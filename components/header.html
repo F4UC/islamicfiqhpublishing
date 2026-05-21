@@ -26,12 +26,12 @@
   transform: scale(1.08) rotate(15deg);
 }
 
-body.dark-mode .search-toggle-btn,
-body.dark-mode .theme-toggle-btn {
+html.dark-mode .search-toggle-btn,
+html.dark-mode .theme-toggle-btn {
   color: #fff;
 }
-body.dark-mode .search-toggle-btn:hover,
-body.dark-mode .theme-toggle-btn:hover {
+html.dark-mode .search-toggle-btn:hover,
+html.dark-mode .theme-toggle-btn:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -78,7 +78,7 @@ body.dark-mode .theme-toggle-btn:hover {
   flex-direction: column;
   max-height: calc(100vh - 120px);
 }
-body.dark-mode .search-modal-card {
+html.dark-mode .search-modal-card {
   background: #181818;
   border-color: #2a2a2a;
   box-shadow: 0 30px 60px rgba(0,0,0,0.4);
@@ -91,7 +91,7 @@ body.dark-mode .search-modal-card {
   justify-content: space-between;
   border-bottom: 1px solid #eee;
 }
-body.dark-mode .search-modal-header {
+html.dark-mode .search-modal-header {
   border-bottom-color: #2a2a2a;
 }
 .search-modal-title {
@@ -100,7 +100,7 @@ body.dark-mode .search-modal-header {
   font-weight: 700;
   color: #0a0a0a;
 }
-body.dark-mode .search-modal-title {
+html.dark-mode .search-modal-title {
   color: #fff;
 }
 .search-close-btn {
@@ -118,7 +118,7 @@ body.dark-mode .search-modal-title {
   color: #0a0a0a;
   background: rgba(0,0,0,0.05);
 }
-body.dark-mode .search-close-btn:hover {
+html.dark-mode .search-close-btn:hover {
   color: #fff;
   background: rgba(255,255,255,0.08);
 }
@@ -131,7 +131,7 @@ body.dark-mode .search-close-btn:hover {
   background: #fafafa;
   border-bottom: 1px solid #eee;
 }
-body.dark-mode .search-input-field-wrapper {
+html.dark-mode .search-input-field-wrapper {
   background: #1e1e1e;
   border-bottom-color: #2a2a2a;
 }
@@ -150,7 +150,7 @@ body.dark-mode .search-input-field-wrapper {
   font-size: 16px;
   color: #0a0a0a;
 }
-body.dark-mode .search-input {
+html.dark-mode .search-input {
   color: #fff;
 }
 .search-input::placeholder {
@@ -167,7 +167,7 @@ body.dark-mode .search-input {
   text-align: center;
   color: #666;
 }
-body.dark-mode .search-empty-state {
+html.dark-mode .search-empty-state {
   color: #aaa;
 }
 .search-empty-state .empty-icon {
@@ -190,7 +190,7 @@ body.dark-mode .search-empty-state {
   border-radius: 4px;
   font-family: monospace;
 }
-body.dark-mode .search-empty-state code {
+html.dark-mode .search-empty-state code {
   background: #333;
   color: #eee;
 }
@@ -205,7 +205,7 @@ body.dark-mode .search-empty-state code {
   text-decoration: none;
   color: inherit;
 }
-body.dark-mode .search-result-item {
+html.dark-mode .search-result-item {
   border-bottom-color: #222;
 }
 .search-result-item:last-child {
@@ -215,7 +215,7 @@ body.dark-mode .search-result-item {
   background: #fdfbf7;
   padding-left: 32px;
 }
-body.dark-mode .search-result-item:hover {
+html.dark-mode .search-result-item:hover {
   background: #222;
 }
 
@@ -238,7 +238,7 @@ body.dark-mode .search-result-item:hover {
   color: #0a0a0a;
   line-height: 1.4;
 }
-body.dark-mode .search-result-title {
+html.dark-mode .search-result-title {
   color: #fff;
 }
 .search-result-excerpt {
@@ -250,7 +250,7 @@ body.dark-mode .search-result-title {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-body.dark-mode .search-result-excerpt {
+html.dark-mode .search-result-excerpt {
   color: #aaa;
 }
 
@@ -259,219 +259,219 @@ body.dark-mode .search-result-excerpt {
   border-radius: 2px;
   padding: 0 2px;
 }
-body.dark-mode .search-highlight {
+html.dark-mode .search-highlight {
   background: rgba(249, 115, 22, 0.4);
 }
 
 /* ==========================================================
    🌙 2. สไตล์โหมดมืดแบบครอบคลุม (Universal Dark Mode Injector)
    ========================================================== */
-body.dark-mode {
+html.dark-mode {
   background-color: #121212 !important;
   color: #e0e0e0 !important;
 }
 
 /* ส่วนหัว (Header) */
-body.dark-mode header {
+html.dark-mode header {
   background: #121212 !important;
   border-bottom-color: #2a2a2a !important;
 }
-body.dark-mode .topbar {
+html.dark-mode .topbar {
   background: #000 !important;
   color: #888 !important;
 }
-body.dark-mode .logo-en { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; line-height: 1; color: inherit; }
-body.dark-mode .logo-ar {
+html.dark-mode .logo-en { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; line-height: 1; color: inherit; }
+html.dark-mode .logo-ar {
   color: #888 !important;
 }
-body.dark-mode nav {
+html.dark-mode nav {
   background: #121212 !important;
 }
-body.dark-mode .nav-item {
+html.dark-mode .nav-item {
   color: #aaa !important;
   border-right-color: #2a2a2a !important;
 }
-body.dark-mode .nav-item:first-child {
+html.dark-mode .nav-item:first-child {
   border-left-color: #2a2a2a !important;
 }
-body.dark-mode .nav-item:hover,
-body.dark-mode .nav-item.active {
+html.dark-mode .nav-item:hover,
+html.dark-mode .nav-item.active {
   color: #fff !important;
   border-bottom-color: #fff !important;
 }
-body.dark-mode .date-line {
+html.dark-mode .date-line {
   color: #888 !important;
 }
-body.dark-mode .menu-toggle {
+html.dark-mode .menu-toggle {
   color: #fff !important;
 }
 
 /* โหมดมือถือ */
 @media(max-width:768px){
-  body.dark-mode nav {
+  html.dark-mode nav {
     background: #181818 !important;
     border-bottom-color: #2a2a2a !important;
   }
-  body.dark-mode .nav-item {
+  html.dark-mode .nav-item {
     border-bottom-color: #222 !important;
   }
-  body.dark-mode .nav-item.active {
+  html.dark-mode .nav-item.active {
     background: #1f1f1f !important;
     border-left-color: #fff !important;
   }
 }
 
 /* วาทะปราชญ์ประจำวัน (Index Quote) */
-body.dark-mode .daily-quote {
+html.dark-mode .daily-quote {
   background: #1a1a1a !important;
   border-color: #2a2a2a !important;
   border-left-color: #fff !important;
 }
-body.dark-mode .quote-text-ar {
+html.dark-mode .quote-text-ar {
   color: #fff !important;
 }
-body.dark-mode .quote-text-th {
+html.dark-mode .quote-text-th {
   color: #ccc !important;
 }
-body.dark-mode .quote-icon {
+html.dark-mode .quote-icon {
   color: #2d2d2d !important;
 }
-body.dark-mode .quote-dark {
+html.dark-mode .quote-dark {
   color: #666 !important;
 }
 
 /* การ์ดแอปพลิเคชันหน้า Index */
-body.dark-mode .index-tools-header {
+html.dark-mode .index-tools-header {
   color: #fff !important;
   border-bottom-color: #fff !important;
 }
-body.dark-mode .view-all-tools {
+html.dark-mode .view-all-tools {
   color: #aaa !important;
 }
-body.dark-mode .view-all-tools:hover {
+html.dark-mode .view-all-tools:hover {
   color: #fff !important;
 }
-body.dark-mode .index-tool-card.coming-soon {
+html.dark-mode .index-tool-card.coming-soon {
   background: #1a1a1a !important;
   border-color: #2a2a2a !important;
   color: #fff !important;
 }
-body.dark-mode .index-tool-card.coming-soon .index-tool-badge {
+html.dark-mode .index-tool-card.coming-soon .index-tool-badge {
   background: #2a2a2a !important;
   color: #aaa !important;
 }
 
 /* รายการบทความล่าสุดหน้า Index & Category */
-body.dark-mode .results-header {
+html.dark-mode .results-header {
   color: #fff !important;
   border-bottom-color: #fff !important;
 }
-body.dark-mode .article-item {
+html.dark-mode .article-item {
   border-bottom-color: #222 !important;
 }
-body.dark-mode .article-item:hover {
+html.dark-mode .article-item:hover {
   border-color: #2a2a2a !important;
   background: #1a1a1a !important;
 }
-body.dark-mode .item-title {
+html.dark-mode .item-title {
   color: #fff !important;
 }
-body.dark-mode .item-cat {
+html.dark-mode .item-cat {
   color: #aaa !important;
 }
-body.dark-mode .item-excerpt {
+html.dark-mode .item-excerpt {
   color: #bbb !important;
 }
-body.dark-mode .read-more-link {
+html.dark-mode .read-more-link {
   color: #fff !important;
 }
 
 /* หน้าหมวดหมู่บทความ (เช่น kalam.html) */
-body.dark-mode .category-title {
+html.dark-mode .category-title {
   color: #fff !important;
   border-bottom-color: #fff !important;
 }
-body.dark-mode .category-desc {
+html.dark-mode .category-desc {
   color: #aaa !important;
 }
-body.dark-mode .partner-badge {
+html.dark-mode .partner-badge {
   background: #1a1a1a !important;
   border-color: #2a2a2a !important;
   border-left-color: #fff !important;
 }
-body.dark-mode .partner-info {
+html.dark-mode .partner-info {
   color: #aaa !important;
 }
-body.dark-mode .partner-link {
+html.dark-mode .partner-link {
   color: #fff !important;
   border-bottom-color: #fff !important;
 }
-body.dark-mode .partner-link:hover {
+html.dark-mode .partner-link:hover {
   color: #ccc !important;
   border-bottom-color: #ccc !important;
 }
-body.dark-mode .list-item {
+html.dark-mode .list-item {
   border-bottom-color: #222 !important;
 }
-body.dark-mode .list-item:first-child {
+html.dark-mode .list-item:first-child {
   border-top-color: #222 !important;
 }
-body.dark-mode .list-title {
+html.dark-mode .list-title {
   color: #fff !important;
 }
-body.dark-mode .list-excerpt {
+html.dark-mode .list-excerpt {
   color: #bbb !important;
 }
-body.dark-mode .list-meta {
+html.dark-mode .list-meta {
   color: #888 !important;
 }
-body.dark-mode .list-meta span {
+html.dark-mode .list-meta span {
   color: #fff !important;
 }
 
 /* ปุ่มเลื่อนหน้า (Pagination) */
-body.dark-mode .page-btn {
+html.dark-mode .page-btn {
   background: #1a1a1a !important;
   border-color: #2a2a2a !important;
   color: #aaa !important;
 }
-body.dark-mode .page-btn:hover {
+html.dark-mode .page-btn:hover {
   border-color: #fff !important;
   color: #fff !important;
 }
-body.dark-mode .page-btn.active {
+html.dark-mode .page-btn.active {
   background: #fff !important;
   border-color: #fff !important;
   color: #000 !important;
 }
-body.dark-mode .page-btn:disabled {
+html.dark-mode .page-btn:disabled {
   border-color: #222 !important;
   color: #444 !important;
 }
 
 /* ปุ่มเลื่อนขึ้นบนสุด (Back to Top) */
-body.dark-mode #backToTopBtn {
+html.dark-mode #backToTopBtn {
   background: #fff !important;
   color: #000 !important;
   border-color: #fff !important;
 }
 
 /* ส่วนล่างสุด (Footer) */
-body.dark-mode footer {
+html.dark-mode footer {
   background: #050505 !important;
   border-top: 1px solid #1a1a1a !important;
 }
-body.dark-mode .footer-logo { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 300; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 1px; color: var(--inverted-text); transition: var(--theme-transition); }
-body.dark-mode .footer-links a { font-size: 13px; color: #bbbbbb; letter-spacing: .5px; transition: var(--theme-transition); text-decoration: none; }
-body.dark-mode .footer-links a:hover {
+html.dark-mode .footer-logo { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 300; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 1px; color: var(--inverted-text); transition: var(--theme-transition); }
+html.dark-mode .footer-links a { font-size: 13px; color: #bbbbbb; letter-spacing: .5px; transition: var(--theme-transition); text-decoration: none; }
+html.dark-mode .footer-links a:hover {
   color: #fff !important;
 }
-body.dark-mode .footer-copy { font-family: 'Inter', sans-serif; font-size: 14px; color: #888888; font-style: normal; letter-spacing: 0.5px; transition: var(--theme-transition); }
-body.dark-mode .support-btn {
+html.dark-mode .footer-copy { font-family: 'Inter', sans-serif; font-size: 14px; color: #888888; font-style: normal; letter-spacing: 0.5px; transition: var(--theme-transition); }
+html.dark-mode .support-btn {
   border-color: #333 !important;
   color: #aaa !important;
 }
-body.dark-mode .support-btn:hover {
+html.dark-mode .support-btn:hover {
   background: #fff !important;
   color: #000 !important;
 }
@@ -545,6 +545,7 @@ body.dark-mode .support-btn:hover {
     </div>
   </div>
 </div>
+
 
 
 
