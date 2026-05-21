@@ -5,12 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ขอบเขตและการซ้อนทับของหลักการ ‘เฎาะรูเราะฮ์’ และ ‘ฮาญะฮ์’ ในนิติศาสตร์อิสลาม – Islamic Fiqh Publishing</title>
 
+<!-- Pre-render Theme Engine: Prevents white flash/FOUC on page load -->
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
+
 <meta name="description" content="บทวิเคราะห์เชิงลึกทางนิติศาสตร์และหลักอุศูลุลฟิกฮ์ว่าด้วยเส้นแบ่งและการประยุกต์ใช้หลักความจำเป็นขั้นวิกฤต (เฎาะรูเราะฮ์) และความต้องการระดับรอง (ฮาญะฮ์) ในธุรกรรมและข้อตัดสินร่วมสมัย">
-<meta name="keywords" content="เฎาะรูเราะฮ์, ฮาญะฮ์, นิติศาสตร์อิสลาม, ฟิกฮ์, อุศูลุลฟิกฮ์, ชะรีอะฮ์, มะกอศิด, มัศละฮะฮ์">
+<meta name="keywords" content="จันทร์เสี้ยว, นิติศาสตร์อิสลาม, ฟิกฮ์, อิสลาม, ดาราศาสตร์อิสลาม, ฮิลาล,ชะรีอะฮ์">
 <meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
 
 <meta property="og:title" content="ขอบเขตและการซ้อนทับของหลักการ ‘เฎาะรูเราะฮ์’ และ ‘ฮาญะฮ์’ ในนิติศาสตร์อิสลาม — Islamic Fiqh Publishing">
-<meta property="og:description" content="ยกระดับความต้องการระดับรองให้เทียบเท่าความจำเป็นขั้นวิกฤตได้หรือไม่? ไขปมปัญหายุ่งยากของธุรกรรมและข้อตัดสินอิสลามในโลกยุคใหม่">
+<meta property="og:description" content="บทวิเคราะห์เชิงลึกทางนิติศาสตร์และหลักอุศูลุลฟิกฮ์ว่าด้วยเส้นแบ่งและการประยุกต์ใช้หลักความจำเป็นขั้นวิกฤต (เฎาะรูเราะฮ์) และความต้องการระดับรอง (ฮาญะฮ์) ในธุรกรรมและข้อตัดสินร่วมสมัย">
 <meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg"> 
 <meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/darurah-vs-hajah.html">
 <meta property="og:type" content="article">
@@ -19,11 +30,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="../../article.css?v=8">
+<!-- ใช้ Path กลาง เพื่อดึงดีไซน์ Option 3 -->
+<link rel="stylesheet" href="/article.css">
 
 <style>
-/* กฎข้อที่ 36: มาตรฐานการจัดบรรทัดและระยะห่าง */
-.article-body p, .article-excerpt, .thai-quote {
+/* กฎข้อที่ 36: มาตรฐานการจัดบรรทัดและระยะห่าง (ปรับให้เข้ากับ Option 3) */
+.article-body p, .lead-text {
     line-height: 2.0;
 }
 .ar {
@@ -32,62 +44,61 @@
     display: inline-block;
     vertical-align: middle;
 }
-/* กฎข้อที่ 34: มาตรฐานกล่องอ้างอิงตามชนิดเนื้อหา */
+/* กฎข้อที่ 34: มาตรฐานกล่องอ้างอิงตามชนิดเนื้อหา (เชื่อมกับ CSS Variables พรีเมียม) */
 blockquote[lang="ar"], .fiqh-principle, .hadith-block, .quote-container {
-    padding: 15px;
-    margin: 20px 0;
-    border-right: 5px solid #ccc;
-    background-color: #f9f9f9;
+    padding: 24px 32px;
+    margin: 32px 0;
+    border-right: 4px solid var(--accent-color);
+    background-color: var(--bg-secondary);
+    border-radius: 8px 0 0 8px;
+    color: var(--text-primary);
 }
 .thai-quote {
-    margin-top: 10px;
     font-style: italic;
-    color: #555;
+    color: var(--text-tertiary);
+    text-align: center;
+    margin-top: -16px;
+    margin-bottom: 32px;
+    font-size: 16px;
 }
 </style>
 </head>
 <body id="article-page" lang="th">
 
-<div class="progress-container">
-  <div class="progress-bar" id="myBar"></div>
-</div>
-
-<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+<!-- แถบแสดงความคืบหน้าการอ่าน (Reading Progress Bar) จะถูกควบคุมโดย main.js -->
+<div id="readingProgressBar"></div>
 
 <div id="header-placeholder"></div>
 
-<article>
-<div class="article-wrap">
-
-  <a href="../../pages/nitisart.html" class="article-cat">นิติศาสตร์อิสลาม</a>
-  <h1 class="article-title" lang="th">ขอบเขตและการซ้อนทับของหลักการ ‘เฎาะรูเราะฮ์’ และ ‘ฮาญะฮ์’ ในนิติศาสตร์อิสลาม</h1>
+<!-- นำเนื้อหาเดิมมาใส่ในโครงสร้าง Article Layout ใหม่ -->
+<main class="article-layout">
   
-  <div class="article-meta">
-    <div>โดย <span>กองบรรณาธิการ</span></div>
-    <div>·</div>
-    <div>18 พฤษภาคม 2569</div>
-    <div>·</div>
-    <div>อ่าน 40 นาที</div>
-  </div>
+  <!-- ส่วนเนื้อหาหลักบทความ (ด้านซ้าย) -->
+  <article class="article-content">
+    <header class="article-header">
+      <a href="/pages/nitisart.html" class="article-category">นิติศาสตร์อิสลาม</a>
+      <h1 class="article-main-title" lang="th">ขอบเขตและการซ้อนทับของหลักการ ‘เฎาะรูเราะฮ์’ และ ‘ฮาญะฮ์’ ในนิติศาสตร์อิสลาม</h1>
+      
+      <div class="article-meta-info">
+        <span>โดย <strong>กองบรรณาธิการ</strong></span>
+        <span class="meta-divider">•</span>
+        <span>18 พฤษภาคม 2569</span>
+        <span class="meta-divider">•</span>
+        <span>อ่าน 40 นาที</span>
+      </div>
+    </header>
 
-  <div class="reading-tools">
-    <div class="tool-group">
-      <span class="tool-label">Appearance:</span>
-      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    <div class="reading-tools">
+      <div class="tool-group">
+        <span class="tool-label">Font Size:</span>
+        <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+        <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+        <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+      </div>
     </div>
-    <div class="tool-group">
-      <span class="tool-label">Font Size:</span>
-      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
-      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
-      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
-    </div>
-  </div>
 
-  <p class="article-excerpt">ก่อนจะเข้าสู่เนื้อหาหลัก จำเป็นต้องทำความเข้าใจคำศัพท์สำคัญ 2 คำ คือ 1. อัฎเฎาะรูเราะฮ์ (<span class="ar" lang="ar" dir="rtl">الضرورة</span>) และ 2. อัลฮาญะฮ์ (<span class="ar" lang="ar" dir="rtl">الحاجة</span>) หากแปลความหมายอย่างรวบรัด ทั้งสองคำอาจถูกนิยามว่า “ความจำเป็น” เหมือนกัน แต่ในรายละเอียดนั้นมีความแตกต่างกันอย่างมีนัยสำคัญ</p>
-
-  <div class="article-body" id="main-content">
-
-    <p><strong>เฎาะรูเราะฮ์</strong> คือความจำเป็นขั้นวิกฤต หรือภาวะคับขันสูงสุด คำนี้เรามักคุ้นเคยกันดี ส่วน <strong>ฮาญะฮ์</strong> คือความจำเป็นระดับรอง หรือความต้องการทั่วไป ซึ่งมักไม่ค่อยถูกพูดถึงในรายละเอียดนัก</p>
+    <div class="article-body" id="main-content">
+<p><strong>เฎาะรูเราะฮ์</strong> คือความจำเป็นขั้นวิกฤต หรือภาวะคับขันสูงสุด คำนี้เรามักคุ้นเคยกันดี ส่วน <strong>ฮาญะฮ์</strong> คือความจำเป็นระดับรอง หรือความต้องการทั่วไป ซึ่งมักไม่ค่อยถูกพูดถึงในรายละเอียดนัก</p>
 
     <p>การนำหลักการเรื่อง “ความจำเป็นระดับรอง” (ฮาญะฮ์) มาปรับใช้ในการวินิจฉัยข้อชี้ขาดทางศาสนา ได้กลายเป็นประเด็นที่มีความคลุมเครือซับซ้อน ซึ่งน้อยคนนักจะเข้าใจอย่างถ่องแท้ ยิ่งไปกว่านั้น ปัญหาทางนิติศาสตร์อิสลามร่วมสมัยส่วนใหญ่ ไม่ว่าจะเป็นเรื่องที่สภาวิชาการศาสนามีมติชี้ขาดไปแล้ว หรือเรื่องที่ยังคงค้างอยู่ในการพิจารณา ล้วนมีรากฐานมาจากปมปัญหาเดียวกัน นั่นคือ “การประเมินระดับของความจำเป็น” และ “การกำหนดข้อชี้ขาดที่สืบเนื่องจากความจำเป็นนั้น” กล่าวคือ เราควรยกระดับ “ความจำเป็นระดับรอง” (ฮาญะฮ์) ให้มีสถานะเทียบเท่ากับ “ความจำเป็นระดับคับขัน” (เฎาะรูเราะฮ์) เพื่อให้มีผลทางกฎหมายเสมอกันหรือไม่?</p>
 
@@ -208,7 +219,7 @@ blockquote[lang="ar"], .fiqh-principle, .hadith-block, .quote-container {
     </blockquote>
     <div class="thai-quote">“การซื้อขายถูกพิจารณาให้อยู่ในฐานะของ ‘สิ่งจำเป็น’ (เฎาะรูรีย์) เพราะหากผู้คนไม่แลกเปลี่ยนสิ่งที่มีอยู่ในมือกัน ย่อมนำไปสู่ความยากลำบากที่ประจักษ์ชัด ดังนั้นที่มาของกฎหมายการซื้อขายจึงกลับไปสู่ความจำเป็นของเผ่าพันธุ์และภาพรวมสังคม และเมื่อกฎเกณฑ์ต่างๆ ได้ถูกวางรากฐานไว้ในบทบัญญัติศาสนาแล้ว ก็ไม่จำเป็นต้องไปตรวจสอบความเดือดร้อนในรายละเอียดปลีกย่อยของปัจเจกบุคคลแต่ละคนอีกต่อไป”</div>
 
-    <p>ท่านอิหม่ามอัชชาฏิบีย์ (เสียชีวิตปี ฮ.ศ. 790 / ค.ศ. 1388) ได้อธิบายขยายความไว้ในตำรา <strong>อัลมุวาฟะกอต</strong> ว่ามันคือหนึ่งใน “สามหลักการสากล” (เฎาะรูรียาต - ฮาญิยาต - ตะห์ซีนียาต) ซึ่งเจตนารมณ์แห่งกฎหมายอิสลาม (มะกอศิด ชะรีอะฮ์) จะย้อนกลับไปรักษา โดยท่านกล่าวว่า:</p>
+    <p>ท่านอิหม่ามอัชชาฏิบีย์ (เสียชีวิตปี ฮ.ศ. 790 / ค.ศ. 1388) ได้อธิบายขยายความไว้ในตำรา <strong>อัลมุวาฟะกอต</strong> ว่ามันคือหนึ่งใน “สามหลักการสากล” (เฎาะรูรียาต - ฮาญิยาต - ตะห์ซีนียาต) ซึ่งเจตนารมณ์แห่งกฎหมายอิสลาม (มะกอศิดชะรีอะฮ์) จะย้อนกลับไปรักษา โดยท่านกล่าวว่า:</p>
     <blockquote dir="rtl" lang="ar" class="quote-container">
       <span class="ar" lang="ar" dir="rtl">فأما الضرورية فمعناها أنها لا بد منها في قيام مصالح الدين والدنيا بحيث إذا فقدت لم تجر مصالح الدنيا على استقامة بل على فساد وتهارج وفوت حياة وفي الأخرى فوت النجاة والنعيم والرجوع بالخسران المبين</span>
     </blockquote>
@@ -433,7 +444,7 @@ blockquote[lang="ar"], .fiqh-principle, .hadith-block, .quote-container {
 
     <p style="margin-top: 24px;">ดังนั้น การนำกฎเกณฑ์ที่ว่า <em>“ความต้องการ (ฮาญะฮ์) ลงมาแทนที่ความจำเป็น (เฎาะรูเราะฮ์)”</em> ไปใช้ปฏิบัติในฐานะกฎทางฟิกฮ์เพื่อตัดสินปัญหาอุบัติใหม่อย่างพร่ำเพรื่อ โดยปราศจากการคัดกรองระดับความเข้มข้นของหลักฐาน ย่อมนำมาซึ่งความสับสนและเปิดช่องให้อารมณ์ใฝ่ต่ำเข้ามาบิดเบือนบทบัญญัติ ความละเอียดอ่อนของคำทั้งสองคำนี้ จึงไม่ได้อยู่ที่ตัวอักษรของคำนิยาม แต่อยู่ที่ <strong>“ระดับความเข้มข้นของเหตุผลทางกฎหมายที่มันรองรับ”</strong> ซึ่งเมื่อระดับนั้นคลาดเคลื่อนเพียงเส้นผม ย่อมส่งผลให้ข้อตัดสินและทิศทางของระบบนิติศาสตร์เปลี่ยนไปทั้งระบบอย่างสิ้นเชิง</p>
 
-    <hr>
+    
 
     <div class="references">
       <h2 class="ref-title" lang="th">บรรณานุกรม</h2>
@@ -451,44 +462,81 @@ blockquote[lang="ar"], .fiqh-principle, .hadith-block, .quote-container {
       </ul>
     </div>
 
-    <div class="citation-box">
-      <div class="citation-text" id="citationText">กองบรรณาธิการ. (2569). ขอบเขตและการซ้อนทับของหลักการ ‘เฎาะรูเราะฮ์’ และ ‘ฮาญะฮ์’ ในนิติศาสตร์อิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/darurah-vs-hajah.html</div>
-      <button class="copy-btn" onclick="copyCitation()">คัดลอกอ้างอิง</button>
+    
+
+<div class="citation-box">
+        <div class="citation-text" id="citationText">กองบรรณาธิการ. (2569). ขอบเขตและการซ้อนทับของหลักการ ‘เฎาะรูเราะฮ์’ และ ‘ฮาญะฮ์’ ในนิติศาสตร์อิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/darurah-vs-hajah.html</div>
+        <button class="copy-btn" onclick="copyCitation()">คัดลอกอ้างอิง</button>
+      </div>
+
     </div>
 
-  </div>
-</div>
-</article>
+    <!-- ส่วนปุ่มแชร์ (Social Share) จาก Option 3 -->
+    <div class="social-share-container">
+      <h4 class="share-title">แบ่งปันบทความนี้:</h4>
+      <div class="share-buttons">
+        <a href="#" class="share-btn btn-facebook" onclick="shareToFacebook(event)" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="#" class="share-btn btn-twitter" onclick="shareToTwitter(event)" title="Share on X (Twitter)">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" class="share-btn btn-line" onclick="shareToLine(event)" title="Share on LINE">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 3.963 8.874 9.542 9.616.745.158 1.761.488 2.023 1.134.238.583.155 1.492.074 2.062l-.208 1.255c-.063.398-.292 1.44 1.267.785 1.558-.654 8.411-4.945 10.126-8.541C23.633 14.28 24 12.39 24 10.304zm-15.654 3.013H4.492a.798.798 0 0 1-.796-.795v-4.14a.798.798 0 0 1 .796-.795h3.854a.799.799 0 0 1 .796.795v1.077c0 .438-.358.796-.796.796H5.856v1.472h2.49a.799.799 0 0 1 .796.795v1.076a.798.798 0 0 1-.796.718zm2.46-.718v-4.14a.799.799 0 0 1 .796-.795h.001a.799.799 0 0 1 .796.795v4.14a.799.799 0 0 1-.796.795h-.001a.798.798 0 0 1-.796-.795zm9.103 0v-4.14a.798.798 0 0 0-.795-.795h-1.096a.798.798 0 0 0-.796.795v2.85l-1.92-2.875a1.218 1.218 0 0 0-.256-.271.8.8 0 0 0-.54-.204h-1.077a.798.798 0 0 0-.795.795v4.14a.798.798 0 0 0 .795.795h1.095a.798.798 0 0 0 .795-.795v-2.85l1.921 2.875c.106.14.24.247.391.311a.795.795 0 0 0 .405.109h1.077c.438 0 .796-.358.796-.795z"/></svg>
+        </a>
+        <button class="share-btn btn-copy" onclick="copyArticleLink()" title="Copy Link">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        </button>
+      </div>
+      <div id="copyAlert" class="copy-alert">คัดลอกลิงก์แล้ว!</div>
+    </div>
+  </article>
 
-<section class="related">
-  <div class="section-header">
-    <span class="section-label">บทความที่เกี่ยวข้อง</span>
-    <div class="section-line"></div>
-  </div>
-  <div class="related-grid">
-    <div class="related-card">
-      <a href="../../pages/nitisart.html" class="related-cat">นิติศาสตร์อิสลาม</a>
-      <a href="emotion-vs-religion.html"><span class="related-title">อารมณ์อ้างตนเป็นศาสนา</span></a>
-      <div class="related-meta">10 พฤษภาคม 2569 · อ่าน 25 นาที</div>
+  <!-- ส่วนสารบัญอัจฉริยะ (ด้านขวา) จาก Option 3 -->
+  <aside class="article-sidebar">
+    <div class="toc-container">
+      <h3 class="toc-title">สารบัญเนื้อหา</h3>
+      <nav id="tocNav" class="toc-nav">
+        <!-- Javascript จาก main.js จะสแกนหัวข้อ (<h2>, <h3>) ในบทความมาสร้างลิงก์ที่นี่อัตโนมัติ -->
+      </nav>
     </div>
-    <div class="related-card">
-      <a href="../../pages/nitisart.html" class="related-cat">นิติศาสตร์อิสลาม</a>
-      <a href="gambling-vs-competition.html"><span class="related-title">รอยต่อระหว่าง ‘การพนัน’ และ ‘การแข่งขัน’ ในมุมมองฟิกฮ์อิสลาม</span></a>
-      <div class="related-meta">18 พฤษภาคม 2569 · อ่าน 30 นาที</div>
-    </div>
-    <div class="related-card">
-      <a href="../../pages/nitisart.html" class="related-cat">นิติศาสตร์อิสลาม</a>
-      <a href="extremism-in-islam.html"><span class="related-title">ความสุดโต่งในอิสลาม</span></a>
-      <div class="related-meta">18 พฤษภาคม 2569 · อ่าน 25 นาที</div>
+  </aside>
+
+</main>
+
+<!-- บทความที่เกี่ยวข้อง (Related Articles) จาก Option 3 -->
+<section class="related-articles-section">
+  <div class="related-inner">
+    <h3 class="related-title">บทความวิชาการที่เกี่ยวข้อง</h3>
+    <div class="related-grid">
+      <!-- การ์ด 1 -->
+      <a href="darurah-vs-hajah.html" class="related-card">
+        <span class="related-cat">นิติศาสตร์อิสลาม</span>
+        <h4 class="related-article-title">ขอบเขตและการซ้อนทับของหลักการ ‘เฎาะรูเราะฮ์’ และ ‘ฮาญะฮ์’ ในนิติศาสตร์อิสลาม</h4>
+      </a>
+      <!-- การ์ด 2 -->
+      <a href="consequences-theory-in-islam.html" class="related-card">
+        <span class="related-cat">นิติศาสตร์อิสลาม</span>
+        <h4 class="related-article-title">ทฤษฎีการพิจารณาผลลัพธ์บั้นปลายในนิติศาสตร์อิสลาม</h4>
+      </a>
+      <!-- การ์ด 3 -->
+      <a href="usul-al-fiqh-foundation.html" class="related-card">
+        <span class="related-cat">นิติศาสตร์อิสลาม</span>
+        <h4 class="related-article-title">อุศูลุลฟิกฮ์ รากฐานและระเบียบวิธีแห่งศาสนบัญญัติอิสลาม</h4>
+      </a>
     </div>
   </div>
 </section>
 
 <div id="footer-placeholder"></div>
 
-<script src="../../main.js"></script>
+<button onclick="window.scrollTo({top:0, behavior:'smooth'})" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<!-- ไม่จำเป็นต้องใช้สคริปต์ท้ายหน้าซ้ำซ้อน เนื่องจากย้ายฟังก์ชันเข้า main.js แล้ว -->
+<script src="/main.js"></script>
 </body>
 </html>
+
 
 
 
