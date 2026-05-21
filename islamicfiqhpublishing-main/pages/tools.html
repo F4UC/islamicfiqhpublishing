@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เครื่องมือและแอปพลิเคชัน - Islamic Fiqh Publishing</title>
+
+<meta name="description" content="ศูนย์รวมเครื่องมือและแอปพลิเคชันดิจิทัลที่พัฒนาขึ้นเพื่อสนับสนุนวิถีชีวิตมุสลิมตามหลักนิติศาสตร์อิสลาม">
+<meta name="keywords" content="เครื่องมือมุสลิม, ปฏิทินฮิจเราะฮ์, ไทม์ไลน์ประวัติศาสตร์อิสลาม, ซะกาต, มรดกอิสลาม, Hijri Time Machine">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<link rel="icon" href="../favicon.png" type="image/png">
+
+<meta property="og:title" content="เครื่องมือและแอปพลิเคชัน — Islamic Fiqh Publishing">
+<meta property="og:description" content="แพลตฟอร์มดิจิทัลที่ผสานเทคโนโลยีเข้ากับหลักศาสนา สำรวจเครื่องมืออำนวยความสะดวกสำหรับมุสลิมได้ที่นี่">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg"> 
+<meta property="og:url" content="https://islamicfiqhpublishing.com/pages/tools.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+Thai:wght@400;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../article.css?v=8">
+
+<style>
+/* - สไตล์ระดับพรีเมียมสำหรับหน้าเครื่องมือหลัก - */
+.tools-container { max-width: 1100px; margin: 60px auto 80px; padding: 0 24px; }
+
+.tools-header { text-align: center; border-bottom: 1px solid #eaeaea; padding-bottom: 40px; margin-bottom: 60px; }
+.tools-title { font-family: 'Noto Serif Thai', serif; font-size: 36px; font-weight: 700; color: #0a0a0a; margin-bottom: 16px; }
+.tools-desc { font-size: 16px; color: #666; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+
+/* โครงสร้างการ์ดพรีเมียม */
+.tool-card { 
+    background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 40px 30px; 
+    text-align: center; display: flex; flex-direction: column; height: 100%; position: relative; overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.tool-card:hover { 
+    border-color: #c49a45; box-shadow: 0 20px 40px rgba(0,0,0,0.06); transform: translateY(-5px); 
+}
+
+/* แอนิเมชันขอบทองสำหรับเครื่องมือเปิดใช้งานสด */
+.tool-card::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: #c49a45;
+    transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+}
+.tool-card:hover::before { transform: scaleX(1); }
+
+/* วงกลมล้อมรอบไอคอน */
+.tool-icon { 
+    font-size: 36px; line-height: 1; color: #0a0a0a; background: #fdfbf7; 
+    width: 70px; height: 70px; border-radius: 50%; border: 1px solid #f0f0f0;
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; flex-shrink: 0;
+}
+
+.tool-name { font-family: 'Noto Serif Thai', serif; font-size: 22px; font-weight: 700; color: #0a0a0a; margin-bottom: 12px; }
+.tool-desc-text { font-size: 14px; color: #666; line-height: 1.6; flex-grow: 1; margin-bottom: 28px; }
+
+.tool-btn { display: inline-block; padding: 11px 28px; font-size: 14px; font-weight: 600; color: #fff; background: #0a0a0a; border-radius: 4px; transition: background 0.2s; text-decoration: none; }
+.tool-btn:hover { background: #333; }
+
+.status-badge { display: inline-block; padding: 4px 14px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border-radius: 20px; margin-bottom: 20px; align-self: center; }
+.status-available { background: rgba(196, 154, 69, 0.1); color: #c49a45; }
+.status-soon { background: #f5f5f5; color: #757575; border: 1px solid #ddd; }
+
+/* รูปแบบการ์ดปิดล็อก / กำลังพัฒนา */
+.tool-card.coming-soon { background: #fafafa; border: 1px dashed #dcdcdc; }
+.tool-card.coming-soon:hover { border-color: #ccc; box-shadow: none; transform: translateY(-2px); }
+.tool-card.coming-soon::before { display: none; }
+.tool-card.coming-soon .tool-icon { background: #eee; border-color: #e5e5e5; filter: grayscale(1); opacity: 0.6; }
+.tool-card.coming-soon .tool-name { color: #555; }
+.tool-card.coming-soon .status-badge { background: #eee; color: #888; border: none; }
+</style>
+</head>
+<body id="tools-page" lang="th">
+
+<div id="header-placeholder"></div>
+
+<main>
+  <section class="tools-container">
+    <div class="tools-header">
+      <h1 class="tools-title" lang="th">เครื่องมือและแอปพลิเคชัน</h1>
+      <p class="tools-desc">แพลตฟอร์มดิจิทัลที่พัฒนาขึ้นเพื่อประยุกต์ใช้เทคโนโลยีร่วมกับหลักนิติศาสตร์อิสลาม มุ่งอำนวยความสะดวกในวิถีชีวิตประจำวันของมุสลิม</p>
+    </div>
+
+    <div class="tools-grid">
+      
+      <div class="tool-card">
+        <div class="status-badge status-available">พร้อมใช้งาน</div>
+        <div class="tool-icon">⏳</div>
+        <h2 class="tool-name">Hijri Time Machine</h2>
+        <p class="tool-desc-text">มากกว่าการแปลงปฏิทิน สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามที่เกิดขึ้นในปี ฮ.ศ. นั้นๆ เพื่อเชื่อมโยงอดีตสู่ปัจจุบัน</p>
+        <a href="tools/hijri-time-machine.html" class="tool-btn">เปิดใช้งาน</a>
+      </div>
+
+      <div class="tool-card coming-soon">
+        <div class="status-badge status-soon">กำลังพิจารณา</div>
+        <div class="tool-icon">💰</div>
+        <h2 class="tool-name">Zakat Calculator</h2>
+        <p class="tool-desc-text">โปรแกรมคำนวณซะกาตตามหลักฟิกฮ์ (ซะกาตทรัพย์สิน, การค้า, หุ้น และทองคำ)</p>
+        <a href="#" class="tool-btn" style="pointer-events: none; background: #ccc; color: #fff;">ขอเวลาอีกไม่นาน</a>
+      </div>
+
+      <div class="tool-card coming-soon">
+        <div class="status-badge status-soon">กำลังพิจารณา</div>
+        <div class="tool-icon">⚖️</div>
+        <h2 class="tool-name">Faraid Calculator</h2>
+        <p class="tool-desc-text">ระบบคำนวณการแบ่งมรดกตามหลักนิติศาสตร์อิสลามที่ซับซ้อน</p>
+        <a href="#" class="tool-btn" style="pointer-events: none; background: #ccc; color: #fff;">ขอเวลาอีกไม่นาน</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="../main.js"></script>
+</body>
+</html>
+
+

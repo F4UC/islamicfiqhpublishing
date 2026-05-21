@@ -1,0 +1,550 @@
+﻿<div class="topbar">islamicfiqhpublishing.com</div>
+
+<style>
+/* ==========================================================
+   🔍 1. สไตล์ปุ่มและ UI ระบบค้นหา (Search System)
+   ========================================================== */
+.search-toggle-btn, .theme-toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #0a0a0a;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.search-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: scale(1.08);
+}
+.theme-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: scale(1.08) rotate(15deg);
+}
+
+body.dark-mode .search-toggle-btn,
+body.dark-mode .theme-toggle-btn {
+  color: #fff;
+}
+body.dark-mode .search-toggle-btn:hover,
+body.dark-mode .theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 999999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 24px;
+}
+.search-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 680px;
+  transform: translateY(-20px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.search-overlay.active .search-container {
+  transform: translateY(0);
+}
+
+.search-modal-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 120px);
+}
+body.dark-mode .search-modal-card {
+  background: #181818;
+  border-color: #2a2a2a;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.search-modal-header {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+body.dark-mode .search-modal-header {
+  border-bottom-color: #2a2a2a;
+}
+.search-modal-title {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0a0a0a;
+}
+body.dark-mode .search-modal-title {
+  color: #fff;
+}
+.search-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  line-height: 0.5;
+  cursor: pointer;
+  color: #888;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.search-close-btn:hover {
+  color: #0a0a0a;
+  background: rgba(0,0,0,0.05);
+}
+body.dark-mode .search-close-btn:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+.search-input-field-wrapper {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+body.dark-mode .search-input-field-wrapper {
+  background: #1e1e1e;
+  border-bottom-color: #2a2a2a;
+}
+.search-input-icon {
+  color: #888;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.search-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 16px;
+  color: #0a0a0a;
+}
+body.dark-mode .search-input {
+  color: #fff;
+}
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-results-list {
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.search-empty-state {
+  padding: 40px 24px;
+  text-align: center;
+  color: #666;
+}
+body.dark-mode .search-empty-state {
+  color: #aaa;
+}
+.search-empty-state .empty-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 12px;
+}
+.search-empty-state p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-family: 'Sarabun', sans-serif;
+}
+.search-empty-state .keyboard-tip {
+  font-size: 11px;
+  color: #999;
+}
+.search-empty-state code {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+body.dark-mode .search-empty-state code {
+  background: #333;
+  color: #eee;
+}
+
+.search-result-item {
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-bottom: 1px solid #f5f5f5;
+  transition: background 0.2s, padding-left 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+body.dark-mode .search-result-item {
+  border-bottom-color: #222;
+}
+.search-result-item:last-child {
+  border-bottom: none;
+}
+.search-result-item:hover {
+  background: #fdfbf7;
+  padding-left: 32px;
+}
+body.dark-mode .search-result-item:hover {
+  background: #222;
+}
+
+.search-result-cat-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-result-cat {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+}
+.search-result-title {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0a0a0a;
+  line-height: 1.4;
+}
+body.dark-mode .search-result-title {
+  color: #fff;
+}
+.search-result-excerpt {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+body.dark-mode .search-result-excerpt {
+  color: #aaa;
+}
+
+.search-highlight {
+  background: rgba(253, 186, 116, 0.3);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+body.dark-mode .search-highlight {
+  background: rgba(249, 115, 22, 0.4);
+}
+
+/* ==========================================================
+   🌙 2. สไตล์โหมดมืดแบบครอบคลุม (Universal Dark Mode Injector)
+   ========================================================== */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+/* ส่วนหัว (Header) */
+body.dark-mode header {
+  background: #121212 !important;
+  border-bottom-color: #2a2a2a !important;
+}
+body.dark-mode .topbar {
+  background: #000 !important;
+  color: #888 !important;
+}
+body.dark-mode .logo-en { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; line-height: 1; color: inherit; }
+body.dark-mode .logo-ar {
+  color: #888 !important;
+}
+body.dark-mode nav {
+  background: #121212 !important;
+}
+body.dark-mode .nav-item {
+  color: #aaa !important;
+  border-right-color: #2a2a2a !important;
+}
+body.dark-mode .nav-item:first-child {
+  border-left-color: #2a2a2a !important;
+}
+body.dark-mode .nav-item:hover,
+body.dark-mode .nav-item.active {
+  color: #fff !important;
+  border-bottom-color: #fff !important;
+}
+body.dark-mode .date-line {
+  color: #888 !important;
+}
+body.dark-mode .menu-toggle {
+  color: #fff !important;
+}
+
+/* โหมดมือถือ */
+@media(max-width:768px){
+  body.dark-mode nav {
+    background: #181818 !important;
+    border-bottom-color: #2a2a2a !important;
+  }
+  body.dark-mode .nav-item {
+    border-bottom-color: #222 !important;
+  }
+  body.dark-mode .nav-item.active {
+    background: #1f1f1f !important;
+    border-left-color: #fff !important;
+  }
+}
+
+/* วาทะปราชญ์ประจำวัน (Index Quote) */
+body.dark-mode .daily-quote {
+  background: #1a1a1a !important;
+  border-color: #2a2a2a !important;
+  border-left-color: #fff !important;
+}
+body.dark-mode .quote-text-ar {
+  color: #fff !important;
+}
+body.dark-mode .quote-text-th {
+  color: #ccc !important;
+}
+body.dark-mode .quote-icon {
+  color: #2d2d2d !important;
+}
+body.dark-mode .quote-dark {
+  color: #666 !important;
+}
+
+/* การ์ดแอปพลิเคชันหน้า Index */
+body.dark-mode .index-tools-header {
+  color: #fff !important;
+  border-bottom-color: #fff !important;
+}
+body.dark-mode .view-all-tools {
+  color: #aaa !important;
+}
+body.dark-mode .view-all-tools:hover {
+  color: #fff !important;
+}
+body.dark-mode .index-tool-card.coming-soon {
+  background: #1a1a1a !important;
+  border-color: #2a2a2a !important;
+  color: #fff !important;
+}
+body.dark-mode .index-tool-card.coming-soon .index-tool-badge {
+  background: #2a2a2a !important;
+  color: #aaa !important;
+}
+
+/* รายการบทความล่าสุดหน้า Index & Category */
+body.dark-mode .results-header {
+  color: #fff !important;
+  border-bottom-color: #fff !important;
+}
+body.dark-mode .article-item {
+  border-bottom-color: #222 !important;
+}
+body.dark-mode .article-item:hover {
+  border-color: #2a2a2a !important;
+  background: #1a1a1a !important;
+}
+body.dark-mode .item-title {
+  color: #fff !important;
+}
+body.dark-mode .item-cat {
+  color: #aaa !important;
+}
+body.dark-mode .item-excerpt {
+  color: #bbb !important;
+}
+body.dark-mode .read-more-link {
+  color: #fff !important;
+}
+
+/* หน้าหมวดหมู่บทความ (เช่น kalam.html) */
+body.dark-mode .category-title {
+  color: #fff !important;
+  border-bottom-color: #fff !important;
+}
+body.dark-mode .category-desc {
+  color: #aaa !important;
+}
+body.dark-mode .partner-badge {
+  background: #1a1a1a !important;
+  border-color: #2a2a2a !important;
+  border-left-color: #fff !important;
+}
+body.dark-mode .partner-info {
+  color: #aaa !important;
+}
+body.dark-mode .partner-link {
+  color: #fff !important;
+  border-bottom-color: #fff !important;
+}
+body.dark-mode .partner-link:hover {
+  color: #ccc !important;
+  border-bottom-color: #ccc !important;
+}
+body.dark-mode .list-item {
+  border-bottom-color: #222 !important;
+}
+body.dark-mode .list-item:first-child {
+  border-top-color: #222 !important;
+}
+body.dark-mode .list-title {
+  color: #fff !important;
+}
+body.dark-mode .list-excerpt {
+  color: #bbb !important;
+}
+body.dark-mode .list-meta {
+  color: #888 !important;
+}
+body.dark-mode .list-meta span {
+  color: #fff !important;
+}
+
+/* ปุ่มเลื่อนหน้า (Pagination) */
+body.dark-mode .page-btn {
+  background: #1a1a1a !important;
+  border-color: #2a2a2a !important;
+  color: #aaa !important;
+}
+body.dark-mode .page-btn:hover {
+  border-color: #fff !important;
+  color: #fff !important;
+}
+body.dark-mode .page-btn.active {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #000 !important;
+}
+body.dark-mode .page-btn:disabled {
+  border-color: #222 !important;
+  color: #444 !important;
+}
+
+/* ปุ่มเลื่อนขึ้นบนสุด (Back to Top) */
+body.dark-mode #backToTopBtn {
+  background: #fff !important;
+  color: #000 !important;
+  border-color: #fff !important;
+}
+
+/* ส่วนล่างสุด (Footer) */
+body.dark-mode footer {
+  background: #050505 !important;
+  border-top: 1px solid #1a1a1a !important;
+}
+body.dark-mode .footer-logo { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 300; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 1px; color: var(--inverted-text); transition: var(--theme-transition); }
+body.dark-mode .footer-links a { font-size: 13px; color: #bbbbbb; letter-spacing: .5px; transition: var(--theme-transition); text-decoration: none; }
+body.dark-mode .footer-links a:hover {
+  color: #fff !important;
+}
+body.dark-mode .footer-copy { font-family: 'Inter', sans-serif; font-size: 14px; color: #888888; font-style: normal; letter-spacing: 0.5px; transition: var(--theme-transition); }
+body.dark-mode .support-btn {
+  border-color: #333 !important;
+  color: #aaa !important;
+}
+body.dark-mode .support-btn:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+@media(max-width: 768px) {
+  .search-overlay {
+    padding: 20px 12px;
+  }
+  .search-modal-card {
+    max-height: calc(100vh - 40px);
+  }
+}
+</style>
+
+<header>
+<div class="header-inner">
+  <div class="header-top">
+    <div class="date-line" id="currentDate"></div>
+    <div class="logo-block">
+      <a href="/index.html"><div class="logo-en">Islamic Fiqh Publishing</div></a>
+      <div class="logo-ar" lang="ar" dir="rtl">دار الفقه الإسلامي للنشر والتوزيع والترجمة</div>
+    </div>
+    <div class="header-right">
+      <!-- 🌙 ปุ่มสลับโหมดธีมพรีเมียม -->
+      <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="เปลี่ยนธีม" title="เปลี่ยนธีม (โหมดมืด/สว่าง)"></button>
+      
+      <!-- 🔍 ปุ่มสืบค้นคลังบทความ -->
+      <button class="search-toggle-btn" id="searchToggleBtn" aria-label="ค้นหาบทความ" title="ค้นหาบทความ (กด / หรือคลิก)">
+        <svg class="search-icon-svg" viewBox="0 0 24 24" width="20" height="20">
+          <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+      </button>
+      <div class="menu-toggle" id="mobileMenuBtn">☰</div>
+    </div>
+  </div>
+  <nav id="navMenu">
+    <a href="/index.html" class="nav-item">หน้าแรก</a>
+    <a href="/pages/about.html" class="nav-item">เกี่ยวกับเรา</a>
+    <a href="/pages/kalam.html" class="nav-item">กะลาม / เทววิทยา</a>
+    <a href="/pages/nitisart.html" class="nav-item">นิติศาสตร์</a>
+    <a href="/pages/hadith.html" class="nav-item">หะดีษ</a>
+    <a href="/pages/history.html" class="nav-item">ประวัติศาสตร์</a>
+    <a href="/pages/literature.html" class="nav-item">วรรณกรรม</a>
+  </nav>
+</div>
+</header>
+
+<!-- Search Overlay (Glassmorphic Instant Search Modal) -->
+<div id="searchOverlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Search articles">
+  <div class="search-container">
+    <div class="search-modal-card">
+      <div class="search-modal-header">
+        <span class="search-modal-title">ค้นหาคลังบทความวิชาการ</span>
+        <button id="searchCloseBtn" class="search-close-btn" aria-label="Close search">&times;</button>
+      </div>
+      <div class="search-input-field-wrapper">
+        <span class="search-input-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </span>
+        <input type="text" id="searchInput" class="search-input" placeholder="ค้นหาบทความ เช่น ญิสม์, กะลาม, อัชอะรีย์, นิติศาสตร์..." autocomplete="off" spellcheck="false">
+      </div>
+      <div id="searchResults" class="search-results-list">
+        <div class="search-empty-state">
+          <span class="empty-icon">📖</span>
+          <p>พิมพ์คีย์เวิร์ดเพื่อค้นหาผลงานแปลและบทวิเคราะห์ในระบบ</p>
+          <span class="keyboard-tip">หรือกดปุ่ม <code>/</code> บนคีย์บอร์ดเพื่อเปิดการค้นหาได้ทันที</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

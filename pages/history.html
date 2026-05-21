@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติศาสตร์ – Islamic Fiqh Publishing</title>
+
+<!-- Pre-render Theme Engine: Prevents white flash/FOUC on page load -->
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
+
+<meta name="description" content="ศึกษาเหตุการณ์สำคัญทางประวัติศาสตร์อิสลาม บริบททางสังคมและการเมืองในอดีต ตลอดจนพัฒนาการของอารยธรรมและสถาบันต่างๆ">
+<meta name="keywords" content="ประวัติศาสตร์อิสลาม, อารยธรรมอิสลาม, ประวัติศาสตร์, อิสลาม, Islamic History, Islamic Fiqh Publishing">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ประวัติศาสตร์ — Islamic Fiqh Publishing">
+<meta property="og:description" content="ศึกษาเหตุการณ์สำคัญทางประวัติศาสตร์อิสลาม บริบททางสังคมและการเมืองในอดีต ตลอดจนพัฒนาการของอารยธรรมและสถาบันต่างๆ">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg"> 
+<meta property="og:url" content="https://islamicfiqhpublishing.com/pages/history.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<style>
+/* --- Premium Dynamic Color System (Option B) --- */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #fdfbf7;
+  --text-primary: #0a0a0a;
+  --text-secondary: #555555;
+  --text-tertiary: #666666;
+  --text-quaternary: #888888;
+  --border-primary: #dddddd;
+  --border-secondary: #eeeeee;
+  
+  --accent-color: #8c724b;
+  
+  /* ตัวแปรพิเศษสำหรับคอมโพเนนต์ที่ควรเข้มเสมอ (Inverted Components) */
+  --inverted-bg: #0a0a0a;
+  --inverted-text: #ffffff;
+  --footer-bg: #050505;
+  --footer-border: #222222;
+  
+  /* ตัวแปรสำหรับเงา (Dynamic Shadows) */
+  --shadow-color: rgba(0,0,0,0.15);
+  --shadow-heavy: rgba(0,0,0,0.25);
+  
+  --theme-transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+html.dark-mode {
+  --bg-primary: #121212;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #1d1a15;
+  --text-primary: #e5e5e5;
+  --text-secondary: #a3a3a3;
+  --text-tertiary: #737373;
+  --text-quaternary: #525252;
+  --border-primary: #2d2d2d;
+  --border-secondary: #222222;
+  
+  --accent-color: #cbbba3;
+  
+  /* ในดาร์กโหมด คอมโพเนนต์ที่เข้มอยู่แล้วจะไม่พลิกกลับเป็นสีสว่าง แต่จะปรับโทนให้มีมิติกลมกลืน */
+  --inverted-bg: #222222;
+  --inverted-text: #e5e5e5;
+  --footer-bg: #0a0a0a;
+  --footer-border: #1a1a1a;
+  
+  --shadow-color: rgba(0,0,0,0.4);
+  --shadow-heavy: rgba(0,0,0,0.6);
+}
+
+/* --- 1. สไตล์พื้นฐาน --- */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Sarabun',sans-serif;
+  color:var(--text-primary);
+  background:var(--bg-primary);
+  font-size:16px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  transition:var(--theme-transition);
+}
+a{text-decoration:none;color:inherit;transition:color 0.2s ease;}
+
+/* --- Category Header --- */
+.category-header { max-width: 800px; margin: 64px auto 48px; padding: 0 24px; }
+.category-title { 
+  font-family: 'Sarabun', sans-serif; 
+  font-size: 48px; 
+  font-weight: 700; 
+  margin-bottom: 16px; 
+  border-bottom: 3px solid var(--text-primary); 
+  display: inline-block; 
+  padding-bottom: 8px;
+  transition:var(--theme-transition);
+}
+.category-desc { 
+  font-size: 18px; 
+  color: var(--text-secondary); 
+  line-height: 1.8; 
+  transition:var(--theme-transition);
+}
+
+/* --- Article List (Empty State) --- */
+.article-list { max-width: 800px; margin: 0 auto 80px; padding: 0 24px; }
+.empty-state { text-align: center; padding: 80px 24px; border: 1px dashed var(--border-primary); background: var(--bg-secondary); margin-top: 32px; transition: var(--theme-transition); }
+.empty-icon { font-family: 'Amiri', serif; font-size: 42px; color: var(--border-primary); margin-bottom: 16px; line-height: 1; transition: var(--theme-transition); }
+.empty-title { font-family: 'Sarabun', sans-serif; font-size: 22px; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px; transition: var(--theme-transition); }
+.empty-desc { font-size: 15px; color: var(--text-quaternary); transition: var(--theme-transition); }
+
+/* ========================================== */
+/* CSS สำหรับเมนูและ Footer ที่จะถูกดึงเข้ามา */
+/* ========================================== */
+.topbar { background: var(--inverted-bg); color: var(--inverted-text); text-align: center; font-size: 11px; letter-spacing: 2px; padding: 8px; font-family: 'Inter', sans-serif; text-transform: uppercase; transition: var(--theme-transition); }
+header { padding: 28px 0 0; border-bottom: 2px solid var(--text-primary); position: relative; z-index: 1000; background: var(--bg-primary); transition: var(--theme-transition); }
+.header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; padding-bottom: 18px; border-bottom: 1px solid var(--border-primary); transition: var(--theme-transition); }
+
+.date-line { font-size: 14px; color: var(--text-secondary); font-family: 'Sarabun', sans-serif; font-weight: 500; letter-spacing: 0.5px; width: 180px; transition: var(--theme-transition); }
+.logo-block { text-align: center; flex: 1; }
+.logo-en { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; line-height: 1; color: inherit; }
+.logo-ar { font-family: 'Amiri', serif; font-size: 18px; color: var(--text-secondary); direction: rtl; margin-top: 6px; line-height: 1.5; transition: var(--theme-transition); }
+.header-right { width: 160px; display: flex; justify-content: flex-end; align-items: center; }
+.spacer { width: 100%; }
+
+.menu-toggle { display: none !important; } 
+
+nav { display: flex; justify-content: center; margin-top: 12px; transition: var(--theme-transition); }
+.nav-item { font-size: 13px; font-weight: 500; padding: 10px 20px; color: var(--text-secondary); border-right: 1px solid var(--border-primary); cursor: pointer; transition: var(--theme-transition); }
+.nav-item:first-child { border-left: 1px solid var(--border-primary); }
+.nav-item:hover { color: var(--text-primary); }
+.nav-item.active { color: var(--text-primary); border-bottom: 2px solid var(--text-primary); }
+
+footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40px 0 24px; border-top: 1px solid var(--footer-border); transition: var(--theme-transition); }
+.footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; text-align: center; }
+.footer-logo { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 300; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 1px; color: var(--inverted-text); transition: var(--theme-transition); }
+.footer-ar { font-family: 'Amiri', serif; font-size: 17px; color: var(--text-quaternary); direction: rtl; margin-bottom: 28px; line-height: 1.6; transition: var(--theme-transition); }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--footer-border); transition: var(--theme-transition); }
+.footer-links a { font-size: 13px; color: #bbbbbb; letter-spacing: .5px; transition: var(--theme-transition); text-decoration: none; }
+.footer-links a:hover { color: var(--inverted-text); }
+.footer-copy { font-family: 'Inter', sans-serif; font-size: 14px; color: #888888; font-style: normal; letter-spacing: 0.5px; transition: var(--theme-transition); }
+
+/* --- Back to Top Button --- */
+#backToTopBtn { display: none; position: fixed; bottom: 24px; right: 24px; z-index: 999; padding: 12px; border: 1px solid var(--border-primary); background: var(--bg-primary); color: var(--text-primary); border-radius: 4px; box-shadow: 0 5px 15px var(--shadow-color); cursor: pointer; transition: var(--theme-transition); }
+#backToTopBtn:hover { background: var(--text-primary); color: var(--bg-primary); border-color: var(--text-primary); }
+
+/* --- โหมดมือถือ (Mobile Responsive) --- */
+@media(max-width:768px){
+  .category-title{font-size: 36px;}
+  .logo-en { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; line-height: 1; color: inherit; }
+  .logo-ar { font-size: 14px; }
+  .date-line { display: none; }
+  .header-right { width: auto; }
+  .spacer { display: none; }
+  
+  .menu-toggle { 
+    display: block !important; 
+    font-size: 24px; 
+    cursor: pointer; 
+    color: var(--text-primary); 
+    transition:var(--theme-transition);
+  }
+  nav { 
+    display: none; 
+    flex-direction: column; 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    width: 100%; 
+    background: var(--bg-primary); 
+    box-shadow: 0 10px 20px var(--shadow-color); 
+    margin-top: 0;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--text-primary);
+    transition:var(--theme-transition);
+  }
+  nav.mobile-active { display: flex; } 
+  .nav-item { 
+    border: none !important; 
+    border-bottom: 1px solid var(--border-secondary) !important; 
+    padding: 16px 24px; 
+    font-size: 16px; 
+    text-align: left; 
+  }
+  .nav-item:last-child { border-bottom: none !important; }
+  .nav-item.active { background: var(--bg-secondary); border-bottom: 1px solid var(--border-secondary) !important; border-left: 4px solid var(--text-primary) !important; }
+}
+</style>
+</head>
+<body lang="th">
+
+<div id="header-placeholder"></div>
+
+<button onclick="window.scrollTo({top:0, behavior:'smooth'})" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<main>
+  <section class="category-header">
+    <h1 class="category-title">ประวัติศาสตร์</h1>
+    <p class="category-desc">ศึกษาเหตุการณ์สำคัญทางประวัติศาสตร์อิสลาม บริบททางสังคมและการเมืองในอดีต ตลอดจนพัฒนาการของอารยธรรมและสถาบันต่างๆ</p>
+  </section>
+
+  <section class="article-list">
+    <div class="empty-state">
+      <div class="empty-icon">ت</div>
+      <h2 class="empty-title">กำลังจัดเตรียมเนื้อหา</h2>
+      <p class="empty-desc">กองบรรณาธิการกำลังอยู่ระหว่างการแปลและเรียบเรียงบทความในหมวดหมู่นี้<br>โปรดติดตามผลงานวิชาการของเราในเร็วๆ นี้</p>
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+window.addEventListener("scroll", function() {
+  var topButton = document.getElementById("backToTopBtn");
+  if (topButton) {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      topButton.style.display = "block";
+    } else {
+      topButton.style.display = "none";
+    }
+  }
+});
+</script>
+
+<script src="/main.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

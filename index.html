@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คลังบทความวิชาการอิสลาม – Islamic Fiqh Publishing</title>
+
+<link rel="icon" href="/favicon.png" type="image/png">
+
+<meta name="description" content="สำนักพิมพ์ที่มุ่งมั่นนำเสนอผลงานแปลและบทวิเคราะห์ทางนิติศาสตร์, เทววิทยา, หะดีษ, ประวัติศาสตร์และการเมืองในอิสลาม">
+<meta name="keywords" content="อิสลาม, นิติศาสตร์อิสลาม, ฟิกฮ์, กะลาม, ประวัติศาสตร์อิสลาม, หนังสืออิสลาม, Islamic Fiqh">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="Islamic Fiqh Publishing">
+<meta property="og:description" content="สืบสานมรดกทางวิชาการ เชื่อมโยงอดีตสู่ความเข้าใจในปัจจุบัน สำรวจคลังบทความและผลงานแปลคลาสสิกได้ที่นี่">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg"> 
+<meta property="og:url" content="https://islamicfiqhpublishing.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<script>
+  // บังคับเปลี่ยนคลาสความมืดทันทีที่บราวเซอร์เริ่มแกะโค้ด (ป้องกันการกะพริบ)
+  (function() {
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && prefersDark)) {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
+
+<style>
+/* - ตัวแปรระบบสีระดับพรีเมียม (CSS Variables) - */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #fdfbf7;
+  --text-primary: #0a0a0a;
+  --text-secondary: #555555;
+  --text-tertiary: #666666;
+  --text-quaternary: #888888;
+  --border-primary: #dddddd;
+  --border-secondary: #eeeeee;
+  
+  /* ตัวแปรพิเศษสำหรับคอมโพเนนต์ที่ควรเข้มเสมอ (Inverted Components) */
+  --inverted-bg: #0a0a0a;
+  --inverted-text: #ffffff;
+  --footer-bg: #050505;
+  --footer-border: #222222;
+  
+  /* ตัวแปรสำหรับเงา (Dynamic Shadows) */
+  --shadow-color: rgba(0,0,0,0.15);
+  --shadow-heavy: rgba(0,0,0,0.25);
+  
+  --theme-transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* ชุดสีดาร์กโหมดสไตล์วิชาการระดับพรีเมียมเมื่อมีคลาส .dark-mode */
+html.dark-mode {
+  --bg-primary: #121212;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #1d1a15; /* สีโทนดาร์กอมส้มอิฐโบราณ สบายตาและมีเอกลักษณ์ */
+  --text-primary: #e5e5e5;
+  --text-secondary: #a3a3a3;
+  --text-tertiary: #737373;
+  --text-quaternary: #525252;
+  --border-primary: #2d2d2d;
+  --border-secondary: #222222;
+  
+  /* ในดาร์กโหมด คอมโพเนนต์ที่เข้มอยู่แล้วจะไม่พลิกกลับเป็นสีสว่าง แต่จะปรับโทนให้มีมิติกลมกลืน */
+  --inverted-bg: #222222;
+  --inverted-text: #e5e5e5;
+  --footer-bg: #0a0a0a;
+  --footer-border: #1a1a1a;
+  
+  --shadow-color: rgba(0,0,0,0.4);
+  --shadow-heavy: rgba(0,0,0,0.6);
+}
+
+/* - สไตล์พื้นฐานของหน้าเว็บ - */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Sarabun', sans-serif; color: var(--text-primary); background: var(--bg-primary); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; transition: var(--theme-transition); }
+a { text-decoration: none; color: inherit; transition: color 0.2s ease; }
+
+/* - แอนิเมชันลอยขึ้น (Scroll Reveal) - */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* - วาทะปราชญ์ประจำวัน (Quote of the Day) - */
+.daily-quote-wrapper { max-width: 800px; margin: 60px auto 40px; padding: 0 24px; }
+.daily-quote { background: var(--bg-tertiary); border: 1px solid var(--border-primary); border-left: 4px solid var(--text-primary); padding: 32px 32px 32px 64px; text-align: center; position: relative; transition: var(--theme-transition); }
+.quote-icon { font-family: 'Inter', sans-serif; font-size: 60px; color: var(--border-primary); line-height: 0; position: absolute; top: 30px; left: 20px; transition: var(--theme-transition); }
+.quote-text-ar { font-family: 'Amiri', serif; font-size: 24px; color: var(--text-primary); margin-bottom: 20px; line-height: 2; transition: var(--theme-transition); }
+.quote-text-th { font-family: 'Sarabun', sans-serif; font-size: 16px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.8; font-style: italic; transition: var(--theme-transition); }
+.quote-author { font-size: 14px; color: var(--text-tertiary); margin-top: 8px; font-weight: 500; transition: var(--theme-transition); }
+
+/* - ส่วนแสดงแอปพลิเคชันหน้า Index - */
+.index-tools-wrapper { max-width: 1100px; margin: 0 auto 60px; padding: 0 24px; }
+.index-tools-header { font-size: 14px; font-weight: 600; color: var(--text-primary); border-bottom: 2px solid var(--text-primary); padding-bottom: 8px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; transition: var(--theme-transition); }
+.view-all-tools { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; transition: color 0.2s; }
+.view-all-tools:hover { color: var(--text-primary); text-decoration: none; }
+
+.index-tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.index-tool-card { background: var(--inverted-bg); color: var(--inverted-text); border-radius: 8px; padding: 30px; display: flex; align-items: center; gap: 20px; transition: var(--theme-transition); text-decoration: none; }
+.index-tool-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px var(--shadow-heavy); color: var(--inverted-text); }
+
+.index-tool-card.coming-soon { background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-primary); }
+.index-tool-card.coming-soon:hover { transform: translateY(-5px); box-shadow: 0 10px 20px var(--shadow-color); color: var(--text-primary); }
+
+.index-tool-icon { font-size: 40px; line-height: 1; }
+.index-tool-info h3 { font-family: 'Sarabun', sans-serif; font-size: 20px; margin-bottom: 4px; font-weight: 700; transition: var(--theme-transition); }
+.index-tool-info p { font-size: 13px; opacity: 0.8; line-height: 1.5; margin-bottom: 0; transition: var(--theme-transition); }
+.index-tool-badge { display: inline-block; padding: 2px 8px; font-size: 10px; font-weight: 600; background: rgba(255,255,255,0.2); border-radius: 12px; margin-bottom: 8px; letter-spacing: 1px; transition: var(--theme-transition); }
+.index-tool-card.coming-soon .index-tool-badge { background: var(--border-primary); color: var(--text-secondary); }
+
+/* - ส่วนแสดงผลลัพธ์บทความ (Results Grid) - */
+.results-container { max-width: 1100px; margin: 0 auto 80px; padding: 0 24px; }
+.results-header { font-size: 14px; font-weight: 600; color: var(--text-primary); border-bottom: 2px solid var(--text-primary); padding-bottom: 8px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; transition: var(--theme-transition); }
+
+.article-list { display: flex; flex-direction: column; gap: 24px; }
+.article-item { border: 1px solid transparent; border-bottom: 1px solid var(--border-primary); padding: 24px; display: flex; flex-direction: column; gap: 8px; border-radius: 8px; transition: var(--theme-transition); position: relative; }
+.article-item:hover { border-color: var(--border-secondary); box-shadow: 0 10px 30px var(--shadow-color); transform: translateY(-3px); background: var(--bg-secondary); border-bottom-color: transparent; }
+.article-item:last-child { border-bottom: 1px solid transparent; }
+
+.item-cat { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--text-secondary); transition: var(--theme-transition); }
+.item-title { font-family: 'Sarabun', sans-serif; font-size: 24px; font-weight: 700; color: var(--text-primary); line-height: 1.4; transition: color 0.2s; }
+.item-title:hover { color: var(--text-secondary); text-decoration: none; }
+.item-excerpt { font-size: 15px; color: var(--text-tertiary); line-height: 1.6; transition: var(--theme-transition); }
+.item-meta { font-size: 12px; color: var(--text-quaternary); display: flex; justify-content: space-between; align-items: center; transition: var(--theme-transition); }
+.read-more-link { font-size: 13px; font-weight: 600; color: var(--text-primary); opacity: 0; transform: translateX(-10px); transition: all 0.3s ease; }
+.article-item:hover .read-more-link { opacity: 1; transform: translateX(0); }
+.article-link { text-decoration: none; color: inherit; display: block; }
+
+/* ========================================== */
+/* CSS สำหรับเมนูและ Footer ที่จะถูกดึงเข้ามา */
+/* ========================================== */
+.topbar { background: var(--inverted-bg); color: var(--inverted-text); text-align: center; font-size: 11px; letter-spacing: 2px; padding: 8px; font-family: 'Inter', sans-serif; text-transform: uppercase; transition: var(--theme-transition); }
+header { padding: 28px 0 0; border-bottom: 2px solid var(--text-primary); position: relative; z-index: 1000; background: var(--bg-primary); transition: var(--theme-transition); }
+.header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; padding-bottom: 18px; border-bottom: 1px solid var(--border-primary); transition: var(--theme-transition); }
+
+.date-line { font-size: 14px; color: var(--text-secondary); font-family: 'Sarabun', sans-serif; font-weight: 500; letter-spacing: 0.5px; width: 180px; transition: var(--theme-transition); }
+.logo-block { text-align: center; flex: 1; }
+.logo-en { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; line-height: 1; color: inherit; }
+.logo-ar { font-family: 'Amiri', serif; font-size: 18px; color: var(--text-secondary); direction: rtl; margin-top: 6px; line-height: 1.5; transition: var(--theme-transition); }
+.header-right { width: 160px; display: flex; justify-content: flex-end; align-items: center; }
+.spacer { width: 100%; }
+
+.menu-toggle { display: none !important; } 
+
+nav { display: flex; justify-content: center; margin-top: 12px; transition: var(--theme-transition); }
+.nav-item { font-size: 13px; font-weight: 500; padding: 10px 20px; color: var(--text-secondary); border-right: 1px solid var(--border-primary); cursor: pointer; transition: var(--theme-transition); }
+.nav-item:first-child { border-left: 1px solid var(--border-primary); }
+.nav-item:hover { color: var(--text-primary); }
+.nav-item.active { color: var(--text-primary); border-bottom: 2px solid var(--text-primary); }
+
+footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40px 0 24px; border-top: 1px solid var(--footer-border); transition: var(--theme-transition); }
+.footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; text-align: center; }
+.footer-logo { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 300; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 1px; color: var(--inverted-text); transition: var(--theme-transition); }
+.footer-ar { font-family: 'Amiri', serif; font-size: 17px; color: var(--text-quaternary); direction: rtl; margin-bottom: 28px; line-height: 1.6; transition: var(--theme-transition); }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--footer-border); transition: var(--theme-transition); }
+.footer-links a { font-size: 13px; color: #bbbbbb; letter-spacing: .5px; transition: var(--theme-transition); text-decoration: none; }
+.footer-links a:hover { color: var(--inverted-text); }
+.footer-copy { font-family: 'Inter', sans-serif; font-size: 14px; color: #888888; font-style: normal; letter-spacing: 0.5px; transition: var(--theme-transition); }
+
+/* --- Back to Top Button --- */
+#backToTopBtn { display: none; position: fixed; bottom: 24px; right: 24px; z-index: 999; padding: 12px; border: 1px solid var(--border-primary); background: var(--bg-primary); color: var(--text-primary); border-radius: 4px; box-shadow: 0 5px 15px var(--shadow-color); cursor: pointer; transition: var(--theme-transition); }
+#backToTopBtn:hover { background: var(--text-primary); color: var(--bg-primary); border-color: var(--text-primary); }
+
+/* โหมดมือถือ */
+@media(max-width:768px){
+  .logo-en { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; line-height: 1; color: inherit; }
+  .logo-ar { font-size: 14px; }
+  .date-line { display: none; } 
+  .header-right { width: auto; }
+  .spacer { display: none; }
+  
+  .menu-toggle { display: block !important; font-size: 28px; cursor: pointer; color: var(--text-primary); user-select: none; transition: var(--theme-transition); } 
+  
+  nav { 
+    display: none; 
+    flex-direction: column; 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    width: 100%; 
+    background: var(--bg-primary); 
+    box-shadow: 0 10px 20px var(--shadow-color); 
+    margin-top: 0;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--text-primary);
+    transition: var(--theme-transition);
+  }
+  nav.mobile-active { display: flex; } 
+  .nav-item { border: none !important; border-bottom: 1px solid var(--border-secondary) !important; padding: 16px 24px; font-size: 16px; text-align: left; }
+  .nav-item:last-child { border-bottom: none !important; }
+  .nav-item.active { background: var(--bg-secondary); border-bottom: 1px solid var(--border-secondary) !important; border-left: 4px solid var(--text-primary) !important; }
+  
+  .quote-text-ar { font-size: 20px; }
+  .daily-quote { padding: 24px; }
+  .quote-icon { position: static; display: block; margin-bottom: 10px; }
+  .article-item { padding: 16px 0; }
+  .article-item:hover { box-shadow: none; transform: none; background: transparent; border-bottom: 1px solid var(--border-primary); }
+  .read-more-link { display: none; } 
+}
+</style>
+</head>
+<body lang="th">
+
+<div id="header-placeholder"></div>
+
+<button onclick="window.scrollTo({top:0, behavior:'smooth'})" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<main id="main-content">
+
+  <section class="daily-quote-wrapper reveal">
+    <div class="daily-quote">
+      <span class="quote-icon">"</span>
+      <div id="quoteAr" class="quote-text-ar" lang="ar" dir="rtl"></div>
+      <div id="quoteTh" class="quote-text-th"></div>
+      <div id="quoteAuthor" class="quote-author"></div>
+    </div>
+  </section>
+
+  <section class="index-tools-wrapper reveal">
+    <div class="index-tools-header">
+      <span>แอปพลิเคชันของเรา</span>
+      <a href="pages/tools.html" class="view-all-tools">ดูเครื่องมือทั้งหมด ➔</a>
+    </div>
+
+    <div class="index-tools-grid">
+      <a href="pages/tools.html" class="index-tool-card coming-soon">
+        <div class="index-tool-icon">⏳</div>
+        <div class="index-tool-info">
+          <span class="index-tool-badge">กำลังพัฒนา</span>
+          <h3>Hijri Time Machine</h3>
+          <p>สำรวจไทม์ไลน์ประวัติศาสตร์อิสลามผ่านปฏิทินฮิจเราะฮ์</p>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  <section class="results-container reveal">
+    <div class="results-header">
+      <span>บทความล่าสุด</span>
+    </div>
+    
+    <div class="article-list" id="articleList">
+      
+      <a href="articles/kalam/concept-of-jism-in-islamic-theology.html" class="article-link">
+        <article class="article-item">
+          <span class="item-cat">กะลาม / เทววิทยา</span>
+          <h2 class="item-title">สารัตถะของคำว่า “ญิสม์” ในวิชากะลาม</h2>
+          <p class="item-excerpt">บทวิเคราะห์เชิงลึกถอดรหัส 12 ทัศนะว่าด้วยคำนิยามของคำว่า ญิสม์ (มวลวัตถุ) จากหนังสือมะกอลาต อัลอิสลามิยีน ของท่านอิหม่ามอบุลหะสัน อัลอัชอะรีย์ เราะหิมะฮุลลอฮ์ (เสียชีวิตปี ฮ.ศ. 324 / ค.ศ. 936) เพื่อการขีดเส้นแบ่งคุณลักษณะของสิ่งถูกสร้างและปกป้องหลักการตันซีฮ์</p>
+          <div class="item-meta">
+            <span>มัรกัส อัลอิมาม อัลอัชอะรีย์ · 18 พ.ค. 2569</span>
+            <span class="read-more-link">อ่านบทความ ➔</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="articles/kalam/subki-nuniyyah-ashari-maturidi.html" class="article-link">
+        <article class="article-item">
+          <span class="item-cat">กะลาม / เทววิทยา</span>
+          <h2 class="item-title">ประเด็นข้อขัดแย้งระหว่างสายอัชอะรีย์และหะนะฟีย์จากบทกวีนูนียะฮ์ของตาญุดดีน อัศศุบกีย์</h2>
+          <p class="item-excerpt">สำรวจคลังบรรณานุกรมเทววิทยาซุนนีย์ แยกแยะข้อขัดแย้ง 13 ประเด็นระหว่างสำนักคิดอัชอะรีย์และมาตูรีดียะฮ์ จากผลงานของตาญุดดีน อัศศุบกีย์ เราะหิมะฮุลลอฮ์ (เสียชีวิตปี ฮ.ศ. 771 / ค.ศ. 1370) ทั้งในเชิงสำนวนภาษาและเชิงเนื้อหาอุดมการณ์ สู่ยุทธศาสตร์สร้างเอกภาพเพื่อพิทักษ์แนวคิดอะฮ์ลุซซุนนะฮ์</p>
+          <div class="item-meta">
+            <span>มัรกัส อัลอิมาม อัลอัชอะรีย์ · 18 พ.ค. 2569</span>
+            <span class="read-more-link">อ่านบทความ ➔</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="articles/kalam/jawhar-al-fard-indivisible-particle.html" class="article-link">
+        <article class="article-item">
+          <span class="item-cat">กะลาม / เทววิทยา</span>
+          <h2 class="item-title">เญาฮัร อัลฟัรด์: อนุภาคที่แบ่งแยกไม่ได้ในหลักความเชื่ออิสลาม</h2>
+          <p class="item-excerpt">คลี่คลายศัพท์เทคนิคทางเทววิทยาอิสลาม สำรวจสถาปัตยกรรมความคิดว่าด้วยจักรวาลที่มีขีดจำกัดและนับจำนวนได้ตามตัวบทหลักฐานทางสติปัญญา ตัวบทอัลกุรอาน และมติเอกฉันท์ (อิจมาอ์)</p>
+          <div class="item-meta">
+            <span>มัรกัส อัลอิมาม อัลอัชอะรีย์ · 18 พ.ค. 2569</span>
+            <span class="read-more-link">อ่านบทความ ➔</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="articles/kalam/did-al-ghazali-abandon-kalam.html" class="article-link">
+        <article class="article-item">
+          <span class="item-cat">กะลาม / เทววิทยา</span>
+          <h2 class="item-title">อิหม่ามอัลเฆาะซาลีย์หันหลังให้ ‘อิลมุลกะลาม’ และประณามมันจริงหรือ?</h2>
+          <p class="item-excerpt">สำรวจและตรวจสอบความจริงเชิงญาณวิทยาในระเบียบวิธีคิดของท่านอิหม่ามอัลเฆาะซาลีย์ เราะหิมะฮุลลอฮ์ (เสียชีวิตปี ฮ.ศ. 505 / ค.ศ. 1111) ผ่านการสืบค้นคลังหนังสือแม่บทอย่างหนังสืออิห์ยาอ์ อุลูมิดดีน, หนังสืออัลมุสตัศฟา และคลังฟัตวาก่อนเสียชีวิตเพื่อหักล้างข้อกล่าวหาบิดเบือน</p>
+          <div class="item-meta">
+            <span>มัรกัส อัลอิมาม อัลอัชอะรีย์ · 18 พ.ค. 2569</span>
+            <span class="read-more-link">อ่านบทความ ➔</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="articles/nitisart/asabiyyah-and-fanaticism.html" class="article-link">
+        <article class="article-item">
+          <span class="item-cat">สังคมศาสตร์อิสลาม</span>
+          <h2 class="item-title">อะศอบียะฮ์: ความคลั่งไคล้ที่ผิดเพี้ยนและตรรกะแห่ง “เผ่า” ในสังคมร่วมสมัย</h2>
+          <p class="item-excerpt">บทวิเคราะห์เชิงนิติศาสตร์ มานุษยวิทยา และปรัชญาการเมืองว่าด้วยระบบพวกรวมกลุ่ม (อัลอะศอบียะฮ์) จากทฤษฎีสร้างรัฐของอิบนุ ค็อลดูน เราะหิมะฮุลลอฮ์ (เสียชีวิตปี ฮ.ศ. 808 / ค.ศ. 1406) สู่ปรากฏการณ์ความคลั่งไคล้แบ่งแยกขั้วในระบอบดิจิทัลร่วมสมัย</p>
+          <div class="item-meta">
+            <span>กองบรรณาธิการ · 18 พ.ค. 2569</span>
+            <span class="read-more-link">อ่านบทความ ➔</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="articles/nitisart/conjoined-twins-in-islamic-law.html" class="article-link">
+        <article class="article-item">
+          <span class="item-cat">นิติศาสตร์อิสลาม</span>
+          <h2 class="item-title">ประเด็นน่ารู้กับแฝดสยามในมุมมองฟิกฮ์อิสลาม</h2>
+          <p class="item-excerpt">บทวิเคราะห์เชิงประวัติศาสตร์และนิติศาสตร์อิสลามว่าด้วยแฝดสยาม (ฝาแฝดที่มีตัวติดกัน) สำรวจสถานะภาพบุคคล ศาสนพิธีการอาบน้ำละหมาด การละหมาด การสมรส และการจัดการศพตามทรรศนะคลาสสิก</p>
+          <div class="item-meta">
+            <span>กองบรรณาธิการ · 18 พ.ค. 2569</span>
+            <span class="read-more-link">อ่านบทความ ➔</span>
+          </div>
+        </article>
+      </a>
+
+      <a href="articles/nitisart/moon-sighting-vs-astronomy.html" class="article-link">
+        <article class="article-item">
+          <span class="item-cat">นิติศาสตร์อิสลาม</span>
+          <h2 class="item-title">เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์</h2>
+          <p class="item-excerpt">ปัญหาว่าด้วยความสัมพันธ์ระหว่าง “การดูจันทร์เสี้ยวด้วยสายตา” กับ “การคำนวณทางดาราศาสตร์” ถือเป็นหนึ่งในประเด็นนิติศาสตร์อิสลามที่มีการถกเถียงกันอย่างยาวนานตลอดหลายศตวรรษ</p>
+          <div class="item-meta">
+            <span>กองบรรณาธิการ · 15 พ.ค. 2569</span>
+            <span class="read-more-link">อ่านบทความ ➔</span>
+          </div>
+        </article>
+      </a>
+
+    </div>
+
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+// - สคริปต์สุ่มวาทะปราชญ์ (Quote of the Day) -
+const quotes = [
+  {
+    ar: "يُرِيدُ الْمَرْءُ أَنْ يُعْطَى مُنَاهُ<br>وَيَأْبَى اللَّهُ إِلَّا مَا أَرَادَا<br>يَقُولُ الْمَرْءُ فَائِدَتِي وَوَمَالِي<br>وَتَقْوَى اللَّهِ أَفْضَلُ مَا اسْتَفَادَا",
+    th: "“มนุษย์ใฝ่ปรารถนาสิ่งที่ตนต้องการ<br>ทว่า พระผู้ทรงอภิบาลย่อมทรงลิขิตตามพระประสงค์<br><br>เขาพร่ำพรรณนาแต่ประโยชน์และทรัพย์สินของตน<br>ทว่าความยำเกรงต่อพระผู้ทรงสูงส่งคือทรัพย์สมบัติอันล้ำเลิศที่สุดที่เขาจะได้ครอบครอง”",
+    author: "- อิหม่ามอัชชาฟิอีย์ เราะหิมะฮุลลอฮ์ (เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820)"
+  },
+  {
+    ar: "وَمَا الْحُبُّ إِلَّا طَاعَةٌ وَتَجَاوُزٌ<br>إِنْ أَكْثَرُوا أَوْصَافَهُ وَالْمَعَانِيَا<br>وَمَا هُوَ إِلَّا الْعَيْنُ بِالْعَيْنِ تَلْتَقِي<br>وَإِنْ نَوَّعُوا أَسْبَابَهُ وَالدَّوَاعِيَا",
+    th: "“ความรักไม่ใช่อะไรเลย นอกจากการยอมจำนน และการก้าวข้ามขีดจำกัดของหัวใจตนเอง<br>แม้ผู้คนจะพร่ำพรรณนามันด้วยถ้อยคำและนิยามมากมายเพียงใดก็ตาม<br><br>และความรักก็เป็นเพียงวินาทีที่ดวงตาสองคู่ประสานกัน<br>แม้นผู้คนจะพยายามจำแนกแจกแจงถึงสาเหตุและแรงจูงใจของความรักให้หลากหลายเพียงใดก็ตาม”",
+    author: "- ญะลาลุดดีน อัรรูมีย์ เราะหิมะฮุลลอฮ์ (เสียชีวิตปี ฮ.ศ. 672 / ค.ศ. 1273)"
+  },
+  {
+    ar: "الْأَصْلُ فِي الْأَشْيَاءِ الْإِبَاحَةُ",
+    th: "“พื้นฐานเดิมของสิ่งต่างๆ นั้น เป็นที่อนุญาต”",
+    author: "- กฎเกณฑ์นิติศาสตร์อิสลาม"
+  },
+  {
+    ar: "نَحْنُ بِتَأْييدِ السُّنَنِ أَوْلَى مِنْ تَشْيِيدِ الْفِتَنِ",
+    th: "“เราย่อมสมควรให้การสนับสนุนซุนนะฮ์ มากกว่าการเป็นผู้ก่อร่างสร้างฟิตนะฮ์”",
+    author: "- นิซอม อัลมุลก์ เราะหิมะฮุลลอฮ์ (เสียชีวิตปี ฮ.ศ. 485 / ค.ศ. 1092)"
+  },
+  {
+    ar: "مَا جَادَلْتُ جَاهِلاً إِلَّا غَلَبَنِي",
+    th: "“ฉันไม่เคยโต้เถียงกับคนโง่เขลาคนใด เว้นแต่เขาจะเป็นฝ่ายเอาชนะฉันได้เสมอ”",
+    author: "- อิหม่ามอัชชาฟิอีย์ เราะหิมะฮุลลอฮ์ (เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820)"
+  },
+  {
+    ar: "دَرْءُ الْمَفَاسِدِ أَوْلَى مِنْ جَلْبِ الْمَصَالِحِ",
+    th: "“การป้องกันความเสียหาย ย่อมสำคัญกว่าการแสวงหาผลประโยชน์”",
+    author: "- กฎเกณฑ์นิติศาสตร์อิสลาม"
+  }
+];
+
+const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+document.getElementById('quoteAr').innerHTML = randomQuote.ar;
+document.getElementById('quoteTh').innerHTML = randomQuote.th;
+document.getElementById('quoteAuthor').innerHTML = randomQuote.author;
+
+// - สคริปต์แอนิเมชันตอนเลื่อนจอ -
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal);
+reveal(); 
+
+// - สคริปต์ควบคุมปุ่มกลับด้านบนสุด (Back to Top) -
+window.addEventListener("scroll", function() {
+  var topButton = document.getElementById("backToTopBtn");
+  if (topButton) {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      topButton.style.display = "block";
+    } else {
+      topButton.style.display = "none";
+    }
+  }
+});
+</script>
+
+<script src="/main.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
