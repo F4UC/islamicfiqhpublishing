@@ -33,95 +33,158 @@
 
 <style>
 /* ----------------------------------------------------------------------
-   STRUCTURE & TYPOGRAPHY STANDARDS (THE 40 CODE CHARTERS)
+   STRUCTURE & TYPOGRAPHY STANDARDS (THE 38 CODE CHARTERS)
 ------------------------------------------------------------------------- */
-body {
-    position: relative;
+body { position: relative; }
+
+/* - Fallback ตัวแปรสีสำหรับรองรับ Dark/Light Mode หากใน article.css หายไป - */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #fdfbf7;
+    --border-color: #eaeaea;
+    --text-primary: #0a0a0a;
+    --text-secondary: #555555;
+    --text-tertiary: #888888;
+    --accent-color: #c49a45;
+    --accent-hover: #a37c35;
+}
+.dark-mode {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --border-color: #333333;
+    --text-primary: #f0f0f0;
+    --text-secondary: #cccccc;
+    --text-tertiary: #999999;
+    --accent-color: #d4af37;
+    --accent-hover: #f1cd56;
 }
 
 /* แถบอัปเดตการเรนเดอร์ระดับความลึกในการอ่าน */
 #readingProgressBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 4px;
-    background: var(--accent-color, #c49a45);
-    z-index: 9999;
-    transition: width 0.1s ease-out;
+    position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+    background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
 }
 
+/* แก้ไขปัญหาช่องไฟภาษาไทยห่างเกินไป (ลบ justify ออก) */
 .article-body p, .lead-text {
     line-height: 2.0;
     margin-bottom: 24px;
-    text-align: justify;
+    text-align: left; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* อักขรวิธีและการบาลานซ์ทิศทางตัวบทอาหรับระดับ Inline & Block */
 .ar {
-    font-family: 'Amiri', serif;
-    font-size: 1.35em;
-    line-height: 1.6;
-    direction: rtl;
-    unicode-bidi: isolate;
+    font-family: 'Amiri', serif; font-size: 1.35em; line-height: 1.6;
+    direction: rtl; unicode-bidi: isolate;
 }
 
-/* บลกล็อกอ้างอิงและพื้นที่ปลอดภัยทางสถาปัตยกรรม (ขจัดปัญหากรอบชนกัน) */
+/* บล็อกอ้างอิงและพื้นที่ปลอดภัยทางสถาปัตยกรรม */
 blockquote[lang="ar"], .fiqh-principle, .hadith-block, .quote-container {
-    padding: 30px 35px;
-    margin: 35px 0;
-    border-right: 4px solid var(--accent-color, #c49a45);
-    background-color: var(--bg-secondary, #fdfbf7);
-    border-radius: 8px 0 0 8px;
-    color: var(--text-primary, #0a0a0a);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; /* สร้างช่องไฟปลอดภัยระหว่างบล็อกข้อความ */
+    padding: 30px 35px; margin: 35px 0;
+    border-right: 4px solid var(--accent-color);
+    background-color: var(--bg-secondary);
+    border-radius: 12px 0 0 12px;
+    color: var(--text-primary);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
 }
-
-/* ตัวบทอาหรับภายในบล็อกอ้างอิง ให้จัดกึ่งกลางและเว้นสเปซที่ถูกต้อง */
 blockquote[lang="ar"] .ar, .hadith-block .ar, .quote-container .ar {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 10px;
+    text-align: center; width: 100%; margin-bottom: 10px;
 }
-
-/* คำแปลภาษาไทยใต้ตัวบทอาหรับในกล่อง */
 .thai-quote {
-    font-family: 'Sarabun', sans-serif;
-    font-style: italic;
-    color: var(--text-tertiary, #555);
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.8;
-    width: 100%;
-    margin-top: 0;
+    font-family: 'Sarabun', sans-serif; font-style: italic; color: var(--text-secondary);
+    text-align: center; font-size: 16px; line-height: 1.8; width: 100%; margin-top: 0;
 }
 
-/* แจ้งเตือนคัดลอกลิงก์สำเร็จ (Fix Toast Notification Layout) */
+/* ----------------------------------------------------------------------
+   PREMIUM TOC (กล่องสารบัญ) & CITATION BOX (กล่องอ้างอิง)
+------------------------------------------------------------------------- */
+/* 1. สารบัญอัจฉริยะ (TOC) */
+.toc-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    border-top: 4px solid var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 100px; /* เกาะติดจอด้านบนเมื่อเลื่อนลง (Desktop) */
+    transition: all 0.3s ease;
+}
+.toc-title {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 18px; font-weight: 700; color: var(--text-primary);
+    margin-bottom: 16px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex; align-items: center; gap: 8px;
+}
+.toc-title::before { content: '📋'; font-size: 16px; }
+.toc-nav a {
+    display: block; font-size: 14px; font-weight: 500; color: var(--text-secondary);
+    padding: 10px 0; border-bottom: 1px dashed var(--border-color);
+    transition: all 0.2s ease; text-decoration: none;
+}
+.toc-nav a:last-child { border-bottom: none; padding-bottom: 0; }
+.toc-nav a:hover {
+    color: var(--accent-color);
+    padding-left: 8px; /* เลื่อนขวาเล็กน้อยเมื่อ Hover ดูลูกเล่นแพงๆ */
+}
+
+/* 2. กล่องอ้างอิง (Citation Box) */
+.citation-box {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin: 40px 0;
+    display: flex; flex-direction: column; gap: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    position: relative; overflow: hidden;
+}
+/* ลายน้ำ Quote Mark ใหญ่ๆ จางๆ ตรงมุมขวาบน */
+.citation-box::after {
+    content: '❝'; position: absolute; top: -15px; right: 20px;
+    font-size: 100px; color: var(--accent-color); opacity: 0.08;
+    font-family: 'Cormorant Garamond', serif; line-height: 1; pointer-events: none;
+}
+.citation-text {
+    font-size: 14px; line-height: 1.8; color: var(--text-secondary);
+    font-family: 'Inter', 'Sarabun', sans-serif;
+    word-break: break-word; position: relative; z-index: 1;
+}
+.copy-btn {
+    align-self: flex-start;
+    background: var(--text-primary); color: var(--bg-primary);
+    border: 1px solid transparent; padding: 10px 24px; border-radius: 6px;
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    transition: all 0.2s ease; font-family: 'Sarabun', sans-serif; z-index: 1;
+    display: flex; align-items: center; gap: 8px;
+}
+.copy-btn::before { content: '📄'; }
+.copy-btn:hover {
+    background: var(--accent-color); color: #fff;
+    transform: translateY(-2px); box-shadow: 0 6px 15px rgba(196, 154, 69, 0.2);
+}
+
+/* แจ้งเตือนคัดลอกลิงก์สำเร็จ */
 .copy-alert {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%) translateY(30px);
-    background: #0a0a0a;
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 500;
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+    background: var(--text-primary); color: var(--bg-primary);
+    padding: 12px 30px; border-radius: 30px; font-size: 14px; font-weight: 600;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 10000;
+    opacity: 0; visibility: hidden; z-index: 10000;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.copy-alert.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* การแสดงผลบนมือถือ */
+@media(max-width:768px){
+    .toc-container { position: static; margin-bottom: 30px; }
+    .citation-box { padding: 20px; }
+    .citation-box::after { font-size: 70px; right: 10px; top: -5px; }
+    .copy-btn { width: 100%; justify-content: center; }
 }
 </style>
 </head>
@@ -160,7 +223,7 @@ blockquote[lang="ar"] .ar, .hadith-block .ar, .quote-container .ar {
 
       <p class="lead-text">ปัญหาว่าด้วยความสัมพันธ์ระหว่าง “การดูจันทร์เสี้ยวด้วยสายตา” กับ “การคำนวณทางดาราศาสตร์” ถือเป็นหนึ่งในประเด็นนิติศาสตร์อิสลามที่มีการถกเถียงกันอย่างยาวนานตลอดหลายศตวรรษ นับตั้งแต่ยุคบรรดาสลัฟจนถึงยุคร่วมสมัย เนื่องจากการกำหนดวันเข้าเดือนใหม่ทางจันทรคตินั้นส่งผลโดยตรงต่อข้อบัญญัติทางศาสนามากมาย ตั้งแต่การเริ่มต้นถือศีลอดเดือนรอมฎอน การออกอีด การทำฮัจญ์ ไปจนถึงการนับระยะเวลาอิดดะฮ์และการชำระหนี้</p>
 
-      <p>ฐานหลักของชะรีอะฮ์ในประเด็นนี้คือหะดีษที่ว่า “จงถือศีลอดเมื่อเห็นมัน (จันทร์เสี้ยว) และจงออกอีดเมื่อเห็นมัน” ซึ่งวางรากฐานให้ “การมองเห็นด้วยตาเปล่า” เป็นเกณฑ์ในการเข้าเดือนใหม่ อย่างไรก็ดี เมื่อศาสตร์แห่งดาราศาสตร์พัฒนาความแม่นยำขึ้นเรื่อยๆ คำถามที่ว่า “หากผลการคำนวณทางดาราศาสตร์บ่งชี้อย่างเด็ดขาดว่าเป็นไปไม่ได้ที่จะมองเห็นจันทร์เสี้ยว แต่กลับมีพยานบุคคลมายืนยันว่าตนเห็น จะตัดสินอย่างไร?” จึงกลายเป็นปัญหาทางนิติศาสตร์ที่หลีกเลี่ยงไม่ได้</p>
+      <p>ฐานหลักของชะรีอะฮ์ในประเด็นนี้คือหะดีษที่ว่า “จงถือศีลอดเมื่อเห็นมัน (จันทร์เสี้ยว) และจงออกอีดเมื่อเห็นมัน” ซึ่งวางรากฐานให้ “การมองเห็นด้วยตาเปล่า” เป็นเกณฑ์ในการเข้าเดือนใหม่ อย่างไรก็ดี เมื่อศาสตร์แห่งดาราศาสตร์พัฒนาความแม่นยำขึ้นเรื่อยๆ คำถามที่ว่า “หากผลการคำนวณทางดาราศาสตร์บ่งชี้อย่างเด็ดขาดว่าเป็นไปไม่ได้ที่จะมองเห็นจันทร์เสี้ยว แต่มีพยานบุคคลมายืนยันว่าตนเห็น จะตัดสินอย่างไร?” จึงกลายเป็นปัญหาทางนิติศาสตร์ที่หลีกเลี่ยงไม่ได้</p>
 
       <p>ในบรรดานักวิชาการที่ให้คำตอบอันลุ่มลึกที่สุดต่อคำถามนี้ ชื่อของท่านอิหม่ามตะกียุดดีน อัซซุบกีย์ เราะหิมะฮุลลอฮ์ (เสียชีวิตปี ฮ.ศ. 756 / ค.ศ. 1355) ถือเป็นหลักหมายสำคัญซึ่งบทความนี้จะนำเสนอทัศนะของท่าน จากนั้นจึงลงลึกถึงหลักวิเคราะห์ที่แยกแยะระหว่าง “การใช้การคำนวณเพื่อเริ่มเดือนใหม่” กับ “การใช้การคำนวณเพื่อตรวจสอบและปฏิเสธคำพยานเท็จ” พร้อมทั้งยกกรณีศึกษาจริงจากเมืองดามัสกัสในปี ฮ.ศ. 748 / ค.ศ. 1347 เพื่อแสดงให้เห็นว่าหลักการนี้ถูกนำไปปฏิบัติจริงอย่างไร</p>
 
@@ -279,46 +342,43 @@ blockquote[lang="ar"] .ar, .hadith-block .ar, .quote-container .ar {
 
 <script>
 /* ----------------------------------------------------------------------
-   EMBEDDED CORE LOOPS (FOR PROGRESS BAR & COPY INTERACTION)
+   EMBEDDED CORE LOOPS (PROGRESS BAR & CITATION/COPY)
 ------------------------------------------------------------------------- */
-// คำนวณแถบควบคุมความลึกในการอ่านแบบเรียลไทม์
+// คำนวณแถบความคืบหน้าการอ่าน (Progress Bar)
 window.addEventListener('scroll', function() {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (winScroll / height) * 100;
     const progressBar = document.getElementById('readingProgressBar');
-    if (progressBar) {
-        progressBar.style.width = scrolled + '%';
-    }
+    if (progressBar) { progressBar.style.width = scrolled + '%'; }
 });
 
-// ฟังก์ชันควบคุมการจัดการ Copy Citation และ Toast Alert Mechanism
+// ฟังก์ชันคัดลอกอ้างอิงบรรณานุกรม (Premium UI interaction)
 function copyCitation() {
     const citationText = document.getElementById('citationText').innerText;
     navigator.clipboard.writeText(citationText).then(() => {
         const copyAlert = document.getElementById('copyAlert');
-        const copyBtn = document.querySelector('.copy-btn');
+        const copyBtn = document.querySelector('.citation-box .copy-btn');
         
         if (copyAlert) {
-            copyAlert.innerText = "คัดลอกอ้างอิงสำเร็จ! ✓";
+            copyAlert.innerText = "คัดลอกบรรณานุกรมสำเร็จ! ✓";
             copyAlert.classList.add('show');
             setTimeout(() => { copyAlert.classList.remove('show'); }, 2000);
         }
         if (copyBtn) {
-            const originalText = copyBtn.innerText;
-            copyBtn.innerText = "คัดลอกแล้ว ✓";
-            setTimeout(() => { copyBtn.innerText = originalText; }, 2000);
+            const originalHTML = copyBtn.innerHTML;
+            copyBtn.innerHTML = "คัดลอกแล้ว ✓";
+            setTimeout(() => { copyBtn.innerHTML = originalHTML; }, 2000);
         }
-    }).catch(err => {
-        console.error('ไม่สามารถคัดลอกข้อความอ้างอิงได้: ', err);
-    });
+    }).catch(err => console.error('ไม่สามารถคัดลอกอ้างอิงได้:', err));
 }
 
+// ฟังก์ชันคัดลอกลิงก์ (URL)
 function copyArticleLink() {
     navigator.clipboard.writeText(window.location.href).then(() => {
         const copyAlert = document.getElementById('copyAlert');
         if (copyAlert) {
-            copyAlert.innerText = "คัดลอกลิงก์เรียบร้อยแล้ว! ✓";
+            copyAlert.innerText = "คัดลอกลิงก์สำเร็จ! ✓";
             copyAlert.classList.add('show');
             setTimeout(() => { copyAlert.classList.remove('show'); }, 2000);
         }
