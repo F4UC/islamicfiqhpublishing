@@ -40,7 +40,7 @@
   --ink-2:     #2a221b;
   --ink-dim:   #6b6357;
   --ink-mute:  #9a907e;
-  --gold:      #c5a572;
+  --gold:      #c49a45;
   --gold-b:    #e0c189;
   --rule:      rgba(10,9,7,.08);
   --rule-s:    rgba(10,9,7,.18);
@@ -641,65 +641,11 @@ button { font:inherit; color:inherit; background:none; border:0; cursor:pointer 
 }
 
 /* =========================================================
-   FOOTER
-   ========================================================= */
-.site-footer {
-  background:#0a0907; border-top:1px solid rgba(232,224,208,.08);
-  padding:80px 0 40px; position:relative; overflow:hidden;
-}
-.foot-top {
-  display:grid; grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:48px; margin-bottom:72px;
-}
-.foot-brand .foot-mark {
-  font-family:var(--serif); font-weight:300; font-size:38px;
-  color:rgba(232,224,208,.9); letter-spacing:-.01em; margin-bottom:6px;
-  line-height:1;
-}
-.foot-brand .foot-mark em { font-style:italic; color:var(--gold) }
-.foot-brand .foot-ar {
-  font-family:var(--arabic); color:rgba(232,224,208,.3);
-  direction:rtl; font-size:16px; margin-bottom:20px;
-}
-.foot-brand p {
-  font-family:var(--thai); font-weight:300; color:rgba(232,224,208,.35);
-  font-size:13px; max-width:320px; line-height:1.75; word-break:break-word;
-}
-.foot-col h4 {
-  font-family:var(--ui); font-size:9px; letter-spacing:.3em;
-  text-transform:uppercase; color:var(--gold); margin-bottom:20px;
-}
-.foot-col a {
-  display:block; padding:5px 0; color:rgba(232,224,208,.35);
-  font-family:var(--thai); font-size:13px; transition:color .25s;
-}
-.foot-col a:hover { color:rgba(232,224,208,.9) }
-.foot-bottom {
-  display:flex; justify-content:space-between; align-items:center;
-  padding-top:32px; border-top:1px solid rgba(232,224,208,.07);
-  font-family:var(--ui); font-size:10px; letter-spacing:.18em;
-  text-transform:uppercase; color:rgba(232,224,208,.25);
-}
-.foot-colophon {
-  font-family:var(--serif); font-style:italic; letter-spacing:0;
-  text-transform:none; font-size:14px; color:rgba(232,224,208,.3);
-}
-.watermark {
-  font-family:var(--serif); font-weight:300; font-style:italic;
-  font-size:clamp(72px,16vw,220px); line-height:.85;
-  color:transparent; -webkit-text-stroke:1px rgba(232,224,208,.04);
-  text-align:center; letter-spacing:-.02em;
-  margin-top:40px; pointer-events:none; user-select:none;
-}
-@media(max-width:768px){
-  .foot-top { grid-template-columns:1fr 1fr; gap:32px }
-  .foot-bottom { flex-direction:column; gap:12px; text-align:center }
-}
-
-/* =========================================================
    UTILITIES
    ========================================================= */
 .thin-rule { height:1px; background:var(--rule); width:100% }
+.section-no-top-pad { padding-top:0 }
+.tool-cta-disabled { opacity:.4; cursor:default; pointer-events:none }
 </style>
 </head>
 <body lang="th">
@@ -768,7 +714,7 @@ button { font:inherit; color:inherit; background:none; border:0; cursor:pointer 
 </section>
 
 <!-- ===== ARTICLE INDEX ===== -->
-<section class="section" style="padding-top:0">
+<section class="section section-no-top-pad">
   <div class="wrap">
     <div class="section-head reveal">
       <div class="section-no">01</div>
@@ -939,14 +885,14 @@ button { font:inherit; color:inherit; background:none; border:0; cursor:pointer 
         <span class="tool-status consider">กำลังพิจารณา</span>
         <div class="tool-name">Zakat<br><em>Calculator</em></div>
         <p class="tool-desc">คำนวณซะกาตตามหลักนิติศาสตร์คลาสสิก ครอบคลุมซะกาตทรัพย์สิน ทองคำ เงิน และสินค้าการค้า</p>
-        <span class="tool-cta" style="opacity:.4;cursor:default">เร็วๆ นี้</span>
+        <span class="tool-cta tool-cta-disabled">เร็วๆ นี้</span>
         <span class="tool-ar" lang="ar">الزكاة</span>
       </div>
       <div class="tool-card">
         <span class="tool-status consider">กำลังพิจารณา</span>
         <div class="tool-name">Faraid<br><em>Calculator</em></div>
         <p class="tool-desc">คำนวณการแบ่งมรดกตามหลักฟะรออิฎ (กฎมรดกอิสลาม) พร้อมแสดงสัดส่วนทายาทแต่ละประเภท</p>
-        <span class="tool-cta" style="opacity:.4;cursor:default">เร็วๆ นี้</span>
+        <span class="tool-cta tool-cta-disabled">เร็วๆ นี้</span>
         <span class="tool-ar" lang="ar">الفرائض</span>
       </div>
     </div>
@@ -981,42 +927,7 @@ button { font:inherit; color:inherit; background:none; border:0; cursor:pointer 
 
 </main>
 
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="foot-top">
-      <div class="foot-brand">
-        <div class="foot-mark"><em>Islamic</em> Fiqh Publishing</div>
-        <div class="foot-ar" lang="ar" dir="rtl">دار الفقه الإسلامي للنشر والتوزيع والترجمة</div>
-        <p>คลังวิชาการอิสลามภาษาไทย มุ่งมั่นนำเสนอบทวิเคราะห์และงานแปลจากคลาสสิกอิสลามด้วยความแม่นยำทางวิชาการ</p>
-      </div>
-      <div class="foot-col">
-        <h4>บทความ</h4>
-        <a href="/pages/nitisart.html">นิติศาสตร์อิสลาม</a>
-        <a href="/pages/kalam.html">กะลาม / เทววิทยา</a>
-        <a href="/pages/hadith.html">หะดีษ</a>
-        <a href="/pages/history.html">ประวัติศาสตร์</a>
-        <a href="/pages/literature.html">วรรณกรรม</a>
-      </div>
-      <div class="foot-col">
-        <h4>เครื่องมือ</h4>
-        <a href="/pages/tools.html">ภาพรวมเครื่องมือ</a>
-        <a href="/pages/tools/hijri-time-machine.html">Hijri Time Machine</a>
-      </div>
-      <div class="foot-col">
-        <h4>ข้อมูล</h4>
-        <a href="/pages/about.html">เกี่ยวกับเรา</a>
-        <a href="https://www.facebook.com/IslamicFiqhPublishing" target="_blank" rel="noopener">ติดต่อ / Facebook</a>
-        <a href="/sitemap.xml">Sitemap</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Islamic Fiqh Publishing · All Rights Reserved</span>
-      <span class="foot-colophon">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</span>
-    </div>
-    <div class="watermark" aria-hidden="true">Bismillāh</div>
-  </div>
-</footer>
+<div id="footer-placeholder"></div>
 
 <script>
 // ===== QUOTE OF THE DAY =====
