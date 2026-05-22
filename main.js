@@ -473,3 +473,34 @@ function copyCitation() {
     });
 }
 
+// ==========================================
+// ⭐️ 9. ระบบบทความที่เกี่ยวข้องอัตโนมัติ (Dynamic Related Articles) ⭐️
+// ==========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const relatedGrid = document.querySelector('.related-grid');
+    if (!relatedGrid) return;
+
+    const path = window.location.pathname;
+    let category = null;
+    if (path.includes('/articles/kalam/')) category = 'กะลาม / เทววิทยา';
+    else if (path.includes('/articles/nitisart/')) category = 'นิติศาสตร์อิสลาม';
+    if (!category) return;
+
+    fetch('/articles.json')
+        .then(res => res.json())
+        .then(articles => {
+            const related = articles
+                .filter(a => a.category === category && a.url !== path)
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 3);
+            if (related.length === 0) return;
+            relatedGrid.innerHTML = related.map(a =>
+                `<a href="${a.url}" class="related-card">` +
+                `<span class="related-cat">${a.category}</span>` +
+                `<h4 class="related-article-title">${a.title}</h4>` +
+                `</a>`
+            ).join('');
+        })
+        .catch(() => {});
+});
+
