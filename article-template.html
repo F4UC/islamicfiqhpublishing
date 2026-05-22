@@ -1,11 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ชื่อบทความวิชาการ (แม่แบบ) – Islamic Fiqh Publishing</title>
 
-<!-- Pre-render Theme Engine: Prevents white flash/FOUC on page load -->
 <script>
   (function() {
     var savedTheme = localStorage.getItem('theme');
@@ -30,20 +29,145 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-<!-- ⭐️ ลิงก์ไฟล์ CSS กลางของหน้าบทความ ⭐️ -->
 <link rel="stylesheet" href="/article.css">
 
+<style>
+/* ----------------------------------------------------------------------
+   STRUCTURE & TYPOGRAPHY STANDARDS (THE 38 CODE CHARTERS)
+------------------------------------------------------------------------- */
+body { position: relative; }
+
+/* ตัวแปรสีสำหรับรองรับระบบ Dark / Light Mode */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #fdfbf7;
+    --border-color: #eaeaea;
+    --text-primary: #0a0a0a;
+    --text-secondary: #444444;
+    --text-tertiary: #777777;
+    --accent-color: #c49a45;
+    --accent-hover: #a37c35;
+    --shadow-soft: 0 10px 40px rgba(0,0,0,0.04);
+}
+.dark-mode {
+    --bg-primary: #121212;
+    --bg-secondary: #1a1a1a;
+    --border-color: #333333;
+    --text-primary: #f5f5f5;
+    --text-secondary: #cccccc;
+    --text-tertiary: #999999;
+    --accent-color: #d4af37;
+    --accent-hover: #f1cd56;
+    --shadow-soft: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+#readingProgressBar {
+    position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+    background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+/* 1. ควบคุมเลย์เอาต์หน้ากระดาษแบบกึ่งกลางให้อ่านสบายตา (Centered Layout) */
+.article-layout {
+    max-width: 900px;
+    margin: 40px auto 80px;
+    padding: 0 24px;
+}
+.article-content {
+    width: 100%;
+}
+
+/* 2. การควบคุมระยะช่องไฟ Typography ภาษาไทยชิดซ้ายธรรมชาติ */
+.article-body p, .lead-text {
+    line-height: 2.0;
+    margin-bottom: 24px;
+    text-align: left; 
+    word-break: break-word;
+    color: var(--text-secondary);
+}
+
+.ar {
+    font-family: 'Amiri', serif; font-size: 1.35em; line-height: 1.6;
+    direction: rtl; unicode-bidi: isolate;
+}
+
+/* บล็อกกล่องอ้างอิงและพื้นที่ปลอดภัยทางสถาปัตยกรรม (ขจัดปัญหาช่องไฟชนกัน) */
+blockquote[lang="ar"], .fiqh-principle, .hadith-block, .quote-container {
+    padding: 30px 35px; margin: 35px 0;
+    border-right: 4px solid var(--accent-color);
+    background-color: var(--bg-secondary);
+    border-radius: 12px 0 0 12px;
+    color: var(--text-primary);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+blockquote[lang="ar"] .ar, .hadith-block .ar, .quote-container .ar {
+    text-align: center; width: 100%; margin-bottom: 5px;
+}
+.thai-quote {
+    font-family: 'Sarabun', sans-serif; font-style: italic; color: var(--text-tertiary);
+    text-align: center; font-size: 16px; line-height: 1.8; width: 100%; margin-top: 0;
+}
+
+/* 3. กล่องอ้างอิงบรรณานุกรมดีไซน์พรีเมียม (Premium Citation Card) */
+.citation-box {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 50px 0;
+    position: relative;
+    box-shadow: var(--shadow-soft);
+    display: flex; flex-direction: column; gap: 16px;
+}
+.citation-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--accent-color);
+    display: flex; align-items: center; gap: 8px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-text {
+    font-family: 'Sarabun', sans-serif; font-size: 15px; color: var(--text-primary);
+    line-height: 1.8; background: var(--bg-secondary);
+    padding: 20px; border-radius: 8px; border: 1px dashed var(--border-color);
+    word-break: break-word;
+}
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-btn {
+    background: var(--bg-secondary); color: var(--text-primary);
+    border: 1px solid var(--border-color); padding: 10px 24px;
+    border-radius: 30px; font-size: 13px; font-weight: 600; cursor: pointer;
+    transition: all 0.2s ease; display: flex; align-items: center; gap: 8px; font-family: 'Sarabun', sans-serif;
+}
+.copy-btn::before { content: '📑'; }
+.copy-btn:hover { background: var(--accent-color); color: #fff; border-color: var(--accent-color); transform: translateY(-2px); }
+
+/* แจ้งเตือนสถานะการคัดลอก */
+.copy-alert {
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+    background: var(--text-primary); color: var(--bg-primary);
+    padding: 12px 30px; border-radius: 30px; font-size: 14px; font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    opacity: 0; visibility: hidden; z-index: 10000;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* การจัดเลย์เอาต์บนมือถือ */
+@media(max-width: 768px) {
+    .citation-box { padding: 24px; }
+    .citation-text { padding: 16px; }
+    .copy-btn { width: 100%; justify-content: center; }
+}
+</style>
 </head>
-<body lang="th">
+<body id="article-page" lang="th">
 
-<!-- แถบแสดงความคืบหน้าการอ่าน (Reading Progress Bar) -->
 <div id="readingProgressBar"></div>
-
 <div id="header-placeholder"></div>
 
 <main class="article-layout">
   
-  <!-- ส่วนเนื้อหาหลักบทความ (ด้านซ้าย) -->
   <article class="article-content">
     <header class="article-header">
       <span class="article-category">นิติศาสตร์อิสลาม</span>
@@ -71,14 +195,15 @@
 
       <h2 id="section-1">1. บทนำและบริบททางประวัติศาสตร์</h2>
       <p>นี่คือตัวอย่างเนื้อหาของบทความวิชาการ คุณสามารถคัดลอกไฟล์ <code>article-template.html</code> นี้ไปสร้างเป็นบทความใหม่ๆ ได้ทันที โดยระบบการจัดรูปแบบต่างๆ จะถูกครอบไว้ด้วย CSS อัตโนมัติ</p>
-      <p>ตัวอย่างการอ้างอิงโองการอัลกุรอานหรือภาษาอาหรับ:</p>
-      <blockquote class="arabic-quote" lang="ar" dir="rtl">
-        إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا
+      <p>ตัวอย่างการอ้างอิงโองการอัลกุรอานหรือภาษาอาหรับระดับบล็อกตามกฎข้อที่ 38:</p>
+      
+      <blockquote lang="ar" dir="rtl" class="quote-container">
+          <span class="ar">إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا</span>
+          <div class="thai-quote">“แท้จริงอัลลอฮ์ทรงใช้พวกเจ้าให้มอบคืนของฝากแก่เจ้าของของมัน” — สูเราะฮ์อันนิสาอ์: 58</div>
       </blockquote>
-      <div class="thai-quote">"แท้จริงอัลลอฮ์ทรงใช้พวกเจ้าให้มอบคืนของฝากแก่เจ้าของของมัน" (อัน-นิสาอ์: 58)</div>
 
       <h2 id="section-2">2. หลักฐานและการวิเคราะห์ทางวิชาการ</h2>
-      <p>เมื่อผู้ใช้เลื่อนหน้าจออ่านเนื้อหามาถึงส่วนนี้ ระบบ <strong>Interactive Table of Contents (TOC)</strong> ทางด้านขวามือ จะทำการไฮไลต์หัวข้อนี้อัตโนมัติ เพื่อให้ผู้อ่านทราบว่าตนเองกำลังอ่านอยู่จุดไหนของโครงสร้างบทความ</p>
+      <p>เมื่อผู้ใช้เลื่อนหน้าจออ่านเนื้อหา ระบบจะคำนวณระยะแถบความคืบหน้าด้านบนสุดโดยอัตโนมัติ เพื่อสร้างมิติการอ่านที่ลื่นไหลและดูเป็นมืออาชีพ</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
       <h3 id="section-2-1">2.1 ประเด็นข้อขัดแย้งเชิงนิติศาสตร์</h3>
@@ -86,9 +211,17 @@
 
       <h2 id="section-3">3. บทสรุปและข้อเสนอแนะ</h2>
       <p>ในส่วนท้ายของบทความ เราจะเตรียมระบบปุ่มแชร์ (Social Share) ไว้ให้ เพื่อให้ผู้อ่านสามารถเผยแพร่บทความไปยังโซเชียลมีเดียต่างๆ ได้ทันที</p>
+      
+      <div class="citation-box">
+        <div class="citation-label">การอ้างอิงบรรณานุกรม (Citation)</div>
+        <div class="citation-text" id="citationText">ชื่อผู้เขียน. (ปี พ.ศ.). ชื่อบทความวิชาการ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/category/article-slug.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCitation()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
     </div>
 
-    <!-- ส่วนปุ่มแชร์ (Social Share) -->
     <div class="social-share-container">
       <h4 class="share-title">แบ่งปันบทความนี้:</h4>
       <div class="share-buttons">
@@ -105,37 +238,23 @@
           <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
         </button>
       </div>
-      <div id="copyAlert" class="copy-alert">คัดลอกลิงก์แล้ว!</div>
+      <div id="copyAlert" class="copy-alert">คัดลอกสำเร็จ!</div>
     </div>
   </article>
-
-  <!-- ส่วนสารบัญอัจฉริยะ (ด้านขวา) -->
-  <aside class="article-sidebar">
-    <div class="toc-container">
-      <h3 class="toc-title">สารบัญเนื้อหา</h3>
-      <nav id="tocNav" class="toc-nav">
-        <!-- Javascript จะสแกนหัวข้อ (<h2>, <h3>) ในบทความมาสร้างลิงก์ที่นี่อัตโนมัติ -->
-      </nav>
-    </div>
-  </aside>
 </main>
 
-<!-- บทความที่เกี่ยวข้อง (Related Articles) -->
 <section class="related-articles-section">
   <div class="related-inner">
     <h3 class="related-title">บทความวิชาการที่เกี่ยวข้อง</h3>
     <div class="related-grid">
-      <!-- การ์ด 1 -->
       <a href="#" class="related-card">
         <span class="related-cat">นิติศาสตร์อิสลาม</span>
         <h4 class="related-article-title">เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์</h4>
       </a>
-      <!-- การ์ด 2 -->
       <a href="#" class="related-card">
         <span class="related-cat">เทววิทยา</span>
         <h4 class="related-article-title">สารัตถะของคำว่า “ญิสม์” ในวิชากะลาม</h4>
       </a>
-      <!-- การ์ด 3 -->
       <a href="#" class="related-card">
         <span class="related-cat">วรรณกรรม</span>
         <h4 class="related-article-title">บทกวีสรรเสริญนบีของอัลบุศอยรีย์ (อัลบุรดะฮ์)</h4>
@@ -148,12 +267,52 @@
 
 <button onclick="window.scrollTo({top:0, behavior:'smooth'})" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
 
-<!-- สคริปต์กลาง -->
-<script src="/main.js"></script>
+<script>
+/* ----------------------------------------------------------------------
+   EMBEDDED CORE LOOPS (PROGRESS BAR & CITATION/COPY)
+------------------------------------------------------------------------- */
+// คำนวณแถบความคืบหน้าการอ่าน (Reading Progress Bar)
+window.addEventListener('scroll', function() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const progressBar = document.getElementById('readingProgressBar');
+    if (progressBar) { progressBar.style.width = scrolled + '%'; }
+});
 
+// ฟังก์ชันคัดลอกอ้างอิงบรรณานุกรม
+function copyCitation() {
+    const citationText = document.getElementById('citationText').innerText;
+    navigator.clipboard.writeText(citationText).then(() => {
+        const copyAlert = document.getElementById('copyAlert');
+        const copyBtn = document.querySelector('.citation-box .copy-btn');
+        
+        if (copyAlert) {
+            copyAlert.innerText = "คัดลอกอ้างอิงสำเร็จ! ✓";
+            copyAlert.classList.add('show');
+            setTimeout(() => { copyAlert.classList.remove('show'); }, 2000);
+        }
+        if (copyBtn) {
+            const originalHTML = copyBtn.innerHTML;
+            copyBtn.innerHTML = "คัดลอกแล้ว ✓";
+            setTimeout(() => { copyBtn.innerHTML = originalHTML; }, 2000);
+        }
+    }).catch(err => console.error('ไม่สามารถคัดลอกอ้างอิงได้:', err));
+}
+
+// ฟังก์ชันคัดลอกลิงก์บทความ (URL)
+function copyArticleLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        const copyAlert = document.getElementById('copyAlert');
+        if (copyAlert) {
+            copyAlert.innerText = "คัดลอกลิงก์สำเร็จ! ✓";
+            copyAlert.classList.add('show');
+            setTimeout(() => { copyAlert.classList.remove('show'); }, 2000);
+        }
+    });
+}
+</script>
+
+<script src="/main.js"></script>
 </body>
 </html>
-
-
-
-
