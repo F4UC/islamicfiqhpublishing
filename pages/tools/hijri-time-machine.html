@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hijri Time Machine — Islamic Fiqh Publishing</title>
+
+<meta name="description" content="สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลาม พร้อมแปลงปฏิทินฮิจเราะฮ์และคริสต์ศักราชแบบสองทาง">
+<meta name="keywords" content="ปฏิทินฮิจเราะฮ์, แปลงวันที่, ประวัติศาสตร์อิสลาม, Hijri calendar, Islamic history timeline">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<link rel="icon" href="../../favicon.png" type="image/png">
+
+<meta property="og:title" content="Hijri Time Machine — Islamic Fiqh Publishing">
+<meta property="og:description" content="สำรวจไทม์ไลน์ประวัติศาสตร์อิสลามและแปลงปฏิทินฮิจเราะฮ์-คริสต์ศักราช">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/pages/tools/hijri-time-machine.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Sarabun:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../article.css?v=8">
+
+<style>
+/* ─── Layout ─── */
+.htm-container { max-width: 900px; margin: 56px auto 80px; padding: 0 24px; }
+
+.htm-hero { text-align: center; margin-bottom: 52px; }
+.htm-hero-icon { font-size: 48px; margin-bottom: 16px; }
+.htm-hero h1 { font-family: 'Sarabun', sans-serif; font-size: 32px; font-weight: 700; color: #0a0a0a; margin-bottom: 12px; }
+.htm-hero p { font-size: 16px; color: #666; line-height: 1.7; max-width: 600px; margin: 0 auto; }
+
+/* ─── Tabs ─── */
+.htm-tabs { display: flex; gap: 4px; background: #f4f4f4; border-radius: 10px; padding: 4px; margin-bottom: 36px; }
+.htm-tab { flex: 1; padding: 10px 16px; font-size: 14px; font-weight: 600; color: #666; background: transparent; border: none; border-radius: 7px; cursor: pointer; transition: all 0.2s; font-family: 'Sarabun', sans-serif; }
+.htm-tab.active { background: #fff; color: #0a0a0a; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+
+/* ─── Converter ─── */
+.converter-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: end; }
+.conv-side { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 28px; }
+.conv-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #c49a45; margin-bottom: 16px; display: block; }
+.conv-fields { display: flex; gap: 8px; }
+.conv-field { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.conv-field label { font-size: 12px; color: #888; }
+.conv-field input, .conv-field select {
+  padding: 10px 12px; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 15px;
+  font-family: 'Sarabun', sans-serif; background: #fafafa; width: 100%;
+  transition: border-color 0.2s; box-sizing: border-box;
+}
+.conv-field input:focus, .conv-field select:focus { outline: none; border-color: #c49a45; background: #fff; }
+.conv-result { margin-top: 16px; padding: 12px 16px; background: #fdfbf7; border: 1px solid #e8dfc8; border-radius: 8px; font-size: 15px; color: #0a0a0a; min-height: 44px; display: flex; align-items: center; }
+.conv-result-label { font-size: 11px; color: #999; margin-bottom: 4px; }
+
+.conv-arrow { display: flex; align-items: center; justify-content: center; color: #c49a45; font-size: 24px; padding-bottom: 8px; }
+
+.btn-convert { width: 100%; margin-top: 16px; padding: 12px; background: #0a0a0a; color: #fff; border: none; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Sarabun', sans-serif; transition: background 0.2s; }
+.btn-convert:hover { background: #333; }
+
+/* ─── Year Explorer ─── */
+.explorer-panel { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 28px; }
+.explorer-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+.explorer-header h2 { font-size: 18px; font-weight: 700; margin: 0; flex: 1; }
+.year-input-wrap { display: flex; align-items: center; gap: 10px; }
+.year-input-wrap label { font-size: 13px; color: #666; white-space: nowrap; }
+.year-input { width: 100px; padding: 9px 12px; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 16px; font-weight: 700; text-align: center; font-family: 'Sarabun', sans-serif; }
+.year-input:focus { outline: none; border-color: #c49a45; }
+.year-suffix { font-size: 13px; color: #888; }
+.btn-explore { padding: 9px 20px; background: #c49a45; color: #fff; border: none; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Sarabun', sans-serif; transition: background 0.2s; white-space: nowrap; }
+.btn-explore:hover { background: #a07c35; }
+
+.year-range-display { font-size: 13px; color: #888; background: #f8f8f8; padding: 6px 12px; border-radius: 6px; margin-bottom: 24px; }
+.year-range-display span { color: #0a0a0a; font-weight: 600; }
+
+/* ─── Timeline ─── */
+.timeline { position: relative; padding-left: 0; }
+.timeline-empty { text-align: center; padding: 48px 24px; color: #aaa; font-size: 15px; }
+.timeline-empty .empty-icon { font-size: 36px; margin-bottom: 12px; }
+
+.event-card { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid #f0f0f0; }
+.event-card:last-child { border-bottom: none; }
+.event-year-badge { flex-shrink: 0; text-align: center; }
+.event-year-num { font-size: 18px; font-weight: 700; color: #0a0a0a; line-height: 1; }
+.event-year-unit { font-size: 10px; color: #aaa; letter-spacing: 0.5px; margin-top: 2px; }
+.event-body { flex: 1; min-width: 0; }
+.event-cat { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px; }
+.cat-history { background: rgba(59,130,246,0.1); color: #2563eb; }
+.cat-fiqh { background: rgba(16,185,129,0.1); color: #059669; }
+.cat-kalam { background: rgba(196,154,69,0.1); color: #92700a; }
+.cat-hadith { background: rgba(139,92,246,0.1); color: #7c3aed; }
+.event-title { font-size: 15px; font-weight: 600; color: #0a0a0a; margin-bottom: 4px; }
+.event-desc { font-size: 13px; color: #666; line-height: 1.6; }
+
+/* ─── Century Badge ─── */
+.century-badge { display: inline-flex; align-items: center; gap: 8px; background: #0a0a0a; color: #c49a45; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; margin-bottom: 24px; }
+
+/* ─── Hidden panel ─── */
+.htm-panel { display: none; }
+.htm-panel.active { display: block; }
+
+/* ─── Dark mode ─── */
+.dark-mode .conv-side,
+.dark-mode .explorer-panel { background: #1a1a1a; border-color: #2a2a2a; }
+.dark-mode .conv-field input,
+.dark-mode .conv-field select,
+.dark-mode .year-input { background: #111; border-color: #333; color: #e0e0e0; }
+.dark-mode .conv-result { background: #111; border-color: #333; color: #e0e0e0; }
+.dark-mode .htm-tabs { background: #111; }
+.dark-mode .htm-tab.active { background: #1a1a1a; color: #e0e0e0; }
+.dark-mode .htm-hero h1 { color: #e0e0e0; }
+.dark-mode .event-title { color: #e0e0e0; }
+.dark-mode .event-card { border-color: #2a2a2a; }
+.dark-mode .year-range-display { background: #111; }
+.dark-mode .year-range-display span { color: #e0e0e0; }
+.dark-mode .century-badge { background: #111; }
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .converter-grid { grid-template-columns: 1fr; }
+  .conv-arrow { transform: rotate(90deg); padding: 0; }
+  .conv-fields { flex-direction: column; }
+  .explorer-header { flex-direction: column; align-items: flex-start; }
+  .htm-hero h1 { font-size: 24px; }
+}
+</style>
+</head>
+<body lang="th">
+
+<div id="header-placeholder"></div>
+
+<main>
+<div class="htm-container">
+
+  <div class="htm-hero">
+    <div class="htm-hero-icon">⏳</div>
+    <h1>Hijri Time Machine</h1>
+    <p>มากกว่าการแปลงปฏิทิน — สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามที่เกิดขึ้นในปี ฮ.ศ. นั้นๆ เพื่อเชื่อมโยงอดีตสู่ปัจจุบัน</p>
+  </div>
+
+  <div class="htm-tabs" role="tablist">
+    <button class="htm-tab active" onclick="switchTab('converter')" role="tab">📅 แปลงปฏิทิน</button>
+    <button class="htm-tab" onclick="switchTab('explorer')" role="tab">🔭 สำรวจไทม์ไลน์</button>
+  </div>
+
+  <!-- Converter Panel -->
+  <div id="panel-converter" class="htm-panel active">
+    <div class="converter-grid">
+
+      <div class="conv-side">
+        <span class="conv-label">ปฏิทินฮิจเราะฮ์ (AH)</span>
+        <div class="conv-fields">
+          <div class="conv-field">
+            <label>วัน</label>
+            <input type="number" id="h-day" min="1" max="30" placeholder="1–30" value="1">
+          </div>
+          <div class="conv-field">
+            <label>เดือน</label>
+            <select id="h-month">
+              <option value="1">1 — มุหัรรอม</option>
+              <option value="2">2 — ศอฟัร</option>
+              <option value="3">3 — รอบีอุลเอาวัล</option>
+              <option value="4">4 — รอบีอุษษานี</option>
+              <option value="5">5 — ญุมาดัลเอาวัล</option>
+              <option value="6">6 — ญุมาดัษษานี</option>
+              <option value="7">7 — รอญับ</option>
+              <option value="8">8 — ชะอ์บาน</option>
+              <option value="9">9 — รอมาฎอน</option>
+              <option value="10">10 — เชาวาล</option>
+              <option value="11">11 — ซุลเกาะอ์ดะฮ์</option>
+              <option value="12">12 — ซุลหิจญะฮ์</option>
+            </select>
+          </div>
+          <div class="conv-field">
+            <label>ปี ฮ.ศ.</label>
+            <input type="number" id="h-year" min="1" max="1500" placeholder="เช่น 771" value="1">
+          </div>
+        </div>
+        <button class="btn-convert" onclick="convertHijriToGregorian()">แปลงเป็นคริสต์ศักราช →</button>
+        <div>
+          <div class="conv-result-label" style="margin-top:12px; font-size:11px; color:#999;">ผลลัพธ์</div>
+          <div class="conv-result" id="result-gregorian">กรอกวันที่ฮิจเราะฮ์แล้วกดแปลง</div>
+        </div>
+      </div>
+
+      <div class="conv-arrow">⇄</div>
+
+      <div class="conv-side">
+        <span class="conv-label">ปฏิทินคริสต์ศักราช (CE)</span>
+        <div class="conv-fields">
+          <div class="conv-field">
+            <label>วัน</label>
+            <input type="number" id="g-day" min="1" max="31" placeholder="1–31" value="1">
+          </div>
+          <div class="conv-field">
+            <label>เดือน</label>
+            <select id="g-month">
+              <option value="1">มกราคม</option>
+              <option value="2">กุมภาพันธ์</option>
+              <option value="3">มีนาคม</option>
+              <option value="4">เมษายน</option>
+              <option value="5">พฤษภาคม</option>
+              <option value="6">มิถุนายน</option>
+              <option value="7">กรกฎาคม</option>
+              <option value="8">สิงหาคม</option>
+              <option value="9">กันยายน</option>
+              <option value="10">ตุลาคม</option>
+              <option value="11">พฤศจิกายน</option>
+              <option value="12">ธันวาคม</option>
+            </select>
+          </div>
+          <div class="conv-field">
+            <label>ปี ค.ศ.</label>
+            <input type="number" id="g-year" min="622" max="2100" placeholder="เช่น 2024" value="622">
+          </div>
+        </div>
+        <button class="btn-convert" onclick="convertGregorianToHijri()">แปลงเป็นฮิจเราะฮ์ →</button>
+        <div>
+          <div class="conv-result-label" style="margin-top:12px; font-size:11px; color:#999;">ผลลัพธ์</div>
+          <div class="conv-result" id="result-hijri">กรอกวันที่คริสต์ศักราชแล้วกดแปลง</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Explorer Panel -->
+  <div id="panel-explorer" class="htm-panel">
+    <div class="explorer-panel">
+      <div class="explorer-header">
+        <h2>สำรวจเหตุการณ์สำคัญ</h2>
+        <div class="year-input-wrap">
+          <label>ปี ฮ.ศ.</label>
+          <input type="number" class="year-input" id="explore-year" min="1" max="1500" value="500">
+          <span class="year-suffix">ฮ.ศ.</span>
+          <button class="btn-explore" onclick="exploreYear()">สำรวจ</button>
+        </div>
+      </div>
+      <div id="explorer-output">
+        <div class="timeline-empty">
+          <div class="empty-icon">🔭</div>
+          <div>กรอกปี ฮ.ศ. ที่ต้องการสำรวจแล้วกดปุ่ม "สำรวจ"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="../../main.js"></script>
+<script>
+/* ─── Tab switching ─── */
+function switchTab(name) {
+  document.querySelectorAll('.htm-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.htm-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+
+/* ─── Calendar conversion math ─── */
+function gregorianToJD(y, m, d) {
+  let a = Math.floor((14 - m) / 12);
+  let yr = y + 4800 - a;
+  let mo = m + 12 * a - 3;
+  return d + Math.floor((153 * mo + 2) / 5) + 365 * yr + Math.floor(yr / 4) - Math.floor(yr / 100) + Math.floor(yr / 400) - 32045;
+}
+
+function jdToGregorian(jd) {
+  let a = jd + 32044;
+  let b = Math.floor((4 * a + 3) / 146097);
+  let c = a - Math.floor(146097 * b / 4);
+  let d = Math.floor((4 * c + 3) / 1461);
+  let e = c - Math.floor(1461 * d / 4);
+  let m = Math.floor((5 * e + 2) / 153);
+  return {
+    day:   e - Math.floor((153 * m + 2) / 5) + 1,
+    month: m + 3 - 12 * Math.floor(m / 10),
+    year:  100 * b + d - 4800 + Math.floor(m / 10)
+  };
+}
+
+function hijriToJD(y, m, d) {
+  return d + Math.ceil(29.5001 * (m - 1)) + (y - 1) * 354 + Math.floor((3 + 11 * y) / 30) + 1948440 - 385;
+}
+
+function jdToHijri(jd) {
+  let l = jd - 1948440 + 10632;
+  let n = Math.floor((l - 1) / 10631);
+  l = l - 10631 * n + 354;
+  let j = Math.floor((10985 - l) / 5316) * Math.floor((50 * l) / 17719) + Math.floor(l / 5670) * Math.floor((43 * l) / 15238);
+  l = l - Math.floor((30 - j) / 15) * Math.floor((17719 * j) / 50) - Math.floor(j / 16) * Math.floor((15238 * j) / 43) + 29;
+  let month = Math.floor((24 * l) / 709);
+  return {
+    day:   l - Math.floor((709 * month) / 24),
+    month: month,
+    year:  30 * n + j - 30
+  };
+}
+
+const HIJRI_MONTHS = ['','มุหัรรอม','ศอฟัร','รอบีอุลเอาวัล','รอบีอุษษานี','ญุมาดัลเอาวัล','ญุมาดัษษานี','รอญับ','ชะอ์บาน','รอมาฎอน','เชาวาล','ซุลเกาะอ์ดะฮ์','ซุลหิจญะฮ์'];
+const GREGORIAN_MONTHS = ['','มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'];
+
+function convertHijriToGregorian() {
+  let d = parseInt(document.getElementById('h-day').value) || 1;
+  let m = parseInt(document.getElementById('h-month').value) || 1;
+  let y = parseInt(document.getElementById('h-year').value) || 1;
+  if (d < 1 || d > 30 || m < 1 || m > 12 || y < 1) {
+    document.getElementById('result-gregorian').textContent = 'กรุณากรอกวันที่ที่ถูกต้อง';
+    return;
+  }
+  let jd = hijriToJD(y, m, d);
+  let g = jdToGregorian(jd);
+  document.getElementById('result-gregorian').textContent =
+    `${g.day} ${GREGORIAN_MONTHS[g.month]} ค.ศ. ${g.year}`;
+}
+
+function convertGregorianToHijri() {
+  let d = parseInt(document.getElementById('g-day').value) || 1;
+  let m = parseInt(document.getElementById('g-month').value) || 1;
+  let y = parseInt(document.getElementById('g-year').value) || 622;
+  if (y < 622) {
+    document.getElementById('result-hijri').textContent = 'ปฏิทินฮิจเราะฮ์เริ่มต้น ค.ศ. 622';
+    return;
+  }
+  let jd = gregorianToJD(y, m, d);
+  let h = jdToHijri(jd);
+  document.getElementById('result-hijri').textContent =
+    `${h.day} ${HIJRI_MONTHS[h.month]} ฮ.ศ. ${h.year}`;
+}
+
+/* ─── Historical Events Data ─── */
+const EVENTS = [
+  { year:1,   cat:'ประวัติศาสตร์', title:'การฮิจเราะฮ์', desc:'ท่านนบีมุหัมมัด ﷺ และเศาะหาบะฮ์ทำการฮิจเราะฮ์จากมักกะฮ์สู่มะดีนะฮ์ จุดเริ่มต้นของปฏิทินฮิจเราะฮ์' },
+  { year:2,   cat:'ประวัติศาสตร์', title:'ยุทธการบะดัร', desc:'ยุทธการสำคัญที่สุดในยุคต้นอิสลาม มุสลิม 313 คนเอาชนะกองทัพกุเรช 1,000 คน' },
+  { year:2,   cat:'ฟิกฮ์', title:'บัญญัติซะกาตและการเปลี่ยนกิบละฮ์', desc:'บทบัญญัติซะกาตและการเปลี่ยนทิศทางละหมาดจากเยรูซาเลมสู่กะอ์บะฮ์' },
+  { year:3,   cat:'ประวัติศาสตร์', title:'ยุทธการอุหุด', desc:'มุสลิมพ่ายแพ้ครั้งเดียวในสงครามสำคัญ ท่านฮัมซะฮ์ ลุงของท่านนบี เสียชีวิต' },
+  { year:5,   cat:'ประวัติศาสตร์', title:'ยุทธการค็อนดัก (อัลอะหฺซาบ)', desc:'มุสลิมขุดคูล้อมมะดีนะฮ์ป้องกันกองทัพพันธมิตร 10,000 คน กลยุทธ์ที่เปลี่ยนประวัติศาสตร์' },
+  { year:6,   cat:'ฟิกฮ์', title:'สนธิสัญญาฮุดัยบียะฮ์', desc:'บทเรียนนิติศาสตร์ระหว่างประเทศอิสลาม ว่าด้วยการทำสัญญากับผู้ที่ไม่ใช่มุสลิม' },
+  { year:8,   cat:'ประวัติศาสตร์', title:'การพิชิตมักกะฮ์', desc:'กองทัพมุสลิม 10,000 คนเข้าสู่มักกะฮ์แทบไม่มีการสู้รบ ท่านนบีนิรโทษกรรมชาวกุเรช' },
+  { year:10,  cat:'ฟิกฮ์', title:'คุฏบะฮ์อำลา (ฮัจญ์วะดาอ์)', desc:'ท่านนบี ﷺ ประกาศหลักสิทธิมนุษยชนอิสลามครั้งสำคัญ "ชีวิต ทรัพย์สิน และเกียรติของท่านคือสิ่งศักดิ์สิทธิ์"' },
+  { year:11,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของท่านนบีมุหัมมัด ﷺ', desc:'ท่านนบี ﷺ สิ้นชีวิต ณ มะดีนะฮ์ อบูบักรฺ อัศศิดดีก รับตำแหน่งเคาะลีฟะฮ์คนแรก' },
+  { year:13,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอบูบักร อัศศิดดีก', desc:'อบูบักรฺ ครองตำแหน่ง 2 ปีครึ่ง รวบรวมอัลกุรอาน อุมัร อิบนุ อัลค็อฏฏอบ สืบต่อ' },
+  { year:15,  cat:'ประวัติศาสตร์', title:'การพิชิตเยรูซาเลม', desc:'อุมัร อิบนุ อัลค็อฏฏอบ เสด็จรับกุญแจเยรูซาเลมด้วยตนเอง ประกันเสรีภาพทางศาสนา' },
+  { year:16,  cat:'ประวัติศาสตร์', title:'การพิชิตเปอร์เซีย (กอดิซียะฮ์)', desc:'ยุทธการกอดิซียะฮ์ สิ้นสุดจักรวรรดิซาซานิด เปอร์เซียเข้าสู่ยุคอิสลาม' },
+  { year:23,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอุมัร อิบนุ อัลค็อฏฏอบ', desc:'อุมัร ถูกลอบสังหาร สร้างระบบรัฐบาลอิสลามที่แข็งแกร่ง อุษมาน รับตำแหน่งต่อ' },
+  { year:25,  cat:'ฟิกฮ์', title:'มุศหัฟ อุษมานี — อัลกุรอานฉบับมาตรฐาน', desc:'อุษมาน อิบนุ อัฟฟาน รวบรวมและมาตรฐานอัลกุรอานให้เป็นฉบับเดียวทั่วโลกอิสลาม' },
+  { year:35,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอุษมาน อิบนุ อัฟฟาน', desc:'อุษมาน ถูกลอบสังหาร นำไปสู่ยุควิกฤตฟิตนะฮ์ครั้งแรก อะลี อิบนุ อบีฏอลิบ รับตำแหน่งต่อ' },
+  { year:40,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอะลี อิบนุ อบีฏอลิบ', desc:'อะลี ถูกลอบสังหาร สิ้นสุดยุคเคาะลีฟะฮ์ผู้ทรงธรรม (รอชิดีน) 30 ปีหลังท่านนบีสิ้นชีวิต' },
+  { year:41,  cat:'ประวัติศาสตร์', title:'เริ่มยุคราชวงศ์อุมัยยะฮ์', desc:'อัลหะสัน อิบนุ อะลี สละราชบัลลังก์ มุอาวียะฮ์ประกาศตนเป็นเคาะลีฟะฮ์ ศูนย์กลางย้ายสู่ดามัสกัส' },
+  { year:61,  cat:'ประวัติศาสตร์', title:'โศกนาฏกรรมกัรบะลาอ์', desc:'อัลหุสัยน์ อิบนุ อะลี และผู้ติดตาม 72 คน ถูกสังหาร ณ กัรบะลาอ์ เหตุการณ์ที่ตอกลึกความแตกต่างซุนนี-ชีอะฮ์' },
+  { year:86,  cat:'ฟิกฮ์', title:'กำเนิดอิหม่ามอบูหะนีฟะฮ์', desc:'นุอ์มาน อิบนุ ษาบิต (อบูหะนีฟะฮ์) เกิด ณ กูฟะฮ์ บิดาแห่งมัซฮับหะนะฟี มัซฮับที่มีผู้ตามมากที่สุดในโลก' },
+  { year:93,  cat:'ประวัติศาสตร์', title:'การพิชิตอันดาลุส (สเปน)', desc:'ฏอริก อิบนุ ซิยาด นำกองทัพข้ามช่องแคบยิบรอลตาร์ เริ่มยุคทองอิสลามในคาบสมุทรไอบีเรีย 800 ปี' },
+  { year:93,  cat:'ฟิกฮ์', title:'กำเนิดอิหม่ามมาลิก อิบนุ อะนัส', desc:'อิหม่ามมาลิก เกิด ณ มะดีนะฮ์ ผู้ก่อตั้งมัซฮับมาลิกี เขียนตำรา อัลมุวัฏเฏาะ' },
+  { year:132, cat:'ประวัติศาสตร์', title:'การปฏิวัติอับบาซียะฮ์', desc:'ราชวงศ์อับบาซียะฮ์โค่นล้มอุมัยยะฮ์ ศูนย์กลางย้ายสู่แบกแดด เริ่มยุคทองของวิทยาการอิสลาม' },
+  { year:145, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอบูหะนีฟะฮ์', desc:'อบูหะนีฟะฮ์ เสียชีวิต ณ แบกแดด ทิ้งมรดกระบบนิติศาสตร์อิสลามที่ใช้สืบมาถึงปัจจุบัน' },
+  { year:150, cat:'ฟิกฮ์', title:'กำเนิดอิหม่ามอัชชาฟิอีย์', desc:'มุหัมมัด อิบนุ อิดรีส อัชชาฟิอีย์ เกิด ณ กัซซะฮ์ ผู้วางระบบอูศูลุลฟิกฮ์คนแรก' },
+  { year:150, cat:'กะลาม', title:'ยุคแห่งการแปลตำราปรัชญากรีก', desc:'ขบวนการแปล (Bayt al-Hikmah) ตำราของอริสโตเติล เพลโต และแพทยศาสตร์กรีกสู่ภาษาอาหรับ เป็นรากฐานอิลมุลกะลาม' },
+  { year:179, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามมาลิก', desc:'อิหม่ามมาลิก เสียชีวิต ณ มะดีนะฮ์ มัซฮับมาลิกีแผ่ขยายทั่วแอฟริกาเหนือและแอฟริกาตะวันตก' },
+  { year:182, cat:'ประวัติศาสตร์', title:'ยุคทองของฮารูน อัรรอชีด', desc:'อาณาจักรอิสลามรุ่งเรืองถึงขีดสุด บัยตุลหิกมะฮ์ (House of Wisdom) เป็นศูนย์กลางวิทยาการโลก' },
+  { year:195, cat:'ฟิกฮ์', title:'อิหม่ามอัชชาฟิอีย์เขียน อัรริซาละฮ์', desc:'ตำราอูศูลุลฟิกฮ์เล่มแรกของโลก วางระเบียบวิธีนิติศาสตร์อิสลามอย่างเป็นระบบ' },
+  { year:204, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอัชชาฟิอีย์', desc:'อิหม่ามอัชชาฟิอีย์ เสียชีวิต ณ ไคโร ทิ้ง อัลอุมม์ และ อัรริซาละฮ์ มรดกแห่งมัซฮับชาฟิอี' },
+  { year:218, cat:'กะลาม', title:'ยุควิกฤตมิห์นะฮ์เริ่มต้น', desc:'เคาะลีฟะฮ์อัลมะอ์มูน บังคับให้ยอมรับแนวคิดมุอ์ตะซิละฮ์ว่าอัลกุรอานถูกสร้าง อิหม่ามอะหมัด ต่อต้านอย่างเด็ดเดี่ยว' },
+  { year:232, cat:'กะลาม', title:'สิ้นสุดยุควิกฤตมิห์นะฮ์', desc:'เคาะลีฟะฮ์อัลมุตะวักกิล ยกเลิกนโยบายมิห์นะฮ์ ฟื้นคืนแนวทางซุนนีย์ อิหม่ามอะหมัด ได้รับชัยชนะทางวิชาการ' },
+  { year:241, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอะหมัด อิบนุ หัมบัล', desc:'อิหม่ามอะหมัด เสียชีวิต ทิ้งมัซฮับหัมบะลี และ มุสนัด อิหม่ามอะหมัด ซึ่งรวบรวมหะดีษ 40,000 บท' },
+  { year:256, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามอัลบุคอรีย์', desc:'มุหัมมัด อิบนุ อิสมาอีล อัลบุคอรีย์ เสียชีวิต ผู้รวบรวม เศาะหีหฺ อัลบุคอรีย์ ตำราหะดีษที่น่าเชื่อถือสูงสุด' },
+  { year:261, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามมุสลิม', desc:'มุสลิม อิบนุ อัลหัจญาจ เสียชีวิต ผู้รวบรวม เศาะหีหฺ มุสลิม คู่แฝดของเศาะหีหฺ อัลบุคอรีย์' },
+  { year:270, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามอบูดาวูด', desc:'อบูดาวูด สุลัยมาน อิบนุ อัลอัชอัษ เสียชีวิต ผู้รวบรวม สุนัน อบูดาวูด' },
+  { year:279, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามอัตติรมิซีย์', desc:'อิหม่ามอัตติรมิซีย์ เสียชีวิต ผู้รวบรวม สุนัน อัตติรมิซีย์ พร้อมการจัดระดับหะดีษ' },
+  { year:310, cat:'กะลาม', title:'อิหม่ามอัลอัชอะรีย์ประกาศแนวทางซุนนีย์', desc:'อิหม่ามอัลอัชอะรีย์ประกาศแยกตัวจากมุอ์ตะซิละฮ์ วางรากฐานสำนักคิดอัชอะรีย์ที่ยืนหยัดถึงปัจจุบัน' },
+  { year:324, cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอัฏฏอบะรีย์', desc:'มุหัมมัด อิบนุ ญะรีร อัฏฏอบะรีย์ เสียชีวิต ทิ้ง ตารีค อัฏฏอบะรีย์ และ ตัฟซีร อัฏฏอบะรีย์ มรดกทางปัญญาชั้นสูง' },
+  { year:333, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัลอัชอะรีย์และอัลมาตูรีดีย์', desc:'ผู้ก่อตั้งสองสำนักคิดเทววิทยาซุนนีย์หลัก อัชอะรีย์และมาตูรีดียะฮ์ สิ้นชีวิตในปีเดียวกัน' },
+  { year:450, cat:'กะลาม', title:'กำเนิดอิหม่ามอัลเฆาะซาลีย์', desc:'อบูหามิด มุหัมมัด อัลเฆาะซาลีย์ เกิด ณ ฏูส เปอร์เซีย นักปราชญ์ผู้ถูกเรียกว่า "หุจญะตุลอิสลาม"' },
+  { year:478, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัลญุวัยนีย์', desc:'อิหม่ามอัลหะรอมัยน์ อัลญุวัยนีย์ เสียชีวิต อาจารย์ของอิหม่ามอัลเฆาะซาลีย์ นักเทววิทยาอัชอะรีย์ผู้ยิ่งใหญ่' },
+  { year:505, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัลเฆาะซาลีย์', desc:'อิหม่ามอัลเฆาะซาลีย์ เสียชีวิต ทิ้ง อิห์ยาอ์ อุลูมิดดีน, ตะฮาฟุต อัลฟะลาสิฟะฮ์ และ อัลมุสตัศฟา' },
+  { year:595, cat:'กะลาม', title:'การสิ้นชีวิตของอิบนุ รุชด์ (Averroes)', desc:'อิบนุ รุชด์ นักปรัชญาอิสลามแห่งอันดาลุส เสียชีวิต งานของเขาเป็นสื่อกลางปรัชญากรีกสู่ยุโรป' },
+  { year:606, cat:'กะลาม', title:'การสิ้นชีวิตของฟัครุดดีน อัรรอซีย์', desc:'อิหม่ามฟัครุดดีน อัรรอซีย์ เสียชีวิต ทิ้ง มะฟาตีหุลเฆยบ์ ตัฟซีรขนาด 32 เล่ม และงานเทววิทยาชั้นสูงมากมาย' },
+  { year:629, cat:'ฟิกฮ์', title:'กำเนิดอิหม่ามอันนะวาวีย์', desc:'ยะห์ยา อิบนุ ชะรัฟ อันนะวาวีย์ เกิด ณ นาวา ซีเรีย นักฟิกฮ์ชาฟิอีย์ผู้ยิ่งใหญ่' },
+  { year:656, cat:'ประวัติศาสตร์', title:'มองโกลบุกกรุงแบกแดด', desc:'ฮูลากู ข่าน บุกและทำลายกรุงแบกแดด สิ้นสุดราชวงศ์อับบาซียะฮ์ยุคทอง 500 ปี นักวิชาการและหนังสือนับล้านถูกทำลาย' },
+  { year:658, cat:'ประวัติศาสตร์', title:'ยุทธการอัยน์ญาลูต', desc:'กองทัพมัมลูกของอียิปต์ภายใต้ ไบบาร์ส เอาชนะมองโกล ณ ปาเลสไตน์ ชะลอการขยายตัวของมองโกลในตะวันออกกลาง' },
+  { year:661, cat:'กะลาม', title:'กำเนิดอิบนุ ตัยมียะฮ์', desc:'ตะกียุดดีน อะหมัด อิบนุ ตัยมียะฮ์ เกิด ณ หัรรอน นักเทววิทยาหัมบะลีผู้มีอิทธิพลสูงสุดคนหนึ่งในประวัติศาสตร์' },
+  { year:676, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอันนะวาวีย์', desc:'อิหม่ามอันนะวาวีย์ เสียชีวิต ณ นาวา ทิ้ง มินฮาจ, รียาฎ อัศศอลิหีน, อัลอัซการ์ มรดกที่ใช้สืบถึงปัจจุบัน' },
+  { year:728, cat:'กะลาม', title:'การสิ้นชีวิตของอิบนุ ตัยมียะฮ์', desc:'อิบนุ ตัยมียะฮ์ เสียชีวิตในคุก ณ ดามัสกัส ขณะกำลังเขียนหนังสือ ทิ้งผลงานมากกว่า 700 ชิ้น' },
+  { year:751, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิบนุ กอยยิม อัลเญาซียะฮ์', desc:'ชัมซุดดีน อิบนุ กอยยิม เสียชีวิต ศิษย์ผู้ซื่อสัตย์ของอิบนุ ตัยมียะฮ์ ผู้เขียน มะดาริจ อัสสาลิกีน' },
+  { year:771, cat:'กะลาม', title:'การสิ้นชีวิตของตาญุดดีน อัศศุบกีย์', desc:'ตาญุดดีน อะลี อิบนุ อับดิลกาฟี อัศศุบกีย์ เสียชีวิต นักเทววิทยาอัชอะรีย์ผู้เขียนนูนียะฮ์และอุสตาซของสำนักชาฟิอี' },
+  { year:808, cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอิบนุ ค็อลดูน', desc:'อิบนุ ค็อลดูน เสียชีวิต ณ ไคโร บิดาแห่งสังคมศาสตร์และปรัชญาประวัติศาสตร์ ผู้เขียน อัลมุกอดดิมะฮ์' },
+  { year:852, cat:'กะลาม', title:'กำเนิดอิหม่ามอัสสะนูซีย์', desc:'มุหัมมัด อิบนุ ยูซุฟ อัสสะนูซีย์ เกิด ณ ตเลมเซน แอลจีเรีย ผู้เขียน อุมมุลบะรอฮีน ตำราอะกีดะฮ์มาตรฐาน' },
+  { year:911, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัสสะนูซีย์', desc:'อิหม่ามอัสสะนูซีย์ เสียชีวิต ณ ตเลมเซน ทิ้ง อุมมุลบะรอฮีน และ ชัรหุ อุมมุลบะรอฮีน ตำราอะกีดะฮ์ที่สอนทั่วโลกอิสลาม' },
+  { year:923, cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอัสสุยูฏีย์', desc:'ญะลาลุดดีน อัสสุยูฏีย์ เสียชีวิต นักวิชาการอเนกสาขาผู้เขียนตำราไว้มากกว่า 500 เล่ม ครอบคลุมทุกสาขาวิชาอิสลาม' },
+  { year:1342, cat:'ประวัติศาสตร์', title:'การล่มสลายของจักรวรรดิออตโตมัน', desc:'หลังสงครามโลกครั้งที่ 1 จักรวรรดิออตโตมันล่มสลาย ตุรกีประกาศสาธารณรัฐ สิ้นสุดระบบเคาะลีฟะฮ์อย่างเป็นทางการในประวัติศาสตร์' },
+];
+
+function getCentury(year) {
+  return Math.ceil(year / 100);
+}
+
+function getCenturyLabel(year) {
+  const c = getCentury(year);
+  const ordinals = ['', 'ที่ 1', 'ที่ 2', 'ที่ 3', 'ที่ 4', 'ที่ 5', 'ที่ 6', 'ที่ 7', 'ที่ 8', 'ที่ 9', 'ที่ 10',
+    'ที่ 11', 'ที่ 12', 'ที่ 13', 'ที่ 14', 'ที่ 15'];
+  return `ศตวรรษ${ordinals[c] || 'ที่ ' + c} แห่งฮิจเราะฮ์ (ฮ.ศ. ${(c-1)*100+1}–${c*100})`;
+}
+
+function getCatClass(cat) {
+  const map = { 'ประวัติศาสตร์': 'cat-history', 'ฟิกฮ์': 'cat-fiqh', 'กะลาม': 'cat-kalam', 'หะดีษ': 'cat-hadith' };
+  return map[cat] || 'cat-history';
+}
+
+function hijriYearToGregorianApprox(h) {
+  return Math.round(h * 0.9702 + 621.5);
+}
+
+function exploreYear() {
+  const hy = parseInt(document.getElementById('explore-year').value);
+  if (!hy || hy < 1 || hy > 1500) {
+    document.getElementById('explorer-output').innerHTML =
+      '<div class="timeline-empty"><div class="empty-icon">⚠️</div><div>กรุณากรอกปี ฮ.ศ. ระหว่าง 1 ถึง 1500</div></div>';
+    return;
+  }
+
+  const range = 15;
+  const nearby = EVENTS.filter(e => Math.abs(e.year - hy) <= range).sort((a, b) => a.year - b.year);
+  const ceApprox = hijriYearToGregorianApprox(hy);
+
+  let html = `
+    <div class="century-badge">📅 ${getCenturyLabel(hy)}</div>
+    <div class="year-range-display">แสดงเหตุการณ์รอบปี <span>ฮ.ศ. ${hy}</span> (ประมาณ ค.ศ. ${ceApprox}) ในช่วง ±${range} ปี</div>
+  `;
+
+  if (nearby.length === 0) {
+    html += `<div class="timeline-empty"><div class="empty-icon">📭</div><div>ไม่พบเหตุการณ์สำคัญที่บันทึกไว้ในช่วงนี้</div></div>`;
+  } else {
+    html += '<div class="timeline">';
+    nearby.forEach(e => {
+      const ceYear = hijriYearToGregorianApprox(e.year);
+      html += `
+        <div class="event-card">
+          <div class="event-year-badge">
+            <div class="event-year-num">${e.year}</div>
+            <div class="event-year-unit">ฮ.ศ.</div>
+            <div class="event-year-unit" style="color:#bbb;">≈${ceYear}</div>
+          </div>
+          <div class="event-body">
+            <span class="event-cat ${getCatClass(e.cat)}">${e.cat}</span>
+            <div class="event-title">${e.title}</div>
+            <div class="event-desc">${e.desc}</div>
+          </div>
+        </div>`;
+    });
+    html += '</div>';
+  }
+
+  document.getElementById('explorer-output').innerHTML = html;
+}
+
+/* Initialize with current Hijri year */
+(function init() {
+  const today = new Date();
+  const jd = gregorianToJD(today.getFullYear(), today.getMonth() + 1, today.getDate());
+  const h = jdToHijri(jd);
+  document.getElementById('h-year').value = h.year;
+  document.getElementById('h-month').value = h.month;
+  document.getElementById('h-day').value = h.day;
+  document.getElementById('g-year').value = today.getFullYear();
+  document.getElementById('g-month').value = today.getMonth() + 1;
+  document.getElementById('g-day').value = today.getDate();
+  document.getElementById('explore-year').value = h.year;
+})();
+</script>
+</body>
+</html>

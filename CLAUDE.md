@@ -1,3 +1,9 @@
+# Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
+
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all 50 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+
+---
+
 # ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (50 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
@@ -111,11 +117,9 @@
   - **ตำแหน่งแนวตั้ง:** กำหนด `vertical-align: middle` สำหรับ `span.ar-inline` เพื่อให้เสมอกัน
   - **ความสูงบรรทัด:** กำหนด `line-height: 2.4` สำหรับย่อหน้าที่มีส่วนผสมอาหรับ เพื่อป้องกันสระอาหรับซ้อนทับ
 
-
-
 ---
 
-# 🌐 Editorial Charter of Islamic Fiqh Publishing (The 50 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 50 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
