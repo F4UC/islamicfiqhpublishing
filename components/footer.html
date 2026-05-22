@@ -1,263 +1,41 @@
 <style>
-/* ============================================================
-   EDITORIAL FOOTER — Islamic Fiqh Publishing
-   All vars hardcoded for cross-page compatibility.
-   ============================================================ */
-
-.site-footer {
-  background: #0a0907;
-  border-top: 1px solid rgba(232,224,208,.08);
-  padding: 80px 0 40px;
-  position: relative;
-  overflow: hidden;
-  font-family: 'Sarabun', sans-serif;
-}
-
-.foot-wrap {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.foot-top {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 72px;
-}
-
-.foot-mark {
-  font-family: 'Cormorant Garamond', 'Amiri', Georgia, serif;
-  font-weight: 300;
-  font-size: 36px;
-  color: rgba(232,224,208,.9);
-  letter-spacing: -.01em;
-  margin-bottom: 6px;
-  line-height: 1;
-}
-
-.foot-mark em {
-  font-style: italic;
-  color: #c49a45;
-}
-
-.foot-ar {
-  font-family: 'Amiri', serif;
-  color: rgba(232,224,208,.28);
-  font-size: 15px;
-  margin-bottom: 20px;
-  direction: rtl;
-}
-
-.foot-brand-p {
-  color: rgba(232,224,208,.32);
-  font-size: 13px;
-  max-width: 300px;
-  line-height: 1.75;
-  word-break: break-word;
-}
-
-.foot-col h4 {
-  font-family: 'Inter', sans-serif;
-  font-size: 9px;
-  letter-spacing: .28em;
-  text-transform: uppercase;
-  color: #c49a45;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
-.foot-col a {
-  display: block;
-  padding: 5px 0;
-  color: rgba(232,224,208,.32);
-  font-size: 13px;
-  text-decoration: none;
-  transition: color .22s ease;
-}
-
-.foot-col a:hover {
-  color: rgba(232,224,208,.88);
-}
-
-/* Support / QR section inside footer */
-.foot-support {
-  border-top: 1px solid rgba(232,224,208,.07);
-  padding-top: 40px;
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
-.foot-support-text {
-  font-size: 13px;
-  color: rgba(232,224,208,.35);
-  line-height: 1.75;
-  flex: 1;
-  min-width: 200px;
-}
-
-.foot-support-text strong {
-  color: rgba(232,224,208,.6);
-}
-
-.foot-qr-btn {
-  background: transparent;
-  border: 1px solid rgba(197,165,114,.45);
-  color: #c49a45;
-  padding: 9px 22px;
-  border-radius: 30px;
-  font-family: 'Sarabun', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all .22s ease;
-  white-space: nowrap;
-}
-
-.foot-qr-btn:hover {
-  background: rgba(197,165,114,.12);
-  border-color: #c49a45;
-}
-
-#footerQrBox {
-  display: none;
-  margin-top: 16px;
-  width: 100%;
-}
-
-#footerQrBox img {
-  max-width: 180px;
-  border-radius: 8px;
-  border: 3px solid rgba(197,165,114,.4);
-}
-
-.foot-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 28px;
-  border-top: 1px solid rgba(232,224,208,.06);
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: rgba(232,224,208,.22);
-}
-
-.foot-colophon {
-  font-family: 'Amiri', serif;
-  font-style: italic;
-  letter-spacing: 0;
-  text-transform: none;
-  font-size: 14px;
-  color: rgba(232,224,208,.28);
-  direction: rtl;
-}
-
-.foot-watermark {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-weight: 300;
-  font-style: italic;
-  font-size: clamp(60px, 14vw, 180px);
-  line-height: .85;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(232,224,208,.04);
-  text-align: center;
-  letter-spacing: -.02em;
-  margin-top: 40px;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* Dark mode — footer is always dark so minimal changes needed */
-html.dark-mode .foot-qr-btn {
-  border-color: rgba(197,165,114,.55);
-}
-
-@media (max-width: 979px) {
-  .foot-top {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-  }
-  .foot-brand-p { max-width: 100%; }
-}
-
-@media (max-width: 599px) {
-  .foot-top {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .foot-bottom {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-  .foot-mark { font-size: 28px; }
-  .foot-wrap { padding: 0 16px; }
-}
+/* --- สไตล์สำหรับส่วนสนับสนุน --- */
+.support-section { text-align: center; margin: 0 auto 40px; border-bottom: 1px solid #222; padding-bottom: 40px; max-width: 600px; }
+.support-btn { background: transparent; border: 1px solid #fff; color: #fff; padding: 10px 24px; font-family: 'Sarabun', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: 1px; cursor: pointer; transition: background 0.3s, color 0.3s; border-radius: 4px; }
+.support-btn:hover { background: #fff; color: #0a0a0a; }
+#qrBox { display: none; margin-top: 24px; animation: fadeIn 0.5s; }
+#qrBox img { max-width: 220px; border-radius: 8px; border: 4px solid #fff; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+.support-text { font-size: 13px; color: #aaa; margin-top: 16px; line-height: 1.6; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 
-<footer class="site-footer" lang="th">
-  <div class="foot-wrap">
-    <div class="foot-top">
-      <div class="foot-brand">
-        <div class="foot-mark"><em>Islamic</em> Fiqh Publishing</div>
-        <div class="foot-ar" lang="ar" dir="rtl">دار الفقه الإسلامي للنشر والتوزيع والترجمة</div>
-        <p class="foot-brand-p">คลังวิชาการอิสลามภาษาไทย มุ่งมั่นนำเสนอบทวิเคราะห์และงานแปลจากคลาสสิกอิสลามด้วยความแม่นยำทางวิชาการ</p>
-      </div>
-      <div class="foot-col">
-        <h4>บทความ</h4>
-        <a href="/pages/nitisart.html">นิติศาสตร์อิสลาม</a>
-        <a href="/pages/kalam.html">กะลาม / เทววิทยา</a>
-        <a href="/pages/hadith.html">หะดีษ</a>
-        <a href="/pages/history.html">ประวัติศาสตร์</a>
-        <a href="/pages/literature.html">วรรณกรรม</a>
-      </div>
-      <div class="foot-col">
-        <h4>เครื่องมือ</h4>
-        <a href="/pages/tools.html">ภาพรวมเครื่องมือ</a>
-        <a href="/pages/tools/hijri-time-machine.html">Hijri Time Machine</a>
-      </div>
-      <div class="foot-col">
-        <h4>ข้อมูล</h4>
-        <a href="/pages/about.html">เกี่ยวกับเรา</a>
-        <a href="https://www.facebook.com/IslamicFiqhPublishing" target="_blank" rel="noopener">ติดต่อ / Facebook</a>
-        <a href="/sitemap.xml">Sitemap</a>
-      </div>
-    </div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Islamic Fiqh Publishing</div>
+    <div class="footer-ar" lang="ar" dir="rtl">دار الفقه الإسلامي للنشر والتوزيع والترجمة</div>
 
-    <div class="foot-support">
-      <div class="foot-support-text">
-        <strong>ร่วมสนับสนุนวิชาการ</strong><br>
-        ทุกการสนับสนุนของท่านคือแรงขับเคลื่อนให้กองบรรณาธิการผลิตผลงานวิชาการต่อไป
-      </div>
-      <button class="foot-qr-btn" id="footerSupportBtn">เลี้ยงชาทีมงาน ☕</button>
-      <div id="footerQrBox">
-        <img src="/q-qr.jpg" alt="QR Code สำหรับสนับสนุนผ่าน PromptPay">
+    <div class="support-section">
+      <button class="support-btn" id="supportToggleBtn">ร่วมสนับสนุนวิชาการ / เลี้ยงชาทีมงาน ☕</button>
+      
+      <div id="qrBox">
+        <img src="/q-qr.jpg" alt="QR Code สำหรับสนับสนุน">
+        <div class="support-text">
+          ทุกการสนับสนุนของท่าน คือแรงขับเคลื่อนที่สำคัญ<br>
+          ให้กองบรรณาธิการสามารถผลิตผลงานแปลและงานเขียนที่มีคุณภาพต่อไป
+        </div>
       </div>
     </div>
-
-    <div class="foot-bottom">
-      <span>© 2026 Islamic Fiqh Publishing · All Rights Reserved</span>
-      <span class="foot-colophon" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</span>
+    
+    <div class="footer-links">
+      <a href="/index.html">หน้าแรก</a>
+      <a href="/pages/about.html">เกี่ยวกับเรา</a>
+      <a href="/pages/kalam.html">กะลาม / เทววิทยา</a>
+      <a href="/pages/nitisart.html">นิติศาสตร์</a>
+      <a href="/pages/hadith.html">หะดีษ</a>
+      <a href="/pages/history.html">ประวัติศาสตร์</a>
+      <a href="/pages/literature.html">วรรณกรรม</a> 
+      <a href="https://www.facebook.com/IslamicFiqhPublishing" target="_blank" rel="noopener noreferrer">ติดต่อ</a>
     </div>
-    <div class="foot-watermark" aria-hidden="true">Bismillāh</div>
+    <div class="footer-copy">© 2026 Islamic Fiqh Publishing · All Rights Reserved</div>
   </div>
 </footer>
-
-<script>
-(function(){
-  var btn = document.getElementById('footerSupportBtn');
-  var box = document.getElementById('footerQrBox');
-  if(btn && box){
-    btn.addEventListener('click', function(){
-      var open = box.style.display === 'block';
-      box.style.display = open ? 'none' : 'block';
-      btn.textContent = open ? 'เลี้ยงชาทีมงาน ☕' : 'ซ่อน QR Code';
-    });
-  }
-})();
-</script>
