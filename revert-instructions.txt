@@ -1,0 +1,28 @@
+วิธีกลับไปใช้ดีไซน์เดิม (Before Redesign)
+=============================================
+
+Commit สุดท้ายก่อนการ redesign คือ:
+  1d23898d8c25c72402f561640788853311ba5785
+
+คำสั่ง git ที่ใช้กลับ (รันใน terminal ภายใน project folder):
+
+--- วิธีที่ 1: ดูเว็บเดิมชั่วคราว (ไม่เปลี่ยนอะไรถาวร) ---
+  git checkout 1d23898 -- index.html components/header.html components/footer.html article.css
+
+--- วิธีที่ 2: ย้อนกลับ commit ล่าสุด 1 commit (revert แบบสร้าง commit ใหม่ ปลอดภัย) ---
+  git revert HEAD --no-edit
+  git push origin main
+
+--- วิธีที่ 3: Hard reset ไปที่ commit เดิมเลย (ระวัง — ลบประวัติหลัง commit นั้น) ---
+  git reset --hard 1d23898
+  git push origin main --force
+
+--- วิธีแนะนำที่ปลอดภัยที่สุด (สร้าง branch ใหม่จาก commit เก่า) ---
+  git checkout -b restore-old-design 1d23898
+  git push origin restore-old-design
+  (แล้วไปที่ GitHub > Settings > Pages > เปลี่ยน branch เป็น restore-old-design)
+
+หมายเหตุ:
+- ทุก commit ถูกเก็บไว้ใน git history ตลอดไป
+- ไม่มีข้อมูลใดที่ถูกลบออกจากระบบ
+- รันคำสั่ง: git log --oneline เพื่อดูประวัติ commit ทั้งหมด
