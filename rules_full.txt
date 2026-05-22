@@ -1,51 +1,72 @@
-ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (38 กฎเหล็ก)
-หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
-* กฎข้อที่ 1: คงเนื้อหาต้นฉบับไว้ครบถ้วน 100% ห้ามตัดทอน ย่อความ หรือดัดแปลงสารัตถะหลักโดยไม่ได้รับอนุมัติจากกองบรรณาธิการ
-* กฎข้อที่ 2: การปรับแก้ซอร์สโค้ดในตัวบทความ ให้กระทำได้เฉพาะส่วนโครงสร้าง HTML และการจัดแต่ง CSS เพื่อรองรับระบบแสดงผลที่ถูกต้องเท่านั้น
-* กฎข้อที่ 3: ห้ามต่อเติมข้อมูลที่มาจากการคาดเดาหรือขาดหลักฐานอ้างอิงในเชิงวิชาการอิสลาม (นิติศาสตร์, เทววิทยา, หะดีษ, ประวัติศาสตร์)
-* กฎข้อที่ 4: เนื้อหาบทความและการวิเคราะห์ต้องอ้างอิงตำราแม่บท (Primary Sources) ยุคคลาสสิกอย่างชัดเจนและถูกต้องตามระเบียบวิธีวิจัย
-* กฎข้อที่ 5: หลีกเลี่ยงการใช้คำราชาศัพท์หรือภาษาลำลองในการกล่าวถึงท่านศาสดาและบรรดาปราชญ์ ให้ใช้ภาษาเขียนเชิงวิชาการที่เหมาะสม
-* กฎข้อที่ 6: รายการหนังสือภาษาอาหรับในส่วนบรรณานุกรม ต้องใช้ภาษาอาหรับต้นฉบับเท่านั้น ห้ามแปลชื่อหนังสือเป็นภาษาอื่นเพื่อรักษาอัตลักษณ์ของตำรา
-หมวดที่ 2: มาตรฐานอักขรวิธี การทับศัพท์ และคำเรียกขาน (Transliteration & Honorifics)
-* กฎข้อที่ 7: การระบุชื่อปราชญ์ในครั้งแรกของบทความ จำเป็นต้องระบุปีเสียชีวิตในวงเล็บตามรูปแบบมาตรฐาน: (เสียชีวิตปี ฮ.ศ. XXX / ค.ศ. XXX)
-* กฎข้อที่ 8: การใส่คำสดุดีท้ายนามปราชญ์ (เช่น เราะหิมะฮุลลอฮ์, เราะฎิยัลลอฮุอันฮุ) ให้วางต่อท้ายชื่อได้ทันที ห้ามใส่วงเล็บครอบคำสดุดีโดยเด็ดขาด แม้จะวางคู่กับปีเสียชีวิตก็ตาม
-* กฎข้อที่ 9: การทับศัพท์คำนามภาษาอาหรับที่มี อัล- (ال) นำหน้า ให้สะกดตามการเชื่อมสระและเสียงพยัญชนะชัมซียะฮ์อย่างถูกต้อง ยกเว้นคำว่า "ชะรีอะฮ์" ให้ตัดคำว่า "อัช" ออกไป เน้นเฉพาะคำนี้เท่านั้น
-* กฎข้อที่ 10: การถอดเสียงชื่อเฉพาะทางวิชาการและชื่อปราชญ์ ต้องอิงตามอักขรวิธีภาษาอาหรับมาตรฐาน (เช่น อัลเฆาะซาลีย์, อัลมาตูรีดีย์, อัซซุบกีย์)
-* กฎข้อที่ 11: ชื่อตำราและหนังสือที่ปรากฏในเนื้อหาบทความและบรรณานุกรม ต้องกำกับด้วยแท็กตัวหนา <strong> เสมอ เพื่อเน้นย้ำความสำคัญ
-* กฎข้อที่ 12: ห้ามใช้แท็กตัวเอียง <em> หรือตัวเอียงในระบบ CSS กับชื่อตำราและหนังสือ ให้สงวนไว้สำหรับคำเน้นย้ำทั่วไปที่ไม่ใช่ชื่อเฉพาะ
-หมวดที่ 3: มาตรฐานโครงสร้างสถาปัตยกรรมภาษาและระดับบล็อก (Language & Typography Structure)
-* กฎข้อที่ 13: โครงสร้างหลักแท็ก <body> และแท็กเนื้อหาภาษาไทยทุกจุด ต้องระบุแอตทริบิวต์ lang="th" เพื่อมาตรฐานความทั่วถึงในการเข้าถึงข้อมูล (Accessibility) และระบบบอทดัชนี
-* กฎข้อที่ 14: ห้ามนำประโยคภาษาอาหรับที่มีความยาวเกิน 1 ประโยคมาวางแทรกในบรรทัดร่วมกับภาษาไทยแบบ Inline ให้แยกบรรทัดเป็นบล็อกอ้างอิงเฉพาะ
-* กฎข้อที่ 15: การจัดวางคำแปลภาษาไทยของตัวบทอ้างอิงภาษาอาหรับ ต้องวางแยกบรรทัดไว้ใต้ตัวบทอาหรับ และห่อหุ้มด้วยแท็ก <div class="thai-quote"> เสมอ
-* กฎข้อที่ 16: การเน้นคำสำคัญ (Highlight) ที่มีน้ำหนักวิชาการภายในย่อหน้าบทความ ต้องใช้แท็ก <strong> เท่านั้น ห้ามใช้โครงสร้างอื่นใด
-* กฎข้อที่ 17: รูปแบบโครงสร้างความสัมพันธ์ระหว่างตัวบทอาหรับและคำแปลไทยในกล่องฟิกฮ์ ต้องควบคุมผ่านคลาสสถาปัตยกรรมระบบที่เสถียร
-หมวดที่ 4: สถาปัตยกรรมซอร์สโค้ดและระบบสไตล์ชีต (Code & CSS Grid Standards)
-* กฎข้อที่ 18: สไตล์ CSS ทั้งหมดต้องถูกประกาศและรวบรวมไว้ภายในแท็ก <style> ภายใต้โครงสร้าง <head> เท่านั้น ห้ามใส่แทรกกลาง <body> โดยเด็ดขาด
-* กฎข้อที่ 19: ทุกหน้าเว็บต้องระบุแอนเคอร์แท็ก id="header-placeholder" และ id="footer-placeholder" ในตำแหน่งที่ถูกต้อง เพื่อให้ระบบสคริปต์กลางเรียกโมดูลมาแสดงผลได้สมบูรณ์
-* กฎข้อที่ 20: การเชื่อมโยงเส้นทางไฟล์ (Path Reference) ของ CSS, JS, และ Assets สำหรับไฟล์ที่อยู่ในโฟลเดอร์ย่อย ต้องใช้ระบบถอยหลังสองชั้น (../../) อย่างเป็นระบบ
-* กฎข้อที่ 21: กำหนดระยะห่างระหว่างบรรทัดในเนื้อหาบทความด้วย line-height: 2.0 เป็นมาตรฐาน เพื่อรองรับรูปสระภาษาไทยและเครื่องหมายสระภาษาอาหรับไม่ให้ซ้อนทับกัน
-* กฎข้อที่ 22: ใช้รหัสสีทองพรีเมียม #c49a45 สำหรับป้ายสถานะ ปุ่ม และองค์ประกอบไฮไลต์ของหน้าแอปพลิเคชัน เพื่อควบคุมอัตลักษณ์ของแบรนด์ (Brand Identity)
-* กฎข้อที่ 23: ห้ามใช้ Inline Style (การเขียนสไตล์ในแท็ก HTML โดยตรง) ในทุกกรณี เว้นแต่เป็นสไตล์ที่ควบคุมผ่านคำสั่งสคริปต์ที่มีการคำนวณค่าตัวแปรแปรผัน
-* กฎข้อที่ 24: โครงสร้างข้อมูลและคำสั่งในการสุ่มวาทะปราชญ์ (Quote of the Day) ต้องถูกจัดวางอย่างเป็นระเบียบในส่วนท้ายของไฟล์ก่อนปิดแท็ก </body>
-หมวดที่ 5: ประสบการณ์ผู้ใช้และมิติดิจิทัลอินเตอร์แอคทีฟ (UI/UX & Digital Experience)
-* กฎข้อที่ 25: หน้าแผงควบคุมเครื่องมือ (tools.html) ต้องใช้รูปแบบการดีไซน์แบบ Premium Minimalist ที่เน้นโครงสร้างการ์ดสีขาวสะอาดตา ขอบบาง และใช้เงานุ่มนวล
-* กฎข้อที่ 26: การ์ดแสดงผลเครื่องมือและแอปพลิเคชันต้องระบุป้ายสถานะ (Status Badge) เสมอ เช่น "พร้อมใช้งาน", "กำลังพัฒนา" หรือ "กำลังพิจารณา"
-* กฎข้อที่ 27: ระบบเว็บต้องเปิดใช้งานแอนิเมชันลอยขึ้นเมื่อเลื่อนจอ (Scroll Reveal) โดยใช้คลาส .reveal เพื่อสร้างมิติการโต้ตอบที่นุ่มนวล
-* กฎข้อที่ 28: ต้องติดตั้งปุ่มกลับขึ้นบนสุด (#backToTopBtn) ในตำแหน่ง Fixed Position ที่จะปรากฏขึ้นโดยอัตโนมัติเมื่อผู้ใช้เลื่อนหน้าจอลงเกิน 400 พิกเซล
-* กฎข้อที่ 29: ระบบโครงสร้าง CSS ต้องรองรับการสลับเป็นโหมดมืด (Dark Mode / Night Mode) ผ่านการสลับคลาส .dark-mode ที่บอดี้
-* กฎข้อที่ 30: แผงเครื่องมือช่วยอ่าน (Reading Tools) ต้องมีฟังก์ชันปรับขนาดตัวอักษรที่ทำงานได้จริง (A-, Normal, A+) โดยจำกัดขนาดระหว่าง 14px ถึง 28px
-* กฎข้อที่ 31: ติดตั้งแถบแสดงความคืบหน้าในการอ่าน (Reading Progress Bar) บนสุดของหน้าบทความ โดยคำนวณค่าเปอร์เซ็นต์ตามการเลื่อนหน้าจอจริง
-* กฎข้อที่ 32: ปุ่มคัดลอกข้อความอ้างอิง (Copy Citation) ต้องมีฟังก์ชันเปลี่ยนข้อความเป็น "คัดลอกแล้ว ✓" เป็นเวลา 2 วินาทีเพื่อเป็น Micro-interaction แก่ผู้ใช้
-* กฎข้อที่ 33: รูปภาพและ Assets ทุกชิ้นต้องมีการระบุแอตทริบิวต์ alt ที่อธิบายความหมายสอดคล้องกับภาพ เพื่อประโยชน์ด้าน SEO และระบบอ่านหน้าจอ
-* กฎข้อที่ 34: การจัดกล่องเนื้อหาอ้างอิง (Quote/Hadith) ในบทความนิติศาสตร์ ต้องใช้โครงสร้างควบคุมที่แยกแยะระหว่างตัวบทอาหรับบริสุทธิ์และส่วนแปลไทยเด็ดขาดชัดเจน
-* กฎข้อที่ 35: การตั้งชื่อหน้าเว็บในแท็ก <title> ต้องเป็นไปในแนวทางเดียวกัน คือ [ชื่อบทความ/ชื่อหน้า] — Islamic Fiqh Publishing โดยใช้เครื่องหมายขีดข้างยาว (Em Dash)
-* กฎข้อที่ 36: โครงสร้าง Layout ต้องได้รับการทดสอบและเขียน Media Queries (@media) ให้แสดงผลแบบ Responsive ได้อย่างสมบูรณ์แบบบนอุปกรณ์สมาร์ตโฟนและแท็บเล็ต
-* กฎข้อที่ 37: หน้าแรก (index.html) ต้องออกแบบโครงสร้างสถาปัตยกรรมให้มีส่วนดึง "แอปพลิเคชันแนะนำ" (Featured Apps Grid) แสดงผลในตำแหน่งก่อนเข้าสู่หมวดหมู่บทความล่าสุด
-หมวดที่ 6: มาตรฐานการจัดการทิศทางข้อความอาหรับ (RTL Core Specification)
-* กฎข้อที่ 38: มาตรฐานการกำหนดทิศทางข้อความอาหรับ (Right-to-Left / RTL)
-"เพื่อป้องกันปัญหาการแสดงผลเครื่องหมายวรรคตอนผิดเพี้ยน (เช่น จุดมหัพภาคกระโดดไปอยู่ผิดฝั่ง) และเพื่อให้สัญลักษณ์นำสายตา (Bullet Points) อยู่ในตำแหน่งที่ถูกต้อง ให้บังคับใช้แอตทริบิวต์ dir="rtl" เสมอ ควบคู่กับ lang="ar" ในแท็กระดับบล็อก (Block-level) หรือรายการ (Lists) ที่บรรจุข้อความภาษาอาหรับล้วน เช่น บรรณานุกรมภาษาอาหรับ หรือกล่องอ้างอิง"
-ตัวอย่างโค้ดมาตรฐานระดับบล็อกอ้างอิงและบรรณานุกรม:
-HTML
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (48 กฎเหล็ก)
+
+### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
+
+* **กฎข้อที่ 1:** คงเนื้อหาต้นฉบับไว้ครบถ้วน 100% ห้ามตัดทอน ย่อความ หรือดัดแปลงสารัตถะหลักโดยไม่ได้รับอนุมัติจากกองบรรณาธิการ
+* **กฎข้อที่ 2:** การปรับแก้ซอร์สโค้ดในตัวบทความ ให้กระทำได้เฉพาะส่วนโครงสร้าง HTML และการจัดแต่ง CSS เพื่อรองรับระบบแสดงผลที่ถูกต้องเท่านั้น
+* **กฎข้อที่ 3:** ห้ามต่อเติมข้อมูลที่มาจากการคาดเดาหรือขาดหลักฐานอ้างอิงในเชิงวิชาการอิสลาม (นิติศาสตร์, เทววิทยา, หะดีษ, ประวัติศาสตร์)
+* **กฎข้อที่ 4:** เนื้อหาบทความและการวิเคราะห์ต้องอ้างอิงตำราแม่บท (Primary Sources) ยุคคลาสสิกอย่างชัดเจนและถูกต้องตามระเบียบวิธีวิจัย
+* **กฎข้อที่ 5:** หลีกเลี่ยงการใช้คำราชาศัพท์หรือภาษาลำลองในการกล่าวถึงท่านศาสดาและบรรดาปราชญ์ ให้ใช้ภาษาเขียนเชิงวิชาการที่เหมาะสม
+* **กฎข้อที่ 6:** รายการหนังสือภาษาอาหรับในส่วนบรรณานุกรม ต้องใช้ภาษาอาหรับต้นฉบับเท่านั้น ห้ามแปลชื่อหนังสือเป็นภาษาอื่นเพื่อรักษาอัตลักษณ์ของตำรา
+* **กฎข้อที่ 7:** **[การสอบทานอัลกุรอาน]** หากมีการอ้างอิงโองการอัลกุรอาน ต้องดึงตัวบทมาจาก `https://quran.com/ar` เพื่อความแม่นยำของอักขระและสระ พร้อมระบุชื่อสูเราะฮ์และหมายเลขอายะฮ์กำกับให้ถูกต้องทุกครั้ง
+* **กฎข้อที่ 8:** **[การสอบทานหะดีษ]** หากมีการอ้างอิงตัวบทหะดีษ ต้องดึงข้อมูลจาก `https://sunnah.com/` เป็นหลัก หากไม่มีให้ค้นคลังข้อมูล `https://shamela.ws/` และ **ต้องใส่สระกำกับตัวบทให้ครบถ้วนทุกครั้ง** หากค้นไม่พบจากทั้งสองแหล่ง จึงจะอนุญาตให้ยึดตามต้นฉบับร่างของผู้เขียนได้
+
+### หมวดที่ 2: มาตรฐานอักขรวิธี การทับศัพท์ และการเลือกใช้คำ (Transliteration & Word Choice)
+
+* **กฎข้อที่ 9:** การระบุชื่อปราชญ์ในครั้งแรกของบทความ จำเป็นต้องระบุปีเสียชีวิตในวงเล็บตามรูปแบบมาตรฐาน: `(เสียชีวิตปี ฮ.ศ. XXX / ค.ศ. XXX)`
+* **กฎข้อที่ 10:** การใส่คำสดุดีท้ายนามปราชญ์ (เช่น เราะหิมะฮุลลอฮ์, เราะฎิยัลลอฮุอันฮุ) ให้วางต่อท้ายชื่อได้ทันที **ห้ามใส่วงเล็บครอบคำสดุดีโดยเด็ดขาด** แม้จะวางคู่กับปีเสียชีวิตก็ตาม
+* **กฎข้อที่ 11:** การทับศัพท์คำนามภาษาอาหรับที่มี อัล- (ال) นำหน้า ให้สะกดตามการเชื่อมสระและเสียงพยัญชนะชัมซียะฮ์อย่างถูกต้อง ยกเว้นคำว่า **"ชะรีอะฮ์"** ให้ตัดคำว่า "อัช" ออกไป เน้นเฉพาะคำนี้เท่านั้น
+* **กฎข้อที่ 12:** การถอดเสียงชื่อเฉพาะทางวิชาการและชื่อปราชญ์ ต้องอิงตามอักขรวิธีภาษาอาหรับมาตรฐาน (เช่น อัลเฆาะซาลีย์, อัลมาตูรีดีย์, อัซซุบกีย์)
+* **กฎข้อที่ 13:** **[ช่องไฟคำทับศัพท์]** คำศัพท์เทคนิคทางศาสนาที่ทับศัพท์มา เมื่อนำมาประกอบในประโยคภาษาไทย **ห้ามเว้นวรรคหน้า-หลังเด็ดขาด** (เช่น ให้เขียนว่า `ฐานหลักของชะรีอะฮ์ในประเด็นนี้` ห้ามเขียนแยกเป็น `ฐานหลักของ ชะรีอะฮ์ ในประเด็นนี้`)
+* **กฎข้อที่ 14:** **[การเลือกใช้คำเชื่อม]** ห้ามใช้คำเชื่อมโบราณเช่นคำว่า **"ทว่า"** ให้เปลี่ยนไปใช้คำว่า **"แต่"** แทนในทุกกรณี เพื่อความกระชับของภาษาวิชาการ
+* **กฎข้อที่ 15:** การอ้างอิงคำพูดของนักวิชาการ, ตัวบทหะดีษ หรือคำแปล ต้องใช้เครื่องหมายอัญประกาศแบบโค้ง **`“...”`** เท่านั้น ห้ามใช้แบบตรง (`"..."`) เพื่อความพรีเมียม
+* **กฎข้อที่ 16:** ชื่อตำราและหนังสือที่ปรากฏในเนื้อหาบทความและบรรณานุกรม ต้องกำกับด้วยแท็กตัวหนา `<strong>` เสมอ เพื่อเน้นย้ำความสำคัญ
+* **กฎข้อที่ 17:** ห้ามใช้แท็กตัวเอียง `<em>` หรือตัวเอียงในระบบ CSS กับชื่อตำราและหนังสือ ให้สงวนไว้สำหรับคำเน้นย้ำทั่วไปที่ไม่ใช่ชื่อเฉพาะ
+
+### หมวดที่ 3: โครงสร้างภาษาและสถาปัตยกรรมระดับบล็อก (Language & Typography Structure)
+
+* **กฎข้อที่ 18:** โครงสร้างหลักแท็ก `<body>` และแท็กเนื้อหาภาษาไทยทุกจุด ต้องระบุแอตทริบิวต์ `lang="th"` เพื่อมาตรฐาน Accessibility และระบบบอทดัชนี
+* **กฎข้อที่ 19:** **[สมดุลตัวบทอาหรับ]** หากข้อความภาษาอาหรับมีความยาว **ไม่เกิน 1 บรรทัด** ให้จัดกึ่งกลาง (Center Layout) แต่หากยาว **เกิน 1 บรรทัดขึ้นไป** ให้จัดเข้าสู่กฎบล็อกอ้างอิง (Blockquote) ตามปกติ
+* **กฎข้อที่ 20:** การจัดวางคำแปลภาษาไทยของตัวบทอ้างอิงภาษาอาหรับ ต้องวางแยกบรรทัดไว้ใต้ตัวบทอาหรับ และห่อหุ้มด้วยแท็ก `<div class="thai-quote">` เสมอ
+* **กฎข้อที่ 21:** การเน้นคำสำคัญ (Highlight) ที่มีน้ำหนักวิชาการภายในย่อหน้าบทความ ต้องใช้แท็ก `<strong>` เท่านั้น ห้ามใช้โครงสร้างอื่นใด
+* **กฎข้อที่ 22:** รูปแบบโครงสร้างความสัมพันธ์ระหว่างตัวบทอาหรับและคำแปลไทยในกล่องฟิกฮ์ ต้องควบคุมผ่านคลาสสถาปัตยกรรมระบบที่เสถียร
+
+### หมวดที่ 4: สถาปัตยกรรมซอร์สโค้ดและระบบสไตล์ชีต (Code & CSS Grid Standards)
+
+* **กฎข้อที่ 23:** สไตล์ CSS ทั้งหมดต้องถูกประกาศและรวบรวมไว้ภายในแท็ก `<style>` ภายใต้โครงสร้าง `<head>` เท่านั้น ห้ามใส่แทรกกลาง `<body>` โดยเด็ดขาด
+* **กฎข้อที่ 24:** ฟอนต์ตัวพิมพ์ต้องยึดมาตรฐานดังนี้: ภาษาอาหรับใช้ **Amiri**, ภาษาไทยใช้ **Sarabun** และภาษาอังกฤษใช้ **Inter** ห้ามใช้ฟอนต์อื่นเด็ดขาด
+* **กฎข้อที่ 25:** ทุกหน้าเว็บต้องระบุแอนเคอร์แท็ก `id="header-placeholder"` และ `id="footer-placeholder"` ในตำแหน่งที่ถูกต้อง เพื่อให้ระบบสคริปต์กลางเรียกโมดูลมาแสดงผลได้สมบูรณ์
+* **กฎข้อที่ 26:** การเชื่อมโยงเส้นทางไฟล์ (Path Reference) ของ CSS, JS, และ Assets สำหรับไฟล์ที่อยู่ในโฟลเดอร์ย่อย ต้องใช้ระบบถอยหลังสองชั้น (`../../`) อย่างเป็นระบบ
+* **กฎข้อที่ 27:** กำหนดระยะห่างระหว่างบรรทัดในเนื้อหาบทความด้วย `line-height: 2.0` เป็นมาตรฐาน เพื่อรองรับรูปสระภาษาไทยและเครื่องหมายสระภาษาอาหรับไม่ให้ซ้อนทับกัน
+* **กฎข้อที่ 28:** **[มาตรฐานช่องไฟภาษาไทย]** ห้ามใช้คำสั่ง `text-align: justify;` ในย่อหน้าบทความโดยเด็ดขาด ให้บังคับใช้ `text-align: left;` คู่กับ `word-break: break-word;` เพื่อป้องกันปัญหาช่องว่างระหว่างคำผิดธรรมชาติ
+* **กฎข้อที่ 29:** ใช้รหัสสีทองพรีเมียม `#c49a45` สำหรับป้ายสถานะ ปุ่ม และองค์ประกอบไฮไลต์ เพื่อควบคุมอัตลักษณ์ของแบรนด์
+* **กฎข้อที่ 30:** ห้ามใช้ `Inline Style` (การเขียนสไตล์ในแท็ก HTML โดยตรง) ในทุกกรณี เว้นแต่เป็นสไตล์ที่ควบคุมผ่านคำสั่งสคริปต์ที่มีการคำนวณค่าตัวแปร
+* **กฎข้อที่ 31:** โครงสร้างข้อมูลและคำสั่งในการสุ่มวาทะปราชญ์ (Quote of the Day) ต้องถูกจัดวางอย่างเป็นระเบียบในส่วนท้ายของไฟล์ก่อนปิดแท็ก `</body>`
+
+### หมวดที่ 5: ประสบการณ์ผู้ใช้และมิติดิจิทัลอินเตอร์แอคทีฟ (UI/UX & Digital Experience)
+
+* **กฎข้อที่ 32:** **[สถาปัตยกรรมหน้าอ่านบทความ]** ยกเลิกระบบสารบัญอัจฉริยะ (Sidebar TOC) ทั้งหมด และบังคับใช้ **Centered Reading Layout** โดยจำกัดความกว้างสูงสุดไว้ที่ `900px` เพื่อให้ผู้อ่านโฟกัสเนื้อหาได้ 100%
+* **กฎข้อที่ 33:** หน้าแผงควบคุมเครื่องมือ (`tools.html`) ต้องใช้ดีไซน์ Premium Minimalist เน้นการ์ดสีขาวสะอาดตา ขอบบาง และใช้เงานุ่มนวล
+* **กฎข้อที่ 34:** การ์ดแสดงผลเครื่องมือและแอปพลิเคชันต้องระบุป้ายสถานะ (Status Badge) เสมอ เช่น "พร้อมใช้งาน", "กำลังพัฒนา" หรือ "กำลังพิจารณา"
+* **กฎข้อที่ 35:** ระบบเว็บต้องเปิดใช้งานแอนิเมชันลอยขึ้นเมื่อเลื่อนจอ (`Scroll Reveal`) โดยใช้คลาส `.reveal`
+* **กฎข้อที่ 36:** ต้องติดตั้งปุ่มกลับขึ้นบนสุด (`#backToTopBtn`) ในตำแหน่ง Fixed Position ที่จะปรากฏขึ้นอัตโนมัติเมื่อเลื่อนจอลงเกิน 400px
+* **กฎข้อที่ 37:** ระบบโครงสร้าง CSS ต้องรองรับการสลับเป็นโหมดมืด (Dark Mode) ผ่านคลาส `.dark-mode` ที่บอดี้
+* **กฎข้อที่ 38:** แผงเครื่องมือช่วยอ่าน ต้องมีฟังก์ชันปรับขนาดตัวอักษรที่ทำงานได้จริง (A-, Normal, A+) โดยจำกัดขนาดระหว่าง 14px ถึง 28px
+* **กฎข้อที่ 39:** ติดตั้งแถบแสดงความคืบหน้าในการอ่าน (Reading Progress Bar) บนสุดของหน้าบทความ โดยคำนวณเปอร์เซ็นต์ตามการเลื่อนหน้าจอจริง
+* **กฎข้อที่ 40:** **[มาตรฐานบรรณานุกรม]** การคัดลอกอ้างอิง ต้องใช้ฟอร์แมต: `ชื่อผู้เขียน/กองบรรณาธิการ. (ปี พ.ศ.). ชื่อบทความ. Islamic Fiqh Publishing. สืบค้นจาก [URL]`
+* **กฎข้อที่ 41:** ปุ่มคัดลอกข้อความอ้างอิงและลิงก์ ต้องมีแจ้งเตือน "คัดลอกแล้ว ✓" เป็นเวลา 2 วินาที (Micro-interaction)
+* **กฎข้อที่ 42:** รูปภาพและ Assets ทุกชิ้นต้องมีการระบุแอตทริบิวต์ `alt` ที่อธิบายความหมายสอดคล้องกับภาพ
+* **กฎข้อที่ 43:** การจัดกล่องเนื้อหาอ้างอิง ในบทความนิติศาสตร์ ต้องแยกแยะระหว่างตัวบทอาหรับบริสุทธิ์และส่วนแปลไทยเด็ดขาดชัดเจน
+* **กฎข้อที่ 44:** การตั้งชื่อหน้าเว็บในแท็ก `<title>` ต้องเป็นไปในแนวทางเดียวกัน คือ `[ชื่อบทความ/ชื่อหน้า] — Islamic Fiqh Publishing` โดยใช้ขีดข้างยาว (Em Dash)
+* **กฎข้อที่ 45:** โครงสร้าง Layout ต้องได้รับการทดสอบและเขียน Media Queries (`@media`) ให้แสดงผลแบบ Responsive บนมือถืออย่างสมบูรณ์
+* **กฎข้อที่ 46:** หน้าแรก (`index.html`) ต้องมีส่วนดึง "แอปพลิเคชันแนะนำ" แสดงผลในตำแหน่งก่อนเข้าสู่หมวดหมู่บทความล่าสุด
+
+### หมวดที่ 6: มาตรฐานการจัดการทิศทางข้อความอาหรับ (RTL Core Specification)
+
+* **กฎข้อที่ 47:** **มาตรฐานการกำหนดทิศทางข้อความอาหรับ (Right-to-Left / RTL)**
+เพื่อป้องกันปัญหาการแสดงผลเครื่องหมายวรรคตอนผิดเพี้ยน (เช่น จุดมหัพภาคกระโดด) และให้ Bullet Points อยู่ในตำแหน่งที่ถูกต้อง ให้บังคับใช้แอตทริบิวต์ `dir="rtl"` เสมอ ควบคู่กับ `lang="ar"` ในแท็กระดับบล็อก (Block-level) หรือรายการ (Lists) ที่บรรจุข้อความภาษาอาหรับล้วน
+* **กฎข้อที่ 48:** **[ตัวอย่างโค้ดมาตรฐานระดับบล็อกอ้างอิงและบรรณานุกรม]**
+```html
 <ul class="ref-list" lang="ar" dir="rtl">
    <li>...เนื้อหาภาษาอาหรับ...</li>
 </ul>
@@ -58,78 +79,80 @@ HTML
  <h2 class="ref-title" lang="th">บรรณานุกรม</h2>
  <ul class="ref-list" lang="ar" dir="rtl">
    <li>ابن كثير، عماد الدين إسماعيل. <strong>البداية والنهاية</strong>. بيروت: دار إحياء التراث العربي.</li>
-   <li>السبكي، تقي الدين. <strong>فتاوى السبكي</strong>. بيروت: دار المعرفة.</li>
-   <li>المطيعي، محمد بخيت. <strong>إرشاد أهل الملة إلى إثبات الأهلة</strong>. مصر: المطبعة السلفية.</li>
-   <li>الرملي، شمس الدين محمد. <strong>نهاية المحتاج</strong>. بيروت: دار الفكر.</li>
    <li>البخاري، محمد بن إسماعيل. <strong>صحيح البخاري</strong>. بيروت: دار طوق النجاة.</li>
  </ul>
 </div>
 
-🌐 Editorial Charter of Islamic Fiqh Publishing (The 38 Iron Rules)
-Section 1: Academic & Editorial Integrity
-   * Rule 1: Maintain 100% of the original content. No truncation, summarizing, or modification of the core substance is permitted without editorial approval.
-   * Rule 2: Source code modifications within article files must strictly be limited to structural HTML styling and CSS layout configurations to ensure accurate rendering.
-   * Rule 3: No insertion of speculative, unverified, or unreferenced data within the academic domains of Islamic jurisprudence (Fiqh), theology (Kalam), Hadith, or history.
-   * Rule 4: All article content and academic analyses must accurately reference classical primary sources (Primary Sources) according to rigorous research methodologies.
-   * Rule 5: Avoid colloquialisms or royal terminology when referring to the Prophet and classical scholars. Utilize precise academic prose.
-   * Rule 6: Arabic book titles within the references section must be preserved in their native Arabic script. Transliteration or translation of names is prohibited to maintain bibliographic authenticity.
-Section 2: Transliteration & Honorifics Standards
-   * Rule 7: The first mention of any classical scholar must include their demise year in parentheses, adhering to the standardized format: (d. AH XXX / CE XXX).
-   * Rule 8: Islamic honorifics (e.g., Rahimahullah, Radiyallahu 'anhu) must immediately follow the scholar's name without parentheses, even when positioned adjacent to the demise year.
-   * Rule 9: Transliteration of Arabic nouns containing the definite article Al- (ال) must conform to sun-and-moon letter phonetics, except for the word "Shari'ah" which must be written without the "Ash-" prefix.
-   * Rule 10: Scholarly technical terms and names of jurists must be transliterated in compliance with standard Arabic phonology (e.g., Al-Ghazali, Al-Maturidi, Al-Subki).
-   * Rule 11: Book and treatise titles in both the main text and bibliographies must be wrapped in <strong> tags to emphasize bibliographic metadata.
-   * Rule 12: Do not use <em> tags or CSS italic styling for book titles; italics are strictly reserved for general contextual emphasis.
-Section 3: Language & Typography Structure
-   * Rule 13: The global <body> tag and all Thai textual elements must explicitly state the lang="th" attribute to ensure web accessibility and search engine compliance.
-   * Rule 14: Arabic text exceeding a single sentence must not be inserted inline within a Thai paragraph. It must be isolated into a distinct block-level quotation element.
-   * Rule 15: The Thai translation of an Arabic quote must be positioned beneath the source text inside a specialized <div class="thai-quote"> element.
-   * Rule 16: Important conceptual keywords highlighted within an essay paragraph must strictly implement <strong> tags; no other highlighting mechanics are permitted.
-   * Rule 17: Structural frameworks regulating the relationship between Arabic text inputs and Thai equivalents must implement standardized system container classes.
-Section 4: Code & CSS Standards
-   * Rule 18: Universal CSS rules must be consolidated within internal <style> blocks in the <head> infrastructure. Inline styling sections inside the <body> are strictly prohibited.
-   * Rule 19: All document interfaces must implement id="header-placeholder" and id="footer-placeholder" nodes to allow the asynchronous runtime template rendering managed by main.js.
-   * Rule 20: URL target references and static asset routing definitions within subfolders must uniformly apply the relative double-tier directory backtracking pattern (../../).
-   * Rule 21: Implement a default typography spacing constraint of line-height: 2.0 across all long-form articles to prevent overlap between Thai vowels and Arabic diacritics.
-   * Rule 22: Deploy the signature premium gold color token #c49a45 for application badges, active interactive state components, and buttons to preserve visual brand identity.
-   * Rule 23: Avoid using Inline Style attributes on HTML elements unless handling dynamic values calculated directly by script routines.
-   * Rule 24: Data arrays and logical scripts for the "Quote of the Day" mechanism must be cleanly structured at the end of the markup file, preceding the closing </body> tag.
-Section 5: UI/UX & Digital Experience
-   * Rule 25: Digital utility pages (tools.html) must follow a Premium Minimalist design aesthetic, featuring clean white bordered card modules with subtle box shadows.
-   * Rule 26: Every tool and application module card must render a clear visibility indicator via text labels (e.g., "Available", "In Development", or "Under Evaluation").
-   * Rule 27: Enable native element transition animation systems on window view movement events (Scroll Reveal) by appending the .reveal animation handler class.
-   * Rule 28: Embed a smooth back-to-top navigational anchor component (#backToTopBtn) configured to toggle on when document scrolling offsets exceed 400 pixels.
-   * Rule 29: CSS structural layouts must inherently support system theme state modifications (Dark Mode / Night Mode) controlled via the global toggle class .dark-mode on the root node.
-   * Rule 30: The reading tools panel must provide a working typography scaling feature (A-, Normal, A+) restricted within the bounds of 14px and 28px.
-   * Rule 31: Implement a dynamic linear page scroll tracking bar (Reading Progress Bar) pinned at the top viewport boundary of all text essays.
-   * Rule 32: The copy citation execution button must trigger an explicit confirmation state, toggling the element inner text to "Copied ✓" for exactly 2 seconds as a micro-interaction indicator.
-   * Rule 33: All static graphic references must declare descriptive alt attribute text to satisfy index bots and assistive viewport readers.
-   * Rule 34: Contextual formatting grids managing primary classical citations in legal essays must separate raw Arabic typography blocks from localized Thai target variables.
-   * Rule 35: Document title tag nomenclature must maintain absolute layout consistency using the specific formulaic pattern: [Article Title/Page Title] — Islamic Fiqh Publishing using an em dash separator.
-   * Rule 36: Visual layout grids must undergo multi-viewport layout validation via targeted responsive breakpoints (@media) to ensure mobile device compatibility.
-   * Rule 37: The site entry script layer (index.html) must allocate a distinct layout area for the "Featured Applications" grid, positioned above the chronological article list.
-Section 6: Right-to-Left (RTL) Core Specification
-   * Rule 38: Arabic Text Direction Standard (Right-to-Left / RTL)
-"To prevent punctuation displacement issues (such as periods leaping to the wrong side of the sentence) and to ensure that list indicators (Bullet Points) are correctly positioned, the dir="rtl" attribute must always be enforced alongside lang="ar" on all block-level or list elements enclosing pure Arabic text blocks, including Arabic bibliographies and reference components."
-Standard Code Blueprint for Block Quotes & Bibliographies:
-HTML
-<ul class="ref-list" lang="ar" dir="rtl">
-   <li>...Arabic Content...</li>
-</ul>
+```
 
-<blockquote lang="ar" dir="rtl" class="quote-container">
-   <span class="ar">...Arabic Content...</span>
-</blockquote>
 
-<div class="references">
- <h2 class="ref-title" lang="th">บรรณานุกรม</h2>
- <ul class="ref-list" lang="ar" dir="rtl">
-   <li>ابن كثير، عماد الدين إسماعيل. <strong>البداية والنهاية</strong>. بيروت: دار إحياء التراث العربي.</li>
-   <li>السبكي، تقي الدين. <strong>فتاوى السبكي</strong>. بيروت: دار المعرفة.</li>
-   <li>المطيعي، محمد بخيت. <strong>إرشاد أهل الملة إلى إثبات الأهلة</strong>. مصر: المطبعة السلفية.</li>
-   <li>الرملي، شمس الدين محمد. <strong>نهاية المحتاج</strong>. بيروت: دار الفكر.</li>
-   <li>البخاري، محمد بن إسماعيل. <strong>صحيح البخاري</strong>. بيروت: دار طوق النجاة.</li>
- </ul>
-</div>
-* กฎข้อที่ 39: การใช้อัญประกาศต้องใช้ “...” (แบบโค้ง) ไม่ใช่ "..." (แบบตรง) เพื่อความเป็นมาตรฐาน
-* กฎข้อที่ 40: ฟอนต์ภาษาอาหรับต้องใช้ Amiri เท่านั้น, ภาษาไทยต้องใช้ Sarabun และภาษาอังกฤษต้องใช้ Inter ห้ามใช้ฟอนต์อื่นเด็ดขาด
+
+---
+
+# 🌐 Editorial Charter of Islamic Fiqh Publishing (The 48 Iron Rules)
+
+## Section 1: Academic & Editorial Integrity
+
+* **Rule 1:** Maintain 100% of the original content. No truncation or modification of the core substance without editorial approval.
+* **Rule 2:** Source code modifications within articles are strictly limited to structural HTML styling and CSS configurations.
+* **Rule 3:** No insertion of speculative or unverified data within academic domains (Fiqh, Kalam, Hadith, History).
+* **Rule 4:** All analyses must accurately reference classical primary sources (`Primary Sources`).
+* **Rule 5:** Avoid colloquialisms or royal terminology when referring to the Prophet and scholars. Use academic prose.
+* **Rule 6:** Arabic book titles in references must be preserved in native Arabic script; translation of names is prohibited.
+* **Rule 7:** **[Quran Verification]** All Quranic citations must be cross-verified and extracted from `https://quran.com/ar` to ensure flawless diacritics, accompanied by the exact Surah and Ayah number.
+* **Rule 8:** **[Hadith Verification]** Hadith texts must be extracted from `https://sunnah.com/` or `https://shamela.ws/` and **must include full Harakat (vowels)**. If unavailable, proceed with the author's original manuscript.
+
+## Section 2: Transliteration & Word Choice
+
+* **Rule 9:** The first mention of a classical scholar must include their demise year: `(d. AH XXX / CE XXX)`.
+* **Rule 10:** Islamic honorifics (e.g., Rahimahullah) must follow the name **without parentheses**, even when adjacent to the demise year.
+* **Rule 11:** Transliteration of Al- (ال) must conform to phonetic rules, except for "Shari'ah" which must omit the "Ash-" prefix.
+* **Rule 12:** Scholarly names must align with standard Arabic phonology (e.g., Al-Ghazali, Al-Maturidi).
+* **Rule 13:** **[Transliteration Spacing]** Transliterated religious terminology inserted into Thai sentences must not be preceded or followed by space bars (e.g., `หลักของชะรีอะฮ์ในประเด็น`).
+* **Rule 14:** **[Conjunction Choice]** Eliminate archaic conjunctions such as "ทว่า"; enforce the use of "แต่" to optimize academic conciseness.
+* **Rule 15:** Direct quotes, Hadith, and translations must be enclosed strictly within curved quotation marks **`“...”`**.
+* **Rule 16:** Book titles in texts and bibliographies must be wrapped in `<strong>` tags.
+* **Rule 17:** Do not use `<em>` tags or CSS italic styling for book titles.
+
+## Section 3: Language & Typography Structure
+
+* **Rule 18:** The global `<body>` and all Thai elements must state `lang="th"` for accessibility and SEO.
+* **Rule 19:** **[Arabic Layout Balance]** Arabic texts extending **$\le 1$ line** must be center-aligned. Texts exceeding 1 line must be formatted as standard Blockquotes.
+* **Rule 20:** Thai translations of Arabic texts must be positioned beneath the source inside `<div class="thai-quote">`.
+* **Rule 21:** Conceptual keywords highlighted within an essay must strictly use `<strong>` tags.
+* **Rule 22:** Fiqh container structures must implement standardized system container classes.
+
+## Section 4: Code & CSS Architecture
+
+* **Rule 23:** CSS rules must be consolidated within `<style>` in `<head>`. Inline `<style>` in `<body>` is prohibited.
+* **Rule 24:** **[Font Stack]** Enforce strict typography: **Amiri** for Arabic, **Sarabun** for Thai, and **Inter** for English.
+* **Rule 25:** Interfaces must implement `id="header-placeholder"` and `id="footer-placeholder"` for runtime template rendering.
+* **Rule 26:** Asset routing in subfolders must apply double-tier backtracking (`../../`).
+* **Rule 27:** Implement a typography spacing constraint of `line-height: 2.0` to prevent vowel/diacritic overlap.
+* **Rule 28:** **[Thai Typography Fix]** The `text-align: justify;` property is strictly forbidden. Paragraphs must enforce `text-align: left;` paired with `word-break: break-word;` to prevent unnatural white spaces.
+* **Rule 29:** Deploy premium gold `#c49a45` for active states and badges to preserve brand identity.
+* **Rule 30:** Avoid `Inline Style` unless handling dynamic script-calculated values.
+* **Rule 31:** Data arrays for "Quote of the Day" must be structured at the end of the file, preceding `</body>`.
+
+## Section 5: UI/UX & Digital Experience
+
+* **Rule 32:** **[Reading Architecture]** Sidebar TOC systems are abolished. Articles must strictly deploy a **Centered Reading Layout** (max-width: 900px) to maximize reading focus.
+* **Rule 33:** Digital utility pages (`tools.html`) must follow a Premium Minimalist aesthetic with subtle box shadows.
+* **Rule 34:** Tool modules must render visibility indicators (e.g., "Available", "In Development").
+* **Rule 35:** Enable native transition animations on scroll (`Scroll Reveal`) via the `.reveal` class.
+* **Rule 36:** Embed a back-to-top component (`#backToTopBtn`) triggered beyond 400px scroll depth.
+* **Rule 37:** CSS must support Dark Mode modifications via the `.dark-mode` root class.
+* **Rule 38:** The reading tools panel must provide working typography scaling (14px - 28px).
+* **Rule 39:** Implement a dynamic Reading Progress Bar pinned at the top viewport boundary.
+* **Rule 40:** **[Citation Standard]** Automated bibliographical citations must generate exact format: `Author/Editor. (Year). Article Title. Islamic Fiqh Publishing. Retrieved from [URL]`.
+* **Rule 41:** Copy execution buttons must trigger a "Copied ✓" micro-interaction state for 2 seconds.
+* **Rule 42:** All static graphics must declare descriptive `alt` attributes.
+* **Rule 43:** Formatting grids managing citations must separate raw Arabic blocks from localized Thai text.
+* **Rule 44:** Title tag nomenclature must maintain the pattern: `[Article Title/Page Title] — Islamic Fiqh Publishing`.
+* **Rule 45:** Visual grids must undergo multi-viewport layout validation (`@media`) for mobile compatibility.
+* **Rule 46:** The entry script (`index.html`) must allocate a "Featured Applications" grid above articles.
+
+## Section 6: Right-to-Left (RTL) Core Specification
+
+* **Rule 47:** **Arabic Text Direction Standard** To prevent punctuation displacement and ensure accurate bullet point positioning, the `dir="rtl"` attribute must always be enforced alongside `lang="ar"` on all block-level or list elements enclosing pure Arabic text.
+* **Rule 48:** **[Blueprint]** Standard Code Blueprint for Block Quotes & Bibliographies (As defined in Thai section).
