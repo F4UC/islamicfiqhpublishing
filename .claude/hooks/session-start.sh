@@ -9,4 +9,10 @@ fi
 # Sync latest changes from main (e.g. updates pushed by Antigravity)
 cd "$CLAUDE_PROJECT_DIR"
 git fetch origin main
-git merge --ff-only origin/main || echo "Note: fast-forward merge not possible, manual sync may be needed"
+
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ "$CURRENT_BRANCH" = "main" ]; then
+  git merge --ff-only origin/main || echo "Note: fast-forward merge not possible, manual sync may be needed"
+else
+  echo "On branch '$CURRENT_BRANCH' — fetched origin/main without merging"
+fi
