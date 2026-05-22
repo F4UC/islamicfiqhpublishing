@@ -1,4 +1,4 @@
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (48 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (50 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -19,7 +19,7 @@
 * **กฎข้อที่ 12:** การถอดเสียงชื่อเฉพาะทางวิชาการและชื่อปราชญ์ ต้องอิงตามอักขรวิธีภาษาอาหรับมาตรฐาน (เช่น อัลเฆาะซาลีย์, อัลมาตูรีดีย์, อัซซุบกีย์)
 * **กฎข้อที่ 13:** **[ช่องไฟคำทับศัพท์]** คำศัพท์เทคนิคทางศาสนาที่ทับศัพท์มา เมื่อนำมาประกอบในประโยคภาษาไทย **ห้ามเว้นวรรคหน้า-หลังเด็ดขาด** (เช่น ให้เขียนว่า `ฐานหลักของชะรีอะฮ์ในประเด็นนี้` ห้ามเขียนแยกเป็น `ฐานหลักของ ชะรีอะฮ์ ในประเด็นนี้`)
 * **กฎข้อที่ 14:** **[การเลือกใช้คำเชื่อม]** ห้ามใช้คำเชื่อมโบราณเช่นคำว่า **"ทว่า"** ให้เปลี่ยนไปใช้คำว่า **"แต่"** แทนในทุกกรณี เพื่อความกระชับของภาษาวิชาการ
-* **กฎข้อที่ 15:** การอ้างอิงคำพูดของนักวิชาการ, ตัวบทหะดีษ หรือคำแปล ต้องใช้เครื่องหมายอัญประกาศแบบโค้ง **`“...”`** เท่านั้น ห้ามใช้แบบตรง (`"..."`) เพื่อความพรีเมียม
+* **กฎข้อที่ 15:** การอ้างอิงคำพูดของนักวิชาการ, ตัวบทหะดีษ หรือคำแปล ต้องใช้เครื่องหมายอัญประกาศแบบโค้ง **`"..."`** เท่านั้น ห้ามใช้แบบตรง (`"..."`) เพื่อความพรีเมียม
 * **กฎข้อที่ 16:** ชื่อตำราและหนังสือที่ปรากฏในเนื้อหาบทความและบรรณานุกรม ต้องกำกับด้วยแท็กตัวหนา `<strong>` เสมอ เพื่อเน้นย้ำความสำคัญ
 * **กฎข้อที่ 17:** ห้ามใช้แท็กตัวเอียง `<em>` หรือตัวเอียงในระบบ CSS กับชื่อตำราและหนังสือ ให้สงวนไว้สำหรับคำเน้นย้ำทั่วไปที่ไม่ใช่ชื่อเฉพาะ
 
@@ -27,7 +27,7 @@
 
 * **กฎข้อที่ 18:** โครงสร้างหลักแท็ก `<body>` และแท็กเนื้อหาภาษาไทยทุกจุด ต้องระบุแอตทริบิวต์ `lang="th"` เพื่อมาตรฐาน Accessibility และระบบบอทดัชนี
 * **กฎข้อที่ 19:** **[สมดุลตัวบทอาหรับ]** หากข้อความภาษาอาหรับมีความยาว **ไม่เกิน 1 บรรทัด** ให้จัดกึ่งกลาง (Center Layout) แต่หากยาว **เกิน 1 บรรทัดขึ้นไป** ให้จัดเข้าสู่กฎบล็อกอ้างอิง (Blockquote) ตามปกติ
-* **กฎข้อที่ 20:** การจัดวางคำแปลภาษาไทยของตัวบทอ้างอิงภาษาอาหรับ ต้องวางแยกบรรทัดไว้ใต้ตัวบทอาหรับ และห่อหุ้มด้วยแท็ก `<div class="thai-quote">` เสมอ
+* **กฎข้อที่ 20:** การจัดวางคำแปลภาษาไทยของตัวบทอ้างอิงภาษาอาหรับ **ในกรณีที่ตัวบทมีความยาวไม่เกิน 60 คำ** ต้องวางแยกบรรทัดไว้ใต้ตัวบทอาหรับ และห่อหุ้มด้วยแท็ก `<div class="thai-quote">` เสมอ (สำหรับตัวบทที่ยาวเกิน 60 คำ ให้ปฏิบัติตามกฎข้อที่ 49)
 * **กฎข้อที่ 21:** การเน้นคำสำคัญ (Highlight) ที่มีน้ำหนักวิชาการภายในย่อหน้าบทความ ต้องใช้แท็ก `<strong>` เท่านั้น ห้ามใช้โครงสร้างอื่นใด
 * **กฎข้อที่ 22:** รูปแบบโครงสร้างความสัมพันธ์ระหว่างตัวบทอาหรับและคำแปลไทยในกล่องฟิกฮ์ ต้องควบคุมผ่านคลาสสถาปัตยกรรมระบบที่เสถียร
 
@@ -56,7 +56,7 @@
 * **กฎข้อที่ 40:** **[มาตรฐานบรรณานุกรม]** การคัดลอกอ้างอิง ต้องใช้ฟอร์แมต: `ชื่อผู้เขียน/กองบรรณาธิการ. (ปี พ.ศ.). ชื่อบทความ. Islamic Fiqh Publishing. สืบค้นจาก [URL]`
 * **กฎข้อที่ 41:** ปุ่มคัดลอกข้อความอ้างอิงและลิงก์ ต้องมีแจ้งเตือน "คัดลอกแล้ว ✓" เป็นเวลา 2 วินาที (Micro-interaction)
 * **กฎข้อที่ 42:** รูปภาพและ Assets ทุกชิ้นต้องมีการระบุแอตทริบิวต์ `alt` ที่อธิบายความหมายสอดคล้องกับภาพ
-* **กฎข้อที่ 43:** การจัดกล่องเนื้อหาอ้างอิง ในบทความนิติศาสตร์ ต้องแยกแยะระหว่างตัวบทอาหรับบริสุทธิ์และส่วนแปลไทยเด็ดขาดชัดเจน
+* **กฎข้อที่ 43:** การจัดกล่องเนื้อหาอ้างอิงในบทความนิติศาสตร์ ต้องแยกแยะระหว่างตัวบทอาหรับบริสุทธิ์และส่วนแปลไทยเด็ดขาดชัดเจน โดยยึดตามมาตรฐานของกฎข้อที่ 20 (กรณีตัวบทไม่เกิน 60 คำ) และกฎข้อที่ 49 (กรณีตัวบทเกิน 60 คำ)
 * **กฎข้อที่ 44:** การตั้งชื่อหน้าเว็บในแท็ก `<title>` ต้องเป็นไปในแนวทางเดียวกัน คือ `[ชื่อบทความ/ชื่อหน้า] — Islamic Fiqh Publishing` โดยใช้ขีดข้างยาว (Em Dash)
 * **กฎข้อที่ 45:** โครงสร้าง Layout ต้องได้รับการทดสอบและเขียน Media Queries (`@media`) ให้แสดงผลแบบ Responsive บนมือถืออย่างสมบูรณ์
 * **กฎข้อที่ 46:** หน้าแรก (`index.html`) ต้องมีส่วนดึง "แอปพลิเคชันแนะนำ" แสดงผลในตำแหน่งก่อนเข้าสู่หมวดหมู่บทความล่าสุด
@@ -82,14 +82,40 @@
    <li>البخاري، محمد بن إسماعيل. <strong>صحيح البخاري</strong>. بيروت: دار طوق النجاة.</li>
  </ul>
 </div>
-
 ```
+
+### หมวดที่ 7: มาตรฐานการแสดงผลตัวบทยาวและอักษรผสม (Long-form & Mixed Script Standards)
+
+* **กฎข้อที่ 49:** **[มาตรฐานตัวบทยาว — การนำเสนอและการระบุเจ้าของคำพูด]** หากตัวบทต้นฉบับ (ภาษาอาหรับหรือภาษาอื่น) มีความยาวเกิน **60 คำ** ให้ปฏิบัติดังนี้:
+  1. แสดงเฉพาะ**คำแปลภาษาไทย**เป็นหลัก โดยต้องขึ้นต้นด้วยสูตร **attribution** ตามประเภทของแหล่งอ้างอิง เพื่อให้ผู้อ่านทราบชัดเจนว่านี่คือคำพูดของใคร ไม่ใช่ของผู้เขียนบทความ:
+     - **คำพูดปราชญ์:** `[ชื่อ] (เสียชีวิตปี ฮ.ศ. XXX / ค.ศ. XXX) [คำสดุดี] กล่าวว่า:` เช่น `อัซซุบกีย์ (เสียชีวิตปี ฮ.ศ. 771 / ค.ศ. 1370) เราะหิมะฮุลลอฮ์ กล่าวว่า:`
+     - **โองการอัลกุรอาน:** `อัลลอฮ์ ซุบหานะฮูวะตะอาลา ตรัสในสูเราะฮ์ [ชื่อสูเราะฮ์] อายะฮ์ที่ [X] ว่า:`
+     - **หะดีษ:** `ท่านนบีมุหัมมัด ศ็อลลัลลอฮุอะลัยฮิวะซัลลัม กล่าวว่า:` (บันทึกโดย [ชื่อผู้บันทึก เช่น อัลบุคอรีย์, มุสลิม])
+  2. ซ่อนตัวบทต้นฉบับไว้ภายใต้แท็ก `<details>/<summary>` โดยใช้ป้ายกำกับ **"ดูตัวบทต้นฉบับ ▼"** วางไว้ใต้คำแปลไทยภายใน blockquote เดียวกัน
+
+```html
+<blockquote class="quote-container">
+  <div class="thai-quote">
+    <span class="attribution">อัซซุบกีย์ (เสียชีวิตปี ฮ.ศ. 771 / ค.ศ. 1370) เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
+    "...คำแปลภาษาไทย..."
+  </div>
+  <details class="source-toggle">
+    <summary>ดูตัวบทต้นฉบับ ▼</summary>
+    <div lang="ar" dir="rtl" class="ar">...نص عربي...</div>
+  </details>
+</blockquote>
+```
+
+* **กฎข้อที่ 50:** **[มาตรฐานสมดุลอักษรอาหรับในบรรทัดผสม — Inline Arabic Balance]** เมื่ออักษรอาหรับปรากฏแทรกอยู่ในบรรทัดภาษาไทย ต้องปรับสมดุลการแสดงผลผ่าน CSS ดังนี้:
+  - **สัดส่วนขนาดอักษร:** กำหนด `font-size: 1.15em` สำหรับ `:lang(ar)` เพื่อให้ตัวอักษร Amiri มีขนาดสายตาเทียบเท่ากับ Sarabun
+  - **ตำแหน่งแนวตั้ง:** กำหนด `vertical-align: middle` สำหรับ `span.ar-inline` เพื่อให้เสมอกัน
+  - **ความสูงบรรทัด:** กำหนด `line-height: 2.4` สำหรับย่อหน้าที่มีส่วนผสมอาหรับ เพื่อป้องกันสระอาหรับซ้อนทับ
 
 
 
 ---
 
-# 🌐 Editorial Charter of Islamic Fiqh Publishing (The 48 Iron Rules)
+# 🌐 Editorial Charter of Islamic Fiqh Publishing (The 50 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -110,15 +136,15 @@
 * **Rule 12:** Scholarly names must align with standard Arabic phonology (e.g., Al-Ghazali, Al-Maturidi).
 * **Rule 13:** **[Transliteration Spacing]** Transliterated religious terminology inserted into Thai sentences must not be preceded or followed by space bars (e.g., `หลักของชะรีอะฮ์ในประเด็น`).
 * **Rule 14:** **[Conjunction Choice]** Eliminate archaic conjunctions such as "ทว่า"; enforce the use of "แต่" to optimize academic conciseness.
-* **Rule 15:** Direct quotes, Hadith, and translations must be enclosed strictly within curved quotation marks **`“...”`**.
+* **Rule 15:** Direct quotes, Hadith, and translations must be enclosed strictly within curved quotation marks **`"..."`**.
 * **Rule 16:** Book titles in texts and bibliographies must be wrapped in `<strong>` tags.
 * **Rule 17:** Do not use `<em>` tags or CSS italic styling for book titles.
 
 ## Section 3: Language & Typography Structure
 
 * **Rule 18:** The global `<body>` and all Thai elements must state `lang="th"` for accessibility and SEO.
-* **Rule 19:** **[Arabic Layout Balance]** Arabic texts extending **$\le 1$ line** must be center-aligned. Texts exceeding 1 line must be formatted as standard Blockquotes.
-* **Rule 20:** Thai translations of Arabic texts must be positioned beneath the source inside `<div class="thai-quote">`.
+* **Rule 19:** **[Arabic Layout Balance]** Arabic texts extending **≤ 1 line** must be center-aligned. Texts exceeding 1 line must be formatted as standard Blockquotes.
+* **Rule 20:** Thai translations of Arabic texts **not exceeding 60 words** must be positioned beneath the source inside `<div class="thai-quote">`. (For texts exceeding 60 words, refer to Rule 49.)
 * **Rule 21:** Conceptual keywords highlighted within an essay must strictly use `<strong>` tags.
 * **Rule 22:** Fiqh container structures must implement standardized system container classes.
 
@@ -147,7 +173,7 @@
 * **Rule 40:** **[Citation Standard]** Automated bibliographical citations must generate exact format: `Author/Editor. (Year). Article Title. Islamic Fiqh Publishing. Retrieved from [URL]`.
 * **Rule 41:** Copy execution buttons must trigger a "Copied ✓" micro-interaction state for 2 seconds.
 * **Rule 42:** All static graphics must declare descriptive `alt` attributes.
-* **Rule 43:** Formatting grids managing citations must separate raw Arabic blocks from localized Thai text.
+* **Rule 43:** Formatting grids managing citations in Fiqh articles must separate raw Arabic blocks from localized Thai text, in accordance with Rule 20 (texts ≤ 60 words) and Rule 49 (texts > 60 words).
 * **Rule 44:** Title tag nomenclature must maintain the pattern: `[Article Title/Page Title] — Islamic Fiqh Publishing`.
 * **Rule 45:** Visual grids must undergo multi-viewport layout validation (`@media`) for mobile compatibility.
 * **Rule 46:** The entry script (`index.html`) must allocate a "Featured Applications" grid above articles.
@@ -156,3 +182,17 @@
 
 * **Rule 47:** **Arabic Text Direction Standard** To prevent punctuation displacement and ensure accurate bullet point positioning, the `dir="rtl"` attribute must always be enforced alongside `lang="ar"` on all block-level or list elements enclosing pure Arabic text.
 * **Rule 48:** **[Blueprint]** Standard Code Blueprint for Block Quotes & Bibliographies (As defined in Thai section).
+
+## Section 7: Long-form & Mixed Script Standards
+
+* **Rule 49:** **[Long-form Source Attribution Standard]** When source text (Arabic or other languages) exceeds **60 words**, apply the following:
+  1. Display only the **Thai translation** as the primary content, preceded by a mandatory **attribution formula** by source type, to clearly distinguish the speaker from the article author:
+     - **Scholar Quote:** `[Name] (d. AH XXX / CE XXX) [Honorific] said:` e.g. `Al-Subki (d. AH 771 / CE 1370) Rahimahullah said:`
+     - **Quranic Verse:** `Allah Subhanahu wa Ta'ala says in Surah [Name], Ayah [X]:`
+     - **Hadith:** `The Prophet Muhammad ﷺ said:` (Recorded by [Collector, e.g., Al-Bukhari, Muslim])
+  2. Conceal the original source text within a `<details>/<summary>` element labeled **"ดูตัวบทต้นฉบับ ▼"**, positioned beneath the Thai translation within the same blockquote.
+
+* **Rule 50:** **[Inline Arabic Balance Standard]** When Arabic characters appear inline within Thai text, visual balance must be enforced via CSS:
+  - **Font size ratio:** Set `font-size: 1.15em` for `:lang(ar)` to visually equalize Amiri with Sarabun.
+  - **Vertical alignment:** Set `vertical-align: middle` on `span.ar-inline` to align baselines.
+  - **Line height:** Set `line-height: 2.4` on paragraphs containing inline Arabic to prevent diacritic overlap.
