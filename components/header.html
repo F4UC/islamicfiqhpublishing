@@ -1,16 +1,28 @@
-<style>
-/* ==========================================================
-   Chrome Navigation — Fixed Dark Frosted Bar
-   ========================================================== */
+:root {
+  --header-bg: rgba(251,251,250,0.92);
+  --header-text: #111111;
+  --header-text-dim: #555555;
+  --header-border: #eaeaea;
+  --header-icon-border: rgba(0,0,0,0.1);
+}
+html.dark-mode {
+  --header-bg: rgba(10,9,7,0.92);
+  --header-text: #e8e0d0;
+  --header-text-dim: #9a907e;
+  --header-border: rgba(232,224,208,0.14);
+  --header-icon-border: rgba(232,224,208,0.32);
+}
+
 .chrome {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
-  color: #9a907e;
+  color: var(--header-text-dim);
   backdrop-filter: blur(20px) saturate(1.2);
   -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  background: linear-gradient(to bottom, rgba(10,9,7,.92), rgba(10,9,7,.70));
-  border-bottom: 1px solid rgba(232,224,208,.14);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 .chrome-inner {
   max-width: 1440px; margin: 0 auto; padding: 14px 40px;
@@ -18,7 +30,8 @@
 }
 .chrome-mark {
   display: flex; align-items: center; gap: 14px;
-  color: #e8e0d0; text-decoration: none; flex-shrink: 0;
+  color: var(--header-text); text-decoration: none; flex-shrink: 0;
+  transition: color 0.3s;
 }
 .chrome-seal {
   width: 22px; height: 22px; border: 1px solid #c49a45; border-radius: 50%;
@@ -30,13 +43,13 @@
 
 nav.chrome-nav { display: flex; gap: 28px; }
 nav.chrome-nav .nav-item {
-  position: relative; color: #9a907e;
+  position: relative; color: var(--header-text-dim);
   transition: color .25s; font-size: 11px;
   letter-spacing: .18em; text-transform: uppercase; text-decoration: none;
   border: none; background: none; cursor: pointer;
 }
 nav.chrome-nav .nav-item:hover,
-nav.chrome-nav .nav-item.active { color: #e8e0d0; }
+nav.chrome-nav .nav-item.active { color: var(--header-text); }
 nav.chrome-nav .nav-item::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: -6px;
   height: 1px; background: #c49a45;
@@ -47,19 +60,20 @@ nav.chrome-nav .nav-item:hover::after,
 nav.chrome-nav .nav-item.active::after { transform: scaleX(1); }
 
 .chrome-right { display: flex; align-items: center; gap: 14px; }
-.chrome-time { color: #e8e0d0; font-size: 11px; letter-spacing: .18em; }
+.chrome-time { color: var(--header-text); font-size: 11px; letter-spacing: .18em; transition: color 0.3s; }
 
 .chrome-icon-btn {
   width: 32px; height: 32px; display: grid; place-items: center;
-  border: 1px solid rgba(232,224,208,.32); border-radius: 50%;
-  color: #9a907e; background: transparent; cursor: pointer;
+  border: 1px solid var(--header-icon-border); border-radius: 50%;
+  color: var(--header-text-dim); background: transparent; cursor: pointer;
   transition: all .25s; padding: 0; flex-shrink: 0;
 }
 .chrome-icon-btn:hover { border-color: #c49a45; color: #c49a45; transform: rotate(8deg); }
 
 .chrome-hamburger {
   display: none; font-size: 20px; cursor: pointer;
-  color: #e8e0d0; background: transparent; border: 0; padding: 4px;
+  color: var(--header-text); background: transparent; border: 0; padding: 4px;
+  transition: color 0.3s;
 }
 .chrome-spacer { height: 51px; }
 
@@ -71,19 +85,19 @@ nav.chrome-nav .nav-item.active::after { transform: scaleX(1); }
 nav.chrome-nav.mobile-active {
   display: flex; flex-direction: column;
   position: fixed; top: 51px; left: 0; right: 0;
-  background: rgba(10,9,7,.97);
+  background: var(--header-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(232,224,208,.14);
+  border-bottom: 1px solid var(--header-border);
   padding: 20px 40px 24px; gap: 0; z-index: 999;
 }
 nav.chrome-nav.mobile-active .nav-item {
-  padding: 14px 0; border-bottom: 1px solid rgba(232,224,208,.10) !important;
+  padding: 14px 0; border-bottom: 1px solid var(--header-border) !important;
   font-size: 13px; letter-spacing: .14em;
 }
 nav.chrome-nav.mobile-active .nav-item:last-child { border-bottom: none !important; }
 nav.chrome-nav.mobile-active .nav-item.active {
-  color: #c49a45; border-bottom: 1px solid rgba(232,224,208,.10) !important;
+  color: #c49a45; border-bottom: 1px solid var(--header-border) !important;
 }
 
 /* ==========================================================

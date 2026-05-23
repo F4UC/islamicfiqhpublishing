@@ -473,3 +473,38 @@ function copyCitation() {
     });
 }
 
+// ==========================================
+// ⭐️ 9. ระบบ Click Ripple Effect ระดับเว็บ (Global Click Ripple) ⭐️
+// ==========================================
+document.addEventListener('click', function(e) {
+  var target = e.target.closest('.btn, .cat-card, .tool-card, .idx-row, .read-more-link, .copy-btn, .chrome-icon-btn, .page-btn, .nav-item, #backToTopBtn, #themeToggleBtn, #searchToggleBtn');
+  if (!target) return;
+  
+  var computedStyle = window.getComputedStyle(target);
+  if (computedStyle.position === 'static') {
+    target.style.position = 'relative';
+  }
+  if (computedStyle.overflow !== 'hidden' && !target.classList.contains('chrome-icon-btn') && target.id !== 'backToTopBtn') {
+    target.style.overflow = 'hidden';
+  }
+  
+  var ripple = document.createElement('span');
+  ripple.className = 'ripple-effect';
+  
+  var rect = target.getBoundingClientRect();
+  var size = Math.max(rect.width, rect.height);
+  ripple.style.width = ripple.style.height = size + 'px';
+  
+  var x = e.clientX - rect.left - size / 2;
+  var y = e.clientY - rect.top - size / 2;
+  ripple.style.left = x + 'px';
+  ripple.style.top = y + 'px';
+  
+  target.appendChild(ripple);
+  
+  setTimeout(function() {
+    ripple.remove();
+  }, 650);
+});
+
+
