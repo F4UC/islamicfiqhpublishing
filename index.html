@@ -248,7 +248,7 @@ body::before {
 .section-no { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--gold); font-size: 18px; letter-spacing: .02em; }
 .section-no .slash { color: var(--text-mute); margin: 0 6px; }
 .section-eyebrow {
-  font-family: var(--ui); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--text-mute);
+  font-family: var(--thai); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--text-mute);
   display: flex; align-items: center; gap: 14px; margin-top: 8px;
 }
 .section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
@@ -343,14 +343,14 @@ body::before {
 .idx-row:hover .idx-title { color: var(--gold-bright); }
 .idx-row:hover .idx-arrow { transform: translateX(8px); color: var(--gold); }
 .idx-num { font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 22px; letter-spacing: .02em; }
-.idx-cat { font-family: var(--ui); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-mute); }
+.idx-cat { font-family: var(--thai); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-mute); }
 .idx-title { font-family: var(--thai); font-weight: 500; font-size: 22px; line-height: 1.4; color: var(--paper); transition: color .3s; }
-.idx-meta { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--text-dim); letter-spacing: .02em; }
-.idx-arrow { text-align: right; color: var(--text-mute); transition: all .35s; font-family: var(--serif); font-style: italic; font-size: 18px; }
+.idx-meta { font-family: var(--thai); font-size: 14px; color: var(--text-dim); letter-spacing: .02em; }
+.idx-arrow { text-align: right; color: var(--text-mute); transition: all .35s; font-family: var(--thai); font-size: 18px; }
 .idx-arrow::after { content: ' →'; }
 
 .archive-footer { margin-top: 64px; display: flex; justify-content: space-between; align-items: center; }
-.archive-count { font-family: var(--ui); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-mute); }
+.archive-count { font-family: var(--thai); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-mute); }
 
 @media(max-width:1100px){
   .idx-row { grid-template-columns: 60px 1fr 100px; gap: 20px; }
@@ -376,7 +376,7 @@ body::before {
 .cat-tag { font-family: var(--ui); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
 .cat-name { font-family: var(--thai); font-weight: 700; color: var(--paper); }
 .cat-sub { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--text-mute); letter-spacing: .04em; margin-top: 8px; }
-.cat-count { font-family: var(--ui); font-size: 11px; color: var(--text-mute); letter-spacing: .1em; }
+.cat-count { font-family: var(--thai); font-size: 11px; color: var(--text-mute); letter-spacing: .1em; }
 .cat-count-lg { margin-top: 20px; }
 .section-support { padding-bottom: 80px; }
 .support-compact { border-top: 1px solid var(--rule); padding: 60px 0; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px; }
@@ -390,7 +390,7 @@ body::before {
 .qr-frame { width: 200px; height: 200px; background: #fff; padding: 12px; }
 .qr-frame img { width: 100%; height: 100%; display: block; }
 .qr-note { font-family: var(--thai); font-size: 12px; color: var(--text-mute); line-height: 1.6; text-align: center; }
-.cat-num { position: absolute; top: 32px; right: 32px; font-family: var(--serif); font-style: italic; color: var(--text-mute); font-size: 14px; }
+.cat-num { position: absolute; top: 32px; right: 32px; font-family: var(--thai); color: var(--text-mute); font-size: 14px; }
 .cat-em { font-style: italic; color: var(--gold); font-family: inherit; }
 
 .cat-card.lg { grid-column: span 3; grid-row: span 2; padding: 48px; }
@@ -439,12 +439,12 @@ body::before {
   direction: rtl; margin-bottom: 48px; max-width: 1100px; margin-left: auto; margin-right: auto; font-weight: 400;
 }
 .quote-th {
-  font-family: var(--serif); font-style: italic; font-weight: 400;
-  font-size: clamp(20px,1.8vw,28px); line-height: 1.7; color: var(--ink-3);
+  font-family: var(--thai); font-weight: 300;
+  font-size: clamp(18px,1.6vw,24px); line-height: 1.8; color: var(--ink-3);
   max-width: 780px; margin: 0 auto 32px;
 }
 .quote-author-line {
-  font-family: var(--ui); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-4);
+  font-family: var(--thai); font-size: 13px; color: var(--ink-4);
   display: inline-flex; align-items: center; gap: 14px;
 }
 .quote-author-line::before { content: '—'; color: var(--gold); font-family: var(--serif); font-style: italic; letter-spacing: 0; }
@@ -592,8 +592,8 @@ body::before {
     </div>
 
     <div class="hero-body">
-      <div class="hero-arabic" lang="ar" dir="rtl" data-reveal>وَقُل رَّبِّ زِدْنِي عِلْمًا</div>
-      <div class="hero-arabic-ref" data-reveal data-delay="1">— สูเราะฮ์ฏอฮา · โองการที่ 114 —</div>
+      <div class="hero-arabic" lang="ar" dir="rtl" data-reveal>أَصْلُهَا ثَابِتٌ وَفَرْعُهَا فِي السَّمَاءِ</div>
+      <div class="hero-arabic-ref" data-reveal data-delay="1">— สูเราะฮ์อิบรอฮีม · โองการที่ 24 —</div>
       <div class="hero-divider" data-reveal data-delay="1.5"></div>
 
       <h1 class="hero-display" data-reveal data-delay="2">
@@ -684,7 +684,7 @@ body::before {
     <div class="section-head">
       <div data-reveal>
         <h2 class="section-title">หมวด<em>หมู่</em></h2>
-        <p class="section-lede">เรียงร้อยศาสตร์อิสลามคลาสสิกเป็นหกสาขา — แต่ละสาขามีตำราแม่บท ระเบียบวิธี และคลังบรรณานุกรมของตนเอง</p>
+        <p class="section-lede">เรียงร้อยศาสตร์อิสลามคลาสสิกเป็นหกสาขา แต่ละสาขามีตำราแม่บท ระเบียบวิธี และคลังบรรณานุกรมของตนเอง</p>
       </div>
     </div>
 
