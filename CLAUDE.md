@@ -22,7 +22,7 @@
 * **กฎข้อที่ 9:** การระบุชื่อปราชญ์ในครั้งแรกของบทความ จำเป็นต้องระบุปีเสียชีวิตในวงเล็บตามรูปแบบมาตรฐาน: `(เสียชีวิตปี ฮ.ศ. XXX / ค.ศ. XXX)`
 * **กฎข้อที่ 10:** การใส่คำสดุดีท้ายนามปราชญ์ (เช่น เราะหิมะฮุลลอฮ์, เราะฎิยัลลอฮุอันฮุ) ให้วางต่อท้ายชื่อได้ทันที **ห้ามใส่วงเล็บครอบคำสดุดีโดยเด็ดขาด** แม้จะวางคู่กับปีเสียชีวิตก็ตาม
 * **กฎข้อที่ 11:** การทับศัพท์คำนามภาษาอาหรับที่มี อัล- (ال) นำหน้า ให้สะกดตามการเชื่อมสระและเสียงพยัญชนะชัมซียะฮ์อย่างถูกต้อง ยกเว้นคำว่า **"ชะรีอะฮ์"** ให้ตัดคำว่า "อัช" ออกไป เน้นเฉพาะคำนี้เท่านั้น
-* **กฎข้อที่ 12:** การถอดเสียงชื่อเฉพาะทางวิชาการและชื่อปราชญ์ ต้องอิงตามอักขรวิธีภาษาอาหรับมาตรฐาน (เช่น อัลเฆาะซาลีย์, อัลมาตูรีดีย์, อัซซุบกีย์)
+* **กฎข้อที่ 12:** การถอดเสียงชื่อเฉพาะทางวิชาการและชื่อปราชญ์ ต้องอิงตามอักขรวิธีภาษาอาหรับมาตรฐาน (เช่น อัลเฆาะซาลีย์, อัลมาตูรีดีย์, อัซซุบกีย์) และหลีกเลี่ยงการสะกดว่า "ท่านอิมาม" หรือ "อิมาม" ให้ใช้คำว่า "อิหม่าม" แทนในทุกกรณี
 * **กฎข้อที่ 13:** **[ช่องไฟคำทับศัพท์]** คำศัพท์เทคนิคทางศาสนาที่ทับศัพท์มา เมื่อนำมาประกอบในประโยคภาษาไทย **ห้ามเว้นวรรคหน้า-หลังเด็ดขาด** (เช่น ให้เขียนว่า `ฐานหลักของชะรีอะฮ์ในประเด็นนี้` ห้ามเขียนแยกเป็น `ฐานหลักของ ชะรีอะฮ์ ในประเด็นนี้`)
 * **กฎข้อที่ 14:** **[การเลือกใช้คำเชื่อม]** ห้ามใช้คำเชื่อมโบราณเช่นคำว่า **"ทว่า"** ให้เปลี่ยนไปใช้คำว่า **"แต่"** แทนในทุกกรณี เพื่อความกระชับของภาษาวิชาการ
 * **กฎข้อที่ 15:** การอ้างอิงคำพูดของนักวิชาการ, ตัวบทหะดีษ หรือคำแปล ต้องใช้เครื่องหมายอัญประกาศแบบโค้ง **`"..."`** เท่านั้น ห้ามใช้แบบตรง (`"..."`) เพื่อความพรีเมียม
@@ -137,7 +137,7 @@
 * **Rule 9:** The first mention of a classical scholar must include their demise year: `(d. AH XXX / CE XXX)`.
 * **Rule 10:** Islamic honorifics (e.g., Rahimahullah) must follow the name **without parentheses**, even when adjacent to the demise year.
 * **Rule 11:** Transliteration of Al- (ال) must conform to phonetic rules, except for "Shari'ah" which must omit the "Ash-" prefix.
-* **Rule 12:** Scholarly names must align with standard Arabic phonology (e.g., Al-Ghazali, Al-Maturidi).
+* **Rule 12:** Scholarly names must align with standard Arabic phonology (e.g., Al-Ghazali, Al-Maturidi). Avoid the spelling "ท่านอิมาม" or "อิมาม"; enforce "อิหม่าม" (Imam) globally.
 * **Rule 13:** **[Transliteration Spacing]** Transliterated religious terminology inserted into Thai sentences must not be preceded or followed by space bars (e.g., `หลักของชะรีอะฮ์ในประเด็น`).
 * **Rule 14:** **[Conjunction Choice]** Eliminate archaic conjunctions such as "ทว่า"; enforce the use of "แต่" to optimize academic conciseness.
 * **Rule 15:** Direct quotes, Hadith, and translations must be enclosed strictly within curved quotation marks **`"..."`**.
