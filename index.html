@@ -52,8 +52,8 @@
   --text: var(--text-primary);
   --text-dim: var(--text-secondary);
   --text-mute: var(--text-tertiary);
-  --gold: #c49a45;             /* Brand Gold — Rule 29 */
-  --gold-bright: #d4ae65;      /* Bright Gold */
+  --gold: #b31b1b;             /* Brand Red — Rule 29 */
+  --gold-bright: #d32f2f;      /* Bright Red */
   --rule: rgba(0,50,100,0.06);
   --rule-strong: rgba(0,50,100,0.12);
   --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
@@ -169,7 +169,7 @@ body::before {
   font-family: var(--arabic); font-weight: 400;
   font-size: clamp(40px, 7.2vw, 110px);
   line-height: 1.35; color: var(--paper); direction: rtl; letter-spacing: 0;
-  margin-bottom: 36px; text-shadow: 0 0 60px rgba(196,154,69,.15);
+  margin-bottom: 36px; text-shadow: 0 0 60px rgba(179,27,27,.12);
 }
 
 .hero-arabic-ref {
@@ -253,8 +253,8 @@ body::before {
 }
 .section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
 .section-title {
-  font-family: var(--serif); font-weight: 300;
-  font-size: clamp(40px, 5.5vw, 86px); line-height: 1; letter-spacing: -.015em; color: var(--paper);
+  font-family: var(--thai); font-weight: 700;
+  font-size: clamp(36px, 5vw, 72px); line-height: 1.1; letter-spacing: -.01em; color: var(--paper);
 }
 .section-title em { font-style: italic; color: var(--gold); font-weight: 400; }
 .section-lede { font-family: var(--thai); font-weight: 300; font-size: 17px; line-height: 1.8; color: var(--text-dim); margin-top: 24px; max-width: 560px; }
@@ -379,6 +379,17 @@ body::before {
 .cat-count { font-family: var(--ui); font-size: 11px; color: var(--text-mute); letter-spacing: .1em; }
 .cat-count-lg { margin-top: 20px; }
 .section-support { padding-bottom: 80px; }
+.support-compact { border-top: 1px solid var(--rule); padding: 60px 0; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.support-compact-text { font-family: var(--thai); font-size: 14px; font-weight: 300; color: var(--text-mute); line-height: 1.7; max-width: 560px; }
+.tea-btn { font-family: var(--thai); font-size: 14px; font-weight: 500; padding: 14px 36px; border: 1px solid var(--rule-strong); border-radius: 999px; background: transparent; color: var(--text); cursor: pointer; transition: all .3s; display: inline-flex; align-items: center; gap: 10px; }
+.tea-btn:hover { border-color: var(--gold); color: var(--gold); }
+.tea-icon { font-size: 16px; }
+.qr-container { display: none; max-width: 280px; width: 100%; }
+.qr-container.open { display: block; }
+.qr-inner { background: var(--ink-2); border: 1px solid var(--rule); padding: 28px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.qr-frame { width: 200px; height: 200px; background: #fff; padding: 12px; }
+.qr-frame img { width: 100%; height: 100%; display: block; }
+.qr-note { font-family: var(--thai); font-size: 12px; color: var(--text-mute); line-height: 1.6; text-align: center; }
 .cat-num { position: absolute; top: 32px; right: 32px; font-family: var(--serif); font-style: italic; color: var(--text-mute); font-size: 14px; }
 .cat-em { font-style: italic; color: var(--gold); font-family: inherit; }
 
@@ -631,30 +642,29 @@ body::before {
     <div class="section-head">
       <div data-reveal data-delay="1">
         <h2 class="section-title">บทความ<em>ล่าสุด</em></h2>
-        <p class="section-lede">งานแปลและบทวิเคราะห์ที่เผยแพร่ในรอบเดือนพฤษภาคม — เรียงตามวันที่ตีพิมพ์</p>
       </div>
     </div>
 
     <div class="index-list" id="indexList">
       <a href="/articles/kalam/concept-of-jism-in-islamic-theology.html" class="idx-row is-in">
         <div class="idx-num">01</div>
-        <div class="idx-cat">Kalām · เทววิทยา</div>
+        <div class="idx-cat">กะลาม / เทววิทยา</div>
         <div class="idx-title">สารัตถะของคำว่า "ญิสม์" ในวิชากะลาม</div>
-        <div class="idx-meta">18 พ.ค. 2569 · 30 min</div>
+        <div class="idx-meta">18 พ.ค. 2569 · 30 นาที</div>
         <div class="idx-arrow">อ่าน</div>
       </a>
       <a href="/articles/kalam/subki-nuniyyah-ashari-maturidi.html" class="idx-row is-in">
         <div class="idx-num">02</div>
-        <div class="idx-cat">Kalām · เทววิทยา</div>
+        <div class="idx-cat">กะลาม / เทววิทยา</div>
         <div class="idx-title">ประเด็นข้อขัดแย้งระหว่างสายอัชอะรีย์และหะนะฟีย์จากบทกวีนูนียะฮ์ของตาญุดดีน อัศศุบกีย์</div>
-        <div class="idx-meta">18 พ.ค. 2569 · 45 min</div>
+        <div class="idx-meta">18 พ.ค. 2569 · 45 นาที</div>
         <div class="idx-arrow">อ่าน</div>
       </a>
       <a href="/articles/nitisart/moon-sighting-vs-astronomy.html" class="idx-row is-in">
         <div class="idx-num">03</div>
-        <div class="idx-cat">Uṣūl al-Fiqh · นิติศาสตร์</div>
+        <div class="idx-cat">นิติศาสตร์</div>
         <div class="idx-title">เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์</div>
-        <div class="idx-meta">15 พ.ค. 2569 · 28 min</div>
+        <div class="idx-meta">15 พ.ค. 2569 · 28 นาที</div>
         <div class="idx-arrow">อ่าน</div>
       </a>
     </div>
@@ -681,51 +691,45 @@ body::before {
     <div class="cat-grid" data-reveal data-delay="2">
       <a href="/pages/kalam.html" class="cat-card lg">
         <div>
-          <div class="cat-tag">Discipline 01</div>
-          <span class="cat-num">15 articles</span>
+          <div class="cat-tag">01</div>
+          <span class="cat-num">15 บทความ</span>
         </div>
         <div>
           <div class="cat-name">เทววิทยา</div>
-          <div class="cat-sub">Kalām · ʿIlm al-Kalām</div>
           <div class="cat-count cat-count-lg">ปรัชญาเทววิทยา · อภิปรัชญา · อะกีดะฮ์</div>
         </div>
       </a>
       <a href="/pages/nitisart.html" class="cat-card md">
-        <div class="cat-tag">Discipline 02</div>
+        <div class="cat-tag">02</div>
         <div>
           <div class="cat-name">นิติศาสตร์</div>
-          <div class="cat-sub">Uṣūl al-Fiqh</div>
         </div>
-        <span class="cat-num">04 articles</span>
+        <span class="cat-num">4 บทความ</span>
       </a>
       <a href="/pages/hadith.html" class="cat-card sm">
-        <div class="cat-tag">Disc. 03</div>
+        <div class="cat-tag">03</div>
         <div>
           <div class="cat-name">หะดีษ</div>
-          <div class="cat-sub">ʿIlm al-Ḥadīth</div>
         </div>
         <span class="cat-num">เร็วๆ นี้</span>
       </a>
       <a href="/pages/history.html" class="cat-card sm">
-        <div class="cat-tag">Disc. 04</div>
+        <div class="cat-tag">04</div>
         <div>
           <div class="cat-name">ประวัติศาสตร์</div>
-          <div class="cat-sub">al-Tārīkh</div>
         </div>
         <span class="cat-num">เร็วๆ นี้</span>
       </a>
       <a href="/pages/literature.html" class="cat-card xs">
-        <div class="cat-tag">Disc. 05</div>
+        <div class="cat-tag">05</div>
         <div>
           <div class="cat-name">วรรณกรรม</div>
-          <div class="cat-sub">al-Adab</div>
         </div>
       </a>
       <a href="/pages/about.html" class="cat-card xs">
-        <div class="cat-tag">Editorial</div>
+        <div class="cat-tag">06</div>
         <div>
           <div class="cat-name">บรรณาธิการ</div>
-          <div class="cat-sub">About Us</div>
         </div>
       </a>
     </div>
@@ -799,26 +803,13 @@ body::before {
      ========================================================= -->
 <section class="section section-support" id="support">
   <div class="wrap">
-    <div class="section-head">
-      <div data-reveal>
-        <h2 class="section-title">เป็นส่วนหนึ่งของ<em>การเดินทางอันไร้จุดสิ้นสุด</em></h2>
-        <p class="section-lede">ทุกบทแปลและทุกบทวิเคราะห์เกิดขึ้นได้ด้วยแรงสนับสนุนของผู้อ่าน</p>
-      </div>
-    </div>
-
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 0; border-top: 1px solid var(--rule); text-align: center;">
-      <div data-reveal>
-        <button id="teaBtn" class="btn" style="font-family: var(--thai); font-size: 16px; padding: 18px 48px; border-radius: 999px; background: var(--paper); color: var(--ink); border-color: var(--paper); cursor: pointer; transition: all 0.3s; font-weight: 500;">
-          เลี้ยงน้ำชาทีมงาน 🍵 <span class="arrow">↓</span>
-        </button>
-      </div>
-      
-      <div id="qrContainer" style="display: none; margin-top: 40px; opacity: 0; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); transform: translateY(-15px); width: 100%; max-width: 320px;">
-        <div class="donate-card" style="padding: 32px; background: var(--ink-2); border: 1px solid var(--rule); border-radius: 8px;">
-          <div class="qr-frame" style="width: 220px; height: 220px; background: #fff; padding: 14px; margin: 0 auto; border-radius: 4px; display: block;">
-            <img src="/q-qr.jpg" alt="QR Code พร้อมเพย์ เลี้ยงน้ำชาทีมงาน" style="width: 100%; height: auto; display: block;">
-          </div>
-          <p class="donate-note" style="font-family: var(--thai); font-size: 13px; color: var(--text-mute); line-height: 1.5; margin-top: 16px;">สแกนผ่านแอปธนาคารเพื่อสนับสนุนค่าน้ำชาทีมงาน</p>
+    <div class="support-compact">
+      <p class="support-compact-text" data-reveal>เป็นส่วนหนึ่งของการเดินทางอันไร้จุดสิ้นสุด — ทุกบทแปลและทุกบทวิเคราะห์เกิดขึ้นได้ด้วยแรงสนับสนุนของผู้อ่าน</p>
+      <button id="teaBtn" class="tea-btn" data-reveal data-delay="1">เลี้ยงน้ำชาทีมงาน <span class="tea-icon">🍵</span></button>
+      <div id="qrContainer" class="qr-container">
+        <div class="qr-inner">
+          <div class="qr-frame"><img src="/q-qr.jpg" alt="QR Code พร้อมเพย์ เลี้ยงน้ำชาทีมงาน"></div>
+          <p class="qr-note">สแกนผ่านแอปธนาคารเพื่อสนับสนุนค่าน้ำชาทีมงาน</p>
         </div>
       </div>
     </div>
@@ -1033,11 +1024,11 @@ window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY});
 document.querySelectorAll('a,button,.cat-card,.tool-card,.idx-row').forEach(function(el){
   el.addEventListener('mouseenter',function(){
     cursor.style.width='24px'; cursor.style.height='24px';
-    cursor.style.background='transparent'; cursor.style.border='1px solid #c49a45';
+    cursor.style.background='transparent'; cursor.style.border='1px solid #b31b1b';
   });
   el.addEventListener('mouseleave',function(){
     cursor.style.width='8px'; cursor.style.height='8px';
-    cursor.style.background='#c49a45'; cursor.style.border='0';
+    cursor.style.background='#b31b1b'; cursor.style.border='0';
   });
 });
 
@@ -1115,26 +1106,13 @@ quotes.forEach(function(_,i){
 paintQuote(0);
 setInterval(function(){ paintQuote(qi+1); }, 9000);
 
-/* ----- INTERACTIVE TEA DONATION CONTAINER ----- */
-var teaBtn = document.getElementById('teaBtn');
-var qrContainer = document.getElementById('qrContainer');
-if (teaBtn && qrContainer) {
-  teaBtn.addEventListener('click', function() {
-    if (qrContainer.style.display === 'none') {
-      qrContainer.style.display = 'block';
-      setTimeout(function() {
-        qrContainer.style.opacity = '1';
-        qrContainer.style.transform = 'translateY(0)';
-      }, 10);
-      teaBtn.innerHTML = 'ปิดกล่องค่าน้ำชา 🍵 <span class="arrow">↑</span>';
-    } else {
-      qrContainer.style.opacity = '0';
-      qrContainer.style.transform = 'translateY(-15px)';
-      setTimeout(function() {
-        qrContainer.style.display = 'none';
-      }, 400);
-      teaBtn.innerHTML = 'เลี้ยงน้ำชาทีมงาน 🍵 <span class="arrow">↓</span>';
-    }
+/* ----- TEA BUTTON ----- */
+var teaBtn2 = document.getElementById('teaBtn');
+var qrCont = document.getElementById('qrContainer');
+if(teaBtn2 && qrCont){
+  teaBtn2.addEventListener('click', function(){
+    qrCont.classList.toggle('open');
+    teaBtn2.querySelector('.tea-icon').textContent = qrCont.classList.contains('open') ? '✕' : '🍵';
   });
 }
 </script>
