@@ -317,10 +317,10 @@ body::before {
 .cat-card:hover { transform: translateY(-4px); border-color: var(--gold); }
 .cat-card:hover::before { background: radial-gradient(120% 100% at 0% 100%, rgba(196,154,69,.18), transparent); }
 .cat-tag { font-family: var(--ui); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
-.cat-name { font-family: var(--serif); font-weight: 300; color: var(--paper); }
-.cat-arabic { font-family: var(--arabic); color: var(--gold); direction: rtl; line-height: 1.4; }
+.cat-name { font-family: var(--thai); font-weight: 700; color: var(--paper); }
+.cat-sub { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--text-mute); letter-spacing: .04em; margin-top: 8px; }
 .cat-count { font-family: var(--ui); font-size: 11px; color: var(--text-mute); letter-spacing: .1em; }
-.cat-count-lg { margin-top: 24px; }
+.cat-count-lg { margin-top: 20px; }
 .section-support { padding-bottom: 80px; }
 .cat-num { position: absolute; top: 32px; right: 32px; font-family: var(--serif); font-style: italic; color: var(--text-mute); font-size: 14px; }
 .cat-em { font-style: italic; color: var(--gold); font-family: inherit; }
@@ -329,14 +329,10 @@ body::before {
 .cat-card.md { grid-column: span 3; }
 .cat-card.sm { grid-column: span 2; }
 .cat-card.xs { grid-column: span 2; }
-.cat-card.lg .cat-name { font-size: 64px; line-height: .95; letter-spacing: -.02em; }
-.cat-card.lg .cat-arabic { font-size: 32px; }
-.cat-card.md .cat-name { font-size: 40px; line-height: .95; }
-.cat-card.md .cat-arabic { font-size: 22px; }
-.cat-card.sm .cat-name { font-size: 32px; line-height: 1; }
-.cat-card.sm .cat-arabic { font-size: 18px; }
-.cat-card.xs .cat-name { font-size: 28px; line-height: 1; }
-.cat-card.xs .cat-arabic { font-size: 16px; }
+.cat-card.lg .cat-name { font-size: 72px; line-height: .9; letter-spacing: -.02em; }
+.cat-card.md .cat-name { font-size: 48px; line-height: .9; }
+.cat-card.sm .cat-name { font-size: 36px; line-height: 1; }
+.cat-card.xs .cat-name { font-size: 30px; line-height: 1; }
 .cat-card.lg::after {
   content: ''; position: absolute; right: -80px; bottom: -80px; width: 300px; height: 300px;
   border: 1px solid var(--rule); border-radius: 50%; pointer-events: none;
@@ -347,7 +343,9 @@ body::before {
   .cat-card,.cat-card.lg,.cat-card.md,.cat-card.sm,.cat-card.xs {
     grid-column: span 1; grid-row: span 1; min-height: 220px; padding: 28px;
   }
-  .cat-card.lg .cat-name { font-size: 40px; }
+  .cat-card.lg .cat-name { font-size: 44px; }
+  .cat-card.md .cat-name { font-size: 36px; }
+  .cat-card.sm .cat-name,.cat-card.xs .cat-name { font-size: 28px; }
 }
 
 /* =========================================================
@@ -671,47 +669,47 @@ body::before {
           <span class="cat-num">15 articles</span>
         </div>
         <div>
-          <div class="cat-arabic" lang="ar" dir="rtl">عِلْمُ الْكَلَامِ</div>
-          <div class="cat-name">Kalām <span class="cat-em">/</span> เทววิทยา</div>
+          <div class="cat-name">เทววิทยา</div>
+          <div class="cat-sub">Kalām · ʿIlm al-Kalām</div>
           <div class="cat-count cat-count-lg">ปรัชญาเทววิทยา · อภิปรัชญา · อะกีดะฮ์</div>
         </div>
       </a>
       <a href="/pages/nitisart.html" class="cat-card md">
         <div class="cat-tag">Discipline 02</div>
         <div>
-          <div class="cat-arabic" lang="ar" dir="rtl">عِلْمُ أُصُولِ الْفِقْهِ</div>
           <div class="cat-name">นิติศาสตร์</div>
+          <div class="cat-sub">Uṣūl al-Fiqh</div>
         </div>
         <span class="cat-num">04 articles</span>
       </a>
       <a href="/pages/hadith.html" class="cat-card sm">
         <div class="cat-tag">Disc. 03</div>
         <div>
-          <div class="cat-arabic" lang="ar" dir="rtl">عِلْمُ الْحَدِيثِ</div>
           <div class="cat-name">หะดีษ</div>
+          <div class="cat-sub">ʿIlm al-Ḥadīth</div>
         </div>
         <span class="cat-num">เร็วๆ นี้</span>
       </a>
       <a href="/pages/history.html" class="cat-card sm">
         <div class="cat-tag">Disc. 04</div>
         <div>
-          <div class="cat-arabic" lang="ar" dir="rtl">التَّارِيخُ</div>
           <div class="cat-name">ประวัติศาสตร์</div>
+          <div class="cat-sub">al-Tārīkh</div>
         </div>
         <span class="cat-num">เร็วๆ นี้</span>
       </a>
       <a href="/pages/literature.html" class="cat-card xs">
         <div class="cat-tag">Disc. 05</div>
         <div>
-          <div class="cat-arabic" lang="ar" dir="rtl">الْأَدَبُ</div>
           <div class="cat-name">วรรณกรรม</div>
+          <div class="cat-sub">al-Adab</div>
         </div>
       </a>
       <a href="/pages/about.html" class="cat-card xs">
         <div class="cat-tag">Editorial</div>
         <div>
-          <div class="cat-arabic" lang="ar" dir="rtl">عَنَّا</div>
           <div class="cat-name">บรรณาธิการ</div>
+          <div class="cat-sub">About Us</div>
         </div>
       </a>
     </div>
