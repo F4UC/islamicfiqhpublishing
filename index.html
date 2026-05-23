@@ -565,6 +565,26 @@ body::before {
   .hero-tag { text-align: left; }
   .section { padding: 80px 0; }
   #backToTopBtn { bottom: 20px; right: 20px; }
+  /* QOTD mobile layout */
+  .quote-section { padding: 80px 0; }
+  .quote-eyebrow {
+    font-size: 9px;
+    letter-spacing: .1em;
+    gap: 8px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .quote-eyebrow::before, .quote-eyebrow::after { width: 22px; }
+  .quote-ar {
+    font-size: clamp(18px, 5vw, 24px);
+    line-height: 1.9;
+    margin-bottom: 28px;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+  .quote-th { font-size: 15px; line-height: 1.9; }
+  .quote-controls { margin-top: 36px; gap: 8px; }
 }
 </style>
 </head>
@@ -1114,7 +1134,7 @@ quotes.forEach(function(_,i){
   dots.appendChild(d);
 });
 paintQuote(0);
-setInterval(function(){ paintQuote(qi+1); }, 9000);
+setInterval(function(){ paintQuote(qi+1); }, 18000);
 
 /* ----- TEA BUTTON ----- */
 var teaBtn2 = document.getElementById('teaBtn');
