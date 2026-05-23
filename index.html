@@ -52,8 +52,8 @@
   --text: var(--text-primary);
   --text-dim: var(--text-secondary);
   --text-mute: var(--text-tertiary);
-  --gold: #b31b1b;             /* Brand Scholarly Crimson Red */
-  --gold-bright: #d32f2f;      /* Bright Scholarly Red */
+  --gold: #c49a45;             /* Brand Gold — Rule 29 */
+  --gold-bright: #d4ae65;      /* Bright Gold */
   --rule: rgba(0,50,100,0.06);
   --rule-strong: rgba(0,50,100,0.12);
   --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
@@ -169,7 +169,7 @@ body::before {
   font-family: var(--arabic); font-weight: 400;
   font-size: clamp(40px, 7.2vw, 110px);
   line-height: 1.35; color: var(--paper); direction: rtl; letter-spacing: 0;
-  margin-bottom: 36px; text-shadow: 0 0 60px rgba(179,27,27,.10);
+  margin-bottom: 36px; text-shadow: 0 0 60px rgba(196,154,69,.15);
 }
 
 .hero-arabic-ref {
@@ -581,9 +581,7 @@ body::before {
     </div>
 
     <div class="hero-body">
-      <div class="hero-arabic" lang="ar" dir="rtl" data-reveal>
-        وَقُل رَّบِّ زِدْنِي عِلْمًا
-      </div>
+      <div class="hero-arabic" lang="ar" dir="rtl" data-reveal>وَقُل رَّبِّ زِدْنِي عِلْمًا</div>
       <div class="hero-arabic-ref" data-reveal data-delay="1">— สูเราะฮ์ฏอฮา · โองการที่ 114 —</div>
       <div class="hero-divider" data-reveal data-delay="1.5"></div>
 
@@ -637,7 +635,29 @@ body::before {
       </div>
     </div>
 
-    <div class="index-list" id="indexList"></div>
+    <div class="index-list" id="indexList">
+      <a href="/articles/kalam/concept-of-jism-in-islamic-theology.html" class="idx-row is-in">
+        <div class="idx-num">01</div>
+        <div class="idx-cat">Kalām · เทววิทยา</div>
+        <div class="idx-title">สารัตถะของคำว่า "ญิสม์" ในวิชากะลาม</div>
+        <div class="idx-meta">18 พ.ค. 2569 · 30 min</div>
+        <div class="idx-arrow">อ่าน</div>
+      </a>
+      <a href="/articles/kalam/subki-nuniyyah-ashari-maturidi.html" class="idx-row is-in">
+        <div class="idx-num">02</div>
+        <div class="idx-cat">Kalām · เทววิทยา</div>
+        <div class="idx-title">ประเด็นข้อขัดแย้งระหว่างสายอัชอะรีย์และหะนะฟีย์จากบทกวีนูนียะฮ์ของตาญุดดีน อัศศุบกีย์</div>
+        <div class="idx-meta">18 พ.ค. 2569 · 45 min</div>
+        <div class="idx-arrow">อ่าน</div>
+      </a>
+      <a href="/articles/nitisart/moon-sighting-vs-astronomy.html" class="idx-row is-in">
+        <div class="idx-num">03</div>
+        <div class="idx-cat">Uṣūl al-Fiqh · นิติศาสตร์</div>
+        <div class="idx-title">เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์</div>
+        <div class="idx-meta">15 พ.ค. 2569 · 28 min</div>
+        <div class="idx-arrow">อ่าน</div>
+      </a>
+    </div>
 
     <div class="archive-footer" data-reveal>
       <span class="archive-count" id="archiveCount">กำลังโหลด…</span>
@@ -1013,11 +1033,11 @@ window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY});
 document.querySelectorAll('a,button,.cat-card,.tool-card,.idx-row').forEach(function(el){
   el.addEventListener('mouseenter',function(){
     cursor.style.width='24px'; cursor.style.height='24px';
-    cursor.style.background='transparent'; cursor.style.border='1px solid #b31b1b';
+    cursor.style.background='transparent'; cursor.style.border='1px solid #c49a45';
   });
   el.addEventListener('mouseleave',function(){
     cursor.style.width='8px'; cursor.style.height='8px';
-    cursor.style.background='#b31b1b'; cursor.style.border='0';
+    cursor.style.background='#c49a45'; cursor.style.border='0';
   });
 });
 
@@ -1040,25 +1060,8 @@ fetch('/articles.json')
   .then(function(data){
     var list = document.getElementById('indexList');
     var count = document.getElementById('archiveCount');
-    var shown = data.slice(0,8);
-    if(count) count.textContent = 'Showing '+shown.length+' of '+data.length+' articles';
-    shown.forEach(function(a,i){
-      var row = document.createElement('a');
-      row.href = a.url;
-      row.className = 'idx-row';
-      row.setAttribute('data-reveal','');
-      row.setAttribute('data-delay', String(Math.min((i%4)+1,4)));
-      var num = String(i+1).padStart(2,'0');
-      var cat = a.category === 'กะลาม / เทววิทยา' ? 'Kalām · เทววิทยา' : 'Uṣūl al-Fiqh · นิติศาสตร์';
-      row.innerHTML =
-        '<div class="idx-num">'+num+'</div>'+
-        '<div class="idx-cat">'+cat+'</div>'+
-        '<div class="idx-title">'+a.title+'</div>'+
-        '<div class="idx-meta">18 พ.ค. 2569</div>'+
-        '<div class="idx-arrow">อ่าน</div>';
-      list.appendChild(row);
-      io.observe(row);
-    });
+    if(count) count.textContent = 'Showing 3 of '+data.length+' articles';
+    /* hardcoded 3 rows already in HTML — skip first 3 from data */
   })
   .catch(function(){
     var count = document.getElementById('archiveCount');

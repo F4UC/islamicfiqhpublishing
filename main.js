@@ -58,10 +58,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // สั่งโหลดไฟล์ Header
     fetch('/components/header.html')
-        .then(response => response.arrayBuffer())
-        .then(buffer => {
-            const decoder = new TextDecoder('utf-8');
-            const data = decoder.decode(buffer);
+        .then(response => response.text())
+        .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
             
             // เรียกปรับรูปไอคอนปุ่มธีมเมื่อประกอบร่างเสร็จ
@@ -157,11 +155,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     // ดึงข้อมูล articles.json แบบ Lazy Loading (ดึงครั้งแรกเมื่อกดเปิด)
                     if (!articlesData) {
                         fetch('/articles.json')
-                            .then(res => res.arrayBuffer())
-                            .then(buffer => {
-                                const decoder = new TextDecoder('utf-8');
-                                const jsonText = decoder.decode(buffer);
-                                articlesData = JSON.parse(jsonText);
+                            .then(res => res.json())
+                            .then(data => {
+                                articlesData = data;
                                 if (searchInput && searchInput.value.trim().length > 0) {
                                     performSearch(searchInput.value);
                                 }
@@ -316,10 +312,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // สั่งโหลดไฟล์ Footer
     fetch('/components/footer.html')
-        .then(response => response.arrayBuffer())
-        .then(buffer => {
-            const decoder = new TextDecoder('utf-8');
-            const data = decoder.decode(buffer);
+        .then(response => response.text())
+        .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
             
             // --- ระบบปุ่มโชว์ QR Code (ปรับปรุงให้กดติดทันทีในการคลิกแรก) ---
