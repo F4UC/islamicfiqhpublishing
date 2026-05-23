@@ -1,537 +1,252 @@
-﻿<div class="topbar">islamicfiqhpublishing.com</div>
-
 <style>
 /* ==========================================================
-   🔍 1. สไตล์ปุ่มและ UI ระบบค้นหา (Search System)
+   Chrome Navigation — Fixed Dark Frosted Bar
    ========================================================== */
-.search-toggle-btn, .theme-toggle-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: #0a0a0a;
-  margin-right: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  border-radius: 50%;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+.chrome {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+  color: #9a907e;
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  background: linear-gradient(to bottom, rgba(10,9,7,.92), rgba(10,9,7,.70));
+  border-bottom: 1px solid rgba(232,224,208,.14);
 }
-.search-toggle-btn:hover {
-  background: rgba(0, 0, 0, 0.05);
-  transform: scale(1.08);
+.chrome-inner {
+  max-width: 1440px; margin: 0 auto; padding: 14px 40px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
 }
-.theme-toggle-btn:hover {
-  background: rgba(0, 0, 0, 0.05);
-  transform: scale(1.08) rotate(15deg);
+.chrome-mark {
+  display: flex; align-items: center; gap: 14px;
+  color: #e8e0d0; text-decoration: none; flex-shrink: 0;
 }
+.chrome-seal {
+  width: 22px; height: 22px; border: 1px solid #c49a45; border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: 'Cormorant Garamond', Georgia, serif; font-size: 11px;
+  color: #c49a45; font-style: italic;
+}
+.chrome-brand { font-weight: 500; letter-spacing: .16em; font-size: 11px; }
 
-html.dark-mode .search-toggle-btn,
-html.dark-mode .theme-toggle-btn {
-  color: #fff;
+nav.chrome-nav { display: flex; gap: 28px; }
+nav.chrome-nav .nav-item {
+  position: relative; color: #9a907e;
+  transition: color .25s; font-size: 11px;
+  letter-spacing: .18em; text-transform: uppercase; text-decoration: none;
+  border: none; background: none; cursor: pointer;
 }
-html.dark-mode .search-toggle-btn:hover,
-html.dark-mode .theme-toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+nav.chrome-nav .nav-item:hover,
+nav.chrome-nav .nav-item.active { color: #e8e0d0; }
+nav.chrome-nav .nav-item::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -6px;
+  height: 1px; background: #c49a45;
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1);
 }
+nav.chrome-nav .nav-item:hover::after,
+nav.chrome-nav .nav-item.active::after { transform: scaleX(1); }
 
-.search-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(10, 10, 10, 0.45);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  z-index: 999999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 60px 24px;
-}
-.search-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
-}
+.chrome-right { display: flex; align-items: center; gap: 14px; }
+.chrome-time { color: #e8e0d0; font-size: 11px; letter-spacing: .18em; }
 
-.search-container {
-  width: 100%;
-  max-width: 680px;
-  transform: translateY(-20px);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+.chrome-icon-btn {
+  width: 32px; height: 32px; display: grid; place-items: center;
+  border: 1px solid rgba(232,224,208,.32); border-radius: 50%;
+  color: #9a907e; background: transparent; cursor: pointer;
+  transition: all .25s; padding: 0; flex-shrink: 0;
 }
-.search-overlay.active .search-container {
-  transform: translateY(0);
-}
+.chrome-icon-btn:hover { border-color: #c49a45; color: #c49a45; transform: rotate(8deg); }
 
-.search-modal-card {
-  background: #ffffff;
-  border: 1px solid #eaeaea;
-  border-radius: 12px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  max-height: calc(100vh - 120px);
+.chrome-hamburger {
+  display: none; font-size: 20px; cursor: pointer;
+  color: #e8e0d0; background: transparent; border: 0; padding: 4px;
 }
-html.dark-mode .search-modal-card {
-  background: #181818;
-  border-color: #2a2a2a;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-}
+.chrome-spacer { height: 51px; }
 
-.search-modal-header {
-  padding: 20px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #eee;
+@media (max-width: 980px) {
+  nav.chrome-nav { display: none; }
+  .chrome-hamburger { display: block; }
+  .chrome-time { display: none; }
 }
-html.dark-mode .search-modal-header {
-  border-bottom-color: #2a2a2a;
+nav.chrome-nav.mobile-active {
+  display: flex; flex-direction: column;
+  position: fixed; top: 51px; left: 0; right: 0;
+  background: rgba(10,9,7,.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(232,224,208,.14);
+  padding: 20px 40px 24px; gap: 0; z-index: 999;
 }
-.search-modal-title {
-  font-family: 'Sarabun', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #0a0a0a;
+nav.chrome-nav.mobile-active .nav-item {
+  padding: 14px 0; border-bottom: 1px solid rgba(232,224,208,.10) !important;
+  font-size: 13px; letter-spacing: .14em;
 }
-html.dark-mode .search-modal-title {
-  color: #fff;
-}
-.search-close-btn {
-  background: transparent;
-  border: none;
-  font-size: 28px;
-  line-height: 0.5;
-  cursor: pointer;
-  color: #888;
-  padding: 8px;
-  border-radius: 4px;
-  transition: all 0.2s;
-}
-.search-close-btn:hover {
-  color: #0a0a0a;
-  background: rgba(0,0,0,0.05);
-}
-html.dark-mode .search-close-btn:hover {
-  color: #fff;
-  background: rgba(255,255,255,0.08);
-}
-
-.search-input-field-wrapper {
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: #fafafa;
-  border-bottom: 1px solid #eee;
-}
-html.dark-mode .search-input-field-wrapper {
-  background: #1e1e1e;
-  border-bottom-color: #2a2a2a;
-}
-.search-input-icon {
-  color: #888;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-.search-input {
-  width: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-family: 'Sarabun', sans-serif;
-  font-size: 16px;
-  color: #0a0a0a;
-}
-html.dark-mode .search-input {
-  color: #fff;
-}
-.search-input::placeholder {
-  color: #999;
-}
-
-.search-results-list {
-  overflow-y: auto;
-  padding: 8px 0;
-}
-
-.search-empty-state {
-  padding: 40px 24px;
-  text-align: center;
-  color: #666;
-}
-html.dark-mode .search-empty-state {
-  color: #aaa;
-}
-.search-empty-state .empty-icon {
-  font-size: 32px;
-  display: block;
-  margin-bottom: 12px;
-}
-.search-empty-state p {
-  font-size: 14px;
-  margin-bottom: 8px;
-  font-family: 'Sarabun', sans-serif;
-}
-.search-empty-state .keyboard-tip {
-  font-size: 11px;
-  color: #999;
-}
-.search-empty-state code {
-  background: #eee;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: monospace;
-}
-html.dark-mode .search-empty-state code {
-  background: #333;
-  color: #eee;
-}
-
-.search-result-item {
-  padding: 16px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  border-bottom: 1px solid #f5f5f5;
-  transition: background 0.2s, padding-left 0.2s;
-  text-decoration: none;
-  color: inherit;
-}
-html.dark-mode .search-result-item {
-  border-bottom-color: #222;
-}
-.search-result-item:last-child {
-  border-bottom: none;
-}
-.search-result-item:hover {
-  background: #fdfbf7;
-  padding-left: 32px;
-}
-html.dark-mode .search-result-item:hover {
-  background: #222;
-}
-
-.search-result-cat-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.search-result-cat {
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #888;
-}
-.search-result-title {
-  font-family: 'Sarabun', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #0a0a0a;
-  line-height: 1.4;
-}
-html.dark-mode .search-result-title {
-  color: #fff;
-}
-.search-result-excerpt {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-html.dark-mode .search-result-excerpt {
-  color: #aaa;
-}
-
-.search-highlight {
-  background: rgba(253, 186, 116, 0.3);
-  border-radius: 2px;
-  padding: 0 2px;
-}
-html.dark-mode .search-highlight {
-  background: rgba(249, 115, 22, 0.4);
+nav.chrome-nav.mobile-active .nav-item:last-child { border-bottom: none !important; }
+nav.chrome-nav.mobile-active .nav-item.active {
+  color: #c49a45; border-bottom: 1px solid rgba(232,224,208,.10) !important;
 }
 
 /* ==========================================================
-   🌙 2. สไตล์โหมดมืดแบบครอบคลุม (Universal Dark Mode Injector)
+   Search Overlay — Glassmorphic Instant Search Modal
    ========================================================== */
-html.dark-mode {
-  background-color: #121212 !important;
-  color: #e0e0e0 !important;
+.search-overlay {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(10,9,7,.65);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  z-index: 999999; opacity: 0; pointer-events: none;
+  transition: opacity .3s cubic-bezier(.4,0,.2,1);
+  display: flex; justify-content: center; align-items: flex-start;
+  padding: 60px 24px;
 }
+.search-overlay.active { opacity: 1; pointer-events: auto; }
+.search-container {
+  width: 100%; max-width: 680px;
+  transform: translateY(-20px);
+  transition: transform .35s cubic-bezier(.16,1,.3,1);
+}
+.search-overlay.active .search-container { transform: translateY(0); }
+.search-modal-card {
+  background: #ffffff; border: 1px solid #eaeaea; border-radius: 12px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.12); overflow: hidden;
+  display: flex; flex-direction: column; max-height: calc(100vh - 120px);
+}
+html.dark-mode .search-modal-card {
+  background: #181818; border-color: #2a2a2a; box-shadow: 0 30px 60px rgba(0,0,0,.4);
+}
+.search-modal-header {
+  padding: 20px 24px; display: flex; align-items: center;
+  justify-content: space-between; border-bottom: 1px solid #eee;
+}
+html.dark-mode .search-modal-header { border-bottom-color: #2a2a2a; }
+.search-modal-title {
+  font-family: 'Sarabun', sans-serif; font-size: 18px; font-weight: 700; color: #0a0a0a;
+}
+html.dark-mode .search-modal-title { color: #fff; }
+.search-close-btn {
+  background: transparent; border: none; font-size: 28px; line-height: .5;
+  cursor: pointer; color: #888; padding: 8px; border-radius: 4px; transition: all .2s;
+}
+.search-close-btn:hover { color: #0a0a0a; background: rgba(0,0,0,.05); }
+html.dark-mode .search-close-btn:hover { color: #fff; background: rgba(255,255,255,.08); }
+.search-input-field-wrapper {
+  padding: 16px 24px; display: flex; align-items: center; gap: 14px;
+  background: #fafafa; border-bottom: 1px solid #eee;
+}
+html.dark-mode .search-input-field-wrapper { background: #1e1e1e; border-bottom-color: #2a2a2a; }
+.search-input-icon { color: #888; flex-shrink: 0; display: flex; align-items: center; }
+.search-input {
+  width: 100%; background: transparent; border: none; outline: none;
+  font-family: 'Sarabun', sans-serif; font-size: 16px; color: #0a0a0a;
+}
+html.dark-mode .search-input { color: #fff; }
+.search-input::placeholder { color: #999; }
+.search-results-list { overflow-y: auto; padding: 8px 0; }
+.search-empty-state { padding: 40px 24px; text-align: center; color: #666; }
+html.dark-mode .search-empty-state { color: #aaa; }
+.search-empty-state .empty-icon { font-size: 32px; display: block; margin-bottom: 12px; }
+.search-empty-state p { font-size: 14px; margin-bottom: 8px; font-family: 'Sarabun', sans-serif; }
+.search-empty-state .keyboard-tip { font-size: 11px; color: #999; }
+.search-empty-state code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+html.dark-mode .search-empty-state code { background: #333; color: #eee; }
+.search-result-item {
+  padding: 16px 24px; display: flex; flex-direction: column; gap: 6px;
+  border-bottom: 1px solid #f5f5f5; transition: background .2s, padding-left .2s;
+  text-decoration: none; color: inherit;
+}
+html.dark-mode .search-result-item { border-bottom-color: #222; }
+.search-result-item:last-child { border-bottom: none; }
+.search-result-item:hover { background: #fdfbf7; padding-left: 32px; }
+html.dark-mode .search-result-item:hover { background: #222; }
+.search-result-cat-wrapper { display: flex; justify-content: space-between; align-items: center; }
+.search-result-cat { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+.search-result-title { font-family: 'Sarabun', sans-serif; font-size: 16px; font-weight: 700; color: #0a0a0a; line-height: 1.4; }
+html.dark-mode .search-result-title { color: #fff; }
+.search-result-excerpt { font-size: 13px; color: #666; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+html.dark-mode .search-result-excerpt { color: #aaa; }
+.search-highlight { background: rgba(253,186,116,.3); border-radius: 2px; padding: 0 2px; }
+html.dark-mode .search-highlight { background: rgba(249,115,22,.4); }
 
-/* ส่วนหัว (Header) */
-html.dark-mode header {
-  background: #121212 !important;
-  border-bottom-color: #2a2a2a !important;
-}
-html.dark-mode .topbar {
-  background: #000 !important;
-  color: #888 !important;
-}
-html.dark-mode .logo-en { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; line-height: 1; color: inherit; }
-html.dark-mode .logo-ar {
-  color: #888 !important;
-}
-html.dark-mode nav {
-  background: #121212 !important;
-}
-html.dark-mode .nav-item {
-  color: #aaa !important;
-  border-right-color: #2a2a2a !important;
-}
-html.dark-mode .nav-item:first-child {
-  border-left-color: #2a2a2a !important;
-}
-html.dark-mode .nav-item:hover,
-html.dark-mode .nav-item.active {
-  color: #fff !important;
-  border-bottom-color: #fff !important;
-}
-html.dark-mode .date-line {
-  color: #888 !important;
-}
-html.dark-mode .menu-toggle {
-  color: #fff !important;
-}
+/* ==========================================================
+   Universal Dark Mode Overrides — Article / Category Pages
+   ========================================================== */
+html.dark-mode { background-color: #121212 !important; color: #e0e0e0 !important; }
+html.dark-mode header { background: #121212 !important; border-bottom-color: #2a2a2a !important; }
+html.dark-mode .logo-ar { color: #888 !important; }
+html.dark-mode .date-line { color: #888 !important; }
+html.dark-mode .category-title { color: #fff !important; border-bottom-color: #fff !important; }
+html.dark-mode .category-desc { color: #aaa !important; }
+html.dark-mode .partner-badge { background: #1a1a1a !important; border-color: #2a2a2a !important; border-left-color: #fff !important; }
+html.dark-mode .partner-info { color: #aaa !important; }
+html.dark-mode .partner-link { color: #fff !important; border-bottom-color: #fff !important; }
+html.dark-mode .partner-link:hover { color: #ccc !important; border-bottom-color: #ccc !important; }
+html.dark-mode .list-item { border-bottom-color: #222 !important; }
+html.dark-mode .list-item:first-child { border-top-color: #222 !important; }
+html.dark-mode .list-title { color: #fff !important; }
+html.dark-mode .list-excerpt { color: #bbb !important; }
+html.dark-mode .list-meta { color: #888 !important; }
+html.dark-mode .list-meta span { color: #fff !important; }
+html.dark-mode .page-btn { background: #1a1a1a !important; border-color: #2a2a2a !important; color: #aaa !important; }
+html.dark-mode .page-btn:hover { border-color: #fff !important; color: #fff !important; }
+html.dark-mode .page-btn.active { background: #fff !important; border-color: #fff !important; color: #000 !important; }
+html.dark-mode .page-btn:disabled { border-color: #222 !important; color: #444 !important; }
+html.dark-mode #backToTopBtn { background: #fff !important; color: #000 !important; border-color: #fff !important; }
+html.dark-mode footer { background: #050403 !important; border-top: 1px solid rgba(232,224,208,.14) !important; }
+html.dark-mode .results-header { color: #fff !important; border-bottom-color: #fff !important; }
+html.dark-mode .article-item { border-bottom-color: #222 !important; }
+html.dark-mode .article-item:hover { border-color: #2a2a2a !important; background: #1a1a1a !important; }
+html.dark-mode .item-title { color: #fff !important; }
+html.dark-mode .item-cat { color: #aaa !important; }
+html.dark-mode .item-excerpt { color: #bbb !important; }
+html.dark-mode .read-more-link { color: #fff !important; }
 
-/* โหมดมือถือ */
-@media(max-width:768px){
-  html.dark-mode nav {
-    background: #181818 !important;
-    border-bottom-color: #2a2a2a !important;
-  }
-  html.dark-mode .nav-item {
-    border-bottom-color: #222 !important;
-  }
-  html.dark-mode .nav-item.active {
-    background: #1f1f1f !important;
-    border-left-color: #fff !important;
-  }
-}
-
-/* วาทะปราชญ์ประจำวัน (Index Quote) */
-html.dark-mode .daily-quote {
-  background: #1a1a1a !important;
-  border-color: #2a2a2a !important;
-  border-left-color: #fff !important;
-}
-html.dark-mode .quote-text-ar {
-  color: #fff !important;
-}
-html.dark-mode .quote-text-th {
-  color: #ccc !important;
-}
-html.dark-mode .quote-icon {
-  color: #2d2d2d !important;
-}
-html.dark-mode .quote-dark {
-  color: #666 !important;
-}
-
-/* การ์ดแอปพลิเคชันหน้า Index */
-html.dark-mode .index-tools-header {
-  color: #fff !important;
-  border-bottom-color: #fff !important;
-}
-html.dark-mode .view-all-tools {
-  color: #aaa !important;
-}
-html.dark-mode .view-all-tools:hover {
-  color: #fff !important;
-}
-html.dark-mode .index-tool-card.coming-soon {
-  background: #1a1a1a !important;
-  border-color: #2a2a2a !important;
-  color: #fff !important;
-}
-html.dark-mode .index-tool-card.coming-soon .index-tool-badge {
-  background: #2a2a2a !important;
-  color: #aaa !important;
-}
-
-/* รายการบทความล่าสุดหน้า Index & Category */
-html.dark-mode .results-header {
-  color: #fff !important;
-  border-bottom-color: #fff !important;
-}
-html.dark-mode .article-item {
-  border-bottom-color: #222 !important;
-}
-html.dark-mode .article-item:hover {
-  border-color: #2a2a2a !important;
-  background: #1a1a1a !important;
-}
-html.dark-mode .item-title {
-  color: #fff !important;
-}
-html.dark-mode .item-cat {
-  color: #aaa !important;
-}
-html.dark-mode .item-excerpt {
-  color: #bbb !important;
-}
-html.dark-mode .read-more-link {
-  color: #fff !important;
-}
-
-/* หน้าหมวดหมู่บทความ (เช่น kalam.html) */
-html.dark-mode .category-title {
-  color: #fff !important;
-  border-bottom-color: #fff !important;
-}
-html.dark-mode .category-desc {
-  color: #aaa !important;
-}
-html.dark-mode .partner-badge {
-  background: #1a1a1a !important;
-  border-color: #2a2a2a !important;
-  border-left-color: #fff !important;
-}
-html.dark-mode .partner-info {
-  color: #aaa !important;
-}
-html.dark-mode .partner-link {
-  color: #fff !important;
-  border-bottom-color: #fff !important;
-}
-html.dark-mode .partner-link:hover {
-  color: #ccc !important;
-  border-bottom-color: #ccc !important;
-}
-html.dark-mode .list-item {
-  border-bottom-color: #222 !important;
-}
-html.dark-mode .list-item:first-child {
-  border-top-color: #222 !important;
-}
-html.dark-mode .list-title {
-  color: #fff !important;
-}
-html.dark-mode .list-excerpt {
-  color: #bbb !important;
-}
-html.dark-mode .list-meta {
-  color: #888 !important;
-}
-html.dark-mode .list-meta span {
-  color: #fff !important;
-}
-
-/* ปุ่มเลื่อนหน้า (Pagination) */
-html.dark-mode .page-btn {
-  background: #1a1a1a !important;
-  border-color: #2a2a2a !important;
-  color: #aaa !important;
-}
-html.dark-mode .page-btn:hover {
-  border-color: #fff !important;
-  color: #fff !important;
-}
-html.dark-mode .page-btn.active {
-  background: #fff !important;
-  border-color: #fff !important;
-  color: #000 !important;
-}
-html.dark-mode .page-btn:disabled {
-  border-color: #222 !important;
-  color: #444 !important;
-}
-
-/* ปุ่มเลื่อนขึ้นบนสุด (Back to Top) */
-html.dark-mode #backToTopBtn {
-  background: #fff !important;
-  color: #000 !important;
-  border-color: #fff !important;
-}
-
-/* ส่วนล่างสุด (Footer) */
-html.dark-mode footer {
-  background: #050505 !important;
-  border-top: 1px solid #1a1a1a !important;
-}
-html.dark-mode .footer-logo { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 300; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 1px; color: var(--inverted-text); transition: var(--theme-transition); }
-html.dark-mode .footer-links a { font-size: 13px; color: #bbbbbb; letter-spacing: .5px; transition: var(--theme-transition); text-decoration: none; }
-html.dark-mode .footer-links a:hover {
-  color: #fff !important;
-}
-html.dark-mode .footer-copy { font-family: 'Inter', sans-serif; font-size: 14px; color: #888888; font-style: normal; letter-spacing: 0.5px; transition: var(--theme-transition); }
-html.dark-mode .support-btn {
-  border-color: #333 !important;
-  color: #aaa !important;
-}
-html.dark-mode .support-btn:hover {
-  background: #fff !important;
-  color: #000 !important;
-}
-
-@media(max-width: 768px) {
-  .search-overlay {
-    padding: 20px 12px;
-  }
-  .search-modal-card {
-    max-height: calc(100vh - 40px);
-  }
+@media (max-width: 768px) {
+  .search-overlay { padding: 20px 12px; }
+  .search-modal-card { max-height: calc(100vh - 40px); }
+  .chrome-inner { padding: 14px 20px; }
+  nav.chrome-nav.mobile-active { padding: 20px 20px 24px; }
 }
 </style>
 
-<header>
-<div class="header-inner">
-  <div class="header-top">
-    <div class="date-line" id="currentDate"></div>
-    <div class="logo-block">
-      <a href="/index.html"><div class="logo-en">Islamic Fiqh Publishing</div></a>
-      <div class="logo-ar" lang="ar" dir="rtl">دار الفقه الإسلامي للنشر والتوزيع والترجمة</div>
-    </div>
-    <div class="header-right">
-      <!-- 🌙 ปุ่มสลับโหมดธีมพรีเมียม -->
-      <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="เปลี่ยนธีม" title="เปลี่ยนธีม (โหมดมืด/สว่าง)"></button>
-      
-      <!-- 🔍 ปุ่มสืบค้นคลังบทความ -->
-      <button class="search-toggle-btn" id="searchToggleBtn" aria-label="ค้นหาบทความ" title="ค้นหาบทความ (กด / หรือคลิก)">
-        <svg class="search-icon-svg" viewBox="0 0 24 24" width="20" height="20">
-          <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-        </svg>
+<div class="chrome">
+  <div class="chrome-inner">
+    <a href="/index.html" class="chrome-mark">
+      <span class="chrome-seal">f</span>
+      <span class="chrome-brand">Islamic Fiqh Publishing</span>
+    </a>
+    <nav class="chrome-nav" id="navMenu">
+      <a href="/index.html" class="nav-item">หน้าแรก</a>
+      <a href="/pages/about.html" class="nav-item">เกี่ยวกับเรา</a>
+      <a href="/pages/kalam.html" class="nav-item">กะลาม</a>
+      <a href="/pages/nitisart.html" class="nav-item">นิติศาสตร์</a>
+      <a href="/pages/hadith.html" class="nav-item">หะดีษ</a>
+      <a href="/pages/history.html" class="nav-item">ประวัติศาสตร์</a>
+      <a href="/pages/literature.html" class="nav-item">วรรณกรรม</a>
+    </nav>
+    <div class="chrome-right">
+      <span class="chrome-time" id="liveTime"></span>
+      <button class="chrome-icon-btn" id="themeToggleBtn" aria-label="เปลี่ยนธีม" title="เปลี่ยนธีม">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 3c.132 0 .263 0 .393.007a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3z"/></svg>
       </button>
-      <div class="menu-toggle" id="mobileMenuBtn">☰</div>
+      <button class="chrome-icon-btn" id="searchToggleBtn" aria-label="ค้นหาบทความ" title="ค้นหา (กด /)">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button class="chrome-hamburger" id="mobileMenuBtn" aria-label="เมนู">☰</button>
     </div>
   </div>
-  <nav id="navMenu">
-    <a href="/index.html" class="nav-item">หน้าแรก</a>
-    <a href="/pages/about.html" class="nav-item">เกี่ยวกับเรา</a>
-    <a href="/pages/kalam.html" class="nav-item">กะลาม / เทววิทยา</a>
-    <a href="/pages/nitisart.html" class="nav-item">นิติศาสตร์</a>
-    <a href="/pages/hadith.html" class="nav-item">หะดีษ</a>
-    <a href="/pages/history.html" class="nav-item">ประวัติศาสตร์</a>
-    <a href="/pages/literature.html" class="nav-item">วรรณกรรม</a>
-  </nav>
 </div>
-</header>
+<div class="chrome-spacer"></div>
 
-<!-- Search Overlay (Glassmorphic Instant Search Modal) -->
+<!-- Search Overlay -->
 <div id="searchOverlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Search articles">
   <div class="search-container">
     <div class="search-modal-card">
       <div class="search-modal-header">
         <span class="search-modal-title">ค้นหาคลังบทความวิชาการ</span>
-        <button id="searchCloseBtn" class="search-close-btn" aria-label="Close search">&times;</button>
+        <button id="searchCloseBtn" class="search-close-btn" aria-label="ปิด">&times;</button>
       </div>
       <div class="search-input-field-wrapper">
         <span class="search-input-icon">
-          <svg viewBox="0 0 24 24" width="20" height="20">
-            <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-          </svg>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
         </span>
         <input type="text" id="searchInput" class="search-input" placeholder="ค้นหาบทความ เช่น ญิสม์, กะลาม, อัชอะรีย์, นิติศาสตร์..." autocomplete="off" spellcheck="false">
       </div>
@@ -545,7 +260,3 @@ html.dark-mode .support-btn:hover {
     </div>
   </div>
 </div>
-
-
-
-
