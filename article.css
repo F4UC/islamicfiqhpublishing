@@ -811,3 +811,9 @@ h1.article-title {
 /* .numbered-section dark-border variant */
 .numbered-section.ns-dark { border-left-color: #0a0a0a; }
 
+/* Table column width helpers */
+.col-5  { width: 5%; }
+.col-25 { width: 25%; }
+.col-30 { width: 30%; }
+.col-35 { width: 35%; }
+
