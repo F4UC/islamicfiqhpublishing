@@ -1,10 +1,10 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 50 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all 51 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (50 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (51 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -117,9 +117,15 @@
   - **ตำแหน่งแนวตั้ง:** กำหนด `vertical-align: middle` สำหรับ `span.ar-inline` เพื่อให้เสมอกัน
   - **ความสูงบรรทัด:** กำหนด `line-height: 2.4` สำหรับย่อหน้าที่มีส่วนผสมอาหรับ เพื่อป้องกันสระอาหรับซ้อนทับ
 
+* **กฎข้อที่ 51:** **[มาตรฐานส่วน QUOTE OF THE DAY]** ระบบวาทะปราชญ์ประจำวัน (QOTD) ต้องปฏิบัติตามข้อกำหนดต่อไปนี้อย่างเคร่งครัด:
+  - **ความถี่ในการสลับ:** `setInterval` ต้องตั้งค่าไม่ต่ำกว่า **18,000ms (18 วินาที)** เพื่อให้ผู้อ่านมีเวลาอ่านและซึมซับวาทะอย่างสมบูรณ์ ห้ามใช้ค่าต่ำกว่า 15,000ms
+  - **มาตรฐานตัวบทอาหรับ:** ข้อความอาหรับทุกรายการต้องใส่สระกำกับ (Harakat) ครบถ้วน และต้องระบุ `lang="ar" dir="rtl"` บน element ที่บรรจุตัวบท
+  - **การแสดงผลบนมือถือ:** ต้องมี `@media` rule สำหรับ `max-width: 600px` ที่ครอบคลุม: (1) `.quote-eyebrow` — ลดขนาดตัวอักษรและ `letter-spacing`, เปิดใช้ `flex-wrap: wrap` เพื่อป้องกันข้อความล้นขอบ; (2) `.quote-ar` — ใช้ `font-size` ที่เหมาะสมกับหน้าจอเล็ก พร้อม `overflow-wrap: break-word` และ `text-align: center`; (3) `.quote-th` — ปรับขนาดตัวอักษรให้อ่านง่ายบนมือถือ
+  - **โครงสร้างข้อมูล:** array `quotes` ต้องประกอบด้วย field `ar` (ตัวบทอาหรับ), `th` (คำแปลไทยที่ล้อมด้วย `"..."`), และ `author` (ชื่อผู้กล่าวและปีเสียชีวิตตามรูปแบบ `ชื่อ · เสียชีวิตปี ฮ.ศ. XXX`) และต้องวางไว้ก่อนปิดแท็ก `</body>` ตามกฎข้อที่ 31
+
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 50 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 51 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -200,3 +206,9 @@
   - **Font size ratio:** Set `font-size: 1.15em` for `:lang(ar)` to visually equalize Amiri with Sarabun.
   - **Vertical alignment:** Set `vertical-align: middle` on `span.ar-inline` to align baselines.
   - **Line height:** Set `line-height: 2.4` on paragraphs containing inline Arabic to prevent diacritic overlap.
+
+* **Rule 51:** **[QUOTE OF THE DAY Standard]** The QOTD system must comply with the following requirements:
+  - **Rotation interval:** `setInterval` must be set to a minimum of **18,000ms (18 seconds)** to allow readers adequate reading time. Values below 15,000ms are prohibited.
+  - **Arabic text standard:** Every Arabic entry must carry full Harakat (diacritics), with `lang="ar" dir="rtl"` on the containing element.
+  - **Mobile layout:** A `@media(max-width:600px)` block must cover: (1) `.quote-eyebrow` — reduce `font-size` and `letter-spacing`, enable `flex-wrap: wrap` to prevent text overflow; (2) `.quote-ar` — use a mobile-appropriate `font-size` with `overflow-wrap: break-word` and explicit `text-align: center`; (3) `.quote-th` — scale font size for mobile readability.
+  - **Data structure:** The `quotes` array must contain `ar` (Arabic text), `th` (Thai translation wrapped in `"..."`), and `author` (`Name · เสียชีวิตปี ฮ.ศ. XXX` format), and must be positioned before `</body>` per Rule 31.
