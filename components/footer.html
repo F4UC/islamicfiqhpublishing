@@ -20,17 +20,17 @@ footer.site-footer {
 }
 .foot-brand .foot-mark em { font-style: italic; color: #b31b1b; }
 .foot-brand .foot-ar {
-  font-family: 'Amiri', serif; color: #6b6357;
+  font-family: 'Amiri', serif; color: #9a907e;
   direction: rtl; font-size: 17px; margin-bottom: 20px; line-height: 1.6;
   text-align: left;
 }
 .foot-brand p {
   font-family: 'Sarabun', sans-serif; font-weight: 300;
-  color: #6b6357; font-size: 14px; max-width: 340px; line-height: 1.7;
+  color: #9a907e; font-size: 14px; max-width: 340px; line-height: 1.7;
 }
 .foot-col h4 {
-  font-family: 'Inter', system-ui, sans-serif; font-size: 10px;
-  letter-spacing: .3em; text-transform: uppercase; color: #b31b1b;
+  font-family: 'Inter', system-ui, sans-serif; font-size: 11px;
+  letter-spacing: .2em; text-transform: uppercase; color: #b31b1b;
   margin-bottom: 20px;
 }
 .foot-col a {
@@ -39,19 +39,14 @@ footer.site-footer {
   text-decoration: none; transition: color .25s;
 }
 .foot-col a:hover { color: #e8e0d0; }
-.watermark {
-  font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; font-style: italic;
-  font-size: clamp(72px,16vw,220px); line-height: .85;
-  color: transparent; -webkit-text-stroke: 1px rgba(232,224,208,.05);
-  text-align: center; letter-spacing: -.02em; margin: 40px 0 0;
-  pointer-events: none; user-select: none; overflow: hidden;
-}
 .foot-bottom {
-  display: flex; justify-content: center; align-items: center;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
   padding-top: 32px; border-top: 1px solid rgba(232,224,208,.14);
   font-family: 'Inter', system-ui, sans-serif; font-size: 11px;
-  letter-spacing: .18em; text-transform: uppercase; color: #6b6357;
+  letter-spacing: .18em; text-transform: uppercase; color: #9a907e;
 }
+.foot-sep { margin: 0 12px; opacity: .4; }
+.foot-colophon { font-family: 'Sarabun', sans-serif; font-size: 12px; letter-spacing: 0; text-transform: none; color: #9a907e; }
 @media (max-width: 880px) {
   .foot-top { grid-template-columns: 1fr 1fr; gap: 32px; }
   .foot-brand { grid-column: span 2; }
@@ -70,7 +65,7 @@ footer.site-footer {
       <div class="foot-brand">
         <div class="foot-mark">Islamic <em>Fiqh</em> Publishing</div>
         <div class="foot-ar" lang="ar" dir="rtl">دار الفقه الإسلامي للنشر والتوزيع والترجمة</div>
-        <p>เริ่มก่อตั้งและเผยแพร่องค์ความรู้ทางออนไลน์ในช่วงกลางปี พ.ศ. 2563</p>
+        <p>เริ่มก่อตั้งและเผยแพร่องค์ความรู้ทางออนไลน์ในช่วงกลางปี พ.ศ. 2563 (ค.ศ. 2020 / ฮ.ศ. 1441) สำนักพิมพ์อิสระที่มุ่งตีพิมพ์บทแปลและบทวิเคราะห์งานวิชาการอิสลามคลาสสิกเป็นภาษาไทย ก่อตั้งโดยกองบรรณาธิการในกรุงเทพมหานคร และได้รับการสนับสนุนจากผู้อ่านทั่วประเทศ</p>
       </div>
       <div class="foot-col">
         <h4>คลังบทความ</h4>
@@ -93,10 +88,12 @@ footer.site-footer {
       </div>
     </div>
 
-    <div class="watermark" aria-hidden="true">Bismillāh</div>
-
     <div class="foot-bottom">
       <span>© 1446–1447 H · Islamic Fiqh Publishing</span>
+      <span class="foot-sep">·</span>
+      <span class="foot-colophon">ตัวอักษร Cormorant Garamond, Amiri &amp; Sarabun</span>
+      <span class="foot-sep">·</span>
+      <span>กรุงเทพมหานคร</span>
     </div>
   </div>
 </footer>
