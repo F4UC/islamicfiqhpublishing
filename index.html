@@ -33,9 +33,9 @@
    ========================================================= */
 :root {
   /* Elegant light blue academic theme */
-  --bg-primary: #f2f6fa;       /* Very soft, premium ice blue background */
-  --bg-secondary: #e5edf4;     /* Pale elegant blue-gray */
-  --bg-tertiary: #d7e3ee;      /* Soft light blue-gray */
+  --bg-primary: #e3edf7;       /* Soft premium sky-blue background */
+  --bg-secondary: #d6e2ee;     /* Pale elegant blue-gray container */
+  --bg-tertiary: #c8d7e5;      /* Soft medium blue-gray */
   --text-primary: #111111;     /* Charcoal primary text */
   --text-secondary: #444444;   /* Muted gray text */
   --text-tertiary: #777777;    /* Very muted text */
@@ -156,17 +156,10 @@ body::before {
 .hero-top { display: flex; justify-content: center; width: 100%; border-bottom: 1px solid var(--rule); padding-bottom: 24px; position: relative; z-index: 5; }
 .hero-nav { display: flex; gap: 40px; justify-content: center; align-items: center; flex-wrap: wrap; }
 .hero-nav-item {
-  font-family: var(--ui); font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
-  color: var(--text-dim); transition: color .25s; position: relative; font-weight: 500; text-decoration: none;
+  font-family: var(--thai); font-size: 14px; letter-spacing: .02em;
+  color: var(--text-dim); transition: color .25s, transform .25s; font-weight: 500; text-decoration: none;
 }
-.hero-nav-item:hover, .hero-nav-item.active { color: var(--text-primary); }
-.hero-nav-item::after {
-  content: ''; position: absolute; left: 0; right: 0; bottom: -6px;
-  height: 1px; background: var(--gold);
-  transform: scaleX(0); transform-origin: left;
-  transition: transform .35s cubic-bezier(.2,.7,.2,1);
-}
-.hero-nav-item:hover::after, .hero-nav-item.active::after { transform: scaleX(1); }
+.hero-nav-item:hover, .hero-nav-item.active { color: var(--gold); transform: translateY(-1px); }
 
 .hero-body { margin-top: 112px; text-align: center; position: relative; }
 
@@ -178,8 +171,8 @@ body::before {
 }
 
 .hero-arabic-ref {
-  font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--text-primary);
-  letter-spacing: .04em; margin-bottom: 128px;
+  font-family: var(--thai); font-size: 16px; color: var(--text-primary);
+  letter-spacing: 0; margin-bottom: 128px; font-weight: 400;
 }
 
 .hero-display {
