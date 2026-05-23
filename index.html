@@ -32,15 +32,15 @@
    TOKENS
    ========================================================= */
 :root {
-  /* Google Antigravity-style elegant light theme (Default) */
-  --bg-primary: #fbfbfa;       /* Very bright cream/white background */
-  --bg-secondary: #f4f4f2;     /* Slightly darker light gray */
-  --bg-tertiary: #eaeaea;      /* Medium light gray */
+  /* Elegant light blue academic theme */
+  --bg-primary: #f2f6fa;       /* Very soft, premium ice blue background */
+  --bg-secondary: #e5edf4;     /* Pale elegant blue-gray */
+  --bg-tertiary: #d7e3ee;      /* Soft light blue-gray */
   --text-primary: #111111;     /* Charcoal primary text */
   --text-secondary: #444444;   /* Muted gray text */
   --text-tertiary: #777777;    /* Very muted text */
-  --border-primary: #eaeaea;   /* Clean thin geometric border line */
-  --border-secondary: #dcdcdc; /* Darker border line */
+  --border-primary: rgba(0,50,100,0.06); /* Clean thin blue-tinted border line */
+  --border-secondary: rgba(0,50,100,0.12); /* Darker blue-tinted border line */
   
   --ink: var(--bg-primary);
   --ink-2: var(--bg-secondary);
@@ -48,14 +48,14 @@
   --ink-4: var(--border-secondary);
   --paper: var(--text-primary);
   --paper-2: var(--text-secondary);
-  --bone: #777777;
+  --bone: #556270;
   --text: var(--text-primary);
   --text-dim: var(--text-secondary);
   --text-mute: var(--text-tertiary);
-  --gold: #c49a45;
-  --gold-bright: #d4ae65;
-  --rule: rgba(0,0,0,0.06);
-  --rule-strong: rgba(0,0,0,0.12);
+  --gold: #b31b1b;             /* Brand Scholarly Crimson Red */
+  --gold-bright: #d32f2f;      /* Bright Scholarly Red */
+  --rule: rgba(0,50,100,0.06);
+  --rule-strong: rgba(0,50,100,0.12);
   --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
   --thai: 'Sarabun', system-ui, sans-serif;
   --arabic: 'Amiri', serif;
@@ -174,11 +174,11 @@ body::before {
   font-family: var(--arabic); font-weight: 400;
   font-size: clamp(40px, 7.2vw, 110px);
   line-height: 1.35; color: var(--paper); direction: rtl; letter-spacing: 0;
-  margin-bottom: 36px; text-shadow: 0 0 60px rgba(196,154,69,.15);
+  margin-bottom: 36px; text-shadow: 0 0 60px rgba(179,27,27,.10);
 }
 
 .hero-arabic-ref {
-  font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--gold);
+  font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--text-primary);
   letter-spacing: .04em; margin-bottom: 128px;
 }
 
@@ -239,7 +239,7 @@ body::before {
 .marquee-track {
   display: flex; gap: 80px; white-space: nowrap;
   animation: slide 60s linear infinite;
-  font-family: var(--arabic); font-size: 42px; color: var(--text-dim); font-style: italic;
+  font-family: var(--arabic); font-size: 42px; color: var(--text-dim);
 }
 .marquee-track span { display: inline-flex; align-items: center; gap: 80px; }
 .marquee-track .sep { color: var(--gold); font-family: var(--serif); font-size: 24px; font-style: italic; }
@@ -604,8 +604,8 @@ body::before {
       </p>
 
       <div class="hero-actions" data-reveal data-delay="4">
-        <a href="#featured" class="btn btn-primary">เริ่มอ่าน <span class="arrow">→</span></a>
-        <a href="#archive" class="btn">เปิดคลังบทความ <span class="arrow">→</span></a>
+        <a href="#archive" class="btn btn-primary">เริ่มอ่าน <span class="arrow">→</span></a>
+        <a href="#categories" class="btn">หมวดหมู่บทความ <span class="arrow">→</span></a>
       </div>
     </div>
 
@@ -638,48 +638,6 @@ body::before {
   </div>
 </div>
 
-<!-- =========================================================
-     FEATURED
-     ========================================================= -->
-<section class="section section-featured" id="featured">
-  <div class="wrap">
-    <div class="section-head">
-      <div data-reveal>
-        <div class="section-no">No. 01 <span class="slash">/</span> 05</div>
-        <div class="section-eyebrow">Editor's Folio</div>
-      </div>
-      <div data-reveal data-delay="1">
-        <h2 class="section-title">บทอ่าน<em>ประจำสัปดาห์</em></h2>
-        <p class="section-lede">บทวิเคราะห์เชิงลึกที่กองบรรณาธิการคัดสรร — ขุดค้นโครงสร้างทางความคิดที่ยังคงทรงพลังในศตวรรษนี้</p>
-      </div>
-    </div>
-
-    <a href="/articles/kalam/concept-of-jism-in-islamic-theology.html" class="featured" data-reveal data-delay="2">
-      <div class="featured-img">
-        <span class="featured-ribbon">Featured</span>
-        <span class="featured-corner-num">Folio 23.01</span>
-        <span class="featured-read-time">30 min read</span>
-      </div>
-      <div class="featured-body">
-        <div class="featured-cat">กะลาม / เทววิทยาอิสลาม</div>
-        <h3 class="featured-title">สารัตถะของคำว่า "ญิสม์" ในวิชากะลาม — ถอดรหัส 12 ทัศนะจากคัมภีร์มะกอลาต อัลอิสลามิยีน</h3>
-        <p class="featured-arabic" lang="ar" dir="rtl">لَيْسَ كَمِثْلِهِ شَيْءٌ</p>
-        <p class="featured-excerpt">
-          บทวิเคราะห์เชิงลึกถอดรหัส 12 ทัศนะว่าด้วยคำนิยามของคำว่า ญิสม์ จากผลงานของท่านอิหม่ามอบุลหะสัน อัลอัชอะรีย์
-          เพื่อขีดเส้นแบ่งระหว่าง "สิ่งถูกสร้าง" กับ "องค์พระผู้ทรงสร้าง" และปกป้องหลักการตันซีฮ์อันบริสุทธิ์
-        </p>
-        <div class="featured-meta">
-          <div>
-            <div class="featured-meta-label">By the Editorial Board</div>
-            <div class="author">มัรกัส อัลอิมาม อัลอัชอะรีย์</div>
-          </div>
-          <div>18.V.2569</div>
-        </div>
-        <span class="featured-cta">อ่านบทความเต็ม <span>→</span></span>
-      </div>
-    </a>
-  </div>
-</section>
 
 <!-- =========================================================
      ARCHIVE
@@ -687,10 +645,6 @@ body::before {
 <section class="section" id="archive">
   <div class="wrap">
     <div class="section-head">
-      <div data-reveal>
-        <div class="section-no">No. 02 <span class="slash">/</span> 05</div>
-        <div class="section-eyebrow">Archive · ดัชนีบทความ</div>
-      </div>
       <div data-reveal data-delay="1">
         <h2 class="section-title">บทความ<em>ล่าสุด</em></h2>
         <p class="section-lede">งานแปลและบทวิเคราะห์ที่เผยแพร่ในรอบเดือนพฤษภาคม — เรียงตามวันที่ตีพิมพ์</p>
@@ -1076,11 +1030,11 @@ window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY});
 document.querySelectorAll('a,button,.cat-card,.tool-card,.idx-row').forEach(function(el){
   el.addEventListener('mouseenter',function(){
     cursor.style.width='24px'; cursor.style.height='24px';
-    cursor.style.background='transparent'; cursor.style.border='1px solid #c49a45';
+    cursor.style.background='transparent'; cursor.style.border='1px solid #b31b1b';
   });
   el.addEventListener('mouseleave',function(){
     cursor.style.width='8px'; cursor.style.height='8px';
-    cursor.style.background='#c49a45'; cursor.style.border='0';
+    cursor.style.background='#b31b1b'; cursor.style.border='0';
   });
 });
 

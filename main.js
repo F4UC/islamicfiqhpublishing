@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (el) {
                     function upd() {
                         const d = new Date();
-                        const timeStr = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+                        const timeStr = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
                         const adYear = d.getFullYear();
                         const beYear = adYear + 543;
                         let hijriYear = "ฮ.ศ. 1447";
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         el.textContent = `BKK ${timeStr} · พ.ศ. ${beYear} · ค.ศ. ${adYear} · ${hijriYear}`;
                     }
                     upd();
-                    setInterval(upd, 30000);
+                    setInterval(upd, 1000);
                 } else {
                     setTimeout(tick, 100);
                 }
