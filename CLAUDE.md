@@ -118,7 +118,7 @@
   - **ความสูงบรรทัด:** กำหนด `line-height: 2.4` สำหรับย่อหน้าที่มีส่วนผสมอาหรับ เพื่อป้องกันสระอาหรับซ้อนทับ
 
 * **กฎข้อที่ 51:** **[มาตรฐานส่วน QUOTE OF THE DAY]** ระบบวาทะปราชญ์ประจำวัน (QOTD) ต้องปฏิบัติตามข้อกำหนดต่อไปนี้อย่างเคร่งครัด:
-  - **ความถี่ในการสลับ:** `setInterval` ต้องตั้งค่าไม่ต่ำกว่า **18,000ms (18 วินาที)** เพื่อให้ผู้อ่านมีเวลาอ่านและซึมซับวาทะอย่างสมบูรณ์ ห้ามใช้ค่าต่ำกว่า 15,000ms
+  - **ความถี่ในการสลับ:** `setInterval` ใช้ค่า **9,000ms (9 วินาที)** เป็นมาตรฐาน ห้ามเปลี่ยนแปลงค่านี้โดยไม่ได้รับอนุมัติจากกองบรรณาธิการ
   - **มาตรฐานตัวบทอาหรับ:** ข้อความอาหรับทุกรายการต้องใส่สระกำกับ (Harakat) ครบถ้วน และต้องระบุ `lang="ar" dir="rtl"` บน element ที่บรรจุตัวบท
   - **[สำคัญมาก] ความถูกต้องและสมบูรณ์ของตัวบท:** ก่อนเพิ่มหรือแก้ไขวาทะใด ๆ ต้องค้นหาจากอินเทอร์เน็ตและแหล่งปฐมภูมิเพื่อยืนยันว่า (1) ตัวบทอาหรับ **ไม่ถูกตัดตอน** จนเสียความหมายหรือขาดส่วนที่จำเป็น (2) **ไม่มีคำเกิน** ที่ไม่ได้อยู่ในต้นฉบับ (3) **การระบุผู้กล่าว** ถูกต้องและไม่เป็นที่โต้แย้งในวงวิชาการ และ (4) ต้อง**ระบุแหล่งอ้างอิง** (ชื่อหนังสือ/แหล่งข้อมูล) ทุกครั้งที่มีการเปลี่ยนแปลงหรือเพิ่มตัวบทใหม่
   - **มาตรฐานคำแปลภาษาไทย:** คำแปลต้องใช้ภาษาธรรมชาติที่สอดคล้องกับโทนของแหล่งที่มา (กวี, วรรณกรรม, เทววิทยา, หรือการเมือง) — ถูกต้อง, เข้าใจง่าย, กระชับ; สามารถตัดส่วนที่ฟุ่มเฟือยออกได้หากไม่กระทบบริบทและความหมาย; **ต้องใช้ `\n` ในตำแหน่งที่สอดคล้องกับจุดหยุดธรรมชาติของประโยค** เพื่อควบคุมการตัดบรรทัดให้สวยงามบนหน้าจอมือถือ หลีกเลี่ยงการปล่อยให้ browser ตัดกลางวลีหรือระหว่างคำเชื่อม
@@ -210,7 +210,7 @@
   - **Line height:** Set `line-height: 2.4` on paragraphs containing inline Arabic to prevent diacritic overlap.
 
 * **Rule 51:** **[QUOTE OF THE DAY Standard]** The QOTD system must comply with the following requirements:
-  - **Rotation interval:** `setInterval` must be set to a minimum of **18,000ms (18 seconds)** to allow readers adequate reading time. Values below 15,000ms are prohibited.
+  - **Rotation interval:** `setInterval` is fixed at **9,000ms (9 seconds)**. Do not change this value without editorial approval.
   - **Arabic text standard:** Every Arabic entry must carry full Harakat (diacritics), with `lang="ar" dir="rtl"` on the containing element.
   - **[Critical] Text completeness & attribution verification:** Before adding or modifying any quote, conduct a web search against primary sources to confirm: (1) the Arabic text is **not truncated** in a way that alters meaning or omits essential parts; (2) **no spurious words** have been added that do not appear in the original; (3) the **attribution is accurate** and not disputed in scholarly circles; and (4) the **source reference** (book title / database) must be cited whenever a quote is changed or a new one is added.
   - **Thai translation standard:** Translations must use natural language matching the tone of the source (poetry, literature, theology, or political writing) — accurate, easy to understand, and concise. Redundant phrasing may be trimmed if context and meaning are preserved. **`\n` must be inserted at natural sentence-break positions** to control line wrapping on mobile screens; avoid allowing the browser to break mid-phrase or before conjunctions.
