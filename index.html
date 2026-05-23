@@ -582,9 +582,10 @@ body::before {
 
     <div class="hero-body">
       <div class="hero-arabic" lang="ar" dir="rtl" data-reveal>
-        وَقُل رَّبِّ زِدْنِي عِلْمًا
+        وَقُل رَّบِّ زِدْنِي عِلْمًا
       </div>
       <div class="hero-arabic-ref" data-reveal data-delay="1">— สูเราะฮ์ฏอฮา · โองการที่ 114 —</div>
+      <div class="hero-divider" data-reveal data-delay="1.5"></div>
 
       <h1 class="hero-display" data-reveal data-delay="2">
         <span class="br">The Library</span>
@@ -597,16 +598,6 @@ body::before {
         ในนิติศาสตร์ เทววิทยา หะดีษ ประวัติศาสตร์ และวรรณกรรมอิสลาม
         เพื่อเชื่อมโยงสู่ความเข้าใจในปัจจุบัน
       </p>
-
-      <div class="hero-actions" data-reveal data-delay="4">
-        <a href="#archive" class="btn btn-primary">เริ่มอ่าน <span class="arrow">→</span></a>
-        <a href="#categories" class="btn">หมวดหมู่บทความ <span class="arrow">→</span></a>
-      </div>
-    </div>
-
-    <div class="scroll-hint">
-      <span>Scroll · เลื่อนลง</span>
-      <div class="line"></div>
     </div>
   </div>
 </div>
@@ -662,10 +653,6 @@ body::before {
   <div class="wrap">
     <div class="section-head">
       <div data-reveal>
-        <div class="section-no">No. 03 <span class="slash">/</span> 05</div>
-        <div class="section-eyebrow">Disciplines · สาขาวิชา</div>
-      </div>
-      <div data-reveal data-delay="1">
         <h2 class="section-title">หมวด<em>หมู่</em></h2>
         <p class="section-lede">เรียงร้อยศาสตร์อิสลามคลาสสิกเป็นหกสาขา — แต่ละสาขามีตำราแม่บท ระเบียบวิธี และคลังบรรณานุกรมของตนเอง</p>
       </div>
@@ -747,12 +734,8 @@ body::before {
   <div class="wrap">
     <div class="section-head">
       <div data-reveal>
-        <div class="section-no">No. 04 <span class="slash">/</span> 05</div>
-        <div class="section-eyebrow">Apparatus · เครื่องมือ</div>
-      </div>
-      <div data-reveal data-delay="1">
         <h2 class="section-title">เครื่องมือ<em>นักวิชาการ</em></h2>
-        <p class="section-lede">แอปพลิเคชันและตัวช่วยทางการอ่านที่กองบรรณาธิการกำลังพัฒนา — เปิดให้ทดลองใช้ก่อนสาธารณะ</p>
+        <p class="section-lede">แอปพลิเคชันและตัวช่วยทางการอ่านที่กองบรรณาธิการกำลังพัฒนา</p>
       </div>
     </div>
 
@@ -798,33 +781,25 @@ body::before {
   <div class="wrap">
     <div class="section-head">
       <div data-reveal>
-        <div class="section-no">No. 05 <span class="slash">/</span> 05</div>
-        <div class="section-eyebrow">Endowment · การสนับสนุน</div>
-      </div>
-      <div data-reveal data-delay="1">
-        <h2 class="section-title">เป็นส่วนหนึ่งของ<em>วะกัฟวิชาการ</em></h2>
-        <p class="section-lede">ทุกบทแปลและทุกบทวิเคราะห์เกิดขึ้นได้ด้วยแรงสนับสนุนของผู้อ่าน — ร่วมเป็นเศาะดะเกาะฮ์ญารียะฮ์</p>
+        <h2 class="section-title">เป็นส่วนหนึ่งของ<em>การเดินทางอันไร้จุดสิ้นสุด</em></h2>
+        <p class="section-lede">ทุกบทแปลและทุกบทวิเคราะห์เกิดขึ้นได้ด้วยแรงสนับสนุนของผู้อ่าน</p>
       </div>
     </div>
 
-    <div class="support">
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 0; border-top: 1px solid var(--rule); text-align: center;">
       <div data-reveal>
-        <h3 class="support-h">รับ<em>เผยแพร่ใหม่</em><br>ส่งตรงถึงกล่องจดหมาย</h3>
-        <p class="support-p">จดหมายข่าวรายเดือนจากกองบรรณาธิการ พร้อมบทบรรณาธิการที่ไม่ได้ตีพิมพ์ที่อื่น — ไม่มีโฆษณา ยกเลิกได้ทุกเมื่อ</p>
-        <form class="email-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ ขอบคุณ'">
-          <input type="email" placeholder="your.email@domain.com" required aria-label="อีเมลของคุณ">
-          <button type="submit">สมัคร</button>
-        </form>
-        <p class="support-note">1,847 ผู้อ่าน · 0 สแปม · ภาษาไทย &amp; عربي</p>
+        <button id="teaBtn" class="btn" style="font-family: var(--thai); font-size: 16px; padding: 18px 48px; border-radius: 999px; background: var(--paper); color: var(--ink); border-color: var(--paper); cursor: pointer; transition: all 0.3s; font-weight: 500;">
+          เลี้ยงน้ำชาทีมงาน 🍵 <span class="arrow">↓</span>
+        </button>
       </div>
-
-      <div class="donate-card" data-reveal data-delay="1">
-        <span class="donate-eyebrow">Ṣadaqah Jāriyah · พร้อมเพย์</span>
-        <h3 class="donate-title">ร่วม<em>วะกัฟ</em><br>คลังบทความ</h3>
-        <div class="qr-frame">
-          <img src="/assets/q-qr.jpg" alt="QR Code พร้อมเพย์ Islamic Fiqh Publishing">
+      
+      <div id="qrContainer" style="display: none; margin-top: 40px; opacity: 0; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); transform: translateY(-15px); width: 100%; max-width: 320px;">
+        <div class="donate-card" style="padding: 32px; background: var(--ink-2); border: 1px solid var(--rule); border-radius: 8px;">
+          <div class="qr-frame" style="width: 220px; height: 220px; background: #fff; padding: 14px; margin: 0 auto; border-radius: 4px; display: block;">
+            <img src="/q-qr.jpg" alt="QR Code พร้อมเพย์ เลี้ยงน้ำชาทีมงาน" style="width: 100%; height: auto; display: block;">
+          </div>
+          <p class="donate-note" style="font-family: var(--thai); font-size: 13px; color: var(--text-mute); line-height: 1.5; margin-top: 16px;">สแกนผ่านแอปธนาคารเพื่อสนับสนุนค่าน้ำชาทีมงาน</p>
         </div>
-        <p class="donate-note">สแกนผ่านแอปธนาคารใดก็ได้ — ทุกบาทถูกแปลงเป็นค่าธรรมเนียมแปล ค่าตำรา และค่าโฮสติ้ง</p>
       </div>
     </div>
   </div>
@@ -1136,6 +1111,29 @@ quotes.forEach(function(_,i){
 });
 paintQuote(0);
 setInterval(function(){ paintQuote(qi+1); }, 9000);
+
+/* ----- INTERACTIVE TEA DONATION CONTAINER ----- */
+var teaBtn = document.getElementById('teaBtn');
+var qrContainer = document.getElementById('qrContainer');
+if (teaBtn && qrContainer) {
+  teaBtn.addEventListener('click', function() {
+    if (qrContainer.style.display === 'none') {
+      qrContainer.style.display = 'block';
+      setTimeout(function() {
+        qrContainer.style.opacity = '1';
+        qrContainer.style.transform = 'translateY(0)';
+      }, 10);
+      teaBtn.innerHTML = 'ปิดกล่องค่าน้ำชา 🍵 <span class="arrow">↑</span>';
+    } else {
+      qrContainer.style.opacity = '0';
+      qrContainer.style.transform = 'translateY(-15px)';
+      setTimeout(function() {
+        qrContainer.style.display = 'none';
+      }, 400);
+      teaBtn.innerHTML = 'เลี้ยงน้ำชาทีมงาน 🍵 <span class="arrow">↓</span>';
+    }
+  });
+}
 </script>
 
 </body>
