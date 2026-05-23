@@ -49,22 +49,25 @@ applyTheme(isDarkModeActive);
 
 // ==========================================
 // â­ï¸ 3. à¸£à¸°à¸šà¸šà¸›à¸£à¸°à¸à¸­à¸šà¸£à¹ˆà¸²à¸‡ Header / Footer â­ï¸
+// ⭐ 3. ระบบประกอบร่าง Header / Footer ⭐
 // ==========================================
 document.addEventListener("DOMContentLoaded", function() {
     
-    // à¹‚à¸«à¸¥à¸”à¸˜à¸µà¸¡à¹à¸¥à¸°à¸›à¸¸à¹ˆà¸¡à¹„à¸­à¸„à¸­à¸™à¹ƒà¸«à¸¡à¹ˆà¸­à¸µà¸à¸„à¸£à¸±à¹‰à¸‡à¸«à¸¥à¸±à¸‡à¸ˆà¸²à¸ DOM à¹‚à¸«à¸¥à¸”à¹à¸¥à¹‰à¸§
+    // โหลดธีมและปุ่มไอคอนใหม่หลังจาก DOM โหลดแล้ว
     updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
 
-    // à¸ªà¸±à¹ˆà¸‡à¹‚à¸«à¸¥à¸”à¹„à¸Ÿà¸¥à¹Œ Header
+    // สั่งโหลดไฟล์ Header
     fetch('/components/header.html')
-        .then(response => response.text())
-        .then(data => {
+        .then(response => response.arrayBuffer())
+        .then(buffer => {
+            const decoder = new TextDecoder('utf-8');
+            const data = decoder.decode(buffer);
             document.getElementById('header-placeholder').innerHTML = data;
             
-            // à¹€à¸£à¸µà¸¢à¸à¸›à¸£à¸±à¸šà¸£à¸¹à¸›à¹„à¸­à¸„à¸­à¸™à¸›à¸¸à¹ˆà¸¡à¸˜à¸µà¸¡à¹€à¸¡à¸·à¹ˆà¸­à¸›à¸£à¸°à¸à¸­à¸šà¸£à¹ˆà¸²à¸‡à¹€à¸ªà¸£à¹‡à¸ˆ
+            // เรียกปรับรูปไอคอนปุ่มธีมเมื่อประกอบร่างเสร็จ
             updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
             
-            // à¸œà¸¹à¸à¹€à¸«à¸•à¸¸à¸à¸²à¸£à¸“à¹Œà¸„à¸¥à¸´à¸à¸›à¸¸à¹ˆà¸¡à¸˜à¸µà¸¡
+            // ผูกเหตุการณ์คลิกปุ่มธีม
             const themeToggleBtn = document.getElementById('themeToggleBtn');
             if (themeToggleBtn) {
                 themeToggleBtn.addEventListener('click', function() {
@@ -73,17 +76,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }
 
-            // --- à¸£à¸°à¸šà¸šà¸›à¸¸à¹ˆà¸¡à¹€à¸¡à¸™à¸¹à¸¡à¸·à¸­à¸–à¸·à¸­ (Hamburger) ---
+            // --- ระบบปุ่มเมนูมือถือ (Hamburger) ---
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navMenu = document.getElementById('navMenu');
             if (mobileMenuBtn && navMenu) {
                 mobileMenuBtn.addEventListener('click', function() {
                     navMenu.classList.toggle('mobile-active');
-                    mobileMenuBtn.innerHTML = navMenu.classList.contains('mobile-active') ? 'âœ•' : 'â˜°';
+                    mobileMenuBtn.innerHTML = navMenu.classList.contains('mobile-active') ? '✖' : '☰';
                 });
             }
 
-            // --- à¸£à¸°à¸šà¸šà¹„à¸®à¹„à¸¥à¸—à¹Œà¹€à¸¡à¸™à¸¹à¸­à¸±à¸•à¹‚à¸™à¸¡à¸±à¸•à¸´ (à¸›à¸£à¸±à¸šà¸›à¸£à¸¸à¸‡à¸„à¸§à¸²à¸¡à¸›à¸¥à¸­à¸”à¸ à¸±à¸¢) ---
+            // --- ระบบไฮไลท์เมนูอัตโนมัติ (ปรับปรุงความปลอดภัย) ---
             const currentPath = window.location.pathname;
             const navLinks = document.querySelectorAll('.nav-item');
             navLinks.forEach(link => {
@@ -97,19 +100,37 @@ document.addEventListener("DOMContentLoaded", function() {
                         }
                     }
                 } catch (e) {
-                    console.error("à¹€à¸¡à¸™à¸¹à¹„à¸®à¹„à¸¥à¸—à¹Œà¸„à¸¥à¸²à¸”à¹€à¸„à¸¥à¸·à¹ˆà¸­à¸™:", e);
+                    console.error("เมนูไฮไลท์คลาดเคลื่อน:", e);
                 }
             });
 
-            // --- à¸£à¸°à¸šà¸šà¸§à¸±à¸™à¸—à¸µà¹ˆà¸­à¸±à¸•à¹‚à¸™à¸¡à¸±à¸•à¸´ ---
-            const dateElement = document.getElementById('currentDate');
-            if (dateElement) {
-                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                dateElement.innerText = new Date().toLocaleDateString('en-GB', options); 
-            }
+            // --- ระบบเวลาและปฏิทินสามระบบอัตโนมัติ (BKK Time & Tri-Calendar) ---
+            (function tick() {
+                const el = document.getElementById('liveTime');
+                if (el) {
+                    function upd() {
+                        const d = new Date();
+                        const timeStr = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+                        const adYear = d.getFullYear();
+                        const beYear = adYear + 543;
+                        let hijriYear = "ฮ.ศ. 1447";
+                        try {
+                            const hijriFormatter = new Intl.DateTimeFormat('th-TH-u-ca-islamic-umalqura', { year: 'numeric' });
+                            hijriYear = hijriFormatter.format(d);
+                        } catch (e) {
+                            console.error("Hijri formatting error:", e);
+                        }
+                        el.textContent = `BKK ${timeStr} · พ.ศ. ${beYear} · ค.ศ. ${adYear} · ${hijriYear}`;
+                    }
+                    upd();
+                    setInterval(upd, 30000);
+                } else {
+                    setTimeout(tick, 100);
+                }
+            })();
 
             // ==========================================
-            // ðŸ” à¸£à¸°à¸šà¸šà¸ªà¸·à¸šà¸„à¹‰à¸™à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸šà¸—à¸„à¸§à¸²à¸¡à¸§à¸´à¸Šà¸²à¸à¸²à¸£ (Search Engine) ðŸ”
+            // 🔎 ระบบสืบค้นข้อมูลบทความวิชาการ (Search Engine) 🔎
             // ==========================================
             const searchToggleBtn = document.getElementById('searchToggleBtn');
             const searchOverlay = document.getElementById('searchOverlay');
@@ -117,34 +138,41 @@ document.addEventListener("DOMContentLoaded", function() {
             const searchInput = document.getElementById('searchInput');
             const searchResults = document.getElementById('searchResults');
             
-            let articlesData = null; // à¹€à¸à¹‡à¸šà¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸šà¸—à¸„à¸§à¸²à¸¡à¸ˆà¸²à¸ JSON
+            let initialSearchResultsHTML = '';
+            if (searchResults) {
+                initialSearchResultsHTML = searchResults.innerHTML;
+            }
+            
+            let articlesData = null; // เก็บข้อมูลบทความจาก JSON
 
-            // à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¹€à¸›à¸´à¸”à¸à¸²à¸£à¹à¸ªà¸”à¸‡à¸œà¸¥à¸à¸²à¸£à¸„à¹‰à¸™à¸«à¸² (Open Modal)
+            // ฟังก์ชันเปิดการแสดงผลการค้นหา (Open Modal)
             function openSearch() {
                 if (searchOverlay) {
                     searchOverlay.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // à¸¥à¹‡à¸­à¸à¸«à¸™à¹‰à¸²à¸ˆà¸­à¸”à¹‰à¸²à¸™à¸«à¸¥à¸±à¸‡
+                    document.body.style.overflow = 'hidden'; // ล็อกหน้าจอด้านหลัง
                     setTimeout(() => {
                         if (searchInput) searchInput.focus();
                     }, 100);
                     
-                    // à¸”à¸¶à¸‡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥ articles.json à¹à¸šà¸š Lazy Loading (à¸”à¸¶à¸‡à¸„à¸£à¸±à¹‰à¸‡à¹à¸£à¸à¹€à¸¡à¸·à¹ˆà¸­à¸à¸”à¹€à¸›à¸´à¸”)
+                    // ดึงข้อมูล articles.json แบบ Lazy Loading (ดึงครั้งแรกเมื่อกดเปิด)
                     if (!articlesData) {
                         fetch('/articles.json')
-                            .then(res => res.json())
-                            .then(data => {
-                                articlesData = data;
+                            .then(res => res.arrayBuffer())
+                            .then(buffer => {
+                                const decoder = new TextDecoder('utf-8');
+                                const jsonText = decoder.decode(buffer);
+                                articlesData = JSON.parse(jsonText);
                                 if (searchInput && searchInput.value.trim().length > 0) {
                                     performSearch(searchInput.value);
                                 }
                             })
                             .catch(err => {
-                                console.error("à¸œà¸´à¸”à¸žà¸¥à¸²à¸”à¹ƒà¸™à¸à¸²à¸£à¹‚à¸«à¸¥à¸”à¸„à¸¥à¸±à¸‡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥:", err);
+                                console.error("ผิดพลาดในการโหลดคลังข้อมูล:", err);
                                 if (searchResults) {
                                     searchResults.innerHTML = `
                                         <div class="search-empty-state">
-                                            <span class="empty-icon">âš ï¸</span>
-                                            <p>à¹„à¸¡à¹ˆà¸ªà¸²à¸¡à¸²à¸£à¸–à¹‚à¸«à¸¥à¸”à¸„à¸¥à¸±à¸‡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸à¸²à¸£à¸„à¹‰à¸™à¸«à¸²à¹„à¸”à¹‰à¹ƒà¸™à¸‚à¸“à¸°à¸™à¸µà¹‰ à¸à¸£à¸¸à¸“à¸²à¸¥à¸­à¸‡à¹ƒà¸«à¸¡à¹ˆà¸­à¸µà¸à¸„à¸£à¸±à¹‰à¸‡</p>
+                                            <span class="empty-icon">⚠️</span>
+                                            <p>ไม่สามารถโหลดคลังข้อมูลการค้นหาได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง</p>
                                         </div>`;
                                 }
                             });
@@ -152,31 +180,31 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
 
-            // à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸›à¸´à¸”à¸à¸²à¸£à¹à¸ªà¸”à¸‡à¸œà¸¥à¸à¸²à¸£à¸„à¹‰à¸™à¸«à¸² (Close Modal)
+            // ฟังก์ชันปิดการแสดงผลการค้นหา (Close Modal)
             function closeSearch() {
                 if (searchOverlay) {
                     searchOverlay.classList.remove('active');
-                    document.body.style.overflow = ''; // à¸„à¸·à¸™à¸„à¹ˆà¸²à¸à¸²à¸£à¹€à¸¥à¸·à¹ˆà¸­à¸™à¸«à¸™à¹‰à¸²à¸ˆà¸­
+                    document.body.style.overflow = ''; // คืนค่าการเลื่อนหน้าจอ
                     if (searchInput) {
-                        searchInput.value = ''; // à¹€à¸„à¸¥à¸µà¸¢à¸£à¹Œà¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡
+                        searchInput.value = ''; // เคลียร์ข้อความ
                     }
                     resetSearchResults();
                 }
             }
 
-            // à¸£à¸µà¹€à¸‹à¹‡à¸•à¸à¸²à¸£à¹à¸ªà¸”à¸‡à¸œà¸¥à¸Šà¹ˆà¸­à¸‡à¸„à¹‰à¸™à¸«à¸²à¹€à¸£à¸´à¹ˆà¸¡à¸•à¹‰à¸™
+            // รีเซ็ตการแสดงผลช่องค้นหาเริ่มต้น
             function resetSearchResults() {
                 if (searchResults) {
-                    searchResults.innerHTML = `
+                    searchResults.innerHTML = initialSearchResultsHTML || `
                         <div class="search-empty-state">
-                            <span class="empty-icon">ðŸ“–</span>
-                            <p>à¸žà¸´à¸¡à¸žà¹Œà¸„à¸µà¸¢à¹Œà¹€à¸§à¸´à¸£à¹Œà¸”à¹€à¸žà¸·à¹ˆà¸­à¸„à¹‰à¸™à¸«à¸²à¸œà¸¥à¸‡à¸²à¸™à¹à¸›à¸¥à¹à¸¥à¸°à¸šà¸—à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¹ƒà¸™à¸£à¸°à¸šà¸š</p>
-                            <span class="keyboard-tip">à¸«à¸£à¸·à¸­à¸à¸”à¸›à¸¸à¹ˆà¸¡ <code>/</code> à¸šà¸™à¸„à¸µà¸¢à¹Œà¸šà¸­à¸£à¹Œà¸”à¹€à¸žà¸·à¹ˆà¸­à¹€à¸›à¸´à¸”à¸à¸²à¸£à¸„à¹‰à¸™à¸«à¸²à¹„à¸”à¹‰à¸—à¸±à¸™à¸—à¸µ</span>
+                            <span class="empty-icon">📖</span>
+                            <p>พิมพ์คีย์เวิร์ดเพื่อค้นหาผลงานแปลและบทวิเคราะห์ในระบบ</p>
+                            <span class="keyboard-tip">หรือกดปุ่ม <code>/</code> บนคีย์บอร์ดเพื่อเปิดการค้นหาได้ทันที</span>
                         </div>`;
                 }
             }
 
-            // à¸œà¸¹à¸à¹€à¸«à¸•à¸¸à¸à¸²à¸£à¸“à¹Œà¸›à¸¸à¹ˆà¸¡à¹€à¸›à¸´à¸”-à¸›à¸´à¸”
+            // ผูกเหตุการณ์ปุ่มเปิด-ปิด
             if (searchToggleBtn) {
                 searchToggleBtn.addEventListener('click', openSearch);
             }
@@ -191,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }
 
-            // à¸œà¸¹à¸à¹€à¸«à¸•à¸¸à¸à¸²à¸£à¸“à¹Œà¸„à¸µà¸¢à¹Œà¸šà¸­à¸£à¹Œà¸”à¸ªà¸²à¸à¸¥ (Global Keyboard Shortcuts)
+            // ผูกเหตุการณ์คีย์บอร์ดสากล (Global Keyboard Shortcuts)
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && searchOverlay && searchOverlay.classList.contains('active')) {
                     closeSearch();
@@ -202,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
 
-            // à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸„à¹‰à¸™à¸«à¸²à¹à¸¥à¸°à¸ˆà¸±à¸šà¸„à¸¹à¹ˆ
+            // ฟังก์ชันค้นหาและจับคู่
             function performSearch(query) {
                 if (!searchResults) return;
                 
@@ -216,8 +244,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (!articlesData) {
                     searchResults.innerHTML = `
                         <div class="search-empty-state">
-                            <span class="empty-icon">â³</span>
-                            <p>à¸à¸³à¸¥à¸±à¸‡à¹‚à¸«à¸¥à¸”à¸„à¸¥à¸±à¸‡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸§à¸´à¸Šà¸²à¸à¸²à¸£...</p>
+                            <span class="empty-icon">⏳</span>
+                            <p>กำลังโหลดคลังข้อมูลวิชาการ...</p>
                         </div>`;
                     return;
                 }
@@ -233,9 +261,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (matches.length === 0) {
                     searchResults.innerHTML = `
                         <div class="search-empty-state">
-                            <span class="empty-icon">ðŸ”</span>
-                            <p>à¹„à¸¡à¹ˆà¸žà¸šà¸œà¸¥à¸¥à¸±à¸žà¸˜à¹Œà¸ªà¸³à¸«à¸£à¸±à¸šà¸„à¸³à¸§à¹ˆà¸² "<strong>${escapeHtml(query)}</strong>"</p>
-                            <span class="keyboard-tip">à¸à¸£à¸¸à¸“à¸²à¸•à¸£à¸§à¸ˆà¸ªà¸­à¸šà¸•à¸±à¸§à¸ªà¸°à¸à¸”à¸«à¸£à¸·à¸­à¸¥à¸­à¸‡à¹ƒà¸Šà¹‰à¸„à¸³à¸„à¹‰à¸™à¸«à¸²à¸—à¸µà¹ˆà¸à¸§à¹‰à¸²à¸‡à¸‚à¸¶à¹‰à¸™</span>
+                            <span class="empty-icon">🔎</span>
+                            <p>ไม่พบผลลัพธ์สำหรับคำว่า "<strong>${escapeHtml(query)}</strong>"</p>
+                            <span class="keyboard-tip">กรุณาตรวจสอบตัวสะกดหรือลองใช้คำค้นหาที่กว้างขึ้น</span>
                         </div>`;
                     return;
                 }
@@ -269,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }
 
-            // à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸›à¹‰à¸­à¸‡à¸à¸±à¸™ XSS
+            // ฟังก์ชันป้องกัน XSS
             function escapeHtml(str) {
                 return str
                     .replace(/&/g, "&amp;")
@@ -286,13 +314,15 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-    // à¸ªà¸±à¹ˆà¸‡à¹‚à¸«à¸¥à¸”à¹„à¸Ÿà¸¥à¹Œ Footer
+    // สั่งโหลดไฟล์ Footer
     fetch('/components/footer.html')
-        .then(response => response.text())
-        .then(data => {
+        .then(response => response.arrayBuffer())
+        .then(buffer => {
+            const decoder = new TextDecoder('utf-8');
+            const data = decoder.decode(buffer);
             document.getElementById('footer-placeholder').innerHTML = data;
             
-            // --- à¸£à¸°à¸šà¸šà¸›à¸¸à¹ˆà¸¡à¹‚à¸Šà¸§à¹Œ QR Code (à¸›à¸£à¸±à¸šà¸›à¸£à¸¸à¸‡à¹ƒà¸«à¹‰à¸à¸”à¸•à¸´à¸”à¸—à¸±à¸™à¸—à¸µà¹ƒà¸™à¸„à¸¥à¸´à¸à¹à¸£à¸) ---
+            // --- ระบบปุ่มโชว์ QR Code (ปรับปรุงให้กดติดทันทีในการคลิกแรก) ---
             const supportBtn = document.getElementById('supportToggleBtn');
             const qrBox = document.getElementById('qrBox');
             if (supportBtn && qrBox) {
