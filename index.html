@@ -680,22 +680,20 @@ body::before {
    CATEGORIES — white dot-field (light mode only)
    ========================================================= */
 @keyframes cat-dots-wave {
-  0%   { background-position: 0 0, 10px 10px; }
-  33%  { background-position: 10px 6px, 20px 16px; }
-  66%  { background-position: 20px 0, 30px 10px; }
-  100% { background-position: 0 0, 10px 10px; }
+  0%   { background-position: 0 0; }
+  33%  { background-position: 8px 5px; }
+  66%  { background-position: 16px 0; }
+  100% { background-position: 0 0; }
 }
 html:not(.dark-mode) #categories { background: #ffffff; position: relative; }
 html:not(.dark-mode) #categories::before {
   content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 0;
-  background-image:
-    radial-gradient(circle, rgba(0,0,0,0.09) 1px, transparent 1px),
-    radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
-  background-size: 20px 20px, 10px 10px;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.16) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
   animation: cat-dots-wave 20s ease-in-out infinite;
 }
 html:not(.dark-mode) #categories .wrap { position: relative; z-index: 1; }
-html:not(.dark-mode) .cat-grid { background: #d4d4d4; gap: 1px; }
+html:not(.dark-mode) .cat-grid { background: #b8b8b8; gap: 10px; }
 html:not(.dark-mode) .cat-card {
   background: #ffffff;
   transition: background .25s, outline .25s, box-shadow .25s;
@@ -705,14 +703,29 @@ html:not(.dark-mode) .cat-card:hover {
   background: #f9f7f4; box-shadow: 0 4px 24px rgba(0,0,0,.07);
 }
 html:not(.dark-mode) .cat-overlay { display: none; }
-html:not(.dark-mode) .cat-bg { opacity: 0 !important; }
-html:not(.dark-mode) .cat-card:hover .cat-bg { opacity: 0 !important; }
+html:not(.dark-mode) .cat-bg { opacity: 0; }
+/* Kalam — restore NASA Carina Nebula with light overlay */
+html:not(.dark-mode) .cat-kalam .cat-bg {
+  opacity: 0.58; filter: brightness(82%) saturate(88%);
+}
+html:not(.dark-mode) .cat-kalam .cat-overlay {
+  display: block;
+  background: linear-gradient(170deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.54) 100%);
+}
+html:not(.dark-mode) .cat-kalam .cat-name { color: #ffffff; text-shadow: 0 1px 12px rgba(0,0,0,0.6); }
+html:not(.dark-mode) .cat-kalam .cat-count { color: rgba(255,255,255,0.88); text-shadow: 0 1px 6px rgba(0,0,0,0.4); }
+html:not(.dark-mode) .cat-kalam .cat-tag { color: #c49a45; }
+/* Nitisart — geometric SVG pattern without dark bg */
+html:not(.dark-mode) .cat-nitisart .cat-bg { opacity: 0.20; background-color: transparent; }
 html:not(.dark-mode) .hadith-map svg { opacity: 0.55; }
 html:not(.dark-mode) .cat-name { color: #111111; }
 html:not(.dark-mode) .cat-sub,
 html:not(.dark-mode) .cat-count { color: #666666; }
 html:not(.dark-mode) .cat-num { color: #999999; }
 html:not(.dark-mode) .cat-tag { color: var(--gold); }
+@media(max-width:600px){
+  html:not(.dark-mode) .cat-grid { grid-template-rows: 300px repeat(5,165px); gap: 10px; }
+}
 </style>
 </head>
 <body lang="th">
