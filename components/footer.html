@@ -13,16 +13,17 @@ footer.site-footer {
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 48px; margin-bottom: 60px;
 }
+.foot-brand-inner { display: inline-flex; flex-direction: column; align-items: center; margin-bottom: 20px; }
 .foot-brand .foot-mark {
   font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
   font-weight: 300; font-size: 40px; color: #e8e0d0; letter-spacing: -.01em;
-  margin-bottom: 8px; line-height: 1.1;
+  line-height: 1.1; white-space: nowrap;
 }
 .foot-brand .foot-mark em { font-style: italic; color: #b31b1b; }
 .foot-brand .foot-ar {
   font-family: 'Amiri', serif; color: #9a907e;
-  direction: rtl; font-size: 19px; margin-bottom: 20px; line-height: 1.6;
-  text-align: center;
+  direction: rtl; font-size: 19px; line-height: 1.6;
+  text-align: center; width: 100%;
 }
 .foot-brand p {
   font-family: 'Sarabun', sans-serif; font-weight: 300;
@@ -30,7 +31,7 @@ footer.site-footer {
 }
 .foot-col h4 {
   font-family: 'Inter', system-ui, sans-serif; font-size: 13px;
-  letter-spacing: .2em; text-transform: uppercase; color: #b31b1b;
+  letter-spacing: .06em; text-transform: uppercase; color: #b31b1b;
   margin-bottom: 20px;
 }
 .foot-col a {
@@ -63,8 +64,10 @@ footer.site-footer {
   <div class="foot-wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <div class="foot-mark">Islamic <em>Fiqh</em> Publishing</div>
-        <div class="foot-ar" lang="ar" dir="rtl">دار الفقه الإسلامي للنشر والتوزيع والترجمة</div>
+        <div class="foot-brand-inner">
+          <div class="foot-mark">Islamic <em>Fiqh</em> Publishing</div>
+          <div class="foot-ar" lang="ar" dir="rtl">دار الفقه الإسلامي للنشر والتوزيع والترجمة</div>
+        </div>
         <p>เริ่มก่อตั้งและเผยแพร่องค์ความรู้ทางออนไลน์ในช่วงกลางปี พ.ศ. 2563 (ค.ศ. 2020 / ฮ.ศ. 1441) สำนักพิมพ์อิสระที่มุ่งตีพิมพ์บทแปลและบทวิเคราะห์งานวิชาการอิสลามคลาสสิกเป็นภาษาไทย</p>
       </div>
       <div class="foot-col">
