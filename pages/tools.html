@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
@@ -30,53 +30,58 @@
 /* - สไตล์ระดับพรีเมียมสำหรับหน้าเครื่องมือหลัก - */
 .tools-container { max-width: 1100px; margin: 60px auto 80px; padding: 0 24px; }
 
-.tools-header { text-align: center; border-bottom: 1px solid #eaeaea; padding-bottom: 40px; margin-bottom: 60px; }
-.tools-title { font-family: 'Noto Serif Thai', serif; font-size: 36px; font-weight: 700; color: #0a0a0a; margin-bottom: 16px; }
-.tools-desc { font-size: 16px; color: #666; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+.tools-header { text-align: center; border-bottom: 1px solid var(--border-primary); padding-bottom: 40px; margin-bottom: 60px; transition: var(--theme-transition); }
+.tools-title { font-family: 'Noto Serif Thai', serif; font-size: 36px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; transition: var(--theme-transition); }
+.tools-desc { font-size: 16px; color: var(--text-secondary); max-width: 700px; margin: 0 auto; line-height: 1.8; transition: var(--theme-transition); }
 
 .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
 
 /* โครงสร้างการ์ดพรีเมียม */
 .tool-card { 
-    background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 40px 30px; 
+    background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: 12px; padding: 40px 30px; 
     text-align: center; display: flex; flex-direction: column; height: 100%; position: relative; overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: var(--theme-transition), transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s;
 }
 .tool-card:hover { 
-    border-color: #b31b1b; box-shadow: 0 20px 40px rgba(0,0,0,0.06); transform: translateY(-5px); 
+    border-color: var(--accent-color); box-shadow: 0 20px 40px var(--shadow-heavy); transform: translateY(-5px); 
 }
 
 /* แอนิเมชันขอบทองสำหรับเครื่องมือเปิดใช้งานสด */
 .tool-card::before {
-    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: #b31b1b;
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--accent-color);
     transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
 }
 .tool-card:hover::before { transform: scaleX(1); }
 
 /* วงกลมล้อมรอบไอคอน */
 .tool-icon { 
-    font-size: 36px; line-height: 1; color: #0a0a0a; background: #fdfbf7; 
-    width: 70px; height: 70px; border-radius: 50%; border: 1px solid #f0f0f0;
+    font-size: 36px; line-height: 1; color: var(--text-primary); background: var(--bg-tertiary); 
+    width: 70px; height: 70px; border-radius: 50%; border: 1px solid var(--border-primary);
     display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; flex-shrink: 0;
+    transition: var(--theme-transition);
 }
 
-.tool-name { font-family: 'Noto Serif Thai', serif; font-size: 22px; font-weight: 700; color: #0a0a0a; margin-bottom: 12px; }
-.tool-desc-text { font-size: 14px; color: #666; line-height: 1.6; flex-grow: 1; margin-bottom: 28px; }
+.tool-name { font-family: 'Noto Serif Thai', serif; font-size: 22px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; transition: var(--theme-transition); }
+.tool-desc-text { font-size: 14px; color: var(--text-secondary); line-height: 1.6; flex-grow: 1; margin-bottom: 28px; transition: var(--theme-transition); }
 
-.tool-btn { display: inline-block; padding: 11px 28px; font-size: 14px; font-weight: 600; color: #fff; background: #0a0a0a; border-radius: 4px; transition: background 0.2s; text-decoration: none; }
-.tool-btn:hover { background: #333; }
+.tool-btn { 
+    display: inline-block; padding: 11px 28px; font-size: 14px; font-weight: 600; 
+    color: var(--inverted-text); background: var(--inverted-bg); border-radius: 4px; 
+    border: 1px solid var(--border-primary); transition: var(--theme-transition); text-decoration: none; 
+}
+.tool-btn:hover { background: var(--accent-color); color: #fff; }
 
-.status-badge { display: inline-block; padding: 4px 14px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border-radius: 20px; margin-bottom: 20px; align-self: center; }
-.status-available { background: rgba(196, 154, 69, 0.1); color: #b31b1b; }
-.status-soon { background: #f5f5f5; color: #757575; border: 1px solid #ddd; }
+.status-badge { display: inline-block; padding: 4px 14px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border-radius: 20px; margin-bottom: 20px; align-self: center; transition: var(--theme-transition); }
+.status-available { background: rgba(196, 154, 69, 0.1); color: var(--accent-color); }
+.status-soon { background: var(--bg-tertiary); color: var(--text-secondary); border: 1px solid var(--border-primary); }
 
 /* รูปแบบการ์ดปิดล็อก / กำลังพัฒนา */
-.tool-card.coming-soon { background: #fafafa; border: 1px dashed #dcdcdc; }
-.tool-card.coming-soon:hover { border-color: #ccc; box-shadow: none; transform: translateY(-2px); }
+.tool-card.coming-soon { background: var(--bg-primary); border: 1px dashed var(--border-secondary); opacity: 0.85; }
+.tool-card.coming-soon:hover { border-color: var(--border-secondary); box-shadow: none; transform: translateY(-2px); }
 .tool-card.coming-soon::before { display: none; }
-.tool-card.coming-soon .tool-icon { background: #eee; border-color: #e5e5e5; filter: grayscale(1); opacity: 0.6; }
-.tool-card.coming-soon .tool-name { color: #555; }
-.tool-card.coming-soon .status-badge { background: #eee; color: #888; border: none; }
+.tool-card.coming-soon .tool-icon { background: var(--bg-secondary); border-color: var(--border-primary); filter: grayscale(1); opacity: 0.5; }
+.tool-card.coming-soon .tool-name { color: var(--text-secondary); }
+.tool-card.coming-soon .status-badge { background: var(--bg-secondary); color: var(--text-tertiary); border: none; }
 </style>
 </head>
 <body id="tools-page" lang="th">
