@@ -421,17 +421,31 @@ body::before {
   opacity: 0.45;
 }
 .cat-nitisart .cat-bg {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cg stroke='%23c49a45' stroke-width='0.7' fill='none' opacity='0.32'%3E%3Cpolygon points='50%2C5 61%2C28 86%2C28 67%2C44 74%2C68 50%2C54 26%2C68 33%2C44 14%2C28 39%2C28'%2F%3E%3Crect x='25' y='25' width='50' height='50' transform='rotate(45%2050%2050)' stroke-width='0.5'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-  background-size: 100px 100px;
+  background-image: url('https://images.unsplash.com/photo-1519817914152-3f5fdfe96607?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
   background-color: #0c0f16;
-  opacity: 0.88;
+  opacity: 0.38;
 }
-.cat-hadith .cat-bg    { opacity: 0; }
-.cat-history .cat-bg   { opacity: 0; }
+.cat-hadith .cat-bg {
+  background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+  opacity: 0.32;
+}
+.cat-history .cat-bg {
+  background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+  opacity: 0.38;
+}
 .cat-literature .cat-bg {
   background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+  opacity: 0.32;
 }
-.cat-about .cat-bg     { opacity: 0; }
+.cat-about .cat-bg {
+  background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+  opacity: 0.30;
+}
 
 /* ── Typography ── */
 .cat-tag { font-family: var(--ui); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
@@ -677,7 +691,7 @@ body::before {
 }
 
 /* =========================================================
-   CATEGORIES — canvas wave dots (light mode only)
+   CATEGORIES — SpaceX dark cards + canvas wave dots (light mode)
    ========================================================= */
 #cat-dots-canvas {
   position: absolute; inset: 0; width: 100%; height: 100%;
@@ -686,25 +700,12 @@ body::before {
 html:not(.dark-mode) #cat-dots-canvas { display: block; }
 html:not(.dark-mode) #categories { background: #ffffff; position: relative; overflow: hidden; }
 html:not(.dark-mode) #categories .wrap { position: relative; z-index: 1; }
-html:not(.dark-mode) .cat-grid { background: transparent; gap: 0; }
-html:not(.dark-mode) .cat-card {
-  background: rgba(255,255,255,0.93);
-  border-bottom: 1px solid rgba(90,140,210,0.20);
-  transition: background .25s, outline .25s, box-shadow .25s;
-}
-html:not(.dark-mode) .cat-card:last-child { border-bottom: none; }
-html:not(.dark-mode) .cat-card:hover {
-  outline: 1px solid rgba(179,27,27,.45); outline-offset: -1px;
-  background: rgba(235,243,255,0.96); box-shadow: 0 4px 24px rgba(0,0,0,.05);
-}
-html:not(.dark-mode) .cat-overlay { display: none; }
-html:not(.dark-mode) .cat-bg { opacity: 0; }
-html:not(.dark-mode) .hadith-map svg { opacity: 0.55; }
-html:not(.dark-mode) .cat-name { color: #111111; }
+html:not(.dark-mode) .cat-grid { background: rgba(255,255,255,0.6); gap: 3px; }
+/* Cards stay dark (original CSS #0a0c10). Override only text colors since vars are dark in light mode */
+html:not(.dark-mode) .cat-name { color: #f0ece4; }
 html:not(.dark-mode) .cat-sub,
-html:not(.dark-mode) .cat-count { color: #666666; }
-html:not(.dark-mode) .cat-num { color: #999999; }
-html:not(.dark-mode) .cat-tag { color: var(--gold); }
+html:not(.dark-mode) .cat-count { color: rgba(240,236,228,0.72); }
+html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
 @media(max-width:600px){
   html:not(.dark-mode) .cat-grid { grid-template-rows: repeat(6,165px); }
 }
