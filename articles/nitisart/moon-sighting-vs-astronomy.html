@@ -59,7 +59,7 @@ body { position: relative; }
     --text-primary: #f5f5f5;
     --text-secondary: #cccccc;
     --text-tertiary: #999999;
-    --accent-color: #d4af37;
+    --accent-color: #3b82f6;
     --accent-hover: #f1cd56;
     --shadow-soft: 0 10px 40px rgba(0,0,0,0.4);
 }
@@ -127,11 +127,11 @@ blockquote[lang="ar"].short-quote .ar, .hadith-block.short-quote .ar, .quote-con
     color: #fff; border: none; padding: 11px 28px; border-radius: 30px;
     font-size: 13px; font-weight: 700; cursor: pointer; letter-spacing: 0.03em;
     transition: all 0.25s ease; display: flex; align-items: center; gap: 8px;
-    font-family: 'Sarabun', sans-serif; box-shadow: 0 4px 14px rgba(196,154,69,0.35);
+    font-family: 'Sarabun', sans-serif; box-shadow: 0 4px 14px rgba(59,130,246,0.35);
 }
 .copy-btn::before { content: '📋'; font-size: 14px; }
-.copy-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,154,69,0.5); filter: brightness(1.08); }
-.copy-btn:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(196,154,69,0.3); }
+.copy-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59,130,246,0.5); filter: brightness(1.08); }
+.copy-btn:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(59,130,246,0.3); }
 
 /* Alert */
 .copy-alert {
@@ -177,14 +177,12 @@ blockquote[lang="ar"].short-quote .ar, .hadith-block.short-quote .ar, .quote-con
 <div id="readingProgressBar"></div>
 <div id="header-placeholder"></div>
 
-
-  <div class="hero-banner article-hero-banner">
-    <div class="hero-banner-inner">
-      <div class="hero-arabic" lang="ar" dir="rtl">أَصْلُهَا ثَابِتٌ وَفَرْعُهَا فِي السَّمَاءِ</div>
-      <div class="hero-arabic-ref">— สูเราะฮ์อิบรอฮีม · โองการที่ 24 —</div>
-      <div class="hero-divider"></div>
-      <span class="article-category">class="article-category">นิติศาสตร์อิสลาม</span>
-      <h1 class="hero-display article-main-title">เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์</h1>
+<main class="article-layout">
+  
+  <article class="article-content">
+    <header class="article-header">
+      <span class="article-category">นิติศาสตร์อิสลาม</span>
+      <h1 class="article-main-title">เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์</h1>
       <div class="article-meta-info">
         <span>โดย <strong>กองบรรณาธิการ</strong></span>
         <span class="meta-divider">•</span>
@@ -192,12 +190,7 @@ blockquote[lang="ar"].short-quote .ar, .hadith-block.short-quote .ar, .quote-con
         <span class="meta-divider">•</span>
         <span>อ่าน 15 นาที</span>
       </div>
-    </div>
-  </div>
-<main class="article-layout">
-  
-  <article class="article-content">
-    
+    </header>
 
     <div class="reading-tools">
       <div class="tool-group">
