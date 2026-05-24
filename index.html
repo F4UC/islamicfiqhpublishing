@@ -104,7 +104,7 @@ html.dark-mode {
 .ripple-effect {
   position: absolute;
   border-radius: 50%;
-  background: rgba(5, 114, 244, 0.15); /* Sleek high-tech blue ripple */
+  background: rgba(179, 27, 27, 0.18);
   transform: scale(0);
   animation: ripple-animation 0.65s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
   pointer-events: none;
@@ -695,6 +695,13 @@ body::before {
 /* =========================================================
    CATEGORIES — SpaceX dark cards, always dark background
    ========================================================= */
+#categories .section-head {
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-bottom: 48px;
+}
+#categories .section-title { color: #f0ece4; }
+#categories .section-lede  { color: rgba(240,236,228,0.48); }
 #categories { background: #0a0907; position: relative; overflow: hidden; }
 #categories .wrap { position: relative; z-index: 1; }
 .cat-name { color: #f0ece4; }
@@ -1365,8 +1372,7 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
     var w = canvas.width / dpr, h = canvas.height / dpr;
     ctx.clearRect(0,0,w,h);
     var cols = Math.ceil(w/SPACING)+2, rows = Math.ceil(h/SPACING)+2;
-    var isDark = document.documentElement.classList.contains('dark-mode');
-    var dotColor = isDark ? 'rgba(180, 215, 255, ' : 'rgba(50, 100, 195, ';
+    var dotColor = 'rgba(160, 20, 20, ';
 
     for(var r=0;r<rows;r++){
       for(var c=0;c<cols;c++){
@@ -1424,8 +1430,7 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
       var cols = Math.ceil(canvas.width / SPACING) + 2;
       var rows = Math.ceil(canvas.height / SPACING) + 2;
       var now = Date.now() * 0.001;
-      var isDark = document.documentElement.classList.contains('dark-mode');
-      var waveColor = isDark ? 'rgba(200, 230, 255, ' : 'rgba(70, 130, 240, ';
+      var waveColor = 'rgba(190, 30, 30, ';
 
       for(var r = 0; r < rows; r++){
         for(var c = 0; c < cols; c++){
