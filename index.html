@@ -553,16 +553,20 @@ body::before {
 .eyebrow-en { display: inline; }
 .eyebrow-en::after { content: ' · '; }
 .eyebrow-th { display: inline; }
+.quote-body {
+  min-height: 640px; width: 100%;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
 .quote-ar {
   font-family: var(--arabic); font-size: clamp(28px,3.6vw,52px); line-height: 2.2; color: var(--ink);
-  direction: rtl; margin-bottom: 48px; max-width: 1100px; margin-left: auto; margin-right: auto; font-weight: 400;
-  min-height: 240px; display: flex; align-items: center; justify-content: center; text-align: center;
+  direction: rtl; margin-bottom: 32px; max-width: 1100px; margin-left: auto; margin-right: auto; font-weight: 400;
+  display: flex; align-items: center; justify-content: center; text-align: center; width: 100%;
 }
 .quote-th {
   font-family: var(--thai); font-weight: 300;
   font-size: clamp(18px,1.6vw,24px); line-height: 1.8; color: var(--ink-3);
   max-width: 780px; margin: 0 auto 32px; white-space: pre-line;
-  min-height: 110px; display: flex; align-items: center; justify-content: center; text-align: center;
+  display: flex; align-items: center; justify-content: center; text-align: center;
 }
 .quote-author-line {
   font-family: var(--thai); font-size: 13px; color: var(--ink-3);
@@ -649,16 +653,19 @@ body::before {
    ========================================================= */
 #backToTopBtn {
   display: none; position: fixed; bottom: 32px; right: 32px; z-index: 500;
-  width: 48px; height: 48px; border: 1px solid var(--rule-strong); border-radius: 50%;
-  background: var(--ink-2); color: var(--text-dim);
-  font-family: var(--ui); font-size: 15px; letter-spacing: 0;
-  box-shadow: 0 4px 20px rgba(0,0,0,.14);
+  width: 52px; height: 52px;
+  border: 1.5px solid rgba(179,27,27,.5); border-radius: 50%;
+  background: rgba(8,7,6,.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  color: rgba(240,236,228,.8);
+  font-family: var(--serif); font-size: 22px; line-height: 52px; text-align: center;
+  box-shadow: 0 4px 28px rgba(0,0,0,.36), inset 0 0 0 1px rgba(255,255,255,.04);
   transition: all .3s cubic-bezier(.2,.7,.2,1); cursor: pointer;
+  place-items: center;
 }
 #backToTopBtn:hover {
   border-color: var(--gold); color: var(--gold);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(0,0,0,.2);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 36px rgba(0,0,0,.44), inset 0 0 0 1px rgba(255,255,255,.06);
 }
 html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 
@@ -691,8 +698,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
   .eyebrow-en::before { content: ''; display: block; width: 28px; height: 1px; background: var(--ink-3); }
   .eyebrow-en::after { content: ''; display: block; width: 28px; height: 1px; background: var(--ink-3); }
   .quote-section { padding: 80px 0; }
-  .quote-ar { min-height: 270px; }
-  .quote-th { min-height: 290px; }
+  .quote-body { min-height: 540px; }
   .tool-name { font-size: 28px; white-space: nowrap; }
 }
 
@@ -955,8 +961,10 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
   <section class="quote-section">
     <div class="wrap">
       <div class="quote-eyebrow" data-reveal><span class="eyebrow-en">Quote of the Day</span><span class="eyebrow-th">วาทะปราชญ์ประจำวัน</span></div>
-      <div id="quoteAr" class="quote-ar" lang="ar" dir="rtl" data-reveal data-delay="1"></div>
-      <div id="quoteTh" class="quote-th" data-reveal data-delay="2"></div>
+      <div class="quote-body">
+        <div id="quoteAr" class="quote-ar" lang="ar" dir="rtl" data-reveal data-delay="1"></div>
+        <div id="quoteTh" class="quote-th" data-reveal data-delay="2"></div>
+      </div>
       <div class="quote-author-line" data-reveal data-delay="3"><span id="quoteAuthor"></span></div>
       <div class="quote-controls" id="quoteDots" data-reveal data-delay="3"></div>
     </div>
@@ -1230,12 +1238,12 @@ var quotes = [
   {
     ar: "يُرِيدُ الْمَرْءُ أَنْ يُعْطَى مُنَاهُ &nbsp; وَيَأْبَى اللَّـهُ إِلَّا مَا أَرَادَا",
     th: "“มนุษย์ใฝ่ปรารถนาสิ่งที่ตนต้องการ แต่พระผู้ทรงอภิบาลย่อมทรงลิขิตตามพระประสงค์”",
-    author: "อิหม่ามอัชชาฟิอีย์ · เสียชีวิตปี ฮ.ศ. 204"
+    author: “อิหม่ามอัชชาฟิอีย์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 204”
   },
   {
-    ar: "يَا أَقْدَامَ الصَّبْرِ! احْمِلِي! بَقِيَ الْقَلِيلُ",
-    th: "“โอ้…ผู้อดทนเอ๋ย! จงแบกรับความอดทนต่อไปอีกเพียงนิดเดียวเถิด...อีกเพียงนิดเดียว อีกเพียงนิดเดียวเท่านั้น”",
-    author: "อิบนุลก็อยยิม · เสียชีวิตปี ฮ.ศ. 751"
+    ar: “يَا أَقْدَامَ الصَّبْرِ! احْمِلِي! بَقِيَ الْقَلِيلُ”,
+    th: “”โอ้…ผู้อดทนเอ๋ย! จงแบกรับความอดทนต่อไปอีกเพียงนิดเดียวเถิด...อีกเพียงนิดเดียว อีกเพียงนิดเดียวเท่านั้น””,
+    author: “อิบนุลก็อยยิม เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 751”
   },
   {
     ar: "فَمَا شِدَّةٌ يَوْمًا وَإِنْ جَلَّ خَطْبُهَا<br>بِنَازِلَةٍ إِلَّا سَيَتْبَعُهَا يُسْرُ<br>وَإِنْ عَسِرَتْ يَوْمًا عَلَى الْمَرْءِ حَاجَةٌ<br>وَضَاقَتْ عَلَيْهِ كَانَ مِفْتَاحُهَا الصَّبْرُ",
@@ -1245,48 +1253,48 @@ var quotes = [
   {
     ar: "إِنَّ رَبًّا كَفَاكَ بِالْأَمْسِ مَا كَانَ<br>سَيَكْفِيكَ فِي غَدٍ مَا يَكُونُ",
     th: "“พระผู้เป็นเจ้าผู้ทรงคุ้มครองเจ้าเมื่อวาน\nย่อมจะทรงคุ้มครองเจ้าในวันพรุ่งนี้เช่นกัน\nทุกสิ่งที่จักบังเกิดขึ้น พระองค์ย่อมเพียงพอแก่เจ้าเสมอ”",
-    author: "อิหม่ามอัชชาฟิอีย์ · เสียชีวิตปี ฮ.ศ. 204"
+    author: "อิหม่ามอัชชาฟิอีย์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 204"
   },
   {
     ar: "سَهِرَتْ أَعْيُنٌ وَنَامَتْ عُيُونُ<br>فِي أُمُورٍ تَكُونُ أَوْ لَا تَكُونُ<br>فَادْرَأِ الْهَمَّ مَا اسْتَطَعْتَ عَنِ النَّفْـ<br>ـسِ فَحَمْلَانُكَ الْهُمُومَ جُنُونُ",
     th: "“บางตาไม่หลับยังคิดพร่ำ\nบางตาเหนื่อยล้าเข้าสู่นิทรา\nเรื่องราวบางสิ่งอาจจริง อาจลวงตา\nอย่าแบกพะวงหนักหนาเกินใจตน\n\nจงผ่อนวางกังวลเท่าที่ไหว\nอย่าให้ทุกข์รุมใจจนสับสน\nแบกทุกข์เกินจำเป็นดุจคนบ้าเวียนวน\nปลดวางเสียเถิดหนา จิตาจะได้เป็นสุข”",
-    author: "อิหม่ามอัชชาฟิอีย์ · เสียชีวิตปี ฮ.ศ. 204"
+    author: "อิหม่ามอัชชาฟิอีย์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 204"
   },
   {
     ar: "مَا جَادَلْتُ جَاهِلًا إِلَّا غَلَبَنِي",
     th: "“ฉันไม่เคยโต้เถียงกับคนโง่เขลาคนใด เว้นแต่เขาจะเป็นฝ่ายเอาชนะฉันได้เสมอ”",
-    author: "อิหม่ามอัชชาฟิอีย์ · เสียชีวิตปี ฮ.ศ. 204"
+    author: "อิหม่ามอัชชาฟิอีย์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 204"
   },
   {
     ar: "نَحْنُ بِتَأْيِيدِ السُّنَنِ أَوْلَى مِنْ تَشْيِيدِ الْفِتَنِ",
     th: "“เราย่อมสมควรให้การสนับสนุนซุนนะฮ์ มากกว่าการเป็นผู้ก่อร่างสร้างฟิตนะฮ์”",
-    author: "นิซอม อัลมุลก์ · เสียชีวิตปี ฮ.ศ. 485"
+    author: "นิซอม อัลมุลก์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 485"
   },
   {
     ar: "سَهِرَتْ أَعْيُنٌ وَنَامَتْ عُيُونُ — فِي أُمُورٍ تَكُونُ أَوْ لَا تَكُونُ<br>فَادْرَأِ الْهَمَّ مَا اسْتَطَعْتَ عَنِ النَّفْسِ — فَحَمْلُكَ الْهُمُومَ جُنُونُ",
     th: "“บางตาไม่หลับยังคิดพร่ำ บางตาเหนื่อยล้าเข้าสู่นิทรา เรื่องราวบางสิ่งอาจจริง อาจลวงตา จงผ่อนวางกังวลเท่าที่ไหว อย่าให้ทุกข์รุมใจจนสับสน แบกทุกข์เกินจำเป็นดุจคนบ้าเวียนวน”",
-    author: "อิหม่ามอัชชาฟิอีย์ (เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820) เราะหิมะฮุลลอฮ์"
+    author: "อิหม่ามอัชชาฟิอีย์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 204"
   },
   {
     ar: "وَلَيْسَ مِنْ أَحَدٍ أَذَلَّ مِنْ مُغْتَابٍ، لِأَنَّهُ يُخْفِي شَخْصَهُ، وَيُطَامِنُ حِسَّهُ، وَيَغُضُّ مِنْ صَوْتِهِ، وَلَا يُرِيدُ بِمَا يَنَالُهُ مِنْ ذَلِكَ إِلَّا أَنْ يَرْفَعَ مِنْ قَدْرِ خَصْمِهِ",
     th: "“ไม่มีใครต่ำต้อยไปยิ่งกว่าผู้ที่นินทาผู้อื่น เพราะเขาต้องซ่อนตัวเอง ลดระดับประสาทสัมผัสของตน กดเสียงให้เบาลง ทั้งหมดนั้นเขาไม่ได้ต้องการสิ่งใดเลย นอกจากยกฐานะของคู่กรณีให้สูงขึ้น”",
-    author: "อัลญาฮิซ (เสียชีวิตปี ฮ.ศ. 255 / ค.ศ. 869) เราะหิมะฮุลลอฮ์ · รสาอิล อัลญาฮิซ หน้า 56"
+    author: "อัลญาฮิซ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 255"
   },
   {
     ar: "الْوَهْمُ نِصْفُ الدَّاءِ، وَالِاطْمِئْنَانُ نِصْفُ الدَّوَاءِ، وَالصَّبْرُ أَوَّلُ خُطُوَاتِ الشِّفَاءِ",
     th: "“ความกระวนกระวายคือครึ่งหนึ่งของการเจ็บป่วย ความสงบของจิตใจคือครึ่งหนึ่งของยารักษา และความอดทนคือก้าวแรกของการรักษาโรค”",
-    author: "อิบนุ ซีนา (เสียชีวิตปี ฮ.ศ. 428 / ค.ศ. 1037) เราะหิมะฮุลลอฮ์"
+    author: "อิบนุ ซีนา เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 428"
   },
   {
     ar: "إِنَّكَ إِنْ كُنْتَ تَقْصِدُ بِالْعِلْمِ الْمُنَافَسَةَ وَالْمُبَاهَاةَ وَالتَّقَدُّمَ عَلَى الْأَقْرَانِ وَاسْتِمَالَةَ وُجُوهِ النَّاسِ إِلَيْكَ وَجَمْعَ حُطَامِ الدُّنْيَا فَأَنْتَ سَاعٍ فِي هَدْمِ دِينِكَ وَإِهْلَاكِ نَفْسِكَ وَبَيْعِ آخِرَتِكَ بِدُنْيَاكَ",
     th: "“หากท่านตั้งเจตนารมณ์การเรียนเพื่อการแข่งขัน ความผยองตน การก้าวหน้าเหนือผู้อื่น การให้ผู้คนนับหน้าถือตา และการสะสมทรัพย์สมบัติ แน่แท้ท่านกำลังทำลายศาสนาของตนเอง และขายโลกหน้าด้วยโลกนี้”",
-    author: "อิหม่ามอัลเฆาะซาลีย์ (เสียชีวิตปี ฮ.ศ. 505 / ค.ศ. 1111) เราะหิมะฮุลลอฮ์"
+    author: "อิหม่ามอัลเฆาะซาลีย์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 505"
   }
 ];
 
 var dots = document.getElementById('quoteDots');
 var qi = 0;
-function shortAuthor(a){ return a.split(/\s+[·(]/)[0].trim(); }
+function shortAuthor(a){ return a.split(/\s+(?:[·(]|เราะ)/)[0].trim(); }
 function paintQuote(i){
   qi = (i + quotes.length) % quotes.length;
   document.getElementById('quoteAr').innerHTML = quotes[qi].ar;
