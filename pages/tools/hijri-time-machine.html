@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hijri Time Machine — Islamic Fiqh Publishing</title>
 
+<!-- Pre-render Theme Engine: Prevents white flash/FOUC on page load -->
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
+
 <meta name="description" content="สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลาม พร้อมแปลงปฏิทินฮิจเราะฮ์และคริสต์ศักราชแบบสองทาง">
 <meta name="keywords" content="ปฏิทินฮิจเราะฮ์, แปลงวันที่, ประวัติศาสตร์อิสลาม, Hijri calendar, Islamic history timeline">
 <meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
@@ -27,23 +38,24 @@
 
 <style>
 /* ─── Layout ─── */
-.htm-container { max-width: 900px; margin: 56px auto 80px; padding: 0 24px; }
+.htm-container { max-width: 900px; margin: 60px auto 80px; padding: 0 24px; }
 
-.htm-hero { text-align: center; margin-bottom: 52px; }
-.htm-hero-icon { font-size: 48px; margin-bottom: 16px; }
-.htm-hero h1 { font-family: 'Sarabun', sans-serif; font-size: 32px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; transition: var(--theme-transition); }
-.htm-hero p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; max-width: 600px; margin: 0 auto; transition: var(--theme-transition); }
+.htm-hero { text-align: center; margin-bottom: 50px; }
+.htm-hero h1 { font-family: 'Sarabun', sans-serif; font-size: 36px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; transition: var(--theme-transition); }
+.htm-hero p { font-size: 16px; color: var(--text-secondary); line-height: 2.0; max-width: 650px; margin: 0 auto; text-align: left; word-break: break-word; transition: var(--theme-transition); }
 
 /* ─── Tabs ─── */
-.htm-tabs { display: flex; gap: 4px; background: var(--bg-tertiary); border-radius: 10px; padding: 4px; margin-bottom: 36px; transition: var(--theme-transition); }
-.htm-tab { flex: 1; padding: 10px 16px; font-size: 14px; font-weight: 600; color: var(--text-secondary); background: transparent; border: none; border-radius: 7px; cursor: pointer; transition: var(--theme-transition); font-family: 'Sarabun', sans-serif; }
-.htm-tab.active { background: var(--bg-secondary); color: var(--text-primary); box-shadow: 0 1px 4px var(--shadow-color); }
+.htm-tabs { display: flex; border-bottom: 2px solid var(--border-secondary); margin-bottom: 40px; gap: 24px; transition: var(--theme-transition); }
+.htm-tab { padding: 12px 4px; font-size: 15px; font-weight: 500; color: var(--text-secondary); background: transparent; border: none; cursor: pointer; transition: var(--theme-transition); font-family: 'Sarabun', sans-serif; position: relative; }
+.htm-tab::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background: var(--accent-color); transform: scaleX(0); transition: transform 0.3s ease; }
+.htm-tab.active { color: var(--text-primary); font-weight: 700; }
+.htm-tab.active::after { transform: scaleX(1); }
 
 /* ─── Converter ─── */
-.converter-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: end; }
-.conv-side { background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: 12px; padding: 28px; transition: var(--theme-transition); }
-.conv-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent-color); margin-bottom: 16px; display: block; transition: var(--theme-transition); }
-.conv-fields { display: flex; gap: 8px; }
+.converter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.conv-side { background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: 8px; padding: 32px; transition: var(--theme-transition); box-shadow: 0 4px 20px var(--shadow-color); }
+.conv-label { font-family: 'Inter', 'Sarabun', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-color); margin-bottom: 24px; display: block; border-bottom: 1px solid var(--border-primary); padding-bottom: 10px; transition: var(--theme-transition); }
+.conv-fields { display: flex; gap: 12px; }
 .conv-field { display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .conv-field label { font-size: 12px; color: var(--text-secondary); transition: var(--theme-transition); }
 .conv-field input, .conv-field select {
@@ -52,13 +64,11 @@
   transition: var(--theme-transition), border-color 0.2s; box-sizing: border-box;
 }
 .conv-field input:focus, .conv-field select:focus { outline: none; border-color: var(--accent-color); background: var(--bg-secondary); }
-.conv-result { margin-top: 16px; padding: 12px 16px; background: var(--bg-primary); border: 1px solid var(--border-secondary); border-radius: 8px; font-size: 15px; color: var(--text-primary); min-height: 44px; display: flex; align-items: center; transition: var(--theme-transition); }
-.conv-result-label { font-size: 11px; color: var(--text-tertiary); margin-top: 12px; margin-bottom: 4px; transition: var(--theme-transition); }
-
-.conv-arrow { display: flex; align-items: center; justify-content: center; color: var(--accent-color); font-size: 24px; padding-bottom: 8px; transition: var(--theme-transition); }
+.conv-result { margin-top: 20px; padding: 16px; background: var(--bg-primary); border: 1px solid var(--border-secondary); border-radius: 6px; font-size: 16px; font-weight: 600; color: var(--text-primary); min-height: 52px; display: flex; align-items: center; transition: var(--theme-transition); }
+.conv-result-label { font-size: 11px; color: var(--text-tertiary); margin-top: 16px; margin-bottom: 4px; transition: var(--theme-transition); }
 
 .btn-convert { 
-  width: 100%; margin-top: 16px; padding: 12px; 
+  width: 100%; margin-top: 20px; padding: 12px; 
   color: var(--inverted-text); background: var(--inverted-bg); border: 1px solid var(--border-primary); 
   border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; 
   font-family: 'Sarabun', sans-serif; transition: var(--theme-transition); 
@@ -66,42 +76,51 @@
 .btn-convert:hover { background: var(--accent-color); color: #fff; }
 
 /* ─── Year Explorer ─── */
-.explorer-panel { background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: 12px; padding: 28px; transition: var(--theme-transition); }
-.explorer-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
-.explorer-header h2 { font-size: 18px; font-weight: 700; margin: 0; flex: 1; color: var(--text-primary); transition: var(--theme-transition); }
+.explorer-panel { background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: 8px; padding: 32px; transition: var(--theme-transition); box-shadow: 0 4px 20px var(--shadow-color); }
+.explorer-header { display: flex; align-items: center; gap: 20px; margin-bottom: 28px; flex-wrap: wrap; border-bottom: 1px solid var(--border-primary); padding-bottom: 20px; }
+.explorer-header h2 { font-size: 20px; font-weight: 700; margin: 0; flex: 1; color: var(--text-primary); transition: var(--theme-transition); }
 .year-input-wrap { display: flex; align-items: center; gap: 10px; }
-.year-input-wrap label { font-size: 13px; color: var(--text-secondary); white-space: nowrap; transition: var(--theme-transition); }
-.year-input { width: 100px; padding: 9px 12px; border: 1px solid var(--border-secondary); border-radius: 6px; font-size: 16px; font-weight: 700; text-align: center; font-family: 'Sarabun', sans-serif; background: var(--bg-tertiary); color: var(--text-primary); transition: var(--theme-transition); }
+.year-input-wrap label { font-size: 14px; color: var(--text-secondary); white-space: nowrap; transition: var(--theme-transition); }
+.year-input { width: 110px; padding: 9px 12px; border: 1px solid var(--border-secondary); border-radius: 6px; font-size: 16px; font-weight: 700; text-align: center; font-family: 'Sarabun', sans-serif; background: var(--bg-tertiary); color: var(--text-primary); transition: var(--theme-transition); }
 .year-input:focus { outline: none; border-color: var(--accent-color); }
-.year-suffix { font-size: 13px; color: var(--text-tertiary); transition: var(--theme-transition); }
-.btn-explore { padding: 9px 20px; background: var(--accent-color); color: #fff; border: none; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Sarabun', sans-serif; transition: var(--theme-transition); white-space: nowrap; }
+.year-suffix { font-size: 14px; color: var(--text-tertiary); transition: var(--theme-transition); }
+.btn-explore { padding: 9px 24px; background: var(--accent-color); color: #fff; border: none; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Sarabun', sans-serif; transition: var(--theme-transition); white-space: nowrap; }
 .btn-explore:hover { opacity: 0.9; }
 
-.year-range-display { font-size: 13px; color: var(--text-secondary); background: var(--bg-primary); padding: 6px 12px; border-radius: 6px; margin-bottom: 24px; transition: var(--theme-transition); }
+.year-range-display { font-size: 13px; color: var(--text-secondary); background: var(--bg-primary); padding: 8px 16px; border-radius: 6px; margin-bottom: 28px; transition: var(--theme-transition); }
 .year-range-display span { color: var(--text-primary); font-weight: 600; transition: var(--theme-transition); }
 
 /* ─── Timeline ─── */
 .timeline { position: relative; padding-left: 0; }
-.timeline-empty { text-align: center; padding: 48px 24px; color: var(--text-tertiary); font-size: 15px; transition: var(--theme-transition); }
-.timeline-empty .empty-icon { font-size: 36px; margin-bottom: 12px; }
+.timeline-empty { text-align: center; padding: 60px 24px; color: var(--text-tertiary); font-size: 15px; transition: var(--theme-transition); }
 
-.event-card { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border-primary); transition: var(--theme-transition); }
-.event-card:last-child { border-bottom: none; }
-.event-year-badge { flex-shrink: 0; text-align: center; }
-.event-year-num { font-size: 18px; font-weight: 700; color: var(--text-primary); line-height: 1; transition: var(--theme-transition); }
-.event-year-unit { font-size: 10px; color: var(--text-secondary); letter-spacing: 0.5px; margin-top: 2px; transition: var(--theme-transition); }
-.event-year-ce { color: var(--text-tertiary); transition: var(--theme-transition); }
+.event-card { 
+  background: var(--bg-primary); border: 1px solid var(--border-primary); border-radius: 8px; 
+  padding: 24px; margin-bottom: 20px; transition: var(--theme-transition); 
+  border-left: 3px solid var(--border-secondary);
+}
+.event-card:hover { border-left-color: var(--accent-color); border-color: var(--accent-color); box-shadow: 0 8px 24px var(--shadow-color); }
+.event-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-primary); padding-bottom: 12px; margin-bottom: 16px; }
+.event-year-badge-inline { font-family: 'Inter', 'Sarabun', sans-serif; text-align: right; }
+.event-year-num { font-size: 18px; font-weight: 700; color: var(--text-primary); transition: var(--theme-transition); }
+.event-year-ce { font-size: 13px; color: var(--text-tertiary); margin-left: 8px; transition: var(--theme-transition); }
 .event-body { flex: 1; min-width: 0; }
-.event-cat { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px; }
+.event-cat { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; }
 .cat-history { background: rgba(59,130,246,0.1); color: #2563eb; }
 .cat-fiqh { background: rgba(16,185,129,0.1); color: #059669; }
 .cat-kalam { background: rgba(196,154,69,0.1); color: #92700a; }
 .cat-hadith { background: rgba(139,92,246,0.1); color: #7c3aed; }
-.event-title { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; transition: var(--theme-transition); }
-.event-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.6; transition: var(--theme-transition); }
+.event-title { font-family: 'Sarabun', sans-serif; font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; transition: var(--theme-transition); }
+.event-desc { font-size: 15px; color: var(--text-secondary); line-height: 2.0; text-align: left; word-break: break-word; transition: var(--theme-transition); }
 
 /* ─── Century Badge ─── */
-.century-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--inverted-bg); color: var(--accent-color); padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; margin-bottom: 24px; transition: var(--theme-transition); }
+.century-badge { display: inline-flex; align-items: center; background: var(--inverted-bg); color: var(--accent-color); padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; margin-bottom: 24px; transition: var(--theme-transition); }
+
+/* ─── Related Articles ─── */
+.event-relation { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--border-secondary); font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.relation-label { font-weight: 600; color: var(--text-tertiary); margin-right: 6px; }
+.relation-link { color: var(--accent-color); font-weight: 700; text-decoration: none; border-bottom: 1px solid transparent; transition: var(--theme-transition); }
+.relation-link:hover { border-bottom-color: var(--accent-color); }
 
 /* ─── Hidden panel ─── */
 .htm-panel { display: none; }
@@ -109,11 +128,10 @@
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
-  .converter-grid { grid-template-columns: 1fr; }
-  .conv-arrow { transform: rotate(90deg); padding: 0; }
+  .converter-grid { grid-template-columns: 1fr; gap: 20px; }
   .conv-fields { flex-direction: column; }
-  .explorer-header { flex-direction: column; align-items: flex-start; }
-  .htm-hero h1 { font-size: 24px; }
+  .explorer-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .htm-hero h1 { font-size: 28px; }
 }
 </style>
 </head>
@@ -125,14 +143,13 @@
 <div class="htm-container">
 
   <div class="htm-hero">
-    <div class="htm-hero-icon">⏳</div>
     <h1>Hijri Time Machine</h1>
     <p>มากกว่าการแปลงปฏิทิน — สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามที่เกิดขึ้นในปี ฮ.ศ. นั้นๆ เพื่อเชื่อมโยงอดีตสู่ปัจจุบัน</p>
   </div>
 
   <div class="htm-tabs" role="tablist">
-    <button class="htm-tab active" onclick="switchTab('converter')" role="tab">📅 แปลงปฏิทิน</button>
-    <button class="htm-tab" onclick="switchTab('explorer')" role="tab">🔭 สำรวจไทม์ไลน์</button>
+    <button class="htm-tab active" onclick="switchTab('converter')" role="tab">แปลงปฏิทิน</button>
+    <button class="htm-tab" onclick="switchTab('explorer')" role="tab">สำรวจไทม์ไลน์</button>
   </div>
 
   <!-- Converter Panel -->
@@ -168,14 +185,12 @@
             <input type="number" id="h-year" min="1" max="1500" placeholder="เช่น 771" value="1">
           </div>
         </div>
-        <button class="btn-convert" onclick="convertHijriToGregorian()">แปลงเป็นคริสต์ศักราช →</button>
+        <button class="btn-convert" onclick="convertHijriToGregorian()">แปลงเป็นคริสต์ศักราช</button>
         <div>
           <div class="conv-result-label">ผลลัพธ์</div>
           <div class="conv-result" id="result-gregorian">กรอกวันที่ฮิจเราะฮ์แล้วกดแปลง</div>
         </div>
       </div>
-
-      <div class="conv-arrow">⇄</div>
 
       <div class="conv-side">
         <span class="conv-label">ปฏิทินคริสต์ศักราช (CE)</span>
@@ -206,7 +221,7 @@
             <input type="number" id="g-year" min="622" max="2100" placeholder="เช่น 2024" value="622">
           </div>
         </div>
-        <button class="btn-convert" onclick="convertGregorianToHijri()">แปลงเป็นฮิจเราะฮ์ →</button>
+        <button class="btn-convert" onclick="convertGregorianToHijri()">แปลงเป็นฮิจเราะฮ์</button>
         <div>
           <div class="conv-result-label">ผลลัพธ์</div>
           <div class="conv-result" id="result-hijri">กรอกวันที่คริสต์ศักราชแล้วกดแปลง</div>
@@ -230,7 +245,6 @@
       </div>
       <div id="explorer-output">
         <div class="timeline-empty">
-          <div class="empty-icon">🔭</div>
           <div>กรอกปี ฮ.ศ. ที่ต้องการสำรวจแล้วกดปุ่ม "สำรวจ"</div>
         </div>
       </div>
@@ -331,55 +345,55 @@ const EVENTS = [
   { year:5,   cat:'ประวัติศาสตร์', title:'ยุทธการค็อนดัก (อัลอะหฺซาบ)', desc:'มุสลิมขุดคูล้อมมะดีนะฮ์ป้องกันกองทัพพันธมิตร 10,000 คน กลยุทธ์ที่เปลี่ยนประวัติศาสตร์' },
   { year:6,   cat:'ฟิกฮ์', title:'สนธิสัญญาฮุดัยบียะฮ์', desc:'บทเรียนนิติศาสตร์ระหว่างประเทศอิสลาม ว่าด้วยการทำสัญญากับผู้ที่ไม่ใช่มุสลิม' },
   { year:8,   cat:'ประวัติศาสตร์', title:'การพิชิตมักกะฮ์', desc:'กองทัพมุสลิม 10,000 คนเข้าสู่มักกะฮ์แทบไม่มีการสู้รบ ท่านนบีนิรโทษกรรมชาวกุเรช' },
-  { year:10,  cat:'ฟิกฮ์', title:'คุฏบะฮ์อำลา (ฮัจญ์วะดาอ์)', desc:'ท่านนบี ﷺ ประกาศหลักสิทธิมนุษยชนอิสลามครั้งสำคัญ "ชีวิต ทรัพย์สิน และเกียรติของท่านคือสิ่งศักดิ์สิทธิ์"' },
-  { year:11,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของท่านนบีมุหัมมัด ﷺ', desc:'ท่านนบี ﷺ สิ้นชีวิต ณ มะดีนะฮ์ อบูบักรฺ อัศศิดดีก รับตำแหน่งเคาะลีฟะฮ์คนแรก' },
-  { year:13,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอบูบักร อัศศิดดีก', desc:'อบูบักรฺ ครองตำแหน่ง 2 ปีครึ่ง รวบรวมอัลกุรอาน อุมัร อิบนุ อัลค็อฏฏอบ สืบต่อ' },
-  { year:15,  cat:'ประวัติศาสตร์', title:'การพิชิตเยรูซาเลม', desc:'อุมัร อิบนุ อัลค็อฏฏอบ เสด็จรับกุญแจเยรูซาเลมด้วยตนเอง ประกันเสรีภาพทางศาสนา' },
+  { year:10,  cat:'ฟิกฮ์', title:'คุฏบะฮ์อำลา (ฮัจญ์วะดาอ์)', desc:'ท่านนบี ﷺ ประกาศหลักสิทธิมนุษยชนอิสลามครั้งสำคัญ “ชีวิต ทรัพย์สิน และเกียรติของท่านคือสิ่งศักดิ์สิทธิ์”' },
+  { year:11,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของท่านนบีมุหัมมัด ﷺ', desc:'ท่านนบี ﷺ สิ้นชีวิต ณ มะดีนะฮ์ อบูบักร อัศศิดดีก เราะฎิยัลลอฮุอันฮุ รับตำแหน่งเคาะลีฟะฮ์คนแรก' },
+  { year:13,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอบูบักร อัศศิดดีก', desc:'อบูบักร อัศศิดดีก เราะฎิยัลลอฮุอันฮุ ครองตำแหน่ง 2 ปีครึ่ง รวบรวมอัลกุรอาน อุมัร อิบนุ อัลค็อฏฏอบ เราะฎิยัลลอฮุอันฮุ สืบต่อ' },
+  { year:15,  cat:'ประวัติศาสตร์', title:'การพิชิตเยรูซาเลม', desc:'อุมัร อิบนุ อัลค็อฏฏอบ เราะฎิยัลลอฮุอันฮุ เสด็จรับกุญแจเยรูซาเลมด้วยตนเอง ประกันเสรีภาพทางศาสนา' },
   { year:16,  cat:'ประวัติศาสตร์', title:'การพิชิตเปอร์เซีย (กอดิซียะฮ์)', desc:'ยุทธการกอดิซียะฮ์ สิ้นสุดจักรวรรดิซาซานิด เปอร์เซียเข้าสู่ยุคอิสลาม' },
-  { year:23,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอุมัร อิบนุ อัลค็อฏฏอบ', desc:'อุมัร ถูกลอบสังหาร สร้างระบบรัฐบาลอิสลามที่แข็งแกร่ง อุษมาน รับตำแหน่งต่อ' },
-  { year:25,  cat:'ฟิกฮ์', title:'มุศหัฟ อุษมานี — อัลกุรอานฉบับมาตรฐาน', desc:'อุษมาน อิบนุ อัฟฟาน รวบรวมและมาตรฐานอัลกุรอานให้เป็นฉบับเดียวทั่วโลกอิสลาม' },
-  { year:35,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอุษมาน อิบนุ อัฟฟาน', desc:'อุษมาน ถูกลอบสังหาร นำไปสู่ยุควิกฤตฟิตนะฮ์ครั้งแรก อะลี อิบนุ อบีฏอลิบ รับตำแหน่งต่อ' },
-  { year:40,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอะลี อิบนุ อบีฏอลิบ', desc:'อะลี ถูกลอบสังหาร สิ้นสุดยุคเคาะลีฟะฮ์ผู้ทรงธรรม (รอชิดีน) 30 ปีหลังท่านนบีสิ้นชีวิต' },
-  { year:41,  cat:'ประวัติศาสตร์', title:'เริ่มยุคราชวงศ์อุมัยยะฮ์', desc:'อัลหะสัน อิบนุ อะลี สละราชบัลลังก์ มุอาวียะฮ์ประกาศตนเป็นเคาะลีฟะฮ์ ศูนย์กลางย้ายสู่ดามัสกัส' },
-  { year:61,  cat:'ประวัติศาสตร์', title:'โศกนาฏกรรมกัรบะลาอ์', desc:'อัลหุสัยน์ อิบนุ อะลี และผู้ติดตาม 72 คน ถูกสังหาร ณ กัรบะลาอ์ เหตุการณ์ที่ตอกลึกความแตกต่างซุนนี-ชีอะฮ์' },
-  { year:86,  cat:'ฟิกฮ์', title:'กำเนิดอิหม่ามอบูหะนีฟะฮ์', desc:'นุอ์มาน อิบนุ ษาบิต (อบูหะนีฟะฮ์) เกิด ณ กูฟะฮ์ บิดาแห่งมัซฮับหะนะฟี มัซฮับที่มีผู้ตามมากที่สุดในโลก' },
+  { year:23,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอุมัร อิบนุ อัลค็อฏฏอบ', desc:'อุมัร อิบนุ อัลค็อฏฏอบ เราะฎิยัลลอฮุอันฮุ ถูกลอบสังหาร สร้างระบบรัฐบาลอิสลามที่แข็งแกร่ง อุษมาน อิบนุ อัฟฟาน เราะฎิยัลลอฮุอันฮุ รับตำแหน่งต่อ' },
+  { year:25,  cat:'ฟิกฮ์', title:'มุศหัฟ อุษมานี — อัลกุรอานฉบับมาตรฐาน', desc:'อุษมาน อิบนุ อัฟฟาน เราะฎิยัลลอฮุอันฮุ รวบรวมและมาตรฐานอัลกุรอานให้เป็นฉบับเดียวทั่วโลกอิสลาม' },
+  { year:35,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอุษมาน อิบนุ อัฟฟาน', desc:'อุษมาน อิบนุ อัฟฟาน เราะฎิยัลลอฮุอันฮุ ถูกลอบสังหาร นำไปสู่ยุควิกฤตฟิตนะฮ์ครั้งแรก อะลี อิบนุ อบีฏอลิบ เราะฎิยัลลอฮุอันฮุ รับตำแหน่งต่อ' },
+  { year:40,  cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอะลี อิบนุ อบีฏอลิบ', desc:'อะลี อิบนุ อบีฏอลิบ เราะฎิยัลลอฮุอันฮุ ถูกลอบสังหาร สิ้นสุดยุคเคาะลีฟะฮ์ผู้ทรงธรรม (รอชิดีน) 30 ปีหลังท่านนบีสิ้นชีวิต' },
+  { year:41,  cat:'ประวัติศาสตร์', title:'เริ่มยุคราชวงศ์อุมัยยะฮ์', desc:'อัลหะสัน อิบนุ อะลี เราะฎิยัลลอฮุอันฮุ สละราชบัลลังก์ มุอาวียะฮ์ประกาศตนเป็นเคาะลีฟะฮ์ ศูนย์กลางย้ายสู่ดามัสกัส' },
+  { year:61,  cat:'ประวัติศาสตร์', title:'โศกนาฏกรรมกัรบะลาอ์', desc:'อัลหุสัยน์ อิบนุ อะลี เราะฎิยัลลอฮุอันฮุ และผู้ติดตาม 72 คน ถูกสังหาร ณ กัรบะลาอ์ เหตุการณ์ที่ตอกลึกความแตกต่างซุนนี-ชีอะฮ์' },
+  { year:86,  cat:'ฟิกฮ์', title:'กำเนิดอิหม่ามอบูหะนีฟะฮ์', desc:'นุอ์มาน อิบนุ ษาบิต อบูหะนีฟะฮ์ เกิด ณ กูฟะฮ์ บิดาแห่งมัซฮับหะนะฟี มัซฮับที่มีผู้ตามมากที่สุดในโลก' },
   { year:93,  cat:'ประวัติศาสตร์', title:'การพิชิตอันดาลุส (สเปน)', desc:'ฏอริก อิบนุ ซิยาด นำกองทัพข้ามช่องแคบยิบรอลตาร์ เริ่มยุคทองอิสลามในคาบสมุทรไอบีเรีย 800 ปี' },
-  { year:93,  cat:'ฟิกฮ์', title:'กำเนิดอิหม่ามมาลิก อิบนุ อะนัส', desc:'อิหม่ามมาลิก เกิด ณ มะดีนะฮ์ ผู้ก่อตั้งมัซฮับมาลิกี เขียนตำรา อัลมุวัฏเฏาะ' },
+  { year:93,  cat:'ฟิกฮ์', title:'กำเนิดอิหม่ามมาลิก อิบนุ อะนัส', desc:'อิหม่ามมาลิก เกิด ณ มะดีนะฮ์ ผู้ก่อตั้งมัซฮับมาลิกี เขียนตำรา <strong>อัลมุวัฏเฏาะ</strong>' },
   { year:132, cat:'ประวัติศาสตร์', title:'การปฏิวัติอับบาซียะฮ์', desc:'ราชวงศ์อับบาซียะฮ์โค่นล้มอุมัยยะฮ์ ศูนย์กลางย้ายสู่แบกแดด เริ่มยุคทองของวิทยาการอิสลาม' },
-  { year:145, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอบูหะนีฟะฮ์', desc:'อบูหะนีฟะฮ์ เสียชีวิต ณ แบกแดด ทิ้งมรดกระบบนิติศาสตร์อิสลามที่ใช้สืบมาถึงปัจจุบัน' },
+  { year:150, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอบูหะนีฟะฮ์', desc:'อิหม่ามอบูหะนีฟะฮ์ (เสียชีวิตปี ฮ.ศ. 150 / ค.ศ. 767) เราะหิมะฮุลลอฮ์ เสียชีวิต ณ แบกแดด ทิ้งมรดกระบบนิติศาสตร์อิสลามที่ใช้สืบมาถึงปัจจุบัน' },
   { year:150, cat:'ฟิกฮ์', title:'กำเนิดอิหม่ามอัชชาฟิอีย์', desc:'มุหัมมัด อิบนุ อิดรีส อัชชาฟิอีย์ เกิด ณ กัซซะฮ์ ผู้วางระบบอูศูลุลฟิกฮ์คนแรก' },
-  { year:150, cat:'กะลาม', title:'ยุคแห่งการแปลตำราปรัชญากรีก', desc:'ขบวนการแปล (Bayt al-Hikmah) ตำราของอริสโตเติล เพลโต และแพทยศาสตร์กรีกสู่ภาษาอาหรับ เป็นรากฐานอิลมุลกะลาม' },
-  { year:179, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามมาลิก', desc:'อิหม่ามมาลิก เสียชีวิต ณ มะดีนะฮ์ มัซฮับมาลิกีแผ่ขยายทั่วแอฟริกาเหนือและแอฟริกาตะวันตก' },
+  { year:150, cat:'กะลาม', title:'ยุคแห่งการแปลตำราปรัชญากรีก', desc:'ขบวนการแปล (Bayt al-Hikmah) ตำราของอริสโตเติล เพลโต และแพทยศาสตร์กรีกสู่ภาษาอาหรับ เป็นรากฐานอิลมุลกะลาม', relatedArticle: { title: 'ปรมาณูนิยมในเทววิทยาจากสำนักมาตูรีดียะฮ์และอัชอะรียะฮ์', url: '../../articles/kalam/atomism-in-islamic-theology.html' } },
+  { year:179, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามมาลิก', desc:'อิหม่ามมาลิก (เสียชีวิตปี ฮ.ศ. 179 / ค.ศ. 795) เราะหิมะฮุลลอฮ์ เสียชีวิต ณ มะดีนะฮ์ มัซฮับมาลิกีแผ่ขยายทั่วแอฟริกาเหนือและแอฟริกาตะวันตก' },
   { year:182, cat:'ประวัติศาสตร์', title:'ยุคทองของฮารูน อัรรอชีด', desc:'อาณาจักรอิสลามรุ่งเรืองถึงขีดสุด บัยตุลหิกมะฮ์ (House of Wisdom) เป็นศูนย์กลางวิทยาการโลก' },
-  { year:195, cat:'ฟิกฮ์', title:'อิหม่ามอัชชาฟิอีย์เขียน อัรริซาละฮ์', desc:'ตำราอูศูลุลฟิกฮ์เล่มแรกของโลก วางระเบียบวิธีนิติศาสตร์อิสลามอย่างเป็นระบบ' },
-  { year:204, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอัชชาฟิอีย์', desc:'อิหม่ามอัชชาฟิอีย์ เสียชีวิต ณ ไคโร ทิ้ง อัลอุมม์ และ อัรริซาละฮ์ มรดกแห่งมัซฮับชาฟิอี' },
-  { year:218, cat:'กะลาม', title:'ยุควิกฤตมิห์นะฮ์เริ่มต้น', desc:'เคาะลีฟะฮ์อัลมะอ์มูน บังคับให้ยอมรับแนวคิดมุอ์ตะซิละฮ์ว่าอัลกุรอานถูกสร้าง อิหม่ามอะหมัด ต่อต้านอย่างเด็ดเดี่ยว' },
-  { year:232, cat:'กะลาม', title:'สิ้นสุดยุควิกฤตมิห์นะฮ์', desc:'เคาะลีฟะฮ์อัลมุตะวักกิล ยกเลิกนโยบายมิห์นะฮ์ ฟื้นคืนแนวทางซุนนีย์ อิหม่ามอะหมัด ได้รับชัยชนะทางวิชาการ' },
-  { year:241, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอะหมัด อิบนุ หัมบัล', desc:'อิหม่ามอะหมัด เสียชีวิต ทิ้งมัซฮับหัมบะลี และ มุสนัด อิหม่ามอะหมัด ซึ่งรวบรวมหะดีษ 40,000 บท' },
-  { year:256, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามอัลบุคอรีย์', desc:'มุหัมมัด อิบนุ อิสมาอีล อัลบุคอรีย์ เสียชีวิต ผู้รวบรวม เศาะหีหฺ อัลบุคอรีย์ ตำราหะดีษที่น่าเชื่อถือสูงสุด' },
-  { year:261, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามมุสลิม', desc:'มุสลิม อิบนุ อัลหัจญาจ เสียชีวิต ผู้รวบรวม เศาะหีหฺ มุสลิม คู่แฝดของเศาะหีหฺ อัลบุคอรีย์' },
-  { year:270, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามอบูดาวูด', desc:'อบูดาวูด สุลัยมาน อิบนุ อัลอัชอัษ เสียชีวิต ผู้รวบรวม สุนัน อบูดาวูด' },
-  { year:279, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามอัตติรมิซีย์', desc:'อิหม่ามอัตติรมิซีย์ เสียชีวิต ผู้รวบรวม สุนัน อัตติรมิซีย์ พร้อมการจัดระดับหะดีษ' },
-  { year:310, cat:'กะลาม', title:'อิหม่ามอัลอัชอะรีย์ประกาศแนวทางซุนนีย์', desc:'อิหม่ามอัลอัชอะรีย์ประกาศแยกตัวจากมุอ์ตะซิละฮ์ วางรากฐานสำนักคิดอัชอะรีย์ที่ยืนหยัดถึงปัจจุบัน' },
-  { year:324, cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอัฏฏอบะรีย์', desc:'มุหัมมัด อิบนุ ญะรีร อัฏฏอบะรีย์ เสียชีวิต ทิ้ง ตารีค อัฏฏอบะรีย์ และ ตัฟซีร อัฏฏอบะรีย์ มรดกทางปัญญาชั้นสูง' },
-  { year:333, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัลอัชอะรีย์และอัลมาตูรีดีย์', desc:'ผู้ก่อตั้งสองสำนักคิดเทววิทยาซุนนีย์หลัก อัชอะรีย์และมาตูรีดียะฮ์ สิ้นชีวิตในปีเดียวกัน' },
-  { year:450, cat:'กะลาม', title:'กำเนิดอิหม่ามอัลเฆาะซาลีย์', desc:'อบูหามิด มุหัมมัด อัลเฆาะซาลีย์ เกิด ณ ฏูส เปอร์เซีย นักปราชญ์ผู้ถูกเรียกว่า "หุจญะตุลอิสลาม"' },
-  { year:478, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัลญุวัยนีย์', desc:'อิหม่ามอัลหะรอมัยน์ อัลญุวัยนีย์ เสียชีวิต อาจารย์ของอิหม่ามอัลเฆาะซาลีย์ นักเทววิทยาอัชอะรีย์ผู้ยิ่งใหญ่' },
-  { year:505, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัลเฆาะซาลีย์', desc:'อิหม่ามอัลเฆาะซาลีย์ เสียชีวิต ทิ้ง อิห์ยาอ์ อุลูมิดดีน, ตะฮาฟุต อัลฟะลาสิฟะฮ์ และ อัลมุสตัศฟา' },
-  { year:595, cat:'กะลาม', title:'การสิ้นชีวิตของอิบนุ รุชด์ (Averroes)', desc:'อิบนุ รุชด์ นักปรัชญาอิสลามแห่งอันดาลุส เสียชีวิต งานของเขาเป็นสื่อกลางปรัชญากรีกสู่ยุโรป' },
-  { year:606, cat:'กะลาม', title:'การสิ้นชีวิตของฟัครุดดีน อัรรอซีย์', desc:'อิหม่ามฟัครุดดีน อัรรอซีย์ เสียชีวิต ทิ้ง มะฟาตีหุลเฆยบ์ ตัฟซีรขนาด 32 เล่ม และงานเทววิทยาชั้นสูงมากมาย' },
+  { year:195, cat:'ฟิกฮ์', title:'อิหม่ามอัชชาฟิอีย์เขียน อัรริซาละฮ์', desc:'เขียนตำรา <strong>อัรริซาละฮ์</strong> ตำราอูศูลุลฟิกฮ์เล่มแรกของโลก วางระเบียบวิธีนิติศาสตร์อิสลามอย่างเป็นระบบ' },
+  { year:204, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอัชชาฟิอีย์', desc:'อิหม่ามอัชชาฟิอีย์ (เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820) เราะหิมะฮุลลอฮ์ เสียชีวิต ณ ไคโร ทิ้ง <strong>อัลอุมม์</strong> และ <strong>อัรริซาละฮ์</strong> มรดกแห่งมัซฮับชาฟิอี' },
+  { year:218, cat:'กะลาม', title:'ยุควิกฤตมิห์นะฮ์เริ่มต้น', desc:'เคาะลีฟะฮ์อัลมะอ์มูน บังคับให้ยอมรับแนวคิดมุอ์ตะซิละฮ์ว่าอัลกุรอานถูกสร้าง อิหม่ามอะหมัด อิบนุ หัมบัล เราะหิมะฮุลลอฮ์ ต่อต้านอย่างเด็ดเดี่ยว', relatedArticle: { title: 'ปราชญ์นักเทววิทยารุ่นบุกเบิกกับการพิทักษ์แนวคิดอะฮ์ลุซซุนนะฮ์ในยุควิกฤตมิห์นะฮ์', url: '../../articles/kalam/pioneers-of-sunni-kalam.html' } },
+  { year:232, cat:'กะลาม', title:'สิ้นสุดยุควิกฤตมิห์นะฮ์', desc:'เคาะลีฟะฮ์อัลมุตะวักกิล ยกเลิกนโยบายมิห์นะฮ์ ฟื้นคืนแนวทางซุนนีย์ อิหม่ามอะหมัด อิบนุ หัมบัล เราะหิมะฮุลลอฮ์ ได้รับชัยชนะทางวิชาการ', relatedArticle: { title: 'ปราชญ์นักเทววิทยารุ่นบุกเบิกกับการพิทักษ์แนวคิดอะฮ์ลุซซุนนะฮ์ในยุควิกฤตมิห์นะฮ์', url: '../../articles/kalam/pioneers-of-sunni-kalam.html' } },
+  { year:241, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอะหมัด อิบนุ หัมบัล', desc:'อิหม่ามอะหมัด อิบนุ หัมบัล (เสียชีวิตปี ฮ.ศ. 241 / ค.ศ. 855) เราะหิมะฮุลลอฮ์ เสียชีวิต ทิ้งมัซฮับหัมบะลี และ <strong>มุสนัด อิหม่ามอะหมัด</strong> ซึ่งรวบรวมหะดีษ 40,000 บท' },
+  { year:256, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามอัลบุคอรีย์', desc:'มุหัมมัด อิบนุ อิสมาอีล อัลบุคอรีย์ (เสียชีวิตปี ฮ.ศ. 256 / ค.ศ. 870) เราะหิมะฮุลลอฮ์ เสียชีวิต ผู้รวบรวม <strong>เศาะหีหฺ อัลบุคอรีย์</strong> ตำราหะดีษที่น่าเชื่อถือสูงสุด' },
+  { year:261, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามมุสลิม', desc:'มุสลิม อิบนุ อัลหัจญาจ (เสียชีวิตปี ฮ.ศ. 261 / ค.ศ. 875) เราะหิมะฮุลลอฮ์ เสียชีวิต ผู้รวบรวม <strong>เศาะหีหฺ มุสลิม</strong> คู่แฝดของ <strong>เศาะหีหฺ อัลบุคอรีย์</strong>' },
+  { year:275, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามอบูดาวูด', desc:'อบูดาวูด สุลัยมาน อิบนุ อัลอัชอัษ (เสียชีวิตปี ฮ.ศ. 275 / ค.ศ. 889) เราะหิมะฮุลลอฮ์ เสียชีวิต ผู้รวบรวม <strong>สุนัน อบูดาวูด</strong>' },
+  { year:279, cat:'หะดีษ', title:'การสิ้นชีวิตของอิหม่ามอัตติรมิซีย์', desc:'อิหม่ามอัตติรมิซีย์ (เสียชีวิตปี ฮ.ศ. 279 / ค.ศ. 892) เราะหิมะฮุลลอฮ์ เสียชีวิต ผู้รวบรวม <strong>สุนัน อัตติรมิซีย์</strong> พร้อมการจัดระดับหะดีษ' },
+  { year:310, cat:'กะลาม', title:'อิหม่ามอัลอัชอะรีย์ประกาศแนวทางซุนนีย์', desc:'อิหม่ามอัลอัชอะรีย์ (เสียชีวิตปี ฮ.ศ. 324 / ค.ศ. 936) เราะหิมะฮุลลอฮ์ ประกาศแยกตัวจากมุอ์ตะซิละฮ์ วางรากฐานสำนักคิดอัชอะรีย์ที่ยืนหยัดถึงปัจจุบัน' },
+  { year:310, cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอัฏฏอบะรีย์', desc:'มุหัมมัด อิบนุ ญะรีร อัฏฏอบะรีย์ (เสียชีวิตปี ฮ.ศ. 310 / ค.ศ. 923) เราะหิมะฮุลลอฮ์ เสียชีวิต ทิ้ง <strong>ตารีค อัฏฏอบะรีย์</strong> และ <strong>ตัฟซีร อัฏฏอบะรีย์</strong> มรดกทางปัญญาชั้นสูง' },
+  { year:333, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัลอัชอะรีย์และอัลมาตูรีดีย์', desc:'อิหม่ามอัลอัชอะรีย์ (เสียชีวิตปี ฮ.ศ. 324 / ค.ศ. 936) เราะหิมะฮุลลอฮ์ และ อิหม่ามอัลมาตูรีดีย์ (เสียชีวิตปี ฮ.ศ. 333 / ค.ศ. 944) เราะหิมะฮุลลอฮ์ ผู้ก่อตั้งสองสำนักคิดเทววิทยาซุนนีย์หลัก สิ้นชีวิตในเวลาใกล้เคียงกัน' },
+  { year:450, cat:'กะลาม', title:'กำเนิดอิหม่ามอัลเฆาะซาลีย์', desc:'อบูหามิด มุหัมมัด อัลเฆาะซาลีย์ เกิด ณ ฏูส เปอร์เซีย นักปราชญ์ผู้ถูกเรียกว่า “หุจญะตุลอิสลาม”' },
+  { year:478, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัลญุวัยนีย์', desc:'อิหม่ามอัลหะรอมัยน์ อัลญุวัยนีย์ (เสียชีวิตปี ฮ.ศ. 478 / ค.ศ. 1085) เราะหิมะฮุลลอฮ์ เสียชีวิต อาจารย์ของอิหม่ามอัลเฆาะซาลีย์ นักเทววิทยาอัชอะรีย์ผู้ยิ่งใหญ่' },
+  { year:505, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัลเฆาะซาลีย์', desc:'อิหม่ามอัลเฆาะซาลีย์ (เสียชีวิตปี ฮ.ศ. 505 / ค.ศ. 1111) เราะหิมะฮุลลอฮ์ เสียชีวิต ทิ้ง <strong>อิห์ยาอ์ อุลูมิดดีน</strong>, <strong>ตะฮาฟุต อัลฟะลาสิฟะฮ์</strong> และ <strong>อัลมุสตัศฟา</strong>', relatedArticle: { title: 'อิหม่ามอัลเฆาะซาลีย์หันหลังให้ “อิลมุลกะลาม” และประณามมันจริงหรือ?', url: '../../articles/kalam/did-al-ghazali-abandon-kalam.html' } },
+  { year:595, cat:'กะลาม', title:'การสิ้นชีวิตของอิบนุ รุชด์ (Averroes)', desc:'อิบนุ รุชด์ (เสียชีวิตปี ฮ.ศ. 595 / ค.ศ. 1198) เราะหิมะฮุลลอฮ์ นักปรัชญาอิสลามแห่งอันดาลุส เสียชีวิต งานของเขาเป็นสื่อกลางปรัชญากรีกสู่ยุโรป' },
+  { year:606, cat:'กะลาม', title:'การสิ้นชีวิตของฟัครุดดีน อัรรอซีย์', desc:'อิหม่ามฟัครุดดีน อัรรอซีย์ (เสียชีวิตปี ฮ.ศ. 606 / ค.ศ. 1210) เราะหิมะฮุลลอฮ์ เสียชีวิต ทิ้ง <strong>มะฟาตีหุลเฆยบ์</strong> ตัฟซีรขนาด 32 เล่ม และงานเทววิทยาชั้นสูงมากมาย', relatedArticle: { title: 'ฟัครุดดีน อัรรอซีย์และข้อถกเถียงเชิงปรมาณูนิยมขั้นสูง', url: '../../articles/kalam/fakhr-al-din-al-razi-atomism.html' } },
   { year:629, cat:'ฟิกฮ์', title:'กำเนิดอิหม่ามอันนะวาวีย์', desc:'ยะห์ยา อิบนุ ชะรัฟ อันนะวาวีย์ เกิด ณ นาวา ซีเรีย นักฟิกฮ์ชาฟิอีย์ผู้ยิ่งใหญ่' },
   { year:656, cat:'ประวัติศาสตร์', title:'มองโกลบุกกรุงแบกแดด', desc:'ฮูลากู ข่าน บุกและทำลายกรุงแบกแดด สิ้นสุดราชวงศ์อับบาซียะฮ์ยุคทอง 500 ปี นักวิชาการและหนังสือนับล้านถูกทำลาย' },
   { year:658, cat:'ประวัติศาสตร์', title:'ยุทธการอัยน์ญาลูต', desc:'กองทัพมัมลูกของอียิปต์ภายใต้ ไบบาร์ส เอาชนะมองโกล ณ ปาเลสไตน์ ชะลอการขยายตัวของมองโกลในตะวันออกกลาง' },
   { year:661, cat:'กะลาม', title:'กำเนิดอิบนุ ตัยมียะฮ์', desc:'ตะกียุดดีน อะหมัด อิบนุ ตัยมียะฮ์ เกิด ณ หัรรอน นักเทววิทยาหัมบะลีผู้มีอิทธิพลสูงสุดคนหนึ่งในประวัติศาสตร์' },
-  { year:676, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอันนะวาวีย์', desc:'อิหม่ามอันนะวาวีย์ เสียชีวิต ณ นาวา ทิ้ง มินฮาจ, รียาฎ อัศศอลิหีน, อัลอัซการ์ มรดกที่ใช้สืบถึงปัจจุบัน' },
-  { year:728, cat:'กะลาม', title:'การสิ้นชีวิตของอิบนุ ตัยมียะฮ์', desc:'อิบนุ ตัยมียะฮ์ เสียชีวิตในคุก ณ ดามัสกัส ขณะกำลังเขียนหนังสือ ทิ้งผลงานมากกว่า 700 ชิ้น' },
-  { year:751, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิบนุ กอยยิม อัลเญาซียะฮ์', desc:'ชัมซุดดีน อิบนุ กอยยิม เสียชีวิต ศิษย์ผู้ซื่อสัตย์ของอิบนุ ตัยมียะฮ์ ผู้เขียน มะดาริจ อัสสาลิกีน' },
-  { year:771, cat:'กะลาม', title:'การสิ้นชีวิตของตาญุดดีน อัศศุบกีย์', desc:'ตาญุดดีน อะลี อิบนุ อับดิลกาฟี อัศศุบกีย์ เสียชีวิต นักเทววิทยาอัชอะรีย์ผู้เขียนนูนียะฮ์และอุสตาซของสำนักชาฟิอี' },
-  { year:808, cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอิบนุ ค็อลดูน', desc:'อิบนุ ค็อลดูน เสียชีวิต ณ ไคโร บิดาแห่งสังคมศาสตร์และปรัชญาประวัติศาสตร์ ผู้เขียน อัลมุกอดดิมะฮ์' },
-  { year:852, cat:'กะลาม', title:'กำเนิดอิหม่ามอัสสะนูซีย์', desc:'มุหัมมัด อิบนุ ยูซุฟ อัสสะนูซีย์ เกิด ณ ตเลมเซน แอลจีเรีย ผู้เขียน อุมมุลบะรอฮีน ตำราอะกีดะฮ์มาตรฐาน' },
-  { year:911, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัสสะนูซีย์', desc:'อิหม่ามอัสสะนูซีย์ เสียชีวิต ณ ตเลมเซน ทิ้ง อุมมุลบะรอฮีน และ ชัรหุ อุมมุลบะรอฮีน ตำราอะกีดะฮ์ที่สอนทั่วโลกอิสลาม' },
-  { year:923, cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอัสสุยูฏีย์', desc:'ญะลาลุดดีน อัสสุยูฏีย์ เสียชีวิต นักวิชาการอเนกสาขาผู้เขียนตำราไว้มากกว่า 500 เล่ม ครอบคลุมทุกสาขาวิชาอิสลาม' },
+  { year:676, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิหม่ามอันนะวาวีย์', desc:'อิหม่ามอันนะวาวีย์ (เสียชีวิตปี ฮ.ศ. 676 / ค.ศ. 1277) เราะหิมะฮุลลอฮ์ เสียชีวิต ณ นาวา ทิ้ง <strong>มินฮาจ</strong>, <strong>รียาฎ อัศศอลิหีน</strong>, <strong>อัลอัซการ์</strong> มรดกที่ใช้สืบถึงปัจจุบัน' },
+  { year:728, cat:'กะลาม', title:'การสิ้นชีวิตของอิบนุ ตัยมียะฮ์', desc:'อิบนุ ตัยมียะฮ์ (เสียชีวิตปี ฮ.ศ. 728 / ค.ศ. 1328) เราะหิมะฮุลลอฮ์ เสียชีวิตในคุก ณ ดามัสกัส ขณะกำลังเขียนหนังสือ ทิ้งผลงานมากกว่า 700 ชิ้น' },
+  { year:751, cat:'ฟิกฮ์', title:'การสิ้นชีวิตของอิบนุ กอยยิม อัลเญาซียะฮ์', desc:'ชัมซุดดีน อิบนุ กอยยิม อัลเญาซียะฮ์ (เสียชีวิตปี ฮ.ศ. 751 / ค.ศ. 1350) เราะหิมะฮุลลอฮ์ เสียชีวิต ศิษย์ผู้ซื่อสัตย์ของอิบนุ ตัยมียะฮ์ ผู้เขียน <strong>มะดาริจ อัสสาลิกีน</strong>', relatedArticle: { title: 'ความจำเป็นและขอบเขตความคุ้มครองทางกฎหมายระหว่าง ดอรูเราะฮ์ (Darurah) กับ หาญะฮ์ (Hajah)', url: '../../articles/nitisart/darurah-vs-hajah.html' } },
+  { year:771, cat:'กะลาม', title:'การสิ้นชีวิตของตาญุดดีน อัศศุบกีย์', desc:'ตาญุดดีน อะลี อิบนุ อับดิลกาฟี อัศศุบกีย์ (เสียชีวิตปี ฮ.ศ. 771 / ค.ศ. 1370) เราะหิมะฮุลลอฮ์ เสียชีวิต นักเทววิทยาอัชอะรีย์ผู้เขียนนูนียะฮ์และอุสตาซของสำนักชาฟิอี', relatedArticle: { title: 'ประเด็นข้อขัดแย้งระหว่างสายอัชอะรีย์และหะนะฟีย์จากบทกวีนูนียะฮ์ของตาญุดดีน อัศศุบกีย์', url: '../../articles/kalam/subki-nuniyyah-ashari-maturidi.html' } },
+  { year:808, cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอิบนุ ค็อลดูน', desc:'อิบนุ ค็อลดูน (เสียชีวิตปี ฮ.ศ. 808 / ค.ศ. 1406) เราะหิมะฮุลลอฮ์ เสียชีวิต ณ ไคโร บิดาแห่งสังคมศาสตร์และปรัชญาประวัติศาสตร์ ผู้เขียน <strong>อัลมุกอดดิมะฮ์</strong>' },
+  { year:852, cat:'กะลาม', title:'กำเนิดอิหม่ามอัสสะนูซีย์', desc:'มุหัมมัด อิบนุ ยูซุฟ อัสสะนูซีย์ เกิด ณ ตเลมเซน แอลจีเรีย ผู้เขียน <strong>อุมมุลบะรอฮีน</strong> ตำราอะกีดะฮ์มาตรฐาน' },
+  { year:895, cat:'กะลาม', title:'การสิ้นชีวิตของอิหม่ามอัสสะนูซีย์', desc:'อิหม่ามอัสสะนูซีย์ (เสียชีวิตปี ฮ.ศ. 895 / ค.ศ. 1490) เราะหิมะฮุลลอฮ์ เสียชีวิต ณ ตเลมเซน ทิ้ง <strong>อุมมุลบะรอฮีน</strong> และ <strong>ชัรหุ อุมมุลบะรอฮีน</strong> ตำราอะกีดะฮ์ที่สอนทั่วโลกอิสลาม' },
+  { year:911, cat:'ประวัติศาสตร์', title:'การสิ้นชีวิตของอัสสุยูฏีย์', desc:'ญะลาลุดดีน อัสสุยูฏีย์ (เสียชีวิตปี ฮ.ศ. 911 / ค.ศ. 1505) เราะหิมะฮุลลอฮ์ เสียชีวิต นักวิชาการอเนกสาขาผู้เขียนตำราไว้มากกว่า 500 เล่ม ครอบคลุมทุกสาขาวิชาอิสลาม' },
   { year:1342, cat:'ประวัติศาสตร์', title:'การล่มสลายของจักรวรรดิออตโตมัน', desc:'หลังสงครามโลกครั้งที่ 1 จักรวรรดิออตโตมันล่มสลาย ตุรกีประกาศสาธารณรัฐ สิ้นสุดระบบเคาะลีฟะฮ์อย่างเป็นทางการในประวัติศาสตร์' },
 ];
 
@@ -407,7 +421,7 @@ function exploreYear() {
   const hy = parseInt(document.getElementById('explore-year').value);
   if (!hy || hy < 1 || hy > 1500) {
     document.getElementById('explorer-output').innerHTML =
-      '<div class="timeline-empty"><div class="empty-icon">⚠️</div><div>กรุณากรอกปี ฮ.ศ. ระหว่าง 1 ถึง 1500</div></div>';
+      '<div class="timeline-empty"><div>กรุณากรอกปี ฮ.ศ. ระหว่าง 1 ถึง 1500</div></div>';
     return;
   }
 
@@ -416,27 +430,41 @@ function exploreYear() {
   const ceApprox = hijriYearToGregorianApprox(hy);
 
   let html = `
-    <div class="century-badge">📅 ${getCenturyLabel(hy)}</div>
+    <div class="century-badge">${getCenturyLabel(hy)}</div>
     <div class="year-range-display">แสดงเหตุการณ์รอบปี <span>ฮ.ศ. ${hy}</span> (ประมาณ ค.ศ. ${ceApprox}) ในช่วง ±${range} ปี</div>
   `;
 
   if (nearby.length === 0) {
-    html += `<div class="timeline-empty"><div class="empty-icon">📭</div><div>ไม่พบเหตุการณ์สำคัญที่บันทึกไว้ในช่วงนี้</div></div>`;
+    html += `<div class="timeline-empty"><div>ไม่พบเหตุการณ์สำคัญที่บันทึกไว้ในช่วงนี้</div></div>`;
   } else {
     html += '<div class="timeline">';
     nearby.forEach(e => {
       const ceYear = hijriYearToGregorianApprox(e.year);
+      let relationHtml = '';
+      if (e.relatedArticle) {
+        relationHtml = `
+          <div class="event-relation">
+            <span class="relation-label">อ่านบทวิเคราะห์เชิงลึก:</span>
+            <a href="${e.relatedArticle.url}" class="relation-link"><strong>${e.relatedArticle.title}</strong></a>
+          </div>
+        `;
+      }
+
       html += `
         <div class="event-card">
-          <div class="event-year-badge">
-            <div class="event-year-num">${e.year}</div>
-            <div class="event-year-unit">ฮ.ศ.</div>
-            <div class="event-year-unit event-year-ce">≈${ceYear}</div>
+          <div class="event-header">
+            <div>
+              <span class="event-cat ${getCatClass(e.cat)}">${e.cat}</span>
+            </div>
+            <div class="event-year-badge-inline">
+              <span class="event-year-num">${e.year} ฮ.ศ.</span>
+              <span class="event-year-ce">≈ ค.ศ. ${ceYear}</span>
+            </div>
           </div>
           <div class="event-body">
-            <span class="event-cat ${getCatClass(e.cat)}">${e.cat}</span>
             <div class="event-title">${e.title}</div>
             <div class="event-desc">${e.desc}</div>
+            ${relationHtml}
           </div>
         </div>`;
     });
