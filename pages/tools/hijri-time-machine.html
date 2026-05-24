@@ -55,6 +55,10 @@
   --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
 }
 
+html, body {
+  background-color: var(--bg-primary) !important;
+}
+
 /* ─── Layout ─── */
 .htm-container { max-width: 900px; margin: 60px auto 80px; padding: 0 24px; }
 
@@ -209,7 +213,7 @@
 .timeline-empty { font-family: var(--thai); text-align: center; padding: 70px 24px; color: var(--text-tertiary); font-size: 16px; transition: var(--theme-transition); line-height: 2.0; }
 
 .event-card { 
-  background: var(--bg-primary); border: 1px solid var(--border-primary); 
+  background: var(--bg-secondary); border: 1px solid var(--border-primary); 
   border-left: 4px solid var(--accent-color); border-radius: 12px; 
   padding: 32px; margin-bottom: 24px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); 
   box-shadow: 0 4px 12px var(--shadow-color);
@@ -286,18 +290,18 @@
           <div class="conv-field">
             <label>เดือน</label>
             <select id="h-month">
-              <option value="1">1 — มุหัรรอม</option>
-              <option value="2">2 — ศอฟัร</option>
-              <option value="3">3 — รอบีอุลเอาวัล</option>
-              <option value="4">4 — รอบีอุษษานี</option>
-              <option value="5">5 — ญุมาดัลเอาวัล</option>
-              <option value="6">6 — ญุมาดัษษานี</option>
-              <option value="7">7 — รอญับ</option>
-              <option value="8">8 — ชะอ์บาน</option>
-              <option value="9">9 — รอมาฎอน</option>
-              <option value="10">10 — เชาวาล</option>
-              <option value="11">11 — ซุลเกาะอ์ดะฮ์</option>
-              <option value="12">12 — ซุลหิจญะฮ์</option>
+              <option value="1">1 - มุหัรรอม</option>
+              <option value="2">2 - ศอฟัร</option>
+              <option value="3">3 - รอบีอุลเอาวัล</option>
+              <option value="4">4 - รอบีอุษษานี</option>
+              <option value="5">5 - ญุมาดัลเอาวัล</option>
+              <option value="6">6 - ญุมาดัษษานี</option>
+              <option value="7">7 - รอญับ</option>
+              <option value="8">8 - ชะอ์บาน</option>
+              <option value="9">9 - รอมาฎอน</option>
+              <option value="10">10 - เชาวาล</option>
+              <option value="11">11 - ซุลเกาะอ์ดะฮ์</option>
+              <option value="12">12 - ซุลหิจญะฮ์</option>
             </select>
           </div>
           <div class="conv-field">
@@ -598,9 +602,6 @@ function exploreYear() {
       html += `
         <div class="event-card">
           <div class="event-header">
-            <div>
-              <span class="event-cat ${getCatClass(e.cat)}">${e.cat}</span>
-            </div>
             <div class="event-year-badge-inline">
               <span class="event-year-num">${e.year} ฮ.ศ.</span>
               <span class="event-year-ce">≈ ค.ศ. ${ceYear}</span>
