@@ -677,46 +677,28 @@ body::before {
 }
 
 /* =========================================================
-   CATEGORIES — white dot-field (light mode only)
+   CATEGORIES — canvas wave dots (light mode only)
    ========================================================= */
-@keyframes cat-dots-wave {
-  0%   { background-position: 0 0; }
-  33%  { background-position: 8px 5px; }
-  66%  { background-position: 16px 0; }
-  100% { background-position: 0 0; }
+#cat-dots-canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 0; display: none;
 }
-html:not(.dark-mode) #categories { background: #ffffff; position: relative; }
-html:not(.dark-mode) #categories::before {
-  content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 0;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.16) 1.5px, transparent 1.5px);
-  background-size: 16px 16px;
-  animation: cat-dots-wave 20s ease-in-out infinite;
-}
+html:not(.dark-mode) #cat-dots-canvas { display: block; }
+html:not(.dark-mode) #categories { background: #ffffff; position: relative; overflow: hidden; }
 html:not(.dark-mode) #categories .wrap { position: relative; z-index: 1; }
-html:not(.dark-mode) .cat-grid { background: #b8b8b8; gap: 10px; }
+html:not(.dark-mode) .cat-grid { background: transparent; gap: 0; }
 html:not(.dark-mode) .cat-card {
-  background: #ffffff;
+  background: rgba(255,255,255,0.93);
+  border-bottom: 1px solid rgba(90,140,210,0.20);
   transition: background .25s, outline .25s, box-shadow .25s;
 }
+html:not(.dark-mode) .cat-card:last-child { border-bottom: none; }
 html:not(.dark-mode) .cat-card:hover {
   outline: 1px solid rgba(179,27,27,.45); outline-offset: -1px;
-  background: #f9f7f4; box-shadow: 0 4px 24px rgba(0,0,0,.07);
+  background: rgba(235,243,255,0.96); box-shadow: 0 4px 24px rgba(0,0,0,.05);
 }
 html:not(.dark-mode) .cat-overlay { display: none; }
 html:not(.dark-mode) .cat-bg { opacity: 0; }
-/* Kalam — restore NASA Carina Nebula with light overlay */
-html:not(.dark-mode) .cat-kalam .cat-bg {
-  opacity: 0.58; filter: brightness(82%) saturate(88%);
-}
-html:not(.dark-mode) .cat-kalam .cat-overlay {
-  display: block;
-  background: linear-gradient(170deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.54) 100%);
-}
-html:not(.dark-mode) .cat-kalam .cat-name { color: #ffffff; text-shadow: 0 1px 12px rgba(0,0,0,0.6); }
-html:not(.dark-mode) .cat-kalam .cat-count { color: rgba(255,255,255,0.88); text-shadow: 0 1px 6px rgba(0,0,0,0.4); }
-html:not(.dark-mode) .cat-kalam .cat-tag { color: #c49a45; }
-/* Nitisart — geometric SVG pattern without dark bg */
-html:not(.dark-mode) .cat-nitisart .cat-bg { opacity: 0.20; background-color: transparent; }
 html:not(.dark-mode) .hadith-map svg { opacity: 0.55; }
 html:not(.dark-mode) .cat-name { color: #111111; }
 html:not(.dark-mode) .cat-sub,
@@ -724,7 +706,7 @@ html:not(.dark-mode) .cat-count { color: #666666; }
 html:not(.dark-mode) .cat-num { color: #999999; }
 html:not(.dark-mode) .cat-tag { color: var(--gold); }
 @media(max-width:600px){
-  html:not(.dark-mode) .cat-grid { grid-template-rows: 300px repeat(5,165px); gap: 10px; }
+  html:not(.dark-mode) .cat-grid { grid-template-rows: repeat(6,165px); }
 }
 </style>
 </head>
@@ -861,6 +843,7 @@ html:not(.dark-mode) .cat-tag { color: var(--gold); }
      CATEGORIES
      ========================================================= -->
 <section class="section" id="categories">
+  <canvas id="cat-dots-canvas" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="section-head">
       <div data-reveal>
@@ -1369,6 +1352,42 @@ quotes.forEach(function(_,i){
 paintQuote(0);
 setInterval(function(){ paintQuote(qi+1); }, 9000);
 window.addEventListener('resize', function(){ document.getElementById('quoteAuthor').textContent = window.innerWidth <= 600 ? shortAuthor(quotes[qi].author) : quotes[qi].author; });
+
+/* ----- CATEGORIES WAVE DOTS ----- */
+(function(){
+  var canvas = document.getElementById('cat-dots-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var t = 0, raf, SPACING = 22, R = 1.6;
+  function resize(){ canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+  function draw(){
+    if (document.documentElement.classList.contains('dark-mode')){ cancelAnimationFrame(raf); return; }
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    var cols = Math.ceil(canvas.width/SPACING)+2, rows = Math.ceil(canvas.height/SPACING)+2;
+    for(var r=0;r<rows;r++){
+      for(var c=0;c<cols;c++){
+        var bx=c*SPACING, by=r*SPACING;
+        var dx=Math.sin(c*0.42+r*0.28+t)*4;
+        var dy=Math.cos(c*0.35+r*0.48+t*0.85)*3;
+        var a=0.12+Math.sin(c*0.55+r*0.38+t*1.1)*0.07;
+        ctx.beginPath();
+        ctx.arc(bx+dx,by+dy,R,0,Math.PI*2);
+        ctx.fillStyle='rgba(70,130,200,'+Math.max(0.05,a)+')';
+        ctx.fill();
+      }
+    }
+    t+=0.018; raf=requestAnimationFrame(draw);
+  }
+  function init(){
+    if(!document.documentElement.classList.contains('dark-mode')){ resize(); draw(); }
+  }
+  window.addEventListener('resize',resize);
+  new MutationObserver(function(){
+    if(document.documentElement.classList.contains('dark-mode')){ cancelAnimationFrame(raf); }
+    else { resize(); draw(); }
+  }).observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+  init();
+})();
 
 /* ----- TEA BUTTON ----- */
 var teaBtn2 = document.getElementById('teaBtn');
