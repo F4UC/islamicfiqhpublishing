@@ -406,7 +406,7 @@ body::before {
 }
 .cat-card {
   position: relative; overflow: hidden;
-  padding: 64px 80px; display: flex; flex-direction: column; justify-content: space-between;
+  padding: 56px 72px; display: flex; flex-direction: column; justify-content: center;
   transition: box-shadow .3s, transform .3s; background: #0a0c10;
   text-decoration: none; border-radius: 12px;
 }
@@ -436,7 +436,7 @@ body::before {
   animation: ken-burns 26s ease-in-out infinite alternate;
 }
 .cat-nitisart .cat-bg {
-  background-image: url('https://images.unsplash.com/photo-1547036967-23d11aacaee0?q=80&w=1200&auto=format&fit=crop');
+  background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1200&auto=format&fit=crop');
   background-size: cover; background-position: center;
   background-color: #0c0f16;
 }
@@ -458,12 +458,10 @@ body::before {
 }
 
 /* ── Typography ── */
-.cat-tag { font-family: var(--ui); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
-.cat-name { font-family: var(--thai); font-weight: 700; color: var(--paper); font-size: clamp(48px, 6.5vw, 84px); line-height: 1.05; letter-spacing: -0.02em; transition: color 0.3s; }
-.cat-card:hover .cat-name { color: var(--gold-bright); }
-.cat-sub { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--text-mute); letter-spacing: .04em; margin-top: 8px; }
-.cat-count { font-family: var(--thai); font-size: 11px; color: var(--text-mute); letter-spacing: .1em; }
-.cat-kalam .cat-count { margin-top: 20px; }
+.cat-tag { font-family: var(--ui); font-size: 9px; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); opacity: 0.75; }
+.cat-name { font-family: var(--thai); font-weight: 700; color: #f0ece4; font-size: clamp(38px, 5vw, 72px); line-height: 1.05; letter-spacing: -0.02em; transition: color 0.3s; }
+.cat-card:hover .cat-name { color: #e8c16a; }
+.cat-sub { font-family: var(--thai); font-weight: 300; font-size: 13px; color: rgba(240,236,228,0.60); letter-spacing: .08em; line-height: 1.6; }
 .section-support { padding-bottom: 80px; }
 .support-compact { border-top: 1px solid var(--rule); padding: 60px 0; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px; }
 .tea-btn { font-family: var(--thai); font-size: 14px; font-weight: 500; padding: 14px 36px; border: 1px solid var(--rule-strong); border-radius: 999px; background: transparent; color: var(--text); cursor: pointer; transition: all .3s; display: inline-flex; align-items: center; gap: 10px; }
@@ -475,13 +473,12 @@ body::before {
 .qr-frame { width: 200px; height: 200px; background: #fff; padding: 12px; }
 .qr-frame img { width: 100%; height: 100%; display: block; }
 .qr-note { font-family: var(--thai); font-size: 12px; color: var(--text-mute); line-height: 1.6; text-align: center; }
-.cat-num { font-family: var(--thai); color: var(--text-mute); font-size: 13px; }
 .cat-em  { font-style: italic; color: var(--gold); font-family: inherit; }
-
-.cat-content-top, .cat-content-bottom {
-  position: relative; z-index: 3; display: flex; flex-direction: column;
+.cat-body {
+  position: relative; z-index: 3;
+  display: flex; flex-direction: column; gap: 14px;
+  max-width: 68%;
 }
-.cat-content-top { flex-direction: row; justify-content: space-between; align-items: center; width: 100%; }
 
 /* ── Hadith SVG map ── */
 .hadith-map {
@@ -527,6 +524,7 @@ body::before {
     gap: 20px;
   }
   .cat-card { padding: 32px 40px; }
+  .cat-body { max-width: 85%; }
   .cat-name { font-size: 40px; }
 }
 
@@ -537,7 +535,9 @@ body::before {
     gap: 16px;
   }
   .cat-card { padding: 24px 28px; }
+  .cat-body { max-width: 90%; gap: 10px; }
   .cat-name { font-size: 32px; }
+  .cat-sub { font-size: 12px; }
 }
 
 /* =========================================================
@@ -693,23 +693,15 @@ body::before {
 }
 
 /* =========================================================
-   CATEGORIES — SpaceX dark cards + canvas wave dots (light mode)
+   CATEGORIES — SpaceX dark cards, always dark background
    ========================================================= */
+#categories { background: #0a0907; position: relative; overflow: hidden; }
+#categories .wrap { position: relative; z-index: 1; }
+.cat-name { color: #f0ece4; }
+.cat-sub { color: rgba(240,236,228,0.62); }
 #cat-dots-canvas {
   position: absolute; inset: 0; width: 100%; height: 100%;
-  pointer-events: none; z-index: 0; display: none;
-}
-html:not(.dark-mode) #cat-dots-canvas { display: block; }
-html:not(.dark-mode) #categories { background: #ffffff; position: relative; overflow: hidden; }
-html:not(.dark-mode) #categories .wrap { position: relative; z-index: 1; }
-html:not(.dark-mode) .cat-grid { background: transparent; gap: 16px; }
-/* Cards stay dark (original CSS #0a0c10). Override only text colors since vars are dark in light mode */
-html:not(.dark-mode) .cat-name { color: #f0ece4; }
-html:not(.dark-mode) .cat-sub,
-html:not(.dark-mode) .cat-count { color: rgba(240,236,228,0.72); }
-html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
-@media(max-width:600px){
-  html:not(.dark-mode) .cat-grid { grid-template-rows: repeat(6,165px); }
+  pointer-events: none; z-index: 0; display: block;
 }
 </style>
 </head>
@@ -857,79 +849,74 @@ html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
 
     <div class="cat-grid" data-reveal data-delay="2">
 
-      <!-- 01 เทววิทยา — NASA Carina Nebula + Ken Burns -->
+      <!-- 01 เทววิทยา -->
       <a href="/pages/kalam.html" class="cat-card cat-kalam">
         <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
         <div class="cat-overlay"></div>
-        <div class="cat-content-top">
-          <div class="cat-tag">01</div>
-        </div>
-        <div class="cat-content-bottom">
+        <div class="cat-body">
+          <span class="cat-tag">01</span>
           <div class="cat-name">เทววิทยา</div>
-          <div class="cat-count">ปรัชญาเทววิทยา · อภิปรัชญา · อะกีดะฮ์</div>
+          <div class="cat-sub">ปรัชญาเทววิทยา · อภิปรัชญา · อะกีดะฮ์</div>
         </div>
       </a>
 
-      <!-- 02 นิติศาสตร์ — Islamic geometric pattern tile -->
+      <!-- 02 นิติศาสตร์ -->
       <a href="/pages/nitisart.html" class="cat-card cat-nitisart">
         <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
         <div class="cat-overlay"></div>
-        <div class="cat-content-top">
-          <div class="cat-tag">02</div>
-          <span class="cat-num">4 บทความ</span>
-        </div>
-        <div class="cat-content-bottom">
+        <div class="cat-body">
+          <span class="cat-tag">02</span>
           <div class="cat-name">นิติศาสตร์</div>
+          <div class="cat-sub">สังคม · กฎหมาย · วิถีชีวิต</div>
         </div>
       </a>
 
-      <!-- 03 หะดีษ — SVG map of hadith transmission routes -->
+      <!-- 03 หะดีษ -->
       <a href="/pages/hadith.html" class="cat-card cat-hadith">
         <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
         <div class="cat-overlay"></div>
         <div class="hadith-map" aria-hidden="true">
-          <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-            <g stroke="#c49a45" stroke-width="0.3" opacity="0.1">
-              <line x1="0" y1="50" x2="280" y2="50"/><line x1="0" y1="100" x2="280" y2="100"/>
-              <line x1="0" y1="150" x2="280" y2="150"/><line x1="70" y1="0" x2="70" y2="200"/>
-              <line x1="140" y1="0" x2="140" y2="200"/><line x1="210" y1="0" x2="210" y2="200"/>
+          <svg viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <g stroke="#c49a45" stroke-width="0.25" opacity="0.08">
+              <line x1="0" y1="44" x2="360" y2="44"/><line x1="0" y1="88" x2="360" y2="88"/>
+              <line x1="0" y1="132" x2="360" y2="132"/><line x1="0" y1="176" x2="360" y2="176"/>
+              <line x1="72" y1="0" x2="72" y2="220"/><line x1="144" y1="0" x2="144" y2="220"/>
+              <line x1="216" y1="0" x2="216" y2="220"/><line x1="288" y1="0" x2="288" y2="220"/>
             </g>
-            <path d="M 110,42 L 95,58 L 88,82 L 90,112 L 102,138 L 118,158 L 140,168 L 160,160 L 166,140 L 162,118 L 170,95 L 180,68 L 170,48 L 148,38 Z"
-                  fill="none" stroke="#c49a45" stroke-width="0.8" opacity="0.15" stroke-linejoin="round"/>
-            <line x1="132" y1="140" x2="108" y2="98"  stroke="#c49a45" stroke-width="0.9" stroke-dasharray="5,3" opacity="0.82"/>
-            <line x1="132" y1="140" x2="215" y2="68"  stroke="#c49a45" stroke-width="0.9" stroke-dasharray="5,3" opacity="0.75"/>
-            <line x1="108" y1="98"  x2="44"  y2="55"  stroke="#c49a45" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.65"/>
-            <line x1="215" y1="68"  x2="262" y2="38"  stroke="#c49a45" stroke-width="0.7" stroke-dasharray="4,5" opacity="0.50"/>
-            <line x1="44"  y1="55"  x2="10"  y2="35"  stroke="#c49a45" stroke-width="0.6" stroke-dasharray="3,5" opacity="0.38"/>
-            <line x1="108" y1="98"  x2="215" y2="68"  stroke="#c49a45" stroke-width="0.6" stroke-dasharray="4,6" opacity="0.40"/>
-            <circle cx="132" cy="140" r="5"  fill="#c49a45" opacity="0.95"/>
-            <circle cx="132" cy="140" r="10" fill="none" stroke="#c49a45" stroke-width="0.8" opacity="0.30"/>
-            <circle cx="108" cy="98"  r="2.8" fill="#c49a45" opacity="0.85"/>
-            <circle cx="215" cy="68"  r="2.5" fill="#c49a45" opacity="0.75"/>
-            <circle cx="44"  cy="55"  r="2.3" fill="#c49a45" opacity="0.65"/>
-            <circle cx="262" cy="38"  r="2"   fill="#c49a45" opacity="0.52"/>
-            <circle cx="10"  cy="35"  r="1.8" fill="#c49a45" opacity="0.38"/>
-            <text x="132" y="158" font-size="7.5" fill="#c49a45" text-anchor="middle" opacity="0.95" font-family="serif">مَكَّة</text>
-            <text x="106" y="91"  font-size="6.5" fill="#c49a45" text-anchor="middle" opacity="0.82" font-family="serif">المَدِينَة</text>
-            <text x="215" y="61"  font-size="6.5" fill="#c49a45" text-anchor="end"    opacity="0.72" font-family="serif">بَغْدَاد</text>
-            <text x="44"  y="48"  font-size="6"   fill="#c49a45" text-anchor="middle" opacity="0.65" font-family="serif">مِصْر</text>
-            <text x="264" y="31"  font-size="5.5" fill="#c49a45" text-anchor="start"  opacity="0.52" font-family="serif">خُرَاسَان</text>
-            <text x="8"   y="28"  font-size="5.5" fill="#c49a45" text-anchor="start"  opacity="0.38" font-family="serif">الأَنْدَلُس</text>
+            <line x1="175" y1="165" x2="130" y2="118" stroke="#c49a45" stroke-width="1.0" stroke-dasharray="5,3" opacity="0.85"/>
+            <line x1="175" y1="165" x2="235" y2="100" stroke="#c49a45" stroke-width="1.0" stroke-dasharray="5,3" opacity="0.78"/>
+            <line x1="130" y1="118" x2="72" y2="75"  stroke="#c49a45" stroke-width="0.85" stroke-dasharray="4,4" opacity="0.68"/>
+            <line x1="235" y1="100" x2="292" y2="58" stroke="#c49a45" stroke-width="0.85" stroke-dasharray="4,5" opacity="0.58"/>
+            <line x1="72"  y1="75"  x2="26"  y2="46" stroke="#c49a45" stroke-width="0.70" stroke-dasharray="3,5" opacity="0.42"/>
+            <line x1="130" y1="118" x2="235" y2="100" stroke="#c49a45" stroke-width="0.55" stroke-dasharray="4,6" opacity="0.35"/>
+            <circle cx="175" cy="165" r="7"  fill="#c49a45" opacity="0.95"/>
+            <circle cx="175" cy="165" r="14" fill="none" stroke="#c49a45" stroke-width="0.8" opacity="0.28"/>
+            <circle cx="175" cy="165" r="23" fill="none" stroke="#c49a45" stroke-width="0.4" opacity="0.11"/>
+            <circle cx="130" cy="118" r="3.8" fill="#c49a45" opacity="0.88"/>
+            <circle cx="130" cy="118" r="8"   fill="none" stroke="#c49a45" stroke-width="0.6" opacity="0.22"/>
+            <circle cx="235" cy="100" r="3.2" fill="#c49a45" opacity="0.78"/>
+            <circle cx="72"  cy="75"  r="2.8" fill="#c49a45" opacity="0.68"/>
+            <circle cx="292" cy="58"  r="2.4" fill="#c49a45" opacity="0.55"/>
+            <circle cx="26"  cy="46"  r="2.0" fill="#c49a45" opacity="0.42"/>
+            <text x="175" y="184" font-size="9"   fill="#c49a45" text-anchor="middle" opacity="0.95" font-family="serif">مَكَّة</text>
+            <text x="118" y="114" font-size="8"   fill="#c49a45" text-anchor="end"    opacity="0.88" font-family="serif">المَدِينَة</text>
+            <text x="248" y="97"  font-size="7.5" fill="#c49a45" text-anchor="start"  opacity="0.78" font-family="serif">بَغْدَاد</text>
+            <text x="72"  y="67"  font-size="7"   fill="#c49a45" text-anchor="middle" opacity="0.68" font-family="serif">مِصْر</text>
+            <text x="296" y="50"  font-size="6.5" fill="#c49a45" text-anchor="start"  opacity="0.55" font-family="serif">خُرَاسَان</text>
+            <text x="22"  y="38"  font-size="6.5" fill="#c49a45" text-anchor="end"    opacity="0.42" font-family="serif">الأَنْدَلُس</text>
           </svg>
         </div>
-        <div class="cat-content-top">
-          <div class="cat-tag">03</div>
-          <span class="cat-num">เร็วๆ นี้</span>
-        </div>
-        <div class="cat-content-bottom">
+        <div class="cat-body">
+          <span class="cat-tag">03</span>
           <div class="cat-name">หะดีษ</div>
+          <div class="cat-sub">ตัวบท · สายรายงาน · การวิเคราะห์</div>
         </div>
       </a>
 
-      <!-- 04 ประวัติศาสตร์ — floating Hijri years (time traveling backward) -->
+      <!-- 04 ประวัติศาสตร์ -->
       <a href="/pages/history.html" class="cat-card cat-history">
         <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
@@ -951,12 +938,10 @@ html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
           <span class="hy hy-9 hy-th">ราชวงศ์</span>
           <span class="hy hy-12 hy-th hy-sm">การปกครอง</span>
         </div>
-        <div class="cat-content-top">
-          <div class="cat-tag">04</div>
-          <span class="cat-num">เร็วๆ นี้</span>
-        </div>
-        <div class="cat-content-bottom">
+        <div class="cat-body">
+          <span class="cat-tag">04</span>
           <div class="cat-name">ประวัติศาสตร์</div>
+          <div class="cat-sub">ราชวงศ์ · อำนาจ · อารยธรรม</div>
         </div>
       </a>
 
@@ -965,25 +950,22 @@ html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
         <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
         <div class="cat-overlay"></div>
-        <div class="cat-content-top">
-          <div class="cat-tag">05</div>
-          <span class="cat-num">เร็วๆ นี้</span>
-        </div>
-        <div class="cat-content-bottom">
+        <div class="cat-body">
+          <span class="cat-tag">05</span>
           <div class="cat-name">วรรณกรรม</div>
+          <div class="cat-sub">บทกวี · ปรัชญา · ภาษา</div>
         </div>
       </a>
+
       <!-- 06 บรรณาธิการ -->
       <a href="/pages/about.html" class="cat-card cat-about">
         <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
         <div class="cat-overlay"></div>
-        <div class="cat-content-top">
-          <div class="cat-tag">06</div>
-          <span class="cat-num">แนะนำ</span>
-        </div>
-        <div class="cat-content-bottom">
+        <div class="cat-body">
+          <span class="cat-tag">06</span>
           <div class="cat-name">บรรณาธิการ</div>
+          <div class="cat-sub">ทีมงาน · วิธีการ · เจตนารมณ์</div>
         </div>
       </a>
 
@@ -1014,40 +996,21 @@ html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
     <div class="section-head">
       <div data-reveal>
         <h2 class="section-title">เครื่องมือ<em>นักวิชาการ</em></h2>
-        <p class="section-lede">แอปพลิเคชันและตัวช่วยทางการอ่านที่กองบรรณาธิการกำลังพัฒนา</p>
       </div>
     </div>
 
     <div class="tools-grid" data-reveal data-delay="2">
       <a href="/pages/tools/hijri-time-machine.html" class="tool-card">
-        <div class="tool-card-header">
-          <span class="tool-status live">พร้อมใช้งาน</span>
-          <span class="tool-icon-mark">App ﹡ 01</span>
-        </div>
         <h3 class="tool-name"><em>Hijri</em> Time Machine</h3>
         <p class="tool-desc">สำรวจไทม์ไลน์ประวัติศาสตร์อิสลามผ่านปฏิทินฮิจเราะฮ์ — เลื่อนผ่านเหตุการณ์สำคัญ บุคคล และตำราจากแต่ละศตวรรษ</p>
         <span class="tool-cta">ทดลองใช้ <span>→</span></span>
         <span class="tool-arabic" lang="ar" dir="rtl">هـ</span>
       </a>
       <a href="/pages/tools.html" class="tool-card">
-        <div class="tool-card-header">
-          <span class="tool-status">กำลังพัฒนา</span>
-          <span class="tool-icon-mark">App ﹡ 02</span>
-        </div>
         <h3 class="tool-name"><em>Isnād</em> Tracer</h3>
         <p class="tool-desc">เครื่องมือตรวจสอบสายรายงานหะดีษ — แผนผังลำดับผู้รายงานพร้อมสถานะความน่าเชื่อถือจากตำราริญาล</p>
         <span class="tool-cta">เร็วๆ นี้ <span>→</span></span>
         <span class="tool-arabic" lang="ar" dir="rtl">إسناد</span>
-      </a>
-      <a href="/pages/tools.html" class="tool-card">
-        <div class="tool-card-header">
-          <span class="tool-status">กำลังพิจารณา</span>
-          <span class="tool-icon-mark">App ﹡ 03</span>
-        </div>
-        <h3 class="tool-name"><em>Turāth</em> Reader</h3>
-        <p class="tool-desc">เครื่องอ่านตำราคลาสสิกพร้อมคำอ่านแบบมีหะเราะกาต คำอธิบายศัพท์เชิงเทคนิค และการเชื่อมโยงสู่บทแปลภาษาไทย</p>
-        <span class="tool-cta">รอเปิดตัว <span>→</span></span>
-        <span class="tool-arabic" lang="ar" dir="rtl">تراث</span>
       </a>
     </div>
   </div>
