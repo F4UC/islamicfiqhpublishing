@@ -16,8 +16,8 @@
   })();
 </script>
 
-<meta name="description" content="เครื่องมือจำลองแผนผังสายรายงานหะดีษ วิเคราะห์สถานะความน่าเชื่อถือของผู้รายงานตามตำราญัรห์วะตะอ์ดีลโบราณ">
-<meta name="keywords" content="สายรายงานหะดีษ, อิลมุรริญาล, ตรวจสอบหะดีษ, Hadith isnad tracer, chains of transmission">
+<meta name="description" content="เครื่องมือวิเคราะห์โครงข่ายสายรายงานหะดีษ ตรวจสอบความสัมพันธ์ระหว่างอาจารย์และศิษย์ พร้อมแสดงผลคำวิจารณ์ในตำราญัรห์วะตะอ์ดีลโบราณ">
+<meta name="keywords" content="สายรายงานหะดีษ, อิลมุรริญาล, ตรวจสอบหะดีษ, Hadith isnad tracer, chains of transmission, ญัรห์วะตะอ์ดีล">
 <meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
 
 <link rel="icon" href="../../favicon.png" type="image/png">
@@ -26,7 +26,7 @@
 <meta name="theme-color" content="#e3edf7">
 
 <meta property="og:title" content="ISNĀD TRACER — Islamic Fiqh Publishing">
-<meta property="og:description" content="จำลองและวิเคราะห์แผนผังสายรายงานหะดีษ วิเคราะห์สถานะความน่าเชื่อถือตามหลักการวิพากษ์ตำราริญาล">
+<meta property="og:description" content="วิเคราะห์โครงข่ายสายรายงานผู้รายงานหะดีษ ครู-ศิษย์ และการรับรองหรือคัดค้านเชิงวิชาการ">
 <meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
 <meta property="og:url" content="https://islamicfiqhpublishing.com/pages/tools/isnad-tracer.html">
 <meta property="og:type" content="website">
@@ -60,7 +60,7 @@ html, body {
 }
 
 /* ─── Layout ─── */
-.it-container { max-width: 900px; margin: 60px auto 80px; padding: 0 24px; position: relative; }
+.it-container { max-width: 1000px; margin: 60px auto 80px; padding: 0 24px; position: relative; }
 
 .it-hero { text-align: center; margin-bottom: 50px; }
 .it-hero h1 { 
@@ -78,250 +78,221 @@ html, body {
   font-size: 15px; 
   color: var(--text-secondary); 
   line-height: 2.0; 
-  max-width: 100%; 
+  max-width: 750px; 
   margin: 0 auto; 
   text-align: center; 
   word-break: break-word; 
   transition: var(--theme-transition); 
 }
 
-/* ─── Selector Bar ─── */
-.hadith-selector {
+/* ─── Narrator Selector Grid ─── */
+.narrator-selector-section {
   background: var(--bg-secondary);
   border: 1px solid var(--border-primary);
   border-radius: 12px;
-  padding: 32px;
+  padding: 28px;
   margin-bottom: 40px;
   transition: var(--theme-transition);
   box-shadow: 0 4px 20px var(--shadow-color);
 }
-.hadith-selector h3 {
+.narrator-selector-section h3 {
   font-family: var(--thai);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-align: left;
 }
-.selector-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
-.btn-select {
-  flex: 1; min-width: 200px; padding: 14px 20px;
+.selector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.btn-select-narrator {
+  padding: 16px 20px;
   background: var(--bg-primary); border: 1px solid var(--border-secondary);
-  border-radius: 8px; font-family: var(--thai); font-size: 14px; font-weight: 600;
-  color: var(--text-secondary); cursor: pointer; text-align: center;
+  border-radius: 8px; font-family: var(--thai); font-size: 13px; font-weight: 600;
+  color: var(--text-secondary); cursor: pointer; text-align: left;
+  display: flex; flex-direction: column; gap: 4px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.btn-select:hover {
+.btn-select-narrator:hover {
   border-color: var(--accent-color);
   color: var(--text-primary);
   transform: translateY(-2px);
 }
-.btn-select.active {
-  background: var(--accent-color);
+.btn-select-narrator.active {
+  background: var(--bg-secondary);
   border-color: var(--accent-color);
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(196, 154, 69, 0.2);
+  border-left: 4px solid var(--accent-color);
+  color: var(--text-primary);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+.btn-select-narrator .narrator-name-en {
+  font-family: var(--serif);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
 }
 
-/* ─── Hadith Text Display ─── */
-.hadith-display-card {
+/* ─── Visual Network Map ─── */
+.network-container {
+  display: grid;
+  grid-template-columns: 1fr 60px 1.2fr 60px 1fr;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 10px;
+}
+.network-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.network-column-title {
+  font-family: var(--thai);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.network-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--border-secondary);
+}
+.network-arrow svg {
+  width: 24px;
+  height: 24px;
+  transition: var(--theme-transition);
+}
+
+/* ─── Narrator Cards ─── */
+.n-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border-primary);
-  border-radius: 12px;
-  padding: 36px;
-  margin-bottom: 40px;
-  transition: var(--theme-transition);
-  box-shadow: 0 4px 20px var(--shadow-color);
+  border-radius: 10px;
+  padding: 16px 18px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px var(--shadow-color);
 }
-.hadith-display-card h4 {
+.n-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+.n-card.center-narrator {
+  border: 1px solid var(--border-primary);
+  border-left: 4px solid var(--accent-color);
+  padding: 24px;
+  box-shadow: 0 4px 16px var(--shadow-color);
+}
+.n-card.center-narrator:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+.n-card-title {
   font-family: var(--thai);
   font-size: 14px;
   font-weight: 700;
-  color: var(--accent-color);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border-secondary);
-  padding-bottom: 10px;
-}
-.hadith-arabic {
-  font-family: var(--arabic);
-  font-size: 26px;
-  line-height: 2.2;
   color: var(--text-primary);
-  direction: rtl;
-  text-align: right;
-  margin-bottom: 24px;
 }
-.hadith-thai {
-  font-family: var(--thai);
-  font-size: 16px;
-  line-height: 2.0;
-  color: var(--text-secondary);
-  text-align: left;
-  word-break: break-word;
-}
-
-/* ─── Flowchart Visualizer ─── */
-.isnad-visualizer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 80px;
-  position: relative;
-}
-.visualizer-title {
-  font-family: var(--thai);
+.n-card-ar {
+  font-family: var(--arabic);
   font-size: 18px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 36px;
-  text-align: center;
-}
-
-.node-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  position: relative;
-}
-
-.node-link-line {
-  width: 2px;
-  height: 40px;
-  background: var(--border-secondary);
-  position: relative;
-}
-.node-link-line::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: -3px;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid var(--border-secondary);
-  border-bottom: 2px solid var(--border-secondary);
-  transform: rotate(45deg);
-}
-
-.narrator-node {
-  width: 100%;
-  max-width: 500px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
-  border-left: 4px solid var(--border-secondary);
-  border-radius: 12px;
-  padding: 20px 24px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 12px var(--shadow-color);
-}
-.narrator-node:hover {
-  border-left-color: var(--accent-color);
-  border-color: var(--accent-color);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px var(--shadow-color);
-}
-
-.node-info-left {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  text-align: left;
-}
-.node-gen {
-  font-family: var(--thai);
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--text-tertiary);
-}
-.node-name-th {
-  font-family: var(--thai);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-.node-name-ar {
-  font-family: var(--arabic);
-  font-size: 20px;
   color: var(--accent-color);
+  margin-top: 2px;
 }
-
-.node-info-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
+.n-card-death {
   font-family: var(--ui);
-}
-.node-death {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-secondary);
   font-weight: 500;
 }
-.node-grade-badge {
+.n-card-badge {
+  align-self: flex-start;
   font-family: var(--thai);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  padding: 3px 10px;
+  padding: 2px 8px;
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-.grade-thiqah { background: rgba(16, 185, 129, 0.1); color: #059669; }
-.grade-saduq { background: rgba(196, 154, 69, 0.1); color: #92700a; }
-.grade-dhaif { background: rgba(239, 68, 68, 0.1); color: #dc2626; }
+.badge-thiqah { background: rgba(16, 185, 129, 0.1); color: #059669; }
+.badge-saduq { background: rgba(196, 154, 69, 0.1); color: #92700a; }
+.badge-dhaif { background: rgba(239, 68, 68, 0.1); color: #dc2626; }
 
-/* ─── Hadith Final Rating Box ─── */
-.final-rating-box {
-  width: 100%;
-  max-width: 500px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
-  border-radius: 12px;
-  padding: 24px;
-  margin-top: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: var(--theme-transition);
-  box-shadow: 0 4px 16px var(--shadow-color);
+/* ─── Critique Panel ─── */
+.critique-section {
+  margin-bottom: 60px;
 }
-.rating-left h5 {
-  font-family: var(--thai);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-tertiary);
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.rating-left p {
+.critique-section-header {
   font-family: var(--thai);
   font-size: 18px;
   font-weight: 700;
   color: var(--text-primary);
-  margin: 4px 0 0;
+  margin-bottom: 24px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-secondary);
+  padding-bottom: 12px;
+  transition: var(--theme-transition);
 }
-.rating-badge {
+.critique-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.critique-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.critique-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+  padding: 20px 24px;
+  text-align: left;
+  transition: var(--theme-transition);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+.critique-card.ta-dil-item {
+  border-left: 3px solid #059669;
+}
+.critique-card.jarh-item {
+  border-left: 3px solid #dc2626;
+}
+
+.critique-meta {
   font-family: var(--thai);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
-  padding: 8px 20px;
-  border-radius: 8px;
-  color: #ffffff;
-  background: var(--accent-color);
-  box-shadow: 0 2px 8px rgba(196, 154, 69, 0.2);
+  color: var(--text-primary);
+  margin-bottom: 8px;
 }
-.rating-badge.sahih { background: #059669; box-shadow: 0 2px 8px rgba(5, 150, 105, 0.2); }
-.rating-badge.dhaif { background: #dc2626; box-shadow: 0 2px 8px rgba(220, 38, 38, 0.2); }
+.critique-meta span {
+  font-family: var(--ui);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: 6px;
+}
+.critique-text {
+  font-family: var(--thai);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
 
 /* ─── Detail Drawer ─── */
 .it-drawer-overlay {
@@ -431,46 +402,29 @@ html, body {
 }
 .drawer-data-item {
   font-family: var(--thai);
-  font-size: 15px;
+  font-size: 14px;
   color: var(--text-primary);
-  line-height: 2.0;
-  word-break: break-word;
-}
-.drawer-data-item.ar {
-  font-family: var(--arabic);
-  font-size: 20px;
-  direction: rtl;
-  text-align: right;
   line-height: 1.8;
-}
-
-.evaluation-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px dashed var(--border-secondary);
-}
-.evaluation-row:last-child {
-  border-bottom: none;
-}
-.eval-scholar {
-  font-family: var(--thai);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-secondary);
-}
-.eval-grade {
-  font-family: var(--thai);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--accent-color);
+  word-break: break-word;
 }
 
 /* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .network-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .network-arrow {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+  .critique-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
 @media (max-width: 480px) {
-  .selector-buttons { flex-direction: column; }
-  .btn-select { width: 100%; min-width: unset; }
+  .selector-grid { grid-template-columns: 1fr; }
   .it-drawer { max-width: 100%; right: -100%; }
 }
 </style>
@@ -484,36 +438,75 @@ html, body {
 
   <div class="it-hero">
     <h1>ISNĀD TRACER</h1>
-    <p>วิเคราะห์สายรายงานและพิจารณาความน่าเชื่อถือของหะดีษ ผ่านการสืบลำดับชั้นผู้รับฟังและคำวิจารณ์ของนักปราชญ์อย่างเป็นระบบ</p>
+    <p>ระบบวิเคราะห์โครงข่ายสายรายงานหะดีษและวิพากษ์สถานะความน่าเชื่อถือ ตรวจสอบความสัมพันธ์ครู-ศิษย์ พร้อมแสดงผลเปรียบเทียบคำวิจารณ์และการยอมรับเชิงชีวประวัติ (ญัรห์วะตะอ์ดีล) ตามระบบวิชาการคลาสสิก</p>
   </div>
 
-  <!-- Selector Panel -->
-  <div class="hadith-selector">
-    <h3>เลือกตัวบทหะดีษเพื่อตรวจสอบสายรายงาน</h3>
-    <div class="selector-buttons" id="selector-bar">
-      <button class="btn-select active" onclick="loadHadith(0)">หะดีษว่าด้วยการตั้งเจตนา</button>
-      <button class="btn-select" onclick="loadHadith(1)">หะดีษว่าด้วยความสมบูรณ์ของธรรม</button>
-      <button class="btn-select" onclick="loadHadith(2)">หะดีษว่าด้วยการห้ามหลอกลวง</button>
-    </div>
-  </div>
-
-  <!-- Hadith Display Card -->
-  <div class="hadith-display-card">
-    <h4>ตัวบทหะดีษอ้างอิง</h4>
-    <div class="hadith-arabic" id="hadith-ar" lang="ar" dir="rtl"></div>
-    <div class="hadith-thai" id="hadith-th"></div>
-  </div>
-
-  <!-- Flowchart Visualizer -->
-  <div class="isnad-visualizer">
-    <div class="visualizer-title">แผนผังการสืบลำดับสายรายงานหะดีษ (คลิกป้ายผู้รายงานเพื่ออ่านประวัติโดยละเอียด)</div>
-    <div class="node-list" id="nodes-container">
+  <!-- Narrator Selection Panel -->
+  <div class="narrator-selector-section">
+    <h3>เลือกนักรายงานหะดีษเพื่อวิเคราะห์โครงข่ายและคำวิจารณ์</h3>
+    <div class="selector-grid" id="selector-grid">
       <!-- Generated dynamically -->
     </div>
+  </div>
 
-    <!-- Final Hadith Grade Box -->
-    <div class="final-rating-box" id="final-rating-box">
-      <!-- Generated dynamically -->
+  <!-- Visual Network Map -->
+  <div class="critique-section-header">โครงข่ายการส่งผ่านสายรายงาน (Transmission Network)</div>
+  <div class="network-container">
+    
+    <div class="network-column">
+      <div class="network-column-title">ชูยูค (อาจารย์ผู้สอน)</div>
+      <div class="network-column" id="teachers-col">
+        <!-- Dynamic cards -->
+      </div>
+    </div>
+
+    <div class="network-arrow">
+      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+      </svg>
+    </div>
+
+    <div class="network-column">
+      <div class="network-column-title">ผู้รายงานที่กำลังศึกษา</div>
+      <div id="center-col">
+        <!-- Dynamic card -->
+      </div>
+    </div>
+
+    <div class="network-arrow">
+      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+      </svg>
+    </div>
+
+    <div class="network-column">
+      <div class="network-column-title">รุวาตอันฮุ (ศิษย์ผู้บันทึกต่อ)</div>
+      <div class="network-column" id="students-col">
+        <!-- Dynamic cards -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Critique Section -->
+  <div class="critique-section">
+    <div class="critique-section-header">การประเมินสถานะในตำราญัรห์วะตะอ์ดีล (Jarh wa al-Ta'dil)</div>
+    <div class="critique-grid">
+      
+      <div class="critique-column">
+        <div class="network-column-title" style="text-align: left; color: #059669;">คำรับรองและการยกย่อง (Ta'dil - เชิงบวก)</div>
+        <div class="critique-column" id="ta-dil-col">
+          <!-- Dynamic cards -->
+        </div>
+      </div>
+
+      <div class="critique-column">
+        <div class="network-column-title" style="text-align: left; color: #dc2626;">ข้อท้วงติงและข้อวิจารณ์ (Jarh - เชิงลบ)</div>
+        <div class="critique-column" id="jarh-col">
+          <!-- Dynamic cards -->
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -540,12 +533,6 @@ html, body {
         <div class="drawer-section-title">ปีที่เสียชีวิต</div>
         <div class="drawer-data-item" id="d-death">ฮ.ศ. - / ค.ศ. -</div>
       </div>
-      <div class="drawer-section">
-        <div class="drawer-section-title">การประเมินสถานะในตำราญัรห์วะตะอ์ดีล</div>
-        <div id="d-evals">
-          <!-- Generated dynamically -->
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -553,393 +540,469 @@ html, body {
 <div id="footer-placeholder"></div>
 <script src="../../main.js"></script>
 <script>
-/* ─── Hadith & Isnad Database ─── */
-const HADITH_DB = [
+/* ─── Scholar Reference Database ─── */
+const SCHOLAR_DB = {
+  // Teachers / Students Bios
+  ata_bin_abi_rabah: {
+    nameTh: "อะฏออ์ อิบนุ อบีรอบาห์ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "عطاء بن أبي رباح",
+    death: "เสียชีวิตปี ฮ.ศ. 114 / ค.ศ. 732",
+    gen: "ตาบิอีนรุ่นใหญ่",
+    bio: "ปราชญ์ฟิกฮ์และมุฟตีผู้ยิ่งใหญ่แห่งมักกะฮ์ เป็นลูกศิษย์สายตรงของเศาะหาบะฮ์หลายท่าน เช่น ท่านอับดุลลอฮ์ อิบนุ อับบาส ได้รับการยอมรับด้านความสัตย์จริงและสายรายงานสูงสุด"
+  },
+  yazid_bin_abi_habib: {
+    nameTh: "ยะซีด อิบนุ อบีหะบีบ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "يزيد بن أبي حبيب",
+    death: "เสียชีวิตปี ฮ.ศ. 128 / ค.ศ. 745",
+    gen: "ตาบิอีนรุ่นกลาง",
+    bio: "นักปราชญ์นิติศาสตร์และผู้รายงานหะดีษคนสำคัญคนแรกของอียิปต์ เป็นปราชญ์ที่มีความเที่ยงธรรมและเป็นเสาหลักวิชาการแห่งแอฟริกาเหนือ"
+  },
+  amr_bin_al_harith: {
+    nameTh: "อัมร์ อิบนุ อัลหาริษ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "عمرو بن الحارث",
+    death: "เสียชีวิตปี ฮ.ศ. 147 / ค.ศ. 764",
+    gen: "ตาบิอิตตาบิอีน",
+    bio: "ปราชญ์หะดีษชั้นนำแห่งอียิปต์ เป็นผู้รวบรวมที่มีสายรายงานแม่นยำ อบูกร็อต ปราชญ์หะดีษยกย่องในด้านการท่องจำ"
+  },
+  ibn_al_mubarak: {
+    nameTh: "อับดุลลอฮ์ อิบนุ อัลมุบาร็อก เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "عبد الله بن المبارك",
+    death: "เสียชีวิตปี ฮ.ศ. 181 / ค.ศ. 797",
+    gen: "ตาบิอิตตาบิอีนรุ่นใหญ่",
+    bio: "มหาปราชญ์ผู้จดจำตำราหะดีษ ได้รับฉายาเป็นแบบอย่างความสมบูรณ์ในทุกด้าน สายรายงานที่ท่านคัดลอกจากอิบนุละฮีอะฮ์ถือว่าเชื่อถือได้เนื่องจากคัดลอกก่อนคลังหนังสือเสียหาย"
+  },
+  ibn_wahb: {
+    nameTh: "อับดุลลอฮ์ อิบนุ วะฮับ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "عبد الله بن وهب",
+    death: "เสียชีวิตปี ฮ.ศ. 197 / ค.ศ. 812",
+    gen: "ตาบิอิตตาบิอีน",
+    bio: "ศิษย์เอกผู้สัตย์จริงของอิหม่ามมาลิกและอิบนุละฮีอะฮ์ บันทึกหะดีษจำนวนมากในอียิปต์และเป็นเสาหลักวิชาการหะดีษ"
+  },
+  qutaybah_bin_said: {
+    nameTh: "กุตัยบะฮ์ อิบนุ สะอีด เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "قتيبة بن سعيد",
+    death: "เสียชีวิตปี ฮ.ศ. 240 / ค.ศ. 854",
+    gen: "ตาบิอิตตาบิอีนรุ่นเล็ก",
+    bio: "ปราชญ์หะดีษอาวุโสแห่งแคว้นคุรอซาน ผู้เป็นอาจารย์ของอิหม่ามอัลบุคอรีย์และมุสลิม รายงานหะดีษจากปราชญ์อียิปต์จำนวนมาก"
+  },
+  qatadah: {
+    nameTh: "ก่อตาดะฮ์ อิบนุ ดิอามะฮ์ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "قتادة بن دعامة",
+    death: "เสียชีวิตปี ฮ.ศ. 117 / ค.ศ. 735",
+    gen: "ตาบิอีนรุ่นใหญ่",
+    bio: "อัจฉริยะปราชญ์ตาบิอีนแห่งเมืองบัสเราะฮ์ มีชื่อเสียงอย่างลือเลื่องในด้านความจำเสมือนบันทึกและทักษะภาษาศาสตร์คลาสสิก"
+  },
+  amr_bin_dinar: {
+    nameTh: "อัมร์ อิบนุ ดินาร เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "عمرو بن دينار",
+    death: "เสียชีวิตปี ฮ.ศ. 126 / ค.ศ. 743",
+    gen: "ตาบิอีนรุ่นใหญ่",
+    bio: "ปราชญ์มุฟตีผู้ยิ่งใหญ่แห่งมักกะฮ์ มีสายรายงานหะดีษที่เข้มแข็งและเที่ยงตรงมากที่สุดท่านหนึ่ง"
+  },
+  abu_ishaq: {
+    nameTh: "อบูอิสฮาก อัซซะบีอีย์ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "أبو إسحاق السبيعي",
+    death: "เสียชีวิตปี ฮ.ศ. 127 / ค.ศ. 744",
+    gen: "ตาบิอีนรุ่นกลาง",
+    bio: "ปราชญ์หะดีษอาวุโสแห่งกูฟะฮ์ เป็นจุดรวบรวมสายรายงานหลักทางนิติศาสตร์ในอิรัก"
+  },
+  sufyan_ath_thawri: {
+    nameTh: "สุฟยาน อัษเษารีย์ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "سفيان الثوري",
+    death: "เสียชีวิตปี ฮ.ศ. 161 / ค.ศ. 778",
+    gen: "ตาบิอิตตาบิอีน",
+    bio: "มหาปราชญ์ผู้จดจำตำราหะดีษ ได้รับสมญาเป็นประมุขแห่งผู้ศรัทธาในวิชาหะดีษ และเป็นเสาหลักการวิเคราะห์ฟิกฮ์"
+  },
+  yahya_al_qattan: {
+    nameTh: "ยะห์ยา อิบนุ สะอีด อัลก็อฏฏอน เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "يحيى بن سعيد القطان",
+    death: "เสียชีวิตปี ฮ.ศ. 198 / ค.ศ. 813",
+    gen: "ตาบิอิตตาบิอีนรุ่นใหญ่",
+    bio: "อัครปราชญ์ผู้ตรวจสอบคัดกรองสายรายงานคนสำคัญของโลกอิสลาม มีความเข้มงวดสูงสุดในวิชาญัรห์วะตะอ์ดีล"
+  },
+  ibn_mahdi: {
+    nameTh: "อับดุรเราะห์มาน อิบนุ มะฮ์ดีย์ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "عبد الرحمن بن مهدي",
+    death: "เสียชีวิตปี ฮ.ศ. 198 / ค.ศ. 813",
+    gen: "ตาบิอิตตาบิอีนรุ่นใหญ่",
+    bio: "เสาหลักปราชญ์หะดีษแห่งบัสเราะฮ์ เป็นคู่หูวิชาการกับท่านอัลก็อฏฏอน ได้รับการรับรองด้านความจำและการวิเคราะห์"
+  },
+  ibn_shihab_al_zuhri: {
+    nameTh: "อิบน์ ชิฮาบ อัซซุฮรีย์ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "ابن شهاب الزهري",
+    death: "เสียชีวิตปี ฮ.ศ. 124 / ค.ศ. 741",
+    gen: "ตาบิอีนรุ่นเล็ก",
+    bio: "ผู้บุกเบิกการจดบันทึกและรวบรวมหะดีษเป็นระบบคนแรกตามพระบัญชาเคาะลีฟะฮ์ เป็นเสาหลักแห่งความมั่นคงของหะดีษมะดีนะฮ์"
+  },
+  asim_bin_umar: {
+    nameTh: "อาศิม อิบนุ อุมัร เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "عاصم بن عمر",
+    death: "เสียชีวิตปี ฮ.ศ. 120 / ค.ศ. 738",
+    gen: "ตาบิอีนรุ่นกลาง",
+    bio: "ปราชญ์ผู้รายงานประวัติศาสตร์และการรบ เป็นหลานชายของเคาะลีฟะฮ์อุมัร ได้รับการยอมรับด้านความสัตย์จริง"
+  },
+  nawfal_bin_mushim: {
+    nameTh: "เนาฟัล อิบนุ มุซาหิม เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "نوفل بن مساحق",
+    death: "เสียชีวิตปี ฮ.ศ. 130 / ค.ศ. 747",
+    gen: "ตาบิอีนรุ่นกลาง",
+    bio: "นักรายงานหะดีษที่มีความมั่นคงระดับสูงของแคว้นชาม ได้รับความไว้วางใจจากเคาะลีฟะฮ์หลายท่าน"
+  },
+  yahya_bin_said: {
+    nameTh: "ยะห์ยา อิบนุ สะอีด อัลอันศอรีย์ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "يحيى بن سعيد الأنصاري",
+    death: "เสียชีวิตปี ฮ.ศ. 143 / ค.ศ. 760",
+    gen: "ตาบิอีนรุ่นเล็ก",
+    bio: "ผู้พิพากษาแห่งมะดีนะฮ์ เป็นผู้รักษาหะดีษที่เปี่ยมจริยธรรมและคัดกรองสายรายงานอย่างเที่ยงตรง"
+  },
+  sufyan_bin_uyaynah: {
+    nameTh: "สุฟยาน อิบนุ อุยัยนะฮ์ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "سفيان بن عيينة",
+    death: "เสียชีวิตปี ฮ.ศ. 198 / ค.ศ. 814",
+    gen: "ตาบิอิตตาบิอีนรุ่นใหญ่",
+    bio: "มหาปราชญ์หะดีษแห่งฮิญาซ บันทึกตำราสายรายงานมากมายจากแคว้นมักกะฮ์ เป็นศิษย์สายตรงของอัซซุฮรีย์"
+  },
+  ibn_hisham: {
+    nameTh: "อับดุลมะลิก อิบนุ ฮิชาม เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "ابن هشام",
+    death: "เสียชีวิตปี ฮ.ศ. 218 / ค.ศ. 833",
+    gen: "ผู้สืบทอดตำรา",
+    bio: "ปราชญ์ผู้จดบันทึกและสืบทอดตำราประวัตินบีของอิบนุอิสหาก ซึ่งนำมาขัดเกลาใหม่จนกลายเป็น <strong>สิเราะฮ์ อิบนุ ฮิชาม</strong> ที่มีชื่อเสียงที่สุด"
+  },
+  hammad_bin_abi_sulaiman: {
+    nameTh: "หัมมาด อิบนุ อบีสุลัยมาน เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "حماد بن أبي سليمان",
+    death: "เสียชีวิตปี ฮ.ศ. 120 / ค.ศ. 738",
+    gen: "ตาบิอีนรุ่นกลาง",
+    bio: "ปราชญ์ฟิกฮ์ผู้ยิ่งใหญ่แห่งกูฟะฮ์ เป็นอาจารย์หลักที่ประสาทวิชานิติศาสตร์ให้แก่อิหม่ามอบูหะนีฟะฮ์เป็นเวลาเกือบยี่สิบปี"
+  },
+  abu_yusuf: {
+    nameTh: "กอฎี อบูยูสุฟ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "أبو يوسف",
+    death: "เสียชีวิตปี ฮ.ศ. 182 / ค.ศ. 798",
+    gen: "ตาบิอิตตาบิอีน",
+    bio: "ยะอ์กูบ อิบนุ อิบรอฮีม อัครศิษย์เอกของอบูหะนีฟะฮ์ ได้ดำรงตำแหน่งเป็นผู้พิพากษาสูงสุดของรัฐอิสลาม มีบทบาทสำคัญในการบันทึกและเผยแผ่ฟิกฮ์"
+  },
+  muhammad_al_shaybani: {
+    nameTh: "อิหม่ามมุสลิม อิบนุ อัลหะซัน อัลชัยบานีย์ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "محمد بن الحسن الشيباني",
+    death: "เสียชีวิตปี ฮ.ศ. 189 / ค.ศ. 805",
+    gen: "ตาบิอิตตาบิอีน",
+    bio: "หนึ่งในศิษย์คนสำคัญผู้รวบรวมประมวลหลักฟิกฮ์หะนะฟีย์อย่างเป็นลายลักษณ์อักษร เป็นผู้มีความแม่นยำในการวิเคราะห์และจัดหมวดนิติศาสตร์"
+  }
+};
+
+/* ─── Main Narrator Database ─── */
+const NARRATOR_DB = [
   {
-    title: "หะดีษว่าด้วยการตั้งเจตนา (อินนะมัล อะอ์มาลุ บินนิยยาต)",
-    ar: "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى، فَمَنْ كَانَتْ هِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ فَهِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ",
-    th: "“แท้จริงการงานทั้งหลายนั้นขึ้นอยู่กับการตั้งเจตนา และแท้จริงสำหรับทุกคนนั้นจะได้รับตามที่เขาได้ตั้งเจตนาไว้ ดังนั้นผู้ใดก็ตามที่การฮิจเราะฮ์ของเขาเป็นไปเพื่ออัลลอฮ์และศาสนทูตของพระองค์ การฮิจเราะฮ์ของเขาก็จะเป็นไปเพื่ออัลลอฮ์และศาสนทูตของพระองค์” (บันทึกโดย อัลบุคอรีย์ และ มุสลิม)",
-    grade: "เศาะหีหฺ (Sahih)",
-    gradeClass: "sahih",
-    narrators: [
+    id: "ibn_lahiah",
+    nameTh: "อับดุลลอฮ์ อิบนุ ละฮีอะฮ์ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "عبد الله بن لهيعة",
+    enName: "Abdullah ibn Lahiah",
+    death: "เสียชีวิตปี ฮ.ศ. 174 / ค.ศ. 790",
+    grade: "เฏาะอีฟ (อ่อนแอ / มีเงื่อนไข)",
+    gradeClass: "badge-dhaif",
+    bio: "อับดุลลอฮ์ อิบนุ ละฮีอะฮ์ อับดุรเราะห์มาน เป็นนักรายงานหะดีษและผู้พิพากษา (กอฎี) ประจำดินแดนอียิปต์ ตำราของท่านเสียหายทั้งหมดในอัคคีภัยที่เผาไหม้บ้านเรือนของท่านเมื่อปี ฮ.ศ. 170 ส่งผลให้ความจำของท่านคลาดเคลื่อนนับแต่นั้น ปราชญ์หะดีษจึงเลือกรับรองเฉพาะสายรายงานที่จดบันทึกจากท่านก่อนเหตุการณ์ไฟไหม้ หรือรายงานผ่านศิษย์เฉพาะกลุ่ม เช่น อับดุลลอฮ์ อิบนุ อัลมุบาร็อก และอับดุลลอฮ์ อิบนุ วะฮับ ที่มีความเที่ยงตรง",
+    teachers: ["ata_bin_abi_rabah", "yazid_bin_abi_habib", "amr_bin_al_harith"],
+    students: ["ibn_al_mubarak", "ibn_wahb", "qutaybah_bin_said"],
+    tadil: [
       {
-        id: "prophet",
-        gen: "บรมศาสดา",
-        nameTh: "ท่านนบีมุหัมมัด ﷺ",
-        nameAr: "محمد رسول الله ﷺ",
-        death: "เสียชีวิตปี ฮ.ศ. 11 / ค.ศ. 632",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "ศาสนทูตคนสุดท้ายของอัลลอฮ์ ซุบหานะฮูวะตะอาลา ผู้รับวะหีย์และเป็นบ่อเกิดแห่งพระวจนะ (หะดีษ)",
-        evals: [
-          { scholar: "คัมภีร์อัลกุรอาน", rating: "สัจธรรมสูงสุด" }
-        ]
+        scholar: "อับดุลลอฮ์ อิบนุ อัลมุบาร็อก (เสียชีวิตปี ฮ.ศ. 181 / ค.ศ. 797)",
+        quote: "ในเรื่องพฤติกรรมและการรักษาสัจจะนั้น เขาเป็นผู้มีความเที่ยงธรรมและน่าเคารพยิ่ง และสายรายงานที่ผมจดบันทึกมาจากเขาถือว่าเกิดขึ้นก่อนเกิดเพลิงไหม้"
       },
       {
-        id: "umar",
-        gen: "เศาะหาบะฮ์",
-        nameTh: "อุมัร อิบนุ อัลค็อฏฏอบ เราะฎิยัลลอฮุอันฮุ",
-        nameAr: "عمر بن الخطاب",
-        death: "เสียชีวิตปี ฮ.ศ. 23 / ค.ศ. 644",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "อุมัร อิบนุ อัลค็อฏฏอบ เคาะลีฟะฮ์ผู้ทรงธรรมท่านที่สอง เป็นแบบอย่างด้านความสัตย์จริงและนิติศาสตร์อิสลาม เศาะหาบะฮ์ทั้งหมดได้รับสถานะเป็นธรรมชนผู้น่าเชื่อถือสูงสุด (อัลอะดาละฮ์) ตามมติเอกฉันท์",
-        evals: [
-          { scholar: "นักวิชาการซุนนีย์", rating: "อัศศิฏดีกีย์ (สัจธรรมสูงสุด)" }
-        ]
+        scholar: "อะหมัด อิบนุ หันบัล (เสียชีวิตปี ฮ.ศ. 241 / ค.ศ. 855)",
+        quote: "ผู้ใดก็ตามที่รายงานหะดีษจากอิบนุละฮีอะฮ์โดยผ่านผู้จดบันทึกรุ่นเก่าที่คัดลอกไว้ก่อนปี ฮ.ศ. 170 ถือว่าสายรายงานนั้นเศาะหีหฺและน่าเชื่อถือ"
       },
       {
-        id: "alqamah",
-        gen: "ตาบิอีนรุ่นใหญ่",
-        nameTh: "อัลเกาะมะฮ์ อิบนุ วักกอส เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "علقمة بن وقاص",
-        death: "เสียชีวิตปี ฮ.ศ. 80 / ค.ศ. 699",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "ปราชญ์ตาบิอีนอาวุโสแห่งนครมะดีนะฮ์ ได้รับการยอมรับอย่างกว้างขวางว่าเป็นผู้จดจำหะดีษได้อย่างแม่นยำและเที่ยงตรง",
-        evals: [
-          { scholar: "อิบนุ หะญัร", rating: "ศิเกาะฮ์ (น่าเชื่อถือสูงสุด)" },
-          { scholar: "อัลดะฮะบีย์", rating: "ศิเกาะฮ์ (น่าเชื่อถือ)" }
-        ]
+        scholar: "ยะห์ยา อิบนุ มะอีน (เสียชีวิตปี ฮ.ศ. 233 / ค.ศ. 848)",
+        quote: "เขาเป็นผู้มีความสัตย์จริงโดยกมลสันดาน เป็นแบบอย่างที่ดีสำหรับชาวอียิปต์ในยุคของเขา"
+      }
+    ],
+    jarh: [
+      {
+        scholar: "อิบนุ หะญัร อัลอัสเกาะลานีย์ (เสียชีวิตปี ฮ.ศ. 852 / ค.ศ. 1449)",
+        quote: "สถานะเป็นเศาะดูก (สัตย์จริง) แต่ทว่าระดับความจำและความแม่นยำของเขาปนเปกันโดยสิ้นเชิงหลังจากหนังสือและบันทึกส่วนตัวถูกไฟไหม้ใหญ่"
       },
       {
-        id: "muhammad_taymi",
-        gen: "ตาบิอีนรุ่นกลาง",
-        nameTh: "มุหัมมัด อิบนุ อิบรอฮีม อัลตัยมี เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "محمد بن إبراهيم التيمي",
-        death: "เสียชีวิตปี ฮ.ศ. 120 / ค.ศ. 738",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "นักรายงานหะดีษคนสำคัญผู้เป็นทายาททางวิชาการของเศาะหาบะฮ์หลายท่าน รายงานหะดีษเรื่องเหนียตนี้เพียงผู้เดียวจากอัลเกาะมะฮ์",
-        evals: [
-          { scholar: "ยะห์ยา อิบนุ มะอีน", rating: "ศิเกาะฮ์ (น่าเชื่อถือ)" },
-          { scholar: "อบูหาติม", rating: "ศิเกาะฮ์ ศอลิหฺ (ดีเลิศ)" }
-        ]
+        scholar: "ยะห์ยา อิบนุ มะอีน (เสียชีวิตปี ฮ.ศ. 233 / ค.ศ. 848)",
+        quote: "ในเชิงท่องจำเดี่ยวเขาอ่อนแอ และหะดีษที่เขารายงานจากบันทึกที่เขียนขึ้นใหม่หลังไฟไหม้ไม่สามารถนำมาใช้อ้างอิงได้"
       },
       {
-        id: "yahya_ansari",
-        gen: "ตาบิอีนรุ่นเล็ก",
-        nameTh: "ยะห์ยา อิบนุ สะอีด อัลอันศอรีย์ เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "يحيى بن سعيد الأنصاري",
-        death: "เสียชีวิตปี ฮ.ศ. 143 / ค.ศ. 760",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "ผู้พิพากษาแห่งมะดีนะฮ์ และปราชญ์นิติศาสตร์ผู้ทรงอิทธิพล หะดีษเรื่องเจตนานี้แผ่ขยายออกสู่โลกอิสลามอย่างกว้างขวางผ่านสายรายงานของท่าน",
-        evals: [
-          { scholar: "อิหม่ามอะหมัด", rating: "ศิเกาะฮ์ ษะบัต (น่าเชื่อถือและมั่นคงที่สุด)" },
-          { scholar: "อันนะซาอี", rating: "ศิเกาะฮ์ (น่าเชื่อถือสูงสุด)" }
-        ]
-      },
-      {
-        id: "sufyan",
-        gen: "ตาบิอิตตาบิอีน",
-        nameTh: "สุฟยาน อัษเษารีย์ เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "سفيان الثوري",
-        death: "เสียชีวิตปี ฮ.ศ. 161 / ค.ศ. 778",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "ผู้มีตำแหน่งเป็น “อะมีรุลมุอ์มินีน ฟิลหะดีษ” (ประมุขแห่งผู้ศรัทธาในวิชาหะดีษ) หนึ่งในนักจำและปราชญ์เทววิทยาผู้ยิ่งใหญ่ที่สุดในประวัติศาสตร์",
-        evals: [
-          { scholar: "อิบนุ มะอีน", rating: "ประมุขแห่งหะดีษ" },
-          { scholar: "ปราชญ์ร่วมสมัย", rating: "ศิเกาะฮ์ ษะบัต อัลมะมูน" }
-        ]
-      },
-      {
-        id: "bukhari",
-        gen: "ผู้รวบรวมหะดีษ",
-        nameTh: "อิหม่ามอัลบุคอรีย์ เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "الإمام البخاري",
-        death: "เสียชีวิตปี ฮ.ศ. 256 / ค.ศ. 870",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "มุหัมมัด อิบนุ อิสมาอีล อัลบุคอรีย์ ผู้ประพันธ์ตำรา <strong>เศาะหีหฺ อัลบุคอรีย์</strong> ซึ่งได้รับการยอมรับอย่างเป็นเอกฉันท์ว่าเป็นหนังสือที่ถูกต้องที่สุดถัดจากคัมภีร์อัลกุรอาน",
-        evals: [
-          { scholar: "ประชาชาติอิสลาม", rating: "เอกฉันท์ด้านความสัจจริงสูงสุด" }
-        ]
+        scholar: "อบูหาติม อัรรอซี (เสียชีวิตปี ฮ.ศ. 277 / ค.ศ. 890)",
+        quote: "รายงานเดี่ยวของเขาไม่มีน้ำหนักเพียงพอที่จะนำมาใช้เป็นหลักฐานในการบัญญัติข้อชี้ขาดทางศาสนา"
       }
     ]
   },
   {
-    title: "หะดีษว่าด้วยความสมบูรณ์ของธรรม (หะดีษญิบรีล)",
-    ar: "فَأَخْبِرْنِي عَنِ الإِيمَانِ قَالَ أَنْ تُؤْمِنَ بِاللَّهِ وَمَلائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ وَالْيَوْمِ الآخِرِ وَتُؤْمِنَ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ",
-    th: "“ดังนั้นขอท่านได้โปรดบอกฉันเกี่ยวกับอีหม่าน (การศรัทธา) ท่านนบีกล่าวว่า: คือการที่ท่านศรัทธาต่ออัลลอฮ์, บรรดามลาอิกะฮ์ของพระองค์, บรรดาคัมภีร์ของพระองค์, บรรดารสูลของพระองค์, วันอาคิเราะฮ์ และศรัทธาต่อกฎกำหนดสภาวะการณ์ทั้งที่ดีและที่ไม่ดี” (บันทึกโดย มุสลิม)",
-    grade: "เศาะหีหฺ (Sahih)",
-    gradeClass: "sahih",
-    narrators: [
+    id: "shubah",
+    nameTh: "ชุอ์บะฮ์ อิบนุ อัลหัจญาจ เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "شعبة بن الحجاج",
+    enName: "Shu'bah ibn al-Hajjaj",
+    death: "เสียชีวิตปี ฮ.ศ. 160 / ค.ศ. 776",
+    grade: "ศิเกาะฮ์ ษะบัต (น่าเชื่อถือสูงสุด)",
+    gradeClass: "badge-thiqah",
+    bio: "ชุอ์บะฮ์ อิบนุ อัลหัจญาจ อบูกุศ็อยมะฮ์ มหาปราชญ์หะดีษแห่งเมืองบัสเราะฮ์ ได้รับสมญาจากประชาชาติอิสลามว่าเป็น “อะมีรุลมุอ์มินีน ฟิลหะดีษ” (ประมุขแห่งผู้ศรัทธาในวิชาหะดีษ) ท่านเป็นผู้บุกเบิกและวางรากฐานการตรวจสอบประวัติพฤติกรรมและการวิพากษ์ผู้รายงาน (ญัรห์วะตะอ์ดีล) อย่างจริงจัง คัดค้านผู้รายงานที่โกหกหรือบกพร่องอย่างเด็ดขาดที่สุดในยุคตาบิอีน",
+    teachers: ["qatadah", "amr_bin_dinar", "abu_ishaq"],
+    students: ["sufyan_ath_thawri", "yahya_al_qattan", "ibn_mahdi"],
+    tadil: [
       {
-        id: "prophet",
-        gen: "บรมศาสดา",
-        nameTh: "ท่านนบีมุหัมมัด ﷺ",
-        nameAr: "محمد رسول الله ﷺ",
-        death: "เสียชีวิตปี ฮ.ศ. 11 / ค.ศ. 632",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "ศาสนทูตคนสุดท้ายของอัลลอฮ์ ซุบหานะฮูวะตะอาลา ผู้ตอบคำถามต่อมลาอิกะฮ์ญิบรีลในรูปร่างมนุษย์ต่อหน้าบรรดาเศาะหาบะฮ์",
-        evals: [
-          { scholar: "คัมภีร์อัลกุรอาน", rating: "สัจธรรมสูงสุด" }
-        ]
+        scholar: "สุฟยาน อัษเษารีย์ (เสียชีวิตปี ฮ.ศ. 161 / ค.ศ. 778)",
+        quote: "ชุอ์บะฮ์คือประมุขแห่งการจดจำหะดีษและเป็นเสาหลักแห่งความมั่นคงของสายรายงานในสากลโลก"
       },
       {
-        id: "umar",
-        gen: "เศาะหาบะฮ์",
-        nameTh: "อุมัร อิบนุ อัลค็อฏฏอบ เราะฎิยัลลอฮุอันฮุ",
-        nameAr: "عمر بن الخطاب",
-        death: "เสียชีวิตปี ฮ.ศ. 23 / ค.ศ. 644",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "เคาะลีฟะฮ์ผู้ทรงธรรมท่านที่สอง ผู้เห็นเหตุการณ์ในหะดีษญิบรีลนี้และบอกเล่าสายรายงานให้คนรุ่นถัดไปฟัง",
-        evals: [
-          { scholar: "นักวิชาการซุนนีย์", rating: "เอกฉันท์ด้านความสัจจริงสูงสุด" }
-        ]
+        scholar: "อิหม่ามอัชชาฟิอีย์ (เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820)",
+        quote: "หากปราศจากความพยายามและการตรวจสอบของชุอ์บะฮ์ในแคว้นอิรัก วิชาหะดีษและความถูกต้องในแผ่นดินนั้นคงจะเลือนหายไปอย่างไร้ร่องรอย"
       },
       {
-        id: "ibn_umar",
-        gen: "เศาะหาบะฮ์รุ่นเยาว์",
-        nameTh: "อับดุลลอฮ์ อิบนุ อุมัร เราะฎิยัลลอฮุอันฮุ",
-        nameAr: "عبد الله بن عمر",
-        death: "เสียชีวิตปี ฮ.ศ. 73 / ค.ศ. 693",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "บุตรชายของท่านอุมัร หนึ่งในห้าผู้รายงานหะดีษมากที่สุดในประวัติศาสตร์ และเป็นผู้ปกป้องจริยวัตรอันถูกต้องตามแบบอย่างท่านนบี",
-        evals: [
-          { scholar: "เอกฉันท์ประชาชาติ", rating: "เศาะหาบะฮ์ผู้น่าเชื่อถือสูงสุด" }
-        ]
+        scholar: "อะหมัด อิบนุ หันบัล (เสียชีวิตปี ฮ.ศ. 241 / ค.ศ. 855)",
+        quote: "เขาคือบุรุษที่ประเสริฐที่สุดในการจดจำคำ และมีความจริงใจสูงสุดในการรักษาความบริสุทธิ์ของศาสนธรรม"
+      }
+    ],
+    jarh: [
+      {
+        scholar: "ปราชญ์ร่วมสมัยในกูฟะฮ์",
+        quote: "ในบางครั้งเขาแสดงความเข้มงวดในการตรวจสอบและประเมินผู้รายงานหะดีษมากเกินไป จนแทบจะปฏิเสธสายรายงานเนื่องจากข้อบกพร่องทางพฤติกรรมเพียงเล็กน้อย"
       },
       {
-        id: "yahya_yamar",
-        gen: "ตาบิอีนรุ่นใหญ่",
-        nameTh: "ยะห์ยา อิบนุ ยะอ์มัร เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "يحيى بن يعمر",
-        death: "เสียชีวิตปี ฮ.ศ. 90 / ค.ศ. 708",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "ผู้พิพากษาแห่งเมืองมัรว์ (Merv) เป็นปราชญ์ผู้เชี่ยวชาญด้านภาษาศาสตร์คลาสสิกและอารยธรรมวิชาการหะดีษต้นศตวรรษ",
-        evals: [
-          { scholar: "อิบนุ หิบบาน", rating: "ศิเกาะฮ์ มะอ์มูน (น่าเชื่อถือและปลอดภัย)" },
-          { scholar: "อัลดะฮะบีย์", rating: "ศิเกาะฮ์ (น่าเชื่อถือสูงสุด)" }
-        ]
-      },
-      {
-        id: "kahmas",
-        gen: "ตาบิอิตตาบิอีน",
-        nameTh: "กะฮ์มัส อิบนุ อัลหะซัน เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "กهمس بن الحسن",
-        death: "เสียชีวิตปี ฮ.ศ. 149 / ค.ศ. 766",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "ปราชญ์และผู้ถือศีลผู้โด่งดังแห่งเมืองบัสเราะฮ์ ได้รับการประเมินสถานะในตำรา <strong>ตะฮ์ซีบ อัตตะฮ์ซีบ</strong> ว่ามีความจำที่แม่นยำอย่างยิ่ง",
-        evals: [
-          { scholar: "อิหม่ามอะหมัด", rating: "ศิเกาะฮ์ ษะบัต (มั่นคงอย่างยิ่ง)" },
-          { scholar: "อบูดาวูด", rating: "ศิเกาะฮ์ (น่าเชื่อถือสูงสุด)" }
-        ]
-      },
-      {
-        id: "muslim",
-        gen: "ผู้รวบรวมหะดีษ",
-        nameTh: "อิหม่ามมุสลิม เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "الإمام مسلم",
-        death: "เสียชีวิตปี ฮ.ศ. 261 / ค.ศ. 875",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "มุสลิม อิบนุ อัลหัจญาจ ผู้รวบรวมตำรา <strong>เศาะหีหฺ มุสลิม</strong> ได้นำหะดีษประวัติศาสตร์บทนี้มาบรรจุไว้ในบทแรกของหนังสือเพื่อเปิดบทความเทววิทยาซุนนีย์",
-        evals: [
-          { scholar: "นักวิชาการซุนนีย์", rating: "เอกฉันท์ด้านความสัจจริงสูงสุด" }
-        ]
+        scholar: "อิบนุ หะญัร อัลอัสเกาะลานีย์ (เสียชีวิตปี ฮ.ศ. 852 / ค.ศ. 1449)",
+        quote: "ในบางหะดีษที่เกี่ยวข้องกับพยัญชนะในคำทับศัพท์ที่ไม่คุ้นเคย ท่านอาจจะมีข้อบกพร่องเล็กน้อยแต่มิได้ส่งผลต่อความน่าเชื่อถือหลัก"
       }
     ]
   },
   {
-    title: "หะดีษว่าด้วยการห้ามหลอกลวง (ผู้ใดโกงเราไม่ใช่พวกเรา)",
-    ar: "مَنْ غَشَّنَا فَلَيْسَ مِنَّا",
-    th: "“ผู้ใดก็ตามที่หลอกลวงเรา เขาย่อมไม่ใช่พวกเรา” (บันทึกโดย มุสลิม และ อัตติรมิซีย์)",
-    grade: "เศาะหีหฺ (Sahih)",
-    gradeClass: "sahih",
-    narrators: [
+    id: "ibn_ishaq",
+    nameTh: "มุหัมมัด อิบนุ อิสหาก เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "محمد بن إسحاق",
+    enName: "Muhammad ibn Ishaq",
+    death: "เสียชีวิตปี ฮ.ศ. 151 / ค.ศ. 768",
+    grade: "หะสัน (ดีพอใช้ / ปราชญ์ประวัติศาสตร์)",
+    gradeClass: "badge-saduq",
+    bio: "มุหัมมัด อิบนุ อิสหาก อบูอับดิลลาฮ์ ปราชญ์ประวัติศาสตร์อิสลามผู้ยิ่งใหญ่และอัครผู้รายงานตำราชีวประวัตินบีและการศึกสงคราม (มะฆอซี) ได้รับการวิพากษ์และตรวจสอบอย่างเข้มข้นที่สุดเกี่ยวกับสายรายงานในเรื่องบัญญัติศาสนา (ฮะลาล-ฮะรอม) แต่ได้รับการยอมรับอย่างเอกฉันท์ในฐานะปราชญ์ผู้นำประวัติศาสตร์ชั้นปฐมภูมิ",
+    teachers: ["ibn_shihab_al_zuhri", "asim_bin_umar", "nawfal_bin_mushim"],
+    students: ["yahya_bin_said", "sufyan_bin_uyaynah", "ibn_hisham"],
+    tadil: [
       {
-        id: "prophet",
-        gen: "บรมศาสดา",
-        nameTh: "ท่านนบีมุหัมมัด ﷺ",
-        nameAr: "محمد رسول الله ﷺ",
-        death: "เสียชีวิตปี ฮ.ศ. 11 / ค.ศ. 632",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "ศาสนทูตสุดท้ายผู้ประกาศสิทธิมนุษยชนและการค้าที่ซื่อสัตย์สุจริต ประกาศหะดีษนี้ในตลาดขณะตรวจสอบกองข้าวสาลีเปียกน้ำ",
-        evals: [
-          { scholar: "คัมภีร์อัลกุรอาน", rating: "สัจธรรมสูงสุด" }
-        ]
+        scholar: "อิบน์ ชิฮาบ อัซซุฮรีย์ (เสียชีวิตปี ฮ.ศ. 124 / ค.ศ. 741)",
+        quote: "ตราบใดที่บุรุษผู้นี้ยังมีชีวิตอยู่ วิชาประวัติศาสตร์และการศึกของบรมศาสดาจะยังคงยืนยงและสมบูรณ์ที่สุด"
       },
       {
-        id: "abu_hurayrah",
-        gen: "เศาะหาบะฮ์",
-        nameTh: "อบูฮุร็อยเราะฮ์ เราะฎิยัลลอฮุอันฮุ",
-        nameAr: "أبو هريرة",
-        death: "เสียชีวิตปี ฮ.ศ. 59 / ค.ศ. 679",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "เศาะหาบะฮ์ผู้จดจำและรายงานหะดีษไว้มากที่สุดในประวัติศาสตร์อิสลาม ได้รับการประเมินด้านพฤติกรรมวิชาการระดับสากลว่าเป็นผู้มีความสามารถในการท่องจำสูงสุด",
-        evals: [
-          { scholar: "เอกฉันท์ประชาชาติ", rating: "เศาะหาบะฮ์ผู้รายงานสูงสุด" }
-        ]
+        scholar: "อิหม่ามอัชชาฟิอีย์ (เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820)",
+        quote: "ผู้ใดก็ตามที่ต้องการเป็นนักวิชาการที่ลึกซึ้งในด้านสงครามและประวัติศาสตร์ของบรมศาสดา เขาจำต้องเป็นหนี้ความรู้แก่มุหัมมัด อิบนุ อิสหาก"
       },
       {
-        id: "al_araj",
-        gen: "ตาบิอีนรุ่นใหญ่",
-        nameTh: "อับดุรเราะห์มาน อิบนุ ฮุรมุซ อัลอะอ์ร็อญ เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "الأعرج",
-        death: "เสียชีวิตปี ฮ.ศ. 117 / ค.ศ. 735",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "ศิษย์สายตรงของอบูฮุร็อยเราะฮ์ มีชื่อเสียงอย่างลือเลื่องในด้านหลักภาษาศาสตร์ เทววิทยา และความจำหะดีษอันเฉียบคม",
-        evals: [
-          { scholar: "อบูหาติม", rating: "ศิเกาะฮ์ (น่าเชื่อถือสูงสุด)" },
-          { scholar: "อิบนุ หะญัร", rating: "ศิเกาะฮ์ (น่าเชื่อถือ)" }
-        ]
+        scholar: "ยะห์ยา อิบนุ มะอีน (เสียชีวิตปี ฮ.ศ. 233 / ค.ศ. 848)",
+        quote: "เขาเป็นผู้รายงานหะดีษที่สัจจริง มีความเที่ยงตรง และหะดีษของเขาอยู่ในระดับที่ดีพอจะนำมาประกอบสืบค้น"
+      }
+    ],
+    jarh: [
+      {
+        scholar: "อิหม่ามมาลิก อิบนุ อะนัส (เสียชีวิตปี ฮ.ศ. 179 / ค.ศ. 795)",
+        quote: "เขาเป็นหนึ่งในผู้ลวงโลกที่รายงานตำราโดยไม่มีสายรายงานที่แน่นอน (เนื่องจากความขัดแย้งในประเด็นตระกูลรายงานระหว่างสองปราชญ์)"
       },
       {
-        id: "abu_zinad",
-        gen: "ตาบิอีนรุ่นกลาง",
-        nameTh: "อบูอัซซินาด เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "أبو الزناد",
-        death: "เสียชีวิตปี ฮ.ศ. 130 / ค.ศ. 748",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "อับดุลลอฮ์ อิบนุ ซักวาน (อบูอัซซินาด) นักกฎหมายและปราชญ์อูศูลุลฟิกฮ์แห่งมะดีนะฮ์ ได้รับความไว้วางใจจากปราชญ์รุ่นหลังอย่างเป็นเอกภาพ",
-        evals: [
-          { scholar: "อิบนุ มะอีน", rating: "ศิเกาะฮ์ มะอ์มูน" },
-          { scholar: "อันนะวาวีย์", rating: "ปราชญ์ผู้เชี่ยวชาญด้านหลักนิติศาสตร์" }
-        ]
+        scholar: "อะหมัด อิบนุ หันบัล (เสียชีวิตปี ฮ.ศ. 241 / ค.ศ. 855)",
+        quote: "หะดีษของเขาใช้เป็นหลักฐานเดี่ยวๆ ในการกำหนดข้อชี้ขาดทางนิตินัยฮะลอมฮะลาลไม่ได้ แต่มีน้ำหนักดีเยี่ยมในประวัติศาสตร์และเรื่องเล่าเกร็ดประวัติ"
       },
       {
-        id: "sufyan_uyaynah",
-        gen: "ตาบิอิตตาบิอีน",
-        nameTh: "สุฟยาน อิบนุ อุยัยนะฮ์ เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "سفيان بن عيينة",
-        death: "เสียชีวิตปี ฮ.ศ. 198 / ค.ศ. 814",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "เสาหลักแห่งวิชาหะดีษในนครมักกะฮ์ ได้รับการบันทึกระดับความเสถียรว่ารายงานถูกต้องที่สุดคนหนึ่งในเจเนอเรชัน",
-        evals: [
-          { scholar: "อิหม่ามชาฟิอี", rating: "หากไร้สุฟยานความรู้หะดีษมักกะฮ์คงมอดดับ" },
-          { scholar: "อิบนุ หะญัร", rating: "ศิเกาะฮ์ หะฟีซ อัลคุจญะฮ์" }
-        ]
+        scholar: "ยะห์ยา อิบนุ สะอีด อัลก็อฏฏอน (เสียชีวิตปี ฮ.ศ. 198 / ค.ศ. 813)",
+        quote: "ผมพบข้อบกพร่องในความแม่นยำด้านการบันทึกสายรายงานเฉพาะเจาะจงในบางบทบัญญัตินิตินัย"
+      }
+    ]
+  },
+  {
+    id: "abu_hanifah",
+    nameTh: "อบูหะนีฟะฮ์ นุอ์มาน อิบนุ ษาบิต เราะหิมะฮ์ลุลลอฮ์",
+    nameAr: "أبو حنيفة النعمان",
+    enName: "Abu Hanifah",
+    death: "เสียชีวิตปี ฮ.ศ. 150 / ค.ศ. 767",
+    grade: "ศิเกาะฮ์ฟิกฮ์ / อ่อนแอด้านการรายงานเชิงจำ",
+    gradeClass: "badge-dhaif",
+    bio: "นุอ์มาน อิบนุ ษาบิต ปราชญ์ผู้สถาปนาสำนักนิติศาสตร์หะนะฟีย์ แม้ท่านจะเป็นอัครปราชญ์ผู้ยิ่งใหญ่ด้านนิติศาสตร์อิสลามและการเทียบเคียงตรรกะศาสนา (กิยาส) แต่ในระเบียบวิธีวิชาหะดีษคลาสสิกซึ่งวัดจาก 'ฏ็อบต์ (ความแม่นยำในการท่องจำเดี่ยวและการถ่ายทอดสายพยัญชนะ)' ปราชญ์หะดีษได้วิจารณ์ว่าท่านมีข้อผิดพลาดบ่อยครั้งในการถ่ายทอด ทำให้สถานะการรายงานหะดีษเดี่ยวอยู่ในระดับค่อนข้างอ่อนแอ ทว่าได้รับการยอมรับในระดับสากลด้านคุณธรรมความสัจจริงและความเป็นเสาหลักแห่งกฎหมายอิสลาม",
+    teachers: ["hammad_bin_abi_sulaiman", "ata_bin_abi_rabah"],
+    students: ["abu_yusuf", "muhammad_al_shaybani", "ibn_al_mubarak"],
+    tadil: [
+      {
+        scholar: "อิหม่ามอัชชาฟิอีย์ (เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820)",
+        quote: "มนุษยชาติทุกคนในโลกนี้เมื่อเข้าสู่วิชานิติศาสตร์ (ฟิกฮ์) ล้วนถือเป็นบุตรบุญธรรมที่คอยพึ่งพิงความรู้ของอบูหะนีฟะฮ์ทั้งสิ้น"
       },
       {
-        id: "muslim",
-        gen: "ผู้รวบรวมหะดีษ",
-        nameTh: "อิหม่ามมุสลิม เราะหิมะฮ์ลุลลอฮ์",
-        nameAr: "الإمام مسلم",
-        death: "เสียชีวิตปี ฮ.ศ. 261 / ค.ศ. 875",
-        grade: "ศิเกาะฮ์",
-        gradeClass: "grade-thiqah",
-        bio: "มุสลิม อิบนุ อัลหัจญาจ บันทึกหะดีษนี้ลงใน <strong>เศาะหีหฺ มุสลิม</strong> หมวดว่าด้วยเรื่องจริยศาสตร์ทางธุรกิจการค้า",
-        evals: [
-          { scholar: "ประชาชาติอิสลาม", rating: "เอกฉันท์ด้านความสัจจริงสูงสุด" }
-        ]
+        scholar: "อับดุลลอฮ์ อิบนุ อัลมุบาร็อก (เสียชีวิตปี ฮ.ศ. 181 / ค.ศ. 797)",
+        quote: "อบูหะนีฟะฮ์คือปราชญ์นิติศาสตร์และนักวิเคราะห์กฎเกณฑ์อิสลามที่ยิ่งใหญ่และฉลาดหลักแหลมที่สุดในโลกหล้า"
+      },
+      {
+        scholar: "ยะห์ยา อิบนุ มะอีน (เสียชีวิตปี ฮ.ศ. 233 / ค.ศ. 848)",
+        quote: "เขาเป็นผู้มีความสัตย์จริงสูงสุด ปราศจากการมุสาในทุกคำพูด และเรายอมรับที่จะบันทึกรายงานของเขาในนิติธรรม"
+      }
+    ],
+    jarh: [
+      {
+        scholar: "อัลดะฮะบีย์ (เสียชีวิตปี ฮ.ศ. 748 / ค.ศ. 1348)",
+        quote: "ท่านคือเพชรน้ำเอกด้านการสกัดข้อกฎหมาย ทว่าในส่วนการถ่ายทอดเชิงจำหลักหะดีษเดี่ยวมีความผิดพลาดคลาดเคลื่อนเกิดขึ้นบ่อยครั้งตามเกณฑ์ของปราชญ์หะดีษ"
+      },
+      {
+        scholar: "อันนะซาอี (เสียชีวิตปี ฮ.ศ. 303 / ค.ศ. 915)",
+        quote: "เขามิใช่ปราชญ์ที่มีความแม่นยำด้านการบันทึกเชิงท่องจำในระบบสืบสายหะดีษเชิงโครงสร้างเดี่ยว"
+      },
+      {
+        scholar: "อิบนุ อะดี (เสียชีวิตปี ฮ.ศ. 365 / ค.ศ. 976)",
+        quote: "ความบกพร่องในการจำของเขาปรากฏในกรณีรายงานหะดีษที่มีการถ่ายทอดเป็นสายสั้นแบบไม่มีผู้รายงานอื่นร่วมยืนยัน"
       }
     ]
   }
 ];
 
-/* ─── State Management ─── */
-let activeHadithIndex = 0;
+/* ─── Global State ─── */
+let currentNarratorId = "ibn_lahiah";
 
-/* ─── Tabs Switcher ─── */
-function loadHadith(index) {
-  activeHadithIndex = index;
-  
-  // Highlight active button
-  const buttons = document.querySelectorAll('#selector-bar button');
-  buttons.forEach((btn, idx) => {
-    if (idx === index) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
-  });
+/* ─── Initialization ─── */
+window.addEventListener('DOMContentLoaded', () => {
+  renderSelector();
+  loadNarrator(currentNarratorId);
+});
 
-  const h = HADITH_DB[index];
-  
-  // Update texts
-  document.getElementById('hadith-ar').textContent = h.ar;
-  document.getElementById('hadith-th').textContent = h.th;
-
-  // Build Isnad tree
-  const container = document.getElementById('nodes-container');
+/* ─── Render Selector Panel ─── */
+function renderSelector() {
+  const container = document.getElementById('selector-grid');
   container.innerHTML = '';
-
-  h.narrators.forEach((n, idx) => {
-    // Narrator node card
-    const node = document.createElement('div');
-    node.className = 'narrator-node';
-    node.onclick = () => openDrawer(n);
-    node.setAttribute('role', 'button');
-
-    node.innerHTML = `
-      <div class="node-info-left">
-        <span class="node-gen">${n.gen}</span>
-        <span class="node-name-th">${n.nameTh}</span>
-        <span class="node-name-ar" lang="ar" dir="rtl">${n.nameAr}</span>
-      </div>
-      <div class="node-info-right">
-        <span class="node-death">${n.id === 'prophet' ? 'ฮ.ศ. 11' : n.death.split(' / ')[0].replace('เสียชีวิตปี ', '')}</span>
-        <span class="node-grade-badge ${n.gradeClass}">${n.grade}</span>
-      </div>
+  
+  NARRATOR_DB.forEach(narrator => {
+    const btn = document.createElement('button');
+    btn.className = `btn-select-narrator ${narrator.id === currentNarratorId ? 'active' : ''}`;
+    btn.id = `btn-${narrator.id}`;
+    btn.onclick = () => selectNarrator(narrator.id);
+    
+    btn.innerHTML = `
+      <span class="narrator-name-en">${narrator.enName}</span>
+      <span class="n-card-title" style="margin: 0;">${narrator.nameTh.split(' ')[0]} ${narrator.nameTh.split(' ')[1]}</span>
+      <span class="n-card-death" style="font-size: 11px;">${narrator.death.split(' / ')[0]}</span>
     `;
+    container.appendChild(btn);
+  });
+}
 
-    container.appendChild(node);
+/* ─── Select Narrator Switch ─── */
+function selectNarrator(id) {
+  // Update buttons classes
+  NARRATOR_DB.forEach(narrator => {
+    const btn = document.getElementById(`btn-${narrator.id}`);
+    if (btn) {
+      if (narrator.id === id) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    }
+  });
+  
+  currentNarratorId = id;
+  loadNarrator(id);
+}
 
-    // Link line if not last
-    if (idx < h.narrators.length - 1) {
-      const line = document.createElement('div');
-      line.className = 'node-link-line';
-      container.appendChild(line);
+/* ─── Load Narrator Details into View ─── */
+function loadNarrator(id) {
+  const data = NARRATOR_DB.find(n => n.id === id);
+  if (!data) return;
+
+  // 1. Center Card (Main Narrator)
+  const centerCol = document.getElementById('center-col');
+  centerCol.innerHTML = `
+    <div class="n-card center-narrator" onclick="openDrawerGlobal('${data.id}', 'main')">
+      <span class="n-card-badge ${data.gradeClass}">${data.grade}</span>
+      <span class="n-card-title" style="font-size: 17px; margin-top: 6px;">${data.nameTh}</span>
+      <span class="n-card-ar" style="font-size: 22px;">${data.nameAr}</span>
+      <span class="n-card-death" style="margin-top: 4px;">${data.death}</span>
+    </div>
+  `;
+
+  // 2. Teachers Column (Left)
+  const teachersCol = document.getElementById('teachers-col');
+  teachersCol.innerHTML = '';
+  data.teachers.forEach(tId => {
+    const tData = SCHOLAR_DB[tId];
+    if (tData) {
+      const card = document.createElement('div');
+      card.className = 'n-card';
+      card.onclick = () => openDrawerGlobal(tId, 'secondary');
+      card.innerHTML = `
+        <span class="n-card-badge badge-thiqah">ศิเกาะฮ์ (น่าเชื่อถือ)</span>
+        <span class="n-card-title">${tData.nameTh.replace(' เราะหิมะฮ์ลุลลอฮ์', '')}</span>
+        <span class="n-card-ar">${tData.nameAr}</span>
+        <span class="n-card-death">${tData.death.split(' / ')[0]}</span>
+      `;
+      teachersCol.appendChild(card);
     }
   });
 
-  // Build Final Rating Box
-  const ratingBox = document.getElementById('final-rating-box');
-  ratingBox.innerHTML = `
-    <div class="rating-left">
-      <h5>ผลลัพธ์การตรวจสอบสายรายงาน</h5>
-      <p>${h.title}</p>
-    </div>
-    <div class="rating-badge ${h.gradeClass}">${h.grade}</div>
-  `;
+  // 3. Students Column (Right)
+  const studentsCol = document.getElementById('students-col');
+  studentsCol.innerHTML = '';
+  data.students.forEach(sId => {
+    const sData = SCHOLAR_DB[sId];
+    if (sData) {
+      const card = document.createElement('div');
+      card.className = 'n-card';
+      card.onclick = () => openDrawerGlobal(sId, 'secondary');
+      card.innerHTML = `
+        <span class="n-card-badge badge-thiqah">ศิเกาะฮ์ (น่าเชื่อถือ)</span>
+        <span class="n-card-title">${sData.nameTh.replace(' เราะหิมะฮ์ลุลลอฮ์', '')}</span>
+        <span class="n-card-ar">${sData.nameAr}</span>
+        <span class="n-card-death">${sData.death.split(' / ')[0]}</span>
+      `;
+      studentsCol.appendChild(card);
+    }
+  });
+
+  // 4. Critique - Ta'dil (Positive)
+  const taDilCol = document.getElementById('ta-dil-col');
+  taDilCol.innerHTML = '';
+  data.tadil.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'critique-card ta-dil-item';
+    card.innerHTML = `
+      <div class="critique-meta">${item.scholar.split(' (')[0]} <span>${item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : ''}</span></div>
+      <div class="critique-text">“${item.quote}”</div>
+    `;
+    taDilCol.appendChild(card);
+  });
+
+  // 5. Critique - Jarh (Negative)
+  const jarhCol = document.getElementById('jarh-col');
+  jarhCol.innerHTML = '';
+  data.jarh.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'critique-card jarh-item';
+    card.innerHTML = `
+      <div class="critique-meta">${item.scholar.split(' (')[0]} <span>${item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : ''}</span></div>
+      <div class="critique-text">“${item.quote}”</div>
+    `;
+    jarhCol.appendChild(card);
+  });
 }
 
 /* ─── Drawer Management ─── */
-function openDrawer(narrator) {
-  document.getElementById('d-gen').textContent = narrator.gen;
-  document.getElementById('d-name-th').textContent = narrator.nameTh;
-  document.getElementById('d-name-ar').textContent = narrator.nameAr;
-  document.getElementById('d-bio').textContent = narrator.bio;
-  document.getElementById('d-death').textContent = narrator.death;
+function openDrawerGlobal(id, type) {
+  let data;
+  if (type === 'main') {
+    data = NARRATOR_DB.find(n => n.id === id);
+  } else {
+    data = SCHOLAR_DB[id];
+  }
 
-  const evalsContainer = document.getElementById('d-evals');
-  evalsContainer.innerHTML = '';
+  if (!data) return;
 
-  narrator.evals.forEach(ev => {
-    const row = document.createElement('div');
-    row.className = 'evaluation-row';
-    row.innerHTML = `
-      <span class="eval-scholar">${ev.scholar}</span>
-      <span class="eval-grade">${ev.rating}</span>
-    `;
-    evalsContainer.appendChild(row);
-  });
+  document.getElementById('d-gen').innerText = data.gen || (type === 'main' ? 'ผู้รายงานหลัก' : 'ผู้รายงานหะดีษ');
+  document.getElementById('d-name-th').innerText = data.nameTh;
+  document.getElementById('d-name-ar').innerText = data.nameAr;
+  document.getElementById('d-bio').innerText = data.bio;
+  document.getElementById('d-death').innerText = data.death;
 
-  // Activate drawers
   document.getElementById('drawer-overlay').classList.add('active');
 }
 
 function closeDrawer() {
   document.getElementById('drawer-overlay').classList.remove('active');
 }
-
-/* Initialize page load */
-(function init() {
-  loadHadith(0);
-})();
 </script>
 </body>
 </html>
