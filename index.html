@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Islamic Fiqh Publishing — คลังบทความวิชาการอิสลาม</title>
 <link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+<meta name="theme-color" content="#e3edf7">
 <meta name="description" content="สำนักพิมพ์อิสระที่มุ่งตีพิมพ์บทแปลและบทวิเคราะห์งานวิชาการอิสลามคลาสสิกเป็นภาษาไทย ครอบคลุมนิติศาสตร์ เทววิทยา หะดีษ ประวัติศาสตร์ และวรรณกรรมอิสลาม">
 <meta name="keywords" content="อิสลาม, นิติศาสตร์อิสลาม, ฟิกฮ์, กะลาม, ประวัติศาสตร์อิสลาม, Islamic Fiqh">
 <meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
@@ -233,8 +236,13 @@ body::before {
 .marquee::after  { right: 0; background: linear-gradient(to left,  var(--ink-2), transparent); }
 .marquee-track {
   display: flex; gap: 80px; white-space: nowrap;
-  animation: slide 60s linear infinite;
+  animation: slide 90s linear infinite;
   font-family: var(--arabic); font-size: 42px; color: var(--text-dim);
+}
+@media (max-width: 768px) {
+  .marquee-track {
+    animation-duration: 55s;
+  }
 }
 .marquee-track span { display: inline-flex; align-items: center; gap: 80px; }
 .marquee-track .sep { color: var(--gold); font-family: var(--serif); font-size: 24px; font-style: italic; }
@@ -432,14 +440,17 @@ body::before {
   display: inline-flex; align-items: center; gap: 14px; margin-bottom: 64px;
 }
 .quote-eyebrow::before, .quote-eyebrow::after { content: ''; width: 48px; height: 1px; background: var(--ink-3); }
+.eyebrow-en { display: inline; }
+.eyebrow-en::after { content: ' · '; }
+.eyebrow-th { display: inline; }
 .quote-ar {
-  font-family: var(--arabic); font-size: clamp(28px,3.6vw,52px); line-height: 1.7; color: var(--ink);
+  font-family: var(--arabic); font-size: clamp(28px,3.6vw,52px); line-height: 2.2; color: var(--ink);
   direction: rtl; margin-bottom: 48px; max-width: 1100px; margin-left: auto; margin-right: auto; font-weight: 400;
 }
 .quote-th {
   font-family: var(--thai); font-weight: 300;
   font-size: clamp(18px,1.6vw,24px); line-height: 1.8; color: var(--ink-3);
-  max-width: 780px; margin: 0 auto 32px;
+  max-width: 780px; margin: 0 auto 32px; white-space: pre-line;
 }
 .quote-author-line {
   font-family: var(--thai); font-size: 13px; color: var(--ink-3);
@@ -563,6 +574,10 @@ body::before {
   .hero-tag { text-align: left; }
   .section { padding: 80px 0; }
   #backToTopBtn { bottom: 20px; right: 20px; }
+  .hero-arabic { font-size: 6.5vw; white-space: nowrap; }
+  .quote-eyebrow { flex-direction: column; gap: 6px; width: 100%; align-items: center; }
+  .quote-eyebrow::before, .quote-eyebrow::after { display: none; }
+  .eyebrow-en::after { content: none; }
 }
 </style>
 </head>
@@ -620,6 +635,17 @@ body::before {
       الْمَشَقَّةُ تَجْلِبُ التَّيْسِيرَ <em class="sep">·</em>
       الْعَادَةُ مُحَكَّمَةٌ <em class="sep">·</em>
       الْأُمُورُ بِمَقَاصِدِهَا <em class="sep">·</em>
+      لَا يُنْسَبُ إِلَى سَاكِتٍ قَوْلٌ، لَكِنَّ السُّكُوتَ فِي مَعْرِضِ الْحَاجَةِ بَيَانٌ <em class="sep">·</em>
+      مَنْ شَكَّ هَلْ فَعَلَ شَيْئًا أَوْ لَا فَالْأَصْلُ أَنَّهُ لَمْ يَفْعَلْهُ <em class="sep">·</em>
+      الْأَصْلُ الْعَدَمُ <em class="sep">·</em>
+      دَرْءُ الْمَفَاسِدِ أَوْلَى مِنْ جَلْبِ الْمَنَافِعِ <em class="sep">·</em>
+      الْأَمْرُ إِذَا ضَاقَ اتَّسَعَ <em class="sep">·</em>
+      الضَّرُورَاتُ تُقَدَّرُ بِقَدَرِهَا <em class="sep">·</em>
+      الْعِبْرَةُ لِلْغَالِبِ الشَّائِعِ لَا لِلنَّادِرِ <em class="sep">·</em>
+      لَا يُنْكَرُ تَغَيُّرُ الْأَحْكَامِ بِتَغَيُّرِ الْأَزْمَانِ <em class="sep">·</em>
+      الْأَصْلُ فِي الْكَلَامِ الْحَقِيقَةُ <em class="sep">·</em>
+      الِاجْتِهَادُ لَا يُنْقَضُ بِمِثْلِهِ <em class="sep">·</em>
+      الْعِبْرَةُ فِي الْعُقُودِ لِلْمَقَاصِدِ وَالْمَعَانِي، لَا لِلْأَلْفَاظِ وَالْمَبَانِي <em class="sep">·</em>
     </span>
     <span aria-hidden="true">
       الْيَقِينُ لَا يَزُولُ بِالشَّكِّ <em class="sep">·</em>
@@ -627,6 +653,17 @@ body::before {
       الْمَشَقَّةُ تَجْلِبُ التَّيْسِيرَ <em class="sep">·</em>
       الْعَادَةُ مُحَكَّمَةٌ <em class="sep">·</em>
       الْأُمُورُ بِمَقَاصِدِهَا <em class="sep">·</em>
+      لَا يُنْسَبُ إِلَى سَاكِتٍ قَوْلٌ، لَكِنَّ السُّكُوتَ فِي مَعْرِضِ الْحَاجَةِ بَيَانٌ <em class="sep">·</em>
+      مَنْ شَكَّ هَلْ فَعَلَ شَيْئًا أَوْ لَا فَالْأَصْلُ أَنَّهُ لَمْ يَفْعَلْهُ <em class="sep">·</em>
+      الْأَصْلُ الْعَدَمُ <em class="sep">·</em>
+      دَرْءُ الْمَفَاسِدِ أَوْلَى مِنْ جَلْبِ الْمَنَافِعِ <em class="sep">·</em>
+      الْأَمْرُ إِذَا ضَاقَ اتَّسَعَ <em class="sep">·</em>
+      الضَّرُورَاتُ تُقَدَّرُ بِقَدَرِهَا <em class="sep">·</em>
+      الْعِبْرَةُ لِلْغَالِبِ الشَّائِعِ لَا لِلنَّادِرِ <em class="sep">·</em>
+      لَا يُنْكَرُ تَغَيُّرُ الْأَحْكَامِ بِتَغَيُّرِ الْأَزْمَانِ <em class="sep">·</em>
+      الْأَصْلُ فِي الْكَلَامِ الْحَقِيقَةُ <em class="sep">·</em>
+      الِاجْتِهَادُ لَا يُنْقَضُ بِمِثْلِهِ <em class="sep">·</em>
+      الْعِبْرَةُ فِي الْعُقُودِ لِلْمَقَاصِدِ وَالْمَعَانِي، لَا لِلْأَلْفَاظِ وَالْمَبَانِي <em class="sep">·</em>
     </span>
   </div>
 </div>
@@ -735,7 +772,7 @@ body::before {
 <div class="parchment">
   <section class="quote-section">
     <div class="wrap">
-      <div class="quote-eyebrow" data-reveal>Quote of the Day · วาทะปราชญ์ประจำวัน</div>
+      <div class="quote-eyebrow" data-reveal><span class="eyebrow-en">Quote of the Day</span><span class="eyebrow-th">วาทะปราชญ์ประจำวัน</span></div>
       <div id="quoteAr" class="quote-ar" lang="ar" dir="rtl" data-reveal data-delay="1"></div>
       <div id="quoteTh" class="quote-th" data-reveal data-delay="2"></div>
       <div class="quote-author-line" data-reveal data-delay="3"><span id="quoteAuthor"></span></div>
@@ -1056,14 +1093,24 @@ var quotes = [
     author: "อิหม่ามอัชชาฟิอีย์ · เสียชีวิตปี ฮ.ศ. 204"
   },
   {
-    ar: "الْأَصْلُ فِي الْأَشْيَاءِ الْإِبَاحَةُ",
-    th: "“พื้นฐานเดิมของสิ่งต่างๆ นั้น เป็นที่อนุญาต”",
-    author: "กฎเกณฑ์นิติศาสตร์อิสลาม · al-Qawāʿid al-Fiqhiyyah"
+    ar: "يَا أَقْدَامَ الصَّبْرِ! احْمِلِي! بَقِيَ الْقَلِيلُ",
+    th: "“โอ้…ผู้อดทนเอ๋ย! จงแบกรับความอดทนต่อไปอีกเพียงนิดเดียวเถิด...อีกเพียงนิดเดียว อีกเพียงนิดเดียวเท่านั้น”",
+    author: "อิบนุลก็อยยิม · เสียชีวิตปี ฮ.ศ. 751"
   },
   {
-    ar: "دَرْءُ الْمَفَاسِدِ أَوْلَى مِنْ جَلْبِ الْمَصَالِحِ",
-    th: "“การป้องกันความเสียหาย ย่อมสำคัญกว่าการแสวงหาผลประโยชน์”",
-    author: "กฎเกณฑ์นิติศาสตร์อิสลาม · al-Qawāʿid al-Fiqhiyyah"
+    ar: "فَمَا شِدَّةٌ يَوْمًا وَإِنْ جَلَّ خَطْبُهَا<br>بِنَازِلَةٍ إِلَّا سَيَتْبَعُهَا يُسْرُ<br>وَإِنْ عَسِرَتْ يَوْمًا عَلَى الْمَرْءِ حَاجَةٌ<br>وَضَاقَتْ عَلَيْهِ كَانَ مِفْتَاحُهَا الصَّبْرُ",
+    th: "“ไม่มีความทุกข์ยากใดในวันหนึ่ง แม้มันจะหนักหนาสาหัสเพียงไร\nเว้นแต่จะมีความง่ายดายติดตามมาหลังจากนั้นเสมอ\nและหากวันใดความปรารถนาของคนเรานั้นยากเข็ญและตีบตัน\nกุญแจที่จะไขมันออกได้... ก็คือความอดทน”",
+    author: "กวีไร้นาม"
+  },
+  {
+    ar: "إِنَّ رَبًّا كَفَاكَ بِالْأَمْسِ مَا كَانَ<br>سَيَكْفِيكَ فِي غَدٍ مَا يَكُونُ",
+    th: "“พระผู้เป็นเจ้าผู้ทรงคุ้มครองเจ้าเมื่อวาน\nย่อมจะทรงคุ้มครองเจ้าในวันพรุ่งนี้เช่นกัน\nทุกสิ่งที่จักบังเกิดขึ้น พระองค์ย่อมเพียงพอแก่เจ้าเสมอ”",
+    author: "อิหม่ามอัชชาฟิอีย์ · เสียชีวิตปี ฮ.ศ. 204"
+  },
+  {
+    ar: "سَهِرَتْ أَعْيُنٌ وَنَامَتْ عُيُونُ<br>فِي أُمُورٍ تَكُونُ أَوْ لَا تَكُونُ<br>فَادْرَأِ الْهَمَّ مَا اسْتَطَعْتَ عَنِ النَّفْـ<br>ـسِ فَحَمْلَانُكَ الْهُمُومَ جُنُونُ",
+    th: "“บางตาไม่หลับยังคิดพร่ำ\nบางตาเหนื่อยล้าเข้าสู่นิทรา\nเรื่องราวบางสิ่งอาจจริง อาจลวงตา\nอย่าแบกพะวงหนักหนาเกินใจตน\n\nจงผ่อนวางกังวลเท่าที่ไหว\nอย่าให้ทุกข์รุมใจจนสับสน\nแบกทุกข์เกินจำเป็นดุจคนบ้าเวียนวน\nปลดวางเสียเถิดหนา จิตาจะได้เป็นสุข”",
+    author: "อิหม่ามอัชชาฟิอีย์ · เสียชีวิตปี ฮ.ศ. 204"
   },
   {
     ar: "مَا جَادَلْتُ جَاهِلًا إِلَّا غَلَبَنِي",
