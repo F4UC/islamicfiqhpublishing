@@ -556,15 +556,7 @@ body::before {
 [data-reveal][data-delay="3"] { transition-delay: .24s; }
 [data-reveal][data-delay="4"] { transition-delay: .32s; }
 
-/* =========================================================
-   CURSOR
-   ========================================================= */
-.cursor-dot {
-  position: fixed; width: 8px; height: 8px; background: var(--gold); border-radius: 50%;
-  pointer-events: none; z-index: 99999; transform: translate(-50%,-50%); mix-blend-mode: difference;
-  transition: transform .2s, width .2s, height .2s;
-}
-@media(hover:none){ .cursor-dot { display: none; } }
+
 
 /* =========================================================
    RESPONSIVE GLOBAL
@@ -586,7 +578,7 @@ body::before {
 <body lang="th">
 
 <div id="header-placeholder"></div>
-<div class="cursor-dot" id="cursor"></div>
+
 
 <!-- =========================================================
      HERO
@@ -967,14 +959,18 @@ body::before {
   ];
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 
+  var isDesktop = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 769px)').matches;
   var mouseX = 0, mouseY = 0;
-  var targetMouseX = 0, targetMouseY = 0;
+  var targetMouseX = isDesktop ? 0 : -9999;
+  var targetMouseY = isDesktop ? 0 : -9999;
 
-  window.addEventListener('mousemove', function(e) {
-    var rect = canvas.getBoundingClientRect();
-    targetMouseX = e.clientX - rect.left;
-    targetMouseY = e.clientY - rect.top;
-  });
+  if (isDesktop) {
+    window.addEventListener('mousemove', function(e) {
+      var rect = canvas.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+  }
 
   function resizeCanvas() {
     var dpr = window.devicePixelRatio || 1;
@@ -1049,25 +1045,7 @@ document.addEventListener('click', function(e) {
 });
 
 
-/* ----- CURSOR ----- */
-var cursor = document.getElementById('cursor');
-var cx=0,cy=0,tx=0,ty=0;
-window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY});
-(function loop(){
-  cx+=(tx-cx)*0.18; cy+=(ty-cy)*0.18;
-  if(cursor){ cursor.style.left=cx+'px'; cursor.style.top=cy+'px'; }
-  requestAnimationFrame(loop);
-})();
-document.querySelectorAll('a,button,.cat-card,.tool-card,.idx-row').forEach(function(el){
-  el.addEventListener('mouseenter',function(){
-    cursor.style.width='24px'; cursor.style.height='24px';
-    cursor.style.background='transparent'; cursor.style.border='1px solid #b31b1b';
-  });
-  el.addEventListener('mouseleave',function(){
-    cursor.style.width='8px'; cursor.style.height='8px';
-    cursor.style.background='#b31b1b'; cursor.style.border='0';
-  });
-});
+
 
 /* ----- REVEAL ON SCROLL ----- */
 var io = new IntersectionObserver(function(entries){
