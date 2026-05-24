@@ -382,14 +382,14 @@ body::before {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 320px 215px 215px;
-  gap: 2px;
-  background: #05060a;
+  gap: 16px;
+  background: transparent;
 }
 .cat-card {
   position: relative; overflow: hidden;
   padding: 28px 32px; display: flex; flex-direction: column; justify-content: space-between;
-  transition: outline .25s; background: #0a0c10;
-  text-decoration: none;
+  transition: box-shadow .3s, transform .3s; background: #0a0c10;
+  text-decoration: none; border-radius: 10px;
 }
 .cat-bg {
   position: absolute; inset: 0;
@@ -402,7 +402,7 @@ body::before {
   background: linear-gradient(170deg, rgba(5,6,10,0.22) 0%, rgba(5,6,10,0.84) 100%);
   z-index: 1; pointer-events: none; transition: background 0.5s ease;
 }
-.cat-card:hover { outline: 1px solid rgba(196,154,69,0.55); outline-offset: -1px; }
+.cat-card:hover { box-shadow: 0 0 0 1px rgba(196,154,69,0.55), 0 8px 32px rgba(0,0,0,0.45); transform: translateY(-3px); }
 .cat-card:hover .cat-bg { opacity: 0.56; filter: brightness(100%) saturate(110%); }
 .cat-card:hover .cat-overlay { background: linear-gradient(170deg, rgba(5,6,10,0.06) 0%, rgba(5,6,10,0.74) 100%); }
 .cat-wave-canvas {
@@ -527,7 +527,7 @@ body::before {
   .cat-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 260px 200px 200px 175px;
-    gap: 2px;
+    gap: 12px;
   }
   .cat-kalam     { grid-column: 1 / 3; grid-row: 1; }
   .cat-nitisart  { grid-column: 1;     grid-row: 2; }
@@ -544,7 +544,7 @@ body::before {
 }
 
 @media(max-width:600px){
-  .cat-grid { grid-template-columns: 1fr; grid-template-rows: repeat(6,165px); gap: 2px; }
+  .cat-grid { grid-template-columns: 1fr; grid-template-rows: repeat(6,165px); gap: 10px; }
   .cat-kalam,.cat-nitisart,.cat-hadith,.cat-history,.cat-literature,.cat-about {
     grid-column: 1 !important; grid-row: auto !important;
   }
@@ -718,7 +718,7 @@ body::before {
 html:not(.dark-mode) #cat-dots-canvas { display: block; }
 html:not(.dark-mode) #categories { background: #ffffff; position: relative; overflow: hidden; }
 html:not(.dark-mode) #categories .wrap { position: relative; z-index: 1; }
-html:not(.dark-mode) .cat-grid { background: rgba(255,255,255,0.6); gap: 3px; }
+html:not(.dark-mode) .cat-grid { background: transparent; gap: 16px; }
 /* Cards stay dark (original CSS #0a0c10). Override only text colors since vars are dark in light mode */
 html:not(.dark-mode) .cat-name { color: #f0ece4; }
 html:not(.dark-mode) .cat-sub,
