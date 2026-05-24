@@ -47,6 +47,37 @@ function updateThemeIcon(isDark) {
 // à¸ªà¸±à¹ˆà¸‡à¸£à¸±à¸™à¸˜à¸µà¸¡à¹€à¸šà¸·à¹‰à¸­à¸‡à¸•à¹‰à¸™à¸—à¸±à¸™à¸—à¸µà¸à¹ˆà¸­à¸™ DOM à¹‚à¸«à¸¥à¸”à¹€à¸•à¹‡à¸¡à¸—à¸µà¹ˆà¹€à¸žà¸·à¹ˆà¸­à¸¥à¸”à¸„à¸§à¸²à¸¡à¸à¸°à¸žà¸£à¸´à¸š
 applyTheme(isDarkModeActive);
 
+// Load the shared animated subpage surface into <head> and keep the home canvas untouched.
+function installSubpageSurface() {
+    const path = window.location.pathname.replace(/\/+$/, '');
+    const isHomePage = path === '' || path === '/' || path === '/index.html';
+
+    if (isHomePage) {
+        if (document.body) {
+            document.body.classList.remove('ifp-subpage-bg');
+        }
+        return;
+    }
+
+    if (!document.querySelector('link[data-ifp-subpage-surface]')) {
+        const surfaceLink = document.createElement('link');
+        surfaceLink.rel = 'stylesheet';
+        surfaceLink.href = '/site-background.css?v=1';
+        surfaceLink.setAttribute('data-ifp-subpage-surface', 'true');
+        document.head.appendChild(surfaceLink);
+    }
+
+    if (document.body) {
+        document.body.classList.add('ifp-subpage-bg');
+    }
+}
+
+if (document.body) {
+    installSubpageSurface();
+} else {
+    document.addEventListener('DOMContentLoaded', installSubpageSurface, { once: true });
+}
+
 // ==========================================
 // â­ï¸ 3. à¸£à¸°à¸šà¸šà¸›à¸£à¸°à¸à¸­à¸šà¸£à¹ˆà¸²à¸‡ Header / Footer â­ï¸
 // ⭐ 3. ระบบประกอบร่าง Header / Footer ⭐
@@ -530,5 +561,3 @@ document.addEventListener('click', function(e) {
     ripple.remove();
   }, 650);
 });
-
-

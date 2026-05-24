@@ -1,0 +1,177 @@
+/* Global animated surface for non-home pages. Loaded by main.js into <head>. */
+:root {
+  --ifp-surface-top: #e3edf7;
+  --ifp-surface-bottom: #ffffff;
+  --ifp-surface-wave: rgba(80, 137, 183, 0.32);
+  --ifp-surface-wave-soft: rgba(255, 255, 255, 0.58);
+  --ifp-header-bg: #050b14;
+  --ifp-header-text: #edf5ff;
+  --ifp-header-text-dim: #a8b5c7;
+  --ifp-header-border: rgba(170, 205, 239, 0.18);
+}
+
+html.dark-mode {
+  --ifp-surface-top: #14110d;
+  --ifp-surface-bottom: #0a0907;
+  --ifp-surface-wave: rgba(196, 154, 69, 0.18);
+  --ifp-surface-wave-soft: rgba(59, 130, 246, 0.08);
+  --ifp-header-bg: #050914;
+  --ifp-header-text: #e8e0d0;
+  --ifp-header-text-dim: #9eb0c8;
+  --ifp-header-border: rgba(147, 197, 253, 0.16);
+}
+
+body.ifp-subpage-bg {
+  --header-bg: var(--ifp-header-bg);
+  --header-text: var(--ifp-header-text);
+  --header-text-dim: var(--ifp-header-text-dim);
+  --header-border: var(--ifp-header-border);
+  background:
+    linear-gradient(
+      180deg,
+      var(--ifp-surface-top) 0,
+      var(--ifp-surface-top) 360px,
+      var(--ifp-surface-bottom) 690px,
+      var(--ifp-surface-bottom) 100%
+    ) fixed !important;
+  color: var(--text-primary);
+  min-height: 100vh;
+  isolation: isolate;
+  overflow-x: hidden;
+}
+
+body.ifp-subpage-bg::before,
+body.ifp-subpage-bg::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 51px;
+  height: 520px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.ifp-subpage-bg::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20380'%20preserveAspectRatio='none'%3E%3Cpath%20fill='none'%20stroke='rgba(43,103,154,0.28)'%20stroke-width='2.5'%20d='M-60%20228C100%20142%20230%20294%20390%20208S690%20128%20855%20216%201166%20288%201506%20172'/%3E%3Cpath%20fill='none'%20stroke='rgba(255,255,255,0.50)'%20stroke-width='1.4'%20d='M-80%20258C92%20188%20238%20312%20408%20242S696%20168%20872%20242%201172%20312%201526%20220'/%3E%3Cpath%20fill='none'%20stroke='rgba(43,103,154,0.18)'%20stroke-width='1.8'%20d='M-40%20310C116%20248%20264%20334%20424%20284S734%20218%20894%20292%201164%20344%201500%20282'/%3E%3C/svg%3E");
+  background-position: 50% 0;
+  background-repeat: repeat-x;
+  background-size: 1440px 380px;
+  opacity: 0.9;
+  transform: translate3d(0, 0, 0);
+  animation: ifp-wave-drift 22s ease-in-out infinite alternate;
+}
+
+body.ifp-subpage-bg::after {
+  background:
+    radial-gradient(ellipse at 18% 24%, var(--ifp-surface-wave-soft), transparent 34%),
+    radial-gradient(ellipse at 76% 16%, var(--ifp-surface-wave), transparent 30%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20380'%20preserveAspectRatio='none'%3E%3Cpath%20fill='none'%20stroke='rgba(43,103,154,0.16)'%20stroke-width='22'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M80%20220C170%20130%20270%20302%20352%20220C440%20128%20526%20302%20620%20212C720%20116%20800%20308%20910%20210C1018%20112%201120%20306%201236%20202C1308%20138%201376%20132%201444%20160'/%3E%3C/svg%3E");
+  background-position: 50% 0, 50% 0, 0 0;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: auto, auto, 1680px 380px;
+  mix-blend-mode: multiply;
+  opacity: 0.36;
+  transform: translate3d(0, 0, 0);
+  animation: ifp-water-sway 18s cubic-bezier(.45, 0, .25, 1) infinite alternate;
+}
+
+body.ifp-subpage-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+body.ifp-subpage-bg .chrome,
+body.ifp-subpage-bg header {
+  background: var(--ifp-header-bg) !important;
+  border-bottom-color: var(--ifp-header-border) !important;
+}
+
+body.ifp-subpage-bg nav.chrome-nav.mobile-active {
+  background: var(--ifp-header-bg) !important;
+}
+
+body.ifp-subpage-bg .article-wrap,
+body.ifp-subpage-bg .article-layout,
+body.ifp-subpage-bg .about-wrap,
+body.ifp-subpage-bg main,
+body.ifp-subpage-bg .category-header,
+body.ifp-subpage-bg .article-list,
+body.ifp-subpage-bg .pagination-container,
+body.ifp-subpage-bg .htm-container,
+body.ifp-subpage-bg .isnad-shell,
+body.ifp-subpage-bg .tools-wrap {
+  background: transparent !important;
+}
+
+html.dark-mode body.ifp-subpage-bg::before {
+  opacity: 0.72;
+  filter: saturate(0.92) brightness(0.9);
+}
+
+html.dark-mode body.ifp-subpage-bg::after {
+  mix-blend-mode: screen;
+  opacity: 0.34;
+  filter: saturate(0.88);
+}
+
+@keyframes ifp-wave-drift {
+  0% {
+    background-position: 46% 0;
+    transform: translate3d(-18px, 0, 0) scaleY(1);
+  }
+  50% {
+    background-position: 52% 10px;
+    transform: translate3d(8px, 8px, 0) scaleY(1.018);
+  }
+  100% {
+    background-position: 58% -4px;
+    transform: translate3d(22px, -2px, 0) scaleY(0.992);
+  }
+}
+
+@keyframes ifp-water-sway {
+  0% {
+    background-position: 50% 0, 50% 0, 0 0;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    background-position: 46% 10px, 54% -8px, -220px 6px;
+    transform: translate3d(0, 12px, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  body.ifp-subpage-bg {
+    background:
+      linear-gradient(
+        180deg,
+        var(--ifp-surface-top) 0,
+        var(--ifp-surface-top) 330px,
+        var(--ifp-surface-bottom) 620px,
+        var(--ifp-surface-bottom) 100%
+      ) fixed !important;
+  }
+
+  body.ifp-subpage-bg::before,
+  body.ifp-subpage-bg::after {
+    height: 460px;
+  }
+
+  body.ifp-subpage-bg::before {
+    background-size: 980px 330px;
+  }
+
+  body.ifp-subpage-bg::after {
+    background-size: auto, auto, 1100px 330px;
+    opacity: 0.28;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.ifp-subpage-bg::before,
+  body.ifp-subpage-bg::after {
+    animation: none;
+  }
+}
