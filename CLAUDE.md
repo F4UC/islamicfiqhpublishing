@@ -1,10 +1,10 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 50 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all 51 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (50 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (51 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -22,7 +22,7 @@
 * **กฎข้อที่ 9:** การระบุชื่อปราชญ์ในครั้งแรกของบทความ จำเป็นต้องระบุปีเสียชีวิตในวงเล็บตามรูปแบบมาตรฐาน: `(เสียชีวิตปี ฮ.ศ. XXX / ค.ศ. XXX)`
 * **กฎข้อที่ 10:** การใส่คำสดุดีท้ายนามปราชญ์ (เช่น เราะหิมะฮุลลอฮ์, เราะฎิยัลลอฮุอันฮุ) ให้วางต่อท้ายชื่อได้ทันที **ห้ามใส่วงเล็บครอบคำสดุดีโดยเด็ดขาด** แม้จะวางคู่กับปีเสียชีวิตก็ตาม
 * **กฎข้อที่ 11:** การทับศัพท์คำนามภาษาอาหรับที่มี อัล- (ال) นำหน้า ให้สะกดตามการเชื่อมสระและเสียงพยัญชนะชัมซียะฮ์อย่างถูกต้อง ยกเว้นคำว่า **"ชะรีอะฮ์"** ให้ตัดคำว่า "อัช" ออกไป เน้นเฉพาะคำนี้เท่านั้น
-* **กฎข้อที่ 12:** การถอดเสียงชื่อเฉพาะทางวิชาการและชื่อปราชญ์ ต้องอิงตามอักขรวิธีภาษาอาหรับมาตรฐาน (เช่น อัลเฆาะซาลีย์, อัลมาตูรีดีย์, อัซซุบกีย์)
+* **กฎข้อที่ 12:** การถอดเสียงชื่อเฉพาะทางวิชาการและชื่อปราชญ์ ต้องอิงตามอักขรวิธีภาษาอาหรับมาตรฐาน (เช่น อัลเฆาะซาลีย์, อัลมาตูรีดีย์, อัซซุบกีย์) และหลีกเลี่ยงการสะกดว่า "ท่านอิมาม" หรือ "อิมาม" ให้ใช้คำว่า "อิหม่าม" แทนในทุกกรณี
 * **กฎข้อที่ 13:** **[ช่องไฟคำทับศัพท์]** คำศัพท์เทคนิคทางศาสนาที่ทับศัพท์มา เมื่อนำมาประกอบในประโยคภาษาไทย **ห้ามเว้นวรรคหน้า-หลังเด็ดขาด** (เช่น ให้เขียนว่า `ฐานหลักของชะรีอะฮ์ในประเด็นนี้` ห้ามเขียนแยกเป็น `ฐานหลักของ ชะรีอะฮ์ ในประเด็นนี้`)
 * **กฎข้อที่ 14:** **[การเลือกใช้คำเชื่อม]** ห้ามใช้คำเชื่อมโบราณเช่นคำว่า **"ทว่า"** ให้เปลี่ยนไปใช้คำว่า **"แต่"** แทนในทุกกรณี เพื่อความกระชับของภาษาวิชาการ
 * **กฎข้อที่ 15:** การอ้างอิงคำพูดของนักวิชาการ, ตัวบทหะดีษ หรือคำแปล ต้องใช้เครื่องหมายอัญประกาศแบบโค้ง **`"..."`** เท่านั้น ห้ามใช้แบบตรง (`"..."`) เพื่อความพรีเมียม
@@ -117,9 +117,17 @@
   - **ตำแหน่งแนวตั้ง:** กำหนด `vertical-align: middle` สำหรับ `span.ar-inline` เพื่อให้เสมอกัน
   - **ความสูงบรรทัด:** กำหนด `line-height: 2.4` สำหรับย่อหน้าที่มีส่วนผสมอาหรับ เพื่อป้องกันสระอาหรับซ้อนทับ
 
+* **กฎข้อที่ 51:** **[มาตรฐานส่วน QUOTE OF THE DAY]** ระบบวาทะปราชญ์ประจำวัน (QOTD) ต้องปฏิบัติตามข้อกำหนดต่อไปนี้อย่างเคร่งครัด:
+  - **ความถี่ในการสลับ:** `setInterval` ใช้ค่า **9,000ms (9 วินาที)** เป็นมาตรฐาน ห้ามเปลี่ยนแปลงค่านี้โดยไม่ได้รับอนุมัติจากกองบรรณาธิการ
+  - **มาตรฐานตัวบทอาหรับ:** ข้อความอาหรับทุกรายการต้องใส่สระกำกับ (Harakat) ครบถ้วน และต้องระบุ `lang="ar" dir="rtl"` บน element ที่บรรจุตัวบท ห้ามใส่อัญประกาศหรือจุด (.) ในฟิลด์ `ar` โดยเด็ดขาด
+  - **[สำคัญมาก] ความถูกต้องและสมบูรณ์ของตัวบท:** หากผู้เขียน/กองบรรณาธิการ **ระบุตัวบทมาให้โดยตรง** ให้ยึดตามนั้นทุกประการโดยไม่ต้องค้นหาหรือเปลี่ยนแปลงสำนวน แต่ยังต้องปฏิบัติ 2 ข้อนี้: (1) **ใส่สระกำกับ (Harakat)** ให้ครบถ้วนหากยังไม่มี และ (2) **ระบุแหล่งอ้างอิง** (ชื่อหนังสือ/แหล่งข้อมูล) กำกับไว้ทุกครั้ง — แต่หากไม่มีการระบุมาให้ ต้องค้นหาจากอินเทอร์เน็ตและแหล่งปฐมภูมิเพื่อยืนยันว่าตัวบทไม่ถูกตัดตอน ไม่มีคำเกิน และการระบุผู้กล่าวถูกต้อง
+  - **มาตรฐานคำแปลภาษาไทย:** คำแปลต้องใช้ภาษาธรรมชาติที่สอดคล้องกับโทนของแหล่งที่มา (กวี, วรรณกรรม, เทววิทยา, หรือการเมือง) — ถูกต้อง, เข้าใจง่าย, กระชับ; ใช้ `\n` ในตำแหน่งที่สอดคล้องกับจุดหยุดธรรมชาติเพื่อควบคุมการตัดบรรทัดบนมือถือ
+  - **การแสดงผลบนมือถือ:** ใช้ `<br>` แทน `&nbsp;` ในการแบ่งวรรคกวีอาหรับ เพื่อให้แต่ละวรรคแสดงในบรรทัดใหม่บนหน้าจอเล็ก (ยกเว้นกรณีที่ทดสอบแล้วว่าแสดงผลได้สมบูรณ์โดยไม่ต้องแบ่ง)
+  - **โครงสร้างข้อมูล:** array `quotes` ต้องประกอบด้วย field `ar` (ตัวบทอาหรับ ไม่มีอัญประกาศเป็นเนื้อหา), `th` (คำแปลไทยที่ล้อมด้วย `"..."`), และ `author` (ชื่อผู้กล่าวและปีเสียชีวิตตามรูปแบบ `ชื่อ · เสียชีวิตปี ฮ.ศ. XXX` ไม่มีอัญประกาศ) และต้องวางไว้ก่อนปิดแท็ก `</body>` ตามกฎข้อที่ 31
+
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 50 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 51 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -137,7 +145,7 @@
 * **Rule 9:** The first mention of a classical scholar must include their demise year: `(d. AH XXX / CE XXX)`.
 * **Rule 10:** Islamic honorifics (e.g., Rahimahullah) must follow the name **without parentheses**, even when adjacent to the demise year.
 * **Rule 11:** Transliteration of Al- (ال) must conform to phonetic rules, except for "Shari'ah" which must omit the "Ash-" prefix.
-* **Rule 12:** Scholarly names must align with standard Arabic phonology (e.g., Al-Ghazali, Al-Maturidi).
+* **Rule 12:** Scholarly names must align with standard Arabic phonology (e.g., Al-Ghazali, Al-Maturidi). Avoid the spelling "ท่านอิมาม" or "อิมาม"; enforce "อิหม่าม" (Imam) globally.
 * **Rule 13:** **[Transliteration Spacing]** Transliterated religious terminology inserted into Thai sentences must not be preceded or followed by space bars (e.g., `หลักของชะรีอะฮ์ในประเด็น`).
 * **Rule 14:** **[Conjunction Choice]** Eliminate archaic conjunctions such as "ทว่า"; enforce the use of "แต่" to optimize academic conciseness.
 * **Rule 15:** Direct quotes, Hadith, and translations must be enclosed strictly within curved quotation marks **`"..."`**.
@@ -200,3 +208,11 @@
   - **Font size ratio:** Set `font-size: 1.15em` for `:lang(ar)` to visually equalize Amiri with Sarabun.
   - **Vertical alignment:** Set `vertical-align: middle` on `span.ar-inline` to align baselines.
   - **Line height:** Set `line-height: 2.4` on paragraphs containing inline Arabic to prevent diacritic overlap.
+
+* **Rule 51:** **[QUOTE OF THE DAY Standard]** The QOTD system must comply with the following requirements:
+  - **Rotation interval:** `setInterval` is fixed at **9,000ms (9 seconds)**. Do not change this value without editorial approval.
+  - **Arabic text standard:** Every Arabic entry must carry full Harakat (diacritics), with `lang="ar" dir="rtl"` on the containing element. Quotation marks and periods (`.`) are strictly prohibited inside the `ar` field.
+  - **[Critical] Text completeness & attribution:** If the author/editor **explicitly provides the text**, accept it as-is without searching or altering the wording — but still: (1) **add full Harakat** if not present, and (2) **cite the source reference** (book title / database). If no text is provided, conduct a web search against primary sources to verify the text is not truncated, contains no spurious words, and that the attribution is accurate.
+  - **Thai translation standard:** Translations must use natural language matching the tone of the source (poetry, literature, theology, or political writing) — accurate, easy to understand, and concise. Use `\n` at natural sentence-break positions to control mobile line wrapping.
+  - **Mobile layout:** Use `<br>` instead of `&nbsp;` to break Arabic poetic hemistiches onto separate lines for small screens (except where tested and confirmed to display correctly without breaking).
+  - **Data structure:** The `quotes` array must contain `ar` (Arabic text — no quotation marks as content), `th` (Thai translation wrapped in `"..."`), and `author` (`Name · เสียชีวิตปี ฮ.ศ. XXX` — no quotation marks), positioned before `</body>` per Rule 31.
