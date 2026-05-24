@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ISNĀD TRACER — Islamic Fiqh Publishing</title>
 
-<!-- Pre-render Theme Engine: Prevents white flash/FOUC on page load -->
 <script>
   (function() {
     var savedTheme = localStorage.getItem('theme');
@@ -16,17 +15,17 @@
   })();
 </script>
 
-<meta name="description" content="เครื่องมือจำลองเครือข่ายสายรายงานหะดีษแบบใยแมงมุม วิเคราะห์ความเชื่อมโยงครู-ศิษย์ และความสัมพันธ์เชิงเครือญาติ พร้อมเปรียบเทียบคำวิจารณ์ในตำราญัรห์ วัตตะอ์ดีล">
-<meta name="keywords" content="สายรายงานหะดีษ, อิลมุรริญาล, ตรวจสอบหะดีษ, Hadith isnad tracer, networks of transmission, ญัรห์ วัตตะอ์ดีล, เครือข่ายผู้รายงาน">
+<meta name="description" content="แผนภูมิสายรายงานวิชาการชาฟิอีแบบแนวนอน แสดงสายนักวิชาการตั้งแต่พระเจ้าถึงอิหม่ามนูวาวี ชัรกอวี และสายต่อเนื่อง">
+<meta name="keywords" content="สายรายงาน, อิสนาด, ชาฟิอี, นักวิชาการ, Hadith isnad tracer, isnād chain, Shafi'i">
 <meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
 
 <link rel="icon" href="../../favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="../../favicon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png">
-<meta name="theme-color" content="#e3edf7">
+<meta name="theme-color" content="#06101e">
 
 <meta property="og:title" content="ISNĀD TRACER — Islamic Fiqh Publishing">
-<meta property="og:description" content="จำลองและสำรวจเครือข่ายใยแมงมุมสายรายงานผู้รายงานหะดีษ ครู-ศิษย์ และความเชื่อมโยงตลอดชีวิต">
+<meta property="og:description" content="แผนภูมิสายรายงานวิชาการชาฟิอีแบบแนวนอน">
 <meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
 <meta property="og:url" content="https://islamicfiqhpublishing.com/pages/tools/isnad-tracer.html">
 <meta property="og:type" content="website">
@@ -34,615 +33,448 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Sarabun:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Sarabun:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../article.css?v=8">
 
 <style>
-@font-face {
-  font-family: 'D-DIN';
-  src: url('../../D-DIN.e58c68e58b09fc0e.woff2') format('woff2'),
-       url('../../D-DIN.105cb3e9fde868e3.woff') format('woff'),
-       url('../../D-DIN.e77db3e5eeb79c76.otf') format('opentype');
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-}
+/* ─── ISNĀD TRACER v5 — Horizontal Timeline Tree ─── */
 
 :root {
-  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
   --thai: 'Sarabun', system-ui, sans-serif;
   --arabic: 'Amiri', serif;
-  --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
+  --eng: 'Inter', system-ui, sans-serif;
+  --canvas-bg: #06101e;
+  --accent: #c49a45;
+  --panel-bg: rgba(6, 16, 30, 0.97);
+  --panel-border: rgba(196, 154, 69, 0.35);
 }
 
+/* Force dark canvas area always, regardless of site theme */
 html, body {
-  background-color: var(--bg-primary) !important;
-}
-
-/* ─── Layout ─── */
-.it-container { max-width: 1200px; margin: 60px auto 80px; padding: 0 24px; position: relative; }
-
-.it-hero { text-align: center; margin-bottom: 40px; }
-.it-hero h1 { 
-  font-family: var(--serif); 
-  font-size: clamp(32px, 4.5vw, 46px); 
-  font-weight: 400; 
-  text-transform: uppercase; 
-  letter-spacing: 0.12em; 
-  color: var(--text-primary); 
-  margin-bottom: 18px; 
-  transition: var(--theme-transition); 
-}
-.it-hero p { 
-  font-family: var(--thai); 
-  font-size: 15px; 
-  color: var(--text-secondary); 
-  line-height: 2.0; 
-  max-width: 900px; 
-  margin: 0 auto; 
-  text-align: center; 
-  word-break: break-word; 
-  transition: var(--theme-transition); 
-}
-
-/* ─── Instruction / Legend Panel ─── */
-.network-instructions {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  transition: var(--theme-transition);
-  box-shadow: 0 4px 16px var(--shadow-color);
-}
-.inst-left h3 {
-  font-family: var(--thai);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin: 0 0 6px 0;
-  text-align: left;
-}
-.inst-left p {
-  font-family: var(--thai);
-  font-size: 13px;
-  color: var(--text-secondary);
+  background: #06101e;
   margin: 0;
-  text-align: left;
-  line-height: 1.6;
+  padding: 0;
 }
-.legend-grid {
+
+body.dark-mode {
+  background: #06101e;
+}
+
+/* ─── Page Header Area ─── */
+.it-page-header {
+  background: linear-gradient(180deg, #06101e 0%, #0a1829 100%);
+  padding: 32px 32px 24px;
+  border-bottom: 1px solid rgba(196, 154, 69, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+.it-brand-row {
   display: flex;
-  gap: 20px;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 8px;
   flex-wrap: wrap;
 }
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--thai);
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-.legend-color {
-  width: 24px;
-  height: 3px;
-  border-radius: 2px;
-}
-.color-trans { background: var(--accent-color); }
-.color-family { background: #e11d48; border-bottom: 2px dashed #e11d48; height: 1px; }
 
-/* ─── Tracer Dashboard Layout ─── */
-.tracer-dashboard {
-  display: grid;
-  grid-template-columns: 310px 1fr;
-  gap: 30px;
-  margin-bottom: 40px;
-}
-
-/* ─── Narrator Sidebar Directory ─── */
-.narrator-sidebar {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
-  border-radius: 14px;
-  padding: 24px;
-  height: 750px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 8px 32px var(--shadow-color);
-  transition: var(--theme-transition);
-}
-.sidebar-header {
-  font-family: var(--thai);
-  font-size: 15px;
+.it-brand-name {
+  font-family: var(--eng);
+  font-size: clamp(18px, 2.5vw, 24px);
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 16px;
-  border-bottom: 1px solid var(--border-secondary);
-  padding-bottom: 10px;
-  text-align: left;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
-.sidebar-search {
-  margin-bottom: 16px;
-}
-.sidebar-search .search-input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px 16px;
-  border-radius: 8px;
-  border: 1px solid var(--border-secondary);
-  background: var(--bg-primary);
-  color: var(--text-primary);
+
+.it-brand-subtitle {
   font-family: var(--thai);
   font-size: 13px;
-  outline: none;
-  transition: all 0.3s;
-}
-.sidebar-search .search-input:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
+  color: rgba(255,255,255,0.45);
+  font-weight: 300;
 }
 
-.sidebar-list {
-  flex: 1;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-right: 4px;
-}
-.sidebar-list::-webkit-scrollbar {
-  width: 6px;
-}
-.sidebar-list::-webkit-scrollbar-track {
-  background: transparent;
-}
-.sidebar-list::-webkit-scrollbar-thumb {
-  background: var(--border-secondary);
-  border-radius: 3px;
-}
-
-.sidebar-gen-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.it-description {
+  font-family: var(--thai);
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 2.0;
+  max-width: 700px;
   text-align: left;
+  word-break: break-word;
+  margin: 0;
 }
-.sidebar-gen-title {
+
+/* ─── Toolbar ─── */
+.it-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 32px;
+  background: rgba(6, 16, 30, 0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  flex-wrap: wrap;
+}
+
+.it-btn {
+  font-family: var(--thai);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.it-btn:hover {
+  background: rgba(196, 154, 69, 0.18);
+  border-color: rgba(196, 154, 69, 0.5);
+  color: #c49a45;
+}
+
+.it-btn-primary {
+  background: rgba(196, 154, 69, 0.15);
+  border-color: rgba(196, 154, 69, 0.4);
+  color: #c49a45;
+}
+
+.it-btn-primary:hover {
+  background: rgba(196, 154, 69, 0.28);
+}
+
+.it-toolbar-sep {
+  width: 1px;
+  height: 24px;
+  background: rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+.it-zoom-label {
+  font-family: var(--eng);
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  min-width: 48px;
+  text-align: center;
+}
+
+.it-legend {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.it-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--thai);
   font-size: 11px;
-  font-weight: 700;
-  color: var(--accent-color);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-top: 6px;
-  border-bottom: 1px dashed var(--border-primary);
-  padding-bottom: 4px;
-}
-.sidebar-item {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-primary);
-  border-radius: 8px;
-  padding: 10px 14px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.2s;
-}
-.sidebar-item:hover {
-  border-color: var(--accent-color);
-  transform: translateX(2px);
-}
-.sidebar-item.active {
-  background: var(--bg-secondary);
-  border-color: var(--accent-color);
-  border-left: 4px solid var(--accent-color);
-  box-shadow: 0 2px 8px var(--shadow-color);
-}
-.sidebar-item-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  text-align: left;
-}
-.sidebar-item-name {
-  font-family: var(--thai);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-.sidebar-item-death {
-  font-family: var(--ui);
-  font-size: 10px;
-  color: var(--text-secondary);
+  color: rgba(255,255,255,0.4);
+  white-space: nowrap;
 }
 
-/* ─── Network Canvas Container ─── */
-.canvas-wrapper {
-  position: relative;
-  width: 100%;
-  height: 750px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px var(--shadow-color);
-  transition: var(--theme-transition);
+.it-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
-#spiderweb-canvas {
+
+/* ─── Canvas Wrapper ─── */
+.it-canvas-wrap {
   width: 100%;
-  height: 100%;
-  display: block;
+  height: calc(100vh - 220px);
+  min-height: 500px;
+  background: var(--canvas-bg);
+  overflow: hidden;
+  position: relative;
   cursor: grab;
 }
-#spiderweb-canvas:active {
+
+.it-canvas-wrap.is-dragging {
   cursor: grabbing;
 }
 
-/* ─── Critique Panel ─── */
-.critique-section {
-  margin-bottom: 60px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.critique-section.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-.critique-section-header {
-  font-family: var(--thai);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 24px;
-  text-align: left;
-  border-bottom: 1px solid var(--border-secondary);
-  padding-bottom: 12px;
-  transition: var(--theme-transition);
-}
-.critique-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-.critique-column {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.critique-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
-  border-radius: 10px;
-  padding: 20px 24px;
-  text-align: left;
-  transition: var(--theme-transition);
-  box-shadow: 0 2px 8px var(--shadow-color);
-}
-.critique-card.ta-dil-item {
-  border-left: 3px solid #059669;
-}
-.critique-card.jarh-item {
-  border-left: 3px solid #dc2626;
-}
-
-.critique-meta {
-  font-family: var(--thai);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 8px;
-}
-.critique-meta span {
-  font-family: var(--ui);
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin-left: 6px;
-}
-.critique-text {
-  font-family: var(--thai);
-  font-size: 14px;
-  line-height: 1.8;
-  color: var(--text-secondary);
-  word-break: break-word;
-}
-
-.empty-critique-notice {
-  font-family: var(--thai);
-  font-size: 15px;
-  color: var(--text-tertiary);
-  padding: 40px;
-  text-align: center;
-  border: 1px dashed var(--border-secondary);
-  border-radius: 10px;
-  background: var(--bg-secondary);
-}
-
-/* ─── Detail Drawer ─── */
-.it-drawer-overlay {
-  position: fixed;
+#isnadSvg {
+  display: block;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
-  z-index: 10000;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-.it-drawer-overlay.active {
-  opacity: 1;
-  visibility: visible;
+  user-select: none;
 }
 
-.it-drawer {
+/* ─── Detail Panel ─── */
+.it-detail-panel {
   position: fixed;
-  top: 0;
-  right: -450px;
-  width: 100%;
-  max-width: 450px;
-  height: 100%;
-  background: var(--bg-primary);
-  border-left: 1px solid var(--border-secondary);
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
-  z-index: 10001;
-  display: flex;
-  flex-direction: column;
-  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.it-drawer-overlay.active .it-drawer {
+  bottom: 0;
+  left: 0;
   right: 0;
+  background: var(--panel-bg);
+  border-top: 2px solid var(--panel-border);
+  border-radius: 16px 16px 0 0;
+  padding: 28px 32px 40px;
+  z-index: 50;
+  transform: translateY(100%);
+  transition: transform 0.38s cubic-bezier(0.22, 0.61, 0.36, 1);
+  max-height: 55vh;
+  overflow-y: auto;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-.drawer-header {
-  padding: 28px;
-  border-bottom: 1px solid var(--border-secondary);
+.it-detail-panel.is-open {
+  transform: translateY(0);
+}
+
+.it-detail-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.it-detail-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 16px;
 }
-.drawer-header-info {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  text-align: left;
-}
-.drawer-gen {
-  font-family: var(--thai);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--accent-color);
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-}
-.drawer-name-th {
-  font-family: var(--thai);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-.drawer-name-ar {
+
+.it-detail-title-wrap {}
+
+.it-detail-ar-name {
   font-family: var(--arabic);
-  font-size: 28px;
-  color: var(--text-primary);
-  margin-top: 4px;
-}
-.btn-close-drawer {
-  background: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: var(--text-secondary);
-  padding: 4px;
-  transition: color 0.2s;
-  line-height: 1;
-}
-.btn-close-drawer:hover {
-  color: var(--accent-color);
-}
-
-.drawer-content {
-  padding: 28px;
-  overflow-y: auto;
-  flex: 1;
-  text-align: left;
-}
-
-.drawer-section {
-  margin-bottom: 28px;
-}
-.drawer-section-title {
-  font-family: var(--thai);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid var(--border-secondary);
-  padding-bottom: 6px;
-}
-.drawer-data-item {
-  font-family: var(--thai);
-  font-size: 14px;
-  color: var(--text-primary);
-  line-height: 1.8;
-  word-break: break-word;
-}
-
-.network-column-title {
-  font-family: var(--thai);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-
-/* ─── Responsive ─── */
-@media (max-width: 900px) {
-  .tracer-dashboard {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .narrator-sidebar {
-    height: auto;
-    max-height: 400px;
-  }
-  .critique-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .canvas-wrapper {
-    height: 500px;
-  }
-}
-/* ─── Arabic References & Toggles ─── */
-.ar-ref-box {
-  display: none;
-  opacity: 0;
-  transform: translateY(4px);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  background: var(--bg-primary);
-  border: 1px dashed var(--accent-color);
-  padding: 10px 14px;
-  border-radius: 8px;
-  margin-top: 10px;
-  font-family: var(--arabic);
-  font-size: 15px;
-  color: var(--text-primary);
+  font-size: 26px;
+  color: #fff;
   direction: rtl;
   text-align: right;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
-}
-.show-arabic-ref .ar-ref-box {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
+  line-height: 1.7;
+  margin-bottom: 4px;
 }
 
-.ar-ref-inline {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  font-family: var(--arabic);
-  font-size: 14px;
-  color: var(--accent-color);
-  margin-right: 6px;
-  direction: rtl;
-}
-.show-arabic-ref .ar-ref-inline {
+.it-detail-gen-badge {
   display: inline-block;
-  opacity: 1;
+  font-family: var(--eng);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(196, 154, 69, 0.12);
+  border: 1px solid rgba(196, 154, 69, 0.3);
+  border-radius: 20px;
+  padding: 3px 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-/* Hide original Arabic name and demise when not requested */
-#d-name-ar, .drawer-name-ar {
-  display: none;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-.show-arabic-ref #d-name-ar, .show-arabic-ref .drawer-name-ar {
-  display: block;
-  opacity: 1;
+.it-close-btn {
+  font-family: var(--thai);
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
-.btn-toggle-ar {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
-  padding: 8px 16px;
-  border-radius: 30px;
+.it-close-btn:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.it-detail-panel-title {
+  font-family: var(--thai);
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+}
+
+.it-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.it-detail-section h4 {
   font-family: var(--thai);
   font-size: 12px;
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  margin-bottom: 12px;
-  outline: none;
-}
-.btn-toggle-ar:hover {
-  background: var(--accent-color);
-  color: #fff;
-  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
-  transform: translateY(-1px);
-}
-.btn-toggle-ar:active {
-  transform: translateY(0);
-}
-.show-arabic-ref .btn-toggle-ar {
-  background: var(--accent-color);
-  color: var(--bg-primary);
+  color: var(--accent);
+  margin: 0 0 8px 0;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-/* Custom switch design for sidebar */
-.toggle-switch-wrapper {
+.it-detail-names {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.it-detail-names li {
+  font-family: var(--arabic);
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8;
+  padding: 5px 10px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 6px;
+  border-right: 2px solid rgba(196,154,69,0.3);
+}
+
+.it-detail-empty {
+  font-family: var(--thai);
+  font-size: 13px;
+  color: rgba(255,255,255,0.25);
+  font-style: italic;
+}
+
+/* ─── Back to Top ─── */
+#backToTopBtn {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  width: 42px;
+  height: 42px;
+  background: rgba(196, 154, 69, 0.18);
+  border: 1px solid rgba(196, 154, 69, 0.4);
+  border-radius: 50%;
+  color: #c49a45;
+  font-size: 18px;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 14px;
-  background: var(--bg-primary);
-  border: 1px solid var(--border-primary);
-  border-radius: 8px;
-  margin-bottom: 14px;
-}
-.toggle-switch-label {
-  font-family: var(--thai);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 44px;
-  height: 22px;
-}
-.switch input {
+  justify-content: center;
   opacity: 0;
-  width: 0;
-  height: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, background 0.2s;
+  z-index: 40;
+  font-family: var(--eng);
+  line-height: 1;
 }
-.slider {
-  position: absolute;
+
+#backToTopBtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#backToTopBtn:hover {
+  background: rgba(196, 154, 69, 0.32);
+}
+
+/* ─── SVG Node Styles (applied via classes) ─── */
+.node-circle {
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--border-secondary);
-  transition: .3s;
-  border-radius: 22px;
+  transition: r 0.15s;
 }
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: .3s;
-  border-radius: 50%;
+
+.node-label {
+  font-family: 'Amiri', serif;
+  font-size: 13px;
+  fill: rgba(255,255,255,0.85);
+  cursor: pointer;
+  pointer-events: none;
 }
-input:checked + .slider {
-  background-color: var(--accent-color);
+
+.node-label-root {
+  font-size: 15px;
+  font-weight: 700;
+  fill: #d4af37;
 }
-input:checked + .slider:before {
-  transform: translateX(22px);
+
+.edge-path {
+  fill: none;
+  stroke-width: 1.8;
+  opacity: 0.55;
+}
+
+.gen-line {
+  stroke: #ffffff;
+  stroke-width: 1;
+  opacity: 0.04;
+  stroke-dasharray: 4 6;
+}
+
+.gen-number {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  fill: rgba(255,255,255,0.2);
+  text-anchor: middle;
+  letter-spacing: 0.04em;
+}
+
+/* ─── Reveal animation ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .it-page-header {
+    padding: 20px 18px 16px;
+  }
+  .it-toolbar {
+    padding: 10px 16px;
+    gap: 6px;
+  }
+  .it-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  .it-legend {
+    display: none;
+  }
+  .it-canvas-wrap {
+    height: calc(100vh - 190px);
+  }
+  .it-detail-panel {
+    padding: 20px 18px 32px;
+  }
+  .it-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .it-detail-ar-name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .it-brand-name {
+    font-size: 15px;
+  }
+  .it-description {
+    display: none;
+  }
+}
+
+/* ─── Dark mode overrides ─── */
+.dark-mode .it-toolbar {
+  background: rgba(4, 10, 20, 0.97);
 }
 </style>
 </head>
@@ -650,1258 +482,594 @@ input:checked + .slider:before {
 
 <div id="header-placeholder"></div>
 
-<main>
-<div class="it-container">
-
-  <div class="it-hero">
-    <h1>ISNĀD TRACER</h1>
-    <p>สืบค้นสายรายงานและสำรวจความเชื่อมโยงทางเครือญาติและการศึกษาของเหล่านักปราชญ์ผู้รายงานหะดีษผ่านแผนผังใยแมงมุม (Interactive Spiderweb Network Map) คลิกและลากเพื่อสำรวจความเชื่อมโยงตลอดชีวิต</p>
+<!-- Page Header -->
+<header class="it-page-header reveal">
+  <div class="it-brand-row">
+    <span class="it-brand-name">ISNĀD TRACER</span>
+    <span class="it-brand-subtitle">แผนภูมิสายรายงานสายวิชาการชาฟิอี</span>
   </div>
+  <p class="it-description">แสดงสายการถ่ายทอดความรู้จากแหล่งที่มาสูงสุดถึงนักวิชาการยุคหลัง — คลิกที่จุดนักวิชาการเพื่อดูรายละเอียด ใช้ล้อเมาส์ซูม ลากเพื่อเลื่อน</p>
+</header>
 
-  <!-- Instruction Panel -->
-  <div class="network-instructions">
-    <div class="inst-left">
-      <h3>วิธีใช้งานแผนผังใยแมงมุม</h3>
-      <p>คลิกซ้ายและลากเพื่อเลื่อนย้ายโหนดปราชญ์เพื่อจัดรูปทรง | คลิกที่โหนดเพื่อวิเคราะห์ความเชื่อมโยงรอบตัวและแสดงผลคำวิจารณ์ ญัรห์ วัตตะอ์ดีล ด้านล่าง</p>
-    </div>
-    <div class="legend-grid">
-      <div class="legend-item">
-        <span class="legend-color color-trans"></span>
-        <span>การส่งผ่านความรู้ (ครู $\rightarrow$ ศิษย์)</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-color color-family"></span>
-        <span>ความสัมพันธ์เชิงเครือญาติ (สายเลือด)</span>
-      </div>
-    </div>
+<!-- Toolbar -->
+<div class="it-toolbar">
+  <button class="it-btn it-btn-primary" id="btnFit" aria-label="พอดีหน้าจอ">พอดีหน้าจอ</button>
+  <button class="it-btn" id="btnZoomIn" aria-label="ขยาย">ขยาย +</button>
+  <button class="it-btn" id="btnZoomOut" aria-label="ย่อ">ย่อ −</button>
+  <div class="it-toolbar-sep"></div>
+  <span class="it-zoom-label" id="zoomLabel">100%</span>
+  <div class="it-toolbar-sep"></div>
+  <div class="it-legend">
+    <div class="it-legend-item"><div class="it-legend-dot" style="background:#d4af37"></div>รากฐาน</div>
+    <div class="it-legend-item"><div class="it-legend-dot" style="background:#93c5fd"></div>ศอฮาบะฮ์</div>
+    <div class="it-legend-item"><div class="it-legend-dot" style="background:#86efac"></div>ตาบิอีน</div>
+    <div class="it-legend-item"><div class="it-legend-dot" style="background:#c49a45"></div>สายอิหม่ามชาฟิอี</div>
+    <div class="it-legend-item"><div class="it-legend-dot" style="background:#a78bfa"></div>สายนูวาวี</div>
+    <div class="it-legend-item"><div class="it-legend-dot" style="background:#38bdf8"></div>ซะกะรียา อัลอันศอรี</div>
+    <div class="it-legend-item"><div class="it-legend-dot" style="background:#67e8f9"></div>สายรอมลี</div>
+    <div class="it-legend-item"><div class="it-legend-dot" style="background:#f87171"></div>สายมัซอาฮี</div>
+    <div class="it-legend-item"><div class="it-legend-dot" style="background:#e879f9"></div>สายอุชมาวี</div>
   </div>
-
-  <!-- Tracer Dashboard Layout -->
-  <div class="tracer-dashboard">
-    
-    <!-- Left Column: grouped scrollable scholar directory -->
-    <div class="narrator-sidebar">
-      <div class="sidebar-header">รายนามปราชญ์ในสายวิชาการ</div>
-      <div class="sidebar-search">
-        <input type="text" class="search-input" id="search-box" placeholder="ค้นหาชื่อนักรายงาน..." oninput="handleSearch()">
-      </div>
-      <div class="toggle-switch-wrapper">
-        <span class="toggle-switch-label">แสดงแหล่งอ้างอิงภาษาอาหรับ</span>
-        <label class="switch">
-          <input type="checkbox" id="global-ar-toggle" onchange="toggleArabicReferences(this.checked)">
-          <span class="slider"></span>
-        </label>
-      </div>
-      <div class="sidebar-list" id="sidebar-list">
-        <!-- Dynamic grouped list will render here -->
-      </div>
-    </div>
-
-    <!-- Right Column: Canvas Container -->
-    <div class="canvas-wrapper">
-      <canvas id="spiderweb-canvas"></canvas>
-    </div>
-
-  </div>
-
-  <!-- Critique Section -->
-  <div class="critique-section" id="critique-panel">
-    <div class="critique-section-header" id="critique-title">การประเมินสถานะในตำราญัรห์ วัตตะอ์ดีล (الجرح والتعديل)</div>
-    
-    <div id="critique-content-area">
-      <div class="critique-grid">
-        
-        <div class="critique-column">
-          <div class="network-column-title" style="text-align: left; color: #059669; margin-left: 0;">คำรับรองและการยกย่อง (التعديل - เชิงบวก)</div>
-          <div class="critique-column" id="ta-dil-col">
-            <!-- Dynamic cards -->
-          </div>
-        </div>
-
-        <div class="critique-column">
-          <div class="network-column-title" style="text-align: left; color: #dc2626; margin-left: 0;">ข้อท้วงติงและข้อวิจารณ์ (الجرح - เชิงลบ)</div>
-          <div class="critique-column" id="jarh-col">
-            <!-- Dynamic cards -->
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
 </div>
-</main>
 
-<!-- Drawer Modal Component -->
-<div class="it-drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
-  <div class="it-drawer" id="drawer-panel" onclick="event.stopPropagation()">
-    <div class="drawer-header">
-      <div class="drawer-header-info">
-        <span class="drawer-gen" id="d-gen">เศาะหาบะฮ์</span>
-        <span class="drawer-name-th" id="d-name-th">ชื่อผู้รายงาน</span>
-        <span class="drawer-name-ar" id="d-name-ar" lang="ar" dir="rtl">الاسم</span>
+<!-- SVG Canvas -->
+<div class="it-canvas-wrap" id="canvasWrap">
+  <svg id="isnadSvg" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <g id="svgRoot">
+      <g id="gridLayer"></g>
+      <g id="edgeLayer"></g>
+      <g id="nodeLayer"></g>
+    </g>
+  </svg>
+</div>
+
+<!-- Detail Panel -->
+<div class="it-detail-panel" id="detailPanel" role="dialog" aria-label="ข้อมูลนักวิชาการ">
+  <div class="it-detail-inner">
+    <p class="it-detail-panel-title">ข้อมูลนักวิชาการ</p>
+    <div class="it-detail-header">
+      <div class="it-detail-title-wrap">
+        <div class="it-detail-ar-name" id="detailArName" lang="ar" dir="rtl">—</div>
+        <span class="it-detail-gen-badge" id="detailGenBadge">รุ่นที่ 0</span>
       </div>
-      <button class="btn-close-drawer" onclick="closeDrawer()">✕</button>
+      <button class="it-close-btn" id="detailCloseBtn">✕ ปิด</button>
     </div>
-    <div class="drawer-content">
-      <button class="btn-toggle-ar" onclick="toggleArabicReferences(null)">แสดงแหล่งอ้างอิงภาษาอาหรับ / عرض المراجع العربية</button>
-      
-      <!-- Arabic Reference Box -->
-      <div class="ar-ref-box" id="d-ar-ref-box"></div>
-
-      <div class="drawer-section">
-        <div class="drawer-section-title">ข้อมูลชีวประวัติ</div>
-        <div class="drawer-data-item" id="d-bio">ข้อมูล...</div>
+    <div class="it-detail-grid">
+      <div class="it-detail-section">
+        <h4>อาจารย์</h4>
+        <ul class="it-detail-names" id="detailTeachers"></ul>
       </div>
-      <div class="drawer-section">
-        <div class="drawer-section-title">ปีที่เสียชีวิต</div>
-        <div class="drawer-data-item" id="d-death">ฮ.ศ. - / ค.ศ. -</div>
+      <div class="it-detail-section">
+        <h4>ศิษย์</h4>
+        <ul class="it-detail-names" id="detailStudents"></ul>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Back to Top -->
+<button id="backToTopBtn" aria-label="กลับขึ้นด้านบน">↑</button>
 
 <div id="footer-placeholder"></div>
+
 <script src="../../main.js"></script>
+
 <script>
-/* ─── 21 Scholars Database ─── */
-const SCHOLAR_DB = [
-  {
-    id: "prophet",
-    nameTh: "ท่านนบีมุหัมมัด ﷺ",
-    nameAr: "محمد رسول الله ﷺ",
-    death: "เสียชีวิตปี ฮ.ศ. 11 / ค.ศ. 632",
-    gen: "บรมศาสดา",
-    bio: "พระบรมศาสดาสัมมาสัมพุทธเจ้าและศาสนทูตท่านสุดท้ายแห่งอิสลาม ผู้รับวะหีย์จากฝั่งฟากฟ้าเพื่อประทานคัมภีร์ <strong>อัลกุรอาน</strong> ทรงแสดงจริยวัตรและวจนะ (หะดีษ) ซึ่งเป็นรากฐานอันเป็นปฐมภูมิของวิชานิติศาสตร์ เทววิทยา และพฤติกรรมศาสตร์ทั้งปวงของโลกมุสลิม",
-    teachers: [],
-    students: ["umar", "abu_hurayrah", "ibn_umar"],
-    family: [],
-    tadil: [
-      { scholar: "คัมภีร์อัลกุรอาน", quote: "และแท้จริงเจ้านั้นอยู่บนคุณธรรมอันยิ่งใหญ่ที่สุด" }
-    ],
-    jarh: []
-  },
-  {
-    id: "umar",
-    nameTh: "อุมัร อิบนุ อัลค็อฏฏอบ",
-    nameAr: "عمر بن الخطاب",
-    death: "เสียชีวิตปี ฮ.ศ. 23 / ค.ศ. 644",
-    gen: "เศาะหาบะฮ์",
-    bio: "เคาะลีฟะฮ์ผู้ทรงธรรมท่านที่สอง อบูหัฟศ์ เป็นหนึ่งในเศาะหาบะฮ์ที่ใกล้ชิดและทรงอิทธิพลสูงสุด เป็นผู้วางระบบการปกครอง ขยายแคว้นอิสลามอย่างรวดเร็ว และทรงปัญญาเลิศล้ำในการตีความนิตินัยศาสนายามเผชิญวิกฤต เป็นบิดาแท้ๆ ของอับดุลลอฮ์ อิบนุ อุมัร",
-    teachers: ["prophet"],
-    students: ["ibn_umar", "ata_bin_abi_rabah"],
-    family: [{ id: "ibn_umar", relation: "บิดา" }],
-    tadil: [
-      { scholar: "ท่านนบีมุหัมมัด ﷺ", quote: "หากในบรรดาประชาชาติรุ่นก่อนมีธรรมชนผู้รับแรงบันดาลใจ แน่นอนว่าอุมัรจะต้องเป็นหนึ่งในคนเหล่านั้น" }
-    ],
-    jarh: []
-  },
-  {
-    id: "abu_hurayrah",
-    nameTh: "อบูฮุร็อยเราะฮ์เราะฎิยัลลอฮุอันฮุ",
-    nameAr: "أبو هريرة",
-    death: "เสียชีวิตปี ฮ.ศ. 59 / ค.ศ. 679",
-    gen: "เศาะหาบะฮ์",
-    bio: "อับดุรเราะห์มาน อิบนุ เศาะคร์ อัดเดาซีย์ อัครเศาะหาบะฮ์ผู้เสียสละเวลาอยู่ใกล้ชิดศาสดาเพื่อท่องจำหะดีษ ได้ชื่อว่าเป็นผู้จดจำและรายงานหะดีษมากที่สุดในประวัติศาสตร์อิสลาม โดยมีลูกศิษย์ในยุคตาบิอีนรับผ่านสายรายงานกว่าแปดร้อยท่าน",
-    teachers: ["prophet"],
-    students: ["ata_bin_abi_rabah", "qatadah"],
-    family: [],
-    tadil: [
-      { scholar: "ปราชญ์สายซุนนีย์", quote: "มีมติเอกฉันท์ในความสัตย์จริงสูงสุด (อะดาละฮ์) ของอบูฮุร็อยเราะฮ์และเป็นจอมปราชญ์ด้านความจำระดับสากล" }
-    ],
-    jarh: []
-  },
-  {
-    id: "ibn_umar",
-    nameTh: "อับดุลลอฮ์ อิบนุ อุมัร",
-    nameAr: "عبد الله بن عمر",
-    death: "เสียชีวิตปี ฮ.ศ. 73 / ค.ศ. 693",
-    gen: "เศาะหาบะฮ์รุ่นเยาว์",
-    bio: "บุตรชายของเคาะลีฟะฮ์อุมัร อบูอับดิกเราะห์มาน เป็นเศาะหาบะฮ์รุ่นเยาว์ที่มีชื่อเสียงอย่างลือเลื่องที่สุดในเรื่องความเพียรพยายามเดินตามรอยเท้าของท่านศาสดาในทุกอณูกิจวัตร ได้รับการยอมรับสูงสุดในความเที่ยงตรงของการสืบทอดสายวิชา",
-    teachers: ["prophet", "umar"],
-    students: ["ibn_shihab_al_zuhri"],
-    family: [{ id: "umar", relation: "บุตร" }],
-    tadil: [
-      { scholar: "อัซซุฮรีย์ (เสียชีวิตปี ฮ.ศ. 124 / ค.ศ. 741)", quote: "เราไม่อาจตั้งข้อกังขาใดๆ ในพฤติกรรมและความจำของอิบนุอุมัรได้เลย ท่านคือนักรายงานระดับสูงสุด" }
-    ],
-    jarh: []
-  },
-  {
-    id: "ata_bin_abi_rabah",
-    nameTh: "อะฏออ์ อิบนุ อบีรอบาห์",
-    nameAr: "عطاء بن أبي رباح",
-    death: "เสียชีวิตปี ฮ.ศ. 114 / ค.ศ. 732",
-    gen: "ตาบิอีนรุ่นใหญ่",
-    bio: "ปราชญ์ฟิกฮ์และมุฟตีประจำนครมักกะฮ์ในยุคตาบิอีนอาวุโส อบูมุหัมมัด เป็นทายาทวิชาการที่สืบทอดความรู้จากท่านอับดุลลอฮ์ อิบนุ อับบาส และอบูฮุร็อยเราะฮ์โดยตรง ได้รับการยอมรับสูงสุดในความเที่ยงตรงของการสืบทอดสายวิชา",
-    teachers: ["abu_hurayrah", "umar"],
-    students: ["abu_hanifah", "ibn_lahiah", "yazid_bin_abi_habib"],
-    family: [],
-    tadil: [
-      { scholar: "อิบนุ หะญัร (เสียชีวิตปี ฮ.ศ. 852 / ค.ศ. 1449)", quote: "ศิเกาะฮ์ (น่าเชื่อถือสูงสุด) เป็นปราชญ์ผู้เชี่ยวชาญด้านกฎบัญญัติและมีความจริงใจอย่างที่สุด" }
-    ],
-    jarh: []
-  },
-  {
-    id: "yazid_bin_abi_habib",
-    nameTh: "ยะซีด อิบนุ อบีหะบีบ",
-    nameAr: "يزيد بن أبي حبيب",
-    death: "เสียชีวิตปี ฮ.ศ. 128 / ค.ศ. 745",
-    gen: "ตาบิอีนรุ่นกลาง",
-    bio: "ปราชญ์หะดีษและกอฎีคนสำคัญคนแรกของอียิปต์ อบูเราะญา เป็นผู้วางระบบการวิเคราะห์วิชาการนิตินัยศาสนาในอียิปต์ มีจริยธรรมดีเลิศและเป็นเสาหลักการศึกษาฝั่งแอฟริกาเหนือ",
-    teachers: ["ata_bin_abi_rabah"],
-    students: ["ibn_lahiah"],
-    family: [],
-    tadil: [
-      { scholar: "ยะห์ยา อิบนุ มะอีน (เสียชีวิตปี ฮ.ศ. 233 / ค.ศ. 848)", quote: "เขาเป็นผู้รายงานที่มีความสัตย์จริงและสายรายงานของเขาในอียิปต์มีความมั่นคงสูงสุด" }
-    ],
-    jarh: []
-  },
-  {
-    id: "ibn_shihab_al_zuhri",
-    nameTh: "อิบน์ ชิฮาบ อัซซุฮรีย์",
-    nameAr: "ابن شهاب الزهري",
-    death: "เสียชีวิตปี ฮ.ศ. 124 / ค.ศ. 741",
-    gen: "ตาบิอีนรุ่นเล็ก",
-    bio: "มุหัมมัด อิบนุ มุสลิม อัซซุฮรีย์ ปราชญ์ผู้สร้างประวัติศาสตร์ด้วยการรวบรวมหะดีษเป็นหมวดหมู่ลายลักษณ์อักษรอย่างเป็นทางการเป็นคนแรกของโลกอิสลาม เป็นจุดบรรจบวิชาการหะดีษแห่งมะดีนะฮ์",
-    teachers: ["ibn_umar"],
-    students: ["ibn_ishaq", "malik"],
-    family: [],
-    tadil: [
-      { scholar: "ปราชญ์ร่วมสมัย", quote: "เราไม่เคยพบเห็นผู้ใดที่จะรวบรวมและจดจำสายรายงานกระจัดกระจายได้เหมือนกับอัซซุฮรีย์อีกแล้ว" }
-    ],
-    jarh: []
-  },
-  {
-    id: "qatadah",
-    nameTh: "ก่อตาดะฮ์ อิบนุ ดิอามะฮ์",
-    nameAr: "قتادة بن دعامة",
-    death: "เสียชีวิตปี ฮ.ศ. 117 / ค.ศ. 735",
-    gen: "ตาบิอีนรุ่นใหญ่",
-    bio: "ปราชญ์อัจฉริยะตาบิอีนแห่งเมืองบัสเราะฮ์ เป็นผู้มีพลังความจำและสายรายงานเป็นเลิศ สามารถสืบสานความรู้จากบรรดาเศาะหาบะฮ์และวิพากษ์หลักไวยากรณ์ภาษาอาหรับชั้นสูงได้อย่างฉับไว",
-    teachers: ["abu_hurayrah"],
-    students: ["shubah"],
-    family: [],
-    tadil: [
-      { scholar: "อะหมัด อิบนุ หันบัล (เสียชีวิตปี ฮ.ศ. 241 / ค.ศ. 855)", quote: "ก่อตาดะฮ์คือบุรุษที่มีความจำยอดเยี่ยมที่สุดคนหนึ่งในประวัติศาสตร์ของแคว้นบัสเราะฮ์" }
-    ],
-    jarh: []
-  },
-  {
-    id: "hammad_bin_abi_sulaiman",
-    nameTh: "หัมมาด อิบนุ อบีสุลัยมาน",
-    nameAr: "حماد بن أبي سليمان",
-    death: "เสียชีวิตปี ฮ.ศ. 120 / ค.ศ. 738",
-    gen: "ตาบิอีนรุ่นกลาง",
-    bio: "ปราชญ์ฟิกฮ์ผู้นำการใช้ดุลยพินิจตรรกะในกูฟะฮ์ อบูกุศ็อยมะฮ์ เป็นศิษย์เอกที่สืบทอดนิตินัยศาสนาของอิบรอฮีม อัลนะคออีย์ และทำหน้าที่สอนอิหม่ามอบูหะนีฟะฮ์เป็นเวลาเกือบ 20 ปี",
-    teachers: ["ata_bin_abi_rabah"],
-    students: ["abu_hanifah"],
-    family: [],
-    tadil: [
-      { scholar: "อัซซะฮะบีย์ (เสียชีวิตปี ฮ.ศ. 748 / ค.ศ. 1348)", quote: "เขาเป็นผู้รายงานที่มีความสัตย์จริงและมีความเชี่ยวชาญสูงสุดในความรู้สายวิชานิตินัยของอิรัก" }
-    ],
-    jarh: []
-  },
-  {
-    id: "ibn_ishaq",
-    nameTh: "มุหัมมัด อิบนุ อิสหาก",
-    nameAr: "محمد بن إسحاق",
-    death: "เสียชีวิตปี ฮ.ศ. 151 / ค.ศ. 768",
-    gen: "ตาบิอิตตาบิอีน",
-    bio: "มุหัมมัด อิบนุ อิสหาก อิบนุ ยะซาร อบูกุศ็อยมะฮ์ ปราชญ์ผู้ประพันธ์ตำราชีวประวัตินบีและการศึกยุคปฐมภูมิ (มะฆอซี) ได้รับการประเมินสถานะในระบบหะดีษอย่างถกเถียงในเชิงการสกัดข้อกฎหมาย แต่ได้รับการยอมรับสูงสุดในเชิงประวัติศาสตร์",
-    teachers: ["ibn_shihab_al_zuhri"],
-    students: ["ibn_hisham"],
-    family: [],
-    tadil: [
-      { scholar: "อิหม่ามอัชชาฟิอีย์ (เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820)", quote: "ผู้ใดที่ต้องการเจาะลึกวิชาสงครามและประวัติท่านศาสดา เขาจะต้องเป็นหนี้วิชาการของมุหัมมัด อิบนุ อิสหาก" }
-    ],
-    jarh: [
-      { scholar: "อิหม่ามมาลิก (เสียชีวิตปี ฮ.ศ. 179 / ค.ศ. 795)", quote: "เขาเป็นหนึ่งในผู้ลวงโลกที่รายงานหะดีษโดยไม่มีความเสถียร (ประเด็นความขัดแย้งส่วนตัวของตระกูลรายงาน)" }
-    ]
-  },
-  {
-    id: "abu_hanifah",
-    nameTh: "อบูหะนีฟะฮ์ นุอ์มาน อิบนุ ษาบิต",
-    nameAr: "أبو حنيفة النعمان",
-    death: "เสียชีวิตปี ฮ.ศ. 150 / ค.ศ. 767",
-    gen: "อัครปราชญ์ฟิกฮ์",
-    bio: "ปราชญ์ผู้สถาปนาสำนักคิดฟิกฮ์หะนะฟีย์ อภิปราชญ์ผู้สร้างความเปลี่ยนแปลงด้วยการนำหลักตรรกะเทียบเคียง (กิยาส) มาเป็นรากฐานการสกัดข้อกฎหมาย ทว่าในด้านสายรายงานท่องจำหะดีษเชิงความจำพยัญชนะเดี่ยวมีข้อบกพร่องตามเกณฑ์หะดีษโบราณ",
-    teachers: ["hammad_bin_abi_sulaiman", "ata_bin_abi_rabah"],
-    students: ["abu_yusuf", "muhammad_al_shaybani", "ibn_al_mubarak"],
-    family: [],
-    tadil: [
-      { scholar: "อิหม่ามอัชชาฟิอีย์ (เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820)", quote: "มนุษยชาติทุกคนเมื่อก้าวเข้าสู่วิชานิติศาสตร์ (ฟิกฮ์) ล้วนถือเป็นหนี้พึ่งพาความรู้ของอบูหะนีฟะฮ์ทั้งสิ้น" }
-    ],
-    jarh: [
-      { scholar: "อันนะซาอี (เสียชีวิตปี ฮ.ศ. 303 / ค.ศ. 915)", quote: "เขามิใช่ปราชญ์ที่มีความเที่ยงตรงด้านความจำท่องจำหะดีษตามระเบียบสืบสายงาน" }
-    ]
-  },
-  {
-    id: "shubah",
-    nameTh: "ชุอ์บะฮ์ อิบนุ อัลหัจญาจ",
-    nameAr: "شعبة بن الحجاج",
-    death: "เสียชีวิตปี ฮ.ศ. 160 / ค.ศ. 776",
-    gen: "ประมุขวิชาหะดีษ",
-    bio: "ปราชญ์หะดีษแห่งบัสเราะฮ์ อบูกุศ็อยมะฮ์ ผู้สร้างระบบญัรห์ วัตตะอ์ดีลโบราณและตรวจสอบความเที่ยงตรงในการท่องจำอย่างเป็นรูปธรรมคนแรกในอิรัก ได้รับฉายาว่าประมุขผู้รักษาหะดีษแห่งโลก",
-    teachers: ["qatadah"],
-    students: ["ibn_al_mubarak", "yahya_al_qattan", "ibn_mahdi"],
-    family: [],
-    tadil: [
-      { scholar: "สุฟยาน อัษเษารีย์ (เสียชีวิตปี ฮ.ศ. 161 / ค.ศ. 778)", quote: "ชุอ์บะฮ์คือปราชญ์สูงสุดในความรู้สายวิชาหะดีษและความเที่ยงธรรมแห่งยุค" }
-    ],
-    jarh: []
-  },
-  {
-    id: "ibn_lahiah",
-    nameTh: "อับดุลลอฮ์ อิบนุ ละฮีอะฮ์",
-    nameAr: "عبد الله بن لهيعة",
-    death: "เสียชีวิตปี ฮ.ศ. 174 / ค.ศ. 790",
-    gen: "กอฎีอียิปต์",
-    bio: "นักรายงานหะดีษและผู้พิพากษาแห่งอียิปต์ ผู้เผชิญเหตุการณ์ตำราบันทึกส่วนตัวเสียหายทั้งหมดในอัคคีภัยใหญ่ปี ฮ.ศ. 170 ส่งผลให้ความจำของท่านคลาดเคลื่อนนับแต่นั้น ปราชญ์จะรับเฉพาะรายงานที่คัดลอกก่อนไฟไหม้",
-    teachers: ["ata_bin_abi_rabah", "yazid_bin_abi_habib"],
-    students: ["ibn_al_mubarak", "ibn_wahb", "qutaybah_bin_said"],
-    family: [],
-    tadil: [
-      { scholar: "อะหมัด อิบนุ หันบัล (เสียชีวิตปี ฮ.ศ. 241 / ค.ศ. 855)", quote: "หะดีษที่ผู้รายงานจดบันทึกจากอิบนุละฮีอะฮ์ก่อนช่วงเวลาไฟไหม้บ้านของเขานั้นถือว่าถูกต้องและเชื่อถือได้" }
-    ],
-    jarh: [
-      { scholar: "อิบนุ หะญัร (เสียชีวิตปี ฮ.ศ. 852 / ค.ศ. 1449)", quote: "ความจำของเขาปนเปไปหมดสิ้นหลังจากหนังสือและบันทึกส่วนตัวถูกไฟไหม้ในปี ฮ.ศ. 170" }
-    ]
-  },
-  {
-    id: "ibn_al_mubarak",
-    nameTh: "อับดุลลอฮ์ อิบนุ อัลมุบาร็อก",
-    nameAr: "عبد الله بن المبارك",
-    death: "เสียชีวิตปี ฮ.ศ. 181 / ค.ศ. 797",
-    gen: "มหาปราชญ์",
-    bio: "อภิปราชญ์หะดีษผู้จดจำตำราและเป็นสะพานเชื่อมสายรายงานปราชญ์สามขั้วใหญ่ในอดีต (อบูหะนีฟะฮ์, ชุอ์บะฮ์ และอิบนุละฮีอะฮ์) มีชื่อเสียงสูงสุดด้านความสมบูรณ์และเป็นที่ยอมรับระดับสากล",
-    teachers: ["shubah", "abu_hanifah", "ibn_lahiah"],
-    students: ["qutaybah_bin_said"],
-    family: [],
-    tadil: [
-      { scholar: "ปราชญ์ร่วมสมัย", quote: "เราไม่อาจหาผู้ใดที่มีคุณสมบัติความรอบรู้และรักษาสัจจะดีเยี่ยมได้เท่าอับดุลลอฮ์ อิบนุ อัลมุบาร็อกอีกแล้ว" }
-    ],
-    jarh: []
-  },
-  {
-    id: "ibn_wahb",
-    nameTh: "อับดุลลอฮ์ อิบนุ วะฮับ",
-    nameAr: "عبد الله بن وهب",
-    death: "เสียชีวิตปี ฮ.ศ. 197 / ค.ศ. 812",
-    gen: "ศิษย์เอกมาลิก",
-    bio: "ศิษย์เอกผู้สัตย์จริงและมีความจำแม่นยำสูงสุดประจำนครอียิปต์ รายงานสายวิชาหลักจากอิหม่ามมาลิกและบันทึกข้อมูลก่อนเกิดเพลิงไหม้ของอิบนุละฮีอะฮ์ได้อย่างเที่ยงตรง",
-    teachers: ["ibn_lahiah", "malik"],
-    students: [],
-    family: [],
-    tadil: [
-      { scholar: "ยะห์ยา อิบนุ มะอีน (เสียชีวิตปี ฮ.ศ. 233 / ค.ศ. 848)", quote: "เขามีความเที่ยงตรงสูงสุดและคัดกรองสายรายงานของดินแดนแอฟริกาเหนือได้อย่างสมบูรณ์ที่สุด" }
-    ],
-    jarh: []
-  },
-  {
-    id: "qutaybah_bin_said",
-    nameTh: "กุตัยบะฮ์ อิบนุ สะอีด",
-    nameAr: "قتيبة بن سعيد",
-    death: "เสียชีวิตปี ฮ.ศ. 240 / ค.ศ. 854",
-    gen: "ปราชญ์อาวุโส",
-    bio: "ปราชญ์หะดีษผู้จดจำสายรายงานและบันทึกข้อมูลผู้รายงานจำนวนมากในดินแดนคุรอซาน อบูเราะญา เป็นอาจารย์คนสำคัญที่เป็นผู้สืบทอดสายวิชาหลักให้แก่อิหม่ามอัลบุคอรีย์และมุสลิม",
-    teachers: ["ibn_lahiah", "ibn_al_mubarak"],
-    students: ["bukhari", "muslim"],
-    family: [],
-    tadil: [
-      { scholar: "อิหม่ามอะหมัด (เสียชีวิตปี ฮ.ศ. 241 / ค.ศ. 855)", quote: "กุตัยบะฮ์เป็นผู้รายงานที่สัตย์จริงและมีน้ำหนักมากพอในการยอมรับสายรายงาน" }
-    ],
-    jarh: []
-  },
-  {
-    id: "malik",
-    nameTh: "อิหม่ามมาลิก อิบนุ อะนัส",
-    nameAr: "مالك بن أنس",
-    death: "เสียชีวิตปี ฮ.ศ. 179 / ค.ศ. 795",
-    gen: "เสาหลักฮิญาซ",
-    bio: "ผู้ประพันธ์ตำราหะดีษนิตินัยเล่มแรกของโลก <strong>อัลมุวัฏเฏาะอ์</strong> ปราชญ์ผู้เป็นประภาคารแห่งมติศาสนาประจำนครมะดีนะฮ์ คัดกรองสายรายงานอย่างเข้มแข็งและเที่ยงตรงที่สุดคนหนึ่ง",
-    teachers: ["ibn_shihab_al_zuhri"],
-    students: ["ibn_wahb", "shafi_i"],
-    family: [],
-    tadil: [
-      { scholar: "อัชชาฟิอีย์ (เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820)", quote: "เมื่อมีการเอ่ยอ้างถึงเหล่านักปราชญ์ผู้เป็นดาวจรัสแสง อิหม่ามมาลิกย่อมเป็นดาวดวงที่สว่างไสวที่สุดในวิชาการหะดีษ" }
-    ],
-    jarh: []
-  },
-  {
-    id: "shafi_i",
-    nameTh: "อิหม่ามอัชชาฟิอีย์",
-    nameAr: "محمد بن إدريس الشافعي",
-    death: "เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820",
-    gen: "เสาหลักนิติศาสตร์",
-    bio: "มุหัมมัด อิบนุ อิดรีส อัชชาฟิอีย์ ปราชญ์ผู้วางรากฐานและจัดหมวดวิชาอุศูลุลฟิกฮ์ (ทฤษฎีและระเบียบวิธีนิติศาสตร์) เป็นผู้ประพันธ์ตำราหลัก <strong>อัรริสาละฮ์</strong> ได้รับการยกย่องในความเป็นสัจจะและความเฉียบคม",
-    teachers: ["malik"],
-    students: ["ahmad"],
-    family: [],
-    tadil: [
-      { scholar: "อะหมัด อิบนุ หันบัล (เสียชีวิตปี ฮ.ศ. 241 / ค.ศ. 855)", quote: "อัชชาฟิอีย์เปรียบเสมือนดั่งแสงอาทิตย์สำหรับผู้คนในหล้าโลก และความรู้ของท่านคือโอสถรักษาความเข้าใจผิด" }
-    ],
-    jarh: []
-  },
-  {
-    id: "ahmad",
-    nameTh: "อิหม่ามอะหมัด อิบนุ หันบัล",
-    nameAr: "أحمد بن حنبل",
-    death: "เสียชีวิตปี ฮ.ศ. 241 / ค.ศ. 855",
-    gen: "เสาหลักซุนนะฮ์",
-    bio: "ปราชญ์ผู้วางตัวเป็นหลักศิลาแห่งความอดทนในการต่อสู้เพื่อพิทักษ์ความบริสุทธิ์ของตัวบทหะดีษตำรา <strong>อัลมุสนัด</strong> ได้รับการนับถือว่าเป็นประมุขผู้ปกป้องจริยวัตรอันถูกต้องตามแบบอย่างนบี",
-    teachers: ["shafi_i", "abu_yusuf", "ibn_mahdi"],
-    students: ["bukhari", "muslim"],
-    family: [],
-    tadil: [
-      { scholar: "อิบน์ กุตัยบะฮ์ (เสียชีวิตปี ฮ.ศ. 276 / ค.ศ. 889)", quote: "เขาคือหลักชัยด้านความเที่ยงตรงและความรู้ทั้งหมดในยุคที่เต็มไปด้วยข้อพิพาททางความคิดศาสนา" }
-    ],
-    jarh: []
-  },
-  {
-    id: "bukhari",
-    nameTh: "อิหม่ามอัลบุคอรีย์",
-    nameAr: "الإمام البخاري",
-    death: "เสียชีวิตปี ฮ.ศ. 256 / ค.ศ. 870",
-    gen: "อัครปราชญ์หะดีษ",
-    bio: "มุหัมมัด อิบนุ อิสมาอีล อัลบุคอรีย์ ผู้ประพันธ์ตำราหะดีษ <strong>เศาะหีหฺ อัลบุคอรีย์</strong> ซึ่งถือเป็นหนังสือที่รวบรวมหะดีษที่ถูกต้องและมีความแม่นยำสูงสุดเป็นอันดับสองรองจากคัมภีร์อัลกุรอานอย่างเป็นเอกฉันท์",
-    teachers: ["qutaybah_bin_said", "ahmad"],
-    students: [],
-    family: [],
-    tadil: [
-      { scholar: "มุสลิม อิบนุ อัลหัจญาจ (เสียชีวิตปี ฮ.ศ. 261 / ค.ศ. 875)", quote: "ไม่มีปราชญ์ผู้รายงานคนใดในหน้าแผ่นดินนี้ที่จะรวบรวมสายรายงานได้อย่างแม่นยำเทียบเท่ากับท่านอีกแล้ว" }
-    ],
-    jarh: []
-  },
-  {
-    id: "muslim",
-    nameTh: "อิหม่ามมุสลิม",
-    nameAr: "الإمام مسلم",
-    death: "เสียชีวิตปี ฮ.ศ. 261 / ค.ศ. 875",
-    gen: "อัครปราชญ์หะดีษ",
-    bio: "มุสลิม อิบนุ อัลหัจญาจ อัลกุชัยรีย์ ผู้ประพันธ์ตำราหะดีษสะท้อนจริยวัตรนบี <strong>เศาะหีหฺ มุสลิม</strong> โดดเด่นเป็นพิเศษด้านการตรวจสอบเชื่อมประสานคำรายงานและเรียบเรียงโครงสร้างอย่างมีระเบียบยอดเยี่ยม",
-    teachers: ["qutaybah_bin_said", "ahmad"],
-    students: [],
-    family: [],
-    tadil: [
-      { scholar: "นักวิชาการซุนนีย์", quote: "เขาเป็นผู้รวบรวมระดับเสาหลักคู่เคียงกับอัลบุคอรีย์ และหนังสือของเขาได้รับความเชื่อถือสูงสุดในระบบการคัดหะดีษ" }
-    ],
-    jarh: []
-  },
-  // Relatives & Helpers not in Main Selection but needed to complete the web
-  {
-    id: "abu_yusuf",
-    nameTh: "กอฎี อบูยูสุฟ",
-    nameAr: "أبو يوسف",
-    death: "เสียชีวิตปี ฮ.ศ. 182 / ค.ศ. 798",
-    gen: "ตาบิอิตตาบิอีน",
-    bio: "ยะอ์กูบ อิบนุ อิบรอฮีม ศิษย์เอกผู้สืบทอดนิตินัยหลักของอบูหะนีฟะฮ์ ได้ดำรงตำแหน่งกอฎีกุฎอต (ผู้พิพากษาสูงสุด) ของอาณาจักรผู้ช่วยกระจายหลักกฎหมาย",
-    teachers: ["abu_hanifah"],
-    students: ["ahmad"],
-    family: [],
-    tadil: [{ scholar: "ยะห์ยา อิบนุ มะอีน", quote: "เป็นปราชญ์ผู้สัตย์จริงและมีความแม่นยำสูง" }],
-    jarh: []
-  },
-  {
-    id: "muhammad_al_shaybani",
-    nameTh: "มุหัมมัด อัลชัยบานีย์",
-    nameAr: "محمد بن الحسن الشيباني",
-    death: "เสียชีวิตปี ฮ.ศ. 189 / ค.ศ. 805",
-    gen: "ตาบิอิตตาบิอีน",
-    bio: "มุหัมมัด อิบนุ อัลหะซัน ศิษย์ผู้ประมวลจัดเรียงกฎฟิกฮ์ของสำนักคิดหะนะฟีย์อย่างเป็นระบบลายลักษณ์อักษร เป็นผู้มีความแม่นยำในการอนุมานนิตินัย",
-    teachers: ["abu_hanifah"],
-    students: [],
-    family: [],
-    tadil: [{ scholar: "อัชชาฟิอีย์", quote: "ผมได้คัดลอกวิชาเปรียบเทียบกฎหมายมาจากเขาจำนวนมาก" }],
-    jarh: []
-  },
-  {
-    id: "ibn_mahdi",
-    nameTh: "อับดุรเราะห์มาน อิบนุ มะฮ์ดีย์",
-    nameAr: "عبد الرحمن بن مهدي",
-    death: "เสียชีวิตปี ฮ.ศ. 198 / ค.ศ. 813",
-    gen: "ตาบิอิตตาบิอีนรุ่นใหญ่",
-    bio: "ปราชญ์ตรวจสอบคัดกรองสายรายงานสำคัญประจำบัสเราะฮ์ เป็นคู่หูวิชาการของปราชญ์ยะห์ยา อัลก็อฏฏอน ได้รับการยอมรับด้านความเที่ยงธรรมและการจำแนกข้อบกพร่องหะดีษ",
-    teachers: ["shubah"],
-    students: ["ahmad"],
-    family: [],
-    tadil: [{ scholar: "ปราชญ์ยุคคลาสสิก", quote: "เขาคือขุมทรัพย์ความมั่นคงของหะดีษซุนนะฮ์" }],
-    jarh: []
-  },
-  {
-    id: "yahya_al_qattan",
-    nameTh: "ยะห์ยา อิบนุ สะอีด อัลก็อฏฏอน",
-    nameAr: "يحيى بن سعيد القطان",
-    death: "เสียชีวิตปี ฮ.ศ. 198 / ค.ศ. 813",
-    gen: "ตาบิอิตตาบิอีนรุ่นใหญ่",
-    bio: "มหาปราชญ์ตรวจคัดหะดีษ มีความเข้มงวดสูงสุดในวิชาญัรห์ วัตตะอ์ดีล ได้รับความเชื่อถืออย่างยิ่งใหญ่ในความเที่ยงตรง",
-    teachers: ["shubah"],
-    students: [],
-    family: [],
-    tadil: [{ scholar: "อิหม่ามอะหมัด", quote: "เราไม่เคยเห็นผู้ใดที่จะเข้มข้นคัดกรองพฤติกรรมผู้รายงานได้เหมือนท่านก็อฏฏอน" }],
-    jarh: []
-  },
-  {
-    id: "ibn_hisham",
-    nameTh: "อับดุลมะลิก อิบนุ ฮิชาม",
-    nameAr: "ابن هشام",
-    death: "เสียชีวิตปี ฮ.ศ. 218 / ค.ศ. 833",
-    gen: "ผู้สืบทอดตำรา",
-    bio: "ปราชญ์ผู้จดบันทึกและสืบทอดตำราประวัตินบีของมุหัมมัด อิบนุ อิสหาก เรียงร้อยใหม่เป็น <strong>สิเราะฮ์ อิบนุ ฮิชาม</strong> ที่ทั่วโลกยอมรับอ้างอิง",
-    teachers: ["ibn_ishaq"],
-    students: [],
-    family: [],
-    tadil: [{ scholar: "ปราชญ์ประวัติศาสตร์", quote: "มีความสัตย์จริงและมีความแม่นยำด้านการคัดกรองคำศัพท์" }],
-    jarh: []
-  }
+/* ════════════════════════════════════════════════════════════
+   ISNĀD TRACER v5 — Horizontal Timeline Tree
+   LEFT = oldest (gen 0), RIGHT = newest (gen 31)
+   ════════════════════════════════════════════════════════════ */
+
+const GEN_WIDTH = 180;
+const NODE_SLOT_H = 52;
+const PAD_TOP = 80;
+const PAD_LEFT = 60;
+const PAD_BOTTOM = 60;
+
+/* ── Branch colour map ── */
+const BRANCH_COLORS = {
+  divine:     '#d4af37',
+  companion:  '#93c5fd',
+  tabiin:     '#86efac',
+  trunk:      '#c49a45',
+  nawawi:     '#a78bfa',
+  zakariyya:  '#38bdf8',
+  ramli:      '#67e8f9',
+  ziyadi:     '#4ade80',
+  mazzahi:    '#f87171',
+  ushmawy:    '#e879f9',
+  ansari:     '#7dd3fc',
+  contemporary: '#d4af37',
+};
+
+/* ── Scholar database ──
+   id, gen, ar (name in Arabic), branch, teachers (array of ids)
+─────────────────────────────────────────────────────────────── */
+const SCHOLARS = [
+  { id: 'allah',       gen: 0,  ar: 'اللهُ تَبَارَكَ وَتَعَالَى',         branch: 'divine',     teachers: [] },
+  { id: 'jibril',      gen: 1,  ar: 'جِبْرِيلُ عَلَيْهِ السَّلَامُ',       branch: 'divine',     teachers: ['allah'] },
+  { id: 'nabi',        gen: 2,  ar: 'رَسُولُ اللهِ ﷺ',                      branch: 'divine',     teachers: ['jibril'] },
+  { id: 'anas',        gen: 3,  ar: 'أَنَسُ بْنُ مَالِكٍ',                   branch: 'companion',  teachers: ['nabi'] },
+  { id: 'ibnumar',     gen: 3,  ar: 'عَبْدُ اللهِ بْنُ عُمَرَ',              branch: 'companion',  teachers: ['nabi'] },
+  { id: 'rabia',       gen: 4,  ar: 'رَبِيعَةُ الرَّأْيِ',                   branch: 'tabiin',     teachers: ['anas'] },
+  { id: 'nafi',        gen: 4,  ar: 'نَافِعٌ مَوْلَى ابْنِ عُمَرَ',          branch: 'tabiin',     teachers: ['ibnumar'] },
+  { id: 'malik',       gen: 5,  ar: 'مَالِكُ بْنُ أَنَسٍ',                   branch: 'trunk',      teachers: ['rabia', 'nafi'] },
+  { id: 'shafii',      gen: 6,  ar: 'مُحَمَّدُ بْنُ إِدْرِيسَ الشَّافِعِيُّ', branch: 'trunk',      teachers: ['malik'] },
+  { id: 'muzani',      gen: 7,  ar: 'إِسْمَاعِيلُ بْنُ يَحْيَى الْمُزَنِيُّ', branch: 'trunk',      teachers: ['shafii'] },
+  { id: 'anmati',      gen: 8,  ar: 'عُثْمَانُ بْنُ بَشَّارٍ الْأَنْمَاطِيُّ', branch: 'trunk',      teachers: ['muzani'] },
+  { id: 'ibnsurij',    gen: 9,  ar: 'أَحْمَدُ بْنُ عُمَرَ بْنِ سُرَيْجٍ',    branch: 'trunk',      teachers: ['anmati'] },
+  { id: 'marwazi',     gen: 10, ar: 'إِبْرَاهِيمُ بْنُ مُحَمَّدٍ الْمَرْوَذِيُّ الْكَبِيرُ', branch: 'trunk', teachers: ['ibnsurij'] },
+  { id: 'masarjisi',   gen: 11, ar: 'مُحَمَّدُ بْنُ عَلِيٍّ الْمَاسَرْجِسِيُّ', branch: 'trunk',    teachers: ['marwazi'] },
+  { id: 'abitayyib',   gen: 12, ar: 'الْقَاضِي أَبُو طَيِّبٍ الطَّبَرِيُّ',  branch: 'trunk',      teachers: ['masarjisi'] },
+  { id: 'shirazi',     gen: 13, ar: 'أَبُو إِسْحَاقَ الشِّيرَازِيُّ',         branch: 'trunk',      teachers: ['abitayyib'] },
+  { id: 'farqi',       gen: 14, ar: 'الْقَاضِي أَبُو عَلِيٍّ الْفَارِقِيُّ',   branch: 'trunk',      teachers: ['shirazi'] },
+  { id: 'ibnasrun',    gen: 15, ar: 'أَبُو سَعِيدٍ ابْنُ أَبِي عَصْرُونٍ',    branch: 'trunk',      teachers: ['farqi'] },
+  { id: 'ibnsalah',    gen: 16, ar: 'ابْنُ الصَّلَاحِ عُثْمَانُ بْنُ عَبْدِ الرَّحْمَنِ', branch: 'nawawi', teachers: ['ibnasrun'] },
+  { id: 'nawawi',      gen: 17, ar: 'أَبُو زَكَرِيَّا النَّوَوِيُّ',           branch: 'nawawi',     teachers: ['ibnsalah'] },
+  { id: 'ibnattar',    gen: 18, ar: 'عَلَاءُ الدِّينِ ابْنُ الْعَطَّارِ',       branch: 'nawawi',     teachers: ['nawawi'] },
+  { id: 'iraqui',      gen: 19, ar: 'الشَّيْخُ عَبْدُ الرَّحِيمِ الْعِرَاقِيُّ', branch: 'nawawi',   teachers: ['ibnattar'] },
+  { id: 'mahalli',     gen: 20, ar: 'جَلَالُ الدِّينِ الْمَحَلِّيُّ',           branch: 'zakariyya', teachers: ['iraqui'] },
+  { id: 'bulqini',     gen: 20, ar: 'جَلَالُ الدِّينِ الْبُلْقِينِيُّ',          branch: 'zakariyya', teachers: ['iraqui'] },
+  { id: 'ibnhajar',    gen: 20, ar: 'ابْنُ حَجَرٍ الْعَسْقَلَانِيُّ',            branch: 'zakariyya', teachers: ['iraqui'] },
+  { id: 'zakariyya',   gen: 21, ar: 'شَيْخُ الْإِسْلَامِ زَكَرِيَّا الْأَنْصَارِيُّ', branch: 'zakariyya', teachers: ['mahalli', 'bulqini', 'ibnhajar'] },
+  { id: 'ramlikabir',  gen: 22, ar: 'شِهَابُ الدِّينِ الرَّمْلِيُّ الْكَبِيرُ',  branch: 'ramli',     teachers: ['zakariyya'] },
+  { id: 'yusufzak',    gen: 22, ar: 'الْجَمَالُ يُوسُفُ بْنُ زَكَرِيَّا',        branch: 'ansari',    teachers: ['zakariyya'] },
+  { id: 'ramlisghr',   gen: 23, ar: 'شَمْسُ الدِّينِ الرَّمْلِيُّ الصَّغِيرُ',   branch: 'ramli',     teachers: ['ramlikabir'] },
+  { id: 'abdulqadir',  gen: 23, ar: 'مُحْيِي الدِّينِ عَبْدُ الْقَادِرِ',         branch: 'ansari',    teachers: ['yusufzak'] },
+  { id: 'ziyadi',      gen: 24, ar: 'نُورُ الدِّينِ عَلِيٌّ الزِّيَادِيُّ',       branch: 'ziyadi',    teachers: ['ramlisghr'] },
+  { id: 'khatibishar', gen: 24, ar: 'الْخَطِيبُ الشَّرْبِينِيُّ',                 branch: 'ramli',     teachers: ['ramlisghr'] },
+  { id: 'sharafyahya', gen: 24, ar: 'شَرَفُ الدِّينِ يَحْيَى الْأَنْصَارِيُّ',    branch: 'ansari',    teachers: ['abdulqadir'] },
+  { id: 'halabi',      gen: 25, ar: 'عَلِيُّ بْنُ إِبْرَاهِيمَ الْحَلَبِيُّ',     branch: 'ziyadi',    teachers: ['ramlisghr'] },
+  { id: 'shabshiri',   gen: 25, ar: 'سَالِمٌ الشَّبْشِيرِيُّ',                    branch: 'ramli',     teachers: ['ramlikabir'] },
+  { id: 'babuli',      gen: 25, ar: 'سُلَيْمَانُ الْبَابُلِيُّ',                   branch: 'ramli',     teachers: ['ramlisghr', 'khatibishar'] },
+  { id: 'mazzahi',     gen: 26, ar: 'سُلْطَانُ الْمُزَاحِيُّ',                    branch: 'mazzahi',   teachers: ['halabi', 'ziyadi', 'shabshiri'] },
+  { id: 'shabramalsi', gen: 26, ar: 'عَلِيٌّ الشَّبْرَامَلِّسِيُّ',                branch: 'mazzahi',   teachers: ['ziyadi'] },
+  { id: 'bushbishy',   gen: 27, ar: 'أَحْمَدُ الْبِشْبِيشِيُّ',                   branch: 'mazzahi',   teachers: ['mazzahi'] },
+  { id: 'anani',       gen: 27, ar: 'مُحَمَّدٌ الْعَنَانِيُّ',                    branch: 'mazzahi',   teachers: ['mazzahi'] },
+  { id: 'tukhi',       gen: 27, ar: 'مَنْصُورٌ الطُّوخِيُّ',                     branch: 'mazzahi',   teachers: ['mazzahi'] },
+  { id: 'ushmawy',     gen: 27, ar: 'مُحَمَّدٌ الْعُشْمَاوِيُّ',                  branch: 'ushmawy',   teachers: ['bushbishy', 'shabramalsi'] },
+  { id: 'khalifi',     gen: 28, ar: 'أَحْمَدُ الْخَلِيفِيُّ الْبَصِيرُ',           branch: 'mazzahi',   teachers: ['bushbishy', 'anani', 'tukhi'] },
+  { id: 'diwi',        gen: 28, ar: 'عَبْدُ رَبِّهِ الدِّيوِيُّ',                 branch: 'ushmawy',   teachers: ['ushmawy'] },
+  { id: 'basri',       gen: 28, ar: 'الشَّيْخُ الْبَصْرِيُّ',                     branch: 'ushmawy',   teachers: ['shabramalsi', 'tukhi'] },
+  { id: 'budayri',     gen: 28, ar: 'مُحَمَّدٌ الْبُدَيْرِيُّ ابْنُ الْمَيِّتِ',   branch: 'ushmawy',   teachers: ['shabramalsi', 'bushbishy', 'sharafyahya'] },
+  { id: 'hafni',       gen: 29, ar: 'مُحَمَّدُ بْنُ سَالِمٍ الْحَفْنِيُّ',         branch: 'mazzahi',   teachers: ['khalifi'] },
+  { id: 'ajhuri',      gen: 29, ar: 'عَطِيَّةُ الْأَجْهُورِيُّ',                  branch: 'ushmawy',   teachers: ['diwi', 'ushmawy', 'basri'] },
+  { id: 'farisi',      gen: 29, ar: 'مُحَمَّدٌ الْفَارِسِيُّ',                    branch: 'ushmawy',   teachers: ['ushmawy'] },
+  { id: 'brawi',       gen: 29, ar: 'الشَّيْخُ عِيسَى الْبِرَاوِيُّ',             branch: 'ushmawy',   teachers: ['basri'] },
+  { id: 'samanudi',    gen: 29, ar: 'مُحَمَّدٌ الْمُنِيرُ السَّمَنُودِيُّ',        branch: 'ushmawy',   teachers: ['budayri'] },
+  { id: 'shanwani',    gen: 30, ar: 'مُحَمَّدُ بْنُ عَلِيٍّ الشَّنَوَانِيُّ',      branch: 'ushmawy',   teachers: ['ajhuri', 'farisi', 'brawi'] },
+  { id: 'amirkabir',   gen: 30, ar: 'مُحَمَّدٌ الْأَمِيرُ الْكَبِيرُ',             branch: 'ushmawy',   teachers: ['samanudi'] },
+  { id: 'sharqawi',    gen: 31, ar: 'عَبْدُ اللهِ بْنُ حِجَازِيٍّ الشَّرْقَاوِيُّ', branch: 'contemporary', teachers: ['hafni', 'ajhuri'] },
 ];
 
-/* ─── Arabic Reference & Formatting Helpers ─── */
-function toArabicNumerals(str) {
-  if (!str) return '';
-  const map = {
-    '0': '٠', '1': '١', '2': '٢', '3': '٣', '4': '٤',
-    '5': '٥', '6': '٦', '7': '٧', '8': '٨', '9': '٩'
-  };
-  return str.toString().replace(/[0-9]/g, w => map[w]);
-}
+/* ── Build lookup maps ── */
+const scholarsById = {};
+SCHOLARS.forEach(s => { scholarsById[s.id] = s; });
 
-function formatDeathAr(deathStr) {
-  if (!deathStr) return '';
-  const numMatch = deathStr.match(/\d+/);
-  if (numMatch) {
-    const num = numMatch[0];
-    return toArabicNumerals(`ت ${num} هـ`);
-  }
-  return toArabicNumerals(deathStr);
-}
-
-// Arabic Critic Name Map
-const CRITIC_AR = {
-  "คัมภีร์อัลกุรอาน": "القرآن الكريم",
-  "ท่านนบีมุหัมมัด ﷺ": "النبي محمد ﷺ",
-  "ปราชญ์สายซุนนีย์": "علماء أهل السنة",
-  "อัซซุฮรีย์": "ابن شهاب الزهري",
-  "อิบนุ หะญัร": "ابن حجر العسقلاني",
-  "ยะห์ยา อิบนุ มะอีน": "يحيى بن معين",
-  "ปราชญ์ร่วมสมัย": "العلماء المعاصرون له",
-  "อะหมัด อิบนุ หันบัล": "أحمد بن حنبل",
-  "อิหม่ามอัชชาฟิอีย์": "الشافعي",
-  "อิหม่ามมาลิก": "مالك بن أنس",
-  "อันนะซาอี": "النسائي",
-  "สุฟยาน อัษเษารีย์": "سفيาน الثوري",
-  "มุสลิม อิบนุ อัลหัจญาจ": "مسلم بن الحجاج",
-  "นักวิชาการซุนนีย์": "علماء السنة",
-  "ยะห์ยา อัลก็อฏฏอน": "يحيى بن سعيد القطان",
-  "ปราชญ์ประวัติศาสตร์": "علماء التاريخ والترجم"
-};
-
-// Global toggle state
-let showArabicRef = false;
-
-function toggleArabicReferences(checkedState) {
-  if (checkedState === null || checkedState === undefined) {
-    showArabicRef = !showArabicRef;
-  } else {
-    showArabicRef = checkedState;
-  }
-  
-  // Sync checkbox UI
-  const cb = document.getElementById('global-ar-toggle');
-  if (cb) cb.checked = showArabicRef;
-  
-  if (showArabicRef) {
-    document.body.classList.add('show-arabic-ref');
-  } else {
-    document.body.classList.remove('show-arabic-ref');
-  }
-}
-
-/* Merge helper nodes into the same access list for quick lookups */
-const SCHOLAR_LOOKUP = {};
-SCHOLAR_DB.forEach(s => {
-  SCHOLAR_LOOKUP[s.id] = s;
+/* Build students map */
+const studentsMap = {};
+SCHOLARS.forEach(s => {
+  s.teachers.forEach(tid => {
+    if (!studentsMap[tid]) studentsMap[tid] = [];
+    studentsMap[tid].push(s.id);
+  });
 });
 
-/* ─── Physics Simulation Engine ─── */
-const canvas = document.getElementById('spiderweb-canvas');
-const ctx = canvas.getContext('2d');
-
-let width = canvas.offsetWidth || 1000;
-let height = canvas.offsetHeight || 600;
-canvas.width = width;
-canvas.height = height;
-
-// Simulation variables
-const nodes = [];
-const links = [];
-const familyLinks = [];
-let selectedNode = null;
-let hoveredNode = null;
-let draggedNode = null;
-
-const gravity = 0.035;
-const friction = 0.86;
-const repulsionDist = 240;
-const targetLinkLength = 170;
-const attractionForce = 0.06;
-
-// Generation parameters
-const GEN_BORDER_COLORS = {
-  "บรมศาสดา": "#b31b1b",      // Rich Gold
-  "เศาะหาบะฮ์": "#2563eb",      // Blue
-  "เศาะหาบะฮ์รุ่นเยาว์": "#3b82f6", // Light Blue
-  "ตาบิอีนรุ่นใหญ่": "#10b981",    // Green
-  "ตาบิอีนรุ่นกลาง": "#059669",    // Dark Green
-  "ตาบิอีนรุ่นเล็ก": "#047857",    // Deep Emerald
-  "ตาบิอิตตาบิอีน": "#8b5cf6",    // Purple
-  "ตาบิอิตตาบิอีนรุ่นใหญ่": "#7c3aed", // Deep Purple
-  "อัครปราชญ์ฟิกฮ์": "#1e40af",   // IFP Gold
-  "ประมุขวิชาหะดีษ": "#2563eb",   // Amber
-  "กอฎีอียิปต์": "#14b8a6",       // Teal
-  "มหาปราชญ์": "#ec4899",        // Pink
-  "ศิษย์เอกมาลิก": "#10b981",      // Green
-  "ปราชญ์อาวุโส": "#f97316",      // Orange
-  "เสาหลักฮิญาซ": "#06b6d4",      // Cyan
-  "เสาหลักนิติศาสตร์": "#3b82f6",  // Blue
-  "เสาหลักซุนนะฮ์": "#b91c1c",    // Red
-  "อัครปราชญ์หะดีษ": "#3b82f6",   // Gold
-  "ผู้สืบทอดตำรา": "#6b7280"      // Gray
-};
-
-/* Initialize Physics Nodes & Links */
-function initSimulation() {
-  // Clear lists
-  nodes.length = 0;
-  links.length = 0;
-  familyLinks.length = 0;
-
-  // Create Node objects
-  SCHOLAR_DB.forEach((s, idx) => {
-    const angle = (idx / SCHOLAR_DB.length) * Math.PI * 2;
-    const radius = 220 + Math.random() * 60;
-    nodes.push({
-      id: s.id,
-      nameTh: s.nameTh.replace(' เราะหิมะฮ์ลุลลอฮ์', '').replace('เราะฎิยัลลอฮุอันฮุ', '').replace('เราะฎิยัลลอฮุอันฮา', ''),
-      nameAr: s.nameAr,
-      gen: s.gen,
-      death: s.death.split(' / ')[0].replace('เสียชีวิตปี ', ''),
-      radius: 46,
-      mass: 1.0,
-      x: width / 2 + Math.cos(angle) * radius,
-      y: height / 2 + Math.sin(angle) * radius,
-      vx: 0,
-      vy: 0,
-      fx: 0,
-      fy: 0
-    });
+/* ── Compute layout positions ── */
+function computeLayout() {
+  const genGroups = {};
+  SCHOLARS.forEach(s => {
+    if (!genGroups[s.gen]) genGroups[s.gen] = [];
+    genGroups[s.gen].push(s);
   });
 
-  // Create Links based on Teachers/Students & Family relations
-  SCHOLAR_DB.forEach(s => {
-    s.students.forEach(studId => {
-      links.push({ source: s.id, target: studId });
-    });
-    s.family.forEach(fam => {
-      familyLinks.push({ source: s.id, target: fam.id, relation: fam.relation });
-    });
-  });
-}
+  const genNums = Object.keys(genGroups).map(Number).sort((a, b) => a - b);
+  const maxGen = Math.max(...genNums);
 
-/* Group and Render Sidebar List */
-function renderSidebar() {
-  const sidebar = document.getElementById('sidebar-list');
-  sidebar.innerHTML = '';
-
-  // Group by generation type
-  const groups = {};
-  SCHOLAR_DB.forEach(s => {
-    const isPrimary = ["prophet", "umar", "abu_hurayrah", "ibn_umar", "ata_bin_abi_rabah", "yazid_bin_abi_habib", "ibn_shihab_al_zuhri", "qatadah", "hammad_bin_abi_sulaiman", "ibn_ishaq", "abu_hanifah", "shubah", "ibn_lahiah", "ibn_al_mubarak", "ibn_wahb", "qutaybah_bin_said", "malik", "shafi_i", "ahmad", "bukhari", "muslim"].includes(s.id);
-    if (!isPrimary) return;
-
-    let groupName = "ยุคผู้รวบรวมและศิษย์";
-    if (s.gen === "บรมศาสดา" || s.gen === "เศาะหาบะฮ์" || s.gen === "เศาะหาบะฮ์รุ่นเยาว์") {
-      groupName = "ยุคบรมศาสดา & เศาะหาบะฮ์";
-    } else if (s.gen.includes("ตาบิอีน")) {
-      groupName = "ยุคตาบิอีน (ศิษย์เศาะหาบะฮ์)";
-    } else if (s.gen === "ตาบิอิตตาบิอีน" || s.gen === "อัครปราชญ์ฟิกฮ์" || s.gen === "ประมุขวิชาหะดีษ" || s.gen === "กอฎีอียิปต์" || s.gen === "มหาปราชญ์" || s.gen === "เสาหลักฮิญาซ") {
-      groupName = "ยุคตาบิอิตตาบิอีน";
-    }
-
-    if (!groups[groupName]) groups[groupName] = [];
-    groups[groupName].push(s);
-  });
-
-  // Render group templates
-  for (const [groupName, scholars] of Object.entries(groups)) {
-    const groupDiv = document.createElement('div');
-    groupDiv.className = 'sidebar-gen-group';
-    groupDiv.innerHTML = `<div class="sidebar-gen-title">${groupName}</div>`;
-
-    scholars.forEach(s => {
-      const item = document.createElement('div');
-      item.className = 'sidebar-item';
-      item.id = `sidebar-item-${s.id}`;
-      item.onclick = () => selectScholarFromSidebar(s.id);
-      
-      const cleanName = s.nameTh.replace(' เราะหิมะฮ์ลุลลอฮ์', '').replace('เราะฎิยัลลอฮุอันฮุ', '');
-      item.innerHTML = `
-        <div class="sidebar-item-info">
-          <span class="sidebar-item-name">${cleanName} <span class="ar-ref-inline" lang="ar" dir="rtl">${s.nameAr}</span></span>
-          <span class="sidebar-item-death">${s.death.split(' / ')[0]}</span>
-        </div>
-        <span class="sidebar-item-badge" style="background: rgba(59, 130, 246, 0.1); color: var(--accent-color);">${s.gen.replace('รุ่นใหญ่','').replace('รุ่นกลาง','').replace('รุ่นเล็ก','')}</span>
-      `;
-      groupDiv.appendChild(item);
-    });
-
-    sidebar.appendChild(groupDiv);
-  }
-}
-
-/* Focus and Select Node from Sidebar clicks */
-function selectScholarFromSidebar(id) {
-  // Update sidebar active classes
-  const items = document.querySelectorAll('.sidebar-item');
-  items.forEach(el => el.classList.remove('active'));
-  
-  const activeItem = document.getElementById(`sidebar-item-${id}`);
-  if (activeItem) activeItem.classList.add('active');
-
-  // Highlight and focus node in physics canvas
-  const node = nodes.find(n => n.id === id);
-  if (node) {
-    selectedNode = node;
-    node.vx += (Math.random() - 0.5) * 8;
-    node.vy += (Math.random() - 0.5) * 8;
-    
-    loadCritique(id);
-    openDrawer(id);
-  }
-}
-
-/* Tick Physics Loop */
-function tick() {
-  const center = { x: width / 2, y: height / 2 };
-
-  if (canvas.offsetWidth > 0 && canvas.offsetHeight > 0 && (width !== canvas.offsetWidth || height !== canvas.offsetHeight)) {
-    width = canvas.offsetWidth;
-    height = canvas.offsetHeight;
-    canvas.width = width;
-    canvas.height = height;
-  }
-
-  // 1. Reset forces & apply center gravity
-  nodes.forEach(node => {
-    node.fx = (center.x - node.x) * gravity;
-    node.fy = (center.y - node.y) * gravity;
-  });
-
-  // 2. Repulsion between all nodes
-  for (let i = 0; i < nodes.length; i++) {
-    const nodeA = nodes[i];
-    for (let j = i + 1; j < nodes.length; j++) {
-      const nodeB = nodes[j];
-      const dx = nodeB.x - nodeA.x;
-      const dy = nodeB.y - nodeA.y;
-      const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
-      
-      if (dist < repulsionDist) {
-        const force = (repulsionDist - dist) * 0.18;
-        const fx = (dx / dist) * force;
-        const fy = (dy / dist) * force;
-        nodeA.fx -= fx;
-        nodeA.fy -= fy;
-        nodeB.fx += fx;
-        nodeB.fy += fy;
+  // Assign y positions within each generation
+  genNums.forEach(g => {
+    const nodes = genGroups[g];
+    const count = nodes.length;
+    nodes.forEach((s, i) => {
+      s.x = PAD_LEFT + g * GEN_WIDTH;
+      const totalH = count * NODE_SLOT_H;
+      s.y = PAD_TOP + i * NODE_SLOT_H + NODE_SLOT_H / 2;
+      // Center vertically around mid-line if few nodes
+      if (count === 1) {
+        s.y = PAD_TOP + Math.floor(maxCountInAnyGen(genGroups) / 2) * NODE_SLOT_H;
       }
-    }
-  }
-
-  // 3. Attraction forces along Scholastic Links
-  links.forEach(link => {
-    const nodeA = nodes.find(n => n.id === link.source);
-    const nodeB = nodes.find(n => n.id === link.target);
-    if (!nodeA || !nodeB) return;
-
-    const dx = nodeB.x - nodeA.x;
-    const dy = nodeB.y - nodeA.y;
-    const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
-    const force = (dist - targetLinkLength) * attractionForce;
-    const fx = (dx / dist) * force;
-    const fy = (dy / dist) * force;
-
-    nodeA.fx += fx;
-    nodeA.fy += fy;
-    nodeB.fx -= fx;
-    nodeB.fy -= fy;
-  });
-
-  // 4. Attraction forces along Family Links
-  familyLinks.forEach(link => {
-    const nodeA = nodes.find(n => n.id === link.source);
-    const nodeB = nodes.find(n => n.id === link.target);
-    if (!nodeA || !nodeB) return;
-
-    const dx = nodeB.x - nodeA.x;
-    const dy = nodeB.y - nodeA.y;
-    const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
-    const force = (dist - targetLinkLength * 0.9) * attractionForce * 0.7; // slightly tighter link
-    const fx = (dx / dist) * force;
-    const fy = (dy / dist) * force;
-
-    nodeA.fx += fx;
-    nodeA.fy += fy;
-    nodeB.fx -= fx;
-    nodeB.fy -= fy;
-  });
-
-  // 5. Update positions & check boundaries
-  nodes.forEach(node => {
-    if (node === draggedNode) {
-      node.vx = 0;
-      node.vy = 0;
-    } else {
-      node.vx += node.fx;
-      node.vy += node.fy;
-      node.vx *= friction;
-      node.vy *= friction;
-      node.x += node.vx;
-      node.y += node.vy;
-    }
-
-    // Border constraints
-    node.x = Math.max(node.radius + 10, Math.min(width - node.radius - 10, node.x));
-    node.y = Math.max(node.radius + 10, Math.min(height - node.radius - 10, node.y));
-  });
-}
-
-/* Check relationship between A and B */
-function isRelated(nodeA, nodeB) {
-  if (nodeA.id === nodeB.id) return true;
-  
-  // Is student/teacher?
-  const hasLink = links.some(l => 
-    (l.source === nodeA.id && l.target === nodeB.id) ||
-    (l.source === nodeB.id && l.target === nodeA.id)
-  );
-  if (hasLink) return true;
-
-  // Is family?
-  const hasFam = familyLinks.some(l => 
-    (l.source === nodeA.id && l.target === nodeB.id) ||
-    (l.source === nodeB.id && l.target === nodeA.id)
-  );
-  return hasFam;
-}
-
-/* Get Color Variables Dynamically */
-function getThemeColors() {
-  const isDark = document.documentElement.classList.contains('dark-mode');
-  return {
-    nodeBg: isDark ? '#141d26' : '#ffffff',
-    nodeBorderDefault: isDark ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.12)',
-    nodeText: isDark ? '#f0f4f8' : '#1c2833',
-    nodeTextSub: isDark ? '#a6b8c7' : '#566573',
-    edgeDefault: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)',
-    edgeActive: '#2563eb',
-    edgeFamily: isDark ? 'rgba(225, 29, 72, 0.45)' : 'rgba(225, 29, 72, 0.35)', // elegant soft rose-red for family bonds
-    accent: '#2563eb'
-  };
-}
-
-/* Draw Canvas Frame */
-function draw() {
-  ctx.clearRect(0, 0, width, height);
-  const colors = getThemeColors();
-  const activeFocus = hoveredNode || selectedNode;
-  const isDark = document.documentElement.classList.contains('dark-mode');
-
-  // Draw premium academic dotted grid backdrop
-  ctx.save();
-  ctx.fillStyle = isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)';
-  const gridSpacing = 30;
-  for (let x = 0; x < width; x += gridSpacing) {
-    for (let y = 0; y < height; y += gridSpacing) {
-      ctx.beginPath();
-      ctx.arc(x, y, 1.2, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
-  ctx.restore();
-
-  // 1. Draw Scholastic Transmission Links
-  links.forEach(link => {
-    const nodeA = nodes.find(n => n.id === link.source);
-    const nodeB = nodes.find(n => n.id === link.target);
-    if (!nodeA || !nodeB) return;
-
-    let isActive = false;
-    let isFaint = false;
-
-    if (activeFocus) {
-      if ((activeFocus.id === nodeA.id && activeFocus.id !== nodeB.id) || 
-          (activeFocus.id === nodeB.id && activeFocus.id !== nodeA.id)) {
-        isActive = true;
-      } else {
-        isFaint = true;
-      }
-    }
-
-    ctx.beginPath();
-    ctx.moveTo(nodeA.x, nodeA.y);
-    ctx.lineTo(nodeB.x, nodeB.y);
-    ctx.lineWidth = isActive ? 2.5 : 1.2;
-    ctx.strokeStyle = isActive ? colors.edgeActive : (isFaint ? 'rgba(100,100,100,0.02)' : colors.edgeDefault);
-    ctx.stroke();
-
-    // Draw Arrowhead along transmission link
-    if (!isFaint || isActive) {
-      const angle = Math.atan2(nodeB.y - nodeA.y, nodeB.x - nodeA.x);
-      const arrowX = nodeB.x - (nodeB.radius + 3) * Math.cos(angle);
-      const arrowY = nodeB.y - (nodeB.radius + 3) * Math.sin(angle);
-      
-      ctx.beginPath();
-      ctx.moveTo(arrowX, arrowY);
-      ctx.lineTo(arrowX - 8 * Math.cos(angle - Math.PI / 6), arrowY - 8 * Math.sin(angle - Math.PI / 6));
-      ctx.lineTo(arrowX - 8 * Math.cos(angle + Math.PI / 6), arrowY - 8 * Math.sin(angle + Math.PI / 6));
-      ctx.closePath();
-      ctx.fillStyle = isActive ? colors.edgeActive : (isFaint ? 'rgba(100,100,100,0.02)' : colors.edgeDefault);
-      ctx.fill();
-    }
-  });
-
-  // 2. Draw Family/Blood Links (Dashed)
-  familyLinks.forEach(link => {
-    const nodeA = nodes.find(n => n.id === link.source);
-    const nodeB = nodes.find(n => n.id === link.target);
-    if (!nodeA || !nodeB) return;
-
-    let isActive = false;
-    let isFaint = false;
-
-    if (activeFocus) {
-      if ((activeFocus.id === nodeA.id && activeFocus.id !== nodeB.id) || 
-          (activeFocus.id === nodeB.id && activeFocus.id !== nodeA.id)) {
-        isActive = true;
-      } else {
-        isFaint = true;
-      }
-    }
-
-    ctx.save();
-    ctx.beginPath();
-    ctx.moveTo(nodeA.x, nodeA.y);
-    ctx.lineTo(nodeB.x, nodeB.y);
-    ctx.lineWidth = isActive ? 2.5 : 1.2;
-    ctx.strokeStyle = isActive ? colors.edgeFamily : (isFaint ? 'rgba(100,100,100,0.02)' : colors.edgeFamily);
-    ctx.setLineDash([5, 5]);
-    ctx.stroke();
-    ctx.restore();
-  });
-
-  // 3. Draw Nodes
-  nodes.forEach(node => {
-    let opacity = 1.0;
-    let scale = 1.0;
-    let isHighlighted = false;
-
-    if (activeFocus) {
-      if (activeFocus.id === node.id) {
-        scale = 1.12;
-        isHighlighted = true;
-      } else if (isRelated(activeFocus, node)) {
-        isHighlighted = true;
-      } else {
-        opacity = 0.18;
-      }
-    }
-
-    ctx.save();
-    ctx.globalAlpha = opacity;
-
-    // Node circular shadow/glow
-    ctx.shadowColor = isHighlighted ? colors.accent : 'rgba(0,0,0,0.05)';
-    ctx.shadowBlur = isHighlighted ? 12 : 6;
-    ctx.shadowOffsetX = 0;
-    ctx.shadowOffsetY = 4;
-
-    // Background circle fill
-    ctx.beginPath();
-    ctx.arc(node.x, node.y, node.radius * scale, 0, Math.PI * 2);
-    ctx.fillStyle = colors.nodeBg;
-    ctx.fill();
-
-    // Reset shadow
-    ctx.shadowColor = 'transparent';
-    ctx.shadowBlur = 0;
-
-    // Border circle
-    ctx.strokeStyle = isHighlighted ? colors.accent : (GEN_BORDER_COLORS[node.gen] || colors.nodeBorderDefault);
-    ctx.lineWidth = isHighlighted ? 3 : 1.5;
-    ctx.stroke();
-
-    // Scholar short Name text (Arabic)
-    ctx.fillStyle = colors.nodeText;
-    ctx.font = `bold 16px 'Amiri', serif`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(node.nameAr, node.x, node.y - 6);
-
-    // Demise year text (Arabic numerals)
-    ctx.fillStyle = colors.nodeTextSub;
-    ctx.font = `bold 11px 'Amiri', serif`;
-    ctx.fillText(formatDeathAr(node.death), node.x, node.y + 13);
-
-    ctx.restore();
-  });
-}
-
-/* Dynamic Font Variable Helper */
-function varGet(cssVar) {
-  return cssVar === '--thai' ? 'Sarabun' : (cssVar === '--ui' ? 'D-DIN, Inter' : 'Cormorant Garamond');
-}
-
-/* Physics Frame Runner */
-function updateFrame() {
-  tick();
-  draw();
-  requestAnimationFrame(updateFrame);
-}
-
-/* Resize Canvas Handler */
-window.addEventListener('resize', () => {
-  if (canvas.offsetWidth > 0 && canvas.offsetHeight > 0) {
-    width = canvas.offsetWidth;
-    height = canvas.offsetHeight;
-    canvas.width = width;
-    canvas.height = height;
-  }
-});
-
-/* ─── Canvas Interaction / Click Handlers ─── */
-canvas.addEventListener('mousedown', e => {
-  const rect = canvas.getBoundingClientRect();
-  const mouseX = e.clientX - rect.left;
-  const mouseY = e.clientY - rect.top;
-
-  // Find if clicked node
-  const clicked = nodes.find(node => {
-    const dx = node.x - mouseX;
-    const dy = node.y - mouseY;
-    return Math.sqrt(dx*dx + dy*dy) < node.radius;
-  });
-
-  if (clicked) {
-    draggedNode = clicked;
-    selectedNode = clicked;
-    loadCritique(clicked.id);
-    
-    // Sync with sidebar active item
-    const items = document.querySelectorAll('.sidebar-item');
-    items.forEach(el => el.classList.remove('active'));
-    const sidebarItem = document.getElementById(`sidebar-item-${clicked.id}`);
-    if (sidebarItem) sidebarItem.classList.add('active');
-  } else {
-    selectedNode = null;
-    hideCritique();
-    const items = document.querySelectorAll('.sidebar-item');
-    items.forEach(el => el.classList.remove('active'));
-  }
-});
-
-canvas.addEventListener('mousemove', e => {
-  const rect = canvas.getBoundingClientRect();
-  const mouseX = e.clientX - rect.left;
-  const mouseY = e.clientY - rect.top;
-
-  if (draggedNode) {
-    draggedNode.x = mouseX;
-    draggedNode.y = mouseY;
-  } else {
-    // Check hover
-    const found = nodes.find(node => {
-      const dx = node.x - mouseX;
-      const dy = node.y - mouseY;
-      return Math.sqrt(dx*dx + dy*dy) < node.radius;
     });
-    hoveredNode = found || null;
-  }
-});
-
-canvas.addEventListener('mouseup', () => {
-  draggedNode = null;
-});
-canvas.addEventListener('mouseleave', () => {
-  draggedNode = null;
-  hoveredNode = null;
-});
-
-// Double click to open Biographical Drawer
-canvas.addEventListener('dblclick', e => {
-  const rect = canvas.getBoundingClientRect();
-  const mouseX = e.clientX - rect.left;
-  const mouseY = e.clientY - rect.top;
-
-  const found = nodes.find(node => {
-    const dx = node.x - mouseX;
-    const dy = node.y - mouseY;
-    return Math.sqrt(dx*dx + dy*dy) < node.radius;
   });
 
-  if (found) {
-    openDrawer(found.id);
-  }
-});
+  return genGroups;
+}
 
-// Touch controls for Mobile support
-canvas.addEventListener('touchstart', e => {
-  if (e.touches.length === 0) return;
-  const rect = canvas.getBoundingClientRect();
-  const touchX = e.touches[0].clientX - rect.left;
-  const touchY = e.touches[0].clientY - rect.top;
+function maxCountInAnyGen(genGroups) {
+  return Math.max(...Object.values(genGroups).map(a => a.length));
+}
 
-  const clicked = nodes.find(node => {
-    const dx = node.x - touchX;
-    const dy = node.y - touchY;
-    return Math.sqrt(dx*dx + dy*dy) < node.radius;
+/* Better vertical balancing: distribute each gen around a weighted center */
+function layoutWithBalance() {
+  const genGroups = {};
+  SCHOLARS.forEach(s => {
+    if (!genGroups[s.gen]) genGroups[s.gen] = [];
+    genGroups[s.gen].push(s);
   });
 
-  if (clicked) {
-    draggedNode = clicked;
-    selectedNode = clicked;
-    loadCritique(clicked.id);
+  const genNums = Object.keys(genGroups).map(Number).sort((a, b) => a - b);
+  const maxCount = Math.max(...Object.values(genGroups).map(a => a.length));
+  const totalH = (maxCount + 1) * NODE_SLOT_H;
+
+  genNums.forEach(g => {
+    const nodes = genGroups[g];
+    const count = nodes.length;
+    nodes.forEach((s, i) => {
+      s.x = PAD_LEFT + g * GEN_WIDTH;
+      const blockH = count * NODE_SLOT_H;
+      const startY = PAD_TOP + (totalH - blockH) / 2;
+      s.y = startY + i * NODE_SLOT_H + NODE_SLOT_H / 2;
+    });
+  });
+
+  return { genGroups, genNums, totalH, maxCount };
+}
+
+/* ── SVG Drawing ── */
+const svg = document.getElementById('isnadSvg');
+const gridLayer = document.getElementById('gridLayer');
+const edgeLayer = document.getElementById('edgeLayer');
+const nodeLayer = document.getElementById('nodeLayer');
+const svgRoot = document.getElementById('svgRoot');
+
+function buildSvg() {
+  const { genGroups, genNums, totalH } = layoutWithBalance();
+
+  const maxGen = Math.max(...genNums);
+  const svgW = PAD_LEFT + (maxGen + 1) * GEN_WIDTH + PAD_LEFT;
+  const svgH = totalH + PAD_TOP + PAD_BOTTOM;
+
+  svg.setAttribute('width', svgW);
+  svg.setAttribute('height', svgH);
+  svg.setAttribute('viewBox', `0 0 ${svgW} ${svgH}`);
+
+  // Grid lines
+  genNums.forEach(g => {
+    const x = PAD_LEFT + g * GEN_WIDTH;
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('class', 'gen-line');
+    line.setAttribute('x1', x); line.setAttribute('y1', 0);
+    line.setAttribute('x2', x); line.setAttribute('y2', svgH);
+    gridLayer.appendChild(line);
+
+    const lbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    lbl.setAttribute('class', 'gen-number');
+    lbl.setAttribute('x', x);
+    lbl.setAttribute('y', 22);
+    lbl.textContent = g;
+    gridLayer.appendChild(lbl);
+  });
+
+  // Edges
+  SCHOLARS.forEach(s => {
+    s.teachers.forEach(tid => {
+      const teacher = scholarsById[tid];
+      if (!teacher) return;
+      const color = BRANCH_COLORS[s.branch] || '#aaa';
+      drawEdge(teacher, s, color);
+    });
+  });
+
+  // Nodes
+  SCHOLARS.forEach(s => {
+    drawNode(s);
+  });
+}
+
+function drawEdge(from, to, color) {
+  const x1 = from.x, y1 = from.y;
+  const x2 = to.x, y2 = to.y;
+  const cx = (x1 + x2) / 2;
+  const d = `M ${x1} ${y1} C ${cx} ${y1}, ${cx} ${y2}, ${x2} ${y2}`;
+
+  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('class', 'edge-path');
+  path.setAttribute('d', d);
+  path.setAttribute('stroke', color);
+  edgeLayer.appendChild(path);
+}
+
+function drawNode(s) {
+  const color = BRANCH_COLORS[s.branch] || '#aaa';
+  const isRoot = s.gen <= 2;
+  const r = isRoot ? 8 : 6;
+
+  const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  g.setAttribute('data-id', s.id);
+
+  // Hit area (larger transparent circle)
+  const hit = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  hit.setAttribute('cx', s.x);
+  hit.setAttribute('cy', s.y);
+  hit.setAttribute('r', 18);
+  hit.setAttribute('fill', 'transparent');
+  hit.setAttribute('class', 'node-circle');
+  g.appendChild(hit);
+
+  // Glow circle for root nodes
+  if (isRoot) {
+    const glow = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    glow.setAttribute('cx', s.x);
+    glow.setAttribute('cy', s.y);
+    glow.setAttribute('r', r + 5);
+    glow.setAttribute('fill', color);
+    glow.setAttribute('opacity', '0.18');
+    glow.setAttribute('filter', 'url(#glow)');
+    g.appendChild(glow);
   }
-});
 
-canvas.addEventListener('touchmove', e => {
-  if (e.touches.length === 0 || !draggedNode) return;
-  const rect = canvas.getBoundingClientRect();
-  const touchX = e.touches[0].clientX - rect.left;
-  const touchY = e.touches[0].clientY - rect.top;
-  draggedNode.x = touchX;
-  draggedNode.y = touchY;
-});
+  // Main dot
+  const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  dot.setAttribute('cx', s.x);
+  dot.setAttribute('cy', s.y);
+  dot.setAttribute('r', r);
+  dot.setAttribute('fill', color);
+  dot.setAttribute('class', 'node-circle');
+  if (isRoot) dot.setAttribute('filter', 'url(#glow)');
+  g.appendChild(dot);
 
-canvas.addEventListener('touchend', () => {
-  draggedNode = null;
-});
+  // Label — Arabic name
+  // Place label above for even-indexed nodes, below for odd to reduce overlap
+  const idx = SCHOLARS.indexOf(s);
+  const labelY = (idx % 2 === 0) ? s.y - 12 : s.y + 22;
+  const anchor = 'middle';
 
-/* ─── Sidebar Search Handler ─── */
-function handleSearch() {
-  const term = document.getElementById('search-box').value.trim().toLowerCase();
-  
-  // Highlight corresponding items in sidebar
-  const items = document.querySelectorAll('.sidebar-item');
-  items.forEach(item => {
-    const name = item.querySelector('.sidebar-item-name').innerText.toLowerCase();
-    if (term && name.includes(term)) {
-      item.style.borderColor = 'var(--accent-color)';
-      item.style.background = 'rgba(59, 130, 246, 0.05)';
-    } else {
-      item.style.borderColor = '';
-      item.style.background = '';
+  // Short display name (trim long names for display)
+  const displayName = shortenName(s.ar);
+
+  const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  text.setAttribute('x', s.x);
+  text.setAttribute('y', labelY);
+  text.setAttribute('text-anchor', anchor);
+  text.setAttribute('class', isRoot ? 'node-label node-label-root' : 'node-label');
+  text.setAttribute('lang', 'ar');
+  text.setAttribute('dir', 'rtl');
+  text.textContent = displayName;
+  g.appendChild(text);
+
+  // Click interaction
+  g.style.cursor = 'pointer';
+  g.addEventListener('click', () => openDetail(s.id));
+
+  nodeLayer.appendChild(g);
+}
+
+function shortenName(ar) {
+  // If name is very long, abbreviate
+  if (ar.length > 30) {
+    const parts = ar.split(' ');
+    if (parts.length > 3) {
+      return parts.slice(0, 3).join(' ') + '…';
     }
+  }
+  return ar;
+}
+
+/* ── Pan / Zoom ── */
+let scale = 1;
+let panX = 0, panY = 0;
+let isDragging = false;
+let lastMouseX = 0, lastMouseY = 0;
+
+const canvasWrap = document.getElementById('canvasWrap');
+
+function applyTransform() {
+  svgRoot.setAttribute('transform', `translate(${panX}, ${panY}) scale(${scale})`);
+  document.getElementById('zoomLabel').textContent = Math.round(scale * 100) + '%';
+}
+
+canvasWrap.addEventListener('mousedown', e => {
+  if (e.button !== 0) return;
+  isDragging = true;
+  lastMouseX = e.clientX;
+  lastMouseY = e.clientY;
+  canvasWrap.classList.add('is-dragging');
+});
+
+window.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  panX += e.clientX - lastMouseX;
+  panY += e.clientY - lastMouseY;
+  lastMouseX = e.clientX;
+  lastMouseY = e.clientY;
+  applyTransform();
+});
+
+window.addEventListener('mouseup', () => {
+  isDragging = false;
+  canvasWrap.classList.remove('is-dragging');
+});
+
+canvasWrap.addEventListener('wheel', e => {
+  e.preventDefault();
+  const factor = e.deltaY < 0 ? 1.1 : 0.91;
+  const rect = canvasWrap.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+  // Zoom toward cursor
+  panX = mx - factor * (mx - panX);
+  panY = my - factor * (my - panY);
+  scale = Math.min(Math.max(scale * factor, 0.15), 4);
+  applyTransform();
+}, { passive: false });
+
+// Touch support
+let lastTouchDist = 0;
+canvasWrap.addEventListener('touchstart', e => {
+  if (e.touches.length === 1) {
+    isDragging = true;
+    lastMouseX = e.touches[0].clientX;
+    lastMouseY = e.touches[0].clientY;
+  } else if (e.touches.length === 2) {
+    isDragging = false;
+    const dx = e.touches[0].clientX - e.touches[1].clientX;
+    const dy = e.touches[0].clientY - e.touches[1].clientY;
+    lastTouchDist = Math.sqrt(dx * dx + dy * dy);
+  }
+}, { passive: true });
+
+canvasWrap.addEventListener('touchmove', e => {
+  e.preventDefault();
+  if (e.touches.length === 1 && isDragging) {
+    panX += e.touches[0].clientX - lastMouseX;
+    panY += e.touches[0].clientY - lastMouseY;
+    lastMouseX = e.touches[0].clientX;
+    lastMouseY = e.touches[0].clientY;
+    applyTransform();
+  } else if (e.touches.length === 2) {
+    const dx = e.touches[0].clientX - e.touches[1].clientX;
+    const dy = e.touches[0].clientY - e.touches[1].clientY;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    if (lastTouchDist > 0) {
+      const factor = dist / lastTouchDist;
+      scale = Math.min(Math.max(scale * factor, 0.15), 4);
+      applyTransform();
+    }
+    lastTouchDist = dist;
+  }
+}, { passive: false });
+
+canvasWrap.addEventListener('touchend', () => { isDragging = false; lastTouchDist = 0; });
+
+/* ── Fit to screen ── */
+function fitToScreen() {
+  const svgW = parseFloat(svg.getAttribute('width'));
+  const svgH = parseFloat(svg.getAttribute('height'));
+  const wrapW = canvasWrap.clientWidth;
+  const wrapH = canvasWrap.clientHeight;
+
+  scale = Math.min(wrapW / svgW, wrapH / svgH) * 0.92;
+  panX = (wrapW - svgW * scale) / 2;
+  panY = (wrapH - svgH * scale) / 2;
+  applyTransform();
+}
+
+document.getElementById('btnFit').addEventListener('click', fitToScreen);
+document.getElementById('btnZoomIn').addEventListener('click', () => {
+  scale = Math.min(scale * 1.2, 4);
+  applyTransform();
+});
+document.getElementById('btnZoomOut').addEventListener('click', () => {
+  scale = Math.max(scale * 0.83, 0.15);
+  applyTransform();
+});
+
+/* ── Detail Panel ── */
+function openDetail(id) {
+  const s = scholarsById[id];
+  if (!s) return;
+
+  document.getElementById('detailArName').textContent = s.ar;
+  document.getElementById('detailGenBadge').textContent = 'รุ่นที่ ' + s.gen;
+
+  const teachersList = document.getElementById('detailTeachers');
+  teachersList.innerHTML = '';
+  if (s.teachers.length === 0) {
+    teachersList.innerHTML = '<li class="it-detail-empty">—</li>';
+  } else {
+    s.teachers.forEach(tid => {
+      const t = scholarsById[tid];
+      if (t) {
+        const li = document.createElement('li');
+        li.setAttribute('lang', 'ar');
+        li.setAttribute('dir', 'rtl');
+        li.textContent = t.ar;
+        teachersList.appendChild(li);
+      }
+    });
+  }
+
+  const studentsList = document.getElementById('detailStudents');
+  studentsList.innerHTML = '';
+  const studs = studentsMap[id] || [];
+  if (studs.length === 0) {
+    studentsList.innerHTML = '<li class="it-detail-empty">—</li>';
+  } else {
+    studs.forEach(sid => {
+      const st = scholarsById[sid];
+      if (st) {
+        const li = document.createElement('li');
+        li.setAttribute('lang', 'ar');
+        li.setAttribute('dir', 'rtl');
+        li.textContent = st.ar;
+        studentsList.appendChild(li);
+      }
+    });
+  }
+
+  document.getElementById('detailPanel').classList.add('is-open');
+}
+
+document.getElementById('detailCloseBtn').addEventListener('click', () => {
+  document.getElementById('detailPanel').classList.remove('is-open');
+});
+
+/* ── Back to Top ── */
+const backBtn = document.getElementById('backToTopBtn');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) backBtn.classList.add('visible');
+  else backBtn.classList.remove('visible');
+});
+backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ── Scroll Reveal ── */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ── Init ── */
+buildSvg();
+// Fit after brief delay to ensure dimensions are settled
+requestAnimationFrame(() => {
+  requestAnimationFrame(() => {
+    fitToScreen();
   });
-
-  if (!term) {
-    hoveredNode = null;
-    return;
-  }
-
-  // Highlight in canvas (supports searching both Thai and Arabic names!)
-  const found = nodes.find(n => n.nameTh.toLowerCase().includes(term) || n.nameAr.toLowerCase().includes(term));
-  if (found) {
-    hoveredNode = found;
-  } else {
-    hoveredNode = null;
-  }
-}
-
-/* ─── Load Critique Box (ญัรห์ วัตตะอ์ดีล) ─── */
-function loadCritique(id) {
-  const data = SCHOLAR_LOOKUP[id];
-  if (!data) return;
-
-  const panel = document.getElementById('critique-panel');
-  document.getElementById('critique-title').innerHTML = `การประเมินสถานะของ **${data.nameTh.replace(' เราะหิมะฮ์ลุลลอฮ์', '').replace('เราะฎิยัลลอฮุอันฮุ', '')}** ในตำราญัรห์ วัตตะอ์ดีล`;
-
-  const taDilCol = document.getElementById('ta-dil-col');
-  taDilCol.innerHTML = '';
-  if (data.tadil.length > 0) {
-    data.tadil.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'critique-card ta-dil-item';
-      
-      const criticNameAr = CRITIC_AR[item.scholar.split(' (')[0]] || item.scholar.split(' (')[0];
-      const scholarClean = item.scholar.split(' (')[0];
-      const scholarMeta = item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : '';
-      
-      card.innerHTML = `
-        <div class="critique-meta">${scholarClean} <span>${scholarMeta}</span></div>
-        <div class="critique-text">“${item.quote}”</div>
-        <div class="ar-ref-box">المصدر: ${criticNameAr}</div>
-      `;
-      taDilCol.appendChild(card);
-    });
-  } else {
-    taDilCol.innerHTML = '<div class="empty-critique-notice">ไม่มีคำวิจารณ์เชิงบวกบันทึกไว้ในตำราหลักการญัรห์</div>';
-  }
-
-  const jarhCol = document.getElementById('jarh-col');
-  jarhCol.innerHTML = '';
-  if (data.jarh.length > 0) {
-    data.jarh.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'critique-card jarh-item';
-      
-      const criticNameAr = CRITIC_AR[item.scholar.split(' (')[0]] || item.scholar.split(' (')[0];
-      const scholarClean = item.scholar.split(' (')[0];
-      const scholarMeta = item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : '';
-      
-      card.innerHTML = `
-        <div class="critique-meta">${scholarClean} <span>${scholarMeta}</span></div>
-        <div class="critique-text">“${item.quote}”</div>
-        <div class="ar-ref-box">المصدر: ${criticNameAr}</div>
-      `;
-      jarhCol.appendChild(card);
-    });
-  } else {
-    jarhCol.innerHTML = '<div class="empty-critique-notice">ไม่มีคำท้วงติงเชิงลบบันทึกไว้ในตำราหลักการญัรห์ (สถานะธรรมชนสมบูรณ์แบบ)</div>';
-  }
-
-  panel.classList.add('active');
-}
-
-function hideCritique() {
-  const panel = document.getElementById('critique-panel');
-  panel.classList.remove('active');
-}
-
-/* ─── Drawer Modal Open ─── */
-function openDrawer(id) {
-  const data = SCHOLAR_LOOKUP[id];
-  if (!data) return;
-
-  document.getElementById('d-gen').innerText = data.gen;
-  document.getElementById('d-name-th').innerText = data.nameTh;
-  document.getElementById('d-name-ar').innerText = data.nameAr;
-  document.getElementById('d-bio').innerHTML = data.bio;
-  document.getElementById('d-death').innerText = data.death;
-
-  // Render Arabic Reference Box
-  document.getElementById('d-ar-ref-box').innerHTML = `<strong>المرجع الموثق:</strong> ${data.nameAr} (${formatDeathAr(data.death)})`;
-
-  document.getElementById('drawer-overlay').classList.add('active');
-}
-
-function closeDrawer() {
-  document.getElementById('drawer-overlay').classList.remove('active');
-}
-
-/* ─── Run Simulation & Render List ─── */
-initSimulation();
-renderSidebar();
-updateFrame();
+});
 </script>
+
+<!-- QOTD placeholder (Rule 31/51) -->
+<script>
+/* ── Quote of the Day — Islamic Fiqh Publishing ── */
+const quotes = [
+  {
+    ar: 'الْعِلْمُ بِلَا عَمَلٍ كَالشَّجَرِ بِلَا ثَمَرٍ',
+    th: '"ความรู้ที่ปราศจากการปฏิบัติ\nเปรียบดังต้นไม้ที่ไร้ผล"',
+    author: 'ابن عبد البر · เสียชีวิตปี ฮ.ศ. 463',
+  },
+  {
+    ar: 'مَنْ عَمِلَ بِمَا عَلِمَ أَوْرَثَهُ اللهُ عِلْمَ مَا لَمْ يَعْلَمْ',
+    th: '"ผู้ใดปฏิบัติตามสิ่งที่ตนรู้\nอัลลอฮ์จะทรงประทานความรู้ในสิ่งที่เขาไม่รู้"',
+    author: 'أبو حامد الغزالي · เสียชีวิตปี ฮ.ศ. 505',
+  },
+  {
+    ar: 'طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ',
+    th: '"การแสวงหาความรู้เป็นภาคบังคับ\nสำหรับมุสลิมทุกคน"',
+    author: 'رسول الله ﷺ · บันทึกโดย ابن ماجه',
+  },
+];
+
+let qotdIdx = 0;
+/* QOTD display handled by main site component if present */
+if (typeof window.initQOTD === 'function') {
+  window.initQOTD(quotes, 9000);
+}
+</script>
+
 </body>
 </html>
