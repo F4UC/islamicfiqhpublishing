@@ -675,6 +675,44 @@ body::before {
   .eyebrow-en::before { content: ''; display: block; width: 28px; height: 1px; background: var(--ink-3); }
   .eyebrow-en::after { content: ''; display: block; width: 28px; height: 1px; background: var(--ink-3); }
 }
+
+/* =========================================================
+   CATEGORIES — white dot-field (light mode only)
+   ========================================================= */
+@keyframes cat-dots-wave {
+  0%   { background-position: 0 0, 10px 10px; }
+  33%  { background-position: 10px 6px, 20px 16px; }
+  66%  { background-position: 20px 0, 30px 10px; }
+  100% { background-position: 0 0, 10px 10px; }
+}
+html:not(.dark-mode) #categories { background: #ffffff; position: relative; }
+html:not(.dark-mode) #categories::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    radial-gradient(circle, rgba(0,0,0,0.09) 1px, transparent 1px),
+    radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 20px 20px, 10px 10px;
+  animation: cat-dots-wave 20s ease-in-out infinite;
+}
+html:not(.dark-mode) #categories .wrap { position: relative; z-index: 1; }
+html:not(.dark-mode) .cat-grid { background: #d4d4d4; gap: 1px; }
+html:not(.dark-mode) .cat-card {
+  background: #ffffff;
+  transition: background .25s, outline .25s, box-shadow .25s;
+}
+html:not(.dark-mode) .cat-card:hover {
+  outline: 1px solid rgba(179,27,27,.45); outline-offset: -1px;
+  background: #f9f7f4; box-shadow: 0 4px 24px rgba(0,0,0,.07);
+}
+html:not(.dark-mode) .cat-overlay { display: none; }
+html:not(.dark-mode) .cat-bg { opacity: 0 !important; }
+html:not(.dark-mode) .cat-card:hover .cat-bg { opacity: 0 !important; }
+html:not(.dark-mode) .hadith-map svg { opacity: 0.55; }
+html:not(.dark-mode) .cat-name { color: #111111; }
+html:not(.dark-mode) .cat-sub,
+html:not(.dark-mode) .cat-count { color: #666666; }
+html:not(.dark-mode) .cat-num { color: #999999; }
+html:not(.dark-mode) .cat-tag { color: var(--gold); }
 </style>
 </head>
 <body lang="th">
