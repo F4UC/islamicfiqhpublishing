@@ -1,9 +1,9 @@
 /* Global animated surface for non-home pages. Loaded by main.js into <head>. */
 :root {
-  --ifp-surface-top: #e3edf7;
-  --ifp-surface-bottom: #ffffff;
-  --ifp-surface-wave: rgba(80, 137, 183, 0.32);
-  --ifp-surface-wave-soft: rgba(255, 255, 255, 0.58);
+  --ifp-surface-top: #06101e;
+  --ifp-surface-bottom: #030912;
+  --ifp-surface-wave: rgba(59, 130, 246, 0.32);
+  --ifp-surface-wave-soft: rgba(147, 197, 253, 0.18);
   --ifp-header-bg: #050b14;
   --ifp-header-text: #edf5ff;
   --ifp-header-text-dim: #a8b5c7;
@@ -11,10 +11,10 @@
 }
 
 html.dark-mode {
-  --ifp-surface-top: #14110d;
-  --ifp-surface-bottom: #0a0907;
-  --ifp-surface-wave: rgba(196, 154, 69, 0.18);
-  --ifp-surface-wave-soft: rgba(59, 130, 246, 0.08);
+  --ifp-surface-top: #040c18;
+  --ifp-surface-bottom: #020609;
+  --ifp-surface-wave: rgba(59, 130, 246, 0.22);
+  --ifp-surface-wave-soft: rgba(147, 197, 253, 0.10);
   --ifp-header-bg: #050914;
   --ifp-header-text: #e8e0d0;
   --ifp-header-text-dim: #9eb0c8;
@@ -26,6 +26,19 @@ body.ifp-subpage-bg {
   --header-text: var(--ifp-header-text);
   --header-text-dim: var(--ifp-header-text-dim);
   --header-border: var(--ifp-header-border);
+  /* Override article.css vars so text is readable on dark navy background */
+  --text-primary: #dde8f4;
+  --text-secondary: #9eb0c8;
+  --text-tertiary: #6b7f96;
+  --text-quaternary: #525f6e;
+  --bg-primary: #06101e;
+  --bg-secondary: #0d1a2e;
+  --bg-tertiary: #0a1525;
+  --border-primary: rgba(147, 197, 253, 0.10);
+  --border-secondary: rgba(147, 197, 253, 0.18);
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --shadow-heavy: rgba(0, 0, 0, 0.6);
+  --accent-color: #3b82f6;
   background:
     linear-gradient(
       180deg,
@@ -54,7 +67,7 @@ body.ifp-subpage-bg::after {
 
 body.ifp-subpage-bg::before {
   background-image:
-    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20380'%20preserveAspectRatio='none'%3E%3Cpath%20fill='none'%20stroke='rgba(43,103,154,0.28)'%20stroke-width='2.5'%20d='M-60%20228C100%20142%20230%20294%20390%20208S690%20128%20855%20216%201166%20288%201506%20172'/%3E%3Cpath%20fill='none'%20stroke='rgba(255,255,255,0.50)'%20stroke-width='1.4'%20d='M-80%20258C92%20188%20238%20312%20408%20242S696%20168%20872%20242%201172%20312%201526%20220'/%3E%3Cpath%20fill='none'%20stroke='rgba(43,103,154,0.18)'%20stroke-width='1.8'%20d='M-40%20310C116%20248%20264%20334%20424%20284S734%20218%20894%20292%201164%20344%201500%20282'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20380'%20preserveAspectRatio='none'%3E%3Cpath%20fill='none'%20stroke='rgba(59,130,246,0.50)'%20stroke-width='2.5'%20d='M-60%20228C100%20142%20230%20294%20390%20208S690%20128%20855%20216%201166%20288%201506%20172'/%3E%3Cpath%20fill='none'%20stroke='rgba(147,197,253,0.38)'%20stroke-width='1.4'%20d='M-80%20258C92%20188%20238%20312%20408%20242S696%20168%20872%20242%201172%20312%201526%20220'/%3E%3Cpath%20fill='none'%20stroke='rgba(37,99,235,0.30)'%20stroke-width='1.8'%20d='M-40%20310C116%20248%20264%20334%20424%20284S734%20218%20894%20292%201164%20344%201500%20282'/%3E%3C/svg%3E");
   background-position: 50% 0;
   background-repeat: repeat-x;
   background-size: 1440px 380px;
@@ -67,12 +80,12 @@ body.ifp-subpage-bg::after {
   background:
     radial-gradient(ellipse at 18% 24%, var(--ifp-surface-wave-soft), transparent 34%),
     radial-gradient(ellipse at 76% 16%, var(--ifp-surface-wave), transparent 30%),
-    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20380'%20preserveAspectRatio='none'%3E%3Cpath%20fill='none'%20stroke='rgba(43,103,154,0.16)'%20stroke-width='22'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M80%20220C170%20130%20270%20302%20352%20220C440%20128%20526%20302%20620%20212C720%20116%20800%20308%20910%20210C1018%20112%201120%20306%201236%20202C1308%20138%201376%20132%201444%20160'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20380'%20preserveAspectRatio='none'%3E%3Cpath%20fill='none'%20stroke='rgba(59,130,246,0.22)'%20stroke-width='22'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M80%20220C170%20130%20270%20302%20352%20220C440%20128%20526%20302%20620%20212C720%20116%20800%20308%20910%20210C1018%20112%201120%20306%201236%20202C1308%20138%201376%20132%201444%20160'/%3E%3C/svg%3E");
   background-position: 50% 0, 50% 0, 0 0;
   background-repeat: no-repeat, no-repeat, repeat-x;
   background-size: auto, auto, 1680px 380px;
-  mix-blend-mode: multiply;
-  opacity: 0.36;
+  mix-blend-mode: screen;
+  opacity: 0.42;
   transform: translate3d(0, 0, 0);
   animation: ifp-water-sway 18s cubic-bezier(.45, 0, .25, 1) infinite alternate;
 }
@@ -80,6 +93,11 @@ body.ifp-subpage-bg::after {
 body.ifp-subpage-bg > * {
   position: relative;
   z-index: 1;
+}
+
+/* Bug fix: header placeholder must sit above all other body children */
+body.ifp-subpage-bg #header-placeholder {
+  z-index: 100;
 }
 
 body.ifp-subpage-bg .chrome,
@@ -106,14 +124,14 @@ body.ifp-subpage-bg .tools-wrap {
 }
 
 html.dark-mode body.ifp-subpage-bg::before {
-  opacity: 0.72;
-  filter: saturate(0.92) brightness(0.9);
+  opacity: 0.65;
+  filter: saturate(0.85) brightness(0.88);
 }
 
 html.dark-mode body.ifp-subpage-bg::after {
   mix-blend-mode: screen;
-  opacity: 0.34;
-  filter: saturate(0.88);
+  opacity: 0.30;
+  filter: saturate(0.80);
 }
 
 @keyframes ifp-wave-drift {
@@ -165,7 +183,7 @@ html.dark-mode body.ifp-subpage-bg::after {
 
   body.ifp-subpage-bg::after {
     background-size: auto, auto, 1100px 330px;
-    opacity: 0.28;
+    opacity: 0.32;
   }
 }
 
