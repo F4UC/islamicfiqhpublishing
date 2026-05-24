@@ -649,12 +649,18 @@ body::before {
    ========================================================= */
 #backToTopBtn {
   display: none; position: fixed; bottom: 32px; right: 32px; z-index: 500;
-  width: 44px; height: 44px; border: 1px solid var(--rule-strong); border-radius: 50%;
+  width: 48px; height: 48px; border: 1px solid var(--rule-strong); border-radius: 50%;
   background: var(--ink-2); color: var(--text-dim);
-  font-family: var(--serif); font-size: 20px;
-  transition: all .25s; cursor: pointer;
+  font-family: var(--ui); font-size: 15px; letter-spacing: 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,.14);
+  transition: all .3s cubic-bezier(.2,.7,.2,1); cursor: pointer;
 }
-#backToTopBtn:hover { border-color: var(--gold); color: var(--gold); }
+#backToTopBtn:hover {
+  border-color: var(--gold); color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.2);
+}
+html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 
 /* =========================================================
    REVEAL ON SCROLL
@@ -687,6 +693,7 @@ body::before {
   .quote-section { padding: 80px 0; }
   .quote-ar { min-height: 270px; }
   .quote-th { min-height: 290px; }
+  .tool-name { font-size: 28px; white-space: nowrap; }
 }
 
 /* =========================================================
@@ -970,11 +977,11 @@ body::before {
     <div class="tools-grid" data-reveal data-delay="2">
       <a href="/pages/tools/hijri-time-machine.html" class="tool-card">
         <h3 class="tool-name"><em>Hijri</em> Time Machine</h3>
-        <p class="tool-desc">สำรวจไทม์ไลน์ประวัติศาสตร์อิสลามผ่านปฏิทินฮิจเราะฮ์ — เลื่อนผ่านเหตุการณ์สำคัญ บุคคล และตำราจากแต่ละศตวรรษ</p>
+        <p class="tool-desc">สำรวจไทม์ไลน์ประวัติศาสตร์อิสลามผ่านปฏิทินฮิจเราะฮ์ เลื่อนผ่านเหตุการณ์สำคัญ บุคคล และตำราจากแต่ละศตวรรษ</p>
       </a>
       <a href="/pages/tools.html" class="tool-card">
         <h3 class="tool-name"><em>Isnād</em> Tracer</h3>
-        <p class="tool-desc">เครื่องมือตรวจสอบสายรายงานหะดีษ — แผนผังลำดับผู้รายงานพร้อมสถานะความน่าเชื่อถือจากตำราริญาล</p>
+        <p class="tool-desc">เครื่องมือตรวจสอบสายรายงานหะดีษ แผนผังลำดับผู้รายงานพร้อมสถานะความน่าเชื่อถือจากตำราริญาล</p>
       </a>
     </div>
   </div>
