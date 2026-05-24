@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISNĀD TRACER — Islamic Fiqh Publishing</title>
+
+<!-- Pre-render Theme Engine: Prevents white flash/FOUC on page load -->
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
+
+<meta name="description" content="เครื่องมือจำลองแผนผังสายรายงานหะดีษ วิเคราะห์สถานะความน่าเชื่อถือของผู้รายงานตามตำราญัรห์วะตะอ์ดีลโบราณ">
+<meta name="keywords" content="สายรายงานหะดีษ, อิลมุรริญาล, ตรวจสอบหะดีษ, Hadith isnad tracer, chains of transmission">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<link rel="icon" href="../../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png">
+<meta name="theme-color" content="#e3edf7">
+
+<meta property="og:title" content="ISNĀD TRACER — Islamic Fiqh Publishing">
+<meta property="og:description" content="จำลองและวิเคราะห์แผนผังสายรายงานหะดีษ วิเคราะห์สถานะความน่าเชื่อถือตามหลักการวิพากษ์ตำราริญาล">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/pages/tools/isnad-tracer.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Sarabun:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../article.css?v=8">
+
+<style>
+@font-face {
+  font-family: 'D-DIN';
+  src: url('../../D-DIN.e58c68e58b09fc0e.woff2') format('woff2'),
+       url('../../D-DIN.105cb3e9fde868e3.woff') format('woff'),
+       url('../../D-DIN.e77db3e5eeb79c76.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+:root {
+  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --thai: 'Sarabun', system-ui, sans-serif;
+  --arabic: 'Amiri', serif;
+  --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
+}
+
+html, body {
+  background-color: var(--bg-primary) !important;
+}
+
+/* ─── Layout ─── */
+.it-container { max-width: 900px; margin: 60px auto 80px; padding: 0 24px; position: relative; }
+
+.it-hero { text-align: center; margin-bottom: 50px; }
+.it-hero h1 { 
+  font-family: var(--serif); 
+  font-size: clamp(32px, 4.5vw, 46px); 
+  font-weight: 400; 
+  text-transform: uppercase; 
+  letter-spacing: 0.12em; 
+  color: var(--text-primary); 
+  margin-bottom: 18px; 
+  transition: var(--theme-transition); 
+}
+.it-hero p { 
+  font-family: var(--thai); 
+  font-size: 15px; 
+  color: var(--text-secondary); 
+  line-height: 2.0; 
+  max-width: 100%; 
+  margin: 0 auto; 
+  text-align: center; 
+  word-break: break-word; 
+  transition: var(--theme-transition); 
+}
+
+/* ─── Selector Bar ─── */
+.hadith-selector {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 40px;
+  transition: var(--theme-transition);
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+.hadith-selector h3 {
+  font-family: var(--thai);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.selector-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-select {
+  flex: 1; min-width: 200px; padding: 14px 20px;
+  background: var(--bg-primary); border: 1px solid var(--border-secondary);
+  border-radius: 8px; font-family: var(--thai); font-size: 14px; font-weight: 600;
+  color: var(--text-secondary); cursor: pointer; text-align: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-select:hover {
+  border-color: var(--accent-color);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+.btn-select.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(196, 154, 69, 0.2);
+}
+
+/* ─── Hadith Text Display ─── */
+.hadith-display-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 36px;
+  margin-bottom: 40px;
+  transition: var(--theme-transition);
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+.hadith-display-card h4 {
+  font-family: var(--thai);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-secondary);
+  padding-bottom: 10px;
+}
+.hadith-arabic {
+  font-family: var(--arabic);
+  font-size: 26px;
+  line-height: 2.2;
+  color: var(--text-primary);
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 24px;
+}
+.hadith-thai {
+  font-family: var(--thai);
+  font-size: 16px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  text-align: left;
+  word-break: break-word;
+}
+
+/* ─── Flowchart Visualizer ─── */
+.isnad-visualizer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+.visualizer-title {
+  font-family: var(--thai);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.node-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.node-link-line {
+  width: 2px;
+  height: 40px;
+  background: var(--border-secondary);
+  position: relative;
+}
+.node-link-line::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--border-secondary);
+  border-bottom: 2px solid var(--border-secondary);
+  transform: rotate(45deg);
+}
+
+.narrator-node {
+  width: 100%;
+  max-width: 500px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-left: 4px solid var(--border-secondary);
+  border-radius: 12px;
+  padding: 20px 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+.narrator-node:hover {
+  border-left-color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px var(--shadow-color);
+}
+
+.node-info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+.node-gen {
+  font-family: var(--thai);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-tertiary);
+}
+.node-name-th {
+  font-family: var(--thai);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.node-name-ar {
+  font-family: var(--arabic);
+  font-size: 20px;
+  color: var(--accent-color);
+}
+
+.node-info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  font-family: var(--ui);
+}
+.node-death {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.node-grade-badge {
+  font-family: var(--thai);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.grade-thiqah { background: rgba(16, 185, 129, 0.1); color: #059669; }
+.grade-saduq { background: rgba(196, 154, 69, 0.1); color: #92700a; }
+.grade-dhaif { background: rgba(239, 68, 68, 0.1); color: #dc2626; }
+
+/* ─── Hadith Final Rating Box ─── */
+.final-rating-box {
+  width: 100%;
+  max-width: 500px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--theme-transition);
+  box-shadow: 0 4px 16px var(--shadow-color);
+}
+.rating-left h5 {
+  font-family: var(--thai);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.rating-left p {
+  font-family: var(--thai);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 4px 0 0;
+}
+.rating-badge {
+  font-family: var(--thai);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: #ffffff;
+  background: var(--accent-color);
+  box-shadow: 0 2px 8px rgba(196, 154, 69, 0.2);
+}
+.rating-badge.sahih { background: #059669; box-shadow: 0 2px 8px rgba(5, 150, 105, 0.2); }
+.rating-badge.dhaif { background: #dc2626; box-shadow: 0 2px 8px rgba(220, 38, 38, 0.2); }
+
+/* ─── Detail Drawer ─── */
+.it-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.it-drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.it-drawer {
+  position: fixed;
+  top: 0;
+  right: -450px;
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  background: var(--bg-primary);
+  border-left: 1px solid var(--border-secondary);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+  z-index: 10001;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.it-drawer-overlay.active .it-drawer {
+  right: 0;
+}
+
+.drawer-header {
+  padding: 28px;
+  border-bottom: 1px solid var(--border-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.drawer-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+.drawer-gen {
+  font-family: var(--thai);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.drawer-name-th {
+  font-family: var(--thai);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.drawer-name-ar {
+  font-family: var(--arabic);
+  font-size: 28px;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+.btn-close-drawer {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 4px;
+  transition: color 0.2s;
+  line-height: 1;
+}
+.btn-close-drawer:hover {
+  color: var(--accent-color);
+}
+
+.drawer-content {
+  padding: 28px;
+  overflow-y: auto;
+  flex: 1;
+  text-align: left;
+}
+
+.drawer-section {
+  margin-bottom: 28px;
+}
+.drawer-section-title {
+  font-family: var(--thai);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border-secondary);
+  padding-bottom: 6px;
+}
+.drawer-data-item {
+  font-family: var(--thai);
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 2.0;
+  word-break: break-word;
+}
+.drawer-data-item.ar {
+  font-family: var(--arabic);
+  font-size: 20px;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8;
+}
+
+.evaluation-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--border-secondary);
+}
+.evaluation-row:last-child {
+  border-bottom: none;
+}
+.eval-scholar {
+  font-family: var(--thai);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.eval-grade {
+  font-family: var(--thai);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 480px) {
+  .selector-buttons { flex-direction: column; }
+  .btn-select { width: 100%; min-width: unset; }
+  .it-drawer { max-width: 100%; right: -100%; }
+}
+</style>
+</head>
+<body lang="th">
+
+<div id="header-placeholder"></div>
+
+<main>
+<div class="it-container">
+
+  <div class="it-hero">
+    <h1>ISNĀD TRACER</h1>
+    <p>วิเคราะห์สายรายงานและพิจารณาความน่าเชื่อถือของหะดีษ ผ่านการสืบลำดับชั้นผู้รับฟังและคำวิจารณ์ของนักปราชญ์อย่างเป็นระบบ</p>
+  </div>
+
+  <!-- Selector Panel -->
+  <div class="hadith-selector">
+    <h3>เลือกตัวบทหะดีษเพื่อตรวจสอบสายรายงาน</h3>
+    <div class="selector-buttons" id="selector-bar">
+      <button class="btn-select active" onclick="loadHadith(0)">หะดีษว่าด้วยการตั้งเจตนา</button>
+      <button class="btn-select" onclick="loadHadith(1)">หะดีษว่าด้วยความสมบูรณ์ของธรรม</button>
+      <button class="btn-select" onclick="loadHadith(2)">หะดีษว่าด้วยการห้ามหลอกลวง</button>
+    </div>
+  </div>
+
+  <!-- Hadith Display Card -->
+  <div class="hadith-display-card">
+    <h4>ตัวบทหะดีษอ้างอิง</h4>
+    <div class="hadith-arabic" id="hadith-ar" lang="ar" dir="rtl"></div>
+    <div class="hadith-thai" id="hadith-th"></div>
+  </div>
+
+  <!-- Flowchart Visualizer -->
+  <div class="isnad-visualizer">
+    <div class="visualizer-title">แผนผังการสืบลำดับสายรายงานหะดีษ (คลิกป้ายผู้รายงานเพื่ออ่านประวัติโดยละเอียด)</div>
+    <div class="node-list" id="nodes-container">
+      <!-- Generated dynamically -->
+    </div>
+
+    <!-- Final Hadith Grade Box -->
+    <div class="final-rating-box" id="final-rating-box">
+      <!-- Generated dynamically -->
+    </div>
+  </div>
+
+</div>
+</main>
+
+<!-- Drawer Modal Component -->
+<div class="it-drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
+  <div class="it-drawer" id="drawer-panel" onclick="event.stopPropagation()">
+    <div class="drawer-header">
+      <div class="drawer-header-info">
+        <span class="drawer-gen" id="d-gen">เศาะหาบะฮ์</span>
+        <span class="drawer-name-th" id="d-name-th">ชื่อผู้รายงาน</span>
+        <span class="drawer-name-ar" id="d-name-ar" lang="ar" dir="rtl">الاسم</span>
+      </div>
+      <button class="btn-close-drawer" onclick="closeDrawer()">✕</button>
+    </div>
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <div class="drawer-section-title">ข้อมูลชีวประวัติ</div>
+        <div class="drawer-data-item" id="d-bio">ข้อมูล...</div>
+      </div>
+      <div class="drawer-section">
+        <div class="drawer-section-title">ปีที่เสียชีวิต</div>
+        <div class="drawer-data-item" id="d-death">ฮ.ศ. - / ค.ศ. -</div>
+      </div>
+      <div class="drawer-section">
+        <div class="drawer-section-title">การประเมินสถานะในตำราญัรห์วะตะอ์ดีล</div>
+        <div id="d-evals">
+          <!-- Generated dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="../../main.js"></script>
+<script>
+/* ─── Hadith & Isnad Database ─── */
+const HADITH_DB = [
+  {
+    title: "หะดีษว่าด้วยการตั้งเจตนา (อินนะมัล อะอ์มาลุ บินนิยยาต)",
+    ar: "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى، فَمَنْ كَانَتْ هِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ فَهِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ",
+    th: "“แท้จริงการงานทั้งหลายนั้นขึ้นอยู่กับการตั้งเจตนา และแท้จริงสำหรับทุกคนนั้นจะได้รับตามที่เขาได้ตั้งเจตนาไว้ ดังนั้นผู้ใดก็ตามที่การฮิจเราะฮ์ของเขาเป็นไปเพื่ออัลลอฮ์และศาสนทูตของพระองค์ การฮิจเราะฮ์ของเขาก็จะเป็นไปเพื่ออัลลอฮ์และศาสนทูตของพระองค์” (บันทึกโดย อัลบุคอรีย์ และ มุสลิม)",
+    grade: "เศาะหีหฺ (Sahih)",
+    gradeClass: "sahih",
+    narrators: [
+      {
+        id: "prophet",
+        gen: "บรมศาสดา",
+        nameTh: "ท่านนบีมุหัมมัด ﷺ",
+        nameAr: "محمد رسول الله ﷺ",
+        death: "เสียชีวิตปี ฮ.ศ. 11 / ค.ศ. 632",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "ศาสนทูตคนสุดท้ายของอัลลอฮ์ ซุบหานะฮูวะตะอาลา ผู้รับวะหีย์และเป็นบ่อเกิดแห่งพระวจนะ (หะดีษ)",
+        evals: [
+          { scholar: "คัมภีร์อัลกุรอาน", rating: "สัจธรรมสูงสุด" }
+        ]
+      },
+      {
+        id: "umar",
+        gen: "เศาะหาบะฮ์",
+        nameTh: "อุมัร อิบนุ อัลค็อฏฏอบ เราะฎิยัลลอฮุอันฮุ",
+        nameAr: "عمر بن الخطاب",
+        death: "เสียชีวิตปี ฮ.ศ. 23 / ค.ศ. 644",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "อุมัร อิบนุ อัลค็อฏฏอบ เคาะลีฟะฮ์ผู้ทรงธรรมท่านที่สอง เป็นแบบอย่างด้านความสัตย์จริงและนิติศาสตร์อิสลาม เศาะหาบะฮ์ทั้งหมดได้รับสถานะเป็นธรรมชนผู้น่าเชื่อถือสูงสุด (อัลอะดาละฮ์) ตามมติเอกฉันท์",
+        evals: [
+          { scholar: "นักวิชาการซุนนีย์", rating: "อัศศิฏดีกีย์ (สัจธรรมสูงสุด)" }
+        ]
+      },
+      {
+        id: "alqamah",
+        gen: "ตาบิอีนรุ่นใหญ่",
+        nameTh: "อัลเกาะมะฮ์ อิบนุ วักกอส เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "علقمة بن وقاص",
+        death: "เสียชีวิตปี ฮ.ศ. 80 / ค.ศ. 699",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "ปราชญ์ตาบิอีนอาวุโสแห่งนครมะดีนะฮ์ ได้รับการยอมรับอย่างกว้างขวางว่าเป็นผู้จดจำหะดีษได้อย่างแม่นยำและเที่ยงตรง",
+        evals: [
+          { scholar: "อิบนุ หะญัร", rating: "ศิเกาะฮ์ (น่าเชื่อถือสูงสุด)" },
+          { scholar: "อัลดะฮะบีย์", rating: "ศิเกาะฮ์ (น่าเชื่อถือ)" }
+        ]
+      },
+      {
+        id: "muhammad_taymi",
+        gen: "ตาบิอีนรุ่นกลาง",
+        nameTh: "มุหัมมัด อิบนุ อิบรอฮีม อัลตัยมี เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "محمد بن إبراهيم التيمي",
+        death: "เสียชีวิตปี ฮ.ศ. 120 / ค.ศ. 738",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "นักรายงานหะดีษคนสำคัญผู้เป็นทายาททางวิชาการของเศาะหาบะฮ์หลายท่าน รายงานหะดีษเรื่องเหนียตนี้เพียงผู้เดียวจากอัลเกาะมะฮ์",
+        evals: [
+          { scholar: "ยะห์ยา อิบนุ มะอีน", rating: "ศิเกาะฮ์ (น่าเชื่อถือ)" },
+          { scholar: "อบูหาติม", rating: "ศิเกาะฮ์ ศอลิหฺ (ดีเลิศ)" }
+        ]
+      },
+      {
+        id: "yahya_ansari",
+        gen: "ตาบิอีนรุ่นเล็ก",
+        nameTh: "ยะห์ยา อิบนุ สะอีด อัลอันศอรีย์ เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "يحيى بن سعيد الأنصاري",
+        death: "เสียชีวิตปี ฮ.ศ. 143 / ค.ศ. 760",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "ผู้พิพากษาแห่งมะดีนะฮ์ และปราชญ์นิติศาสตร์ผู้ทรงอิทธิพล หะดีษเรื่องเจตนานี้แผ่ขยายออกสู่โลกอิสลามอย่างกว้างขวางผ่านสายรายงานของท่าน",
+        evals: [
+          { scholar: "อิหม่ามอะหมัด", rating: "ศิเกาะฮ์ ษะบัต (น่าเชื่อถือและมั่นคงที่สุด)" },
+          { scholar: "อันนะซาอี", rating: "ศิเกาะฮ์ (น่าเชื่อถือสูงสุด)" }
+        ]
+      },
+      {
+        id: "sufyan",
+        gen: "ตาบิอิตตาบิอีน",
+        nameTh: "สุฟยาน อัษเษารีย์ เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "سفيان الثوري",
+        death: "เสียชีวิตปี ฮ.ศ. 161 / ค.ศ. 778",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "ผู้มีตำแหน่งเป็น “อะมีรุลมุอ์มินีน ฟิลหะดีษ” (ประมุขแห่งผู้ศรัทธาในวิชาหะดีษ) หนึ่งในนักจำและปราชญ์เทววิทยาผู้ยิ่งใหญ่ที่สุดในประวัติศาสตร์",
+        evals: [
+          { scholar: "อิบนุ มะอีน", rating: "ประมุขแห่งหะดีษ" },
+          { scholar: "ปราชญ์ร่วมสมัย", rating: "ศิเกาะฮ์ ษะบัต อัลมะมูน" }
+        ]
+      },
+      {
+        id: "bukhari",
+        gen: "ผู้รวบรวมหะดีษ",
+        nameTh: "อิหม่ามอัลบุคอรีย์ เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "الإمام البخاري",
+        death: "เสียชีวิตปี ฮ.ศ. 256 / ค.ศ. 870",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "มุหัมมัด อิบนุ อิสมาอีล อัลบุคอรีย์ ผู้ประพันธ์ตำรา <strong>เศาะหีหฺ อัลบุคอรีย์</strong> ซึ่งได้รับการยอมรับอย่างเป็นเอกฉันท์ว่าเป็นหนังสือที่ถูกต้องที่สุดถัดจากคัมภีร์อัลกุรอาน",
+        evals: [
+          { scholar: "ประชาชาติอิสลาม", rating: "เอกฉันท์ด้านความสัจจริงสูงสุด" }
+        ]
+      }
+    ]
+  },
+  {
+    title: "หะดีษว่าด้วยความสมบูรณ์ของธรรม (หะดีษญิบรีล)",
+    ar: "فَأَخْبِرْنِي عَنِ الإِيمَانِ قَالَ أَنْ تُؤْمِنَ بِاللَّهِ وَمَلائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ وَالْيَوْمِ الآخِرِ وَتُؤْمِنَ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ",
+    th: "“ดังนั้นขอท่านได้โปรดบอกฉันเกี่ยวกับอีหม่าน (การศรัทธา) ท่านนบีกล่าวว่า: คือการที่ท่านศรัทธาต่ออัลลอฮ์, บรรดามลาอิกะฮ์ของพระองค์, บรรดาคัมภีร์ของพระองค์, บรรดารสูลของพระองค์, วันอาคิเราะฮ์ และศรัทธาต่อกฎกำหนดสภาวะการณ์ทั้งที่ดีและที่ไม่ดี” (บันทึกโดย มุสลิม)",
+    grade: "เศาะหีหฺ (Sahih)",
+    gradeClass: "sahih",
+    narrators: [
+      {
+        id: "prophet",
+        gen: "บรมศาสดา",
+        nameTh: "ท่านนบีมุหัมมัด ﷺ",
+        nameAr: "محمد رسول الله ﷺ",
+        death: "เสียชีวิตปี ฮ.ศ. 11 / ค.ศ. 632",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "ศาสนทูตคนสุดท้ายของอัลลอฮ์ ซุบหานะฮูวะตะอาลา ผู้ตอบคำถามต่อมลาอิกะฮ์ญิบรีลในรูปร่างมนุษย์ต่อหน้าบรรดาเศาะหาบะฮ์",
+        evals: [
+          { scholar: "คัมภีร์อัลกุรอาน", rating: "สัจธรรมสูงสุด" }
+        ]
+      },
+      {
+        id: "umar",
+        gen: "เศาะหาบะฮ์",
+        nameTh: "อุมัร อิบนุ อัลค็อฏฏอบ เราะฎิยัลลอฮุอันฮุ",
+        nameAr: "عمر بن الخطاب",
+        death: "เสียชีวิตปี ฮ.ศ. 23 / ค.ศ. 644",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "เคาะลีฟะฮ์ผู้ทรงธรรมท่านที่สอง ผู้เห็นเหตุการณ์ในหะดีษญิบรีลนี้และบอกเล่าสายรายงานให้คนรุ่นถัดไปฟัง",
+        evals: [
+          { scholar: "นักวิชาการซุนนีย์", rating: "เอกฉันท์ด้านความสัจจริงสูงสุด" }
+        ]
+      },
+      {
+        id: "ibn_umar",
+        gen: "เศาะหาบะฮ์รุ่นเยาว์",
+        nameTh: "อับดุลลอฮ์ อิบนุ อุมัร เราะฎิยัลลอฮุอันฮุ",
+        nameAr: "عبد الله بن عمر",
+        death: "เสียชีวิตปี ฮ.ศ. 73 / ค.ศ. 693",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "บุตรชายของท่านอุมัร หนึ่งในห้าผู้รายงานหะดีษมากที่สุดในประวัติศาสตร์ และเป็นผู้ปกป้องจริยวัตรอันถูกต้องตามแบบอย่างท่านนบี",
+        evals: [
+          { scholar: "เอกฉันท์ประชาชาติ", rating: "เศาะหาบะฮ์ผู้น่าเชื่อถือสูงสุด" }
+        ]
+      },
+      {
+        id: "yahya_yamar",
+        gen: "ตาบิอีนรุ่นใหญ่",
+        nameTh: "ยะห์ยา อิบนุ ยะอ์มัร เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "يحيى بن يعمر",
+        death: "เสียชีวิตปี ฮ.ศ. 90 / ค.ศ. 708",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "ผู้พิพากษาแห่งเมืองมัรว์ (Merv) เป็นปราชญ์ผู้เชี่ยวชาญด้านภาษาศาสตร์คลาสสิกและอารยธรรมวิชาการหะดีษต้นศตวรรษ",
+        evals: [
+          { scholar: "อิบนุ หิบบาน", rating: "ศิเกาะฮ์ มะอ์มูน (น่าเชื่อถือและปลอดภัย)" },
+          { scholar: "อัลดะฮะบีย์", rating: "ศิเกาะฮ์ (น่าเชื่อถือสูงสุด)" }
+        ]
+      },
+      {
+        id: "kahmas",
+        gen: "ตาบิอิตตาบิอีน",
+        nameTh: "กะฮ์มัส อิบนุ อัลหะซัน เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "กهمس بن الحسن",
+        death: "เสียชีวิตปี ฮ.ศ. 149 / ค.ศ. 766",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "ปราชญ์และผู้ถือศีลผู้โด่งดังแห่งเมืองบัสเราะฮ์ ได้รับการประเมินสถานะในตำรา <strong>ตะฮ์ซีบ อัตตะฮ์ซีบ</strong> ว่ามีความจำที่แม่นยำอย่างยิ่ง",
+        evals: [
+          { scholar: "อิหม่ามอะหมัด", rating: "ศิเกาะฮ์ ษะบัต (มั่นคงอย่างยิ่ง)" },
+          { scholar: "อบูดาวูด", rating: "ศิเกาะฮ์ (น่าเชื่อถือสูงสุด)" }
+        ]
+      },
+      {
+        id: "muslim",
+        gen: "ผู้รวบรวมหะดีษ",
+        nameTh: "อิหม่ามมุสลิม เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "الإمام مسلم",
+        death: "เสียชีวิตปี ฮ.ศ. 261 / ค.ศ. 875",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "มุสลิม อิบนุ อัลหัจญาจ ผู้รวบรวมตำรา <strong>เศาะหีหฺ มุสลิม</strong> ได้นำหะดีษประวัติศาสตร์บทนี้มาบรรจุไว้ในบทแรกของหนังสือเพื่อเปิดบทความเทววิทยาซุนนีย์",
+        evals: [
+          { scholar: "นักวิชาการซุนนีย์", rating: "เอกฉันท์ด้านความสัจจริงสูงสุด" }
+        ]
+      }
+    ]
+  },
+  {
+    title: "หะดีษว่าด้วยการห้ามหลอกลวง (ผู้ใดโกงเราไม่ใช่พวกเรา)",
+    ar: "مَنْ غَشَّنَا فَلَيْسَ مِنَّا",
+    th: "“ผู้ใดก็ตามที่หลอกลวงเรา เขาย่อมไม่ใช่พวกเรา” (บันทึกโดย มุสลิม และ อัตติรมิซีย์)",
+    grade: "เศาะหีหฺ (Sahih)",
+    gradeClass: "sahih",
+    narrators: [
+      {
+        id: "prophet",
+        gen: "บรมศาสดา",
+        nameTh: "ท่านนบีมุหัมมัด ﷺ",
+        nameAr: "محمد رسول الله ﷺ",
+        death: "เสียชีวิตปี ฮ.ศ. 11 / ค.ศ. 632",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "ศาสนทูตสุดท้ายผู้ประกาศสิทธิมนุษยชนและการค้าที่ซื่อสัตย์สุจริต ประกาศหะดีษนี้ในตลาดขณะตรวจสอบกองข้าวสาลีเปียกน้ำ",
+        evals: [
+          { scholar: "คัมภีร์อัลกุรอาน", rating: "สัจธรรมสูงสุด" }
+        ]
+      },
+      {
+        id: "abu_hurayrah",
+        gen: "เศาะหาบะฮ์",
+        nameTh: "อบูฮุร็อยเราะฮ์ เราะฎิยัลลอฮุอันฮุ",
+        nameAr: "أبو هريرة",
+        death: "เสียชีวิตปี ฮ.ศ. 59 / ค.ศ. 679",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "เศาะหาบะฮ์ผู้จดจำและรายงานหะดีษไว้มากที่สุดในประวัติศาสตร์อิสลาม ได้รับการประเมินด้านพฤติกรรมวิชาการระดับสากลว่าเป็นผู้มีความสามารถในการท่องจำสูงสุด",
+        evals: [
+          { scholar: "เอกฉันท์ประชาชาติ", rating: "เศาะหาบะฮ์ผู้รายงานสูงสุด" }
+        ]
+      },
+      {
+        id: "al_araj",
+        gen: "ตาบิอีนรุ่นใหญ่",
+        nameTh: "อับดุรเราะห์มาน อิบนุ ฮุรมุซ อัลอะอ์ร็อญ เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "الأعرج",
+        death: "เสียชีวิตปี ฮ.ศ. 117 / ค.ศ. 735",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "ศิษย์สายตรงของอบูฮุร็อยเราะฮ์ มีชื่อเสียงอย่างลือเลื่องในด้านหลักภาษาศาสตร์ เทววิทยา และความจำหะดีษอันเฉียบคม",
+        evals: [
+          { scholar: "อบูหาติม", rating: "ศิเกาะฮ์ (น่าเชื่อถือสูงสุด)" },
+          { scholar: "อิบนุ หะญัร", rating: "ศิเกาะฮ์ (น่าเชื่อถือ)" }
+        ]
+      },
+      {
+        id: "abu_zinad",
+        gen: "ตาบิอีนรุ่นกลาง",
+        nameTh: "อบูอัซซินาด เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "أبو الزناد",
+        death: "เสียชีวิตปี ฮ.ศ. 130 / ค.ศ. 748",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "อับดุลลอฮ์ อิบนุ ซักวาน (อบูอัซซินาด) นักกฎหมายและปราชญ์อูศูลุลฟิกฮ์แห่งมะดีนะฮ์ ได้รับความไว้วางใจจากปราชญ์รุ่นหลังอย่างเป็นเอกภาพ",
+        evals: [
+          { scholar: "อิบนุ มะอีน", rating: "ศิเกาะฮ์ มะอ์มูน" },
+          { scholar: "อันนะวาวีย์", rating: "ปราชญ์ผู้เชี่ยวชาญด้านหลักนิติศาสตร์" }
+        ]
+      },
+      {
+        id: "sufyan_uyaynah",
+        gen: "ตาบิอิตตาบิอีน",
+        nameTh: "สุฟยาน อิบนุ อุยัยนะฮ์ เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "سفيان بن عيينة",
+        death: "เสียชีวิตปี ฮ.ศ. 198 / ค.ศ. 814",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "เสาหลักแห่งวิชาหะดีษในนครมักกะฮ์ ได้รับการบันทึกระดับความเสถียรว่ารายงานถูกต้องที่สุดคนหนึ่งในเจเนอเรชัน",
+        evals: [
+          { scholar: "อิหม่ามชาฟิอี", rating: "หากไร้สุฟยานความรู้หะดีษมักกะฮ์คงมอดดับ" },
+          { scholar: "อิบนุ หะญัร", rating: "ศิเกาะฮ์ หะฟีซ อัลคุจญะฮ์" }
+        ]
+      },
+      {
+        id: "muslim",
+        gen: "ผู้รวบรวมหะดีษ",
+        nameTh: "อิหม่ามมุสลิม เราะหิมะฮ์ลุลลอฮ์",
+        nameAr: "الإمام مسلم",
+        death: "เสียชีวิตปี ฮ.ศ. 261 / ค.ศ. 875",
+        grade: "ศิเกาะฮ์",
+        gradeClass: "grade-thiqah",
+        bio: "มุสลิม อิบนุ อัลหัจญาจ บันทึกหะดีษนี้ลงใน <strong>เศาะหีหฺ มุสลิม</strong> หมวดว่าด้วยเรื่องจริยศาสตร์ทางธุรกิจการค้า",
+        evals: [
+          { scholar: "ประชาชาติอิสลาม", rating: "เอกฉันท์ด้านความสัจจริงสูงสุด" }
+        ]
+      }
+    ]
+  }
+];
+
+/* ─── State Management ─── */
+let activeHadithIndex = 0;
+
+/* ─── Tabs Switcher ─── */
+function loadHadith(index) {
+  activeHadithIndex = index;
+  
+  // Highlight active button
+  const buttons = document.querySelectorAll('#selector-bar button');
+  buttons.forEach((btn, idx) => {
+    if (idx === index) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+
+  const h = HADITH_DB[index];
+  
+  // Update texts
+  document.getElementById('hadith-ar').textContent = h.ar;
+  document.getElementById('hadith-th').textContent = h.th;
+
+  // Build Isnad tree
+  const container = document.getElementById('nodes-container');
+  container.innerHTML = '';
+
+  h.narrators.forEach((n, idx) => {
+    // Narrator node card
+    const node = document.createElement('div');
+    node.className = 'narrator-node';
+    node.onclick = () => openDrawer(n);
+    node.setAttribute('role', 'button');
+
+    node.innerHTML = `
+      <div class="node-info-left">
+        <span class="node-gen">${n.gen}</span>
+        <span class="node-name-th">${n.nameTh}</span>
+        <span class="node-name-ar" lang="ar" dir="rtl">${n.nameAr}</span>
+      </div>
+      <div class="node-info-right">
+        <span class="node-death">${n.id === 'prophet' ? 'ฮ.ศ. 11' : n.death.split(' / ')[0].replace('เสียชีวิตปี ', '')}</span>
+        <span class="node-grade-badge ${n.gradeClass}">${n.grade}</span>
+      </div>
+    `;
+
+    container.appendChild(node);
+
+    // Link line if not last
+    if (idx < h.narrators.length - 1) {
+      const line = document.createElement('div');
+      line.className = 'node-link-line';
+      container.appendChild(line);
+    }
+  });
+
+  // Build Final Rating Box
+  const ratingBox = document.getElementById('final-rating-box');
+  ratingBox.innerHTML = `
+    <div class="rating-left">
+      <h5>ผลลัพธ์การตรวจสอบสายรายงาน</h5>
+      <p>${h.title}</p>
+    </div>
+    <div class="rating-badge ${h.gradeClass}">${h.grade}</div>
+  `;
+}
+
+/* ─── Drawer Management ─── */
+function openDrawer(narrator) {
+  document.getElementById('d-gen').textContent = narrator.gen;
+  document.getElementById('d-name-th').textContent = narrator.nameTh;
+  document.getElementById('d-name-ar').textContent = narrator.nameAr;
+  document.getElementById('d-bio').textContent = narrator.bio;
+  document.getElementById('d-death').textContent = narrator.death;
+
+  const evalsContainer = document.getElementById('d-evals');
+  evalsContainer.innerHTML = '';
+
+  narrator.evals.forEach(ev => {
+    const row = document.createElement('div');
+    row.className = 'evaluation-row';
+    row.innerHTML = `
+      <span class="eval-scholar">${ev.scholar}</span>
+      <span class="eval-grade">${ev.rating}</span>
+    `;
+    evalsContainer.appendChild(row);
+  });
+
+  // Activate drawers
+  document.getElementById('drawer-overlay').classList.add('active');
+}
+
+function closeDrawer() {
+  document.getElementById('drawer-overlay').classList.remove('active');
+}
+
+/* Initialize page load */
+(function init() {
+  loadHadith(0);
+})();
+</script>
+</body>
+</html>
