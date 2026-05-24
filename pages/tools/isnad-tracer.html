@@ -185,7 +185,7 @@ html, body {
 }
 .sidebar-search .search-input:focus {
   border-color: var(--accent-color);
-  box-shadow: 0 4px 16px rgba(196, 154, 69, 0.15);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
 }
 
 .sidebar-list {
@@ -577,7 +577,7 @@ html, body {
 .btn-toggle-ar:hover {
   background: var(--accent-color);
   color: #fff;
-  box-shadow: 0 4px 14px rgba(196, 154, 69, 0.25);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
   transform: translateY(-1px);
 }
 .btn-toggle-ar:active {
@@ -653,14 +653,9 @@ input:checked + .slider:before {
 <main>
 <div class="it-container">
 
-  <div class="hero-banner">
-    <div class="hero-banner-inner">
-      <div class="hero-arabic" lang="ar" dir="rtl">أَصْلُهَا ثَابِتٌ وَفَرْعُهَا فِي السَّمَاءِ</div>
-      <div class="hero-arabic-ref">— สูเราะฮ์อิบรอฮีม · โองการที่ 24 —</div>
-      <div class="hero-divider"></div>
-      <h1 class="hero-display">ISNĀD TRACER</h1>
-      <p class="hero-sub">สืบค้นสายรายงานและสำรวจความเชื่อมโยงทางเครือญาติและการศึกษาของเหล่านักปราชญ์ผู้รายงานหะดีษผ่านแผนผังใยแมงมุม (Interactive Spiderweb Network Map) คลิกและลากเพื่อสำรวจความเชื่อมโยงตลอดชีวิต</p>
-    </div>
+  <div class="it-hero">
+    <h1>ISNĀD TRACER</h1>
+    <p>สืบค้นสายรายงานและสำรวจความเชื่อมโยงทางเครือญาติและการศึกษาของเหล่านักปราชญ์ผู้รายงานหะดีษผ่านแผนผังใยแมงมุม (Interactive Spiderweb Network Map) คลิกและลากเพื่อสำรวจความเชื่อมโยงตลอดชีวิต</p>
   </div>
 
   <!-- Instruction Panel -->
@@ -1252,7 +1247,7 @@ const attractionForce = 0.06;
 
 // Generation parameters
 const GEN_BORDER_COLORS = {
-  "บรมศาสดา": "#d4af37",      // Rich Gold
+  "บรมศาสดา": "#b31b1b",      // Rich Gold
   "เศาะหาบะฮ์": "#2563eb",      // Blue
   "เศาะหาบะฮ์รุ่นเยาว์": "#3b82f6", // Light Blue
   "ตาบิอีนรุ่นใหญ่": "#10b981",    // Green
@@ -1260,8 +1255,8 @@ const GEN_BORDER_COLORS = {
   "ตาบิอีนรุ่นเล็ก": "#047857",    // Deep Emerald
   "ตาบิอิตตาบิอีน": "#8b5cf6",    // Purple
   "ตาบิอิตตาบิอีนรุ่นใหญ่": "#7c3aed", // Deep Purple
-  "อัครปราชญ์ฟิกฮ์": "#c49a45",   // IFP Gold
-  "ประมุขวิชาหะดีษ": "#f59e0b",   // Amber
+  "อัครปราชญ์ฟิกฮ์": "#1e40af",   // IFP Gold
+  "ประมุขวิชาหะดีษ": "#2563eb",   // Amber
   "กอฎีอียิปต์": "#14b8a6",       // Teal
   "มหาปราชญ์": "#ec4899",        // Pink
   "ศิษย์เอกมาลิก": "#10b981",      // Green
@@ -1269,7 +1264,7 @@ const GEN_BORDER_COLORS = {
   "เสาหลักฮิญาซ": "#06b6d4",      // Cyan
   "เสาหลักนิติศาสตร์": "#3b82f6",  // Blue
   "เสาหลักซุนนะฮ์": "#b91c1c",    // Red
-  "อัครปราชญ์หะดีษ": "#c49a45",   // Gold
+  "อัครปราชญ์หะดีษ": "#3b82f6",   // Gold
   "ผู้สืบทอดตำรา": "#6b7280"      // Gray
 };
 
@@ -1354,7 +1349,7 @@ function renderSidebar() {
           <span class="sidebar-item-name">${cleanName} <span class="ar-ref-inline" lang="ar" dir="rtl">${s.nameAr}</span></span>
           <span class="sidebar-item-death">${s.death.split(' / ')[0]}</span>
         </div>
-        <span class="sidebar-item-badge" style="background: rgba(196, 154, 69, 0.1); color: var(--accent-color);">${s.gen.replace('รุ่นใหญ่','').replace('รุ่นกลาง','').replace('รุ่นเล็ก','')}</span>
+        <span class="sidebar-item-badge" style="background: rgba(59, 130, 246, 0.1); color: var(--accent-color);">${s.gen.replace('รุ่นใหญ่','').replace('รุ่นกลาง','').replace('รุ่นเล็ก','')}</span>
       `;
       groupDiv.appendChild(item);
     });
@@ -1508,9 +1503,9 @@ function getThemeColors() {
     nodeText: isDark ? '#f0f4f8' : '#1c2833',
     nodeTextSub: isDark ? '#a6b8c7' : '#566573',
     edgeDefault: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)',
-    edgeActive: '#c49a45',
+    edgeActive: '#2563eb',
     edgeFamily: isDark ? 'rgba(225, 29, 72, 0.45)' : 'rgba(225, 29, 72, 0.35)', // elegant soft rose-red for family bonds
-    accent: '#c49a45'
+    accent: '#2563eb'
   };
 }
 
@@ -1801,7 +1796,7 @@ function handleSearch() {
     const name = item.querySelector('.sidebar-item-name').innerText.toLowerCase();
     if (term && name.includes(term)) {
       item.style.borderColor = 'var(--accent-color)';
-      item.style.background = 'rgba(196, 154, 69, 0.05)';
+      item.style.background = 'rgba(59, 130, 246, 0.05)';
     } else {
       item.style.borderColor = '';
       item.style.background = '';
