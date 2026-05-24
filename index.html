@@ -671,7 +671,9 @@ body::before {
   .hero-arabic { font-size: 6.5vw; white-space: nowrap; }
   .quote-eyebrow { flex-direction: column; gap: 6px; width: 100%; align-items: center; }
   .quote-eyebrow::before, .quote-eyebrow::after { display: none; }
-  .eyebrow-en::after { content: none; }
+  .eyebrow-en { display: inline-flex; align-items: center; gap: 12px; }
+  .eyebrow-en::before { content: ''; display: block; width: 28px; height: 1px; background: var(--ink-3); }
+  .eyebrow-en::after { content: ''; display: block; width: 28px; height: 1px; background: var(--ink-3); }
 }
 </style>
 </head>
@@ -1298,11 +1300,12 @@ var quotes = [
 
 var dots = document.getElementById('quoteDots');
 var qi = 0;
+function shortAuthor(a){ return a.split(/\s+[·(]/)[0].trim(); }
 function paintQuote(i){
   qi = (i + quotes.length) % quotes.length;
   document.getElementById('quoteAr').innerHTML = quotes[qi].ar;
   document.getElementById('quoteTh').textContent = quotes[qi].th;
-  document.getElementById('quoteAuthor').textContent = quotes[qi].author;
+  document.getElementById('quoteAuthor').textContent = window.innerWidth <= 600 ? shortAuthor(quotes[qi].author) : quotes[qi].author;
   [].forEach.call(dots.children,function(d,idx){ d.classList.toggle('active', idx===qi); });
 }
 quotes.forEach(function(_,i){
@@ -1314,6 +1317,7 @@ quotes.forEach(function(_,i){
 });
 paintQuote(0);
 setInterval(function(){ paintQuote(qi+1); }, 9000);
+window.addEventListener('resize', function(){ document.getElementById('quoteAuthor').textContent = window.innerWidth <= 600 ? shortAuthor(quotes[qi].author) : quotes[qi].author; });
 
 /* ----- TEA BUTTON ----- */
 var teaBtn2 = document.getElementById('teaBtn');
