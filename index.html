@@ -380,9 +380,9 @@ body::before {
 
 .cat-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 320px 215px 215px;
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 260px;
+  gap: 24px;
   background: transparent;
 }
 .cat-card {
@@ -409,14 +409,6 @@ body::before {
   position: absolute; inset: 0; width: 100%; height: 100%;
   pointer-events: none; z-index: 2;
 }
-
-/* ── Grid placement ── */
-.cat-kalam     { grid-column: 1; grid-row: 1 / 4; }
-.cat-nitisart  { grid-column: 2 / 4; grid-row: 1; }
-.cat-hadith    { grid-column: 2; grid-row: 2; }
-.cat-history   { grid-column: 3; grid-row: 2; }
-.cat-literature{ grid-column: 2; grid-row: 3; }
-.cat-about     { grid-column: 3; grid-row: 3; }
 
 /* ── Backgrounds via CSS (Rule 30 — no inline style) ── */
 .cat-kalam .cat-bg {
@@ -454,7 +446,7 @@ body::before {
 
 /* ── Typography ── */
 .cat-tag { font-family: var(--ui); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
-.cat-name { font-family: var(--thai); font-weight: 700; color: var(--paper); }
+.cat-name { font-family: var(--thai); font-weight: 700; color: var(--paper); font-size: 36px; line-height: 1.1; }
 .cat-sub { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--text-mute); letter-spacing: .04em; margin-top: 8px; }
 .cat-count { font-family: var(--thai); font-size: 11px; color: var(--text-mute); letter-spacing: .1em; }
 .cat-kalam .cat-count { margin-top: 20px; }
@@ -472,14 +464,6 @@ body::before {
 .qr-note { font-family: var(--thai); font-size: 12px; color: var(--text-mute); line-height: 1.6; text-align: center; }
 .cat-num { font-family: var(--thai); color: var(--text-mute); font-size: 13px; }
 .cat-em  { font-style: italic; color: var(--gold); font-family: inherit; }
-
-/* ── Name sizes per card type ── */
-.cat-kalam     .cat-name { font-size: 66px; line-height: .88; letter-spacing: -.02em; }
-.cat-nitisart  .cat-name { font-size: 52px; line-height: .9; }
-.cat-hadith    .cat-name,
-.cat-history   .cat-name,
-.cat-literature .cat-name,
-.cat-about     .cat-name { font-size: 30px; line-height: 1; }
 
 .cat-content-top, .cat-content-bottom {
   position: relative; z-index: 3; display: flex; flex-direction: column;
@@ -525,35 +509,20 @@ body::before {
 /* ── Responsive ── */
 @media(max-width:980px){
   .cat-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 260px 200px 200px 175px;
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 220px;
+    gap: 16px;
   }
-  .cat-kalam     { grid-column: 1 / 3; grid-row: 1; }
-  .cat-nitisart  { grid-column: 1;     grid-row: 2; }
-  .cat-hadith    { grid-column: 2;     grid-row: 2; }
-  .cat-history   { grid-column: 1;     grid-row: 3; }
-  .cat-literature{ grid-column: 2;     grid-row: 3; }
-  .cat-about     { grid-column: 1 / 3; grid-row: 4; }
-  .cat-kalam    .cat-name { font-size: 48px; }
-  .cat-nitisart .cat-name { font-size: 34px; }
-  .cat-hadith   .cat-name,
-  .cat-history  .cat-name,
-  .cat-literature .cat-name,
-  .cat-about    .cat-name { font-size: 26px; }
+  .cat-name { font-size: 30px; }
 }
 
 @media(max-width:600px){
-  .cat-grid { grid-template-columns: 1fr; grid-template-rows: repeat(6,165px); gap: 10px; }
-  .cat-kalam,.cat-nitisart,.cat-hadith,.cat-history,.cat-literature,.cat-about {
-    grid-column: 1 !important; grid-row: auto !important;
+  .cat-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 170px;
+    gap: 12px;
   }
-  .cat-kalam    .cat-name { font-size: 42px; }
-  .cat-nitisart .cat-name { font-size: 34px; }
-  .cat-hadith   .cat-name,
-  .cat-history  .cat-name,
-  .cat-literature .cat-name,
-  .cat-about    .cat-name { font-size: 26px; }
+  .cat-name { font-size: 26px; }
 }
 
 /* =========================================================
