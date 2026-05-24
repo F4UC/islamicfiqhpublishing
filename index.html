@@ -391,22 +391,22 @@ body::before {
 .wrap-spacex {
   display: block;
   position: relative;
-  width: 100%;
-  max-width: 1700px;
+  width: 98%;
+  max-width: none;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0;
 }
 
 .cat-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 420px;
+  grid-auto-rows: 941px;
   gap: 28px;
   background: transparent;
 }
 .cat-card {
   position: relative; overflow: hidden;
-  padding: 40px 48px; display: flex; flex-direction: column; justify-content: space-between;
+  padding: 64px 80px; display: flex; flex-direction: column; justify-content: space-between;
   transition: box-shadow .3s, transform .3s; background: #0a0c10;
   text-decoration: none; border-radius: 12px;
 }
@@ -459,7 +459,7 @@ body::before {
 
 /* ── Typography ── */
 .cat-tag { font-family: var(--ui); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
-.cat-name { font-family: var(--thai); font-weight: 700; color: var(--paper); font-size: 64px; line-height: 1.1; letter-spacing: -0.02em; transition: color 0.3s; }
+.cat-name { font-family: var(--thai); font-weight: 700; color: var(--paper); font-size: clamp(48px, 6.5vw, 84px); line-height: 1.05; letter-spacing: -0.02em; transition: color 0.3s; }
 .cat-card:hover .cat-name { color: var(--gold-bright); }
 .cat-sub { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--text-mute); letter-spacing: .04em; margin-top: 8px; }
 .cat-count { font-family: var(--thai); font-size: 11px; color: var(--text-mute); letter-spacing: .1em; }
@@ -1133,20 +1133,20 @@ html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
         // Dark Mode: Screen blend
         vec3 dark_bg = vec3(0.04, 0.04, 0.03);
         vec3 dark_blue = vec3(0.02, 0.28, 0.65);
-        vec3 dark_red = vec3(0.50, 0.08, 0.08); // Sleek glowing brand red
+        vec3 dark_bluewhite = vec3(0.60, 0.85, 1.0); // Icy blue-white glow
         
         vec3 temp = mix(dark_bg, dark_blue, wave_b * 0.45);
-        final_color = mix(temp, dark_red, wave_r * (1.0 - dist * 0.4));
+        final_color = mix(temp, dark_bluewhite, wave_r * (1.0 - dist * 0.4));
         alpha = 0.18;
       } else {
         // Light Mode: Multiply blend
         vec3 light_bg = vec3(1.0, 1.0, 1.0); // Pure white base
         vec3 light_blue = vec3(0.12, 0.43, 0.82); // Royal Blue waves
-        vec3 light_red = vec3(0.70, 0.11, 0.11); // Crimson Red accent waves
+        vec3 light_bluewhite = vec3(0.40, 0.70, 0.95); // Royal blue-white accent waves
         
         // Multiplied blend: White is transparent, dark colors overlay
         vec3 temp = mix(light_bg, light_blue, wave_b * 0.18);
-        final_color = mix(temp, light_red, wave_r * 0.22 * (1.0 - dist * 0.45));
+        final_color = mix(temp, light_bluewhite, wave_r * 0.22 * (1.0 - dist * 0.45));
         alpha = 1.0;
       }
       
@@ -1377,6 +1377,19 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
   var t = 0, raf, SPACING = 24, R = 2.2;
+  
+  var mx = 0, my = 0, hovering = false;
+  var categoriesSec = document.getElementById('categories');
+  if(categoriesSec){
+    categoriesSec.addEventListener('mouseenter', function(){ hovering = true; });
+    categoriesSec.addEventListener('mousemove', function(e){
+      var rect = categoriesSec.getBoundingClientRect();
+      mx = e.clientX - rect.left;
+      my = e.clientY - rect.top;
+    });
+    categoriesSec.addEventListener('mouseleave', function(){ hovering = false; });
+  }
+
   function resize(){
     var dpr = window.devicePixelRatio || 1;
     canvas.width = canvas.offsetWidth * dpr;
@@ -1385,32 +1398,48 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
     ctx.scale(dpr, dpr);
   }
   function draw(){
-    if (document.documentElement.classList.contains('dark-mode')){ cancelAnimationFrame(raf); return; }
     var dpr = window.devicePixelRatio || 1;
     var w = canvas.width / dpr, h = canvas.height / dpr;
     ctx.clearRect(0,0,w,h);
     var cols = Math.ceil(w/SPACING)+2, rows = Math.ceil(h/SPACING)+2;
+    var isDark = document.documentElement.classList.contains('dark-mode');
+    var dotColor = isDark ? 'rgba(180, 215, 255, ' : 'rgba(50, 100, 195, ';
+
     for(var r=0;r<rows;r++){
       for(var c=0;c<cols;c++){
         var bx=c*SPACING, by=r*SPACING;
         var dx=Math.sin(c*0.42+r*0.28+t)*4;
         var dy=Math.cos(c*0.35+r*0.48+t*0.85)*3;
         var a=0.26+Math.sin(c*0.55+r*0.38+t*1.1)*0.12;
+
+        if (hovering && window.innerWidth > 980) {
+          var hx = mx - bx, hy = my - by;
+          var hd = Math.sqrt(hx*hx + hy*hy) || 1;
+          if (hd < 280) {
+            var factor = Math.max(0, 1 - hd / 280);
+            var wave = Math.sin(hd * 0.06 - t * 4.0) * 14;
+            dx += (hx / hd) * wave * factor;
+            dy += (hy / hd) * wave * factor;
+            a += factor * 0.35;
+          }
+        }
+
         ctx.beginPath();
         ctx.arc(bx+dx,by+dy,R,0,Math.PI*2);
-        ctx.fillStyle='rgba(30,50,90,'+Math.max(0.08,a)+')';
+        ctx.fillStyle=dotColor+Math.min(0.85, Math.max(0.08, a))+')';
         ctx.fill();
       }
     }
     t+=0.018; raf=requestAnimationFrame(draw);
   }
   function init(){
-    if(!document.documentElement.classList.contains('dark-mode')){ resize(); draw(); }
+    resize();
+    cancelAnimationFrame(raf);
+    draw();
   }
   window.addEventListener('resize',resize);
   new MutationObserver(function(){
-    if(document.documentElement.classList.contains('dark-mode')){ cancelAnimationFrame(raf); }
-    else { resize(); draw(); }
+    resize();
   }).observe(document.documentElement,{attributes:true,attributeFilter:['class']});
   init();
 })();
@@ -1434,6 +1463,8 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
       var cols = Math.ceil(canvas.width / SPACING) + 2;
       var rows = Math.ceil(canvas.height / SPACING) + 2;
       var now = Date.now() * 0.001;
+      var isDark = document.documentElement.classList.contains('dark-mode');
+      var waveColor = isDark ? 'rgba(200, 230, 255, ' : 'rgba(70, 130, 240, ';
 
       for(var r = 0; r < rows; r++){
         for(var c = 0; c < cols; c++){
@@ -1468,7 +1499,7 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
           if(alpha < 0.04) continue;
           ctx.beginPath();
           ctx.arc(bx + dx, by + dy, R, 0, 6.2832);
-          ctx.fillStyle = 'rgba(70,130,200,' + Math.min(0.90, alpha) + ')';
+          ctx.fillStyle = waveColor + Math.min(0.90, alpha) + ')';
           ctx.fill();
         }
       }
@@ -1491,11 +1522,13 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
     }
 
     card.addEventListener('mouseenter', function(e){
+      if (window.innerWidth <= 980) return;
       var rect = card.getBoundingClientRect();
       mx = e.clientX - rect.left; my = e.clientY - rect.top;
       hovering = true; start();
     });
     card.addEventListener('mousemove', function(e){
+      if (window.innerWidth <= 980) return;
       var rect = card.getBoundingClientRect();
       mx = e.clientX - rect.left; my = e.clientY - rect.top;
     });
@@ -1503,12 +1536,22 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
       hovering = false;
     });
     card.addEventListener('click', function(e){
+      if (window.innerWidth <= 980) return;
       var rect = card.getBoundingClientRect();
       ripples.push({x: e.clientX - rect.left, y: e.clientY - rect.top, t: 0, maxT: 70, str: 2.0});
       start();
     });
     window.addEventListener('resize', resize);
   });
+  new MutationObserver(function(){
+    document.querySelectorAll('.cat-card').forEach(function(card){
+      var canvas = card.querySelector('.cat-wave-canvas');
+      if (canvas) {
+        canvas.width = card.offsetWidth;
+        canvas.height = card.offsetHeight;
+      }
+    });
+  }).observe(document.documentElement,{attributes:true,attributeFilter:['class']});
 })();
 
 /* ----- TEA BUTTON ----- */
