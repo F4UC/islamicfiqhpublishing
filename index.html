@@ -405,6 +405,10 @@ body::before {
 .cat-card:hover { outline: 1px solid rgba(196,154,69,0.55); outline-offset: -1px; }
 .cat-card:hover .cat-bg { opacity: 0.56; filter: brightness(100%) saturate(110%); }
 .cat-card:hover .cat-overlay { background: linear-gradient(170deg, rgba(5,6,10,0.06) 0%, rgba(5,6,10,0.74) 100%); }
+.cat-wave-canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 2;
+}
 
 /* ── Grid placement ── */
 .cat-kalam     { grid-column: 1; grid-row: 1 / 4; }
@@ -416,12 +420,13 @@ body::before {
 
 /* ── Backgrounds via CSS (Rule 30 — no inline style) ── */
 .cat-kalam .cat-bg {
-  background-image: url('https://svs.gsfc.nasa.gov/vis/a010000/a014000/a014073/STScI-01GKMK80XA8MTB2V2XB3RD30GF-carina-nebula_print.jpg');
+  background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
   animation: ken-burns 26s ease-in-out infinite alternate;
   opacity: 0.45;
 }
 .cat-nitisart .cat-bg {
-  background-image: url('https://images.unsplash.com/photo-1519817914152-3f5fdfe96607?q=80&w=1200&auto=format&fit=crop');
+  background-image: url('https://images.unsplash.com/photo-1547036967-23d11aacaee0?q=80&w=1200&auto=format&fit=crop');
   background-size: cover; background-position: center;
   background-color: #0c0f16;
   opacity: 0.38;
@@ -857,6 +862,7 @@ html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
 
       <!-- 01 เทววิทยา — NASA Carina Nebula + Ken Burns -->
       <a href="/pages/kalam.html" class="cat-card cat-kalam">
+        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
         <div class="cat-overlay"></div>
         <div class="cat-content-top">
@@ -870,6 +876,7 @@ html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
 
       <!-- 02 นิติศาสตร์ — Islamic geometric pattern tile -->
       <a href="/pages/nitisart.html" class="cat-card cat-nitisart">
+        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
         <div class="cat-overlay"></div>
         <div class="cat-content-top">
@@ -883,6 +890,7 @@ html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
 
       <!-- 03 หะดีษ — SVG map of hadith transmission routes -->
       <a href="/pages/hadith.html" class="cat-card cat-hadith">
+        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
         <div class="cat-overlay"></div>
         <div class="hadith-map" aria-hidden="true">
@@ -926,6 +934,7 @@ html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
 
       <!-- 04 ประวัติศาสตร์ — floating Hijri years (time traveling backward) -->
       <a href="/pages/history.html" class="cat-card cat-history">
+        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
         <div class="cat-overlay"></div>
         <div class="hist-years" aria-hidden="true">
@@ -947,6 +956,7 @@ html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
 
       <!-- 05 วรรณกรรม -->
       <a href="/pages/literature.html" class="cat-card cat-literature">
+        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
         <div class="cat-overlay"></div>
         <div class="cat-content-top">
@@ -959,6 +969,7 @@ html:not(.dark-mode) .cat-num { color: rgba(240,236,228,0.55); }
       </a>
       <!-- 06 บรรณาธิการ -->
       <a href="/pages/about.html" class="cat-card cat-about">
+        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
         <div class="cat-bg"></div>
         <div class="cat-overlay"></div>
         <div class="cat-content-top">
@@ -1388,6 +1399,102 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
     else { resize(); draw(); }
   }).observe(document.documentElement,{attributes:true,attributeFilter:['class']});
   init();
+})();
+
+/* ----- CARD RIPPLE WAVE (Google Gravity style) ----- */
+(function(){
+  var SPACING = 20, R = 1.5;
+  document.querySelectorAll('.cat-card').forEach(function(card){
+    var canvas = card.querySelector('.cat-wave-canvas');
+    if(!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var ripples = [], mx = 0, my = 0, hovering = false, raf = null;
+
+    function resize(){
+      canvas.width = card.offsetWidth;
+      canvas.height = card.offsetHeight;
+    }
+
+    function draw(){
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      var cols = Math.ceil(canvas.width / SPACING) + 2;
+      var rows = Math.ceil(canvas.height / SPACING) + 2;
+      var now = Date.now() * 0.001;
+
+      for(var r = 0; r < rows; r++){
+        for(var c = 0; c < cols; c++){
+          var bx = c * SPACING, by = r * SPACING;
+          var dx = 0, dy = 0, alpha = 0;
+
+          if(hovering){
+            var hx = mx - bx, hy = my - by;
+            var hd = Math.sqrt(hx*hx + hy*hy) || 1;
+            var hwave = Math.sin(hd * 0.12 - now * 3.5) * 5;
+            var hfactor = Math.max(0, 1 - hd / 140);
+            dx += (hx/hd) * hwave * hfactor;
+            dy += (hy/hd) * hwave * hfactor;
+            alpha += hfactor * 0.22;
+          }
+
+          for(var i = 0; i < ripples.length; i++){
+            var rp = ripples[i];
+            var px = rp.x - bx, py = rp.y - by;
+            var pd = Math.sqrt(px*px + py*py) || 1;
+            var progress = rp.t / rp.maxT;
+            var front = progress * 240;
+            var prox = Math.abs(pd - front);
+            if(prox < 28){
+              var amp = (1 - prox/28) * (1 - progress) * 9 * rp.str;
+              dx -= (px/pd) * amp;
+              dy -= (py/pd) * amp;
+              alpha += (1 - prox/28) * (1 - progress) * 0.40;
+            }
+          }
+
+          if(alpha < 0.04) continue;
+          ctx.beginPath();
+          ctx.arc(bx + dx, by + dy, R, 0, 6.2832);
+          ctx.fillStyle = 'rgba(70,130,200,' + Math.min(0.90, alpha) + ')';
+          ctx.fill();
+        }
+      }
+
+      for(var i = ripples.length - 1; i >= 0; i--){
+        ripples[i].t++;
+        if(ripples[i].t >= ripples[i].maxT) ripples.splice(i, 1);
+      }
+
+      if(hovering || ripples.length > 0){
+        raf = requestAnimationFrame(draw);
+      } else {
+        raf = null;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+
+    function start(){
+      if(!raf){ resize(); raf = requestAnimationFrame(draw); }
+    }
+
+    card.addEventListener('mouseenter', function(e){
+      var rect = card.getBoundingClientRect();
+      mx = e.clientX - rect.left; my = e.clientY - rect.top;
+      hovering = true; start();
+    });
+    card.addEventListener('mousemove', function(e){
+      var rect = card.getBoundingClientRect();
+      mx = e.clientX - rect.left; my = e.clientY - rect.top;
+    });
+    card.addEventListener('mouseleave', function(){
+      hovering = false;
+    });
+    card.addEventListener('click', function(e){
+      var rect = card.getBoundingClientRect();
+      ripples.push({x: e.clientX - rect.left, y: e.clientY - rect.top, t: 0, maxT: 70, str: 2.0});
+      start();
+    });
+    window.addEventListener('resize', resize);
+  });
 })();
 
 /* ----- TEA BUTTON ----- */
