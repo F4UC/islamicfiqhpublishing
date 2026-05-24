@@ -1332,8 +1332,8 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       var cols = Math.ceil(canvas.width / SPACING) + 2;
       var rows = Math.ceil(canvas.height / SPACING) + 2;
-      var now = Date.now() * 0.001;
-      var waveColor = 'rgba(190, 30, 30, ';
+      var isDark = document.documentElement.classList.contains('dark-mode');
+      var waveColor = isDark ? 'rgba(200, 230, 255, ' : 'rgba(70, 130, 240, ';
 
       for(var r = 0; r < rows; r++){
         for(var c = 0; c < cols; c++){
