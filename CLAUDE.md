@@ -1,10 +1,10 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 50 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all 51 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (50 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (51 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -117,9 +117,17 @@
   - **ตำแหน่งแนวตั้ง:** กำหนด `vertical-align: middle` สำหรับ `span.ar-inline` เพื่อให้เสมอกัน
   - **ความสูงบรรทัด:** กำหนด `line-height: 2.4` สำหรับย่อหน้าที่มีส่วนผสมอาหรับ เพื่อป้องกันสระอาหรับซ้อนทับ
 
+* **กฎข้อที่ 51:** **[มาตรฐานส่วน QUOTE OF THE DAY]** ระบบวาทะปราชญ์ประจำวัน (QOTD) ต้องปฏิบัติตามข้อกำหนดต่อไปนี้อย่างเคร่งครัด:
+  - **ความถี่ในการสลับ:** `setInterval` ใช้ค่า **9,000ms (9 วินาที)** เป็นมาตรฐาน ห้ามเปลี่ยนแปลงค่านี้โดยไม่ได้รับอนุมัติจากกองบรรณาธิการ
+  - **มาตรฐานตัวบทอาหรับ:** ข้อความอาหรับทุกรายการต้องใส่สระกำกับ (Harakat) ครบถ้วน และต้องระบุ `lang="ar" dir="rtl"` บน element ที่บรรจุตัวบท ห้ามใส่อัญประกาศหรือจุด (.) ในฟิลด์ `ar` โดยเด็ดขาด
+  - **[สำคัญมาก] ความถูกต้องและสมบูรณ์ของตัวบท:** หากผู้เขียน/กองบรรณาธิการ **ระบุตัวบทมาให้โดยตรง** ให้ยึดตามนั้นทุกประการโดยไม่ต้องค้นหาหรือเปลี่ยนแปลงสำนวน แต่ยังต้องปฏิบัติ 2 ข้อนี้: (1) **ใส่สระกำกับ (Harakat)** ให้ครบถ้วนหากยังไม่มี และ (2) **ระบุแหล่งอ้างอิง** (ชื่อหนังสือ/แหล่งข้อมูล) กำกับไว้ทุกครั้ง — แต่หากไม่มีการระบุมาให้ ต้องค้นหาจากอินเทอร์เน็ตและแหล่งปฐมภูมิเพื่อยืนยันว่าตัวบทไม่ถูกตัดตอน ไม่มีคำเกิน และการระบุผู้กล่าวถูกต้อง
+  - **มาตรฐานคำแปลภาษาไทย:** คำแปลต้องใช้ภาษาธรรมชาติที่สอดคล้องกับโทนของแหล่งที่มา (กวี, วรรณกรรม, เทววิทยา, หรือการเมือง) — ถูกต้อง, เข้าใจง่าย, กระชับ; ใช้ `\n` ในตำแหน่งที่สอดคล้องกับจุดหยุดธรรมชาติเพื่อควบคุมการตัดบรรทัดบนมือถือ
+  - **การแสดงผลบนมือถือ:** ใช้ `<br>` แทน `&nbsp;` ในการแบ่งวรรคกวีอาหรับ เพื่อให้แต่ละวรรคแสดงในบรรทัดใหม่บนหน้าจอเล็ก (ยกเว้นกรณีที่ทดสอบแล้วว่าแสดงผลได้สมบูรณ์โดยไม่ต้องแบ่ง)
+  - **โครงสร้างข้อมูล:** array `quotes` ต้องประกอบด้วย field `ar` (ตัวบทอาหรับ ไม่มีอัญประกาศเป็นเนื้อหา), `th` (คำแปลไทยที่ล้อมด้วย `"..."`), และ `author` (ชื่อผู้กล่าวและปีเสียชีวิตตามรูปแบบ `ชื่อ · เสียชีวิตปี ฮ.ศ. XXX` ไม่มีอัญประกาศ) และต้องวางไว้ก่อนปิดแท็ก `</body>` ตามกฎข้อที่ 31
+
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 50 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 51 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -200,3 +208,11 @@
   - **Font size ratio:** Set `font-size: 1.15em` for `:lang(ar)` to visually equalize Amiri with Sarabun.
   - **Vertical alignment:** Set `vertical-align: middle` on `span.ar-inline` to align baselines.
   - **Line height:** Set `line-height: 2.4` on paragraphs containing inline Arabic to prevent diacritic overlap.
+
+* **Rule 51:** **[QUOTE OF THE DAY Standard]** The QOTD system must comply with the following requirements:
+  - **Rotation interval:** `setInterval` is fixed at **9,000ms (9 seconds)**. Do not change this value without editorial approval.
+  - **Arabic text standard:** Every Arabic entry must carry full Harakat (diacritics), with `lang="ar" dir="rtl"` on the containing element. Quotation marks and periods (`.`) are strictly prohibited inside the `ar` field.
+  - **[Critical] Text completeness & attribution:** If the author/editor **explicitly provides the text**, accept it as-is without searching or altering the wording — but still: (1) **add full Harakat** if not present, and (2) **cite the source reference** (book title / database). If no text is provided, conduct a web search against primary sources to verify the text is not truncated, contains no spurious words, and that the attribution is accurate.
+  - **Thai translation standard:** Translations must use natural language matching the tone of the source (poetry, literature, theology, or political writing) — accurate, easy to understand, and concise. Use `\n` at natural sentence-break positions to control mobile line wrapping.
+  - **Mobile layout:** Use `<br>` instead of `&nbsp;` to break Arabic poetic hemistiches onto separate lines for small screens (except where tested and confirmed to display correctly without breaking).
+  - **Data structure:** The `quotes` array must contain `ar` (Arabic text — no quotation marks as content), `th` (Thai translation wrapped in `"..."`), and `author` (`Name · เสียชีวิตปี ฮ.ศ. XXX` — no quotation marks), positioned before `</body>` per Rule 31.
