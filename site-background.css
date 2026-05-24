@@ -100,8 +100,7 @@ body.ifp-subpage-bg #header-placeholder {
   z-index: 100;
 }
 
-body.ifp-subpage-bg .chrome,
-body.ifp-subpage-bg header {
+body.ifp-subpage-bg .chrome {
   background: var(--ifp-header-bg) !important;
   border-bottom-color: var(--ifp-header-border) !important;
 }
