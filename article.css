@@ -861,3 +861,146 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
 .col-30 { width: 30%; }
 .col-35 { width: 35%; }
 
+
+/* ==========================================================
+   ⭐️ THE LIBRARY HERO BANNER (SUBPAGES & ARTICLES) ⭐️
+   ========================================================== */
+.hero-banner {
+  position: relative;
+  min-height: 420px;
+  padding: 120px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #05060a; /* Premium dark ink */
+  color: #e8e0d0; /* Warm ivory text */
+  overflow: hidden;
+  border-bottom: 1px solid rgba(196,154,69,0.15);
+  transition: var(--theme-transition);
+}
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23c49a45' fill-opacity='1' d='M0,192L48,202.7C96,213,192,235,288,234.7C384,235,480,213,576,192C672,171,768,149,864,160C960,171,1056,213,1152,229.3C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path></svg>");
+  background-size: cover;
+  background-position: bottom;
+  z-index: 1;
+}
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: 
+    radial-gradient(50% 50% at 70% 20%, rgba(196,154,69,0.08), transparent 60%),
+    radial-gradient(70% 60% at 20% 80%, rgba(196,154,69,0.04), transparent 70%);
+  z-index: 0;
+}
+.hero-banner-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  width: 100%;
+}
+.hero-banner .hero-arabic {
+  font-family: 'Amiri', serif;
+  font-weight: 400;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.4;
+  color: #e8e0d0;
+  direction: rtl;
+  margin-bottom: 12px;
+  text-shadow: 0 0 40px rgba(179,27,27,0.15);
+}
+.hero-banner .hero-arabic-ref {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 13px;
+  color: rgba(232, 224, 208, 0.65);
+  margin-bottom: 24px;
+}
+.hero-banner .hero-divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(196,154,69,0.3);
+  margin: 0 auto 32px;
+}
+.hero-banner .hero-display {
+  font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(36px, 5.5vw, 64px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #e8e0d0;
+  margin-bottom: 20px;
+}
+.hero-banner .hero-display em {
+  font-style: italic;
+  color: #c49a45;
+  font-weight: 400;
+}
+.hero-banner .hero-sub {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(240, 236, 228, 0.75);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Specific styling for article header in banner */
+.article-hero-banner {
+  min-height: 380px;
+  padding: 100px 24px 60px;
+}
+.article-hero-banner .article-category {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #c49a45;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+.article-hero-banner .article-main-title {
+  margin-bottom: 16px;
+}
+.article-hero-banner .article-meta-info {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 13px;
+  color: rgba(232, 224, 208, 0.65);
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.article-hero-banner .article-meta-info strong {
+  color: #e8e0d0;
+}
+.article-hero-banner .meta-divider {
+  color: rgba(232, 224, 208, 0.3);
+}
+
+/* Custom Grid Height for Homepage Tools */
+.tools-cat-grid {
+  grid-auto-rows: 480px !important;
+}
+@media(max-width:980px){
+  .tools-cat-grid {
+    grid-auto-rows: 260px !important;
+  }
+}
+@media(max-width:600px){
+  .tools-cat-grid {
+    grid-auto-rows: 200px !important;
+  }
+}
+
+

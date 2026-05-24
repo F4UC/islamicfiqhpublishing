@@ -456,6 +456,14 @@ body::before {
   background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop');
   background-size: cover; background-position: center;
 }
+.cat-htm .cat-bg {
+  background-image: url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+}
+.cat-isnad .cat-bg {
+  background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+}
 
 /* ── Typography ── */
 .cat-tag { font-family: var(--ui); font-size: 9px; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); opacity: 0.75; }
@@ -1013,14 +1021,29 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
       </div>
     </div>
 
-    <div class="tools-grid" data-reveal data-delay="2">
-      <a href="pages/tools/hijri-time-machine.html" class="tool-card">
-        <h3 class="tool-name"><em>Hijri</em> Time Machine</h3>
-        <p class="tool-desc">สำรวจไทม์ไลน์ประวัติศาสตร์อิสลามผ่านปฏิทินฮิจเราะฮ์ เลื่อนผ่านเหตุการณ์สำคัญ บุคคล และตำราจากแต่ละศตวรรษ</p>
+    <div class="cat-grid tools-cat-grid" data-reveal data-delay="2">
+      <!-- 01 HIJRI TIME MACHINE -->
+      <a href="pages/tools/hijri-time-machine.html" class="cat-card cat-htm">
+        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
+        <div class="cat-bg"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-body">
+          <span class="cat-tag">TOOL 01</span>
+          <div class="cat-name">HIJRI TIME MACHINE</div>
+          <div class="cat-sub">สะพานเวลาประวัติศาสตร์อิสลาม — สำรวจเหตุการณ์สำคัญ บุคคล และตำราจากแต่ละศตวรรษผ่านปฏิทินฮิจเราะฮ์แบบสองทาง</div>
+        </div>
       </a>
-      <a href="pages/tools/isnad-tracer.html" class="tool-card">
-        <h3 class="tool-name"><em>Isnād</em> Tracer</h3>
-        <p class="tool-desc">เครื่องมือตรวจสอบสายรายงานหะดีษ แผนผังลำดับผู้รายงานพร้อมสถานะความน่าเชื่อถือจากตำราริญาล</p>
+
+      <!-- 02 ISNĀD TRACER -->
+      <a href="pages/tools/isnad-tracer.html" class="cat-card cat-isnad">
+        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
+        <div class="cat-bg"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-body">
+          <span class="cat-tag">TOOL 02</span>
+          <div class="cat-name">ISNĀD TRACER</div>
+          <div class="cat-sub">เครือข่ายสืบค้นสายรายงานหะดีษ — แผนผังจำลองโครงข่ายผู้รายงานแบบอินเตอร์แอคทีฟวิเคราะห์คำวิจารณ์ตำราญัรห์ วัตตะอ์ดีลโบราณ</div>
+        </div>
       </a>
     </div>
   </div>

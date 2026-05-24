@@ -151,7 +151,7 @@ html, body {
   border: 1px solid var(--border-primary);
   border-radius: 14px;
   padding: 24px;
-  height: 600px;
+  height: 750px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 32px var(--shadow-color);
@@ -267,7 +267,7 @@ html, body {
 .canvas-wrapper {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 750px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-primary);
   border-radius: 14px;
@@ -507,8 +507,142 @@ html, body {
     height: 500px;
   }
 }
-@media (max-width: 480px) {
-  .it-drawer { max-width: 100%; right: -100%; }
+/* ─── Arabic References & Toggles ─── */
+.ar-ref-box {
+  display: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: var(--bg-primary);
+  border: 1px dashed var(--accent-color);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-family: var(--arabic);
+  font-size: 15px;
+  color: var(--text-primary);
+  direction: rtl;
+  text-align: right;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+.show-arabic-ref .ar-ref-box {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ar-ref-inline {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: var(--arabic);
+  font-size: 14px;
+  color: var(--accent-color);
+  margin-right: 6px;
+  direction: rtl;
+}
+.show-arabic-ref .ar-ref-inline {
+  display: inline-block;
+  opacity: 1;
+}
+
+/* Hide original Arabic name and demise when not requested */
+#d-name-ar, .drawer-name-ar {
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.show-arabic-ref #d-name-ar, .show-arabic-ref .drawer-name-ar {
+  display: block;
+  opacity: 1;
+}
+
+.btn-toggle-ar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-family: var(--thai);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-bottom: 12px;
+  outline: none;
+}
+.btn-toggle-ar:hover {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(196, 154, 69, 0.25);
+  transform: translateY(-1px);
+}
+.btn-toggle-ar:active {
+  transform: translateY(0);
+}
+.show-arabic-ref .btn-toggle-ar {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+/* Custom switch design for sidebar */
+.toggle-switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+.toggle-switch-label {
+  font-family: var(--thai);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-secondary);
+  transition: .3s;
+  border-radius: 22px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+input:checked + .slider:before {
+  transform: translateX(22px);
 }
 </style>
 </head>
@@ -519,9 +653,14 @@ html, body {
 <main>
 <div class="it-container">
 
-  <div class="it-hero">
-    <h1>ISNĀD TRACER</h1>
-    <p>สืบค้นสายรายงานและสำรวจความเชื่อมโยงทางเครือญาติและการศึกษาของเหล่านักปราชญ์ผู้รายงานหะดีษผ่านแผนผังใยแมงมุม (Interactive Spiderweb Network Map) คลิกและลากเพื่อสำรวจความเชื่อมโยงตลอดชีวิต</p>
+  <div class="hero-banner">
+    <div class="hero-banner-inner">
+      <div class="hero-arabic" lang="ar" dir="rtl">أَصْلُهَا ثَابِتٌ وَفَرْعُهَا فِي السَّمَاءِ</div>
+      <div class="hero-arabic-ref">— สูเราะฮ์อิบรอฮีม · โองการที่ 24 —</div>
+      <div class="hero-divider"></div>
+      <h1 class="hero-display">ISNĀD TRACER</h1>
+      <p class="hero-sub">สืบค้นสายรายงานและสำรวจความเชื่อมโยงทางเครือญาติและการศึกษาของเหล่านักปราชญ์ผู้รายงานหะดีษผ่านแผนผังใยแมงมุม (Interactive Spiderweb Network Map) คลิกและลากเพื่อสำรวจความเชื่อมโยงตลอดชีวิต</p>
+    </div>
   </div>
 
   <!-- Instruction Panel -->
@@ -551,6 +690,13 @@ html, body {
       <div class="sidebar-search">
         <input type="text" class="search-input" id="search-box" placeholder="ค้นหาชื่อนักรายงาน..." oninput="handleSearch()">
       </div>
+      <div class="toggle-switch-wrapper">
+        <span class="toggle-switch-label">แสดงแหล่งอ้างอิงภาษาอาหรับ</span>
+        <label class="switch">
+          <input type="checkbox" id="global-ar-toggle" onchange="toggleArabicReferences(this.checked)">
+          <span class="slider"></span>
+        </label>
+      </div>
       <div class="sidebar-list" id="sidebar-list">
         <!-- Dynamic grouped list will render here -->
       </div>
@@ -565,20 +711,20 @@ html, body {
 
   <!-- Critique Section -->
   <div class="critique-section" id="critique-panel">
-    <div class="critique-section-header" id="critique-title">การประเมินสถานะในตำราญัรห์ วัตตะอ์ดีล (Jarh wa al-Ta'dil)</div>
+    <div class="critique-section-header" id="critique-title">การประเมินสถานะในตำราญัรห์ วัตตะอ์ดีล (الجرح والتعديل)</div>
     
     <div id="critique-content-area">
       <div class="critique-grid">
         
         <div class="critique-column">
-          <div class="network-column-title" style="text-align: left; color: #059669; margin-left: 0;">คำรับรองและการยกย่อง (Ta'dil - เชิงบวก)</div>
+          <div class="network-column-title" style="text-align: left; color: #059669; margin-left: 0;">คำรับรองและการยกย่อง (التعديل - เชิงบวก)</div>
           <div class="critique-column" id="ta-dil-col">
             <!-- Dynamic cards -->
           </div>
         </div>
 
         <div class="critique-column">
-          <div class="network-column-title" style="text-align: left; color: #dc2626; margin-left: 0;">ข้อท้วงติงและข้อวิจารณ์ (Jarh - เชิงลบ)</div>
+          <div class="network-column-title" style="text-align: left; color: #dc2626; margin-left: 0;">ข้อท้วงติงและข้อวิจารณ์ (الجرح - เชิงลบ)</div>
           <div class="critique-column" id="jarh-col">
             <!-- Dynamic cards -->
           </div>
@@ -603,6 +749,11 @@ html, body {
       <button class="btn-close-drawer" onclick="closeDrawer()">✕</button>
     </div>
     <div class="drawer-content">
+      <button class="btn-toggle-ar" onclick="toggleArabicReferences(null)">แสดงแหล่งอ้างอิงภาษาอาหรับ / عرض المراجع العربية</button>
+      
+      <!-- Arabic Reference Box -->
+      <div class="ar-ref-box" id="d-ar-ref-box"></div>
+
       <div class="drawer-section">
         <div class="drawer-section-title">ข้อมูลชีวประวัติ</div>
         <div class="drawer-data-item" id="d-bio">ข้อมูล...</div>
@@ -1009,6 +1160,67 @@ const SCHOLAR_DB = [
   }
 ];
 
+/* ─── Arabic Reference & Formatting Helpers ─── */
+function toArabicNumerals(str) {
+  if (!str) return '';
+  const map = {
+    '0': '٠', '1': '١', '2': '٢', '3': '٣', '4': '٤',
+    '5': '٥', '6': '٦', '7': '٧', '8': '٨', '9': '٩'
+  };
+  return str.toString().replace(/[0-9]/g, w => map[w]);
+}
+
+function formatDeathAr(deathStr) {
+  if (!deathStr) return '';
+  const numMatch = deathStr.match(/\d+/);
+  if (numMatch) {
+    const num = numMatch[0];
+    return toArabicNumerals(`ت ${num} هـ`);
+  }
+  return toArabicNumerals(deathStr);
+}
+
+// Arabic Critic Name Map
+const CRITIC_AR = {
+  "คัมภีร์อัลกุรอาน": "القرآن الكريم",
+  "ท่านนบีมุหัมมัด ﷺ": "النبي محمد ﷺ",
+  "ปราชญ์สายซุนนีย์": "علماء أهل السنة",
+  "อัซซุฮรีย์": "ابن شهاب الزهري",
+  "อิบนุ หะญัร": "ابن حجر العسقلاني",
+  "ยะห์ยา อิบนุ มะอีน": "يحيى بن معين",
+  "ปราชญ์ร่วมสมัย": "العلماء المعاصرون له",
+  "อะหมัด อิบนุ หันบัล": "أحمد بن حنبل",
+  "อิหม่ามอัชชาฟิอีย์": "الشافعي",
+  "อิหม่ามมาลิก": "مالك بن أنس",
+  "อันนะซาอี": "النسائي",
+  "สุฟยาน อัษเษารีย์": "سفيาน الثوري",
+  "มุสลิม อิบนุ อัลหัจญาจ": "مسلم بن الحجاج",
+  "นักวิชาการซุนนีย์": "علماء السنة",
+  "ยะห์ยา อัลก็อฏฏอน": "يحيى بن سعيد القطان",
+  "ปราชญ์ประวัติศาสตร์": "علماء التاريخ والترجم"
+};
+
+// Global toggle state
+let showArabicRef = false;
+
+function toggleArabicReferences(checkedState) {
+  if (checkedState === null || checkedState === undefined) {
+    showArabicRef = !showArabicRef;
+  } else {
+    showArabicRef = checkedState;
+  }
+  
+  // Sync checkbox UI
+  const cb = document.getElementById('global-ar-toggle');
+  if (cb) cb.checked = showArabicRef;
+  
+  if (showArabicRef) {
+    document.body.classList.add('show-arabic-ref');
+  } else {
+    document.body.classList.remove('show-arabic-ref');
+  }
+}
+
 /* Merge helper nodes into the same access list for quick lookups */
 const SCHOLAR_LOOKUP = {};
 SCHOLAR_DB.forEach(s => {
@@ -1139,7 +1351,7 @@ function renderSidebar() {
       const cleanName = s.nameTh.replace(' เราะหิมะฮ์ลุลลอฮ์', '').replace('เราะฎิยัลลอฮุอันฮุ', '');
       item.innerHTML = `
         <div class="sidebar-item-info">
-          <span class="sidebar-item-name">${cleanName}</span>
+          <span class="sidebar-item-name">${cleanName} <span class="ar-ref-inline" lang="ar" dir="rtl">${s.nameAr}</span></span>
           <span class="sidebar-item-death">${s.death.split(' / ')[0]}</span>
         </div>
         <span class="sidebar-item-badge" style="background: rgba(196, 154, 69, 0.1); color: var(--accent-color);">${s.gen.replace('รุ่นใหญ่','').replace('รุ่นกลาง','').replace('รุ่นเล็ก','')}</span>
@@ -1307,6 +1519,20 @@ function draw() {
   ctx.clearRect(0, 0, width, height);
   const colors = getThemeColors();
   const activeFocus = hoveredNode || selectedNode;
+  const isDark = document.documentElement.classList.contains('dark-mode');
+
+  // Draw premium academic dotted grid backdrop
+  ctx.save();
+  ctx.fillStyle = isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)';
+  const gridSpacing = 30;
+  for (let x = 0; x < width; x += gridSpacing) {
+    for (let y = 0; y < height; y += gridSpacing) {
+      ctx.beginPath();
+      ctx.arc(x, y, 1.2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  ctx.restore();
 
   // 1. Draw Scholastic Transmission Links
   links.forEach(link => {
@@ -1419,17 +1645,17 @@ function draw() {
     ctx.lineWidth = isHighlighted ? 3 : 1.5;
     ctx.stroke();
 
-    // Scholar short Name text (Thai)
+    // Scholar short Name text (Arabic)
     ctx.fillStyle = colors.nodeText;
-    ctx.font = `bold 12px ${varGet('--thai')}`;
+    ctx.font = `bold 16px 'Amiri', serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(node.nameTh, node.x, node.y - 7);
+    ctx.fillText(node.nameAr, node.x, node.y - 6);
 
-    // Demise year text
+    // Demise year text (Arabic numerals)
     ctx.fillStyle = colors.nodeTextSub;
-    ctx.font = `500 10px ${varGet('--ui')}`;
-    ctx.fillText(node.death, node.x, node.y + 11);
+    ctx.font = `bold 11px 'Amiri', serif`;
+    ctx.fillText(formatDeathAr(node.death), node.x, node.y + 13);
 
     ctx.restore();
   });
@@ -1587,8 +1813,8 @@ function handleSearch() {
     return;
   }
 
-  // Highlight in canvas
-  const found = nodes.find(n => n.nameTh.toLowerCase().includes(term));
+  // Highlight in canvas (supports searching both Thai and Arabic names!)
+  const found = nodes.find(n => n.nameTh.toLowerCase().includes(term) || n.nameAr.toLowerCase().includes(term));
   if (found) {
     hoveredNode = found;
   } else {
@@ -1610,9 +1836,15 @@ function loadCritique(id) {
     data.tadil.forEach(item => {
       const card = document.createElement('div');
       card.className = 'critique-card ta-dil-item';
+      
+      const criticNameAr = CRITIC_AR[item.scholar.split(' (')[0]] || item.scholar.split(' (')[0];
+      const scholarClean = item.scholar.split(' (')[0];
+      const scholarMeta = item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : '';
+      
       card.innerHTML = `
-        <div class="critique-meta">${item.scholar.split(' (')[0]} <span>${item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : ''}</span></div>
+        <div class="critique-meta">${scholarClean} <span>${scholarMeta}</span></div>
         <div class="critique-text">“${item.quote}”</div>
+        <div class="ar-ref-box">المصدر: ${criticNameAr}</div>
       `;
       taDilCol.appendChild(card);
     });
@@ -1626,9 +1858,15 @@ function loadCritique(id) {
     data.jarh.forEach(item => {
       const card = document.createElement('div');
       card.className = 'critique-card jarh-item';
+      
+      const criticNameAr = CRITIC_AR[item.scholar.split(' (')[0]] || item.scholar.split(' (')[0];
+      const scholarClean = item.scholar.split(' (')[0];
+      const scholarMeta = item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : '';
+      
       card.innerHTML = `
-        <div class="critique-meta">${item.scholar.split(' (')[0]} <span>${item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : ''}</span></div>
+        <div class="critique-meta">${scholarClean} <span>${scholarMeta}</span></div>
         <div class="critique-text">“${item.quote}”</div>
+        <div class="ar-ref-box">المصدر: ${criticNameAr}</div>
       `;
       jarhCol.appendChild(card);
     });
@@ -1654,6 +1892,9 @@ function openDrawer(id) {
   document.getElementById('d-name-ar').innerText = data.nameAr;
   document.getElementById('d-bio').innerHTML = data.bio;
   document.getElementById('d-death').innerText = data.death;
+
+  // Render Arabic Reference Box
+  document.getElementById('d-ar-ref-box').innerHTML = `<strong>المرجع الموثق:</strong> ${data.nameAr} (${formatDeathAr(data.death)})`;
 
   document.getElementById('drawer-overlay').classList.add('active');
 }
