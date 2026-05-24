@@ -48,6 +48,7 @@
   font-display: block;
 }
 
+/* ─── CSS Variable Overrides for this page ─── */
 :root {
   --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
   --thai: 'Sarabun', system-ui, sans-serif;
@@ -59,39 +60,48 @@ html, body {
   background-color: var(--bg-primary) !important;
 }
 
-/* ─── Layout ─── */
-.it-container { max-width: 1100px; margin: 60px auto 80px; padding: 0 24px; position: relative; }
-
-.it-hero { text-align: center; margin-bottom: 40px; }
-.it-hero h1 { 
-  font-family: var(--serif); 
-  font-size: clamp(32px, 4.5vw, 46px); 
-  font-weight: 400; 
-  text-transform: uppercase; 
-  letter-spacing: 0.12em; 
-  color: var(--text-primary); 
-  margin-bottom: 18px; 
-  transition: var(--theme-transition); 
-}
-.it-hero p { 
-  font-family: var(--thai); 
-  font-size: 15px; 
-  color: var(--text-secondary); 
-  line-height: 2.0; 
-  max-width: 800px; 
-  margin: 0 auto; 
-  text-align: center; 
-  word-break: break-word; 
-  transition: var(--theme-transition); 
+/* ─── Page Container ─── */
+.it-container {
+  max-width: 1200px;
+  margin: 60px auto 80px;
+  padding: 0 24px;
+  position: relative;
 }
 
-/* ─── Instruction / Legend Panel ─── */
+/* ─── Hero ─── */
+.it-hero {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.it-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 4.5vw, 46px);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  transition: var(--theme-transition);
+}
+.it-hero p {
+  font-family: var(--thai);
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 2.0;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: left;
+  word-break: break-word;
+  transition: var(--theme-transition);
+}
+
+/* ─── Legend / Instructions Bar ─── */
 .network-instructions {
   background: var(--bg-secondary);
   border: 1px solid var(--border-primary);
   border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 30px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,53 +112,237 @@ html, body {
 }
 .inst-left h3 {
   font-family: var(--thai);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text-primary);
-  margin: 0 0 6px 0;
+  margin: 0 0 5px;
   text-align: left;
 }
 .inst-left p {
   font-family: var(--thai);
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-secondary);
   margin: 0;
   text-align: left;
-  line-height: 1.6;
+  line-height: 1.7;
+  word-break: break-word;
+}
+.legend-and-reset {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .legend-grid {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   flex-wrap: wrap;
+  align-items: center;
 }
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   font-family: var(--thai);
   font-size: 12px;
   color: var(--text-secondary);
 }
 .legend-color {
-  width: 24px;
+  width: 22px;
   height: 3px;
   border-radius: 2px;
+  flex-shrink: 0;
 }
 .color-trans { background: var(--accent-color); }
-.color-family { background: #e11d48; border-bottom: 2px dashed #e11d48; height: 1px; }
+.color-family { background: #e11d48; }
 
-/* ─── Network Canvas Container ─── */
-.canvas-wrapper {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  background: var(--bg-secondary);
+.btn-reset {
+  font-family: var(--ui);
+  font-size: 12px;
+  font-weight: 400;
+  padding: 7px 16px;
+  border-radius: 7px;
+  border: 1px solid var(--border-secondary);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btn-reset:hover {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+}
+
+/* ─── Two-column workspace ─── */
+.it-workspace {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  height: 620px;
   border: 1px solid var(--border-primary);
   border-radius: 14px;
   overflow: hidden;
-  margin-bottom: 40px;
   box-shadow: 0 8px 32px var(--shadow-color);
+  margin-bottom: 32px;
   transition: var(--theme-transition);
+}
+
+/* ─── Left Narrator Panel ─── */
+.narrator-panel {
+  width: 280px;
+  height: 620px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-primary);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: var(--theme-transition);
+  flex-shrink: 0;
+}
+.narrator-panel-header {
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid var(--border-primary);
+  flex-shrink: 0;
+}
+.narrator-panel-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.narrator-panel-title h2 {
+  font-family: var(--thai);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+.narrator-count-badge {
+  font-family: var(--ui);
+  font-size: 10px;
+  font-weight: 400;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--accent-color);
+  color: #fff;
+  white-space: nowrap;
+}
+.narrator-search {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 7px;
+  border: 1px solid var(--border-secondary);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--thai);
+  font-size: 12px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+.narrator-search:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(179, 27, 27, 0.12);
+}
+.dark-mode .narrator-search:focus {
+  box-shadow: 0 0 0 2px rgba(196, 154, 69, 0.15);
+}
+.narrator-list-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+.narrator-list-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.narrator-list-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.narrator-list-scroll::-webkit-scrollbar-thumb {
+  background: var(--border-secondary);
+  border-radius: 2px;
+}
+
+/* Era group header */
+.narrator-era-group {
+  margin-bottom: 2px;
+}
+.narrator-era-label {
+  font-family: var(--thai);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 8px 16px 4px;
+  display: block;
+}
+
+/* Narrator list item */
+.narrator-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: all 0.15s;
+  position: relative;
+}
+.narrator-item:hover {
+  background: var(--bg-tertiary);
+}
+.narrator-item.is-selected {
+  background: var(--bg-tertiary);
+  border-left-color: var(--accent-color);
+}
+.narrator-item-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.narrator-item-info {
+  flex: 1;
+  min-width: 0;
+}
+.narrator-item-name {
+  font-family: var(--thai);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.narrator-item-meta {
+  font-family: var(--ui);
+  font-size: 10px;
+  color: var(--text-tertiary);
+  margin-top: 1px;
+  line-height: 1.4;
+}
+.narrator-item-gen {
+  font-family: var(--thai);
+  font-size: 10px;
+  color: var(--text-tertiary);
+  margin-top: 1px;
+  line-height: 1.4;
+}
+
+/* hidden by search */
+.narrator-item.hidden { display: none; }
+.narrator-era-group.all-hidden .narrator-era-label { display: none; }
+
+/* ─── Canvas Panel ─── */
+.canvas-panel {
+  flex: 1;
+  position: relative;
+  background: var(--bg-primary);
+  overflow: hidden;
 }
 #spiderweb-canvas {
   width: 100%;
@@ -160,71 +354,119 @@ html, body {
   cursor: grabbing;
 }
 
-/* ─── Search / Filter Controls ─── */
-.search-controls {
+/* Depth selector (absolute, top-right of canvas panel) */
+.depth-selector {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
+  top: 14px;
+  right: 14px;
   display: flex;
-  gap: 10px;
-  max-width: calc(100% - 40px);
+  gap: 4px;
+  z-index: 10;
 }
-.search-input {
-  padding: 10px 16px;
-  border-radius: 8px;
+.depth-btn {
+  font-family: var(--ui);
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 6px;
   border: 1px solid var(--border-secondary);
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: var(--thai);
-  font-size: 13px;
-  outline: none;
-  min-width: 220px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: all 0.3s;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
 }
-.search-input:focus {
+.depth-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+.depth-btn.active {
+  background: var(--accent-color);
+  color: #fff;
   border-color: var(--accent-color);
-  box-shadow: 0 4px 16px rgba(196, 154, 69, 0.15);
 }
 
 /* ─── Critique Panel ─── */
 .critique-section {
-  margin-bottom: 60px;
+  margin-bottom: 56px;
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
 }
 .critique-section.active {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
+}
+.critique-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-secondary);
+  padding-bottom: 12px;
 }
 .critique-section-header {
   font-family: var(--thai);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 24px;
   text-align: left;
-  border-bottom: 1px solid var(--border-secondary);
-  padding-bottom: 12px;
+  line-height: 1.6;
+  word-break: break-word;
   transition: var(--theme-transition);
+}
+.btn-close-critique {
+  background: transparent;
+  border: 1px solid var(--border-secondary);
+  border-radius: 6px;
+  font-family: var(--ui);
+  font-size: 14px;
+  padding: 4px 10px;
+  cursor: pointer;
+  color: var(--text-tertiary);
+  transition: all 0.2s;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.btn-close-critique:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
 }
 .critique-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 28px;
 }
 .critique-column {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
+}
+.col-head-pos {
+  font-family: var(--thai);
+  font-size: 13px;
+  font-weight: 700;
+  color: #059669;
+  margin-bottom: 4px;
+  text-align: left;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(5, 150, 105, 0.15);
+}
+.col-head-neg {
+  font-family: var(--thai);
+  font-size: 13px;
+  font-weight: 700;
+  color: #dc2626;
+  margin-bottom: 4px;
+  text-align: left;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(220, 38, 38, 0.15);
 }
 .critique-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border-primary);
   border-radius: 10px;
-  padding: 20px 24px;
+  padding: 18px 22px;
   text-align: left;
   transition: var(--theme-transition);
   box-shadow: 0 2px 8px var(--shadow-color);
@@ -235,165 +477,271 @@ html, body {
 .critique-card.jarh-item {
   border-left: 3px solid #dc2626;
 }
-
 .critique-meta {
   font-family: var(--thai);
   font-size: 13px;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
-.critique-meta span {
+.critique-meta-year {
   font-family: var(--ui);
-  font-weight: 500;
+  font-size: 11px;
+  font-weight: 400;
   color: var(--text-secondary);
-  margin-left: 6px;
+  margin-left: 5px;
 }
 .critique-text {
   font-family: var(--thai);
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 1.9;
   color: var(--text-secondary);
   word-break: break-word;
 }
-
 .empty-critique-notice {
   font-family: var(--thai);
-  font-size: 15px;
+  font-size: 13px;
   color: var(--text-tertiary);
-  padding: 40px;
+  padding: 28px 20px;
   text-align: center;
   border: 1px dashed var(--border-secondary);
   border-radius: 10px;
   background: var(--bg-secondary);
+  line-height: 1.8;
 }
 
-/* ─── Detail Drawer ─── */
+/* ─── Biog Drawer Overlay ─── */
 .it-drawer-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.38);
   backdrop-filter: blur(4px);
   z-index: 10000;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .it-drawer-overlay.active {
   opacity: 1;
   visibility: visible;
 }
-
 .it-drawer {
   position: fixed;
   top: 0;
-  right: -450px;
+  right: -480px;
   width: 100%;
-  max-width: 450px;
+  max-width: 460px;
   height: 100%;
   background: var(--bg-primary);
   border-left: 1px solid var(--border-secondary);
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+  box-shadow: -12px 0 48px rgba(0, 0, 0, 0.18);
   z-index: 10001;
   display: flex;
   flex-direction: column;
-  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .it-drawer-overlay.active .it-drawer {
   right: 0;
 }
-
 .drawer-header {
-  padding: 28px;
+  padding: 26px 28px;
   border-bottom: 1px solid var(--border-secondary);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-shrink: 0;
 }
 .drawer-header-info {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   text-align: left;
+  min-width: 0;
+  flex: 1;
+  margin-right: 12px;
 }
 .drawer-gen {
   font-family: var(--thai);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--accent-color);
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.08em;
 }
 .drawer-name-th {
   font-family: var(--thai);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--text-primary);
+  line-height: 1.4;
+  word-break: break-word;
 }
 .drawer-name-ar {
   font-family: var(--arabic);
-  font-size: 28px;
+  font-size: 26px;
   color: var(--text-primary);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 .btn-close-drawer {
   background: transparent;
   border: none;
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
   color: var(--text-secondary);
   padding: 4px;
   transition: color 0.2s;
   line-height: 1;
+  flex-shrink: 0;
 }
 .btn-close-drawer:hover {
   color: var(--accent-color);
 }
-
 .drawer-content {
-  padding: 28px;
+  padding: 24px 28px;
   overflow-y: auto;
   flex: 1;
   text-align: left;
 }
-
 .drawer-section {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 .drawer-section-title {
   font-family: var(--thai);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--text-tertiary);
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 10px;
+  letter-spacing: 0.08em;
+  margin-bottom: 9px;
   border-bottom: 1px solid var(--border-secondary);
-  padding-bottom: 6px;
+  padding-bottom: 5px;
 }
 .drawer-data-item {
   font-family: var(--thai);
   font-size: 14px;
   color: var(--text-primary);
-  line-height: 1.8;
+  line-height: 2.0;
   word-break: break-word;
+  text-align: left;
+}
+.drawer-data-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.drawer-data-item ul li {
+  font-family: var(--thai);
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 3px 0;
+  border-bottom: 1px solid var(--border-primary);
+  line-height: 1.7;
+  word-break: break-word;
+}
+.drawer-data-item ul li:last-child {
+  border-bottom: none;
+}
+.drawer-ijazah-notice {
+  font-family: var(--thai);
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 10px 0;
+}
+.drawer-empty-note {
+  font-family: var(--thai);
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+.drawer-family-relation {
+  font-family: var(--ui);
+  font-size: 11px;
+  color: var(--accent-color);
+  margin-left: 4px;
 }
 
 /* ─── Responsive ─── */
 @media (max-width: 900px) {
   .critique-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .canvas-wrapper {
-    height: 500px;
+    gap: 20px;
   }
 }
+
+@media (max-width: 768px) {
+  .it-workspace {
+    grid-template-columns: 1fr;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .narrator-panel {
+    width: 100%;
+    height: 180px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-primary);
+  }
+  .narrator-list-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    padding: 4px 8px;
+  }
+  .narrator-era-group {
+    display: contents;
+  }
+  .narrator-era-label {
+    display: none;
+  }
+  .narrator-item {
+    flex-direction: column;
+    align-items: center;
+    min-width: 90px;
+    max-width: 100px;
+    padding: 8px 6px;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+    gap: 4px;
+  }
+  .narrator-item.is-selected {
+    border-left-color: transparent;
+    border-bottom-color: var(--accent-color);
+  }
+  .narrator-item-dot {
+    margin-top: 0;
+  }
+  .narrator-item-name {
+    font-size: 10px;
+    text-align: center;
+  }
+  .narrator-item-meta,
+  .narrator-item-gen {
+    font-size: 9px;
+    text-align: center;
+  }
+  .canvas-panel {
+    height: 480px;
+  }
+  #spiderweb-canvas {
+    height: 480px;
+  }
+}
+
 @media (max-width: 480px) {
-  .it-drawer { max-width: 100%; right: -100%; }
+  .it-drawer {
+    max-width: 100%;
+    right: -100%;
+  }
+  .network-instructions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 </style>
 </head>
@@ -404,58 +752,86 @@ html, body {
 <main>
 <div class="it-container">
 
+  <!-- Hero -->
   <div class="it-hero">
     <h1>ISNĀD TRACER</h1>
-    <p>สืบค้นสายรายงานและสำรวจความเชื่อมโยงทางเครือญาติและการศึกษาของเหล่านักปราชญ์ผู้รายงานหะดีษผ่านแผนผังใยแมงมุม (Interactive Spiderweb Network Map) คลิกและลากเพื่อสำรวจความเชื่อมโยงตลอดชีวิต</p>
+    <p>สืบค้นสายรายงานและสำรวจความเชื่อมโยงทางเครือญาติและการศึกษาของเหล่านักปราชญ์ผู้รายงานหะดีษผ่านแผนผังใยแมงมุม (Interactive Spiderweb Network Map) คลิกโหนดปราชญ์เพื่อวิเคราะห์ความเชื่อมโยงและแสดงผลคำวิจารณ์ญัรห์ วัตตะอ์ดีล ดับเบิลคลิกเพื่อเปิดชีวประวัติฉบับเต็ม</p>
   </div>
 
-  <!-- Instruction Panel -->
+  <!-- Legend Bar -->
   <div class="network-instructions">
     <div class="inst-left">
       <h3>วิธีใช้งานแผนผังใยแมงมุม</h3>
-      <p>คลิกซ้ายและลากเพื่อเลื่อนย้ายโหนดปราชญ์เพื่อจัดรูปทรง | คลิกที่โหนดเพื่อวิเคราะห์ความเชื่อมโยงรอบตัวและแสดงผลคำวิจารณ์ ญัรห์ วัตตะอ์ดีล ด้านล่าง</p>
+      <p>คลิกและลากโหนดเพื่อจัดรูปทรง | คลิกที่โหนดหรือชื่อในแผงซ้ายเพื่อวิเคราะห์ | ดับเบิลคลิกเพื่อเปิดชีวประวัติ | ปุ่ม 1× 2× 3× ควบคุมความลึกของการแสดงผลเครือข่าย</p>
     </div>
-    <div class="legend-grid">
-      <div class="legend-item">
-        <span class="legend-color color-trans"></span>
-        <span>การส่งผ่านความรู้ (ครู $\rightarrow$ ศิษย์)</span>
+    <div class="legend-and-reset">
+      <div class="legend-grid">
+        <div class="legend-item">
+          <span class="legend-color color-trans"></span>
+          <span>การส่งผ่านความรู้ (ครู → ศิษย์)</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color color-family"></span>
+          <span>ความสัมพันธ์เชิงเครือญาติ (สายเลือด)</span>
+        </div>
       </div>
-      <div class="legend-item">
-        <span class="legend-color color-family"></span>
-        <span>ความสัมพันธ์เชิงเครือญาติ (สายเลือด)</span>
-      </div>
+      <button class="btn-reset" id="btn-reset-layout" onclick="resetLayout()">↺ รีเซ็ตผังใหม่</button>
     </div>
   </div>
 
-  <!-- Canvas Visualizer Container -->
-  <div class="canvas-wrapper">
-    <div class="search-controls">
-      <input type="text" class="search-input" id="search-box" placeholder="ค้นหาชื่อนักรายงาน..." oninput="handleSearch()">
-    </div>
-    <canvas id="spiderweb-canvas"></canvas>
-  </div>
+  <!-- Two-column workspace -->
+  <div class="it-workspace" id="it-workspace">
 
-  <!-- Critique Section -->
+    <!-- Left: Narrator Panel -->
+    <div class="narrator-panel" id="narrator-panel">
+      <div class="narrator-panel-header">
+        <div class="narrator-panel-title">
+          <h2>เครือข่ายผู้รายงาน</h2>
+          <span class="narrator-count-badge">21 ท่าน</span>
+        </div>
+        <input
+          type="text"
+          class="narrator-search"
+          id="narrator-search-input"
+          placeholder="ค้นหาชื่อนักรายงาน…"
+          oninput="handleNarratorSearch()"
+          autocomplete="off"
+        >
+      </div>
+      <div class="narrator-list-scroll" id="narrator-list-scroll">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- Right: Canvas Panel -->
+    <div class="canvas-panel" id="canvas-panel">
+      <!-- Depth selector -->
+      <div class="depth-selector" id="depth-selector">
+        <button class="depth-btn" id="depth-btn-1" onclick="setDepth(1)">1×</button>
+        <button class="depth-btn active" id="depth-btn-2" onclick="setDepth(2)">2×</button>
+        <button class="depth-btn" id="depth-btn-3" onclick="setDepth(3)">3×</button>
+      </div>
+      <canvas id="spiderweb-canvas"></canvas>
+    </div>
+
+  </div><!-- /.it-workspace -->
+
+  <!-- Critique Panel (slides up on node select) -->
   <div class="critique-section" id="critique-panel">
-    <div class="critique-section-header" id="critique-title">การประเมินสถานะในตำราญัรห์ วัตตะอ์ดีล (Jarh wa al-Ta'dil)</div>
-    
+    <div class="critique-header-bar">
+      <div class="critique-section-header" id="critique-title">การประเมินสถานะในตำราญัรห์ วัตตะอ์ดีล (Jarh wa al-Ta'dil)</div>
+      <button class="btn-close-critique" onclick="hideCritique()" aria-label="ปิดแผงการประเมิน">✕ ปิด</button>
+    </div>
     <div id="critique-content-area">
       <div class="critique-grid">
-        
-        <div class="critique-column">
-          <div class="network-column-title" style="text-align: left; color: #059669; margin-left: 0;">คำรับรองและการยกย่อง (Ta'dil - เชิงบวก)</div>
-          <div class="critique-column" id="ta-dil-col">
-            <!-- Dynamic cards -->
-          </div>
+        <div class="critique-column" id="ta-dil-outer">
+          <div class="col-head-pos">คำรับรองและการยกย่อง (Ta'dil — เชิงบวก)</div>
+          <div id="ta-dil-col"><!-- dynamic --></div>
         </div>
-
-        <div class="critique-column">
-          <div class="network-column-title" style="text-align: left; color: #dc2626; margin-left: 0;">ข้อท้วงติงและข้อวิจารณ์ (Jarh - เชิงลบ)</div>
-          <div class="critique-column" id="jarh-col">
-            <!-- Dynamic cards -->
-          </div>
+        <div class="critique-column" id="jarh-outer">
+          <div class="col-head-neg">ข้อท้วงติงและข้อวิจารณ์ (Jarh — เชิงลบ)</div>
+          <div id="jarh-col"><!-- dynamic --></div>
         </div>
-
       </div>
     </div>
   </div>
@@ -463,7 +839,7 @@ html, body {
 </div>
 </main>
 
-<!-- Drawer Modal Component -->
+<!-- Biog Drawer Modal -->
 <div class="it-drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
   <div class="it-drawer" id="drawer-panel" onclick="event.stopPropagation()">
     <div class="drawer-header">
@@ -472,16 +848,38 @@ html, body {
         <span class="drawer-name-th" id="d-name-th">ชื่อผู้รายงาน</span>
         <span class="drawer-name-ar" id="d-name-ar" lang="ar" dir="rtl">الاسم</span>
       </div>
-      <button class="btn-close-drawer" onclick="closeDrawer()">✕</button>
+      <button class="btn-close-drawer" onclick="closeDrawer()" aria-label="ปิด">✕</button>
     </div>
     <div class="drawer-content">
       <div class="drawer-section">
-        <div class="drawer-section-title">ข้อมูลชีวประวัติ</div>
-        <div class="drawer-data-item" id="d-bio">ข้อมูล...</div>
+        <div class="drawer-section-title">ยุคสมัย</div>
+        <div class="drawer-data-item" id="d-gen-full"></div>
       </div>
       <div class="drawer-section">
         <div class="drawer-section-title">ปีที่เสียชีวิต</div>
-        <div class="drawer-data-item" id="d-death">ฮ.ศ. - / ค.ศ. -</div>
+        <div class="drawer-data-item" id="d-death"></div>
+      </div>
+      <div class="drawer-section">
+        <div class="drawer-section-title">ชีวประวัติ</div>
+        <div class="drawer-data-item" id="d-bio"></div>
+      </div>
+      <div class="drawer-section" id="d-teachers-section">
+        <div class="drawer-section-title">อาจารย์ (ชัยค์)</div>
+        <div class="drawer-data-item" id="d-teachers"></div>
+      </div>
+      <div class="drawer-section" id="d-students-section">
+        <div class="drawer-section-title">ลูกศิษย์</div>
+        <div class="drawer-data-item" id="d-students"></div>
+      </div>
+      <div class="drawer-section" id="d-family-section">
+        <div class="drawer-section-title">ความสัมพันธ์เชิงเครือญาติ</div>
+        <div class="drawer-data-item" id="d-family"></div>
+      </div>
+      <div class="drawer-section">
+        <div class="drawer-section-title">อิญาซะฮ์</div>
+        <div class="drawer-data-item">
+          <span class="drawer-ijazah-notice">ข้อมูลอิญาซะฮ์ยังอยู่ระหว่างการเพิ่มเติม</span>
+        </div>
       </div>
     </div>
   </div>
@@ -490,7 +888,9 @@ html, body {
 <div id="footer-placeholder"></div>
 <script src="../../main.js"></script>
 <script>
-/* ─── 21 Scholars Database ─── */
+/* ══════════════════════════════════════════════════════════════════
+   21 Scholars Database — DO NOT ALTER SCHOLARSHIP DATA
+   ══════════════════════════════════════════════════════════════════ */
 const SCHOLAR_DB = [
   {
     id: "prophet",
@@ -881,28 +1281,74 @@ const SCHOLAR_DB = [
   }
 ];
 
-/* Merge helper nodes into the same access list for quick lookups */
+/* ══════════════════════════════════════════════════════════════════
+   Lookup map
+   ══════════════════════════════════════════════════════════════════ */
 const SCHOLAR_LOOKUP = {};
-SCHOLAR_DB.forEach(s => {
-  SCHOLAR_LOOKUP[s.id] = s;
-});
+SCHOLAR_DB.forEach(s => { SCHOLAR_LOOKUP[s.id] = s; });
 
-/* ─── Physics Simulation Engine ─── */
+/* ══════════════════════════════════════════════════════════════════
+   Generation border colors
+   ══════════════════════════════════════════════════════════════════ */
+const GEN_BORDER_COLORS = {
+  "บรมศาสดา":              "#d4af37",
+  "เศาะหาบะฮ์":            "#2563eb",
+  "เศาะหาบะฮ์รุ่นเยาว์":  "#3b82f6",
+  "ตาบิอีนรุ่นใหญ่":       "#10b981",
+  "ตาบิอีนรุ่นกลาง":       "#059669",
+  "ตาบิอีนรุ่นเล็ก":       "#047857",
+  "ตาบิอิตตาบิอีน":        "#8b5cf6",
+  "ตาบิอิตตาบิอีนรุ่นใหญ่":"#7c3aed",
+  "อัครปราชญ์ฟิกฮ์":       "#c49a45",
+  "ประมุขวิชาหะดีษ":       "#f59e0b",
+  "กอฎีอียิปต์":           "#14b8a6",
+  "มหาปราชญ์":             "#ec4899",
+  "ศิษย์เอกมาลิก":         "#10b981",
+  "ปราชญ์อาวุโส":          "#f97316",
+  "เสาหลักฮิญาซ":          "#06b6d4",
+  "เสาหลักนิติศาสตร์":     "#3b82f6",
+  "เสาหลักซุนนะฮ์":        "#b91c1c",
+  "อัครปราชญ์หะดีษ":       "#c49a45",
+  "ผู้สืบทอดตำรา":         "#6b7280"
+};
+
+/* Era groupings for the narrator panel */
+const ERA_GROUPS = [
+  {
+    label: "ยุคเศาะหาบะฮ์",
+    gens: ["บรมศาสดา", "เศาะหาบะฮ์", "เศาะหาบะฮ์รุ่นเยาว์"]
+  },
+  {
+    label: "ยุคตาบิอีน",
+    gens: ["ตาบิอีนรุ่นใหญ่", "ตาบิอีนรุ่นกลาง", "ตาบิอีนรุ่นเล็ก", "กอฎีอียิปต์"]
+  },
+  {
+    label: "ยุคตาบิอิตตาบิอีน",
+    gens: ["ตาบิอิตตาบิอีน", "ตาบิอิตตาบิอีนรุ่นใหญ่", "ศิษย์เอกมาลิก", "ผู้สืบทอดตำรา"]
+  },
+  {
+    label: "อัครปราชญ์",
+    gens: []  // will catch all remaining
+  }
+];
+
+/* ══════════════════════════════════════════════════════════════════
+   Physics simulation state
+   ══════════════════════════════════════════════════════════════════ */
 const canvas = document.getElementById('spiderweb-canvas');
 const ctx = canvas.getContext('2d');
+const canvasPanel = document.getElementById('canvas-panel');
 
-let width = canvas.offsetWidth || 1000;
-let height = canvas.offsetHeight || 600;
-canvas.width = width;
-canvas.height = height;
+let width = 800;
+let height = 620;
 
-// Simulation variables
 const nodes = [];
 const links = [];
 const familyLinks = [];
 let selectedNode = null;
 let hoveredNode = null;
 let draggedNode = null;
+let currentDepth = 2;
 
 const gravity = 0.035;
 const friction = 0.86;
@@ -910,47 +1356,200 @@ const repulsionDist = 240;
 const targetLinkLength = 170;
 const attractionForce = 0.06;
 
-// Generation parameters
-const GEN_BORDER_COLORS = {
-  "บรมศาสดา": "#d4af37",      // Rich Gold
-  "เศาะหาบะฮ์": "#2563eb",      // Blue
-  "เศาะหาบะฮ์รุ่นเยาว์": "#3b82f6", // Light Blue
-  "ตาบิอีนรุ่นใหญ่": "#10b981",    // Green
-  "ตาบิอีนรุ่นกลาง": "#059669",    // Dark Green
-  "ตาบิอีนรุ่นเล็ก": "#047857",    // Deep Emerald
-  "ตาบิอิตตาบิอีน": "#8b5cf6",    // Purple
-  "ตาบิอิตตาบิอีนรุ่นใหญ่": "#7c3aed", // Deep Purple
-  "อัครปราชญ์ฟิกฮ์": "#c49a45",   // IFP Gold
-  "ประมุขวิชาหะดีษ": "#f59e0b",   // Amber
-  "กอฎีอียิปต์": "#14b8a6",       // Teal
-  "มหาปราชญ์": "#ec4899",        // Pink
-  "ศิษย์เอกมาลิก": "#10b981",      // Green
-  "ปราชญ์อาวุโส": "#f97316",      // Orange
-  "เสาหลักฮิญาซ": "#06b6d4",      // Cyan
-  "เสาหลักนิติศาสตร์": "#3b82f6",  // Blue
-  "เสาหลักซุนนะฮ์": "#b91c1c",    // Red
-  "อัครปราชญ์หะดีษ": "#c49a45",   // Gold
-  "ผู้สืบทอดตำรา": "#6b7280"      // Gray
-};
+/* ══════════════════════════════════════════════════════════════════
+   Short name helper — strip honorifics, take first 9 chars
+   ══════════════════════════════════════════════════════════════════ */
+function shortName(nameTh) {
+  let n = nameTh
+    .replace(/เราะหิมะฮุลลอฮ์/g, '')
+    .replace(/เราะหิมะฮ์ลุลลอฮ์/g, '')
+    .replace(/เราะฎิยัลลอฮุอันฮุ/g, '')
+    .replace(/ﷺ/g, '')
+    .replace(/ท่านนบี/g, 'นบี')
+    .replace(/อิหม่าม/g, '')
+    .replace(/ท่าน/g, '')
+    .trim();
+  if (n.length > 9) {
+    n = n.substring(0, 9) + '…';
+  }
+  return n;
+}
 
-/* Initialize Physics Nodes & Links */
+/* ══════════════════════════════════════════════════════════════════
+   Death year compact helper
+   ══════════════════════════════════════════════════════════════════ */
+function deathCompact(death) {
+  // "เสียชีวิตปี ฮ.ศ. 256 / ค.ศ. 870" -> "ฮ.ศ. 256"
+  const m = death.match(/ฮ\.ศ\.\s*(\d+)/);
+  return m ? 'ฮ.ศ. ' + m[1] : death.split(' / ')[0].replace('เสียชีวิตปี ', '');
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Multi-hop BFS connection map
+   ══════════════════════════════════════════════════════════════════ */
+function getConnectionMap(nodeId, maxDepth) {
+  const map = new Map([[nodeId, 0]]);
+  const queue = [{ id: nodeId, depth: 0 }];
+  while (queue.length > 0) {
+    const { id, depth } = queue.shift();
+    if (depth >= maxDepth) continue;
+    const s = SCHOLAR_LOOKUP[id];
+    if (!s) continue;
+    const neighbors = [
+      ...s.teachers,
+      ...s.students,
+      ...s.family.map(f => f.id)
+    ];
+    neighbors.forEach(nid => {
+      if (!map.has(nid)) {
+        map.set(nid, depth + 1);
+        queue.push({ id: nid, depth: depth + 1 });
+      }
+    });
+  }
+  return map;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Narrator panel population
+   ══════════════════════════════════════════════════════════════════ */
+function buildNarratorPanel() {
+  const scroll = document.getElementById('narrator-list-scroll');
+  scroll.innerHTML = '';
+
+  const knownGens = new Set();
+  ERA_GROUPS.slice(0, 3).forEach(eg => eg.gens.forEach(g => knownGens.add(g)));
+
+  ERA_GROUPS.forEach((era, eraIdx) => {
+    let scholars;
+    if (eraIdx < 3) {
+      scholars = SCHOLAR_DB.filter(s => era.gens.includes(s.gen));
+    } else {
+      // "อัครปราชญ์" — everything not in the prior 3 era groups
+      scholars = SCHOLAR_DB.filter(s => !knownGens.has(s.gen));
+    }
+    if (scholars.length === 0) return;
+
+    const group = document.createElement('div');
+    group.className = 'narrator-era-group';
+    group.dataset.era = era.label;
+
+    const label = document.createElement('span');
+    label.className = 'narrator-era-label';
+    label.textContent = era.label;
+    group.appendChild(label);
+
+    scholars.forEach(s => {
+      const item = document.createElement('div');
+      item.className = 'narrator-item';
+      item.dataset.id = s.id;
+      item.dataset.nameTh = s.nameTh.toLowerCase();
+
+      const borderColor = GEN_BORDER_COLORS[s.gen] || '#888';
+      const dot = document.createElement('span');
+      dot.className = 'narrator-item-dot';
+      dot.style.background = borderColor;
+
+      const info = document.createElement('div');
+      info.className = 'narrator-item-info';
+
+      const nameEl = document.createElement('div');
+      nameEl.className = 'narrator-item-name';
+      nameEl.textContent = s.nameTh;
+
+      const metaEl = document.createElement('div');
+      metaEl.className = 'narrator-item-meta';
+      metaEl.textContent = deathCompact(s.death);
+
+      const genEl = document.createElement('div');
+      genEl.className = 'narrator-item-gen';
+      genEl.textContent = s.gen;
+
+      info.appendChild(nameEl);
+      info.appendChild(metaEl);
+      info.appendChild(genEl);
+      item.appendChild(dot);
+      item.appendChild(info);
+
+      item.addEventListener('click', () => {
+        selectScholarById(s.id);
+      });
+
+      group.appendChild(item);
+    });
+
+    scroll.appendChild(group);
+  });
+}
+
+function selectScholarById(id) {
+  // Find and select in the canvas
+  const node = nodes.find(n => n.id === id);
+  if (node) {
+    selectedNode = node;
+    loadCritique(id);
+    // Scroll narrative item
+    setNarratorSelected(id);
+  }
+}
+
+function setNarratorSelected(id) {
+  document.querySelectorAll('.narrator-item').forEach(el => {
+    el.classList.toggle('is-selected', el.dataset.id === id);
+  });
+  // Scroll selected item into view
+  const sel = document.querySelector(`.narrator-item[data-id="${id}"]`);
+  if (sel) {
+    sel.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  // Update era-group hidden state for search
+  updateEraGroupVisibility();
+}
+
+function handleNarratorSearch() {
+  const term = document.getElementById('narrator-search-input').value.trim().toLowerCase();
+  document.querySelectorAll('.narrator-item').forEach(el => {
+    if (!term || el.dataset.nameTh.includes(term)) {
+      el.classList.remove('hidden');
+    } else {
+      el.classList.add('hidden');
+    }
+  });
+  // Also highlight on canvas
+  if (term) {
+    const found = nodes.find(n => n.nameTh.toLowerCase().includes(term));
+    hoveredNode = found || null;
+  } else {
+    hoveredNode = null;
+  }
+  updateEraGroupVisibility();
+}
+
+function updateEraGroupVisibility() {
+  document.querySelectorAll('.narrator-era-group').forEach(group => {
+    const visibleItems = group.querySelectorAll('.narrator-item:not(.hidden)');
+    group.classList.toggle('all-hidden', visibleItems.length === 0);
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Physics simulation initialisation
+   ══════════════════════════════════════════════════════════════════ */
 function initSimulation() {
-  // Clear lists
   nodes.length = 0;
   links.length = 0;
   familyLinks.length = 0;
 
-  // Create Node objects
   SCHOLAR_DB.forEach((s, idx) => {
     const angle = (idx / SCHOLAR_DB.length) * Math.PI * 2;
     const radius = 220 + Math.random() * 60;
     nodes.push({
       id: s.id,
-      nameTh: s.nameTh.replace(' เราะหิมะฮ์ลุลลอฮ์', '').replace('เราะฎิยัลลอฮุอันฮุ', ''),
+      nameTh: s.nameTh,
       nameAr: s.nameAr,
       gen: s.gen,
-      death: s.death.split(' / ')[0].replace('เสียชีวิตปี ', ''),
-      radius: 46,
+      death: deathCompact(s.death),
+      radius: 44,
       mass: 1.0,
       x: width / 2 + Math.cos(angle) * radius,
       y: height / 2 + Math.sin(angle) * radius,
@@ -961,7 +1560,6 @@ function initSimulation() {
     });
   });
 
-  // Create Links based on Teachers/Students & Family relations
   SCHOLAR_DB.forEach(s => {
     s.students.forEach(studId => {
       links.push({ source: s.id, target: studId });
@@ -972,17 +1570,17 @@ function initSimulation() {
   });
 }
 
-/* Tick Physics Loop */
+/* ══════════════════════════════════════════════════════════════════
+   Tick physics loop (preserved engine)
+   ══════════════════════════════════════════════════════════════════ */
 function tick() {
   const center = { x: width / 2, y: height / 2 };
 
-  // 1. Reset forces & apply center gravity
   nodes.forEach(node => {
     node.fx = (center.x - node.x) * gravity;
     node.fy = (center.y - node.y) * gravity;
   });
 
-  // 2. Repulsion between all nodes
   for (let i = 0; i < nodes.length; i++) {
     const nodeA = nodes[i];
     for (let j = i + 1; j < nodes.length; j++) {
@@ -990,7 +1588,6 @@ function tick() {
       const dx = nodeB.x - nodeA.x;
       const dy = nodeB.y - nodeA.y;
       const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
-      
       if (dist < repulsionDist) {
         const force = (repulsionDist - dist) * 0.18;
         const fx = (dx / dist) * force;
@@ -1003,45 +1600,38 @@ function tick() {
     }
   }
 
-  // 3. Attraction forces along Scholastic Links
   links.forEach(link => {
     const nodeA = nodes.find(n => n.id === link.source);
     const nodeB = nodes.find(n => n.id === link.target);
     if (!nodeA || !nodeB) return;
-
     const dx = nodeB.x - nodeA.x;
     const dy = nodeB.y - nodeA.y;
     const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
     const force = (dist - targetLinkLength) * attractionForce;
     const fx = (dx / dist) * force;
     const fy = (dy / dist) * force;
-
     nodeA.fx += fx;
     nodeA.fy += fy;
     nodeB.fx -= fx;
     nodeB.fy -= fy;
   });
 
-  // 4. Attraction forces along Family Links
   familyLinks.forEach(link => {
     const nodeA = nodes.find(n => n.id === link.source);
     const nodeB = nodes.find(n => n.id === link.target);
     if (!nodeA || !nodeB) return;
-
     const dx = nodeB.x - nodeA.x;
     const dy = nodeB.y - nodeA.y;
     const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
-    const force = (dist - targetLinkLength * 0.9) * attractionForce * 0.7; // slightly tighter link
+    const force = (dist - targetLinkLength * 0.9) * attractionForce * 0.7;
     const fx = (dx / dist) * force;
     const fy = (dy / dist) * force;
-
     nodeA.fx += fx;
     nodeA.fy += fy;
     nodeB.fx -= fx;
     nodeB.fy -= fy;
   });
 
-  // 5. Update positions & check boundaries
   nodes.forEach(node => {
     if (node === draggedNode) {
       node.vx = 0;
@@ -1054,109 +1644,125 @@ function tick() {
       node.x += node.vx;
       node.y += node.vy;
     }
-
-    // Border constraints
     node.x = Math.max(node.radius + 10, Math.min(width - node.radius - 10, node.x));
     node.y = Math.max(node.radius + 10, Math.min(height - node.radius - 10, node.y));
   });
 }
 
-/* Check relationship between A and B */
-function isRelated(nodeA, nodeB) {
-  if (nodeA.id === nodeB.id) return true;
-  
-  // Is student/teacher?
-  const hasLink = links.some(l => 
-    (l.source === nodeA.id && l.target === nodeB.id) ||
-    (l.source === nodeB.id && l.target === nodeA.id)
-  );
-  if (hasLink) return true;
-
-  // Is family?
-  const hasFam = familyLinks.some(l => 
-    (l.source === nodeA.id && l.target === nodeB.id) ||
-    (l.source === nodeB.id && l.target === nodeA.id)
-  );
-  return hasFam;
-}
-
-/* Get Color Variables Dynamically */
+/* ══════════════════════════════════════════════════════════════════
+   Theme colors
+   ══════════════════════════════════════════════════════════════════ */
 function getThemeColors() {
   const isDark = document.documentElement.classList.contains('dark-mode');
   return {
-    nodeBg: isDark ? '#141d26' : '#ffffff',
-    nodeBorderDefault: isDark ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.12)',
-    nodeText: isDark ? '#f0f4f8' : '#1c2833',
-    nodeTextSub: isDark ? '#a6b8c7' : '#566573',
-    edgeDefault: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)',
-    edgeActive: '#c49a45',
-    edgeFamily: isDark ? 'rgba(225, 29, 72, 0.45)' : 'rgba(225, 29, 72, 0.35)', // elegant soft rose-red for family bonds
-    accent: '#c49a45'
+    nodeBg:            isDark ? '#141d26' : 'rgba(255,255,255,0.96)',
+    nodeBorderDefault: isDark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.12)',
+    nodeText:          isDark ? '#f0f4f8' : '#1c2833',
+    nodeTextSub:       isDark ? '#a6b8c7' : '#566573',
+    edgeDefault:       isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.08)',
+    edgeActive:        '#c49a45',
+    edgeFamily:        isDark ? 'rgba(225,29,72,0.45)' : 'rgba(225,29,72,0.35)',
+    accent:            isDark ? '#c49a45' : '#b31b1b'
   };
 }
 
-/* Draw Canvas Frame */
+/* Opacity / scale by BFS depth */
+const DEPTH_OPACITY  = [1.0, 1.0, 0.65, 0.45];
+const DEPTH_SCALE    = [1.15, 1.0, 1.0, 1.0];
+const UNRELATED_OPACITY = 0.12;
+
+/* ══════════════════════════════════════════════════════════════════
+   Draw canvas frame
+   ══════════════════════════════════════════════════════════════════ */
 function draw() {
   ctx.clearRect(0, 0, width, height);
   const colors = getThemeColors();
-  const activeFocus = hoveredNode || selectedNode;
 
-  // 1. Draw Scholastic Transmission Links
+  // Build connection map if a node is selected
+  let connectionMap = null;
+  const focusNode = selectedNode || hoveredNode;
+  if (focusNode) {
+    connectionMap = getConnectionMap(focusNode.id, currentDepth);
+  }
+
+  // Helper: edge depth from two node ids
+  function edgeDepth(idA, idB) {
+    if (!connectionMap) return -1;
+    const dA = connectionMap.has(idA) ? connectionMap.get(idA) : Infinity;
+    const dB = connectionMap.has(idB) ? connectionMap.get(idB) : Infinity;
+    return Math.min(dA, dB);
+  }
+
+  // 1. Draw scholastic transmission links
   links.forEach(link => {
     const nodeA = nodes.find(n => n.id === link.source);
     const nodeB = nodes.find(n => n.id === link.target);
     if (!nodeA || !nodeB) return;
 
-    let isActive = false;
-    let isFaint = false;
+    let strokeStyle, lineWidth;
 
-    if (activeFocus) {
-      if ((activeFocus.id === nodeA.id && activeFocus.id !== nodeB.id) || 
-          (activeFocus.id === nodeB.id && activeFocus.id !== nodeA.id)) {
-        isActive = true;
+    if (!connectionMap) {
+      strokeStyle = colors.edgeDefault;
+      lineWidth = 1.2;
+    } else {
+      const d = edgeDepth(link.source, link.target);
+      if (d === Infinity) {
+        strokeStyle = 'rgba(100,100,100,0.03)';
+        lineWidth = 0.8;
+      } else if (d === 0) {
+        strokeStyle = colors.accent;
+        lineWidth = 2.8;
+      } else if (d === 1) {
+        strokeStyle = colors.edgeActive;
+        lineWidth = 2.2;
       } else {
-        isFaint = true;
+        const op = d === 2 ? 0.4 : 0.22;
+        strokeStyle = `rgba(196,154,69,${op})`;
+        lineWidth = 1.0;
       }
     }
 
     ctx.beginPath();
     ctx.moveTo(nodeA.x, nodeA.y);
     ctx.lineTo(nodeB.x, nodeB.y);
-    ctx.lineWidth = isActive ? 2.5 : 1.2;
-    ctx.strokeStyle = isActive ? colors.edgeActive : (isFaint ? 'rgba(100,100,100,0.02)' : colors.edgeDefault);
+    ctx.lineWidth = lineWidth;
+    ctx.strokeStyle = strokeStyle;
     ctx.stroke();
 
-    // Draw Arrowhead along transmission link
-    if (!isFaint || isActive) {
+    // Arrowhead
+    if (strokeStyle !== 'rgba(100,100,100,0.03)') {
       const angle = Math.atan2(nodeB.y - nodeA.y, nodeB.x - nodeA.x);
       const arrowX = nodeB.x - (nodeB.radius + 3) * Math.cos(angle);
       const arrowY = nodeB.y - (nodeB.radius + 3) * Math.sin(angle);
-      
       ctx.beginPath();
       ctx.moveTo(arrowX, arrowY);
       ctx.lineTo(arrowX - 8 * Math.cos(angle - Math.PI / 6), arrowY - 8 * Math.sin(angle - Math.PI / 6));
       ctx.lineTo(arrowX - 8 * Math.cos(angle + Math.PI / 6), arrowY - 8 * Math.sin(angle + Math.PI / 6));
       ctx.closePath();
-      ctx.fillStyle = isActive ? colors.edgeActive : (isFaint ? 'rgba(100,100,100,0.02)' : colors.edgeDefault);
+      ctx.fillStyle = strokeStyle;
       ctx.fill();
     }
   });
 
-  // 2. Draw Family/Blood Links (Dashed)
+  // 2. Draw family / blood links (dashed)
   familyLinks.forEach(link => {
     const nodeA = nodes.find(n => n.id === link.source);
     const nodeB = nodes.find(n => n.id === link.target);
     if (!nodeA || !nodeB) return;
 
-    let isActive = false;
-    let isFaint = false;
-
-    if (activeFocus) {
-      if ((activeFocus.id === nodeA.id && activeFocus.id !== nodeB.id) || 
-          (activeFocus.id === nodeB.id && activeFocus.id !== nodeA.id)) {
-        isActive = true;
+    let strokeStyle, lineWidth;
+    if (!connectionMap) {
+      strokeStyle = colors.edgeFamily;
+      lineWidth = 1.2;
+    } else {
+      const d = edgeDepth(link.source, link.target);
+      if (d === Infinity) {
+        strokeStyle = 'rgba(225,29,72,0.04)';
+        lineWidth = 0.8;
       } else {
-        isFaint = true;
+        const op = d <= 1 ? 0.7 : (d === 2 ? 0.4 : 0.22);
+        strokeStyle = `rgba(225,29,72,${op})`;
+        lineWidth = d <= 1 ? 2.2 : 1.0;
       }
     }
 
@@ -1164,223 +1770,257 @@ function draw() {
     ctx.beginPath();
     ctx.moveTo(nodeA.x, nodeA.y);
     ctx.lineTo(nodeB.x, nodeB.y);
-    ctx.lineWidth = isActive ? 2.5 : 1.2;
-    ctx.strokeStyle = isActive ? colors.edgeFamily : (isFaint ? 'rgba(100,100,100,0.02)' : colors.edgeFamily);
+    ctx.lineWidth = lineWidth;
+    ctx.strokeStyle = strokeStyle;
     ctx.setLineDash([5, 5]);
     ctx.stroke();
     ctx.restore();
   });
 
-  // 3. Draw Nodes
+  // 3. Draw nodes
   nodes.forEach(node => {
     let opacity = 1.0;
     let scale = 1.0;
-    let isHighlighted = false;
+    let borderColor = GEN_BORDER_COLORS[node.gen] || colors.nodeBorderDefault;
+    let borderWidth = 1.8;
+    let isSelected = selectedNode && selectedNode.id === node.id;
 
-    if (activeFocus) {
-      if (activeFocus.id === node.id) {
-        scale = 1.12;
-        isHighlighted = true;
-      } else if (isRelated(activeFocus, node)) {
-        isHighlighted = true;
+    if (connectionMap) {
+      if (connectionMap.has(node.id)) {
+        const d = connectionMap.get(node.id);
+        opacity = DEPTH_OPACITY[Math.min(d, 3)] !== undefined ? DEPTH_OPACITY[Math.min(d, 3)] : UNRELATED_OPACITY;
+        scale = DEPTH_SCALE[Math.min(d, 3)] !== undefined ? DEPTH_SCALE[Math.min(d, 3)] : 1.0;
+        if (d === 0) {
+          borderColor = colors.accent;
+          borderWidth = 3.2;
+        } else if (d === 1) {
+          borderWidth = 2.5;
+        } else {
+          borderWidth = 1.4;
+        }
       } else {
-        opacity = 0.18;
+        opacity = UNRELATED_OPACITY;
       }
     }
 
     ctx.save();
     ctx.globalAlpha = opacity;
 
-    // Node circular shadow/glow
-    ctx.shadowColor = isHighlighted ? colors.accent : 'rgba(0,0,0,0.05)';
-    ctx.shadowBlur = isHighlighted ? 12 : 6;
+    // Shadow / glow
+    ctx.shadowColor = isSelected ? colors.accent : 'rgba(0,0,0,0.06)';
+    ctx.shadowBlur = isSelected ? 16 : 6;
     ctx.shadowOffsetX = 0;
-    ctx.shadowOffsetY = 4;
+    ctx.shadowOffsetY = 3;
 
-    // Background circle fill
+    // Background
     ctx.beginPath();
     ctx.arc(node.x, node.y, node.radius * scale, 0, Math.PI * 2);
     ctx.fillStyle = colors.nodeBg;
     ctx.fill();
 
-    // Reset shadow
+    // Reset shadow before border
     ctx.shadowColor = 'transparent';
     ctx.shadowBlur = 0;
 
-    // Border circle
-    ctx.strokeStyle = isHighlighted ? colors.accent : (GEN_BORDER_COLORS[node.gen] || colors.nodeBorderDefault);
-    ctx.lineWidth = isHighlighted ? 3 : 1.5;
+    // Border
+    ctx.strokeStyle = borderColor;
+    ctx.lineWidth = borderWidth;
     ctx.stroke();
 
-    // Scholar short Name text (Thai)
+    // Short name (Thai)
     ctx.fillStyle = colors.nodeText;
-    ctx.font = `bold 12px ${varGet('--thai')}`;
+    ctx.font = `bold 11px Sarabun, system-ui, sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(node.nameTh, node.x, node.y - 7);
+    ctx.fillText(shortName(node.nameTh), node.x, node.y - 7);
 
-    // Demise year text
+    // Death year
     ctx.fillStyle = colors.nodeTextSub;
-    ctx.font = `500 10px ${varGet('--ui')}`;
-    ctx.fillText(node.death, node.x, node.y + 11);
+    ctx.font = `10px D-DIN, Inter, system-ui, sans-serif`;
+    ctx.fillText(node.death, node.x, node.y + 10);
 
     ctx.restore();
   });
 }
 
-/* Dynamic Font Variable Helper */
-function varGet(cssVar) {
-  return cssVar === '--thai' ? 'Sarabun' : (cssVar === '--ui' ? 'D-DIN, Inter' : 'Cormorant Garamond');
-}
-
-/* Physics Frame Runner */
+/* ══════════════════════════════════════════════════════════════════
+   Animation loop
+   ══════════════════════════════════════════════════════════════════ */
 function updateFrame() {
   tick();
   draw();
   requestAnimationFrame(updateFrame);
 }
 
-/* Resize Canvas Handler */
-window.addEventListener('resize', () => {
-  width = canvas.offsetWidth || 1000;
-  height = canvas.offsetHeight || 600;
-  canvas.width = width;
-  canvas.height = height;
+/* ══════════════════════════════════════════════════════════════════
+   Canvas sizing — use window load + ResizeObserver
+   ══════════════════════════════════════════════════════════════════ */
+function resizeCanvas() {
+  const panel = document.getElementById('canvas-panel');
+  const pw = panel.clientWidth;
+  const ph = panel.clientHeight;
+  if (pw > 0 && ph > 0) {
+    width = pw;
+    height = ph;
+    canvas.width = pw;
+    canvas.height = ph;
+  }
+}
+
+window.addEventListener('load', () => {
+  resizeCanvas();
+  initSimulation();
+  buildNarratorPanel();
+  updateFrame();
 });
 
-/* ─── Canvas Interaction / Click Handlers ─── */
+const resizeObserver = new ResizeObserver(() => {
+  resizeCanvas();
+});
+resizeObserver.observe(document.getElementById('canvas-panel'));
+
+/* ══════════════════════════════════════════════════════════════════
+   Depth selector
+   ══════════════════════════════════════════════════════════════════ */
+function setDepth(d) {
+  currentDepth = d;
+  document.querySelectorAll('.depth-btn').forEach(btn => {
+    btn.classList.toggle('active', parseInt(btn.id.split('-').pop()) === d);
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Reset layout
+   ══════════════════════════════════════════════════════════════════ */
+function resetLayout() {
+  selectedNode = null;
+  hoveredNode = null;
+  hideCritique();
+  document.querySelectorAll('.narrator-item').forEach(el => el.classList.remove('is-selected'));
+  SCHOLAR_DB.forEach((s, idx) => {
+    const node = nodes.find(n => n.id === s.id);
+    if (!node) return;
+    const angle = (idx / SCHOLAR_DB.length) * Math.PI * 2;
+    const radius = 220 + Math.random() * 60;
+    node.x = width / 2 + Math.cos(angle) * radius;
+    node.y = height / 2 + Math.sin(angle) * radius;
+    node.vx = 0;
+    node.vy = 0;
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Canvas interaction
+   ══════════════════════════════════════════════════════════════════ */
+function nodeAtPoint(x, y) {
+  return nodes.find(node => {
+    const dx = node.x - x;
+    const dy = node.y - y;
+    return Math.sqrt(dx * dx + dy * dy) < node.radius;
+  });
+}
+
 canvas.addEventListener('mousedown', e => {
   const rect = canvas.getBoundingClientRect();
-  const mouseX = e.clientX - rect.left;
-  const mouseY = e.clientY - rect.top;
-
-  // Find if clicked node
-  const clicked = nodes.find(node => {
-    const dx = node.x - mouseX;
-    const dy = node.y - mouseY;
-    return Math.sqrt(dx*dx + dy*dy) < node.radius;
-  });
-
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+  const clicked = nodeAtPoint(mx, my);
   if (clicked) {
     draggedNode = clicked;
     selectedNode = clicked;
     loadCritique(clicked.id);
+    setNarratorSelected(clicked.id);
   } else {
     selectedNode = null;
     hideCritique();
+    document.querySelectorAll('.narrator-item').forEach(el => el.classList.remove('is-selected'));
   }
 });
 
 canvas.addEventListener('mousemove', e => {
   const rect = canvas.getBoundingClientRect();
-  const mouseX = e.clientX - rect.left;
-  const mouseY = e.clientY - rect.top;
-
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
   if (draggedNode) {
-    draggedNode.x = mouseX;
-    draggedNode.y = mouseY;
+    draggedNode.x = mx;
+    draggedNode.y = my;
   } else {
-    // Check hover
-    const found = nodes.find(node => {
-      const dx = node.x - mouseX;
-      const dy = node.y - mouseY;
-      return Math.sqrt(dx*dx + dy*dy) < node.radius;
-    });
-    hoveredNode = found || null;
+    hoveredNode = nodeAtPoint(mx, my) || null;
   }
 });
 
-canvas.addEventListener('mouseup', () => {
-  draggedNode = null;
-});
-canvas.addEventListener('mouseleave', () => {
-  draggedNode = null;
-  hoveredNode = null;
-});
+canvas.addEventListener('mouseup', () => { draggedNode = null; });
+canvas.addEventListener('mouseleave', () => { draggedNode = null; hoveredNode = null; });
 
-// Double click to open Biographical Drawer
 canvas.addEventListener('dblclick', e => {
   const rect = canvas.getBoundingClientRect();
-  const mouseX = e.clientX - rect.left;
-  const mouseY = e.clientY - rect.top;
-
-  const found = nodes.find(node => {
-    const dx = node.x - mouseX;
-    const dy = node.y - mouseY;
-    return Math.sqrt(dx*dx + dy*dy) < node.radius;
-  });
-
-  if (found) {
-    openDrawer(found.id);
-  }
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+  const found = nodeAtPoint(mx, my);
+  if (found) openDrawer(found.id);
 });
 
-// Touch controls for Mobile support
+// Touch support
 canvas.addEventListener('touchstart', e => {
   if (e.touches.length === 0) return;
+  e.preventDefault();
   const rect = canvas.getBoundingClientRect();
-  const touchX = e.touches[0].clientX - rect.left;
-  const touchY = e.touches[0].clientY - rect.top;
-
-  const clicked = nodes.find(node => {
-    const dx = node.x - touchX;
-    const dy = node.y - touchY;
-    return Math.sqrt(dx*dx + dy*dy) < node.radius;
-  });
-
+  const tx = e.touches[0].clientX - rect.left;
+  const ty = e.touches[0].clientY - rect.top;
+  const clicked = nodeAtPoint(tx, ty);
   if (clicked) {
     draggedNode = clicked;
     selectedNode = clicked;
     loadCritique(clicked.id);
+    setNarratorSelected(clicked.id);
+  } else {
+    selectedNode = null;
+    hideCritique();
+    document.querySelectorAll('.narrator-item').forEach(el => el.classList.remove('is-selected'));
   }
-});
+}, { passive: false });
 
 canvas.addEventListener('touchmove', e => {
   if (e.touches.length === 0 || !draggedNode) return;
+  e.preventDefault();
   const rect = canvas.getBoundingClientRect();
-  const touchX = e.touches[0].clientX - rect.left;
-  const touchY = e.touches[0].clientY - rect.top;
-  draggedNode.x = touchX;
-  draggedNode.y = touchY;
-});
+  draggedNode.x = e.touches[0].clientX - rect.left;
+  draggedNode.y = e.touches[0].clientY - rect.top;
+}, { passive: false });
 
-canvas.addEventListener('touchend', () => {
-  draggedNode = null;
-});
+canvas.addEventListener('touchend', () => { draggedNode = null; });
 
-/* ─── Search / Filter Handler ─── */
-function handleSearch() {
-  const term = document.getElementById('search-box').value.trim().toLowerCase();
-  if (!term) {
-    hoveredNode = null;
-    return;
-  }
-  const found = nodes.find(n => n.nameTh.toLowerCase().includes(term));
-  if (found) {
-    hoveredNode = found;
-  } else {
-    hoveredNode = null;
-  }
-}
-
-/* ─── Load Critique Box (Jarh wa al-Ta'dil) ─── */
+/* ══════════════════════════════════════════════════════════════════
+   Critique panel
+   ══════════════════════════════════════════════════════════════════ */
 function loadCritique(id) {
   const data = SCHOLAR_LOOKUP[id];
   if (!data) return;
 
-  const panel = document.getElementById('critique-panel');
-  document.getElementById('critique-title').innerHTML = `การประเมินสถานะของ **${data.nameTh.replace(' เราะหิมะฮ์ลุลลอฮ์', '').replace('เราะฎิยัลลอฮุอันฮุ', '')}** ในตำราญัรห์ วัตตะอ์ดีล`;
+  const cleanName = data.nameTh
+    .replace(/เราะหิมะฮุลลอฮ์/g, '')
+    .replace(/เราะหิมะฮ์ลุลลอฮ์/g, '')
+    .replace(/เราะฎิยัลลอฮุอันฮุ/g, '')
+    .trim();
+
+  document.getElementById('critique-title').innerHTML =
+    'การประเมินสถานะของ <strong>' + cleanName + '</strong> ในตำราญัรห์ วัตตะอ์ดีล';
 
   const taDilCol = document.getElementById('ta-dil-col');
   taDilCol.innerHTML = '';
   if (data.tadil.length > 0) {
     data.tadil.forEach(item => {
+      const scholarName = item.scholar.split(' (')[0];
+      const scholarYear = item.scholar.includes(' (')
+        ? '(' + item.scholar.split(' (')[1]
+        : '';
       const card = document.createElement('div');
       card.className = 'critique-card ta-dil-item';
-      card.innerHTML = `
-        <div class="critique-meta">${item.scholar.split(' (')[0]} <span>${item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : ''}</span></div>
-        <div class="critique-text">“${item.quote}”</div>
-      `;
+      card.innerHTML =
+        '<div class="critique-meta">' + scholarName +
+        (scholarYear ? '<span class="critique-meta-year">' + scholarYear + '</span>' : '') +
+        '</div>' +
+        '<div class="critique-text">“' + item.quote + '”</div>';
       taDilCol.appendChild(card);
     });
   } else {
@@ -1391,36 +2031,90 @@ function loadCritique(id) {
   jarhCol.innerHTML = '';
   if (data.jarh.length > 0) {
     data.jarh.forEach(item => {
+      const scholarName = item.scholar.split(' (')[0];
+      const scholarYear = item.scholar.includes(' (')
+        ? '(' + item.scholar.split(' (')[1]
+        : '';
       const card = document.createElement('div');
       card.className = 'critique-card jarh-item';
-      card.innerHTML = `
-        <div class="critique-meta">${item.scholar.split(' (')[0]} <span>${item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : ''}</span></div>
-        <div class="critique-text">“${item.quote}”</div>
-      `;
+      card.innerHTML =
+        '<div class="critique-meta">' + scholarName +
+        (scholarYear ? '<span class="critique-meta-year">' + scholarYear + '</span>' : '') +
+        '</div>' +
+        '<div class="critique-text">“' + item.quote + '”</div>';
       jarhCol.appendChild(card);
     });
   } else {
     jarhCol.innerHTML = '<div class="empty-critique-notice">ไม่มีคำท้วงติงเชิงลบบันทึกไว้ในตำราหลักการญัรห์ (สถานะธรรมชนสมบูรณ์แบบ)</div>';
   }
 
-  panel.classList.add('active');
+  document.getElementById('critique-panel').classList.add('active');
 }
 
 function hideCritique() {
-  const panel = document.getElementById('critique-panel');
-  panel.classList.remove('active');
+  document.getElementById('critique-panel').classList.remove('active');
 }
 
-/* ─── Drawer Modal Open ─── */
+/* ══════════════════════════════════════════════════════════════════
+   Biog Drawer
+   ══════════════════════════════════════════════════════════════════ */
 function openDrawer(id) {
   const data = SCHOLAR_LOOKUP[id];
   if (!data) return;
 
-  document.getElementById('d-gen').innerText = data.gen;
-  document.getElementById('d-name-th').innerText = data.nameTh;
-  document.getElementById('d-name-ar').innerText = data.nameAr;
+  document.getElementById('d-gen').textContent = data.gen;
+  document.getElementById('d-name-th').textContent = data.nameTh;
+  document.getElementById('d-name-ar').textContent = data.nameAr;
+  document.getElementById('d-gen-full').textContent = data.gen;
+  document.getElementById('d-death').textContent = data.death;
   document.getElementById('d-bio').innerHTML = data.bio;
-  document.getElementById('d-death').innerText = data.death;
+
+  // Teachers
+  const teachersEl = document.getElementById('d-teachers');
+  const teachersSection = document.getElementById('d-teachers-section');
+  if (data.teachers.length > 0) {
+    teachersEl.innerHTML = '<ul>' +
+      data.teachers.map(tid => {
+        const t = SCHOLAR_LOOKUP[tid];
+        return '<li>' + (t ? t.nameTh : tid) + '</li>';
+      }).join('') +
+      '</ul>';
+    teachersSection.style.display = '';
+  } else {
+    teachersEl.innerHTML = '<span class="drawer-empty-note">ไม่มีข้อมูลอาจารย์ในฐานข้อมูล</span>';
+    teachersSection.style.display = '';
+  }
+
+  // Students
+  const studentsEl = document.getElementById('d-students');
+  const studentsSection = document.getElementById('d-students-section');
+  if (data.students.length > 0) {
+    studentsEl.innerHTML = '<ul>' +
+      data.students.map(sid => {
+        const s = SCHOLAR_LOOKUP[sid];
+        return '<li>' + (s ? s.nameTh : sid) + '</li>';
+      }).join('') +
+      '</ul>';
+    studentsSection.style.display = '';
+  } else {
+    studentsEl.innerHTML = '<span class="drawer-empty-note">ไม่มีลูกศิษย์บันทึกในฐานข้อมูล</span>';
+    studentsSection.style.display = '';
+  }
+
+  // Family
+  const familyEl = document.getElementById('d-family');
+  const familySection = document.getElementById('d-family-section');
+  if (data.family.length > 0) {
+    familyEl.innerHTML = '<ul>' +
+      data.family.map(f => {
+        const fm = SCHOLAR_LOOKUP[f.id];
+        return '<li>' + (fm ? fm.nameTh : f.id) + ' <span class="drawer-family-relation">[' + f.relation + ']</span></li>';
+      }).join('') +
+      '</ul>';
+    familySection.style.display = '';
+  } else {
+    familySection.style.display = 'none';
+  }
 
   document.getElementById('drawer-overlay').classList.add('active');
 }
@@ -1428,10 +2122,6 @@ function openDrawer(id) {
 function closeDrawer() {
   document.getElementById('drawer-overlay').classList.remove('active');
 }
-
-/* ─── Run Simulation ─── */
-initSimulation();
-updateFrame();
 </script>
 </body>
 </html>
