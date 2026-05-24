@@ -587,7 +587,7 @@ body::before {
 /* =========================================================
    TOOLS
    ========================================================= */
-.tools-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.tools-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
 .tool-card {
   position: relative; padding: 48px 36px; border: 1px solid var(--rule);
   display: flex; flex-direction: column; gap: 24px; min-height: 340px;
@@ -1396,13 +1396,11 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
     t+=0.018; raf=requestAnimationFrame(draw);
   }
   function init(){
-    resize();
-    cancelAnimationFrame(raf);
-    draw();
+    resize(); draw();
   }
   window.addEventListener('resize',resize);
   new MutationObserver(function(){
-    resize();
+    if(!raf){ resize(); draw(); }
   }).observe(document.documentElement,{attributes:true,attributeFilter:['class']});
   init();
 })();
