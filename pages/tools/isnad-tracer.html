@@ -16,8 +16,8 @@
   })();
 </script>
 
-<meta name="description" content="เครื่องมือตรวจสอบสายรายงานหะดีษในรูปแบบแผนผังต้นไม้ลำดับชั้น วิเคราะห์ความเชื่อมโยงครู-ศิษย์ และความสัมพันธ์เชิงสายเลือด พร้อมข้อมูลจากตำราญัรห์ วัตตะอ์ดีล">
-<meta name="keywords" content="สายรายงานหะดีษ, อิลมุรริญาล, ตรวจสอบหะดีษ, อิสนาด, ญัรห์ วัตตะอ์ดีล, ผู้รายงานหะดีษ">
+<meta name="description" content="เครื่องมือจำลองเครือข่ายสายรายงานหะดีษแบบใยแมงมุม วิเคราะห์ความเชื่อมโยงครู-ศิษย์ และความสัมพันธ์เชิงเครือญาติ พร้อมเปรียบเทียบคำวิจารณ์ในตำราญัรห์ วัตตะอ์ดีล">
+<meta name="keywords" content="สายรายงานหะดีษ, อิลมุรริญาล, ตรวจสอบหะดีษ, Hadith isnad tracer, networks of transmission, ญัรห์ วัตตะอ์ดีล, เครือข่ายผู้รายงาน">
 <meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
 
 <link rel="icon" href="../../favicon.png" type="image/png">
@@ -25,8 +25,8 @@
 <link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png">
 <meta name="theme-color" content="#e3edf7">
 
-<meta property="og:title" content="ตรวจสอบสายรายงาน — Islamic Fiqh Publishing">
-<meta property="og:description" content="สำรวจสายรายงานผู้รายงานหะดีษในรูปแบบแผนผังต้นไม้ลำดับชั้น ตั้งแต่ท่านนบี ﷺ ถึงบรรดาอิหม่ามผู้รวบรวมหะดีษ">
+<meta property="og:title" content="ISNĀD TRACER — Islamic Fiqh Publishing">
+<meta property="og:description" content="จำลองและสำรวจเครือข่ายใยแมงมุมสายรายงานผู้รายงานหะดีษ ครู-ศิษย์ และความเชื่อมโยงตลอดชีวิต">
 <meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
 <meta property="og:url" content="https://islamicfiqhpublishing.com/pages/tools/isnad-tracer.html">
 <meta property="og:type" content="website">
@@ -34,7 +34,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Sarabun:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Sarabun:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../article.css?v=8">
 
 <style>
@@ -48,8 +48,8 @@
   font-display: block;
 }
 
-/* ─── CSS Variable Overrides ─── */
 :root {
+  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
   --thai: 'Sarabun', system-ui, sans-serif;
   --arabic: 'Amiri', serif;
   --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
@@ -59,588 +59,456 @@ html, body {
   background-color: var(--bg-primary) !important;
 }
 
-/* ─── Page Container ─── */
-.it-container {
-  max-width: 1400px;
-  margin: 56px auto 80px;
-  padding: 0 24px;
-  position: relative;
+/* ─── Layout ─── */
+.it-container { max-width: 1200px; margin: 60px auto 80px; padding: 0 24px; position: relative; }
+
+.it-hero { text-align: center; margin-bottom: 40px; }
+.it-hero h1 { 
+  font-family: var(--serif); 
+  font-size: clamp(32px, 4.5vw, 46px); 
+  font-weight: 400; 
+  text-transform: uppercase; 
+  letter-spacing: 0.12em; 
+  color: var(--text-primary); 
+  margin-bottom: 18px; 
+  transition: var(--theme-transition); 
+}
+.it-hero p { 
+  font-family: var(--thai); 
+  font-size: 15px; 
+  color: var(--text-secondary); 
+  line-height: 2.0; 
+  max-width: 900px; 
+  margin: 0 auto; 
+  text-align: center; 
+  word-break: break-word; 
+  transition: var(--theme-transition); 
 }
 
-/* ─── Hero ─── */
-.it-hero {
-  text-align: center;
-  margin-bottom: 32px;
-}
-.it-hero h1 {
-  font-family: var(--thai);
-  font-size: clamp(26px, 3.5vw, 38px);
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 10px;
-  letter-spacing: 0.01em;
-  transition: var(--theme-transition);
-}
-.it-hero-ar {
-  font-family: var(--arabic);
-  font-size: clamp(22px, 2.8vw, 32px);
-  color: var(--accent-color);
-  margin-bottom: 14px;
-  line-height: 1.6;
-  direction: rtl;
-}
-.it-hero p {
-  font-family: var(--thai);
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 2.0;
-  max-width: 820px;
-  margin: 0 auto;
-  text-align: left;
-  word-break: break-word;
-  transition: var(--theme-transition);
-}
-
-/* ─── Toolbar ─── */
-.it-toolbar {
+/* ─── Instruction / Legend Panel ─── */
+.network-instructions {
   background: var(--bg-secondary);
   border: 1px solid var(--border-primary);
   border-radius: 12px;
-  padding: 14px 20px;
-  margin-bottom: 20px;
+  padding: 24px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 14px;
-  box-shadow: 0 2px 12px var(--shadow-color);
+  gap: 16px;
   transition: var(--theme-transition);
+  box-shadow: 0 4px 16px var(--shadow-color);
 }
-.tb-left {
+.inst-left h3 {
+  font-family: var(--thai);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 6px 0;
+  text-align: left;
+}
+.inst-left p {
+  font-family: var(--thai);
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: left;
+  line-height: 1.6;
+}
+.legend-grid {
   display: flex;
-  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-}
-.tb-legend {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  align-items: center;
 }
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 7px;
-  font-family: var(--thai);
-  font-size: 12px;
-  color: var(--text-secondary);
-  white-space: nowrap;
-}
-.legend-line {
-  width: 28px;
-  height: 2px;
-  border-radius: 2px;
-  flex-shrink: 0;
-}
-.legend-line-std { background: var(--text-tertiary); }
-.legend-line-fam {
-  background: transparent;
-  border-top: 2px dashed #e11d48;
-}
-.tb-right {
-  display: flex;
-  align-items: center;
   gap: 8px;
-}
-.tb-zoom-btn {
   font-family: var(--thai);
   font-size: 12px;
-  padding: 6px 14px;
-  border-radius: 7px;
-  border: 1px solid var(--border-secondary);
-  background: var(--bg-tertiary);
   color: var(--text-secondary);
-  cursor: pointer;
-  transition: all 0.2s;
-  white-space: nowrap;
 }
-.tb-zoom-btn:hover {
-  background: var(--accent-color);
-  color: #fff;
-  border-color: var(--accent-color);
+.legend-color {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
 }
+.color-trans { background: var(--accent-color); }
+.color-family { background: #e11d48; border-bottom: 2px dashed #e11d48; height: 1px; }
 
-/* ─── Two-column workspace ─── */
-.it-workspace {
+/* ─── Tracer Dashboard Layout ─── */
+.tracer-dashboard {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid var(--border-primary);
-  margin-bottom: 32px;
-  box-shadow: 0 6px 28px var(--shadow-color);
-  transition: var(--theme-transition);
+  grid-template-columns: 310px 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
-/* ─── Left Narrator Panel ─── */
-.narrator-panel {
-  width: 260px;
-  height: max(75vh, 700px);
+/* ─── Narrator Sidebar Directory ─── */
+.narrator-sidebar {
   background: var(--bg-secondary);
-  border-right: 1px solid var(--border-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 14px;
+  padding: 24px;
+  height: 600px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  box-shadow: 0 8px 32px var(--shadow-color);
   transition: var(--theme-transition);
-  flex-shrink: 0;
 }
-.narrator-panel-header {
-  padding: 16px 14px 12px;
-  border-bottom: 1px solid var(--border-primary);
-  flex-shrink: 0;
+.sidebar-header {
+  font-family: var(--thai);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-secondary);
+  padding-bottom: 10px;
+  text-align: left;
 }
-.narrator-panel-title {
+.sidebar-search {
+  margin-bottom: 16px;
+}
+.sidebar-search .search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-secondary);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--thai);
+  font-size: 13px;
+  outline: none;
+  transition: all 0.3s;
+}
+.sidebar-search .search-input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 4px 16px rgba(196, 154, 69, 0.15);
+}
+
+.sidebar-list {
+  flex: 1;
+  overflow-y: auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  flex-direction: column;
+  gap: 14px;
+  padding-right: 4px;
 }
-.narrator-panel-title h2 {
+.sidebar-list::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-list::-webkit-scrollbar-thumb {
+  background: var(--border-secondary);
+  border-radius: 3px;
+}
+
+.sidebar-gen-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+.sidebar-gen-title {
+  font-family: var(--thai);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 6px;
+  border-bottom: 1px dashed var(--border-primary);
+  padding-bottom: 4px;
+}
+.sidebar-item {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+.sidebar-item:hover {
+  border-color: var(--accent-color);
+  transform: translateX(2px);
+}
+.sidebar-item.active {
+  background: var(--bg-secondary);
+  border-color: var(--accent-color);
+  border-left: 4px solid var(--accent-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+.sidebar-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+.sidebar-item-name {
   font-family: var(--thai);
   font-size: 13px;
   font-weight: 700;
   color: var(--text-primary);
-  margin: 0;
-  letter-spacing: 0.02em;
 }
-.narrator-count-badge {
+.sidebar-item-death {
   font-family: var(--ui);
   font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 10px;
-  background: var(--accent-color);
-  color: #fff;
-  white-space: nowrap;
-}
-.narrator-search {
-  width: 100%;
-  padding: 7px 11px;
-  border-radius: 7px;
-  border: 1px solid var(--border-secondary);
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: var(--thai);
-  font-size: 12px;
-  outline: none;
-  box-sizing: border-box;
-  transition: all 0.2s;
-}
-.narrator-search:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 2px rgba(179, 27, 27, 0.12);
-}
-.dark-mode .narrator-search:focus {
-  box-shadow: 0 0 0 2px rgba(196, 154, 69, 0.15);
-}
-.narrator-list-scroll {
-  flex: 1;
-  overflow-y: auto;
-  padding: 6px 0;
-}
-.narrator-list-scroll::-webkit-scrollbar { width: 4px; }
-.narrator-list-scroll::-webkit-scrollbar-track { background: transparent; }
-.narrator-list-scroll::-webkit-scrollbar-thumb {
-  background: var(--border-secondary);
-  border-radius: 2px;
+  color: var(--text-secondary);
 }
 
-/* Era group header */
-.narrator-era-label {
-  font-family: var(--thai);
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--text-tertiary);
-  letter-spacing: 0.07em;
-  padding: 8px 14px 4px;
-  display: block;
-}
-
-/* Narrator list item */
-.narrator-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 7px 12px;
-  cursor: pointer;
-  border-left: 3px solid transparent;
-  transition: all 0.15s;
-}
-.narrator-item:hover { background: var(--bg-tertiary); }
-.narrator-item.is-selected {
-  background: var(--bg-tertiary);
-  border-left-color: var(--accent-color);
-}
-.narrator-item-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  margin-top: 5px;
-}
-.narrator-item-info { flex: 1; min-width: 0; }
-.narrator-item-ar {
-  font-family: var(--arabic);
-  font-size: 14px;
-  color: var(--text-primary);
-  line-height: 1.5;
-  direction: rtl;
-  word-break: break-word;
-}
-.narrator-item-meta {
-  font-family: var(--ui);
-  font-size: 10px;
-  color: var(--text-tertiary);
-  margin-top: 1px;
-}
-.narrator-item.hidden { display: none; }
-.narrator-era-group.all-hidden .narrator-era-label { display: none; }
-
-/* ─── Network Canvas Panel ─── */
-.network-container {
-  width: 100%;
-  height: max(75vh, 700px);
+/* ─── Network Canvas Container ─── */
+.canvas-wrapper {
   position: relative;
+  width: 100%;
+  height: 600px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 14px;
   overflow: hidden;
-  cursor: grab;
-  background: var(--bg-primary);
+  box-shadow: 0 8px 32px var(--shadow-color);
+  transition: var(--theme-transition);
 }
-.network-container:active { cursor: grabbing; }
-
-#isnad-svg {
+#spiderweb-canvas {
   width: 100%;
   height: 100%;
   display: block;
-  user-select: none;
+  cursor: grab;
+}
+#spiderweb-canvas:active {
+  cursor: grabbing;
 }
 
-/* ─── SVG Node & Edge classes ─── */
-.sn-node { cursor: pointer; }
-.sn-node-bg { fill: transparent; }
-.sn-node-text {
-  fill: var(--text-primary);
-  font-family: 'Amiri', serif;
-  transition: fill 0.2s;
-}
-.sn-node-text.is-prophet { fill: #d4af37; }
-.sn-node-text.is-grand-imam { fill: var(--accent-color); }
-.sn-node-text.is-disputed { fill: #dc2626; }
-html.dark-mode .sn-node-text.is-disputed { fill: #f87171; }
-.sn-node-text.is-selected { fill: var(--accent-color) !important; }
-.sn-node-underline {
-  stroke: var(--accent-color);
-  stroke-width: 2;
-  opacity: 0;
-  transition: opacity 0.2s;
-  pointer-events: none;
-}
-.sn-node.is-hovered .sn-node-underline { opacity: 0.4; }
-.sn-node.is-selected .sn-node-underline { opacity: 1; }
-.sn-node.is-faded .sn-node-text { opacity: 0.18; }
-.sn-node.is-faded .sn-node-underline { opacity: 0 !important; }
-
-.sn-edge { pointer-events: none; }
-.sn-edge-std {
-  stroke: var(--border-secondary);
-  stroke-width: 1.5;
-  fill: none;
-  transition: stroke 0.2s, opacity 0.2s;
-}
-.sn-edge-fam {
-  stroke: #e11d48;
-  stroke-width: 1.5;
-  stroke-dasharray: 6 5;
-  fill: none;
-  transition: stroke 0.2s, opacity 0.2s;
-}
-.sn-edge.is-faded { opacity: 0.06; }
-.sn-edge.is-active-std { stroke: var(--accent-color); stroke-width: 2.2; }
-.sn-edge.is-active-fam { stroke: #e11d48; stroke-width: 2.2; }
-
-.arr-fill-std { fill: var(--text-tertiary); }
-.arr-fill-fam { fill: #e11d48; }
-.arr-fill-active { fill: var(--accent-color); }
-
-/* ─── Detail Panel ─── */
-.detail-panel {
+/* ─── Critique Panel ─── */
+.critique-section {
+  margin-bottom: 60px;
   opacity: 0;
   transform: translateY(20px);
-  pointer-events: none;
-  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  margin-bottom: 56px;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.detail-panel.active {
+.critique-section.active {
   opacity: 1;
-  transform: none;
-  pointer-events: all;
+  transform: translateY(0);
 }
-.dp-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--border-secondary);
-  padding-bottom: 16px;
-  margin-bottom: 24px;
-  gap: 16px;
-}
-.dp-header-main { flex: 1; min-width: 0; }
-.dp-name-ar {
-  font-family: var(--arabic);
-  font-size: 28px;
-  color: var(--text-primary);
-  direction: rtl;
-  line-height: 1.5;
-  word-break: break-word;
-}
-.dp-name-th {
+.critique-section-header {
   font-family: var(--thai);
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-top: 4px;
-  text-align: left;
-  word-break: break-word;
-}
-.dp-meta {
-  margin-top: 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.dp-era-badge {
-  font-family: var(--thai);
-  font-size: 10px;
+  font-size: 18px;
   font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 9px;
-  background: var(--accent-color);
-  color: #fff;
-  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-secondary);
+  padding-bottom: 12px;
+  transition: var(--theme-transition);
 }
-.dp-death {
-  font-family: var(--ui);
-  font-size: 12px;
-  color: var(--text-tertiary);
-}
-.dp-close-btn {
-  font-family: var(--thai);
-  font-size: 12px;
-  padding: 6px 14px;
-  border-radius: 7px;
-  border: 1px solid var(--border-secondary);
-  background: var(--bg-tertiary);
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: all 0.2s;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.dp-close-btn:hover {
-  background: var(--accent-color);
-  color: #fff;
-  border-color: var(--accent-color);
-}
-.dp-body {
+.critique-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  gap: 30px;
 }
-.dp-bio-col { grid-column: 1 / -1; }
-.dp-bio {
-  font-family: var(--thai);
-  font-size: 14px;
-  line-height: 2.0;
-  color: var(--text-secondary);
-  text-align: left;
-  word-break: break-word;
-  margin-bottom: 4px;
+.critique-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.dp-section-title {
-  font-family: var(--thai);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-tertiary);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding-bottom: 6px;
-  border-bottom: 1px solid var(--border-primary);
-  margin-bottom: 12px;
-}
-.dp-section-title.pos-title { color: #059669; border-bottom-color: rgba(5,150,105,0.2); }
-.dp-section-title.neg-title { color: #dc2626; border-bottom-color: rgba(220,38,38,0.2); }
-.dp-critique-item {
+.critique-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border-primary);
   border-radius: 10px;
-  padding: 14px 16px;
-  margin-bottom: 10px;
+  padding: 20px 24px;
+  text-align: left;
   transition: var(--theme-transition);
+  box-shadow: 0 2px 8px var(--shadow-color);
 }
-.dp-critique-item.pos { border-left: 3px solid #059669; }
-.dp-critique-item.neg { border-left: 3px solid #dc2626; }
-.dp-critic-name {
+.critique-card.ta-dil-item {
+  border-left: 3px solid #059669;
+}
+.critique-card.jarh-item {
+  border-left: 3px solid #dc2626;
+}
+
+.critique-meta {
   font-family: var(--thai);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 6px;
-  text-align: left;
-  word-break: break-word;
+  margin-bottom: 8px;
 }
-.dp-critic-th {
-  font-family: var(--thai);
-  font-size: 13px;
-  line-height: 1.9;
+.critique-meta span {
+  font-family: var(--ui);
+  font-weight: 500;
   color: var(--text-secondary);
-  text-align: left;
+  margin-left: 6px;
+}
+.critique-text {
+  font-family: var(--thai);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-secondary);
   word-break: break-word;
 }
-.dp-empty-notice {
+
+.empty-critique-notice {
   font-family: var(--thai);
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-tertiary);
-  padding: 20px;
+  padding: 40px;
   text-align: center;
   border: 1px dashed var(--border-secondary);
   border-radius: 10px;
   background: var(--bg-secondary);
-  line-height: 1.8;
 }
 
-/* source-toggle: Rule 49 */
-.source-toggle {
-  margin-top: 8px;
+/* ─── Detail Drawer ─── */
+.it-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
-.source-toggle > summary {
+.it-drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.it-drawer {
+  position: fixed;
+  top: 0;
+  right: -450px;
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  background: var(--bg-primary);
+  border-left: 1px solid var(--border-secondary);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+  z-index: 10001;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.it-drawer-overlay.active .it-drawer {
+  right: 0;
+}
+
+.drawer-header {
+  padding: 28px;
+  border-bottom: 1px solid var(--border-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.drawer-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+.drawer-gen {
   font-family: var(--thai);
   font-size: 11px;
-  color: var(--text-tertiary);
-  cursor: pointer;
-  list-style: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 0;
-  transition: color 0.15s;
-  text-align: left;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
-.source-toggle > summary:hover { color: var(--accent-color); }
-.source-toggle[open] > summary { color: var(--accent-color); }
-.dp-critic-ar {
-  font-family: var(--arabic);
-  font-size: 16px;
-  line-height: 2.2;
+.drawer-name-th {
+  font-family: var(--thai);
+  font-size: 22px;
+  font-weight: 700;
   color: var(--text-primary);
-  direction: rtl;
-  text-align: right;
-  padding: 10px 14px;
-  background: var(--bg-tertiary);
-  border-radius: 6px;
-  margin-top: 6px;
-  word-break: break-word;
 }
-.dp-connections {
+.drawer-name-ar {
+  font-family: var(--arabic);
+  font-size: 28px;
+  color: var(--text-primary);
   margin-top: 4px;
 }
-.dp-connections ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.btn-close-drawer {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 4px;
+  transition: color 0.2s;
+  line-height: 1;
 }
-.dp-connections ul li {
+.btn-close-drawer:hover {
+  color: var(--accent-color);
+}
+
+.drawer-content {
+  padding: 28px;
+  overflow-y: auto;
+  flex: 1;
+  text-align: left;
+}
+
+.drawer-section {
+  margin-bottom: 28px;
+}
+.drawer-section-title {
   font-family: var(--thai);
   font-size: 13px;
-  color: var(--text-secondary);
-  padding: 4px 0;
-  border-bottom: 1px solid var(--border-primary);
-  text-align: left;
-  word-break: break-word;
-  line-height: 1.7;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border-secondary);
+  padding-bottom: 6px;
 }
-.dp-connections ul li:last-child { border-bottom: none; }
-.dp-ijazah {
+.drawer-data-item {
+  font-family: var(--thai);
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+.network-column-title {
   font-family: var(--thai);
   font-size: 12px;
+  font-weight: 700;
   color: var(--text-tertiary);
-  padding: 12px 16px;
-  border: 1px dashed var(--border-secondary);
-  border-radius: 8px;
-  background: var(--bg-secondary);
-  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
 /* ─── Responsive ─── */
 @media (max-width: 900px) {
-  .dp-body {
+  .tracer-dashboard {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
-  .dp-bio-col { grid-column: 1; }
-}
-
-@media (max-width: 768px) {
-  .it-workspace {
+  .narrator-sidebar {
+    height: auto;
+    max-height: 400px;
+  }
+  .critique-grid {
     grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column;
+    gap: 24px;
   }
-  .narrator-panel {
-    width: 100%;
-    height: 160px;
-    border-right: none;
-    border-bottom: 1px solid var(--border-primary);
+  .canvas-wrapper {
+    height: 500px;
   }
-  .narrator-list-scroll {
-    overflow-x: auto;
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: row;
-    gap: 0;
-    padding: 4px 8px;
-  }
-  .narrator-era-group { display: contents; }
-  .narrator-era-label { display: none; }
-  .narrator-item {
-    flex-direction: column;
-    align-items: center;
-    min-width: 80px;
-    max-width: 95px;
-    padding: 6px 4px;
-    border-left: none;
-    border-bottom: 3px solid transparent;
-    text-align: center;
-    gap: 3px;
-  }
-  .narrator-item.is-selected {
-    border-left-color: transparent;
-    border-bottom-color: var(--accent-color);
-  }
-  .narrator-item-dot { margin-top: 0; }
-  .narrator-item-ar {
-    font-size: 12px;
-    text-align: center;
-    direction: rtl;
-  }
-  .narrator-item-meta { font-size: 9px; text-align: center; }
-  .network-container { height: max(55vh, 480px); }
-  .it-toolbar { flex-direction: column; align-items: flex-start; }
-  .tb-legend { gap: 10px; }
 }
-
 @media (max-width: 480px) {
-  .it-container { padding: 0 14px; }
-  .dp-header { flex-direction: column; }
-  .dp-name-ar { font-size: 22px; }
+  .it-drawer { max-width: 100%; right: -100%; }
 }
 </style>
 </head>
@@ -651,125 +519,106 @@ html.dark-mode .sn-node-text.is-disputed { fill: #f87171; }
 <main>
 <div class="it-container">
 
-  <!-- Hero -->
   <div class="it-hero">
-    <h1>ตรวจสอบสายรายงาน</h1>
-    <div class="it-hero-ar" lang="ar" dir="rtl">تَتَبُّعُ الإِسْنَادِ</div>
-    <p>สำรวจสายรายงานหะดีษผ่านแผนผังต้นไม้ลำดับชั้น (BFS Tree) จากท่านนบีมุหัมมัด ﷺ สู่บรรดาเศาะหาบะฮ์ ตาบิอีน และอัครปราชญ์ผู้รวบรวมหะดีษ คลิกชื่อผู้รายงานเพื่อดูรายละเอียดและคำวิจารณ์ญัรห์ วัตตะอ์ดีล</p>
+    <h1>ISNĀD TRACER</h1>
+    <p>สืบค้นสายรายงานและสำรวจความเชื่อมโยงทางเครือญาติและการศึกษาของเหล่านักปราชญ์ผู้รายงานหะดีษผ่านแผนผังใยแมงมุม (Interactive Spiderweb Network Map) คลิกและลากเพื่อสำรวจความเชื่อมโยงตลอดชีวิต</p>
   </div>
 
-  <!-- Toolbar -->
-  <div class="it-toolbar">
-    <div class="tb-left">
-      <div class="tb-legend">
-        <div class="legend-item">
-          <div class="legend-line legend-line-std"></div>
-          <span>การส่งผ่านความรู้ (ครูอาจารย์ → ลูกศิษย์)</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-line legend-line-fam"></div>
-          <span>ความสัมพันธ์เชิงสายเลือด (เส้นประ)</span>
-        </div>
-      </div>
+  <!-- Instruction Panel -->
+  <div class="network-instructions">
+    <div class="inst-left">
+      <h3>วิธีใช้งานแผนผังใยแมงมุม</h3>
+      <p>คลิกซ้ายและลากเพื่อเลื่อนย้ายโหนดปราชญ์เพื่อจัดรูปทรง | คลิกที่โหนดเพื่อวิเคราะห์ความเชื่อมโยงรอบตัวและแสดงผลคำวิจารณ์ ญัรห์ วัตตะอ์ดีล ด้านล่าง</p>
     </div>
-    <div class="tb-right">
-      <button class="tb-zoom-btn" id="btn-zoom-in" onclick="zoomIn()">ขยาย +</button>
-      <button class="tb-zoom-btn" id="btn-zoom-out" onclick="zoomOut()">ย่อ −</button>
-      <button class="tb-zoom-btn" id="btn-fit" onclick="fitNetwork()">พอดีหน้าจอ</button>
-      <button class="tb-zoom-btn" id="btn-reset" onclick="resetSelection()">ล้างการเลือก</button>
+    <div class="legend-grid">
+      <div class="legend-item">
+        <span class="legend-color color-trans"></span>
+        <span>การส่งผ่านความรู้ (ครู $\rightarrow$ ศิษย์)</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-color color-family"></span>
+        <span>ความสัมพันธ์เชิงเครือญาติ (สายเลือด)</span>
+      </div>
     </div>
   </div>
 
-  <!-- Two-column Workspace -->
-  <div class="it-workspace" id="it-workspace">
+  <!-- Tracer Dashboard Layout -->
+  <div class="tracer-dashboard">
+    
+    <!-- Left Column: grouped scrollable scholar directory -->
+    <div class="narrator-sidebar">
+      <div class="sidebar-header">รายนามปราชญ์ในสายวิชาการ</div>
+      <div class="sidebar-search">
+        <input type="text" class="search-input" id="search-box" placeholder="ค้นหาชื่อนักรายงาน..." oninput="handleSearch()">
+      </div>
+      <div class="sidebar-list" id="sidebar-list">
+        <!-- Dynamic grouped list will render here -->
+      </div>
+    </div>
 
-    <!-- Left: Narrator Panel -->
-    <div class="narrator-panel" id="narrator-panel">
-      <div class="narrator-panel-header">
-        <div class="narrator-panel-title">
-          <h2>รายชื่อผู้รายงาน</h2>
-          <span class="narrator-count-badge">21 ท่าน</span>
+    <!-- Right Column: Canvas Container -->
+    <div class="canvas-wrapper">
+      <canvas id="spiderweb-canvas"></canvas>
+    </div>
+
+  </div>
+
+  <!-- Critique Section -->
+  <div class="critique-section" id="critique-panel">
+    <div class="critique-section-header" id="critique-title">การประเมินสถานะในตำราญัรห์ วัตตะอ์ดีล (Jarh wa al-Ta'dil)</div>
+    
+    <div id="critique-content-area">
+      <div class="critique-grid">
+        
+        <div class="critique-column">
+          <div class="network-column-title" style="text-align: left; color: #059669; margin-left: 0;">คำรับรองและการยกย่อง (Ta'dil - เชิงบวก)</div>
+          <div class="critique-column" id="ta-dil-col">
+            <!-- Dynamic cards -->
+          </div>
         </div>
-        <input
-          type="text"
-          class="narrator-search"
-          id="narrator-search-input"
-          placeholder="ค้นหาชื่อ (ภาษาไทยหรืออาหรับ)…"
-          oninput="handleNarratorSearch()"
-          autocomplete="off"
-        >
-      </div>
-      <div class="narrator-list-scroll" id="narrator-list-scroll">
-        <!-- Populated by JS -->
-      </div>
-    </div>
 
-    <!-- Right: SVG Network -->
-    <div class="network-container" id="network-container">
-      <svg id="isnad-svg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <marker id="arr-std" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-            <polygon points="0 0, 8 3, 0 6" class="arr-fill-std"/>
-          </marker>
-          <marker id="arr-fam" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-            <polygon points="0 0, 8 3, 0 6" class="arr-fill-fam"/>
-          </marker>
-          <marker id="arr-active" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-            <polygon points="0 0, 8 3, 0 6" class="arr-fill-active"/>
-          </marker>
-        </defs>
-        <g id="net-g"></g>
-      </svg>
-    </div>
-
-  </div><!-- /.it-workspace -->
-
-  <!-- Detail Panel (slides up on select) -->
-  <div class="detail-panel" id="detail-panel">
-    <div class="dp-header">
-      <div class="dp-header-main">
-        <div class="dp-name-ar" id="dp-name-ar" lang="ar" dir="rtl">اسم العالم</div>
-        <div class="dp-name-th" id="dp-name-th">ชื่อนักปราชญ์</div>
-        <div class="dp-meta">
-          <span class="dp-era-badge" id="dp-era-badge">ยุคสมัย</span>
-          <span class="dp-death" id="dp-death"></span>
+        <div class="critique-column">
+          <div class="network-column-title" style="text-align: left; color: #dc2626; margin-left: 0;">ข้อท้วงติงและข้อวิจารณ์ (Jarh - เชิงลบ)</div>
+          <div class="critique-column" id="jarh-col">
+            <!-- Dynamic cards -->
+          </div>
         </div>
-      </div>
-      <button class="dp-close-btn" onclick="closeDetailPanel()">✕ ปิด</button>
-    </div>
-    <div class="dp-body">
-      <div class="dp-bio-col">
-        <div class="dp-section-title">ชีวประวัติ</div>
-        <div class="dp-bio" id="dp-bio"></div>
-      </div>
-      <div id="dp-tadil-col">
-        <div class="dp-section-title pos-title">คำรับรอง (ตะอ์ดีล)</div>
-        <div id="dp-tadil-items"></div>
-      </div>
-      <div id="dp-jarh-col">
-        <div class="dp-section-title neg-title">ข้อท้วงติง (ญัรห์)</div>
-        <div id="dp-jarh-items"></div>
-      </div>
-      <div>
-        <div class="dp-section-title">ครูอาจารย์และลูกศิษย์</div>
-        <div class="dp-connections" id="dp-connections"></div>
-      </div>
-      <div>
-        <div class="dp-section-title">อิญาซะฮ์</div>
-        <div class="dp-ijazah">อิญาซะฮ์: อยู่ระหว่างการเพิ่มข้อมูล</div>
+
       </div>
     </div>
-  </div><!-- /.detail-panel -->
+  </div>
 
 </div>
 </main>
 
+<!-- Drawer Modal Component -->
+<div class="it-drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
+  <div class="it-drawer" id="drawer-panel" onclick="event.stopPropagation()">
+    <div class="drawer-header">
+      <div class="drawer-header-info">
+        <span class="drawer-gen" id="d-gen">เศาะหาบะฮ์</span>
+        <span class="drawer-name-th" id="d-name-th">ชื่อผู้รายงาน</span>
+        <span class="drawer-name-ar" id="d-name-ar" lang="ar" dir="rtl">الاسم</span>
+      </div>
+      <button class="btn-close-drawer" onclick="closeDrawer()">✕</button>
+    </div>
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <div class="drawer-section-title">ข้อมูลชีวประวัติ</div>
+        <div class="drawer-data-item" id="d-bio">ข้อมูล...</div>
+      </div>
+      <div class="drawer-section">
+        <div class="drawer-section-title">ปีที่เสียชีวิต</div>
+        <div class="drawer-data-item" id="d-death">ฮ.ศ. - / ค.ศ. -</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="footer-placeholder"></div>
 <script src="../../main.js"></script>
 <script>
-/* ══════════════════════════════════════════════════════════════════
-   21 Scholars Database — DO NOT ALTER SCHOLARSHIP DATA
-   ══════════════════════════════════════════════════════════════════ */
+/* ─── 21 Scholars Database ─── */
 const SCHOLAR_DB = [
   {
     id: "prophet",
@@ -837,7 +686,7 @@ const SCHOLAR_DB = [
     nameAr: "عطاء بن أبي رباح",
     death: "เสียชีวิตปี ฮ.ศ. 114 / ค.ศ. 732",
     gen: "ตาบิอีนรุ่นใหญ่",
-    bio: "ปราชญ์ฟิกฮ์และมุฟตีประจำนครมักกะฮ์ในยุคตาบิอีนอาวุโส อบูมุหัมมัด เป็นทายาทวิชาการที่สืบทอดความรู้จากท่านอับดุลลอฮ์ อิบนุ อับบาส และอบูฮุร็อยเราะฮ์โดยตรง ได้รับการยกย่องว่าเที่ยงธรรมและเป็นเอกด้านวิชานิตินัย",
+    bio: "ปราชญ์ฟิกฮ์และมุฟตีประจำนครมักกะฮ์ในยุคตาบิอีนอาวุโส อบูมุหัมมัด เป็นทายาทวิชาการที่สืบทอดความรู้จากท่านอับดุลลอฮ์ อิบนุ อับบาส และอบูฮุร็อยเราะฮ์โดยตรง ได้รับการยอมรับสูงสุดในความเที่ยงตรงของการสืบทอดสายวิชา",
     teachers: ["abu_hurayrah", "umar"],
     students: ["abu_hanifah", "ibn_lahiah", "yazid_bin_abi_habib"],
     family: [],
@@ -912,7 +761,7 @@ const SCHOLAR_DB = [
     nameAr: "محمد بن إسحاق",
     death: "เสียชีวิตปี ฮ.ศ. 151 / ค.ศ. 768",
     gen: "ตาบิอิตตาบิอีน",
-    bio: "มุหัมมัด อิบนุ อิสหาก อบูอับดิลลาฮ์ ปราชญ์ผู้ประพันธ์ตำราชีวประวัตินบีและการศึกยุคปฐมภูมิ (มะฆอซี) ได้รับการประเมินสถานะในระบบหะดีษอย่างถกเถียงในเชิงการสกัดข้อกฎหมาย แต่ได้รับการยอมรับสูงสุดในเชิงประวัติศาสตร์",
+    bio: "มุหัมมัด อิบนุ อิสหาก อิบนุ ยะซาร อบูกุศ็อยมะฮ์ ปราชญ์ผู้ประพันธ์ตำราชีวประวัตินบีและการศึกยุคปฐมภูมิ (มะฆอซี) ได้รับการประเมินสถานะในระบบหะดีษอย่างถกเถียงในเชิงการสกัดข้อกฎหมาย แต่ได้รับการยอมรับสูงสุดในเชิงประวัติศาสตร์",
     teachers: ["ibn_shihab_al_zuhri"],
     students: ["ibn_hisham"],
     family: [],
@@ -929,7 +778,7 @@ const SCHOLAR_DB = [
     nameAr: "أبو حنيفة النعمان",
     death: "เสียชีวิตปี ฮ.ศ. 150 / ค.ศ. 767",
     gen: "อัครปราชญ์ฟิกฮ์",
-    bio: "ปราชญ์ผู้สถาปนาสำนักคิดฟิกฮ์หะนะฟีย์ อภิปราชญ์ผู้สร้างความเปลี่ยนแปลงด้วยการนำหลักตรรกะเทียบเคียง (กิยาส) มาเป็นรากฐานการสกัดข้อกฎหมาย แต่ในด้านสายรายงานท่องจำหะดีษเชิงความจำพยัญชนะเดี่ยวมีข้อบกพร่องตามเกณฑ์หะดีษโบราณ",
+    bio: "ปราชญ์ผู้สถาปนาสำนักคิดฟิกฮ์หะนะฟีย์ อภิปราชญ์ผู้สร้างความเปลี่ยนแปลงด้วยการนำหลักตรรกะเทียบเคียง (กิยาส) มาเป็นรากฐานการสกัดข้อกฎหมาย ทว่าในด้านสายรายงานท่องจำหะดีษเชิงความจำพยัญชนะเดี่ยวมีข้อบกพร่องตามเกณฑ์หะดีษโบราณ",
     teachers: ["hammad_bin_abi_sulaiman", "ata_bin_abi_rabah"],
     students: ["abu_yusuf", "muhammad_al_shaybani", "ibn_al_mubarak"],
     family: [],
@@ -1092,6 +941,7 @@ const SCHOLAR_DB = [
     ],
     jarh: []
   },
+  // Relatives & Helpers not in Main Selection but needed to complete the web
   {
     id: "abu_yusuf",
     nameTh: "กอฎี อบูยูสุฟ",
@@ -1159,695 +1009,663 @@ const SCHOLAR_DB = [
   }
 ];
 
-/* ══════════════════════════════════════════════════════════════════
-   Lookup & helpers
-   ══════════════════════════════════════════════════════════════════ */
+/* Merge helper nodes into the same access list for quick lookups */
 const SCHOLAR_LOOKUP = {};
-SCHOLAR_DB.forEach(s => { SCHOLAR_LOOKUP[s.id] = s; });
+SCHOLAR_DB.forEach(s => {
+  SCHOLAR_LOOKUP[s.id] = s;
+});
 
-const GRAND_IMAMS = new Set(['bukhari', 'muslim', 'shafi_i', 'ahmad', 'malik']);
+/* ─── Physics Simulation Engine ─── */
+const canvas = document.getElementById('spiderweb-canvas');
+const ctx = canvas.getContext('2d');
 
-const GEN_COLORS = {
-  "บรมศาสดา":              "#d4af37",
-  "เศาะหาบะฮ์":            "#2563eb",
-  "เศาะหาบะฮ์รุ่นเยาว์":  "#3b82f6",
-  "ตาบิอีนรุ่นใหญ่":       "#10b981",
-  "ตาบิอีนรุ่นกลาง":       "#059669",
-  "ตาบิอีนรุ่นเล็ก":       "#047857",
-  "ตาบิอิตตาบิอีน":        "#8b5cf6",
-  "ตาบิอิตตาบิอีนรุ่นใหญ่":"#7c3aed",
-  "อัครปราชญ์ฟิกฮ์":       "#c49a45",
-  "ประมุขวิชาหะดีษ":       "#f59e0b",
-  "กอฎีอียิปต์":           "#14b8a6",
-  "มหาปราชญ์":             "#ec4899",
-  "ศิษย์เอกมาลิก":         "#10b981",
-  "ปราชญ์อาวุโส":          "#f97316",
-  "เสาหลักฮิญาซ":          "#06b6d4",
-  "เสาหลักนิติศาสตร์":     "#3b82f6",
-  "เสาหลักซุนนะฮ์":        "#b91c1c",
-  "อัครปราชญ์หะดีษ":       "#c49a45",
-  "ผู้สืบทอดตำรา":         "#6b7280"
+let width = canvas.offsetWidth || 1000;
+let height = canvas.offsetHeight || 600;
+canvas.width = width;
+canvas.height = height;
+
+// Simulation variables
+const nodes = [];
+const links = [];
+const familyLinks = [];
+let selectedNode = null;
+let hoveredNode = null;
+let draggedNode = null;
+
+const gravity = 0.035;
+const friction = 0.86;
+const repulsionDist = 240;
+const targetLinkLength = 170;
+const attractionForce = 0.06;
+
+// Generation parameters
+const GEN_BORDER_COLORS = {
+  "บรมศาสดา": "#d4af37",      // Rich Gold
+  "เศาะหาบะฮ์": "#2563eb",      // Blue
+  "เศาะหาบะฮ์รุ่นเยาว์": "#3b82f6", // Light Blue
+  "ตาบิอีนรุ่นใหญ่": "#10b981",    // Green
+  "ตาบิอีนรุ่นกลาง": "#059669",    // Dark Green
+  "ตาบิอีนรุ่นเล็ก": "#047857",    // Deep Emerald
+  "ตาบิอิตตาบิอีน": "#8b5cf6",    // Purple
+  "ตาบิอิตตาบิอีนรุ่นใหญ่": "#7c3aed", // Deep Purple
+  "อัครปราชญ์ฟิกฮ์": "#c49a45",   // IFP Gold
+  "ประมุขวิชาหะดีษ": "#f59e0b",   // Amber
+  "กอฎีอียิปต์": "#14b8a6",       // Teal
+  "มหาปราชญ์": "#ec4899",        // Pink
+  "ศิษย์เอกมาลิก": "#10b981",      // Green
+  "ปราชญ์อาวุโส": "#f97316",      // Orange
+  "เสาหลักฮิญาซ": "#06b6d4",      // Cyan
+  "เสาหลักนิติศาสตร์": "#3b82f6",  // Blue
+  "เสาหลักซุนนะฮ์": "#b91c1c",    // Red
+  "อัครปราชญ์หะดีษ": "#c49a45",   // Gold
+  "ผู้สืบทอดตำรา": "#6b7280"      // Gray
 };
 
-const ERA_GROUPS = [
-  { label: "ยุคเศาะหาบะฮ์", gens: ["บรมศาสดา", "เศาะหาบะฮ์", "เศาะหาบะฮ์รุ่นเยาว์"] },
-  { label: "ยุคตาบิอีน", gens: ["ตาบิอีนรุ่นใหญ่", "ตาบิอีนรุ่นกลาง", "ตาบิอีนรุ่นเล็ก", "กอฎีอียิปต์"] },
-  { label: "ยุคตาบิอิตตาบิอีน", gens: ["ตาบิอิตตาบิอีน", "ตาบิอิตตาบิอีนรุ่นใหญ่", "ศิษย์เอกมาลิก", "ผู้สืบทอดตำรา"] },
-  { label: "อัครปราชญ์", gens: [] }
-];
+/* Initialize Physics Nodes & Links */
+function initSimulation() {
+  // Clear lists
+  nodes.length = 0;
+  links.length = 0;
+  familyLinks.length = 0;
 
-function deathCompact(death) {
-  const m = death.match(/ฮ\.ศ\.\s*(\d+)/);
-  return m ? 'ฮ.ศ. ' + m[1] : death.split(' / ')[0].replace('เสียชีวิตปี ', '');
-}
-
-function isDisputed(scholar) {
-  return scholar.jarh && scholar.jarh.length > 0;
-}
-
-/* ══════════════════════════════════════════════════════════════════
-   BFS Layout
-   ══════════════════════════════════════════════════════════════════ */
-function computeLayout(scholars, lookup) {
-  const levels = { prophet: 0 };
-  const queue = ['prophet'];
-  const visited = new Set(['prophet']);
-  while (queue.length) {
-    const id = queue.shift();
-    const s = lookup[id];
-    if (!s) continue;
-    s.students.forEach(sid => {
-      if (!visited.has(sid)) {
-        visited.add(sid);
-        levels[sid] = levels[id] + 1;
-        queue.push(sid);
-      }
-    });
-  }
-  scholars.forEach(s => {
-    if (!(s.id in levels)) {
-      let ml = 0;
-      s.teachers.forEach(tid => { if (tid in levels) ml = Math.max(ml, levels[tid] + 1); });
-      levels[s.id] = ml || 1;
-    }
-  });
-
-  const byLevel = {};
-  Object.entries(levels).forEach(([id, lv]) => {
-    byLevel[lv] = byLevel[lv] || [];
-    byLevel[lv].push(id);
-  });
-
-  const NODE_H_GAP = 70;
-  const LEVEL_GAP = 160;
-  const MARGIN_Y = 80;
-
-  const nodeWidth = id => {
-    const s = lookup[id];
-    if (!s) return 160;
-    return Math.max(110, s.nameAr.length * 11 + 28);
-  };
-
-  const positions = {};
-  Object.entries(byLevel).forEach(([lv, ids]) => {
-    const totalW = ids.reduce((sum, id) => sum + nodeWidth(id), 0) + (ids.length - 1) * NODE_H_GAP;
-    let cx = -totalW / 2;
-    ids.forEach(id => {
-      const nw = nodeWidth(id);
-      positions[id] = { x: cx + nw / 2, y: parseInt(lv) * LEVEL_GAP + MARGIN_Y, lv: parseInt(lv) };
-      cx += nw + NODE_H_GAP;
+  // Create Node objects
+  SCHOLAR_DB.forEach((s, idx) => {
+    const angle = (idx / SCHOLAR_DB.length) * Math.PI * 2;
+    const radius = 220 + Math.random() * 60;
+    nodes.push({
+      id: s.id,
+      nameTh: s.nameTh.replace(' เราะหิมะฮ์ลุลลอฮ์', '').replace('เราะฎิยัลลอฮุอันฮุ', '').replace('เราะฎิยัลลอฮุอันฮา', ''),
+      nameAr: s.nameAr,
+      gen: s.gen,
+      death: s.death.split(' / ')[0].replace('เสียชีวิตปี ', ''),
+      radius: 46,
+      mass: 1.0,
+      x: width / 2 + Math.cos(angle) * radius,
+      y: height / 2 + Math.sin(angle) * radius,
+      vx: 0,
+      vy: 0,
+      fx: 0,
+      fy: 0
     });
   });
 
-  return { positions, byLevel, nodeWidth };
-}
-
-/* ══════════════════════════════════════════════════════════════════
-   SVG Namespace helper
-   ══════════════════════════════════════════════════════════════════ */
-const SVG_NS = 'http://www.w3.org/2000/svg';
-function svgEl(tag, attrs) {
-  const el = document.createElementNS(SVG_NS, tag);
-  if (attrs) {
-    Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
-  }
-  return el;
-}
-
-/* ══════════════════════════════════════════════════════════════════
-   Global SVG state
-   ══════════════════════════════════════════════════════════════════ */
-let tf = { x: 0, y: 0, scale: 1 };
-let SVG_W = 2800;
-let SVG_H = 1400;
-let selectedId = null;
-let nodeElements = {}; // id -> { g, text, underline, bg }
-let edgeElements = []; // { el, sourceId, targetId, isFam }
-
-function applyTF() {
-  document.getElementById('net-g').setAttribute('transform',
-    `translate(${tf.x},${tf.y}) scale(${tf.scale})`);
-}
-
-/* ══════════════════════════════════════════════════════════════════
-   Build SVG network
-   ══════════════════════════════════════════════════════════════════ */
-function buildNetwork() {
-  const container = document.getElementById('network-container');
-  const { positions, byLevel, nodeWidth } = computeLayout(SCHOLAR_DB, SCHOLAR_LOOKUP);
-
-  // Compute SVG bounds
-  let maxX = 0, maxY = 0;
-  Object.values(positions).forEach(p => {
-    const w = nodeWidth;
-    maxX = Math.max(maxX, Math.abs(p.x) + 200);
-    maxY = Math.max(maxY, p.y + 100);
-  });
-  SVG_W = maxX * 2 + 200;
-  SVG_H = maxY + 120;
-
-  const netG = document.getElementById('net-g');
-  netG.innerHTML = '';
-  nodeElements = {};
-  edgeElements = [];
-
-  // Center offset: shift all positions by SVG_W/2 so x=0 maps to center
-  const cx = SVG_W / 2;
-
-  // ── Draw edges first (behind nodes) ──
-  const edgesG = svgEl('g', { class: 'edges-layer' });
-  netG.appendChild(edgesG);
-
+  // Create Links based on Teachers/Students & Family relations
   SCHOLAR_DB.forEach(s => {
-    // Transmission edges
     s.students.forEach(studId => {
-      if (!positions[s.id] || !positions[studId]) return;
-      const p1 = positions[s.id];
-      const p2 = positions[studId];
-      const x1 = p1.x + cx;
-      const y1 = p1.y;
-      const x2 = p2.x + cx;
-      const y2 = p2.y;
-      // Cubic bezier: control points bend downward
-      const cy1 = y1 + 60;
-      const cy2 = y2 - 60;
-      const d = `M ${x1} ${y1} C ${x1} ${cy1}, ${x2} ${cy2}, ${x2} ${y2}`;
-      const path = svgEl('path', {
-        d,
-        class: 'sn-edge sn-edge-std',
-        'marker-end': 'url(#arr-std)'
-      });
-      edgesG.appendChild(path);
-      edgeElements.push({ el: path, sourceId: s.id, targetId: studId, isFam: false });
+      links.push({ source: s.id, target: studId });
     });
-
-    // Family edges
     s.family.forEach(fam => {
-      if (!positions[s.id] || !positions[fam.id]) return;
-      const p1 = positions[s.id];
-      const p2 = positions[fam.id];
-      const x1 = p1.x + cx;
-      const y1 = p1.y;
-      const x2 = p2.x + cx;
-      const y2 = p2.y;
-      const midX = (x1 + x2) / 2;
-      const midY = (y1 + y2) / 2 - 30;
-      const d = `M ${x1} ${y1} Q ${midX} ${midY}, ${x2} ${y2}`;
-      const path = svgEl('path', {
-        d,
-        class: 'sn-edge sn-edge-fam',
-        'marker-end': 'url(#arr-fam)'
-      });
-      edgesG.appendChild(path);
-      edgeElements.push({ el: path, sourceId: s.id, targetId: fam.id, isFam: true });
+      familyLinks.push({ source: s.id, target: fam.id, relation: fam.relation });
     });
   });
+}
 
-  // ── Draw nodes ──
-  const nodesG = svgEl('g', { class: 'nodes-layer' });
-  netG.appendChild(nodesG);
+/* Group and Render Sidebar List */
+function renderSidebar() {
+  const sidebar = document.getElementById('sidebar-list');
+  sidebar.innerHTML = '';
 
+  // Group by generation type
+  const groups = {};
   SCHOLAR_DB.forEach(s => {
-    if (!positions[s.id]) return;
-    const p = positions[s.id];
-    const nx = p.x + cx;
-    const ny = p.y;
-    const nw = nodeWidth(s.id);
-    const nh = 36;
-    const halfW = nw / 2;
+    const isPrimary = ["prophet", "umar", "abu_hurayrah", "ibn_umar", "ata_bin_abi_rabah", "yazid_bin_abi_habib", "ibn_shihab_al_zuhri", "qatadah", "hammad_bin_abi_sulaiman", "ibn_ishaq", "abu_hanifah", "shubah", "ibn_lahiah", "ibn_al_mubarak", "ibn_wahb", "qutaybah_bin_said", "malik", "shafi_i", "ahmad", "bukhari", "muslim"].includes(s.id);
+    if (!isPrimary) return;
 
-    const g = svgEl('g', {
-      class: 'sn-node',
-      'data-id': s.id,
-      transform: `translate(${nx}, ${ny})`
-    });
-
-    // Invisible click target
-    const bg = svgEl('rect', {
-      class: 'sn-node-bg',
-      x: -halfW,
-      y: -nh / 2,
-      width: nw,
-      height: nh,
-      rx: '4'
-    });
-    g.appendChild(bg);
-
-    // Arabic label
-    let textClass = 'sn-node-text';
-    if (s.id === 'prophet') textClass += ' is-prophet';
-    else if (GRAND_IMAMS.has(s.id)) textClass += ' is-grand-imam';
-    else if (isDisputed(s)) textClass += ' is-disputed';
-
-    const text = svgEl('text', {
-      class: textClass,
-      'font-family': 'Amiri, serif',
-      'font-size': s.id === 'prophet' ? '20' : '17',
-      'font-weight': (s.id === 'prophet' || GRAND_IMAMS.has(s.id)) ? '700' : '400',
-      'text-anchor': 'middle',
-      'dominant-baseline': 'middle',
-      lang: 'ar',
-      direction: 'rtl',
-      x: '0',
-      y: '0'
-    });
-    text.textContent = s.nameAr;
-    g.appendChild(text);
-
-    // Underline decoration
-    const underline = svgEl('line', {
-      class: 'sn-node-underline',
-      x1: -halfW + 4,
-      y1: nh / 2 - 2,
-      x2: halfW - 4,
-      y2: nh / 2 - 2
-    });
-    g.appendChild(underline);
-
-    // Interaction
-    g.addEventListener('mouseenter', () => {
-      if (selectedId !== s.id) {
-        g.classList.add('is-hovered');
-      }
-    });
-    g.addEventListener('mouseleave', () => {
-      g.classList.remove('is-hovered');
-    });
-    g.addEventListener('click', (e) => {
-      e.stopPropagation();
-      selectScholar(s.id);
-    });
-
-    nodesG.appendChild(g);
-    nodeElements[s.id] = { g, text, underline, bg };
-  });
-
-  // Click on SVG background deselects
-  document.getElementById('isnad-svg').addEventListener('click', () => {
-    if (selectedId) {
-      deselectAll();
+    let groupName = "ยุคผู้รวบรวมและศิษย์";
+    if (s.gen === "บรมศาสดา" || s.gen === "เศาะหาบะฮ์" || s.gen === "เศาะหาบะฮ์รุ่นเยาว์") {
+      groupName = "ยุคบรมศาสดา & เศาะหาบะฮ์";
+    } else if (s.gen.includes("ตาบิอีน")) {
+      groupName = "ยุคตาบิอีน (ศิษย์เศาะหาบะฮ์)";
+    } else if (s.gen === "ตาบิอิตตาบิอีน" || s.gen === "อัครปราชญ์ฟิกฮ์" || s.gen === "ประมุขวิชาหะดีษ" || s.gen === "กอฎีอียิปต์" || s.gen === "มหาปราชญ์" || s.gen === "เสาหลักฮิญาซ") {
+      groupName = "ยุคตาบิอิตตาบิอีน";
     }
+
+    if (!groups[groupName]) groups[groupName] = [];
+    groups[groupName].push(s);
   });
 
-  // Initial fit
-  fitNetwork();
-}
-
-/* ══════════════════════════════════════════════════════════════════
-   Selection & highlight logic
-   ══════════════════════════════════════════════════════════════════ */
-function selectScholar(id) {
-  selectedId = id;
-
-  // BFS reachability from selected node (teachers + students)
-  const reachable = new Set([id]);
-  const q = [id];
-  while (q.length) {
-    const cur = q.shift();
-    const s = SCHOLAR_LOOKUP[cur];
-    if (!s) continue;
-    [...s.teachers, ...s.students, ...s.family.map(f => f.id)].forEach(nid => {
-      if (!reachable.has(nid)) {
-        reachable.add(nid);
-        q.push(nid);
-      }
-    });
-  }
-
-  // Update nodes
-  Object.entries(nodeElements).forEach(([nid, els]) => {
-    els.g.classList.remove('is-selected', 'is-hovered', 'is-faded');
-    if (nid === id) {
-      els.g.classList.add('is-selected');
-      els.text.classList.add('is-selected');
-    } else if (reachable.has(nid)) {
-      els.text.classList.remove('is-selected');
-    } else {
-      els.g.classList.add('is-faded');
-      els.text.classList.remove('is-selected');
-    }
-  });
-
-  // Update edges
-  edgeElements.forEach(({ el, sourceId, targetId, isFam }) => {
-    el.classList.remove('is-faded', 'is-active-std', 'is-active-fam');
-    const connected = reachable.has(sourceId) && reachable.has(targetId);
-    if (!connected) {
-      el.classList.add('is-faded');
-      el.setAttribute('marker-end', isFam ? 'url(#arr-fam)' : 'url(#arr-std)');
-    } else {
-      el.classList.add(isFam ? 'is-active-fam' : 'is-active-std');
-      el.setAttribute('marker-end', 'url(#arr-active)');
-    }
-  });
-
-  // Narrator panel
-  setNarratorSelected(id);
-
-  // Detail panel
-  showDetailPanel(id);
-}
-
-function deselectAll() {
-  selectedId = null;
-  Object.entries(nodeElements).forEach(([nid, els]) => {
-    els.g.classList.remove('is-selected', 'is-hovered', 'is-faded');
-    els.text.classList.remove('is-selected');
-  });
-  edgeElements.forEach(({ el, isFam }) => {
-    el.classList.remove('is-faded', 'is-active-std', 'is-active-fam');
-    el.setAttribute('marker-end', isFam ? 'url(#arr-fam)' : 'url(#arr-std)');
-  });
-  document.querySelectorAll('.narrator-item').forEach(el => el.classList.remove('is-selected'));
-  closeDetailPanel();
-}
-
-function resetSelection() {
-  deselectAll();
-}
-
-/* ══════════════════════════════════════════════════════════════════
-   Narrator Panel
-   ══════════════════════════════════════════════════════════════════ */
-function buildNarratorPanel() {
-  const scroll = document.getElementById('narrator-list-scroll');
-  scroll.innerHTML = '';
-
-  const knownGens = new Set();
-  ERA_GROUPS.slice(0, 3).forEach(eg => eg.gens.forEach(g => knownGens.add(g)));
-
-  ERA_GROUPS.forEach((era, eraIdx) => {
-    let scholars;
-    if (eraIdx < 3) {
-      scholars = SCHOLAR_DB.filter(s => era.gens.includes(s.gen));
-    } else {
-      scholars = SCHOLAR_DB.filter(s => !knownGens.has(s.gen));
-    }
-    if (scholars.length === 0) return;
-
-    const group = document.createElement('div');
-    group.className = 'narrator-era-group';
-    group.dataset.era = era.label;
-
-    const label = document.createElement('span');
-    label.className = 'narrator-era-label';
-    label.textContent = era.label;
-    group.appendChild(label);
+  // Render group templates
+  for (const [groupName, scholars] of Object.entries(groups)) {
+    const groupDiv = document.createElement('div');
+    groupDiv.className = 'sidebar-gen-group';
+    groupDiv.innerHTML = `<div class="sidebar-gen-title">${groupName}</div>`;
 
     scholars.forEach(s => {
       const item = document.createElement('div');
-      item.className = 'narrator-item';
-      item.dataset.id = s.id;
-      item.dataset.nameTh = s.nameTh.toLowerCase();
-      item.dataset.nameAr = s.nameAr;
-
-      const dotColor = GEN_COLORS[s.gen] || '#888';
-      const dot = document.createElement('span');
-      dot.className = 'narrator-item-dot';
-      dot.style.background = dotColor;
-
-      const info = document.createElement('div');
-      info.className = 'narrator-item-info';
-
-      const arEl = document.createElement('div');
-      arEl.className = 'narrator-item-ar';
-      arEl.setAttribute('lang', 'ar');
-      arEl.setAttribute('dir', 'rtl');
-      arEl.textContent = s.nameAr;
-
-      const metaEl = document.createElement('div');
-      metaEl.className = 'narrator-item-meta';
-      metaEl.textContent = deathCompact(s.death);
-
-      info.appendChild(arEl);
-      info.appendChild(metaEl);
-      item.appendChild(dot);
-      item.appendChild(info);
-
-      item.addEventListener('click', () => { selectScholar(s.id); });
-      group.appendChild(item);
+      item.className = 'sidebar-item';
+      item.id = `sidebar-item-${s.id}`;
+      item.onclick = () => selectScholarFromSidebar(s.id);
+      
+      const cleanName = s.nameTh.replace(' เราะหิมะฮ์ลุลลอฮ์', '').replace('เราะฎิยัลลอฮุอันฮุ', '');
+      item.innerHTML = `
+        <div class="sidebar-item-info">
+          <span class="sidebar-item-name">${cleanName}</span>
+          <span class="sidebar-item-death">${s.death.split(' / ')[0]}</span>
+        </div>
+        <span class="sidebar-item-badge" style="background: rgba(196, 154, 69, 0.1); color: var(--accent-color);">${s.gen.replace('รุ่นใหญ่','').replace('รุ่นกลาง','').replace('รุ่นเล็ก','')}</span>
+      `;
+      groupDiv.appendChild(item);
     });
 
-    scroll.appendChild(group);
+    sidebar.appendChild(groupDiv);
+  }
+}
+
+/* Focus and Select Node from Sidebar clicks */
+function selectScholarFromSidebar(id) {
+  // Update sidebar active classes
+  const items = document.querySelectorAll('.sidebar-item');
+  items.forEach(el => el.classList.remove('active'));
+  
+  const activeItem = document.getElementById(`sidebar-item-${id}`);
+  if (activeItem) activeItem.classList.add('active');
+
+  // Highlight and focus node in physics canvas
+  const node = nodes.find(n => n.id === id);
+  if (node) {
+    selectedNode = node;
+    node.vx += (Math.random() - 0.5) * 8;
+    node.vy += (Math.random() - 0.5) * 8;
+    
+    loadCritique(id);
+    openDrawer(id);
+  }
+}
+
+/* Tick Physics Loop */
+function tick() {
+  const center = { x: width / 2, y: height / 2 };
+
+  if (canvas.offsetWidth > 0 && canvas.offsetHeight > 0 && (width !== canvas.offsetWidth || height !== canvas.offsetHeight)) {
+    width = canvas.offsetWidth;
+    height = canvas.offsetHeight;
+    canvas.width = width;
+    canvas.height = height;
+  }
+
+  // 1. Reset forces & apply center gravity
+  nodes.forEach(node => {
+    node.fx = (center.x - node.x) * gravity;
+    node.fy = (center.y - node.y) * gravity;
+  });
+
+  // 2. Repulsion between all nodes
+  for (let i = 0; i < nodes.length; i++) {
+    const nodeA = nodes[i];
+    for (let j = i + 1; j < nodes.length; j++) {
+      const nodeB = nodes[j];
+      const dx = nodeB.x - nodeA.x;
+      const dy = nodeB.y - nodeA.y;
+      const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
+      
+      if (dist < repulsionDist) {
+        const force = (repulsionDist - dist) * 0.18;
+        const fx = (dx / dist) * force;
+        const fy = (dy / dist) * force;
+        nodeA.fx -= fx;
+        nodeA.fy -= fy;
+        nodeB.fx += fx;
+        nodeB.fy += fy;
+      }
+    }
+  }
+
+  // 3. Attraction forces along Scholastic Links
+  links.forEach(link => {
+    const nodeA = nodes.find(n => n.id === link.source);
+    const nodeB = nodes.find(n => n.id === link.target);
+    if (!nodeA || !nodeB) return;
+
+    const dx = nodeB.x - nodeA.x;
+    const dy = nodeB.y - nodeA.y;
+    const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
+    const force = (dist - targetLinkLength) * attractionForce;
+    const fx = (dx / dist) * force;
+    const fy = (dy / dist) * force;
+
+    nodeA.fx += fx;
+    nodeA.fy += fy;
+    nodeB.fx -= fx;
+    nodeB.fy -= fy;
+  });
+
+  // 4. Attraction forces along Family Links
+  familyLinks.forEach(link => {
+    const nodeA = nodes.find(n => n.id === link.source);
+    const nodeB = nodes.find(n => n.id === link.target);
+    if (!nodeA || !nodeB) return;
+
+    const dx = nodeB.x - nodeA.x;
+    const dy = nodeB.y - nodeA.y;
+    const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
+    const force = (dist - targetLinkLength * 0.9) * attractionForce * 0.7; // slightly tighter link
+    const fx = (dx / dist) * force;
+    const fy = (dy / dist) * force;
+
+    nodeA.fx += fx;
+    nodeA.fy += fy;
+    nodeB.fx -= fx;
+    nodeB.fy -= fy;
+  });
+
+  // 5. Update positions & check boundaries
+  nodes.forEach(node => {
+    if (node === draggedNode) {
+      node.vx = 0;
+      node.vy = 0;
+    } else {
+      node.vx += node.fx;
+      node.vy += node.fy;
+      node.vx *= friction;
+      node.vy *= friction;
+      node.x += node.vx;
+      node.y += node.vy;
+    }
+
+    // Border constraints
+    node.x = Math.max(node.radius + 10, Math.min(width - node.radius - 10, node.x));
+    node.y = Math.max(node.radius + 10, Math.min(height - node.radius - 10, node.y));
   });
 }
 
-function setNarratorSelected(id) {
-  document.querySelectorAll('.narrator-item').forEach(el => {
-    el.classList.toggle('is-selected', el.dataset.id === id);
-  });
-  const sel = document.querySelector(`.narrator-item[data-id="${id}"]`);
-  if (sel) sel.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-  updateEraGroupVisibility();
+/* Check relationship between A and B */
+function isRelated(nodeA, nodeB) {
+  if (nodeA.id === nodeB.id) return true;
+  
+  // Is student/teacher?
+  const hasLink = links.some(l => 
+    (l.source === nodeA.id && l.target === nodeB.id) ||
+    (l.source === nodeB.id && l.target === nodeA.id)
+  );
+  if (hasLink) return true;
+
+  // Is family?
+  const hasFam = familyLinks.some(l => 
+    (l.source === nodeA.id && l.target === nodeB.id) ||
+    (l.source === nodeB.id && l.target === nodeA.id)
+  );
+  return hasFam;
 }
 
-function handleNarratorSearch() {
-  const term = document.getElementById('narrator-search-input').value.trim().toLowerCase();
-  document.querySelectorAll('.narrator-item').forEach(el => {
-    const matchTh = el.dataset.nameTh && el.dataset.nameTh.includes(term);
-    const matchAr = el.dataset.nameAr && el.dataset.nameAr.includes(term);
-    el.classList.toggle('hidden', !(!term || matchTh || matchAr));
-  });
-  updateEraGroupVisibility();
+/* Get Color Variables Dynamically */
+function getThemeColors() {
+  const isDark = document.documentElement.classList.contains('dark-mode');
+  return {
+    nodeBg: isDark ? '#141d26' : '#ffffff',
+    nodeBorderDefault: isDark ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.12)',
+    nodeText: isDark ? '#f0f4f8' : '#1c2833',
+    nodeTextSub: isDark ? '#a6b8c7' : '#566573',
+    edgeDefault: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)',
+    edgeActive: '#c49a45',
+    edgeFamily: isDark ? 'rgba(225, 29, 72, 0.45)' : 'rgba(225, 29, 72, 0.35)', // elegant soft rose-red for family bonds
+    accent: '#c49a45'
+  };
 }
 
-function updateEraGroupVisibility() {
-  document.querySelectorAll('.narrator-era-group').forEach(group => {
-    const visible = group.querySelectorAll('.narrator-item:not(.hidden)');
-    group.classList.toggle('all-hidden', visible.length === 0);
+/* Draw Canvas Frame */
+function draw() {
+  ctx.clearRect(0, 0, width, height);
+  const colors = getThemeColors();
+  const activeFocus = hoveredNode || selectedNode;
+
+  // 1. Draw Scholastic Transmission Links
+  links.forEach(link => {
+    const nodeA = nodes.find(n => n.id === link.source);
+    const nodeB = nodes.find(n => n.id === link.target);
+    if (!nodeA || !nodeB) return;
+
+    let isActive = false;
+    let isFaint = false;
+
+    if (activeFocus) {
+      if ((activeFocus.id === nodeA.id && activeFocus.id !== nodeB.id) || 
+          (activeFocus.id === nodeB.id && activeFocus.id !== nodeA.id)) {
+        isActive = true;
+      } else {
+        isFaint = true;
+      }
+    }
+
+    ctx.beginPath();
+    ctx.moveTo(nodeA.x, nodeA.y);
+    ctx.lineTo(nodeB.x, nodeB.y);
+    ctx.lineWidth = isActive ? 2.5 : 1.2;
+    ctx.strokeStyle = isActive ? colors.edgeActive : (isFaint ? 'rgba(100,100,100,0.02)' : colors.edgeDefault);
+    ctx.stroke();
+
+    // Draw Arrowhead along transmission link
+    if (!isFaint || isActive) {
+      const angle = Math.atan2(nodeB.y - nodeA.y, nodeB.x - nodeA.x);
+      const arrowX = nodeB.x - (nodeB.radius + 3) * Math.cos(angle);
+      const arrowY = nodeB.y - (nodeB.radius + 3) * Math.sin(angle);
+      
+      ctx.beginPath();
+      ctx.moveTo(arrowX, arrowY);
+      ctx.lineTo(arrowX - 8 * Math.cos(angle - Math.PI / 6), arrowY - 8 * Math.sin(angle - Math.PI / 6));
+      ctx.lineTo(arrowX - 8 * Math.cos(angle + Math.PI / 6), arrowY - 8 * Math.sin(angle + Math.PI / 6));
+      ctx.closePath();
+      ctx.fillStyle = isActive ? colors.edgeActive : (isFaint ? 'rgba(100,100,100,0.02)' : colors.edgeDefault);
+      ctx.fill();
+    }
+  });
+
+  // 2. Draw Family/Blood Links (Dashed)
+  familyLinks.forEach(link => {
+    const nodeA = nodes.find(n => n.id === link.source);
+    const nodeB = nodes.find(n => n.id === link.target);
+    if (!nodeA || !nodeB) return;
+
+    let isActive = false;
+    let isFaint = false;
+
+    if (activeFocus) {
+      if ((activeFocus.id === nodeA.id && activeFocus.id !== nodeB.id) || 
+          (activeFocus.id === nodeB.id && activeFocus.id !== nodeA.id)) {
+        isActive = true;
+      } else {
+        isFaint = true;
+      }
+    }
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(nodeA.x, nodeA.y);
+    ctx.lineTo(nodeB.x, nodeB.y);
+    ctx.lineWidth = isActive ? 2.5 : 1.2;
+    ctx.strokeStyle = isActive ? colors.edgeFamily : (isFaint ? 'rgba(100,100,100,0.02)' : colors.edgeFamily);
+    ctx.setLineDash([5, 5]);
+    ctx.stroke();
+    ctx.restore();
+  });
+
+  // 3. Draw Nodes
+  nodes.forEach(node => {
+    let opacity = 1.0;
+    let scale = 1.0;
+    let isHighlighted = false;
+
+    if (activeFocus) {
+      if (activeFocus.id === node.id) {
+        scale = 1.12;
+        isHighlighted = true;
+      } else if (isRelated(activeFocus, node)) {
+        isHighlighted = true;
+      } else {
+        opacity = 0.18;
+      }
+    }
+
+    ctx.save();
+    ctx.globalAlpha = opacity;
+
+    // Node circular shadow/glow
+    ctx.shadowColor = isHighlighted ? colors.accent : 'rgba(0,0,0,0.05)';
+    ctx.shadowBlur = isHighlighted ? 12 : 6;
+    ctx.shadowOffsetX = 0;
+    ctx.shadowOffsetY = 4;
+
+    // Background circle fill
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, node.radius * scale, 0, Math.PI * 2);
+    ctx.fillStyle = colors.nodeBg;
+    ctx.fill();
+
+    // Reset shadow
+    ctx.shadowColor = 'transparent';
+    ctx.shadowBlur = 0;
+
+    // Border circle
+    ctx.strokeStyle = isHighlighted ? colors.accent : (GEN_BORDER_COLORS[node.gen] || colors.nodeBorderDefault);
+    ctx.lineWidth = isHighlighted ? 3 : 1.5;
+    ctx.stroke();
+
+    // Scholar short Name text (Thai)
+    ctx.fillStyle = colors.nodeText;
+    ctx.font = `bold 12px ${varGet('--thai')}`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(node.nameTh, node.x, node.y - 7);
+
+    // Demise year text
+    ctx.fillStyle = colors.nodeTextSub;
+    ctx.font = `500 10px ${varGet('--ui')}`;
+    ctx.fillText(node.death, node.x, node.y + 11);
+
+    ctx.restore();
   });
 }
 
-/* ══════════════════════════════════════════════════════════════════
-   Detail Panel
-   ══════════════════════════════════════════════════════════════════ */
-function showDetailPanel(id) {
+/* Dynamic Font Variable Helper */
+function varGet(cssVar) {
+  return cssVar === '--thai' ? 'Sarabun' : (cssVar === '--ui' ? 'D-DIN, Inter' : 'Cormorant Garamond');
+}
+
+/* Physics Frame Runner */
+function updateFrame() {
+  tick();
+  draw();
+  requestAnimationFrame(updateFrame);
+}
+
+/* Resize Canvas Handler */
+window.addEventListener('resize', () => {
+  if (canvas.offsetWidth > 0 && canvas.offsetHeight > 0) {
+    width = canvas.offsetWidth;
+    height = canvas.offsetHeight;
+    canvas.width = width;
+    canvas.height = height;
+  }
+});
+
+/* ─── Canvas Interaction / Click Handlers ─── */
+canvas.addEventListener('mousedown', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mouseX = e.clientX - rect.left;
+  const mouseY = e.clientY - rect.top;
+
+  // Find if clicked node
+  const clicked = nodes.find(node => {
+    const dx = node.x - mouseX;
+    const dy = node.y - mouseY;
+    return Math.sqrt(dx*dx + dy*dy) < node.radius;
+  });
+
+  if (clicked) {
+    draggedNode = clicked;
+    selectedNode = clicked;
+    loadCritique(clicked.id);
+    
+    // Sync with sidebar active item
+    const items = document.querySelectorAll('.sidebar-item');
+    items.forEach(el => el.classList.remove('active'));
+    const sidebarItem = document.getElementById(`sidebar-item-${clicked.id}`);
+    if (sidebarItem) sidebarItem.classList.add('active');
+  } else {
+    selectedNode = null;
+    hideCritique();
+    const items = document.querySelectorAll('.sidebar-item');
+    items.forEach(el => el.classList.remove('active'));
+  }
+});
+
+canvas.addEventListener('mousemove', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mouseX = e.clientX - rect.left;
+  const mouseY = e.clientY - rect.top;
+
+  if (draggedNode) {
+    draggedNode.x = mouseX;
+    draggedNode.y = mouseY;
+  } else {
+    // Check hover
+    const found = nodes.find(node => {
+      const dx = node.x - mouseX;
+      const dy = node.y - mouseY;
+      return Math.sqrt(dx*dx + dy*dy) < node.radius;
+    });
+    hoveredNode = found || null;
+  }
+});
+
+canvas.addEventListener('mouseup', () => {
+  draggedNode = null;
+});
+canvas.addEventListener('mouseleave', () => {
+  draggedNode = null;
+  hoveredNode = null;
+});
+
+// Double click to open Biographical Drawer
+canvas.addEventListener('dblclick', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mouseX = e.clientX - rect.left;
+  const mouseY = e.clientY - rect.top;
+
+  const found = nodes.find(node => {
+    const dx = node.x - mouseX;
+    const dy = node.y - mouseY;
+    return Math.sqrt(dx*dx + dy*dy) < node.radius;
+  });
+
+  if (found) {
+    openDrawer(found.id);
+  }
+});
+
+// Touch controls for Mobile support
+canvas.addEventListener('touchstart', e => {
+  if (e.touches.length === 0) return;
+  const rect = canvas.getBoundingClientRect();
+  const touchX = e.touches[0].clientX - rect.left;
+  const touchY = e.touches[0].clientY - rect.top;
+
+  const clicked = nodes.find(node => {
+    const dx = node.x - touchX;
+    const dy = node.y - touchY;
+    return Math.sqrt(dx*dx + dy*dy) < node.radius;
+  });
+
+  if (clicked) {
+    draggedNode = clicked;
+    selectedNode = clicked;
+    loadCritique(clicked.id);
+  }
+});
+
+canvas.addEventListener('touchmove', e => {
+  if (e.touches.length === 0 || !draggedNode) return;
+  const rect = canvas.getBoundingClientRect();
+  const touchX = e.touches[0].clientX - rect.left;
+  const touchY = e.touches[0].clientY - rect.top;
+  draggedNode.x = touchX;
+  draggedNode.y = touchY;
+});
+
+canvas.addEventListener('touchend', () => {
+  draggedNode = null;
+});
+
+/* ─── Sidebar Search Handler ─── */
+function handleSearch() {
+  const term = document.getElementById('search-box').value.trim().toLowerCase();
+  
+  // Highlight corresponding items in sidebar
+  const items = document.querySelectorAll('.sidebar-item');
+  items.forEach(item => {
+    const name = item.querySelector('.sidebar-item-name').innerText.toLowerCase();
+    if (term && name.includes(term)) {
+      item.style.borderColor = 'var(--accent-color)';
+      item.style.background = 'rgba(196, 154, 69, 0.05)';
+    } else {
+      item.style.borderColor = '';
+      item.style.background = '';
+    }
+  });
+
+  if (!term) {
+    hoveredNode = null;
+    return;
+  }
+
+  // Highlight in canvas
+  const found = nodes.find(n => n.nameTh.toLowerCase().includes(term));
+  if (found) {
+    hoveredNode = found;
+  } else {
+    hoveredNode = null;
+  }
+}
+
+/* ─── Load Critique Box (ญัรห์ วัตตะอ์ดีล) ─── */
+function loadCritique(id) {
   const data = SCHOLAR_LOOKUP[id];
   if (!data) return;
 
-  document.getElementById('dp-name-ar').textContent = data.nameAr;
-  document.getElementById('dp-name-th').textContent = data.nameTh;
-  document.getElementById('dp-era-badge').textContent = data.gen;
-  document.getElementById('dp-death').textContent = data.death;
-  document.getElementById('dp-bio').innerHTML = data.bio;
+  const panel = document.getElementById('critique-panel');
+  document.getElementById('critique-title').innerHTML = `การประเมินสถานะของ **${data.nameTh.replace(' เราะหิมะฮ์ลุลลอฮ์', '').replace('เราะฎิยัลลอฮุอันฮุ', '')}** ในตำราญัรห์ วัตตะอ์ดีล`;
 
-  // Ta'dil
-  const tadilItems = document.getElementById('dp-tadil-items');
-  tadilItems.innerHTML = '';
+  const taDilCol = document.getElementById('ta-dil-col');
+  taDilCol.innerHTML = '';
   if (data.tadil.length > 0) {
     data.tadil.forEach(item => {
       const card = document.createElement('div');
-      card.className = 'dp-critique-item pos';
-      const nameEl = document.createElement('div');
-      nameEl.className = 'dp-critic-name';
-      nameEl.textContent = item.scholar;
-      const quoteEl = document.createElement('div');
-      quoteEl.className = 'dp-critic-th';
-      quoteEl.textContent = '“' + item.quote + '”';
-      card.appendChild(nameEl);
-      card.appendChild(quoteEl);
-      tadilItems.appendChild(card);
+      card.className = 'critique-card ta-dil-item';
+      card.innerHTML = `
+        <div class="critique-meta">${item.scholar.split(' (')[0]} <span>${item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : ''}</span></div>
+        <div class="critique-text">“${item.quote}”</div>
+      `;
+      taDilCol.appendChild(card);
     });
   } else {
-    tadilItems.innerHTML = '<div class="dp-empty-notice">ไม่มีคำวิจารณ์เชิงบวกบันทึกไว้ในตำราหลักการญัรห์</div>';
+    taDilCol.innerHTML = '<div class="empty-critique-notice">ไม่มีคำวิจารณ์เชิงบวกบันทึกไว้ในตำราหลักการญัรห์</div>';
   }
 
-  // Jarh
-  const jarhItems = document.getElementById('dp-jarh-items');
-  jarhItems.innerHTML = '';
+  const jarhCol = document.getElementById('jarh-col');
+  jarhCol.innerHTML = '';
   if (data.jarh.length > 0) {
     data.jarh.forEach(item => {
       const card = document.createElement('div');
-      card.className = 'dp-critique-item neg';
-      const nameEl = document.createElement('div');
-      nameEl.className = 'dp-critic-name';
-      nameEl.textContent = item.scholar;
-      const quoteEl = document.createElement('div');
-      quoteEl.className = 'dp-critic-th';
-      quoteEl.textContent = '“' + item.quote + '”';
-      card.appendChild(nameEl);
-      card.appendChild(quoteEl);
-      jarhItems.appendChild(card);
+      card.className = 'critique-card jarh-item';
+      card.innerHTML = `
+        <div class="critique-meta">${item.scholar.split(' (')[0]} <span>${item.scholar.includes(' (') ? '(' + item.scholar.split(' (')[1] : ''}</span></div>
+        <div class="critique-text">“${item.quote}”</div>
+      `;
+      jarhCol.appendChild(card);
     });
   } else {
-    jarhItems.innerHTML = '<div class="dp-empty-notice">ไม่มีคำท้วงติงเชิงลบ — สถานะธรรมชนสมบูรณ์</div>';
+    jarhCol.innerHTML = '<div class="empty-critique-notice">ไม่มีคำท้วงติงเชิงลบบันทึกไว้ในตำราหลักการญัรห์ (สถานะธรรมชนสมบูรณ์แบบ)</div>';
   }
 
-  // Connections
-  const connEl = document.getElementById('dp-connections');
-  let connHTML = '';
-  if (data.teachers.length > 0) {
-    connHTML += '<div class="dp-section-title">ครูอาจารย์</div><ul>';
-    data.teachers.forEach(tid => {
-      const t = SCHOLAR_LOOKUP[tid];
-      connHTML += '<li>' + (t ? t.nameTh : tid) + '</li>';
-    });
-    connHTML += '</ul>';
-  }
-  if (data.students.length > 0) {
-    connHTML += '<div class="dp-section-title">ลูกศิษย์</div><ul>';
-    data.students.forEach(sid => {
-      const s = SCHOLAR_LOOKUP[sid];
-      connHTML += '<li>' + (s ? s.nameTh : sid) + '</li>';
-    });
-    connHTML += '</ul>';
-  }
-  if (data.family.length > 0) {
-    connHTML += '<div class="dp-section-title">ความสัมพันธ์เชิงสายเลือด</div><ul>';
-    data.family.forEach(f => {
-      const fm = SCHOLAR_LOOKUP[f.id];
-      connHTML += '<li>' + (fm ? fm.nameTh : f.id) + ' [' + f.relation + ']</li>';
-    });
-    connHTML += '</ul>';
-  }
-  connEl.innerHTML = connHTML || '<div class="dp-empty-notice">ไม่มีข้อมูลเพิ่มเติม</div>';
-
-  document.getElementById('detail-panel').classList.add('active');
-  setTimeout(() => {
-    document.getElementById('detail-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 120);
+  panel.classList.add('active');
 }
 
-function closeDetailPanel() {
-  document.getElementById('detail-panel').classList.remove('active');
+function hideCritique() {
+  const panel = document.getElementById('critique-panel');
+  panel.classList.remove('active');
 }
 
-/* ══════════════════════════════════════════════════════════════════
-   Pan / Zoom
-   ══════════════════════════════════════════════════════════════════ */
-function fitNetwork() {
-  const container = document.getElementById('network-container');
-  const cw = container.clientWidth;
-  const ch = container.clientHeight;
-  const scale = Math.min(cw / SVG_W, ch / SVG_H) * 0.92;
-  tf = {
-    x: (cw - SVG_W * scale) / 2,
-    y: (ch - SVG_H * scale) / 2,
-    scale
-  };
-  applyTF();
+/* ─── Drawer Modal Open ─── */
+function openDrawer(id) {
+  const data = SCHOLAR_LOOKUP[id];
+  if (!data) return;
+
+  document.getElementById('d-gen').innerText = data.gen;
+  document.getElementById('d-name-th').innerText = data.nameTh;
+  document.getElementById('d-name-ar').innerText = data.nameAr;
+  document.getElementById('d-bio').innerHTML = data.bio;
+  document.getElementById('d-death').innerText = data.death;
+
+  document.getElementById('drawer-overlay').classList.add('active');
 }
 
-function zoomIn() {
-  const container = document.getElementById('network-container');
-  const cx = container.clientWidth / 2;
-  const cy = container.clientHeight / 2;
-  const newScale = Math.min(4, tf.scale * 1.25);
-  tf.x = cx - (cx - tf.x) * (newScale / tf.scale);
-  tf.y = cy - (cy - tf.y) * (newScale / tf.scale);
-  tf.scale = newScale;
-  applyTF();
+function closeDrawer() {
+  document.getElementById('drawer-overlay').classList.remove('active');
 }
 
-function zoomOut() {
-  const container = document.getElementById('network-container');
-  const cx = container.clientWidth / 2;
-  const cy = container.clientHeight / 2;
-  const newScale = Math.max(0.1, tf.scale * 0.8);
-  tf.x = cx - (cx - tf.x) * (newScale / tf.scale);
-  tf.y = cy - (cy - tf.y) * (newScale / tf.scale);
-  tf.scale = newScale;
-  applyTF();
-}
-
-// Wheel zoom
-const svgEl2 = document.getElementById('isnad-svg');
-svgEl2.addEventListener('wheel', e => {
-  e.preventDefault();
-  const rect = svgEl2.getBoundingClientRect();
-  const mx = e.clientX - rect.left;
-  const my = e.clientY - rect.top;
-  const factor = e.deltaY < 0 ? 1.12 : 0.89;
-  const newScale = Math.max(0.1, Math.min(4, tf.scale * factor));
-  tf.x = mx - (mx - tf.x) * (newScale / tf.scale);
-  tf.y = my - (my - tf.y) * (newScale / tf.scale);
-  tf.scale = newScale;
-  applyTF();
-}, { passive: false });
-
-// Pan with mouse drag
-let isPanning = false;
-let panStart = { x: 0, y: 0 };
-
-svgEl2.addEventListener('mousedown', e => {
-  if (e.target.closest('.sn-node')) return;
-  isPanning = true;
-  svgEl2.style.cursor = 'grabbing';
-  panStart = { x: e.clientX - tf.x, y: e.clientY - tf.y };
-});
-window.addEventListener('mousemove', e => {
-  if (!isPanning) return;
-  tf.x = e.clientX - panStart.x;
-  tf.y = e.clientY - panStart.y;
-  applyTF();
-});
-window.addEventListener('mouseup', () => {
-  if (isPanning) {
-    isPanning = false;
-    svgEl2.style.cursor = 'grab';
-  }
-});
-
-// Touch pan
-let touchStart = null;
-svgEl2.addEventListener('touchstart', e => {
-  if (e.touches.length === 1) {
-    touchStart = { x: e.touches[0].clientX - tf.x, y: e.touches[0].clientY - tf.y };
-  }
-}, { passive: true });
-svgEl2.addEventListener('touchmove', e => {
-  if (e.touches.length === 1 && touchStart) {
-    e.preventDefault();
-    tf.x = e.touches[0].clientX - touchStart.x;
-    tf.y = e.touches[0].clientY - touchStart.y;
-    applyTF();
-  }
-}, { passive: false });
-svgEl2.addEventListener('touchend', () => { touchStart = null; });
-
-// Touch pinch zoom
-let lastPinchDist = null;
-svgEl2.addEventListener('touchstart', e => {
-  if (e.touches.length === 2) {
-    const dx = e.touches[0].clientX - e.touches[1].clientX;
-    const dy = e.touches[0].clientY - e.touches[1].clientY;
-    lastPinchDist = Math.sqrt(dx * dx + dy * dy);
-  }
-}, { passive: true });
-svgEl2.addEventListener('touchmove', e => {
-  if (e.touches.length === 2 && lastPinchDist) {
-    e.preventDefault();
-    const dx = e.touches[0].clientX - e.touches[1].clientX;
-    const dy = e.touches[0].clientY - e.touches[1].clientY;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    const factor = dist / lastPinchDist;
-    const rect = svgEl2.getBoundingClientRect();
-    const mx = (e.touches[0].clientX + e.touches[1].clientX) / 2 - rect.left;
-    const my = (e.touches[0].clientY + e.touches[1].clientY) / 2 - rect.top;
-    const newScale = Math.max(0.1, Math.min(4, tf.scale * factor));
-    tf.x = mx - (mx - tf.x) * (newScale / tf.scale);
-    tf.y = my - (my - tf.y) * (newScale / tf.scale);
-    tf.scale = newScale;
-    applyTF();
-    lastPinchDist = dist;
-  }
-}, { passive: false });
-svgEl2.addEventListener('touchend', () => { lastPinchDist = null; });
-
-/* ══════════════════════════════════════════════════════════════════
-   Initialise
-   ══════════════════════════════════════════════════════════════════ */
-window.addEventListener('load', () => {
-  buildNarratorPanel();
-  buildNetwork();
-});
-
-// Re-fit on resize
-window.addEventListener('resize', () => {
-  if (!selectedId) fitNetwork();
-});
-
-// Theme toggle re-render is handled by CSS variables automatically
+/* ─── Run Simulation & Render List ─── */
+initSimulation();
+renderSidebar();
+updateFrame();
 </script>
 </body>
 </html>
