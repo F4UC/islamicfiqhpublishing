@@ -314,27 +314,21 @@ body::before {
 .tc-count strong { color:var(--gold); font-weight:600; }
 
 /* =========================================================
-   VISUALIZATION AREA
+   VIZ HEADER (tabaqah info bar — keep for all views)
    ========================================================= */
 .viz-section { padding:60px 0 100px; border-top:1px solid var(--rule); }
 .viz-header {
   display:flex; align-items:center; justify-content:space-between;
-  flex-wrap:wrap; gap:16px; margin-bottom:20px;
+  flex-wrap:wrap; gap:16px; margin-bottom:28px;
 }
-.viz-current-label {
-  display:flex; align-items:center; gap:12px;
-}
-.viz-current-num {
-  font-family:var(--serif); font-style:italic; font-size:36px; color:var(--gold); line-height:1;
-}
-.viz-current-text { display:flex; flex-direction:column; gap:2px; }
-.viz-current-ar {
-  font-family:var(--arabic); font-size:18px; color:var(--paper); direction:rtl;
-}
-.viz-current-th { font-family:var(--thai); font-size:13px; color:var(--text-dim); }
+.viz-current-label { display:flex; align-items:center; gap:12px; }
+.viz-current-num   { font-family:var(--serif); font-style:italic; font-size:36px; color:var(--gold); line-height:1; }
+.viz-current-text  { display:flex; flex-direction:column; gap:2px; }
+.viz-current-ar    { font-family:var(--arabic); font-size:18px; color:var(--paper); direction:rtl; }
+.viz-current-th    { font-family:var(--thai); font-size:13px; color:var(--text-dim); }
 .viz-current-stats { font-family:var(--ui); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-mute); }
 
-/* Tabaqah pill selector toolbar (above SVG) */
+/* Tabaqah pill selector toolbar (above list) */
 .tabaqah-toolbar {
   display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px;
   padding:16px 0 12px; border-bottom:1px solid var(--rule);
@@ -353,185 +347,130 @@ body::before {
 }
 .tab-pill.loading-pill { opacity:.5; cursor:wait; }
 
-.viz-controls {
-  display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:28px;
-}
-.viz-label {
-  font-family:var(--ui); font-size:11px; letter-spacing:.2em;
-  text-transform:uppercase; color:var(--text-mute); margin-right:4px;
-}
-.filter-btn {
-  font-family:var(--ui); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
-  padding:8px 18px; border:1px solid var(--rule-strong); border-radius:999px;
-  color:var(--text-dim); transition:all .25s; cursor:pointer;
-}
-.filter-btn:hover, .filter-btn.active {
-  border-color:var(--gold); color:var(--gold); background:rgba(179,27,27,.06);
-}
-.viz-container {
-  position:relative; width:100%; height:580px;
-  border:1px solid var(--rule-strong); border-radius:12px;
-  overflow:hidden; background:var(--ink-2);
-}
-.viz-svg   { width:100%; height:100%; cursor:grab; user-select:none; display:block; }
-.viz-svg:active { cursor:grabbing; }
-.viz-hint  {
-  position:absolute; bottom:16px; right:20px;
-  font-family:var(--ui); font-size:10px; letter-spacing:.18em; text-transform:uppercase;
-  color:var(--text-mute); pointer-events:none;
-}
-.viz-zoom-btns { position:absolute; bottom:16px; left:20px; display:flex; gap:8px; }
-.zoom-btn {
-  width:32px; height:32px; border:1px solid var(--rule-strong);
-  border-radius:50%; background:var(--ink); color:var(--text);
-  display:grid; place-items:center; font-size:18px; line-height:1; transition:all .25s;
-}
-.zoom-btn:hover { border-color:var(--gold); color:var(--gold); }
-.zoom-btn-reset { font-size:12px; font-family:var(--ui); letter-spacing:.05em; }
-.viz-loading {
-  position:absolute; inset:0; display:flex; flex-direction:column;
-  align-items:center; justify-content:center; gap:12px;
-  font-family:var(--thai); color:var(--text-mute); font-size:15px;
-  background:var(--ink-2);
-}
-.viz-spinner {
-  width:36px; height:36px; border:2px solid var(--rule-strong);
-  border-top-color:var(--gold); border-radius:50%;
-  animation:spin .8s linear infinite;
-}
+/* Loading spinner (reused) */
+.viz-loading { display:flex; align-items:center; justify-content:center; gap:16px; padding:60px 0; font-family:var(--thai); color:var(--text-mute); font-size:14px; }
+.viz-spinner { width:24px; height:24px; border:2px solid var(--rule-strong); border-top-color:var(--gold); border-radius:50%; animation:spin .8s linear infinite; }
 @keyframes spin { to { transform:rotate(360deg); } }
 
-/* SVG nodes & edges — all rules via class, no inline style (Rule 30) */
-.edge {
-  stroke:rgba(0,50,100,0.18); stroke-width:1; fill:none; opacity:.7;
+/* =========================================================
+   LIST TOOLBAR
+   ========================================================= */
+.list-toolbar {
+  display:flex;
+  align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:12px;
+  padding:16px 0 18px; border-bottom:1px solid var(--rule);
+  margin-bottom:0;
 }
-html.dark-mode .edge { stroke:rgba(232,224,208,.18); }
-.edge.highlighted { stroke:var(--gold); stroke-width:2; opacity:1; }
-.node-circle {
-  fill:var(--bg-secondary); stroke:rgba(0,50,100,0.22); stroke-width:1.5;
-  cursor:pointer; transition:stroke .22s, fill .22s, r .22s;
+.list-meta { font-family:var(--ui); font-size:12px; letter-spacing:.1em; color:var(--text-mute); }
+.list-controls { display:flex; gap:10px; flex-wrap:wrap; }
+.list-select {
+  font-family:var(--thai); font-size:13px; color:var(--text);
+  background:var(--ink-2); border:1px solid var(--rule-strong);
+  padding:8px 14px; border-radius:4px; outline:none; cursor:pointer;
+  transition:border-color .2s;
 }
-html.dark-mode .node-circle { fill:var(--bg-secondary); stroke:rgba(232,224,208,.28); }
-.node-circle.sahabi  { fill:rgba(59,130,246,.14); stroke:#3b82f6; }
-.node-circle.tabii   { fill:rgba(59,130,246,.10); stroke:rgba(59,130,246,.55); }
-.node-circle.selected { stroke:var(--gold); stroke-width:2.5; fill:rgba(179,27,27,.10); }
-#gNodes g:hover .node-circle { stroke:var(--gold); stroke-width:2; r: 9; }
-.node-label {
+.list-select:focus { border-color:var(--gold); }
+
+/* =========================================================
+   DUAL PANEL
+   ========================================================= */
+.dual-panel {
+  display:grid;
+  grid-template-columns:1fr 400px;
+  gap:20px; align-items:start;
+  margin-top:0;
+}
+
+/* ─── Left: narrator list ─── */
+.list-panel { }
+.list-header-row {
+  display:grid;
+  grid-template-columns:48px 1fr 140px 72px 88px;
+  gap:8px; padding:10px 16px;
+  border:1px solid var(--rule-strong); border-bottom:2px solid var(--rule-strong);
+  background:var(--ink-2);
+  font-family:var(--ui); font-size:10px; letter-spacing:.15em;
+  text-transform:uppercase; color:var(--text-mute);
+}
+.list-scroll {
+  display:flex; flex-direction:column;
+  height:640px; overflow-y:auto;
+  border:1px solid var(--rule-strong); border-top:none;
+  background:var(--ink);
+  overscroll-behavior:contain;
+}
+.list-scroll::-webkit-scrollbar { width:5px; }
+.list-scroll::-webkit-scrollbar-track { background:var(--ink-2); }
+.list-scroll::-webkit-scrollbar-thumb { background:var(--rule-strong); border-radius:3px; }
+.list-row {
+  display:grid;
+  grid-template-columns:48px 1fr 140px 72px 88px;
+  gap:8px; padding:13px 16px;
+  border-bottom:1px solid var(--rule);
+  cursor:pointer; transition:background .18s;
+  align-items:center; flex-shrink:0;
+}
+.list-row:hover  { background:var(--ink-2); }
+.list-row.active { background:rgba(179,27,27,.07); border-left:3px solid var(--gold); padding-left:13px; }
+.row-num   { font-family:var(--serif); font-style:italic; font-size:14px; color:var(--gold); opacity:.65; text-align:right; }
+.row-name  { font-family:var(--arabic); font-size:16px; color:var(--paper); direction:rtl; text-align:right; line-height:1.5; word-break:break-word; }
+.row-grade { font-family:var(--arabic); font-size:12px; color:var(--text-mute); direction:rtl; text-align:right; line-height:1.4; }
+.row-death { font-family:var(--ui); font-size:12px; color:var(--text-dim); }
+.row-conns { font-family:var(--ui); font-size:11px; color:var(--text-dim); display:flex; align-items:center; gap:5px; }
+.conn-bar  { height:3px; border-radius:2px; background:var(--gold); opacity:.45; min-width:2px; }
+
+/* ─── Right: ego-network panel ─── */
+.ego-panel {
+  position:sticky; top:72px;
+  border:1px solid var(--rule-strong);
+  background:var(--ink-2);
+  overflow:hidden;
+}
+.ego-empty {
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  height:560px; gap:14px; text-align:center; padding:24px;
+}
+.ego-empty-ar  { font-family:var(--arabic); font-size:36px; color:var(--rule-strong); }
+.ego-empty-th  { font-family:var(--thai); font-size:13px; color:var(--text-mute); line-height:1.7; }
+.ego-net       { display:none; }
+.ego-header    { padding:16px 20px 10px; border-bottom:1px solid var(--rule); }
+.ego-name      { font-family:var(--arabic); font-size:20px; color:var(--paper); direction:rtl; text-align:right; line-height:1.5; }
+.ego-meta      { font-family:var(--thai); font-size:12px; color:var(--text-mute); margin-top:4px; }
+.ego-legend    { display:flex; gap:16px; flex-wrap:wrap; padding:8px 20px; border-bottom:1px solid var(--rule); }
+.ego-leg-item  { display:flex; align-items:center; gap:6px; font-family:var(--ui); font-size:10px; letter-spacing:.1em; color:var(--text-mute); }
+.ego-dot       { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+.ego-dot-t     { background:rgba(59,130,246,.55); border:1.5px solid #3b82f6; }
+.ego-dot-c     { background:rgba(179,27,27,.15); border:1.5px solid var(--gold); }
+.ego-dot-s     { background:rgba(59,130,246,.10); border:1.5px solid rgba(59,130,246,.45); }
+.ego-svg       { width:100%; height:440px; display:block; }
+
+/* SVG elements (used by ego-network) */
+.edge          { stroke:rgba(0,50,100,0.18); stroke-width:1; fill:none; opacity:.7; }
+html.dark-mode .edge { stroke:rgba(232,224,208,.20); }
+.node-circle   { cursor:pointer; transition:stroke .2s, fill .2s; }
+.node-circle.n-center  { fill:rgba(179,27,27,.12); stroke:var(--gold); stroke-width:2.5; }
+.node-circle.n-teacher { fill:rgba(59,130,246,.14); stroke:#3b82f6; stroke-width:1.5; }
+.node-circle.n-student { fill:rgba(59,130,246,.06); stroke:rgba(59,130,246,.45); stroke-width:1.5; }
+.node-label    {
   font-family:'Amiri',serif; font-size:10px; fill:var(--text-secondary);
   pointer-events:none; direction:rtl; text-anchor:middle;
-  text-shadow: 0 1px 3px rgba(255,255,255,0.9), 0 0 6px rgba(255,255,255,0.6);
-  opacity: 0;
-  transition: opacity 0.25s ease, font-size 0.25s ease, fill 0.25s ease;
 }
-html.dark-mode .node-label {
-  fill:#9a907e;
-  text-shadow: 0 1px 3px rgba(10,9,7,0.9), 0 0 6px rgba(10,9,7,0.6);
-}
-.node-label.visible-label {
-  opacity: 0.85;
-}
-#gNodes g:hover .node-label {
-  opacity: 1 !important;
-  font-size: 11px;
-  fill: var(--gold) !important;
-  font-weight: bold;
-}
-.node-label.selected  {
-  fill:var(--gold) !important;
-  font-weight: bold;
-  font-size:12px !important;
-  opacity: 1 !important;
-}
-.arrow-marker { fill:rgba(0,50,100,0.22); }
+html.dark-mode .node-label { fill:var(--text-secondary); }
+.node-label.lbl-center { font-size:11px; fill:var(--gold); font-weight:700; }
+.arrow-marker  { fill:rgba(0,50,100,0.22); }
 html.dark-mode .arrow-marker { fill:rgba(232,224,208,.22); }
 
-/* Empty-state message in viz */
-.viz-empty {
-  position:absolute; inset:0; display:flex; flex-direction:column;
-  align-items:center; justify-content:center; gap:8px;
-  font-family:var(--thai); color:var(--text-mute); font-size:14px;
+/* ─── Responsive ─── */
+@media (max-width:960px) {
+  .dual-panel { grid-template-columns:1fr; }
+  .ego-panel  { position:static; margin-top:20px; }
 }
-.viz-empty-ar { font-family:var(--arabic); font-size:32px; color:var(--rule-strong); direction:rtl; }
-
-/* =========================================================
-   LEGEND
-   ========================================================= */
-.legend {
-  display:flex; gap:24px; flex-wrap:wrap; align-items:center; margin-top:20px;
+@media (max-width:640px) {
+  .list-header-row,
+  .list-row { grid-template-columns:36px 1fr 100px 56px; }
+  .row-conns { display:none; }
 }
-.legend-item { display:flex; align-items:center; gap:8px; }
-.legend-dot  { width:12px; height:12px; border-radius:50%; flex-shrink:0; }
-.legend-dot-sahaba { background:rgba(59,130,246,.7); border:1.5px solid #3b82f6; }
-.legend-dot-tabii  { background:rgba(59,130,246,.55); border:1.5px solid rgba(59,130,246,.8); }
-.legend-dot-hadith { background:var(--bg-secondary); border:1.5px solid rgba(0,50,100,.22); }
-html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
-.legend-dot-sel    { background:rgba(179,27,27,.15); border:1.5px solid var(--gold); }
-.legend-label { font-family:var(--ui); font-size:11px; letter-spacing:.12em; color:var(--text-mute); }
-
-/* =========================================================
-   NARRATOR DETAIL PANEL
-   ========================================================= */
-.detail-section { padding:80px 0; border-top:1px solid var(--rule); }
-.detail-panel {
-  display:grid; grid-template-columns:1fr 1fr; gap:48px;
-  padding:48px; border:1px solid var(--rule-strong);
-  background:var(--ink-2); position:relative;
-}
-.detail-panel::before {
-  content:''; position:absolute; inset:12px;
-  border:1px solid var(--rule); pointer-events:none;
-}
-.detail-close {
-  position:absolute; top:20px; right:20px;
-  font-family:var(--ui); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--text-mute); display:flex; align-items:center; gap:6px;
-  transition:color .25s; cursor:pointer;
-}
-.detail-close:hover { color:var(--gold); }
-.detail-eyebrow {
-  font-family:var(--ui); font-size:10px; letter-spacing:.28em; text-transform:uppercase;
-  color:var(--gold); margin-bottom:12px;
-}
-.detail-name-ar {
-  font-family:var(--arabic); font-size:30px; color:var(--paper);
-  direction:rtl; line-height:1.55; margin-bottom:8px;
-}
-.detail-tabaqah {
-  font-family:var(--arabic); font-size:15px; color:var(--text-mute);
-  direction:rtl; margin-bottom:24px;
-}
-.detail-meta-grid {
-  display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:32px;
-}
-.detail-meta-item { display:flex; flex-direction:column; gap:4px; }
-.meta-label    { font-family:var(--ui); font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--text-mute); }
-.meta-value    { font-family:var(--thai); font-size:14px; color:var(--paper); font-weight:400; }
-.meta-value-ar { font-family:var(--arabic); font-size:15px; color:var(--text-dim); direction:rtl; }
-.detail-connections h3 {
-  font-family:var(--thai); font-size:12px; letter-spacing:.18em; text-transform:uppercase;
-  color:var(--text-mute); margin-bottom:12px; display:flex; align-items:center; gap:10px;
-}
-.detail-connections h3::after { content:''; flex:1; height:1px; background:var(--rule); }
-.connections-list {
-  display:flex; flex-direction:column; max-height:220px; overflow-y:auto; gap:0;
-}
-.connections-list::-webkit-scrollbar { width:4px; }
-.connections-list::-webkit-scrollbar-track { background:transparent; }
-.connections-list::-webkit-scrollbar-thumb { background:var(--rule-strong); border-radius:2px; }
-.conn-item {
-  display:flex; align-items:center; gap:12px;
-  padding:10px 0; border-bottom:1px solid var(--rule);
-  cursor:pointer; transition:all .25s;
-}
-.conn-item:last-child { border-bottom:0; }
-.conn-item:hover .conn-name-ar { color:var(--gold); }
-.conn-dot        { width:6px; height:6px; border-radius:50%; background:var(--accent); flex-shrink:0; }
-.conn-dot.teacher { background:var(--gold); }
-.conn-name-ar    { font-family:var(--arabic); font-size:16px; color:var(--paper); direction:rtl; transition:color .25s; flex:1; text-align:right; }
-.conn-meta       { font-family:var(--thai); font-size:11px; color:var(--text-mute); flex-shrink:0; }
-.detail-default  { grid-column:1 / -1; text-align:center; padding:64px 0; }
-.detail-default-ar  { font-family:var(--arabic); font-size:48px; color:var(--rule-strong); direction:rtl; margin-bottom:16px; }
-.detail-default-th  { font-family:var(--thai); font-size:15px; color:var(--text-mute); }
 
 /* =========================================================
    HOW IT WORKS
@@ -743,7 +682,7 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
 
 
 <!-- ==========================================================
-     SECTION 3: NETWORK VISUALIZATION
+     SECTION 3: NARRATOR LIST + EGO-NETWORK
      ========================================================== -->
 <section class="viz-section" id="vizSection">
   <div class="wrap">
@@ -751,14 +690,11 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
     <div class="section-head" data-reveal>
       <div>
         <div class="section-no">03</div>
-        <div class="section-eyebrow">เครือข่ายนักรายงาน</div>
+        <div class="section-eyebrow">รายชื่อนักรายงาน</div>
       </div>
       <div>
-        <h2 class="section-title">แผนภูมิ<em>อิสนาด</em></h2>
-        <p class="section-lede">
-          ลูกศรแสดงทิศทางการส่งต่อรายงาน (จากอาจารย์สู่ลูกศิษย์)
-          เลือกฏอบะเกาะฮ์ด้านบนเพื่อกรองข้อมูล และคลิกโหนดเพื่อดูรายละเอียดนักรายงาน
-        </p>
+        <h2 class="section-title">สำรวจ<em>อิสนาด</em></h2>
+        <p class="section-lede">คลิกชื่อนักรายงานเพื่อดูเครือข่ายอาจารย์–ลูกศิษย์ทันที · เรียง กรอง และค้นหาได้ครบทุกท่าน</p>
       </div>
     </div>
 
@@ -779,114 +715,69 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
       <div class="viz-current-stats" id="vizCurrentStats"></div>
     </div>
 
-    <!-- SVG visualization canvas -->
-    <div class="viz-container" id="vizContainer" data-reveal data-delay="2">
-      <div class="viz-loading" id="vizLoading">
-        <div class="viz-spinner"></div>
-        <span>เลือกฏอบะเกาะฮ์เพื่อโหลดข้อมูล…</span>
-      </div>
-      <svg class="viz-svg" id="isnadSvg" aria-label="แผนภูมิสายรายงานหะดีษ"></svg>
-      <div class="viz-hint">ลากเพื่อเลื่อน · ล้อเมาส์เพื่อซูม · คลิกโหนดเพื่อดูข้อมูล</div>
-      <div class="viz-zoom-btns">
-        <button class="zoom-btn" id="zoomIn"    title="ขยาย">+</button>
-        <button class="zoom-btn" id="zoomOut"   title="ย่อ">−</button>
-        <button class="zoom-btn zoom-btn-reset" id="zoomReset" title="รีเซ็ต">⟳</button>
+    <!-- Loading state -->
+    <div class="viz-loading" id="vizLoading" style="display:none">
+      <div class="viz-spinner"></div>
+      <span>กำลังโหลด…</span>
+    </div>
+
+    <!-- Toolbar: sort + filter + count -->
+    <div class="list-toolbar" id="listToolbar" style="display:none">
+      <div class="list-meta" id="listMeta"></div>
+      <div class="list-controls">
+        <select class="list-select" id="sortSelect">
+          <option value="connections">เรียง: จำนวนเชื่อมต่อ ↓</option>
+          <option value="death">เรียง: ปีเสียชีวิต ↑</option>
+          <option value="name">เรียง: ชื่อ (อ–ฮ)</option>
+        </select>
+        <select class="list-select" id="gradeFilter">
+          <option value="">ทุกระดับ</option>
+          <option value="ثقة">ثقة — เชื่อถือได้</option>
+          <option value="صدوق">صدوق — สัตย์จริง</option>
+          <option value="مقبول">مقبول — ยอมรับ</option>
+          <option value="صحابي">صحابي — เศาะหาบะฮ์</option>
+          <option value="ضعيف">ضعيف — อ่อน</option>
+          <option value="مجهول">مجهول — ไม่ทราบประวัติ</option>
+        </select>
       </div>
     </div>
 
-    <!-- Legend -->
-    <div class="legend" data-reveal>
-      <div class="legend-item">
-        <div class="legend-dot legend-dot-sahaba"></div>
-        <span class="legend-label">صحابة — เศาะหาบะฮ์</span>
-      </div>
-      <div class="legend-item">
-        <div class="legend-dot legend-dot-tabii"></div>
-        <span class="legend-label">تابعون — ตาบิอีน</span>
-      </div>
-      <div class="legend-item">
-        <div class="legend-dot legend-dot-hadith"></div>
-        <span class="legend-label">المحدثون — นักหะดีษ</span>
-      </div>
-      <div class="legend-item">
-        <div class="legend-dot legend-dot-sel"></div>
-        <span class="legend-label">โหนดที่เลือก</span>
-      </div>
-    </div>
+    <!-- DUAL PANEL -->
+    <div class="dual-panel" id="dualPanel" style="display:none">
 
-  </div>
-</section>
-
-
-<!-- ==========================================================
-     SECTION 4: NARRATOR DETAIL PANEL
-     ========================================================== -->
-<section class="detail-section" id="detailSection">
-  <div class="wrap">
-
-    <div class="section-head" data-reveal>
-      <div>
-        <div class="section-no">04</div>
-        <div class="section-eyebrow">ตัรญะมะฮ์</div>
-      </div>
-      <div>
-        <h2 class="section-title">ชีวประวัติ<em>นักรายงาน</em></h2>
-        <p class="section-lede">
-          คลิกที่โหนดในแผนภูมิหรือผลการค้นหา เพื่อดูชีวประวัติ ระดับความน่าเชื่อถือ
-          และสายเชื่อมโยงอาจารย์-ลูกศิษย์ของนักรายงาน
-        </p>
-      </div>
-    </div>
-
-    <!-- Default placeholder -->
-    <div id="detailDefault" class="detail-panel" data-reveal>
-      <div class="detail-default">
-        <div class="detail-default-ar" lang="ar" dir="rtl">رِجَالُ الإِسنَادِ</div>
-        <div class="detail-default-th">เลือกนักรายงานจากแผนภูมิหรือการค้นหาเพื่อดูรายละเอียด</div>
-      </div>
-    </div>
-
-    <!-- Filled detail panel — hidden until narrator selected -->
-    <div id="narratorDetail" class="detail-panel narrator-detail-hidden">
-      <button class="detail-close" id="detailClose">ปิด ×</button>
-
-      <!-- Column 1: Bio -->
-      <div>
-        <div class="detail-eyebrow" id="detailEyebrow">نَاقِلُ الحَدِيث</div>
-        <div class="detail-name-ar" lang="ar" dir="rtl" id="detailNameAr"></div>
-        <div class="detail-tabaqah" lang="ar" dir="rtl" id="detailTabaqahAr"></div>
-
-        <div class="detail-meta-grid">
-          <div class="detail-meta-item">
-            <span class="meta-label">ปีเสียชีวิต (ฮ.ศ.)</span>
-            <span class="meta-value" id="detailDeath">—</span>
-          </div>
-          <div class="detail-meta-item">
-            <span class="meta-label">รุ่น / ยุคสมัย</span>
-            <span class="meta-value" id="detailGen">—</span>
-          </div>
-          <div class="detail-meta-item">
-            <span class="meta-label">ระดับความน่าเชื่อถือ</span>
-            <span class="meta-value-ar" lang="ar" dir="rtl" id="detailGradeIH">—</span>
-          </div>
-          <div class="detail-meta-item">
-            <span class="meta-label">จำนวนการเชื่อมต่อ</span>
-            <span class="meta-value" id="detailConnCount">—</span>
-          </div>
+      <!-- LEFT: virtualized narrator list -->
+      <div class="list-panel">
+        <div class="list-header-row">
+          <span>#</span>
+          <span>ชื่อนักรายงาน</span>
+          <span>ระดับ (ابن حجر)</span>
+          <span>ฮ.ศ.</span>
+          <span>เชื่อมต่อ</span>
+        </div>
+        <div class="list-scroll" id="listScroll">
+          <div id="padTop" style="flex-shrink:0"></div>
+          <div id="listRows"></div>
+          <div id="padBot" style="flex-shrink:0"></div>
         </div>
       </div>
 
-      <!-- Column 2: Teachers & Students -->
-      <div>
-        <div class="detail-connections">
-          <h3>อาจารย์ (شُيُوخ)</h3>
-          <div class="connections-list" id="teachersList"></div>
+      <!-- RIGHT: sticky ego-network -->
+      <div class="ego-panel" id="egoPanel">
+        <div class="ego-empty" id="egoEmpty">
+          <div class="ego-empty-ar" lang="ar" dir="rtl">اختَر رَاوِيًا</div>
+          <div class="ego-empty-th">คลิกนักรายงานจากรายชื่อด้านซ้าย<br>เพื่อดูเครือข่ายของท่าน</div>
         </div>
-        <div class="detail-connections detail-connections-students">
-          <h3>ลูกศิษย์ (تَلَامِيذ)</h3>
-          <div class="connections-list" id="studentsList"></div>
+        <div class="ego-net" id="egoNet">
+          <div class="ego-header" id="egoHeader"></div>
+          <div class="ego-legend">
+            <span class="ego-leg-item"><span class="ego-dot ego-dot-t"></span>อาจารย์ (شُيُوخ)</span>
+            <span class="ego-leg-item"><span class="ego-dot ego-dot-c"></span>นักรายงาน</span>
+            <span class="ego-leg-item"><span class="ego-dot ego-dot-s"></span>ลูกศิษย์ (تَلَامِيذ)</span>
+          </div>
+          <svg id="egoSvg" class="ego-svg" aria-label="เครือข่ายนักรายงาน"></svg>
         </div>
       </div>
+
     </div>
 
   </div>
@@ -980,13 +871,7 @@ var narById        = {};          /* id -> narrator (current tabaqah) */
 var globalNarById  = {};          /* id -> narrator (all loaded tabaqat, for cross-ref) */
 var nodePos        = {};          /* id -> {x,y,vx,vy} */
 var selectedId     = null;
-var gMain, vizSvg;
-var panZoom        = { x:0, y:0, k:1 };
-var NODE_R         = 7;
-
-/* Max nodes/edges to render for performance */
-var MAX_VIZ_NODES = 600;
-var MAX_VIZ_EDGES = 5000;
+/* (force-directed graph removed — dual-panel list replaces it) */
 
 /* ── Tabaqah UI label helpers ────────────────────────────── */
 function tabaqahThLabel(num) {
@@ -1208,392 +1093,265 @@ function activateTabaqah(tabNum, data) {
     allNarrators.length.toLocaleString() + ' นักรายงาน  ·  ' +
     allEdges.length.toLocaleString() + ' เส้นเชื่อม';
 
-  /* Hide loading, init viz */
-  document.getElementById('vizLoading').style.display = 'none';
-
-  /* Close any open detail */
-  closeDetail();
-
-  initViz();
+  /* Initialize dual-panel list view */
+  initList(allNarrators);
 }
 
 /* =========================================================
-   VISUALIZATION — force-directed layout
+   DUAL-PANEL LIST — virtual scroll narrator table
    ========================================================= */
-function initViz() {
-  vizSvg = document.getElementById('isnadSvg');
-  var W = vizSvg.clientWidth  || 1200;
-  var H = vizSvg.clientHeight || 580;
+var ITEM_H    = 57;   /* px — must match .list-row height in CSS */
+var WIN_EXTRA = 18;   /* extra rows rendered above/below viewport */
+var listItems  = [];  /* current filtered+sorted array */
+var activeNarId = null;
+var sortKey   = 'connections';
+var gradeFilterVal = '';
 
-  /* Clear previous render */
-  while (vizSvg.firstChild) vizSvg.removeChild(vizSvg.firstChild);
+function initList(narrators) {
+  /* Show/hide panels */
+  var loading  = document.getElementById('vizLoading');
+  var toolbar  = document.getElementById('listToolbar');
+  var panel    = document.getElementById('dualPanel');
+  if (loading) loading.style.display = 'none';
+  if (toolbar) toolbar.style.display = 'flex';
+  if (panel)   panel.style.display   = 'grid';
 
-  /* Arrow marker defs */
+  activeNarId = null;
+  rebuildList(narrators);
+
+  /* Wire sort/filter controls */
+  var sortSel  = document.getElementById('sortSelect');
+  var gradeSel = document.getElementById('gradeFilter');
+  if (sortSel)  sortSel.onchange  = function(){ sortKey = this.value; rebuildList(allNarrators); };
+  if (gradeSel) gradeSel.onchange = function(){ gradeFilterVal = this.value; rebuildList(allNarrators); };
+
+  /* Wire scroll */
+  var ls = document.getElementById('listScroll');
+  if (ls) ls.onscroll = updateListWindow;
+}
+
+function rebuildList(narrators) {
+  /* Filter */
+  var gf = gradeFilterVal;
+  listItems = gf
+    ? narrators.filter(function(n){ return (n.grade_ibn_hajar || '').indexOf(gf) > -1; })
+    : narrators.slice();
+
+  /* Sort */
+  var sk = sortKey;
+  listItems.sort(function(a, b){
+    if (sk === 'connections') {
+      var ca = (a.teachers ? a.teachers.length : 0) + (a.students ? a.students.length : 0);
+      var cb = (b.teachers ? b.teachers.length : 0) + (b.students ? b.students.length : 0);
+      return cb - ca;
+    }
+    if (sk === 'death') return (a.death_ah || 9999) - (b.death_ah || 9999);
+    if (sk === 'name')  return (a.name_ar || '').localeCompare(b.name_ar || '', 'ar');
+    return 0;
+  });
+
+  /* Reset scroll and render */
+  var ls = document.getElementById('listScroll');
+  if (ls) ls.scrollTop = 0;
+  var meta = document.getElementById('listMeta');
+  if (meta) meta.textContent = listItems.length.toLocaleString() + ' นักรายงาน';
+  updateListWindow();
+}
+
+function updateListWindow() {
+  var ls     = document.getElementById('listScroll');
+  var rows   = document.getElementById('listRows');
+  var padTop = document.getElementById('padTop');
+  var padBot = document.getElementById('padBot');
+  if (!ls || !rows || !padTop || !padBot) return;
+
+  var total   = listItems.length;
+  var scrollT = ls.scrollTop;
+  var visH    = ls.clientHeight || 640;
+
+  var start = Math.max(0, Math.floor(scrollT / ITEM_H) - WIN_EXTRA);
+  var end   = Math.min(total, Math.ceil((scrollT + visH) / ITEM_H) + WIN_EXTRA);
+
+  padTop.style.height = (start * ITEM_H) + 'px';
+  padBot.style.height = ((total - end) * ITEM_H) + 'px';
+
+  rows.innerHTML = '';
+  var frag = document.createDocumentFragment();
+  for (var i = start; i < end; i++) {
+    var n    = listItems[i];
+    var row  = document.createElement('div');
+    var conns = (n.teachers ? n.teachers.length : 0) + (n.students ? n.students.length : 0);
+    var barW  = Math.min(48, Math.max(2, Math.round(conns * 0.8)));
+    row.className = 'list-row' + (n.id === activeNarId ? ' active' : '');
+    row.setAttribute('data-id', n.id);
+    row.innerHTML =
+      '<div class="row-num">' + (i + 1) + '</div>' +
+      '<div class="row-name" lang="ar" dir="rtl">' + esc(n.name_ar) + '</div>' +
+      '<div class="row-grade" lang="ar" dir="rtl">' + esc(n.grade_ibn_hajar || '—') + '</div>' +
+      '<div class="row-death">' + (n.death_ah ? n.death_ah : '—') + '</div>' +
+      '<div class="row-conns"><div class="conn-bar" style="width:' + barW + 'px"></div>' + conns + '</div>';
+    row.addEventListener('click', (function(narrator, rowIdx){
+      return function(){
+        activeNarId = narrator.id;
+        updateListWindow();
+        showEgoNetwork(narrator);
+      };
+    })(n, i));
+    frag.appendChild(row);
+  }
+  rows.appendChild(frag);
+}
+
+/* =========================================================
+   EGO-NETWORK — 1-hop neighborhood of selected narrator
+   ========================================================= */
+function showEgoNetwork(center) {
+  var egoEmpty = document.getElementById('egoEmpty');
+  var egoNet   = document.getElementById('egoNet');
+  var egoHeader= document.getElementById('egoHeader');
+  var svg      = document.getElementById('egoSvg');
+  if (!svg) return;
+
+  if (egoEmpty) egoEmpty.style.display = 'none';
+  if (egoNet)   egoNet.style.display   = 'block';
+
+  var conns = (center.teachers ? center.teachers.length : 0) + (center.students ? center.students.length : 0);
+  if (egoHeader) {
+    egoHeader.innerHTML =
+      '<div class="ego-name" lang="ar" dir="rtl">' + esc(center.name_ar) + '</div>' +
+      '<div class="ego-meta">' +
+        (center.death_ah ? 'ฮ.ศ. ' + center.death_ah + ' · ' : '') +
+        esc(center.grade_ibn_hajar || '') +
+        (conns ? ' · ' + conns + ' การเชื่อมต่อ' : '') +
+      '</div>';
+  }
+
+  /* Collect neighbor nodes (cap at 25 each side) */
+  var teachers = (center.teachers || []).slice(0, 25).map(function(id){
+    return narById[id] || globalNarById[id] || { id: id, name_ar: 'رَاوٍ #' + id };
+  });
+  var students = (center.students || []).slice(0, 25).map(function(id){
+    return narById[id] || globalNarById[id] || { id: id, name_ar: 'رَاوٍ #' + id };
+  });
+
+  renderEgoSvg(svg, center, teachers, students);
+}
+
+function renderEgoSvg(svg, center, teachers, students) {
+  /* Clear */
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+  var W  = svg.clientWidth  || 380;
+  var H  = svg.clientHeight || 440;
+  var CX = W / 2;
+  var CY = H / 2;
+
+  /* ─── Arrow marker ─── */
   var defs   = document.createElementNS('http://www.w3.org/2000/svg','defs');
   var marker = document.createElementNS('http://www.w3.org/2000/svg','marker');
-  marker.setAttribute('id','arr');
-  marker.setAttribute('markerWidth','7'); marker.setAttribute('markerHeight','5');
-  marker.setAttribute('refX','7');        marker.setAttribute('refY','2.5');
+  marker.setAttribute('id','ego-arr');
+  marker.setAttribute('markerWidth','7');  marker.setAttribute('markerHeight','5');
+  marker.setAttribute('refX','7');         marker.setAttribute('refY','2.5');
   marker.setAttribute('orient','auto');
   var poly = document.createElementNS('http://www.w3.org/2000/svg','polygon');
   poly.setAttribute('points','0 0, 7 2.5, 0 5');
   poly.setAttribute('class','arrow-marker');
-  marker.appendChild(poly); defs.appendChild(marker);
-  vizSvg.appendChild(defs);
+  marker.appendChild(poly); defs.appendChild(marker); svg.appendChild(defs);
 
-  gMain = document.createElementNS('http://www.w3.org/2000/svg','g');
-  vizSvg.appendChild(gMain);
+  /* ─── Layout ─── */
+  var CRAD = 22;   /* center node radius */
+  var NRAD = 14;   /* neighbor node radius */
+  var TRAD = Math.min(CY - CRAD - 20, 160);  /* teacher arc radius */
+  var SRAD = Math.min(CY - CRAD - 20, 160);  /* student arc radius */
 
-  var gE = document.createElementNS('http://www.w3.org/2000/svg','g');
-  gE.setAttribute('id','gEdges');
-  gMain.appendChild(gE);
-
-  var gN = document.createElementNS('http://www.w3.org/2000/svg','g');
-  gN.setAttribute('id','gNodes');
-  gMain.appendChild(gN);
-
-  /* Subsample for performance */
-  var vizNarrators = allNarrators.slice(0, MAX_VIZ_NODES);
-  var vizIds       = new Set(vizNarrators.map(function(n){ return n.id; }));
-  var vizEdges     = allEdges.filter(function(e){
-    return vizIds.has(e.from) && vizIds.has(e.to);
-  }).slice(0, MAX_VIZ_EDGES);
-
-  computeLayout(vizNarrators, vizEdges, W, H);
-  renderGraph(vizNarrators, vizEdges);
-  initPanZoom();
-}
-
-function computeLayout(narrators, edges, W, H) {
-  // Find min and max death_ah dynamically for horizontal chronological distribution
-  var minDeath = Infinity;
-  var maxDeath = -Infinity;
-  narrators.forEach(function(n){
-    if (n.death_ah !== null && n.death_ah !== undefined) {
-      if (n.death_ah < minDeath) minDeath = n.death_ah;
-      if (n.death_ah > maxDeath) maxDeath = n.death_ah;
-    }
-  });
-
-  var hasDeathRange = (minDeath !== Infinity && minDeath !== maxDeath);
-
-  /* Assign initial spread-out positions */
-  var idx = 0;
-  narrators.forEach(function(n){
-    var cx;
-    if (hasDeathRange && n.death_ah !== null && n.death_ah !== undefined) {
-      // Map demise year to 15% to 85% of screen width based on demise year (left=earlier, right=later)
-      cx = 0.15 * W + 0.7 * W * (n.death_ah - minDeath) / (maxDeath - minDeath);
-    } else {
-      // Fallback: distribute evenly
-      cx = 0.15 * W + 0.7 * W * (idx / narrators.length);
-    }
-    
-    // Spread vertically evenly with vertical margin
-    var cy = 60 + (idx % 18) * ((H - 120) / 18) + (Math.random() - 0.5) * 15;
-    nodePos[n.id] = { x: cx + (Math.random() - 0.5) * 20, y: cy, vx: 0, vy: 0 };
-    idx++;
-  });
-
-  var alpha = 1.0;
-  var iters = narrators.length > 300 ? 60 : 100;
-  for (var iter = 0; iter < iters; iter++) {
-    alpha *= 0.975;
-
-    /* Repulsion — O(n²) between all nodes to guarantee no overlapping name clusters */
-    var a = narrators;
-    var len = a.length;
-    for (var i = 0; i < len; i++) {
-      var pi = nodePos[a[i].id];
-      if (!pi) continue;
-      for (var j = i+1; j < len; j++) {
-        var pj = nodePos[a[j].id];
-        if (!pj) continue;
-        var dx = pi.x - pj.x;
-        var dy = pi.y - pj.y;
-        var d2 = dx*dx + dy*dy || 0.01;
-        var d  = Math.sqrt(d2);
-        
-        // Dynamic repulsion: push harder when nodes are extremely close (under 50px) to prevent text clutter
-        var rForce = 500;
-        if (d < 50) rForce = 900;
-        
-        var f  = (alpha * rForce) / d2;
-        if (f > 8) f = 8; // Cap force vector to prevent physics explosion
-        
-        var fx = (dx/d)*f, fy = (dy/d)*f;
-        pi.vx += fx; pi.vy += fy;
-        pj.vx -= fx; pj.vy -= fy;
-      }
-    }
-
-    /* Attraction along edges */
-    edges.forEach(function(e){
-      var pf = nodePos[e.from], pt = nodePos[e.to];
-      if (!pf || !pt) return;
-      var dx = pt.x-pf.x, dy = pt.y-pf.y;
-      var d  = Math.sqrt(dx*dx+dy*dy) || 1;
-      var f  = (d-55)*0.012*alpha;
-      var fx = (dx/d)*f, fy = (dy/d)*f;
-      pf.vx += fx; pf.vy += fy;
-      pt.vx -= fx; pt.vy -= fy;
-    });
-
-    /* Chronological horizontal ordering and vertical center gravity */
-    narrators.forEach(function(n){
-      var tx;
-      if (hasDeathRange && n.death_ah !== null && n.death_ah !== undefined) {
-        tx = 0.15 * W + 0.7 * W * (n.death_ah - minDeath) / (maxDeath - minDeath);
-      } else {
-        tx = 0.5 * W;
-      }
-      var p  = nodePos[n.id];
-      if (!p) return;
-      
-      // Extremely gentle forces to guide the layout while letting repulsion create spacious gaps
-      p.vx  += (tx - p.x) * 0.005 * alpha;
-      p.vy  += (H/2 - p.y) * 0.003 * alpha;
-    });
-
-    /* Integrate and bound */
-    narrators.forEach(function(n){
-      var p = nodePos[n.id];
-      if (!p) return;
-      p.vx *= 0.82; p.vy *= 0.82;
-      p.x  += p.vx;  p.y  += p.vy;
-      p.x   = Math.max(25, Math.min(W - 25,  p.x));
-      p.y   = Math.max(25, Math.min(H - 25, p.y));
-    });
-  }
-}
-
-function renderGraph(narrators, edges) {
-  var gE = document.getElementById('gEdges');
-  var gN = document.getElementById('gNodes');
-  if (gE) gE.innerHTML = '';
-  if (gN) gN.innerHTML = '';
-
-  if (!narrators.length) {
-    /* Show empty state */
-    var empty = document.createElementNS('http://www.w3.org/2000/svg','foreignObject');
-    empty.setAttribute('x','0'); empty.setAttribute('y','0');
-    empty.setAttribute('width','100%'); empty.setAttribute('height','100%');
-    vizSvg.appendChild(empty);
-    return;
+  /* place teachers above in a fan */
+  function arcPos(idx, total, cx, cy, r, topHalf) {
+    var span = Math.min(Math.PI * 0.85, (total - 1) * 0.32);
+    var base = topHalf ? -Math.PI / 2 : Math.PI / 2;
+    var angle = total === 1 ? base : base + span * (idx / (total - 1) - 0.5);
+    return { x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle) };
   }
 
-  /* Draw edges */
+  var nodes = [];
+  var edges = [];
+
+  /* Center */
+  nodes.push({ n: center, x: CX, y: CY, role: 'center', r: CRAD });
+
+  /* Teachers (above → topHalf=true → negative y direction) */
+  teachers.forEach(function(t, i){
+    var pos = arcPos(i, teachers.length, CX, CY, TRAD, true);
+    nodes.push({ n: t, x: pos.x, y: pos.y, role: 'teacher', r: NRAD });
+    edges.push({ from: t.id, to: center.id });
+  });
+
+  /* Students (below) */
+  students.forEach(function(s, i){
+    var pos = arcPos(i, students.length, CX, CY, SRAD, false);
+    nodes.push({ n: s, x: pos.x, y: pos.y, role: 'student', r: NRAD });
+    edges.push({ from: center.id, to: s.id });
+  });
+
+  /* Build pos map */
+  var pos = {};
+  nodes.forEach(function(nd){ pos[nd.n.id] = nd; });
+
+  /* ─── Draw edges ─── */
   edges.forEach(function(e){
-    var pf = nodePos[e.from], pt = nodePos[e.to];
+    var pf = pos[e.from], pt = pos[e.to];
     if (!pf || !pt) return;
-    var dx = pt.x-pf.x, dy = pt.y-pf.y;
-    var len = Math.sqrt(dx*dx+dy*dy) || 1;
-    var ex  = pt.x - (dx/len)*(NODE_R+3);
-    var ey  = pt.y - (dy/len)*(NODE_R+3);
+    var dx = pt.x - pf.x, dy = pt.y - pf.y;
+    var len = Math.sqrt(dx*dx + dy*dy) || 1;
     var line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1', (pf.x + (dx/len)*pf.r).toFixed(1));
+    line.setAttribute('y1', (pf.y + (dy/len)*pf.r).toFixed(1));
+    line.setAttribute('x2', (pt.x - (dx/len)*(pt.r+5)).toFixed(1));
+    line.setAttribute('y2', (pt.y - (dy/len)*(pt.r+5)).toFixed(1));
     line.setAttribute('class','edge');
-    line.setAttribute('x1',pf.x.toFixed(1)); line.setAttribute('y1',pf.y.toFixed(1));
-    line.setAttribute('x2',ex.toFixed(1));   line.setAttribute('y2',ey.toFixed(1));
-    line.setAttribute('marker-end','url(#arr)');
-    line.setAttribute('data-from',e.from);
-    line.setAttribute('data-to',  e.to);
-    gE.appendChild(line);
+    line.setAttribute('marker-end','url(#ego-arr)');
+    svg.appendChild(line);
   });
 
-  /* Draw nodes */
-  narrators.forEach(function(n){
-    var p = nodePos[n.id];
-    if (!p) return;
+  /* ─── Draw nodes ─── */
+  nodes.forEach(function(nd){
     var g = document.createElementNS('http://www.w3.org/2000/svg','g');
-    g.setAttribute('data-id', n.id);
-    g.setAttribute('transform','translate('+p.x.toFixed(1)+','+p.y.toFixed(1)+')');
-
-    // Dynamic browser-native tooltip containing full name and demise year
-    var title = document.createElementNS('http://www.w3.org/2000/svg','title');
-    var tooltipText = (n.name_ar || '');
-    if (n.death_ah) tooltipText += ' (ت ' + n.death_ah + ' هـ)';
-    title.textContent = tooltipText;
-    g.appendChild(title);
 
     var circ = document.createElementNS('http://www.w3.org/2000/svg','circle');
-    circ.setAttribute('r', NODE_R);
-    circ.setAttribute('class', nodeClass(n) + (n.id === selectedId ? ' selected' : ''));
+    circ.setAttribute('cx', nd.x.toFixed(1));
+    circ.setAttribute('cy', nd.y.toFixed(1));
+    circ.setAttribute('r',  nd.r);
+    var cls = 'node-circle ' + (nd.role === 'center' ? 'n-center' : nd.role === 'teacher' ? 'n-teacher' : 'n-student');
+    circ.setAttribute('class', cls);
     g.appendChild(circ);
 
-    // Render name label for ALL nodes, but control visibility dynamically via CSS classes and hovers
-    var connN = (n.teachers ? n.teachers.length : 0) + (n.students ? n.students.length : 0);
-    var parts     = (n.name_ar || '').split(' ');
-    var shortName = parts.slice(0, 2).join(' '); // 2 words is much cleaner and avoids overlap
-
+    /* Label: up to 3 words of Arabic name */
+    var words = (nd.n.name_ar || '').split(' ');
+    var label = words.slice(0, nd.role === 'center' ? 4 : 3).join(' ');
+    var lblY  = nd.role === 'teacher'
+                  ? nd.y - nd.r - 5          /* above node for teachers */
+                  : nd.y + nd.r + 13;        /* below node for center/students */
     var txt = document.createElementNS('http://www.w3.org/2000/svg','text');
-    var isHub = (connN >= 14); // Visible label permanently only for key hub nodes
-    var labelClass = 'node-label' + 
-                     (isHub ? ' visible-label' : '') + 
-                     (n.id === selectedId ? ' selected' : '');
-                     
-    txt.setAttribute('class', labelClass);
-    txt.setAttribute('y', NODE_R + 11);
-    txt.setAttribute('lang','ar');
-    txt.setAttribute('dir','rtl');
-    txt.textContent = shortName;
+    txt.setAttribute('x', nd.x.toFixed(1));
+    txt.setAttribute('y', lblY.toFixed(1));
+    txt.setAttribute('lang','ar'); txt.setAttribute('dir','rtl');
+    txt.setAttribute('class','node-label' + (nd.role === 'center' ? ' lbl-center' : ''));
+    txt.textContent = label;
     g.appendChild(txt);
 
-    g.addEventListener('click', function(){
-      selectNarrator(parseInt(this.getAttribute('data-id'),10));
-    });
-    gN.appendChild(g);
-  });
-}
-
-/* ── Select narrator ────────────────────────────────────── */
-function selectNarrator(id) {
-  selectedId = id;
-  /* Look up in current narById first, then global cache */
-  var n = narById[id] || globalNarById[id];
-  if (!n) return;
-
-  /* Highlight node */
-  document.querySelectorAll('#gNodes .node-circle').forEach(function(el){ el.classList.remove('selected'); });
-  document.querySelectorAll('#gNodes .node-label').forEach(function(el){  el.classList.remove('selected'); });
-  var gEl = document.querySelector('#gNodes g[data-id="'+id+'"]');
-  if (gEl) {
-    var c = gEl.querySelector('.node-circle'); if(c) c.classList.add('selected');
-    var t = gEl.querySelector('.node-label');  if(t) t.classList.add('selected');
-  }
-
-  /* Highlight connected edges */
-  document.querySelectorAll('.edge').forEach(function(el){
-    var f  = parseInt(el.getAttribute('data-from'),10);
-    var to = parseInt(el.getAttribute('data-to'),  10);
-    el.classList.toggle('highlighted', f===id || to===id);
-  });
-
-  /* Pan to node */
-  var p = nodePos[id];
-  if (p && vizSvg) {
-    var W = vizSvg.clientWidth  || 1200;
-    var H = vizSvg.clientHeight || 580;
-    panZoom.x = W/2 - p.x * panZoom.k;
-    panZoom.y = H/2 - p.y * panZoom.k;
-    applyTransform();
-  }
-
-  fillDetail(n);
-}
-
-function fillDetail(n) {
-  document.getElementById('detailDefault').style.display   = 'none';
-  var panel = document.getElementById('narratorDetail');
-  panel.classList.remove('narrator-detail-hidden');
-  panel.style.display = 'grid';
-
-  var tabNum = n.tabaqah_num || 12;
-  document.getElementById('detailEyebrow').textContent   = tabaqahThLabel(tabNum);
-  document.getElementById('detailNameAr').textContent    = n.name_ar || '—';
-  document.getElementById('detailTabaqahAr').textContent = tabaqahArLabel(tabNum);
-  document.getElementById('detailDeath').textContent     = n.death_ah ? 'ฮ.ศ. '+n.death_ah : '—';
-  document.getElementById('detailGen').textContent       = 'ฏอบะเกาะฮ์ที่ '+tabNum+' — '+tabaqahThLabel(tabNum);
-  document.getElementById('detailGradeIH').textContent   = n.grade_ibn_hajar || '—';
-  var cc = (n.teachers ? n.teachers.length : 0) + (n.students ? n.students.length : 0);
-  document.getElementById('detailConnCount').textContent = cc + ' การเชื่อมต่อ';
-
-  fillConnectionList('teachersList', n.teachers || [], 'teacher');
-  fillConnectionList('studentsList', n.students || [], 'student');
-}
-
-function fillConnectionList(elId, ids, type) {
-  var el = document.getElementById(elId);
-  el.innerHTML = '';
-  if (!ids.length) {
-    var empty = document.createElement('div');
-    empty.className = 'conn-item';
-    empty.innerHTML = '<span class="conn-empty-text">ไม่มีข้อมูล</span>';
-    el.appendChild(empty);
-    return;
-  }
-  ids.slice(0,30).forEach(function(tid){
-    var t = narById[tid] || globalNarById[tid];
-    var item = document.createElement('div');
-    item.className = 'conn-item';
-    var nameHtml = t
-      ? '<div class="conn-name-ar" lang="ar" dir="rtl">'+esc(t.name_ar)+'</div>'
-      : '<div class="conn-name-ar" lang="ar" dir="rtl">رَاوٍ #'+tid+'</div>';
-    var metaHtml = (t && t.death_ah) ? '<div class="conn-meta">ฮ.ศ. '+t.death_ah+'</div>' : '';
-    item.innerHTML =
-      '<div class="conn-dot'+(type==='teacher'?' teacher':'')+'"></div>'+
-      nameHtml + metaHtml;
-    item.addEventListener('click', function(){ selectNarrator(tid); });
-    el.appendChild(item);
-  });
-  if (ids.length > 30) {
-    var more = document.createElement('div');
-    more.innerHTML = '<div class="conn-more-text">… และอีก '+(ids.length-30)+' คน</div>';
-    el.appendChild(more);
-  }
-}
-
-function closeDetail() {
-  var panel = document.getElementById('narratorDetail');
-  panel.style.display = 'none';
-  panel.classList.add('narrator-detail-hidden');
-  document.getElementById('detailDefault').style.display = '';
-  selectedId = null;
-}
-
-document.getElementById('detailClose').addEventListener('click', function(){
-  closeDetail();
-  document.querySelectorAll('#gNodes .node-circle').forEach(function(el){ el.classList.remove('selected'); });
-  document.querySelectorAll('#gNodes .node-label').forEach(function(el){  el.classList.remove('selected'); });
-  document.querySelectorAll('.edge').forEach(function(el){ el.classList.remove('highlighted'); });
-});
-
-/* =========================================================
-   PAN & ZOOM
-   ========================================================= */
-function applyTransform() {
-  if (!gMain) return;
-  gMain.setAttribute('transform',
-    'translate('+panZoom.x.toFixed(2)+','+panZoom.y.toFixed(2)+') scale('+panZoom.k.toFixed(3)+')');
-}
-
-function initPanZoom() {
-  panZoom = { x:0, y:0, k:1 };
-  var dragging = false, lx = 0, ly = 0;
-
-  vizSvg.addEventListener('mousedown', function(e){
-    if (e.target.closest('g[data-id]')) return;
-    dragging = true; lx = e.clientX; ly = e.clientY;
-  });
-  window.addEventListener('mousemove', function(e){
-    if (!dragging) return;
-    panZoom.x += e.clientX-lx; panZoom.y += e.clientY-ly;
-    lx = e.clientX; ly = e.clientY; applyTransform();
-  });
-  window.addEventListener('mouseup', function(){ dragging = false; });
-
-  var ltx = 0, lty = 0;
-  vizSvg.addEventListener('touchstart', function(e){ if(e.touches.length===1){ ltx=e.touches[0].clientX; lty=e.touches[0].clientY; }},{passive:true});
-  vizSvg.addEventListener('touchmove',  function(e){
-    if(e.touches.length===1){
-      panZoom.x += e.touches[0].clientX-ltx; panZoom.y += e.touches[0].clientY-lty;
-      ltx=e.touches[0].clientX; lty=e.touches[0].clientY; applyTransform();
+    /* Click: switch ego-network to this narrator */
+    if (nd.role !== 'center') {
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', (function(narrator){
+        return function(){
+          activeNarId = narrator.id;
+          updateListWindow();
+          showEgoNetwork(narrator);
+        };
+      })(nd.n));
     }
-  },{passive:true});
 
-  vizSvg.addEventListener('wheel', function(e){
-    e.preventDefault();
-    var rect = vizSvg.getBoundingClientRect();
-    var cx = e.clientX-rect.left, cy = e.clientY-rect.top;
-    var d  = e.deltaY > 0 ? 0.85 : 1.18;
-    var nk = Math.max(0.15, Math.min(5, panZoom.k*d));
-    panZoom.x = cx - (cx-panZoom.x)*(nk/panZoom.k);
-    panZoom.y = cy - (cy-panZoom.y)*(nk/panZoom.k);
-    panZoom.k = nk; applyTransform();
-  },{passive:false});
-
-  document.getElementById('zoomIn').addEventListener('click',    function(){ panZoom.k=Math.min(5,panZoom.k*1.3); applyTransform(); });
-  document.getElementById('zoomOut').addEventListener('click',   function(){ panZoom.k=Math.max(0.15,panZoom.k/1.3); applyTransform(); });
-  document.getElementById('zoomReset').addEventListener('click', function(){ panZoom={x:0,y:0,k:1}; applyTransform(); });
+    svg.appendChild(g);
+  });
 }
 
 /* =========================================================
@@ -1655,16 +1413,9 @@ function doSearch(q) {
   $results.querySelectorAll('.result-row').forEach(function(row){
     row.addEventListener('click', function(){
       var id = parseInt(this.getAttribute('data-id'),10);
-      var n = globalNarById[id] || narById[id];
-      if (n && n.tabaqah_num && n.tabaqah_num !== currentTabaqah) {
-        loadTabaqah(n.tabaqah_num);
-        setTimeout(function(){
-          selectNarrator(id);
-        }, 350);
-      } else {
-        selectNarrator(id);
-      }
-      document.getElementById('detailSection').scrollIntoView({behavior:'smooth',block:'start'});
+      var n = narById[id] || globalNarById[id];
+      if (n) { activeNarId = id; showEgoNetwork(n); }
+      document.getElementById('vizSection').scrollIntoView({behavior:'smooth',block:'start'});
     });
   });
 }
