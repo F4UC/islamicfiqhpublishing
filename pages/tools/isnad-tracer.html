@@ -373,12 +373,12 @@ body::before {
 .list-select:focus { border-color:var(--gold); }
 
 /* =========================================================
-   DUAL PANEL
+   DUAL PANEL — vertical stack (list top, ego-network bottom)
    ========================================================= */
 .dual-panel {
   display:grid;
-  grid-template-columns:1fr 400px;
-  gap:20px; align-items:start;
+  grid-template-columns:1fr;
+  gap:32px; align-items:start;
   margin-top:0;
 }
 
@@ -395,7 +395,7 @@ body::before {
 }
 .list-scroll {
   display:flex; flex-direction:column;
-  height:640px; overflow-y:auto;
+  height:520px; overflow-y:auto;
   border:1px solid var(--rule-strong); border-top:none;
   background:var(--ink);
   overscroll-behavior:contain;
@@ -420,52 +420,52 @@ body::before {
 .row-conns { font-family:var(--ui); font-size:11px; color:var(--text-dim); display:flex; align-items:center; gap:5px; }
 .conn-bar  { height:3px; border-radius:2px; background:var(--gold); opacity:.45; min-width:2px; }
 
-/* ─── Right: ego-network panel ─── */
+/* ─── Bottom: ego-network panel ─── */
 .ego-panel {
-  position:sticky; top:72px;
   border:1px solid var(--rule-strong);
   background:var(--ink-2);
   overflow:hidden;
 }
 .ego-empty {
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  height:560px; gap:14px; text-align:center; padding:24px;
+  height:320px; gap:14px; text-align:center; padding:24px;
 }
 .ego-empty-ar  { font-family:var(--arabic); font-size:36px; color:var(--rule-strong); }
 .ego-empty-th  { font-family:var(--thai); font-size:13px; color:var(--text-mute); line-height:1.7; }
 .ego-net       { display:none; }
-.ego-header    { padding:16px 20px 10px; border-bottom:1px solid var(--rule); }
-.ego-name      { font-family:var(--arabic); font-size:20px; color:var(--paper); direction:rtl; text-align:right; line-height:1.5; }
-.ego-meta      { font-family:var(--thai); font-size:12px; color:var(--text-mute); margin-top:4px; }
-.ego-legend    { display:flex; gap:16px; flex-wrap:wrap; padding:8px 20px; border-bottom:1px solid var(--rule); }
-.ego-leg-item  { display:flex; align-items:center; gap:6px; font-family:var(--ui); font-size:10px; letter-spacing:.1em; color:var(--text-mute); }
-.ego-dot       { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
-.ego-dot-t     { background:rgba(59,130,246,.55); border:1.5px solid #3b82f6; }
-.ego-dot-c     { background:rgba(179,27,27,.15); border:1.5px solid var(--gold); }
-.ego-dot-s     { background:rgba(59,130,246,.10); border:1.5px solid rgba(59,130,246,.45); }
-.ego-svg       { width:100%; height:440px; display:block; }
+.ego-header    { padding:20px 24px 12px; border-bottom:1px solid var(--rule); }
+.ego-name      { font-family:var(--arabic); font-size:22px; color:var(--paper); direction:rtl; text-align:right; line-height:1.5; }
+.ego-meta      { font-family:var(--thai); font-size:13px; color:var(--text-mute); margin-top:6px; }
+.ego-legend    { display:flex; gap:20px; flex-wrap:wrap; padding:10px 24px; border-bottom:1px solid var(--rule); }
+.ego-leg-item  { display:flex; align-items:center; gap:8px; font-family:var(--ui); font-size:11px; letter-spacing:.1em; color:var(--text-mute); }
+.ego-dot       { width:28px; height:14px; border-radius:3px; flex-shrink:0; }
+.ego-dot-t     { background:rgba(59,130,246,.12); border:1px solid #3b82f6; }
+.ego-dot-c     { background:rgba(179,27,27,.10); border:1px solid var(--gold); }
+.ego-dot-s     { background:rgba(59,130,246,.05); border:1px solid rgba(59,130,246,.4); }
+.ego-svg       { width:100%; display:block; }
 
-/* SVG elements (used by ego-network) */
-.edge          { stroke:rgba(0,50,100,0.18); stroke-width:1; fill:none; opacity:.7; }
-html.dark-mode .edge { stroke:rgba(232,224,208,.20); }
-.node-circle   { cursor:pointer; transition:stroke .2s, fill .2s; }
-.node-circle.n-center  { fill:rgba(179,27,27,.12); stroke:var(--gold); stroke-width:2.5; }
-.node-circle.n-teacher { fill:rgba(59,130,246,.14); stroke:#3b82f6; stroke-width:1.5; }
-.node-circle.n-student { fill:rgba(59,130,246,.06); stroke:rgba(59,130,246,.45); stroke-width:1.5; }
+/* SVG elements — text-only nodes (no circles) */
+.edge          { stroke:rgba(0,50,100,0.14); stroke-width:1; fill:none; opacity:.6; }
+html.dark-mode .edge { stroke:rgba(232,224,208,.16); }
+.node-bg       { }
+.node-bg-center  { fill:rgba(179,27,27,.10); stroke:var(--gold); stroke-width:1.5; }
+.node-bg-teacher { fill:rgba(59,130,246,.08); stroke:rgba(59,130,246,.5); stroke-width:1; }
+.node-bg-student { fill:rgba(59,130,246,.05); stroke:rgba(59,130,246,.28); stroke-width:1; }
+html.dark-mode .node-bg-center  { fill:rgba(179,27,27,.22); }
+html.dark-mode .node-bg-teacher { fill:rgba(59,130,246,.16); stroke:rgba(59,130,246,.7); }
+html.dark-mode .node-bg-student { fill:rgba(59,130,246,.10); stroke:rgba(59,130,246,.5); }
 .node-label    {
-  font-family:'Amiri',serif; font-size:10px; fill:var(--text-secondary);
+  font-family:'Amiri',serif; font-size:12px; fill:var(--text-secondary);
   pointer-events:none; direction:rtl; text-anchor:middle;
 }
 html.dark-mode .node-label { fill:var(--text-secondary); }
-.node-label.lbl-center { font-size:11px; fill:var(--gold); font-weight:700; }
+.node-label.lbl-center  { font-size:15px; fill:var(--gold); font-weight:700; }
+.node-label.lbl-teacher { font-size:12px; fill:var(--text-dim); }
+.node-label.lbl-student { font-size:12px; fill:var(--text-dim); }
 .arrow-marker  { fill:rgba(0,50,100,0.22); }
 html.dark-mode .arrow-marker { fill:rgba(232,224,208,.22); }
 
 /* ─── Responsive ─── */
-@media (max-width:960px) {
-  .dual-panel { grid-template-columns:1fr; }
-  .ego-panel  { position:static; margin-top:20px; }
-}
 @media (max-width:640px) {
   .list-header-row,
   .list-row { grid-template-columns:36px 1fr 100px 56px; }
@@ -586,7 +586,7 @@ html.dark-mode .arrow-marker { fill:rgba(232,224,208,.22); }
      ========================================================== -->
 <section class="page-hero">
   <div class="wrap">
-    <div class="hero-eyebrow" lang="ar" dir="rtl" data-reveal>أَدَوَاتُ البَحْثِ الحَدِيثِيّ</div>
+    <div class="hero-eyebrow" data-reveal>ISNĀD TRACER</div>
     <div class="hero-arabic-title" lang="ar" dir="rtl" data-reveal data-delay="1">شَجَرَةُ الإِسنَادِ</div>
     <h1 class="hero-title" data-reveal data-delay="2">ISNĀD<br><em>TRACER</em></h1>
 
@@ -662,8 +662,7 @@ html.dark-mode .arrow-marker { fill:rgba(232,224,208,.22); }
         <h2 class="section-title">12 <em>ฏอบะเกาะฮ์</em></h2>
         <p class="section-lede">
           คลิกที่ยุคสมัยที่ต้องการสำรวจ — ระบบจะโหลดข้อมูลนักรายงานและสายรายงาน
-          เฉพาะฏอบะเกาะฮ์นั้นมาแสดงในแผนภูมิด้านล่าง
-          (ข้อมูลจะถูกแคชเมื่อโหลดครั้งแรก)
+          เฉพาะฏอบะเกาะฮ์นั้นมาแสดงในรายชื่อด้านล่าง
         </p>
       </div>
     </div>
@@ -799,7 +798,7 @@ html.dark-mode .arrow-marker { fill:rgba(232,224,208,.22); }
         <h2 class="section-title">วิธีอ่าน<em>อิสนาด</em></h2>
         <p class="section-lede">
           สายรายงาน (อิสนาด) คือหัวใจของวิทยาการหะดีษ วิธีอ่านและตรวจสอบสายรายงาน
-          ถูกวางหลักเกณฑ์โดยนักวิชาการมุสลิมรุ่นแรกผ่านศาสตร์ที่เรียกว่า "อิลมุอัรริญาล"
+          ถูกวางหลักเกณฑ์โดยนักวิชาการมุสลิมรุ่นแรกผ่านศาสตร์ที่เรียกว่า "อิลมุรริญาล"
         </p>
       </div>
     </div>
@@ -809,9 +808,8 @@ html.dark-mode .arrow-marker { fill:rgba(232,224,208,.22); }
         <div class="how-num">01</div>
         <div class="how-title">เลือกฏอบะเกาะฮ์</div>
         <div class="how-desc">
-          คลิกการ์ดยุคสมัยที่ต้องการ ระบบจะโหลดข้อมูลนักรายงานเฉพาะรุ่นนั้นจากเซิร์ฟเวอร์
-          ทำให้แผนภูมิตอบสนองได้เร็วกว่าการโหลดข้อมูลทั้งหมดพร้อมกัน
-          ข้อมูลจะถูกเก็บแคชในหน่วยความจำเมื่อโหลดครั้งแรก
+          คลิกที่ยุคสมัยที่ต้องการสำรวจ — ระบบจะโหลดข้อมูลนักรายงานและสายรายงาน
+          เฉพาะฏอบะเกาะฮ์นั้นมาแสดงในรายชื่อด้านล่าง
         </div>
       </div>
       <div class="how-card" data-reveal data-delay="1">
@@ -1241,117 +1239,118 @@ function renderEgoSvg(svg, center, teachers, students) {
   /* Clear */
   while (svg.firstChild) svg.removeChild(svg.firstChild);
 
-  var W  = svg.clientWidth  || 380;
-  var H  = svg.clientHeight || 440;
-  var CX = W / 2;
+  /* ── Compute layout dimensions ── */
+  var W   = svg.parentElement ? svg.parentElement.clientWidth || 900 : 900;
+  var PAD = 40;               /* horizontal margin */
+  var ROW_H   = 72;           /* px between rows */
+  var NODE_H  = 24;           /* text-pill height */
+
+  /* Split into rows: ≤14 → 1 row, >14 → 2 rows */
+  var tRows = teachers.length > 14 ? 2 : 1;
+  var sRows = students.length > 14 ? 2 : 1;
+  var totalRows = tRows + 1 + sRows;          /* teacher rows + center + student rows */
+  var H = Math.max(300, totalRows * ROW_H + PAD * 2);
+
+  svg.setAttribute('height', H);
+
   var CY = H / 2;
 
-  /* ─── Arrow marker ─── */
+  /* Distribute items in a row evenly across full width */
+  function rowNodes(items, y) {
+    var n = items.length;
+    return items.map(function(item, i){
+      var x = n === 1 ? W/2 : PAD + (W - PAD*2) * (i / (n - 1));
+      return { n: item, x: x, y: y };
+    });
+  }
+
+  /* Teacher nodes (above center) */
+  var tAll = [];
+  if (tRows === 1) {
+    tAll = rowNodes(teachers, CY - ROW_H);
+  } else {
+    var half = Math.ceil(teachers.length / 2);
+    tAll = rowNodes(teachers.slice(0, half), CY - ROW_H * 2)
+      .concat(rowNodes(teachers.slice(half),  CY - ROW_H));
+  }
+
+  /* Student nodes (below center) */
+  var sAll = [];
+  if (sRows === 1) {
+    sAll = rowNodes(students, CY + ROW_H);
+  } else {
+    var half2 = Math.ceil(students.length / 2);
+    sAll = rowNodes(students.slice(0, half2), CY + ROW_H)
+      .concat(rowNodes(students.slice(half2), CY + ROW_H * 2));
+  }
+
+  /* Arrow marker defs */
   var defs   = document.createElementNS('http://www.w3.org/2000/svg','defs');
   var marker = document.createElementNS('http://www.w3.org/2000/svg','marker');
   marker.setAttribute('id','ego-arr');
-  marker.setAttribute('markerWidth','7');  marker.setAttribute('markerHeight','5');
-  marker.setAttribute('refX','7');         marker.setAttribute('refY','2.5');
+  marker.setAttribute('markerWidth','7'); marker.setAttribute('markerHeight','5');
+  marker.setAttribute('refX','7');        marker.setAttribute('refY','2.5');
   marker.setAttribute('orient','auto');
   var poly = document.createElementNS('http://www.w3.org/2000/svg','polygon');
   poly.setAttribute('points','0 0, 7 2.5, 0 5');
   poly.setAttribute('class','arrow-marker');
   marker.appendChild(poly); defs.appendChild(marker); svg.appendChild(defs);
 
-  /* ─── Layout ─── */
-  var CRAD = 22;   /* center node radius */
-  var NRAD = 14;   /* neighbor node radius */
-  var TRAD = Math.min(CY - CRAD - 20, 160);  /* teacher arc radius */
-  var SRAD = Math.min(CY - CRAD - 20, 160);  /* student arc radius */
-
-  /* place teachers above in a fan */
-  function arcPos(idx, total, cx, cy, r, topHalf) {
-    var span = Math.min(Math.PI * 0.85, (total - 1) * 0.32);
-    var base = topHalf ? -Math.PI / 2 : Math.PI / 2;
-    var angle = total === 1 ? base : base + span * (idx / (total - 1) - 0.5);
-    return { x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle) };
-  }
-
-  var nodes = [];
-  var edges = [];
-
-  /* Center */
-  nodes.push({ n: center, x: CX, y: CY, role: 'center', r: CRAD });
-
-  /* Teachers (above → topHalf=true → negative y direction) */
-  teachers.forEach(function(t, i){
-    var pos = arcPos(i, teachers.length, CX, CY, TRAD, true);
-    nodes.push({ n: t, x: pos.x, y: pos.y, role: 'teacher', r: NRAD });
-    edges.push({ from: t.id, to: center.id });
-  });
-
-  /* Students (below) */
-  students.forEach(function(s, i){
-    var pos = arcPos(i, students.length, CX, CY, SRAD, false);
-    nodes.push({ n: s, x: pos.x, y: pos.y, role: 'student', r: NRAD });
-    edges.push({ from: center.id, to: s.id });
-  });
-
-  /* Build pos map */
-  var pos = {};
-  nodes.forEach(function(nd){ pos[nd.n.id] = nd; });
-
-  /* ─── Draw edges ─── */
-  edges.forEach(function(e){
-    var pf = pos[e.from], pt = pos[e.to];
-    if (!pf || !pt) return;
-    var dx = pt.x - pf.x, dy = pt.y - pf.y;
-    var len = Math.sqrt(dx*dx + dy*dy) || 1;
+  /* Helper: draw a line between two text-pill centers */
+  function drawLine(x1, y1, x2, y2, cls) {
+    var dx = x2-x1, dy = y2-y1, len = Math.sqrt(dx*dx+dy*dy)||1;
+    var OFF = NODE_H/2 + 3;
     var line = document.createElementNS('http://www.w3.org/2000/svg','line');
-    line.setAttribute('x1', (pf.x + (dx/len)*pf.r).toFixed(1));
-    line.setAttribute('y1', (pf.y + (dy/len)*pf.r).toFixed(1));
-    line.setAttribute('x2', (pt.x - (dx/len)*(pt.r+5)).toFixed(1));
-    line.setAttribute('y2', (pt.y - (dy/len)*(pt.r+5)).toFixed(1));
-    line.setAttribute('class','edge');
+    line.setAttribute('x1', (x1+(dx/len)*OFF).toFixed(1));
+    line.setAttribute('y1', (y1+(dy/len)*OFF).toFixed(1));
+    line.setAttribute('x2', (x2-(dx/len)*(OFF+4)).toFixed(1));
+    line.setAttribute('y2', (y2-(dy/len)*(OFF+4)).toFixed(1));
+    line.setAttribute('class','edge ' + cls);
     line.setAttribute('marker-end','url(#ego-arr)');
     svg.appendChild(line);
-  });
+  }
 
-  /* ─── Draw nodes ─── */
-  nodes.forEach(function(nd){
+  /* Helper: draw a text-pill node (rect + text) */
+  function drawTextNode(x, y, nameAr, role, narrator) {
+    var words = (nameAr || '').split(' ');
+    var maxW  = role === 'center' ? 5 : 4;
+    var label = words.slice(0, maxW).join(' ');
+    var estW  = Math.min(200, label.length * 7.8 + 20);
     var g = document.createElementNS('http://www.w3.org/2000/svg','g');
-
-    var circ = document.createElementNS('http://www.w3.org/2000/svg','circle');
-    circ.setAttribute('cx', nd.x.toFixed(1));
-    circ.setAttribute('cy', nd.y.toFixed(1));
-    circ.setAttribute('r',  nd.r);
-    var cls = 'node-circle ' + (nd.role === 'center' ? 'n-center' : nd.role === 'teacher' ? 'n-teacher' : 'n-student');
-    circ.setAttribute('class', cls);
-    g.appendChild(circ);
-
-    /* Label: up to 3 words of Arabic name */
-    var words = (nd.n.name_ar || '').split(' ');
-    var label = words.slice(0, nd.role === 'center' ? 4 : 3).join(' ');
-    var lblY  = nd.role === 'teacher'
-                  ? nd.y - nd.r - 5          /* above node for teachers */
-                  : nd.y + nd.r + 13;        /* below node for center/students */
+    var rect = document.createElementNS('http://www.w3.org/2000/svg','rect');
+    rect.setAttribute('x', (x - estW/2).toFixed(1));
+    rect.setAttribute('y', (y - NODE_H/2).toFixed(1));
+    rect.setAttribute('width',  estW.toFixed(1));
+    rect.setAttribute('height', NODE_H);
+    rect.setAttribute('rx', '4');
+    rect.setAttribute('class', 'node-bg node-bg-' + role);
+    g.appendChild(rect);
     var txt = document.createElementNS('http://www.w3.org/2000/svg','text');
-    txt.setAttribute('x', nd.x.toFixed(1));
-    txt.setAttribute('y', lblY.toFixed(1));
+    txt.setAttribute('x', x.toFixed(1));
+    txt.setAttribute('y', (y + 5).toFixed(1));
     txt.setAttribute('lang','ar'); txt.setAttribute('dir','rtl');
-    txt.setAttribute('class','node-label' + (nd.role === 'center' ? ' lbl-center' : ''));
+    txt.setAttribute('class','node-label lbl-' + role);
     txt.textContent = label;
     g.appendChild(txt);
-
-    /* Click: switch ego-network to this narrator */
-    if (nd.role !== 'center') {
+    if (role !== 'center' && narrator) {
       g.style.cursor = 'pointer';
-      g.addEventListener('click', (function(narrator){
-        return function(){
-          activeNarId = narrator.id;
-          updateListWindow();
-          showEgoNetwork(narrator);
-        };
-      })(nd.n));
+      g.addEventListener('click', (function(n){ return function(){
+        activeNarId = n.id;
+        updateListWindow();
+        showEgoNetwork(n);
+      }; })(narrator));
     }
-
     svg.appendChild(g);
-  });
+  }
+
+  /* Draw edges first (below nodes) */
+  tAll.forEach(function(nd){ drawLine(nd.x, nd.y, W/2, CY, 'edge-t'); });
+  sAll.forEach(function(nd){ drawLine(W/2, CY, nd.x, nd.y, 'edge-s'); });
+
+  /* Draw nodes on top */
+  tAll.forEach(function(nd){ drawTextNode(nd.x, nd.y, nd.n.name_ar, 'teacher', nd.n); });
+  sAll.forEach(function(nd){ drawTextNode(nd.x, nd.y, nd.n.name_ar, 'student', nd.n); });
+  drawTextNode(W/2, CY, center.name_ar, 'center', null);
 }
 
 /* =========================================================
