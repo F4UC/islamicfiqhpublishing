@@ -27,61 +27,173 @@
 <link rel="stylesheet" href="../article.css?v=8">
 
 <style>
-/* - สไตล์ระดับพรีเมียมสำหรับหน้าเครื่องมือหลัก - */
-.tools-container { max-width: 1100px; margin: 60px auto 80px; padding: 0 24px; }
-
-.tools-header { text-align: center; border-bottom: 1px solid var(--border-primary); padding-bottom: 40px; margin-bottom: 60px; transition: var(--theme-transition); }
-.tools-title { font-family: 'Sarabun', sans-serif; font-size: 36px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; transition: var(--theme-transition); }
-.tools-desc { font-size: 16px; color: var(--text-secondary); max-width: 700px; margin: 0 auto; line-height: 1.8; transition: var(--theme-transition); }
-
-.tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
-
-/* โครงสร้างการ์ดพรีเมียม */
-.tool-card { 
-    background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: 12px; padding: 40px 30px; 
-    text-align: center; display: flex; flex-direction: column; height: 100%; position: relative; overflow: hidden;
-    transition: var(--theme-transition), transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s;
+/* ─── TOKEN SYSTEM — mirrors index.html ─────────────────────────── */
+:root {
+  --t-ink:      #e3edf7;
+  --t-paper:    #111111;
+  --t-dim:      #444444;
+  --t-mute:     #777777;
+  --t-gold:     #b31b1b;
+  --t-rule:     rgba(0,50,100,0.08);
+  --t-border:   rgba(0,50,100,0.10);
+  --t-card-bg:  #d6e2ee;
+  --t-card-bg2: #c8d7e5;
+  --t-serif:    'Cormorant Garamond', Georgia, serif;
+  --t-thai:     'Sarabun', system-ui, sans-serif;
 }
-.tool-card:hover { 
-    border-color: var(--accent-color); box-shadow: 0 20px 40px var(--shadow-heavy); transform: translateY(-5px); 
+html.dark-mode {
+  --t-ink:      #0a0907;
+  --t-paper:    #e8e0d0;
+  --t-dim:      #9a907e;
+  --t-mute:     #6b6357;
+  --t-rule:     rgba(232,224,208,0.14);
+  --t-border:   rgba(232,224,208,0.18);
+  --t-card-bg:  #14110d;
+  --t-card-bg2: #1d1814;
 }
 
-/* แอนิเมชันขอบทองสำหรับเครื่องมือเปิดใช้งานสด */
+body { background: var(--t-ink); color: var(--t-paper); }
+
+/* ─── TOOLS HERO ─────────────────────────────────────────────────── */
+.tools-hero {
+  min-height: 62vh;
+  padding: 100px 0 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tools-hero::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 50% at 80% 18%, rgba(59,130,246,.10), transparent 60%),
+    radial-gradient(80% 60% at 10% 90%, rgba(59,130,246,.05), transparent 70%);
+}
+html.dark-mode .tools-hero::before {
+  background:
+    radial-gradient(60% 50% at 80% 18%, rgba(59,130,246,.06), transparent 60%),
+    radial-gradient(80% 60% at 10% 90%, rgba(59,130,246,.03), transparent 70%);
+}
+
+.tools-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative; z-index: 2;
+}
+
+.tools-display {
+  font-family: var(--t-serif);
+  font-weight: 300;
+  font-size: clamp(56px, 12vw, 160px);
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  color: var(--t-paper);
+}
+.tools-display em  { font-style: italic; color: var(--t-gold); font-weight: 400; }
+.tools-display .br { display: block; }
+
+.tools-hero-rule {
+  display: block;
+  width: 1px; height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--t-gold));
+  margin: 36px auto;
+}
+
+.tools-hero-sub {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: var(--t-thai);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--t-dim);
+}
+
+/* ─── DIVIDER BETWEEN HERO AND GRID ─────────────────────────────── */
+.tools-section-sep {
+  height: 1px;
+  background: var(--t-rule);
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+
+/* ─── GRID CONTAINER ─────────────────────────────────────────────── */
+.tools-container { max-width: 1100px; margin: 0 auto 100px; padding: 0 24px; }
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+
+/* ─── TOOL CARDS ─────────────────────────────────────────────────── */
+.tool-card {
+  background: var(--t-card-bg);
+  border: 1px solid var(--t-border);
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  display: flex; flex-direction: column; height: 100%;
+  position: relative; overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s, border-color 0.3s;
+}
+.tool-card:hover {
+  border-color: var(--t-gold);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+}
 .tool-card::before {
-    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--accent-color);
-    transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+  background: var(--t-gold);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
 }
 .tool-card:hover::before { transform: scaleX(1); }
 
-/* วงกลมล้อมรอบไอคอน */
-.tool-icon { 
-    font-size: 36px; line-height: 1; color: var(--text-primary); background: var(--bg-tertiary); 
-    width: 70px; height: 70px; border-radius: 50%; border: 1px solid var(--border-primary);
-    display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; flex-shrink: 0;
-    transition: var(--theme-transition);
+.tool-icon {
+  font-size: 36px; line-height: 1;
+  color: var(--t-paper);
+  background: var(--t-card-bg2);
+  width: 70px; height: 70px; border-radius: 50%;
+  border: 1px solid var(--t-border);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px; flex-shrink: 0;
 }
 
-.tool-name { font-family: 'Sarabun', sans-serif; font-size: 22px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; transition: var(--theme-transition); }
-.tool-desc-text { font-size: 14px; color: var(--text-secondary); line-height: 1.6; flex-grow: 1; margin-bottom: 28px; transition: var(--theme-transition); }
+.tool-name      { font-family: var(--t-thai); font-size: 22px; font-weight: 700; color: var(--t-paper); margin-bottom: 12px; }
+.tool-desc-text { font-size: 14px; color: var(--t-dim); line-height: 1.7; flex-grow: 1; margin-bottom: 28px; text-align: left; }
 
-.tool-btn { 
-    display: inline-block; padding: 11px 28px; font-size: 14px; font-weight: 600; 
-    color: var(--inverted-text); background: var(--inverted-bg); border-radius: 4px; 
-    border: 1px solid var(--border-primary); transition: var(--theme-transition); text-decoration: none; 
+.tool-btn {
+  display: inline-block; padding: 11px 28px;
+  font-size: 13px; font-weight: 600; letter-spacing: .04em;
+  color: var(--t-paper); background: transparent;
+  border-radius: 4px; border: 1px solid var(--t-border);
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+  text-decoration: none;
 }
-.tool-btn:hover { background: var(--accent-color); color: #fff; }
+.tool-btn:hover { background: var(--t-gold); border-color: var(--t-gold); color: #fff; }
 
-.status-badge { display: inline-block; padding: 4px 14px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border-radius: 20px; margin-bottom: 20px; align-self: center; transition: var(--theme-transition); }
-.status-available { background: rgba(59, 130, 246, 0.1); color: var(--accent-color); }
-.status-soon { background: var(--bg-tertiary); color: var(--text-secondary); border: 1px solid var(--border-primary); }
+.status-badge {
+  display: inline-block; padding: 4px 14px;
+  font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  border-radius: 20px; margin-bottom: 20px; align-self: center;
+}
+.status-available { background: rgba(179,27,27,0.10); color: var(--t-gold); }
+.status-soon      { background: var(--t-card-bg2); color: var(--t-mute); border: 1px solid var(--t-border); }
 
-/* รูปแบบการ์ดปิดล็อก / กำลังพัฒนา */
-.tool-card.coming-soon { background: var(--bg-primary); border: 1px dashed var(--border-secondary); opacity: 0.85; }
-.tool-card.coming-soon:hover { border-color: var(--border-secondary); box-shadow: none; transform: translateY(-2px); }
+.tool-card.coming-soon {
+  background: transparent; border: 1px dashed var(--t-border); opacity: 0.8;
+}
+.tool-card.coming-soon:hover { border-color: var(--t-border); box-shadow: none; transform: translateY(-2px); }
 .tool-card.coming-soon::before { display: none; }
-.tool-card.coming-soon .tool-icon { background: var(--bg-secondary); border-color: var(--border-primary); filter: grayscale(1); opacity: 0.5; }
-.tool-card.coming-soon .tool-name { color: var(--text-secondary); }
-.tool-card.coming-soon .status-badge { background: var(--bg-secondary); color: var(--text-tertiary); border: none; }
+.tool-card.coming-soon .tool-icon { opacity: 0.45; filter: grayscale(1); }
+.tool-card.coming-soon .tool-name { color: var(--t-dim); }
+.tool-card.coming-soon .status-badge { background: var(--t-card-bg); color: var(--t-mute); }
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .tools-hero { min-height: 55vh; padding: 80px 0 56px; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .tool-desc-text { text-align: center; }
+}
 </style>
 </head>
 <body id="tools-page" class="ifp-tools-page" lang="th">
@@ -89,12 +201,22 @@
 <div id="header-placeholder"></div>
 
 <main>
-  <section class="tools-container">
-    <div class="tools-header">
-      <h1 class="tools-title" lang="th">เครื่องมือและแอปพลิเคชัน</h1>
-      <p class="tools-desc">แพลตฟอร์มดิจิทัลที่พัฒนาขึ้นเพื่อประยุกต์ใช้เทคโนโลยีร่วมกับหลักนิติศาสตร์อิสลาม มุ่งอำนวยความสะดวกในวิถีชีวิตประจำวันของมุสลิม</p>
-    </div>
 
+  <!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
+  <section class="tools-hero">
+    <div class="tools-hero-inner">
+      <h1 class="tools-display">
+        <span class="br">เครื่องมือ</span>
+        <span class="br"><em>นักวิชาการ</em>.</span>
+      </h1>
+      <span class="tools-hero-rule"></span>
+      <p class="tools-hero-sub">แพลตฟอร์มดิจิทัลที่พัฒนาขึ้นเพื่อประยุกต์ใช้เทคโนโลยีร่วมกับหลักนิติศาสตร์อิสลาม มุ่งอำนวยความสะดวกในวิถีชีวิตประจำวันของมุสลิม</p>
+    </div>
+  </section>
+
+  <!-- ═══ TOOLS GRID ═════════════════════════════════════════════════ -->
+  <div class="tools-section-sep"></div>
+  <section class="tools-container">
     <div class="tools-grid">
       
       <div class="tool-card">
