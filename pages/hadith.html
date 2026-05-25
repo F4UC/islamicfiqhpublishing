@@ -123,14 +123,6 @@ html.dark-mode .page-hero::before{background:radial-gradient(60% 50% at 80% 18%,
 .page-display{font-family:var(--ph-serif);font-weight:600;font-size:clamp(40px,11vw,140px);line-height:1.05;letter-spacing:-.02em;color:var(--ph-paper)}
 .page-display em{font-style:italic;color:var(--ph-gold);font-weight:400}
 .page-display .br{display:block}
-.hero-meteors{position:relative;width:160px;height:55px;margin:24px auto;overflow:hidden}
-.hero-meteors .meteor{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--ph-gold);opacity:0;animation:chain-drop var(--dur) var(--delay) ease-in infinite}
-@keyframes chain-drop{0%{transform:translateY(-20px);opacity:0}20%{opacity:.9}70%{opacity:.8}100%{transform:translateY(60px);opacity:0}}
-.hero-meteors .meteor:nth-child(1){left:20px;--dur:1.4s;--delay:0s}
-.hero-meteors .meteor:nth-child(2){left:50px;--dur:1.4s;--delay:.28s}
-.hero-meteors .meteor:nth-child(3){left:80px;--dur:1.4s;--delay:.56s}
-.hero-meteors .meteor:nth-child(4){left:110px;--dur:1.4s;--delay:.84s}
-.hero-meteors .meteor:nth-child(5){left:140px;--dur:1.4s;--delay:1.12s}
 .page-hero-sub{max-width:560px;margin:0 auto;font-family:var(--ph-thai);font-weight:400;font-size:16px;line-height:1.8;color:var(--ph-dim)}
 .page-hero-sep{height:1px;background:rgba(0,50,100,0.08);max-width:900px;margin:0 auto 48px}
 html.dark-mode .page-hero-sep{background:rgba(232,224,208,.12)}
@@ -261,9 +253,6 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
         <span class="br">หะ</span>
         <span class="br"><em>ดีษ</em></span>
       </h1>
-      <div class="hero-meteors" aria-hidden="true" data-reveal data-delay="1">
-        <span class="meteor"></span><span class="meteor"></span><span class="meteor"></span><span class="meteor"></span><span class="meteor"></span>
-      </div>
       <p class="page-hero-sub" data-reveal data-delay="2">รวบรวมบทวิเคราะห์และคำอธิบายสายรายงาน ตลอดจนตัวบทของวจนะและจริยวัตรของท่านศาสดามุฮัมมัด ﷺ พร้อมวิชาญัรห์วัตตะอ์ดีลในการประเมินความน่าเชื่อถือของผู้รายงาน</p>
     </div>
   </section>

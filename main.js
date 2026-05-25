@@ -441,6 +441,21 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     }
+
+    // ── Mouse-follow glow (desktop only) ──
+    if (!document.getElementById('ifp-mouse-glow')) {
+        var glowEl = document.createElement('div');
+        glowEl.id = 'ifp-mouse-glow';
+        document.body.insertBefore(glowEl, document.body.firstChild);
+    }
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        document.addEventListener('mousemove', function(e) {
+            var x = (e.clientX / window.innerWidth * 100).toFixed(1);
+            var y = (e.clientY / window.innerHeight * 100).toFixed(1);
+            document.body.style.setProperty('--mouse-x', x + '%');
+            document.body.style.setProperty('--mouse-y', y + '%');
+        });
+    }
 });
 
 // ==========================================
