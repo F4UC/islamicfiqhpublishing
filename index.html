@@ -719,48 +719,6 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 }
 
 /* =========================================================
-   CATEGORY QUICK-NAV — compact horizontal strip above articles
-   ========================================================= */
-.cat-quicknav {
-  padding: 48px 0;
-  border-bottom: 1px solid var(--rule);
-}
-.cqn-eyebrow {
-  font-family: var(--ui); font-size: 10px; letter-spacing: .24em;
-  text-transform: uppercase; color: var(--text-mute);
-  display: flex; align-items: center; gap: 14px; margin-bottom: 28px;
-}
-.cqn-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
-.cqn-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 12px;
-}
-.cqn-card {
-  display: flex; flex-direction: column; gap: 6px;
-  padding: 20px 16px;
-  border: 1px solid var(--rule-strong);
-  background: var(--ink-2);
-  text-decoration: none;
-  transition: border-color .3s, background .3s, transform .25s cubic-bezier(.2,.7,.2,1);
-  position: relative; overflow: hidden;
-}
-.cqn-card::before {
-  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
-  background: var(--gold); transform: scaleX(0); transform-origin: left;
-  transition: transform .3s cubic-bezier(.2,.7,.2,1);
-}
-.cqn-card:hover { border-color: var(--gold); background: var(--ink-3); transform: translateY(-2px); }
-.cqn-card:hover::before { transform: scaleX(1); }
-.cqn-num  { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--gold); opacity: .65; line-height: 1; }
-.cqn-name { font-family: var(--thai); font-size: 15px; font-weight: 600; color: var(--paper); line-height: 1.2; }
-.cqn-ar   { font-family: var(--arabic); font-size: 14px; color: var(--text-mute); direction: rtl; line-height: 1.4; margin-top: 2px; }
-.cqn-sub  { font-family: var(--thai); font-size: 11px; color: var(--text-mute); line-height: 1.4; margin-top: 2px; }
-
-@media(max-width:1000px) { .cqn-grid { grid-template-columns: repeat(3, 1fr); } }
-@media(max-width:560px)  { .cqn-grid { grid-template-columns: repeat(2, 1fr); } }
-
-/* =========================================================
    CATEGORIES — SpaceX dark cards, always dark background
    ========================================================= */
 #categories .section-head {
@@ -796,6 +754,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
         <a href="/pages/hadith.html" class="hero-nav-item">หะดีษ</a>
         <a href="/pages/history.html" class="hero-nav-item">ประวัติศาสตร์</a>
         <a href="/pages/literature.html" class="hero-nav-item">วรรณกรรม</a>
+        <a href="/pages/tools.html" class="hero-nav-item">เครื่องมือนักวิชาการ</a>
       </nav>
     </div>
 
@@ -862,61 +821,6 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
     </span>
   </div>
 </div>
-
-
-<!-- =========================================================
-     CATEGORY QUICK-NAV — compact row above articles
-     ========================================================= -->
-<section class="cat-quicknav" data-reveal>
-  <div class="wrap">
-    <div class="cqn-eyebrow">สำรวจตามหมวดหมู่</div>
-    <div class="cqn-grid">
-
-      <a href="/pages/kalam.html" class="cqn-card">
-        <div class="cqn-num">01</div>
-        <div class="cqn-name">เทววิทยา</div>
-        <div class="cqn-ar" lang="ar" dir="rtl">الكَلَام</div>
-        <div class="cqn-sub">ปรัชญา · อะกีดะฮ์ · อภิปรัชญา</div>
-      </a>
-
-      <a href="/pages/nitisart.html" class="cqn-card">
-        <div class="cqn-num">02</div>
-        <div class="cqn-name">นิติศาสตร์</div>
-        <div class="cqn-ar" lang="ar" dir="rtl">الفِقْه</div>
-        <div class="cqn-sub">สังคม · กฎหมาย · วิถีชีวิต</div>
-      </a>
-
-      <a href="/pages/hadith.html" class="cqn-card">
-        <div class="cqn-num">03</div>
-        <div class="cqn-name">หะดีษ</div>
-        <div class="cqn-ar" lang="ar" dir="rtl">الحَدِيث</div>
-        <div class="cqn-sub">ตัวบท · สายรายงาน · วิเคราะห์</div>
-      </a>
-
-      <a href="/pages/history.html" class="cqn-card">
-        <div class="cqn-num">04</div>
-        <div class="cqn-name">ประวัติศาสตร์</div>
-        <div class="cqn-ar" lang="ar" dir="rtl">التَّارِيخ</div>
-        <div class="cqn-sub">ราชวงศ์ · อำนาจ · อารยธรรม</div>
-      </a>
-
-      <a href="/pages/literature.html" class="cqn-card">
-        <div class="cqn-num">05</div>
-        <div class="cqn-name">วรรณกรรม</div>
-        <div class="cqn-ar" lang="ar" dir="rtl">الأَدَب</div>
-        <div class="cqn-sub">บทกวี · ปรัชญา · ภาษา</div>
-      </a>
-
-      <a href="/pages/tools.html" class="cqn-card">
-        <div class="cqn-num">06</div>
-        <div class="cqn-name">เครื่องมือ</div>
-        <div class="cqn-ar" lang="ar" dir="rtl">الأَدَوَات</div>
-        <div class="cqn-sub">Hijri · Isnād · ดิจิทัล</div>
-      </a>
-
-    </div>
-  </div>
-</section>
 
 
 <!-- =========================================================
