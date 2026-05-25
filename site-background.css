@@ -235,7 +235,7 @@ body.ifp-tools-page.ifp-subpage-bg::after {
   filter: saturate(0.5);
 }
 
-/* Dark mode: restore dark navy surface + boost text contrast */
+/* Dark mode: restore dark navy surface + ALL dark mode component tokens */
 html.dark-mode body.ifp-tools-page.ifp-subpage-bg {
   background:
     linear-gradient(
@@ -250,6 +250,14 @@ html.dark-mode body.ifp-tools-page.ifp-subpage-bg {
   --text-secondary:  #b8c8e0;
   --text-tertiary:   #8ea4bc;
   --text-quaternary: #6a8099;
+  --bg-primary:      #06101e;
+  --bg-secondary:    #0d1a2e;
+  --bg-tertiary:     #0a1525;
+  --border-primary:  rgba(147, 197, 253, 0.10);
+  --border-secondary:rgba(147, 197, 253, 0.18);
+  --shadow-color:    rgba(0, 0, 0, 0.4);
+  --shadow-heavy:    rgba(0, 0, 0, 0.6);
+  --accent-color:    #3b82f6;
 }
 
 @media (max-width: 768px) {
