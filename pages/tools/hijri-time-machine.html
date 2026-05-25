@@ -55,6 +55,10 @@
   --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
 }
 
+html.dark-mode {
+  --text-tertiary: #6b6357;
+}
+
 html, body {
   background-color: var(--bg-primary) !important;
 }
@@ -257,18 +261,50 @@ html, body {
   .explorer-header { flex-direction: column; align-items: flex-start; gap: 20px; }
   .htm-hero h1 { font-size: 32px; }
 }
+
+/* ─── Reading Progress (Rule 39) ─── */
+#readingProgress{position:fixed;top:0;left:0;height:2px;width:0%;background:var(--accent-color);z-index:9999;transition:width .1s linear;}
+
+/* ─── Back To Top (Rule 36) ─── */
+#backToTopBtn{
+  display:none;position:fixed;bottom:32px;right:32px;z-index:500;
+  width:48px;height:48px;
+  border:1px solid var(--border-primary);border-radius:50%;
+  background:rgba(10,12,16,0.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  color:var(--text-secondary);
+  box-shadow:0 8px 32px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05);
+  transition:all .35s cubic-bezier(.2,.7,.2,1);cursor:pointer;
+  place-items:center;padding:0;
+}
+#backToTopBtn svg{transition:transform 0.3s ease;}
+#backToTopBtn:hover{
+  border-color:var(--accent-color);color:var(--accent-color);
+  background:rgba(10,12,16,0.90);transform:translateY(-5px);
+  box-shadow:0 12px 40px rgba(59,130,246,0.18),0 8px 32px rgba(0,0,0,0.36);
+}
+#backToTopBtn:hover svg{transform:translateY(-3px);}
+
+/* ─── Scroll Reveal (Rule 35) ─── */
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);}
+[data-reveal].is-in{opacity:1;transform:none;}
+[data-reveal][data-delay="1"]{transition-delay:.08s;}
+[data-reveal][data-delay="2"]{transition-delay:.16s;}
+[data-reveal][data-delay="3"]{transition-delay:.24s;}
+[data-reveal][data-delay="4"]{transition-delay:.32s;}
 </style>
 </head>
 <body class="ifp-tools-page" lang="th">
 
+<div id="readingProgress"></div>
+<button id="backToTopBtn" title="กลับขึ้นบนสุด" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
 <div id="header-placeholder"></div>
 
 <main>
 <div class="htm-container">
 
   <div class="htm-hero">
-    <h1>HIJRI TIME MACHINE</h1>
-    <p>มากกว่าการแปลงปฏิทิน สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามที่เกิดขึ้นในปี ฮ.ศ. นั้นๆ เพื่อเชื่อมโยงอดีตสู่ปัจจุบัน</p>
+    <h1 data-reveal>HIJRI TIME MACHINE</h1>
+    <p data-reveal data-delay="1">มากกว่าการแปลงปฏิทิน สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามที่เกิดขึ้นในปี ฮ.ศ. นั้นๆ เพื่อเชื่อมโยงอดีตสู่ปัจจุบัน</p>
   </div>
 
   <div class="htm-tabs" role="tablist">
@@ -632,6 +668,31 @@ function exploreYear() {
   document.getElementById('g-month').value = today.getMonth() + 1;
   document.getElementById('g-day').value = today.getDate();
   document.getElementById('explore-year').value = h.year;
+})();
+</script>
+<script>
+(function(){
+  var bar = document.getElementById('readingProgress');
+  if(bar){
+    window.addEventListener('scroll',function(){
+      var st = document.documentElement.scrollTop;
+      var sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (sh > 0 ? (st/sh*100) : 0) + '%';
+    });
+  }
+  window.addEventListener('scroll',function(){
+    var btn = document.getElementById('backToTopBtn');
+    if(!btn) return;
+    btn.style.display = (document.documentElement.scrollTop > 400) ? 'grid' : 'none';
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){
+    var r = el.getBoundingClientRect();
+    if(r.top < window.innerHeight && r.bottom > 0){ el.classList.add('is-in'); }
+    else { io.observe(el); }
+  });
 })();
 </script>
 </body>
