@@ -399,7 +399,7 @@ body::before {
   text-transform:uppercase; color:var(--text-mute);
 }
 .list-scroll {
-  display:flex; flex-direction:column;
+  display:block; position:relative;
   height:520px; overflow-y:auto;
   border:1px solid var(--rule-strong); border-top:none;
   background:var(--ink);
@@ -918,9 +918,9 @@ html.dark-mode .arrow-marker { fill:rgba(232,224,208,0.15); }
           <span>เชื่อมต่อ</span>
         </div>
         <div class="list-scroll" id="listScroll">
-          <div id="padTop" style="flex-shrink:0"></div>
-          <div id="listRows"></div>
-          <div id="padBot" style="flex-shrink:0"></div>
+          <div id="listWrapper" style="position:relative; width:100%; height:0px;">
+            <div id="listRows" style="position:absolute; left:0; right:0; top:0;"></div>
+          </div>
         </div>
       </div>
 
@@ -932,7 +932,7 @@ html.dark-mode .arrow-marker { fill:rgba(232,224,208,0.15); }
         </div>
         <div>
           <h2 class="section-title">เครือข่าย<em>อาจารย์–ลูกศิษย์</em></h2>
-          <p class="section-lede">แสดงสายรายงานการถ่ายทอดจากชุยูค (อาจารย์) สู่ตลามีซ (ลูกศิษย์) เรียงลำดับตามความอาวุโสและยุคกาล</p>
+          <p class="section-lede">แสดงสายรายงานการถ่ายทอดจากอาจารย์ สู่ลูกศิษย์ เรียงลำดับตามความอาวุโสและยุคกาล</p>
         </div>
       </div>
 
@@ -1364,9 +1364,8 @@ function renderGradeBadge(grade) {
 function updateListWindow() {
   var ls     = document.getElementById('listScroll');
   var rows   = document.getElementById('listRows');
-  var padTop = document.getElementById('padTop');
-  var padBot = document.getElementById('padBot');
-  if (!ls || !rows || !padTop || !padBot) return;
+  var wrapper = document.getElementById('listWrapper');
+  if (!ls || !rows || !wrapper) return;
 
   var total   = listItems.length;
   var scrollT = ls.scrollTop;
@@ -1375,8 +1374,8 @@ function updateListWindow() {
   var start = Math.max(0, Math.floor(scrollT / ITEM_H) - WIN_EXTRA);
   var end   = Math.min(total, Math.ceil((scrollT + visH) / ITEM_H) + WIN_EXTRA);
 
-  padTop.style.height = (start * ITEM_H) + 'px';
-  padBot.style.height = ((total - end) * ITEM_H) + 'px';
+  wrapper.style.height = (total * ITEM_H) + 'px';
+  rows.style.transform = 'translateY(' + (start * ITEM_H) + 'px)';
 
   rows.innerHTML = '';
   var frag = document.createDocumentFragment();
