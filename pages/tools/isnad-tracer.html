@@ -92,8 +92,17 @@ html.dark-mode {
    RESET & BASE (Rule 28)
    ========================================================= */
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-html,body { background:var(--ink); color:var(--text); font-family:var(--thai); overflow-x:hidden; }
-body { font-size:16px; line-height:1.7; font-weight:300; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+html,body { background-color:#ffffff; color:var(--text); font-family:var(--thai); overflow-x:hidden; }
+body {
+  font-size:16px; line-height:1.7; font-weight:300; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'><path fill='%23e3edf7' fill-opacity='1' d='M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,202.7C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'></path></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% 380px;
+}
+html.dark-mode, html.dark-mode body { background-color:#0a0907; }
+html.dark-mode body {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'><path fill='%2314110d' fill-opacity='1' d='M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,202.7C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'></path></svg>");
+}
 a { color:inherit; text-decoration:none; }
 img { display:block; max-width:100%; }
 button { font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
@@ -984,6 +993,51 @@ function esc(s) {
 /* =========================================================
    STEP 1 — Load tabaqah index on page init
    ========================================================= */
+var preloadedCount = 0;
+var totalTabaqat = 12;
+
+function preloadAllTabaqat() {
+  var tabNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  var delay = 150; /* Load one every 150ms to prevent lag */
+  var placeholder = document.getElementById('searchInput');
+  if (placeholder) {
+    placeholder.setAttribute('placeholder', 'กำลังเตรียมดึงข้อมูลนักรายงาน 18,000+ ท่านในพื้นหลัง…');
+  }
+
+  tabNums.forEach(function(tabNum, idx) {
+    setTimeout(function() {
+      if (tabaqahCache[tabNum]) {
+        preloadedCount++;
+        updateSearchPlaceholder();
+        return;
+      }
+      fetch(DATA_BASE + 'tabaqah-' + tabNum + '.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          tabaqahCache[tabNum] = data;
+          (data.narrators || []).forEach(function(n) {
+            globalNarById[n.id] = n;
+          });
+          preloadedCount++;
+          updateSearchPlaceholder();
+        })
+        .catch(function(err) {
+          console.error('[Isnād Tracer] Background preload error for tabaqah ' + tabNum, err);
+        });
+    }, idx * delay);
+  });
+}
+
+function updateSearchPlaceholder() {
+  var placeholder = document.getElementById('searchInput');
+  if (!placeholder) return;
+  if (preloadedCount >= totalTabaqat) {
+    placeholder.setAttribute('placeholder', '🔍 ค้นหานักรายงานทั้งหมด 18,000+ ท่านได้ทันที (ดึงข้อมูลสมบูรณ์แล้ว)');
+  } else {
+    placeholder.setAttribute('placeholder', 'กำลังดึงฐานข้อมูลในพื้นหลัง (' + preloadedCount + '/' + totalTabaqat + ' ยุคสมัย)…');
+  }
+}
+
 function loadIndex() {
   fetch(INDEX_URL)
     .then(function(r){ return r.json(); })
@@ -993,6 +1047,8 @@ function loadIndex() {
       renderTabaqahToolbar(data);
       /* Auto-load tabaqah 1 on start */
       loadTabaqah(1);
+      /* Preload all other tabaqat in background for instant global search */
+      preloadAllTabaqat();
     })
     .catch(function(err){
       console.error('[Isnād Tracer] index load error:', err);
