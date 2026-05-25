@@ -409,18 +409,39 @@ html.dark-mode .edge { stroke:rgba(232,224,208,.18); }
 .edge.highlighted { stroke:var(--gold); stroke-width:2; opacity:1; }
 .node-circle {
   fill:var(--bg-secondary); stroke:rgba(0,50,100,0.22); stroke-width:1.5;
-  cursor:pointer; transition:stroke .2s, fill .2s;
+  cursor:pointer; transition:stroke .22s, fill .22s, r .22s;
 }
 html.dark-mode .node-circle { fill:var(--bg-secondary); stroke:rgba(232,224,208,.28); }
 .node-circle.sahabi  { fill:rgba(59,130,246,.14); stroke:#3b82f6; }
 .node-circle.tabii   { fill:rgba(59,130,246,.10); stroke:rgba(59,130,246,.55); }
 .node-circle.selected { stroke:var(--gold); stroke-width:2.5; fill:rgba(179,27,27,.10); }
+#gNodes g:hover .node-circle { stroke:var(--gold); stroke-width:2; r: 9; }
 .node-label {
-  font-family:'Amiri',serif; font-size:9px; fill:var(--text-secondary);
+  font-family:'Amiri',serif; font-size:10px; fill:var(--text-secondary);
   pointer-events:none; direction:rtl; text-anchor:middle;
+  text-shadow: 0 1px 3px rgba(255,255,255,0.9), 0 0 6px rgba(255,255,255,0.6);
+  opacity: 0;
+  transition: opacity 0.25s ease, font-size 0.25s ease, fill 0.25s ease;
 }
-html.dark-mode .node-label { fill:#9a907e; }
-.node-label.selected  { fill:var(--gold); }
+html.dark-mode .node-label {
+  fill:#9a907e;
+  text-shadow: 0 1px 3px rgba(10,9,7,0.9), 0 0 6px rgba(10,9,7,0.6);
+}
+.node-label.visible-label {
+  opacity: 0.85;
+}
+#gNodes g:hover .node-label {
+  opacity: 1 !important;
+  font-size: 11px;
+  fill: var(--gold) !important;
+  font-weight: bold;
+}
+.node-label.selected  {
+  fill:var(--gold) !important;
+  font-weight: bold;
+  font-size:12px !important;
+  opacity: 1 !important;
+}
 .arrow-marker { fill:rgba(0,50,100,0.22); }
 html.dark-mode .arrow-marker { fill:rgba(232,224,208,.22); }
 
@@ -1016,6 +1037,7 @@ function preloadAllTabaqat() {
         .then(function(data) {
           tabaqahCache[tabNum] = data;
           (data.narrators || []).forEach(function(n) {
+            n.tabaqah_num = tabNum;
             globalNarById[n.id] = n;
           });
           preloadedCount++;
@@ -1165,6 +1187,11 @@ function activateTabaqah(tabNum, data) {
   nodePos      = {};
   selectedId   = null;
 
+  /* Dynamically inject tabaqah_num */
+  allNarrators.forEach(function(n){
+    n.tabaqah_num = tabNum;
+  });
+
   /* Build lookup */
   allNarrators.forEach(function(n){ narById[n.id] = n; });
 
@@ -1238,17 +1265,34 @@ function initViz() {
 }
 
 function computeLayout(narrators, edges, W, H) {
-  var NUM_LAYERS = 12;
-
-  /* Assign initial positions by tabaqah_num (left→right) */
-  var layerIdx = {};
+  // Find min and max death_ah dynamically for horizontal chronological distribution
+  var minDeath = Infinity;
+  var maxDeath = -Infinity;
   narrators.forEach(function(n){
-    var L  = (n.tabaqah_num || 12) - 1;   /* 0-based */
-    layerIdx[L] = (layerIdx[L] || 0) + 1;
-    var idx = layerIdx[L];
-    var cx  = ((L + 0.5) / NUM_LAYERS) * W;
-    var cy  = 40 + (idx % 24) * (H / 26);
-    nodePos[n.id] = { x: cx + (Math.random()-0.5)*50, y: cy, vx:0, vy:0 };
+    if (n.death_ah !== null && n.death_ah !== undefined) {
+      if (n.death_ah < minDeath) minDeath = n.death_ah;
+      if (n.death_ah > maxDeath) maxDeath = n.death_ah;
+    }
+  });
+
+  var hasDeathRange = (minDeath !== Infinity && minDeath !== maxDeath);
+
+  /* Assign initial spread-out positions */
+  var idx = 0;
+  narrators.forEach(function(n){
+    var cx;
+    if (hasDeathRange && n.death_ah !== null && n.death_ah !== undefined) {
+      // Map demise year to 15% to 85% of screen width based on demise year (left=earlier, right=later)
+      cx = 0.15 * W + 0.7 * W * (n.death_ah - minDeath) / (maxDeath - minDeath);
+    } else {
+      // Fallback: distribute evenly
+      cx = 0.15 * W + 0.7 * W * (idx / narrators.length);
+    }
+    
+    // Spread vertically evenly with vertical margin
+    var cy = 60 + (idx % 18) * ((H - 120) / 18) + (Math.random() - 0.5) * 15;
+    nodePos[n.id] = { x: cx + (Math.random() - 0.5) * 20, y: cy, vx: 0, vy: 0 };
+    idx++;
   });
 
   var alpha = 1.0;
@@ -1256,17 +1300,27 @@ function computeLayout(narrators, edges, W, H) {
   for (var iter = 0; iter < iters; iter++) {
     alpha *= 0.975;
 
-    /* Repulsion — O(n²) capped */
+    /* Repulsion — O(n²) between all nodes to guarantee no overlapping name clusters */
     var a = narrators;
-    var cap = Math.min(a.length, 250);
-    for (var i = 0; i < cap; i++) {
+    var len = a.length;
+    for (var i = 0; i < len; i++) {
       var pi = nodePos[a[i].id];
-      for (var j = i+1; j < cap; j++) {
+      if (!pi) continue;
+      for (var j = i+1; j < len; j++) {
         var pj = nodePos[a[j].id];
-        var dx = pi.x-pj.x, dy = pi.y-pj.y;
+        if (!pj) continue;
+        var dx = pi.x - pj.x;
+        var dy = pi.y - pj.y;
         var d2 = dx*dx + dy*dy || 0.01;
         var d  = Math.sqrt(d2);
-        var f  = (alpha * 600) / d2;
+        
+        // Dynamic repulsion: push harder when nodes are extremely close (under 50px) to prevent text clutter
+        var rForce = 500;
+        if (d < 50) rForce = 900;
+        
+        var f  = (alpha * rForce) / d2;
+        if (f > 8) f = 8; // Cap force vector to prevent physics explosion
+        
         var fx = (dx/d)*f, fy = (dy/d)*f;
         pi.vx += fx; pi.vy += fy;
         pj.vx -= fx; pj.vy -= fy;
@@ -1285,22 +1339,30 @@ function computeLayout(narrators, edges, W, H) {
       pt.vx -= fx; pt.vy -= fy;
     });
 
-    /* Layer gravity — push toward column */
+    /* Chronological horizontal ordering and vertical center gravity */
     narrators.forEach(function(n){
-      var L  = (n.tabaqah_num || 12) - 1;
-      var tx = ((L + 0.5) / 12) * (vizSvg.clientWidth || W);
+      var tx;
+      if (hasDeathRange && n.death_ah !== null && n.death_ah !== undefined) {
+        tx = 0.15 * W + 0.7 * W * (n.death_ah - minDeath) / (maxDeath - minDeath);
+      } else {
+        tx = 0.5 * W;
+      }
       var p  = nodePos[n.id];
-      p.vx  += (tx - p.x) * 0.06 * alpha;
-      p.vy  += ((vizSvg.clientHeight||H)/2 - p.y) * 0.008 * alpha;
+      if (!p) return;
+      
+      // Extremely gentle forces to guide the layout while letting repulsion create spacious gaps
+      p.vx  += (tx - p.x) * 0.005 * alpha;
+      p.vy  += (H/2 - p.y) * 0.003 * alpha;
     });
 
-    /* Integrate */
+    /* Integrate and bound */
     narrators.forEach(function(n){
       var p = nodePos[n.id];
+      if (!p) return;
       p.vx *= 0.82; p.vy *= 0.82;
       p.x  += p.vx;  p.y  += p.vy;
-      p.x   = Math.max(16, Math.min((vizSvg.clientWidth||W)-16,  p.x));
-      p.y   = Math.max(16, Math.min((vizSvg.clientHeight||H)-16, p.y));
+      p.x   = Math.max(25, Math.min(W - 25,  p.x));
+      p.y   = Math.max(25, Math.min(H - 25, p.y));
     });
   }
 }
@@ -1346,24 +1408,35 @@ function renderGraph(narrators, edges) {
     g.setAttribute('data-id', n.id);
     g.setAttribute('transform','translate('+p.x.toFixed(1)+','+p.y.toFixed(1)+')');
 
+    // Dynamic browser-native tooltip containing full name and demise year
+    var title = document.createElementNS('http://www.w3.org/2000/svg','title');
+    var tooltipText = (n.name_ar || '');
+    if (n.death_ah) tooltipText += ' (ت ' + n.death_ah + ' هـ)';
+    title.textContent = tooltipText;
+    g.appendChild(title);
+
     var circ = document.createElementNS('http://www.w3.org/2000/svg','circle');
     circ.setAttribute('r', NODE_R);
     circ.setAttribute('class', nodeClass(n) + (n.id === selectedId ? ' selected' : ''));
     g.appendChild(circ);
 
-    /* Label only for well-connected narrators */
+    // Render name label for ALL nodes, but control visibility dynamically via CSS classes and hovers
     var connN = (n.teachers ? n.teachers.length : 0) + (n.students ? n.students.length : 0);
-    if (connN >= 6 || (n.tabaqah_num || 12) === 1) {
-      var parts     = (n.name_ar || '').split(' ');
-      var shortName = parts.slice(0,3).join(' ');
-      var txt = document.createElementNS('http://www.w3.org/2000/svg','text');
-      txt.setAttribute('class','node-label' + (n.id === selectedId ? ' selected' : ''));
-      txt.setAttribute('y', NODE_R + 11);
-      txt.setAttribute('lang','ar');
-      txt.setAttribute('dir','rtl');
-      txt.textContent = shortName;
-      g.appendChild(txt);
-    }
+    var parts     = (n.name_ar || '').split(' ');
+    var shortName = parts.slice(0, 2).join(' '); // 2 words is much cleaner and avoids overlap
+
+    var txt = document.createElementNS('http://www.w3.org/2000/svg','text');
+    var isHub = (connN >= 14); // Visible label permanently only for key hub nodes
+    var labelClass = 'node-label' + 
+                     (isHub ? ' visible-label' : '') + 
+                     (n.id === selectedId ? ' selected' : '');
+                     
+    txt.setAttribute('class', labelClass);
+    txt.setAttribute('y', NODE_R + 11);
+    txt.setAttribute('lang','ar');
+    txt.setAttribute('dir','rtl');
+    txt.textContent = shortName;
+    g.appendChild(txt);
 
     g.addEventListener('click', function(){
       selectNarrator(parseInt(this.getAttribute('data-id'),10));
@@ -1582,7 +1655,15 @@ function doSearch(q) {
   $results.querySelectorAll('.result-row').forEach(function(row){
     row.addEventListener('click', function(){
       var id = parseInt(this.getAttribute('data-id'),10);
-      selectNarrator(id);
+      var n = globalNarById[id] || narById[id];
+      if (n && n.tabaqah_num && n.tabaqah_num !== currentTabaqah) {
+        loadTabaqah(n.tabaqah_num);
+        setTimeout(function(){
+          selectNarrator(id);
+        }, 350);
+      } else {
+        selectNarrator(id);
+      }
       document.getElementById('detailSection').scrollIntoView({behavior:'smooth',block:'start'});
     });
   });
