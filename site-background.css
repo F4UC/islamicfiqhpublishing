@@ -78,22 +78,22 @@ body.ifp-subpage-bg::after {
   z-index: 0;
 }
 
-/* Orb A — blue #1e5fa5 (top-left) + brand red #b31b1b (bottom-right) — 18 s */
+/* Orb A — deep blue #1a4fa0 (top-left) + brand red #c41e1e (bottom-right) — 18 s */
 body.ifp-subpage-bg::before {
   background:
-    radial-gradient(ellipse 520px 420px at 18% 32%, #1e5fa5, transparent 70%),
-    radial-gradient(ellipse 460px 380px at 82% 68%, #b31b1b, transparent 70%);
+    radial-gradient(ellipse 520px 420px at 18% 32%, #1a4fa0, transparent 70%),
+    radial-gradient(ellipse 460px 380px at 82% 68%, #c41e1e, transparent 70%);
   filter: blur(70px);
   mix-blend-mode: screen;
   opacity: 0.55;
   animation: ifp-orb-drift-a 18s ease-in-out infinite;
 }
 
-/* Orb B — sky #3b82f6 (top-right) + purple #7a3a8c (bottom-left) — 26 s */
+/* Orb B — white (top-right) + white soft (bottom-left) — 26 s */
 body.ifp-subpage-bg::after {
   background:
-    radial-gradient(ellipse 440px 500px at 78% 22%, #3b82f6, transparent 70%),
-    radial-gradient(ellipse 400px 440px at 22% 78%, #7a3a8c, transparent 70%);
+    radial-gradient(ellipse 440px 500px at 78% 22%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(ellipse 400px 440px at 22% 78%, rgba(255,255,255,0.5), transparent 70%);
   filter: blur(70px);
   mix-blend-mode: screen;
   opacity: 0.55;
@@ -113,11 +113,12 @@ body.ifp-subpage-bg #ifp-mouse-glow {
   z-index: 0;
   background: radial-gradient(
     circle 600px at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(147, 197, 253, 0.15),
+    rgba(255, 255, 255, 0.6),
     transparent 70%
   );
   filter: blur(80px);
   mix-blend-mode: screen;
+  opacity: 0.55;
 }
 
 /* Bug fix: header placeholder must sit above all other body children */
@@ -209,10 +210,11 @@ body.ifp-tools-page.ifp-subpage-bg {
   color: #111111;
 }
 
-/* Tools/category pages — light blue background: lower opacity for readability */
+/* Tools/category pages — light blue background */
 body.ifp-tools-page.ifp-subpage-bg::before,
 body.ifp-tools-page.ifp-subpage-bg::after {
-  opacity: 0.35;
+  opacity: 0.55;
+  filter: blur(90px);
 }
 
 /* Dark mode: restore dark navy surface + ALL dark mode component tokens */
