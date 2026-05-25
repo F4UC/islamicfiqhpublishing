@@ -105,6 +105,21 @@ body.ifp-subpage-bg > * {
   z-index: 1;
 }
 
+/* ── MOUSE-FOLLOW GLOW (desktop only — JS sets --mouse-x / --mouse-y on body) ── */
+body.ifp-subpage-bg #ifp-mouse-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    circle 600px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(147, 197, 253, 0.15),
+    transparent 70%
+  );
+  filter: blur(80px);
+  mix-blend-mode: screen;
+}
+
 /* Bug fix: header placeholder must sit above all other body children */
 body.ifp-subpage-bg #header-placeholder {
   z-index: 100;
