@@ -54,11 +54,21 @@ html.dark-mode {
   --t-ink:      #0a0907;
   --t-paper:    #e8e0d0;
   --t-dim:      #9a907e;
-  --t-mute:     #6b6357;
+  --t-mute:     #8ea4bc;
   --t-rule:     rgba(232,224,208,0.14);
   --t-border:   rgba(232,224,208,0.18);
   --t-card-bg:  #14110d;
   --t-card-bg2: #1d1814;
+}
+
+/* Dark mode background — inline fallback, specificity (0,2,2) beats site-background.css light rule (0,2,1) */
+html.dark-mode body.ifp-tools-page {
+  background: linear-gradient(180deg, #06101e 0, #06101e 360px, #030912 690px, #030912 100%) fixed !important;
+}
+@media (max-width: 768px) {
+  html.dark-mode body.ifp-tools-page {
+    background: linear-gradient(180deg, #06101e 0, #06101e 330px, #030912 620px, #030912 100%) fixed !important;
+  }
 }
 
 body { background: var(--t-ink); color: var(--t-paper); }
