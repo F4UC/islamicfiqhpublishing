@@ -235,8 +235,17 @@ body.ifp-tools-page.ifp-subpage-bg::after {
   filter: saturate(0.5);
 }
 
-/* Dark mode: keep dark navy surface; boost text contrast only */
+/* Dark mode: restore dark navy surface + boost text contrast */
 html.dark-mode body.ifp-tools-page.ifp-subpage-bg {
+  background:
+    linear-gradient(
+      180deg,
+      var(--ifp-surface-top) 0,
+      var(--ifp-surface-top) 360px,
+      var(--ifp-surface-bottom) 690px,
+      var(--ifp-surface-bottom) 100%
+    ) fixed !important;
+  color: #f0f4ff;
   --text-primary:    #f0f4ff;
   --text-secondary:  #b8c8e0;
   --text-tertiary:   #8ea4bc;
@@ -252,6 +261,19 @@ html.dark-mode body.ifp-tools-page.ifp-subpage-bg {
         #e3edf7 330px,
         #ffffff 620px,
         #ffffff 100%
+      ) fixed !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html.dark-mode body.ifp-tools-page.ifp-subpage-bg {
+    background:
+      linear-gradient(
+        180deg,
+        var(--ifp-surface-top) 0,
+        var(--ifp-surface-top) 330px,
+        var(--ifp-surface-bottom) 620px,
+        var(--ifp-surface-bottom) 100%
       ) fixed !important;
   }
 }
