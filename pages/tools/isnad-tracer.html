@@ -53,8 +53,8 @@
   --text:     var(--text-primary);
   --text-dim: var(--text-secondary);
   --text-mute:var(--text-tertiary);
-  --gold:        #3b82f6;
-  --gold-bright: #60a5fa;
+  --gold:        #b31b1b;
+  --gold-bright: #d32f2f;
   --accent:      #3b82f6;
   --rule:        rgba(0,50,100,0.06);
   --rule-strong: rgba(0,50,100,0.12);
@@ -290,7 +290,7 @@ body::before {
 .tabaqah-card:hover { border-color:var(--gold); background:var(--ink-3); transform:translateY(-2px); }
 .tabaqah-card:hover::before { transform:scaleX(1); }
 .tabaqah-card.active {
-  border-color:var(--gold); background:rgba(59,130,246,.06);
+  border-color:var(--gold); background:rgba(179,27,27,.07);
 }
 .tabaqah-card.active::before { transform:scaleX(1); }
 .tabaqah-card.loading { opacity:.6; cursor:wait; }
@@ -426,7 +426,7 @@ html.dark-mode .list-row:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.22);
 }
 .list-row.active {
-  background:rgba(59,130,246,.07) !important;
+  background:rgba(179,27,27,.07) !important;
   border-left:3px solid var(--gold);
   padding-left:13px;
   font-weight: 500;
@@ -518,7 +518,7 @@ html.dark-mode .ego-panel {
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
 }
 .ego-panel:hover {
-  border-color: rgba(59, 130, 246, 0.35);
+  border-color: rgba(179, 27, 27, 0.4);
 }
 .ego-empty {
   display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -534,7 +534,7 @@ html.dark-mode .ego-panel {
 .ego-leg-item  { display:flex; align-items:center; gap:8px; font-family:var(--ui); font-size:11px; letter-spacing:.1em; color:var(--text-mute); }
 .ego-dot       { width:28px; height:14px; border-radius:3px; flex-shrink:0; }
 .ego-dot-t     { background:rgba(59,130,246,.12); border:1px solid #3b82f6; }
-.ego-dot-c     { background:rgba(59,130,246,.12); border:1px solid var(--gold); }
+.ego-dot-c     { background:rgba(179,27,27,.10); border:1px solid var(--gold); }
 .ego-dot-s     { background:rgba(59,130,246,.05); border:1px solid rgba(59,130,246,.4); }
 .ego-svg       { 
   width:100%; display:block; 
@@ -559,10 +559,10 @@ html.dark-mode .edge { stroke: rgba(232,224,208,0.14); }
   rx: 999;
   transition: fill 0.25s, stroke 0.25s, stroke-width 0.25s;
 }
-.node-bg-center  { fill: rgba(59,130,246,0.10); stroke: var(--gold); stroke-width: 1.8px; }
+.node-bg-center  { fill: rgba(179,27,27,0.06); stroke: var(--gold); stroke-width: 1.8px; }
 .node-bg-teacher { fill: rgba(59,130,246,0.04); stroke: rgba(59,130,246,0.32); stroke-width: 1.2px; }
 .node-bg-student { fill: rgba(59,130,246,0.02); stroke: rgba(59,130,246,0.16); stroke-width: 1.2px; }
-html.dark-mode .node-bg-center  { fill: rgba(59,130,246,0.20); }
+html.dark-mode .node-bg-center  { fill: rgba(179,27,27,0.16); }
 html.dark-mode .node-bg-teacher { fill: rgba(59,130,246,0.08); stroke: rgba(59,130,246,0.5); }
 html.dark-mode .node-bg-student { fill: rgba(59,130,246,0.04); stroke: rgba(59,130,246,0.32); }
 
