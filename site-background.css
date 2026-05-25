@@ -53,37 +53,51 @@ body.ifp-subpage-bg {
   overflow-x: hidden;
 }
 
-/* ── WATER DROPLET BACKGROUND (replaces wave animations) ── */
+/* ── ANIMATED GRADIENT MESH ── */
+
+@keyframes ifp-orb-drift-a {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(55px, -38px) scale(1.06); }
+  66%  { transform: translate(-38px, 48px) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes ifp-orb-drift-b {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(-65px, 42px) scale(1.08); }
+  75%  { transform: translate(48px, -55px) scale(0.94); }
+  100% { transform: translate(0, 0) scale(1); }
+}
 
 body.ifp-subpage-bg::before,
 body.ifp-subpage-bg::after {
   content: "";
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 51px;
-  height: 520px;
+  inset: 0;
   pointer-events: none;
   z-index: 0;
 }
 
-/* Article pages: larger, more prominent droplets on dark navy */
+/* Orb A — blue #1e5fa5 (top-left) + brand red #b31b1b (bottom-right) — 18 s */
 body.ifp-subpage-bg::before {
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Ccircle cx='150' cy='150' r='22' fill='none' stroke='rgba(147%2C197%2C253%2C0.30)' stroke-width='1.5'/%3E%3Ccircle cx='150' cy='150' r='50' fill='none' stroke='rgba(147%2C197%2C253%2C0.20)' stroke-width='1'/%3E%3Ccircle cx='150' cy='150' r='82' fill='none' stroke='rgba(147%2C197%2C253%2C0.12)' stroke-width='0.8'/%3E%3Ccircle cx='150' cy='150' r='115' fill='none' stroke='rgba(147%2C197%2C253%2C0.07)' stroke-width='0.6'/%3E%3Ccircle cx='150' cy='150' r='145' fill='none' stroke='rgba(147%2C197%2C253%2C0.03)' stroke-width='0.5'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='15' fill='none' stroke='rgba(147%2C197%2C253%2C0.25)' stroke-width='1.2'/%3E%3Ccircle cx='100' cy='100' r='38' fill='none' stroke='rgba(147%2C197%2C253%2C0.15)' stroke-width='0.9'/%3E%3Ccircle cx='100' cy='100' r='62' fill='none' stroke='rgba(147%2C197%2C253%2C0.08)' stroke-width='0.7'/%3E%3Ccircle cx='100' cy='100' r='88' fill='none' stroke='rgba(147%2C197%2C253%2C0.04)' stroke-width='0.5'/%3E%3C/svg%3E");
-  background-position: 18% 30%, 76% 14%;
-  background-size: 360px 360px, 260px 260px;
-  background-repeat: no-repeat;
-  opacity: 0.85;
+  background:
+    radial-gradient(ellipse 520px 420px at 18% 32%, #1e5fa5, transparent 70%),
+    radial-gradient(ellipse 460px 380px at 82% 68%, #b31b1b, transparent 70%);
+  filter: blur(70px);
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  animation: ifp-orb-drift-a 18s ease-in-out infinite;
 }
 
+/* Orb B — sky #3b82f6 (top-right) + purple #7a3a8c (bottom-left) — 26 s */
 body.ifp-subpage-bg::after {
   background:
-    radial-gradient(ellipse at 18% 24%, var(--ifp-surface-wave-soft), transparent 34%),
-    radial-gradient(ellipse at 76% 16%, var(--ifp-surface-wave), transparent 30%);
+    radial-gradient(ellipse 440px 500px at 78% 22%, #3b82f6, transparent 70%),
+    radial-gradient(ellipse 400px 440px at 22% 78%, #7a3a8c, transparent 70%);
+  filter: blur(70px);
   mix-blend-mode: screen;
-  opacity: 0.38;
+  opacity: 0.55;
+  animation: ifp-orb-drift-b 26s ease-in-out infinite;
 }
 
 body.ifp-subpage-bg > * {
@@ -118,13 +132,9 @@ body.ifp-subpage-bg .tools-wrap {
   background: transparent !important;
 }
 
-html.dark-mode body.ifp-subpage-bg::before {
-  opacity: 0.70;
-}
-
+html.dark-mode body.ifp-subpage-bg::before,
 html.dark-mode body.ifp-subpage-bg::after {
-  opacity: 0.28;
-  filter: saturate(0.80);
+  opacity: 0.55;
 }
 
 body.ifp-subpage-bg .page-hero::before {
@@ -184,21 +194,10 @@ body.ifp-tools-page.ifp-subpage-bg {
   color: #111111;
 }
 
-/* Category/tools pages: lighter droplets on light blue */
-body.ifp-tools-page.ifp-subpage-bg::before {
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Ccircle cx='150' cy='150' r='22' fill='none' stroke='rgba(59%2C130%2C246%2C0.28)' stroke-width='1.5'/%3E%3Ccircle cx='150' cy='150' r='50' fill='none' stroke='rgba(59%2C130%2C246%2C0.18)' stroke-width='1'/%3E%3Ccircle cx='150' cy='150' r='82' fill='none' stroke='rgba(59%2C130%2C246%2C0.11)' stroke-width='0.8'/%3E%3Ccircle cx='150' cy='150' r='115' fill='none' stroke='rgba(59%2C130%2C246%2C0.06)' stroke-width='0.6'/%3E%3Ccircle cx='150' cy='150' r='145' fill='none' stroke='rgba(59%2C130%2C246%2C0.03)' stroke-width='0.5'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='15' fill='none' stroke='rgba(59%2C130%2C246%2C0.22)' stroke-width='1.2'/%3E%3Ccircle cx='100' cy='100' r='38' fill='none' stroke='rgba(59%2C130%2C246%2C0.14)' stroke-width='0.9'/%3E%3Ccircle cx='100' cy='100' r='62' fill='none' stroke='rgba(59%2C130%2C246%2C0.08)' stroke-width='0.7'/%3E%3Ccircle cx='100' cy='100' r='88' fill='none' stroke='rgba(59%2C130%2C246%2C0.04)' stroke-width='0.5'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Ccircle cx='80' cy='80' r='12' fill='none' stroke='rgba(59%2C130%2C246%2C0.20)' stroke-width='1'/%3E%3Ccircle cx='80' cy='80' r='30' fill='none' stroke='rgba(59%2C130%2C246%2C0.12)' stroke-width='0.8'/%3E%3Ccircle cx='80' cy='80' r='50' fill='none' stroke='rgba(59%2C130%2C246%2C0.07)' stroke-width='0.6'/%3E%3Ccircle cx='80' cy='80' r='70' fill='none' stroke='rgba(59%2C130%2C246%2C0.03)' stroke-width='0.5'/%3E%3C/svg%3E");
-  background-position: 16% 28%, 80% 18%, 50% 55%;
-  background-size: 380px 380px, 280px 280px, 200px 200px;
-  background-repeat: no-repeat;
-  opacity: 0.9;
-}
-
+/* Tools/category pages — light blue background: lower opacity for readability */
+body.ifp-tools-page.ifp-subpage-bg::before,
 body.ifp-tools-page.ifp-subpage-bg::after {
-  background: none;
-  opacity: 0;
+  opacity: 0.35;
 }
 
 /* Dark mode: restore dark navy surface + ALL dark mode component tokens */
@@ -226,18 +225,10 @@ html.dark-mode body.ifp-tools-page.ifp-subpage-bg {
   --accent-color:    #3b82f6;
 }
 
-/* Dark mode overrides for tools page droplets */
-html.dark-mode body.ifp-tools-page.ifp-subpage-bg::before {
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Ccircle cx='150' cy='150' r='22' fill='none' stroke='rgba(147%2C197%2C253%2C0.22)' stroke-width='1.5'/%3E%3Ccircle cx='150' cy='150' r='50' fill='none' stroke='rgba(147%2C197%2C253%2C0.14)' stroke-width='1'/%3E%3Ccircle cx='150' cy='150' r='82' fill='none' stroke='rgba(147%2C197%2C253%2C0.08)' stroke-width='0.8'/%3E%3Ccircle cx='150' cy='150' r='115' fill='none' stroke='rgba(147%2C197%2C253%2C0.04)' stroke-width='0.6'/%3E%3Ccircle cx='150' cy='150' r='145' fill='none' stroke='rgba(147%2C197%2C253%2C0.02)' stroke-width='0.5'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='15' fill='none' stroke='rgba(147%2C197%2C253%2C0.18)' stroke-width='1.2'/%3E%3Ccircle cx='100' cy='100' r='38' fill='none' stroke='rgba(147%2C197%2C253%2C0.11)' stroke-width='0.9'/%3E%3Ccircle cx='100' cy='100' r='62' fill='none' stroke='rgba(147%2C197%2C253%2C0.06)' stroke-width='0.7'/%3E%3Ccircle cx='100' cy='100' r='88' fill='none' stroke='rgba(147%2C197%2C253%2C0.03)' stroke-width='0.5'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Ccircle cx='80' cy='80' r='12' fill='none' stroke='rgba(147%2C197%2C253%2C0.15)' stroke-width='1'/%3E%3Ccircle cx='80' cy='80' r='30' fill='none' stroke='rgba(147%2C197%2C253%2C0.09)' stroke-width='0.8'/%3E%3Ccircle cx='80' cy='80' r='50' fill='none' stroke='rgba(147%2C197%2C253%2C0.05)' stroke-width='0.6'/%3E%3Ccircle cx='80' cy='80' r='70' fill='none' stroke='rgba(147%2C197%2C253%2C0.02)' stroke-width='0.5'/%3E%3C/svg%3E");
-  opacity: 0.80;
-}
-
+/* Tools/category pages dark mode — restore full orb opacity on dark navy */
+html.dark-mode body.ifp-tools-page.ifp-subpage-bg::before,
 html.dark-mode body.ifp-tools-page.ifp-subpage-bg::after {
-  background: none;
-  opacity: 0;
+  opacity: 0.55;
 }
 
 @media (max-width: 768px) {
@@ -263,5 +254,12 @@ html.dark-mode body.ifp-tools-page.ifp-subpage-bg::after {
         var(--ifp-surface-bottom) 620px,
         var(--ifp-surface-bottom) 100%
       ) fixed !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.ifp-subpage-bg::before,
+  body.ifp-subpage-bg::after {
+    animation: none;
   }
 }
