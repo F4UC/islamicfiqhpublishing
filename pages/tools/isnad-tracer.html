@@ -421,6 +421,12 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
 .how-title { font-family:var(--thai); font-weight:600; font-size:18px; color:var(--paper); margin-bottom:12px; }
 .how-desc  { font-family:var(--thai); font-size:14px; line-height:1.85; color:var(--text-dim); text-align:left; word-break:break-word; }
 
+/* Results area top padding */
+.results-area { padding:40px 0 0; }
+
+/* Students panel spacing */
+.detail-connections-students { margin-top:28px; }
+
 /* =========================================================
    REVEAL ON SCROLL (Rule 35) — data-reveal pattern from index.html
    ========================================================= */
@@ -539,7 +545,7 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
 <!-- ==========================================================
      SEARCH RESULTS AREA
      ========================================================== -->
-<div id="resultsArea" style="padding:40px 0 0;">
+<div id="resultsArea" class="results-area">
   <div class="wrap">
     <div class="results-head" id="resultsHead">
       <div class="hero-eyebrow">ผลการค้นหา</div>
@@ -683,7 +689,7 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
           <h3>อาจารย์ (شُيُوخ)</h3>
           <div class="connections-list" id="teachersList"></div>
         </div>
-        <div class="detail-connections" style="margin-top:28px;">
+        <div class="detail-connections detail-connections-students">
           <h3>ลูกศิษย์ (تَلَامِيذ)</h3>
           <div class="connections-list" id="studentsList"></div>
         </div>
