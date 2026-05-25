@@ -25,7 +25,7 @@
 <meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="../../article.css?v=8">
 
@@ -91,24 +91,28 @@ body{
 }
 a{text-decoration:none;color:inherit;transition:color 0.2s ease;}
 
-/* --- Category Header --- */
-.category-header { max-width: 800px; margin: 64px auto 48px; padding: 0 24px; }
-.category-title { 
-  font-family: 'Sarabun', sans-serif; 
-  font-size: 48px; 
-  font-weight: 700; 
-  margin-bottom: 16px; 
-  border-bottom: 3px solid var(--text-primary); 
-  display: inline-block; 
-  padding-bottom: 8px;
-  transition:var(--theme-transition);
-}
-.category-desc { 
-  font-size: 18px; 
-  color: var(--text-secondary); 
-  line-height: 1.8; 
-  transition:var(--theme-transition);
-}
+/* ─── PAGE HERO ─────────────────────────────────────────────────── */
+:root{--ph-paper:#111111;--ph-dim:#444444;--ph-gold:#b31b1b;--ph-serif:'Cormorant Garamond',Georgia,serif;--ph-thai:'Sarabun',sans-serif}
+html.dark-mode{--ph-paper:#e8e0d0;--ph-dim:#9a907e}
+.page-hero{min-height:52vh;padding:90px 0 60px;text-align:center;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.page-hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(60% 50% at 80% 18%,rgba(59,130,246,.10),transparent 60%),radial-gradient(80% 60% at 10% 90%,rgba(59,130,246,.05),transparent 70%)}
+html.dark-mode .page-hero::before{background:radial-gradient(60% 50% at 80% 18%,rgba(59,130,246,.06),transparent 60%),radial-gradient(80% 60% at 10% 90%,rgba(59,130,246,.03),transparent 70%)}
+.page-hero-inner{max-width:800px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.page-display{font-family:var(--ph-serif);font-weight:300;font-size:clamp(52px,11vw,140px);line-height:1.05;letter-spacing:-.02em;color:var(--ph-paper)}
+.page-display em{font-style:italic;color:var(--ph-gold);font-weight:400}
+.page-display .br{display:block}
+.hero-meteors{position:relative;width:120px;height:64px;margin:28px auto;overflow:hidden}
+.hero-meteors .meteor{position:absolute;width:1px;background:linear-gradient(to bottom,transparent 0%,var(--ph-gold) 55%,transparent 100%);opacity:0;animation:meteor-drop var(--dur) var(--delay) ease-in infinite}
+@keyframes meteor-drop{0%{transform:translateY(-36px);opacity:0}12%{opacity:1}80%{opacity:.7}100%{transform:translateY(90px);opacity:0}}
+.hero-meteors .meteor:nth-child(1){left:52px;height:28px;--dur:1.1s;--delay:0s}
+.hero-meteors .meteor:nth-child(2){left:60px;height:18px;--dur:1.4s;--delay:.45s}
+.hero-meteors .meteor:nth-child(3){left:44px;height:22px;--dur:1.7s;--delay:.9s}
+.hero-meteors .meteor:nth-child(4){left:68px;height:14px;--dur:1.3s;--delay:1.4s}
+.hero-meteors .meteor:nth-child(5){left:36px;height:16px;--dur:1.9s;--delay:.25s}
+.page-hero-sub{max-width:560px;margin:0 auto;font-family:var(--ph-thai);font-weight:300;font-size:16px;line-height:1.8;color:var(--ph-dim)}
+.page-hero-sep{height:1px;background:rgba(0,50,100,0.08);max-width:900px;margin:0 auto 48px}
+html.dark-mode .page-hero-sep{background:rgba(232,224,208,.12)}
+@media(max-width:640px){.page-hero{min-height:48vh;padding:70px 0 50px}}
 
 /* --- Article List --- */
 .article-list { max-width: 800px; margin: 0 auto 80px; padding: 0 24px; }
@@ -197,7 +201,6 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 
 /* --- โหมดมือถือ (Mobile Responsive) --- */
 @media(max-width:768px){
-  .category-title{font-size: 36px;}
   .list-title{font-size: 24px;}
   .list-item:hover { transform: none; }
   .logo-en { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; line-height: 1; color: inherit; }
@@ -246,10 +249,19 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 <button onclick="window.scrollTo({top:0, behavior:'smooth'})" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
 
 <main>
-  <section class="category-header">
-    <h1 class="category-title">นิติศาสตร์อิสลาม</h1>
-    <p class="category-desc">การศึกษาและวิเคราะห์บทบัญญัติอิสลาม (ชะรีอะฮ์) ผ่านหลักอุศูลุลฟิกฮ์ การวินิจฉัย (อิจญ์ติฮาด) และมติของนักนิติศาสตร์อิสลามในประเด็นร่วมสมัย</p>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <h1 class="page-display">
+        <span class="br">นิติ</span>
+        <span class="br"><em>ศาสตร์</em>.</span>
+      </h1>
+      <div class="hero-meteors" aria-hidden="true">
+        <span class="meteor"></span><span class="meteor"></span><span class="meteor"></span><span class="meteor"></span><span class="meteor"></span>
+      </div>
+      <p class="page-hero-sub">การศึกษาและวิเคราะห์บทบัญญัติอิสลาม (ชะรีอะฮ์) ผ่านหลักอุศูลุลฟิกฮ์ การวินิจฉัย (อิจญ์ติฮาด) และมติของนักนิติศาสตร์อิสลามในประเด็นร่วมสมัย</p>
+    </div>
   </section>
+  <div class="page-hero-sep"></div>
 
   <section class="article-list" id="articleList">
     
