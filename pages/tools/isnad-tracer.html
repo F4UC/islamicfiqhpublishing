@@ -13,11 +13,11 @@
 })();
 </script>
 
-<meta name="description" content="สำรวจสายรายงานหะดีษ (อิสนาด) ครอบคลุมกว่า 18,000 นักรายงาน และ 523,000 เส้นเชื่อมสายรายงาน จากฐานข้อมูล KASHAF">
-<meta name="keywords" content="อิสนาด, สายรายงาน, หะดีษ, นักรายงาน, isnad tracer, رجال الحديث">
+<meta name="description" content="สำรวจสายรายงานหะดีษ (อิสนาด) ครอบคลุมกว่า 18,000 นักรายงาน และ 523,000 เส้นเชื่อมสายรายงาน จากฐานข้อมูล KASHAF แบ่งตาม 12 ฏอบะเกาะฮ์">
+<meta name="keywords" content="อิสนาด, สายรายงาน, หะดีษ, นักรายงาน, ฏอบะเกาะฮ์, isnad tracer, رجال الحديث, طبقات">
 <meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
 <meta property="og:title" content="ISNĀD TRACER — Islamic Fiqh Publishing">
-<meta property="og:description" content="สำรวจสายรายงานหะดีษ (อิสนาด) ครอบคลุมกว่า 18,000 นักรายงาน จากฐานข้อมูล KASHAF">
+<meta property="og:description" content="สำรวจสายรายงานหะดีษ (อิสนาด) ครอบคลุมกว่า 18,000 นักรายงาน จากฐานข้อมูล KASHAF แบ่งตาม 12 ฏอบะเกาะฮ์">
 <meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
 <meta property="og:url" content="https://islamicfiqhpublishing.com/pages/tools/isnad-tracer.html">
 <meta property="og:type" content="website">
@@ -125,7 +125,7 @@ body::before {
    HERO SECTION
    ========================================================= */
 .page-hero {
-  position:relative; padding:160px 0 100px;
+  position:relative; padding:160px 0 80px;
   border-bottom:1px solid var(--rule); overflow:hidden;
 }
 .page-hero::before {
@@ -253,9 +253,97 @@ body::before {
 }
 
 /* =========================================================
+   TABAQAH SELECTOR SECTION
+   ========================================================= */
+.tabaqah-section { padding:80px 0 40px; border-bottom:1px solid var(--rule); }
+
+/* Grid of 12 tabaqah cards — responsive */
+.tabaqah-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-top:48px;
+}
+.tabaqah-card {
+  padding:24px 20px 20px;
+  border:1px solid var(--rule-strong);
+  background:var(--ink-2);
+  cursor:pointer;
+  transition:border-color .3s, background .3s, transform .25s cubic-bezier(.2,.7,.2,1);
+  position:relative; overflow:hidden;
+  text-align:center;
+}
+.tabaqah-card::before {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:2px;
+  background:var(--gold); transform:scaleX(0); transform-origin:left;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1);
+}
+.tabaqah-card:hover { border-color:var(--gold); background:var(--ink-3); transform:translateY(-2px); }
+.tabaqah-card:hover::before { transform:scaleX(1); }
+.tabaqah-card.active {
+  border-color:var(--gold); background:rgba(179,27,27,.07);
+}
+.tabaqah-card.active::before { transform:scaleX(1); }
+.tabaqah-card.loading { opacity:.6; cursor:wait; }
+
+.tc-num {
+  font-family:var(--serif); font-style:italic; font-size:28px;
+  color:var(--gold); line-height:1; margin-bottom:10px; opacity:.7;
+}
+.tc-ar {
+  font-family:var(--arabic); font-size:15px; color:var(--paper);
+  direction:rtl; line-height:1.5; margin-bottom:6px;
+}
+.tc-th {
+  font-family:var(--thai); font-size:12px; color:var(--text-dim);
+  margin-bottom:10px; line-height:1.4;
+}
+.tc-count {
+  font-family:var(--ui); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--text-mute);
+}
+.tc-count strong { color:var(--gold); font-weight:600; }
+
+/* =========================================================
    VISUALIZATION AREA
    ========================================================= */
-.viz-section { padding:80px 0 100px; border-top:1px solid var(--rule); }
+.viz-section { padding:60px 0 100px; border-top:1px solid var(--rule); }
+.viz-header {
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px; margin-bottom:20px;
+}
+.viz-current-label {
+  display:flex; align-items:center; gap:12px;
+}
+.viz-current-num {
+  font-family:var(--serif); font-style:italic; font-size:36px; color:var(--gold); line-height:1;
+}
+.viz-current-text { display:flex; flex-direction:column; gap:2px; }
+.viz-current-ar {
+  font-family:var(--arabic); font-size:18px; color:var(--paper); direction:rtl;
+}
+.viz-current-th { font-family:var(--thai); font-size:13px; color:var(--text-dim); }
+.viz-current-stats { font-family:var(--ui); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-mute); }
+
+/* Tabaqah pill selector toolbar (above SVG) */
+.tabaqah-toolbar {
+  display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px;
+  padding:16px 0 12px; border-bottom:1px solid var(--rule);
+}
+.tab-pill {
+  font-family:var(--ui); font-size:10px; letter-spacing:.12em;
+  text-transform:uppercase; padding:6px 14px;
+  border:1px solid var(--rule-strong); border-radius:999px;
+  color:var(--text-dim); transition:all .22s; cursor:pointer;
+  white-space:nowrap;
+}
+.tab-pill:hover { border-color:var(--gold); color:var(--gold); }
+.tab-pill.active {
+  background:var(--gold); border-color:var(--gold);
+  color:#fff;
+}
+.tab-pill.loading-pill { opacity:.5; cursor:wait; }
+
 .viz-controls {
   display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:28px;
 }
@@ -290,10 +378,12 @@ body::before {
   display:grid; place-items:center; font-size:18px; line-height:1; transition:all .25s;
 }
 .zoom-btn:hover { border-color:var(--gold); color:var(--gold); }
+.zoom-btn-reset { font-size:12px; font-family:var(--ui); letter-spacing:.05em; }
 .viz-loading {
   position:absolute; inset:0; display:flex; flex-direction:column;
   align-items:center; justify-content:center; gap:12px;
   font-family:var(--thai); color:var(--text-mute); font-size:15px;
+  background:var(--ink-2);
 }
 .viz-spinner {
   width:36px; height:36px; border:2px solid var(--rule-strong);
@@ -324,6 +414,14 @@ html.dark-mode .node-label { fill:#9a907e; }
 .node-label.selected  { fill:var(--gold); }
 .arrow-marker { fill:rgba(0,50,100,0.22); }
 html.dark-mode .arrow-marker { fill:rgba(232,224,208,.22); }
+
+/* Empty-state message in viz */
+.viz-empty {
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:8px;
+  font-family:var(--thai); color:var(--text-mute); font-size:14px;
+}
+.viz-empty-ar { font-family:var(--arabic); font-size:32px; color:var(--rule-strong); direction:rtl; }
 
 /* =========================================================
    LEGEND
@@ -427,6 +525,26 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
 /* Students panel spacing */
 .detail-connections-students { margin-top:28px; }
 
+/* Narrator detail hidden state */
+.narrator-detail-hidden { display:none; }
+
+/* =========================================================
+   JS-GENERATED UTILITY CLASSES (Rule 30 — no inline styles)
+   ========================================================= */
+.js-err-msg {
+  font-family:var(--thai); color:var(--text-mute);
+  grid-column:1 / -1; padding:24px 0;
+}
+.conn-empty-text {
+  font-family:var(--thai); font-size:13px; color:var(--text-mute); padding:8px 0;
+}
+.conn-more-text {
+  font-family:var(--thai); font-size:12px; color:var(--text-mute); padding:8px 0;
+}
+.result-meta-sub {
+  color:var(--text-mute); font-size:11px;
+}
+
 /* =========================================================
    REVEAL ON SCROLL (Rule 35) — data-reveal pattern from index.html
    ========================================================= */
@@ -456,15 +574,17 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
    RESPONSIVE (Rule 45)
    ========================================================= */
 @media(max-width:1100px){
-  .result-row   { grid-template-columns:40px 1fr 140px; gap:16px; }
-  .result-grade { display:none; }
-  .how-grid     { grid-template-columns:1fr 1fr; gap:32px; }
+  .result-row     { grid-template-columns:40px 1fr 140px; gap:16px; }
+  .result-grade   { display:none; }
+  .how-grid       { grid-template-columns:1fr 1fr; gap:32px; }
+  .tabaqah-grid   { grid-template-columns:repeat(3,1fr); }
 }
 @media(max-width:880px){
   .section-head  { grid-template-columns:1fr; gap:24px; }
   .detail-panel  { grid-template-columns:1fr; gap:32px; }
   .how-grid      { grid-template-columns:1fr; gap:24px; }
   .hero-stats    { gap:24px; }
+  .tabaqah-grid  { grid-template-columns:repeat(2,1fr); }
 }
 @media(max-width:600px){
   .wrap          { padding:0 20px; }
@@ -477,6 +597,9 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
   .result-meta   { font-size:11px; }
   .detail-meta-grid { grid-template-columns:1fr; }
   .how-num       { font-size:48px; }
+  .tabaqah-grid  { grid-template-columns:repeat(2,1fr); gap:10px; }
+  .tc-num        { font-size:22px; }
+  .tc-ar         { font-size:13px; }
 }
 </style>
 </head>
@@ -502,9 +625,8 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
       <p class="hero-lede" data-reveal data-delay="3">
         อิสนาด (الإسناد) คือสายรายงานที่เชื่อมโยงนักวิชาการมุสลิมย้อนกลับไปถึงท่านนบีมุหัมมัด
         ศ็อลลัลลอฮุอะลัยฮิวะซัลลัม ผ่านบรรดาเศาะหาบะฮ์ ตาบิอีน และนักหะดีษในแต่ละยุคสมัย
-        ระบบนี้เป็นเอกลักษณ์ของวิทยาการหะดีษอิสลาม ทำให้สามารถตรวจสอบความน่าเชื่อถือของ
-        ผู้รายงานแต่ละคนได้อย่างเป็นวิทยาศาสตร์ ค้นหาและสำรวจสายรายงานจากฐานข้อมูล KASHAF
-        ที่ครอบคลุมกว่า 18,000 นักรายงาน
+        เลือกยุคสมัย (ฏอบะเกาะฮ์) ที่ต้องการสำรวจ — ระบบจะโหลดข้อมูลเฉพาะรุ่นนั้น
+        ทำให้แผนภูมิตอบสนองได้อย่างรวดเร็ว ฐานข้อมูล KASHAF ครอบคลุมกว่า 18,000 นักรายงาน
       </p>
 
       <div class="hero-stats" data-reveal data-delay="3">
@@ -517,12 +639,12 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
           <span class="stat-label">สายรายงาน</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num">500</span>
-          <span class="stat-label">นักรายงานหลักที่แสดง</span>
+          <span class="stat-num">12</span>
+          <span class="stat-label">ฏอบะเกาะฮ์</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num">2,000</span>
-          <span class="stat-label">เส้นเชื่อมสำคัญที่สุด</span>
+          <span class="stat-num">39,000+</span>
+          <span class="stat-label">เส้นเชื่อมอาจารย์-ลูกศิษย์</span>
         </div>
       </div>
 
@@ -557,47 +679,88 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
 
 
 <!-- ==========================================================
-     SECTION 2: NETWORK VISUALIZATION
+     SECTION 2: TABAQAH SELECTOR
+     ========================================================== -->
+<section class="tabaqah-section" id="tabaqahSection">
+  <div class="wrap">
+
+    <div class="section-head" data-reveal>
+      <div>
+        <div class="section-no">02</div>
+        <div class="section-eyebrow">เลือกยุคสมัย</div>
+      </div>
+      <div>
+        <h2 class="section-title">12 <em>ฏอบะเกาะฮ์</em></h2>
+        <p class="section-lede">
+          คลิกที่ยุคสมัยที่ต้องการสำรวจ — ระบบจะโหลดข้อมูลนักรายงานและสายรายงาน
+          เฉพาะฏอบะเกาะฮ์นั้นมาแสดงในแผนภูมิด้านล่าง
+          (ข้อมูลจะถูกแคชเมื่อโหลดครั้งแรก)
+        </p>
+      </div>
+    </div>
+
+    <!-- 12 tabaqah cards — rendered by JS from tabaqah-index.json -->
+    <div class="tabaqah-grid" id="tabaqahGrid" data-reveal data-delay="1">
+      <!-- placeholder cards while index loads -->
+      <div class="tabaqah-card loading"><div class="tc-num">—</div><div class="tc-th">กำลังโหลด…</div></div>
+      <div class="tabaqah-card loading"><div class="tc-num">—</div><div class="tc-th">กำลังโหลด…</div></div>
+      <div class="tabaqah-card loading"><div class="tc-num">—</div><div class="tc-th">กำลังโหลด…</div></div>
+      <div class="tabaqah-card loading"><div class="tc-num">—</div><div class="tc-th">กำลังโหลด…</div></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     SECTION 3: NETWORK VISUALIZATION
      ========================================================== -->
 <section class="viz-section" id="vizSection">
   <div class="wrap">
 
     <div class="section-head" data-reveal>
       <div>
-        <div class="section-no">02</div>
+        <div class="section-no">03</div>
         <div class="section-eyebrow">เครือข่ายนักรายงาน</div>
       </div>
       <div>
         <h2 class="section-title">แผนภูมิ<em>อิสนาด</em></h2>
         <p class="section-lede">
-          แผนภูมิแสดงการเชื่อมโยงระหว่างนักรายงาน 500 คนที่ปรากฏบ่อยที่สุดในฐานข้อมูล
           ลูกศรแสดงทิศทางการส่งต่อรายงาน (จากอาจารย์สู่ลูกศิษย์)
-          กรองด้วยยุคสมัย และคลิกโหนดเพื่อดูรายละเอียด
+          เลือกฏอบะเกาะฮ์ด้านบนเพื่อกรองข้อมูล และคลิกโหนดเพื่อดูรายละเอียดนักรายงาน
         </p>
       </div>
     </div>
 
-    <!-- Filter tabs -->
-    <div class="viz-controls" data-reveal>
-      <span class="viz-label">กรองยุคสมัย:</span>
-      <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
-      <button class="filter-btn" data-filter="sahaba">صحابة — เศาะหาบะฮ์</button>
-      <button class="filter-btn" data-filter="tabiin">تابعون — ตาบิอีน</button>
-      <button class="filter-btn" data-filter="hadith">المحدثون — นักหะดีษ</button>
+    <!-- Tabaqah pill toolbar — switches loaded tabaqah -->
+    <div class="tabaqah-toolbar" id="tabaqahToolbar" data-reveal>
+      <!-- pills rendered by JS -->
+    </div>
+
+    <!-- Current tabaqah info bar -->
+    <div class="viz-header" data-reveal data-delay="1">
+      <div class="viz-current-label">
+        <div class="viz-current-num" id="vizCurrentNum">—</div>
+        <div class="viz-current-text">
+          <div class="viz-current-ar" lang="ar" dir="rtl" id="vizCurrentAr">اختَر طَبَقَةً</div>
+          <div class="viz-current-th" id="vizCurrentTh">เลือกฏอบะเกาะฮ์จากด้านบน</div>
+        </div>
+      </div>
+      <div class="viz-current-stats" id="vizCurrentStats"></div>
     </div>
 
     <!-- SVG visualization canvas -->
-    <div class="viz-container" id="vizContainer" data-reveal data-delay="1">
+    <div class="viz-container" id="vizContainer" data-reveal data-delay="2">
       <div class="viz-loading" id="vizLoading">
         <div class="viz-spinner"></div>
-        <span>กำลังโหลดข้อมูลสายรายงาน…</span>
+        <span>เลือกฏอบะเกาะฮ์เพื่อโหลดข้อมูล…</span>
       </div>
       <svg class="viz-svg" id="isnadSvg" aria-label="แผนภูมิสายรายงานหะดีษ"></svg>
       <div class="viz-hint">ลากเพื่อเลื่อน · ล้อเมาส์เพื่อซูม · คลิกโหนดเพื่อดูข้อมูล</div>
       <div class="viz-zoom-btns">
         <button class="zoom-btn" id="zoomIn"    title="ขยาย">+</button>
         <button class="zoom-btn" id="zoomOut"   title="ย่อ">−</button>
-        <button class="zoom-btn" id="zoomReset" title="รีเซ็ต" style="font-size:12px; font-family:var(--ui); letter-spacing:.05em;">⟳</button>
+        <button class="zoom-btn zoom-btn-reset" id="zoomReset" title="รีเซ็ต">⟳</button>
       </div>
     </div>
 
@@ -626,14 +789,14 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
 
 
 <!-- ==========================================================
-     SECTION 3: NARRATOR DETAIL PANEL
+     SECTION 4: NARRATOR DETAIL PANEL
      ========================================================== -->
 <section class="detail-section" id="detailSection">
   <div class="wrap">
 
     <div class="section-head" data-reveal>
       <div>
-        <div class="section-no">03</div>
+        <div class="section-no">04</div>
         <div class="section-eyebrow">ตัรญะมะฮ์</div>
       </div>
       <div>
@@ -654,7 +817,7 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
     </div>
 
     <!-- Filled detail panel — hidden until narrator selected -->
-    <div id="narratorDetail" class="detail-panel" style="display:none;">
+    <div id="narratorDetail" class="detail-panel narrator-detail-hidden">
       <button class="detail-close" id="detailClose">ปิด ×</button>
 
       <!-- Column 1: Bio -->
@@ -701,14 +864,14 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
 
 
 <!-- ==========================================================
-     SECTION 4: HOW IT WORKS
+     SECTION 5: HOW IT WORKS
      ========================================================== -->
 <section class="how-section">
   <div class="wrap">
 
     <div class="section-head" data-reveal>
       <div>
-        <div class="section-no">04</div>
+        <div class="section-no">05</div>
         <div class="section-eyebrow">คำอธิบายระบบ</div>
       </div>
       <div>
@@ -723,11 +886,11 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
     <div class="how-grid">
       <div class="how-card" data-reveal>
         <div class="how-num">01</div>
-        <div class="how-title">ค้นหานักรายงาน</div>
+        <div class="how-title">เลือกฏอบะเกาะฮ์</div>
         <div class="how-desc">
-          พิมพ์ชื่ออาหรับหรือชื่อทับศัพท์ในช่องค้นหา ระบบจะแสดงรายชื่อนักรายงาน
-          ที่ตรงกันจากฐานข้อมูล 500 นักรายงานหลัก คลิกที่ชื่อเพื่อดูข้อมูลโดยละเอียด
-          และไฮไลต์ตำแหน่งในแผนภูมิเครือข่าย
+          คลิกการ์ดยุคสมัยที่ต้องการ ระบบจะโหลดข้อมูลนักรายงานเฉพาะรุ่นนั้นจากเซิร์ฟเวอร์
+          ทำให้แผนภูมิตอบสนองได้เร็วกว่าการโหลดข้อมูลทั้งหมดพร้อมกัน
+          ข้อมูลจะถูกเก็บแคชในหน่วยความจำเมื่อโหลดครั้งแรก
         </div>
       </div>
       <div class="how-card" data-reveal data-delay="1">
@@ -735,8 +898,8 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
         <div class="how-title">สำรวจแผนภูมิเครือข่าย</div>
         <div class="how-desc">
           แผนภูมิแสดงความสัมพันธ์ระหว่างนักรายงาน เส้นลูกศรแสดงทิศทางการส่งต่อ
-          รายงาน (จากอาจารย์ไปสู่ลูกศิษย์) กรองด้วยยุคสมัยเพื่อมุ่งเน้นกลุ่มที่ต้องการ
-          ใช้ล้อเมาส์ซูมและลากเพื่อสำรวจส่วนต่าง ๆ ของเครือข่าย
+          รายงาน (จากอาจารย์ไปสู่ลูกศิษย์) ใช้ล้อเมาส์ซูมและลากเพื่อสำรวจส่วนต่าง ๆ
+          คลิกโหนดเพื่อดูชีวประวัติและสายเชื่อมโยง
         </div>
       </div>
       <div class="how-card" data-reveal data-delay="2">
@@ -771,66 +934,541 @@ html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
 
 <script>
 /* =========================================================
-   ISNĀD TRACER v6 — KASHAF Dataset
+   ISNĀD TRACER v7 — Lazy-load per tabaqah (KASHAF Dataset)
    ========================================================= */
 
-var DATA_URL     = '../../data/isnad-narrators.json';
-var allNarrators = [];
-var allEdges     = [];
-var narById      = {};          /* sequential id -> narrator object */
-var nodePos      = {};          /* sequential id -> { x, y, vx, vy } */
-var currentFilter   = 'all';
-var selectedId      = null;
+var INDEX_URL    = '../../data/tabaqah-index.json';
+var DATA_BASE    = '../../data/';
 
-/* ── Tabaqah classification ─────────────────────────────────── */
-function tabaqahGroup(t) {
-  if (!t) return 'other';
-  if (t === 'صحابة')  return 'sahaba';
-  if (t === 'تابعون') return 'tabiin';
-  if (t.indexOf('المحدث') > -1 || t.indexOf('التابعين') > -1 || t.indexOf('المتأخر') > -1) return 'hadith';
-  return 'other';
+/* Global state */
+var tabaqahIndex   = [];          /* [{tabaqah, label_ar, label_th, count, file}] */
+var tabaqahCache   = {};          /* tabaqah_num -> loaded data object */
+var currentTabaqah = 0;           /* 0 = none loaded */
+var allNarrators   = [];          /* narrators in current tabaqah */
+var allEdges       = [];          /* edges in current tabaqah */
+var narById        = {};          /* id -> narrator (current tabaqah) */
+var globalNarById  = {};          /* id -> narrator (all loaded tabaqat, for cross-ref) */
+var nodePos        = {};          /* id -> {x,y,vx,vy} */
+var selectedId     = null;
+var gMain, vizSvg;
+var panZoom        = { x:0, y:0, k:1 };
+var NODE_R         = 7;
+
+/* Max nodes/edges to render for performance */
+var MAX_VIZ_NODES = 600;
+var MAX_VIZ_EDGES = 5000;
+
+/* ── Tabaqah UI label helpers ────────────────────────────── */
+function tabaqahThLabel(num) {
+  var entry = tabaqahIndex.filter(function(e){ return e.tabaqah === num; })[0];
+  return entry ? entry.label_th : 'ฏอบะเกาะฮ์ ' + num;
+}
+function tabaqahArLabel(num) {
+  var entry = tabaqahIndex.filter(function(e){ return e.tabaqah === num; })[0];
+  return entry ? entry.label_ar : '';
 }
 
-function tabaqahThai(t) {
-  var map = {
-    'صحابة':             'เศาะหาบะฮ์',
-    'تابعون':            'ตาบิอีน',
-    'أتباع التابعين':    'อัตบาอุตตาบิอีน',
-    'المحدثون الكبار':   'มุหัดดิษรุ่นใหญ่',
-    'أتباع المحدثين':    'อัตบาอุลมุหัดดิษีน',
-    'المتأخرون':         'มุตะอัคคิรูน',
-    'غير معروف':         'ไม่ทราบยุคสมัย'
-  };
-  return map[t] || t || '—';
+/* ── Node colour by tabaqah number ──────────────────────── */
+function nodeClass(n) {
+  var t = n.tabaqah_num || 12;
+  if (t === 1) return 'node-circle sahabi';
+  if (t <= 4)  return 'node-circle tabii';
+  return 'node-circle';
 }
 
-/* ── Safe HTML escape ────────────────────────────────────────── */
+/* ── Safe HTML escape ────────────────────────────────────── */
 function esc(s) {
   return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 /* =========================================================
-   DATA LOAD
+   STEP 1 — Load tabaqah index on page init
    ========================================================= */
-function loadData() {
-  fetch(DATA_URL)
+function loadIndex() {
+  fetch(INDEX_URL)
     .then(function(r){ return r.json(); })
-    .then(function(d){
-      allNarrators = d.narrators || [];
-      allEdges     = d.edges     || [];
-      allNarrators.forEach(function(n){ narById[n.id] = n; });
-      document.getElementById('vizLoading').style.display = 'none';
-      initViz();
+    .then(function(data){
+      tabaqahIndex = data;
+      renderTabaqahCards(data);
+      renderTabaqahToolbar(data);
+      /* Auto-load tabaqah 1 on start */
+      loadTabaqah(1);
     })
     .catch(function(err){
-      var loading = document.getElementById('vizLoading');
-      loading.innerHTML = '<span style="font-family:var(--thai); font-size:14px; color:var(--text-mute);">ไม่สามารถโหลดข้อมูลได้ กรุณาลองใหม่อีกครั้ง</span>';
-      console.error('[Isnād Tracer] data error:', err);
+      console.error('[Isnād Tracer] index load error:', err);
+      document.getElementById('tabaqahGrid').innerHTML =
+        '<div class="js-err-msg">ไม่สามารถโหลดรายการฏอบะเกาะฮ์ได้</div>';
     });
 }
 
 /* =========================================================
-   SEARCH
+   Render 12 tabaqah cards in the selector section
+   ========================================================= */
+function renderTabaqahCards(data) {
+  var grid = document.getElementById('tabaqahGrid');
+  grid.innerHTML = '';
+  data.forEach(function(entry) {
+    var card = document.createElement('div');
+    card.className = 'tabaqah-card';
+    card.setAttribute('data-tabaqah', entry.tabaqah);
+    card.innerHTML =
+      '<div class="tc-num">' + entry.tabaqah + '</div>' +
+      '<div class="tc-ar" lang="ar" dir="rtl">' + esc(entry.label_ar) + '</div>' +
+      '<div class="tc-th">' + esc(entry.label_th) + '</div>' +
+      '<div class="tc-count"><strong>' + entry.count.toLocaleString() + '</strong> นักรายงาน</div>';
+    card.addEventListener('click', function(){
+      loadTabaqah(entry.tabaqah);
+      /* Scroll to viz section */
+      document.getElementById('vizSection').scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+    grid.appendChild(card);
+  });
+}
+
+/* =========================================================
+   Render pill toolbar above SVG
+   ========================================================= */
+function renderTabaqahToolbar(data) {
+  var toolbar = document.getElementById('tabaqahToolbar');
+  toolbar.innerHTML = '';
+  data.forEach(function(entry) {
+    var pill = document.createElement('button');
+    pill.className = 'tab-pill';
+    pill.setAttribute('data-tabaqah', entry.tabaqah);
+    pill.setAttribute('title', entry.label_th + ' — ' + entry.count.toLocaleString() + ' นักรายงาน');
+    pill.textContent = entry.tabaqah + '. ' + entry.label_th;
+    pill.addEventListener('click', function(){
+      loadTabaqah(entry.tabaqah);
+    });
+    toolbar.appendChild(pill);
+  });
+}
+
+/* =========================================================
+   STEP 2 — Load a specific tabaqah JSON
+   ========================================================= */
+function loadTabaqah(tabNum) {
+  if (currentTabaqah === tabNum) return;   /* already loaded */
+
+  /* Mark active state on cards and pills */
+  setActiveTabaqah(tabNum);
+
+  /* If cached, use it immediately */
+  if (tabaqahCache[tabNum]) {
+    activateTabaqah(tabNum, tabaqahCache[tabNum]);
+    return;
+  }
+
+  /* Show loading spinner */
+  showVizLoading('กำลังโหลดฏอบะเกาะฮ์ที่ ' + tabNum + '…');
+
+  fetch(DATA_BASE + 'tabaqah-' + tabNum + '.json')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      tabaqahCache[tabNum] = data;
+      activateTabaqah(tabNum, data);
+    })
+    .catch(function(err){
+      console.error('[Isnād Tracer] tabaqah-' + tabNum + ' load error:', err);
+      showVizError('ไม่สามารถโหลดข้อมูลฏอบะเกาะฮ์ที่ ' + tabNum + ' ได้');
+    });
+}
+
+function setActiveTabaqah(tabNum) {
+  /* Cards */
+  document.querySelectorAll('.tabaqah-card').forEach(function(c){
+    c.classList.toggle('active', parseInt(c.getAttribute('data-tabaqah'),10) === tabNum);
+  });
+  /* Pills */
+  document.querySelectorAll('.tab-pill').forEach(function(p){
+    p.classList.toggle('active', parseInt(p.getAttribute('data-tabaqah'),10) === tabNum);
+  });
+}
+
+function showVizLoading(msg) {
+  var loading = document.getElementById('vizLoading');
+  loading.innerHTML = '<div class="viz-spinner"></div><span>' + esc(msg) + '</span>';
+  loading.style.display = 'flex';
+}
+
+function showVizError(msg) {
+  var loading = document.getElementById('vizLoading');
+  loading.innerHTML = '<span>' + esc(msg) + '</span>';
+  loading.style.display = 'flex';
+}
+
+/* =========================================================
+   Activate loaded tabaqah data
+   ========================================================= */
+function activateTabaqah(tabNum, data) {
+  currentTabaqah = tabNum;
+
+  allNarrators = data.narrators || [];
+  allEdges     = data.edges     || [];
+  narById      = {};
+  nodePos      = {};
+  selectedId   = null;
+
+  /* Build lookup */
+  allNarrators.forEach(function(n){ narById[n.id] = n; });
+
+  /* Merge into global lookup for cross-tabaqah detail display */
+  allNarrators.forEach(function(n){ globalNarById[n.id] = n; });
+
+  /* Update header info bar */
+  document.getElementById('vizCurrentNum').textContent = tabNum;
+  var arEl = document.getElementById('vizCurrentAr');
+  arEl.textContent  = data.label_ar || '';
+  arEl.setAttribute('lang','ar'); arEl.setAttribute('dir','rtl');
+  document.getElementById('vizCurrentTh').textContent  = data.label_th || '';
+  document.getElementById('vizCurrentStats').textContent =
+    allNarrators.length.toLocaleString() + ' นักรายงาน  ·  ' +
+    allEdges.length.toLocaleString() + ' เส้นเชื่อม';
+
+  /* Hide loading, init viz */
+  document.getElementById('vizLoading').style.display = 'none';
+
+  /* Close any open detail */
+  closeDetail();
+
+  initViz();
+}
+
+/* =========================================================
+   VISUALIZATION — force-directed layout
+   ========================================================= */
+function initViz() {
+  vizSvg = document.getElementById('isnadSvg');
+  var W = vizSvg.clientWidth  || 1200;
+  var H = vizSvg.clientHeight || 580;
+
+  /* Clear previous render */
+  while (vizSvg.firstChild) vizSvg.removeChild(vizSvg.firstChild);
+
+  /* Arrow marker defs */
+  var defs   = document.createElementNS('http://www.w3.org/2000/svg','defs');
+  var marker = document.createElementNS('http://www.w3.org/2000/svg','marker');
+  marker.setAttribute('id','arr');
+  marker.setAttribute('markerWidth','7'); marker.setAttribute('markerHeight','5');
+  marker.setAttribute('refX','7');        marker.setAttribute('refY','2.5');
+  marker.setAttribute('orient','auto');
+  var poly = document.createElementNS('http://www.w3.org/2000/svg','polygon');
+  poly.setAttribute('points','0 0, 7 2.5, 0 5');
+  poly.setAttribute('class','arrow-marker');
+  marker.appendChild(poly); defs.appendChild(marker);
+  vizSvg.appendChild(defs);
+
+  gMain = document.createElementNS('http://www.w3.org/2000/svg','g');
+  vizSvg.appendChild(gMain);
+
+  var gE = document.createElementNS('http://www.w3.org/2000/svg','g');
+  gE.setAttribute('id','gEdges');
+  gMain.appendChild(gE);
+
+  var gN = document.createElementNS('http://www.w3.org/2000/svg','g');
+  gN.setAttribute('id','gNodes');
+  gMain.appendChild(gN);
+
+  /* Subsample for performance */
+  var vizNarrators = allNarrators.slice(0, MAX_VIZ_NODES);
+  var vizIds       = new Set(vizNarrators.map(function(n){ return n.id; }));
+  var vizEdges     = allEdges.filter(function(e){
+    return vizIds.has(e.from) && vizIds.has(e.to);
+  }).slice(0, MAX_VIZ_EDGES);
+
+  computeLayout(vizNarrators, vizEdges, W, H);
+  renderGraph(vizNarrators, vizEdges);
+  initPanZoom();
+}
+
+function computeLayout(narrators, edges, W, H) {
+  var NUM_LAYERS = 12;
+
+  /* Assign initial positions by tabaqah_num (left→right) */
+  var layerIdx = {};
+  narrators.forEach(function(n){
+    var L  = (n.tabaqah_num || 12) - 1;   /* 0-based */
+    layerIdx[L] = (layerIdx[L] || 0) + 1;
+    var idx = layerIdx[L];
+    var cx  = ((L + 0.5) / NUM_LAYERS) * W;
+    var cy  = 40 + (idx % 24) * (H / 26);
+    nodePos[n.id] = { x: cx + (Math.random()-0.5)*50, y: cy, vx:0, vy:0 };
+  });
+
+  var alpha = 1.0;
+  var iters = narrators.length > 300 ? 60 : 100;
+  for (var iter = 0; iter < iters; iter++) {
+    alpha *= 0.975;
+
+    /* Repulsion — O(n²) capped */
+    var a = narrators;
+    var cap = Math.min(a.length, 250);
+    for (var i = 0; i < cap; i++) {
+      var pi = nodePos[a[i].id];
+      for (var j = i+1; j < cap; j++) {
+        var pj = nodePos[a[j].id];
+        var dx = pi.x-pj.x, dy = pi.y-pj.y;
+        var d2 = dx*dx + dy*dy || 0.01;
+        var d  = Math.sqrt(d2);
+        var f  = (alpha * 600) / d2;
+        var fx = (dx/d)*f, fy = (dy/d)*f;
+        pi.vx += fx; pi.vy += fy;
+        pj.vx -= fx; pj.vy -= fy;
+      }
+    }
+
+    /* Attraction along edges */
+    edges.forEach(function(e){
+      var pf = nodePos[e.from], pt = nodePos[e.to];
+      if (!pf || !pt) return;
+      var dx = pt.x-pf.x, dy = pt.y-pf.y;
+      var d  = Math.sqrt(dx*dx+dy*dy) || 1;
+      var f  = (d-55)*0.012*alpha;
+      var fx = (dx/d)*f, fy = (dy/d)*f;
+      pf.vx += fx; pf.vy += fy;
+      pt.vx -= fx; pt.vy -= fy;
+    });
+
+    /* Layer gravity — push toward column */
+    narrators.forEach(function(n){
+      var L  = (n.tabaqah_num || 12) - 1;
+      var tx = ((L + 0.5) / 12) * (vizSvg.clientWidth || W);
+      var p  = nodePos[n.id];
+      p.vx  += (tx - p.x) * 0.06 * alpha;
+      p.vy  += ((vizSvg.clientHeight||H)/2 - p.y) * 0.008 * alpha;
+    });
+
+    /* Integrate */
+    narrators.forEach(function(n){
+      var p = nodePos[n.id];
+      p.vx *= 0.82; p.vy *= 0.82;
+      p.x  += p.vx;  p.y  += p.vy;
+      p.x   = Math.max(16, Math.min((vizSvg.clientWidth||W)-16,  p.x));
+      p.y   = Math.max(16, Math.min((vizSvg.clientHeight||H)-16, p.y));
+    });
+  }
+}
+
+function renderGraph(narrators, edges) {
+  var gE = document.getElementById('gEdges');
+  var gN = document.getElementById('gNodes');
+  if (gE) gE.innerHTML = '';
+  if (gN) gN.innerHTML = '';
+
+  if (!narrators.length) {
+    /* Show empty state */
+    var empty = document.createElementNS('http://www.w3.org/2000/svg','foreignObject');
+    empty.setAttribute('x','0'); empty.setAttribute('y','0');
+    empty.setAttribute('width','100%'); empty.setAttribute('height','100%');
+    vizSvg.appendChild(empty);
+    return;
+  }
+
+  /* Draw edges */
+  edges.forEach(function(e){
+    var pf = nodePos[e.from], pt = nodePos[e.to];
+    if (!pf || !pt) return;
+    var dx = pt.x-pf.x, dy = pt.y-pf.y;
+    var len = Math.sqrt(dx*dx+dy*dy) || 1;
+    var ex  = pt.x - (dx/len)*(NODE_R+3);
+    var ey  = pt.y - (dy/len)*(NODE_R+3);
+    var line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('class','edge');
+    line.setAttribute('x1',pf.x.toFixed(1)); line.setAttribute('y1',pf.y.toFixed(1));
+    line.setAttribute('x2',ex.toFixed(1));   line.setAttribute('y2',ey.toFixed(1));
+    line.setAttribute('marker-end','url(#arr)');
+    line.setAttribute('data-from',e.from);
+    line.setAttribute('data-to',  e.to);
+    gE.appendChild(line);
+  });
+
+  /* Draw nodes */
+  narrators.forEach(function(n){
+    var p = nodePos[n.id];
+    if (!p) return;
+    var g = document.createElementNS('http://www.w3.org/2000/svg','g');
+    g.setAttribute('data-id', n.id);
+    g.setAttribute('transform','translate('+p.x.toFixed(1)+','+p.y.toFixed(1)+')');
+
+    var circ = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    circ.setAttribute('r', NODE_R);
+    circ.setAttribute('class', nodeClass(n) + (n.id === selectedId ? ' selected' : ''));
+    g.appendChild(circ);
+
+    /* Label only for well-connected narrators */
+    var connN = (n.teachers ? n.teachers.length : 0) + (n.students ? n.students.length : 0);
+    if (connN >= 6 || (n.tabaqah_num || 12) === 1) {
+      var parts     = (n.name_ar || '').split(' ');
+      var shortName = parts.slice(0,3).join(' ');
+      var txt = document.createElementNS('http://www.w3.org/2000/svg','text');
+      txt.setAttribute('class','node-label' + (n.id === selectedId ? ' selected' : ''));
+      txt.setAttribute('y', NODE_R + 11);
+      txt.setAttribute('lang','ar');
+      txt.setAttribute('dir','rtl');
+      txt.textContent = shortName;
+      g.appendChild(txt);
+    }
+
+    g.addEventListener('click', function(){
+      selectNarrator(parseInt(this.getAttribute('data-id'),10));
+    });
+    gN.appendChild(g);
+  });
+}
+
+/* ── Select narrator ────────────────────────────────────── */
+function selectNarrator(id) {
+  selectedId = id;
+  /* Look up in current narById first, then global cache */
+  var n = narById[id] || globalNarById[id];
+  if (!n) return;
+
+  /* Highlight node */
+  document.querySelectorAll('#gNodes .node-circle').forEach(function(el){ el.classList.remove('selected'); });
+  document.querySelectorAll('#gNodes .node-label').forEach(function(el){  el.classList.remove('selected'); });
+  var gEl = document.querySelector('#gNodes g[data-id="'+id+'"]');
+  if (gEl) {
+    var c = gEl.querySelector('.node-circle'); if(c) c.classList.add('selected');
+    var t = gEl.querySelector('.node-label');  if(t) t.classList.add('selected');
+  }
+
+  /* Highlight connected edges */
+  document.querySelectorAll('.edge').forEach(function(el){
+    var f  = parseInt(el.getAttribute('data-from'),10);
+    var to = parseInt(el.getAttribute('data-to'),  10);
+    el.classList.toggle('highlighted', f===id || to===id);
+  });
+
+  /* Pan to node */
+  var p = nodePos[id];
+  if (p && vizSvg) {
+    var W = vizSvg.clientWidth  || 1200;
+    var H = vizSvg.clientHeight || 580;
+    panZoom.x = W/2 - p.x * panZoom.k;
+    panZoom.y = H/2 - p.y * panZoom.k;
+    applyTransform();
+  }
+
+  fillDetail(n);
+}
+
+function fillDetail(n) {
+  document.getElementById('detailDefault').style.display   = 'none';
+  var panel = document.getElementById('narratorDetail');
+  panel.classList.remove('narrator-detail-hidden');
+  panel.style.display = 'grid';
+
+  var tabNum = n.tabaqah_num || 12;
+  document.getElementById('detailEyebrow').textContent   = tabaqahThLabel(tabNum);
+  document.getElementById('detailNameAr').textContent    = n.name_ar || '—';
+  document.getElementById('detailTabaqahAr').textContent = tabaqahArLabel(tabNum);
+  document.getElementById('detailDeath').textContent     = n.death_ah ? 'ฮ.ศ. '+n.death_ah : '—';
+  document.getElementById('detailGen').textContent       = 'ฏอบะเกาะฮ์ที่ '+tabNum+' — '+tabaqahThLabel(tabNum);
+  document.getElementById('detailGradeIH').textContent   = n.grade_ibn_hajar || '—';
+  var cc = (n.teachers ? n.teachers.length : 0) + (n.students ? n.students.length : 0);
+  document.getElementById('detailConnCount').textContent = cc + ' การเชื่อมต่อ';
+
+  fillConnectionList('teachersList', n.teachers || [], 'teacher');
+  fillConnectionList('studentsList', n.students || [], 'student');
+}
+
+function fillConnectionList(elId, ids, type) {
+  var el = document.getElementById(elId);
+  el.innerHTML = '';
+  if (!ids.length) {
+    var empty = document.createElement('div');
+    empty.className = 'conn-item';
+    empty.innerHTML = '<span class="conn-empty-text">ไม่มีข้อมูล</span>';
+    el.appendChild(empty);
+    return;
+  }
+  ids.slice(0,30).forEach(function(tid){
+    var t = narById[tid] || globalNarById[tid];
+    var item = document.createElement('div');
+    item.className = 'conn-item';
+    var nameHtml = t
+      ? '<div class="conn-name-ar" lang="ar" dir="rtl">'+esc(t.name_ar)+'</div>'
+      : '<div class="conn-name-ar" lang="ar" dir="rtl">رَاوٍ #'+tid+'</div>';
+    var metaHtml = (t && t.death_ah) ? '<div class="conn-meta">ฮ.ศ. '+t.death_ah+'</div>' : '';
+    item.innerHTML =
+      '<div class="conn-dot'+(type==='teacher'?' teacher':'')+'"></div>'+
+      nameHtml + metaHtml;
+    item.addEventListener('click', function(){ selectNarrator(tid); });
+    el.appendChild(item);
+  });
+  if (ids.length > 30) {
+    var more = document.createElement('div');
+    more.innerHTML = '<div class="conn-more-text">… และอีก '+(ids.length-30)+' คน</div>';
+    el.appendChild(more);
+  }
+}
+
+function closeDetail() {
+  var panel = document.getElementById('narratorDetail');
+  panel.style.display = 'none';
+  panel.classList.add('narrator-detail-hidden');
+  document.getElementById('detailDefault').style.display = '';
+  selectedId = null;
+}
+
+document.getElementById('detailClose').addEventListener('click', function(){
+  closeDetail();
+  document.querySelectorAll('#gNodes .node-circle').forEach(function(el){ el.classList.remove('selected'); });
+  document.querySelectorAll('#gNodes .node-label').forEach(function(el){  el.classList.remove('selected'); });
+  document.querySelectorAll('.edge').forEach(function(el){ el.classList.remove('highlighted'); });
+});
+
+/* =========================================================
+   PAN & ZOOM
+   ========================================================= */
+function applyTransform() {
+  if (!gMain) return;
+  gMain.setAttribute('transform',
+    'translate('+panZoom.x.toFixed(2)+','+panZoom.y.toFixed(2)+') scale('+panZoom.k.toFixed(3)+')');
+}
+
+function initPanZoom() {
+  panZoom = { x:0, y:0, k:1 };
+  var dragging = false, lx = 0, ly = 0;
+
+  vizSvg.addEventListener('mousedown', function(e){
+    if (e.target.closest('g[data-id]')) return;
+    dragging = true; lx = e.clientX; ly = e.clientY;
+  });
+  window.addEventListener('mousemove', function(e){
+    if (!dragging) return;
+    panZoom.x += e.clientX-lx; panZoom.y += e.clientY-ly;
+    lx = e.clientX; ly = e.clientY; applyTransform();
+  });
+  window.addEventListener('mouseup', function(){ dragging = false; });
+
+  var ltx = 0, lty = 0;
+  vizSvg.addEventListener('touchstart', function(e){ if(e.touches.length===1){ ltx=e.touches[0].clientX; lty=e.touches[0].clientY; }},{passive:true});
+  vizSvg.addEventListener('touchmove',  function(e){
+    if(e.touches.length===1){
+      panZoom.x += e.touches[0].clientX-ltx; panZoom.y += e.touches[0].clientY-lty;
+      ltx=e.touches[0].clientX; lty=e.touches[0].clientY; applyTransform();
+    }
+  },{passive:true});
+
+  vizSvg.addEventListener('wheel', function(e){
+    e.preventDefault();
+    var rect = vizSvg.getBoundingClientRect();
+    var cx = e.clientX-rect.left, cy = e.clientY-rect.top;
+    var d  = e.deltaY > 0 ? 0.85 : 1.18;
+    var nk = Math.max(0.15, Math.min(5, panZoom.k*d));
+    panZoom.x = cx - (cx-panZoom.x)*(nk/panZoom.k);
+    panZoom.y = cy - (cy-panZoom.y)*(nk/panZoom.k);
+    panZoom.k = nk; applyTransform();
+  },{passive:false});
+
+  document.getElementById('zoomIn').addEventListener('click',    function(){ panZoom.k=Math.min(5,panZoom.k*1.3); applyTransform(); });
+  document.getElementById('zoomOut').addEventListener('click',   function(){ panZoom.k=Math.max(0.15,panZoom.k/1.3); applyTransform(); });
+  document.getElementById('zoomReset').addEventListener('click', function(){ panZoom={x:0,y:0,k:1}; applyTransform(); });
+}
+
+/* =========================================================
+   SEARCH (searches across all loaded tabaqat)
    ========================================================= */
 var $search  = document.getElementById('searchInput');
 var $clear   = document.getElementById('searchClear');
@@ -848,38 +1486,48 @@ function doSearch(q) {
     return;
   }
   $clear.classList.add('visible');
-  var ql      = q.toLowerCase();
-  var matched = allNarrators.filter(function(n){
+  var ql = q.toLowerCase();
+
+  /* Search across all currently loaded narrators (current tabaqah + cache) */
+  var pool = {};
+  Object.keys(tabaqahCache).forEach(function(k){
+    var d = tabaqahCache[k];
+    (d.narrators || []).forEach(function(n){ pool[n.id] = n; });
+  });
+  var narList = Object.values(pool);
+
+  var matched = narList.filter(function(n){
     return (n.name_ar  || '').toLowerCase().indexOf(ql) > -1 ||
            (n.shuhrah  || '').toLowerCase().indexOf(ql) > -1 ||
-           (n.rawi_index + '') === q;
+           (n.id + '') === q;
   }).slice(0, 24);
 
   $rhead.classList.add('visible');
-  $rcount.textContent = 'พบ ' + matched.length + (matched.length === 24 ? '+' : '') + ' รายการ';
+  $rcount.textContent = 'พบ '+matched.length+(matched.length===24?'+':'')+' รายการ'+(narList.length < 18000 ? ' (จากฏอบะเกาะฮ์ที่โหลดแล้ว)' : '');
 
   if (!matched.length) {
-    $results.innerHTML = '<div class="result-empty">ไม่พบนักรายงานที่ตรงกับคำค้นหา — ลองค้นหาด้วยตัวอักษรภาษาอาหรับ</div>';
+    $results.innerHTML = '<div class="result-empty">ไม่พบนักรายงาน — ลองโหลดฏอบะเกาะฮ์อื่นก่อนค้นหา หรือค้นหาด้วยตัวอักษรอาหรับ</div>';
     $results.classList.add('visible');
     return;
   }
 
   $results.innerHTML = matched.map(function(n, i){
-    return '<div class="result-row" data-id="' + n.id + '">' +
-      '<div class="result-num">' + esc(i + 1) + '</div>' +
-      '<div class="result-name" lang="ar" dir="rtl">' + esc(n.name_ar) + '</div>' +
-      '<div class="result-meta"><div>' + esc(tabaqahThai(n.tabaqah)) + '</div>' +
-        '<div style="color:var(--text-mute); font-size:11px;">' + (n.death_ah ? 'ฮ.ศ. ' + n.death_ah : '—') + '</div></div>' +
-      '<div class="result-grade" lang="ar" dir="rtl">' + esc(n.grade_ibn_hajar || '—') + '</div>' +
+    var tab = n.tabaqah_num || 12;
+    return '<div class="result-row" data-id="'+n.id+'">' +
+      '<div class="result-num">'+(i+1)+'</div>' +
+      '<div class="result-name" lang="ar" dir="rtl">'+esc(n.name_ar)+'</div>' +
+      '<div class="result-meta"><div>ฏ.'+tab+' '+esc(tabaqahThLabel(tab))+'</div>'+
+        '<div class="result-meta-sub">'+(n.death_ah?'ฮ.ศ. '+n.death_ah:'—')+'</div></div>' +
+      '<div class="result-grade" lang="ar" dir="rtl">'+esc(n.grade_ibn_hajar||'—')+'</div>' +
     '</div>';
   }).join('');
   $results.classList.add('visible');
 
   $results.querySelectorAll('.result-row').forEach(function(row){
     row.addEventListener('click', function(){
-      var id = parseInt(this.getAttribute('data-id'), 10);
+      var id = parseInt(this.getAttribute('data-id'),10);
       selectNarrator(id);
-      document.getElementById('detailSection').scrollIntoView({ behavior:'smooth', block:'start' });
+      document.getElementById('detailSection').scrollIntoView({behavior:'smooth',block:'start'});
     });
   });
 }
@@ -887,353 +1535,7 @@ function doSearch(q) {
 $search.addEventListener('input',   function(){ doSearch(this.value); });
 $search.addEventListener('keydown', function(e){ if(e.key==='Enter') doSearch(this.value); });
 document.getElementById('searchBtn').addEventListener('click', function(){ doSearch($search.value); });
-$clear.addEventListener('click', function(){ $search.value = ''; doSearch(''); });
-
-/* =========================================================
-   VISUALIZATION — simplified force layout (no external libs)
-   ========================================================= */
-var gMain, vizSvg;
-var panZoom = { x:0, y:0, k:1 };
-var LAYER = { 'صحابة':0, 'تابعون':1, 'أتباع التابعين':2, 'المحدثون الكبار':3, 'أتباع المحدثين':4, 'المتأخرون':5, 'غير معروف':3 };
-var NUM_LAYERS = 6;
-var NODE_R = 7;
-
-function initViz() {
-  vizSvg = document.getElementById('isnadSvg');
-  var W = vizSvg.clientWidth  || 1200;
-  var H = vizSvg.clientHeight || 580;
-
-  /* build top-level groups */
-  gMain = document.createElementNS('http://www.w3.org/2000/svg','g');
-  vizSvg.appendChild(gMain);
-
-  var gE = document.createElementNS('http://www.w3.org/2000/svg','g');
-  gE.setAttribute('id','gEdges');
-  gMain.appendChild(gE);
-
-  var gN = document.createElementNS('http://www.w3.org/2000/svg','g');
-  gN.setAttribute('id','gNodes');
-  gMain.appendChild(gN);
-
-  computeLayout(W, H);
-  renderGraph('all');
-  initPanZoom();
-  initFilters();
-}
-
-function computeLayout(W, H) {
-  var layerCounts = {};
-  allNarrators.forEach(function(n){
-    var L = LAYER[n.tabaqah] !== undefined ? LAYER[n.tabaqah] : 3;
-    layerCounts[L] = (layerCounts[L] || 0) + 1;
-    var cx = ((L + 0.5) / NUM_LAYERS) * W;
-    var idx = layerCounts[L];
-    var cy  = 40 + (idx % 24) * (H / 26);
-    nodePos[n.id] = { x: cx + (Math.random()-0.5)*60, y: cy, vx:0, vy:0 };
-  });
-
-  /* Build edge lookup */
-  var edgeLookup = {};
-  allEdges.forEach(function(e){ edgeLookup[e.from + '_' + e.to] = true; });
-
-  var alpha = 1.0;
-  for (var iter = 0; iter < 100; iter++) {
-    alpha *= 0.975;
-    var a = allNarrators;
-
-    /* Repulsion */
-    for (var i = 0; i < a.length; i++) {
-      var pi = nodePos[a[i].id];
-      for (var j = i+1; j < a.length; j++) {
-        var pj = nodePos[a[j].id];
-        var dx = pi.x - pj.x, dy = pi.y - pj.y;
-        var d2 = dx*dx + dy*dy || 0.01;
-        var d  = Math.sqrt(d2);
-        var f  = (alpha * 700) / d2;
-        var fx = (dx/d)*f, fy = (dy/d)*f;
-        pi.vx += fx; pi.vy += fy;
-        pj.vx -= fx; pj.vy -= fy;
-      }
-    }
-
-    /* Attraction */
-    allEdges.forEach(function(e){
-      var pf = nodePos[e.from], pt = nodePos[e.to];
-      if (!pf || !pt) return;
-      var dx = pt.x-pf.x, dy = pt.y-pf.y;
-      var d  = Math.sqrt(dx*dx + dy*dy) || 1;
-      var f  = (d - 55) * 0.012 * alpha;
-      var fx = (dx/d)*f, fy = (dy/d)*f;
-      pf.vx += fx; pf.vy += fy;
-      pt.vx -= fx; pt.vy -= fy;
-    });
-
-    /* Layer gravity */
-    allNarrators.forEach(function(n){
-      var L  = LAYER[n.tabaqah] !== undefined ? LAYER[n.tabaqah] : 3;
-      var tx = ((L + 0.5) / NUM_LAYERS) * (vizSvg.clientWidth || 1200);
-      var p  = nodePos[n.id];
-      p.vx  += (tx - p.x) * 0.06 * alpha;
-      p.vy  += ((vizSvg.clientHeight||580)/2 - p.y) * 0.008 * alpha;
-    });
-
-    /* Integrate */
-    allNarrators.forEach(function(n){
-      var p = nodePos[n.id];
-      p.vx *= 0.82; p.vy *= 0.82;
-      p.x  += p.vx; p.y  += p.vy;
-      p.x   = Math.max(16, Math.min((vizSvg.clientWidth||1200)-16, p.x));
-      p.y   = Math.max(16, Math.min((vizSvg.clientHeight||580)-16, p.y));
-    });
-  }
-}
-
-function renderGraph(filter) {
-  var gE = document.getElementById('gEdges');
-  var gN = document.getElementById('gNodes');
-  if (gE) gE.innerHTML = '';
-  if (gN) gN.innerHTML = '';
-
-  /* Arrow marker in defs */
-  var existDefs = vizSvg.querySelector('defs');
-  if (existDefs) vizSvg.removeChild(existDefs);
-  var defs   = document.createElementNS('http://www.w3.org/2000/svg','defs');
-  var marker = document.createElementNS('http://www.w3.org/2000/svg','marker');
-  marker.setAttribute('id','arr'); marker.setAttribute('markerWidth','7'); marker.setAttribute('markerHeight','5');
-  marker.setAttribute('refX','7'); marker.setAttribute('refY','2.5'); marker.setAttribute('orient','auto');
-  var poly = document.createElementNS('http://www.w3.org/2000/svg','polygon');
-  poly.setAttribute('points','0 0, 7 2.5, 0 5');
-  poly.setAttribute('class','arrow-marker');
-  marker.appendChild(poly); defs.appendChild(marker);
-  vizSvg.insertBefore(defs, gMain);
-
-  /* Which nodes are visible */
-  var vis = {};
-  allNarrators.forEach(function(n){
-    if (filter === 'all') { vis[n.id] = true; return; }
-    var g = tabaqahGroup(n.tabaqah);
-    if (filter === 'sahaba' && g === 'sahaba') vis[n.id] = true;
-    if (filter === 'tabiin' && g === 'tabiin') vis[n.id] = true;
-    if (filter === 'hadith' && (g === 'hadith' || g === 'other')) vis[n.id] = true;
-  });
-
-  /* Draw edges first (below nodes) */
-  allEdges.forEach(function(e){
-    if (!vis[e.from] || !vis[e.to]) return;
-    var pf = nodePos[e.from], pt = nodePos[e.to];
-    if (!pf || !pt) return;
-    var dx = pt.x-pf.x, dy = pt.y-pf.y;
-    var len = Math.sqrt(dx*dx+dy*dy) || 1;
-    var ex  = pt.x - (dx/len)*(NODE_R+3);
-    var ey  = pt.y - (dy/len)*(NODE_R+3);
-    var line = document.createElementNS('http://www.w3.org/2000/svg','line');
-    line.setAttribute('class','edge');
-    line.setAttribute('x1', pf.x.toFixed(1)); line.setAttribute('y1', pf.y.toFixed(1));
-    line.setAttribute('x2', ex.toFixed(1));   line.setAttribute('y2', ey.toFixed(1));
-    line.setAttribute('marker-end','url(#arr)');
-    line.setAttribute('data-from', e.from);
-    line.setAttribute('data-to',   e.to);
-    gE.appendChild(line);
-  });
-
-  /* Draw nodes */
-  allNarrators.forEach(function(n){
-    if (!vis[n.id]) return;
-    var p   = nodePos[n.id];
-    if (!p) return;
-    var grp  = tabaqahGroup(n.tabaqah);
-    var cls  = 'node-circle' + (grp==='sahaba' ? ' sahabi' : grp==='tabiin' ? ' tabii' : '');
-    var g    = document.createElementNS('http://www.w3.org/2000/svg','g');
-    g.setAttribute('data-id', n.id);
-    g.setAttribute('transform','translate(' + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ')');
-    g.style.cursor = 'pointer';
-
-    var circ = document.createElementNS('http://www.w3.org/2000/svg','circle');
-    circ.setAttribute('r', NODE_R);
-    circ.setAttribute('class', cls + (n.id === selectedId ? ' selected' : ''));
-    g.appendChild(circ);
-
-    /* Show label only for highly connected narrators */
-    var connN = (n.teachers ? n.teachers.length : 0) + (n.students ? n.students.length : 0);
-    if (connN >= 6 || grp === 'sahaba') {
-      var parts     = (n.name_ar || '').split(' ');
-      var shortName = parts.slice(0, 3).join(' ');
-      var txt = document.createElementNS('http://www.w3.org/2000/svg','text');
-      txt.setAttribute('class','node-label' + (n.id === selectedId ? ' selected' : ''));
-      txt.setAttribute('y', NODE_R + 11);
-      txt.setAttribute('lang','ar'); txt.setAttribute('dir','rtl');
-      txt.textContent = shortName;
-      g.appendChild(txt);
-    }
-
-    g.addEventListener('click', function(){
-      selectNarrator(parseInt(this.getAttribute('data-id'), 10));
-    });
-    gN.appendChild(g);
-  });
-}
-
-/* ── Select narrator ─────────────────────────────────────────── */
-function selectNarrator(id) {
-  selectedId = id;
-  var n = narById[id];
-  if (!n) return;
-
-  /* Highlight node */
-  document.querySelectorAll('#gNodes .node-circle').forEach(function(el){ el.classList.remove('selected'); });
-  document.querySelectorAll('#gNodes .node-label').forEach(function(el){  el.classList.remove('selected'); });
-  var gEl = document.querySelector('#gNodes g[data-id="' + id + '"]');
-  if (gEl) {
-    var c = gEl.querySelector('.node-circle'); if(c) c.classList.add('selected');
-    var t = gEl.querySelector('.node-label');  if(t) t.classList.add('selected');
-  }
-
-  /* Highlight edges */
-  document.querySelectorAll('.edge').forEach(function(el){
-    var f = parseInt(el.getAttribute('data-from'),10);
-    var to= parseInt(el.getAttribute('data-to'),  10);
-    el.classList.toggle('highlighted', f===id || to===id);
-  });
-
-  /* Pan to node */
-  var p = nodePos[id];
-  if (p && vizSvg) {
-    var W = vizSvg.clientWidth  || 1200;
-    var H = vizSvg.clientHeight || 580;
-    panZoom.x = W/2 - p.x * panZoom.k;
-    panZoom.y = H/2 - p.y * panZoom.k;
-    applyTransform();
-  }
-
-  /* Show detail panel */
-  fillDetail(n);
-}
-
-function fillDetail(n) {
-  document.getElementById('detailDefault').style.display   = 'none';
-  document.getElementById('narratorDetail').style.display  = 'grid';
-
-  document.getElementById('detailEyebrow').textContent   = tabaqahThai(n.tabaqah);
-  document.getElementById('detailNameAr').textContent    = n.name_ar   || '—';
-  document.getElementById('detailTabaqahAr').textContent = n.tabaqah   || '';
-  document.getElementById('detailDeath').textContent     = n.death_ah  ? 'ฮ.ศ. ' + n.death_ah : '—';
-  document.getElementById('detailGen').textContent       = tabaqahThai(n.tabaqah);
-  document.getElementById('detailGradeIH').textContent   = n.grade_ibn_hajar || '—';
-  var cc = (n.teachers ? n.teachers.length : 0) + (n.students ? n.students.length : 0);
-  document.getElementById('detailConnCount').textContent = cc + ' การเชื่อมต่อ';
-
-  fillConnectionList('teachersList', n.teachers || [], 'teacher');
-  fillConnectionList('studentsList', n.students || [], 'student');
-}
-
-function fillConnectionList(elId, ids, type) {
-  var el  = document.getElementById(elId);
-  el.innerHTML = '';
-  if (!ids.length) {
-    el.innerHTML = '<div style="font-family:var(--thai); font-size:13px; color:var(--text-mute); padding:8px 0;">ไม่มีข้อมูล</div>';
-    return;
-  }
-  ids.forEach(function(tid){
-    var t = narById[tid];
-    if (!t) return;
-    var item = document.createElement('div');
-    item.className = 'conn-item';
-    item.innerHTML =
-      '<div class="conn-dot' + (type==='teacher' ? ' teacher' : '') + '"></div>' +
-      '<div class="conn-name-ar" lang="ar" dir="rtl">' + esc(t.name_ar) + '</div>' +
-      '<div class="conn-meta">' + (t.death_ah ? 'ฮ.ศ. ' + t.death_ah : '') + '</div>';
-    item.addEventListener('click', function(){ selectNarrator(tid); });
-    el.appendChild(item);
-  });
-}
-
-document.getElementById('detailClose').addEventListener('click', function(){
-  document.getElementById('narratorDetail').style.display = 'none';
-  document.getElementById('detailDefault').style.display  = '';
-  selectedId = null;
-  document.querySelectorAll('#gNodes .node-circle').forEach(function(el){ el.classList.remove('selected'); });
-  document.querySelectorAll('#gNodes .node-label').forEach(function(el){  el.classList.remove('selected'); });
-  document.querySelectorAll('.edge').forEach(function(el){ el.classList.remove('highlighted'); });
-});
-
-/* =========================================================
-   PAN & ZOOM
-   ========================================================= */
-function applyTransform() {
-  if (!gMain) return;
-  gMain.setAttribute('transform',
-    'translate(' + panZoom.x.toFixed(2) + ',' + panZoom.y.toFixed(2) + ') scale(' + panZoom.k.toFixed(3) + ')');
-}
-
-function initPanZoom() {
-  var dragging = false, lx = 0, ly = 0;
-
-  vizSvg.addEventListener('mousedown', function(e){
-    if (e.target.closest('g[data-id]')) return; /* don't pan when clicking a node */
-    dragging = true; lx = e.clientX; ly = e.clientY;
-  });
-  window.addEventListener('mousemove', function(e){
-    if (!dragging) return;
-    panZoom.x += e.clientX - lx;
-    panZoom.y += e.clientY - ly;
-    lx = e.clientX; ly = e.clientY;
-    applyTransform();
-  });
-  window.addEventListener('mouseup', function(){ dragging = false; });
-
-  /* Touch */
-  var ltx = 0, lty = 0;
-  vizSvg.addEventListener('touchstart', function(e){ if(e.touches.length===1){ ltx=e.touches[0].clientX; lty=e.touches[0].clientY; } }, {passive:true});
-  vizSvg.addEventListener('touchmove',  function(e){
-    if(e.touches.length===1){
-      panZoom.x += e.touches[0].clientX - ltx; panZoom.y += e.touches[0].clientY - lty;
-      ltx = e.touches[0].clientX; lty = e.touches[0].clientY; applyTransform();
-    }
-  }, {passive:true});
-
-  /* Wheel zoom */
-  vizSvg.addEventListener('wheel', function(e){
-    e.preventDefault();
-    var rect = vizSvg.getBoundingClientRect();
-    var cx   = e.clientX - rect.left;
-    var cy   = e.clientY - rect.top;
-    var d    = e.deltaY > 0 ? 0.85 : 1.18;
-    var nk   = Math.max(0.15, Math.min(5, panZoom.k * d));
-    panZoom.x = cx - (cx - panZoom.x) * (nk / panZoom.k);
-    panZoom.y = cy - (cy - panZoom.y) * (nk / panZoom.k);
-    panZoom.k = nk; applyTransform();
-  }, {passive:false});
-
-  /* Buttons */
-  document.getElementById('zoomIn').addEventListener('click',    function(){ panZoom.k = Math.min(5, panZoom.k*1.3); applyTransform(); });
-  document.getElementById('zoomOut').addEventListener('click',   function(){ panZoom.k = Math.max(0.15, panZoom.k/1.3); applyTransform(); });
-  document.getElementById('zoomReset').addEventListener('click', function(){ panZoom={x:0,y:0,k:1}; applyTransform(); });
-}
-
-/* ── Filter buttons ─────────────────────────────────────────── */
-function initFilters() {
-  document.querySelectorAll('.filter-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
-      this.classList.add('active');
-      currentFilter = this.getAttribute('data-filter');
-      renderGraph(currentFilter);
-      if (selectedId) {
-        /* re-apply selection highlight after re-render */
-        var gEl = document.querySelector('#gNodes g[data-id="' + selectedId + '"]');
-        if (gEl) {
-          var c = gEl.querySelector('.node-circle'); if(c) c.classList.add('selected');
-          var t = gEl.querySelector('.node-label');  if(t) t.classList.add('selected');
-        }
-        document.querySelectorAll('.edge').forEach(function(el){
-          var f  = parseInt(el.getAttribute('data-from'),10);
-          var to = parseInt(el.getAttribute('data-to'),  10);
-          el.classList.toggle('highlighted', f===selectedId || to===selectedId);
-        });
-      }
-    });
-  });
-}
+$clear.addEventListener('click', function(){ $search.value=''; doSearch(''); });
 
 /* =========================================================
    READING PROGRESS BAR — Rule 39
@@ -1243,7 +1545,7 @@ window.addEventListener('scroll', function(){
   if (!bar) return;
   var st   = document.documentElement.scrollTop;
   var docH = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  bar.style.width = (docH > 0 ? (st / docH) * 100 : 0) + '%';
+  bar.style.width = (docH > 0 ? (st/docH)*100 : 0) + '%';
 });
 
 /* =========================================================
@@ -1256,7 +1558,7 @@ window.addEventListener('scroll', function(){
 });
 
 /* =========================================================
-   REVEAL ON SCROLL — Rule 35 (data-reveal, same as index.html)
+   REVEAL ON SCROLL — Rule 35
    ========================================================= */
 var io = new IntersectionObserver(function(entries){
   entries.forEach(function(en){
@@ -1270,8 +1572,8 @@ document.querySelectorAll('[data-reveal]').forEach(function(el){
   else { io.observe(el); }
 });
 
-/* ── Bootstrap ───────────────────────────────────────────────── */
-loadData();
+/* ── Bootstrap ─────────────────────────────────────────── */
+loadIndex();
 </script>
 
 </body>
