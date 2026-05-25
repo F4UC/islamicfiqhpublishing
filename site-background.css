@@ -127,6 +127,20 @@ html.dark-mode body.ifp-subpage-bg::after {
   filter: saturate(0.80);
 }
 
+body.ifp-subpage-bg .page-hero::before {
+  background:
+    radial-gradient(60% 50% at 80% 18%, rgba(59,130,246,.10), transparent 60%),
+    radial-gradient(80% 60% at 10% 90%, rgba(59,130,246,.05), transparent 70%);
+  opacity: 1;
+}
+
+html.dark-mode body.ifp-subpage-bg .page-hero::before {
+  background:
+    radial-gradient(60% 50% at 80% 18%, rgba(59,130,246,.06), transparent 60%),
+    radial-gradient(80% 60% at 10% 90%, rgba(59,130,246,.03), transparent 70%);
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   body.ifp-subpage-bg {
     background:
