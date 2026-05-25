@@ -373,7 +373,7 @@ body::before {
 .list-select:focus { border-color:var(--gold); }
 
 /* =========================================================
-   DUAL PANEL — vertical stack (list top, ego-network bottom)
+   DUAL PANEL — side-by-side on desktop with sticky canvas
    ========================================================= */
 .dual-panel {
   display:grid;
@@ -381,13 +381,28 @@ body::before {
   gap:32px; align-items:start;
   margin-top:0;
 }
+@media (min-width: 1024px) {
+  .dual-panel {
+    grid-template-columns: 4fr 5fr; /* 45% list, 55% network side-by-side */
+    gap: 36px;
+  }
+  .ego-panel {
+    position: sticky;
+    top: 100px;
+    z-index: 10;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  }
+  html.dark-mode .ego-panel {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  }
+}
 
 /* ─── Left: narrator list ─── */
 .list-panel { }
 .list-header-row {
   display:grid;
   grid-template-columns:48px 1fr 140px 72px 88px;
-  gap:8px; padding:10px 16px;
+  gap:8px; padding:12px 16px;
   border:1px solid var(--rule-strong); border-bottom:2px solid var(--rule-strong);
   background:var(--ink-2);
   font-family:var(--ui); font-size:10px; letter-spacing:.15em;
@@ -395,7 +410,7 @@ body::before {
 }
 .list-scroll {
   display:flex; flex-direction:column;
-  height:520px; overflow-y:auto;
+  height:600px; overflow-y:auto;
   border:1px solid var(--rule-strong); border-top:none;
   background:var(--ink);
   overscroll-behavior:contain;
@@ -408,62 +423,173 @@ body::before {
   grid-template-columns:48px 1fr 140px 72px 88px;
   gap:8px; padding:13px 16px;
   border-bottom:1px solid var(--rule);
-  cursor:pointer; transition:background .18s;
+  cursor:pointer; 
+  transition: background-color 0.22s ease, transform 0.18s ease, box-shadow 0.22s ease;
   align-items:center; flex-shrink:0;
 }
-.list-row:hover  { background:var(--ink-2); }
-.list-row.active { background:rgba(179,27,27,.07); border-left:3px solid var(--gold); padding-left:13px; }
+.list-row:hover  { 
+  background:var(--ink-3) !important; 
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+html.dark-mode .list-row:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+}
+.list-row.active { 
+  background:rgba(179,27,27,.07) !important; 
+  border-left:3px solid var(--gold); 
+  padding-left:13px;
+  font-weight: 500;
+}
 .row-num   { font-family:var(--serif); font-style:italic; font-size:14px; color:var(--gold); opacity:.65; text-align:right; }
 .row-name  { font-family:var(--arabic); font-size:16px; color:var(--paper); direction:rtl; text-align:right; line-height:1.5; word-break:break-word; }
-.row-grade { font-family:var(--arabic); font-size:12px; color:var(--text-mute); direction:rtl; text-align:right; line-height:1.4; }
+.row-grade { font-family:var(--arabic); font-size:12px; color:var(--text-mute); direction:rtl; text-align:right; line-height:1.4; display:flex; justify-content:flex-end; }
 .row-death { font-family:var(--ui); font-size:12px; color:var(--text-dim); }
 .row-conns { font-family:var(--ui); font-size:11px; color:var(--text-dim); display:flex; align-items:center; gap:5px; }
-.conn-bar  { height:3px; border-radius:2px; background:var(--gold); opacity:.45; min-width:2px; }
+.conn-bar  { height:4px; border-radius:2px; background:linear-gradient(90deg, var(--gold), var(--gold-bright)); opacity:.6; min-width:2px; transition: width 0.3s; }
+
+/* ─── Academic Badges ─── */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: var(--thai);
+  text-align: center;
+  white-space: nowrap;
+}
+.badge-sahabi {
+  background: rgba(59, 130, 246, 0.08);
+  color: #2563eb;
+  border: 1px solid rgba(59, 130, 246, 0.22);
+}
+html.dark-mode .badge-sahabi {
+  background: rgba(59, 130, 246, 0.16);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+.badge-thiqah {
+  background: rgba(179, 27, 27, 0.06);
+  color: #b31b1b;
+  border: 1px solid rgba(179, 27, 27, 0.18);
+}
+html.dark-mode .badge-thiqah {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+.badge-sadooq {
+  background: rgba(245, 158, 11, 0.06);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.18);
+}
+html.dark-mode .badge-sadooq {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+.badge-daeef {
+  background: rgba(239, 68, 68, 0.06);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.18);
+}
+.badge-majhool {
+  background: rgba(107, 114, 128, 0.06);
+  color: #4b5563;
+  border: 1px solid rgba(107, 114, 128, 0.18);
+}
+html.dark-mode .badge-majhool {
+  background: rgba(156, 163, 175, 0.1);
+  color: #9ca3af;
+  border: 1px solid rgba(156, 163, 175, 0.25);
+}
 
 /* ─── Bottom: ego-network panel ─── */
 .ego-panel {
-  border:1px solid var(--rule-strong);
-  background:var(--ink-2);
+  border: 1px solid var(--rule-strong);
+  background: var(--ink-2);
+  border-radius: 12px;
   overflow:hidden;
+  transition: border-color 0.3s;
+}
+.ego-panel:hover {
+  border-color: rgba(179, 27, 27, 0.3);
 }
 .ego-empty {
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  height:320px; gap:14px; text-align:center; padding:24px;
+  height:380px; gap:14px; text-align:center; padding:24px;
 }
 .ego-empty-ar  { font-family:var(--arabic); font-size:36px; color:var(--rule-strong); }
 .ego-empty-th  { font-family:var(--thai); font-size:13px; color:var(--text-mute); line-height:1.7; }
 .ego-net       { display:none; }
-.ego-header    { padding:20px 24px 12px; border-bottom:1px solid var(--rule); }
-.ego-name      { font-family:var(--arabic); font-size:22px; color:var(--paper); direction:rtl; text-align:right; line-height:1.5; }
+.ego-header    { padding:24px 28px 16px; border-bottom:1px solid var(--rule); }
+.ego-name      { font-family:var(--arabic); font-size:24px; color:var(--paper); direction:rtl; text-align:right; line-height:1.5; font-weight: 700; }
 .ego-meta      { font-family:var(--thai); font-size:13px; color:var(--text-mute); margin-top:6px; }
-.ego-legend    { display:flex; gap:20px; flex-wrap:wrap; padding:10px 24px; border-bottom:1px solid var(--rule); }
+.ego-legend    { display:flex; gap:20px; flex-wrap:wrap; padding:12px 28px; border-bottom:1px solid var(--rule); background: var(--ink); }
 .ego-leg-item  { display:flex; align-items:center; gap:8px; font-family:var(--ui); font-size:11px; letter-spacing:.1em; color:var(--text-mute); }
 .ego-dot       { width:28px; height:14px; border-radius:3px; flex-shrink:0; }
 .ego-dot-t     { background:rgba(59,130,246,.12); border:1px solid #3b82f6; }
 .ego-dot-c     { background:rgba(179,27,27,.10); border:1px solid var(--gold); }
 .ego-dot-s     { background:rgba(59,130,246,.05); border:1px solid rgba(59,130,246,.4); }
-.ego-svg       { width:100%; display:block; }
+.ego-svg       { 
+  width:100%; display:block; 
+  background-image: radial-gradient(var(--border-secondary) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
 
-/* SVG elements — text-only nodes (no circles) */
-.edge          { stroke:rgba(0,50,100,0.14); stroke-width:1; fill:none; opacity:.6; }
-html.dark-mode .edge { stroke:rgba(232,224,208,.16); }
-.node-bg       { }
-.node-bg-center  { fill:rgba(179,27,27,.10); stroke:var(--gold); stroke-width:1.5; }
-.node-bg-teacher { fill:rgba(59,130,246,.08); stroke:rgba(59,130,246,.5); stroke-width:1; }
-.node-bg-student { fill:rgba(59,130,246,.05); stroke:rgba(59,130,246,.28); stroke-width:1; }
-html.dark-mode .node-bg-center  { fill:rgba(179,27,27,.22); }
-html.dark-mode .node-bg-teacher { fill:rgba(59,130,246,.16); stroke:rgba(59,130,246,.7); }
-html.dark-mode .node-bg-student { fill:rgba(59,130,246,.10); stroke:rgba(59,130,246,.5); }
-.node-label    {
+/* SVG elements — premium text-only glassmorphic nodes */
+.edge { 
+  stroke: rgba(0,50,100,0.12); 
+  stroke-width: 1.5; 
+  fill: none; 
+  opacity: .55;
+  transition: stroke 0.3s, stroke-width 0.3s, opacity 0.3s;
+}
+html.dark-mode .edge { stroke: rgba(232,224,208,0.14); }
+.edge.edge-t { stroke: rgba(59, 130, 246, 0.18); }
+.edge.edge-s { stroke: rgba(59, 130, 246, 0.12); }
+.edge.active { stroke: var(--gold); stroke-width: 2.2px; opacity: 1; }
+
+.node-bg { 
+  rx: 999;
+  transition: fill 0.25s, stroke 0.25s, stroke-width 0.25s;
+}
+.node-bg-center  { fill: rgba(179,27,27,0.06); stroke: var(--gold); stroke-width: 1.8px; }
+.node-bg-teacher { fill: rgba(59,130,246,0.04); stroke: rgba(59,130,246,0.32); stroke-width: 1.2px; }
+.node-bg-student { fill: rgba(59,130,246,0.02); stroke: rgba(59,130,246,0.16); stroke-width: 1.2px; }
+html.dark-mode .node-bg-center  { fill: rgba(179,27,27,0.16); }
+html.dark-mode .node-bg-teacher { fill: rgba(59,130,246,0.08); stroke: rgba(59,130,246,0.5); }
+html.dark-mode .node-bg-student { fill: rgba(59,130,246,0.04); stroke: rgba(59,130,246,0.32); }
+
+.node-label {
   font-family:'Amiri',serif; font-size:12px; fill:var(--text-secondary);
   pointer-events:none; direction:rtl; text-anchor:middle;
+  transition: fill 0.25s, font-size 0.25s, font-weight 0.25s;
 }
 html.dark-mode .node-label { fill:var(--text-secondary); }
 .node-label.lbl-center  { font-size:15px; fill:var(--gold); font-weight:700; }
 .node-label.lbl-teacher { font-size:12px; fill:var(--text-dim); }
-.node-label.lbl-student { font-size:12px; fill:var(--text-dim); }
-.arrow-marker  { fill:rgba(0,50,100,0.22); }
-html.dark-mode .arrow-marker { fill:rgba(232,224,208,.22); }
+.node-label.lbl-student { font-size:12px; fill:var(--text-mute); }
+
+/* SVG Hover Interactions via CSS */
+g[style*="cursor: pointer"]:hover .node-bg-teacher {
+  fill: rgba(59,130,246,0.12) !important;
+  stroke: rgba(59,130,246,0.8) !important;
+  stroke-width: 1.8px;
+}
+g[style*="cursor: pointer"]:hover .node-bg-student {
+  fill: rgba(59,130,246,0.08) !important;
+  stroke: rgba(59,130,246,0.6) !important;
+  stroke-width: 1.8px;
+}
+g[style*="cursor: pointer"]:hover .node-label {
+  fill: var(--paper) !important;
+  font-weight: 700;
+}
+
+.arrow-marker  { fill:rgba(0,50,100,0.15); }
+html.dark-mode .arrow-marker { fill:rgba(232,224,208,0.15); }
 
 /* ─── Responsive ─── */
 @media (max-width:640px) {
@@ -1156,6 +1282,35 @@ function rebuildList(narrators) {
   updateListWindow();
 }
 
+function renderGradeBadge(grade) {
+  if (!grade) return '—';
+  var g = grade.trim();
+  
+  // Companion check
+  if (g.indexOf('صحابي') > -1 || g.indexOf('صحابية') > -1 || g.indexOf('صحابة') > -1) {
+    return '<span class="badge badge-sahabi">' + esc(g) + '</span>';
+  }
+  // Trustworthy check
+  if (g.indexOf('ثقة') > -1 || g.indexOf('حافظ') > -1 || g.indexOf('أحد الأئمة') > -1) {
+    return '<span class="badge badge-thiqah">' + esc(g) + '</span>';
+  }
+  // Sadooq check
+  if (g.indexOf('صدوق') > -1 || g.indexOf('مقبول') > -1 || g.indexOf('وسط') > -1 || g.indexOf('صالح') > -1) {
+    return '<span class="badge badge-sadooq">' + esc(g) + '</span>';
+  }
+  // Daeef check
+  if (g.indexOf('ضعيف') > -1 || g.indexOf('متروك') > -1 || g.indexOf('لين') > -1) {
+    return '<span class="badge badge-daeef">' + esc(g) + '</span>';
+  }
+  // Majhool check
+  if (g.indexOf('مجهول') > -1 || g.indexOf('لا يعرف') > -1) {
+    return '<span class="badge badge-majhool">' + esc(g) + '</span>';
+  }
+  
+  // Fallback: default clean badge
+  return '<span class="badge badge-majhool">' + esc(g) + '</span>';
+}
+
 function updateListWindow() {
   var ls     = document.getElementById('listScroll');
   var rows   = document.getElementById('listRows');
@@ -1185,7 +1340,7 @@ function updateListWindow() {
     row.innerHTML =
       '<div class="row-num">' + (i + 1) + '</div>' +
       '<div class="row-name" lang="ar" dir="rtl">' + esc(n.name_ar) + '</div>' +
-      '<div class="row-grade" lang="ar" dir="rtl">' + esc(n.grade_ibn_hajar || '—') + '</div>' +
+      '<div class="row-grade">' + renderGradeBadge(n.grade_ibn_hajar) + '</div>' +
       '<div class="row-death">' + (n.death_ah ? n.death_ah : '—') + '</div>' +
       '<div class="row-conns"><div class="conn-bar" style="width:' + barW + 'px"></div>' + conns + '</div>';
     row.addEventListener('click', (function(narrator, rowIdx){
@@ -1243,13 +1398,13 @@ function renderEgoSvg(svg, center, teachers, students) {
   var W   = svg.parentElement ? svg.parentElement.clientWidth || 900 : 900;
   var PAD = 40;               /* horizontal margin */
   var ROW_H   = 72;           /* px between rows */
-  var NODE_H  = 24;           /* text-pill height */
+  var NODE_H  = 32;           /* premium rounded text-pill height */
 
   /* Split into rows: ≤14 → 1 row, >14 → 2 rows */
   var tRows = teachers.length > 14 ? 2 : 1;
   var sRows = students.length > 14 ? 2 : 1;
   var totalRows = tRows + 1 + sRows;          /* teacher rows + center + student rows */
-  var H = Math.max(300, totalRows * ROW_H + PAD * 2);
+  var H = Math.max(340, totalRows * ROW_H + PAD * 2);
 
   svg.setAttribute('height', H);
 
@@ -1296,18 +1451,35 @@ function renderEgoSvg(svg, center, teachers, students) {
   poly.setAttribute('class','arrow-marker');
   marker.appendChild(poly); defs.appendChild(marker); svg.appendChild(defs);
 
-  /* Helper: draw a line between two text-pill centers */
+  /* Helper: draw a curved cubic bezier S-curve between two text-pill centers */
   function drawLine(x1, y1, x2, y2, cls) {
-    var dx = x2-x1, dy = y2-y1, len = Math.sqrt(dx*dx+dy*dy)||1;
-    var OFF = NODE_H/2 + 3;
-    var line = document.createElementNS('http://www.w3.org/2000/svg','line');
-    line.setAttribute('x1', (x1+(dx/len)*OFF).toFixed(1));
-    line.setAttribute('y1', (y1+(dy/len)*OFF).toFixed(1));
-    line.setAttribute('x2', (x2-(dx/len)*(OFF+4)).toFixed(1));
-    line.setAttribute('y2', (y2-(dy/len)*(OFF+4)).toFixed(1));
-    line.setAttribute('class','edge ' + cls);
-    line.setAttribute('marker-end','url(#ego-arr)');
-    svg.appendChild(line);
+    var dx = x2 - x1;
+    var dy = y2 - y1;
+    var len = Math.sqrt(dx*dx + dy*dy) || 1;
+    
+    // Offsets to avoid overlapping the rounded pills
+    var OFF_START = NODE_H/2 + 3;
+    var OFF_END = NODE_H/2 + 7;
+    
+    var sx = x1 + (dx/len) * OFF_START;
+    var sy = y1 + (dy/len) * OFF_START;
+    var ex = x2 - (dx/len) * OFF_END;
+    var ey = y2 - (dy/len) * OFF_END;
+    
+    // Control points for a beautiful smooth S-curve
+    var cpy1 = sy + dy * 0.45;
+    var cpy2 = ey - dy * 0.45;
+    
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    var dAttr = 'M ' + sx.toFixed(1) + ',' + sy.toFixed(1) + 
+                ' C ' + sx.toFixed(1) + ',' + cpy1.toFixed(1) + 
+                ' ' + ex.toFixed(1) + ',' + cpy2.toFixed(1) + 
+                ' ' + ex.toFixed(1) + ',' + ey.toFixed(1);
+                
+    path.setAttribute('d', dAttr);
+    path.setAttribute('class', 'edge ' + cls);
+    path.setAttribute('marker-end', 'url(#ego-arr)');
+    svg.appendChild(path);
   }
 
   /* Helper: draw a text-pill node (rect + text) */
@@ -1315,19 +1487,19 @@ function renderEgoSvg(svg, center, teachers, students) {
     var words = (nameAr || '').split(' ');
     var maxW  = role === 'center' ? 5 : 4;
     var label = words.slice(0, maxW).join(' ');
-    var estW  = Math.min(200, label.length * 7.8 + 20);
+    var estW  = Math.min(220, label.length * 8.2 + 24);
     var g = document.createElementNS('http://www.w3.org/2000/svg','g');
     var rect = document.createElementNS('http://www.w3.org/2000/svg','rect');
     rect.setAttribute('x', (x - estW/2).toFixed(1));
     rect.setAttribute('y', (y - NODE_H/2).toFixed(1));
     rect.setAttribute('width',  estW.toFixed(1));
     rect.setAttribute('height', NODE_H);
-    rect.setAttribute('rx', '4');
+    rect.setAttribute('rx', '999'); // Perfect rounded pill shape
     rect.setAttribute('class', 'node-bg node-bg-' + role);
     g.appendChild(rect);
     var txt = document.createElementNS('http://www.w3.org/2000/svg','text');
     txt.setAttribute('x', x.toFixed(1));
-    txt.setAttribute('y', (y + 5).toFixed(1));
+    txt.setAttribute('y', (y + 6).toFixed(1)); // Vertical adjustment for Amiri diacritics
     txt.setAttribute('lang','ar'); txt.setAttribute('dir','rtl');
     txt.setAttribute('class','node-label lbl-' + role);
     txt.textContent = label;
