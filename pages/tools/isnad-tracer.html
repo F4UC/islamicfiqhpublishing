@@ -375,30 +375,20 @@ body::before {
 /* =========================================================
    DUAL PANEL — side-by-side on desktop with sticky canvas
    ========================================================= */
+/* =========================================================
+   DUAL PANEL — fully decoupled block-level sections
+   ========================================================= */
 .dual-panel {
-  display:grid;
-  grid-template-columns:1fr;
-  gap:32px; align-items:start;
-  margin-top:0;
-}
-@media (min-width: 1024px) {
-  .dual-panel {
-    grid-template-columns: 4fr 5fr; /* 45% list, 55% network side-by-side */
-    gap: 36px;
-  }
-  .ego-panel {
-    position: sticky;
-    top: 100px;
-    z-index: 10;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-  }
-  html.dark-mode .ego-panel {
-    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 64px; /* Strong separation between directory and network sections */
+  margin-top: 20px;
 }
 
 /* ─── Left: narrator list ─── */
-.list-panel { }
+.list-panel {
+  width: 100%;
+}
 .list-header-row {
   display:grid;
   grid-template-columns:48px 1fr 140px 72px 88px;
@@ -410,7 +400,7 @@ body::before {
 }
 .list-scroll {
   display:flex; flex-direction:column;
-  height:600px; overflow-y:auto;
+  height:520px; overflow-y:auto;
   border:1px solid var(--rule-strong); border-top:none;
   background:var(--ink);
   overscroll-behavior:contain;
@@ -507,14 +497,19 @@ html.dark-mode .badge-majhool {
 
 /* ─── Bottom: ego-network panel ─── */
 .ego-panel {
+  width: 100%;
   border: 1px solid var(--rule-strong);
   background: var(--ink-2);
-  border-radius: 12px;
+  border-radius: 16px;
   overflow:hidden;
-  transition: border-color 0.3s;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+html.dark-mode .ego-panel {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
 }
 .ego-panel:hover {
-  border-color: rgba(179, 27, 27, 0.3);
+  border-color: rgba(179, 27, 27, 0.4);
 }
 .ego-empty {
   display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -590,6 +585,49 @@ g[style*="cursor: pointer"]:hover .node-label {
 
 .arrow-marker  { fill:rgba(0,50,100,0.15); }
 html.dark-mode .arrow-marker { fill:rgba(232,224,208,0.15); }
+
+/* ─── Educational-Media SVG Entrance Animations ─── */
+@keyframes draw-path {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes rect-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  70% {
+    transform: scale(1.06);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes text-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.edge {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-path 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.node-bg {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: rect-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.node-label {
+  opacity: 0;
+  animation: text-fade 0.45s ease forwards;
+}
 
 /* ─── Responsive ─── */
 @media (max-width:640px) {
@@ -886,11 +924,23 @@ html.dark-mode .arrow-marker { fill:rgba(232,224,208,0.15); }
         </div>
       </div>
 
-      <!-- RIGHT: sticky ego-network -->
+      <!-- MIDDLE: SECTION 4 HEADER (Widescreen transition) -->
+      <div class="section-head" style="margin-top: 40px; margin-bottom: 24px; border-top: 1px solid var(--rule); padding-top: 48px;" data-reveal>
+        <div>
+          <div class="section-no">04</div>
+          <div class="section-eyebrow">แผนภูมิการถ่ายทอด</div>
+        </div>
+        <div>
+          <h2 class="section-title">เครือข่าย<em>อาจารย์–ลูกศิษย์</em></h2>
+          <p class="section-lede">แสดงสายรายงานการถ่ายทอดจากชุยูค (อาจารย์) สู่ตลามีซ (ลูกศิษย์) เรียงลำดับตามความอาวุโสและยุคกาล</p>
+        </div>
+      </div>
+
+      <!-- BOTTOM: ego-network panel -->
       <div class="ego-panel" id="egoPanel">
         <div class="ego-empty" id="egoEmpty">
           <div class="ego-empty-ar" lang="ar" dir="rtl">اختَر رَاوِيًا</div>
-          <div class="ego-empty-th">คลิกนักรายงานจากรายชื่อด้านซ้าย<br>เพื่อดูเครือข่ายของท่าน</div>
+          <div class="ego-empty-th">คลิกนักรายงานจากทำเนียบรายชื่อด้านบน<br>เพื่อดูเครือข่ายความสัมพันธ์ของท่าน</div>
         </div>
         <div class="ego-net" id="egoNet">
           <div class="ego-header" id="egoHeader"></div>
@@ -1238,7 +1288,7 @@ function initList(narrators) {
   var panel    = document.getElementById('dualPanel');
   if (loading) loading.style.display = 'none';
   if (toolbar) toolbar.style.display = 'flex';
-  if (panel)   panel.style.display   = 'grid';
+  if (panel)   panel.style.display   = 'flex';
 
   activeNarId = null;
   rebuildList(narrators);
@@ -1348,6 +1398,10 @@ function updateListWindow() {
         activeNarId = narrator.id;
         updateListWindow();
         showEgoNetwork(narrator);
+        setTimeout(function(){
+          var egoPanel = document.getElementById('egoPanel');
+          if (egoPanel) egoPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 80);
       };
     })(n, i));
     frag.appendChild(row);
@@ -1394,17 +1448,17 @@ function renderEgoSvg(svg, center, teachers, students) {
   /* Clear */
   while (svg.firstChild) svg.removeChild(svg.firstChild);
 
-  /* ── Compute layout dimensions ── */
-  var W   = svg.parentElement ? svg.parentElement.clientWidth || 900 : 900;
-  var PAD = 40;               /* horizontal margin */
-  var ROW_H   = 72;           /* px between rows */
-  var NODE_H  = 32;           /* premium rounded text-pill height */
+  /* ── Compute layout dimensions — upscaled for premium widescreen (Phase 2) ── */
+  var W   = svg.parentElement ? svg.parentElement.clientWidth || 1000 : 1000;
+  var PAD = 60;               /* larger horizontal padding */
+  var ROW_H   = 100;          /* larger vertical row distance */
+  var NODE_H  = 36;           /* larger luxury text-pill height */
 
   /* Split into rows: ≤14 → 1 row, >14 → 2 rows */
   var tRows = teachers.length > 14 ? 2 : 1;
   var sRows = students.length > 14 ? 2 : 1;
   var totalRows = tRows + 1 + sRows;          /* teacher rows + center + student rows */
-  var H = Math.max(340, totalRows * ROW_H + PAD * 2);
+  var H = Math.max(540, totalRows * ROW_H + PAD * 2); /* upscale to 540px baseline height */
 
   svg.setAttribute('height', H);
 
@@ -1452,7 +1506,7 @@ function renderEgoSvg(svg, center, teachers, students) {
   marker.appendChild(poly); defs.appendChild(marker); svg.appendChild(defs);
 
   /* Helper: draw a curved cubic bezier S-curve between two text-pill centers */
-  function drawLine(x1, y1, x2, y2, cls) {
+  function drawLine(x1, y1, x2, y2, cls, delaySec) {
     var dx = x2 - x1;
     var dy = y2 - y1;
     var len = Math.sqrt(dx*dx + dy*dy) || 1;
@@ -1478,12 +1532,13 @@ function renderEgoSvg(svg, center, teachers, students) {
                 
     path.setAttribute('d', dAttr);
     path.setAttribute('class', 'edge ' + cls);
+    path.style.animationDelay = delaySec.toFixed(3) + 's';
     path.setAttribute('marker-end', 'url(#ego-arr)');
     svg.appendChild(path);
   }
 
   /* Helper: draw a text-pill node (rect + text) */
-  function drawTextNode(x, y, nameAr, role, narrator) {
+  function drawTextNode(x, y, nameAr, role, narrator, bgDelay, txtDelay) {
     var words = (nameAr || '').split(' ');
     var maxW  = role === 'center' ? 5 : 4;
     var label = words.slice(0, maxW).join(' ');
@@ -1496,12 +1551,14 @@ function renderEgoSvg(svg, center, teachers, students) {
     rect.setAttribute('height', NODE_H);
     rect.setAttribute('rx', '999'); // Perfect rounded pill shape
     rect.setAttribute('class', 'node-bg node-bg-' + role);
+    rect.style.animationDelay = bgDelay.toFixed(3) + 's';
     g.appendChild(rect);
     var txt = document.createElementNS('http://www.w3.org/2000/svg','text');
     txt.setAttribute('x', x.toFixed(1));
     txt.setAttribute('y', (y + 6).toFixed(1)); // Vertical adjustment for Amiri diacritics
     txt.setAttribute('lang','ar'); txt.setAttribute('dir','rtl');
     txt.setAttribute('class','node-label lbl-' + role);
+    txt.style.animationDelay = txtDelay.toFixed(3) + 's';
     txt.textContent = label;
     g.appendChild(txt);
     if (role !== 'center' && narrator) {
@@ -1515,14 +1572,46 @@ function renderEgoSvg(svg, center, teachers, students) {
     svg.appendChild(g);
   }
 
+  /* ── Compute chronological sequential staggering timings (Phase 3) ── */
+  var stagger = 0.04;
+  
+  // 1. Teachers pop
+  tAll.forEach(function(nd, i){
+    nd.bgDelay = i * stagger;
+    nd.txtDelay = nd.bgDelay + 0.08;
+  });
+  
+  // 2. Teacher-to-Center paths draw
+  var teacherPathStart = Math.max(0.25, teachers.length * stagger);
+  tAll.forEach(function(nd, i){
+    nd.pathDelay = teacherPathStart + i * stagger;
+  });
+  
+  // 3. Center Node pops
+  var centerBgDelay = teacherPathStart + Math.max(0.35, teachers.length * stagger);
+  var centerTxtDelay = centerBgDelay + 0.12;
+  
+  // 4. Center-to-Student paths draw
+  var studentPathStart = centerBgDelay + 0.4;
+  sAll.forEach(function(nd, i){
+    nd.pathDelay = studentPathStart + i * stagger;
+  });
+  
+  // 5. Students pop
+  var studentPopStart = studentPathStart + Math.max(0.35, students.length * stagger);
+  sAll.forEach(function(nd, i){
+    nd.bgDelay = studentPopStart + i * stagger;
+    nd.txtDelay = nd.bgDelay + 0.08;
+  });
+
   /* Draw edges first (below nodes) */
-  tAll.forEach(function(nd){ drawLine(nd.x, nd.y, W/2, CY, 'edge-t'); });
-  sAll.forEach(function(nd){ drawLine(W/2, CY, nd.x, nd.y, 'edge-s'); });
+  tAll.forEach(function(nd){ drawLine(nd.x, nd.y, W/2, CY, 'edge-t', nd.pathDelay); });
+  sAll.forEach(function(nd){ drawLine(W/2, CY, nd.x, nd.y, 'edge-s', nd.pathDelay); });
 
   /* Draw nodes on top */
-  tAll.forEach(function(nd){ drawTextNode(nd.x, nd.y, nd.n.name_ar, 'teacher', nd.n); });
-  sAll.forEach(function(nd){ drawTextNode(nd.x, nd.y, nd.n.name_ar, 'student', nd.n); });
-  drawTextNode(W/2, CY, center.name_ar, 'center', null);
+  tAll.forEach(function(nd){ drawTextNode(nd.x, nd.y, nd.n.name_ar, 'teacher', nd.n, nd.bgDelay, nd.txtDelay); });
+  sAll.forEach(function(nd){ drawTextNode(nd.x, nd.y, nd.n.name_ar, 'student', nd.n, nd.bgDelay, nd.txtDelay); });
+  drawTextNode(W/2, CY, center.name_ar, 'center', null, centerBgDelay, centerTxtDelay);
 }
 
 /* =========================================================
@@ -1585,8 +1674,14 @@ function doSearch(q) {
     row.addEventListener('click', function(){
       var id = parseInt(this.getAttribute('data-id'),10);
       var n = narById[id] || globalNarById[id];
-      if (n) { activeNarId = id; showEgoNetwork(n); }
-      document.getElementById('vizSection').scrollIntoView({behavior:'smooth',block:'start'});
+      if (n) { 
+        activeNarId = id; 
+        showEgoNetwork(n); 
+        setTimeout(function(){
+          var egoPanel = document.getElementById('egoPanel');
+          if (egoPanel) egoPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 80);
+      }
     });
   });
 }
