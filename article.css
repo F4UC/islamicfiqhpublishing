@@ -1066,7 +1066,7 @@ html.dark-mode .art-hero::before {
   font-size: clamp(40px, 9vw, 96px);
   line-height: 1.05;
   letter-spacing: -.02em;
-  color: var(--ph-paper);
+  color: var(--ph-paper, #111111);
 }
 .art-hero-display em {
   font-style: italic;
@@ -1107,7 +1107,7 @@ html.dark-mode .art-hero::before {
 }
 html.dark-mode .art-hero-sep { background: rgba(232,224,208,.12); }
 @media (max-width: 640px) {
-  .art-hero { min-height: 18vh; padding: 40px 0 20px; }
+  .art-hero { min-height: 12vh; padding: 24px 0 16px; }
   .art-hero-display { font-size: clamp(36px, 9vw, 72px); }
 }
 @media (prefers-reduced-motion: reduce) {
