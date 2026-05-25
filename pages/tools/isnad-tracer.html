@@ -6,1069 +6,1266 @@
 <title>ISNĀD TRACER — Islamic Fiqh Publishing</title>
 
 <script>
-  (function() {
-    var savedTheme = localStorage.getItem('theme');
-    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      document.documentElement.classList.add('dark-mode');
-    }
-  })();
+(function(){
+  var s = localStorage.getItem('theme');
+  var p = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if(s === 'dark' || (!s && p)) document.documentElement.classList.add('dark-mode');
+})();
 </script>
 
-<meta name="description" content="แผนภูมิสายรายงานวิชาการชาฟิอีแบบแนวนอน แสดงสายนักวิชาการตั้งแต่พระเจ้าถึงอิหม่ามนูวาวี ชัรกอวี และสายต่อเนื่อง">
-<meta name="keywords" content="สายรายงาน, อิสนาด, ชาฟิอี, นักวิชาการ, Hadith isnad tracer, isnād chain, Shafi'i">
+<meta name="description" content="สำรวจสายรายงานหะดีษ (อิสนาด) ครอบคลุมกว่า 18,000 นักรายงาน และ 523,000 เส้นเชื่อมสายรายงาน จากฐานข้อมูล KASHAF">
+<meta name="keywords" content="อิสนาด, สายรายงาน, หะดีษ, นักรายงาน, isnad tracer, رجال الحديث">
 <meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
-
-<link rel="icon" href="../../favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="../../favicon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png">
-<meta name="theme-color" content="#06101e">
-
 <meta property="og:title" content="ISNĀD TRACER — Islamic Fiqh Publishing">
-<meta property="og:description" content="แผนภูมิสายรายงานวิชาการชาฟิอีแบบแนวนอน">
+<meta property="og:description" content="สำรวจสายรายงานหะดีษ (อิสนาด) ครอบคลุมกว่า 18,000 นักรายงาน จากฐานข้อมูล KASHAF">
 <meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
 <meta property="og:url" content="https://islamicfiqhpublishing.com/pages/tools/isnad-tracer.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png">
+<meta name="theme-color" content="#e3edf7">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Sarabun:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../article.css?v=8">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Amiri:ital,wght@0,400;0,700;1,400&family=Sarabun:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ─── ISNĀD TRACER v5 — Horizontal Timeline Tree ─── */
-
+/* =========================================================
+   TOKENS — mirroring index.html design system (Rule 24, 29)
+   ========================================================= */
 :root {
-  --thai: 'Sarabun', system-ui, sans-serif;
-  --arabic: 'Amiri', serif;
-  --eng: 'Inter', system-ui, sans-serif;
-  --canvas-bg: #06101e;
-  --accent: #c49a45;
-  --panel-bg: rgba(6, 16, 30, 0.97);
-  --panel-border: rgba(196, 154, 69, 0.35);
+  --bg-primary:     #e3edf7;
+  --bg-secondary:   #d6e2ee;
+  --bg-tertiary:    #c8d7e5;
+  --text-primary:   #111111;
+  --text-secondary: #444444;
+  --text-tertiary:  #777777;
+  --border-primary:   rgba(0,50,100,0.06);
+  --border-secondary: rgba(0,50,100,0.12);
+
+  --ink:      var(--bg-primary);
+  --ink-2:    var(--bg-secondary);
+  --ink-3:    var(--bg-tertiary);
+  --ink-4:    var(--border-secondary);
+  --paper:    var(--text-primary);
+  --paper-2:  var(--text-secondary);
+  --text:     var(--text-primary);
+  --text-dim: var(--text-secondary);
+  --text-mute:var(--text-tertiary);
+  --gold:        #b31b1b;
+  --gold-bright: #d32f2f;
+  --accent:      #c49a45;
+  --rule:        rgba(0,50,100,0.06);
+  --rule-strong: rgba(0,50,100,0.12);
+
+  --serif:  'Cormorant Garamond','EB Garamond',Georgia,serif;
+  --thai:   'Sarabun',system-ui,sans-serif;
+  --arabic: 'Amiri',serif;
+  --ui:     'Inter',system-ui,sans-serif;
 }
 
-/* Force dark canvas area always, regardless of site theme */
-html, body {
-  background: #06101e;
-  margin: 0;
-  padding: 0;
+/* Dark mode (Rule 37) */
+html.dark-mode {
+  --bg-primary:   #0a0907;
+  --bg-secondary: #14110d;
+  --bg-tertiary:  #1d1814;
+  --text-primary: #e8e0d0;
+  --text-secondary:#9a907e;
+  --text-tertiary: #6b6357;
+  --border-primary:   rgba(232,224,208,0.12);
+  --border-secondary: rgba(232,224,208,0.24);
+  --ink:      var(--bg-primary);
+  --ink-2:    var(--bg-secondary);
+  --ink-3:    var(--bg-tertiary);
+  --ink-4:    var(--border-secondary);
+  --paper:    var(--text-primary);
+  --paper-2:  var(--text-secondary);
+  --text:     var(--text-primary);
+  --text-dim: var(--text-secondary);
+  --text-mute:var(--text-tertiary);
+  --rule:        rgba(232,224,208,.14);
+  --rule-strong: rgba(232,224,208,.32);
 }
 
-body.dark-mode {
-  background: #06101e;
+/* =========================================================
+   RESET & BASE (Rule 28)
+   ========================================================= */
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html,body { background:var(--ink); color:var(--text); font-family:var(--thai); overflow-x:hidden; }
+body { font-size:16px; line-height:1.7; font-weight:300; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+a { color:inherit; text-decoration:none; }
+img { display:block; max-width:100%; }
+button { font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
+::selection { background:var(--gold); color:var(--ink); }
+
+body::before {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:9000;
+  opacity:.04; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.9 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
-/* ─── Page Header Area ─── */
-.it-page-header {
-  background: linear-gradient(180deg, #06101e 0%, #0a1829 100%);
-  padding: 32px 32px 24px;
-  border-bottom: 1px solid rgba(196, 154, 69, 0.2);
-  position: relative;
-  z-index: 10;
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+.wrap        { max-width:1440px; margin:0 auto; padding:0 40px; }
+.wrap-narrow { max-width:900px;  margin:0 auto; padding:0 40px; }
+.thin-rule   { height:1px; background:var(--rule); width:100%; }
+
+/* =========================================================
+   READING PROGRESS BAR (Rule 39)
+   ========================================================= */
+#readingProgress {
+  position:fixed; top:0; left:0; height:2px; width:0%;
+  background:var(--gold); z-index:10000; transition:width .1s linear;
+  pointer-events:none;
 }
 
-.it-brand-row {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  margin-bottom: 8px;
-  flex-wrap: wrap;
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+.page-hero {
+  position:relative; padding:160px 0 100px;
+  border-bottom:1px solid var(--rule); overflow:hidden;
+}
+.page-hero::before {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(60% 50% at 80% 18%, rgba(59,130,246,.08), transparent 60%),
+    radial-gradient(80% 60% at 10% 90%, rgba(59,130,246,.04), transparent 70%);
+}
+.hero-eyebrow {
+  font-family:var(--ui); font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--text-mute); display:flex; align-items:center; gap:14px; margin-bottom:28px;
+}
+.hero-eyebrow::before { content:''; width:32px; height:1px; background:var(--gold); }
+.hero-arabic-title {
+  font-family:var(--arabic); font-size:clamp(40px,6.5vw,88px);
+  line-height:1.35; color:var(--paper); direction:rtl; text-align:center;
+  margin-bottom:16px;
+}
+.hero-title {
+  font-family:var(--serif); font-weight:300;
+  font-size:clamp(60px,10vw,148px); line-height:1.0;
+  letter-spacing:-.02em; color:var(--paper);
+  text-align:center; margin-bottom:40px;
+}
+.hero-title em { font-style:italic; color:var(--gold); }
+.hero-lede {
+  font-family:var(--thai); font-weight:300; font-size:17px;
+  line-height:1.85; color:var(--text-dim);
+  max-width:680px; margin:0 auto 40px;
+  text-align:left; word-break:break-word;
+}
+.hero-stats {
+  display:flex; gap:48px; flex-wrap:wrap; margin-bottom:48px;
+}
+.stat-item  { display:flex; flex-direction:column; gap:4px; }
+.stat-num   { font-family:var(--serif); font-style:italic; font-size:40px; color:var(--gold); line-height:1; }
+.stat-label { font-family:var(--ui); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-mute); }
+
+/* =========================================================
+   SEARCH BAR
+   ========================================================= */
+.search-wrap  { position:relative; max-width:680px; }
+.search-input {
+  width:100%; padding:18px 100px 18px 24px;
+  border:1px solid var(--rule-strong); border-radius:999px;
+  background:var(--ink-2); color:var(--text);
+  font-family:var(--thai); font-size:16px; font-weight:300;
+  outline:none; transition:border-color .3s, box-shadow .3s;
+}
+.search-input::placeholder { color:var(--text-mute); }
+.search-input:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(179,27,27,.12); }
+.search-btn {
+  position:absolute; right:6px; top:50%; transform:translateY(-50%);
+  width:40px; height:40px; border-radius:50%;
+  background:var(--paper); color:var(--ink);
+  display:grid; place-items:center; transition:background .25s;
+}
+.search-btn:hover { background:var(--gold); color:#fff; }
+.search-clear {
+  position:absolute; right:54px; top:50%; transform:translateY(-50%);
+  font-size:20px; color:var(--text-mute); display:none; cursor:pointer; line-height:1;
+  padding:4px 8px; transition:color .25s;
+}
+.search-clear:hover { color:var(--gold); }
+.search-clear.visible { display:block; }
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+.section { padding:100px 0; position:relative; }
+.section-head { display:grid; grid-template-columns:1fr 2fr; gap:80px; margin-bottom:64px; align-items:end; }
+.section-no   { font-family:var(--serif); font-style:italic; color:var(--gold); font-size:18px; letter-spacing:.02em; }
+.section-eyebrow {
+  font-family:var(--thai); font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--text-mute); display:flex; align-items:center; gap:14px; margin-top:8px;
+}
+.section-eyebrow::before { content:''; width:32px; height:1px; background:var(--gold); }
+.section-title {
+  font-family:var(--thai); font-weight:700;
+  font-size:clamp(32px,4.5vw,64px); line-height:1.1; letter-spacing:-.01em; color:var(--paper);
+}
+.section-title em { font-style:italic; color:var(--gold); font-weight:400; }
+.section-lede {
+  font-family:var(--thai); font-weight:300; font-size:16px;
+  line-height:1.85; color:var(--text-dim); margin-top:20px;
+  max-width:520px; text-align:left; word-break:break-word;
 }
 
-.it-brand-name {
-  font-family: var(--eng);
-  font-size: clamp(18px, 2.5vw, 24px);
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+/* =========================================================
+   SEARCH RESULTS LIST
+   ========================================================= */
+.results-head {
+  display:none; margin-bottom:20px;
+}
+.results-head.visible { display:block; }
+.results-count {
+  font-family:var(--thai); font-size:13px; color:var(--text-mute); margin-top:4px;
+}
+#searchResults {
+  display:none; flex-direction:column;
+  border-top:1px solid var(--rule-strong); margin-bottom:48px;
+}
+#searchResults.visible { display:flex; }
+.result-row {
+  display:grid; grid-template-columns:56px 1fr 200px 160px;
+  gap:24px; align-items:center;
+  padding:24px 0; border-bottom:1px solid var(--rule);
+  cursor:pointer; transition:all .35s cubic-bezier(.2,.7,.2,1);
+  position:relative; overflow:hidden;
+}
+.result-row::before {
+  content:''; position:absolute; left:0; top:0; bottom:0; width:0;
+  background:var(--gold); transition:width .35s cubic-bezier(.2,.7,.2,1);
+}
+.result-row:hover            { padding-left:24px; }
+.result-row:hover::before    { width:3px; }
+.result-row:hover .result-name { color:var(--gold-bright); }
+.result-num   { font-family:var(--serif); font-style:italic; color:var(--gold); font-size:20px; }
+.result-name  { font-family:var(--arabic); font-size:20px; color:var(--paper); direction:rtl; text-align:right; line-height:1.6; transition:color .3s; }
+.result-meta  { font-family:var(--thai); font-size:13px; color:var(--text-dim); }
+.result-grade { font-family:var(--arabic); font-size:13px; color:var(--text-mute); direction:rtl; text-align:right; }
+.result-empty {
+  padding:48px 0; text-align:center;
+  font-family:var(--thai); color:var(--text-mute); font-size:15px;
 }
 
-.it-brand-subtitle {
-  font-family: var(--thai);
-  font-size: 13px;
-  color: rgba(255,255,255,0.45);
-  font-weight: 300;
+/* =========================================================
+   VISUALIZATION AREA
+   ========================================================= */
+.viz-section { padding:80px 0 100px; border-top:1px solid var(--rule); }
+.viz-controls {
+  display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:28px;
 }
-
-.it-description {
-  font-family: var(--thai);
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
-  line-height: 2.0;
-  max-width: 700px;
-  text-align: left;
-  word-break: break-word;
-  margin: 0;
+.viz-label {
+  font-family:var(--ui); font-size:11px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--text-mute); margin-right:4px;
 }
-
-/* ─── Toolbar ─── */
-.it-toolbar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 32px;
-  background: rgba(6, 16, 30, 0.95);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  flex-wrap: wrap;
+.filter-btn {
+  font-family:var(--ui); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  padding:8px 18px; border:1px solid var(--rule-strong); border-radius:999px;
+  color:var(--text-dim); transition:all .25s; cursor:pointer;
 }
-
-.it-btn {
-  font-family: var(--thai);
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(255,255,255,0.8);
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 6px;
-  padding: 7px 16px;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
-  user-select: none;
-  white-space: nowrap;
+.filter-btn:hover, .filter-btn.active {
+  border-color:var(--gold); color:var(--gold); background:rgba(179,27,27,.06);
 }
-
-.it-btn:hover {
-  background: rgba(196, 154, 69, 0.18);
-  border-color: rgba(196, 154, 69, 0.5);
-  color: #c49a45;
+.viz-container {
+  position:relative; width:100%; height:580px;
+  border:1px solid var(--rule-strong); border-radius:12px;
+  overflow:hidden; background:var(--ink-2);
 }
-
-.it-btn-primary {
-  background: rgba(196, 154, 69, 0.15);
-  border-color: rgba(196, 154, 69, 0.4);
-  color: #c49a45;
+.viz-svg   { width:100%; height:100%; cursor:grab; user-select:none; display:block; }
+.viz-svg:active { cursor:grabbing; }
+.viz-hint  {
+  position:absolute; bottom:16px; right:20px;
+  font-family:var(--ui); font-size:10px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--text-mute); pointer-events:none;
 }
-
-.it-btn-primary:hover {
-  background: rgba(196, 154, 69, 0.28);
+.viz-zoom-btns { position:absolute; bottom:16px; left:20px; display:flex; gap:8px; }
+.zoom-btn {
+  width:32px; height:32px; border:1px solid var(--rule-strong);
+  border-radius:50%; background:var(--ink); color:var(--text);
+  display:grid; place-items:center; font-size:18px; line-height:1; transition:all .25s;
 }
-
-.it-toolbar-sep {
-  width: 1px;
-  height: 24px;
-  background: rgba(255,255,255,0.1);
-  flex-shrink: 0;
+.zoom-btn:hover { border-color:var(--gold); color:var(--gold); }
+.viz-loading {
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:12px;
+  font-family:var(--thai); color:var(--text-mute); font-size:15px;
 }
-
-.it-zoom-label {
-  font-family: var(--eng);
-  font-size: 12px;
-  color: rgba(255,255,255,0.35);
-  min-width: 48px;
-  text-align: center;
+.viz-spinner {
+  width:36px; height:36px; border:2px solid var(--rule-strong);
+  border-top-color:var(--gold); border-radius:50%;
+  animation:spin .8s linear infinite;
 }
+@keyframes spin { to { transform:rotate(360deg); } }
 
-.it-legend {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-left: auto;
+/* SVG nodes & edges — all rules via class, no inline style (Rule 30) */
+.edge {
+  stroke:rgba(0,50,100,0.18); stroke-width:1; fill:none; opacity:.7;
 }
-
-.it-legend-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--thai);
-  font-size: 11px;
-  color: rgba(255,255,255,0.4);
-  white-space: nowrap;
-}
-
-.it-legend-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-/* ─── Canvas Wrapper ─── */
-.it-canvas-wrap {
-  width: 100%;
-  height: calc(100vh - 220px);
-  min-height: 500px;
-  background: var(--canvas-bg);
-  overflow: hidden;
-  position: relative;
-  cursor: grab;
-}
-
-.it-canvas-wrap.is-dragging {
-  cursor: grabbing;
-}
-
-#isnadSvg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  user-select: none;
-}
-
-/* ─── Detail Panel ─── */
-.it-detail-panel {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--panel-bg);
-  border-top: 2px solid var(--panel-border);
-  border-radius: 16px 16px 0 0;
-  padding: 28px 32px 40px;
-  z-index: 50;
-  transform: translateY(100%);
-  transition: transform 0.38s cubic-bezier(0.22, 0.61, 0.36, 1);
-  max-height: 55vh;
-  overflow-y: auto;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.it-detail-panel.is-open {
-  transform: translateY(0);
-}
-
-.it-detail-inner {
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.it-detail-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  gap: 16px;
-}
-
-.it-detail-title-wrap {}
-
-.it-detail-ar-name {
-  font-family: var(--arabic);
-  font-size: 26px;
-  color: #fff;
-  direction: rtl;
-  text-align: right;
-  line-height: 1.7;
-  margin-bottom: 4px;
-}
-
-.it-detail-gen-badge {
-  display: inline-block;
-  font-family: var(--eng);
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--accent);
-  background: rgba(196, 154, 69, 0.12);
-  border: 1px solid rgba(196, 154, 69, 0.3);
-  border-radius: 20px;
-  padding: 3px 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.it-close-btn {
-  font-family: var(--thai);
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 6px;
-  padding: 7px 14px;
-  cursor: pointer;
-  transition: background 0.2s;
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-.it-close-btn:hover {
-  background: rgba(255,255,255,0.12);
-}
-
-.it-detail-panel-title {
-  font-family: var(--thai);
-  font-size: 11px;
-  font-weight: 600;
-  color: rgba(255,255,255,0.3);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 14px;
-}
-
-.it-detail-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.it-detail-section h4 {
-  font-family: var(--thai);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--accent);
-  margin: 0 0 8px 0;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.it-detail-names {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.it-detail-names li {
-  font-family: var(--arabic);
-  font-size: 15px;
-  color: rgba(255,255,255,0.75);
-  direction: rtl;
-  text-align: right;
-  line-height: 1.8;
-  padding: 5px 10px;
-  background: rgba(255,255,255,0.04);
-  border-radius: 6px;
-  border-right: 2px solid rgba(196,154,69,0.3);
-}
-
-.it-detail-empty {
-  font-family: var(--thai);
-  font-size: 13px;
-  color: rgba(255,255,255,0.25);
-  font-style: italic;
-}
-
-/* ─── Back to Top ─── */
-#backToTopBtn {
-  position: fixed;
-  bottom: 80px;
-  right: 24px;
-  width: 42px;
-  height: 42px;
-  background: rgba(196, 154, 69, 0.18);
-  border: 1px solid rgba(196, 154, 69, 0.4);
-  border-radius: 50%;
-  color: #c49a45;
-  font-size: 18px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s, background 0.2s;
-  z-index: 40;
-  font-family: var(--eng);
-  line-height: 1;
-}
-
-#backToTopBtn.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-#backToTopBtn:hover {
-  background: rgba(196, 154, 69, 0.32);
-}
-
-/* ─── SVG Node Styles (applied via classes) ─── */
+html.dark-mode .edge { stroke:rgba(232,224,208,.18); }
+.edge.highlighted { stroke:var(--gold); stroke-width:2; opacity:1; }
 .node-circle {
-  cursor: pointer;
-  transition: r 0.15s;
+  fill:var(--bg-secondary); stroke:rgba(0,50,100,0.22); stroke-width:1.5;
+  cursor:pointer; transition:stroke .2s, fill .2s;
 }
-
+html.dark-mode .node-circle { fill:var(--bg-secondary); stroke:rgba(232,224,208,.28); }
+.node-circle.sahabi  { fill:rgba(196,154,69,.14); stroke:#c49a45; }
+.node-circle.tabii   { fill:rgba(59,130,246,.10); stroke:rgba(59,130,246,.55); }
+.node-circle.selected { stroke:var(--gold); stroke-width:2.5; fill:rgba(179,27,27,.10); }
 .node-label {
-  font-family: 'Amiri', serif;
-  font-size: 13px;
-  fill: rgba(255,255,255,0.85);
-  cursor: pointer;
-  pointer-events: none;
+  font-family:'Amiri',serif; font-size:9px; fill:var(--text-secondary);
+  pointer-events:none; direction:rtl; text-anchor:middle;
 }
+html.dark-mode .node-label { fill:#9a907e; }
+.node-label.selected  { fill:var(--gold); }
+.arrow-marker { fill:rgba(0,50,100,0.22); }
+html.dark-mode .arrow-marker { fill:rgba(232,224,208,.22); }
 
-.node-label-root {
-  font-size: 15px;
-  font-weight: 700;
-  fill: #d4af37;
+/* =========================================================
+   LEGEND
+   ========================================================= */
+.legend {
+  display:flex; gap:24px; flex-wrap:wrap; align-items:center; margin-top:20px;
 }
+.legend-item { display:flex; align-items:center; gap:8px; }
+.legend-dot  { width:12px; height:12px; border-radius:50%; flex-shrink:0; }
+.legend-dot-sahaba { background:rgba(196,154,69,.7); border:1.5px solid #c49a45; }
+.legend-dot-tabii  { background:rgba(59,130,246,.55); border:1.5px solid rgba(59,130,246,.8); }
+.legend-dot-hadith { background:var(--bg-secondary); border:1.5px solid rgba(0,50,100,.22); }
+html.dark-mode .legend-dot-hadith { border-color:rgba(232,224,208,.28); }
+.legend-dot-sel    { background:rgba(179,27,27,.15); border:1.5px solid var(--gold); }
+.legend-label { font-family:var(--ui); font-size:11px; letter-spacing:.12em; color:var(--text-mute); }
 
-.edge-path {
-  fill: none;
-  stroke-width: 1.8;
-  opacity: 0.55;
+/* =========================================================
+   NARRATOR DETAIL PANEL
+   ========================================================= */
+.detail-section { padding:80px 0; border-top:1px solid var(--rule); }
+.detail-panel {
+  display:grid; grid-template-columns:1fr 1fr; gap:48px;
+  padding:48px; border:1px solid var(--rule-strong);
+  background:var(--ink-2); position:relative;
 }
-
-.gen-line {
-  stroke: #ffffff;
-  stroke-width: 1;
-  opacity: 0.04;
-  stroke-dasharray: 4 6;
+.detail-panel::before {
+  content:''; position:absolute; inset:12px;
+  border:1px solid var(--rule); pointer-events:none;
 }
-
-.gen-number {
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  fill: rgba(255,255,255,0.2);
-  text-anchor: middle;
-  letter-spacing: 0.04em;
+.detail-close {
+  position:absolute; top:20px; right:20px;
+  font-family:var(--ui); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--text-mute); display:flex; align-items:center; gap:6px;
+  transition:color .25s; cursor:pointer;
 }
-
-/* ─── Reveal animation ─── */
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+.detail-close:hover { color:var(--gold); }
+.detail-eyebrow {
+  font-family:var(--ui); font-size:10px; letter-spacing:.28em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:12px;
 }
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+.detail-name-ar {
+  font-family:var(--arabic); font-size:30px; color:var(--paper);
+  direction:rtl; line-height:1.55; margin-bottom:8px;
 }
-
-/* ─── Responsive ─── */
-@media (max-width: 768px) {
-  .it-page-header {
-    padding: 20px 18px 16px;
-  }
-  .it-toolbar {
-    padding: 10px 16px;
-    gap: 6px;
-  }
-  .it-btn {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-  .it-legend {
-    display: none;
-  }
-  .it-canvas-wrap {
-    height: calc(100vh - 190px);
-  }
-  .it-detail-panel {
-    padding: 20px 18px 32px;
-  }
-  .it-detail-grid {
-    grid-template-columns: 1fr;
-  }
-  .it-detail-ar-name {
-    font-size: 20px;
-  }
+.detail-tabaqah {
+  font-family:var(--arabic); font-size:15px; color:var(--text-mute);
+  direction:rtl; margin-bottom:24px;
 }
-
-@media (max-width: 480px) {
-  .it-brand-name {
-    font-size: 15px;
-  }
-  .it-description {
-    display: none;
-  }
+.detail-meta-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:32px;
 }
+.detail-meta-item { display:flex; flex-direction:column; gap:4px; }
+.meta-label    { font-family:var(--ui); font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--text-mute); }
+.meta-value    { font-family:var(--thai); font-size:14px; color:var(--paper); font-weight:400; }
+.meta-value-ar { font-family:var(--arabic); font-size:15px; color:var(--text-dim); direction:rtl; }
+.detail-connections h3 {
+  font-family:var(--thai); font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--text-mute); margin-bottom:12px; display:flex; align-items:center; gap:10px;
+}
+.detail-connections h3::after { content:''; flex:1; height:1px; background:var(--rule); }
+.connections-list {
+  display:flex; flex-direction:column; max-height:220px; overflow-y:auto; gap:0;
+}
+.connections-list::-webkit-scrollbar { width:4px; }
+.connections-list::-webkit-scrollbar-track { background:transparent; }
+.connections-list::-webkit-scrollbar-thumb { background:var(--rule-strong); border-radius:2px; }
+.conn-item {
+  display:flex; align-items:center; gap:12px;
+  padding:10px 0; border-bottom:1px solid var(--rule);
+  cursor:pointer; transition:all .25s;
+}
+.conn-item:last-child { border-bottom:0; }
+.conn-item:hover .conn-name-ar { color:var(--gold); }
+.conn-dot        { width:6px; height:6px; border-radius:50%; background:var(--accent); flex-shrink:0; }
+.conn-dot.teacher { background:var(--gold); }
+.conn-name-ar    { font-family:var(--arabic); font-size:16px; color:var(--paper); direction:rtl; transition:color .25s; flex:1; text-align:right; }
+.conn-meta       { font-family:var(--thai); font-size:11px; color:var(--text-mute); flex-shrink:0; }
+.detail-default  { grid-column:1 / -1; text-align:center; padding:64px 0; }
+.detail-default-ar  { font-family:var(--arabic); font-size:48px; color:var(--rule-strong); direction:rtl; margin-bottom:16px; }
+.detail-default-th  { font-family:var(--thai); font-size:15px; color:var(--text-mute); }
 
-/* ─── Dark mode overrides ─── */
-.dark-mode .it-toolbar {
-  background: rgba(4, 10, 20, 0.97);
+/* =========================================================
+   HOW IT WORKS
+   ========================================================= */
+.how-section { padding:100px 0; border-top:1px solid var(--rule); }
+.how-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:48px; margin-top:64px;
+}
+.how-card {
+  padding:40px; border:1px solid var(--rule);
+  background:var(--ink-2); position:relative; transition:border-color .35s;
+}
+.how-card:hover { border-color:var(--gold); }
+.how-num   { font-family:var(--serif); font-style:italic; color:var(--gold); font-size:64px; line-height:1; margin-bottom:24px; opacity:.6; }
+.how-title { font-family:var(--thai); font-weight:600; font-size:18px; color:var(--paper); margin-bottom:12px; }
+.how-desc  { font-family:var(--thai); font-size:14px; line-height:1.85; color:var(--text-dim); text-align:left; word-break:break-word; }
+
+/* =========================================================
+   REVEAL ON SCROLL (Rule 35) — data-reveal pattern from index.html
+   ========================================================= */
+[data-reveal] { opacity:0; transform:translateY(28px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+[data-reveal].is-in { opacity:1; transform:none; }
+[data-reveal][data-delay="1"] { transition-delay:.08s; }
+[data-reveal][data-delay="2"] { transition-delay:.16s; }
+[data-reveal][data-delay="3"] { transition-delay:.24s; }
+[data-reveal][data-delay="4"] { transition-delay:.32s; }
+
+/* =========================================================
+   BACK TO TOP (Rule 36)
+   ========================================================= */
+#backToTopBtn {
+  display:none; position:fixed; bottom:32px; right:32px; z-index:500;
+  width:48px; height:48px; border:1px solid var(--border-primary); border-radius:50%;
+  background:rgba(10,12,16,0.72); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  color:var(--text-secondary);
+  box-shadow:0 8px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.05);
+  transition:all .35s cubic-bezier(.2,.7,.2,1); cursor:pointer; place-items:center; padding:0;
+}
+#backToTopBtn svg      { transition:transform .3s ease; }
+#backToTopBtn:hover    { border-color:var(--gold); color:var(--gold); background:rgba(10,12,16,0.90); transform:translateY(-5px); box-shadow:0 12px 40px rgba(59,130,246,0.18), 0 8px 32px rgba(0,0,0,0.36); }
+#backToTopBtn:hover svg { transform:translateY(-3px); }
+
+/* =========================================================
+   RESPONSIVE (Rule 45)
+   ========================================================= */
+@media(max-width:1100px){
+  .result-row   { grid-template-columns:40px 1fr 140px; gap:16px; }
+  .result-grade { display:none; }
+  .how-grid     { grid-template-columns:1fr 1fr; gap:32px; }
+}
+@media(max-width:880px){
+  .section-head  { grid-template-columns:1fr; gap:24px; }
+  .detail-panel  { grid-template-columns:1fr; gap:32px; }
+  .how-grid      { grid-template-columns:1fr; gap:24px; }
+  .hero-stats    { gap:24px; }
+}
+@media(max-width:600px){
+  .wrap          { padding:0 20px; }
+  .wrap-narrow   { padding:0 20px; }
+  .page-hero     { padding:120px 0 64px; }
+  .section       { padding:64px 0; }
+  .viz-container { height:420px; }
+  #backToTopBtn  { bottom:20px; right:20px; }
+  .result-row    { grid-template-columns:36px 1fr 80px; }
+  .result-meta   { font-size:11px; }
+  .detail-meta-grid { grid-template-columns:1fr; }
+  .how-num       { font-size:48px; }
 }
 </style>
 </head>
 <body lang="th">
 
+<!-- Reading Progress Bar — Rule 39 -->
+<div id="readingProgress"></div>
+
+<!-- Header placeholder — Rule 25 -->
 <div id="header-placeholder"></div>
 
-<!-- Page Header -->
-<header class="it-page-header reveal">
-  <div class="it-brand-row">
-    <span class="it-brand-name">ISNĀD TRACER</span>
-    <span class="it-brand-subtitle">แผนภูมิสายรายงานสายวิชาการชาฟิอี</span>
-  </div>
-  <p class="it-description">แสดงสายการถ่ายทอดความรู้จากแหล่งที่มาสูงสุดถึงนักวิชาการยุคหลัง — คลิกที่จุดนักวิชาการเพื่อดูรายละเอียด ใช้ล้อเมาส์ซูม ลากเพื่อเลื่อน</p>
-</header>
 
-<!-- Toolbar -->
-<div class="it-toolbar">
-  <button class="it-btn it-btn-primary" id="btnFit" aria-label="พอดีหน้าจอ">พอดีหน้าจอ</button>
-  <button class="it-btn" id="btnZoomIn" aria-label="ขยาย">ขยาย +</button>
-  <button class="it-btn" id="btnZoomOut" aria-label="ย่อ">ย่อ −</button>
-  <div class="it-toolbar-sep"></div>
-  <span class="it-zoom-label" id="zoomLabel">100%</span>
-  <div class="it-toolbar-sep"></div>
-  <div class="it-legend">
-    <div class="it-legend-item"><div class="it-legend-dot" style="background:#d4af37"></div>รากฐาน</div>
-    <div class="it-legend-item"><div class="it-legend-dot" style="background:#93c5fd"></div>ศอฮาบะฮ์</div>
-    <div class="it-legend-item"><div class="it-legend-dot" style="background:#86efac"></div>ตาบิอีน</div>
-    <div class="it-legend-item"><div class="it-legend-dot" style="background:#c49a45"></div>สายอิหม่ามชาฟิอี</div>
-    <div class="it-legend-item"><div class="it-legend-dot" style="background:#a78bfa"></div>สายนูวาวี</div>
-    <div class="it-legend-item"><div class="it-legend-dot" style="background:#38bdf8"></div>ซะกะรียา อัลอันศอรี</div>
-    <div class="it-legend-item"><div class="it-legend-dot" style="background:#67e8f9"></div>สายรอมลี</div>
-    <div class="it-legend-item"><div class="it-legend-dot" style="background:#f87171"></div>สายมัซอาฮี</div>
-    <div class="it-legend-item"><div class="it-legend-dot" style="background:#e879f9"></div>สายอุชมาวี</div>
-  </div>
-</div>
+<!-- ==========================================================
+     SECTION 1: HERO
+     ========================================================== -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow" data-reveal>أَدَوَاتُ البَحْثِ الحَدِيثِيّ</div>
+    <div class="hero-arabic-title" lang="ar" dir="rtl" data-reveal data-delay="1">شَجَرَةُ الإِسنَادِ</div>
+    <h1 class="hero-title" data-reveal data-delay="2">ISNĀD<br><em>TRACER</em></h1>
 
-<!-- SVG Canvas -->
-<div class="it-canvas-wrap" id="canvasWrap">
-  <svg id="isnadSvg" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="3" result="blur"/>
-        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-      </filter>
-    </defs>
-    <g id="svgRoot">
-      <g id="gridLayer"></g>
-      <g id="edgeLayer"></g>
-      <g id="nodeLayer"></g>
-    </g>
-  </svg>
-</div>
+    <div class="wrap-narrow">
+      <p class="hero-lede" data-reveal data-delay="3">
+        อิสนาด (الإسناد) คือสายรายงานที่เชื่อมโยงนักวิชาการมุสลิมย้อนกลับไปถึงท่านนบีมุหัมมัด
+        ศ็อลลัลลอฮุอะลัยฮิวะซัลลัม ผ่านบรรดาเศาะหาบะฮ์ ตาบิอีน และนักหะดีษในแต่ละยุคสมัย
+        ระบบนี้เป็นเอกลักษณ์ของวิทยาการหะดีษอิสลาม ทำให้สามารถตรวจสอบความน่าเชื่อถือของ
+        ผู้รายงานแต่ละคนได้อย่างเป็นวิทยาศาสตร์ ค้นหาและสำรวจสายรายงานจากฐานข้อมูล KASHAF
+        ที่ครอบคลุมกว่า 18,000 นักรายงาน
+      </p>
 
-<!-- Detail Panel -->
-<div class="it-detail-panel" id="detailPanel" role="dialog" aria-label="ข้อมูลนักวิชาการ">
-  <div class="it-detail-inner">
-    <p class="it-detail-panel-title">ข้อมูลนักวิชาการ</p>
-    <div class="it-detail-header">
-      <div class="it-detail-title-wrap">
-        <div class="it-detail-ar-name" id="detailArName" lang="ar" dir="rtl">—</div>
-        <span class="it-detail-gen-badge" id="detailGenBadge">รุ่นที่ 0</span>
+      <div class="hero-stats" data-reveal data-delay="3">
+        <div class="stat-item">
+          <span class="stat-num">18,000+</span>
+          <span class="stat-label">นักรายงาน</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">523,000+</span>
+          <span class="stat-label">สายรายงาน</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">500</span>
+          <span class="stat-label">นักรายงานหลักที่แสดง</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">2,000</span>
+          <span class="stat-label">เส้นเชื่อมสำคัญที่สุด</span>
+        </div>
       </div>
-      <button class="it-close-btn" id="detailCloseBtn">✕ ปิด</button>
-    </div>
-    <div class="it-detail-grid">
-      <div class="it-detail-section">
-        <h4>อาจารย์</h4>
-        <ul class="it-detail-names" id="detailTeachers"></ul>
-      </div>
-      <div class="it-detail-section">
-        <h4>ศิษย์</h4>
-        <ul class="it-detail-names" id="detailStudents"></ul>
+
+      <!-- Search bar -->
+      <div class="search-wrap" data-reveal data-delay="4">
+        <input
+          type="text" id="searchInput" class="search-input"
+          placeholder="ค้นหานักรายงาน — อาหรับหรือทับศัพท์ (เช่น البخاري, ابن حجر…)"
+          autocomplete="off" dir="auto">
+        <span class="search-clear" id="searchClear" title="ล้างการค้นหา">×</span>
+        <button class="search-btn" id="searchBtn" title="ค้นหา">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
       </div>
     </div>
   </div>
+</section>
+
+
+<!-- ==========================================================
+     SEARCH RESULTS AREA
+     ========================================================== -->
+<div id="resultsArea" style="padding:40px 0 0;">
+  <div class="wrap">
+    <div class="results-head" id="resultsHead">
+      <div class="hero-eyebrow">ผลการค้นหา</div>
+      <div class="results-count" id="resultsCount"></div>
+    </div>
+    <div id="searchResults"></div>
+  </div>
 </div>
 
-<!-- Back to Top -->
-<button id="backToTopBtn" aria-label="กลับขึ้นด้านบน">↑</button>
 
+<!-- ==========================================================
+     SECTION 2: NETWORK VISUALIZATION
+     ========================================================== -->
+<section class="viz-section" id="vizSection">
+  <div class="wrap">
+
+    <div class="section-head" data-reveal>
+      <div>
+        <div class="section-no">02</div>
+        <div class="section-eyebrow">เครือข่ายนักรายงาน</div>
+      </div>
+      <div>
+        <h2 class="section-title">แผนภูมิ<em>อิสนาด</em></h2>
+        <p class="section-lede">
+          แผนภูมิแสดงการเชื่อมโยงระหว่างนักรายงาน 500 คนที่ปรากฏบ่อยที่สุดในฐานข้อมูล
+          ลูกศรแสดงทิศทางการส่งต่อรายงาน (จากอาจารย์สู่ลูกศิษย์)
+          กรองด้วยยุคสมัย และคลิกโหนดเพื่อดูรายละเอียด
+        </p>
+      </div>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="viz-controls" data-reveal>
+      <span class="viz-label">กรองยุคสมัย:</span>
+      <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+      <button class="filter-btn" data-filter="sahaba">صحابة — เศาะหาบะฮ์</button>
+      <button class="filter-btn" data-filter="tabiin">تابعون — ตาบิอีน</button>
+      <button class="filter-btn" data-filter="hadith">المحدثون — นักหะดีษ</button>
+    </div>
+
+    <!-- SVG visualization canvas -->
+    <div class="viz-container" id="vizContainer" data-reveal data-delay="1">
+      <div class="viz-loading" id="vizLoading">
+        <div class="viz-spinner"></div>
+        <span>กำลังโหลดข้อมูลสายรายงาน…</span>
+      </div>
+      <svg class="viz-svg" id="isnadSvg" aria-label="แผนภูมิสายรายงานหะดีษ"></svg>
+      <div class="viz-hint">ลากเพื่อเลื่อน · ล้อเมาส์เพื่อซูม · คลิกโหนดเพื่อดูข้อมูล</div>
+      <div class="viz-zoom-btns">
+        <button class="zoom-btn" id="zoomIn"    title="ขยาย">+</button>
+        <button class="zoom-btn" id="zoomOut"   title="ย่อ">−</button>
+        <button class="zoom-btn" id="zoomReset" title="รีเซ็ต" style="font-size:12px; font-family:var(--ui); letter-spacing:.05em;">⟳</button>
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend" data-reveal>
+      <div class="legend-item">
+        <div class="legend-dot legend-dot-sahaba"></div>
+        <span class="legend-label">صحابة — เศาะหาบะฮ์</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot legend-dot-tabii"></div>
+        <span class="legend-label">تابعون — ตาบิอีน</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot legend-dot-hadith"></div>
+        <span class="legend-label">المحدثون — นักหะดีษ</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot legend-dot-sel"></div>
+        <span class="legend-label">โหนดที่เลือก</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     SECTION 3: NARRATOR DETAIL PANEL
+     ========================================================== -->
+<section class="detail-section" id="detailSection">
+  <div class="wrap">
+
+    <div class="section-head" data-reveal>
+      <div>
+        <div class="section-no">03</div>
+        <div class="section-eyebrow">ตัรญะมะฮ์</div>
+      </div>
+      <div>
+        <h2 class="section-title">ชีวประวัติ<em>นักรายงาน</em></h2>
+        <p class="section-lede">
+          คลิกที่โหนดในแผนภูมิหรือผลการค้นหา เพื่อดูชีวประวัติ ระดับความน่าเชื่อถือ
+          และสายเชื่อมโยงอาจารย์-ลูกศิษย์ของนักรายงาน
+        </p>
+      </div>
+    </div>
+
+    <!-- Default placeholder -->
+    <div id="detailDefault" class="detail-panel" data-reveal>
+      <div class="detail-default">
+        <div class="detail-default-ar" lang="ar" dir="rtl">رِجَالُ الإِسنَادِ</div>
+        <div class="detail-default-th">เลือกนักรายงานจากแผนภูมิหรือการค้นหาเพื่อดูรายละเอียด</div>
+      </div>
+    </div>
+
+    <!-- Filled detail panel — hidden until narrator selected -->
+    <div id="narratorDetail" class="detail-panel" style="display:none;">
+      <button class="detail-close" id="detailClose">ปิด ×</button>
+
+      <!-- Column 1: Bio -->
+      <div>
+        <div class="detail-eyebrow" id="detailEyebrow">نَاقِلُ الحَدِيث</div>
+        <div class="detail-name-ar" lang="ar" dir="rtl" id="detailNameAr"></div>
+        <div class="detail-tabaqah" lang="ar" dir="rtl" id="detailTabaqahAr"></div>
+
+        <div class="detail-meta-grid">
+          <div class="detail-meta-item">
+            <span class="meta-label">ปีเสียชีวิต (ฮ.ศ.)</span>
+            <span class="meta-value" id="detailDeath">—</span>
+          </div>
+          <div class="detail-meta-item">
+            <span class="meta-label">รุ่น / ยุคสมัย</span>
+            <span class="meta-value" id="detailGen">—</span>
+          </div>
+          <div class="detail-meta-item">
+            <span class="meta-label">ระดับความน่าเชื่อถือ</span>
+            <span class="meta-value-ar" lang="ar" dir="rtl" id="detailGradeIH">—</span>
+          </div>
+          <div class="detail-meta-item">
+            <span class="meta-label">จำนวนการเชื่อมต่อ</span>
+            <span class="meta-value" id="detailConnCount">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Teachers & Students -->
+      <div>
+        <div class="detail-connections">
+          <h3>อาจารย์ (شُيُوخ)</h3>
+          <div class="connections-list" id="teachersList"></div>
+        </div>
+        <div class="detail-connections" style="margin-top:28px;">
+          <h3>ลูกศิษย์ (تَلَامِيذ)</h3>
+          <div class="connections-list" id="studentsList"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     SECTION 4: HOW IT WORKS
+     ========================================================== -->
+<section class="how-section">
+  <div class="wrap">
+
+    <div class="section-head" data-reveal>
+      <div>
+        <div class="section-no">04</div>
+        <div class="section-eyebrow">คำอธิบายระบบ</div>
+      </div>
+      <div>
+        <h2 class="section-title">วิธีอ่าน<em>อิสนาด</em></h2>
+        <p class="section-lede">
+          สายรายงาน (อิสนาด) คือหัวใจของวิทยาการหะดีษ วิธีอ่านและตรวจสอบสายรายงาน
+          ถูกวางหลักเกณฑ์โดยนักวิชาการมุสลิมรุ่นแรกผ่านศาสตร์ที่เรียกว่า "อิลมุอัรริญาล"
+        </p>
+      </div>
+    </div>
+
+    <div class="how-grid">
+      <div class="how-card" data-reveal>
+        <div class="how-num">01</div>
+        <div class="how-title">ค้นหานักรายงาน</div>
+        <div class="how-desc">
+          พิมพ์ชื่ออาหรับหรือชื่อทับศัพท์ในช่องค้นหา ระบบจะแสดงรายชื่อนักรายงาน
+          ที่ตรงกันจากฐานข้อมูล 500 นักรายงานหลัก คลิกที่ชื่อเพื่อดูข้อมูลโดยละเอียด
+          และไฮไลต์ตำแหน่งในแผนภูมิเครือข่าย
+        </div>
+      </div>
+      <div class="how-card" data-reveal data-delay="1">
+        <div class="how-num">02</div>
+        <div class="how-title">สำรวจแผนภูมิเครือข่าย</div>
+        <div class="how-desc">
+          แผนภูมิแสดงความสัมพันธ์ระหว่างนักรายงาน เส้นลูกศรแสดงทิศทางการส่งต่อ
+          รายงาน (จากอาจารย์ไปสู่ลูกศิษย์) กรองด้วยยุคสมัยเพื่อมุ่งเน้นกลุ่มที่ต้องการ
+          ใช้ล้อเมาส์ซูมและลากเพื่อสำรวจส่วนต่าง ๆ ของเครือข่าย
+        </div>
+      </div>
+      <div class="how-card" data-reveal data-delay="2">
+        <div class="how-num">03</div>
+        <div class="how-title">ตรวจสอบระดับความน่าเชื่อถือ</div>
+        <div class="how-desc">
+          นักรายงานแต่ละคนมีการประเมินความน่าเชื่อถือจากนักวิชาการอิสลาม
+          เช่น ثِقَة (เชื่อถือได้สูงสุด), صَدُوق (ซื่อสัตย์), ضَعِيف (ข้อมูลอ่อน)
+          ข้อมูลมาจากคัมภีร์วิจารณ์นักรายงาน (كُتُبُ الرِّجَال) ของนักวิชาการคลาสสิก
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer placeholder — Rule 25 -->
 <div id="footer-placeholder"></div>
 
+
+<!-- Back to Top button — Rule 36 -->
+<button id="backToTopBtn" title="กลับขึ้นบนสุด" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+
+<!-- Main.js for header/footer — Rule 26 -->
 <script src="../../main.js"></script>
 
 <script>
-/* ════════════════════════════════════════════════════════════
-   ISNĀD TRACER v5 — Horizontal Timeline Tree
-   LEFT = oldest (gen 0), RIGHT = newest (gen 31)
-   ════════════════════════════════════════════════════════════ */
+/* =========================================================
+   ISNĀD TRACER v6 — KASHAF Dataset
+   ========================================================= */
 
-const GEN_WIDTH = 180;
-const NODE_SLOT_H = 52;
-const PAD_TOP = 80;
-const PAD_LEFT = 60;
-const PAD_BOTTOM = 60;
+var DATA_URL     = '../../data/isnad-narrators.json';
+var allNarrators = [];
+var allEdges     = [];
+var narById      = {};          /* sequential id -> narrator object */
+var nodePos      = {};          /* sequential id -> { x, y, vx, vy } */
+var currentFilter   = 'all';
+var selectedId      = null;
 
-/* ── Branch colour map ── */
-const BRANCH_COLORS = {
-  divine:     '#d4af37',
-  companion:  '#93c5fd',
-  tabiin:     '#86efac',
-  trunk:      '#c49a45',
-  nawawi:     '#a78bfa',
-  zakariyya:  '#38bdf8',
-  ramli:      '#67e8f9',
-  ziyadi:     '#4ade80',
-  mazzahi:    '#f87171',
-  ushmawy:    '#e879f9',
-  ansari:     '#7dd3fc',
-  contemporary: '#d4af37',
-};
+/* ── Tabaqah classification ─────────────────────────────────── */
+function tabaqahGroup(t) {
+  if (!t) return 'other';
+  if (t === 'صحابة')  return 'sahaba';
+  if (t === 'تابعون') return 'tabiin';
+  if (t.indexOf('المحدث') > -1 || t.indexOf('التابعين') > -1 || t.indexOf('المتأخر') > -1) return 'hadith';
+  return 'other';
+}
 
-/* ── Scholar database ──
-   id, gen, ar (name in Arabic), branch, teachers (array of ids)
-─────────────────────────────────────────────────────────────── */
-const SCHOLARS = [
-  { id: 'allah',       gen: 0,  ar: 'اللهُ تَبَارَكَ وَتَعَالَى',         branch: 'divine',     teachers: [] },
-  { id: 'jibril',      gen: 1,  ar: 'جِبْرِيلُ عَلَيْهِ السَّلَامُ',       branch: 'divine',     teachers: ['allah'] },
-  { id: 'nabi',        gen: 2,  ar: 'رَسُولُ اللهِ ﷺ',                      branch: 'divine',     teachers: ['jibril'] },
-  { id: 'anas',        gen: 3,  ar: 'أَنَسُ بْنُ مَالِكٍ',                   branch: 'companion',  teachers: ['nabi'] },
-  { id: 'ibnumar',     gen: 3,  ar: 'عَبْدُ اللهِ بْنُ عُمَرَ',              branch: 'companion',  teachers: ['nabi'] },
-  { id: 'rabia',       gen: 4,  ar: 'رَبِيعَةُ الرَّأْيِ',                   branch: 'tabiin',     teachers: ['anas'] },
-  { id: 'nafi',        gen: 4,  ar: 'نَافِعٌ مَوْلَى ابْنِ عُمَرَ',          branch: 'tabiin',     teachers: ['ibnumar'] },
-  { id: 'malik',       gen: 5,  ar: 'مَالِكُ بْنُ أَنَسٍ',                   branch: 'trunk',      teachers: ['rabia', 'nafi'] },
-  { id: 'shafii',      gen: 6,  ar: 'مُحَمَّدُ بْنُ إِدْرِيسَ الشَّافِعِيُّ', branch: 'trunk',      teachers: ['malik'] },
-  { id: 'muzani',      gen: 7,  ar: 'إِسْمَاعِيلُ بْنُ يَحْيَى الْمُزَنِيُّ', branch: 'trunk',      teachers: ['shafii'] },
-  { id: 'anmati',      gen: 8,  ar: 'عُثْمَانُ بْنُ بَشَّارٍ الْأَنْمَاطِيُّ', branch: 'trunk',      teachers: ['muzani'] },
-  { id: 'ibnsurij',    gen: 9,  ar: 'أَحْمَدُ بْنُ عُمَرَ بْنِ سُرَيْجٍ',    branch: 'trunk',      teachers: ['anmati'] },
-  { id: 'marwazi',     gen: 10, ar: 'إِبْرَاهِيمُ بْنُ مُحَمَّدٍ الْمَرْوَذِيُّ الْكَبِيرُ', branch: 'trunk', teachers: ['ibnsurij'] },
-  { id: 'masarjisi',   gen: 11, ar: 'مُحَمَّدُ بْنُ عَلِيٍّ الْمَاسَرْجِسِيُّ', branch: 'trunk',    teachers: ['marwazi'] },
-  { id: 'abitayyib',   gen: 12, ar: 'الْقَاضِي أَبُو طَيِّبٍ الطَّبَرِيُّ',  branch: 'trunk',      teachers: ['masarjisi'] },
-  { id: 'shirazi',     gen: 13, ar: 'أَبُو إِسْحَاقَ الشِّيرَازِيُّ',         branch: 'trunk',      teachers: ['abitayyib'] },
-  { id: 'farqi',       gen: 14, ar: 'الْقَاضِي أَبُو عَلِيٍّ الْفَارِقِيُّ',   branch: 'trunk',      teachers: ['shirazi'] },
-  { id: 'ibnasrun',    gen: 15, ar: 'أَبُو سَعِيدٍ ابْنُ أَبِي عَصْرُونٍ',    branch: 'trunk',      teachers: ['farqi'] },
-  { id: 'ibnsalah',    gen: 16, ar: 'ابْنُ الصَّلَاحِ عُثْمَانُ بْنُ عَبْدِ الرَّحْمَنِ', branch: 'nawawi', teachers: ['ibnasrun'] },
-  { id: 'nawawi',      gen: 17, ar: 'أَبُو زَكَرِيَّا النَّوَوِيُّ',           branch: 'nawawi',     teachers: ['ibnsalah'] },
-  { id: 'ibnattar',    gen: 18, ar: 'عَلَاءُ الدِّينِ ابْنُ الْعَطَّارِ',       branch: 'nawawi',     teachers: ['nawawi'] },
-  { id: 'iraqui',      gen: 19, ar: 'الشَّيْخُ عَبْدُ الرَّحِيمِ الْعِرَاقِيُّ', branch: 'nawawi',   teachers: ['ibnattar'] },
-  { id: 'mahalli',     gen: 20, ar: 'جَلَالُ الدِّينِ الْمَحَلِّيُّ',           branch: 'zakariyya', teachers: ['iraqui'] },
-  { id: 'bulqini',     gen: 20, ar: 'جَلَالُ الدِّينِ الْبُلْقِينِيُّ',          branch: 'zakariyya', teachers: ['iraqui'] },
-  { id: 'ibnhajar',    gen: 20, ar: 'ابْنُ حَجَرٍ الْعَسْقَلَانِيُّ',            branch: 'zakariyya', teachers: ['iraqui'] },
-  { id: 'zakariyya',   gen: 21, ar: 'شَيْخُ الْإِسْلَامِ زَكَرِيَّا الْأَنْصَارِيُّ', branch: 'zakariyya', teachers: ['mahalli', 'bulqini', 'ibnhajar'] },
-  { id: 'ramlikabir',  gen: 22, ar: 'شِهَابُ الدِّينِ الرَّمْلِيُّ الْكَبِيرُ',  branch: 'ramli',     teachers: ['zakariyya'] },
-  { id: 'yusufzak',    gen: 22, ar: 'الْجَمَالُ يُوسُفُ بْنُ زَكَرِيَّا',        branch: 'ansari',    teachers: ['zakariyya'] },
-  { id: 'ramlisghr',   gen: 23, ar: 'شَمْسُ الدِّينِ الرَّمْلِيُّ الصَّغِيرُ',   branch: 'ramli',     teachers: ['ramlikabir'] },
-  { id: 'abdulqadir',  gen: 23, ar: 'مُحْيِي الدِّينِ عَبْدُ الْقَادِرِ',         branch: 'ansari',    teachers: ['yusufzak'] },
-  { id: 'ziyadi',      gen: 24, ar: 'نُورُ الدِّينِ عَلِيٌّ الزِّيَادِيُّ',       branch: 'ziyadi',    teachers: ['ramlisghr'] },
-  { id: 'khatibishar', gen: 24, ar: 'الْخَطِيبُ الشَّرْبِينِيُّ',                 branch: 'ramli',     teachers: ['ramlisghr'] },
-  { id: 'sharafyahya', gen: 24, ar: 'شَرَفُ الدِّينِ يَحْيَى الْأَنْصَارِيُّ',    branch: 'ansari',    teachers: ['abdulqadir'] },
-  { id: 'halabi',      gen: 25, ar: 'عَلِيُّ بْنُ إِبْرَاهِيمَ الْحَلَبِيُّ',     branch: 'ziyadi',    teachers: ['ramlisghr'] },
-  { id: 'shabshiri',   gen: 25, ar: 'سَالِمٌ الشَّبْشِيرِيُّ',                    branch: 'ramli',     teachers: ['ramlikabir'] },
-  { id: 'babuli',      gen: 25, ar: 'سُلَيْمَانُ الْبَابُلِيُّ',                   branch: 'ramli',     teachers: ['ramlisghr', 'khatibishar'] },
-  { id: 'mazzahi',     gen: 26, ar: 'سُلْطَانُ الْمُزَاحِيُّ',                    branch: 'mazzahi',   teachers: ['halabi', 'ziyadi', 'shabshiri'] },
-  { id: 'shabramalsi', gen: 26, ar: 'عَلِيٌّ الشَّبْرَامَلِّسِيُّ',                branch: 'mazzahi',   teachers: ['ziyadi'] },
-  { id: 'bushbishy',   gen: 27, ar: 'أَحْمَدُ الْبِشْبِيشِيُّ',                   branch: 'mazzahi',   teachers: ['mazzahi'] },
-  { id: 'anani',       gen: 27, ar: 'مُحَمَّدٌ الْعَنَانِيُّ',                    branch: 'mazzahi',   teachers: ['mazzahi'] },
-  { id: 'tukhi',       gen: 27, ar: 'مَنْصُورٌ الطُّوخِيُّ',                     branch: 'mazzahi',   teachers: ['mazzahi'] },
-  { id: 'ushmawy',     gen: 27, ar: 'مُحَمَّدٌ الْعُشْمَاوِيُّ',                  branch: 'ushmawy',   teachers: ['bushbishy', 'shabramalsi'] },
-  { id: 'khalifi',     gen: 28, ar: 'أَحْمَدُ الْخَلِيفِيُّ الْبَصِيرُ',           branch: 'mazzahi',   teachers: ['bushbishy', 'anani', 'tukhi'] },
-  { id: 'diwi',        gen: 28, ar: 'عَبْدُ رَبِّهِ الدِّيوِيُّ',                 branch: 'ushmawy',   teachers: ['ushmawy'] },
-  { id: 'basri',       gen: 28, ar: 'الشَّيْخُ الْبَصْرِيُّ',                     branch: 'ushmawy',   teachers: ['shabramalsi', 'tukhi'] },
-  { id: 'budayri',     gen: 28, ar: 'مُحَمَّدٌ الْبُدَيْرِيُّ ابْنُ الْمَيِّتِ',   branch: 'ushmawy',   teachers: ['shabramalsi', 'bushbishy', 'sharafyahya'] },
-  { id: 'hafni',       gen: 29, ar: 'مُحَمَّدُ بْنُ سَالِمٍ الْحَفْنِيُّ',         branch: 'mazzahi',   teachers: ['khalifi'] },
-  { id: 'ajhuri',      gen: 29, ar: 'عَطِيَّةُ الْأَجْهُورِيُّ',                  branch: 'ushmawy',   teachers: ['diwi', 'ushmawy', 'basri'] },
-  { id: 'farisi',      gen: 29, ar: 'مُحَمَّدٌ الْفَارِسِيُّ',                    branch: 'ushmawy',   teachers: ['ushmawy'] },
-  { id: 'brawi',       gen: 29, ar: 'الشَّيْخُ عِيسَى الْبِرَاوِيُّ',             branch: 'ushmawy',   teachers: ['basri'] },
-  { id: 'samanudi',    gen: 29, ar: 'مُحَمَّدٌ الْمُنِيرُ السَّمَنُودِيُّ',        branch: 'ushmawy',   teachers: ['budayri'] },
-  { id: 'shanwani',    gen: 30, ar: 'مُحَمَّدُ بْنُ عَلِيٍّ الشَّنَوَانِيُّ',      branch: 'ushmawy',   teachers: ['ajhuri', 'farisi', 'brawi'] },
-  { id: 'amirkabir',   gen: 30, ar: 'مُحَمَّدٌ الْأَمِيرُ الْكَبِيرُ',             branch: 'ushmawy',   teachers: ['samanudi'] },
-  { id: 'sharqawi',    gen: 31, ar: 'عَبْدُ اللهِ بْنُ حِجَازِيٍّ الشَّرْقَاوِيُّ', branch: 'contemporary', teachers: ['hafni', 'ajhuri'] },
-];
+function tabaqahThai(t) {
+  var map = {
+    'صحابة':             'เศาะหาบะฮ์',
+    'تابعون':            'ตาบิอีน',
+    'أتباع التابعين':    'อัตบาอุตตาบิอีน',
+    'المحدثون الكبار':   'มุหัดดิษรุ่นใหญ่',
+    'أتباع المحدثين':    'อัตบาอุลมุหัดดิษีน',
+    'المتأخرون':         'มุตะอัคคิรูน',
+    'غير معروف':         'ไม่ทราบยุคสมัย'
+  };
+  return map[t] || t || '—';
+}
 
-/* ── Build lookup maps ── */
-const scholarsById = {};
-SCHOLARS.forEach(s => { scholarsById[s.id] = s; });
+/* ── Safe HTML escape ────────────────────────────────────────── */
+function esc(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 
-/* Build students map */
-const studentsMap = {};
-SCHOLARS.forEach(s => {
-  s.teachers.forEach(tid => {
-    if (!studentsMap[tid]) studentsMap[tid] = [];
-    studentsMap[tid].push(s.id);
+/* =========================================================
+   DATA LOAD
+   ========================================================= */
+function loadData() {
+  fetch(DATA_URL)
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      allNarrators = d.narrators || [];
+      allEdges     = d.edges     || [];
+      allNarrators.forEach(function(n){ narById[n.id] = n; });
+      document.getElementById('vizLoading').style.display = 'none';
+      initViz();
+    })
+    .catch(function(err){
+      var loading = document.getElementById('vizLoading');
+      loading.innerHTML = '<span style="font-family:var(--thai); font-size:14px; color:var(--text-mute);">ไม่สามารถโหลดข้อมูลได้ กรุณาลองใหม่อีกครั้ง</span>';
+      console.error('[Isnād Tracer] data error:', err);
+    });
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+var $search  = document.getElementById('searchInput');
+var $clear   = document.getElementById('searchClear');
+var $results = document.getElementById('searchResults');
+var $rhead   = document.getElementById('resultsHead');
+var $rcount  = document.getElementById('resultsCount');
+
+function doSearch(q) {
+  q = q.trim();
+  if (!q) {
+    $results.innerHTML = '';
+    $results.classList.remove('visible');
+    $rhead.classList.remove('visible');
+    $clear.classList.remove('visible');
+    return;
+  }
+  $clear.classList.add('visible');
+  var ql      = q.toLowerCase();
+  var matched = allNarrators.filter(function(n){
+    return (n.name_ar  || '').toLowerCase().indexOf(ql) > -1 ||
+           (n.shuhrah  || '').toLowerCase().indexOf(ql) > -1 ||
+           (n.rawi_index + '') === q;
+  }).slice(0, 24);
+
+  $rhead.classList.add('visible');
+  $rcount.textContent = 'พบ ' + matched.length + (matched.length === 24 ? '+' : '') + ' รายการ';
+
+  if (!matched.length) {
+    $results.innerHTML = '<div class="result-empty">ไม่พบนักรายงานที่ตรงกับคำค้นหา — ลองค้นหาด้วยตัวอักษรภาษาอาหรับ</div>';
+    $results.classList.add('visible');
+    return;
+  }
+
+  $results.innerHTML = matched.map(function(n, i){
+    return '<div class="result-row" data-id="' + n.id + '">' +
+      '<div class="result-num">' + esc(i + 1) + '</div>' +
+      '<div class="result-name" lang="ar" dir="rtl">' + esc(n.name_ar) + '</div>' +
+      '<div class="result-meta"><div>' + esc(tabaqahThai(n.tabaqah)) + '</div>' +
+        '<div style="color:var(--text-mute); font-size:11px;">' + (n.death_ah ? 'ฮ.ศ. ' + n.death_ah : '—') + '</div></div>' +
+      '<div class="result-grade" lang="ar" dir="rtl">' + esc(n.grade_ibn_hajar || '—') + '</div>' +
+    '</div>';
+  }).join('');
+  $results.classList.add('visible');
+
+  $results.querySelectorAll('.result-row').forEach(function(row){
+    row.addEventListener('click', function(){
+      var id = parseInt(this.getAttribute('data-id'), 10);
+      selectNarrator(id);
+      document.getElementById('detailSection').scrollIntoView({ behavior:'smooth', block:'start' });
+    });
   });
-});
+}
 
-/* ── Compute layout positions ── */
-function computeLayout() {
-  const genGroups = {};
-  SCHOLARS.forEach(s => {
-    if (!genGroups[s.gen]) genGroups[s.gen] = [];
-    genGroups[s.gen].push(s);
+$search.addEventListener('input',   function(){ doSearch(this.value); });
+$search.addEventListener('keydown', function(e){ if(e.key==='Enter') doSearch(this.value); });
+document.getElementById('searchBtn').addEventListener('click', function(){ doSearch($search.value); });
+$clear.addEventListener('click', function(){ $search.value = ''; doSearch(''); });
+
+/* =========================================================
+   VISUALIZATION — simplified force layout (no external libs)
+   ========================================================= */
+var gMain, vizSvg;
+var panZoom = { x:0, y:0, k:1 };
+var LAYER = { 'صحابة':0, 'تابعون':1, 'أتباع التابعين':2, 'المحدثون الكبار':3, 'أتباع المحدثين':4, 'المتأخرون':5, 'غير معروف':3 };
+var NUM_LAYERS = 6;
+var NODE_R = 7;
+
+function initViz() {
+  vizSvg = document.getElementById('isnadSvg');
+  var W = vizSvg.clientWidth  || 1200;
+  var H = vizSvg.clientHeight || 580;
+
+  /* build top-level groups */
+  gMain = document.createElementNS('http://www.w3.org/2000/svg','g');
+  vizSvg.appendChild(gMain);
+
+  var gE = document.createElementNS('http://www.w3.org/2000/svg','g');
+  gE.setAttribute('id','gEdges');
+  gMain.appendChild(gE);
+
+  var gN = document.createElementNS('http://www.w3.org/2000/svg','g');
+  gN.setAttribute('id','gNodes');
+  gMain.appendChild(gN);
+
+  computeLayout(W, H);
+  renderGraph('all');
+  initPanZoom();
+  initFilters();
+}
+
+function computeLayout(W, H) {
+  var layerCounts = {};
+  allNarrators.forEach(function(n){
+    var L = LAYER[n.tabaqah] !== undefined ? LAYER[n.tabaqah] : 3;
+    layerCounts[L] = (layerCounts[L] || 0) + 1;
+    var cx = ((L + 0.5) / NUM_LAYERS) * W;
+    var idx = layerCounts[L];
+    var cy  = 40 + (idx % 24) * (H / 26);
+    nodePos[n.id] = { x: cx + (Math.random()-0.5)*60, y: cy, vx:0, vy:0 };
   });
 
-  const genNums = Object.keys(genGroups).map(Number).sort((a, b) => a - b);
-  const maxGen = Math.max(...genNums);
+  /* Build edge lookup */
+  var edgeLookup = {};
+  allEdges.forEach(function(e){ edgeLookup[e.from + '_' + e.to] = true; });
 
-  // Assign y positions within each generation
-  genNums.forEach(g => {
-    const nodes = genGroups[g];
-    const count = nodes.length;
-    nodes.forEach((s, i) => {
-      s.x = PAD_LEFT + g * GEN_WIDTH;
-      const totalH = count * NODE_SLOT_H;
-      s.y = PAD_TOP + i * NODE_SLOT_H + NODE_SLOT_H / 2;
-      // Center vertically around mid-line if few nodes
-      if (count === 1) {
-        s.y = PAD_TOP + Math.floor(maxCountInAnyGen(genGroups) / 2) * NODE_SLOT_H;
+  var alpha = 1.0;
+  for (var iter = 0; iter < 100; iter++) {
+    alpha *= 0.975;
+    var a = allNarrators;
+
+    /* Repulsion */
+    for (var i = 0; i < a.length; i++) {
+      var pi = nodePos[a[i].id];
+      for (var j = i+1; j < a.length; j++) {
+        var pj = nodePos[a[j].id];
+        var dx = pi.x - pj.x, dy = pi.y - pj.y;
+        var d2 = dx*dx + dy*dy || 0.01;
+        var d  = Math.sqrt(d2);
+        var f  = (alpha * 700) / d2;
+        var fx = (dx/d)*f, fy = (dy/d)*f;
+        pi.vx += fx; pi.vy += fy;
+        pj.vx -= fx; pj.vy -= fy;
       }
-    });
-  });
-
-  return genGroups;
-}
-
-function maxCountInAnyGen(genGroups) {
-  return Math.max(...Object.values(genGroups).map(a => a.length));
-}
-
-/* Better vertical balancing: distribute each gen around a weighted center */
-function layoutWithBalance() {
-  const genGroups = {};
-  SCHOLARS.forEach(s => {
-    if (!genGroups[s.gen]) genGroups[s.gen] = [];
-    genGroups[s.gen].push(s);
-  });
-
-  const genNums = Object.keys(genGroups).map(Number).sort((a, b) => a - b);
-  const maxCount = Math.max(...Object.values(genGroups).map(a => a.length));
-  const totalH = (maxCount + 1) * NODE_SLOT_H;
-
-  genNums.forEach(g => {
-    const nodes = genGroups[g];
-    const count = nodes.length;
-    nodes.forEach((s, i) => {
-      s.x = PAD_LEFT + g * GEN_WIDTH;
-      const blockH = count * NODE_SLOT_H;
-      const startY = PAD_TOP + (totalH - blockH) / 2;
-      s.y = startY + i * NODE_SLOT_H + NODE_SLOT_H / 2;
-    });
-  });
-
-  return { genGroups, genNums, totalH, maxCount };
-}
-
-/* ── SVG Drawing ── */
-const svg = document.getElementById('isnadSvg');
-const gridLayer = document.getElementById('gridLayer');
-const edgeLayer = document.getElementById('edgeLayer');
-const nodeLayer = document.getElementById('nodeLayer');
-const svgRoot = document.getElementById('svgRoot');
-
-function buildSvg() {
-  const { genGroups, genNums, totalH } = layoutWithBalance();
-
-  const maxGen = Math.max(...genNums);
-  const svgW = PAD_LEFT + (maxGen + 1) * GEN_WIDTH + PAD_LEFT;
-  const svgH = totalH + PAD_TOP + PAD_BOTTOM;
-
-  svg.setAttribute('width', svgW);
-  svg.setAttribute('height', svgH);
-  svg.setAttribute('viewBox', `0 0 ${svgW} ${svgH}`);
-
-  // Grid lines
-  genNums.forEach(g => {
-    const x = PAD_LEFT + g * GEN_WIDTH;
-    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    line.setAttribute('class', 'gen-line');
-    line.setAttribute('x1', x); line.setAttribute('y1', 0);
-    line.setAttribute('x2', x); line.setAttribute('y2', svgH);
-    gridLayer.appendChild(line);
-
-    const lbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    lbl.setAttribute('class', 'gen-number');
-    lbl.setAttribute('x', x);
-    lbl.setAttribute('y', 22);
-    lbl.textContent = g;
-    gridLayer.appendChild(lbl);
-  });
-
-  // Edges
-  SCHOLARS.forEach(s => {
-    s.teachers.forEach(tid => {
-      const teacher = scholarsById[tid];
-      if (!teacher) return;
-      const color = BRANCH_COLORS[s.branch] || '#aaa';
-      drawEdge(teacher, s, color);
-    });
-  });
-
-  // Nodes
-  SCHOLARS.forEach(s => {
-    drawNode(s);
-  });
-}
-
-function drawEdge(from, to, color) {
-  const x1 = from.x, y1 = from.y;
-  const x2 = to.x, y2 = to.y;
-  const cx = (x1 + x2) / 2;
-  const d = `M ${x1} ${y1} C ${cx} ${y1}, ${cx} ${y2}, ${x2} ${y2}`;
-
-  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-  path.setAttribute('class', 'edge-path');
-  path.setAttribute('d', d);
-  path.setAttribute('stroke', color);
-  edgeLayer.appendChild(path);
-}
-
-function drawNode(s) {
-  const color = BRANCH_COLORS[s.branch] || '#aaa';
-  const isRoot = s.gen <= 2;
-  const r = isRoot ? 8 : 6;
-
-  const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-  g.setAttribute('data-id', s.id);
-
-  // Hit area (larger transparent circle)
-  const hit = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-  hit.setAttribute('cx', s.x);
-  hit.setAttribute('cy', s.y);
-  hit.setAttribute('r', 18);
-  hit.setAttribute('fill', 'transparent');
-  hit.setAttribute('class', 'node-circle');
-  g.appendChild(hit);
-
-  // Glow circle for root nodes
-  if (isRoot) {
-    const glow = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    glow.setAttribute('cx', s.x);
-    glow.setAttribute('cy', s.y);
-    glow.setAttribute('r', r + 5);
-    glow.setAttribute('fill', color);
-    glow.setAttribute('opacity', '0.18');
-    glow.setAttribute('filter', 'url(#glow)');
-    g.appendChild(glow);
-  }
-
-  // Main dot
-  const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-  dot.setAttribute('cx', s.x);
-  dot.setAttribute('cy', s.y);
-  dot.setAttribute('r', r);
-  dot.setAttribute('fill', color);
-  dot.setAttribute('class', 'node-circle');
-  if (isRoot) dot.setAttribute('filter', 'url(#glow)');
-  g.appendChild(dot);
-
-  // Label — Arabic name
-  // Place label above for even-indexed nodes, below for odd to reduce overlap
-  const idx = SCHOLARS.indexOf(s);
-  const labelY = (idx % 2 === 0) ? s.y - 12 : s.y + 22;
-  const anchor = 'middle';
-
-  // Short display name (trim long names for display)
-  const displayName = shortenName(s.ar);
-
-  const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-  text.setAttribute('x', s.x);
-  text.setAttribute('y', labelY);
-  text.setAttribute('text-anchor', anchor);
-  text.setAttribute('class', isRoot ? 'node-label node-label-root' : 'node-label');
-  text.setAttribute('lang', 'ar');
-  text.setAttribute('dir', 'rtl');
-  text.textContent = displayName;
-  g.appendChild(text);
-
-  // Click interaction
-  g.style.cursor = 'pointer';
-  g.addEventListener('click', () => openDetail(s.id));
-
-  nodeLayer.appendChild(g);
-}
-
-function shortenName(ar) {
-  // If name is very long, abbreviate
-  if (ar.length > 30) {
-    const parts = ar.split(' ');
-    if (parts.length > 3) {
-      return parts.slice(0, 3).join(' ') + '…';
     }
+
+    /* Attraction */
+    allEdges.forEach(function(e){
+      var pf = nodePos[e.from], pt = nodePos[e.to];
+      if (!pf || !pt) return;
+      var dx = pt.x-pf.x, dy = pt.y-pf.y;
+      var d  = Math.sqrt(dx*dx + dy*dy) || 1;
+      var f  = (d - 55) * 0.012 * alpha;
+      var fx = (dx/d)*f, fy = (dy/d)*f;
+      pf.vx += fx; pf.vy += fy;
+      pt.vx -= fx; pt.vy -= fy;
+    });
+
+    /* Layer gravity */
+    allNarrators.forEach(function(n){
+      var L  = LAYER[n.tabaqah] !== undefined ? LAYER[n.tabaqah] : 3;
+      var tx = ((L + 0.5) / NUM_LAYERS) * (vizSvg.clientWidth || 1200);
+      var p  = nodePos[n.id];
+      p.vx  += (tx - p.x) * 0.06 * alpha;
+      p.vy  += ((vizSvg.clientHeight||580)/2 - p.y) * 0.008 * alpha;
+    });
+
+    /* Integrate */
+    allNarrators.forEach(function(n){
+      var p = nodePos[n.id];
+      p.vx *= 0.82; p.vy *= 0.82;
+      p.x  += p.vx; p.y  += p.vy;
+      p.x   = Math.max(16, Math.min((vizSvg.clientWidth||1200)-16, p.x));
+      p.y   = Math.max(16, Math.min((vizSvg.clientHeight||580)-16, p.y));
+    });
   }
-  return ar;
 }
 
-/* ── Pan / Zoom ── */
-let scale = 1;
-let panX = 0, panY = 0;
-let isDragging = false;
-let lastMouseX = 0, lastMouseY = 0;
+function renderGraph(filter) {
+  var gE = document.getElementById('gEdges');
+  var gN = document.getElementById('gNodes');
+  if (gE) gE.innerHTML = '';
+  if (gN) gN.innerHTML = '';
 
-const canvasWrap = document.getElementById('canvasWrap');
+  /* Arrow marker in defs */
+  var existDefs = vizSvg.querySelector('defs');
+  if (existDefs) vizSvg.removeChild(existDefs);
+  var defs   = document.createElementNS('http://www.w3.org/2000/svg','defs');
+  var marker = document.createElementNS('http://www.w3.org/2000/svg','marker');
+  marker.setAttribute('id','arr'); marker.setAttribute('markerWidth','7'); marker.setAttribute('markerHeight','5');
+  marker.setAttribute('refX','7'); marker.setAttribute('refY','2.5'); marker.setAttribute('orient','auto');
+  var poly = document.createElementNS('http://www.w3.org/2000/svg','polygon');
+  poly.setAttribute('points','0 0, 7 2.5, 0 5');
+  poly.setAttribute('class','arrow-marker');
+  marker.appendChild(poly); defs.appendChild(marker);
+  vizSvg.insertBefore(defs, gMain);
 
-function applyTransform() {
-  svgRoot.setAttribute('transform', `translate(${panX}, ${panY}) scale(${scale})`);
-  document.getElementById('zoomLabel').textContent = Math.round(scale * 100) + '%';
+  /* Which nodes are visible */
+  var vis = {};
+  allNarrators.forEach(function(n){
+    if (filter === 'all') { vis[n.id] = true; return; }
+    var g = tabaqahGroup(n.tabaqah);
+    if (filter === 'sahaba' && g === 'sahaba') vis[n.id] = true;
+    if (filter === 'tabiin' && g === 'tabiin') vis[n.id] = true;
+    if (filter === 'hadith' && (g === 'hadith' || g === 'other')) vis[n.id] = true;
+  });
+
+  /* Draw edges first (below nodes) */
+  allEdges.forEach(function(e){
+    if (!vis[e.from] || !vis[e.to]) return;
+    var pf = nodePos[e.from], pt = nodePos[e.to];
+    if (!pf || !pt) return;
+    var dx = pt.x-pf.x, dy = pt.y-pf.y;
+    var len = Math.sqrt(dx*dx+dy*dy) || 1;
+    var ex  = pt.x - (dx/len)*(NODE_R+3);
+    var ey  = pt.y - (dy/len)*(NODE_R+3);
+    var line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('class','edge');
+    line.setAttribute('x1', pf.x.toFixed(1)); line.setAttribute('y1', pf.y.toFixed(1));
+    line.setAttribute('x2', ex.toFixed(1));   line.setAttribute('y2', ey.toFixed(1));
+    line.setAttribute('marker-end','url(#arr)');
+    line.setAttribute('data-from', e.from);
+    line.setAttribute('data-to',   e.to);
+    gE.appendChild(line);
+  });
+
+  /* Draw nodes */
+  allNarrators.forEach(function(n){
+    if (!vis[n.id]) return;
+    var p   = nodePos[n.id];
+    if (!p) return;
+    var grp  = tabaqahGroup(n.tabaqah);
+    var cls  = 'node-circle' + (grp==='sahaba' ? ' sahabi' : grp==='tabiin' ? ' tabii' : '');
+    var g    = document.createElementNS('http://www.w3.org/2000/svg','g');
+    g.setAttribute('data-id', n.id);
+    g.setAttribute('transform','translate(' + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ')');
+    g.style.cursor = 'pointer';
+
+    var circ = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    circ.setAttribute('r', NODE_R);
+    circ.setAttribute('class', cls + (n.id === selectedId ? ' selected' : ''));
+    g.appendChild(circ);
+
+    /* Show label only for highly connected narrators */
+    var connN = (n.teachers ? n.teachers.length : 0) + (n.students ? n.students.length : 0);
+    if (connN >= 6 || grp === 'sahaba') {
+      var parts     = (n.name_ar || '').split(' ');
+      var shortName = parts.slice(0, 3).join(' ');
+      var txt = document.createElementNS('http://www.w3.org/2000/svg','text');
+      txt.setAttribute('class','node-label' + (n.id === selectedId ? ' selected' : ''));
+      txt.setAttribute('y', NODE_R + 11);
+      txt.setAttribute('lang','ar'); txt.setAttribute('dir','rtl');
+      txt.textContent = shortName;
+      g.appendChild(txt);
+    }
+
+    g.addEventListener('click', function(){
+      selectNarrator(parseInt(this.getAttribute('data-id'), 10));
+    });
+    gN.appendChild(g);
+  });
 }
 
-canvasWrap.addEventListener('mousedown', e => {
-  if (e.button !== 0) return;
-  isDragging = true;
-  lastMouseX = e.clientX;
-  lastMouseY = e.clientY;
-  canvasWrap.classList.add('is-dragging');
-});
+/* ── Select narrator ─────────────────────────────────────────── */
+function selectNarrator(id) {
+  selectedId = id;
+  var n = narById[id];
+  if (!n) return;
 
-window.addEventListener('mousemove', e => {
-  if (!isDragging) return;
-  panX += e.clientX - lastMouseX;
-  panY += e.clientY - lastMouseY;
-  lastMouseX = e.clientX;
-  lastMouseY = e.clientY;
-  applyTransform();
-});
-
-window.addEventListener('mouseup', () => {
-  isDragging = false;
-  canvasWrap.classList.remove('is-dragging');
-});
-
-canvasWrap.addEventListener('wheel', e => {
-  e.preventDefault();
-  const factor = e.deltaY < 0 ? 1.1 : 0.91;
-  const rect = canvasWrap.getBoundingClientRect();
-  const mx = e.clientX - rect.left;
-  const my = e.clientY - rect.top;
-  // Zoom toward cursor
-  panX = mx - factor * (mx - panX);
-  panY = my - factor * (my - panY);
-  scale = Math.min(Math.max(scale * factor, 0.15), 4);
-  applyTransform();
-}, { passive: false });
-
-// Touch support
-let lastTouchDist = 0;
-canvasWrap.addEventListener('touchstart', e => {
-  if (e.touches.length === 1) {
-    isDragging = true;
-    lastMouseX = e.touches[0].clientX;
-    lastMouseY = e.touches[0].clientY;
-  } else if (e.touches.length === 2) {
-    isDragging = false;
-    const dx = e.touches[0].clientX - e.touches[1].clientX;
-    const dy = e.touches[0].clientY - e.touches[1].clientY;
-    lastTouchDist = Math.sqrt(dx * dx + dy * dy);
+  /* Highlight node */
+  document.querySelectorAll('#gNodes .node-circle').forEach(function(el){ el.classList.remove('selected'); });
+  document.querySelectorAll('#gNodes .node-label').forEach(function(el){  el.classList.remove('selected'); });
+  var gEl = document.querySelector('#gNodes g[data-id="' + id + '"]');
+  if (gEl) {
+    var c = gEl.querySelector('.node-circle'); if(c) c.classList.add('selected');
+    var t = gEl.querySelector('.node-label');  if(t) t.classList.add('selected');
   }
-}, { passive: true });
 
-canvasWrap.addEventListener('touchmove', e => {
-  e.preventDefault();
-  if (e.touches.length === 1 && isDragging) {
-    panX += e.touches[0].clientX - lastMouseX;
-    panY += e.touches[0].clientY - lastMouseY;
-    lastMouseX = e.touches[0].clientX;
-    lastMouseY = e.touches[0].clientY;
+  /* Highlight edges */
+  document.querySelectorAll('.edge').forEach(function(el){
+    var f = parseInt(el.getAttribute('data-from'),10);
+    var to= parseInt(el.getAttribute('data-to'),  10);
+    el.classList.toggle('highlighted', f===id || to===id);
+  });
+
+  /* Pan to node */
+  var p = nodePos[id];
+  if (p && vizSvg) {
+    var W = vizSvg.clientWidth  || 1200;
+    var H = vizSvg.clientHeight || 580;
+    panZoom.x = W/2 - p.x * panZoom.k;
+    panZoom.y = H/2 - p.y * panZoom.k;
     applyTransform();
-  } else if (e.touches.length === 2) {
-    const dx = e.touches[0].clientX - e.touches[1].clientX;
-    const dy = e.touches[0].clientY - e.touches[1].clientY;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    if (lastTouchDist > 0) {
-      const factor = dist / lastTouchDist;
-      scale = Math.min(Math.max(scale * factor, 0.15), 4);
-      applyTransform();
-    }
-    lastTouchDist = dist;
   }
-}, { passive: false });
 
-canvasWrap.addEventListener('touchend', () => { isDragging = false; lastTouchDist = 0; });
-
-/* ── Fit to screen ── */
-function fitToScreen() {
-  const svgW = parseFloat(svg.getAttribute('width'));
-  const svgH = parseFloat(svg.getAttribute('height'));
-  const wrapW = canvasWrap.clientWidth;
-  const wrapH = canvasWrap.clientHeight;
-
-  scale = Math.min(wrapW / svgW, wrapH / svgH) * 0.92;
-  panX = (wrapW - svgW * scale) / 2;
-  panY = (wrapH - svgH * scale) / 2;
-  applyTransform();
+  /* Show detail panel */
+  fillDetail(n);
 }
 
-document.getElementById('btnFit').addEventListener('click', fitToScreen);
-document.getElementById('btnZoomIn').addEventListener('click', () => {
-  scale = Math.min(scale * 1.2, 4);
-  applyTransform();
-});
-document.getElementById('btnZoomOut').addEventListener('click', () => {
-  scale = Math.max(scale * 0.83, 0.15);
-  applyTransform();
-});
+function fillDetail(n) {
+  document.getElementById('detailDefault').style.display   = 'none';
+  document.getElementById('narratorDetail').style.display  = 'grid';
 
-/* ── Detail Panel ── */
-function openDetail(id) {
-  const s = scholarsById[id];
-  if (!s) return;
+  document.getElementById('detailEyebrow').textContent   = tabaqahThai(n.tabaqah);
+  document.getElementById('detailNameAr').textContent    = n.name_ar   || '—';
+  document.getElementById('detailTabaqahAr').textContent = n.tabaqah   || '';
+  document.getElementById('detailDeath').textContent     = n.death_ah  ? 'ฮ.ศ. ' + n.death_ah : '—';
+  document.getElementById('detailGen').textContent       = tabaqahThai(n.tabaqah);
+  document.getElementById('detailGradeIH').textContent   = n.grade_ibn_hajar || '—';
+  var cc = (n.teachers ? n.teachers.length : 0) + (n.students ? n.students.length : 0);
+  document.getElementById('detailConnCount').textContent = cc + ' การเชื่อมต่อ';
 
-  document.getElementById('detailArName').textContent = s.ar;
-  document.getElementById('detailGenBadge').textContent = 'รุ่นที่ ' + s.gen;
-
-  const teachersList = document.getElementById('detailTeachers');
-  teachersList.innerHTML = '';
-  if (s.teachers.length === 0) {
-    teachersList.innerHTML = '<li class="it-detail-empty">—</li>';
-  } else {
-    s.teachers.forEach(tid => {
-      const t = scholarsById[tid];
-      if (t) {
-        const li = document.createElement('li');
-        li.setAttribute('lang', 'ar');
-        li.setAttribute('dir', 'rtl');
-        li.textContent = t.ar;
-        teachersList.appendChild(li);
-      }
-    });
-  }
-
-  const studentsList = document.getElementById('detailStudents');
-  studentsList.innerHTML = '';
-  const studs = studentsMap[id] || [];
-  if (studs.length === 0) {
-    studentsList.innerHTML = '<li class="it-detail-empty">—</li>';
-  } else {
-    studs.forEach(sid => {
-      const st = scholarsById[sid];
-      if (st) {
-        const li = document.createElement('li');
-        li.setAttribute('lang', 'ar');
-        li.setAttribute('dir', 'rtl');
-        li.textContent = st.ar;
-        studentsList.appendChild(li);
-      }
-    });
-  }
-
-  document.getElementById('detailPanel').classList.add('is-open');
+  fillConnectionList('teachersList', n.teachers || [], 'teacher');
+  fillConnectionList('studentsList', n.students || [], 'student');
 }
 
-document.getElementById('detailCloseBtn').addEventListener('click', () => {
-  document.getElementById('detailPanel').classList.remove('is-open');
-});
-
-/* ── Back to Top ── */
-const backBtn = document.getElementById('backToTopBtn');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 400) backBtn.classList.add('visible');
-  else backBtn.classList.remove('visible');
-});
-backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-/* ── Scroll Reveal ── */
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-/* ── Init ── */
-buildSvg();
-// Fit after brief delay to ensure dimensions are settled
-requestAnimationFrame(() => {
-  requestAnimationFrame(() => {
-    fitToScreen();
+function fillConnectionList(elId, ids, type) {
+  var el  = document.getElementById(elId);
+  el.innerHTML = '';
+  if (!ids.length) {
+    el.innerHTML = '<div style="font-family:var(--thai); font-size:13px; color:var(--text-mute); padding:8px 0;">ไม่มีข้อมูล</div>';
+    return;
+  }
+  ids.forEach(function(tid){
+    var t = narById[tid];
+    if (!t) return;
+    var item = document.createElement('div');
+    item.className = 'conn-item';
+    item.innerHTML =
+      '<div class="conn-dot' + (type==='teacher' ? ' teacher' : '') + '"></div>' +
+      '<div class="conn-name-ar" lang="ar" dir="rtl">' + esc(t.name_ar) + '</div>' +
+      '<div class="conn-meta">' + (t.death_ah ? 'ฮ.ศ. ' + t.death_ah : '') + '</div>';
+    item.addEventListener('click', function(){ selectNarrator(tid); });
+    el.appendChild(item);
   });
-});
-</script>
-
-<!-- QOTD placeholder (Rule 31/51) -->
-<script>
-/* ── Quote of the Day — Islamic Fiqh Publishing ── */
-const quotes = [
-  {
-    ar: 'الْعِلْمُ بِلَا عَمَلٍ كَالشَّجَرِ بِلَا ثَمَرٍ',
-    th: '"ความรู้ที่ปราศจากการปฏิบัติ\nเปรียบดังต้นไม้ที่ไร้ผล"',
-    author: 'ابن عبد البر · เสียชีวิตปี ฮ.ศ. 463',
-  },
-  {
-    ar: 'مَنْ عَمِلَ بِمَا عَلِمَ أَوْرَثَهُ اللهُ عِلْمَ مَا لَمْ يَعْلَمْ',
-    th: '"ผู้ใดปฏิบัติตามสิ่งที่ตนรู้\nอัลลอฮ์จะทรงประทานความรู้ในสิ่งที่เขาไม่รู้"',
-    author: 'أبو حامد الغزالي · เสียชีวิตปี ฮ.ศ. 505',
-  },
-  {
-    ar: 'طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ',
-    th: '"การแสวงหาความรู้เป็นภาคบังคับ\nสำหรับมุสลิมทุกคน"',
-    author: 'رسول الله ﷺ · บันทึกโดย ابن ماجه',
-  },
-];
-
-let qotdIdx = 0;
-/* QOTD display handled by main site component if present */
-if (typeof window.initQOTD === 'function') {
-  window.initQOTD(quotes, 9000);
 }
+
+document.getElementById('detailClose').addEventListener('click', function(){
+  document.getElementById('narratorDetail').style.display = 'none';
+  document.getElementById('detailDefault').style.display  = '';
+  selectedId = null;
+  document.querySelectorAll('#gNodes .node-circle').forEach(function(el){ el.classList.remove('selected'); });
+  document.querySelectorAll('#gNodes .node-label').forEach(function(el){  el.classList.remove('selected'); });
+  document.querySelectorAll('.edge').forEach(function(el){ el.classList.remove('highlighted'); });
+});
+
+/* =========================================================
+   PAN & ZOOM
+   ========================================================= */
+function applyTransform() {
+  if (!gMain) return;
+  gMain.setAttribute('transform',
+    'translate(' + panZoom.x.toFixed(2) + ',' + panZoom.y.toFixed(2) + ') scale(' + panZoom.k.toFixed(3) + ')');
+}
+
+function initPanZoom() {
+  var dragging = false, lx = 0, ly = 0;
+
+  vizSvg.addEventListener('mousedown', function(e){
+    if (e.target.closest('g[data-id]')) return; /* don't pan when clicking a node */
+    dragging = true; lx = e.clientX; ly = e.clientY;
+  });
+  window.addEventListener('mousemove', function(e){
+    if (!dragging) return;
+    panZoom.x += e.clientX - lx;
+    panZoom.y += e.clientY - ly;
+    lx = e.clientX; ly = e.clientY;
+    applyTransform();
+  });
+  window.addEventListener('mouseup', function(){ dragging = false; });
+
+  /* Touch */
+  var ltx = 0, lty = 0;
+  vizSvg.addEventListener('touchstart', function(e){ if(e.touches.length===1){ ltx=e.touches[0].clientX; lty=e.touches[0].clientY; } }, {passive:true});
+  vizSvg.addEventListener('touchmove',  function(e){
+    if(e.touches.length===1){
+      panZoom.x += e.touches[0].clientX - ltx; panZoom.y += e.touches[0].clientY - lty;
+      ltx = e.touches[0].clientX; lty = e.touches[0].clientY; applyTransform();
+    }
+  }, {passive:true});
+
+  /* Wheel zoom */
+  vizSvg.addEventListener('wheel', function(e){
+    e.preventDefault();
+    var rect = vizSvg.getBoundingClientRect();
+    var cx   = e.clientX - rect.left;
+    var cy   = e.clientY - rect.top;
+    var d    = e.deltaY > 0 ? 0.85 : 1.18;
+    var nk   = Math.max(0.15, Math.min(5, panZoom.k * d));
+    panZoom.x = cx - (cx - panZoom.x) * (nk / panZoom.k);
+    panZoom.y = cy - (cy - panZoom.y) * (nk / panZoom.k);
+    panZoom.k = nk; applyTransform();
+  }, {passive:false});
+
+  /* Buttons */
+  document.getElementById('zoomIn').addEventListener('click',    function(){ panZoom.k = Math.min(5, panZoom.k*1.3); applyTransform(); });
+  document.getElementById('zoomOut').addEventListener('click',   function(){ panZoom.k = Math.max(0.15, panZoom.k/1.3); applyTransform(); });
+  document.getElementById('zoomReset').addEventListener('click', function(){ panZoom={x:0,y:0,k:1}; applyTransform(); });
+}
+
+/* ── Filter buttons ─────────────────────────────────────────── */
+function initFilters() {
+  document.querySelectorAll('.filter-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+      this.classList.add('active');
+      currentFilter = this.getAttribute('data-filter');
+      renderGraph(currentFilter);
+      if (selectedId) {
+        /* re-apply selection highlight after re-render */
+        var gEl = document.querySelector('#gNodes g[data-id="' + selectedId + '"]');
+        if (gEl) {
+          var c = gEl.querySelector('.node-circle'); if(c) c.classList.add('selected');
+          var t = gEl.querySelector('.node-label');  if(t) t.classList.add('selected');
+        }
+        document.querySelectorAll('.edge').forEach(function(el){
+          var f  = parseInt(el.getAttribute('data-from'),10);
+          var to = parseInt(el.getAttribute('data-to'),  10);
+          el.classList.toggle('highlighted', f===selectedId || to===selectedId);
+        });
+      }
+    });
+  });
+}
+
+/* =========================================================
+   READING PROGRESS BAR — Rule 39
+   ========================================================= */
+window.addEventListener('scroll', function(){
+  var bar  = document.getElementById('readingProgress');
+  if (!bar) return;
+  var st   = document.documentElement.scrollTop;
+  var docH = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  bar.style.width = (docH > 0 ? (st / docH) * 100 : 0) + '%';
+});
+
+/* =========================================================
+   BACK TO TOP — Rule 36
+   ========================================================= */
+window.addEventListener('scroll', function(){
+  var btn = document.getElementById('backToTopBtn');
+  if (!btn) return;
+  btn.style.display = document.documentElement.scrollTop > 400 ? 'grid' : 'none';
+});
+
+/* =========================================================
+   REVEAL ON SCROLL — Rule 35 (data-reveal, same as index.html)
+   ========================================================= */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+  });
+},{threshold:.12});
+
+document.querySelectorAll('[data-reveal]').forEach(function(el){
+  var r = el.getBoundingClientRect();
+  if(r.top < window.innerHeight && r.bottom > 0){ el.classList.add('is-in'); }
+  else { io.observe(el); }
+});
+
+/* ── Bootstrap ───────────────────────────────────────────────── */
+loadData();
 </script>
 
 </body>
