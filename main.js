@@ -62,7 +62,7 @@ function installSubpageSurface() {
     if (!document.querySelector('link[data-ifp-subpage-surface]')) {
         const surfaceLink = document.createElement('link');
         surfaceLink.rel = 'stylesheet';
-        surfaceLink.href = '/site-background.css?v=5';
+        surfaceLink.href = '/site-background.css?v=6';
         surfaceLink.setAttribute('data-ifp-subpage-surface', 'true');
         document.head.appendChild(surfaceLink);
     }
