@@ -68,8 +68,8 @@ html.dark-mode {
   --bg-tertiary: #1d1814;      /* Medium dark */
   --text-primary: #e8e0d0;     /* Warm ivory text */
   --text-secondary: #9a907e;   /* Sand colored muted text */
-  --text-tertiary: #6b6357;    /* Earthy dark gray muted text */
-  --text-quaternary: #525252;
+  --text-tertiary: #8ea4bc;    /* Earthy dark gray muted text */
+  --text-quaternary: #6a8099;
   --border-primary: rgba(232,224,208,0.12);
   --border-secondary: rgba(232,224,208,0.24);
   --accent-color: #3b82f6;     /* Brand Gold */
@@ -81,6 +81,17 @@ html.dark-mode {
   
   --shadow-color: rgba(0,0,0,0.4);
   --shadow-heavy: rgba(0,0,0,0.6);
+}
+
+
+/* Dark mode background — inline fallback, beats site-background.css light rule via specificity (0,2,2) > (0,2,1) */
+html.dark-mode body.ifp-tools-page {
+  background: linear-gradient(180deg, #06101e 0, #06101e 360px, #030912 690px, #030912 100%) fixed !important;
+}
+@media (max-width: 768px) {
+  html.dark-mode body.ifp-tools-page {
+    background: linear-gradient(180deg, #06101e 0, #06101e 330px, #030912 620px, #030912 100%) fixed !important;
+  }
 }
 
 /* --- 1. สไตล์พื้นฐาน --- */
