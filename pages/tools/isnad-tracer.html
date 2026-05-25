@@ -53,8 +53,8 @@
   --text:     var(--text-primary);
   --text-dim: var(--text-secondary);
   --text-mute:var(--text-tertiary);
-  --gold:        #b31b1b;
-  --gold-bright: #d32f2f;
+  --gold:        #3b82f6;
+  --gold-bright: #60a5fa;
   --accent:      #3b82f6;
   --rule:        rgba(0,50,100,0.06);
   --rule-strong: rgba(0,50,100,0.12);
@@ -290,7 +290,7 @@ body::before {
 .tabaqah-card:hover { border-color:var(--gold); background:var(--ink-3); transform:translateY(-2px); }
 .tabaqah-card:hover::before { transform:scaleX(1); }
 .tabaqah-card.active {
-  border-color:var(--gold); background:rgba(179,27,27,.07);
+  border-color:var(--gold); background:rgba(59,130,246,.06);
 }
 .tabaqah-card.active::before { transform:scaleX(1); }
 .tabaqah-card.loading { opacity:.6; cursor:wait; }
@@ -425,9 +425,9 @@ body::before {
 html.dark-mode .list-row:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.22);
 }
-.list-row.active { 
-  background:rgba(179,27,27,.07) !important; 
-  border-left:3px solid var(--gold); 
+.list-row.active {
+  background:rgba(59,130,246,.07) !important;
+  border-left:3px solid var(--gold);
   padding-left:13px;
   font-weight: 500;
 }
@@ -441,13 +441,17 @@ html.dark-mode .list-row:hover {
 /* ─── Academic Badges ─── */
 .badge {
   display: inline-block;
-  padding: 4px 10px;
+  padding: 3px 9px;
   border-radius: 999px;
   font-size: 11px;
   font-weight: 500;
-  font-family: var(--thai);
+  font-family: var(--arabic);
   text-align: center;
   white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: rtl;
 }
 .badge-sahabi {
   background: rgba(59, 130, 246, 0.08);
@@ -460,29 +464,34 @@ html.dark-mode .badge-sahabi {
   border: 1px solid rgba(59, 130, 246, 0.35);
 }
 .badge-thiqah {
-  background: rgba(179, 27, 27, 0.06);
-  color: #b31b1b;
-  border: 1px solid rgba(179, 27, 27, 0.18);
+  background: rgba(22, 163, 74, 0.07);
+  color: #16a34a;
+  border: 1px solid rgba(22, 163, 74, 0.20);
 }
 html.dark-mode .badge-thiqah {
-  background: rgba(239, 68, 68, 0.1);
-  color: #f87171;
-  border: 1px solid rgba(239, 68, 68, 0.25);
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.28);
 }
 .badge-sadooq {
-  background: rgba(245, 158, 11, 0.06);
-  color: #d97706;
-  border: 1px solid rgba(245, 158, 11, 0.18);
+  background: rgba(234, 179, 8, 0.07);
+  color: #a16207;
+  border: 1px solid rgba(234, 179, 8, 0.20);
 }
 html.dark-mode .badge-sadooq {
-  background: rgba(245, 158, 11, 0.12);
-  color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  background: rgba(234, 179, 8, 0.12);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.30);
 }
 .badge-daeef {
   background: rgba(239, 68, 68, 0.06);
   color: #dc2626;
   border: 1px solid rgba(239, 68, 68, 0.18);
+}
+html.dark-mode .badge-daeef {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.28);
 }
 .badge-majhool {
   background: rgba(107, 114, 128, 0.06);
@@ -490,7 +499,7 @@ html.dark-mode .badge-sadooq {
   border: 1px solid rgba(107, 114, 128, 0.18);
 }
 html.dark-mode .badge-majhool {
-  background: rgba(156, 163, 175, 0.1);
+  background: rgba(156, 163, 175, 0.10);
   color: #9ca3af;
   border: 1px solid rgba(156, 163, 175, 0.25);
 }
@@ -509,7 +518,7 @@ html.dark-mode .ego-panel {
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
 }
 .ego-panel:hover {
-  border-color: rgba(179, 27, 27, 0.4);
+  border-color: rgba(59, 130, 246, 0.35);
 }
 .ego-empty {
   display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -525,7 +534,7 @@ html.dark-mode .ego-panel {
 .ego-leg-item  { display:flex; align-items:center; gap:8px; font-family:var(--ui); font-size:11px; letter-spacing:.1em; color:var(--text-mute); }
 .ego-dot       { width:28px; height:14px; border-radius:3px; flex-shrink:0; }
 .ego-dot-t     { background:rgba(59,130,246,.12); border:1px solid #3b82f6; }
-.ego-dot-c     { background:rgba(179,27,27,.10); border:1px solid var(--gold); }
+.ego-dot-c     { background:rgba(59,130,246,.12); border:1px solid var(--gold); }
 .ego-dot-s     { background:rgba(59,130,246,.05); border:1px solid rgba(59,130,246,.4); }
 .ego-svg       { 
   width:100%; display:block; 
@@ -550,10 +559,10 @@ html.dark-mode .edge { stroke: rgba(232,224,208,0.14); }
   rx: 999;
   transition: fill 0.25s, stroke 0.25s, stroke-width 0.25s;
 }
-.node-bg-center  { fill: rgba(179,27,27,0.06); stroke: var(--gold); stroke-width: 1.8px; }
+.node-bg-center  { fill: rgba(59,130,246,0.10); stroke: var(--gold); stroke-width: 1.8px; }
 .node-bg-teacher { fill: rgba(59,130,246,0.04); stroke: rgba(59,130,246,0.32); stroke-width: 1.2px; }
 .node-bg-student { fill: rgba(59,130,246,0.02); stroke: rgba(59,130,246,0.16); stroke-width: 1.2px; }
-html.dark-mode .node-bg-center  { fill: rgba(179,27,27,0.16); }
+html.dark-mode .node-bg-center  { fill: rgba(59,130,246,0.20); }
 html.dark-mode .node-bg-teacher { fill: rgba(59,130,246,0.08); stroke: rgba(59,130,246,0.5); }
 html.dark-mode .node-bg-student { fill: rgba(59,130,246,0.04); stroke: rgba(59,130,246,0.32); }
 
@@ -1332,33 +1341,34 @@ function rebuildList(narrators) {
   updateListWindow();
 }
 
+function truncGrade(g) {
+  var comma = g.indexOf('،');
+  var short = comma > 0 ? g.substring(0, comma).trim() : g;
+  var words = short.split(' ');
+  return words.length > 3 ? words.slice(0, 3).join(' ') : short;
+}
+
 function renderGradeBadge(grade) {
   if (!grade) return '—';
   var g = grade.trim();
-  
-  // Companion check
+  var label = truncGrade(g);
+
   if (g.indexOf('صحابي') > -1 || g.indexOf('صحابية') > -1 || g.indexOf('صحابة') > -1) {
-    return '<span class="badge badge-sahabi">' + esc(g) + '</span>';
+    return '<span class="badge badge-sahabi" title="' + esc(g) + '">' + esc(label) + '</span>';
   }
-  // Trustworthy check
   if (g.indexOf('ثقة') > -1 || g.indexOf('حافظ') > -1 || g.indexOf('أحد الأئمة') > -1) {
-    return '<span class="badge badge-thiqah">' + esc(g) + '</span>';
+    return '<span class="badge badge-thiqah" title="' + esc(g) + '">' + esc(label) + '</span>';
   }
-  // Sadooq check
   if (g.indexOf('صدوق') > -1 || g.indexOf('مقبول') > -1 || g.indexOf('وسط') > -1 || g.indexOf('صالح') > -1) {
-    return '<span class="badge badge-sadooq">' + esc(g) + '</span>';
+    return '<span class="badge badge-sadooq" title="' + esc(g) + '">' + esc(label) + '</span>';
   }
-  // Daeef check
   if (g.indexOf('ضعيف') > -1 || g.indexOf('متروك') > -1 || g.indexOf('لين') > -1) {
-    return '<span class="badge badge-daeef">' + esc(g) + '</span>';
+    return '<span class="badge badge-daeef" title="' + esc(g) + '">' + esc(label) + '</span>';
   }
-  // Majhool check
   if (g.indexOf('مجهول') > -1 || g.indexOf('لا يعرف') > -1) {
-    return '<span class="badge badge-majhool">' + esc(g) + '</span>';
+    return '<span class="badge badge-majhool" title="' + esc(g) + '">' + esc(label) + '</span>';
   }
-  
-  // Fallback: default clean badge
-  return '<span class="badge badge-majhool">' + esc(g) + '</span>';
+  return '<span class="badge badge-majhool" title="' + esc(g) + '">' + esc(label) + '</span>';
 }
 
 function updateListWindow() {
