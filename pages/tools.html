@@ -31,34 +31,52 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="../article.css?v=9">
 
 <style>
-/* ─── TOKEN SYSTEM — mirrors index.html ─────────────────────────── */
+@font-face {
+  font-family: 'D-DIN';
+  src: url('../D-DIN.e58c68e58b09fc0e.woff2') format('woff2'),
+       url('../D-DIN.105cb3e9fde868e3.woff') format('woff'),
+       url('../D-DIN.e77db3e5eeb79c76.otf') format('opentype');
+  font-style: normal; font-weight: 400; font-display: block;
+}
+
+/* ─── TOKEN SYSTEM — mirrors index.html canonical ─────────────────── */
 :root {
-  --t-ink:      #e3edf7;
-  --t-paper:    #111111;
-  --t-dim:      #444444;
-  --t-mute:     #777777;
-  --t-gold:     #b31b1b;
-  --t-rule:     rgba(0,50,100,0.08);
-  --t-border:   rgba(0,50,100,0.10);
-  --t-card-bg:  #d6e2ee;
-  --t-card-bg2: #c8d7e5;
-  --t-serif:    'Cormorant Garamond', Georgia, serif;
-  --t-thai:     'Sarabun', system-ui, sans-serif;
+  --bg-primary: #e3edf7;
+  --bg-secondary: #d6e2ee;
+  --bg-tertiary: #c8d7e5;
+  --text-primary: #111111;
+  --text-secondary: #444444;
+  --text-tertiary: #777777;
+  --border-primary: rgba(0,50,100,0.06);
+  --border-secondary: rgba(0,50,100,0.12);
+  --ink: var(--bg-primary); --ink-2: var(--bg-secondary); --ink-3: var(--bg-tertiary);
+  --ink-4: var(--border-secondary); --paper: var(--text-primary); --paper-2: var(--text-secondary);
+  --bone: #556270; --text: var(--text-primary); --text-dim: var(--text-secondary);
+  --text-mute: var(--text-tertiary); --gold: #b31b1b; --gold-bright: #d32f2f;
+  --rule: rgba(0,50,100,0.06); --rule-strong: rgba(0,50,100,0.12);
+  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --thai: 'Sarabun', system-ui, sans-serif;
+  --arabic: 'Amiri', serif;
+  --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
 }
 html.dark-mode {
-  --t-ink:      #0a0907;
-  --t-paper:    #e8e0d0;
-  --t-dim:      #9a907e;
-  --t-mute:     #8ea4bc;
-  --t-rule:     rgba(232,224,208,0.14);
-  --t-border:   rgba(232,224,208,0.18);
-  --t-card-bg:  #14110d;
-  --t-card-bg2: #1d1814;
+  --bg-primary: #0a0907;
+  --bg-secondary: #14110d;
+  --bg-tertiary: #1d1814;
+  --text-primary: #e8e0d0;
+  --text-secondary: #9a907e;
+  --text-tertiary: #6b6357;
+  --border-primary: rgba(232,224,208,0.12);
+  --border-secondary: rgba(232,224,208,0.24);
+  --ink: var(--bg-primary); --ink-2: var(--bg-secondary); --ink-3: var(--bg-tertiary);
+  --ink-4: var(--border-secondary); --paper: var(--text-primary); --paper-2: var(--text-secondary);
+  --bone: #9a907e; --text: var(--text-primary); --text-dim: var(--text-secondary);
+  --text-mute: var(--text-tertiary); --rule: rgba(232,224,208,.14); --rule-strong: rgba(232,224,208,.32);
 }
 
 /* Dark mode background — inline fallback, specificity (0,2,2) beats site-background.css light rule (0,2,1) */
@@ -71,7 +89,37 @@ html.dark-mode body.ifp-tools-page {
   }
 }
 
-body { background: var(--t-ink); color: var(--t-paper); }
+body { background: var(--ink); color: var(--paper); }
+
+/* ─── READING PROGRESS ───────────────────────────────────────────── */
+#readingProgress{position:fixed;top:0;left:0;height:2px;width:0%;background:var(--gold);z-index:9999;transition:width .1s linear;}
+
+/* ─── BACK TO TOP ────────────────────────────────────────────────── */
+#backToTopBtn{
+  display:none;position:fixed;bottom:32px;right:32px;z-index:500;
+  width:48px;height:48px;
+  border:1px solid var(--border-primary);border-radius:50%;
+  background:rgba(10,12,16,0.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  color:var(--text-secondary);
+  box-shadow:0 8px 32px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05);
+  transition:all .35s cubic-bezier(.2,.7,.2,1);cursor:pointer;
+  place-items:center;padding:0;
+}
+#backToTopBtn svg{transition:transform 0.3s ease;}
+#backToTopBtn:hover{
+  border-color:var(--gold);color:var(--gold);
+  background:rgba(10,12,16,0.90);transform:translateY(-5px);
+  box-shadow:0 12px 40px rgba(59,130,246,0.18),0 8px 32px rgba(0,0,0,0.36);
+}
+#backToTopBtn:hover svg{transform:translateY(-3px);}
+
+/* ─── SCROLL REVEAL ──────────────────────────────────────────────── */
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);}
+[data-reveal].is-in{opacity:1;transform:none;}
+[data-reveal][data-delay="1"]{transition-delay:.08s;}
+[data-reveal][data-delay="2"]{transition-delay:.16s;}
+[data-reveal][data-delay="3"]{transition-delay:.24s;}
+[data-reveal][data-delay="4"]{transition-delay:.32s;}
 
 /* ─── TOOLS HERO ─────────────────────────────────────────────────── */
 .tools-hero {
@@ -105,14 +153,14 @@ html.dark-mode .tools-hero::before {
 }
 
 .tools-display {
-  font-family: var(--t-serif);
+  font-family: var(--serif);
   font-weight: 600;
   font-size: clamp(40px, 12vw, 160px);
   line-height: 1.05;
   letter-spacing: -.02em;
-  color: var(--t-paper);
+  color: var(--paper);
 }
-.tools-display em  { font-style: italic; color: var(--t-gold); font-weight: 400; }
+.tools-display em  { font-style: italic; color: var(--gold); font-weight: 400; }
 .tools-display .br { display: block; }
 
 /* ─── METEOR SHOWER DIVIDER ─────────────────────────────────────── */
@@ -125,7 +173,7 @@ html.dark-mode .tools-hero::before {
 .hero-meteors .meteor {
   position: absolute;
   width: 1px;
-  background: linear-gradient(to bottom, transparent 0%, var(--t-gold) 55%, transparent 100%);
+  background: linear-gradient(to bottom, transparent 0%, var(--gold) 55%, transparent 100%);
   opacity: 0;
   animation: meteor-drop var(--dur) var(--delay) ease-in infinite;
 }
@@ -144,17 +192,17 @@ html.dark-mode .tools-hero::before {
 .tools-hero-sub {
   max-width: 600px;
   margin: 0 auto;
-  font-family: var(--t-thai);
+  font-family: var(--thai);
   font-weight: 300;
   font-size: 17px;
   line-height: 1.8;
-  color: var(--t-dim);
+  color: var(--text-dim);
 }
 
 /* ─── DIVIDER BETWEEN HERO AND GRID ─────────────────────────────── */
 .tools-section-sep {
   height: 1px;
-  background: var(--t-rule);
+  background: var(--rule);
   max-width: 1100px;
   margin: 0 auto 60px;
 }
@@ -165,8 +213,8 @@ html.dark-mode .tools-hero::before {
 
 /* ─── TOOL CARDS ─────────────────────────────────────────────────── */
 .tool-card {
-  background: var(--t-card-bg);
-  border: 1px solid var(--t-border);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
   border-radius: 12px;
   padding: 40px 30px;
   text-align: center;
@@ -175,56 +223,56 @@ html.dark-mode .tools-hero::before {
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s, border-color 0.3s;
 }
 .tool-card:hover {
-  border-color: var(--t-gold);
+  border-color: var(--gold);
   box-shadow: 0 20px 40px rgba(0,0,0,0.12);
   transform: translateY(-5px);
 }
 .tool-card::before {
   content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-  background: var(--t-gold);
+  background: var(--gold);
   transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
 }
 .tool-card:hover::before { transform: scaleX(1); }
 
 .tool-icon {
   font-size: 36px; line-height: 1;
-  color: var(--t-paper);
-  background: var(--t-card-bg2);
+  color: var(--paper);
+  background: var(--bg-tertiary);
   width: 70px; height: 70px; border-radius: 50%;
-  border: 1px solid var(--t-border);
+  border: 1px solid var(--border-primary);
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 24px; flex-shrink: 0;
 }
 
-.tool-name      { font-family: var(--t-thai); font-size: 22px; font-weight: 700; color: var(--t-paper); margin-bottom: 12px; }
-.tool-desc-text { font-size: 14px; color: var(--t-dim); line-height: 1.7; flex-grow: 1; margin-bottom: 28px; text-align: left; }
+.tool-name      { font-family: var(--thai); font-size: 22px; font-weight: 700; color: var(--paper); margin-bottom: 12px; }
+.tool-desc-text { font-size: 14px; color: var(--text-dim); line-height: 1.7; flex-grow: 1; margin-bottom: 28px; text-align: left; }
 
 .tool-btn {
   display: inline-block; padding: 11px 28px;
   font-size: 13px; font-weight: 600; letter-spacing: .04em;
-  color: var(--t-paper); background: transparent;
-  border-radius: 4px; border: 1px solid var(--t-border);
+  color: var(--paper); background: transparent;
+  border-radius: 4px; border: 1px solid var(--border-primary);
   transition: background 0.3s, border-color 0.3s, color 0.3s;
   text-decoration: none;
 }
-.tool-btn:hover { background: var(--t-gold); border-color: var(--t-gold); color: #fff; }
+.tool-btn:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
 
 .status-badge {
   display: inline-block; padding: 4px 14px;
   font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
   border-radius: 20px; margin-bottom: 20px; align-self: center;
 }
-.status-available { background: rgba(179,27,27,0.10); color: var(--t-gold); }
-.status-soon      { background: var(--t-card-bg2); color: var(--t-mute); border: 1px solid var(--t-border); }
+.status-available { background: rgba(179,27,27,0.10); color: var(--gold); }
+.status-soon      { background: var(--bg-tertiary); color: var(--text-mute); border: 1px solid var(--border-primary); }
 
 .tool-card.coming-soon {
-  background: transparent; border: 1px dashed var(--t-border); opacity: 0.8;
+  background: transparent; border: 1px dashed var(--border-primary); opacity: 0.8;
 }
-.tool-card.coming-soon:hover { border-color: var(--t-border); box-shadow: none; transform: translateY(-2px); }
+.tool-card.coming-soon:hover { border-color: var(--border-primary); box-shadow: none; transform: translateY(-2px); }
 .tool-card.coming-soon::before { display: none; }
 .tool-card.coming-soon .tool-icon { opacity: 0.45; filter: grayscale(1); }
-.tool-card.coming-soon .tool-name { color: var(--t-dim); }
-.tool-card.coming-soon .status-badge { background: var(--t-card-bg); color: var(--t-mute); }
+.tool-card.coming-soon .tool-name { color: var(--text-dim); }
+.tool-card.coming-soon .status-badge { background: var(--bg-secondary); color: var(--text-mute); }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────────────── */
 @media (max-width: 640px) {
@@ -236,6 +284,8 @@ html.dark-mode .tools-hero::before {
 </head>
 <body id="tools-page" class="ifp-tools-page" lang="th">
 
+<div id="readingProgress"></div>
+<button id="backToTopBtn" title="กลับขึ้นบนสุด" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
 <div id="header-placeholder"></div>
 
 <main>
@@ -243,18 +293,18 @@ html.dark-mode .tools-hero::before {
   <!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
   <section class="tools-hero">
     <div class="tools-hero-inner">
-      <h1 class="tools-display">
+      <h1 class="tools-display" data-reveal>
         <span class="br">เครื่องมือ</span>
         <span class="br"><em>นักวิชาการ</em></span>
       </h1>
-      <div class="hero-meteors" aria-hidden="true">
+      <div class="hero-meteors" aria-hidden="true" data-reveal data-delay="1">
         <span class="meteor"></span>
         <span class="meteor"></span>
         <span class="meteor"></span>
         <span class="meteor"></span>
         <span class="meteor"></span>
       </div>
-      <p class="tools-hero-sub">แพลตฟอร์มดิจิทัลที่พัฒนาขึ้นเพื่อประยุกต์ใช้เทคโนโลยีร่วมกับหลักนิติศาสตร์อิสลาม มุ่งอำนวยความสะดวกในวิถีชีวิตประจำวันของมุสลิม</p>
+      <p class="tools-hero-sub" data-reveal data-delay="2">แพลตฟอร์มดิจิทัลที่พัฒนาขึ้นเพื่อประยุกต์ใช้เทคโนโลยีร่วมกับหลักนิติศาสตร์อิสลาม มุ่งอำนวยความสะดวกในวิถีชีวิตประจำวันของมุสลิม</p>
     </div>
   </section>
 
@@ -309,6 +359,31 @@ html.dark-mode .tools-hero::before {
 
 <div id="footer-placeholder"></div>
 <script src="../main.js?v=20260525"></script>
+<script>
+(function(){
+  var bar = document.getElementById('readingProgress');
+  if(bar){
+    window.addEventListener('scroll',function(){
+      var st = document.documentElement.scrollTop;
+      var sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (sh > 0 ? (st/sh*100) : 0) + '%';
+    });
+  }
+  window.addEventListener('scroll',function(){
+    var btn = document.getElementById('backToTopBtn');
+    if(!btn) return;
+    btn.style.display = (document.documentElement.scrollTop > 400) ? 'grid' : 'none';
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){
+    var r = el.getBoundingClientRect();
+    if(r.top < window.innerHeight && r.bottom > 0){ el.classList.add('is-in'); }
+    else { io.observe(el); }
+  });
+})();
+</script>
 </body>
 </html>
 
