@@ -192,3 +192,66 @@ html.dark-mode body.ifp-subpage-bg::after {
     animation: none;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   TOOLS PAGES — Light mode override
+   Body gets class "ifp-tools-page" directly in HTML.
+   main.js then adds "ifp-subpage-bg", so both classes coexist.
+   The double-class selector (higher specificity) restores light colors.
+   ═══════════════════════════════════════════════════════════════════ */
+body.ifp-tools-page.ifp-subpage-bg {
+  --text-primary:    #111111;
+  --text-secondary:  #444444;
+  --text-tertiary:   #777777;
+  --text-quaternary: #999999;
+  --bg-primary:      #e3edf7;
+  --bg-secondary:    #d6e2ee;
+  --bg-tertiary:     #c8d7e5;
+  --border-primary:  rgba(0, 50, 100, 0.06);
+  --border-secondary:rgba(0, 50, 100, 0.12);
+  --shadow-color:    rgba(0, 0, 0, 0.06);
+  --shadow-heavy:    rgba(0, 0, 0, 0.12);
+  --accent-color:    #b31b1b;
+  background:
+    linear-gradient(
+      180deg,
+      #e3edf7 0,
+      #e3edf7 360px,
+      #ffffff 690px,
+      #ffffff 100%
+    ) fixed !important;
+  color: #111111;
+}
+
+/* Wave pseudo-elements: multiply blend visible on light bg, low opacity */
+body.ifp-tools-page.ifp-subpage-bg::before {
+  opacity: 0.14;
+  filter: saturate(0.6) brightness(1.05);
+}
+
+body.ifp-tools-page.ifp-subpage-bg::after {
+  mix-blend-mode: multiply;
+  opacity: 0.10;
+  filter: saturate(0.5);
+}
+
+/* Dark mode: keep dark navy surface; boost text contrast only */
+html.dark-mode body.ifp-tools-page.ifp-subpage-bg {
+  --text-primary:    #f0f4ff;
+  --text-secondary:  #b8c8e0;
+  --text-tertiary:   #8ea4bc;
+  --text-quaternary: #6a8099;
+}
+
+@media (max-width: 768px) {
+  body.ifp-tools-page.ifp-subpage-bg {
+    background:
+      linear-gradient(
+        180deg,
+        #e3edf7 0,
+        #e3edf7 330px,
+        #ffffff 620px,
+        #ffffff 100%
+      ) fixed !important;
+  }
+}
