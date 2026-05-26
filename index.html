@@ -168,23 +168,7 @@ body::before {
     radial-gradient(80% 60% at 10% 90%, rgba(59,130,246,.05), transparent 70%);
 }
 
-.hero-top { display: flex; justify-content: center; width: 100%; border-bottom: 1px solid var(--rule); padding-bottom: 24px; position: relative; z-index: 5; }
-.hero-nav { display: flex; gap: 40px; justify-content: center; align-items: center; flex-wrap: wrap; }
-.hero-nav-row { display: contents; }
-.hero-nav-item {
-  font-family: var(--thai); font-size: 14px; letter-spacing: .02em;
-  color: var(--text-dim); transition: color .25s, transform .25s; font-weight: 500; text-decoration: none;
-}
-.hero-nav-item:hover, .hero-nav-item.active { color: var(--gold); transform: translateY(-1px); }
-@media (max-width: 767px) {
-  .hero-nav { flex-direction: column; align-items: center; gap: 10px; }
-  .hero-nav-row { display: flex; justify-content: center; gap: 16px; }
-  .hero-nav-item { font-size: 12px; letter-spacing: 0; }
-}
-
 @media (max-width: 1023px) {
-  .hero-nav { display: none; }
-  .hero-top { display: none; }
   .hero { padding-top: 80px; }
   .hero-body { margin-top: 40px; }
 }
@@ -193,22 +177,22 @@ body::before {
 
 .hero-arabic {
   font-family: var(--arabic); font-weight: 400;
-  font-size: clamp(40px, 7.2vw, 110px);
+  font-size: clamp(46px, 8.3vw, 127px);
   line-height: 1.35; color: var(--paper); direction: rtl; letter-spacing: 0;
   margin-bottom: 36px; text-shadow: 0 0 60px rgba(179,27,27,.12);
 }
 
 .hero-arabic-ref {
-  font-family: var(--thai); font-size: 16px; color: var(--text-primary);
+  font-family: var(--thai); font-size: 18px; color: var(--text-primary);
   letter-spacing: 0; margin-bottom: 128px; font-weight: 400;
 }
 
 .hero-display {
-  font-family: var(--serif); font-weight: 300;
+  font-family: 'IBM Plex Sans Thai', 'IBM Plex Sans', system-ui, sans-serif; font-weight: 300;
   font-size: clamp(56px, 11vw, 180px);
   line-height: 1.05; letter-spacing: -.02em; color: var(--paper);
 }
-.hero-display em { font-style: normal; font-weight: 700; color: #d32f2f; letter-spacing: -0.02em; }
+.hero-display em { font-style: normal; font-weight: 700; color: var(--gold); letter-spacing: -0.02em; }
 .hero-display .br { display: block; }
 
 .hero-sub {
@@ -716,7 +700,6 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 @media(max-width:600px){
   .wrap { padding: 0 20px; }
   .hero { padding: 80px 0 60px; }
-  .hero-top { grid-template-columns: 1fr; gap: 16px; }
   .hero-tag { text-align: left; }
   .section { padding: 80px 0; }
   #backToTopBtn { bottom: 20px; right: 20px; }
@@ -758,22 +741,6 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 <div class="hero">
   <canvas id="fluidCanvas"></canvas>
   <div class="wrap">
-    <div class="hero-top">
-      <nav class="hero-nav" data-reveal>
-        <span class="hero-nav-row">
-          <a href="/pages/about.html" class="hero-nav-item">เกี่ยวกับเรา</a>
-          <a href="/pages/kalam.html" class="hero-nav-item">กะลาม</a>
-          <a href="/pages/nitisart.html" class="hero-nav-item">นิติศาสตร์</a>
-          <a href="/pages/hadith.html" class="hero-nav-item">หะดีษ</a>
-        </span>
-        <span class="hero-nav-row">
-          <a href="/pages/history.html" class="hero-nav-item">ประวัติศาสตร์</a>
-          <a href="/pages/hajj.html" class="hero-nav-item">หัจญ์ & อุมเราะฮ์</a>
-          <a href="/pages/tools.html" class="hero-nav-item">เครื่องมือนักวิชาการ</a>
-        </span>
-      </nav>
-    </div>
-
     <div class="hero-body">
       <div class="hero-arabic" lang="ar" dir="rtl" data-reveal>أَصْلُهَا ثَابِتٌ وَفَرْعُهَا فِي السَّمَاءِ</div>
       <div class="hero-arabic-ref" data-reveal data-delay="1">— สูเราะฮ์อิบรอฮีม · โองการที่ 24 —</div>

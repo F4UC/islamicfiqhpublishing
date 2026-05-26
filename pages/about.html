@@ -70,15 +70,21 @@ body{
 }
 a{text-decoration:none;color:inherit;transition: color 0.2s ease;}
 
-/* ─── PAGE HERO ─────────────────────────────────────────────────── */
-.page-hero{min-height:52vh;padding:90px 0 60px;text-align:center;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--ink)}
-.page-hero-inner{max-width:800px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
-.page-display{font-family:var(--serif);font-weight:600;font-size:clamp(32px,7vw,120px);line-height:1.05;letter-spacing:-.02em;color:var(--heading);white-space:nowrap}
+/* ─── PAGE HERO (Video) ─────────────────────────────────────────── */
+:root{--ph-serif:'IBM Plex Sans Thai', system-ui, sans-serif;--ph-thai:'Sarabun',sans-serif}
+.page-hero{position:relative;height:100vh;overflow:hidden;background:var(--ink,#0a0907)}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.page-hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0) 100%)}
+.page-hero-inner{position:absolute;left:60px;bottom:120px;max-width:560px;z-index:3;text-align:left}
+.page-display{font-family:var(--ph-serif);font-weight:700;font-size:clamp(32px,7vw,120px);line-height:1.05;letter-spacing:-.02em;white-space:nowrap;color:#f5f1ea;text-shadow:0 2px 24px rgba(0,0,0,0.6)}
 .page-display em{font-style:normal;font-weight:700;color:#d32f2f;letter-spacing:-0.02em}
-.page-display .br{display:block}
-.page-hero-sub{max-width:560px;margin:0 auto;font-family:var(--thai);font-weight:400;font-size:16px;line-height:1.8;color:var(--text)}
-.page-hero-sep{height:1px;background:var(--line);max-width:900px;margin:0 auto 48px}
-@media(max-width:640px){.page-hero{min-height:30vh;padding:40px 0 28px}}
+.page-display .br{display:inline}
+.page-hero-sub{max-width:560px;margin:18px 0 0;font-family:var(--ph-thai);font-weight:400;font-size:16px;line-height:1.8;color:rgba(245,241,234,0.82);text-shadow:0 1px 12px rgba(0,0,0,0.7)}
+.hero-scroll-hint{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;animation:hero-bounce 2s ease-in-out infinite;z-index:4;cursor:pointer}
+.hero-scroll-line{width:1px;height:28px;background:rgba(255,255,255,0.5)}
+@keyframes hero-bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+@media(max-width:640px){.page-hero-inner{left:24px;bottom:90px}.page-display{font-size:clamp(36px,10vw,60px);white-space:normal}}
+@media(prefers-reduced-motion:reduce){.hero-scroll-hint{animation:none}}
 
 /* --- 2. เนื้อหาหน้า About --- */
 .about-wrap { max-width: 800px; margin: 0 auto 80px; padding: 0 24px; }
@@ -179,12 +185,19 @@ footer{background:var(--inverted-bg);color:var(--inverted-text);padding:40px 0 2
 
 <main>
   <section class="page-hero">
+    <video class="hero-video" autoplay muted loop playsinline aria-label="วิดีโอพื้นหลังประกอบหน้าเกี่ยวกับเรา">
+      <source src="/images/heroes/hero-about.mp4" type="video/mp4">
+    </video>
+    <div class="page-hero-overlay"></div>
     <div class="page-hero-inner">
       <h1 class="page-display" data-reveal>เกี่ยวกับ<em>เรา</em></h1>
       <p class="page-hero-sub" data-reveal data-delay="2">สืบสานมรดกทางวิชาการ เชื่อมโยงอดีตสู่ความเข้าใจในปัจจุบัน</p>
     </div>
+    <div class="hero-scroll-hint" role="button" aria-label="เลื่อนลงดูเนื้อหา">
+      <div class="hero-scroll-line"></div>
+      <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L10 10L19 1" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
   </section>
-  <div class="page-hero-sep"></div>
 
   <article class="about-wrap">
 
@@ -247,6 +260,12 @@ footer{background:var(--inverted-bg);color:var(--inverted-text);padding:40px 0 2
     if(r.top < window.innerHeight && r.bottom > 0){ el.classList.add('is-in'); }
     else { io.observe(el); }
   });
+  document.querySelector('.hero-scroll-hint')?.addEventListener('click', function() {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+  });
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelector('.hero-video')?.pause();
+  }
 })();
 </script>
 </body>
