@@ -10,13 +10,31 @@
   Expires: 0
   Surrogate-Control: no-store
 
+/pages/*
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+  Surrogate-Control: no-store
+
 /pages/*.html
   Cache-Control: no-cache, no-store, must-revalidate
   Pragma: no-cache
   Expires: 0
   Surrogate-Control: no-store
 
+/pages/tools/*
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+  Surrogate-Control: no-store
+
 /pages/tools/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+  Surrogate-Control: no-store
+
+/articles/*/*
   Cache-Control: no-cache, no-store, must-revalidate
   Pragma: no-cache
   Expires: 0
