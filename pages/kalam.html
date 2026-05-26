@@ -83,39 +83,38 @@ a{text-decoration:none;color:inherit;transition:color 0.2s ease;}
 @media(max-width:640px){.page-hero-inner{left:24px;bottom:90px}.page-display{font-size:clamp(36px,10vw,60px);white-space:normal}}
 @media(prefers-reduced-motion:reduce){.hero-slide{animation:none}.hero-scroll-hint{animation:none}}
 
-/* --- Category Header --- */
-.category-header { max-width: 100%; margin: 0; padding: 0 48px; }
+/* --- Category Header (pinned to hero bottom) --- */
+.category-header {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 3;
+  padding: 0 60px; max-width: none; margin: 0;
+}
 .category-title { display: none; }
 .category-desc { display: none; }
 
 /* --- Institutional Partner --- */
 .partner-badge {
-  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
-  padding: 20px 0 22px;
-  border-bottom: 0.5px solid rgba(255,255,255,0.08);
-  background: transparent; border-top: none; border-left: none; border-right: none;
-  border-radius: 0; margin-top: 0;
+  display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+  padding: 14px 0 20px;
+  background: transparent; border: none; border-radius: 0; margin: 0;
 }
 .partner-logo { display: none; }
 .partner-info {
   font-family: 'IBM Plex Sans Thai', system-ui, sans-serif;
-  font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.5;
+  font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.5;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7);
 }
-.partner-info label {
-  display: inline; font-size: 10px; text-transform: uppercase;
-  letter-spacing: 0.14em; color: rgba(255,255,255,0.22); font-weight: 600;
-  margin-right: 8px; margin-bottom: 0;
-}
+.partner-info label { display: none; }
 .partner-link {
-  font-weight: 400; color: rgba(255,255,255,0.35);
-  border-bottom: 0.5px solid rgba(255,255,255,0.18);
+  font-weight: 400; color: rgba(255,255,255,0.7);
+  border-bottom: 0.5px solid rgba(255,255,255,0.35);
   transition: color 0.2s, border-color 0.2s;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7);
 }
-.partner-link:hover { color: rgba(255,255,255,0.65); border-bottom-color: rgba(255,255,255,0.4); }
+.partner-link:hover { color: #ffffff; border-bottom-color: rgba(255,255,255,0.7); }
 @media (max-width: 768px) { .category-header { padding: 0 24px; } }
 
 /* --- Article Index (idx-row minimal 3-column) --- */
-.idx-list-grid { display: flex; flex-direction: column; max-width: 100%; margin: 0 auto; padding: 0 48px; }
+.idx-list-grid { display: flex; flex-direction: column; max-width: 100%; margin: 0 auto; padding: 48px 48px 0; }
 .idx-row {
   display: grid; grid-template-columns: 56px 1fr 48px; gap: 0 32px; align-items: center;
   padding: 32px 0; border-top: 0.5px solid rgba(255,255,255,0.08);
@@ -131,7 +130,7 @@ a{text-decoration:none;color:inherit;transition:color 0.2s ease;}
 .idx-row:hover .idx-title { color: #ffffff; font-weight: 600; }
 .idx-row:hover .idx-arrow { color: #b31b1b; transform: translateX(6px); }
 @media(max-width:768px) {
-  .idx-list-grid { padding: 0 24px; }
+  .idx-list-grid { padding: 32px 24px 0; }
   .idx-title { font-size: 20px; }
 }
 
@@ -237,17 +236,15 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
       <div class="hero-scroll-line"></div>
       <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L10 10L19 1" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/></svg>
     </div>
-  </section>
-
-  <div class="category-header">
-    <div class="partner-badge">
-      <img src="/logo-markaz.png" alt="Markaz Logo" class="partner-logo" onerror="this.style.display='none'">
-      <div class="partner-info">
-        <label>Institutional Partner</label>
-        ดำเนินงานและร่วมดูแลเนื้อหาโดย <a href="https://www.facebook.com/profile.php?id=61577200135795" target="_blank" class="partner-link">มัรกัส อัลอิมาม อัลอัชอะรีย์</a>
+    <div class="category-header">
+      <div class="partner-badge">
+        <div class="partner-info">
+          <label>Institutional Partner</label>
+          ดำเนินงานและร่วมดูแลเนื้อหาโดย <a href="https://www.facebook.com/profile.php?id=61577200135795" target="_blank" class="partner-link">มัรกัส อัลอิมาม อัลอัชอะรีย์</a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <section class="idx-list-grid" id="articleList">
 
