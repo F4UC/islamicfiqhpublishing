@@ -1,6 +1,7 @@
 .claude/worktrees/
 
-# Wrangler — block auto-generated jsonc and cache dir; allow committed toml
+# Wrangler — block all wrangler config and cache (Workers not used; Pages deploys natively)
+wrangler.toml
 wrangler.jsonc
 .wrangler/
 
