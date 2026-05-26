@@ -1,8 +1,7 @@
 .claude/worktrees/
 
-# Wrangler (Workers CLI) — not used for Pages; keep out of repo
+# Wrangler — block auto-generated jsonc but allow committed toml
 wrangler.jsonc
-wrangler.toml
 .wrangler/
 
 # Large binary / video files — host externally (Cloudflare R2, YouTube, etc.)

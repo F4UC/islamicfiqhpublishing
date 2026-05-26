@@ -1,0 +1,12 @@
+name = "islamicfiqhpublishing"
+compatibility_date = "2026-05-26"
+
+[assets]
+directory = "."
+not_found_handling = "single-page-application"
+exclude = [
+  ".git/**",
+  ".claude/**",
+  ".wrangler/**",
+  "node_modules/**",
+]
