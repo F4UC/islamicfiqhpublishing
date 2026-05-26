@@ -114,7 +114,7 @@
   }
   #catNavPanel.open { right: 0; }
   .cat-panel-header {
-    font-family: var(--ui); font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    font-family: var(--thai); font-size: 14px; font-weight: 600; letter-spacing: .04em;
     color: var(--muted); padding: 0 24px 12px;
     border-bottom: 0.5px solid rgba(255,255,255,0.1); margin-bottom: 8px;
   }
