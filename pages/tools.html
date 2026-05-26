@@ -122,45 +122,8 @@ body { background: var(--ink); color: var(--paper); }
 }
 .tool-card:hover::before { transform: scaleX(1); }
 
-.tool-icon {
-  font-size: 36px; line-height: 1;
-  color: var(--paper);
-  background: var(--bg-tertiary);
-  width: 70px; height: 70px; border-radius: 50%;
-  border: 1px solid var(--border-primary);
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 24px; flex-shrink: 0;
-}
-
-.tool-name      { font-family: var(--thai); font-size: 22px; font-weight: 700; color: var(--paper); margin-bottom: 12px; }
-.tool-desc-text { font-size: 14px; color: var(--text-dim); line-height: 1.7; flex-grow: 1; margin-bottom: 28px; text-align: left; }
-
-.tool-btn {
-  display: inline-block; padding: 11px 28px;
-  font-size: 13px; font-weight: 600; letter-spacing: .04em;
-  color: var(--paper); background: transparent;
-  border-radius: 4px; border: 1px solid var(--border-primary);
-  transition: background 0.3s, border-color 0.3s, color 0.3s;
-  text-decoration: none;
-}
-.tool-btn:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
-
-.status-badge {
-  display: inline-block; padding: 4px 14px;
-  font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-  border-radius: 20px; margin-bottom: 20px; align-self: center;
-}
-.status-available { background: rgba(179,27,27,0.10); color: var(--gold); }
-.status-soon      { background: var(--bg-tertiary); color: var(--text-mute); border: 1px solid var(--border-primary); }
-
-.tool-card.coming-soon {
-  background: transparent; border: 1px dashed var(--border-primary); opacity: 0.8;
-}
-.tool-card.coming-soon:hover { border-color: var(--border-primary); box-shadow: none; transform: translateY(-2px); }
-.tool-card.coming-soon::before { display: none; }
-.tool-card.coming-soon .tool-icon { opacity: 0.45; filter: grayscale(1); }
-.tool-card.coming-soon .tool-name { color: var(--text-dim); }
-.tool-card.coming-soon .status-badge { background: var(--bg-secondary); color: var(--text-mute); }
+.tool-name      { font-family: var(--thai); font-size: 22px; font-weight: 700; letter-spacing: .04em; color: var(--paper); margin-bottom: 12px; }
+.tool-desc-text { font-size: 14px; color: var(--text-dim); line-height: 1.7; flex-grow: 1; text-align: left; }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────────────── */
 @media (max-width: 640px) {
@@ -201,46 +164,16 @@ body { background: var(--ink); color: var(--paper); }
   <div class="tools-section-sep"></div>
   <section class="tools-container">
     <div class="tools-grid">
-      
-      <div class="tool-card">
-        <div class="status-badge status-available">พร้อมใช้งาน</div>
-        <div class="tool-icon">
-          <svg class="tool-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-        </div>
-        <h2 class="tool-name">Hijri Time Machine</h2>
+
+      <a class="tool-card" href="tools/hijri-time-machine.html">
+        <h2 class="tool-name">HIJRI TIME MACHINE</h2>
         <p class="tool-desc-text">มากกว่าการแปลงปฏิทิน สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามที่เกิดขึ้นในปี ฮ.ศ. นั้นๆ เพื่อเชื่อมโยงอดีตสู่ปัจจุบัน</p>
-        <a href="tools/hijri-time-machine.html" class="tool-btn">เปิดใช้งาน</a>
-      </div>
+      </a>
 
-      <div class="tool-card">
-        <div class="status-badge status-available">พร้อมใช้งาน</div>
-        <div class="tool-icon">
-          <svg class="tool-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.5" y1="10.5" x2="15.5" y2="6.5"></line><line x1="8.5" y1="13.5" x2="15.5" y2="17.5"></line></svg>
-        </div>
-        <h2 class="tool-name">Isnād Tracer</h2>
+      <a class="tool-card" href="tools/isnad-tracer.html">
+        <h2 class="tool-name">ISNĀD TRACER</h2>
         <p class="tool-desc-text">เครื่องมือสืบค้นสายรายงานหะดีษ แผนผังจำลองโครงข่ายผู้รายงานพร้อมสถานะความน่าเชื่อถือและการประเมินจากตำราญัรห์ วัตตะอ์ดีลโบราณ</p>
-        <a href="tools/isnad-tracer.html" class="tool-btn">เปิดใช้งาน</a>
-      </div>
-
-      <div class="tool-card coming-soon">
-        <div class="status-badge status-soon">กำลังพิจารณา</div>
-        <div class="tool-icon">
-          <svg class="tool-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-        </div>
-        <h2 class="tool-name">Zakat Calculator</h2>
-        <p class="tool-desc-text">โปรแกรมคำนวณซะกาตตามหลักฟิกฮ์ (ซะกาตทรัพย์สิน, การค้า, หุ้น และทองคำ)</p>
-        <a href="#" class="tool-btn btn-disabled">ขอเวลาอีกไม่นาน</a>
-      </div>
-
-      <div class="tool-card coming-soon">
-        <div class="status-badge status-soon">กำลังพิจารณา</div>
-        <div class="tool-icon">
-          <svg class="tool-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"></line><line x1="5" y1="7" x2="19" y2="7"></line><path d="M5 7l3 9h-6l3-9zm14 0l3 9h-6l3-9z"></path></svg>
-        </div>
-        <h2 class="tool-name">Faraid Calculator</h2>
-        <p class="tool-desc-text">ระบบคำนวณการแบ่งมรดกตามหลักนิติศาสตร์อิสลามที่ซับซ้อน</p>
-        <a href="#" class="tool-btn btn-disabled">ขอเวลาอีกไม่นาน</a>
-      </div>
+      </a>
 
     </div>
   </section>
