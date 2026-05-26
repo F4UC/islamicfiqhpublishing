@@ -1,58 +1,58 @@
 
 /* - ตัวแปรระบบสีระดับพรีเมียม (CSS Variables) - */
 :root {
-  --ph-paper: #111111;
-  --ph-dim: #444444;
+  --ph-paper: #f5f1ea;
+  --ph-dim: #9a907e;
   --ph-gold: #b31b1b;
   --ph-serif: 'Cormorant Garamond', Georgia, serif;
   --ph-thai: 'Sarabun', sans-serif;
-  /* Pure black-and-white reading theme (light) */
-  --bg-primary: #ffffff;       /* Pure white background */
-  --bg-secondary: #f5f5f5;     /* Subtle off-white container */
-  --bg-tertiary: #ebebeb;      /* Light gray panel */
-  --text-primary: #111111;     /* Near-black primary text */
-  --text-secondary: #3f3f3f;   /* Dark gray body text */
-  --text-tertiary: #666666;    /* Muted gray */
-  --text-quaternary: #888888;
-  --border-primary: rgba(0,0,0,0.10);
-  --border-secondary: rgba(0,0,0,0.18);
+  /* Flat ink dark theme — uniform with homepage */
+  --bg-primary: #0a0907;       /* Flat ink background */
+  --bg-secondary: #14110d;     /* Slightly lighter ink */
+  --bg-tertiary: #1d1814;      /* Panel ink */
+  --text-primary: #f5f1ea;     /* Warm white */
+  --text-secondary: #e8e0d0;   /* Warm ivory */
+  --text-tertiary: #9a907e;    /* Warm muted */
+  --text-quaternary: rgba(245,241,234,0.45);
+  --border-primary: rgba(255,255,255,0.08);
+  --border-secondary: rgba(255,255,255,0.14);
   --accent-color: #b31b1b;     /* Brand Red */
-  
+
   /* ตัวแปรพิเศษสำหรับคอมโพเนนต์ที่ควรเข้มเสมอ (Inverted Components) */
-  --inverted-bg: #0a0c10;
+  --inverted-bg: #14110d;
   --inverted-text: #e8e0d0;
   --footer-bg: #050403;
   --footer-border: rgba(232,224,208,.14);
-  
+
   /* ตัวแปรสำหรับเงา (Dynamic Shadows) */
-  --shadow-color: rgba(0,0,0,0.08);
-  --shadow-heavy: rgba(0,0,0,0.15);
+  --shadow-color: rgba(0,0,0,0.4);
+  --shadow-heavy: rgba(0,0,0,0.6);
 
   --theme-transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* ชุดสีดาร์กโหมดสไตล์วิชาการระดับพรีเมียมเมื่อมีคลาส .dark-mode */
+/* Dark mode deepens to pure black — Rule 37 */
 html.dark-mode {
-  --ph-paper: #f5f5f5;
-  --ph-dim: #b8b8b8;
-  --bg-primary: #000000;       /* Pure black background */
-  --bg-secondary: #0d0d0d;     /* Near-black container */
-  --bg-tertiary: #161616;      /* Dark gray panel */
-  --text-primary: #f5f5f5;     /* Near-white primary text */
-  --text-secondary: #c4c4c4;   /* Light gray body text */
-  --text-tertiary: #9a9a9a;    /* Muted gray */
-  --text-quaternary: #777777;
-  --border-primary: rgba(255,255,255,0.12);
-  --border-secondary: rgba(255,255,255,0.24);
-  --accent-color: #d32f2f;     /* Brand Red (brightened for dark) */
+  --ph-paper: #f5f1ea;
+  --ph-dim: #9a907e;
+  --bg-primary: #000000;
+  --bg-secondary: #0a0907;
+  --bg-tertiary: #14110d;
+  --text-primary: #f5f1ea;
+  --text-secondary: #e8e0d0;
+  --text-tertiary: #9a907e;
+  --text-quaternary: rgba(245,241,234,0.45);
+  --border-primary: rgba(255,255,255,0.10);
+  --border-secondary: rgba(255,255,255,0.18);
+  --accent-color: #d32f2f;
 
-  --inverted-bg: #0d0d0d;
+  --inverted-bg: #0a0907;
   --inverted-text: #e8e0d0;
-  --footer-bg: #050403;
+  --footer-bg: #000000;
   --footer-border: rgba(232,224,208,.14);
-  
-  --shadow-color: rgba(0,0,0,0.4);
-  --shadow-heavy: rgba(0,0,0,0.6);
+
+  --shadow-color: rgba(0,0,0,0.5);
+  --shadow-heavy: rgba(0,0,0,0.7);
 }
 
 /* - สไตล์พื้นฐานของหน้าเว็บ - */
@@ -60,7 +60,7 @@ html.dark-mode {
 body {
   font-family: 'Sarabun', sans-serif;
   color: var(--text-primary);
-  background-color: #ffffff;
+  background-color: var(--bg-primary);
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -783,20 +783,17 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
 
 /* Article comparison tables (Rule 30) */
 .article-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; text-align: left; }
-.article-table th, .article-table td { padding: 12px; border: 1px solid #ddd; }
+.article-table th, .article-table td { padding: 12px; border: 1px solid var(--border-primary); }
 .article-table thead tr { background-color: var(--inverted-bg); color: var(--inverted-text); }
-.alt-row { background-color: #f9f9f9; }
-html.dark-mode .alt-row { background-color: var(--bg-secondary); }
+.alt-row { background-color: var(--bg-secondary); }
 .col-5  { width: 5%; }
 .col-25 { width: 25%; }
 .col-30 { width: 30%; }
 .col-35 { width: 35%; }
 .cell-bold { font-weight: 500; }
 .cell-center { text-align: center; }
-.cell-section-header { font-weight: 500; vertical-align: top; background-color: #fafafa; }
-.cell-section-alt { font-weight: 500; vertical-align: top; background-color: #f5f5f5; }
-html.dark-mode .cell-section-header,
-html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
+.cell-section-header { font-weight: 500; vertical-align: top; background-color: var(--bg-secondary); }
+.cell-section-alt { font-weight: 500; vertical-align: top; background-color: var(--bg-tertiary); }
 
 /* Disabled tool button state (tools.html) */
 .btn-disabled { pointer-events: none; background: #ccc; color: #fff; }
@@ -831,24 +828,24 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
 .article-table th,
 .article-table td {
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-primary);
 }
 .article-table thead tr {
-  background-color: #0a0a0a;
-  color: #fff;
+  background-color: var(--inverted-bg);
+  color: var(--inverted-text);
 }
-.article-table .alt-row { background-color: #f9f9f9; }
+.article-table .alt-row { background-color: var(--bg-secondary); }
 .article-table .cell-center { text-align: center; }
 .article-table .cell-bold { font-weight: 500; }
 .article-table .cell-category {
   font-weight: 500;
   vertical-align: top;
-  background-color: #fafafa;
+  background-color: var(--bg-secondary);
 }
 .article-table .cell-category-alt {
   font-weight: 500;
   vertical-align: top;
-  background-color: #f5f5f5;
+  background-color: var(--bg-tertiary);
 }
 
 /* ==========================================================
@@ -895,32 +892,11 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #05060a; /* Premium dark ink */
-  color: #e8e0d0; /* Warm ivory text */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   overflow: hidden;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid var(--border-primary);
   transition: var(--theme-transition);
-}
-.hero-banner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.12;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23d32f2f' fill-opacity='1' d='M0,192L48,202.7C96,213,192,235,288,234.7C384,235,480,213,576,192C672,171,768,149,864,160C960,171,1056,213,1152,229.3C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path></svg>");
-  background-size: cover;
-  background-position: bottom;
-  z-index: 1;
-}
-.hero-banner::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: 
-    radial-gradient(50% 50% at 70% 20%, rgba(211,47,47,0.08), transparent 60%),
-    radial-gradient(70% 60% at 20% 80%, rgba(211,47,47,0.04), transparent 70%);
-  z-index: 0;
 }
 .hero-banner-inner {
   position: relative;
@@ -933,10 +909,9 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
   font-weight: 400;
   font-size: clamp(28px, 4vw, 48px);
   line-height: 1.4;
-  color: #e8e0d0;
+  color: var(--text-primary);
   direction: rtl;
   margin-bottom: 12px;
-  text-shadow: 0 0 40px rgba(179,27,27,0.15);
 }
 .hero-banner .hero-arabic-ref {
   font-family: 'Sarabun', sans-serif;
@@ -952,11 +927,11 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
 }
 .hero-banner .hero-display {
   font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(36px, 5.5vw, 64px);
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: #e8e0d0;
+  color: var(--text-primary);
   margin-bottom: 20px;
 }
 .hero-banner .hero-display em {
