@@ -78,7 +78,7 @@ a{text-decoration:none;color:inherit;transition:color 0.2s ease;}
 .hero-slide-6{background-image:url('/images/heroes/hero-nitisart-6.jpg');animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:37.5s,0s}
 .page-hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0) 100%)}
 .page-hero-inner{position:absolute;left:60px;bottom:120px;max-width:560px;z-index:3;text-align:left}
-.page-display{font-family:var(--ph-serif);font-weight:400;font-size:clamp(44px,8vw,92px);line-height:1.05;letter-spacing:-.01em;color:#f5f1ea;text-shadow:0 2px 24px rgba(0,0,0,0.6)}
+.page-display{font-family:var(--ph-serif);font-weight:400;font-size:clamp(3rem,6vw,7rem);line-height:1.05;letter-spacing:-.01em;white-space:nowrap;color:#f5f1ea;text-shadow:0 2px 24px rgba(0,0,0,0.6)}
 .page-display em{font-style:italic;color:#f5f1ea;font-weight:400}
 .page-display .br{display:block}
 .page-hero-sub{max-width:560px;margin:18px 0 0;font-family:var(--ph-thai);font-weight:400;font-size:16px;line-height:1.8;color:rgba(245,241,234,0.82);text-shadow:0 1px 12px rgba(0,0,0,0.7)}
@@ -87,7 +87,7 @@ a{text-decoration:none;color:inherit;transition:color 0.2s ease;}
 @keyframes ken-burns{0%{transform:scale(1)}100%{transform:scale(1.08)}}
 @keyframes hero-fade{0%{opacity:1}13.33%{opacity:1}16.67%{opacity:0}100%{opacity:0}}
 @keyframes hero-bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
-@media(max-width:640px){.page-hero-inner{left:24px;bottom:90px}.page-display{font-size:clamp(36px,10vw,60px)}}
+@media(max-width:640px){.page-hero-inner{left:24px;bottom:90px}.page-display{font-size:clamp(36px,10vw,60px);white-space:normal}}
 @media(prefers-reduced-motion:reduce){.hero-slide{animation:none}.hero-scroll-hint{animation:none}}
 
 /* --- Article Index (idx-row 5-column grid) --- */
