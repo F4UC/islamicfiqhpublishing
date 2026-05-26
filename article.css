@@ -1026,6 +1026,7 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
 
 /* ─── ARTICLE CATEGORY HERO ──────────────────────────────────────── */
 .art-hero {
+  background: var(--inverted-bg, #0a0c10);
   min-height: 32vh;
   padding: 80px 0 40px;
   text-align: center;
@@ -1044,11 +1045,11 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
 }
 .art-hero-display {
   font-family: var(--ph-serif);
-  font-weight: 600;
+  font-weight: 400;
   font-size: clamp(40px, 9vw, 96px);
   line-height: 1.05;
   letter-spacing: -.02em;
-  color: var(--ph-paper, #111111);
+  color: #f5f1ea;
 }
 .art-hero-display em {
   font-style: italic;
@@ -1088,8 +1089,10 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
   margin: 0 auto 32px;
 }
 @media (max-width: 640px) {
-  .art-hero { min-height: 12vh; padding: 24px 0 16px; }
-  .art-hero-display { font-size: clamp(36px, 9vw, 72px); }
+  .art-hero { min-height: 0; padding: 16px 0 8px; }
+  .art-hero-display { font-size: clamp(28px, 8vw, 52px); }
+  .art-hero-meteors { display: none; }
+  .art-hero-sep { margin: 0 auto 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .art-hero-meteors .meteor { animation: none; }

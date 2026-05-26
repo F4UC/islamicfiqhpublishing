@@ -102,14 +102,74 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // --- category-nav ---
             (function() {
-                // Remove cat-nav entirely on the homepage
                 var p = window.location.pathname;
-                if (p === '/' || p === '/index.html') {
-                    ['catNavBtn','catNavDropdown','catNavTab','catNavPanel','catNavOverlay'].forEach(function(id) {
-                        var el = document.getElementById(id); if (el) el.remove();
-                    });
-                    return;
+                if (p === '/' || p === '/index.html') return; // homepage: never inject
+
+                var CAT_LINKS = [
+                    {text: 'กะลาม',           href: '/pages/kalam.html'},
+                    {text: 'หะดีษ',           href: '/pages/hadith.html'},
+                    {text: 'ประวัติศาสตร์',   href: '/pages/history.html'},
+                    {text: 'นิติศาสตร์',      href: '/pages/nitisart.html'},
+                    {text: 'หัจญ์ & อุมเราะฮ์', href: '/pages/hajj.html'},
+                    {text: 'เครื่องมือ',      href: '/pages/tools.html'}
+                ];
+
+                // Inject ☰ button before search button
+                var searchBtn = document.getElementById('searchToggleBtn');
+                if (searchBtn) {
+                    var catBtn = document.createElement('button');
+                    catBtn.className = 'chrome-icon-btn cat-nav-btn';
+                    catBtn.id = 'catNavBtn';
+                    catBtn.setAttribute('aria-label', 'หมวดหมู่');
+                    catBtn.title = 'หมวดหมู่';
+                    catBtn.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="18" y2="18"/></svg>';
+                    searchBtn.insertAdjacentElement('beforebegin', catBtn);
                 }
+
+                // Inject dropdown inside .chrome
+                var chrome = document.querySelector('.chrome');
+                if (chrome) {
+                    var dd = document.createElement('div');
+                    dd.id = 'catNavDropdown';
+                    dd.className = 'cat-nav-dropdown';
+                    var linksHtml = CAT_LINKS.map(function(l) {
+                        return '<a class="cat-nav-link" href="' + l.href + '">' + l.text + '</a>';
+                    }).join('');
+                    dd.innerHTML = '<div class="cat-nav-links">' + linksHtml + '</div>';
+                    chrome.appendChild(dd);
+                }
+
+                // Inject mobile tab + panel + overlay after header-placeholder
+                var hp = document.getElementById('header-placeholder');
+                if (hp) {
+                    var overlay = document.createElement('div');
+                    overlay.id = 'catNavOverlay';
+
+                    var panelLinksHtml = CAT_LINKS.map(function(l) {
+                        return '<a class="cat-panel-link" href="' + l.href + '">' + l.text + '</a>';
+                    }).join('');
+                    var panel = document.createElement('div');
+                    panel.id = 'catNavPanel';
+                    panel.setAttribute('role', 'dialog');
+                    panel.setAttribute('aria-label', 'หมวดหมู่');
+                    panel.innerHTML = '<button class="cat-panel-close" id="catPanelClose" aria-label="ปิด">×</button>' +
+                        '<div class="cat-panel-header">หมวดหมู่</div>' + panelLinksHtml;
+
+                    var tab = document.createElement('button');
+                    tab.id = 'catNavTab';
+                    tab.setAttribute('aria-label', 'หมวดหมู่');
+                    tab.textContent = 'หมวดหมู่';
+
+                    hp.after(overlay);
+                    hp.after(panel);
+                    hp.after(tab);
+                }
+
+                // Mark active page
+                var cp = window.location.pathname;
+                document.querySelectorAll('.cat-nav-link, .cat-panel-link').forEach(function(a) {
+                    try { if (new URL(a.href, location.origin).pathname === cp) a.classList.add('cat-active'); } catch(e) {}
+                });
 
                 /* category-nav-desktop */
                 if (window.matchMedia('(min-width: 768px)').matches) {
@@ -126,28 +186,20 @@ document.addEventListener("DOMContentLoaded", function() {
                                 dropdown.classList.remove('open');
                             }
                         });
-                        var cp = window.location.pathname;
-                        dropdown.querySelectorAll('.cat-nav-link').forEach(function(a) {
-                            try { if (new URL(a.href, location.origin).pathname === cp) a.classList.add('cat-active'); } catch(e) {}
-                        });
                     }
                 }
 
                 /* category-nav-mobile */
                 if (window.matchMedia('(max-width: 767px)').matches) {
-                    var tab     = document.getElementById('catNavTab');
-                    var panel   = document.getElementById('catNavPanel');
-                    var overlay = document.getElementById('catNavOverlay');
-                    var close   = document.getElementById('catPanelClose');
-                    function openPanel()  { if (panel) panel.classList.add('open'); if (overlay) overlay.classList.add('open'); }
-                    function closePanel() { if (panel) panel.classList.remove('open'); if (overlay) overlay.classList.remove('open'); }
-                    if (tab)     tab.addEventListener('click', openPanel);
-                    if (close)   close.addEventListener('click', closePanel);
-                    if (overlay) overlay.addEventListener('click', closePanel);
-                    var cp = window.location.pathname;
-                    if (panel) panel.querySelectorAll('.cat-panel-link').forEach(function(a) {
-                        try { if (new URL(a.href, location.origin).pathname === cp) a.classList.add('cat-active'); } catch(e) {}
-                    });
+                    var mTab     = document.getElementById('catNavTab');
+                    var mPanel   = document.getElementById('catNavPanel');
+                    var mOverlay = document.getElementById('catNavOverlay');
+                    var mClose   = document.getElementById('catPanelClose');
+                    function openPanel()  { if (mPanel) mPanel.classList.add('open'); if (mOverlay) mOverlay.classList.add('open'); }
+                    function closePanel() { if (mPanel) mPanel.classList.remove('open'); if (mOverlay) mOverlay.classList.remove('open'); }
+                    if (mTab)     mTab.addEventListener('click', openPanel);
+                    if (mClose)   mClose.addEventListener('click', closePanel);
+                    if (mOverlay) mOverlay.addEventListener('click', closePanel);
                 }
             })();
 
