@@ -1,7 +1,8 @@
 .claude/worktrees/
 
-# Wrangler — block auto-generated jsonc but allow committed toml
+# Wrangler — keep all configs out of repo (use Cloudflare Pages native deploy)
 wrangler.jsonc
+wrangler.toml
 .wrangler/
 
 # Large binary / video files — host externally (Cloudflare R2, YouTube, etc.)
