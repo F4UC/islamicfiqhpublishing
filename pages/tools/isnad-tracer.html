@@ -413,8 +413,9 @@ body::before {
   display:grid;
   grid-template-columns:48px 1fr 140px 72px 88px;
   gap:8px; padding:13px 16px;
+  height:57px; overflow:hidden;
   border-bottom:1px solid var(--rule);
-  cursor:pointer; 
+  cursor:pointer;
   transition: background-color 0.22s ease, transform 0.18s ease, box-shadow 0.22s ease;
   align-items:center; flex-shrink:0;
 }
@@ -433,7 +434,7 @@ html.dark-mode .list-row:hover {
   font-weight: 500;
 }
 .row-num   { font-family:var(--serif); font-style:italic; font-size:14px; color:var(--gold); opacity:.65; text-align:right; }
-.row-name  { font-family:var(--arabic); font-size:16px; color:var(--paper); direction:rtl; text-align:right; line-height:1.5; word-break:break-word; }
+.row-name  { font-family:var(--arabic); font-size:16px; color:var(--paper); direction:rtl; text-align:right; line-height:1.5; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .row-grade { font-family:var(--arabic); font-size:12px; color:var(--text-mute); direction:rtl; text-align:right; line-height:1.4; display:flex; justify-content:flex-end; }
 .row-death { font-family:var(--ui); font-size:12px; color:var(--text-dim); }
 .row-conns { font-family:var(--ui); font-size:11px; color:var(--text-dim); display:flex; align-items:center; gap:5px; }
@@ -889,9 +890,9 @@ html.dark-mode .arrow-marker { fill:rgba(232,224,208,0.15); }
     </div>
 
     <!-- Loading state -->
-    <div class="viz-loading" id="vizLoading" style="display:none">
+    <div class="viz-loading" id="vizLoading">
       <div class="viz-spinner"></div>
-      <span>กำลังโหลด…</span>
+      <span>กำลังโหลดฐานข้อมูล…</span>
     </div>
 
     <!-- Toolbar: sort + filter + count -->
