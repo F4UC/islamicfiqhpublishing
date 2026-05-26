@@ -165,7 +165,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     var overlay = document.createElement('div');
                     overlay.id = 'catNavOverlay';
 
-                    var panelLinksHtml = CAT_LINKS.map(function(l) {
+                    var panelLinksHtml = '<a class="cat-panel-link" href="/index.html">หน้าแรก</a>' +
+                        CAT_LINKS.map(function(l) {
                         return '<a class="cat-panel-link" href="' + l.href + '">' + l.text + '</a>';
                     }).join('');
                     var panel = document.createElement('div');
@@ -525,7 +526,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // สั่งโหลดไฟล์ Footer
-    fetch('/components/footer.html?v=20260526b')
+    fetch('/components/footer.html?v=20260526c')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;

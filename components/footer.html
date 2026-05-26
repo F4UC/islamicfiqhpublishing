@@ -17,7 +17,7 @@ footer.site-footer {
 .foot-brand .foot-mark {
   font-family: 'IBM Plex Sans Thai', system-ui, sans-serif;
   font-weight: 600; font-size: 40px; color: #e8e0d0; letter-spacing: -.01em;
-  line-height: 1.1; white-space: nowrap;
+  line-height: 1.1;
 }
 .foot-brand .foot-mark em { font-style: italic; color: #b31b1b; }
 .foot-brand .foot-ar {
@@ -57,6 +57,7 @@ footer.site-footer {
 @media (max-width: 540px) {
   .foot-top { grid-template-columns: 1fr; }
   .foot-brand { grid-column: span 1; }
+  .foot-brand .foot-mark { font-size: clamp(26px, 7.5vw, 36px); }
 }
 </style>
 
