@@ -4,7 +4,7 @@
   --ph-paper: #f5f1ea;
   --ph-dim: #9a907e;
   --ph-gold: #b31b1b;
-  --ph-serif: 'Cormorant Garamond', Georgia, serif;
+  --ph-serif: 'IBM Plex Sans Thai', system-ui, sans-serif;
   --ph-thai: 'Sarabun', sans-serif;
   /* Flat ink dark theme — uniform with homepage */
   --bg-primary: #0a0907;       /* Flat ink background */
@@ -926,7 +926,7 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   margin: 0 auto 32px;
 }
 .hero-banner .hero-display {
-  font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif;
   font-weight: 400;
   font-size: clamp(36px, 5.5vw, 64px);
   line-height: 1.15;
@@ -935,9 +935,10 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   margin-bottom: 20px;
 }
 .hero-banner .hero-display em {
-  font-style: italic;
+  font-style: normal;
+  font-weight: 700;
   color: #d32f2f;
-  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 .hero-banner .hero-sub {
   font-family: 'Sarabun', sans-serif;
@@ -1027,9 +1028,10 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   color: #f5f1ea;
 }
 .art-hero-display em {
-  font-style: italic;
-  color: var(--ph-gold);
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 700;
+  color: #d32f2f;
+  letter-spacing: -0.02em;
 }
 .art-hero-br { display: block; }
 .art-hero-meteors {

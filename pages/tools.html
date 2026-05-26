@@ -31,7 +31,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="../article.css?v=9">
 <link rel="stylesheet" href="../css/tokens.css">
@@ -66,7 +66,7 @@ body { background: var(--ink); color: var(--paper); }
 
 
 /* ─── PAGE HERO (Ken Burns · 4 slides) ──────────────────────────── */
-:root{--ph-serif:'Cormorant Garamond',Georgia,serif;--ph-thai:'Sarabun',sans-serif}
+:root{--ph-serif:'IBM Plex Sans Thai', system-ui, sans-serif;--ph-thai:'Sarabun',sans-serif}
 .page-hero{position:relative;height:100vh;overflow:hidden}
 .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0}
 .hero-slide-1{background-image:url('/images/heroes/hero-tools-1.jpg');opacity:1;animation:hero-fade 30s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:0s,0s}
@@ -76,7 +76,7 @@ body { background: var(--ink); color: var(--paper); }
 .page-hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0) 100%)}
 .page-hero-inner{position:absolute;left:60px;bottom:120px;max-width:560px;z-index:3;text-align:left}
 .page-display{font-family:var(--ph-serif);font-weight:400;font-size:clamp(3rem,6vw,7rem);line-height:1.05;letter-spacing:-.01em;white-space:nowrap;color:#f5f1ea;text-shadow:0 2px 24px rgba(0,0,0,0.6)}
-.page-display em{font-style:italic;color:#f5f1ea;font-weight:400}
+.page-display em{font-style:normal;font-weight:700;color:#d32f2f;letter-spacing:-0.02em}
 .page-display .br{display:inline}
 .page-hero-sub{max-width:560px;margin:18px 0 0;font-family:var(--ph-thai);font-weight:400;font-size:16px;line-height:1.8;color:rgba(245,241,234,0.82);text-shadow:0 1px 12px rgba(0,0,0,0.7)}
 .hero-scroll-hint{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;animation:hero-bounce 2s ease-in-out infinite;z-index:4;cursor:pointer}

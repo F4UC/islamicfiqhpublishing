@@ -31,7 +31,7 @@
   --line: rgba(255,255,255,0.08);
   --line-strong: rgba(255,255,255,0.14);
   /* Font stack (Rule 24) */
-  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --serif: 'IBM Plex Sans Thai', system-ui, sans-serif;
   --thai: 'Sarabun', system-ui, sans-serif;
   --arabic: 'Amiri', serif;
   --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
