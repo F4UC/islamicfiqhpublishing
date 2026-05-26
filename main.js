@@ -100,53 +100,55 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }
 
-            // --- Category Navigation ---
+            // --- category-nav ---
             (function() {
-                var catNavBtn     = document.getElementById('catNavBtn');
-                var catNavDropdown= document.getElementById('catNavDropdown');
-                var catNavTab     = document.getElementById('catNavTab');
-                var catNavPanel   = document.getElementById('catNavPanel');
-                var catNavOverlay = document.getElementById('catNavOverlay');
-                var catPanelClose = document.getElementById('catPanelClose');
-
-                function openPanel() {
-                    if (catNavPanel)   catNavPanel.classList.add('open');
-                    if (catNavOverlay) catNavOverlay.classList.add('open');
-                }
-                function closeCatNav() {
-                    if (catNavDropdown) catNavDropdown.classList.remove('open');
-                    if (catNavPanel)    catNavPanel.classList.remove('open');
-                    if (catNavOverlay)  catNavOverlay.classList.remove('open');
+                // Remove cat-nav entirely on the homepage
+                var p = window.location.pathname;
+                if (p === '/' || p === '/index.html') {
+                    ['catNavBtn','catNavDropdown','catNavTab','catNavPanel','catNavOverlay'].forEach(function(id) {
+                        var el = document.getElementById(id); if (el) el.remove();
+                    });
+                    return;
                 }
 
-                if (catNavBtn) {
-                    catNavBtn.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        catNavDropdown.classList.toggle('open');
+                /* category-nav-desktop */
+                if (window.matchMedia('(min-width: 768px)').matches) {
+                    var btn      = document.getElementById('catNavBtn');
+                    var dropdown = document.getElementById('catNavDropdown');
+                    if (btn && dropdown) {
+                        btn.addEventListener('click', function(e) {
+                            e.stopPropagation();
+                            dropdown.classList.toggle('open');
+                        });
+                        document.addEventListener('click', function(e) {
+                            if (dropdown.classList.contains('open') &&
+                                !dropdown.contains(e.target) && e.target !== btn) {
+                                dropdown.classList.remove('open');
+                            }
+                        });
+                        var cp = window.location.pathname;
+                        dropdown.querySelectorAll('.cat-nav-link').forEach(function(a) {
+                            try { if (new URL(a.href, location.origin).pathname === cp) a.classList.add('cat-active'); } catch(e) {}
+                        });
+                    }
+                }
+
+                /* category-nav-mobile */
+                if (window.matchMedia('(max-width: 767px)').matches) {
+                    var tab     = document.getElementById('catNavTab');
+                    var panel   = document.getElementById('catNavPanel');
+                    var overlay = document.getElementById('catNavOverlay');
+                    var close   = document.getElementById('catPanelClose');
+                    function openPanel()  { if (panel) panel.classList.add('open'); if (overlay) overlay.classList.add('open'); }
+                    function closePanel() { if (panel) panel.classList.remove('open'); if (overlay) overlay.classList.remove('open'); }
+                    if (tab)     tab.addEventListener('click', openPanel);
+                    if (close)   close.addEventListener('click', closePanel);
+                    if (overlay) overlay.addEventListener('click', closePanel);
+                    var cp = window.location.pathname;
+                    if (panel) panel.querySelectorAll('.cat-panel-link').forEach(function(a) {
+                        try { if (new URL(a.href, location.origin).pathname === cp) a.classList.add('cat-active'); } catch(e) {}
                     });
                 }
-                if (catNavTab)      catNavTab.addEventListener('click', openPanel);
-                if (catPanelClose)  catPanelClose.addEventListener('click', closeCatNav);
-                if (catNavOverlay)  catNavOverlay.addEventListener('click', closeCatNav);
-
-                // Close dropdown on outside click
-                document.addEventListener('click', function(e) {
-                    if (catNavDropdown && catNavDropdown.classList.contains('open')) {
-                        if (!catNavDropdown.contains(e.target) && e.target !== catNavBtn) {
-                            catNavDropdown.classList.remove('open');
-                        }
-                    }
-                });
-
-                // Mark active category
-                var catPath = window.location.pathname;
-                document.querySelectorAll('.cat-nav-link, .cat-panel-link').forEach(function(link) {
-                    try {
-                        if (new URL(link.href, window.location.origin).pathname === catPath) {
-                            link.classList.add('cat-active');
-                        }
-                    } catch(e) {}
-                });
             })();
 
             // --- ระบบไฮไลท์เมนูอัตโนมัติ (ปรับปรุงความปลอดภัย) ---
