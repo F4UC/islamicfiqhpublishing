@@ -1,0 +1,69 @@
+/* ============================================================
+   tokens.css — shared foundation for Islamic Fiqh Publishing subpages
+   Canonical dark palette (shades of white + red on near-black ink),
+   font stack (Rule 24), and shared UI widgets (Rules 35, 36, 39).
+   Imported by category pages (../css/tokens.css) and
+   tool pages (../../css/tokens.css).
+   ============================================================ */
+
+@font-face {
+  font-family: 'D-DIN';
+  src: url('../D-DIN.e58c68e58b09fc0e.woff2') format('woff2'),
+       url('../D-DIN.105cb3e9fde868e3.woff') format('woff'),
+       url('../D-DIN.e77db3e5eeb79c76.otf') format('opentype');
+  font-style: normal; font-weight: 400; font-display: block;
+}
+
+:root {
+  /* Backgrounds — near-black ink */
+  --ink: #0a0907;
+  --ink-2: #14110d;
+  --ink-3: #1d1814;
+  /* Text — shades of white */
+  --heading: #f5f1ea;
+  --text: #e8e0d0;
+  --muted: rgba(245,241,234,0.6);
+  --faint: rgba(245,241,234,0.45);
+  /* Accents — red */
+  --accent: #d32f2f;
+  --accent-deep: #b31b1b;
+  /* Hairlines */
+  --line: rgba(255,255,255,0.08);
+  --line-strong: rgba(255,255,255,0.14);
+  /* Font stack (Rule 24) */
+  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --thai: 'Sarabun', system-ui, sans-serif;
+  --arabic: 'Amiri', serif;
+  --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
+}
+
+/* Reading progress bar (Rule 39) */
+#readingProgress{position:fixed;top:0;left:0;height:2px;width:0%;background:var(--accent);z-index:9999;transition:width .1s linear;}
+
+/* Back to top button (Rule 36) */
+#backToTopBtn{
+  display:none;position:fixed;bottom:32px;right:32px;z-index:500;
+  width:48px;height:48px;
+  border:1px solid var(--line);border-radius:50%;
+  background:rgba(10,9,7,0.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  color:var(--text);
+  box-shadow:0 8px 32px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05);
+  transition:all .35s cubic-bezier(.2,.7,.2,1);cursor:pointer;
+  place-items:center;padding:0;
+}
+#backToTopBtn svg{transition:transform 0.3s ease;}
+#backToTopBtn:hover{
+  border-color:var(--accent);color:var(--accent);
+  background:rgba(10,9,7,0.90);transform:translateY(-5px);
+  box-shadow:0 12px 40px rgba(211,47,47,0.18),0 8px 32px rgba(0,0,0,0.36);
+}
+#backToTopBtn:hover svg{transform:translateY(-3px);}
+
+/* Scroll reveal (Rule 35) */
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);}
+[data-reveal].is-in{opacity:1;transform:none;}
+[data-reveal][data-delay="1"]{transition-delay:.08s;}
+[data-reveal][data-delay="2"]{transition-delay:.16s;}
+[data-reveal][data-delay="3"]{transition-delay:.24s;}
+[data-reveal][data-delay="4"]{transition-delay:.32s;}
+@media(prefers-reduced-motion:reduce){[data-reveal]{transition:none;opacity:1;transform:none;}}
