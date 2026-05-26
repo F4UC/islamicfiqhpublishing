@@ -100,6 +100,55 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }
 
+            // --- Category Navigation ---
+            (function() {
+                var catNavBtn     = document.getElementById('catNavBtn');
+                var catNavDropdown= document.getElementById('catNavDropdown');
+                var catNavTab     = document.getElementById('catNavTab');
+                var catNavPanel   = document.getElementById('catNavPanel');
+                var catNavOverlay = document.getElementById('catNavOverlay');
+                var catPanelClose = document.getElementById('catPanelClose');
+
+                function openPanel() {
+                    if (catNavPanel)   catNavPanel.classList.add('open');
+                    if (catNavOverlay) catNavOverlay.classList.add('open');
+                }
+                function closeCatNav() {
+                    if (catNavDropdown) catNavDropdown.classList.remove('open');
+                    if (catNavPanel)    catNavPanel.classList.remove('open');
+                    if (catNavOverlay)  catNavOverlay.classList.remove('open');
+                }
+
+                if (catNavBtn) {
+                    catNavBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        catNavDropdown.classList.toggle('open');
+                    });
+                }
+                if (catNavTab)      catNavTab.addEventListener('click', openPanel);
+                if (catPanelClose)  catPanelClose.addEventListener('click', closeCatNav);
+                if (catNavOverlay)  catNavOverlay.addEventListener('click', closeCatNav);
+
+                // Close dropdown on outside click
+                document.addEventListener('click', function(e) {
+                    if (catNavDropdown && catNavDropdown.classList.contains('open')) {
+                        if (!catNavDropdown.contains(e.target) && e.target !== catNavBtn) {
+                            catNavDropdown.classList.remove('open');
+                        }
+                    }
+                });
+
+                // Mark active category
+                var catPath = window.location.pathname;
+                document.querySelectorAll('.cat-nav-link, .cat-panel-link').forEach(function(link) {
+                    try {
+                        if (new URL(link.href, window.location.origin).pathname === catPath) {
+                            link.classList.add('cat-active');
+                        }
+                    } catch(e) {}
+                });
+            })();
+
             // --- ระบบไฮไลท์เมนูอัตโนมัติ (ปรับปรุงความปลอดภัย) ---
             const currentPath = window.location.pathname;
             const navLinks = document.querySelectorAll('.nav-item');

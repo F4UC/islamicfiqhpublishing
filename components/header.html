@@ -240,6 +240,9 @@ html.dark-mode .read-more-link { color: #fff !important; }
       <button class="chrome-icon-btn" id="themeToggleBtn" aria-label="เปลี่ยนธีม" title="เปลี่ยนธีม">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 3c.132 0 .263 0 .393.007a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3z"/></svg>
       </button>
+      <button class="chrome-icon-btn cat-nav-btn" id="catNavBtn" aria-label="หมวดหมู่" title="หมวดหมู่">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="18" y2="18"/></svg>
+      </button>
       <button class="chrome-icon-btn" id="searchToggleBtn" aria-label="ค้นหาบทความ" title="ค้นหา (กด /)">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       </button>
@@ -256,8 +259,36 @@ html.dark-mode .read-more-link { color: #fff !important; }
     <a href="/pages/history.html" class="nav-item">ประวัติศาสตร์</a>
     <a href="/pages/hajj.html" class="nav-item">หัจญ์ & อุมเราะฮ์</a>
   </nav>
+
+  <!-- Category nav dropdown (desktop) -->
+  <div id="catNavDropdown" class="cat-nav-dropdown">
+    <div class="cat-nav-links">
+      <a class="cat-nav-link" href="/pages/kalam.html">กะลาม</a>
+      <a class="cat-nav-link" href="/pages/hadith.html">หะดีษ</a>
+      <a class="cat-nav-link" href="/pages/history.html">ประวัติศาสตร์</a>
+      <a class="cat-nav-link" href="/pages/nitisart.html">นิติศาสตร์</a>
+      <a class="cat-nav-link" href="/pages/hajj.html">หัจญ์ & อุมเราะฮ์</a>
+      <a class="cat-nav-link" href="/pages/tools.html">เครื่องมือ</a>
+    </div>
+  </div>
 </div>
 <div class="chrome-spacer"></div>
+
+<!-- Category nav mobile tab -->
+<button id="catNavTab" aria-label="หมวดหมู่">หมวดหมู่</button>
+
+<!-- Category nav slide panel (mobile) -->
+<div id="catNavPanel" role="dialog" aria-label="หมวดหมู่">
+  <button class="cat-panel-close" id="catPanelClose" aria-label="ปิด">&times;</button>
+  <div class="cat-panel-header">หมวดหมู่</div>
+  <a class="cat-panel-link" href="/pages/kalam.html">กะลาม</a>
+  <a class="cat-panel-link" href="/pages/hadith.html">หะดีษ</a>
+  <a class="cat-panel-link" href="/pages/history.html">ประวัติศาสตร์</a>
+  <a class="cat-panel-link" href="/pages/nitisart.html">นิติศาสตร์</a>
+  <a class="cat-panel-link" href="/pages/hajj.html">หัจญ์ & อุมเราะฮ์</a>
+  <a class="cat-panel-link" href="/pages/tools.html">เครื่องมือ</a>
+</div>
+<div id="catNavOverlay"></div>
 
 <!-- Search Overlay -->
 <div id="searchOverlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Search articles">
