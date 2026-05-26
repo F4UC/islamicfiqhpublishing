@@ -216,80 +216,128 @@ nav.chrome-nav.mobile-active .nav-item.active {
    ========================================================== */
 .search-overlay {
   position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-  background: rgba(10,9,7,.65);
+  background: rgba(10,9,7,0.88);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   z-index: 999999; opacity: 0; pointer-events: none;
   transition: opacity .3s cubic-bezier(.4,0,.2,1);
   display: flex; justify-content: center; align-items: flex-start;
-  padding: 60px 24px;
+  padding: 72px 24px;
 }
 .search-overlay.active { opacity: 1; pointer-events: auto; }
 .search-container {
-  width: 100%; max-width: 680px;
+  width: 100%; max-width: 600px;
   transform: translateY(-20px);
   transition: transform .35s cubic-bezier(.16,1,.3,1);
 }
 .search-overlay.active .search-container { transform: translateY(0); }
 .search-modal-card {
-  background: #ffffff; border: 1px solid #eaeaea; border-radius: 12px;
-  box-shadow: 0 30px 60px rgba(0,0,0,.12); overflow: hidden;
-  display: flex; flex-direction: column; max-height: calc(100vh - 120px);
-}
-html.dark-mode .search-modal-card {
-  background: #181818; border-color: #2a2a2a; box-shadow: 0 30px 60px rgba(0,0,0,.4);
+  background: #1a1612;
+  border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.6),
+              0 8px 16px rgba(0,0,0,0.4),
+              0 0 0 0.5px rgba(255,255,255,0.05) inset,
+              0 1px 0 rgba(255,255,255,0.08) inset;
+  overflow: hidden;
+  display: flex; flex-direction: column; max-height: calc(100vh - 144px);
 }
 .search-modal-header {
-  padding: 20px 24px; display: flex; align-items: center;
-  justify-content: space-between; border-bottom: 1px solid #eee;
+  padding: 14px 20px 8px; display: flex; align-items: center;
 }
-html.dark-mode .search-modal-header { border-bottom-color: #2a2a2a; }
 .search-modal-title {
-  font-family: 'Sarabun', sans-serif; font-size: 18px; font-weight: 700; color: #0a0a0a;
+  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif;
+  font-size: 13px; font-weight: 600; color: #f5f1ea; letter-spacing: .02em;
 }
-html.dark-mode .search-modal-title { color: #fff; }
-.search-close-btn {
-  background: transparent; border: none; font-size: 28px; line-height: .5;
-  cursor: pointer; color: #888; padding: 8px; border-radius: 4px; transition: all .2s;
-}
-.search-close-btn:hover { color: #0a0a0a; background: rgba(0,0,0,.05); }
-html.dark-mode .search-close-btn:hover { color: #fff; background: rgba(255,255,255,.08); }
 .search-input-field-wrapper {
-  padding: 16px 24px; display: flex; align-items: center; gap: 14px;
-  background: #fafafa; border-bottom: 1px solid #eee;
+  padding: 16px 20px; display: flex; align-items: center; gap: 12px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.07); background: transparent;
 }
-html.dark-mode .search-input-field-wrapper { background: #1e1e1e; border-bottom-color: #2a2a2a; }
-.search-input-icon { color: #888; flex-shrink: 0; display: flex; align-items: center; }
+.search-input-icon { color: rgba(255,255,255,0.25); flex-shrink: 0; display: flex; align-items: center; }
 .search-input {
   width: 100%; background: transparent; border: none; outline: none;
-  font-family: 'Sarabun', sans-serif; font-size: 16px; color: #0a0a0a;
+  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-size: 15px; color: #f5f1ea;
 }
-html.dark-mode .search-input { color: #fff; }
-.search-input::placeholder { color: #999; }
-.search-results-list { overflow-y: auto; padding: 8px 0; }
-.search-empty-state { padding: 40px 24px; text-align: center; color: #666; }
-html.dark-mode .search-empty-state { color: #aaa; }
-.search-empty-state .empty-icon { font-size: 32px; display: block; margin-bottom: 12px; }
-.search-empty-state p { font-size: 14px; margin-bottom: 8px; font-family: 'Sarabun', sans-serif; }
-.search-empty-state .keyboard-tip { font-size: 11px; color: #999; }
-.search-empty-state code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
-html.dark-mode .search-empty-state code { background: #333; color: #eee; }
+.search-input::placeholder { color: rgba(255,255,255,0.2); font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; }
+.search-esc-badge {
+  flex-shrink: 0; background: rgba(255,255,255,0.06);
+  border: 0.5px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.3);
+  border-radius: 6px; padding: 3px 8px; font-family: monospace; font-size: 11px;
+  line-height: 1.4; cursor: pointer; transition: all .2s;
+}
+.search-esc-badge:hover { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); }
+.search-results-list { overflow-y: auto; flex: 1 1 auto; padding: 6px 0; }
+.search-empty-state { padding: 48px 24px; text-align: center; }
+.search-empty-state .empty-icon { font-size: 32px; display: block; margin-bottom: 12px; opacity: 0.25; }
+.search-empty-state p { font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-size: 14px; margin-bottom: 8px; color: rgba(255,255,255,0.25); }
+.search-empty-state .keyboard-tip { font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-size: 11px; color: rgba(255,255,255,0.2); }
+.search-empty-state strong { color: #f5f1ea; }
+.search-empty-state code {
+  background: rgba(255,255,255,0.06); border: 0.5px solid rgba(255,255,255,0.1);
+  padding: 2px 6px; border-radius: 4px; font-family: monospace; color: rgba(255,255,255,0.4);
+}
 .search-result-item {
-  padding: 16px 24px; display: flex; flex-direction: column; gap: 6px;
-  border-bottom: 1px solid #f5f5f5; transition: background .2s, padding-left .2s;
-  text-decoration: none; color: inherit;
+  display: grid;
+  grid-template-columns: 32px minmax(0,1fr) 16px;
+  grid-template-rows: auto auto auto;
+  column-gap: 12px; align-items: center;
+  padding: 10px 20px; text-decoration: none; color: inherit;
+  border-bottom: 0.5px solid rgba(255,255,255,0.06);
+  border-left: 2px solid transparent;
+  transition: background .2s, padding-left .2s, border-color .2s;
 }
-html.dark-mode .search-result-item { border-bottom-color: #222; }
 .search-result-item:last-child { border-bottom: none; }
-.search-result-item:hover { background: #fdfbf7; padding-left: 32px; }
-html.dark-mode .search-result-item:hover { background: #222; }
-.search-result-cat-wrapper { display: flex; justify-content: space-between; align-items: center; }
-.search-result-cat { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #888; }
-.search-result-title { font-family: 'Sarabun', sans-serif; font-size: 16px; font-weight: 700; color: #0a0a0a; line-height: 1.4; }
-html.dark-mode .search-result-title { color: #fff; }
-.search-result-excerpt { font-size: 13px; color: #666; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-html.dark-mode .search-result-excerpt { color: #aaa; }
-.search-highlight { background: rgba(253,186,116,.3); border-radius: 2px; padding: 0 2px; }
-html.dark-mode .search-highlight { background: rgba(249,115,22,.4); }
+.search-result-item::before {
+  content: ''; grid-column: 1; grid-row: 1 / 4; align-self: center;
+  width: 32px; height: 32px; border-radius: 8px;
+  background: rgba(255,255,255,0.05) center / 16px 16px no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23ffffff'%20stroke-opacity='0.35'%20stroke-width='1.8'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M14%203v4a1%201%200%200%200%201%201h4'/%3E%3Cpath%20d='M17%2021H7a2%202%200%200%201-2-2V5a2%202%200%200%201%202-2h7l5%205v11a2%202%200%200%201-2%202z'/%3E%3Cline%20x1='9'%20y1='13'%20x2='15'%20y2='13'/%3E%3Cline%20x1='9'%20y1='17'%20x2='13'%20y2='17'/%3E%3C/svg%3E");
+  border: 0.5px solid rgba(255,255,255,0.08);
+}
+.search-result-item::after {
+  content: ''; grid-column: 3; grid-row: 1 / 4; align-self: center;
+  width: 16px; height: 16px;
+  background: center / 16px 16px no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23ffffff'%20stroke-opacity='0.15'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpolyline%20points='9%206%2015%2012%209%2018'/%3E%3C/svg%3E");
+}
+.search-result-cat-wrapper { grid-column: 2; grid-row: 1; }
+.search-result-title { grid-column: 2; grid-row: 2; }
+.search-result-excerpt { grid-column: 2; grid-row: 3; }
+.search-result-item:hover,
+.search-result-item.active {
+  background: rgba(211,47,47,0.08);
+  border-left: 2px solid #b31b1b;
+  padding-left: 18px;
+}
+.search-result-cat {
+  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif;
+  font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #b31b1b;
+}
+.search-result-title {
+  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif;
+  font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.75); line-height: 1.4; margin: 1px 0;
+}
+.search-result-item:hover .search-result-title,
+.search-result-item.active .search-result-title { color: #f5f1ea; font-weight: 500; }
+.search-result-excerpt {
+  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif;
+  font-size: 11px; color: rgba(255,255,255,0.25); line-height: 1.5;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+.search-highlight { background: rgba(211,47,47,0.25); color: #f5f1ea; border-radius: 2px; padding: 0 2px; }
+.search-modal-footer {
+  border-top: 0.5px solid rgba(255,255,255,0.06);
+  padding: 10px 20px; display: flex; gap: 16px; align-items: center; flex-shrink: 0;
+}
+.search-hint {
+  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-size: 11px;
+  color: rgba(255,255,255,0.2); display: inline-flex; align-items: center; gap: 5px;
+}
+.search-hint kbd {
+  background: rgba(255,255,255,0.06); border: 0.5px solid rgba(255,255,255,0.1);
+  border-bottom: 1.5px solid rgba(0,0,0,0.3); border-radius: 4px;
+  font-family: monospace; font-size: 10px; color: rgba(255,255,255,0.4);
+  padding: 1px 5px; line-height: 1.4;
+}
 
 /* ==========================================================
    Universal Dark Mode Overrides — Article / Category Pages
@@ -373,13 +421,13 @@ html.dark-mode .read-more-link { color: #fff !important; }
     <div class="search-modal-card">
       <div class="search-modal-header">
         <span class="search-modal-title">ค้นหาคลังบทความวิชาการ</span>
-        <button id="searchCloseBtn" class="search-close-btn" aria-label="ปิด">&times;</button>
       </div>
       <div class="search-input-field-wrapper">
         <span class="search-input-icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
         </span>
         <input type="text" id="searchInput" class="search-input" placeholder="ค้นหาบทความ เช่น ญิสม์, กะลาม, อัชอะรีย์, นิติศาสตร์..." autocomplete="off" spellcheck="false">
+        <button id="searchCloseBtn" class="search-esc-badge" aria-label="ปิด">ESC</button>
       </div>
       <div id="searchResults" class="search-results-list">
         <div class="search-empty-state">
@@ -387,6 +435,11 @@ html.dark-mode .read-more-link { color: #fff !important; }
           <p>พิมพ์คีย์เวิร์ดเพื่อค้นหาผลงานแปลและบทวิเคราะห์ในระบบ</p>
           <span class="keyboard-tip">หรือกดปุ่ม <code>/</code> บนคีย์บอร์ดเพื่อเปิดการค้นหาได้ทันที</span>
         </div>
+      </div>
+      <div class="search-modal-footer">
+        <span class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> เลื่อน</span>
+        <span class="search-hint"><kbd>↵</kbd> เปิด</span>
+        <span class="search-hint"><kbd>ESC</kbd> ปิด</span>
       </div>
     </div>
   </div>
