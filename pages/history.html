@@ -113,20 +113,29 @@ body{
 }
 a{text-decoration:none;color:inherit;transition:color 0.2s ease;}
 
-/* ─── PAGE HERO ─────────────────────────────────────────────────── */
+/* ─── PAGE HERO (Ken Burns · 5 slides) ──────────────────────────── */
 :root{--ph-paper:#111111;--ph-dim:#444444;--ph-gold:#b31b1b;--ph-serif:'Cormorant Garamond',Georgia,serif;--ph-thai:'Sarabun',sans-serif}
 html.dark-mode{--ph-paper:#f0f4ff;--ph-dim:#b8c8e0}
-.page-hero{min-height:52vh;padding:90px 0 60px;text-align:center;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.page-hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(60% 50% at 80% 18%,rgba(59,130,246,.10),transparent 60%),radial-gradient(80% 60% at 10% 90%,rgba(59,130,246,.05),transparent 70%)}
-html.dark-mode .page-hero::before{background:radial-gradient(60% 50% at 80% 18%,rgba(59,130,246,.06),transparent 60%),radial-gradient(80% 60% at 10% 90%,rgba(59,130,246,.03),transparent 70%)}
-.page-hero-inner{max-width:800px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
-.page-display{font-family:var(--ph-serif);font-weight:600;font-size:clamp(40px,11vw,140px);line-height:1.05;letter-spacing:-.02em;color:var(--ph-paper)}
-.page-display em{font-style:italic;color:var(--ph-gold);font-weight:400}
+.page-hero{position:relative;height:100vh;overflow:hidden}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0}
+.hero-slide-1{background-image:url('/images/heroes/hero-history-1.jpg');opacity:1;animation:hero-fade 37.5s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:0s,0s}
+.hero-slide-2{background-image:url('/images/heroes/hero-history-2.jpg');animation:hero-fade 37.5s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:7.5s,0s}
+.hero-slide-3{background-image:url('/images/heroes/hero-history-3.jpg');animation:hero-fade 37.5s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:15s,0s}
+.hero-slide-4{background-image:url('/images/heroes/hero-history-4.jpg');animation:hero-fade 37.5s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:22.5s,0s}
+.hero-slide-5{background-image:url('/images/heroes/hero-history-5.jpg');animation:hero-fade 37.5s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:30s,0s}
+.page-hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0) 100%)}
+.page-hero-inner{position:absolute;left:60px;bottom:120px;max-width:560px;z-index:3;text-align:left}
+.page-display{font-family:var(--ph-serif);font-weight:400;font-size:clamp(44px,8vw,92px);line-height:1.05;letter-spacing:-.01em;color:#f5f1ea;text-shadow:0 2px 24px rgba(0,0,0,0.6)}
+.page-display em{font-style:italic;color:#f5f1ea;font-weight:400}
 .page-display .br{display:block}
-.page-hero-sub{max-width:560px;margin:0 auto;font-family:var(--ph-thai);font-weight:400;font-size:16px;line-height:1.8;color:var(--ph-dim)}
-.page-hero-sep{height:1px;background:rgba(0,50,100,0.08);max-width:900px;margin:0 auto 48px}
-html.dark-mode .page-hero-sep{background:rgba(232,224,208,.12)}
-@media(max-width:640px){.page-hero{min-height:30vh;padding:40px 0 28px}}
+.page-hero-sub{max-width:560px;margin:18px 0 0;font-family:var(--ph-thai);font-weight:400;font-size:16px;line-height:1.8;color:rgba(245,241,234,0.82);text-shadow:0 1px 12px rgba(0,0,0,0.7)}
+.hero-scroll-hint{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;animation:hero-bounce 2s ease-in-out infinite;z-index:4;cursor:pointer}
+.hero-scroll-line{width:1px;height:28px;background:rgba(255,255,255,0.5)}
+@keyframes ken-burns{0%{transform:scale(1)}100%{transform:scale(1.08)}}
+@keyframes hero-fade{0%{opacity:1}16%{opacity:1}20%{opacity:0}100%{opacity:0}}
+@keyframes hero-bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+@media(max-width:640px){.page-hero-inner{left:24px;bottom:90px}.page-display{font-size:clamp(36px,10vw,60px)}}
+@media(prefers-reduced-motion:reduce){.hero-slide{animation:none}.hero-scroll-hint{animation:none}}
 
 /* --- Article List (Empty State) --- */
 .article-list { max-width: 800px; margin: 0 auto 80px; padding: 0 24px; }
@@ -247,6 +256,12 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 
 <main>
   <section class="page-hero">
+    <div class="hero-slide hero-slide-1" role="img" aria-label="ภาพสถาปัตยกรรมอิสลามยุคคลาสสิก"></div>
+    <div class="hero-slide hero-slide-2" role="img" aria-label="ภาพต้นฉบับตำราภาษาอาหรับโบราณ"></div>
+    <div class="hero-slide hero-slide-3" role="img" aria-label="ภาพเส้นทางสายไหมและอารยธรรมอิสลาม"></div>
+    <div class="hero-slide hero-slide-4" role="img" aria-label="ภาพมัสยิดประวัติศาสตร์"></div>
+    <div class="hero-slide hero-slide-5" role="img" aria-label="ภาพแผนที่อาณาจักรอิสลามในยุคทอง"></div>
+    <div class="page-hero-overlay"></div>
     <div class="page-hero-inner">
       <h1 class="page-display" data-reveal>
         <span class="br">ประวัติ</span>
@@ -254,8 +269,11 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
       </h1>
       <p class="page-hero-sub" data-reveal data-delay="2">ศึกษาเหตุการณ์สำคัญทางประวัติศาสตร์อิสลาม บริบททางสังคมและการเมืองในอดีต ตลอดจนพัฒนาการของอารยธรรมและสถาบันต่างๆ</p>
     </div>
+    <div class="hero-scroll-hint" role="button" aria-label="เลื่อนลงดูเนื้อหา">
+      <div class="hero-scroll-line"></div>
+      <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L10 10L19 1" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
   </section>
-  <div class="page-hero-sep"></div>
 
   <section class="article-list">
     <div class="empty-state">
@@ -291,6 +309,9 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
     var r = el.getBoundingClientRect();
     if(r.top < window.innerHeight && r.bottom > 0){ el.classList.add('is-in'); }
     else { io.observe(el); }
+  });
+  document.querySelector('.hero-scroll-hint')?.addEventListener('click', function() {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
   });
 })();
 </script>

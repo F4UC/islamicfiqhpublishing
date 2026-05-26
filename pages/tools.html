@@ -121,58 +121,27 @@ body { background: var(--ink); color: var(--paper); }
 [data-reveal][data-delay="3"]{transition-delay:.24s;}
 [data-reveal][data-delay="4"]{transition-delay:.32s;}
 
-/* ─── TOOLS HERO ─────────────────────────────────────────────────── */
-.tools-hero {
-  min-height: 62vh;
-  padding: 100px 0 72px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.tools-hero::before {
-  content: '';
-  position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(60% 50% at 80% 18%, rgba(59,130,246,.10), transparent 60%),
-    radial-gradient(80% 60% at 10% 90%, rgba(59,130,246,.05), transparent 70%);
-}
-html.dark-mode .tools-hero::before {
-  background:
-    radial-gradient(60% 50% at 80% 18%, rgba(59,130,246,.06), transparent 60%),
-    radial-gradient(80% 60% at 10% 90%, rgba(59,130,246,.03), transparent 70%);
-}
-
-.tools-hero-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 24px;
-  position: relative; z-index: 2;
-}
-
-.tools-display {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: clamp(40px, 12vw, 160px);
-  line-height: 1.05;
-  letter-spacing: -.02em;
-  color: var(--paper);
-}
-.tools-display em  { font-style: italic; color: var(--gold); font-weight: 400; }
-.tools-display .br { display: block; }
-
-
-.tools-hero-sub {
-  max-width: 600px;
-  margin: 0 auto;
-  font-family: var(--thai);
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 1.8;
-  color: var(--text-dim);
-}
+/* ─── PAGE HERO (Ken Burns · 4 slides) ──────────────────────────── */
+:root{--ph-serif:'Cormorant Garamond',Georgia,serif;--ph-thai:'Sarabun',sans-serif}
+.page-hero{position:relative;height:100vh;overflow:hidden}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0}
+.hero-slide-1{background-image:url('/images/heroes/hero-tools-1.jpg');opacity:1;animation:hero-fade 30s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:0s,0s}
+.hero-slide-2{background-image:url('/images/heroes/hero-tools-2.jpg');animation:hero-fade 30s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:7.5s,0s}
+.hero-slide-3{background-image:url('/images/heroes/hero-tools-3.jpg');animation:hero-fade 30s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:15s,0s}
+.hero-slide-4{background-image:url('/images/heroes/hero-tools-4.jpg');animation:hero-fade 30s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:22.5s,0s}
+.page-hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0) 100%)}
+.page-hero-inner{position:absolute;left:60px;bottom:120px;max-width:560px;z-index:3;text-align:left}
+.page-display{font-family:var(--ph-serif);font-weight:400;font-size:clamp(44px,8vw,92px);line-height:1.05;letter-spacing:-.01em;color:#f5f1ea;text-shadow:0 2px 24px rgba(0,0,0,0.6)}
+.page-display em{font-style:italic;color:#f5f1ea;font-weight:400}
+.page-display .br{display:block}
+.page-hero-sub{max-width:560px;margin:18px 0 0;font-family:var(--ph-thai);font-weight:400;font-size:16px;line-height:1.8;color:rgba(245,241,234,0.82);text-shadow:0 1px 12px rgba(0,0,0,0.7)}
+.hero-scroll-hint{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;animation:hero-bounce 2s ease-in-out infinite;z-index:4;cursor:pointer}
+.hero-scroll-line{width:1px;height:28px;background:rgba(255,255,255,0.5)}
+@keyframes ken-burns{0%{transform:scale(1)}100%{transform:scale(1.08)}}
+@keyframes hero-fade{0%{opacity:1}20%{opacity:1}25%{opacity:0}100%{opacity:0}}
+@keyframes hero-bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+@media(max-width:640px){.page-hero-inner{left:24px;bottom:90px}.page-display{font-size:clamp(36px,10vw,60px)}}
+@media(prefers-reduced-motion:reduce){.hero-slide{animation:none}.hero-scroll-hint{animation:none}}
 
 /* ─── DIVIDER BETWEEN HERO AND GRID ─────────────────────────────── */
 .tools-section-sep {
@@ -251,7 +220,6 @@ html.dark-mode .tools-hero::before {
 
 /* ─── RESPONSIVE ─────────────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .tools-hero { min-height: 32vh; padding: 44px 0 32px; }
   .tools-grid { grid-template-columns: 1fr; }
   .tool-desc-text { text-align: center; }
 }
@@ -266,13 +234,22 @@ html.dark-mode .tools-hero::before {
 <main>
 
   <!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
-  <section class="tools-hero">
-    <div class="tools-hero-inner">
-      <h1 class="tools-display" data-reveal>
+  <section class="page-hero">
+    <div class="hero-slide hero-slide-1" role="img" aria-label="ภาพเครื่องมือดิจิทัลสำหรับนักวิชาการอิสลาม"></div>
+    <div class="hero-slide hero-slide-2" role="img" aria-label="ภาพปฏิทินฮิจเราะฮ์และการคำนวณเวลา"></div>
+    <div class="hero-slide hero-slide-3" role="img" aria-label="ภาพการค้นคว้าตำราและห้องสมุดดิจิทัล"></div>
+    <div class="hero-slide hero-slide-4" role="img" aria-label="ภาพเทคโนโลยีกับการศึกษาอิสลาม"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-inner">
+      <h1 class="page-display" data-reveal>
         <span class="br">เครื่องมือ</span>
         <span class="br"><em>นักวิชาการ</em></span>
       </h1>
-      <p class="tools-hero-sub" data-reveal data-delay="2">แพลตฟอร์มดิจิทัลที่พัฒนาขึ้นเพื่อประยุกต์ใช้เทคโนโลยีร่วมกับหลักนิติศาสตร์อิสลาม มุ่งอำนวยความสะดวกในวิถีชีวิตประจำวันของมุสลิม</p>
+      <p class="page-hero-sub" data-reveal data-delay="2">แพลตฟอร์มดิจิทัลที่พัฒนาขึ้นเพื่อประยุกต์ใช้เทคโนโลยีร่วมกับหลักนิติศาสตร์อิสลาม มุ่งอำนวยความสะดวกในวิถีชีวิตประจำวันของมุสลิม</p>
+    </div>
+    <div class="hero-scroll-hint" role="button" aria-label="เลื่อนลงดูเนื้อหา">
+      <div class="hero-scroll-line"></div>
+      <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L10 10L19 1" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/></svg>
     </div>
   </section>
 
@@ -349,6 +326,9 @@ html.dark-mode .tools-hero::before {
     var r = el.getBoundingClientRect();
     if(r.top < window.innerHeight && r.bottom > 0){ el.classList.add('is-in'); }
     else { io.observe(el); }
+  });
+  document.querySelector('.hero-scroll-hint')?.addEventListener('click', function() {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
   });
 })();
 </script>
