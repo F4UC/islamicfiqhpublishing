@@ -83,6 +83,20 @@ nav.chrome-nav .nav-item.active::after { transform: scaleX(1); }
 }
 .chrome-spacer { height: 51px; }
 
+/* Inline desktop search — hidden by default, shown ≥1024px */
+#inlineSearchInput {
+  display: none;
+  width: 200px; height: 32px; box-sizing: border-box;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 999px; padding: 0 16px;
+  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif;
+  font-size: 13px; color: #ffffff; outline: none;
+  transition: border-color 0.25s, width 0.3s ease;
+}
+#inlineSearchInput::placeholder { color: rgba(255,255,255,0.4); }
+#inlineSearchInput:focus { border-color: rgba(255,255,255,0.9); width: 280px; }
+
 @media (max-width: 980px) {
   .chrome-inner { display: flex; justify-content: space-between; }
   .chrome-left { display: none; }
@@ -186,8 +200,9 @@ nav.chrome-nav.mobile-active .nav-item.active {
   /* Hide หน้าแรก — FIQH wordmark links home on desktop */
   nav.chrome-nav .nav-item[href="/index.html"] { display: none; }
 
-  /* RIGHT: search only */
+  /* RIGHT: inline search + search button */
   .chrome-right { gap: 10px; }
+  #inlineSearchInput { display: block; }
   #themeToggleBtn { display: none; }
   .chrome-hamburger { display: none !important; }
   .chrome-icon-btn {
@@ -406,6 +421,7 @@ html.dark-mode .read-more-link { color: #fff !important; }
       <button class="chrome-icon-btn" id="themeToggleBtn" aria-label="เปลี่ยนธีม" title="เปลี่ยนธีม">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 3c.132 0 .263 0 .393.007a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3z"/></svg>
       </button>
+      <input type="text" id="inlineSearchInput" placeholder="ค้นหาบทความ..." autocomplete="off" spellcheck="false" aria-label="ค้นหาบทความ">
       <button class="chrome-icon-btn" id="searchToggleBtn" aria-label="ค้นหาบทความ" title="ค้นหา (กด /)">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       </button>
@@ -431,7 +447,7 @@ html.dark-mode .read-more-link { color: #fff !important; }
       </div>
       <div id="searchResults" class="search-results-list">
         <div class="search-empty-state">
-          <span class="empty-icon">📖</span>
+          <!-- NO ICONS — text only in modal -->
           <p>พิมพ์คีย์เวิร์ดเพื่อค้นหาผลงานแปลและบทวิเคราะห์ในระบบ</p>
           <span class="keyboard-tip">หรือกดปุ่ม <code>/</code> บนคีย์บอร์ดเพื่อเปิดการค้นหาได้ทันที</span>
         </div>

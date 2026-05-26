@@ -447,6 +447,26 @@ document.addEventListener("DOMContentLoaded", function() {
                     performSearch(e.target.value);
                 });
             }
+
+            // --- แถบค้นหา inline บนเดสก์ท็อป → เปิด overlay แล้วส่งค่าเข้า performSearch เดิม ---
+            const inlineSearchInput = document.getElementById('inlineSearchInput');
+            if (inlineSearchInput) {
+                const runInlineSearch = function(val) {
+                    if (searchInput) searchInput.value = val;
+                    openSearch();
+                    performSearch(val);
+                };
+                inlineSearchInput.addEventListener('input', function(e) {
+                    runInlineSearch(e.target.value);
+                });
+                inlineSearchInput.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        runInlineSearch(e.target.value);
+                        setTimeout(function(){ if (searchInput) searchInput.focus(); }, 120);
+                    }
+                });
+            }
         });
 
     // สั่งโหลดไฟล์ Footer
