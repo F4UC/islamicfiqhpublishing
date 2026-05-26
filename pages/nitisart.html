@@ -5,7 +5,7 @@
 <link rel="icon" href="../favicon.png?v=2" type="image/png">
 <link rel="apple-touch-icon" href="../favicon.png?v=2">
 <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png?v=2">
-<meta name="theme-color" content="#e3edf7">
+<meta name="theme-color" content="#0a0907">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>นิติศาสตร์ — Islamic Fiqh Publishing</title>
 
@@ -29,63 +29,29 @@
 <link rel="stylesheet" href="../css/tokens.css">
 
 <style>
-/* --- Premium Dynamic Color System --- */
+/* --- Fixed Dark Palette — all colors resolve via css/tokens.css (white + red on ink) --- */
 :root {
-  --bg-primary: #e3edf7;
-  --bg-secondary: #d6e2ee;
-  --bg-tertiary: #c8d7e5;
-  --text-primary: #111111;
-  --text-secondary: #444444;
-  --text-tertiary: #777777;
-  --text-quaternary: #888888;
-  --border-primary: rgba(0,50,100,0.06);
-  --border-secondary: rgba(0,50,100,0.12);
-  --ink: var(--bg-primary); --ink-2: var(--bg-secondary); --ink-3: var(--bg-tertiary);
-  --ink-4: var(--border-secondary); --paper: var(--text-primary); --paper-2: var(--text-secondary);
-  --bone: #556270; --text: var(--text-primary); --text-dim: var(--text-secondary);
-  --text-mute: var(--text-tertiary); --gold: #b31b1b; --gold-bright: #d32f2f;
-  --rule: rgba(0,50,100,0.06); --rule-strong: rgba(0,50,100,0.12);
-  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
-  --thai: 'Sarabun', system-ui, sans-serif;
-  --arabic: 'Amiri', serif;
-  --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
-  --accent-color: #b31b1b;
-  --inverted-bg: #0a0c10; --inverted-text: #e8e0d0;
-  --footer-bg: #050403; --footer-border: rgba(232,224,208,.14);
-  --shadow-color: rgba(0,50,100,0.08); --shadow-heavy: rgba(0,50,100,0.15);
+  --bg-primary: var(--ink);
+  --bg-secondary: var(--ink-2);
+  --bg-tertiary: var(--ink-3);
+  --text-primary: var(--heading);
+  --text-secondary: var(--text);
+  --text-tertiary: var(--muted);
+  --text-quaternary: var(--faint);
+  --border-primary: var(--line);
+  --border-secondary: var(--line-strong);
+  --ink-4: var(--line-strong);
+  --paper: var(--heading); --paper-2: var(--text);
+  --bone: var(--muted); --text-dim: var(--text); --text-mute: var(--muted);
+  --gold: var(--accent-deep); --gold-bright: var(--accent);
+  --rule: var(--line); --rule-strong: var(--line-strong);
+  --accent-color: var(--accent-deep);
+  --inverted-bg: var(--ink-2); --inverted-text: var(--heading);
+  --footer-bg: #050403; --footer-border: var(--line-strong);
+  --shadow-color: rgba(0,0,0,0.4); --shadow-heavy: rgba(0,0,0,0.6);
   --theme-transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
-
-html.dark-mode {
-  --bg-primary: #0a0907;
-  --bg-secondary: #14110d;
-  --bg-tertiary: #1d1814;
-  --text-primary: #e8e0d0;
-  --text-secondary: #9a907e;
-  --text-tertiary: #6b6357;
-  --text-quaternary: #6a8099;
-  --border-primary: rgba(232,224,208,0.12);
-  --border-secondary: rgba(232,224,208,0.24);
-  --ink: var(--bg-primary); --ink-2: var(--bg-secondary); --ink-3: var(--bg-tertiary);
-  --ink-4: var(--border-secondary); --paper: var(--text-primary); --paper-2: var(--text-secondary);
-  --bone: #9a907e; --text: var(--text-primary); --text-dim: var(--text-secondary);
-  --text-mute: var(--text-tertiary); --rule: rgba(232,224,208,.14); --rule-strong: rgba(232,224,208,.32);
-  --accent-color: #3b82f6;
-  --inverted-bg: #14110d; --inverted-text: #e8e0d0;
-  --footer-bg: #050403; --footer-border: rgba(232,224,208,.14);
-  --shadow-color: rgba(0,0,0,0.4); --shadow-heavy: rgba(0,0,0,0.6);
-}
-
-
-/* Dark mode background — inline fallback, beats site-background.css light rule via specificity (0,2,2) > (0,2,1) */
-html.dark-mode body.ifp-tools-page {
-  background: linear-gradient(180deg, #06101e 0, #06101e 360px, #030912 690px, #030912 100%) fixed !important;
-}
-@media (max-width: 768px) {
-  html.dark-mode body.ifp-tools-page {
-    background: linear-gradient(180deg, #06101e 0, #06101e 330px, #030912 620px, #030912 100%) fixed !important;
-  }
-}
+#themeToggleBtn { display: none !important; }
 
 /* --- 1. สไตล์พื้นฐาน --- */
 *{box-sizing:border-box;margin:0;padding:0}
@@ -101,8 +67,7 @@ body{
 a{text-decoration:none;color:inherit;transition:color 0.2s ease;}
 
 /* ─── PAGE HERO (Ken Burns · 6 slides) ──────────────────────────── */
-:root{--ph-paper:#111111;--ph-dim:#444444;--ph-gold:#b31b1b;--ph-serif:'Cormorant Garamond',Georgia,serif;--ph-thai:'Sarabun',sans-serif}
-html.dark-mode{--ph-paper:#f0f4ff;--ph-dim:#b8c8e0}
+:root{--ph-paper:var(--heading);--ph-dim:var(--text);--ph-gold:var(--accent-deep);--ph-serif:'Cormorant Garamond',Georgia,serif;--ph-thai:'Sarabun',sans-serif}
 .page-hero{position:relative;height:100vh;overflow:hidden}
 .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0}
 .hero-slide-1{background-image:url('/images/heroes/hero-nitisart-1.jpg');opacity:1;animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:0s,0s}
@@ -137,7 +102,7 @@ html.dark-mode{--ph-paper:#f0f4ff;--ph-dim:#b8c8e0}
   content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--gold);
   transition: width .4s cubic-bezier(.2,.7,.2,1);
 }
-.idx-row:hover { padding-left: 32px; background: linear-gradient(to right, rgba(59,130,246,.04), transparent 60%); }
+.idx-row:hover { padding-left: 32px; background: linear-gradient(to right, var(--line), transparent 60%); }
 .idx-row:hover::before { width: 3px; }
 .idx-row:hover .idx-title { color: var(--gold-bright); }
 .idx-row:hover .idx-arrow { transform: translateX(8px); color: var(--gold); }

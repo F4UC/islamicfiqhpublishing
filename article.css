@@ -6,16 +6,16 @@
   --ph-gold: #b31b1b;
   --ph-serif: 'Cormorant Garamond', Georgia, serif;
   --ph-thai: 'Sarabun', sans-serif;
-  /* Elegant light blue academic theme */
-  --bg-primary: #e3edf7;       /* Soft premium sky-blue background */
-  --bg-secondary: #d6e2ee;     /* Pale elegant blue-gray container */
-  --bg-tertiary: #c8d7e5;      /* Soft medium blue-gray */
-  --text-primary: #111111;     /* Charcoal primary text */
-  --text-secondary: #444444;   /* Muted gray text */
-  --text-tertiary: #777777;    /* Very muted text */
+  /* Pure black-and-white reading theme (light) */
+  --bg-primary: #ffffff;       /* Pure white background */
+  --bg-secondary: #f5f5f5;     /* Subtle off-white container */
+  --bg-tertiary: #ebebeb;      /* Light gray panel */
+  --text-primary: #111111;     /* Near-black primary text */
+  --text-secondary: #3f3f3f;   /* Dark gray body text */
+  --text-tertiary: #666666;    /* Muted gray */
   --text-quaternary: #888888;
-  --border-primary: rgba(0,50,100,0.06);
-  --border-secondary: rgba(0,50,100,0.12);
+  --border-primary: rgba(0,0,0,0.10);
+  --border-secondary: rgba(0,0,0,0.18);
   --accent-color: #b31b1b;     /* Brand Red */
   
   /* ตัวแปรพิเศษสำหรับคอมโพเนนต์ที่ควรเข้มเสมอ (Inverted Components) */
@@ -25,28 +25,28 @@
   --footer-border: rgba(232,224,208,.14);
   
   /* ตัวแปรสำหรับเงา (Dynamic Shadows) */
-  --shadow-color: rgba(0,50,100,0.08);
-  --shadow-heavy: rgba(0,50,100,0.15);
-  
+  --shadow-color: rgba(0,0,0,0.08);
+  --shadow-heavy: rgba(0,0,0,0.15);
+
   --theme-transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 /* ชุดสีดาร์กโหมดสไตล์วิชาการระดับพรีเมียมเมื่อมีคลาส .dark-mode */
 html.dark-mode {
-  --ph-paper: #f0f4ff;
-  --ph-dim: #b8c8e0;
-  --bg-primary: #0a0907;       /* Rich dark ink background */
-  --bg-secondary: #14110d;     /* Deep charcoal warm brown */
-  --bg-tertiary: #1d1814;      /* Medium dark */
-  --text-primary: #e8e0d0;     /* Warm ivory text */
-  --text-secondary: #9a907e;   /* Sand colored muted text */
-  --text-tertiary: #6b6357;    /* Earthy dark gray muted text */
-  --text-quaternary: #525252;
-  --border-primary: rgba(232,224,208,0.12);
-  --border-secondary: rgba(232,224,208,0.24);
-  --accent-color: #3b82f6;     /* Premium Sky Blue */
-  
-  --inverted-bg: #14110d;
+  --ph-paper: #f5f5f5;
+  --ph-dim: #b8b8b8;
+  --bg-primary: #000000;       /* Pure black background */
+  --bg-secondary: #0d0d0d;     /* Near-black container */
+  --bg-tertiary: #161616;      /* Dark gray panel */
+  --text-primary: #f5f5f5;     /* Near-white primary text */
+  --text-secondary: #c4c4c4;   /* Light gray body text */
+  --text-tertiary: #9a9a9a;    /* Muted gray */
+  --text-quaternary: #777777;
+  --border-primary: rgba(255,255,255,0.12);
+  --border-secondary: rgba(255,255,255,0.24);
+  --accent-color: #d32f2f;     /* Brand Red (brightened for dark) */
+
+  --inverted-bg: #0d0d0d;
   --inverted-text: #e8e0d0;
   --footer-bg: #050403;
   --footer-border: rgba(232,224,208,.14);
@@ -61,17 +61,13 @@ body {
   font-family: 'Sarabun', sans-serif;
   color: var(--text-primary);
   background-color: #ffffff;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'><path fill='%23e3edf7' fill-opacity='1' d='M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,202.7C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'></path></svg>");
-  background-repeat: no-repeat;
-  background-size: 100% 380px;
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   transition: var(--theme-transition);
 }
 html.dark-mode body {
-  background-color: #0a0907;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'><path fill='%2314110d' fill-opacity='1' d='M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,202.7C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'></path></svg>");
+  background-color: #000000;
 }
 .article-wrap, .article-layout, .about-wrap {
   background: transparent !important;
@@ -902,7 +898,7 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
   background-color: #05060a; /* Premium dark ink */
   color: #e8e0d0; /* Warm ivory text */
   overflow: hidden;
-  border-bottom: 1px solid rgba(59,130,246,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
   transition: var(--theme-transition);
 }
 .hero-banner::before {
@@ -911,7 +907,7 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
   inset: 0;
   pointer-events: none;
   opacity: 0.12;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%233b82f6' fill-opacity='1' d='M0,192L48,202.7C96,213,192,235,288,234.7C384,235,480,213,576,192C672,171,768,149,864,160C960,171,1056,213,1152,229.3C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23d32f2f' fill-opacity='1' d='M0,192L48,202.7C96,213,192,235,288,234.7C384,235,480,213,576,192C672,171,768,149,864,160C960,171,1056,213,1152,229.3C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path></svg>");
   background-size: cover;
   background-position: bottom;
   z-index: 1;
@@ -922,8 +918,8 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
   inset: 0;
   pointer-events: none;
   background: 
-    radial-gradient(50% 50% at 70% 20%, rgba(59,130,246,0.08), transparent 60%),
-    radial-gradient(70% 60% at 20% 80%, rgba(59,130,246,0.04), transparent 70%);
+    radial-gradient(50% 50% at 70% 20%, rgba(211,47,47,0.08), transparent 60%),
+    radial-gradient(70% 60% at 20% 80%, rgba(211,47,47,0.04), transparent 70%);
   z-index: 0;
 }
 .hero-banner-inner {
@@ -951,7 +947,7 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
 .hero-banner .hero-divider {
   width: 60px;
   height: 1px;
-  background: rgba(59,130,246,0.3);
+  background: rgba(211,47,47,0.4);
   margin: 0 auto 32px;
 }
 .hero-banner .hero-display {
@@ -965,7 +961,7 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
 }
 .hero-banner .hero-display em {
   font-style: italic;
-  color: #3b82f6;
+  color: #d32f2f;
   font-weight: 400;
 }
 .hero-banner .hero-sub {
@@ -988,7 +984,7 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #3b82f6;
+  color: #d32f2f;
   font-weight: 600;
   margin-bottom: 12px;
   display: inline-block;
@@ -1039,20 +1035,6 @@ html.dark-mode .cell-section-alt { background-color: var(--bg-secondary); }
   align-items: center;
   justify-content: center;
 }
-.art-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(60% 50% at 80% 18%, rgba(59,130,246,.08), transparent 60%),
-    radial-gradient(80% 60% at 10% 90%, rgba(59,130,246,.04), transparent 70%);
-}
-html.dark-mode .art-hero::before {
-  background:
-    radial-gradient(60% 50% at 80% 18%, rgba(59,130,246,.05), transparent 60%),
-    radial-gradient(80% 60% at 10% 90%, rgba(59,130,246,.02), transparent 70%);
-}
 .art-hero-inner {
   max-width: 700px;
   margin: 0 auto;
@@ -1101,11 +1083,10 @@ html.dark-mode .art-hero::before {
 .art-hero-meteors .meteor:nth-child(5) { left: 36px; height: 16px; --dur: 1.9s; --delay: .25s; }
 .art-hero-sep {
   height: 1px;
-  background: rgba(0,50,100,0.08);
+  background: var(--border-primary);
   max-width: 900px;
   margin: 0 auto 32px;
 }
-html.dark-mode .art-hero-sep { background: rgba(232,224,208,.12); }
 @media (max-width: 640px) {
   .art-hero { min-height: 12vh; padding: 24px 0 16px; }
   .art-hero-display { font-size: clamp(36px, 9vw, 72px); }

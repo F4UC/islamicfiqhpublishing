@@ -47,28 +47,13 @@ function updateThemeIcon(isDark) {
 // à¸ªà¸±à¹ˆà¸‡à¸£à¸±à¸™à¸˜à¸µà¸¡à¹€à¸šà¸·à¹‰à¸­à¸‡à¸•à¹‰à¸™à¸—à¸±à¸™à¸—à¸µà¸à¹ˆà¸­à¸™ DOM à¹‚à¸«à¸¥à¸”à¹€à¸•à¹‡à¸¡à¸—à¸µà¹ˆà¹€à¸žà¸·à¹ˆà¸­à¸¥à¸”à¸„à¸§à¸²à¸¡à¸à¸°à¸žà¸£à¸´à¸š
 applyTheme(isDarkModeActive);
 
-// Load the shared animated subpage surface into <head> and keep the home canvas untouched.
+// The animated navy subpage surface is retired: category pages are fixed-dark
+// and article/tool pages use pure black/white. Ensure no surface is applied.
 function installSubpageSurface() {
-    const path = window.location.pathname.replace(/\/+$/, '');
-    const isHomePage = path === '' || path === '/' || path === '/index.html';
-
-    if (isHomePage) {
-        if (document.body) {
-            document.body.classList.remove('ifp-subpage-bg');
-        }
-        return;
-    }
-
-    if (!document.querySelector('link[data-ifp-subpage-surface]')) {
-        const surfaceLink = document.createElement('link');
-        surfaceLink.rel = 'stylesheet';
-        surfaceLink.href = '/site-background.css?v=8';
-        surfaceLink.setAttribute('data-ifp-subpage-surface', 'true');
-        document.head.appendChild(surfaceLink);
-    }
-
+    const existing = document.querySelector('link[data-ifp-subpage-surface]');
+    if (existing) existing.remove();
     if (document.body) {
-        document.body.classList.add('ifp-subpage-bg');
+        document.body.classList.remove('ifp-subpage-bg');
     }
 }
 

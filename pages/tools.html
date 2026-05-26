@@ -21,7 +21,7 @@
 <link rel="icon" href="../favicon.png?v=2" type="image/png">
 <link rel="apple-touch-icon" href="../favicon.png?v=2">
 <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png?v=2">
-<meta name="theme-color" content="#e3edf7">
+<meta name="theme-color" content="#0a0907">
 
 <meta property="og:title" content="เครื่องมือและแอปพลิเคชัน — Islamic Fiqh Publishing">
 <meta property="og:description" content="แพลตฟอร์มดิจิทัลที่ผสานเทคโนโลยีเข้ากับหลักศาสนา สำรวจเครื่องมืออำนวยความสะดวกสำหรับมุสลิมได้ที่นี่">
@@ -38,50 +38,29 @@
 
 <style>
 
-/* ─── TOKEN SYSTEM — mirrors index.html canonical ─────────────────── */
+/* --- Fixed Dark Palette — all colors resolve via css/tokens.css (white + red on ink) --- */
 :root {
-  --bg-primary: #e3edf7;
-  --bg-secondary: #d6e2ee;
-  --bg-tertiary: #c8d7e5;
-  --text-primary: #111111;
-  --text-secondary: #444444;
-  --text-tertiary: #777777;
-  --border-primary: rgba(0,50,100,0.06);
-  --border-secondary: rgba(0,50,100,0.12);
-  --ink: var(--bg-primary); --ink-2: var(--bg-secondary); --ink-3: var(--bg-tertiary);
-  --ink-4: var(--border-secondary); --paper: var(--text-primary); --paper-2: var(--text-secondary);
-  --bone: #556270; --text: var(--text-primary); --text-dim: var(--text-secondary);
-  --text-mute: var(--text-tertiary); --gold: #b31b1b; --gold-bright: #d32f2f;
-  --rule: rgba(0,50,100,0.06); --rule-strong: rgba(0,50,100,0.12);
-  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
-  --thai: 'Sarabun', system-ui, sans-serif;
-  --arabic: 'Amiri', serif;
-  --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
+  --bg-primary: var(--ink);
+  --bg-secondary: var(--ink-2);
+  --bg-tertiary: var(--ink-3);
+  --text-primary: var(--heading);
+  --text-secondary: var(--text);
+  --text-tertiary: var(--muted);
+  --text-quaternary: var(--faint);
+  --border-primary: var(--line);
+  --border-secondary: var(--line-strong);
+  --ink-4: var(--line-strong);
+  --paper: var(--heading); --paper-2: var(--text);
+  --bone: var(--muted); --text-dim: var(--text); --text-mute: var(--muted);
+  --gold: var(--accent-deep); --gold-bright: var(--accent);
+  --rule: var(--line); --rule-strong: var(--line-strong);
+  --accent-color: var(--accent-deep);
+  --inverted-bg: var(--ink-2); --inverted-text: var(--heading);
+  --footer-bg: #050403; --footer-border: var(--line-strong);
+  --shadow-color: rgba(0,0,0,0.4); --shadow-heavy: rgba(0,0,0,0.6);
+  --theme-transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
-html.dark-mode {
-  --bg-primary: #0a0907;
-  --bg-secondary: #14110d;
-  --bg-tertiary: #1d1814;
-  --text-primary: #e8e0d0;
-  --text-secondary: #9a907e;
-  --text-tertiary: #6b6357;
-  --border-primary: rgba(232,224,208,0.12);
-  --border-secondary: rgba(232,224,208,0.24);
-  --ink: var(--bg-primary); --ink-2: var(--bg-secondary); --ink-3: var(--bg-tertiary);
-  --ink-4: var(--border-secondary); --paper: var(--text-primary); --paper-2: var(--text-secondary);
-  --bone: #9a907e; --text: var(--text-primary); --text-dim: var(--text-secondary);
-  --text-mute: var(--text-tertiary); --rule: rgba(232,224,208,.14); --rule-strong: rgba(232,224,208,.32);
-}
-
-/* Dark mode background — inline fallback, specificity (0,2,2) beats site-background.css light rule (0,2,1) */
-html.dark-mode body.ifp-tools-page {
-  background: linear-gradient(180deg, #06101e 0, #06101e 360px, #030912 690px, #030912 100%) fixed !important;
-}
-@media (max-width: 768px) {
-  html.dark-mode body.ifp-tools-page {
-    background: linear-gradient(180deg, #06101e 0, #06101e 330px, #030912 620px, #030912 100%) fixed !important;
-  }
-}
+#themeToggleBtn { display: none !important; }
 
 body { background: var(--ink); color: var(--paper); }
 
