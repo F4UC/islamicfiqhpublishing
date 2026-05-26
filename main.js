@@ -100,6 +100,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }
 
+            // --- ระบบซ่อน-แสดงแถบนำทางเมื่อเลื่อนจอ (Hide-on-scroll) ---
+            (function() {
+                const chrome = document.querySelector('.chrome');
+                if (!chrome) return;
+                let lastScrollY = window.scrollY;
+                window.addEventListener('scroll', function() {
+                    // ไม่ซ่อนแถบขณะเมนูมือถือเปิดอยู่
+                    if (navMenu && navMenu.classList.contains('mobile-active')) return;
+                    const currentY = window.scrollY;
+                    if (currentY <= 0) {
+                        chrome.classList.remove('nav-hidden');
+                    } else if (currentY > lastScrollY && currentY > 80) {
+                        chrome.classList.add('nav-hidden');
+                    } else if (currentY < lastScrollY) {
+                        chrome.classList.remove('nav-hidden');
+                    }
+                    lastScrollY = currentY;
+                }, { passive: true });
+            })();
+
             // --- category-nav ---
             (function() {
                 var p = window.location.pathname;
