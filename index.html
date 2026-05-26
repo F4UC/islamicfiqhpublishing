@@ -170,11 +170,17 @@ body::before {
 
 .hero-top { display: flex; justify-content: center; width: 100%; border-bottom: 1px solid var(--rule); padding-bottom: 24px; position: relative; z-index: 5; }
 .hero-nav { display: flex; gap: 40px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.hero-nav-row { display: contents; }
 .hero-nav-item {
   font-family: var(--thai); font-size: 14px; letter-spacing: .02em;
   color: var(--text-dim); transition: color .25s, transform .25s; font-weight: 500; text-decoration: none;
 }
 .hero-nav-item:hover, .hero-nav-item.active { color: var(--gold); transform: translateY(-1px); }
+@media (max-width: 767px) {
+  .hero-nav { flex-direction: column; align-items: center; gap: 10px; }
+  .hero-nav-row { display: flex; justify-content: center; gap: 16px; }
+  .hero-nav-item { font-size: 12px; letter-spacing: 0; }
+}
 
 .hero-body { margin-top: 112px; text-align: center; position: relative; z-index: 2; }
 
@@ -747,14 +753,17 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
   <div class="wrap">
     <div class="hero-top">
       <nav class="hero-nav" data-reveal>
-        <a href="/index.html" class="hero-nav-item active">หน้าแรก</a>
-        <a href="/pages/about.html" class="hero-nav-item">เกี่ยวกับเรา</a>
-        <a href="/pages/kalam.html" class="hero-nav-item">กะลาม</a>
-        <a href="/pages/nitisart.html" class="hero-nav-item">นิติศาสตร์</a>
-        <a href="/pages/hadith.html" class="hero-nav-item">หะดีษ</a>
-        <a href="/pages/history.html" class="hero-nav-item">ประวัติศาสตร์</a>
-        <a href="/pages/hajj.html" class="hero-nav-item">หัจญ์ & อุมเราะฮ์</a>
-        <a href="/pages/tools.html" class="hero-nav-item">เครื่องมือนักวิชาการ</a>
+        <span class="hero-nav-row">
+          <a href="/pages/about.html" class="hero-nav-item">เกี่ยวกับเรา</a>
+          <a href="/pages/kalam.html" class="hero-nav-item">กะลาม</a>
+          <a href="/pages/nitisart.html" class="hero-nav-item">นิติศาสตร์</a>
+          <a href="/pages/hadith.html" class="hero-nav-item">หะดีษ</a>
+        </span>
+        <span class="hero-nav-row">
+          <a href="/pages/history.html" class="hero-nav-item">ประวัติศาสตร์</a>
+          <a href="/pages/hajj.html" class="hero-nav-item">หัจญ์ & อุมเราะฮ์</a>
+          <a href="/pages/tools.html" class="hero-nav-item">เครื่องมือนักวิชาการ</a>
+        </span>
       </nav>
     </div>
 
