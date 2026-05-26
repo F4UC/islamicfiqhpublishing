@@ -182,6 +182,13 @@ body::before {
   .hero-nav-item { font-size: 12px; letter-spacing: 0; }
 }
 
+@media (max-width: 1023px) {
+  .hero-nav { display: none; }
+  .hero-top { display: none; }
+  .hero { padding-top: 80px; }
+  .hero-body { margin-top: 40px; }
+}
+
 .hero-body { margin-top: 112px; text-align: center; position: relative; z-index: 2; }
 
 .hero-arabic {
@@ -277,10 +284,10 @@ body::before {
 }
 .section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
 .section-title {
-  font-family: var(--thai); font-weight: 700;
+  font-family: var(--serif); font-weight: 700;
   font-size: clamp(36px, 5vw, 72px); line-height: 1.1; letter-spacing: -.01em; color: var(--paper);
 }
-.section-title em { font-style: italic; color: var(--gold); font-weight: 400; }
+.section-title em { font-style: normal; font-weight: 700; color: #d32f2f; }
 .section-lede { font-family: var(--thai); font-weight: 300; font-size: 17px; line-height: 1.8; color: var(--text-dim); margin-top: 24px; max-width: 560px; }
 
 @media(max-width:880px){ .section-head { grid-template-columns: 1fr; gap: 24px; } }
@@ -473,7 +480,7 @@ body::before {
 
 /* ── Typography ── */
 .cat-tag { font-family: var(--ui); font-size: 9px; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); opacity: 0.75; }
-.cat-name { font-family: var(--thai); font-weight: 700; color: #f0ece4; font-size: clamp(38px, 5vw, 72px); line-height: 1.05; letter-spacing: -0.02em; transition: color 0.3s; }
+.cat-name { font-family: var(--serif); font-weight: 700; color: #f0ece4; font-size: clamp(38px, 5vw, 72px); line-height: 1.05; letter-spacing: -0.02em; transition: color 0.3s; }
 .cat-card:hover .cat-name { color: #e8c16a; }
 .cat-sub { font-family: var(--thai); font-weight: 300; font-size: 13px; color: rgba(240,236,228,0.60); letter-spacing: .08em; line-height: 1.6; }
 #tools { padding-bottom: 60px; }
@@ -708,7 +715,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
    ========================================================= */
 @media(max-width:600px){
   .wrap { padding: 0 20px; }
-  .hero { padding: 120px 0 60px; }
+  .hero { padding: 80px 0 60px; }
   .hero-top { grid-template-columns: 1fr; gap: 16px; }
   .hero-tag { text-align: left; }
   .section { padding: 80px 0; }
