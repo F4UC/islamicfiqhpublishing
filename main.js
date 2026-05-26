@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
 
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260527')
+    fetch('/components/header.html?v=20260526')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -274,44 +274,28 @@ document.addEventListener("DOMContentLoaded", function() {
             const searchCloseBtn = document.getElementById('searchCloseBtn');
             const searchInput = document.getElementById('searchInput');
             const searchResults = document.getElementById('searchResults');
-            
+            const inlineSearchInput = document.getElementById('inlineSearchInput');
+            const inlineDropdown = document.getElementById('inlineSearchDropdown');
+
             let initialSearchResultsHTML = '';
             if (searchResults) {
                 initialSearchResultsHTML = searchResults.innerHTML;
             }
-            
-            let articlesData = null; // เก็บข้อมูลบทความจาก JSON
+
+            let articlesData = null;
+
+            // Preload articles index immediately when header mounts
+            fetch('/articles.json')
+                .then(res => res.json())
+                .then(data => { articlesData = data; })
+                .catch(err => console.error("ผิดพลาดในการโหลดคลังข้อมูล:", err));
 
             // ฟังก์ชันเปิดการแสดงผลการค้นหา (Open Modal)
             function openSearch() {
                 if (searchOverlay) {
                     searchOverlay.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // ล็อกหน้าจอด้านหลัง
-                    setTimeout(() => {
-                        if (searchInput) searchInput.focus();
-                    }, 100);
-                    
-                    // ดึงข้อมูล articles.json แบบ Lazy Loading (ดึงครั้งแรกเมื่อกดเปิด)
-                    if (!articlesData) {
-                        fetch('/articles.json')
-                            .then(res => res.json())
-                            .then(data => {
-                                articlesData = data;
-                                if (searchInput && searchInput.value.trim().length > 0) {
-                                    performSearch(searchInput.value);
-                                }
-                            })
-                            .catch(err => {
-                                console.error("ผิดพลาดในการโหลดคลังข้อมูล:", err);
-                                if (searchResults) {
-                                    searchResults.innerHTML = `
-                                        <div class="search-empty-state">
-                                            <span class="empty-icon">⚠️</span>
-                                            <p>ไม่สามารถโหลดคลังข้อมูลการค้นหาได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง</p>
-                                        </div>`;
-                                }
-                            });
-                    }
+                    document.body.style.overflow = 'hidden';
+                    setTimeout(() => { if (searchInput) searchInput.focus(); }, 100);
                 }
             }
 
@@ -361,21 +345,38 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
                     e.preventDefault();
-                    openSearch();
+                    if (window.matchMedia('(min-width: 1024px)').matches && inlineSearchInput) {
+                        inlineSearchInput.focus();
+                    } else {
+                        openSearch();
+                    }
                 }
             });
+
+            // Shared filter — used by both overlay and inline dropdown
+            function getMatches(query) {
+                if (!articlesData || !query) return [];
+                var q = query.trim().toLowerCase();
+                if (q.length === 0) return [];
+                return articlesData.filter(function(article) {
+                    return article.title.toLowerCase().includes(q) ||
+                           article.excerpt.toLowerCase().includes(q) ||
+                           article.category.toLowerCase().includes(q) ||
+                           article.tags.some(function(tag) { return tag.toLowerCase().includes(q); });
+                });
+            }
 
             // ฟังก์ชันค้นหาและจับคู่
             function performSearch(query) {
                 if (!searchResults) return;
-                
+
                 query = query.trim().toLowerCase();
-                
+
                 if (query.length === 0) {
                     resetSearchResults();
                     return;
                 }
-                
+
                 if (!articlesData) {
                     searchResults.innerHTML = `
                         <div class="search-empty-state">
@@ -384,14 +385,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         </div>`;
                     return;
                 }
-                
-                const matches = articlesData.filter(article => {
-                    const titleMatch = article.title.toLowerCase().includes(query);
-                    const excerptMatch = article.excerpt.toLowerCase().includes(query);
-                    const categoryMatch = article.category.toLowerCase().includes(query);
-                    const tagsMatch = article.tags.some(tag => tag.toLowerCase().includes(query));
-                    return titleMatch || excerptMatch || categoryMatch || tagsMatch;
-                });
+
+                const matches = getMatches(query);
                 
                 if (matches.length === 0) {
                     searchResults.innerHTML = `
@@ -448,29 +443,89 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }
 
-            // --- แถบค้นหา inline บนเดสก์ท็อป → เปิด overlay แล้วส่งค่าเข้า performSearch เดิม ---
-            const inlineSearchInput = document.getElementById('inlineSearchInput');
-            if (inlineSearchInput) {
-                const runInlineSearch = function(val) {
-                    if (searchInput) searchInput.value = val;
-                    openSearch();
-                    performSearch(val);
-                };
+            // --- Inline search typeahead dropdown ---
+            var ddActiveIndex = -1;
+
+            function renderInlineDropdown(query) {
+                if (!inlineDropdown) return;
+                var q = query.trim();
+                if (q.length === 0) {
+                    inlineDropdown.classList.remove('open');
+                    inlineDropdown.innerHTML = '';
+                    ddActiveIndex = -1;
+                    return;
+                }
+                var matches = getMatches(q).slice(0, 6);
+                if (matches.length === 0) {
+                    inlineDropdown.innerHTML = '<div class="inline-dd-empty">ไม่พบผลลัพธ์สำหรับ "' + escapeHtml(q) + '"</div>';
+                    inlineDropdown.classList.add('open');
+                    ddActiveIndex = -1;
+                    return;
+                }
+                var totalMatches = getMatches(q).length;
+                var items = matches.map(function(a) {
+                    return '<a class="inline-dd-item" href="' + escapeHtml(a.url) + '">' +
+                           '<span class="inline-dd-cat">' + escapeHtml(a.category) + '</span>' +
+                           '<span class="inline-dd-title">' + escapeHtml(a.title) + '</span>' +
+                           '</a>';
+                }).join('');
+                var footer = totalMatches > 6
+                    ? '<div class="inline-dd-footer">กด Enter เพื่อดูผลทั้งหมด (' + totalMatches + ' รายการ)</div>'
+                    : '';
+                inlineDropdown.innerHTML = items + footer;
+                inlineDropdown.classList.add('open');
+                ddActiveIndex = -1;
+            }
+
+            function closeInlineDropdown() {
+                if (inlineDropdown) {
+                    inlineDropdown.classList.remove('open');
+                    ddActiveIndex = -1;
+                }
+            }
+
+            if (inlineSearchInput && inlineDropdown) {
                 inlineSearchInput.addEventListener('input', function(e) {
-                    runInlineSearch(e.target.value);
+                    renderInlineDropdown(e.target.value);
                 });
+
                 inlineSearchInput.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter') {
+                    var items = inlineDropdown.querySelectorAll('.inline-dd-item');
+                    if (e.key === 'ArrowDown') {
                         e.preventDefault();
-                        runInlineSearch(e.target.value);
-                        setTimeout(function(){ if (searchInput) searchInput.focus(); }, 120);
+                        ddActiveIndex = Math.min(ddActiveIndex + 1, items.length - 1);
+                        items.forEach(function(el, i) { el.classList.toggle('active', i === ddActiveIndex); });
+                    } else if (e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        ddActiveIndex = Math.max(ddActiveIndex - 1, -1);
+                        items.forEach(function(el, i) { el.classList.toggle('active', i === ddActiveIndex); });
+                    } else if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (ddActiveIndex >= 0 && items[ddActiveIndex]) {
+                            items[ddActiveIndex].click();
+                        } else {
+                            if (searchInput) searchInput.value = inlineSearchInput.value;
+                            closeInlineDropdown();
+                            openSearch();
+                            performSearch(inlineSearchInput.value);
+                            setTimeout(function() { if (searchInput) searchInput.focus(); }, 120);
+                        }
+                    } else if (e.key === 'Escape') {
+                        closeInlineDropdown();
+                        inlineSearchInput.blur();
+                    }
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!inlineSearchInput.contains(e.target) && !inlineDropdown.contains(e.target)) {
+                        closeInlineDropdown();
                     }
                 });
             }
         });
 
     // สั่งโหลดไฟล์ Footer
-    fetch('/components/footer.html?v=20260527')
+    fetch('/components/footer.html?v=20260526')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
