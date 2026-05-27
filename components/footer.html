@@ -14,40 +14,45 @@ footer.site-footer {
   gap: 48px; margin-bottom: 60px;
 }
 .foot-brand-inner { display: inline-flex; flex-direction: column; align-items: center; margin-bottom: 20px; }
+.foot-brand { text-align: center; }
 .foot-brand .foot-mark {
-  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif;
-  font-weight: 600; font-size: 40px; color: #e8e0d0; letter-spacing: -.01em;
-  line-height: 1.1;
+  font-family: 'D-DIN', 'Inter', system-ui, sans-serif;
+  font-weight: 600; font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+  color: #f5f1ea; letter-spacing: 0.05em; text-transform: uppercase;
+  line-height: 1.15;
 }
-.foot-brand .foot-mark em { font-style: italic; color: #b31b1b; }
+.foot-brand .foot-mark .footer-brand-accent { color: #b31b1b; }
 .foot-brand .foot-ar {
-  font-family: 'Amiri', serif; color: #9a907e;
+  font-family: 'Amiri', serif; color: #f5f1ea;
   direction: rtl; font-size: 19px; line-height: 1.6;
-  text-align: center; width: 100%; margin-top: 12px;
+  text-align: center; width: 100%; margin-top: 22px;
 }
 .foot-brand p {
-  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-weight: 300;
-  color: #9a907e; font-size: 16px; max-width: 340px; line-height: 1.7;
+  font-family: 'Sarabun', sans-serif; font-weight: 400;
+  color: #f5f1ea; font-size: 16px; max-width: 420px; line-height: 1.7;
+  text-align: center; margin: 0 auto;
 }
 .foot-col h4 {
-  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-size: 13px;
-  font-weight: 600; letter-spacing: .06em; color: #b31b1b;
+  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif;
+  font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+  font-weight: 600; letter-spacing: .02em; color: #f5f1ea;
   margin-bottom: 20px;
 }
 .foot-col a {
-  display: block; padding: 5px 0; color: #9a907e;
-  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-weight: 300; font-size: 16px;
+  display: block; padding: 5px 0; color: #f5f1ea;
+  font-family: 'Sarabun', sans-serif; font-weight: 400; font-size: 16px;
   text-decoration: none; transition: color .25s;
 }
-.foot-col a:hover { color: #e8e0d0; }
+.foot-col a .footer-en { font-family: 'D-DIN', 'Inter', system-ui, sans-serif; }
+.foot-col a:hover { color: #b31b1b; }
 .foot-bottom {
-  display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px;
+  display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 6px;
   padding-top: 32px; border-top: 1px solid rgba(232,224,208,.14);
-  font-family: 'Inter', system-ui, sans-serif; font-size: 13px;
-  letter-spacing: .18em; text-transform: uppercase; color: #9a907e;
+  font-family: 'D-DIN', 'Inter', system-ui, sans-serif; font-size: 13px;
+  letter-spacing: .04em; color: #f5f1ea;
 }
-.foot-sep { margin: 0 12px; opacity: .4; }
-.foot-colophon { font-family: 'Sarabun', sans-serif; font-size: 13px; letter-spacing: 0; text-transform: none; color: #9a907e; }
+.foot-bottom .copy-sep { margin: 0 8px; opacity: .5; }
+.foot-colophon { font-family: 'Sarabun', sans-serif; font-size: 13px; letter-spacing: 0; text-transform: none; color: #f5f1ea; }
 @media (max-width: 880px) {
   .foot-top { grid-template-columns: 1fr 1fr; gap: 32px; }
   .foot-brand { grid-column: span 2; }
@@ -57,7 +62,10 @@ footer.site-footer {
 @media (max-width: 540px) {
   .foot-top { grid-template-columns: 1fr; }
   .foot-brand { grid-column: span 1; }
-  .foot-brand .foot-mark { font-size: clamp(26px, 7.5vw, 36px); }
+}
+@media (max-width: 400px) {
+  .foot-bottom .copy-sep { display: none; }
+  .foot-bottom .copy-date, .foot-bottom .copy-brand { display: block; width: 100%; }
 }
 </style>
 
@@ -66,14 +74,13 @@ footer.site-footer {
     <div class="foot-top">
       <div class="foot-brand">
         <div class="foot-brand-inner">
-          <div class="foot-mark">Islamic <em>Fiqh</em> Publishing</div>
+          <div class="foot-mark">ISLAMIC <span class="footer-brand-accent">FIQH</span> PUBLISHING</div>
           <div class="foot-ar" lang="ar" dir="rtl">دار الفقه الإسلامي للنشر والتوزيع والترجمة</div>
         </div>
         <p>เริ่มก่อตั้งและเผยแพร่องค์ความรู้ทางออนไลน์ในช่วงกลางปี พ.ศ. 2563 (ค.ศ. 2020 / ฮ.ศ. 1441) สำนักพิมพ์อิสระที่มุ่งตีพิมพ์บทแปลและบทวิเคราะห์งานวิชาการอิสลามคลาสสิกเป็นภาษาไทย</p>
       </div>
       <div class="foot-col">
         <h4>คลังบทความ</h4>
-        <a href="/index.html">หน้าแรก</a>
         <a href="/pages/kalam.html">กะลาม / เทววิทยา</a>
         <a href="/pages/nitisart.html">นิติศาสตร์</a>
         <a href="/pages/hadith.html">หะดีษ</a>
@@ -82,18 +89,20 @@ footer.site-footer {
       </div>
       <div class="foot-col">
         <h4>เครื่องมือ</h4>
-        <a href="/pages/tools/hijri-time-machine.html">HIJRI TIME MACHINE</a>
+        <a href="/pages/tools/hijri-time-machine.html"><span class="footer-en">HIJRI TIME MACHINE</span></a>
         <a href="/pages/tools.html">ดูเครื่องมือทั้งหมด</a>
       </div>
       <div class="foot-col">
         <h4>กองบรรณาธิการ</h4>
         <a href="/pages/about.html">เกี่ยวกับเรา</a>
-        <a href="https://www.facebook.com/IslamicFiqhPublishing" target="_blank" rel="noopener noreferrer">ติดต่อ / Facebook</a>
+        <a href="https://www.facebook.com/IslamicFiqhPublishing" target="_blank" rel="noopener noreferrer">ติดต่อ / <span class="footer-en">Facebook</span></a>
       </div>
     </div>
 
     <div class="foot-bottom">
-      <span>© 1447 H / 2026 · Islamic Fiqh Publishing</span>
+      <span class="copy-date">© 1447 H / 2026</span>
+      <span class="copy-sep" aria-hidden="true">·</span>
+      <span class="copy-brand">Islamic Fiqh Publishing</span>
     </div>
   </div>
 </footer>

@@ -222,25 +222,24 @@ nav.chrome-nav.mobile-active .nav-item.active {
     background: transparent;
     border: none;
     padding: 0;
-    gap: 24px;
+    gap: 20px;
     align-items: center;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
   nav.chrome-nav .nav-item {
     font-family: 'Sarabun', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: none;
+    white-space: nowrap;
     color: rgba(255,255,255,0.85);
     padding: 0;
     border-bottom: none !important;
   }
   nav.chrome-nav .nav-item:hover,
   nav.chrome-nav .nav-item.active { color: #ffffff; }
-  /* Hide หน้าแรก — FIQH wordmark links home on desktop */
-  nav.chrome-nav .nav-item[href="/index.html"] { display: none; }
 
   /* RIGHT: inline search wrapper + hide magnifier button */
   .chrome-right { gap: 10px; }
@@ -447,7 +446,7 @@ html.dark-mode .read-more-link { color: #fff !important; }
     </a>
 
     <nav class="chrome-nav" id="navMenu">
-      <a href="/index.html" class="nav-item">หน้าแรก</a>
+      <a href="/" class="nav-item nav-home">หน้าแรก</a>
       <a href="/pages/about.html" class="nav-item">เกี่ยวกับเรา</a>
       <a href="/pages/kalam.html" class="nav-item">กะลาม</a>
       <a href="/pages/nitisart.html" class="nav-item">นิติศาสตร์</a>

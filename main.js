@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
 
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260527g')
+    fetch('/components/header.html?v=20260527h')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -225,6 +225,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (mTab)     mTab.addEventListener('click', openPanel);
                     if (mClose)   mClose.addEventListener('click', closePanel);
                     if (mOverlay) mOverlay.addEventListener('click', closePanel);
+                }
+            })();
+
+            // --- ซ่อนลิงก์ "หน้าแรก" เมื่ออยู่บนหน้าแรกเอง ---
+            (function() {
+                var p = window.location.pathname;
+                if (p === '/' || p === '/index.html') {
+                    var home = document.querySelector('.nav-item.nav-home');
+                    if (home) home.style.display = 'none';
                 }
             })();
 
@@ -530,7 +539,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // สั่งโหลดไฟล์ Footer
-    fetch('/components/footer.html?v=20260527g')
+    fetch('/components/footer.html?v=20260527h')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;

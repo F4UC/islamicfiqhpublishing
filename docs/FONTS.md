@@ -65,7 +65,7 @@ https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300..700
 - **IBM Plex Sans Thai** (`--serif` / `--ph-serif`) → `.page-display` (hero title ทุก category page), `.about-content h2`, article `<h2>` / `.article-h2`, search overlay (`.search-input`, `.search-result-*`, `.search-modal-title`), inline search dropdown (`.inline-dd-*`)
 - **Amiri** (`--arabic` / ตรง ๆ) → `.ar-feature`, `.ar-block`, `.ar-inline`, `.arabic-text`, `.quote-text-ar`, ตัวอักษรอาหรับประดับขนาดใหญ่บน index, `.logo-ar`, `.footer-ar`, QOTD `ar`
 - **Inter** → `.chrome` (nav bar base font, header.html), `.chrome-wordmark` ("FIQH"), `.topbar`, `.logo-en`, `.footer-logo`, `.footer-copy`, `.en-text` (อังกฤษแทรกในบทความ), `.numbered-section .num`, `--ui` fallback ทุกที่
-- **D-DIN** → ตัวเลือกแรกของ `--ui` ใน `index.html`, `css/tokens.css`, `pages/tools/hijri-time-machine.html` (เช่น `.topbar`, `.logo-en`, `.footer-logo`, `.footer-copy` เมื่อหน้านั้นใช้ `var(--ui)`)
+- **D-DIN** → ตัวเลือกแรกของ `--ui` ใน `index.html`, `css/tokens.css`, `pages/tools/hijri-time-machine.html` (เช่น `.topbar`, `.logo-en`, `.footer-logo`, `.footer-copy` เมื่อหน้านั้นใช้ `var(--ui)`); **footer (`components/footer.html`)** ใช้ stack ตรง ๆ `'D-DIN','Inter',system-ui` ที่ brand wordmark (`.foot-mark`), บรรทัดลิขสิทธิ์ (`.foot-bottom`), และ Latin substring ในลิงก์ (`.footer-en` — เช่น HIJRI TIME MACHINE, Facebook) เหตุที่ใช้ stack ตรง ๆ ไม่ใช่ `var(--ui)` เพราะ footer ถูกฉีดทุกหน้ารวมหน้าบทความที่ `article.css` ไม่ได้นิยาม `--ui`
 
 ---
 
