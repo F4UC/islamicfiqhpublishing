@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
 
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260526d')
+    fetch('/components/header.html?v=20260527a')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // --- category-nav ---
             (function() {
                 var p = window.location.pathname;
-                if (p === '/' || p === '/index.html') return; // homepage: never inject
+                if (p === '/' || p === '/index.html' || p === '/pages/about.html') return; // homepage + about: never inject
 
                 var CAT_LINKS = [
                     {text: 'กะลาม',           href: '/pages/kalam.html'},
@@ -526,7 +526,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // สั่งโหลดไฟล์ Footer
-    fetch('/components/footer.html?v=20260526c')
+    fetch('/components/footer.html?v=20260527a')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
