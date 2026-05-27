@@ -9,6 +9,13 @@
 |---|---|---|---|---|
 | `articles/nitisart/moon-sighting-vs-astronomy.html` (hero) | `https://commons.wikimedia.org/wiki/Special:FilePath/Crescent_Moon.JPG` (embed ผ่าน Special:FilePath ของ Wikimedia Commons, โหลดในเบราว์เซอร์ผู้อ่าน) | Wikimedia Commons — [File:Crescent Moon.JPG](https://commons.wikimedia.org/wiki/File:Crescent_Moon.JPG) | Y0kwetahoe (Wikimedia user) | Public Domain — เจ้าของสละสิทธิ์ ใช้ได้ทุกวัตถุประสงค์รวมเชิงพาณิชย์ ไม่ต้องระบุที่มา |
 
+| `index.html` (categories panel 01 — กะลาม/เทววิทยา) | `/images/heroes/hero-kalam-1.jpg` | local asset — ถ่ายภาพ/ซื้อสิทธิ์โดยทีมงาน | Islamic Fiqh Publishing | สิทธิ์ภายใน |
+| `index.html` (categories panel 02 — นิติศาสตร์) | `/images/heroes/hero-nitisart-1.jpg` | local asset — ถ่ายภาพ/ซื้อสิทธิ์โดยทีมงาน | Islamic Fiqh Publishing | สิทธิ์ภายใน |
+| `index.html` (categories panel 03 — หะดีษ) | `/images/heroes/hero-hadith.mp4` | local asset — วิดีโอภายใน | Islamic Fiqh Publishing | สิทธิ์ภายใน |
+| `index.html` (categories panel 04 — ประวัติศาสตร์) | `/images/heroes/hero-history-1.jpg` | local asset — ถ่ายภาพ/ซื้อสิทธิ์โดยทีมงาน | Islamic Fiqh Publishing | สิทธิ์ภายใน |
+| `index.html` (categories panel 05 — หัจญ์ & อุมเราะฮ์) | `/images/heroes/hero-hajj-1.jpg` | local asset — ถ่ายภาพ/ซื้อสิทธิ์โดยทีมงาน | Islamic Fiqh Publishing | สิทธิ์ภายใน |
+| `index.html` (categories panel 06 — เครื่องมือนักวิชาการ) | `/images/heroes/hero-tools-1.jpg` | local asset — ถ่ายภาพ/ซื้อสิทธิ์โดยทีมงาน | Islamic Fiqh Publishing | สิทธิ์ภายใน |
+
 ## หมายเหตุการเลือกภาพ (hero ของบทความ moon-sighting)
 - **โจทย์:** จันทร์เสี้ยว / ดาราศาสตร์อิสลาม — โทนสงบ มีศักดิ์ศรี ไม่ sci-fi
 - **เลือก** ภาพจันทร์เสี้ยวจริงบนท้องฟ้ามืด (greyscale-on-black) ตรงธีมบทความ "การดูจันทร์เสี้ยว" โดยตรง
