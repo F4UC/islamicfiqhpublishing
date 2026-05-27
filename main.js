@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
 
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260527h')
+    fetch('/components/header.html?v=20260527i')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -539,7 +539,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // สั่งโหลดไฟล์ Footer
-    fetch('/components/footer.html?v=20260527h')
+    fetch('/components/footer.html?v=20260527i')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;

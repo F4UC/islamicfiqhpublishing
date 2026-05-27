@@ -1080,14 +1080,13 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
    Add these once here so all articles can reuse them.
    ============================================================ */
 
-/* B.2 — Full-display block: ayah / hadith / core definition ≤280 chars */
+/* B.2 — Full-display block: unified centered Arabic, no side border */
 .ar-feature {
   font-family: 'Amiri', serif;
-  direction: rtl; text-align: right;
+  direction: rtl; text-align: center;
   font-size: 1.6rem; line-height: 2.1;
   color: #f5f1ea;
-  border-right: 3px solid #b31b1b;
-  padding: 16px 20px; margin: 24px 0;
+  padding: 24px 24px; margin: 28px 0;
   background: rgba(255,255,255,0.02);
 }
 .ar-translation { color: #cfc8bb; margin: 0 0 24px; line-height: 2.0; }
