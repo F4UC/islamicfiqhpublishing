@@ -202,16 +202,15 @@ body::before {
 
 .hero-actions { margin-top: 56px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
 .btn {
-  font-family: var(--ui); font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
-  padding: 18px 32px; border: 1px solid var(--rule-strong); border-radius: 999px;
+  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-weight: 500; font-size: 15px;
+  letter-spacing: 0.04em; color: #f5f1ea;
+  padding: 12px 28px; border: 1px solid rgba(255,255,255,0.65); border-radius: 999px;
   display: inline-flex; align-items: center; gap: 12px;
   transition: all .35s cubic-bezier(.2,.7,.2,1); position: relative; overflow: hidden;
 }
-.btn .arrow { display: inline-block; transition: transform .35s; }
-.btn:hover { border-color: var(--gold); color: var(--gold); }
-.btn:hover .arrow { transform: translateX(4px); }
-.btn-primary { background: var(--paper); color: var(--ink); border-color: var(--paper); }
-.btn-primary:hover { background: var(--gold-bright); border-color: var(--gold-bright); color: var(--ink); }
+.btn .arrow { display: inline-block; transition: transform .35s; color: inherit; }
+.btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(179,27,27,0.1); }
+.btn:hover .arrow { transform: translateX(4px); color: var(--gold); }
 
 .scroll-hint {
   position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
@@ -724,10 +723,71 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 }
 #categories .section-title { color: #f0ece4; }
 #categories .section-lede  { color: rgba(240,236,228,0.48); }
-#categories { background: #0a0907; position: relative; overflow: hidden; }
+#categories { background: #0a0907; position: relative; padding-bottom: 0; }
 #categories .wrap { position: relative; z-index: 1; }
 .cat-name { color: #f0ece4; }
 .cat-sub { color: rgba(240,236,228,0.62); }
+
+/* ─── CAT-STACK — SpaceX-style vertical full-bleed panels ─── */
+.cat-stack { display: flex; flex-direction: column; }
+.cat-panel {
+  position: relative; height: 100vh; overflow: hidden;
+  display: flex; align-items: flex-end; text-decoration: none;
+}
+.cat-panel-bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center; z-index: 0;
+  transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+}
+.cat-panel-video {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: 0;
+  transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+}
+.cat-panel:hover .cat-panel-bg,
+.cat-panel:hover .cat-panel-video { transform: scale(1.04); }
+.cat-panel-overlay {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(135deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.0) 100%);
+}
+.cat-panel-body {
+  position: relative; z-index: 2; padding: 0 40px 56px;
+  display: flex; flex-direction: column; gap: 12px; max-width: 720px;
+}
+.cat-panel-num {
+  font-family: var(--ui); font-size: 9px; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.75;
+}
+.cat-panel-title {
+  font-family: 'IBM Plex Sans Thai', 'IBM Plex Sans', system-ui, sans-serif;
+  font-weight: 400; line-height: 1.0;
+  font-size: clamp(2.8rem, 6.5vw, 7rem);
+  color: #f5f1ea; letter-spacing: -0.01em;
+}
+.cat-panel-title em {
+  font-style: normal; font-weight: 700; color: #b31b1b; letter-spacing: -0.02em;
+}
+.cat-panel-sub {
+  font-family: 'Sarabun', sans-serif; font-weight: 300; font-size: 15px;
+  color: rgba(245,241,234,0.65); letter-spacing: .04em; line-height: 1.6;
+}
+.cat-panel-cta {
+  font-family: 'D-DIN','Inter', system-ui, sans-serif; font-size: 10px;
+  letter-spacing: .22em; text-transform: uppercase; color: rgba(245,241,234,0.50);
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 6px;
+  transition: color .3s;
+}
+.cat-panel:hover .cat-panel-cta { color: #f5f1ea; }
+.cat-panel-kalam .cat-panel-bg   { background-image: url('/images/heroes/hero-kalam-1.jpg'); }
+.cat-panel-nitisart .cat-panel-bg { background-image: url('/images/heroes/hero-nitisart-1.jpg'); }
+.cat-panel-history .cat-panel-bg  { background-image: url('/images/heroes/hero-history-1.jpg'); }
+.cat-panel-hajj .cat-panel-bg    { background-image: url('/images/heroes/hero-hajj-1.jpg'); }
+.cat-panel-tools .cat-panel-bg   { background-image: url('/images/heroes/hero-tools-1.jpg'); }
+@media(max-width:768px){
+  .cat-panel { height: 80vh; }
+  .cat-panel-title { font-size: clamp(2.4rem, 9vw, 4rem); }
+  .cat-panel-body { padding: 0 24px 48px; }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -909,99 +969,80 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
     </div>
   </div>
 
-  <div class="wrap wrap-spacex">
-    <div class="cat-grid" data-reveal data-delay="2">
+  <div class="cat-stack">
 
-      <!-- 01 เทววิทยา -->
-      <a href="/pages/kalam.html" class="cat-card cat-kalam">
-        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
-        <div class="cat-bg"></div>
-        <div class="cat-overlay"></div>
-        <div class="cat-body">
-          <span class="cat-tag">01</span>
-          <div class="cat-name">เทววิทยา</div>
-          <div class="cat-sub">ปรัชญาเทววิทยา · อภิปรัชญา · อะกีดะฮ์</div>
-        </div>
-      </a>
+    <!-- 01 กะลาม / เทววิทยา -->
+    <a href="/pages/kalam.html" class="cat-panel cat-panel-kalam">
+      <div class="cat-panel-bg"></div>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">01</span>
+        <div class="cat-panel-title">กะลาม<br><em>เทววิทยา</em></div>
+        <div class="cat-panel-sub">ปรัชญาเทววิทยา · อภิปรัชญา · อะกีดะฮ์</div>
+        <span class="cat-panel-cta">ดูบทความ →</span>
+      </div>
+    </a>
 
-      <!-- 02 นิติศาสตร์ -->
-      <a href="/pages/nitisart.html" class="cat-card cat-nitisart">
-        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
-        <div class="cat-bg"></div>
-        <div class="cat-overlay"></div>
-        <div class="cat-body">
-          <span class="cat-tag">02</span>
-          <div class="cat-name">นิติศาสตร์</div>
-          <div class="cat-sub">สังคม · กฎหมาย · วิถีชีวิต</div>
-        </div>
-      </a>
+    <!-- 02 นิติศาสตร์ -->
+    <a href="/pages/nitisart.html" class="cat-panel cat-panel-nitisart">
+      <div class="cat-panel-bg"></div>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">02</span>
+        <div class="cat-panel-title">นิติ<em>ศาสตร์</em></div>
+        <div class="cat-panel-sub">สังคม · กฎหมาย · วิถีชีวิต</div>
+        <span class="cat-panel-cta">ดูบทความ →</span>
+      </div>
+    </a>
 
-      <!-- 03 หะดีษ -->
-      <a href="/pages/hadith.html" class="cat-card cat-hadith">
-        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
-        <div class="cat-bg"></div>
-        <div class="cat-overlay"></div>
-        <div class="cat-body">
-          <span class="cat-tag">03</span>
-          <div class="cat-name">หะดีษ</div>
-          <div class="cat-sub">ตัวบท · สายรายงาน · การวิเคราะห์</div>
-        </div>
-      </a>
+    <!-- 03 หะดีษ (video background) -->
+    <a href="/pages/hadith.html" class="cat-panel cat-panel-hadith">
+      <video class="cat-panel-video" src="/images/heroes/hero-hadith.mp4" autoplay muted loop playsinline></video>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">03</span>
+        <div class="cat-panel-title">หะ<em>ดีษ</em></div>
+        <div class="cat-panel-sub">ตัวบท · สายรายงาน · การวิเคราะห์</div>
+        <span class="cat-panel-cta">ดูบทความ →</span>
+      </div>
+    </a>
 
-      <!-- 04 ประวัติศาสตร์ -->
-      <a href="/pages/history.html" class="cat-card cat-history">
-        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
-        <div class="cat-bg"></div>
-        <div class="cat-overlay"></div>
-        <div class="hist-years" aria-hidden="true">
-          <!-- Arabic -->
-          <span class="hy hy-1 hy-lg" lang="ar">خِلَافَة</span>
-          <span class="hy hy-4" lang="ar">٦٣٢ م</span>
-          <span class="hy hy-7" lang="ar">فُتُوحَات</span>
-          <span class="hy hy-10 hy-sm" lang="ar">سِيَاسَة</span>
-          <!-- English -->
-          <span class="hy hy-2 hy-en">Caliphate</span>
-          <span class="hy hy-5 hy-en hy-sm">1258 CE</span>
-          <span class="hy hy-8 hy-en">Dynasty</span>
-          <span class="hy hy-11 hy-en hy-sm">Conquest</span>
-          <!-- Thai -->
-          <span class="hy hy-3 hy-th">อำนาจ</span>
-          <span class="hy hy-6 hy-th hy-sm">การเมือง</span>
-          <span class="hy hy-9 hy-th">ราชวงศ์</span>
-          <span class="hy hy-12 hy-th hy-sm">การปกครอง</span>
-        </div>
-        <div class="cat-body">
-          <span class="cat-tag">04</span>
-          <div class="cat-name">ประวัติศาสตร์</div>
-          <div class="cat-sub">ราชวงศ์ · อำนาจ · อารยธรรม</div>
-        </div>
-      </a>
+    <!-- 04 ประวัติศาสตร์ -->
+    <a href="/pages/history.html" class="cat-panel cat-panel-history">
+      <div class="cat-panel-bg"></div>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">04</span>
+        <div class="cat-panel-title">ประวัติ<em>ศาสตร์</em></div>
+        <div class="cat-panel-sub">ราชวงศ์ · อำนาจ · อารยธรรม</div>
+        <span class="cat-panel-cta">ดูบทความ →</span>
+      </div>
+    </a>
 
-      <!-- 05 หัจญ์ & อุมเราะฮ์ -->
-      <a href="/pages/hajj.html" class="cat-card cat-hajj">
-        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
-        <div class="cat-bg"></div>
-        <div class="cat-overlay"></div>
-        <div class="cat-body">
-          <span class="cat-tag">05</span>
-          <div class="cat-name">หัจญ์ & อุมเราะฮ์</div>
-          <div class="cat-sub">พิธีกรรม · จิตวิญญาณ · ประวัติศาสตร์</div>
-        </div>
-      </a>
+    <!-- 05 หัจญ์ & อุมเราะฮ์ -->
+    <a href="/pages/hajj.html" class="cat-panel cat-panel-hajj">
+      <div class="cat-panel-bg"></div>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">05</span>
+        <div class="cat-panel-title">หัจญ์ & <em>อุมเราะฮ์</em></div>
+        <div class="cat-panel-sub">พิธีกรรม · จิตวิญญาณ · ประวัติศาสตร์</div>
+        <span class="cat-panel-cta">ดูบทความ →</span>
+      </div>
+    </a>
 
-      <!-- 06 บรรณาธิการ -->
-      <a href="/pages/about.html" class="cat-card cat-about">
-        <canvas class="cat-wave-canvas" aria-hidden="true"></canvas>
-        <div class="cat-bg"></div>
-        <div class="cat-overlay"></div>
-        <div class="cat-body">
-          <span class="cat-tag">06</span>
-          <div class="cat-name">บรรณาธิการ</div>
-          <div class="cat-sub">ทีมงาน · วิธีการ · เจตนารมณ์</div>
-        </div>
-      </a>
+    <!-- 06 เครื่องมือนักวิชาการ -->
+    <a href="/pages/tools.html" class="cat-panel cat-panel-tools">
+      <div class="cat-panel-bg"></div>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">06</span>
+        <div class="cat-panel-title">เครื่องมือ<br><em>นักวิชาการ</em></div>
+        <div class="cat-panel-sub">เครื่องมือดิจิทัลสำหรับนักศึกษาวิชาอิสลามคลาสสิก</div>
+        <span class="cat-panel-cta">สำรวจเครื่องมือ →</span>
+      </div>
+    </a>
 
-    </div>
   </div>
 </section>
 
@@ -1083,7 +1124,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 
 <div id="footer-placeholder"></div>
 
-<script src="/main.js?v=20260527b" charset="UTF-8"></script>
+<script src="/main.js?v=20260527k" charset="UTF-8"></script>
 
 <script>
 /* ----- WEBGL FLUID EFFECT ----- */
@@ -1371,7 +1412,7 @@ quotes.forEach(function(_,i){
   dots.appendChild(d);
 });
 paintQuote(0);
-setInterval(function(){ paintQuote(qi+1); }, 19000);
+setInterval(function(){ paintQuote(qi+1); }, 9000);
 window.addEventListener('resize', function(){ document.getElementById('quoteAuthor').textContent = window.innerWidth <= 600 ? shortAuthor(quotes[qi].author) : quotes[qi].author; });
 
 
