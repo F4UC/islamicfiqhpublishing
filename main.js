@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
 
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260527c')
+    fetch('/components/header.html?v=20260527d')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -104,6 +104,8 @@ document.addEventListener("DOMContentLoaded", function() {
             (function() {
                 const chrome = document.querySelector('.chrome');
                 if (!chrome) return;
+                // Set initial frosted state if page loads mid-scroll
+                if (window.scrollY > 60) chrome.classList.add('chrome--scrolled');
                 let lastScrollY = window.scrollY;
                 window.addEventListener('scroll', function() {
                     // ไม่ซ่อนแถบขณะเมนูมือถือเปิดอยู่
@@ -116,6 +118,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     } else if (currentY < lastScrollY) {
                         chrome.classList.remove('nav-hidden');
                     }
+                    // SpaceX/Tesla scroll-aware: transparent at top, frosted when scrolled
+                    chrome.classList.toggle('chrome--scrolled', currentY > 60);
                     lastScrollY = currentY;
                 }, { passive: true });
             })();
@@ -526,7 +530,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // สั่งโหลดไฟล์ Footer
-    fetch('/components/footer.html?v=20260527c')
+    fetch('/components/footer.html?v=20260527d')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;

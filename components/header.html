@@ -265,6 +265,18 @@ nav.chrome-nav.mobile-active .nav-item.active {
   #catNavPanel,
   #catNavTab,
   #catNavOverlay { display: none !important; }
+
+  /* Scroll-aware: frosted glass once user leaves top of page */
+  .chrome--scrolled {
+    background: rgba(10,9,7,0.88) !important;
+    backdrop-filter: blur(22px) saturate(1.3) !important;
+    -webkit-backdrop-filter: blur(22px) saturate(1.3) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  }
+  .chrome--scrolled::before {
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
 }
 
 /* ==========================================================
