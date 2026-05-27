@@ -1141,4 +1141,47 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   border-bottom: 1px solid var(--border-primary);
 }
 
+/* B.2.1 — Upgraded primary-text blocks: AYA / HADITH (Option C)
+   Shared visual treatment, separate class names for future divergence.
+   No top label — surrounding Thai prose introduces the text.
+   The Thai translation lives OUTSIDE the block as normal body prose. */
+.aya-block,
+.hadith-block {
+  position: relative;
+  margin: 36px 0;
+  padding: 56px 44px 48px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background:
+    radial-gradient(ellipse at center top, rgba(179,27,27,0.08), transparent 60%),
+    linear-gradient(180deg, #11100d 0%, #0a0907 100%);
+  text-align: center;
+}
+.aya-block::before, .aya-block::after,
+.hadith-block::before, .hadith-block::after {
+  content: '';
+  position: absolute; left: 50%; transform: translateX(-50%);
+  width: 80px; height: 14px;
+  background-image: radial-gradient(circle, rgba(179,27,27,0.5) 1.5px, transparent 2px);
+  background-size: 12px 14px; background-repeat: repeat-x; background-position: center;
+}
+.aya-block::before, .hadith-block::before { top: 18px; }
+.aya-block::after,  .hadith-block::after  { bottom: 18px; }
+.aya-block .block-ar,
+.hadith-block .block-ar {
+  font-family: 'Amiri', serif;
+  direction: rtl; text-align: center;
+  font-size: 2.2rem; line-height: 2.1;
+  color: #f5f1ea; margin: 0;
+}
+.aya-block .block-source,
+.hadith-block .block-source {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em;
+  color: #9a907e; margin: 20px 0 0;
+}
+@media (max-width: 640px) {
+  .aya-block, .hadith-block { padding: 48px 24px 40px; }
+  .aya-block .block-ar, .hadith-block .block-ar { font-size: 1.7rem; }
+}
+
 
