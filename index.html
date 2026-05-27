@@ -357,11 +357,11 @@ body::before {
 .idx-row:hover::before { width: 3px; }
 .idx-row:hover .idx-title { color: var(--gold-bright); }
 .idx-row:hover .idx-arrow { transform: translateX(8px); color: var(--gold); }
-.idx-num { font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 22px; letter-spacing: .02em; }
-.idx-cat { font-family: var(--thai); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-mute); }
+.idx-num { font-family: var(--serif); font-style: italic; color: rgba(255,255,255,0.75); font-size: 22px; letter-spacing: .02em; }
+.idx-cat { font-family: var(--thai); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,0.75); white-space: nowrap; }
 .idx-title { font-family: var(--thai); font-weight: 500; font-size: 22px; line-height: 1.4; color: var(--paper); transition: color .3s; }
-.idx-meta { font-family: var(--thai); font-size: 14px; color: var(--text-dim); letter-spacing: .02em; }
-.idx-arrow { text-align: right; color: var(--text-mute); transition: all .35s; font-family: var(--thai); font-size: 18px; }
+.idx-meta { font-family: var(--thai); font-size: 14px; color: rgba(255,255,255,0.65); letter-spacing: .02em; }
+.idx-arrow { text-align: right; color: rgba(255,255,255,0.7); transition: all .35s; font-family: var(--thai); font-size: 18px; }
 .idx-arrow::after { content: ' →'; }
 
 .archive-footer { margin-top: 64px; display: flex; justify-content: flex-end; align-items: center; }

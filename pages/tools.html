@@ -84,6 +84,7 @@ body { background: var(--ink); color: var(--paper); }
 @keyframes ken-burns{0%{transform:scale(1)}100%{transform:scale(1.08)}}
 @keyframes hero-fade{0%{opacity:1}20%{opacity:1}25%{opacity:0}100%{opacity:0}}
 @keyframes hero-bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+@media(min-width:1024px){.page-display.is-long{font-size:clamp(2.8rem,4.4vw,5rem)}}
 @media(max-width:640px){.page-hero-inner{left:24px;bottom:90px}.page-display{font-size:clamp(36px,10vw,60px);white-space:normal}}
 @media(prefers-reduced-motion:reduce){.hero-slide{animation:none}.hero-scroll-hint{animation:none}}
 
@@ -148,7 +149,7 @@ body { background: var(--ink); color: var(--paper); }
     <div class="hero-slide hero-slide-4" role="img" aria-label="ภาพเทคโนโลยีกับการศึกษาอิสลาม"></div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-inner">
-      <h1 class="page-display" data-reveal>เครื่องมือ<em>นักวิชาการ</em></h1>
+      <h1 class="page-display is-long" data-reveal>เครื่องมือ<em>นักวิชาการ</em></h1>
       <p class="page-hero-sub" data-reveal data-delay="2">แพลตฟอร์มดิจิทัลที่พัฒนาขึ้นเพื่อประยุกต์ใช้เทคโนโลยีร่วมกับหลักนิติศาสตร์อิสลาม มุ่งอำนวยความสะดวกในวิถีชีวิตประจำวันของมุสลิม</p>
     </div>
     <div class="hero-scroll-hint" role="button" aria-label="เลื่อนลงดูเนื้อหา">
