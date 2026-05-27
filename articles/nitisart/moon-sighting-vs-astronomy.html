@@ -7,11 +7,9 @@
 
 <script>
   (function() {
-    var savedTheme = localStorage.getItem('theme');
-    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      document.documentElement.classList.add('dark-mode');
-    }
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
   })();
 </script>
 
@@ -21,7 +19,7 @@
 
 <meta property="og:title" content="เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์ — Islamic Fiqh Publishing">
 <meta property="og:description" content="หากผลการคำนวณดาราศาสตร์ชี้ชัดว่าเป็นไปไม่ได้ที่จะเห็นฮิลาล แต่มีพยานยืนยันว่าเห็น นิติศาสตร์อิสลามจะตัดสินความขัดแย้งนี้อย่างไร?">
-<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg"> 
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
 <meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/moon-sighting-vs-astronomy.html">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,142 +31,203 @@
 <link rel="apple-touch-icon" href="../../favicon.png?v=2">
 <link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
 <meta name="theme-color" content="#e3edf7">
-<link rel="stylesheet" href="../../article.css?v=20260526">
+<link rel="stylesheet" href="../../article.css?v=20260527">
 
 <style>
-/* ----------------------------------------------------------------------
-   STRUCTURE & TYPOGRAPHY STANDARDS (THE 50 IRON RULES)
-------------------------------------------------------------------------- */
 body { position: relative; }
 
-:root {
-    --bg-primary: #0a0907;
-    --bg-secondary: #14110d;
-    --border-color: rgba(255,255,255,0.08);
-    --text-primary: #f5f1ea;
-    --text-secondary: #e8e0d0;
-    --text-tertiary: #9a907e;
-    --accent-color: #b31b1b;
-    --accent-hover: #d32f2f;
-    --shadow-soft: 0 10px 40px rgba(0,0,0,0.4);
-}
-html.dark-mode {
-    --bg-primary: #000000;
-    --bg-secondary: #0a0907;
-    --border-color: rgba(255,255,255,0.12);
-    --text-primary: #f5f1ea;
-    --text-secondary: #e8e0d0;
-    --text-tertiary: #9a907e;
-    --accent-color: #d32f2f;
-    --accent-hover: #b31b1b;
-    --shadow-soft: 0 10px 40px rgba(0,0,0,0.6);
-}
-
 #readingProgressBar {
-    position: fixed; top: 0; left: 0; width: 0%; height: 4px;
-    background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
 }
 
-/* Centered Layout */
 .article-layout { max-width: 900px; margin: 40px auto 80px; padding: 0 24px; }
 .article-content { width: 100%; }
 
-/* Thai Typography */
 .article-body p, .lead-text {
-    line-height: 2.0; margin-bottom: 24px; text-align: left; 
-    word-break: break-word; color: var(--text-secondary);
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: ayah / hadith / core definition shown full */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl; text-align: right;
+  font-size: 1.6rem; line-height: 2.1;
+  color: var(--text-primary);
+  border-right: 3px solid var(--accent-color);
+  padding: 16px 20px; margin: 24px 0;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+  margin: -12px 0 28px;
+  line-height: 2.0;
+  font-style: italic;
 }
 
-.ar {
-    font-family: 'Amiri', serif; font-size: 1.15em; line-height: 1.6;
-    direction: rtl; unicode-bidi: isolate;
+/* SOP B.3 — ar-toggle: ulama quotes collapsed */
+.ar-toggle { margin: 8px 0 24px; }
+.ar-toggle > summary {
+  cursor: pointer; list-style: none;
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: .9rem;
+  color: var(--text-tertiary); padding: 6px 0; user-select: none;
+  border-bottom: 0.5px solid rgba(255,255,255,0.12); display: inline-block;
+}
+.ar-toggle > summary::-webkit-details-marker { display: none; }
+.ar-toggle > summary:hover { color: var(--accent-color); }
+.ar-toggle[open] > summary { color: var(--accent-color); margin-bottom: 10px; }
+.ar-toggle .ar-block {
+  font-family: 'Amiri', serif;
+  direction: rtl; text-align: right;
+  font-size: 1.45rem; line-height: 2.1;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-right: 2px solid rgba(179,27,27,0.5);
+  margin: 8px 0;
 }
 
-/* Arabic Blockquotes & Balance */
-blockquote[lang="ar"], .fiqh-principle, .hadith-block, .quote-container {
-    padding: 30px 35px; margin: 35px 0;
-    border-right: 4px solid var(--accent-color); background-color: var(--bg-secondary);
-    border-radius: 12px 0 0 12px; color: var(--text-primary);
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
 }
-blockquote[lang="ar"] .ar, .hadith-block .ar, .quote-container .ar {
-    text-align: right; width: 100%; margin-bottom: 5px;
-}
-blockquote[lang="ar"].short-quote .ar, .hadith-block.short-quote .ar, .quote-container.short-quote .ar {
-    text-align: center;
-}
-.thai-quote {
-    font-family: 'Sarabun', sans-serif; font-style: italic; color: var(--text-tertiary);
-    text-align: left; font-size: 16px; line-height: 1.8; width: 100%; margin-top: 0;
-    direction: ltr;
-}
-.short-quote .thai-quote { text-align: center; }
 
-/* Citation Box */
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box */
 .citation-box {
-    background: var(--bg-primary); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-color);
-    border-radius: 12px; padding: 30px; margin: 50px 0; position: relative;
-    box-shadow: var(--shadow-soft); display: flex; flex-direction: column; gap: 16px;
+  background: var(--bg-primary); border: 1px solid var(--border-primary); border-left: 4px solid var(--accent-color);
+  border-radius: 12px; padding: 30px; margin: 50px 0; position: relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4); display: flex; flex-direction: column; gap: 16px;
 }
 .citation-label {
-    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
-    display: flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px;
 }
 .citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
 .citation-text {
-    font-family: 'Sarabun', sans-serif; font-size: 15px; color: var(--text-primary);
-    line-height: 1.8; background: var(--bg-secondary); padding: 20px; border-radius: 8px; 
-    border: 1px dashed var(--border-color); word-break: break-word;
+  font-family: 'Sarabun', sans-serif; font-size: 15px; color: var(--text-primary);
+  line-height: 1.8; background: var(--bg-secondary); padding: 20px; border-radius: 8px;
+  border: 1px dashed var(--border-primary); word-break: break-word;
 }
 .citation-footer { display: flex; justify-content: flex-end; }
 .copy-btn {
-    background: linear-gradient(135deg, #b31b1b 0%, #e0b96a 50%, #b31b1b 100%);
-    color: #fff; border: none; padding: 11px 28px; border-radius: 30px;
-    font-size: 13px; font-weight: 700; cursor: pointer; letter-spacing: 0.03em;
-    transition: all 0.25s ease; display: flex; align-items: center; gap: 8px;
-    font-family: 'Sarabun', sans-serif; box-shadow: 0 4px 14px rgba(59,130,246,0.35);
+  background: linear-gradient(135deg, #b31b1b 0%, #e0b96a 50%, #b31b1b 100%);
+  color: #fff; border: none; padding: 11px 28px; border-radius: 30px;
+  font-size: 13px; font-weight: 700; cursor: pointer; letter-spacing: 0.03em;
+  transition: all 0.25s ease; display: flex; align-items: center; gap: 8px;
+  font-family: 'Sarabun', sans-serif;
 }
 .copy-btn::before { content: '📋'; font-size: 14px; }
-.copy-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59,130,246,0.5); filter: brightness(1.08); }
-.copy-btn:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(59,130,246,0.3); }
-
-/* Alert */
+.copy-btn:hover { transform: translateY(-2px); }
 .copy-alert {
-    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
-    background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px; 
-    font-size: 14px; font-weight: 600; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    opacity: 0; visibility: hidden; z-index: 10000; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
 
-@media(max-width: 768px) {
-    .citation-box { padding: 24px; }
-    .citation-text { padding: 16px; }
-    .copy-btn { width: 100%; justify-content: center; }
+/* Reading tools */
+.reading-tools {
+  display: flex; gap: 12px; align-items: center; margin-bottom: 32px;
+  padding: 14px 20px; background: var(--bg-secondary);
+  border: 1px solid var(--border-primary); border-radius: 10px;
+}
+.tool-group { display: flex; align-items: center; gap: 8px; }
+.tool-label { font-size: 12px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 1px; }
+.btn-tool {
+  background: transparent; border: 1px solid var(--border-primary); color: var(--text-secondary);
+  padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 13px;
+  font-family: 'Sarabun', sans-serif; transition: all 0.2s;
+}
+.btn-tool:hover { background: var(--bg-tertiary); color: var(--text-primary); border-color: var(--accent-color); }
+
+/* Article header */
+.article-category {
+  display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1.8px; color: var(--accent-color); margin-bottom: 16px;
+}
+.article-main-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: clamp(26px,4vw,40px);
+  font-weight: 700; color: var(--text-primary); line-height: 1.3; margin: 0 0 20px;
+}
+.article-meta-info {
+  display: flex; flex-wrap: wrap; gap: 8px 0; align-items: center;
+  font-size: 13px; color: var(--text-tertiary); margin-bottom: 32px;
+}
+.meta-divider { margin: 0 10px; opacity: 0.4; }
+
+/* Related articles */
+.related-section { margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--border-primary); }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.8px; color: var(--text-tertiary); margin-bottom: 24px;
+}
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; }
+.related-card {
+  background: var(--bg-secondary); border: 1px solid var(--border-primary);
+  border-radius: 10px; padding: 20px; text-decoration: none; display: block;
+  transition: all 0.2s; color: inherit;
+}
+.related-card:hover { border-color: var(--accent-color); background: var(--bg-tertiary); }
+.related-article-category {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--accent-color); margin-bottom: 8px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 15px; font-weight: 600;
+  color: var(--text-primary); line-height: 1.5; margin: 0;
 }
 
-.thai-detail-list {
-    text-align: left; padding-left: 20px; list-style-type: circle;
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
 }
+#backToTopBtn:hover { transform: translateY(-3px); }
 
-.attribution {
-    display: block; font-family: 'Sarabun', sans-serif; font-weight: 600;
-    font-style: normal; color: var(--accent-color); font-size: 14px;
-    margin-bottom: 8px; letter-spacing: 0.3px;
+@media (max-width: 640px) {
+  .article-layout { margin: 20px auto 60px; padding: 0 16px; }
+  .related-grid { grid-template-columns: 1fr; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
 }
-
-.source-toggle {
-    width: 100%; margin-top: 12px;
-}
-.source-toggle summary {
-    cursor: pointer; font-family: 'Sarabun', sans-serif; font-size: 13px;
-    color: var(--text-tertiary); user-select: none; list-style: none;
-    padding: 6px 0; border-top: 1px dashed var(--border-color);
-}
-.source-toggle summary::-webkit-details-marker { display: none; }
-.source-toggle .ar {
-    margin-top: 12px; padding: 16px 0; text-align: right;
+@media (prefers-reduced-motion: reduce) {
+  .ar-toggle, .copy-btn { transition: none; }
 }
 </style>
 </head>
@@ -192,456 +251,268 @@ blockquote[lang="ar"].short-quote .ar, .hadith-block.short-quote .ar, .quote-con
 </section>
 <div class="art-hero-sep"></div>
 
-  
-  <article class="article-content">
-    <header class="article-header">
-      <span class="article-category">นิติศาสตร์อิสลาม</span>
-      <h1 class="article-main-title">เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์</h1>
-      <div class="article-meta-info">
-        <span>โดย <strong>กองบรรณาธิการ</strong></span>
-        <span class="meta-divider">•</span>
-        <span>22 พฤษภาคม 2569</span>
-        <span class="meta-divider">•</span>
-        <span>อ่าน 15 นาที</span>
-      </div>
-    </header>
-
-    <div class="reading-tools">
-      <div class="tool-group">
-        <span class="tool-label">Font Size:</span>
-        <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
-        <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
-        <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
-      </div>
+<article class="article-content">
+  <header class="article-header">
+    <span class="article-category">นิติศาสตร์อิสลาม</span>
+    <h1 class="article-main-title">เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์</h1>
+    <div class="article-meta-info">
+      <span>โดย <strong>กองบรรณาธิการ</strong></span>
+      <span class="meta-divider">•</span>
+      <span>22 พฤษภาคม 2569</span>
+      <span class="meta-divider">•</span>
+      <span>อ่าน 15 นาที</span>
     </div>
+  </header>
 
-    <div class="article-body" id="main-content">
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
       <p class="lead-text">ปัญหาว่าด้วยความสัมพันธ์ระหว่าง “การดูจันทร์เสี้ยวด้วยสายตา” กับ “การคำนวณทางดาราศาสตร์” ถือเป็นหนึ่งในประเด็นนิติศาสตร์อิสลามที่มีการถกเถียงกันอย่างยาวนานตลอดหลายศตวรรษ นับตั้งแต่ยุคบรรดาสลัฟจนถึงยุคร่วมสมัย เนื่องจากการกำหนดวันเข้าเดือนใหม่ทางจันทรคตินั้นส่งผลโดยตรงต่อข้อบัญญัติทางศาสนามากมาย ตั้งแต่การเริ่มต้นถือศีลอดเดือนรอมฎอน การออกอีด การทำฮัจญ์ ไปจนถึงการนับระยะเวลาอิดดะฮ์และการชำระหนี้</p>
-
       <p>ฐานหลักของชะรีอะฮ์ในประเด็นนี้คือหะดีษที่ว่า “จงถือศีลอดเมื่อเห็นมัน (จันทร์เสี้ยว) และจงออกอีดเมื่อเห็นมัน” ซึ่งวางรากฐานให้ “การมองเห็นด้วยตาเปล่า” เป็นเกณฑ์ในการเข้าเดือนใหม่ อย่างไรก็ดี เมื่อศาสตร์แห่งดาราศาสตร์พัฒนาความแม่นยำขึ้นเรื่อยๆ คำถามที่ว่า “หากผลการคำนวณทางดาราศาสตร์บ่งชี้อย่างเด็ดขาดว่าเป็นไปไม่ได้ที่จะมองเห็นจันทร์เสี้ยว แต่กลับมีพยานบุคคลมายืนยันว่าตนเห็น จะตัดสินอย่างไร?” จึงกลายเป็นปัญหาทางนิติศาสตร์ที่หลีกเลี่ยงไม่ได้</p>
-
-      <p>ในบรรดานักวิชาการที่ให้คำตอบอันลุ่มลึกที่สุดต่อคำถามนี้ ชื่อของท่านอิหม่ามตะกียุดดีน อัซซุบกีย์ (เสียชีวิตปี ฮ.ศ. 756 / ค.ศ. 1355) เราะหิมะฮุลลอฮ์ ถือเป็นหลักหมายสำคัญซึ่งบทความนี้จะนำเสนอทัศนะของท่าน จากนั้นจึงลงลึกถึงหลักวิเคราะห์ที่แยกแยะระหว่าง “การใช้การคำนวณเพื่อเริ่มเดือนใหม่” กับ “การใช้การคำนวณเพื่อตรวจสอบและปฏิเสธคำพยานเท็จ” พร้อมทั้งยกกรณีศึกษาจริงจากเมืองดามัสกัสในปี ฮ.ศ. 748 เพื่อแสดงให้เห็นว่าหลักการนี้ถูกนำไปปฏิบัติจริงอย่างไร</p>
-
-      <h2 id="section-1">คำถามตั้งต้นของอิหม่ามอัซซุบกีย์</h2>
+      <p>ในบรรดานักวิชาการที่ให้คำตอบอันลุ่มลึกที่สุดต่อคำถามนี้ ชื่อของท่านอิหม่ามตะกียุดดีน อัซซุบกีย์ (เสียชีวิต ฮ.ศ. 756) ถือเป็นหลักหมายสำคัญซึ่งบทความนี้จะนำเสนอทัศนะของท่าน จากนั้นจึงลงลึกถึงหลักวิเคราะห์ที่แยกแยะระหว่าง “การใช้การคำนวณเพื่อเริ่มเดือนใหม่” กับ “การใช้การคำนวณเพื่อตรวจสอบและปฏิเสธคำพยานเท็จ” พร้อมทั้งยกกรณีศึกษาจริงจากเมืองดามัสกัสในปี ฮ.ศ. 748 เพื่อแสดงให้เห็นว่าหลักการนี้ถูกนำไปปฏิบัติจริงอย่างไร</p>
       <p>ท่านอิหม่ามตะกียุดดีน อัซซุบกีย์ได้เปิดประเด็นนี้ด้วยการอธิบายจากคำถามที่ถูกส่งมาถึงท่าน ซึ่งมีเนื้อหาว่า:</p>
-
-      <blockquote lang="ar" dir="rtl" class="quote-container short-quote">
-          <span class="ar">فِيمَنْ شَهِدَ بِرُؤْيَةِ الْهِلَالِ مُنْفَرِدًا بِشَهَادَتِهِ وَاقْتَضَى الْحِسَابُ تَكْذِيبَهُ</span>
-          <div class="thai-quote">“ในกรณีของผู้ที่อ้างตนเป็นพยานว่ามองเห็นจันทร์เสี้ยว (ฮิลาล) เพียงลำพัง (หรือสองสามคน) แต่ผลการคำนวณทางดาราศาสตร์ กลับบ่งชี้ว่าคำกล่าวอ้างของเขาเป็นเท็จ จะให้คำตอบอย่างไร?”</div>
-      </blockquote>
-
+      <blockquote class="ar-feature" lang="ar" dir="rtl">فِيمَنْ شَهِدَ بِرُؤْيَةِ الْهِلَالِ مُنْفَرِدًا بِشَهَادَتِهِ وَاقْتَضَى الْحِسَابُ تَكْذِيبَهُ</blockquote>
+      <p class="ar-translation">“ในกรณีของผู้ที่อ้างตนเป็นพยานว่ามองเห็นจันทร์เสี้ยว (ฮิลาล) เพียงลำพัง (หรือสองสามคน) แต่ผลการคำนวณทางดาราศาสตร์ กลับบ่งชี้ว่าคำกล่าวอ้างของเขาเป็นเท็จ (จะให้คำตอบอย่างไร?)”</p>
       <p>เพื่อให้เข้าใจถึงน้ำหนักของคำถามนี้ ท่านอัซซุบกีย์ได้เริ่มต้นด้วยการชี้ให้เห็นว่าจันทร์เสี้ยวมีบทบาทกว้างขวางเพียงใดในระบบนิติศาสตร์อิสลาม โดยท่านอ้างอิงดำรัสของอัลลอฮ์ ซุบฮานะฮูวะตะอาลา ที่ตรัสว่า:</p>
-
-      <blockquote lang="ar" dir="rtl" class="quote-container short-quote">
-          <span class="ar">۞ يَسْـَٔلُونَكَ عَنِ ٱلْأَهِلَّةِ ۖ قُلْ هِىَ مَوَٰقِيتُ لِلنَّاسِ وَٱلْحَجِّ ۗ</span>
-          <div class="thai-quote">“พวกเขาจะถามเจ้าเกี่ยวกับดวงจันทร์ข้างขึ้น จงกล่าวเถิดว่า มันคือเครื่องกำหนดเวลาสำหรับมนุษย์และสำหรับการทำฮัจญ์” — สูเราะฮ์อัลบะเกาะเราะฮ์: 189</div>
-      </blockquote>
-
+      <blockquote class="ar-feature" lang="ar" dir="rtl">يسألونك عن الأهلة قل هي مواقيت للناس والحج</blockquote>
+      <p class="ar-translation">{พวกเขาจะถามเจ้าเกี่ยวกับดวงจันทร์ข้างขึ้น จงกล่าวเถิดว่า มันคือเครื่องกำหนดเวลาสำหรับมนุษย์และสำหรับการทำฮัจญ์}</p>
       <p>การกำหนดเวลาที่ต้องพิจารณาอาศัยจันทร์เสี้ยวนั้น ครอบคลุมกฎหมายหลายมิติ อาทิ เวลาละหมาดอีด, การจ่ายซะกาต, ซะกาตฟิฏร์, การถือศีลอดรอมฎอนและการออกอีด, การถือศีลอดวันบีฎ, วันอาชูรออ์, ทัศนะที่มักรูฮ์ให้ถือศีลอดหลังกึ่งกลางเดือนชะอ์บาน, การถือศีลอด 6 วันในเดือนเชาวาล, การพิจารณาอายุของแพะ แกะ อูฐ และวัวในการจ่ายซะกาต, การเอี๊ยะอ์ติกาฟตามที่ได้บนบานไว้, การทำฮัจญ์และการวุกูฟ, การทำอุฎฮียะฮ์ (กุรบาน), อะกีเกาะฮ์, สัตว์พลี, การกำหนดระยะเวลาชำระหนี้, การทำสัญญาซื้อขายล่วงหน้า, การบรรลุนิติภาวะ, การจ้างทำสวน, การเช่าและให้เช่า, ทรัพย์สินที่เก็บได้, ระยะเวลาของผู้เสื่อมสมรรถภาพทางเพศ, การสาบานงดเว้นการหลับนอนกับภรรยา, การจ่ายกัฟฟาเราะฮ์เนื่องจากการมีเพศสัมพันธ์ในเวลากลางวันของเดือนรอมฎอน, การซิฮาร, การถือศีลอดชดเชยการฆ่าคน, ระยะเวลาครองตน (อิดดะฮ์) ของสตรีที่สามีเสียชีวิต, สตรีที่หมดประจำเดือน และการอิสติบรออ์, ระยะเวลาการให้นมบุตร, การพิสูจน์สายโลหิต, การจัดหาเครื่องนุ่งห่มให้ภรรยา, การจ่ายค่าทำขวัญ (ดิยะฮ์) และอื่นๆ อีกมากมาย</p>
-
-      <p>ด้วยเหตุนี้ จึงเป็นเรื่องสำคัญยิ่งที่จะต้องให้ความใส่ใจในประเด็นดังกล่าว และทำความเข้าใจเกณฑ์การเข้าสู่เดือนใหม่ตามหลักชะรีอะฮ์ ท่านนบี ﷺ กล่าวว่า:</p>
-
-      <div class="hadith-block short-quote">
-          <span class="ar">إِنَّا أُمَّةٌ أُمِّيَّةٌ، لاَ نَكْتُبُ وَلاَ نَحْسُبُ، الشَّهْرُ هَكَذَا وَهَكَذَا</span>
-          <div class="thai-quote">“เราเป็นประชาชาติที่ไม่รู้หนังสือ (อุมมียะฮ์) เราเขียนไม่เป็นและคำนวณไม่ได้ เดือนนั้นเป็นแบบนี้และแบบนี้ (พร้อมกับท่านใช้มือชี้ให้เห็นว่ายี่สิบเก้าและสามสิบ)”</div>
-      </div>
-
+      <p>ด้วยเหตุนี้ จึงเป็นเรื่องสำคัญยิ่งที่จะต้องให้ความใส่ใจในประเด็นดังกล่าว และทำความเข้าใจเกณฑ์การเข้าสู่เดือนใหม่ตามหลักชะรีอะฮ์</p>
+      <p>ท่านนบี ﷺ กล่าวว่า:</p>
+      <blockquote class="ar-feature" lang="ar" dir="rtl">إِنَّا أُمَّةٌ أُمِّيَّةٌ لاَ نَكْتُبُ وَلاَ نَحْسُبُ، الشَّهْرُ هَكَذَا وَهَكَذَا</blockquote>
+      <p class="ar-translation">“เราเป็นประชาชาติที่ไม่รู้หนังสือ (อุมมียะฮ์) เราเขียนไม่เป็นและคำนวณไม่ได้ เดือนนั้นเป็นแบบนี้และแบบนี้ พร้อมกับท่านใช้มือชี้ให้เห็นว่ายี่สิบเก้าและสามสิบ”</p>
       <p>ท่านอิหม่ามอัซซุบกีย์ได้อธิบายเอาไว้ว่า:</p>
-
-      <blockquote class="quote-container">
-          <div class="thai-quote">
-              <span class="attribution">อัซซุบกีย์ (เสียชีวิตปี ฮ.ศ. 756 / ค.ศ. 1355) เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-              “ข้าพเจ้าได้พิจารณาใคร่ครวญหะดีษบทนี้ และพบว่าความหมายของมันคือการยกเลิกทรรศนะของนักดาราศาสตร์ และนักคำนวณที่กล่าวว่า เดือนในทรรศนะของพวกเขานั้น หมายถึงการที่จันทร์เสี้ยว (ฮิลาล) ได้แยกตัวออกจากรัศมีของดวงอาทิตย์ ซึ่งนั่นคือการเริ่มต้นเดือนสำหรับพวกเขา และเดือนจะดำเนินต่อไปจนกว่าดวงจันทร์จะกลับมาบรรจบกับดวงอาทิตย์และแยกตัวออกไปอีกครั้ง ดังนั้น เดือนสำหรับพวกเขาจึงหมายถึงระยะเวลาที่อยู่ระหว่างเหตุการณ์ทั้งสองนี้ ซึ่งทรรศนะนี้ถือเป็นโมฆะ (บาฏิล) อย่างเด็ดขาดในทางบทบัญญัติศาสนา และจะไม่ได้รับการนำมาพิจารณา”
-          </div>
-          <details class="source-toggle">
-              <summary>ดูตัวบทต้นฉบับ ▼</summary>
-              <div lang="ar" dir="rtl" class="ar">وقد تأملت هذا الحديث فوجدت معناه إلغاء ما يقوله أهل الهيئة والحساب من أن الشهر عندهم عبارة عن مفارقة الهلال شعاع الشمس فهو أول الشهر عندهم ويبقى الشهر إلى أن يجتمع معها ويفارقها فالشهر عندهم ما بين ذلك وهذا باطل في الشرع قطعا لا اعتبار به</div>
-          </details>
-      </blockquote>
-
-      <blockquote class="quote-container">
-          <div class="thai-quote">
-              <span class="attribution">อัซซุบกีย์ (เสียชีวิตปี ฮ.ศ. 756 / ค.ศ. 1355) เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-              “ด้วยเหตุนี้ ท่านนบี ﷺ จึงได้ชี้แจง (ผ่านหะดีษ) ว่า ‘แท้จริงพวกเรา (หมายถึงชาวอาหรับ) เป็นประชาชาติที่อ่านไม่ออกเขียนไม่ได้ พวกเราเขียนไม่เป็นและคำนวณไม่ได้’ ซึ่งหมายความว่า วิสัยของชาวอาหรับในเรื่องนี้ไม่ได้อาศัยการเขียนและการคำนวณ ดังนั้น เดือนตามหลักบทบัญญัติศาสนา จึงหมายถึงระยะเวลาระหว่างการปรากฏของจันทร์เสี้ยวทั้งสองรอบ ซึ่งสิ่งนี้จะรับรู้ได้ด้วยหนึ่งในสองวิธี นั่นก็คือ การมองเห็นจันทร์เสี้ยวด้วยตาเปล่า หรือ การนับจำนวนวันให้ครบสามสิบวันบริบูรณ์”
-          </div>
-          <details class="source-toggle">
-              <summary>ดูตัวบทต้นฉบับ ▼</summary>
-              <div lang="ar" dir="rtl" class="ar">فأشار النبي صلى الله عليه وسلم بأنا أي العرب أمة أمية لا نكتب ولا نحسب أي ليس من شأن العرب الكتابة ولا الحساب فالشرع في الشهر ما بين الهلالين ويدرك ذلك إما برؤية الهلال وإما بكمال العدة ثلاثين واعتباره إكمال العدة ثلاثين</div>
-          </details>
-      </blockquote>
-
-      <blockquote class="quote-container">
-          <div class="thai-quote">
-              <span class="attribution">อัซซุบกีย์ (เสียชีวิตปี ฮ.ศ. 756 / ค.ศ. 1355) เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-              “และการพิจารณาให้ยึดการนับวันให้ครบสามสิบวันบริบูรณ์นั้น เป็นหลักฐานบ่งชี้ว่าพวกเขาไม่ได้รอคอยเพียงแค่การเกิดจันทร์เสี้ยวเท่านั้น และการมีอยู่ของดวงจันทร์ในความเป็นจริงนั้น จะถูกนำมาพิจารณา (ทางบทบัญญัติ) ก็ต่อเมื่ออยู่ภายใต้เงื่อนไขที่ว่า ‘สามารถมองเห็นได้’ ซึ่งหากท่านนบี ﷺ ไม่ได้กล่าวไว้เช่นนั้น สมมติว่าเมื่อดวงจันทร์แยกตัวออกจากรัศมีดวงอาทิตย์ก่อนรุ่งสาง ก็ย่อมเป็นข้อบังคับให้ต้องถือศีลอดในวันนั้นทันที แต่ท่านนบี ﷺ ได้ตีตกหลักการนั้น และไม่ได้กำหนดให้การถือศีลอดเป็นข้อบังคับนอกจากในวันถัดไป (หลังจากที่เห็นดวงจันทร์แล้ว) ซึ่งประเด็นนี้เป็นจุดที่มีมติเอกฉันท์ (อิจญ์มาอ์) และไม่มีความขัดแย้งใดๆ ในหมู่นักวิชาการ”
-          </div>
-          <details class="source-toggle">
-              <summary>ดูตัวบทต้นฉบับ ▼</summary>
-              <div lang="ar" dir="rtl" class="ar">دليل على أنه لا ينتظرون به الهلال وأن وجوده في نفس الأمر معتبر بشرط إمكان الرؤية ولو لم يقل النبي صلى الله عليه وسلم ذلك لكان إذا فارق الشعاع مثلا قبل الفجر يجب صوم ذلك اليوم فأบطل النبي صلى الله عليه وسلم ذلك ولم يجعل الصوم إلا في اليوم القابل وهذا محل مجمع عليه لا خلاف فيه بين العلماء</div>
-          </details>
-      </blockquote>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">อัซซุบกีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-
-              <p>“อย่างไรก็ตาม ยังมีอีกประเด็นหนึ่งที่บรรดานักวิชาการมีความเห็นขัดแย้งกัน ซึ่งเป็นประเด็นที่อาจยึดหลักเกณฑ์จากหะดีษบทนี้ หรืออาจละเว้นจากมันก็ได้ นั่นคือ กรณีที่การคำนวณบ่งชี้ว่าดวงจันทร์ได้แยกตัวออกจากรัศมีดวงอาทิตย์แล้ว และได้ผ่านระยะเวลาที่ทำให้สามารถมองเห็นได้ในช่วงดวงอาทิตย์ตก นักวิชาการมีความเห็นต่างกันในเรื่องการอนุญาตให้ถือศีลอดด้วยเกณฑ์ดังกล่าว และความเป็นข้อบังคับสำหรับผู้คำนวณเองรวมถึงบุคคลอื่น (ในที่นี้หมายถึงการอนุญาตสำหรับบุคคลอื่น)</p>
-              <p>ผู้ที่กล่าวว่าไม่เป็นข้อบังคับและไม่อนุญาต (ให้ถือศีลอดด้วยการคำนวณ): ได้ยึดมั่นตามหะดีษ และมีน้ำหนักสนับสนุนจากคำกล่าวของท่านนบี ﷺ ที่ว่า: ‘พวกท่านจงถือศีลอดเมื่อเห็นมัน (จันทร์เสี้ยว) และจงละศีลอดเมื่อเห็นมัน และหากท้องฟ้าถูกบดบังทัศนวิสัย ก็จงกะประมาณเอามันเถิด’ และในอีกสายรายงานหนึ่งระบุว่า ‘ก็จงนับเดือนชะอ์บานให้ครบสามสิบวันบริบูรณ์’ ซึ่งทรรศนะนี้ถือเป็นทรรศนะที่ถูกต้องกว่า ตามมติของนักวิชาการส่วนใหญ่</p>
-              <p>ส่วนผู้ที่กล่าวว่าอนุญาต (ให้ใช้การคำนวณได้): พวกเขามีความเชื่อว่า เป้าหมายหลักคือการมีอยู่ของจันทร์เสี้ยวและ ‘ความเป็นไปได้ที่จะมองเห็น’ เช่นเดียวกับกรณีของการเทียบเวลาละหมาดด้วยการคำนวณในวันที่ท้องฟ้ามีเมฆหมอก ซึ่งทรรศนะนี้ก็ได้รับการกล่าวถึงโดยปราชญ์ผู้ใหญ่หลายท่านเช่นกัน</p>
-              <p>แต่ความเห็นแรกนั้นเป็นทรรศนะที่ถูกต้องกว่า โดยพิจารณาจากนัยยะความเข้าใจของหะดีษ และการยึดทรรศนะนี้ไม่ใช่การปฏิเสธศาสตร์แห่งการคำนวณแต่อย่างใด เพราะการคำนวณนั้นเพียงแค่ระบุถึง ‘ความเป็นไปได้’ ลำพังเพียงแค่ความเป็นไปได้นั้น ย่อมไม่จำเป็นต้องถูกนำมาผูกพันกับข้อชี้ขาดทางบทบัญญัติ (ฮุกุ่ม) ทั้งนี้เพราะการกำหนดข้อชี้ขาดนั้นเป็นสิทธิของพระผู้ทรงบัญญัติ ซึ่งพระองค์ได้ทรงผูกข้อชี้ขาดไว้กับ ‘การมองเห็น’ (ไม่ใช่รู้ว่ามีจันทร์เสี้ยว) และจะไม่มีการหลุดพ้นไปจากเงื่อนไขนี้ได้ เว้นแต่เมื่อมีการนับวันจนครบจำนวนบริบูรณ์เท่านั้น</p>
-              <p>ข้อแตกต่างระหว่างเรื่องนี้กับเรื่องเวลาละหมาดก็คือ ความผิดพลาด (จากการคำนวณ) ในเรื่องการดูเดือนนั้นสามารถเกิดขึ้นได้บ่อยครั้ง แตกต่างจากเวลาละหมาด ซึ่งมักจะได้รับความมั่นใจเด็ดขาด หรือไม่ก็ใกล้เคียงกับความเด็ดขาดเป็นส่วนใหญ่</p>
-              <p>และความขัดแย้งที่กล่าวมานี้ เป็นไปในกรณีที่การคำนวณบ่งชี้ว่าสามารถมองเห็นได้ แต่ไม่มีผู้ใดมองเห็นจริง โดยทรรศนะหนึ่งมองว่า สาเหตุของการเข้าเดือนคือ ‘ความเป็นไปได้ที่จะมองเห็น’ ในขณะที่อีกทรรศนะหนึ่ง ซึ่งเป็นทรรศนะที่ถูกต้องกว่ามองว่า สาเหตุที่แท้จริงคือ ‘การมองเห็นด้วยตาจริงๆ’ หรือการนับจำนวนวันให้ครบ</p>
-              <p>อย่างไรก็ตาม บนพื้นฐานของทั้งสองทรรศนะ สิ่งที่การคำนวณได้บ่งชี้ไว้ก็ไม่ได้ถูกตัดสินว่าเป็นโมฆะหรือผิดพลาดโดยตัวของมันเอง ซึ่งผลลัพธ์ของการคำนวณอาจนำไปสู่ความมั่นใจอย่างเด็ดขาด หรืออาจจะไม่ถึงขั้นนั้นก็ได้ ทั้งนี้ขึ้นอยู่กับระดับความห่างของดวงจันทร์จากดวงอาทิตย์ หรือความใกล้ของมันนั่นเอง”</p>
-                          </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">وثم محل آخر اختلفوا فيه يمكن أن يؤخذ من الحديث ويمكن أن يعتذر عنه وهو ما إذا دل الحساب على أنه فارق الشعاع ومضت عليه مدة يمكن أن يرى فيها عند الغروب فقد اختلف العلماء في جواز الصوم بذلك وفي وجوبه على الحاسب وعلى غيره أعني في الجواز على غيره فمن قال بعدم الوجوب عليه وبعدم الجواز فقد يتمسك بالحديث ويعتضد بقوله صلى الله عليه وسلم إذا رأيتموه فصوموا وإذا رأيتموه فأفطروا فإن غم عليكم فاقدروا له وفي رواية فأكملوا عدة شعبان ثلاثين وهذا هو الأصح عند العلماء ومن قال بالجواز اعتقد بأن المقصود وجود الهلال وإمكان رؤيته كما في أوقات الصلاة إذا دل الحساب عليها في يوم الغيم وهذا القول قاله كبار ولكن الصحيح الأول لمفهوم الحديث وليس ذلك ردا للحساب فإن الحساب إنما يقتضي الإمكان ومجرد الإمكان لا يجب أن يرتب عليه الحكم وترتيب الحكم للشارع وقد رتبه على الرؤية ولم تخرج عنه إلا إذا كملت العدة الفرق بينه وبين أوقات الصلاة أن الغلط قد يحصل هنا كثيرا بخلاف أوقات الصلاة يحصل القطع أو قريب منه غالبا وهذا الخلاف فيما إذا دل الحساب على إمكان الرؤية ولم ير فأحد الوجهين أن السبب إمكان الرؤية والثاني وهو الأصح أن السبب نفس الرؤية أو إكمال العدة وعلى كلا الوجهين ليس ما دل عليه الحساب محكوما عليه بالبطلان وقد يكون في نفسه بحيث تنتهي مقدماته إلى القطع وقد لا تنتهي إلى ذلك بحسب مراتب بعده عن الشمس وقربه.</div>
-                </details>
-      </blockquote>
-
+      <p class="ar-translation">&quot;ข้าพเจ้าได้พิจารณาใคร่ครวญหะดีษบทนี้ และพบว่าความหมายของมันคือการยกเลิกทรรศนะของนักดาราศาสตร์ และนักคำนวณที่กล่าวว่า เดือนในทรรศนะของพวกเขานั้น หมายถึงการที่จันทร์เสี้ยว (ฮิลาล) ได้แยกตัวออกจากรัศมีของดวงอาทิตย์ ซึ่งนั่นคือการเริ่มต้นเดือนสำหรับพวกเขา และเดือนจะดำเนินต่อไปจนกว่าดวงจันทร์จะกลับมาบรรจบกับดวงอาทิตย์และแยกตัวออกไปอีกครั้ง ดังนั้น เดือนสำหรับพวกเขาจึงหมายถึงระยะเวลาที่อยู่ระหว่างเหตุการณ์ทั้งสองนี้ ซึ่งทรรศนะนี้ถือเป็นโมฆะ (บาฏิล) อย่างเด็ดขาดในทางบทบัญญัติศาสนา และจะไม่ได้รับการนำมาพิจารณา&quot;</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">وقد تأملت هذا الحديث فوجدت معناه إلغاء ما يقوله أهل الهيئة والحساب من أن الشهر عندهم عبارة عن مفارقة الهلال شعاع الشمس فهو أول الشهر عندهم ويبقى الشهر إلى أن يجتمع معها ويفارقها فالشهر عندهم ما بين ذلك وهذا باطل في الشرع قطعا لا اعتبار به</blockquote>
+      </details>
+      <p class="ar-translation">&quot;ด้วยเหตุนี้ ท่านนบี (ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม) จึงได้ชี้แจง (ผ่านหะดีษ) ว่า &quot;แท้จริงพวกเรา (หมายถึงชาวอาหรับ) เป็นประชาชาติที่อ่านไม่ออกเขียนไม่ได้ พวกเราเขียนไม่เป็นและคำนวณไม่ได้&quot; ซึ่งหมายความว่า วิสัยของชาวอาหรับในเรื่องนี้ไม่ได้อาศัยการเขียนและการคำนวณ ดังนั้น เดือนตามหลักบทบัญญัติศาสนา จึงหมายถึงระยะเวลาระหว่างการปรากฏของจันทร์เสี้ยวทั้งสองรอบ ซึ่งสิ่งนี้จะรับรู้ได้ด้วยหนึ่งในสองวิธี นั่นก็คือ การมองเห็นจันทร์เสี้ยวด้วยตาเปล่า หรือ การนับจำนวนวันให้ครบสามสิบวันบริบูรณ์&quot;</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">فأشار النبي صلى الله عليه وسلم بأنا أي العرب أمة أمية لا نكتب ولا نحسب أي ليس من شأن العرب الكتابة ولا الحساب فالشرع في الشهر ما بين الهلالين ويدرك ذلك إما برؤية الهلال وإما بكمال العدة ثلاثين واعتباره إكمال العدة ثلاثين</blockquote>
+      </details>
+      <p class="ar-translation">&quot;และการพิจารณาให้ยึดการนับวันให้ครบสามสิบวันบริบูรณ์นั้น เป็นหลักฐานบ่งชี้ว่าพวกเขาไม่ได้รอคอยเพียงแค่การเกิดจันทร์เสี้ยวเท่านั้น และการมีอยู่ของดวงจันทร์ในความเป็นจริงนั้น จะถูกนำมาพิจารณา (ทางบทบัญญัติ) ก็ต่อเมื่ออยู่ภายใต้เงื่อนไขที่ว่า &quot;สามารถมองเห็นได้&quot;  ซึ่งหากท่านนบี (ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม) ไม่ได้กล่าวไว้เช่นนั้น สมมติว่าเมื่อดวงจันทร์แยกตัวออกจากรัศมีดวงอาทิตย์ก่อนรุ่งสาง ก็ย่อมเป็นข้อบังคับให้ต้องถือศีลอดในวันนั้นทันที แต่ท่านนบี (ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม) ได้ตีตกหลักการนั้น และไม่ได้กำหนดให้การถือศีลอดเป็นข้อบังคับนอกจากในวันถัดไป (หลังจากที่เห็นดวงจันทร์แล้ว) ซึ่งประเด็นนี้เป็นจุดที่มีมติเอกฉันท์ (อิจญ์มาอ์) และไม่มีความขัดแย้งใดๆ ในหมู่นักวิชาการ&quot;</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">دليل على أنه لا ينتظرون به الهلال وأن وجوده في نفس الأمر معتبر بشرط إمكان الرؤية ولو لم يقل النبي صلى الله عليه وسلم ذلك لكان إذا فارق الشعاع مثلا قبل الفجر يجب صوم ذلك اليوم فأبطل النبي صلى الله عليه وسلم ذلك ولم يجعل الصوم إلا في اليوم القابل وهذا محل مجمع عليه لا خلاف فيه بين العلماء</blockquote>
+      </details>
+      <p class="ar-translation">&quot;อย่างไรก็ตาม ยังมีอีกประเด็นหนึ่งที่บรรดานักวิชาการมีความเห็นขัดแย้งกัน ซึ่งเป็นประเด็นที่อาจยึดหลักเกณฑ์จากหะดีษบทนี้ หรืออาจละเว้นจากมันก็ได้ นั่นคือ กรณีที่การคำนวณบ่งชี้ว่าดวงจันทร์ได้แยกตัวออกจากรัศมีดวงอาทิตย์แล้ว และได้ผ่านระยะเวลาที่ทำให้สามารถมองเห็นได้ในช่วงดวงอาทิตย์ตก นักวิชาการมีความเห็นต่างกันในเรื่องการอนุญาตให้ถือศีลอดด้วยเกณฑ์ดังกล่าว และความเป็นข้อบังคับสำหรับผู้คำนวณเองรวมถึงบุคคลอื่น (ในที่นี้หมายถึงการอนุญาตสำหรับบุคคลอื่น)</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">وثم محل آخر اختلفوا فيه يمكن أن يؤخذ من الحديث ويمكن أن يعتذر عنه وهو ما إذا دل الحساب على أنه فارق الشعاع ومضت عليه مدة يمكن أن يرى فيها عند الغروب فقد اختلف العلماء في جواز الصوم بذلك وفي وجوبه على الحاسب وعلى غيره أعني في الجواز على غيره فمن قال بعدم الوجوب عليه وبعدم الجواز فقد يتمسك بالحديث ويعتضد بقوله صلى الله عليه وسلم إذا رأيتموه فصوموا وإذا رأيتموه فأفطروا فإن غم عليكم فاقدروا له وفي رواية فأكملوا عدة شعبان ثلاثين وهذا هو الأصح عند العلماء ومن قال بالجواز اعتقد بأن المقصود وجود الهلال وإمكان رؤيته كما في أوقات الصلاة إذا دل الحساب عليها في يوم الغيم وهذا القول قاله كبار ولكن الصحيح الأول لمفهوم الحديث وليس ذلك ردا للحساب فإن الحساب إنما يقتضي الإمكان ومجرد الإمكان لا يجب أن يرتب عليه الحكم وترتيب الحكم للشارع وقد رتبه على الرؤية ولم تخرج عنه إلا إذا كملت العدة الفرق بينه وبين أوقات الصلاة أن الغلط قد يحصل هنا كثيرا بخلاف أوقات الصلاة يحصل القطع أو قريب منه غالبا وهذا الخلاف فيما إذا دل الحساب على إمكان الرؤية ولم ير فأحد الوجهين أن السبب إمكان الرؤية والثاني وهو الأصح أن السبب نفس الرؤية أو إكمال العدة وعلى كلا الوجهين ليس ما دل عليه الحساب محكوما عليه بالبطلان وقد يكون في نفسه بحيث تنتهي مقدماته إلى القطع وقد لا تنتهي إلى ذلك بحسب مراتب بعده عن الشمس وقربه.</blockquote>
+      </details>
+      <p>ผู้ที่กล่าวว่าไม่เป็นข้อบังคับและไม่อนุญาต (ให้ถือศีลอดด้วยการคำนวณ): ได้ยึดมั่นตามหะดีษ และมีน้ำหนักสนับสนุนจากคำกล่าวของท่านนบี (ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม) ที่ว่า: &quot;พวกท่านจงถือศีลอดเมื่อเห็นมัน (จันทร์เสี้ยว) และจงละศีลอดเมื่อเห็นมัน และหากท้องฟ้าถูกบดบังทัศนวิสัย ก็จงกะประมาณเอามันเถิด&quot; และในอีกสายรายงานหนึ่งระบุว่า &quot;ก็จงนับเดือนชะอ์บานให้ครบสามสิบวันบริบูรณ์&quot; ซึ่งทรรศนะนี้ถือเป็นทรรศนะที่ถูกต้องกว่า ตามมติของนักวิชาการส่วนใหญ่</p>
+      <p>ส่วนผู้ที่กล่าวว่าอนุญาต (ให้ใช้การคำนวณได้): พวกเขามีความเชื่อว่า เป้าหมายหลักคือการมีอยู่ของจันทร์เสี้ยวและ &quot;ความเป็นไปได้ที่จะมองเห็น&quot; เช่นเดียวกับกรณีของการเทียบเวลาละหมาดด้วยการคำนวณในวันที่ท้องฟ้ามีเมฆหมอก ซึ่งทรรศนะนี้ก็ได้รับการกล่าวถึงโดยปราชญ์ผู้ใหญ่หลายท่านเช่นกัน</p>
+      <p>แต่ความเห็นแรกนั้นเป็นทรรศนะที่ถูกต้องกว่า โดยพิจารณาจากนัยยะความเข้าใจของหะดีษ และการยึดทรรศนะนี้ไม่ใช่การปฏิเสธศาสตร์แห่งการคำนวณแต่อย่างใด เพราะการคำนวณนั้นเพียงแค่ระบุถึง &quot;ความเป็นไปได้&quot;  ลำพังเพียงแค่ความเป็นไปได้นั้น ย่อมไม่จำเป็นต้องถูกนำมาผูกพันกับข้อชี้ขาดทางบทบัญญัติ (ฮุกุ่ม) ทั้งนี้เพราะการกำหนดข้อชี้ขาดนั้นเป็นสิทธิของพระผู้ทรงบัญญัติ ซึ่งพระองค์ได้ทรงผูกข้อชี้ขาดไว้กับ &quot;การมองเห็น&quot; (ไม่ใช่รู้ว่ามีจันทร์เสี้ยว) และจะไม่มีการหลุดพ้นไปจากเงื่อนไขนี้ได้ เว้นแต่เมื่อมีการนับวันจนครบจำนวนบริบูรณ์เท่านั้น</p>
+      <p>ข้อแตกต่างระหว่างเรื่องนี้กับเรื่องเวลาละหมาดก็คือ ความผิดพลาด (จากการคำนวณ) ในเรื่องการดูเดือนนั้นสามารถเกิดขึ้นได้บ่อยครั้ง แตกต่างจากเวลาละหมาด ซึ่งมักจะได้รับความมั่นใจเด็ดขาด หรือไม่ก็ใกล้เคียงกับความเด็ดขาดเป็นส่วนใหญ่</p>
+      <p>และความขัดแย้งที่กล่าวมานี้ เป็นไปในกรณีที่การคำนวณบ่งชี้ว่าสามารถมองเห็นได้ ทว่าไม่มีผู้ใดมองเห็นจริง โดยทรรศนะหนึ่งมองว่า สาเหตุของการเข้าเดือนคือ &quot;ความเป็นไปได้ที่จะมองเห็น&quot; ในขณะที่อีกทรรศนะหนึ่ง ซึ่งเป็นทรรศนะที่ถูกต้องกว่ามองว่า สาเหตุที่แท้จริงคือ &quot;การมองเห็นด้วยตาจริงๆ&quot; หรือการนับจำนวนวันให้ครบ</p>
+      <p>อย่างไรก็ตาม บนพื้นฐานของทั้งสองทรรศนะ สิ่งที่การคำนวณได้บ่งชี้ไว้ก็ไม่ได้ถูกตัดสินว่าเป็นโมฆะหรือผิดพลาดโดยตัวของมันเอง ซึ่งผลลัพธ์ของการคำนวณอาจนำไปสู่ความมั่นใจอย่างเด็ดขาด หรืออาจจะไม่ถึงขั้นนั้นก็ได้ ทั้งนี้ขึ้นอยู่กับระดับความห่างของดวงจันทร์จากดวงอาทิตย์ หรือความใกล้ของมันนั่นเอง&quot;</p>
       <p>อัซซุบกีย์ท่านอธิบายต่อว่า:</p>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">อัซซุบกีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-“และในที่นี้ยังมีอีกกรณีหนึ่ง นั่นคือ กรณีที่การคำนวณบ่งบอกว่า ‘(วันนี้) ไม่สามารถมองเห็นจันทร์เสี้ยวได้’ โดยเป็นผลลัพธ์ที่ได้มาจากข้อมูลเบื้องต้นที่เด็ดขาดตายตัว เช่น ดวงจันทร์อยู่ใกล้กับดวงอาทิตย์มากจนเกินไป ในสถานการณ์เช่นนี้ การที่เราจะมองเห็นจันทร์เสี้ยวด้วยตาเปล่าในความเป็นจริงย่อมเป็นไปไม่ได้เลยเพราะมันฝืนธรรมชาติ ดังนั้น หากมีผู้แจ้งข่าวหนึ่งคนหรือมากกว่านั้นมาบอกว่าพวกเขามองเห็นจันทร์เสี้ยว ซึ่งคำบอกเล่านั้นมีโอกาสที่จะเป็นการโกหกหรือเกิดความผิดพลาด แนวทางที่สมควรปฏิบัติคือ การตีความคำบอกเล่านั้นว่าเป็นการโกหกหรือความผิดพลาด แม้ว่าจะมีพยานสองคนมายืนยัน คำให้การของพวกเขาก็จะไม่ถูกยอมรับ ทั้งนี้เพราะ ‘การคำนวณ’ เป็นสิ่งที่เด็ดขาดตายตัว ในขณะที่ ‘คำให้การ’ และ ‘การแจ้งข่าว’ เป็นเพียงความน่าจะเป็น และสิ่งที่เป็นเพียงความน่าจะเป็น ย่อมไม่สามารถนำมาหักล้างสิ่งที่เด็ดขาดตายตัวได้ นับประสาอะไรกับการที่จะให้น้ำหนักมันเหนือกว่าสิ่งที้เด็ดขาด”                </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">وههنا صورة أخرى وهو أن يدل الحساب على عدم إمكان رؤيته ويدرك ذلك بمقدمات قطعية ويكون في غاية القرب من الشمس ففي هذه الحالة لا يمكن فرض رؤيتنا له حسا لأنه يستحيل فلو أخبرنا به مخبر واحد أو أكثر ممن يحتمل خبره الكذب أو الغلط فالذي يتجه قبول هذا الخبر وحمله على الكذب أو الغلط ولو شهد به شاهدان لم تقبل شهادتهما لأن الحساب قطعي والشهادة والخبر ظنيان والظن لا يعارض القطع فضلا عن أن يقدم عليه</div>
-                </details>
-      </blockquote>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">อัซซุบกีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-
-              <p>“เงื่อนไขสำคัญของ ‘พยานหลักฐาน’ ก็คือ สิ่งที่ถูกนำมาเป็นพยานนั้นจะต้องเป็นสิ่งที่เป็นไปได้ ทั้งในทางกายภาพ สติปัญญา และบทบัญญัติศาสนา ดังนั้น หากสมมติว่าการคำนวณชี้ชัดอย่างเด็ดขาดแล้วว่า ‘เป็นไปไม่ได้ที่จะมองเห็น’ การยอมรับพยานหลักฐานนั้นในทางศาสนาก็ย่อมเป็นไปไม่ได้เช่นกัน เพราะสิ่งที่ถูกนำมาอ้างนั้นเป็นเรื่องที่เป็นไปไม่ได้ และบทบัญญัติศาสนาย่อมไม่นำเสนอสิ่งที่เป็นไปไม่ได้ นอกจากนี้ เราไม่มีตัวบทใดในศาสนาที่ระบุว่า ‘พยานสองคนใดๆ ก็ตามจะต้องถูกยอมรับเสมอ ไม่ว่าสิ่งที่พวกเขายืนยันจะถูกต้องหรือเป็นเท็จก็ตาม’ และการกำหนดให้การถือศีลอดหรือการกำหนดเข้าเดือนใหม่เป็นข้อบังคับนั้น ก็ไม่ได้ขึ้นอยู่กับเพียงแค่การมีคนมาแจ้งข่าวหรือมาเป็นพยานเท่านั้น จนถึงขั้นที่เราจะต้องหลับหูหลับตากล่าวว่า ‘หลักการคือคำสั่งของศาสนาที่ว่า: จงถือศีลอดหากมีคนมาบอกพวกท่าน’ เพราะหากมีคำสั่งระบุไว้เช่นนั้นจริง เราก็พร้อมจะน้อมรับด้วยความเต็มใจ แต่ในบทบัญญัติศาสนาไม่เคยมีคำสั่งลักษณะนั้นเลย ตรงกันข้าม เรามีหน้าที่ต้อง ‘ตรวจสอบให้ชัดเจน’ ก่อนที่จะยอมรับข่าวสาร เพื่อให้รู้ถึงความจริงเสียก่อน เพราะเป็นที่แน่ชัดว่า บางคนที่มาเป็นพยานว่าเห็นจันทร์เสี้ยว:</p>
-              <ul class="thai-detail-list">
-                  <li>อาจจะไม่ได้เห็นจริงๆ แต่อาจเกิดความสับสน</li>
-                  <li>หรือเห็นบางสิ่งแล้วเข้าใจผิดว่าเป็นจันทร์เสี้ยว</li>
-                  <li>หรือตาฝาดเห็นในสิ่งที่ไม่มีอยู่จริง</li>
-                  <li>หรือมาให้การหลังจากผ่านไปหลายวันจนจำคืนที่เห็นผิดพลาด</li>
-                  <li>หรือบางคนอาจมีความเขลาอย่างหนักจนคิดเอาเองว่า การทำให้ผู้คนได้ถือศีลอดนั้นจะได้บุญ</li>
-                  <li>หรือบางคนก็แค่อยากจะสร้างผลงานพิสูจน์ความน่าเชื่อถือของตนเอง เพื่อใช้เป็นเครื่องมือให้ได้รับการยอมรับจากศาล</li>
-              </ul>
-              <p>ซึ่งตัวอย่างคนประเภทต่างๆ เหล่านี้ เราล้วนเคยพบเห็นและได้ยินมาแล้วทั้งสิ้น”</p>
-                          </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">والبينة شرطها أن يكون ما شهدت به ممكنا حسا وعقلا وشرعا فإذا فرض دلالة الحساب قطعا على عدم الإمكان استحال القبول شرعا لاستحالة المشهود به والشرع لا يأتي بالمستحيلات ولم يأت لنا نص من الشرع أن كل شاهدين تقبل شهادتهما سواء كان المشهود به صحيحا أو باطلا ولا يترتب وجوب الصوم وأحكام الشهر على مجرد الخبر أو الشهادة حتى إنا نقول العمدة قول الشارع صوموا إذا أخبركم مخبر فإنه لو ورد ذلك قبلناه على الرأس والعين لكن ذلك لم يأت قط في الشرع بل وجب علينا التبين في قبول الخبر حتى نعلم حقيقته أولا ولا شك أن بعض من يشهد بالهلال قد لا يراه ويشتبه عليه أو يرى ما يظنه هلالا وليس بهلال أو تريه عينه ما لم ير أو يؤدي الشهادة بعد أيام ويحصل الغلط في الليلة التي رأى فيها أو يكون جهله عظيما يحمله على أن يعتقد في حمله الناس على الصيام أجرا أو يكون ممن يقصد إثبات عدالته فيتخذ ذلك وسيلة إلى أن يزكى ويصير مقبولا عند الحكام وكل هذه الأنواع قد رأيناها وسمعناها</div>
-                </details>
-      </blockquote>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">อัซซุบกีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-“ดังนั้น สำหรับผู้พิพากษา (หรือผู้มีอำนาจตัดสิน) หากเคยประสบกับเหตุการณ์เช่นนี้ และได้รับรู้ด้วยตนเองหรือจากผู้เชี่ยวชาญที่เชื่อถือได้ว่า ‘การคำนวณชี้ชัดว่าไม่มีทางมองเห็นได้’ เขาต้องไม่ยอมรับคำให้การนั้น ไม่กำหนดการเข้าเดือนใหม่ด้วยคำให้การนั้น และไม่ใช้มันในการตัดสิน แต่เขาจะต้องยึดหลัก ‘การรักษาสถานะเดิม’ นั่นคือให้เดือนเดิมดำเนินต่อไปให้ครบจำนวน เพราะนี่คือหลักฐานทางศาสนาที่ได้รับการยืนยันแล้ว จนกว่าจะมีความจริงอื่นมาหักล้าง เราไม่ได้กล่าวว่า บทบัญญัติศาสนาได้ยกเลิกหรือเพิกเฉยต่อ ‘การคำนวณ’ อย่างสิ้นเชิง และการที่บรรดานักนิติศาสตร์เคยกล่าวว่า ‘ห้ามนำการคำนวณมาเป็นเกณฑ์’ นั้น จริงๆ แล้วพวกเขากล่าวถึงในกรณีที่ตรงกันข้ามกับกรณีนี้ (นั่นคือกรณีที่เราถกเถียงกันไปแล้วก่อนหน้านี้ ที่การคำนวณบอกว่าเห็นได้ แต่ไม่มีใครเห็น) ส่วนในกรณีนี้ (การคำนวณบอกว่าไม่มีทางเห็นได้) บริบทมันต่างกันอย่างสิ้นเชิง ซึ่งข้าพเจ้าไม่พบการอ้างอิงจากปราชญ์ท่านอื่นในประเด็นนี้ และไม่มีช่องว่างให้คาดเดาเป็นอื่นได้นอกจากสิ่งที่ข้าพเจ้าได้อธิบายมานี้”                </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">فيجب على الحاكم إذا جرب مثل ذلك وعرف من نفسه أو بخبر من يثق به أن دلالة الحساب على عدم إمكان الرؤية أن لا يقبل هذه الشهادة ولا يثبت بها ولا يحكم بها ويستصحب الأصل في بقاء الشهر فإنه دليل شرعي محقق حتى يتحقق خلافه ولا نقول الشرع ألغى قول الحساب مطلقا والفقهاء قالوا لا يعتمد فإن ذلك إنما قالوه في عكس هذا وهذه المسألة المتقدمة التي حكينا فيها الخلاف أما هذه المسألة فلا ولم أجد في هذه نقلا ولا وجه فيها للاحتمال غير ما ذكرته</div>
-                </details>
-      </blockquote>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">อัซซุบกีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-
-              <p>“ข้าพเจ้าได้เห็นอิหม่าม อัลฮะรอมัยน์ (เสียชีวิตปี ฮ.ศ. 478 / ค.ศ. 1085) เราะหิมะฮุลลอฮ์ระบุไว้ในตำรา <strong>อันนิฮายะฮ์</strong> เมื่อท่านกล่าวถึงกรณีที่: หากมีการมองเห็นจันทร์เสี้ยวในพื้นที่หนึ่ง แต่ไม่เห็นในอีกพื้นที่หนึ่ง บรรดานักปราชญ์ (ในมัซฮับอัชชาฟิอียะฮ์) มีสองทรรศนะว่า เราจะใช้เกณฑ์ระยะทางแบบใด ระหว่าง ‘ระยะทางที่อนุญาตให้ย่อละหมาดได้’ หรือพิจารณาจาก ‘พิกัดการขึ้นของดวงจันทร์’ ?</p>
-              <p>ท่านได้ฟันธงที่เกณฑ์ระยะทางย่อละหมาด และได้กล่าวถึงเรื่องพิกัดดวงจันทร์ไว้ในลักษณะที่แบ่งรับแบ่งสู้ เนื่องจากท่านไม่ได้มีสายรายงานอ้างอิงในเรื่องนี้ จากนั้นท่านก็ตีตกประเด็นนี้ไปโดยให้เหตุผลว่า มันตั้งอยู่บนพื้นฐานของการสังเกตการณ์ทางดาราศาสตร์และการคำนวณ และท่านได้ตั้งข้อสมมติฐานถึงกรณีที่อยู่ภายในเขตระยะทางย่อละหมาดเดียวกัน แต่พื้นที่นั้นมีความสูงต่ำของภูมิประเทศแตกต่างกัน ซึ่งข้อสมมติฐานที่ท่านยกมานี้เป็นเรื่องที่เกิดขึ้นได้ยาก แต่หากมันเป็นไปได้ และผู้คำนวณทางดาราศาสตร์ตัดสินว่า ‘ไม่สามารถมองเห็นได้ในพื้นที่ (ที่ต่ำ) นี้’ ก็อาจจะตีความได้ว่า ข้อชี้ขาด (การให้เข้าเดือนใหม่) ไม่ครอบคลุมถึงพื้นที่นั้น หรืออาจจะตีความได้ว่า พื้นที่ใดก็ตามที่อยู่ภายในเขตระยะทางย่อละหมาดย่อมถือเป็นเสมือนเมืองเดียวกัน ดังนั้นข้อชี้ขาดจึงครอบคลุมถึงทั้งหมด</p>
-              <p>(บทสรุปสำหรับประเด็นของเรา) ปัญหาของเราในที่นี้ เป็นเรื่องที่เกิดขึ้นในภูมิภาคและดินแดนอันกว้างใหญ่ไพศาล ซึ่งการคำนวณได้บ่งชี้ชัดเจนแล้วว่า ไม่มีความเป็นไปได้ที่จะมองเห็นจันทร์เสี้ยวในพื้นที่เหล่านั้นเลย แต่กลับมีพยานสองหรือสามคนมายืนยันว่ามองเห็น ซึ่งคำกล่าวของพวกเขามีความเป็นไปได้ที่จะเกิดข้อผิดพลาดตามปัจจัยทั้งหมดที่เราได้อธิบายไปแล้ว ดังนั้น ข้าพเจ้าจึงมองว่า ไม่อาจยอมรับพยานหลักฐานนี้ได้เลยโดยสิ้นเชิง และไม่อนุญาตให้ใช้มันในการตัดสินข้อชี้ขาดใดๆ ทั้งสิ้น”</p>
-                          </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">ورأيت إمام الحرمين في النهاية لما تكلم فيها إذا رئي الهلال في موضع ولم ير في غيره وللأصحاب فيه وجهان هل تعتبر مسافة القصر أو المطالع جزم بمسافة القصر وذكر المطالع على وجه الاحتمال له لأنه لم ينقله ثم رده بأنه مبني على الأرصاد والتمودرات وفرض ذلك في دون مسافة القصر بانخفاض وارتفاع وهذا الفرض الذي قد فرضه نادر فإن أمكن ذلك وحكم حاسب بعدم الإمكان في هذا الموضع احتمل أن يقال بعدم تعلق الحكم واحتمل أن يقال إنما دون مسافة القصر كالبلد الواحد فيتعلق به الحكم ومسألتنا هذه في قطر عظيم وأقاليم دل الحساب على عدم إمكان الرؤية فيها فشهد اثنان أو ثلاثة على رؤيته مع احتمال قولهما بجميع ما قدمناه فلا أرى قبول هذه البينة أصلا ولا يجوز الحكم بها</div>
-                </details>
-      </blockquote>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">อัซซุบกีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-
-              <p>“พึงทราบเถิดว่า คำว่า ‘ความเด็ดขาดตายตัว’ ที่เราหมายถึงในที่นี้ ไม่ใช่ความเด็ดขาดที่ได้มาจากหลักฐานเชิงตรรกะหรือสติปัญญาล้วนๆ เพราะบริบทของเราในเรื่องนี้ไม่ได้เป็นเช่นนั้น แต่มันตั้งอยู่บนพื้นฐานของการเฝ้าสังเกตการณ์ การทดลองที่สั่งสมมายาวนาน การติดตามวิถีโคจรของดวงอาทิตย์และดวงจันทร์ และการประเมินปริมาณแสงที่จะทำให้มนุษย์สามารถมองเห็นจันทร์เสี้ยวได้ ซึ่งแน่นอนว่ามนุษย์เรามีความคมชัดของสายตาที่แตกต่างกัน</p>
-              <p>บางครั้ง ความเด็ดขาดตายตัวอาจเกิดขึ้นได้ทั้งในกรณีที่ ‘เป็นไปได้ที่จะมองเห็น’ และ ‘เป็นไปไม่ได้ที่จะมองเห็น’ และบางครั้งมันก็ไม่เด็ดขาดแต่มีความลังเลอยู่ ซึ่งการจะฟันธงไปในทางใดทางหนึ่งนั้น ต้องอิงกับ ‘กฎธรรมชาติ/ความคุ้นเคยทางกายภาพ’ เปรียบเหมือนการที่เราฟันธงว่า ดวงดาวบางดวงที่อยู่ไกลลิบตา เราไม่มีทางมองเห็นมันได้ตามวิสัยปกติธรรมชาติ แม้ว่าในเชิงตรรกะและสติปัญญา มันอาจจะเกิดขึ้นได้ก็ตาม แต่นั่นจะต้องเป็นการฉีกกฎธรรมชาติ ซึ่งการฝืนกฎธรรมชาติเช่นนั้น อาจเกิดขึ้นได้ในฐานะ ‘มุอ์ญิซะฮ์’ สำหรับบรรดานบี หรือ ‘กะรอมะฮ์’ สำหรับบรรดาวะลีย์ (ผู้ใกล้ชิดอัลลอฮ์) เท่านั้น ส่วนคนทั่วไปนั้นย่อมเป็นไปไม่ได้</p>
-              <p>ดังนั้น หากมีคนมาบอกเราว่า เขามองเห็นและได้ยินเสียงของคนที่อยู่ห่างออกไปเป็นระยะทางเดินเท้าหนึ่งวัน คำบอกเล่าและคำให้การของเขาย่อมไม่ถูกยอมรับ และเราจะไม่นำมันมาใช้ตัดสินข้อกฎหมายใดๆ เพราะแม้มันจะ ‘เป็นไปได้ในทางตรรกะ’ แต่มัน ‘เป็นไปไม่ได้ในทางธรรมชาติ’”</p>
-                          </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">واعلم أنه ليس مرادنا بالقطع ههنا الذي يحصل بالبرهان الذي مقدماته كلها عقلية فإن الحال هنا ليس كذلك وإنما هو مبني على أرصاد وتجارب طويلة وتسيير منازل الشمس والقمر ومعرفة حصول الضوء الذي فيه بحيث يتمكن الناس من رؤيته والناس يختلفون في حدة البصر فتارة يحصل القطع إما بإمكان الرؤية وإما بعدمه وتارة لا يقطع بل يتردد والقطع بأحد الطرفين مستنده العادة كما نقطع في بعض الأجرام البعيدة عنا بأنا لا نراها ولا يمكنا رؤيتها في العادة وإن كان في الإمكان العقلي ذلك ولكن يكون ذلك خارقا للعادة وقد يقع معجزة لنبي أو كرامة لولي أما غيرهما فلا فلو أخبرنا مخبر أنه رأى شخصا بعيدا عنه في مسافة يوم مثلا وسمعه يقر بحق وشهد عليه به لم يقبل خبره ولا شهادته بذلك ولا نرتب عليها حكما وإن كان ذلك ممكنا في العقل لكنه مستحيل في العادة</div>
-                </details>
-      </blockquote>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">อัซซุบกีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-
-              <p>“ในทำนองเดียวกัน หากมีพยานสองคนหรือมากกว่า ซึ่งเป็นบุคคลที่มีโอกาสโกหกหรือผิดพลาดได้ มาให้การยืนยันว่าเห็นจันทร์เสี้ยว ในขณะที่การคำนวณวิถีโคจรของดวงจันทร์ชี้ชัดว่า ‘ไม่มีความเป็นไปได้ที่จะมองเห็น’ ในจุดที่พวกเขากล่าวอ้าง คำให้การของพวกเขาย่อมต้องถูกตีตกไป! เหตุผลก็คือ ‘ความเป็นไปได้’ คือเงื่อนไขแรกของการเป็นพยานหลักฐาน และการให้น้ำหนักว่าพยานอาจโกหกหรือผิดพลาด ย่อมสมเหตุสมผลมากกว่าการเชื่อว่ากฎธรรมชาติถูกทำลายลง ดังนั้น สิ่งที่เป็นไปไม่ได้ในทางธรรมชาติ ก็มีค่าเท่ากับสิ่งที่เป็นไปไม่ได้ในทางตรรกะ ซึ่งไม่อาจนำมายอมรับเป็นคำรับสารภาพหรือคำให้การได้</p>
-              <p>ด้วยเหตุนี้ จึงเป็นหน้าที่บังคับสำหรับผู้พิพากษา (กอฎีย์) ที่จะต้องมีวิจารณญาณที่ตื่นตัวในเรื่องนี้ และต้องไม่รีบเร่งยอมรับคำให้การของพยานสองคน จนกว่าจะได้ตรวจสอบรายละเอียดสิ่งที่พวกเขาให้การเสียก่อน ว่ามันมีความเป็นไปได้หรือไม่? อยู่ในระดับความเป็นไปได้มากน้อยเพียงใด? สายตาของพวกเขามีศักยภาพพอหรือไม่? พวกเขาเป็นคนที่มักจะสับสนตาฝาดหรือไม่?</p>
-              <p>หากพิสูจน์ได้ว่ามันเป็นไปได้จริง และพยานทั้งสองสายตาดี มีไหวพริบ ไม่สับสน ไม่มีวาระซ่อนเร้น และเป็นผู้มีความยุติธรรม (ผู้พิพากษาจึงจะนำมาพิจารณา) แต่ถ้าไม่ใช่ตามนี้ ก็ต้องระงับไว้หรือตีตกไป เพราะหากผู้พิพากษามัวแต่เชื่อทุกสิ่งที่พยานสองคนกล่าวอ้าง ใครๆ ก็คงสามารถเข้าใจแก่นแท้ของการพิพากษาได้ (ไม่ต้องมีผู้พิพากษาก็ได้) แต่นี่คือหน้าที่ที่ผู้พิพากษาต้องใช้ดุลยพินิจ ดังนั้น เมื่อผู้พิพากษากล่าวว่า ‘เรื่องนี้เป็นที่ยุติสำหรับฉันแล้ว’ เราย่อมรู้ได้ว่าท่านได้ตรวจสอบเงื่อนไขทั้งหมดอย่างครบถ้วนแล้ว</p>
-              <p>การที่นักคำนวณดาราศาสตร์จะฟันธงในเรื่องนี้ มีอยู่หลายระดับ:</p>
-              <ul class="thai-detail-list">
-                  <li>ระดับที่ฟันธงเด็ดขาดว่า ‘ไม่มีทางมองเห็นได้’: ในกรณีนี้ สำหรับเราแล้ว ไม่มีข้อกังขาเลยที่จะต้องตีตกคำให้การ (ของพยานที่อ้างว่าเห็น) หากผู้พิพากษารับทราบข้อมูลนี้ด้วยตนเอง หรืออาศัยคำยืนยันจากผู้เชี่ยวชาญที่เชื่อถือได้ (แม้เพียงคนเดียวก็เพียงพอแล้ว)</li>
-                  <li>ระดับที่ไม่ได้ฟันธงเด็ดขาด แต่ประเมินว่าเป็นไปได้ยากมาก: กรณีนี้ผู้พิพากษาต้องพิจารณาอย่างละเอียดถึงสภาพของพยาน ความคมชัดของสายตา และประเมินโอกาสที่จะเกิดข้อผิดพลาดหรือการโกหก ซึ่งต้องใช้ความพยายามอย่างหนักในการวินิจฉัย</li>
-                  <li>ระดับที่เป็นไปได้และคนส่วนใหญ่สามารถมองเห็นได้: กรณีนี้เหลือเพียงแค่การตรวจสอบความน่าเชื่อถือของพยานตามปกติ</li>
-              </ul>
-              <p>ผู้พิพากษาต้องไม่คิดเอาเองว่า เพียงแค่มีพยานสองคนและมีผู้มารับรองความประพฤติพยาน การเข้าเดือนใหม่ก็จะถูกพิสูจน์ทันที และต้องไม่เข้าใจผิดว่า บทบัญญัติศาสนาได้ยกเลิกการใช้การคำนวณทางดาราศาสตร์ไปโดยสิ้นเชิง ศาสนาไม่ได้กล่าวเช่นนั้น จะเป็นไปได้อย่างไรในเมื่อเรายังใช้การคำนวณในเรื่องของมรดก (ฟะรออิฎ) และเรื่องอื่นๆ? ในหะดีษก็มีการกล่าวถึง ‘การขีดเขียน’ และ ‘การคำนวณ’ ซึ่งการขีดเขียนไม่ได้ถูกห้าม การคำนวณก็ย่อมไม่ถูกห้ามเช่นกัน</p>
-              <p>แต่เป้าหมายของศาสนาเพียงแค่ต้องการตีกรอบข้อชี้ขาดเรื่องการเข้าเดือนใหม่ ให้อยู่ในวิธีการที่ชัดเจนและเข้าถึงง่ายสำหรับคนทั่วไป นั่นคือ ‘การมองเห็นด้วยตาเปล่า’ หรือ ‘การนับให้ครบ 30 วัน’ เท่านั้นเอง และนักนิติศาสตร์ (ฟะกีฮ์) จะต้องไม่สับสนว่า ปัญหาที่เรากำลังพูดถึงอยู่นี้ เป็นเรื่องเดียวกับที่ปราชญ์ฟิกฮ์ระบุในหมวดการถือศีลอดว่า ‘ทรรศนะที่ถูกต้องคือ ไม่ให้ยึดการคำนวณดาราศาสตร์’ เพราะนั่นคือกรณีที่ดาราศาสตร์บอกว่าเห็นได้ แต่ตาเปล่ากลับมองไม่เห็น แต่กรณีของเราในที่นี้ มันคือสถานการณ์ที่ตรงกันข้ามอย่างสิ้นเชิง! (นั่นคือ ดาราศาสตร์บอกว่าไม่มีทางเห็นได้ แต่ตาเปล่าดันอ้างว่าเห็น)”</p>
-                          </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">فكذلك إذا شهد عندنا اثنان أو أكثر ممن يجوز كذبهما أو غلطهما برؤية الهلال وقد دل حساب تسيير منازل القمر على عدم إمكان رؤيته في ذلك الذي قالا إنهما رأياه فيه ترد شهادتهما لأن الإمكان شرط في المشهور به وتجويز الكذب والغلط على الشاهدين المذكورين أولى من تجويز انخرام العادة فالمستحيل العادي والمستحيل العقلي لا يقبل الإقرار به ولا الشهادة فكذلك المستحيل العادي وحق على القاضي التيقظ لذلك وأن لا يتسرع إلى قبول الشاهدين حتى يفحص عن حال ما شهدا به من الإمكان وعدمه ومراتب الإمكان فيه وهل بصرهما يقتضي ذلك أو لا وهل هما ممن يشتبه عليهما أو لا فإذا تبين له الإمكان وإنهما ممن يجيد بصرهما رؤيته ولا يشتبه عليهما لفطنتهما ويقظتهما ولا غرض لهما وهما عدلان ذلك بسبب أو لا فيتوقف أو يرد ولو كان كل ما يشهد به شاهدان يثبته القاضي لكان كل أحد يدرك حقيقة القضاء لكن لا بد من نظر لأجله جعل القاضي فإذا قال القاضي ثبت عندي علمنا أنه استوفى هذه الأحوال كلها وتكاملت شروطها عنده فلذلك ينبغي للقاضي التثبت وعدم التسرع مظنة الغلط ولهذا إن الشاهد المتسرع إلى أداء الشهادة ترد شهادته ومن عرف منه التسرع في ذلك لم تقبل شهادته فيه ومراتب ما يقوله الحساب في ذلك [فتاوى السبكي (1/211)] متفاوتة منها ما يقطعون بعدم إمكان الرؤية فيه فهذا لا ريب عندنا في رد الشهادة به إذا عرفه القاضي بنفسه أو اعتمد فيه على قول من يثق به ويظهر أن يكتفي فيه بإخبار واحد موثوق به ويعلمه أما اثنان فلا شك فيهما ومنها ما لا يقطعون فيه بعدم الإمكان ولكن يستعدون فهذا محل النظر في حال الشهود وحدة بصرهم ويرى أنهم من احتمال الغلط والكذب يتفاوت ذلك تفاوتا كبيرا ومراتب كثيرة فلهذا يجب على القاضي الاجتهاد وسع الطاقة أما إذا كان الإمكان بحيث يراه أكثر الناس فلا يبقى إلا النظر في حال الشاهدين فلا يعتقد القاضي أنه بمجرد شهادة الشاهدين وتزكيتهما يثبت الهلال ولا يعتقد أن الشرع أبطل العمل بما يقوله الحساب مطلقا فلم يأت ذلك وكيف والحساب معمول به في الفرائض وغيرها وقد ذكر في الحديث الكتابة والحساب وليست الكتابة منهيا عنها فكذلك الحساب وإنما المراد ضبط الحكم الشرعي في الشهر بطريقين ظاهرين مكشوفين رؤية الهلال أو تمام ثلاثين وأن الشهر تارة تسع وعشرون وتارة ثلاثون وليست مدة زمانية مضبوطة بحساب كما يقوله أهل الهيئة ولا يعتقد الفقيه أن هذه المسألة هي التي قال الفقهاء في كتاب الصيام إن الصحيح عدم العمل بالحساب لأن ذلك فيما إذا دل الحساب على إنكار الرؤية وهذا عكسه .</div>
-                </details>
-      </blockquote>
-
-      <blockquote class="quote-container">
-          <div class="thai-quote">
-              <span class="attribution">อัซซุบกีย์ (เสียชีวิตปี ฮ.ศ. 756 / ค.ศ. 1355) เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-              “ไม่ต้องสงสัยเลยว่า ปราชญ์ท่านใดที่เคยอนุโลมให้ดาราศาสตร์มีน้ำหนักในกรณีแรก ย่อมต้องห้ามการใช้คำให้การพยานในกรณีนี้อย่างเด็ดขาด (เพราะดาราศาสตร์มีน้ำหนักกว่า) ส่วนผู้ที่เคยห้ามใช้ดาราศาสตร์ในกรณีแรก ก็ไม่ได้กล่าวห้ามอะไรในกรณีนี้ และจุดที่วิจารณญาณของเราพิจารณาเห็นชอบ ก็คือ ‘การสั่งห้าม’ (ไม่อนุญาตให้รับพยานที่ขัดกับดาราศาสตร์อย่างสิ้นเชิง) ซึ่งการสั่งห้ามในที่นี้เป็นสิ่งที่เด็ดขาดตายตัว แม้เราจะไม่พบการถ่ายทอดทรรศนะนี้โดยตรง แต่เราได้ใช้กระบวนการวินิจฉัยทางฟิกฮ์ลงไปในเรื่องนี้ และสำหรับเราแล้ว ประเด็นนี้จัดอยู่ในหมวดหมู่ของความเด็ดขาดตายตัว ซึ่งได้รับการยกระดับก้าวข้ามขอบเขตของเรื่องที่เป็นเพียงความคาดเดาหรือความน่าจะเป็นไปเรียบร้อยแล้ว”
-          </div>
-          <details class="source-toggle">
-              <summary>ดูตัวบทต้นฉบับ ▼</summary>
-              <div lang="ar" dir="rtl" class="ar">ولا شك أن من قال هناك بجواز الصوم أو وجوبه يقول هنا بالمنع بطريق الأولى ومن قال هناك بالمنع فههنا لم يقل شيئا والذي اقتضاه نظرنا المنع فالمنع هنا مقطوع به .ولم نجد هذه المسألة منقولة لكنا تفقهنا فيها وهي عندنا من محال القطع مترقية عن مرتبة الظنون</div>
-          </details>
-      </blockquote>
-
-      <p>ในจุดนี้เองท่านมุฮัมมัด บะคีต อัลมุฏีอีย์ (เสียชีวิตปี ฮ.ศ. 1354 / ค.ศ. 1935) เราะหิมะฮุลลอฮ์ ยังได้อธิบายประเด็นนี้ไว้ในตำรา <strong>อิร์ชาด อะฮ์ลิลมิลละฮ์</strong> ไว้เช่นกันว่า:</p>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">มุฮัมมัด บะคีต อัลมุฏีอีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-
-              <p>“ในเมื่อคำให้การพยาน (ชะฮาดะฮ์) ยังคงถูกปัดตกในกรณีที่การอ้างสิทธิแต่เพียงฝ่ายเดียว (หรือกลุ่มเล็กๆ) เป็นเหตุให้ต้องสันนิษฐานว่าจะเกิดความผิดพลาดหรือการมุสา ซึ่งนั่นคือกรณีที่คนกลุ่มเล็กๆ มองเห็นจันทร์เสี้ยว แต่คนกลุ่มใหญ่ที่มีจำนวนมากกว่าหลายเท่าตัวกลับมองไม่เห็น และกฎเกณฑ์นี้ถูกระบุไว้อย่างชัดเจนในมัสฮับของปวงปราชญ์หะนะฟีย์และมาลิกีย์ ดังที่จะกล่าวต่อไป แล้วเหตุไฉนคำให้การพยานจะไม่ถูกปัดตกเล่า ในกรณีที่มีหลักฐานอันเด็ดขาด หรือใกล้เคียงกับความเด็ดขาด ยืนยันถึงความเป็นไปไม่ได้ที่จะมองเห็นจันทร์เสี้ยวนั้น</p>
-              <p>ไม่เป็นที่สงสัยเลยว่า การปฏิเสธพยานในกรณีหลังนี้ย่อมสมเหตุสมผลยิ่งกว่า เพราะหากคนกลุ่มเล็กๆ มองเห็น แต่คนส่วนใหญ่ที่มีจำนวนมากกว่าหลายเท่ากลับมองไม่เห็น การที่คนกลุ่มใหญ่ไม่เห็นย่อมทำให้น้ำหนักของความน่าจะเป็น ชี้ไปที่ความผิดพลาดหรือการโกหกของคนกลุ่มเล็กในการกล่าวอ้าง แต่ในกรณีนี้ (การคำนวณทางดาราศาสตร์) หลักฐานนั้นมีความเด็ดขาดหรือเกือบจะเด็ดขาดในเรื่องดังกล่าว</p>
-              <p>จะเป็นไปได้อย่างไร ในเมื่อบรรดานักปราชญ์ได้วางเงื่อนไขของการรายงานที่แพร่หลายที่จะให้ความรู้แจ้งแก่ผู้ฟังไว้ว่า ผู้ฟังจะต้องไม่เชื่อมั่นในสิ่งที่ขัดแย้งกับเนื้อหาของรายงานนั้น ไม่ว่าจะด้วยความคลางแคลงใจ การปฏิบัติตามผู้อื่น หรือหลักศรัทธาก็ตาม ดังนั้น หากนี่คือบรรทัดฐานสำหรับหะดีษระดับมุตะวาติร แล้วจะนับประสาอะไรกับรายงานระดับอื่นเล่า?</p>
-              <p>และในยามนั้น หากผู้พิพากษายอมรับคำให้การของผู้ที่มาเป็นพยานว่าเห็นจันทร์เสี้ยว ทั้งๆ ที่การคำนวณอันเด็ดขาดหรือเกือบเด็ดขาดได้บ่งชี้ว่าไม่มีความเป็นไปได้ที่จะเห็น การกระทำของเขาย่อมขัดแย้งกับสิ่งที่เขาเชื่อมั่น ด้วยเหตุนี้เอง อิหม่ามอัซซุบกีย์จึงวิพากษ์ไว้ว่า: ‘เขา (ผู้พิพากษาผู้นั้น) เป็นคนโง่เขลา’ และกรณีนี้ ไม่ใช่ลักษณะของการที่ ‘การคำนวณ’ ขัดแย้งกับ ‘คำพยาน’ จนถึงขั้นที่จะอนุมานได้ว่า: ให้ยึดถือคำให้การของพยานและละทิ้งการคำนวณ แต่กรณีนี้จัดอยู่ในหมวดหมู่ของการที่ผู้พิพากษามีหลักฐานอยู่ในมือ ที่ทำให้เขามั่นใจว่าพยานผู้นั้นผิดพลาดหรือมุสา เพราะแท้จริงแล้ว การคำนวณของนักดาราศาสตร์ที่เที่ยงธรรมและเชี่ยวชาญอย่างลึกซึ้ง หากได้ชี้ชัดว่าไม่มีความเป็นไปได้ในการเห็น ย่อมทำให้น้ำหนักของความน่าจะเป็นชี้ไปที่ความผิดพลาดหรือการโกหกของพยานอย่างปราศจากข้อกังขา แล้วเช่นนี้ ผู้พิพากษาจะสามารถยอมรับคำพยานของเขาได้อย่างไรเล่า?”</p>
-                          </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">إذا رُدَّت الشهادة عندما يكون التفرد مظنة الغلط أو الكذب، وذلك عندما يرى الهلالَ جمعٌ قليل دون أضعافهم -وهذا منصوصٌ عليه في مذهب السادة الحنفية والمالكية كما سيأتي- فكيف لا ترد إذا وجد دليل قاطع أو قريب من القاطع على عدم إمكان الرؤية! لا شك أن عدم قبول الشهادة هنا أولى؛ لأنه إذا رأى القليل ولم يره أضعافهم فعدم رؤية أضعافهم يوجب غلبةَ الظن بغلط القليل أو كذبه في دعواه الرؤية، وأما هنا فالدليل قاطعٌ أو قريب منه على ذلك، كيف وقد جعلوا من شروط إفادة الخبر المتواتر العلم للسامع أن لا يكون السامع معتقدًا لنقيض ما يقتضيه الخبر إما لشبهةٍ أو تقليدٍ أو اعتقاد، فإذا كان هذا هو حال الخبر المتواتر فكيف بغيره؟ وحينئذٍ إذا قبل القاضي شهادة مَن شهد عنده برؤية الهلال مع دلالة الحساب القطعي أو القريب منه على عدم إمكان الرؤية كان ذلك على خلاف ما يعتقده، ولذلك قال السبكي: إنه أخرق، وليس هذا من قبيل معارضة الحساب للشهادة حتى يقال: يُعمَل بالشهادة دون الحساب، بل إن ذلك من قبيل وجود دليلٍ عند القاضي المشهود عنده اعتقد بموجبه خطأ الشاهد أو كذبه؛ فإن حساب الحاسب العدل الراسخ في الفن إذا دلَّ على عدم إمكان الرؤية أوجب غلبة الظن بغلط الشاهد أو كذبِهِ بلا شبهة، فكيف يستطيع القاضي أن يقبل مع هذا شهادة هذا الشاهد؟</div>
-                </details>
-      </blockquote>
-
-      <p>ด้วยเหตุนี้ อัลมุฏีอีย์จึงสรุปตามรอยอัซซุบกีย์ว่า หากผู้พิพากษายอมรับคำให้การของพยานทั้งๆ ที่การคำนวณอันเด็ดขาดชี้ว่าเป็นไปไม่ได้ที่จะเห็น ในอีกฟัตวาหนึ่งท่านยังได้ระบุเอาไว้ว่า:</p>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">อัซซุบกีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-
-              <p>“มูลเหตุจูงใจในการบันทึกประเด็นปัญหานี้ คือในปีนี้ ซึ่งตรงกับปี ฮ.ศ. 748 มีผู้คนอ้างว่าพบเห็นจันทร์เสี้ยวของเดือนซุลฮิจญะฮ์ที่เมืองดามัสกัสในคืนวันอาทิตย์ ณ ตำบลอัล-มุอัซเซาะมียะฮ์ ซึ่งอยู่ติดกับเมืองดามัสกัส และมีการกล่าวอ้างเพิ่มเติมว่าพบเห็นจันทร์เสี้ยวที่เมืองบัยซาน ซึ่งเมืองนี้แม้จะตั้งอยู่ห่างไกลเกินกว่าระยะทางของการละหมาดย่อก็ตาม แต่ในทางดาราศาสตร์ การคำนวณไม่บ่งชี้ถึงความเป็นไปได้ที่จะมองเห็นจันทร์เสี้ยวที่นั่นได้เลย ข้อตัดสินของเมืองนั้นในกรณีนี้จึงย่อมเหมือนกับข้อตัดสินของเมืองดามัสกัส</p>
-              <p>ดังนั้น เมื่อข่าวนั้นทราบถึงข้าพเจ้า ข้าพเจ้าจึงได้ระงับท่าทีไว้ เนื่องจากมีหลักฐานเป็นที่ประจักษ์ชัดแก่ข้าพเจ้าว่า วันแรกของเดือนคือวันจันทร์ โดยอาศัยหลักการนิติศาสตร์ว่าด้วย ‘อิสติศฮาบ’ (การคงสภาพเดิมของเดือนก่อนหน้าไว้) ผนวกกับข้อเท็จจริงที่ว่า ‘ไม่มีความเป็นไปได้ที่จะมองเห็นจันทร์เสี้ยวได้จริง’ ซึ่งหลักอิสติศฮาบเพียงอย่างเดียวนั้นก็ถือเป็นหลักฐานทางศาสนาที่สมบูรณ์อยู่แล้ว และมันยิ่งมีน้ำหนักมากขึ้นด้วยเหตุผลแห่งความเป็นไปไม่ได้ดังกล่าว</p>
-              <p>ข้าพเจ้าได้กล่าวเตือนผู้พิพากษา ซึ่งพยานเหล่านั้นได้ไปให้การต่อหน้าเขาว่า: ‘ท่านอย่าเพิ่งด่วนตัดสิน’ แต่ข้าพเจ้ากลับไม่ทันตั้งตัว เมื่อมีพยานสองคนจากฝั่งเขามาแจ้งว่า เขาได้อนุมัติรับรองการเห็นเดือนนั้นไปเรียบร้อยแล้ว และประกาศให้วันนี้ ซึ่งคือวันจันทร์ กลายเป็นวันที่ 9 ของเดือนซุลฮิจญะฮ์ (วันอะเราะฟะฮ์) โดยเขาได้ตัดสินเช่นนั้นทั้งๆ ที่ทราบดีถึงความเห็นต่าง (คิลาฟ) ในประเด็นนี้</p>
-              <p>ข้าพเจ้าจึงถามว่า: ‘อะไรคือความเห็นต่างนั้น?’ มีผู้ตอบว่า: ‘คือความเห็นต่างในเรื่องจุดการเกิดจันทร์เสี้ยว’ ข้าพเจ้าจึงมองว่าเหตุผลนี้ไม่อาจนำมาหักล้างสัจธรรมที่ประจักษ์ชัดแก่ข้าพเจ้าได้ และข้าพเจ้าได้ปฏิเสธที่จะบังคับใช้คำตัดสินของเขา ด้วยเหตุผลที่ข้าพเจ้าได้กล่าวไปแล้วข้างต้น</p>
-              <p>อีกประการหนึ่งคือ ข้าพเจ้าได้มีประสบการณ์กับเขา (ผู้พิพากษาผู้นี้) มากว่า 20 เทศกาล (อีด) โดยเริ่มต้นตั้งแต่อีดิลฟิฏรีย์ในปี ฮ.ศ. 739 ซึ่งในทุกๆ อีด เขามักจะรีบเร่งกระตือรือร้นที่จะรับรองการเห็นเดือนในลักษณะนี้เสมอ บางครั้งเราก็คล้อยตามเขา และบางครั้งเราก็ไม่รับฟัง และในปีที่ผ่านมาก็เกิดเหตุการณ์เช่นนี้ขึ้น กล่าวคือ วันอีดของชาวดามัสกัสตามคำตัดสินของเขาคือวันศุกร์ ซึ่งกลับไปตรงกับวันวุกูฟของบรรดาผู้ประกอบพิธีฮัจญ์</p>
-              <p>และในปีนี้ หลังจากที่เขาได้ตัดสินและเผยแพร่ประกาศออกไป เขาได้ส่งเอกสารรายงานที่มีการให้การพยานต่อหน้าเขามาให้ข้าพเจ้า ซึ่งในนั้นมีคำให้การของพยานสองคนที่อ้างว่าพวกเขาเห็นจันทร์เสี้ยวที่ตำบลอัลมุอัซเซาะมียะฮ์ ในเขตดารอยา และพยานทั้งสองก็ได้รับการรับรองความน่าเชื่อถือจากเขาแล้ว แต่ข้าพเจ้าก็มิได้ใส่ใจคล้อยตามคำกล่าวอ้างของพยานทั้งสองนั้นเลย</p>
-              <p>ท้ายที่สุด วันอีดของผู้คนตามคำตัดสินของเขาจึงกลายเป็นวันอังคาร ซึ่งข้าพเจ้าไม่สามารถทัดทานมวลชนส่วนใหญ่ได้ และข้าพเจ้าก็ไม่เห็นสมควรที่จะไปวิพากษ์โจมตีคำตัดสินของผู้พิพากษา หลังจากที่มันได้ถูกประกาศแพร่หลายออกไปแล้ว ทั้งนี้เพื่อป้องกันมิให้ผู้คนเกิดความคลางแคลงใจต่ออำนาจและคำตัดสินของระบบตุลาการ ดังนั้น ข้าพเจ้าจึงพอใจเพียงแค่การปกป้องตนเองมิให้เข้าไปร่วมตัดสินในสิ่งที่ข้าพเจ้าไม่เห็นด้วย ท่ามกลางสภาวะที่ไม่อาจผลักดันหรือเปลี่ยนแปลงคำตัดสินนั้นได้อีกต่อไป”</p>
-                          </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">كَانَ الدَّاعِي إلَى كِتَابَةِ هَذِهِ الْمَسْأَلَةِ أَنَّهُ فِي هَذِهِ السَّنَةِ وَهِيَ سَنَةُ ثَمَانٍ وَأَرْبَعِينَ وَسَبْعِمِائَةٍ يَرَى النَّاسُ هِلَالَ ذِي الْحِجَّةِ بِدِمَشْقَ لَيْلَةَ الْأَحَدِ فِي الْمَعْظَمِيَّةِ مِنْ عَمَلِ دَارِي الْمُجَاوِرَةِ لِدِمَشْقَ، وَرُبَّمَا قِيلَ إنَّهُ رُئِيَ فِي بَيْسَانَ، وَهِيَ وَإِنْ كَانَتْ أَكْثَرَ مِنْ مَسَافَةِ الْقَصْرِ لَكِنْ لَا يَقْتَضِي الْحِسَابُ إمْكَانَ الرُّؤْيَةِ فِيهَا بَلْ حُكْمُهَا فِي ذَلِكَ حُكْمُ دِمَشْقَ. فَلَمَّا بَلَغَنِي ذَلِكَ تَوَقَّفْت لِأَنَّهُ ثَبَتَ عِنْدِي أَنَّ أَوَّلَهُ يَوْمُ الِاثْنَيْنِ عَمَلًا بِالِاسْتِصْحَابِ الْمَضْمُومِ إلَى عَدَمِ إمْكَانِ الرُّؤْيَةِ وَالِاسْتِصْحَابُ وَحْدَهُ دَلِيلٌ شَرْعِيٌّ وَقَدْ قَوِيَ بِذَلِكَ. وَقُلْت لِلْقَاضِي الَّذِي وَقَعَتْ الشَّهَادَةُ عِنْدَهُ لَا تَسْتَعْجِلْ فَلَمْ أَشْعُرْ إلَّا وَقَدْ حَضَرَ شَاهِدَانِ مِنْ عِنْدِهِ أَنَّهُ أَثْبَتَهُ وَأَنَّ الْيَوْمَ وَهُوَ يَوْمُ الِاثْنَيْنِ التَّاسِعُ مِنْ ذِي الْحِجَّةِ وَأَنَّهُ حَكَمَ بِذَلِكَ مَعَ عِلْمِهِ بِالْخِلَافِ. قُلْت: مَا هُوَ الْخِلَافُ؟ قِيلَ: اخْتِلَافُ الْمَطَالِعِ فَلَمْ أَرَ هَذَا دَافِعًا لِمَا ثَبَتَ عِنْدِي وَامْتَنَعْت مِنْ تَنْفِيذِ حُكْمِهِ لِمَا قَدَّمْتُهُ وَلِأَنِّي قَدْ جَرَّبْتُهُ فِي عِشْرِينَ عِيدًا أَوَّلُهَا عِيدُ الْفِطْرِ سَنَةَ تِسْعٍ وَثَلَاثِينَ فِي كُلِّ عِيدٍ هَكَذَا أَتَحْرِصُ عَلَى إثْبَاتِهِ وَتَارَةً نَسْمَعُ مِنْهُ وَتَارَةً لَا نَسْمَعُ مِنْهُ وَفِي الْعَامِ الْمَاضِي هَكَذَا وَعِيدُ أَهْلِ دِمَشْقَ بِقَوْلِهِ الْجُمُعَةَ وَكَانَتْ الْوَقْفَةُ عِنْدَ الْحُجَّاجِ، وَأَرْسَلَ فِي هَذَا الْعَامِ بَعْدَ أَنْ حَكَمَ وَأَشَاعَ ذَلِكَ إلَى الْمَحْضَرِ الَّذِي شَهِدَ فِيهِ عِنْدَهُ وَفِيهِ شَهَادَةُ اثْنَيْنِ قَالَا إنَّهُمَا رَأَيَاهُ فِي الْمَعْظَمِيَّةِ مِنْ عَمَلِ دَارِي وَزُكِّيَا عِنْدَهُ فَمَا أَلْوَيْت عَلَى قَوْلِهِمَا، وَعِيدُ النَّاسِ بِقَوْلِهِ يَوْمَ الثُّلَاثَاءِ وَلَمْ يُمْكِنْ رَدُّ السَّوَادِ الْأَعْظَمِ وَلَا اسْتَحْسَنْت الطَّعْنَ فِي حُكْمِ حَاكِمٍ بَعْدَ اشْتِهَارِهِ لِئَلَّا يَتَطَرَّقَ النَّاسُ إلَى الرِّيبَةِ فِي حُكْمِ الْحَاكِمِ وَاكْتَفَيْت بِصِيَانَةِ نَفْسِي عَنْ الْحُكْمِ بِمَا لَا أَرَاهُ مَعَ عَدَمِ إمْكَانِ دَفْعِهِ.</div>
-                </details>
-      </blockquote>
-
+      <p class="ar-translation">&quot;และในที่นี้ยังมีอีกกรณีหนึ่ง นั่นคือ กรณีที่การคำนวณบ่งบอกว่า &quot;(วันนี้) ไม่สามารถมองเห็นจันทร์เสี้ยวได้&quot; โดยเป็นผลลัพธ์ที่ได้มาจากข้อมูลเบื้องต้นที่เด็ดขาดตายตัว เช่น ดวงจันทร์อยู่ใกล้กับดวงอาทิตย์มากจนเกินไป ในสถานการณ์เช่นนี้ การที่เราจะมองเห็นจันทร์เสี้ยวด้วยตาเปล่าในความเป็นจริงย่อมเป็นไปไม่ได้เลยเพราะมันฝืนธรรมชาติ ดังนั้น หากมีผู้แจ้งข่าวหนึ่งคนหรือมากกว่านั้นมาบอกว่าพวกเขามองเห็นจันทร์เสี้ยว ซึ่งคำบอกเล่านั้นมีโอกาสที่จะเป็นการโกหกหรือเกิดความผิดพลาด แนวทางที่สมควรปฏิบัติคือ การตีความคำบอกเล่านั้นว่าเป็นการโกหกหรือความผิดพลาด แม้ว่าจะมีพยานสองคนมายืนยัน คำให้การของพวกเขาก็จะไม่ถูกยอมรับ ทั้งนี้เพราะ &quot;การคำนวณ&quot; เป็นสิ่งที่เด็ดขาดตายตัว ในขณะที่ &quot;คำให้การ&quot; และ &quot;การแจ้งข่าว&quot; เป็นเพียงความน่าจะเป็น และสิ่งที่เป็นเพียงความน่าจะเป็น ย่อมไม่สามารถนำมาหักล้างสิ่งที่เด็ดขาดตายตัวได้ นับประสาอะไรกับการที่จะให้น้ำหนักมันเหนือกว่าสิ่งที้เด็ดขาด&quot;</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">وههنا صورة أخرى وهو أن يدل الحساب على عدم إمكان رؤيته ويدرك ذلك بمقدمات قطعية ويكون في غاية القرب من الشمس ففي هذه الحالة لا يمكن فرض رؤيتنا له حسا لأنه يستحيل فلو أخبرنا به مخبر واحد أو أكثر ممن يحتمل خبره الكذب أو الغلط فالذي يتجه قبول هذا الخبر وحمله على الكذب أو الغلط ولو شهد به شاهدان لم تقبل شهادتهما لأن الحساب قطعي والشهادة والخبر ظنيان والظن لا يعارض القطع فضلا عن أن يقدم عليه</blockquote>
+      </details>
+      <p class="ar-translation">&quot;เงื่อนไขสำคัญของ &quot;พยานหลักฐาน&quot; ก็คือ สิ่งที่ถูกนำมาเป็นพยานนั้นจะต้องเป็นสิ่งที่เป็นไปได้ ทั้งในทางกายภาพ สติปัญญา และบทบัญญัติศาสนา ดังนั้น หากสมมติว่าการคำนวณชี้ชัดอย่างเด็ดขาดแล้วว่า &quot;เป็นไปไม่ได้ที่จะมองเห็น&quot; การยอมรับพยานหลักฐานนั้นในทางศาสนาก็ย่อมเป็นไปไม่ได้เช่นกัน เพราะสิ่งที่ถูกนำมาอ้างนั้นเป็นเรื่องที่เป็นไปไม่ได้ และบทบัญญัติศาสนาย่อมไม่นำเสนอสิ่งที่เป็นไปไม่ได้ นอกจากนี้ เราไม่มีตัวบทใดในศาสนาที่ระบุว่า &quot;พยานสองคนใดๆ ก็ตามจะต้องถูกยอมรับเสมอ ไม่ว่าสิ่งที่พวกเขายืนยันจะถูกต้องหรือเป็นเท็จก็ตาม&quot; และการกำหนดให้การถือศีลอดหรือการกำหนดเข้าเดือนใหม่เป็นข้อบังคับนั้น ก็ไม่ได้ขึ้นอยู่กับเพียงแค่การมีคนมาแจ้งข่าวหรือมาเป็นพยานเท่านั้น จนถึงขั้นที่เราจะต้องหลับหูหลับตากล่าวว่า &quot;หลักการคือคำสั่งของศาสนาที่ว่า &#x27;จงถือศีลอดหากมีคนมาบอกพวกท่าน&#x27;&quot; เพราะหากมีคำสั่งระบุไว้เช่นนั้นจริง เราก็พร้อมจะน้อมรับด้วยความเต็มใจ แต่ในบทบัญญัติศาสนาไม่เคยมีคำสั่งลักษณะนั้นเลย ตรงกันข้าม เรามีหน้าที่ต้อง &quot;ตรวจสอบให้ชัดเจน&quot; ก่อนที่จะยอมรับข่าวสาร เพื่อให้รู้ถึงความจริงเสียก่อน เพราะเป็นที่แน่ชัดว่า บางคนที่มาเป็นพยานว่าเห็นจันทร์เสี้ยว:</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">والبينة شرطها أن يكون ما شهدت به ممكنا حسا وعقلا وشرعا فإذا فرض دلالة الحساب قطعا على عدم الإمكان استحال القبول شرعا لاستحالة المشهود به والشرع لا يأتي بالمستحيلات ولم يأت لنا نص من الشرع أن كل شاهدين تقبل شهادتهما سواء كان المشهود به صحيحا أو باطلا ولا يترتب وجوب الصوم وأحكام الشهر على مجرد الخبر أو الشهادة حتى إنا نقول العمدة قول الشارع صوموا إذا أخبركم مخبر فإنه لو ورد ذلك قبلناه على الرأس والعين لكن ذلك لم يأت قط في الشرع بل وجب علينا التبين في قبول الخبر حتى نعلم حقيقته أولا ولا شك أن بعض من يشهد بالهلال قد لا يراه ويشتبه عليه أو يرى ما يظنه هلالا وليس بهلال أو تريه عينه ما لم ير أو يؤدي الشهادة بعد أيام ويحصل الغلط في الليلة التي رأى فيها أو يكون جهله عظيما يحمله على أن يعتقد في حمله الناس على الصيام أجرا أو يكون ممن يقصد إثبات عدالته فيتخذ ذلك وسيلة إلى أن يزكى ويصير مقبولا عند الحكام وكل هذه الأنواع قد رأيناها وسمعناها</blockquote>
+      </details>
+      <p>อาจจะไม่ได้เห็นจริงๆ แต่อาจเกิดความสับสน</p>
+      <p>หรือเห็นบางสิ่งแล้วเข้าใจผิดว่าเป็นจันทร์เสี้ยว</p>
+      <p>หรือตาฝาดเห็นในสิ่งที่ไม่มีอยู่จริง</p>
+      <p>หรือมาให้การหลังจากผ่านไปหลายวันจนจำคืนที่เห็นผิดพลาด</p>
+      <p>หรือบางคนอาจมีความเขลาอย่างหนักจนคิดเอาเองว่า การทำให้ผู้คนได้ถือศีลอดนั้นจะได้บุญ</p>
+      <p>หรือบางคนก็แค่อยากจะสร้างผลงานพิสูจน์ความน่าเชื่อถือของตนเอง เพื่อใช้เป็นเครื่องมือให้ได้รับการยอมรับจากศาล</p>
+      <p>ซึ่งตัวอย่างคนประเภทต่างๆ เหล่านี้ เราล้วนเคยพบเห็นและได้ยินมาแล้วทั้งสิ้น&quot;</p>
+      <p class="ar-translation">&quot;ดังนั้น สำหรับผู้พิพากษา (หรือผู้มีอำนาจตัดสิน) หากเคยประสบกับเหตุการณ์เช่นนี้ และได้รับรู้ด้วยตนเองหรือจากผู้เชี่ยวชาญที่เชื่อถือได้ว่า &quot;การคำนวณชี้ชัดว่าไม่มีทางมองเห็นได้&quot; เขาต้องไม่ยอมรับคำให้การนั้น ไม่กำหนดการเข้าเดือนใหม่ด้วยคำให้การนั้น และไม่ใช้มันในการตัดสิน แต่เขาจะต้องยึดหลัก &quot;การรักษาสถานะเดิม&quot; นั่นคือให้เดือนเดิมดำเนินต่อไปให้ครบจำนวน เพราะนี่คือหลักฐานทางศาสนาที่ได้รับการยืนยันแล้ว จนกว่าจะมีความจริงอื่นมาหักล้าง</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">فيجب على الحاكم إذا جرب مثل ذلك وعرف من نفسه أو بخبر من يثق به أن دلالة الحساب على عدم إمكان الرؤية أن لا يقبل هذه الشهادة ولا يثبت بها ولا يحكم بها ويستصحب الأصل في بقاء الشهر فإنه دليل شرعي محقق حتى يتحقق خلافه ولا نقول الشرع ألغى قول الحساب مطلقا والفقهاء قالوا لا يعتمد فإن ذلك إنما قالوه في عكس هذا وهذه المسألة المتقدمة التي حكينا فيها الخلاف أما هذه المسألة فلا ولم أجد في هذه نقلا ولا وجه فيها للاحتمال غير ما ذكرته</blockquote>
+      </details>
+      <p>เราไม่ได้กล่าวว่า บทบัญญัติศาสนาได้ยกเลิกหรือเพิกเฉยต่อ &quot;การคำนวณ&quot; อย่างสิ้นเชิง และการที่บรรดานักนิติศาสตร์เคยกล่าวว่า &quot;ห้ามนำการคำนวณมาเป็นเกณฑ์&quot; นั้น จริงๆ แล้วพวกเขากล่าวถึงในกรณีที่ตรงกันข้ามกับกรณีนี้ (นั่นคือกรณีที่เราถกเถียงกันไปแล้วก่อนหน้านี้ ที่การคำนวณบอกว่า &#x27;เห็นได้&#x27; แต่ไม่มีใครเห็น) ส่วนในกรณีนี้ (การคำนวณบอกว่า &#x27;ไม่มีทางเห็นได้&#x27;) บริบทมันต่างกันอย่างสิ้นเชิง ซึ่งข้าพเจ้าไม่พบการอ้างอิงจากปราชญ์ท่านอื่นในประเด็นนี้ และไม่มีช่องว่างให้คาดเดาเป็นอื่นได้นอกจากสิ่งที่ข้าพเจ้าได้อธิบายมานี้</p>
+      <p class="ar-translation">&quot;ข้าพเจ้าได้เห็นท่านอิมาม อัลฮะรอมัยน์ระบุไว้ในตำรา &quot;อันนิฮายะฮ์&quot; เมื่อท่านกล่าวถึงกรณีที่: หากมีการมองเห็นจันทร์เสี้ยวในพื้นที่หนึ่ง แต่ไม่เห็นในอีกพื้นที่หนึ่ง บรรดานักปราชญ์ (ในมัซฮับอัชชาฟิอียะฮ์) มีสองทรรศนะว่า เราจะใช้เกณฑ์ระยะทางแบบใด ระหว่าง &quot;ระยะทางที่อนุญาตให้ย่อละหมาดได้&quot; หรือพิจารณาจาก &quot;พิกัดการขึ้นของดวงจันทร์&quot; ?</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">ورأيت إمام الحرمين في النهاية لما تكلم فيها إذا رئي الهلال في موضع ولم ير في غيره وللأصحاب فيه وجهان هل تعتبر مسافة القصر أو المطالع جزم بمسافة القصر وذكر المطالع على وجه الاحتمال له لأنه لم ينقله ثم رده بأنه مبني على الأرصاد والتمودرات وفرض ذلك في دون مسافة القصر بانخفاض وارتفاع وهذا الفرض الذي قد فرضه نادر فإن أمكن ذلك وحكم حاسب بعدم الإمكان في هذا الموضع احتمل أن يقال بعدم تعلق الحكم واحتمل أن يقال إنما دون مسافة القصر كالبلد الواحد فيتعلق به الحكم ومسألتنا هذه في قطر عظيم وأقاليم دل الحساب على عدم إمكان الرؤية فيها فشهد اثنان أو ثلاثة على رؤيته مع احتمال قولهما بجميع ما قدمناه فلا أرى قبول هذه البينة أصلا ولا يجوز الحكم بها</blockquote>
+      </details>
+      <p>ท่านได้ฟันธงที่เกณฑ์ &#x27;ระยะทางย่อละหมาด&#x27; และได้กล่าวถึงเรื่อง &#x27;พิกัดดวงจันทร์&#x27; ไว้ในลักษณะที่แบ่งรับแบ่งสู้ เนื่องจากท่านไม่ได้มีสายรายงานอ้างอิงในเรื่องนี้ จากนั้นท่านก็ตีตกประเด็นนี้ไปโดยให้เหตุผลว่า มันตั้งอยู่บนพื้นฐานของการสังเกตการณ์ทางดาราศาสตร์และการคำนวณ</p>
+      <p>และท่านได้ตั้งข้อสมมติฐานถึงกรณีที่อยู่ภายในเขตระยะทางย่อละหมาดเดียวกัน แต่พื้นที่นั้นมีความสูงต่ำของภูมิประเทศแตกต่างกัน ซึ่งข้อสมมติฐานที่ท่านยกมานี้เป็นเรื่องที่เกิดขึ้นได้ยาก แต่หากมันเป็นไปได้ และผู้คำนวณทางดาราศาสตร์ตัดสินว่า &quot;ไม่สามารถมองเห็นได้ในพื้นที่ (ที่ต่ำ) นี้&quot; ก็อาจจะตีความได้ว่า ข้อชี้ขาด (การให้เข้าเดือนใหม่) ไม่ครอบคลุมถึงพื้นที่นั้น หรืออาจจะตีความได้ว่า พื้นที่ใดก็ตามที่อยู่ภายในเขตระยะทางย่อละหมาดย่อมถือเป็นเสมือนเมืองเดียวกัน ดังนั้นข้อชี้ขาดจึงครอบคลุมถึงทั้งหมด&quot;</p>
+      <p>(บทสรุปสำหรับประเด็นของเรา) ปัญหาของเราในที่นี้ เป็นเรื่องที่เกิดขึ้นในภูมิภาคและดินแดนอันกว้างใหญ่ไพศาล ซึ่งการคำนวณได้บ่งชี้ชัดเจนแล้วว่า ไม่มีความเป็นไปได้ที่จะมองเห็นจันทร์เสี้ยวในพื้นที่เหล่านั้นเลย แต่กลับมีพยานสองหรือสามคนมายืนยันว่ามองเห็น ซึ่งคำกล่าวของพวกเขามีความเป็นไปได้ที่จะเกิดข้อผิดพลาดตามปัจจัยทั้งหมดที่เราได้อธิบายไปแล้ว ดังนั้น ข้าพเจ้าจึงมองว่า ไม่อาจยอมรับพยานหลักฐานนี้ได้เลยโดยสิ้นเชิง และไม่อนุญาตให้ใช้มันในการตัดสินข้อชี้ขาดใดๆ ทั้งสิ้น&quot;</p>
+      <p>ท่านอธิบายต่อว่า:</p>
+      <p class="ar-translation">&quot;พึงทราบเถิดว่า คำว่า &quot;ความเด็ดขาดตายตัว&quot;  ที่เราหมายถึงในที่นี้ ไม่ใช่ความเด็ดขาดที่ได้มาจากหลักฐานเชิงตรรกะหรือสติปัญญาล้วนๆ เพราะบริบทของเราในเรื่องนี้ไม่ได้เป็นเช่นนั้น แต่มันตั้งอยู่บนพื้นฐานของการเฝ้าสังเกตการณ์ การทดลองที่สั่งสมมายาวนาน การติดตามวิถีโคจรของดวงอาทิตย์และดวงจันทร์ และการประเมินปริมาณแสงที่จะทำให้มนุษย์สามารถมองเห็นจันทร์เสี้ยวได้ ซึ่งแน่นอนว่ามนุษย์เรามีความคมชัดของสายตาที่แตกต่างกัน</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">واعلم أنه ليس مرادنا بالقطع ههنا الذي يحصل بالبرهان الذي مقدماته كلها عقلية فإن الحال هنا ليس كذلك وإنما هو مبني على أرصاد وتجارب طويلة وتسيير منازل الشمس والقمر ومعرفة حصول الضوء الذي فيه بحيث يتمكن الناس من رؤيته والناس يختلفون في حدة البصر فتارة يحصل القطع إما بإمكان الرؤية وإما بعدمه وتارة لا يقطع بل يتردد والقطع بأحد الطرفين مستنده العادة كما نقطع في بعض الأجرام البعيدة عنا بأنا لا نراها ولا يمكنا رؤيتها في العادة وإن كان في الإمكان العقلي ذلك ولكن يكون ذلك خارقا للعادة وقد يقع معجزة لنبي أو كرامة لولي أما غيرهما فلا فلو أخبرنا مخبر أنه رأى شخصا بعيدا عنه في مسافة يوم مثلا وسمعه يقر بحق وشهد عليه به لم يقبل خبره ولا شهادته بذلك ولا نرتب عليها حكما وإن كان ذلك ممكنا في العقل لكنه مستحيل في العادة</blockquote>
+      </details>
+      <p>บางครั้ง ความเด็ดขาดตายตัวอาจเกิดขึ้นได้ทั้งในกรณีที่ &quot;เป็นไปได้ที่จะมองเห็น&quot; และ &quot;เป็นไปไม่ได้ที่จะมองเห็น&quot; และบางครั้งมันก็ไม่เด็ดขาดแต่มีความลังเลอยู่ ซึ่งการจะฟันธงไปในทางใดทางหนึ่งนั้น ต้องอิงกับ &quot;กฎธรรมชาติ/ความคุ้นเคยทางกายภาพ&quot; เปรียบเหมือนการที่เราฟันธงว่า ดวงดาวบางดวงที่อยู่ไกลลิบตา เราไม่มีทางมองเห็นมันได้ตามวิสัยปกติธรรมชาติ แม้ว่าในเชิง &quot;ตรรกะและสติปัญญา&quot; มันอาจจะเกิดขึ้นได้ก็ตาม แต่นั่นจะต้องเป็นการฉีกกฎธรรมชาติ ซึ่งการฝืนกฎธรรมชาติเช่นนั้น อาจเกิดขึ้นได้ในฐานะ &quot;มุอ์ญิซะฮ์&quot; สำหรับบรรดานบี หรือ &quot;กะรอมะฮ์&quot; สำหรับบรรดาวะลีย์ (ผู้ใกล้ชิดอัลลอฮ์) เท่านั้น ส่วนคนทั่วไปนั้นย่อมเป็นไปไม่ได้</p>
+      <p>ดังนั้น หากมีคนมาบอกเราว่า เขามองเห็นและได้ยินเสียงของคนที่อยู่ห่างออกไปเป็นระยะทางเดินเท้าหนึ่งวัน คำบอกเล่าและคำให้การของเขาย่อมไม่ถูกยอมรับ และเราจะไม่นำมันมาใช้ตัดสินข้อกฎหมายใดๆ เพราะแม้มันจะ &quot;เป็นไปได้ในทางตรรกะ&quot; แต่มัน &quot;เป็นไปไม่ได้ในทางธรรมชาติ&quot;</p>
+      <p class="ar-translation">&quot;ในทำนองเดียวกัน หากมีพยานสองคนหรือมากกว่า ซึ่งเป็นบุคคลที่มีโอกาสโกหกหรือผิดพลาดได้ มาให้การยืนยันว่าเห็นจันทร์เสี้ยว ในขณะที่การคำนวณวิถีโคจรของดวงจันทร์ชี้ชัดว่า &quot;ไม่มีความเป็นไปได้ที่จะมองเห็น&quot; ในจุดที่พวกเขากล่าวอ้าง คำให้การของพวกเขาย่อมต้องถูกตีตกไป! เหตุผลก็คือ &quot;ความเป็นไปได้&quot; คือเงื่อนไขแรกของการเป็นพยานหลักฐาน และการให้น้ำหนักว่าพยานอาจโกหกหรือผิดพลาด ย่อมสมเหตุสมผลมากกว่าการเชื่อว่ากฎธรรมชาติถูกทำลายลง ดังนั้น สิ่งที่เป็นไปไม่ได้ในทางธรรมชาติ ก็มีค่าเท่ากับสิ่งที่เป็นไปไม่ได้ในทางตรรกะ ซึ่งไม่อาจนำมายอมรับเป็นคำรับสารภาพหรือคำให้การได้ ด้วยเหตุนี้ จึงเป็นหน้าที่บังคับสำหรับผู้พิพากษา (กอฎีย์) ที่จะต้องมีวิจารณญาณที่ตื่นตัวในเรื่องนี้ และต้องไม่รีบเร่งยอมรับคำให้การของพยานสองคน จนกว่าจะได้ตรวจสอบรายละเอียดสิ่งที่พวกเขาให้การเสียก่อน ว่ามันมีความเป็นไปได้หรือไม่? อยู่ในระดับความเป็นไปได้มากน้อยเพียงใด? สายตาของพวกเขามีศักยภาพพอหรือไม่? พวกเขาเป็นคนที่มักจะสับสนตาฝาดหรือไม่? หากพิสูจน์ได้ว่ามันเป็นไปได้จริง และพยานทั้งสองสายตาดี มีไหวพริบ ไม่สับสน ไม่มีวาระซ่อนเร้น และเป็นผู้มีความยุติธรรม (ผู้พิพากษาจึงจะนำมาพิจารณา) แต่ถ้าไม่ใช่ตามนี้ ก็ต้องระงับไว้หรือตีตกไป เพราะหากผู้พิพากษามัวแต่เชื่อทุกสิ่งที่พยานสองคนกล่าวอ้าง ใครๆ ก็คงสามารถเข้าใจแก่นแท้ของการพิพากษาได้ (ไม่ต้องมีผู้พิพากษาก็ได้) แต่นี่คือหน้าที่ที่ผู้พิพากษาต้องใช้ดุลยพินิจ ดังนั้น เมื่อผู้พิพากษากล่าวว่า &quot;เรื่องนี้เป็นที่ยุติสำหรับฉันแล้ว&quot; เราย่อมรู้ได้ว่าท่านได้ตรวจสอบเงื่อนไขทั้งหมดอย่างครบถ้วนแล้ว</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">فكذلك إذا شهد عندنا اثنان أو أكثر ممن يجوز كذبهما أو غلطهما برؤية الهلال وقد دل حساب تسيير منازل القمر على عدم إمكان رؤيته في ذلك الذي قالا إنهما رأياه فيه ترد شهادتهما لأن الإمكان شرط في المشهور به وتجويز الكذب والغلط على الشاهدين المذكورين أولى من تجويز انخرام العادة فالمستحيل العادي والمستحيل العقلي لا يقبل الإقرار به ولا الشهادة فكذلك المستحيل العادي وحق على القاضي التيقظ لذلك وأن لا يتسرع إلى قبول الشاهدين حتى يفحص عن حال ما شهدا به من الإمكان وعدمه ومراتب الإمكان فيه وهل بصرهما يقتضي ذلك أو لا وهل هما ممن يشتبه عليهما أو لا فإذا تبين له الإمكان وإنهما ممن يجيد بصرهما رؤيته ولا يشتبه عليهما لفطنتهما ويقظتهما ولا غرض لهما وهما عدلان ذلك بسبب أو لا فيتوقف أو يرد ولو كان كل ما يشهد به شاهدان يثبته القاضي لكان كل أحد يدرك حقيقة القضاء لكن لا بد من نظر لأجله جعل القاضي فإذا قال القاضي ثبت عندي علمنا أنه استوفى هذه الأحوال كلها وتكاملت شروطها عنده فلذلك ينبغي للقاضي التثبت وعدم التسرع مظنة الغلط ولهذا إن الشاهد المتسرع إلى أداء الشهادة ترد شهادته ومن عرف منه التسرع في ذلك لم تقبل شهادته فيه ومراتب ما يقوله الحساب في ذلك [فتاوى السبكي (1/211)] متفاوتة منها ما يقطعون بعدم إمكان الرؤية فيه فهذا لا ريب عندنا في رد الشهادة به إذا عرفه القاضي بنفسه أو اعتمد فيه على قول من يثق به ويظهر أن يكتفي فيه بإخبار واحد موثوق به ويعلمه أما اثنان فلا شك فيهما ومنها ما لا يقطعون فيه بعدم الإمكان ولكن يستعدون فهذا محل النظر في حال الشهود وحدة بصرهم ويرى أنهم من احتمال الغلط والكذب يتفاوت ذلك تفاوتا كبيرا ومراتب كثيرة فلهذا يجب على القاضي الاجتهاد وسع الطاقة أما إذا كان الإمكان بحيث يراه أكثر الناس فلا يبقى إلا النظر في حال الشاهدين فلا يعتقد القاضي أنه بمجرد شهادة الشاهدين وتزكيتهما يثبت الهلال ولا يعتقد أن الشرع أبطل العمل بما يقوله الحساب مطلقا فلم يأت ذلك وكيف والحساب معمول به في الفرائض وغيرها وقد ذكر في الحديث الكتابة والحساب وليست الكتابة منهيا عنها فكذلك الحساب وإنما المراد ضبط الحكم الشرعي في الشهر بطريقين ظاهرين مكشوفين رؤية الهلال أو تمام ثلاثين وأن الشهر تارة تسع وعشرون وتارة ثلاثون وليست مدة زمانية مضبوطة بحساب كما يقوله أهل الهيئة ولا يعتقد الفقيه أن هذه المسألة هي التي قال الفقهاء في كتاب الصيام إن الصحيح عدم العمل بالحساب لأن ذلك فيما إذا دل الحساب على إنكار الرؤية وهذا عكسه .</blockquote>
+      </details>
+      <p>การที่นักคำนวณดาราศาสตร์จะฟันธงในเรื่องนี้ มีอยู่หลายระดับ:</p>
+      <p>ระดับที่ฟันธงเด็ดขาดว่า &quot;ไม่มีทางมองเห็นได้&quot;: ในกรณีนี้ สำหรับเราแล้ว ไม่มีข้อกังขาเลยที่จะต้องตีตกคำให้การ (ของพยานที่อ้างว่าเห็น) หากผู้พิพากษารับทราบข้อมูลนี้ด้วยตนเอง หรืออาศัยคำยืนยันจากผู้เชี่ยวชาญที่เชื่อถือได้ (แม้เพียงคนเดียวก็เพียงพอแล้ว)</p>
+      <p>ระดับที่ไม่ได้ฟันธงเด็ดขาด แต่ประเมินว่าเป็นไปได้ยากมาก: กรณีนี้ผู้พิพากษาต้องพิจารณาอย่างละเอียดถึงสภาพของพยาน ความคมชัดของสายตา และประเมินโอกาสที่จะเกิดข้อผิดพลาดหรือการโกหก ซึ่งต้องใช้ความพยายามอย่างหนักในการวินิจฉัย</p>
+      <p>ระดับที่เป็นไปได้และคนส่วนใหญ่สามารถมองเห็นได้: กรณีนี้เหลือเพียงแค่การตรวจสอบความน่าเชื่อถือของพยานตามปกติ</p>
+      <p>ผู้พิพากษาต้องไม่คิดเอาเองว่า เพียงแค่มีพยานสองคนและมีผู้มารับรองความประพฤติพยาน การเข้าเดือนใหม่ก็จะถูกพิสูจน์ทันที และต้องไม่เข้าใจผิดว่า บทบัญญัติศาสนาได้ยกเลิกการใช้การคำนวณทางดาราศาสตร์ไปโดยสิ้นเชิง</p>
+      <p>ศาสนาไม่ได้กล่าวเช่นนั้น จะเป็นไปได้อย่างไรในเมื่อเรายังใช้การคำนวณในเรื่องของมรดก (ฟะรออิฎ) และเรื่องอื่นๆ? ในหะดีษก็มีการกล่าวถึง &quot;การขีดเขียน&quot; และ &quot;การคำนวณ&quot; ซึ่งการขีดเขียนไม่ได้ถูกห้าม การคำนวณก็ย่อมไม่ถูกห้ามเช่นกัน แต่เป้าหมายของศาสนาเพียงแค่ต้องการตีกรอบข้อชี้ขาดเรื่องการเข้าเดือนใหม่ ให้อยู่ในวิธีการที่ชัดเจนและเข้าถึงง่ายสำหรับคนทั่วไป นั่นคือ &quot;การมองเห็นด้วยตาเปล่า&quot; หรือ &quot;การนับให้ครบ 30 วัน&quot; เท่านั้นเอง และนักนิติศาสตร์ (ฟะกีฮ์) จะต้องไม่สับสนว่า ปัญหาที่เรากำลังพูดถึงอยู่นี้ เป็นเรื่องเดียวกับที่ปราชญ์ฟิกฮ์ระบุในหมวดการถือศีลอดว่า &quot;ทรรศนะที่ถูกต้องคือ ไม่ให้ยึดการคำนวณดาราศาสตร์&quot; เพราะนั่นคือกรณีที่ดาราศาสตร์บอกว่า &quot;เห็นได้&quot; แต่ตาเปล่ากลับมองไม่เห็น (ซึ่งฟิกฮ์ให้ยึดตาเปล่า) แต่กรณีของเราในที่นี้ มันคือสถานการณ์ที่ตรงกันข้ามอย่างสิ้นเชิง! (นั่นคือ ดาราศาสตร์บอกว่า &quot;ไม่มีทางเห็นได้&quot; แต่ตาเปล่าดันอ้างว่าเห็น)&quot;</p>
+      <p class="ar-translation">&quot;ไม่ต้องสงสัยเลยว่า ปราชญ์ท่านใดที่เคยอนุโลมให้ดาราศาสตร์มีน้ำหนักในกรณีแรก ย่อมต้องห้ามการใช้คำให้การพยานในกรณีนี้อย่างเด็ดขาด (เพราะดาราศาสตร์มีน้ำหนักกว่า) ส่วนผู้ที่เคยห้ามใช้ดาราศาสตร์ในกรณีแรก ก็ไม่ได้กล่าวห้ามอะไรในกรณีนี้ และจุดที่วิจารณญาณของเราพิจารณาเห็นชอบ ก็คือ &quot;การสั่งห้าม&quot; (ไม่อนุญาตให้รับพยานที่ขัดกับดาราศาสตร์อย่างสิ้นเชิง) ซึ่งการสั่งห้ามในที่นี้เป็นสิ่งที่เด็ดขาดตายตัว แม้เราจะไม่พบการถ่ายทอดทรรศนะนี้ (จากปราชญ์รุ่นก่อนๆ) โดยตรง แต่เราได้ใช้กระบวนการวินิจฉัยทางฟิกฮ์ลงไปในเรื่องนี้ และสำหรับเราแล้ว ประเด็นนี้จัดอยู่ในหมวดหมู่ของ &quot;ความเด็ดขาดตายตัว&quot; ซึ่งได้รับการยกระดับก้าวข้ามขอบเขตของเรื่องที่เป็นเพียงความคาดเดาหรือความน่าจะเป็นไปเรียบร้อยแล้ว</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">ولا شك أن من قال هناك بجواز الصوم أو وجوبه يقول هنا بالمنع بطريق الأولى ومن قال هناك بالمنع فههنا لم يقل شيئا والذي اقتضاه نظرنا المنع فالمنع هنا مقطوع به .ولم نجد هذه المسألة منقولة لكنا تفقهنا فيها وهي عندنا من محال القطع مترقية عن مرتبة الظنون</blockquote>
+      </details>
+      <p>ในจุดนี้เองท่านมุฮัมมัด บะคีต อัลมุฏีอีย์ยังได้อธิบายประเด็นนี้ไว้ในตำราอิร์ชาด อะฮ์ลิลมิลละฮ์ไว้เช่นกันว่า:</p>
+      <p class="ar-translation">“ในเมื่อคำให้การพยาน (ชะฮาดะฮ์) ยังคงถูกปัดตกในกรณีที่การอ้างสิทธิแต่เพียงฝ่ายเดียว (หรือกลุ่มเล็กๆ) เป็นเหตุให้ต้องสันนิษฐานว่าจะเกิดความผิดพลาดหรือการมุสา ซึ่งนั่นคือกรณีที่คนกลุ่มเล็กๆ มองเห็นจันทร์เสี้ยว แต่คนกลุ่มใหญ่ที่มีจำนวนมากกว่าหลายเท่าตัวกลับมองไม่เห็น และกฎเกณฑ์นี้ถูกระบุไว้อย่างชัดเจนในมัสฮับของปวงปราชญ์หะนะฟีย์และมาลิกีย์ ดังที่จะกล่าวต่อไป แล้วเหตุไฉนคำให้การพยานจะไม่ถูกปัดตกเล่า ในกรณีที่มีหลักฐานอันเด็ดขาด หรือใกล้เคียงกับความเด็ดขาด ยืนยันถึงความเป็นไปไม่ได้ที่จะมองเห็นจันทร์เสี้ยวนั้น</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">إذا رُدَّت الشهادة عندما يكون التفرد مظنة الغلط أو الكذب، وذلك عندما يرى الهلالَ جمعٌ قليل دون أضعافهم -وهذا منصوصٌ عليه في مذهب السادة الحنفية والمالكية كما سيأتي- فكيف لا ترد إذا وجد دليل قاطع أو قريب من القاطع على عدم إمكان الرؤية! لا شك أن عدم قبول الشهادة هنا أولى؛ لأنه إذا رأى القليل ولم يره أضعافهم فعدم رؤية أضعافهم يوجب غلبةَ الظن بغلط القليل أو كذبه في دعواه الرؤية، وأما هنا فالدليل قاطعٌ أو قريب منه على ذلك، كيف وقد جعلوا من شروط إفادة الخبر المتواتر العلم للسامع أن لا يكون السامع معتقدًا لنقيض ما يقتضيه الخبر إما لشبهةٍ أو تقليدٍ أو اعتقاد، فإذا كان هذا هو حال الخبر المتواتر فكيف بغيره؟ وحينئذٍ إذا قبل القاضي شهادة مَن شهد عنده برؤية الهلال مع دلالة الحساب القطعي أو القريب منه على عدم إمكان الرؤية كان ذلك على خلاف ما يعتقده، ولذلك قال السبكي: إنه أخرق، وليس هذا من قبيل معارضة الحساب للشهادة حتى يقال: يُعمَل بالشهادة دون الحساب، بل إن ذلك من قبيل وجود دليلٍ عند القاضي المشهود عنده اعتقد بموجبه خطأ الشاهد أو كذبه؛ فإن حساب الحاسب العدل الراسخ في الفن إذا دلَّ على عدم إمكان الرؤية أوجب غلبة الظن بغلط الشاهد أو كذبِهِ بلا شبهة، فكيف يستطيع القاضي أن يقبل مع هذا شهادة هذا الشاهد؟</blockquote>
+      </details>
+      <p>ไม่เป็นที่สงสัยเลยว่า การปฏิเสธพยานในกรณีหลังนี้ย่อมสมเหตุสมผลยิ่งกว่า เพราะหากคนกลุ่มเล็กๆ มองเห็น แต่คนส่วนใหญ่ที่มีจำนวนมากกว่าหลายเท่ากลับมองไม่เห็น การที่คนกลุ่มใหญ่ไม่เห็นย่อมทำให้น้ำหนักของความน่าจะเป็น ชี้ไปที่ความผิดพลาดหรือการโกหกของคนกลุ่มเล็กในการกล่าวอ้าง แต่ทว่าในกรณีนี้ (การคำนวณทางดาราศาสตร์) หลักฐานนั้นมีความเด็ดขาดหรือเกือบจะเด็ดขาดในเรื่องดังกล่าว</p>
+      <p>จะเป็นไปได้อย่างไร ในเมื่อบรรดานักปราชญ์ได้วางเงื่อนไขของการรายงานที่แพร่หลายที่จะให้ความรู้แจ้งแก่ผู้ฟังไว้ว่า ผู้ฟังจะต้องไม่เชื่อมั่นในสิ่งที่ขัดแย้งกับเนื้อหาของรายงานนั้น ไม่ว่าจะด้วยความคลางแคลงใจ การปฏิบัติตามผู้อื่น หรือหลักศรัทธาก็ตาม ดังนั้น หากนี่คือบรรทัดฐานสำหรับหะดีษระดับมุตะวาติร แล้วจะนับประสาอะไรกับรายงานระดับอื่นเล่า?</p>
+      <p>และในยามนั้น หากผู้พิพากษายอมรับคำให้การของผู้ที่มาเป็นพยานว่าเห็นจันทร์เสี้ยว ทั้งๆ ที่การคำนวณอันเด็ดขาดหรือเกือบเด็ดขาดได้บ่งชี้ว่าไม่มีความเป็นไปได้ที่จะเห็น การกระทำของเขาย่อมขัดแย้งกับสิ่งที่เขาเชื่อมั่น ด้วยเหตุนี้เอง อิหม่ามอัซซุบกีย์จึงวิพากษ์ไว้ว่า: “เขา (ผู้พิพากษาผู้นั้น) เป็นคนโง่เขลา” และกรณีนี้ ไม่ใช่ลักษณะของการที่ “การคำนวณ” ขัดแย้งกับ “คำพยาน” จนถึงขั้นที่จะอนุมานได้ว่า: “ให้ยึดถือคำให้การของพยานและละทิ้งการคำนวณ” ทว่ากรณีนี้จัดอยู่ในหมวดหมู่ของการที่ผู้พิพากษามีหลักฐานอยู่ในมือ ที่ทำให้เขามั่นใจว่าพยานผู้นั้นผิดพลาดหรือมุสา เพราะแท้จริงแล้ว การคำนวณของนักดาราศาสตร์ที่เที่ยงธรรมและเชี่ยวชาญอย่างลึกซึ้ง หากได้ชี้ชัดว่าไม่มีความเป็นไปได้ในการเห็น ย่อมทำให้น้ำหนักของความน่าจะเป็นชี้ไปที่ความผิดพลาดหรือการโกหกของพยานอย่างปราศจากข้อกังขา แล้วเช่นนี้ ผู้พิพากษาจะสามารถยอมรับคำพยานของเขาได้อย่างไรเล่า?”</p>
+      <p>ด้วยเหตุนี้ อัลมุฏีอีย์จึงสรุปตามรอยอัซซุบกีย์ว่า หากผู้พิพากษายอมรับคำให้การของพยานทั้งๆ ที่การคำนวณอันเด็ดขาดชี้ว่าเป็นไปไม่ได้ที่จะเห็น</p>
+      <p>ในอีกฟัตวาหนึ่งท่านยังได้ระบุเอาไว้ว่า:</p>
+      <p class="ar-translation">“มูลเหตุจูงใจในการบันทึกประเด็นปัญหานี้ คือในปีนี้ ซึ่งตรงกับปี ฮ.ศ. 748 มีผู้คนอ้างว่าพบเห็นจันทร์เสี้ยวของเดือนซุลฮิจญะฮ์ที่เมืองดามัสกัสในคืนวันอาทิตย์ ณ ตำบลอัล-มุอัซเซาะมียะฮ์ ซึ่งอยู่ติดกับเมืองดามัสกัส และมีการกล่าวอ้างเพิ่มเติมว่าพบเห็นจันทร์เสี้ยวที่เมืองบัยซาน ซึ่งเมืองนี้แม้จะตั้งอยู่ห่างไกลเกินกว่าระยะทางของการละหมาดย่อก็ตาม ทว่าในทางดาราศาสตร์ การคำนวณไม่บ่งชี้ถึงความเป็นไปได้ที่จะมองเห็นจันทร์เสี้ยวที่นั่นได้เลย ข้อตัดสินของเมืองนั้นในกรณีนี้จึงย่อมเหมือนกับข้อตัดสินของเมืองดามัสกัส</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">كَانَ الدَّاعِي إلَى كِتَابَةِ هَذِهِ الْمَسْأَلَةِ أَنَّهُ فِي هَذِهِ السَّنَةِ وَهِيَ سَنَةُ ثَمَانٍ وَأَرْبَعِينَ وَسَبْعِمِائَةٍ يَرَى النَّاسُ هِلَالَ ذِي الْحِجَّةِ بِدِمَشْقَ لَيْلَةَ الْأَحَدِ فِي الْمَعْظَمِيَّةِ مِنْ عَمَلِ دَارِي الْمُجَاوِرَةِ لِدِمَشْقَ، وَرُبَّمَا قِيلَ إنَّهُ رُئِيَ فِي بَيْسَانَ، وَهِيَ وَإِنْ كَانَتْ أَكْثَرَ مِنْ مَسَافَةِ الْقَصْرِ لَكِنْ لَا يَقْتَضِي الْحِسَابُ إمْكَانَ الرُّؤْيَةِ فِيهَا بَلْ حُكْمُهَا فِي ذَلِكَ حُكْمُ دِمَشْقَ. فَلَمَّا بَلَغَنِي ذَلِكَ تَوَقَّفْت لِأَنَّهُ ثَبَتَ عِنْدِي أَنَّ أَوَّلَهُ يَوْمُ الِاثْنَيْنِ عَمَلًا بِالِاسْتِصْحَابِ الْمَضْمُومِ إلَى عَدَمِ إمْكَانِ الرُّؤْيَةِ وَالِاسْتِصْحَابُ وَحْدَهُ دَلِيلٌ شَرْعِيٌّ وَقَدْ قَوِيَ بِذَلِكَ. وَقُلْت لِلْقَاضِي الَّذِي وَقَعَتْ الشَّهَادَةُ عِنْدَهُ لَا تَسْتَعْجِلْ فَلَمْ أَشْعُرْ إلَّا وَقَدْ حَضَرَ شَاهِدَانِ مِنْ عِنْدِهِ أَنَّهُ أَثْبَتَهُ وَأَنَّ الْيَوْمَ وَهُوَ يَوْمُ الِاثْنَيْنِ التَّاسِعُ مِنْ ذِي الْحِجَّةِ وَأَنَّهُ حَكَمَ بِذَلِكَ مَعَ عِلْمِهِ بِالْخِلَافِ. قُلْت: مَا هُوَ الْخِلَافُ؟ قِيلَ: اخْتِلَافُ الْمَطَالِعِ فَلَمْ أَرَ هَذَا دَافِعًا لِمَا ثَبَتَ عِنْدِي وَامْتَنَعْت مِنْ تَنْفِيذِ حُكْمِهِ لِمَا قَدَّمْتُهُ وَلِأَنِّي قَدْ جَرَّبْتُهُ فِي عِشْرِينَ عِيدًا أَوَّلُهَا عِيدُ الْفِطْرِ سَنَةَ تِسْعٍ وَثَلَاثِينَ فِي كُلِّ عِيدٍ هَكَذَا أَتَحْرِصُ عَلَى إثْبَاتِهِ وَتَارَةً نَسْمَعُ مِنْهُ وَتَارَةً لَا نَسْمَعُ مِنْهُ وَفِي الْعَامِ الْمَاضِي هَكَذَا وَعِيدُ أَهْلِ دِمَشْقَ بِقَوْلِهِ الْجُمُعَةَ وَكَانَتْ الْوَقْفَةُ عِنْدَ الْحُجَّاجِ، وَأَرْسَلَ فِي هَذَا الْعَامِ بَعْدَ أَنْ حَكَمَ وَأَشَاعَ ذَلِكَ إلَى الْمَحْضَرِ الَّذِي شَهِدَ فِيهِ عِنْدَهُ وَفِيهِ شَهَادَةُ اثْنَيْنِ قَالَا إنَّهُمَا رَأَيَاهُ فِي الْمَعْظَمِيَّةِ مِنْ عَمَلِ دَارِي وَزُكِّيَا عِنْدَهُ فَمَا أَلْوَيْت عَلَى قَوْلِهِمَا، وَعِيدُ النَّاسِ بِقَوْلِهِ يَوْمَ الثُّلَاثَاءِ وَلَمْ يُمْكِنْ رَدُّ السَّوَادِ الْأَعْظَمِ وَلَا اسْتَحْسَنْت الطَّعْنَ فِي حُكْمِ حَاكِمٍ بَعْدَ اشْتِهَارِهِ لِئَلَّا يَتَطَرَّقَ النَّاسُ إلَى الرِّيبَةِ فِي حُكْمِ الْحَاكِمِ وَاكْتَفَيْت بِصِيَانَةِ نَفْسِي عَنْ الْحُكْمِ بِمَا لَا أَرَاهُ مَعَ عَدَمِ إمْكَانِ دَفْعِهِ.</blockquote>
+      </details>
+      <p>ดังนั้น เมื่อข่าวนั้นทราบถึงข้าพเจ้า ข้าพเจ้าจึงได้ระงับท่าทีไว้ เนื่องจากมีหลักฐานเป็นที่ประจักษ์ชัดแก่ข้าพเจ้าว่า วันแรกของเดือนคือวันจันทร์ โดยอาศัยหลักการนิติศาสตร์ว่าด้วย “อิสติศฮาบ” (การคงสภาพเดิมของเดือนก่อนหน้าไว้) ผนวกกับข้อเท็จจริงที่ว่า “ไม่มีความเป็นไปได้ที่จะมองเห็นจันทร์เสี้ยวได้จริง” ซึ่งหลักอิสติศฮาบเพียงอย่างเดียวนั้นก็ถือเป็นหลักฐานทางศาสนาที่สมบูรณ์อยู่แล้ว และมันยิ่งมีน้ำหนักมากขึ้นด้วยเหตุผลแห่งความเป็นไปไม่ได้ดังกล่าว</p>
+      <p>ข้าพเจ้าได้กล่าวเตือนผู้พิพากษา ซึ่งพยานเหล่านั้นได้ไปให้การต่อหน้าเขาว่า: “ท่านอย่าเพิ่งด่วนตัดสิน” ทว่าข้าพเจ้ากลับไม่ทันตั้งตัว เมื่อมีพยานสองคนจากฝั่งเขามาแจ้งว่า เขาได้อนุมัติรับรองการเห็นเดือนนั้นไปเรียบร้อยแล้ว และประกาศให้วันนี้ ซึ่งคือวันจันทร์ กลายเป็นวันที่ 9 ของเดือนซุลฮิจญะฮ์ (วันอะเราะฟะฮ์) โดยเขาได้ตัดสินเช่นนั้นทั้งๆ ที่ทราบดีถึงความเห็นต่าง (คิลาฟ) ในประเด็นนี้</p>
+      <p>ข้าพเจ้าจึงถามว่า: “อะไรคือความเห็นต่างนั้น?” มีผู้ตอบว่า: “คือความเห็นต่างในเรื่องจุดการเกิดจันทร์เสี้ยว” ข้าพเจ้าจึงมองว่าเหตุผลนี้ไม่อาจนำมาหักล้างสัจธรรมที่ประจักษ์ชัดแก่ข้าพเจ้าได้ และข้าพเจ้าได้ปฏิเสธที่จะบังคับใช้คำตัดสินของเขา ด้วยเหตุผลที่ข้าพเจ้าได้กล่าวไปแล้วข้างต้น</p>
+      <p>อีกประการหนึ่งคือ ข้าพเจ้าได้มีประสบการณ์กับเขา (ผู้พิพากษาผู้นี้) มากว่า 20 เทศกาล (อีด) โดยเริ่มต้นตั้งแต่อีดิลฟิฏรีย์ในปี ฮ.ศ. 739 ซึ่งในทุกๆ อีด เขามักจะรีบเร่งกระตือรือร้นที่จะรับรองการเห็นเดือนในลักษณะนี้เสมอ บางครั้งเราก็คล้อยตามเขา และบางครั้งเราก็ไม่รับฟัง และในปีที่ผ่านมาก็เกิดเหตุการณ์เช่นนี้ขึ้น กล่าวคือ วันอีดของชาวดามัสกัสตามคำตัดสินของเขาคือวันศุกร์ ซึ่งกลับไปตรงกับวันวุกูฟของบรรดาผู้ประกอบพิธีฮัจญ์</p>
+      <p>และในปีนี้ หลังจากที่เขาได้ตัดสินและเผยแพร่ประกาศออกไป เขาได้ส่งเอกสารรายงานที่มีการให้การพยานต่อหน้าเขามาให้ข้าพเจ้า ซึ่งในนั้นมีคำให้การของพยานสองคนที่อ้างว่าพวกเขาเห็นจันทร์เสี้ยวที่ตำบลอัลมุอัซเซาะมียะฮ์ ในเขตดารอยา และพยานทั้งสองก็ได้รับการรับรองความน่าเชื่อถือจากเขาแล้ว ทว่าข้าพเจ้าก็มิได้ใส่ใจคล้อยตามคำกล่าวอ้างของพยานทั้งสองนั้นเลย</p>
+      <p>ท้ายที่สุด วันอีดของผู้คนตามคำตัดสินของเขาจึงกลายเป็นวันอังคาร ซึ่งข้าพเจ้าไม่สามารถทัดทานมวลชนส่วนใหญ่ได้ และข้าพเจ้าก็ไม่เห็นสมควรที่จะไปวิพากษ์โจมตีคำตัดสินของผู้พิพากษา หลังจากที่มันได้ถูกประกาศแพร่หลายออกไปแล้ว ทั้งนี้เพื่อป้องกันมิให้ผู้คนเกิดความคลางแคลงใจต่ออำนาจและคำตัดสินของระบบตุลาการ ดังนั้น ข้าพเจ้าจึงพอใจเพียงแค่การปกป้องตนเองมิให้เข้าไปร่วมตัดสินในสิ่งที่ข้าพเจ้าไม่เห็นด้วย ท่ามกลางสภาวะที่ไม่อาจผลักดันหรือเปลี่ยนแปลงคำตัดสินนั้นได้อีกต่อไป”</p>
       <p>จากกรณีศึกษาดามัสกัสข้างต้น จะเห็นได้ว่าท่านอัซซุบกีย์ไม่เพียงแต่วางหลักทฤษฎีไว้เท่านั้น หากแต่ยังได้สกัดบทเรียนจากประสบการณ์จริงออกมาเป็นเกณฑ์ปฏิบัติสำหรับผู้พิพากษาอีกด้วย โดยท่านได้สรุปไว้ว่า ก่อนที่ผู้พิพากษาจะรับหรือปฏิเสธคำพยานเรื่องจันทร์เสี้ยวนั้น มีองค์ประกอบหลายประการที่ต้องตรวจสอบอย่างครบถ้วน ดังที่ท่านกล่าวว่า:</p>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">อัซซุบกีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-
-              <p>“ผู้พิพากษาจะต้องพิจารณาสถานภาพของบรรดาพยาน ภายหลังจากที่ได้ตรวจสอบความเที่ยงธรรม, ความมีสติสัมปชัญญะตื่นรู้ และความบริสุทธิ์ของพวกเขาจากข้อกังขาและมลทินข้อกล่าวหา ตลอดจนความสมบูรณ์ของประสาทสัมผัสและความคมชัดของสายตา</p>
-              <p>รวมถึงต้องพิจารณาความปลอดโปร่งของเส้นขอบฟ้าและตำแหน่งของจันทร์เสี้ยว จากสิ่งรบกวนที่อาจบดบังทัศนียภาพในการมองเห็น และจำต้องมีความรู้เกี่ยวกับตำแหน่งที่จันทร์เสี้ยวจะโคจรปรากฏขึ้น ตลอดจนสิ่งที่หลักการคำนวณ (ทางดาราศาสตร์) ได้ชี้ขาดถึงความเป็นไปได้ หรือความเป็นไปไม่ได้ในการมองเห็นจันทร์เสี้ยวนั้น</p>
-              <p>ทั้งนี้เนื่องจากเงื่อนไขสำคัญของสิ่งที่ถูกอ้างตัวเป็นพยานนั้นคือ ความเป็นไปได้ในทางปฏิบัติ และในเมื่อการให้คำรับสารภาพยังถูกกำหนดเงื่อนไขว่าต้องตั้งอยู่บนพื้นฐานของความเป็นไปได้ ทั้งๆ ที่ผู้รับสารภาพนั้นเป็นเพียงการแจ้งข้อเท็จจริงเกี่ยวกับตัวเขาเอง (ซึ่งย่อมต้องระมัดระวังผลกระทบที่จะเกิดกับตนเองเป็นทุนเดิมอยู่แล้ว) แล้วจะนับประสาอะไรกับการให้การพยาน (ซึ่งคำตัดสินจะส่งผลกระทบและผูกพันต่อบุคคลอื่น) เล่า?</p>
-              <p>ดังนั้น หลักพิจารณาข้อนี้จึงต้องเป็นสิ่งที่สถิตอยู่อย่างมั่นคงและเตรียมพร้อมอยู่เสมอในกระบวนทัศน์ของผู้พิพากษา”</p>
-                          </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">ينظر القاضي في حال الشهود، بعد تحقق عدالتهم وتيقظهم وبراءتهم من الريبة والتهمة وسلامة حواسهم وحدة نظرهم، وسلامة الأفق ومحل الهلال مما يشوِّش الرؤية، ومعرفة منزلة الهلال التي يطلع فيها وما يقتضيه الحساب من إمكان رؤيته وعدمها، فإن المشهودَ به شرطُه الإمكان، وإذا كان يُشترط في الإقرار الإمكان، والمقرُّ مخبرٌ عن نفسه محترزٌ عليها، فما ظنك بالشهادة، فيكون هذا عند القاضي عتيدًا</div>
-                </details>
-      </blockquote>
-
+      <p class="ar-translation">“ผู้พิพากษาจะต้องพิจารณาสถานภาพของบรรดาพยาน ภายหลังจากที่ได้ตรวจสอบความเที่ยงธรรม, ความมีสติสัมปชัญญะตื่นรู้ และความบริสุทธิ์ของพวกเขาจากข้อกังขาและมลทินข้อกล่าวหา ตลอดจนความสมบูรณ์ของประสาทสัมผัสและความคมชัดของสายตา</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">ينظر القاضي في حال الشهود، بعد تحقق عدالتهم وتيقظهم وبراءتهم من الريبة والتهمة وسلامة حواسهم وحدة نظرهم، وسلامة الأفق ومحل الهلال مما يشوِّش الرؤية، ومعرفة منزلة الهلال التي يطلع فيها وما يقتضيه الحساب من إمكان رؤيته وعدمها، فإن المشهودَ به شرطُه الإمكان، وإذا كان يُشترط في الإقرار الإمكان، والمقرُّ مخبرٌ عن نفسه محترزٌ عليها، فما ظنك بالشهادة، فيكون هذا عند القاضي عتيدًا</blockquote>
+      </details>
+      <p>รวมถึงต้องพิจารณาความปลอดโปร่งของเส้นขอบฟ้าและตำแหน่งของจันทร์เสี้ยว จากสิ่งรบกวนที่อาจบดบังทัศนียภาพในการมองเห็น และจำต้องมีความรู้เกี่ยวกับตำแหน่งที่จันทร์เสี้ยวจะโคจรปรากฏขึ้น ตลอดจนสิ่งที่หลักการคำนวณ (ทางดาราศาสตร์) ได้ชี้ขาดถึงความเป็นไปได้ หรือความเป็นไปไม่ได้ในการมองเห็นจันทร์เสี้ยวนั้น</p>
+      <p>ทั้งนี้เนื่องจากเงื่อนไขสำคัญของสิ่งที่ถูกอ้างตัวเป็นพยานนั้นคือ ความเป็นไปได้ในทางปฏิบัติ และในเมื่อการให้คำรับสารภาพยังถูกกำหนดเงื่อนไขว่าต้องตั้งอยู่บนพื้นฐานของความเป็นไปได้ ทั้งๆ ที่ผู้รับสารภาพนั้นเป็นเพียงการแจ้งข้อเท็จจริงเกี่ยวกับตัวเขาเอง (ซึ่งย่อมต้องระมัดระวังผลกระทบที่จะเกิดกับตนเองเป็นทุนเดิมอยู่แล้ว) แล้วจะนับประสาอะไรกับการให้การพยาน (ซึ่งคำตัดสินจะส่งผลกระทบและผูกพันต่อบุคคลอื่น) เล่า?</p>
+      <p>ดังนั้น หลักพิจารณาข้อนี้จึงต้องเป็นสิ่งที่สถิตอยู่อย่างมั่นคงและเตรียมพร้อมอยู่เสมอในกระบวนทัศน์ของผู้พิพากษา”</p>
       <p>และเพื่อย้อนกลับมาเชื่อมโยงกับหลักการที่ท่านได้อธิบายไว้ตั้งแต่ต้น ท่านอัซซุบกีย์ได้กล่าวขยายความในอีกชุดความคิดหนึ่งถึงกรณีที่ผลการคำนวณชี้เด็ดขาดว่าเป็นไปไม่ได้ที่จะมองเห็น ซึ่งเป็นประเด็นที่ท่านถือว่ามีความสำคัญยิ่งกว่าเกณฑ์ปฏิบัติข้างต้น โดยท่านกล่าวว่า:</p>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">อัซซุบกีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-
-              <p>“และ ณ ที่นี้ ยังมีอีกกรณีศึกษาหนึ่ง นั่นคือการที่การคำนวณ (ทางดาราศาสตร์) ได้บ่งชี้ถึง ความเป็นไปไม่ได้ที่จะมองเห็นจันทร์เสี้ยว โดยข้อเท็จจริงนี้สามารถรับรู้ได้ผ่านข้อมูลพื้นฐานที่มีความเด็ดขาดแน่นอน เช่น ดวงจันทร์อยู่ในตำแหน่งที่ใกล้ชิดกับดวงอาทิตย์อย่างมาก ในสภาวการณ์เช่นนี้ ย่อมไม่อาจสมมติให้เกิดการมองเห็นได้ผ่านทางกายภาพ เนื่องจากมันเป็นสิ่งที่เป็นไปไม่ได้ที่จะเห็น</p>
-              <p>ดังนั้น หากมีผู้แจ้งข่าวเพียงคนเดียวหรือมากกว่า ซึ่งคำรายงานของเขามีโอกาสที่จะเกิดจากการมุสาหรือความผิดพลาด นำข่าวนี้มาแจ้งแก่เรา แนวทางที่ถูกต้องคือการนำคำรายงานนั้นไปตีความว่าเกิดจากการมุสาหรือความผิดพลาด และแม้จะมีพยานสองคนมาให้การรับรองในเรื่องนี้ คำพยานของพวกเขาก็จะไม่ถูกยอมรับเด็ดขาด ทั้งนี้เนื่องจาก การคำนวณนั้นเป็นสิ่งที่มีความเด็ดขาด ในขณะที่คำพยานและข่าวรายงานนั้นเป็นเพียงความน่าจะเป็น และความน่าจะเป็นย่อมไม่อาจนำมาหักล้างความเด็ดขาดแน่นอนได้ นับประสาอะไรกับการที่จะนำมันมายึดถือและให้ความสำคัญเหนือกว่าเล่า</p>
-              <p>นอกจากนี้ เงื่อนไขสำคัญของพยานหลักฐานคือ สิ่งที่ถูกนำมาอ้างเป็นพยานนั้นจะต้องมีความเป็นไปได้ ทั้งในทางกายภาพ, ทางสติปัญญา และทางบทบัญญัติศาสนา ดังนั้น หากสมมติว่าการคำนวณได้บ่งชี้อย่างเด็ดขาดถึงความไม่มีความเป็นไปได้ การยอมรับคำพยานนั้นในทางนิติศาสตร์ย่อมกลายเป็นสิ่งที่เป็นไปไม่ได้เช่นกัน เนื่องจากสิ่งที่ถูกอ้างนั้นเป็นสิ่งที่ขัดแย้งกับความเป็นจริง และบทบัญญัติศาสนาย่อมไม่นำพาสิ่งที่เป็นไปไม่ได้มาบังคับใช้</p>
-              <p>อีกทั้งไม่เคยมีตัวบท (นัศ) ทางศาสนาใดที่ระบุว่า คำพยานของพยานสองคนจะต้องถูกยอมรับในทุกกรณี ไม่ว่าสิ่งที่พวกเขาอ้างนั้นจะถูกต้องหรือเป็นเท็จก็ตาม ตลอดจนข้อบังคับในการถือศีลอดและบทบัญญัติที่เกี่ยวกับเดือนนั้น ก็ไม่ได้ถูกกำหนดขึ้นโดยอาศัยเพียงแค่ข่าวรายงานหรือคำพยานลอยๆ จนถึงขั้นที่เราจะอนุมานได้ว่า ‘เสาหลักคือพระดำรัสของผู้บัญญัติศาสนาที่ว่า: พวกท่านจงถือศีลอดเถิด หากมีผู้แจ้งข่าวมาบอกพวกท่าน’ ซึ่งหากมีตัวบทเช่นนั้นระบุไว้ เราย่อมต้องน้อมรับด้วยความยินดีอย่างแน่นอน แต่สิ่งนั้นไม่เคยปรากฏในบทบัญญัติศาสนาเลย ในทางกลับกัน เรามีหน้าที่ต้องตรวจสอบความกระจ่างชัดในการรับข่าวสาร เพื่อให้ประจักษ์ถึงข้อเท็จจริงของมันเป็นปฐมภูมิ</p>
-              <p>และไม่เป็นที่สงสัยเลยว่า บางคนที่มาเป็นพยานเรื่องจันทร์เสี้ยวนั้น อาจตกอยู่ในสภาวะดังต่อไปนี้คือ ไม่ได้เห็นมันจริงแต่เกิดความสับสน, มองเห็นสิ่งที่ตนคิดว่าเป็นจันทร์เสี้ยวทั้งที่มันไม่ใช่, ดวงตาของเขาสร้างภาพลวงตาในสิ่งที่ไม่ได้เห็น, มาให้การพยานหลังจากผ่านไปหลายวัน จนเกิดความสับสนคลาดเคลื่อนในคืนที่เขาอ้างว่าเห็น, มีความเขลาอันใหญ่หลวงที่ผลักดันให้เขาเชื่อว่า การชักจูงให้ผู้คนถือศีลอดนั้นจะทำให้เขาได้รับผลบุญ, ต้องการสร้างบรรทัดฐานความน่าเชื่อถือให้แก่ตนเอง เพื่อใช้เป็นเครื่องมือให้ได้รับการรับรอง (ตัซกียะฮ์) และเป็นที่ยอมรับในสายตาของผู้ปกครอง ซึ่งทั้งหมดนี้ล้วนเป็นสิ่งที่เราเคยประจักษ์และได้รับฟังมาแล้วทั้งสิ้น</p>
-              <p>ดังนั้น เมื่อผู้พิพากษาได้ประสบกับเหตุการณ์เช่นนี้ และตระหนักได้ด้วยตนเอง หรือผ่านการแจ้งข่าวจากผู้ที่เขาเชื่อถือได้ว่า การคำนวณได้บ่งชี้ถึงความเป็นไปไม่ได้ในการมองเห็น เขาจำต้องไม่ยอมรับคำพยานเหล่านี้ ไม่ลงบันทึกรับรอง และไม่บังคับใช้คำตัดสินตามนั้น แต่เขาต้องยึดหลัก ‘อิสติศฮาบ’ (การคงสภาพเดิม) ไว้เป็นรากฐานในการนับเดือนให้ครบถ้วนสมบูรณ์ต่อไป เพราะนั่นคือหลักฐานทางศาสนาที่ได้รับการยืนยันอย่างเป็นรูปธรรม จนกว่าจะมีความเป็นจริงที่ขัดแย้งกับสิ่งนั้นปรากฏขึ้นอย่างชัดเจน”</p>
-                          </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">وها هنا صورة أخرى: وهو أن يدل الحساب على عدم إمكان رؤيته، ويُدرَك ذلك بمقدمات قطعية، ويكون في غاية القرب من الشمس، ففي هذه الحالة لا يمكن فرض رؤيتنا له حسًّا؛ لأنه يستحيل، فلو أخبَرَنَا به مخبِرٌ واحدٌ أو أكثر ممن يحتمل خبره الكذب أو الغلط فالذي يتجه قبول هذا الخبر وحمله على الكذب أو الغلط، ولو شهد به شاهدان لم تقبل شهادتهما؛ لأن الحساب قطعي والشهادة والخبر ظنيان، والظن لا يعارض القطع، فضلًا عن أن يُقدَّم عليه، والبينة شرطها أن يكون ما شهدت به ممكنًا حسًّا وعقلًا وشرعًا، فإذا فرض دلالة الحساب قطعًا على عدم الإمكان استحال القبول شرعًا؛ لاستحالة المشهود به، والشرع لا يأتي بالمستحيلات، ولم يأت لنا نصٌّ من الشرع أن كل شاهدين تقبل شهادتهما سواء كان المشهود به صحيحًا أو باطلًا، ولا يترتب وجوب الصوم وأحكام الشهر على مجرد الخَبَر أو الشهادة حتى إنا نقول: العمدة قول الشارع: صوموا إذا أخبركم مخبر فإنه لو ورد ذلك قبلناه على الرأس والعين، لكن ذلك لم يأت قط في الشرع، بل وجب علينا التبيُّن في قبول الخبر حتى نعلم حقيقته أولًا، ولا شك أن بعض مَن يشهد بالهلال قد لا يراه ويشتبه عليه، أو يرى ما يظنه هلالًا وليس بهلال، أو تريه عينُه ما لم يرَ، أو يؤدِّي الشهادة بعد أيام ويحصل الغلط في الليلة التي رأى فيها، أو يكون جهله عظيمًا يحمله على أن يعتقد في حمله الناس على الصيام أجرًا، أو يكون ممن يَقصِد إثباتَ عدالته؛ فيتخذ ذلك وسيلة إلى أن يُزكَّى ويصير مقبولًا عند الحكام، وكل هذا رأيناه وسمعناه. وعلى الحاكم إذا جرب مثل ذلك وعرَف مِن نفسه أو بخبر مَن يثق به أن دلالة الحساب على عدم إمكان الرؤية ألا يقبل هذه الشهادة ولا يثبت بها ولا يحكم بها، ويستصحب الأصل في بقاء الشهر فإنه دليل شرعي محقق حتى يتحقق خلافه</div>
-                </details>
-      </blockquote>
-
-      <p>หลักการที่ท่านอัซซุบกีย์ได้วางไว้นี้ไม่ได้จำกัดอยู่เฉพาะในผลงานของท่านเพียงผู้เดียว หากแต่ยังได้รับการรับรองและถ่ายทอดโดยปราชญ์ในยุคต่อมาด้วย ดังเช่นที่ท่านอัลก็อลยูบีย์ (เสียชีวิตปี ฮ.ศ. 1069 / ค.ศ. 1659) เราะหิมะฮุลลอฮ์ ได้บันทึกไว้ในฮาชิยะฮ์ของท่านที่มีต่อตำราชัรห์ อัลมะฮัลลีย์ อะลัลมินฮาจญ์ โดยอ้างจากท่านอิบนุ กอเซม อัลอับบาดีย์ (เสียชีวิตปี ฮ.ศ. 994 / ค.ศ. 1585) เราะหิมะฮุลลอฮ์ ซึ่งได้กล่าวว่า:</p>
-
-      <blockquote lang="ar" dir="rtl" class="quote-container short-quote">
-          <span class="ar">إذا دلَّ الحساب القطعيّ على عدم رؤية الهلال لم يُقبَل قولُ العدول برؤيته، وتُرَدُّ شهادتُهم، وهو ظاهرٌ جليٌّ، ولا يجوز الصوم حينئذٍ، ومخالفةُ ذلك معاندةٌ ومكابَرَةٌ</span>
-          <div class="thai-quote">“เมื่อการคำนวณอันเด็ดขาดได้บ่งชี้ถึงการไม่สามารถมองเห็นจันทร์เสี้ยวได้ คำกล่าวอ้างของพยานผู้เที่ยงธรรมที่ระบุว่าเห็นจันทร์เสี้ยวนั้นจะไม่ถูกยอมรับ และคำพยานของพวกเขาจะถูกปัดตก (จากนั้นอัลก็อลยูบีย์ได้กล่าวเสริมว่า:) และนี่คือสิ่งที่ประจักษ์ชัดแจ้ง และไม่อนุญาตให้ถือศีลอดในสถานการณ์ดังกล่าว การฝ่าฝืนในเรื่องนี้ถือเป็นการดื้อดึงและดันทุรัง”</div>
-      </blockquote>
-
-      <p>และมีบรรดานักปราชญ์ชั้นนำในยุคหลังจำนวนไม่น้อยที่ได้สนับสนุนความชอบธรรมในการนำการคำนวณทางดาราศาสตร์มาใช้ในการยืนยันจันทร์เสี้ยว หนึ่งในนั้นคือ ท่านชิฮาบุดดีน อัลมัรญานีย์ (เสียชีวิตปี ฮ.ศ. 1306 / ค.ศ. 1889) เราะหิมะฮุลลอฮ์ ในตำรา <strong>นาซูเราะฮ์ อัลฮัก ฟี ฟัรฎียะติลอิชาอ์ วะอิน ลัม ยะฆิบ อัชชะฟัก</strong> ของท่าน โดยท่านได้กล่าวไว้ในหน้า 44-45 ฉบับพิมพ์ปี ค.ศ. 1870 ว่า:</p>
-
-      <blockquote class="quote-container">
-                <div class="thai-quote">
-                    <span class="attribution">ชิฮาบุดดีน อัลมัรญานีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
-“และการคำนวณทั้งหมดนั้นล้วนเป็นกิจการที่มีความเด็ดขาดแน่นอนและมีข้อพิสูจน์ ซึ่งไม่มีหนทางใดที่จะปฏิเสธมันได้เลยหลังจากที่ได้ทำความเข้าใจและรับรู้ถึงมันแล้ว...นักวิชาการศาสนา ทั้งบรรดานักนิติศาสตร์และผู้ทรงคุณวุฒิท่านอื่นๆ ต่างก็กลับไปอ้างอิงบรรดาผู้เชี่ยวชาญและผู้มีวิสัยทัศน์ในศาสตร์นั้นๆ ในทุกๆ อุบัติการณ์ที่เกิดขึ้น โดยพวกเขาจะยึดถือคำกล่าวของนักปราชญ์ด้านภาษาศาสตร์ในเรื่องความหมายของถ้อยคำในอัลกุรอานและหะดีษ และยึดถือคำวินิจฉัยของแพทย์ในเรื่องการละศีลอดในเดือนรอมฎอนและกรณีอื่นๆ แล้วมีสิ่งใดเล่าที่จะมาขัดขวางมิให้สร้างหลักเกณฑ์การนับเดือนชะอ์บานและเดือนอื่นๆ ให้ครบถ้วนโดยอาศัยการคำนวณ ในเมื่อมันเป็นสิ่งที่เด็ดขาดแน่นอนและสอดคล้องกับสิ่งที่องค์ผู้ทรงบัญญัติศาสนาได้แจ้งข่าวไว้”                </div>
-                <details class="source-toggle">
-                    <summary>ดูตัวบทต้นฉบับ ▼</summary>
-                    <div lang="ar" dir="rtl" class="ar">والحسابيات كلها أمور قطعية برهانية لا سبيل إلى مجاحدتها بعد فهمها ومعرفتها،... وأهل الشرع من الفقهاء وغيرهم يرجعون في كل حادثة إلى أهل الخبرة بها وذوي البصارة في حالها، فإنهم يأخذون بقول أهل اللغة في معاني ألفاظ القرآن والحديث، وبقول الطبيب في إفطار شهر رمضان وغير ذلك، فما الذي يمنع من بناء إكمال شعبان وغيره من الأشهر عليه مع كونه قطعيًّا وموافقًا إخبار الشارع به</div>
-                </details>
-      </blockquote>
-
-      <h2 id="section-5">กรณีศึกษา เมื่อพยานบอกว่าเห็น แต่ดาราศาสตร์บอกว่าเป็นไปไม่ได้</h2>
+      <p class="ar-translation">“และ ณ ที่นี้ ยังมีอีกกรณีศึกษาหนึ่ง นั่นคือการที่การคำนวณ (ทางดาราศาสตร์) ได้บ่งชี้ถึง ความเป็นไปไม่ได้ที่จะมองเห็นจันทร์เสี้ยว โดยข้อเท็จจริงนี้สามารถรับรู้ได้ผ่านข้อมูลพื้นฐานที่มีความเด็ดขาดแน่นอน เช่น ดวงจันทร์อยู่ในตำแหน่งที่ใกล้ชิดกับดวงอาทิตย์อย่างมาก ในสภาวการณ์เช่นนี้ ย่อมไม่อาจสมมติให้เกิดการมองเห็นได้ผ่านทางกายภาพ เนื่องจากมันเป็นสิ่งที่เป็นไปไม่ได้ที่จะเห็น</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">وها هنا صورة أخرى: وهو أن يدل الحساب على عدم إمكان رؤيته، ويُدرَك ذلك بمقدمات قطعية، ويكون في غاية القرب من الشمس، ففي هذه الحالة لا يمكن فرض رؤيتنا له حسًّا؛ لأنه يستحيل، فلو أخبَرَنَا به مخبِرٌ واحدٌ أو أكثر ممن يحتمل خبره الكذب أو الغلط فالذي يتجه قبول هذا الخبر وحمله على الكذب أو الغلط، ولو شهد به شاهدان لم تقبل شهادتهما؛ لأن الحساب قطعي والشهادة والخبر ظنيان، والظن لا يعارض القطع، فضلًا عن أن يُقدَّم عليه، والبينة شرطها أن يكون ما شهدت به ممكنًا حسًّا وعقلًا وشرعًا، فإذا فرض دلالة الحساب قطعًا على عدم الإمكان استحال القبول شرعًا؛ لاستحالة المشهود به، والشرع لا يأتي بالمستحيلات، ولم يأت لنا نصٌّ من الشرع أن كل شاهدين تقبل شهادتهما سواء كان المشهود به صحيحًا أو باطلًا، ولا يترتب وجوب الصوم وأحكام الشهر على مجرد الخَبَر أو الشهادة حتى إنا نقول: العمدة قول الشارع: صوموا إذا أخبركم مخبر فإنه لو ورد ذلك قبلناه على الرأس والعين، لكن ذلك لم يأت قط في الشرع، بل وجب علينا التبيُّن في قبول الخبر حتى نعلم حقيقته أولًا، ولا شك أن بعض مَن يشهد بالهلال قد لا يراه ويشتبه عليه، أو يرى ما يظنه هلالًا وليس بهلال، أو تريه عينُه ما لم يرَ، أو يؤدِّي الشهادة بعد أيام ويحصل الغلط في الليلة التي رأى فيها، أو يكون جهله عظيمًا يحمله على أن يعتقد في حمله الناس على الصيام أجرًا، أو يكون ممن يَقصِد إثباتَ عدالته؛ فيتخذ ذلك وسيلة إلى أن يُزكَّى ويصير مقبولًا عند الحكام، وكل هذا رأيناه وسمعناه. وعلى الحاكم إذا جرب مثل ذلك وعرَف مِن نفسه أو بخبر مَن يثق به أن دلالة الحساب على عدم إمكان الرؤية ألا يقبل هذه الشهادة ولا يثبت بها ولا يحكم بها، ويستصحب الأصل في بقاء الشهر فإنه دليل شرعي محقق حتى يتحقق خلافه</blockquote>
+      </details>
+      <p>ดังนั้น หากมีผู้แจ้งข่าวเพียงคนเดียวหรือมากกว่า ซึ่งคำรายงานของเขามีโอกาสที่จะเกิดจากการมุสาหรือความผิดพลาด นำข่าวนี้มาแจ้งแก่เรา แนวทางที่ถูกต้องคือการนำคำรายงานนั้นไปตีความว่าเกิดจากการมุสาหรือความผิดพลาด</p>
+      <p>และแม้จะมีพยานสองคนมาให้การรับรองในเรื่องนี้ คำพยานของพวกเขาก็จะไม่ถูกยอมรับเด็ดขาด ทั้งนี้เนื่องจาก การคำนวณนั้นเป็นสิ่งที่มีความเด็ดขาด ในขณะที่คำพยานและข่าวรายงานนั้นเป็นเพียงความน่าจะเป็น และความน่าจะเป็นย่อมไม่อาจนำมาหักล้างความเด็ดขาดแน่นอนได้ นับประสาอะไรกับการที่จะนำมันมายึดถือและให้ความสำคัญเหนือกว่าเล่า</p>
+      <p>นอกจากนี้ เงื่อนไขสำคัญของพยานหลักฐานคือ สิ่งที่ถูกนำมาอ้างเป็นพยานนั้นจะต้องมีความเป็นไปได้ ทั้งในทางกายภาพ, ทางสติปัญญา และทางบทบัญญัติศาสนา ดังนั้น หากสมมติว่าการคำนวณได้บ่งชี้อย่างเด็ดขาดถึงความไม่มีความเป็นไปได้ การยอมรับคำพยานนั้นในทางนิติศาสตร์ย่อมกลายเป็นสิ่งที่เป็นไปไม่ได้เช่นกัน เนื่องจากสิ่งที่ถูกอ้างนั้นเป็นสิ่งที่ขัดแย้งกับความเป็นจริง และบทบัญญัติศาสนาย่อมไม่นำพาสิ่งที่เป็นไปไม่ได้มาบังคับใช้</p>
+      <p>อีกทั้งไม่เคยมีตัวบท (นัศ) ทางศาสนาใดที่ระบุว่า คำพยานของพยานสองคนจะต้องถูกยอมรับในทุกกรณี ไม่ว่าสิ่งที่พวกเขาอ้างนั้นจะถูกต้องหรือเป็นเท็จก็ตาม ตลอดจนข้อบังคับในการถือศีลอดและบทบัญญัติที่เกี่ยวกับเดือนนั้น ก็ไม่ได้ถูกกำหนดขึ้นโดยอาศัยเพียงแค่ข่าวรายงานหรือคำพยานลอยๆ จนถึงขั้นที่เราจะอนุมานได้ว่า “เสาหลักคือพระดำรัสของผู้บัญญัติศาสนาที่ว่า: พวกท่านจงถือศีลอดเถิด หากมีผู้แจ้งข่าวมาบอกพวกท่าน” ซึ่งหากมีตัวบทเช่นนั้นระบุไว้ เราย่อมต้องน้อมรับด้วยความยินดีอย่างแน่นอน ทว่าสิ่งนั้นไม่เคยปรากฏในบทบัญญัติศาสนาเลย ในทางกลับกัน เรามีหน้าที่ต้องตรวจสอบความกระจ่างชัดในการรับข่าวสาร เพื่อให้ประจักษ์ถึงข้อเท็จจริงของมันเป็นปฐมภูมิ</p>
+      <p>และไม่เป็นที่สงสัยเลยว่า บางคนที่มาเป็นพยานเรื่องจันทร์เสี้ยวนั้น อาจตกอยู่ในสภาวะดังต่อไปนี้คือ ไม่ได้เห็นมันจริงแต่เกิดความสับสน, มองเห็นสิ่งที่ตนคิดว่าเป็นจันทร์เสี้ยวทั้งที่มันไม่ใช่, ดวงตาของเขาสร้างภาพลวงตาในสิ่งที่ไม่ได้เห็น, มาให้การพยานหลังจากผ่านไปหลายวัน จนเกิดความสับสนคลาดเคลื่อนในคืนที่เขาอ้างว่าเห็น, มีความเขลาอันใหญ่หลวงที่ผลักดันให้เขาเชื่อว่า การชักจูงให้ผู้คนถือศีลอดนั้นจะทำให้เขาได้รับผลบุญ, ต้องการสร้างบรรทัดฐานความน่าเชื่อถือให้แก่ตนเอง เพื่อใช้เป็นเครื่องมือให้ได้รับการรับรอง (ตัซกียะฮ์) และเป็นที่ยอมรับในสายตาของผู้ปกครอง ซึ่งทั้งหมดนี้ล้วนเป็นสิ่งที่เราเคยประจักษ์และได้รับฟังมาแล้วทั้งสิ้น</p>
+      <p>ดังนั้น เมื่อผู้พิพากษาได้ประสบกับเหตุการณ์เช่นนี้ และตระหนักได้ด้วยตนเอง หรือผ่านการแจ้งข่าวจากผู้ที่เขาเชื่อถือได้ว่า การคำนวณได้บ่งชี้ถึงความเป็นไปไม่ได้ในการมองเห็น เขาจำต้องไม่ยอมรับคำพยานเหล่านี้ ไม่ลงบันทึกรับรอง และไม่บังคับใช้คำตัดสินตามนั้น ทว่าเขาต้องยึดหลัก “อิสติศฮาบ” (การคงสภาพเดิม) ไว้เป็นรากฐานในการนับเดือนให้ครบถ้วนสมบูรณ์ต่อไป เพราะนั่นคือหลักฐานทางศาสนาที่ได้รับการยืนยันอย่างเป็นรูปธรรม จนกว่าจะมีความเป็นจริงที่ขัดแย้งกับสิ่งนั้นปรากฏขึ้นอย่างชัดเจน”</p>
+      <p>หลักการที่ท่านอัซซุบกีย์ได้วางไว้นี้ไม่ได้จำกัดอยู่เฉพาะในผลงานของท่านเพียงผู้เดียว หากแต่ยังได้รับการรับรองและถ่ายทอดโดยปราชญ์ในยุคต่อมาด้วย ดังเช่นที่ท่านอัลก็อลยูบีย์ได้บันทึกไว้ในฮาชิยะฮ์ของท่านที่มีต่อตำราชัรห์ อัลมะฮัลลีย์ อะลัลมินฮาจญ์ โดยอ้างจากท่านอิบนุ กอเซม อัลอับบาดีย์ (เสียชีวิต ฮ.ศ. 994) ซึ่งได้กล่าวว่า:</p>
+      <blockquote class="ar-feature" lang="ar" dir="rtl">إذا دلَّ الحساب القطعيّ على عدم رؤية الهلال لم يُقبَل قولُ العدول برؤيته، وتُرَدُّ شهادتُهم، وهو ظاهرٌ جليٌّ، ولا يجوز الصوم حينئذٍ، ومخالفةُ ذلك معاندةٌ ومكابَرَةٌ</blockquote>
+      <p class="ar-translation">“เมื่อการคำนวณอันเด็ดขาดได้บ่งชี้ถึงการไม่สามารถมองเห็นจันทร์เสี้ยวได้ คำกล่าวอ้างของพยานผู้เที่ยงธรรมที่ระบุว่าเห็นจันทร์เสี้ยวนั้นจะไม่ถูกยอมรับ และคำพยานของพวกเขาจะถูกปัดตก (จากนั้นอัลก็อลยูบีย์ได้กล่าวเสริมว่า:) และนี่คือสิ่งที่ประจักษ์ชัดแจ้ง และไม่อนุญาตให้ถือศีลอดในสถานการณ์ดังกล่าว การฝ่าฝืนในเรื่องนี้ถือเป็นการดื้อดึงและดันทุรัง”</p>
+      <p>และมีบรรดานักปราชญ์ชั้นนำในยุคหลังจำนวนไม่น้อยที่ได้สนับสนุนความชอบธรรมในการนำการคำนวณทางดาราศาสตร์มาใช้ในการยืนยันจันทร์เสี้ยว หนึ่งในนั้นคือ ท่านชิฮาบุดดีน อัลมัรญานีย์ (เสียชีวิต ค.ศ. 1889) ในตำรานาซูเราะฮ์ อัลฮัก ฟี ฟัรฎียะติลอิชาอ์ วะอิน ลัม ยะฆิบ อัชชะฟักของท่าน โดยท่านได้กล่าวไว้ในหน้า 44-45 ฉบับพิมพ์ปี ค.ศ. 1870 ว่า:</p>
+      <p class="ar-translation">“และการคำนวณทั้งหมดนั้นล้วนเป็นกิจการที่มีความเด็ดขาดแน่นอนและมีข้อพิสูจน์ ซึ่งไม่มีหนทางใดที่จะปฏิเสธมันได้เลยหลังจากที่ได้ทำความเข้าใจและรับรู้ถึงมันแล้ว...นักวิชาการศาสนา ทั้งบรรดานักนิติศาสตร์และผู้ทรงคุณวุฒิท่านอื่นๆ ต่างก็กลับไปอ้างอิงบรรดาผู้เชี่ยวชาญและผู้มีวิสัยทัศน์ในศาสตร์นั้นๆ ในทุกๆ อุบัติการณ์ที่เกิดขึ้น โดยพวกเขาจะยึดถือคำกล่าวของนักปราชญ์ด้านภาษาศาสตร์ในเรื่องความหมายของถ้อยคำในอัลกุรอานและหะดีษ และยึดถือคำวินิจฉัยของแพทย์ในเรื่องการละศีลอดในเดือนรอมฎอนและกรณีอื่นๆ แล้วมีสิ่งใดเล่าที่จะมาขัดขวางมิให้สร้างหลักเกณฑ์การนับเดือนชะอ์บานและเดือนอื่นๆ ให้ครบถ้วนโดยอาศัยการคำนวณ ในเมื่อมันเป็นสิ่งที่เด็ดขาดแน่นอนและสอดคล้องกับสิ่งที่องค์ผู้ทรงบัญญัติศาสนา ได้แจ้งข่าวไว้”</p>
+      <details class="ar-toggle">
+        <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+        <blockquote lang="ar" dir="rtl" class="ar-block">والحسابيات كلها أمور قطعية برهانية لا سبيل إلى مجاحدتها بعد فهمها ومعرفتها،... وأهل الشرع من الفقهاء وغيرهم يرجعون في كل حادثة إلى أهل الخبرة بها وذوي البصارة في حالها، فإنهم يأخذون بقول أهل اللغة في معاني ألفاظ القرآن والحديث، وبقول الطبيب في إفطار شهر رمضان وغير ذلك، فما الذي يمنع من بناء إكمال شعبان وغيره من الأشهر عليه مع كونه قطعيًّا وموافقًا إخبار الشارع به</blockquote>
+      </details>
+      <h2 class="article-h2">กรณีศึกษา เมื่อพยานบอกว่าเห็น แต่ดาราศาสตร์บอกว่าเป็นไปไม่ได้</h2>
       <p>หนึ่งในกรณีที่น่าสนใจ คือการสังเกตจันทร์เสี้ยวในช่วงเย็นของวันพฤหัสบดีที่ 19 มีนาคม พ.ศ. 2569 ซึ่งตรงกับวันที่ 29 เดือนรอมฎอน ฮ.ศ. 1447 ในบริบทของประเทศไทย</p>
-
       <p>โดยกรณีนี้เป็นตัวอย่างที่ชัดเจนมากสำหรับเรื่องนี้ เพราะวันดังกล่าวเป็นวันที่เราต้องออกมาสังเกตดวงจันทร์เสี้ยวแรกเพื่อพิจารณาว่าจะเข้าสู่เดือนเชาวาลและวันอีดหรือไม่ โดยข้อมูลที่มีระบุว่า ดวงจันทร์ดับเกิดขึ้นในเวลา 08:26 น. ของวันนั้นเอง นั่นหมายความว่า เมื่อถึงช่วงหลังดวงอาทิตย์ตกในเย็นวันเดียวกัน ดวงจันทร์มีอายุเพียงประมาณ 10 ชั่วโมงเท่านั้น</p>
-
       <p>หากดูข้อมูลในประเทศไทย จะพบว่าในกรุงเทพมหานคร ดวงจันทร์ตกหลังดวงอาทิตย์เพียง 17 นาที ส่วนที่สงขลาก็ตกช้ากว่าดวงอาทิตย์ 16 นาที และที่เชียงใหม่ 19 นาที ตัวเลขเหล่านี้บอกอะไรเราได้อย่างชัดเจนว่า เวลาที่ดวงจันทร์จะอยู่ให้สังเกตหลังอาทิตย์ตกนั้นสั้นมาก อีกทั้งยังอยู่ต่ำใกล้ขอบฟ้า ซึ่งเป็นบริเวณที่มีทั้งแสงสนธยา ความชื้น ฝุ่น และมลภาวะในอากาศค่อนข้างมาก ปัจจัยทั้งหมดนี้ล้วนทำให้การมองเห็นจันทร์เสี้ยวบางๆ เป็นเรื่องยากอย่างยิ่ง</p>
-
       <p>ถ้าพูดให้เข้าใจง่าย ดวงจันทร์ในเย็นวันนั้นทั้ง “อ่อนวัยเกินไป” และ “อยู่ให้ดูไม่นานพอ” สำหรับการเห็นด้วยตาเปล่าในสภาพปกติ ยิ่งเมื่อรวมกับสภาพท้องฟ้าจริงหลังอาทิตย์ตก โอกาสที่จะมองเห็นได้ด้วยตาเปล่าจึงต่ำมากจนแทบเรียกได้ว่า “เป็นไปไม่ได้ในทางปฏิบัติ” หรืออย่างน้อยที่สุดก็เป็นกรณีที่ยากมากอย่างยิ่งจนไม่อาจรับคำอ้างว่าเห็นได้อย่างง่ายดาย</p>
-
       <p>ตรงนี้เองที่แนวคิดของอิหม่ามตะกียุดดีน อัซซุบกีย์มีความสำคัญมาก เพราะท่านได้อธิบายไว้อย่างลุ่มลึกว่า การคำนวณทางดาราศาสตร์ไม่ควรถูกนำมาใช้เพื่อ “ตั้งต้นเดือนใหม่แทนการเห็น” แต่สามารถนำมาใช้เพื่อ “ปฏิเสธคำพยาน” ในกรณีที่ผลคำนวณชี้ชัดว่าเป็นไปไม่ได้ที่จะเห็นดวงจันทร์เสี้ยว หลักการนี้ตั้งอยู่บนเหตุผลที่ว่า คำพยานของมนุษย์นั้นมีโอกาสผิดพลาดได้เสมอ ไม่ว่าจะจากความตาฝาด ความเข้าใจผิด หรือความเร่งรีบในการสรุป แต่ข้อมูลที่ยืนยันจากการคำนวณซึ่งแม่นยำและแน่นอนย่อมมีน้ำหนักมากกว่าในกรณีที่ชี้ถึง “ความเป็นไปไม่ได้”</p>
-
       <p>กล่าวอีกแบบหนึ่งก็คือ หากดาราศาสตร์บอกว่าเงื่อนไขของการเห็นยังไม่เกิดขึ้นจริง การที่มีคนไม่กี่คนอ้างว่าเห็น ย่อมไม่เพียงพอที่จะล้มข้อมูลที่แน่นอนกว่าได้ เพราะเงื่อนไขของการรับพยานในอิสลาม ไม่ใช่มีเพียงจำนวนพยานเท่านั้น แต่ยังรวมถึงความเป็นไปได้ของสิ่งที่ถูกกล่าวอ้างด้วย ถ้าสิ่งนั้นเป็นไปไม่ได้ในทางธรรมชาติ คำพยานก็ย่อมต้องถูกตรวจสอบอย่างเข้มงวด หรืออาจถูกปฏิเสธไปเลย</p>
-
       <p>เมื่อนำหลักนี้กลับมามองกรณีเย็นวันที่ 19 มีนาคม 2569 ภาพก็ยิ่งชัดขึ้น กล่าวคือ ดวงจันทร์มีอายุเพียงประมาณ 10 ชั่วโมง อยู่เหนือขอบฟ้าหลังอาทิตย์ตกราว 16–19 นาทีเท่านั้น และอยู่ในสภาพแสงที่ไม่เอื้อต่อการมองเห็น ฉะนั้น หากวันนั้นไม่มีผู้ใดเห็นดวงจันทร์ ก็ถือเป็นเรื่องสอดคล้องกับข้อมูลทางดาราศาสตร์อย่างยิ่ง แต่หากมีผู้ใดกล่าวอ้างว่าเห็น ก็ย่อมเป็นกรณีที่ต้องนำมาพิจารณาอย่างระมัดระวังมาก เพราะข้อมูลทั้งหมดชี้ไปในทางตรงกันข้าม</p>
-
       <p>ดังนั้น ข้อสรุปที่เข้าใจง่ายสำหรับคนทั่วไปก็คือ เย็นวันที่ 19 มีนาคม 2569 มีโอกาสต่ำมากอย่างยิ่งที่จะเห็นดวงจันทร์เสี้ยวแรกด้วยตาเปล่าในประเทศไทย และในเชิงหลักการทางศาสนา กรณีลักษณะนี้ไม่ได้หมายความว่าเรานำดาราศาสตร์มาแทนที่คำสอนของศาสนา แต่หมายความว่าเราใช้ความรู้ทางดาราศาสตร์มาเป็นตัวช่วยตรวจสอบ เพื่อไม่ให้การตัดสินเรื่องสำคัญทางศาสนาตั้งอยู่บนความคลาดเคลื่อนหรือการเข้าใจผิด</p>
-
       <p>มองในภาพรวมแล้ว ก็จะรู้ว่า “การเห็น” กับ “การคำนวณ” ไม่จำเป็นต้องเป็นคู่ขัดแย้งเสมอไป หากวางแต่ละอย่างไว้ในบทบาทของมันอย่างถูกต้อง การเห็นด้วยตายังคงเป็นหลักในการยืนยันเดือนใหม่ตามบทบัญญัติ ส่วนการคำนวณเป็นเครื่องมือช่วยบอกว่า เวลาใดการเห็นนั้นเป็นไปได้จริง และเวลาใดการอ้างว่าเห็นควรถูกตั้งคำถามอย่างเข้มงวด</p>
-
       <p>สำหรับกรณีของวันที่ 19 มีนาคม 2569 นี้ จึงอาจกล่าวได้อย่างสั้นที่สุดว่า ในทางดาราศาสตร์ โอกาสเห็นด้วยตาเปล่าแทบไม่มี และในทางนิติศาสตร์อิสลาม หากมีคำอ้างว่าเห็น ก็ไม่ควรถูกรับอย่างง่ายๆ โดยไม่ตรวจสอบ เพราะเมื่อความเป็นไปได้ทางธรรมชาติยังไม่รองรับ คำพยานนั้นก็ย่อมไม่แข็งแรงพอที่จะใช้กำหนดเรื่องใหญ่ของศาสนาได้</p>
-
-      <h2 id="section-6">สรุป</h2>
+      <h2 class="article-h2">สรุป</h2>
       <p>จากการพินิจพิจารณาทัศนะของอิหม่ามตะกียุดดีน อัซซุบกีย์และท่านมุฮัมมัด บะคีต อัลมุฏีอีย์อย่างเป็นระบบ ประกอบกับกรณีศึกษาทางดาราศาสตร์ร่วมสมัย สามารถสรุปหลักนิติศาสตร์ที่ได้จากการวิเคราะห์ทั้งหมดนี้ออกเป็นประเด็นสำคัญ ดังนี้</p>
+      <ol class="article-summary">
+        <li><strong>ประเด็นที่หนึ่ง ว่าด้วยหลักฐานของการแยกแยะ:</strong> การคำนวณทางดาราศาสตร์ถูกนำมาใช้ในฐานะเครื่องมือ “เพื่อปฏิเสธ” ไม่ใช่ “เพื่อยืนยัน” ดังกล่าวนี้คือจุดแกนกลางที่สำคัญที่สุดของทัศนะนี้ กล่าวคือ หลักที่ถือเป็นมาตรฐานยังคงเป็น “การมองเห็นจันทร์เสี้ยวด้วยสายตา” ตามที่ชะรีอะฮ์ได้บัญญัติไว้เป็นสำคัญ การคำนวณทางดาราศาสตร์ไม่ได้ถูกยกขึ้นมาเป็นเกณฑ์ทดแทนการมองเห็น แต่มันถูกนำมาใช้เป็น “ตัวกรอง” เฉพาะในกรณีที่คำอ้างการเห็นนั้นขัดกับผลการคำนวณที่ยืนยันความแม่นยำอย่างเด็ดขาด เมื่อใดที่ผลการคำนวณชี้ชัดว่า “เป็นไปไม่ได้ที่จะมองเห็น” ก็ไม่อาจยึดถือการเห็นนั้นได้ และคำให้การของผู้ที่อ้างว่าเห็นจันทร์เสี้ยวก็ย่อมไม่ถูกรับพิจารณา เพราะคำให้การนั้นขัดกับสิ่งที่เป็นไปไม่ได้ ดังที่ท่านอัซซุบกีย์ได้เน้นย้ำว่า สิ่งที่บรรดานักฟิกฮ์กล่าวว่า “ไม่อนุญาตให้นำการคำนวณมาเป็นบรรทัดฐาน” นั้น พวกเขากำลังอ้างถึงกรณีที่พยายามใช้การคำนวณเพื่อเริ่มเดือนใหม่แทนการมองเห็น ซึ่งเป็นคนละบริบทกับกรณีที่ผลการคำนวณถูกนำมาใช้เพื่อดักจับและปฏิเสธคำพยานที่เป็นไปไม่ได้ทางธรรมชาติ และนักนิติศาสตร์จะต้องไม่สับสนปะปนสองกรณีนี้เข้าด้วยกัน</li>
+        <li><strong>ประเด็นที่สอง ว่าด้วยลำดับชั้นของหลักฐาน:</strong> ทัศนะนี้ตั้งอยู่บนหลักญาณวิทยา “หลักการจัดลำดับชั้นของหลักฐาน” พื้นฐานของอุศูลุลฟิกฮ์ที่ว่า “ความแน่นอน” (ก็อฏอีย์) ย่อมมีน้ำหนักเหนือกว่า “ความน่าจะเป็น” (ซอนนีย์) เสมอ ผลการคำนวณที่ยืนยันเด็ดขาดว่าเป็นไปไม่ได้ที่จะมองเห็นดวงจันทร์นั้น มีสถานะเป็นความแน่นอนที่ถูกสร้างขึ้นบนกระบวนการสังเกตการณ์ทางดาราศาสตร์ การทดลองที่สั่งสมมาอย่างยาวนาน และการคำนวณวิถีโคจรที่พิสูจน์ความถูกต้องซ้ำแล้วซ้ำเล่า ในขณะที่คำให้การของพยานบุคคลนั้น ไม่ว่าจะเป็นผู้มีคุณธรรมเพียงใดก็ตาม ยังคงอยู่ในขั้นของความน่าจะเป็น เพราะมนุษย์มีโอกาสผิดพลาดได้เสมอ ไม่ว่าจากความตาฝาด ความสับสน ความเขลา หรือแรงจูงใจแอบแฝง ดังที่ท่านอัซซุบกีย์ได้กล่าวไว้ว่า ข้อสมมติฐานว่าพยานอาจพูดเท็จหรือตาฝาดไป ย่อมมีน้ำหนักและเป็นไปได้มากกว่าข้อสมมติฐานว่าเกิดการฉีกกฎธรรมชาติขึ้น ดังนั้น สิ่งที่เป็นไปไม่ได้ตามกฎธรรมชาติ ย่อมมีสถานะเดียวกับสิ่งที่เป็นไปไม่ได้ตามหลักตรรกะ ในแง่ของการไม่ยอมรับคำพยาน</li>
+        <li><strong>ประเด็นที่สาม ว่าด้วยเงื่อนไขของพยาน:</strong> ทัศนะนี้ไม่ได้สร้างเงื่อนไขใหม่ขึ้นมา หากแต่กลับยืนยันเงื่อนไขที่มีอยู่แล้วในหลักนิติศาสตร์ว่าด้วยการเป็นพยาน นั่นคือ สิ่งที่ถูกนำมาเบิกความนั้นต้องมีความเป็นไปได้ในทางปฏิบัติ ในทางตรรกะ และในทางนิติศาสตร์ ชะรีอะฮ์ไม่เคยวางหลักว่า “คำให้การของพยานสองคนย่อมต้องถูกรับไว้เสมอ” โดยไม่คำนึงว่าเรื่องที่พวกเขาเป็นพยานนั้นเป็นความจริงหรือเป็นความเท็จ จำนวนพยานจึงไม่ใช่เกณฑ์อัตโนมัติที่ล้มล้างการตรวจสอบความถูกต้องของคำให้การ ท่านอัลมุฏีอีย์ยังได้เสริมว่า ในเมื่อแม้แต่การให้คำรับสารภาพ ซึ่งเป็นเพียงการแจ้งข้อเท็จจริงเกี่ยวกับตนเองยังมีเงื่อนไขว่าต้องตั้งอยู่บนพื้นฐานของความเป็นไปได้ แล้วจะนับประสาอะไรกับการให้การพยาน ซึ่งคำตัดสินจะส่งผลกระทบและผูกพันต่อบุคคลอื่น ยิ่งกว่านั้น ท่านอัลมุฏีอีย์ยังได้ชี้ถึงบรรทัดฐานที่มีอยู่แล้วในมัสฮับหะนะฟีย์และมาลิกีย์ที่กำหนดให้ปัดตกคำพยานในกรณีที่คนกลุ่มเล็กอ้างว่าเห็นจันทร์เสี้ยว แต่คนกลุ่มใหญ่ที่มีจำนวนมากกว่าหลายเท่ากลับไม่เห็น ซึ่งในกรณีนั้นเหตุผลของการปัดตกคำพยานเป็นเพียง “ข้อสันนิษฐานอันมีน้ำหนัก” ว่าเกิดความผิดพลาด แต่สำหรับกรณีที่การคำนวณทางดาราศาสตร์ยืนยันเด็ดขาดว่าเป็นไปไม่ได้ เหตุผลกลับยิ่งหนักแน่นกว่า เพราะมีหลักฐานอันเด็ดขาดหรือใกล้เคียงกับความเด็ดขาดรองรับ การปฏิเสธพยานในกรณีหลังนี้จึงย่อมสมเหตุสมผลยิ่งกว่าอย่างไม่ต้องสงสัย</li>
+        <li><strong>ประเด็นที่สี่ ว่าด้วยหน้าที่ของผู้พิพากษา:</strong> ทัศนะนี้ยังตอกย้ำว่า หน้าที่ของผู้พิพากษาในการรับพยานจันทร์เสี้ยวนั้นไม่ใช่เรื่องง่ายดายที่เพียงแค่มีพยานสองคนมาให้การก็ถือว่าสำเร็จ หากเป็นเช่นนั้น ใครก็คงทำหน้าที่ผู้พิพากษาได้ แต่จริงแล้วมันต้องอาศัยการพินิจวิเคราะห์อย่างรอบด้าน ดังที่ท่านอัซซุบกีย์ได้วางเกณฑ์ไว้ว่า ผู้พิพากษาจะต้องตรวจสอบสถานภาพของพยาน ความเที่ยงธรรมและความตื่นรู้ของพวกเขา ความบริสุทธิ์จากข้อกังขาและมลทิน ความสมบูรณ์ของประสาทสัมผัสและความคมชัดของสายตา ความปลอดโปร่งของเส้นขอบฟ้าและตำแหน่งของจันทร์เสี้ยวจากสิ่งรบกวนที่อาจบดบังทัศนียภาพ ตลอดจนต้องมีความรู้เกี่ยวกับตำแหน่งที่จันทร์เสี้ยวจะปรากฏขึ้น และสิ่งที่การคำนวณทางดาราศาสตร์ได้ชี้ขาดถึงความเป็นไปได้หรือเป็นไปไม่ได้ในการมองเห็น ทั้งหมดนี้ต้องเป็นสิ่งที่สถิตอยู่อย่างมั่นคงในกระบวนทัศน์ของผู้พิพากษาก่อนที่จะตัดสินใจรับหรือปฏิเสธคำพยาน และนี่คือเหตุผลที่มีการแต่งตั้งผู้พิพากษาขึ้นมา เพราะงานของผู้พิพากษาคือการวินิจฉัย ไม่ใช่การเซ็นรับรองอัตโนมัติ</li>
+        <li><strong>ประเด็นที่ห้า การประสานระหว่างชะรีอะฮ์กับดาราศาสตร์:</strong> แนวทางนี้จึงเป็นการประสานอย่างลงตัวระหว่างหลักเดิม ซึ่งก็คือการเห็นด้วยสายตาตามที่ชะรีอะฮ์บัญญัติให้เป็นฐานของประเด็นนี้ กับการคำนวณทางดาราศาสตร์ที่ในยุคปัจจุบันมีความแม่นยำถึงระดับแน่ชัด โดยไม่ต้องเลือกข้างระหว่างสองสิ่งนี้ เพราะแต่ละฝ่ายมีบทบาทของตนเอง การมองเห็นเป็นเกณฑ์ยืนยัน ส่วนการคำนวณเป็นเครื่องมือตรวจสอบ ท่านอัซซุบกีย์เองได้ย้ำว่า ชะรีอะฮ์ไม่ได้ปฏิเสธวิชาคำนวณโดยสิ้นเชิง ซึ่งมันจะเป็นเช่นนั้นได้อย่างไรในเมื่อการคำนวณถูกนำมาใช้ปฏิบัติจริงในหลักศาสนา เช่น เรื่องการแบ่งมรดก (ฟะรออิฎ) และในตัวบทหะดีษที่ว่า “เราเขียนไม่เป็นและคำนวณไม่ได้” นั้น ในเมื่อการเขียนไม่ใช่สิ่งที่ถูกสั่งห้าม การคำนวณก็ไม่ใช่สิ่งที่ถูกสั่งห้ามเช่นเดียวกัน เจตนารมณ์ที่แท้จริงของหะดีษคือการจัดระเบียบข้อตัดสินเรื่องการเข้าเดือนใหม่ด้วยแนวทางที่ประจักษ์ชัดและเข้าถึงได้ง่าย คือ “การเห็น” หรือ “การนับครบ 30 วัน” ไม่ใช่การปฏิเสธศาสตร์แห่งการคำนวณโดยตัวมันเอง</li>
+        <li><strong>ประเด็นที่หก กรณีศึกษาร่วมสมัย:</strong> เมื่อนำหลักการข้างต้นมาประยุกต์กับกรณีเย็นวันพฤหัสบดีที่ 19 มีนาคม พ.ศ. 2569 ในบริบทของประเทศไทย ภาพก็ยิ่งชัดขึ้น ดวงจันทร์ดับเกิดขึ้นเวลาประมาณ 08:23 น. ตามเวลาไทย ดวงจันทร์จึงมีอายุเพียงประมาณ 10 ชั่วโมง ณ เวลาตะวันตกดิน และอยู่เหนือขอบฟ้าหลังอาทิตย์ตกราว 16 ถึง 19 นาทีเท่านั้น ทั้งยังอยู่ต่ำในบริเวณที่มีแสงสนธยา ความชื้น และมลภาวะในอากาศเจือปนอยู่หนาแน่น ข้อมูลจากแหล่งดาราศาสตร์สากลหลายแหล่ง ไม่ว่าจะเป็น UK HM Nautical Almanac Office หรือ International Astronomy Centre ล้วนยืนยันตรงกันว่า เอเชียตะวันออกเฉียงใต้ไม่ได้อยู่ในเขตที่เป็นไปได้สำหรับการเห็นจันทร์เสี้ยวในเย็นวันดังกล่าว แม้แต่ด้วยกล้องโทรทรรศน์ขนาดเล็ก ดังนั้น หากมีผู้ใดกล่าวอ้างว่าเห็นจันทร์เสี้ยวด้วยตาเปล่าในประเทศไทยในเย็นวันนั้น ก็เป็นกรณีที่เข้าข่ายสิ่งที่อัซซุบกีย์อธิบายไว้อย่างชัดแจ้ง คือ คำอ้างที่ขัดกับ “ความเป็นไปไม่ได้” ซึ่งยืนยันโดยผลการคำนวณที่แน่นอนเด็ดขาด</li>
+        <li><strong>ประเด็นสุดท้าย สถานะทางวิชาการของทัศนะนี้:</strong> การที่ท่านอัซซุบกีย์กล้าประกาศว่านี่คืออิจญ์ติฮาดใหม่ที่ท่านไม่พบจากบรรดาปราชญ์รุ่นก่อน แสดงให้เห็นถึงความซื่อสัตย์ทางวิชาการ ท่านไม่ได้อ้างว่ามีมติเอกฉันท์ (อิจญ์มาอ์) หรือบิดเบือนคำพูดของผู้อื่นมาสนับสนุน หากแต่ยอมรับอย่างเปิดเผยว่าเป็นการวิเคราะห์และสกัดหลักนิติศาสตร์ขึ้นมาใหม่ ด้วยเหตุผลที่ท่านเชื่อว่าอยู่ในขอบข่ายของความแน่นอนเด็ดขาด ขณะเดียวกัน การที่ท่านอัลมุฏีอีย์ในยุคหลังได้สานต่อและเสริมเหตุผลอย่างเป็นระบบ ทั้งในแง่ของการเปรียบเทียบกับบรรทัดฐานที่มีอยู่แล้วในมัสฮับหะนะฟีย์และมาลิกีย์ การอ้างหลักอุศูลว่าด้วยเงื่อนไขของหะดีษมุตะวาติร และการชี้ว่ากรณีนี้จัดอยู่ในหมวดหมู่ของ “หลักฐานในมือผู้พิพากษา” ไม่ใช่ “การคำนวณขัดแย้งกับคำพยาน” ก็ยิ่งยืนยันว่าหลักนิติศาสตร์ที่อัซซุบกีย์วางไว้นั้นไม่ใช่ทัศนะที่โดดเดี่ยว หากแต่มีรากฐานมั่นคงในทฤษฎีแห่งการเป็นพยาน (ชะฮาดะฮ์) และหลักอุศูลุลฟิกฮ์ จึงสมควรได้รับการศึกษาและนำมาประยุกต์ใช้ในบริบทร่วมสมัยที่วิทยาการดาราศาสตร์มีความแม่นยำสูงยิ่งขึ้น</li>
+      </ol>
 
-      <p><strong>ประเด็นที่หนึ่ง ว่าด้วยหลักฐานของการแยกแยะ:</strong> การคำนวณทางดาราศาสตร์ถูกนำมาใช้ในฐานะเครื่องมือ “เพื่อปฏิเสธ” ไม่ใช่ “เพื่อยืนยัน” ดังกล่าวนี้คือจุดแกนกลางที่สำคัญที่สุดของทัศนะนี้ กล่าวคือ หลักที่ถือเป็นมาตรฐานยังคงเป็น “การมองเห็นจันทร์เสี้ยวด้วยสายตา” ตามที่ชะรีอะฮ์ได้บัญญัติไว้เป็นสำคัญ การคำนวณทางดาราศาสตร์ไม่ได้ถูกยกขึ้นมาเป็นเกณฑ์ทดแทนการมองเห็น แต่มันถูกนำมาใช้เป็น “ตัวกรอง” เฉพาะในกรณีที่คำอ้างการเห็นนั้นขัดกับผลการคำนวณที่ยืนยันความแม่นยำอย่างเด็ดขาด เมื่อใดที่ผลการคำนวณชี้ชัดว่า “เป็นไปไม่ได้ที่จะมองเห็น” ก็ไม่อาจยึดถือการเห็นนั้นได้ และคำให้การของผู้ที่อ้างว่าเห็นจันทร์เสี้ยวก็ย่อมไม่ถูกรับพิจารณา เพราะคำให้การนั้นขัดกับสิ่งที่เป็นไปไม่ได้ ดังที่ท่านอัซซุบกีย์ได้เน้นย้ำว่า สิ่งที่บรรดานักฟิกฮ์กล่าวว่า “ไม่อนุญาตให้นำการคำนวณมาเป็นบรรทัดฐาน” นั้น พวกเขากำลังอ้างถึงกรณีที่พยายามใช้การคำนวณเพื่อเริ่มเดือนใหม่แทนการมองเห็น ซึ่งเป็นคนละบริบทกับกรณีที่ผลการคำนวณถูกนำมาใช้เพื่อดักจับและปฏิเสธคำพยานที่เป็นไปไม่ได้ทางธรรมชาติ และนักนิติศาสตร์จะต้องไม่สับสนปะปนสองกรณีนี้เข้าด้วยกัน</p>
-
-      <p><strong>ประเด็นที่สอง ว่าด้วยลำดับชั้นของหลักฐาน:</strong> ทัศนะนี้ตั้งอยู่บนหลักญาณวิทยา “หลักการจัดลำดับชั้นของหลักฐาน” พื้นฐานของอุศูลุลฟิกฮ์ที่ว่า “ความแน่นอน” (ก็อฏอีย์) ย่อมมีน้ำหนักเหนือกว่า “ความน่าจะเป็น” (ซอนนีย์) เสมอ ผลการคำนวณที่ยืนยันเด็ดขาดว่าเป็นไปไม่ได้ที่จะมองเห็นดวงจันทร์นั้น มีสถานะเป็นความแน่นอนที่ถูกสร้างขึ้นบนกระบวนการสังเกตการณ์ทางดาราศาสตร์ การทดลองที่สั่งสมมาอย่างยาวนาน และการคำนวณวิถีโคจรที่พิสูจน์ความถูกต้องซ้ำแล้วซ้ำเล่า ในขณะที่คำให้การของพยานบุคคลนั้น ไม่ว่าจะเป็นผู้มีคุณธรรมเพียงใดก็ตาม ยังคงอยู่ในขั้นของความน่าจะเป็น เพราะมนุษย์มีโอกาสผิดพลาดได้เสมอ ไม่ว่าจากความตาฝาด ความสับสน ความเขลา หรือแรงจูงใจแอบแฝง ดังที่ท่านอัซซุบกีย์ได้กล่าวไว้ว่า ข้อสมมติฐานว่าพยานอาจพูดเท็จหรือตาฝาดไป ย่อมมีน้ำหนักและเป็นไปได้มากกว่าข้อสมมติฐานว่าเกิดการฉีกกฎธรรมชาติขึ้น ดังนั้น สิ่งที่เป็นไปไม่ได้ตามกฎธรรมชาติ ย่อมมีสถานะเดียวกับสิ่งที่เป็นไปไม่ได้ตามหลักตรรกะ ในแง่ของการไม่ยอมรับคำพยาน</p>
-
-      <p><strong>ประเด็นที่สาม ว่าด้วยเงื่อนไขของพยาน:</strong> ทัศนะนี้ไม่ได้สร้างเงื่อนไขใหม่ขึ้นมา หากแต่กลับยืนยันเงื่อนไขที่มีอยู่แล้วในหลักนิติศาสตร์ว่าด้วยการเป็นพยาน นั่นคือ สิ่งที่ถูกนำมาเบิกความนั้นต้องมีความเป็นไปได้ในทางปฏิบัติ ในทางตรรกะ และในทางนิติศาสตร์ ชะรีอะฮ์ไม่เคยวางหลักว่า “คำให้การของพยานสองคนย่อมต้องถูกรับไว้เสมอ” โดยไม่คำนึงว่าเรื่องที่พวกเขาเป็นพยานนั้นเป็นความจริงหรือเป็นความเท็จ จำนวนพยานจึงไม่ใช่เกณฑ์อัตโนมัติที่ล้มล้างการตรวจสอบความถูกต้องของคำให้การ ท่านอัลมุฏีอีย์ยังได้เสริมว่า ในเมื่อแม้แต่การให้คำรับสารภาพ ซึ่งเป็นเพียงการแจ้งข้อเท็จจริงเกี่ยวกับตนเองยังมีเงื่อนไขว่าต้องตั้งอยู่บนพื้นฐานของความเป็นไปได้ แล้วจะนับประสาอะไรกับการให้การพยาน ซึ่งคำตัดสินจะส่งผลกระทบและผูกพันต่อบุคคลอื่น ยิ่งกว่านั้น ท่านอัลมุฏีอีย์ยังได้ชี้ถึงบรรทัดฐานที่มีอยู่แล้วในมัสฮับหะนะฟีย์และมาลิกีย์ที่กำหนดให้ปัดตกคำพยานในกรณีที่คนกลุ่มเล็กอ้างว่าเห็นจันทร์เสี้ยว แต่คนกลุ่มใหญ่ที่มีจำนวนมากกว่าหลายเท่ากลับไม่เห็น ซึ่งในกรณีนั้นเหตุผลของการปัดตกคำพยานเป็นเพียง “ข้อสันนิษฐานอันมีน้ำหนัก” ว่าเกิดความผิดพลาด แต่สำหรับกรณีที่การคำนวณทางดาราศาสตร์ยืนยันเด็ดขาดว่าเป็นไปไม่ได้ เหตุผลกลับยิ่งหนักแน่นกว่า เพราะมีหลักฐานอันเด็ดขาดหรือใกล้เคียงกับความเด็ดขาดรองรับ การปฏิเสธพยานในกรณีหลังนี้จึงย่อมสมเหตุสมผลยิ่งกว่าอย่างไม่ต้องสงสัย</p>
-
-      <p><strong>ประเด็นที่สี่ ว่าด้วยหน้าที่ของผู้พิพากษา:</strong> ทัศนะนี้ยังตอกย้ำว่า หน้าที่ของผู้พิพากษาในการรับพยานจันทร์เสี้ยวนั้นไม่ใช่เรื่องง่ายดายที่เพียงแค่มีพยานสองคนมาให้การก็ถือว่าสำเร็จ หากเป็นเช่นนั้น ใครก็คงทำหน้าที่ผู้พิพากษาได้ แต่จริงแล้วมันต้องอาศัยการพินิจวิเคราะห์อย่างรอบด้าน ดังที่ท่านอัซซุบกีย์ได้วางเกณฑ์ไว้ว่า ผู้พิพากษาจะต้องตรวจสอบสถานภาพของพยาน ความเที่ยงธรรมและความตื่นรู้ของพวกเขา ความบริสุทธิ์จากข้อกังขาและมลทิน ความสมบูรณ์ของประสาทสัมผัสและความคมชัดของสายตา ความปลอดโปร่งของเส้นขอบฟ้าและตำแหน่งของจันทร์เสี้ยวจากสิ่งรบกวนที่อาจบดบังทัศนียภาพ ตลอดจนต้องมีความรู้เกี่ยวกับตำแหน่งที่จันทร์เสี้ยวจะปรากฏขึ้น และสิ่งที่การคำนวณทางดาราศาสตร์ได้ชี้ขาดถึงความเป็นไปได้หรือเป็นไปไม่ได้ในการมองเห็น ทั้งหมดนี้ต้องเป็นสิ่งที่สถิตอยู่อย่างมั่นคงในกระบวนทัศน์ของผู้พิพากษาก่อนที่จะตัดสินใจรับหรือปฏิเสธคำพยาน และนี่คือเหตุผลที่มีการแต่งตั้งผู้พิพากษาขึ้นมา เพราะงานของผู้พิพากษาคือการวินิจฉัย ไม่ใช่การเซ็นรับรองอัตโนมัติ</p>
-
-      <p><strong>ประเด็นที่ห้า การประสานระหว่างชะรีอะฮ์กับดาราศาสตร์:</strong> แนวทางนี้จึงเป็นการประสานอย่างลงตัวระหว่างหลักเดิม ซึ่งก็คือการเห็นด้วยสายตาตามที่ชะรีอะฮ์บัญญัติให้เป็นฐานของประเด็นนี้ กับการคำนวณทางดาราศาสตร์ที่ในยุคปัจจุบันมีความแม่นยำถึงระดับแน่ชัด โดยไม่ต้องเลือกข้างระหว่างสองสิ่งนี้ เพราะแต่ละฝ่ายมีบทบาทของตนเอง การมองเห็นเป็นเกณฑ์ยืนยัน ส่วนการคำนวณเป็นเครื่องมือตรวจสอบ ท่านอัซซุบกีย์เองได้ย้ำว่า ชะรีอะฮ์ไม่ได้ปฏิเสธวิชาคำนวณโดยสิ้นเชิง ซึ่งมันจะเป็นเช่นนั้นได้อย่างไรในเมื่อการคำนวณถูกนำมาใช้ปฏิบัติจริงในหลักศาสนา เช่น เรื่องการแบ่งมรดก (ฟะรออิฎ) และในตัวบทหะดีษที่ว่า “เราเขียนไม่เป็นและคำนวณไม่ได้” นั้น ในเมื่อการเขียนไม่ใช่สิ่งที่ถูกสั่งห้าม การคำนวณก็ไม่ใช่สิ่งที่ถูกสั่งห้ามเช่นเดียวกัน เจตนารมณ์ที่แท้จริงของหะดีษคือการจัดระเบียบข้อตัดสินเรื่องการเข้าเดือนใหม่ด้วยแนวทางที่ประจักษ์ชัดและเข้าถึงได้ง่าย คือ “การเห็น” หรือ “การนับครบ 30 วัน” ไม่ใช่การปฏิเสธศาสตร์แห่งการคำนวณโดยตัวมันเอง</p>
-
-      <p><strong>ประเด็นที่หก กรณีศึกษาร่วมสมัย:</strong> เมื่อนำหลักการข้างต้นมาประยุกต์กับกรณีเย็นวันพฤหัสบดีที่ 19 มีนาคม พ.ศ. 2569 ในบริบทของประเทศไทย ภาพก็ยิ่งชัดขึ้น ดวงจันทร์ดับเกิดขึ้นเวลาประมาณ 08:26 น. ตามเวลาไทย ดวงจันทร์จึงมีอายุเพียงประมาณ 10 ชั่วโมง ณ เวลาตะวันตกดิน และอยู่เหนือขอบฟ้าหลังอาทิตย์ตกราว 16 ถึง 19 นาทีเท่านั้น ทั้งยังอยู่ต่ำในบริเวณที่มีแสงสนธยา ความชื้น และมลภาวะในอากาศเจือปนอยู่หนาแน่น ข้อมูลจากแหล่งดาราศาสตร์สากลหลายแหล่ง ไม่ว่าจะเป็น UK HM Nautical Almanac Office หรือ International Astronomy Centre ล้วนยืนยันตรงกันว่า เอเชียตะวันออกเฉียงใต้ไม่ได้อยู่ในเขตที่เป็นไปได้สำหรับการเห็นจันทร์เสี้ยวในเย็นวันดังกล่าว แม้แต่ด้วยกล้องโทรทรรศน์ขนาดเล็ก ดังนั้น หากมีผู้ใดกล่าวอ้างว่าเห็นจันทร์เสี้ยวด้วยตาเปล่าในประเทศไทยในเย็นวันนั้น ก็เป็นกรณีที่เข้าข่ายสิ่งที่อัซซุบกีย์อธิบายไว้อย่างชัดแจ้ง คือ คำอ้างที่ขัดกับ “ความเป็นไปไม่ได้” ซึ่งยืนยันโดยผลการคำนวณที่แน่นอนเด็ดขาด</p>
-
-      <p><strong>ประเด็นสุดท้าย สถานะทางวิชาการของทัศนะนี้:</strong> การที่ท่านอัซซุบกีย์กล้าประกาศว่านี่คืออิจญ์ติฮาดใหม่ที่ท่านไม่พบจากบรรดาปราชญ์รุ่นก่อน แสดงให้เห็นถึงความซื่อสัตย์ทางวิชาการ ท่านไม่ได้อ้างว่ามีมติเอกฉันท์ (อิจญ์มาอ์) หรือบิดเบือนคำพูดของผู้อื่นมาสนับสนุน หากแต่ยอมรับอย่างเปิดเผยว่าเป็นการวิเคราะห์และสกัดหลักนิติศาสตร์ขึ้นมาใหม่ ด้วยเหตุผลที่ท่านเชื่อว่าอยู่ในขอบข่ายของความแน่นอนเด็ดขาด ขณะเดียวกัน การที่ท่านอัลมุฏีอีย์ในยุคหลังได้สานต่อและเสริมเหตุผลอย่างเป็นระบบ ทั้งในแง่ของการเปรียบเทียบกับบรรทัดฐานที่มีอยู่แล้วในมัสฮับหะนะฟีย์และมาลิกีย์ การอ้างหลักอุศูลว่าด้วยเงื่อนไขของหะดีษมุตะวาติร และการชี้ว่ากรณีนี้จัดอยู่ในหมวดหมู่ของ “หลักฐานในมือผู้พิพากษา” ไม่ใช่ “การคำนวณขัดแย้งกับคำพยาน” ก็ยิ่งยืนยันว่าหลักนิติศาสตร์ที่อัซซุบกีย์วางไว้นั้นไม่ใช่ทัศนะที่โดดเดี่ยว หากแต่มีรากฐานมั่นคงในทฤษฎีแห่งการเป็นพยาน (ชะฮาดะฮ์) และหลักอุศูลุลฟิกฮ์ จึงสมควรได้รับการศึกษาและนำมาประยุกต์ใช้ในบริบทร่วมสมัยที่วิทยาการดาราศาสตร์มีความแม่นยำสูงยิ่งขึ้น</p>
-
-      <div class="references">
-        <h2 class="ref-title" id="section-refs" lang="th">บรรณานุกรม</h2>
-        <ul class="ref-list" lang="ar" dir="rtl">
-          <li>ابن كثير، عماد الدين إسماعيل. <strong>البداية والنهاية</strong>. بيروت: دار إحياء التراث العربي.</li>
-          <li>السبكي، تقي الدين. <strong>فتاوى السبكي</strong>. بيروت: دار المعرفة.</li>
-          <li>المطيعي، محمد بخيت. <strong>إرشاد أهل الملة إلى إثبات الأهلة</strong>. مصر: المطبعة السلفية.</li>
-          <li>الرملي، شمس الدين محمد. <strong>نهاية المحتاج</strong>. بيروت: دار الفكر.</li>
-          <li>البخاري، محمد بن إسماعيل. <strong>صحيح البخاري</strong>. بيروت: دار طوق النجاة.</li>
-        </ul>
+    <div class="citation-box" id="citation-area">
+      <div class="citation-label">อ้างอิงบทความนี้</div>
+      <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/moon-sighting-vs-astronomy.html</div>
+      <div class="citation-footer">
+        <button class="copy-btn" onclick="copyCitation()">คัดลอกอ้างอิง</button>
       </div>
-
-      <div class="citation-box">
-        <div class="citation-label">การอ้างอิงบรรณานุกรม (Citation)</div>
-        <div class="citation-text" id="citationText">กองบรรณาธิการ. (2569). เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/moon-sighting-vs-astronomy.html</div>
-        <div class="citation-footer">
-          <button class="copy-btn" onclick="copyCitation()">คัดลอกอ้างอิง</button>
-        </div>
-      </div>
-
     </div>
 
-    <div class="social-share-container">
-      <h4 class="share-title">แบ่งปันบทความนี้:</h4>
-      <div class="share-buttons">
-        <a href="#" class="share-btn btn-facebook" onclick="shareToFacebook(event)" title="Share on Facebook">
-          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
-        <a href="#" class="share-btn btn-twitter" onclick="shareToTwitter(event)" title="Share on X (Twitter)">
-          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="#" class="share-btn btn-line" onclick="shareToLine(event)" title="Share on LINE">
-          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 3.963 8.874 9.542 9.616.745.158 1.761.488 2.023 1.134.238.583.155 1.492.074 2.062l-.208 1.255c-.063.398-.292 1.44 1.267.785 1.558-.654 8.411-4.945 10.126-8.541C23.633 14.28 24 12.39 24 10.304zm-15.654 3.013H4.492a.798.798 0 0 1-.796-.795v-4.14a.798.798 0 0 1 .796-.795h3.854a.799.799 0 0 1 .796.795v1.077c0 .438-.358.796-.796.796H5.856v1.472h2.49a.799.799 0 0 1 .796.795v1.076a.798.798 0 0 1-.796.718zm2.46-.718v-4.14a.799.799 0 0 1 .796-.795h.001a.799.799 0 0 1 .796.795v4.14a.799.799 0 0 1-.796.795h-.001a.798.798 0 0 1-.796-.795zm9.103 0v-4.14a.798.798 0 0 0-.795-.795h-1.096a.798.798 0 0 0-.796.795v2.85l-1.92-2.875a1.218 1.218 0 0 0-.256-.271.8.8 0 0 0-.54-.204h-1.077a.798.798 0 0 0-.795.795v4.14a.798.798 0 0 0 .795.795h1.095a.798.798 0 0 0 .795-.795v-2.85l1.921 2.875c.106.14.24.247.391.311a.795.795 0 0 0 .405.109h1.077c.438 0 .796-.358.796-.795z"/></svg>
-        </a>
-        <button class="share-btn btn-copy" onclick="copyArticleLink()" title="Copy Link">
-          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-        </button>
-      </div>
-      <div id="copyAlert" class="copy-alert">คัดลอกสำเร็จ!</div>
-    </div>
-  </article>
+  </div>
 
-</main>
-
-<section class="related-articles-section">
-  <div class="related-inner">
-    <h3 class="related-title">บทความวิชาการที่เกี่ยวข้อง</h3>
+  <div class="related-section">
+    <p class="related-title">บทความที่เกี่ยวข้อง</p>
     <div class="related-grid">
-      <a href="darurah-vs-hajah.html" class="related-card">
-        <span class="related-cat">นิติศาสตร์อิสลาม</span>
-        <h4 class="related-article-title">ขอบเขตและการซ้อนทับของหลักการ ‘เฎาะรูเราะฮ์’ และ ‘ฮาญะฮ์’ ในนิติศาสตร์อิสลาม</h4>
+      <a href="darurah-vs-hajah.html" class="related-card reveal">
+        <span class="related-article-category">นิติศาสตร์อิสลาม</span>
+        <h4 class="related-article-title">ขอบเขตและการซ้อนทับของหลักการ 'เฎาะรูเราะฮ์' และ 'ฮาญะฮ์' ในนิติศาสตร์อิสลาม</h4>
       </a>
-      <a href="consequences-theory-in-islam.html" class="related-card">
-        <span class="related-cat">นิติศาสตร์อิสลาม</span>
-        <h4 class="related-article-title">ทฤษฎีการพิจารณาผลลัพธ์บั้นปลายในนิติศาสตร์อิสลาม</h4>
-      </a>
-      <a href="usul-al-fiqh-foundation.html" class="related-card">
-        <span class="related-cat">นิติศาสตร์อิสลาม</span>
+      <a href="usul-al-fiqh-foundation.html" class="related-card reveal">
+        <span class="related-article-category">นิติศาสตร์อิสลาม</span>
         <h4 class="related-article-title">อุศูลุลฟิกฮ์ รากฐานและระเบียบวิธีแห่งศาสนบัญญัติอิสลาม</h4>
+      </a>
+      <a href="../kalam/tawhid-divine-attributes.html" class="related-card reveal">
+        <span class="related-article-category">เทววิทยาอิสลาม</span>
+        <h4 class="related-article-title">อัต-เตาฮีด และมิติแห่งคุณลักษณะของอัลลอฮ์</h4>
       </a>
     </div>
   </div>
-</section>
+
+</article>
+</main>
 
 <div id="footer-placeholder"></div>
 
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
 <button onclick="window.scrollTo({top:0, behavior:'smooth'})" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
 
 <script>
-// คำนวณแถบความคืบหน้าการอ่าน
-window.addEventListener('scroll', function() {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    const progressBar = document.getElementById('readingProgressBar');
-    if (progressBar) { progressBar.style.width = scrolled + '%'; }
-});
-
-// ฟังก์ชันคัดลอกอ้างอิงบรรณานุกรม
 function copyCitation() {
-    const citationText = document.getElementById('citationText').innerText;
-    navigator.clipboard.writeText(citationText).then(() => {
-        const copyAlert = document.getElementById('copyAlert');
-        const copyBtn = document.querySelector('.citation-box .copy-btn');
-        if (copyAlert) {
-            copyAlert.innerText = "คัดลอกอ้างอิงสำเร็จ! ✓";
-            copyAlert.classList.add('show');
-            setTimeout(() => { copyAlert.classList.remove('show'); }, 2000);
-        }
-        if (copyBtn) {
-            const originalHTML = copyBtn.innerHTML;
-            copyBtn.innerHTML = "คัดลอกแล้ว ✓";
-            setTimeout(() => { copyBtn.innerHTML = originalHTML; }, 2000);
-        }
-    }).catch(err => console.error('ไม่สามารถคัดลอกอ้างอิงได้:', err));
+  var t = document.getElementById('citation-text').textContent;
+  navigator.clipboard.writeText(t).then(function() {
+    var a = document.getElementById('copyAlert');
+    a.classList.add('show');
+    setTimeout(function() { a.classList.remove('show'); }, 2000);
+  });
 }
-
-// ฟังก์ชันคัดลอกลิงก์บทความ
-function copyArticleLink() {
-    navigator.clipboard.writeText(window.location.href).then(() => {
-        const copyAlert = document.getElementById('copyAlert');
-        if (copyAlert) {
-            copyAlert.innerText = "คัดลอกลิงก์สำเร็จ! ✓";
-            copyAlert.classList.add('show');
-            setTimeout(() => { copyAlert.classList.remove('show'); }, 2000);
-        }
-    });
+function changeFontSize(delta) {
+  var body = document.querySelector('.article-body');
+  var cur = parseFloat(getComputedStyle(body).fontSize);
+  if (delta === 0) { body.style.fontSize = ''; return; }
+  var next = Math.max(14, Math.min(28, cur + delta));
+  body.style.fontSize = next + 'px';
 }
+window.addEventListener('scroll', function() {
+  var prog = document.getElementById('readingProgressBar');
+  var btn = document.getElementById('backToTopBtn');
+  var s = document.documentElement.scrollTop || document.body.scrollTop;
+  var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  if (prog) prog.style.width = (s/h*100) + '%';
+  if (btn) btn.style.display = s > 400 ? 'block' : 'none';
+});
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
 </script>
-
-<script src="../../main.js?v=20260526"></script>
+<script src="../../main.js?v=20260527c" charset="UTF-8"></script>
 </body>
 </html>
