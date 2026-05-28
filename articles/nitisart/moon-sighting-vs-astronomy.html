@@ -31,7 +31,7 @@
 <link rel="apple-touch-icon" href="../../favicon.png?v=2">
 <link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
 <meta name="theme-color" content="#e3edf7">
-<link rel="stylesheet" href="../../article.css?v=20260527i">
+<link rel="stylesheet" href="../../article.css?v=20260528e">
 
 <style>
 body { position: relative; }
@@ -41,8 +41,6 @@ body { position: relative; }
   background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
 }
 
-.article-layout { max-width: none; margin: 0; padding: 0; }
-.article-content { width: 100%; max-width: 880px; margin: 0 auto; padding: 56px 24px 64px; }
 
 .article-body p, .lead-text {
   line-height: 2.0; margin-bottom: 24px; text-align: left;
@@ -178,33 +176,6 @@ body { position: relative; }
 .btn-tool:hover { color: #a01818; }
 .btn-tool.active { color: #a01818; font-weight: 700; }
 
-/* Article header — unified with category-page hero language */
-.article-header { margin: 8px 0 36px; }
-.article-eyebrow-rule {
-  width: 48px; height: 2px; background: var(--accent-color);
-  margin: 0 0 18px; border: 0;
-}
-.article-category {
-  display: block;
-  font-family: 'IBM Plex Sans Thai', sans-serif;
-  font-size: 12px; font-weight: 600; text-transform: uppercase;
-  letter-spacing: 0.2em; color: var(--accent-color); margin-bottom: 18px;
-}
-.article-main-title {
-  font-family: 'IBM Plex Sans Thai', sans-serif;
-  font-size: clamp(2rem, 4.6vw, 3.3rem);
-  font-weight: 400; color: var(--text-primary);
-  line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 22px;
-}
-.article-main-title em {
-  font-style: normal; font-weight: 700; color: var(--accent-color);
-}
-.article-meta-info {
-  display: flex; flex-wrap: wrap; gap: 8px 0; align-items: center;
-  font-family: 'IBM Plex Sans Thai', sans-serif;
-  font-size: 13px; color: var(--text-tertiary); margin-bottom: 0;
-}
-.meta-divider { margin: 0 10px; opacity: 0.4; }
 
 /* Related articles — editorial reading list (Part 6) */
 .related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
@@ -250,73 +221,6 @@ body { position: relative; }
 }
 #backToTopBtn:hover { transform: translateY(-3px); }
 
-/* ===== PART 1 — HERO IMAGE ON TOP ===== */
-.article-hero {
-  position: relative; width: 100%;
-  height: clamp(360px, 52vh, 560px);
-  overflow: hidden; background: #0a0907;
-}
-.article-hero-img {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  object-fit: cover; object-position: center;
-}
-.article-hero-overlay {
-  position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(to top, rgba(10,9,7,0.94) 0%, rgba(10,9,7,0.55) 40%, rgba(10,9,7,0.12) 72%, rgba(10,9,7,0) 100%);
-}
-.article-hero-inner {
-  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
-  max-width: 880px; margin: 0 auto; padding: 0 24px 46px; text-align: left;
-}
-.article-hero .article-eyebrow-rule { width: 48px; height: 2px; background: var(--accent-color); border: 0; margin: 0 0 18px; }
-.article-hero .article-category {
-  display: block; font-family: 'IBM Plex Sans Thai', sans-serif;
-  font-size: 12px; font-weight: 600; text-transform: uppercase;
-  letter-spacing: 0.2em; color: #ff6b6b; margin-bottom: 14px;
-  text-shadow: 0 1px 10px rgba(0,0,0,0.55);
-}
-.article-hero .article-main-title {
-  font-family: 'IBM Plex Sans Thai', sans-serif;
-  font-size: clamp(1.9rem, 4.4vw, 3.1rem); font-weight: 600;
-  color: #ffffff; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 16px;
-  text-shadow: 0 2px 24px rgba(0,0,0,0.65);
-}
-.article-hero .article-meta-info {
-  display: flex; flex-wrap: wrap; align-items: center; margin: 0;
-  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 13px;
-  color: rgba(245,241,234,0.9); text-shadow: 0 1px 10px rgba(0,0,0,0.55);
-}
-.article-hero .meta-divider { margin: 0 10px; opacity: 0.5; }
-
-/* ===== PART 2 — LIGHT EDITORIAL READING AREA (scoped) ===== */
-.article-light {
-  background: #faf6ee; color: #1a1612;
-  box-shadow: inset 0 10px 28px -12px rgba(0,0,0,0.5);
-}
-.article-light ::selection { background: rgba(160,24,24,0.15); }
-.article-light .article-body { font-size: 18px; }
-.article-light .article-body p,
-.article-light .lead-text { color: #1a1612; }
-.article-light .lead-text { font-weight: 500; }
-.article-light .ar-translation { color: #2e2620; }
-.article-light .article-h2 { color: #1a1612; border-bottom-color: rgba(0,0,0,0.1); }
-.article-light .ar-feature { color: #1a1612; background: rgba(0,0,0,0.03); }
-.article-light .ar-toggle > summary { color: #6e6354; border-bottom-color: rgba(0,0,0,0.18); }
-.article-light .ar-toggle > summary:hover,
-.article-light .ar-toggle[open] > summary { color: #a01818; }
-.article-light .ar-toggle .ar-block { color: #2e2620; border-right-color: rgba(160,24,24,0.5); }
-.article-light .article-summary li { color: #2e2620; }
-.article-light .article-summary li strong { color: #1a1612; }
-.article-light .article-body a { color: #a01818; text-decoration: none; }
-.article-light .article-body a:hover { text-decoration: underline; }
-.article-light .citation-box {
-  background: #f2ebdd; border: 1px solid rgba(0,0,0,0.08);
-  border-left: 4px solid #a01818; box-shadow: 0 8px 28px rgba(0,0,0,0.08);
-}
-.article-light .citation-label { color: #a01818; }
-.article-light .citation-text {
-  background: #fffdf8; color: #1a1612; border: 1px dashed rgba(0,0,0,0.18);
-}
 
 /* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
 .fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
@@ -332,9 +236,6 @@ body { position: relative; }
 .fn-back:hover { text-decoration: underline; }
 
 @media (max-width: 640px) {
-  .article-content { padding: 40px 20px 12px; }
-  .article-hero { height: clamp(300px, 46vh, 420px); }
-  .article-hero-inner { padding: 0 20px 32px; }
   .related-section { padding: 48px 20px 64px; }
   #backToTopBtn { bottom: 20px; right: 20px; }
   .article-summary { padding-left: 20px; }
@@ -347,38 +248,49 @@ body { position: relative; }
 <body id="article-page" class="ifp-tools-page" lang="th">
 
 <div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
 <div id="header-placeholder"></div>
 
-<main class="article-layout">
-
-<section class="article-hero">
-  <img class="article-hero-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Crescent_Moon.JPG?width=1600" alt="ภาพถ่ายจันทร์เสี้ยวบนท้องฟ้ายามค่ำคืน" loading="eager" fetchpriority="high">
-  <div class="article-hero-overlay" aria-hidden="true"></div>
-  <div class="article-hero-inner">
-    <hr class="article-eyebrow-rule">
-    <span class="article-category">นิติศาสตร์อิสลาม</span>
-    <h1 class="article-main-title">เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์</h1>
-    <div class="article-meta-info">
-      <span>โดย <strong>กองบรรณาธิการ</strong></span>
-      <span class="meta-divider">•</span>
-      <span>22 พฤษภาคม 2569</span>
-      <span class="meta-divider">•</span>
-      <span>อ่าน 15 นาที</span>
+<section class="art-hero">
+  <div class="art-hero-inner">
+    <h2 class="art-hero-display">
+      <span class="art-hero-br">นิติศาสตร์</span>
+      <span class="art-hero-br"><em>ฟิกฮ์</em></span>
+    </h2>
+    <div class="art-hero-meteors" aria-hidden="true">
+      <span class="meteor"></span><span class="meteor"></span><span class="meteor"></span><span class="meteor"></span><span class="meteor"></span>
     </div>
   </div>
 </section>
+<div class="art-hero-sep"></div>
 
-<div class="article-light">
-<article class="article-content">
+
+<article>
+<div class="article-wrap">
+
+  <a href="../../pages/nitisart.html" class="article-cat">นิติศาสตร์ / ฟิกฮ์</a>
+  <h1 class="article-title">เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์</h1>
+
+  <div class="article-meta">
+    <div>โดย <span>กองบรรณาธิการ</span></div>
+    <div>·</div>
+    <div>22 พฤษภาคม 2569</div>
+    <div>·</div>
+    <div>อ่าน 15 นาที</div>
+  </div>
 
   <div class="reading-tools">
-    <span class="tool-label">ขนาดตัวอักษร</span>
     <div class="tool-group">
-      <button class="btn-tool" onclick="changeFontSize(-2, this)">A−</button>
-      <span class="tool-div" aria-hidden="true">·</span>
-      <button class="btn-tool active" onclick="changeFontSize(0, this)">A</button>
-      <span class="tool-div" aria-hidden="true">·</span>
-      <button class="btn-tool" onclick="changeFontSize(2, this)">A+</button>
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
     </div>
   </div>
 
@@ -577,8 +489,8 @@ body { position: relative; }
       </ol>
     </section>
 
+</div>
 </article>
-</div><!-- /.article-light -->
 
   <div class="related-section">
     <h2 class="related-title">บทความที่เกี่ยวข้อง</h2>
@@ -601,12 +513,9 @@ body { position: relative; }
     </div>
   </div>
 
-</main>
-
 <div id="footer-placeholder"></div>
 
 <div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
-<button onclick="window.scrollTo({top:0, behavior:'smooth'})" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
 
 <script>
 function copyCitation() {
