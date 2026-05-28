@@ -664,8 +664,8 @@ html.dark-mode .idx-arrow { color: rgba(255,255,255,0.7); }
   display: none; position: fixed; bottom: 32px; right: 32px; z-index: 500;
   width: 48px; height: 48px;
   border: 1px solid var(--border-primary); border-radius: 50%;
-  background: rgba(10, 12, 16, 0.72); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  color: var(--text-secondary);
+  background: #1a1612;
+  color: #f5f1ea;
   box-shadow: 0 8px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.05);
   transition: all .35s cubic-bezier(.2,.7,.2,1); cursor: pointer;
   place-items: center;
@@ -676,7 +676,7 @@ html.dark-mode .idx-arrow { color: rgba(255,255,255,0.7); }
 }
 #backToTopBtn:hover {
   border-color: var(--gold); color: var(--gold);
-  background: rgba(10, 12, 16, 0.90);
+  background: #2a2118;
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(59,130,246,0.18), 0 8px 32px rgba(0,0,0,0.36);
 }
@@ -791,6 +791,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
   .cat-panel { height: 80vh; }
   .cat-panel-title { font-size: clamp(2.4rem, 9vw, 4rem); }
   .cat-panel-body { padding: 0 24px 48px; }
+  .quote-section { padding: 40px 0; }
 }
 </style>
 <script type="application/ld+json">
@@ -1128,7 +1129,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 
 <div id="footer-placeholder"></div>
 
-<script src="/main.js?v=20260528b" charset="UTF-8"></script>
+<script src="/main.js?v=20260528c" charset="UTF-8"></script>
 
 <script>
 /* ----- WEBGL FLUID EFFECT ----- */

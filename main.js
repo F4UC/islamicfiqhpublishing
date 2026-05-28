@@ -47,6 +47,15 @@ function updateThemeIcon(isDark) {
 // à¸ªà¸±à¹ˆà¸‡à¸£à¸±à¸™à¸˜à¸µà¸¡à¹€à¸šà¸·à¹‰à¸­à¸‡à¸•à¹‰à¸™à¸—à¸±à¸™à¸—à¸µà¸à¹ˆà¸­à¸™ DOM à¹‚à¸«à¸¥à¸”à¹€à¸•à¹‡à¸¡à¸—à¸µà¹ˆà¹€à¸žà¸·à¹ˆà¸­à¸¥à¸”à¸„à¸§à¸²à¸¡à¸à¸°à¸žà¸£à¸´à¸š
 applyTheme(isDarkModeActive);
 
+// Force light theme on pages where dark mode is not supported
+(function() {
+    var p = window.location.pathname;
+    var supportsTheme = (p === '/' || p === '/index.html' || p.startsWith('/articles/'));
+    if (!supportsTheme) {
+        document.documentElement.classList.remove('dark-mode');
+    }
+})();
+
 // The animated navy subpage surface is retired: category pages are fixed-dark
 // and article/tool pages use pure black/white. Ensure no surface is applied.
 function installSubpageSurface() {
@@ -73,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
 
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260528b')
+    fetch('/components/header.html?v=20260528c')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -89,6 +98,16 @@ document.addEventListener("DOMContentLoaded", function() {
                     applyTheme(!isDarkCurrently);
                 });
             }
+
+            // --- Hide theme toggle on pages that don't support dark mode ---
+            (function() {
+                var p = window.location.pathname;
+                var supportsTheme = (p === '/' || p === '/index.html' || p.startsWith('/articles/'));
+                if (!supportsTheme) {
+                    var tBtn = document.getElementById('themeToggleBtn');
+                    if (tBtn) tBtn.style.display = 'none';
+                }
+            })();
 
             // --- ระบบปุ่มเมนูมือถือ (Hamburger) ---
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -551,7 +570,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // สั่งโหลดไฟล์ Footer
-    fetch('/components/footer.html?v=20260528b')
+    fetch('/components/footer.html?v=20260528c')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
