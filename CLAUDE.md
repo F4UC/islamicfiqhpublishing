@@ -23,6 +23,7 @@
 * **กฎข้อที่ 10:** การใส่คำสดุดีท้ายนามปราชญ์ (เช่น เราะหิมะฮุลลอฮ์, เราะฎิยัลลอฮุอันฮุ) ให้วางต่อท้ายชื่อได้ทันที **ห้ามใส่วงเล็บครอบคำสดุดีโดยเด็ดขาด** แม้จะวางคู่กับปีเสียชีวิตก็ตาม
 * **กฎข้อที่ 11:** การทับศัพท์คำนามภาษาอาหรับที่มี อัล- (ال) นำหน้า ให้สะกดตามการเชื่อมสระและเสียงพยัญชนะชัมซียะฮ์อย่างถูกต้อง ยกเว้นคำว่า **"ชะรีอะฮ์"** ให้ตัดคำว่า "อัช" ออกไป เน้นเฉพาะคำนี้เท่านั้น
 * **กฎข้อที่ 12:** การถอดเสียงชื่อเฉพาะทางวิชาการและชื่อปราชญ์ ต้องอิงตามอักขรวิธีภาษาอาหรับมาตรฐาน (เช่น อัลเฆาะซาลีย์, อัลมาตูรีดีย์, อัซซุบกีย์) และหลีกเลี่ยงการสะกดว่า "ท่านอิมาม" หรือ "อิมาม" ให้ใช้คำว่า "อิหม่าม" แทนในทุกกรณี
+* **กฎข้อที่ 12.1:** **[การทับศัพท์คำว่า صحيح]** การถอดเสียงคำว่า **صحيح** (Sahih) เป็นภาษาไทย ต้องสะกดว่า **"ศอเฮี้ยะฮ์"** เท่านั้น (เช่น ศอเฮี้ยะฮ์อัลบุคอรีย์, ศอเฮี้ยะฮ์มุสลิม) **ห้ามสะกดว่า "ศ่อเหี้ยห์" โดยเด็ดขาด** และให้ใช้รูปแบบนี้อย่างสม่ำเสมอในเนื้อหาทั้งหมดในอนาคต
 * **กฎข้อที่ 13:** **[ช่องไฟคำทับศัพท์]** คำศัพท์เทคนิคทางศาสนาที่ทับศัพท์มา เมื่อนำมาประกอบในประโยคภาษาไทย **ห้ามเว้นวรรคหน้า-หลังเด็ดขาด** (เช่น ให้เขียนว่า `ฐานหลักของชะรีอะฮ์ในประเด็นนี้` ห้ามเขียนแยกเป็น `ฐานหลักของ ชะรีอะฮ์ ในประเด็นนี้`)
 * **กฎข้อที่ 14:** **[การเลือกใช้คำเชื่อม]** ห้ามใช้คำเชื่อมโบราณเช่นคำว่า **"ทว่า"** ให้เปลี่ยนไปใช้คำว่า **"แต่"** แทนในทุกกรณี เพื่อความกระชับของภาษาวิชาการ
 * **กฎข้อที่ 15:** การอ้างอิงคำพูดของนักวิชาการ, ตัวบทหะดีษ หรือคำแปล ต้องใช้เครื่องหมายอัญประกาศแบบโค้ง **`"..."`** เท่านั้น ห้ามใช้แบบตรง (`"..."`) เพื่อความพรีเมียม
@@ -146,6 +147,7 @@
 * **Rule 10:** Islamic honorifics (e.g., Rahimahullah) must follow the name **without parentheses**, even when adjacent to the demise year.
 * **Rule 11:** Transliteration of Al- (ال) must conform to phonetic rules, except for "Shari'ah" which must omit the "Ash-" prefix.
 * **Rule 12:** Scholarly names must align with standard Arabic phonology (e.g., Al-Ghazali, Al-Maturidi). Avoid the spelling "ท่านอิมาม" or "อิมาม"; enforce "อิหม่าม" (Imam) globally.
+* **Rule 12.1:** **[Transliteration of صحيح]** The Thai transliteration of **صحيح** (Sahih) must always be spelled **"ศอเฮี้ยะฮ์"** (e.g., ศอเฮี้ยะฮ์อัลบุคอรีย์, ศอเฮี้ยะฮ์มุสลิม). The spelling **"ศ่อเหี้ยห์" is strictly prohibited.** Apply this consistently across all future content.
 * **Rule 13:** **[Transliteration Spacing]** Transliterated religious terminology inserted into Thai sentences must not be preceded or followed by space bars (e.g., `หลักของชะรีอะฮ์ในประเด็น`).
 * **Rule 14:** **[Conjunction Choice]** Eliminate archaic conjunctions such as "ทว่า"; enforce the use of "แต่" to optimize academic conciseness.
 * **Rule 15:** Direct quotes, Hadith, and translations must be enclosed strictly within curved quotation marks **`"..."`**.

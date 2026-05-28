@@ -593,70 +593,87 @@ html.dark-mode .related-card {
 /* ==========================================
    5. READING TOOLS & CITATIONS (Global Article Styles)
    ========================================== */
+/* Reading tools — refined minimal control bar (shared article template, Rule 38) */
 .reading-tools {
-  display: inline-flex;
-  gap: 16px;
-  background: var(--bg-tertiary);
-  padding: 8px 16px;
-  border-radius: 6px;
-  margin-bottom: 32px;
-  border: 1px solid var(--border-primary);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 32px;
+  margin: 0 0 44px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border-primary);
+  border-bottom: 1px solid var(--border-primary);
 }
 .tool-group {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 .tool-label {
-  font-size: 13px;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px;
   color: var(--text-tertiary);
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.13em;
 }
 .btn-tool {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-primary);
+  background: transparent;
+  border: 1px solid var(--border-secondary);
   color: var(--text-secondary);
-  padding: 4px 12px;
-  border-radius: 4px;
+  padding: 6px 15px;
+  border-radius: 999px;
   cursor: pointer;
   font-size: 13px;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  line-height: 1.5;
   transition: var(--theme-transition);
 }
 .btn-tool:hover {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
+.btn-tool:active { transform: translateY(1px); }
+.btn-tool.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+  font-weight: 600;
+}
 
 .citation-box {
-  background: var(--bg-tertiary);
-  padding: 24px 32px;
-  border-radius: 4px;
-  border: none;
+  background: var(--bg-secondary);
+  padding: 28px 32px;
+  border-radius: 10px;
+  border: 1px solid var(--border-primary);
   border-left: 4px solid var(--accent-color);
-  margin-top: 40px;
+  margin-top: 48px;
   position: relative;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 24px var(--shadow-color);
 }
 .citation-text {
+  font-family: 'Sarabun', sans-serif;
   font-size: 14px;
   color: var(--text-secondary);
-  margin-bottom: 16px;
-  word-break: break-all;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  word-break: break-word;
 }
 .copy-btn {
   background: var(--accent-color);
   color: #fff;
   border: none;
-  padding: 6px 16px;
-  border-radius: 4px;
+  padding: 9px 22px;
+  border-radius: 999px;
   font-size: 13px;
+  font-weight: 600;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  letter-spacing: 0.02em;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: var(--theme-transition);
 }
-.copy-btn:hover {
-  opacity: 0.9;
-}
+.copy-btn:hover { background: #9a1717; transform: translateY(-1px); }
+.copy-btn:active { transform: translateY(0); }
 
 .references { margin-top: 60px; }
 .ref-title { font-size: 24px !important; border-bottom: none !important; margin-bottom: 16px !important; }

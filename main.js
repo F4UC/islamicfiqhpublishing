@@ -77,12 +77,16 @@ if (document.body) {
 // ⭐ 3. ระบบประกอบร่าง Header / Footer ⭐
 // ==========================================
 document.addEventListener("DOMContentLoaded", function() {
-    
+
     // โหลดธีมและปุ่มไอคอนใหม่หลังจาก DOM โหลดแล้ว
     updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
 
+    // ตั้งสถานะเริ่มต้นของแผงเครื่องมือช่วยอ่าน (ปุ่มขนาดอักษร + ปุ่มโหมดกลางคืน)
+    if (typeof updateFontButtons === 'function') updateFontButtons();
+    if (typeof syncDarkButton === 'function') syncDarkButton(document.documentElement.classList.contains('dark-mode'));
+
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260528e')
+    fetch('/components/header.html?v=20260528g')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -570,7 +574,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // สั่งโหลดไฟล์ Footer
-    fetch('/components/footer.html?v=20260528e')
+    fetch('/components/footer.html?v=20260528g')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
@@ -737,6 +741,19 @@ function changeFontSize(delta) {
     if (currentFontSize < 14) currentFontSize = 14;
     if (currentFontSize > 28) currentFontSize = 28;
     content.style.fontSize = currentFontSize + "px";
+    updateFontButtons();
+}
+// Reflect the active font-size step on the reading-tools buttons (shared template)
+function updateFontButtons() {
+    const btns = document.querySelectorAll('.btn-tool[onclick*="changeFontSize"]');
+    btns.forEach(function(b) {
+        const m = (b.getAttribute('onclick') || '').match(/changeFontSize\((-?\d+)\)/);
+        const d = m ? parseInt(m[1], 10) : 0;
+        const isActive = (currentFontSize === 18 && d === 0) ||
+                         (currentFontSize > 18 && d === 2) ||
+                         (currentFontSize < 18 && d === -2);
+        b.classList.toggle('active', isActive);
+    });
 }
 
 // ==========================================
@@ -748,10 +765,16 @@ function scrollToTop() {
 
 function toggleDarkMode() {
     const isDarkCurrently = document.documentElement.classList.contains('dark-mode');
-    applyTheme(!isDarkCurrently);
+    const nowDark = !isDarkCurrently;
+    applyTheme(nowDark);
+    syncDarkButton(nowDark);
+}
+// Keep the reading-tools Night Mode button label + active state in sync (shared template)
+function syncDarkButton(isDark) {
     const legacyBtn = document.getElementById('darkBtn');
     if (legacyBtn) {
-        legacyBtn.innerText = !isDarkCurrently ? 'Light Mode ☀️' : 'Night Mode 🌙';
+        legacyBtn.innerText = isDark ? 'Light Mode ☀️' : 'Night Mode 🌙';
+        legacyBtn.classList.toggle('active', isDark);
     }
 }
 

@@ -31,7 +31,7 @@
 <link rel="apple-touch-icon" href="../../favicon.png?v=2">
 <link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
 <meta name="theme-color" content="#e3edf7">
-<link rel="stylesheet" href="../../article.css?v=20260528f">
+<link rel="stylesheet" href="../../article.css?v=20260528g">
 
 <style>
 body { position: relative; }
@@ -123,32 +123,14 @@ body { position: relative; }
   border-bottom: 1px solid var(--border-primary);
 }
 
-/* Citation box */
-.citation-box {
-  background: var(--bg-primary); border: 1px solid var(--border-primary); border-left: 4px solid var(--accent-color);
-  border-radius: 12px; padding: 30px; margin: 50px 0; position: relative;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.4); display: flex; flex-direction: column; gap: 16px;
-}
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
 .citation-label {
   font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
-  display: flex; align-items: center; gap: 8px;
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
 }
 .citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
-.citation-text {
-  font-family: 'Sarabun', sans-serif; font-size: 15px; color: var(--text-primary);
-  line-height: 1.8; background: var(--bg-secondary); padding: 20px; border-radius: 8px;
-  border: 1px dashed var(--border-primary); word-break: break-word;
-}
 .citation-footer { display: flex; justify-content: flex-end; }
-.copy-btn {
-  background: linear-gradient(135deg, #b31b1b 0%, #e0b96a 50%, #b31b1b 100%);
-  color: #fff; border: none; padding: 11px 28px; border-radius: 30px;
-  font-size: 13px; font-weight: 700; cursor: pointer; letter-spacing: 0.03em;
-  transition: all 0.25s ease; display: flex; align-items: center; gap: 8px;
-  font-family: 'Sarabun', sans-serif;
-}
-.copy-btn::before { content: '📋'; font-size: 14px; }
-.copy-btn:hover { transform: translateY(-2px); }
 .copy-alert {
   position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
   background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
@@ -156,26 +138,6 @@ body { position: relative; }
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-
-/* Reading tools — minimal inline text control (Part 3), no box */
-.reading-tools {
-  display: flex; gap: 12px; align-items: baseline; justify-content: flex-end;
-  margin: 0 0 32px; padding: 0;
-}
-.tool-group { display: inline-flex; align-items: baseline; gap: 10px; }
-.tool-label {
-  font-family: 'IBM Plex Sans Thai', sans-serif;
-  font-size: 11px; color: var(--text-tertiary);
-  text-transform: uppercase; letter-spacing: 0.14em;
-}
-.tool-div { color: var(--border-secondary); font-size: 13px; user-select: none; }
-.btn-tool {
-  background: none; border: 0; padding: 0; cursor: pointer;
-  color: var(--text-tertiary); font-size: 15px; line-height: 1;
-  font-family: 'IBM Plex Sans Thai', sans-serif; transition: color 0.2s;
-}
-.btn-tool:hover { color: #a01818; }
-.btn-tool.active { color: #a01818; font-weight: 700; }
 
 
 /* Related articles — editorial reading list (Part 6) */
@@ -265,7 +227,7 @@ body { position: relative; }
     <div>·</div>
     <div>22 พฤษภาคม 2569</div>
     <div>·</div>
-    <div>อ่าน 15 นาที</div>
+    <div>อ่าน 45 นาที</div>
   </div>
 
   <div class="reading-tools">
@@ -366,7 +328,7 @@ body { position: relative; }
         <blockquote lang="ar" dir="rtl" class="ar-block">واعلم أنه ليس مرادنا بالقطع ههنا الذي يحصل بالبرهان الذي مقدماته كلها عقلية فإن الحال هنا ليس كذلك وإنما هو مبني على أرصاد وتجارب طويلة وتسيير منازل الشمس والقمر ومعرفة حصول الضوء الذي فيه بحيث يتمكن الناس من رؤيته والناس يختلفون في حدة البصر فتارة يحصل القطع إما بإمكان الرؤية وإما بعدمه وتارة لا يقطع بل يتردد والقطع بأحد الطرفين مستنده العادة كما نقطع في بعض الأجرام البعيدة عنا بأنا لا نراها ولا يمكنا رؤيتها في العادة وإن كان في الإمكان العقلي ذلك ولكن يكون ذلك خارقا للعادة وقد يقع معجزة لنبي أو كرامة لولي أما غيرهما فلا فلو أخبرنا مخبر أنه رأى شخصا بعيدا عنه في مسافة يوم مثلا وسمعه يقر بحق وشهد عليه به لم يقبل خبره ولا شهادته بذلك ولا نرتب عليها حكما وإن كان ذلك ممكنا في العقل لكنه مستحيل في العادة</blockquote>
       </details>
       <p>บางครั้ง ความเด็ดขาดตายตัวอาจเกิดขึ้นได้ทั้งในกรณีที่ “เป็นไปได้ที่จะมองเห็น” และ “เป็นไปไม่ได้ที่จะมองเห็น” และบางครั้งมันก็ไม่เด็ดขาดแต่มีความลังเลอยู่ ซึ่งการจะฟันธงไปในทางใดทางหนึ่งนั้น ต้องอิงกับ “กฎธรรมชาติ/ความคุ้นเคยทางกายภาพ” เปรียบเหมือนการที่เราฟันธงว่า ดวงดาวบางดวงที่อยู่ไกลลิบตา เราไม่มีทางมองเห็นมันได้ตามวิสัยปกติธรรมชาติ แม้ว่าในเชิง “ตรรกะและสติปัญญา” มันอาจจะเกิดขึ้นได้ก็ตาม แต่นั่นจะต้องเป็นการฉีกกฎธรรมชาติ ซึ่งการฝืนกฎธรรมชาติเช่นนั้น อาจเกิดขึ้นได้ในฐานะ “มุอ์ญิซะฮ์” สำหรับบรรดานบี หรือ “กะรอมะฮ์” สำหรับบรรดาวะลีย์ (ผู้ใกล้ชิดอัลลอฮ์) เท่านั้น ส่วนคนทั่วไปนั้นย่อมเป็นไปไม่ได้</p>
-      <p>ดังนั้น หากมีคนมาบอกเราว่า เขามองเห็นและได้ยินเสียงของคนที่อยู่ห่างออกไปเป็นระยะทางเดินเท้าหนึ่งวัน คำบอกเล่าและคำให้การของเขาย่อมไม่ถูกยอมรับ และเราจะไม่นำมันมาใช้ตัดสินข้อกฎหมายใดๆ เพราะแม้มันจะ “เป็นไปได้ในทางตรรกะ” แต่มัน “เป็นไปไม่ได้ในทางธรรมชาติ”</p>
+      <p>ดังนั้น หากมีคนมาบอกเราว่า เขามองเห็นและได้ยินเสียงของคนที่อยู่ห่างออกไปเป็นระยะทางเดินเท้าหนึ่งวัน คำบอกเล่าและคำให้การของเขาย่อมไม่ถูกยอมรับ และเราจะไม่นำมันมาใช้ตัดสินข้อกฎหมายใดๆ เพราะแม้มันจะ “เป็นไปได้ในทางตรรกะ” แต่มัน “เป็นไปไม่ได้ในทางธรรมชาติ””</p>
       <p class="ar-translation">“ในทำนองเดียวกัน หากมีพยานสองคนหรือมากกว่า ซึ่งเป็นบุคคลที่มีโอกาสโกหกหรือผิดพลาดได้ มาให้การยืนยันว่าเห็นจันทร์เสี้ยว ในขณะที่การคำนวณวิถีโคจรของดวงจันทร์ชี้ชัดว่า “ไม่มีความเป็นไปได้ที่จะมองเห็น” ในจุดที่พวกเขากล่าวอ้าง คำให้การของพวกเขาย่อมต้องถูกตีตกไป! เหตุผลก็คือ “ความเป็นไปได้” คือเงื่อนไขแรกของการเป็นพยานหลักฐาน และการให้น้ำหนักว่าพยานอาจโกหกหรือผิดพลาด ย่อมสมเหตุสมผลมากกว่าการเชื่อว่ากฎธรรมชาติถูกทำลายลง ดังนั้น สิ่งที่เป็นไปไม่ได้ในทางธรรมชาติ ก็มีค่าเท่ากับสิ่งที่เป็นไปไม่ได้ในทางตรรกะ ซึ่งไม่อาจนำมายอมรับเป็นคำรับสารภาพหรือคำให้การได้ ด้วยเหตุนี้ จึงเป็นหน้าที่บังคับสำหรับผู้พิพากษา (กอฎีย์) ที่จะต้องมีวิจารณญาณที่ตื่นตัวในเรื่องนี้ และต้องไม่รีบเร่งยอมรับคำให้การของพยานสองคน จนกว่าจะได้ตรวจสอบรายละเอียดสิ่งที่พวกเขาให้การเสียก่อน ว่ามันมีความเป็นไปได้หรือไม่? อยู่ในระดับความเป็นไปได้มากน้อยเพียงใด? สายตาของพวกเขามีศักยภาพพอหรือไม่? พวกเขาเป็นคนที่มักจะสับสนตาฝาดหรือไม่? หากพิสูจน์ได้ว่ามันเป็นไปได้จริง และพยานทั้งสองสายตาดี มีไหวพริบ ไม่สับสน ไม่มีวาระซ่อนเร้น และเป็นผู้มีความยุติธรรม (ผู้พิพากษาจึงจะนำมาพิจารณา) แต่ถ้าไม่ใช่ตามนี้ ก็ต้องระงับไว้หรือตีตกไป เพราะหากผู้พิพากษามัวแต่เชื่อทุกสิ่งที่พยานสองคนกล่าวอ้าง ใครๆ ก็คงสามารถเข้าใจแก่นแท้ของการพิพากษาได้ (ไม่ต้องมีผู้พิพากษาก็ได้) แต่นี่คือหน้าที่ที่ผู้พิพากษาต้องใช้ดุลยพินิจ ดังนั้น เมื่อผู้พิพากษากล่าวว่า “เรื่องนี้เป็นที่ยุติสำหรับฉันแล้ว” เราย่อมรู้ได้ว่าท่านได้ตรวจสอบเงื่อนไขทั้งหมดอย่างครบถ้วนแล้ว</p>
       <details class="ar-toggle">
         <summary>ดูต้นฉบับภาษาอาหรับ</summary>
@@ -378,7 +340,7 @@ body { position: relative; }
       <p>ระดับที่เป็นไปได้และคนส่วนใหญ่สามารถมองเห็นได้: กรณีนี้เหลือเพียงแค่การตรวจสอบความน่าเชื่อถือของพยานตามปกติ</p>
       <p>ผู้พิพากษาต้องไม่คิดเอาเองว่า เพียงแค่มีพยานสองคนและมีผู้มารับรองความประพฤติพยาน การเข้าเดือนใหม่ก็จะถูกพิสูจน์ทันที และต้องไม่เข้าใจผิดว่า บทบัญญัติศาสนาได้ยกเลิกการใช้การคำนวณทางดาราศาสตร์ไปโดยสิ้นเชิง</p>
       <p>ศาสนาไม่ได้กล่าวเช่นนั้น จะเป็นไปได้อย่างไรในเมื่อเรายังใช้การคำนวณในเรื่องของมรดก (ฟะรออิฎ) และเรื่องอื่นๆ? ในหะดีษก็มีการกล่าวถึง “การขีดเขียน” และ “การคำนวณ” ซึ่งการขีดเขียนไม่ได้ถูกห้าม การคำนวณก็ย่อมไม่ถูกห้ามเช่นกัน แต่เป้าหมายของศาสนาเพียงแค่ต้องการตีกรอบข้อชี้ขาดเรื่องการเข้าเดือนใหม่ ให้อยู่ในวิธีการที่ชัดเจนและเข้าถึงง่ายสำหรับคนทั่วไป นั่นคือ “การมองเห็นด้วยตาเปล่า” หรือ “การนับให้ครบ 30 วัน” เท่านั้นเอง และนักนิติศาสตร์ (ฟะกีฮ์) จะต้องไม่สับสนว่า ปัญหาที่เรากำลังพูดถึงอยู่นี้ เป็นเรื่องเดียวกับที่ปราชญ์ฟิกฮ์ระบุในหมวดการถือศีลอดว่า “ทรรศนะที่ถูกต้องคือ ไม่ให้ยึดการคำนวณดาราศาสตร์” เพราะนั่นคือกรณีที่ดาราศาสตร์บอกว่า “เห็นได้” แต่ตาเปล่ากลับมองไม่เห็น (ซึ่งฟิกฮ์ให้ยึดตาเปล่า) แต่กรณีของเราในที่นี้ มันคือสถานการณ์ที่ตรงกันข้ามอย่างสิ้นเชิง! (นั่นคือ ดาราศาสตร์บอกว่า “ไม่มีทางเห็นได้” แต่ตาเปล่าดันอ้างว่าเห็น)”</p>
-      <p class="ar-translation">“ไม่ต้องสงสัยเลยว่า ปราชญ์ท่านใดที่เคยอนุโลมให้ดาราศาสตร์มีน้ำหนักในกรณีแรก ย่อมต้องห้ามการใช้คำให้การพยานในกรณีนี้อย่างเด็ดขาด (เพราะดาราศาสตร์มีน้ำหนักกว่า) ส่วนผู้ที่เคยห้ามใช้ดาราศาสตร์ในกรณีแรก ก็ไม่ได้กล่าวห้ามอะไรในกรณีนี้ และจุดที่วิจารณญาณของเราพิจารณาเห็นชอบ ก็คือ “การสั่งห้าม” (ไม่อนุญาตให้รับพยานที่ขัดกับดาราศาสตร์อย่างสิ้นเชิง) ซึ่งการสั่งห้ามในที่นี้เป็นสิ่งที่เด็ดขาดตายตัว แม้เราจะไม่พบการถ่ายทอดทรรศนะนี้ (จากปราชญ์รุ่นก่อนๆ) โดยตรง แต่เราได้ใช้กระบวนการวินิจฉัยทางฟิกฮ์ลงไปในเรื่องนี้ และสำหรับเราแล้ว ประเด็นนี้จัดอยู่ในหมวดหมู่ของ “ความเด็ดขาดตายตัว” ซึ่งได้รับการยกระดับก้าวข้ามขอบเขตของเรื่องที่เป็นเพียงความคาดเดาหรือความน่าจะเป็นไปเรียบร้อยแล้ว</p>
+      <p class="ar-translation">“ไม่ต้องสงสัยเลยว่า ปราชญ์ท่านใดที่เคยอนุโลมให้ดาราศาสตร์มีน้ำหนักในกรณีแรก ย่อมต้องห้ามการใช้คำให้การพยานในกรณีนี้อย่างเด็ดขาด (เพราะดาราศาสตร์มีน้ำหนักกว่า) ส่วนผู้ที่เคยห้ามใช้ดาราศาสตร์ในกรณีแรก ก็ไม่ได้กล่าวห้ามอะไรในกรณีนี้ และจุดที่วิจารณญาณของเราพิจารณาเห็นชอบ ก็คือ “การสั่งห้าม” (ไม่อนุญาตให้รับพยานที่ขัดกับดาราศาสตร์อย่างสิ้นเชิง) ซึ่งการสั่งห้ามในที่นี้เป็นสิ่งที่เด็ดขาดตายตัว แม้เราจะไม่พบการถ่ายทอดทรรศนะนี้ (จากปราชญ์รุ่นก่อนๆ) โดยตรง แต่เราได้ใช้กระบวนการวินิจฉัยทางฟิกฮ์ลงไปในเรื่องนี้ และสำหรับเราแล้ว ประเด็นนี้จัดอยู่ในหมวดหมู่ของ “ความเด็ดขาดตายตัว” ซึ่งได้รับการยกระดับก้าวข้ามขอบเขตของเรื่องที่เป็นเพียงความคาดเดาหรือความน่าจะเป็นไปเรียบร้อยแล้ว”</p>
       <details class="ar-toggle">
         <summary>ดูต้นฉบับภาษาอาหรับ</summary>
         <blockquote lang="ar" dir="rtl" class="ar-block">ولا شك أن من قال هناك بجواز الصوم أو وجوبه يقول هنا بالمنع بطريق الأولى ومن قال هناك بالمنع فههنا لم يقل شيئا والذي اقتضاه نظرنا المنع فالمنع هنا مقطوع به .ولم نجد هذه المسألة منقولة لكنا تفقهنا فيها وهي عندنا من محال القطع مترقية عن مرتبة الظنون</blockquote>
@@ -462,7 +424,7 @@ body { position: relative; }
       <div class="citation-label">อ้างอิงบทความนี้</div>
       <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/moon-sighting-vs-astronomy.html</div>
       <div class="citation-footer">
-        <button class="copy-btn" onclick="copyCitation()">คัดลอกอ้างอิง</button>
+        <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
       </div>
     </div>
 
@@ -472,7 +434,7 @@ body { position: relative; }
       <h2 class="article-h2">บรรณานุกรม</h2>
       <ol class="bibliography">
         <li id="ref-1">อัลกุรอาน, สูเราะฮ์อัลบะเกาะเราะฮ์ (สูเราะฮ์ที่ 2), อายะฮ์ที่ 189 <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
-        <li id="ref-2">บันทึกโดยอัลบุคอรีย์ในศ่อเหี้ยห์อัลบุคอรีย์ เลขที่ 1913 และมุสลิมในศ่อเหี้ยห์มุสลิม เลขที่ 1080 (รายงานจากท่านอิบนุอุมัร เราะฎิยัลลอฮุอันฮุมา) <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-2">บันทึกโดยอัลบุคอรีย์ในศอเฮี้ยะฮ์อัลบุคอรีย์ เลขที่ 1913 และมุสลิมในศอเฮี้ยะฮ์มุสลิม เลขที่ 1080 (รายงานจากท่านอิบนุอุมัร เราะฎิยัลลอฮุอันฮุมา) <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
       </ol>
     </section>
 
@@ -505,7 +467,9 @@ body { position: relative; }
 <div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
 
 <script>
-function copyCitation() {
+// Citation copy uses a unique name so it is not shadowed by main.js's copyCitation
+// (this page's markup uses #citation-text + a toast, Rule 41).
+function copyCite() {
   var t = document.getElementById('citation-text').textContent;
   navigator.clipboard.writeText(t).then(function() {
     var a = document.getElementById('copyAlert');
@@ -513,34 +477,15 @@ function copyCitation() {
     setTimeout(function() { a.classList.remove('show'); }, 2000);
   });
 }
-function changeFontSize(delta, btn) {
-  var body = document.querySelector('.article-body');
-  if (delta === 0) { body.style.fontSize = ''; }
-  else {
-    var cur = parseFloat(getComputedStyle(body).fontSize);
-    var next = Math.max(14, Math.min(28, cur + delta));
-    body.style.fontSize = next + 'px';
-  }
-  if (btn) {
-    document.querySelectorAll('.btn-tool').forEach(function(b) { b.classList.remove('active'); });
-    btn.classList.add('active');
-  }
-}
-window.addEventListener('scroll', function() {
-  var prog = document.getElementById('readingProgressBar');
-  var btn = document.getElementById('backToTopBtn');
-  var s = document.documentElement.scrollTop || document.body.scrollTop;
-  var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  if (prog) prog.style.width = (s/h*100) + '%';
-  if (btn) btn.style.display = s > 400 ? 'block' : 'none';
-});
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
 document.querySelectorAll('.reveal').forEach(function(el) {
   var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } });
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
   }, {threshold: 0.1});
   obs.observe(el);
 });
 </script>
-<script src="../../main.js?v=20260528f" charset="UTF-8"></script>
+<script src="../../main.js?v=20260528g" charset="UTF-8"></script>
 </body>
 </html>
