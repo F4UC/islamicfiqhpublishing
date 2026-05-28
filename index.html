@@ -1124,7 +1124,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 
 <div id="footer-placeholder"></div>
 
-<script src="/main.js?v=20260527k" charset="UTF-8"></script>
+<script src="/main.js?v=20260528a" charset="UTF-8"></script>
 
 <script>
 /* ----- WEBGL FLUID EFFECT ----- */
@@ -1412,7 +1412,7 @@ quotes.forEach(function(_,i){
   dots.appendChild(d);
 });
 paintQuote(0);
-setInterval(function(){ paintQuote(qi+1); }, 9000);
+setInterval(function(){ paintQuote(qi+1); }, 19000);
 window.addEventListener('resize', function(){ document.getElementById('quoteAuthor').textContent = window.innerWidth <= 600 ? shortAuthor(quotes[qi].author) : quotes[qi].author; });
 
 
