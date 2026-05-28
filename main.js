@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
 
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260528a')
+    fetch('/components/header.html?v=20260528b')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -234,6 +234,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (p === '/' || p === '/index.html') {
                     var home = document.querySelector('.nav-item.nav-home');
                     if (home) home.style.display = 'none';
+                }
+            })();
+
+            // --- ปรับ nav บนหน้าที่ไม่ใช่ index: ซ่อน "เกี่ยวกับเรา", ย่อ "เครื่องมือ" ---
+            (function() {
+                var p = window.location.pathname;
+                var isIndex = (p === '/' || p === '/index.html');
+                if (!isIndex) {
+                    var about = document.querySelector('.nav-item.nav-about');
+                    if (about) about.style.display = 'none';
+                    var tools = document.querySelector('.nav-item.nav-tools');
+                    if (tools) tools.textContent = 'เครื่องมือ';
                 }
             })();
 
@@ -539,7 +551,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // สั่งโหลดไฟล์ Footer
-    fetch('/components/footer.html?v=20260528a')
+    fetch('/components/footer.html?v=20260528b')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;

@@ -356,11 +356,15 @@ body::before {
 .idx-row:hover::before { width: 3px; }
 .idx-row:hover .idx-title { color: var(--gold-bright); }
 .idx-row:hover .idx-arrow { transform: translateX(8px); color: var(--gold); }
-.idx-num { font-family: var(--serif); font-style: italic; color: rgba(255,255,255,0.75); font-size: 22px; letter-spacing: .02em; }
-.idx-cat { font-family: var(--thai); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,0.75); white-space: nowrap; }
+.idx-num { font-family: var(--serif); font-style: italic; color: rgba(0,0,0,0.72); font-size: 22px; letter-spacing: .02em; }
+.idx-cat { font-family: var(--thai); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(0,0,0,0.72); white-space: nowrap; }
 .idx-title { font-family: var(--thai); font-weight: 500; font-size: 22px; line-height: 1.4; color: var(--paper); transition: color .3s; }
-.idx-meta { font-family: var(--thai); font-size: 14px; color: rgba(255,255,255,0.65); letter-spacing: .02em; }
-.idx-arrow { text-align: right; color: rgba(255,255,255,0.7); transition: all .35s; font-family: var(--thai); font-size: 18px; }
+.idx-meta { font-family: var(--thai); font-size: 14px; color: rgba(0,0,0,0.55); letter-spacing: .02em; }
+.idx-arrow { text-align: right; color: rgba(0,0,0,0.7); transition: all .35s; font-family: var(--thai); font-size: 18px; }
+html.dark-mode .idx-num { color: rgba(255,255,255,0.75); }
+html.dark-mode .idx-cat { color: rgba(255,255,255,0.75); }
+html.dark-mode .idx-meta { color: rgba(255,255,255,0.65); }
+html.dark-mode .idx-arrow { color: rgba(255,255,255,0.7); }
 .idx-arrow::after { content: ' →'; }
 
 .archive-footer { margin-top: 64px; display: flex; justify-content: flex-end; align-items: center; }
@@ -722,7 +726,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
   margin-bottom: 48px;
 }
 #categories .section-title { color: #f0ece4; }
-#categories .section-lede  { color: rgba(240,236,228,0.48); }
+#categories .section-lede  { color: #f5f1ea; }
 #categories { background: #0a0907; position: relative; padding-bottom: 0; }
 #categories .wrap { position: relative; z-index: 1; }
 .cat-name { color: #f0ece4; }
@@ -1124,7 +1128,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 
 <div id="footer-placeholder"></div>
 
-<script src="/main.js?v=20260528a" charset="UTF-8"></script>
+<script src="/main.js?v=20260528b" charset="UTF-8"></script>
 
 <script>
 /* ----- WEBGL FLUID EFFECT ----- */
