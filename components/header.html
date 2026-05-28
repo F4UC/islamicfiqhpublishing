@@ -193,10 +193,10 @@ nav.chrome-nav.mobile-active .nav-item.active {
     transition: opacity 0.35s ease;
   }
 
-  /* 3-column inner grid — nav is center column */
+  /* 3-column inner grid — FIQH + nav left-cluster, search far-right */
   .chrome-inner {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto auto 1fr;
     align-items: center;
     padding: 0 48px;
     height: 72px;
@@ -214,7 +214,7 @@ nav.chrome-nav.mobile-active .nav-item.active {
   .chrome-wordmark { display: block; font-size: 28px; }
   .chrome-wordmark:hover { opacity: 0.8; }
 
-  /* CENTER: nav inline */
+  /* LEFT-CLUSTER: nav sits right of FIQH wordmark */
   nav.chrome-nav {
     display: flex !important;
     flex-direction: row;
@@ -222,11 +222,11 @@ nav.chrome-nav.mobile-active .nav-item.active {
     background: transparent;
     border: none;
     padding: 0;
-    gap: 10px;
+    gap: 28px;
     align-items: center;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    justify-content: center;
+    justify-content: flex-start;
   }
   nav.chrome-nav .nav-item {
     font-family: 'Sarabun', sans-serif;
