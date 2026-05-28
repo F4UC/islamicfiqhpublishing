@@ -6,16 +6,16 @@
   --ph-gold: #b31b1b;
   --ph-serif: 'IBM Plex Sans Thai', system-ui, sans-serif;
   --ph-thai: 'Sarabun', sans-serif;
-  /* Flat ink dark theme — uniform with homepage */
-  --bg-primary: #0a0907;       /* Flat ink background */
-  --bg-secondary: #14110d;     /* Slightly lighter ink */
-  --bg-tertiary: #1d1814;      /* Panel ink */
-  --text-primary: #f5f1ea;     /* Warm white */
-  --text-secondary: #e8e0d0;   /* Warm ivory */
-  --text-tertiary: #9a907e;    /* Warm muted */
-  --text-quaternary: rgba(245,241,234,0.45);
-  --border-primary: rgba(255,255,255,0.08);
-  --border-secondary: rgba(255,255,255,0.14);
+  /* Light mode defaults — clean white reading surface — Rule 37 */
+  --bg-primary: #ffffff;       /* Pure white body */
+  --bg-secondary: #faf7f4;     /* Warm near-white */
+  --bg-tertiary: #f0ece5;      /* Warm panel bg */
+  --text-primary: #1a1612;     /* Near-black text */
+  --text-secondary: #2c2520;   /* Dark body text */
+  --text-tertiary: #6b6258;    /* Warm muted captions */
+  --text-quaternary: rgba(26,22,18,0.45);
+  --border-primary: rgba(26,22,18,0.10);
+  --border-secondary: rgba(26,22,18,0.18);
   --accent-color: #b31b1b;     /* Brand Red */
 
   /* ตัวแปรพิเศษสำหรับคอมโพเนนต์ที่ควรเข้มเสมอ (Inverted Components) */
@@ -25,19 +25,19 @@
   --footer-border: rgba(232,224,208,.14);
 
   /* ตัวแปรสำหรับเงา (Dynamic Shadows) */
-  --shadow-color: rgba(0,0,0,0.4);
-  --shadow-heavy: rgba(0,0,0,0.6);
+  --shadow-color: rgba(0,0,0,0.06);
+  --shadow-heavy: rgba(0,0,0,0.12);
 
   --theme-transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* Dark mode deepens to pure black — Rule 37 */
+/* Dark mode: flat ink theme — Rule 37 */
 html.dark-mode {
   --ph-paper: #f5f1ea;
   --ph-dim: #9a907e;
-  --bg-primary: #000000;
-  --bg-secondary: #0a0907;
-  --bg-tertiary: #14110d;
+  --bg-primary: #0a0907;
+  --bg-secondary: #14110d;
+  --bg-tertiary: #1d1814;
   --text-primary: #f5f1ea;
   --text-secondary: #e8e0d0;
   --text-tertiary: #9a907e;
@@ -1085,19 +1085,19 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   font-family: 'Amiri', serif;
   direction: rtl; text-align: center;
   font-size: 1.6rem; line-height: 2.1;
-  color: #f5f1ea;
+  color: var(--text-primary);
   padding: 24px 24px; margin: 28px 0;
-  background: rgba(255,255,255,0.02);
+  background: var(--bg-secondary);
 }
-.ar-translation { color: #cfc8bb; margin: 0 0 24px; line-height: 2.0; }
+.ar-translation { color: var(--text-tertiary); margin: 0 0 24px; line-height: 2.0; }
 
 /* B.3 — Collapsed toggle: ulama quotes / long excerpts */
 .ar-toggle { margin: 8px 0 24px; }
 .ar-toggle > summary {
   cursor: pointer; list-style: none;
   font-family: 'IBM Plex Sans Thai', sans-serif; font-size: .9rem;
-  color: #9a907e; padding: 6px 0; user-select: none;
-  border-bottom: 0.5px solid rgba(255,255,255,0.12); display: inline-block;
+  color: var(--text-tertiary); padding: 6px 0; user-select: none;
+  border-bottom: 0.5px solid var(--border-secondary); display: inline-block;
 }
 .ar-toggle > summary::-webkit-details-marker { display: none; }
 .ar-toggle > summary:hover { color: #b31b1b; }
@@ -1106,7 +1106,7 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   font-family: 'Amiri', serif;
   direction: rtl; text-align: right;
   font-size: 1.45rem; line-height: 2.1;
-  color: #e8e0d0;
+  color: var(--text-secondary);
   padding: 8px 16px;
   border-right: 2px solid rgba(179,27,27,0.5);
 }
