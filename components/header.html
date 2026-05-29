@@ -444,6 +444,12 @@ html.dark-mode .read-more-link { color: #fff !important; }
   .search-modal-card { max-height: calc(100vh - 80px); }
   .chrome-inner { padding: 14px 20px; }
   nav.chrome-nav.mobile-active { padding: 20px 20px 24px; }
+  /* Hide physical-keyboard hints on touch */
+  .keyboard-tip { display: none; }
+  .search-modal-footer { display: none; }
+  /* ESC badge = close button: keep functional, relabel for touch */
+  .search-esc-badge { font-size: 0; padding: 8px 14px; border-radius: 8px; }
+  .search-esc-badge::after { content: 'ปิด'; font-size: 12px; font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; letter-spacing: 0; }
 }
 @media (max-width: 767px) {
   #catNavBtn, #catNavDropdown, #catNavTab, #catNavPanel, #catNavOverlay { display: none !important; }
