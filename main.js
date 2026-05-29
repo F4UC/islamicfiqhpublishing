@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (typeof syncDarkButton === 'function') syncDarkButton(document.documentElement.classList.contains('dark-mode'));
 
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260529j')
+    fetch('/components/header.html?v=20260529k')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -291,29 +291,28 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             // --- ระบบเวลาและปฏิทินสามระบบอัตโนมัติ (BKK Time & Tri-Calendar) ---
-            (function tick() {
+            (function tick(attempts) {
                 const el = document.getElementById('liveTime');
                 if (el) {
+                    // Construct formatter once; Hijri year is cached (changes at most once per day)
+                    let hijriYearStr = 'ฮ.ศ. 1447';
+                    try {
+                        const hijriFormatter = new Intl.DateTimeFormat('th-TH-u-ca-islamic-umalqura', { year: 'numeric' });
+                        hijriYearStr = hijriFormatter.format(new Date());
+                    } catch (e) {}
                     function upd() {
                         const d = new Date();
                         const timeStr = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
                         const adYear = d.getFullYear();
                         const beYear = adYear + 543;
-                        let hijriYear = "ฮ.ศ. 1447";
-                        try {
-                            const hijriFormatter = new Intl.DateTimeFormat('th-TH-u-ca-islamic-umalqura', { year: 'numeric' });
-                            hijriYear = hijriFormatter.format(d);
-                        } catch (e) {
-                            console.error("Hijri formatting error:", e);
-                        }
-                        el.textContent = `BKK ${timeStr} · พ.ศ. ${beYear} · ค.ศ. ${adYear} · ${hijriYear}`;
+                        el.textContent = `BKK ${timeStr} · พ.ศ. ${beYear} · ค.ศ. ${adYear} · ${hijriYearStr}`;
                     }
                     upd();
                     setInterval(upd, 1000);
-                } else {
-                    setTimeout(tick, 100);
+                } else if (attempts < 50) {
+                    setTimeout(function() { tick(attempts + 1); }, 100);
                 }
-            })();
+            })(0);
 
             // ==========================================
             // 🔎 ระบบสืบค้นข้อมูลบทความวิชาการ (Search Engine) 🔎
@@ -574,7 +573,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // สั่งโหลดไฟล์ Footer
-    fetch('/components/footer.html?v=20260529j')
+    fetch('/components/footer.html?v=20260529k')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
@@ -599,20 +598,22 @@ document.addEventListener("DOMContentLoaded", function() {
     // ==========================================
     const progressBar = document.getElementById('readingProgressBar');
     if (progressBar) {
-        window.addEventListener('scroll', () => {
-            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPercent = (scrollTop / scrollHeight) * 100;
-            progressBar.style.width = scrollPercent + "%";
-        const topButton = document.getElementById('backToTopBtn');
-        if (topButton) {
-            if (scrollTop > 400) {
-                topButton.style.setProperty('display', 'block', 'important');
-            } else {
-                topButton.style.setProperty('display', 'none', 'important');
+        var _scrollTicking = false;
+        window.addEventListener('scroll', function() {
+            if (!_scrollTicking) {
+                _scrollTicking = true;
+                requestAnimationFrame(function() {
+                    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    progressBar.style.width = (scrollTop / scrollHeight * 100) + '%';
+                    var topButton = document.getElementById('backToTopBtn');
+                    if (topButton) {
+                        topButton.style.setProperty('display', scrollTop > 400 ? 'block' : 'none', 'important');
+                    }
+                    _scrollTicking = false;
+                });
             }
-        }
-        });
+        }, { passive: true });
     }
 
     // ==========================================
@@ -681,11 +682,18 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.insertBefore(glowEl, document.body.firstChild);
     }
     if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        var _glowX = 0, _glowY = 0, _glowTicking = false;
         document.addEventListener('mousemove', function(e) {
-            var x = (e.clientX / window.innerWidth * 100).toFixed(1);
-            var y = (e.clientY / window.innerHeight * 100).toFixed(1);
-            document.body.style.setProperty('--mouse-x', x + '%');
-            document.body.style.setProperty('--mouse-y', y + '%');
+            _glowX = e.clientX;
+            _glowY = e.clientY;
+            if (!_glowTicking) {
+                _glowTicking = true;
+                requestAnimationFrame(function() {
+                    document.body.style.setProperty('--mouse-x', (_glowX / window.innerWidth * 100).toFixed(1) + '%');
+                    document.body.style.setProperty('--mouse-y', (_glowY / window.innerHeight * 100).toFixed(1) + '%');
+                    _glowTicking = false;
+                });
+            }
         });
     }
 });
