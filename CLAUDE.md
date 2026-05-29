@@ -240,3 +240,32 @@
   - **⚑ FLAG EVERY "อิบนุล…", "อบุล…", or "อบูล…" case** for editorial review — never determine unilaterally whether it is al- or a name-initial consonant.
 
 * **Rule 53:** **[Quran Harakat Integrity]** Every Quran verse, everywhere, must carry full harakat (tashkīl). Source verses from a standard Mushaf (quran.com or tanzil.net, Hafs ʿan ʿĀṣim unless otherwise specified). **NEVER add harakat manually** — incorrect vowel marks alter recitation and meaning; copy only from a fully-vowelled authoritative source. If verification is not possible, flag the issue — do not guess. **This rule applies to Quran verses only, not to ordinary Arabic (names, terms, hadith, or scholarly quotations).**
+
+## Bibliography & Citation Standard (قواعد المراجع والإحالات)
+
+Apply this whenever creating or editing references, footnotes, or bibliographies in any article. (Recorded as a standing rule; do not retro-apply unless explicitly told.)
+
+STYLE
+- Chicago (notes–bibliography). Cite each source in its ORIGINAL language and script — do NOT transliterate the entry itself.
+  - Arabic sources: Arabic script.
+  - Latin-script sources (English, French, etc.): their original language.
+- Split the bibliography into two sections:
+  - المصادر العربية (Arabic sources)
+  - References / المراجع الأجنبية (foreign-language sources)
+
+DIRECTION / LAYOUT
+- If Arabic sources outnumber the rest: bibliography is RTL (right-aligned), Arabic section first.
+- If non-Arabic sources outnumber Arabic: LTR (left-aligned), Latin section first.
+
+ENTRY FORMAT (full academic detail required)
+- Arabic: المؤلف (الاسم الكامل)، *العنوان*، تحقيق [المحقق إن وُجد]، مكان النشر: الناشر، الطبعة، السنة (هـ/م)، الجزء/الصفحة.
+- Latin: Author (full name). *Title*. Edited by [editor if any]. Place: Publisher, edition, year. Volume:page.
+
+VERIFICATION (non-negotiable)
+- Every detail (publisher, place, edition, year, page) MUST trace to a verifiable source. NEVER invent or guess any of them.
+- Page numbers must match the exact edition cited.
+- Maktaba Shamela: only cite a page number if the book shows the "ترقيم الكتاب موافق للمطبوع" indicator (digital pagination matches the print edition). If it does NOT match, do not cite that page — verify against the printed edition or flag it.
+- If any detail cannot be verified, FLAG the entry (e.g. [edition unverified]) instead of filling it in. Cut unsupported claims rather than keep them.
+
+TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentions in Thai/English prose)
+- Use one consistent system: IJMES.
