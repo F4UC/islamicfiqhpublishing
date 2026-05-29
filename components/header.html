@@ -138,8 +138,10 @@ nav.chrome-nav .nav-item.active::after { transform: scaleX(1); }
 
 @media (max-width: 980px) {
   .chrome-inner { display: flex; justify-content: space-between; }
-  .chrome-left { display: none; }
-  .chrome-mark { justify-self: start; }
+  .chrome-mark { display: none; }
+  .chrome-left { display: flex; }
+  .chrome-time { display: none; }
+  .chrome-wordmark { display: block; font-size: 20px; }
   nav.chrome-nav { display: none; }
   .chrome-hamburger { display: block; }
 }
@@ -159,11 +161,18 @@ nav.chrome-nav.mobile-active {
 }
 nav.chrome-nav.mobile-active .nav-item {
   padding: 14px 0; border-bottom: 1px solid var(--header-border) !important;
-  font-size: 13px; letter-spacing: .14em;
+  font-size: 16px; letter-spacing: 0.05em; font-family: 'Sarabun', sans-serif;
 }
 nav.chrome-nav.mobile-active .nav-item:last-child { border-bottom: none !important; }
 nav.chrome-nav.mobile-active .nav-item.active {
   color: #b31b1b; border-bottom: 1px solid var(--header-border) !important;
+}
+.mobile-menu-heading { display: none; }
+nav.chrome-nav.mobile-active .mobile-menu-heading {
+  display: block; padding-bottom: 8px;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--header-text-dim); font-weight: 600;
 }
 
 /* ==========================================================
@@ -435,6 +444,9 @@ html.dark-mode .read-more-link { color: #fff !important; }
   .chrome-inner { padding: 14px 20px; }
   nav.chrome-nav.mobile-active { padding: 20px 20px 24px; }
 }
+@media (max-width: 767px) {
+  #catNavTab, #catNavPanel, #catNavOverlay { display: none !important; }
+}
 </style>
 
 <div class="chrome">
@@ -449,6 +461,7 @@ html.dark-mode .read-more-link { color: #fff !important; }
     </a>
 
     <nav class="chrome-nav" id="navMenu">
+      <span class="mobile-menu-heading">สารบัญ</span>
       <a href="/" class="nav-item nav-home">หน้าแรก</a>
       <a href="/pages/about.html" class="nav-item nav-about">เกี่ยวกับเรา</a>
       <a href="/pages/kalam.html" class="nav-item">กะลาม</a>
