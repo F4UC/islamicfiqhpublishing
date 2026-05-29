@@ -1,5 +1,10 @@
 .claude/worktrees/
 
+# Environment / secrets — never commit credentials
+.env
+.env.*
+!.env.example
+
 # Wrangler — block all wrangler config and cache (Workers not used; Pages deploys natively)
 wrangler.toml
 wrangler.jsonc
