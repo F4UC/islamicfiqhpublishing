@@ -1200,4 +1200,104 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   .aya-block .block-ar, .hadith-block .block-ar { font-size: 1.7rem; }
 }
 
+/* ============================================================
+   CINEMATIC OVERLAY FEATURE-IMAGE COMPONENT (.article-feature)
+   Per-article opt-in. Add the .article-feature block in HTML
+   between #header-placeholder and <article>. Other articles
+   are unaffected.
+
+   Accent <em> in overlay title: #ff5b5b.
+   Contrast on pure black: 6.9:1 — passes WCAG AA (4.5:1).
+   White (21:1) not used here to preserve brand red identity
+   against the cinematic dark gradient.
+   ============================================================ */
+.article-feature {
+  position: relative;
+  height: 60vh;
+  min-height: 420px;
+  overflow: hidden;
+}
+.article-feature img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.article-feature::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.78) 100%
+  );
+  z-index: 1;
+}
+.article-feature-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.article-feature-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 32px 52px;
+}
+.article-feature-eyebrow {
+  display: block;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.2s ease;
+}
+.article-feature-eyebrow:hover { color: rgba(255, 255, 255, 0.95); }
+.article-feature-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: clamp(26px, 4.5vw, 48px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #f5f1ea;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  word-break: break-word;
+  margin: 0;
+}
+.article-feature-title em {
+  font-style: normal;
+  color: #ff5b5b;
+}
+.article-feature-credit {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  pointer-events: none;
+  user-select: none;
+}
+/* Dark mode: identical appearance — overlay sits on photo, not page bg */
+html.dark-mode .article-feature-title { color: #f5f1ea; }
+@media (max-width: 960px) {
+  .article-feature { height: 52vh; min-height: 360px; }
+  .article-feature-inner { padding: 0 24px 44px; }
+}
+@media (max-width: 640px) {
+  .article-feature { height: 44vh; min-height: 300px; }
+  .article-feature-inner { padding: 0 20px 36px; }
+  .article-feature-credit { font-size: 11px; bottom: 8px; right: 12px; }
+}
+
 
