@@ -65,6 +65,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   transition: var(--theme-transition);
+  position: relative;
 }
 html.dark-mode body {
   background-color: #000000;
@@ -155,9 +156,16 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 .footer-links a:hover { color: var(--inverted-text); }
 .footer-copy { font-family: 'Inter', sans-serif; font-size: 14px; color: #888888; font-style: normal; letter-spacing: 0.5px; transition: var(--theme-transition); }
 
-/* --- Back to Top Button --- */
+/* --- Back to Top Button — global default (non-article pages, e.g. tools.html) --- */
 #backToTopBtn { display: none; position: fixed; bottom: 24px; right: 24px; z-index: 999; padding: 12px; border: 1px solid var(--border-primary); background: var(--bg-primary); color: var(--text-primary); border-radius: 4px; box-shadow: 0 5px 15px var(--shadow-color); cursor: pointer; transition: var(--theme-transition); }
 #backToTopBtn:hover { background: var(--text-primary); color: var(--bg-primary); border-color: var(--text-primary); }
+/* Article pages only — canonical style per moon-sighting-vs-astronomy.html (Rule 54) */
+body#article-page #backToTopBtn {
+  background: var(--accent-color); color: #fff; border: none; box-shadow: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px; padding: 0;
+  bottom: 30px; right: 30px;
+}
+body#article-page #backToTopBtn:hover { background: var(--accent-color); color: #fff; border-color: transparent; transform: translateY(-3px); }
 
 /* โหมดมือถือ */
 @media(max-width:768px){
@@ -264,11 +272,14 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 
 .article-body p {
   margin-bottom: 24px;
+  line-height: 2.0;
+  text-align: left;
+  word-break: break-word;
 }
 
 .article-body .lead-text {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 400;
   color: var(--text-primary);
   line-height: 1.7;
   margin-bottom: 32px;
@@ -335,7 +346,7 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
   background: var(--accent-color);
   width: 0%;
   z-index: 9999;
-  transition: width 0.1s ease;
+  transition: width 0.1s ease-out;
 }
 
 /* ==========================================
@@ -474,13 +485,12 @@ html.dark-mode .btn-twitter { background: #ffffff; color: #000000; } /* For X lo
 .btn-copy { background: var(--text-tertiary); }
 
 .copy-alert {
-  display: none;
-  font-size: 14px;
-  color: var(--accent-color);
-  margin-top: 12px;
-  font-weight: 500;
-  animation: fadeIn 0.3s;
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
@@ -1106,9 +1116,9 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   font-size: 1.6rem; line-height: 2.1;
   color: var(--text-primary);
   padding: 24px 24px; margin: 28px 0;
-  background: var(--bg-secondary);
+  background: rgba(255,255,255,0.02);
 }
-.ar-translation { color: var(--text-tertiary); margin: 0 0 24px; line-height: 2.0; }
+.ar-translation { color: var(--text-tertiary); margin: -12px 0 28px; line-height: 2.0; font-style: italic; }
 
 /* B.3 — Collapsed toggle: ulama quotes / long excerpts */
 .ar-toggle { margin: 8px 0 24px; }
@@ -1119,8 +1129,8 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   border-bottom: 0.5px solid var(--border-secondary); display: inline-block;
 }
 .ar-toggle > summary::-webkit-details-marker { display: none; }
-.ar-toggle > summary:hover { color: #b31b1b; }
-.ar-toggle[open] > summary { color: #b31b1b; margin-bottom: 10px; }
+.ar-toggle > summary:hover { color: var(--accent-color); }
+.ar-toggle[open] > summary { color: var(--accent-color); margin-bottom: 10px; }
 .ar-toggle .ar-block {
   font-family: 'Amiri', serif;
   direction: rtl; text-align: right;
@@ -1128,6 +1138,7 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   color: var(--text-secondary);
   padding: 8px 16px;
   border-right: 2px solid rgba(179,27,27,0.5);
+  margin: 8px 0;
 }
 
 /* B.1 — Inline Arabic term */
@@ -1303,3 +1314,90 @@ html.dark-mode .article-feature-title { color: #f5f1ea; }
 }
 
 
+/* ============================================================
+   NITISART ARTICLE CLASSES — migrated from inline <style>
+   ============================================================ */
+
+/* Inline Arabic span for darurah/usul */
+.ar {
+  font-family: 'Amiri', serif;
+  font-size: 1.25em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Quote container: fiqh-principle boxes and plain Arabic blockquotes */
+.quote-container,
+.fiqh-principle {
+  padding: 24px 32px;
+  margin: 32px 0;
+  border-right: 4px solid var(--accent-color);
+  background-color: var(--bg-secondary);
+  border-radius: 8px 0 0 8px;
+  color: var(--text-primary);
+}
+
+/* Citation box label and footer */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+
+/* Related articles section */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-section .related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Footnotes and bibliography */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  body#article-page #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ar-toggle, .copy-btn { transition: none; }
+}
