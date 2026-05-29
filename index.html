@@ -1095,7 +1095,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 
 <div id="footer-placeholder"></div>
 
-<script src="/main.js?v=20260529j" charset="UTF-8"></script>
+<script src="/main.js?v=20260529k" charset="UTF-8"></script>
 
 <script>
 /* ----- WEBGL FLUID EFFECT ----- */
@@ -1218,21 +1218,32 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
     });
   }
 
-  function resizeCanvas() {
-    var dpr = window.devicePixelRatio || 1;
-    var width = canvas.clientWidth;
-    var height = canvas.clientHeight;
-    if (canvas.width !== width || canvas.height !== height) {
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
-      gl.viewport(0, 0, canvas.width, canvas.height);
-    }
-  }
+  // Cache canvas size; recompute only on resize (avoids per-frame layout read)
+  var dpr = window.devicePixelRatio || 1;
+  canvas.width = canvas.clientWidth * dpr;
+  canvas.height = canvas.clientHeight * dpr;
+  gl.viewport(0, 0, canvas.width, canvas.height);
+  window.addEventListener('resize', function() {
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = canvas.clientWidth * dpr;
+    canvas.height = canvas.clientHeight * dpr;
+    gl.viewport(0, 0, canvas.width, canvas.height);
+  });
+
+  // Cache dark-mode state; update via MutationObserver (no per-frame DOM read)
+  var isDarkUniform = document.documentElement.classList.contains('dark-mode') ? 1.0 : 0.0;
+  new MutationObserver(function() {
+    isDarkUniform = document.documentElement.classList.contains('dark-mode') ? 1.0 : 0.0;
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
   var startTime = Date.now();
+  var rafId = null;
+  var lastFrameTime = 0;
+  var FRAME_MIN_MS = 33; // ~30fps cap
 
-  function render() {
-    resizeCanvas();
+  function render(ts) {
+    if (ts - lastFrameTime < FRAME_MIN_MS) { rafId = requestAnimationFrame(render); return; }
+    lastFrameTime = ts;
 
     gl.clearColor(0, 0, 0, 0);
     gl.clear(gl.COLOR_BUFFER_BIT);
@@ -1248,22 +1259,30 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
     // Ease mouse coordinates
     mouseX += (targetMouseX - mouseX) * 0.08;
     mouseY += (targetMouseY - mouseY) * 0.08;
-    
-    var dpr = window.devicePixelRatio || 1;
     gl.uniform2f(mouseUniformLocation, mouseX * dpr, mouseY * dpr);
 
-    var time = (Date.now() - startTime) * 0.001;
-    gl.uniform1f(timeUniformLocation, time);
-
-    var isDark = document.documentElement.classList.contains('dark-mode') ? 1.0 : 0.0;
-    gl.uniform1f(darkUniformLocation, isDark);
+    gl.uniform1f(timeUniformLocation, (Date.now() - startTime) * 0.001);
+    gl.uniform1f(darkUniformLocation, isDarkUniform);
 
     gl.drawArrays(gl.TRIANGLES, 0, 6);
 
-    requestAnimationFrame(render);
+    rafId = requestAnimationFrame(render);
   }
 
-  requestAnimationFrame(render);
+  function startRender() { if (!rafId) rafId = requestAnimationFrame(render); }
+  function stopRender()  { if (rafId) { cancelAnimationFrame(rafId); rafId = null; } }
+
+  // Pause when tab is hidden; resume when visible
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) stopRender(); else startRender();
+  });
+
+  // Pause when canvas is scrolled off-screen; resume when it re-enters
+  new IntersectionObserver(function(entries) {
+    entries[0].isIntersecting ? startRender() : stopRender();
+  }, { threshold: 0 }).observe(canvas);
+
+  startRender();
 })();
 
 /* ----- CLICK RIPPLE EFFECT ----- */
@@ -1401,7 +1420,8 @@ window.addEventListener('resize', function(){ document.getElementById('quoteAuth
       canvas.height = card.offsetHeight;
     }
 
-    function draw(){
+    function draw(ts){
+      var now = (ts || 0) * 0.001;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       var cols = Math.ceil(canvas.width / SPACING) + 2;
       var rows = Math.ceil(canvas.height / SPACING) + 2;
