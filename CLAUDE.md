@@ -128,10 +128,12 @@
 
 ### หมวดที่ 8: กฎเพิ่มเติมด้านอักขรวิธีและความถูกต้องทางวิชาการ
 
-* **กฎข้อที่ 52:** **[ช่องไฟนำหน้าชื่อ อิบนุ / อบู]** คำนำหน้า **"อิบนุ"** (ابن) และ **"อบู"** (أبو) ต้องมีช่องว่างคั่นจากชื่อที่ตามมาเสมอ
+* **กฎข้อที่ 52:** **[ช่องไฟนำหน้าชื่อ อิบนุ / อบู และรูปประสมอัล-]** คำนำหน้า **"อิบนุ"** (ابن) และ **"อบู"** (أبو) ต้องมีช่องว่างคั่นจากชื่อที่ตามมาเสมอ
   - ตัวอย่าง: "อิบนุอุมัร" → "อิบนุ อุมัร", "อบูอับดุลลอฮ์" → "อบู อับดุลลอฮ์", "อบูฮุร็อยเราะฮ์" → "อบู ฮุร็อยเราะฮ์"
-  - **ข้อยกเว้น (อิบนุ เท่านั้น):** เมื่อ "อิบนุ" ตามด้วยตัวอักษร "ล" ทันที ให้ถือว่าเป็นรูปประสม **"อิบนุล"** (Ibn al-) เช่น "อิบนุลก็อยยิม" (Ibn al-Qayyim), "อิบนุลอะษีร" (Ibn al-Athir) — **ห้ามแทรกช่องว่างใน "อิบนุล..."**
-  - **"อบู" ไม่มีข้อยกเว้น** — ต้องเพิ่มช่องว่างเสมอ (หมายเหตุ: Abu al- สะกดว่า "อบุล" โดยใช้สระอุ ซึ่งเป็นสตริงต่างกัน กฎนี้ไม่ครอบคลุม "อบุล")
+  - **รูปประสม Ibn al- → "อิบนุล…" (เชื่อม):** เมื่อ "อิบนุ" ตามด้วย "ล" ทันที ให้เชื่อมเป็น **"อิบนุล"** (Ibn al-) เช่น "อิบนุลก็อยยิม" (Ibn al-Qayyim), "อิบนุลอะษีร" (Ibn al-Athir) — **ห้ามแทรกช่องว่าง**
+  - **รูปประสม Abu al- → "อบุล…" (เชื่อม, สระอุ):** เมื่อ "อบู" นำหน้า اَل ให้เขียนเชื่อมเป็น **"อบุล"** โดยใช้สระอุ (สั้น) เช่น "อบุลหะสัน" (Abu al-Hasan), "อบุลวะลีด" (Abu al-Walid) — **ห้ามแทรกช่องว่าง และห้ามใช้สระอู ("อบูล")** — หากพบ "อบูล" (สระอู) ในรูป al- ให้แก้เป็น "อบุล" (สระอุ) ทุกกรณี
+  - **ข้อควรระวัง — ล ที่เป็นพยัญชนะต้นของชื่อจริง (ไม่ใช่ اَل):** เช่น "อบู ลุบาบะฮ์" (Abu Lubabah / أبو لُبَابَة) — ล ตามด้วยสระอุ เป็นส่วนของชื่อ ให้เว้นวรรคและใช้สระอู ตามปกติ: **"อบู ลุบาบะฮ์"** ห้ามเชื่อมเป็น "อบุล…" แนวทางเบื้องต้น: ล + สระอุ/อู/อิ มักเป็นพยัญชนะต้นของชื่อ → เว้นวรรค; ล + พยัญชนะตัวต่อไป (เช่น ลหะ, ลวะ, ลกอ, ลมุ) มักเป็น اَل → เชื่อม
+  - **⚑ ทุกกรณีที่พบ "อิบนุล…", "อบุล…", หรือ "อบูล…"** ต้องรายงานเพื่อให้บรรณาธิการยืนยันว่าเป็นรูปอัล- หรือพยัญชนะต้นของชื่อก่อนตัดสิน — ห้ามเดาโดยลำพัง
 
 * **กฎข้อที่ 53:** **[ฮะเราะกาตโองการอัลกุรอาน]** โองการอัลกุรอานทุกข้อ ทุกที่ ต้องมีสระกำกับ (ตัชกีล / ฮะเราะกาต) ครบถ้วน โดยดึงตัวบทจากมุสหัฟมาตรฐาน (quran.com หรือ tanzil.net รูปแบบ Hafs ʿan ʿĀṣim หากไม่ระบุเป็นอย่างอื่น) **ห้ามใส่สระด้วยตนเองโดยเด็ดขาด** เพราะสระผิดจะเปลี่ยนการออกเสียงและความหมาย ให้คัดลอกจากแหล่งที่มีสระครบถ้วนเท่านั้น หากไม่สามารถตรวจสอบได้ ให้แจ้งข้อสงสัยแทนการเดา — **กฎนี้ใช้บังคับเฉพาะโองการอัลกุรอานเท่านั้น ไม่ครอบคลุมภาษาอาหรับทั่วไป (ชื่อบุคคล, คำศัพท์เทคนิค, หะดีษ, คำพูดของปราชญ์)**
 
@@ -230,9 +232,11 @@
 
 ## Section 8: Additional Rules
 
-* **Rule 52:** **[Spacing after Ibn / Abu prefixes]** The transliterated prefixes **"อิบนุ"** (ابن, Ibn) and **"อบู"** (أبو, Abu) must always be separated from the following name by a single space.
+* **Rule 52:** **[Spacing after Ibn / Abu prefixes and al- compounds]** The transliterated prefixes **"อิบนุ"** (ابن, Ibn) and **"อบู"** (أบو, Abu) must always be separated from the following name by a single space.
   - Examples: "อิบนุอุมัร" → "อิบนุ อุมัร"; "อบูอับดุลลอฮ์" → "อบู อับดุลลอฮ์"; "อบูฮุร็อยเราะฮ์" → "อบู ฮุร็อยเราะฮ์"
-  - **Exception (อิบนุ only):** When "อิบนุ" is immediately followed by the letter "ล", it forms the contracted **"อิบนุล"** (Ibn al-), e.g., "อิบนุลก็อยยิม" (Ibn al-Qayyim), "อิบนุลอะษีร" (Ibn al-Athir). Do **NOT** insert a space within "อิบนุล…"
-  - **"อบู" has NO exception** — always add the space. (Note: Abu al- is spelled "อบุล" using สระอุ — a distinct string not covered by this rule.)
+  - **Ibn al- compound → "อิบนุล…" (fused):** When "อิบนุ" is immediately followed by "ล", contract to **"อิบนุล"** (Ibn al-). Do **NOT** insert a space. E.g., "อิบนุลก็อยยิม" (Ibn al-Qayyim), "อิบนุลอะษีร" (Ibn al-Athir).
+  - **Abu al- compound → "อบุล…" (fused, สระอุ short vowel):** When "อบู" precedes al- (اَل), write fused as **"อบุล"** using สระอุ. Do **NOT** split and do **NOT** use สระอู ("อบูล") in this form. E.g., "อบุลหะสัน" (Abu al-Hasan), "อบุลวะลีด" (Abu al-Walid). If "อบูล" (สระอู) is found in an al- compound, normalize to "อบุล" (สระอุ).
+  - **Caveat — ล belonging to the actual name (not al-):** If "ล" is the initial consonant of the name itself (not اَل), e.g., Abu Lubabah (أبو لُبَابَة) = "อบู ลุบาบะฮ์" — keep spaced with สระอู as normal. Rule of thumb: ล followed by a short vowel (ลุ, ลู, ลิ) is usually a name-initial → space; ล followed by a consonant cluster (ลหะ, ลวะ, ลกอ, ลมุ) is usually al- → fuse.
+  - **⚑ FLAG EVERY "อิบนุล…", "อบุล…", or "อบูล…" case** for editorial review — never determine unilaterally whether it is al- or a name-initial consonant.
 
 * **Rule 53:** **[Quran Harakat Integrity]** Every Quran verse, everywhere, must carry full harakat (tashkīl). Source verses from a standard Mushaf (quran.com or tanzil.net, Hafs ʿan ʿĀṣim unless otherwise specified). **NEVER add harakat manually** — incorrect vowel marks alter recitation and meaning; copy only from a fully-vowelled authoritative source. If verification is not possible, flag the issue — do not guess. **This rule applies to Quran verses only, not to ordinary Arabic (names, terms, hadith, or scholarly quotations).**
