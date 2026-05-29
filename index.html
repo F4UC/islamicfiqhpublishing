@@ -580,7 +580,7 @@ html.dark-mode .idx-arrow { color: rgba(255,255,255,0.7); }
   font-family: var(--thai); font-size: 15px; color: var(--ink-3);
   display: inline-flex; align-items: center; gap: 14px;
 }
-.quote-author-line::before { content: '—'; color: var(--gold); font-family: var(--serif); font-style: italic; letter-spacing: 0; }
+.quote-author-line::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); flex-shrink: 0; }
 .quote-controls { margin-top: 64px; display: flex; justify-content: center; gap: 12px; }
 .quote-dot {
   width: 24px; height: 24px; display: grid; place-items: center;
@@ -706,11 +706,11 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
   .section { padding: 80px 0; }
   #backToTopBtn { bottom: 20px; right: 20px; }
   .hero-arabic { font-size: 6.5vw; white-space: nowrap; }
-  .quote-eyebrow { flex-direction: column; gap: 6px; width: 100%; align-items: center; }
-  .quote-eyebrow::before, .quote-eyebrow::after { display: none; }
-  .eyebrow-en { display: inline-flex; align-items: center; gap: 12px; }
-  .eyebrow-en::before { content: ''; display: block; width: 28px; height: 1px; background: var(--ink-3); }
-  .eyebrow-en::after { content: ''; display: block; width: 28px; height: 1px; background: var(--ink-3); }
+  .quote-eyebrow { flex-direction: row; gap: 6px; width: auto; font-size: 9px; letter-spacing: 0.1em; white-space: nowrap; }
+  .quote-eyebrow::before, .quote-eyebrow::after { width: 20px; display: block; }
+  .eyebrow-en { display: inline; }
+  .eyebrow-en::before { display: none; }
+  .eyebrow-en::after { content: ' · '; display: inline; background: none; width: auto; height: auto; }
   .quote-section { padding: 80px 0; }
   .quote-body { min-height: 580px; }
   .tool-name { font-size: 28px; white-space: nowrap; }
@@ -775,8 +775,8 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
   color: rgba(245,241,234,0.65); letter-spacing: .04em; line-height: 1.6;
 }
 .cat-panel-cta {
-  font-family: 'D-DIN','Inter', system-ui, sans-serif; font-size: 10px;
-  letter-spacing: .22em; text-transform: uppercase; color: rgba(245,241,234,0.50);
+  font-family: 'Sarabun', system-ui, sans-serif; font-size: 13px;
+  letter-spacing: 0.04em; color: rgba(245,241,234,0.50);
   display: inline-flex; align-items: center; gap: 10px; margin-top: 6px;
   transition: color .3s;
 }
@@ -1089,7 +1089,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 
 <div id="footer-placeholder"></div>
 
-<script src="/main.js?v=20260529f" charset="UTF-8"></script>
+<script src="/main.js?v=20260529g" charset="UTF-8"></script>
 
 <script>
 /* ----- WEBGL FLUID EFFECT ----- */
