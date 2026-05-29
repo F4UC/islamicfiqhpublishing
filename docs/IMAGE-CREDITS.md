@@ -7,7 +7,7 @@
 
 | ใช้ที่ (หน้า) | File / URL | แหล่งที่มา | ผู้ถ่าย / เจ้าของ | สัญญาอนุญาต |
 |---|---|---|---|---|
-| `articles/nitisart/moon-sighting-vs-astronomy.html` (hero) | `https://commons.wikimedia.org/wiki/Special:FilePath/Crescent_Moon.JPG` (embed ผ่าน Special:FilePath ของ Wikimedia Commons, โหลดในเบราว์เซอร์ผู้อ่าน) | Wikimedia Commons — [File:Crescent Moon.JPG](https://commons.wikimedia.org/wiki/File:Crescent_Moon.JPG) | Y0kwetahoe (Wikimedia user) | Public Domain — เจ้าของสละสิทธิ์ ใช้ได้ทุกวัตถุประสงค์รวมเชิงพาณิชย์ ไม่ต้องระบุที่มา |
+| `articles/nitisart/moon-sighting-vs-astronomy.html` (feature image) | `https://images.islamicfiqhpublishing.com/articles/moon-sighting.jpg` (R2 self-hosted) | Pexels | Ludvig Hedenborg | Pexels License — ใช้ฟรี รวมเชิงพาณิชย์ ไม่บังคับ attribution แต่ให้เครดิตไว้ในหน้าบทความ |
 
 | `index.html` (categories panel 01 — กะลาม/เทววิทยา) | `/images/heroes/hero-kalam-1.jpg` | local asset — ถ่ายภาพ/ซื้อสิทธิ์โดยทีมงาน | Islamic Fiqh Publishing | สิทธิ์ภายใน |
 | `index.html` (categories panel 02 — นิติศาสตร์) | `/images/heroes/hero-nitisart-1.jpg` | local asset — ถ่ายภาพ/ซื้อสิทธิ์โดยทีมงาน | Islamic Fiqh Publishing | สิทธิ์ภายใน |
@@ -16,9 +16,9 @@
 | `index.html` (categories panel 05 — หัจญ์ & อุมเราะฮ์) | `/images/heroes/hero-hajj-1.jpg` | local asset — ถ่ายภาพ/ซื้อสิทธิ์โดยทีมงาน | Islamic Fiqh Publishing | สิทธิ์ภายใน |
 | `index.html` (categories panel 06 — เครื่องมือนักวิชาการ) | `/images/heroes/hero-tools-1.jpg` | local asset — ถ่ายภาพ/ซื้อสิทธิ์โดยทีมงาน | Islamic Fiqh Publishing | สิทธิ์ภายใน |
 
-## หมายเหตุการเลือกภาพ (hero ของบทความ moon-sighting)
-- **โจทย์:** จันทร์เสี้ยว / ดาราศาสตร์อิสลาม — โทนสงบ มีศักดิ์ศรี ไม่ sci-fi
-- **เลือก** ภาพจันทร์เสี้ยวจริงบนท้องฟ้ามืด (greyscale-on-black) ตรงธีมบทความ "การดูจันทร์เสี้ยว" โดยตรง
-- **วิธีฝัง:** ใช้ Wikimedia `Special:FilePath` (endpoint redirect ที่เสถียร) แทนการ self-host เพราะ sandbox มี allowlist เครือข่าย เข้าถึง Unsplash/NASA/Wikimedia upload ไม่ได้ (403 ทั้งหมด) จึงดาวน์โหลดมา self-host ไม่ได้ — ภาพจะโหลดในเบราว์เซอร์ผู้อ่านซึ่งเข้าถึง Wikimedia ได้ตามปกติ
-- **License:** Public Domain (ยืนยันจากหน้าไฟล์ Commons) — ปลอดภัยเชิงพาณิชย์ ไม่ต้อง attribution แต่บันทึกเครดิตไว้ที่นี่เพื่อความโปร่งใส
-- **ควรตรวจสายตา** ครั้งแรกหลัง deploy ว่าองค์ประกอบ/อัตราส่วนภาพเข้ากับ overlay ข้อความล่างซ้าย
+## หมายเหตุการเลือกภาพ (feature image ของบทความ moon-sighting)
+- **โจทย์:** จันทร์เสี้ยวในเมฆยามค่ำคืน — โทนสงบ มีศักดิ์ศรี ตรงธีม "การดูจันทร์เสี้ยว" โดยตรง
+- **แหล่งภาพ:** Pexels (ช่างภาพ: Ludvig Hedenborg) — self-hosted ผ่าน Cloudflare R2
+- **R2 path:** `articles/moon-sighting.jpg` → public URL `https://images.islamicfiqhpublishing.com/articles/moon-sighting.jpg`
+- **License:** Pexels License — ใช้ฟรี รวมเชิงพาณิชย์ ไม่บังคับ attribution แต่ให้เครดิต "ภาพ: Ludvig Hedenborg / Pexels" ไว้ใน overlay ของบทความ
+- **ควรตรวจสายตา** ครั้งแรกหลัง deploy: overlay gradient / ข้อความ / credit caption ตำแหน่งถูกต้อง และภาพโหลดสำเร็จ

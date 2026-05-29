@@ -230,6 +230,86 @@ Commit and push when done.
 
 ---
 
+## ส่วน D — Feature Image (Cinematic Overlay)
+
+### D.1 R2 Image Hosting Convention
+
+ภาพฟีเจอร์ของบทความโฮสต์บน Cloudflare R2 ผ่าน custom subdomain:
+
+```
+Public URL: https://images.islamicfiqhpublishing.com/articles/<slug>.jpg
+R2 path:    articles/<slug>.jpg
+```
+
+ตัวอย่าง: `articles/moon-sighting.jpg` → `https://images.islamicfiqhpublishing.com/articles/moon-sighting.jpg`
+
+### D.2 เมื่อไรควรใช้ `.article-feature`
+
+- บทความที่มีภาพถ่ายจริงที่น่าดึงดูดและตรงธีม
+- ภาพต้องมีพื้นที่มืดบริเวณล่างเพียงพอ (gradient overlay จะเข้มขึ้นด้านล่าง 78%)
+- Per-article opt-in: ใส่ block `.article-feature` ในบทความที่ต้องการเท่านั้น บทความอื่นไม่ได้รับผลกระทบ
+
+### D.3 Markup มาตรฐาน
+
+วาง block นี้ **ระหว่าง `<div id="header-placeholder"></div>` และ `<article>`**:
+
+```html
+<div id="header-placeholder"></div>
+
+<div class="article-feature">
+  <img
+    src="https://images.islamicfiqhpublishing.com/articles/<slug>.jpg"
+    alt="[คำอธิบายภาพเป็นภาษาไทย]"
+    width="1600"
+    height="900"
+    loading="eager"
+    fetchpriority="high"
+  >
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/<category>.html" class="article-feature-eyebrow">[หมวดหมู่]</a>
+      <h1 class="article-feature-title">[ชื่อบทความ — word-for-word จาก H1 เดิม]</h1>
+    </div>
+    <p class="article-feature-credit">ภาพ: [ชื่อช่างภาพ] / [แหล่งที่มา]</p>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+  <!-- H1 และ article-cat ถูกย้ายไปอยู่ใน .article-feature แล้ว -->
+  <!-- เริ่มด้วย .article-meta โดยตรง -->
+  <div class="article-meta">...</div>
+  <div class="reading-tools">...</div>
+  <div class="article-body" id="main-content">...</div>
+</div>
+</article>
+```
+
+### D.4 LCP Loading Attributes (บังคับ)
+
+`.article-feature img` คือ Largest Contentful Paint (LCP) element — อยู่ above the fold:
+
+- `loading="eager"` — ห้ามใช้ `loading="lazy"` โดยเด็ดขาด
+- `fetchpriority="high"` — ให้ browser จัดลำดับความสำคัญสูงสุด
+- `width` + `height` — ระบุ intrinsic size เสมอ เพื่อป้องกัน layout shift (CLS)
+- `alt` — คำอธิบายภาษาไทยที่อธิบายภาพจริง (Rule 42)
+
+### D.5 Credit Caption (บังคับ)
+
+- ทุกบทความที่มี `.article-feature` ต้องมี `.article-feature-credit` แสดง credit ในภาพ
+- รูปแบบ: `ภาพ: [ชื่อช่างภาพ] / [แหล่ง]`
+- ต้องบันทึกรายการนี้ใน `/docs/IMAGE-CREDITS.md` ในคอมมิตเดียวกันกับที่เพิ่มภาพ
+
+### D.6 Dark Mode
+
+`.article-feature` แสดงผลเหมือนกันทั้ง light และ dark mode — overlay gradient นั่งบนภาพถ่าย ไม่ใช้ CSS variable ของ page background ดังนั้นไม่ต้องเขียน dark-mode override แยกสำหรับ overlay
+
+### D.7 inline style ใน `<article>`
+
+บทความที่ใช้ `.article-feature` ไม่ต้องใส่ `.article-wrap { padding-top: 96px; }` ในหน้าเพราะ feature image ทำหน้าที่ visual separation จาก nav แล้ว (global `padding: 40px 24px 80px` ของ `.article-wrap` ใช้ตามปกติ)
+
+---
+
 ## หมายเหตุท้ายเอกสาร
 - เมื่อขึ้นบทความใหม่แล้ว อย่าลืมเพิ่ม URL ของบทความเข้า `sitemap.xml`
 - ภายหลังเมื่อบทความครบทุกหมวดแล้ว ค่อยฝัง JSON-LD แบบ `ScholarlyArticle` รายบทความทีเดียว (ดู roadmap SEO)
