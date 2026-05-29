@@ -33,7 +33,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/tokens.css?v=20260529l">
+<link rel="preload" href="/images/heroes/hero-hadith.jpg" as="image" fetchpriority="high">
+<link rel="stylesheet" href="../css/tokens.css?v=20260529m">
 <style>
 /* --- Fixed Dark Palette — all colors resolve via css/tokens.css (white + red on ink) --- */
 :root {
@@ -72,10 +73,10 @@ body{
 }
 a{text-decoration:none;color:inherit;transition:color 0.2s ease;}
 
-/* ─── PAGE HERO (Video) ─────────────────────────────────────────── */
+/* ─── PAGE HERO (Static Image) ──────────────────────────────────── */
 :root{--ph-serif:'IBM Plex Sans Thai', system-ui, sans-serif;--ph-thai:'Sarabun',sans-serif}
 .page-hero{position:relative;height:100vh;overflow:hidden;background:var(--ink,#0a0907)}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-bg{position:absolute;inset:0;background-image:url('/images/heroes/hero-hadith.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}
 .page-hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0) 100%)}
 .page-hero-inner{position:absolute;left:60px;bottom:120px;max-width:560px;z-index:3;text-align:left}
 .page-display{font-family:var(--ph-serif);font-weight:400;font-size:clamp(3rem,6vw,7rem);line-height:1.05;letter-spacing:-.01em;white-space:nowrap;color:#f5f1ea;text-shadow:0 2px 24px rgba(0,0,0,0.6)}
@@ -192,9 +193,7 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 
 <main>
   <section class="page-hero">
-    <video class="hero-video" autoplay muted loop playsinline aria-label="วิดีโอพื้นหลังประกอบหมวดหะดีษ">
-      <source src="/images/heroes/hero-hadith.mp4" type="video/mp4">
-    </video>
+    <div class="hero-bg" role="img" aria-label="ภาพพื้นหลังประกอบหมวดหะดีษ"></div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-inner">
       <h1 class="page-display" data-reveal>หะ<em>ดีษ</em></h1>
@@ -217,7 +216,7 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 
 <div id="footer-placeholder"></div>
 
-<script src="/main.js?v=20260529l"></script>
+<script src="/main.js?v=20260529m"></script>
 <script>
 (function(){
   var bar = document.getElementById('readingProgress');
@@ -244,9 +243,7 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
   document.querySelector('.hero-scroll-hint')?.addEventListener('click', function() {
     window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
   });
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelector('.hero-video')?.pause();
-  }
+
 })();
 </script>
 
