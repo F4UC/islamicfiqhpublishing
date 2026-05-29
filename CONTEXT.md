@@ -4,7 +4,7 @@
 
 ## Stack & Workflow
 - Static site บน Cloudflare Pages
-- Repo: Genesis897/islamicfiqhpublishing
+- Repo: F4UC/islamicfiqhpublishing
 - Branch: main (production) + claude/rules-full-update-kGLfz (deploy/dev — ต้อง sync กับ main เสมอ)
 - พัฒนาบน claude/rules-full-update-kGLfz เสมอ แล้ว merge เข้า main
 - Components: components/header.html + components/footer.html inject ผ่าน main.js
