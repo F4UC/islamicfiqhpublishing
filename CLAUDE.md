@@ -1,10 +1,10 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 53 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all 55 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (53 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (54 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -26,7 +26,7 @@
 * **กฎข้อที่ 12.1:** **[การทับศัพท์คำว่า صحيح]** การถอดเสียงคำว่า **صحيح** (Sahih) เป็นภาษาไทย ต้องสะกดว่า **"ศอเฮี้ยะฮ์"** เท่านั้น (เช่น ศอเฮี้ยะฮ์อัลบุคอรีย์, ศอเฮี้ยะฮ์มุสลิม) **ห้ามสะกดว่า "ศ่อเหี้ยห์" โดยเด็ดขาด** และให้ใช้รูปแบบนี้อย่างสม่ำเสมอในเนื้อหาทั้งหมดในอนาคต
 * **กฎข้อที่ 13:** **[ช่องไฟคำทับศัพท์]** คำศัพท์เทคนิคทางศาสนาที่ทับศัพท์มา เมื่อนำมาประกอบในประโยคภาษาไทย **ห้ามเว้นวรรคหน้า-หลังเด็ดขาด** (เช่น ให้เขียนว่า `ฐานหลักของชะรีอะฮ์ในประเด็นนี้` ห้ามเขียนแยกเป็น `ฐานหลักของ ชะรีอะฮ์ ในประเด็นนี้`)
 * **กฎข้อที่ 14:** **[การเลือกใช้คำเชื่อม]** ห้ามใช้คำเชื่อมโบราณเช่นคำว่า **"ทว่า"** ให้เปลี่ยนไปใช้คำว่า **"แต่"** แทนในทุกกรณี เพื่อความกระชับของภาษาวิชาการ
-* **กฎข้อที่ 15:** การอ้างอิงคำพูดของนักวิชาการ, ตัวบทหะดีษ หรือคำแปล ต้องใช้เครื่องหมายอัญประกาศแบบโค้ง **`"..."`** เท่านั้น ห้ามใช้แบบตรง (`"..."`) เพื่อความพรีเมียม
+* **กฎข้อที่ 15:** การอ้างอิงคำพูดของนักวิชาการ, ตัวบทหะดีษ หรือคำแปล ต้องใช้เครื่องหมายอัญประกาศแบบโค้ง **`“...”`** เท่านั้น ห้ามใช้แบบตรง (`"..."`) เพื่อความพรีเมียม
 * **กฎข้อที่ 16:** ชื่อตำราและหนังสือที่ปรากฏในเนื้อหาบทความและบรรณานุกรม ต้องกำกับด้วยแท็กตัวหนา `<strong>` เสมอ เพื่อเน้นย้ำความสำคัญ
 * **กฎข้อที่ 17:** ห้ามใช้แท็กตัวเอียง `<em>` หรือตัวเอียงในระบบ CSS กับชื่อตำราและหนังสือ ให้สงวนไว้สำหรับคำเน้นย้ำทั่วไปที่ไม่ใช่ชื่อเฉพาะ
 
@@ -137,9 +137,28 @@
 
 * **กฎข้อที่ 53:** **[ฮะเราะกาตโองการอัลกุรอาน]** โองการอัลกุรอานทุกข้อ ทุกที่ ต้องมีสระกำกับ (ตัชกีล / ฮะเราะกาต) ครบถ้วน โดยดึงตัวบทจากมุสหัฟมาตรฐาน (quran.com หรือ tanzil.net รูปแบบ Hafs ʿan ʿĀṣim หากไม่ระบุเป็นอย่างอื่น) **ห้ามใส่สระด้วยตนเองโดยเด็ดขาด** เพราะสระผิดจะเปลี่ยนการออกเสียงและความหมาย ให้คัดลอกจากแหล่งที่มีสระครบถ้วนเท่านั้น หากไม่สามารถตรวจสอบได้ ให้แจ้งข้อสงสัยแทนการเดา — **กฎนี้ใช้บังคับเฉพาะโองการอัลกุรอานเท่านั้น ไม่ครอบคลุมภาษาอาหรับทั่วไป (ชื่อบุคคล, คำศัพท์เทคนิค, หะดีษ, คำพูดของปราชญ์)**
 
+### หมวดที่ 9: หลักการปกครองการออกแบบบทความ (Article Design Governance)
+
+* **กฎข้อที่ 54:** **[บทความต้นแบบและขอบเขตสไตล์บทความ]**
+  - **บทความต้นแบบ (Canonical Reference Article):** ไฟล์ `articles/nitisart/moon-sighting-vs-astronomy.html` คือบทความต้นแบบอย่างเป็นทางการสำหรับโครงสร้างและสไตล์ของหน้าบทความทั้งหมด การเปลี่ยนแปลงมาตรฐานการออกแบบบทความใดๆ ต้องนำมาจากบทความนี้เป็นหลัก
+  - **ขอบเขตของสไตล์บทความ:** สไตล์ที่เป็นมาตรฐานบทความใน `article.css` (รวมถึงกฎข้อที่ 27 และ 28) ใช้บังคับเฉพาะหน้าบทความ (`<body id="article-page">`) เท่านั้น **ห้ามนำสไตล์เหล่านี้ไปปรับเปลี่ยน site-wide chrome โดยเด็ดขาด** ไม่ว่าจะเป็น homepage, หน้าหมวดหมู่, tools, nav, หรือ UI ส่วนกลางใดๆ
+  - **ตัวระบุหน้าบทความ:** หน้าบทความทุกหน้าต้องมี `id="article-page"` ที่แท็ก `<body>` เสมอ — CSS ใน `article.css` ที่ต้องการจำกัดขอบเขตเฉพาะบทความต้องใช้ selector `body#article-page` เสมอ
+  - **กฎข้อที่ 27 และ 28 เป็น Article-Scoped:** `line-height: 2.0` และ `text-align: left; word-break: break-word;` ใช้กับเนื้อหาบทความ (`.article-body`) เท่านั้น ไม่ใช่ global rule ทั่วทั้งเว็บไซต์ และต้องไม่ส่งผลกระทบต่อหน้าอื่นที่นำเข้า `article.css`
+
+### หมวดที่ 10: มาตรฐานเวลาอ่านโดยประมาณ (Reading Time Standard)
+
+* **กฎข้อที่ 55:** **[มาตรฐานการคำนวณเวลาอ่านโดยประมาณ]**
+  - **แหล่งที่มาเดียว:** ค่า `readingTime` ในทุก entry ของ `articles.json` ต้องผลิตโดยสคริปต์ `scripts/gen-reading-time.js` **เท่านั้น** ห้ามพิมพ์หรือแก้ไขค่าด้วยมืออย่างเด็ดขาด
+  - **หน่วยนับ:** นับ **จำนวนตัวอักษร (characters)** ของเนื้อหาไทยในส่วน `.article-body` เสมอ — ภาษาไทยไม่มีช่องว่างระหว่างคำ จึงห้ามนับคำโดยเด็ดขาด
+  - **ส่วนที่ยกเว้น:** ข้อความในบล็อกภาษาอาหรับทั้งหมด (องค์ประกอบที่มี `lang="ar"` หรือ `dir="rtl"`, คลาส `.ar`, `.ar-block`, `.ar-feature`, `.ar-inline`, `.ar-toggle`, `.quote-container`), `.bibliography-section`, `.fn-list`, `.footnotes` — **ยกเว้น** `.thai-quote` ซึ่งต้องนับเสมอแม้จะอยู่ภายในบล็อกที่ถูกยกเว้น
+  - **ค่าคงที่ที่ปรับได้:** `const READING_CPM = 900;` (ตัวอักษรไทยต่อนาที) — ปรับได้โดยเปลี่ยนเลขนี้เพียงจุดเดียวแล้วรันสคริปต์ใหม่
+  - **สูตรคำนวณ:** `readingTime = Math.max(1, Math.ceil(chars / READING_CPM))` — ค่าต่ำสุดคือ 1 นาทีเสมอ
+  - **รูปแบบแสดงผล:** เมื่อนำไปแสดงบนหน้าเว็บ ให้ใช้รูปแบบ `"เวลาอ่านโดยประมาณ X นาที"` เสมอ
+  - **การอัปเดต:** ต้องรันสคริปต์ใหม่ทุกครั้งที่มีการแก้ไขเนื้อหาบทความ เพื่อให้ค่า `readingTime` เป็นปัจจุบันเสมอ
+
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 53 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 55 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -161,7 +180,7 @@
 * **Rule 12.1:** **[Transliteration of صحيح]** The Thai transliteration of **صحيح** (Sahih) must always be spelled **"ศอเฮี้ยะฮ์"** (e.g., ศอเฮี้ยะฮ์อัลบุคอรีย์, ศอเฮี้ยะฮ์มุสลิม). The spelling **"ศ่อเหี้ยห์" is strictly prohibited.** Apply this consistently across all future content.
 * **Rule 13:** **[Transliteration Spacing]** Transliterated religious terminology inserted into Thai sentences must not be preceded or followed by space bars (e.g., `หลักของชะรีอะฮ์ในประเด็น`).
 * **Rule 14:** **[Conjunction Choice]** Eliminate archaic conjunctions such as "ทว่า"; enforce the use of "แต่" to optimize academic conciseness.
-* **Rule 15:** Direct quotes, Hadith, and translations must be enclosed strictly within curved quotation marks **`"..."`**.
+* **Rule 15:** Direct quotes, Hadith, and translations must be enclosed strictly within curved quotation marks **`“...”`**.
 * **Rule 16:** Book titles in texts and bibliographies must be wrapped in `<strong>` tags.
 * **Rule 17:** Do not use `<em>` tags or CSS italic styling for book titles.
 
@@ -241,6 +260,25 @@
 
 * **Rule 53:** **[Quran Harakat Integrity]** Every Quran verse, everywhere, must carry full harakat (tashkīl). Source verses from a standard Mushaf (quran.com or tanzil.net, Hafs ʿan ʿĀṣim unless otherwise specified). **NEVER add harakat manually** — incorrect vowel marks alter recitation and meaning; copy only from a fully-vowelled authoritative source. If verification is not possible, flag the issue — do not guess. **This rule applies to Quran verses only, not to ordinary Arabic (names, terms, hadith, or scholarly quotations).**
 
+## Section 9: Article Design Governance
+
+* **Rule 54:** **[Canonical Reference Article & Article-Style Scope]**
+  - **Canonical Reference Article:** The file `articles/nitisart/moon-sighting-vs-astronomy.html` is the official structural and visual reference for all article pages. Any change to article design standards must derive from this file.
+  - **Article-Style Scope:** Article-standard styles in `article.css` (including Rules 27 and 28) apply ONLY to article pages — those with `<body id="article-page">`. These styles **must NEVER modify site-wide chrome**: homepage, category pages, tools pages, nav, or any global UI element.
+  - **Article Page Marker:** Every article page must carry `id="article-page"` on its `<body>` tag. CSS in `article.css` that is intended for article pages only must use the `body#article-page` selector to scope it accurately.
+  - **Rules 27 and 28 are Article-Scoped:** `line-height: 2.0` and `text-align: left; word-break: break-word;` govern article body text (`.article-body`) only. They are not global rules and must not affect non-article pages that import `article.css`.
+
+## Section 10: Reading Time Standard
+
+* **Rule 55:** **[Reading Time Generation Standard]**
+  - **Single source of truth:** The `readingTime` value in every `articles.json` entry must be produced exclusively by `scripts/gen-reading-time.js`. Manual editing of this field is strictly prohibited.
+  - **Unit of measure:** Always count **characters** of Thai prose within `.article-body`. Thai text has no word boundaries — word counting is strictly forbidden.
+  - **Excluded zones:** All Arabic-script blocks (any element carrying `lang="ar"` or `dir="rtl"`, classes `.ar`, `.ar-block`, `.ar-feature`, `.ar-inline`, `.ar-toggle`, `.quote-container`), `.bibliography-section`, `.fn-list`, `.footnotes`. **Exception:** `.thai-quote` elements must always be counted, even when nested inside an otherwise-excluded subtree.
+  - **Tunable constant:** `const READING_CPM = 900;` (Thai characters per minute). To recalibrate, change this single value and re-run the script.
+  - **Formula:** `readingTime = Math.max(1, Math.ceil(chars / READING_CPM))`. Minimum value is always 1 minute.
+  - **Display format:** When surfaced in the UI, always render as `"เวลาอ่านโดยประมาณ X นาที"`.
+  - **Maintenance:** Re-run the generator script whenever article body content changes to keep `readingTime` current.
+
 ## Bibliography & Citation Standard (قواعد المراجع والإحالات)
 
 Apply this whenever creating or editing references, footnotes, or bibliographies in any article. (Recorded as a standing rule; do not retro-apply unless explicitly told.)
@@ -269,3 +307,9 @@ VERIFICATION (non-negotiable)
 
 TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentions in Thai/English prose)
 - Use one consistent system: IJMES.
+# userEmail
+The user's email address is gibraltar2580@gmail.com.
+# currentDate
+Today's date is 2026-05-29.
+
+      IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
