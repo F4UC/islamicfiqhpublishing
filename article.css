@@ -540,9 +540,11 @@ html.dark-mode .related-card {
 
 .related-cat {
   font-size: 12px;
+  font-family: 'Sarabun', sans-serif;
   color: var(--accent-color);
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: normal;
   margin-bottom: 12px;
   display: block;
 }
