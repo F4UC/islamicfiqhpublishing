@@ -1,10 +1,10 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 51 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all 53 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (51 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (53 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -126,9 +126,20 @@
   - **การแสดงผลบนมือถือ:** ใช้ `<br>` แทน `&nbsp;` ในการแบ่งวรรคกวีอาหรับ เพื่อให้แต่ละวรรคแสดงในบรรทัดใหม่บนหน้าจอเล็ก (ยกเว้นกรณีที่ทดสอบแล้วว่าแสดงผลได้สมบูรณ์โดยไม่ต้องแบ่ง)
   - **โครงสร้างข้อมูล:** array `quotes` ต้องประกอบด้วย field `ar` (ตัวบทอาหรับ ไม่มีอัญประกาศเป็นเนื้อหา), `th` (คำแปลไทยที่ล้อมด้วย `"..."`), และ `author` (ชื่อผู้กล่าวและปีเสียชีวิตตามรูปแบบ `ชื่อ · เสียชีวิตปี ฮ.ศ. XXX` ไม่มีอัญประกาศ) และต้องวางไว้ก่อนปิดแท็ก `</body>` ตามกฎข้อที่ 31
 
+### หมวดที่ 8: กฎเพิ่มเติมด้านอักขรวิธีและความถูกต้องทางวิชาการ
+
+* **กฎข้อที่ 52:** **[ช่องไฟนำหน้าชื่อ อิบนุ / อบู และรูปประสมอัล-]** คำนำหน้า **"อิบนุ"** (ابن) และ **"อบู"** (أبو) ต้องมีช่องว่างคั่นจากชื่อที่ตามมาเสมอ
+  - ตัวอย่าง: "อิบนุอุมัร" → "อิบนุ อุมัร", "อบูอับดุลลอฮ์" → "อบู อับดุลลอฮ์", "อบูฮุร็อยเราะฮ์" → "อบู ฮุร็อยเราะฮ์"
+  - **รูปประสม Ibn al- → "อิบนุล…" (เชื่อม):** เมื่อ "อิบนุ" ตามด้วย "ล" ทันที ให้เชื่อมเป็น **"อิบนุล"** (Ibn al-) เช่น "อิบนุลก็อยยิม" (Ibn al-Qayyim), "อิบนุลอะษีร" (Ibn al-Athir) — **ห้ามแทรกช่องว่าง**
+  - **รูปประสม Abu al- → "อบุล…" (เชื่อม, สระอุ):** เมื่อ "อบู" นำหน้า اَل ให้เขียนเชื่อมเป็น **"อบุล"** โดยใช้สระอุ (สั้น) เช่น "อบุลหะสัน" (Abu al-Hasan), "อบุลวะลีด" (Abu al-Walid) — **ห้ามแทรกช่องว่าง และห้ามใช้สระอู ("อบูล")** — หากพบ "อบูล" (สระอู) ในรูป al- ให้แก้เป็น "อบุล" (สระอุ) ทุกกรณี
+  - **ข้อควรระวัง — ล ที่เป็นพยัญชนะต้นของชื่อจริง (ไม่ใช่ اَل):** เช่น "อบู ลุบาบะฮ์" (Abu Lubabah / أبو لُبَابَة) — ล ตามด้วยสระอุ เป็นส่วนของชื่อ ให้เว้นวรรคและใช้สระอู ตามปกติ: **"อบู ลุบาบะฮ์"** ห้ามเชื่อมเป็น "อบุล…" แนวทางเบื้องต้น: ล + สระอุ/อู/อิ มักเป็นพยัญชนะต้นของชื่อ → เว้นวรรค; ล + พยัญชนะตัวต่อไป (เช่น ลหะ, ลวะ, ลกอ, ลมุ) มักเป็น اَل → เชื่อม
+  - **⚑ ทุกกรณีที่พบ "อิบนุล…", "อบุล…", หรือ "อบูล…"** ต้องรายงานเพื่อให้บรรณาธิการยืนยันว่าเป็นรูปอัล- หรือพยัญชนะต้นของชื่อก่อนตัดสิน — ห้ามเดาโดยลำพัง
+
+* **กฎข้อที่ 53:** **[ฮะเราะกาตโองการอัลกุรอาน]** โองการอัลกุรอานทุกข้อ ทุกที่ ต้องมีสระกำกับ (ตัชกีล / ฮะเราะกาต) ครบถ้วน โดยดึงตัวบทจากมุสหัฟมาตรฐาน (quran.com หรือ tanzil.net รูปแบบ Hafs ʿan ʿĀṣim หากไม่ระบุเป็นอย่างอื่น) **ห้ามใส่สระด้วยตนเองโดยเด็ดขาด** เพราะสระผิดจะเปลี่ยนการออกเสียงและความหมาย ให้คัดลอกจากแหล่งที่มีสระครบถ้วนเท่านั้น หากไม่สามารถตรวจสอบได้ ให้แจ้งข้อสงสัยแทนการเดา — **กฎนี้ใช้บังคับเฉพาะโองการอัลกุรอานเท่านั้น ไม่ครอบคลุมภาษาอาหรับทั่วไป (ชื่อบุคคล, คำศัพท์เทคนิค, หะดีษ, คำพูดของปราชญ์)**
+
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 51 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 53 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -218,3 +229,14 @@
   - **Thai translation standard:** Translations must use natural language matching the tone of the source (poetry, literature, theology, or political writing) — accurate, easy to understand, and concise. Use `\n` at natural sentence-break positions to control mobile line wrapping.
   - **Mobile layout:** Use `<br>` instead of `&nbsp;` to break Arabic poetic hemistiches onto separate lines for small screens (except where tested and confirmed to display correctly without breaking).
   - **Data structure:** The `quotes` array must contain `ar` (Arabic text — no quotation marks as content), `th` (Thai translation wrapped in `"..."`), and `author` (`Name · เสียชีวิตปี ฮ.ศ. XXX` — no quotation marks), positioned before `</body>` per Rule 31.
+
+## Section 8: Additional Rules
+
+* **Rule 52:** **[Spacing after Ibn / Abu prefixes and al- compounds]** The transliterated prefixes **"อิบนุ"** (ابن, Ibn) and **"อบู"** (أบو, Abu) must always be separated from the following name by a single space.
+  - Examples: "อิบนุอุมัร" → "อิบนุ อุมัร"; "อบูอับดุลลอฮ์" → "อบู อับดุลลอฮ์"; "อบูฮุร็อยเราะฮ์" → "อบู ฮุร็อยเราะฮ์"
+  - **Ibn al- compound → "อิบนุล…" (fused):** When "อิบนุ" is immediately followed by "ล", contract to **"อิบนุล"** (Ibn al-). Do **NOT** insert a space. E.g., "อิบนุลก็อยยิม" (Ibn al-Qayyim), "อิบนุลอะษีร" (Ibn al-Athir).
+  - **Abu al- compound → "อบุล…" (fused, สระอุ short vowel):** When "อบู" precedes al- (اَل), write fused as **"อบุล"** using สระอุ. Do **NOT** split and do **NOT** use สระอู ("อบูล") in this form. E.g., "อบุลหะสัน" (Abu al-Hasan), "อบุลวะลีด" (Abu al-Walid). If "อบูล" (สระอู) is found in an al- compound, normalize to "อบุล" (สระอุ).
+  - **Caveat — ล belonging to the actual name (not al-):** If "ล" is the initial consonant of the name itself (not اَل), e.g., Abu Lubabah (أبو لُبَابَة) = "อบู ลุบาบะฮ์" — keep spaced with สระอู as normal. Rule of thumb: ล followed by a short vowel (ลุ, ลู, ลิ) is usually a name-initial → space; ล followed by a consonant cluster (ลหะ, ลวะ, ลกอ, ลมุ) is usually al- → fuse.
+  - **⚑ FLAG EVERY "อิบนุล…", "อบุล…", or "อบูล…" case** for editorial review — never determine unilaterally whether it is al- or a name-initial consonant.
+
+* **Rule 53:** **[Quran Harakat Integrity]** Every Quran verse, everywhere, must carry full harakat (tashkīl). Source verses from a standard Mushaf (quran.com or tanzil.net, Hafs ʿan ʿĀṣim unless otherwise specified). **NEVER add harakat manually** — incorrect vowel marks alter recitation and meaning; copy only from a fully-vowelled authoritative source. If verification is not possible, flag the issue — do not guess. **This rule applies to Quran verses only, not to ordinary Arabic (names, terms, hadith, or scholarly quotations).**
