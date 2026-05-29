@@ -1,10 +1,10 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 51 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all 53 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (51 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (53 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -126,9 +126,18 @@
   - **การแสดงผลบนมือถือ:** ใช้ `<br>` แทน `&nbsp;` ในการแบ่งวรรคกวีอาหรับ เพื่อให้แต่ละวรรคแสดงในบรรทัดใหม่บนหน้าจอเล็ก (ยกเว้นกรณีที่ทดสอบแล้วว่าแสดงผลได้สมบูรณ์โดยไม่ต้องแบ่ง)
   - **โครงสร้างข้อมูล:** array `quotes` ต้องประกอบด้วย field `ar` (ตัวบทอาหรับ ไม่มีอัญประกาศเป็นเนื้อหา), `th` (คำแปลไทยที่ล้อมด้วย `"..."`), และ `author` (ชื่อผู้กล่าวและปีเสียชีวิตตามรูปแบบ `ชื่อ · เสียชีวิตปี ฮ.ศ. XXX` ไม่มีอัญประกาศ) และต้องวางไว้ก่อนปิดแท็ก `</body>` ตามกฎข้อที่ 31
 
+### หมวดที่ 8: กฎเพิ่มเติมด้านอักขรวิธีและความถูกต้องทางวิชาการ
+
+* **กฎข้อที่ 52:** **[ช่องไฟนำหน้าชื่อ อิบนุ / อบู]** คำนำหน้า **"อิบนุ"** (ابن) และ **"อบู"** (أبو) ต้องมีช่องว่างคั่นจากชื่อที่ตามมาเสมอ
+  - ตัวอย่าง: "อิบนุอุมัร" → "อิบนุ อุมัร", "อบูอับดุลลอฮ์" → "อบู อับดุลลอฮ์", "อบูฮุร็อยเราะฮ์" → "อบู ฮุร็อยเราะฮ์"
+  - **ข้อยกเว้น (อิบนุ เท่านั้น):** เมื่อ "อิบนุ" ตามด้วยตัวอักษร "ล" ทันที ให้ถือว่าเป็นรูปประสม **"อิบนุล"** (Ibn al-) เช่น "อิบนุลก็อยยิม" (Ibn al-Qayyim), "อิบนุลอะษีร" (Ibn al-Athir) — **ห้ามแทรกช่องว่างใน "อิบนุล..."**
+  - **"อบู" ไม่มีข้อยกเว้น** — ต้องเพิ่มช่องว่างเสมอ (หมายเหตุ: Abu al- สะกดว่า "อบุล" โดยใช้สระอุ ซึ่งเป็นสตริงต่างกัน กฎนี้ไม่ครอบคลุม "อบุล")
+
+* **กฎข้อที่ 53:** **[ฮะเราะกาตโองการอัลกุรอาน]** โองการอัลกุรอานทุกข้อ ทุกที่ ต้องมีสระกำกับ (ตัชกีล / ฮะเราะกาต) ครบถ้วน โดยดึงตัวบทจากมุสหัฟมาตรฐาน (quran.com หรือ tanzil.net รูปแบบ Hafs ʿan ʿĀṣim หากไม่ระบุเป็นอย่างอื่น) **ห้ามใส่สระด้วยตนเองโดยเด็ดขาด** เพราะสระผิดจะเปลี่ยนการออกเสียงและความหมาย ให้คัดลอกจากแหล่งที่มีสระครบถ้วนเท่านั้น หากไม่สามารถตรวจสอบได้ ให้แจ้งข้อสงสัยแทนการเดา — **กฎนี้ใช้บังคับเฉพาะโองการอัลกุรอานเท่านั้น ไม่ครอบคลุมภาษาอาหรับทั่วไป (ชื่อบุคคล, คำศัพท์เทคนิค, หะดีษ, คำพูดของปราชญ์)**
+
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 51 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 53 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -218,3 +227,12 @@
   - **Thai translation standard:** Translations must use natural language matching the tone of the source (poetry, literature, theology, or political writing) — accurate, easy to understand, and concise. Use `\n` at natural sentence-break positions to control mobile line wrapping.
   - **Mobile layout:** Use `<br>` instead of `&nbsp;` to break Arabic poetic hemistiches onto separate lines for small screens (except where tested and confirmed to display correctly without breaking).
   - **Data structure:** The `quotes` array must contain `ar` (Arabic text — no quotation marks as content), `th` (Thai translation wrapped in `"..."`), and `author` (`Name · เสียชีวิตปี ฮ.ศ. XXX` — no quotation marks), positioned before `</body>` per Rule 31.
+
+## Section 8: Additional Rules
+
+* **Rule 52:** **[Spacing after Ibn / Abu prefixes]** The transliterated prefixes **"อิบนุ"** (ابن, Ibn) and **"อบู"** (أبو, Abu) must always be separated from the following name by a single space.
+  - Examples: "อิบนุอุมัร" → "อิบนุ อุมัร"; "อบูอับดุลลอฮ์" → "อบู อับดุลลอฮ์"; "อบูฮุร็อยเราะฮ์" → "อบู ฮุร็อยเราะฮ์"
+  - **Exception (อิบนุ only):** When "อิบนุ" is immediately followed by the letter "ล", it forms the contracted **"อิบนุล"** (Ibn al-), e.g., "อิบนุลก็อยยิม" (Ibn al-Qayyim), "อิบนุลอะษีร" (Ibn al-Athir). Do **NOT** insert a space within "อิบนุล…"
+  - **"อบู" has NO exception** — always add the space. (Note: Abu al- is spelled "อบุล" using สระอุ — a distinct string not covered by this rule.)
+
+* **Rule 53:** **[Quran Harakat Integrity]** Every Quran verse, everywhere, must carry full harakat (tashkīl). Source verses from a standard Mushaf (quran.com or tanzil.net, Hafs ʿan ʿĀṣim unless otherwise specified). **NEVER add harakat manually** — incorrect vowel marks alter recitation and meaning; copy only from a fully-vowelled authoritative source. If verification is not possible, flag the issue — do not guess. **This rule applies to Quran verses only, not to ordinary Arabic (names, terms, hadith, or scholarly quotations).**
