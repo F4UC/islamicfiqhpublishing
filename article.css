@@ -1230,6 +1230,9 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   min-height: 420px;
   overflow: hidden;
 }
+.article-feature--no-photo {
+  background: #000;
+}
 .article-feature img {
   position: absolute;
   inset: 0;
