@@ -1,10 +1,10 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 55 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all 56 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (54 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (56 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -19,7 +19,7 @@
 
 ### หมวดที่ 2: มาตรฐานอักขรวิธี การทับศัพท์ และการเลือกใช้คำ (Transliteration & Word Choice)
 
-* **กฎข้อที่ 9:** การระบุชื่อปราชญ์ในครั้งแรกของบทความ จำเป็นต้องระบุปีเสียชีวิตในวงเล็บตามรูปแบบมาตรฐาน: `(เสียชีวิตปี ฮ.ศ. XXX / ค.ศ. XXX)`
+* **กฎข้อที่ 9:** การระบุชื่อปราชญ์ในครั้งแรกของบทความ จำเป็นต้องระบุปีเสียชีวิตในวงเล็บ โดยใส่เฉพาะยุคสมัยที่ยืนยันได้จากแหล่งอ้างอิง ห้ามประดิษฐ์ยุคสมัยที่ขาดหลักฐาน (ตามกฎข้อที่ 3) รูปแบบที่ยอมรับ: `(เสียชีวิต ฮ.ศ. XXX)` หรือ `(เสียชีวิต ค.ศ. XXX)` หรือ `(เสียชีวิต ฮ.ศ. XXX / ค.ศ. XXX)` ตามข้อมูลที่มี — ห้ามใช้คำว่า "ปี" นำหน้าตัวเลข ตัวอย่างจากบทความต้นแบบ: `(เสียชีวิต ฮ.ศ. 756)` สำหรับอัซซุบกีย์, `(เสียชีวิต ค.ศ. 1889)` สำหรับอัลมัรญานีย์
 * **กฎข้อที่ 10:** การใส่คำสดุดีท้ายนามปราชญ์ (เช่น เราะหิมะฮุลลอฮ์, เราะฎิยัลลอฮุอันฮุ) ให้วางต่อท้ายชื่อได้ทันที **ห้ามใส่วงเล็บครอบคำสดุดีโดยเด็ดขาด** แม้จะวางคู่กับปีเสียชีวิตก็ตาม
 * **กฎข้อที่ 11:** การทับศัพท์คำนามภาษาอาหรับที่มี อัล- (ال) นำหน้า ให้สะกดตามการเชื่อมสระและเสียงพยัญชนะชัมซียะฮ์อย่างถูกต้อง ยกเว้นคำว่า **"ชะรีอะฮ์"** ให้ตัดคำว่า "อัช" ออกไป เน้นเฉพาะคำนี้เท่านั้น
 * **กฎข้อที่ 12:** การถอดเสียงชื่อเฉพาะทางวิชาการและชื่อปราชญ์ ต้องอิงตามอักขรวิธีภาษาอาหรับมาตรฐาน (เช่น อัลเฆาะซาลีย์, อัลมาตูรีดีย์, อัซซุบกีย์) และหลีกเลี่ยงการสะกดว่า "ท่านอิมาม" หรือ "อิมาม" ให้ใช้คำว่า "อิหม่าม" แทนในทุกกรณี
@@ -102,7 +102,7 @@
 
 * **กฎข้อที่ 49:** **[มาตรฐานตัวบทยาว — การนำเสนอและการระบุเจ้าของคำพูด]** หากตัวบทต้นฉบับ (ภาษาอาหรับหรือภาษาอื่น) มีความยาวเกิน **60 คำ** ให้ปฏิบัติดังนี้:
   1. แสดงเฉพาะ**คำแปลภาษาไทย**เป็นหลัก โดยต้องขึ้นต้นด้วยสูตร **attribution** ตามประเภทของแหล่งอ้างอิง เพื่อให้ผู้อ่านทราบชัดเจนว่านี่คือคำพูดของใคร ไม่ใช่ของผู้เขียนบทความ:
-     - **คำพูดปราชญ์:** `[ชื่อ] (เสียชีวิตปี ฮ.ศ. XXX / ค.ศ. XXX) [คำสดุดี] กล่าวว่า:` เช่น `อัซซุบกีย์ (เสียชีวิตปี ฮ.ศ. 771 / ค.ศ. 1370) เราะหิมะฮุลลอฮ์ กล่าวว่า:`
+     - **คำพูดปราชญ์:** `[ชื่อ] (เสียชีวิต [ยุคสมัย] XXX) [คำสดุดี] กล่าวว่า:` เช่น `อัซซุบกีย์ (เสียชีวิต ฮ.ศ. 756) เราะหิมะฮุลลอฮ์ กล่าวว่า:` (ใส่เฉพาะยุคสมัยที่ยืนยันได้ ตามกฎข้อที่ 9)
      - **โองการอัลกุรอาน:** `อัลลอฮ์ ซุบหานะฮูวะตะอาลา ตรัสในสูเราะฮ์ [ชื่อสูเราะฮ์] อายะฮ์ที่ [X] ว่า:`
      - **หะดีษ:** `ท่านนบีมุหัมมัด ศ็อลลัลลอฮุอะลัยฮิวะซัลลัม กล่าวว่า:` (บันทึกโดย [ชื่อผู้บันทึก เช่น อัลบุคอรีย์, มุสลิม])
   2. ซ่อนตัวบทต้นฉบับไว้ภายใต้แท็ก `<details>/<summary>` โดยใช้ป้ายกำกับ **"ดูต้นฉบับภาษาอาหรับ"** วางไว้ใต้คำแปลไทยภายใน blockquote เดียวกัน
@@ -110,7 +110,7 @@
 ```html
 <blockquote class="quote-container">
   <p class="ar-translation">
-    <span class="attribution">อัซซุบกีย์ (เสียชีวิตปี ฮ.ศ. 771 / ค.ศ. 1370) เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
+    <span class="attribution">อัซซุบกีย์ (เสียชีวิต ฮ.ศ. 756) เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>
     "...คำแปลภาษาไทย..."
   </p>
   <details class="ar-toggle">
@@ -163,9 +163,13 @@
   - **รูปแบบแสดงผล:** เมื่อนำไปแสดงบนหน้าเว็บ ให้ใช้รูปแบบ `"อ่าน X นาที"` เสมอ (สอดคล้องกับ main.js และบทความต้นแบบ)
   - **การอัปเดต:** ต้องรันสคริปต์ใหม่ทุกครั้งที่มีการแก้ไขเนื้อหาบทความ เพื่อให้ค่า `readingTime` เป็นปัจจุบันเสมอ
 
+### หมวดที่ 11: ขอบเขตการปรับแต่งรูปแบบ (Formatting Polish Latitude)
+
+* **กฎข้อที่ 56:** **[ขอบเขตการปรับแต่งรูปแบบ — Polish Latitude]** ตัวแทน AI สามารถปรับปรุง**รูปแบบและการนำเสนอ**ของบทความเพื่อคุณภาพทางภาพ ได้แก่ การตัดบรรทัด, ระยะห่าง, โครงสร้างย่อหน้า, การประยุกต์ใช้เทมเพลตต้นแบบ, การจัดพิมพ์ที่สอดคล้องกับกฎ, การทำเครื่องหมายอัญประกาศให้เป็นมาตรฐาน, การลบสิ่งแปลกปลอมที่ไม่ใช่เนื้อหา (เช่น ข้อความสนทนาที่หลงเหลือ, มาร์กดาวน์ที่ยังไม่ถูกเรนเดอร์ เช่น `**...**` แบบตัวอักษร) **ห้ามโดยเด็ดขาด**: ตัด, ย่อ, ถอดความ หรือเปลี่ยนแปลง**เนื้อหาสาระ** (การโต้แย้ง, คำอ้างอิง, แหล่งอ้างอิง, ความหมาย) ข้อความอาหรับและโองการอัลกุรอานต้องคงอยู่แบบไบต์ต่อไบต์ — ห้ามพิมพ์ใหม่หรือเปลี่ยนแปลงโดยเด็ดขาด (กฎข้อที่ 7, 8, 53) หากไม่แน่ใจว่าสิ่งใดเป็น**เนื้อหา**หรือ**สิ่งแปลกปลอมด้านรูปแบบ** ให้**คงไว้**และตั้งค่าสถานะเพื่อให้กองบรรณาธิการตรวจสอบ
+
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 55 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 56 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -180,7 +184,7 @@
 
 ## Section 2: Transliteration & Word Choice
 
-* **Rule 9:** The first mention of a classical scholar must include their demise year: `(d. AH XXX / CE XXX)`.
+* **Rule 9:** The first mention of a classical scholar must include their demise year in parentheses, citing only verifiable era(s) — never fabricate a missing era (per Rule 3). Accepted formats: `(d. AH XXX)`, `(d. CE XXX)`, or `(d. AH XXX / CE XXX)` depending on available evidence. Do **not** prefix the numeral with "ปี". Canonical examples: `(d. AH 756)` for Al-Subki; `(d. CE 1889)` for Al-Marjani.
 * **Rule 10:** Islamic honorifics (e.g., Rahimahullah) must follow the name **without parentheses**, even when adjacent to the demise year.
 * **Rule 11:** Transliteration of Al- (ال) must conform to phonetic rules, except for "Shari'ah" which must omit the "Ash-" prefix.
 * **Rule 12:** Scholarly names must align with standard Arabic phonology (e.g., Al-Ghazali, Al-Maturidi). Avoid the spelling "ท่านอิมาม" or "อิมาม"; enforce "อิหม่าม" (Imam) globally.
@@ -238,7 +242,7 @@
 
 * **Rule 49:** **[Long-form Source Attribution Standard]** When source text (Arabic or other languages) exceeds **60 words**, apply the following:
   1. Display only the **Thai translation** as the primary content, preceded by a mandatory **attribution formula** by source type, to clearly distinguish the speaker from the article author:
-     - **Scholar Quote:** `[Name] (d. AH XXX / CE XXX) [Honorific] said:` e.g. `Al-Subki (d. AH 771 / CE 1370) Rahimahullah said:`
+     - **Scholar Quote:** `[Name] (d. [era] XXX) [Honorific] said:` e.g. `Al-Subki (d. AH 756) Rahimahullah said:` (include only verifiable era(s) per Rule 9)
      - **Quranic Verse:** `Allah Subhanahu wa Ta'ala says in Surah [Name], Ayah [X]:`
      - **Hadith:** `The Prophet Muhammad ﷺ said:` (Recorded by [Collector, e.g., Al-Bukhari, Muslim])
   2. Conceal the original source text within a `<details>/<summary>` element labeled **"ดูต้นฉบับภาษาอาหรับ"**, positioned beneath the Thai translation within the same blockquote.
@@ -285,6 +289,10 @@
   - **Formula:** `readingTime = Math.max(1, Math.ceil(chars / READING_CPM))`. Minimum value is always 1 minute.
   - **Display format:** When surfaced in the UI, always render as `"อ่าน X นาที"` (matching main.js and canonical byline).
   - **Maintenance:** Re-run the generator script whenever article body content changes to keep `readingTime` current.
+
+## Section 11: Formatting Polish Latitude
+
+* **Rule 56:** **[Polish Latitude]** Agents may refine an article's **formatting and presentation** for visual quality — line breaks, spacing, paragraph structure, applying the canonical template, rule-compliant typography, normalizing quotation marks, removing non-content artifacts (stray conversational text, unrendered markdown like literal `**...**`). They must **NEVER** cut, truncate, paraphrase, or alter **substantive content** (arguments, quotes, citations, meaning). Arabic-script and Quran text stay byte-exact — never retyped or altered (Rules 7, 8, 53). When uncertain whether something is content or a formatting artifact, **PRESERVE it** and flag for editorial review.
 
 ## Bibliography & Citation Standard (قواعد المراجع والإحالات)
 
