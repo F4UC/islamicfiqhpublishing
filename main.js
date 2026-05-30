@@ -73,7 +73,9 @@ if (document.body) {
 }
 
 // Shared articles.json promise — used by both search and category renderer
-const articlesPromise = fetch('/articles.json').then(function(r) { return r.json(); }).catch(function() { return []; });
+// Cache-bust with timestamp (daily granularity) to prevent Cloudflare serving stale schema
+const _artCacheBust = Math.floor(Date.now() / 86400000);
+const articlesPromise = fetch('/articles.json?v=' + _artCacheBust).then(function(r) { return r.json(); }).catch(function() { return []; });
 
 // ==========================================
 // â­ï¸ 3. à¸£à¸°à¸šà¸šà¸›à¸£à¸°à¸à¸­à¸šà¸£à¹à¸²à¸‡ Header / Footer â­ï¸
@@ -716,7 +718,10 @@ document.addEventListener("DOMContentLoaded", function() {
         articlesPromise.then(function(all) {
             var indexed = all.map(function(a, i) { return { a: a, i: i }; });
             var filtered = indexed
-                .filter(function(x) { return x.a.categoryKey === category; })
+                .filter(function(x) {
+                    // New schema: categoryKey (slug). Guard against old/malformed data.
+                    return x.a && x.a.categoryKey === category;
+                })
                 .sort(function(x, y) {
                     if (x.a.date > y.a.date) return -1;
                     if (x.a.date < y.a.date) return 1;
@@ -728,19 +733,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
             container.innerHTML = '';
             filtered.forEach(function(art, idx) {
-                var num = String(idx + 1).padStart(2, '0');
-                var row = document.createElement('a');
-                row.href = art.url;
-                row.className = 'idx-row';
-                row.innerHTML =
-                    '<div class="idx-num">' + num + '</div>' +
-                    '<div class="idx-cat">' + _esc(art.categoryLabel) + '</div>' +
-                    '<div class="idx-title">' + _esc(art.title) + '</div>' +
-                    '<div class="idx-meta">โดย <span>' + _esc(art.author) + '</span>' +
-                    ' &nbsp;·&nbsp; ' + _esc(art.dateDisplay) +
-                    ' &nbsp;·&nbsp; อ่าน ' + art.readingTime + ' นาที</div>' +
-                    '<div class="idx-arrow"></div>';
-                container.appendChild(row);
+                try {
+                    var num = String(idx + 1).padStart(2, '0');
+                    var readTime = art.readingTime != null ? art.readingTime : '—';
+                    var row = document.createElement('a');
+                    row.href = art.url || '#';
+                    row.className = 'idx-row';
+                    row.innerHTML =
+                        '<div class="idx-num">' + num + '</div>' +
+                        '<div class="idx-cat">' + _esc(art.categoryLabel || '') + '</div>' +
+                        '<div class="idx-title">' + _esc(art.title || '') + '</div>' +
+                        '<div class="idx-meta">โดย <span>' + _esc(art.author || '') + '</span>' +
+                        ' &nbsp;·&nbsp; ' + _esc(art.dateDisplay || '') +
+                        ' &nbsp;·&nbsp; อ่าน ' + readTime + ' นาที</div>' +
+                        '<div class="idx-arrow"></div>';
+                    container.appendChild(row);
+                } catch (e) {
+                    console.warn('[IFP] row build error entry ' + idx + ':', e);
+                }
             });
 
             if (!paginationEl || filtered.length <= itemsPerPage) return;
@@ -804,12 +814,13 @@ document.addEventListener("DOMContentLoaded", function() {
             for (var i = 0; i < all.length; i++) { if (all[i].id === slug) { art = all[i]; break; } }
             if (!art) return;
             function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+            var readTime = art.readingTime != null ? art.readingTime : '—';
             metaEl.innerHTML =
-                '<div>โดย <span>' + esc(art.author) + '</span></div>' +
+                '<div>โดย <span>' + esc(art.author || '') + '</span></div>' +
                 '<div>·</div>' +
-                '<div>' + esc(art.dateDisplay) + '</div>' +
+                '<div>' + esc(art.dateDisplay || '') + '</div>' +
                 '<div>·</div>' +
-                '<div>อ่าน ' + art.readingTime + ' นาที</div>';
+                '<div>อ่าน ' + readTime + ' นาที</div>';
         });
     })();
 
