@@ -28,7 +28,7 @@
 * **กฎข้อที่ 13:** **[ช่องไฟคำทับศัพท์]** คำศัพท์เทคนิคทางศาสนาที่ทับศัพท์มา เมื่อนำมาประกอบในประโยคภาษาไทย **ห้ามเว้นวรรคหน้า-หลังเด็ดขาด** (เช่น ให้เขียนว่า `ฐานหลักของชะรีอะฮ์ในประเด็นนี้` ห้ามเขียนแยกเป็น `ฐานหลักของ ชะรีอะฮ์ ในประเด็นนี้`)
 * **กฎข้อที่ 14:** **[การเลือกใช้คำเชื่อม]** ห้ามใช้คำเชื่อมโบราณเช่นคำว่า **"ทว่า"** ให้เปลี่ยนไปใช้คำว่า **"แต่"** แทนในทุกกรณี เพื่อความกระชับของภาษาวิชาการ
 * **กฎข้อที่ 15:** การอ้างอิงคำพูดของนักวิชาการ, ตัวบทหะดีษ หรือคำแปล ต้องใช้เครื่องหมายอัญประกาศแบบโค้ง **`“...”`** เท่านั้น ห้ามใช้แบบตรง (`"..."`) เพื่อความพรีเมียม
-* **กฎข้อที่ 16:** การกำกับชื่อตำราและหนังสือให้ยึดตามบทความต้นแบบ ดังนี้: (ก) ชื่อตำราในบรรณานุกรมและเชิงอรรถ ให้ใช้**ข้อความธรรมดา** ไม่ต้องใส่แท็กเน้นหรือมาร์กอัปใดๆ; (ข) ชื่อตำราที่กล่าวถึงในเนื้อความบทความ ให้ครอบด้วย**อัญประกาศโค้ง "…"** ตามมาตรฐานอัญประกาศของกฎข้อที่ 15 (เช่น "อันนิฮายะฮ์") — ยกเลิกการบังคับใช้ `<strong>` กับชื่อตำราทุกกรณี
+* **กฎข้อที่ 16:** การกำกับชื่อตำราและหนังสือให้ยึดตามบทความต้นแบบ ดังนี้: (ก) ชื่อตำราในบรรณานุกรมและเชิงอรรถ ให้ใช้**ข้อความธรรมดา** ไม่ต้องใส่แท็กเน้นหรือมาร์กอัปใดๆ; (ข) ชื่อตำราที่กล่าวถึงในเนื้อความบทความ ให้ครอบด้วย**อัญประกาศโค้ง “…”** ตามมาตรฐานอัญประกาศของกฎข้อที่ 15 (เช่น “อันนิฮายะฮ์”) — ยกเลิกการบังคับใช้ `<strong>` กับชื่อตำราทุกกรณี
 * **กฎข้อที่ 17:** ห้ามใช้แท็กตัวเอียง `<em>` หรือตัวเอียงในระบบ CSS กับชื่อตำราและหนังสือ ให้สงวนไว้สำหรับคำเน้นย้ำทั่วไปที่ไม่ใช่ชื่อเฉพาะ
 
 ### หมวดที่ 3: โครงสร้างภาษาและสถาปัตยกรรมระดับบล็อก (Language & Typography Structure)
@@ -194,7 +194,7 @@
 * **Rule 13:** **[Transliteration Spacing]** Transliterated religious terminology inserted into Thai sentences must not be preceded or followed by space bars (e.g., `หลักของชะรีอะฮ์ในประเด็น`).
 * **Rule 14:** **[Conjunction Choice]** Eliminate archaic conjunctions such as "ทว่า"; enforce the use of "แต่" to optimize academic conciseness.
 * **Rule 15:** Direct quotes, Hadith, and translations must be enclosed strictly within curved quotation marks **`“...”`**.
-* **Rule 16:** Book-title styling follows the canonical article: (a) titles in the bibliography and footnotes use **plain text** — no emphasis tags or markup; (b) book-title mentions in body prose are wrapped in **curved quotation marks "…"** per Rule 15's quotation standard (e.g. "อันนิฮายะฮ์"). The blanket `<strong>` mandate for book titles is removed.
+* **Rule 16:** Book-title styling follows the canonical article: (a) titles in the bibliography and footnotes use **plain text** — no emphasis tags or markup; (b) book-title mentions in body prose are wrapped in **curved quotation marks “…”** per Rule 15's quotation standard (e.g. “อันนิฮายะฮ์”). The blanket `<strong>` mandate for book titles is removed.
 * **Rule 17:** Do not use `<em>` tags or CSS italic styling for book titles.
 
 ## Section 3: Language & Typography Structure
@@ -324,3 +324,9 @@ VERIFICATION (non-negotiable)
 
 TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentions in Thai/English prose)
 - Use one consistent system: IJMES.
+# userEmail
+The user's email address is gibraltar2580@gmail.com.
+# currentDate
+Today's date is 2026-05-30.
+
+      IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
