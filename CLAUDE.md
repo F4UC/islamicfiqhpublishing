@@ -1,10 +1,10 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 56 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all 58 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (56 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (58 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -73,16 +73,33 @@
 
 * **กฎข้อที่ 47:** **มาตรฐานการกำหนดทิศทางข้อความอาหรับ (Right-to-Left / RTL)**
 เพื่อป้องกันปัญหาการแสดงผลเครื่องหมายวรรคตอนผิดเพี้ยน (เช่น จุดมหัพภาคกระโดด) และให้ Bullet Points อยู่ในตำแหน่งที่ถูกต้อง ให้บังคับใช้แอตทริบิวต์ `dir="rtl"` เสมอ ควบคู่กับ `lang="ar"` ในแท็กระดับบล็อก (Block-level) หรือรายการ (Lists) ที่บรรจุข้อความภาษาอาหรับล้วน
-* **กฎข้อที่ 48:** **[ตัวอย่างโค้ดมาตรฐานระดับบล็อกอ้างอิงและบรรณานุกรม]**
-```html
-<!-- ตัวบทอาหรับเดี่ยว (จัดกึ่งกลาง ≤1 บรรทัด) -->
-<blockquote class="ar-feature" lang="ar" dir="rtl">...نص عربي...</blockquote>
+* **กฎข้อที่ 48:** **[ตัวอย่างโค้ดมาตรฐานระดับบล็อกอ้างอิงและบรรณานุกรม — Arabic-Display Model 2]**
 
-<!-- ตัวบทอาหรับย่อย (ซ่อนไว้ให้กดเปิด) -->
+  **หลักการแสดงผลตัวบทอาหรับ (Default-Collapsed):** ตัวบทอาหรับ**ทุกประเภท**ต้องซ่อนไว้โดยค่าเริ่มต้น ผู้อ่านเปิดดูได้ทีละบล็อก หรือเปิด/ปิดทั้งหมดพร้อมกันผ่านปุ่ม [ซ่อน]/[แสดง] ในแผงเครื่องมืออ่าน — ต้องมีแถว "ตัวบทอาหรับ" ต่อจากแถว Font Size เสมอ
+
+```html
+<!-- ตัวบทอาหรับสั้น (≤60 คำ): คำแปลไทยก่อน, อาหรับซ่อนไว้โดยค่าเริ่มต้น -->
+<p class="ar-translation">"...คำแปลภาษาไทย..."</p>
 <details class="ar-toggle">
   <summary>ดูต้นฉบับภาษาอาหรับ</summary>
   <blockquote lang="ar" dir="rtl" class="ar-block">...نص عربي...</blockquote>
 </details>
+
+<!-- ตัวบทอัลกุรอาน (aya-block) หรือหะดีษ (hadith-block): คำแปลก่อน, บล็อกอาหรับซ่อนไว้ -->
+<p>...คำแปลภาษาไทย...</p>
+<details class="ar-toggle">
+  <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+  <div class="aya-block"><!-- หรือ hadith-block -->
+    <p class="block-ar" lang="ar" dir="rtl">...نص عربي...</p>
+  </div>
+</details>
+
+<!-- แถว Arabic Toggle ในแผงเครื่องมืออ่าน (ต้องอยู่ต่อจาก Font Size) -->
+<div class="tool-group">
+  <span class="tool-label">ตัวบทอาหรับ:</span>
+  <button class="btn-tool active" onclick="setArabicDisplay('hide')" id="arabicHideBtn">ซ่อน</button>
+  <button class="btn-tool" onclick="setArabicDisplay('show')" id="arabicShowBtn">แสดง</button>
+</div>
 
 <!-- บรรณานุกรม/เชิงอรรถ (โครงสร้างต้นแบบตามบทความต้นแบบ) -->
 <section class="bibliography-section">
@@ -168,9 +185,27 @@
 
 * **กฎข้อที่ 56:** **[ขอบเขตการปรับแต่งรูปแบบ — Polish Latitude]** ตัวแทน AI สามารถปรับปรุง**รูปแบบและการนำเสนอ**ของบทความเพื่อคุณภาพทางภาพ ได้แก่ การตัดบรรทัด, ระยะห่าง, โครงสร้างย่อหน้า, การประยุกต์ใช้เทมเพลตต้นแบบ, การจัดพิมพ์ที่สอดคล้องกับกฎ, การทำเครื่องหมายอัญประกาศให้เป็นมาตรฐาน, การลบสิ่งแปลกปลอมที่ไม่ใช่เนื้อหา (เช่น ข้อความสนทนาที่หลงเหลือ, มาร์กดาวน์ที่ยังไม่ถูกเรนเดอร์ เช่น `**...**` แบบตัวอักษร) **ห้ามโดยเด็ดขาด**: ตัด, ย่อ, ถอดความ หรือเปลี่ยนแปลง**เนื้อหาสาระ** (การโต้แย้ง, คำอ้างอิง, แหล่งอ้างอิง, ความหมาย) ข้อความอาหรับและโองการอัลกุรอานต้องคงอยู่แบบไบต์ต่อไบต์ — ห้ามพิมพ์ใหม่หรือเปลี่ยนแปลงโดยเด็ดขาด (กฎข้อที่ 7, 8, 53) หากไม่แน่ใจว่าสิ่งใดเป็น**เนื้อหา**หรือ**สิ่งแปลกปลอมด้านรูปแบบ** ให้**คงไว้**และตั้งค่าสถานะเพื่อให้กองบรรณาธิการตรวจสอบ
 
+### หมวดที่ 12: ระบบ Byline บทความ (Article Byline System)
+
+* **กฎข้อที่ 57:** **[Byline บทความขับเคลื่อนด้วย JSON]**
+  - ส่วน `.article-meta` บนหน้าบทความทุกหน้าต้อง **ว่างเปล่าในซอร์สโค้ด** — ห้ามเขียนเนื้อหาแบบ hardcoded ใดๆ (ชื่อผู้เขียน, วันที่, เวลาอ่าน) ลงไปโดยเด็ดขาด
+  - ข้อมูล Byline ทั้งสามรายการ (`author`, `dateDisplay`, `readingTime`) จะถูก inject ณ รันไทม์โดย `main.js` (Section 11) ผ่าน `articlesPromise` จาก `articles.json` โดยใช้แอตทริบิวต์ `data-article-id` บนแท็ก `<body>` เป็นกุญแจ
+  - รูปแบบซอร์สโค้ดที่ถูกต้อง: `<div class="article-meta"></div>` เท่านั้น
+  - ค่า `readingTime` ต้องผลิตโดย `scripts/gen-reading-time.js` เท่านั้น (ตามกฎข้อที่ 55) — ห้ามระบุด้วยมือ
+  - ค่า `dateDisplay` ต้องสอดคล้องกับ `date` ใน `articles.json` เสมอ ในรูปแบบ "DD เดือน YYYY" (ปี พ.ศ.)
+
+### หมวดที่ 13: เทมเพลตบทความมาตรฐาน (Standard Article Template)
+
+* **กฎข้อที่ 58:** **[เทมเพลตบทความมาตรฐาน]**
+  - **ไฟล์ต้นแบบ:** `templates/article-template.html` คือเทมเพลตมาตรฐานสำหรับสร้างบทความใหม่ทุกหน้า โดยอิงโครงสร้างจากบทความต้นแบบ (กฎข้อที่ 54) ตั้งแต่ส่วน hero จนถึงส่วนท้าย พร้อม Arabic Display Model 2
+  - **ตัวยึดตำแหน่ง (Placeholders):** เทมเพลตใช้ตัวยึดรูปแบบ `{{PLACEHOLDER}}` ได้แก่: `{{ARTICLE_ID}}`, `{{CATEGORY_LABEL}}`, `{{CATEGORY_URL}}`, `{{TITLE}}`, `{{DESCRIPTION}}`, `{{HERO_IMAGE_URL}}`, `{{HERO_IMAGE_ALT}}`, `{{HERO_CREDIT}}`, `{{BODY}}`, `{{BIBLIOGRAPHY}}`
+  - **Noindex:** เทมเพลตต้องมี `<meta name="robots" content="noindex, nofollow">` เพื่อป้องกันการจัดทำดัชนี
+  - **ไม่อยู่ใน articles.json:** ห้ามเพิ่มรายการของเทมเพลตใน `articles.json` โดยเด็ดขาด
+  - **การอัปเดต:** เมื่อบทความต้นแบบมีการเปลี่ยนแปลงโครงสร้างหรือ CSS มาตรฐานใดๆ ต้องอัปเดตเทมเพลตให้สอดคล้องกันด้วยเสมอ
+
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 56 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 58 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -238,7 +273,7 @@
 ## Section 6: Right-to-Left (RTL) Core Specification
 
 * **Rule 47:** **Arabic Text Direction Standard** To prevent punctuation displacement and ensure accurate bullet point positioning, the `dir="rtl"` attribute must always be enforced alongside `lang="ar"` on all block-level or list elements enclosing pure Arabic text.
-* **Rule 48:** **[Blueprint]** Standard Code Blueprint for Block Quotes & Bibliographies (As defined in Thai section).
+* **Rule 48:** **[Blueprint — Arabic-Display Model 2]** All Arabic source text must be **hidden by default** (default-collapsed). Readers can expand individual blocks or toggle all at once via [ซ่อน]/[แสดง] buttons in the Reading Tools panel. The panel must include a "ตัวบทอาหรับ" row immediately after the Font Size row. Short texts (≤ 60 words): Thai translation first, Arabic hidden in `<details class="ar-toggle">`; Quran aya-block / hadith-block: Thai translation first, block wrapped inside `<details class="ar-toggle">`. See Thai section for full code blueprint.
 
 ## Section 7: Long-form & Mixed Script Standards
 
@@ -296,6 +331,24 @@
 
 * **Rule 56:** **[Polish Latitude]** Agents may refine an article's **formatting and presentation** for visual quality — line breaks, spacing, paragraph structure, applying the canonical template, rule-compliant typography, normalizing quotation marks, removing non-content artifacts (stray conversational text, unrendered markdown like literal `**...**`). They must **NEVER** cut, truncate, paraphrase, or alter **substantive content** (arguments, quotes, citations, meaning). Arabic-script and Quran text stay byte-exact — never retyped or altered (Rules 7, 8, 53). When uncertain whether something is content or a formatting artifact, **PRESERVE it** and flag for editorial review.
 
+## Section 12: Article Byline System
+
+* **Rule 57:** **[Article Byline — JSON-Driven System]**
+  - The `.article-meta` element on every article page must be **empty in source HTML** — no hardcoded content (author, date, reading time) is permitted.
+  - All three byline fields (`author`, `dateDisplay`, `readingTime`) are injected at runtime by `main.js` Section 11 via `articlesPromise` from `articles.json`, keyed on the `data-article-id` attribute of `<body>`.
+  - Correct source form: `<div class="article-meta"></div>`.
+  - `readingTime` must be produced exclusively by `scripts/gen-reading-time.js` (per Rule 55) — manual values are prohibited.
+  - `dateDisplay` must always match the `date` field in `articles.json`, formatted as "DD Month YYYY" (BE calendar).
+
+## Section 13: Standard Article Template
+
+* **Rule 58:** **[Standard Article Template]**
+  - **Template file:** `templates/article-template.html` is the canonical boilerplate for creating every new article page, derived from the canonical reference article (Rule 54), covering the full hero-to-footer structure with Arabic Display Model 2.
+  - **Placeholders:** The template uses `{{PLACEHOLDER}}` markers for: `{{ARTICLE_ID}}`, `{{CATEGORY_LABEL}}`, `{{CATEGORY_URL}}`, `{{TITLE}}`, `{{DESCRIPTION}}`, `{{HERO_IMAGE_URL}}`, `{{HERO_IMAGE_ALT}}`, `{{HERO_CREDIT}}`, `{{BODY}}`, `{{BIBLIOGRAPHY}}`
+  - **Noindex:** The template must carry `<meta name="robots" content="noindex, nofollow">` to prevent search engine indexing.
+  - **Not in articles.json:** Never add a template entry to `articles.json`.
+  - **Maintenance:** Whenever the canonical article's structure or CSS standards change, update the template to match.
+
 ## Bibliography & Citation Standard (قواعد المراجع والإحالات)
 
 Apply this whenever creating or editing references, footnotes, or bibliographies in any article. (Recorded as a standing rule; do not retro-apply unless explicitly told.)
@@ -324,9 +377,3 @@ VERIFICATION (non-negotiable)
 
 TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentions in Thai/English prose)
 - Use one consistent system: IJMES.
-# userEmail
-The user's email address is gibraltar2580@gmail.com.
-# currentDate
-Today's date is 2026-05-30.
-
-      IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
