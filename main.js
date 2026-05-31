@@ -871,14 +871,9 @@ document.addEventListener("DOMContentLoaded", function() {
     })();
 
     // ==========================================
-    // ⭐ 13. Arabic Display Toggle init
+    // ⭐ 13. Arabic Preview init
     // ==========================================
-    (function() {
-        document.querySelectorAll('details.ar-toggle').forEach(function(d) {
-            d.addEventListener('toggle', _syncArabicBtns);
-        });
-        _syncArabicBtns();
-    })();
+    initArPreview();
 });
 
 // ==========================================
@@ -990,22 +985,136 @@ function copyCite() {
 function copyCitation() { copyCite(); }
 
 // ==========================================
-// ⭐ Arabic Display Toggle (global panel controls)
+// ⭐ Arabic Preview System (per-block, base-letter budget)
 // ==========================================
-function setArabicDisplay(mode) {
-    document.querySelectorAll('details.ar-toggle').forEach(function(d) {
-        d.open = (mode === 'show');
+function initArPreview() {
+    var AR_PREVIEW_LETTERS = 28;
+    var PARTICLES = ['و','ف','ثم','أو','لا','ما','إن','أن','من','عن','إلى','على','في','بـ','لـ','كـ','حتى','لكن','بل'];
+    // Arabic punctuation chars used as cut points
+    var PUNCTS = '،؛.:؟';
+
+    function isHarakat(cp) {
+        return (cp >= 0x0610 && cp <= 0x061A) ||
+               (cp >= 0x064B && cp <= 0x065F) ||
+               cp === 0x0670 ||
+               (cp >= 0x06D6 && cp <= 0x06DC) ||
+               (cp >= 0x06DF && cp <= 0x06E8) ||
+               (cp >= 0x06EA && cp <= 0x06ED);
+    }
+
+    function isArLetter(cp) {
+        return (cp >= 0x0621 && cp <= 0x064A) ||
+               (cp >= 0x066E && cp <= 0x06D5) ||
+               cp === 0x06EE || cp === 0x06EF ||
+               (cp >= 0x06FA && cp <= 0x06FF);
+    }
+
+    function countBaseLetters(s) {
+        var n = 0;
+        for (var i = 0; i < s.length; i++) {
+            if (isArLetter(s.charCodeAt(i))) n++;
+        }
+        return n;
+    }
+
+    function avoidParticle(words) {
+        var STRIP = /[ً-ٰٟۖ-ۜ۟-۪ۨ-ۭ،؛.;؟:]/g;
+        while (words.length > 1) {
+            var last = words[words.length - 1].replace(STRIP, '');
+            var isP = false;
+            for (var pi = 0; pi < PARTICLES.length; pi++) {
+                if (last === PARTICLES[pi]) { isP = true; break; }
+            }
+            if (isP) { words = words.slice(0, -1); } else { break; }
+        }
+        return words;
+    }
+
+    function computePreview(text, dataCut) {
+        var total = countBaseLetters(text);
+        if (total <= AR_PREVIEW_LETTERS) {
+            return { text: text, isFull: true };
+        }
+
+        // Manual override via data-preview-cut attribute
+        if (dataCut) {
+            var ci = parseInt(dataCut, 10);
+            if (!isNaN(ci) && ci > 0 && ci < text.length) {
+                return { text: text.slice(0, ci) + ' …', isFull: false };
+            }
+        }
+
+        // Find cut position: walk to budget-th base letter in original text
+        var letterCount = 0, cutOrigIdx = text.length;
+        for (var i = 0; i < text.length; i++) {
+            var cp = text.charCodeAt(i);
+            if (!isHarakat(cp) && isArLetter(cp)) {
+                letterCount++;
+                if (letterCount === AR_PREVIEW_LETTERS) {
+                    cutOrigIdx = i + 1;
+                    // Carry trailing harakat with their base
+                    while (cutOrigIdx < text.length && isHarakat(text.charCodeAt(cutOrigIdx))) {
+                        cutOrigIdx++;
+                    }
+                    break;
+                }
+            }
+        }
+
+        var candidate = text.slice(0, cutOrigIdx);
+
+        // b) Last Arabic punctuation at/before budget, if ≥ 50% of budget
+        var bestPunct = -1;
+        for (var pi2 = 0; pi2 < candidate.length; pi2++) {
+            if (PUNCTS.indexOf(candidate[pi2]) !== -1) bestPunct = pi2;
+        }
+        if (bestPunct >= 0) {
+            var punctLetters = countBaseLetters(candidate.slice(0, bestPunct + 1));
+            if (punctLetters >= Math.floor(AR_PREVIEW_LETTERS / 2)) {
+                var wP = candidate.slice(0, bestPunct + 1).replace(/\s+$/, '').split(' ');
+                return { text: avoidParticle(wP).join(' ') + ' …', isFull: false };
+            }
+        }
+
+        // c) Last space (word boundary)
+        var ls = candidate.lastIndexOf(' ');
+        if (ls > 0) {
+            var wS = candidate.slice(0, ls).split(' ');
+            return { text: avoidParticle(wS).join(' ') + ' …', isFull: false };
+        }
+
+        // Fallback: hard cut at budget
+        return { text: candidate + ' …', isFull: false };
+    }
+
+    function escHtml(s) {
+        return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    document.querySelectorAll('details.ar-toggle').forEach(function(details) {
+        var arEl = details.querySelector('.ar-block, .block-ar');
+        if (!arEl) return;
+        var fullText = arEl.textContent.trim();
+        var dataCut = details.getAttribute('data-preview-cut');
+        var preview = computePreview(fullText, dataCut);
+        var summary = details.querySelector('summary');
+        if (!summary) return;
+
+        function render() {
+            if (details.open) {
+                summary.innerHTML = '<span class="ar-preview-trigger ar-collapse-trigger">ย่อ</span>';
+            } else if (preview.isFull) {
+                summary.innerHTML = '<span class="ar-preview-trigger">ดูต้นฉบับภาษาอาหรับ</span>';
+            } else {
+                summary.innerHTML =
+                    '<span class="ar-preview" dir="rtl" lang="ar">' + escHtml(preview.text) + '</span>' +
+                    '<span class="ar-preview-trigger">ดูต้นฉบับภาษาอาหรับ</span>';
+            }
+        }
+
+        render();
+        details.addEventListener('toggle', render);
     });
-    _syncArabicBtns();
-}
-function _syncArabicBtns() {
-    var toggles = Array.from(document.querySelectorAll('details.ar-toggle'));
-    var noneOpen = toggles.length === 0 || toggles.every(function(d) { return !d.open; });
-    var allOpen = toggles.length > 0 && toggles.every(function(d) { return d.open; });
-    var hideBtn = document.getElementById('arabicHideBtn');
-    var showBtn = document.getElementById('arabicShowBtn');
-    if (hideBtn) hideBtn.classList.toggle('active', noneOpen);
-    if (showBtn) showBtn.classList.toggle('active', allOpen);
 }
 
 // ==========================================

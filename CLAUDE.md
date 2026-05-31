@@ -24,7 +24,6 @@
 * **กฎข้อที่ 11:** การทับศัพท์คำนามภาษาอาหรับที่มี อัล- (ال) นำหน้า ให้สะกดตามการเชื่อมสระและเสียงพยัญชนะชัมซียะฮ์อย่างถูกต้อง ยกเว้นคำว่า **"ชะรีอะฮ์"** ให้ตัดคำว่า "อัช" ออกไป เน้นเฉพาะคำนี้เท่านั้น
 * **กฎข้อที่ 12:** การถอดเสียงชื่อเฉพาะทางวิชาการและชื่อปราชญ์ ต้องอิงตามอักขรวิธีภาษาอาหรับมาตรฐาน (เช่น อัลเฆาะซาลีย์, อัลมาตูรีดีย์, อัซซุบกีย์) และหลีกเลี่ยงการสะกดว่า "ท่านอิมาม" หรือ "อิมาม" ให้ใช้คำว่า "อิหม่าม" แทนในทุกกรณี
 * **กฎข้อที่ 12.1:** **[การทับศัพท์คำว่า صحيح]** การถอดเสียงคำว่า **صحيح** (Sahih) เป็นภาษาไทย ต้องสะกดว่า **"ศอเฮี้ยะฮ์"** เท่านั้น (เช่น ศอเฮี้ยะฮ์อัลบุคอรีย์, ศอเฮี้ยะฮ์มุสลิม) **ห้ามสะกดว่า "ศ่อเหี้ยห์" โดยเด็ดขาด** และให้ใช้รูปแบบนี้อย่างสม่ำเสมอในเนื้อหาทั้งหมดในอนาคต
-* **กฎข้อที่ 12.2:** **[การทับศัพท์คำว่า مذهب]** การถอดเสียงคำว่า **مذهب** (Madhhab) เป็นภาษาไทย ต้องสะกดว่า **"มัสฮับ"** เสมอ **ห้ามสะกดว่า "มัซฮับ" โดยเด็ดขาด** และให้ใช้รูปแบบนี้อย่างสม่ำเสมอในเนื้อหาทั้งหมด
 * **กฎข้อที่ 13:** **[ช่องไฟคำทับศัพท์]** คำศัพท์เทคนิคทางศาสนาที่ทับศัพท์มา เมื่อนำมาประกอบในประโยคภาษาไทย **ห้ามเว้นวรรคหน้า-หลังเด็ดขาด** (เช่น ให้เขียนว่า `ฐานหลักของชะรีอะฮ์ในประเด็นนี้` ห้ามเขียนแยกเป็น `ฐานหลักของ ชะรีอะฮ์ ในประเด็นนี้`)
 * **กฎข้อที่ 14:** **[การเลือกใช้คำเชื่อม]** ห้ามใช้คำเชื่อมโบราณเช่นคำว่า **"ทว่า"** ให้เปลี่ยนไปใช้คำว่า **"แต่"** แทนในทุกกรณี เพื่อความกระชับของภาษาวิชาการ
 * **กฎข้อที่ 15:** การอ้างอิงคำพูดของนักวิชาการ, ตัวบทหะดีษ หรือคำแปล ต้องใช้เครื่องหมายอัญประกาศแบบโค้ง **`“...”`** เท่านั้น ห้ามใช้แบบตรง (`"..."`) เพื่อความพรีเมียม
@@ -75,31 +74,34 @@
 เพื่อป้องกันปัญหาการแสดงผลเครื่องหมายวรรคตอนผิดเพี้ยน (เช่น จุดมหัพภาคกระโดด) และให้ Bullet Points อยู่ในตำแหน่งที่ถูกต้อง ให้บังคับใช้แอตทริบิวต์ `dir="rtl"` เสมอ ควบคู่กับ `lang="ar"` ในแท็กระดับบล็อก (Block-level) หรือรายการ (Lists) ที่บรรจุข้อความภาษาอาหรับล้วน
 * **กฎข้อที่ 48:** **[ตัวอย่างโค้ดมาตรฐานระดับบล็อกอ้างอิงและบรรณานุกรม — Arabic-Display Model 2]**
 
-  **หลักการแสดงผลตัวบทอาหรับ (Default-Collapsed):** ตัวบทอาหรับ**ทุกประเภท**ต้องซ่อนไว้โดยค่าเริ่มต้น ผู้อ่านเปิดดูได้ทีละบล็อก หรือเปิด/ปิดทั้งหมดพร้อมกันผ่านปุ่ม [ซ่อน]/[แสดง] ในแผงเครื่องมืออ่าน — ต้องมีแถว "ตัวบทอาหรับ" ต่อจากแถว Font Size เสมอ
+  **หลักการแสดงผลตัวบทอาหรับ (Base-Letter Preview):** ตัวบทอาหรับ**ทุกประเภท**แสดง **preview แบบ per-block** โดยค่าเริ่มต้น: เนื้อหาภาษาอาหรับนับ**เฉพาะตัวอักษรฐาน** (base letters, ไม่นับสระ/ฮะเราะกาต) ไม่เกิน **28 ตัวอักษร** (`AR_PREVIEW_LETTERS=28`, ปรับได้) พร้อมตัดที่จุดสิ้นสุดวลีที่เหมาะสม — **ไม่มีปุ่ม [ซ่อน]/[แสดง] ในแผงเครื่องมืออ่าน** ผู้อ่านขยาย/ย่อแต่ละบล็อกด้วยการแตะ `<summary>` โดยตรง ตัวบทอาหรับฉบับเต็มคงอยู่ใน DOM ครบถ้วนไบต์ต่อไบต์
+
+  **หลักการตัด preview (ลำดับความสำคัญ):**
+  1. `data-preview-cut` (manual override) — ตัดตามดัชนีตัวอักษรที่ระบุ
+  2. เครื่องหมายวรรคตอนอาหรับ (، ؛ . : ؟) ที่อยู่ก่อนหรือตรงกับงบประมาณ และ ≥ 50% ของงบประมาณ → ตัดท้ายวลี
+  3. ช่องว่างสุดท้าย (word boundary) ≤ งบประมาณ
+  4. ห้ามจบที่คำเชื่อม/บุพบท: و ف ثم أو لا ما إن أن من عن إلى على في بـ لـ كـ حتى لكن بل — ถ้าจบที่คำดังกล่าว ให้ถอยหลังหนึ่งคำ
+  - ต่อท้าย " …" ถ้าตัด; แสดงเต็มโดยไม่มี "…" ถ้าตัวบททั้งหมด ≤ งบประมาณ
 
 ```html
-<!-- ตัวบทอาหรับสั้น (≤60 คำ): คำแปลไทยก่อน, อาหรับซ่อนไว้โดยค่าเริ่มต้น -->
+<!-- ตัวบทอาหรับสั้น (≤60 คำ): คำแปลไทยก่อน, preview อาหรับใน summary, ฉบับเต็มใน blockquote -->
 <p class="ar-translation">"...คำแปลภาษาไทย..."</p>
 <details class="ar-toggle">
-  <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+  <summary>ดูต้นฉบับภาษาอาหรับ</summary><!-- JS จะแทนที่ด้วย preview + trigger อัตโนมัติ -->
   <blockquote lang="ar" dir="rtl" class="ar-block">...نص عربي...</blockquote>
 </details>
 
-<!-- ตัวบทอัลกุรอาน (aya-block) หรือหะดีษ (hadith-block): คำแปลก่อน, บล็อกอาหรับซ่อนไว้ -->
+<!-- ตัวบทอัลกุรอาน (aya-block) หรือหะดีษ (hadith-block): เหมือนกัน -->
 <p>...คำแปลภาษาไทย...</p>
 <details class="ar-toggle">
-  <summary>ดูต้นฉบับภาษาอาหรับ</summary>
+  <summary>ดูต้นฉบับภาษาอาหรับ</summary><!-- JS inject preview -->
   <div class="aya-block"><!-- หรือ hadith-block -->
     <p class="block-ar" lang="ar" dir="rtl">...نص عربي...</p>
   </div>
 </details>
 
-<!-- แถว Arabic Toggle ในแผงเครื่องมืออ่าน (ต้องอยู่ต่อจาก Font Size) -->
-<div class="tool-group">
-  <span class="tool-label">ตัวบทอาหรับ:</span>
-  <button class="btn-tool active" onclick="setArabicDisplay('hide')" id="arabicHideBtn">ซ่อน</button>
-  <button class="btn-tool" onclick="setArabicDisplay('show')" id="arabicShowBtn">แสดง</button>
-</div>
+<!-- optional: manual cut override (char index in full text) -->
+<details class="ar-toggle" data-preview-cut="42">...</details>
 
 <!-- บรรณานุกรม/เชิงอรรถ (โครงสร้างต้นแบบตามบทความต้นแบบ) -->
 <section class="bibliography-section">
@@ -154,7 +156,7 @@
 ### หมวดที่ 8: กฎเพิ่มเติมด้านอักขรวิธีและความถูกต้องทางวิชาการ
 
 * **กฎข้อที่ 52:** **[ช่องไฟนำหน้าชื่อ อิบนุ / อบู และรูปประสมอัล-]** คำนำหน้า **"อิบนุ"** (ابن) และ **"อบู"** (أبو) ต้องมีช่องว่างคั่นจากชื่อที่ตามมาเสมอ
-  - ตัวอย่าง: "อิบนุอุมัร" → "อิบนุ อุมัร", "อบูอับดุลลอฮ์" → "อบู อับดุลลอฮ์", "อบูฮุร็อยเราะฮ์" → "อบู ฮุร็อยเราะฮ์"
+  - ตัวอย่าง: "อิบนุอุมัร" → "อิบนุ อุมัร", "อบูอับดุลลอฮ์" → "อบู อับดุลลอฮ์", "อบูฮุร็อยเราะฮ์" → "อบู ฮุร็อยเราะฮ์"; **ابن قاسم العبادي** → "อิบนุ กอเซม อัลอับบาดีย์ (เสียชีวิต ฮ.ศ. 994)" (ชาฟีอีย์) — แตกต่างจาก **ابن القاسم** (นักวิชาการมาลิกีย์ ผู้รวบรวมมัสฮับของอิหม่ามมาลิก)
   - **รูปประสม Ibn al- → "อิบนุล…" (เชื่อม):** เมื่อ "อิบนุ" ตามด้วย "ล" ทันที ให้เชื่อมเป็น **"อิบนุล"** (Ibn al-) เช่น "อิบนุลก็อยยิม" (Ibn al-Qayyim), "อิบนุลอะษีร" (Ibn al-Athir) — **ห้ามแทรกช่องว่าง**
   - **รูปประสม Abu al- → "อบุล…" (เชื่อม, สระอุ):** เมื่อ "อบู" นำหน้า اَل ให้เขียนเชื่อมเป็น **"อบุล"** โดยใช้สระอุ (สั้น) เช่น "อบุลหะสัน" (Abu al-Hasan), "อบุลวะลีด" (Abu al-Walid) — **ห้ามแทรกช่องว่าง และห้ามใช้สระอู ("อบูล")** — หากพบ "อบูล" (สระอู) ในรูป al- ให้แก้เป็น "อบุล" (สระอุ) ทุกกรณี
   - **ข้อควรระวัง — ล ที่เป็นพยัญชนะต้นของชื่อจริง (ไม่ใช่ اَل):** เช่น "อบู ลุบาบะฮ์" (Abu Lubabah / أبو لُبَابَة) — ล ตามด้วยสระอุ เป็นส่วนของชื่อ ให้เว้นวรรคและใช้สระอู ตามปกติ: **"อบู ลุบาบะฮ์"** ห้ามเชื่อมเป็น "อบุล…" แนวทางเบื้องต้น: ล + สระอุ/อู/อิ มักเป็นพยัญชนะต้นของชื่อ → เว้นวรรค; ล + พยัญชนะตัวต่อไป (เช่น ลหะ, ลวะ, ลกอ, ลมุ) มักเป็น اَل → เชื่อม
@@ -225,7 +227,6 @@
 * **Rule 11:** Transliteration of Al- (ال) must conform to phonetic rules, except for "Shari'ah" which must omit the "Ash-" prefix.
 * **Rule 12:** Scholarly names must align with standard Arabic phonology (e.g., Al-Ghazali, Al-Maturidi). Avoid the spelling "ท่านอิมาม" or "อิมาม"; enforce "อิหม่าม" (Imam) globally.
 * **Rule 12.1:** **[Transliteration of صحيح]** The Thai transliteration of **صحيح** (Sahih) must always be spelled **"ศอเฮี้ยะฮ์"** (e.g., ศอเฮี้ยะฮ์อัลบุคอรีย์, ศอเฮี้ยะฮ์มุสลิม). The spelling **"ศ่อเหี้ยห์" is strictly prohibited.** Apply this consistently across all future content.
-* **Rule 12.2:** **[Transliteration of مذهب]** The Thai transliteration of **مذهب** (Madhhab) must always be spelled **"มัสฮับ"**. The spelling **"มัซฮับ" is strictly prohibited.** Apply this consistently across all future content.
 * **Rule 13:** **[Transliteration Spacing]** Transliterated religious terminology inserted into Thai sentences must not be preceded or followed by space bars (e.g., `หลักของชะรีอะฮ์ในประเด็น`).
 * **Rule 14:** **[Conjunction Choice]** Eliminate archaic conjunctions such as "ทว่า"; enforce the use of "แต่" to optimize academic conciseness.
 * **Rule 15:** Direct quotes, Hadith, and translations must be enclosed strictly within curved quotation marks **`“...”`**.
@@ -273,7 +274,7 @@
 ## Section 6: Right-to-Left (RTL) Core Specification
 
 * **Rule 47:** **Arabic Text Direction Standard** To prevent punctuation displacement and ensure accurate bullet point positioning, the `dir="rtl"` attribute must always be enforced alongside `lang="ar"` on all block-level or list elements enclosing pure Arabic text.
-* **Rule 48:** **[Blueprint — Arabic-Display Model 2]** All Arabic source text must be **hidden by default** (default-collapsed). Readers can expand individual blocks or toggle all at once via [ซ่อน]/[แสดง] buttons in the Reading Tools panel. The panel must include a "ตัวบทอาหรับ" row immediately after the Font Size row. Short texts (≤ 60 words): Thai translation first, Arabic hidden in `<details class="ar-toggle">`; Quran aya-block / hadith-block: Thai translation first, block wrapped inside `<details class="ar-toggle">`. See Thai section for full code blueprint.
+* **Rule 48:** **[Blueprint — Arabic-Display Model 2 — Per-Block Base-Letter Preview]** Every Arabic block displays a **per-block preview** by default: the summary shows up to **28 base letters** (`AR_PREVIEW_LETTERS=28`, tunable) of the Arabic text, with harakat stripped from the letter count (combining marks ride their base and are never counted or orphaned). The cut is context-aware in this priority order: (a) `data-preview-cut` attribute (char-index override); (b) last Arabic punctuation (، ؛ . : ؟) at or before budget if ≥ 50% of budget — ends on a complete clause; (c) last space (word boundary) ≤ budget; never end on a connective/particle (و ف ثم أو لا ما إن أن من عن إلى على في بـ لـ كـ حتى لكن بل) — back up one word if so. Append " …". If whole text ≤ budget, show all (no "…", no expand button needed). **No global [ซ่อน]/[แสดง] panel row.** Readers expand/collapse each block individually by tapping its `<summary>`; label switches to "ย่อ" when open. Full Arabic text is retained in the DOM byte-for-byte — preview is display-only via JS (`initArPreview()` in `main.js`). HTML structure unchanged: `<details class="ar-toggle">` with `<summary>` and Arabic block inside. See Thai section for full code blueprint and CSS.
 
 ## Section 7: Long-form & Mixed Script Standards
 
@@ -300,7 +301,7 @@
 ## Section 8: Additional Rules
 
 * **Rule 52:** **[Spacing after Ibn / Abu prefixes and al- compounds]** The transliterated prefixes **"อิบนุ"** (ابن, Ibn) and **"อบู"** (أบو, Abu) must always be separated from the following name by a single space.
-  - Examples: "อิบนุอุมัร" → "อิบนุ อุมัร"; "อบูอับดุลลอฮ์" → "อบู อับดุลลอฮ์"; "อบูฮุร็อยเราะฮ์" → "อบู ฮุร็อยเราะฮ์"
+  - Examples: "อิบนุอุมัร" → "อิบนุ อุมัร"; "อบูอับดุลลอฮ์" → "อบู อับดุลลอฮ์"; "อบูฮุร็อยเราะฮ์" → "อบู ฮุร็อยเราะฮ์"; **ابن قاسم العبادي** → "อิบนุ กอเซม อัลอับบาดีย์ (d. AH 994)" (Shafiʿi) — distinct from **ابن القاسم** (Maliki jurist, compiler of Imam Malik's school)
   - **Ibn al- compound → "อิบนุล…" (fused):** When "อิบนุ" is immediately followed by "ล", contract to **"อิบนุล"** (Ibn al-). Do **NOT** insert a space. E.g., "อิบนุลก็อยยิม" (Ibn al-Qayyim), "อิบนุลอะษีร" (Ibn al-Athir).
   - **Abu al- compound → "อบุล…" (fused, สระอุ short vowel):** When "อบู" precedes al- (اَل), write fused as **"อบุล"** using สระอุ. Do **NOT** split and do **NOT** use สระอู ("อบูล") in this form. E.g., "อบุลหะสัน" (Abu al-Hasan), "อบุลวะลีด" (Abu al-Walid). If "อบูล" (สระอู) is found in an al- compound, normalize to "อบุล" (สระอุ).
   - **Caveat — ล belonging to the actual name (not al-):** If "ล" is the initial consonant of the name itself (not اَل), e.g., Abu Lubabah (أبو لُبَابَة) = "อบู ลุบาบะฮ์" — keep spaced with สระอู as normal. Rule of thumb: ล followed by a short vowel (ลุ, ลู, ลิ) is usually a name-initial → space; ล followed by a consonant cluster (ลหะ, ลวะ, ลกอ, ลมุ) is usually al- → fuse.
