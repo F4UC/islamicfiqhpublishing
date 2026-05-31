@@ -1,5 +1,5 @@
 // ==========================================
-// ⭐ 1. ระบบ Google Analytics ⭐
+// ⭐️ 1. ระบบ Google Analytics ⭐️
 // ==========================================
 const gaScript = document.createElement('script');
 gaScript.async = true;
