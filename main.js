@@ -10,3 +10,5 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-PBC80ZJT27');
+
+// THIS IS A PLACEHOLDER - reading full content next
