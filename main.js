@@ -1,5 +1,5 @@
 // ==========================================
-// ⭐ 1. ระบบ Google Analytics ⭐
+// â­ï¸ 1. à¸£à¸°à¸šà¸š Google Analytics â­ï¸
 // ==========================================
 const gaScript = document.createElement('script');
 gaScript.async = true;
@@ -12,18 +12,18 @@ gtag('js', new Date());
 gtag('config', 'G-PBC80ZJT27');
 
 // ==========================================
-// ⭐ 2. ระบบจัดการธีมมืด/สว่างพรีเมียม (Dark Mode Controller) ⭐
+// â­ï¸ 2. à¸£à¸°à¸šà¸šà¸ˆà¸±à¸"à¸à¸²à¸£à¸˜à¸µà¸¡à¸¡à¸·à¸"/à¸ªà¸§à¹à¸²à¸‡à¸žà¸£à¸µà¹€à¸¡à¸µà¸¢à¸¡ (Dark Mode Controller) â­ï¸
 // ==========================================
-// นิยามไอคอน SUN (พระอาทิตย์) และ MOON (พระจันทร์) เพื่อใช้สลับบนปุ่ม
+// à¸™à¸´à¸¢à¸²à¸¡à¹„à¸­à¸„à¸­à¸™ SUN (à¸žà¸£à¸°à¸­à¸²à¸—à¸´à¸•à¸¢à¹Œ) à¹à¸¥à¸° MOON (à¸žà¸£à¸°à¸ˆà¸±à¸™à¸—à¸£à¹Œ) à¹€à¸žà¸·à¹à¸­à¹ƒà¸Šà¹à¸ªà¸¥à¸±à¸šà¸šà¸™à¸›à¸¸à¹à¸¡
 const sunIcon = `<svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-7a1 1 0 0 1 .993.883L13 3v1a1 1 0 0 1-1.993.117L11 4V3a1 1 0 0 1 1-1zm0 17a1 1 0 0 1 .993.883L13 21v1a1 1 0 0 1-1.993.117L11 22v-1a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.32-.083l.094.083 1.414 1.414a1 1 0 0 1-1.32 1.497l-.094-.083-1.414-1.414a1 1 0 0 1 0-1.414zm12.728 12.728a1 1 0 0 1 1.32-.083l.094.083 1.414 1.414a1 1 0 0 1-1.32 1.497l-.094-.083-1.414-1.414a1 1 0 0 1 0-1.414zM3 11a1 1 0 0 1 .117 1.993L3 13H2a1 1 0 0 1-.117-1.993L2 11h1zm19 0a1 1 0 0 1 .117 1.993L22 13h-1a1 1 0 0 1-.117-1.993L21 11h1zM5.636 16.95a1 1 0 0 1 .083 1.32l-.083.094-1.414 1.414a1 1 0 0 1-1.497-1.32l.083-.094 1.414-1.414a1 1 0 0 1 1.414 0zm12.728-12.728a1 1 0 0 1 .083 1.32l-.083.094-1.414 1.414a1 1 0 0 1-1.497-1.32l.083-.094 1.414-1.414a1 1 0 0 1 1.414 0z"/></svg>`;
 const moonIcon = `<svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 3c.132 0 .263 0 .393.007a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3z"/></svg>`;
 
-// ดึงการตั้งค่าธีมก่อนหน้านี้จาก LocalStorage หรืออ้างอิงตามธีมเริ่มต้นของอุปกรณ์ผู้ใช้งาน
+// à¸"à¸¶à¸‡à¸à¸²à¸£à¸•à¸±à¹à¸‡à¸„à¹à¸²à¸˜à¸µà¸¡à¸à¹à¸­à¸™à¸«à¸™à¹à¸²à¸™à¸µà¹à¸ˆà¸²à¸ LocalStorage à¸«à¸£à¸·à¸­à¸­à¹à¸²à¸‡à¸­à¸´à¸‡à¸•à¸²à¸¡à¸˜à¸µà¸¡à¹€à¸£à¸´à¹à¸¡à¸•à¹à¸™à¸‚à¸­à¸‡à¸­à¸¸à¸›à¸à¸£à¸"à¹Œà¸œà¸¹à¹à¹ƒà¸Šà¹à¸‡à¸²à¸™
 const savedTheme = localStorage.getItem('theme');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const isDarkModeActive = savedTheme === 'dark' || (!savedTheme && prefersDark);
 
-// ฟังก์ชันปรับใช้ธีมในระดับสูง
+// à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸›à¸£à¸±à¸šà¹ƒà¸Šà¹à¸˜à¸µà¸¡à¹ƒà¸™à¸£à¸°à¸"à¸±à¸šà¸ªà¸¹à¸‡
 function applyTheme(isDark) {
     if (isDark) {
         document.documentElement.classList.add('dark-mode');
@@ -32,11 +32,11 @@ function applyTheme(isDark) {
         document.documentElement.classList.remove('dark-mode');
         localStorage.setItem('theme', 'light');
     }
-    // อัปเดตไอคอนปุ่มสลับเมื่อรันโค้ด
+    // à¸­à¸±à¸›à¹€à¸"à¸•à¹„à¸­à¸„à¸­à¸™à¸›à¸¸à¹à¸¡à¸ªà¸¥à¸±à¸šà¹€à¸¡à¸·à¹à¸­à¸£à¸±à¸™à¹‚à¸„à¹à¸"
     updateThemeIcon(isDark);
 }
 
-// อัปเดตรูปลักษณ์ของปุ่มสลับธีม
+// à¸­à¸±à¸›à¹€à¸"à¸•à¸£à¸¹à¸›à¸¥à¸±à¸à¸©à¸"à¹Œà¸‚à¸­à¸‡à¸›à¸¸à¹à¸¡à¸ªà¸¥à¸±à¸šà¸˜à¸µà¸¡
 function updateThemeIcon(isDark) {
     const btn = document.getElementById('themeToggleBtn');
     if (btn) {
@@ -44,7 +44,7 @@ function updateThemeIcon(isDark) {
     }
 }
 
-// สั่งรันธีมเบื้องต้นทันที ก่อน DOM โหลดเต็มที่เพื่อลดความกะพริบ
+// à¸ªà¸±à¹à¸‡à¸£à¸±à¸™à¸˜à¸µà¸¡à¹€à¸šà¸·à¹à¸­à¸‡à¸•à¹à¸™à¸—à¸±à¸™à¸—à¸µà¸à¹à¸­à¸™ DOM à¹‚à¸«à¸¥à¸"à¹€à¸•à¹‡à¸¡à¸—à¸µà¹à¹€à¸žà¸·à¹à¸­à¸¥à¸"à¸„à¸§à¸²à¸¡à¸à¸°à¸žà¸£à¸´à¸š
 applyTheme(isDarkModeActive);
 
 // Force light theme on pages where dark mode is not supported
@@ -78,6 +78,7 @@ const _artCacheBust = Math.floor(Date.now() / 86400000);
 const articlesPromise = fetch('/articles.json?v=' + _artCacheBust).then(function(r) { return r.json(); }).catch(function() { return []; });
 
 // ==========================================
+// â­ï¸ 3. à¸£à¸°à¸šà¸šà¸›à¸£à¸°à¸à¸­à¸šà¸£à¹à¸²à¸‡ Header / Footer â­ï¸
 // ⭐ 3. ระบบประกอบร่าง Header / Footer ⭐
 // ==========================================
 document.addEventListener("DOMContentLoaded", function() {
@@ -595,7 +596,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // ==========================================
-    // ⭐ 4. ระบบแถบความคืบหน้าการอ่าน (Reading Progress Bar) ⭐
+    // â­ï¸ 4. à¸£à¸°à¸šà¸šà¹à¸–à¸šà¸„à¸§à¸²à¸¡à¸„à¸·à¸šà¸«à¸™à¹à¸²à¸à¸²à¸£à¸­à¹à¸²à¸™ (Reading Progress Bar) â­ï¸
     // ==========================================
     const progressBar = document.getElementById('readingProgressBar');
     if (progressBar) {
@@ -618,35 +619,35 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ==========================================
-    // ⭐ 5. ระบบสารบัญอัจฉริยะ (Interactive TOC) ⭐
+    // â­ï¸ 5. à¸£à¸°à¸šà¸šà¸ªà¸²à¸£à¸šà¸±à¸à¸­à¸±à¸ˆà¸‰à¸£à¸´à¸¢à¸° (Interactive TOC) â­ï¸
     // ==========================================
     const articleBody = document.querySelector('.article-body');
     const tocNav = document.getElementById('tocNav');
     
     if (articleBody && tocNav) {
-        // หาหัวข้อ h2 และ h3 ทั้งหมด
+        // à¸«à¸²à¸«à¸±à¸§à¸‚à¹à¸­ h2 à¹à¸¥à¸° h3 à¸—à¸±à¹à¸‡à¸«à¸¡à¸"
         const headings = articleBody.querySelectorAll('h2, h3');
         if (headings.length > 0) {
             headings.forEach(heading => {
-                if (!heading.id) return; // ข้ามถ้าไม่มี id
+                if (!heading.id) return; // à¸‚à¹à¸²à¸¡à¸–à¹à¸²à¹„à¸¡à¹à¸¡à¸µ id
                 
                 const link = document.createElement('a');
                 link.href = '#' + heading.id;
                 link.textContent = heading.textContent;
                 link.className = 'toc-link ' + (heading.tagName.toLowerCase() === 'h3' ? 'toc-h3' : 'toc-h2');
                 
-                // คลิกแล้วเลื่อนแบบ smooth
+                // à¸„à¸¥à¸´à¸à¹à¸¥à¹à¸§à¹€à¸¥à¸·à¹à¸­à¸™à¹à¸šà¸š smooth
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     document.getElementById(heading.id).scrollIntoView({ behavior: 'smooth' });
-                    // อัปเดต URL hash โดยไม่เลื่อนจอแบบกระตุก
+                    // à¸­à¸±à¸›à¹€à¸"à¸• URL hash à¹‚à¸"à¸¢à¹„à¸¡à¹à¹€à¸¥à¸·à¹à¸­à¸™à¸ˆà¸­à¹à¸šà¸šà¸à¸£à¸°à¸•à¸¸à¸
                     history.pushState(null, null, '#' + heading.id);
                 });
                 
                 tocNav.appendChild(link);
             });
 
-            // ใช้ Intersection Observer ตรวจจับว่าอ่านถึงไหน
+            // à¹ƒà¸Šà¹ Intersection Observer à¸•à¸£à¸§à¸ˆà¸ˆà¸±à¸šà¸§à¹à¸²à¸­à¹à¸²à¸™à¸–à¸¶à¸‡à¹„à¸«à¸™
             const observerOptions = {
                 root: null,
                 rootMargin: '0px 0px -60% 0px',
@@ -656,12 +657,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const tocLinks = tocNav.querySelectorAll('.toc-link');
             
             const headingObserver = new IntersectionObserver(entries => {
-                // หารายการที่แสดงบนจอ
+                // à¸«à¸²à¸£à¸²à¸¢à¸à¸²à¸£à¸—à¸µà¹à¹à¸ªà¸"à¸‡à¸šà¸™à¸ˆà¸­
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // เอา active ออกจากทุกลิงก์
+                        // à¹€à¸­à¸² active à¸­à¸­à¸à¸ˆà¸²à¸à¸—à¸¸à¸à¸¥à¸´à¸‡à¸à¹Œ
                         tocLinks.forEach(link => link.classList.remove('toc-active'));
-                        // ใส่ active ให้ลิงก์ปัจจุบัน
+                        // à¹ƒà¸ªà¹ active à¹ƒà¸«à¹à¸¥à¸´à¸‡à¸à¹Œà¸›à¸±à¸ˆà¸ˆà¸¸à¸šà¸±à¸™
                         const activeLink = tocNav.querySelector(`a[href="#${entry.target.id}"]`);
                         if (activeLink) {
                             activeLink.classList.add('toc-active');
@@ -795,6 +796,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 next.onclick = function() { showPage(currentPage + 1); };
                 paginationEl.appendChild(next);
             }
+
             showPage(1);
         });
     })();
@@ -869,15 +871,10 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     })();
-
-    // ==========================================
-    // ⭐ 13. Arabic Preview init
-    // ==========================================
-    initArPreview();
 });
 
 // ==========================================
-// ⭐ 6. ระบบแชร์โซเชียลมีเดีย (Social Share) ⭐
+// â­ï¸ 6. à¸£à¸°à¸šà¸šà¹à¸Šà¸£à¹Œà¹‚à¸‹à¹€à¸Šà¸µà¸¢à¸¥à¸¡à¸µà¹€à¸"à¸µà¸¢ (Social Share) â­ï¸
 // ==========================================
 function shareToFacebook(e) {
     e.preventDefault();
@@ -913,7 +910,7 @@ function copyArticleLink() {
 }
 
 // ==========================================
-// ⭐ 7. ระบบเครื่องมือปรับขนาดตัวอักษร (Reading Tools) ⭐
+// â­ï¸ 7. à¸£à¸°à¸šà¸šà¹€à¸„à¸£à¸·à¹à¸­à¸‡à¸¡à¸·à¸­à¸›à¸£à¸±à¸šà¸‚à¸™à¸²à¸"à¸•à¸±à¸§à¸­à¸±à¸à¸©à¸£ (Reading Tools) â­ï¸
 // ==========================================
 let currentFontSize = 18;
 function changeFontSize(delta) {
@@ -983,141 +980,6 @@ function copyCite() {
     });
 }
 function copyCitation() { copyCite(); }
-
-// ==========================================
-// ⭐ Arabic Preview System (per-block, base-letter budget)
-// ==========================================
-function initArPreview() {
-    var AR_PREVIEW_LETTERS = 28;
-    var PARTICLES = ['و','ف','ثم','أو','لا','ما','إن','أن','من','عن','إلى','على','في','بـ','لـ','كـ','حتى','لكن','بل'];
-    // Arabic punctuation chars used as cut points
-    var PUNCTS = '،؛.:؟';
-
-    function isHarakat(cp) {
-        return (cp >= 0x0610 && cp <= 0x061A) ||
-               (cp >= 0x064B && cp <= 0x065F) ||
-               cp === 0x0670 ||
-               (cp >= 0x06D6 && cp <= 0x06DC) ||
-               (cp >= 0x06DF && cp <= 0x06E8) ||
-               (cp >= 0x06EA && cp <= 0x06ED);
-    }
-
-    function isArLetter(cp) {
-        return (cp >= 0x0621 && cp <= 0x064A) ||
-               (cp >= 0x066E && cp <= 0x06D5) ||
-               cp === 0x06EE || cp === 0x06EF ||
-               (cp >= 0x06FA && cp <= 0x06FF);
-    }
-
-    function countBaseLetters(s) {
-        var n = 0;
-        for (var i = 0; i < s.length; i++) {
-            if (isArLetter(s.charCodeAt(i))) n++;
-        }
-        return n;
-    }
-
-    function avoidParticle(words) {
-        var STRIP = /[ً-ٰٟۖ-ۜ۟-۪ۨ-ۭ،؛.;؟:]/g;
-        while (words.length > 1) {
-            var last = words[words.length - 1].replace(STRIP, '');
-            var isP = false;
-            for (var pi = 0; pi < PARTICLES.length; pi++) {
-                if (last === PARTICLES[pi]) { isP = true; break; }
-            }
-            if (isP) { words = words.slice(0, -1); } else { break; }
-        }
-        return words;
-    }
-
-    function computePreview(text, dataCut) {
-        var total = countBaseLetters(text);
-        if (total <= AR_PREVIEW_LETTERS) {
-            return { text: text, isFull: true };
-        }
-
-        // Manual override via data-preview-cut attribute
-        if (dataCut) {
-            var ci = parseInt(dataCut, 10);
-            if (!isNaN(ci) && ci > 0 && ci < text.length) {
-                return { text: text.slice(0, ci) + ' …', isFull: false };
-            }
-        }
-
-        // Find cut position: walk to budget-th base letter in original text
-        var letterCount = 0, cutOrigIdx = text.length;
-        for (var i = 0; i < text.length; i++) {
-            var cp = text.charCodeAt(i);
-            if (!isHarakat(cp) && isArLetter(cp)) {
-                letterCount++;
-                if (letterCount === AR_PREVIEW_LETTERS) {
-                    cutOrigIdx = i + 1;
-                    // Carry trailing harakat with their base
-                    while (cutOrigIdx < text.length && isHarakat(text.charCodeAt(cutOrigIdx))) {
-                        cutOrigIdx++;
-                    }
-                    break;
-                }
-            }
-        }
-
-        var candidate = text.slice(0, cutOrigIdx);
-
-        // b) Last Arabic punctuation at/before budget, if ≥ 50% of budget
-        var bestPunct = -1;
-        for (var pi2 = 0; pi2 < candidate.length; pi2++) {
-            if (PUNCTS.indexOf(candidate[pi2]) !== -1) bestPunct = pi2;
-        }
-        if (bestPunct >= 0) {
-            var punctLetters = countBaseLetters(candidate.slice(0, bestPunct + 1));
-            if (punctLetters >= Math.floor(AR_PREVIEW_LETTERS / 2)) {
-                var wP = candidate.slice(0, bestPunct + 1).replace(/\s+$/, '').split(' ');
-                return { text: avoidParticle(wP).join(' ') + ' …', isFull: false };
-            }
-        }
-
-        // c) Last space (word boundary)
-        var ls = candidate.lastIndexOf(' ');
-        if (ls > 0) {
-            var wS = candidate.slice(0, ls).split(' ');
-            return { text: avoidParticle(wS).join(' ') + ' …', isFull: false };
-        }
-
-        // Fallback: hard cut at budget
-        return { text: candidate + ' …', isFull: false };
-    }
-
-    function escHtml(s) {
-        return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-    }
-
-    document.querySelectorAll('details.ar-toggle').forEach(function(details) {
-        // Quran aya-block and hadith-block are always shown in full — skip preview
-        if (details.querySelector('.aya-block, .hadith-block')) return;
-        var arEl = details.querySelector('.ar-block, .block-ar');
-        if (!arEl) return;
-        var fullText = arEl.textContent.trim();
-        var dataCut = details.getAttribute('data-preview-cut');
-        var preview = computePreview(fullText, dataCut);
-        var summary = details.querySelector('summary');
-        if (!summary) return;
-
-        function render() {
-            if (details.open) {
-                summary.innerHTML = '<span class="ar-preview-trigger ar-collapse-trigger">ย่อ</span>';
-            } else if (preview.isFull) {
-                summary.innerHTML = '<span class="ar-preview-trigger">ดูต้นฉบับภาษาอาหรับ</span>';
-            } else {
-                summary.innerHTML =
-                    '<span class="ar-preview" dir="rtl" lang="ar">' + escHtml(preview.text) + '</span>' +
-                    '<span class="ar-preview-trigger">ดูต้นฉบับภาษาอาหรับ</span>';
-            }
-        }
-
-        render();
-        details.addEventListener('toggle', render);
-    });
-}
 
 // ==========================================
 // ⭐️ 9. ระบบ Click Ripple Effect ระดับเว็บ (Global Click Ripple) ⭐️
