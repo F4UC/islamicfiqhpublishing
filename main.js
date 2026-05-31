@@ -1092,6 +1092,8 @@ function initArPreview() {
     }
 
     document.querySelectorAll('details.ar-toggle').forEach(function(details) {
+        // Quran aya-block and hadith-block are always shown in full — skip preview
+        if (details.querySelector('.aya-block, .hadith-block')) return;
         var arEl = details.querySelector('.ar-block, .block-ar');
         if (!arEl) return;
         var fullText = arEl.textContent.trim();

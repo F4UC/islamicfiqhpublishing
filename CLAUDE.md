@@ -74,7 +74,9 @@
 เพื่อป้องกันปัญหาการแสดงผลเครื่องหมายวรรคตอนผิดเพี้ยน (เช่น จุดมหัพภาคกระโดด) และให้ Bullet Points อยู่ในตำแหน่งที่ถูกต้อง ให้บังคับใช้แอตทริบิวต์ `dir="rtl"` เสมอ ควบคู่กับ `lang="ar"` ในแท็กระดับบล็อก (Block-level) หรือรายการ (Lists) ที่บรรจุข้อความภาษาอาหรับล้วน
 * **กฎข้อที่ 48:** **[ตัวอย่างโค้ดมาตรฐานระดับบล็อกอ้างอิงและบรรณานุกรม — Arabic-Display Model 2]**
 
-  **หลักการแสดงผลตัวบทอาหรับ (Base-Letter Preview):** ตัวบทอาหรับ**ทุกประเภท**แสดง **preview แบบ per-block** โดยค่าเริ่มต้น: เนื้อหาภาษาอาหรับนับ**เฉพาะตัวอักษรฐาน** (base letters, ไม่นับสระ/ฮะเราะกาต) ไม่เกิน **28 ตัวอักษร** (`AR_PREVIEW_LETTERS=28`, ปรับได้) พร้อมตัดที่จุดสิ้นสุดวลีที่เหมาะสม — **ไม่มีปุ่ม [ซ่อน]/[แสดง] ในแผงเครื่องมืออ่าน** ผู้อ่านขยาย/ย่อแต่ละบล็อกด้วยการแตะ `<summary>` โดยตรง ตัวบทอาหรับฉบับเต็มคงอยู่ใน DOM ครบถ้วนไบต์ต่อไบต์
+  **หลักการแสดงผลตัวบทอาหรับ (Base-Letter Preview):** ตัวบทอาหรับ**ที่ไม่ใช่พระคัมภีร์**แสดง **preview แบบ per-block** โดยค่าเริ่มต้น: เนื้อหาภาษาอาหรับนับ**เฉพาะตัวอักษรฐาน** (base letters, ไม่นับสระ/ฮะเราะกาต) ไม่เกิน **28 ตัวอักษร** (`AR_PREVIEW_LETTERS=28`, ปรับได้) พร้อมตัดที่จุดสิ้นสุดวลีที่เหมาะสม — **ไม่มีปุ่ม [ซ่อน]/[แสดง] ในแผงเครื่องมืออ่าน** ผู้อ่านขยาย/ย่อแต่ละบล็อกด้วยการแตะ `<summary>` โดยตรง ตัวบทอาหรับฉบับเต็มคงอยู่ใน DOM ครบถ้วนไบต์ต่อไบต์
+
+  **ข้อยกเว้นพระคัมภีร์ (Scripture Exception):** โองการอัลกุรอาน (`.aya-block`) และหะดีษ (`.hadith-block`) ต้องแสดงเต็มทุกกรณีเสมอ — ห้ามตัด, ห้าม preview, ห้ามซ่อนในแท็ก `<details>` โดยเด็ดขาด เนื่องจากตัวบทพระคัมภีร์ต้องอ่านได้ทันทีโดยไม่ต้องกดขยาย ระบบ preview (การตัด 28 ตัวอักษร) ใช้กับตัวบทอาหรับ**ที่ไม่ใช่พระคัมภีร์เท่านั้น** ได้แก่ คำพูดปราชญ์และคำอธิบาย (`blockquote.ar-block`) — ฟังก์ชัน `initArPreview()` ใน `main.js` ต้องข้าม (`return`) ทุก `<details>` ที่บรรจุ `.aya-block` หรือ `.hadith-block` การระบุประเภทให้ยึดตาม **class เท่านั้น** ห้ามเดาจากเนื้อหาหากไม่มี class กำกับ
 
   **หลักการตัด preview (ลำดับความสำคัญ):**
   1. `data-preview-cut` (manual override) — ตัดตามดัชนีตัวอักษรที่ระบุ
@@ -91,14 +93,17 @@
   <blockquote lang="ar" dir="rtl" class="ar-block">...نص عربي...</blockquote>
 </details>
 
-<!-- ตัวบทอัลกุรอาน (aya-block) หรือหะดีษ (hadith-block): เหมือนกัน -->
+<!-- ตัวบทอัลกุรอาน (aya-block) — แสดงเต็มทันที ไม่ใช้ <details> -->
 <p>...คำแปลภาษาไทย...</p>
-<details class="ar-toggle">
-  <summary>ดูต้นฉบับภาษาอาหรับ</summary><!-- JS inject preview -->
-  <div class="aya-block"><!-- หรือ hadith-block -->
-    <p class="block-ar" lang="ar" dir="rtl">...نص عربي...</p>
-  </div>
-</details>
+<div class="aya-block">
+  <p class="block-ar" lang="ar" dir="rtl">...نص عربي...</p>
+</div>
+
+<!-- หะดีษ (hadith-block) — แสดงเต็มทันที ไม่ใช้ <details> -->
+<p>...คำแปลภาษาไทย...</p>
+<div class="hadith-block">
+  <p class="block-ar" lang="ar" dir="rtl">...نص عربي...</p>
+</div>
 
 <!-- optional: manual cut override (char index in full text) -->
 <details class="ar-toggle" data-preview-cut="42">...</details>
@@ -274,7 +279,7 @@
 ## Section 6: Right-to-Left (RTL) Core Specification
 
 * **Rule 47:** **Arabic Text Direction Standard** To prevent punctuation displacement and ensure accurate bullet point positioning, the `dir="rtl"` attribute must always be enforced alongside `lang="ar"` on all block-level or list elements enclosing pure Arabic text.
-* **Rule 48:** **[Blueprint — Arabic-Display Model 2 — Per-Block Base-Letter Preview]** Every Arabic block displays a **per-block preview** by default: the summary shows up to **28 base letters** (`AR_PREVIEW_LETTERS=28`, tunable) of the Arabic text, with harakat stripped from the letter count (combining marks ride their base and are never counted or orphaned). The cut is context-aware in this priority order: (a) `data-preview-cut` attribute (char-index override); (b) last Arabic punctuation (، ؛ . : ؟) at or before budget if ≥ 50% of budget — ends on a complete clause; (c) last space (word boundary) ≤ budget; never end on a connective/particle (و ف ثم أو لا ما إن أن من عن إلى على في بـ لـ كـ حتى لكن بل) — back up one word if so. Append " …". If whole text ≤ budget, show all (no "…", no expand button needed). **No global [ซ่อน]/[แสดง] panel row.** Readers expand/collapse each block individually by tapping its `<summary>`; label switches to "ย่อ" when open. Full Arabic text is retained in the DOM byte-for-byte — preview is display-only via JS (`initArPreview()` in `main.js`). HTML structure unchanged: `<details class="ar-toggle">` with `<summary>` and Arabic block inside. See Thai section for full code blueprint and CSS.
+* **Rule 48:** **[Blueprint — Arabic-Display Model 2 — Per-Block Base-Letter Preview]** Non-scripture Arabic blocks display a **per-block preview** by default: the summary shows up to **28 base letters** (`AR_PREVIEW_LETTERS=28`, tunable) of the Arabic text, with harakat stripped from the letter count (combining marks ride their base and are never counted or orphaned). The cut is context-aware in this priority order: (a) `data-preview-cut` attribute (char-index override); (b) last Arabic punctuation (، ؛ . : ؟) at or before budget if ≥ 50% of budget — ends on a complete clause; (c) last space (word boundary) ≤ budget; never end on a connective/particle (و ف ثم أو لا ما إن أن من عن إلى على في بـ لـ كـ حتى لكن بل) — back up one word if so. Append " …". If whole text ≤ budget, show all (no "…", no expand button needed). **No global [ซ่อน]/[แสดง] panel row.** Readers expand/collapse each block individually by tapping its `<summary>`; label switches to "ย่อ" when open. Full Arabic text is retained in the DOM byte-for-byte — preview is display-only via JS (`initArPreview()` in `main.js`). HTML structure: `<details class="ar-toggle">` with `<summary>` and Arabic block inside. **Scripture Exception:** Quran verses (`.aya-block`) and hadith (`.hadith-block`) are ALWAYS shown in full — never truncated, never collapsed, never wrapped in `<details>`. They render directly visible in the document. `initArPreview()` must skip (`return` early) any `<details>` that contains `.aya-block` or `.hadith-block`. Classification must rely on **class names only** — never guess scripture status from content alone; flag ambiguous blocks for editorial review. See Thai section for full code blueprint and CSS.
 
 ## Section 7: Long-form & Mixed Script Standards
 
