@@ -749,6 +749,7 @@ h1.article-title {
 }
 
 
+
 /* ==========================================
    REFINEMENTS FOR RELATED ARTICLES (UI FIX)
    ========================================== */
@@ -1403,4 +1404,67 @@ html.dark-mode .article-feature-title { color: #f5f1ea; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ar-toggle, .copy-btn { transition: none; }
+}
+
+/* ============================================================
+   SCHOLAR ARABIC TOGGLE
+   OFF = html.hide-scholar-arabic (default, pre-painted at load)
+   ON  = html (without class)
+   Scope: .ar-toggle .ar-block only
+   .aya-block / .hadith-block / .ar-feature / .ar-inline always shown
+   ============================================================ */
+
+/* Pre-paint: hide blocks before JS relocates them — no flash */
+html.hide-scholar-arabic .ar-toggle .ar-block { display: none; }
+/* Hide the now-empty toggle shell after JS marks it */
+html.hide-scholar-arabic .ar-toggle[data-ar-emptied] { display: none; }
+
+/* Arabic Appendix section */
+.arabic-appendix {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-primary);
+}
+.arabic-appendix-entry {
+  padding: 24px 0;
+  border-bottom: 1px dashed var(--border-primary);
+  position: relative;
+}
+.arabic-appendix-entry:last-child { border-bottom: none; }
+
+/* Re-apply .ar-block visual styles in appendix context (selector no longer .ar-toggle .ar-block) */
+.arabic-appendix-entry .ar-block {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  text-align: right;
+  font-size: 1.45rem;
+  line-height: 2.1;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-right: 2px solid rgba(179,27,27,0.5);
+  margin: 8px 0;
+  display: block;
+}
+
+/* Back-to-origin marker */
+.ar-back-marker {
+  display: block;
+  margin-top: 8px;
+}
+
+/* Inline footnote-style marker (extends .fn-ref base) */
+.ar-marker { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.ar-marker a {
+  color: var(--accent-color);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0 2px;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-weight: 600;
+}
+.ar-marker a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .arabic-appendix { margin-top: 40px; padding-top: 24px; }
+  .arabic-appendix-entry { padding: 16px 0; }
 }
