@@ -1,5 +1,5 @@
 // ==========================================
-// â­ï¸ 1. à¸£à¸°à¸šà¸š Google Analytics â­ï¸
+// â­ï¸ 1. à¸£à¸°à¸šà¸š Google Analytics â­ï¸
 // ==========================================
 const gaScript = document.createElement('script');
 gaScript.async = true;
@@ -12,18 +12,18 @@ gtag('js', new Date());
 gtag('config', 'G-PBC80ZJT27');
 
 // ==========================================
-// â­ï¸ 2. à¸£à¸°à¸šà¸šà¸ˆà¸±à¸"à¸à¸²à¸£à¸˜à¸µà¸¡à¸¡à¸·à¸"/à¸ªà¸§à¹à¸²à¸‡à¸žà¸£à¸µà¹€à¸¡à¸µà¸¢à¸¡ (Dark Mode Controller) â­ï¸
+// â­ï¸ 2. à¸£à¸°à¸šà¸šà¸ˆà¸±à¸"à¸à¸²à¸£à¸˜à¸µà¸¡à¸¡à¸·à¸"/à¸ªà¸§à¹à¸²à¸‡à¸žà¸£à¸µà¹€à¸¡à¸µà¸¢à¸¡ (Dark Mode Controller) â­ï¸
 // ==========================================
-// à¸™à¸´à¸¢à¸²à¸¡à¹„à¸­à¸„à¸­à¸™ SUN (à¸žà¸£à¸°à¸­à¸²à¸—à¸´à¸•à¸¢à¹Œ) à¹à¸¥à¸° MOON (à¸žà¸£à¸°à¸ˆà¸±à¸™à¸—à¸£à¹Œ) à¹€à¸žà¸·à¹à¸­à¹ƒà¸Šà¹à¸ªà¸¥à¸±à¸šà¸šà¸™à¸›à¸¸à¹à¸¡
+// à¸™à¸´à¸¢à¸²à¸¡à¹„à¸­à¸„à¸­à¸™ SUN (à¸žà¸£à¸°à¸­à¸²à¸—à¸´à¸•à¸¢à¹Œ) à¹à¸¥à¸° MOON (à¸žà¸£à¸°à¸ˆà¸±à¸™à¸—à¸£à¹Œ) à¹€à¸žà¸·à¹à¸­à¹ƒà¸Šà¹à¸ªà¸¥à¸±à¸šà¸šà¸™à¸›à¸¸à¹à¸¡
 const sunIcon = `<svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-7a1 1 0 0 1 .993.883L13 3v1a1 1 0 0 1-1.993.117L11 4V3a1 1 0 0 1 1-1zm0 17a1 1 0 0 1 .993.883L13 21v1a1 1 0 0 1-1.993.117L11 22v-1a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.32-.083l.094.083 1.414 1.414a1 1 0 0 1-1.32 1.497l-.094-.083-1.414-1.414a1 1 0 0 1 0-1.414zm12.728 12.728a1 1 0 0 1 1.32-.083l.094.083 1.414 1.414a1 1 0 0 1-1.32 1.497l-.094-.083-1.414-1.414a1 1 0 0 1 0-1.414zM3 11a1 1 0 0 1 .117 1.993L3 13H2a1 1 0 0 1-.117-1.993L2 11h1zm19 0a1 1 0 0 1 .117 1.993L22 13h-1a1 1 0 0 1-.117-1.993L21 11h1zM5.636 16.95a1 1 0 0 1 .083 1.32l-.083.094-1.414 1.414a1 1 0 0 1-1.497-1.32l.083-.094 1.414-1.414a1 1 0 0 1 1.414 0zm12.728-12.728a1 1 0 0 1 .083 1.32l-.083.094-1.414 1.414a1 1 0 0 1-1.497-1.32l.083-.094 1.414-1.414a1 1 0 0 1 1.414 0z"/></svg>`;
 const moonIcon = `<svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 3c.132 0 .263 0 .393.007a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3z"/></svg>`;
 
-// à¸"à¸¶à¸‡à¸à¸²à¸£à¸•à¸±à¹à¸‡à¸„à¹à¸²à¸˜à¸µà¸¡à¸à¹à¸­à¸™à¸«à¸™à¹à¸²à¸™à¸µà¹à¸ˆà¸²à¸ LocalStorage à¸«à¸£à¸·à¸­à¸­à¹à¸²à¸‡à¸­à¸´à¸‡à¸•à¸²à¸¡à¸˜à¸µà¸¡à¹€à¸£à¸´à¹à¸¡à¸•à¹à¸™à¸‚à¸­à¸‡à¸­à¸¸à¸›à¸à¸£à¸"à¹Œà¸œà¸¹à¹à¹ƒà¸Šà¹à¸‡à¸²à¸™
+// à¸"à¸¶à¸‡à¸à¸²à¸£à¸•à¸±à¹à¸‡à¸„à¹à¸²à¸˜à¸µà¸¡à¸à¹à¸­à¸™à¸«à¸™à¹à¸²à¸™à¸µà¹à¸ˆà¸²à¸ LocalStorage à¸«à¸£à¸·à¸­à¸­à¹à¸²à¸‡à¸­à¸´à¸‡à¸•à¸²à¸¡à¸˜à¸µà¸¡à¹€à¸£à¸´à¹à¸¡à¸•à¹à¸™à¸‚à¸­à¸‡à¸­à¸¸à¸›à¸à¸£à¸"à¹Œà¸œà¸¹à¹à¹ƒà¸Šà¹à¸‡à¸²à¸™
 const savedTheme = localStorage.getItem('theme');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const isDarkModeActive = savedTheme === 'dark' || (!savedTheme && prefersDark);
 
-// à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸›à¸£à¸±à¸šà¹ƒà¸Šà¹à¸˜à¸µà¸¡à¹ƒà¸™à¸£à¸°à¸"à¸±à¸šà¸ªà¸¹à¸‡
+// à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸›à¸£à¸±à¸šà¹ƒà¸Šà¹à¸˜à¸µà¸¡à¹ƒà¸™à¸£à¸°à¸"à¸±à¸šà¸ªà¸¹à¸‡
 function applyTheme(isDark) {
     if (isDark) {
         document.documentElement.classList.add('dark-mode');
@@ -32,11 +32,11 @@ function applyTheme(isDark) {
         document.documentElement.classList.remove('dark-mode');
         localStorage.setItem('theme', 'light');
     }
-    // à¸­à¸±à¸›à¹€à¸"à¸•à¹„à¸­à¸„à¸­à¸™à¸›à¸¸à¹à¸¡à¸ªà¸¥à¸±à¸šà¹€à¸¡à¸·à¹à¸­à¸£à¸±à¸™à¹‚à¸„à¹à¸"
+    // à¸­à¸±à¸›à¹€à¸"à¸•à¹„à¸­à¸„à¸­à¸™à¸›à¸¸à¹à¸¡à¸ªà¸¥à¸±à¸šà¹€à¸¡à¸·à¹à¸­à¸£à¸±à¸™à¹‚à¸„à¹à¸"
     updateThemeIcon(isDark);
 }
 
-// à¸­à¸±à¸›à¹€à¸"à¸•à¸£à¸¹à¸›à¸¥à¸±à¸à¸©à¸"à¹Œà¸‚à¸­à¸‡à¸›à¸¸à¹à¸¡à¸ªà¸¥à¸±à¸šà¸˜à¸µà¸¡
+// à¸­à¸±à¸›à¹€à¸"à¸•à¸£à¸¹à¸›à¸¥à¸±à¸à¸©à¸"à¹Œà¸‚à¸­à¸‡à¸›à¸¸à¹à¸¡à¸ªà¸¥à¸±à¸šà¸˜à¸µà¸¡
 function updateThemeIcon(isDark) {
     const btn = document.getElementById('themeToggleBtn');
     if (btn) {
@@ -44,7 +44,7 @@ function updateThemeIcon(isDark) {
     }
 }
 
-// à¸ªà¸±à¹à¸‡à¸£à¸±à¸™à¸˜à¸µà¸¡à¹€à¸šà¸·à¹à¸­à¸‡à¸•à¹à¸™à¸—à¸±à¸™à¸—à¸µà¸à¹à¸­à¸™ DOM à¹‚à¸«à¸¥à¸"à¹€à¸•à¹‡à¸¡à¸—à¸µà¹à¹€à¸žà¸·à¹à¸­à¸¥à¸"à¸„à¸§à¸²à¸¡à¸à¸°à¸žà¸£à¸´à¸š
+// à¸ªà¸±à¹à¸‡à¸£à¸±à¸™à¸˜à¸µà¸¡à¹€à¸šà¸·à¹à¸­à¸‡à¸•à¹à¸™à¸—à¸±à¸™à¸—à¸µà¸à¹à¸­à¸™ DOM à¹‚à¸«à¸¥à¸"à¹€à¸•à¹‡à¸¡à¸—à¸µà¹à¹€à¸žà¸·à¹à¸­à¸¥à¸"à¸„à¸§à¸²à¸¡à¸à¸°à¸žà¸£à¸´à¸š
 applyTheme(isDarkModeActive);
 
 // Force light theme on pages where dark mode is not supported
@@ -53,6 +53,14 @@ applyTheme(isDarkModeActive);
     var supportsTheme = (p === '/' || p === '/index.html' || p.startsWith('/articles/'));
     if (!supportsTheme) {
         document.documentElement.classList.remove('dark-mode');
+    }
+})();
+
+// Pre-paint: Scholar Arabic toggle (default: hidden / OFF) — avoids flash on load
+(function() {
+    var s = localStorage.getItem('scholarArabic');
+    if (s !== 'visible') {
+        document.documentElement.classList.add('hide-scholar-arabic');
     }
 })();
 
@@ -78,7 +86,7 @@ const _artCacheBust = Math.floor(Date.now() / 86400000);
 const articlesPromise = fetch('/articles.json?v=' + _artCacheBust).then(function(r) { return r.json(); }).catch(function() { return []; });
 
 // ==========================================
-// â­ï¸ 3. à¸£à¸°à¸šà¸šà¸›à¸£à¸°à¸à¸­à¸šà¸£à¹à¸²à¸‡ Header / Footer â­ï¸
+// â­ï¸ 3. à¸£à¸°à¸šà¸šà¸›à¸£à¸°à¸à¸­à¸šà¸£à¹à¸²à¸‡ Header / Footer â­ï¸
 // ⭐ 3. ระบบประกอบร่าง Header / Footer ⭐
 // ==========================================
 document.addEventListener("DOMContentLoaded", function() {
@@ -596,7 +604,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // ==========================================
-    // â­ï¸ 4. à¸£à¸°à¸šà¸šà¹à¸–à¸šà¸„à¸§à¸²à¸¡à¸„à¸·à¸šà¸«à¸™à¹à¸²à¸à¸²à¸£à¸­à¹à¸²à¸™ (Reading Progress Bar) â­ï¸
+    // â­ï¸ 4. à¸£à¸°à¸šà¸šà¹à¸–à¸šà¸„à¸§à¸²à¸¡à¸„à¸·à¸šà¸«à¸™à¹à¸²à¸à¸²à¸£à¸­à¹à¸²à¸™ (Reading Progress Bar) â­ï¸
     // ==========================================
     const progressBar = document.getElementById('readingProgressBar');
     if (progressBar) {
@@ -619,35 +627,35 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ==========================================
-    // â­ï¸ 5. à¸£à¸°à¸šà¸šà¸ªà¸²à¸£à¸šà¸±à¸à¸­à¸±à¸ˆà¸‰à¸£à¸´à¸¢à¸° (Interactive TOC) â­ï¸
+    // â­ï¸ 5. à¸£à¸°à¸šà¸šà¸ªà¸²à¸£à¸šà¸±à¸à¸­à¸±à¸ˆà¸‰à¸£à¸´à¸¢à¸° (Interactive TOC) â­ï¸
     // ==========================================
     const articleBody = document.querySelector('.article-body');
     const tocNav = document.getElementById('tocNav');
     
     if (articleBody && tocNav) {
-        // à¸«à¸²à¸«à¸±à¸§à¸‚à¹à¸­ h2 à¹à¸¥à¸° h3 à¸—à¸±à¹à¸‡à¸«à¸¡à¸"
+        // à¸«à¸²à¸«à¸±à¸§à¸‚à¹à¸­ h2 à¹à¸¥à¸° h3 à¸—à¸±à¹à¸‡à¸«à¸¡à¸"
         const headings = articleBody.querySelectorAll('h2, h3');
         if (headings.length > 0) {
             headings.forEach(heading => {
-                if (!heading.id) return; // à¸‚à¹à¸²à¸¡à¸–à¹à¸²à¹„à¸¡à¹à¸¡à¸µ id
+                if (!heading.id) return; // à¸‚à¹à¸²à¸¡à¸–à¹à¸²à¹„à¸¡à¹à¸¡à¸µ id
                 
                 const link = document.createElement('a');
                 link.href = '#' + heading.id;
                 link.textContent = heading.textContent;
                 link.className = 'toc-link ' + (heading.tagName.toLowerCase() === 'h3' ? 'toc-h3' : 'toc-h2');
                 
-                // à¸„à¸¥à¸´à¸à¹à¸¥à¹à¸§à¹€à¸¥à¸·à¹à¸­à¸™à¹à¸šà¸š smooth
+                // à¸„à¸¥à¸´à¸à¹à¸¥à¹à¸§à¹€à¸¥à¸·à¹à¸­à¸™à¹à¸šà¸š smooth
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     document.getElementById(heading.id).scrollIntoView({ behavior: 'smooth' });
-                    // à¸­à¸±à¸›à¹€à¸"à¸• URL hash à¹‚à¸"à¸¢à¹„à¸¡à¹à¹€à¸¥à¸·à¹à¸­à¸™à¸ˆà¸­à¹à¸šà¸šà¸à¸£à¸°à¸•à¸¸à¸
+                    // à¸­à¸±à¸›à¹€à¸"à¸• URL hash à¹‚à¸"à¸¢à¹„à¸¡à¹à¹€à¸¥à¸·à¹à¸­à¸™à¸ˆà¸­à¹à¸šà¸šà¸à¸£à¸°à¸•à¸¸à¸
                     history.pushState(null, null, '#' + heading.id);
                 });
                 
                 tocNav.appendChild(link);
             });
 
-            // à¹ƒà¸Šà¹ Intersection Observer à¸•à¸£à¸§à¸ˆà¸ˆà¸±à¸šà¸§à¹à¸²à¸­à¹à¸²à¸™à¸–à¸¶à¸‡à¹„à¸«à¸™
+            // à¹ƒà¸Šà¹ Intersection Observer à¸•à¸£à¸§à¸ˆà¸ˆà¸±à¸šà¸§à¹à¸²à¸­à¹à¸²à¸™à¸–à¸¶à¸‡à¹„à¸«à¸™
             const observerOptions = {
                 root: null,
                 rootMargin: '0px 0px -60% 0px',
@@ -657,12 +665,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const tocLinks = tocNav.querySelectorAll('.toc-link');
             
             const headingObserver = new IntersectionObserver(entries => {
-                // à¸«à¸²à¸£à¸²à¸¢à¸à¸²à¸£à¸—à¸µà¹à¹à¸ªà¸"à¸‡à¸šà¸™à¸ˆà¸­
+                // à¸«à¸²à¸£à¸²à¸¢à¸à¸²à¸£à¸—à¸µà¹à¹à¸ªà¸"à¸‡à¸šà¸™à¸ˆà¸­
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         // à¹€à¸­à¸² active à¸­à¸­à¸à¸ˆà¸²à¸à¸—à¸¸à¸à¸¥à¸´à¸‡à¸à¹Œ
                         tocLinks.forEach(link => link.classList.remove('toc-active'));
-                        // à¹ƒà¸ªà¹ active à¹ƒà¸«à¹à¸¥à¸´à¸‡à¸à¹Œà¸›à¸±à¸ˆà¸ˆà¸¸à¸šà¸±à¸™
+                        // à¹ƒà¸ªà¹ active à¹ƒà¸«à¹à¸¥à¸´à¸‡à¸à¹Œà¸›à¸±à¸ˆà¸ˆà¸¸à¸šà¸±à¸™
                         const activeLink = tocNav.querySelector(`a[href="#${entry.target.id}"]`);
                         if (activeLink) {
                             activeLink.classList.add('toc-active');
@@ -871,11 +879,154 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     })();
+
+    // Scholar Arabic Toggle
+    initScholarArabicToggle();
 });
 
 // ==========================================
-// â­ï¸ 6. à¸£à¸°à¸šà¸šà¹à¸Šà¸£à¹Œà¹‚à¸‹à¹€à¸Šà¸µà¸¢à¸¥à¸¡à¸µà¹€à¸"à¸µà¸¢ (Social Share) â­ï¸
+// â­ï¸ 6. à¸£à¸°à¸šà¸šà¹à¸Šà¸£à¹Œà¹‚à¸‹à¹€à¸Šà¸µà¸¢à¸¥à¸¡à¸µà¹€à¸"à¸µà¸¢ (Social Share) â­ï¸
 // ==========================================
+// ==========================================
+// Scholar Arabic Toggle — DOM Relocation Engine
+// OFF (default): .ar-toggle .ar-block nodes relocated to <section.arabic-appendix>
+// ON: blocks restored inline, <details> opened, no appendix
+// NEVER touches .aya-block, .hadith-block, .ar-feature, .ar-inline
+// ==========================================
+function initScholarArabicToggle() {
+    var articleBody = document.querySelector('.article-body');
+    if (!articleBody) return;
+    var blocks = Array.from(articleBody.querySelectorAll('.ar-toggle .ar-block'));
+    if (blocks.length === 0) return;
+
+    var blockData = blocks.map(function(block, i) {
+        return { index: i + 1, block: block, toggleEl: block.closest('.ar-toggle') };
+    });
+
+    var readingTools = document.querySelector('.reading-tools');
+    if (readingTools) {
+        var grp = document.createElement('div');
+        grp.className = 'tool-group';
+        var lbl = document.createElement('span');
+        lbl.className = 'tool-label';
+        lbl.textContent = 'ต้นฉบับ';
+        var btn = document.createElement('button');
+        btn.id = 'scholarArabicBtn';
+        btn.className = 'btn-tool';
+        btn.type = 'button';
+        btn.textContent = 'Arabic ✦ On/Off';
+        grp.appendChild(lbl);
+        grp.appendChild(btn);
+        readingTools.appendChild(grp);
+
+        function syncBtn() {
+            btn.classList.toggle('active', !document.documentElement.classList.contains('hide-scholar-arabic'));
+        }
+        syncBtn();
+
+        btn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('hide-scholar-arabic')) {
+                _scholarShow(blockData);
+                document.documentElement.classList.remove('hide-scholar-arabic');
+                localStorage.setItem('scholarArabic', 'visible');
+            } else {
+                _scholarHide(blockData);
+                document.documentElement.classList.add('hide-scholar-arabic');
+                localStorage.setItem('scholarArabic', 'hidden');
+            }
+            syncBtn();
+        });
+    }
+
+    if (document.documentElement.classList.contains('hide-scholar-arabic')) {
+        _scholarHide(blockData);
+    } else {
+        _scholarShow(blockData);
+    }
+}
+
+function _scholarHide(blockData) {
+    var articleBody = document.querySelector('.article-body');
+    if (!articleBody) return;
+
+    // Clean up any previous relocation pass
+    var old = document.getElementById('arabic-appendix');
+    if (old) old.remove();
+    document.querySelectorAll('.ar-origin-anchor').forEach(function(el) { el.remove(); });
+
+    var appendix = document.createElement('section');
+    appendix.id = 'arabic-appendix';
+    appendix.className = 'arabic-appendix';
+    var bib = articleBody.querySelector('.bibliography-section');
+    if (bib) articleBody.insertBefore(appendix, bib);
+    else articleBody.appendChild(appendix);
+
+    blockData.forEach(function(d) {
+        var n = d.index;
+
+        // Origin anchor + inline footnote-style marker
+        var anchor = document.createElement('span');
+        anchor.id = 'ar-origin-' + n;
+        anchor.className = 'ar-origin-anchor';
+        var marker = document.createElement('sup');
+        marker.className = 'fn-ref ar-marker';
+        var mLink = document.createElement('a');
+        mLink.href = '#ar-appendix-' + n;
+        mLink.textContent = 'ต้นฉบับอาหรับ ✦';
+        mLink.setAttribute('aria-label', 'ต้นฉบับอาหรับ รายการที่ ' + n);
+        mLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            var t = document.getElementById('ar-appendix-' + n);
+            if (t) t.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+        marker.appendChild(mLink);
+        anchor.appendChild(marker);
+        d.toggleEl.parentNode.insertBefore(anchor, d.toggleEl);
+        d.toggleEl.setAttribute('data-ar-emptied', '1');
+
+        // Appendix entry — RELOCATE block node, no byte change to Arabic
+        var entry = document.createElement('div');
+        entry.id = 'ar-appendix-' + n;
+        entry.className = 'arabic-appendix-entry';
+        entry.appendChild(d.block);
+
+        // Back-link to origin
+        var back = document.createElement('span');
+        back.className = 'fn-back ar-back-marker';
+        var bLink = document.createElement('a');
+        bLink.href = '#ar-origin-' + n;
+        bLink.textContent = '↑';
+        bLink.setAttribute('aria-label', 'กลับไปยังตำแหน่งในบทความ');
+        bLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            var t = document.getElementById('ar-origin-' + n);
+            if (t) t.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+        back.appendChild(bLink);
+        entry.appendChild(back);
+        appendix.appendChild(entry);
+    });
+}
+
+function _scholarShow(blockData) {
+    // Restore each block to its original .ar-toggle parent
+    blockData.forEach(function(d) {
+        var n = d.index;
+        var summary = d.toggleEl.querySelector('summary');
+        if (summary) {
+            d.toggleEl.insertBefore(d.block, summary.nextSibling);
+        } else {
+            d.toggleEl.insertBefore(d.block, d.toggleEl.firstChild);
+        }
+        d.toggleEl.removeAttribute('data-ar-emptied');
+        d.toggleEl.open = true; // show without requiring a click on summary
+        var anchor = document.getElementById('ar-origin-' + n);
+        if (anchor) anchor.remove();
+    });
+    var appendix = document.getElementById('arabic-appendix');
+    if (appendix) appendix.remove();
+}
+
 function shareToFacebook(e) {
     e.preventDefault();
     const url = encodeURIComponent(window.location.href);
@@ -910,7 +1061,7 @@ function copyArticleLink() {
 }
 
 // ==========================================
-// â­ï¸ 7. à¸£à¸°à¸šà¸šà¹€à¸„à¸£à¸·à¹à¸­à¸‡à¸¡à¸·à¸­à¸›à¸£à¸±à¸šà¸‚à¸™à¸²à¸"à¸•à¸±à¸§à¸­à¸±à¸à¸©à¸£ (Reading Tools) â­ï¸
+// â­ï¸ 7. à¸£à¸°à¸šà¸šà¹€à¸„à¸£à¸·à¹à¸­à¸‡à¸¡à¸·à¸­à¸›à¸£à¸±à¸šà¸‚à¸™à¸²à¸"à¸•à¸±à¸§à¸­à¸±à¸à¸©à¸£ (Reading Tools) â­ï¸
 // ==========================================
 let currentFontSize = 18;
 function changeFontSize(delta) {
