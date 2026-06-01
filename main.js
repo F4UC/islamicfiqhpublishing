@@ -882,6 +882,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Scholar Arabic Toggle
     initScholarArabicToggle();
+    initReadingToolsUI();
 });
 
 // ==========================================
@@ -1165,3 +1166,60 @@ document.addEventListener('click', function(e) {
     ripple.remove();
   }, 650);
 });
+
+
+function initReadingToolsUI() {
+    var darkBtn = document.getElementById('darkBtn');
+    if (darkBtn) {
+        darkBtn.classList.add('ifp-iconbtn');
+        darkBtn.innerHTML =
+            '<svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>' +
+            '<svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    }
+
+    var fsBtns = Array.from(document.querySelectorAll('.btn-tool[onclick*="changeFontSize"]'));
+    if (fsBtns.length === 3) {
+        var fsWrapper = document.createElement('span');
+        fsWrapper.className = 'ifp-fsgroup';
+        fsBtns[0].parentNode.insertBefore(fsWrapper, fsBtns[0]);
+        var innerLabels = [
+            '<span class="a-sm">A</span>',
+            '<span class="a-md">A</span>',
+            '<span class="a-lg">A</span>'
+        ];
+        fsBtns.forEach(function(b, i) {
+            fsWrapper.appendChild(b);
+            b.classList.add('ifp-fsbtn');
+            b.innerHTML = innerLabels[i];
+        });
+    }
+    updateFontButtons();
+
+    var citBox = document.getElementById('citation-area');
+    if (citBox) {
+        var citFooter = citBox.querySelector('.citation-footer');
+        var cpBtn = document.createElement('button');
+        cpBtn.className = 'ifp-copybtn';
+        cpBtn.type = 'button';
+        cpBtn.innerHTML =
+            '<span class="ifp-tip">คัดลอกแล้ว</span>' +
+            '<span class="ic">' +
+            '<svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>' +
+            '<svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>' +
+            '</span>คัดลอกอ้างอิง';
+        cpBtn.addEventListener('click', function() {
+            var citText = document.getElementById('citation-text');
+            if (!citText) return;
+            navigator.clipboard.writeText(citText.innerText).then(function() {
+                cpBtn.classList.add('copied');
+                setTimeout(function() { cpBtn.classList.remove('copied'); }, 1800);
+            });
+        });
+        if (citFooter) {
+            citFooter.innerHTML = '';
+            citFooter.appendChild(cpBtn);
+        } else {
+            citBox.appendChild(cpBtn);
+        }
+    }
+}

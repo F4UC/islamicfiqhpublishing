@@ -1468,3 +1468,38 @@ html.hide-scholar-arabic .ar-toggle[data-ar-emptied] { display: none; }
   .arabic-appendix { margin-top: 40px; padding-top: 24px; }
   .arabic-appendix-entry { padding: 16px 0; }
 }
+
+/* ===== Unified reading-tools controls (ifp-) ===== */
+.reading-tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
+.ifp-iconbtn{position:relative;display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--border-primary);background:var(--bg-secondary);color:inherit;cursor:pointer;overflow:hidden;transition:border-color .2s,background .2s;-webkit-tap-highlight-color:transparent;}
+.ifp-iconbtn:hover{border-color:var(--accent-color);}
+.ifp-iconbtn svg{position:absolute;width:18px;height:18px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),opacity .35s cubic-bezier(.34,1.56,.64,1);}
+.ifp-iconbtn .ic-sun{opacity:1;transform:translateY(0) scale(1);}
+.ifp-iconbtn .ic-moon{opacity:0;transform:translateY(18px) scale(.5);}
+html:not(.dark-mode) .ifp-iconbtn .ic-sun{opacity:0;transform:translateY(-18px) scale(.5);}
+html:not(.dark-mode) .ifp-iconbtn .ic-moon{opacity:1;transform:translateY(0) scale(1);}
+.ifp-fsgroup{display:inline-flex;border:1px solid var(--border-primary);border-radius:19px;overflow:hidden;background:var(--bg-secondary);}
+.ifp-fsbtn{display:inline-flex;align-items:center;justify-content:center;border:0;background:transparent;color:inherit;cursor:pointer;font-family:inherit;height:38px;min-width:40px;padding:0 12px;line-height:1;transition:background .2s,color .2s;-webkit-tap-highlight-color:transparent;}
+.ifp-fsbtn:not(:last-child){border-right:1px solid var(--border-primary);}
+.ifp-fsbtn:hover{background:var(--accent-color);color:#fff;}
+.ifp-fsbtn.active{background:var(--accent-color);color:#fff;}
+.ifp-fsbtn .a-sm{font-size:12px;}.ifp-fsbtn .a-md{font-size:15px;}.ifp-fsbtn .a-lg{font-size:18px;}
+.ifp-arbtn{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 15px;border-radius:19px;border:1px solid var(--border-primary);background:var(--bg-secondary);color:inherit;cursor:pointer;font-family:inherit;font-size:13px;font-weight:500;transition:border-color .2s;-webkit-tap-highlight-color:transparent;}
+.ifp-arbtn:hover{border-color:var(--accent-color);}
+.ifp-arbtn .ifp-dot{width:7px;height:7px;border-radius:50%;background:var(--text-tertiary);transition:background .2s,box-shadow .2s;}
+.ifp-arbtn.on .ifp-dot{background:var(--accent-color);box-shadow:0 0 8px var(--accent-color);}
+.ifp-arbtn .ifp-arstate{font-size:11px;opacity:.7;min-width:20px;text-align:left;}
+.reading-tools .tool-divider{width:1px;height:22px;background:var(--border-primary);}
+@media (max-width:520px){.reading-tools{gap:8px;}.reading-tools .tool-divider{display:none;}.reading-tools .tool-label{display:none;}.ifp-fsbtn{min-width:38px;padding:0 10px;}}
+/* ===== copy-citation button ===== */
+.ifp-copybtn{position:relative;display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border-radius:10px;border:1px solid var(--border-primary);background:var(--bg-secondary);color:inherit;cursor:pointer;font-family:inherit;font-size:13px;font-weight:500;transition:border-color .2s;-webkit-tap-highlight-color:transparent;}
+.ifp-copybtn:hover{border-color:var(--accent-color);}
+.ifp-copybtn .ic{position:relative;width:16px;height:16px;}
+.ifp-copybtn .ic svg{position:absolute;inset:0;width:16px;height:16px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),opacity .3s;}
+.ifp-copybtn .ic-copy{opacity:1;transform:scale(1);}
+.ifp-copybtn .ic-check{opacity:0;transform:scale(.4);color:var(--accent-color);}
+.ifp-copybtn.copied .ic-copy{opacity:0;transform:scale(.4);}
+.ifp-copybtn.copied .ic-check{opacity:1;transform:scale(1);}
+.ifp-copybtn .ifp-tip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(4px);background:var(--text-primary);color:var(--bg-primary);font-size:11px;font-weight:600;padding:5px 10px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;}
+.ifp-copybtn .ifp-tip::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:4px solid transparent;border-top-color:var(--text-primary);}
+.ifp-copybtn.copied .ifp-tip{opacity:1;transform:translateX(-50%) translateY(0);}
