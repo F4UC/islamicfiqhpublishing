@@ -273,7 +273,7 @@
 
 ## Section 8: Additional Rules
 
-* **Rule 52:** **[Spacing after Ibn / Abu prefixes and al- compounds]** The transliterated prefixes **"อิบนุ"** (ابن, Ibn) and **"อบู"** (أบو, Abu) must always be separated from the following name by a single space.
+* **Rule 52:** **[Spacing after Ibn / Abu prefixes and al- compounds]** The transliterated prefixes **"อิบนุ"** (ابن, Ibn) and **"อบู"** (أبو, Abu) must always be separated from the following name by a single space.
   - Examples: "อิบนุอุมัร" → "อิบนุ อุมัร"; "อบูอับดุลลอฮ์" → "อบู อับดุลลอฮ์"; "อบูฮุร็อยเราะฮ์" → "อบู ฮุร็อยเราะฮ์"
   - **Ibn al- compound → "อิบนุล…" (fused):** When "อิบนุ" is immediately followed by "ล", contract to **"อิบนุล"** (Ibn al-). Do **NOT** insert a space. E.g., "อิบนุลก็อยยิม" (Ibn al-Qayyim), "อิบนุลอะษีร" (Ibn al-Athir).
   - **Abu al- compound → "อบุล…" (fused, สระอุ short vowel):** When "อบู" precedes al- (اَل), write fused as **"อบุล"** using สระอุ. Do **NOT** split and do **NOT** use สระอู ("อบูล") in this form. E.g., "อบุลหะสัน" (Abu al-Hasan), "อบุลวะลีด" (Abu al-Walid). If "อบูล" (สระอู) is found in an al- compound, normalize to "อบุล" (สระอุ).
@@ -348,3 +348,16 @@ The user's email address is gibraltar2580@gmail.com.
 Today's date is 2026-05-30.
 
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
+
+## Push & safety discipline
+- NEVER read/extract/use credentials or tokens from config files, env vars, or disk to call an API directly. NEVER circumvent the proxy, tool payload limits, or any guardrail.
+- If a push fails (503 / payload too large / auth error): STOP and report. Do not find an alternative channel.
+- Push only via the approved GitHub tool, directly to main, raw UTF-8 read from committed bytes (git cat-file). Never force-push. Never reconstruct file contents from chat context.
+- Do not route work through long-lived feature branches; work against main.
+
+## Cache-busting
+- When changing a shared versioned asset (main.js, article.css), you MUST bust its cache or users keep seeing the old file: bump the ?v= string on that asset across all referencing HTML in the SAME commit, OR purge the specific Cloudflare URL after pushing.
+- After any asset change, verify via a cache-busted fetch before declaring done.
+
+## Integrity checks
+- After any change confirm only intended files changed; protected files intact: moon-sighting-vs-astronomy.html = 158537 bytes, itibar-al-maal.html ≈ 155804 bytes.
