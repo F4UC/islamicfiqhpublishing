@@ -1,10 +1,10 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 57 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all 61 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (57 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (61 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -177,9 +177,16 @@
   - ค่า `readingTime` ต้องผลิตโดย `scripts/gen-reading-time.js` เท่านั้น (ตามกฎข้อที่ 55) — ห้ามระบุด้วยมือ
   - ค่า `dateDisplay` ต้องสอดคล้องกับ `date` ใน `articles.json` เสมอ ในรูปแบบ "DD เดือน YYYY" (ปี พ.ศ.)
 
+### หมวดที่ 13: การจัดวางและการแสดงผลตัวบทอาหรับในบทความ (Arabic Block Layout & Tashkeel)
+
+* **กฎข้อที่ 58:** **[ลำดับบล็อกอาหรับเหนือคำแปล]** ในบทความที่ใช้ระบบ `.ar-quote` (เช่น บทความต้นแบบ moon-sighting) บล็อกตัวบทภาษาอาหรับต้องวางอยู่**เหนือ**คำแปลภาษาไทย (`.ar-translation`) เสมอ โดยเรียงลำดับในซอร์สโค้ดเป็น อาหรับก่อน แล้วจึงตามด้วยคำแปลไทย (ห้ามซ่อนตัวบทอาหรับไว้ใน `<details>` toggle อีกต่อไป)
+* **กฎข้อที่ 59:** **[ระยะห่างอาหรับ↔คำแปล]** ระยะห่างระหว่างบล็อกอาหรับกับคำแปลไทยต้องกระชับ ไม่ทับซ้อนและไม่ห่างเกินไป โดยใช้ค่ามาตรฐานปัจจุบัน: `.ar-quote { margin: 28px 0 4px; }` และ `.ar-translation { margin: 6px 0 28px; }`
+* **กฎข้อที่ 60:** **[ตัชกีลแบบ ALL-OR-NOTHING สำหรับคำพูดปราชญ์]** การลงสระ (ตัชกีล/ฮะเราะกาต) ของบล็อกคำพูดปราชญ์ — ได้แก่ `.ar-quote` ทั้งหมด และข้อความปราชญ์/คำถามใน `.ar-feature` — ต้องเป็นแบบ ALL-OR-NOTHING: หากสามารถลงสระให้ครบถ้วนถูกต้องจากแหล่งอ้างอิง/ฉบับพิมพ์ที่มีสระได้**ทุกบล็อก** จึงลงสระทั้งหมด มิฉะนั้นให้**ตัดสระออกทั้งหมดให้เปลือยสระอย่างสม่ำเสมอ (uniformly bare)** ห้ามสร้างหรือเดาสระเองโดยเด็ดขาด (สอดคล้องกฎข้อที่ 53) — โองการอัลกุรอาน (`.aya-block`) และหะดีษ (`.hadith-block`) ต้องมีสระครบถ้วนเสมอ ไม่อยู่ในขอบเขตของกฎ all-or-nothing นี้ — การดำเนินการต้องเป็น byte-exact: **ลบเฉพาะเครื่องหมายสระ (U+064B–U+0652)** หรือ **วางตัวบทจากแหล่งอ้างอิง** เท่านั้น ห้ามพิมพ์โครงพยัญชนะ (skeleton) ขึ้นใหม่
+* **กฎข้อที่ 61:** **[อายะฮ์/หะดีษ ไม่มีพื้นหลังกล่องแยก]** บล็อกโองการอัลกุรอาน (`.aya-block`) และหะดีษ (`.hadith-block`) ต้องไม่มีพื้นหลังกล่องที่แตกต่างจากเนื้อหาหลัก ให้ใช้ `background: transparent` (สืบทอดพื้นผิว `--bg-primary`) เพื่อให้กลมกลืนกับเนื้อบทความ **ห้าม hardcode สีขาวหรือสีกล่องตายตัว** และต้องแสดงผลถูกต้องในโหมดมืด (ใช้ตัวแปรธีม เช่น `color: var(--text-primary)`) ทั้งนี้ให้คงสไตล์ตัวอักษรอาหรับ (ฟอนต์ Amiri, ขนาด, การจัดกึ่งกลาง) ไว้ตามเดิม
+
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 57 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 61 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -313,6 +320,13 @@
   - Correct source form: `<div class="article-meta"></div>`.
   - `readingTime` must be produced exclusively by `scripts/gen-reading-time.js` (per Rule 55) — manual values are prohibited.
   - `dateDisplay` must always match the `date` field in `articles.json`, formatted as "DD Month YYYY" (BE calendar).
+
+## Section 13: Arabic Block Layout & Tashkeel
+
+* **Rule 58:** **[Arabic block above its translation]** In articles using the `.ar-quote` system (e.g. the canonical moon-sighting article), the Arabic source block must sit **above** its Thai translation (`.ar-translation`) in source order — Arabic first, then the Thai translation. Arabic source text must no longer be hidden inside a `<details>` toggle.
+* **Rule 59:** **[Arabic↔translation spacing]** The gap between an Arabic block and its Thai translation must be snug — no overlap and no excessive gap — using the current standard margins: `.ar-quote { margin: 28px 0 4px; }` and `.ar-translation { margin: 6px 0 28px; }`.
+* **Rule 60:** **[ALL-OR-NOTHING tashkeel for scholar quotes]** Tashkeel (harakat) on scholar-quote blocks — all `.ar-quote` plus scholar/question text in `.ar-feature` — is ALL-OR-NOTHING: vowel them all only if **every** block can be correctly and fully voweled from a source / a voweled printed edition; otherwise **strip harakat from all so they are uniformly BARE**. Never auto-generate or guess vowels (per Rule 53). Quran (`.aya-block`) and hadith (`.hadith-block`) must always stay fully voweled and are outside this all-or-nothing scope. Operate byte-exact: **only delete vowel marks (U+064B–U+0652)** or **paste from a source** — never retype the consonant skeleton.
+* **Rule 61:** **[Aya/hadith carry no distinct background]** Quran (`.aya-block`) and hadith (`.hadith-block`) blocks must carry no card background distinct from body content: use `background: transparent` (inheriting `--bg-primary`) so they blend with the article surface. **Never hardcode white or a fixed box color**, and they must render correctly in dark mode (use theme variables, e.g. `color: var(--text-primary)`). Keep the Arabic text style (Amiri font, size, centering) intact.
 
 ## Bibliography & Citation Standard (قواعد المراجع والإحالات)
 

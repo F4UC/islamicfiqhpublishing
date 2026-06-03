@@ -1180,10 +1180,9 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   position: relative;
   margin: 36px 0;
   padding: 56px 44px 48px;
-  border: 1px solid rgba(255,255,255,0.06);
-  background:
-    radial-gradient(ellipse at center top, rgba(179,27,27,0.08), transparent 60%),
-    linear-gradient(180deg, #11100d 0%, #0a0907 100%);
+  /* No distinct card: transparent so it inherits the body surface and stays
+     correct in both light and dark mode (never hardcode a background). */
+  background: transparent;
   text-align: center;
 }
 .aya-block::before, .aya-block::after,
@@ -1201,7 +1200,7 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
   font-family: 'Amiri', serif;
   direction: rtl; text-align: center;
   font-size: 2.2rem; line-height: 2.1;
-  color: #f5f1ea; margin: 0;
+  color: var(--text-primary); margin: 0;
 }
 .aya-block .block-source,
 .hadith-block .block-source {
