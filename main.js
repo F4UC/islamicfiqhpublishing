@@ -56,11 +56,19 @@ applyTheme(isDarkModeActive);
     }
 })();
 
-// Pre-paint: Scholar Arabic toggle (default: hidden / OFF) — avoids flash on load
+// Pre-paint: Scholar Arabic legacy relocation engine (itibar etc.; default OFF)
 (function() {
     var s = localStorage.getItem('scholarArabic');
     if (s !== 'visible') {
         document.documentElement.classList.add('hide-scholar-arabic');
+    }
+})();
+
+// Pre-paint: Global Arabic On/Off — single source of truth html.no-arabic
+// (.ar-quote articles, e.g. moon-sighting). Default ON; persisted in 'arabic'.
+(function() {
+    if (localStorage.getItem('arabic') === 'off') {
+        document.documentElement.classList.add('no-arabic');
     }
 })();
 
@@ -880,8 +888,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     })();
 
-    // Scholar Arabic Toggle
+    // Scholar Arabic Toggle (legacy relocation engine — itibar etc.)
     initScholarArabicToggle();
+    // Global Arabic On/Off (no-arabic) — .ar-quote articles (moon-sighting etc.)
+    initGlobalArabicToggle();
     initReadingToolsUI();
 });
 
@@ -944,6 +954,47 @@ function initScholarArabicToggle() {
     } else {
         _scholarShow(blockData);
     }
+}
+
+// ==========================================
+// Global Arabic On/Off — single source of truth: html.no-arabic
+// Hides/shows ALL Arabic on .ar-quote articles together: Quran (.aya-block),
+// hadith (.hadith-block), feature (.ar-feature) and scholar quotes (.ar-quote).
+// Default ON; persisted in localStorage 'arabic' ('on' | 'off').
+// Skips legacy .ar-toggle relocation pages (e.g. itibar) so the two
+// mechanisms never collide or render two buttons.
+// ==========================================
+function initGlobalArabicToggle() {
+    var readingTools = document.querySelector('.reading-tools');
+    if (!readingTools) return;
+    if (document.querySelector('.ar-toggle .ar-block')) return; // legacy page keeps its own control
+
+    var grp = document.createElement('div');
+    grp.className = 'tool-group';
+    var lbl = document.createElement('span');
+    lbl.className = 'tool-label';
+    lbl.textContent = 'ต้นฉบับ';
+    var btn = document.createElement('button');
+    btn.id = 'arabicToggleBtn';
+    btn.className = 'btn-tool';
+    btn.type = 'button';
+    btn.textContent = 'Arabic ✦ On/Off';
+    grp.appendChild(lbl);
+    grp.appendChild(btn);
+    readingTools.appendChild(grp);
+
+    function sync() {
+        var on = !document.documentElement.classList.contains('no-arabic');
+        btn.classList.toggle('active', on);
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+    sync();
+
+    btn.addEventListener('click', function() {
+        var hidden = document.documentElement.classList.toggle('no-arabic');
+        localStorage.setItem('arabic', hidden ? 'off' : 'on');
+        sync();
+    });
 }
 
 function _scholarHide(blockData) {
