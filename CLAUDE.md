@@ -330,6 +330,33 @@
 * **Rule 61:** **[Aya/hadith carry no distinct background]** Quran (`.aya-block`) and hadith (`.hadith-block`) blocks must carry no card background distinct from body content: use `background: transparent` (inheriting `--bg-primary`) so they blend with the article surface. **Never hardcode white or a fixed box color**, and they must render correctly in dark mode (use theme variables, e.g. `color: var(--text-primary)`). Keep the Arabic text style (Amiri font, size, centering) intact.
 * **Rule 62:** **[Line-count alignment]** Arabic blocks (`.ar-quote`, `.ar-feature`, `.aya-block .block-ar`, `.hadith-block .block-ar`) and the Thai translation (`.ar-translation`): a **single-line** block is **centered**; a **2+-line** block is **flush to its side** (Arabic right, Thai left), judged at the **real rendered width** (incl. mobile) by a script that toggles `.is-1line`, never a static class — and it must be re-run on resize and right after the Arabic On/Off toggle fires. **Arabic blocks carry no decorative border.**
 
+**Rule 63 — Golden Master & Template (บทใหม่ต้อง clone จากต้นแบบ)**
+บทความใหม่ทุกบท (ตั้งแต่ moon-sighting เป็นต้นไป) ต้องสร้างโดยก๊อป `articles/_TEMPLATE.html`
+แล้วเติมเนื้อหาแทนที่ token/placeholder ห้ามเขียนโครงใหม่จากศูนย์หรือก๊อปบทอื่นที่อาจ
+drift จากมาตรฐาน บทอ้างอิง (golden master) คือ
+`articles/nitisart/moon-sighting-vs-astronomy.html` — เมื่อสงสัยเรื่องโครง/รูปแบบใด ๆ
+ให้ยึดไฟล์นี้เป็นคำตัดสิน ข้อนี้ไม่บังคับย้อนหลังกับบทเก่า
+
+**Rule 64 — Golden Master QC gate (เช็คลิสต์บังคับก่อน publish)**
+ก่อน merge บทความใหม่เข้า main ต้องผ่านเช็คลิสต์ `docs/golden-master.md` ครบทุกข้อ
+(โครง/meta, hero, Arabic byte-exact, ย่อหน้าตาม Doc, บล็อก ar-*, footnote/บรรณานุกรม,
+reading-time, control bar/alignment, QC เรนเดอร์ desktop+mobile, merge gate)
+ถ้าข้อใด FAIL ให้แก้บน feature branch + Cloudflare preview แล้ว verify ก่อน
+ห้าม merge ทั้งที่ยัง FAIL
+
+**Rule 65 — Template drift control (template ต้องตาม golden master)**
+`_TEMPLATE.html` ต้องสะท้อนโครงของ golden master ฉบับล่าสุดเสมอ หากแก้โครง/สไตล์/สคริปต์
+ที่ใช้ร่วมกัน (head order, control bar, ifpAlign, version string ฯลฯ) ใน golden master
+หรือ component กลาง ต้อง sync `_TEMPLATE.html` ในการแก้ครั้งเดียวกัน ห้ามปล่อยให้ template
+ค้างเวอร์ชันเก่า เพื่อกันไม่ให้บทใหม่ก๊อป artifact หรือโครงล้าสมัยไปทั้งสาย
+
+**Rule 66 — Per-deployment verify ก่อน sign-off**
+การยืนยันบทความบน production/preview ให้ fetch จาก per-deployment hash URL
+(`<hash>.islamicfiqhpublishing.pages.dev/…`) ที่ผูกกับ commit จริงเท่านั้น ห้ามตัดสินผ่าน
+branch alias (อาจ serve edge cache เก่า) และพึงทราบว่า production domain
+(`islamicfiqhpublishing.com`) ถูก WAF บล็อก fetch (403) — ใช้ per-deployment URL แทน
+หลัง merge ต้อง Custom Purge production URL ที่แก้ (ห้าม "Purge Everything")
+
 ## Bibliography & Citation Standard (قواعد المراجع والإحالات)
 
 Apply this whenever creating or editing references, footnotes, or bibliographies in any article. (Recorded as a standing rule; do not retro-apply unless explicitly told.)
