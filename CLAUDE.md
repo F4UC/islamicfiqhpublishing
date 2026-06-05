@@ -1,10 +1,10 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 57 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all 62 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (57 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (62 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -26,7 +26,7 @@
 * **กฎข้อที่ 12.1:** **[การทับศัพท์คำว่า صحيح]** การถอดเสียงคำว่า **صحيح** (Sahih) เป็นภาษาไทย ต้องสะกดว่า **"ศอเฮี้ยะฮ์"** เท่านั้น (เช่น ศอเฮี้ยะฮ์อัลบุคอรีย์, ศอเฮี้ยะฮ์มุสลิม) **ห้ามสะกดว่า "ศ่อเหี้ยห์" โดยเด็ดขาด** และให้ใช้รูปแบบนี้อย่างสม่ำเสมอในเนื้อหาทั้งหมดในอนาคต
 * **กฎข้อที่ 12.2:** **[การทับศัพท์คำว่า مذهب]** การถอดเสียงคำว่า **مذهب** (Madhhab) เป็นภาษาไทย ต้องสะกดว่า **"มัสฮับ"** เสมอ **ห้ามสะกดว่า "มัซฮับ" โดยเด็ดขาด** และให้ใช้รูปแบบนี้อย่างสม่ำเสมอในเนื้อหาทั้งหมด
 * **กฎข้อที่ 13:** **[ช่องไฟคำทับศัพท์]** คำศัพท์เทคนิคทางศาสนาที่ทับศัพท์มา เมื่อนำมาประกอบในประโยคภาษาไทย **ห้ามเว้นวรรคหน้า-หลังเด็ดขาด** (เช่น ให้เขียนว่า `ฐานหลักของชะรีอะฮ์ในประเด็นนี้` ห้ามเขียนแยกเป็น `ฐานหลักของ ชะรีอะฮ์ ในประเด็นนี้`)
-* **กฎข้อที่ 14:** **[การเลือกใช้คำเชื่อม]** ห้ามใช้คำเชื่อมโบราณเช่นคำว่า **"ทว่า"** ให้เปลี่ยนไปใช้คำว่า **"แต่"** แทนในทุกกรณี เพื่อความกระชับของภาษาวิชาการ
+* **กฎข้อที่ 14:** **[การเลือกใช้คำเชื่อม]** อนุญาตให้ใช้คำเชื่อม **"ทว่า"** และ **"แต่"** ได้ตามดุลยพินิจเชิงโวหารของกองบรรณาธิการ — ยกเลิกข้อห้ามเดิมที่ห้ามใช้คำว่า **"ทว่า"** (ปรับปรุงตามมติกองบรรณาธิการ)
 * **กฎข้อที่ 15:** การอ้างอิงคำพูดของนักวิชาการ, ตัวบทหะดีษ หรือคำแปล ต้องใช้เครื่องหมายอัญประกาศแบบโค้ง **`“...”`** เท่านั้น ห้ามใช้แบบตรง (`"..."`) เพื่อความพรีเมียม
 * **กฎข้อที่ 16:** การกำกับชื่อตำราและหนังสือให้ยึดตามบทความต้นแบบ ดังนี้: (ก) ชื่อตำราในบรรณานุกรมและเชิงอรรถ ให้ใช้**ข้อความธรรมดา** ไม่ต้องใส่แท็กเน้นหรือมาร์กอัปใดๆ; (ข) ชื่อตำราที่กล่าวถึงในเนื้อความบทความ ให้ครอบด้วย**อัญประกาศโค้ง “…”** ตามมาตรฐานอัญประกาศของกฎข้อที่ 15 (เช่น “อันนิฮายะฮ์”) — ยกเลิกการบังคับใช้ `<strong>` กับชื่อตำราทุกกรณี
 * **กฎข้อที่ 17:** ห้ามใช้แท็กตัวเอียง `<em>` หรือตัวเอียงในระบบ CSS กับชื่อตำราและหนังสือ ให้สงวนไว้สำหรับคำเน้นย้ำทั่วไปที่ไม่ใช่ชื่อเฉพาะ
@@ -177,9 +177,17 @@
   - ค่า `readingTime` ต้องผลิตโดย `scripts/gen-reading-time.js` เท่านั้น (ตามกฎข้อที่ 55) — ห้ามระบุด้วยมือ
   - ค่า `dateDisplay` ต้องสอดคล้องกับ `date` ใน `articles.json` เสมอ ในรูปแบบ "DD เดือน YYYY" (ปี พ.ศ.)
 
+### หมวดที่ 13: การจัดวางและการแสดงผลตัวบทอาหรับในบทความ (Arabic Block Layout & Tashkeel)
+
+* **กฎข้อที่ 58:** **[ลำดับบล็อกอาหรับเหนือคำแปล]** ในบทความที่ใช้ระบบ `.ar-quote` (เช่น บทความต้นแบบ moon-sighting) บล็อกตัวบทภาษาอาหรับต้องวางอยู่**เหนือ**คำแปลภาษาไทย (`.ar-translation`) เสมอ โดยเรียงลำดับในซอร์สโค้ดเป็น อาหรับก่อน แล้วจึงตามด้วยคำแปลไทย (ห้ามซ่อนตัวบทอาหรับไว้ใน `<details>` toggle อีกต่อไป)
+* **กฎข้อที่ 59:** **[ระยะห่างอาหรับ↔คำแปล]** ระยะห่างระหว่างบล็อกอาหรับกับคำแปลไทยต้องกระชับ ไม่ทับซ้อนและไม่ห่างเกินไป โดยใช้ค่ามาตรฐานปัจจุบัน: `.ar-quote { margin: 28px 0 4px; }` และ `.ar-translation { margin: 6px 0 28px; }`
+* **กฎข้อที่ 60:** **[ตัชกีลแบบ ALL-OR-NOTHING สำหรับคำพูดปราชญ์]** การลงสระ (ตัชกีล/ฮะเราะกาต) ของบล็อกคำพูดปราชญ์ — ได้แก่ `.ar-quote` ทั้งหมด และข้อความปราชญ์/คำถามใน `.ar-feature` — ต้องเป็นแบบ ALL-OR-NOTHING: หากสามารถลงสระให้ครบถ้วนถูกต้องจากแหล่งอ้างอิง/ฉบับพิมพ์ที่มีสระได้**ทุกบล็อก** จึงลงสระทั้งหมด มิฉะนั้นให้**ตัดสระออกทั้งหมดให้เปลือยสระอย่างสม่ำเสมอ (uniformly bare)** ห้ามสร้างหรือเดาสระเองโดยเด็ดขาด (สอดคล้องกฎข้อที่ 53) — โองการอัลกุรอาน (`.aya-block`) และหะดีษ (`.hadith-block`) ต้องมีสระครบถ้วนเสมอ ไม่อยู่ในขอบเขตของกฎ all-or-nothing นี้ — การดำเนินการต้องเป็น byte-exact: **ลบเฉพาะเครื่องหมายสระ (U+064B–U+0652)** หรือ **วางตัวบทจากแหล่งอ้างอิง** เท่านั้น ห้ามพิมพ์โครงพยัญชนะ (skeleton) ขึ้นใหม่
+* **กฎข้อที่ 61:** **[อายะฮ์/หะดีษ ไม่มีพื้นหลังกล่องแยก]** บล็อกโองการอัลกุรอาน (`.aya-block`) และหะดีษ (`.hadith-block`) ต้องไม่มีพื้นหลังกล่องที่แตกต่างจากเนื้อหาหลัก ให้ใช้ `background: transparent` (สืบทอดพื้นผิว `--bg-primary`) เพื่อให้กลมกลืนกับเนื้อบทความ **ห้าม hardcode สีขาวหรือสีกล่องตายตัว** และต้องแสดงผลถูกต้องในโหมดมืด (ใช้ตัวแปรธีม เช่น `color: var(--text-primary)`) ทั้งนี้ให้คงสไตล์ตัวอักษรอาหรับ (ฟอนต์ Amiri, ขนาด, การจัดกึ่งกลาง) ไว้ตามเดิม
+* **กฎข้อที่ 62:** **[การจัดแนวตามจำนวนบรรทัด]** บล็อกตัวบทอาหรับ (`.ar-quote`, `.ar-feature`, `.aya-block .block-ar`, `.hadith-block .block-ar`) และคำแปลไทย (`.ar-translation`): บล็อกที่พอดี**บรรทัดเดียว**ให้จัด**กึ่งกลาง** ส่วนบล็อกที่ยาว **2 บรรทัดขึ้นไป**ให้**ชิดด้านของตน** (อาหรับชิดขวา, ไทยชิดซ้าย) โดยตัดสินจาก**ความกว้างที่เรนเดอร์จริง** (รวมมือถือ) ผ่านสคริปต์ที่สลับคลาส `.is-1line` ไม่ใช่คลาสตายตัว และต้องเรียกใหม่เมื่อ resize และเมื่อสวิตช์ Arabic On/Off ทำงาน — **บล็อกอาหรับต้องไม่มีเส้นขอบตกแต่ง (decorative border)**
+
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 57 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 62 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -201,7 +209,7 @@
 * **Rule 12.1:** **[Transliteration of صحيح]** The Thai transliteration of **صحيح** (Sahih) must always be spelled **"ศอเฮี้ยะฮ์"** (e.g., ศอเฮี้ยะฮ์อัลบุคอรีย์, ศอเฮี้ยะฮ์มุสลิม). The spelling **"ศ่อเหี้ยห์" is strictly prohibited.** Apply this consistently across all future content.
 * **Rule 12.2:** **[Transliteration of مذهب]** The Thai transliteration of **مذهب** (Madhhab) must always be spelled **"มัสฮับ"**. The spelling **"มัซฮับ" is strictly prohibited.** Apply this consistently across all future content.
 * **Rule 13:** **[Transliteration Spacing]** Transliterated religious terminology inserted into Thai sentences must not be preceded or followed by space bars (e.g., `หลักของชะรีอะฮ์ในประเด็น`).
-* **Rule 14:** **[Conjunction Choice]** Eliminate archaic conjunctions such as "ทว่า"; enforce the use of "แต่" to optimize academic conciseness.
+* **Rule 14:** **[Conjunction Choice]** Both "ทว่า" and "แต่" are permitted at the editorial board's stylistic discretion — the former blanket ban on "ทว่า" is lifted (revised per editorial board decision).
 * **Rule 15:** Direct quotes, Hadith, and translations must be enclosed strictly within curved quotation marks **`“...”`**.
 * **Rule 16:** Book-title styling follows the canonical article: (a) titles in the bibliography and footnotes use **plain text** — no emphasis tags or markup; (b) book-title mentions in body prose are wrapped in **curved quotation marks “…”** per Rule 15's quotation standard (e.g. “อันนิฮายะฮ์”). The blanket `<strong>` mandate for book titles is removed.
 * **Rule 17:** Do not use `<em>` tags or CSS italic styling for book titles.
@@ -313,6 +321,14 @@
   - Correct source form: `<div class="article-meta"></div>`.
   - `readingTime` must be produced exclusively by `scripts/gen-reading-time.js` (per Rule 55) — manual values are prohibited.
   - `dateDisplay` must always match the `date` field in `articles.json`, formatted as "DD Month YYYY" (BE calendar).
+
+## Section 13: Arabic Block Layout & Tashkeel
+
+* **Rule 58:** **[Arabic block above its translation]** In articles using the `.ar-quote` system (e.g. the canonical moon-sighting article), the Arabic source block must sit **above** its Thai translation (`.ar-translation`) in source order — Arabic first, then the Thai translation. Arabic source text must no longer be hidden inside a `<details>` toggle.
+* **Rule 59:** **[Arabic↔translation spacing]** The gap between an Arabic block and its Thai translation must be snug — no overlap and no excessive gap — using the current standard margins: `.ar-quote { margin: 28px 0 4px; }` and `.ar-translation { margin: 6px 0 28px; }`.
+* **Rule 60:** **[ALL-OR-NOTHING tashkeel for scholar quotes]** Tashkeel (harakat) on scholar-quote blocks — all `.ar-quote` plus scholar/question text in `.ar-feature` — is ALL-OR-NOTHING: vowel them all only if **every** block can be correctly and fully voweled from a source / a voweled printed edition; otherwise **strip harakat from all so they are uniformly BARE**. Never auto-generate or guess vowels (per Rule 53). Quran (`.aya-block`) and hadith (`.hadith-block`) must always stay fully voweled and are outside this all-or-nothing scope. Operate byte-exact: **only delete vowel marks (U+064B–U+0652)** or **paste from a source** — never retype the consonant skeleton.
+* **Rule 61:** **[Aya/hadith carry no distinct background]** Quran (`.aya-block`) and hadith (`.hadith-block`) blocks must carry no card background distinct from body content: use `background: transparent` (inheriting `--bg-primary`) so they blend with the article surface. **Never hardcode white or a fixed box color**, and they must render correctly in dark mode (use theme variables, e.g. `color: var(--text-primary)`). Keep the Arabic text style (Amiri font, size, centering) intact.
+* **Rule 62:** **[Line-count alignment]** Arabic blocks (`.ar-quote`, `.ar-feature`, `.aya-block .block-ar`, `.hadith-block .block-ar`) and the Thai translation (`.ar-translation`): a **single-line** block is **centered**; a **2+-line** block is **flush to its side** (Arabic right, Thai left), judged at the **real rendered width** (incl. mobile) by a script that toggles `.is-1line`, never a static class — and it must be re-run on resize and right after the Arabic On/Off toggle fires. **Arabic blocks carry no decorative border.**
 
 ## Bibliography & Citation Standard (قواعد المراجع والإحالات)
 
