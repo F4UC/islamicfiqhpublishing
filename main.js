@@ -737,9 +737,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // shared .idx-row builder — identical markup/format on homepage, category & all-articles
-        function _buildRow(art, idx) {
+        // opts.showDate (default true): include · dateDisplay in the meta.
+        // Homepage passes showDate:false; category & all-articles keep the date.
+        function _buildRow(art, idx, opts) {
+            var showDate = !opts || opts.showDate !== false;
             var num = String(idx + 1).padStart(2, '0');
             var readTime = art.readingTime != null ? art.readingTime : '—';
+            var datePart = showDate ? (' &nbsp;·&nbsp; ' + _esc(art.dateDisplay || '')) : '';
             var row = document.createElement('a');
             row.href = art.url || '#';
             row.className = 'idx-row';
@@ -748,7 +752,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 '<div class="idx-cat">' + _esc(art.categoryLabel || '') + '</div>' +
                 '<div class="idx-title">' + _esc(art.title || '') + '</div>' +
                 '<div class="idx-meta">โดย <span>' + _esc(art.author || '') + '</span>' +
-                ' &nbsp;·&nbsp; ' + _esc(art.dateDisplay || '') +
+                datePart +
                 ' &nbsp;·&nbsp; อ่าน ' + readTime + ' นาที</div>' +
                 '<div class="idx-arrow"></div>';
             return row;
@@ -837,7 +841,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 home.innerHTML = '';
                 list.forEach(function(art, idx) {
                     try {
-                        home.appendChild(_buildRow(art, idx));
+                        home.appendChild(_buildRow(art, idx, { showDate: false }));
                     } catch (e) {
                         console.warn('[IFP] home row build error ' + idx + ':', e);
                     }
