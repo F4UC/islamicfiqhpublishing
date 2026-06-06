@@ -1122,6 +1122,14 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
 .ar-translation { color: var(--text-tertiary); margin: -14px 0 22px; line-height: 2.0; font-style: normal; }
 /* Rule 68 — .ar-quote spacing centralised here (inline <style> no longer sets margin/line-height) */
 .ar-quote { margin: 22px 0; line-height: 1.9; }
+/* Rule 68 — tighten the gap ABOVE an Arabic block that follows an intro paragraph
+   so it equals the ~8px below-gap: intro <p> bottom (24px) + (-16px) = 8px.
+   Scoped to a NON-translation paragraph; H2->block, epigraph/first-child, and
+   block-after-block keep their normal 22px top (no collision). */
+p:not(.ar-translation) + .ar-quote,
+p:not(.ar-translation) + .ar-feature,
+p:not(.ar-translation) + .aya-block,
+p:not(.ar-translation) + .hadith-block { margin-top: -16px; }
 
 /* B.3 — Collapsed toggle: ulama quotes / long excerpts */
 .ar-toggle { margin: 8px 0 24px; }
