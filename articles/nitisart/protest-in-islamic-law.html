@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การชุมนุมประท้วงในกฎหมายอิสลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์เชิงนิติศาสตร์อิสลามและอุศูลุลฟิกฮ์ว่าด้วยการชุมนุมประท้วงในกฎหมายอิสลาม สถานะทางหุก่มระหว่างทัศนะฝ่ายสนับสนุนและฝ่ายคัดค้าน พร้อมหลักวะสาอิล–มะกอศิดและหลักฐานจากยุคเศาะหาบะฮ์">
+<meta name="keywords" content="การชุมนุมประท้วง, นิติศาสตร์อิสลาม, ฟิกฮ์, วะสาอิล, มะกอศิด, มะศอลิห์, อิจติฮาด">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การชุมนุมประท้วงในกฎหมายอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="บทวิเคราะห์เชิงนิติศาสตร์อิสลามและอุศูลุลฟิกฮ์ว่าด้วยการชุมนุมประท้วงในกฎหมายอิสลาม สถานะทางหุก่มระหว่างทัศนะฝ่ายสนับสนุนและฝ่ายคัดค้าน พร้อมหลักวะสาอิล–มะกอศิดและหลักฐานจากยุคเศาะหาบะฮ์">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/protest-in-islamic-law.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260606f">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="protest-in-islamic-law">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">การชุมนุมประท้วงในกฎหมายอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในยุคสมัยปัจจุบัน คงมีไม่กี่ประเด็นที่จะสร้างความขัดแย้งทางความคิด จนอาจถึงขั้นกระทบกระเทือนความสัมพันธ์ฉันพี่น้องได้เท่ากับเรื่อง “การชุมนุมประท้วง” บทความนี้จึงขอนำเสนอมุมมองเกี่ยวกับการชุมนุมประท้วงในมิติของกฎหมายอิสลาม</p>
+      <p>หากจะกล่าวว่าในหน้าประวัติศาสตร์อิสลามไม่เคยมีการชุมนุมประท้วงเกิดขึ้นเลย ย่อมเป็นการบิดเบือนข้อเท็จจริง เพราะปรากฏการณ์ดังกล่าวเริ่มเห็นภาพชัดเจนขึ้นในยุคสมัยของเคาะลีฟะฮ์อะลีย์ อิบนุ อบีฏอลิบ</p>
+      <p>เหตุการณ์สำคัญคือการประท้วงที่เรียกร้องให้มีการลงโทษ (กิศอศ) กลุ่มผู้สังหารเคาะลีฟะฮ์อุสมานโดยเร็วที่สุด โดยมีแกนนำคนสำคัญคือท่านซุเบร, ท่านฏอลหะฮ์ และท่านหญิงอาอิชะฮ์ ซึ่งในหลักการนั้น บรรดาสาวก (เศาะหาบะฮ์) ต่างเห็นพ้องต้องกันว่าจำเป็นต้องดำเนินคดีกับผู้กระทำผิด</p>
+      <p>อย่างไรก็ตาม ความเห็นต่างได้เกิดขึ้นในประเด็นของ “ช่วงเวลา” ว่าควรจะดำเนินคดีทันที หรือควรชะลอไว้ก่อนจนกว่าสถานการณ์บ้านเมืองที่กำลังวุ่นวายภายหลังการขึ้นรับตำแหน่งของท่านอะลีย์จะคลี่คลายลง ความขัดแย้งทางความคิดนี้นำไปสู่เหตุการณ์น่าสลดใจอย่าง “สงครามอูฐ” (ฮ.ศ. 35) และ “ยุทธการที่ศิฟฟีน” (ฮ.ศ. 36) ในเวลาต่อมา</p>
+      <p>นับจากนั้นเป็นต้นมา การชุมนุมประท้วงได้เกิดขึ้นในหลายยุคสมัย บางครั้งนำไปสู่การปฏิรูปที่สันติ แต่บางครั้งก็นำไปสู่ความรุนแรงจนกลายเป็นสงครามกลางเมือง ด้วยเหตุนี้ ผู้ที่เป็นปราชญ์ราชบัณฑิตและตุลาการทั้งหลายจึงไม่ควรมองในภาพรวมว่าการประท้วงเป็นสิ่งต้องห้าม (หะรอม) โดยสิ้นเชิง เพราะนั่นอาจเป็นการสรุปที่เกินขอบเขต</p>
+
+      <h2 class="article-h2">เกริ่นนำ</h2>
+      <p>การประท้วง หรือที่อาจเรียกว่าการชุมนุมเรียกร้องหรือการแสดงความคัดค้าน คือการแสดงออกในที่สาธารณะเพื่อคัดค้าน ไม่เห็นด้วย หรือขัดแย้งต่อแนวคิดหรือการกระทำใดๆ ซึ่งโดยทั่วไปมักมีนัยทางการเมือง</p>
+      <p>คำว่า Protest ซึ่งแปลว่า การประท้วง คำศัพท์นี้เริ่มใช้มาตั้งแต่กลางศตวรรษที่ 19 และได้พัฒนาจนมีสถานะในทางกฎหมายในฐานะเครื่องมือสำหรับมวลชนในการส่งเสียงสะท้อนความเดือดร้อนทุกข์เข็ญและผลักดันให้เกิดการเปลี่ยนแปลงที่พวกเขาปรารถนา</p>
+      <p>เมื่อพิจารณาถึงภาพความน่าสลดใจที่ปรากฏรายวัน รวมถึงความพินาศและการกดขี่ข่มเหงที่ผู้สูงอายุ เด็กทารก และครอบครัวทั้งหลายต้องเผชิญในหลายภูมิภาค ทั้งทางตรงและทางอ้อม คำถามเกี่ยวกับทัศนะของศาสนาอิสลามต่อการประท้วงจึงถูกหยิบยกขึ้นมาโดยชาวมุสลิมทั่วโลก ในขณะที่มวลชนจากนานาชาติ โดยไม่แบ่งแยกศาสนาหรือลัทธิความเชื่อ ต่างวางแผนเคลื่อนไหวเพื่อมนุษยธรรม</p>
+
+      <h2 class="article-h2">แนวทางที่ต้องอาศัยวิจารณญาณและความรับผิดชอบ</h2>
+      <p>บางครั้งก็ได้รับคำถามและข้อโต้แย้งมากมายเกี่ยวกับสถานการณ์นี้ ทั้งจากฝ่ายที่เห็นด้วยและไม่เห็นด้วยกับการประท้วง บทความนี้จึงเชื่อว่าจะเป็นประโยชน์สำหรับพวกเราทุกคนที่จะทำความเข้าใจในประเด็นนี้ เพื่อสร้างความเข้าใจต่อเหตุผลเบื้องหลังทัศนะของนักวิชาการทั้งฝ่ายที่สนับสนุนและฝ่ายที่คัดค้าน</p>
+      <p>ก่อนจะลงลึกไปกว่านี้ พึงทราบว่าในบริบทของนิติศาสตร์อิสลาม ข้อชี้ขาด (หุก่ม) เกี่ยวกับการประท้วงนั้นต้องอาศัยแนวทางที่เปี่ยมด้วยวิจารณญาณและความรับผิดชอบในการพิจารณาหลักฐานต่างๆทางศาสนา โดยเฉพาะอย่างยิ่งเมื่อตระหนักว่ากฎหมายอิสลามถูกออกแบบมาเพื่อเป็นเครื่องมือชี้นำที่นำไปสู่การเปลี่ยนแปลงจวบจนวันสิ้นโลก ด้วยเหตุที่ศาสดามุฮัมมัด ﷺ คือศาสนทูตท่านสุดท้าย และอัลกุรอานคือคัมภีร์ฉบับสุดท้าย</p>
+      <p>ดังนั้น พึงตระหนักเช่นกันว่าข้อชี้ขาดว่าด้วยการประท้วงในอิสลามเป็นประเด็นที่ต้องอาศัยการวินิจฉัยเชิงลึก (อิจติฮาด) และมีความละเอียดอ่อน ซึ่งต้องชั่งน้ำหนักระหว่างปัจจัยที่ซับซ้อนหลากหลายประการ ปัจจัยเหล่านี้รวมถึงการยอมรับพลวัตทางสังคมและการเมืองที่เปลี่ยนแปลงอยู่เสมอ ทั้งในระดับท้องถิ่นและระดับโลก</p>
+      <p>ด้วยเหตุนี้ ข้อสรุปชี้ขาดเกี่ยวกับสถานะของการประท้วงในอิสลามจึงเป็นอำนาจการพิจารณาตามบริบทของแต่ละพื้นที่ (Local Jurisdiction) ความเห็นส่วนตัวของตาสีตาสาใครก็ตาม ไม่ว่าจะเห็นด้วยหรือไม่ จึงไม่มีความสำคัญในประเด็นที่ขึ้นอยู่กับการตัดสินใจของนักวิชาการผู้ทรงความรู้และความรับผิดชอบในแต่ละภูมิภาค ซึ่งจะพิจารณาจากสถานการณ์และปัจจัยแวดล้อมที่แตกต่างกันไป</p>
+      <p>ดังนั้น ทุกสิ่งที่กล่าวมานี้ไม่ได้มีเจตนาเพื่อสร้างความขัดแย้งที่ไม่จำเป็นระหว่างประชาคม ท่านผู้อ่านโปรดพิจารณาบทความสั้นๆนี้ในฐานะส่วนเสริมความรู้ เพื่อสนับสนุนความพยายามอันทรงคุณค่าของนักวิชาการในพื้นที่ของท่านเอง</p>
+
+      <h2 class="article-h2">ประเด็นที่นักวิชาการเห็นพ้องต้องกันนั้นมีมากกว่าประเด็นที่เห็นต่าง</h2>
+      <p>เป็นสิ่งสำคัญอย่างยิ่งที่ต้องตระหนักโดยไม่คำนึงถึงข้อสรุปทางวิชาการในประเด็นเรื่องการประท้วง นักวิชาการทั้งฝ่ายที่สนับสนุนและฝ่ายที่คัดค้านต่างเห็นพ้องต้องกันว่า หนึ่งในเป้าหมายพื้นฐานของบทบัญญัติอิสลาม (ชะรีอะฮ์) คือ การพิทักษ์รักษาชีวิตและทรัพย์สิน</p>
+      <p>นักวิชาการเหล่านั้นยังเห็นพ้องต้องกันอีกว่า หากจำเป็นต้องเลือกเผชิญระหว่างสองสิ่งที่สร้างความเสียหาย เราจำเป็นต้องเลือกสิ่งที่จะก่อให้เกิดความเสียหายน้อยกว่า เพื่อหลีกเลี่ยงความเสียหายที่รุนแรงกว่า</p>
+      <p>นอกจากนี้ พวกเขาทั้งหมดเห็นพ้องต้องกันว่า อุปมาของบรรดาผู้ศรัทธาในเรื่องความเมตตา ความรัก และความเอื้ออาทรต่อกันนั้น เปรียบดังร่างกายเดียวกัน</p>
+      <p>หากอวัยวะส่วนหนึ่งส่วนใดเจ็บป่วย ร่างกายทั้งหมดก็จะตอบสนองด้วยอาการนอนไม่หลับและเป็นไข้ จนกว่าอาการป่วยนั้นจะทุเลาลงและร่างกายกลับสู่สภาวะปกติ</p>
+      <p>พวกเขาทั้งหมดเห็นพ้องต้องกันว่า ประชาคมของศาสดามุฮัมมัด ﷺ คือประชาชาติที่ประเสริฐที่สุด เพราะพวกเขาเป็นผู้สนับสนุนความยุติธรรมและเป็นปฏิปักษ์ต่อการกดขี่ข่มเหง ไม่ว่าความยุติธรรมหรือการกดขี่นั้นจะปรากฏในรูปแบบหรือระดับใดก็ตาม และพวกเขาทั้งหมดเห็นพ้องต้องกันถึงข้อบัญชาในอัลกุรอาน ซูเราะฮ์อัลอันฟาล อายะฮ์ที่ 72 ซึ่งอัลลอฮ์ ซุบฮานะฮูวะตะอาลาได้ทรงมีพระดำรัสว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَإِنِ استَنصَرُوكُم فِي الدِّينِ فَعَلَيكُمُ النَّصرُ إِلَّا عَلَىٰ قَومِ بَينَكُم وَبَينَهُم مِّيثَٰق وَاللَّهُ بِمَا تَعمَلُونَ بَصِير</p>
+      </div>
+      <p>{และหากพวกเขาขอความช่วยเหลือจากพวกเจ้าในเรื่องศาสนา ก็เป็นหน้าที่ของพวกเจ้าที่จะต้องให้ความช่วยเหลือ เว้นแต่เป็นการ (ช่วยเหลือเพื่อ) ต่อสู้กับกลุ่มชนที่ระหว่างพวกเจ้ากับพวกเขามีพันธสัญญาต่อกัน และอัลลอฮ์นั้นทรงเห็นในสิ่งที่พวกเจ้ากระทำ}</p>
+
+      <h2 class="article-h2">แก่นของความเห็นต่าง</h2>
+      <p>ความแตกต่างในข้อสรุปของบรรดานักนิติศาสตร์อิสลาม (ฟุเกาะฮาอ์) ในประเด็นนี้ เกิดขึ้นจากความแตกต่างในระเบียบวิธีเชิงรากฐานที่ใช้ในการสรุปข้อชี้ขาดทางศาสนาที่มีลักษณะเช่นนี้</p>
+      <p>ข้อสรุปที่แตกต่างกันดังกล่าวยังเป็นผลมาจากการที่นักวิชาการต้องชั่งน้ำหนักระหว่างข้อพิจารณาเชิงคุณประโยชน์ต่างๆ (มะศอลิห์), การนำหลักการไปปรับใช้ในสถานการณ์จริง รวมถึงการวิเคราะห์และประเมินความเสียหายในแง่มุมต่างๆ ไม่ว่าจะเป็นความเสียหายที่ “ร้ายแรง” หรือ “เล็กน้อย”</p>
+      <p>ความแตกต่างเหล่านี้ถือเป็นเรื่องปกติในมุมมองของอรรถศาสตร์แห่งนิติศาสตร์อิสลาม (อุศูลุลฟิกฮ์) อีกทั้งอัลลอฮ์ ซุบฮานะฮูวะตะอาลาได้ทรงสร้างเรามาให้มีบุคลิกภาพและอุปนิสัยที่แตกต่างกัน เราจึงย่อมตีความสถานการณ์ต่างๆด้วยมุมมองที่ต่างกันไปโดยธรรมชาติ</p>
+      <p>นี่เป็นส่วนหนึ่งของเหตุผลว่าทำไมการตัดสินใจในประเด็นสำคัญๆควรเกิดจากการประชุมร่วมกันของกลุ่มนักนิติศาสตร์ เพื่อลดทอนความผันแปรในทัศนะของแต่ละบุคคล ซึ่งจุดสูงสุดของกระบวนการนี้คือ อิจมาอ์ (มติเอกฉันท์) อันเป็นหลักฐานที่มีผลผูกพันซึ่งสะท้อนถึงสิ่งที่อัลลอฮ์ ซุบฮานะฮูวะตะอาลาทรงประสงค์ให้เป็นข้อชี้ขาดในนามของพระองค์ในเรื่องนั้นๆ</p>
+
+      <h2 class="article-h2">ข้อถกเถียงว่าด้วยการประท้วง</h2>
+      <p><strong>ทัศนะของฝ่ายคัดค้าน</strong></p>
+      <p>ฝ่ายนี้มองว่าการประท้วงจัดอยู่ในการกระทำประเภทตะอับบุดี และจำเป็นต้องมีหลักฐานมายืนยันเพื่อที่จะถือว่าเป็นการปฏิบัติที่ศาสนารับรอง</p>
+      <p>“ตะอับบุดี” หมายถึง การกระทำที่เป็นการเคารพภักดี (อิบาดะฮ์) ต่ออัลลอฮ์ในตัวของมันเอง และต้องอาศัยหลักฐานที่ชัดเจนมารับรอง โดยที่เราไม่จำเป็นต้องเข้าใจเหตุผลเบื้องหลังได้อย่างสมบูรณ์ กล่าวคือ ไม่จำเป็นต้องมีความหมายหรือคำสั่งที่เราสามารถทำความเข้าใจได้เสมอไป</p>
+      <p>ตัวอย่างของการกระทำประเภทตะอับบุดี ได้แก่ การละหมาด 5 เวลา ในเวลาที่กำหนดไว้อย่างเจาะจง และจำนวนร็อกอะฮ์ที่แตกต่างกันไปในแต่ละเวลา อีกตัวอย่างหนึ่งคือการเดินเวียนรอบกะอ์บะฮ์ 7 รอบในทิศทางทวนเข็มนาฬิกา เราไม่จำเป็นต้องเข้าใจว่าเหตุใดละหมาดฟัจญร์จึงมี 2 ร็อกอะฮ์ หรือเหตุใดเราจึงต้องเดินเวียนรอบกะอ์บะฮ์ทวนเข็มนาฬิกาแทนที่จะเป็นตามเข็มนาฬิกา</p>
+      <p>การกระทำลักษณะนี้มีเงื่อนไขว่าต้องมีหลักฐานที่เฉพาะเจาะจงมาอนุมัติ จึงจะถือเป็นการกระทำที่เป็นที่ยอมรับในศาสนาอิสลามได้ โดยไม่ขึ้นอยู่กับว่าเราจะเข้าใจเหตุผลเบื้องหลังหรือไม่ก็ตาม</p>
+      <p>กลุ่มนักวิชาการอิสลามที่คัดค้านการอนุญาตให้ประท้วงได้โดยสิ้นเชิงมองว่า การประท้วงเป็น “สื่อหรือวิธีการไปสู่เป้าหมาย” (الوسائل - อัลวะสาอิล) และพิจารณาว่า “วิธีการ” ดังกล่าวมีลักษณะเป็นตะอับบุดี ดังนั้น การที่การประท้วงจะได้รับอนุญาตในอิสลามได้นั้น จำเป็นต้องมีหลักฐานที่มีน้ำหนักและเฉพาะเจาะจงมายอมรับว่ามันเป็นส่วนหนึ่งของศาสนา และเนื่องจากไม่มีหลักฐานที่อนุญาตการประท้วง การเข้าร่วมจึงถือเป็นอุตริกรรมในศาสนา (บิดอะฮ์)</p>
+      <p><strong>ทัศนะของฝ่ายสนับสนุน</strong></p>
+      <p>นักวิชาการในกลุ่มทัศนะนี้ไม่เห็นด้วยในบางส่วนกับแนวทางการอธิบายของนักวิชาการกลุ่มแรก</p>
+      <p>พวกเขาเห็นด้วยว่าการประท้วงเป็น “สื่อหรือวิธีการเพื่อบรรลุเป้าหมาย” (الوسائل - อัลวะสาอิล) ซึ่งจัดอยู่ในการกระทำประเภทหนึ่งในนิติศาสตร์อิสลาม แต่พวกเขาไม่เห็นด้วยในประเด็นที่ว่า “วิธีการ” ทุกอย่างจะต้องมีลักษณะเป็นตะอับบุดีเสมอไป</p>
+      <p>สำหรับนักวิชาการกลุ่มนี้ การประท้วงจัดอยู่ในการกระทำประเภทที่เกี่ยวข้องกับจารีตปฏิบัติทางสังคม (อาดัต) กล่าวคือ เป็นส่วนหนึ่งของธรรมเนียมและประเพณีของมนุษย์ ซึ่งการกระทำประเภทนี้ไม่จำเป็นต้องมีหลักฐานที่ชัดเจนและเฉพาะเจาะจงมายืนยันเพื่อที่จะอนุมัติให้กระทำได้</p>
+      <p>ดังนั้น เมื่อการประท้วงถูกมองว่าเป็นวิธีการที่ชอบธรรมในการแสดงออกซึ่งความคิดเห็นหรือจุดยืนต่อผู้ที่เกี่ยวข้องตามจารีตปฏิบัติของสังคม การหาหลักฐานเพื่อพิสูจน์ความชอบธรรมของการประท้วงในมุมมองของอิสลามจึงไม่ใช่เงื่อนไขที่จำเป็น แต่การประท้วงจะถือเป็นสิ่งที่ “อนุมัติโดยเป็นพื้นฐาน” ตั้งแต่แรก</p>
+      <p>ด้วยเหตุนี้ หนทางเดียวที่จะทำให้การประท้วงกลายเป็นสิ่งต้องห้าม (หะรอม) ในอิสลามได้ ก็คือการต้องมีหลักฐานที่ชัดเจนมายกเลิกสถานะการเป็นที่อนุมัตินั้น ซึ่งมันเข้าข่ายกฎเกณฑ์แห่งนิติศาสตร์อิสลามที่ว่า :</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الأصل في الأشياء الإباحة</blockquote>
+      <p class="ar-translation">“พื้นฐานเดิมของสิ่งต่างๆนั้นเป็นที่อนุญาต”</p>
+      <p>ท่านอัชชาฏิบีย์ (เราะหิมะฮุลลอฮ์) ได้จำแนกความแตกต่างระหว่างการกระทำสองประเภท (คือประเภทตะอับบุดีและประเภทที่เกี่ยวกับจารีตปฏิบัติ) และผลกระทบของกฎหมายอิสลามที่มีต่อการกระทำทั้งสองว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فالبدعة إذن عبارة عن طريقة في الدين مخترعة ، تضاهي الشرعية يقصد بالسلوك عليها المبالغة في التعبد لله سبحانه، وهذا على رأي من لا يدخل العادات في معنى البدعة ، وإنما يخصها بالعبادات</blockquote>
+      <p class="ar-translation">“ดังนั้น อุตริกรรม (บิดอะฮ์) คือระเบียบวิธีที่ถูกประดิษฐ์ขึ้นในศาสนา ซึ่งทำเลียนแบบบทบัญญัติ (ชะรีอะฮ์) โดยมีเจตนาในการปฏิบัติเพื่อแสดงความภักดีต่ออัลลอฮ์ให้เกินขอบเขต คำนิยามนี้สอดคล้องกับทัศนะของผู้ที่ไม่นับรวมเรื่องจารีตปฏิบัติ (อาดัต) เข้าไปอยู่ในความหมายของบิดอะฮ์ แต่ได้จำกัดความหมายของมันไว้โดยเฉพาะให้อยู่ในขอบเขตของศาสนกิจเชิงพิธีกรรม (อิบาดาต)”</p>
+
+      <h2 class="article-h2">การประท้วงโดยสันติและชอบด้วยกฎหมายเพื่อผู้ถูกกดขี่</h2>
+      <p>เมื่อพิจารณาถึงกระบวนการที่ซับซ้อนในสาขานิติศาสตร์อิสลามและการตัดสินใจเชิงวินิจฉัย โดยเฉพาะอย่างยิ่งในประเด็นร่วมสมัย และเมื่อข้อชี้ขาดว่าด้วยการประท้วงโดยสันติและชอบด้วยกฎหมายเป็นประเด็นเชิงอิจติฮาด (เรื่องที่ต้องอาศัยการใช้เหตุผลเชิงวิชาการ) บรรดานักวิชาการจึงยอมรับในข้อสรุปของกันและกันได้</p>
+      <p>ในประเด็นการประท้วงโดยสันติและชอบด้วยกฎหมายในประเทศที่อนุญาตให้กระทำได้เพื่อเป็นช่องทางการแสดงออกนั้น เราเห็นว่า เป็นที่อนุญาตโดยเป็นพื้นฐาน แต่มีข้อควรพิจารณาประกอบ ซึ่งมีรายละเอียดดังประเด็นต่อไปนี้:</p>
+      <p><strong>1 | การประท้วงไม่ใช่วิธีการ (วะซีละฮ์) ที่ผูกพันอยู่กับศาสนกิจ</strong></p>
+      <p>การประท้วงไม่ใช่วิธีการที่ผูกพันอยู่กับการเคารพภักดี (อิบาดะฮ์) แต่จัดอยู่ในการกระทำประเภทที่เกี่ยวข้องกับจารีตปฏิบัติและธรรมเนียมของสังคม</p>
+      <p>ดังนั้น การประท้วงโดยสันติและชอบด้วยกฎหมายเพื่อผู้ถูกกดขี่จึงไม่จัดอยู่ในการกระทำประเภทตะอับบุดี แต่เป็น “สื่อหรือวิธีการไปสู่เป้าหมาย”</p>
+      <p>โดย “เป้าหมาย” ในที่นี้คือการสร้างความตระหนักรู้ถึงความเสียหายร้ายแรงที่เกิดขึ้น การแสดงความเป็นน้ำหนึ่งใจเดียวกันกับผู้ถูกกดขี่ และการแจ้งให้ผู้มีอำนาจรับทราบถึงทัศนะและความรู้สึกของประชาชนด้วยวิธีการที่ชอบด้วยกฎหมาย ซึ่งเป็นวิธีการที่ผู้มีอำนาจยอมรับ</p>
+      <p>ด้วยเหตุนี้ การประท้วงในรูปแบบดังกล่าวจึงจัดอยู่ในการกระทำที่เชื่อมโยงกับหลักการพิจารณาถึงประโยชน์สาธารณะ หรือ อัลมะศอลิห์ อัลมุรซะละฮ์ (المصالح المرسلة) หลักการนี้หมายถึง การกระทำใดๆ (ที่ไม่ใช่ศาสนกิจ) ซึ่งไม่มีหลักฐานที่ชัดเจนมายืนยันหรือปฏิเสธโดยตรง แต่ในมุมมองของนักวิชาการแล้ว การกระทำนั้นมีแนวโน้มอย่างแท้จริงที่จะนำไปสู่ผลลัพธ์ที่บทบัญญัติชะรีอะฮ์โดยรวมมุ่งประสงค์ให้เกิดขึ้น เช่น การพิทักษ์รักษาชีวิตและทรัพย์สิน เป็นต้น</p>
+      <p><strong>2 | เรื่องพื้นฐานคือการอนุมัติสำหรับการกระทำประเภทนี้</strong></p>
+      <p>เราเคยระบุไปแล้วถึงหลักเกณฑ์เบื้องต้นทางนิติศาสตร์อิสลาม (ฟิกฮ์) ที่ว่าด้วยการกระทำเชิงจารีตปฏิบัติระบุว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الْأَصْلُ فِي الْأَشْيَاءِ الْإِبَاحَةُ حَتَّى يَدُلُّ الدَّلِيلُ عَلَى التَّحْرِيمِ</blockquote>
+      <p class="ar-translation">“ข้อชี้ขาดในเรื่องพื้นฐานคือการอนุมัติ เว้นแต่จะมีหลักฐานมายืนยันเป็นสิ่งต้องห้าม”</p>
+      <p>อัสสุยูฏีย์กล่าวระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هذا مذهبنا، وعند أبي حنيفة  : الأصل فيها التحريم حتى يدل الدليل على الإباحة ، ويظهر أثر الخلاف في المسكوت عنه، ويعضد الأول قوله صلى الله عليه وسلم {ما أحل الله فهو حلال وما حرم فهو حرام وما سكت عنه فهو عفو، فاقبلوا من الله عافيته فإن الله لم يكن لينسى شيئا}</blockquote>
+      <p class="ar-translation">“นี่คือแนวทางมัสฮับของเรา (คือชาฟิอีย์) แต่ในทัศนะของอบู หะนีฟะฮ์นั้นตรงข้ามกันคือ “หลักการพื้นฐานในเรื่องต่างๆคือการห้าม จนกว่าจะมีหลักฐานมาชี้ถึงการอนุมัติ” ผลของความขัดแย้งนี้จะปรากฏชัดในประเด็นที่ศาสนาไม่ได้กล่าวถึงโดยเฉพาะ ซึ่งทัศนะแรก (ของฝ่ายเรา) นั้นได้รับการสนับสนุนจากวจนะของท่านนบี (ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม) ที่ว่า: “สิ่งใดที่อัลลอฮ์ทรงอนุมัติ สิ่งนั้นย่อมเป็นที่อนุมัติ (หะลาล), สิ่งใดที่พระองค์ทรงห้าม สิ่งนั้นย่อมเป็นที่ต้องห้าม (หะรอม) และสิ่งใดที่พระองค์ทรงนิ่งเงียบไว้ สิ่งนั้นคือสิ่งที่ได้รับการละเว้น ดังนั้น จงยอมรับการผ่อนปรนของอัลลอฮ์เถิด เพราะแท้จริงแล้ว อัลลอฮ์ไม่เคยทรงหลงลืมสิ่งใดเลย”</p>
+      <p>ดังนั้น หากไม่มีหลักฐานที่ระบุเป็นอย่างอื่น ข้อชี้ขาดพื้นฐานที่ว่าอนุมัติให้กระทำได้ก็จะยังคงอยู่</p>
+      <p><strong>3 | การกระทำที่เป็นสื่อกลางเพื่อบรรลุเป้าหมายที่เฉพาะเจาะจง</strong></p>
+      <p>ยังมีหลักเกณฑ์ทางนิติศาสตร์อีกข้อหนึ่งที่ใช้ในการพิจารณาข้อชี้ขาดของการกระทำใดๆที่เป็นสื่อกลางเพื่อบรรลุเป้าหมาย หลักเกณฑ์ดังกล่าวระบุว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">للوسائِلِ أحكام المَقاصِدِ</blockquote>
+      <p class="ar-translation">“วิธีการ (วะซีละฮ์) ย่อมมีข้อชี้ขาด (หุก่ม) เช่นเดียวกับ “เป้าหมาย” (ที่มุ่งหมายจะให้บรรลุผลตราบใดที่ “วิธีการ” นั้นไม่ได้เป็นสิ่งต้องห้าม (หะรอม) อย่างชัดเจนในตัวเอง)</p>
+      <p>ท่านอิบนุ อาชูรเสริมคำอธิบายเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقد تتعدد الوسائل إلى المقصد الواحد، فتعتبر الشريعة في التكليف بتحصيلها أقوى تلك الوسائل تحصيلاً للمقصد المتوسل إليه بحيث يحصل كاملاً، راسخاً، عاجلاً، ميسوراً، فتقدمها على وسيلة هي دونها في هذا التحصيل. وهذا مجال متسع، ظهر فيه مصداق نظر الشريعة إلى المصالح، وعصمتها من الخطأ والتفريط... فإذا قدّرنا وسائل متساوية في الإفضاء إلى المقصد باعتبار أحواله كلها: سوّت الشريعة في اعتبارها، وتخير المكلف في تحصيل بعضها دون الآخر؛ إذ الوسائل ليست مقصودة لذاتها</blockquote>
+      <p class="ar-translation">“และหนทาง (วะซีละฮ์) ที่จะนำไปสู่เป้าหมายเดียวกันนั้นอาจมีได้หลากหลาย ดังนั้น ในการบัญญัติข้อบังคับให้บรรลุถึงเป้าหมายนั้น บทบัญญัติศาสนาจะพิจารณาเลือกใช้หนทางที่มีประสิทธิภาพที่สุดในการนำไปสู่เป้าหมายนั้นๆ เพื่อให้เป้าหมายดังกล่าวบรรลุผลอย่างสมบูรณ์, อย่างมั่นคง, อย่างรวดเร็วและอย่างง่ายดาย และจะให้ความสำคัญแก่หนทางนั้นมากกว่าหนทางอื่นที่ด้อยกว่าในแง่ของประสิทธิภาพ และนี่คือขอบเขตที่กว้างขวางอย่างยิ่ง ซึ่งได้แสดงให้เห็นถึงข้อพิสูจน์ของการที่บทบัญญัติศาสนาให้ความสำคัญต่อคุณประโยชน์ (มัศละหะฮ์) และความบริสุทธิ์ของมันจากข้อผิดพลาดและความบกพร่อง...ดังนั้น หากเราสมมติว่ามีหนทางต่างๆที่มีประสิทธิภาพเท่าเทียมกันในการนำไปสู่เป้าหมายหนึ่งๆโดยพิจารณาในทุกแง่มุมแล้ว บทบัญญัติศาสนาก็จะพิจารณาว่าหนทางเหล่านั้นมีสถานะเท่าเทียมกัน และผู้ที่อยู่ในขอบข่ายศาสนบัญญัติ (มุกัลลัฟ) ก็มีสิทธิ์ที่จะเลือกปฏิบัติหนทางใดหนทางหนึ่งได้ ทั้งนี้ก็เพราะหนทางนั้นไม่ได้เป็นเป้าหมายในตัวของมันเอง”</p>
+      <p>เมื่อมีหนทางหรือวิธีการหลายอย่างเพื่อไปสู่เป้าหมายที่ดีงามเป้าหมายเดียว ศาสนาอิสลามไม่ได้มองว่าทุกวิธีมีค่าเท่ากัน แต่จะสนับสนุนให้เลือก “วิธีการที่มีประสิทธิภาพสูงสุด” เกณฑ์ในการวัดประสิทธิภาพที่ข้อความนี้ยกมาคือ สมบูรณ์, มั่นคง, รวดเร็วและง่ายดาย</p>
+      <p>สมมติว่า “เป้าหมาย” คือ “การสร้างความตระหนักรู้ในสังคมเพื่อให้เกิดการช่วยเหลือผู้ถูกกดขี่” เราอาจมี “วิธีการ” หลายอย่าง เช่น</p>
+      <p>A. เดินขบวนประท้วงบนถนน</p>
+      <p>B. ทำแคมเปญออนไลน์ให้ความรู้และระดมทุนเงินบริจาค</p>
+      <p>C. ยื่นหนังสือต่อองค์กรระหว่างประเทศ</p>
+      <p>หลักการนี้จะบอกให้เราวิเคราะห์ว่า วิธี A, B, หรือ C อันไหนมีแนวโน้มที่จะบรรลุเป้าหมายได้สมบูรณ์, มั่นคง, รวดเร็ว, และง่ายดายที่สุด ในบริบทของสังคมเรา โดยก่อให้เกิดผลเสีย (มัฟซะดะฮ์) น้อยที่สุด เราก็ควรเลือกวิธีการนั้น</p>
+      <p>แต่ถ้าหากวิเคราะห์แล้วพบว่า วิธีการ A, B, และ C มีประสิทธิภาพทัดเทียมกัน ไม่มีวิธีไหนดีไปกว่ากันอย่างมีนัยสำคัญ ในกรณีนี้ ศาสนาให้อิสระแก่ผู้ปฏิบัติ (มุกัลลัฟ) ในการเลือกใช้วิธีการใดก็ได้ตามความถนัดหรือความสะดวกของตนเอง</p>
+      <p>เหตุผลสำคัญถูกระบุไว้ในตอนท้ายว่า “เพราะ ‘วิธีการ’ ทั้งหลายนั้นไม่ได้เป็นเป้าหมายในตัวของมันเอง”</p>
+      <p>ส่วนนี้มันคือการย้ำเตือนอีกครั้งว่า “การประท้วงไม่ใช่เป้าหมาย” มันเป็นแค่เครื่องมือ เช่นเดียวกับการทำแคมเปญออนไลน์ หรือการยื่นหนังสือ ศาสนาไม่ได้บังคับว่าท่านต้องใช้วิธี A เท่านั้น สิ่งสำคัญคือการบรรลุ “เป้าหมาย” ที่ดีงามต่างหาก หากมีเครื่องมือหลายชิ้นที่ใช้งานได้ดีเท่ากัน ท่านก็มีสิทธิ์เลือกใช้ชิ้นที่ถนัดที่สุดได้เลย</p>
+      <p>ท่านอัลเกาะรอฟีย์ได้อธิบายไว้เช่นกันว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وحكمها - أي الوسائل -كحكم ما أفضت إليه من تحريم أو تحليل، غير أنها أخفض رتبة من المقاصد في حكمها</blockquote>
+      <p class="ar-translation">“และข้อชี้ขาดของมัน (หมายถึงวิธีการ) ย่อมเป็นเช่นเดียวกับข้อชี้ขาดของสิ่งที่มันนำไปสู่ (ผลลัพธ์) ไม่ว่าจะเป็นการห้ามหรือการอนุมัติ เพียงแต่ว่ามันมีระดับขั้นที่ต่ำกว่า ‘เป้าหมาย’ ในแง่ของข้อชี้ขาด”</p>
+      <p>กล่าวคือ ถ้าเป้าหมายเป็นสิ่งที่ศาสนาส่งเสริม เช่น การเรียกร้องความยุติธรรมให้ผู้ถูกกดขี่, การปกป้องชีวิตและทรัพย์สิน, การยับยั้งความชั่วร้าย ฯลฯ วิธีการ (การประท้วง) ก็จะมีข้อชี้ขาดว่า “ส่งเสริมให้กระทำ” ไปด้วย แต่ถ้าเป้าหมายเป็นสิ่งที่ศาสนาห้าม เช่นการสร้างความวุ่นวายอย่างไร้เหตุผล, การมุ่งทำลายล้าง, การเรียกร้องในสิ่งที่เป็นบาป ฯลฯ วิธีการ (การประท้วง) ก็จะมีข้อชี้ขาดว่า “ต้องห้าม” (หะรอม) ตามไปด้วย</p>
+      <p>อัลเกาะรอฟีย์ท่านกล่าวไว้ว่า: “วิธีการมีระดับขั้นที่ต่ำกว่าเป้าหมาย” หัวใจสำคัญที่เพิ่มเข้ามาตรงนี้มันหมายความว่า ถึงแม้ “วิธีการ” และ “เป้าหมาย” จะมีข้อชี้ขาดเหมือนกัน แต่ “เป้าหมาย” มีความสำคัญและมีสถานะที่สูงกว่า “วิธีการ” เสมอ ในบริบทของการประท้วง นี่หมายความว่า วิธีการไม่ใช่เป้าหมายในตัวเอง การประท้วงเป็นเพียง “เครื่องมือ” ไม่ใช่สิ่งศักดิ์สิทธิ์หรือเป้าหมายหลัก คุณค่าของการประท้วงขึ้นอยู่กับว่ามันสามารถบรรลุเป้าหมายที่ดีงามได้จริงหรือไม่ และยังต้องคำนึงถึงผลกระทบ หาก “วิธีการ” (การประท้วง) ที่เราเลือกใช้แม้จะมีเป้าหมายที่ดี แต่หากนำไปสู่ความเสียหายที่ใหญ่หลวงกว่า หรือไปทำลาย “เป้าหมาย” ที่สำคัญกว่า (เช่น การรักษาชีวิต, ความสงบเรียบร้อยของสังคม) เราก็จำเป็นต้องละทิ้ง “วิธีการ” นั้นเสีย สมมติว่าเป้าหมายคือ “การเรียกร้องความเป็นธรรม” (เป้าหมายที่ดี) แต่วิธีการคือ “การประท้วง” ที่บานปลายไปสู่การจลาจลจนมีผู้เสียชีวิต ซึ่งขัดกับ “เป้าหมาย” ที่สูงกว่าคือ “การพิทักษ์รักษาชีวิต” ในกรณีนี้ “วิธีการ” ดังกล่าวจะสูญเสียความชอบธรรมทันที เพราะมันได้ทำลายเป้าหมายที่สำคัญกว่า</p>
+      <p>ในส่วนนี้ให้กรอบความคิดที่สมดุลว่า การประท้วง (วิธีการ) จะได้รับความชอบธรรมจากเป้าหมายที่ดี แต่ความชอบธรรมนั้นมีเงื่อนไขว่าตัววิธีการเองจะต้องไม่นำไปสู่ความเสียหายที่ทำลายเป้าหมายที่สูงส่งกว่าในบทบัญญัติอิสลามนั่นเอง</p>
+      <p>อีกประการหนึ่งคือ ข้อชี้ขาดพื้นฐานสำหรับเรื่องจารีตและธรรมเนียมปฏิบัตินั้นได้ถูกระบุไว้แล้วว่าเป็นที่อนุมัติ ในแง่ของหลักนิติศาสตร์อิสลามข้อนี้ ได้ชี้ให้เห็นถึงข้อควรพิจารณาเพิ่มเติมอีกสองประการดังต่อไปนี้:</p>
+      <p><strong>— ข้อควรพิจารณาประการแรก</strong></p>
+      <p>หากเป้าหมายของวิธีการนั้นเป็นสิ่งที่ส่งเสริมให้กระทำ (มุสตะหับ) วิธีการเพื่อบรรลุเป้าหมายนั้นก็จะมีข้อชี้ขาดว่าส่งเสริมให้กระทำเช่นกัน และหากเป้าหมายของวิธีการนั้นเป็นสิ่งบังคับ (วาญิบ) วิธีการเพื่อบรรลุเป้าหมายนั้นก็จะมีข้อชี้ขาดว่าบังคับเช่นกัน</p>
+      <p>ตัวอย่างเพื่อช่วยให้ข้อพิจารณานี้ชัดเจนขึ้นคือการใช้นาฬิกาปลุกเพื่อช่วยให้ตื่นละหมาดฟัจญร์ เนื่องจากการละหมาดฟัจญร์เป็นสิ่งบังคับ (วาญิบ) ในกรณีที่บุคคลหนึ่งไม่สามารถตื่นละหมาดฟัจญร์ได้เว้นแต่จะต้องใช้นาฬิกาปลุก การใช้นาฬิกาปลุกในฐานะวิธีการเพื่อตื่นละหมาดฟัจญร์ก็จะกลายเป็นสิ่งบังคับ (วาญิบ) ไปด้วย</p>
+      <p><strong>— ข้อควรพิจารณาประการที่สอง</strong></p>
+      <p>ข้อยกเว้นสำหรับข้อพิจารณาข้างต้นจะเกิดขึ้นก็ต่อเมื่อ “วิธีการ” นั้นเป็นสิ่งต้องห้าม (หะรอม) ในตัวของมันเอง ตัวอย่างเช่น การอยู่สองต่อสองในที่ลับตา ซึ่งเป็นสิ่งไม่อนุญาต เพื่อใช้เป็นวิธีการในการนำทางใครบางคนสู่อิสลาม (เป้าหมาย) จากตัวอย่างนี้ หลักฐานต่างๆที่ห้ามวิธีการบางอย่างได้สอนหลักการแก่เราว่า ในมุมมองของอิสลามนั้น “เป้าหมายไม่ได้ทำให้วิธีการที่ผิดกลายเป็นสิ่งที่ถูกต้องได้”</p>
+      <p>ดังนั้น การประท้วงโดยสันติและชอบด้วยกฎหมายจึงถือเป็นที่อนุมัติตามหลักการพื้นฐาน หรืออาจจะอยู่ในระดับส่งเสริมให้กระทำ (มุสตะหับ) หรือกระทั่งเป็นสิ่งบังคับ (วาญิบ) ก็ได้ ขึ้นอยู่กับข้อชี้ขาดของเป้าหมายที่ต้องการจะบรรลุในมุมมองของอิสลาม อย่างไรก็ตาม หากการประท้วงนั้นผิดกฎหมายในประเทศใดประเทศหนึ่ง หรือถูกดำเนินการด้วยความรุนแรง การกระทำนั้นย่อมไม่ใช่วิธีการที่ได้รับอนุญาต</p>
+
+      <h2 class="article-h2">การประท้วงที่มีเป้าหมายที่ศาสนารับรอง</h2>
+      <p>ในประเด็นที่เรากำลังสนทนากันอยู่นี้ สิ่งสำคัญคือต้องตระหนักว่าการประท้วงที่จัดขึ้นนั้น มีเป้าหมายที่ไม่ขัดแย้งกับบทบัญญัติชะรีอะฮ์ กล่าวคือ การพิทักษ์รักษาชีวิต และการขจัดสิ้นซึ่งการกดขี่ข่มเหง</p>
+      <p>นอกจากนี้ การประท้วงในพื้นที่ทั่วโลกส่วนใหญ่ ยังเป็นสิ่งที่ชอบด้วยกฎหมาย ซึ่งส่งผลให้ไม่มีประเด็นปัญหาทางกฎหมายในมุมมองของนิติศาสตร์อิสลาม เพราะไม่ได้เป็นการกระทำที่ขัดต่อกฎหมายบ้านเมือง เนื่องจากการประท้วงไม่จัดอยู่ในการกระทำประเภทตะอับบุดี เงื่อนไขที่ต้องมีหลักฐานมายืนยันความถูกต้องในอิสลามจึงไม่ถูกนำมาบังคับใช้ จึงเกิดคำถามขึ้นว่า: “มีหลักฐานอะไรที่ห้ามการประท้วงตั้งแต่แรก หากเป็นการกระทำที่ชอบด้วยกฎหมายในประเทศนั้นๆ โดยมีวัตถุประสงค์เพื่อสร้างความตระหนักรู้ถึงการกดขี่และช่วยเหลือผู้ที่ถูกกดขี่?”</p>
+      <p>และในทางกลับกัน: “จะทำอย่างไรหากมีสิ่งที่ไม่ดีงาม ซึ่งเป็นที่ต้องห้ามตามบทบัญญัติชะรีอะฮ์ เกิดขึ้นควบคู่ไปกับการประท้วง แม้ว่าสิ่งเหล่านั้นจะไม่ใช่เนื้อหาที่แท้จริงของการประท้วงก็ตาม? ตัวอย่างเช่น การมีเสียงดนตรี การปะปนกันระหว่างชายหญิงและอื่นๆ”</p>
+      <p>ในกรณีเช่นนี้ มีหลักเกณฑ์ทางนิติศาสตร์อิสลาม (ฟิกฮ์) มาเป็นแนวทางในการพิจารณาคือ</p>
+      <p><strong>หลักการข้อแรก |</strong></p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يغتفر في الوسائل ما لا يغتفر في المقاصد</blockquote>
+      <p class="ar-translation">“ความผิดพลาดในวิธีการนั้นเป็นที่ยอมรับได้ ในระดับที่ความผิดพลาดในเป้าหมายนั้นยอมรับไม่ได้”</p>
+      <p>ท่านมุฮัมหมัด อัซซุหัยลีย์ได้อธิบายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الأحكام الشرعية بعضها مقاصد، أي مقصودة لذاتها، وبعضها وسائل لغيرها، ولذلك يتم التساهل في الوسائل أكثر من التساهل في المقاصد</blockquote>
+      <p class="ar-translation">“บทบัญญัติทางศาสนานั้น บางส่วนถือเป็น “เป้าหมาย” ที่ถูกบัญญัติขึ้นเพื่อให้กระทำโดยตรง ในขณะที่บางส่วนถือเป็น “วิธีการ” ที่ถูกกำหนดไว้เพื่อใช้บรรลุเป้าหมายอื่น ดังนั้น ศาสนาจึงมีความผ่อนปรนในเรื่องของ “วิธีการ” มากกว่าความผ่อนปรนในเรื่องของ “เป้าหมาย” โดยตรง”</p>
+      <p>อีกหลักเกณฑ์หนึ่งท่านสุยูฏีย์ได้ระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يغتفر في التوابع ما لا يغتفر في غيرها</blockquote>
+      <p class="ar-translation">“สิ่งที่เป็นส่วนต่อหรือส่วนประกอบรอง สามารถผ่อนปรนได้มากกว่าส่วนหลัก”</p>
+      <p>หลักเกณฑ์นี้มีความหมายว่า หากมีสิ่งที่ไม่สมบูรณ์หรือไม่เหมาะสมเกิดขึ้นใน “ส่วนประกอบรอง” (เช่น สิ่งที่ติดตามมา ไม่ใช่ตัวสาระสำคัญของการกระทำ) ศาสนามีแนวโน้มที่จะมองข้ามหรือผ่อนปรนได้มากกว่าการเกิดสิ่งเหล่านั้นใน “ส่วนหลัก” หรือ “แก่นสำคัญ” ของการกระทำ</p>
+      <p>เมื่อเชื่อมโยงกับประเด็นเรื่องการประท้วง การเดินขบวนเพื่อเรียกร้องความยุติธรรม หรือเพื่อหยุดยั้งความอยุติธรรม เป็น “เป้าหมายหลัก” และ “วิธีการหลัก” ที่ต้องพิจารณาก่อน ส่วนสิ่งที่เกิดควบคู่ เช่น การเปิดเพลง เสียงดนตรี ซึ่งมันเป็นประเด็นการขัดแย้งด้านแนวคิด หรือการปะปนระหว่างชายหญิงในพื้นที่นั้น ถือเป็น “ส่วนต่อ” ที่เกิดขึ้นตามมา ไม่ใช่สาระสำคัญของกิจกรรม ดังนั้นจึงสามารถประเมินด้วยมาตรฐานแห่งความผ่อนปรนที่ต่างออกไป</p>
+      <p>กล่าวคือ ความไม่เหมาะสมใน “สิ่งประกอบรอง” ไม่เพียงพอที่จะล้มล้างความชอบธรรมของ “สาระหลัก” ของการประท้วงดังหลักเกณฑ์ที่ผ่านมา</p>
+      <p>นี่คือหลักการเชิงวิชาการที่ช่วยให้การวินิจฉัยทางศาสนาเป็นไปอย่างรอบด้าน ไม่รีบตัดสินความไม่ดีงามเล็กน้อยในส่วนประกอบรองว่าเป็นตัวตัดสินความถูกต้องของกิจกรรมทั้งหมด แต่แยกน้ำหนักระหว่าง “สาระหลัก” กับ “สิ่งประกอบรอง” อย่างมีชั้นเชิง</p>
+      <p>ดังนั้น นิติศาสตร์อิสลามจึงมีขอบเขตให้สามารถมองข้ามความไม่ดีงามบางอย่างที่เกิดขึ้นควบคู่กับการประท้วงได้เป็นการชั่วคราว และไม่ถือเป็นข้อพิจารณาที่มีน้ำหนักมากพอที่จะมาเปลี่ยนแปลงข้อชี้ขาดพื้นฐานของวิธีการ (คือการอนุมัติ) ได้ เนื่องจากมันเป็นประเด็นที่เกิดขึ้นควบคู่มาและสามารถแยกออกจากตัววิธีการได้ ไม่ใช่ส่วนหนึ่งของเนื้อหาที่แท้จริง</p>
+      <p>หลักการนี้บอกเราว่าศาสนาให้ความสำคัญกับ “เป้าหมาย” (เช่น การยุติการกดขี่) มากกว่า “วิธีการ” (เช่น การเดินขบวน) ตราบใดที่เป้าหมายนั้นถูกต้องและยิ่งใหญ่ ความไม่สมบูรณ์แบบเล็กๆน้อยๆที่เกิดขึ้นระหว่างทาง (ซึ่งไม่ใช่แก่นแท้ของการกระทำ) สามารถผ่อนปรนได้ เปรียบเสมือนการเดินทางไปมัสยิดเพื่อละหมาดวันศุกร์ (เป้าหมาย) ซึ่งเป็นสิ่งบังคับ แต่ระหว่างทาง (วิธีการ) อาจเจอสิ่งที่ไม่สมบูรณ์แบบ เช่น การจราจรติดขัด หรือเห็นสิ่งที่ไม่เหมาะสม เราย่อมไม่ล้มเลิกเป้าหมายเพียงเพราะวิธีการไม่สมบูรณ์ 100%</p>
+      <p>ท่านซุหัยลีย์ยังได้อธิบายต่อว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يغتفر ويتسامح ويتساهل في الأمور الثابتة ضمناً وداخلاً لشىٍء آخر ما لا يتسامح في الأمر المقصود أصلاً، لأنه يشترط توافر جميع الشروط الشرعية فيما قصده العاقد أو الشرع أصلاً، أما الأمور الضمنية فلا مانع من التساهل فيها، لأنها ليست، مقصوداً شرعاً، أو عقداً، أو تصرفاً</blockquote>
+      <p class="ar-translation">“โดยหลักแล้ว ศาสนาจะมีความผ่อนปรน อนุโลม หรือยกเว้นได้มากกว่า ในกรณีที่เรื่องนั้น “เกิดขึ้นโดยปริยาย” หรือ “เป็นส่วนหนึ่งภายในของสิ่งอื่น” (ไม่ได้ตั้งใจทำโดยตรง) มากกว่ากรณีที่เรื่องนั้น “เป็นเป้าหมายหลัก” ที่ตั้งใจทำตั้งแต่ต้น เพราะเมื่อเป็นการกระทำที่ตั้งใจหรือเป็นจุดมุ่งหมายโดยตรง ย่อมต้องมีการปฏิบัติตามเงื่อนไขทางศาสนาอย่างครบถ้วน แต่หากเป็นเรื่องที่เกิดขึ้น “โดยนัย” หรือ “แทรกอยู่ในเรื่องอื่น” ศาสนาก็สามารถผ่อนปรนได้ เนื่องจากมันไม่ใช่สิ่งที่ถูกตั้งใจทำ ไม่ใช่เป้าหมายทางศาสนาโดยตรง และไม่ใช่สัญญาหรือการกระทำที่มีสถานะเป็นอิสระในตัวเอง</p>
+      <p>ซึ่งการมีชายหญิงอยู่ร่วมในพื้นที่เดียวกันระหว่างการประท้วง ไม่ได้เป็น “เป้าหมายหลัก” ของการประท้วง และก็ไม่ใช่กิจกรรมที่จัดขึ้นเพื่อให้เกิดการปะปนกันโดยตั้งใจ แต่เป็นสิ่งที่เกิดขึ้นโดยปริยาย จากธรรมชาติของสถานการณ์ เช่น การรวมตัวในพื้นที่สาธารณะหรือการเคลื่อนขบวนร่วมกัน</p>
+      <p>ดังนั้น ตามหลัก “สิ่งที่เกิดโดยปริยายสามารถผ่อนปรนได้มากกว่าสิ่งที่ตั้งใจทำ” ความไม่เหมาะสมที่เกิดขึ้นจากการปะปนชายหญิงในลักษณะนี้ ไม่ถือว่าเป็นสาระสำคัญหรือเป้าหมายของกิจกรรม จึงสามารถประเมินด้วยมาตรฐานแห่งความผ่อนปรนได้ ตราบใดที่ไม่มีการตั้งใจสร้างบรรยากาศแบบนั้น และไม่มีการกระทำที่ละเมิดอย่างชัดแจ้ง เช่น การจัดงานเพื่อให้เกิดการคลุกคลีระหว่างเพศโดยเจตนา</p>
+      <p>ในทางกลับกัน หากกิจกรรมถูกจัดขึ้นโดยตั้งใจให้มีการปะปนชายหญิงอย่างเปิดเผย (เช่น งานรื่นเริงหรือกิจกรรมที่ส่งเสริมสิ่งนี้โดยตรง) กรณีนั้นจะไม่เข้าข่าย “โดยปริยาย” และไม่อาจอ้างหลักการนี้เพื่อผ่อนปรนได้ เพราะกลายเป็น “เป้าหมายโดยตรง” แล้ว ซึ่งต้องปฏิบัติตามเงื่อนไขศาสนาอย่างครบถ้วน</p>
+      <p>ดังนั้น การมีชายหญิงอยู่ร่วมกันในการประท้วงเป็นสิ่งที่เกิด “โดยนัย” ไม่ใช่ “โดยตั้งใจ” จึงสามารถใช้หลัก</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يغتفر في الشيء ضمناً ما لا يغتفر فيه قصدًا</blockquote>
+      <p>เพื่ออธิบายว่า ศาสนาเปิดพื้นที่ให้ผ่อนปรนในกรณีเช่นนี้ได้ โดยไม่ถือว่าเป็นปัจจัยหลักในการเปลี่ยนคำตัดสินของกิจกรรมทั้งหมด ซึ่งท่านอัซซุหัยลีย์ได้อธิบายไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يغتفر ويتسامح ويتساهل فيما يأتي ثانياً أكثر مما يأتي أولاً، فلا يغتفر في الأوائل؛ لأنها مقصودة أصلاً، أما الثواني فقصودة تبعاً.</blockquote>
+      <p class="ar-translation">“มีความผ่อนปรน อนุโลม และละเว้นได้มากกว่าในสิ่งที่ “เกิดตามมาในภายหลัง” เมื่อเทียบกับสิ่งที่ “เกิดขึ้นเป็นอันดับแรก” เนื่องจากสิ่งที่อยู่ในตอนต้นนั้นถือว่าเป็น “เป้าหมายหลัก” ที่ตั้งใจทำตั้งแต่แรก จึงไม่อาจละเว้นได้ง่าย ส่วนสิ่งที่เกิดตามมาภายหลัง มักเป็นสิ่งที่ “เกี่ยวเนื่องหรือเกิดขึ้นตามมา” จึงมีพื้นที่ให้ผ่อนปรนมากกว่า”</p>
+      <p><strong>หลักการข้อที่สอง |</strong></p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا تعارض مفسدتان رُوعي أعظمُهما ضررًا بارتكاب أخفهما</blockquote>
+      <p class="ar-translation">“เมื่อความเสียหายสองอย่างขัดแย้งกัน ให้พิจารณาถึงความเสียหายที่รุนแรงกว่า โดยการยอมรับความเสียหายที่เบากว่า”</p>
+      <p>หลักการนี้ระบุว่า หากบุคคลต้องเผชิญหน้าระหว่างความเสียหายสองประการ พวกเขาควรเลือกยอมรับความเสียหายที่น้อยกว่า เพื่อหลีกเลี่ยงความเสียหายที่ใหญ่หลวงกว่า</p>
+      <p>ทั้งนี้เพราะบทบัญญัติชะรีอะฮ์มีเจตจำนงที่จะนำมาซึ่งคุณประโยชน์และทำให้มันเพิ่มพูน และมุ่งที่จะลดทอนความเสียหายและขจัดมันให้หมดสิ้นไป ในกรณีนี้ เราต้องชั่งน้ำหนักระหว่างความเสียหายที่ใหญ่หลวงกว่า คือการนิ่งเฉยต่อการกดขี่ การฆ่าล้างเผ่าพันธุ์ และความทุกข์ทรมานของผู้ถูกกดขี่ และความเสียหายที่เบากว่า สิ่งไม่ดีงามที่อาจเกิดขึ้นในการชุมนุม เช่น การปะปนกัน หรือการเสียเวลา</p>
+      <p>หลักการนี้ชี้ชัดว่า การยอมรับความเสียหายที่เบากว่า (ข้อ 2) เพื่อต่อสู้กับความเสียหายที่ใหญ่หลวงกว่า (ข้อ 1) เป็นสิ่งที่ศาสนาสนับสนุน การนิ่งเฉยก็เท่ากับเป็นการยอมรับความเสียหายที่ใหญ่หลวงกว่านั่นเอง แต่ทั้งนี้ก็อาจมีใครตีความข้อ 2 ให้แรงกว่าข้อ 1 ก็สุดแล้วจะตีความกันไป</p>
+      <p>ด้วยเหตุนี้ หากทัศนะส่วนใหญ่ของนักวิชาการในพื้นที่หนึ่งเห็นว่าการประท้วงเป็นวิธีการขจัดหรือลดทอนความเสียหาย และเห็นว่า “ความเสียหายจากการนิ่งเฉยไม่ประท้วงนั้นมีมากกว่าความเสียหายที่อาจเกิดจากการประท้วง” คำแนะนำสุดท้ายก็คือให้เลือกยอมรับความเสียหายที่น้อยกว่า นั่นคือการออกมาประท้วง เพื่อยับยั้งความเสียหายที่ใหญ่หลวงกว่า (ซึ่งก็คือการกดขี่ที่ดำเนินต่อไปหรือเพิ่มทวีขึ้น)</p>
+      <p><strong>หลักการข้อที่สาม |</strong></p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">درء المفسدة مقدم على جلب المصلحة</blockquote>
+      <p class="ar-translation">“การป้องกันความเสียหายสำคัญกว่าการแสวงหาผลประโยชน์”</p>
+      <p>หากบุคคลใดรู้สึกเป็นการส่วนตัวว่าสิ่งไม่ดีงามที่เกิดขึ้นควบคู่กับการประท้วงนั้นจะส่งผลเสียต่อศรัทธาของตนเอง เนื่องจากสถานการณ์เฉพาะตัวของเขา หลักการ “ป้องกันความเสียหาย” นี้ก็จะถูกนำมาใช้กับเขาโดยเฉพาะ</p>
+      <p>หลักการนี้ระบุว่า การป้องกันความเสียหายย่อมมาก่อนการแสวงหาผลประโยชน์ ดังนั้น ในกรณีของบุคคลผู้นั้น การป้องกันความเสียหาย (ที่จะเกิดกับศรัทธาของเขา) จะได้รับความสำคัญมากกว่าการได้รับประโยชน์จากการเข้าร่วมประท้วง โดยเฉพาะอย่างยิ่งเมื่อการไม่เข้าร่วมของเขาเพียงคนเดียวไม่ได้หมายความว่าช่องทางในการขจัดหรือลดทอนการกดขี่นั้นจะหมดสิ้นไป</p>
+      <p>อีกทางเลือกหนึ่ง บุคคลผู้นั้นสามารถค้นหาหรือวางแผน “วิธีการ” อื่นๆ เพื่อต่อสู้กับความเสียหายที่การประท้วงนั้นพยายามจะยับยั้งได้เช่นกัน ตัวอย่างเช่น ชุมชนแห่งหนึ่งได้จัด “การประท้วงแบบขับรถผ่าน (drive-through)” โดยนำรถยนต์มาประดับด้วยธงของชาติที่ถูกอธรรม เพื่อประท้วงต่อต้านการสังหารเด็กและผู้บริสุทธิ์ ซึ่งด้วยวิธีนี้ พวกเขาสามารถลดทอนความเสียหายบางอย่าง (เช่น การปะปน) ที่พวกเขารู้สึกว่าจัดการได้ยาก</p>
+      <p>คำถามต่อมา การประท้วงถือเป็นการฝ่ามติเอกฉันท์ของนักวิชาการหรือไม่?</p>
+      <p>ในการตอบคำถามนี้ เราอาจกล่าวได้ว่า แม้จะเป็นความจริงที่อิสลามไม่มีประวัติศาสตร์การประท้วงใน “รูปแบบสมัยใหม่” เช่นปัจจุบัน แต่แนวคิดเรื่อง “การคัดค้านโดยสันติและชอบธรรม” นั้น ปรากฏอยู่ในประวัติศาสตร์ของชาวมุสลิมมาตั้งแต่สมัยเศาะหาบะฮ์แล้วและศาสดาแล้ว</p>
+      <p>ซึ่งเรื่องนี้ไม่ใช่เรื่องน่าประหลาดใจและเป็นไปตามธรรมชาติ ดังที่เราได้ข้อสรุปไปแล้วว่า การประท้วงนั้นจัดอยู่ใน การกระทำเชิงจารีตปฏิบัติของสังคม ไม่ใช่การกระทำประเภทศาสนกิจ (อิบาดะฮ์)</p>
+
+      <h2 class="article-h2">ท่านหญิงอาอิชะฮ์ (เราะฎิยัลลอฮุอันฮา) กับการเข้าร่วมประท้วงโดยสันติ</h2>
+      <p>ในตัวอย่างหนึ่งสมัยเศาะหาบะฮ์ บรรดาสาวกหลายร้อยคน ซึ่งรวมถึงท่านหญิงอาอิชะฮ์ (เราะฎิยัลลอฮุอันฮา) ผู้เป็นมารดาแห่งศรัทธาชน ได้เดินทางจากดินแดนฮิญาซไปยังอิรักเพื่อทำการประท้วงโดยสันติ ท่านมีความประสงค์ให้ฆาตกรที่สังหารท่านอุสมาน (เราะฎิยัลลอฮุอันฮุ) ถูกนำตัวมาลงโทษโดยเร็วที่สุด แทนที่จะปล่อยให้ล่าช้าออกไป ท่านอิบนุ หิบบานได้ถ่ายทอดเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أن عائشة كتبت إلى أبي موسى  وهو والي الكوفة من قبل عليّ : إنه قد كان من أمر عثمان ما قد علمت، وقد خرجت مصلحة بين الناس، فمر من قبلكم بالقرار في منازلهم والرضا بالعافية حتى يأتيهم ما يحبّون من صلاح أمر المسلمين</blockquote>
+      <p class="ar-translation">“และท่านหญิงอาอิชะฮ์ได้เขียนสาส์นถึงอบู มูซา ซึ่งในขณะนั้นดำรงตำแหน่งเจ้าเมืองกูฟะฮ์ในนามของท่านอะลีย์ ความว่า: “ความจริงแล้ว เรื่องราวของท่านอุษมานได้เกิดขึ้นดังที่ท่านทราบดีอยู่แล้ว และฉันได้ออกมา (เดินทาง) ก็เพื่อแสวงหาความปรองดองในหมู่ผู้คน ดังนั้น ท่านจงสั่งให้ผู้คนที่อยู่ภายใต้การปกครองของท่านจงพำนักอยู่ในบ้านเรือนของพวกเขา และจงพึงพอใจในความสงบสุขปลอดภัย จนกว่าความดีงามในกิจการของชาวมุสลิมที่พวกเขาปรารถนาจะมาถึง”</p>
+      <p>ท่านอิบนุลอะเราะบีย์ได้เสริมไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما خروجها إلى حرب الجمل، فما خرجت لحرب ولكن تعلّق الناس بها وشكوا إليها ما صاروا إليه من عظيم الفتنة، وتهارج الناس ورجوا بركتها في الإصلاح، وطمعوا في الاستحياء منها إذا وقفت إلى الخلق، وظنّت هي ذلك فخرجت عاملة بقول الله تعالى: (لا خير في كثير من نجواهم . . . . . الآية)، (وإن طائفتان من المؤمنين اقتتلوا فأصلحوا بينهما . . الآية</blockquote>
+      <p class="ar-translation">“ส่วนการที่นาง (อาอิชะฮ์) ออกไปร่วมในสงครามญะมัล (อูฐ) นั้น นางไม่ได้ออกไปเพื่อทำสงคราม แต่ผู้คนได้ยึดมั่นในตัวนางและร้องทุกข์ต่อนางถึงความวุ่นวายครั้งใหญ่ที่พวกเขาต้องเผชิญ รวมถึงความบาดหมางของผู้คน และพวกเขาหวังในความเป็นสิริมงคลของนางในการแก้ไขปัญหา พวกเขาหวังว่าเมื่อนางยืนอยู่ต่อหน้าผู้คน ความละอายจะเกิดขึ้นในใจพวกเขา (แล้วจะหยุดสู้กัน) และนางก็คิดเช่นนั้นจึงออกเดินทาง โดยปฏิบัติตามพระดำรัสของอัลลอฮ์ที่ว่า: “ไม่มีความดีงามใดในการซุบซิบส่วนใหญ่ของพวกเขา...” และ “และหากสองฝ่ายจากบรรดาผู้ศรัทธาทะเลาะกัน ก็จงไกล่เกลี่ยระหว่างทั้งสอง”</p>
+      <p>อย่างไรก็ตาม การปฏิวัติครั้งใหญ่ที่สุดที่มุ่งหมายจะเปลี่ยนแปลงการปกครองด้วยกำลังในยุคสมัยของเศาะหาบะฮ์ก็คือ การลุกฮือของชาวมะดีนะฮ์ซึ่งเป็นเมืองหลวงของปราชญ์สายหะดีษในปี ฮ.ศ. 63 เพื่อต่อต้านยะซีด บิน มุอาวิยะฮ์ ซึ่งอัซซะฮะบีย์ (เสียชีวิตปี ฮ.ศ. 748) ได้กล่าวถึงเหตุการณ์นี้ไว้ในตำราสิยัร อะอ์ลาม อันนุบะลาอ์ของท่านว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وخرج عليه غير واحد -بعد الحسين- كأهل المدينة؛ قاموا لله" إنكارا للظلم ودفعا للطغيان</blockquote>
+      <p class="ar-translation">“และได้มีผู้คนมากกว่าหนึ่งกลุ่มที่ลุกขึ้นต่อต้านเขา (ยะซีด) -หลังจากท่านอัลหุซัยน์- เช่น ชาวมะดีนะฮ์; พวกเขาได้ลุกขึ้นยืนหยัดเพื่ออัลลอฮ์เพื่อประณามความอยุติธรรมและขจัดทรราชย์”</p>
+      <p>การลุกฮือของชาวมะดีนะฮ์ในครั้งนี้ถูกขนานนามว่า “การปฏิวัติแห่งอัลหัรเราะฮ์” ซึ่งอยู่ภายใต้การนำของอับดุลลอฮ์ บิน มุฏีอ์ อัลอะดะวีย์ (เสียชีวิตปี ฮ.ศ. 73) ในฐานะผู้นำของฝ่ายมุฮาญิรีน และอับดุลลอฮ์ บิน ฮันเซาะละฮ์ อัลอันศอรีย์ (เสียชีวิตปี ฮ.ศ. 63) ในฐานะผู้นำของฝ่ายอันศอร</p>
+      <p>เหตุการณ์นี้เกิดขึ้นหลังจากที่คณะผู้แทนของพวกเขาซึ่งนำโดยอิบนุมุฏีอ์ได้กลับมา และเขาได้ประกาศต่อหน้าผู้คนว่า ยะซีดนั้นดื่มสุรา, ละทิ้งการละหมาด และละเมิดข้อตัดสินแห่งคัมภีร์ (อัลกุรอาน) ตามสายรายงานของอิหม่ามอิบนุกะษีร (เสียชีวิตปี ฮ.ศ. 774) ในตำราอัลบิดายะฮ์ วันนิฮายะฮ์</p>
+      <p>ด้วยเหตุนี้ ชาวมะดีนะฮ์จึงได้ถอนการให้สัตยาบัน (บัยอะฮ์) ต่อยะซีด และได้หันไปให้สัตยาบันแก่อับดุลลอฮ์ บิน มุฏีอ์ ณ มิมบัร (แท่นแสดงธรรม) ของท่านนบี (ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม) และได้ใช้มัสยิดของท่านนบีเป็นศูนย์บัญชาการ ชาวมะดีนะฮ์ส่วนใหญ่ได้ออกไปร่วมกับเขาเพื่อต่อสู้กับกองทัพของยะซีดที่มาจากชาม และบรรดาวีรบุรุษของพวกเขาก็ได้เสียสละอย่างใหญ่หลวงในเหตุการณ์ครั้งนั้น</p>
+      <p>อิบนุกะษีร ได้ถ่ายทอดคำพูดของอิหม่ามอิบนุ ชิฮาบ อัซซุฮ์รีย์ (เสียชีวิตปี ฮ.ศ. 124) เมื่อท่านถูกถามถึงจำนวนผู้เสียชีวิตในวันแห่งอัลหัรเราะฮ์ ท่านตอบว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">سبعمئة من وجوه الناس من المهاجرين والأنصار ووجوه الموالي، وممن لا أعرف من حُرّ وعبْد وغيرهم عشرة آلاف</blockquote>
+      <p class="ar-translation">“เจ็ดร้อยคนจากบรรดาบุคคลสำคัญ ทั้งจากฝ่ายมุฮาญิรีน, อันศอร และมะวาลี (ผู้เข้ารับอิสลามในอานัติ) และอีกหนึ่งหมื่นคนจากผู้ที่ข้าพเจ้าไม่รู้จัก ทั้งที่เป็นไท, ทาส และอื่นๆ”</p>
+      <p>และเนื่องมาจากความโหดร้ายของเหตุการณ์อัลหัรเราะฮ์ ความสัมพันธ์ระหว่างนักหะดีษและอิหม่ามแห่งมะดีนะฮ์สะอีด อิบนุลมุสัยยับ (เสียชีวิตปี ฮ.ศ. 94) กับราชวงศ์อุมัยยะฮ์ก็ได้เสื่อมทรามลง ท่านมีจุดยืนที่กล้าหาญในการวิพากษ์วิจารณ์การปกครองของพวกเขา จนต้องชดใช้ด้วยการถูกโบยตีปางตาย</p>
+      <p>และในบรรดานักหะดีษผู้มีชื่อเสียงที่ขึ้นเป็นผู้นำการปฏิวัติของชาวมะดีนะฮ์และถูกสังหารในเหตุการณ์ครั้งนั้น ได้แก่มะอ์กิล บิน ซินาน อัลอัชญะอีย์ (เสียชีวิตปี ฮ.ศ. 63) ซึ่งอัซซะฮะบีย์ได้กล่าวถึงท่านไว้ในสิยัร อะอ์ลาม อันนุบะลาอ์ว่า: “ท่านมีสถานะเป็นเศาะหาบะฮ์และได้รายงานหะดีษ, เป็นผู้ถือธงของเผ่าอัชญะอ์ในวันพิชิตมักกะฮ์...ท่านได้เดินทางไปพบยะซีดและได้เห็นการกระทำที่น่ารังเกียจต่างๆจากเขา ท่านจึงได้เดินทางกลับมายังมะดีนะฮ์และถอนการให้สัตยาบันต่อยะซีด และท่านคือหนึ่งในผู้อาวุโสของเหตุการณ์อัลหัรเราะฮ์”, อับดุลลอฮ์ บิน ซัยด์ บิน อาศิม อัลอันศอรีย์ (เสียชีวิตปี ฮ.ศ. 63) ซึ่งอบู นุอัยม์ อัลอัศบะฮานีย์ (เสียชีวิตปี ฮ.ศ. 430) ระบุว่าท่าน “ได้เข้าร่วมสงครามบะดัร” และอัซซะฮะบีย์กล่าวเสริมว่าท่านคือ “เจ้าของหะดีษเรื่องการอาบน้ำละหมาด”</p>
+
+      <h2 class="article-h2">การประท้วงลุกฮือของชาวอียิปต์</h2>
+      <p>อับดุลอะซีซ ญามาลุดดีน ได้ระบุไว้ในหนังสือของเขาที่ชื่อว่า “การลุกฮือของชาวอียิปต์จนถึงยุคของอัลมักรีซีย์” (ثورات المصريين حتى عصر المقريزي) โดยอ้างจากอัลมักรีซีย์ว่า การลุกฮือครั้งแรก (ต่อผู้ปกครองชาวอาหรับ ซึ่งไม่ได้ระบุช่วงเวลาที่แน่ชัด) ได้เกิดขึ้นในหลายเมืองทางตอนเหนือของสามเหลี่ยมปากแม่น้ำไนล์ สำหรับการลุกฮือในปี ฮ.ศ. 107 (ค.ศ. 726) นั้น เกิดขึ้นในรัชสมัยของฮิชาม บิน อับดุลมะลิก เคาะลีฟะฮ์องค์ที่สิบแห่งราชวงศ์อุมะวีย์ (ครองราชย์ระหว่างปี ฮ.ศ. 105-125) ตามข้อมูลจากหนังสือที่อับดุลอะซีซได้อ้างอิงไว้ในตำราของเขา อัลหับหาบผู้ปกครองฝ่ายสรรพากรได้เพิ่มอัตราภาษีที่ดิน (เคาะรอจญ์) ขึ้นหนึ่งดีนาร์ต่อทุกๆกีรอฏ (หน่วยวัดพื้นที่) ทำให้ประชาชนในหลายพื้นที่ของอียิปต์เกิดการลุกขึ้นต่อต้าน ผู้ปกครองอัลหุรร์ บิน ยูซุฟ จึงได้ส่งกองกำลังไปทำสงครามกับพวกเขาและสังหารผู้คนไปเป็นจำนวนมาก</p>
+      <p>อับดุลอะซีซได้กล่าวเสริมในหนังสือของเขาต่อไปว่า ในช่วงเริ่มต้นการปกครองของ อับดุลอะซีซ บิน มัรวานได้มีการบังคับเก็บภาษีรายหัว (ญิซยะฮ์) จากบรรดานักบวชเป็นครั้งแรก มีการสำรวจสำมะโนประชากรนักบวช และมีการเก็บภาษีจากโบสถ์และอารามต่างๆ นอกจากนี้ยังมีการแทรกแซงการคัดเลือกตำแหน่งพระสังฆราช ซึ่งทั้งหมดนี้มีเป้าหมายทางการเมืองเพื่อลดทอนอำนาจทางจิตวิญญาณของพระสังฆราช—แม้จะเป็นเพียงในเชิงสัญลักษณ์—โดยทำให้ตำแหน่งนี้มีสถานะไม่ต่างจากข้าราชการคนหนึ่งเท่านั้น</p>
+
+      <h2 class="article-h2">การประท้วงของเศาะหาบะฮ์ในสมัยท่านศาสดา</h2>
+      <p>ท่านอบู ดาวูดได้บันทึกเอาไว้ว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">جاءَ رجلٌ إلى النَّبيِّ صلَّى اللَّهُ عليهِ وسلَّمَ يَشكو جارَهُ ، فقالَ : اذهَب فاصبِر فأتاهُ مرَّتينِ أو ثلاثًا، فقالَ: اذهَب فاطرَحْ متاعَكَ في الطَّريقِ فطرحَ متاعَهُ في الطَّريقِ، فجعلَ النَّاسُ يَسألونَهُ فيُخبِرُهُم خبرَهُ، فجَعلَ النَّاسُ يلعنونَهُ: فعلَ اللَّهُ بِهِ، وفَعلَ، فجاءَ إليهِ جارُهُ فقالَ لَهُ: ارجِع لا تَرى منِّي شيئًا تَكْرَهُهُ</p>
+      </div>
+      <p>“มีชายผู้หนึ่งได้มาหาท่านนบี (ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม) เพื่อร้องทุกข์เรื่องเพื่อนบ้านของเขา ท่านนบีจึงกล่าวว่า: “จงกลับไปและอดทนเถิด” แต่หลังจากนั้น ชายผู้นั้นได้กลับมาหาท่านอีกเป็นครั้งที่สองหรือสาม ท่านนบีจึงกล่าวว่า: “จงไปนำข้าวของของท่านไปวางไว้ที่กลางถนน” ดังนั้น เขาจึงได้นำข้าวของของเขาไปวางไว้ที่กลางถนน ผู้คนจึงเริ่มเข้ามาไต่ถามเขา และเขาก็ได้เล่าเรื่องราวของเขาให้ฟัง เมื่อได้ฟังดังนั้น ผู้คนก็พากันสาปแช่งเพื่อนบ้านคนนั้นว่า: “ขออัลลอฮ์ทรงจัดการเขาอย่างนั้นอย่างนี้...” เพื่อนบ้านของเขาจึงได้รีบมาหาเขาแล้วกล่าวว่า: “ท่านจงกลับเข้าไปเถิด ท่านจะไม่ได้เห็นสิ่งใดจากฉันที่ท่านรังเกียจอีกต่อไป”</p>
+      <p>ในหนังสืออะดับ อัลมุฟร็อดของท่านบุคอรีย์มีเนื้อหาที่เสริมขึ้นมาว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">قَالَ رَجُلٌ : يَا رَسُولَ اللَّهِ ، إِنَّ لِي جَارًا يُؤْذِينِي ، فَقَالَ : انْطَلِقْ فَأَخْرِجْ مَتَاعَكَ إِلَى الطَّرِيقِ ، فَانْطَلَقَ فَأَخْرِجَ مَتَاعَهُ ، فَاجْتَمَعَ النَّاسُ عَلَيْهِ ، فَقَالُوا : مَا شَأْنُكَ ؟ قَالَ : لِي جَارٌ يُؤْذِينِي ، فَذَكَرْتُ لِلنَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ ، فَقَالَ : انْطَلِقْ فَأَخْرِجْ مَتَاعَكَ إِلَى الطَّرِيقِ ، فَجَعَلُوا يَقُولُونَ : اللَّهُمَّ الْعَنْهُ ، اللَّهُمَّ أَخْزِهِ . فَبَلَغَهُ ، فَأَتَاهُ فَقَالَ : ارْجِعْ إِلَى مَنْزِلِكَ ، فَوَاللَّهِ لَا أُؤْذِيكَ</p>
+      </div>
+      <p>“มีชายผู้หนึ่งกล่าวว่า: โอ้ ศาสนทูตแห่งอัลลอฮ์ แท้จริงฉันมีเพื่อนบ้านคนหนึ่งที่คอยสร้างความเดือดร้อนให้แก่ฉัน ท่านนบีจึงกล่าวว่า: จงไปนำข้าวของของท่านออกมาไว้ที่กลางถนน ดังนั้น เขาจึงได้ไปนำข้าวของของเขาออกมา ผู้คนจึงได้มารวมตัวกันรอบๆเขา แล้วกล่าวว่า: เกิดอะไรขึ้นกับท่าน? เขาตอบว่า: ฉันมีเพื่อนบ้านที่คอยสร้างความเดือดร้อนให้ฉัน ฉันจึงได้ไปบอกเล่าเรื่องนี้แก่ท่านนบี (ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม) และท่านก็ได้กล่าวว่า: จงไปนำข้าวของของท่านออกมาไว้ที่กลางถนน เมื่อได้ฟังดังนั้น ผู้คนก็พากันกล่าวว่า: โอ้อัลลอฮ์ ขอทรงสาปแช่งเขาด้วยเถิด, โอ้อัลลอฮ์ ขอทรงทำให้เขาอัปยศด้วยเถิด เรื่องราวดังกล่าวได้ไปถึงหูของเพื่อนบ้านคนนั้น เขาจึงได้รีบมาหาชายผู้นั้นแล้วกล่าวว่า: ท่านจงกลับเข้าไปในบ้านของท่านเถิด ขอสาบานต่ออัลลอฮ์ ฉันจะไม่สร้างความเดือดร้อนให้ท่านอีกต่อไป”</p>
+      <p>อีกประเด็นหนึ่งคือ การประท้วงถือเป็นการฝ่าฝืนมติเอกฉันท์ของนักวิชาการหรือไม่? เพราะมีนักวิชาการหลายท่านได้รายงานเรื่องนี้เอาไว้</p>
+      <p>ประเด็นนี้ท่านอิบนุ หัซมินได้ให้คำตอบเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ورأيت لبعض من نصب نفسه للإمامة والكلام في الدين ، فصولاً ، ذكر فيها الإجماع ، فأتى فيها بكلام ، لو سكت عنه ، لكان أسلمَ له في أخراه ، بل الخرس كانَ أسلمَ له ، وهو ابن مجاهد البصري المتكلم الطائي ، لا المقرئ ، فإنه ادعى فيه الإجماعَ أنهم أجمعوا على أنه لا يُخرج على أئمة الجور ، فاستعظمت ذلك ، ولعمري إنه لعظيم أن يكون قد علمَ أن مخالف الإجماع كافر ، فيلقي هذا إلى الناس ، وقد علمَ أن أفاضل الصحابة وبقية السلف يومَ الحرَّةِ خرجوا على يزيد بن معاوية ، وأن ابن الزبير ومن تابعه من خيار الناس خرجوا عليه ، وأن الحسينَ بن عليٍّ ومن تابعه من خيار المسلمين خرجوا عليه أيضاً ، رضي الله عن الخارجين عليه ، ولعن قَتَلَتَهم ، وأن الحسن البصري وأكابر التابعين خرجوا على الحجاج بسيوفهم ، أترى هؤلاء كفروا ؟ بل واللهِ من كفرهم ، فهو أحق بالكفر منهم ، ولعمري لو كان اختلافاً – يخفى – لعذرناه ، ولكنه مشهور يعرفه أكثر من في الأسواق ، والمخدَّراتُ في خدورهنَّ لاشتهاره ، ولكن يحق على المرء أن يَخطِمَ كلامه ويزُمَّه إلا بعد تحقيق وميزٍ ، ويعلم أن الله تعالى بالمرصاد ، وأن كلام المرء محسوب مكتوب مسؤول عنه يومَ القيامة مقلداً أجر من اتبعه عليه أو وزرَه</blockquote>
+      <p class="ar-translation">“ข้าพเจ้าได้เห็นข้อเขียนบางบทของผู้ที่ตั้งตนขึ้นเป็นผู้นำและนักพูดในเรื่องศาสนา ซึ่งเขาได้กล่าวถึง “มติเอกฉันท์” (อิจญ์มาอ์) และได้นำเสนอคำพูดบางอย่างที่ว่า (คือห้ามประท้วงหรือล้มผู้นำ) หากเขาเพียงแค่นิ่งเงียบเสีย ก็คงจะปลอดภัยกว่าสำหรับชีวิตในโลกหน้าของเขา ไม่เลย! (เขาไม่ได้เงียบไว้) แม้แต่การเป็นใบ้ก็ยังจะปลอดภัยกว่าสำหรับเขา ผู้นั้นคือ อิบนุ มุญาฮิด อัลบัศรีย์ นักเทววิทยาจากเผ่าฏ็ออีย์ (ไม่ใช่ท่านอิบนุ มุญาฮิดที่เป็นนักกิรออาต) เขาได้อ้าง “มติเอกฉันท์” ว่า ปวงปราชญ์ได้ลงความเห็นเป็นเอกฉันท์ว่า “จะต้องไม่ลุกขึ้นต่อต้านบรรดาผู้นำที่ฉ้อฉล” ข้าพเจ้าเห็นว่านี่เป็นเรื่องที่เลวร้ายอย่างยิ่ง และขอสาบานว่ามันเป็นเรื่องที่ใหญ่หลวงนัก ที่คนคนหนึ่งจะรู้ว่า “ผู้ที่ขัดแย้งต่อมติเอกฉันท์คือผู้ปฏิเสธศรัทธา (กาฟิร)” แล้วยังกล้านำเสนอเรื่องนี้ต่อหน้าสาธารณชน ทั้งๆที่เขาก็รู้ดีว่า บรรดาสาวก (เศาะหาบะฮ์) ผู้ทรงคุณธรรมและชนรุ่นสลัฟที่เหลืออยู่ในวันแห่งอัลหัรเราะฮ์ ได้ลุกขึ้นต่อต้านยะซีด บิน มุอาวิยะฮ์, อิบนุซซุบัยร์ และผู้ที่เจริญรอยตามท่าน ซึ่งล้วนเป็นคนดีที่สุด ก็ได้ลุกขึ้นต่อต้านเขา, อัลหุซัยน์ บิน อะลีย์ และผู้ที่เจริญรอยตามท่าน ซึ่งล้วนเป็นมุสลิมที่ประเสริฐที่สุด ก็ได้ลุกขึ้นต่อต้านเขาเช่นกัน ขออัลลอฮ์ทรงพอพระทัยต่อผู้ที่ลุกขึ้นต่อต้านเขา (มุอาวียะฮ์) และขอทรงสาปแช่งบรรดาผู้ที่สังหารพวกเขา, อัลหะสัน อัลบัศรีย์ และบรรดาตาบิอีนผู้ยิ่งใหญ่ ก็ได้ลุกขึ้นต่อต้านอัลหัจญาจด้วยคมดาบของพวกเขา ท่านคิดว่าคนเหล่านั้นได้กลายเป็นผู้ปฏิเสธศรัทธากระนั้นหรือ? ไม่เลย ขอสาบานต่ออัลลอฮ์! ผู้ใดก็ตามที่ตัดสินว่าพวกเขาเป็นผู้ปฏิเสธศรัทธา เขาผู้นั้นต่างหากที่สมควรจะถูกตัดสินว่าเป็นผู้ปฏิเสธศรัทธายิ่งกว่าพวกเขา! และขอสาบานว่า หากนี่เป็นประเด็นขัดแย้งที่ซ่อนเร้นอยู่ เราก็อาจจะพอแก้ต่างให้เขาได้ แต่นี่เป็นเรื่องที่โด่งดังจนเป็นที่รู้จักกันในหมู่ผู้คนส่วนใหญ่ในตลาด และแม้แต่สตรีที่เก็บตัวอยู่ในห้องลับของนางก็ยังรู้ดีถึงความโด่งดังของเรื่องนี้ แต่เป็นหน้าที่ของคนเราที่จะต้องควบคุมและเหนี่ยวรั้งคำพูดของตนไว้ จนกว่าจะได้ตรวจสอบและกลั่นกรองเป็นอย่างดี และพึงรู้เถิดว่า อัลลอฮ์ ตะอาลาทรงเฝ้ามองอยู่เสมอ และคำพูดของคนเรานั้นจะถูกนับ ถูกบันทึก และจะถูกสอบสวนถึงมันในวันกิยามะฮ์ โดยที่เขาจะต้องแบกรับทั้งผลบุญของผู้ที่ปฏิบัติตามเขา หรือบาปของผู้ที่ปฏิบัติตามเขาด้วย”</p>
+      <p>ท่านอันนะวาวีย์ได้ถ่ายทอดคำกล่าวของอัลกอฎีย์อิยาฎเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقد رد عليه بعضهم هذا بقيام الحسن  وابن الزبير  وأهل المدينة  على بني أمية ،  وبقيام جماعة عظيمة من التابعين والصدر الأول على الحجاج  مع ابن الأشعث ،  وتأول هذا القائل قوله : ألا ننازع الأمر أهله في أئمة العدل ، وحجة الجمهور أن قيامهم على الحجاج  ليس بمجرد الفسق ، بل لما غير من الشرع وظاهر من الكفر</blockquote>
+      <p class="ar-translation">“และนักวิชาการบางท่านได้ตอบโต้ทัศนะของเขา (อิบนุ มุญาฮิด) ในเรื่องนี้ โดยอ้างถึงการลุกขึ้นต่อต้านราชวงศ์อุมัยยะฮ์ของท่านอัลหะสัน, ท่านอิบนุ อัซซุบัยร์ และชาวมะดีนะฮ์ และการลุกขึ้นต่อต้านอัลหัจญาจของกลุ่มชนจำนวนมากจากบรรดาตาบิอีนและชนรุ่นแรกร่วมกับอิบนุ อัลอัชอัษ และผู้ที่ยึดถือทัศนะนี้ (ที่อนุญาตให้ต่อต้าน) ได้ตีความวจนะของท่านนบีที่ว่า “ว่าเราจะไม่ช่วงชิงอำนาจจากผู้ที่ครอบครองมัน” ว่าหมายถึง บรรดาผู้นำที่ยุติธรรม เท่านั้น ส่วนหลักฐานของปราชญ์ส่วนใหญ่ (ญุมฮูร) นั้นคือ การที่พวกเขาได้ลุกขึ้นต่อต้านอัลหัจญาจนั้น ไม่ใช่เป็นเพียงเพราะการกระทำชั่วของเขา หากแต่เป็นเพราะการที่เขาได้เปลี่ยนแปลงบทบัญญัติศาสนาและได้แสดงออกถึงการปฏิเสธศรัทธา (กุฟร์) อย่างชัดแจ้ง”</p>
+      <p>แต่ประเด็นที่ต้องย้ำให้ขึ้นใจก็คือ การประท้วงในปัจจุบันส่วนใหญ่นั้น ไม่ได้มีเป้าหมายเพื่อ “โค่นล้มผู้ปกครอง” อย่างที่ใครบางกลุ่มพยายามจะผูกขาดความหมาย</p>
+      <p>ดังนั้น การหยิบยกเอา “ไม้บรรทัดอันเดียว” มาวัดการประท้วงทุกรูปแบบบนโลกใบนี้ แล้วแปะป้ายว่า “เมื่อมีการประท้วง = ล้มผู้นำ” จึงเป็นตรรกะวิบัติอย่างยิ่ง การนำเอาประเด็นเรื่องการโค่นล้มผู้ปกครองมาครอบจักรวาลให้กับการประท้วงทุกเรื่อง ตั้งแต่เรื่องโลกร้อนไปจนถึงเรื่องปาเลสไตน์ จึงเป็นความพยายามที่จะทำให้ “ฟิกฮ์” (นิติศาสตร์) กลายเป็นเรื่องขาวกับดำ โดยไม่สนใจ “วากิอ์” (สภาพความเป็นจริง) เลยแม้แต่น้อย การกระทำเช่นนี้ไม่ต่างอะไรกับการเอาหุก่มเรื่องการเชือดสัตว์ไปใช้กับการผ่าตัดคนไข้ ซึ่งมันคนละเรื่องเดียวกัน</p>
+
+      <h2 class="article-h2">บทส่งท้าย</h2>
+      <p>และท้ายที่สุด นี่คือสิ่งที่อัลลอฮ์ได้ทรงโปรดให้เป็นเรื่องง่ายและสะดวกในการแบ่งปัน เพื่อตอบคำถามมากมายในประเด็นนี้ ท่ามกลางช่วงเวลาที่วุ่นวาย</p>
+      <p>แต่ก่อนจะจบบทความนี้ มีข้อควรระวังที่สำคัญยิ่งกว่าการถกเถียงว่าสิ่งใด “หะรอม” หรือ “หะลาล” นั่นคือ “กับดัก” ของการประท้วง ที่อาจทำให้เราไขว้เขว หรือทำให้เรา “เสพติดความชอบธรรม” ของการได้ส่งเสียง จนหลงลืมไปว่ายังมี “การกระทำ” อื่นๆอีกมากมายที่มีผลกระทบสูงกว่ารออยู่</p>
+      <p>ด้วยเหตุนี้ จึงเป็นเรื่องสำคัญอย่างยิ่งที่จะต้องมีกรอบความคิดที่ถูกต้องในการเข้าร่วมการประท้วง เพื่อไม่ให้การเคลื่อนไหวของเราเป็นเพียง “อีเวนต์แสดงพลัง” หรือ “เทศกาลระบายอารมณ์” ที่จบลงเมื่อแยกย้ายกลับบ้าน โดยไม่มีการขับเคลื่อนที่เป็นรูปธรรมตามมา เพื่อนำไปสู่ผลลัพธ์ที่ก่อให้เกิดการเปลี่ยนแปลงอย่างยั่งยืน</p>
+      <p>ขออัลลอฮ์ทรงโปรดยกการกดขี่ข่มเหงทุกอณูออกไปจากหน้าผืนแผ่นดินนี้ และทรงโปรดให้เราเป็นสื่อกลางในการสร้างคุณประโยชน์แก่ผู้ถูกกดขี่เสมอไป</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การชุมนุมประท้วงในกฎหมายอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/protest-in-islamic-law.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
