@@ -1504,3 +1504,27 @@ html:not(.dark-mode) .ifp-iconbtn .ic-moon{opacity:1;transform:translateY(0) sca
 .ifp-copybtn .ifp-tip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(4px);background:var(--text-primary);color:var(--bg-primary);font-size:11px;font-weight:600;padding:5px 10px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;}
 .ifp-copybtn .ifp-tip::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:4px solid transparent;border-top-color:var(--text-primary);}
 .ifp-copybtn.copied .ifp-tip{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ============================================================
+   Thai verse block (poetry) — centered, NOT italic, spaced from prose.
+   Pairs below an Arabic verse ar-quote. Line breaks via <br>.
+   ============================================================ */
+.poem-th {
+  font-family: 'Sarabun', sans-serif;
+  text-align: center;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  margin: 22px 0;
+  font-style: normal;
+}
+
+/* Hero-less title banner (Rule 67: solid banner, NO <img>, no 404). */
+.article-feature.no-hero { height: auto; min-height: 0; background: #1d2537; }
+.article-feature.no-hero::after { display: none; }
+.article-feature.no-hero .article-feature-content { position: static; }
+.article-feature.no-hero .article-feature-inner { padding: 72px 32px 56px; }
+.article-feature.no-hero .article-feature-title { color: #f5f1ea; text-shadow: none; }
+.article-feature.no-hero .article-feature-eyebrow { color: rgba(255,255,255,0.65); }
+@media (max-width: 640px) {
+  .article-feature.no-hero .article-feature-inner { padding: 56px 20px 40px; }
+}
