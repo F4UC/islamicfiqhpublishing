@@ -1114,12 +1114,14 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
 .ar-feature {
   font-family: 'Amiri', serif;
   direction: rtl; text-align: center;
-  font-size: 1.6rem; line-height: 2.1;
+  font-size: 1.6rem; line-height: 1.9;
   color: var(--text-primary);
-  padding: 24px 24px; margin: 28px 0;
+  padding: 24px 24px; margin: 22px 0;
   background: rgba(255,255,255,0.02);
 }
-.ar-translation { color: var(--text-tertiary); margin: -12px 0 28px; line-height: 2.0; font-style: italic; }
+.ar-translation { color: var(--text-tertiary); margin: -14px 0 22px; line-height: 2.0; font-style: italic; }
+/* Rule 68 — .ar-quote spacing centralised here (inline <style> no longer sets margin/line-height) */
+.ar-quote { margin: 22px 0; line-height: 1.9; }
 
 /* B.3 — Collapsed toggle: ulama quotes / long excerpts */
 .ar-toggle { margin: 8px 0 24px; }
@@ -1178,7 +1180,7 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
 .aya-block,
 .hadith-block {
   position: relative;
-  margin: 36px 0;
+  margin: 22px 0;
   padding: 56px 44px 48px;
   /* No distinct card: transparent so it inherits the body surface and stays
      correct in both light and dark mode (never hardcode a background). */
@@ -1199,7 +1201,7 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
 .hadith-block .block-ar {
   font-family: 'Amiri', serif;
   direction: rtl; text-align: center;
-  font-size: 2.2rem; line-height: 2.1;
+  font-size: 2.2rem; line-height: 1.9;
   color: var(--text-primary); margin: 0;
 }
 .aya-block .block-source,

@@ -19,7 +19,7 @@
 
 ## 2. Hero / feature image
 - [ ] hero block โครงเหมือน golden master: รูป feature, แคปชันเครดิตภาพ ("ภาพ: …"), ลิงก์หมวด ("นิติศาสตร์ / ฟิกฮ์" → `/pages/<category>.html`)
-- [ ] `<h1>` = ชื่อบทความ + em-dash + ชื่อเว็บ ("… — Islamic Fiqh Publishing") ตาม Rule 44
+- [ ] `<h1>` = ชื่อบทความล้วน (ไม่มีชื่อเว็บ) — ชื่อเว็บอยู่ใน <title> และ OG เท่านั้น ตามโครง golden master จริง สอดคล้อง Rule 44
 - [ ] รูป hero อยู่บน CDN `images.islamicfiqhpublishing.com/articles/<slug>.…` ไม่ฝัง base64/ไม่ลิงก์นอก
 - [ ] มีเครดิตภาพจริง (ผู้ถ่าย/แหล่ง) — ห้ามปล่อย placeholder
 
@@ -42,6 +42,7 @@
 - [ ] `ar-feature` = บล็อก Arabic เด่น/ยกพิเศษ (ใช้สงวน ตรงตาม golden master = 2 จุด)
 - [ ] ทุก ar-quote มีคำแปลไทยกำกับเสมอ ไม่ปล่อย Arabic ลอยไร้แปล
 - [ ] tag counts สมดุล ไม่มี wrapper เปิดค้าง/ซ้ำ
+- [ ] ระยะห่าง Arabic↔Thai แคบและสม่ำเสมอตาม Rule 68 (margin บน=ล่างเท่ากัน, line-height ไม่กว้างเกิน) — กำหนดใน article.css ที่เดียว
 
 ## 6. Footnote & บรรณานุกรม
 - [ ] footnote ลิงก์สองทาง: `#ref-N` ↔ `#fnref-N` ครบทุกคู่ ไม่มี orphan
