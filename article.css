@@ -1114,11 +1114,16 @@ html.dark-mode .numbered-section-dark { border-left-color: var(--text-primary); 
 .ar-feature {
   font-family: 'Amiri', serif;
   direction: rtl; text-align: center;
-  font-size: 1.6rem; line-height: 1.9;
+  font-size: 1.45rem; line-height: 1.9;
   color: var(--text-primary);
   padding: 24px 24px; margin: 22px 0;
   background: rgba(255,255,255,0.02);
 }
+/* Uniform Arabic font-size: aya/hadith/feature all match the scholar .ar-quote
+   size (1.45rem). id-scoped to override the legacy inline <style>
+   .ar-feature { font-size: 1.6rem } that ships in article bodies — block
+   backgrounds / flat-bg distinction (Rules 53/61) and line-height are untouched. */
+body#article-page .ar-feature { font-size: 1.45rem; }
 .ar-translation { color: var(--text-tertiary); margin: -14px 0 22px; line-height: 2.0; font-style: normal; }
 /* Rule 68 — .ar-quote spacing centralised here (inline <style> no longer sets margin/line-height) */
 .ar-quote { margin: 22px 0; line-height: 1.9; }
@@ -1209,7 +1214,7 @@ p:not(.ar-translation) + .hadith-block { margin-top: -16px; }
 .hadith-block .block-ar {
   font-family: 'Amiri', serif;
   direction: rtl; text-align: center;
-  font-size: 2.2rem; line-height: 1.9;
+  font-size: 1.45rem; line-height: 1.9;
   color: var(--text-primary); margin: 0;
 }
 .aya-block .block-source,
@@ -1220,7 +1225,8 @@ p:not(.ar-translation) + .hadith-block { margin-top: -16px; }
 }
 @media (max-width: 640px) {
   .aya-block, .hadith-block { padding: 48px 24px 40px; }
-  .aya-block .block-ar, .hadith-block .block-ar { font-size: 1.7rem; }
+  /* Arabic font-size stays uniform on mobile too: aya/hadith inherit the base
+     1.45rem (same as .ar-quote), no separate oversize override. */
 }
 
 /* ============================================================
