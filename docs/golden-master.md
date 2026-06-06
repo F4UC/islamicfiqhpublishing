@@ -43,6 +43,7 @@
 - [ ] ทุก ar-quote มีคำแปลไทยกำกับเสมอ ไม่ปล่อย Arabic ลอยไร้แปล
 - [ ] tag counts สมดุล ไม่มี wrapper เปิดค้าง/ซ้ำ
 - [ ] ระยะห่าง Arabic↔Thai แคบและสม่ำเสมอตาม Rule 68 (margin บน=ล่างเท่ากัน, line-height ไม่กว้างเกิน) — กำหนดใน article.css ที่เดียว
+- [ ] Arabic block gap equal above & below (~8px); Thai translation/verse non-italic.
 
 ## 6. Footnote & บรรณานุกรม
 - [ ] footnote ลิงก์สองทาง: `#ref-N` ↔ `#fnref-N` ครบทุกคู่ ไม่มี orphan
