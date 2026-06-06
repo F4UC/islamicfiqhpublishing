@@ -719,102 +719,131 @@ document.addEventListener("DOMContentLoaded", function() {
     // ⭐ 10. ระบบสร้างรายการบทความจาก articles.json ⭐
     // ==========================================
     (function() {
-        var container = document.querySelector('section.idx-list-grid[data-category]');
-        if (!container) return;
-        var category = container.getAttribute('data-category');
-        var paginationEl = document.getElementById('pagination');
-        var itemsPerPage = 6;
-
         function _esc(s) {
             return String(s)
                 .replace(/&/g, '&amp;').replace(/</g, '&lt;')
                 .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         }
 
-        articlesPromise.then(function(all) {
-            var indexed = all.map(function(a, i) { return { a: a, i: i }; });
-            var filtered = indexed
-                .filter(function(x) {
-                    // New schema: categoryKey (slug). Guard against old/malformed data.
-                    return x.a && x.a.categoryKey === category;
-                })
+        // newest-first (date desc), stable by original index
+        function _sortNewest(all) {
+            return all.map(function(a, i) { return { a: a, i: i }; })
                 .sort(function(x, y) {
                     if (x.a.date > y.a.date) return -1;
                     if (x.a.date < y.a.date) return 1;
                     return x.i - y.i;
                 })
                 .map(function(x) { return x.a; });
+        }
 
-            if (filtered.length === 0) return;
+        // shared .idx-row builder — identical markup/format on homepage, category & all-articles
+        function _buildRow(art, idx) {
+            var num = String(idx + 1).padStart(2, '0');
+            var readTime = art.readingTime != null ? art.readingTime : '—';
+            var row = document.createElement('a');
+            row.href = art.url || '#';
+            row.className = 'idx-row';
+            row.innerHTML =
+                '<div class="idx-num">' + num + '</div>' +
+                '<div class="idx-cat">' + _esc(art.categoryLabel || '') + '</div>' +
+                '<div class="idx-title">' + _esc(art.title || '') + '</div>' +
+                '<div class="idx-meta">โดย <span>' + _esc(art.author || '') + '</span>' +
+                ' &nbsp;·&nbsp; ' + _esc(art.dateDisplay || '') +
+                ' &nbsp;·&nbsp; อ่าน ' + readTime + ' นาที</div>' +
+                '<div class="idx-arrow"></div>';
+            return row;
+        }
 
-            container.innerHTML = '';
-            filtered.forEach(function(art, idx) {
-                try {
-                    var num = String(idx + 1).padStart(2, '0');
-                    var readTime = art.readingTime != null ? art.readingTime : '—';
-                    var row = document.createElement('a');
-                    row.href = art.url || '#';
-                    row.className = 'idx-row';
-                    row.innerHTML =
-                        '<div class="idx-num">' + num + '</div>' +
-                        '<div class="idx-cat">' + _esc(art.categoryLabel || '') + '</div>' +
-                        '<div class="idx-title">' + _esc(art.title || '') + '</div>' +
-                        '<div class="idx-meta">โดย <span>' + _esc(art.author || '') + '</span>' +
-                        ' &nbsp;·&nbsp; ' + _esc(art.dateDisplay || '') +
-                        ' &nbsp;·&nbsp; อ่าน ' + readTime + ' นาที</div>' +
-                        '<div class="idx-arrow"></div>';
-                    container.appendChild(row);
-                } catch (e) {
-                    console.warn('[IFP] row build error entry ' + idx + ':', e);
-                }
-            });
+        // --- Category / all-articles list: section.idx-list-grid[data-category] ---
+        // data-category="all" renders every entry (no category filter), date desc.
+        (function() {
+            var container = document.querySelector('section.idx-list-grid[data-category]');
+            if (!container) return;
+            var category = container.getAttribute('data-category');
+            var paginationEl = document.getElementById('pagination');
+            var itemsPerPage = 6;
 
-            if (!paginationEl || filtered.length <= itemsPerPage) return;
-
-            var rows = Array.from(container.getElementsByClassName('idx-row'));
-            var totalPages = Math.ceil(rows.length / itemsPerPage);
-            var currentPage = 1;
-
-            function showPage(page) {
-                if (page < 1 || page > totalPages) return;
-                currentPage = page;
-                var start = (page - 1) * itemsPerPage;
-                var end = start + itemsPerPage;
-                rows.forEach(function(r, i) {
-                    r.style.setProperty('display', (i >= start && i < end) ? 'grid' : 'none', 'important');
+            articlesPromise.then(function(all) {
+                var filtered = _sortNewest(all).filter(function(a) {
+                    return a && (category === 'all' || a.categoryKey === category);
                 });
-                renderPagination();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
 
-            function renderPagination() {
-                paginationEl.innerHTML = '';
-                if (totalPages <= 1) return;
-                var prev = document.createElement('button');
-                prev.className = 'page-btn';
-                prev.innerHTML = '« ก่อนหน้า';
-                prev.disabled = currentPage === 1;
-                prev.onclick = function() { showPage(currentPage - 1); };
-                paginationEl.appendChild(prev);
-                for (var p = 1; p <= totalPages; p++) {
-                    (function(p) {
-                        var btn = document.createElement('button');
-                        btn.className = 'page-btn' + (currentPage === p ? ' active' : '');
-                        btn.innerText = p;
-                        btn.onclick = function() { showPage(p); };
-                        paginationEl.appendChild(btn);
-                    })(p);
+                if (filtered.length === 0) return;
+
+                container.innerHTML = '';
+                filtered.forEach(function(art, idx) {
+                    try {
+                        container.appendChild(_buildRow(art, idx));
+                    } catch (e) {
+                        console.warn('[IFP] row build error entry ' + idx + ':', e);
+                    }
+                });
+
+                if (!paginationEl || filtered.length <= itemsPerPage) return;
+
+                var rows = Array.from(container.getElementsByClassName('idx-row'));
+                var totalPages = Math.ceil(rows.length / itemsPerPage);
+                var currentPage = 1;
+
+                function showPage(page) {
+                    if (page < 1 || page > totalPages) return;
+                    currentPage = page;
+                    var start = (page - 1) * itemsPerPage;
+                    var end = start + itemsPerPage;
+                    rows.forEach(function(r, i) {
+                        r.style.setProperty('display', (i >= start && i < end) ? 'grid' : 'none', 'important');
+                    });
+                    renderPagination();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
-                var next = document.createElement('button');
-                next.className = 'page-btn';
-                next.innerHTML = 'ถัดไป »';
-                next.disabled = currentPage === totalPages;
-                next.onclick = function() { showPage(currentPage + 1); };
-                paginationEl.appendChild(next);
-            }
 
-            showPage(1);
-        });
+                function renderPagination() {
+                    paginationEl.innerHTML = '';
+                    if (totalPages <= 1) return;
+                    var prev = document.createElement('button');
+                    prev.className = 'page-btn';
+                    prev.innerHTML = '« ก่อนหน้า';
+                    prev.disabled = currentPage === 1;
+                    prev.onclick = function() { showPage(currentPage - 1); };
+                    paginationEl.appendChild(prev);
+                    for (var p = 1; p <= totalPages; p++) {
+                        (function(p) {
+                            var btn = document.createElement('button');
+                            btn.className = 'page-btn' + (currentPage === p ? ' active' : '');
+                            btn.innerText = p;
+                            btn.onclick = function() { showPage(p); };
+                            paginationEl.appendChild(btn);
+                        })(p);
+                    }
+                    var next = document.createElement('button');
+                    next.className = 'page-btn';
+                    next.innerHTML = 'ถัดไป »';
+                    next.disabled = currentPage === totalPages;
+                    next.onclick = function() { showPage(currentPage + 1); };
+                    paginationEl.appendChild(next);
+                }
+
+                showPage(1);
+            });
+        })();
+
+        // --- Homepage "บทความล่าสุด": newest 6 across all categories ---
+        (function() {
+            var home = document.getElementById('indexList');
+            if (!home) return;
+            articlesPromise.then(function(all) {
+                var list = _sortNewest(all).slice(0, 6);
+                if (list.length === 0) return;
+                home.innerHTML = '';
+                list.forEach(function(art, idx) {
+                    try {
+                        home.appendChild(_buildRow(art, idx));
+                    } catch (e) {
+                        console.warn('[IFP] home row build error ' + idx + ':', e);
+                    }
+                });
+            });
+        })();
     })();
 
     // ==========================================
