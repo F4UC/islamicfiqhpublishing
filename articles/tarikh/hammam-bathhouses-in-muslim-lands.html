@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ฮัมมาม โรงอาบน้ำในดินแดนมุสลิม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="">
+<meta name="keywords" content="ฮัมมาม, โรงอาบน้ำ, อารยธรรมอิสลาม, วัฒนธรรม, ประวัติศาสตร์, สังคมมุสลิม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ฮัมมาม โรงอาบน้ำในดินแดนมุสลิม — Islamic Fiqh Publishing">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/hammam-bathhouses-in-muslim-lands.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="hammam-bathhouses-in-muslim-lands">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/tarikh.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">ฮัมมาม โรงอาบน้ำในดินแดนมุสลิม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">“ฮัมมาม” (ภาษาอาหรับ: حمّام) หรือที่ชาวตะวันตกมักขนานนามกันว่า “โรงอาบน้ำแบบตุรกี” เป็นรูปแบบหนึ่งของการอาบน้ำด้วยไอน้ำ หรือสถานอาบน้ำสาธารณะที่มีความเกี่ยวพันอย่างลึกซึ้งกับโลกอิสลาม ถือเป็นอัตลักษณ์อันโดดเด่นในวัฒนธรรมของโลกมุสลิม โดยได้รับมรดกตกทอดมาจากแบบจำลอง “โรงอาบน้ำแบบโรมัน” ในทางประวัติศาสตร์ เราสามารถพบเห็นโรงอาบน้ำมุสลิมหรือฮัมมามได้ทั่วทั้งดินแดนตะวันออกกลาง, แอฟริกาเหนือ, อัลอันดาลุส, เอเชียกลาง, อนุทวีปอินเดีย และในยุโรปตะวันออกเฉียงใต้ โดยเฉพาะแถบบอลข่านและฮังการีภายใต้อาณัติของจักรวรรดิออตโตมัน</p>
+      <p>นานาอารยธรรมโบราณล้วนรู้จักฮัมมามและให้ความสำคัญกับการก่อสร้างและตกแต่งสถานที่แห่งนี้อย่างวิจิตรบรรจง อีกทั้งยังใส่ใจในการวางระบบทางเดินน้ำ การสร้างสระและถังพักน้ำให้ประณีต รวมถึงการประดับประดาห้องโถงสำหรับนั่งพักผ่อน เพราะเหล่าเศรษฐีและผู้มีอันจะกินในยุคนั้นต่างใช้ฮัมมามเป็นสถานที่เพื่อความสะอาดและการชำระกาย และยังเป็นสโมสรสำหรับการรื่นเริงบันเทิงและเสพสุขจากความสำราญหลากรูปแบบ</p>
+      <p>อารยธรรมเหล่านี้ได้แก่ ชาวบาบิโลเนียน แอสซีเรียน อียิปต์ เอธิโอเปีย และกรีก เป็นต้น พลูตาร์ก (Plutarch) เคยบันทึกไว้ว่า: “เมื่อครั้งที่อเล็กซานเดอร์มหาราช ได้เข้าพิชิตเปอร์เซียและได้ย่างกรายเข้าสู่ฮัมมามของกษัตริย์ดาริอุส พระองค์ถึงกับตื่นตะลึงเป็นที่สุดเมื่อได้ทอดพระเนตรเห็นท่อทางเดินน้ำและภาชนะเครื่องใช้ต่างๆ ที่ส่วนใหญ่ล้วนทำขึ้นจากทองคำและเงิน”</p>
+      <p>ทว่าเมื่อย้อนกลับมาดูในบทกวีของชาวอาหรับยุคญาฮิลียะฮ์ (ยุคก่อนอิสลาม) และกวียุคคาบเกี่ยว (มุค็อฎเราะมีน - ผู้ทันเห็นทั้งสองยุค) เราแทบไม่พบการเอ่ยถึงฮัมมามเลย และเป็นที่แน่ชัดว่าท่านศาสนทูต และเหล่าสาวกส่วนใหญ่ ต่างอาบน้ำชำระกายในบึงน้ำหรือสระน้ำตามธรรมชาติ</p>
+      <p>จนกระทั่งเมื่อชาวมุสลิมยุคแรกได้อพยพโยกย้ายถิ่นฐานไปยังดินแดนชาม (ซีเรีย) พวกเขาจึงได้รู้จักกับฮัมมามทั้งแบบสาธารณะและส่วนตัว มีทั้งผู้ที่ชื่นชอบความสบายในการอาบน้ำแบบนี้ และผู้ที่ต่อต้านโดยมองว่ามันทำให้ผู้คนหมกมุ่นจนละเลยผลประโยชน์ของประชาชาติ</p>
+      <p>ฮัมมามในยุคนั้น ก็เฉกเช่นในยุคของเรา เป็นช่องทางทำมาหากินที่สร้างรายได้เป็นกอบเป็นกำ</p>
+      <p>ครั้งหนึ่งอะบู บักเราะฮ์ ถามลูกชายของเขา มุสลิม ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يا بني والله ما تلى عملا قط وما أراك تقصر عن إخوتك في النفق فقال : إن كتمت علي أخبرك ؟ قال : فإني أفعل قال : فإني أغتل من حمامي هذا، في كل يوم ألف درهم وطعاما كثيرا</blockquote>
+      <p class="ar-translation">“ลูกเอ๋ย พ่อไม่เคยเห็นเจ้าทำงานการอะไร แต่ทำไมเจ้าถึงใช้จ่ายเงินทองได้ไม่น้อยหน้าพี่น้องคนอื่นๆ เลย? ลูกชายตอบว่า: หากพ่อจะเก็บเรื่องนี้เป็นความลับ ข้าจะบอก, พ่อรับคำ ลูกชายจึงเฉลยว่า: ข้าเก็บรายได้จากฮัมมามของข้าได้วันละหนึ่งพันดิรฮัม พร้อมกับอาหารอีกจำนวนมาก”</p>
+      <p>ต่อมามุสลิมล้มป่วยลง เขาจึงสั่งเสียและเล่าความลับเรื่องรายได้ของฮัมมามให้พี่ชาย อับดุรเราะห์มาน บิน อะบี บักเราะฮ์ฟัง แต่พี่ชายกลับนำเรื่องนี้ไปแพร่งพราย และไปขออนุญาตผู้ปกครองเมืองเพื่อสร้างฮัมมามบ้าง คนอื่นๆ ก็พากันขอสร้างตาม จนฮัมมามผุดขึ้นมากมาย</p>
+      <p>เมื่อมุสลิมหายป่วย กิจการฮัมมามของเขาก็เจ๊งไม่เป็นท่า เขาได้แต่สาปแช่งอับดุรเราะห์มานว่า มันเป็นบ้าอะไร! ขออัลลอฮ์ทรงตัดญาติขาดมิตรกับมัน</p>
+      <p>จากเรื่องราวนี้สะท้อนให้เห็นว่า ตั้งแต่สมัยนั้นการสร้างฮัมมามต้องได้รับอนุญาตจากเจ้าเมือง (วะลีย์) เสียก่อน ซึ่งเป็นเรื่องที่เข้าใจได้ เพราะจำเป็นต้องเลือกทำเลที่เหมาะสม เพื่อไม่ให้ควันไฟไปรบกวนเพื่อนบ้าน ต้องมีการตรวจสอบโครงสร้างเพื่อไม่ให้พังถล่มลงมาทับผู้ใช้บริการ และเจ้าของกิจการต้องเป็นผู้มีความซื่อสัตย์สุจริต</p>
+      <p>นอกจากนี้ยังชี้ให้เห็นว่า ผู้คนนิยมเข้าฮัมมามกันอย่างเนืองแน่น และค่าเข้าใช้บริการนั้นจ่ายเป็นทั้ง “เงินสดและอาหาร” และยังมีการระบุถึงฮัมมามที่มีผู้หญิงเป็นผู้ดูแลอีกด้วย</p>
+      <p>ในวัฒนธรรมอิสลาม นัยสำคัญของฮัมมามครอบคลุมทั้งมิติทางศาสนาและทางสังคม กล่าวคือ มันทำหน้าที่รองรับความจำเป็นในการ “ชำระล้างร่างกายตามศาสนบัญญัติ” ในขณะเดียวกันก็เป็นสถานที่สำหรับรักษาสุขอนามัยทั่วไป ในยุคสมัยที่ระบบประปาส่วนตัวตามบ้านเรือนยังไม่ถือกำเนิดขึ้น อีกทั้งยังทำหน้าที่ทางสังคมด้านอื่นๆ เช่น เป็นสโมสรสำหรับพบปะสังสรรค์ซึ่งมีการแบ่งแยกพื้นที่ระหว่างบุรุษและสตรีอย่างชัดเจน</p>
+      <p>ซากทางโบราณคดีเป็นประจักษ์พยานยืนยันการมีอยู่ของโรงอาบน้ำในโลกอิสลามมาแต่เนิ่นนานตั้งแต่สมัยราชวงศ์อุมัยยะฮ์ ศตวรรษที่ 7-8 และความสำคัญของมันยังคงสืบเนื่องมาจนถึงยุคปัจจุบัน สถาปัตยกรรมของฮัมมามมีวิวัฒนาการมาจากผังของโรงอาบน้ำโรมันและกรีก โดยจัดเรียงลำดับห้องไว้อย่างเป็นระบบ ได้แก่ ห้องผลัดเปลี่ยนเสื้อผ้า, ห้องเย็น, ห้องอุ่น และห้องร้อน ความร้อนภายในถูกสร้างขึ้นจากเตาหลอมที่ทำหน้าที่ต้มน้ำและสร้างไอน้ำ ในขณะที่ควันและอากาศร้อนจะถูกส่งผ่านไปตามท่อลำเลียงใต้พื้นห้อง</p>
+      <p>สำหรับฮัมมามในยุคใกล้ปัจจุบัน ผู้มาเยือนจะเปลื้องผ้าโดยยังคงสวมผ้าปิดของสงวนหรือผ้าเตี่ยวไว้เพื่อรักษาความอุจาดตา จากนั้นจะก้าวเข้าสู่ห้องที่มีอุณหภูมิร้อนขึ้นตามลำดับเพื่อขับเหงื่อ ก่อนจะเข้าสู่ขั้นตอนการชำระล้างโดยพนักงานชายหรือหญิง (ตามเพศของผู้ใช้บริการ) ซึ่งจะทำการขัดผิวอย่างหนักหน่วงด้วยสบู่ และจบลงด้วยการล้างตัวด้วยน้ำอุ่น</p>
+      <p>สิ่งที่แตกต่างจากโรงอาบน้ำของโรมันหรือกรีกคือ ผู้ใช้บริการมักชำระร่างกายด้วย “น้ำไหล” แทนที่จะลงไปแช่ตัวในอ่างน้ำขัง ทั้งนี้เป็นไปตามข้อกำหนดเรื่องความสะอาดของศาสนาอิสลาม แม้ว่าการแช่ตัวในสระน้ำจะเคยเป็นธรรมเนียมปฏิบัติในฮัมมามบางภูมิภาค เช่น ในอิหร่านก็ตาม และถึงแม้ว่าโดยทั่วไปฮัมมามในทุกพื้นที่จะมีระบบการดำเนินงานที่คล้ายคลึงกัน แต่ก็ยังคงปรากฏความแตกต่างในรายละเอียดตามภูมิภาค ทั้งในแง่ของวิธีการใช้งานและรูปแบบสถาปัตยกรรม</p>
+
+      <h2 class="article-h2">นิรุกศาสตร์ของฮัมมาม</h2>
+      <p>คำว่า “ฮัมมาม” เป็นคำนามที่มีความหมายครอบคลุมตั้งแต่การอาบน้ำ, ห้องน้ำ, โรงอาบน้ำ ไปจนถึงสระว่ายน้ำ ซึ่งคำนี้สืบรากศัพท์มาจากรากศัพท์ภาษาอาหรับในอักษรสามตัว คือ ฮา-มีม-มีม (ح م م) ซึ่งสื่อความหมายอันเกี่ยวเนื่องกับ “ความร้อน” หรือ “การทำให้ร้อน”</p>
+      <p>ในภาษาอังกฤษ การนำคำว่า “โรงอาบน้ำตุรกี” (Turkish baths) มาใช้เป็นคำไวพจน์เรียกแทนฮัมมามนั้น ถือเป็นการใช้ที่คลาดเคลื่อน ซึ่งต้องยกผลประโยชน์แห่งความเข้าใจผิดนี้ให้แก่บรรดานักเขียนสารคดีท่องเที่ยวชาวต่างชาติ ผู้เป็นต้นเหตุในการเผยแพร่ฮัมมามให้เป็นที่นิยมในยุโรป โดยวาดภาพให้มันเป็นอัตลักษณ์ของความเป็น “ตุรกี” โดยเนื้อแท้ แต่ทว่าในความเป็นจริง ชาวออตโตมันเองกลับมิได้นิยามฮัมมามด้วยถ้อยคำเช่นนั้น</p>
+      <p>ด้วยเหตุนี้ การใช้คำว่า “โรงอาบน้ำตุรกี” จึงเป็นเรื่องที่มีปัญหาในเชิงนิยามศาสตร์ เพราะหากใช้ในความหมายตามมุมมองของนักเขียนสารคดีท่องเที่ยว มันก็คือแนวคิดแบบ “บูรพคดีนิยม” แต่หากใช้ในเชิงชาติพันธุ์หรือชาตินิยม มันก็คือการฉายภาพมโนทัศน์ของศตวรรษที่ 19 ย้อนกลับไปครอบทับช่วงเวลาในศตวรรษก่อนหน้าอย่างผิดยุคผิดสมัย ทั้งนี้มีการบันทึกการใช้คำว่า “Turkish bath” เป็นครั้งแรกในภาษาอังกฤษเมื่อปี ค.ศ. 1644</p>
+      <p>ในสารานุกรมนิติศาสตร์อิสลามแห่งคูเวตได้ระบุคำนิยามเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الْحَمَّامُ مُشَدَّدًا وَالْمُسْتَحَمُّ فِي الأَْصْل الْمَوْضِعُ الَّذِي يُغْتَسَل فِيهِ بِالْحَمِيمِ وَهُوَ الْمَاءُ الْحَارُّ، ثُمَّ قِيل لِلاِغْتِسَال بِأَيِّ مَاءٍ كَانَ اسْتِحْمَامٌ . وَالْعَرَبُ تُذَكِّرُ الْحَمَّامَ وَتُؤَنِّثُهُ، وَالْحَمَّامِيُّ صَاحِبُهُ، وَاسْتَحَمَّ فُلاَنٌ: دَخَل الْحَمَّامَ، وَفِي الْحَدِيثِ: لاَ يَبُولَنَّ أَحَدُكُمْ فِي مُسْتَحَمِّهِ، ثُمَّ يَتَوَضَّأُ فِيهِ، وَلاَ يَخْرُجُ اسْتِعْمَال الْفُقَهَاءِ لَهُ عَنِ الْمَعْنَى اللُّغَوِيِّ.</blockquote>
+      <p class="ar-translation">“คำว่า “อัลฮัมมาม” (อ่านออกเสียงโดยเน้นหนักที่อักษรมีม) และคำว่า “อัลมุสตะฮัม” นั้น เดิมทีหมายถึงสถานที่ที่ซึ่งมีการชำระล้างร่างกายด้วย “ฮะมีม” (น้ำร้อนเดือด) ต่อมา นัยของคำได้ขยายออกไป โดยคำว่า “อิสติฮ์มาม” ถูกนำมาใช้เรียกการชำระล้างร่างกายไม่ว่าจะด้วยน้ำชนิดใดก็ตาม (ไม่จำกัดเฉพาะน้ำร้อน) และชาวอาหรับใช้คำว่า “ฮัมมาม” ในฐานะคำที่ระบุได้ทั้งเพศชาย (มุซักกัร) และเพศหญิง (มุอันนัษ) ส่วนคำว่า “อัลฮัมมามีย์” หมายถึง เจ้าของโรงอาบน้ำ และสำนวน “อิสตะฮัมมะ ฟุลาน” หมายถึง ชายผู้นั้นได้เข้าไปในโรงอาบน้ำ ดังปรากฏในวจนะ (หะดีษ) ที่ว่า: “พวกท่านคนใดจงอย่าได้ปัสสาวะลงในที่อาบน้ำ (มุสตะฮัม) ของเขา แล้วจากนั้นก็ทำการอาบน้ำละหมาดในที่แห่งนั้น” ซึ่งการนิยามศัพท์คำนี้ของบรรดานักนิติศาสตร์ ก็มิได้แตกต่างไปจากความหมายทางภาษาศาสตร์แต่อย่างใดเลย</p>
+
+      <h2 class="article-h2">จุดกำเนิดและพัฒนาการในยุคเริ่มแรก</h2>
+      <p>โรงอาบน้ำสาธารณะถือเป็นสถาบันทางสังคมและผังเมืองที่โดดเด่นมากๆในวัฒนธรรมโรมันและยุคสมัยของเฮลเลนิสติก ซึ่งสามารถพบเห็นได้ทั่วไปในดินแดนรอบทะเลเมดิเตอร์เรเนียน โรงอาบน้ำเหล่านี้ยังคงบทบาทสำคัญในหัวเมืองต่างๆ ของจักรวรรดิไบแซนไทน์ยุคต้นตราบจนกระทั่งราวกลางศตวรรษที่ 6 ซึ่งเป็นช่วงที่การก่อสร้างโรงอาบน้ำแห่งใหม่เริ่มลดน้อยถอยลง และแห่งที่มีอยู่เดิมก็ค่อยๆถูกทิ้งร้างไป</p>
+      <p>ภายหลังการขยายอำนาจของชาวอาหรับ-มุสลิมเข้าครอบครองพื้นที่ส่วนใหญ่ของตะวันออกกลางและแอฟริกาเหนือในช่วงศตวรรษที่ 7 และ 8 สังคมอิสลามที่กำลังก่อร่างสร้างตัวได้ปรับเปลี่ยนโรงอาบน้ำให้สอดคล้องกับความต้องการของตนอย่างรวดเร็ว ความสำคัญของโรงอาบน้ำที่มีต่อสังคมมุสลิมนั้น ผูกโยงอยู่กับข้อกำหนดทางศาสนาที่ต้องมีการชำระล้างร่างกายก่อนการปฏิบัติศาสนกิจ รวมถึงการที่อิสลามให้ความสำคัญอย่างยิ่งต่อความบริสุทธิ์ทั้งทางร่างกายและจิตวิญญาณ</p>
+      <p>แต่ก็มีนักวิชาการบางท่านได้โต้แย้งประเด็นนี้ว่า อันที่จริงแล้วฮัมมามไม่ได้มีความจำเป็นสำหรับวัตถุประสงค์ทางศาสนาในยุคต้นของอิสลามแต่อย่างใดเลย และความเชื่อมโยงระหว่างฮัมมามกับศาสนานั้นเป็นสิ่งที่นักประวัติศาสตร์รุ่นหลังทึกทักกันเอาเองเสียเป็นส่วนใหญ่ บ้างก็เสนอว่า ความนิยมในฮัมมามช่วงเริ่มแรกนั้น ส่วนหนึ่งมาจากความสะดวกสบายในการให้บริการด้านอื่นๆ (เช่น การโกนหนวด) การได้รับการรับรองจากแพทย์มุสลิมบางท่านว่าเป็นรูปแบบหนึ่งของการบำบัดรักษา และความนิยมชมชอบในสุนทรียะของการอาบน้ำที่ฝังรากลึกอยู่ในภูมิภาคนี้มานานนับศตวรรษแล้ว</p>
+      <p>บางคนยังตั้งข้อสังเกตอีกว่า ในช่วงแรกนั้นมีการต่อต้านฮัมมามอย่างรุนแรงจากบรรดานักปราชญ์อิสลามจำนวนมาก โดยเฉพาะนักปราชญ์ในสำนักคิดมาลิกี ปราชญ์เหล่านี้มองว่าฮัมมามเป็นสิ่งเกินความจำเป็นสำหรับการอาบน้ำยกฮะดัษใหญ่ และตั้งคำถามว่าพื้นที่อาบน้ำสาธารณะจะมีความสะอาดเพียงพอที่จะทำให้เกิดความบริสุทธิ์ตามหลักศาสนาได้จริงหรือ อีกทั้งยังกังวลว่าพื้นที่สำหรับการอาบน้ำรวมหมู่อาจกลายเป็นแหล่งมั่วสุมสำหรับพฤติกรรมทางเพศที่ผิดทำนองคลองธรรม อย่างไรก็ดี แรงต้านทานเหล่านี้ได้ค่อยๆ จางหายไปตามกาลเวลา จนกระทั่งถึงศตวรรษที่ 9 นักปราชญ์ส่วนใหญ่ก็เลิกถกเถียงถึงความถูกต้องเหมาะสมของฮัมมาม แม้ว่าจะยังคงมีความระแวงสงสัยหลงเหลืออยู่ในแวดวงอนุรักษนิยมบางกลุ่มก็ตาม</p>
+      <p>หลักฐานของฮัมมามในโลกอิสลามยุคแรกสุดที่ถูกค้นพบว่าตั้งอยู่ในซีเรียและจอร์แดน สร้างขึ้นในสมัยราชวงศ์อุมัยยะฮ์ (ค.ศ. 661–750) โดยเป็นส่วนหนึ่งของพระราชวังและปราสาทกลางทะเลทราย เช่นที่กุศ็อยร์ หรือก็อศร์ อัมเราะฮ์, ฮัมมาม อัซซัรห์, ก็อศรุลฮัยร์ อัชชัรกีย์และคิรบัต อัลมัฟญัร</p>
+      <p>ไม่นานนักหลังจากยุคสมัยดังกล่าว หลักฐานทางโบราณคดีได้เผยให้เห็นการมีอยู่ของโรงอาบน้ำอิสลามที่กระจายตัวไปทั่วโลกมุสลิม โดยพบฮัมมามไกลไปถึงทางตะวันตกอย่างเมืองโวลูบิลิส (Volubilis) ในโมร็อกโก ช่วงสมัยราชวงศ์อิดรีสิยะฮ์ (ปลายศตวรรษที่ 8 ถึงต้นศตวรรษที่ 9) นอกจากนี้ เอกสารทางประวัติศาสตร์และหลักฐานทางโบราณคดียังบ่งชี้ถึงการมีอยู่ของฮัมมามในเมืองกอร์โดบาและเมืองอื่นๆของอันดาลุส ในช่วงศตวรรษที่ 8</p>
+      <p>ชาวมุสลิมได้รักษาองค์ประกอบหลักหลายประการของโรงอาบน้ำยุคคลาสสิกเอาไว้ แต่ตัดทอนฟังก์ชันที่ไม่สอดคล้องกับวิถีปฏิบัติของตนออกไป ตัวอย่างเช่น ลำดับการเข้าใช้บริการจากห้องเย็นไปสู่ห้องร้อนยังคงถูกรักษาไว้ แต่ธรรมเนียมการกระโดดลงแช่น้ำเย็นจัดหลังจากออกจากห้องร้อนนั้นไม่เป็นที่นิยมอีกต่อไป เช่นเดียวกับการออกกำลังกายซึ่งเคยเป็นส่วนหนึ่งของวัฒนธรรมการอาบน้ำในโรงยิมเนเซียมยุคคลาสสิกก็ถูกตัดออกไป ในทำนองเดียวกัน ผู้ใช้บริการโรงอาบน้ำมุสลิมมักชำระร่างกายด้วยน้ำไหลผ่านตัว แทนที่จะลงไปแช่ในอ่างน้ำขัง</p>
+      <p>แม้ว่าในช่วงต้นประวัติศาสตร์อิสลาม สตรีจะไม่นิยมไปใช้บริการฮัมมาม แต่ราวศตวรรษที่ 10 สถานที่หลายแห่งเริ่มจัดสรรเวลาเฉพาะ (หรือแยกส่วนอำนวยความสะดวก) สำหรับชายและหญิง จากนั้นมา ฮัมมามจึงกลายเป็นบทบาทสำคัญในชีวิตสังคมของผู้หญิงในฐานะหนึ่งในพื้นที่สาธารณะเพียงไม่กี่แห่งที่พวกเธอสามารถรวมตัวและสังสรรค์กันได้โดยแยกเป็นสัดส่วนจากผู้ชาย ดังที่สารานุกรมนิติศาสตร์อิสลามแห่งคูเวตได้บันทึกเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَلاَ فَرْقَ بَيْنَ اتِّخَاذِ الْحَمَّامِ لِلرِّجَال وَالنِّسَاءِ، إِذِ الْحَاجَةُ فِي حَقِّ النِّسَاءِ أَظْهَرُ، لأَِنَّهُنَّ يَحْتَجْنَ إِلَى الاِغْتِسَال عَنِ الْجَنَابَةِ وَالْحَيْضِ وَالنِّفَاسِ، وَلاَ يَتَمَكَّنَّ مِنْ ذَلِكَ فِي الأَْنْهَارِ وَالْحِيَاضِ تَمَكُّنَ الرِّجَال.</blockquote>
+      <p class="ar-translation">“และไม่มีความแตกต่างใดๆระหว่างการมีโรงอาบน้ำสำหรับผู้ชายและผู้หญิง ทว่าความจำเป็นในสิทธิของผู้หญิงนั้นมีความชัดแจ้งยิ่งกว่า เนื่องด้วยพวกนางจำเป็นต้องทำการอาบน้ำชำระร่างกายจากการมีเพศสัมพันธ์ (ญะนาบะฮ์), เลือดประจำเดือน (หัยฎ์), และเลือดหลังคลอดบุตร (นิฟาส) ซึ่งพวกนางไม่สามารถกระทำสิ่งดังกล่าวในแม่น้ำลำคลองหรือบ่อน้ำได้อย่างสะดวกดายเหมือนดั่งผู้ชาย (ด้วยเหตุผลเรื่องการปกปิดอวัยวะพึงสงวน)”</p>
+      <p>ฮัมมามบางแห่งเป็นกรรมสิทธิ์ส่วนบุคคล หรือเป็นส่วนหนึ่งของพระราชวังและคฤหาสน์ แต่ในหลายกรณี ฮัมมามเป็นสมบัติสาธารณะหรือการกุศลที่เป็นส่วนหนึ่งของคอมเพล็กซ์ทางศาสนาและชุมชนขนาดใหญ่ ซึ่งบริหารจัดการภายใต้ข้อตกลงวะกัฟหรือการอุทิศทรัพย์สินส่วนตัวเพื่อสาธารณกุศล และบ่อยครั้งที่ฮัมมามทำหน้าที่เป็นแหล่งรายได้เพื่อนำไปทำนุบำรุงสถาบันอื่นๆ เช่น มัสยิดอีกด้วย</p>
+
+      <h2 class="article-h2">ฮัมมามในยุคหลัง</h2>
+      <p>ในศตวรรษที่ 11 จักรวรรดิเซลจุกได้เข้ายึดครองดินแดนส่วนใหญ่ของอนาโตเลียจากจักรวรรดิไบแซนไทน์ ซึ่งท้ายที่สุดนำไปสู่การพิชิตส่วนที่เหลือของจักรวรรดิเก่าอย่างเบ็ดเสร็จในศตวรรษที่ 15 ตลอดหลายศตวรรษแห่งสงคราม สันติภาพ การเป็นพันธมิตร การค้า และการแข่งขัน วัฒนธรรมที่ผสมผสานกันเหล่านี้ (โรมันตะวันออก, เปอร์เซียอิสลาม และเติร์ก) ต่างมีอิทธิพลต่อกันและกันอย่างมหาศาล</p>
+      <p>ต่อมา ชาวออตโตมันได้กลายเป็นผู้อุปถัมภ์ฮัมมามตัวยง เนื่องจากฮัมมามเป็นทั้งศูนย์กลางทางสังคมและสถานที่อาบน้ำ จึงมีการสร้างฮัมมามขึ้นในแทบทุกเมืองทั่วดินแดนในครอบครองทั้งในยุโรป เอเชีย และแอฟริกา ด้วยเหตุนี้ ออตโตมันจึงเป็นผู้นำพาฮัมมามเข้าสู่พื้นที่ส่วนใหญ่ของยุโรปตะวันออกและยุโรปกลาง ซึ่งหลายแห่งยังคงหลงเหลือให้เห็นในปัจจุบันในสภาพที่ได้รับการบูรณะบ้างหรือทรุดโทรมบ้าง โรงอาบน้ำเหล่านี้พบได้ไกลถึงบอสเนีย กรีซ และฮังการี</p>
+      <p>ฮัมมามยุคต้นของสมัยออตโตมันจำนวนมากยังคงหลงเหลืออยู่ในเมืองบูร์ซาและเอดีร์เน รวมถึงในยุโรปตะวันออกและอนาโตเลีย แต่ฮัมมามได้ทวีจำนวนขึ้นและมีความทะเยอทะยานทางสถาปัตยกรรมยิ่งขึ้นในกรุงคอนสแตนติโนเปิล เนื่องด้วยอานิสงส์จากการอุปถัมภ์ของราชสำนัก ประชากรจำนวนมาก และการเข้าถึงแหล่งน้ำที่อุดมสมบูรณ์ ชาวกรีกที่อาศัยอยู่ในเมืองยังคงรักษาวัฒนธรรมการอาบน้ำแบบโรมันตะวันออกไว้อย่างเข้มข้น โดยมี “โรงอาบน้ำแห่งซูซิปปัส” (Baths of Zeuxippus) เป็นหนึ่งในตัวอย่างยุคแรก</p>
+      <p>สถาปนิกออตโตมันได้ต่อยอดประสบการณ์จากสถาปนิกไบแซนไทน์เพื่อสร้างสรรค์การออกแบบที่สมดุลเป็นพิเศษ มีความสมมาตรและความเป็นระเบียบในการจัดวางพื้นที่มากกว่าที่พบในฮัมมามแห่งอื่นๆของโลกมุสลิม ฮัมมามขนาดอนุสรณ์สถานที่เก่าแก่ที่สุดของเมือง ได้แก่ฮัมมามทาห์ตาคาเล (ซึ่งน่าจะสร้างทันทีหลังปี 1454), ฮัมมามมะห์มูด ปาชา (สร้างปี 1466) และฮัมมามบาเยซิดที่ 2 (สร้างระหว่างปี 1500-1507)</p>
+      <p>ฮัมมามขนาดใหญ่ที่ออกแบบโดย “มิอ์มาร สินาน”  สถาปนิกเอกแห่งศตวรรษที่ 16 (ค.ศ. 1489–1588) อาทิ ฮัมมามเชมเบอร์ลิตาช, ฮัมมามสุลัยมานิยะฮ์ (ในบริเวณมัสยิดสุลัยมานิยะฮ์) และฮัมมามฮาเซกิ ฮูร์เร็ม สุลต่าน อยาโซเฟีย ถือเป็นตัวอย่างสำคัญของฮัมมามที่สร้างขึ้นในยุคหลังของสถาปัตยกรรมออตโตมันคลาสสิก</p>
+      <p>เมื่อสุลต่านมุสตาฟาที่ 3 มีพระราชกฤษฎีกาสั่งระงับการก่อสร้างโรงอาบน้ำสาธารณะแห่งใหม่ในเมืองเมื่อปี ค.ศ. 1768 ส่งผลให้จำนวนฮัมมามส่วนตัวของเหล่าเศรษฐีและชนชั้นสูงเพิ่มขึ้น โดยเฉพาะในย่านชานเมืองแถบช่องแคบบอสฟอรัส ซึ่งนิยมสร้างบ้านพักตากอากาศอันหรูหรา</p>
+      <p>ในอิหร่านตัวอย่างฮัมมามจำนวนมากยังคงหลงเหลือมาจากสมัยราชวงศ์ซาฟาวิยะฮ์ (ศตวรรษที่ 16–18) เป็นต้นมา โดยเฉพาะในเมืองประวัติศาสตร์อย่างอิสฟาฮาน ซึ่งมีฮัมมามหลงเหลืออยู่หลายแห่ง การแผ่ขยายอำนาจของมุสลิมเข้าสู่อนุทวีปอินเดีย ก็นำพาฮัมมามเข้าสู่ภูมิภาคนี้เหมือนกัน โดยมีตัวอย่างจำนวนมากที่ยังคงปรากฏให้เห็นในสถาปัตยกรรมยุคโมกุล (ศตวรรษที่ 16–19)</p>
+
+      <h2 class="article-h2">ฮัมมามในประวัติศาสตร์อิสลาม</h2>
+      <p>เหล่านักเขียนอย่างสารคดีท่องเที่ยวและผู้ประพันธ์หนังสือประเภท “อัลมะซาลิก วัลมะมาลิก” ไม่ได้ละเลยที่จะเอ่ยถึงฮัมมามที่พวกเขาได้พบเห็นในระหว่างการเดินทางท่องเที่ยว บ้างก็พรรณนาถึงฮัมมามที่โดดเด่นในหัวเมืองต่างๆ เพราะสถานที่เหล่านี้ได้เติมเต็มความวิจิตรบรรจงให้แก่ศิลปะสถาปัตยกรรมและเสริมแต่งสีสันแห่งขนบธรรมเนียมประเพณีให้แก่อารยธรรมทางสังคม</p>
+      <p>กวีและนักเขียนบางท่านถึงกับใช้ฮัมมามเป็นหัวข้อที่แปลกใหม่ในการปลดปล่อยจินตนาการ แข่งขันกันพรรณนาถึงลวดลายประดับ ภาพวาด กระจกสี เครื่องเรือน และข้าวของเครื่องใช้ต่างๆ ฯลฯ รวมไปถึงการถ่ายทอดความรู้สึกที่เกิดขึ้น ณ ขอบสระน้ำอุ่นและท่ามกลางไอน้ำที่คุกรุ่น</p>
+      <p>อัลเคาะฏีบ อัลบัฆดาดีย์กล่าวไว้ในหนังสือประวัติศาสตร์ของท่านเองว่า: “แบกแดดประกอบด้วยเมืองย่อย 40 เมือง และจำนวนฮัมมามในสมัยของอัลมะอ์มูน มีมากถึง 65,000 แห่ง”</p>
+      <p>ส่วนผู้แต่งหนังสือซิยัร อัลมุลุก (จริยวัตรแห่งราชา) ต้องการชี้ให้เห็นถึงความยิ่งใหญ่ของแบกแดด จึงกล่าวว่า: “ในเวลานั้น แบกแดดมีฮัมมามถึง 60,000 แห่ง และอย่างน้อยที่สุดในแต่ละฮัมมามจะมีพนักงาน 5 คน ได้แก่ เจ้าของฮัมมาม (ฮัมมามีย์), ผู้ดูแล (ก็อยยิม), พนักงานทำความสะอาด (ซับบาล), คนจุดไฟ (วักกอด) และคนตักน้ำ (ซักกออ์) รวมแล้วเท่ากับ 300,000 คน และกล่าวกันว่า ตรงข้ามฮัมมามแต่ละแห่งจะมีมัสยิด 5 แห่ง รวมเป็น 300,000 มัสยิด และหากประเมินว่าแต่ละมัสยิดมีคนอย่างน้อย 5 คน ก็จะรวมเป็นประชากร 1,500,000 คน”</p>
+      <p>วิธีการนับสถิติเช่นนี้ดูจะมีความสับสนอยู่บ้าง เพราะเป็นการประเมินจำนวนประชากรจากเพศชายเป็นหลัก เว้นเสียแต่ว่าจะมีมัสยิดและฮัมมามที่ดูแลและเข้าใช้เฉพาะสตรีเท่านั้น</p>
+      <p>อิบนุ ญุบัยร์เองก็ได้ไปเยือนแบกแดดในปี ฮ.ศ. 581 (ค.ศ. 1185) และบันทึกว่า “ฝั่งตะวันออกของเมืองมีสิ่งก่อสร้างใหม่เกิดขึ้น และแม้จะมีความทรุดโทรมปกคลุมอยู่บ้าง แต่ก็ประกอบด้วย 17 ย่าน แต่ละย่านเปรียบเสมือนเมืองอิสระ และในแต่ละย่านจะมีฮัมมาม 2, 3 หรือ 8 แห่ง” เขากล่าวต่อว่า: “ส่วนย่านตะวันออก ปัจจุบันคือที่ตั้งของวังเคาะลีฟะฮ์ เต็มไปด้วยตลาดที่คึกคักและการจัดระเบียบที่ยิ่งใหญ่ ส่วนฮัมมามนั้นมีมากจนนับไม่ถ้วน ผู้เฒ่าผู้แก่ในเมืองคนหนึ่งบอกเราว่า ระหว่างฝั่งตะวันออกและตะวันตกมีฮัมมามราว 1,000 แห่ง ส่วนใหญ่ฉาบด้วยยางมะตอยจนดูเหมือนทำจากหินอ่อนสีดำขัดมัน”</p>
+      <p>ยูซุฟ อับดุลฮาดี หรืออิบนุ มิบร็อด (บุรุษแห่งศตวรรษที่ 9 และ 10) ได้แต่งหนังสือชื่อ อิดดะฮ์ อัลมุลิมมาต ฟีตะอ์ดาด อัลฮัมมามาต” (เครื่องมือยามยาก ในการนับจำนวนฮัมมาม) ซึ่งอุทิศให้แก่ฮัมมามจำนวนมากในดามัสกัสโดยเฉพาะ</p>
+      <p>ในหนังสือประวัติศาสตร์บางแห่งระบุว่า จำนวนฮัมมามในไคโรช่วงศตวรรษที่ 7 แห่งฮิจเราะห์ศักราช มีเพียง 80 แห่ง ในขณะที่เมืองฟุสฏอฏ (เมืองหลวงเก่าของอียิปต์) มีมากกว่า 1,000 แห่ง</p>
+      <p>สำหรับฮัมมามในมัฆริบ (โมร็อกโกและแอฟริกาเหนือตะวันตก) หนังสือศุบห์ อัลอะอ์ชาได้อ้างคำพูดของอะบู ซะอีด (หนึ่งในผู้แต่งหนังสืออัลมุฆริบ ฟี หุลา อัลมัฆริบ ซึ่งส่วนที่เกี่ยวกับดินแดนนี้ได้สูญหายไป) ว่า: “ข้าพเจ้าไม่เคยเห็นฮัมมามที่ใดมีน้ำพุผุดขึ้นมาจากภายในเหมือนที่เมืองเฟสเลย” และเขากล่าวอีกว่า: “ที่นั่นมีน้ำอุดมสมบูรณ์ยิ่งกว่าดามัสกัสเสียอีก”</p>
+      <p>ฮัมมามเป็นที่รู้จักในโมร็อกโกผ่านทางชาวโรมัน แต่ราชวงศ์อิดรีสิด, อัลมุรอบิฏีน และอัลมุวะห์ฮิดีน ได้รับประโยชน์อย่างมากจากฮัมมามแบบอิสลามที่พวกเขาเห็นในอันดาลุส จึงได้นำมาสร้างเลียนแบบในโมร็อกโก</p>
+      <p>ไม่ว่าอย่างไรก็ตาม ฮัมมามของโมร็อกโกโดยเฉพาะที่สร้างขึ้นตั้งแต่สมัยราชวงศ์มารินิด มีเอกลักษณ์ทางวิศวกรรมที่แทบจะโดดเด่นเฉพาะตัวในบรรดาฮัมมามของแอฟริกาเหนือ ซึ่งความโดดเด่นนี้อยู่ที่การออกแบบผัง ไม่ใช่ที่การตกแต่งประดับประดาด้วยเสาหินอ่อนหรือโมเสกเหมือนฮัมมามที่มีชื่อเสียงแห่งอื่นๆ</p>
+
+      <h2 class="article-h2">การอาบน้ำสาธารณะในบริบทของอิสลาม</h2>
+      <p>การละหมาดถือเป็นหนึ่งในหลักการปฏิบัติ 5 ประการของมุสลิมทุกคน และเป็นสิ่งจำเป็นที่จะต้องทำการชำระล้างร่างกายก่อนการละหมาด</p>
+      <p>แม้ว่ามัสยิดจะจัดเตรียมสถานที่สำหรับชำระล้างไว้เสมอ แต่ฮัมมามมักจะตั้งอยู่ใกล้เคียงเพื่อรองรับการชำระล้างที่สะอาดหมดจดยิ่งกว่า และในความเป็นจริง ฮัมมามจำนวนมากถือเป็นส่วนหนึ่งของกลุ่มอาคารมัสยิด</p>
+      <p>ฮัมมาม โดยเฉพาะในโมร็อกโก ได้วิวัฒนาการจากต้นกำเนิดแบบโรมันเพื่อตอบสนองความต้องการในการชำระล้างตามศาสนบัญญัติของอิสลาม ตัวอย่างเช่น ในฮัมมามแบบโรมันส่วนใหญ่จะมีสระน้ำเย็นสำหรับการลงไปแช่ตัว ซึ่งเป็นรูปแบบการอาบน้ำที่ไม่ค่อยเป็นที่นิยมในอิสลาม เนื่องจากอิสลามถือว่าการอาบน้ำโดยให้น้ำไหลผ่านร่างกายโดยไม่ต้องลงไปแช่ทั้งตัวนั้นมีความเหมาะสมกว่า</p>
+      <p>อัลเฆาะซาลีย์ได้ประพันธ์อิห์ยาอ์ ซึ่งเป็นผลงานหลายเล่มจบที่อภิปรายถึงรูปแบบการปฏิบัติตนที่เหมาะสมในหลายมิติของชีวิตและความตายของมุสลิม หนึ่งในหนังสือชุดนี้มีชื่อว่า “ความลี้ลับแห่งความสะอาด” ซึ่งท่านได้ลงรายละเอียดเกี่ยวกับวิธีการที่ถูกต้องในการอาบน้ำละหมาด และการอาบน้ำยกฮะดัษใหญ่ภายหลังจากเหตุที่ทำให้จำเป็นต้องอาบน้ำ เช่น การหลั่งน้ำอสุจิ</p>
+      <p>สำหรับอัลเฆาะซาลีย์แล้ว ฮัมมามถือเป็นสถาบันที่เป็นพื้นที่สำหรับผู้ชายเป็นหลัก และท่านได้เตือนว่าสตรีควรเข้าฮัมมามเฉพาะหลังจากคลอดบุตรหรือเจ็บป่วยเท่านั้น อย่างไรก็ตาม แม้แต่อัลเฆาะซาลีย์เองก็ยังเห็นว่าเป็นเรื่องยอมรับได้ที่ผู้ชายจะสั่งห้ามภรรยาหรือพี่น้องสตรีของตนไม่ให้ไปใช้บริการฮัมมาม</p>
+      <p>ประเด็นขัดแย้งหลักเกี่ยวกับฮัมมามในทัศนะของอัลเฆาะซาลีย์ คือเรื่อง “การเปลือยกาย” ท่านได้เตือนว่าจะต้องหลีกเลี่ยงการเปลือยกายอย่างโจ่งแจ้งดังเช่นการเตือนของนักวิชาการจากสำนักอื่นๆเช่นกันว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إِذَا كَانَ الدَّاخِل رَجُلاً فَيُبَاحُ لَهُ دُخُولُهُ إِذَا أَمِنَ وُقُوعَ مُحَرَّمٍ: بِأَنْ يَسْلَمَ مِنَ النَّظَرِ إِلَى عَوْرَاتِ النَّاسِ وَمَسِّهَا، وَيَسْلَمَ مِنْ نَظَرِهِمْ إِلَى عَوْرَتِهِ وَمَسِّهَا، وَإِنْ خَشِيَ أَنْ لاَ يَسْلَمَ مِنْ ذَلِكَ كُرِهَ لَهُ ذَلِكَ، لأَِنَّهُ لاَ يَأْمَنُ وُقُوعَهُ فِي الْمَحْظُورِ، فَإِنَّ كَشْفَ الْعَوْرَةِ وَمُشَاهَدَتَهَا حَرَامٌ</blockquote>
+      <p class="ar-translation">“หากผู้ที่เข้าไปใช้บริการเป็นผู้ชาย ย่อมเป็นที่ อนุญาตสำหรับเขาในการเข้าไปก็ต่อเมื่อเขามั่นใจว่าปลอดภัยจากการเกิดสิ่งต้องห้ามขึ้น กล่าวคือ: เขาต้องรอดพ้นจากการมองไปยังอวัยวะพึงสงวนของผู้อื่นและการสัมผัสมัน และรอดพ้นจากการที่ผู้อื่นจะมองมายังอวัยวะพึงสงวนของเขาหรือสัมผัสมัน แต่หากเขาเกรงว่าตนเองจะไม่รอดพ้นจากสิ่งดังกล่าว ก็ถือเป็นสิ่งที่น่ารังเกียจ (มักรูฮ์) สำหรับเขา เพราะเขาไม่มีความปลอดภัยจากการตกไปสู่สิ่งต้องห้าม เนื่องด้วยการเปิดเผยอวัยวะพึงสงวนและการจ้องมองมันนั้น ถือเป็นสิ่งต้องห้าม“ ตำราอัลอิห์ยาอ์ของท่านนั้น เน้นย้ำเป็นพิเศษถึงความจำเป็นในการหลีกเลี่ยงการสัมผัสอวัยวะเพศชายในขณะอาบน้ำและหลังปัสสาวะ และระบุว่าการเปลือยกายที่ถือว่าสุภาพเหมาะสมนั้น คือการที่พื้นที่ระหว่างหัวเข่าและท้องน้อยของผู้ชายถูกปกปิดไว้อย่างมิดชิด ส่วนสำหรับสตรีนั้น ท่านเสนอว่าการเปิดเผยเฉพาะใบหน้าและฝ่ามือเท่านั้นจึงจะถือว่าเหมาะสม ตามความเห็นของอัลเฆาะซาลีย์ การเปลือยกายในฮัมมามอาจกระตุ้นเร้าให้เกิดความคิดและพฤติกรรมที่ไม่ดีงาม ซึ่งนี่คือสาเหตุที่ทำให้สถานที่แห่งนี้มีลักษณะที่เป็นข้อถกเถียง</p>
+
+      <h2 class="article-h2">ฮัมมามในวรรณกรรมอิสลาม</h2>
+      <p>หากเราย้อนไปดูในวรรณกรรมเอกอย่าง “อาหรับราตรี” (พันหนึ่งราตรี) ซึ่งเปรียบเสมือนกระจกบานใหญ่ที่สะท้อนภาพชีวิตสังคมอิสลามอันมีชีวิตชีวา ทั้งความฟุ้งเฟ้อหรูหรา ความรื่นรมย์ทางโลกีย์ หรือแม้แต่ความขัดสนยากแค้น เราได้พบกับนิทานเรื่อง “อะบู ศีร และอะบู กีร” ซึ่งเรื่องราวนี้โน้มน้าวให้เราตระหนักว่า “ฮัมมาม” คือสถาบันสาธารณะที่สำคัญยิ่ง เป็นเครื่องหมายที่ขาดไม่ได้สำหรับความศิวิไลซ์ของบ้านเมือง เป็นสโมสรเชื่อมสัมพันธ์กับผู้ลากมากดี และเป็นบ่อเกิดแห่งสัมมาชีพอันบริสุทธิ์</p>
+      <p>แม้ผู้เล่าจะใช้ศัพท์แสงของชาวเรืออย่างช่ำชอง แต่กลับมิได้ระบุชื่อเมืองที่ “อะบู ศีร” ไปสร้างฮัมมามไว้ ซึ่งสิ่งนี้บ่งชี้ว่ามันคือนิทานที่แต่งขึ้นเพื่อเป็นคติสอนใจ โดยเฉพาะเพื่อชี้ให้เห็นผลร้ายของความอิจฉาริษยา มากกว่าจะเป็นบันทึกข้อเท็จจริงทางประวัติศาสตร์ และคาดว่าน่าจะร้อยเรียงขึ้นหลังยุคสงครามครูเสด ทว่าสิ่งที่น่าสนใจคือ รายละเอียดการบริหารจัดการและกิจกรรมการชำระล้างผ่อนคลายภายในฮัมมามที่ถูกถ่ายทอดออกมา</p>
+      <p>เนื้อเรื่องย่อมีอยู่ว่า “อะบู ศีร” และ “อะบู กีร” (เป็นชื่อสมมติทำนองนายดำ นายแดง) ประสบความฝืดเคืองในการหาเลี้ยงชีพที่เมืองอเล็กซานเดรีย จึงตัดสินใจลงเรือออกทะเลเพื่อแสวงโชค จนกระทั่งมาถึงเมืองงามที่เป็นระเบียบเรียบร้อยเมืองหนึ่ง แต่หลังจากพำนักอยู่สักพักและได้เข้าเฝ้ากษัตริย์ พวกเขาก็สังเกตเห็นว่าเมืองนี้ไร้ซึ่งฮัมมาม</p>
+      <p>อะบู ศีรจึงทูลขอพระบรมราชานุญาตสร้างฮัมมาม โดยจำลองแบบมาจากฮัมมามที่อเล็กซานเดรีย เขาตกแต่งประดับประดา ปูพรม และอบร่ำด้วยกำยานหลากชนิด พร้อมทั้งฝึกฝนเหล่ามหาดเล็กให้รู้งาน เมื่อกษัตริย์เสด็จมาเจิมฮัมมามพร้อมด้วยเหล่าเสนาบดีและขุนนาง อะบู ศีรได้ลงมือขัดสีฉวีวรรณถวายกษัตริย์ด้วยตนเอง จนขี้ไคลหลุดออกมาเป็นเส้นๆ...เขาผสมน้ำกุหลาบลงในอ่างสรง เมื่อกษัตริย์ขึ้นจากน้ำ พระวรกายก็ชุ่มชื่นและทรงรู้สึกกระปรี้กระเปร่า จากนั้นจึงเชิญเสด็จประทับที่โถง (ลีวาน) ให้มหาดเล็กนวดเฟ้นท่ามกลางกลิ่นหอมฟุ้งของไม้กฤษณาและเครื่องหอม</p>
+      <p>กษัตริย์ตรัสชมเชยว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ما صارت مدينتي مدينة بهذا الحمام</blockquote>
+      <p class="ar-translation">“เมืองของข้าเพิ่งจะเป็นเมืองที่สมบูรณ์ก็เพราะฮัมมามแห่งนี้นี่แหละ”</p>
+      <p>พระองค์จึงได้ประทานทรัพย์สินและข้าทาสบริวารแก่อะบู ศีรมากมาย ขุนนางทั้งหลายก็กระทำตามเช่นกัน ต่อมาราชินีพร้อมด้วยนางสนมกำนัลและภริยาขุนนางก็ตามมาใช้บริการ ต่างปลาบปลื้มยินดีและมอบเครื่องดื่มหวานเย็นเป็นรางวัล อะบู ศีรจึงกลายเป็นคนโปรด ชื่อเสียงขจรขจาย เงินทองไหลมาเทมา เพราะชาวเมืองทุกคนต่างประจักษ์ถึงคุณวิเศษของฮัมมาม และพากันหลั่งไหลมาใช้บริการเพื่อความสะอาดและความผ่อนคลาย</p>
+      <p>ในอีกด้านหนึ่ง บะดีอุซซะมาน อัลฮะมะซานีย์ ได้วาดลวดลายในงานเขียนประเภท “มะกอม” ของเขา มะกอมซึ่งเปรียบได้ดั่งม้วนฟิล์มบันทึกภาพสีสันของชีวิตสังคมในยุคนั้น ด้วยฉากตลกขบขันในฮัมมามว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">حدثنا عيسى بن هشام قال: لما قفلت من الحج فيمن قفل، ونزلت حلوان مع من نزل، قلت لغلامي، أجد شعري طويلا، وقد اتسخ بدني قليلا، فاختر لنا حماما ندخله، وحجاما نستعمله، وليكن الحمام واسع الرقعة، نظيف البقعة طيب الهواء، معتدل الماء....</blockquote>
+      <p class="ar-translation">“อีซา บิน ฮิชาม เล่าว่า: เมื่อข้าเดินทางกลับจากพิธีฮัจญ์พร้อมกับขบวนคาราวาน และแวะพักที่เมืองฮุลวาน ข้าบอกบ่าวของข้าว่า ‘ผมข้ายาวรุงรัง ตัวข้าก็เริ่มสกปรก เจ้าจงไปเลือกฮัมมามที่กว้างขวาง สะอาดสะอ้าน อากาศถ่ายเทดี และน้ำอุ่นกำลังเหมาะให้ข้าสักแห่ง... เราได้มุ่งหน้าไปยังฮัมมามตามที่ตั้งใจ พอไปถึงกลับไม่เห็นผู้ดูแล แต่ข้าก็เดินเข้าไป ชายคนหนึ่งเดินตามหลังข้ามา แล้วเอาดินเหนียวพอกหน้าผากและหัวข้าเสร็จก็เดินออกไป ทันใดนั้นชายอีกคนก็เดินเข้ามา แล้วเริ่มนวดข้าเสียจนกระดูกแทบหัก กดจุดจนร่างแทบสลาย ปากก็ผิวปากพ่นน้ำลายฝอย แล้วก็ลงมือสระหัวข้าแล้วลากลงไปล้างน้ำ ไม่นานนักชายคนแรกก็กลับมา แล้วชกเข้าที่กรามของชายคนที่สองเสียงดังสนั่น พร้อมตะคอกว่า ‘ไอ้ทึ่ม! มายุ่งอะไรกับหัวนี้ นี่มันหัวลูกค้าข้า!’ ชายคนที่สองสวนกลับ ตบหน้าชายคนแรกจนผ้าคลุมหลุด ‘หัวนี้เป็นสิทธิของข้า เป็นกรรมสิทธิ์ของข้า อยู่ในมือข้าต่างหาก!’ ทั้งสองตะลุมบอนกันจนเหนื่อยหอบ แล้วลากกันไปหาเจ้าของฮัมมามเพื่อตัดสินความ คนแรกอ้างว่า: ‘ข้าคือเจ้าของหัวนี้ เพราะข้าเป็นคนพอกดินบนหน้าผากและหัวมัน’ คนที่สองแย้งว่า: ‘ข้าต่างหากที่เป็นเจ้าของ เพราะข้าเป็นคนนวดตัวและกดจุดให้เขา’ เจ้าของฮัมมามจึงสั่งว่า: ‘ไปเอาเจ้าของหัวมา ข้าจะถามเขาเองว่าหัวนี้เป็นของใคร ของเอ็งหรือของเขา’ พวกเขาจึงมาลากตัวข้าไปแล้วบอกว่า ‘ท่านต้องเป็นพยานให้เรา’ ข้าจึงจำใจต้องลุกไป เจ้าของฮัมมามถามข้า: ‘พ่อหนุ่ม อย่าพูดเท็จ จงเป็นพยานด้วยความสัตย์จริง บอกข้าซิว่า หัวนี้เป็นของใครในสองคนนี้?’ ข้าตอบว่า: ‘ขออัลลอฮ์คุ้มครอง! หัวนี้เป็นหัวของข้า มันติดคอข้ามาตลอดการเดินทาง และได้ตอวาฟรอบวิหารกะอ์บะฮ์พร้อมกับข้า ข้าไม่เคยสงสัยเลยว่ามันเป็นของข้า!’ เจ้าของฮัมมามตวาด: ‘หุบปาก ไอ้คนสอดรู้!’ แล้วหันไปหาคู่กรณีพลางกล่าวว่า: ‘พวกเอ็งจะเถียงกันทำไมกับหัวพรรค์นี้? จะลากยาวไปถึงไหน? สาปส่งมันลงนรกไปซะ ถือซะว่าหัวนี้ไม่มีอยู่จริง หรือเราไม่เคยเห็นไอ้บ้านี่ก็จบเรื่อง!’ อีซา บิน ฮิชาม กล่าวปิดท้ายว่า: ‘ข้าจึงรีบลุกจากที่นั่นด้วยความอับอาย คว้าเสื้อผ้าได้ก็รีบเผ่นแน่บออกจากฮัมมามทันที...’”</p>
+      <p>นอกจากเรื่องขำขันแล้ว บ่อยครั้งที่ฮัมมามเป็นแรงบันดาลใจให้กวีรังสรรค์บทกวีหลากรสและต่างลีลา ครั้งหนึ่งกวีอะบู บักร ยะห์ยา อัลกุรฏุบีย์ เข้าไปในฮัมมามและพบกับอะบู ญะอ์ฟัร อัตตุฏีลีย์ (ผู้มีฉายาว่าคนตาบอด) เขาจึงเอ่ยบทกลอนท้าทายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">حمامنا كزمان القيظ محتدم                    وفيه للبرد صر غير ذي ضرر</blockquote>
+      <p class="poem-th">“ฮัมมามเรา ร้อนรุ่ม ดั่งคิมหันต์<br>แต่ในนั้น มีน้ำเย็น มิเป็นภัย”</p>
+      <p>กวีตาบอดจึงต่อกลอนกลับไปว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ضدان ينعم جسم المرء بينهما                  كالغصن ينعم بين الشمس والمطر</blockquote>
+      <p class="poem-th">“สองขั้วต่าง สร้างสุข ให้ร่างกาย<br>ดั่งกิ่งไม้ เคล้าแดดฝน ปนเปกัน”</p>
+      <p>ว่ากันว่าทั้งสองพบกันอีกครั้งในฮัมมาม กวีตาบอดได้ร่ายกลอนว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يا حسن حمامنا وبهجته       مرأى من السحر كله حسن</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ماء ونار حواهما كنف         كالقلب فيه السرور والحزن</blockquote>
+      <p class="poem-th">“ฮัมมามเรา งามงด ดั่งมนต์ขลัง<br>ช่างน่าดู ยิ่งนัก ยามเพ่งพิศ<br>น้ำและไฟ อยู่ร่วมยั้ง ในเขตขัณฑ์<br>ดั่งดวงใจ เก็บสุขเศร้า เคล้าคละกัน”</p>
+      <p>และเขายังกล่าวเสริมด้วยความชอบใจในความหมายนี้อีกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ليس على لهونا مزيد           ولا لحمامنا ضريب</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ماء وفيه لهيب نار             كالشمس في ديمة تصوب</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأبيض من تحته رخام        كالثلج حين ابتدا يذوب</blockquote>
+      <p class="poem-th">“ไม่มีสุข ใดล้ำ กว่าฮัมมาม<br>น้ำอุ้มไฟ วับวาม งามจับจิต<br>ดั่งตะวัน ในสายฝน ยลเพลินพิศ<br>พื้นหินอ่อน ขาวสนิท ดั่งหิมะละลาย”</p>
+      <p>การปรากฏของคำว่า “หิมะ” ในบทกลอน เป็นเครื่องยืนยันว่าผู้แต่งเป็นชาวอันดาลูเซีย (สเปน) ซึ่งชื่นชอบการเข้าฮัมมามโดยเฉพาะในฤดูหนาวและฤดูฝน เป็นธรรมดาที่กวีแต่ละคนย่อมโบยบินในนภาที่ตนเลือก และถักทอถ้อยคำตามครรลองที่ตนหลงใหลในความหมายที่สอดคล้องกับรสนิยมของตนเอง</p>
+      <p>งานเขียนทั้งร้อยแก้วและร้อยกรองเหล่านี้ ล้วนชี้ให้เห็นว่า “ฮัมมาม” คือสถาบันที่เปิดกว้างในบรรยากาศสาธารณะ เป็นเวทีที่เปิดเผยสำหรับผู้คนทุกชนชั้น กวีบางท่านอาจเข้าไปเพื่อ “ร่ำไห้” บางท่านเข้าไปเพื่อระลึกถึงความโดดเดี่ยวในหลุมฝังศพ และบางท่านก็มองเห็น “สวรรค์ท่ามกลางเปลวเพลิง” ในสถานที่แห่งนี้</p>
+
+      <h2 class="article-h2">มารยาทในการเข้าฮัมมาม</h2>
+      <p>ไม่ว่าอย่างไรก็ตาม เป้าหมายสูงสุดของฮัมมามคือการชำระล้างและการทำความสะอาด ในแง่นี้มันจึงเป็นสถานที่ที่ “สร้างขึ้นเพื่อทั้งคนดีและคนชั่ว” และเป็น “ที่พำนักซึ่งเมื่อผู้คนมาเผชิญหน้ากัน บ่าวไพร่และเจ้านายก็ดูมิต่างกัน”</p>
+      <p>ด้วยเหตุนี้ จึงไม่ใช่เรื่องแปลกที่สถานที่อัน “ดีงามอาจพลิกผันเป็นความเลวทราม” และ “ความถูกต้องอาจกลายเป็นความผิดบาป” ได้ในชั่วพริบตา ฮัมมามจึงเป็นบ่อเกิดแห่งคำตัดสินที่แตกต่างและคำวินิจฉัยทางศาสนาที่ขัดแย้งกันมาโดยตลอด อีกทั้งยังเป็นเป้าหมายในการจับตามองของ “มุห์ตะซิบ” (เรียกกันติดหูในยุคนี้ว่า ตำรวจศาสนา) และเจ้าหน้าที่ตำรวจ เพื่อป้องกันมิให้เกิดสิ่งผิดศีลธรรมและป้องปรามผู้ที่คิดจะก่อการเสื่อมเสียในสถานที่แห่งนี้</p>
+      <p>ณ ที่นี้ สมควรจะกล่าวถึงสิ่งที่ปรากฏในหนังสือ “อัลมุวัชชา” ว่าด้วยจริยวัตรของผู้มีเกียรติและขอบเขตแห่งมารยาทที่เหล่า “วิญญูชน” (ผู้ดีมีรสนิยม) พึงสังวรเมื่อย่างกรายเข้าสู่ฮัมมาม:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقد ينبغي للظريف أن يدخل الحمام على خلوة، لئلا ينظر فيه إلى سوءة ولا يمد عينيه إلى أحد، ولا يعلق ثوبه على وتد، ولا يدلي رجله في البئر التي ينصب إليها الماء فإن ذلك مما يفعله الأدنياء، ولا يدلك رجله في البئر التي ينصب إليها الماء فإن ذلك مما يفعله الأدنياء، ولا يدلك يديه بخرقة، فإن ذلك مما يستعمله السخفاء، ولا يتمرغ على حرارة أرض الحمام فإن ذلك مما يفعله سفلة العوام، بل ينبغي له أن يدخل متزرا ويقعد فيه معتزلا، ولا يقعد متوقزا على رجليه، فإن ذلك طعن على عقله، ولا يميل مضطجعا بل ينتصب متربعا، حتى إذا نضب العرق من بدنه، وتحدر على جسده، وكان عرقه بين الكثير والقليل، نشفه عن بدنه بمنديل، ثم دعا لرأسه بالغسول والأشنان المنخول، فإن ذلك من أهل المروات والنعم، وأهل البيوتات والقدر ممن لا ينسب في فعله إلى شيء من شكله: فليبتدئ، دخوله الحمام بالإمساك عن الكلام، والتجرع من الماء الحار ثلاث جرع</blockquote>
+      <p class="ar-translation">“เป็นการสมควรที่วิญญูชนจะเข้าฮัมมามโดยลำพัง เพื่อมิให้สายตาไปกระทบกับอวัยวะพึงสงวนของผู้อื่น และไม่สอดส่ายสายตามองใคร ไม่แขวนเสื้อผ้าไว้กับหมุดข้างฝา ไม่ห้อยขาลงในบ่อพักน้ำ หรือขัดถูเท้าในบ่อพักน้ำ เพราะนั่นคือการกระทำของคนชั้นต่ำ ไม่ขัดถูมือด้วยเศษผ้า เพราะนั่นคือวิสัยของคนหยาบช้า และไม่นอนเกลือกกลิ้งบนพื้นร้อนของฮัมมาม เพราะนั่นคือพฤติกรรมของไพร่สถุล แต่เขาพึงเข้าไปโดยนุ่งผ้าปิดกายท่อนล่าง นั่งแยกตัวออกห่าง ไม่นั่งยองๆ แต่ให้นั่งขัดสมาธิตัวตรง เพราะการนั่งยองๆ เป็นการบั่นทอนสติปัญญา รอจนกระทั่งเหงื่อไหลซึมออกจากร่าง แล้วจึงเช็ดตัวด้วยผ้าเช็ดตัว จากนั้นจึงเรียกให้คนมาสระผมด้วยโคลนหรือขี้เถ้าสมุนไพร เพราะนี่แหละคือวิถีแห่งผู้มีตระกูลและผู้มีอันจะกิน เป็นผู้ที่การกระทำจะไม่ถูกครหาว่าต่ำต้อย และพึงเริ่มต้นการเข้าฮัมมามด้วยการสงบวาจา และจิบน้ำร้อนสามอึก”</p>
+      <p>ทีนี้ลองมาดูแง่มุมมารยาททั่วไปเกี่ยวกับฮัมมามกันบ้าง มีคำกล่าวว่า: “มีคำอวยพรสองประการที่มักถูกลืมเมื่อเข้าฮัมมาม คือขออัลลอฮ์คุ้มครองท่านจากการลื่นล้ม และขอพระองค์พิทักษ์เสื้อผ้าท่านจากการลักขโมย”</p>
+      <p>ท่านอิหม่ามอัลเฆาะซาลีย์ถือว่า การกำจัดเหตุแห่งการลื่นล้มในฮัมมาม เป็นสิ่งที่ต้องกำชับให้กระทำ ตามวจนะของท่านศาสนทูตที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">من رأى منكم منكرا فليغيره</blockquote>
+      <p class="ar-translation">“ใครก็ตามในหมู่พวกท่านที่เห็นสิ่งผิดทำนองคลองธรรม ก็จงเปลี่ยนแปลงมัน”</p>
+      <p>เหล่าผู้ประพันธ์หนังสือเกี่ยวกับการตรวจสอบก็มิได้ละเลยที่จะเตือนให้ใส่ใจในทุกสิ่งที่สร้างความสะดวกสบายแก่ผู้มาอาบน้ำ และสร้างความเบิกบานใจแก่พวกเขา</p>
+      <p>ท่านอะบู อับดุลลอฮ์ มุฮัมมัด บิน อะบี มุฮัมมัด อัสซะกอฏีย์กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكذلك الخدمة بالحمامات يبيتون محاكهم التي يحكون بها أرجل الناس في الملح والماء كل ليلة لئلا تكتسب الروائح، ويغسلون مئازرهم كل عشية بالصابون</blockquote>
+      <p class="ar-translation">“ในทำนองเดียวกัน ผู้ให้บริการในฮัมมามต้องแช่หินขัดเท้าในน้ำเกลือทุกคืน เพื่อป้องกันไม่ให้หมักหมมจนเกิดกลิ่นเหม็น และต้องซักผ้าเตี่ยวด้วยสบู่ทุกเย็น”</p>
+      <p>ส่วนท่านมุฮัมมัด บิน อะห์มัด บิน อับดูน อันนะญีบีย์ได้กล่าวไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يجب أن تكون صهاريج الحمامات مغطاة، فإن كانت مكشوفة لم تومن نجاستها، فهو موضع طهارة، يجب ألا يمشي الطياب ولا الحكاك ولا الحجام في الحمام ألا بالتبان  وسراولات، يجب ألا يحك مسلم «اليهودي ولا النصراني... لا يجلس متقبل الحمام للنساء فإنه موضع تمتع وزنى ولا يكون متقبل فنادق التجار والغرباء امرأة فذلك عين الزنى</blockquote>
+      <p class="ar-translation">“อ่างเก็บน้ำในฮัมมามจะต้องมีฝาปิด หากเปิดโล่งไว้จะไม่ปลอดภัยจากสิ่งปนเปื้อน (นะญิส) เพราะนี่คือสถานที่เพื่อความสะอาดบริสุทธิ์ ผู้ให้บริการนวดตัว ขัดตัว หรือทำกรอกเลือด จะต้องไม่เดินเหินโลดเต้นในฮัมมามเว้นแต่จะสวมกางเกงขาสั้น หรือกางเกงขายาว และมุสลิมไม่ควรขัดตัวให้กับชาวยิวหรือคริสเตียน...ห้ามมิให้สตรีเป็นผู้รับสัมปทานดูแลฮัมมาม (สำหรับชาย) เพราะมันเป็นสถานแห่งความสำราญซึ่งอาจนำไปสู่การผิดประเวณี และห้ามมิให้สตรีเป็นผู้ดูแลโรงแรมที่พักของพ่อค้าและคนแปลกหน้า เพราะนั่นคือบ่อเกิดแห่งการผิดประเวณีอย่างแท้จริง”</p>
+      <p>จากข้อความข้างต้น พอจะอนุมานได้ว่าทั้งชาวเยิวและชาวคริสต์ต่างใช้บริการฮัมมามร่วมกับชาวมุสลิม ทั้งในดินแดนตะวันออกและตะวันตก เพื่อชำระล้างร่างกายและอาบน้ำ ซึ่งธรรมเนียมนี้เป็นที่ปฏิบัติสืบต่อกันมาในโมร็อกโกจนกระทั่งถึงช่วง 20 ปีแรกของยุคอารักขา</p>
+      <p>มีเรื่องเล่าขานว่า เคาะลีฟะฮ์แห่งราชวงศ์ฟาฏิมียะฮ์ นามว่า “อัลฮากิม” คือผู้แรกที่ออกคำสั่งให้ “ชาวคริสต์ต้องแขวนไม้กางเขนที่คอ และชาวยิวต้องแขวนกระดิ่งที่คอเมื่อเข้าไปใช้บริการฮัมมามสาธารณะ เพื่อให้แยกแยะได้ชัดเจนจากชาวมุสลิม”</p>
+      <p>ต่อมาในปี ฮ.ศ. 408 พระองค์ได้ทรงแยกฮัมมามสำหรับชาวยิวและชาวคริสต์ออกจากฮัมมามของมุสลิม เฉกเช่นเดียวกับที่ทรงกำหนดให้ย่าน “ซุวัยละฮ์” ในกรุงไคโร เป็นเขตพำนักของชาวยิวในเวลานั้น</p>
+      <p>สิ่งที่ควรค่าแก่การกล่าวถึงคือ เหล่าชาวแฟรงก์ (ชาวยุโรป) ที่เข้ามาตั้งรกรากในดินแดนชามระหว่างสงครามครูเสด เป็นกลุ่มแรกที่ชื่นชอบการอาบน้ำในฮัมมามแบบอิสลามเป็นอย่างมาก “พวกเขาพากันหลั่งไหลเข้าไปใช้บริการ ใช้เวลาว่างพักผ่อนหย่อนใจนานนับชั่วโมง นอกเหนือไปจากเป้าหมายหลักคือความสะอาด ดูเหมือนว่าบางคนจะเสพติดสิ่งนี้จนเกินพอดี จนทำให้บรรดานักบวชในศาสนจักรต้องออกมาประท้วงเหล่าแม่ชี ที่บังอาจ ‘ออกจากคอนแวนต์ อันเป็นการละเมิดกฎระเบียบแห่งสมถะ เพื่อไปเที่ยวเตร่ในฮัมมามสาธารณะปะปนกับชาวบ้านร้านตลาด’</p>
+      <p>ดังที่ได้กล่าวไปแล้วว่า ฮัมมามนั้นเปิดกว้างสำหรับทั้งสาธุชนและคนถ่อย แต่ทว่าผู้ทรงคุณธรรมและผู้ยำเกรงพระเจ้ามักจะหลีกเลี่ยงสิ่งเลวร้ายที่อาจพบเห็นในนั้น บรรดานักปราชญ์จึงได้กำหนดเงื่อนไขที่อนุญาตให้เข้าใช้บริการได้ ซึ่งท่านอัลเฆาะซาลีย์ได้ระบุไว้ในหนังสือ “อิห์ยาอ์ฯ”, ท่านอิบนุลฮาญในหนังสือ “อัลมัดค็อล” และท่านอิบนุ ญุซัยย์ ในหนังสือ “อัลกอวานีน อัลฟิกฮียะฮ์” ต่างก็ได้ระบุเงื่อนไขเหล่านี้ไว้ ซึ่งแทบจะมีใจความและรูปแบบที่คล้ายคลึงกัน</p>
+      <p>ท่านอิบนุ ญุซัยย์ (ในบทที่ 12: การเข้าฮัมมาม) ได้กล่าวว่า: “สำหรับผู้ชาย (มิใช่สตรี) มีเงื่อนไข 10 ประการ ดังนี้: 1.เขาต้องเข้าไปเพียงลำพัง หรือ 2.เข้าไปพร้อมกับกลุ่มคนที่รู้จักปกปิดร่างกาย และควรเลือกเวลาที่เงียบสงบผู้คนน้อย 3.เขาต้องปกปิดอวัยวะพึงสงวนด้วยผ้าที่หนาทึบ 4.เขาต้องหันหน้าเข้าหากำแพงเพื่อมิให้สายตาไปกระทบกับสิ่งต้องห้าม 5.เขาต้องตักเตือนเปลี่ยนแปลงสิ่งที่เห็นว่าผิดทำนองคลองธรรมด้วยความนุ่มนวล 6.เขาต้องไม่ยอมให้ผู้นวดตัวสัมผัสอวัยวะพึงสงวน (ตั้งแต่สะดือถึงหัวเข่า) ยกเว้นภรรยาหรือทาสสาวของเขาเอง 5.เขาต้องเข้าไปด้วยเจตนาเพื่อการบำบัดรักษาหรือชำระล้างคราบไคล 7.เขาต้องเข้าไปโดยตกลงค่าจ้างไว้ชัดเจนตามธรรมเนียม 8.เขาต้องใช้น้ำเท่าที่จำเป็น 9.เขาต้องรำลึกถึงนรก (จากความร้อนของฮัมมาม) 10.หากไม่สามารถเข้าไปตามลำพังได้ ให้เช่าเหมาเข้าไปพร้อมกับกลุ่มคนที่เคร่งครัดในศาสนา”</p>
+      <p>ท่านกล่าวต่อว่า “ส่วนสตรีนั้น มีทัศนะที่ขัดแย้งกันในการเข้าฮัมมาม บ้างก็ว่าห้ามเข้าโดยเด็ดขาดเว้นแต่มีเหตุจำเป็น เช่น เจ็บป่วย หรืออากาศหนาวจัด หรือเหตุผลคล้ายกันทำนองนี้ บ้างก็ว่าที่ห้ามนั้นเพราะสมัยก่อนไม่มีฮัมมามแยกเฉพาะ แต่หากมีการแยกสัดส่วนเฉพาะสตรีโดยไม่มีปะปนกับบุรุษ ก็ถือว่าไม่เป็นไร”</p>
+      <p>เมื่อนางเข้าไปแล้ว มีความเห็นว่านางต้องปกปิดทั่วเรือนร่าง แต่ท่านอิบนุ รุชด์ให้ความเห็นว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لا يلزمها من الستر مع النساء إلا ما يلزم ستره مع الرجال، فإن النساء مع النساء كالرجال مع الرجال</blockquote>
+      <p class="ar-translation">“ไม่จำเป็นต้องปกปิดต่อหน้าสตรีด้วยกันมากไปกว่าสิ่งที่ผู้ชายต้องปกปิดต่อหน้าผู้ชายด้วยกัน เพราะผู้หญิงกับผู้หญิงก็สถานะเดียวกับผู้ชายกับผู้ชาย”</p>
+      <p>ในหนังสือ “อิห์ยาอ์ฯ” ในบทว่าด้วยความสะอาดระบุว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الدرن الذي يجتمع على جميع البدن برشح العرق وغبار الطريق، وذلك يزيله الحمام، ولا بأس بدخول الحمام، دخل أصحاب رسول الله صلى الله عليه وسلم حمامات الشام، وقال بعضهم : «نعم البيت بيت الحمام، يطهر البدن ويذكر النار» وقال بعضهم: «بئس البيت بيت الحمام، يبدي العورة ويذهب الحياء». فهذا تعرض لآفاته وذلك تعرض لفائدته، ولا بأس بطلب فائدته عند الاحتراز من آفته</blockquote>
+      <p class="ar-translation">“คราบไคลที่เกาะตามร่างกายจากเหงื่อและฝุ่นละอองบนท้องถนนนั้น ฮัมมามช่วยกำจัดออกไปได้ จึงไม่เป็นไรที่จะเข้าฮัมมาม เหล่าสหายของท่านศาสนทูตก็เคยใช้บริการฮัมมามในเมืองชาม บางท่านกล่าวสรรเสริญว่า ‘ฮัมมามเป็นสถานที่ที่ดียิ่ง ช่วยชำระกายและเตือนใจให้นึกถึงไฟนรก’ แต่บางท่านติเตียนว่า ‘ฮัมมามเป็นสถานที่ที่แย่ยิ่ง เป็นที่เปิดเผยอวัยวะพึงสงวนและทำลายความยางอาย’ นี่คือการมองที่โทษและประโยชน์ ดังนั้นจึงไม่ผิดที่จะแสวงหาประโยชน์โดยระมัดระวังจากโทษของมัน”</p>
+      <p>ท่านยังยกหะดีษที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فلا يدخلها (أي الحمامات) الرجال إلا بمئزر، وامنعوا النساء إلا مريضة أو نفساء</blockquote>
+      <p class="ar-translation">“ผู้ชายจงอย่าเข้าฮัมมามเว้นแต่จะนุ่งผ้าปิดกาย และจงห้ามสตรีเข้า เว้นแต่ผู้ป่วยหรือหญิงหลังคลอดบุตร”</p>
+      <p>ส่วนท่านอิบนุลฮาญได้กล่าวถึงกรณีของสตรี หลังจากระบุเงื่อนไขของบุรุษแล้วว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ينبغي للزوج ألا يأذن لزوجته في دخول الحمام لما اشتمل عليه، في هذا الزمان، من المفاسد الدنيئة والعوائد الرديئة، ثم يضاف إلى ذلك محرم آخر، وهو أن اليهودية أو النصرانية لا يجوز لها أن ترى بدن الحرة المسلمة وهن يجتمعن في الحمامات مسلمات ونصرانيات ويهوديات... ولو أخلى لأهله الحمام ليلا، واستترن فلا بأس.. ألا ترى أن الواحدة منهن إذا أرادت الحمام استصحبت معها أفخر ثيابها وأنفس حليها فتلبسها حين فراغها من الغسل، بذلك المفاخرة والمباهاة</blockquote>
+      <p class="ar-translation">“สามีไม่พึงอนุญาตให้ภรรยาไปฮัมมาม เพราะในยุคสมัยนี้สถานที่ดังกล่าวเต็มไปด้วยความเสื่อมทรามและธรรมเนียมที่เลวร้าย นอกจากนี้ยังมีข้อห้ามอีกประการหนึ่งคือ สตรีชาวยิวหรือคริสเตียนนั้น ไม่อนุญาตให้มองเห็นเรือนร่างของสตรีมุสลิมที่เป็นไท ในขณะที่พวกนางมักจะมารวมตัวปะปนกันในฮัมมาม... ต่อให้เหมาฮัมมามในเวลากลางคืนเพื่อปิดมิดชิด ก็ยังไม่วายมีปัญหา... ท่านไม่เห็นหรือว่า เวลาที่นางคนหนึ่งจะไปฮัมมาม นางจะขนเสื้อผ้าอาภรณ์ที่หรูหราที่สุดและเครื่องประดับที่มีค่าที่สุดติดตัวไป เพื่อสวมใส่ประชันกันหลังอาบน้ำเสร็จ เป็นการโอ้อวดและประกวดประขันกัน”</p>
+      <p>การหวาดระแวงในตัวสตรีนั้นเป็นทัศนคติที่มีมาแต่โบราณกาล ด้วยมองว่าพวกนางคือ “สหายแห่งยูซุฟ” (เจ้ามารยา) และเล่ห์เหลี่ยมของพวกนางนั้นยิ่งใหญ่หนักหนา แต่ทว่า... ผู้ชายนั้นเล่าคือเทวดานางฟ้ากระนั้นหรือ? ก็ไม่ใช่ จะมีชายสักกี่คนที่สามารถกล่าวเยี่ยงท่านศาสดายูซุฟได้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">رب السجن أحب إلي مما يدعونني إليه</blockquote>
+      <p class="ar-translation">“โอ้พระผู้อภิบาล คุกนั้นยังเป็นที่รักสำหรับข้า มากกว่าสิ่งที่พวกนางเรียกร้องเชิญชวนข้าไปกระทำ”?</p>
+      <p>จริงอยู่ ที่พวกนางอาจจะโอนเอียงไปในทางรักสวยรักงาม ชอบอวดโฉมเสื้อผ้าและเครื่องประดับมากกว่าผู้ชาย แต่ก็นั่นแล...ดังบทกวีที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كتب القتل والقتال علينا</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وعلى الغانيات جر الذيول</blockquote>
+      <p class="ar-translation">“บทบัญญัติ การศึก ถูกจารึกไว้ ให้แก่เรา (บุรุษ) ส่วนการลาก ชายเสื้อ (ความงาม) นั้นเล่า คือกิจ ของนงคราญ”</p>
+      <p>เป็นที่น่าสังเกตว่า สตรีผู้รักนวลสงวนตัวนั้นมีจำนวนมากกว่าบุรุษผู้รู้จักยับยั้งชั่งใจ โดยเฉพาะในยามที่สังคมรวมถึงบรรดาชายหนุ่มและผู้หลักผู้ใหญ่ต่างให้เกียรติและละเว้นจากการล่วงละเมิดสตรีที่ดีงาม</p>
+      <p>แต่ทว่า... เมื่อใดที่โอกาสเอื้ออำนวยให้เกิดการปะปนกันอย่างสับสนอลหม่าน ระหว่างคนดีและคนเลว คนซื่อและคนเจ้าเล่ห์ ผู้สุขุมและผู้มุทะลุ เมื่อนั้นหน้าที่ของสามีในการเป็นเกราะป้องกันและประคับประคองภรรยาให้ธำรงไว้ซึ่งความบริสุทธิ์จึงกลายเป็นสิ่งจำเป็นยิ่ง</p>
+      <p>กวีเอกอย่างอบุลอะลา อัลมะอัรรีย์ ได้กล่าวตักเตือนสตรีไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا تلجي الحمام، قد جاء ناصح  بتحريسه، من قبل أن يفسد الناس</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فكيف به لما اغتدى في طريقه  رجيب وحواش وتنسج وأشناس</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">تمازح بالعرب الأعاجم والتقي   على الغدر أنواع تذم وأجناس</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أناس كقوم ذاهبين وجوههم    ولكنهم في باطن الأمر نسناس</blockquote>
+      <p class="poem-th">“เจ้าจงอย่า ย่างกราย เข้าฮัมมาม<br>ผู้หวังดี เตือนห้าม ก่อนเสียหาย<br>จะเป็นเช่น ไรเล่า เมื่อเยี่ยมกราย<br>ต้องพบชาย ชั่วช้า สารพัน<br>ทั้งต่างชาติ ปะปน คนอาหรับ<br>ความตลบ ตะแลง พลิกแพลงผัน<br>หน้าเหมือนคน แต่เนื้อใน ใช่คนกัน<br>คือเดรัจฉาน ลิงค่าง ร่างแปลงมา”</p>
+      <p>ต้องเข้าใจว่า อัลมะอัรรีย์มีชีวิตอยู่ในยุคสมัยที่การเมืองและศีลธรรมเสื่อมโทรมและสับสนวุ่นวาย ตัวเขาเองก็มีนิสัยหวาดระแวงในเพศหญิงเป็นทุนเดิม และคำวิพากษ์วิจารณ์ของเขามิได้จำกัดอยู่เพียงสตรีมุสลิม แต่เหมารวมไปถึงสตรีชาวยิวและคริสเตียน ดังที่เขาปิดท้ายบทกวีอันโด่งดังของเขาว่า: “จงปฏิบัติต่อพวกนางให้เท่าเทียมกัน ไม่ว่าจะเป็นสตรีคริสเตียน หรือแม้แต่ดวงตาของชาวยิวและมุสลิม”</p>
+      <p>เขามองโลกในแง่ร้ายเกี่ยวกับสตรีอย่างสุดโต่ง ถึงขนาดมองไม่เห็นประโยชน์ใดๆ ในการให้พวกนางได้รับการศึกษา หรือการออกไปทำพิธีฮัจญ์ ไปมัสยิด หรือไปฮัมมามจนถึงขั้นกล่าวประโยคที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ودفن الغانيات لهن أو في</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">من الكلل المنيعة والخدور</blockquote>
+      <p class="ar-translation">“การฝังร่าง นงคราญ ลงพื้นดิน ประเสริฐสิ้น กว่าม่านกั้น หรือหอห้อง”</p>
+      <p>ในขณะที่ยอดกวีอย่างอะบู อัฏฏ็อยยิบ อัลมุตะนับบีย์ ได้เปรียบเทียบความงามตามธรรมชาติของสาวชาวเบดูอิน (ชนบท) กับความงามที่ปรุงแต่งจนเกินจริตของสาวชาวเมือง (คนกรุง) ไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ما أوجه الحضر المستحسنات به        كأوجه البدويات الرعابيب</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">حسن الحضارة مجلوب بتطرية         وفي البداوة حسن غير مجلوب</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أفدي ظباء فلاة ما عرفن بها             مضغ الكلام ولا صبغ الحواجيب</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا يرزن من الحمام مائلة               أوراكهن صقيلات العراقيب</blockquote>
+      <p class="poem-th">“ใบหน้านาง ชาวกรุง ที่ปรุงแต่ง<br>มิอาจแย่ง งามนางไพร ผู้ใสซื่อ<br>งามชาวกรุง ต้องแต้มแต่ง ด้วยฝีมือ<br>แต่งามคือ ธรรมชาติ ของนางไพร<br>ข้าขอพลี ใจแด่ กวางน้อยนี้<br>กลางทรายที่ มิรู้จัก จริตไข<br>มิเคี้ยวคำ จำนรรจา หรือเขียนไพร<br>มิรู้จัก เขียนคิ้วให้ โก่งดั่งคัน<br>และมิใช่ ผู้เดินนวย ออกฮัมมาม<br>ด้วยท่วงท่า วู่วาม สะโพกผัน<br>อวดเอวคอด ส้นเท้าขัด เงางามงอน...”</p>
+      <p>อัลมุตะนับบีย์ยกย่องสาวเบดูอินเพราะความงามของพวกนางนั้นบริสุทธิ์ ไม่ต้องพึ่งพาเครื่องประทินโฉมหรือการเสแสร้ง พวกนางพูดจาฉะฉานโดยไม่ต้องดัดจริตเคี้ยวคำเหมือนสาวชาวเมืองที่มักเขียนคิ้วทาสีและพยายามสร้างความงามด้วยการเข้าฮัมมาม เพื่อขัดสีฉวีวรรณ รัดเอวให้คอดกิ่วจนสะโพกผายออก และขัดส้นเท้าจนมันวาว</p>
+      <p>อัลมุตะนับบีย์มิได้มองว่าการเข้าฮัมมามเป็นเรื่องผิดบาป แต่เขารังเกียจพฤติกรรมของสาวชาวเมืองที่ใช้ฮัมมามเป็นโอกาสในการอวดโฉมเรือนร่างให้ผู้อื่นที่มิใช่สามีได้ยล</p>
+      <p>แม้ว่าเราจะเห็นนักนิติศาสตร์จำนวนมากมองว่าการอนุญาตให้สตรีเข้าฮัมมามเป็นการเปิดประตูสู่ความเสื่อมเสีย และมักออกคำวินิจฉัยห้ามสตรีเข้าฮัมมาม แต่เมื่อพิจารณาถึงประวัติศาสตร์ วิถีชีวิตประจำวันในยุคปัจจุบัน และพัฒนาการของขนบธรรมเนียมทางสังคมแล้ว ย่อมกล่าวได้ว่าการจะนำฟัตวาเหล่านั้นมาบังคับใช้อย่างเคร่งครัดในปัจจุบันเป็นเรื่องยาก หรือแทบจะเป็นไปไม่ได้</p>
+      <p>ทางออกที่ดีที่สุดคือการส่งเสริมสิ่งที่ช่วยสร้าง “ภูมิคุ้มกัน” ทางจิตใจ นั่นคือความรักนวลสงวนตัวโดยสัญชาตญาณ และการรู้จักลดสายตาต่ำโดยธรรมชาติ</p>
+      <p>ในอีกด้านหนึ่ง ห้องอาบน้ำส่วนตัวได้กลายเป็นสิ่งปกติสามัญในเมืองและเป็นสาธารณูปโภคพื้นฐานของบ้านเรือนสมัยใหม่ ขณะเดียวกันฮัมมามแบบโมเดิร์นก็เพิ่มจำนวนขึ้น โดยที่ชายและหญิงสามารถผลัดเปลี่ยนกันเข้าใช้บริการได้ในช่วงเวลาที่ต่างกันทั้งกลางวันและกลางคืน ซึ่งฮัมมามเหล่านี้ส่วนใหญ่มีวัตถุประสงค์เพื่ออำนวยความสะดวกในการชำระล้างร่างกาย ลดความยุ่งยากและเวลาที่ต้องใช้ในฮัมมามแบบโบราณ และหลีกเลี่ยงกระแสลมโกรกหรือปัญหาการปะปนกันของผู้คนร้อยพ่อพันแม่</p>
+      <p>ทั้งหมดนี้ตอกย้ำถึงความจำเป็นในการเอาใจใส่ต่อการอบรมเลี้ยงดูบุตรหลาน ทั้งชายและหญิง ให้รู้จักไตร่ตรองถึงผลที่จะตามมาของการกระทำและรสนิยมของตน พร้อมๆกับความจำเป็นในการดูแลจัดการฮัมมามต่อไป ทั้งในแง่การเลือกทำเลที่ตั้ง การออกแบบสถาปัตยกรรม ระบบทำความร้อน และที่สำคัญที่สุดคือ จรรยาบรรณของผู้ดูแลและการเคารพมารยาทในการใช้สถานที่แห่งนี้</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ฮัมมาม โรงอาบน้ำในดินแดนมุสลิม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/hammam-bathhouses-in-muslim-lands.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>

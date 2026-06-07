@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>อิมามอัลฆอซาลี หันหลังให้ ‘อิลมุลกะลาม’ และประณามมันจริงหรือ? — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="">
+<meta name="keywords" content="อัลฆอซาลี, อิลมุลกะลาม, เทววิทยา, อัชอะรียะฮ์, อุศูลุดดีน">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="อิมามอัลฆอซาลี หันหลังให้ ‘อิลมุลกะลาม’ และประณามมันจริงหรือ? — Islamic Fiqh Publishing">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/kalam/ghazali-and-ilm-al-kalam.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="ghazali-and-ilm-al-kalam">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/kalam.html" class="article-feature-eyebrow">เทววิทยา / กะลาม</a>
+      <h1 class="article-feature-title">อิมามอัลฆอซาลี หันหลังให้ ‘อิลมุลกะลาม’ และประณามมันจริงหรือ?</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">บทความโดย มัรกัส อัลอิมาม อัลอัชอะรีย์</p>
+
+      <h2 class="article-h2">บทนำ</h2>
+      <p>ท่าทีของปรมาจารย์อบู ฮามิด อัลฆอซาลี (เสียชีวิตปี ฮ.ศ. 505) ต่อศาสตร์ที่เรียกว่า ‘อิลมุลกะลาม’ (เทววิทยาอิสลาม) นั้น เต็มไปด้วยความสับสนและความขัดแย้งมาโดยตลอด บางคนกล่าวว่าท่านได้หันหลังให้กับมันและกล่าวประณาม ในขณะที่บางคนก็ยืนยันว่าท่านยังคงยึดมั่นและกล่าวชื่นชม</p>
+      <p>ดังนั้น เราจึงตั้งใจให้งานเขียนสั้นๆนี้เป็นเหมือนแสงสว่างที่ฉายให้เห็นถึงทัศนะที่แท้จริงของอิมามอัลฆอซาลีต่ออิลมุลกะลาม</p>
+      <p>แต่ในบทความนี้...ขอเสนอภาพที่แตกต่างออกไป...ขอยืนยันว่าทัศนะของท่านอิมามนั้นมีเพียงหนึ่งเดียวและมั่นคงไม่เคยเปลี่ยนแปลง นับตั้งแต่ผลงานในยุคแรกเริ่มของท่าน จวบจนวาระสุดท้ายที่ท่านได้กลับไปสู่ความเมตตาของอัลลอฮ์...ทัศนะนั้นคือ การยอมรับใน ‘อิลมุลกะลาม’ ไม่ใช่การประณาม โดยมองว่ามันเปรียบเสมือน ‘ยา’ ที่จะใช้ก็ต่อเมื่อมีความจำเป็นเท่านั้น</p>
+      <p>เราไม่ได้จะอวดอ้างว่าจะนำเสนอสิ่งใหม่ที่ไม่มีใครเคยพูดถึง หรือค้นพบความลับที่นักวิชาการรุ่นก่อนมองข้ามไป...เราได้ย้อนกลับไปสู่ต้นธารแห่งความรู้...นั่นคือตำราเล่มสำคัญๆของท่านอิมามเอง เพื่อค้นคว้าและคัดลอกข้อความที่จะมายืนยันในสิ่งที่เราเชื่อ แล้วจิตวิญญาณของเราก็เรียกร้องให้เรียบเรียงบทความนี้ขึ้นมา...เพราะเห็นว่าการพูดคุยเกี่ยวกับอัลฆอซาลีนั้นเป็นเรื่องที่เกิดขึ้นใหม่อยู่เสมอ ทั้งในอดีตและในปัจจุบัน ทั้งในโลกตะวันออกและตะวันตก และทัศนะของท่านที่มีต่อ ‘อิลมุลกะลาม’ และปรัชญานั้น ก็เป็นเรื่องที่ยังต้องการการอธิบายและขยายความให้กระจ่างชัดยิ่งขึ้น</p>
+      <p>สำหรับแนวทางที่ใช้ในบทความนี้คือ:</p>
+      <p>หนึ่ง ติดตามทัศนะของท่านอิมามจากหนังสือ “อิห์ยาอ์ อุลูมิดดีน” โดยเฉพาะใน “บทว่าด้วยความรู้ (กิตาบุลอิลม์)” และ “บทว่าด้วยรากฐานแห่งความเชื่อ (กิตาบ เกาะวาอิดิลอะกออิด)” ซึ่งเป็นสองบทสำคัญที่ท่านได้กล่าวถึงอิลมุลกะลามไว้อย่างละเอียด</p>
+      <p>สอง อุทิศเนื้อหาส่วนที่สองของบทความเพื่อวิเคราะห์ทัศนะของท่านจากหนังสือเล่มอื่นๆ</p>
+      <p>สาม วาง “รากฐานสำคัญ” ข้อหนึ่ง ซึ่งเชื่อว่าหากใครเข้าใจรากฐานข้อนี้แล้ว จะทำให้การทำความเข้าใจมรดกทางปัญญาของท่านอิมามเป็นเรื่องง่ายขึ้น</p>
+      <p>และท่านก็คงทราบดีว่า หนึ่งในข้อกล่าวหาที่ไล่ตามอัลฆอซาลีไม่หยุดหย่อนก็คือ การที่ท่านได้ดำดิ่งลงไปในมหาสมุทรแห่งปรัชญาอย่างลึกซึ้ง...จนเมื่อต้องการจะกลับขึ้นมา ก็ไม่สามารถทำได้อีกต่อไป ด้วยเหตุนี้เอง ท่านจึงได้รับอิทธิพลจากแนวทางของนักปรัชญาอย่างหลีกเลี่ยงไม่ได้ และแน่นอนว่าอิทธิพลนั้นก็ได้แผ่ขยายมาถึงทัศนะของท่านที่มีต่ออิลมุลกะลามด้วย ดังนั้น ทัศนะของอัลฆอซาลีต่ออิลมุลกะลามจึงถูกมองว่าตั้งอยู่บนพื้นฐานของปรัชญา ซึ่งเป็นประเด็นที่ต้องนำมาทบทวนและพิจารณากันใหม่ และเราจะมาถกเถียงกันในตอนท้ายของงานเขียนนี้...และอัลลอฮ์คือผู้ทรงอยู่เบื้องหลังเจตนาทั้งปวง การสรรเสริญเป็นสิทธิ์ของพระองค์ และพระองค์คือผู้ทรงนำทางสู่หนทางที่เที่ยงตรง</p>
+      <p>อัลฆอซาลีกับอิลมุลกะลาม: มุมมองผ่านผลงานชิ้นเอกอย่าง ‘อิห์ยาอ์ อุลูมิดดีน’</p>
+      <p>ข้อเสนอหลักที่เราต้องการจะปกป้องในงานเขียนชิ้นนี้ก็คือ...อิมามอัลฆอซาลีไม่เคยเปลี่ยนทัศนะของท่านที่มีต่ออิลมุลกะลามเลย ทัศนะของท่านเป็นหนึ่งเดียว, มั่นคงและไม่เปลี่ยนแปลง นับตั้งแต่ผลงานยุคแรกอย่าง “อัลอิกติศอด ฟิลอิอ์ติกอด" จวบจนผลงานยุคสุดท้ายอย่าง “อิลญาม อัลอะวาม อัน อิลมิลกะลาม” และ “อิห์ยาอ์ อุลูมิดดีน” ซึ่งเป็นสองเล่มที่ท่านเขียนขึ้นหลังจากกลับมาจากการเดินทางเพื่อค้นหาจิตวิญญาณ</p>
+      <p>ทัศนะที่ว่านั้นก็คือ: อิลมุลกะลามเป็นศาสตร์ที่มีประโยชน์ เป็นยารักษาที่ได้ผล แต่ต้องอยู่ภายใต้เงื่อนไขบางประการ (ซึ่งจะกล่าวต่อไป)</p>
+      <p>มันคือ ฟัรฎูกิฟายะฮ์ (หน้าที่ส่วนรวม) ที่ทุกเมืองของชาวมุสลิมจะขาดนักเทววิทยา (มุตะกัลลิม) ผู้มีไหวพริบปฏิภาณเฉียบแหลมไปไม่ได้ เพื่อที่จะคอยปราบปรามอุตริกรรม, ปัดเป่าข้อคลางแคลงใจ และปกป้องความเชื่อของคนทั่วไปไม่ให้สั่นคลอน</p>
+      <p>แต่...อิลมุลกะลามเพียงอย่างเดียวนั้นไม่เพียงพอ และไม่สามารถบรรลุเป้าหมายสูงสุดได้ด้วยตัวของมันเอง</p>
+      <p>นักเทววิทยาในอุดมคติ คือผู้ที่ผสมผสานอิลมุลกะลามเข้ากับการอุทิศตนอย่างแท้จริงเพื่ออัลลอฮ์ตะอาลา และมีความบริสุทธิ์ใจในการแสวงหาความพึงพอใจจากพระองค์... เขาผู้นั้นคืออิมามที่สมควรเจริญรอยตาม คือผู้ยำเกรงที่ได้รับการชี้นำ และคือปราชญ์ที่ได้รับการสนับสนุนจากพระองค์</p>
+      <p>เราขอยืนยันว่า อัลฆอซาลีได้แสดงออกถึงทัศนะอันมั่นคงนี้ผ่านถ้อยคำและลีลาการเขียนที่หลากหลาย บางครั้งท่านก็ปล่อยให้ปลายปากกาโลดแล่นไปตามความคิด เขียนอธิบายอย่างยืดยาวและละเอียดลออ ในขณะที่บางครั้งท่านก็ควบคุมมันไว้อย่างรัดกุม เขียนอย่างกระชับและรวบรัด</p>
+      <p>และ ‘ลีลาที่เปลี่ยนไป’ นี่เอง...ที่ทำให้นักวิชาการบางกลุ่มต้องลังเล ไม่สามารถเข้าถึงทัศนะที่แท้จริงของท่านได้ และผลักดันให้อีกกลุ่มหนึ่งฟันธงอย่างมั่นใจว่า ท่านอิมามได้หันหลังให้กับอิลมุลกะลาม, กล่าวประณาม และสั่งห้ามมันไปแล้ว!</p>
+      <p>แต่ในความเป็นจริงแล้ว ทัศนะของท่านที่มีต่ออิลมุลกะลามนั้นเป็นหนึ่งเดียว ไม่เคยเปลี่ยนแปลง และไม่เคยแตกต่าง และในเนื้อหาต่อไปจากนี้ จะเป็นการสำรวจตำราเล่มสำคัญต่างๆของท่าน ซึ่งอินชาอัลลอฮ์ จะเป็นเครื่องยืนยันในสิ่งที่เราได้กล่าวอ้างไว้</p>
+      <p>สิ่งแรกที่เราต้องให้ความสำคัญก็คือ คำกล่าวของท่านที่ว่า หลักการพื้นฐานก็คือ...หากไม่มีอุตริกรรม (บิดอะฮ์) แพร่หลายจนทำให้ผู้คนหันเหออกจากศาสนาของพวกเขา ก็ไม่ควรที่จะเข้าไปยุ่งเกี่ยวกับอิลมุลกะลาม เพราะสำหรับมุสลิมส่วนใหญ่แล้ว อัลกุรอานเพียงอย่างเดียวก็เพียงพอสำหรับพวกเขาแล้ว...</p>
+      <p>แต่เมื่อใดก็ตามที่อุตริกรรมเริ่มระบาดและกลายเป็นปัญหาใหญ่...หน้าที่ในการปกป้องความเชื่อและปัดเป่าอุตริกรรมก็ถือกำเนิดขึ้น ท่านได้กล่าวไว้ใน “บทว่าด้วยความรู้” ซึ่งเป็นบทแรกของหนังสือ “อิห์ยาอ์ อุลูมิดดีน” ว่า:</p>
+      <p>“พึงทราบเถิดว่า แก่นแท้ของบรรดาหลักฐานที่มีประโยชน์ในอิลมุลกะลามนั้น...อัลกุรอานและหะดีษก็ได้ครอบคลุมไว้หมดแล้ว ส่วนสิ่งที่นอกเหนือไปจากสองสิ่งนี้...ก็มีอยู่สองประเภท:</p>
+      <p>หนึ่ง คือการโต้เถียงที่น่าตำหนิ ซึ่งถือเป็นอุตริกรรม...</p>
+      <p>สอง คือการทะเลาะวิวาทที่ไร้แก่นสาร ด้วยการไปยึดติดกับความขัดแย้งของกลุ่มต่างๆและการสาธยายแนวคิดต่างๆที่ส่วนใหญ่เป็นเรื่องไร้สาระเพ้อเจ้อที่สามัญสำนึกรังเกียจและโสตประสาทไม่อยากได้ยิน...</p>
+      <p>แต่เดิมนั้น การเข้าไปยุ่งเกี่ยวกับเรื่องเหล่านี้ถือเป็นอุตริกรรมโดยสิ้นเชิงในยุคแรก...</p>
+      <p>แต่ทว่า...บัดนี้สถานะของมันได้เปลี่ยนไปแล้ว! เพราะได้เกิดมีอุตริกรรมใหม่ๆที่พยายามจะทำให้ผู้คนหันเหออกจากแนวทางของอัลกุรอานและซุนนะฮ์ และมีกลุ่มคนที่สร้างข้อคลางแคลงใจ (ชุบะฮาต) และเรียบเรียงวาทกรรมต่างๆขึ้นมาสนับสนุนแนวคิดของตน...ดังนั้น สิ่งที่เคยเป็นข้อห้ามจึงกลายเป็นสิ่งที่ได้รับอนุญาตตามความจำเป็น...ยิ่งไปกว่านั้น มันยังได้กลายเป็นฟัรฎูกิฟายะฮ์ (หน้าที่ส่วนรวม) ในขอบเขตที่จำเป็นเพื่อใช้ตอบโต้ผู้สร้างอุตริกรรมที่ต้องการจะเผยแพร่แนวคิดของตน ซึ่งมีขอบเขตจำกัดดังที่ข้าพเจ้าจะกล่าวถึงในบทต่อไป”</p>
+      <p>คำพูดของอัลฆอซาลีที่ว่า “อิลมุลกะลามได้กลายเป็นฟัรฎูกิฟายะฮ์นั้น” ชัดเจนในตัวเองจนไม่ต้องการคำอธิบายเพิ่มเติม...แต่ในข้อความนี้ ท่านอิมาม (ขออัลลอฮ์ทรงเมตตา) ได้ชี้ให้เห็นถึงสองประเด็นสำคัญคือ</p>
+      <p>ประเด็นแรก: ท่านได้วางเงื่อนไขสำหรับผู้ที่ต้องการจะศึกษาอิลมุลกะลามว่า จะต้องมีเป้าหมายเพื่อลุกขึ้นมาต่อต้านอุตริกรรม ปัดเป่ามันออกจากหัวใจของมุสลิมทั่วไป และขจัดข้อคลางแคลงใจเพื่อไม่ให้มันฝังรากลึกลงในจิตใจของผู้ศรัทธา</p>
+      <p>ประเด็นที่สอง (ซึ่งอาจจะสำคัญกว่าเพราะสร้างความสับสนมากกว่า): คือคำกล่าวของท่านที่ว่า อิลมุลกะลามนั้นไม่เป็นที่รู้จักหรือไม่เป็นที่คุ้นเคยในยุคแรกของอิสลาม</p>
+      <p>และเมื่อเราอ่านต่อไปอีกเล็กน้อยในหนังสืออิห์ยาอ์จนถึง “บทว่าด้วยรากฐานแห่งความเชื่อ” เราจะพบว่าอัลฆอซาลีได้ขยายความในประเด็นนี้และให้คำตอบไว้อย่างชัดเจน ซึ่งสรุปได้ว่า ในยุคของเศาะฮาบะฮ์ (ขออัลลอฮ์ทรงพอพระทัยในพวกเขา) นั้น ยังไม่มีความจำเป็นเร่งด่วนที่จะต้องใช้อิลมุลกะลาม ท่านกล่าวว่า:</p>
+      <p>“หากท่านจะถามว่า: ในเมื่อท่านยอมรับว่ามีความจำเป็นต้องใช้มัน (อิลมุลกะลาม) เพื่อตอบโต้พวกอุตริกรรม และบัดนี้อุตริกรรมก็ได้เกิดขึ้นแล้ว ปัญหาก็ได้แพร่หลาย ความจำเป็นก็ได้บังเกิด ดังนั้น การทำหน้าที่นี้ก็ย่อมต้องกลายเป็นฟัรฎูกิฟายะฮ์...และศาสตร์นี้จะดำรงอยู่ไม่ได้หากไม่มีการเรียนการสอน...ถ้าเช่นนั้น การเรียนการสอนและการค้นคว้าในศาสตร์นี้ก็ควรจะเป็นฟัรฎูกิฟายะฮ์ด้วย ซึ่งแตกต่างจากยุคของเศาะฮาบะฮ์ที่ยังไม่มีความจำเป็นเร่งด่วน...</p>
+      <p>พึงทราบเถิดว่า ความจริงก็คือ ในทุกๆเมือง จำเป็นต้องมีผู้ที่เชี่ยวชาญในศาสตร์นี้ เพื่อคอยปัดเป่าข้อคลางแคลงใจของพวกอุตริกรรมที่เกิดขึ้นในเมืองนั้น...แต่...ไม่ใช่เรื่องถูกต้องที่จะสอนศาสตร์นี้เป็นการทั่วไปเหมือนกับการสอนฟิกฮ์ (นิติศาสตร์) และตัฟซีร (อรรถาธิบายอัลกุรอาน)...เพราะศาสตร์นี้เปรียบเสมือน ‘ยา’ ส่วนฟิกฮ์นั้นเปรียบเสมือน ‘อาหาร’”</p>
+      <p>ดังนั้น...ในยุคของเศาะฮาบะฮ์จึงยังไม่มีความจำเป็นเร่งด่วนที่จะต้องใช้อิลมุลกะลาม ไม่มีความจำเป็นที่จะต้องมานั่งคิดพิจารณา, ค้นหาหลักฐาน หรือเรียบเรียงข้อพิสูจน์ต่างๆ...ทั้งหมดนี้เป็นเพราะความจำเริญจากการมีอยู่ของท่านนบีคนสุดท้าย ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม อยู่ท่ามกลางพวกเขา</p>
+      <p>จากจุดนี้เอง จึงเป็นที่แน่ชัดว่า อิลมุลกะลามคือ ‘ศาสตร์เชิงป้องกัน’ ที่มีหน้าที่ต่อกรกับอุตริกรรม, ดับไฟของมัน และขจัดภัยอันตรายของมันให้หมดสิ้นไป และตราบใดที่ยังไม่มีอุตริกรรมเกิดขึ้น อัลกุรอานก็เพียงพอแล้ว และผู้ที่จะใช้ศาสตร์นี้ก็ควรเป็นนักวิชาการ ไม่ใช่คนทั่วไป...ท่านอิมามอัลฆอซาลีได้เปรียบเทียบไว้อย่างเห็นภาพว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فإذا، الكلام صار من جملة الصناعات الواجبة على الكفاية حراسةً لقلوب العوام عن تخييلات المبتدعة، وإنما حدث ذلك بحدوث البدعِ، كما حدثت حاجة الإنسان إلى استئجار البذرقة [الحراس] في طريق الحج بحدوث ظلم العرب وقطعهم الطريق، ولو ترك العرب عدوانهم.. لم يكن استئجار الحراس من شروط طريق الحج، فكذلك لو ترك المبتدع هذيانه.. لم افتقر إلى الزيادة على ما عُهِد في عصر الصحابة رضي الله عنهم</blockquote>
+      <p class="ar-translation">“ดังนั้น อิลมุลกะลามจึงได้กลายเป็นหนึ่งในทักษะที่จำเป็นในฐานะฟัรฎูกิฟายะฮ์ เพื่อปกป้องหัวใจของคนทั่วไปจากจินตนาการของพวกอุตริกรรม...ซึ่งมันเกิดขึ้นก็เพราะการเกิดขึ้นของอุตริกรรมนั่นเอง...เช่นเดียวกับที่มนุษย์ (บางคน) จำเป็นต้องจ้างทหารองครักษ์คุ้มกันในการเดินทางไปทำฮัจญ์ เพราะการเกิดขึ้นของโจรอาหรับที่คอยปล้นสะดมกลางทาง หากพวกอาหรับเลิกพฤติกรรมรุกราน...การจ้างทหารองครักษ์ก็ไม่จำเป็นสำหรับการเดินทางไปทำฮัจญ์อีกต่อไป...ในทำนองเดียวกัน...หากพวกอุตริกรรมเลิกเพ้อเจ้อ...เราก็ไม่จำเป็นต้องมีอะไรเพิ่มเติมไปกว่าสิ่งที่เคยมีในยุคของเศาะฮาบะฮ์อีกเลย”</p>
+      <p>ดังนั้น ‘อิลมุลกะลาม’ จึงเป็นสิ่งที่น่าชื่นชม ไม่ใช่สิ่งที่น่าตำหนิ, มีประโยชน์ ไม่ใช่มีโทษและเปรียบเสมือนเกราะป้องกันความเชื่อ...และศาสตร์ที่มีหน้าที่เช่นนี้ จะถูกมองว่าน่าตำหนิได้อย่างไรกัน?</p>
+      <p>เราไม่เคยสงสัยเลยว่า อิมามอัลฆอซาลี (ขออัลลอฮ์ทรงเมตตา) นั้นมองว่า “ศาสตร์แห่งอาคิเราะฮ์” โดยเฉพาะอย่างยิ่ง “ศาสตร์แห่งการเปิดเผยจากพระเจ้า (อิลมุลมุกาชะฟะฮ์)” นั้น สูงส่งกว่าอิลมุลกะลาม...นี่เป็นสิ่งที่เห็นได้ชัดเจนเพียงแค่พิจารณาเพียงเล็กน้อย</p>
+      <p>เหตุผลก็เพราะว่า “ศาสตร์แห่งอาคิเราะฮ์” ซึ่งครอบคลุมถึงการรู้จักอัลลอฮ์ ซุบฮานะฮูวะตะอาลา, การงานของพระองค์ และคุณลักษณะของพระองค์นั้น มีเป้าหมายในตัวของมันเอง ไม่ใช่เครื่องมือไปสู่สิ่งอื่น ดังนั้นมันจึงมีสถานะที่สูงส่งและประเสริฐกว่า</p>
+      <p>แต่ (ซึ่งนี่คือจุดที่ทำให้หลายคนหลงทาง) ทัศนะนี้ไม่ได้หมายความว่าท่านปฏิเสธอิลมุลกะลาม หรือกล่าวประณามและลดทอนคุณค่าความสำคัญของมันเลยแม้แต่น้อย!</p>
+      <p>ท่านอิมามไม่เคยเหนื่อยที่จะย้ำเตือนว่า...นักนิติศาสตร์ (ฟะกีฮ์) หากเขายังคงจมปลักอยู่กับกฎเกณฑ์หะลาล-หะรอม โดยไม่หันมาพัฒนาและขัดเกลาจิตใจภายในของตนเอง เขาก็เป็นเพียงผู้ที่ทำตามอารมณ์ใฝ่ต่ำ และจะไม่มีส่วนใดๆจากความพึงพอใจของอัลลอฮ์เลย</p>
+      <p>นักเทววิทยา (มุตะกัลลิม) หากเขาถูกบดบังด้วยศาสตร์ของตนเอง วนเวียนอยู่กับการสร้างข้อพิสูจน์และศิลปะแห่งการโต้แย้ง โดยที่หัวใจไม่เคยสัมผัสกับความนอบน้อมถ่อมตน (คุชูอ์) ต่ออัลลอฮ์เลย...นั่นคือความขาดทุนที่สุด!</p>
+      <p>ดังนั้น หน้าที่ที่แท้จริงในทัศนะของท่านก็คือ การผสมผสานศิลปะแห่งการโต้แย้ง, การปราบปรามอุตริกรรม และการพิทักษ์ความเชื่อ (เมื่อมีความจำเป็น) เข้ากับการยกระดับการงานของหัวใจ การไต่เต้าไปสู่ความสมบูรณ์แบบแห่งพระเจ้า และการอุทิศตนเพื่อแสวงหาความพึงพอใจจากพระองค์...และหลักการเดียวกันนี้ก็ใช้ได้กับนักนิติศาสตร์เช่นกัน</p>
+      <p>ท่านได้กล่าวไว้ใน “บทว่าด้วยความรู้” ว่า:</p>
+      <p>“ดังนั้น…นักเทววิทยาจงรู้ขอบเขตของตนในศาสนาเถิด ว่าตำแหน่งของเขานั้นก็ไม่ต่างอะไรกับทหารยามบนเส้นทางสู่การทำฮัจญ์...หากทหารยามมัวแต่ทำหน้าที่คุ้มกันเพียงอย่างเดียว...เขาก็ย่อมไม่ได้ถูกนับว่าเป็นหนึ่งในผู้แสวงบุญ…</p>
+      <p>ในทำนองเดียวกัน หากนักเทววิทยามัวแต่โต้เถียงและปกป้องเพียงอย่างเดียว โดยที่ไม่ได้เดินทางบนเส้นทางสู่อาคิเราะฮ์ และไม่ได้ใส่ใจดูแลขัดเกลาหัวใจของตนเอง...เขาก็ไม่ได้ถูกนับว่าเป็นหนึ่งในปราชญ์แห่งศาสนาเลย! เพราะสิ่งที่นักเทววิทยามีนั้น ก็มีเพียงแค่หลักความเชื่อ (อะกีดะฮ์) ซึ่งคนทั่วไปก็มีเหมือนกัน...สิ่งที่ทำให้เขาแตกต่างจากคนทั่วไปก็คือ ‘ทักษะ’ ในการโต้แย้งและพิทักษ์เท่านั้น...ส่วนการรู้จักอัลลอฮ์ตะอาลาอย่างแท้จริง, คุณลักษณะของพระองค์, การงานของพระองค์ และทุกสิ่งที่อยู่ในศาสตร์แห่งการเปิดเผยจากพระเจ้า (อิลมุลมุกาชะฟะฮ์) นั้น...จะไม่สามารถได้รับมาจากอิลมุลกะลามเลย...ยิ่งไปกว่านั้น อิลมุลกะลามเกือบจะเป็นม่านบดบังและอุปสรรคขัดขวางเสียด้วยซ้ำ! หนทางที่จะไปสู่จุดนั้นได้คือการอุทิศตนต่อสู้ (มุญาฮะดะฮ์) ซึ่งอัลลอฮ์ได้ทรงให้มันเป็นบันไดขั้นแรกสู่การชี้นำ ดังที่พระองค์ตรัสว่า: “และบรรดาผู้ที่ต่อสู้ในหนทางของเรา แน่นอนเราจะชี้นำพวกเขาไปสู่หนทางทั้งหลายของเรา”</p>
+      <p>ท่านได้กล่าวต่อว่า:</p>
+      <p>“หากท่านจะถามว่า: ท่านได้ลดระดับนักเทววิทยาลงมาเป็นแค่ทหารยามคุ้มกันความเชื่อของคนทั่วไป...และลดระดับนักนิติศาสตร์ลงมาเป็นแค่ผู้รักษากฎหมาย...ตำแหน่งเหล่านี้ช่างต่ำต้อยเมื่อเทียบกับศาสตร์แห่งศาสนา! แต่ปราชญ์ผู้ยิ่งใหญ่ของประชาชาตินี้ก็คือนักนิติศาสตร์และนักเทววิทยามิใช่หรือ? แล้วเหตุใดท่านจึงลดระดับของพวกเขาลงมาต่ำเช่นนี้?</p>
+      <p>ท่านพึงทราบเถิดว่า ผู้ใดก็ตามที่รู้จักสัจธรรมโดยผ่านตัวบุคคล...เขาผู้นั้นจะหลงทางอยู่ในเขาวงกตแห่งความมืดมน! ดังนั้น จงรู้จักสัจธรรม...แล้วท่านจะรู้จักผู้ที่ยึดมั่นในสัจธรรมเอง หากท่านคือผู้ที่กำลังแสวงหาหนทางที่ถูกต้อง...และหากท่านพอใจอยู่กับการตามอย่างคนส่วนใหญ่...ก็จงอย่าได้ลืมสถานะอันสูงส่งของเหล่าเศาะฮาบะฮ์...ทุกคนต่างก็ยอมรับว่าพวกเขาคือผู้ที่อยู่ในแนวหน้า และไม่มีใครในศาสนานี้จะไปถึงระดับของพวกเขาได้...และความประเสริฐของพวกเขาก็ไม่ได้มาจากอิลมุลกะลามหรือฟิกฮ์...แต่มาจากศาสตร์แห่งอาคิเราะฮ์และการเดินทางบนเส้นทางนั้น</p>
+      <p>ท่านอบู บักร (ขออัลลอฮ์ทรงพอพระทัยในท่าน) ไม่ได้ประเสริฐกว่าผู้คนเพราะละหมาดมากกว่า, ถือศีลอดมากกว่า, หรือมีความรู้ด้านหะดีษและฟัตวามากกว่า...แต่ท่านประเสริฐกว่าด้วย ‘บางสิ่ง’ ที่สถิตมั่นอยู่ในหัวใจของท่าน ดังที่หัวหน้าของมวลมนุษย์ (ท่านนบีมุฮัมมัด ﷺ) ได้เป็นพยานให้...</p>
+      <p>ดังนั้น ท่านจงมุ่งมั่นแสวงหา ‘ความลับ’ นั้นเถิด...เพราะมันคืออัญมณีอันล้ำค่าและไข่มุกที่ถูกซ่อนเร้นเอาไว้อยู่ และจงละทิ้งสิ่งที่คนส่วนใหญ่ยกย่องเทิดทูนด้วยเหตุผลต่างๆนานา...เพราะเมื่อท่านเราะซูลุลลอฮ์ ﷺ ได้จากไป ท่านได้ทิ้งเศาะฮาบะฮ์ไว้หลายพันคน ซึ่งทั้งหมดคือปราชญ์ผู้รู้จักอัลลอฮ์ และท่านเราะซูลก็ได้กล่าวยกย่องพวกเขา...แต่ในหมู่พวกเขานั้น ไม่มีใครเลยที่เชี่ยวชาญใน ‘ทักษะ’ แห่งอิลมุลกะลาม และมีเพียงสิบกว่าคนเท่านั้นที่ทำหน้าที่ให้ฟัตวา”</p>
+      <p>ในคำพูดนี้ ท่านอิมาม (ขออัลลอฮ์ทรงเมตตา) ได้เน้นย้ำว่า หลักการพื้นฐานที่แท้จริงคือการเดินทางไปสู่อัลลอฮ์ตะอาลา และความรู้ที่แท้จริงคือความรู้เกี่ยวกับอัลลอฮ์และคุณลักษณะของพระองค์ และอิลมุลกะลามอาจจะเป็นอุปสรรคขัดขวางการเดินทางนี้ และไม่อาจนำไปสู่เป้าหมายนั้นได้ หากมัวเมาอยู่กับมันเพียงอย่างเดียว</p>
+      <p>สังเกตให้ดี...เราใช้คำว่า “หากมัวเมาอยู่กับมันเพียงอย่างเดียว” ซึ่งหมายความว่า อิลมุลกะลามนั้นยังคงเป็นสิ่งที่ขาดไม่ได้ในการเผชิญหน้ากับอุตริกรรมและปกป้องศาสนา...แต่เฉพาะอิลมุลกะลามเพียงอย่างเดียวไม่เคยเพียงพอ ดังที่ได้กล่าวไปแล้ว</p>
+      <p>และเพื่อเติมเต็มทัศนะของท่านเกี่ยวกับอิลมุลกะลาม...อิมามอัลฆอซาลีได้กล่าวไว้ใน “บทว่าด้วยความรู้” ว่า มีศัพท์เทคนิคทางศาสนาอยู่หลายคำที่ ถูกเปลี่ยนแปลง และเมื่อศัพท์เปลี่ยน ความหมายและนัยยะของมันก็เปลี่ยนตามไปด้วย...หนึ่งในศัพท์ที่ถูกเปลี่ยนแปลงนั้นก็คือ ฟิกฮ์, อิลม์, ฮิกมะฮ์, ซิกรุลลอฮ์...และรวมถึง “อิลมุลกะลาม” ซึ่งแต่เดิมเคยมีชื่อว่า “เตาฮีด” ท่านกล่าวว่า:</p>
+      <p>“ในอดีตนั้น ‘เตาฮีด’ คือแก่นแท้อันล้ำค่า ซึ่งมีเปลือกห่อหุ้มอยู่สองชั้น...แต่แล้วผู้คนกลับนำชื่อ ‘เตาฮีด’ ไปเรียก ‘เปลือก’ และเรียก ‘ทักษะการพิทักษ์เปลือก’...โดยละเลย ‘แก่นแท้’ ที่อยู่ข้างในไปโดยสิ้นเชิง</p>
+      <p>เปลือกชั้นแรก: คือการกล่าวคำว่า “ลาอิลาฮะอิลลัลลอฮ์” ด้วยลิ้นของเจ้า นี่เรียกว่าเตาฮีดที่ขัดแย้งกับการเชื่อในตรีเอกานุภาพของชาวคริสต์ แต่มันก็อาจจะออกมาจากปากของผู้กลับกลอก (มุนาฟิก) ที่ซ่อนความลับไว้ตรงข้ามกับสิ่งที่แสดงออก</p>
+      <p>เปลือกชั้นที่สอง: คือการที่ในหัวใจไม่มีความขัดแย้งหรือปฏิเสธต่อความหมายของคำกล่าวนี้ แต่จิตใจภายนอกนั้นเชื่อและยอมรับในสิ่งนั้น...นี่คือเตาฮีดของคนทั่วไป และดังที่กล่าวไป...นักเทววิทยา (มุตะกัลลิมูน) ก็คือทหารยามผู้พิทักษ์เปลือกชั้นนี้ จากความสับสนที่พวกอุตริกรรมสร้างขึ้น</p>
+      <p>ส่วนที่สามนั่นคือ แก่นแท้เนื้อใน คือการที่คนคนหนึ่งมองเห็นว่าสรรพสิ่งทั้งหมดนั้นมาจากอัลลอฮ์ตะอาลา...เป็นการมองเห็นที่ตัดขาดความยึดติดของเขาออกจากสื่อกลางทั้งปวง และเขาจะเคารพภักดีต่อพระองค์เพียงผู้เดียว โดยไม่เคารพภักดีต่อสิ่งอื่นใดอีกเลย”</p>
+      <p>สิ่งที่อัลฆอซาลีต้องการจะสื่อก็คือ...สิ่งที่อยู่ในอัลกุรอานอันยิ่งใหญ่นั้นเป็นที่รู้กันสำหรับทุกคน และเพียงพอแล้วสำหรับทุกคน แต่แล้วก็ได้เกิดการเปลี่ยนแปลงความหมายของศัพท์ดังที่ได้กล่าวไป และชื่อของ “เตาฮีด” ก็ได้กลายมาเป็น “อิลมุลกะลาม”</p>
+      <p>ภารกิจหลักของศาสตร์ใหม่นี้จึงกลายเป็นการสร้างตรรกะเพื่อมัดตัวคู่ต่อสู้ และการตั้งคำถามให้แตกแขนงออกไปเรื่อยๆ...ณ จุดนี้ อัลฆอซาลีกำลังแยกแยะระหว่างสองศาสตร์ที่แตกต่างกันคือ</p>
+      <p>1-เตาฮีด (ในแบบดั้งเดิม): คือสิ่งที่เหล่าเศาะฮาบะฮ์และมุสลิมทั่วไปรู้จัก เป็นสถานะทางจิตวิญญาณของ “อัศศิดดีกีน” (ผู้สัตย์จริงอย่างที่สุด) ที่มนุษย์ต้องพากเพียรและต่อสู้เพื่อให้ได้มา และผลลัพธ์ของเตาฮีดในระดับนี้ก็คือ การตัดขาดหัวใจออกจากทุกสิ่งนอกเหนือจากอัลลอฮ์, การมอบหมายตนต่อพระผู้ทรงชีวินตลอดกาล ผู้ซึ่งกุญแจของทุกสรรพสิ่งอยู่ในพระหัตถ์ของพระองค์...และนี่คือแก่นแท้ของเตาฮีด</p>
+      <p>2-อิลมุลกะลาม (ศาสตร์ที่กลายมา): คือศาสตร์ที่ “เตาฮีด” ได้แปรสภาพไป...หน้าที่ของมันคือการพิทักษ์แก่นแท้ (เตาฮีด) นั้น เตาฮีดคือรากฐานและแก่นสาร ในขณะที่อิลมุลกะลามคือทหารยามและผู้พิทักษ์ เพราะอิลมุลกะลามนั้นครอบคลุมถึงการรู้จักวิธีการโต้แย้ง, การหักล้างฝ่ายตรงข้ามที่เป็นพวกอุตริกรรม, การโค่นล้มพวกเขา และการปกป้องผู้คนจากพวกเขา</p>
+      <p>จากจุดนี้เอง เราจึงได้ข้อสรุปว่า คำกล่าวของอัลฆอซาลีทั้งหมดนี้ ล้วนอยู่ภายใต้ร่มเงาแห่งทัศนะโดยรวมของท่าน ซึ่งก็คือ...อิลมุลกะลามคือศาสตร์ที่มีประโยชน์ ซึ่งจะถูกนำมาใช้ตามความจำเป็น และจะถูกปิดกั้นจากผู้ที่ไม่จำเป็นต้องใช้มัน หรือผู้ที่ไม่มีความรู้ในรากฐานของมัน...และนี่คือทัศนะที่เรารู้ดีว่าท่านได้ยึดมั่นมาโดยตลอดนับตั้งแต่แรกเริ่ม</p>
+
+      <h2 class="article-h2">รากฐานสำคัญ (The Master Key)</h2>
+      <p>ณ ที่นี้ เราขอชี้แจง “รากฐานสำคัญ” ข้อหนึ่งที่อิมามอัลฆอซาลียึดมั่นมาโดยตลอด และเชื่อว่าหากใครเข้าใจรากฐานข้อนี้อย่างถ่องแท้แล้ว ก็แทบจะไม่จำเป็นต้องไปไล่ตามหาคำพูดทั้งหมดของท่านเกี่ยวกับอิลมุลกะลามที่กระจัดกระจายอยู่ในหนังสือเล่มต่างๆอีกเลย</p>
+      <p>รากฐานนั้นก็คือ เมื่อเราสำรวจทัศนะและความคิดเห็นของอัลฆอซาลี เราจะพบว่าท่านให้ความสำคัญกับสองสิ่งอยู่เสมอ:</p>
+      <p>หนึ่ง: การแยกแยะระหว่าง “แก่นแท้ที่บริสุทธิ์” กับ “ส่วนที่เพิ่มเติมเข้ามา”</p>
+      <p>ท่านมองว่า องค์ความรู้ทั้งหลายนั้นมี “แก่นแท้” (อัลอัศล์) ที่ถูกต้องดีงามและเป็นสัจธรรม ซึ่งเป็นหน้าที่ที่ต้องยึดมั่นไว้ แต่แล้ว...ก็มีสิ่งที่ถูกเพิ่มเติมเข้ามาในภายหลัง ซึ่งมีสองลักษณะ:</p>
+      <p>1-ส่วนที่เพิ่มเติมโดยนักวิชาการ คือรายละเอียดปลีกย่อยที่ลึกซึ้งเกินความจำเป็น</p>
+      <p>2-ส่วนที่เพิ่มเติมโดยพวกอุตริกรรม คือกิ่งก้านสาขาที่เลวร้ายและวิบัติ ซึ่งแตกหน่อออกมาจากรากฐานที่ถูกต้องดีงามนั้น</p>
+      <p>ดังนั้น ภารกิจหลักของอัลฆอซาลีคือ การพิทักษ์ “แก่นแท้ที่บริสุทธิ์” นี้ไว้จากกิ่งก้านสาขาที่สร้างความสับสน และปกป้องเนื้อแท้ของความรู้ไว้จากการแตกแขนงที่ไร้ประโยชน์...“แก่นแท้ที่บริสุทธิ์และมีคุณประโยชน์” ที่ไม่เคยถูกบิดเบือนหรือแต่งเติมนั้น คือสิ่งที่น่าชื่นชมเสมอ ส่วนสิ่งที่เกินเลยไปกว่านั้น คือสิ่งที่ต้องถูกปฏิเสธ</p>
+      <p>สอง: การปกป้อง “คนทั่วไป” (เอาวามมุลมุสลิมีน)</p>
+      <p>ภารกิจสำคัญประการที่สองของท่านก็คือ การปกป้องมุสลิมทั่วไปจากรายละเอียดปลีกย่อยของศาสตร์ต่างๆที่ไม่ได้ก่อให้เกิดประโยชน์อันใด และกันพวกเขาให้ออกห่างจากการบิดเบือนที่ไร้รากฐาน</p>
+      <p>และนี่คือข้อความที่จะฉายภาพทัศนะของท่านอิมามอัลฆอซาลีที่มีต่อคนทั่วไปให้ชัดเจนยิ่งขึ้น โดยท่านได้กล่าวถึงหน้าที่ของผู้ชี้นำหรือครูอาจารย์ไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وبهذا يُعلَم: أنّ من تقيّد من العوامّ بقيدِ الشرع، ورسخَت في نفسِهِ العقائدُ المأثورةُ عن السلف من غير تشبيهٍ ومن غير تأويل، وحَسُن مع ذلك سيرتُهُ، ولم يحتمل عقلُهُ أكثرَ من ذلك.. فلا ينبغي أن يشوّشَ عليه اعتقاده، بل ينبغي أن يخلّى وحرفتَهُ، فإنّه لو ذُكِرَ له تأويلاتُ الظواهر.. انحلّ عنه قيدُ العوامّ ولم يتيسّر قيدُهُ بقيدِ الخواصّ، فيرتفعُ السدُّ الذي بينه وبين المعاصي، وينقلبُ شيطانًا مريدًا يهلكُ نفسه وغيره. بل لا ينبغي أن يُخاض بالعوامّ في حقائق العلومِ الدقيقة، بل يقتصرُ معهم على تعليم العبادات، وتعليم الأمانة في الصناعة التي هو بصددها، ويملأُ قلوبهم من الرغبة والرهبة بالجنّة والنار كما نطقَ به القرآن، ولا يحرّك عليهم شُبهةً، فإنّه ربما تعلّقت الشُبهة بقلبه ويعسُرُ عليه حلُّها، فيشقى ويهلك. وبالجملة: لا ينبغي أن يُفتح للعوامّ باب البحث، فإنه يُعطّل عليهم صناعاتهم التي بها قوامُ الخلق، ودوامُ عيش الخواص</blockquote>
+      <p class="ar-translation">“ด้วยเหตุนี้เอง จึงเป็นที่ทราบกันว่า: สำหรับคนทั่วไปที่ยึดมั่นในกรอบของศาสนบัญญัติ และในจิตใจของเขามีหลักความเชื่อที่สืบทอดมาจากบรรพชนสลัฟอย่างมั่นคง โดยไม่มีการเปรียบเทียบ (ตัชบีฮ์) และไม่มีการตีความ (ตะวีล) ประกอบกับมีจรรยามารยาทที่ดีงาม และสติปัญญาของเขาก็ไม่สามารถรองรับอะไรที่มากไปกว่านั้นได้...ก็ไม่ควรที่จะไปสร้างความสับสนในความเชื่อของเขาเป็นอันขาด! แต่ควรปล่อยให้เขาอยู่กับอาชีพการงานของเขาต่อไป...เพราะหากมีคนนำการตีความต่างๆมาอธิบายให้เขาฟัง...โซ่ตรวนที่ผูกมัดเขาในฐานะ ‘คนทั่วไป’ ก็จะขาดสะบั้นลง แต่เขาเองก็จะไม่สามารถสวม ‘โซ่ตรวนของคนชั้นสูง’ ได้...เขื่อนที่กั้นระหว่างเขากับบาปก็จะพังทลายลง และเขาก็จะกลายเป็นชัยฏอนมารร้ายที่ทำลายทั้งตัวเองและผู้อื่น ไม่ควรที่จะนำคนทั่วไปมาถกเถียงในสัจธรรมอันลึกซึ้งของศาสตร์ต่างๆ แต่ควรจำกัดการสอนพวกเขาไว้เพียงแค่การสอนเรื่องอิบาดะฮ์ (ศาสนกิจ), การสอนเรื่องความซื่อสัตย์ในอาชีพที่เขาทำอยู่, การเติมเต็มหัวใจของพวกเขาด้วยความหวังในสวรรค์และความกลัวในนรก ดังที่อัลกุรอานได้กล่าวไว้ และอย่าได้จุดประกายข้อคลางแคลงใจ (ชุบฮะฮ์) ใดๆ ให้แก่พวกเขาเป็นอันขาด เพราะบางทีข้อคลางแคลงใจนั้นอาจจะฝังลึกลงในใจของเขาและยากที่จะแก้ไขได้ ซึ่งจะนำพาเขาไปสู่ความทุกข์และความพินาศ...โดยสรุปแล้ว ไม่ควรเปิดประตูแห่งการค้นคว้าวิจัยให้กับคนทั่วไป เพราะมันจะทำให้พวกเขาต้องละทิ้งอาชีพการงาน ซึ่งเป็นรากฐานของสังคมและเป็นปัจจัยยังชีพของคนชั้นสูง”</p>
+      <p>และอย่าได้คิดว่ารากฐานข้อนี้ของอัลฆอซาลีจะจำกัดอยู่แค่อิลมุลกะลามเท่านั้น...แต่มันครอบคลุมไปถึงศาสตร์อื่นๆด้วย</p>
+      <p>ตัวอย่างเช่น...ท่านอิมามได้แยกแยะระหว่าง “การตักเตือนที่ถูกต้องตามหลักการ” กับ “การเล่านิทานของนักเล่านิทาน”</p>
+      <p>แก่นแท้ที่บริสุทธิ์ คือการตักเตือนและการให้โอวาท ซึ่งเป็นสิ่งที่น่าชื่นชมโดยไม่มีเงื่อนไข ผู้คนต่างรับฟังเรื่องราวจากอัลกุรอานที่กล่าวถึงชีวประวัติของบรรดานบี, การสอนให้ละทิ้งดุนยา และการส่งเสริมให้มุ่งมั่นเพื่ออาคิเราะฮ์...ทั้งหมดนี้คือสิ่งที่อัล-ฆอซาลีมองว่าเป็น “แก่นแท้”</p>
+      <p>ส่วนที่เพิ่มเติมเข้ามา: จนกระทั่งมีคนกลุ่มหนึ่งที่เริ่มเพิ่มเติมจินตนาการและความเพ้อฝัน เข้าไปในเรื่องราวเหล่านั้น พวกเขาประดิดประดอยถ้อยคำให้สวยหรูด้วยสัมผัสคล้องจอง...ทั้งหมดนี้ก็เพื่อดึงดูดใจผู้คน, แสวงหาชื่อเสียง และต้องการเข้าใกล้ผู้มีอำนาจ...สิ่งเหล่านี้คือสิ่งที่ต้องถูกปฏิเสธและละทิ้ง และต้องกันคนทั่วไปให้ออกห่าง เพราะมันเป็นอันตรายต่อศาสนาของพวกเขา และจะทำให้พวกเขาลืม “เป้าหมายและแก่นแท้” ของเรื่องราวเหล่านั้น ซึ่งก็คือการกระตุ้นให้ทำความดีเพื่ออาคิเราะฮ์และรำลึกถึงการได้พบกับอัลลอฮ์นั่นเอง</p>
+      <p>และอัลฆอซาลีก็ไม่ได้หยุดอยู่แค่การชี้ให้เห็นความเสื่อมจาก “การตักเตือน” ไปสู่ “การเล่านิทานที่ไร้สาระ” เท่านั้น...แต่ท่านยังได้กล่าวถึงความเสื่อมของ “บทกวี (อัชชิอฺร์)” ที่เป้าหมายของมันได้เปลี่ยนไป...แก่นแท้ คือ “บทกวีแห่งหิกมะฮ์ (ปรัชญาชีวิต)”</p>
+      <p>ส่วนที่เพิ่มเติมเข้ามาคือ “บทกวีแห่งความใคร่และความหยาบโลน”</p>
+      <p>ซึ่ง “บทกวีแห่งหิกมะฮ์” คือแก่นแท้ ส่วนที่เกินเลยไปกว่านั้นคือสิ่งที่ต้องถูกปฏิเสธ และเป็นหน้าที่ที่ต้องปกป้องมุสลิมทุกคนจากมัน</p>
+      <p>จากนั้นท่านก็ได้กล่าวถึง “หิกมะฮ์ (วิทยปัญญา)” ว่าเป็นสิ่งที่น่าชื่นชมเสมอ เป็นความสำเร็จที่อัลลอฮ์ทรงประทานให้ และผู้ใดได้รับมันก็ถือว่าได้รับสิ่งที่ดีงามอันยิ่งใหญ่...แต่แล้วก็มีคนที่ไม่ใช่ “ผู้ทรงปัญญา” เข้ามาแอบอ้างในศาสตร์นี้...ทั้งแพทย์, นักโหราศาสตร์ และนักไสยศาสตร์ ต่างก็เรียกตัวเองว่าเป็นผู้มี “หิกมะฮ์”...ซึ่ง “หิกมะฮ์ที่แท้จริง” คือแก่นแท้ที่เราต้องยึดมั่นและเชิดชู ส่วนผู้ที่แอบอ้างในนามของมัน เราต้องปฏิเสธสิ่งที่เขาพูดและปกป้องชาวมุสลิมจากเขา</p>
+      <p>และท่านก็ยังใช้หลักการเดียวกันนี้กับ “การโต้วาที (มุนาเซาะเราะฮ์)” ในประเด็นทางนิติศาสตร์หรือความเชื่อ...</p>
+      <p>แก่นแท้ของเรื่องนี้คือ การปฏิบัติของเหล่าเศาะฮาบะฮ์ ซึ่งก็คือ “การปรึกษาหารือ” และ “การตักเตือนซึ่งกันและกัน” ด้วยความบริสุทธิ์ใจเพื่ออัลลอฮ์ นี่คือแก่นแท้ที่น่าชื่นชม</p>
+      <p>ส่วนที่เพิ่มเติมเข้ามาคือการโต้วาทีในยุคหลัง ซึ่งมีเป้าหมายอื่นแอบแฝง เช่น เพื่อเอาชนะคะคานและข่มขู่ฝ่ายตรงข้าม ซึ่งในทัศนะของท่านอิมามแล้ว...นี่คือสิ่งที่น่าตำหนิอย่างยิ่ง เว้นแต่จะเป็นไปตามเงื่อนไขที่รัดกุมจำนวนมากที่ท่านได้วางไว้</p>
+      <p>และนี่คือแนวทางของอิมามอัลฆอซาลี...และ “อิลมุลกะลาม” ก็ไม่ได้เป็นข้อยกเว้นจากรากฐานข้อนี้เลย...</p>
+      <p>สิ่งที่เราได้ชี้แจงมาทั้งหมดนี้...ที่ว่าอัลฆอซาลียอมรับในประโยชน์ของอิลมุลกะลามและไม่เคยหันหลังให้มันดังที่นักวิชาการบางท่านกล่าวอ้าง, ที่ว่ามันเปรียบเสมือน “ยา” ที่จะใช้ก็ต่อเมื่อมีความจำเป็น และเป้าหมายของมันคือการพิทักษ์ความเชื่อและปกป้องศาสนา...ข้อสรุปทั้งหมดนี้คือสิ่งที่อัลฆอซาลีได้วนเวียนกล่าวถึงในหนังสือทุกเล่มของท่าน และคือสิ่งที่เราพยายามจะพิสูจน์มาโดยตลอด</p>
+      <p>จากเนื้อหาในหนังสือ “อิห์ยาอ์ อุลูมิดดีน” ท่านอิมามได้กล่าวถึง “ระดับ” ในการศึกษาศาสตร์ต่างๆว่ามีทั้งระดับสรุปย่อ (มุคตะศ็อร), ระดับพอประมาณ (อิกติศอด), และระดับเจาะลึก (อิสติกศออ์)</p>
+      <p>ซึ่งก็ไม่น่าแปลกใจเลยที่เมื่อท่านกล่าวถึง “อิลมุลกะลาม” ท่านได้ระบุว่าศาสตร์นี้ควรศึกษาในระดับ “สรุปย่อ” หรือ “พอประมาณ” ซึ่งระดับพอประมาณนี้ก็คือเนื้อหาที่ท่านได้นำเสนอไว้ในหนังสือเล่มดังของท่าน “อัลอิกติศอด ฟิลอิอ์ติกอด” (ทางสายกลางในหลักความเชื่อ) นั่นเอง</p>
+      <p>และท่านก็ได้กล่าวว่า เนื้อหาในหนังสืออัลอิกติศอดนั้น เพียงพอแล้ว สำหรับการใช้โต้แย้งกับพวกอุตริกรรมและถอนรากถอนโคนแนวคิดของพวกเขาออกจากหัวใจของ “คนทั่วไป” ซึ่งเป็นเป้าหมายและความห่วงใยหลักของท่านดังที่ได้กล่าวไปแล้ว... ท่านกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما الكلامُ: فمقصوده حماية المعتقداتِ التي نقلها أهل السنة من السلف الصالح لا غير، وما وراء ذلك طلبُ لكشفِ حقائق الأمور من غير طريقه. ومقصودُ حفظ السنة تحصُلُ رتبةُ الاقتصار منه بمعتقد مختصر، وهو القدر الذي أوردناه في كتاب قواعد العقائد من جملة هذه الكتب [كتب إحياء علوم الدين]، والاقتصاد فيه ما يبلغ قدرَ مئة ورقة، وهو الذي أوردناه في كتاب الاقتصاد في الاعتقاد، ويُحتاجُ إليه لمناظرة مبتدع ومعارضة بدعتهِ بما يفسدُها وينزعها عن قلب العاميّ، وذلك لا ينفع إلا مع العوامّ قبل اشتداد تعصبهم</blockquote>
+      <p class="ar-translation">“สำหรับอิลมุลกะลามนั้น เป้าหมายของมันคือการพิทักษ์หลักความเชื่อที่สืบทอดมาจากบรรพชนสลัฟศอลิห์ ไม่มีเป้าหมายอื่นใดอีก...ส่วนสิ่งที่เกินเลยไปกว่านั้น คือการแสวงหาความจริงด้วยหนทางที่ผิดพลาด...และเป้าหมายในการพิทักษ์ซุนนะฮ์นั้นจะบรรลุได้ในระดับ “พอประมาณ” ด้วยหลักความเชื่อฉบับย่อ...ซึ่งก็คือระดับที่อยู่ในหนังสืออัลอิกติศอด ฟิลอิอ์ติกอดที่มีความยาวประมาณร้อยหน้ากระดาษ...มันมีความจำเป็นสำหรับการใช้โต้วาทีกับพวกอุตริกรรมและหักล้างแนวคิดของพวกเขา เพื่อที่จะถอนมันออกจากหัวใจของคนทั่วไป และวิธีนี้จะได้ผลก็ต่อเมื่อใช้กับคนทั่วไปก่อนที่พวกเขาจะยึดติดกับความเชื่อผิดๆนั้นอย่างรุนแรง”</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+      <p>ในส่วนที่ผ่านมาของบทนี้ เราได้ติดตามทัศนะของอิมามอัลฆอซาลีต่ออิลมุลกะลามผ่านการพิจารณาหนังสือเล่มสำคัญที่สุดของท่าน นั่นคือ “บทว่าด้วยความรู้” จากหนังสือ “อิห์ยาอ์ อุลูมิดดีน” ซึ่งเป็นที่ทราบกันดีว่าเป็นหนึ่งในผลงานชิ้นสุดท้ายของท่านอิมาม...และเราก็ได้ข้อสรุปว่า อัลฆอซาลีมองเห็นประโยชน์ของอิลมุลกะลาม ซึ่งตรงกันข้ามกับสิ่งที่นักวิชาการบางท่านกล่าวหาว่าท่านได้ประณามและหันหลังให้กับมัน</p>
+      <p>ประโยชน์ของมันคือ การพิทักษ์ความเชื่อ, การปกป้องหลักศรัทธาของคนทั่วไป และการตอบโต้ข้อคลางแคลงใจต่างๆ</p>
+      <p>อิลมุลกะลามเปรียบเสมือน “ยา” ที่เหมาะสมกับคนบางกลุ่ม แต่ไม่เหมาะกับคนบางกลุ่ม...ในขณะที่อัลกุรอานเปรียบเสมือน “อาหาร” ที่เหมาะสมกับทุกคน</p>
+      <p>และแม้ว่าอิลมุลกะลามจะมีประโยชน์ที่ชัดเจน...ก็ไม่ควรมีใครหันเข้าหามันเว้นแต่ผู้ที่มีความจำเป็น และก็ควรศึกษาเท่าที่จำเป็นเท่านั้น...ยกเว้น...ปราชญ์ผู้เชี่ยวชาญในศาสตร์ต่างๆเขาสามารถที่จะดำดิ่งลงไปในมหาสมุทรแห่งศาสตร์นี้ได้ เพื่อที่จะทำหน้าที่ฟัรฎูกิฟายะฮ์แทนนักวิชาการคนอื่นๆในการตอบโต้บิดอะฮ์และพิทักษ์หลักความเชื่อต่อไป</p>
+
+      <h2 class="article-h2">บทที่ 2 สำรวจทัศนะของอิมามอัลฆอซาลีต่ออิลมุลกะลาม จากตำราเล่มอื่นๆ</h2>
+      <p>เนื้อหาส่วนนี้จะเป็นการรวบรวมมุมมองที่กระจัดกระจายอยู่ในตำราเล่มต่างๆของอัลฆอซาลี เพื่อมายืนยันในสิ่งที่เราได้นำเสนอไป และดังที่ได้ชี้ให้เห็นถึงเอกลักษณ์ของท่านอิมามไปแล้วว่า ท่านมักจะนำเสนอสิ่งที่ท่านต้องการจะสื่อด้วยลีลาที่หลากหลาย...บางครั้งท่านก็ชี้ให้เห็นถึงความสำคัญของศาสตร์นี้, บางทีท่านก็อธิบายถึงประโยชน์ของมัน และในบางครั้งท่านก็จัดลำดับความสัมพันธ์ของศาสตร์นี้กับศาสตร์อื่นๆเป็นต้น</p>
+      <p>เป็นธรรมเนียมของอัลฆอซาลีที่มักจะวาง “บทนำเชิงตรรกศาสตร์” ไว้ในตอนต้นของหนังสือบางเล่มของท่าน เช่นในหนังสือ “มะกอศิด อัลฟะลาซิฟะฮ์” และ “อัลมุสตัศฟา” นอกจากนี้ ในบทนำของตำราเล่มอื่นๆท่านก็จะกล่าวถึงลำดับชั้นของศาสตร์ต่างๆ, ความสำคัญของมัน และความสัมพันธ์ระหว่างกัน ซึ่งท่านก็ได้ทำเช่นนี้ในหนังสืออิห์ยาอ์ อุลูมิดดีนและ อัลมุสตัศฟาเช่นกัน</p>
+      <p>เป้าหมายของเราในส่วนนี้ก็คือ การสกัดทัศนะของท่านที่มีต่ออิลมุลกะลาม ผ่านการจัดลำดับศาสตร์ต่างๆของท่านนั่นเอง</p>
+      <p>ท่านได้กล่าวไว้ในหนังสืออัลมุสตัศฟาว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اعلم أن العلوم تنقسم إلى عقلية كالطب والحساب والهندسة، وليس ذلك من غرضنا. وإلى دينية كالكلام، والفقه وأصوله، وعلم الحديث، وعلم التفسير، وعلم الباطن، أعني علم القلب وتطهيره عن الأخلاق الذميمة، وكل واحد من العقلية والدينية ينقسم إلى كليّة وجزئية، فالعلم الكلي من العلوم الدينية هو الكلام، وسائر العلوم من الفقه وأصوله والحديث والتفسير علوم جزئية، لأن المفسر لا ينظر إلى في معنى الكتاب خاصّة، والمحدّث لا ينظر إلا في طريق ثبوت الحديث خاصّة، والفقيه لا ينظر إلا في أحكام أفعال المكلفين خاصّة، والأصوليّ لا ينظر إلا في أدلة الأحكام الشرعية خاصّة. والمتكلم هو الذي ينظر في أعم الأشياء وهو الموجود. فيقسم الموجود أولا إلى قديم وحادث، ثم يقسم المحدث إلى جوهر وعرض</blockquote>
+      <p class="ar-translation">“พึงทราบเถิดว่า ศาสตร์ต่างๆนั้นแบ่งออกเป็น ศาสตร์ทางปัญญา (อักลียะฮ์) เช่น แพทยศาสตร์, คณิตศาสตร์, วิศวกรรมศาสตร์ ซึ่งไม่ใช่เป้าหมายของเราในที่นี้ และศาสตร์ทางศาสนา (ดีนียะฮ์) เช่น อิลมุลกะลาม, ฟิกฮ์, อุศูลุลฟิกฮ์, หะดีษ, ตัฟซีร และศาสตร์เร้นลับภายใน (อิลมุลบาฏิน) ซึ่งก็คือศาสตร์แห่งหัวใจและการขัดเกลามันจากจริยธรรมที่น่าตำหนิ...ซึ่งทั้งศาสตร์ทางปัญญาและศาสนานั้น ต่างก็แบ่งออกเป็นศาสตร์แม่บท (กุลลียะฮ์) และศาสตร์ย่อย (ญุซอียะฮ์)...โดยศาสตร์แม่บทแห่งศาสตร์ทั้งปวงในศาสนาก็คือ ‘อิลมุลกะลาม’ ส่วนศาสตร์อื่นๆเช่น ฟิกฮ์, อุศูลุลฟิกฮ์, หะดีษ และตัฟซีร ล้วนเป็นศาสตร์ย่อย...เพราะนักอรรถาธิบายกุรอาน (มุฟัสสิร) ก็จะพิจารณาเฉพาะความหมายของคัมภีร์เท่านั้น, นักหะดีษ (มุหัดดิษ) ก็จะพิจารณาเฉพาะสายรายงานของหะดีษเท่านั้น, นักนิติศาสตร์ (ฟะกีฮ์) ก็จะพิจารณาเฉพาะข้อบัญญัติที่เกี่ยวกับการกระทำของมนุษย์เท่านั้นและนักอุศูลุลฟิกฮ์ ก็จะพิจารณาเฉพาะแหล่งที่มาของบัญญัติศาสนาเท่านั้น... แต่นักเทววิทยา (มุตะกัลลิม) คือผู้ที่พิจารณาในสิ่งที่ครอบคลุมที่สุด นั่นก็คือ ‘การดำรงอยู่’ (อัลเมาญูด) นั่นเอง โดยเขาจะเริ่มต้นจากการแบ่งการดำรงอยู่ออกเป็น ‘สิ่งที่ดำรงอยู่แต่เดิม (เกาะดีม)’ และ ‘สิ่งที่เกิดขึ้นใหม่ (หาดิษ)’ จากนั้นก็จะแบ่งสิ่งที่เกิดขึ้นใหม่ออกเป็น ‘สสาร (เญาฮัร)’ และ ‘สภาวะที่เกิดขึ้นชั่วคราว (อะร็อฎ)’...”</p>
+      <p>หนังสือ “อัลมุสตัศฟา” คือหนึ่งในผลงานชิ้นสุดท้ายที่อัลฆอซาลีได้ประพันธ์ขึ้น และดังที่ท่านได้เห็น...ท่านได้ยกให้อิลมุลกะลามเป็นรากฐานของศาสตร์ทางศาสนาทั้งหมด ซึ่งเป็นสิ่งที่สมเหตุสมผลอย่างยิ่ง</p>
+      <p>ลองคิดดูว่า...หากนักหะดีษกำลังรายงานหะดีษจากท่านเราะซูลุลลอฮ์ ﷺ แล้วมีคนถามขึ้นมาว่า: “ท่านรู้ได้อย่างไรว่าท่านเราะซูลเป็นผู้สัตย์จริง?” เป็นไปได้อย่างยิ่งว่านักหะดีษท่านนั้นจะนิ่งเงียบและตอบไม่ได้ เขาจะไม่ยกหลักฐานเรื่องมุอ์ญิซาตขึ้นมาอ้าง เพราะนั่นไม่ใช่หน้าที่ของเขา...แต่นักเทววิทยา (มุตะกัลลิม) จะเป็นผู้รับผิดชอบในเรื่องนี้ทั้งหมด!</p>
+      <p>นี่คือสิ่งที่ยืนยันคำพูดของเราก่อนหน้านี้ที่ว่า อิลมุลกะลามนั้นโดยพื้นฐานแล้วคือ “ศาสตร์เชิงป้องกัน” ที่คอยปกป้องความเชื่อจากความสับสนของพวกนอกรีตและพวกอุตริกรรม...และคำถามที่ท้าทายความสัตย์จริงของท่านนบี ﷺ ก็คือหนึ่งในตัวอย่างนั้น</p>
+      <p>หลักการเดียวกันนี้ก็ใช้ได้กับนักอุศูลุลฟิกฮ์...ในขณะที่เขากำลังวินิจฉัยข้อบัญญัติต่างๆจากอัลกุรอานและซุนนะฮ์ หากมีคนกล่าวกับเขาว่า: “ฉันจะไม่ยอมรับจนกว่าท่านจะพิสูจน์ให้ฉันเห็นก่อนว่าอัลกุรอานและซุนนะฮ์นั้น ถูกต้องและเชื่อถือได้” นักอุศูลุลฟิกฮ์ก็จะตอบไม่ได้...แต่ผู้ที่จะตอบได้คือนักเทววิทยา! และนักอรรถาธิบายกุรอานก็เช่นเดียวกัน</p>
+      <p>นี่คือแก่นแท้ในทัศนะของอิมามอัลฆอซาลี และด้วยเหตุนี้เอง...ท่านจึงยกให้อิลมุลกะลามเป็นประมุขแห่งศาสตร์ทางศาสนา เพราะมันคือศาสตร์ที่ใช้พิสูจน์หลักความเชื่อที่ยิ่งใหญ่ที่สุด เช่น เอกภาพของอัลลอฮ์ (วะห์ดานียะฮ์), ความเป็นพระผู้อภิบาล (รุบูบียะฮ์) และการส่งศาสนทูต (อิรซาลุลอันบิยาอ์) จากนั้นจึงค่อยแตกแขนงไปสู่ศาสตร์ย่อยอื่นๆต่อไป</p>
+      <p>และเมื่อท่านเข้าใจเช่นนี้แล้ว และรู้ว่านี่คือเป้าหมายและภารกิจของอิลมุลกะลาม...ก็สุดที่จะจินตนาการได้ว่า จะมีใครในประชาชาตินี้ที่คิดจะประณามมัน, รังเกียจผู้ที่ศึกษามัน หรือลดทอนคุณค่าของมันได้...ยิ่งไม่ต้องพูดถึงอิมามผู้ยิ่งใหญ่อย่างอัลฆอซาลีเลย!</p>
+      <p>ด้วยเหตุนี้เอง ท่านจึงกล่าวเสริมจากข้อความก่อนหน้านี้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فهذا ما يحويه علم الكلام، فقد عرفت من هذا أنه يبتدأ نظره في أعمّ الأشياء أولا وهو الموجود، ثم ينزل بالتدريج إلى التفصيل الذي ذكرناه، فيثبت فيه مبادئ سائر العلوم الدينية، من الكتاب والسنة، صدق الرسول ﷺ</blockquote>
+      <p class="ar-translation">“และนี่คือสิ่งที่อิลมุลกะลามครอบคลุมไว้...ท่านคงได้รู้แล้วว่า ศาสตร์นี้เริ่มต้นจากการพิจารณาในสิ่งที่ครอบคลุมที่สุด นั่นคือ ‘การดำรงอยู่’ จากนั้นจึงค่อยๆลงรายละเอียดตามลำดับ...และในกระบวนการนี้เอง ที่มันได้พิสูจน์และวางรากฐานให้กับศาสตร์ทางศาสนาอื่นๆทั้งหมด ทั้งอัลกุรอาน, ซุนนะฮ์ และความสัตย์จริงของท่านเราะซูล ﷺ จากนั้นท่านก็ได้กล่าวต่อไปจนถึงประโยคที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فإذا الكلامُ هو المتكفّل بإثبات مبادئ العلوم الدينية كلها، فهي جزئية بالإضافة إلى الكلام، فالكلامُ هو العلم الأعلى بالرتبة، إذ منه النزول إلى هذه الجزئيات</blockquote>
+      <p class="ar-translation">“ดังนั้น อิลมุลกะลามจึงเป็นผู้รับผิดชอบในการพิสูจน์รากฐานของศาสตร์ทางศาสนาทั้งหมด ศาสตร์อื่นๆ ล้วนเป็นศาสตร์ย่อยเมื่อเทียบกับอิลมุลกะลาม...ดังนั้น อิลมุลกะลามจึงเป็นศาสตร์ที่มีระดับสูงสุด เพราะจากศาสตร์นี้เองที่ศาสตร์ย่อยอื่นๆได้แตกแขนงออกไป”</p>
+      <p>ถึงตอนนี้ เราเชื่อว่าท่านคงประจักษ์แล้วว่า…อัลฆอซาลีมองเห็นประโยชน์ของอิลมุลกะลามและยกย่องให้มันเป็นรากฐานของศาสตร์ทางศาสนา...</p>
+      <p>คำถามสำคัญจึงเกิดขึ้นว่า: แล้วเราจะนำทัศนะนี้ไปรวมกับทัศนะที่ท่านตำหนิอิลมุลกะลามสำหรับ “คนทั่วไป” ได้อย่างไร?</p>
+      <p>เราขอตอบว่า: ท่านอิมามอัลฆอซาลีพยายามที่จะ “ควบคุมคนทั่วไป” (อิลญาม อัลอะวาม) ไม่ให้เข้าไปยุ่งเกี่ยวกับอิลมุลกะลาม แต่ท่านไม่เคยพยายามที่จะ “ควบคุมเหล่านักปราชญ์” (อิลญาม อัลอุละมาอ์) ซึ่งเป็นกลุ่มคนที่มีความจำเป็นอย่างยิ่งในการตอบโต้พวกนอกรีตและพวกอุตริกรรม...เพราะนักปราชญ์นั้น ไม่เหมือนกับคนทั่วไป</p>
+      <p>คนกลุ่มแรก (นักปราชญ์) นั้นมีความจำเป็นในการลุกขึ้นมาต่อกรกับอุตริกรรมและปกป้องอาณาเขตของศาสนา พวกเขาไม่มีความน่ากังวลว่าจะหลงผิดไปกับประเด็นที่ลึกซึ้งของอิลมุลกะลาม...ส่วนคนทั่วไปนั้น ประเด็นที่ลึกซึ้งของอิลมุลกะลามจะสร้างโทษมากกว่าให้คุณ จะสร้างความสับสนและทำลายความบริสุทธิ์ในความเชื่อของพวกเขา</p>
+      <p>นั่นไม่ใช่การตำหนิ “อิลมุลกะลาม” ในฐานะที่เป็นศาสตร์ แต่เป็นการ “กักกัน” คนทั่วไปออกจากมันเมื่อพวกเขาไม่มีความจำเป็น...ก็เหมือนกับ “ยา” ที่จะไม่มีใครกินมัน เว้นแต่ผู้ที่ป่วยและมีความจำเป็นเท่านั้น</p>
+      <p>หนังสือญะวาฮิร อัลกุรอาน" (อัญมณีแห่งอัลกุรอาน) ของอัลฆอซาลี เป็นหนึ่งในผลงานชิ้นสุดท้ายที่ท่านเขียนขึ้นหลังหนังสืออิห์ยาอ์ และในหนังสือเล่มนี้ ท่านก็ได้ใช้ธรรมเนียมเดิมของท่านคือการจัดลำดับชั้นของศาสตร์ต่างๆโดยท่านได้แบ่งศาสตร์ออกเป็น 2 ประเภท:</p>
+      <p>1-ศาสตร์เปลือกนอก เช่น ไวยากรณ์, ตัจวีด เป็นต้น</p>
+      <p>2-ศาสตร์แห่งแก่นแท้ ซึ่งศาสตร์แก่นแท้นี้ ยังแบ่งย่อยออกเป็นอีก 2 ระดับ (ระดับสูงและระดับล่าง)</p>
+      <p>และ “ศาสตร์แก่นแท้ระดับล่าง” (ซึ่งท่านเรียกว่า ศาสตร์สนับสนุน) ตามการจัดลำดับของอัลฆอซาลีนั้น ประกอบด้วย:</p>
+      <p>1-ความรู้เกี่ยวกับเรื่องราวในอัลกุรอานและชีวประวัติของบรรดานบี</p>
+      <p>2-ศาสตร์ที่ใช้ในการโต้แย้งและถกเถียงกับผู้ปฏิเสธศรัทธา</p>
+      <p>3-ศาสตร์ที่เกี่ยวข้องกับนักนิติศาสตร์ (ฟิกฮ์) เช่น การดูแลทรัพย์สิน, สตรี และอื่นๆ</p>
+      <p>สิ่งที่เราให้ความสำคัญในที่นี้ก็คือ ศาสตร์ประเภทที่ 2 ของแก่นแท้ระดับล่าง ซึ่งก็คือศาสตร์ที่ใช้ในการโต้แย้ง ซึ่งอัลฆอซาลีได้กล่าวถึงมันว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والقسم الثاني: هو محاجّة الكفّار ومجادلتهم، ومنه يتشعّبُ علم الكلام المقصود لردّ الضلالات والبدع، وإزالة الشبهات، ويتكفل به المتكلمون، وهذا العلم قد شرحناه على طبقتين، سمّينا الطبقة القريبة منها الرسالة القُدُسيّة، والطبقة التي فوقها الاقتصاد في الاعتقاد. ومقصود هذا العلم حراسة عقيدة العوامّ عن تشويش المبتدعة، ولا يكون هذا العلم مليًّا بكشف الحقائق، وبجنسه يتعلّق الكتاب الذي صنفناه في تهافت الفلاسفة، والذي أوردناه في الرد على الباطنيّة في الكتاب الملقّب الُمستظهري، وفي كتاب حجّة الحق وقواسم الباطنية. وكتاب مُفصّل الخلاف في أصول الدين. ولهذا العلم آلة يُعرف بها طريق المجادلة بل طرق المحاجّة بالبرهان الحقيقي، وقد أودعناه كتاب محكّ النظر وكتاب معيارُ العلم على وجهٍ لا يُلفى مثله على الفقهاء والمتكلمين، ولا يثق بحقيقة الحُجّة والشبهة من لم يُحط به علما</blockquote>
+      <p class="ar-translation">“และประเภทที่สอง คือ การโต้แย้งและถกเถียงกับบรรดาผู้ปฏิเสธศรัทธา ซึ่งจากประการเหล่านี้เองที่ ‘อิลมุลกะลาม’ (เทววิทยาอิสลาม) ได้แตกแขนงออกมา โดยมีเป้าหมายเพื่อตอบโต้แนวคิดที่หลงผิดและอุตริกรรมต่างๆ (บิดอะฮ์) และเพื่อขจัดข้อคลางแคลงใจ (ชุบะฮาต) ทั้งหลาย ซึ่งนักเทววิทยา (มุตะกัลลิมูน) คือผู้รับผิดชอบในเรื่องนี้…และเป้าหมายของศาสตร์นี้คือ การพิทักษ์หลักความเชื่อของคนทั่วไป (เอาวาม) ให้พ้นจากความสับสนที่พวกอุตริกรรมสร้างขึ้น และศาสตร์นี้เพียงอย่างเดียว ไม่เพียงพอที่จะเปิดเผยสัจธรรมอันสูงสุดได้ โดยหนังสือที่เราได้ประพันธ์ขึ้นในศาสตร์ประเภทนี้ก็คือ ‘ตะฮาฟุต อัลฟะลาซิฟะฮ์’ และหนังสือที่เราได้ใช้ตอบโต้พวกบาฏินียะฮ์ซึ่งมีชื่อว่า ‘อัลมุสตัซฮิรีย์’, หนังสือ ‘หุจญะตุลฮักก์’ (ข้อพิสูจน์แห่งสัจธรรม), ‘เกาะวาสิม อัลบาฏินียะฮ์’ และหนังสือ ‘มุฟัศศ็อล อัลคิลาฟ ฟี อุศูลิลดีน’ (การแจกแจงความขัดแย้งในรากฐานของศาสนา) และสำหรับศาสตร์นี้ มันมี ‘เครื่องไม้เครื่องมือ’ ที่ใช้ในการเรียนรู้วิธีการโต้แย้ง หรือจะกล่าวให้ถูกก็คือ วิธีการหาข้อพิสูจน์ด้วยหลักฐานที่แท้จริง ซึ่งเราได้บรรจุความรู้เกี่ยวกับเครื่องมือนี้ไว้ในหนังสือ ‘มิหักก์ อันนะซ็อร’ (มาตรฐานการพิสูจน์) และหนังสือ ‘มิอ์ยาร อัลอิลม์’ (เกณฑ์วัดความรู้) ในรูปแบบที่หาไม่ได้จากนักนิติศาสตร์ (ฟุเกาะฮาอ์) และนักเทววิทยา (มุตะกัลลิมูน) ทั่วไป...และผู้ใดก็ตามที่ยังไม่เชี่ยวชาญในศาสตร์นี้ ก็ไม่อาจมั่นใจได้เลยว่าตนเองจะแยกแยะระหว่าง ‘ข้อพิสูจน์ที่แท้จริง’ กับ ‘ข้อคลางแคลงใจที่ดูคล้ายจริง’ ได้”</p>
+      <p>ข้อความนี้ได้ยืนยันสิ่งที่เราได้กล่าวไปในตอนต้นของบทว่า อัลฆอซาลีได้แสดงออกถึงทัศนะของท่านด้วยลีลาที่หลากหลาย...บางครั้งท่านก็ยกให้มันเป็นศาสตร์แก่นแท้ที่เป็นกำลังสนับสนุนที่ขาดไม่ได้ และในบางที่ท่านก็ยกให้มันเป็นประมุขแห่งศาสตร์ทางศาสนา</p>
+      <p>ดังนั้น อัลฆอซาลีจึงจัดให้อิลมุลกะลามเป็น “ศาสตร์แก่นแท้ในระดับล่าง”</p>
+      <p>ส่วน “ศาสตร์แก่นแท้ในระดับสูง” นั้นคืออะไร? มันคือ “ศาสตร์แห่งการเดินทางไปสู่พระผู้สร้าง”, ความรู้เกี่ยวกับอัลลอฮ์และวันอาคิเราะฮ์, การขัดเกลาและชำระล้างจิตใจ, การประดับประดาจิตใจด้วยคุณธรรม และการขจัดกิเลสทั้งปวง...ศาสตร์อื่นๆทั้งหมดล้วนเป็นเพียงบันไดขั้นต้นเพื่อไปสู่เป้าหมายอันยิ่งใหญ่นี้</p>
+      <p>และในหนังสือ “ญะวาฮิร อัลกุรอาน” ท่านอิมามก็ได้ย้ำอีกครั้งว่า “แม้ความต้องการนักนิติศาสตร์ (ฟะกีฮ์) จะมีมากกว่า แต่ความต้องการนักเทววิทยา (มุตะกัลลิม) นั้น รุนแรงยิ่งกว่า...ท่านได้กล่าวว่า:</p>
+      <p>“สถานะของนักนิติศาสตร์และนักเทววิทยานั้นใกล้เคียงกัน...แต่ความต้องการนักนิติศาสตร์นั้น แพร่หลายกว่า ส่วนความต้องการนักเทววิทยานั้น รุนแรงและสาหัสยิ่งกว่า...ความสัมพันธ์ของพวกเขากับหนทาง (สู่พระเจ้า) และเป้าหมาย (คืออาคิเราะฮ์) นั้น...นักนิติศาสตร์ก็เปรียบเสมือนผู้ดูแลที่พักและสิ่งอำนวยความสะดวกบนเส้นทางสู่มักกะฮ์ เมื่อเทียบกับผู้แสวงบุญ (ฮุจญาจ)...</p>
+      <p>ส่วนนักเทววิทยาก็เปรียบเสมือนทหารองครักษ์ผู้พิทักษ์เส้นทางฮัจญ์ เมื่อเทียบกับผู้แสวงบุญ...</p>
+      <p>หากคนทั้งสองกลุ่มนี้ได้เพิ่ม ‘การเดินทางบนหนทางสู่พระเจ้า’ เข้าไปในทักษะของพวกเขาด้วย...ด้วยการข้ามผ่านอุปสรรคของจิตใจ, การละทิ้งดุนยา และการมุ่งหน้าสู่อัลลอฮ์...ความประเสริฐของพวกเขาก็จะเหนือกว่าผู้อื่น ดั่งความประเสริฐของดวงอาทิตย์ที่เหนือกว่าดวงจันทร์ แต่หากพวกเขาจำกัดตัวเองอยู่แค่ทักษะของตน...สถานะของพวกเขาก็จะต่ำต้อยอย่างยิ่ง”</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+      <p>ทั้งหมดนั้นคือมุมมองคร่าวๆจากตำราเล่มอื่นๆของอิมามอัลฆอซาลี ซึ่งเราก็ได้เห็นแล้วว่าทัศนะของท่านนั้น มั่นคงและไม่เคยเปลี่ยนแปลง...ทัศนะนั้นก็คือ อิลมุลกะลามนั้นมีประโยชน์สำหรับผู้ที่มีความจำเป็นต้องใช้มัน มันจึงเปรียบเสมือนยา มันคือ “ศาสตร์แห่งแก่นแท้” ที่ควรยึดมั่นไว้ ไม่ใช่ “ศาสตร์เปลือกนอก” ที่จะละทิ้งไปก็ได้</p>
+      <p>ศาสตร์นี้คือ ประมุขและรากฐานของศาสตร์ทางศาสนาทั้งหมด ดังที่ท่านได้ทราบแล้ว เพราะมันเริ่มต้นจากการพิจารณาสิ่วต่างๆก่อนที่จะแตกแขนงไปสู่ศาสตร์ย่อยอื่นๆ</p>
+      <p>หากนักเทววิทยาสามารถผสมผสานความรู้ของเขาเข้ากับการเดินทางและการอุทิศตนเพื่ออัลลอฮ์ได้...เขาก็คือผู้ที่ได้รับความสำเร็จ ซึ่งความประเสริฐของเขานั้นเปรียบดั่งดวงอาทิตย์ที่เหนือกว่าดวงจันทร์</p>
+      <p>อิลมุลกะลามคือ ศาสตร์เชิงป้องกัน ที่คอยตัดลิ้นอันแหลมคมของพวกอุตริกรรม และพิทักษ์ความเชื่อให้พ้นจากข้อคลางแคลงใจของพวกนอกรีต</p>
+      <p>เมื่อท่านเข้าใจทั้งหมดนี้อย่างมั่นคงแล้ว ท่านก็จะรู้ว่า...อัลฆอซาลีนั้นแสวงหาความใกล้ชิดต่ออัลลอฮ์ด้วยการยืนยันในศาสตร์นี้และส่งเสริมมัน...สำหรับผู้ที่มีความจำเป็นต้องใช้...และเป็นไปไม่ได้เลยที่ผู้มีสติปัญญาจะกล่าวว่าอัลฆอซาลีได้สำนึกผิด, หันหลังให้, และประณามอิลมุลกะลาม!</p>
+      <p>สิ่งที่อัลฆอซาลีทำคือ การห้ามปราม “คนทั่วไป” จากการค้นคว้าที่อาจจะนำมาซึ่งโทษมากกว่าคุณ...แต่สำหรับคนทั่วไปที่ถูกข้อคลางแคลงใจครอบงำและจำเป็นต้องค้นคว้าหาคำตอบ...เขาก็จำเป็นต้องพิจารณาในหลักฐานที่ชัดแจ้งเพื่อที่จะได้รับความมั่นใจกลับคืนมา เพื่อที่หัวใจของเขาจะได้สงบและเคารพภักดีต่ออัลลอฮ์ด้วยความเข้าใจ...แต่นี่ไม่ใช่หลักการพื้นฐาน</p>
+      <p>ยิ่งไปกว่านั้น เราขอยืนยันว่า โดยพื้นฐานแล้ว คนทั่วไปไม่จำเป็นต้องเริ่มต้นด้วยการค้นคว้าเชิงเทววิทยา และอีหม่านของเขาก็ถือว่าใช้ได้แล้ว...เหตุผลก็เพราะว่า การรู้จักอัลลอฮ์ ซุบฮานะฮูวะตะอาลานั้น เป็นสิ่งที่ถูกฝังรากลึกอยู่ในสามัญสำนึกที่ดีงาม (ฟิฏเราะฮ์) ของมนุษย์อยู่แล้ว</p>
+      <p>แต่สามัญสำนึกที่ดีงามนั้นอาจจะถูกบดบังด้วยสิ่งต่างๆจนทำให้มันหันเหออกจากธรรมชาติดั้งเดิมที่อัลลอฮ์ได้ทรงสร้างมนุษย์มา...มันจะทำให้สิ่งที่น่าเกลียดดูสวยงาม และสิ่งที่สวยงามกลับดูน่าเกลียด...ดังนั้น โดยพื้นฐานแล้ว มนุษย์ถูกสร้างมาให้รู้จักพระผู้อภิบาลของเขา แต่ชัยฏอนอาจจะล่อลวงเขาให้หลงทางและละเมิดสัญญาแห่งธรรมชาติและพระเจ้าได้...ดังที่อัลลอฮ์ตะอาลาได้ตรัสไว้ในหะดีษกุดซีย์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إنّي خلقت عبادي حنفاء فاجتالتهم الشياطين</blockquote>
+      <p class="ar-translation">“แท้จริง ข้าได้สร้างปวงบ่าวของข้ามาในสภาพที่บริสุทธิ์ แต่แล้วชัยฏอนก็ได้ล่อลวงพวกเขาให้หลงทางไป”</p>
+      <p>และผู้ใดก็ตามที่ถูกชัยฏอนล่อลวงไป...เขาก็จะตกอยู่ในสภาวะของผู้ป่วย และผู้ป่วยก็ย่อมต้องการยา...และยานั้นก็คือ “การค้นคว้าเชิงเหตุผล” นั่นเอง</p>
+
+      <h2 class="article-h2">ข้อโต้แย้งที่อาจเกิดขึ้น</h2>
+      <p>ณ ที่นี้ ข้าพเจ้าขอนำเสนอทัศนะหนึ่งที่เคยได้ยินมาก็คือ…เมื่อ อบู ฮามิด อัลฆอซาลี ได้กล่าวว่า “จำเป็นต้องกีดกันคนทั่วไปออกจากการค้นคว้าเชิงเหตุผลและการพิจารณาภาพรวมก็เพียงพอแล้วสำหรับพวกเขา ส่วนการพิจารณาเชิงลึกนั้นเป็นหน้าที่ของนักปราชญ์หรือผู้ที่จำเป็นเท่านั้น... มีผู้กล่าวว่า ทัศนะนี้ของอัลฆอซาลี เป็นการเจริญรอยตามแนวทางของพวกนักปรัชญา!</p>
+      <p>เพราะคำกล่าวอ้างที่วิบัติของพวกนักปรัชญาก็คือ การที่พวกเขาอ้างว่าบรรดานบีนั้นจะละเว้นไม่กล่าวถึงประเด็นบางอย่างเพื่อรักษาผลประโยชน์ของสาธารณชน โดยอ้างว่าคนทั่วไปนั้นไม่สามารถรับมือกับประเด็นเหล่านี้ได้...ซึ่งก็ได้มีการยกหลักฐานจากคำพูดของอิบนุลอะเราะบีย์ ซึ่งเป็นลูกศิษย์ของอิมามอัลฆอซาลี ที่กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">شيخنا أبو حامد دخل في بطون الفلاسفة ثم أراد أن يخرج منهم فما قدر</blockquote>
+      <p class="ar-translation">“ชัยค์ของเรา อบู ฮามิดได้ดำดิ่งลงไปในท้องของนักปรัชญา...ครั้นเมื่อท่านต้องการจะออกมา ก็ออกมาไม่ได้เสียแล้ว”</p>
+      <p>คำกล่าวอ้างที่ว่า อบู ฮามิดได้เจริญรอยตามแนวทางของนักปรัชญานี้...เป็นข้อกล่าวหาที่ร้ายแรงอย่างยิ่ง และมันจะนำไปสู่ข้อสรุปที่ว่า ศาสนามีหลักความเชื่อสองชุด ชุดหนึ่งสำหรับคนทั่วไป และอีกชุดหนึ่งสำหรับคนชั้นสูง ซึ่งท่านอิมามอัลฆอซาลีบริสุทธิ์จากข้อกล่าวหาทั้งหมดนี้</p>
+      <p>เราขอยืนยันว่า อัลฆอซาลีไม่ได้เจริญรอยตามแนวทางของนักปรัชญาเลยแม้แต่น้อย แต่ท่านอยู่ตรงกันข้ามกับพวกเขาโดยสิ้นเชิง ด้วยเหตุผลหลายประการ</p>
+      <p>ประการแรก: ท่านได้ตอบโต้พวกเขาอย่างรุนแรงในหนังสืออันโด่งดังของท่าน “ตะฮาฟุต อัลฟะลาซิฟะฮ์” และได้ตัดสินว่าพวกเขาเป็นผู้ปฏิเสธศรัทธา (ตักฟีร) ในสามประเด็นที่เลื่องชื่อ</p>
+      <p>ประการที่สอง (ซึ่งสำคัญกว่า): ก่อนที่ท่านจะเขียน “อัตตะฮาฟุต” (บทวิพากษ์) ท่านได้เขียน “มะกอศิด อัลฟะลาซิฟะฮ์” (บทอธิบาย) เพื่อเป็นการปูทาง โดยท่านได้รวบรวมและตรวจสอบทัศนะของเหล่านักปรัชญา จากนั้นจึงค่อยย้อนกลับมาหักล้างและทำลายล้างมันในภายหลัง</p>
+      <p>ดังนั้น เราจึงต้องถามว่า: บุรุษผู้ที่สถาปนาตนเองขึ้นเป็นกำแพงเหล็กเพื่อปกป้องศาสนา ไม่ให้แนวคิดเพ้อฝันของนักปรัชญามาทำลายล้าง...เป็นไปได้อย่างไรที่เขาจะหันไปเจริญรอยตามแนวทางของพวกเขาเสียเอง? อะไรคือแรงจูงใจที่ทำให้เขาต้องลุกขึ้นมาตอบโต้และเปิดโปงความล้มเหลวของพวกเขา หากว่าเขากำลังเดินอยู่บนเส้นทางเดียวกันกับพวกเขา?</p>
+      <p>อิมามอัลฆอซาลีเองได้บอกเราไว้อย่างชัดเจนในหนังสือ “อัตตะฮาฟุต” หลังจากที่ได้ชี้แจงความเชื่อของนักปรัชญาแล้ว ท่านก็ได้กล่าวทำลายล้างมันว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هذه المسائل الثلاث [قولهم أن العالم قديم، وأن علم الباري سبحانه لا يحيط بالجزئيات، وإنكارهم لحشر الأجساد] لا تلائم الإسلام بوجه، ومعتقدها معتقد كذب الأنبياء. وإنهم ذكروا ما ذكروه على سبيل المصلحة تمثيلًا لجماهير الخلق وتفهيمًا، وهذا هو الكفر الصراح الذي لم يعتقده أحد من فرق المسلمين</blockquote>
+      <p class="ar-translation">“ประเด็นทั้งสามนี้ (ที่ว่าโลกนี้ดำรงมีมาแต่เดิม, ที่ว่าความรู้ของอัลลอฮ์ไม่ครอบคลุมรายละเอียดปลีกย่อย, และการปฏิเสธการฟื้นคืนชีพทางกายภาพ) ไม่มีทางที่จะสอดคล้องกับอิสลามได้เลยแม้แต่น้อย ผู้ที่เชื่อเช่นนี้ก็เท่ากับเชื่อว่าบรรดานบีเป็นผู้โกหก...และการที่พวกเขา (นักปรัชญา) อ้างว่า สิ่งที่พวกเขาพูด (เกี่ยวกับเรื่องปรโลก) นั้นเป็นเพียงการพูดเพื่อรักษาผลประโยชน์ของสาธารณชน เป็นเพียงการเปรียบเทียบเพื่อให้คนทั่วไปเข้าใจง่าย...นี่คือการปฏิเสธศรัทธาอย่างโจ่งแจ้งที่สุด ซึ่งไม่เคยมีกลุ่มใดในอิสลามเชื่อเช่นนี้เลย!”</p>
+      <p>โปรดพิจารณาข้อความที่ท่านเพิ่งได้อ่านไปอีกครั้ง...ท่านจะเห็นว่าอัลฆอซาลีได้ตำหนิเหล่านักปรัชญาอย่างรุนแรงที่สุด ท่านได้ละทิ้งและหันหลังให้กับแนวทางของพวกเขา จากนั้นท่านก็ได้ตัดสินว่าพวกเขาเป็นกาฟิร...แล้วเราจะยังกล่าวได้อย่างไรอีกว่า อัลฆอซาลีเจริญรอยตามแนวทางของพวกเขา?</p>
+      <p>เมื่อท่านเข้าใจความหมายนี้อย่างชัดเจนแล้วว่า อบู ฮามิด นั้นบริสุทธิ์จากแนวทางของนักปรัชญา...มันจึงนำไปสู่ข้อสรุปที่ว่า ข้อกล่าวหาที่ว่าท่านมี “หลักความเชื่อสองชุด” นั้นเป็นโมฆะ (หลักความเชื่อภายนอกสำหรับคนทั่วไป และหลักความเชื่อภายในสำหรับคนชั้นสูง)...</p>
+      <p>และเราสามารถตอบโต้ข้อกล่าวหานี้ได้สองประการ:</p>
+      <p>ประการแรก: สิ่งที่อัลฆอซาลีต้องการจะสื่อก็คือ ทั้งคนทั่วไปและนักปราชญ์ต่างก็ยึดมั่นใน “หลักความเชื่อเดียวกัน” แต่การพิจารณาในหลักความเชื่อนั้นมี “ระดับความเข้าใจ” (มะรอติบ) ที่แตกต่างกัน...สิ่งที่เหมาะสมกับคนทั่วไปคือภาพรวมโดยไม่ลงลึกในรายละเอียด และหลักฐานจากอัลกุรอานก็เพียงพอแล้วสำหรับพวกเขา...ส่วนสิ่งที่เหมาะสมกับนักปราชญ์คือการลงลึกในรายละเอียด ไม่ใช่แค่ภาพรวม</p>
+      <p>ประการที่สอง: ท่านอิมามอัลฆอซาลีเองได้ช่วยให้เราไม่ต้องเหนื่อยค้นหาคำตอบในเรื่องนี้ โดยท่านได้กล่าวไว้อย่างชัดเจนจนไม่เหลือข้อสงสัยใดๆในใจของเราอีกต่อไปว่า ผู้ใดก็ตามที่กล่าวว่ามีความจริงภายใน (อัลบาฏิน) ที่ขัดแย้งกับสิ่งภายนอก (อัซซอฮิร) ผู้นั้นเข้าใกล้การปฏิเสธศรัทธามากกว่าการศรัทธา ท่านกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فمن قال: إن الحقيقة تخالف الشريعة أو الباطن يناقض الظاهر، فهو إلى الكفر أقرب منه إلى الإيمان</blockquote>
+      <p class="ar-translation">“ดังนั้น ผู้ใดก็ตามที่กล่าวว่า สัจธรรมที่แท้จริงขัดแย้งกับบทบัญญัติ (อัชชะรีอะฮ์) หรือสิ่งที่อยู่ภายใน (อัลบาฏิน) ขัดแย้งกับสิ่งที่อยู่ภายนอก (อัซซอฮิร) ผู้นั้นก็เข้าใกล้การเป็นกาฟิรมากกว่าการเป็นผู้ศรัทธา”</p>
+      <p>นี่คือคำกล่าวที่ชัดเจนจนไม่ต้องการคำอธิบายใดๆ เพิ่มเติมอีก</p>
+      <p>และยังมี ประเด็นสำคัญประการที่สาม ที่จะมาทำลายล้างข้อกล่าวหานี้...</p>
+      <p>สมมติว่า...หากเรายอมรับว่าอัลฆอซาลีใช้สำนวนที่แตกต่างกันในการสื่อสารกับคนทั่วไปและคนชั้นสูงจริงๆ...ถ้าเช่นนั้น เหตุใดเล่าท่านจึงเน้นย้ำในประเด็น “การให้ความบริสุทธิ์อย่างสูงสุดแก่อัลลอฮ์ (ตันซีฮ์)” ทั้งๆที่ประเด็นนี้อาจจะนำพาคนทั่วไปไปสู่การปฏิเสธคุณลักษณะของพระเจ้า (ตะอ์ฏีล) หรือแม้กระทั่งการปฏิเสธการมีอยู่ของพระผู้สร้างได้เลย?</p>
+      <p>หมายความว่า...คนทั่วไปนั้นยากที่จะเข้าใจได้ว่า อัลลอฮ์ตะอาลานั้นไม่ได้ประกอบขึ้นจากร่างกาย หรือญิสม์, ไม่ได้อยู่ภายใต้ปริภูมิ-กาลเวลา, ไม่ได้อยู่ในสถานที่ แต่พระองค์คือผู้สร้างสิ่งเหล่านั้น, พระองค์ไม่ได้อยู่ภายในโลกและก็ไม่ได้อยู่ภายนอกโลก...</p>
+      <p>แต่ท่านกลับย้ำเตือนเรื่องนี้ในหนังสือทุกเล่มของท่าน!</p>
+      <p>เหตุใดท่านจึง “ประนีประนอม” กับพวกเขาในเรื่องอิลมุลกะลาม แต่กลับไม่ “ประนีประนอม” ในเรื่อง “ตันซีฮ์” ซึ่งอาจจะเป็นอันตรายต่อคนทั่วไปมากกว่าเสียอีก?</p>
+      <p>คำตอบก็คือ... เพราะหลักความเชื่อนั้นมีเพียงหนึ่งเดียวและเป็นสิ่งสำคัญ และสำหรับคนทั่วไปนั้น การยืนยันในหลักการ “ตันซีฮ์” โดยภาพรวมก็เพียงพอแล้ว โดยไม่จำเป็นต้องลงลึกไปกว่านั้น...ท่านไม่ได้ปิดบังความจริงจากพวกเขาเพื่อ “รักษาผลประโยชน์” เหมือนกับแนวทางของพวกนักปรัชญา</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). อิมามอัลฆอซาลี หันหลังให้ ‘อิลมุลกะลาม’ และประณามมันจริงหรือ?. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/kalam/ghazali-and-ilm-al-kalam.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>

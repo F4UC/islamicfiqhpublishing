@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การปฏิรูปการเมืองในร่มเงาของมัมลู้ก — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="">
+<meta name="keywords" content="มัมลูก, การปฏิรูปการเมือง, ประวัติศาสตร์อิสลาม, การปกครอง, รัฐ">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การปฏิรูปการเมืองในร่มเงาของมัมลู้ก — Islamic Fiqh Publishing">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/political-reform-under-the-mamluks.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="political-reform-under-the-mamluks">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/tarikh.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">การปฏิรูปการเมืองในร่มเงาของมัมลู้ก</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أما سؤالكم عن الزمان فإن الزمان: الناس، والناس رجلان: والٍ ومُوَلَّى عليه</blockquote>
+      <p class="ar-translation">“หากท่านถามถึง ‘ยุคสมัย’ ก็จงรู้เถิดว่า ยุคสมัยไม่ได้เป็นอื่นนอกจากมันคือ ‘ผู้คน’ และเมื่อมองในระเบียบสังคมแล้ว ผู้คนจะมีสองฝ่ายเท่านั้น นั่นคือฝ่ายที่ปกครอง และฝ่ายที่อยู่ใต้การปกครอง”</p>
+      <p class="lead-text">ด้วยถ้อยคำอันคมคายนี้ อับดุลลอฮ์ บิน อัลมุก็อฟฟะอ์ (เสียชีวิต ฮ.ศ. 142 / ค.ศ. 760) ปราชญ์เอกแห่งยุคอับบาสิยะฮ์ตอนต้น ได้เปิดประเด็นในสาส์นว่าด้วยการปฏิรูปการเมืองและสังคม โดยท่านได้กล่าวกับสานุศิษย์ถึงพลวัตทางอารยธรรม 4 ยุคสมัย ซึ่งตามหลักตรรกะแล้ว วิถีแห่งรัฐและสังคมในโลกอิสลามไม่อาจหลุดพ้นไปจากวงจรเหล่านี้ได้ โดยวัฏจักรทางอารยธรรมทั้ง 4 ยุคสมัย ได้แก่:</p>
+      <p>1.ยุคทอง ยุคที่ธรรมาภิบาลของผู้ปกครองและความดีงามของราษฎรมาบรรจบกัน</p>
+      <p>2.ยุครองลงมาคือ ยุคที่ผู้นำประพฤติดีมีคุณธรรม แต่ประชาชนเสื่อมทราม</p>
+      <p>3.ยุคที่สาม ซึ่งยุคที่ประชาชนเป็นพลเมืองดี แต่ผู้ปกครองทุจริตฉ้อฉล</p>
+      <p>4.ยุควิกฤต หรือยุคทมิฬที่เป็นศูนย์รวมความเสื่อมทรามของทั้งฝ่ายผู้ปกครองและฝ่ายราษฎร</p>
+      <p>เหล่านักนิติศาสตร์จำนวนหนึ่งโดยเฉพาะในยุคหลัง ได้มุ่งเน้นการนำเสนอแนวคิดเชิงยุทธศาสตร์เพื่อการปฏิรูปที่ครอบคลุมทั้งสองมิติ คือการปฏิรูปฝ่ายปกครองและฝ่ายพลเมือง ผ่านการวิเคราะห์สังเคราะห์ผลงานระดับเสาหลักสามชิ้น นั่นคือ อิบนุ ตัยมียะฮ์, อัซซุบกีย์และอิบนุ คอลดูนที่มุ่งแก้ปัญหาวิกฤตการณ์ของ “ยุคที่สี่” (ยุควิกฤต) ซึ่งเจ้าของผลงานทั้งสามท่านล้วนปรากฏตัวในศตวรรษที่ 8 แห่งฮิจเราะห์ (ศตวรรษที่ 14 แห่งคริสตกาล) ซึ่งเราจะนำเสนอระเบียบวิธีและยุทธศาสตร์การปฏิรูปการเมืองและสังคมที่ผู้เสนอพยายามแบกรับภารกิจในการ “ดัดนิสัยทั้งผู้นำและประชาชน”</p>
+      <p>สิ่งที่รัฐบุรุษทางปัญญาทั้งสามท่านมีร่วมกันคือ การบรรลุถึงสถานะ “อิหม่าม” (ผู้นำสูงสุดทางวิชาการศาสนา) และต่างก็ทุ่มเทให้กับการวิเคราะห์ปัญหาเชิงโครงสร้างของสังคมโดยไม่ละเลยที่จะเข้าไปมีส่วนร่วมใน “กลไกแห่งอำนาจรัฐ” (ไม่ว่าจะเป็นการออกคำวินิจฉัย/ฟัตวา, การตรวจสอบกิจการสาธารณะ, ตุลาการ หรือการบริหารราชการแผ่นดิน) และต่างต้องเผชิญวิบากกรรมในคุกตารางเมื่อถูกกล่าวหาว่า “ขัดขวางผลประโยชน์ของผู้มีอำนาจ” อีกทั้งพวกเขายังเขียนวิสัยทัศน์การปฏิรูปเหล่านี้ในช่วงวัย 40 ปีเหมือนกัน</p>
+      <p>ในเชิงภูมิรัฐศาสตร์ พวกเขาสังกัดอยู่ในขอบเขตอันกว้างใหญ่ที่เป็นหัวใจของโลกอิสลามนั่นคือชาม, อียิปต์ และอัลมัฆริบ (อาณาจักรฝั่งตะวันตกของโลกอิสลาม) และเป็นตัวแทนของสามสำนักคิดทางนิติศาสตร์หลักที่ครอบงำพื้นที่ดังกล่าว นั่นคือฮัมบาลีย์, ชาฟิอีย์ และมาลิกีย์ แม้ว่าจุดยืนทางระเบียบวิธีคิดในเรื่องหลักศรัทธาและจริยวัตรจะแตกต่างกันไประหว่างสำนักอะฮ์ลุลหะดีษ, อัชอะรียะฮ์ และซูฟีก็ตาม</p>
+      <p>เช่นเดียวกัน แนวทางของพวกเขาในการ “จินตนาการถึงการปฏิรูป” ก็หลากหลายออกไป ระหว่างแนวทางเชิงทฤษฎีซึ่งอิบนุ ตัยมียะฮ์ยึดถือ; แนวทางเชิงภาคปฏิบัติซึ่งตาญุดดีน อัซซุบกีย์ ดำเนินตาม; และแนวทางที่สามซึ่งเป็นการบรรยายเชิงพรรณนา–ใคร่ครวญในมิติอารยธรรม นำเสนอโดยนักฟิกฮ์ ผู้พิพากษา และนักประวัติศาสตร์อย่างอิบนุ คอลดูน</p>
+      <p>รูปแบบการปฏิรูปทั้งสามนี้เกิดขึ้นภายใต้บริบททางการเมืองที่ซับซ้อนยิ่งของ “ยุคมัมลู้ก” ซึ่งเต็มไปด้วยความระส่ำระสายทางการเมือง การแตกแยกอย่างร้าวลึกของรัฐศูนย์กลาง สงครามอันดุเดือดที่เห็นการกรีธาทัพทั้งขนาดเล็กและใหญ่นับร้อยครั้ง โดยมีทหารนับแสนนายเข้าร่วมสมรภูมิ ทั้งยังมีความขัดแย้งทางความคิดที่รุนแรง และการแพร่ระบาดของแนวคิดที่เหล่านักนิติศาสตร์มองว่าเป็นภัยคุกคามต่อความมั่นคงทางศรัทธา</p>
+      <p>ในความเป็นจริง รัฐมัมลู้ก - ซึ่งกินเวลาตั้งแต่ปี ฮ.ศ. 648 (ค.ศ. 1250) ถึง 923 (ค.ศ. 1518) - ถือกำเนิดขึ้นจากชัยชนะทางประวัติศาสตร์ เพื่อขึ้นมาปกครองอาณาจักรสุลต่านอันยิ่งใหญ่ในอียิปต์ ชาม และฮิญาซ โดยมีต้นทุนทางการเมืองเพียงอย่างเดียวคือ “แสนยานุภาพทางทหาร” และ “อำนาจกำลังรบ” โดยฉกฉวยโอกาสจากสภาวะความถดถอยทางสังคมอย่างรุนแรง</p>
+      <p>ดังนั้น เหล่านักปราชญ์รับมือกับความท้าทายนี้อย่างไร? ชนชั้นนำทางวิชาการในยุคนั้นมีกระบวนทัศน์อย่างไร? และอะไรคือระเบียบวิธีทั้งทางทฤษฎีและปฏิบัติที่พวกเขาเสนอเพื่อจัดสรรอำนาจของมัมลู้กที่กำลังพุ่งทะยาน ให้มุ่งไปสู่เป้าหมายแห่งการปฏิรูปที่ครอบคลุมอย่างยั่งยืน?</p>
+
+      <h2 class="article-h2">วิถีทัศน์แห่งตัยมียะฮ์: การปฏิรูปภายใต้เงื้อมเงาอำนาจ</h2>
+      <p>สุลต่านอันนาศิร มุฮัมมัด บิน กอลาวูน (เสียชีวิต ฮ.ศ. 741 / ค.ศ. 1340) ทรงเป็นที่จดจำในฐานะผู้บุกเบิกการปฏิรูปเชิงสถาบันในยุคมัมลู้ก ซึ่งในรัชสมัยของพระองค์มีการก่อตั้งทบวงกรมและสถาบันการศึกษาตลอดจนสถานพยาบาลมากมาย</p>
+      <p>อิบนุ กะษีร (เสียชีวิต ฮ.ศ. 776 / ค.ศ. 1374) ได้ตั้งข้อสังเกตไว้ในหนังสืออัลบิดายะฮ์ วันนิฮายะฮ์ว่า มีปราชญ์ผู้ยิ่งใหญ่ท่านหนึ่งที่มีบทบาทสำคัญในการผลักดันสุลต่านกอลาวูนไปสู่การปฏิรูปและการยอมรับมาตรฐานทางจริยธรรมบางประการในยุคนั้น โดยยกตัวอย่างการยกเลิกธรรมเนียม “การซื้อขายตำแหน่งด้วยสินบน” (ที่คนยุคนั้นเรียกว่า ‘บัรเฏาะละฮ์’) ซึ่งอิบนุ กะษีร ระบุชัดเจนว่า “สาเหตุของเรื่องนี้มาจากท่านเชคตะกียุดดีน อิบนุ ตัยมียะฮ์”</p>
+      <p>อิบนุ ตัยมียะฮ์ตระหนักดีว่าสถานการณ์ในยุคสมัยของท่านนั้นจัดอยู่ในยุคที่สี่ (ยุควิกฤต) ตามคำนิยามของอิบนุ อัลมุก็อฟฟะอ์ ท่านจึงได้ประพันธ์วิสัยทัศน์การปฏิรูปอันล้ำสมัยเพื่อผลักดันกระบวนการปฏิรูปเชิงสถาบันในสมัยสุลต่านอันนาศิร กอลาวูน โดยบรรจุไว้ในหนังสือชื่ออัสสิยาซะฮ์ อัชชัรอียะฮ์ ฟี อิสลาห์ อัรรออี วัรเราะอียะฮ์ (นิติรัฐศาสตร์อิสลาม ว่าด้วยการปฏิรูปผู้ปกครองและผู้อยู่ใต้ปกครอง) ซึ่งท่านได้มอบให้กับเจ้าเมืองกาซาคนหนึ่ง (ซึ่งเป็นอดีตทาสมัมลู้ก) ในช่วงทศวรรษที่สองของศตวรรษที่ 8 ฮิจเราะห์ (ศตวรรษที่ 14) โดยประมาณ ตามที่ระบุไว้ในท้ายต้นที่ถูกคัดลอกฉบับหนึ่ง</p>
+      <p>ผ่านหนังสือเล่มนี้ อิบนุ ตัยมียะฮ์ได้พยายามสวมบทบาททั้งสองประการ คือการปฏิรูปอำนาจรัฐ และการให้ปัญญาแก่สังคม ท่านเขียนสรุปแนวคิดที่ท่านอธิบายว่าเป็นสิ่งที่ทั้งผู้ปกครองและราษฎรไม่อาจขาดได้โดยให้เหตุผลว่า</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لما تغير الإمام والرعية كان الواجب على كل إنسان أن يفعل من الواجب ما يقدر عليه</blockquote>
+      <p class="ar-translation">“เมื่อทั้งผู้นำและประชาชนต่างแปรเปลี่ยนไป จึงเป็นหน้าที่ของมนุษย์ทุกคนที่จะต้องกระทำสิ่งที่เป็นวาญิบ (หน้าที่จำเป็น) เท่าที่ตนมีความสามารถ”</p>
+      <p>แนวคิดหลักของหนังสือเล่มนี้มีความคมคายและทำให้นึกย้อนไปถึงบทบาทของอิหม่ามอัลญุวัยนีย์ (เสียชีวิต ฮ.ศ. 478 / ค.ศ. 1089) ในการปฏิรูปรัฐเซลจุก กล่าวคือ เป็นการวางทฤษฎีว่าจะทำอย่างไรให้ “อำนาจและความกล้าหาญ” ของชนชั้นปกครองใหม่ (พวกมัมลู้ก) เข้าสู่ระบบระเบียบที่ถูกต้องตามหลักการศาสนา และในขณะเดียวกันก็ชักนำพลังอำนาจนั้นไปสู่ทิศทางของการปฏิรูป</p>
+      <p>การบรรลุเป้าหมายทั้งสองนี้ หมายถึงการยอมรับความเป็นจริงทางการเมืองแบบมัมลู้ก และยอมรับผู้ถือครองอำนาจที่มีเกียรติประวัติทางการทหาร ตราบเท่าที่ความเป็นจริงนี้จะมุ่งหน้าสู่การปฏิรูปตนเองและสังคม และตราบเท่าที่พวกเขายอมรับให้เหล่านักปราชญ์ (อุละมาอ์) เป็นหุ้นส่วนในอำนาจ ภายใต้หลักการที่ว่า “ผู้มีอำนาจปกครองมีสองประเภท คือเหล่าผู้นำ (อะมีร) และเหล่านักปราชญ์ (อุละมาอ์)”</p>
+      <p>จากจุดนี้เอง เราจึงเข้าใจนัยยะที่ซ่อนอยู่เบื้องหลังชื่อหนังสือของอิบนุ ตัยมียะฮ์ที่ชื่อว่า “การปฏิรูปผู้ปกครองและผู้อยู่ใต้ปกครอง” ซึ่งเป็นการนำวาทกรรมของอิบนุ อัลมุก็อฟฟะอ์ เรื่อง “ความดีงามของผู้ปกครองและผู้อยู่ใต้ปกครอง” มาเรียบเรียงใหม่ โดยยกระดับจากสภาวะความเป็นคนดี ไปสู่กระบวนการทำให้ดีขึ้น เพื่อให้สอดคล้องกับบริบทที่แตกต่างกันของยุคสมัย</p>
+      <p>สำหรับอิบนุ ตัยมียะฮ์แล้ว การปล่อยให้ขุมกำลังมหาศาลนี้ (พวกมัมลู้ก) หลุดลอยไปจากกฎเกณฑ์ของศาสนาถือเป็นเรื่องอันตรายอย่างยิ่ง เพราะหากสุลต่าน (การเมือง) แยกขาดจากศาสนา หรือศาสนาแยกขาดจากสุลต่าน สภาพการณ์ของผู้คนก็จะวิบัติ</p>
+      <p>ในเบื้องต้น อิบนุ ตัยมียะฮ์ตระหนักว่าหนังสือเล่มนี้ไม่ใช่พื้นที่สำหรับการถกเถียงเรื่องความชอบธรรมของผู้ปกครองจากเผ่ากุเรช หรือแม้แต่เงื่อนไขเรื่อง ความเป็นไท (อิสรภาพ) ที่ตำรานิติรัฐศาสตร์อิสลามมักเน้นย้ำ และสถานการณ์ก็ไม่เอื้ออำนวยให้ตั้งคำถามถึงความชอบธรรมในการปกครองของมัมลู้ก เหมือนที่ท่านอิซซุดดีน บิน อับดุสสะลาม (เสียชีวิต ฮ.ศ. 660 / ค.ศ. 1262) เคยทำไว้ในอดีต (ด้วยการบังคับขายทอดตลาดเหล่าเจ้าเมืองที่ไม่ใช่ไทเพราะยังมีสถานะเป็นทาส!)</p>
+      <p>สถานการณ์ได้ก้าวข้ามจุดนั้นมาไกลแล้ว เพราะพวกมัมลู้กได้สถาปนาความชอบธรรมในการปกครองผ่านชัยชนะอันยิ่งใหญ่ในสมรภูมิอัยน์ ญาลูต (ฮ.ศ. 658) และสมรภูมิฮิมส์ทั้งสองครั้ง (ฮ.ศ. 659 และ 680) ซึ่งเป็นชัยชนะที่ชี้ชะตาโลกอิสลามด้วยการหยุดยั้งคลื่นยักษ์แห่งกองทัพมองโกลไว้ได้ตลอดกาล</p>
+      <p>ยิ่งไปกว่านั้น เคาะลีฟะฮ์แห่งราชวงศ์อับบาสิยะฮ์ (ที่เป็นสายเลือดกุเรช) ผู้ซึ่งเป็นสัญลักษณ์แห่งความชอบธรรม ก็ได้ย้ายฐานที่มั่นมาอยู่ที่กรุงไคโรแล้ว และพระองค์เองก็ได้ถวายพระนามยกย่องสุลต่านมัมลู้กว่า “นายผู้ยิ่งใหญ่ ผู้ทรงภูมิธรรม ผู้ทรงธรรม ผู้เป็นนักรบมุญาฮิด ผู้ได้รับการสนับสนุน (จากอัลลอฮ์) เสาหลักแห่งโลกและศาสนา” ตามบันทึกของกุฏบุดดีน อัลยูนินีย์ (เสียชีวิต ฮ.ศ. 726 / ค.ศ. 1326) ในหนังสือซัยล์ มิรอาต อัซซะมาน</p>
+
+      <h2 class="article-h2">รัฐประศาสนศาสตร์ตามแนวทางอิบนุ ตัยมียะฮ์</h2>
+      <p>หนังสือการปฏิรูปผู้ปกครองและผู้อยู่ใต้ปกครอง (อัสสิยาซะฮ์ อัชชัรอียะฮ์) ซึ่งถือเป็นผลงานชิ้นแรกในบรรดาหนังสือสามเล่มที่เรากล่าวถึง ได้เจาะลึกถึงความสำคัญของการบริหารจัดการกิจการบ้านเมืองและสถาบันอำนาจรัฐอย่างมีประสิทธิภาพสูงสุด โดยมุ่งเน้นไปที่โครงสร้างหลัก ได้แก่ สถาบันประมุข (สุลต่านและอุปราช), สถาบันกองทัพ (แม่ทัพนายกอง), สถาบันตุลาการ (ศาลและหน่วยงานตรวจสอบความประพฤติสาธารณะ), การคลัง (กระทรวงการคลังและการดูแลทรัพย์สินแผ่นดิน)</p>
+      <p>แม้ว่าในทางปฏิบัติอำนาจสูงสุด (ตำแหน่งสุลต่าน) อาจได้รับการยกเว้นจากการตรวจสอบที่เข้มงวดเนื่องจากสภาวะจำยอมทางการเมือง แต่เงื่อนไขสำคัญที่อิบนุ ตัยมียะฮ์วางไว้คือ “ต้องมีการยอมรับมาตรฐานใหม่ในการแต่งตั้งข้าราชการระดับรองลงมา”</p>
+      <p>ด้วยเหตุนี้ ท่านจึงได้จำแนกตำแหน่งงานราชการออกเป็น 9 ตำแหน่งหลักที่เกี่ยวข้องกับความมั่นคงของรัฐ และอีกประมาณ 17 ตำแหน่งที่เกี่ยวข้องกับกิจการสังคม โดยท่านกำหนดให้เป็นพันธกิจของสุลต่านที่จะต้อง “เฟ้นหาผู้เหมาะสม” เพื่อมาดำรงตำแหน่งตัวแทนในหัวเมืองต่างๆ ไม่ว่าจะเป็นเจ้าเมือง, ผู้พิพากษา, แม่ทัพ, นายกองตลอดจนเจ้าหน้าที่การคลัง อาทิ อัครเสนาบดี (วะซีร), เสมียนบัญชี (กุตตาบ), ผู้ตรวจราชการและเจ้าพนักงานเก็บภาษีและซะกาต</p>
+      <p>ท่านยังเรียกร้องให้การมอบอำนาจเหล่านี้ “ปลอดจากระบบอุปถัมภ์” ไม่ว่าจะเป็นความผูกพันทางสายเลือด (เครือญาติ) หรือความจงรักภักดีในระบบทาสอุปถัมภ์ (ซึ่งเป็นรากฐานของระบบมัมลู้ก) รวมถึงต้องก้าวข้ามความลำเอียงทางภูมิภาค, ความขัดแย้งทางสำนักความคิด, การยึดติดกับสำนักคิดทางซูฟี หรืออคติทางชาติพันธุ์</p>
+      <p>ท่านเตือนไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فإن الرجل لحبه لولده أو لعتيقه قد يؤثره في بعض الولايات، أو يعطيه ما لا يستحقه؛ فيكون قد خان أمانته</blockquote>
+      <p class="ar-translation">“บุคคลใดก็ตามที่แต่งตั้งผู้อื่นให้ดำรงตำแหน่งเพียงเพราะความรักที่มีต่อบุตรหลาน หรือต่ออดีตทาสในสังกัด โดยที่ผู้นั้นไม่มีความเหมาะสม หรือมอบสิ่งที่เขาไม่ควรได้รับ บุคคลนั้นย่อมได้ชื่อว่า ทรยศต่อความไว้วางใจ (อะมานะฮ์) แล้ว”</p>
+      <p>อิบนุ ตัยมียะฮ์วางรากฐานหนังสือเล่มนี้บนเสาหลักของโองการจากอัลกุรอาน 2 โองการ คือ สำหรับผู้ปกครอง</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إنّ اللهَ يأمرُكم أن تؤدُّوا الأماناتِ إلى أهلِها</blockquote>
+      <p>{แท้จริงอัลลอฮ์ทรงบัญชาพวกเจ้าให้คืนความไว้วางใจ (อะมานะฮ์) แก่เจ้าของของมัน}</p>
+      <p>และสำหรับราษฎร</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يا أيها الذين آمنوا أطيعوا اللهَ وأطيعوا الرسولَ وأولي الأمرِ منكم</blockquote>
+      <p>{โอ้บรรดาผู้ศรัทธา จงเชื่อฟังอัลลอฮ์ และเชื่อฟังศาสนทูต และผู้มีอำนาจปกครองในหมู่พวกเจ้า}</p>
+      <p>ผ่านสองโองการนี้ ท่านพยายามที่จะคลี่คลายปมขัดแย้งอันยิ่งใหญ่ระหว่างคุณค่าของขุมกำลังและความซื่อสัตย์ด้วยทฤษฎีที่มีความสมจริงทางการเมืองอย่างที่สุด</p>
+      <p>ท่านตระหนักดีว่า ช่วงเวลาในอุดมคติคือยามที่รัฐถูกขับเคลื่อนโดยผู้นำที่มีคุณสมบัติครบถ้วนทั้งเป็นผู้เข้มแข็งและผู้ซื่อสัตย์ แต่ทว่าในความเป็นจริง การที่ความเข้มแข็งและความซื่อสัตย์จะมารวมอยู่ในตัวคนคนเดียวนั้น เป็นเรื่องยาก</p>
+      <p>ซึ่งนั่นคือปมปัญหาที่กระทบต่อความชอบธรรมทางการเมืองในยุคมัมลู้กโดยตรง เพราะเหล่ามัมลู้กส่วนใหญ่เป็นมุสลิมใหม่ บางคนยังมีข้อครหาในเรื่องจริยธรรม ดังที่ตะกียุดดีน อัลมักรีซีย์ (เสียชีวิต ฮ.ศ. 845 / ค.ศ. 1441) ได้บันทึกถึงลักษณะของพวกเขาในหนังสืออัลมะวาอิซ วัลอิอ์ติบารว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">جمعوا بين الحق والباطل، وضموا الجيد إلى الرديء</blockquote>
+      <p class="ar-translation">“พวกเขาผสมผสานสัจธรรมเข้ากับความเท็จ และผนวกสิ่งดีงามเข้ากับความเลวทราม”</p>
+      <p>พวกเขาเหล่านี้ถูกนำตัวมาจากดินแดนอันไกลโพ้นในฐานะทาส แล้วสถาปนารัฐของตนขึ้นด้วยคมดาบและปลายหอก โดยมีสิ่งเดียวที่ใช้ค้ำจุนอำนาจคือ ขุมกำลังและความห้าวหาญนั่นเอง</p>
+      <p>โจทย์สำคัญที่ท้าทายสติปัญญาของอิบนุ ตัยมียะฮ์ คือคำถามที่ว่า: เราจะจัดวางคุณค่าแต่ละประการให้ถูกที่ถูกทางได้อย่างไร?</p>
+      <p>ท่านวินิจฉัยอย่างเด็ดขาดว่า ในภารกิจด้านการสงครามและการบัญชาการกองทัพ หากเกิดกรณีที่ต้องเลือกระหว่าง “คนเก่งแต่ชั่ว” กับ “คนดีแต่อ่อนแอ” ท่านจะเลือก “บุรุษผู้เข้มแข็งกล้าหาญ แม้เขาจะมีพฤติกรรมเสื่อมทรามก็ตาม” เพราะความเข้มแข็งของเขาเป็นประโยชน์ต่ออิสลาม ส่วนความชั่วของเขาเป็นภัยต่อตัวเขาเอง</p>
+      <p>แต่ตรรกะนี้ใช้ไม่ได้กับภารกิจด้านการคลังและทรัพย์สิน ซึ่งท่านระบุว่า: “หากตำแหน่งนั้นต้องการความซื่อสัตย์ (อะมานะฮ์) มากกว่าการใช้กำลัง ก็ต้องเลือกคนซื่อสัตย์เป็นลำดับแรก”</p>
+      <p>สำหรับสถาบันตุลาการ (ศาล) ซึ่งเป็นจุดบรรจบระหว่างมิติทางศาสนาและมิติทางการเมือง อิบนุ ตัยมียะฮ์ค่อนข้างระมัดระวังในการนำเกณฑ์เรื่องการใช้กำลัง มาใช้โดดๆโดยท่านกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يقدَّم الأكفأ إن كان القضاء يحتاج إلى قوة وإعانة للقاضي أكثر من حاجته إلى مزيد العلم والورع</blockquote>
+      <p class="ar-translation">“ควรเลือกผู้ที่มีความสามารถเหมาะสมที่สุด หากการตัดสินคดีนั้นต้องการอำนาจในการบังคับใช้กฎหมายและการสนับสนุนผู้พิพากษา มากกว่าความต้องการความรู้ที่ลึกซึ้งหรือความยำเกรง (วะเราะอ์) ที่มากเกินจำเป็น”</p>
+      <p>จริงแล้วอิบนุ ตัยมียะฮ์ได้เปิดประตูสู่ความยืดหยุ่นในการประยุกต์ใช้คุณค่าเหล่านี้ ท่านกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يجب.. السعي في إصلاح الأحوال حتى يكمل في الناس ما لا بد لهم منه من أمور الولايات والإمارات ونحوها</blockquote>
+      <p class="ar-translation">“จำเป็นต้อง...พยายามแก้ไขสถานการณ์ จนกว่าผู้คนจะมีความพร้อมในสิ่งที่จำเป็นสำหรับกิจการบ้านเมืองและการปกครอง”</p>
+      <p>นอกจากนี้ ท่านยังเสนอทางออกเชิงปฏิรูปที่สร้างสรรค์ด้วยการเรียกร้องให้ชดเชยจุดอ่อนของปัจเจกบุคคลด้วยระบบองค์กร กล่าวคือ หากไม่อาจหาบุคคลที่เป็น “ผู้เข้มแข็งและซื่อสัตย์” ได้ในคนคนเดียว ก็ให้ใช้วิธีการบริหารแบบองค์คณะ โดยแต่งตั้งบุคคลหลายคนที่มีจุดเด่นคนละด้านมาทำงานร่วมกัน เพื่อให้บรรลุเป้าหมายผ่าน “พหุนิยมของผู้ปกครอง (การแต่งตั้งหลายคน) ในกรณีที่คนคนเดียวไม่สามารถทำหน้าที่ได้อย่างสมบูรณ์”</p>
+      <p>สิ่งที่น่าสนใจคือ ด้วยสติปัญญาอันเฉียบแหลม อิบนุ ตัยมียะฮ์พยายามดึงสถาบันแห่งอำนาจ (กองทัพ) ให้เข้ามาผูกพันกับภารกิจทางศาสนาโดยตรง เพื่อเป้าหมายในการ “ปฏิรูปศาสนาของประชาชน”</p>
+      <p>ท่านวางเงื่อนไขให้กองทัพมัมลู้ก (ซึ่งเป็นผู้กุมอำนาจที่แท้จริงของรัฐ) ต้องรับผิดชอบดูแลพันธกิจสำคัญสองประการคือ “การละหมาดและการญิฮาด” โดยอ้างอิงบรรทัดฐานว่า “ตามแบบฉบับ (ซุนนะฮ์) ดั้งเดิมนั้น ผู้ที่ทำหน้าที่นำละหมาดวันศุกร์และละหมาดญะมาอะฮ์ รวมถึงการกล่าวคุฏบะฮ์แก่ประชาชน คือบรรดาแม่ทัพนายกองนั่นเอง”</p>
+      <p>จากนั้น ท่านอิหม่ามได้ชี้ให้เห็นว่า การธำรงรักษาการละหมาดจะนำไปสู่ผลลัพธ์สองประการ คือการรักษาเสาหลักต้นที่สองของศาสนาและคือการปลูกฝังคุณค่าทางจริยธรรมที่จะนำไปสู่การปฏิรูปองค์กรทหารนั้นเอง</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا أقام المتولي عمادَ الدين؛ فالصلاة تنهى عن الفحشاء والمنكر، وهي التي تعين الناس على ما سواها من الطاعات</blockquote>
+      <p class="ar-translation">“หากผู้ปกครองดำรงไว้ซึ่งเสาหลักของศาสนา การละหมาดนั้นย่อมยับยั้งความลามกและความชั่วช้า และมันจะเป็นตัวช่วยให้ผู้คนปฏิบัติความดีอื่นๆ ได้ง่ายขึ้น”</p>
+      <p>กล่าวโดยสรุปคือ ในแผนการปฏิรูปเชิงทฤษฎีสำหรับรัฐมัมลู้กและสังคมภายใต้การปกครองนั้น อิบนุ ตัยมียะฮ์เคลื่อนไหวภายใต้เงื่อนไขของความเป็นจริง มิใช่เพื่อจมปลักหรือยอมจำนนต่อมัน แต่เพื่อยกระดับมันขึ้น ท่านยอมรับความเป็นจริงทางการเมืองเพื่อใช้เป็นแรงกดดัน ผลักดันให้เกิดการปฏิรูปจากภายใน</p>
+
+      <h2 class="article-h2">จากทฤษฎีสู่การลงมือทำ</h2>
+      <p>ในขณะที่อิบนุ ตัยมียะฮ์ได้ประพันธ์หนังสือว่าด้วยการปฏิรูปผู้ปกครองและราษฎรขึ้นในกรุงไคโร (อียิปต์) ตาญุดดีน อัซซุบกีย์กลับเรียบเรียงหนังสือมุอีดุนนิอัม วะมูบีด อันนิกอม (ผู้กอบกู้ความโปรดปรานและผู้ทำลายล้างความทุกข์เข็ญ) ขึ้นในกรุงดามัสกัส หนังสือเล่มหลังนี้ถือเป็นห่วงโซ่ที่โดดเด่นที่สุดในทางนิติศาสตร์เพื่อการปฏิรูปรัฐและสังคมในยุคมัมลู้กแห่งศตวรรษที่ 8 ฮิจเราะห์</p>
+      <p>ความแตกต่างระหว่างมุอีดุนนิอัมของอัซซุบกีย์ กับงานของอิบนุ ตัยมียะฮ์ เปรียบเสมือนความต่างระหว่างภาคปฏิบัติกับภาคทฤษฎี แม้ว่าผู้เขียนทั้งสองจะยืนอยู่บนจุดยืนร่วมกันคือ “ความเป็นอิสระของนักวิชาการจากอิทธิพลของชนชั้นปกครอง”</p>
+      <p>งานของอิบนุ ตัยมียะฮ์ ถูกเขียนขึ้นตามขนบของตำรานิติรัฐศาสตร์ ซึ่งมักกล่าวถึงหน้าที่ทางการเมืองในภาพรวมของรัฐ โดยไม่ได้ลงลึกถึงรายละเอียดของสังคมที่มีความซับซ้อนของสาธารณูปโภคและอาชีพต่างๆ มากนัก</p>
+      <p>ในทางตรงกันข้าม งานของตาญุดดีน อัซซุบกีย์ คือตำราเชิงประยุกต์ที่สืบสวนสาเหตุของความเบี่ยงเบนของรัฐทั้งในภาครัฐและเอกชน โดยเฝ้าระวังข้อบกพร่องในการปฏิบัติหน้าที่และปัญหาด้านการผลิต พร้อมทั้งนำเสนอวิสัยทัศน์และโปรแกรมเพื่อการแก้ไขเยียวยา</p>
+      <p>ดังนั้น หนังสือเล่มนี้จึงเป็นบทเรียนในวิชารัฐศาสตร์ภาคปฏิบัติและเชิงนโยบาย ในระดับเดียวกับที่บริษัทที่ปรึกษาในยุคปัจจุบันนำเสนอต่อผู้กำหนดนโยบาย ซึ่งมันมอบการอ่านเจาะลึกถึงธรรมชาติของสังคมมัมลู้กในอียิปต์ ชาม และฮิญาซ ผ่านการสำรวจ 113 อาชีพและตำแหน่งงาน ซึ่งเป็นเสาหลักของชีวิตสังคมในห้วงเวลานั้น โดยสามารถจำแนกออกเป็นกลุ่มข้าราชการบริหาร, กลุ่มนักวิชาการศาสนาและกลุ่มที่เกี่ยวข้องกับงานฝีมือ</p>
+      <p>อัซซุบกีย์ได้สื่อสารไปยังทุกภาคส่วนตั้งแต่สุลต่าน, อุปราช, ผู้ช่วย, แม่ทัพนายกอง ไปจนถึงบรรดาอุละมาอ์ในมัสยิด, พวกซูฟีในสำนักปฏิบัติธรรม ลามไปถึงผู้ประกอบวิชาชีพต่างๆ และแม้กระทั่งขอทานตามท้องถนน</p>
+      <p>ด้วยเหตุนี้ หนังสือเล่มนี้จึงเป็นขุมทรัพย์ข้อมูลมหาศาลสำหรับนักประวัติศาสตร์ นักสังคมวิทยา และผู้ที่สนใจระบบรัฐและสังคมในยุคนั้น โดยฉายภาพให้เห็นกลไกการทำงานของตำแหน่งผู้นำและฝ่ายบริหารของรัฐ เทียบเคียงกับภาคบริการในสังคม สิ่งสำคัญที่ต้องตระหนักคือ หนังสือเล่มนี้จัดอยู่ในหมวด “นิติรัฐศาสตร์เชิงประยุกต์” ซึ่งเป็นแขนงวิชาที่นักวิจัยมักมองข้าม</p>
+      <p>ผู้เขียนได้นำมโนทัศน์ทางจริยธรรมและการขัดเกลาจิตใจ คือเรื่องการขอบคุณ มาใช้เป็นเส้นด้ายร้อยเรียงองค์ประกอบต่างๆ ของระเบียบวิธีปฏิรูปการเมือง สังคม และเศรษฐกิจ แม้ว่าเรื่อง “การขอบคุณ” มักจะเป็นหัวข้อที่โด่งดังในหนังสือประเภทวรรณกรรมสอนใจหรือในวงการซูฟีมากกว่าก็ตาม</p>
+      <p>สิ่งที่อัซซุบกีย์เขียนเกี่ยวกับ “การขอบคุณ” ในบทนำเชิงทฤษฎี และในบทสรุปเกี่ยวกับของขวัญที่มาในรูปของบททดสอบนั้น เป็นการคัดลอกและดัดแปลงมาจากหนังสืออิห์ยาอ์ ของอัลเฆาะซาลีย์ (เสียชีวิต ฮ.ศ. 505 / ค.ศ. 1111) ซึ่งตัวอัลเฆาะซาลีย์เอง ตามทัศนะของอิบนุ ตัยมียะฮ์ ก็ได้รับอิทธิพลในการอธิบายเรื่องการขอบคุณมาจากปรมาจารย์ซูฟีผู้ยิ่งใหญ่อย่างอะบู ฏอลิบ อัลมักกีย์ (เสียชีวิต ฮ.ศ. 386 / ค.ศ. 997) ในหนังสือกูตุลกุลูบ (อาหารทางใจ)</p>
+      <p>แต่ความแปลกใหม่ในการจัดการเรื่องการขอบคุณพระเจ้าของอัซซุบกีย์ คือการที่ท่านใช้มันเป็นประตูสู่การสนทนาเพื่อซ่อมแซมความเป็นจริงทางสังคมนั่นเอง</p>
+
+      <h2 class="article-h2">มิติทางจิตวิญญาณและการเมือง การเล่นแร่แปรธาตุทางภาษา</h2>
+      <p>สิ่งที่น่าสังเกตคือ “การเลื่อนไหลทางความหมาย” ในการเคลื่อนที่ของมโนทัศน์ต่างๆดังที่อัซซุบกีย์ได้นำมาใช้ในการผนวกแนวคิดเรื่องการขอบคุณ จากการขัดเกลาจิตใจ เข้าสู่ประเด็นทางการเมืองและสังคมนั้น นับเป็นคุณลักษณะเด่นของยุคสมัยดังกล่าว</p>
+      <p>การปรากฏขึ้นของคำศัพท์ทางไวยากรณ์อย่าง “นาอิบ ฟาแอล” (ตัวแทนผู้กระทำ/กรรมวาจก) ในแวดวงการศึกษาภาษาอาหรับ โดยฝีมือของปรมาจารย์ไวยากรณ์อย่างอิบนุ มาลิก (เสียชีวิต ฮ.ศ. 672 / ค.ศ. 1271) ก็ถือเป็นการเลื่อนไหลทางความหมายอีกประการหนึ่ง ซึ่งคราวนี้เป็นการหยิบยืมคำศัพท์จากแวดวงการเมืองมาใช้ เพื่อให้สอดรับกับอำนาจที่พองตัวขึ้นเรื่อยๆของตำแหน่งนาอิบ อัซซุลฏอน (อุปราช/ตัวแทนสุลต่าน) ซึ่งเป็นตำแหน่งที่มอบให้แก่ผู้ปกครองนครดามัสกัส ในฐานะที่เป็นเจ้าเมืองเอกแห่งปีกตะวันออก (แคว้นชาม) ของจักรวรรดิมัมลู้ก</p>
+      <p>ทำนองเดียวกัน คำศัพท์อย่าง “อัซซุลฏอน อัลมุคตะศ็อร” (สุลต่านฉบับย่อ) ซึ่งใช้เรียกขาน “นาอิบ อัซซุลฏอน” (อุปราช) ผู้มีอำนาจล้นฟ้านั้น ก็เป็นศัพท์ที่พจนานุกรมทางการเมืองในยุคนั้นหยิบยืมมาจากแวดวงวิชาการ โดยเฉพาะวงการนิติศาสตร์ (ซึ่งนิยมใช้คำว่า “มุคตะศ็อร” เรียกหนังสือฉบับย่อ)</p>
+      <p>การขยายขอบเขตอำนาจของ “อุปราช” นี้เอง เป็นปัจจัยสำคัญที่ทำให้อัซซุบกีย์รวมถึงอิบนุ ตัยมียะฮ์ต้องอุทิศพื้นที่จำนวนมากในงานเขียนของพวกเขาเพื่อแจกแจงรายละเอียดเกี่ยวกับอำนาจหน้าที่ของตำแหน่งนี้ โดยเฉพาะเมื่อพิจารณาถึงข้อเท็จจริงที่ว่า สุลต่านมัมลู้กจำนวนมากขึ้นครองราชย์ในขณะที่ยังไม่บรรลุนิติภาวะ (ยังเป็นเด็ก) ทำให้อำนาจการบริหารจัดการตกอยู่ในมือของเหล่าอุปราช ซึ่งอัซซุบกีย์ได้สนับสนุนให้พวกเขาทำหน้าที่บริหารราชการแผ่นดินและดูแลทุกข์สุขของราษฎรแทนองค์สุลต่าน</p>
+      <p>อัซซุบกีย์เริ่มต้นหนังสือของท่านด้วย “คำถาม” ที่ถูกตั้งขึ้นโดย “ผู้ถาม” (ซึ่งอาจเป็นตัวละครสมมติ ตามธรรมเนียมการประพันธ์ของนักเขียนบางท่านเพื่อสร้างบริบทให้งานเขียน) โดยผู้ถามขอให้ท่าน (ในฐานะนักนิติศาสตร์และหัวหน้าผู้พิพากษา) ชี้แนะถึงหนทางสำหรับผู้ที่ถูกพรากความโปรดปราน ทั้งทางศาสนาและทางโลกไป หากเขาดำเนินตามหนทางนี้ สิ่งนั้นจะหวนคืนและกลับมาหาเขา</p>
+      <p>ท่านตอบว่า จำเป็นต้องทำ 3 ประการ 1.ต้องรู้สาเหตุที่แท้จริงที่ทำให้ความโปรดปรานนั้นหลุดลอยไป, 2.ต้องกลับเนื้อกลับตัว (เตาบะฮ์) จากบาปที่เป็นต้นเหตุแห่งการสูญเสียนั้น, 3.ต้องยอมรับในคุณประโยชน์ที่ซ่อนอยู่ในบททดสอบแห่งการสูญเสีย เพื่อทำใจให้ยอมรับ</p>
+      <p>คำตอบนี้ยังไม่เป็นที่พอใจแก่ผู้ถาม เขาจึงขอให้อัซซุบกีย์ “อธิบายขยายความให้ชัดเจนแต่กระชับ” ท่านจึงตัดสินใจเขียนหนังสือเล่มนี้ขึ้นเพื่อตอบคำถาม โดยจำกัดขอบเขตไว้เพียง “ความโปรดปรานทางโลก” (เพราะเป็นสิ่งที่ผู้ถามต้องการ)</p>
+      <p>ทว่า อัสซุบกีย์ตัดสินใจ “ยกระดับคำถาม” จากสถานการณ์ของปัจเจกบุคคล ไปสู่สถานะของรัฐและสังคม ท่านขยายความหมายของคำถามจาก “ทำอย่างไรปัจเจกบุคคลจะได้รับผลประโยชน์ที่สูญเสียไปกลับคืนมา?” ไปสู่ “ทำอย่างไรให้ประชาชาติ - พร้อมด้วยระบบระเบียบทั้งมวล - และผู้ปกครอง จะได้รับความโปรดปรานและอำนาจวาสนาที่สูญเสียไป อันเนื่องมาจากการฉ้อฉลทางอำนาจและความเสื่อมทรามทางสังคมกลับคืนมา?”</p>
+      <p>อัซซุบกีย์ใช้มโนทัศน์เรื่อง “การขอบคุณ” ในที่นี้เพื่อบรรลุวัตถุประสงค์หลายประการ ประการสำคัญที่สุดคือ การทำให้การปฏิบัติหน้าที่และการประกอบสัมมาอาชีพในรูปแบบที่ดีที่สุด กลายเป็น “ศาสนกิจ” (อิบาดะฮ์) ที่ใช้เข้าหาอัลลอฮ์ ในฐานะที่เป็นการ “ขอบคุณ” ต่อความโปรดปรานที่พระองค์ทรงมอบให้แก่เจ้าของตำแหน่งหรือช่างฝีมือนั้นๆ</p>
+      <p>แนวคิดนี้ช่วยยกระดับความเป็นมืออาชีพและประสิทธิภาพการผลิตผ่านการทำงานอย่างประณีตบรรจง ซึ่งสอดคล้องกับขนบธรรมเนียมในยุคนั้น ที่วิชาชีพและงานฝีมือต่างๆ มีการถ่ายทอดความรู้ผ่านสายรายงานจากครูสู่ศิษย์ เฉกเช่นเดียวกับการถ่ายทอดวิชาการทางศาสนา</p>
+
+      <h2 class="article-h2">มุมมองซูฟี: ศาสตร์แห่งการขอบคุณ</h2>
+      <p>ทำไมอัซซุบกีย์ถึงเลือกใช้คำว่า “การขอบคุณ” แทนที่จะเป็น “การสรรเสริญ?”</p>
+      <p>คำตอบคือ: การสรรเสริญในนิยามที่ลึกซึ้งที่สุด เป็นสภาวะทางใจที่มนุษย์พึงมีตลอดเวลา ไม่ว่าจะอยู่ในยามสุขหรือยามทุกข์ ส่วนการขอบคุณนั้น จะเกิดขึ้นก็ต่อเมื่อได้รับความโปรดปรานเท่านั้น</p>
+      <p>ยิ่งไปกว่านั้น อัลกุรอานได้นิยามการขอบคุณว่า เป็นการกระทำดังที่อัลลอฮ์ตรัสว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اعْملوا آلَ داودَ شُكراً</blockquote>
+      <p>{จงทำงานเถิด วงศ์วานของดาวูดเอ๋ย เพื่อเป็นการขอบคุณ }</p>
+      <p>ดังนั้น การขอบคุณจึงเป็นปฏิกิริยาตอบสนองที่จำเป็นต่อความโปรดปรานหรือของขวัญใดๆ ที่มนุษย์ได้รับ และเป็นแนวคิดเชิงบรรทัดฐานที่สามารถสัมผัสและสังเกตเห็นได้เป็นรูปธรรม</p>
+      <p>เมื่อมีผู้ถามถึงสาเหตุที่ความโปรดปรานทางศาสนาหรือทางโลก (เช่น ตำแหน่งงาน, อำนาจปกครอง, ทรัพย์สิน หรือความมั่นคง) หลุดลอยไป คำตอบที่อัซซุบกีย์ให้คือ</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إخلالك بالقيام بما يجب عليك من حقوقها وهو الشكر، فإن كل نعمة لا تشكر جديرة بالزوال</blockquote>
+      <p class="ar-translation">“สาเหตุคือความบกพร่องของท่านในการปฏิบัติหน้าที่อันพึงกระทำต่อสิ่งนั้น ซึ่งก็คือ การขอบคุณ เพราะความโปรดปรานใดที่ปราศจากการขอบคุณ ย่อมสมควรแก่การสูญสลาย”</p>
+      <p>ข้อบกพร่องที่อัซซุบกีย์ชี้ให้เห็น คือความเข้าใจผิดของผู้คนที่มักเบี่ยงเบนความสนใจไปสู่การทำความดีในรูปแบบสมัครใจ (นะวาฟิล) เช่น การถือศีลอด, การบริจาคทาน หรือการทำฮัจญ์ ในขณะที่ละเลยหน้าที่หลักในวิชาชีพของตน โดยเข้าใจไปเองว่าการทำความดีเหล่านั้นเป็นการขอบคุณต่อตำแหน่งหน้าที่ในรูปแบบที่ผิดเพี้ยนไปจากวัตถุประสงค์ที่แท้จริง</p>
+      <p>ท่านยกตัวอย่างหนึ่งว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لو تصدّقت بدرهمين شكرا للَّه تعالى على نعمة الأذنين، وهتكتَ كل قبيح سمعته، وأصغيت إلى كل حرام وَعَيته؛ فلستَ من الشاكرين</blockquote>
+      <p class="ar-translation">“หากท่านบริจาคเงิน 2 ดิรฮัม เพื่อขอบคุณอัลลอฮ์สำหรับหูที่ได้ยิน แต่ในขณะเดียวกันท่านกลับเปิดเผยเรื่องน่าละอายทุกอย่างที่ได้ยิน และเงี่ยหูฟังทุกเรื่องต้องห้ามที่ผ่านเข้ามา... ท่านย่อมไม่ใช่ผู้กตัญญู (ผู้ขอบคุณ) แต่อย่างใด”</p>
+      <p>ในส่วนของการขอบคุณเชิงภาคปฏิบัติสำหรับผู้ปกครองหรือสุลต่านนั้น อัซซุบกีย์กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا ولَّاك اللَّه تعالى أمرا على الخلق فعليك البحث عن الرعية، والعدل بينهم في القضية، والحكم فيهم بالسويّة، ومجانبة الهوى والميل، ولو أنك تركت الناس هملًا يأكل بعضهم بعضا وجلست في دارك تصلي وتبكي على ذنوبك لكنت مسيئا على ربك…، فمَلِكُك لم يطلب منك أن تتهجد بالليل ولا أن تصوم الدهر، وإنما يطلب منك ما ذكرناه. فإن ضممت إليه أعمالا أخرى صالحة كان ذلك نورا على نور، وإلا فهذا هو شكر نعمة الولاية التي بها تدوم</blockquote>
+      <p class="ar-translation">“เมื่ออัลลอฮ์ทรงมอบอำนาจให้ท่านปกครองฝูงชน หน้าที่ของท่านคือการสอดส่องดูแลทุกข์สุขของราษฎร อำนวยความยุติธรรมในการตัดสิน พิพากษาด้วยความเสมอภาค และหลีกเลี่ยงอคติและความลำเอียง หากท่านปล่อยปละละเลยผู้คนให้กัดกินกันเอง แล้วไปนั่งสวดมนต์ร้องไห้คร่ำครวญถึงบาปของตนอยู่ในบ้าน ท่านย่อมเป็นผู้กระทำผิดต่อพระเจ้าของท่าน...พระราชาของท่าน (อัลลอฮ์) มิได้ทรงเรียกร้องให้ท่านละหมาดตะฮัจญุดในยามค่ำคืน หรือถือศีลอดตลอดปี แต่พระองค์ทรงเรียกร้องสิ่งที่ข้าพเจ้าได้กล่าวไปแล้ว หากท่านทำสิ่งเหล่านั้นควบคู่ไปกับการงานที่ดีอื่นๆ ย่อมเป็น ‘แสงสว่างบนแสงสว่าง’ (ดียิ่งขึ้นไปอีก) แต่หากไม่แล้ว สิ่งที่ข้าพเจ้ากล่าวมานั่นแหละคือแก่นแท้ของการขอบคุณต่ออำนาจวาสนา ซึ่งจะทำให้มันยั่งยืนสืบไป”</p>
+      <p>ในความเป็นจริง อัซซุบกีย์กำลังพยายามแก้ไข “ความย้อนแย้งอย่างรุนแรง” ที่แพร่ระบาดในสังคมมัมลู้ก ซึ่งเหล่าผู้ปกครองมักเชื่อผิดๆว่า การสร้างมัสยิด, โรงเรียนสอนศาสนา, สำนักซูฟี, การเลี้ยงอาหารคนยากจน และการสร้างโรงทานน้ำดื่ม จะสามารถลบล้างบาปจากการนองเลือด การยักยอกทรัพย์สิน และการกดขี่ข่มเหงผู้คนได้</p>
+      <p>เป้าหมายสูงสุดของ “การขอบคุณ” ในทัศนะของอัซซุบกีย์ คือการสร้าง “มนุษย์ผู้เป็นมืออาชีพและมีอิสระ” ผู้ซึ่งปฏิบัติหน้าที่ของตนอย่างสมบูรณ์แบบ โดยไม่ตกเป็นทาสของตำแหน่งงาน หรือถูกครอบงำโดยระบบราชการ</p>
+      <p>แนวคิดนี้มอบพลังให้เขาสามารถ “ปฏิเสธ” อำนาจใดๆก็ตามที่พยายามบิดเบือนเขาออกจากหน้าที่ เป้าหมาย และจรรยาบรรณวิชาชีพ เพราะสำหรับอัซซุบกีย์แล้ว “ตำแหน่งงานไม่ใช่สัญญาทาสกับรัฐ แต่เป็นพันธสัญญาแห่งการเป็นตัวแทนจากอัลลอฮ์”</p>
+      <p>อัซซุบกีย์มองว่า ไม่ว่าอำนาจรัฐที่แต่งตั้งท่านมาจะมีวาระซ่อนเร้นใดก็ตาม ท้ายที่สุดแล้วพวกเขาก็มีเป้าหมายเพื่อผลประโยชน์ของตนเอง เพราะท่านมีประโยชน์ต่อพวกเขาในด้านใดด้านหนึ่ง</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يَطلب [مَنْ عيّنك] نفعَ نفسه بنفعك، ويتخذك وسيلة إلى نعمة أخرى يرجوها لنفسه، ولذلك فإن السلطان لو لم يكن له غرض في الإِعطاء لما أعطاك</blockquote>
+      <p class="ar-translation">“ผู้ที่แต่งตั้งท่าน ย่อมแสวงหาผลประโยชน์ให้ตนเองผ่านประโยชน์จากท่าน และใช้ท่านเป็นเครื่องมือไปสู่ลาภยศอื่นที่เขาปรารถนา...หากสุลต่านไม่มีผลประโยชน์แอบแฝงในการมอบตำแหน่ง เขาก็คงไม่มอบให้ท่านแต่แรก”</p>
+      <p>แน่นอนว่าแนวคิดนี้ไม่ได้ปฏิเสธความกตัญญูต่อผู้มีพระคุณ (มนุษย์) แต่เป็นการวางตำแหน่งแห่งที่ของความกตัญญูนั้นให้อยู่บนฐานความเข้าใจที่ว่า มนุษย์เหล่านั้นเป็นเพียง “สื่อกลาง” ที่นำพระประสงค์ของอัลลอฮ์มาสู่เรา ส่วน “การขอบคุณที่แท้จริง” อันประกอบด้วยการยอมรับในบุญคุณด้วยความนอบน้อมถ่อมตนอย่างที่สุดนั้น ย่อมสงวนไว้แด่อัลลอฮ์แต่เพียงผู้เดียว</p>
+      <p>หนังสือเล่มนี้ (มุอีดุนนิอัมฯ) โดดเด่นด้วยความกล้าหาญในการนำเสนอความคิด และความเด็ดเดี่ยวในการวิพากษ์วิจารณ์การเมืองและสังคม ซึ่งคุณธรรมข้อนี้เป็นลักษณะร่วมของยุคมัมลู้ก ยุคที่งานเขียนและบทกวีวิพากษ์วิจารณ์แพร่หลายอย่างมาก ตัวอย่างที่โด่งดังคือบทกวีการเมืองของชัรฟุดดีน อัลบูศิรีย์ (เสียชีวิต ฮ.ศ. 696 / ค.ศ. 1297) เจ้าของบทกวีสรรเสริญท่านศาสนทูตอย่างอัลบุรดะฮ์ รวมถึงงานเขียนที่ใช้ถ้อยคำรุนแรงในการตักเตือนผู้ปกครอง ซึ่งหนังสือของอัซซุบกีย์เล่มนี้ถือเป็นแบบอย่างชั้นเลิศทั้งในแง่ของลีลาการเขียนและระดับความตรงไปตรงมาของการวิพากษ์</p>
+      <p>หนึ่งในประเด็นที่อัซซุบกีย์บันทึกไว้อย่างชัดเจนคือ การชี้ให้เห็นถึงความเข้าใจผิดของผู้ปกครองที่ถือเป็นการเนรคุณต่อตำแหน่งผู้นำประชาชาติมุสลิม คือการที่สุลต่านคิดว่า การมีอำนาจหมายถึงการเป็นประธานที่ “กินอิ่ม นอนหลับ และพักผ่อนสบายใจ” ทั้งที่ความจริงแล้ว เขาได้รับมอบหมายให้ดูแลกิจการของมุสลิมเพื่อพิทักษ์ศาสนาและเชิดชูสัจธรรม อัซซุบกีย์ย้ำว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يفرق [السلطان] الإقطاعات على مماليك اصطفاها وزينها بأنواع الملابس، والزراكش المحرمة، وافتخر بركوبها بين يديه، وترك الذين ينفعون الإسلام جياعا في بيوتهم</blockquote>
+      <p class="ar-translation">“ความเป็นสุลต่านมิใช่การแจกจ่ายที่ดินหรือคนละครึ่งให้กับทาสมัมลู้กคนโปรด หรือประดับประดาพวกเขาด้วยอาภรณ์หรูหราและลายปักดิ้นทองที่ต้องห้าม แล้วภูมิใจที่ได้ขี่ม้าอวดบารมีต่อหน้าพวกเขา ในขณะที่ทอดทิ้งผู้ที่ทำคุณประโยชน์ให้อิสลามให้หิวโหยอยู่ในบ้าน”</p>
+      <p>นอกจากนี้ ท่านยังพยายามทำลายธรรมเนียมปฏิบัติแบบราชสำนักเปอร์เซียที่แพร่หลายในยุคนั้น คือการจูบพื้นดินต่อหน้าสุลต่าน โดยระบุอย่างรุนแรงว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">من عظائم الذنوب، ونخشى أن يكون كفرا</blockquote>
+      <p class="ar-translation">“เป็นหนึ่งในบาปมหันต์ และเราเกรงว่ามันอาจถึงขั้นเป็นการปฏิเสธศรัทธา”</p>
+      <p>อัซซุบกีย์ยังวิพากษ์วิจารณ์อย่างเผ็ดร้อนต่อพฤติกรรมความฟุ่มเฟือยในการสร้างมัสยิดขนาดใหญ่ ซึ่งเป็นค่านิยมของยุคมัมลู้ก โดยเฉพาะมัสยิดที่สร้างขึ้นจากเงินภาษีขูดรีดและการปล้นชิงทรัพย์สินราษฎร ท่านกล่าวตักเตือนผู้ปกครองว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">تريد أن تعمر الجوامع بأموال الرعايا، ليقال: هذا جامع فلان؛ فلا والله لن يتقبله الله تعالى أبدا، وإن الله سبحانه طيب لا يقبل إلا طيبا</blockquote>
+      <p class="ar-translation">“ท่านปรารถนาจะบูรณะมัสยิดด้วยทรัพย์สินของราษฎร เพื่อให้คนกล่าวขานว่า ‘นี่คือมัสยิดของคนนั้นคนนี้’.. ขอสาบานต่ออัลลอฮ์ พระองค์จะไม่ทรงรับมันไว้เด็ดขาด เพราะแท้จริงอัลลอฮ์ทรงบริสุทธิ์ และพระองค์จะไม่ทรงรับสิ่งใดเว้นแต่สิ่งที่บริสุทธิ์เท่านั้น”</p>
+      <p>อิบนุ อิยาส (เสียชีวิต ฮ.ศ. 928 / ค.ศ. 1522) ได้กล่าวถึงพฤติกรรมเช่นนี้และท่าทีของนักวิชาการที่มีต่อมัสยิดบางแห่งที่สร้างด้วยเงินสกปรกเพื่อหลอกลวงประชาชน ในหนังสือบะดาอิอ์ อัซซุฮูร ท่านเล่าว่า ชาวอียิปต์ผู้มีอารมณ์ขันและแสบสันต์ ได้ตั้งฉายาให้โรงเรียน/มัสยิดที่สร้างโดยสุลต่าน กอนศูฮ์ อัลเฆารีย์ (ด้วยเงินภาษีอธรรม) ว่า “มัสยิดอัลฮะรอม” (ซึ่งเป็นการเล่นคำแทนที่จะหมายถึง มัสยิดต้องห้าม/ศักดิ์สิทธิ์เหมือนที่มักกะฮ์ กลับหมายถึง มัสยิดที่สร้างจากเงินฮะรอม/เงินบาป)</p>
+      <p>อัซซุบกีย์ยังไม่ละเว้นที่จะวิจารณ์พฤติกรรมของชนชั้นนำในสังคม ที่มุ่งมั่นละหมาดเพื่อขอบคุณอัลลอฮ์ที่ทรงทำให้เขามีอำนาจวาสนาและมีวาจาสิทธิ์ต่อหน้าผู้ปกครอง แต่กลับปล่อยให้ผู้ถูกกดขี่ต้องจมปลักอยู่กับความอยุติธรรม โดยท่านยืนยันว่า “การละหมาดของเขาจะเป็นหายนะแก่ตัวเขาเอง!”</p>
+      <p>ผู้ที่พินิจพิเคราะห์รายละเอียดการวิพากษ์วิจารณ์เหล่านี้ จะพบว่ามันสะท้อนภาพความเป็นจริงทางการเมืองที่อัซซุบกีย์ดำรงอยู่ ท่านพยายามสรุปปัญหาเชิงโครงสร้างอำนาจและความย้อนแย้งทางค่านิยมที่เกิดขึ้น โดยมองว่าพฤติกรรมเหล่านี้ขัดแย้งกับพันธกิจของตำแหน่งหน้าที่ และเป็นตัวเร่งให้อำนาจหลุดลอยไปจากเจ้าของเร็วขึ้น</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وإذا استمرأ السلطان هذه السلوكيات ثم سلبه الله النعمة أخذ يبكي ويقول: ما بال نعمتي زالت وأيامي قصرت؟! فيقال له: يا أحمق، أما علمت السبب؟! أَوَلستَ الجاني على نفسك</blockquote>
+      <p class="ar-translation">“และเมื่อสุลต่านยังคงดื้อดึงในพฤติกรรมเหล่านี้ จนกระทั่งอัลลอฮ์ทรงพรากอำนาจวาสนาไป เขาก็จะเริ่มร้องไห้คร่ำครวญว่า เกิดอะไรขึ้นกับข้า? ทำไมวาสนาของข้าจึงดับสูญและวันเวลาของข้าจึงสั้นนัก?!... เมื่อนั้นจะมีผู้กล่าวแก่เขาว่า: ไอ้โง่เอ๋ย! เจ้าไม่รู้สาเหตุจริงๆรึ?! ก็เจ้าไม่ใช่หรือที่เป็นคนทำลายตัวเอง?!”</p>
+      <p>หลังจากที่อัซซุบกีย์ได้วินิจฉัยถึงเครื่องมือที่นำไปสู่การเสื่อมสลายของอำนาจแล้ว ท่านได้ขยายความว่า หนึ่งในนัยยะสำคัญของการ “ขอบคุณต่ออำนาจวาสนา” คือการที่สุลต่านต้องตระหนักว่า “พระองค์และราษฎรนั้นเท่าเทียมกัน”</p>
+      <p>จากนั้น ท่านได้เริ่มแจกแจงถึงพฤติกรรมเชิงปฏิบัติที่สุลต่านพึงกระทำเพื่อแสดงออกถึงการขอบคุณ นั่นคือ การตรวจสอบการจัดสรรที่ดินและมอบมันให้ถูกที่ถูกทาง การเลือกใช้บุคลากรที่สร้างคุณประโยชน์แก่ชาวมุสลิม รวมถึงหน้าที่ในการใส่ใจดูแลนักวิชาการ คนยากจน และผู้มีสิทธิ์ได้รับความช่วยเหลือ โดยจัดวางพวกเขาไว้ในตำแหน่งและฐานะที่เหมาะสม</p>
+      <p>ต่อมา ท่านได้กล่าวถึงประเด็นสำคัญที่เกิดขึ้นในยุคนั้น ซึ่งเต็มไปด้วยบทลงโทษที่ขัดต่อหลักการศาสนา ภายใต้ข้ออ้างที่เรียกว่า “นโยบายความมั่นคง” (อาทิ การตอกตะปูตรึงร่าง, การถลกหนัง, การเสียบประจาน และการตัดลำตัว) ซึ่งพวกมัมลู้กบางกลุ่มใช้เป็นเครื่องมือสร้างความหวาดกลัวเพื่อควบคุมความมั่นคง</p>
+      <p>แต่สิ่งที่น่าตกใจคือ อัซซุบกีย์สังเกตเห็นกระแสวิพากษ์วิจารณ์เจ้าหน้าที่ที่ยึดมั่นในหลักชะรีอะฮ์ โดยมองว่าบทลงโทษตามศาสนานั้นอ่อนแอและหย่อนยานเมื่อเทียบกับระบบความหวาดกลัวที่มัมลู้กใช้ ท่านเตือนสติว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فإذا رأيت من يعيب على نائب السلطنة انقياده للشرع وينسبه بذلك إلى اللين والرخاوة؛ فاعلم أنه يُخشى عليه أن يكون ممن طُبع على قلبه</blockquote>
+      <p class="ar-translation">“หากท่านเห็นผู้ใดตำหนิอุปราชที่ยอมจำนนต่อหลักการศาสนา โดยกล่าวหาว่าเขาอ่อนแอและเหยาะแหยะ...จงพึงรู้เถิดว่า คนผู้นั้นสุ่มเสี่ยงที่จะเป็นผู้ที่หัวใจถูกปิดตาย (จากสัจธรรม)”</p>
+      <p>ข้อสังเกตของอัซซุบกีย์ชี้ให้เห็นถึงปรากฏการณ์สำคัญทางประวัติศาสตร์ นั่นคือพวกมัมลู้กเป็นกลุ่มแรกที่สถาปนาระบบตุลาการแบบทวิลักษณะ โดยแยกการตัดสินคดีตามกฎหมายที่มนุษย์บัญญัติออกจากระบบตุลาการตามหลักชะรีอะฮ์ ซึ่งถือเป็นการกระทำที่มาก่อนยุคอาณานิคมตะวันตกหลายศตวรรษ ดังที่อัลมักรีซีย์ได้บันทึกไว้ในอัลมะวาอิซ วัลอิอ์ติบารว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فإن المماليك فوضوا لقاضي القضاة كل ما يتعلق بالأمور الدينية.. وجعلوا إليه النظر في الأقضية الشرعية..، واحتاجوا في ذات أنفسهم إلى الرجوع لعادة جنكزخان والاقتداء بحكم الياسة، فلذلك نصبوا الحاجب ليقضي بينهم فيما اختلفوا فيه من عوايدهم.. على مقتضى ما في الياسة</blockquote>
+      <p class="ar-translation">“พวกมัมลู้กมอบอำนาจทางศาสนาและการตัดสินคดีตามบทบัญญัติให้แก่ประธานผู้พิพากษา... แต่สำหรับเรื่องราวข้อพิพาทระหว่างพวกเขากันเอง พวกเขาเลือกที่จะหวนกลับไปใช้ธรรมเนียมของเจงกิสข่าน และยึดตามกฎหมายยัสสะ ด้วยเหตุนี้ พวกเขาจึงแต่งตั้งเจ้าหน้าที่ตำแหน่งฮาญิบ (สมุหราชองครักษ์/ตุลาการฝ่ายทหาร) เพื่อตัดสินคดีความตามข้อกำหนดของกฎหมายยัสสะ”</p>
+      <p>แนวคิดสำคัญอีกประการที่ปรากฏในหนังสือ คือการวิพากษ์วิจารณ์สถาบันกองทัพมัมลู้ก ซึ่งถือเป็นชนชั้นปกครองและอภิสิทธิ์ชนในยุคนั้น อัซซุบกีย์ประกาศห้ามการเกณฑ์ทหารจากคนยากจนและผู้ไร้ความสามารถที่ไม่มีเงินจ่ายค่าชดเชย และท่านยังประณามนโยบายการเกณฑ์ชาวนามาใช้แรงงานเยี่ยงทาสในที่ดินของเหล่าแม่ทัพนายกอง โดยประกาศก้องว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الفلاح حر لا يدَ لآدمي عليه، وهو أمير نفسه</blockquote>
+      <p class="ar-translation">“ชาวนาคือเสรีชน ไม่มีมนุษย์หน้าไหนมีสิทธิเหนือเขา เขาคือเจ้านายของตัวเขาเอง”</p>
+      <p>นอกจากนี้ ท่านยังปฏิเสธแนวคิดที่จะให้ชาวนาต้องรับราชการทหารเกินกว่า 3 ปี และถือว่าสิ่งนี้เป็นความอัปลักษณ์ของกฎระเบียบกองทัพ ท่านต่อต้านการยกกฎหมายทหารขึ้นมาอยู่เหนือบทบัญญัติศาสนา โดยกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">من قبائحهم أنهم إذا اعتمدوا شيئا مما جرت به عوائدهم القبيحة؛ يقولون: هذا شرع الديوان! والديوان لا شرع له، بل الشرع لله تعالى ولرسوله صلى الله عليه وسلم. فهذا الكلام ينتهي إلى الكفر؛ وإن لم تنشرح النفس لتكفير قائله فلا أقل من ضربه بالسياط</blockquote>
+      <p class="ar-translation">“หนึ่งในความเลวร้ายของพวกทหารคือ เมื่อพวกเขากระทำตามธรรมเนียมปฏิบัติที่ชั่วช้า พวกเขากลับอ้างว่า นี่คือบทบัญญัติของกองทัพ... แต่กองทัพไม่มีบทบัญญัติใดๆ ทั้งสิ้น บทบัญญัติเป็นสิทธิขาดของอัลลอฮ์และศาสนทูตของพระองค์เท่านั้น คำพูดเช่นนี้อาจนำไปสู่การปฏิเสธศรัทธาได้ และแม้หากเราจะไม่ตัดสินว่าผู้พูดตกศาสนา อย่างน้อยที่สุดเขาก็สมควรถูกเฆี่ยนด้วยแส้”</p>
+
+      <h2 class="article-h2">พลเรือนและทหาร</h2>
+      <p>สิ่งที่น่าทึ่งในหนังสือเล่มนี้คือ หน้ากระดาษจำนวนมากที่อัซซุบกีย์อุทิศให้กับการวิเคราะห์ “ความสัมพันธ์ระหว่างพลเรือนและทหาร” ในยุคนั้น ด้วยความแม่นยำและลุ่มลึกในระดับที่แทบจะทาบทับกับปัญหาระหว่างกองทัพและชีวิตพลเรือนในยุคสมัยใหม่ได้อย่างน่าประหลาด</p>
+      <p>อัซซุบกีย์ได้จับสังเกตความรู้สึกดูแคลนที่แฝงอยู่ในพฤติกรรมของฝ่ายทหารที่มีต่อชนชั้นนำทางวิชาการและวัฒนธรรม (อุละมาอ์และปัญญาชน) รวมถึงการบีบคั้นทางเศรษฐกิจต่อกลุ่มคนเหล่านี้ ท่านกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">من قبائح كثير من الأمراء أنهم لا يوقرون أهل العلم، ولا يعرفون لهم حقوقهم</blockquote>
+      <p class="ar-translation">“หนึ่งในความน่ารังเกียจของเหล่าแม่ทัพนายกองจำนวนมาก คือการที่พวกเขาไม่ให้เกียรติผู้มีความรู้ และไม่ตระหนักถึงสิทธิที่พึงมีของปราชญ์เหล่านั้น”</p>
+      <p>ท่านยังได้กล่าวถึงความเสื่อมโทรมทางการเงินที่กัดกินสถาบันกองทัพในยุคนั้น โดยชี้ว่าบุคลากรในกองทัพขาดแม้กระทั่งจริยธรรมแบบโจรคุณธรรม อัซซุบกีย์เสนอความเห็นว่า ทองคำที่ใช้ปักประดับเครื่องแบบและเหรียญตราอันหรูหราของพวกเขานั้น หากนำมาใส่ไว้ในคลังหลวงและให้ชาวมุสลิมได้หมุนเวียนใช้ประโยชน์ สินค้าก็จะราคาถูกลง และทรัพย์สินก็จะงอกเงย</p>
+      <p>การเปรยถึงการยึดทรัพย์สินทหารมาเป็นของรัฐนี้ เป็นการสืบสานเจตนารมณ์และรายละเอียดจากวีรกรรมของท่านอิซซุดดีน บิน อับดุสสะลาม เมื่อครั้งที่ท่านปฏิเสธการเก็บภาษีจากประชาชนในช่วงเตรียมการสู้รบที่อัยน์ ญาลูต โดยท่านยืนกรานให้ยึดทรัพย์สินและประมูลขายสมบัติของเหล่าแม่ทัพมัมลู้ก (เช่น อัซซอฮิร ไบบัรส์ และไซฟุดดีน กุฏุซ) มาเป็นทุนรบเสียก่อน</p>
+      <p>ในส่วนที่กล่าวถึงแวดวงวิชาการ อัซซุบกีย์ได้จำแนกลาภและลวงที่ครอบงำชีวิตนักปราชญ์ โดยระบุถึงหน้าที่หลัก 3 ประการที่นักวิชาการต้องกระทำ ได้แก่ การจัดการศึกษา, การวินิจฉัยปัญหาศาสนา (ฟัตวา) และการให้คำแนะนำแก่สาธารณชน พร้อมเน้นย้ำว่านักนิติศาสตร์ต้องปลดปล่อยตนเองให้เป็นอิสระจากอำนาจของทางโลกและกับดักของมัน</p>
+      <p>อัซซุบกีย์มีความเห็นที่น่าสนใจว่า ความรู้และสติปัญญาไม่ใช่กุญแจสู่ความร่ำรวย ในทางกลับกัน เส้นทางแห่งความเขลาอาจเป็นทางลัดที่รวดเร็วและแน่นอนกว่าสำหรับผู้ที่ต้องการความมั่งคั่งผ่านตำแหน่งผู้พิพากษา</p>
+      <p>ด้วยเหตุนี้ ท่านจึงแนะนำ (ด้วยความประชดประชัน) ให้บรรดาผู้แสวงหาลาภยศเหล่านี้ ไปสมัครเป็นทหารเสียดีกว่า เพราะมันตอบโจทย์ความทะเยอทะยานทางโลกของพวกเขาได้ตรงจุดและคุ้มค่ากว่าการมาหากินกับศาสนา!</p>
+      <p>ท่านยังจับตาดูการซื้อขายตำแหน่งผู้พิพากษา โดยชี้ว่าสิ่งนี้ทำให้คำตัดสินทางศาสนาของพวกเขาเป็นโมฆะ พร้อมทั้งหักล้างข้ออ้างของพวกที่บอกว่า “ข้าถูกบังคับให้รับตำแหน่ง” โดยท่านยืนยันว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لم أرى مَن أكرِه على القضاء الإكراه الحقيقي..، فقبحها الله تعالى من طائفة</blockquote>
+      <p class="ar-translation">“ข้าไม่เคยเห็นใครที่ถูกบังคับให้เป็นผู้พิพากษาอย่างแท้จริงเลย (มีแต่วิ่งเต้นอยากจะเป็น)... ขออัลลอฮ์ทรงทำให้คนกลุ่มนี้อัปลักษณ์เถิด”</p>
+      <p>จากนั้น ท่านได้เตือนถึงโรคระบาดทางวิชาการที่แพร่หลายในยุคนั้น นั่นคือ “ความคลั่งไคล้ในสังกัดสำนักคิด” โดยกล่าวตักเตือนเหล่านักนิติศาสตร์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما حملكم الناس على مذهب واحد فهو الذي لا يقبله الله منكم، ولا يحملكم عليه إلا محض التعصب والتحاسد. قبح الله مثل هذا الفقيه</blockquote>
+      <p class="ar-translation">“ส่วนการที่พวกท่านบีบบังคับผู้คนให้ยึดตามสำนักคิดเดียว คือสิ่งที่อัลลอฮ์จะไม่ทรงตอบรับจากพวกท่าน มันไม่ได้เกิดจากอะไรเลยนอกเสียจากความคลั่งไคล้และความอิจฉาริษยาล้วนๆ... ขออัลลอฮ์ทรงทำให้อัปลักษณ์เถิด นักนิติศาสตร์เยี่ยงนี้”</p>
+
+      <h2 class="article-h2">ทัศนะของอิบนุ คอลดูน มุมมองเชิงอารยธรรม</h2>
+      <p>แม้นว่าอิบนุ คอลดูนจะได้ประพันธ์ผลงานชิ้นเอกอย่างอัลมุก็อดดิมะฮ์ และหนังสือประวัติศาสตร์อย่างกิตาบ อัลอิบารเสร็จสิ้นก่อนที่ท่านจะเดินทางมาพำนักถาวรในอียิปต์เมื่อปี ฮ.ศ. 784 (ค.ศ. 1382) ก็ตาม (แม้ภายหลังท่านจะเพิ่มเติมและขัดเกลาเนื้อหาอีกมากในขณะอยู่ที่นั่น) ทว่าท่านก็ได้อุทิศบทหนึ่งในหนังสือประวัติศาสตร์ของท่าน โดยจั่วหัวข้อว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الخبر عن دولة الترك القائمين بالدولة العباسية بمصر والشام من بعد بني أيوب ولهذا العهد ومبادي أمورهم وتصاريف أحوالهم</blockquote>
+      <p class="ar-translation">“เรื่องราวเกี่ยวกับรัฐของพวกเติร์ก (มัมลู้ก) ผู้ค้ำจุนราชวงศ์อับบาสิยะฮ์ในอียิปต์และชาม ต่อจากราชวงศ์อัยยูบีย์ จวบจนยุคสมัยนี้ ว่าด้วยจุดเริ่มต้นและการผันแปรของพวกเขา”</p>
+      <p>ในบทนี้ นักประวัติศาสตร์ของเราได้พรรณนาถึงการไต่เต้าทางสังคมของชาวเติร์กในโลกอิสลาม เริ่มต้นจากการเป็นแรงงานฝีมือและผู้ประกอบวิชาชีพ ก้าวเข้าสู่กองทัพในฐานะนักรบ เข้าสู่ระบบราชการในฐานะผู้บริหารและอาลักษณ์ผู้มีการศึกษา จนกระทั่งก้าวขึ้นสู่จุดสูงสุดแห่งอำนาจทางการทหารและการเมืองในฐานะแม่ทัพและสุลต่าน โดยเฉพาะอย่างยิ่งในอียิปต์ ภายหลังการล่มสลายในทางปฏิบัติของราชวงศ์อัยยูบีย์ ด้วยการสิ้นพระชนม์ของกษัตริย์ตูรอน ชาห์ ในปี ฮ.ศ. 648 (ค.ศ. 1250) และการขึ้นสู่อำนาจของเหล่ามัมลู้ก เริ่มต้นจากพระนางชะญัร อัดดุร (เสียชีวิต ฮ.ศ. 655 / ค.ศ. 1257)</p>
+      <p>อาจเป็นเพราะสถานะของอิบนุ คอลดูนในอียิปต์ที่เป็นเสมือนอาคันตุกะผู้ลี้ภัย และความต้องการความปลอดภัย ทำให้ท่านเลือกใช้วาจาที่นุ่มนวลและรวบรัดเมื่อกล่าวถึงพวกมัมลู้ก ท่านมองว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">من لطف الله سبحانه أن تدارك الإيمان بإحياء رمقه، وتلافى شمل المسلمين بالديار المصرية بحفظ نظامه وحماية سياجه، بأن بعث لهم من هذه الطائفة التركية وقبائلها الغزيرة المتوافرة أمراء حامية وأنصارا متوافية</blockquote>
+      <p class="ar-translation">“เป็นความเมตตาของอัลลอฮ์ (ซ.บ.) ที่ทรงกอบกู้ศรัทธาที่กำลังร่อแร่ และรวบรวมเอกภาพของมุสลิมในแผ่นดินอียิปต์ ด้วยการส่งชนชาติเติร์กกลุ่มนี้และเผ่าต่างๆ ของพวกเขา มาเป็นแม่ทัพผู้ปกป้องและผู้ช่วยเหลือที่เข้มแข็ง”</p>
+      <p>พร้อมทั้งยืนยันว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لملوك الترك بمصر… الفضل والمزية بما خصهم الله من ضخامة الملك وشرف الولاية بالمساجد المعظمة وخدمة الحرمين</blockquote>
+      <p class="ar-translation">“กษัตริย์เติร์กในอียิปต์... มีความดีความชอบและความประเสริฐอันเนื่องมาจากสิ่งที่อัลลอฮ์ทรงมอบให้ คือราชอาณาจักรที่ยิ่งใหญ่และเกียรติยศในการดูแลมัสยิดศักดิ์สิทธิ์ (ฮะเราะมัยน์)”</p>
+      <p>สำหรับอัลมุก็อดดิมะฮ์นั้น อิบนุ คอลดูนเขียนขึ้นในขณะที่ยืนอยู่บนขอบเหวแห่งประวัติศาสตร์ที่กำลังจะพลิกโฉม ท่านตระหนักดีว่าโลกอิสลามของท่านกำลังเผชิญหน้ากับวิกฤตการณ์ หลังจากที่เสียงเพรียกแห่งจักรวาลได้ป่าวประกาศถึงความเสื่อมถอยที่กำลังรอคอยอารยธรรมนี้อยู่ ในหนังสือเล่มนี้ ท่านแทบไม่ได้กล่าวถึงรัฐมัมลู้กเลย เว้นแต่เพียงผ่านๆ เมื่ออธิบายถึงหน้าที่ของตำแหน่งฮาญิบ (สมุหราชองครักษ์/เลขาธิการ) และอุตสาหกรรมฏิรอซ (การปักดิ้นทองบนเสื้อคลุมกษัตริย์) ว่ารัฐมัมลู้กปฏิบัติอย่างไรในเรื่องเหล่านี้</p>
+      <p>อัลมุก็อดดิมะฮ์เปรียบเสมือนคำตอบเชิงรายละเอียดต่อโจทย์ 4 ข้อที่อิบนุ อัลมุก็อฟฟะอ์เคยตั้งไว้ แต่อิบนุ คอลดูนเลือกที่จะตอบด้วยวิธีการที่แตกต่างออกไป โดยมุ่งเน้นไปที่โจทย์แห่งอารยธรรม ท่านพรรณนาถึงการรุ่งโรจน์และร่วงโรยของรัฐ ว่ารัฐหนึ่งจะผลัดเปลี่ยนแทนที่อีกรัฐหนึ่งอย่างไรเมื่อครบวาระแห่งอายุขัย เปรียบประดุจมนุษย์ที่ถือกำเนิด เติบโต แก่ชรา และดับสูญ และเมื่อความเจริญของแผ่นดินล่มสลาย [นั่นก็เพราะ] การล่มสลายของมนุษย์นั่นเอง</p>
+
+      <h2 class="article-h2">คำตอบเชิงอารยธรรม เมื่อประวัติศาสตร์คือกฎเกณฑ์</h2>
+      <p>อิบนุ คอลดูนต้องการวินิจฉัยอย่างแม่นยำว่า เกิดอะไรขึ้นกับอารยธรรมอาหรับ-อิสลาม? และเมื่อคำถามถูกตั้งขึ้นในระดับอารยธรรม คำตอบย่อมต้องครอบคลุมทั้งมิติของศาสนา, จารีตประเพณี, การเมือง, เศรษฐกิจ, องค์ความรู้, ภูมิทัศน์ของสังคมเมือง, โครงสร้างทางสังคม และแรงขับเคลื่อนของอะศอบิยะฮ์ (ความรู้สึกเป็นพวกพ้อง/ความสมานฉันท์ในกลุ่มชน)</p>
+      <p>หนังสือของท่านจึงอัดแน่นไปด้วยวิสัยทัศน์เกี่ยวกับเรื่องราวเหล่านี้ทั้งหมด รวมถึงความสัมพันธ์ระหว่างนายทุนกับผู้มีอำนาจ, ระหว่างปัญญาชนกับฝ่ายทหาร, ตลอดจนประวัติศาสตร์ของวิทยาการและรูปแบบการประกอบอาชีพและอุตสาหกรรม</p>
+      <p>อะศอบิยะฮ์คือกุญแจที่อิบนุ คอลดูนใช้ไขความลับเพื่อทำความเข้าใจว่า รัฐอาหรับผงาดขึ้นมาได้อย่างไร และอ่อนแอลงจากภายในกลไกของรัฐเองได้อย่างไร ผ่านการใช้ระบบบริวารและทาส จนกระทั่งท่านสามารถจับตาดูวินาทีแห่งการปรากฏตัวของอะศอบิยะฮ์ต่างชาติ (โดยเฉพาะชาวเติร์ก/มัมลู้ก) ซึ่งตั้งอยู่บนฐานความชอบธรรมของกำลังทหาร และท้ายที่สุดชะตากรรมการปกครองในดินแดนส่วนใหญ่และดินแดนที่สำคัญที่สุดของโลกอิสลามก็ตกไปอยู่ในมือของพวกเขา</p>
+      <p>หนังสืออัลมุก็อดดิมะฮ์เปรียบประดุจแผ่นบันทึกข้อมูลที่มีความหนาแน่นสูงที่อิบนุ คอลดูนได้ปูทางให้เราเข้าใจว่า อารยธรรมนั้นยิ่งใหญ่กว่ารัฐ ยิ่งใหญ่กว่าสำนักคิด และยิ่งใหญ่กว่าเชื้อชาติ</p>
+      <p>ท่านเขียนงานชิ้นนี้ในขณะที่อารยธรรมอิสลามกำลังอยู่ในช่วงถดถอยถึงขีดสุด ดังที่ท่านพรรณนาไว้อย่างน่าขนลุกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">تبدل الخلق من أصله وتحول العالم بأسره، وكأنه خَلْق جديد ونشأة مستأنَفة وعالَم محدَث</blockquote>
+      <p class="ar-translation">“สรรพสิ่งได้แปรเปลี่ยนไปจากรากเดิม และโลกทั้งใบได้ผันแปรไปราวกับว่ามันคือการสร้างใหม่ เป็นการกำเนิดที่เริ่มต้นใหม่ และเป็นโลกที่เพิ่งอุบัติขึ้น”</p>
+      <p>นี่คือช่วงเวลาที่เหมาะสมที่สุดในการบันทึกเรื่องราวของอารยธรรม ในยามที่ผู้คนต้องการใครสักคนที่จะมาบันทึกสภาพความเป็นไปของมนุษยชาติ ขอบฟ้าแห่งยุคสมัย ชั่วอายุคน จารีตประเพณี และลัทธิความเชื่อที่ได้แปรเปลี่ยนไป</p>
+      <p>ดังนั้น อิบนุ คอลดูนจึงได้ตอบคำถามของอิบนุ อัลมุก็อฟฟะอ์เกี่ยวกับหนทางแห่งการปฏิรูปผู้ปกครองและราษฎรในยุคที่สี่ (ยุควิกฤต) ด้วยคำตอบเชิงอารยธรรม ท่านสรุปว่า ทั้งผู้ปกครองและประชาชนต่างตกอยู่ภายใต้กฎเหล็กทางประวัติศาสตร์และกฎเกณฑ์ทางสังคม ทั้งสองฝ่ายเป็นเพียงผลผลิต เป็นวัตถุดิบ และเป็นเครื่องมือของกฎเหล่านั้น</p>
+      <p>ท้ายที่สุดแล้ว นักประวัติศาสตร์ผู้ยิ่งใหญ่ของเรา วะลียุดดีน อิบนุ คอลดูน อัลฮัฎเราะมีย์ มีเจตจำนงแฝงเร้นอยู่เบื้องหลังทฤษฎีในอัลมุก็อดดิมะฮ์หรือไม่?</p>
+      <p>ท่านต้องการมอบกฎเกณฑ์ทางอารยธรรม เพื่อให้รัฐต่างๆ ในยุคของท่านรวมถึงรัฐมัมลู้กและรัฐที่จะเกิดขึ้นในภายภาคหน้า ได้นำไปใช้เพื่อปฏิรูปสถานการณ์ที่ย่ำแย่ และชะลอการล่มสลายให้เนิ่นนานออกไปที่สุดเท่าที่จะเป็นไปได้... ในเมื่อการหลีกหนีความล่มสลายอย่างสิ้นเชิงนั้น เป็นสิ่งที่ไม่อาจเป็นไปได้ตามกฎแห่งกาลเวลา</p>
+      <p>จากทั้งหมดนี้ การจะเปลี่ยนแปลงและปฏิรูปสังคมจึงต้องเริ่มจากการยอมรับความจริง (อิบนุ ตัยมียะฮ์) จนถึงรับผิดชอบหน้าที่ตนเอง (อัซซุบกีย์) และเข้าใจกฎแห่งกาลเวลา (อิบนุ คอลดูน)</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การปฏิรูปการเมืองในร่มเงาของมัมลู้ก. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/political-reform-under-the-mamluks.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
