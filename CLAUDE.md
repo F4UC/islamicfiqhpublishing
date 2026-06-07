@@ -392,22 +392,16 @@ VERIFICATION (non-negotiable)
 
 TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentions in Thai/English prose)
 - Use one consistent system: IJMES.
-# userEmail
-The user's email address is gibraltar2580@gmail.com.
-# currentDate
-Today's date is 2026-05-30.
-
-      IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
-
 ## Push & safety discipline
-- NEVER read/extract/use credentials or tokens from config files, env vars, or disk to call an API directly. NEVER circumvent the proxy, tool payload limits, or any guardrail.
-- If a push fails (503 / payload too large / auth error): STOP and report. Do not find an alternative channel.
-- Push only via the approved GitHub tool, directly to main, raw UTF-8 read from committed bytes (git cat-file). Never force-push. Never reconstruct file contents from chat context.
-- Do not route work through long-lived feature branches; work against main.
+- NEVER read, extract, or use credentials or tokens from config files, env vars, or disk to call any API directly. NEVER circumvent the proxy, tool payload limits, or any guardrail.
+- If a push fails (503 / payload too large / auth error): STOP and report. Do not seek an alternative channel.
+- Read file bytes from the committed tree (git cat-file), raw UTF-8. Never force-push. Never reconstruct file contents from chat context.
+- Ship via feature branch → PR → human review → merge. Direct pushes to main are blocked (503); never push to main directly and never bypass the PR/review gate.
 
 ## Cache-busting
 - When changing a shared versioned asset (main.js, article.css), you MUST bust its cache or users keep seeing the old file: bump the ?v= string on that asset across all referencing HTML in the SAME commit, OR purge the specific Cloudflare URL after pushing.
 - After any asset change, verify via a cache-busted fetch before declaring done.
 
 ## Integrity checks
-- After any change confirm only intended files changed; protected files intact: moon-sighting-vs-astronomy.html = 158537 bytes, itibar-al-maal.html ≈ 155804 bytes.
+- After any change, confirm via the diff that ONLY the intended files changed.
+- Regression-check shared/protected files (article.css, main.js, any multi-article HTML) against other live articles before merge. Verify by diff + rendering — do not rely on hardcoded byte counts (they go stale on every edit).
