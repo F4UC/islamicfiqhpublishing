@@ -177,6 +177,8 @@
   - ค่า `readingTime` ต้องผลิตโดย `scripts/gen-reading-time.js` เท่านั้น (ตามกฎข้อที่ 55) — ห้ามระบุด้วยมือ
   - ค่า `dateDisplay` ต้องสอดคล้องกับ `date` ใน `articles.json` เสมอ ในรูปแบบ "DD เดือน YYYY" (ปี พ.ศ.)
 
+* **กฎข้อที่ 69:** **[ผู้เขียนประจำหมวด kalam]** บทความในหมวด **kalam (เทววิทยา)** มีผู้เขียนคือ **มัรกัส อัลอิมาม อัลอัชอะรีย์** ไม่ใช่ **กองบรรณาธิการ** เนื่องจากหมวดนี้มีผู้ดูแลเฉพาะของตนเอง — ใช้บังคับกับบทความ kalam ทั้งหมดทั้งที่มีอยู่และในอนาคต (ตั้งค่าในฟิลด์ `author` ของ `articles.json` และในไบไลน์/การอ้างอิงที่แสดงผล) ส่วนหมวดอื่นยังคงใช้ `กองบรรณาธิการ` ตามเดิม
+
 ### หมวดที่ 13: การจัดวางและการแสดงผลตัวบทอาหรับในบทความ (Arabic Block Layout & Tashkeel)
 
 * **กฎข้อที่ 58:** **[ลำดับบล็อกอาหรับเหนือคำแปล]** ในบทความที่ใช้ระบบ `.ar-quote` (เช่น บทความต้นแบบ moon-sighting) บล็อกตัวบทภาษาอาหรับต้องวางอยู่**เหนือ**คำแปลภาษาไทย (`.ar-translation`) เสมอ โดยเรียงลำดับในซอร์สโค้ดเป็น อาหรับก่อน แล้วจึงตามด้วยคำแปลไทย (ห้ามซ่อนตัวบทอาหรับไว้ใน `<details>` toggle อีกต่อไป)
@@ -321,6 +323,8 @@
   - Correct source form: `<div class="article-meta"></div>`.
   - `readingTime` must be produced exclusively by `scripts/gen-reading-time.js` (per Rule 55) — manual values are prohibited.
   - `dateDisplay` must always match the `date` field in `articles.json`, formatted as "DD Month YYYY" (BE calendar).
+
+* **Rule 69:** **[kalam category author]** Articles in the **kalam (เทววิทยา)** category are authored by **มัรกัส อัลอิมาม อัลอัชอะรีย์**, not **กองบรรณาธิการ** — this category has a dedicated maintainer. Applies to all current and future kalam articles (set in the `articles.json` `author` field and in any rendered byline/citation). Other categories keep `กองบรรณาธิการ`.
 
 ## Section 13: Arabic Block Layout & Tashkeel
 

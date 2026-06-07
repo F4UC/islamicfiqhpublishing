@@ -1186,6 +1186,14 @@ p:not(.ar-translation) + .hadith-block { margin-top: -16px; }
   border-bottom: 1px solid var(--border-primary);
 }
 
+/* B.5.1 — Sub-section heading (H3): smaller than H2, no underline. */
+.article-h3 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 18px; font-weight: 600;
+  color: var(--text-primary);
+  margin: 36px 0 14px;
+}
+
 /* B.2.1 — Upgraded primary-text blocks: AYA / HADITH (Option C)
    Shared visual treatment, separate class names for future divergence.
    No top label — surrounding Thai prose introduces the text.

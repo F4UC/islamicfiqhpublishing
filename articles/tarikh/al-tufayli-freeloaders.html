@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>กินฟรีมีปรัชญา ‘อัฏฏุฟัยลีย์’ และปรากฏการณ์ ‘นักลักแกง’ แห่งโลกอาหรับ — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="">
+<meta name="keywords" content="อัฏฏุฟัยลีย์, นักลักแกง, วัฒนธรรมอาหรับ, วรรณกรรม, ประวัติศาสตร์, สังคม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="กินฟรีมีปรัชญา ‘อัฏฏุฟัยลีย์’ และปรากฏการณ์ ‘นักลักแกง’ แห่งโลกอาหรับ — Islamic Fiqh Publishing">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/al-tufayli-freeloaders.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="al-tufayli-freeloaders">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/tarikh.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">กินฟรีมีปรัชญา ‘อัฏฏุฟัยลีย์’ และปรากฏการณ์ ‘นักลักแกง’ แห่งโลกอาหรับ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا دخلت عرسًا فلا تلتفت تلفُّت المُريب، وتخيَّر المجالس، فإنْ كان العُرسُ كثير الزحام فأمِرْ وأنهِ، ولا تنظر في عيون أهل المرأة ولا في عيون أهل الرّجلِ ليظنّ هؤلاء أنّك من هؤلاء، ويظن هؤلاء أنّك من هؤلاء، فإنْ كان البوّابُ غليظًا وقاحًا فابدأ به وأنههِ من غير أنْ تعنِّفهُ وعليكَ بكلامٍ بين النَّصيحة والإدلال</blockquote>
+      <p class="ar-translation">“เมื่อเจ้าเข้าสู่งานเลี้ยงแต่งงาน ก็อย่าได้มองซ้ายมองขวาอย่างคนมีพิรุธ จากนั้นก็หาที่นั่งดีๆ หากงานเลี้ยงนั้นคับคั่งไปด้วยผู้คน ก็ให้ทำทีเป็นออกคำสั่งและห้ามปราม และอย่าได้สบตากับคนของฝ่ายเจ้าสาวหรือฝ่ายเจ้าบ่าว เพื่อให้ฝ่ายหนึ่งเข้าใจว่าเจ้าเป็นพวกของอีกฝ่าย และอีกฝ่ายก็เข้าใจว่าเจ้าเป็นพวกของฝ่าย หากคนเฝ้าประตูมีท่าทีกระด้างและหยาบคาย ก็จงเริ่มจัดการกับเขาก่อน...ทำให้เขาสงบลงโดยปราศจากความรุนแรง และจงใช้ถ้อยคำที่อยู่กึ่งกลางระหว่างคำแนะนำกับการแสดงความสนิทสนม”</p>
+      <p class="lead-text">- อัลบัฆดาดีย์</p>
+      <p>บทความนี้มุ่งหวังที่จะขุดค้นลงไปในปรัชญาที่ถูกสร้างสรรค์ขึ้นโดยกลุ่มชนที่เรียกตนเองว่า “ฏุฟัยลีย์” ซึ่งเป็นปรัชญาที่ไม่เคยมองโลกด้วยสายตาธรรมดาทั่วไปเยี่ยงปุถุชน แต่ก้าวข้ามไปสู่การมองโลกและชีวิตผ่านเลนส์ที่ “อาหารเป็นศูนย์กลาง”</p>
+      <p>เค้าโครงของปรัชญานี้เริ่มก่อตัวขึ้นหลังการปฏิวัติของกองทัพ “ฏุฟัยลีย์” จำนวนมหาศาล เพื่อต่อต้านระเบียบทางสังคมที่พวกเขาถือว่าไม่ยุติธรรม หลังจากที่ระเบียบนั้นได้ผลักไสและกีดกันพวกเขาออกจากวงจรชีวิต ทำให้พวกเขา (ในความเข้าใจของตน) จำต้องโอบกอดความแร้นแค้นและเผชิญหน้ากับความยากลำบาก ในขณะที่คนกลุ่มอื่นกลับเบื่อหน่ายชีวิตอันสุขสบายและระอาต่อความฟุ่มเฟือยและความมั่งคั่ง</p>
+      <p>การปฏิวัติครั้งนี้ซึ่งประสบความสำเร็จในรูปแบบใดรูปแบบหนึ่ง จะไม่สามารถเกิดขึ้นได้เลยหากปราศจากความหลักแหลม, ความคล่องแคล่วทางวาจา, การพึ่งพาเล่ห์เหลี่ยมและการสร้างความสับสนอยู่เสมอ, การละทิ้งคุณธรรมของลูกผู้ชาย (มุรูอะฮ์) อย่างต่อเนื่อง และการเพิกเฉยต่อศักดิ์ศรีอย่างชัดแจ้งของพวกเขา เพราะพวกเขามักจะตกเป็นเป้าของการเยาะเย้ย, การดูถูกและการเหยียดหยามอยู่เสมอ แต่ทว่า เปลวไฟในกระเพาะอาหาร สำหรับพวกเขานั้น รุนแรงกว่าความพยายามที่จะรักษาไว้ซึ่งความรู้สึกอันสูงส่งเหล่านี้ของมนุษย์</p>
+      <p>ชาวอาหรับได้ตระหนักถึงอันตรายของปรัชญานี้ ซึ่งมี “ฏุฟัยลีย์” จำนวนมากยึดถือ พวกเขาจึงได้พยายามต่อสู้กับคนกลุ่มนี้ โดยเฉพาะอย่างยิ่งเมื่อชาวอาหรับในตอนแรกนั้นรู้สึกรังเกียจ แต่ต่อมากลับเริ่มคุ้นชินกับมัน โดยเฉพาะอย่างยิ่งเมื่อความสงสารและความเห็นอกเห็นใจถาโถมเข้าใส่ยามที่ได้ยินบทกวีอันไพเราะ หรือเมื่อถ้อยคำคมคายที่ “ฏุฟัยลีย์” จงใจนำมาใช้เพื่อสร้างความชอบธรรมให้แก่พฤติกรรมอันน่ารังเกียจของตนนั้น ได้แทรกซึมเข้าไปในส่วนลึกของหัวใจ</p>
+      <p>แต่ทว่า จุดอ่อนของเหล่า “ฏุฟัยลีย์” ก็คือ เมื่อกาลเวลาผ่านไป พวกเขาได้หลงเชื่อว่า การบุกเข้าไปในบ้านงานหรืองานเลี้ยงต่างๆนั้น คือสิทธิอันชอบธรรมที่ไม่มีผู้ใดสามารถเพิกถอนได้ในทุกสถานการณ์ และ ณ จุดนี้เอง ที่สมรภูมิทางสังคมได้ปะทุขึ้นในหมู่ชาวอาหรับ โดยเฉพาะอย่างยิ่งหลังจากที่เหล่า “ฏุฟัยลีย์” ได้หันไปพึ่งพาการแข็งขืน, วาจาที่ก้าวร้าวและการกระทำที่รุนแรง</p>
+      <p>และได้ค้นพบว่า หนึ่งในเหตุผลที่ชัดเจนที่สุดที่ผลักดันให้ชาวอาหรับต่อต้านและขัดขวางปรัชญานี้ ก็คือการที่มันได้สร้างชนชั้นของคนเกียจคร้านและไร้เรี่ยวแรงในการทำมาหากินขึ้นมา ผู้ซึ่งกลายเป็นกลุ่มพวกที่พึ่งพาผู้อื่นอยู่เสมอ และไม่เคยหยุดร้องขอความช่วยเหลือและการให้โดยไม่ใช้ความพยายามแม้แต่น้อยนิดเพื่อปรับปรุงชีวิตของตนเอง</p>
+
+      <h2 class="article-h2">เกริ่นนำ</h2>
+      <p>บางที “อาหาร” ทั้งในแง่ของการกินและการดื่ม อาจไม่เคยหยุดถูกมองโดยมนุษยชาติในฐานะเครื่องบรรเทาเสียงท้องร้อง หรือในขั้นที่สูงกว่าคือ ผู้สังหารความหิวโหย และก็มีผู้ที่มองในมุมตรงกันข้ามโดยเรียกขานอาหารว่าเป็น “ผู้ช่วยชีวิตปฐมภูมิ” ที่ทำให้มนุษย์สามารถก้าวเดินต่อไปบนเส้นทางแห่งชีวิตได้</p>
+      <p>อย่างไรก็ตาม มุมมองนี้ได้เริ่มเปลี่ยนแปลงไปตามกาลเวลา เมื่อมนุษย์สามารถตระหนักรู้ได้ว่า อาหารได้กลายเป็น “อัตลักษณ์” ที่บ่งบอกและผูกพันอยู่กับสังคมต่างๆ ก่อนที่มันจะได้รับการยกระดับเชิงคุณภาพจน กลายเป็น “วัฒนธรรม” ไปด้วย หลังจากที่เคยผูกพันอยู่กับเพียงความต้องการทางชีวภาพล้วนๆ</p>
+      <p>และเพื่อเป็นการยืนยันข้อกล่าวอ้างนี้ อาจกล่าวได้ (หากถ้อยคำจะเอื้ออำนวย) ว่า อาหารได้ประสบความสำเร็จในการมอบสถานะอันโดดเด่นให้แก่ประเทศต่างๆมากมาย มีกี่ประเทศกันที่อ่อนแอในภาคอุตสาหกรรม, ล้าหลังในวิทยาศาสตร์สมัยใหม่, ถูกครอบงำด้วยการปิดตัว และจมอยู่กับการถดถอย แต่กระนั้น อาหารพื้นเมืองของพวกเขากลับไม่เคยละเว้นแคว้นใดเลย เว้นแต่จะได้เข้ายึดครองมัน และเครื่องดื่มของพวกเขาก็ได้คืบคลานข้ามผ่านทะเลทรายและดินแดนรกร้างเพื่อไปจับจองพื้นที่ให้ตนเองทั้งในโลกตะวันออกและตะวันตก</p>
+      <p>ด้วยเหตุนี้เอง อาหารจึงไม่อาจถูกจำกัดขอบเขตไว้เพียงแค่ในมิติทางชีวภาพได้ เพราะนั่นคือมุมมองที่คับแคบ, ตื้นเขิน และปิดกั้นอย่างที่สุด และเพื่อเป็นการสนับสนุนข้อเสนอนี้ ขอยกคำกล่าวของนักวิจัยชาวฝรั่งเศสนาม โคลด เลวี-สเตราส์ (Claude Lévi-Strauss) ในหนังสือของเขา “ต้นกำเนิดแห่งมารยาทบนโต๊ะอาหาร” (The Origin of Table Manners) ที่ว่า: “ครัวของสังคมใดสังคมหนึ่ง ก็คือภาษา ที่แปลความหมายออกมาโดยไม่รู้ตัว และเผยให้เห็นถึงความขัดแย้งภายในของมัน”</p>
+      <p>จากคำกล่าวนี้ เราจะเห็นได้ว่า “อัตลักษณ์” ของผู้อื่นนั้น สามารถถูกหยั่งรู้ได้ผ่านการทำความรู้จักกับสิ่งที่เขากินในแต่ละวัน ตั้งแต่รุ่งสางจนกระทั่งความมืดมิดเข้าปกคลุมโลกในยามพลบค่ำ; ผู้ที่คุ้นเคยกับการกินปลา (ทั้งตัวเล็กตัวใหญ่) ด้วยรอยยิ้มและความพึงพอใจ นั่นก็เป็นเครื่องบ่งชี้ว่าทะเลได้โอบล้อมเขาไว้ ดุจดังกำไลข้อมือที่โอบล้อมข้อมือฉันใดก็ฉันนั้น</p>
+      <p>ทุกสังคม (ทั้งในโลกตะวันออกและตะวันตก) ได้พยายามขุดค้นในประวัติศาสตร์ของ “สำรับอาหาร” (สุฟเราะฮ์) และสืบค้นในเรื่องราวของมัน เพื่อพยายามเปิดเผยสิ่งที่ซ่อนเร้นและหยั่งถึงความหมายที่ถูกเก็บงำไว้ เพราะโต๊ะอาหารนั้นไม่ใช่เพียงแค่กองไม้ขัดเงา, โลหะหลอมเหลว, หรือเครื่องปั้นดินเผาที่สลักลวดลายที่มีผู้คนมารวมตัวกันล้อมรอบเพื่อดับเปลวไฟในกระเพาะอาหารเท่านั้น แต่แท้จริงแล้ว มันคือสิ่งที่ย่อส่วนเอาความรู้สึกของมนุษย์และสายใยแห่งครอบครัวอันมากมายมหาศาลไว้ด้วยกัน มันเสริมสร้างและหล่อเลี้ยงความผูกพันทางสังคม</p>
+      <p>ยิ่งไปกว่านั้น โต๊ะอาหารยังคงถูกมองโดยนักวิจัยในฐานะเครื่องหมายแห่งความ “บะเราะกะฮ์” (ความจำเริญ) ดังที่มีคำกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">خير الطعام هو ما كثُرت عليه الأيدي</blockquote>
+      <p class="ar-translation">“อาหารที่ดีที่สุด คืออาหารที่มีมือมาร่วมวงมากที่สุด”</p>
+      <p>และด้วยเหตุนี้เอง ระดับของบะเราะกะฮ์ในสำรับอาหารก็จะเพิ่มสูงขึ้น นี่คือเครื่องบ่งชี้ว่าความอิ่มหนำและการเติมเต็มนั้นไม่ได้ผูกพันอยู่กับปริมาณ, ความหลากหลาย, หรือจำนวนของอาหารเท่านั้น แต่แท้จริงแล้ว “ความเป็นปึกแผ่นทางสังคม” ที่เกิดขึ้นจากวงอาหารต่างหากที่ทำให้ปัจเจกบุคคลเปี่ยมล้นไปด้วยความรู้สึกสบายใจและผาสุก และสิ่งนี้เองที่เร่งให้ความหิวโหยของผู้กินถูกกำจัดไปและทำให้จิตใจของเขาผ่อนคลายลง</p>
+      <p>และดังที่โคลด เลวี-สเตราส์กล่าวไว้ ครัวของสังคม คือภาษาที่เผยความขัดแย้งและความตึงเครียดในโครงสร้างสังคม</p>
+      <p>และในบรรดาความขัดแย้งทั้งปวง คงไม่มีสิ่งใดจะท้าทาย ‘ความเป็นเจ้าของ’ เหนืออาหารได้เท่ากับการดำรงอยู่ของ ‘นักกินฟรี’ ปรากฏการณ์นี้เกิดขึ้นในหลากหลายวัฒนธรรมในสังคมอาหรับคลาสสิก พวกเขาถูกเรียกขานว่า “อัฏฏุฟัยลีย์” ขณะที่ในสังคมไทย เราก็มีคำเรียกที่เห็นภาพชัดเจนว่า “นักลักแกง”</p>
+      <p>บทความนี้จะพาไปสำรวจรากเหง้า ปรัชญา และวิวัฒนาการของ “ฏุฟัยลีย์” ในโลกอาหรับ เพื่อเป็นกระจกสะท้อนกลับมายังปรากฏการณ์ “ลักแกง” ที่เราคุ้นเคย ว่าทั้งสองมีความเหมือน ต่าง หรือทับซ้อนกันในมิติใดบ้าง</p>
+
+      <h2 class="article-h2">อัฏฏุฟัยลีย์ “นักลักแกง” คำนี้ท่านได้แต่ใดมา?</h2>
+      <p>อัฏฏุฟัยลีย์ หมายถึงผู้อาศัยกินฟรี หรือนักกินงานเลี้ยงโดยไม่ได้รับเชิญ หรือหากเรียกอีกอย่างที่คุ้นเคยกันแบบไทยๆในแถบในภาคใต้ก็น่าจะเรียกว่า ‘พวกมั่วบ้านงาน’ หรือเรียกอย่างสากล ‘ชักดาบ’ ก็ยังได้ ซึ่งคำที่ว่ามาก็ไม่มีคำบัญญัติอย่างเป็นทางการในภาษาไทย รวมถึงคำนิยามของนักลักแกง แต่หากจะบอกว่าคำไหน ใกล้เคียงสุดกับคำว่า “อัฏฏุฟัยลีย์” ก็คงจะเป็นคำว่า “ชักดาบ” กระมั้ง ซึ่งศาสตราภิชานล้อม เพ็งแก้ว ได้อธิบายไว้ในหนังสือ “สนั่นสนามสำนวนไทย” (๒๕๔๙ : ๕๖) ว่า: “ผู้ใดชำนาญในการใช้ดาบก็มักจะถือติดตัวเป็นอาวุธประจำกาย และแน่นอนว่าผู้ถือดาบส่วนหนึ่งอาจเป็นคนเกกมะเหรกเกเร ถือตนว่ามีดาบอยู่ในมือ และดึงตัวดาบออกอวดเบ่ง แสดงอำนาจในทางมิชอบ เช่น ไปกินอาหาร พอเจ้าร้านเรียกเก็บเงิน ก็ดึงดาบออกมา เอาคมวางลงชี้ ถามว่าจานนี้เท่าไร ถ้วยนี้เท่าไร เป็นต้น (แต่หากเป็นดาบสองคมก็ยุ่งเอาได้เหมือนกัน)”</p>
+      <p>อิบนุลเญาซีย์ได้บันทึกคำกล่าวของอัลอัศมะอีย์ไว้ว่า : “อัฏฏุฟัยลีย์” (الطفيلي - นักกินฟรี/แขกไม่ได้รับเชิญ) คือผู้ที่ไปปรากฏตัวในหมู่คณะโดยที่มิได้รับการเชิญ</p>
+      <p>และคำว่า “ฏุฟัยลีย์” นั้น เป็นคำที่ถูกสลักมาจากคำว่า “อัฏฏ็อฟล์” (الطَّفلُ) ซึ่งหมายถึง การที่รัตติกาลเข้าจู่โจมทิวาด้วยความมืดมิดของมัน (คือช่วงเวลาพลบค่ำที่กลางวันเริ่มถูกกลืนกินด้วยความมืด)</p>
+      <p>และเราจะพบว่า อิบนุ มันซูรได้กล่าวไว้ในตำรา “ลิซานุลอาหรับ” ในรากศัพท์ “طفل” (เฏาะ-ฟะ-ละ) ว่า: เมื่อดวงอาทิตย์ลับขอบฟ้าและตกดินไป จะถูกเรียกว่า “อัฏฏิฟล์” (الطِّفل) และรัตติกาลเองก็มีชื่อเรียกนี้ในภาษาอาหรับเช่นกัน (ทั้งหมดนี้เชื่อมโยงกับแนวคิดของการมาถึงอย่างไม่คาดฝัน หรือการมาในช่วงเวลาที่ไม่เหมาะสม เหมือนแขกที่ไม่ได้รับเชิญมาในตอนพลบค่ำ)</p>
+      <p>ตัวบทของนักปราชญ์ในยุคก่อนมีแนวโน้มจะให้น้ำหนักว่า บุคคลแรกที่ได้รับสมญานาม “อัฏฏุฟัยลีย์” คือชายผู้หนึ่งจากเผ่า บะนู ฆอเฏาะฟาน (بني غطفان) ซึ่งมีกิจวัตรคือ การไปปรากฏตัวในงานเลี้ยงต่างๆ โดยไม่ได้รับเชิญ จนผู้คนได้ตั้งฉายาให้เขาว่า “ฏุฟัยล์ อัลอะรออิส” (طفيل العرائس - ฏุฟัยล์แห่งงานวิวาห์) ก่อนที่ “ฏุฟัยล์ บิน ซัลลาล” (طفيل بن زلَّال) จะรับช่วง “ชื่อเสียง” ในเรื่องนี้ต่อจากเขา จนกลายเป็นต้นแบบที่โด่งดังไปทั่วใน “ปรัชญาแห่งการกินฟรี” (فلسفة التطفيل)</p>
+      <p>และเราพบเนื้อหาเดียวกันนี้ พร้อมการเปลี่ยนแปลงเพียงเล็กน้อย ในหนังสือของอัลเคาะฏีบ อัลบัฆดาดีย์ ซึ่งเขาได้เลือกชื่อเรื่องว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">التطفيل وحكايات الطفيليين وأخبارهم ونوادر كلامهم وأشعارهم</blockquote>
+      <p class="ar-translation">“การกินฟรี, เรื่องเล่าของเหล่านักกินฟรี, ข่าวคราวของพวกเขา, เกร็ดคำพูดและบทกวีของพวกเขา” ซึ่งท่านอัลบัฆดาดีย์ก็ได้นำเสนอคำกล่าวของอัลอัศมะอีย์คนเดียวกัน เกี่ยวกับความหมายของ “อัตตัฏฟีล” ในทางภาษา และพร้อมชื่อบุคคลแรกที่ได้รับสมญานามนี้</p>
+
+      <h2 class="article-h2">ปรัชญาแห่งการกินฟรีจากความน่ารังเกียจสู่ความคุ้นชิน</h2>
+      <p>บางที สิ่งที่อาจสกัดความได้จากเรื่องเล่าของเหล่า “ฏุฟัยลีย์” ผู้ถูกกีดกันก็คือ สังคมอาหรับ-อิสลามนั้น เคยชื่นชอบในเล่ห์กลของพวกเขา และสิ่งที่สนับสนุนข้อเสนอนี้ก็คือ เรื่องเล่าส่วนใหญ่ที่นักเขียนและนักประพันธ์ร้อยแก้วได้สืบทอดกันมาเกี่ยวกับพวกเขานั้น (ซึ่งถือเป็นสมบัติและสิ่งล้ำค่า) ได้แสดงให้เห็นเช่นนั้น เพราะเป็นเรื่องปกติที่เจ้าบ้านจะรู้สึกรังเกียจผู้บุกรุกในตอนแรกเริ่ม แต่ทว่า เขาก็จะถอยกลับจากท่าทีนั้นหลังจากที่ถูก “ฏุฟัยลีย์” ทำให้อับจนด้วยเหตุผลอันหนักแน่น หรือเมื่อถูกทำให้เงียบด้วยคำตอบอันน่าตกใจ ซึ่งรบกวนจิตใจอย่างลึกซึ้งและปลุกเร้าความวุ่นวายในใจ และในบางครั้ง เขาอาจจะยกบทกวีขึ้นมาเพื่อช่วยให้ตนเองรอดพ้นจากสถานการณ์ลำบากนั้น, ทำให้เจ้าบ้านต้องสับสน, มึนงง และหวั่นไหวทางอารมณ์ จำใจต้องยอมรับการลักแกงของเขา เพื่อให้เขากลายเป็นสีสันของวงสนทนาได้อย่างเต็มภาคภูมิ แล้วหูของผู้คนก็จะยอมฟังเขา และสติปัญญาของผู้ร่วมวงก็จะถูกเขาดึงดูดไป โดยอาศัยความสดใหม่ของถ้อยคำ และการใช้ภาษาอาหรับอย่างแตกฉาน</p>
+      <p>เหล่า “นักกินฟรี” เองนั้นก็มีชื่อเสียงเลื่องลือไปทั่วสารทิศในเรื่องเล่ห์เหลี่ยม และการกลการหลบหลีกพลิกแพลง โดยมุ่งหวังเพียงเป้าหมายพื้นฐานของพวกเขา นั่นคือ การได้กินดื่มอย่างสบายใจโดยไม่ต้องเสียเงิน จนถึงขั้นอิ่มหนำสำราญ และแทบจะไม่มีผู้ใดสามารถแข่งขันกับพวกเขาในเรื่องนี้ได้เลย</p>
+      <p>และในประเด็นนี้ ก็ขอยกตัวอย่างที่ควรค่าแก่การพิจารณา ซึ่งปรากฏในเรื่องเล่าที่อัลญาหิซได้ถ่ายทอดไว้ มีใจความว่า: ชายหนุ่มผู้หนึ่งซึ่งความรักเริ่มกัดกิน ‘เยื่อหุ้มหัวใจ’ ของเขา เขาได้ขอให้หญิงคนรักส่ง ‘ข้าวสาลีผสมเนยใส’ มาให้ นางก็ได้ส่งมาให้ตามคำขอ เขายังไม่พอใจเพียงเท่านั้น แต่ยังเลยเถิด ไปขอ ‘ไวน์’ จากนางเพื่อนำไปหมักต่อ นางก็นำมาให้</p>
+      <p>คำตอบของนางก็คือ นางกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أبقاك الله وحفظك رأينا الحبَّ يكون في القلبِ فإذا فشَا دبَّ في المفاصل، وحبُّك ما يزولُ من المعدة وأراك طفيليًا تتأكَّلُ من العشق</blockquote>
+      <p class="ar-translation">“ขออัลลอฮ์ทรงให้ท่านมีชีวิตยืนยาวและคุ้มครองท่าน! พวกเราเคยเห็นความรักนั้นอยู่ในหัวใจ และเมื่อมันแพร่กระจาย มันก็จะซึมซาบไปตามข้อต่อต่างๆ แต่ความรักของท่านนี้หาได้เคลื่อนย้ายไปจากกระเพาะอาหารไม่! ข้าเห็นว่าท่านเป็นเพียง “พวกลักแกง” ที่หากินจาก “ความรัก” เพียงเท่านั้น”</p>
+      <p>ด้วยเหตุนี้ จึงเห็นได้ว่า ความรู้สึกรังเกียจและน่าขยะแขยง จะปรากฏขึ้นในตอนแรก จากนั้นไม่นานก็จะถูกสวนทางด้วยการยอมรับอย่างจำกัดที่แฝงไว้ด้วยความไม่พอใจ หรือการยอมรับด้วยความเต็มใจ ซึ่งเป็นสิ่งที่ปรารถนา เพราะฏุฟัยลีย์นั้น ในท้ายที่สุด ไม่ได้ต้องการอะไรเลยนอกจากการดับความหิวโหยด้วยอาหารชนิดเดียวกับที่ชนชั้นนำของสังคมได้กิน และการที่จะไม่ต้องกลับบ้านไปในสภาพโกรธเคือง, หดหู่, ถูกความทุกข์ยากห้อมล้อมและความเศร้าโศกครอบงำ และถูกภาพแห่งความน่ารังเกียจครอบงำจิตใจ</p>
+      <p>ด้วยเหตุนี้ เขาจึงถูก ชักนำด้วยความปรารถนาที่ไม่สามารถหยุดยั้งได้, เหนื่อยล้ากับการต่อสู้กับความโหดร้ายของความหิวโหย, ใฝ่ฝันถึงชีวิตอันสุขสบายที่มีอาหารเลิศรสเป็นแกนกลาง, จนกลายเป็น “คนตะกละ” และสิ่งนั้นก็ได้กลายเป็น “อุปนิสัย” ของคนเหล่านี้ในเวลาต่อมา</p>
+      <p>และบางที ความปรารถนาที่จะฉกฉวยสิทธิ์ในการกินของคนเหล่านี้ก็อาจผุดขึ้นมา และแนวโน้มที่จะแก้แค้นต่อชะตากรรมอันเลวร้ายทางสังคม ก็อาจคุกรุ่นอยู่ในใจ แต่ทว่า การล้างแค้นนี้เป็นเรื่องส่วนตัวที่ไม่สร้างความเสียหายให้แก่เจ้าบ้าน ผู้ซึ่งเชื้อเชิญผู้คนจำนวนหนึ่งมายังงานเลี้ยงขึ้นบ้านใหม่ หรืองานเลี้ยงแต่งงาน โดยมีเป้าหมายคือ การประกาศการแต่งงาน หรือการประกาศการย้ายเข้าที่อยู่ใหม่</p>
+      <p>ดังนั้น เจ้าภาพย่อมต้องคำนึงถึงว่า จำนวนแขกอาจจะมากกว่าที่คาดไว้ และด้วยเหตุนี้ เขาจึงจะเตรียมงานเลี้ยงที่เพียงพอสำหรับผู้ที่ได้รับเชิญและผู้ที่อาจจะมาพร้อมกับผู้ที่ถูกเชิญ และบางทีตัวอย่างที่ชัดเจนที่สุดในเรื่องนี้ ก็คือสิ่งที่กวีได้รจนาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إنّ الطفيلي له حرمةٌ... زادت على حُرمة نُدمائي/ لأنّه جاء ولم أَدعُهُ...مبتدئًا فيه بإحسان/ مائدتي للنّاس منصوبة... فليأتها القاصي والدّاني/ أحبب بمن أنساهُ لا عن قلى... وهو يجي ليس ينساني</blockquote>
+      <p class="ar-translation">“แท้จริง ‘ฏุฟัยลีย์’ นั้นมีเกียรติ (ที่ต้องให้)...เพิ่มพูนยิ่งกว่าเกียรติของสหายสนิทของข้าเสียอีก (เป็นการกล่าวเชิงประชด แต่ก็สะท้อนธรรมเนียมการเผื่อแผ่) เพราะเขามาโดยที่ข้ามิได้เชิญ... เป็นการเริ่มต้นทำความดีแก่เขา (โดยเจ้าภาพ) สำรับของข้าถูกตั้งไว้สำหรับผู้คน... ดังนั้นจงมาเถิดทั้งผู้ที่อยู่ไกลและอยู่ใกล้ แหม่ ช่างน่ารักเสียนี่กระไร ผู้ที่ข้าหลงลืมไป (ในการเชิญ) ไม่ใช่เพราะความเกลียดชัง... ในขณะที่เขามาโดยไม่เคยลืมข้าเลย”</p>
+      <p>ความหิวโหย ซึ่งนับเป็นความรู้สึกที่เลวร้ายที่สุดที่มนุษย์คนหนึ่งอาจประสบได้ขณะดำเนินไปบนเส้นทางแห่งชีวิตนั้น สามารถบดขยี้จิตใจของตัวเขา ทำให้คนเหล่านี้กลายเป็นคน “เศร้าซึม” เก็บกดความขุ่นเคืองไว้ภายในใจ และสั่นคลอนอยู่ท่ามกลางกรงเล็บและเขี้ยวเล็บของโลกดุนยา ด้วยเหตุนี้ ความจำเป็น และความปรารถนาอย่างแรงกล้าที่จะอยู่รอด อาจบีบบังคับให้จิตใจของคนกลุ่มนี้เอนเอียงไปสู่การมองว่าพฤติกรรมบางอย่างเป็นเรื่องง่ายดาย ซึ่งพฤติกรรมเหล่านั้นจะทำให้เขากลายเป็นผู้สูญสิ้นซึ่งเกียรติภูมิ และต้องวนเวียนอยู่ในห้วงลึกแห่งความต่ำต้อย</p>
+      <p>ทั้งนี้เพราะเมื่อกระเพาะอาหารลุกเป็นไฟ มันก็จะ ทำลายอวัยวะต่างๆ, ลดระดับความอดทน, สร้างความเจ็บปวดแก่หัวใจ และกลายเป็นบ่อเกิดแห่งความเศร้าหมองอันมืดมิดที่เข้าครอบงำจิตใจ และความสิ้นหวังก็จะบดบังใบหน้า หลังจากที่อารมณ์ใฝ่ต่ำได้ต่อสู้กับสติปัญญา และดับถ่านไฟแห่งปัญญานั้นให้มอดลง มนุษย์ก็จะกลายเป็นผู้ เคว้งคว้างปราศจากสติปัญญาที่จะรวบรวมเซลล์ต่างๆของตนไว้ได้ นี่คือสภาพเมื่อความหิวโหยอยู่ในระยะแรกเริ่ม</p>
+      <p>แต่หากระดับความรุนแรงของมันเพิ่มสูงขึ้นและถึงขั้น “ความหิวโหยอย่างรุนแรง” หรือ “หิวโซ” แล้วไซร้ มนุษย์ก็จะไม่เพียงแค่กลายเป็น “นักลักแกง” ที่ หอบหายใจไล่ตามอาหารไม่ว่าจะอยู่ที่ใดก็ตาม โดยไม่สนใจในเกียรติภูมิและความทะเยอทะยานอันสูงส่งอีกต่อไป แต่เขาจะกลายเป็น “ผู้กินพืช” ที่ดำรงชีวิตอยู่ด้วย “หญ้า” ดังที่เคยเกิดขึ้นในภาวะทุพภิกขภัยที่เข้าโจมตีดินแดนมัฆริบในหลายศตวรรษที่ผ่านมา หรือกลายเป็น “ผู้กินเนื้อ” ที่ดำรงชีพอยู่ด้วย “ซากสัตว์”</p>
+      <p>และเพียงแค่พยายามจินตนาการในยุคปัจจุบันถึงมนุษย์คนหนึ่งที่กำลังกินซากสัตว์ซึ่งกลิ่นของมันแทบจะทำให้กระเพาะอาหารหลุดออกมาและทำให้หายใจไม่ออก มนุษย์ผู้นั้นก็จะรู้สึกสั่นสะท้านและไม่สบายใจ และความสับสนทางจิตใจก็จะเข้าครอบงำเขา</p>
+      <p>ดังนั้น เราจึงสามารถสรุปได้ว่า ความหิวโหยอันเกิดจากความจำเป็น ซึ่งปราศจากคุณงามความดีใดๆ โดยสิ้นเชิง (หาใช่ ความหิวโหยโดยสมัครใจ) ที่เกี่ยวข้องกับการควบคุมอาหาร, การฝึกฝนจิตใจ และการขัดเกลาจิตใจ ซึ่งบรรดาผู้ฟุ้งเฟ้อ ผู้จมปลักอยู่ในความสุขสบายและเพลิดเพลิน จนกระทั่งเบื่อหน่ายมัน แล้วจึงตัดสินใจเปลี่ยนวิถีชีวิตของตนเอง (เพราะมนุษย์นั้นถูกสร้างมาพร้อมกับความอยากรู้อยากเห็นและไม่เคยหยุดที่จะแสวงหาการปรับปรุงและการเปลี่ยนแปลงในฐานะที่เป็นผู้เบื่อง่ายโดยธรรมชาติ)</p>
+      <p>ความหิวโหยประเภทนี้คือความหิวโหยที่ดับสูญซึ่งสติปัญญา ทำให้ความทะเยอทะยานต้องทลายลง และทำให้มนุษย์เบี่ยงเบนไปจากพฤติกรรมอันถูกต้อง</p>
+      <p>ทั้งนี้เพราะผู้ที่หิวโหยโดยความจำเป็นนั้น ถูกความขาดแคลนเข้าครอบงำ และไม่รู้ว่าเมื่อใดโชคชะตาจะเมตตาประทานขนมปังสักก้อน หรืออาหารสักคำมาให้ เพื่อบรรเทาเปลวไฟในท้องของเขา และนั่นก็จะนำไปสู่การ “บุกเข้าไปในงานเลี้ยง” หรือมั่วบ้านงาน และกินอาหารจากงานเลี้ยงนั้นอย่างสบายใจโดยไม่ใส่ใจกับการถูกดูหมิ่น หรือการเยาะเย้ยจากผู้อื่น หรือการมองมาด้วยสายตาแห่งความตำหนิและเหยียดหยาม</p>
+      <p>ผู้ที่หิวโหยใกล้ตาย จะมามัวเลือกอาหารที่จะกลืนกินกระนั้นหรือ? ผู้ที่หิวโหยจะมีสติปัญญาพอที่จะแยกแยะความถูกต้องออกจากความผิดพลาดได้กระนั้นหรือ? เป็นไปได้สูงว่า ไม่ใช่ เพราะความอิ่มท้อง, ความอิ่มแปล้ และความอิ่มหนำสำราญ คือหนทางที่ง่ายที่สุดสู่ความสมบูรณ์ทางสติปัญญา และความสมดุล</p>
+      <p>ดังนั้น หากสติปัญญาถูกบดบังไป และอารมณ์ใฝ่ต่ำได้ขึ้นมาทำหน้าที่ตัดสินแทน ก็ไม่ควรที่จะไปตัดสินนักลักแกงผู้เศร้าซึม ซึ่งสีหน้าของเขาแสดงความทุกข์ระทมออกมาทุกครั้งที่ความยากลำบากถาโถมเข้ามาใส่เขา</p>
+      <p>เรามิได้กำลังปกป้องเหล่าคนเหล่านี้ ที่ชักดายได้ตลอดเวลา หรือหาเหตุผลมาสนับสนุนปรัชญาของพวกเขา ซึ่งบางคนอาจมองว่าเป็นความน่าอับอาย, ตำหนิ และอาจเลยเถิดไปถึงขั้นขนานนามนักลักแกงเหล่านี้ว่าเป็น “ไอ้บื้อ”  ดังที่อับดุลลอฮ์ บิน มัสอูดได้กล่าวไว้ แต่ทว่า คำตัดสินอันโหดร้ายนี้อาจเกิดจากการไม่ทำความเข้าใจถึงสาเหตุ ที่นำพาเหล่านักกินฟรีเหล่านี้ (ผู้ซึ่งไม่พบสิ่งใดที่จะมาทำให้หัวใจของพวกเขาอบอุ่น และไม่ได้รับความเห็นอกเห็นใจและความเมตตา) ไปสู่การโน้มเอียงที่ไปสู่พฤติกรรมเหล่านี้ และในแนวหน้าของสาเหตุเหล่านั้นก็คือ ความหิวโหยอย่างรุนแรง และความปรารถนาที่จะอยู่รอดและดำเนินชีวิตต่อไป  และนี่คือความปรารถนาตามธรรมชาติ</p>
+      <p>และหากมันไม่เป็นเช่นนั้น เหตุใดเราจึงพบว่ามนุษย์ ต่อสู้ดิ้นรนด้วยความกล้าหาญและความองอาจอันโดดเด่นในยามประสบภัยพิบัติ เหตุใดเขาจึงต่อกรกับโรคระบาดที่ร้ายแรงที่สุดที่ได้ทำลายล้างและทำให้เขาอ่อนแอลงตลอดช่วงเวลาที่ผ่านมา และทำให้ความเศร้าโศก, ความวิตกกังวลและความหดหู่ เข้ายึดครองส่วนลึกของหัวใจที่บอบช้ำของเขา?</p>
+      <p>และบางที สิ่งที่ยืนยันว่าความหิวโหยคือแรงผลักดันประการแรกของเหล่านักกินฟรีในการทำให้ตนเองและเจ้าภาพงานเลี้ยงต้องอับอาย ก็คือการที่นักกินฟรีผู้หนึ่งได้ร้อยกรองบทกวีขึ้น โดยกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كلّ يومٍ أدور في عرصة الحيّ... أشم القتارَ شمَّ الذباب/ فإذا ما رأيتُ نار عروسٍ... أو خِتانًا أو دعوة لصحاب/ لم أعرّج دون التقحُّم لا أرهَبُ...شتمًا ووكزة البوّاب/ مستخفًا بمن دخلتُ عليهم... غير مستأذنٍ ولا هيّاب</blockquote>
+      <p class="ar-translation">“ทุกวันฉันวนเวียนอยู่ในลานบ้านผู้คน สูดกลิ่นควันอาหารราวแมลงวันดมกลิ่นหวาน ครั้นเมื่อแลเห็นแสงไฟแห่งงานแต่ง หรือเสียงเฮฮาในพิธีเข้าสุนัต หรือเชิญเลี้ยงหมู่มิตร ฉันไม่เคยลังเลจะพุ่งเข้าไปทันที ไม่หวั่นต่อคำด่าหรือหมัดจากยามเฝ้าประตู ย่างกายเข้าไปอย่างไม่เกรงใจใคร มิได้ขออนุญาต ไม่ได้เกรงขาม เยี่ยงผู้ถือสิทธิ์แห่งความหิวอย่างภาคภูมิ!”</p>
+      <p>เราสังเกตเห็นในบทกวีนี้ถึง ความโอ้อวด และความภาคภูมิใจอย่างเปิดเผย ในความเป็นนักกินฟรีของตน และความเพลิดเพลินในการสร้างความอับอายให้แก่ผู้คนและสร้างความลำบากให้แก่พวกเขาในโอกาสพิเศษต่างๆ ที่ไม่ได้จัดขึ้นเป็นประจำ เช่น งานแต่งงาน, งานอะกีเกาะฮ์ (โกนผมไฟ), งานวะกีเราะฮ์ (เลี้ยงฉลองสร้างบ้าน) และงานนะกีอะฮ์ (เลี้ยงต้อนรับผู้กลับจากเดินทาง)... เป็นต้น</p>
+      <p>และที่ร้ายกาจไปกว่านั้นคือ เหล่านักกินฟรีได้มีคุณลักษณะอันชาญฉลาดที่ควรค่าแก่การพิจารณา เพราะมันย่อ “บ่อเกิดแห่งปรัชญา” ของพวกเขาไว้ คุณลักษณะนี้ปรากฏให้เห็นในการที่การคำนวณทางคณิตศาสตร์ของพวกเขานั้น ผูกพันอยู่กับการกิน ยิ่งไปกว่านั้น การคำนวณเวลาของพวกเขาก็ยังเกี่ยวข้องกับก้อนขนมปัง และก้อนคำอาหาร ท่านอิบนุลเญาซีย์ได้นำเสนอถ้อยคำมากมายในเรื่องนี้ ซึ่งเราขอยกมาเพียงสองตัวอย่าง</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قال أبو هفَّان: قيل لطفيلي: كم أربعة في أربعة؟ قال: ستَّة عشر رغيفًا</blockquote>
+      <p class="ar-translation">“อบู ฮัฟฟานกล่าวว่า: มีคนถามนักลักแกงผู้หนึ่งว่า: สี่คูณสี่ได้เท่าไหร่? เขาตอบว่า: ก็ได้ขนมปังสิบหกก้อน”</p>
+      <p>และตัวอย่างหนึ่งคือ นักกินฟรีหรือลักแกงอีกผู้หนึ่งที่กำลังรอการมาถึงของใครบางคน เขาได้ประเมินเวลาที่ตนเองรอคอยไป และกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">انتظرتهُ مقدارَ ما يأكلُ الإنسانُ رغيفًا</blockquote>
+      <p class="ar-translation">“ข้ารอเขามทเป็นเวลาประมาณเท่ากับการที่คนๆหนึ่งกินขนมปังหนึ่งก้อน”</p>
+      <p>และเพื่อเป็นการยืนยันถึงความเชื่อมโยงระหว่างปรัชญาแห่งการกินฟรีกับความหิวโหยในระยะรุนแรง ก็ขอยกสิ่งที่ปรากฏใน “มารยาทในการร่วมรับประทานอาหาร” ซึ่งบัดรุดดีน อัลฆ็อซซีย์ไม่เคยละเลยที่จะชี้แจงประเด็นนี้โดยการกล่าวถึงคุณลักษณะเฉพาะบางประการที่เหล่านักกินฟรีมีร่วมกัน และในแนวหน้าของคุณลักษณะเหล่านั้นคือ การงดเว้นจากการพูดคุยขณะกินและดื่ม และการพูดเพียงสั้นๆ เพราะการพูดคุยมากบนโต๊ะอาหารนั้นจะ ขัดขวางความเพลิดเพลิน และลดทอนการกินเพิ่ม และที่ร้ายไปกว่านั้นคือ มันอาจชะลอความอิ่ม โดยเฉพาะอย่างยิ่งหากนักกินฟรีผู้นั้นต้องเผชิญหน้ากับ กลุ่มนักกินจุผู้ตะกละตะกลาม ซึ่งในสายตาของเขาแล้ว พวกเขานั้นคือศัตรูและคู่แข่ง!</p>
+      <p>เราอ่านพบในบริบทนี้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ومن وصاياهم إذا كنت على مائدةٍ فلا تتكلَّم في حال الأكل، وإن كلَّمك من لابدَّ من كلامه فلا تجبهُ إلَّا بـ نعم، فإنَّها لا تُشغلُ عن الأكل</blockquote>
+      <p class="ar-translation">“และหนึ่งในคำสั่งเสียของพวกเขา (คือเหล่านักกินฟรี) คือ หากเจ้าอยู่บนโต๊ะอาหาร จงอย่าได้พูดคุยขณะกำลังกิน และหากผู้ที่จำเป็นต้องสนทนาด้วยพูดกับเจ้า ก็จงอย่าตอบเขาเว้นแต่ด้วยคำว่า ‘ใช่’ เพราะมันไม่ทำให้เสียสมาธิจากการกิน”</p>
+      <p>และหนึ่งในคุณลักษณะเฉพาะของพวกเขาที่สนับสนุนข้อเสนอที่ว่าพฤติกรรมของพวกเขานั้นเกิดจากความรู้สึกหิวโหยก็คือ พวกเขาจะกินอย่างตะกละตะกลามอย่างเห็นได้ชัดโดยไม่ปิดบังอาหารใดๆก็ตามที่พวกเขาพบเจอ โดยไม่ลังเลหรือรีรอ ดังนั้น การเลือกสรรในรายการอาหาร จึงไม่มีอยู่ในพจนานุกรมของพวกเขา เพราะความยากลำบากอันเกิดจากความจำเป็นนั้น ล้มล้างเงื่อนไขของการเลือก และการคัดสรรอาหารที่ดีที่สุดและอร่อยที่สุด</p>
+      <p>การดับความหิวโหยคือสิ่งสำคัญอันดับแรกสุด จากนั้นจึงค่อยตามมาด้วยการเลือกสรรในภายหลังหลังจากที่มั่นใจแล้วว่าอิ่มท้อง</p>
+      <p>ในหมวดนี้ สิ่งที่ปรากฏใน “มารยาทในการร่วมรับประทานอาหาร” อีกหนึ่งประการคือ</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقال بعضم لطفيليٍّ: أوصني، قال: لا تُصادف شيئًا من الطعام وترفع يدكَ وتقول: لعلِّي أصادف أحسن منه، قال: زدني، قال: إذا وجدتَ طعامًا فكُل منه أكْلَ من لم يَرَهُ قطُّ</blockquote>
+      <p class="ar-translation">“และบางคนได้กล่าวแก่นักกินฟรีผู้หนึ่งว่า: จงสั่งเสียข้าเถิด เขาจึงกล่าวว่า: เจ้าจงอย่าได้พบเจออาหารสิ่งใดแล้วยกมือขึ้นพลางกล่าวว่า: บางทีข้าอาจจะเจอสิ่งที่ดีกว่านี้ก็ได้นะ ชายผู้นั้นกล่าวว่า: จงสั่งเสียข้าเพิ่มอีก เขาจึงกล่าวว่า: เมื่อเจ้าพบเจออาหาร ก็จงกินมันเหมือนกับผู้ที่ไม่เคยเห็นมันมาก่อนเลย...”</p>
+      <p>และพวกเขายังมีคุณลักษณะคือ การไปถึงบ้านงานตั้งแต่เนิ่นๆ เพราะหม้อแกงในตอนนั้นจะยังคงเต็มอยู่ และยังไม่มีมือใดมาแตะต้องแน่นอน และพวกเขายังมีคุณลักษณะเด่นคือ การแบ่งปันคำวิงวอนแก่กันและกัน ซึ่งคำวิงวอนเหล่านั้นบังคับให้ผู้ที่ได้ยินต้องเผยฟันออกมาด้วยเสียงหัวเราะและความงุนงง ดังเช่นคำกล่าว:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">متَّعك الله بسعةِ الصدر وطيب الأكل، والصبر على المَضغِ منَّ الله عليكَ بصحَّة الجسم، وكثرةِ الأكل، ودوام الشَّهوة، ونقاءِ المَعدة، وأمتعكَ بضرسٍ طحونٍ، ومعدةٍ هضوم</blockquote>
+      <p class="ar-translation">“ขออัลลอฮ์ทรงประทานความสุขแก่ท่านด้วยหัวใจที่กว้างขวางและการกินที่ดี และความอดทนต่อการเคี้ยว...ขออัลลอฮ์ทรงประทานแก่ท่านซึ่งสุขภาพร่างกายที่ดี, การกินที่มากมาย, ความอยากอาหารที่ยั่งยืน, กระเพาะอาหารที่สะอาด และทรงประทานความสุขแก่ท่านด้วยฟันกรามที่บดเคี้ยวได้ดี และกระเพาะอาหารที่ย่อยได้เยี่ยม”</p>
+      <p>สมมติว่า มนุษย์ผู้หนึ่งที่ความยากลำบากได้โอบกอดเขาไว้, ความขัดสนได้คุ้นเคยกับเขาและความแร้นแค้นได้ตัดสินใจที่จะไม่จากเขาไป ยิ่งไปกว่านั้น เขายังไม่เคยรู้จักมาก่อนถึงสิ่งที่นำมาซึ่งความสุขและความเพลิดเพลิน ซึ่งบางครั้งเกิดจากการกินอาหารที่อร่อยและน่าพึงพอใจ เขาจะมาเริ่มคัดเลือกอาหาร และเริ่มจากสิ่งที่หวานและกลืนง่าย และละเลยสิ่งที่อร่อยและมีคุณภาพน้อยกว่าหรือ? เป็นไปได้สูงว่า เขาจะเขมือบทุกสิ่งที่ถูกวางอยู่บนผ้าปูโต๊ะ โดยผสมผสานระหว่างการเคี้ยวเอื้อง และการกัดกินอย่างรวดเร็ว และควบคู่ไปกับการกินคำใหญ่ๆ และการเคี้ยวอย่างรวดเร็วดังที่นักกินฟรีผู้หนึ่งได้กล่าวไว้ในคำสั่งเสียอันล้ำค่าว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لا تمضغوا مضغ المتعلِّلين الشباع المُتخمين</blockquote>
+      <p class="ar-translation">“พวกท่านจงอย่าได้เคี้ยวเหมือนกับการเคี้ยวของผู้ที่กินเล่น, ผู้ที่อิ่มแล้ว และผู้ที่อิ่มแปล้” เพราะกระเพาะอาหารในสายตาของผู้หิวโหยนั้น คือแก่นกลางของร่างกายของเขา และมีเพียงมันเท่านั้นที่ สูบฉีดชีวิตเข้าไปในตัวเขา, หล่อเลี้ยงเขา และทำให้เขา แข็งแกร่งและมั่นคงยิ่งขึ้น ยิ่งไปกว่านั้น ยังเป็นการ ลับคมความทะเยอทะยานของเขาให้ต่อสู้กับความผันผวนของสถานการณ์และความเลวร้ายของโลกดุนยาต่อไป และจากนั้น เขาก็จะได้รับฉายาว่า: “ผู้เร่งรีบแห่งผู้เดินทาง” (عُجالة الرَّاكب) อันเป็นอุปลักษณ์ถึงความเร่งรีบของเขาในการกิน เพราะ ความกดดันและความตึงเครียดที่ความหิวโหยสร้างขึ้นนั้น ทำลายล้างความเชื่องช้า, ความสุขุมรอบคอบ และการยึดมั่นในมารยาทบนโต๊ะอาหาร</p>
+      <p>นักกินฟรีไม่สมควรที่จะถูกขนานนามว่าเป็น “ไอ้บื้อ” และถูกขับไล่ด้วยถ้อยคำหยาบคาย และเราถลำลึกในการสร้างความอับอายและสะกิดแผลของเขา เพราะเป้าหมายของเขาคือการกลืนกินและดื่มเท่านั้น แม้จะต้องทำด้วยความตะกละตะกลามที่ไม่สามารถปิดบังได้ และนักวินิจฉัยบางท่านก็ได้ หาเหตุผลมาสนับสนุนให้แก่ขโมย ที่จะขโมยขนมปังสักก้อนเพื่อประทังความหิว และช่วยชีวิตของเขาให้พ้นจากการดับสูญ โดยอาศัยหลักการที่ว่า “ความจำเป็นย่อมอนุญาตสิ่งที่ต้องห้าม” (الضرورات تبيحُ المَحظورات)</p>
+      <p>ส่วนการที่ชายผู้หนึ่งจะ “ไปกินฟรี” ที่บ้านหลังหนึ่งและ “เขมือบ” สิ่งที่หม้ออาหารได้มอบให้เพื่อดับ ความหิวโหยนั้น ก็ไม่เป็นอันตรายใดๆเลย แม้จะมี ข้อตำหนิ และข้อบกพร่องทางสังคมที่เกิดจากพฤติกรรมอันน่ารังเกียจนี้ก็ตาม</p>
+      <p>เป็นที่ควรค่าแก่การกล่าวถึงประเด็นหนึ่งที่ดึงดูดความสนใจขณะที่กำลังค้นคว้าใน “ปรัชญา” ที่เล่นตลกนี้ นั่นก็คือ เมื่อก่อนสตรีนั้นถูกกีดกันออกจากการกินฟรี และหากเราจะค้นคว้าตำรามากมายเพียงใดก็จะไม่พบเรื่องเล่าใดๆที่มีศูนย์กลางอยู่ที่สตรีนักกินฟรีเลย แม้ว่าพฤติกรรมนี้ โดยธรรมชาติแล้ว ย่อมไม่ควรเป็นเอกสิทธิ์เฉพาะของบุรุษ ตราบใดที่เรากำลังพูดถึงความหิวโหย, ความขัดสน และสภาพแวดล้อมที่โหดร้ายอย่างยิ่ง เพราะการรวมตัวกันของปัจจัยเหล่านี้ย่อมผลิตนักกินฟรีออกมาโดยอัตโนมัติ</p>
+      <p>แต่ทว่า ข้อยกเว้นย่อมมีอยู่เสมอ เพราะมีกี่มากน้อยแล้วที่บุคคลหนึ่งต้องทนทุกข์ทรมาน (ถึงความยากจนข้นแค้น) แต่เขาก็หาได้ไปกินฟรีจากผู้คนไม่ โดยรักษาเกียรติภูมิของตนไว้ ซึ่งเป็นสิ่งที่ไม่สามารถทดแทนได้ และไม่สามารถแลกเปลี่ยนได้ ด้วยสิ่งใดๆก็ตาม ไม่ว่าคุณค่าของมันในโลกดุนยาของเราจะสูงส่งเพียงใดก็ตาม</p>
+      <p>เมื่อสังคมมีปฏิกิริยาตอบโต้ และเหล่าฏุฟัยลีย์ก็สร้างปรัชญาขึ้นมาเพื่อปกป้องการกระทำของตน คำถามสำคัญจึงเกิดขึ้นว่า อะไรคือ “แรงขับ” ที่แท้จริงที่ผลักดันให้คนกลุ่มนี้ยอมแลกศักดิ์ศรีเพื่อมื้ออาหาร?</p>
+      <p>คำตอบนั้นหยั่งรากลึกไปถึงสภาวะพื้นฐานที่สุดของมนุษย์ นั่นคือ “ความหิวโหย” (อบู อัมเราะฮ์) ซึ่งในบริบทของทะเลทรายอาหรับ มันคือความจริงอันโหดร้าย...</p>
+
+      <h2 class="article-h2">สายใยที่เชื่อมโยงระหว่างความหิวโหยกับการกินฟรี</h2>
+      <p>นักวิจัยชาวอาหรับจำนวนหนึ่งได้ให้ความสนใจกับประวัติศาสตร์ของอาหารในมรดกอาหรับและอิสลาม พวกเขาได้ขุดค้นในมรดกทั้งสองนี้ เพื่อพยายามสำรวจขั้นตอนต่างๆที่อาหารได้ผ่านมา โดยมุ่งหวังที่จะทำความเข้าใจการเปลี่ยนแปลงเชิงคุณภาพ (ทั้งในด้านปริมาณและลักษณะ) ที่เกิดขึ้นและส่งผลกระทบต่อมัน เพราะบริบททางประวัติศาสตร์, สังคมและเศรษฐกิจ ได้มีส่วนอย่างชัดเจนในการเปลี่ยนแปลงอาหารและมุมมองที่คนรุ่นก่อนมีต่อมัน</p>
+      <p>ยิ่งไปกว่านั้น พวกเขายังได้พยายามชี้แจงให้เห็นถึง คลังคำศัพท์ (มุอ์ญัม) ที่นักภาษาศาสตร์ได้สร้างสรรค์ขึ้นในมรดกทั้งสองดังกล่าว ซึ่งเราจะได้พบ (เป็นเพียงตัวอย่าง มิใช่ทั้งหมด) กับพจนานุกรมศัพท์ที่หรูหรา, งดงาม, หลากหลาย, เปี่ยมไปด้วยความเจิดจรัสและความแม่นยำ, กระตุ้นให้เกิดความทึ่งและความประหลาดใจ ซึ่งผูกพันอยู่กับอาหาร, สำรับ, โต๊ะอาหาร, วงสนทนาของสหายสนิทและมิตรสหาย พวกเขาได้แสดงความสามารถอันยอดเยี่ยมในการสร้างสรรค์สำนวนที่แม่นยำและคำพรรณนาที่สละสลวย (ทั้งในรูปแบบร้อยแก้ว) และร้อยกรอง สำหรับการกิน, การดื่ม, ระดับขั้นของความหิว, ประเภทของสำรับอาหารและโอกาสต่างๆ, จำพวกของนักกิน, รูปแบบของอาหารและเศษอาหารที่เหลือ...ฯลฯ พวกเขายังได้ประพันธ์และรวบรวม (ด้วยความเชี่ยวชาญอันประจักษ์) ตำราและงานเขียนมากมายเกี่ยวกับ มารยาทในการร่วมวงสนทนาและการกิน</p>
+      <p>ความจริง ตัวบทมรดกทางวรรณกรรมร้อยแก้ว ที่ให้ความสำคัญอย่างยิ่งยวดกับอาหารนั้นมีอยู่มากมายนับไม่ถ้วนและยากที่จะรวบรวมได้หมด แต่ทว่า ตัวบทกวีนิพนธ์ที่อุทิศให้กับการพรรณนาถึงอาหารและเครื่องดื่มโดยเฉพาะ รวมถึงการบันทึกเรื่องราวจากวงสังสรรค์ที่เต็มไปด้วยปฏิภาณโวหารอันเฉียบคม ความขบขัน การหยอกล้อ และความผ่อนคลายนั้น กลับมีอยู่เพียงน้อยนิดเมื่อเทียบกับงานร้อยแก้วประเภทเดียวกัน</p>
+      <p>และบางที ตัวอย่างที่ส่องประกายชัดเจนที่สุดในเรื่องนี้ก็คือ ประชุมบทกวี (ดีวาน) ของกวีสมัยอับบาซียะฮ์นามว่า อิบนุ อัรรูมีย์ ผู้ซึ่งได้ประพันธ์บทกวีอันวิจิตรบรรจงหลายบท เปรียบเสมือน “กล้องถ่ายรูป” ที่ท่านใช้บันทึก ความรู้สึกอันเกิดจากความเอื้อเฟื้อเผื่อแผ่และการเลี้ยงดูปูเสื่อด้วยความละเอียดสูง ท่านไม่ละเลยที่จะพรรณนาถึงรูปลักษณ์และสีสันของอาหาร และถ่ายทอดให้เราเห็นถึงประเภทและชนิดของเครื่องดื่มที่ประดับประดาอยู่บนโต๊ะอาหาร ยิ่งไปกว่านั้น ท่านยังใส่ใจที่จะถ่ายทอดพฤติกรรมของเหล่านักกินอีกด้วย</p>
+      <p>ขอยกตัวอย่างเพียงเสี้ยวหนึ่งจากบทกวีในประชุมบทกวีของท่านคือ</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">مائدة السيد مشحونةٌ...تُغنيك باللحمان عن اللُّحمى</blockquote>
+      <p class="ar-translation">“โต๊ะอาหารของท่านผู้นำนั้นอุดมสมบูรณ์... ทำให้ท่านอิ่มเอมด้วยเนื้อนานาชนิดจนลืมเลือนเนื้อแท้ (หรือญาติมิตร)”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يا صاحبًا رضي النّذالة صاحبًا...وغدا يُعدُّ مؤاكليه أَراقما</blockquote>
+      <p class="ar-translation">“โอ้ สหายผู้ยอมรับความต่ำช้าเป็นเพื่อน...พรุ่งนี้เขาคงนับเพื่อนร่วมโต๊ะของตนเป็นอสรพิษ” (บทกวีนี้อาจใช้บริบทของอาหารเป็นอุปลักษณ์)</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لعمركَ ما ضيفُ ابن موسى بصائمٍ...إذا ضافهُ يومًا وإنْ عدَّ صائمًا</blockquote>
+      <p class="ar-translation">“ขอสาบานด้วยชีวิตท่าน แขกของอิบนุ มูซา หามิได้ถือศีลอด...หากมาเยือนเขาสักวัน แม้จะถูกนับว่าเป็นผู้ถือศีลอดก็ตาม“ ยิ่งไปกว่านั้น ยังมีตำราขนาดใหญ่ที่ประกอบด้วยสี่เล่มสมบูรณ์ ในชื่อ “ว่าด้วยผู้รัก ผู้เป็นที่รัก สิ่งที่สูดดม และสิ่งที่ดื่มกิน” (محب والمحبوب والمَشموم والمَشروب) ซึ่งผู้รวบรวมได้บรรจุไว้ซึ่งอัญมณีและไข่มุกแห่งกวีนิพนธ์อาหรับที่ขับขานถึงเครื่องดื่ม ทั้งที่อนุญาต (หะลาล) และต้องห้าม (หะรอม) ยิ่งไปกว่านั้น ผู้รวบรวมยังมิได้ละเลยที่จะรวบรวมบทกวีที่ผู้ประพันธ์มีความสามารถเป็นเลิศในการร้อยกรองบทกวีที่พรรณนาถึง “สหายร่วมวงสุรา” และโต๊ะอาหารที่เต็มไปด้วยทั้งของกินและของดื่ม กลับเข้าเรื่องต่อ สถานะที่อาหารได้ครอบครองในวัฒนธรรมอาหรับ-อิสลามนั้น โดยพื้นฐานแล้วผูกพันอยู่กับการแข่งขันเชิงบวกที่เกิดขึ้นระหว่างเผ่าอาหรับต่างๆ เพราะแต่ละเผ่าต่างก็มุ่งหวังที่จะก้าวขึ้นเป็นผู้นำในด้านความเอื้อเฟื้อเผื่อแผ่, ความใจกว้างและความทรนงในเกียรติโดยไม่ต้องการให้เผ่าอื่นใดมาทัดเทียมได้ และการแข่งขันอันน่าชื่นชมนี้เองที่ได้สร้างวัฒนธรรมซึ่งมีศูนย์กลางอยู่ที่การยกย่องความเอื้อเฟื้อและความใจกว้าง และการประณามความละโมบและความตระหนี่ และบางที ตัวบทต่างๆในมรดกที่ถูกรจนาขึ้นในบริบทนี้ก็คือพยานที่ดีที่สุดในเรื่องนั้น ยกตัวอย่างเช่น “คนขี้เหนียว” (บะคีล) นั้น ไม่เพียงแต่จะหวาดกลัวมนุษย์ที่อาจบุกเข้ามาในบ้านและเขมือบอาหารของเขาไป หรือหวาดระแวงการมาถึงของแขกโดยไม่คาดฝันเท่านั้น แต่เขายังได้ก้าวข้ามไปอีกขั้น (หลังจากที่ถูกครอบงำด้วยโรคแห่งความตระหนี่และความขี้เหนียว) จนถึงขั้นเป็นศัตรูกับ “แมลงวัน” เสียด้วยซ้ำ! ซึ่งในสายตาของคนขี้เหนียวแล้ว แมลงวันคือ “ฏุฟัยลีย์” (นักกินฟรี) ตัวฉกาจที่สุดที่คอยรบกวนชีวิตของเขา เพราะมันบินวนเวียนอยู่รอบอาหาร (แม้จะมีอยู่น้อยนิด) และคอยฉกฉวยไปโดยไม่รู้จักเหน็ดเหนื่อย ท่านอบุลหุซัยน์ อิบนุลญัซซารได้เล่าไว้ในหนังสือของท่าน “ฟะวาอิด อัลมะวาอิด” ถึงเรื่องราวขำขันที่ยืนยันในเรื่องนี้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقيلَ لبعض البُخلاء هل قاسيتَ الطُّفيليةَ قط؟ فقال: في كلِّ يومٍ. قيلَ له: وكيفَ ذلك؟ فقال: لا أعرفُ الطفيليةَ إلَّا الذباب</blockquote>
+      <p class="ar-translation">“มีผู้กล่าวกับคนขี้เหนียวบางคนว่า ‘ท่านเคยต้องทนทุกข์กับพวกกินฟรีบ้างไหม?’ เขาตอบว่า ‘ทุกวันเลย’ มีผู้ถามต่อว่า ‘เป็นเช่นนั้นได้อย่างไรกัน?’ เขาจึงตอบว่า ‘ข้าไม่รู้จักพวกกินฟรีอื่นใดเลย นอกจากแมลงวัน’ เราจะไม่ลงลึกในประเด็น “ความขัดแย้งระหว่างความเอื้อเฟื้อเผื่อแผ่กับความตระหนี่ถี่เหนียว” (อันเป็นแก่นกลางของการต่อสู้ทางความคิดนี้) และจะไม่หยุดพิจารณาอย่างละเอียดถึงประวัติศาสตร์ของสำรับอาหารในมรดกอาหรับ-อิสลามอีกทั้งงานบทความนี้ก็ไม่ได้ให้ความสำคัญมากนักกับการเปลี่ยนแปลงที่เกิดขึ้นกับเรื่องการกินการดื่มในมรดกดังกล่าว แต่เป้าหมายหลักคือการชี้แจงให้เห็นว่า การสังหาร “อบู อัมเราะฮ์” (ซึ่งเป็นชื่อเล่นหรือกุนยะฮ์ที่ใช้เรียก ‘ความหิวโหย’) นั้น ไม่ใช่เรื่องง่ายดายเลยในวัฒนธรรมอาหรับ-อิสลาม และบางทีสิ่งที่มายืนยันเรื่องนี้ก็คือการมีอยู่ของอาหารประเภทหนึ่งที่ถูกเรียกว่า “อาหารที่ถูกปล้นชิง” ในวัฒนธรรมนี้ ซึ่งผู้ที่สืบทอดวัฒนธรรมนี้ไม่เคยหยุดที่จะโอ้อวดถึง “หาติม อัฏฏออีย์” (حاتم الطائي - กวีอาหรับยุคก่อนอิสลามผู้เป็นสัญลักษณ์แห่งความเอื้อเฟื้อเผื่อแผ่อย่างหาที่สุดมิได้) และผู้ที่ดำเนินรอยตามแนวทางเดียวกัน ชาวอาหรับโบราณได้จำแนกอาหารออกเป็นสามประเภทหลักคือ 1.อาหารที่ถูกมอบให้: เป็นคำเปรียบเปรยถึงอาหารที่เจ้าบ้านมอบให้แก่แขกของตนด้วยความเอื้อเฟื้อเผื่อแผ่ และใช้ “อาหาร” นั้นเป็นช่องทางในการประกาศว่าหัวใจของเขานั้นนอบน้อมต่อแขกผู้นั้น และกระซิบกระซาบถึงความรักและความนับถือที่มีให้ ซึ่งนำเราไปสู่การพูดถึงรูปแบบอื่นของความเอื้อเฟื้อเผื่อแผ่ นั่นคือ ความเอื้อเฟื้อที่เกี่ยวข้องกับส่วนลึกของหัวใจ, ปลอบประโลมมันและทำให้มันผ่อนคลาย ท่านอบู หัยยาน อัตเตาฮีดี (ผู้โชคร้ายแห่งยุคสมัย - อันเป็นฉายาที่สะท้อนชีวิตอันยากลำบากของท่าน) ได้พรรณนาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أمّا الكرمُ في اللقاء فالبَشاشةُ، وأمّا في العِشرة فالهَشاشةُ، وأما في الأخلاق فالسَّماحة، وأمّا في الأفعال فالنَّصاحةُ، وأمَّا في الغِنى فالمُشاركة، وأمَّا في الفقر فالمواساة</blockquote>
+      <p class="ar-translation">“สำหรับความเอื้อเฟื้อในการพบปะคือความเบิกบาน, ในการคบหาคือความร่าเริง, ในจริยธรรมคือความใจกว้าง, ในการกระทำคือความบริสุทธิ์ใจ, ในยามมั่งมีคือการแบ่งปัน, และในยามยากจนคือการช่วยเหลือเกื้อกูล”</p>
+      <p>2.อาหารที่น่าหวาดหวั่น: เป็นสัญลักษณ์ของความตระหนี่, ความขี้เหนียว และความคับแคบ ซึ่งเป็นข้อบกพร่องที่หากครอบงำผู้ใดแล้ว ก็จะทำให้เขาจวนเจียนสู่ความพินาศ</p>
+      <p>3.อาหารที่ถูกปล้นชิง (หรือลักแกง): “การปล้นชิง” คือการบ่งชี้อย่างชัดเจนถึงการยึดเอาสิ่งของไปโดยใช้กำลังและการช่วงชิงมันไปจากผู้อื่นโดยที่เขาไม่ยินยอม</p>
+      <p>เราสามารถสกัดความหมายจากนิยามของกริยา “นะฮะบะ” (نبه - ปล้นชิง) ในพจนานุกรม “ลิซานุลอาหรับ” ได้ว่า มันคือการกระทำที่ขัดต่อมารยาทอันดีงาม และสวนทางกับสิ่งที่ผู้คนยอมรับร่วมกันในการเคารพสิทธิส่วนบุคคลของผู้อื่นและไม่ละเมิดมัน ทั้งนี้เป็นเพราะ “ผู้ปล้นชิง” (อันนาฮิบ) นั้น มักจะอาศัยความกล้าหาญ (ที่ใช้ในทางที่ผิด) หรือความหลักแหลม (เชิงเล่ห์เหลี่ยม) ของตนเพื่อบรรลุเป้าหมาย โดยไม่สนใจความสูญเสียของฝ่ายที่ถูกปล้นชิงเลยแม้แต่น้อย</p>
+      <p>“การปล้นชิง” หรือการลักแกงที่เกี่ยวข้องกับอาหารนั้น เป็นการกระทำที่มีความเสียหายน้อยกว่าและรุนแรงน้อยกว่าเมื่อเทียบกับการปล้นชิงทรัพย์สินเป็นต้น เพราะ “ผู้ปล้นชิงอาหาร” นั้นมุ่งหวังเพียงเพื่อประทังชีวิต, ดับเสียงท้องร้อง และบรรเทาความหิวโหย นี่คือสิ่งที่เกิดขึ้นในตอนแรกเริ่ม แต่ทว่า การเพิ่มจำนวนขึ้นของผู้ลักแกงได้นำไปสู่การบัญญัติคำเรียกขานใหม่สำหรับการกระทำนี้ นั่นคือ: “อัตตัฏฟีล” (التطفيل - การกินฟรี) เพราะผู้ใดก็ตามที่ยึดถือเอาการปล้นชิงอาหารเป็นนิสัยที่ปฏิบัติเป็นประจำ ก็จะถูกเรียกว่า “ฏุฟัยลีย์” (الطُفيلي - นักกินฟรี) เพราะเขามายังงานเลี้ยงโดยไม่ได้รับเชิญ, บุกเข้าไปกวาดกินจนเกลี้ยง, ทำให้เจ้าภาพอับอายและตกที่นั่งลำบาก; ด้วยการทำลายศักดิ์ศรีของตนเอง, โค่นล้มความทรนงในเกียรติ และละทิ้งความรู้สึกอันดีงามหยิบมือหนึ่งที่มนุษย์ผู้มีสติปัญญาย่อมปกป้องไว้ตลอดการเดินทางของตนในโลกนี้, เพื่อที่จะสามารถเปลี่ยน “อาหารของผู้มีเกียรติจากสถานะของการมอบให้ ไปสู่สถานะของการปล้นชิง”</p>
+      <p>และสิ่งนี้เองที่ผลักดันให้เขาต้องสวมบทบาทที่เขาสร้างขึ้นมาจากจินตนาการ โดยอาศัยเล่ห์เหลี่ยมและการสร้างความสับสน (ซึ่งคนเหล่านี้ช่ำชองในเรื่องนี้) หรือใช้ลิ้นอันคมคายของตนในการ โปรยปรายเรื่องตลกและเกร็ดขำขันให้แก่คนในบ้าน ซึ่งสั่นสะเทือนส่วนลึกของหัวใจด้วยความสบายใจและเสียงหัวเราะ หรืออาศัยความชำนาญในการ หลอกล่อผู้คนและแทรกตัวเข้าไปในหมู่พวกเขา โดยไม่ได้สนใจธรรมเนียมของงานเลี้ยงและมารยาทบนโต๊ะอาหาร เพราะเป้าหมายของเขาคือ การกอบโกย, การลิ้มรส และการเกลือกกลิ้งอยู่บนปากเหวแห่งความสุข โดยไม่แยแส ไม่สนใจต่อ ความอับอายและความอัปยศที่คนพวกนี้อาจต้องเผชิญและนำมาซึ่งความทุกข์ใจ และการที่การกระทำอันน่าตำหนิของคนเหล่านี้อาจทำให้ตนเองตกอยู่ในความลำบากและถูกถอดถอนออกจากความเป็นลูกผู้ชาย ยิ่งไปกว่านั้นคือการที่คนเหล่านี้มีเจตนาที่จะบรรลุซึ่งการแก้แค้นทางสังคม-เศรษฐกิจและการฉกฉวยสิทธิ์ในการกินดื่มที่ถูกกดขี่ และการก่อกบฏต่อโครงสร้างทางสังคมที่ไม่ยุติธรรม เพราะเขามองว่าคนอื่นๆได้กินในสิ่งที่พวกเขาอยากกินและฟุ่มเฟือยตามที่พวกเขาต้องการ โดยปราศจากความลำบาก, ในขณะที่ความหิวโหย กลับเต็มท้องของเขาและความหลงผิด ก็รบกวนหัวใจของเขา ด้วยเหตุนี้ การได้ร่วมกินกับพวกเขาจึงเป็นสิทธิ์ตามธรรมชาติ และไม่มีผู้ใดสามารถริบสิทธิ์นี้ของเขาไปได้</p>
+
+      <h2 class="article-h2">บทส่งท้าย</h2>
+      <p>จากการสำรวจปรากฏการณ์ “อัฏฏุฟัยลีย์” เราจะเห็นวิวัฒนาการที่ซับซ้อน จากการดิ้นรนเพื่อปากท้องอันเนื่องมาจาก “อบู อัมเราะฮ์” (ความหิวโหย) สู่การต่อต้านทางชนชั้นด้วยไหวพริบและบทกวี จนท้ายที่สุดกลายสภาพเป็น “ปรสิต” ที่ใช้ความหน้าด้านเป็นอาวุธเพื่อความอยู่รอดทางสังคม</p>
+      <p>เมื่อหันกลับมามองปรากฏการณ์ “ลักแกง” ในสังคมไทย เราอาจต้องตั้งคำถามว่า ปรากฏการณ์ของเราเหมือนหรือต่างจากพวกเขาอย่างไร?</p>
+      <p>รากเหง้าของ “นักลักแกง” ไทย อาจไม่ได้มาจากความอดอยากแร้นแค้นระดับคอขาดบาดตายเช่นในทะเลทราย แต่อาจมาจากวัฒนธรรม “งานบุญ” ที่เน้นการแบ่งปัน “ความใจกว้าง” ของเจ้าภาพที่ตั้งใจเผื่อแผ่ (เช่น โรงทาน) เป็นทุนเดิม?</p>
+      <p>ในขณะที่ปรัชญาของ “ฏุฟัยลีย์” คือการ “ทวงสิทธิ์” (แม้จะด้วยเล่ห์) จากคนรวยที่หวงแหนอาหาร จนไปทับสิทธิ์ของคนอื่น แต่ปรัชญาของ “นักลักแกง” ไทย อาจเป็นเพียง “การฉวยโอกาส” ที่เน้นความสนุกสนาน แต่เจ้าบ้านอาจไม่สนุกด้วย แต่ไม่ได้มีการต่อต้านเชิงโครงสร้างที่ลึกซึ้งเท่า</p>
+      <p>ดังนั้น แม้พฤติกรรม “กินฟรี” จะปรากฏเหมือนกัน แต่แรงจูงใจและปฏิกิริยาของสังคมอาจแตกต่างกันโดยสิ้นเชิง “ฏุฟัยลีย์” อาจเป็นอาชญากรที่กลายมาเป็นนักปราชญ์ แต่ “นักลักแกง” ของไทย ไม่ได้ถึงขั้นขนาดนั้น แต่เป็นเพียง “สีสัน” ในวงสังสรรค์ ซึ่งวัฒนธรรมลักแกงงาน (ซึ่งภาคอื่นก็มีเช่นเดียวกัน แต่ไม่เด่นเท่านี้) ของเมืองใต้มีสูตรเด็ดที่มืออาชีพต้องรู้และมีการเอาไปแซวกันทั่วบ้านทั่วเมืองคือ 5x8 ใส่ข้าว 6x9 ใส่แกง ทำไมกันล่ะ? “ก็เพราะแกงงานคนใต้มันหรอยนิ” โดยเฉพาะแกงแพะ ซึ่งการประเมินผลความพึงพอใจของอาหารนั้น สามารถประเมินได้จาก การหิ้วแกงงานหลบเรินของแขกผู้มาร่วมงาน โดยมีปัจจัยหลากหลายในการลักแกงงานคือ อาหารอร่อย, บ้านไม่ทำกับข้าว จะลักแกงงานไว้กินมื้อถัดไป, ฝากญาติโกโหติกา และสำหรับการหิ้วแกงลักกลับบ้านเองนั้น อย่างน้อยๆก็สามารถแบ่งได้ 2-3 กรณีคือ</p>
+      <p>1.เขิน อายและจะแอบ แล้วก็แอบเอาแกงวิ่งไปใส่รถ</p>
+      <p>2.กรณีใส่ผ้าคลุมหัว วันนั้นก็อาจมีการปิดเอารัตให้มากกว่าปกติ ก็อาจมีการใส่ผ้าคลุมผืนใหญ่ๆมางาน  ซึ่งก็ไม่ได้มาวาเราะอ์อะไรหรอก แต่จะมาลักแกงแล้วใส่ไว้ในผ้าคลุมนั่นแหละ</p>
+      <p>3.ไม่เขิน ไม่อาย จะเดินเฉิดฉาย เชิดหน้า ถือถุงแกงทั้งงาน จนคนอื่นก็นึกว่าเป็นเจ้าของงาน</p>
+      <p>และจากการวิเคราะห์วัฒนธรรมการลักแกงแล้ว เป็นวัฒนธรรมที่ไม่จำเป็นต้องสอน แต่เกิดจากการเรียนรู้จากแขกในงานรุ่นก่อนๆ และเกิดการสั่งสมประสบการณ์ โดยมีการเพิ่มพูนทักษะด้วยการไปดูงาน และดูปัจจัยตามที่กล่าวมาข้างต้น ซึ่งในประเทศไทยเองนั้นก็ไม่ได้มีการเขียนตำราในประเด็นนี้ขึ้นมาอย่างจริงๆจังๆเหมือนฝั่งอาหรับเขา ก็เลยไม่ทราบว่าใครหรือที่ไหนคือจุดแรกเริ่มที่จุดประกายสิ่งนี้ขึ้มากันแน่</p>
+      <p>มีนักวิจัยจากอาหรับคนหนึ่ง สะอีด อัลอะวาดีย์ ได้ชี้ให้เห็นประเด็นที่สำคัญอย่างยิ่งยวดในงานเขียนของเขาเองเรื่อง “อาหารและวาทกรรม” (الطعام والكلام) ซึ่งมีใจความว่า: “ปรัชญาแห่งการลักแกง” นั้น ไม่ได้จำกัดอยู่แค่การกระทำส่วนบุคคลอีกต่อไป (กล่าวคือ การที่นักกินฟรีเพียงลำพังต้องใช้ความพยายามอย่างยากลำบากเพื่อบุกเข้าไปในงานเลี้ยงเพียงคนเดียว) แต่ทว่า ความบิดเบือนได้เข้ามาแปดเปื้อนมัน และทำให้มันเบี่ยงเบนไปจากเป้าหมายดั้งเดิมที่มันเคยเป็นในครั้งแรก จนกลายเป็น “ปรัชญาหมู่คณะ” การลักแกงจึงพัฒนากลายเป็น “อาชีพ” ไป หลังจากที่บางคนพยายามสร้างความชอบธรรมให้กับพฤติกรรมนี้ และมอบเหตุผลสนับสนุนทางศีลธรรมให้แก่การกระทำดังกล่าว โดยมิได้คำนึงเลยว่า สิ่งที่ทำให้พวกเขาเคยได้รับการยอมรับ (หรือการทำเป็นมองไม่เห็น) และพฤติกรรมของพวกเขาเคยเป็นที่อดทนได้นั้น โดยพื้นฐานแล้วเกิดจาก “ความเห็นอกเห็นใจทางสังคม” ที่ตั้งอยู่บนความเวทนาสงสาร และความพยายามที่จะเอาชนะความยากจนข้นแค้นเพื่อไม่ให้มันลุกลามและแผ่ขยายไปในสังคม</p>
+      <p>ด้วยเหตุนี้ การพยายามหาเหตุผลเข้าข้างตัวเองเช่นนี้ ย่อมจะนำไปสู่การที่หัวใจของผู้คนจะตีตัวออกห่างจากพวกเขา และจิตใจก็จะรังเกียจพวกเขาอย่างหลีกเลี่ยงไม่ได้</p>
+      <p>และเรื่องนี้ปรากฏให้เราเห็นอย่างชัดเจนผ่านการที่นักกินฟรีนาม “บุนาน” (بُنان) ผู้ซึ่งถูกนับว่าเป็นหนึ่งในนักกินฟรีที่โดดเด่นที่สุดในวัฒนธรรมอาหรับ-อิสลาม เขาได้เปิดฉากโจมตีด้วยวาจาต่อชายผู้หนึ่งที่ห้ามเขาเข้าบ้าน โดยประณามเขาด้วยความขี้เหนียวและความโง่เขลา ราวกับว่าการบุกเข้าบ้านหรือเข้างานของตนนั้นเป็น “สิทธิอันชอบธรรม” ของเขา! และอีกผลงานหนึ่งที่สร้างความเจ็บแสบไม่แพ้กันคือ บุนานเขาได้ไปยังงานแต่งงานงานหนึ่งแต่ไม่สามารถเข้าไปข้างในได้ เขาจึงเดินตรงไปยังร้านขายของชำแห่งหนึ่งและขอยืมถ้วยมาจำนวนหนึ่ง เมื่อไปเคาะประตู คนเฝ้าประตูก็ได้สอบถามว่า เจ้าเป็นใคร เขาจึงตอบกลับไปด้วยความหน้าด้านอย่างที่สุดว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أراك لستَ تعرفني، أنا الذي بعثوني أشتري لهم الأقداح</blockquote>
+      <p class="ar-translation">“แหม่ เจ้าคงไม่รู้จักข้าสินะ ข้านี่แหละคือคนที่พวกเขาใช้ให้มาซื้อถ้วยให้”</p>
+      <p>เขาจึงได้เข้าไปข้างในและกินอาหารด้วยความตะกละ และความละโมบอย่างเห็นได้ชัด จนกระทั่งกระเพาะของเขาเต็มพิกัด จากนั้น เขาก็ได้นำถ้วยไปคืนและรับแหวนที่มัดจำไว้คืนมา ซึ่งได้มัดจำไว้กับคนขายของชำเพื่อเป็นหลักประกันในการยืมถ้วยที่ได้ช่วยอำนวยความสะดวกให้เขาสามารถเข้าร่วมงานเลี้ยงนั้นได้</p>
+      <p>ด้วยเหตุนี้ ปรัชญานี้จึงกลายเป็น “อันตราย” ต่อสังคมอาหรับ-อิสลาม (รวมถึงสังคมไทยด้วย) เพราะมันได้เปลี่ยนไปพึ่งพา “ความหน้าด้านในคำพูด”, “ความแข็งกร้าวในการกระทำ” และ “ความก้าวร้าวในการปฏิบัติ” ที่แสดงออกผ่านการต่อต้านต่อ “โครงสร้างทางสังคมที่ไม่เป็นธรรม” (ในสายตาของพวกเขา) ซึ่ง “ผูกขาดความมั่งคั่งของพระเจ้า ไว้กับคนเพียงกลุ่มน้อย” และนี่คือสิ่งที่ผลักดันให้คนบางกลุ่มลุกขึ้นต่อสู้กับพวกเขา และหลีกเลี่ยงที่จะสร้างสายสัมพันธ์ทางครอบครัวกับใครก็ตามที่สังกัดอยู่ในกลุ่มนี้ ซึ่งในตอนแรกเคยเป็นที่น่ารังเกียจ แต่ต่อมาชาวอาหรับ (และคนในสังคม) ก็ค่อยๆคุ้นชินกับมัน ก่อนที่จะเห็นพ้องต้องกันในการต่อต้านมันในที่สุด</p>
+      <p>และบางทีผลพวงอันเลวร้ายของปรัชญานี้ก็คือ การที่นักกินฟรีจะยิ่งถลำลึกสู่ “การพึ่งพาผู้อื่น” จนจะยึดถือพฤติกรรมนี้เป็นกิจวัตรและนิสัยประจำตัว และท้ายที่สุดจะนำไปสู่การเพิ่มจำนวนของ “พวกมือไม่พายเอาเท้าราน้ำ” และคนขี้เกียจในสังคมอย่างน่าตกใจ พวกเขาจะยังคง “หวังพึ่ง” ให้ผู้อื่นเลี้ยงดูปูเสื่อและปรนเปรอพวกเขาอยู่เสมอ โดยไม่ใช้ความพยายามแม้แต่น้อยในการปรับปรุงสภาพความเป็นอยู่ของตนเองและยกระดับสถานะทางสังคม เพราะ “มือที่ให้” (ดังที่ชาวมัฆริบอัลอักศอนิยมกล่าวกัน) ย่อมเหนื่อยล้าจากการให้และการทำความดี ในขณะที่ “มือที่รับ” กลับชื่นชอบในสิ่งนั้น เพราะมัน ง่ายดายและสะดวกสบาย</p>
+      <p>โดยสรุปแล้ว ปรัชญาแห่งการลักแกงนั้น ได้ถูกสร้างขึ้นบนคุณลักษณะบางประการ และมีคุณสมบัติเฉพาะหลายอย่าง ซึ่งเราได้พยายามชี้ให้เห็นเป็นนัย บ้าง หรือหยุดพิจารณาบ้างเป็นครั้งคราว แต่ทว่า แก่นแท้ และหัวใจของปรัชญานี้อยู่ที่การที่มันไม่ได้มอง “โลก” ด้วยสายตาปกติที่สอดคล้องกับมุมมองของผู้คนทั่วไป แต่ทว่า มันก้าวล้ำไปกว่านั้นและมองโลกและชีวิตด้วย มุมมองที่ยึด “อาหาร” เป็นศูนย์กลาง โดยเห็น “การดำรงอยู่” เป็นเพียง “อาหาร” วัดค่ามันด้วย “ตรรกะแบบเห็นแก่กิน” ซึ่งมันคือ “การแสยะยิ้ม” ที่มีเป้าหมายเพื่อทวงคืน “สิทธิทางสังคมที่ถูกลิดรอน” และบางทีเป้าหมายนี้ก็ช่างขัดแย้งกับเป้าหมายดั้งเดิมที่ปรัชญานี้ได้ก่อกำเนิดขึ้น ซึ่งในระยะแรกเริ่มเป็นเพียง “การร้องขอ” ของขวัญ (الوَهْبَ), การให้ (المنحَ) และความใจกว้าง (السَّخاء), วิงวอนการบริจาค และการทำความดี และหวังที่จะได้ “ดำดิ่ง” ลงไปในวันเวลาอันอุดมสมบูรณ์ที่สุด และอยู่ห่างไกลจากความหิวโหยอันแสนสาหัส ดังนั้น ถ้าใครคิดจะไปลักแกงบ้านไหน ก็อย่าลืมว่า ถุง 5x8 ใส่ข้าว 6x9 ใส่แกงกัน</p>
+      <p>บรรณานุกรม</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">1. - ابن الجوزي، أخبار الأذكياء، بيروت: دار ابن حزم، ط1، 2003</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">2. - ابن الرومي، ديوان ابن الرومي، ج6، تحقيق: حسين نصار، القاهرة: دار الكُتب والوثائق القومية، ط3، 2003</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">3. - ابن أبي الدُّنيا، قِرى الضيف، تحقيق: عبد الله بن حمد المنصور، الرياض: مكتبة أضواء السلف، ط1، 1997</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">4. - ابن منظور، لسان العرب، القاهرة: دار المعارف، د. ط، د. ت.</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">5. - البغدادي، الخطيب. التطفيل وحكايات الطفيليين وأخبارهم ونوادر كلامهم وأشعارهم، دمشق: مطبعة التوفيق، د. ط، 1346هـ.</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">6. - التوحيدي، أبو حيان. مثالب الوزيرين، تحقيق: إبراهيم الكيلاني، دمشق: دار الفكر، ط1، 1961</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">7. - الثعالبي، أبو منصور. ثمارُ القلوب في المُضاف والمَنسوب، تحقيق: محمّد أبو الفضل إبراهيم، القاهرة: دار المعارف، د. ط، 1985</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">8. - العامري، بدر الدين الغزي. آدابُ المؤاكلة، تحقيق: عمر موسى باشا، دمشق/ بيروت: دار ابن كثير، ط1، 1987</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">9. - الشيخ، محمَّد. مع أبي حيان التوحيدي في شَقوته، بيروت: مركز دراسات الوحدة العربية، ط1، 2012</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">10. - العوادي، سعيد. الطعام والكلام: حفرياتٌ بلاغية ثقافية في التراث العربي، الدار البيضاء: إفريقيا الشّرق، ط1، 2023</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">11. - القرطبي، يوسف بن عبد الله بن عبد البر. بهجة المَجالس وأنسُ المُجالس وشحذُ الذّهن والهاجِس، المجلد الأول، تحقيق: محمد مرسي الخولي، بيروت: دار الكُتب العلمية، د. ط، د. ت.</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">12. - الهمذاني، بديع الزمان. المقامات: المقامة المجاعية، تحقيق: محمد محيّ الدّين، مصر: مدرسة دار العلوم، د. ط، 1923</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">13. - ابن أحمد الرفاء، السري. المُحبُّ والمحبوبُ والمشمومُ والمَشروب، ج4، تحقيق: ماجد حسن الذّهبي، دمشق: مطبوعات مَجمع اللغة العربية، د. ط، 1986</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">14. - حبيدة، محمد. المغرب النَّباتي: الزراعة والأغذية قبل الاستعمار، الدار البيضاء: منشورات مُلتقى الطرق، ط1، 2018</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">15. - شبوح، إبراهيم. المائدةُ في التراث العربي الإسلامي، لندن: منشورات الفرقان للتراث الإسلامي، د. ط، 2004</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">16. الجزَّار، أبو الحسين جمال الدِّين. فوائد المَوائد، ج2، تحقيق: إبراهيم السامرائي، مجلة: المجمع العلمي العراقي، بغداد، العدد 20، مارس، 1977</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">17. بدر الدين الغزي العامري، آداب المؤاكلة، تحقيق: عمر موسى باشا، (دمشق/ بيروت: دار ابن كثير، ط1، 1987)، ص32</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">18. محمد حبيدة، المغرب النباتي: الزراعة والأغذية قبل الاستعمار، (الدار البيضاء: منشورات ملتقى الطرق، ط1، 2018)، ص121</blockquote>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). กินฟรีมีปรัชญา ‘อัฏฏุฟัยลีย์’ และปรากฏการณ์ ‘นักลักแกง’ แห่งโลกอาหรับ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/al-tufayli-freeloaders.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
