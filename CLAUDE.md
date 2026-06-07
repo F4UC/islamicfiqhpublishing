@@ -179,6 +179,14 @@
 
 * **กฎข้อที่ 69:** **[ผู้เขียนประจำหมวด kalam]** บทความในหมวด **kalam (เทววิทยา)** มีผู้เขียนคือ **มัรกัส อัลอิมาม อัลอัชอะรีย์** ไม่ใช่ **กองบรรณาธิการ** เนื่องจากหมวดนี้มีผู้ดูแลเฉพาะของตนเอง — ใช้บังคับกับบทความ kalam ทั้งหมดทั้งที่มีอยู่และในอนาคต (ตั้งค่าในฟิลด์ `author` ของ `articles.json` และในไบไลน์/การอ้างอิงที่แสดงผล) ส่วนหมวดอื่นยังคงใช้ `กองบรรณาธิการ` ตามเดิม
 
+* **กฎข้อที่ 70:** **[ทะเบียนหมวดหมู่ — Category Registry]** `categoryLabel` ต้อง**เท่ากับชื่อหมวดที่มีอยู่จริง**เสมอ (ชื่อในเมนู nav และหัวเรื่องหน้า `/pages/{key}.html`) ห้ามประดิษฐ์ชื่อใหม่หรือเติมส่วนขยายเช่น "…อิสลาม" หรือคำพ้องความหมายใดๆ ทะเบียนที่เป็นทางการ (key → label):
+  - `nitisart` → นิติศาสตร์
+  - `kalam` → กะลาม
+  - `history` → ประวัติศาสตร์
+  - `hadith` → หะดีษ
+  - `hajj` → หัจญ์ & อุมเราะฮ์
+  บทความใหม่ทุกบท **ต้องใช้ `categoryKey` ที่มีอยู่แล้ว** และ**คัดลอก `categoryLabel` มาจากทะเบียนนี้แบบตรงตัวอักษร** ห้ามสร้าง key ใหม่หรือ label ที่เพี้ยนไปจากทะเบียน — แหล่งอ้างอิงที่เป็นความจริง (source of truth) คือ nav CAT_LINKS ใน `main.js` + หัวเรื่องของแต่ละ `/pages/{key}.html`
+
 ### หมวดที่ 13: การจัดวางและการแสดงผลตัวบทอาหรับในบทความ (Arabic Block Layout & Tashkeel)
 
 * **กฎข้อที่ 58:** **[ลำดับบล็อกอาหรับเหนือคำแปล]** ในบทความที่ใช้ระบบ `.ar-quote` (เช่น บทความต้นแบบ moon-sighting) บล็อกตัวบทภาษาอาหรับต้องวางอยู่**เหนือ**คำแปลภาษาไทย (`.ar-translation`) เสมอ โดยเรียงลำดับในซอร์สโค้ดเป็น อาหรับก่อน แล้วจึงตามด้วยคำแปลไทย (ห้ามซ่อนตัวบทอาหรับไว้ใน `<details>` toggle อีกต่อไป)
@@ -325,6 +333,14 @@
   - `dateDisplay` must always match the `date` field in `articles.json`, formatted as "DD Month YYYY" (BE calendar).
 
 * **Rule 69:** **[kalam category author]** Articles in the **kalam (เทววิทยา)** category are authored by **มัรกัส อัลอิมาม อัลอัชอะรีย์**, not **กองบรรณาธิการ** — this category has a dedicated maintainer. Applies to all current and future kalam articles (set in the `articles.json` `author` field and in any rendered byline/citation). Other categories keep `กองบรรณาธิการ`.
+
+* **Rule 70:** **[Category Registry]** `categoryLabel` must always **equal the existing category name** — the nav menu label and the `/pages/{key}.html` hero title. Never invent labels or append variants like "…อิสลาม" or synonyms. Canonical registry (key → label):
+  - `nitisart` → นิติศาสตร์
+  - `kalam` → กะลาม
+  - `history` → ประวัติศาสตร์
+  - `hadith` → หะดีษ
+  - `hajj` → หัจญ์ & อุมเราะฮ์
+  Every new article **must reuse an existing `categoryKey`** and **copy its `categoryLabel` verbatim from this registry** — never create new keys or labels that diverge from the registry. Source of truth = nav CAT_LINKS in `main.js` + each `/pages/{key}.html` hero.
 
 ## Section 13: Arabic Block Layout & Tashkeel
 
