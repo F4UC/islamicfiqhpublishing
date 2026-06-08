@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>นักบูรพาคดีกับการตีความกฎหมายอิสลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์เชิงนิติศาสตร์อิสลามว่าด้วยทัศนะของนักบูรพาคดีต่อการอิจติฮาด ชะรีอะฮ์ อุศูลุลฟิกฮ์ และฟิกฮ์ พร้อมการหักล้างข้อกล่าวหาที่ว่าฟิกฮ์อิสลามลอกกฎหมายโรมัน">
+<meta name="keywords" content="นักบูรพาคดี, การอิจติฮาด, อุศูลุลฟิกฮ์, ฟิกฮ์, ชะรีอะฮ์, นิติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="นักบูรพาคดีกับการตีความกฎหมายอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="นักบูรพาคดีมองการอิจติฮาด ชะรีอะฮ์ และฟิกฮ์อิสลามอย่างไร และเหตุใดข้อกล่าวหาที่ว่าฟิกฮ์อิสลามลอกกฎหมายโรมันจึงไม่เป็นความจริง">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/orientalists-and-ijtihad.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="orientalists-and-ijtihad">
+<div id="readingProgressBar"></div>
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์</a>
+      <h1 class="article-feature-title">นักบูรพาคดีกับการตีความกฎหมายอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ถ้าจะพูดถึงมุมมองของนักวิชาการตะวันตก [ที่เรียกว่า ‘นักบูรพาคดี’] ที่มีต่อ “การอิจติฮาด” (การวินิจฉัยปัญหาศาสนาโดยผู้เชี่ยวชาญ) เราจำเป็นต้องคุยกันหลายประเด็น นั่นเพราะวิธีคิดของพวกเขาไม่ได้แค่ศึกษาเฉยๆ แต่พยายามจะทำเป็น “รื้อ” รากฐานที่มีการอิจติฮาดตั้งอยู่ แล้ว “โจมตี” ผลลัพธ์ที่ได้จากการอิจติฮาด และ “บิดเบือน” ความพยายามของบรรดานักปราชญ์ (อุละมาอ์) ที่เหนื่อยยากในการสร้างและสนับสนุนแนวคิดนี้</p>
+
+      <p>ประเด็นหลักๆที่ต้องคุยกัน (อย่างน้อยก็แบบย่อๆ) ก็มีดังนี้</p>
+
+      <ol>
+        <li>นักบูรพาคดีกับชะรีอะฮ์ (กฎหมายอิสลาม)</li>
+        <li>นักบูรพาคดีกับอุศูล (หลักการ/ที่มาของกฎหมาย)</li>
+        <li>นักบูรพาคดีกับฟิกฮ์ (ตัวบทกฎหมาย/นิติศาสตร์)</li>
+      </ol>
+
+      <h2 class="article-h2">นักบูรพาคดีมอง “ชะรีอะฮ์” (กฎหมายอิสลาม) อย่างไร?</h2>
+
+      <p>ในส่วนนี้คงไม่พูดถึงทุกอย่างที่นักบูรพาคดีวิจารณ์ชะรีอะฮ์ เช่น ที่มาของมัน ความครอบคลุม หรือความอมตะของมัน แต่จะขอหยิบยกแค่ “บางแง่มุม” ที่พวกเขามองชะรีอะฮ์ที่มันไปเกี่ยวข้องหรือโยงไปถึงเรื่องการอิจติฮาด</p>
+
+      <p>ต้องบอกว่า นักบูรพาคดีส่วนใหญ่โทษว่า ที่ชาวมุสลิม “ล้าหลัง”, “อ่อนแอ” และ “หยุดนิ่ง” ในยุคใหม่นี้...ทั้งหมดเป็นเพราะ “ชะรีอะฮ์อิสลาม”</p>
+
+      <p>เหตุผลที่เขาว่าอย่างนั้นคือ เพราะชะรีอะฮ์ดันไป “รวม” เรื่องทางโลก (การทำมาหากิน) กับเรื่องทางธรรม (ศาสนา) ไว้ด้วยกัน แถมกฎเกณฑ์ต่างๆ ก็ “อมตะ” ไม่ยอมเปลี่ยนแปลง พอเป็นแบบนี้ มันก็เลยไม่สอดคล้องกับยุคสมัยและสภาพแวดล้อมที่เปลี่ยนไป</p>
+
+      <p>นอกจากนั้น พวกเขายังบอกอีกว่า ชะรีอะฮ์เป็นกฎหมายที่ไม่รู้จัก “เสรีภาพทางความคิด” ไม่เชื่อใน “การพัฒนาทางวิทยาศาสตร์” ก็เลยกลายเป็นกฎหมายที่ “แข็งทื่อเหมือนหิน” มันไม่ตอบสนองต่อความรู้ใหม่ๆเลย ที่เป็นแบบนี้ก็เพราะดันไปเชื่อเรื่อง “กอฎอ-กอดัร” (การกำหนดสภาวะ) ซึ่งความเชื่อนี้นี่แหละที่ทำให้มุสลิมเฉื่อยชาและไม่พัฒนา</p>
+
+      <p>มีตัวอย่างก็ตอนที่เรอน็องไปบรรยายที่ซอร์บอนน์ เขาบอกว่า “อิสลามไม่สนับสนุนวิทยาศาสตร์ ปรัชญา หรือการค้นคว้าอิสระเลย” แต่กลับเป็น “อุปสรรค” ด้วยซ้ำ เพราะดันไปเชื่อเรื่อง “สิ่งเร้นลับ”, “เรื่องเหนือธรรมชาติ” และ “กอฎอ-กอดัร”</p>
+
+      <p>เขาบอกว่า พวกมุสลิมที่ไปยุ่งกับปรัชญาก็โดนข่มเหง ถูกเผาหนังสือ แถมสิ่งที่นักปรัชญามุสลิมทำไว้ก็ไม่ได้มีคุณค่าอะไรมากมาย เรอน็องสรุปเลยว่า “จุดเด่นของมุสลิมคือการเกลียดชังวิทยาศาสตร์ และเชื่อว่าการค้นคว้าวิจัยคือการปฏิเสธศาสนา เป็นเรื่องโง่เขลาและไร้ประโยชน์</p>
+
+      <p>เช่นเดียวกัน ผู้นำตะวันตกบางคน ซึ่งคนพวกนี้ก็ไม่รู้อะไรเกี่ยวกับอิสลามเลย นอกจากเรื่องโกหกที่นักบูรพาคดีป้อนให้ ก็พยายามยัดเยียดข้อหาหัวโบราณและความล้าหลังให้กับกฎหมายอิสลามด้วย</p>
+
+      <p>สรุปคือ นักบูรพาคดีฟันธงว่าชะรีอะฮ์นั้น “แข็งทื่อ” (ไม่ยืดหยุ่น) ต่อต้านความก้าวหน้าทางวิทย์และเกลียดการเปลี่ยนแปลงทุกชนิด</p>
+
+      <p>เหตุผลก็เดิมๆ ก็เพราะ…มันรวมเรื่องศาสนากับเรื่องทางโลกไว้ด้วยกัน และหลักการของมันก็ขัดขวางไม่ให้สมองได้คิดและค้นคว้า</p>
+
+      <p>แต่ท่าทีของนักบูรพาคดีที่ว่ามานั้น มันถูกหักล้าง (หรือก็คือไม่จริง) ด้วยข้อเท็จจริงที่ว่า...“ก่อน” ที่จะมีชะรีอะฮ์อิสลาม มนุษยชาติจมอยู่ในความมืดมิดแค่ไหน ทั้งความเชื่อ ค่านิยม สังคม ศีลธรรม พอท่านนบีมุฮัมมัดนำชะรีอะฮ์นี้มา มนุษยชาติก็เริ่มต้นยุคใหม่แห่งความก้าวหน้าและอารยธรรม และแม้แต่ “โลกตะวันตกเอง” ก็ไม่มีทางหลุดพ้นจากยุคกลางได้เลย ถ้าไม่ใช่เพราะชะรีอะอ์อิสลาม และเพราะชะรีอะฮ์คือ กฎแห่งสติปัญญา, วิทยาศาสตร์, ความเสมอภาคและความยุติธรรม</p>
+
+      <p>หลักฐานก็มีเยอะแยะ ทั้งในอัลกุรอานและหะดีษที่สั่งให้เรา “สังเกต”, “คิดวิเคราะห์” และ “เรียนรู้ (หาความรู้) ตั้งแต่ในเปลจนถึงหลุมศพ” ข้อเท็จจริงนี้มันชัดเจนมาก จนใครก็ตามที่ “เคารพสติปัญญาของตัวเอง” และใช้ “กระบวนการทางวิทยาศาสตร์” (ที่เป็นกลาง ซื่อสัตย์ แม่นยำ และอยากหาความจริง) ก็ปฏิเสธคำสอนเหล่านี้ไม่ลง</p>
+
+      <p>ว่ากันตามตรง การที่นักบูรพาคดีพยายามกุเรื่องโกหกพวกนี้ขึ้นมา ส่วนหนึ่งก็เพราะพวกเขาไม่อยากให้ประชาชาติอิสลามลุกขึ้นมาพัฒนาหรือก้าวหน้าได้ เป้าหมายที่ซ่อนอยู่เบื้องหลังคำกล่าวหาพวกนี้ คือการพยายามผลักดันให้ชาวมุสลิมยอมรับกฎหมายและระบบของตะวันตกมาเป็นธรรมนูญชีวิต และใช้มันในทุกๆเรื่อง</p>
+
+      <p>นี่คือความพยายามที่จะล่อให้มุสลิมทิ้งศาสนาและกฎหมายของตัวเอง เพราะนักบูรพาคดีรู้ดีว่าจุดแข็ง, เกียรติยศและการไม่ยอมก้มหัวให้ใครของมุสลิมนั้น มาจากการ “ยึดมั่น” ในศาสนาของพวกเขา...และแน่นอนว่า พวกเขาไม่อยากให้มุสลิมแข็งแกร่งหรือมีเกียรติ แต่อีกส่วนหนึ่งก็เพราะมุสลิมเองที่ทำลายมุสลิมด้วยกันเอง อันนี้ก็โทษใครไม่ได้นอกจากตัวเอง</p>
+
+      <p>จริงๆ แล้ว “การอิจติฮาด” นี่แหละ คือสิ่งที่สร้าง “ขุมทรัพย์ทางปัญญา” ซึ่งเต็มไปด้วยข้อชี้ขาดและทัศนะต่างๆที่ใช้แก้ปัญหาทุกอย่างของประชาชาติ ผลงานเหล่านี้เป็น “พยาน” ยืนยันได้เลยว่า บรรดา “ฟุกอฮาอ์” (นักนิติศาสตร์) นั้นมีวิสัยทัศน์กว้างไกลแค่ไหน มีมุมมองเชิงวิทยาศาสตร์ที่แม่นยำยังไง และมีความสามารถในการสรุปความที่เฉียบคมและปราศจากอคติ (อารมณ์ใฝ่ต่ำ) ได้อย่างไร</p>
+
+      <p>ซึ่งสิ่งที่พวกเขาทำได้นี้ อยู่ในระดับที่ไม่มีประชาชาติไหน ก่อนหน้าหรือหลังจากพวกเขา ทำได้เทียบเท่าเลย</p>
+
+      <p>ดังนั้น การที่นักบูรพาคดีเปิดแคมเปญโจมตีชะรีอะฮ์ว่าแข็งทื่อและหัวโบราณนั้น มันจึงเท่ากับการลบล้าง (ยกเลิก) คุณค่าของผลงานจากการอิจติฮาดทั้งหมด พวกเขากำลังตัดสินว่า การอิจติฮาดที่ผ่านมา “ไม่ได้สร้างอะไรใหม่” หรือ “ไม่มีประโยชน์” อะไรเลยในแง่ของกฎหมาย</p>
+
+      <p>พวกเขากำลังบอกว่า...ประชาชาติอิสลามควร “เลิก” สนใจศึกษามรดกความรู้ด้านฟิกฮ์ (นิติศาสตร์) ได้แล้ว เพราะมันไร้ประโยชน์และให้หันหน้าไปพึ่งกฎหมายและระบบของตะวันตกเสีย เพื่อที่จะได้ตามทัน “ชาติที่เจริญ” แล้ว และจะได้มีส่วนร่วมในอารยธรรมยุคใหม่กับเขาบ้าง</p>
+
+      <h2 class="article-h2">นักบูรพาคดี กับ “อุศูล” (ที่มาของกฎหมาย)</h2>
+
+      <p>วิชาอุศูล (<span class="ar-inline" lang="ar" dir="rtl">أصول الفقه</span>) ถ้าจะพูดให้ง่าย มันคือ “คู่มือ” หรือ “หลักการและเหตุผล” ที่นักวิชาการอิสลาม (ฟุกอฮาอ์) ใช้ในการค้นคว้าและ “อิจติฮาด” (วินิจฉัยกฎหมาย) นั่นเอง</p>
+
+      <p>ต้องบอกว่า นักบูรพาคดีเขาเขียนเกี่ยวกับวิชาอุศูลนี้น้อยมากๆ เมื่อเทียบกับวิชาการอิสลามแขนงอื่นๆ แต่ถึงแม้จะเขียนน้อย...“ความอันตราย” ของมันกลับไม่น้อยตามเลย เผลอๆจะร้ายแรงกว่าเรื่องอื่นด้วยซ้ำ</p>
+
+      <p>เพราะอะไร? เพราะแนวคิดเพี้ยนๆหรือภาพบิดเบือนที่พวกเขามีต่ออะกีดะฮ์ (หลักความเชื่อ) และชะรีอะฮ์ (กฎหมายอิสลาม) นั้น ดันมีรากฐานมาจากความไม่เข้าใจหรือความเข้าใจผิดๆของพวกเขาต่อวิชาอุศูล</p>
+
+      <p>ใครที่ไปตามอ่านงานของพวกเขาเกี่ยวกับอุศูลก็จะเห็นเจตนาร้ายตั้งแต่แวบแรก พวกเขาจงใจโฟกัสไปที่แหล่งที่มา หรือหลักฐานเท่านั้น...แต่พวกเขาไม่แตะเรื่องตัวบทกฎหมาย (<span class="ar-inline" lang="ar" dir="rtl">الأحكام</span>) หรือหลักการตีความ (<span class="ar-inline" lang="ar" dir="rtl">الدلالات</span>) หรือเจตนารมณ์ของกฎหมาย (<span class="ar-inline" lang="ar" dir="rtl">المقاصد</span>) เลย</p>
+
+      <p>ที่เขาทำแบบนี้ก็เพราะเขารู้ดีว่า ถ้า “ทำลาย” หลักฐาน หรือทำให้แหล่งที่มาน่าสงสัยได้...ทุกอย่างที่ถูกสร้างขึ้นมาจากแหล่งที่มานั้น (ก็คือตัวกฎหมาย) ก็จะพังตามไปด้วยนั่นเอง</p>
+
+      <p>ซึ่งหลักฐานที่ว่านี้ก็คือ “ตัวบท” (นัศ) ที่มาจากอัลกุรอานและซุนนะฮ์ จากนั้นจึงเป็น “การอิจติฮาด” ภายในกรอบของตัวบทนี้ ซึ่งการอิจติฮาดเองก็มีเครื่องมือหลายอย่างที่นักวิชาการอุศูลเขาก็มาถกเถียงกันว่าอันไหนใช้ได้หรือไม่ได้</p>
+
+      <p>ทีนี้มาดู “หลักฐานชิ้นแรก” และเป็น “หัวใจหลัก” ก็คือ “อัลกุรอาน” พอมาถึงเรื่องนี้ นักบูรพาคดีเริ่มต้นด้วยธงในใจที่ว่า อัลกุรอานเป็นสิ่งที่มนุษย์แต่งขึ้น</p>
+
+      <p>แม้ว่าพวกเขาจะเถียงกันเองว่า “ใคร” เป็นคนแต่ง แต่สิ่งที่พวกเขามั่นใจเหมือนกันคือ มันไม่ใช่วะฮีย์จากอัลลอฮ์</p>
+
+      <p>บางคนก็บอกว่า อัลกุรอานได้รับอิทธิพลมาจากสภาพแวดล้อมทั้งภูมิศาสตร์ ชีวิต ศาสนา และวัฒนธรรมของอาหรับ พูดง่ายๆคือ อัลกุรอานเป็นแค่ “ผลผลิตของสภาพแวดล้อมแบบทะเลทราย” ที่สะท้อนความร้อนระอุ ชีวิตสังคม และแนวคิดของคนแถวนั้น... ด้วยเหตุนี้ มันก็เลย “ใช้ไม่ได้” กับสภาพแวดล้อมอื่นที่ไม่ใช่ทะเลทราย นั่นเท่ากับเขาพยายามจะบอกว่า ศาสนาของท่านนบีมุฮัมมัด ไม่ได้เป็นสากล</p>
+
+      <p>บางพวกก็บอกว่า มาจากพวก “หะนีฟ” กลุ่มคนที่นับถือพระเจ้าองค์เดียวก่อนอิสลาม บางพวกก็เหมาว่า “ลอก” มาจากคัมภีร์เตารอต, อินญีล (ไบเบิล) และคัมภีร์อื่นๆ</p>
+
+      <p>สังเกตว่า... แค่เรื่อง “ที่มา” ของอัลกุรอาน ก็ “สับสน” กันเองแล้ว สาเหตุก็เพราะพวกเขา “เริ่ม” ศึกษาอัลกุรอานด้วย “อคติ” ที่ว่ามัน “เป็นสิ่งที่มนุษย์แต่ง” และพวกเขาเชื่อว่าท่านนบีมุฮัมมัดโกหกในการอ้างตนเป็นศาสนทูต</p>
+
+      <p>พอตั้งธงแบบนี้ ทุกคนก็เลยพยายามไป “ขุด” หาที่มาอื่นๆมาสนับสนุนความคิดตัวเอง จนเกิดเป็น “ความขัดแย้ง” และ “ความสับสน” ในหมู่พวกเขาเอง มันพิสูจน์ชัดว่า ในการศึกษาแหล่งที่มาของกฎหมายอิสลาม พวกเขาไม่ได้ใช้หลักวิชาการเลย แต่กลับถูกจองจำด้วยความเชื่อส่วนตัวและอคติของตัวเอง และพอพวกเขาสับสนเรื่องที่มา มันก็เลยส่งผลให้พวกเขามั่วในเรื่องของกฎหมายที่มาจากคัมภีร์นี้ด้วย...</p>
+
+      <p>ตัวอย่างเช่น Brockelmann ที่เขียนบทหนึ่งในหนังสือ “ประวัติศาสตร์ชนชาติอิสลาม” บิดเบือน “หลักการอิสลาม” จนเละ เขาพยายามย้ำว่าหลักการเหล่านี้เป็นความคิดของมุฮัมมัดเอง และส่วนใหญ่ก็ไปลอกมาจากคัมภีร์เตารอต, ไบเบิลและธรรมเนียมปฏิบัติของชนชาติโบราณ</p>
+
+      <p>บางคนอคติมาก ถึงขั้นยอมรับว่า อัลกุรอานมีหลักการที่ดี มีคุณธรรมที่สมบูรณ์ แต่...ก็ไม่ได้หมายความว่ามันมาจากพระเจ้า แล้วก็ไปเปรียบเทียบกับเตารอตและไบเบิล บอกว่าสองเล่มนั้นสูงส่งกว่าอัลกุรอาน คำสอนก็ดีกว่า...สรุปคือ อัลกุรอาน ไม่ใช่วะฮีย์จากพระเจ้า แต่เป็นแค่งานตัดแปะที่ไป “ยำ” มาจากแหล่งศาสนาอื่นๆ</p>
+
+      <p>ส่วน Gustave Le Bon ก็โจมตีกฎหมายในอัลกุรอานว่าเป็นปัจจัยสำคัญที่ทำให้มุสลิม “เสื่อมโทรมทางปัญญา”</p>
+
+      <p>แล้ว “ซุนนะฮ์” ล่ะ?</p>
+
+      <p>พอมาถึง “ซุนนะฮ์” (จริยวัตรของท่านนบี) นักบูรพาคดีก็ใช้ท่าทีเดียวกันกับที่ใช้กับอัลกุรอาน พวกเขาบอกว่า ซุนนะฮ์ (ซึ่งทำหน้าที่อธิบายอัลกุรอาน) นั้น เชื่อถือไม่ได้ (ไม่ถูกต้อง) เขาอ้างว่ามุสลิมทุกกลุ่มทุกมัซฮับต่างก็กุหะดีษ (แต่งเรื่อง) ขึ้นมาเอง โดยมีกิเลส, ผลประโยชน์ส่วนตัวและความขัดแย้งทางการเมืองอยู่เบื้องหลังปรากฏการณ์</p>
+
+      <p>การกุหะดีษนี้ เขาอ้างว่าเพราะหลังจากเหตุการณ์ความวุ่นวายครั้งใหญ่ (ฟิตนะฮ์ กุบรอ) มุสลิมก็แตกเป็นก๊กเป็นเหล่า เกิดการป้ายสีกันไปมาเพื่อปกป้องแนวคิดของฝ่ายตัวเอง</p>
+
+      <p>หัวหอกในการโจมตีซุนนะฮ์ และบอกว่ามันใช้เป็นแหล่งที่มาของกฎหมายไม่ได้ ก็คือ “Goldziher” และ “Schacht”</p>
+
+      <p>คนแรกบอกว่า...หะดีษมันเป็นผลพวงของพัฒนาการทางศาสนาและการเมืองใน 2 ศตวรรษแรก (ของอิสลาม)</p>
+
+      <p>พวกหะดีษที่ถูกแต่งขึ้น (เมาฎูอ์) ก็ไม่ใช่แค่คนรุ่นหลังๆที่แต่ง หะดีษพวกนี้ “อาจจะ” มาจากตัวท่านศาสนทูตเอง (หมายถึงพูดเอง) หรือมาจากคนยุคแรกๆของอิสลาม</p>
+
+      <p>เขายังบอกว่า หะดีษเหล่านี้ “ไปเอา” มาจากพันธสัญญาเดิม, พันธสัญญาใหม่, ปรัชญากรีก, ปรัชญาเปอร์เซียและอินเดีย ฯลฯ อีกด้วย</p>
+
+      <p>ส่วน Schacht เขาอธิบายว่า “นักวิชาการมุสลิมทั้งหมด” ใน 3 ศตวรรษแรกนั้น เป็นนักโกหกและไม่ซื่อสัตย์ เขาอ้างว่า กฎหมายฟิกฮ์ (นิติศาสตร์อิสลาม) ไม่ได้มีที่มาจากศาสนาจริงๆหรอก แต่มาจากหะดีษที่กุขึ้นมาที่นักนิติศาสตร์ (ฟุกอฮาอ์) แต่งขึ้นเอง แล้วก็สร้างสายรายงานปลอมๆ ขึ้นมาประกอบ</p>
+
+      <p>เขายังบอกว่า สายรายงานส่วนใหญ่ถูกแต่งขึ้นมาลอยๆและทุกคนก็รู้ดีว่าสายรายงานพวกนี้มันเริ่มมาจากแบบพื้นๆ ก่อนจะมา “สมบูรณ์แบบ” เอาในช่วงครึ่งหลังของศตวรรษที่ 3 ฮิจเราะฮ์</p>
+
+      <p>สิ่งที่ทั้งคู่บอกกล่าวมานั้น มันไม่ได้แค่โจมตีความน่าเชื่อถือของซุนนะฮ์เท่านั้น แต่มันยังป้ายสีคนยุคแรกในประวัติศาสตร์อิสลามทั้งหมดว่า เป็นกลุ่มคนที่เชื่อถือไม่ได้ในเรื่องศาสนา อ้างว่า “ความขัดแย้ง” ระหว่างคนยุคแรกๆนั่นแหละ คือสาเหตุหลักที่ทำให้เกิดการอุปโลกน์และโกหกใส่ท่านศาสนทูต นี่คือการส่งสัญญาณอย่างชัดว่า... “การที่ประชาชาติอิสลามยอมรับทุกอย่างที่ถ่ายทอดมาจากคนยุคนั้น (ยุคสลัฟ) จำเป็นต้องถูกนำมา ‘ทบทวนใหม่’ ทั้งหมด”</p>
+
+      <p>และจากทั้งหมดที่ได้ยกตัวอย่างทัศนะของนักบูรพาคดีที่มีต่อ “ตัวบทหลักฐาน” (อัลกุรอานและซุนนะฮ์) มา จะเห็นได้ชัดว่า:</p>
+
+      <p>ประการที่หนึ่ง: ทัศนะเหล่านี้ “ไม่ได้ตั้งอยู่บนหลักวิชาการ” เลย</p>
+
+      <p>ประการที่สอง: เป้าหมายของพวกเขาคือการ “พยายามทำให้” ประชาชาติอิสลามสลัดทิ้งมรดกทางปัญญา พวกเขากำลังจะบอกเป็นนัยว่า “การอิจติฮาด” ที่ผ่านมาทั้งหมดนั้น ไม่ได้อิงอยู่บน “หลักฐานที่ถูกต้อง” ดังนั้นข้อสรุปทั้งหมดที่บรรดานักนิติศาสตร์ (ฟุกอฮาอ์) ทำมา จึง “ไม่มีน้ำหนัก” และ “ห้ามนำไปใช้”</p>
+
+      <p>และเหมือนกับที่พวกเขามีท่าทีโจมตีต่อ “แหล่งที่มาหลัก” (กุรอาน/ซุนนะฮ์) พวกเขาก็มีท่าทีแบบเดียวกันต่อตัว “การอิจติฮาด” และ “เครื่องมือ” ของการอิจติฮาด</p>
+
+      <p>พวกเขา “กระโจนเข้าไปยุ่ง” ในประเด็นปัญหาด้าน “อุศูล” (หลักการนิติศาสตร์) ทั้งๆที่ตัวเองก็ไม่ได้เข้าใจมันอย่างถ่องแท้ แล้วก็อ้างว่าที่บรรดานักนิติศาสตร์ (ฟุกอฮาอ์) ใช้เครื่องมือเหล่านั้น (เช่น กิยาส, อิสติห์สาน ฯลฯ) ก็เพียงเพื่อปกป้องมัสฮับ (สำนักคิด) ของตัวเอง ไม่ได้ใช้มันในฐานะเครื่องมือทางวิชาการเพื่อการค้นคว้าจริงๆ</p>
+
+      <h2 class="article-h2">ความหมายของการอิจติฮาด</h2>
+
+      <p>ถ้าเราพูดถึง “การอิจติฮาด” (<span class="ar-inline" lang="ar" dir="rtl">الاجتهاد</span>) โดยตัวของมันเอง คือการทุ่มเทความพยายามอย่างสุดความสามารถเพื่อค้นหาข้อชี้ขาดของศาสนา</p>
+
+      <p>แต่ถ้าเรามองในแง่ของ “วิธีการ” (<span class="ar-inline" lang="ar" dir="rtl">كيفيته</span>) มันจะแบ่งออกเป็น 2 ประเภท:</p>
+
+      <ol>
+        <li>การอิจติฮาดแบบปัจเจก</li>
+        <li>การอิจติฮาดแบบกลุ่ม</li>
+      </ol>
+
+      <p>ทั้งสองแบบนี้ “ไม่ต่างกัน” ในแง่ของ “เครื่องมือ” ที่ใช้ในการสรุปความ ความต่างมันมีอยู่แค่ว่า:</p>
+
+      <p>แบบที่ 1 (ปัจเจก): คือการอิจติฮาดใดๆที่ “ยังไม่เกิดการเห็นพ้องต้องกัน” ของบรรดานักอิจติฮาด (มุจตะฮิด) ในประเด็นนั้น</p>
+
+      <p>แบบที่ 2 (กลุ่ม): คือการอิจติฮาดใดๆที่ “นักอิจติฮาดเห็นพ้องต้องกัน” ในประเด็นนั้น ซึ่งนี่ก็คือสิ่งที่เรารู้จักกันในนาม “อัลอิจมาอ์” หรือฉันทมตินั่นเอง</p>
+
+      <p>โดยเครื่องมือสำคัญๆที่ใช้ในการอิจติฮาด (ทั้งแบบเดี่ยวและแบบกลุ่ม) ก็คือ กิยาส (<span class="ar-inline" lang="ar" dir="rtl">القياس</span> - การเทียบเคียง), มัสละหะฮ์ (<span class="ar-inline" lang="ar" dir="rtl">المصلحة</span> - ประโยชน์สาธารณะ), อิสติห์สาน (<span class="ar-inline" lang="ar" dir="rtl">الاستحسان</span> - การเลือกสิ่งที่เหมาะสมกว่า), และอุรุฟ (<span class="ar-inline" lang="ar" dir="rtl">العرف</span> - จารีตประเพณี)</p>
+
+      <p>แน่นอนว่า แนวคิดของนักบูรพาคดีก็ “มีทัศนะ” วิจารณ์ต่อเครื่องมือเหล่านี้เหมือนกัน แต่ก่อนจะไปดูเครื่องมือพวกนั้น ขอพูดเรื่อง “อิจมาอ์” ก่อน</p>
+
+      <p>เวลาพวกเขาพูดถึงอิจมาอ์ พวกเขา “ไม่แยกแยะ” ระหว่างสิ่งที่รู้กันอยู่แล้วโดยอัตโนมัติว่าเป็นศาสนา เช่น ต้องละหมาด 5 เวลา ซึ่งทุกคนก็เห็นตรงกันอยู่แล้วกับ “อิจมาอ์ในความหมายเชิงหลักการ” ที่เป็นเครื่องมือทางนิติศาสตร์</p>
+
+      <p>เท่านั้นไม่พอ...บางคนถึงขั้นบอกว่า คนทั่วไปก็ถือเป็นส่วนหนึ่งของ “อิจมาอ์” ด้วย ซึ่งในทางหลักการอุศูลมันไม่ใช่</p>
+
+      <p>บางคนก็มองว่า ทฤษฎีอิจมาอ์นี่แหละที่เป็นตัวการทำให้เกิดความหยุดนิ่งทางปัญญา เพราะมันไปสนับสนุนแนวคิดที่ว่า “ประตูแห่งการอิจติฮาดถูกปิด” ไปแล้ว</p>
+
+      <p>พวกเขาอ้างว่า “อิจมาอ์” ไม่มีที่มาจากวะฮีย์ แต่มันเป็น “ทฤษฎีที่มนุษย์สร้างขึ้น” ที่พวกนักนิติศาสตร์กุขึ้นมาเอง ดังนั้น มันจึงเป็นของนำเข้าที่กฎหมายอิสลามไม่เคยรู้จักมาก่อน</p>
+
+      <p>แน่นอนว่าท่าทีของนักบูรพาคดีต่อ “อิจมาอ์” ที่เล่ามานั้น มันสะท้อนความสับสนและความไม่เข้าใจเรื่องนี้อย่างแรง มันคือความพยายามจะป้ายสีว่าอิจมาอ์คือ “ตัวการของความล้าหลัง” แถมยังอ้างว่ามันไม่มีที่มาจากศาสนา...ซึ่งทั้งหมดนี้ “เป็นความเข้าใจที่ผิด”</p>
+
+      <p>ทีนี้เรามาดูเรื่อง “กิยาส” (<span class="ar-inline" lang="ar" dir="rtl">القياس</span> - การเทียบเคียง) ต้องบอกว่ากิยาสนั้น โดนโจมตีน้อยที่สุดในบรรดาเครื่องมือทั้งหมด พวกเขาส่วนใหญ่ยอมรับว่ามันเป็นแหล่งที่มาที่รัดกุมและปลอดภัยในการหาข้อสรุป แต่...ถึงจะชม ก็ยังมีบางคนพยายามจะเหมารวมว่า กิยาสก็คือความเห็นส่วนตัว</p>
+
+      <p>Schacht อ้างว่า อิหม่ามอัชชาฟิอีก็แค่กุคำว่ากิยาสขึ้นมาใช้แทน “อัรเราะอ์ยุ - ความเห็นส่วนตัว” เพราะคนยุคนั้นรับคำว่า “ความเห็นส่วนตัว” ไม่ได้ อิหม่ามชาฟิอีแค่รีแบรนด์คำว่า “ความเห็นส่วนตัว” ให้ดูดีขึ้น</p>
+
+      <p>ซึ่งคำพูดนี้ไม่จริงเลย กิยาสในวิชาอุศูลมันมีกฎเกณฑ์และองค์ประกอบที่ชัดเจน แต่อัรเราะอ์ยุมันเป็นคำกว้างๆที่ไม่มีกฎเกณฑ์รัดกุมเหมือนกิยาส</p>
+
+      <p>Schacht ยังพยายามบอกอีกว่า กิยาสของอิหม่ามชาฟิอีมีความหมายเท่ากับ “อิจติฮาด”...เขาพยายามจะ “มัดมือชก” ให้อิหม่ามชาฟิอียอมรับว่า “กิยาส = เราะอ์ยุ”...ซึ่งอิหม่ามชาฟิอี “ไม่เคยพูด” แบบนั้น ท่านพูดว่า การอิจติฮาด ก็คือกิยาส</p>
+
+      <p>ที่ท่านพูดแบบนี้คือการชี้ว่า “กิยาส” เป็น “ประเภทหนึ่ง” ของการอิจติฮาด ไม่ใช่ทั้งหมด...หลักฐานคือ ในหนังสืออัรริสาละฮ์ ท่านก็นิยามกิยาส และวางเงื่อนไขที่ชัดเจน จนมันไม่ปนเปกับความหมายกว้างๆของคำว่าอิจติฮาดเลย</p>
+
+      <p>ที่นักบูรพาคดี “ไม่ค่อยโจมตี” กิยาสมากนัก มันมีเหตุผลแอบแฝง ก็เพราะพวกเขาพยายามจะอ้างว่ากิยาสเป็นของนำเข้า เช่น อ้างว่ามาจากกฎหมายโรมันที่เล็ดลอดเข้ามาในกฎหมายอิสลาม...พวกเขาพยายามยกให้กิยาสสำคัญมากๆเพื่อที่จะลดทอนความน่าเชื่อถือของอัลกุรอานและซุนนะฮ์ในการอิจติฮาดนั่นเอง</p>
+
+      <p>ต่อมาคือ มัศละหะฮ์ มุรซะละฮ์ ประโยชน์สาธารณะ และอิสติห์สาน คือการอิจติฮาดในการเลือกสิ่งที่เหมาะสมกว่า</p>
+
+      <p>ปรากฏว่านักบูรพาคดีบางคนสับสนแยกสองอย่างนี้ไม่ออก บางคนก็บอกว่า มัศละหะฮ์ก็คือกิเลส และความเห็นส่วนตัวดีๆนี่เอง และอ้างว่ามันขัดแย้งกับหลักการทั่วไปของศาสนา</p>
+
+      <p>บางคนก็ว่า มัศละหะฮ์กับอิสติห์สานเป็นสิ่งที่นักนิติศาสตร์แต่งขึ้นเพื่อมาสนับสนุนความเห็นส่วนตัวของตัวเอง ส่วน Perl และ Schacht ก็อ้างว่า ทั้งสองอย่างนี้ลอกมาจากตรรกะแบบกรีกและกฎหมายกรีก</p>
+
+      <p>ที่เขาพูดกันแบบนี้ก็เพื่อจะสรุปว่า “เครื่องมือพวกนี้เป็นของนำเข้า” ที่กฎหมายอิสลามปฏิเสธ...และกฎหมายต่างๆที่ได้มาจากเครื่องมือเหล่านี้ก็เป็น “ของปลอม” ที่ถูกเอามาแปะไว้...จนทำให้นักนิติศาสตร์รุ่นหลังๆต้องไปกุหะดีษขึ้นมาเพื่อรองรับความเห็นเหล่านี้</p>
+
+      <p>ทัศนะแบบนี้มันสะท้อนถึงความไม่รู้เกี่ยวกับมัศละหะฮ์และอิสติห์สานอย่างชัดเจน และมันก็ยืนยันว่าคนพูด “ตั้งใจจะบิดเบือน” ความพยายามของนักนิติศาสตร์</p>
+
+      <p>พวกเขาพยายามจะบอกว่า นักนิติศาสตร์อิสลามไปใช้ “หลักฐานที่ไม่มีในศาสนา” แถมยัง “กุหะดีษ” ขึ้นมาเพื่อให้สิ่งที่ตัวเองคิด “ดูศักดิ์สิทธิ์” ดังนั้น ข้อสรุปทั้งหมดที่ได้มาจึงไม่ชอบธรรมและห้ามนำไปใช้</p>
+
+      <p>สุดท้ายคือ อุรุฟ จารีตประเพณี</p>
+
+      <p>ในอิสลามนั้น “จารีตประเพณีที่ดี” ที่ไม่ขัดศาสนาถือเป็นสิ่งที่ได้รับการยอมรับในการสรุปและปรับใช้กฎหมาย เพื่อให้เกิดความง่ายดายและลบลบล้างความลำบาก</p>
+
+      <p>แต่...นักบูรพาคดีกลับมองว่า นี่คือการที่การอิจติฮาดต้องยอมจำนนต่อสภาพแวดล้อม...แม้ว่าสภาพแวดล้อมนั้นจะขัดแย้งกับหลักการศาสนาก็ตาม นักบูรพาคดีพวกเขาไม่เข้าใจเป้าหมายที่แท้จริงของการคำนึงถึงจารีตประเพณี, ความหลากหลายของสภาพแวดล้อมและการเปลี่ยนแปลงของยุคสมัย เลย</p>
+
+      <p>การคำนึงถึงสิ่งเหล่านี้ไม่ใช่การยอมจำนนต่อสภาพแวดล้อม แต่มันคือสัญญาณที่แสดงถึงความยืดหยุ่นในการค้นคว้าต่างหาก และมันคือการยืนยันว่า ฟิกฮ์ (นิติศาสตร์อิสลาม) “ไม่เคยหยุดนิ่ง” และ “ชะรีอะฮ์” ที่แสนจะผ่อนปรนนี้ “ใช้ได้จริง” ใน “ทุกที่และทุกเวลา”</p>
+
+      <p>แต่ก็นั่นแหละ...นักบูรพาคดีต้องการจะปฏิเสธความสามารถในการปรับใช้นี้ และนี่คือเหตุผลที่ว่า ทำไมการตีความและทัศนะทั้งหมดของพวกเขาที่มีต่อวิชา อุศูล (ซึ่งเป็นคู่มือการอิจติฮาด) จึงวนเวียนอยู่กับการกล่าวหาว่าชะรีอะฮ์ “ต่อต้านการคิด” และ “กล่าวหา” ว่านักนิติศาสตร์ (ฟุกอฮาอ์) นั้น “วิสัยทัศน์แคบ” ไม่ซื่อสัตย์ และโกหกในการอ้างอิงแหล่งที่มาของการอิจติฮาดของพวกเขา</p>
+
+      <h2 class="article-h2">นักบูรพาคดีกับฟิกฮ์ (นิติศาสตร์อิสลาม)</h2>
+
+      <p>กลุ่มนักบูรพาคดียังไม่พอใจแค่การทำลายแหล่งที่มาอย่างกุรอาน, ซุนนะฮ์ ฯลฯ หรือป้ายสีบรรดานักนิติศาสตร์ (ฟุกอฮาอ์) เท่านั้น...แต่พวกเขายังพยายามปฏิเสธความเป็นต้นฉบับของตัวฟิกฮ์อิสลาม (นิติศาสตร์) เองด้วย โดยการอ้างว่าฟิกฮ์อิสลามนั้น “เป็นหนี้บุญคุณ” หรือ “ไปลอก” มาจากกฎหมายโรมัน</p>
+
+      <p>แถมยังมีกลุ่มนักบูรพาคดีที่สุดโต่งไปกว่านั้นที่อ้างว่า “กฎหมายของมุฮัมมัด” ก็ “ไม่มีอะไรเลย” นอกจากจะเป็นเงา “กฎหมายโรมัน” ของจักรวรรดิไบแซนไทน์ที่ถูกเอามาดัดแปลงนิดหน่อยให้เข้ากับการเมืองของพวกอาหรับ</p>
+
+      <p>โดยหลักฐานที่พวกเขาทั้งหมดเอามาอ้างก็คือสิ่งที่พวกเขา “คิดว่า” มันคล้ายกันระหว่างกฎหมายอิสลามบางข้อกับกฎหมายโรมัน, การอ้างถึงการแลกเปลี่ยนทางอารยธรรมที่มันต้องเกิดการหยิบยืมกันอยู่แล้วเป็นธรรมดา</p>
+
+      <p>แต่คำถามคือ... ประเด็น “ความคล้ายกัน” ที่ว่านั้น (สมมติว่ามันมีอยู่จริง) มันพิสูจน์ได้อย่างไรว่า “เราไปลอกเขามา” หรือแปลว่า “ฟิกฮ์อิสลามก็คือกฎหมายโรมันที่ถูกดัดแปลง” ?</p>
+
+      <p>คำตอบคือ “ไม่” อย่างไม่ต้องสงสัย เพราะ “สถานการณ์ที่ถูกต้อง” ตามหลักสังคมวิทยาจริงๆก็คือ...เมื่อไหร่ก็ตามที่ “อารยธรรมผู้ชนะ” (ในที่นี้คือมุสลิม) ไปเจอกับอารยธรรมผู้แพ้ ถ้ามันจะมีการลอกเลียนแบบเกิดขึ้น...มันก็คือฝ่ายผู้แพ้ที่คลั่งไคล้อยากจะเลียนแบบฝ่ายผู้ชนะเสมอ ไม่ใช่ผู้ชนะที่ไปลอกผู้แพ้ และสิ่งที่พิสูจน์ชัดว่า “ฟิกฮ์อิสลาม ‘ไม่ได้’ ลอกกฎหมายโรมัน” ก็คือ</p>
+
+      <ol>
+        <li>มีหลายอย่างในกฎหมายโรมันที่ไม่มีในฟิกฮ์อิสลาม เช่น ระบบการรับบุตรบุญธรรมแบบที่ไปรับเด็กที่รู้ถึงพ่อแม่ที่แท้จริงอยู่แล้ว ซึ่งอิสลามห้ามเด็ดขาด มีเพียงการอุปการะเลี้ยงดู, ระบบผู้พิทักษ์เหนือสตรีที่ทำให้สตรี “ไม่สามารถ” ทำธุรกรรมใดๆได้ด้วยตัวเอง เว้นแต่จะได้รับ “อนุญาต” จากผู้พิทักษ์ก่อน ในขณะที่ฟิกฮ์อิสลามให้ผู้หญิงมีสิทธิ์ในทรัพย์สินของตนเอง 100% โดยสมบูรณ์</li>
+        <li>มีหลายอย่างในฟิกฮ์อิสลามที่ไม่มีรากฐานในกฎหมายโรมัน เช่น ระบบวะกัฟ หรือการการอุทิศทรัพย์สิน/ที่ดินเพื่อการกุศลอย่างถาวร, ระบบชุฟอะฮ์ คือสิทธิของหุ้นส่วนในการขอซื้อที่ดิน/ทรัพย์สินก่อนคนนอก, ข้อห้ามในการแต่งงานที่เกิดจากการเป็นพี่น้องร่วมน้ำนม</li>
+        <li>ปรัชญาก็ต่างกัน กฎหมายโรมัน “ไม่เชื่อมโยง” กฎหมายเข้ากับจริยธรรม แต่ฟิกฮ์อิสลาม “ไม่เคยแยก” สองสิ่งนี้ออกจากกันเลย</li>
+        <li>หลักความเท่าเทียมก็ต่างกัน ฟิกฮ์อิสลามนั้นตั้งอยู่บนรากฐานของความเท่าเทียมของทุกคนต่อหน้ากฎหมาย ซึ่งสิ่งนี้ “ไม่มีอยู่” ในกฎหมายโรมันที่ยังแบ่งแยกผู้คนตามสถานะพลเมือง ทาส ฯลฯ</li>
+      </ol>
+
+      <p>...และยังมีปัจจัยอื่นๆอีกมากมายที่ “ยืนยัน” ถึง “การเติบโตที่เป็นเอกลักษณ์เฉพาะตัว” ของฟิกฮ์อิสลาม</p>
+
+      <p>ดังนั้น...ที่นักบูรพาคดีพยายามอ้างว่ากฎเกณฑ์ของฟิกฮ์อิสลามไปลอกมาจากโรมันนั้น...มันคือความไม่เข้าใจทั้งสิ้นในความพยายามที่จะตอกย้ำแนวคิดของตัวเองว่า ฟิกฮ์อิสลาม ไม่มีจริง ไม่ว่าจะในแง่ที่มา, หลักการ, หรือแม้แต่วิธีการจัดหมวดหมู่ นักบูรพาคดีเลยล็อคเป้าโจมตีไปที่นักปราชญ์ (ฟุกอฮาอ์) ดังๆอยู่ 3 ท่าน เป้าหมายก็เพื่อด้อยค่าผลงานอันยิ่งใหญ่ของท่านเหล่านี้ และเพื่อจะพิสูจน์ให้ได้ว่า ท่านเหล่านี้ก็แค่ไปลอกพวกกรีกและโรมันมาอีกที</p>
+
+      <h2 class="article-h2">1. อิหม่ามอัลเอาซาอีย์ (เสียชีวิตปี ฮ.ศ. 157 / ค.ศ. 774)</h2>
+
+      <p>มีนักบูรพาคดีบางคน อ้างลอยๆ โดยไม่มีหลักฐานว่าท่านไปศึกษากฎหมายไบแซนไทน์ที่สถาบันกฎหมายแห่งเบรุต พวกเขาทึกทักเอาเองว่า แค่การที่ท่านเติบโตในเบรุต มันก็ช่วยสนับสนุนข้ออ้างของพวกเขาแล้ว</p>
+
+      <p>แต่น่าเสียดายว่าข้ออ้างนี้ “ไม่มีหลักฐาน” มันเลยเป็นแค่การเดาส่งเดช เหตุผลก็คือ สถาบันการศึกษากฎหมายเบรุตที่ว่านั้น มันไม่มีอยู่แล้วในศตวรรษที่ 2 ฮิจเราะฮ์ ซึ่งมันถูกปิดหรือถูกทำลายไปนานมากแล้ว</p>
+
+      <p>ยิ่งไปกว่านั้น มรดกทางปัญญาทั้งหมดของอิหม่ามเอาซาอีย์ ก็ไม่มีร่องรอยอะไรเลยที่บอกว่าท่านได้รับอิทธิพลจากแนวคิดนอกอิสลาม</p>
+
+      <p>ใครก็ตามที่ได้อ่านงานของท่าน (โดยเฉพาะหนังสือเรื่องอัสสิยัรและการโต้แย้งอิหม่ามอบู ยูซุฟ จะเห็นชัดเจนว่าท่านไม่ได้รับอิทธิพลจากกฎหมายไบแซนไทน์...แถมฟิกฮ์ของท่านยังอิงกับตัวบทหลักฐานมากกว่าความเห็นส่วนตัวเสียอีก</p>
+
+      <h2 class="article-h2">2. อิหม่ามอัชชัยบานีย์ (เสียชีวิตปี ฮ.ศ. 189 / ค.ศ. 805)</h2>
+
+      <p>ท่านคือ “คนแรก” ที่จัดระเบียบฟิกฮ์อิสลามอย่างเป็นระบบชนิดที่ไม่มีใครเคยทำมาก่อน</p>
+
+      <p>ท่านยังเป็น “คนแรก” ที่เขียนเรื่อง “ความสัมพันธ์ระหว่างประเทศ” (<span class="ar-inline" lang="ar" dir="rtl">العلاقات الدوليّة</span>) อย่างเป็นระบบและครอบคลุมอีกด้วย จนในปัจจุบันวงการกฎหมายสากลยกย่องท่านว่าเป็น “ผู้บุกเบิก” ในด้าน “กฎหมายระหว่างประเทศ” ถึงขนาดมีการตั้ง “สมาคม” ในยุโรปและอเมริกาในชื่อ The aI-Shaybani Society of International Law</p>
+
+      <p>แล้วนักบูรพาคดีพูดถึงอิหม่ามท่านนี้ว่าอย่างไร?</p>
+
+      <p>แน่นอนว่าพวกเขาตกใจและรับไม่ได้ที่เห็นอัจฉริยภาพของอิหม่ามชัยบานีย์ในการ “จัดระเบียบ” ฟิกฮ์ได้อย่างสุดยอด แถมยังเขียนเรื่องกฎหมายระหว่างประเทศได้อีก</p>
+
+      <p>พวกเขาก็เลยพยายาม “ด้อยค่า” ความสำคัญของผลงานที่ท่านทำ และพยายามจะ “พิสูจน์” ให้ได้ว่าท่าน “ไม่ได้เป็นคนริเริ่ม” อะไรเลย แต่ก็แค่เดินตามคนก่อนๆ และไปยืมมรดกความรู้นอกอิสลามมาใช้</p>
+
+      <p>พวกเขาอ้างว่า “การจัดหมวดหมู่” ฟิกฮ์ของท่านนั้น...ไปได้รับอิทธิพลมาจาก “วิธีการจัดเรียง” ของ “คัมภีร์มิชนาห์ของยิว” จึงสรุปได้ว่า ท่านเป็นแค่ “นักลอกเลียน” ไม่ใช่ “นักนวัตกร”</p>
+
+      <p>คัมภีร์ “มิชนาห์” ที่ว่านั้น มันคือคัมภีร์ประเพณีปฏิบัติของยิว แล้วก็มีกลุ่มแรบไบมาเขียนอธิบายขยายความต่อ เรียกว่า “เกอมารา” (Gemara) พอเอามิชนาห์กับเกอมารามารวมกัน ก็เลยกลายเป็น “ตัลมุด” ซึ่งเป็นคัมภีร์อ้างอิงหลักของยิวในเรื่องศาสนพิธีและการปฏิบัติตัว</p>
+
+      <p>ทีนี้ ประเด็นมันอยู่ตรงที่ว่า คัมภีร์ “ตัลมุด” นั้น ไม่ได้เขียนเป็นภาษาอาหรับและไม่เคยถูกแปลเป็นภาษาอาหรับเลยจนกระทั่งต้นศตวรรษที่ 4 ฮิจเราะฮ์</p>
+
+      <p>แล้วคำถามคือ...อิหม่ามชัยบานีจะลอกเขาได้อย่างไร...ในเมื่อท่านมีชีวิตอยู่ในศตวรรษที่ 2 และท่านก็ไม่รู้ภาษาอื่นเลยนอกจากภาษาอาหรับ จะบอกว่าไปอ่านต้นฉบับภาษาฮีบรู/อาราเมอิกก็เป็นไปไม่ได้</p>
+
+      <p>ดังนั้น ข้ออ้างที่ว่าอิหม่ามชัยบานีไปลอกคัมภีร์มิชนาห์มาถือว่า พูดไม่เป็นเหตุเป็นผล เพราะมันไม่มีหลักฐานจริงๆมารองรับเลย</p>
+
+      <p>และที่ “บังเอิญ” ไปกว่านั้นก็คือ ในบรรดานักวิชาการยิวที่หันมารับอิสลามในยุคนั้นก็ไม่มีใครเลยสักคนที่เป็นผู้เชี่ยวชาญด้านตัลมุดหรือกฎหมายยิว ดังนั้น ไอเดียที่ว่าความรู้ยิวคงรั่วไหลมาทางชาวยิวที่เข้ารับอิสลามก็ตกไป เพราะไม่มีช่องทางเลย</p>
+
+      <h2 class="article-h2">3. อิหม่ามอัชชาฟิอี (เสียชีวิตปี ฮ.ศ. 204 / ค.ศ. 820)</h2>
+
+      <p>ท่านคือ “คนแรก” ที่วางระบบวิชาอุศูลุลฟิกฮ์ อย่างสมบูรณ์แบบ ในหนังสืออัรริสาละฮ์ ซึ่งวิชานี้ถือเป็นความภาคภูมิใจของโลกอิสลาม มันคือ “การวางรากฐาน” ให้กับ “ระเบียบวิธีวิจัย” ทางกฎหมายที่ยอดเยี่ยมมากๆ</p>
+
+      <p>และเพราะท่านเป็นคนแรกนี่แหละ การโจมตีเลยมุ่งเป้ามาที่ท่านเป็นส่วนใหญ่ พวกเขากล่าวหาว่า: ท่านรู้ตรรกศาสตร์กรีกเลยเอามาเขียนวิชาอุศูลฯ, กล่าวหาว่าท่านไปเรียนกฎหมายโรมันที่สถานเบรุตที่เดิมก่อนหน้านี้ เลยทำให้ท่านมีวิธีคิดที่เป็นระบบ</p>
+
+      <p>ซึ่งทั้งหมดนี้ ไม่เป็นความจริง อิหม่ามชาฟิอีไม่รู้จักตรรกศาสตร์กรีก และไม่เคยเรียนที่เบรุต... ก็เพราะสถาบันมันดังกล่าวนั้นดับไปแล้ว ตั้งแต่ศตวรรษที่ 2!!</p>
+
+      <p>และอิหม่ามชาฟิอีเองเกิดที่กาซา (ปาเลสไตน์) แล้วไปโตที่ชนบทเพื่อเรียนภาษาอาหรับแท้ จากนั้นก็เดินทางหาความรู้กับยอดนักปราชญ์ในยุคของท่าน เช่น อิหม่ามมาลิก ทั้งในฮิญาซ และอิรัก ไปรับตำแหน่งที่เยเมน แล้วก็ย้ายไปอิรัก ก่อนจะย้ายไปอียิปต์และเกิดทัศนะใหม่ ที่แนวคิดท่านเปลี่ยนก็เพราะ “จารีตประเพณี” ของสองแผ่นดิน คืออิรักกับอียิปต์มันไม่เหมือนกัน แล้วท่านจะเอาเวลาที่ไหนไปเรียนกฎหมายไบแซนไทน์ อย่างที่พวกเขาอ้าง ซึ่งข้อกล่าวหานี้มันขัดแย้งกับประวัติชีวิตจริงของท่านโดยสิ้นเชิง</p>
+
+      <p>ข้อเท็จจริงทั้งหมดมันยืนยันว่า “ฟิกฮ์อิสลามคือของแท้ดั้งเดิม” และบรรดานักปราชญ์ของเราไม่ได้ลอกใครมา</p>
+
+      <p>ดังนั้น ทุกสิ่งทีนักบูรพาคดีพูดมาในประเด็นนี้คือ “ไร้หลักฐาน” ซึ่งเป็นแค่วาระทางการเมืองที่พยายามจะลบคุณความดีทุกอย่างของมุสลิมทิ้งไป และป่าวประกาศว่า “มุสลิมไม่เคยคิดอะไรเอง” ได้แต่ “ลอก” ชาวบ้านเขามา...แต่นั่นคือไกลเกินฝันที่ความเห็นที่ไม่มีน้ำหนักเหล่านั้นจะมาบดบังความจริงที่มันชัดแจ้งอยู่แล้วได้</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>สรุปก็คือ แนวคิดของนักบูรพาคดีส่วนใหญ่หรืออาจจะทั้งหมดต่อเรื่อง “การอิจติฮาด” นั้น...ไม่เคยเป็นกลาง พวกเขาไม่ได้ศึกษาอิสลามเพื่อค้นหาความจริง แต่ศึกษาในฐานะ “นักประวัติศาสตร์” ที่มี “ธง” อยู่ในใจแล้ว...พวกเขาไม่ได้พยายามจะหาความจริง แต่พยายามหาหลักฐานมาสนับสนุนสิ่งที่ตัวเองเชื่ออยู่แล้ว</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). นักบูรพาคดีกับการตีความกฎหมายอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/orientalists-and-ijtihad.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li>أحمد أمين، زعماء الإصلاح في العصر الحديث.</li>
+        <li>البهى، محمد، الفكر الإسلامي الحديث وصلته بالاستعمار.</li>
+        <li>الحاج، ساسي سالم، الظاهرة الاستشراقية، مركز دراسات العالم الإسلامي، مالطا.</li>
+        <li>دراز، محمد عبد الله، مدخل إلى القرآن الكريم، دار القلم، الكويت.</li>
+        <li>دراز، محمد عبد الله، النبأ العظيم.</li>
+        <li>العقاد، عباس محمود، حقائق الإسلام وأباطيل خصومه، بيروت.</li>
+        <li>السباعي، مصطفى، السنة ومكانتها في التشريع الإسلامي.</li>
+        <li>سراج، محمد (مترجم)، تاريخ التشريع الإسلامي للمستشرق كولسون، مراجعة: حسن الشافعي، دار العروبة، الكويت.</li>
+        <li>الصالح، صبحي، معالم الشريعة الإسلامية، بيروت.</li>
+        <li>الطنطاوي، عبد الوهاب خلاف، علم أصول الفقه.</li>
+        <li>العقاد، عباس محمود، حقائق الإسلام وأباطيل خصومه.</li>
+        <li>عبد الحميد متولي، الإسلام وموقف علماء المستشرقين.</li>
+        <li>علي حسب الله، أصول التشريع الإسلامي، دار المعارف.</li>
+        <li>لوثروب، حاضر العالم الإسلامي، ج2.</li>
+        <li>مالك بن نبي، الظاهرة القرآنية.</li>
+        <li>محمد وزان، عدنان، الاستشراق والمستشرقون وجهة نظر، دعوة الحق، عدد 24.</li>
+        <li>مجلة الوعي الإسلامي، الأعداد 216، 242، 248.</li>
+        <li>هاشم، زكريا، الاستشراق والإسلام، المجلس الأعلى للشؤون الإسلامية، القاهرة.</li>
+        <li>أرسلان، شكيب، تعليق في حاضر العالم الإسلامي حول جمود الشريعة.</li>
+        <li>الشافعي، محمد بن إدريس، الرسالة، تحقيق أحمد محمد شاكر.</li>
+        <li>مناهج المستشرقين في الدراسات العربية والإسلامية.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
