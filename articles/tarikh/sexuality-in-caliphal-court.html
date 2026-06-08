@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เพศวิถีในราชสำนักแห่งคอลีฟะฮ์ จากอุมัยยะฮ์ถึงอับบาซียะฮ์ — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์ประวัติศาสตร์เพศวิถีในราชสำนักของคอลีฟะฮ์ ตั้งแต่ราชวงศ์อุมัยยะฮ์ถึงอับบาซียะฮ์ ผ่านบันทึกของอัลญาฮิซ อัฏเฏาะบะรีย์ อัซซะฮะบีย์ และบทกวีของอะบู นุวาส">
+<meta name="keywords" content="เพศวิถี, ประวัติศาสตร์อิสลาม, ราชวงศ์อุมัยยะฮ์, ราชวงศ์อับบาซียะฮ์, อะบู นุวาส, อัลอะมีน, ราชสำนักคอลีฟะฮ์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="เพศวิถีในราชสำนักแห่งคอลีฟะฮ์ จากอุมัยยะฮ์ถึงอับบาซียะฮ์ — Islamic Fiqh Publishing">
+<meta property="og:description" content="ประวัติศาสตร์เพศวิถีในราชสำนักคอลีฟะฮ์ อุมัยยะฮ์ถึงอับบาซียะฮ์ ผ่านตำราคลาสสิกและบันทึกร่วมสมัย">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/sexuality-in-caliphal-court.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="sexuality-in-caliphal-court">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์</a>
+      <h1 class="article-feature-title">เพศวิถีในราชสำนักแห่งคอลีฟะฮ์ จากอุมัยยะฮ์ถึงอับบาซียะฮ์</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">เมื่อพูดถึงเดือนเชาวาล ซึ่งเป็นเดือนแห่งการสมรสของคู่บ่าวสาวจำนวนมาก ย่อมหลีกเลี่ยงไม่ได้ที่จะนึกถึงมิติหนึ่งที่มักถูกมองข้ามในประเด็นทางศาสนา นั่นคือเรื่องเพศวิถี ทั้งที่ในความเป็นจริงแล้ว อารยธรรมอิสลามได้ทิ้งมรดกทางเอกสารว่าด้วยเรื่องนี้ไว้อย่างมหาศาล ดังปรากฏในตำราชั้นนำหลายเล่ม อาทิ ตำราญะวามิอ์ อัลลัซซะฮ์ (<span class="ar-inline" lang="ar" dir="rtl">جوامع اللذة</span>) ของอะลีย์ บิน นัศร์ อัลกาติบ อัลก็อซวีนีย์ ซึ่งรวบรวมความรู้ด้านเพศศาสตร์อย่างเป็นระบบ, ตำรานะวาฎิร อัลอัยก์ ฟี มะอ์ริฟัต อัลนัยก์ (<span class="ar-inline" lang="ar" dir="rtl">نواضر الأيك في معرفة النيك</span>) ของอัซซุยูฏีย์ ที่รวบรวมรายงานและกวีนิพนธ์เกี่ยวกับเพศวิถีจากแหล่งอ้างอิงชั้นต้นจำนวนมาก, ตำราอัรเราฎ์ อัลอาฏิร ฟี นุซฮัต อัลคอฏิร (<span class="ar-inline" lang="ar" dir="rtl">الروض العاطر في نزهة الخاطر</span>) ของมุฮัมมัด อันนัฟซาวีย์ อันถือเป็นสารานุกรมเพศศาสตร์อาหรับที่สมบูรณ์ที่สุดเล่มหนึ่ง, ตำรานุซฮัต อัลอัลบาบ ฟีมา ลา ยูญัด ฟี กิตาบ (<span class="ar-inline" lang="ar" dir="rtl">نزهة الألباب فيما لا يوجد في كتاب</span>) ของอะฮ์มัด อัตติฟาชีย์ที่บันทึกเรื่องเพศวิถีและรสนิยมทางเพศในสังคมอิสลามอย่างเปิดเผยตรงไปตรงมา และตำราฏูก อัลฮะมามะฮ์ ฟิลอุลฟะฮ์ วัลอาลาฟ (<span class="ar-inline" lang="ar" dir="rtl">طوق الحمامة في الألفة والآلاف</span>) ของอิบนุ ฮัซม์ อัลอันดะลุซีย์ ซึ่งท่านได้วิเคราะห์ธรรมชาติแห่งความรักและกามารมณ์ในเชิงปรัชญาและวรรณกรรม ตำรากลุ่มนี้ล้วนเป็นประจักษ์พยานว่าเรื่องเพศมิได้เป็นสิ่งต้องห้ามในการศึกษาวิจัยสำหรับนักปราชญ์มุสลิม หากแต่ถูกบันทึกและวิเคราะห์ไว้อย่างจริงจังในฐานะที่เป็นส่วนหนึ่งของประสบการณ์มนุษย์</p>
+      <p>อย่างไรก็ตาม มรดกทางหน้าประวัติศาสตร์เหล่านี้มิได้จำกัดขอบเขตอยู่เพียงความสัมพันธ์ฉันสามีภรรยาตามครรลองศาสนาเท่านั้น เมื่อสืบค้นลึกลงไป เราจะพบการบันทึกถึงความหลากหลายและซับซ้อนของกามารมณ์ในมิติอื่นๆ ด้วย โดยเฉพาะความสัมพันธ์นอกขอบเขตการสมรสและพฤติกรรมรักร่วมเพศ ซึ่งต้องทำความเข้าใจก่อนว่า วิถีปฏิบัติเหล่านี้มิใช่สิ่งที่อิสลามนำมาสั่งสอนหรือริเริ่มขึ้น หากแต่เป็นสิ่งที่ดำรงอยู่และเป็นที่รับรู้ในหมู่พวกเขามาเนิ่นนานก่อนการมาถึงของอิสลาม ทว่าเมื่อชาวอาหรับเรืองอำนาจและสถาปนาจักรวรรดิอันกว้างใหญ่ ครอบคลุมดินแดนตั้งแต่เปอร์เซียไปจนถึงไบแซนไทน์ การหลอมรวมทางวัฒนธรรมและธรรมเนียมการจดบันทึกก็ขยายตัวตามไปด้วย จนก้าวสู่จุดสูงสุดในยุคราชวงศ์อับบาซียะฮ์ที่รู้จักกันในนามยุคทอง ยุคสมัยอันรุ่งเรืองนี้ได้ทิ้งมรดกเป็นต้นฉบับเอกสารนับพันชิ้น ซึ่งบางส่วนได้สะท้อนภาพและให้ข้อมูลเชิงลึกอันมีค่ายิ่งเกี่ยวกับวิถีชีวิตทางเพศอันหลากหลายของผู้คนในยุคนั้น แต่ก่อนที่วัฒนธรรมกามารมณ์จะก้าวไปสู่จุดสูงสุดในยุคอับบาซียะฮ์ ร่องรอยแห่งการเปิดกว้างทางเพศได้เริ่มก่อตัวและหยั่งรากลึกมาตั้งแต่รัชสมัยก่อนหน้าแล้ว</p>
+      <h2 class="article-h2">รัฐคอลีฟะฮ์ราชวงศ์อุมัยยะฮ์ ปฐมบทแห่งตัณหาราคะในราชสำนัก</h2>
+      <p>ในช่วงยุคราชวงศ์อุมัยยะฮ์ ราชสำนักของคอลีฟะฮ์ได้กลายเป็นประจักษ์พยานถึงจุดเริ่มต้นของการเปิดกว้างและปลดแอกทางเพศ นับเป็นครั้งแรกในประวัติศาสตร์ของรัฐอิสลาม ที่สถาบันมิลกุลยะมีนถูกแปรสภาพขึ้นมาเป็นระบบราชสำนักอย่างเป็นทางการ โดยมีการจัดหาและจัดสรรสตรีเข้าสู่ราชสำนักเพื่อวัตถุประสงค์ทางเพศอย่างเป็นระเบียบแบบแผน แนวปฏิบัติเช่นนี้ปรากฏให้เห็นอย่างชัดเจนตั้งแต่ยุคต้น ดังที่อัลญาฮิซได้บันทึกไว้ในริสาละฮ์ อัลกิยานว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ورأى معاوية كاتبا له يكلم جارية لامرأته فاختة بنت قرظة، في بعض طرق داره، ثم خطب ذلك الكاتب تلك الجارية فزوجها منه، فدخل معاوية الى فاختة وهي متحشدة في تعبئة عطر لعرس جاريتها، فقال: هوني عليك يا ابنة قرظة، فإني أحسب الابتناء قد كان منذ حين، ومعاوية أحد الأئمة، فلما لم يقع عنده ما رأى من الكلام موقع يقين، وإنما حل محل ظن وحسبان، ولم يقض به ولم يوجبه، ولو أوجبه لحد عليه، وكان معاوية يؤتى بالجارية فيجردها من ثيابها بحضرة جلسائه، ويضع القضيب على ركبها، ثم يقول: إنه لمتاع لو وجد متاعا! ثم يقول لصعصعة بن صوحان: خذها لبعض ولدك، فإنها لا تحل ليزيد بعد أن فعلت بها ما فعلت، ولم يكن يعدم من الخليفة ومن بمنزلته في القدرة والتأتي أن تقف على رأسه جارية تذب عنه وتروحه، وتعاطيه أخرى في مجلس عام بحضرة الرجال.</blockquote>
+      <p class="ar-translation">“(มีเรื่องเล่าว่า) ครั้งหนึ่ง มุอาวิยะฮ์ได้พบเห็นอาลักษณ์ผู้หนึ่งของท่านกำลังยืนสนทนากับทาสีของฟาคิตะฮ์ บินต์ กุเราะเซาะฮ์ ภริยาของท่าน ณ บริเวณทางเดินแห่งหนึ่งภายในตำหนัก ต่อมา อาลักษณ์ผู้นั้นได้มาสู่ขอทาสีนางนั้น และท่านก็ได้จัดการสมรสให้นางครองคู่กับเขา</p>
+      <p>มุอาวิยะฮ์ได้เข้าไปหาฟาคิตะฮ์ในขณะที่นางกำลังสาละวนอยู่กับการจัดเตรียมเครื่องหอมสำหรับงานมงคลสมรสของทาสีรับใช้ ท่านจึงเอ่ยขึ้นว่า “เบามือลงหน่อยเถิด โอ้บุตรีแห่งกุเราะเซาะฮ์เอ๋ย เพราะข้าคาดว่าการร่วมหอลงโรงนั้น คงจะลุล่วงไปตั้งแต่ก่อนหน้านี้แล้ว”</p>
+      <p>ทั้งนี้ มุอาวิยะฮ์ถือเป็นหนึ่งในบรรดาผู้นำรัฐ ทว่าเมื่อภาพการสนทนาที่ท่านได้พบเห็นนั้น มิได้ก่อให้เกิดความแน่แท้ถึงขั้นที่จะชี้มูลความผิด หากแต่หยุดอยู่เพียงแค่ข้อสันนิษฐานและการคาดคะเน ท่านจึงมิได้พิพากษาหรือบังคับใช้บทลงโทษทางกฎหมายใดๆ ซึ่งหากท่านถือว่ามันเป็นความผิดอันประจักษ์ชัด ท่านย่อมต้องสั่งลงอาญาแก่เขาไปแล้ว</p>
+      <p>นอกจากนี้ ในอีกบริบทหนึ่งแห่งธรรมเนียมราชสำนัก ทาสีมักถูกนำตัวมาเข้าเฝ้ามุอาวิยะฮ์ แล้วท่านก็ให้ปลดเปลื้องอาภรณ์ของนางออกต่อหน้าบรรดาราชสำนักผู้ร่วมสมาคม จากนั้นท่านวางของสงวนของตนลงบนเข่าของนาง พร้อมกล่าวรำพึงว่า “นี่คือโภคทรัพย์อันทรงคุณค่า หากเพียงแต่มันจะได้พบกับผู้ครอบครองที่คู่ควร!”</p>
+      <p>จากนั้นท่านจึงหันไปกล่าวแก่ เศาะอ์เศาะอะฮ์ บิน ศูฮาน ว่า “จงรับนางไปให้บุตรชายของท่านสักคนเถิด เพราะนางย่อมไม่เป็นที่อนุมัติ (ฮะลาล) สำหรับยะซีด (บุตรชายของมุอาวิยะฮ์) อีกต่อไปแล้ว หลังจากที่ข้าได้เสียกับนางไปแล้ว”</p>
+      <p>และนับเป็นเรื่องปกติวิสัยที่พบเห็นได้ทั่วไปสำหรับองค์คอลีฟะฮ์ หรือผู้ที่มีสถานภาพที่มีอำนาจบารมี และความพรั่งพร้อมทัดเทียมกัน ที่จะมีทาสียืนอยู่เบื้องศีรษะคอยพัดวีและปัดเป่าแมลงให้ พร้อมกับมีทาสีอีกนางหนึ่งคอยหยิบส่งสิ่งของถวายปรนนิบัติ ท่ามกลางมหาสมาคมที่รายล้อมไปด้วยบุรุษเพศ”</p>
+      <p>ความหมกมุ่นทางกามารมณ์ได้ฝังรากลึกและแผ่ขยายอย่างรวดเร็วในราชสำนักของคอลีฟะฮ์ ดังปรากฏในคำกล่าวของคอลีฟะฮ์ อับดุลมะลิก บิน มัรวาน ซึ่งอัซซุยูตีย์ได้บันทึกไว้ในตาริค อัลคุละฟาอ์ และอิบนุ อะบี ชัยบะฮ์ก็ได้รายงานในทำนองเดียวกันในอัลมุศ็อนนัฟว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">من أراد أن يتخذ جارية للتلذذ فليتخذها بربرية، ومن أراد أن يتخذها للولد فليتخذها فارسية، ومن أراد أن يتخذها للخدمة فليتخذها رومية</blockquote>
+      <p class="ar-translation">“ผู้ใดที่ปรารถนาจะหาทาสีเพื่อแสวงหาความสำราญ เขาจงเลือกทาสีชาวเบอร์เบอร์ [ปัจจุบันคือภูมิภาคแอฟริกาเหนือ] ผู้ใดที่ปรารถนาทาสีเพื่อการให้กำเนิดบุตร เขาจงเลือกทาสีชาวเปอร์เซีย และผู้ใดที่ปรารถนาทาสีเพื่อการปรนนิบัติรับใช้ เขาจงเลือกทาสีชาวโรมัน”</p>
+      <p>การจำแนกประเภทในลักษณะนี้สะท้อนให้เห็นถึงการสั่งสมประสบการณ์และความชำนาญทางเพศอันมากมายในเวลาเพียงไม่กี่ชั่วอายุคน นับตั้งแต่รัชสมัยของคอลีฟะฮ์พระองค์แรกจนถึงพระองค์ที่ห้าแห่งราชวงศ์อุมัยยะฮ์ และกระทั่งในช่วงปลายยุคการปกครองของราชวงศ์นี้ ความหมกมุ่นในกามารมณ์ได้พุ่งทะยานสู่ระดับที่ไม่เคยปรากฏมาก่อน อันเป็นการวางรากฐานสู่ความเสื่อมทรามทางศีลธรรมในราชสำนักของคอลีฟะฮ์ยุคถัดมา</p>
+      <p>ในปี ค.ศ. 743 อัลวะลีด บิน ยะซีด บิน อับดุลมะลิกได้ก้าวขึ้นเป็นคอลีฟะฮ์ลำดับที่ 11 ที่ประทับบนบัลลังก์แห่งจักรวรรดิอิสลาม รัชสมัยของพระองค์ยืนยาวเพียงแค่หนึ่งปีเท่านั้น แต่มันก็เพียงพอที่จะทำให้พระองค์ได้รับสมญานามว่า “คอลีฟะฮ์ผู้เสเพลมัวเมา”</p>
+      <p>เป็นที่ประจักษ์ชัดว่า การที่ประชาชนลุกฮือขึ้นก่อกบฏต่อต้านพระองค์นั้น มิใช่ด้วยเหตุผลทางการเมืองหรือสังคมดังเช่นการลุกฮือในกรณีส่วนใหญ่ ทว่าเกิดจากความเสื่อมทรามทางศีลธรรมและความสำส่อนอันสุดโต่งของพระองค์ มีเสียงเล่าลือกล่าวหากันว่าพระองค์ได้กระทำการลบหลู่ศาสนาและตกศาสนาเป็นพวกนอกรีต ทว่า อิหม่ามอัซซะฮะบีย์ได้หักล้างข้อกล่าวหาเหล่านี้ โดยระบุไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولم يصح عن الوليد كفر ولا زندقة ، نعم اشتهر بالخمر والتلوط ، فخرجوا عليه لذلك</blockquote>
+      <p class="ar-translation">“ไม่ปรากฏหลักฐานยืนยันว่า อัลวะลีดได้กระทำการลบหลู่ศาสนาหรือเป็นพวกนอกรีต แต่ทว่าพระองค์เป็นที่เลื่องลือประจักษ์ชัดในเรื่องการดื่มสุราและการมีพฤติกรรมรักร่วมเพศ และผู้คนก็ได้ลุกฮือขึ้นต่อต้านพระองค์ด้วยเหตุนี้นี่เอง”</p>
+      <p>รายงานระบุว่า อัลวะลีดมีเด็กรับใช้ที่ตนหลงใหลชื่ออับดุลลอฮ์ และได้แต่งบทกวีทั้งในแนวกวีรัก และที่ถูกมองว่าเป็นกุฟร์ (การปฏิเสธศรัทธา) เกี่ยวกับเขาที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أدنيا مني خليلي عبد الله من دون الإزار<br>
+فلقد أيقنت أني غير مبعوث لنار<br>
+واتركا من يطلب الجنة يسعى في خسار</blockquote>
+      <p class="ar-translation">“จงนำสหายที่รักของข้า อับดุลลอฮ์มาใกล้ข้า โดยปราศจากผ้านุ่ง<br>
+เพราะข้ามั่นใจแล้วว่าข้าจะไม่ถูกส่งไปยังไฟนรก<br>
+และจงปล่อยให้ผู้แสวงหาสวรรค์ดิ้นรนไปอย่างขาดทุนเถิด”</p>
+      <p>แน่นอนว่า บทกวีของอัลวะลีด บิน ยะซีด ไม่ได้เป็นเพียงการแสดงออกถึงรสนิยมส่วนตัว หากแต่เป็นหมุดหมายสำคัญที่บ่งชี้ถึงจุดสิ้นสุดของราชวงศ์อุมัยยะฮ์ในแง่ศีลธรรม ก่อนที่มันจะล่มสลายในทางการเมือง ตลอดช่วงเวลาไม่ถึงหนึ่งศตวรรษ ราชสำนักแห่งนี้ได้เดินทางจากการวางรากฐานระเบียบแห่งมิลกุลยะมีนในสมัยมุอาวิยะฮ์ ผ่านการสั่งสมและจำแนกประสบการณ์ทางเพศในสมัยอับดุลมะลิก ไปจนถึงการละทิ้งขนบศาสนาอย่างเปิดเผยในสมัยอัลวะลีด เส้นทางนี้ได้วางรากฐานไว้เรียบร้อยแล้วสำหรับสิ่งที่กำลังจะตามมา</p>
+      <p>เมื่อราชวงศ์อับบาซียะฮ์ขึ้นสู่อำนาจและย้ายศูนย์กลางจักรวรรดิจากดิมัชก์มายังแบกแดด สิ่งที่ถูกรับช่วงต่อมามันยังรวมถึงวัฒนธรรมกามารมณ์ที่บ่มเพาะมาตลอดยุคก่อน และราชสำนักชุดใหม่นี้ก็ได้ขยายมันออกไปจนถึงขีดจำกัดที่ไม่เคยปรากฏมาก่อน</p>
+
+      <h2 class="article-h2">รัฐอับบาซียะฮ์ ยุคสมัยแห่งเด็กหนุ่ม</h2>
+      <p>อีกประการหนึ่งคือ เรามักคุ้นชินกับการนำเอาความหมกมุ่นทางกามารมณ์ไปผูกโยงกับ “ฮารูน อัรเราะชีด” และบรรดานักประวัติศาสตร์อิสลามก็ได้พยายามอย่างยิ่งที่จะชำระล้างมรดกทางประวัติศาสตร์ของพระองค์ให้บริสุทธิ์ โดยพรรณนาว่าพระองค์คือบุรุษผู้ออกทำศึกสงครามในปีหนึ่ง และเสด็จไปประกอบพิธีฮัจญ์ในอีกปีหนึ่งสลับกันไป ทว่าในที่นี้ เราจะทำการสำรวจมิติทางเพศในชีวิตของบรรดาพระราชโอรสผู้โด่งดังของพระองค์ ได้แก่ อัลอะมีนและอัลมะอ์มูนตลอดจนคอลีฟะฮ์แห่งราชวงศ์อับบาซียะฮ์พระองค์อื่นๆ</p>
+      <p>เด็กหนุ่ม (ทาสรับใช้ชาย - ฆุลาม) และเด็กสาว (ทาสี - ญะวารีย์) ต่างถูกครอบครองไว้ในฐานะสมบัติทางเพศ ราชวงศ์อับบาซียะฮ์ได้สืบทอดเจตนารมณ์ต่อจากผู้ปกครองรุ่นก่อน โดยการปลดปล่อยตัณหาความปรารถนาอย่างเต็มพิกัด และนำพาราชสำนักไปสู่จุดสูงสุดของความสำส่อนและความหมกมุ่นทางกามารมณ์ จักรวรรดิอิสลามได้ผ่านพ้นยุคสมัยแห่งเสรีภาพทางเพศที่เปิดกว้างที่สุด ซึ่งประจวบเหมาะกับยุคแห่งการฟื้นฟูศิลปวิทยาการครั้งสำคัญที่รู้จักกันในนาม “ยุคทอง”</p>
+      <p>ในช่วงจุดสูงสุดของยุคนี้ คอลีฟะฮ์ อัลอะมีน มุหัมมัด อิบนุ ซุบัยดะฮ์ (ครองราชย์ ฮ.ศ. 193–198) ได้ก้าวขึ้นครองบัลลังก์ในฐานะคอลีฟะฮ์พระองค์แรกที่มีพฤติกรรมรักร่วมเพศอย่างเปิดเผย อัฏเฏาะบะรีย์บันทึกในตารีค อัรรุสุล วัลมุลูกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لما ملك محمد، وكاتبه المأمون، وأعطاه بيعته، طلب الخصيان وابتاعهم، وغالى بهم، وصيرهم لخلوته في ليله ونهاره، وقوام طعامه وشرابه، وأمره ونهيه، وفرض لهم فرضا سماهم الجرادية، وفرضا من الحبشان سماهم الغرابية، ورفض النساء الحرائر والإماء حتى رمي بهن</blockquote>
+      <p class="ar-translation">“เมื่อมุฮัมมัด (คอลีฟะฮ์ อัลอะมีน) ขึ้นสู่อำนาจ และ อัลมะอ์มูนได้ส่งสาส์นพร้อมทั้งมอบสัตยาบันแก่พระองค์ พระองค์ได้เริ่มเสาะหาและกว้านซื้อขันที โดยทรงยอมประทานทรัพย์สินในราคาสูงลิ่วเพื่อครอบครองบุคคลเหล่านี้ พระองค์ทรงแต่งตั้งให้ขันทีเป็นผู้ติดตามใกล้ชิดในพื้นที่ส่วนพระองค์ ทั้งในยามทิวาและราตรี ทรงมอบหมายให้เป็นผู้ดูแลจัดการเรื่องโภชนาการและเครื่องดื่ม ตลอดจนเป็นผู้รับสนองพระราชบัญชาและควบคุมข้อห้ามต่างๆ ในราชสำนัก</p>
+      <p>ยิ่งไปกว่านั้น พระองค์ยังได้จัดตั้งกองกำลังเฉพาะกิจขึ้นมารองรับกลุ่มคนเหล่านี้ โดยกองกำลังหนึ่งได้รับการขนานนามว่า “อัลญะรออียะฮ์” และอีกกองกำลังหนึ่งซึ่งประกอบด้วยชาวเอธิโอเปียได้รับการขนานนามว่า “อัลฆุรอบียะฮ์”</p>
+      <p>ในขณะเดียวกัน พระองค์ทรงปฏิเสธและหมางเมินความสัมพันธ์กับสตรีเพศโดยสิ้นเชิง ไม่ว่าจะเป็นสตรีเสรีชนหรือทาสี จนกระทั่งพวกนางถูกทอดทิ้ง และพฤติการณ์ดังกล่าวของพระองค์ได้กลายเป็นที่เลื่องลือและถูกวิพากษ์วิจารณ์อย่างกว้างขวาง”</p>
+      <p>จนกระทั่งพระองค์ถูกตั้งสมญานามและถูกเหน็บแนม อีกทั้งยังมีการเสียดสีอย่างเจ็บแสบในบทกวีร่วมสมัยดังเช่นบทกวีต่อไปนี้:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ألا يا مزمن المثوى بطوس *** عزيبا ما يفادى بالنفوس<br>
+لقد أبقيت للخصيان بعلا *** تحمل منهم شؤم البسوس<br>
+فأما نوفل فالشأن فيه *** وفي بدر، فيا لك من جليس!<br>
+وما العصمي بشار لديه *** إذا ذكروا بذي سهم خسيس<br>
+وما حسن الصغير أخس حالا *** لديه عند مخترق الكئوس<br>
+لهم من عمره شطر وشطر *** يعاقر فيه شرب الخندريس<br>
+وما للغانيات لديه حظ *** سوى التقطيب بالوجه العبوس<br>
+إذا كان الرئيس كذا سقيما *** فكيف صلاحنا بعد الرئيس!<br>
+فلو علم المقيم بدار طوس *** لعز على المقيم بدار طوس</blockquote>
+      <p class="ar-translation">“โอ้... ท่านผู้หลับใหล ณ แดนฏูสชั่วนิรันดร์<br>
+ผู้อยู่อย่างเดียวดาย อันดวงวิญญาณใดก็มิอาจไถ่ถอนคืน<br>
+ท่านได้ทิ้งทายาทผู้ตกเป็นสวามีแห่งหมู่ขันที<br>
+ผู้แบกรับลางร้ายแห่งบะซูสจากชนเหล่านั้นมาสู่แผ่นดิน<br>
+ทั้งเนาฟัลและบัดร์ นั้นเล่าคือสหายแนบชิด<br>
+โอ้... ช่างเป็นมิตรคู่กายที่น่าสังเวชเสียนี่กระไร!<br>
+และเมื่อเอ่ยนาม บะชาร อัลอิศมีขึ้นมา<br>
+เขาก็มิได้มีส่วนแบ่งความโปรดปรานที่ด้อยไปกว่าใคร<br>
+แม้แต่ “ฮะซันน้อย” ก็มิได้มีสถานะที่ต่ำต้อยกว่า<br>
+ยามเมื่อจอกเมรัยถูกส่งเวียนรินรด<br>
+ครึ่งหนึ่งของชีวิตเขา...อุทิศทิ้งให้แก่ชายเหล่านั้น<br>
+ส่วนอีกครึ่งกาลนั้นเล่า...มัวเมาอยู่กับสุราคันดะรีสรสเลิศ<br>
+เหล่าอิสตรีโฉมงามหาได้มีพื้นที่ในดวงใจเขาไม่<br>
+มีเพียงสีหน้าบึ้งตึงและแววตาอันเย็นชาที่มอบให้พวกนาง<br>
+หากผู้นำมีจิตใจที่ป่วยไข้ถึงเพียงนี้<br>
+แล้วผองเราจะพบความดีงามได้อย่างไรเล่า... เมื่อสิ้นยุคของท่านผู้นำ!<br>
+และหากผู้พำนัก ณ สุสานเมืองฏูสได้ล่วงรู้ความจริงนี้...<br>
+ความรวดร้าวคงบาดลึกกินใจ... ผู้พำนัก ณ เมืองฏูสเป็นแน่แท้”</p>
+      <p>แต่ก็มีหนึ่งในข้อโต้แย้งร่วมสมัยที่ออกมาปกป้องคอลีฟะฮ์ อัลอะมีนที่ได้ระบุว่า เรื่องเล่าเหล่านี้ไม่ได้ระบุอย่างชัดแจ้งถึงการกระทำอันลามกอนาจาร สิ่งที่ปรากฏมีเพียงการที่พระองค์ทรงพึงพอใจที่จะให้บุคคลเหล่านี้ (ขันทีหรือเด็กหนุ่ม) คอยรับใช้แทนที่สตรี นอกจากนี้ เรื่องเล่าดังกล่าวยังไม่สอดคล้อง ซ้ำยังขัดแย้งกับบันทึกอื่นๆ เกี่ยวกับพระราชประวัติของพระองค์ในช่วงที่ทรงครองราชย์ เนื่องจากพระองค์ทรงมีทั้งพระมเหสีและพระราชโอรส และมักปรากฏว่ามีเหล่าทาสีคอยรับใช้และให้ความบันเทิงแก่พระองค์ ยิ่งไปกว่านั้น เมื่อทาสีซึ่งเป็นพระมารดาของพระราชโอรสสิ้นพระชนม์ พระองค์ก็ทรงโศกเศร้าเสียพระทัยอย่างยิ่ง รวมถึงยังมีรายงานที่ระบุถึงการที่พระองค์ทรงตำหนิติเตียนอบู นุวาส กวีชื่อดังอีกด้วย</p>
+      <p>ในอีกด้านหนึ่ง อัลอะมีนทรงเป็นที่รู้จักกันดีในเรื่องของความสำราญ การละเล่น และการหลงใหลในชีวิต แหล่งข้อมูลทางประวัติศาสตร์ส่วนหนึ่งระบุว่า คอลีฟะฮ์อัลอะมีนทรงมีความหลงใหลในเกมหมากรุกอย่างรุนแรง และในเวลานั้นทรงคลั่งไคล้มันอย่างถึงที่สุด คิฎิร มูซา มุฮัมมัด ฮัมมูดได้กล่าวไว้ในหนังสือของเขาที่ชื่อ “หมากรุกและลูกเต๋าในวรรณกรรมอาหรับ - <span class="ar-inline" lang="ar" dir="rtl">الشطرنج والنرد في الأدب العربي</span>” ว่า คอลีฟะฮ์พระองค์นี้ได้รวบรวมเหล่าอัจฉริยะและยอดฝีมือจากทั่วทุกสารทิศของจักรวรรดิอันกว้างใหญ่ไพศาลมาไว้ในราชสำนักของพระองค์ ทรงประทานรางวัลให้แก่พวกเขาอย่างล้นเหลือ และพระองค์ทรงถือว่าช่วงเวลาที่งดงามที่สุดในชีวิตคือช่วงเวลาที่ได้ทอดพระเนตรการประลองหมากรุกและทรงเล่นหมากรุกด้วยพระองค์เอง</p>
+      <p>ในหนังสือเล่มเดียวกันนี้ยังระบุอีกว่า ในขณะที่กองทัพของน้องชาย (คืออัลมะอ์มูน) กำลังโอบล้อมพระองค์ซึ่งประทับอยู่ในพระราชวังที่กรุงแบกแดด และการสู้รบอันดุเดือดกำลังดำเนินไปอย่างเข้มข้นในบริเวณชานเมืองและบนกำแพงเมือง ได้มีผู้นำสาส์นมาแจ้งเตือนพระองค์ถึงภัยอันตรายที่กำลังคืบคลานเข้ามาใกล้ ทูตผู้นั้นเต็มไปด้วยความตื่นตระหนกและหวาดกลัวต่อความน่าสะพรึงกลัวของสงคราม ทว่าเขากลับต้องตกตะลึงจนพูดไม่ออกเมื่อเห็นคอลีฟะฮ์กำลังจมจ่อมอยู่กับความคิดเบื้องหน้ากระดานหมากรุก!</p>
+      <p>ชายผู้นั้นร้องตะโกนขึ้นว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يا أمير المؤمنين أتوسل اليك أن تسرع ليس هذا وقت اللعب</blockquote>
+      <p class="ar-translation">“โอ้ อะมีรุลมุอ์มินีน ข้าพระองค์ขอวิงวอนให้พระองค์เร่งรีบเถิด เวลานี้ไม่ใช่เวลาสำหรับการละเล่นอีกต่อไป!”</p>
+      <p>แต่คอลีฟะฮ์ อัลอะมีนที่กำลังหมกมุ่นอยู่กับการแก้หมากรุกบนกระดาน กลับตรัสตอบโดยที่ไม่ได้ละสายตาจากกระดานเลยว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">صبرا صبرا فإني أتوقع الفوز بعد بضع نقلات</blockquote>
+      <p class="ar-translation">“เย็นไว้ อดทนไว้ ข้าคาดว่าจะชนะในอีกไม่กี่ตานี้แล้ว”</p>
+      <p>กระนั้นเอง คอลีฟะฮ์ อัลอะมีนก็ยังเป็นที่รู้จักกันดีในเรื่องความรักและความลุ่มหลงที่พระองค์มีต่อเด็กหนุ่มรับใช้นามว่า “เกาษัร” ตำราประวัติศาสตร์หลายเล่มระบุว่า เกาษัรเป็นเด็กหนุ่มรูปงามที่ได้เข้ามาครอบครองหัวใจของคอลีฟะฮ์ ผู้ซึ่งถูกครอบงำด้วยความรักและความโหยหาที่มีต่อเขาอย่างหมดหัวใจ</p>
+      <p>แหล่งข้อมูลส่วนใหญ่ที่กล่าวถึงความสัมพันธ์ระหว่างอัลอะมีนและเกาษัรระบุว่า เขาคือเด็กหนุ่มคนโปรดที่ได้รับการปรนนิบัติตามคำขอก่อนที่เขาจะทันได้กะพริบตาด้วยซ้ำ ดังที่เราพบในบันทึกของอัลอัศฟะฮานีย์ในตำราอัลอะฆอนีย์ว่า มีกวีผู้หนึ่งนามว่า “อัลลูยะฮ์” ซึ่งเป็นหนึ่งในข้าราชบริพารของอัลอะมีน ทว่ามีข่าวลือมาถึงหูว่า อัลลูยะฮ์พยายามตีสนิทกับอัลมะอ์มูน ศัตรูคู่อาฆาตซึ่งเป็นน้องชายของอัลอะมีน</p>
+      <p>เมื่อเรื่องของอัลลูยะฮ์ทราบถึงหูอัลอะมีน พระองค์ทรงกริ้วและสั่งให้โบยเขาห้าสิบแส้ ให้จับเขาลากไปกับพื้น และทรงหมางเมินเขาไประยะหนึ่ง จนกระทั่งอัลลูยะฮ์ต้องไปอ้อนวอนขอพึ่งบารมีของเกาษัร เกาษัรจึงได้ทูลขอความเมตตาแทนเขา อัลลูยะฮ์จึงได้กลับเข้ารับราชการอีกครั้ง และยังได้รับเงินพระราชทานถึงห้าพันดีนาร์ เรื่องเล่านี้เพียงพอที่จะทำให้เราตระหนักว่า คำทูลขอของเกาษัรเปรียบดั่งกุญแจแห่งทางรอดชีวิตสำหรับอัลลูยะฮ์อย่างแท้จริง</p>
+      <p>ด้วยเหตุนี้ ข่าวลือเรื่องพฤติกรรมรักร่วมเพศของคอลีฟะฮ์ อัลอะมีนจึงแพร่สะพัดไปทั่ว จนกระทั่งบทกวีที่แต่งขึ้นเพื่อพรรณนาถึงความหลงใหลในเด็กหนุ่มของพระองค์ถูกเผยแพร่อย่างกว้างขวาง ทว่าสิ่งที่น่าประหลาดใจในรายงานประวัติศาสตร์คือ คอลีฟะฮ์มิได้ทรงปฏิเสธหรือตอบโต้ข่าวลือที่แพร่หลายเหล่านั้นแต่อย่างใด ในทางกลับกัน สิ่งที่พระองค์ทรงทำคือการยืนยันถึงความรักที่ทรงมีต่อเกาษัรผ่านบทกวีที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ما يريد الناس من صبب بمن يهوى كئيب<br>
+كوثر ديني ودنياي وسقمي وطبيبي<br>
+أعجز الناس الذي يلحى محبا في حبيب</blockquote>
+      <p class="ar-translation">“ผู้คนต้องการสิ่งใดจากผู้คลั่งรัก ผู้โศกเศร้าทนทุกข์เพราะผู้ที่ตนหลงใหล<br>
+เกาษัรคือศาสนาและโลกดุนยาของข้า คือความเจ็บป่วยและคือแพทย์ผู้เยียวยาข้า<br>
+มนุษย์ผู้อ่อนแอที่สุดคือผู้ที่ คอยตำหนิติเตียนคนรักที่กำลังลุ่มหลงในคนรักของตน”</p>
+      <p>และยังมีเรื่องเล่าว่า พระมารดาของอัลอะมีน คือพระนางซุบัยดะฮ์ อัลฮาชิมียะฮ์ ทรงรู้สึกไม่พอพระทัยอย่างยิ่งกับข่าวที่เป็นความจริง ซึ่งทุกคนต่างรับรู้เกี่ยวกับรสนิยมรักร่วมเพศของคอลีฟะฮ์แห่งปวงศรัทธาชนผู้เป็นโอรสของพระนาง พระนางจึงใช้วิธีการที่แปลกประหลาด โดยการนำพวกฆุลามียาตมาถวาย ซึ่งก็คือทาสีหญิงที่พระมารดาของคอลีฟะฮ์จับมาหั่นผมสั้น และแต่งตัวให้มีรูปลักษณ์เหมือนเด็กผู้ชาย เพื่อกระตุ้นอารมณ์ความรู้สึกของอัลอะมีน แต่พระองค์กลับไม่ทรงไยดีพวกนางเลย... และทรงหวนกลับไปหาเกาษัร รักแท้อันบริสุทธิ์ของพระองค์</p>
+      <p>มีผู้กล่าวถึงทาสีทอมบอยเหล่านี้ว่า เมื่อกวีเอกอะบู นุวาสได้เห็นหนึ่งในพวกนาง เขาได้ขับลำนำขึ้นว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وناهدة الثديين من خدم القصر<br>
+سبتني بحسن الجيد والوجه والنحر<br>
+غلامية في زيها برمكية<br>
+مزوقة الأصداغ مطمومة الشعر<br>
+كلفت بما أبصرت من حسن وجهها<br>
+زمانا وما حب الكواعب من أمري<br>
+فما زلت بالأشعار في كل مشهد<br>
+ألينها والشعر من عقد السحر<br>
+إلى أن أجابت للوصال وأقبلت<br>
+على غير ميعاد إلي مع العصر<br>
+فقلت لها أهلا ودارت كؤوسنا<br>
+بمشمولة كالورس أو شعل الجمر<br>
+فقالت عساها الخمر إني بريئة<br>
+إلى الله من وصل الرجال مع الخمر<br>
+فقلت اشربي إن كان هذا محرما<br>
+ففي عنقي يا ريم وزرك مع وزري<br>
+فطالبتها شيئا فقالت بعبرة<br>
+أموت إذن منه ودمعتها تجري<br>
+فما زلت في رفق ونفسي تقول لي<br>
+جويرية بكر وذا جزع البكر<br>
+فلما تواصلنا توسطت لجة<br>
+غرقت بها يا قوم من لجج البحر<br>
+فصحت أغثني يا غلام فجاءني<br>
+وقد زلقت رجلي ولججت في الغمر<br>
+فلولا صياحي بالغلام وأنه<br>
+تداركني بالحبل صرت إلى القعر<br>
+فآليت لا أركب البحر غازيا<br>
+حياتي ولا سافرت إلا على الظهر</blockquote>
+      <p class="ar-translation">“โอ้ แม่นางผู้มีปทุมถันผลิบานจากหมู่ทาสีในราชสำนัก<br>
+นางได้สะกดข้าให้หลงใหลด้วยความงามแห่งลำคอ ใบหน้า และทรวงอก<br>
+นางคือทาสีในคราบเด็กหนุ่ม (ฆุลามียาต) ผู้แต่งกายเยี่ยงชนตระกูลบัรมัก<br>
+ผู้แต่งแต้มขมับและมีเรือนผมสั้นเตียน<br>
+ข้าเกิดความลุ่มหลงในความงดงามแห่งใบหน้าของนางที่ได้ประจักษ์อยู่พักใหญ่<br>
+ทั้งที่การลุ่มหลงสตรีวัยแรกรุ่นมิใช่รสนิยมวิสัยของข้าเลย!<br>
+ข้าจึงเฝ้าขับลำนำกวีเกี้ยวพานางในทุกคราที่พบหน้า<br>
+เพื่อหลอมละลายใจนาง และบทกวีนั้นก็เปรียบดั่งเงื่อนมนตร์สะกด<br>
+จนกระทั่งนางโอนอ่อนยอมตอบรับการครองคู่ และได้มาหาข้า<br>
+ในยามบ่ายคล้อยโดยมิได้นัดหมาย<br>
+ข้าจึงเอ่ยต้อนรับนาง แล้วจอกสุราของเราก็เริ่มหมุนเวียน<br>
+ด้วยเมรัยเย็นฉ่ำที่มีสีเหลืองอร่ามดั่งสีย้อม หรือแดงฉานดั่งเปลวเพลิง<br>
+นางเอ่ยถามว่า นี่คือสุรากระนั้นหรือ? ข้าขอความคุ้มครอง<br>
+ต่ออัลลอฮ์ให้พ้นจากการร่วมหอกับบุรุษพร้อมด้วยสุราเถิด!<br>
+ข้าจึงปลอบว่า ดื่มเถิด! หากแม้นสิ่งนี้เป็นที่ต้องห้าม<br>
+ข้าก็ขอแบกรับบาปของเจ้าไว้บนคอข้าพร้อมกับบาปของข้าเอง โอ้แม่กวางน้อยเอ๋ย<br>
+จากนั้นข้าจึงเรียกร้องบางสิ่งจากนาง นางก็กล่าวทั้งน้ำตาว่า<br>
+ถ้าเช่นนั้นข้าคงต้องตายแน่ๆ ขณะที่หยาดน้ำตาของนางรินไหล<br>
+ข้าจึงยังคงปฏิบัติต่อนางอย่างนุ่มนวล โดยที่จิตใจของข้าคิดไปว่า:<br>
+นางยังเป็นสาวบริสุทธิ์ และนี่คงเป็นความตื่นตระหนกของหญิงพรหมจรรย์<br>
+ทว่า... เมื่อเราได้ร่วมรักกัน ข้ากลับพบว่าตนเองตกลงไปท่ามกลางมหาสมุทรอันเวิ้งว้าง!<br>
+โอ้ผู้คนเอ๋ย ข้าได้จมดิ่งลงไปในเกลียวคลื่นแห่งห้วงทะเลลึก!<br>
+ข้าจึงตะโกนลั่น ช่วยข้าด้วย โอ้ เด็กหนุ่มเอ๋ย! แล้วเขาก็วิ่งมาหาข้า<br>
+ในขณะที่เท้าของข้าลื่นไถลและกำลังจะจมมิดลงในห้วงน้ำ<br>
+หากข้าไม่ตะโกนเรียกเด็กหนุ่ม และหากเขา...<br>
+ไม่โยนเชือกมาช่วยดึงข้าไว้ ข้าคงดำดิ่งลงสู่ก้นบึ้งไปแล้ว!<br>
+ข้าจึงขอสาบานว่า ชั่วชีวิตนี้ข้าจะไม่ขอ ขี่เรือออกสู่ทะเล (อิสตรี) อีกต่อไป...<br>
+และข้าจะไม่ขอสัญจรไปไหน เว้นแต่บนแผ่นหลัง (บุรุษเพศ) เท่านั้น!”</p>
+      <p>บทกวีชิ้นนี้ถือเป็นหนึ่งในบทกวีเสียดสีและพรรณนาเรื่องเพศที่โด่งดังที่สุดของอะบู นุวาส โดยเขาได้เล่นตลกกับความคาดหวังของตนเอง เขาถูกดึงดูดด้วยทาสีที่ถูกจับแต่งกายให้เหมือนเด็กผู้ชาย และคิดว่านางเป็นหญิงบริสุทธิ์ ทว่าในท่อนท้าย เขาได้ใช้กลวิธีอุปมาอุปไมยเปรียบเทียบสรีระของนางที่ลึกและกว้างขวางเหมือนมหาสมุทรจนเขาเกือบจมน้ำตาย และต้องเรียกเด็กหนุ่มมาช่วยดึงขึ้นไป ก่อนจะปิดท้ายด้วยการเล่นคำสองแง่สองง่ามที่เป็นการประกาศอย่างชัดเจนถึงการปฏิเสธสตรี และยืนยันรสนิยมชายรักชายของเขาในท้ายที่สุด</p>
+      <p>ย้อนกลับมาเข้าเรื่องเดิม ความสัมพันธ์ของอัลอะมีนและเกาษัรดำรงอยู่ได้ไม่นานนัก เมื่อสงครามกลางเมืองปะทุขึ้นอย่างเต็มรูปแบบ และกองทัพของอัลมะอ์มูนได้รุกประชิดเข้ายึดกรุงแบกแดด นครหลวงของอาณาจักรในขณะนั้น อัลอะมีนไม่ได้ประทับหลบภัยอยู่เพียงในพระราชวัง แต่ได้เสด็จออกไปบัญชาการรบกับน้องชาย ในสมรภูมิที่กองทัพทั้งสองกำลังประจัญบานกันนั้น เกาษัรได้เดินออกมาจากเต็นท์ เพื่อสังเกตการณ์สถานการณ์สู้รบอย่างใกล้ชิด</p>
+      <p>ท่านมุฮัมมัด บิน ญะรีร อัฏเฏาะบะรีย์ได้บันทึกไว้ในตารีค อัรรุซุล วัลมุลูกของท่านว่า เกาษัร ข้ารับใช้ของอัลอะมีน ได้ออกมาเพื่อดูการสู้รบในช่วงวันที่ฏอฮิร บิน อัลฮุซัยน์ และฮะซีมะฮ์ บิน อะอ์ยันเข้าปิดล้อมกรุงแบกแดด ทันใดนั้น ลูกธนูหลงทิศดอกหนึ่งได้พุ่งเข้าเสียบและทำให้เขาได้รับบาดเจ็บ เขาจึงเดินเข้าไปหาอัลอะมีนในสภาพที่กำลังร้องไห้ด้วยความเจ็บปวดจากบาดแผล อัลอะมีนไม่อาจกลั้นความรู้สึกได้และเริ่มใช้มือเช็ดเลือดให้เขาพร้อมกับกล่าวบทกวีว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ضربوا قرة عيني<br>
+ومن أجلي ضربوه<br>
+أخذ الله لقلبي<br>
+من أناس أحرقوه</blockquote>
+      <p class="ar-translation">“พวกเขาได้ทำร้ายแก้วตาดวงใจของข้า<br>
+และเป็นเพราะข้า... พวกเขาจึงได้ทำร้ายเขา<br>
+ขออัลลอฮ์ทรงทวงแค้นให้แก่ดวงใจของข้า<br>
+จากหมู่ชนที่ได้เผาผลาญทำลายมัน”</p>
+      <p>จากนั้นพระองค์ก็เกิดอาการเศร้าโศกจนแต่งกวีต่อไม่ออก จึงมีรับสั่งเรียกอัลฟัฎล์ บิน อัรเราะบีอ์ ให้ไปตามกวีมาแต่งบทกวีต่อจากสองวรรคนี้ให้สมบูรณ์ อัลฟัฎล์จึงไปตามอับดุลลอฮ์ บิน มุฮัมมัด บิน อัยยูบ อัตตัยมีย์มาเข้าเฝ้า พระองค์จึงขับขานสองวรรคนั้นให้เขาฟัง เขาจึงแต่งต่อว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ما لمن أهوى شبيه     فبه الدنيا تتيه<br>
+وصله حلو ولكن     هجره مر كريه<br>
+من رأى الناس له الـ     ـفضل عليهم حسدوه<br>
+مثل ما قد حسد القا     ئم بالملك أخوه</blockquote>
+      <p class="ar-translation">“ผู้ที่ข้าหลงใหลนั้นไร้ซึ่งผู้ใดเทียบเคียง<br>
+โลกทั้งใบต่างลุ่มหลงและภาคภูมิในตัวเขา<br>
+การได้แนบชิดเขานั้นช่างแสนหอมหวาน<br>
+ทว่าการห่างเหินจากเขานั้นช่างขมขื่นและปวดร้าว<br>
+เมื่อผู้คนประจักษ์ว่าเขาได้รับความโปรดปรานเหนือกว่า<br>
+พวกเขาก็พากันอิจฉาริษยา<br>
+อุปมาดั่งผู้ประทับบนบัลลังก์กษัตริย์<br>
+ที่ถูกพระเชษฐาของตนริษยา... ก็มิปาน”</p>
+      <p>อัลอะมีนได้ฟังจึงตรัสว่า ขอสาบานต่ออัลลอฮ์ เจ้าแต่งได้ดีเยี่ยมยิ่งนัก</p>
+      <p>ท้ายที่สุด อัลอะมีนก็ถูกสังหาร และมีรายงานว่าศพของพระองค์ถูกกระทำย่ำยีสับทำลายตามคำสั่งของฏอฮิร บิน อัลฮุซัยน์ (แม่ทัพของอัลมะอ์มูน) ซึ่งนั่นก็เป็นชะตากรรมเดียวกันกับที่เกาษัร เด็กหนุ่มของพระองค์ต้องเผชิญ...</p>
+      <p>และนี่คือบทสรุปของอัลอะมีนและเกาษัร ผู้ซึ่งมีชีวิตอยู่ในโลกดุนยาด้วยการกอบโกยความสุขสมและกามารมณ์ และมีจุดจบร่วมกันในท้ายที่สุด... ด้วยโศกนาฏกรรมอันแสนรันทด</p>
+
+      <p>ส่วนคอลีฟะฮ์ อัลมุตะวักกิล (ครองราชย์ ฮ.ศ. 232–247) นั้น ท่านอัซซะฮะบีย์ระบุว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ويقال : إنه كان له أربعة آلاف سرية وطئ الجميع</blockquote>
+      <p class="ar-translation">“มีการกล่าวขานกันว่า พระองค์ทรงมีทาสี (นางบำเรอ) ในครอบครองมากถึง 4,000 คน และทรงได้เสียกับพวกนางทั้งหมด”</p>
+      <p>ตัวเลขที่หากคำนวณจริงแล้ว แม้จะทรงร่วมหลับนอนวันละสองครั้ง แต่ละคนก็จะได้รับเสด็จเพียงครั้งเดียวในรอบห้าปีเศษ</p>
+      <p>และคอลีฟะฮ์ อัลวาษิก (ครองราชย์ ฮ.ศ. 227–232) อัซซุยูตีย์บันทึกไว้ในตารีค อัลคุละฟาอ์เอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقال غيره : كان الواثق وافر الأدب ، مليح الشعر، وكان يحب خادما أهدي إليه من مصر، فأغضبه الواثق يوما، ثم إنه سمعه يقول لبعض الخدم: والله إنه ليروم أن أكلمه من أمس فما أفعل، فقال الواثق</blockquote>
+      <p class="ar-translation">“ท่านอื่นๆ ได้กล่าวเสริมว่า: คอลีฟะฮ์อัลวาษิก ทรงเป็นผู้ที่มีสุนทรียภาพทางวรรณกรรมอย่างเปี่ยมล้นและทรงนิพนธ์กวีนิพนธ์ได้อย่างไพเราะงดงามยิ่ง พระองค์ทรงลุ่มหลงในตัวข้ารับใช้ชายผู้หนึ่งซึ่งถูกส่งมาเป็นเครื่องบรรณาการจากอียิปต์ วันหนึ่ง อัลวาษิกทรงทำให้ข้ารับใช้ผู้นี้ขุ่นเคืองใจ ต่อมาพระองค์ทรงได้ยินข้ารับใช้ผู้นั้นกล่าวกับเหล่าข้ารับใช้คนอื่นๆ ว่า: ขอสาบานต่ออัลลอฮ์ พระองค์ทรงพยายามชักชวนให้ข้าพูดด้วยมาตั้งแต่เมื่อวานแล้ว แต่ข้าก็จะไม่ยอมทำตาม” เมื่อได้ยินดังนั้น อัลวาษิกจึงทรงพระนิพนธ์บทกวีขึ้นมาว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يا ذا الذي بعذابي ظل مفتخرا ما أنت إلا مليك جار إذا قدرا لولا الهوى لتجارينا على قدر وإن أفق منه يوما ما فسوف ترى</blockquote>
+      <p class="ar-translation">“โอ้ ผู้ที่ยังคงภาคภูมิใจในความทุกข์ทรมานของข้าเอ๋ย เจ้ามิใช่อื่นใด นอกเสียจากราชันผู้ใช้อำนาจกดขี่เมื่อมีโอกาส<br>
+หากมิใช่เพราะความลุ่มหลงแห่งรักบังตา เราคงได้ประชันกันอย่างสมน้ำสมเนื้อ<br>
+และหากวันใดที่ข้าตื่นจากภวังค์รักนี้ วันนั้นเจ้าจะได้เห็นดี”</p>
+      <p>และส่วนหนึ่งจากบทกวีของอัลวาศิกที่ทรงรจนาถึงข้ารับใช้ของพระองค์มีใจความว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">مهج يملك المهج<br>
+بسجى اللحظ والدعج<br>
+حسن القد مخطف<br>
+ذو دلال وذو غنج<br>
+ليس للعين إن بدا<br>
+عنه باللحظ منعرج</blockquote>
+      <p class="ar-translation">“มุฮัจ (ดวงชีวา) ผู้ครอบครองดวงชีวาทั้งปวง<br>
+ด้วยท่วงทีแห่งสายตาอันหยาดเยิ้มและดวงตาที่ดำขลับ<br>
+เรือนร่างอันงดงามและอ้อนแอ่น เปี่ยมไปด้วยจริตจะก้านและความยั่วยวน<br>
+เมื่อใดที่เขาปรากฏกาย ย่อมไม่มีดวงตาใดสามารถละสายตาไปจากเขาได้เลย”</p>
+      <p>ปรากฏการณ์นี้ยังได้แพร่กระจายออกไปนอกรั้วพระราชวัง นักเขียนจำนวนมากได้ผลิตต้นฉบับเอกสารที่บันทึกถึงวิถีชีวิตทางเพศของสังคมและราชสำนัก และหลายท่าน เช่น อะบู นุวาส (มีชีวิตช่วงค.ศ. 756–814) ได้ประกาศรสนิยมรักร่วมเพศของตนอย่างกล้าหาญผ่านผลงานประพันธ์ของท่าน</p>
+      <p>อะบู นุวาส หนึ่งในกวีเอกคลาสสิกชาวอาหรับผู้ยิ่งใหญ่แห่งยุคคอลีฟะฮ์อับบาซียะฮ์ ได้เขียนพรรณนาถึงความปรารถนาและความสัมพันธ์แบบรักร่วมเพศของตนสู่สาธารณะ บทกวีอีโรติกแบบชายรักชายของเขาได้รับการเผยแพร่อย่างเปิดเผยมาจวบจนถึงศตวรรษที่ 20 หัวหน้าผู้พิพากษาอย่างท่านชัมซุดดีน อิบนุ ค็อลลิกานได้บันทึกเรื่องราวที่ถ่ายทอดจาก อัลอัศมะอีย์ ซึ่งได้เล่าว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">دخلت يوما أنا وأبو عبيدة المسجد فإذا على الإسطوانة التي يجلس إليها أبو عبيدة مكتوب على نحو سبعة أذرع:<br>
+صلى الإله على لوط وشيعته ... أبا عبيدة قل بالله آمينا<br>
+فأنت عندي بلا شك بقيتهم ... منذ احتملت وقد جاوزت سبعينا<br>
+قال لي يا أصمعي امح هذا فركبت ظهره ومحوته بعد أن أثقلته فقال أثقلتني وقطعت ظهري انزل فقلت له بقيت الطاء فقال هي شر حروف هذا البيت وقيل أنه لما ركب على ظهره وأثقله قال له عجل فقال قد بقي لوط فقال من هذا يهرب وكان الذي كتب ذلك أبو نواس.</blockquote>
+      <p class="ar-translation">“วันหนึ่งข้าพเจ้าและอบู อุบัยดะฮ์ได้เข้าไปในมัสยิด และพบว่าบนเสาต้นที่อบู อุบัยดะฮ์มักจะนั่งพิงเป็นประจำนั้น มีข้อความเขียนไว้ที่ระดับความสูงราวเจ็ดศอก โดยมีใจความว่า:<br>
+‘ขอพระผู้เป็นเจ้าทรงประทานพรแด่ลูฏ (นบีลูฏ) และพรรคพวกของเขา...โอ้ อบู อุบัยดะฮ์ ขอสาบานต่ออัลลอฮ์ จงกล่าว ‘อามีน’ (รับพรนั้น) เถิด<br>
+เพราะสำหรับข้าพเจ้าแล้ว ท่านคือผู้ที่หลงเหลืออยู่จากชนกลุ่มนั้นอย่างไม่ต้องสงสัย... นับตั้งแต่ท่านได้ยอมรับมัน (เป็นนัยยะเสียดสีถึงการมีรสนิยมแบบรักร่วมเพศ) และบัดนี้อายุของท่านก็ล่วงเลยวัยเจ็ดสิบปีแล้ว’<br>
+อบู อุบัยดะฮ์จึงกล่าวกับข้าพเจ้าว่า: โอ้ อัศมะอีย์ จงลบข้อความนี้ทิ้งเสีย! ข้าพเจ้าจึงปีนขึ้นไปบนหลังของเขาและทำการลบข้อความนั้นออก โดยทิ้งน้ำหนักตัวกดทับเขาไว้<br>
+เขาจึงร้องขึ้นว่า: ท่านทำตัวหนักทับข้าจนหลังข้าจะหักอยู่แล้ว ลงมาเถิด!<br>
+ข้าพเจ้าจึงตอบเขาไปว่า ยังเหลืออักษร ฏออ์ (<span class="ar-inline" lang="ar" dir="rtl">ط</span>) อยู่อีกตัวหนึ่ง เขาจึงตอบกลับมาว่า นั่นแหละคืออักษรที่ชั่วร้ายที่สุดในโคลงบทนี้!<br>
+นอกจากนี้ยังมีอีกกระแสหนึ่งเล่าว่า เมื่ออัลอัศมะอีย์ปีนขึ้นไปบนหลังและทิ้งน้ำหนักทับเขา อบู อุบัยดะฮ์ ได้เร่งว่า เร็วเข้า! อัลอัศมะอีย์ตอบว่า ยังเหลือคำว่า ‘ลูฏ’ (<span class="ar-inline" lang="ar" dir="rtl">لوط</span>) อยู่อีกคำหนึ่ง เขาจึงสวนกลับไปว่า ก็ไอ้คำนี้นี่แหละที่คนเขาวิ่งหนีกัน!<br>
+และเป็นที่ทราบกันดีว่า บุคคลที่เขียนข้อความเชิงเสียดสีดังกล่าวทิ้งไว้ก็คือ อบู นุวาส กวีชื่อดังแห่งยุคนั้น”</p>
+      <p>กวีนิพนธ์แนวรักร่วมเพศของอะบู นุวาสแพร่หลายและถูกกล่าวขานอย่างเปิดเผยในแวดวงวรรณกรรมของยุคนั้น จนชื่อของเขากลายเป็นภาพแทนของการที่สังคมเมืองในยุคทองอาหรับเปิดพื้นที่ให้แก่การพรรณนาเรื่องเพศอย่างตรงไปตรงมา และปรากฏการณ์เช่นนี้มิได้จำกัดอยู่เพียงในหมู่กวี หากแต่ยังแผ่เข้าสู่ราชสำนักของบรรดาคอลีฟะฮ์โดยตรง</p>
+      <p>บรรดาคอลีฟะฮ์แห่งราชวงศ์อับบาซียะฮ์ได้ผลัดเปลี่ยนหมุนเวียนกันขึ้นสืบทอดอำนาจ และสิ่งที่ตามมาพร้อมกับผู้ปกครองเหล่านั้นคือการปรากฏตัวของเหล่าเด็กหนุ่มหรือข้ารับใช้ชายผู้ทรงอิทธิพล</p>
+      <p>เมื่อคอลีฟะฮ์ อัลมุอ์ตะศิมเสด็จขึ้นครองราชย์ พระองค์ได้นำทหารชาวเติร์กนับพันคนเข้ามาอยู่ในครอบครอง ตามข้อมูลที่ระบุในตำรามุรูจญ์ อัซซะฮับของอัลมัสอูดี อันเป็นข้อเท็จจริงที่อัซซะฮะบีย์ก็ได้บันทึกไว้เช่นกันในสิยัร อะอ์ลาม อันนุบะลาอ์ ทั้งนี้ ในบริบทดั้งเดิมแล้ว เรื่องนี้เป็นประเด็นทางการทหารและการเมืองโดยแท้ เนื่องจากอัลมุอ์ตะศิมทรงจัดตั้งกองทัพทหารเติร์กขึ้นเป็นกำลังหลักของรัฐ เพราะมิทรงไว้วางพระทัยชาวอาหรับและเปอร์เซีย นับเป็นจุดเปลี่ยนทางการทหารที่สำคัญที่สุดของราชวงศ์อับบาซียะฮ์ และเป็นเหตุให้พระองค์ต้องย้ายเมืองหลวงไปสถาปนา ณ สามัรรออ์ อันเนื่องมาจากความขัดแย้งระหว่างชาวแบกแดดกับทหารเติร์ก แม้จะมีผู้พยายามตีความเรื่องนี้ในกรอบของเพศวิถี ทว่าหลักฐานทั้งหมดชี้ชัดว่าเป็นยุทธศาสตร์ทางการทหาร มิใช่ประเด็นเชิงกามารมณ์แต่อย่างใดตามที่ข้อมูลบางแห่งกล่าวอ้าง เว้นแต่จะมีหลักฐานอื่นๆ ที่ระบุเป็นเรื่องอื่นไว้</p>
+      <p>ครั้นเมื่อรัฐอับบาซียะฮ์เริ่มอ่อนแอลง และรัฐมัมลูกเริ่มก่อตัวและเรืองอำนาจขึ้นจากศูนย์กลางทางฝั่งอียิปต์ กิจกรรมการค้าประเวณีก็ปรากฏให้เห็นเด่นชัดมากยิ่งขึ้น ประเด็นทางสังคมวิทยาประวัติศาสตร์นี้ได้รับการบันทึกและศึกษาโดยดร.ซามียะฮ์ อลีย์ มุศลิฮีย์ ในผลงานทางวิชาการที่ใช้ชื่อหัวข้อว่า การค้าประเวณีในอียิปต์ช่วงยุคมัมลูก (<span class="ar-inline" lang="ar" dir="rtl">البغاء في مصر في العصر المملوكي 648–923 هـ / 1250–1517 م</span>)</p>
+      <h2 class="article-h2">บทสรุป</h2>
+      <p>จากราชสำนักอุมัยยะฮ์ที่เริ่มวางรากฐานระเบียบแห่งตัณหาผ่านสถาบันทาสี ไปจนถึงราชสำนักอับบาซียะฮ์ที่เปิดประตูบานใหญ่สู่ความหลากหลายทางเพศอย่างไม่ปิดบัง สิ่งที่ปรากฏให้เห็นอย่างชัดเจนคือ เพศวิถีในอารยธรรมอิสลามมิได้ดำรงอยู่ในกรอบบทบัญญัติทางศาสนาเพียงอย่างเดียวเท่านั้น หากแต่ยังถูกหล่อหลอมอย่างซับซ้อนโดยอำนาจทางการเมือง โครงสร้างชนชั้น และค่านิยมทางวัฒนธรรมของแต่ละยุคสมัย</p>
+      <p>บทกวีของอบู นุวาส วาทกรรมแห่งราชสำนักที่บันทึกโดยอัลญาฮิซและอัฏเฏาะบะรีย์ ตลอดจนปรากฏการณ์ฆุลามียาตในราชวังของอัลอะมีน ล้วนเป็นประจักษ์พยานที่ยืนยันว่า ประวัติศาสตร์เพศวิถีในโลกอิสลามนั้นมีความซับซ้อนและหลากหลายยิ่ง แต่เมื่อกงล้อแห่งประวัติศาสตร์หมุนผ่านยุคมืดของมัมลูก การเปลี่ยนแปลงครั้งใหญ่ก็กำลังก่อตัวขึ้นอีกครั้ง นำพาโลกอิสลามเข้าสู่อีกหนึ่งบริบทที่ซับซ้อนและเร้นลับยิ่งกว่า... ภายใต้ร่มเงาของ “จักรวรรดิออตโตมัน”</p>
+
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). เพศวิถีในราชสำนักแห่งคอลีฟะฮ์ จากอุมัยยะฮ์ถึงอับบาซียะฮ์. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/sexuality-in-caliphal-court.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
