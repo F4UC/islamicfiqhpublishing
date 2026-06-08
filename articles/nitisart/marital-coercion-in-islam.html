@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การบังคับขืนใจคู่สมรสในอิสลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์เชิงนิติศาสตร์อิสลามว่าด้วยการบังคับขืนใจคู่สมรส ทัศนะของสำนักคิดทั้งสี่ บทลงโทษผู้กระทำผิด สถานะของเหยื่อ และการเปรียบเทียบกับกฎหมายว่าด้วยความยินยอม">
+<meta name="keywords" content="การบังคับขืนใจคู่สมรส, นิติศาสตร์อิสลาม, ฟิกฮ์, มัสฮับทั้งสี่, อันตราย, ความยินยอม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การบังคับขืนใจคู่สมรสในอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="บทวิเคราะห์เชิงนิติศาสตร์อิสลามว่าด้วยการบังคับขืนใจคู่สมรส ทัศนะสำนักคิดทั้งสี่ และการเปรียบเทียบกับกฎหมายสมัยใหม่">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/marital-coercion-in-islam.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="marital-coercion-in-islam">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">การบังคับขืนใจคู่สมรสในอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ไม่ได้เขียนอะไรลงมาหลายวัน เพราะผู้เขียนดันล้มป่วยแบบไม่ทันตั้งตัว เลยเงียบหายไปเกือบอาทิตย์เต็มๆ วันนี้เลยอยากกลับมาเล่าอะไรบางอย่างสั้นๆให้ฟัง มันเป็นประเด็นที่ไม่ค่อยมีคนหยิบมาพูดกันนัก ทั้งที่จริงๆแล้วมันมีความสำคัญมากเลยทีเดียว เรื่องก็คือ การข่มขืนในชีวิตสมรสกับมุมมองของศาสนาอิสลาม</p>
+
+      <p>หลายครั้งที่เจอการพูดถึงประเด็นนี้ ก็มักเต็มไปด้วยความเข้าใจผิด มีทั้งการตีความหะดีษที่ไม่ตรงกับเจตนารมณ์ การหยิบคำพูดของปราชญ์มาใช้แบบไม่ครบ และการนิยามศัพท์ต่างๆที่เลื่อนไหลไปจนทำให้ความหมายเปลี่ยน สุดท้ายก็ออกมาเป็นภาพลักษณ์ที่บิดเบือน จนบางครั้งกลายเป็นเหมือนการกล่าวหาศาสนาไปเสียอย่างนั้น</p>
+
+      <p>สิ่งที่อยากทำจึงไม่ใช่แค่การแก้ไขความเข้าใจผิดเหล่านั้น แต่คือการวางรากฐานใหม่ให้กับการอธิบายว่า ความจริงแล้ว การข่มขืนถูกนิยามและถูกจัดการอย่างไรในกรอบนิติศาสตร์อิสลามดั้งเดิม และเกี่ยวข้องกับการแต่งงานอย่างไร ปราชญ์วินิจฉัยไว้ว่าอย่างไร และหะดีษที่มักถูกหยิบยกมาถกเถียงนั้น แท้จริงแล้วมีความหมายอย่างไร</p>
+
+      <p>และแน่นอนก็อยากชวนทุกท่านให้มองอีกมุมด้วยว่า กระบวนทัศน์แบบตะวันตกที่มักถูกยกขึ้นมาเปรียบเทียบ จริงๆแล้วอาจไม่ได้ละเอียดหรือครอบคลุมเท่าที่แนวทางอิสลามเคยจัดการกับเรื่องนี้มาก่อนแล้วด้วยซ้ำ</p>
+
+      <p>คำที่ใช้ในภาษาอาหรับเพื่อหมายถึง “การข่มขืน” คือ “อัลอิฆติศอบ” (<span class="ar-inline" lang="ar" dir="rtl">اغتصاب</span>) ซึ่งหมายถึง “การยึดเอาสิ่งใดสิ่งหนึ่งไปโดยมิชอบด้วยการใช้กำลัง” เมื่อกล่าวถึงการ “อิฆติศอบ” ต่อสตรี และในบริบทที่ใช้กันโดยทั่วไปในตำรานิติศาสตร์คลาสสิก มันจะหมายถึง การพรากเกียรติของสตรีไปโดยใช้กำลัง ผ่านการมีเพศสัมพันธ์โดยที่นางไม่ยินยอม</p>
+
+      <p>เป็นที่ยอมรับโดยทั่วกันว่า นี่คืออาชญากรรมที่ถูกระบุไว้อย่างชัดเจนในอิสลาม และมีมติเห็นพ้องต้องกัน (อิจมาอ์) ว่าเป็นสิ่งต้องห้าม (หะรอม) ไม่มีความขัดแย้งใดๆในประเด็นที่ว่ามันเป็น “อาชญากรรม” แต่ข้อขัดแย้ง (คิลาฟ) นั้นอยู่ที่ “บทลงโทษที่แน่ชัด” ที่จะใช้กับผู้กระทำผิด</p>
+
+      <p>ท่านอิบนุ อับดิลบัรได้กล่าวไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا نعلم خلافا بين العلماء أن المستكرهة لا حد عليها</blockquote>
+      <p class="ar-translation">“เราไม่พบความขัดแย้งใดๆในหมู่ปราชญ์ที่ว่า สตรีผู้ถูกบังคับขืนใจ (กล่าวคือ ผู้ถูกข่มขืน) นั้น จะไม่มีบทลงโทษใดๆต่อนาง”</p>
+
+      <p>กล่าวคือ คำพูดของท่านอิบนุ อับดิลบัรนี้ได้วางรากฐานที่สำคัญที่สุดประการหนึ่งในกฎหมายอิสลาม นั่นคือ ผู้ที่ตกเป็นเหยื่อของการข่มขืนถือเป็นผู้บริสุทธิ์อย่างสมบูรณ์ และจะไม่มีความผิดหรือบทลงโทษใดๆตามศาสนบัญญัติต่อนางโดยเด็ดขาด นี่คือมติเอกฉันท์ของปวงปราชญ์อิสลาม</p>
+
+      <p>เพื่อชี้ให้เห็นถึงความแตกต่างที่มีอยู่เกี่ยวกับบทลงโทษเพิ่มเติมซึ่งนักนิติศาสตร์ (ฟุเกาะฮาอ์) หลายท่านได้กำหนดไว้ ท่านอิบนุ อับดิลบัรได้เขียนต่อไปว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">واختلف الفقهاء في وجوب الصداق على المغتصب فقال مالك والليث والشافعي عليه الصداق والحد جميعا</blockquote>
+      <p class="ar-translation">“และบรรดานักนิติศาสตร์ (ฟุเกาะฮาอ์) มีความเห็นต่างกันในประเด็นว่า จำเป็น (วาญิบ) หรือไม่ที่ผู้ข่มขืนจะต้องจ่ายค่าสินไหมทดแทน (เศาะดาก) ซึ่งในเรื่องนี้ ท่านอิหม่ามมาลิก, ท่านอัลลัยษ์และท่านอิหม่ามอัชชาฟิอีย์ได้กล่าวว่า: เขา (ผู้ข่มขืน) จะต้องรับผิดชอบทั้งค่าสินไหมทดแทนและบทลงโทษควบคู่กันไป”</p>
+
+      <h2 class="article-h2">ทัศนะของสำนักคิดมาลิกีย์</h2>
+
+      <p>ท่านอิหม่ามมาลิกได้มีคำกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الأمر عندنا في الرجل يغتصب المرأة ; بكرا كانت أو ثيبا   . إنها إن كانت حرة فعليه صداق مثلها . وإن كانت أمة فعليه ما نقص من ثمنها . والعقوبة في ذلك على المغتصب . ولا عقوبة على المغتصبة في ذلك كله وإن كان المغتصب عبدا  ، فذلك على سيده . إلا أن يشاء أن يسلمه</blockquote>
+      <p class="ar-translation">“ข้อชี้ขาดในทัศนะของเราสำหรับชายที่ข่มขืนสตรี ไม่ว่านางจะเป็นหญิงพรหมจรรย์หรือไม่ก็ตามคือ หากนางเป็นสตรีเสรีชน เขาจะต้องจ่ายค่าสินไหมทดแทนเทียบเท่ากับสินสอดของผู้หญิงในระดับเดียวกัน หากนางเป็นทาสหญิง เขาจะต้องจ่ายค่าเสียหายตามมูลค่าของนางที่ลดลงไป และบทลงโทษนั้นจะต้องถูกนำมาใช้กับผู้ข่มขืนเท่านั้น และจะไม่มีบทลงโทษใดๆต่อสตรีผู้ถูกข่มขืนในทุกกรณี และหากผู้ข่มขืนเป็นทาสชาย ค่าชดเชยนั้นจะตกเป็นความรับผิดชอบของนายของเขา เว้นแต่ว่านายประสงค์จะส่งมอบตัวทาสนั้น (เพื่อรับโทษแทนการจ่ายค่าชดเชย)”</p>
+
+      <p>ค่าสินไหมทดแทนเทียบเท่ากับสินสอดของผู้หญิงในระดับเดียวกัน นี่คือหลักการทางนิติศาสตร์ในการกำหนดค่าชดเชย โดยผู้พิพากษาจะพิจารณาจากสถานะทางสังคม, คุณลักษณะและปัจจัยอื่นๆของเหยื่อ โดยเปรียบเทียบกับสินสอดโดยเฉลี่ยของผู้หญิงคนอื่นๆในครอบครัวหรือชุมชนของนางที่มีสถานะใกล้เคียงกัน เพื่อให้การชดเชยนั้นมีความยุติธรรมและเหมาะสมกับความเสียหายที่เกิดขึ้นกับเกียรติและสถานะของนาง</p>
+
+      <p>ทัศนะของอิหม่ามมาลิกนี้แสดงให้เห็นถึงการให้ความสำคัญกับการเยียวยาเหยื่อในเชิงทรัพย์สิน นอกเหนือไปจากการลงโทษผู้กระทำผิดทางร่างกาย ซึ่งเป็นการสร้างความยุติธรรมอย่างรอบด้าน</p>
+
+      <h2 class="article-h2">ทัศนะของสำนักคิดชาฟิอีย์</h2>
+
+      <p>ท่านอัลบาญีย์ได้เล่าไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">المستكرهة لا يخلو أن تكون حرة أو أمة فإن كانت حرة فلها صداق مثلها على من استكرهها وعليه الحد وبهذا قال الشافعي وهو مذهب الليث وروي عن علي بن أبي طالب – رضي الله عنه</blockquote>
+      <p class="ar-translation">“ในกรณีของสตรีผู้ถูกบังคับขืนใจ (ผู้ถูกข่มขืน) หากนางเป็นสตรีเสรีชน นางมีสิทธิ์ได้รับค่าสินไหมทดแทนเทียบเท่ากับสินสอดของผู้หญิงในระดับเดียวกันจากผู้ที่ข่มขืนนาง และเขาผู้นั้นจะต้องได้รับบทลงโทษนี่คือทัศนะของท่านอิหม่ามอัชชาฟิอีย์และเป็นทัศนะของท่านอัลลัยษ์และยังได้ถูกรายงานมาจากท่านอะลี บิน อบี ฏอลิบอีกด้วย”</p>
+
+      <p>ทัศนะของสำนักคิดชาฟิอีย์ในประเด็นนี้มีความสอดคล้องอย่างยิ่งกับทัศนะของสำนักคิดมาลิกีย์ที่ได้นำเสนอไปก่อนหน้า คือการยืนยันว่าผู้กระทำผิดจะต้องรับผิดทั้งในทางอาญาและในทางแพ่ง (ด้วยการจ่ายค่าสินไหมทดแทนแก่เหยื่อ) การอ้างอิงว่าทัศนะนี้สืบย้อนไปถึงเคาะลีฟะฮ์อะลี บิน อบี ฏอลิบ ยังเป็นการเพิ่มน้ำหนักและความน่าเชื่อถือให้แก่ข้อชี้ขาดนี้อย่างยิ่ง</p>
+
+      <h2 class="article-h2">ทัศนะของสำนักคิดฮะนะฟีย์</h2>
+
+      <p>ท่านอัลกาสานีย์ ได้เขียนไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكذلك الوطء عن إكراه يوجب الحد</blockquote>
+      <p class="ar-translation">“และในทำนองเดียวกัน การมีเพศสัมพันธ์อันเนื่องมาจากการบังคับขืนใจ (กล่าวคือ การที่ชายบังคับขืนใจ) นั้น ย่อมทำให้จำเป็นต้องมีบทลงโทษ (แก่ผู้กระทำการบังคับ)”</p>
+
+      <p>ข้อความสั้นๆนี้จากปราชญ์ในสำนักคิดฮะนะฟีย์เป็นการตอกย้ำว่า การบังคับขืนใจให้มีเพศสัมพันธ์นั้นเป็นการกระทำที่ก่อให้เกิดบทลงโทษแก่ผู้กระทำผิด ทั้งนี้ สำนักคิดฮะนะฟีย์ก็ยึดมั่นในหลักการพื้นฐานที่เป็นมติเอกฉันท์ (อิจมาอ์) เช่นเดียวกับสำนักคิดอื่นๆว่า ผู้ที่ถูกบังคับขืนใจหรือตกเป็นเหยื่อของการข่มขืนนั้น ถือเป็นผู้บริสุทธิ์และจะไม่มีบทลงโทษใดๆต่อนางโดยเด็ดขาด</p>
+
+      <p>ทัศนะของสำนักคิดฮะนะฟีย์คือ บทลงโทษจะต้องถูกนำมาใช้กับผู้กระทำผิด แต่เขาไม่จำเป็นต้องรับผิดชอบในการจ่ายค่าสินไหมทดแทน</p>
+
+      <p>ท่านอบุลวะลีด อัลบาญีย์ได้เขียนไว้อีกว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقال أبو حنيفة والثوري: عليه الحد دون الصداق</blockquote>
+      <p class="ar-translation">“และท่านอบู หะนีฟะฮ์และท่าน (สุฟยาน) อัษเษารีย์ ได้กล่าวว่า: เขา (ผู้ข่มขืน) จะต้องได้รับบทลงโทษโดยไม่ต้องจ่ายค่าสินไหมทดแทน”</p>
+
+      <p>ท่านอิบนุ อับดิลบัรก็ได้อ้างอิงทัศนะเดียวกันนี้จากท่านอบู หะนีฟะฮ์, ท่านอบู ยูซุฟ, ท่านมุฮัมมัด อัชชัยบานีย์และท่านสุฟยาน อัษเษารีย์โดยท่านได้เขียนไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقال أبو حنيفة وأبو يوسف ومحمد وسفيان الثوري عليه الحد ولا مهر عليه</blockquote>
+      <p class="ar-translation">“และท่านอบู หะนีฟะฮ์, ท่านอบู ยูซุฟ, ท่านมุฮัมมัด, และท่านสุฟยาน อัษเษารีย์ ได้กล่าวว่า: เขาจะต้องได้รับบทลงโทษ และไม่ต้องจ่ายค่าสินสอด (มะฮัร = ค่าสินไหม) ใดๆ”</p>
+
+      <h2 class="article-h2">ข้อสังเกตเชิงเปรียบเทียบ</h2>
+
+      <p>จากที่กล่าวมาทั้งหมด จะเห็นถึงความแตกต่างที่สำคัญระหว่างทัศนะของสำนักคิดฮะนะฟีย์กับสำนักคิดมาลิกีย์และชาฟิอีย์ จุดที่เห็นพ้องต้องกันคือ ทุกสำนักคิดเห็นตรงกันว่าการข่มขืนเป็นอาชญากรรมร้ายแรง และผู้กระทำผิดจะต้องได้รับบทลงโทษทางอาญา ส่วนจุดที่เห็นต่างคือ ประเด็นเรื่อง “การเยียวยาในทางแพ่ง” หรือค่าสินไหมทดแทนแก่เหยื่อ</p>
+
+      <p>สำนักคิดมาลิกีย์และชาฟิอีย์มองว่า นอกจากการลงโทษทางอาญาแล้ว ผู้กระทำผิดยังมีภาระผูกพันทางแพ่งที่จะต้องจ่ายค่าชดเชยความเสียหายให้แก่เหยื่อในรูปแบบของ “เศาะดาก มิษลิฮา” ตามที่ได้กล่าวไปก่อนหน้านี้ นั่นคือการจ่ายค่าสินไหมให้เหมาะสมกับสถานะของนาง</p>
+
+      <p>สำนักคิดฮะนะฟีย์มองว่า บทลงโทษนั้นจำกัดอยู่เพียงบทลงโทษทางอาญา (อัลหัดด์) เท่านั้น และไม่ได้กำหนดให้ผู้กระทำผิดต้องรับผิดชอบค่าสินไหมทดแทนเพิ่มเติม</p>
+
+      <p>ความแตกต่างนี้สะท้อนให้เห็นถึงหลักการและวิถีในการวินิจฉัยทางนิติศาสตร์ (อุศูลุลฟิกฮ์) ที่แตกต่างกันของแต่ละสำนักคิดในการจัดการกับอาชญากรรมร้ายแรงนี้</p>
+
+      <h2 class="article-h2">ทัศนะของสำนักคิดฮัมบะลีย์</h2>
+
+      <p>ทัศนะของสำนักคิดฮัมบะลีย์คือ บทลงโทษหัดจะต้องถูกนำมาใช้กับผู้กระทำผิด และเขาจำเป็นต้องจ่าย “ค่าสินไหมทดแทน” ให้แก่สตรีผู้เป็นเหยื่อให้เหมาะสมกับสถานะของนาง ทัศนะเดียวกันนี้ได้ถูกถ่ายทอดมาจากท่านอิบนุ ญุร็อยจญ์และท่านมะอ์มัรก็ได้ถ่ายทอดทัศนะเดียวกันนี้จากท่านอัซซุฮรีย์ และมีรายงานว่าท่านเกาะตาดะฮ์ก็ได้กล่าวถึงทัศนะนี้เช่นเดียวกัน</p>
+
+      <p>แนวคิดที่ว่า สตรีจะต้องถูกลงโทษจากการที่เธอถูกบังคับขืนใจให้มีเพศสัมพันธ์นั้น เป็นความเข้าใจผิดอย่างสิ้นเชิง หรือไม่ก็เป็นการโกหกโดยเจตนาของบรรดาผู้ที่ต้องการจะเผยแพร่วาทกรรมที่ต่อต้านอิสลาม</p>
+
+      <p>ท่านอัลบุฮูตีย์ปราชญ์ผู้ยิ่งใหญ่ในสำนักคิดฮัมบะลีย์ได้เขียนไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">(وَإِنْ أُكْرِهَتْ الْمَرْأَةُ عَلَى الزِّنَا أَوْ) أُكْرِهَ (الْمَفْعُولُ بِهِ لِوَاطًا قَهْرًا أَوْ بِالضَّرْبِ أَوْ بِالْمَنْعِ مِنْ طَعَامٍ أَوْ شَرَابٍ اضْطِرَارًا إلَيْهِ وَنَحْوِهِ) ... (فَلَا حَدَّ) لِقَوْلِهِ – صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ – «رُفِعَ عَنْ أُمَّتِي الْخَطَأُ وَالنِّسْيَانُ وَمَا اُسْتُكْرِهُوا عَلَيْهِ» رواه النسائي</blockquote>
+      <p class="ar-translation">“และหากสตรีถูกบังคับขืนใจให้ผิดประเวณี (ซินา) หรือผู้ถูกกระทำ (ชาย) ถูกบังคับให้ร่วมเพศทางทวารหนัก (ลิวาฏ) ด้วยการใช้กำลัง, การทุบตีหรือด้วยการห้ามไม่ให้เข้าถึงอาหารหรือเครื่องดื่มที่จำเป็นต่อการดำรงชีพ และอื่นๆที่คล้ายกัน...ก็จะไม่มีบทลงโทษ (ต่อผู้ถูกบังคับดังกล่าว) เนื่องด้วยคำกล่าวของท่านศาสดา ﷺ ที่ว่า: ‘ประชาชาติของฉันได้รับการอภัยโทษในความผิดพลาด, การหลงลืมและสิ่งที่พวกเขาถูกบังคับให้กระทำ’ ซึ่งบันทึกโดยอันนะสาอีย์”</p>
+
+      <p>ท่านอัตติรมิซีย์ได้เขียนไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والعمل على هذا عند أهل العلم من أصحاب النبي صلى الله عليه وسلم وغيرهم أن ليس على المستكرهة حد</blockquote>
+      <p class="ar-translation">“และนี่คือแนวทางปฏิบัติสำหรับบรรดาผู้รู้ในหมู่สหายของท่านศาสดา ﷺ และชนรุ่นหลังพวกเขา ที่ว่า จะไม่มีบทลงโทษใดๆต่อสตรีผู้ถูกบังคับขืนใจ (ผู้ถูกข่มขืน)”</p>
+
+      <h2 class="article-h2">ข้อสังเกต</h2>
+
+      <p>ในเรื่องบทลงโทษผู้กระทำผิด ทัศนะของสำนักคิดฮัมบะลีย์นั้นสอดคล้องกับสำนักคิดมาลิกีย์และชาฟิอีย์คือ การลงโทษทั้งทางอาญาและบังคับให้ชดใช้ค่าเสียหายทางแพ่ง (ค่าสินไหมทดแทน) แก่เหยื่อ</p>
+
+      <p>ในเรื่องสถานะของเหยื่อ เนื้อหาส่วนนี้ได้ตอกย้ำอย่างหนักแน่นผ่านคำกล่าวของปราชญ์คนสำคัญทั้งสายฟิกฮ์ (อัลบุฮูตีย์) และสายหะดีษ (อัตติรมิซีย์-อัลบาญีย์) ว่า ความบริสุทธิ์ของผู้ที่ตกเป็นเหยื่อของการข่มขืนนั้น เป็นสิ่งที่เด็ดขาดและเป็นมติเอกฉันท์ ซึ่งเป็นแนวปฏิบัติที่สืบทอดมาตั้งแต่สมัยเศาะฮาบะฮ์ (สหายของท่านนบี) โดยไม่มีข้อโต้แย้งใดๆ</p>
+
+      <p>ในประเด็นนี้มีมติเห็นพ้องต้องกันในหมู่นักวิชาการ ซึ่งได้รับการอ้างอิงโดยปราชญ์หลายท่าน นอกเหนือจากท่านอิบนุ อับดิลบัรแล้ว ท่านอิบนุ รุชด์ก็ได้เขียนไว้เป็นอีกตัวอย่างหนึ่งว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا خلاف بين أهل الإسلام أن المستكرهة لا حد عليها</blockquote>
+      <p class="ar-translation">“และไม่มีความขัดแย้งใดๆในหมู่ชาวอิสลามที่ว่า สตรีผู้ถูกบังคับขืนใจ (ผู้ถูกข่มขืน) นั้น จะไม่มีบทลงโทษใดๆต่อนาง”</p>
+
+      <p>โดยภาพรวมแล้ว ในทุกสำนักคิดหลักทั้งสี่แหล่ง ผู้ข่มขืนจะถูกปฏิบัติเสมือนเป็นผู้ผิดประเวณี (โดยบางสำนักคิดได้กำหนดให้จ่ายค่าสินไหมทดแทนเพิ่มเติมสำหรับผู้ข่มขืนที่ยังไม่ได้แต่งงาน) และหากเขาแต่งงานแล้ว เขาจะต้องถูกขว้างด้วยหินจนเสียชีวิต; แต่หากยังไม่ได้แต่งงาน เขาจะต้องถูกเฆี่ยน</p>
+
+      <p>เป็นเรื่องสำคัญอย่างยิ่งที่ต้องชี้แจงให้ชัดเจนว่า การจ่ายค่าสินไหมทดแทนที่บังคับใช้กับผู้กระทำผิดนั้น เป็นเพียง “ค่าปรับ” หรือ “ค่าชดเชย” ซึ่งเขาต้องจ่ายให้แก่สตรีเสรีชนเนื่องจากการที่เขาได้บังคับขืนใจนางในสิ่งซึ่งจะกระทำได้ก็ต่อเมื่ออยู่ภายใต้กรอบของการแต่งงานที่ถูกต้องเท่านั้น แต่นี่ไม่ได้หมายความโดยสิ้นเชิงว่าผู้ถูกข่มขืนจะต้องแต่งงานกับผู้ข่มขืน</p>
+
+      <p>แน่นอนว่า มีเงื่อนไขบางประการที่จะต้องครบถ้วนก่อนจึงจะสามารถบังคับใช้บทลงโทษหัดด์ได้ เช่นเดียวกับกรณีการผิดประเวณีโดยทั่วไป คือ จะต้องมีพยานชายสี่คน หรือผู้กระทำผิดจะต้องสารภาพในอาชญากรรมนั้น</p>
+
+      <p>อย่างไรก็ตาม หากหลักฐานไม่เข้าเกณฑ์ของบทลงโทษหัดด์ แต่มีหลักฐานเพียงพอที่จะพิสูจน์ได้ว่ามีการบังคับขืนใจและมีการกระทำผิดเกิดขึ้นจริงจากฝ่ายผู้ถูกกล่าวหา ผู้พิพากษาก็สามารถกำหนดบทลงโทษ “ตะอ์ซีร” ได้</p>
+
+      <p>“ตะอ์ซีร” คือบทลงโทษตามดุลยพินิจของผู้พิพากษา ซึ่งอาจมีตั้งแต่การตักเตือน การปรับ ไปจนถึงการจำคุกหรือการลงโทษทางร่างกาย โดยหลักฐานต่างๆ เช่น เสียงกรีดร้องของสตรี, ร่องรอยการต่อสู้และหลักฐานการทำร้ายร่างกาย สามารถนำมาพิจารณาเพื่อใช้ในการกำหนดบทลงโทษตามดุลยพินิจได้</p>
+
+      <p>รายละเอียดเหล่านี้ถูกนำเสนอมาเพียงเพื่อแสดงให้เห็นว่า ปราชญ์อิสลามคลาสสิกได้นิยามคำว่า ‘ข่มขืน’ ไว้อย่างเหมาะสม และได้อภิปรายถึงบทลงโทษที่จะนำมาบังคับใช้แล้ว ดังนั้นจึงจำเป็นต้องเน้นย้ำว่า จารีตอิสลามไม่ได้เพิกเฉยต่อความเป็นจริงนี้ และได้ยอมรับในองค์ประกอบของการบังคับขืนใจมาโดยตลอด</p>
+
+      <p>ท่านอิบนุลก็อยยิมได้ทำให้ประเด็นเรื่องการใช้กำลังนี้ชัดเจนยิ่งขึ้นเมื่อท่านกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما إذا استكرهها فإن هذا من باب المثلة فإن الإكراه على الوطء مثلة فإن الوطء يجري مجرى الجناية ولهذا لا يخلو عن عقر أو عقوبة</blockquote>
+      <p class="ar-translation">“สำหรับกรณีที่เขาได้บังคับขืนใจนาง นี่ถือเป็นการ ‘ล่วงละเมิด’ ประเภทหนึ่ง เพราะแท้จริงแล้ว การบังคับให้มีเพศสัมพันธ์คือการล่วงละเมิด และเพศสัมพันธ์เช่นนั้นได้ถูกกระทำไปในลักษณะของ ‘อาชญากรรม’ ด้วยเหตุนี้เอง เขาจึงไม่พ้นจากความผิดที่จะต้องถูกปรับหรือรับโทษตามกฎหมาย”</p>
+
+      <h2 class="article-h2">หะดีษที่ดูเหมือนจะ “มีปัญหา” คำอธิบายและบริบท</h2>
+
+      <p>ก่อนที่จะกล่าวถึงหะดีษซึ่งเป็นประเด็นถกเถียงกันอย่างเผ็ดร้อนในการโต้แย้งระหว่างศาสนา เราควรจะมาอภิปรายกันสั้นๆเสียก่อนว่า “การแต่งงาน” มีความหมายอย่างไรสำหรับมุสลิม</p>
+
+      <p>สิ่งที่เราต้องชื่นชมและทำความเข้าใจก็คือ ในอิสลามนั้น การแต่งงานคือสายสัมพันธ์อันบริสุทธิ์ที่สุดที่มนุษย์จะสามารถมีได้กับเพื่อนมนุษย์ด้วยกัน กรณีของการแต่งงานนั้นเปรียบเสมือนว่าคนหนึ่งถูกสร้างมาเพื่ออีกคนหนึ่ง เพื่อที่จะยืนหยัดฝ่าฟันความทุกข์ยาก, แบ่งปันความสุขและเติมเต็มซึ่งกันและกัน</p>
+
+      <p>เมื่ออัลลอฮ์ทรงพรรณนาว่าท่านหญิงหะวาอ์ ถูกสร้างมาจากซี่โครงของท่านอาดัม ก็เพื่อเป็นการเน้นย้ำว่า ท่านอาดัมนั้นไม่สมบูรณ์หากปราศจากคู่ครองของท่าน เรื่องนี้ได้แสดงให้เห็นถึงการพึ่งพาอาศัยซึ่งกันและกัน โดยแต่ละฝ่ายจะมาเติมเต็มซึ่งกันและกัน และอุดช่องว่าง, จุดอ่อนและข้อบกพร่องที่อีกฝ่ายอาจจะมี</p>
+
+      <p>เป็นเรื่องที่ควรเน้นย้ำว่า บทบาทและหน้าที่ความรับผิดชอบของพวกเขานั้นแตกต่างกัน เช่นเดียวกับโครงสร้างทางชีวภาพ, ธรรมชาติ, ข้อบกพร่องและจุดแข็งของแต่ละคน ความแตกต่างเหล่านี้มีขึ้นเพื่ออำนวยให้เกิดการพึ่งพาอาศัยซึ่งกันและกัน และเพื่อสร้างสายสัมพันธ์ที่มีประสิทธิผล, ใช้งานได้จริงและยั่งยืนยิ่งขึ้นระหว่างคู่ครอง ทั้งสองจะแบ่งบทบาท, หน้าที่และภารกิจของตนเพื่อให้เกิดประสิทธิภาพสูงสุด และยังเป็นการส่งเสริมจุดแข็งและเกื้อหนุนจุดอ่อนของแต่ละฝ่ายอีกด้วย</p>
+
+      <p>สิ่งนี้จะนำไปสู่สังคมที่เกื้อกูลกัน ซึ่งเข้าใจถึงความจำเป็นของการสื่อสารและไม่หวาดกลัวต่อความรับผิดชอบ อัลกุรอานได้ทำให้ความเข้าใจนี้ชัดเจนยิ่งขึ้นผ่านโองการต่างๆมากมาย เช่น</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَالَّذِينَ يَقُولُونَ رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا</p>
+      </div>
+      <p>“และบรรดาผู้ที่กล่าวว่า ‘ข้าแต่พระผู้อภิบาลของเรา โปรดประทานแก่เราซึ่งคู่ครองและลูกหลานอันเป็นที่รื่นรมย์แก่สายตา (แก้วตาดวงใจ) และโปรดทำให้เราเป็นผู้นำสำหรับบรรดาผู้ยำเกรงด้วยเถิด’”</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">رَبَّنَا وَأَدْخِلْهُمْ جَنَّاتِ عَدْنٍ الَّتِي وَعَدْتَهُمْ وَمَنْ صَلَحَ مِنْ آبَائِهِمْ وَأَزْوَاجِهِمْ وَذُرِّيَّاتِهِمْ ۚ إِنَّكَ أَنْتَ الْعَزِيزُ الْحَكِيمُ</p>
+      </div>
+      <p>“ข้าแต่พระผู้อภิบาลของเรา โปรดนำพวกเขาเข้าสู่สวนสวรรค์ ซึ่งพระองค์ได้ทรงสัญญาแก่พวกเขา และแก่ผู้ทรงธรรมในหมู่บรรพบุรุษ, คู่ครองและลูกหลานของพวกเขา แท้จริงพระองค์คือผู้ทรงอำนาจ ผู้ทรงปรีชาญาณยิ่ง”</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ</p>
+      </div>
+      <p>“และหนึ่งในสัญญาณทั้งหลายของพระองค์คือ การที่พระองค์ได้ทรงสร้างคู่ครองให้แก่พวกเจ้าจากตัวของพวกเจ้าเอง เพื่อที่พวกเจ้าจะได้พบกับความสงบสุขและความพึงพอใจซึ่งกันและกัน และพระองค์ได้ทรงบันดาลให้เกิดความรักใคร่และความเมตตาปรานีขึ้นระหว่างพวกเจ้า แท้จริงในนั้นย่อมเป็นสัญญาณนานัปการสำหรับหมู่ชนผู้ใคร่ครวญ”</p>
+
+      <p>การแต่งงานคือศิลามุมเอกของสังคม ด้วยเหตุนี้เอง การธำรงรักษาและการทำหน้าที่ของสถาบันสมรสจึงได้รับการเน้นย้ำเป็นพิเศษในศาสนบัญญัติอิสลาม (ชะรีอะฮ์) เมื่อคำนึงถึงสิ่งนี้แล้ว เราจะมาพิจารณาหะดีษที่เป็นศูนย์กลางของการอภิปรายในครั้งนี้กัน</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">إِذَا دَعَا الرَّجُلُ امْرَأَتَهُ إِلَى فِرَاشِهِ فَلَمْ تَأْتِهِ فَبَاتَ غَضْبَانَ عَلَيْهَا لَعَنَتْهَا الْمَلاَئِكَةُ حَتَّى تُصْبِحَ</p>
+      </div>
+      <p class="ar-translation">“เมื่อชายผู้หนึ่งได้เรียกภรรยาของเขามายังที่นอน แต่นางไม่มาหาเขา และส่งผลให้เขาต้องนอนหลับไปในสภาพที่โกรธเคืองนาง บรรดามะลาอิกะฮ์จะสาปแช่งนางไปจนกระทั่งรุ่งเช้า”</p>
+
+      <p>มีแนวทางการอธิบายหะดีษบทนี้อยู่สองแนวทางด้วยกันคือ</p>
+
+      <h2 class="article-h2">แนวทางที่ 1: การวิเคราะห์เชิงภาษาศาสตร์</h2>
+
+      <p>แนวทางแรกเกี่ยวข้องกับภาษาที่ใช้ในตัวบทรายงาน ซึ่งมีอีกสองสำนวนรายงานที่ให้รายละเอียดที่สำคัญยิ่ง</p>
+
+      <p>สำนวนรายงานแรกใช้คำว่า “ฮาญิเราะตัน ฟิรอชะ เซาญิฮา” (<span class="ar-inline" lang="ar" dir="rtl">هاجرة فراش زوجها</span>) คำว่า “ฮาญิเราะตัน” (มาจากรากศัพท์ “ฮัจญ์ร” ที่แปลว่า การอพยพ, การละทิ้ง) บ่งชี้ถึงการที่นาง “จงใจละทิ้ง” หรือ “บอยคอต” เตียงนอนของสามี ราวกับว่านางได้จากไปและย้ายไปอยู่ในที่ห่างไกล</p>
+
+      <p>สำนวนรายงานที่สองใช้คำว่า “ฟะตะอ์บา อะลัยฮิ” (<span class="ar-inline" lang="ar" dir="rtl">فتأبى عليه</span>) คำว่า “ตะอ์บา” บ่งชี้ถึง “การปฏิเสธอย่างแข็งกร้าวโดยปราศจากเหตุผลอันสมควร”</p>
+
+      <p>เมื่อนำความหมายเชิงลึกของทั้งสองสำนวนมารวมกันจะได้ความหมายว่า ภรรยาได้จงใจปฏิเสธการเรียกของสามีเพื่อมีความสัมพันธ์ โดยปราศจากเหตุผลที่ชอบด้วยหลักศาสนา ซึ่งการกระทำนั้นได้สร้างความเจ็บปวดให้แก่เขา</p>
+
+      <h2 class="article-h2">แนวทางที่ 2: การทำความเข้าใจในบริบทของการแต่งงานแบบอิสลาม</h2>
+
+      <p>แม้ว่าจะไม่พิจารณาความหมายเชิงลึกทางภาษาศาสตร์ ก็ยังคงจำเป็นอย่างยิ่งที่จะต้องทำความเข้าใจหะดีษบทนี้ในบริบทของการแต่งงานแบบอิสลาม กล่าวคือ จะต้องคำนึงถึงหน้าที่ความรับผิดชอบของทั้งสามีและภรรยา</p>
+
+      <p>ภายใต้กรอบของอิสลาม ความต้องการทางเพศของบุคคลจะสามารถได้รับการตอบสนองได้ก็ต่อเมื่ออยู่ในความสัมพันธ์ที่ถูกต้องตามกฎหมายเท่านั้น ด้วยเหตุนี้เอง หน้าที่ความรับผิดชอบบางประการจึงถูกกำหนดไว้สำหรับทั้งสองฝ่าย เพื่อให้ความต้องการของทั้งคู่ได้รับการตอบสนอง</p>
+
+      <p>ภรรยาจะสามารถปฏิเสธได้หาก…นางเหนื่อยล้า, นางป่วยหรือไม่สบาย, นางกำลังปฏิบัติหน้าที่บังคับทางศาสนา (เช่น การถือศีลอดฟัรฎู) หรือหากการมีความสัมพันธ์นั้นจะก่อให้เกิดอันตรายต่อนาง อย่างไรก็ตาม เป็นหน้าที่ของนางที่จะต้องตอบสนองความต้องการของสามี เช่นเดียวกับที่เป็นหน้าที่ของสามีที่จะต้องตอบสนองความต้องการของภรรยาเช่นกัน</p>
+
+      <p>หะดีษบทนี้มักจะถูกนักวิจารณ์จากตะวันตกหยิบยกขึ้นมาเพื่อโจมตีว่า อิสลามอนุญาตให้มีการข่มขืนในชีวิตสมรสได้ แต่ทว่า ตัวบทรายงานได้ชี้แจงไว้อย่างชัดเจนว่า การสาปแช่งของมะลาอิกะฮ์จะเกิดขึ้นกับนางก็ต่อเมื่อสามีต้องนอนหลับไปในสภาพที่โกรธเคือง ซึ่งในมุมมองทางนิติศาสตร์ (ฟิกฮ์) นั้น หมายถึงกรณีที่นางปฏิเสธการมีเพศสัมพันธ์ โดยปราศจากเหตุผลอันชอบด้วยหลักศาสนา</p>
+
+      <p>นอกจากนี้ สิ่งที่ควรตระหนักอย่างยิ่งก็คือ ไม่มีส่วนใดในหะดีษเลยที่กล่าวว่า หากภรรยาปฏิเสธแล้ว สามีจะสามารถใช้กำลังบังคับขืนใจนางได้</p>
+
+      <p>ท่านมุฟตี มุฮัมมัด อิบนุ อาดัม อัลเกาษะรีย์ (ผู้ก่อตั้งและหัวหน้ามุฟตีแห่งสถาบันดารุลอิฟตาอ์ในเลสเตอร์) ได้เขียนไว้ในหนังสือ “แนวทางการมีความสัมพันธ์ในอิสลาม” (Guidelines to Intimacy in Islām) ของท่านว่า: “อย่างไรก็ตาม มีสองประเด็นที่ควรค่าแก่การพิจารณาในที่นี้คือ</p>
+
+      <p><strong>ประเด็นที่หนึ่ง: สิทธิของสามีไม่ได้หมายถึงสิทธิในการบังคับขืนใจ</strong></p>
+
+      <p>สิทธิของสามีในการเรียกร้องให้มีเพศสัมพันธ์ ไม่ได้หมายความว่าเขาได้รับอนุญาตให้ใช้กำลังบังคับขืนใจภรรยาเพื่อสนองความใคร่ของตนเอง การที่หะดีษกล่าวถึงเพียงการที่สามี “นอนหลับไปในสภาพที่โกรธเคือง” และ “ไม่พอใจ” นั้น คือหลักฐานในตัวเองที่แสดงให้เห็นว่าสามีควรระงับตนเอง จากการใช้กำลังบังคับขืนใจภรรยาและทำร้ายนาง หากการกระทำเช่นนั้นเป็นที่อนุญาตแล้วไซร้ แน่นอนว่าท่านศาสนทูตแห่งอัลลอฮ์ก็คงจะอนุญาตให้สามีกระทำได้ไปแล้ว</p>
+
+      <p>หากภรรยากำลังมีประจำเดือนหรือมีเลือดหลังคลอดบุตร, นางป่วย, ไม่สามารถมีเพศสัมพันธ์ได้ทางร่างกาย, เหนื่อยล้าอย่างยิ่ง, หมดเรี่ยวแรงทางอารมณ์หรือการมีเพศสัมพันธ์นั้นจะเป็นอันตรายต่อสุขภาวะของนาง ในกรณีเหล่านี้ นางไม่จำเป็นต้องปฏิบัติตามคำเรียกร้องของสามีอีกต่อไป ในทางกลับกัน เป็นหน้าที่ของสามีที่จะต้องแสดงความเห็นอกเห็นใจ ด้วยการทำความเข้าใจว่านางอาจไม่สามารถมีเพศสัมพันธ์ได้</p>
+
+      <p>อัลลอฮ์ ตะอาลาได้ตรัสไว้ในซูเราะฮ์อัลบะเกาะเราะฮ์ว่า: <span class="ar-inline" lang="ar" dir="rtl">لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا</span> “อัลลอฮ์จะไม่ทรงบังคับชีวิตใดเกินกว่าความสามารถของชีวิตนั้น”</p>
+
+      <p>บ่อยครั้งที่เราจะเห็นสามีเรียกร้องให้ภรรยาสนองความต้องการของตน โดยไม่ใส่ใจว่านางอาจจะป่วยหนักและไม่พร้อมทางร่างกาย บางคนถึงกับขู่ภรรยาด้วยการหย่าร้าง และนำหะดีษต่างๆมาสนับสนุนพฤติกรรมของตน เป็นเรื่องสำคัญที่ต้องเข้าใจว่า หากภรรยาไม่ได้อยู่ในสภาวะที่จะมีเพศสัมพันธ์ได้และมีเหตุผลที่แท้จริงและชอบด้วยหลักอิสลาม แต่สามียังคงบังคับขืนใจนาง เขาก็จะกลายเป็นผู้ทำบาป ในฐานะสามี เราต้องตระหนักว่าภรรยาของเราก็เป็นมนุษย์เช่นกัน ไม่ใช่เครื่องจักรที่จะสามารถเปิด-ปิดสวิตช์ได้ทุกเมื่อที่เราต้องการ!</p>
+
+      <p><strong>ประเด็นที่สอง: ขอบเขตหน้าที่ของภรรยา</strong></p>
+
+      <p>หน้าที่ของภรรยาในการเตรียมพร้อมสำหรับสามีนั้น บังคับใช้ในสถานการณ์ปกติ เมื่อนางมีเหตุผลที่ชอบด้วยหลักศาสนา นางย่อมสามารถปฏิเสธได้ แต่การปฏิเสธเพราะต้องการใช้เรื่องเพศเป็นอาวุธต่อรองนั้น ไม่เป็นที่อนุญาตในอิสลาม การที่นางจะกล่าวขึ้นมาลอยๆ ว่า “ฉันไม่มีอารมณ์” นั้น ยังไม่ถือเป็นเหตุผลที่เพียงพอ (ในกรณีที่ไม่มีอุปสรรคอื่นใดและมีเจตนาเพื่อใช้เป็นเครื่องต่อรอง)</p>
+
+      <p>ท้ายที่สุดแล้ว ปัญหาเหล่านี้จะได้รับการแก้ไขอย่างดีที่สุดผ่าน ความเข้าอกเข้าใจซึ่งกันและกัน, การให้เกียรติซึ่งกันและกัน, ความรัก, ความอ่อนโยน, และการเห็นแก่คู่ครองมากกว่าตนเอง”</p>
+
+      <h2 class="article-h2">ประเด็นการบังคับขืนใจคู่สมรส</h2>
+
+      <p>หลักการในอิสลามนั้นแตกต่างจากแนวคิดเรื่อง “ความยินยอม” ตามความเข้าใจในปัจจุบัน ในอิสลาม การมีเพศสัมพันธ์ที่ถูกต้องตามกฎหมาย (ภายใต้กรอบของการแต่งงานที่สมบูรณ์) จะถือว่าสมบูรณ์ ตราบใดที่ไม่มีอันตรายใดๆเกิดขึ้นกับฝ่ายภรรยา</p>
+
+      <p>ท่านอัลบุฮูตีย์ได้เขียนไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وللزوج الاستمتاع بزوجته كل وقت على أي صفة كانت … ما لم يشغلها عن الفرائض أو يضرها فليس له الاستمتاع بها إذن لأن ذلك ليس من المعاشرة بالمعروف وحيث لم يشغلها عن ذلك ولم يضرها فله الاستمتاع</blockquote>
+      <p class="ar-translation">“เป็นสิทธิของสามีที่จะมีความสุขเกษม (มีความสัมพันธ์) กับภรรยาของเขาได้ในทุกเวลา ไม่ว่าสภาพของนางจะเป็นเช่นไรก็ตาม...ตราบใดที่เขาไม่ทำให้นางต้องละเลยจากหน้าที่อันเป็นภาคบังคับทางศาสนา หรือสร้างความเจ็บปวด/อันตรายแก่นาง หากเป็นกรณีเช่นนั้น (คือทำให้ละเลยศาสนกิจหรือทำให้นางเจ็บปวด) เขาก็ย่อมไม่มีสิทธิ์ที่จะมีความสัมพันธ์กับนาง เพราะการกระทำดังกล่าวนั้นไม่นับเป็นการใช้ชีวิตร่วมกับนางด้วยดี แต่หากเขาไม่ได้ทำให้นางต้องละเลยจากหน้าที่เหล่านั้น และไม่ได้สร้างความเจ็บปวด/อันตรายแก่นาง เขาก็มีสิทธิ์ที่จะมีความสัมพันธ์กับนางได้”</p>
+
+      <p>ดังที่ข้อความข้างต้นได้แสดงให้เห็น สามีสามารถมีความสัมพันธ์กับภรรยาของเขาได้ตราบใดที่ไม่มี “อันตราย” เกิดขึ้น และเป็นที่ประจักษ์ชัดว่า การบังคับขืนใจให้มีเพศสัมพันธ์นั้น ย่อมสร้างความเจ็บปวดและอันตรายให้แก่ผู้ที่ถูกล่วงละเมิด และในกรณีนี้ ไม่มีเหตุผลใดที่จะมองว่า “ความเจ็บปวดทางจิตใจ” แตกต่างไปจาก “ความเจ็บปวดทางร่างกาย”</p>
+
+      <p>แม้ว่าการบังคับขืนใจคู่ครองให้มีเพศสัมพันธ์นั้นมีแนวโน้มอย่างยิ่งที่จะสร้างความเจ็บปวดทางร่างกายแก่นาง แต่ถึงแม้เราจะพิจารณาในกรณีสมมติที่ว่า ไม่มีการทำร้ายร่างกายใดๆเกิดขึ้นเลยก็ตาม แง่มุมและความเป็นไปได้ที่นางจะต้องเผชิญกับความบอบช้ำทางจิตใจ ก็เป็นสิ่งที่มิอาจเพิกเฉยได้ และก็ไม่มีเหตุผลใดๆที่จะมองข้ามความเป็นไปได้ที่จะเกิดอันตรายทางจิตใจเช่นกัน</p>
+
+      <p>แม้ว่าเราจะยอมรับว่าตำรานิติศาสตร์อิสลาม (ฟิกฮ์) คลาสสิกอาจไม่ได้กล่าวถึงประเด็นความบอบช้ำทางจิตใจที่ตามมาไว้อย่างชัดเจน แต่ฝ่ายที่ต้องการจะจำกัดความหมายของคำว่า “อันตราย” ไว้แค่เพียงรูปแบบทางกายภาพเท่านั้น ก็จำเป็นที่จะต้องหาหลักฐานมายืนยันในเรื่องนี้ โดยเฉพาะอย่างยิ่งเมื่อพิจารณาจากตำราคลาสสิกหลายเล่มที่ไม่ได้จำกัดความหมายไว้เช่นนั้น</p>
+
+      <p>ท่านอิบนุ เราะญับ อัลฮัมบะลีย์ ได้ระบุไว้ในผลงานชิ้นเอกของท่านเล่มหนึ่ง “ญามิอ์ อัลอุลูม วัลหิกัม” ท่านได้อรรถาธิบายหะดีษที่เป็นดั่งหลักการสำคัญที่ว่า “ห้ามสร้างความเสียหาย และห้ามตอบโต้ด้วยความเสียหาย (<span class="ar-inline" lang="ar" dir="rtl">لا ضرر ولا ضرار</span>)” โดยได้ยกตัวอย่างที่แสดงให้เห็นถึงความหมายอันกว้างขวางของคำว่า “อันตราย” ดังนี้</p>
+
+      <p><strong>ตัวอย่างที่ 1: การทำพินัยกรรมเพื่อสร้างความเสียหาย</strong></p>
+
+      <p>เมื่อบุคคลใดทำพินัยกรรมยกมรดกให้แก่ทายาทคนหนึ่ง (มากกว่าส่วนแบ่งปกติ) หรือยกให้แก่บุคคลอื่นที่ไม่ใช่ทายาทในจำนวนที่มากกว่าหนึ่งในสามของทรัพย์สินทั้งหมด พินัยกรรมนั้นจะไม่มีผลบังคับใช้ นอกจากจะได้รับความยินยอมจากทายาทคนอื่นๆ</p>
+
+      <p>แต่ในกรณีที่เขาทำพินัยกรรมนั้น โดยมีเจตนาที่จะสร้างความเสียหาย (ฎอร็อร) ให้แก่ทายาทของตน (เช่น ทำไปเพื่อสร้างความขุ่นเคืองใจ) ท่านอิบนุ อะฏียะฮ์ ได้รายงานทัศนะของท่านอิหม่ามมาลิกว่า พินัยกรรมนั้นจะต้องถูกปฏิเสธ (ถือเป็นโมฆะ) ซึ่งทัศนะนี้ยังถือเป็นข้อวินิจฉัยโดยการเทียบเคียง (กิยาส) ของสำนักคิดอะห์มัดอีกด้วย</p>
+
+      <p>ข้อสังเกต ในกรณีนี้ “ความเสียหาย” ไม่ใช่ความเสียหายทางกายภาพ แต่เป็น…ความเสียหายทางการเงินและอารมณ์ ซึ่งศาสนบัญญัติได้เข้ามาแทรกแซงและทำให้การกระทำนั้นเป็นโมฆะ</p>
+
+      <p><strong>ตัวอย่างที่ 2: การหย่าร้างเพื่อสร้างความเสียหาย</strong></p>
+
+      <p>ท่านอิหม่ามมาลิกได้วางข้อชี้ขาดว่า ชายผู้หนึ่งที่หย่าภรรยาของเขา และก่อนที่ระยะเวลารอคอยหลังการหย่า (อิดดะฮ์) ของนางจะสิ้นสุดลง เขาได้ขอคืนดีกับนาง แต่หลังจากนั้นก็หย่ากับนางอีกครั้งโดยที่ยังไม่ได้มีความสัมพันธ์กัน</p>
+
+      <p>หากเขาทำเช่นนั้น โดยมีเจตนาที่จะสร้างความเสียหายแก่นางด้วยการยืดระยะเวลา ‘อิดดะฮ์’ ของนางให้ยาวนานขึ้น (เพื่อกลั่นแกล้งไม่ให้นางสามารถแต่งงานใหม่ได้โดยเร็ว) ระยะเวลา ‘อิดดะฮ์’ ของนางก็จะไม่เริ่มต้นนับใหม่ แต่นางจะนับต่อไปจากระยะเวลาเดิมที่ได้ผ่านไปแล้ว</p>
+
+      <p>ข้อสังเกต ในกรณีนี้ “ความเสียหาย” คือ การกลั่นแกล้งทางอารมณ์และจิตใจ ซึ่งศาสนบัญญัติได้เข้ามาแทรกแซงเพื่อปกป้องสิทธิของฝ่ายหญิง</p>
+
+      <p><strong>ตัวอย่างที่ 3: การขัดขวางผลประโยชน์ของเพื่อนบ้าน</strong></p>
+
+      <p>ในกรณีของการป้องกันไม่ให้เพื่อนบ้านได้รับผลประโยชน์จากทรัพย์สินของเขา หากการกระทำของเพื่อนบ้านจะก่อให้เกิดความเสียหายทางกายภาพ ต่อทรัพย์สินของเรา (เช่น เพื่อนบ้านต้องการจะพาดคานไม้ลงบนกำแพงที่ไม่แข็งแรงของเรา) เราก็มีสิทธิ์ที่จะปฏิเสธได้</p>
+
+      <p>ข้อสังเกต การที่ศาสนาระบุเงื่อนไขว่าเราจะปฏิเสธได้ก็ต่อเมื่อจะเกิดความเสียหายทางกายภาพนั้น ย่อมมีความหมายโดยนัยว่า หากการกระทำของเพื่อนบ้านไม่ได้สร้างความเสียหายใดๆแก่เรา เราก็ไม่มีสิทธิ์ที่จะไปขัดขวางเขาเพียงเพื่อสร้างความเดือดร้อนรำคาญ การกระทำเช่นนั้นจะถือเป็นการสร้าง “ความเสียหาย” ในรูปแบบหนึ่งเช่นกัน</p>
+
+      <p>จากตัวอย่างทั้งสามของท่านอิบนุ เราะญับนี้ได้พิสูจน์อย่างชัดเจนว่า “ความเสียหาย” ในนิติศาสตร์อิสลามนั้นมีความหมายที่กว้างขวาง ครอบคลุมทั้งความเสียหายทางกายภาพ, การเงิน, อารมณ์, และจิตใจ ดังนั้น การจำกัดความหมายของมันไว้แค่เพียง “ความเสียหายทางกายภาพ” จึงเป็นความเข้าใจที่คลาดเคลื่อน</p>
+
+      <p>อย่างไรก็ตาม ข้อความเหล่านี้ยังได้อภิปรายถึงหลักการ “การปิดกั้นหนทาง (สู่ความชั่ว)” (สัดดุซซะรออิอ์) ซึ่งเป็นหลักการหนึ่งในอุศูลุลฟิกฮ์ (หลักนิติศาสตร์อิสลาม) ที่ประกาศว่า การกระทำใดๆ แม้ว่าเดิมทีจะเป็นที่อนุญาต แต่ก็จะกลายเป็นสิ่งต้องห้ามได้ หากมันนำไปสู่ความเสียหาย หรือนำไปสู่การกระทำ (หรือมีศักยภาพที่จะนำไปสู่การกระทำ) ที่เป็นสิ่งต้องห้าม (ตัวอย่างเช่น การขายอาวุธในช่วงสงคราม ซึ่งปราชญ์บางท่านได้ชี้ขาดว่าเป็นสิ่งต้องห้าม เพราะอาจนำไปสู่ความวุ่นวายที่บานปลายยิ่งขึ้น)</p>
+
+      <p>ที่เกี่ยวข้องกับหลักการนี้คือหลักนิติศาสตร์ที่ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الضرر الأشد يزال بالضرر الأخف</blockquote>
+      <p class="ar-translation">“ความเสียหายที่รุนแรงกว่า ย่อมถูกขจัดไปด้วย (การยอมรับ) ความเสียหายที่เบากว่า”</p>
+
+      <p>สิ่งที่มาสนับสนุนจุดยืนต่อต้านการข่มขืนในชีวิตสมรสให้แข็งแกร่งยิ่งขึ้นไปอีก คือหลักนิติศาสตร์ที่สำคัญอย่างยิ่งที่ว่า “การปัดเป่าความเสียหายย่อมมาก่อนการแสวงหาผลประโยชน์” ดังนั้น หากเราพิจารณาว่า การได้รับการตอบสนองทางเพศเป็น “ผลประโยชน์” ก็ย่อมหมายความว่า ผลประโยชน์นั้นจะถูกแสวงหามาด้วยการบังคับขืนใจไม่ได้ เพราะนั่นจะนำมาซึ่ง “ความเสียหาย”</p>
+
+      <p>และถึงแม้ว่ามันจะเกิดขึ้นด้วยวิธีการนั้นในทางประวัติศาสตร์ (แม้ว่าเราจะไม่พบรายงานใดๆที่บ่งชี้ว่าสิ่งนี้เกิดขึ้นภายใต้กรอบของการแต่งงานก็ตาม) ความเสียหายก็ไม่สามารถใช้เป็นบรรทัดฐานได้ (<span class="ar-inline" lang="ar" dir="rtl">الضرر لا يكون قديما</span>) พูดง่ายๆก็คือ แนวคิดที่ว่าความเสียหายเคยเกิดขึ้นในอดีต ไม่ได้เป็นเหตุผลให้การกระทำนั้นกลายเป็นสิ่งที่ชอบธรรมในยุคปัจจุบันได้เลย</p>
+
+      <h2 class="article-h2">ความเข้าอกเข้าใจระหว่างคู่ครอง</h2>
+
+      <p>การใช้กำลังบังคับในการมีเพศสัมพันธ์นั้น ถูกมองว่าเป็นการล่วงละเมิดรูปแบบหนึ่ง ดังที่ท่านอิบนุลก็อยยิมได้กล่าวไว้ว่า: “สำหรับกรณีที่เขาได้บังคับขืนใจนาง นี่ถือเป็นการ ‘ล่วงละเมิด’ ประเภทหนึ่ง เพราะแท้จริงแล้ว การบังคับให้มีเพศสัมพันธ์คือการล่วงละเมิด และความจริงแล้ว เพศสัมพันธ์เช่นนั้นได้ถูกกระทำไปในลักษณะของ ‘อาชญากรรม’ (ญินายะฮ์) ด้วยเหตุนี้เอง เขาจึงไม่พ้นจากความผิดที่จะต้องถูกปรับหรือรับโทษตามกฎหมาย”</p>
+
+      <p>แม้ว่าคำกล่าวของท่านอิบนุลก็อยยิมที่ยกมานี้จะไม่ได้เกี่ยวข้องโดยตรงกับประเด็นในชีวิตสมรส แต่หลักการพื้นฐานที่เราสามารถสกัดออกมาได้นั้นเป็นหลักการทั่วไปและสามารถนำมาปรับใช้กับสถานการณ์นี้ได้อย่างแน่นอน ท่านมุฟตี มุฮัมมัด อิบนุ อาดัม อัลเกาษะรีย์เองก็ได้ชี้แจงอย่างชัดเจนโดยอาศัยหลักการนี้ว่า แม้ภรรยาจะทำบาปหากนางปฏิเสธการเรียกของสามีโดยปราศจากเหตุผลอันชอบด้วยหลักศาสนา แต่การที่นางทำบาปนั้น ก็ไม่ได้หมายความว่าสามีจะมีสิทธิ์ไปบังคับขืนใจนางได้</p>
+
+      <p>อัลกุรอานได้เน้นย้ำว่า บุคคลพึงใช้ชีวิตร่วมกับคู่ครองของตนด้วยความเมตตาและความยุติธรรม ดังนั้น หากบุคคลใดไม่ชอบคู่ครองของตน เขาก็พึงรู้ไว้ว่าอัลกุรอานได้บัญชาว่า: <span class="ar-inline" lang="ar" dir="rtl">وَعَاشِرُوهُنَّ بِالْمَعْرُوفِ</span> “และจงใช้ชีวิตร่วมกับพวกนางด้วยดี หากพวกเจ้าไม่ชอบพวกนาง ก็อาจเป็นไปได้ว่าพวกเจ้าไม่ชอบสิ่งหนึ่งซึ่งอัลลอฮ์ได้ทรงให้มีความดีงามอยู่อย่างมากมายในสิ่งนั้น”</p>
+
+      <p>โองการนี้ได้สื่อถึงหลักการพื้นฐานในการปฏิสัมพันธ์กับคู่ครองของเราที่เราต้องยึดมั่น นั่นคือ เราต้องให้เกียรติในสิทธิของพวกนาง และปฏิบัติต่อพวกนางด้วยสิ่งที่ดีงามและให้เกียรติ</p>
+
+      <p>การแต่งงานคือพรอันประเสริฐจากอัลลอฮ์ ซึ่งวิทยปัญญาเบื้องหลังของมันคือการปลูกฝังความสุข, ความปรองดอง, ความสงบและความพึงพอใจ มันจะกลายเป็นการทำลายวิทยปัญญาและเป้าหมายนั้นในทันที หากมีการยอมให้เกิดการบังคับขืนใจขึ้น</p>
+
+      <p>ท่านศาสนทูต ﷺ ได้ตรัสกับประชาชาติของท่านว่า: “ผู้ศรัทธาที่มีความศรัทธาสมบูรณ์ที่สุด คือผู้ที่มีมารยาทดีที่สุด และผู้ที่ดีที่สุดในหมู่พวกท่าน คือผู้ที่ปฏิบัติตัวดีที่สุดต่อภรรยาของพวกเขา” ซึ่งไม่เหลือข้อสงสัยใดๆอีกเลยว่าหลักการใดที่ควรจะชี้นำการปฏิสัมพันธ์ระหว่างคู่ครอง</p>
+
+      <p>โดยสรุปแล้ว หลักการเรื่อง “อันตราย” ที่เกี่ยวข้องกับการข่มขืนในชีวิตสมรสนั้นมีความตรงไปตรงมาอย่างยิ่ง สามีมีสิทธิ์ที่จะมีความสัมพันธ์กับภรรยาของเขา โดยมีเงื่อนไขว่าเขาจะต้องไม่สร้างความเจ็บปวดหรืออันตรายแก่นาง และจะต้องไม่ล่วงละเมิดข้อยกเว้นต่างๆที่นางได้รับอนุญาต (ในการปฏิเสธ)</p>
+
+      <p>คำว่า “อันตราย” นั้นครอบคลุมทั้งความเจ็บปวดทางร่างกายและจิตใจ…ที่อาจเป็นผลมาจากการกระทำของเขา ยิ่งไปกว่านั้น ดังที่ได้อธิบายไปแล้ว ความรักและความเมตตาปรานีอันลุ่มลึกที่อิสลามปรารถนาจะปลูกฝังระหว่างคู่ครองนั้น จะถูกทำลายลงโดยสิ้นเชิง หากฝ่ายใดฝ่ายหนึ่งต้องเผชิญกับการบังคับขืนใจ ไม่ว่าจะเกิดขึ้นบ่อยครั้งหรือไม่ก็ตาม</p>
+
+      <p>ดังนั้น ด้วยปัจจัยทั้งหมดเหล่านี้ ข้อสรุปที่ว่าการข่มขืนในชีวิตสมรสเป็นสิ่งต้องห้าม (หะรอม) จึงมีความชัดเจนอย่างยิ่ง</p>
+
+      <h2 class="article-h2">การเปรียบเทียบกับกฎหมายว่าด้วยความยินยอม</h2>
+
+      <p>ในกรณีส่วนใหญ่ ผู้ตั้งคำถามมักจะสันนิษฐานว่ากฎหมายว่าด้วย “ความยินยอม” ในสังคมสมัยใหม่มีความรัดกุมและทันสมัยกว่า เมื่อเปรียบเทียบกับวิธีที่ศาสนบัญญัติอิสลามจัดการกับปัญหาการข่มขืนในชีวิตสมรส แต่หากพิจารณาในเชิงประวัติศาสตร์และเนื้อหาจริงๆจะพบว่า ภาพที่ปรากฏนั้นซับซ้อนกว่าที่เข้าใจกันทั่วไป</p>
+
+      <p>ในประเทศไทยเอง การข่มขืนในชีวิตสมรสเพิ่งถูกบัญญัติให้เป็นความผิดทางอาญาเมื่อปี พ.ศ. 2550 (ค.ศ. 2007) ตามพระราชบัญญัติแก้ไขประมวลกฎหมายอาญา (ฉบับที่ 19) ซึ่งก่อนหน้านั้น หากสามีบังคับภรรยาให้มีเพศสัมพันธ์ ก็ไม่ถือว่าผิดกฎหมาย เนื่องจากบทบัญญัติดั้งเดิมระบุเพียงว่า “การกระทำชำเราผู้หญิงที่ไม่ใช่ภรรยา” เท่านั้น ความเปลี่ยนแปลงจึงสะท้อนว่า แนวคิดเรื่อง “การข่มขืนในชีวิตสมรส” เป็นพัฒนาการที่ใหม่มากในกฎหมายไทย มิใช่สิ่งที่มีรากฐานมายาวนาน</p>
+
+      <p>แม้ว่ากฎหมายไทยปัจจุบันจะยอมรับการข่มขืนคู่สมรสเป็นความผิดแล้ว แต่การบังคับใช้ก็ยังมีข้อจำกัด เช่น ในบางกรณี…หากเหยื่อไม่ร้องทุกข์ภายในสามเดือน นิติกรรมดังกล่าวอาจถูกมองว่าเป็น “คดีอันยอมความได้” ซึ่งทำให้ผู้ถูกกระทำเสียสิทธิ์ในการดำเนินคดี ทั้งยังมีแนวโน้มที่ศาลจะ “สันนิษฐานว่ามีความยินยอมอยู่แล้ว” ในความสัมพันธ์สมรส เว้นแต่ฝ่ายภรรยาจะปฏิเสธอย่างชัดเจน หนักแน่น และเป็นลายลักษณ์อักษรหรือด้วยถ้อยคำตรงไปตรงมา การลังเล ความกลัวที่ไม่สามารถพิสูจน์ได้ หรือสภาวะที่ไม่ใช่การปฏิเสธอย่างชัดแจ้ง มักไม่เพียงพอที่จะลบล้างข้อสันนิษฐานนี้</p>
+
+      <p>เมื่อเปรียบเทียบกับอิสลาม จะเห็นความแตกต่างเชิงหลักการที่สำคัญ อิสลามวางเกณฑ์ไว้ที่ “อันตราย” ซึ่งไม่ใช่แนวคิดที่คลุมเครือ แต่คือความจริงทางกายภาพที่พิสูจน์ได้ชัดเจน หากมีการใช้กำลังบังคับจนก่อให้เกิดอันตราย ไม่ว่าจะทางร่างกายหรือศักดิ์ศรี ก็ถือว่าผิดทันที โดยไม่ต้องอาศัยการปฏิเสธด้วยวาจาหรือการร้องทุกข์ภายในระยะเวลาที่จำกัด</p>
+
+      <p>ตัวอย่างเช่น หากภรรยาถูกสามีทำร้ายหรือบังคับขืนใจจนได้รับบาดเจ็บ อิสลามถือว่านั่นคือ “อันตราย” ที่เป็นเหตุให้ความสัมพันธ์สมรสถูกละเมิดอย่างร้ายแรง และศาลสามารถตัดสินความผิดได้ทันที โดยไม่ขึ้นกับเงื่อนไขว่าฝ่ายหญิงได้กล่าวคำปฏิเสธหรือได้ยื่นคำร้องในเวลาที่กำหนดหรือไม่</p>
+
+      <p>เมื่อพิจารณาในภาพรวมถึงกฎหมายไทยว่าด้วยความยินยอมแม้จะพัฒนาไปมาก แต่ก็ยังขึ้นอยู่กับข้อสันนิษฐานเรื่อง “การยินยอมโดยปริยาย” ในชีวิตสมรส และจำกัดด้วยกรอบทางเทคนิคทางกฎหมายหลายประการ ตรงกันข้าม อิสลามเน้นความเป็นจริงเชิงประจักษ์ของ “อันตราย” และความศักดิ์สิทธิ์ของความสัมพันธ์คู่สมรสที่ตั้งอยู่บนพื้นฐานของความเมตตา ความเข้าใจ และการพึ่งพาอาศัยซึ่งกันและกัน</p>
+
+      <p>ดังนั้น จึงไม่อาจกล่าวได้ว่าอิสลาม “ล้าหลัง” เมื่อเทียบกับกฎหมายสมัยใหม่ ตรงกันข้าม อิสลามได้วางกรอบที่ชัดเจนและยืดหยุ่นต่อการปกป้องสิทธิของคู่สมรสไว้ตั้งแต่กว่า 1,400 ปีก่อน ขณะที่กฎหมายไทยเพิ่งจะยอมรับปัญหานี้อย่างจริงจังไม่นานมานี้เอง</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การบังคับขืนใจคู่สมรสในอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/marital-coercion-in-islam.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography">
+        <li>Ibn Ādam al-Kawtharī, Guidelines to Intimacy in Islām, pp. 23-24</li>
+        <li>Hashim Kamali, “Sharīʿah Law: An Introduction,” Oneworld Publications, pg. 147</li>
+        <li>William Wilson, Module Guide on Criminal Law, Chapter 8</li>
+        <li>Sexual Offence Act 2003</li>
+        <li>10 U.S. Code § 920 – Art. 120. Rape and sexual assault, Section 3 (A)</li>
+      </ol>
+    </section>
+
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
