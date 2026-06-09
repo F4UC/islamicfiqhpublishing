@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ความสุดโต่งในอิสลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์ทางนิติศาสตร์อิสลามว่าด้วยความสุดโต่ง (ตะฏ็อรรุฟ) และการเลยเถิด (ฆุลูว์) ตั้งแต่รากศัพท์ รูปแบบในคำพูด การกระทำ ความเชื่อ และความคิด พร้อมยืนยันว่าแก่นของศาสนาคือทางสายกลางและการผ่อนปรน ผ่านทัศนะของอัรรอซีย์ อิบนุ หะญัร และอัชชาฏิบีย์">
+<meta name="keywords" content="ความสุดโต่ง, ฆุลูว์, อัตตะชัดดุด, วะสะฏียะฮ์, ทางสายกลาง, นิติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ความสุดโต่งในอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="บทวิเคราะห์ทางนิติศาสตร์อิสลามว่าด้วยความสุดโต่ง (ตะฏ็อรรุฟ) และการเลยเถิด (ฆุลูว์) ตั้งแต่รากศัพท์ รูปแบบในคำพูด การกระทำ ความเชื่อ และความคิด พร้อมยืนยันว่าแก่นของศาสนาคือทางสายกลางและการผ่อนปรน ผ่านทัศนะของอัรรอซีย์ อิบนุ หะญัร และอัชชาฏิบีย์">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/extremism-in-islam.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="extremism-in-islam">
+<div id="readingProgressBar"></div>
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์</a>
+      <h1 class="article-feature-title">ความสุดโต่งในอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">อิสลามปฏิเสธ ‘ความสุดโต่ง’ ความบ้าพลังในทุกรูปแบบ โดยมองว่าเป็นพฤติกรรมที่เบี่ยงเบนไปจากหลักการ ‘ทางสายกลาง’ ตอนนี้จะพาไปสำรวจรากศัพท์ของความสุดโต่งในโลกอิสลาม พร้อมชี้ให้เห็นรูปแบบต่างๆ ทั้งในคำพูด การกระทำ และความเชื่อที่นำไปสู่ความขัดแย้ง เพื่อยืนยันว่าแก่นแท้ของความรู้ในศาสนานั้น อยู่ที่ ‘การผ่อนปรน’ ไม่ใช่ ‘ความสุดโต่ง’</p>
+
+      <h2 class="article-h2">รากศัพท์ที่สะท้อนความหมาย</h2>
+
+      <p>คำว่า “ความสุดโต่ง” (<span class="ar-inline" lang="ar" dir="rtl">التطرف</span> - อัตตะฏ็อรรุฟ) ในความหมายและศัพท์บัญญัติที่เราเข้าใจกันในปัจจุบันนั้น ไม่เคยปรากฏอยู่ในงานเขียนของอุละมาอ์ (นักปราชญ์) และฟุเกาะฮาอ์ (นักนิติศาสตร์) ทั้งชาวอาหรับและมุสลิมในยุคก่อนเลย จวบจนกระทั่งช่วงทศวรรษสุดท้ายของศตวรรษที่ 20 แต่ในอดีตนั้น มีคำศัพท์อื่นที่ใช้สื่อความหมายถึงความสุดโต่ง, ความเคร่งครัดเกินไป และการกระทำที่เกินเลยในการปฏิบัติศาสนพิธีและศาสนกิจจนเบี่ยงเบนไปจากความถูกต้อง นั่นคือคำว่า “อัลฆุลูว์” (<span class="ar-inline" lang="ar" dir="rtl">الغلو</span> - การเลยเถิด), “อัตตะชัดดุด” (<span class="ar-inline" lang="ar" dir="rtl">التشدد</span> - การเคร่งครัดเกินไป) หรือ “อัตตะนัฏฏุอ์” (<span class="ar-inline" lang="ar" dir="rtl">التنطع</span> - การเจาะลึกหยุมหยิมจนเกินงาม)</p>
+
+      <p>ด้วยเหตุนี้ บทบัญญัติอิสลามจึงได้ประณาม “การเลยเถิด” และได้สั่งห้ามการกระทำดังกล่าว โดยถือว่ามันเป็นพฤติกรรมที่น่ารังเกียจและเป็นกิริยาที่น่าชิงชัง แต่เมื่อใดก็ตามที่ “การเลยเถิด” นั้นถูกผนวกเข้ากับการฆ่า, ความรุนแรง, การล่าแม่มด, การก่อการร้าย และการสร้างความหวาดกลัวให้แก่ผู้คน มันก็จะกลายเป็นการกระทำทางอาชญากรรมที่ต้องห้ามโดยเด็ดขาด (หะรอม) และ ณ เวลานั้นเอง “ความสุดโต่ง” ก็จะแปรสภาพเป็น “การก่อการร้าย” และ “การเป็นภัยต่อสังคม” ในประเด็นนี้ อัลลอฮ์ตะอาลาได้ตรัสไว้ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">إِنَّمَا جَزَاءُ الَّذِينَ يُحَارِبُونَ اللَّهَ وَرَسُولَهُ وَيَسْعَوْنَ فِي الْأَرْضِ فَسَادًا أَن يُقَتَّلُوا أَوْ يُصَلَّبُوا أَوْ تُقَطَّعَ أَيْدِيهِمْ وَأَرْجُلُهُم مِّنْ خِلَافٍ أَوْ يُنفَوْا مِنَ الْأَرْضِ ۚ ذَٰلِكَ لَهُمْ خِزْيٌ فِي الدُّنْيَا ۖ وَلَهُمْ فِي الْآخِرَةِ عَذَابٌ عَظِيمٌ</p>
+      </div>
+      <p>{แท้จริงแล้ว การตอบแทนแก่บรรดาผู้ที่ทำสงครามต่ออัลลอฮ์และเราะสูลของพระองค์ และผู้ที่พากเพียรบ่อนทำลายในแผ่นดินนั้น คือการที่พวกเขาจะถูกประหารชีวิต หรือถูกตรึงกางเขน หรือมือและเท้าของพวกเขาจะถูกตัดสลับข้าง หรือถูกเนรเทศออกจากแผ่นดิน นั่นคือความอัปยศสำหรับพวกเขาในโลกนี้ และในปรโลกนั้น พวกเขาจะได้รับการลงโทษอันมหันต์} (อัลมาอิดะฮ์: 33)</p>
+
+      <p>และหลักฐานที่แสดงถึงความน่ารังเกียจและการสั่งห้ามความสุดโต่ง คือสิ่งที่อัลลอฮ์ตะอาลาได้ตรัสไว้ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">قُلْ يَا أَهْلَ الْكِتَابِ لَا تَغْلُوا فِي دِينِكُمْ غَيْرَ الْحَقِّ وَلَا تَتَّبِعُوا أَهْوَاءَ قَوْمٍ قَدْ ضَلُّوا مِن قَبْلُ وَأَضَلُّوا كَثِيرًا وَضَلُّوا عَن سَوَاءِ السَّبِيلِ</p>
+      </div>
+      <p>{จงกล่าวเถิด โอ้ ชาวคัมภีร์! จงอย่าได้เลยเถิดในศาสนาของพวกเจ้าอย่างไม่เป็นธรรม และจงอย่าได้ปฏิบัติตามอารมณ์ใฝ่ต่ำของกลุ่มชนที่ได้หลงผิดไปแล้วก่อนหน้านี้ และพวกเขาได้ทำให้คนจำนวนมากหลงผิด อีกทั้งตัวพวกเขาเองก็ได้หลงออกจากทางอันเที่ยงตรง} (อัลมาอิดะฮ์: 77)</p>
+
+      <p>ดังนั้น อัลกุรอานจึงได้ชี้ให้เห็นถึง “การเลยเถิด” ของชาวคัมภีร์ และการบิดเบือนโองการและบทบัญญัติของอัลลอฮ์ของพวกเขาจนถึงขั้นสุดโต่ง</p>
+
+      <p>ท่านฟัครุดดีน อัรรอซีย์อธิบายไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والغلو نقيض التقصير . ومعناه الخروج عن الحد ، وذلك لأن الحق بين طرفي الإفراط والتفريط ، ودين الله بين الغلو والتقصير . وقوله { غير الحق } صفة المصدر ، أي لا تغلوا في دينكم غلوا غير الحق ، أي غلوا باطلا ، لأن الغلو في الدين نوعان : غلو حق ، وهو أن يبالغ في تقريره وتأكيده ، وغلو باطل وهو أن يتكلف في تقرير الشبه وإخفاء الدلائل ، وذلك الغلو هو أن اليهود لعنهم الله نسبوه إلى الزنا . وإلى أنه كذاب ، والنصارى ادعوا فيه الإلهية .</blockquote>
+      <p class="ar-translation">“และ ‘อัลฆุลูว์’ (<span class="ar-inline" lang="ar" dir="rtl">الغلو</span> - การเลยเถิด) นั้น คือขั้วตรงข้ามของ ‘อัตตักศีร’ (<span class="ar-inline" lang="ar" dir="rtl">التقصير</span> - การหย่อนยาน) และความหมายของมันคือ ‘การก้าวล้ำออกไปจากขอบเขต’ ทั้งนี้เพราะสัจธรรมนั้นอยู่ระหว่างสองปลายสุดคือ ‘อัลอิฟรอฏ’ (<span class="ar-inline" lang="ar" dir="rtl">الإفراط</span> - การกระทำเกินเลย) และ ‘อัตตัฟรีฏ’ (<span class="ar-inline" lang="ar" dir="rtl">التفريط</span> - การละเลยหย่อนยาน) และศาสนาของอัลลอฮ์นั้นก็อยู่ระหว่าง ‘การเลยเถิด’ และ ‘การหย่อนยาน’ นั่นเอง ส่วนดำรัสของพระองค์ที่ว่า <span class="ar-inline" lang="ar" dir="rtl">{ غَيْرَ الْحَقِّ }</span> (โดยไม่เป็นธรรม/นอกเหนือจากสัจธรรม) นั้น เป็นคุณลักษณะที่ขยายความคำนาม หมายความว่า ‘จงอย่าได้เลยเถิดในศาสนาของพวกเจ้า ซึ่งเป็นการเลยเถิดที่ไม่ใช่สัจธรรม’ กล่าวคือ การเลยเถิดที่เป็นเท็จ เพราะแท้จริงแล้ว ‘การเลยเถิด’ ในศาสนานั้นมีอยู่สองประเภท คือการเลยเถิดที่เป็นสัจจริง คือการทุ่มเทอย่างยิ่งยวดในการยืนยันและเน้นย้ำสัจธรรมนั้น และการเลยเถิดที่เป็นเท็จ คือการพยายามฝืนธรรมชาติในการสร้างข้อคลือบแคลงสงสัยและปิดบังหลักฐานต่างๆ และการเลยเถิด (ที่เป็นเท็จ) นั้น ก็เช่นการที่ชาวยิวได้กล่าวหาท่าน (อีซา) ว่าเกิดจากการผิดประเวณี (ซินา) และกล่าวหาว่าท่านเป็นคนโกหก ในขณะที่ชาวคริสต์ก็ได้อ้างว่าท่านมีสถานะเป็นพระเจ้า”</p>
+
+      <p>นอกจากนี้ อัลกุรอานยังได้ชี้ถึงความสุดโต่งของเหล่าพระสงฆ์ในการอุตริกรรม “การถือสันโดษแบบนักบวช” (เราะฮ์บานียะฮ์) ที่สุดโต่งของพวกเขาขึ้นมาเอง และการที่พวกเขาไม่สามารถรักษามันไว้ได้แม้แต่น้อย ดังที่ปรากฏอย่างชัดเจนในดำรัสของพระองค์ที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">ثُمَّ قَفَّيْنَا عَلَىٰ آثَارِهِم بِرُسُلِنَا وَقَفَّيْنَا بِعِيسَى ابْنِ مَرْيَمَ وَآتَيْنَاهُ الْإِنجِيلَ وَجَعَلْنَا فِي قُلُوبِ الَّذِينَ اتَّبَعُوهُ رَأْفَةً وَرَحْمَةً وَرَهْبَانِيَّةً ابْتَدَعُوهَا مَا كَتَبْنَاهَا عَلَيْهِمْ إِلَّا ابْتِغَاءَ رِضْوَانِ اللَّهِ فَمَا رَعَوْهَا حَقَّ رِعَايَتِهَا ۖ فَآتَيْنَا الَّذِينَ آمَنُوا مِنْهُمْ أَجْرَهُمْ ۖ وَكَثِيرٌ مِّنْهُمْ فَاسِقُونَ</p>
+      </div>
+      <p>{หลังจากนั้น เราได้ให้บรรดาเราะสูลของเราติดตามมา และเราได้ให้อีซา บุตรของมัรยัม ติดตามมา และเราได้ประทานคัมภีร์อินญีลแก่เขา และเราได้บันดาลความสงสารและความเมตตาให้เกิดขึ้นในหัวใจของบรรดาผู้ที่ปฏิบัติตามเขา และการถือสันโดษแบบนักบวชนั้น พวกเขาได้อุตริมันขึ้นมาเอง เรามิได้กำหนดมันแก่พวกเขา เว้นแต่เพื่อแสวงหาความพึงพอพระทัยของอัลลอฮ์ แต่แล้วพวกเขาก็มิได้รักษามันไว้อย่างที่ควรจะรักษา ดังนั้น เราจึงได้ประทานรางวัลของพวกเขาแก่บรรดาผู้ศรัทธาในหมู่พวกเขา และส่วนมากของพวกเขานั้นเป็นผู้ฝ่าฝืน} (อัลหะดีด: 27)</p>
+
+      <p>และท่านเราะสูล (ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม) ก็ได้กล่าวไว้เช่นกันว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">لاَ تُشَدِّدُوا عَلَى أَنْفُسِكُمْ فَيُشَدَّدَ عَلَيْكُمْ فَإِنَّ قَوْمًا شَدَّدُوا عَلَى أَنْفُسِهِمْ فَشَدَّدَ اللَّهُ عَلَيْهِمْ فَتِلْكَ بَقَايَاهُمْ فِي الصَّوَامِعِ وَالدِّيَارِ</p>
+      </div>
+      <p>“พวกท่านจงอย่าได้เคร่งครัดกับตัวเองจนเกินไป มิเช่นนั้นแล้ว (บทบัญญัติ) ก็จะถูกทำให้เคร่งครัดแก่พวกท่าน แท้จริงแล้ว ได้มีกลุ่มชนหนึ่งที่เคร่งครัดกับตัวเองจนเกินไป แล้วอัลลอฮ์ก็ทรงทำให้ (บทบัญญัติ) เคร่งครัดแก่พวกเขา และนั่นคือร่องรอยที่เหลืออยู่ของพวกเขาในโบสถ์วิหารและอารามต่างๆ”</p>
+
+      <p>และท่านยังได้กล่าวอีกว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">هَلَكَ الْمُتَنَطِّعُونَ قَالَهَا ثَلَاثًا</p>
+      </div>
+      <p>“บรรดาผู้เจาะลึกจนเกินงามย่อมพินาศ” ท่านได้กล่าวเช่นนี้ถึงสามครั้ง</p>
+
+      <p>อัลค้อฏฏอบีย์อธิบายเกริ่นไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">المتنطع المتعمق في الشيء المتكلف للبحث عنه على مذاهب أهل الكلام الداخلي فيما لا يعنيهم، الخائضين فيما لا تبلغه عقولهم..</blockquote>
+      <p class="ar-translation">“(คำว่า) อัลมุตะนัฏฏิอ์ คือผู้ที่เจาะลึกในสิ่งต่างๆ อย่างเกินพอดี, ผู้ที่พยายามอย่างฝืนธรรมชาติในการค้นคว้าเกี่ยวกับมันตามแนวทางของปราชญ์ฝ่ายเทววิทยา (อะฮ์ลุลกะลาม) คือบรรดาผู้ที่เข้าไปยุ่งเกี่ยวกับเรื่องที่ไม่ใช่กิจของตน และถลำลึกลงไปในสิ่งที่สติปัญญาของพวกเขามิอาจหยั่งถึง...”</p>
+
+      <p>และท่านเราะสูล (ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม) ได้กล่าวห้ามการเลยเถิดไว้ว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">إِيَّاكُمْ وَالْغُلُوَّ فِي الدِّينِ؛ فَإِنَّمَا أَهْلَكَ مَنْ كَانَ قَبْلَكُمُ الْغُلُوُّ فِي الدِّينِ</p>
+      </div>
+      <p>“จงระวังการเลยเถิด (ฆุลูว์) ในศาสนา เพราะแท้จริง สิ่งที่ได้ทำลายล้างบรรดาประชาชาติก่อนหน้าพวกท่าน ก็คือการเลยเถิดในศาสนานั่นเอง”</p>
+
+      <p>โองการอัลกุรอานและหะดีษของท่านนบีเหล่านี้ทั้งหมด ล้วนบ่งชี้ถึงความน่าชิงชัง, ความน่ารังเกียจ และความต่ำช้าของความสุดโต่ง ด้วยเหตุนี้ อิสลาม ทั้งในคัมภีร์และซุนนะฮ์ จึงมีจุดยืนในเชิงปฏิเสธต่อความสุดโต่ง และถือว่ามันเป็นพฤติกรรมที่เบี่ยงเบนไปจากแก่นแท้ของบทบัญญัติ (ชะรีอะฮ์) ที่มีความพอดี, ปานกลาง และสมดุล</p>
+
+      <h2 class="article-h2">รูปแบบของความสุดโต่ง</h2>
+
+      <p>เราสามารถกล่าวถึงรูปแบบของความสุดโต่งได้หลายประเภท และสามารถจำแนกออกได้ดังต่อไปนี้</p>
+
+      <p>ประการแรก: ความสุดโต่งในคำพูด</p>
+
+      <p>คำพูดของผู้สุดโต่งนั้นมีลักษณะเด่นคือความเคร่งครัดเกินไป (<span class="ar-inline" lang="ar" dir="rtl">التشدد</span>), การเลยเถิด (<span class="ar-inline" lang="ar" dir="rtl">الغلو</span>), และการเจาะลึกหยุมหยิมจนเกินงาม (<span class="ar-inline" lang="ar" dir="rtl">التنطع</span>) รวมถึงการเบี่ยงเบนไปจากความถูกต้องและขอบเขตแห่งความพอดี มีการใช้ความแข็งกร้าวและความรุนแรงในการปกป้องทัศนะที่หลงผิดของตน, การปฏิเสธการเสวนา, การอภิปราย และการโต้แย้งด้วยเหตุผลที่ดีงาม และการใช้ความรุนแรงทั้งทางกายภาพและเชิงสัญลักษณ์ในการเผยแพร่ทัศนะที่แปลกแยกของตน</p>
+
+      <p>ด้วยเหตุนี้ ผู้สุดโต่งที่เคร่งครัดจึงปฏิเสธที่จะรับฟังความคิดเห็นของผู้อื่น, ไม่ยอมรับการสดับฟัง และไม่ยอมรับในหลักฐานและเหตุผลที่ผู้อื่นนำเสนอ ดังนั้น เขาจึงยึดมั่นอย่างคลั่งไคล้ในทัศนะอันโดดเดี่ยวของตนเองอย่างสิ้นเชิง ซึ่งเป็นทัศนะที่เกิดจากการเจาะลึกเกินงามที่เขาสืบทอดมาจาก “กลุ่ม” ของตน ผ่านการถ่ายทอด, การรายงาน และความเข้าใจที่ผิดพลาด</p>
+
+      <p>อัลฮาฟิศ อิบนุ หะญัรได้ถ่ายทอดคำกล่าวของอิบนุลมุนีรเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">في هذا الحديث علم من أعلام النبوة، فقد رأينا ورأى الناس قبلنا أن كل متنطع في الدين ينقطع. وصدق ابن المنير رحمه الله، فقد شاهدنا في هذا العصر بعض الشباب المتحمسين الذين كان لهم غلو وتشدد انتكسوا وانقطعوا .. وانحرف بعضهم إلى الإفراط أو التفريط.</blockquote>
+      <p class="ar-translation">“ในหะดีษบทนี้ (คือหะดีษที่ผ่านมา) มีสัญลักษณ์หนึ่งแห่งสัจธรรมแห่งคำสอนของท่านนบี เพราะเราได้ประจักษ์แก่สายตาตนเอง และผู้คนก่อนหน้าเราก็ได้ประจักษ์มาแล้วว่า ผู้ใดก็ตามที่เจาะลึกจนเกินงามในเรื่องศาสนา เขาย่อมสะดุดหยุดลง (หรือไปไม่รอด) ในที่สุด และช่างสัจจริงยิ่งนัก คำกล่าวของท่านอิบนุลมุนีร (ขออัลลอฮ์ทรงเมตตาท่าน) เพราะเราก็ได้เห็นมาแล้วในยุคสมัยนี้ บรรดาคนหนุ่มสาวผู้เปี่ยมด้วยไฟแรงบางส่วนที่เคยมี ‘การเลยเถิด’ (ฆุลูว์) และ ‘ความเคร่งครัดเกินไป’ (ตะชัดดุด) ก็ได้เสื่อมถอยลงและสะดุดหยุดไปในที่สุด...และบางส่วนของพวกเขาก็ได้เบี่ยงเบนไปสู่การสุดโต่งในทางที่เกินเลย หรือการสุดโต่งในทางที่หย่อนยาน”</p>
+
+      <p>ประการที่สอง: ความสุดโต่งในการกระทำ</p>
+
+      <p>พฤติกรรมและการกระทำของผู้สุดโต่งนั้นมีลักษณะเด่นคือ ความขัดแย้งระหว่างคำพูดและการกระทำ กล่าวคือ เขาจะเคร่งครัดในการปฏิบัติศาสนาจนถึงขั้นเลยเถิด, เจาะลึกเกินงาม และตึงเครียดเกินไป เช่น การไว้เคราจนยาวรุงรังและน่ารังเกียจจนสร้างความขุ่นเคืองให้แก่ผู้คน, การสวมใส่เครื่องแต่งกายที่แปลกแยกไปจากที่ผู้อื่นสวมใส่ แต่ในขณะเดียวกัน เขากลับสวมใส่รองเท้ากีฬาสมัยใหม่, ใช้อุปกรณ์เทคโนโลยีที่ล้ำสมัย ทั้งโทรศัพท์, รถยนต์หรูหรา และโทรทัศน์จานดาวเทียม เขาพูดเรื่องราวมากมายเกี่ยวกับศาสนา แต่กลับกระทำการในโลกแห่งความเป็นจริงที่ขัดแย้งกับคำพูดเหล่านั้น</p>
+
+      <p>เขาแสดงให้ผู้คนเห็นว่าตนเองยึดมั่นในศาสนา, มีความยำเกรง (วะเราะอ์), เคร่งครัด และบริสุทธิ์เพียงใด และแสดงให้เห็นว่าตนเองยึดมั่นในซุนนะฮ์อันดีงามมากเพียงใด แต่การกระทำของเขาโดยรวมแล้วกลับไม่ได้สะท้อนถึงแนวทางที่ถูกต้องตามบทบัญญัติเลย เขามีมารยาทในการอยู่ร่วมกับผู้อื่นที่หยาบกระด้าง, มีพฤติกรรมที่เลวร้าย, มีวาจาที่น่าขยะแขยง, และเป็นคนแข็งกร้าวทั้งต่อตนเองและผู้อื่น, โกรธง่าย, อารมณ์ฉุนเฉียว และโมโหร้าย, ปลีกตัวออกจากสังคม, พอใจที่จะอยู่สันโดษในที่ห่างไกล เช่น ทะเลทราย, ภูเขา และถ้ำ และเข้าไปรวมตัวกับกลุ่มและเครือข่ายลับทางศาสนา, การเมือง, การต่อสู้ (ญิฮาด) และการกล่าวหาผู้อื่นว่าเป็นผู้ปฏิเสธศรัทธา (ตักฟีร) กล่าวหาคนกลุ่มหนึ่งว่าเป็นกาฟิร, สาปแช่งอีกกลุ่มหนึ่ง และใช้ความรุนแรงต่อผู้อื่นด้วยการข่มขู่, การสร้างความหวาดกลัว</p>
+
+      <p>อัลฮาฟิศ อิบนุ หะญัร อัลอัสกอลานีย์ได้ระบุว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وليس المراد منع طلب الأكمل في العبادة، فإنه من الأمور المحمودة، بل المقصود منع الإفراط المؤدي إلى الملال.</blockquote>
+      <p class="ar-translation">“เจตนารมณ์ (ของคำสอนที่ห้ามการเลยเถิด) นั้น หาใช่การห้ามปรามการแสวงหาความสมบูรณ์แบบที่สุดในการประกอบอิบาดะฮ์ไม่ เพราะความเป็นจริงแล้ว การกระทำดังกล่าวมันเป็นกิจการที่น่าสรรเสริญ แต่ทว่า เป้าหมายที่แท้จริงคือการห้ามปราม ‘การกระทำที่เกินเลย’ ซึ่งจะนำไปสู่ ‘ความเบื่อหน่ายและความเหนื่อยล้า’ (จนทำให้ละทิ้งการปฏิบัตินั้นไปในที่สุด)”</p>
+
+      <p>ประการที่สาม: ความสุดโต่งในความเชื่อ</p>
+
+      <p>ผู้สุดโต่งมีลักษณะเด่นคือการเบี่ยงเบนในระดับหลักความเชื่อ, การเคร่งครัดเกินไปในการปฏิบัติศาสนา, และการให้ความสำคัญกับ “เปลือกนอก” (เรื่องหยุมหยิม) โดยละเลย “แก่นแท้” (เรื่องที่เป็นข้อบังคับและสาระสำคัญ) มีความเข้าใจศาสนาอย่างตื้นเขินและผิดพลาด, ตีความศาสนาตามอารมณ์ใฝ่ต่ำ, แนวโน้ม, ความปรารถนา และความขัดแย้งส่วนตัว หรือตามวิสัยทัศน์ทางความคิดแบบเอกนิยมที่ตึงเครียด ไม่พยายามที่จะตีความตัวบททางศาสนาให้สอดคล้องกับความเปลี่ยนแปลง, สภาพการณ์ และประเด็นปัญหาใหม่ๆ ของยุคสมัย</p>
+
+      <p>ยิ่งไปกว่านั้น ยังมีการกล่าวหาผู้อื่นในความเชื่อของตนว่าเป็นผู้ปฏิเสธศรัทธา (ตักฟีร) ด้วยความคลั่งไคล้, การกล่าวหาว่าต้องห้าม และการใช้ความรุนแรง ยิ่งไปกว่านั้น บางครั้งยังมีใช้ความรุนแรงและการก่อการร้ายเพื่อสร้างความหวาดกลัวให้แก่ผู้ที่เห็นต่างจากความเชื่อทางศาสนาในนามของ “การญิฮาดในหนทางของอัลลอฮฺ” และการต่อสู้กับ “บรรดาผู้ปฏิเสธศรัทธา” บนพื้นฐานที่ว่าสงครามศาสนานั้นเป็นสิ่งที่ชอบธรรม</p>
+
+      <p>อัชชาฏิบีย์ได้ถ่ายทอดคำกล่าวของอบู ฮามิด อัลฆอซาลีย์เอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أكثر الجهالات إنما رسخت في قلوب العوام بتعصب جماعة من جهال أهل الحق ، أظهروا الحق في معرض التحدي والإدلال ونظروا إلى ضعفاء الخصوم بعين التحقير والازدراء ، فثارت من بواطنهم دواعي المعاندة والمخالفة ، ورسخت في قلوبهم الاعتقادات الباطلة ، وتعذر على العلماء المتلطفين محوها مع ظهور فسادها ، حتى انتهى التعصب بطائفة إلى أن اعتقدوا أن الحروف التي نطقوا بها في الحال بعد السكوت عنها طول العمر قديمة . ولولا استيلاء الشيطان بواسطة العناد والتعصب للأهواء ، لما وجد مثل هذا الاعتقاد مستنفرا في قلب مجنون فضلا عن قلب عاقل . هذا ما قال . وهو الحق الذي تشهد له العوائد الجارية فالواجب تسكين الثائرة ما قدر على ذلك . والله أعلم .</blockquote>
+      <p class="ar-translation">“และความโฉดเขลาส่วนใหญ่นั้นได้ฝังรากลึกอยู่ในหัวใจของสามัญชนได้ ก็เนื่องมาจากความคลั่งไคล้ของกลุ่ม ‘ผู้รู้ที่ไม่รู้จริง’ จากฝ่ายสัจธรรม พวกเขาได้นำเสนอสัจธรรมในลักษณะของการท้าทายและการโอ้อวด และมองไปยังฝ่ายตรงข้ามที่อ่อนแอกว่าด้วยสายตาแห่งการดูถูกเหยียดหยาม สิ่งนั้นจึงได้ปลุกเร้าจิตใจของพวกเขาให้เกิดความดื้อรั้นและการต่อต้าน และทำให้ความเชื่อที่ผิดๆนั้น ฝังรากลึกลงไปในจิตใจของพวกเขา จนเป็นการยากที่บรรดานักปราชญ์ผู้มีเมตตาและนุ่มนวลจะลบล้างมันออกไปได้ แม้ว่าความเสื่อมเสียของมันจะปรากฏชัดแจ้งก็ตาม กระทั่งความคลั่งไคล้นี้ได้นำพาคนกลุ่มหนึ่งไปสู่การยึดมั่นในความเชื่อที่ว่า ‘ตัวอักษร (ในอัลกุรอ่าน) ที่พวกเขาเพิ่งจะเอ่ยออกมานั้นมีมาแต่ดั้งเดิม’ (ทั้งที่ก่อนหน้านี้พวกเขาไม่เคยสนใจเรื่องนี้เลยตลอดชีวิต) และหากมิใช่เพราะชัยฏอน (มารร้าย) ได้เข้าครอบงำพวกเขาผ่านความดื้อรั้นและความคลั่งไคล้ในอารมณ์ใฝ่ต่ำแล้วไซร้ ความเชื่อเช่นนี้ย่อมมิอาจผุดขึ้นมาได้แม้ในหัวใจของคนวิกลจริต แล้วนับประสาอะไรกับผู้ที่มีสติปัญญาสมบูรณ์ นี่คือสิ่งที่ท่านได้กล่าวไว้ และมันคือสัจธรรมที่วิถีปฏิบัติอันเป็นไปในปัจจุบันได้เป็นพยานยืนยัน ดังนั้น สิ่งที่จำเป็นคือการระงับเปลวไฟ (แห่งความขัดแย้ง) นั้นให้มอดลงเท่าที่สามารถจะกระทำได้ และอัลลอฮ์คือผู้ทรงรอบรู้ที่สุด”</p>
+
+      <p>ความรุนแรงทั้งในคำพูด, การกระทำ, พฤติกรรม และความเชื่อนี้ ได้สร้างภาพลักษณ์ที่เลวร้ายและบิดเบือนให้แก่อิสลาม ในขณะที่อิสลามคือศาสนาแห่งสันติภาพ, ความรัก และความเมตตา ดังที่ปรากฏในดำรัสของพระองค์ที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَإِن جَنَحُوا لِلسَّلْمِ فَاجْنَحْ لَهَا وَتَوَكَّلْ عَلَى اللَّهِ ۚ إِنَّهُ هُوَ السَّمِيعُ الْعَلِيمُ</p>
+      </div>
+      <p>{และหากพวกเขาโอนอ่อนเพื่อการประนีประนอม ก็จงโอนอ่อนตามเถิด และจงมอบหมายต่ออัลลอฮ์ แท้จริงพระองค์คือผู้ทรงได้ยิน ผู้ทรงรอบรู้} (อัลอันฟาล: 61)</p>
+
+      <p>ประการที่สี่: ความสุดโต่งทางความคิด</p>
+
+      <p>ความสุดโต่งไม่ได้จำกัดอยู่แค่ในเรื่องศาสนา, ความเชื่อ, สำนักคิด หรือนิกายเท่านั้น แต่เรายังพบความสุดโต่งได้แม้กระทั่งในหมู่นักคิด ทั้งชาวมุสลิมและชาวตะวันตก โดยความสุดโต่งนั้นจะอยู่ในรูปของความคลั่งไคล้, การเกินเลย, การเจาะลึกจนเกินงาม และความเคร่งครัดในทัศนะของตน รวมถึงการรับใช้ความทะเยอทะยานของผู้ปกครองและนักการเมือง, การส่งเสริมลัทธิล่าอาณานิคม, การปกป้องตรรกะแห่งการขูดรีด และการมอบความชอบธรรมให้แก่สถาบันศาสนา (โดยเฉพาะอย่างยิ่งกลุ่มที่เบี่ยงเบน) เพื่อบรรลุความทะเยอทะยาน, อภิสิทธิ์ และการสั่งสมความมั่งคั่งบนความเชื่อของศาสนิกชนที่ซื่อบริสุทธิ์</p>
+
+      <p>ยิ่งไปกว่านั้น ยังมีการบิดเบือนข้อเท็จจริงทางวิทยาศาสตร์ที่เป็นกลาง, การละทิ้งความแน่นอนและความถูกต้อง, การมีอคติต่อสิ่งที่มาจากทัศนะส่วนตัว, ความเชื่อ, เชื้อชาติ และนิกาย และการยึดถือในความเชื่อเชิงอุดมการณ์และวาทกรรมปลุกปั่นที่อ่อนแอ, หลอกลวง และบิดเบือน นอกเหนือไปจากการหันห่างออกจากเหตุผล, ตรรกะ, วิทยาศาสตร์, ประสบการณ์ และบทบัญญัติอันถูกต้องของพระผู้เป็นเจ้า</p>
+
+      <p>ความสุดโต่งทางความคิดอาจนำไปสู่การปลอมแปลงข้อเท็จจริง, การสนับสนุนความเท็จ, การยืนอยู่ฝั่งตรงข้ามกับสัจธรรม และการเอนเอียงไปสนับสนุนผู้ปกครองและผู้มีอำนาจโดยเหยียบย่ำผู้อ่อนแอ บ่อยครั้งที่ความสุดโต่งทางความคิดแสดงออกผ่านการคลั่งไคล้ในสำนักคิดทางการเมืองหนึ่งๆ, การยึดติดกับโครงการทางการเมืองหนึ่งๆ, การเอนเอียงไปสู่นิกายหรือกลุ่มหนึ่งๆ หรือการยึดมั่นในแนวคิดที่ตึงเครียด พร้อมกับการต่อต้านแนวคิดอื่นที่เป็นปฏิปักษ์, การกีดกันผู้เห็นต่างและฝ่ายตรงข้าม, การกล่าวหาป้ายสีนักปราชญ์, นักคิด, นักศึกษา และนักนิติศาสตร์ที่โดดเด่นด้วยความเท็จ, ความหลงผิด หรือการกีดกันพวกเขาออกจากวงจรอย่างจงใจและดื้อรั้น, การลดทอนบทบาทของพวกเขาอย่างสิ้นเชิง, การไม่ให้การยอมรับ และการดูหมิ่นพวกเขาด้วยความเหยียดหยามและกดขี่</p>
+
+      <p>อัชชาฏิบีย์ระบุว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الشريعة جارية في التكليف بمقتضاها على الطريق الأوسط، الأعدل، الآخذ من الطرفين بقسط لا ميل فيه، الداخل تحت كسب العبد، من غير مشقة عليه، ولا انحلال، بل هو تكليف جار على موازنة تقتضي في جميع المكلفين غاية الاعتدال</blockquote>
+      <p class="ar-translation">“บทบัญญัติแห่งศาสนานั้น ดำเนินไปในการบัญญัติข้อบังคับทางศาสนาตามแนวทางสายกลางอันเที่ยงธรรมที่สุด โดยดึงเอาส่วนอันพอดีจากสองปลายสุดขั้ว (คือการเกินเลยและการหย่อนยาน) อย่างสมดุลปราศจากความเอนเอียง เป็นหนทางที่อยู่ในขอบข่ายวิสัยที่บ่าว (ของพระเจ้า) จะสามารถปฏิบัติได้ โดยปราศจากความยากลำบากแก่เขา และปราศจากการหย่อนยาน หากแต่เป็นข้อบังคับที่ดำเนินไปบนความสมดุล อันเรียกร้อง ‘ที่สุดแห่งความพอดี’ จากผู้ที่อยู่ภายใต้ข้อบังคับทั้งปวง”</p>
+
+      <p>และหากมันเป็นเพียงการ “ความขัดแย้งทางความคิด” ไม่ใช่ “สุดโต่ง” ตรงกันข้าม มันคือสิ่งที่ช่วยพัฒนาแนวความคิดให้ก้าวหน้า ไม่ว่าจะมีความขัดแย้งกันเพียงใด หรือแม้จะถึงขั้นปะทะกันก็ตาม ตราบใดที่มันยังคงอยู่เพียงในขอบเขตของแนวความคิด โดยปราศจากอารมณ์ที่บานปลายไปสู่การนองเลือด และความสุดโต่ง ซึ่งนั่นคือจุดสูงสุดของความคลั่งไคล้ในทัศนะของตน อันเป็นสิ่งที่มิได้มาจากวัฒนธรรม, ความคิด หรือความรู้เลยแม้แต่น้อย</p>
+
+      <p>และนี่คือสิ่งที่นักนิติศาสตร์สายกลางอย่างท่านสุฟยาน บิน มัสรูก อัษเษารีย์ (เสียชีวิต ฮ.ศ. 161 / ค.ศ. 778) ได้เล็งเห็นและได้สรุปไว้อย่างสั้นๆ ในวาทะอันโด่งดังของท่าน ซึ่งย่อประวัติศาสตร์แห่งความเคร่งครัดที่นำไปสู่การนองเลือดมานานหลายศตวรรษไว้ได้อย่างเฉียบคม ท่านกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إنما العلم عندنا الرخصة من ثقة، فأما التشدد فيحسنه كل أحد</blockquote>
+      <p class="ar-translation">“แท้จริงแล้ว ‘ความรู้’ ในทัศนะของเรานั้น คือ ‘การผ่อนปรน’ ที่มาจากผู้ที่น่าเชื่อถือ ส่วน ‘ความเคร่งครัด’ (อัตตะชัดดุด) นั้น ใครๆ ก็ทำได้”</p>
+
+      <p>อย่างไรก็ตาม ปัญหาที่แท้จริงเกิดขึ้นเมื่อความขัดแย้งนี้ได้แปรเปลี่ยนไปสู่ “เรื่องของศาสนา” และถูกอ้างความชอบธรรมว่าเป็นการ “ปกป้องพระเจ้า” ณ จุดนี้ เรื่องราวไม่ได้หยุดอยู่แค่ความขัดแย้งทางความคิด หรือการโต้ตอบกันด้วยปลายปากกาและหน้ากระดาษอีกต่อไป แต่มันได้ลุกลามไปสู่ “การกล่าวหาผู้อื่นว่าตกศาสนา” (ตักฟีร) และ “การกล่าวหาผู้อื่นว่าเป็นคนชั่ว” (ฟาสิก) และเมื่อนั้นเอง ปากกาก็ถูกหักทิ้งและดาบก็ถูกชักออกจากฝัก</p>
+
+      <p>ท่านอิบนุ อับบาดได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا شيء أشد على النفس من متابعة الشرع وهو التوسط في الأمور كلها، فهي أبدا متفلتة إلى أحد الطرفين لوجود هواها فيه</blockquote>
+      <p class="ar-translation">“ไม่มีสิ่งใดที่ยากยิ่งสำหรับจิตใจ ยิ่งไปกว่าการปฏิบัติตามบทบัญญัติแห่งศาสนา ซึ่งก็คือ การยึดมั่นในทางสายกลางในทุกกิจการ ทั้งนี้เพราะจิตใจนั้นมีแนวโน้มที่จะหลีกหนีไปยังปลายสุดขั้วใดขั้วหนึ่งอยู่เสมอ เนื่องจากเป็นที่ที่ อารมณ์ใฝ่ต่ำของมันสถิตอยู่”</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>อิสลามคือศาสนาแห่งความเรียบง่าย สมดุล และความเมตตา การปฏิเสธความสุดโต่งจึงไม่ใช่แค่แนวคิดเพียงอย่างเดียว แต่คือหลักปฏิบัติที่นำไปสู่สันติสุขทั้งในระดับปัจเจกบุคคลและสังคม การทำความเข้าใจรากเหง้าและรูปแบบของความสุดโต่ง จะช่วยให้เราสามารถแยกแยะระหว่างความศรัทธาที่แท้จริงกับพฤติกรรมที่เบี่ยงเบน และกลับคืนสู่ “ทางสายกลาง” อันเป็นเส้นทางที่งดงาม</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ความสุดโต่งในอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/extremism-in-islam.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
