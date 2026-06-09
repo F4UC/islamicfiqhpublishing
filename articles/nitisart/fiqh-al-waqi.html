@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ความสำคัญของการเข้าใจสภาพแห่งความเป็นจริง หรือฟิกฮุลวากิอ์ — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์ทางนิติศาสตร์อิสลามว่าด้วย “ฟิกฮุลวากิอ์” หรือการเข้าใจสภาพแห่งความเป็นจริง หนทางและหลักเกณฑ์ในการนำตัวบทมาปรับใช้กับบริบทจริง ตามทัศนะอิบนุลก็อยยิม อัชชาฏิบีย์ และอัลฆอซาลีย์">
+<meta name="keywords" content="ฟิกฮุลวากิอ์, นิติศาสตร์อิสลาม, ฟิกฮ์, อิจติฮาด, มะกอศิด, ฟัตวา">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ความสำคัญของการเข้าใจสภาพแห่งความเป็นจริง หรือฟิกฮุลวากิอ์ — Islamic Fiqh Publishing">
+<meta property="og:description" content="ฟิกฮุลวากิอ์ คือการเข้าใจบริบทของยุคสมัย สังคม และผู้คน ก่อนนำตัวบทศาสนามาปรับใช้ — หนทางสี่ประการและหลักเกณฑ์สี่ข้อในการวินิจฉัย">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/fiqh-al-waqi.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="fiqh-al-waqi">
+<div id="readingProgressBar"></div>
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์</a>
+      <h1 class="article-feature-title">ความสำคัญของการเข้าใจสภาพแห่งความเป็นจริง หรือฟิกฮุลวากิอ์</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">เคยสงสัยไหมว่า...ทำไมคำชี้ขาดทางศาสนา (ฟัตวา) บางเรื่องในอดีต ถึงดูเหมือนไม่สอดคล้องกับยุคสมัยปัจจุบัน? หรือในทางกลับกัน...ปัญหาใหม่ๆที่ไม่เคยมีมาก่อน เช่น การซื้อขายสินทรัพย์ดิจิทัล, ธุรกรรมออนไลน์ที่ซับซ้อนหรือประเด็นทางการแพทย์สมัยใหม่ นักวิชาการอิสลามใช้อะไรเป็นเกณฑ์ในการวินิจฉัยเรื่องเหล่านี้?</p>
+
+      <p>คำตอบของคำถามเหล่านี้ อยู่ในหลักการที่สำคัญอย่างยิ่งยวดในนิติศาสตร์อิสลาม นั่นคือ “ฟิกฮุล วากิอ์” (<span class="ar-inline" lang="ar" dir="rtl">فقه الواقع</span>) หรือ “การเข้าใจสภาพแห่งความเป็นจริง”</p>
+
+      <p>“ฟิกฮุล วากิอ์” คือศาสตร์ที่ว่าด้วยเรื่องการทำความเข้าใจ “บริบท” ที่ซับซ้อนของสังคม, ยุคสมัย, สถานที่, ธรรมเนียมปฏิบัติ และตัวบุคคลอย่างถ่องแท้ ก่อนที่จะนำ “ตัวบทหลักฐาน” มาปรับใช้</p>
+
+      <p>พูดง่ายๆก็คือ การเป็นผู้รู้หรือผู้ชี้ขาดที่แม่นยำนั้น ไม่ได้หมายความว่ารู้แค่ “ตัวบท” (เช่น กุรอานและซุนนะฮ์) ว่าอย่างไร แต่จำเป็นต้องมีความเข้าใจที่ลึกซึ้งใน “ความเป็นจริง” ของสิ่งที่เกิดขึ้นตรงหน้าด้วย ซึ่งมันมีหลายประการดังต่อไปนี้</p>
+
+      <p>ประการแรก: การพิจารณาถึงผู้บัญญัติ ซึ่งก็คืออัลลอฮ์ ตะอาลา (ผู้ทรงกำหนดบทบัญญัติ)</p>
+
+      <p>ประการที่สอง: การพิจารณาถึงผู้ที่อยู่ภายใต้บทบัญญัติ ซึ่งก็คือ “มุกัลลัฟ” (คือมนุษย์ที่ต้องรับผิดชอบตามหลักศาสนา ซึ่งคือบุคคลที่บรรลุศาสนภาวะแล้ว)</p>
+
+      <p>ประการที่สาม: การพิจารณาถึงการกระทำที่ถูกตัดสิน ซึ่งก็คือการกระทำนั้นๆ (ของการกระทำของมุกัลลัฟ)</p>
+
+      <p>และบนพื้นฐานนี้เอง การมีความรู้เกี่ยวกับ “ความเป็นจริง” ของมุกัลลัฟ จึงมีความสำคัญไม่ยิ่งหย่อนไปกว่าการมีความรู้เกี่ยวกับ “ตัวบทหลักฐาน” เองเลย (คือการรู้แค่ตัวบทไม่พอ ต้องรู้บริบทด้วย) และการกำหนดบทบัญญัติทางศาสนาที่ถูกต้องนั้น จะต้องถูกสร้างขึ้นบนพื้นฐานของความรู้ทั้งสองด้านนี้ประกอบกัน; และ “การวินิจฉัย” (อิจติฮาด) ในการทำความเข้าใจความเป็นจริงโดยบรรดาผู้รู้ ก็คือรากฐานสำคัญในการวางบทบัญญัติและคำชี้ขาดทางศาสนา (ในอดีต)</p>
+
+      <p>อิบนุลก็อยยิมได้ถือว่า การทำความเข้าใจและความหยั่งรู้ในความเป็นจริงนั้น คือหนทางที่จำเป็นอย่างยิ่งยวดในการเข้าถึงบทบัญญัติที่แท้จริง โดยท่านกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لَا ‌يَتَمَكَّنُ الْمُفْتِي وَلَا الْحَاكِمُ مِنْ الْفَتْوَى وَالْحُكْمِ بِالْحَقِّ إلَّا بِنَوْعَيْنِ مِنْ الْفَهْمِ: أَحَدُهُمَا: فَهْمُ الْوَاقِعِ وَالْفِقْهِ فِيهِ وَاسْتِنْبَاطُ عِلْمِ حَقِيقَةِ مَا وَقَعَ بِالْقَرَائِنِ وَالْأَمَارَاتِ وَالْعَلَامَاتِ حَتَّى يُحِيطَ بِهِ عِلْمًا. وَالنَّوْعُ الثَّانِي: فَهْمُ الْوَاجِبِ فِي الْوَاقِعِ، وَهُوَ فَهْمُ حُكْمِ اللَّهِ الَّذِي حَكَمَ بِهِ فِي كِتَابِهِ أَوْ عَلَى لِسَانِ قَوْلِهِ فِي هَذَا الْوَاقِعِ، ثُمَّ يُطَبِّقُ أَحَدُهُمَا عَلَى الْآخَرِ</blockquote>
+      <p class="ar-translation">“ผู้ให้คำชี้ขาดทางศาสนา (มุฟตี) และผู้พิพากษา (หากิม) จะไม่สามารถให้คำชี้ขาดและตัดสินได้อย่างถูกต้องเลย เว้นแต่ด้วยความเข้าใจสองประเภท”: (คำว่า “ฟิกฮ์” ในบริบทนี้จะหมายถึงความเข้าใจอย่างลึกซึ้ง ไม่ใช่แค่วิชานิติศาสตร์)</p>
+
+      <p>ประเภทแรก: การทำความเข้าใจในสภาพ “ความเป็นจริง” และการหยั่งรู้ในประเด็นนั้นอย่างถ่องแท้ และการสืบค้นความรู้ถึงข้อเท็จจริงของสิ่งที่เกิดขึ้นผ่านแวดล้อม, สิ่งบ่งชี้ต่างๆ และสัญญาณต่างๆ จนกระทั่งมีความเข้าใจอย่างรอบด้าน (คือการเข้าใจสถานการณ์และบริบทที่เกิดขึ้นจริงอย่างละเอียด)</p>
+
+      <p>ประเภทที่สอง: การทำความเข้าใจใน “ข้อบังคับ” ในความเป็นจริงนั้น ซึ่งก็คือการทำความเข้าใจใน “บทบัญญัติของอัลลอฮ์” ที่พระองค์ได้ทรงกำหนดไว้ในคัมภีร์ของพระองค์ หรือผ่านทางลิ้น (คำพูด) ของพระองค์ (หมายถึงคำพูดของท่านเราะสูล ﷺ ที่เป็นวะฮีย์) ที่เกี่ยวข้องกับความเป็นจริงนั้นๆ จากนั้นจึงนำบทบัญญัติมาปรับใช้กับความเป็นจริงนั้น (คือการนำตัวบทมาปรับใช้กับบริบทที่เข้าใจแล้ว)</p>
+
+      <p>และ “ข้อบังคับในความเป็นจริง” ตามทัศนะของอิบนุลก็อยยิมก็คือ บทบัญญัติทางศาสนาที่กำลังมองหา “พื้นที่” ที่เหมาะสมในความเป็นจริงนั้น เพื่อที่จะได้นำบทบัญญัตินั้นลงไปปรับใช้ (คือตัวบทบัญญัตินั้นมีอยู่แล้ว แต่ต้องหาบริบทที่ถูกต้องเหมาะสมในการนำไปใช้)</p>
+
+      <p>ในทำนองเดียวกัน อัชชาฏิบีย์ได้ถือว่า “การวินิจฉัยเพื่อสืบค้นบริบทที่เหมาะสมในการปรับใช้บทบัญญัติ” นั้น เป็น “ครึ่งหนึ่ง” ของการวินิจฉัยทั้งหมด โดยท่านได้แบ่งการวินิจฉัยออกเป็นสองประเภท</p>
+
+      <p>ประเภทแรก: เป็นการวินิจฉัยที่ไม่สามารถสิ้นสุดลงได้จนกว่า “รากฐานของข้อบังคับทางศาสนา” จะสิ้นสุดลง ซึ่งจะเกิดขึ้นเมื่อวันสิ้นโลกมาถึง (คือการวินิจฉัยเพื่อหาบริบทในการปรับใช้บทบัญญัติจะคงอยู่ตลอดไปตราบเท่าที่ศาสนายังคงอยู่)</p>
+
+      <p>ประเภทที่สอง: เป็นการวินิจฉัยที่อาจสิ้นสุดลงได้ก่อนโลกจะดับสูญ (คือการวินิจฉัยเพื่อสืบค้นตัวบทบัญญัติเดิมอาจสิ้นสุดลงได้)</p>
+
+      <p>อัชชาฏิบีย์กล่าวต่อว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فَأَمَّا الْأَوَّلُ؛ فَهُوَ الِاجْتِهَادُ الْمُتَعَلِّقُ بِتَحْقِيقِ الْمَنَاطِ، وَهُوَ الَّذِي لَا خِلَافَ بَيْنَ الْأُمَّةِ فِي قَبُولِهِ، وَمَعْنَاهُ أَنْ يَثْبُتَ الْحُكْمُ بِمُدْرَكِهِ الشَّرْعِيِّ لَكِنْ يَبْقَى النَّظَرُ فِي تَعْيِينِ مَحَلِّهِ…</blockquote>
+      <p class="ar-translation">“สำหรับประเภทแรกนั้น คือการวินิจฉัยที่เกี่ยวข้องกับการสืบค้นบริบทที่เหมาะสมในการปรับใช้บทบัญญัติ ซึ่งเป็นประเภทที่ประชาชาติอิสลามไม่มีความเห็นต่างในการยอมรับ และความหมายของมันก็คือ การที่บทบัญญัติได้รับการยืนยันด้วยหลักฐานทางศาสนาของมันแล้ว แต่ยังคงต้องมีการพิจารณาเพื่อระบุ ‘พื้นที่’ หรือบริบทที่เหมาะสมในการนำบทบัญญัตินั้นไปปรับใช้…”</p>
+
+      <p>ด้วยเหตุนี้ การวินิจฉัย (อิจติฮาด) จึงมีสองประเภท</p>
+
+      <ol>
+        <li>การวินิจฉัยในเชิงทฤษฎี คือการวินิจฉัยเพื่อสืบค้นตัวบทบัญญัติ (คือการหาว่าตัวบทกล่าวว่าอย่างไร)</li>
+        <li>การวินิจฉัยเชิงประยุกต์ คือการสืบค้นบริบทที่เหมาะสมในการปรับใช้บทบัญญัติ (คือการพิจารณาว่าจะนำตัวบทมาปรับใช้กับสถานการณ์จริงอย่างไร)</li>
+      </ol>
+
+      <p>และการวินิจฉัยประเภทหลังนี้ จะยังคงดำรงอยู่ตราบเท่าที่มนุษย์ยังคงดำรงอยู่ และมันคือสิ่งที่รับประกันว่า บทบัญญัติจะบรรลุเป้าหมายที่ตั้งไว้ เพราะบทบัญญัติศาสนานั้น มุ่งหมายที่จะนำบทบัญญัติทางศาสนามาปรับใช้ในลักษณะที่ “นำมาซึ่งผลประโยชน์” และ “ปัดเป่าความเสียหาย” ออกไป และท่านอิซซุดดีน บิน อับดิสสลามได้วางหลักการทั่วไปในเรื่องนี้ไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كل تصرف تقاعد عن تحصيل مقصوده فهو باطل وليس الاجتهاد في التفهم والاستنباط، إذن، بأولى من الاجتهاد في التطبيق إن لم نقل إن قيمة الاجتهاد عمليا إنما تنحصر فيما يؤدي من ثمرات في تطبيقه تحقق مقاصد التشريع وأهدافه في جميع مناحي الحياة</blockquote>
+      <p class="ar-translation">“ทุกการกระทำใดๆที่บกพร่องจากการบรรลุเป้าหมายที่ตั้งไว้ของมัน การกระทำนั้นย่อมเป็นโมฆะ”; และ “การวินิจฉัยในการทำความเข้าใจและสืบค้นตัวบทบัญญัตินั้น จึงไม่ได้มีความสำคัญไปกว่าการวินิจฉัยในการนำไปปรับใช้เลย หากเราจะไม่กล่าวว่า คุณค่าของการวินิจฉัยในภาคปฏิบัตินั้นแท้จริงแล้วจำกัดอยู่เพียงแค่ผลลัพธ์ที่เกิดจากการปรับใช้ที่สามารถบรรลุเป้าหมายและเจตนารมณ์ของบทบัญญัติในทุกแง่มุมของชีวิตได้”</p>
+
+      <p>ดังนั้น ผู้วินิจฉัย (มุจตะฮิด) จึงจำเป็นต้อง “ผสมผสาน” ระหว่างการพิจารณาตัวบทหลักฐาน กับการพิจารณาถึงสภาพความเป็นจริง เพื่อให้บทบัญญัติที่ได้มานั้น ครอบคลุมบริบทที่เกี่ยวข้องและบรรลุเป้าหมายที่ตั้งไว้ ในทางกลับกัน หากเขาไม่คำนึงถึงสภาพการณ์ของผู้คน บทบัญญัติของเขาก็จะห่างไกลจากความเป็นจริงและล่องลอยอยู่ห่างจากบริบทที่ควรจะเป็น เพราะการกระทำเช่นนั้นเท่ากับเป็นการจำกัดการทำงานของเขาอยู่แค่ในสิ่งที่ “ควรจะเป็น” โดยปราศจากการตรวจสอบในสิ่งที่ “เป็นอยู่จริง”; ดังที่อุมัร อุบัยด์กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن فقه النص دون فقه الواقع الذي يعد محل التنزيل، يمثل نصف الطريق، أو نصف الحقيقة التي توقف عندها الكثير من الفقهاء في هذا العصر، والتي لن تحقق شيئا إذا لم نفهم الواقع ولَا ‌يَصِحُّ ‌لِلْعَالِمِ إِذَا سُئِلَ عَنْ أَمْرٍ كَيْفَ يَحْصُلُ فِي الْوَاقِعِ إِلَّا أَنْ يُجِيبَ بِحَسَبِ الْوَاقِعِ، فَإِنْ أَجَابَ عَلَى غَيْرِ ذَلِكَ؛ أَخْطَأَ فِي عَدَمِ اعْتِبَارِ الْمَنَاطِ الْمَسْئُولِ عَنْ حُكْمِهِ، لِأَنَّهُ سُئِلَ عَنْ مَنَاطٍ مُعَيَّنٍ؛ فَأَجَابَ عَنْ مَنَاطٍ غَيْرِ مُعَيَّنٍ</blockquote>
+      <p class="ar-translation">“การหยั่งรู้ในตัวบทโดยปราศจากการหยั่งรู้ในความเป็นจริง (<span class="ar-inline" lang="ar" dir="rtl">فقه الواقع</span>) ซึ่งเป็นพื้นที่ในการนำบทบัญญัติไปปรับใช้นั้น เปรียบเสมือนการเดินทางเพียงครึ่งทาง หรือเพียงครึ่งหนึ่งของความจริง ซึ่งเป็นจุดที่นักนิติศาสตร์จำนวนมากในยุคนี้ได้หยุดอยู่ และมันจะไม่สามารถบรรลุผลใดๆได้เลยหากเราไม่เข้าใจความเป็นจริง”; และ “ไม่ถูกต้องสำหรับผู้รู้ หากถูกถามเกี่ยวกับเรื่องใดเรื่องหนึ่งว่ามันเกิดขึ้นในความเป็นจริงอย่างไร ที่จะตอบโดยไม่สอดคล้องกับความเป็นจริงนั้น เพราะหากเขาตอบโดยไม่เป็นไปตามนั้น เขาก็ย่อมผิดพลาดในการไม่พิจารณาถึง “บริบท” ที่ถูกถามถึงบทบัญญัติของมัน เพราะเขาถูกถามเกี่ยวกับบริบทที่เฉพาะเจาะจง แต่กลับตอบเกี่ยวกับบริบทที่ไม่เฉพาะเจาะจง”</p>
+
+      <p>ท่านอิหม่ามอะห์มัดได้วางเงื่อนไขห้าประการสำหรับผู้ที่จะดำรงตำแหน่งให้คำชี้ขาดทางศาสนา (มุฟตี) และท่านได้ระบุเงื่อนไขว่า “ประการที่ห้า คือการรู้จักผู้คน”; ซึ่งอิบนุลก็อยยิมได้อธิบายขยายความว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَأَمَّا قَوْلُهُ “الْخَامِسَةُ ‌مَعْرِفَةُ ‌النَّاسِ” فَهَذَا أَصْلٌ عَظِيمٌ يَحْتَاجُ إلَيْهِ الْمُفْتِي وَالْحَاكِمُ، فَإِنْ لَمْ يَكُنْ فَقِيهًا فِيهِ فَقِيهًا فِي الْأَمْرِ وَالنَّهْيِ ثُمَّ يُطَبِّقُ أَحَدَهُمَا عَلَى الْآخَرِ، وَإِلَّا كَانَ مَا يَفْسُدُ أَكْثَرَ مِمَّا يَصْلُحُ…بَلْ يَنْبَغِي لَهُ أَنْ يَكُونَ فَقِيهًا فِي مَعْرِفَةِ مَكْرِ النَّاسِ وَخِدَاعِهِمْ وَاحْتِيَالِهِمْ وَعَوَائِدِهِمْ وَعُرْفِيَّاتِهِمْ، فَإِنَّ الْفَتْوَى تَتَغَيَّرُ بِتَغَيُّرِ الزَّمَانِ وَالْمَكَانِ وَالْعَوَائِدِ وَالْأَحْوَالِ</blockquote>
+      <p class="ar-translation">“สำหรับคำกล่าวของท่านที่ว่า ‘ประการที่ห้า การรู้จักผู้คน’ นั้น นี่คือรากฐานอันยิ่งใหญ่ที่ทั้งผู้ให้คำชี้ขาดและผู้พิพากษาจำเป็นที่จะต้องมี เพราะหากเขาไม่มีความหยั่งรู้ในเรื่องนี้ (คือไม่เข้าใจผู้คนและสังคม) และไม่มีความหยั่งรู้ในเรื่องคำสั่งใช้และคำสั่งห้าม (คือไม่เข้าใจตัวบท) จากนั้นก็นำทั้งสองอย่างยำกันแล้วมาปรับใช้เข้าด้วยกัน มิเช่นนั้นแล้ว ความเสียหายที่เขาจะก่อขึ้นย่อมมีมากกว่าความดีงามที่เขาจะสร้างสรรค์... ยิ่งไปกว่านั้น เขาจำเป็นต้องเป็นผู้ที่หยั่งรู้ในการรู้จักเล่ห์เหลี่ยม, กลอุบาย, การหลอกลวง, ขนบธรรมเนียมและธรรมเนียมปฏิบัติของผู้คน เพราะจริงแล้ว คำชี้ขาดทางศาสนานั้น ย่อมเปลี่ยนแปลงไปตามการเปลี่ยนแปลงของยุคสมัย, สถานที่, ขนบธรรมเนียม และสภาพการณ์”</p>
+
+      <p>และด้วยความสำคัญของการคำนึงถึงความเป็นจริงในการกำหนดบทบัญญัติ ท่านอบุลอับบาส อัลวันชะรีซีย์ (<span class="ar-inline" lang="ar" dir="rtl">أبو العباس الونشريسي</span> - เสียชีวิตปี 914) จึงได้ถือว่ามันเป็นส่วนหนึ่งของ “ฟิกฮ์แห่งการให้คำชี้ขาด” (ฟิกฮ์ ฟัตวา) โดยท่านกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والفرق المذكور هو أيضا الفرق بين الفتيا وفقه الفتيا، ففقه الفتيا هو العلم بالأحكام الكلية، وعلمها هو العلم بتلك الأحكام مع تنزيلها على النوازل</blockquote>
+      <p class="ar-translation">“และความแตกต่างที่กล่าวถึงนั้น ก็คือความแตกต่างระหว่าง ‘การให้คำชี้ขาด’ กับ ‘ฟิกฮ์แห่งการให้คำชี้ขาด’ ด้วย ‘ฟิกฮ์แห่งการให้คำชี้ขาด’ คือความรู้เกี่ยวกับบทบัญญัติโดยรวม ส่วนความรู้เกี่ยวกับมัน (คือการให้คำชี้ขาดที่แท้จริง) คือความรู้เกี่ยวกับบทบัญญัติเหล่านั้น พร้อมกับการนำมันไปปรับใช้กับประเด็นปัญหาที่เกิดขึ้นใหม่ (<span class="ar-inline" lang="ar" dir="rtl">النوازل</span> - นะวาซิล)”</p>
+
+      <p>ท่านได้ยกตัวอย่างนักนิติศาสตร์หลายท่านที่ประสบความยากลำบากในการนำบทบัญญัติทางศาสนามาปรับใช้ แม้จะมีความรู้ในตัวบทเป็นอย่างดีก็ตาม หนึ่งในนั้นคือคำกล่าวของอัยยูบ บิน สุลัยมานที่ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لقد ابتليت بالفتيا، فما دريت ما أقول في أول مجلس شاورني فيه سليمان بن أسود، وأنا أحفظ المدونة والمستخرجة الحفظ المتقن</blockquote>
+      <p class="ar-translation">“ข้าพเจ้าได้ถูกทดสอบด้วยการให้คำชี้ขาดทางศาสนา แต่ข้าพเจ้ากลับไม่รู้ว่าจะกล่าวอย่างไรในครั้งแรกที่สุลัยมาน บิน อัสวัดมาปรึกษาข้าพเจ้า ทั้งๆที่ข้าพเจ้าท่องจำตำรา ‘อัลมุเดาวะนะฮ์’ และ ‘อัลมุสตัครอญะฮ์’ ได้อย่างแม่นยำ”</p>
+
+      <p>ดังนั้น เราอาจพบนักนิติศาสตร์ที่มีความเชี่ยวชาญอย่างยิ่งในการทำความเข้าใจตัวบท แต่กลับไม่ประสบความสำเร็จในการนำตัวบทเหล่านั้นไปปรับใช้กับสถานการณ์ที่เกิดขึ้นจริง และนี่คือสิ่งที่ อัลหัฏฏอบได้ชี้ให้เห็นโดยท่านกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا ‌غرابة في امتياز علم القضاء عن غيره من أنواع الفقه، وإنما الغرابة في استعمال كليات علم الفقه وانطباقها على جزئيات الوقائع بين الناس، وهو عسير على كثير من الناس، فنجد الرجل يحفظ كثيرا من العلم، ويفهم ويعلم غيره، فإذا سئل عن واقعة لا يحسن الجواب</blockquote>
+      <p class="ar-translation">“มันไม่ใช่เรื่องแปลกแต่อย่างใดที่ศาสตร์แห่งการพิพากษาคดี (<span class="ar-inline" lang="ar" dir="rtl">علم القضاء</span>) จะมีความโดดเด่นแตกต่างจากฟิกฮ์ประเภทอื่นๆ แต่ความแปลกนั้นอยู่ที่ การนำหลักการทั่วไปของวิชาฟิกฮ์มาปรับใช้ให้สอดคล้องกับรายละเอียดปลีกย่อยของเหตุการณ์ที่เกิดขึ้นระหว่างผู้คน ซึ่งเป็นเรื่องยากสำหรับคนจำนวนมาก เราจึงพบว่า ชายผู้หนึ่งอาจท่องจำความรู้ไว้มากมาย, เข้าใจ และสามารถสอนผู้อื่นได้ แต่เมื่อถูกถามเกี่ยวกับเหตุการณ์ที่เกิดขึ้นจริง เขากลับไม่สามารถให้คำตอบที่ดีได้”</p>
+
+      <p>ท่านอิบนุ รุชด์ได้เปรียบเปรยอย่างมีความหมายลึกซึ้งถึงนักนิติศาสตร์ที่ท่องจำประเด็นปัญหาต่างๆได้ แต่กลับไม่หยั่งรู้ถึงสภาพความเป็นจริงว่าเปรียบเสมือน “คนขายรองเท้าหนัง” ที่มีรองเท้าหนังมากมายอยู่ในครอบครอง แต่กลับไม่สามารถทำรองเท้าหนังคู่ใหม่ๆให้แก่ผู้ที่ขนาดเท้าของเขาไม่พอดีกับรองเท้าที่มีอยู่ได้; ท่านได้กล่าวไว้ในหนังสือ “บิดายะตุลมุจตะฮิด” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وبهذه الرتبة يسمى فقيها لا بحفظ مسائل الفقه، ولو بلغت في العدد أقصى ما يمكن أن يحفظه إنسان، كما نجد متفقهة زماننا يظنون أن الأفقه هو الذي حفظ مسائل أكثر، وهؤلاء عرض لهم شبيه ما يعرض لمن ظن أن الخفاف هو الذي عنده خفاف كثيرة لا الذي يقدر على عملها، وهو بين أن الذي عنده خفاف كثيرة سيأتيه إنسان بقدم لا يجد في خفافه ما يصلح لقدمه، فيلجأ إلى صانع الخفاف ضرورة، وهو الذي يصنع لكل قدم خفا يوافقه</blockquote>
+      <p class="ar-translation">“และด้วยสถานะนี้เอง (คือสถานะของการวินิจฉัย) เขาจึงจะถูกเรียกว่าเป็น ‘ฟะกีฮ์’ (ผู้หยั่งรู้) หาใช่ด้วยการท่องจำประเด็นปัญหาทางฟิกฮ์ไม่ แม้ว่าเขาจะท่องจำได้มากมายถึงขีดสุดเท่าที่มนุษย์คนหนึ่งจะสามารถท่องจำได้ก็ตาม ดังที่เราพบเห็นนักศึกษาฟิกฮ์ในยุคสมัยของเราที่หลงคิดไปว่า ผู้ที่หยั่งรู้ที่สุดคือผู้ที่ท่องจำประเด็นปัญหาได้มากที่สุด</p>
+
+      <p>คนเหล่านี้เปรียบได้กับผู้ที่หลงคิดว่า ‘คนขายรองเท้าหนัง’ คือผู้ที่มีรองเท้าหนังจำนวนมาก ไม่ใช่ผู้ที่สามารถทำรองเท้าหนังได้ และเป็นที่ประจักษ์ชัดว่า ผู้ที่มีรองเท้าหนังจำนวนมากนั้น ย่อมต้องมีคนมาหาเขาพร้อมกับเท้าที่ไม่พอดีกับไซส์รองเท้าใดๆ ที่เขามีอยู่ และเขาก็จำเป็นต้องหันไปพึ่ง ‘ช่างทำรองเท้าหนัง’ อย่างหลีกเลี่ยงไม่ได้ ซึ่งก็คือผู้ที่สามารถทำรองเท้าหนังที่พอดีกับเท้าแต่ละข้างได้ (คือฟะกีฮ์ที่แท้จริงต้องสามารถปรับใช้ความรู้ให้เข้ากับสถานการณ์เฉพาะหน้าได้ ไม่ใช่แค่ท่องจำ)”</p>
+
+      <p>จากสิ่งที่กล่าวมาทั้งหมดนี้ ย่อมเป็นที่ประจักษ์ชัดว่า การทำความเข้าใจและรู้จัก “สภาพแห่งความเป็นจริง” (<span class="ar-inline" lang="ar" dir="rtl">فقه الواقع</span>) คือกลไกที่ไม่อาจแยกออกจากกันได้สำหรับการปฏิสัมพันธ์กับตัวบททางศาสนาตาม วิสัยทัศน์เชิงเป้าหมาย (คือการคำนึงถึงเจตนารมณ์และเป้าหมายสูงสุดของบทบัญญัติ) และหาก “ฟิกฮ์ วากิอ์” ของผู้ให้คำชี้ขาด (มุฟตี) นั้นถูกต้อง การวินิจฉัย (อิจติฮาดี) ทั้งหมดของเขาก็ย่อมถูกต้องตามไปด้วย</p>
+
+      <h2 class="article-h2">หนทางและหลักเกณฑ์ของการเข้าใจ “ฟิกฮ์ วากิอ์”</h2>
+
+      <p>ประการแรก: หนทางสู่การรู้จักความเป็นจริง</p>
+
+      <p>“หนทาง” ในที่นี้หมายถึง ขั้นตอนเชิงระเบียบวิธีที่ผู้พิจารณา (คือมุจตะฮิดหรือมุฟตี) จำเป็นต้องปฏิบัติตามเพื่อ “สร้างมโนภาพ” ถึง “ประเด็นปัญหาที่เกิดขึ้นใหม่” (คือสถานการณ์หรือกรณีเฉพาะที่ต้องการคำตัดสิน) ได้อย่างแม่นยำ และเพื่อ “ตรวจสอบยืนยัน” ถึง “สาเหตุ” (คือเหตุผลหรือปัจจัยที่เป็นแก่นแท้ของประเด็นนั้น) ของมันก่อนที่จะนำบทบัญญัติมาปรับใช้</p>
+
+      <p>และหนทางเหล่านี้ก็คือสิ่งที่ท่านอัลฆอซาลีย์ได้ชี้ให้เห็นในระหว่างการอธิบายเรื่อง “การสืบค้นบริบทที่เหมาะสมในการปรับใช้บทบัญญัติ” โดยท่านได้เรียกมันว่า “ประเภทต่างๆของการพิจารณาเชิงทฤษฎี” (<span class="ar-inline" lang="ar" dir="rtl">الأصناف من النظريات</span>) และยังเรียกว่า “มาตรวัด” (<span class="ar-inline" lang="ar" dir="rtl">الموازين</span>) อีกด้วย; ดังที่ท่านกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وتلك الأصول التي تدرك النتيجة بها؛ تارة تقتبس من اللغة…وتارة تبنى على العرف والعادة…وتارة تبنى على محض النظر العقلي…وتارة تبنى على مجرد الحس…وتارة تبنى على النظر في طبيعة الأشياء…فهذه خمسة أصناف من النظريات وهي: اللغوية، والعرفية، والعقلية، والحسية، والطبيعية</blockquote>
+      <p class="ar-translation">“และบรรดาหลักการมูลฐาย (อุศูล) ที่ใช้ในการเข้าถึงผลลัพธ์ (คือความเข้าใจในความเป็นจริง) นั้น; บางครั้งก็ได้รับมาจากภาษา…บางครั้งก็ตั้งอยู่บนพื้นฐานของธรรมเนียมปฏิบัติ…บางครั้งก็ตั้งอยู่บนพื้นฐานของการพิจารณาด้วยสติปัญญาล้วนๆ…บางครั้งก็ตั้งอยู่บนพื้นฐานของการรับรู้ทางประสาทสัมผัส…และบางครั้งก็ตั้งอยู่บนพื้นฐานของการพิจารณาในธรรมชาติของสรรพสิ่ง…นี่คือห้าประเภทของการพิจารณาเชิงทฤษฎี ได้แก่ ทางภาษา, ทางธรรมเนียมปฏิบัติ, ทางสติปัญญา, ทางประสาทสัมผัส, และทางธรรมชาติ”</p>
+
+      <p>และ “หนทางสู่การรู้จักสภาพความเป็นจริง” ก็คือกลไกต่างๆที่ช่วยเปิดเผยและทำให้ความเป็นจริงนั้นปรากฏชัดเจนดังที่อัลฆอซาลีย์ได้แจงไว้</p>
+
+      <h2 class="article-h2">หนทางทางประสาทสัมผัส</h2>
+
+      <p>คือการใช้ประสาทสัมผัสในการรับรู้ประเด็นปัญหาที่ถูกถามถึง การปรับใช้หลักการนี้มีอยู่มากมายในหมวดต่างๆของฟิกฮ์ (นิติศาสตร์อิสลาม) เช่น</p>
+
+      <p>การสัมผัสใช้ในการรับรู้ว่าได้มีการขัดถู (ในการทำความสะอาด) เกิดขึ้นจริงหรือไม่</p>
+
+      <p>ด้วยประสาทสัมผัสทำให้รับรู้ถึงการหมดประจำเดือนของสตรี</p>
+
+      <p>ด้วยประสาทสัมผัส ทำให้รับรู้ถึงการที่สิ่งทำให้เสียศีลอด นั่นคือได้มีการล่วงล้ำเข้าไปในช่องท้องของผู้ถือศีลอด</p>
+
+      <p>ด้วยประสาทสัมผัส (การมองเห็น) ทำให้การเห็นจันทร์เสี้ยวเพื่อเริ่มและสิ้นสุดการถือศีลอดได้รับการยืนยัน</p>
+
+      <p>และด้วยประสาทสัมผัส (การรับรู้ทางตา จมูก ลิ้น) ทำให้รับรู้ถึงการเปลี่ยนแปลงของสี, รสชาติ หรือกลิ่นของน้ำ</p>
+
+      <h2 class="article-h2">หนทางทางธรรมเนียมปฏิบัติ</h2>
+
+      <p>ผู้คนย่อมมีธรรมเนียมปฏิบัติร่วมกันในเรื่องคำพูดและการกระทำต่างๆจนกลายเป็น “ปกติวิสัย” ของพวกเขา ดังนั้น ผู้ให้คำชี้ขาด (มุฟตี) จึงจำเป็นต้องมีความรอบรู้ในธรรมเนียมปฏิบัติของผู้ที่มาขอคำชี้ขาด เพื่อให้คำชี้ขาดของเขาสอดคล้องกับบริบทที่เป็นจริง ท่านเกาะรอฟีย์ได้อธิบายถึงความสำคัญของหนทางนี้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَعَلَى هَذِهِ الْقَاعِدَةِ تَتَخَرَّجُ ‌أَيْمَانُ ‌الطَّلَاقِ وَالْعَتَاقِ وَصِيَغُ الصَّرَائِحِ وَالْكِنَايَاتِ فَقَدْ يَصِيرُ الصَّرِيحُ كِنَايَةً يَفْتَقِرُ إلَى النِّيَّةِ. وَقَدْ تَصِيرُ الْكِنَايَةُ صَرِيحًا مُسْتَغْنِيَةً عَنْ النِّيَّةِ وَاعْلَمْ أَنَّ فِي هَذِهِ الْمَسْأَلَةِ غَوْرًا آخَرَ وَهُوَ أَنَّ لَفْظَ الْيَمِينِ فِي اللُّغَةِ هُوَ الْقَسَمُ فَقَطْ ثُمَّ إنَّ أَهْلَ الْعُرْفِ يَسْتَعْمِلُونَهُ فِي النَّذْرِ أَيْضًا وَهُوَ لَيْسَ قَسَمًا بَلْ إطْلَاقُ الْيَمِينِ عَلَيْهِ إمَّا مَجَازٌ لُغَوِيٌّ أَوْ بِطَرِيقِ</blockquote>
+      <p class="ar-translation">“และบนหลักการนี้เอง คำสาบานที่เกี่ยวกับการหย่าร้าง, การปล่อยทาสและถ้อยคำที่ชัดเจนกับถ้อยคำที่เป็นนัย จะถูกพิจารณาตัดสิน เพราะบางครั้ง ถ้อยคำที่ชัดเจนอาจกลายเป็นนัย ซึ่งจำเป็นต้องอาศัยเจตนามาประกอบ และบางครั้ง ถ้อยคำที่เป็นนัยก็อาจกลายเป็นชัดเจน โดยไม่ต้องอาศัยเจตนาอีกต่อไป</p>
+
+      <p>และพึงทราบเถิดว่า ในประเด็นปัญหานี้ยังมีความลึกซึ้งอีกประการหนึ่ง นั่นคือ คำว่า ‘ยะมีน’ (<span class="ar-inline" lang="ar" dir="rtl">الْيَمِينِ</span> - คำสาบาน) ในทางภาษานั้นหมายถึง ‘การกล่าวสาบาน’ (<span class="ar-inline" lang="ar" dir="rtl">الْقَسَمُ</span> - เกาะสัม) เท่านั้น แต่ทว่า ผู้คนตามธรรมเนียมปฏิบัติกลับนำคำนี้มาใช้ในความหมายของ ‘การบนบาน’ (<span class="ar-inline" lang="ar" dir="rtl">النَّذْرِ</span> - นะสัร) ด้วย ทั้งๆที่การบนบานไม่ใช่การกล่าวสาบาน แต่การใช้คำว่า ‘ยะมีน’ เรียกการบนบานนั้น อาจเป็นไปในลักษณะของอุปลักษณ์ทางภาษา หรือด้วยแนวทางอื่น…(คือธรรมเนียมปฏิบัติสามารถเปลี่ยนความหมายของคำศัพท์ทางศาสนาได้)”</p>
+
+      <p>ตัวอย่างของกรณีนี้คือ ถ้อยคำที่ใช้ในการหย่าร้างซึ่งเป็นที่รู้กันในหมู่ผู้คน ท่านชัยค์ อะลัยช์ ได้ถูกถามว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">(ما قولكم) في ألفاظ جرى بها عرف بعض البلدان كيمين سفه، ولا عيش لك عندي، وروحي يا فردة الوطا من بيتي، أو ‌زولي ‌من وجهي فما الحكم؟” فأجاب: “إن جرى عرفهم بالتطليق بصيغة من هذه الصيغ لزم الطلاق بمجرد النطق بها؛ لأنها صارت من الكناية الظاهرة، وتلزم بها واحدة رجعية في المدخول بها، وبائنة في غيرها إن نوى الواحدة أو لم ينو شيئا فإن نوى أكثر لزمه ما نواه، وكذا إن جرى به العرف كما تقدم، قال في المجموع: ومهما جرى عرف عمل به قاعدة كلية كالقرائن حسب أعرافهم</blockquote>
+      <p class="ar-translation">“(ท่านมีความเห็นอย่างไร) เกี่ยวกับถ้อยคำที่กลายเป็นธรรมเนียมปฏิบัติในบางเมือง เช่น คำสาบานของคนโง่เขลา, (หรือคำกล่าวที่ว่า:) เจ้านะ ตายไปแล้วสำหรับฉัน, (หรือคำกล่าว:) จงออกไปจากบ้านของฉันเสียหรือจงไปให้พ้นหน้าฉัน บทบัญญัติในเรื่องนี้คืออะไร?”</p>
+
+      <p>ท่านได้ตอบว่า: “หากธรรมเนียมปฏิบัติของพวกเขากำหนดให้การหย่าร้างเกิดขึ้นด้วยถ้อยคำใดถ้อยคำหนึ่งเหล่านี้ การหย่าร้างย่อมเกิดขึ้นทันทีที่กล่าวถ้อยคำนั้นออกมา; เพราะมันได้กลายเป็น ‘ถ้อยคำที่เป็นนัยแต่ชัดเจน’ ไปแล้ว (คือแม้รูปคำจะเป็นนัย แต่ความหมายเป็นที่เข้าใจกันโดยทั่วไปว่าคือการหย่า) และด้วยถ้อยคำเหล่านั้น การหย่าร้างแบบคืนดีได้หนึ่งครั้ง จะเกิดขึ้นสำหรับภรรยาที่ได้ร่วมหลับนอนแล้ว และการหย่าร้างแบบสิ้นสุด จะเกิดขึ้นสำหรับภรรยาที่ยังไม่ได้ร่วมหลับนอน หากเขามีเจตนาหย่าหนึ่งครั้งหรือไม่ได้มีเจตนาใดๆเลย แต่หากเขามีเจตนาหย่ามากกว่านั้น ก็ให้เป็นไปตามที่เขาเจตนา และเช่นเดียวกัน หากธรรมเนียมปฏิบัติกำหนดไว้เช่นนั้นดังที่ได้กล่าวไปแล้ว…”</p>
+
+      <p>การย้อนกลับไปพิจารณาธรรมเนียมปฏิบัติ ถือเป็นองค์ประกอบที่ชี้ขาดในการสร้างมโนภาพถึงข้อเท็จจริงของเหตุการณ์ และจากนั้นจึงกำหนดบทบัญญัติที่เหมาะสมกับมัน</p>
+
+      <h2 class="article-h2">หนทางทางการพิจารณาในธรรมชาติของสรรพสิ่ง</h2>
+
+      <p>คือการพิจารณาในธรรมชาติของสรรพสิ่งในแง่ของต้นกำเนิดของมัน ตัวอย่างเช่น ความเห็นต่างของนักนิติศาสตร์ในประเด็นเรื่องดิน ว่ามันมีคุณสมบัติในการ “ขจัด” กลิ่น หรือเป็นเพียงสิ่งที่ “ปกปิด” กลิ่นเท่านั้น? ท่านอัลฆอซาลีย์ได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فإن الماء الكثير إذا تغير بالنجاسة، ثم زال تغيره بهبوب الريح وطول الزمان عاد طاهرا، ولو زال بإلقاء المسك والزعفران لم يعد طاهرا؛ لأنهما ساتران للرائحة لا مزيلان لها…فطريق معرفة ذلك البحث عن طبيعة التراب ومناسبته للماء</blockquote>
+      <p class="ar-translation">“เพราะแท้จริงแล้ว น้ำจำนวนมากหากมันเปลี่ยนแปลงไปด้วยสิ่งสกปรก จากนั้นการเปลี่ยนแปลงนั้นได้หมดสิ้นไปด้วยการพัดของลมหรือกาลเวลาที่ผ่านไป มันก็จะกลับมาสะอาดได้ดังเดิม แต่หากการเปลี่ยนแปลงนั้นหมดสิ้นไปด้วยการใส่ชะมดเชียง หรือหญ้าฝรั่นลงไป มันก็จะไม่กลับมาสะอาด เพราะทั้งสองสิ่งนั้นเป็นเพียงสิ่งที่ “ปกปิด” กลิ่น หาใช่สิ่งที่ “ขจัด” กลิ่นไม่…ดังนั้น หนทางในการรู้แจ้งในเรื่องนี้คือ การค้นคว้าถึงธรรมชาติของดินและความสัมพันธ์ที่เหมาะสมของมันกับน้ำ (คือต้องเข้าใจธรรมชาติของดินว่ามันทำปฏิกิริยากับสิ่งสกปรกอย่างไร)”</p>
+
+      <p>และหนทางนี้ยังรวมถึงการค้นพบทางธรรมชาติ, วิทยาศาสตร์การแพทย์, และการนำศาสตร์แห่งลายพิมพ์ดีเอ็นเอมาปรับใช้...(คือการนำความรู้ทางวิทยาศาสตร์สมัยใหม่มาช่วยในการทำความเข้าใจความเป็นจริง)</p>
+
+      <h2 class="article-h2">หนทางทางสติปัญญา</h2>
+
+      <p>ท่านอัลฆอซาลีย์ได้อธิบายถึงหนทางนี้โดยกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقد يعرف بطلب الحد وتصور حقيقة الشيء في نفسه</blockquote>
+      <p class="ar-translation">“และบางครั้งอาจรู้ได้ด้วยการแสวงหา ‘คำจำกัดความ’ และการสร้างมโนภาพถึง ‘สัจภาวะ’ ของสิ่งนั้นในตัวของมันเอง”</p>
+
+      <p>ซึ่งกระทำได้ด้วย “คำจำกัดความที่ครอบคลุมและจำแนกได้อย่างชัดเจน” (คือคำนิยามที่รวบรวมคุณสมบัติสำคัญทั้งหมด และกันสิ่งที่ไม่ใช่ออกไป)</p>
+
+      <p>และประเด็นปัญหาที่เป็นข้อขัดแย้งจำนวนมากนั้น มีสาเหตุมาจากการไม่กำหนด “มโนทัศน์” ให้ชัดเจน เพราะความคลุมเครือของมโนทัศน์ ย่อมนำไปสู่ความสับสนในการกำหนดบทบัญญัติ ด้วยเหตุนี้ ท่านอัลฆอซาลีย์จึงได้เน้นย้ำถึงหนทางนี้โดยกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وذلك من أدق مدارك العقليات</blockquote>
+      <p class="ar-translation">“และนั่นคือหนึ่งในหนทางที่ลึกซึ้งที่สุดของการเข้าถึงด้วยสติปัญญา”</p>
+
+      <p>ตัวอย่างของกรณีนี้ในชุดความคิดหนึ่งคือ เงินฝากธนาคารในยุคปัจจุบัน ซึ่งมันขัดแย้งกับคำจำกัดความของ “การฝาก” ตามทัศนะของนักนิติศาสตร์ในอดีต ดังเช่นคำจำกัดความของท่านอิบนุ อะเราะฟะฮ์ที่ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">نقل مجرد حفظ ملك ينقل</blockquote>
+      <p class="ar-translation">“(การฝากคือ) การส่งมอบ (ทรัพย์สิน) เพียงเพื่อการดูแลรักษา โดยกรรมสิทธิ์ยังคงอยู่ (กับผู้ฝาก)”</p>
+
+      <p>และเป็นที่น่าสังเกตว่า “การดูแลรักษา” นั้น ขัดแย้งกับ “การนำไปใช้ประโยชน์” และด้วยการที่ธนาคารได้นำทรัพย์สินที่รับฝากไปใช้ประโยชน์ (เช่น ปล่อยกู้) มันจึงทำให้ทรัพย์สินนั้นหลุดออกจากการเป็นสิ่งที่ถูกฝากตามความหมายเดิม และด้วยเหตุนี้ บทบัญญัติที่เกี่ยวกับสัญญาการฝากในเรื่องที่เกี่ยวกับการค้ำประกันและการจำเป็นต้องจ่ายซะกาตเมื่อครบเงื่อนไข จึงไม่สามารถนำมาปรับใช้ได้ (กับเงินฝากธนาคาร); ดังกล่าวนี้คือสิ่งที่มุหัมหมัด อัตตาวีลได้ยืนยันไว้โดยกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لكن التكييف الفقهي الصحيح للودائع البنكية ومثيلاتها أنها ديون على الجهات التي تلقتها وليست ودائع بالمفهوم الفقهي</blockquote>
+      <p class="ar-translation">“แต่ การจำแนกประเภททางฟิกฮ์ที่ถูกต้องสำหรับเงินฝากธนาคารและสิ่งที่คล้ายกันนั้น คือการถือว่ามันเป็น ‘หนี้สิน’ ที่อยู่กับหน่วยงานที่รับฝาก หาใช่ ‘เงินฝาก’ ตามมโนทัศน์ทางฟิกฮ์ไม่”</p>
+
+      <p>และหนทางนี้ยังรวมถึงการตรวจสอบอย่างละเอียดในธรรมชาติของสัญญาต่างๆ, และกฎหมายที่ควบคุม และยังครอบคลุมถึงการกำหนดระดับขั้นของผลประโยชน์และความเสียหาย, การชั่งน้ำหนักระหว่างกัน และการประเมินผลที่จะตามมา...(คือการใช้หลักการทางนิติศาสตร์ขั้นสูงในการวิเคราะห์)</p>
+
+      <p>และเครื่องมือชี้วัดฟิกฮ์ วากิอ์เหล่านี้ ไม่ได้อยู่ในระดับเดียวกันในแง่ของความเป็นไปได้ในการนำมาปรับใช้ บางหนทางก็ง่ายต่อการเข้าถึงโดยไม่ต้องลำบาก แต่บางหนทางก็ยาก ซึ่งจำเป็นต้องอาศัยการสืบค้นอย่างละเอียด, การฝึกฝนและประสบการณ์</p>
+
+      <h2 class="article-h2">หลักเกณฑ์ของฟิกฮ์ วากิอ์</h2>
+
+      <p>ผู้พิจารณาในฟิกฮุลวากิอ์เพื่อที่จะนำบทบัญญัติมาปรับใช้กับบริบทที่เป็นจริงได้อย่างถูกต้องนั้น จำเป็นต้องยึดมั่นในหลักเกณฑ์ดังต่อไปนี้ เพื่อให้การดำเนินการของเขานั้น ถูกต้องและได้รับการชี้นำ ซึ่งได้แก่</p>
+
+      <h2 class="article-h2">1. การสร้างมโนภาพที่แม่นยำถึงสัจภาวะของประเด็นปัญหา</h2>
+
+      <p>หลักเกณฑ์ข้อนี้มีความสำคัญอย่างยิ่งยวด เพราะความผิดพลาดในขั้นตอนนี้จะส่งผลกระทบในทางลบต่อทุกสิ่งที่ถูกสร้างขึ้นบนพื้นฐานของมัน มันคือ รากฐานของการวินิจฉัย ซึ่งความหมายของมันคือ</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اسْتِفْرَاغِ الْوُسْعِ فِي طَلَبِ الظَّنِّ بِشَيْءٍ مِنَ الْأَحْكَامِ الشَّرْعِيَّةِ عَلَى وَجْهٍ يُحَسُّ مِنَ النَّفْسِ الْعَجْزُ عَنِ الْمَزِيدِ فِيهِ</blockquote>
+      <p class="ar-translation">“การทุ่มเทความพยายามอย่างสุดความสามารถ ในการแสวงหาความรู้ที่น่าจะเป็นไปได้เกี่ยวกับบทบัญญัติทางศาสนาประการใดประการหนึ่ง ในลักษณะที่ทำให้ตนเองรู้สึกถึงความไร้ความสามารถที่จะกระทำได้มากกว่านี้อีกแล้ว”</p>
+
+      <p>และสิ่งที่บ่งชี้ถึงความสำคัญของหลักเกณฑ์ข้อนี้คือ การที่ท่านอุมัร เราะฎิยัลลอฮุอันฮุ ได้เน้นย้ำถึงมันในสาส์นที่ท่านส่งถึงอบู มูซา อัลอัชอะรีย์ เราะฎิยัลลอฮุอันฮุ โดยท่านระบุกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الْفَهْمَ ‌الْفَهْمَ فِيمَا يَخْتَلِجُ فِي صَدْرِكَ مِمَّا لَمْ يَبْلُغْكَ فِي الْقُرْآنِ وَالسُّنَّةِ، فَتَعَرَّفِ الْأَمْثَالَ وَالْأَشْبَاهَ، ثُمَّ قِسِ الْأُمُورَ عِنْدَ ذَلِكَ، وَاعْمِدْ إِلَى أَحَبِّهَا إِلَى اللهِ، وَأَشْبَهِهَا فِيمَا تَرَى</blockquote>
+      <p class="ar-translation">“จงทำความเข้าใจ! จงทำความเข้าใจ! ในสิ่งที่วนเวียนอยู่ในใจของท่าน ซึ่งท่าน (อาจจะ) ไม่พบ (คำตอบที่ชัดเจน) ในอัลกุรอานและซุนนะฮ์ ดังนั้น จงทำความรู้จักตัวอย่าง และสิ่งที่คล้ายคลึงกัน (คือให้ศึกษาจากกรณีเทียบเคียง) จากนั้น จงเปรียบเทียบเรื่องราวต่างๆ ณ เวลานั้น (คือให้ใช้วิธีการกิยาส หรือการเทียบเคียง) และจงมุ่งไปยังสิ่งที่ท่านเห็นว่าเป็นที่รักยิ่งที่สุด ณ อัลลอฮ์ และใกล้เคียงกับสัจธรรมมากที่สุด”</p>
+
+      <p>อิบนุลก็อยยิมได้อธิบายสาส์นฉบับนี้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَلَا ‌يَتَمَكَّنُ الْمُفْتِي وَلَا الْحَاكِمُ مِنْ الْفَتْوَى وَالْحُكْمِ بِالْحَقِّ إلَّا بِنَوْعَيْنِ مِنْ الْفَهْمِ: أَحَدُهُمَا: فَهْمُ الْوَاقِعِ وَالْفِقْهِ فِيهِ وَاسْتِنْبَاطُ عِلْمِ حَقِيقَةِ مَا وَقَعَ بِالْقَرَائِنِ وَالْأَمَارَاتِ وَالْعَلَامَاتِ حَتَّى يُحِيطَ بِهِ عِلْمًا</blockquote>
+      <p class="ar-translation">“และผู้ให้คำชี้ขาด (อัลมุฟตี) และผู้พิพากษา (หากิม) จะไม่สามารถให้คำชี้ขาดและตัดสินได้อย่างถูกต้องเลย เว้นแต่ด้วยความเข้าใจสองประเภท</p>
+
+      <p>ประเภทแรก: การทำความเข้าใจในสภาพ ‘ความเป็นจริง’ และการหยั่งรู้ในประเด็นนั้นอย่างถ่องแท้ และการสืบค้นความรู้ถึงข้อเท็จจริงของสิ่งที่เกิดขึ้น ผ่านแวดล้อมต่างๆ, สิ่งบ่งชี้ต่างๆ และสัญญาณต่างๆ จนกระทั่งมีความเข้าใจอย่างรอบด้าน”</p>
+
+      <p>ดังนั้น “ความเป็นจริง” ตามสำนวนของอิบนุลก็อยยิมก็คือ การมีความเข้าใจอย่างครอบคลุมรอบด้านถึงสัจภาวะของสิ่งที่กำลังจะถูกตัดสิน ไม่ว่าจะเป็นพฤติกรรม, ตัวตน หรือความสัมพันธ์ เพื่อให้บทบัญญัติที่ถูกนำมาปรับใช้ ซึ่งท่านอิบนุลก็อยยิม เรียกว่า “ข้อบังคับในความเป็นจริง” (<span class="ar-inline" lang="ar" dir="rtl">الواجب في الواقع</span>) นั้น สอดคล้องและตรงกับความเป็นจริงนั้นๆ เพราะย่อมเป็นไปไม่ได้ที่จะตัดสินในเรื่องใดเรื่องหนึ่งโดยที่ภาพที่ถูกต้องของเรื่องนั้นยังไม่เกิดขึ้นในมโนสำนึกของผู้พิพากษา เนื่องจาก “การตัดสินสิ่งใดสิ่งหนึ่งนั้นเป็นผลมาจากการสร้างมโนภาพถึงสิ่งนั้น (<span class="ar-inline" lang="ar" dir="rtl">الْحُكْمُ عَلَى الشَّيْءِ فَرْعٌ عَنْ تَصَوُّرِهِ</span> - คือต้องเข้าใจเรื่องให้ถูกต้องก่อนจึงจะตัดสินได้)”</p>
+
+      <p>ในความเป็นจริง ผู้ให้ที่คำชี้ขาด (มุฟตี) ที่ไม่ทำความเข้าใจประเด็นปัญหาอย่างรอบด้านและรอบรู้ในรายละเอียดปลีกย่อย ย่อมเป็นที่น่าหวั่นเกรงว่า คำกล่าวของท่านนบี ﷺ ที่ว่า:</p>
+
+      <div class="hadith-block"><p class="block-ar" lang="ar" dir="rtl">مَنْ ‌أَفْتَى النَّاسَ بِغَيْرِ عِلْمٍ كَانَ إِثْمُهُ عَلَى مَنْ أَفْتَاهُ</p></div>
+      <p>“‌ผู้ใดให้คำชี้ขาดแก่ผู้คนโดยปราศจากความรู้ บาปของเขาย่อมตกอยู่กับผู้ที่ให้คำชี้ขาดนั้น จะประสบแก่เขา”</p>
+
+      <p>ด้วยเหตุนี้ จึงเป็นปกติวิสัยของบรรพชนผู้ทรงคุณธรรม (สลัฟ) ที่จะ “พิจารณาไตร่ตรองในเหตุการณ์นั้นซ้ำแล้วซ้ำเล่า” และให้ความสำคัญกับการทำความเข้าใจและการมีความรู้รอบด้านอย่างเต็มที่ นี่คืออิหม่ามแห่งนครมะดีนะฮ์ (อิหม่ามมาลิก) ที่กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">رُبَّمَا وَرَدَتْ عَلَيَّ الْمَسْأَلَةُ ‌تَمْنَعُنِي ‌مِنَ ‌الطَّعَامِ وَالشَّرَابِ وَالنَّوْمِ…</blockquote>
+      <p class="ar-translation">“บางครั้งประเด็นปัญหาหนึ่งๆได้มาถึงข้าพเจ้า จนกระทั่งมันทำให้ข้าพเจ้ากินไม่ได้ นอนไม่หลับ...”;</p>
+
+      <p>และท่านยังกล่าวอีกว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إِنِّي لَأُفَكِّرُ فِي مَسْأَلَةٍ مُنْذُ بِضْعَ عَشْرَةَ سَنَةً، فَمَا اتَّفَقَ لِي فِيهَا رَأْيٌ إِلَى الْآنِ</blockquote>
+      <p class="ar-translation">“ข้าพเจ้าได้ครุ่นคิดถึงประเด็นปัญหาหนึ่งมาเป็นเวลาสิบกว่าปีแล้ว แต่จนถึงบัดนี้ข้าพเจ้าก็ยังไม่สามารถตกลงใจในทัศนะใดทัศนะหนึ่งได้เลย”</p>
+
+      <p>และท่านกล่าวอีกว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">رُبَّمَا وَرَدَتْ عَلَيَّ الْمَسْأَلَةُ فَأُفَكِّرُ فِيهَا لَيَالِيَ</blockquote>
+      <p class="ar-translation">“บางครั้งประเด็นปัญหาหนึ่งๆได้มาถึงข้าพเจ้า และข้าพเจ้าก็ได้ครุ่นคิดถึงมันนานหลายคืน”</p>
+
+      <p>และหนึ่งในหนทางสู่การมีความรู้รอบด้านในประเด็นปัญหาที่เกิดขึ้นใหม่ก็คือ การปรึกษาหารือผู้ที่มีความเชี่ยวชาญและชำนาญการเฉพาะด้าน ท่านเคาะฏีบ อัลบัฆดาดีย์ ได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ثُمَّ يَذْكُرُ الْمَسْأَلَةَ ‌لِمَنْ ‌بِحَضْرَتِهِ مِمَّنْ يَصْلُحُ لِذَلِكَ مِنْ أَهْلِ الْعِلْمِ وَيُشَاوِرُهُمْ فِي الْجَوَابِ، وَيَسْأَلُ كُلَ وَاحِدٍ مِنْهُمْ عَمَّا عِنْدَهُ، فَإِنَّ فِي ذَلِكَ بَرَكَةً، وَاقْتِدَاءً بِالسَّلَفِ الصَّالِحِ</blockquote>
+      <p class="ar-translation">“จากนั้น (มุฟตี) ควรจะกล่าวถึงประเด็นปัญหานั้นให้แก่ผู้ที่อยู่ ณ ที่นั้น ซึ่งเหมาะสมกับเรื่องนั้นๆจากบรรดาผู้รู้ และปรึกษาหารือกับพวกเขาเกี่ยวกับคำตอบ และสอบถามแต่ละคนถึงสิ่งที่พวกเขามี (คือความเห็นหรือข้อมูล) เพราะแท้จริงแล้ว ในการกระทำเช่นนั้นมีความจำเริญอยู่ และเป็นการเจริญรอยตามบรรพชนผู้ทรงธรรม”</p>
+
+      <p>ท่านชาฏิบีย์ได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إِذَا ‌عَنَّتْ ‌لَهُ مَسْأَلَةٌ يَنْظُرُ فِيهَا زَاوَلَ أَهْلَ الْمَعْرِفَةِ بِتِلْكَ الْمَعَارِفِ الْمُتَعَلِّقَةِ بِمَسْأَلَتِهِ؛ فَلَا يَقْضِي فِيهَا إِلَّا بِمَشُورَتِهِمْ</blockquote>
+      <p class="ar-translation">“เมื่อประเด็นปัญหาหนึ่งๆได้ปรากฏแก่เขา (มุฟตี) และเขาได้พิจารณามันแล้ว เขาควรจะปรึกษาหารือ ผู้ที่มีความรู้ในศาสตร์ต่างๆ ที่เกี่ยวข้องกับประเด็นปัญหานั้นๆ; และเขาไม่ควรจะตัดสินในเรื่องนั้นเว้นแต่จะผ่านการปรึกษาหารือกับพวกเขาแล้ว”</p>
+
+      <p>และเช่นเดียวกัน ควรที่จะอาศัยข้อมูลสถิติ, รายงาน และการศึกษาต่างๆ (หากมี) ที่ให้ภาพที่แม่นยำเกี่ยวกับข้อเท็จจริงของประเด็นปัญหานั้นทั้งในอดีต, ปัจจุบัน และอนาคต</p>
+
+      <h2 class="article-h2">2. การทำความเข้าใจบทบัญญัติปลีกย่อย ภายใต้ร่มเงาของหลักการทั่วไปทางศาสนา</h2>
+
+      <p>การพิจารณาส่วนปลีกย่อย (คือบทบัญญัติเฉพาะกรณี) ผ่านมุมมองของ หลักการทั่วไป (คือเจตนารมณ์และเป้าหมายสูงสุดของศาสนา) จะช่วยปกป้องส่วนปลีกย่อยนั้นจากการถูกฉีกออกจากบริบทของมัน และจะช่วยวางมันไว้ในตำแหน่งที่ควรจะเป็น</p>
+
+      <p>และหนึ่งในหลักฐานสำหรับหลักเกณฑ์ข้อนี้ ซึ่งเป็นรากฐานของระเบียบวิธีที่ถูกต้องในการวินิจฉัยคือ สิ่งที่รายงานมาจากท่านอะลี บิน อบี ฏอลิบ เราะฎิยัลลอฮุอันฮุ ท่านกล่าวว่า:</p>
+
+      <div class="hadith-block"><p class="block-ar" lang="ar" dir="rtl">بَعَثَ النَّبيُّ ﷺ سَرِيَّةً، فَاسْتَعْمَلَ رَجُلًا مِنَ الأنْصَارِ وأَمَرَهُمْ أنْ يُطِيعُوهُ، فَغَضِبَ، فَقالَ: أليسَ أمَرَكُمُ النَّبيُّ ﷺ أنْ تُطِيعُونِي؟ قالوا: بَلَى، قالَ: فَاجْمَعُوا لي حَطَبًا، فَجَمَعُوا، فَقالَ: أوْقِدُوا نَارًا، فأوْقَدُوهَا، فَقالَ: ادْخُلُوهَا، فَهَمُّوا وجَعَلَ بَعْضُهُمْ يُمْسِكُ بَعْضًا، ويَقولونَ: فَرَرْنَا إلى النَّبيِّ ﷺ مِنَ النَّارِ، فَما زَالُوا حتَّى خَمَدَتِ النَّارُ، فَسَكَنَ غَضَبُهُ، فَبَلَغَ النَّبيَّ ﷺ، فَقالَ: لو دَخَلُوهَا ما خَرَجُوا منها إلى يَومِ القِيَامَةِ؛ الطَّاعَةُ في المَعروفِ</p></div>
+      <p>“ท่านนบี ﷺ ได้ส่งกองทหารกองหนึ่งออกไป และได้แต่งตั้งชายผู้หนึ่งจากชาวอันศอรเป็นผู้บัญชาการ และได้สั่งให้พวกเขา (ทหาร) เชื่อฟังเขา (ต่อมา) เขา (ผู้บัญชาการ) ได้โกรธขึ้นมา และกล่าวว่า: ‘ท่านนบี ﷺ ไม่ได้สั่งให้พวกท่านเชื่อฟังข้าดอกหรือ?’ พวกเขากล่าวว่า: ‘ใช่แล้ว’ เขาจึงกล่าวว่า: ‘เช่นนั้น จงรวบรวมฟืนมาให้ข้า’ พวกเขาจึงรวบรวมมา เขาจึงกล่าวว่า: ‘จงจุดไฟขึ้น’ พวกเขาจึงจุดไฟขึ้น เขาจึงกล่าวว่า: ‘จงเข้าไปในกองไฟนั้นเสีย!’ พวกเขาจึงลังเล และบางคนก็พยายามรั้งคนอื่นไว้ พลางกล่าวว่า: ‘พวกเราได้หนีมาหาท่านนบี ﷺ ก็เพื่อหนีจากไฟ (นรก) มิใช่หรือ?’ พวกเขายังคงเป็นเช่นนั้นจนกระทั่งไฟมอดลง และความโกรธของเขาก็สงบลง เมื่อเรื่องนี้ได้ทราบถึงท่านนบี ﷺ ท่านจึงกล่าวว่า: ‘หากพวกเขาได้เข้าไปในนั้น พวกเขาก็จะไม่ได้ออกมาจากมันจนกระทั่งวันกิยามะฮ์; แท้จริงแล้ว การเชื่อฟังนั้นอยู่ในเรื่องที่ดีงาม เท่านั้น’ (คือการเชื่อฟังผู้นำมีขอบเขต ไม่ใช่เชื่อฟังในเรื่องที่ผิดหลักการ)”</p>
+
+      <p>จากหะดีษบทนี้ เป็นที่ประจักษ์ชัดว่า บรรดาเศาะหาบะฮ์มิได้จำกัดการพิจารณาของพวกเขาอยู่เพียงแค่คำสั่งเฉพาะกรณีที่บ่งชี้ถึงการจำเป็นต้องเชื่อฟังผู้นำเท่านั้น แต่ทว่า พวกเขาได้นำคำสั่งนั้นไปวางไว้ในกรอบของ “เจตนารมณ์ของบทบัญญัติ” มะกอศิด ชารีอะฮ์) และ “หลักการทั่วไป” ซึ่งกำหนดให้ต้องรักษาชีวิต; ดังนั้น พวกเขาจึงให้น้ำหนักแก่การยกเลิกคำสั่งเฉพาะกรณีนี้ เนื่องจากมันขัดแย้งกับเจตนารมณ์ของบทบัญญัติ และได้นำ “หลักการทั่วไป” ที่กำหนดให้ต้องรักษาชีวิตมาปฏิบัติแทน; ด้วยเหตุนี้ “เจตนารมณ์ของชะรีอะฮ์” จึงเปรียบเสมือน “กิบลัต” (ทิศทาง) ของผู้วินิจฉัย (มุจตะฮิด) และบรรพชนสลัฟก็ได้นำตัวบทต่างๆมาปรับใช้ภายใต้ร่มเงาของเจตนารมณ์แห่งชะรีอะฮ์เสมอมา และท่านชาฏิบีย์ได้ชี้ว่า ความผิดพลาดและการหลงทางจำนวนมากนั้น เกิดขึ้นเนื่องจากความไม่รู้ในเจตนารมณ์ของบทบัญญัติ โดยท่านกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَمَدَارُ ‌الْغَلَطِ فِي هَذَا الْفَصْلِ إِنَّمَا هُوَ عَلَى حَرْفٍ وَاحِدٍ، وَهُوَ الْجَهْلُ بِمَقَاصِدِ الشَّرْعِ، وَعَدَمِ ضَمِّ أَطْرَافِهِ بَعْضِهَا بِبَعْضٍ</blockquote>
+      <p class="ar-translation">“และแกนกลางของความผิดพลาดในบทนี้ ความจริงแล้วมันอยู่ที่ประเด็นเดียว นั่นคือ ความไม่รู้ในเจตนารมณ์ของบทบัญญัติ และการไม่นำส่วนต่างๆ ของมันมาพิจารณาร่วมกัน”</p>
+
+      <h2 class="article-h2">3. การพิจารณาถึงผลที่จะตามมาและผลลัพธ์</h2>
+
+      <p>“การพิจารณาถึงผลที่จะตามมา” คือการตรวจสอบอย่างละเอียดถึงความผันผวนของความเป็นจริง และการคาดการณ์ถึงผลกระทบที่เป็นไปได้ของบทบัญญัติ ทั้งในแง่ของความดีงามและความเสียหาย และการให้น้ำหนักแก่ผลลัพธ์ที่น่าชื่นชม และการบรรลุเป้าหมายของบทบัญญัติที่ต้องการจะนำไปปรับใช้</p>
+
+      <p>ท่านชาฏิบีย์ได้อธิบายว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">النَّظَرُ فِي مَآلَاتِ الْأَفْعَالِ مُعْتَبَرٌ مَقْصُودٌ شَرْعًا كَانَتِ الْأَفْعَالُ مُوَافِقَةً أَوْ مُخَالِفَةً، وَذَلِكَ أَنَّ الْمُجْتَهِدَ لَا يَحْكُمُ عَلَى فِعْلٍ مِنَ الْأَفْعَالِ الصَّادِرَةِ عَنِ الْمُكَلَّفِينَ بِالْإِقْدَامِ أَوْ بِالْإِحْجَامِ إِلَّا بَعْدَ نَظَرِهِ إِلَى مَا يَؤُولُ إِلَيْهِ ذَلِكَ الْفِعْلُ، ‌مَشْرُوعًا ‌لِمَصْلَحَةٍ فِيهِ تُسْتَجْلَبُ، أَوْ لِمَفْسَدَةٍ تُدْرَأُ</blockquote>
+      <p class="ar-translation">“การพิจารณาถึงผลที่จะตามมาของการกระทำนั้น เป็นสิ่งที่ได้รับการพิจารณาและเป็นเป้าหมายในทางบทบัญญัติ ไม่ว่าการกระทำนั้นจะเป็นสิ่งที่สอดคล้อง (กับบทบัญญัติ) หรือขัดแย้งก็ตาม ทั้งนี้เพราะผู้วินิจฉัย (มุจตะฮิด) จะไม่ตัดสินการกระทำใดๆที่ออกมาจากมุกัลลัฟ ว่าควรจะกระทำ หรือละเว้น เว้นแต่หลังจากที่เขาได้พิจารณาถึงสิ่งที่การกระทำนั้นจะนำไป ไม่ว่าจะเป็นผลประโยชน์ที่จะได้รับ หรือความเสียหายที่จะถูกปัดเป่า”</p>
+
+      <p>และรากฐานของหลักการนี้คือ ประเด็นปัญหาเรื่อง การบังคับใช้บทลงโทษในระหว่างการทำสงคราม; ดังรายงานจากบุสร บิน อัรฏอฮฺ ท่านกล่าวว่า: ข้าพเจ้าได้ยินท่านนบี ﷺ กล่าวว่า:</p>
+
+      <div class="hadith-block"><p class="block-ar" lang="ar" dir="rtl">لَا ‌تُقْطَعُ ‌الأَيْدِي ‌فِي الغَزْوِ</p></div>
+      <p>“มือ (ของผู้ขโมย) จะไม่ถูกตัดในระหว่างการทำสงคราม”; และสาเหตุของเรื่องนี้ก็คือ “ความหวั่นเกรงว่ามัน (การลงโทษ) จะนำไปสู่สิ่งที่อัลลอฮ์ทรงกริ้วยิ่งกว่าการระงับหรือชะลอการลงโทษนั้นเสียอีก นั่นคือการที่ผู้ถูกลงโทษจะไปเข้าร่วมกับพวกตั้งภาคี ด้วยความโกรธแค้นและเคืองใจ (คือพิจารณาแล้วว่าผลเสียของการลงโทษในสถานการณ์นั้นอาจร้ายแรงกว่าการชะลอไปก่อน)</p>
+
+      <h2 class="article-h2">4. การแยกแยะระหว่าง “วิธีการ” และ “เป้าหมาย”</h2>
+
+      <p>ท่านเกาะรอฟีย์ได้แบ่งบทบัญญัติของชะรีอะฮ์ออกเป็น “วิธีการ” (วะสาอิล) และ “เป้าหมาย” (มะกอศิด) โดยท่านกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الْوَاجِبَاتِ ‌وَالْمَنْدُوبَاتِ ‌ضَرْبَانِ: أَحَدُهُمَا مَقَاصِدُ، وَالثَّانِي وَسَائِلُ، وَكَذَلِكَ الْمَكْرُوهَاتُ وَالْمُحَرَّمَاتُ ضَرْبَانِ: أَحَدُهُمَا مَقَاصِدُ وَالثَّانِي: وَسَائِلُ، وَلِلْوَسَائِلِ أَحْكَامُ الْمَقَاصِدِ</blockquote>
+      <p class="ar-translation">“บรรดาสิ่งที่เป็นวาญิบและสิ่งที่ส่งเสริมให้กระทำนั้น มีสองประเภท ประเภทหนึ่งคือเป้าหมาย (มะกอศิด) และประเภทที่สองคือวิธีการ (วะสาอิล) และเช่นเดียวกัน บรรดาสิ่งที่น่ารังเกียจและสิ่งที่ต้องห้าม ก็มีสองประเภท: ประเภทหนึ่งคือเป้าหมาย และ ประเภทที่สองคือวิธีการ และสำหรับวิธีการนั้น มีบทบัญญัติเช่นเดียวกับเป้าหมายที่มันนำไปสู่ (คือหากเป้าหมายเป็นวาญิบ วิธีการที่จำเป็นก็เป็นวาญิบด้วย)”</p>
+
+      <p>และท่านอิบนุ อาชูร ได้อธิบายความแตกต่างนี้ในระหว่างการกล่าวถึงวิธีการว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فهي الأحكام المشروعة من أجل أن يتم بها تحصيل أحكام أخرى. وهي غير ‌مقصودة ‌لذاتها بل لتحصيل غيرها على الوجه المطلوب، إذ بدونها قد لا يحصل المقصد، أو يحصل معرضاً للاختلال والانحلال. وتعد من الوسائل الأسبابُ المعرفات للأحكام، والشروط، وانتفاء الموانع وصيغ العقود ونحوُ ذلك</blockquote>
+      <p class="ar-translation">“มันคือบรรดาบทบัญญัติที่ถูกกำหนดขึ้นเพื่อที่จะทำให้การบรรลุบทบัญญัติอื่นๆ (คือเป้าหมาย) นั้นสมบูรณ์ และมันไม่ได้ถูกมุ่งหมายในตัวของมันเอง แต่เพื่อบรรลุสิ่งอื่น (คือเป้าหมาย) ในลักษณะที่ต้องการ เพราะหากปราศจากมัน (วิธีการ) เป้าหมายก็อาจจะไม่บรรลุ หรืออาจบรรลุในสภาพที่เสี่ยงต่อความบกพร่องและความเสื่อมสลาย และสิ่งที่ถูกนับว่าเป็นวิธีการนั้นรวมถึง สาเหตุที่บ่งชี้ถึงบทบัญญัติ, เงื่อนไข, การไม่มีอยู่ของอุปสรรค, สำนวนของสัญญาและสิ่งที่คล้ายกัน”</p>
+
+      <p>ดังนั้น ผู้บัญญัติทรงประสงค์ให้เราบรรลุเป้าหมาย (มะกอศิด) แม้ว่าวิธีการ (วะสาอิล) จะเปลี่ยนแปลงไปก็ตาม</p>
+
+      <p>และเป้าหมายนั้น มีคุณลักษณะคือ ความมั่นคงและยั่งยืน ส่วนวิธีการนั้น มีคุณลักษณะคือ ความเปลี่ยนแปลงและยืดหยุ่น และเพื่อบรรลุเป้าหมายใดๆ เราจำเป็นต้องวินิจฉัยในทุกยุคทุกสมัยและทุกสถานที่ ตามความสามารถ เพื่อเลือกวิธีการที่นำไปสู่เป้าหมายนั้น; เพราะวิธีการนั้นมีสถานะรองลงมาจากเป้าหมาย และ “การคำนึงถึงเป้าหมายนั้นย่อมมาก่อนการคำนึงถึงวิธีการเสมอ (<span class="ar-inline" lang="ar" dir="rtl">مراعاة المقاصد مقدمة على رعاية الوسائل أبداً</span>)”; ด้วยเหตุนี้ จึงมีการ ผ่อนปรนในบทบัญญัติที่เกี่ยวกับวิธีการ โดยไม่มีการผ่อนปรนในเป้าหมาย โดยอาศัยหลักการที่ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يُغْتَفَرُ ‌فِي الْوَسَائِلِ مَا لَا ‌يُغْتَفَرُ ‌فِي الْمَقَاصِدِ</blockquote>
+      <p class="ar-translation">“สิ่งที่ถูกอลุ่มอล่วยในวิธีการนั้น ไม่ถูกอลุ่มอล่วยในเป้าหมาย”</p>
+
+      <p>และหนึ่งในหลักเกณฑ์ทางฟิกฮ์ (<span class="ar-inline" lang="ar" dir="rtl">القواعد الفقهية</span>) ที่เป็นประโยชน์ในบริบทนี้คือ</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">حصول المقصود بإحدى الوسائل مسقط لاعتبار التعيين فيها</blockquote>
+      <p class="ar-translation">“การบรรลุเป้าหมายด้วยวิธีการใดวิธีการหนึ่ง ย่อมทำให้การพิจารณาถึงการเจาะจงวิธีการนั้นตกไป”; ความหมายของหลักเกณฑ์นี้คือ หากเป้าหมายสามารถบรรลุได้ด้วยวิธีการใดๆที่ชอบด้วยบทบัญญัติ ก็ไม่มีเหตุผลใดที่จะต้องเจาะจงวิธีการบางอย่างและจำกัดอยู่เพียงวิธีการเดียวโดยไม่ใช้วิธีการอื่น แต่ทว่า ย่อมถูกต้องที่จะใช้วิธีการใดๆก็ได้ เว้นแต่จะมีหลักฐาน (มายกเว้น); ทั้งนี้เพราะ สิ่งที่ต้องการคือการบรรลุเป้าหมายและผลประโยชน์</p>
+
+      <p>และรากฐานของหลักเกณฑ์นี้คือ การที่รอฟิอ์ บิน เคาะดีจญ์ เราะฎิยัลลอฮุอันฮุ ได้กล่าวแก่ท่านนบี ﷺ ว่า:</p>
+
+      <div class="hadith-block"><p class="block-ar" lang="ar" dir="rtl">إِنَّا لَنَرْجُو أَوْ نَخَافُ أَنْ نَلْقَى الْعَدُوَّ غَدًا، وَلَيْسَ مَعَنَا مُدًى، أَفَنَذْبَحُ بِالْقَصَبِ؟ فَقَالَ: مَا أَنْهَرَ الدَّمَ وَذُكِرَ اسْمُ اللِّه عَلَيْهِ فَكُلْ، لَيْسَ السِّنَّ وَالظُّفُر.َ وَسَأُخْبِرُكُمْ عَنْهُ أَمَّا السِّنُّ: فَعَظْم.ٌ وَأَمَّا الظُّفُرُ فَمُدَى الْحَبَشَةِ</p></div>
+      <p>“แท้จริงพวกเราหวัง (หรือเกรง) ว่าจะได้เผชิญหน้ากับศัตรูในวันพรุ่งนี้ และพวกเราไม่มีมีดอยู่เลย พวกเราจะเชือด (สัตว์) ด้วยลำต้นอ้อยได้หรือไม่?” ท่านจึงกล่าวว่า: “สิ่งใดก็ตามที่ทำให้เลือดหลั่งออกมา และได้มีการกล่าวพระนามของอัลลอฮ์บนมัน ก็จงกินเถิด ไม่ใช่ (เชือดด้วย) ฟัน และเล็บ และข้าจะบอกพวกท่านถึงสาเหตุของมัน สำหรับฟันนั้น มันคือกระดูก และสำหรับเล็บนั้น มันคือมีดของชาวเอธิโอเปีย (คือห้ามเชือดด้วยกระดูกและเล็บ แต่สิ่งอื่นที่ทำให้เลือดหลั่งใช้ได้หมด)”; ดังนั้น ท่านนบี ﷺ ได้ทรงแจ้งแก่รอฟิอ์ เราะฎิยัลลอฮุอันฮุ ว่า ทุกวิธีการที่สามารถบรรลุเป้าหมายซึ่งก็คือการทำให้เลือดหลั่งออกมาได้นั้น ย่อมใช้ในการเชือดสัตว์ได้อย่างถูกต้อง และนี่คือสิ่งที่ท่านอัลเกาะรอฟีย์ได้สรุปเป็นหลักเกณฑ์ไว้โดยกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا تيسر المقصود بدون وسيلة معينة سقط اعتبارها</blockquote>
+      <p class="ar-translation">“เมื่อเป้าหมายสามารถบรรลุได้โดยง่ายโดยไม่ต้องใช้วิธีการที่เจาะจง การพิจารณา (ที่จะจำกัดอยู่เพียง) วิธีการนั้นก็ย่อมตกไป”</p>
+
+      <p>การแยกแยะระหว่างวิธีการและเป้าหมายนั้น จะช่วย นำทางไปสู่การเลือกบทบัญญัติที่เหมาะสมกับประเด็นปัญหาที่เกิดขึ้นใหม่ และการสืบค้นบริบทที่ถูกต้อง</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>จากงานบทความนี้ เราสามารถสรุปได้ดังต่อไปนี้:</p>
+
+      <ul>
+        <li>“ฟิกฮุล วากิอ์ คือการทำความเข้าใจอย่างแม่นยำถึงประเด็นปัญหาที่เกิดขึ้นใหม่ และปัจจัยที่มีอิทธิพลต่อชีวิตของบุคคลและสภาพแวดล้อมของเขา และการสร้างมโนภาพถึงมันตามข้อเท็จจริง เพื่อที่จะได้ทราบถึงบทบัญญัติทางศาสนาที่เหมาะสม</li>
+        <li>การคำนึงถึงความเป็นจริงนั้น ปรากฏอยู่ทั้งในอัลกุรอาน, ซุนนะฮ์และในแนวทางปฏิบัติของเหล่าเศาะหาบะฮ์</li>
+        <li>การคำนึงถึงความเป็นจริง คือรากฐานทางศาสนา</li>
+        <li>การสืบค้นบริบทที่เหมาะสมในการปรับใช้บทบัญญัติ คือการทำความเข้าใจความเป็นจริงเพื่อที่จะได้ทราบถึงพื้นที่ของคำสั่งใช้และคำสั่งห้ามทางศาสนา และนำมันไปปรับใช้ในพื้นที่นั้นๆ</li>
+        <li>การละเลยการสืบค้นบริบทที่เหมาะสมในการปรับใช้บทบัญญัติในความเป็นจริง ถือเป็นการบิดเบือนเจตนารมณ์ของพระผู้อภิบาลแห่งสากลโลก</li>
+        <li>การวินิจฉัยมีสองประเภท: การวินิจฉัยเชิงทฤษฎี (<span class="ar-inline" lang="ar" dir="rtl">اجتهاد نظري</span>) คือการวินิจฉัยเพื่อสืบค้นตัวบทบัญญัติและการวินิจฉัยเชิงประยุกต์ (<span class="ar-inline" lang="ar" dir="rtl">اجتهاد تطبيقي</span>) คือการสืบค้นบริบทที่เหมาะสมในการปรับใช้บทบัญญัติ</li>
+        <li>หากฟิกฮุล วากิอ์ของผู้ให้คำชี้ขาด (มุฟตี) นั้นถูกต้อง การวินิจฉัยทั้งหมดของเขาก็ย่อมถูกต้องตามไปด้วย</li>
+        <li>หนทางสู่การรู้จักความเป็นจริงมีสี่ประการ: ทางธรรมเนียมปฏิบัติ, ทางประสาทสัมผัส, ทางธรรมชาติของสรรพสิ่งและทางสติปัญญา</li>
+        <li>การสร้างมโนภาพถึงสัจภาวะของประเด็นปัญหาที่เกิดขึ้นใหม่ คือเงื่อนไขแห่งความถูกต้องของ “ฟิกฮุล วากิอ์”</li>
+        <li>การละเลยความเป็นจริงและการไม่ทำความเข้าใจความซับซ้อนของมันในการกำหนดบทบัญญัติ ถือเป็นการบิดเบือนตัวบทหลักฐาน และเป็นการล้มล้างหุกมวัฎอีย์</li>
+        <li>การนำคำสั่งใช้และคำสั่งห้ามมาปรับใช้โดยปราศจากการพิจารณาถึงภาพรวมของประเด็น และสภาพการณ์ของผู้ที่อยู่ภายใต้บทบัญญัติ อาจนำไปสู่ผลลัพธ์ที่ตรงกันข้ามกับเป้าหมายที่ตั้งใจไว้</li>
+      </ul>
+
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ความสำคัญของการเข้าใจสภาพแห่งความเป็นจริง หรือฟิกฮุลวากิอ์. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/fiqh-al-waqi.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li>إعلام الموقعين عن رب العالمين، ابن القيم 1/69 ؛ 3/13 ؛ 3/23 ؛ 4/157 ؛ 4/340</li>
+        <li>الموافقات، الشاطبي 3/217–218 ؛ 3/301 ؛ 5/11–22 ؛ 5/44 ؛ 5/177–178 ؛ 5/323</li>
+        <li>قواعد الأحكام في مصالح الأنام، العز بن عبد السلام 1/54 ؛ 2/132</li>
+        <li>البحر المحيط، الزركشي 8/354–355</li>
+        <li>الاجتهاد المقاصدي، نورالدين الخادمي، كتاب الأمة، عدد 66، 1998، وزارة الأوقاف والشؤون الإسلامية<br>مقدمة الكتاب، عمر عبيد حسنة، ص 18</li>
+        <li>العدة في أصول الفقه، أبو يعلى 5/1599</li>
+        <li>المعيار المعرب والجامع المغرب عن فتاوى أهل إفريقية والأندلس والمغرب، الونشريسي 10/78</li>
+        <li>مواهب الجليل، الحطاب 6/87</li>
+        <li>بداية المجتهد ونهاية المقتصد، ابن رشد 3/210</li>
+        <li>المقاصد والواقع، يحيى محمد، مجلة قضايا إسلامية معاصرة، عدد 8، 1999 ص 171</li>
+        <li>أساس القياس، الغزالي ص 41–42</li>
+        <li>الشفاء الغليل، الغزالي ص 436</li>
+        <li>الفروق، القرافي 1/177</li>
+        <li>فتح العلي المالك في الفتوى على مذهب الإمام مالك، عليش 2/36</li>
+        <li>شرح حدود ابن عرفة، ابن الرصاع ص 336</li>
+        <li>زكاة العين ومستجداتها، محمد التاويل ص 95</li>
+        <li>الإحكام في أصول الأحكام، الآمدي 4/162</li>
+        <li>السنن الكبرى، البيهقي رقم 20347، 10/197</li>
+        <li>المستدرك على الصحيحين، الحاكم رقم 436، 1/215</li>
+        <li>الفقيه والمتفقه، البغدادي 2/390</li>
+        <li>الاعتصام، الشاطبي 3/311</li>
+        <li>صحيح البخاري
+          <ul>
+            <li>كتاب الحيض، باب تقضي الحائض المناسك كلها إلا الطواف بالبيت، رقم 266، 1/117</li>
+            <li>كتاب المغازي، باب سرية عبد الله بن حذافة السهمي، رقم 4085، 4/1577</li>
+            <li>كتاب الذبائح والصيد، باب التسمية على الذبيحة ومن ترك متعمدا، رقم 5498، 7/91</li>
+          </ul>
+        </li>
+        <li>سنن الترمذي أبواب الحدود، باب ما جاء ألا تقطع الأيدي في الغزو، رقم 1450، 4/53</li>
+        <li>مقاصد الشريعة، ابن عاشور 2/151</li>
+        <li>الأشباه والنظائر، السيوطي 1/158</li>
+        <li>الذخيرة، القرافي 3/177</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
