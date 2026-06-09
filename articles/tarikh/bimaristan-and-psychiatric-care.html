@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การดูแลผู้ป่วยจิตเวชและระบบ ‘บีมาริสตาน’ — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="ประวัติศาสตร์การดูแลผู้ป่วยจิตเวชในอารยธรรมอิสลามและระบบ ‘บีมาริสตาน’ ตั้งแต่ดามัสกัสถึงแบกแดด ผ่านการจำแนกโรคโดยอัรรอซี อิบนุ ซีนา อัลบัลคี และกรณีศึกษา ‘โรคคลั่งรัก’">
+<meta name="keywords" content="บีมาริสตาน, จิตเวช, ประวัติศาสตร์อิสลาม, อัรรอซี, อิบนุ ซีนา, สุขภาพจิต, โรคคลั่งรัก">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การดูแลผู้ป่วยจิตเวชและระบบ ‘บีมาริสตาน’ — Islamic Fiqh Publishing">
+<meta property="og:description" content="ระบบโรงพยาบาลจิตเวช ‘บีมาริสตาน’ และวิธีคิดเรื่องสุขภาพจิตของปราชญ์มุสลิมยุคทอง">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/bimaristan-and-psychiatric-care.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="bimaristan-and-psychiatric-care">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์</a>
+      <h1 class="article-feature-title">การดูแลผู้ป่วยจิตเวชและระบบ ‘บีมาริสตาน’</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในมุมมองของอิสลาม มนุษย์คือองค์รวมที่สมบูรณ์ซึ่งประกอบสร้างขึ้นจากร่างกาย, จิตใจและจิตวิญญาณ ความเชื่อมโยงที่แยกขาดจากกันไม่ได้นี้สะท้อนอยู่ในตัวบทอัลกุรอานและวจนะของท่านศาสดาหลายต่อหลายแห่งด้วยกัน ตัวอย่างเช่นอัลกุรอานได้เน้นย้ำถึงความสำคัญของการดูแลสุขภาวะทางจิตใจ และชี้ให้เห็นว่าความสมดุลระหว่างกายและจิตใจ คือกุญแจสู่สุขภาพที่สมบูรณ์ ดังพระดำรัสของพระผู้เป็นเจ้าที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">قَدْ أَفْلَحَ مَن زَكَّىٰهَا وَقَدْ خَابَ مَن دَسَّىٰهَا</p>
+      </div>
+      <p>{แน่นอน ผู้ที่ขัดเกลาชีวิตย่อมได้รับความสำเร็จ และแน่นอน ผู้ที่หมกมุ่นในความชั่ว (ทำให้จิตใจตกต่ำ) ย่อมล้มเหลว} (อัชชัมส์: 9-10)</p>
+
+      <p>นับตั้งแต่รุ่งอรุณแห่งอารยธรรมอิสลาม ชาวมุสลิมและเหล่านักปราชญ์ได้ให้ความสำคัญอย่างยิ่งกับ “ปัญหาสุขภาพจิตและความผิดปกติทางอารมณ์” การดูแลจิตวิญญาณและจิตใจถือเป็นส่วนหนึ่งที่ไม่สามารถแยกออกจากแนวทางอิสลามในการดูแลมนุษย์แบบองค์รวม และวิสัยทัศน์นี้ก็เริ่มฉายชัดขึ้นพร้อมกับพัฒนาการของอารยธรรมอิสลามในช่วงศตวรรษแรกๆ</p>
+
+      <p>เหล่านักปราชญ์มุสลิมยุคแรกใช้อัลกุรอาน และซุนนะฮ์เป็นรากฐานในการทำความเข้าใจจิตวิทยาของมนุษย์ หนึ่งในบุคคลสำคัญนั้นคือ อิบนุ ซีนา (เสียชีวิต ฮ.ศ. 428 / ค.ศ. 1037) ปราชญ์และแพทย์ผู้ยิ่งใหญ่ที่สุดคนหนึ่งในประวัติศาสตร์อิสลาม ท่านได้สร้างคุณูปการอย่างมหาศาลในการทำความเข้าใจจิตใจของมนุษย์ผ่านผลงานชิ้นเอกอย่าง “อัลกอนูน ฟิฏฏิบ” (The Canon of Medicine) ซึ่งในตำราเล่มนี้ ท่านได้จำแนกรายละเอียดว่า สภาวะทางจิตใจส่งผลกระทบต่อสุขภาพกายได้อย่างไร และเสนอวิธีการรักษาด้วยกระบวนการทางวิทยาศาสตร์และระเบียบวิธีที่ชัดเจน</p>
+
+      <p>ความสนใจของนักวิชาการมุสลิมไม่ได้หยุดเพียงแค่ในทฤษฎีทางจิตวิทยา แต่ยังได้ก้าวไปสู่การลงมือรักษาผู้ป่วยจริงๆ หนึ่งในผู้บุกเบิกคือ อบู บักร อัรรอซี (เสียชีวิต ฮ.ศ. 313 / ค.ศ. 925) ผู้ประพันธ์ตำราทางการแพทย์และจิตวิทยาไว้มากมาย รวมถึงหนังสืออัลฮาวี ที่ลงรายละเอียดเรื่องการวินิจฉัยและรักษาโรคทางจิตเวช อัรรอซีใช้แนวทางการรักษาแบบองค์รวมที่ครอบคลุมทั้งมิติด้านจิตวิญญาณ จิตใจ และร่างกาย อัรรอซีถือเป็นผู้มีบทบาทสำคัญในการวางรากฐาน “จิตเวชศาสตร์” ท่านเป็นผู้นำวิธีการบำบัดใหม่ๆมาใช้ เช่น ดนตรีบำบัด และสุคนธบำบัด (การใช้กลิ่นรักษา) ควบคู่ไปกับการให้ความสำคัญกับมิติทางจิตวิญญาณในการเยียวยาผู้ป่วย ไม่ใช่เพียงแค่ให้ผู้ป่วยมอบหมายหรือตะวักกัลโดยปราศจากการบำบัดรักษาที่ถูกต้อง</p>
+
+      <p>หลักฐานที่ชัดเจนที่สุดที่แสดงถึงความใส่ใจในสุขภาพจิตของอารยธรรมอิสลาม คือการก่อตั้ง “บีมาริสตาน” ในกรุงดามัสกัสช่วงปีคริสต์ศักราชที่ 707 โดยเคาะลีฟะฮ์อัลวะลีด บิน อับดุลมาลิก แบกแดดช่วงศตวรรษที่ 8 แห่งคริสตกาล และเมื่อฮารูน อัรเราะชีดได้สืบราชบัลลังก์ต่อจึงได้ให้มีการสร้างในนครแบกแดดด้วยเช่นกัน และได้ตั้งชื่อสถานที่ตามนามของท่าน</p>
+
+      <p>(มาริสตานหรือบีมาริสตานมาจากภาษาฟาร์ซีสองคำนั่นคือ : <span class="ar-inline" lang="ar" dir="rtl">بیمار</span> = ผู้ป่วย + <span class="ar-inline" lang="ar" dir="rtl">ستان</span> = สถานที่ หมายถึง “สถานที่ของผู้ป่วย” เป็นสถาบันทางการแพทย์ที่มิได้จำกัดเฉพาะการรักษาผู้ป่วย แต่ยังรวมถึงการทำวิจัยทางการแพทย์ และการสอนวิชาแพทยศาสตร์ด้วย ในสมัยออตโตมัน สถาบันประเภทนี้ถูกเรียกว่า ดารุชชิฟา (<span class="ar-inline" lang="ar" dir="rtl">دار الشفاء</span>) และมุ่งเน้นด้านการรักษาพยาบาลเป็นหลัก ส่วนในยุคสมัยใหม่ บทบาทของสถาบันนี้ค่อยๆจำกัดอยู่เพียงงานบริการทางการแพทย์ และจึงเป็นที่มาของคำว่า โรงพยาบาล (<span class="ar-inline" lang="ar" dir="rtl">مشفى / مستشفى</span>) ในความหมายที่เราเข้าใจกันในปัจจุบัน)</p>
+
+      <h2 class="article-h2">บีมาริสตานในโลกอาหรับ</h2>
+
+      <p>โรงพยาบาลสำหรับรักษาโรคทางจิตเวชที่เก่าแก่ที่สุดนั้น ถือกำเนิดขึ้นในโลกอาหรับ ไม่ว่าจะเป็นที่แบกแดด ไคโร หรือดามัสกัส ในยุคทองของอิสลามผู้ป่วยที่มีความผิดปกติทางจิตหรือทางอารมณ์จะได้รับการดูแลรักษาในบีมาริสตาน โดยบีมาริสตานแห่งแรกในโลกอิสลามถูกสร้างขึ้นที่เมืองดามัสกัส ตามคำสั่งของเคาะลีฟะฮ์แห่งราชวงศ์อุมัยยะฮ์ อัลวะลีด บิน อับดุลมาลิกในปี ค.ศ. 707 (ฮ.ศ. 88) ตามที่ได้ระบุไป นอกจากแห่งแรกที่ดามัสกัสแล้ว ในดินแดนแถบนี้ยังมีบีมาริสตาน อันนูรีขนาดใหญ่ ซึ่งสร้างโดยกษัตริย์นูรุดดีน บิน มะห์มูด ซังกี ราวปี ค.ศ. 1154</p>
+
+      <p>ส่วนทางฝั่งอิรัก ก็มีการสร้างสถานพยาบาลสำคัญหลายแห่ง เช่น บีมาริสตาน อัรเราะชีด, บีมาริสตาน อัลมุกตะดิรี และบีมาริสตานแห่งเมืองโมซุล แต่ที่โด่งดังที่สุดต้องยกให้ “บีมาริสตาน อัลอะฎุดี” ซึ่งสร้างโดยกษัตริย์อะฎุดุดเดาละฮ์ บิน บูวัยฮ์ ในกรุงแบกแดด เมื่อปี ค.ศ. 978</p>
+
+      <p>ข้ามมาที่ฝั่งอียิปต์ ก็มีบีมาริสตาน อัลอะตีก ที่สร้างโดยอะห์มัด บิน ฏูลูน ตั้งแต่ปี ค.ศ. 872 ในเมืองฟุสฏอฏ (เมืองไคโรเก่า) และบีมาริสตาน อัลมันศูรี หรือที่รู้จักในชื่อ บีมาริสตาน กอลาวูน ซึ่งสร้างขึ้นตามบัญชาของกษัตริย์อัลมันศูร กอลาวูน อัศศอลิฮี</p>
+
+      <p>ในแวดวงนี้ มีบุคลากรทางการแพทย์ระดับตำนานเกิดขึ้นมากมาย อาทิอบู บักร อัรรอซี แพทย์ผู้ยิ่งใหญ่ที่สุดของมุสลิมในยุคกลาง ผู้ซึ่งได้เขียนคำอธิบายลักษณะของโรคทางจิตไว้อย่างละเอียดลออ นอกจากนี้ยังมีแพทย์ท่านอื่นๆอย่างญิบรออีล บิน บุคติชูอ์ (เสียชีวิต ฮ.ศ. 213 / ค.ศ. 828) และเอาฮะดุซซะมาน ที่ล้วนมีบทบาทสำคัญในการวางรากฐานการรักษาผู้ป่วยทางจิตในยุคนั้น</p>
+
+      <p>แต่เมื่อย้อนไปค้นรายละเอียดมากกว่านั้น “บีมาริสตาน อัรเราะชีด” ในกรุงแบกแดด ดูจะได้รับการยกย่องว่าเป็น “โรงพยาบาลจิตเวช” แห่งแรกในประวัติศาสตร์ของโลกอิสลาม ภายในโรงพยาบาลมีการจัดสภาพแวดล้อมเพื่อการบำบัดอย่างพิถีพิถัน ประกอบด้วยสวนหย่อมเขียวขจี เสียงสายน้ำที่ไหลริน ฟังแล้วเพลิดเพลิน และบรรยากาศที่เงียบสงบ เพื่อช่วยฟื้นฟูจิตใจของผู้ป่วยให้กลับมามีสุขภาวะที่ดีอีกครั้ง</p>
+
+      <p>โดยบีมาริสตานในโลกอิสลามถือเป็นองคาพยพหนึ่งของสังคม ไม่ได้เป็นสถานที่ที่ถูกแยกตัวอยู่อย่างโดดเดี่ยวในพื้นที่อันห่างไกล หากแต่ตั้งอยู่ ณ ใจกลางเมือง ซึ่งเอื้ออำนวยให้ผู้คนสามารถเข้าเยี่ยมเยียนและมอบกำลังใจแก่ผู้ป่วยได้โดยง่าย ซึ่งสะท้อนให้เห็นถึงวิสัยทัศน์ของอิสลามที่มีต่อการบำบัดรักษาทางจิตใจแบบองค์รวม โดยมีแนวคิดที่ถือว่า การได้รับการสนับสนุนทางสังคมคือส่วนสำคัญที่ขาดไม่ได้เลยในเส้นทางของการฟื้นฟูเยียวยา ดังจะเห็นได้จากตัวอย่างที่โรงพยาบาลมักจะเป็นส่วนหนึ่งของกลุ่มอาคารขนาดใหญ่ที่ประกอบด้วยมัสยิดและสถาบันการศึกษา ซึ่งช่วยเสริมสร้างความรู้สึกของการเป็นส่วนหนึ่งและการได้รับการเกื้อกูลจากชุมชนให้แก่ผู้ป่วย</p>
+
+      <p>จากข้อมูลข้างต้น เป็นที่ประจักษ์ชัดว่า ชาวมุสลิมและเหล่านักปราชญ์ได้ให้ความสำคัญอย่างยิ่งต่อประเด็นทางจิตวิทยาและความผิดปกติทางจิตมาตั้งแต่อรุณรุ่งแห่งอารยธรรมอิสลาม ความใส่ใจนี้ยังได้ถูกนำไปปฏิบัติจริงผ่านการก่อตั้งสถาบันบำบัดรักษาที่ก้าวหน้า ซึ่งให้การดูแลผู้ป่วยทางจิตด้วยวิธีการที่เปี่ยมด้วยมนุษยธรรมและหลักการทางวิทยาศาสตร์ที่ล้ำสมัยเมื่อเทียบกับยุคสมัยนั้น การศึกษาแง่มุมเหล่านี้ของประวัติศาสตร์อิสลาม จึงมีส่วนช่วยให้เราเกิดความเข้าใจที่ลึกซึ้งยิ่งขึ้นว่า ชาวมุสลิมในอดีตมีปฏิสัมพันธ์และวิธีคิดต่อประเด็นสุขภาพจิตอย่างไร รวมถึงพวกเขาได้จัดเตรียมการดูแลรักษาที่จำเป็นไว้อย่างไรบ้าง</p>
+
+      <h2 class="article-h2">มาตรฐานทางการแพทย์ชั้นสูง</h2>
+
+      <p>บีมาริสตานสำหรับผู้ป่วยทางจิตในกรุงแบกแดด ถือเป็นหนึ่งในหมุดหมายสำคัญที่สุดของหน้าประวัติศาสตร์จิตเวชศาสตร์ โดยโรงพยาบาลจิตเวชแห่งแรกของโลกอิสลามถูกก่อตั้งขึ้น ณ นครแห่งนี้ในช่วงศตวรรษที่ 8 แห่งคริสตกาล สถานพยาบาลเหล่านี้มีบทบาทอย่างยิ่งในการมอบการดูแลรักษาสุขภาพจิตด้วยแนวทางที่เปี่ยมด้วยมนุษยธรรมและก้าวหน้าด้วยหลักวิชาการ ซึ่งสะท้อนให้เห็นถึงระดับความเจริญรุ่งเรืองทางอารยธรรมและวิทยาการของโลกอิสลามในยุคสมัยนั้น</p>
+
+      <p>โรงพยาบาลจิตเวชแห่งแรกถูกสถาปนาขึ้นในแบกแดดเมื่อปี ค.ศ. 805 โดยดำริของเคาะลีฟะฮ์แห่งราชวงศ์อับบาซิยะฮ์ ฮารูน อัรเราะชีด นับเป็นสถาบันการแพทย์แห่งแรกในประวัติศาสตร์อิสลามที่มุ่งเน้นการรักษาโรคทางจิตเวชโดยเฉพาะด้วยระเบียบวิธีทางวิทยาศาสตร์ โรงพยาบาลแห่งนี้เปิดให้บริการแก่ทุกเชื้อชาติ ทุกศาสนา ไม่ว่าจะเป็นมุสลิมหรือต่างศาสนิก ซึ่งมีการเปิดกว้างอย่างยิ่งในเวลานั้น</p>
+
+      <p>อัตลักษณ์ทางสถาปัตยกรรมของบีมาริสตานในแบกแดดมีความโดดเด่นด้วยการออกแบบพิเศษที่มุ่งสร้างสภาพแวดล้อมที่ผ่อนคลายและเหมาะสมกับผู้ป่วยทางจิต ตัวโรงพยาบาลตั้งอยู่ใจกลางเมืองเพื่อให้เข้าถึงได้ง่ายและเอื้อต่อการได้รับกำลังใจจากสังคม ภายในประกอบด้วยสวนพฤกษชาติ สายวารีที่ถูกสร้างอย่างดี และมุมสงบที่ช่วยกล่อมเกลาจิตใจผู้ป่วยให้สงบร่มเย็น อาคารสถานที่ถูกออกแบบอย่างพิถีพิถันเพื่อให้มีการระบายอากาศที่ดีและมีสุขอนามัยที่เป็นเลิศ</p>
+
+      <p>ระบบการบริหารจัดการของบีมาริสตานในแบกแดดถือว่าก้าวหน้าอย่างยิ่งเมื่อเทียบกับยุคสมัยเดียวกัน โดยยึดหลักการดูแลแบบองค์รวม มีการแยกประเภทผู้ป่วยตามลักษณะอาการความผิดปกติ ผู้ป่วยแต่ละคนจะมีห้องพักส่วนตัวพร้อมพื้นที่สำหรับเก็บของใช้ส่วนตัว ก็เพื่อสร้างความรู้สึกคุ้นเคยและอบอุ่นใจเสมือนอยู่บ้าน อีกทั้งยังมีการเฝ้าสังเกตอาการอย่างสม่ำเสมอโดยคณะแพทย์และพยาบาลเพื่อให้มั่นใจว่าผู้ป่วยได้รับการดูแลอย่างดีที่สุด</p>
+
+      <p>นอกจากนี้ แผ่นจารึกที่ปรากฏอยู่บนผนังของบีมาริสตาน อัรฆูน ในเมืองอเลปโปของประเทศซีเรีย ยังช่วยจารึกความทรงจำแห่งการก่อตั้งโดยเจ้าชายอัรฆูน อัลกามิลี ในช่วงกลางศตวรรษที่ 14 ซึ่งระบุถึงการดูแลรักษาโรคทางจิตที่เน้นความสำคัญของแสงสว่างที่เพียงพอ อากาศที่บริสุทธิ์ สายน้ำที่ไหลเย็น และการใช้เสียงดนตรีบำบัด</p>
+
+      <p>เคียงคู่ไปกับบีมาริสตานแห่งแบกแดด ยังมีการก่อตั้งโรงพยาบาลในลักษณะเดียวกันตามมหานครใหญ่ๆของโลกอิสลาม เช่น ไคโรและดามัสกัส อาทิ บีมาริสตาน อัลมันศูรีในไคโร ที่ก่อตั้งโดยสุลต่านกอลาวูนในศตวรรษที่ 13 ซึ่งถือเป็นหนึ่งในโรงพยาบาลที่ใหญ่ที่สุดในโลกอิสลามและให้บริการทางการแพทย์ที่หลากหลายรวมถึงจิตเวช เช่นเดียวกับบีมาริสตาน นูรุดดีน ในดามัสกัส ที่ให้บริการดูแลผู้ป่วยทางจิตอย่างดีเยี่ยม และยังเป็นศูนย์กลางการศึกษาที่สำคัญสำหรับแพทย์และบุคลากรทางการแพทย์อีกด้วย</p>
+
+      <p>โดยหลักมนุษยธรรมถือเป็นหัวใจสำคัญของกระบวนการรักษาในบีมาริสตานแห่งแบกแดด ผู้ป่วยจะได้รับการปฏิบัติด้วยความเคารพและให้เกียรติในศักดิ์ศรีความเป็นมนุษย์ ควบคู่ไปกับการจัดเตรียมสภาพแวดล้อมที่เอื้อต่อการฟื้นฟู บีมาริสตานนำเสนอวิธีการรักษาที่หลากหลาย ครอบคลุมทั้งการบำบัดทางจิตวิญญาณ เช่น การอ่านอัลกุรอาน และดนตรีบำบัดจากธรรมชาติ ไปจนถึงการบำบัดทางร่างกาย เช่น วารีบำบัด (การอาบน้ำ) และการนวด รวมถึงการดูแลด้านโภชนาการ โดยมีเป้าหมายสูงสุดเพื่อมอบการดูแลแบบองค์รวมที่สอดประสานทั้งมิติด้านจิตใจ ร่างกาย และจิตวิญญาณของผู้ป่วยเข้าด้วยกัน</p>
+
+      <h2 class="article-h2">การสนับสนุนทางสังคมและการคืนสู่สังคม</h2>
+
+      <p>การสนับสนุนทางสังคม ถือเป็นเสาหลักสำคัญในระบบการรักษาของบีมาริสตานจิตเวชแห่งแบกแดด ด้วยทำเลที่ตั้งซึ่งอยู่ใจกลางเมือง ทำให้ครอบครัวและมิตรสหายสามารถเดินทางมาเยี่ยมเยียนและให้กำลังใจผู้ป่วยได้อย่างสะดวก นอกจากนี้ ยังมีระบบสวัสดิการที่มอบเงินช่วยเหลือให้แก่ผู้ป่วยเมื่อพวกเขารักษาหายและออกจากโรงพยาบาล เพื่อเป็นทุนรอนในการช่วยให้พวกเขากลับไปใช้ชีวิตและปรับตัวเข้าสู่สังคมได้อีกครั้ง รวมถึงช่วยแบ่งเบาภาระทางการเงินในช่วงแรกหลังจากสิ้นสุดการรักษา บีมาริสตานจิตเวชแห่งแบกแดดจึงนับเป็นต้นแบบที่ก้าวหน้าของการดูแลสุขภาพจิตแบบองค์รวม ซึ่งผสานแนวทางด้านมนุษยธรรมเข้ากับวิทยาศาสตร์ได้อย่างดี</p>
+
+      <h2 class="article-h2">การจำแนกโรคทางจิตเวชโดยปราชญ์มุสลิมยุคแรก</h2>
+
+      <p>นักวิชาการมุสลิมในยุคแรกเริ่มมีความเข้าใจที่ก้าวหน้าเกี่ยวกับปัญหาและความผิดปกติทางจิต โดยได้ทำการศึกษาและจัดหมวดหมู่อาการเหล่านี้ไว้อย่างเป็นระบบ ปราชญ์คนสำคัญที่มีคุณูปการในด้านนี้ได้แก่อิบนุ ซีนา, อัรรอซี, อัลกินดี และอบู ซัยด์ อัลบัลคี</p>
+
+      <p>1. อบู ซัยด์ อัลบัลคี (เสียชีวิต ฮ.ศ. 322 / ค.ศ. 934) ถือเป็นหนึ่งในปราชญ์คนสำคัญที่สุดคนหนึ่งที่ได้จำแนกประเภทความผิดปกติทางจิตไว้อย่างชัดเจน ในหนังสือเล่มสำคัญของท่านชื่อ “<span class="ar-inline" lang="ar" dir="rtl">مصالح الأبدان والأنفس</span>” (ประโยชน์สุขแห่งร่างกายและจิตใจ) ท่านได้แบ่งโรคทางจิตออกเป็น 4 ประเภทหลัก ได้แก่: 1.ความวิตกกังวลและความกลัว, 2.ความโกรธและความก้าวร้าว, 3.ความโศกเศร้าและซึมเศร้า, 4.อาการย้ำคิดย้ำทำ สำหรับยุคนั้นการแบ่งแบบนี้ถือว่าล้ำหน้าแล้ว อัลบัลคีเป็นคนแรกที่อธิบายถึง “ความสัมพันธ์ระหว่างกายและจิต” โดยยืนยันว่าโรคทางใจสามารถส่งผลให้เกิดความเจ็บป่วยทางกายได้ และในทางกลับกัน ความเจ็บป่วยทางกายก็นำไปสู่ปัญหาทางใจได้เช่นกัน</p>
+
+      <p>2. อิบนุ ซีนาแพทย์และนักปรัชญาผู้ยิ่งใหญ่ ได้นำเสนอการจำแนกโรคทางจิตเวชไว้อย่างละเอียดในตำราแพทย์ระดับโลกอย่างอัลกอนูน ท่านได้ระบุโรคต่างๆไว้อย่างชัดเจน เช่น อาการนอนไม่หลับ, ความจำเสื่อม, โรคอารมณ์สองขั้ว, โรคกลัวและโรคซึมเศร้า แนวคิดหลักของท่านคือการเชื่อว่า ความผิดปกติทางจิตสามารถเกิดขึ้นได้จากความไม่สมดุลของของเหลว 4 อย่างในร่างกายหรือเรียกกันว่าทฤษฎี Four Humors ได้แก่ น้ำดีเหลือง, น้ำดีดำ, เลือด และเสมหะ ซึ่งความแปรปรวนของธาตุเหล่านี้ส่งผลกระทบโดยตรงต่อทั้งระบบร่างกายและระบบประสาท</p>
+
+      <p>จุดเริ่มต้นของแนวคิดนี้ต้องสืบย้อนกลับไปถึงแพทย์กรีกผู้ยิ่งใหญ่อย่างฮิปโปเครตีส (Hippocrates) ผู้พยายามสร้างกรอบการแพทย์ที่เป็นระบบและมีเหตุผล โดยเชื่อว่าร่างกายมนุษย์ประกอบด้วย “ของเหลวพื้นฐาน” สี่ชนิด ได้แก่ เลือด, น้ำดีเหลือง, น้ำดีดำและเสมหะ ซึ่งถูกเรียกรวมกันว่า Humors ความเจ็บป่วยทั้งทางร่างกายและจิตใจถูกมองว่าเกิดจาก “ความไม่สมดุล” ของของเหลวทั้งสี่นี้ แนวคิดดังกล่าวนี้ยังโยงกับปรัชญาธาตุทั้งสี่ของกรีกได้แก่ ดิน น้ำ ลม ไฟ โดยกำหนดคุณสมบัติ “ร้อน–เย็น” และ “แห้ง–ชื้น” มาผูกกับสภาพร่างกายและอารมณ์ของมนุษย์</p>
+
+      <p>ต่อมาแพทย์ผู้ทรงอิทธิพลอีกคนคือ กาเลน ได้พัฒนาทฤษฎีนี้ให้ลุ่มลึกยิ่งขึ้น และนำไปสู่แนวคิด “Temperament” หรือบุคลิกสี่ประเภท แต่ในทางแพทย์สมัยใหม่ ทฤษฎีของเหลวทั้งสี่ไม่ถือเป็นหลักฐานทางวิทยาศาสตร์อีกต่อไป แต่ถูกแทนที่ด้วยความรู้ด้านชีวเคมี ระบบประสาท จิตเวชศาสตร์ และจิตวิทยาทางวิทยาศาสตร์</p>
+
+      <p>3. อบู บักร อัรรอซี เป็นแพทย์รุ่นบุกเบิกที่ให้ความสนใจกับจิตเวชศาสตร์อย่างจริงจัง ท่านได้นิพนธ์หนังสือหลายเล่มเกี่ยวกับโรคทางจิต ในงานเขียนเหล่านั้น อัรรอซีได้อภิปรายแนวคิดเรื่องโรคซึมเศร้า และได้สร้างข้อแตกต่างที่สำคัญระหว่าง “ภาวะซึมเศร้า” กับ “ความคิดสับสน” โดยชี้ว่า ผู้ที่ซึมเศร้านั้นจะรู้สึกเหมือนชีวิตหลงทางและสิ้นหวัง ในขณะที่ผู้ที่มีความคิดสับสนนั้น จะมีภาวะทางจิตที่ปั่นป่วนวุ่นวายอย่างต่อเนื่อง ครั้งหนึ่งท่านได้พูดถึงอาการของบุคคลที่มีโรคจิตเภทอย่างอาการวิกลจริต หรือเรียกกันคุ้นหูอย่าง “คนบ้า” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">العامة تسمي مجنونا أصحاب الصرع، والماليخوليا، والاختلاط، وبين هذه الثلاثة فرق كبير، وذلك أن أصحاب الصرع أصحاء في كل حال إلا في ذلك الوقت، والماليخوليا ليس معه سهر ولا توثب على الناس، ولا يخلط كثيرا في كلامه، بل ربما لم يكن مخالفا للأصحاء إلا في أشياء قليلة بأفكار ردية، وإذا طال به خلط تخليطا كثيرا، إلا أنه في ذلك كله ينحو نحو العاقل، ويلزمه الخوف، والفزع، والغم، وأما الجنون فمعه توثب، وحركات سريعة قوية، وسهر واختلاط دائم... (أي الجنون) كل اختلاط يكون مع جرأة، وإقدام وخبث نفس</blockquote>
+      <p class="ar-translation">“คนทั่วไปมักเหมารวมเรียกผู้ป่วยโรคลมชัก, โรค Melancholia (ชื่อเรียกแรกของภาวะซึมเศร้า) และผู้ที่มีอาการสับสนทางจิตว่าเป็น “คนบ้า” เหมือนกันหมด ทว่าในความเป็นจริงแล้ว ภาวะทั้งสามนี้มีความแตกต่างกันอย่างสิ้นเชิง</p>
+      <p>กล่าวคือ ผู้ป่วยโรคลมชักนั้น โดยปกติแล้วจะมีสติสัมปชัญญะสมบูรณ์และมีสุขภาพจิตดีเหมือนคนทั่วไปทุกประการ ยกเว้นเพียงแค่ช่วงเวลาที่อาการกำเริบเท่านั้น</p>
+      <p>ส่วนผู้ป่วยโรค Melancholia นั้น จะไม่มีอาการนอนไม่หลับ หรือแสดงพฤติกรรมก้าวร้าวกระโจนเข้าใส่ผู้คน อีกทั้งการพูดจาก็มิได้สับสนวกวนมากนัก ดีไม่ดีพวกเขาแทบจะไม่ต่างอะไรจากคนปกติเลย เว้นแต่เพียงในบางเรื่องที่มีความคิดในแง่ลบหรือความคิดที่เลวร้ายปะปนอยู่บ้าง และหากปล่อยไว้นานเข้า อาการสับสนฟั่นเฟือนอาจมีมากขึ้น แต่ถึงกระนั้น โดยภาพรวมพฤติกรรมของพวกเขาก็ยังคงมีเค้าโครงของคนที่มีสติสัมปชัญญะอยู่ เพียงแต่สิ่งที่มักเกาะกุมจิตใจพวกเขาคือความหวาดกลัว ความตื่นตระหนก และความโศกเศร้า</p>
+      <p>ในขณะที่ “ความบ้า” ของจริงนั้น จะมาพร้อมกับพฤติกรรมก้าวร้าวพุ่งเข้าใส่ผู้อื่น มีการเคลื่อนไหวที่รวดเร็วรุนแรง นอนไม่หลับ และมีภาวะสับสนฟั่นเฟือนอยู่ตลอดเวลา...กล่าวโดยสรุปคือ (ความบ้า) หมายถึงอาการสับสนทางจิตทุกประเภทที่ดำเนินไปพร้อมกับความกล้าบ้าบิ่น ความมุทะลุดุดัน และพื้นฐานอารมณ์ที่ร้ายกาจ”</p>
+
+      <p>4. อัลกินดี (เสียชีวิต ฮ.ศ. 256 / ค.ศ. 873) ปราชญ์ท่านนี้ได้เขียนเกี่ยวกับระบบการรู้คิด และจิตวิญญาณในหนังสือ “<span class="ar-inline" lang="ar" dir="rtl">رسالة في العقل</span>” (สาส์นว่าด้วยสติปัญญา) ท่านมองว่าสุขภาพจิตที่ดีต้องเกิดจากความสมดุลระหว่าง “จิตใจ” และ “ร่างกาย” และเชื่อว่าการรักษาโรคทางจิตคือการคืนสมดุลให้แก่ระบบทั้งสอง</p>
+
+      <p>5. อัลฟารอบี (เสียชีวิต ฮ.ศ. 339 / ค.ศ. 950) ท่านได้เขียนถึงสุขภาพจิตในหนังสือ “<span class="ar-inline" lang="ar" dir="rtl">المدينة الفاضلة</span>” (มหานครในอุดมคติ) โดยกล่าวถึงปัจจัยที่นำไปสู่ความสุขและสุขภาวะทางจิต ซึ่งท่านก็เน้นย้ำเช่นกันว่าต้องอาศัยความสมดุลระหว่างร่างกายและสติปัญญาจึงจะบรรลุสุขภาพจิตที่สมบูรณ์ได้</p>
+
+      <p>นักวิชาการมุสลิมเหล่านี้ได้ต่อยอดองค์ความรู้จากทฤษฎีคลาสสิกของกรีก โดยนำมาพัฒนาและจัดระบบใหม่อย่างมีแบบแผน ตัวอย่างเช่น การที่อิบนุ ซีนาจำแนกโรคตามสาเหตุว่าเกิดจากปัจจัยทางกายหรือทางใจ วิธีการรักษาจึงมีความหลากหลายและผสมผสาน ตั้งแต่การรักษาทางกาย เช่น การใช้สมุนไพรและดนตรีบำบัด ไปจนถึงการรักษาทางจิตวิญญาณ เช่น การอ่านอัลกุรอาน เพราะพวกเขาเชื่อมั่นอย่างแรงกล้าว่า สุขภาพจิตที่แข็งแรงต้องมาจากการดูแลที่ครอบคลุมทั้ง 3 มิติของมนุษย์ คือ ร่างกาย, จิตใจและจิตวิญญาณนั่นเอง โดยแพทย์ในยุคนั้นจะใช้ทั้งการอ่านอัลกุรอาน ดนตรีบำบัด และสมุนไพร เพื่อให้การดูแลเป็นไปอย่างครบวงจร</p>
+
+      <h2 class="article-h2">เมื่อความรัก คือความป่วยไข้ ตัวอย่างของโรคทางจิตเวชในอดีต</h2>
+
+      <p>หนึ่งในตัวอย่างของโรคที่มีการพูดถึงกันในอดีตคือ “โรคคลั่งรัก” โดยมรดกทางวัฒนธรรมอาหรับในยุคทองนั้น อุดมไปด้วยบทกวีและงานเขียนทางจิตวิทยาที่กล่าวถึงความปั่นป่วนของสัญชาตญาณแห่งความรัก ตัวอย่างเช่น บทกวีที่ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الحب أسقمني والحب أضناني ..... والحب أنحلني والحب أبلاني</blockquote>
+      <p class="poem-th">ความรักทำให้ฉันป่วยไข้ ความรักทำให้ฉันอ่อนล้า<br>ความรักทำให้ฉันซูบผอม และความรักทำให้ฉันร่วงโรย</p>
+
+      <p>กวีสิ่งนี้สะท้อนให้เห็นว่าชาวอาหรับเข้าใจความสัมพันธ์ระหว่างความพลุ่งพล่านทางอารมณ์ (ความรัก) กับร่างกาย (ความซูบผอมและความเจ็บป่วย) เป็นอย่างดี</p>
+
+      <p>แน่นอนมันปฏิเสธไม่ได้ว่า “ความรัก” คือสัญชาตญาณพื้นฐานของมนุษย์ เฉกเช่นความรักที่ชายคนหนึ่งมีต่อครอบครัวและลูกหลาน แต่มันจะคลายเป้าหมายทางจิตใจก็ต่อเมื่อธรรมชาติของคนสองคนเกิดความสอดคล้องและมีความปรารถนาที่ตรงกัน นิยามที่ชัดเจนของความรักคือ สภาวะของจิตวิญญาณที่มีต่อสิ่งที่ดึงดูดมันเข้ามา (ซึ่งความเกลียดชังก็คือขั้วตรงข้าม) แม้ความรักจะเป็นอารมณ์ที่สูงส่งที่สุดของมนุษย์ แต่ก็ยังคงเป็นสัญชาตญาณที่ต้องถูกกำกับด้วยขอบเขตที่เหมาะสม หากเสียสมดุลเมื่อใด ย่อมนำไปสู่ความผิดปกติทางสัญชาตญาณเมื่อนั้น</p>
+
+      <p>สำหรับสาเหตุที่ทำให้มนุษย์ตกอยู่ในความผิดปกตินี้ แพทย์อย่างอิบนุ ร็อบบัน อัฏฏอบะรี (เสียชีวิตหลัง ฮ.ศ. 236 / ค.ศ. 861) ให้ความเห็นว่า: “เกิดจากความต้องการตามธรรมชาติของร่างกายในการปลดปล่อยส่วนเกิน หรือเกิดจากความโหยหาของจิตวิญญาณที่จะได้เชยชมรูปโฉมที่งดงาม เพราะธรรมชาติของจิตวิญญาณนั้นชื่นชมทุกสิ่งที่สวยงาม ไม่ว่าจะเป็นอัญมณี ธรรมชาติ หรือแม้แต่สัตว์เอง ดังนั้น หากความงามนั้นบังเอิญปรากฏอยู่ใน “มนุษย์” ด้วยกัน แรงปรารถนา (หรือชะฮ์วะฮ์) ก็จะถูกกระตุ้นให้พลุ่งพล่าน และจิตวิญญาณจะมุ่งมาดปรารถนาที่จะได้ใกล้ชิดและสานสัมพันธ์”</p>
+
+      <p>สิ่งที่น่าสนใจคือ เหล่าปราชญ์มีความเห็นต่างกันในการระบุต้นตอของโรคทางใจชนิดนี้</p>
+
+      <p>1.บางคนกล่าวว่ามันเกี่ยวข้องกับ “จิตวิญญาณแห่งปัญญา” คือความวิบัติของจินตนาการและความคิด หนึ่งในนั้นคือ อิบนุ ซีนาซึ่งนิยามว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">مرض وسواسي شبيه بالمالنخوليا يكون الإنسان قد جلبه إلى نفسه بتسليط فكرته على استحسان بعض الصور والشمائل التي له، ثم أعانته على ذلك شهوته أو لم تعن</blockquote>
+      <p class="ar-translation">“มันคือ “โรคย้ำคิดย้ำทำ” ที่คล้ายคลึงกับภาวะซึมเศร้าช่วงแรก ซึ่งมนุษย์นำพามาใส่ตนเองด้วยการหมกมุ่นครุ่นคิดถึงแต่ความงดงามของรูปลักษณ์และกิริยาของใครบางคน โดยอาจมีแรงตัณหาเป็นตัวช่วยขับเคลื่อนหรือไม่ก็ได้”</p>
+
+      <p>2.อีกกลุ่มหนึ่งมองว่ามันเป็นเรื่องของ “จิตวิญญาณใฝ่ต่ำ” ซึ่งเกิดจากการอดนอนมากเกินไป</p>
+
+      <p>3.บางท่านรวมทั้งสองทัศนะเข้าด้วยกัน และเสริมเรื่องความเข้ากันได้ ทั้งทางจิตวิญญาณและร่างกาย เปรียบดั่งแม่เหล็กกับเหล็ก โดยนิยามว่าโรคคลั่งรักคือ “ความปรารถนาที่มากเกินพอดี ซึ่งเรียกร้องหาความใกล้ชิดและการผูกพันทางร่างกาย” เมื่อโรคนี้หยั่งรากลงในหัวใจ สมองก็จะเข้าร่วมผสมโรงผ่านจินตนาการและความคิด</p>
+
+      <p>ส่วนอัรรอซีมีมุมมองที่น่าสนใจและค่อนข้างเผ็ดร้อนต่อโรคนี้ โดยเห็นว่าผู้ที่มักตกเป็นเหยื่อคือผู้ที่มีกมลสันดานหยาบกระด้างและสติปัญญาทึบ สาเหตุที่เป็นเช่นนั้น ในทัศนะของท่านคือ ผู้ที่ขาดการไตร่ตรอง ขาดวิสัยทัศน์ และความยับยั้งชั่งใจ มักจะด่วนบุ่มบ่ามทำตามสิ่งที่จิตใจเรียกร้องและโอนอ่อนผ่อนผันตามตัณหาของตนโดยง่าย บุคคลจำพวกนี้ได้แก่คนว่างงาน ผู้ใช้ชีวิตอย่างสุขสบายฟุ้งเฟ้อ และผู้ที่จมปลักอยู่ในห้วงกิเลสตัณหา อัรรอซีระบุไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الذين لا يهمهم سواها ولا يريدون من الدنيا إلا إصابتها ويرون فوتها فوتا وأسفا، وما لم يقدروا عليه منها حسرة وشقاء، فلا يكادون يتخلصون من هذه البلية، لا سيما إن أكثروا النظر في قصص العشاق ورواية الرقيق الغزل من الشعر وسماع الشجي من الألحان والغناء... أما الرجال كبار الهمم والأنفس فهم بعيدون من هذه البلية</blockquote>
+      <p class="ar-translation">“คนพวกนี้คือผู้ที่ไม่ได้ให้ความสำคัญกับสิ่งใดอื่น (นอกจากการสนองตัณหา) ไม่ปรารถนาสิ่งใดในโลกนี้นอกจากต้องได้สิ่งนั้นมาครอบครองเท่านั้น พวกเขามองว่าการพลาดหวังจากมันคือความสูญเสียและความโศกศัลย์ และสิ่งที่พวกเขาไม่อาจคว้ามาได้คือกองทุกข์และความระทม</p>
+      <p>พวกเขาแทบจะถอนตัวไม่ขึ้นจากภัยพิบัตินี้ โดยเฉพาะอย่างยิ่งหากพวกเขาหมกมุ่นอยู่กับการเสพนิยายรักโรแมนติก การพร่ำเพ้อบ่นผ่านบทกวีที่พรรณนาความรักอันอ่อนไหว และการสดับฟังท่วงทำนองเพลงขับร้องที่โศกซึ้งกินใจ...ในขณะที่บุรุษผู้มีปณิธานอันแน่วแน่และมีจิตวิญญาณที่สูงส่งนั้น พวกเขาย่อมอยู่ห่างไกลจากความวิบัติพรรคนี้”</p>
+
+      <p>ความอัจฉริยะของแพทย์มุสลิมปรากฏชัดเจนในการบรรยายอาการทางคลินิกของผู้ป่วยโรคคลั่งรักได้อย่างแม่นยำโดยแบ่งอาการออกเป็นทางจิตใจและทางร่างกาย</p>
+
+      <p>โดยสำหรับอาการทางจิตใจนั้น ผู้ป่วยจะจมอยู่ในความกลัดกลุ้มตลอดเวลา เนื่องจากความปรารถนาที่ไม่ได้รับการตอบสนอง อัรรอซีกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن العشاق مع طاعتهم للهوى وإيثارهم للذة وتعبدهم لها، يحزنون من حيث يظنون أنهم يفرحون ويألمون من حيث يظنون أنهم يلذون</blockquote>
+      <p class="ar-translation">“คนคลั่งรักนั้น แม้จะยอมสยบต่ออารมณ์และบูชาความหฤหรรษ์ แต่พวกเขากลับโศกเศร้าในสิ่งที่ตนคิดว่าเป็นความสุข และเจ็บปวดในสิ่งที่ตนคิดว่าเป็นความเพลิดเพลิน”</p>
+
+      <p>อารมณ์ของพวกเขาจะแปรปรวน เดี๋ยวหัวเราะดีใจ เดี๋ยวร้องไห้คร่ำครวญ โดยเฉพาะเมื่อได้ยินบทกวีเกี้ยวพาราสี หรือการพูดถึงการพลัดพรากและห่างไกล</p>
+
+      <p>ในวรรณกรรมและเกร็ดเรื่องเล่าสมัยราชวงศ์อับบาซิยะฮ์ มีกรณีศึกษาที่น่าสนใจของพระนางบุดูร ซึ่งปรากฎขึ้นในสมัยของเคาะลีฟะฮ์ฮารูน อัรเราะชีด นางได้ล้มป่วยลงและมีอาการสาหัส เมื่อแพทย์ได้เข้ามาตรวจดูอาการและจับชีพจรของนาง เขาก็กล่าวขึ้นว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يا ست بدور، الضارب ضارب والساكن ساكن ولا برد ولا حمى ولا شيء تشتكينه أكثر من سهر الليل وجريان الدمع لعل الست في قلبها هوى من أحد</blockquote>
+      <p class="ar-translation">“โอ้ แม่นางบุดูรเอ๋ย... ชีพจรที่ควรเต้นก็ยังเต้นดีอยู่ ส่วนที่ควรสงบนิ่งก็ยังนิ่งอยู่ มิมีอาการหนาวสั่น มิมีไข้ และมิมีสิ่งใดที่เจ้าต้องทุกข์ทรมานมากไปกว่าการข่มตานอนไม่หลับพร้อมกับคราบน้ำตา...เป็นไปได้ว่า ในดวงใจของแม่นางอาจจะมีเงาของชายใดซ่อนอยู่กระมัง”</p>
+
+      <p>เมื่อนางได้ฟังคำวินิจฉัยของแพทย์ นางจึงขับขานบทกวีตอบกลับไปว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا هممت بكتمان الهوى نطقت ... مدامعي بالذي أخفي من الألم<br>فإن أبح افتضح من غير منفعة ... وإن كتمت فدمعي غير منكتم<br>لكن إلى الله أشكو ما أكابده ... من طول وجد ودمع غير منصرم</blockquote>
+      <p class="poem-th">ยามข้าแม้น มุ่งมาด ซ่อนไฟรัก<br>แต่น้ำตา กลับประจักษ์ แจ้งแถลง<br>เผยความเจ็บ ปวดร้าว ที่เคลือบแคลง<br>ให้สำแดง แจ้งความ ที่ซ่อนเร้น</p>
+
+      <p>ผู้เล่าเรื่องกล่าวว่า: เมื่อกล่าวจบ แพทย์ผู้นั้นจึงลุกขึ้น นางจึงยื่นถุงเงินที่มีเหรียญทองบรรจุอยู่ 20 ดีนาร์ให้แก่เขา จากนั้นนางก็หันมาทางข้าพเจ้าแล้วเอ่ยถามว่า: ท่านมาจากถิ่นใดหรือ ท่านผู้เฒ่า?</p>
+
+      <p>ข้าพเจ้าจึงตอบนางไปว่า: จากแบกแดด... ความกระหายน้ำได้ชักนำให้ข้าพเจ้าระหกระเหินมาจนถึงที่นี่</p>
+
+      <p>นางจึงกล่าวว่า: บางทีหนทางดับทุกข์ของข้าอาจจะอยู่ที่มือของท่านก็ได้... ข้าจะเขียนจดหมายฉบับหนึ่งมอบให้แก่ท่าน ขอให้ท่านไปสืบหาวังของเจ้าชายอัมร์ แล้วมอบจดหมายนี้ให้แก่เขา หากท่านนำคำตอบกลับมาให้ข้าได้ ข้าจะมอบเงินรางวัลให้ท่านถึง 500 ดีนาร์</p>
+
+      <p>จากนั้นนางก็เรียกหาขวดหมึกและกระดาษ แล้วลงมือเขียนพร้อมกับพร่ำรำพันถ้อยคำออกมาว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يعجز لساني ويكل جناني عن بث الأشواق، ولكن أسأل الكريم الخلاق أن يمن علينا بالتلاق بالسعد الرائق والأمر الموافق</blockquote>
+      <p class="ar-translation">“ลิ้นของข้าพเจ้ามิอาจเอื้อนเอ่ย และดวงใจของข้าพเจ้าก็อ่อนล้าเกินกว่าจะพรรณนาความคะนึงหา แต่ข้าพเจ้าขอวอนขอต่อพระผู้ทรงสร้าง ผู้ทรงเกื้อกูลยิ่ง ขอพระองค์ทรงโปรดประทานพรให้เราได้พบกันด้วยความปีติยินดีและความสอดคล้องต้องกันเถิด”</p>
+
+      <p>และนางก็ขับบทกลอนว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">سروري من الدنيا لقاكم وقربكم ... وحبكم فرض وما منكم بد<br>ولي شاهد دمعي إذا ما ذكرتكم ... جرى فوق خدي لا يطاق له رد<br>إذا الريح من نحون الحبيب تنسمت ... وجدت لمسراها على كبدي برد<br>فوالله ما أحببت ما عشت غيركم ... ولا كنت إلا ما حييت لكم عبد<br>سلام عليك ما أمر فراقكم ... فلا كان منكم ما جرى آخرا عهد</blockquote>
+      <p class="poem-th">สุขของข้าฯ ในโลกา คือคราพบ<br>ได้น้อมนบ ชิดใกล้ ในตัวท่าน<br>รักของท่าน คือกฎเกณฑ์ เกินทัดทาน<br>ข้าฯ นั้นปาน ทาสรับใช้ ไม่เสื่อมคลาย<br><br>ยามระลึก ถึงท่าน พยานฟ้อง<br>คือน้ำตา ไหลนอง สองแก้มฉาย<br>สุดจะห้าม รินหลั่ง พรั่งพรูพราย<br>มิอาจวาย หักห้าม ความอาวรณ์<br><br>แม้นสายลม พัดโชย โปรยมาทัก<br>จากทิศทาง คนรัก ที่สมร<br>สัมผัสเย็น ซาบซึ้ง ถึงดวงพร<br>ดับเร่าร้อน ในดวงจิต ให้ชิดเชย<br><br>ขอสาบาน ต่อพระเจ้า เท่าชีวิต<br>มิเคยคิด รักใคร ไหนอื่นเลย<br>เป็นทาสรัก ภักดี อย่างที่เคย<br>ขอทรามเชย รับรู้ อยู่ทุกยาม</p>
+
+      <p>(ในจดหมายเขียนต่อว่า):</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فهذا كتاب ممن ليلها في نحيب، ونهارها في تعذيب، لا أتركن إلى عاذل ولا تصغي إلى قائل، قد غلبتها أيدي الفراق، ولو شرحت بعض ما عندها للفسيح ضاق وما وسعته الأوراق، ولكن أسأل الكريم الخلاق، رافع السبع الطباق، أن يمن علينا بالتلاق</blockquote>
+      <p class="ar-translation">“นี่คือสาส์นจากหญิงผู้ซึ่งค่ำคืนของนางมีแต่เสียงสะอื้นร่ำไห้ และทิววันของนางมีแต่ความทนทุกข์ทรมาน นางมิได้สนใจผู้ที่คอยตำหนิติเตียน และมิได้สดับฟังถ้อยคำของผู้ใด อุ้งมือแห่งการพลัดพรากได้เข้าครอบงำนางไว้ หากแม้นนางจักอธิบายความในใจที่มีอยู่ แผ่นฟ้าอันกว้างใหญ่คงคับแคบลงถนัดตา และหน้ากระดาษคงมิอาจบรรจุความรู้สึกได้หมดสิ้น แต่ข้าพเจ้าขอวอนขอต่อพระผู้ทรงสร้างผู้ทรงเกื้อกูล ผู้ทรงยกชั้นฟ้าทั้งเจ็ดชั้นให้สูงส่ง ขอพระองค์ทรงโปรดประทานการพบพานแก่เราด้วยเถิด”</p>
+
+      <p>แล้วนางก็ขับบทกลอนต่อว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أحبة قلبي وإن جرتم ... علي فكل المنى أنتم<br>رحلتم وفي القلب خلفتم ... لهيبا فهلا ترفقتم<br>وأودعتم يوم ودعتم ... بأحشاي نارا وأضرمتم<br>وما كنتم تعرفون الجفا ... على شؤم بختي تعلمتم</blockquote>
+      <p class="poem-th">ยอดดวงใจ แม้นท่าน นั้นโหดร้าย<br>รังแกกาย ใจข้าฯ ให้อาสัญ<br>แต่ท่านคือ ยอดมิ่ง สุดสำคัญ<br>เป็นความฝัน หนึ่งเดียว ที่ข้าฯ ปอง<br><br>ท่านจากไป ทิ้งไว้ ในใจข้าฯ<br>คือไฟรัก โรยรา แสนหม่นหมอง<br>ไยท่านไม่ ปรานี ที่เกี่ยวดอง<br>กลับทิ้งกอง เพลิงสุม รุมดวงมาน<br><br>วันที่ท่าน กล่าวลา พาใจเศร้า<br>ดั่งสุมไฟ แผดเผา ในสังขาร<br>เดิมท่านไม่ เคยหยาบ ทรมาน<br>คงเพราะโชค สามานย์ สอนท่านเป็น</p>
+
+      <p>นางเขียนต่อไปว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فألف ألف لا أوحش الله منكم والسلام مني عليكم عدد شوقي إليكم ما حن الغريب إلى الأوطان، وغرد حمام الأيك على البان، فرحم الله من قرأ كتابي وتعطف برد جوابي</blockquote>
+      <p class="ar-translation">“ด้วยเหตุนี้ นับพันพันครั้ง ขออัลลอฮ์อย่าทรงให้ข้าพเจ้าต้องว้าเหว่จากการขาดท่าน... ขอความสันติจากฉันพึงมีแด่ท่าน เท่ากับจำนวนความคิดถึงที่ข้าพเจ้ามี ตราบเท่าที่คนพลัดถิ่นยังคงโหยหามาตุภูมิ และตราบเท่าที่นกพิราบยังคงส่งเสียงขันคูอยู่บนยอดไม้... ขออัลลอฮ์ทรงเมตตาผู้ที่อ่านจดหมายฉบับนี้ และมีใจเอื้ออารีตอบกลับความนัยของข้าพเจ้าด้วยเถิด”</p>
+
+      <p>และนางก็ปิดท้ายด้วยบทกลอนว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أحبابنا ما رقا دمعي لفرقتكم ... يوم الفراق ولا كفت غواديه<br>بنتم فلم يبق لي من بعدكم جلد ... ولا فؤاد ولا صبر أرجيه<br>فكم أمني فؤادي بالهوى كذبا ... ولست أول من بانت غواشيه</blockquote>
+      <p class="poem-th">โอ้ที่รัก น้ำตาข้าฯ มิเคยเหือด<br>ดั่งสายเลือด หลั่งริน วันบินหนี<br>เมฆฝนริน มิหยุด แรมเดือนปี<br>นับแต่วัน ที่พี่ จรจากไกล<br><br>ท่านจากไป ใจกาย ข้าฯ พลอยดับ<br>ความอดทน ลาลับ เลือนหายไป<br>ไร้หัวใจ ไร้หวัง กำลังใจ<br>เหลือเพียงซาก ร่างไว้ ให้อาวรณ์<br><br>หลอกตัวเอง ด้วยรัก สลักจิต<br>เป็นเพียงหวัง ลมๆ แล้งๆ หลอน<br>มิใช่คน แรกที่ ถูกตัดรอน<br>ให้อาทร ทุกข์ทน จนวันตาย</p>
+
+      <p>ผู้เล่าก็ได้กล่าวต่อไปว่า: จากนั้นนางก็พับจดหมายลงอย่างประณีต แล้วประทับตราปิดผนึก ก่อนจะโรยผงชะมดและอำพันทะเลอันหอมกรุ่นลงไปภายในจดหมายให้กลิ่นเกียรติและความสง่าแทรกซึมอยู่ในทุกถ้อยคำ นางยื่นจดหมายให้ข้า ข้าจึงรับมาอย่างสำรวม แล้วรีบมุ่งหน้าไปยังคฤหาสน์ของท่านเจ้าชายอัมร์ แต่เมื่อไปถึงก็พบว่าท่านออกไปล่าสัตว์และออกท่องทุ่ง ข้าจึงนั่งรออยู่หน้าประตูเป็นเวลาหนึ่งครู่ใหญ่</p>
+
+      <p>ไม่นานนัก เขาก็กลับมา โดยปรากฏตัวอย่างสง่างามพร้อมกับอาชาเหงื่อโลหิต มีรูปร่างเพรียวกำยำ เป็นหนึ่งในสายพันธุ์ม้าชั้นสูง ที่แม้แต่จักรพรรดิคอสโรวและไคเซอร์ก็ไม่อาจเทียบได้ ว่ากันว่าเป็นเชื้อสายเดียวกับม้า “อัลอับญัร” ม้าคู่ใจของอันตะเราะฮ์ อิบนุ ชัดดาด ยอดนักรบและกวีเอกแห่งยุคญาฮิลียะฮ์ ซึ่งถ้ามันเป็นฝ่ายไล่ตามผู้ใด มันจะตามทันแน่ และหากใครคิดจะไล่ตามมัน ก็จะไม่มีวันตามทัน</p>
+
+      <p>ส่วนเจ้าชายอัมร์เมื่ออยู่บนหลังม้าตัวนั้น ก็ราวกับพระจันทร์เต็มดวงในตำแหน่งสูงส่งบนฟากฟ้า และเหล่ากษัตริย์ทั้งหลายก็รายล้อมท่านอยู่รอบด้าน เปรียบเสมือนดวงดาวที่หมุนล้อมดวงจันทร์ด้วยความยำเกรงและศรัทธา ภาพที่เห็นนั้นมีทั้งความสง่างาม น่าเกรงขาม และงดงามจนยากจะลืมเลือน”</p>
+
+      <p>แต่กระนั้น เมื่อไปถึงวังของเจ้าชายอัมร์ ก็พบว่าเจ้าชายเองก็ป่วยหนักด้วยโรคตรอมใจจากการคิดถึงพระนางบุดูรเช่นกัน เพราะทั้งคู่ไม่ได้เจอกันมานานเป็นปีเนื่องจากความขัดแย้งและความเข้าใจผิด ผู้เล่าจึงได้ทำหน้าที่เป็นพ่อสื่อ เดินทางไปมาระหว่างทั้งสองฝ่ายเพื่อส่งจดหมายและปรับความเข้าใจกัน จนกระทั่งเจ้าชายอัมร์เดินทางมาหาพระนางบุดูร</p>
+
+      <p>ในตอนท้ายของเรื่อง หลังจากที่เจ้าชายอัมร์มาหาพระนางบุดูร และปรับความเข้าใจกันแล้ว ทั้งคู่ได้จัดงานเลี้ยงฉลองอย่างมีความสุข รุ่งเช้าบุดูร ได้ขอให้อบุลหะสัน (ซึ่งเป็นผู้เล่าและพ่อสื่อ) ไปตามผู้พิพากษาและพยานมา เพื่อทำพิธีแต่งงานให้ถูกต้อง เจ้าชายอัมร์และบุดูรจึงได้เข้าพิธีสมรสกันอย่างเป็นทางการ อบุลหะสันได้รับรางวัลตอบแทนเป็นเงินจำนวนมากจากทั้งสองคน (คนละ 1,500 ดีนาร์) และกลับไปแบกแดดด้วยความมั่งคั่ง</p>
+
+      <p>เรื่องราวนี้ เหล่าแพทย์อาหรับจำนวนมากที่ได้นำมาศึกษาในกรณีของ “โรคคลั่งรัก” ต่างก็ลงความเห็นเป็นเอกฉันท์ว่า “ความผิดปกติของชีพจร” คือสัญญาณสำคัญในการวินิจฉัยโรคนี้ ยิ่งไปกว่านั้น มันยังเป็นกุญแจสำคัญที่นำไปสู่การระบุตัวตนของ “คนรัก” ที่ผู้ป่วยแอบมีใจให้ได้อีกด้วย</p>
+
+      <p>ซึ่งเรื่องวินิจฉัยทำนองนี้ได้รับการพิสูจน์ให้เห็นจริงจากกรณีที่อิบนุ ซีนาได้ทำการรักษาบุตรชายของเจ้าเมืองแห่งหนึ่งในเปอร์เซียที่ล้มป่วยด้วยโรคปริศนา ชายหนุ่มผู้นั้นซูบผอมและอ่อนแรงลงทุกวันเนื่องจากไม่ยอมกินยอมดื่ม จนร่างกายผ่ายผอมติดเตียงโดยไม่ทราบสาเหตุ</p>
+
+      <p>เมื่ออิบนุ ซีนาได้เข้าไปเยี่ยมและเริ่มทำการตรวจ รวบรวมประวัติอาการ และสังเกตลักษณะทางกายภาพ ท่านได้วางนิ้วลงบนชีพจรของคนไข้ แล้วสั่งให้คนรับใช้เริ่มร่ายชื่อย่านชุมชนต่างๆในเมืองนั้น เมื่อคนรับใช้เอ่ยถึงชื่อย่านแห่งหนึ่ง อิบนุ ซีนาสังเกตเห็นว่าชีพจรของชายหนุ่มเต้นเร็วขึ้นทันที ความสงสัยของท่านเริ่มมีเค้าความจริง</p>
+
+      <p>จากนั้น ท่านจึงสั่งให้เอ่ยชื่อครอบครัวที่อาศัยอยู่ในย่านนั้น และเมื่อเอ่ยถึงชื่อตระกูลหนึ่ง ชีพจรของเด็กหนุ่มก็เต้นระรัวยิ่งกว่าเดิม ณ จุดนั้น อิบนุ ซีนาจึงถามว่าครอบครัวนี้มีลูกสาวหรือไม่ เมื่อได้รับคำตอบว่า “มี” ท่านจึงหันไปกล่าวแก่ครอบครัวของชายหนุ่มว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن سبب ما يعانيه ابنكم من الهزال والتعب هو عشقه لإحدى بنات تلك العائلة وعلاجه يكون بالزواج منها.</blockquote>
+      <p class="ar-translation">“สาเหตุที่ลูกชายของพวกท่านต้องซูบผอมและเจ็บป่วยขนาดนี้ เป็นเพราะเขาตกหลุมรักลูกสาวของตระกูลนั้น...และยารักษาเดียวที่จะช่วยเขาได้ คือการให้ทั้งสองได้แต่งงานกัน”</p>
+
+      <p>เมื่อวินิจฉัยพบโรคนี้แล้ว เหล่าแพทย์จะเริ่มทำการรักษาโดยตั้งอยู่บนสมมติฐานที่ว่า โรคนี้มีต้นกำเนิดมาจากภาวะที่มี “น้ำดีดำ” ในสมองมากเกินไป ซึ่งเป็นหนึ่งในของเหลวทั้งสี่ตามทฤษฎีการแพทย์โบราณดังที่กล่าวไปแล้วก่อนหน้านี้ โดยต้องจัดการด้วยหลักการ “รักษาด้วยสิ่งตรงข้าม” กล่าวคือ 1.การเบี่ยงเบนความสนใจ โดยพยายามให้ผู้ป่วยเลิกหมกมุ่นกับความคิดถึง ชักชวนให้พูดคุยกับเพื่อนฝูง อ่านบทกวี เดินชมน้ำ ชมนก ชมสวนดอกไม้ 2.ทั้งนี้หากการเบี่ยงเบนความสนใจไม่ได้ผล แพทย์จะแนะนำให้จัดงานแต่งงานระหว่างคู่รักให้ถูกต้องตามหลักศาสนา 3.แต่หากมีอุปสรรคขัดขวางการแต่งงาน ก็ให้ใช้วิธีมองดูคนรักจากระยะไกลแทน</p>
+
+      <p>มาตรการขั้นเด็ดขาด</p>
+
+      <p>และในกรณีที่หมดหนทางและไม่สามารถพบเจอคนรักได้เลย แพทย์จะใช้วิธีจิตวิทยาขั้นรุนแรง นั่นคือการกระตุ้นให้ผู้ป่วยเกิดความ “เกลียดชัง” ในตัวคนรัก โดยการพูดถึงข้อเสียหรือเรื่องราวแย่ๆของคนคนนั้น พร้อมกับสนับสนุนให้ผู้ป่วยเริ่มต้นความสัมพันธ์ครั้งใหม่กับคนอื่นเพื่อลืมรักครั้งเก่า แล้วค่อยให้ตัดความสัมพันธ์ใหม่นั้นทิ้งก่อนที่จะถลำลึกจนกลายเป็นความรักฝังใจอีกครั้ง หรืออาจใช้วิธีสร้างมิตรภาพใหม่ๆที่แน่นแฟ้นกับคนที่ผู้ป่วยรู้สึกดีด้วย</p>
+
+      <p>ด้วยวิธีการรักษาเหล่านี้ ผู้ป่วยอาจกลับมาแข็งแรงและหายเป็นปกติได้ แต่ในบางกรณี หากความกลัดกลุ้มและการอดนอนยังคงดำเนินต่อไปจนเรื้อรัง หรือผู้ป่วยฝ่าฝืนคำแนะนำของแพทย์ สภาพจิตใจอาจทรุดหนักลงจนกลายเป็นความวิกลจริตหรือโรควิตกจริต ผู้ป่วยอาจตกอยู่ในบ่วงแห่งตัณหาซึ่งนำไปสู่ความทุกข์ระทมตลอดชีวิต หรือร้ายแรงถึงขั้นเสียชีวิต</p>
+
+      <p>โศกนาฏกรรมเช่นนี้เคยเกิดขึ้นจริงกับชายหนุ่มในแบกแดดนามว่า อิบนุ อัรเราวาส (ในปี ฮ.ศ. 480 / ค.ศ. 1087) หลังจากหญิงสาวที่เขาหลงรักได้เสียชีวิตลง เขาจมอยู่ในความโศกเศร้าอาลัยอาวรณ์อย่างแสนสาหัสอยู่หลายวัน จนกระทั่งตัดสินใจผูกคอตายตามนางไปในที่สุด</p>
+
+      <p>ท้ายที่สุดนี้ จำเป็นต้องชี้ให้เห็นว่า ในตำราการแพทย์ของมุสลิมนั้น เหล่าปราชญ์ได้แสดงทัศนะต่อ “โรคคลั่งรัก” แตกต่างกันออกเป็น 3 แนวทางหลักคือ</p>
+
+      <p>1.กลุ่มที่หลีกเลี่ยงการกล่าวถึง เช่น ษาบิต บิน กุรเราะฮ์ (เสียชีวิต ฮ.ศ. 288 / ค.ศ. 901) ในหนังสือ “<span class="ar-inline" lang="ar" dir="rtl">الذخيرة في علم الطب</span>” สาเหตุอาจเป็นเพราะท่านไม่เชื่อว่าความรักเป็นโรคทางจิตที่ต้องรักษา หรืออาจเป็นเพราะบริบททางสังคมอาหรับที่เคร่งครัดและมีความละเอียดอ่อนของหัวข้อนี้</p>
+
+      <p>2.กลุ่มที่มองว่าเป็นพฤติกรรมไร้เหตุผล เช่น อัรรอซี และอุบัยดิลละฮ์ บิน บัคติชูอ์ ที่มองว่าความรักแบบนี้เป็นความเจ็บป่วยทางจิต และพฤติกรรมของผู้ตกหลุมรักนั้นเปรียบเสมือนพฤติกรรมของสิ่งมีชีวิตที่ไร้สติปัญญา</p>
+
+      <p>3.กลุ่มที่จัดเป็นโรคทางสมอง เช่น อะลี บิน อับบาส อัลมะญูซี (เสียชีวิต ฮ.ศ. 384 / ค.ศ. 994), อิบนุ ซีนา และอิบนุลญัซซาร (เสียชีวิต ฮ.ศ. 369 / ค.ศ. 980) ซึ่งจัดหมวดหมู่ให้โรคคลั่งรักเป็นหนึ่งใน “โรคที่เกิดขึ้นกับสมอง” อย่างเป็นกิจจะลักษณะ</p>
+
+      <h2 class="article-h2">โดยสรุป</h2>
+
+      <p>ภาพรวมทั้งหมดนี้บอกเราอย่างชัดเจนว่า เมื่อชาวมุสลิมเริ่ม “รู้จัก” ความเจ็บปวดทางใจอย่างจริงจัง ไม่ว่าจะในรูปของโรคซึมเศร้า ความวิตกกังวล หรือแม้แต่ “โรคคลั่งรัก” พวกเขาก็ไม่ได้เลือกที่จะมองมันเป็นเรื่องงมงาย หรือโทษว่าผู้ป่วยมีศรัทธาที่ไม่ดีพอ แต่หยิบยกมันขึ้นมาเพื่อทำการศึกษา วิจัย แยกแยะ จัดหมวดหมู่ และสร้างระบบการดูแลรักษาขึ้นมาอย่างเป็นเรื่องเป็นราวและจริงจัง ทั้งในระดับแนวคิดทางวิชาการและในระดับโครงสร้างจริงอย่างบีมาริสตาน ซึ่งเป็นโรงพยาบาลที่ตั้งอยู่ใจกลางเมือง ไปจนถึงการสนับสนุนให้คนไข้กลับคืนสู่สังคมอย่างมีศักดิ์ศรี</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การดูแลผู้ป่วยจิตเวชและระบบ ‘บีมาริสตาน’. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/bimaristan-and-psychiatric-care.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
