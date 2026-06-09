@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การแต่งชุดดำไว้ทุกข์: มุมมองเชิงศาสนาและวัฒนธรรม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์เชิงนิติศาสตร์อิสลามว่าด้วยการแต่งชุดดำไว้ทุกข์ — แก่นของ 'หิดาด' คือการละเว้นการประดับประดาและกลิ่นหอม ไม่ใช่ตัวสี พร้อมพิจารณาข้อกังวลเรื่องการเลียนแบบ (ตะชับบุฮ์) การคร่ำครวญ (นิยาหะฮ์) และบทบาทของอุรุฟในบริบทสังคมไทย-มาเลย์">
+<meta name="keywords" content="การไว้ทุกข์, หิดาด, ชุดดำ, ตะชับบุฮ์, อุรุฟ, นิติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การแต่งชุดดำไว้ทุกข์: มุมมองเชิงศาสนาและวัฒนธรรม — Islamic Fiqh Publishing">
+<meta property="og:description" content="บทวิเคราะห์เชิงนิติศาสตร์อิสลามว่าด้วยการแต่งชุดดำไว้ทุกข์ — แก่นของ 'หิดาด' คือการละเว้นการประดับประดาและกลิ่นหอม ไม่ใช่ตัวสี พร้อมพิจารณาข้อกังวลเรื่องการเลียนแบบ (ตะชับบุฮ์) การคร่ำครวญ (นิยาหะฮ์) และบทบาทของอุรุฟในบริบทสังคมไทย-มาเลย์">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/wearing-black-for-mourning.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="wearing-black-for-mourning">
+<div id="readingProgressBar"></div>
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์</a>
+      <h1 class="article-feature-title">การแต่งชุดดำไว้ทุกข์: มุมมองเชิงศาสนาและวัฒนธรรม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">คำถามที่มักถูกหยิบยกขึ้นมาในสังคมมุสลิมยุคใหม่คือ “จำเป็นหรือไม่ที่มุสลิมจะต้องแต่งชุดดำในงานศพหรือช่วงไว้ทุกข์?”</p>
+
+      <p>คำถามตรงนี้…สะท้อนให้เห็นถึงความสับสนระหว่างหลักศาสนากับธรรมเนียมทางสังคม ซึ่งมักผสานอยู่ในชีวิตประจำวันของผู้คน</p>
+
+      <h2 class="article-h2">ข้อบังคับว่าด้วยการไว้ทุกข์</h2>
+
+      <p>ก่อนจะตอบคำถามเรื่อง “สีดำ” เราจำเป็นต้องเข้าใจก่อนว่า “ข้อบังคับ” ที่แท้จริงของอิสลามในเรื่องการไว้ทุกข์คืออะไร</p>
+
+      <p>อิสลามยอมรับว่าการโศกเศร้าต่อการสูญเสียเป็นธรรมชาติของมนุษย์ และไม่ห้ามแสดงออกซึ่งความเสียใจ แต่ได้วางขอบเขตไว้อย่างชัดเจน การปฏิบัติเช่นนี้เรียกว่า “หิดาด” (<span class="ar-inline" lang="ar" dir="rtl">الحداد</span>) ซึ่งหมายถึง “การไว้ทุกข์” และเป็นข้อบัญญัติที่ “เฉพาะเจาะจงสำหรับสตรี” โดยมีรายละเอียดดังนี้:</p>
+
+      <p>สำหรับสตรีที่เป็นภรรยา: ต้องงดการตกแต่งร่างกาย การใช้เครื่องหอม หรือการย้อมสีผ้าและผม ตั้งแต่วันที่สามีเสียชีวิตจนสิ้นสุดระยะเวลาการไว้ทุกข์ และหากตั้งครรภ์ ระยะเวลาก็จะสิ้นสุดเมื่อคลอดบุตร แต่หากไม่ตั้งครรภ์ ระยะเวลาคือสี่เดือนสิบวัน ตามที่ระบุในอัลกุรอาน</p>
+
+      <p>สำหรับบุคคลอื่นที่มิใช่สามี: สตรีสามารถไว้ทุกข์ได้ไม่เกิน “สามวัน” ไม่ว่าจะเป็นบิดา มารดา หรือบุตรของตนเองก็ตาม</p>
+
+      <p>ส่วนบุรุษนั้น ไม่มีการกำหนดระยะเวลา แต่อยู่ในขอบเขตของความเหมาะสมและการแสดงความเคารพ</p>
+
+      <p>หลักฐานในเรื่องนี้ คือหะดีษที่รายงานโดยอัลบุคอรีย์และมุสลิม ซึ่งบันทึกไว้ว่า ท่านซัยนับได้กล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">دخلت على أم حبيبة زوج النبي صلى الله عليه وسلم حين توفي أبوها أبو سفيان  فدعت أم حبيبة  بطيب فيه صفرة خلوق أو غيره فدهنت منه جارية ثم مست بعارضيها ثم قالت والله ما لي بالطيب من حاجة غير أني سمعت رسول الله صلى الله عليه وسلم يقول على المنبر لا يحل لامرأة تؤمن بالله واليوم الآخر تحد على ميت فوق ثلاث إلا على زوج أربعة أشهر وعشرا</p>
+      </div>
+      <p>“ฉันได้เข้าไปหาท่านอุมมุฮะบีบะฮ์ (เราะฎิยัลลอฮุอันฮา) ภรรยาของท่านนบี ﷺ ภายหลังจากการเสียชีวิตของอบู สุฟยาน บิดาของนาง เมื่อครบสามวัน อุมมุฮะบีบะฮ์ได้ขอเครื่องหอมชนิดหนึ่งมาทาหน้าและแขน แล้วกล่าวว่า: อันที่จริงฉันไม่จำเป็นต้องทำเช่นนี้เลย หากฉันมิได้ยินท่านรอซูลุลลอฮ์ ﷺ กล่าวบนมิมบัรว่า: ‘ไม่อนุญาตให้หญิงใดที่ศรัทธาต่ออัลลอฮ์และวันอาคิเราะฮ์ ไว้ทุกข์เกินสามวันต่อผู้ตายคนใด เว้นแต่สามีของนาง ซึ่งนางจะต้องไว้ทุกข์สี่เดือนสิบวัน’”</p>
+
+      <p>ท่านอิหม่ามอันนะวาวีย์อธิบายไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فيه دليل على وجوب الإحداد على المعتدة من وفاة زوجها وهو مجمع عليه في الجملة وإن اختلفوا في تفصيله، فيجب على كل معتدة عن وفاة سواء المدخول بها وغيرها والصغيرة والكبيرة والبكر والثيب والحرة والأمة والمسلمة والكافرة هذا مذهب الشافعي والجمهور . وقال أبو حنيفة  وغيره من الكوفيين وأبو ثور  وبعض المالكية : لا يجب على الزوجة الكتابية بل يختص بالمسلمة لقوله صلى الله عليه وسلم : ( لا يحل لامرأة تؤمن بالله ) فخصه بالمؤمنة .</blockquote>
+      <p class="ar-translation">“(หะดีษบทนี้) เป็นหลักฐานบ่งชี้ถึงข้อบังคับของการ ‘อิห์ดาด’ (การไว้ทุกข์) สำหรับสตรีที่อยู่ในช่วงอิดดะฮ์ เนื่องจากการเสียชีวิตของสามี และประเด็นนี้ถือเป็น ‘สิ่งที่ปวงปราชญ์เห็นพ้องต้องกันโดยรวม’ แม้ว่าพวกเขาจะมีความเห็นต่างกันในรายละเอียดปลีกย่อยก็ตาม ดังนั้น จึงเป็นวาญิบสำหรับ ‘สตรีทุกคน’ ที่อยู่ในช่วงอิดดะฮ์จากการเสียชีวิต (ของสามี) โดยไม่คำนึงถึงว่า การสมรสนั้นได้มีการร่วมหลับนอนแล้วหรือไม่, นางจะเป็นเด็กหรือผู้ใหญ่, นางจะเป็นสาวพรหมจรรย์หรือผ่านการสมรสมาแล้ว, นางจะเป็นไทหรือทาส, นางจะเป็นมุสลิมหรือกาฟิร นี่คือทัศนะของอิหม่ามอัชชาฟิอีย์และปวงปราชญ์ส่วนใหญ่ (ในทางกลับกัน) ท่านอบู หะนีฟะฮ์ และนักวิชาการท่านอื่นๆจากกูฟะฮ์, ท่านอบู ษูรและนักวิชาการมาลิกียะฮ์บางท่าน กล่าวว่า: ‘ไม่เป็นวาญิบ’ สำหรับภรรยาที่เป็น ‘อะฮ์ลุลกิตาบ’ แต่ข้อบังคับนี้ ‘จำกัดเฉพาะ’ อยู่กับสตรีมุสลิมเท่านั้น โดยอ้างอิงจากวจนะของท่านนบี ﷺ ที่ว่า: ‘ไม่เป็นที่อนุมัติสำหรับสตรีใดที่ศรัทธาต่ออัลลอฮ์’ ซึ่งพวกท่านเห็นว่าเป็นการ ‘จำกัดขอบเขต’ ข้อชี้ขาดนี้ไว้เฉพาะกับ ‘ผู้ศรัทธา’ (สตรีมุสลิม) เท่านั้น”</p>
+
+      <h2 class="article-h2">การประดับประดา ไม่ใช่ สี นั่นคือข้อห้ามที่แท้จริง</h2>
+
+      <p>จากช่วงแรก เราจะเห็นว่า แก่นแท้ของ “ไว้ทุกข์” (<span class="ar-inline" lang="ar" dir="rtl">الحداد</span>) คือการ “ละเว้นจากการประดับประดา”</p>
+
+      <p>ในช่วงเวลาแห่งความโศกเศร้า มุสลิมได้รับคำแนะนำให้ละเว้นจากการแต่งกายที่ขัดต่อบรรยากาศของการไว้ทุกข์ ซึ่งไม่ได้เจาะจงที่ “สี” แต่เจาะจงที่ “ลักษณะ” ของเสื้อผ้า</p>
+
+      <p>ท่านนบีมุฮัมมัด ﷺ ได้ยกตัวอย่างตามธรรมเนียมของชาวอาหรับในสมัยนั้น โดยท่านได้ห้ามการสวมเสื้อผ้าที่ถูกย้อมด้วยหญ้าฝรั่น (<span class="ar-inline" lang="ar" dir="rtl">الزعفران</span>) หรือวัรส์ (<span class="ar-inline" lang="ar" dir="rtl">الورس</span>) เนื่องจากเสื้อผ้าประเภทดังกล่าวถือเป็นเครื่องแต่งกายเชิงประดับและมีกลิ่นหอม ซึ่งไม่เหมาะแก่บรรยากาศแห่งการไว้ทุกข์</p>
+
+      <p>อัลฮาฟิศอิบนุ หะญัร อัลอัสกอลานีย์ได้อธิบายไว้อย่างชัดเจนว่า “คำกล่าวของท่านนบี ﷺ ที่ว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَلَا تَلْبَسُوا مِنَ الثِّيَابِ شَيْئًا مَسَّهُ زَعْفَرَانٌ أَوْ وَرْسٌ</p>
+      </div>
+      <p>‘และพวกท่านจงอย่าสวมใส่เสื้อผ้าใดๆที่สัมผัสด้วยหญ้าฝรั่นหรือวัรส์’…</p>
+
+      <p>สิ่งที่ปรากฏชัดก็คือ ‘ประเด็นสำคัญ’ ของการเปลี่ยนแปลงรูปแบบการกล่าวนี้คือ เสื้อผ้าใดๆก็ตามที่ถูกผสมด้วยหญ้าฝรั่นหรือวัรส์นั้น ‘ไม่อนุญาตให้สวมใส่’ ไม่ว่าเสื้อผ้านั้นจะเป็นชนิดที่ผู้ครองอิห์รอมสวมใส่ตามปกติหรือไม่ก็ตาม (กล่าวคือ ข้อห้ามนี้มุ่งไปที่ ‘กลิ่น’ โดยไม่จำกัด ‘ประเภท’ ของเสื้อผ้าเหมือนข้อห้ามก่อนหน้านี้)</p>
+
+      <p>‘อัลวัรส์’ (<span class="ar-inline" lang="ar" dir="rtl">الورس</span>) คือ พืชสีเหลืองที่มีกลิ่นหอม ใช้สำหรับย้อมผ้า อิบนุลอะเราะบีย์กล่าวว่า: วัรส์นั้น (โดยตัวมันเอง) ไม่ใช่เครื่องหอม แต่ทว่า การที่ท่านนบีกล่าวถึงมัน เป็นการ ‘กระตุ้นเตือน’ ให้หลีกเลี่ยงเครื่องหอมและสิ่งที่คล้ายคลึงกับมันในแง่ที่ ‘พึงพอใจต่อประสาทสัมผัสทางกลิ่น’</p>
+
+      <p>ดังนั้น จึงสามารถ ‘อนุมาน’ จากสิ่งนี้ถึง ‘ข้อห้าม’ ในการใช้เครื่องหอมทุกชนิดสำหรับผู้ครองอิห์รอม และประเด็นนี้ถือเป็น ‘มติเอกฉันท์’ ในกรณีที่มีเจตนาเพื่อ ‘ประพรมน้ำหอม’ โดยตรง</p>
+
+      <p>และมีการอ้างหลักฐานจากคำกล่าวของท่านนบีที่ว่า ‘สัมผัส’ เพื่อบ่งชี้ถึงข้อห้ามสำหรับเสื้อผ้าที่ถูกย้อม ไม่ว่าจะทั้งหมดหรือบางส่วน และแม้ว่ากลิ่นของมันจะจางลงแล้วก็ตาม</p>
+
+      <p>ท่านอิหม่ามมาลิกว่า: ที่ว่าการสวมใส่เสื้อผ้าย้อมสีเป็นที่น่ารังเกียจก็เพราะว่ามันยังคง ‘ส่งกลิ่น’ ออกมา</p>
+
+      <p>ส่วนนักวิชาการชาฟิอีย์กล่าวว่า: หากเสื้อผ้านั้นอยู่ในสภาพที่เมื่อถูกน้ำแล้ว กลิ่นไม่ฟุ้งออกมา ก็ไม่ถือว่าเป็นที่ต้องห้าม (นำมาใส่ได้) และหลักฐานสำหรับทัศนะนี้คือ หะดีษของอิบนุ อับบาสด้วยสำนวนว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَلَمْ يَنْهَ عَنْ شَيْءٍ مِنَ الثِّيَابِ إِلَّا الْمُزَعْفَرَةَ الَّتِي تَرْدَعُ الْجِلْدَ</p>
+      </div>
+      <p>‘...และท่านไม่ได้ห้ามเสื้อผ้าชนิดใดเลย เว้นแต่เสื้อผ้าที่ย้อมด้วยหญ้าฝรั่นซึ่ง ‘ทิ้งรอยเปื้อนบนผิวหนัง’ (เพราะมันยังคงส่งกลิ่นอยู่)’”</p>
+
+      <p>ดังนั้น จะเห็นได้ว่าข้อห้ามของศาสนานั้นมุ่งเน้นไปที่ “การประดับประดาและกลิ่นหอม” ไม่ใช่ตัวสี และสีที่เหมาะสมที่สุดก็คือสีที่ “ตรงข้าม” กับการประดับประดานั่นเอง ดังที่อิหม่ามอันนะวะวีย์ได้อธิบายว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وإن كان الصبغ مما لا يقصد به الزينة، بل يعمل للمصيبة واحتمال الوسخ كالأسود والكحلي، فلها لبسه وهو أبلغ في الإحداد</blockquote>
+      <p class="ar-translation">“หากสีเสื้อผ้านั้น ไม่ได้มีจุดประสงค์เพื่อความงดงาม แต่สวมใส่เพราะเหตุแห่งความทุกข์ หรือเพื่อป้องกันสิ่งสกปรก เช่น สีดำหรือสีน้ำเงินเข้ม หญิงผู้ไว้ทุกข์สามารถสวมใส่ได้ เพราะสีเหล่านี้คือสีที่เหมาะสมที่สุดสำหรับช่วงเวลาแห่งการไว้ทุกข์”</p>
+
+      <p>การสวมเสื้อผ้าสีดำของสตรีที่อยู่ในช่วงอิดดะฮ์จึงไม่เพียงเป็นสิ่งที่อนุญาต แต่ยังถือว่า “เหมาะสมและสงบสำรวมที่สุด” ในเชิงศีลธรรมและจิตวิญญาณ แสดงถึงความนอบน้อมและการยอมรับต่อพระลิขิตของอัลลอฮ์อย่างสงบงดงาม</p>
+
+      <h2 class="article-h2">สีดำในมิติประวัติศาสตร์และวัฒนธรรม</h2>
+
+      <p>เมื่อเราทราบแล้วว่า “สีดำ” ไม่ได้ถูกห้ามทางศาสนา แต่ยังถูกมองว่า “เหมาะสม” ที่สุดสำหรับการไว้ทุกข์ด้วยซ้ำ คำถามต่อมาคือ แล้วข้อกังวลอื่นๆ ล่ะ?</p>
+
+      <p>ข้อกังวลที่ 1: การเลียนแบบ (ตะชับบุฮ์)</p>
+
+      <p>มีผู้กังวลว่า การใส่ชุดดำเป็นการเลียนแบบศาสนาอื่น โดยอ้างหะดีษของท่านนบี ﷺ ที่ว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">مَنْ تَشَبَّهَ بِقَوْمٍ فَهُوَ مِنْهُمْ</p>
+      </div>
+      <p>“ผู้ใดเลียนแบบกลุ่มชนใด เขาก็ถือว่าเป็นส่วนหนึ่งของกลุ่มชนนั้น”</p>
+
+      <p>อย่างไรก็ตาม นักวิชาการได้อธิบายว่า หากเสื้อผ้าหรือการกระทำนั้น “ไม่ได้เป็นสัญลักษณ์เฉพาะของชาวที่ไม่ใช่มุสลิม...อีกต่อไป” ก็สามารถเปลี่ยนสถานะทางบทบัญญัติได้ กลายเป็นสิ่งที่ “อนุญาต” แทนที่จะเป็นสิ่งต้องห้าม</p>
+
+      <p>ในประวัติศาสตร์อิสลามเอง สีดำถูกใช้เป็นสัญลักษณ์แห่งการไว้ทุกข์มานานแล้ว</p>
+
+      <p>ท่านอิหม่ามอัซซาฟะรินีย์กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أول ما لبس العباسيون السواد حين قتل مروان الأموي  إبراهيم  الإمام لما تنسم منه دعوى الخلافة لبسوه حزنا قالوا : لأنها أشبه بثياب أهل المصيبة وفي المحكم : البس البياض والسواد ، فإن الدهر كذا بياض وسواد . وأول من لبس السواد من بني العباس  عبد الله بن علي بن عبد الله بن عباس  رضي الله عنهم ذكره السيوطي  في أوائله ، والمعتمد في المذهب عدم الكراهة والله أعلم .</blockquote>
+      <p class="ar-translation">“ครั้งแรกที่ราชวงศ์อับบาซิดเริ่มสวมใส่ชุดสีดำ เกิดขึ้นเมื่อมัรวาน (เคาะลีฟะฮ์แห่งราชวงศ์อุมัยยะฮ์) ได้สังหารอิบรอฮีม อัลอิมาม (ผู้นำขบวนการอับบาซิดในยุคแรก) หลังจากที่เขาสัมผัสได้ถึงการอ้างสิทธิ์ในตำแหน่งเคาะลีฟะฮ์ของอิบรอฮีม พวกเขา (ชาวอับบาซิด) จึงสวมชุดดำเพื่อเป็นการไว้ทุกข์ มีผู้กล่าว (อธิบายเหตุผล) ว่า: ‘เพราะมัน (สีดำ) คล้ายคลึงกับอาภรณ์ของอะฮ์ลุลมุศีบะฮ์ (หมายถึงผู้ไว้ทุกข์) มากที่สุด’ และใน (พจนานุกรม) อัลมุห์กัมระบุ (เป็นสำนวน) ว่า: ‘จงสวมใส่ทั้งสีขาวและสีดำเถิด เพราะแท้จริงแล้วกาลเวลา (หรือชีวิต) ก็เป็นเช่นนั้น คือมีทั้งขาวและดำ (หมายถึง มีทั้งสุขและทุกข์)’ และบุคคลแรกในหมู่ตระกูลอับบาซิดที่สวมใส่ชุดดำคือ อับดุลลอฮ์ บิน อะลี บิน อับดุลลอฮ์ บิน อับบาส (เราะฎิยัลลอฮุอันฮุม) ดังที่ท่านอัสสุยูฏีย์ ได้กล่าวไว้ในหนังสืออัลอะวาอิลของท่าน (ส่วนข้อชี้ขาดทางศาสนา) และทัศนะอันเป็นที่ยึดถือกัน (อัลมุอ์ตะมัด) ในมัสฮับ (อัลฮัมบาลีย์) คือ ‘ไม่มีความน่ารังเกียจ’ (ในการสวมใส่ชุดสีดำเพื่อไว้ทุกข์) วัลลอฮุอะอ์ลัม”</p>
+
+      <p>หลักการนี้ยังถูกยืนยันโดยนักวิชาการในประเด็นอื่นๆ เช่น ผ้าคลุมไหล่ “อัฏฏอยาลีซะฮ์” ซึ่งเคยเป็นสัญลักษณ์ของชาวยิว แต่เมื่อมันหมดสถานะ “เฉพาะ” นั้นไปแล้ว ก็กลับกลายเป็นสิ่งที่อนุญาต</p>
+
+      <p>ท่านชัยค์อัลบุญัยริมีย์ได้อธิบายเมื่อกล่าวถึงผ้าคลุมศีรษะชนิดหนึ่งที่เรียกว่า อัฏฏอยาลีซะฮ์ (<span class="ar-inline" lang="ar" dir="rtl">الطيالسة</span>) ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أن الطيالسة الآن ليست من شعارهم بل ارتفع في زماننا وصار داخلا في عموم المباح وقد ذكره ابن عبد السلام في البدع المباحة.</blockquote>
+      <p class="ar-translation">“ผ้าคลุมชนิดอัฏฏอยาลีซะฮ์ในยุคของเรา มิได้เป็นสัญลักษณ์ของชาวคริสเตียนหรือยิวอีกต่อไป แต่มันหมดสถานะนั้นลงแล้ว และกลายเป็นสิ่งที่รวมอยู่ในประเภทของสิ่งที่อนุญาตได้ทั่วไป ซึ่งอิบนุ อับดุสสลามได้กล่าวถึงไว้ในหมวดของบิดอะฮ์ที่อนุญาต”</p>
+
+      <p>อัลฮาฟิศอิบนุ หะญัร อัลอัสกอลานีย์เคยได้อธิบายเรื่องนี้ไว้เช่นกันว่า “การอ้างหลักฐานจากเรื่องราวของชาวยิวนั้น จะสมเหตุสมผลก็ต่อเมื่ออัฏฏ็อยาลิซะฮ์ ‘ยังคงเป็นสัญลักษณ์เฉพาะ’ ของพวกเขา แต่ทว่า สภาวะดังกล่าวนั้นได้หมดสิ้นไปแล้วในยุคสมัยปัจจุบันนี้ ดังนั้น การสวมอัฏฏ็อยาลิซะฮ์จึงกลับเข้าไปอยู่ภายใต้ ‘หลักการทั่วไปว่าด้วยสิ่งที่อนุญาต’ และท่านอิบนุ อับดิสสะลาม ก็ได้กล่าวถึงมันไว้ในฐานะตัวอย่างหนึ่งของบิดอะฮ์ที่อนุญาต”</p>
+
+      <p>อัลฮาฟิศอิบนุ หะญัร อัลอัสกอลานีย์อธิบายต่อว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقد يصير من شعائر قوم فيصير تركه من الإخلال بالمروءة كما نبه عليه الفقهاء أن الشيء قد يكون لقوم وتركه بالعكس</blockquote>
+      <p class="ar-translation">“และสิ่งหนึ่งอาจกลายเป็น ‘สัญลักษณ์’ ของกลุ่มชนหนึ่ง จนกระทั่งการ ‘ละทิ้ง’ มัน กลายเป็นการ ‘บกพร่องต่อมารยาท’ ดังที่บรรดานักนิติศาสตร์ได้ชี้ให้เห็นว่า ‘สิ่งหนึ่งอาจเป็น (สัญลักษณ์) สำหรับกลุ่มชนหนึ่ง และการละทิ้งมันก็อาจให้ผลตรงกันข้าม (คือ กลายเป็นไม่เหมาะสม)’ และอิบนุรริฟอะฮ์ ท่านได้ยกตัวอย่างเปรียบเทียบในเรื่องนี้ถึงกรณีของ ‘พ่อค้าในตลาด’ กับ ‘นักนิติศาสตร์’ ในเรื่องการสวมอัฏฏ็อยลิซะฮ์ (ซึ่งบ่งชี้ว่า การสวมใส่อาภรณ์ชนิดเดียวกัน อาจเหมาะสมกับคนกลุ่มหนึ่ง แต่ไม่เหมาะสมกับอีกกลุ่มหนึ่ง แต่ก็ขึ้นอยู่กับจารีตและสถานะทางสังคมในยุคนั้นๆ)”</p>
+
+      <p>นอกจากนี้ ยังมีรายงานจากท่านอัลมุฆีเราะฮ์ บิน ชุอ์บะฮ์ว่า บิดาของเขาได้เล่าว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">أَنَّ النَّبِيَّ صلى الله عليه وسلم لَبِسَ جُبَّةً رُومِيَّةً ضَيِّقَةَ الْكُمَّيْنِ</p>
+      </div>
+      <p>“ท่านนบี ﷺ เคยสวมเสื้อคลุมชนิดหนึ่งจากโรมัน ซึ่งมีแขนเสื้อที่แคบ”</p>
+
+      <p>ข้อกังวลที่ 2: การคร่ำครวญ (นิยาหะฮ์)</p>
+
+      <p>ข้อกังวลที่สองคือ การใส่ชุดดำจะถือเป็นการ “คร่ำครวญ” หรือไม่พอใจต่อลิขิตของอัลลอฮ์หรือไม่ ซึ่งศาสนาอิสลามได้ห้ามการกระทำเหล่านี้อย่างเด็ดขาด ดังที่ท่านนบี ﷺ ได้กล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">لَيْسَ مِنَّا مَنْ لَطَمَ الْخُدُودَ، وَشَقَّ الْجُيُوبَ، وَدَعَا بِدَعْوَى الْجَاهِلِيَّةِ</p>
+      </div>
+      <p>“ไม่ใช่ส่วนหนึ่งจากหมู่ประชาชาติของข้า คือผู้ที่ตีหน้า ฉีกเสื้อผ้า และกล่าวคำในแนวทางของพวกญาฮิลียะฮ์ (ยุคเขลา)”</p>
+
+      <p>นักวิชาการบางท่านในมัสฮับอัชชาฟิอีย์ได้กล่าวว่า การ “กำหนดสีเสื้อผ้าหนึ่งสีใดโดยเฉพาะ” เพื่อใช้ในช่วงการสูญเสีย ก็อาจถือว่าเข้าข่าย “การคร่ำครวญ” ได้ ดังที่อิหม่ามคอฏีบ อัชชิรบีนีกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ومن ذلك أيضا تغيير الزي ولبس غير ما جرت به العادة، والضابط كل فعل يتضمن إظهار جزع ينافي الانقياد والاستسلام لقضاء الله تعالى</blockquote>
+      <p class="ar-translation">“และยังรวมถึงการเปลี่ยนรูปแบบการแต่งกายให้ต่างไปจากปกติ (ก็ถือว่าต้องห้าม) เพราะหลักเกณฑ์คือ ทุกการกระทำที่สื่อถึงความไม่พอใจหรือการขัดขืนต่อพระลิขิตของอัลลอฮ์นั้น ถือเป็นสิ่งที่ต้องห้าม”</p>
+
+      <p>ประเด็นนี้จึงขึ้นอยู่กับ “เจตนา” และ “จารีตประเพณี” ของสังคมนั้นๆ</p>
+
+      <h2 class="article-h2">บทสรุปของ “อุรุฟ” (จารีต)</h2>
+
+      <p>ท่านชัยค์อะฏียะฮ์ ศ็อกร์ (อดีตประธานคณะกรรมการฟัตวาแห่งอัสฮัร) ได้สรุปประเด็นนี้ไว้อย่างชัดเจนว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والخلاصة أنه لا يوجد نص دينى فى القرآن والسنة يشير إلى ارتداء الملابس السوداء حدادا على المتوفى، وإنما الموجود هو النهى عن الملابس التى تتنافى مع الحزن، ويترك تحديد ذلك للعرف</blockquote>
+      <p class="ar-translation">“โดยสรุปแล้ว ไม่มีหลักฐานทางศาสนาใดในอัลกุรอานหรือซุนนะฮ์ที่ระบุว่า ผู้ไว้ทุกข์จำเป็นต้องสวมเสื้อผ้าสีดำโดยเฉพาะ แต่สิ่งที่ศาสนาได้กำหนดไว้ก็คือ ข้อห้ามในการแต่งกายที่ขัดต่อสภาพแห่งความโศกเศร้า ส่วนลักษณะของเสื้อผ้าที่ถือว่าเหมาะสมหรือไม่เหมาะสมในช่วงไว้ทุกข์นั้น ถูกปล่อยให้เป็นไปตาม ‘จารีตประเพณีของแต่ละสังคม’ ซึ่งอาจแตกต่างกันไปตามกาลเวลาและวัฒนธรรม”</p>
+
+      <p>ในขณะที่นักวิชาการชาฟิอีย์บางท่านมองว่า “การกำหนดสี” อาจเข้าข่ายการคร่ำครวญ แต่ในบริบทของสังคมไทยและมาเลเซีย จารีตประเพณีมิได้มองว่าสิ่งนี้มีความหมายเช่นนั้น ซึ่งคำวินิจฉัยจากสหพันธรัฐของมาเลเซียก็ได้ให้คำตอบทำนองนี้ว่า:</p>
+
+      <p>“ตามอุรุฟ (จารีต) ของมาเลเซีย มิได้ถือเช่นนั้น (หมายถึง จะถูกนับว่าเข้าข่าย ‘การคร่ำครวญ’ นิยาหะฮ์) ดังนั้น ฮุกุมของการสวมเสื้อผ้าสีดำในพิธีฝังศพจึงเป็นสิ่งที่ ‘อนุญาต’”</p>
+
+      <p>ในวัฒนธรรมไทยเอง การใช้สีเพื่อไว้ทุกข์ก็มีมานาน ดังมีบันทึกว่า “ในอดีตเมื่อมีงานศพหรือพระศพของเจ้านายจะมีการไว้ทุกข์โดยหลักอยู่ 2 วิธีคือ สีของเครื่องแต่งกาย... คือ 1.สีดำ 2.สีขาว และ 3.สีม่วงแก่หรือสีน้ำเงินแก่...”</p>
+
+      <p>ดังนั้น การใส่ชุดดำไปงานศพในบริบทสังคมไทย ถือว่า “ไม่ผิดศาสนา” เพราะเป็นการปฏิบัติตาม “อุรุฟ” (จารีต) ของสังคมเพื่อแสดงความสำรวมและความเคารพ ไม่ใช่ “เครื่องหมายศาสนาอื่นโดยเฉพาะ” และไม่ใช่การ “นิยาหะฮ์” (การคร่ำครวญ) หากผู้สวมใส่ไม่ได้มีเจตนาเพื่อแสดงการไม่ยอมรับต่อพระลิขิตของอัลลอฮ์</p>
+
+      <p>แต่อาจจะมีคำถามว่า ถ้าเราจะ “ใส่ชุดดำให้กับคนต่างศาสนา แล้วทำไมไม่ใส่ชุดดำให้ญาติเราเล่า?”</p>
+
+      <p>เมื่อเราเข้าใจประเด็นที่ผ่านมาแล้ว ก็จะสามารถตอบคำถามได้อย่างชัดเจนว่า:</p>
+
+      <p>“ประเด็นไม่ได้อยู่ที่ว่าเราจะแต่งชุดดำให้ใคร แต่ประเด็นอยู่ที่ว่า เรากำลังปฏิบัติตามหลักการศาสนาและจารีตของสังคมอย่างถูกต้องหรือไม่</p>
+
+      <p>1. สำหรับญาติมุสลิมของเรา: เรา “สมควรอย่างยิ่ง” ที่จะต้องไว้ทุกข์ให้พวกเขาตามที่ศาสนากำหนด และเมื่อเราไว้ทุกข์ในสังคมไทย การเลือกใส่ “ชุดดำ” ก็คือวิธีการแสดงออกถึงการไว้ทุกข์ที่ “เหมาะสมที่สุด” ตามหลักการ (คือไม่ประดับประดา) และตามจารีตของสังคม (คือการให้เกียรติ)</p>
+
+      <p>2. สำหรับการไปร่วมงานที่ไม่เกี่ยวกับพิธีกรรมของคนต่างศาสนิก: การที่เราแต่งชุดดำไปร่วมงานของพวกเขา ไม่ใช่การทำเพื่อ “ไว้ทุกข์ให้คนต่างศาสนา” ในเชิงอิบาดะฮ์ แต่เป็นการ “ปฏิบัติตามในฐานะเพื่อนมนุษย์หรือมารยาททางสังคม” และให้เกียรติเจ้าภาพตามธรรมเนียมปฏิบัติ ซึ่งอิสลามไม่ได้ห้าม</p>
+
+      <p>ดังนั้น คำถามที่ถูกต้องจึงไม่ใช่ “ทำไมแต่งชุดดำให้คนนอกศาสนาได้ แต่ไม่แต่งชุดดำให้ญาติเรา?” แต่ควรจะเป็น “เราควรแต่งกายให้เหมาะสมเพื่อแสดงความเคารพต่อญาติมุสลิมของเราตามหลักการศาสนาและจารีตของสังคมใช่หรือไม่?”</p>
+
+      <p>ซึ่งคำตอบก็คือ...ใช่ เราสมควรทำเช่นนั้นอย่างยิ่ง”</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การแต่งชุดดำไว้ทุกข์: มุมมองเชิงศาสนาและวัฒนธรรม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/wearing-black-for-mourning.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography">
+        <li>นนทพร อยู่มั่งมี และ ธัชชัย ยอดพิชัย. (๒๕๕๑). ธรรมเนียมพระบรมศพและพระศพเจ้านาย. กรุงเทพฯ : มติชน.</li>
+        <li>สมภพ ภิรมย์. (๒๕๓๙). พระเมรุมาศ พระเมรุ และเมรุ สมัยกรุงรัตนโกสินทร์. กรุงเทพฯ : อมรินทร์พริ้นติ้งแอนด์พับลิชชิง.</li>
+        <li>หนังสือ สารคดี ของ ม.จ.หญิง พูนพิศมัย ดิศกุล</li>
+        <li>IRSYAD HUKUM SIRI KE-884: HUKUM ORANG ISLAM MEMAKAI PAKAIAN HITAM KETIKA MENGHADIRI KEMATIAN</li>
+      </ol>
+    </section>
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
