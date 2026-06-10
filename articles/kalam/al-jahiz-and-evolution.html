@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>มรดกของอัลญาฮิซ: จากการรังสรรค์อันประณีต สู่ข้อถกเถียงเรื่องวิวัฒนาการ — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="มรดกทางความคิดของอัลญาฮิซ นักสัตววิทยาแห่งบัสเราะฮ์ศตวรรษที่ 9 ผู้วางเค้าโครงแนวคิด ‘การต่อสู้เพื่อความอยู่รอด’ และการแปรผันของสายพันธุ์ พร้อมข้อถกเถียงว่าแนวคิดของท่านเป็นต้นธารทฤษฎีวิวัฒนาการของดาร์วินจริงหรือไม่">
+<meta name="keywords" content="อัลญาฮิซ, วิวัฒนาการ, ดาร์วิน, อัลฮะยะวาน, สัตววิทยา, มุอ์ตะซิละฮ์, กะลาม">
+<meta name="author" content="มัรกัส อัลอิมาม อัลอัชอะรีย์">
+
+<meta property="og:title" content="มรดกของอัลญาฮิซ: จากการรังสรรค์อันประณีต สู่ข้อถกเถียงเรื่องวิวัฒนาการ — Islamic Fiqh Publishing">
+<meta property="og:description" content="อัลญาฮิซวางเค้าโครงแนวคิดวิวัฒนาการก่อนดาร์วินพันปีจริงหรือ? บทวิเคราะห์มรดกของนักสัตววิทยาแห่งบัสเราะฮ์">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/kalam/al-jahiz-and-evolution.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+.bibliography.latin { direction: ltr; text-align: left; }
+.bibliography.latin li { font-family: 'Inter', 'Sarabun', sans-serif; }
+.biblio-subhead {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 15px; font-weight: 700;
+  color: var(--text-primary); margin: 24px 0 4px;
+}
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="al-jahiz-and-evolution">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/kalam.html" class="article-feature-eyebrow">กะลาม / เทววิทยา</a>
+      <h1 class="article-feature-title">มรดกของอัลญาฮิซ: จากการรังสรรค์อันประณีต สู่ข้อถกเถียงเรื่องวิวัฒนาการ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">อัลญาฮิซ (เสียชีวิต ฮ.ศ. 255 / ค.ศ. 869) ได้เปิดบทวิเคราะห์ของท่านว่าด้วยความมหัศจรรย์ของสิ่งมีชีวิต ด้วยการเปรียบเทียบระหว่างสัญชาตญาณของสัตว์กับสติปัญญาของมนุษย์ ท่านเขียนไว้ในตำรา “อัลฮะยะวาน” (ตำราแห่งสรรพชีวิต) ว่า</p>
+
+      <p>“…[จงพิจารณา] สิ่งที่พระเจ้าได้ประทานแก่สรรพสัตว์…นั่นคือความรู้หลากหลายแขนง และสัญชาตญาณ (ฟิฏเราะฮ์) ที่นำทางอย่างน่าพิศวง…พวกมันได้รับ ‘ความรู้สึกอันละเอียดอ่อน’ และ ‘งานฝีมืออันน่าทึ่ง’ โดยปราศจากการอบรมสั่งสอน…ปราศจากการเรียนรู้และฝึกฝน…พวกมันบรรลุได้ด้วยสัญชาตญาณและการด้นสดในสิ่งที่แม้แต่มนุษย์ผู้เชี่ยวชาญที่สุดและนักปราชญ์ที่ฉลาดที่สุดก็มิอาจทำได้…[มนุษย์] กลับต้องตะลึงในสิ่งที่ตนเองด้อยกว่า แม้กระทั่งสิ่งที่แมลงตัวเล็ก ๆ ทำได้ ดังเช่นสิ่งที่พระเจ้าได้ประทานแก่แมงมุม หนอนไหมและผึ้ง…สรรพสัตว์เหล่านี้ทำสิ่งมหัศจรรย์ที่มันทำได้ โดยปราศจากการเรียนรู้ ในสิ่งที่มนุษย์ไม่อาจทำได้แม้จะเรียนรู้แล้วก็ตาม…”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>คำกล่าวนี้คือภาพสะท้อนที่ชัดเจนที่สุดของ “สายตา” แบบอัลญาฮิซ นั่นคือสายตาของนักสังเกตการณ์เชิงประจักษ์ที่ไม่เพียงแต่มองสัตว์ในฐานะสิ่งถูกสร้างที่น่าเกรงขาม แต่ยังวิเคราะห์พวกมันในฐานะผู้เล่นในระบบนิเวศที่ซับซ้อน</p>
+
+      <p>และจากการสังเกตการณ์ “ความมหัศจรรย์ในสัญชาตญาณ” นี้เอง ที่นำพาเขาไปสู่การตั้งคำถามที่ลึกซึ้งยิ่งขึ้นเกี่ยวกับ “การดิ้นรนต่อสู้” และ “การเปลี่ยนแปลง” ของพวกมัน ซึ่งเป็นรากฐานของแนวคิดที่จะปฏิวัติวงการวิทยาศาสตร์ในอีกหนึ่งพันปีต่อมา</p>
+
+      <p>กลางศตวรรษที่ 9 แห่งโลกอิสลาม ขณะที่โลกคริสเตียนยุโรปยังจมอยู่กับภาพการสร้างมนุษย์จากดินเหนียวโดยพระหัตถ์ของพระผู้เป็นเจ้า และแนวคิดของกรีกยังวนเวียนอยู่กับการเปลี่ยนแปลงแบบคงที่ ในห้องสมุดบัสเราะฮ์แห่งหนึ่ง ชายผู้หนึ่งกำลังวางรากฐานแนวคิดที่มนุษย์จะเรียกมันในอีกพันปีต่อมาว่า “วิวัฒนาการ”</p>
+
+      <p>แม้ว่าอันนัซซอม (เสียชีวิตราว ฮ.ศ. 231 / ค.ศ. 845) จะเป็นผู้ริเริ่มแนวคิดเกี่ยวกับวิวัฒนาการทางชีววิทยาเป็นคนแรกในประวัติศาสตร์วิทยาศาสตร์ แต่ผู้ที่นำเสนอทฤษฎีนี้ใน “แบบแผนที่สมบูรณ์” เป็นครั้งแรก ก็คือนักสัตววิทยาผู้ยิ่งใหญ่ในยุคศตวรรษที่ 9 นามว่า อัลญาฮิซ</p>
+
+      <p>เขาคือผู้ริเริ่มแนวคิดนี้อย่างเป็นระบบและต่อเนื่อง ทฤษฎีของอัลญาฮิซถือเป็นตัวอย่างของการปฏิวัติทางวิทยาศาสตร์และนวัตกรรมทางความคิด ที่ส่ง “แรงสั่นสะเทือน” ไปสู่แวดวงความคิดของมนุษย์ในวงกว้างไกล</p>
+
+      <p>คงไม่ผิดนักหากจะกล่าวว่า ปัญหาหลายอย่างที่เกี่ยวกับ “ปรัชญาธรรมชาติ” (หรือการศึกษาโลกทางกายภาพในยุคก่อน) ได้ถูกมองในมุมมองใหม่หลังจากการปฏิวัติทางความคิดของอัลญาฮิซ และนักคิดรุ่นหลังที่ตามท่านมา</p>
+
+      <p>ก่อนที่เราจะไปดูแนวคิดของอัลญาฮิซ และอิทธิพลที่เขามีต่อนักคิดมุสลิมและชาวยุโรป โดยเฉพาะลามาร์ก (Lamarck) และดาร์วิน (Darwin) เราขอกล่าวถึงประวัติและผลงานของเขาสักเล็กน้อย</p>
+
+      <h2 class="article-h2">ประวัติชีวิตและผลงานโดยย่อ</h2>
+
+      <p>ชื่อเต็มของอัลญาฮิซคือ อบู อุษมาน อัมร์ บิน บะห์ร อัลบัศรี ท่านเกิดที่เมืองบัสเราะฮ์ (ในอิรักปัจจุบัน) ราวปี ค.ศ. 776</p>
+
+      <p>เรื่องราวในวัยเด็กไม่เป็นที่ทราบแน่ชัดนัก รู้เพียงแต่ว่าตั้งแต่อายุยังน้อย ท่านมีความกระหายในการเรียนรู้อย่างแรงกล้าและมีจิตใจที่ช่างสงสัยอย่างน่าทึ่ง สิ่งนี้ผลักดันให้เขาเลือกใช้ชีวิตที่เป็นอิสระ และที่น่าจะทำให้ครอบครัวของเขาสิ้นหวังคือ การอุทิศตนให้กับการศึกษาโดยไม่ยอมทำงานทำการ</p>
+
+      <p>อัลญาฮิซเข้าร่วมมัจลิสเพื่อเรียนรู้ตามมัสยิดต่าง ๆ เข้าร่วมฟังการถกเถียงปัญหาด้านภาษาศาสตร์ที่ตลาดมิรบัด (ศูนย์กลางการค้าและวรรณกรรม) และเข้าฟังการบรรยายจากนักปราชญ์ผู้ทรงคุณวุฒิที่สุดในยุคของเขาในด้านภาษาศาสตร์ การศึกษาศัพท์ และกวีนิพนธ์ เช่น อัลอัศมะอี (เสียชีวิต ฮ.ศ. 216 / ค.ศ. 831), อบู อุบัยดะฮ์ (เสียชีวิต ฮ.ศ. 209 / ค.ศ. 824) และอบู ซัยด์ (เสียชีวิต ฮ.ศ. 215 / ค.ศ. 830) ในไม่ช้าก็เชี่ยวชาญภาษาอาหรับควบคู่ไปกับความรู้เชิงวัฒนธรรมดั้งเดิม</p>
+
+      <p>ต่อมา สติปัญญาอันหลักแหลมของเขาก็ทำให้ได้เข้าร่วมในมัจลิสของกลุ่มมุอ์ตะซิละฮ์ (กลุ่มนักคิดเชิงเหตุผลนิยม) และในแวดวงสังคมชั้นสูง ซึ่งบทสนทนากับพวกเขานั้นมักจะมีชีวิตชีวาด้วยประเด็นปัญหาทางปรัชญา เทววิทยา และวิทยาศาสตร์</p>
+
+      <p>การสังเกตผู้คนอย่างทะลุปรุโปร่งในสังคมที่มีประชากรหลากหลาย (ในเมืองบัสเราะฮ์) ช่วยเพิ่มพูนความเข้าใจในธรรมชาติของมนุษย์ให้กับอัลญาฮิซ ขณะเดียวกัน การอ่านหนังสือทุกประเภทที่เริ่มแพร่หลายในบัสเราะฮ์ก็ช่วยเปิดมุมมองให้เขารู้จักโลกภายนอก</p>
+
+      <p>ฮาญี คอลีฟะฮ์ได้เล่าเอาไว้ว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لم أر قط ولا سمعت من أحب الكتب والعلوم أكثر من الجاحظ، فإنه لم يقع بيده كتاب قط إلا استوفى قراءته كائنا ما كان ولا عجب إذ ذاك في أن يفرد الصفحات الطوال مرات عدة في كتبه، للحديث عن فوائد الكتب وفضائلها ومحاسنها. والحق أنه كان أشبه بآلة مصورة، فليس هناك شيء يقرأه إلا ويرتسم في ذهنه، ويظل في ذاكرته آمادا متطاولة، ولكن الجاحظ لم يقصر مصادر فكره ومعارفه على الكتب، وخاصة أن ذلك عادة مذمومة فيما أخبرنا هو ذاته وأخبرنا كثيرون غيره، إذ العلم الحق لا يؤخذ إلا عن معلم، فتتلمذ على أيدي كثير من المعلمين العلماء واغتنى فكره من اتصاله بهم، وهو وإن لم يتفق مع بعضهم أو لم يرض عن فكرهم فإنه أقر بفضل الجميع ونقل عنهم وذكرهم مرارا بين طيات كتبه</blockquote>
+      <p class="ar-translation">“ข้าพเจ้าไม่เคยเห็นและไม่เคยได้ยินผู้ใดที่จะรักหนังสือและสรรพวิชามากไปกว่าอัลญาฮิซเลย เพราะไม่ว่าหนังสือเล่มใดจะตกถึงมือเขา เขาจะต้องอ่านมันจนจบสิ้น ไม่ว่าเนื้อหานั้นจะเป็นเช่นไรก็ตาม จึงไม่น่าแปลกใจเลยที่เขาจะอุทิศหน้ากระดาษหลาย ๆ แผ่นหลายต่อหลายครั้งในงานเขียนของเขา เพื่อพูดถึงประโยชน์ ความประเสริฐและคุณงามความดีของหนังสือ อันที่จริงเขาเองเปรียบเสมือน ‘กล้องถ่ายรูป’ ก็ไม่ปาน เพราะไม่มีสิ่งใดที่เขาอ่านผ่านตา เว้นแต่ว่ามันจะถูกประทับไว้ในจิตใจของเขา และคงอยู่ในความทรงจำของเขาไปอีกตราบนานเท่านาน แต่ทว่าอัลญาฮิซไม่ได้จำกัดแหล่งที่มาของความคิดและความรู้ของเขาไว้เพียงแค่ในหนังสือเท่านั้น โดยเฉพาะอย่างยิ่งเมื่อการกระทำเช่นนั้นถือเป็นอุปนิสัยที่น่าตำหนิ ดังที่ตัวเขาเองและปราชญ์ท่านอื่น ๆ อีกมากมายได้บอกแก่เราไว้ ด้วยเหตุว่า ‘ความรู้ที่แท้จริงนั้นย่อมไม่สามารถได้รับมา นอกจากจะต้องผ่านครูบาอาจารย์’ ดังนั้น เขาจึงได้ฝากตัวเป็นศิษย์กับครูบาอาจารย์ผู้รู้หลายท่าน และความคิดของเขาก็ได้เติบโตงอกงามจากการได้เชื่อมโยงกับพวกเขา และแม้ว่าเขาจะไม่เห็นด้วยกับบางท่าน หรือไม่พึงพอใจในแนวคิดของพวกเขา แต่อัลญาฮิซก็ยังคงยอมรับในคุณูปการของพวกเขาทุกคน และได้ถ่ายทอดความรู้จากพวกเขา รวมถึงเอ่ยนามของพวกเขาไว้หลายต่อหลายครั้งในระหว่างบรรทัดของงานเขียนของเขา”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>ผลงานการประพันธ์ในช่วงแรกของเขาได้รับคำชื่นชมจากคอลีฟะฮ์อัลมะอ์มูน และนั่นคือ “ใบเบิกทาง” ชั้นดีที่ทำให้เขาได้เข้าสู่เมืองหลวง (แบกแดด) ซึ่งเป็นสิ่งที่ปัญญาชนจากต่างเมืองโหยหา เพื่อให้ความสามารถของตนเป็นที่ยอมรับ และได้เข้าไปอยู่ในราชสำนักเพื่อสร้างความมั่นคงในอาชีพ</p>
+
+      <p>นับตั้งแต่นั้นมา แม้จะยังไม่ทิ้งเมืองบัสเราะฮ์โดยสิ้นเชิง อัลญาฮิซก็ได้ใช้เวลาส่วนใหญ่อยู่ในกรุงแบกแดด และต่อมาก็ย้ายไปอยู่ที่เมืองซามาร์เราะอ์ (เมืองหลวงใหม่ในยุคนั้น) โดยอุทิศตนให้กับงานเขียนเชิงวรรณกรรมและวิทยาศาสตร์</p>
+
+      <p>มีช่วงหนึ่งที่เขาได้รับหน้าที่เป็นอาจารย์ถวายพระอักษรแด่พระโอรสของคอลีฟะฮ์อัลมุตะวักกิล แม้ว่าข้อมูลเกี่ยวกับชีวิตส่วนตัวและชีวิตการทำงานของเขาจะไม่ค่อยปรากฏนัก (ไม่ว่าจะจากนักเขียนชีวประวัติหรือจากตัวเขาเอง) แต่จากหลักฐานเท่าที่มี ดูเหมือนว่าอัลญาฮิซจะไม่เคยรับตำแหน่งราชการอย่างเป็นทางการ หรือทำงานประจำใด ๆ เลย</p>
+
+      <p>อย่างไรก็ตาม เขายอมรับว่าเขาได้รับเงินจำนวนมากจากการเขียนคำนำอุทิศเพื่อผู้อุปถัมภ์ และเรารู้ว่ามีช่วงหนึ่งที่เขาได้รับเงินเบี้ยเลี้ยงจาก “ดีวาน” (กรมคลังของราชสำนัก)</p>
+
+      <p>ในกรุงแบกแดด เขาได้ค้นพบ “คลังความรู้” ขนาดใหญ่ที่ช่วยให้เขาสามารถขยายโลกทัศน์และขัดเกลาหลักปรัชญาและเทววิทยาของตนเองให้สมบูรณ์ยิ่งขึ้น ซึ่งเป็นแนวคิดที่เขาเริ่มพัฒนาขึ้นภายใต้การดูแลของปราชญ์กลุ่มมุอ์ตะซิละฮ์ผู้ยิ่งใหญ่ในยุคนั้น โดยเฉพาะอย่างยิ่งอันนัซซอม และษุมามะฮ์ บิน อัชรัส (เสียชีวิต ฮ.ศ. 213 / ค.ศ. 828) ซึ่งดูเหมือนว่าคนหลังนี้จะมีอิทธิพลต่อเขาอย่างสูง</p>
+
+      <p>ในช่วงบั้นปลายชีวิต เขาต้องทนทุกข์จากโรคอัมพาตครึ่งซีก เขาจึงเดินทางกลับไปยังบ้านเกิด (เมืองบัสเราะฮ์) และเสียชีวิตที่นั่นในปี ค.ศ. 869</p>
+
+      <p>ทั้งในแง่การเมืองและเทววิทยา อัลญาฮิซคือชาวมุอ์ตะซิละฮ์ (ผู้ยึดมั่นในเหตุผล) เขายังเป็นนักเขียนร้อยแก้วมุสลิมที่มีชื่อเสียง บทบาทของเขาในการพัฒนาแนวคิดของชาวมุสลิมนั้นยิ่งใหญ่มาก เขาเป็นผู้ก่อตั้งสำนักคิดที่ตั้งชื่อตามเขาว่า “อัลญาฮิซียะฮ์” เขาเป็นอัจฉริยะในด้านสัตววิทยา และเขายังรู้วิธีการสกัดแอมโมเนียและซัลมิแอก (หรือแอมโมเนียมคลอไรด์) จากของเสียของสัตว์โดยใช้วิธีการกลั่นแห้ง (dry distillation)</p>
+
+      <p>และด้วยการเป็น “พหูสูต” และนักประพันธ์ อัลญาฮิซจึงมีผลงานตีพิมพ์มากมายมหาศาลเช่นเดียวกับนักเขียนมุสลิมในยุคนั้น บัญชีรายชื่อผลงานของเขามีเกือบ 200 รายการ มีเพียงประมาณหนึ่งในสามเท่านั้นที่ยังคงหลงเหลือมาถึงเราในสภาพสมบูรณ์ อีกประมาณห้าสิบรายการหลงเหลืออยู่เพียงบางส่วน ในขณะที่ส่วนที่เหลือดูเหมือนจะสูญหายไปอย่างถาวรแล้ว</p>
+
+      <p>หนังสือที่สำคัญที่สุดของเขาคือหนังสือ “อัลฮะยะวาน” หรือ “ตำราแห่งสรรพชีวิต” ระเบียบวิธีวิจัยของอัลญาฮิซนั้นตั้งอยู่บน “การสังเกตเชิงประจักษ์” และ “หลักวิทยาศาสตร์” ไม่ใช่เป็นเพียง “การอ้างอิงตำราและการถกเถียง” อย่างที่ซาร์ตัน (Sarton) เชื่อ ซึ่งเขากล่าวว่า</p>
+
+      <p>“งานที่สำคัญที่สุดของเขาคือ The Book of Animals ซึ่งเป็นงานรวบรวมเชิงพรรณนาอย่างกว้างขวาง จุดมุ่งหมายของหนังสือเล่มนี้มีลักษณะเชิงเทววิทยาและคติชนวิทยามากกว่าจะเป็นเชิงวิทยาศาสตร์”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+
+      <p>อย่างไรก็ดี ข้อวินิจฉัยของซาร์ตันนี้ไม่ถูกต้อง เพราะข้อมูลจำนวนมากที่นำเสนอไว้ในหนังสือเล่มดังกล่าวเป็นผลมาจากการสังเกตโดยตรงและประสบการณ์ส่วนตัวของผู้เขียนเอง ดังที่อัลญาฮิซได้กล่าวย้ำไว้ในหลายบทของหนังสือ</p>
+
+      <p>นี่คือเหตุผลที่อาซิน ปาลาซิออส (Asín Palacios นักวิชาการชาวสเปน) กล่าวสนับสนุนว่า (ดังที่อัลญาฮิซเองได้ใบ้ไว้ในบทนำหนังสือฮะยะวาน) เขาได้ใช้ประโยชน์จากหนังสือของนักปรัชญา เรื่องเล่าของนักเดินทางและชาวเรือ ฯลฯ “และการสังเกตหรือประสบการณ์โดยตรง” ในการเขียนตำราเล่มนี้ คุณค่าทางวิทยาศาสตร์ของหนังสือเล่มนี้จึงยิ่งใหญ่มาก และมันเป็นดังที่ปาลาซิออสกล่าวว่า มันคือ “คุณูปการที่แท้จริง” ต่อประวัติศาสตร์วิทยาศาสตร์ โดยเฉพาะอย่างยิ่ง “สัตววิทยา”</p>
+
+      <p>ทัศนะของซาร์ตันนั้น “สะท้อนมุมมองของนักบูรพคดีศึกษาในยุคเก่า” แต่ปัจจุบันนักประวัติศาสตร์วิทยาศาสตร์ส่วนใหญ่ยอมรับทัศนะของปาลาซิออสมากกว่า ว่าอัลญาฮิซใช้ “ระเบียบวิธีเชิงประจักษ์” (Empirical Method) จริง</p>
+
+      <p>แหล่งข้อมูลหลักของ “ตำราแห่งสรรพชีวิต” ของอัลญาฮิซ คือหนังสือสัตววิทยาของนักวิชาการรุ่นก่อนและร่วมสมัยกับเขา นั่นคือ อับดุลมาลิก บิน กุรัยบ์ อัลอัศมะอี เท่าที่ทราบ หนังสือเล่มนี้ของอัลอัศมะอีถือเป็นตำราด้านสัตววิทยาเล่มแรกในประวัติศาสตร์ภูมิปัญญาอิสลาม</p>
+
+      <p>หนังสือ “อัลฮะยะวาน” ถูกนำไปศึกษาต่อยอดอย่างกว้างขวาง และมีอิทธิพลอย่างสูงต่อนักวิทยาศาสตร์มุสลิมในยุคต่อมา และส่งอิทธิพลผ่านพวกเขาไปถึงนักคิดชาวยุโรปด้วย ตำราเล่มนี้ได้กลายเป็นแหล่งข้อมูลอ้างอิงหลักสำหรับตำราสัตววิทยาในยุคหลัง</p>
+
+      <p>ประโยคจำนวนมากของอัลญาฮิซถูกนำไปอ้างอิงโดยกลุ่ม “อิควาน อัศเศาะฟา” และอิบนุ มิสกะวัยฮ์ (เสียชีวิต ฮ.ศ. 421 / ค.ศ. 1030) ข้อความหลายตอนถูกคัดลอกไปใช้โดยซะกะรียา อัลกอซวีนี (เสียชีวิต ฮ.ศ. 682 / ค.ศ. 1283) ในหนังสือของเขา “อะญาอิบ อัลมัคลูก้อต” (มหัศจรรย์แห่งการสร้างสรรค์) และโดยมุสเตาฟี อัลกอซวีนี (เสียชีวิตราว ฮ.ศ. 750 / ค.ศ. 1349) ในหนังสือ “นุซฮัต อัลกุลูบ” (ความรื่นรมย์แห่งหัวใจ) และโดยอัดดะมีรี (เสียชีวิต ฮ.ศ. 808 / ค.ศ. 1405) ในหนังสือ “ฮะยาต อัลฮะยะวาน” (วิถีแห่งสรรพชีวิต)</p>
+
+      <p>โดยรวมแล้วอัลญาฮิซนั้นเกิดในสมัยคอลีฟะฮ์อัลมะฮ์ดี ซึ่งเป็นคอลีฟะฮ์องค์ที่สามแห่งราชวงศ์อับบาซียะฮ์ ราวปี ฮ.ศ. 150 (บางบันทึกว่า 159 หรือ 163 ฮ.ศ.) และเสียชีวิตในรัชสมัยของคอลีฟะฮ์อัลมุฮ์ตะดี บิลลาฮ์ เมื่อปี ฮ.ศ. 255 ช่วงชีวิตของเขาจึงครอบคลุมรัชสมัยของคอลีฟะฮ์อับบาซียะฮ์ถึง 12 พระองค์ คือ อัลมะฮ์ดี, อัลฮาดี, อัรรอชีด, อัลอามีน, อัลมะอ์มูน, อัลมุอ์ตะศิม, อัลวะษิก, อัลมุตะวักกิล, อัลมุนตะศิร, อัลมุสตะอีน, อัลมุอ์ตัซ และอัลมุฮ์ตะดี บิลลาฮ์ นับเป็นศตวรรษที่วัฒนธรรมอาหรับกำลังรุ่งเรืองถึงขีดสุด ทั้งในด้านวรรณศิลป์ ปรัชญา และวิทยาการทุกแขนง</p>
+
+      <h2 class="article-h2">แนวคิดของอัลญาฮิซว่าด้วยวิวัฒนาการทางชีววิทยา</h2>
+
+      <p>หลังจากที่ได้ศึกษาเรื่องสัตว์มาอย่างยาวนาน อัลญาฮิซคือคนแรกที่นำเสนอแนวคิดเรื่องวิวัฒนาการทางชีววิทยาในหนังสือ “อัลฮะยะวาน” ของเขา ซึ่งในตำราเล่มนี้บรรจุ “แนวคิดตั้งต้น” ของทฤษฎีวิวัฒนาการในยุคหลังไว้มากมาย (เช่น คัพภวิทยาของสัตว์ หรือการศึกษาตัวอ่อน, วิวัฒนาการ, การปรับตัว, จิตวิทยาสัตว์ และสังคมวิทยาสัตว์)</p>
+
+      <p>ประการแรก ความพยายามของอัลญาฮิซนั้นเกิดขึ้นบน “จิตวิญญาณทางวิทยาศาสตร์” อย่างแท้จริง โดยเขามีเป้าหมายที่จะ “จัดจำแนก” สัตว์ต่าง ๆ โดย “เรียงลำดับ” จากสิ่งมีชีวิตที่เรียบง่ายที่สุดไปสู่สิ่งที่ซับซ้อนที่สุด</p>
+
+      <p>และในขณะเดียวกัน เขาก็จัดสัตว์เหล่านั้นเป็นกลุ่ม ๆ ตามลักษณะที่คล้ายคลึงกันอย่างเห็นได้ชัด และกลุ่มเหล่านี้ก็ถูกแบ่งย่อยลงไปอีก เพื่อติดตามไปจนถึงหน่วยย่อยที่สุดในระดับสายพันธุ์</p>
+
+      <p>ในฐานะผู้บุกเบิกยุคแรก ๆ ของศาสตร์ด้านสัตววิทยาและมานุษยวิทยา อัลญาฮิซได้ค้นพบและตระหนักถึง “ผลกระทบของปัจจัยแวดล้อม” ที่มีต่อชีวิตของสัตว์ และเขายังได้สังเกตเห็น “การแปรผันของสายพันธุ์สัตว์”</p>
+
+      <p>ภายใต้ปัจจัยที่แตกต่างกันในหลายช่วงตอนที่น่าทึ่งของหนังสือเล่มนี้ เขาได้อธิบายให้เราเห็นถึง “การต่อสู้ดิ้นรนเพื่อความอยู่รอด” ทั้งเป้าหมาย กลไก และคุณค่าของมัน ทั้งในแง่มุมทางวิทยาศาสตร์และในเชิงเรื่องเล่า</p>
+
+      <p>สำหรับ “กลไก” ของวิวัฒนาการนั้น อัลญาฮิซได้อธิบายไว้ 3 ประการ คือ</p>
+
+      <ol class="article-summary">
+        <li>การต่อสู้ดิ้นรนเพื่อความอยู่รอด (Struggle for Existence)</li>
+        <li>การแปรผันของสายพันธุ์หนึ่งไปสู่อีกสายพันธุ์ (Transformation of Species into Each Other)</li>
+        <li>ปัจจัยด้านสิ่งแวดล้อม (Environmental Factors)</li>
+      </ol>
+
+      <h2 class="article-h2">กลไกการต่อสู้ดิ้นรนเพื่อความอยู่รอด</h2>
+
+      <p>เรามาดูกลไกเหล่านี้อย่างย่อที่สุด การต่อสู้ดิ้นรนเพื่อความอยู่รอด (Struggle for Existence) คืออัลญาฮิซให้น้ำหนักมากที่สุดกับวิวัฒนาการที่เกิดจาก “การต่อสู้ดิ้นรนเพื่อความอยู่รอด” หรือหากมองในความหมายที่กว้างกว่านั้นก็คือ “การคัดเลือกโดยธรรมชาติ” (Natural Selection) ในภาษาของอัลญาฮิซ นั่นคือกฎการดำรงอยู่ที่พระเจ้าทรงวางไว้ในธรรมชาติ</p>
+
+      <p>แม้ว่าอัลญาฮิซจะไม่ได้เสนอ ‘ทฤษฎีวิวัฒนาการ’ ที่อธิบายด้วยหลักพันธุกรรมเชิงกลไกอย่างเป็นระบบตามแนวคิดของดาร์วิน แต่ท่านได้เสนอภาพรวมของธรรมชาติที่มีความพลวัตและมีความเชื่อมโยงกันอย่างลึกซึ้ง กลไกนี้ทำงานควบคู่ไปกับ “สัญชาตญาณ” ในการรักษาตัวตนและการดำรงอยู่ของเผ่าพันธุ์</p>
+
+      <p>ตามแนวคิดของอัลญาฮิซ ระหว่างสิ่งมีชีวิตแต่ละปัจเจกนั้นมี “การแข่งขันตามธรรมชาติ” เพื่อการอยู่รอดอยู่เสมอ สิ่งมีชีวิตต่าง ๆ ล้วนต้องต่อสู้ดิ้นรนซึ่งกันและกัน</p>
+
+      <p>ดังนั้น ทฤษฎีการต่อสู้ดิ้นรนเพื่อความอยู่รอดของอัลญาฮิซ จึงอาจนิยามได้ว่า มันคือ “อัตราการตายที่ไม่เท่ากัน” ระหว่างสิ่งมีชีวิตสองกลุ่มที่แตกต่างกัน โดยกลุ่มที่มีอัตราการตายน้อยกว่า คือกลุ่มที่ “ปรับตัวได้ดีกว่าและแข็งแกร่งกว่า”</p>
+
+      <p>และสำหรับอัลญาฮิซ การต่อสู้ดิ้นรนเพื่อความอยู่รอดนี้ถือเป็น “กฎที่พระเจ้ากำหนด” พระเจ้าทรงสร้างอาหารสำหรับร่างกายหนึ่ง ให้มาจากความตายของอีกร่างกายหนึ่ง</p>
+
+      <p>นักประวัติศาสตร์วิทยาศาสตร์ชื่อคอนเวย์ เซิร์กเคิล (Conway Zirkle) ได้ถ่ายทอดข้อความตอนหนึ่งของอัลญาฮิซ ซึ่งเขาได้อ้างคำแปลภาษาสเปนของหนังสือ เพื่อยกตัวอย่างภาพของการดิ้นรนเพื่อความอยู่รอดว่า อัลญาฮิซกล่าวว่า</p>
+
+      <p>“หนูออกหาอาหารของมัน และมีไหวพริบในการล่า เพราะมันกินสัตว์ที่อ่อนแอกว่าตนเอง แต่ในขณะเดียวกัน มันก็ต้องระวังงู นก และสัตว์นักล่าอื่น ๆ ที่แข็งแกร่งกว่า เพราะพวกนั้นล่ามันเพื่อกินเป็นอาหาร ยุงรู้โดยสัญชาตญาณว่า เลือดคือสิ่งที่ทำให้พวกมันมีชีวิตอยู่ และเมื่อมันเห็นสัตว์ มันก็รู้ว่าผิวหนังของสัตว์นั้นมีไว้เพื่อให้มันดูดกิน แต่แมลงบิน (เช่น แมลงปอ) ก็ตามล่ายุงอีกที เพราะยุงคืออาหารที่แมลงบินชอบที่สุด และนักล่าก็กินแมลงบินอีกทอดหนึ่ง”<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+
+      <p>กล่าวโดยสรุป สัตว์ทุกตัวไม่อาจอยู่ได้หากขาดอาหาร ขณะเดียวกัน นักล่าทั้งหลายก็ไม่สามารถหลีกเลี่ยงการถูกล่าได้ ในที่สุดสัตว์ที่อ่อนแอกว่าก็จะล่าสัตว์ที่อ่อนแอกว่าอีกทอดหนึ่ง ส่วนสัตว์ที่แข็งแรงก็ไม่อาจหนีจากสัตว์อื่นที่แข็งแรงกว่ากัดจนตาย ซึ่งเหยื่อก็มักจะตายในเวลาอันรวดเร็ว ในประเด็นนี้ มนุษย์ก็ไม่ต่างอะไรจากสัตว์ เพียงแต่พวกเขาไม่ได้ไปถึงจุดสุดโต่งแบบเดียวกัน กล่าวอย่างกระชับคือ พระเจ้าได้กำหนดให้มนุษย์บางคนมีชีวิตเพื่อเป็นสาเหตุแห่งชีวิตของผู้อื่น และในขณะเดียวกันก็ให้ผู้อื่นเหล่านั้นเป็นสาเหตุแห่งความตายของคนกลุ่มแรก</p>
+
+      <p>อัดดะมีรีได้บอกไว้คล้ายกันว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا جلس على عضو من أعضاء الإنسان، لا يزال يتوخى بخرطومه المسام التي يخرج منها العرق، لأنها أرق بشرة من جلدة الإنسان فإذا وجدها وضع خرطومه فيها، وفيه من الشره أن يمص الدم إلى أن ينشق ويموت أو إلى أن يعجز عن الطيران، فيكون ذلك سبب هلاكه. ومن عجيب أمره أنه ربما قتل البعير وغيره، من ذوات الأربع، فيبقى طريحا في الصحراء، فتجتمع السباع حوله والطير التي تأكل الجيف فمن أكل منها شيئا مات لوقته. وكان بعض الجبابرة من الملوك بالعراق يعذب بالبعوض، فيأخذ من يريد قتله فيخرجه مجردا إلى بعض الآجام التي بالبطائح ويتركه فيها مكتوفا، فيقتل في أسرع وقت</blockquote>
+      <p class="ar-translation">“เมื่อมัน (หมายถึงยุง) เกาะลงบนอวัยวะส่วนหนึ่งของร่างกายมนุษย์ มันจะค่อย ๆ ใช้งวงของมันค้นหาตามรูขุมขนที่เหงื่อออก เพราะบริเวณนั้นมีผิวบางกว่าส่วนอื่น ๆ ของผิวหนังมนุษย์ และเมื่อมันพบ มันก็จะสอดงวงเข้าไปในรูขุมขนนั้น ความโลภของมันนั้นถึงขนาดที่มันดูดเลือดจนตัวมันแตกตาย หรืออย่างน้อยก็ดูดจนไม่สามารถบินต่อได้ ซึ่งสิ่งนี้เองอาจกลายเป็นสาเหตุแห่งความตายของมัน เรื่องน่าอัศจรรย์อีกอย่างของมันคือ มันสามารถฆ่าอูฐหรือสัตว์สี่เท้าอื่น ๆ ให้ล้มตายกลางทะเลทรายได้ แล้วพวกสัตว์ร้ายและนกที่กินซากก็จะมารวมตัวกันรอบศพนั้น แต่ใครก็ตามที่กินซากนั้นเข้าไปก็จะตายในทันที เคยมีเรื่องเล่าว่า หนึ่งในทรราชผู้โหดร้ายแห่งดินแดนอิรัก เคยใช้ ‘ยุง’ เป็นเครื่องทรมาน โดยจะจับคนที่เขาต้องการฆ่า ถอดเสื้อผ้าจนเปลือย แล้วพาไปทิ้งไว้ในพื้นที่ชุ่มน้ำใกล้แหล่งน้ำท่วมตลิ่ง จากนั้นก็ปล่อยทิ้งไว้ให้ยุง”<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup></p>
+
+      <p>และตามทัศนะของอัลญาฮิซ การต่อสู้ดิ้นรนนี้ไม่ได้เกิดขึ้นเฉพาะระหว่างสมาชิกต่างสายพันธุ์เท่านั้น แต่ยังเกิดขึ้นระหว่างสมาชิกในสายพันธุ์เดียวกันอีกด้วย</p>
+
+      <p>อย่างไรก็ตาม การตีความคำกล่าวของอัลญาฮิซในประเด็นนี้ถือเป็นจุดถกเถียงที่สำคัญที่สุดในทางวิชาการ นักวิชาการอีกกลุ่มหนึ่ง เช่น Jerry A. Coyne ได้โต้แย้งว่า คำพูดที่อัลญาฮิซยกมา (เรื่องหนู งู และไฮยีน่า) นั้น เป็นเพียงการอธิบายถึง “การล่าเหยื่อ” หรือปฏิสัมพันธ์ระหว่างสปีชีส์เท่านั้น</p>
+
+      <p>ข้อโต้แย้งหลักของพวกเขาคือ อัลญาฮิซ “ไม่ได้เสนอ” กลไกที่ชัดเจนว่าการต่อสู้ดิ้นรนนี้จะนำไปสู่ “การคัดเลือกโดยธรรมชาติ” (Natural Selection) ที่เกิดขึ้นภายในสปีชีส์เดียวกันได้อย่างไร (กล่าวคือ ไม่ได้อธิบายว่าหนูตัวที่เร็วกว่าในฝูงเดียวกัน จะอยู่รอดและถ่ายทอดลักษณะนั้นให้ลูกหลาน จนทำให้สปีชีส์เปลี่ยนแปลงไปตามกาลเวลาอย่างไร) พวกเขามองว่า การอ้างว่าอัลญาฮิซพูดถึงการต่อสู้ในสปีชีส์เดียวกันนั้น เป็นการตีความที่ไกลเกินกว่าหลักฐานที่มีในต้นฉบับ</p>
+
+      <p>จากสิ่งที่อัลญาฮิซได้กล่าวมา เราสามารถสรุปได้ว่า อัลลอฮ์ได้ทรงสร้างธรรมชาติให้มีคุณสมบัติในการสืบพันธุ์อย่างล้นเหลือ และในขณะเดียวกัน พระองค์ก็ได้ทรงกำหนด “กฎ” ขึ้นมา ซึ่งก็คือ “การต่อสู้ดิ้นรนทางชีววิทยาเพื่อความอยู่รอด” (the biological struggle for existence) เพื่อควบคุมจำนวนประชากรให้อยู่ใน “อัตราส่วนที่จำกัด” มิฉะนั้นแล้ว ความไร้ระเบียบก็จะปรากฏขึ้นในธรรมชาติ และธรรมชาติก็จะสูญเสียความอุดมสมบูรณ์และสายพันธุ์บางส่วนไป ดังเช่นที่เราเห็นกรณีการแพร่ระบาดของปลาหมอคางดำในปัจจุบัน</p>
+
+      <p>แม้จะมีร่องรอยความคิดบางประการที่สะท้อนภาพของ ‘การเปลี่ยนแปลงตามธรรมชาติ’ แต่อัลญาฮิซก็ไม่ได้เสนอ ‘กลไกวิวัฒนาการเชิงพันธุกรรม’ ที่สามารถเปลี่ยนสปีชีส์ได้ในระยะยาวผ่านการสืบพันธุ์โดยคัดเลือก ซึ่งเป็นหัวใจสำคัญของทฤษฎีดาร์วิน</p>
+
+      <h2 class="article-h2">การแปรผันของสายพันธุ์ (Transformation of Species)</h2>
+
+      <p>อัลญาฮิซ เช่นเดียวกับลามาร์กและดาร์วินในเวลาต่อมา เชื่อว่า “การแปรผันของสายพันธุ์” และ “การกลายพันธุ์” นั้น “เป็นสิ่งที่เกิดขึ้นได้”</p>
+
+      <p>การแปรผันนี้เกิดขึ้นควบคู่ไปกับ “อิทธิพลของปัจจัยด้านสิ่งแวดล้อม” (effect of environmental factors) และเขายืนยันว่า “รูปแบบดั้งเดิม” ได้ “แตกแขนง” ออกไปเป็นสายพันธุ์รูปแบบใหม่ ๆ โดยการ “ค่อย ๆ พัฒนาลักษณะใหม่ ๆ” ที่ช่วยให้พวกมันอยู่รอดได้ในสภาพแวดล้อมนั้น ๆ</p>
+
+      <p>มีข้อความตอนหนึ่งที่เขาระบุว่า “ผู้คนมีความเห็นต่างกันเกี่ยวกับการมีอยู่ของ ‘อัลมิสค์’ (รูปแบบดั้งเดิมของสัตว์สี่เท้า) บางคนยอมรับวิวัฒนาการของมัน และกล่าวว่ามันคือสิ่งที่ให้กำเนิดสุนัข หมาป่า สุนัขจิ้งจอก และสัตว์ที่คล้ายคลึงกัน สมาชิกในตระกูลนี้ล้วนมาจากรูปแบบดั้งเดิมนี้ (คือมาจากอัลมิสค์)”</p>
+
+      <p>และเขากล่าวเสริมว่า “พระประสงค์” และ “อำนาจ” ของพระเจ้า คือ “ปัจจัยที่เป็นเหตุหลัก” ของการแปรผันนี้ และพระเจ้าสามารถเปลี่ยนแปลงสายพันธุ์ใดให้เป็นอีกสายพันธุ์หนึ่งได้ทุกเวลาที่พระองค์ประสงค์</p>
+
+      <p>ดังนั้น อัลญาฮิซจึงสนับสนุนแนวคิดเรื่องการแปรผันของสายพันธุ์และการกลายพันธุ์ ซึ่งเกิดขึ้นได้จากหลายปัจจัย รวมถึงพระประสงค์ของพระเจ้าด้วย (ดังที่เราได้กล่าวไปแล้ว)</p>
+
+      <p>ในประเด็นนี้ อัลญาฮิซได้รับข้อมูลบางส่วนมาจากคำกล่าวของนักปราชญ์ท่านอื่น ๆ และสำหรับ “อิทธิพลของปัจจัยด้านสิ่งแวดล้อม” นั้น อัลญาฮิซเชื่อว่า อาหาร สภาพภูมิอากาศ ที่พักพิง และปัจจัยอื่น ๆ ล้วนมี “ผลกระทบทางชีววิทยาและจิตวิทยา” ต่อสายพันธุ์</p>
+
+      <p>และในมุมมองของเขา ปัจจัยเหล่านี้ยังผลักดันให้สายพันธุ์ต่าง ๆ ต้อง “ต่อสู้ดิ้นรนอย่างหนักเพื่อความอยู่รอด” ในสภาพแวดล้อมที่เปลี่ยนแปลงไป และก็จะเกิด “การเปลี่ยนแปลงในลักษณะเฉพาะบางประการ” ซึ่งลักษณะเหล่านี้มี “คุณค่าต่อการอยู่รอด” กระบวนการเปลี่ยนแปลงลักษณะเฉพาะที่ส่งต่อไปยังรุ่นลูกรุ่นหลานนี้ ทำให้สิ่งมีชีวิตปรับตัวเข้ากับสิ่งแวดล้อมได้ดีขึ้น พวกมันจึงอยู่รอดได้ และมีโอกาสที่จะสืบพันธุ์และส่งต่อลักษณะเด่นของพวกมันไปยังลูกหลานต่อไป</p>
+
+      <p>ดังนั้น อัลญาฮิซจึงวางรากฐานทฤษฎีของเขาไว้บนแนวคิดเรื่อง “การใช้และไม่ใช้อวัยวะ” ซึ่งเป็นแนวคิดสำคัญที่ลามาร์ก (Lamarck) ใช้ในเวลาต่อมา เพื่อใช้ในการปรับตัวของสัตว์ให้เข้ากับสิ่งแวดล้อม</p>
+
+      <p>จุดนี้เป็นข้อสังเกตที่นักวิชาการทั้งสองฝ่ายเห็นพ้องต้องกัน โดยนักวิจารณ์ชี้ชัดว่า แม้แนวคิดของอัลญาฮิซจะก้าวหน้ามาก แต่กลไกที่เขาอธิบายนั้นอยู่ในกรอบคิดแบบ “ลามาร์ก” (Lamarckian) อย่างชัดเจน คือการเปลี่ยนแปลงที่เกิดจากผลกระทบโดยตรงของสิ่งแวดล้อม ไม่ใช่ “การคัดเลือกโดยธรรมชาติ” อันเป็นกลไกใหม่ที่ดาร์วินค้นพบ</p>
+
+      <p>อัลญาฮิซกล่าวว่า “ไม่ต้องสงสัยเลยว่า เราเคยเห็นนักเดินเรือชาวนาบาธีนบางคนที่มีลักษณะคล้ายลิงเอปเมื่ออยู่ในสภาพแวดล้อมทางภูมิศาสตร์หนึ่ง ๆ และเราก็อาจเคยเห็นผู้คนจากโมร็อกโกที่ดูคล้ายกับ ‘อัลมิสค์’ (รูปแบบดั้งเดิมของสัตว์) โดยมีความแตกต่างเพียงเล็กน้อย…และเป็นไปได้ว่า อากาศที่ปนเปื้อน น้ำและฝุ่นละออง คือสิ่งที่ทำให้เกิดการเปลี่ยนแปลงลักษณะเหล่านี้ในตัวชาวโมร็อกโก…หากผลกระทบนี้ยังคงดำเนินต่อไปเรื่อย ๆ ในตัวพวกเขา การเปลี่ยนแปลงเหล่านี้ ไม่ว่าจะเป็นขน หู สีผิว และรูปร่าง (ที่คล้ายลิงเอป) ก็จะยิ่งเพิ่มมากขึ้น…”</p>
+
+      <p>และนี่คือกลไกหลักของทฤษฎีวิวัฒนาการทางชีววิทยาของอัลญาฮิซ</p>
+
+      <h2 class="article-h2">มุมมองจากนักประวัติศาสตร์วิทยาศาสตร์ตะวันตกต่ออัลญาฮิซ</h2>
+
+      <p>แม้ว่านักประวัติศาสตร์วิทยาศาสตร์มุสลิมหลายท่านจะยกย่องอัลญาฮิซว่าเป็น “บิดาแห่งวิวัฒนาการทางชีววิทยา” แต่ในมุมมองของนักวิชาการตะวันตกสมัยใหม่บางท่านระบุว่า การประเมินนี้ยังเป็นประเด็นถกเถียงอย่างกว้างขวาง</p>
+
+      <p>แฟรงค์ เอดเจอร์ตัน (Frank Edgerton) เห็นว่า การอ้างว่าอัลญาฮิซเป็น “นักวิวัฒนาการยุคแรก” นั้นยังไม่อาจพิสูจน์ได้อย่างน่าเชื่อถือ แม้กระนั้น เขายอมรับว่าอัลญาฮิซ “ตระหนักถึงอิทธิพลของปัจจัยแวดล้อมที่มีต่อชีวิตสัตว์” อย่างลึกซึ้ง ซึ่งถือเป็นรากฐานสำคัญของแนวคิดชีววิทยาสมัยใหม่</p>
+
+      <p>ในทำนองเดียวกัน รีเบคกา สต็อตต์ (Rebecca Stott) ชี้ว่า</p>
+
+      <p>“อัลญาฮิซไม่ได้สนใจในการโต้แย้งเชิงทฤษฎี เขาสนใจการสังเกตด้วยสายตาตนเอง เขาส่งเสริมความเพลิดเพลินและความหลงใหลในการมองดูสิ่งต่าง ๆ อย่างลึกซึ้ง และบอกผู้อ่านของเขาว่า ไม่มีสิ่งใดสำคัญไปกว่าสิ่งนี้อีกแล้ว…ในระหว่างบรรทัดของการสังเกตที่ลึกซึ้งนั้น บางครั้งบางคราวเราจะพบแววแห่งความเข้าใจอันเฉียบคมต่อกฎของธรรมชาติ แต่จุดประสงค์ที่ปรากฏอย่างชัดเจนของหนังสือฮะยะวานก็คือ การชักชวนผู้อ่านให้ตระหนักถึงหน้าที่ทางศีลธรรมต่อพระผู้เป็นเจ้า ซึ่งเป็นหน้าที่ที่ระบุไว้อย่างชัดเจนในอัลกุรอาน คือ จงมองดูและพิจารณา…หากนักประวัติศาสตร์บางคนกล่าวว่า อัลญาฮิซเขียนเรื่องวิวัฒนาการก่อนดาร์วินถึงพันปี หรือว่าเขาคือผู้ค้นพบทฤษฎีการคัดเลือกโดยธรรมชาติแล้วละก็ พวกเขากำลังเข้าใจผิด อัลญาฮิซไม่ได้พยายามไขปริศนาเกี่ยวกับจุดกำเนิดของโลก หรือที่มาของเผ่าพันธุ์ เขาเชื่อว่าพระเจ้าทรงเป็นผู้สร้างทุกสิ่ง และพระองค์ทรงสร้างมันไว้อย่างยอดเยี่ยม เขายอมรับแนวคิดการสร้างโดยพระผู้เป็นเจ้าและการออกแบบอย่างประณีต (Intelligent Design) โดยไม่มีข้อสงสัยใด ๆ สำหรับเขาแล้วไม่มีคำอธิบายอื่นใดที่เป็นไปได้”<sup class="fn-ref" id="fnref-6"><a href="#ref-6">⁶</a></sup></p>
+
+      <p>นักวิชาการกลุ่มที่วิจารณ์แนวคิดนี้ได้ใช้ข้อสังเกตของสต็อตต์เป็นประเด็นหลักในการโต้แย้ง พวกเขาเน้นย้ำว่า “เป้าหมายที่แตกต่างกันนี้คือหัวใจสำคัญ” อัลญาฮิซใช้การสังเกตธรรมชาติที่เฉียบคมเพื่อยืนยัน “การออกแบบอันประณีต” (Intelligent Design) ของพระผู้เป็นเจ้า ในขณะที่ดาร์วินเสนอ “กลไกสสารนิยม” (Materialistic mechanism) ที่ทำงานได้โดยไม่ต้องมีการแทรกแซงจากพระเจ้า</p>
+
+      <p>ในมุมมองนี้ แม้ข้อสังเกตบางอย่าง (เช่น การต่อสู้) จะคล้ายคลึงกัน แต่ “ทฤษฎี” ที่ได้นั้นอยู่บนฐานคิดที่ตรงกันข้ามอย่างสิ้นเชิง และนี่คือเหตุผลที่พวกเขาไม่นับว่าอัลญาฮิซเป็นผู้บุกเบิกทฤษฎีของดาร์วิน</p>
+
+      <p>สิ่งที่น่าประทับใจอย่างยิ่งในภาพที่อัลญาฮิซวาดขึ้นเกี่ยวกับธรรมชาติในหนังสือฮะยะวานก็คือ วิสัยทัศน์เรื่องความสัมพันธ์เชื่อมโยงกันของสรรพสิ่ง ภาพของเครือข่ายและใยแมงมุมที่ปรากฏซ้ำแล้วซ้ำเล่า เขาเห็นสิ่งที่ในปัจจุบันเราเรียกว่า “ระบบนิเวศ” อยู่ในธรรมชาติ และเขาก็เข้าใจสิ่งที่เราทุกวันนี้เรียกว่า “การอยู่รอดของผู้ที่เหมาะสมที่สุด” (survival of the fittest)</p>
+
+      <p>แน่นอน สต็อตต์มองว่า จุดประสงค์ของอัลฮะยะวานไม่ใช่การอธิบายต้นกำเนิดของสิ่งมีชีวิต แต่เพื่อเผยให้เห็น “เครือข่ายแห่งชีวิต” ที่พระเจ้าทรงรังสรรค์ไว้อย่างประณีต ผ่านสายตาแห่งการสังเกตและความพิศวงในธรรมชาติ</p>
+
+      <h2 class="article-h2">อิทธิพลของอัลญาฮิซต่อนักวิทยาศาสตร์มุสลิมและชาวยุโรป</h2>
+
+      <p>อิทธิพลของอัลญาฮิซและนักคิดมุสลิมผู้วางรากฐานแนวคิดวิวัฒนาการ มิได้หยุดอยู่เพียงในโลกอิสลาม หากยังแทรกซึมไปสู่นักคิดรุ่นก่อนหน้าและร่วมสมัยของดาร์วิน ผ่านหลากหลายช่องทาง ทั้งทางตรงและโดยนัย</p>
+
+      <p>อย่างไรก็ตาม ประเด็นเรื่องอิทธิพลโดยตรงต่อดาร์วินนั้น เป็นข้อถกเถียงที่ซับซ้อนและยังไม่มีข้อยุติ มุมมองของนักวิชาการสายวิจารณ์ยืนยันอย่างหนักแน่นว่า ดาร์วิน “ไม่ได้รับอิทธิพลใด ๆ แม้แต่น้อยจากอัลญาฮิซ” พวกเขามองว่าทฤษฎีของดาร์วินมีลักษณะเฉพาะตัว และการพยายามเชื่อมโยงนี้เป็นความพยายามในยุคหลังที่จะสร้างความภาคภูมิใจทางอัตลักษณ์ มากกว่าจะเป็นข้อเท็จจริงทางประวัติศาสตร์</p>
+
+      <p>กระนั้นก็ตาม นักคิดอีกกลุ่มหนึ่ง (ดังที่บทความนี้กำลังนำเสนอ) ได้ชี้ให้เห็นถึงหลักฐานแวดล้อมของอิทธิพล “โดยอ้อม” ที่แนวคิดเหล่านี้อาจแทรกซึมไปสู่นักคิดยุโรป ผ่านผลงานของนักปราชญ์มุสลิมท่านอื่นที่ต่อยอดมาจากอัลญาฮิซ</p>
+
+      <p>ศาสตร์สัตววิทยาและทฤษฎีวิวัฒนาการทางชีววิทยาของอัลญาฮิซได้ส่งผลกระทบอย่างลึกซึ้งต่อการพัฒนาสัตววิทยาและชีววิทยา ดังที่เราได้กล่าวไปแล้วว่า ทฤษฎีของเขามีอิทธิพลโดยตรงต่อกลุ่ม “อิควาน อัศเศาะฟา” และนักปรัชญาผู้มีชื่อเสียงท่านอื่น ๆ เช่น อิบนุ มิสกะวัยฮ์, อัลบิรูนี (เสียชีวิต ฮ.ศ. 440 / ค.ศ. 1048) และอิบนุ ฏุฟัยล์ (เสียชีวิต ฮ.ศ. 581 / ค.ศ. 1185)</p>
+
+      <p>เมื่อทฤษฎีนี้อยู่ในมือนักคิดเหล่านี้ มันได้รับ “มิติความหมายใหม่” โดยพวกเขาได้พัฒนาต่อยอดไปเป็นหลักคำสอนใหม่อีก 2 แขนง คือ</p>
+
+      <ol class="article-summary">
+        <li><strong>แขนงจักรวาลวิทยา:</strong> เพราะพวกเขานำทฤษฎีนี้ไปประยุกต์ใช้กับปรากฏการณ์ของทั้งจักรวาล</li>
+        <li><strong>แขนงสังคมวิทยา:</strong> เพราะพวกเขานำไปประยุกต์ใช้กับปรากฏการณ์ทางสังคม</li>
+      </ol>
+
+      <p>ยิ่งไปกว่านั้น อิบนุ มิสกะวัยฮ์ และอิบนุ คอลดูน (เสียชีวิต ฮ.ศ. 808 / ค.ศ. 1406) ยังใช้อธิบายความหมายที่แท้จริงของ “การเป็นศาสดาพยากรณ์” และพิสูจน์แนวคิดนี้ด้วยทฤษฎีดังกล่าว</p>
+
+      <p>ดังนั้น ทฤษฎี “วิวัฒนาการทางชีววิทยา” บริสุทธิ์ของอัลญาฮิซ จึงได้กลายเป็น “แหล่งที่มา” ของแนวคิดวิวัฒนาการนิยม (evolutionisms) ในแขนงอื่น ๆ ของภูมิปัญญาอิสลามยุคต่อมา ไม่ว่าจะเป็นเชิงสังคมวิทยา อภิปรัชญา หรือจักรวาลวิทยา</p>
+
+      <p>ในอีกด้านหนึ่ง ทฤษฎีของอัลญาฮิซได้ถูกกล่าวถึงซ้ำโดยนักสัตววิทยาและนักธรรมชาติวิทยามุสลิม โดยเฉพาะอย่างยิ่งซะกะรียา อัลกอซวีนี ในหนังสือ “อะญาอิบ อัลมัคลูก้อต”, มุสเตาฟี อัลกอซวีนีในหนังสือ “นุซฮัต อัลกุลูบ” และอัดดะมีรีในหนังสือ “ฮะยาต อัลฮะยะวาน” นี่ยังไม่นับรวมนักประพันธ์ท่านอื่น ๆ เช่น อัลมัสอูดี (เสียชีวิต ฮ.ศ. 346 / ค.ศ. 957) และอิบนุ กุตัยบะฮ์ (เสียชีวิต ฮ.ศ. 276 / ค.ศ. 889)</p>
+
+      <p>สำหรับอิทธิพลของอัลญาฮิซต่อนักคิดชาวยุโรปนั้น ได้กลายเป็นหัวข้อของงานวิจัยหลัก 2 ชิ้น ซึ่งตีพิมพ์เป็นภาษาเยอรมัน ได้แก่ “Der Darwinismus im X und XIX Jahrhundert” (ลัทธิดาร์วินในศตวรรษที่ 10 และ 19) และ “Darwinistisches bei Gahiz” (แนวคิดแบบดาร์วินในงานของญาฮิซ)</p>
+
+      <p>นักวิจัยเหล่านี้ที่ศึกษามาก่อนหน้าได้ค้นพบ “ความคล้ายคลึงอย่างมาก” ระหว่างแนวคิดของอัลญาฮิซและดาร์วิน</p>
+
+      <p>แม้กลไกของอัลญาฮิซยังไม่สามารถเทียบเท่าระบบ Natural Selection ได้โดยสมบูรณ์ แต่เขาก็ได้วางฐานคิดสำคัญหลายประการที่ทำให้เห็นร่องรอยของแนวคิดวิวัฒนาการในโลกอิสลามก่อนยุคสมัยของดาร์วิน</p>
+
+      <p>บางที ความแตกต่างหลักเพียงประการเดียวระหว่างทฤษฎีของอัลญาฮิซกับทฤษฎีสมัยใหม่ อาจอยู่ที่ “อุดมการณ์” คือ</p>
+
+      <ol class="article-summary">
+        <li>ทฤษฎีของอัลญาฮิซนั้นตั้งอยู่บน “เทววิทยา” และมีลักษณะ “เหนือธรรมชาติ” กล่าวคือ เชื่อมโยงกับสิ่งที่อยู่เหนือธรรมชาติในแง่ที่ว่า เขายอมรับว่า “สาเหตุแรก” ของวิวัฒนาการคือพระเจ้า ส่วนปัจจัยอื่น ๆ นั้นเป็นเพียงปัจจัยรอง</li>
+        <li>ในขณะที่วิวัฒนาการของลามาร์ก (Lamarck), ดาร์วิน และคนอื่น ๆ นั้น มีลักษณะ “สสารนิยม” คือ เชื่อว่าทุกอย่างเกิดจากสสาร และ “เกิดขึ้นภายในธรรมชาติเอง” (คือไม่ได้มาจากพลังภายนอก)</li>
+      </ol>
+
+      <p>แม้ว่า “คำอธิบายเชิงกลไก” ของทฤษฎีเหล่านี้จะเหมือนกันไม่มากก็น้อย แต่ดาร์วินและนักวิทยาศาสตร์สมัยใหม่คนอื่น ๆ ก็แตกต่างจากอัลญาฮิซและนักเขียนมุสลิมท่านอื่น ในแง่ของ “การตีความเชิงอุดมการณ์” ของทฤษฎีนี้</p>
+
+      <p>ก่อนที่นักคิดชื่อดังอย่างคาโรลัส ลินเนียส (C. Linnaeus), บูฟง (Buffon), อีราสมุส ดาร์วิน (E. Darwin ปู่ของชาลส์ ดาร์วิน), ฌ็อง-บาติสต์ ลามาร์ก (J. B. Lamarck) และชาลส์ ดาร์วิน (Ch. Darwin) จะโด่งดังขึ้นมา…และนานก่อนการรุ่งเรืองของสำนักปรัชญาธรรมชาติ (School of Natural Philosophy) ในเยอรมนี…อัลญาฮิซและนักคิดมุสลิมท่านอื่น ๆ ก็เป็นที่รู้จักของชาวยุโรปอยู่แล้ว ผ่านการแปลผลงานของพวกเขาเอง หรือผ่านงานวิจัยที่ชาวยุโรปศึกษาเกี่ยวกับพวกเขา ตัวอย่างเช่น</p>
+
+      <ol class="article-summary">
+        <li><strong>ตำราฮะยาต อัลฮะยะวานของอัดดะมีรี แห่งมัสฮับชาฟิอี:</strong> ตำราเล่มนี้ได้รับการตีพิมพ์ครั้งแรกที่เมืองบูลาก (อียิปต์) ในปี ฮ.ศ. 1275 และเป็นหนึ่งในตำราที่สุลต่านสะลีมที่ 1 ได้มีพระบัญชาให้แปลเป็นภาษาตุรกีเมื่อครั้งที่พระองค์พิชิตอียิปต์ได้ และยังได้รับการแปลเป็นภาษาละติน (แม้จะเพียงบางส่วน) โดยอับราฮัม เอเคลเลนซิส (Abraham Echellensis) และตีพิมพ์ในปารีสเมื่อปี ค.ศ. 1617 นอกจากนี้ยังได้ถูกแปลเป็นภาษาอังกฤษโดยโคโลเนล จัยการ์ (Colonel Jaykar) หนึ่งในคณาจารย์แห่งวิทยาลัยบอมเบย์ในประเทศอินเดีย โดยฉบับแปลของเขาได้รับการตีพิมพ์ในกรุงลอนดอน ระหว่างปี ค.ศ. 1906–1908 และยังได้ถูกแปลเป็นภาษาฝรั่งเศสโดยซิลแวสต์ เดอ ซาซี (Sylvestre de Sacy) ซึ่งหนังสือเล่มนี้ (ของอัดดะมีรี) มีเนื้อหาหลายส่วนที่คัดลอกมาจากหนังสืออัลฮะยะวานของอัลญาฮิซโดยตรง ปราชญ์ในยุคเดียวกันกับท่านคือ อะห์มัด บิน อิมาด อัลอักฟะฮ์ซีได้ประพันธ์หนังสือที่วิพากษ์วิจารณ์เล่มนี้ชื่อว่า “อัลบะยาน อัตตักรีรีย์ ฟี ตัคติอะติลกะมาล อัดดะมีรี” (คำชี้แจงเพื่อแสดงข้อผิดพลาดของกะมาล อัดดะมีรี)</li>
+        <li><strong>ตำรานิฮายะตุลอะรับ ฟี ฟุนูนิลอะดับ ของชิฮาบุดดีน อันนุวัยรี</strong> (เสียชีวิต ฮ.ศ. 733 / ค.ศ. 1333) ก็ถูกศึกษาโดยนักวิชาการตะวันตก</li>
+        <li><strong>ตำราฮัย อิบนุ ยักซอน</strong> (<span class="ar-inline" lang="ar" dir="rtl">حي بن يقظان</span>) ของอิบนุ ฏุฟัยล์ พื้นฐานดั้งเดิมของหนังสือเล่มนี้เป็นนวนิยายที่บอกเล่าเรื่องราวของบุคคลที่ชื่อ ฮัย บิน ยักซอน ผู้ซึ่งเติบโตขึ้นมาเพียงลำพังบนเกาะแห่งหนึ่ง ซึ่งเรื่องราวนี้เป็นสัญลักษณ์ของ “มนุษย์” และความสัมพันธ์ของเขากับจักรวาลและศาสนา โดยมีเนื้อหาเชิงปรัชญาและสอดแทรกแนวคิดวิวัฒนาการอยู่ภายใน ฉบับของอิบนุ ฏุฟัยล์ได้รับการแปลเป็นภาษาละตินโดยเอ็ดเวิร์ด โพค็อก (Edward Pococke) ในปี ค.ศ. 1671 และตีพิมพ์ภายใต้ชื่อ “นักปรัชญาผู้สอนตนเอง” (Philosophus Autodidactus) และฉบับแปลนี้ก็ได้ส่งอิทธิพลต่อนักปรัชญารุ่นแล้วรุ่นเล่า ในทำนองเดียวกัน วารสาร Philosophical Transactions of the Royal Society ก็ได้ตีพิมพ์บทวิจารณ์อันยอดเยี่ยมที่ยกย่องหนังสือ (ฮัย บิน ยักซอน) ฉบับแปลเล่มนี้ นวนิยายเรื่องนี้จึงได้กลายเป็นรากฐานให้กับผลงานชิ้นเอกทางความคิดและวรรณกรรมระดับโลกหลายเรื่อง เช่น หนังสือ “หลักศรัทธาของนักบวชแห่งซาวอย” (Creed of the Savoyard Priest) ของนักปรัชญาชาวฝรั่งเศส ฌอง-ฌาค รุสโซ (Jean-Jacques Rousseau) ในทำนองเดียวกัน เรายังพบเห็นเหตุการณ์ที่สอดคล้องกันอย่างชัดเจนระหว่างเรื่องนี้กับนวนิยาย “โรบินสัน ครูโซ” (Robinson Crusoe) ของแดเนียล เดโฟ (Daniel Defoe) ตลอดจนเรื่องราวของ “เมาคลีลูกหมาป่า” และตัวละครอย่างทาร์ซาน ซึ่งส่วนใหญ่ล้วนกล่าวถึงพฤติกรรมของมนุษย์เมื่อถูกบังคับให้ต้องอาศัยอยู่อย่างโดดเดี่ยวในสภาพแวดล้อมที่ตัดขาดจากโลกภายนอก ผู้ประพันธ์คนแรกของเรื่อง “ฮัย บิน ยักซอน” คือนักปรัชญาอย่างอิบนุ ซีนา (เสียชีวิต ฮ.ศ. 428 / ค.ศ. 1037) ซึ่งได้เขียนขึ้นในระหว่างที่ท่านถูกคุมขัง ต่อมาชิฮาบุดดีน อัสสุฮ์รอวัรดี (เสียชีวิต ฮ.ศ. 587 / ค.ศ. 1191) ได้นำมาสร้างขึ้นใหม่ หลังจากนั้น นักปรัชญาชาวอันดะลุสคืออิบนุ ฏุฟัยล์ ได้นำมาเขียนขึ้นอีกครั้ง (ซึ่งเป็นฉบับที่ได้รับความนิยมและโด่งดังที่สุดในโลกตะวันตก) และนวนิยายฉบับสุดท้ายเป็นของอิบนุนนะฟีส (เสียชีวิต ฮ.ศ. 687 / ค.ศ. 1288) ผู้ซึ่งได้สังเกตเห็นเนื้อหาดั้งเดิมบางส่วนในฉบับของอิบนุ ซีนา ที่ไม่สอดคล้องกับแนวทางของท่าน เขาจึงได้เรียบเรียงมันขึ้นมาใหม่ให้เป็นเรื่องราวของ “ฮัยย์ บิน ยักซอน ที่ถ่ายทอดโดยศอลิห์ บิน กามิล”</li>
+        <li><strong>ตำราจักรวาลวิทยา อะญาอิบ อัลมัคลูก้อต</strong> (สิ่งมหัศจรรย์แห่งการสร้างสรรค์) ของซะกะรียา อัลกอซวีนี ซึ่งมีแนวคิดของอัลญาฮิซอยู่มาก ก็ได้รับการตีพิมพ์ในเยอรมนี ปี 1848–49 และถูกแปลเป็นภาษาฝรั่งเศส ปี 1789</li>
+      </ol>
+
+      <p>อัลกอซวีนีมักถูกวิจารณ์ว่า ตำราชุดนี้ขาดความแปลกใหม่หรือความเป็นต้นฉบับอย่างแท้จริง เนื่องจากเนื้อหาส่วนสำคัญของหนังสือเล่มนี้มีลักษณะซ้ำซ้อนกับผลงานของยากูต อัลฮะมะวี (เสียชีวิต ฮ.ศ. 626 / ค.ศ. 1229) ในหนังสือ “มุอ์ญัม บุลดาน” แม้กัซวีนีจะระบุชื่อผู้แต่งถึง 50 คนที่เขาใช้อ้างอิง โดยส่วนใหญ่เป็นนักภูมิศาสตร์และนักประวัติศาสตร์รุ่นก่อนหน้า เช่น อิสตอครี, อะห์มัด อิบนุ ฟัฎลาน, อัลมัสอูดี, อิบนุ เฮากอล, อัลบีรูนี, อิบนุลอะซีร, อัลมักดะซี และอัรรอซีย์ แต่ถึงกระนั้น ผลงานของเขาก็ยังถือว่าเป็นการประมวลจากแหล่งข้อมูลทั้งที่เป็นที่รู้จักและไม่เป็นที่รู้จัก</p>
+
+      <p>อย่างไรก็ดี จุดเด่นของอะญาอิบเล่มนี้กลับอยู่ที่รูปแบบการเขียนและภาษา ซึ่งส่งอิทธิพลต่อผลงานด้านจักรวาลวิทยาและภูมิศาสตร์อิสลามรุ่นหลังจำนวนมาก โดยเฉพาะในแง่ของสไตล์ที่ผสมผสานความรู้ทางวิทยาศาสตร์เข้ากับเรื่องเล่าและบทกวี เพื่อสร้างความเพลิดเพลินให้แก่ผู้อ่าน มากกว่าจะมุ่งเสนอความรู้เชิงวิทยาศาสตร์ล้วน ๆ</p>
+
+      <p>ไม่ว่าจะอย่างไรก็ตาม องค์ความรู้ด้านสัตววิทยาของอิสลามได้เจาะทะลุเข้าไปในโลกตะวันตกตั้งแต่ศตวรรษที่ 17 แล้ว ชาวยุโรปบางคนรู้ภาษาอาหรับและสามารถอ่านตำราของนักวิทยาศาสตร์มุสลิมได้โดยตรง ตัวอย่างเช่น ตัวของดาร์วินเองก็เคยได้เรียนรู้วัฒนธรรมอิสลามในเคมบริดจ์ ภายใต้การสอนของนักบูรพคดีศึกษาชาวยิวที่ชื่อ ซามูเอล ลี (Samuel Lee)</p>
+
+      <p>และน่าสนใจอย่างยิ่งที่จะสังเกตว่า มีการแปล “บทสรุป” ของหนังสือที่แต่งโดยอัดดะมีรีและนักวิทยาศาสตร์มุสลิมคนอื่น ๆ เป็นภาษาละตินโดยอับรอฮัม เอเชลเลนซิส (Abraham Echellensis) และถูกตีพิมพ์ที่กรุงปารีสในปี ค.ศ. 1671 ภายใต้ชื่อว่า De Proprietatibus et Virtutibus Medicis Animalium (ว่าด้วยคุณสมบัติและสรรพคุณทางยาของสัตว์)</p>
+
+      <p>กล่าวได้ว่า หนังสือฉบับนี้ถูกแปลและเผยแพร่ “ก่อน” การปรากฏตัวของบรรดานักคิดผู้เป็นต้นแบบของดาร์วิน เช่น ฟรานเชสโก เรดี (Francesco Redi, 1626–1698), คาร์ล ลินเนียส (Carl Linnaeus, 1707–1778), จอร์จ-หลุยส์ เลอแคลร์ก เดอ บุฟฟง (Buffon, 1707–1788) และฌ็อง-บาติสต์ ลามาร์ก (Jean-Baptiste Lamarck, 1744–1829)</p>
+
+      <p>ดังนั้นจึงกล่าวได้ว่า แนวคิดเรื่อง “วิวัฒนาการ” ของนักวิชาการมุสลิมได้แทรกซึมเข้าสู่โลกตะวันตกก่อนหน้านั้นแล้ว และอาจเป็นเหตุผลหนึ่งที่ว่าทำไมบรรดานักวิวัฒนาการกลุ่มแรก ๆ จึงเกิดขึ้นในฝรั่งเศส</p>
+
+      <p>เราคิดว่าสิ่งที่กล่าวมาทั้งหมดนี้เพียงพอที่จะแสดงให้เห็นถึงอิทธิพลของมุสลิมต่อชาวยุโรปในเรื่องนี้ และจำเป็นต้องมีการศึกษาเชิงเปรียบเทียบเพิ่มเติมต่อไป เพื่อเผยให้เห็นถึงอิทธิพลของนักคิดสายวิวัฒนาการมุสลิมต่อชาวยุโรปและการส่งต่อแนวคิดเหล่านี้ไปยังโลกตะวันตก</p>
+
+      <h2 class="article-h2">ความแตกต่างจากแนวคิดของกรีก</h2>
+
+      <p>ทฤษฎีวิวัฒนาการของอัลญาฮิซถือเป็น “ของใหม่มาก” ในประวัติศาสตร์วิทยาศาสตร์ และไม่เคยมีใครเขียนถึงเรื่องนี้มาก่อนหน้าเขาเลย แม้ว่านักปรัชญากรีกอย่างเอมเพโดเคิลส์ (Empedocles) และอริสโตเติลจะเคยพูดถึง “การเปลี่ยนแปลง” ในธรรมชาติ พืช และสัตว์ แต่พวกเขาก็ไม่เคยแม้แต่จะก้าวเท้าแรกไปสู่ “ทฤษฎีวิวัฒนาการ” ที่จะเกิดขึ้นในโลกมุสลิมในอนาคต</p>
+
+      <p>แนวคิด “การเปลี่ยนแปลง” ของพวกเขาเป็นเพียง “การเปลี่ยนแปลงที่เรียบง่าย” หรือ “การเคลื่อนที่” เท่านั้น ไม่ได้มีอะไรไปมากกว่านั้น และด้วยแนวคิดเรื่อง “การเปลี่ยนแปลง” นี้ พวกเขาไม่เคยออกแบบ (ไม่ว่าจะโดยตรงหรือโดยนัย) ถึงแนวคิดเรื่อง “วิวัฒนาการ” เลย</p>
+
+      <p>ดังที่มีผู้สรุปแนวคิดของอริสโตเติลว่า</p>
+
+      <p>“โลกแห่งธรรมชาติสำหรับอริสโตเติล จึงเป็นโลกของสิ่งที่เคลื่อนที่ได้เอง…ธรรมชาติในตัวมันเองคือกระบวนการ การเติบโต การเปลี่ยนแปลง…กระบวนการนี้คือ ‘พัฒนาการ’ แต่มัน ‘ไม่ใช่’ สิ่งที่เราเรียกว่า ‘วิวัฒนาการ’ เพราะสำหรับอริสโตเติลแล้ว รูปแบบของการเปลี่ยนแปลงและโครงสร้างต่าง ๆ ที่ปรากฏในโลกธรรมชาตินั้น เป็น ‘ชุดรายการที่คงอยู่ชั่วนิรันดร์’ (คือ มีแบบนี้มาตลอดและจะเป็นแบบนี้ตลอดไป) และรายการต่าง ๆ ในชุดนี้มีความสัมพันธ์กันใน ‘เชิงตรรกะ’ ไม่ใช่ใน ‘เชิงลำดับเวลา’ (คือ ไม่ได้เปลี่ยนแปลงจากสิ่งหนึ่งไปสู่อีกสิ่งหนึ่งตามกาลเวลา)”<sup class="fn-ref" id="fnref-7"><a href="#ref-7">⁷</a></sup></p>
+
+      <p>ในเวลาต่อมา นักวิชาการแห่งศตวรรษที่ 11 อย่างอัลคอฏีบ อัลบัฆดาดีย์ (เสียชีวิต ฮ.ศ. 463 / ค.ศ. 1071) ได้แสดงความเห็นวิจารณ์ว่า หนังสืออัลฮะยะวานแทบจะเป็นแค่การลอกผลงานของอริสโตเติลในหนังสือที่มีชื่อเดียวกัน อย่างไรก็ตาม ยังมีผู้ตั้งข้อกล่าวหาในลักษณะเดียวกันต่ออริสโตเติลเอง โดยกล่าวว่า เขาอาจลอกแนวคิดมาจากนักปราชญ์ที่ชื่อว่า “อัสคะลิบียาดิสแห่งเปอร์กามุม” (Asclepiades of Pergamum) มาอีกที</p>
+
+      <p>อย่างไรก็ดี นักวิชาการรุ่นหลังได้ชี้ให้เห็นว่า อิทธิพลของอริสโตเติลที่มีต่อผลงานของอัลญาฮิซนั้นมีอยู่อย่างจำกัด และอาจเป็นไปได้ว่า อัลบัฆดาดีย์ไม่ได้รู้จักงานต้นฉบับของอริสโตเติลอย่างแท้จริง จึงเข้าใจผิดเกี่ยวกับที่มาและคุณค่าของหนังสือเล่มนี้</p>
+
+      <p>สำหรับอัลญาฮิซ ข้อสังเกตของเขานั้นถือว่ามีความสำคัญอย่างยิ่ง และมีอิทธิพลต่อปัญญาชนยุคฟื้นฟูศิลปวิทยา (Renaissance) หลายคน รวมถึงเลโอนาร์โด ดาวินชีด้วย</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>แม้ในประวัติศาสตร์อิสลามจะมีนักปราชญ์อย่างอัลญาฮิซที่เสนอแนวคิดซึ่ง “ดูเหมือนจะคล้าย” แนวคิดเรื่องวิวัฒนาการในบางมิติ โดยเฉพาะอย่างยิ่งเรื่อง “การต่อสู้เพื่อความอยู่รอด” (struggle for existence) และ “ความสัมพันธ์เชิงล่า–เหยื่อ” ระหว่างสปีชีส์ในธรรมชาติ แต่เมื่อนำมาตรวจสอบโดยละเอียดแล้ว ย่อมเห็นชัดว่า “แนวคิดเหล่านี้ยังห่างไกล” จากโครงสร้างของทฤษฎีวิวัฒนาการโดยการคัดเลือกโดยธรรมชาติของดาร์วินอย่างมีนัยสำคัญ</p>
+
+      <p>สิ่งที่ดาร์วินนำเสนอใน On the Origin of Species มิใช่เพียงการกล่าวถึง “การเปลี่ยนแปลงของสิ่งมีชีวิตตามกาลเวลา” ซึ่งเป็นสิ่งที่มีมานานในวัฒนธรรมมนุษย์ แต่คือการสร้าง “กลไกอธิบาย” อย่างเป็นระบบ โดยเฉพาะแนวคิดเรื่องการคัดเลือกโดยธรรมชาติ ซึ่งยึดโยงกับพันธุกรรม อัตราการสืบพันธุ์และการเปลี่ยนแปลงของลักษณะพันธุกรรมในประชากร สิ่งเหล่านี้ไม่ปรากฏเลยในงานเขียนของอัลญาฮิซหรือผู้เขียนอาหรับยุคก่อนหน้าอื่น ๆ</p>
+
+      <p>ยิ่งไปกว่านั้น เมื่อพิจารณาอย่างรอบด้านก็พบว่า</p>
+
+      <ol class="article-summary">
+        <li>ไม่มีหลักฐานว่าดาร์วินเคยอ่านผลงานของอัลญาฮิซ หรือได้รับอิทธิพลจากนักปราชญ์อาหรับในด้านนี้ ข้อมูลในบางบทความ เช่น บทความในหัวข้อ A Thousand Years Before Darwin, Islamic Scholars Were Writing About Natural Selection ของ Shayla Love ยังขาด “คำอ้างอิงโดยตรง” ที่จะสามารถพิสูจน์ได้ว่าแนวคิดของอัลญาฮิซสอดคล้องกับ “สาระสำคัญ” ของทฤษฎีวิวัฒนาการสมัยใหม่จริง ๆ</li>
+        <li>การอ้างอิงว่าแนวคิดของอัลญาฮิซคือจุดตั้งต้นของทฤษฎีดาร์วิน จึงมีลักษณะเป็นการตีความแบบฉายย้อน (retrojection) ซึ่งอาจเป็นอันตรายต่อความเข้าใจในประวัติศาสตร์วิทยาศาสตร์</li>
+      </ol>
+
+      <p>และในบางบทความที่เขียนเกี่ยวกับวิวัฒนาการดังเช่นของ Shayla ก็ได้เผยเจตนาเชิงอัตลักษณ์อย่างชัดเจนว่า ต้องการให้การเล่าเรื่องนี้ช่วย “เปิดพื้นที่” ทางวิทยาศาสตร์ในประเทศมุสลิมที่ยังต่อต้านวิวัฒนาการ รวมถึงสร้างภาพแทนทางบวกให้แก่ “เยาวชนคนผิวสี” ที่มักไม่เห็นตนเองในประวัติศาสตร์วิทยาศาสตร์โลก แต่เจตนาในลักษณะนี้แม้น่าเห็นใจก็อาจบิดเบือนข้อเท็จจริงเชิงวิทยาศาสตร์และประวัติศาสตร์ หากใช้อย่างไม่ระมัดระวัง</p>
+
+      <p>แทนที่จะมุ่งเน้นว่า “ใครคิดก่อน” หรือ “ใครสมควรได้รับเครดิต” การศึกษาประวัติศาสตร์วิทยาศาสตร์ก็ควรมุ่งไปที่การทำความเข้าใจว่า องค์ความรู้เกิดขึ้นจากกระบวนการสะสม–วิพากษ์–กลั่นกรองอย่างไร และเมื่อใดคือ “จุดเปลี่ยน” ที่ทำให้แนวคิดหนึ่งกลายเป็น “ทฤษฎีวิทยาศาสตร์” ที่ตรวจสอบได้และเป็นที่ยอมรับในหมู่ผู้รู้ในยุคนั้น</p>
+
+      <p>การสำรวจอัลญาฮิซในฐานะผู้ที่มีจินตนาการทางชีววิทยาที่ลุ่มลึก มีคุณค่าในตัวของมันเอง โดยไม่จำเป็นต้องพยายามยกระดับเป็น “ดาร์วินแห่งโลกอิสลาม” อย่างฝืนธรรมชาติ เพราะคุณค่าของเขาอยู่ที่ความสามารถในการสังเกตธรรมชาติ วิเคราะห์พฤติกรรมของสัตว์ และตั้งคำถามที่ท้าทาย ซึ่งเป็นคุณสมบัติพื้นฐานของนักคิดอิสระในโลกอิสลามยุคทอง</p>
+
+      <p>อย่างไรก็ตาม ทฤษฎีวิวัฒนาการยังคงเป็นแนวคิดที่ท้าทายต่อหลักความเชื่อและกรอบอภิปรัชญาของอิสลามในบางระดับ และอาจต้องใช้เวลาอีกยาวนานในการพิสูจน์ พินิจ และสนทนาให้ลงลึกทั้งในเชิงหลักฐานวิทยาศาสตร์และในเชิงเทววิทยา ข้อถกเถียงในเรื่องนี้ไม่ควรถูกปัดตกเพียงเพราะมันถูกเสนอโดยกลุ่มที่นอกเหนือจากชาวมุสลิม หรือเพราะถูกเชื่อมโยงกับกลุ่มผู้มีแนวคิดนอกขนบ การถกเถียงในเชิงวิทยาศาสตร์ไม่ควรถูกมองว่าเป็นภัยต่อศรัทธา หากแต่เป็นอีกเส้นทางของการแสวงหาความจริง ดังที่อิหม่ามอัลฆอซาลีย์ (เสียชีวิต ฮ.ศ. 505 / ค.ศ. 1111) ได้เตือนสติไว้ว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">تهجين قضايا الأدلة -بسبب قبول بعض المبتدعة لها، واعتقاده إياها- من دأب ذوي الخور والجبن. فلقد عرفنا بالدليل حدوث العالم وافتقاره إلى محدث، وصدق الرسول وتأييده بالمعجزة. وهو -أيضا- مذهب المعتزلة والروافض والكرامية. ولا سبيل إلى اجتناب الحق: ترفعا من خسة الشركاء.</blockquote>
+      <p class="ar-translation">“เราขอยืนยันในจุดยืนว่า การปฏิเสธความน่าเชื่อถือของบทสรุปเพียงเพราะมีกลุ่มอุตริชนบางกลุ่มยอมรับและยึดถือในข้อสรุปเหล่านั้นด้วยนั้น ความจริงแล้วมันคือวิสัยทัศน์ของผู้ที่อ่อนแอทางปัญญาและปราศจากความกล้าหาญทางวิชาการ ทั้งนี้เนื่องด้วยข้อเท็จจริงที่ว่า เราได้ประจักษ์แจ้งผ่านกระบวนการพิสูจน์ทางสติปัญญาอันมิอาจปฏิเสธได้ถึงหลักการพื้นฐานอันเป็นสัจธรรม ซึ่งได้แก่การบังเกิดขึ้นของจักรวาล (ภายหลังจากที่มันมิได้ดำรงอยู่) และการที่มันจำเป็นต้องมีผู้สร้าง ตลอดจนการประจักษ์แจ้งถึงความสัตย์จริงของศาสนทูตและการยืนยันสาส์นของท่านด้วยการแสดงมุอ์ญิซาตอันเป็นที่ประจักษ์ และเป็นความจริงที่ว่า หลักการเชิงเทววิทยาเหล่านี้ก็เป็นแนวทาง (มัสฮับ) ของกลุ่มมุอ์ตะซิละฮ์ กลุ่มรอฟิเฎาะฮ์และกลุ่มกัรรอมียะฮ์ด้วยเช่นกัน และการมีจุดยืนร่วมกันในประเด็นเหล่านี้ (กับกลุ่มที่ถูกมองว่าเป็นอุตริชน) ไม่ได้หมายความว่าเรามีสิทธิ์ที่จะละทิ้งสัจธรรมที่ได้รับการพิสูจน์แล้ว ด้วยเหตุนี้ จึงย่อมไม่มีหนทางใดที่อนุญาตให้เราหลีกหนีหรือปฏิเสธสัจธรรมได้เพียงเพื่อต้องการยกระดับตนเองให้พ้นจากสิ่งที่ตนมองว่าเป็นความต่ำต้อยของผู้ที่มีจุดยืนร่วมกัน การกระทำเช่นนั้นย่อมหมายถึงการให้ความสำคัญกับอัตตาของตนเองอยู่เหนือความจริงอันเป็นที่ประจักษ์”<sup class="fn-ref" id="fnref-8"><a href="#ref-8">⁸</a></sup></p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">มัรกัส อัลอิมาม อัลอัชอะรีย์. (2569). มรดกของอัลญาฮิซ: จากการรังสรรค์อันประณีต สู่ข้อถกเถียงเรื่องวิวัฒนาการ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/kalam/al-jahiz-and-evolution.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">เชิงอรรถ</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1" lang="ar" dir="rtl">الجاحظ، الحيوان، تحقيق: عبد السلام هارون. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2" lang="ar" dir="rtl">حاجي خليفة، كشف الظنون عن أسامي الكتب والفنون. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3" lang="en" dir="ltr">George Sarton, Introduction to the History of Science (Washington, 1927–1948). <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4" lang="en" dir="ltr">Conway Zirkle, “Natural Selection before the Origin of Species,” Proceedings of the American Philosophical Society 84, no. 1 (1941): 71–123 — نقلًا عن الجاحظ، الحيوان. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5" lang="ar" dir="rtl">كمال الدين الدميري، حياة الحيوان الكبرى. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+        <li id="ref-6" lang="en" dir="ltr">Rebecca Stott, Darwin’s Ghosts: The Secret History of Evolution (London: Bloomsbury, 2012). <a class="fn-back" href="#fnref-6" aria-label="กลับไปยังเชิงอรรถที่ 6">↑</a></li>
+        <li id="ref-7" lang="en" dir="ltr">R. G. Collingwood, The Idea of Nature (Oxford: Clarendon Press, 1945). <a class="fn-back" href="#fnref-7" aria-label="กลับไปยังเชิงอรรถที่ 7">↑</a></li>
+        <li id="ref-8" lang="ar" dir="rtl">أبو حامد الغزالي، الاقتصاد في الاعتقاد (المقدمة) — الطبعة والموضع بحاجة إلى تحقيق. <a class="fn-back" href="#fnref-8" aria-label="กลับไปยังเชิงอรรถที่ 8">↑</a></li>
+      </ol>
+    </section>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <p class="biblio-subhead">References</p>
+      <ol class="bibliography latin">
+        <li>Ibn Ṭufayl. The Improvement of Human Reason, Exhibited in the Life of Hai Ebn Yokdhan. Translated by Simon Ockley. London: W. Bray, 1711.</li>
+        <li>Netton, Ian Richard, ed. “Al-Qazwini.” In Encyclopedia of Islamic Civilization and Religion, 686. 2013.</li>
+        <li>Coyne, Jerry A. “Did Arabs Come Up with Darwinism before Darwin?” Why Evolution Is True, 7 October 2020.</li>
+        <li>Bayrakdar, Mehmet. “Al-Jahiz and the Rise of Biological Evolutionism.” The Islamic Quarterly 27, no. 3 (1983): 149–155.</li>
+        <li>Peters, F. E. Aristotle and the Arabs: The Aristotelian Tradition in Islam. New York: New York University Press, 1968.</li>
+        <li>Echellensis, Abraham. De Proprietatibus et Virtutibus Medicis Animalium. Paris, 1617.</li>
+        <li>Asín Palacios, Miguel. “El ‘Libro de los Animales’ de Jāḥiẓ.” Isis 14, no. 1 (1930): 20–54.</li>
+        <li>Brockelmann, Carl. Geschichte der arabischen Litteratur (GAL). Supplement I.</li>
+        <li>Cassirer, Ernst. The Problem of Knowledge. Translated by W. H. Woglom and C. W. Hendel. New Haven: Yale University Press, 1950.</li>
+        <li>Collingwood, R. G. The Idea of Nature. Oxford: Clarendon Press, 1945.</li>
+        <li>Darwin, Francis, ed. The Life and Letters of Charles Darwin. London: John Murray, 1887.</li>
+        <li>Zirkle, Conway. “Natural Selection before the Origin of Species.” Proceedings of the American Philosophical Society 84, no. 1 (1941): 71–123.</li>
+        <li>Mieli, Aldo. La Science Arabe et Son Rôle dans l’Évolution Scientifique Mondiale. Leiden: Brill, 1938.</li>
+        <li>Sarton, George. Introduction to the History of Science. Washington, 1927–1948.</li>
+        <li>Stott, Rebecca. Darwin’s Ghosts: The Secret History of Evolution. London: Bloomsbury, 2012.</li>
+        <li>Masood, Ehsan. “Islam’s Evolutionary Legacy.” The Guardian, 27 February 2009.</li>
+      </ol>
+      <p class="biblio-subhead" lang="ar" dir="rtl">المصادر العربية</p>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li>عبد الحي العكري، شذرات الذهب في أخبار من ذهب، تحقيق: عبد القادر الأرناؤوط ومحمود الأرناؤوط، دار ابن كثير، 1406هـ/1986م.</li>
+        <li>الجاحظ، الحيوان، تحقيق: عبد السلام هارون، 1384هـ/1965م.</li>
+        <li>الجاحظ، الحيوان، تحقيق: محمد باسل عيون السود، بيروت: دار الكتب العلمية، الطبعة الثانية، 1424هـ/2003م.</li>
+        <li>عبد العزيز عتيق، تاريخ النقد الأدبي عند العرب، بيروت: دار النهضة العربية للطباعة والنشر، الطبعة الرابعة، 1406هـ/1986م، ص324.</li>
+        <li>السخاوي، الضوء اللامع لأهل القرن التاسع، دار مكتبة الحياة.</li>
+        <li>حاجي خليفة، كشف الظنون عن أسامي الكتب والفنون، تحقيق: إكمال الدين إحسان أوغلي وبشار عواد معروف، لندن: مؤسسة الفرقان للتراث الإسلامي.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
