@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เวลาในเทววิทยาอิสลาม ระหว่างอัลฆอซาลีย์และอิบนุ หัซม์ — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์เชิงเทววิทยาเปรียบเทียบมโนทัศน์ ‘เวลา’ ระหว่างอิหม่ามอัลฆอซาลีย์แห่งอัชอะรียะฮ์กับอิบนุ หัซม์แห่งศอฮิรียะฮ์ และการเชื่อมโยงกับทฤษฎีสัมพัทธภาพและกลศาสตร์ควอนตัมในเชิงอุปมา">
+<meta name="keywords" content="เวลา, อัลฆอซาลีย์, อิบนุ หัซม์, กะลาม, เทววิทยา, อิลมุลกะลาม, สัมพัทธภาพ, ควอนตัม">
+<meta name="author" content="มัรกัส อัลอิมาม อัลอัชอะรีย์">
+
+<meta property="og:title" content="เวลาในเทววิทยาอิสลาม ระหว่างอัลฆอซาลีย์และอิบนุ หัซม์ — Islamic Fiqh Publishing">
+<meta property="og:description" content="มุตะกัลลิมูนเข้าใจ ‘เวลา’ อย่างไร และมุมมองของอัลฆอซาลีย์กับอิบนุ หัซม์สัมพันธ์กับฟิสิกส์สมัยใหม่อย่างไร">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/kalam/time-in-islamic-theology.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+.bibliography.latin { direction: ltr; text-align: left; }
+.bibliography.latin li { font-family: 'Inter', 'Sarabun', sans-serif; }
+.biblio-subhead {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 15px; font-weight: 700;
+  color: var(--text-primary); margin: 24px 0 4px;
+}
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="time-in-islamic-theology">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/kalam.html" class="article-feature-eyebrow">กะลาม / เทววิทยา</a>
+      <h1 class="article-feature-title">เวลาในเทววิทยาอิสลาม ระหว่างอัลฆอซาลีย์และอิบนุ หัซม์</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَمِن وَرَآئِهِم بَرْزَخٌ إِلَىٰ يَوْمِ يُبْعَثُونَ</p>
+      </div>
+      <p>{และเบื้องหลังพวกเขามีบัรซัค (สิ่งกีดขวางคั่นอยู่) ทอดยาวไปจนถึงวันที่พวกเขาจะถูกทำให้ฟื้นคืนชีพ}<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>คำบุพบท <span class="ar-inline" lang="ar" dir="rtl">إِلَى</span> บ่งบอกถึง “ขอบเขตเชิงเวลา” มิใช่ “ตำแหน่งเชิงพื้นที่” ซึ่งตอกย้ำว่าพระดำรัสมุ่งที่ลำดับเวลา มิใช่ที่ตั้งทางอวกาศ</p>
+
+      <p class="lead-text">ทว่าปัญหาที่ว่า “เวลา” (<span class="ar-inline" lang="ar" dir="rtl">الزمان</span>) เป็นสิ่งที่ดำรงอยู่อย่างอิสระหรือเกิดขึ้นพร้อมกับการสร้างโลก เป็นหนึ่งในคำถามที่มีมานานทั้งในฟิสิกส์และเทววิทยาอิสลาม บทความนี้จะมุ่งสำรวจว่ามุตะกัลลิมูนและนักเทววิทยา อย่างเช่น อิหม่ามอัลฆอซาลีย์ (เสียชีวิต ฮ.ศ. 505 / ค.ศ. 1111) จากมัสฮับอัลอัชอะรีย์ และอิบนุ หัซม์ (เสียชีวิต ฮ.ศ. 456 / ค.ศ. 1064) จากมัสฮับอัศศอฮิรีย์ เข้าใจเวลาอย่างไร และมุมมองนั้นสัมพันธ์กับทฤษฎีสัมพัทธภาพและกลศาสตร์ควอนตัมอย่างไร<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>เป็นที่น่าสนใจว่า อัลลอฮ์ตรัสว่า “บัรซัค” (<span class="ar-inline" lang="ar" dir="rtl">بَرْزَخ</span> คือ สภาวะหรือภพภูมิระหว่างความตายและการฟื้นคืนชีพ) นั้นทอดยาว “ไปจนถึง” วันแห่งการฟื้นคืนชีพ ไม่ใช่ทอด “ข้าม” อวกาศ การอ้างอิงถึงเวลาแทนที่จะเป็น “ตำแหน่ง” นี้ มีความสำคัญในทางฟิสิกส์ โดยเกี่ยวข้องกับทฤษฎีสัมพัทธภาพ, เวลา (โดยเฉพาะการยืดออกของเวลา หรือ time dilation), ธรรมชาติของสิ่งกีดขวาง หรือขอบเขตระหว่างโลกควอนตัมที่มองเห็นและมองไม่เห็น และธรรมชาติของการดำรงอยู่ในโลกนั้น</p>
+
+      <h2 class="article-h2">มุมมองเชิงปรัชญา–กะลามเกี่ยวกับเวลาและอวกาศ</h2>
+
+      <p>“เวลา” นั้นเชื่อมโยงกับการเปลี่ยนแปลงสภาวะ หน่วยเวลาตามธรรมชาติถูกกำหนดมาจากคาบการเคลื่อนที่ของวัตถุท้องฟ้า เช่น ดวงอาทิตย์และดวงจันทร์ นักปราชญ์ในอดีตได้ตระหนักว่าเวลามีความเชื่อมโยงอย่างยิ่งกับการเคลื่อนที่ ในความเป็นจริง เวลาเคยถูกพิจารณาว่าเป็น “เครื่องวัดการเคลื่อนที่”</p>
+
+      <p>ในวิชา “กะลาม” เวลามักถูกมองว่ามีความสัมพันธ์กับอวกาศเสมอ อวกาศและเวลาถูกพิจารณาว่าเป็น “มาตรวัดสัมพัทธ์” (คือค่าของมันขึ้นอยู่กับผู้สังเกตหรือกรอบอ้างอิง) ทั้งอวกาศและเวลาถูกมองว่ามีลักษณะไม่ต่อเนื่อง (เวลาประกอบจาก “อานะ” คือ <span class="ar-inline" lang="ar" dir="rtl">آن</span>; สสารจาก “อัลเญาฮัร อัลฟัรด์”) นักเทววิทยาและมุตะกัลลิมูนผู้เชี่ยวชาญศาสตร์กะลามบางท่านได้อธิบายรายละเอียดแง่มุมเหล่านี้ของเวลาอย่างละเอียด จนเราสามารถสร้างทฤษฎีเกี่ยวกับอวกาศและเวลาทั้งหมดขึ้นมาได้ ทัศนะของพวกท่านเกี่ยวกับความสัมพันธ์ระหว่างอวกาศและเวลานั้นสอดคล้องอย่างยิ่งในเชิงแนวคิดกับความเข้าใจร่วมสมัยเกี่ยวกับเวลาเชิงสัมพัทธภาพ</p>
+
+      <p>สองนักคิดใหญ่ที่อภิปรายเรื่องเวลาอย่างลุ่มลึกคืออิบนุ หัซม์ (อัศศอฮิรีย์) และอิหม่ามอัลฆอซาลีย์ (อะชาอิเราะฮ์) พวกท่านได้ปฏิเสธแนวคิดเรื่อง “อวกาศสัมบูรณ์” และ “เวลาสัมบูรณ์” และมองว่าอวกาศและเวลามีความสัมพันธ์ซึ่งกันและกันเสมอ อิหม่ามอัลฆอซาลีย์ได้กล่าวถึง “มิติเวลา” (time-dimension) โดยเฉพาะ และพิจารณาว่ามันมีสถานะเท่าเทียมกับมิติเชิงพื้นที่ (spatial dimensions) ในความเป็นจริง คุณสมบัติหลายประการของเวลาในศาสตร์กะลามนั้นสอดคล้องในเชิงแนวคิดกับคำอธิบายเวลาในทฤษฎีสัมพัทธภาพ</p>
+
+      <p>ยิ่งไปกว่านั้น ศาสตร์กะลามยังตั้งสมมติฐานว่าเวลา เช่นเดียวกับอวกาศ เกิดขึ้นพร้อมกับการสร้างจักรวาล ดังนั้น พวกท่านจึงถือว่าคำถามที่ว่า “พระเจ้าทรงทำอะไรอยู่ก่อนการสร้างจักรวาล?” เป็นคำถามที่ไร้ความหมาย มุตะกัลลิมูนส่วนใหญ่ถือว่าเวลาและอวกาศมีลักษณะไม่ต่อเนื่อง ประกอบด้วยขณะที่ไม่สามารถแบ่งแยกได้ ที่เรียกว่า “อานะ” (<span class="ar-inline" lang="ar" dir="rtl">آن</span> คือหน่วยเวลาที่เล็กที่สุด)</p>
+
+      <h2 class="article-h2">ผลเชิงเทววิทยาและอภิปรัชญา</h2>
+
+      <p>ตามหลักความเชื่ออิสลาม มุตะกัลลิมูนถือว่าอัลลอฮ์ทรงอยู่นอกเหนือ (คือไม่ถูกผูกมัดหรือจำกัดโดย) อวกาศและเวลา หากไม่ถูกผูกมัดด้วยเวลา ก็ย่อมสามารถ “มองเห็น” เวลาทั้งหมดได้ในคราวเดียว ซึ่งเป็นมุมมองของผู้สังเกตการณ์นั้น ดังนั้น การกระทำของอัลลอฮ์จึงไม่ถูกผูกมัดด้วยลำดับเหตุการณ์ที่เกิดขึ้นตามเวลา</p>
+
+      <p>แหล่งข้อมูลของกะลามอิสลามนั้นแตกต่างอย่างมากจากแหล่งข้อมูลของปรัชญาธรรมชาติคลาสสิก รวมถึงปรัชญาของกรีก มุตะกัลลิมูนถือว่าอัลกุรอานเป็นแหล่งข้อมูลหลักสำหรับความรู้เกี่ยวกับโลก และด้วยเหตุนี้ พวกท่านจึงพยายามทำความเข้าใจโลกโดยอิงตามบทบัญญัติของอัลกุรอาน มุตะกัลลิมูนมีความเข้าใจว่าอวกาศไม่มีความหมายในตัวเอง</p>
+
+      <p>หากปราศจาก “วัตถุ” (อัลญิสม์) เราก็ไม่สามารถรับรู้ถึงการมีอยู่ของอวกาศได้ เช่นเดียวกันกับเวลา ซึ่งไม่สามารถรับรู้ได้หากปราศจากการมีอยู่ของ “การเคลื่อนที่” ซึ่งการเคลื่อนที่นั้นก็ต้องการวัตถุที่จะได้รับผลกระทบ</p>
+
+      <p>ตามทัศนะของอิบนุ หัซม์ เวลาถูกนิยามว่าเป็น “ช่วงระยะเวลาที่อนุภาคหนึ่งจะดำรงอยู่ ไม่ว่าจะหยุดนิ่งหรือเคลื่อนที่ก็ตาม และหากเวลาถูกแยกออกจากวัตถุ วัตถุก็จะหยุดดำรงอยู่ และเวลาเองก็จะหยุดดำรงอยู่ด้วยเช่นกัน” ในนิยามนี้ เวลามีความเชื่อมโยงโดยตรงกับการเคลื่อนที่ และการมีอยู่ของ “วัตถุ” (อัลญิสม์) ที่เป็นประธานของการเคลื่อนที่นั้น นี่คือเหตุผลที่อิบนุ หัซม์ได้อ้างถึงนิยามของเวลานี้ซ้ำ ๆ ตลอดการอภิปรายของท่านเกี่ยวกับการสร้างโลก</p>
+
+      <p>(ในฟิสิกส์สมัยใหม่ เวลาและอวกาศถูกถักทอเป็นผืนเดียวกัน เรียกว่า “ปริภูมิ-เวลา” หรือ space-time ทฤษฎีสัมพัทธภาพของไอน์สไตน์อธิบายว่า มวลขนาดใหญ่ เช่น โลกหรือดวงอาทิตย์ จะบิดงอผืนผ้าของปริภูมิ-เวลา และเมื่อโลกหมุน มันยัง “ลาก” ผืนผ้าดังกล่าวให้บิดตามไปด้วย นักวิทยาศาสตร์สามารถวัดผลนี้ได้จริงโดยใช้ดาวเทียม นั่นยืนยันว่า “เวลา” และ “อวกาศ” เชื่อมโยงกันอย่างแท้จริง)</p>
+
+      <p>วัตถุ (ที่นักเทววิทยาเรียกว่า “อัลญิสม์”) เองก็ไม่สามารถดำรงอยู่ได้หากปราศจากการเคลื่อนที่ สภาวะ “หยุดนิ่ง” (หรือเรียกกันว่า สุกูน คือ <span class="ar-inline" lang="ar" dir="rtl">سكون</span>) เองก็ถูกพิจารณาโดยเหล่ามุตะกัลลิมูนบางท่านว่า เป็นการเคลื่อนที่ชนิดหนึ่งที่เกิดขึ้นพร้อมกันในสองทิศทางตรงกันข้าม หรือกล่าวอีกอย่างคือเป็นภาวะที่แรงสองด้านสมดุลกัน ซึ่งแนวคิดนี้คล้ายกับกฎข้อที่หนึ่งของนิวตันที่ว่า “วัตถุที่อยู่นิ่งจะคงอยู่นิ่ง และวัตถุที่กำลังเคลื่อนที่จะคงเคลื่อนไหวไปเรื่อย ๆ จนกว่าจะมีแรงภายนอกมากระทำ”</p>
+
+      <p>ซึ่งอุปมาได้กับ “แรงปฏิกิริยาปกติ” (normal force) เมื่อวัตถุสัมผัสกัน — ขอย้ำว่าเป็นเพียงอุปมาสื่อสาร ไม่ใช่การเทียบตรงในเชิงทฤษฎี — แรงนี้ทำหน้าที่ป้องกันไม่ให้วัตถุซ้อนทับกัน</p>
+
+      <p>ในอีกมุมหนึ่ง ทั้งอวกาศ (<span class="ar-inline" lang="ar" dir="rtl">المكان</span>) และเวลา (<span class="ar-inline" lang="ar" dir="rtl">الزمان</span>) ก็ถูกมองว่าเป็นสิ่งสัมพัทธ์ กล่าวคือ แนวคิดอย่าง “ข้างหน้า” และ “ข้างหลัง”, “ข้างบน” และ “ข้างล่าง” ล้วนขึ้นอยู่กับตำแหน่งของผู้สังเกต เช่นเดียวกับที่คำว่า “ก่อน” และ “หลัง” ก็ขึ้นอยู่กับมุมมองของผู้รับรู้เช่นกัน</p>
+
+      <p>อิหม่ามอัลฆอซาลีย์ได้อธิบายประเด็นนี้ไว้อย่างลึกซึ้งว่า มนุษย์มี “ขีดจำกัดของจินตนาการ” ที่ไม่สามารถนึกภาพสิ่งที่มี “การเริ่มต้น” ได้ โดยไม่เผลอคิดว่าต้องมี “ก่อนหน้า” มันเสมอ เราจึงเผลอมองว่า “ก่อนเริ่มจักรวาล” ต้องมี “เวลา” อยู่ด้วย ทั้งที่ในความจริงแล้ว “เวลา” เองก็เริ่มต้นพร้อมกับจักรวาล เปรียบได้กับคนที่คิดว่าเหนือสุดของท้องฟ้ายังต้องมี “ที่ว่าง” อีก ทั้งที่เหนือไปกว่านั้นไม่มีแม้แต่ “ที่ว่าง” หรือ “ความว่างเปล่า”</p>
+
+      <p>อัลฆอซาลีย์จึงสรุปว่า ทั้ง “อวกาศ” และ “เวลา” มีสถานะเท่าเทียมกัน เป็นเพียงลักษณะที่เกิดควบคู่ไปกับร่างวัตถุและการเคลื่อนไหวเท่านั้น ท่านกล่าวว่า “ดังที่ระยะทางเป็นคุณสมบัติประจำของร่างวัตถุ เวลาก็เป็นคุณสมบัติประจำของการเคลื่อนไหว และเช่นเดียวกับที่ไม่มีพื้นที่ใดอยู่ถัดจากขอบของโลก ก็ไม่มี ‘ช่วงเวลาก่อนหน้า’ ที่อยู่ก่อนเริ่มการเคลื่อนไหวแรก นอกจากในจินตนาการเท่านั้น” และยังกล่าวอีกว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فإذا رجعنا إلى الزمان، لم يقدر الخصم على تقدير حدوث زمان لا «قبل» له، وخلاف المعتقد يمكن وضعه في الوهم تقديرا وفرضا. وهذا مما لا يمكن وضعه في الوهم كما في المكان، فإن من يعتقد تناهي الجسم ومن لا يعتقد كل واحد يعجز عن تقدير جسم ليس وراءه لا خلاء ولا ملاء، بل لا يذعن وهمه لقبول ذلك</blockquote>
+      <p class="ar-translation">“ดังนั้น เมื่อเรากลับมาพิจารณาเรื่อง ‘เวลา’ อีกครั้ง คู่โต้แย้ง (หมายถึงผู้ไม่เห็นด้วยกับแนวคิดที่ว่าโลกและเวลามีจุดเริ่มต้น) ไม่สามารถจินตนาการถึง ‘เวลา’ ที่เกิดขึ้นโดยไม่มี ‘ก่อนหน้า’ ได้เลย กล่าวคือ พวกเขาไม่สามารถนึกภาพ ‘การเริ่มต้นของเวลา’ ที่ไม่มีสิ่งใดมาก่อนมันได้ และถึงแม้ในทางทฤษฎีจะพยายาม ‘สมมุติ’ หรือ ‘วางไว้ในจินตนาการ’ ให้เป็นไปได้ แต่ในความเป็นจริงทางตรรกะ มันเป็นสิ่งที่ไม่สามารถสร้างภาพในจิตได้เลย”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+
+      <p>เรื่องนี้คล้ายกับประเด็นของ “อวกาศ” เพราะไม่ว่าจะเป็นผู้ที่เชื่อว่า “ร่างวัตถุมีขอบจำกัด” หรือผู้ที่ไม่เชื่อ ต่างก็ไม่สามารถนึกภาพได้ว่า “จะมีร่างวัตถุที่ไม่มีอะไรอยู่ถัดจากมัน” ทั้ง “ไม่มีพื้นที่ว่าง (สุญญากาศ)” และ “ไม่มีสิ่งเติมเต็ม (วัตถุอื่น)” ความคิดของมนุษย์ไม่ยอมรับหรือไม่สามารถทำให้จินตนาการนี้เป็นจริงได้เลย</p>
+
+      <p>อัลฆอซาลีย์ชี้ให้เห็นว่า “สมองของมนุษย์” มีข้อจำกัดในเชิงจินตนาการทางมิติ เราไม่สามารถนึกภาพ “เวลาเริ่มต้นโดยไม่มีอดีตก่อนหน้า” ได้ เหมือนที่เราไม่สามารถนึกภาพ “ขอบสุดของอวกาศที่ไม่มีอะไรอยู่ถัดไป” ได้เลย</p>
+
+      <p>มนุษย์มักมองว่า “ก่อนเริ่มต้นของจักรวาล” ต้องมี “เวลา” อยู่ก่อน แต่ในความจริงทางฟิสิกส์ เวลาเองเกิดขึ้น “พร้อมกับ” การเกิดของเอกภพ (Big Bang) ก่อนหน้านั้น “เวลา” ไม่มีความหมายที่จะพูดถึงได้เลย เช่นเดียวกับ “เหนือสุดของอวกาศ” ที่ไม่มี “เหนือ” อีกต่อไป</p>
+
+      <p>มุตะกัลลิมูนบางกลุ่มเสนอแนวคิดที่ล้ำยุคมากในยุคนั้นว่า เวลาไม่ได้ไหลต่อเนื่อง แต่เกิดขึ้นเป็น “หน่วยเล็ก ๆ” ต่อเนื่องกัน เหมือนภาพเคลื่อนไหวที่เกิดจากการฉายภาพนิ่งจำนวนมากติดต่อกัน หน่วยเล็กสุดของเวลานี้พวกเขาเรียกว่า “อานะ” (<span class="ar-inline" lang="ar" dir="rtl">آن</span>) ซึ่งหมายถึง “ขณะ” หรือ “ชั่วขณะหนึ่ง” พวกเขาเชื่อว่าเพราะจักรวาลมีอายุจำกัด จึงมีจำนวน “ขณะ” เหล่านี้จำกัดด้วย</p>
+
+      <p>อิบนุ หัซม์กล่าวว่า “ช่วงเวลาทั้งหมดประกอบด้วยจำนวนขณะเล็ก ๆ ที่มีจุดเริ่มต้นแน่นอน” และยังอธิบายอีกว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ومعنى الزمان هو مدة بقاء الجسم متحركا أو ساكنا ومدة وجود العرض في الجسم، وإذ الزمان مدة كما ذكرنا فهو عدد معدود، ويزيد بمروره ودوامه، والزيادة لا تكون ألبتة إلا في ذي مبدأ ونهاية من أوله إلى ما زاد فيه. والعدد أيضا ذو مبدأ، ولا بد، والزمان مركب بلا شك من أجزائه، وكل جزء من أجزاء الزمان فهو بيقين ذو نهاية من أوله ومنتهاه والكل ليس هو شيئا غير أجزائه، وأجزاؤه كلها ذات مبدأ، فهو كله ذو مبدأ ضرورة، فلما كان الزمان لا بد له من مبدأ ضرورة، وكان العالم كله لا ينفك، عن زمان والزمان ذو مبدأ، فما لم يتقدم ذا المبدأ فهو ذو مبدأ، ولا بد، فالعالم كله جوهره وعرضه ذو مبدأ وإذ هو ذو مبدأ فهو محدث</blockquote>
+      <p class="ar-translation">“ความหมายของ ‘เวลา’ คือช่วงระยะที่ร่างวัตถุหนึ่งดำรงอยู่ในสภาพเคลื่อนไหวหรือนิ่ง รวมถึงช่วงเวลาที่อะร็อฎดำรงอยู่ในร่างวัตถุนั้น เมื่อ ‘เวลา’ เป็นระยะหรือความยาวของการคงอยู่เช่นนี้ มันจึงมีลักษณะเป็นสิ่งที่ ‘นับได้’ กล่าวคือ เวลาเป็นจำนวนที่สามารถวัดและเพิ่มขึ้นได้ตามการดำเนินไปของมัน แต่การ ‘เพิ่มขึ้น’ นั้นจะเกิดขึ้นได้ก็ต่อเมื่อสิ่งนั้นมี ‘จุดเริ่มต้น’ และ ‘จุดสิ้นสุด’ เท่านั้น เพราะสิ่งที่ไม่มีจุดเริ่มย่อมไม่อาจมีการเพิ่มขึ้นของปริมาณได้ และ ‘จำนวน’ เองก็ต้องมีจุดเริ่มต้นโดยจำเป็นเช่นกัน เมื่อเป็นเช่นนี้ ‘เวลา’ จึงประกอบขึ้นจากส่วนย่อย ๆ ของมันอย่างแน่นอน และแต่ละส่วนของเวลา แต่ละขณะ ย่อมมีจุดเริ่มต้นและจุดสิ้นสุดของมันเอง และเมื่อองค์รวม (คือเวลาทั้งหมด) ไม่ได้เป็นสิ่งใดนอกจากผลรวมของส่วนย่อยเหล่านั้น และทุกส่วนต่างก็มีจุดเริ่มต้น ดังนั้น ‘เวลาโดยทั้งหมด’ จึงจำเป็นต้องมี ‘จุดเริ่มต้น’ ด้วยเช่นกัน ดังนั้น เมื่อเวลาเองมีจุดเริ่มต้นอย่างหลีกเลี่ยงไม่ได้ และเมื่อ ‘โลกทั้งมวล’ (รวมถึงร่างวัตถุและคุณสมบัติทั้งหมดของมัน) ไม่อาจดำรงอยู่โดยไม่สัมพันธ์กับเวลาได้ นั่นหมายความว่าเมื่อเวลาเป็นสิ่งมีจุดเริ่มต้น ‘โลกทั้งมวล’ ก็ต้องมีจุดเริ่มต้นด้วยโดยจำเป็นเช่นกัน และเมื่อโลกมีจุดเริ่มต้น มันจึงเป็นสิ่งที่ ‘ถูกสร้างขึ้น’ ไม่ใช่สิ่งที่มีอยู่มาแต่เดิม”<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+
+      <p>ในมุมมองของอิบนุ หัซม์ เวลามิได้ดำรงอยู่อย่างอิสระจากวัตถุหรืออะร็อฎ มันเกิดขึ้นเพราะการดำรงอยู่และการเปลี่ยนแปลงของวัตถุในอวกาศ ดังนั้น เมื่อไม่มีวัตถุ ไม่มีการเคลื่อนไหว ก็ย่อมไม่มีเวลา</p>
+
+      <p>แนวคิดนี้ก็ยังคงสอดคล้องกับฟิสิกส์ยุคใหม่ที่มองว่า “เวลา” ไม่ใช่สิ่งคงที่อยู่ภายนอกจักรวาล แต่เกิดขึ้นภายในโครงสร้างของจักรวาลร่วมกับอวกาศ เราเรียกมันว่า “ปริภูมิ–เวลา” (space-time) ดังที่ผ่านมา</p>
+
+      <p>ในทางปรัชญา แนวคิดของอิบนุ หัซม์จึงเป็นการยืนยันว่า “สิ่งที่มีการวัดได้ มีการเปลี่ยนแปลงได้ และมีการเพิ่มขึ้นได้” ย่อมต้องมีจุดเริ่มต้นและจุดสิ้นสุด และเมื่อเวลามีจุดเริ่มต้น โลกซึ่งอยู่ในเวลานั้นก็ย่อมมีจุดเริ่มต้นด้วย</p>
+
+      <p>แม้อัลฆอซาลีย์จะไม่เน้นเรื่องนี้มากนัก แต่แนวคิดเรื่อง “เวลาที่เป็นหน่วยย่อย” กลับคล้ายกับแนวคิดทางฟิสิกส์ยุคใหม่ในบางแง่ เพราะแม้ปัจจุบันเราจะเข้าใจว่าเวลาเป็นสิ่งที่ต่อเนื่อง แต่กฎทางฟิสิกส์ที่เรารู้จักใช้ได้เพียงถึงขอบเขตหนึ่งที่เรียกว่า “เวลาพลังค์” (Planck time) ซึ่งมีค่าประมาณ 5.39 × 10⁻⁴⁴ วินาที ซึ่งสั้นจนเกินจะจินตนาการได้ นักฟิสิกส์เชื่อว่าการรวมทฤษฎีควอนตัมเข้ากับทฤษฎีสัมพัทธภาพทั่วไปอาจทำให้เราพบว่า “เวลา” เองก็มีโครงสร้างแบบไม่ต่อเนื่องเช่นเดียวกัน</p>
+
+      <p>นักเทววิทยาสายมุอ์ตะซิละฮ์คนหนึ่งชื่อว่า อันนัซซอม (เสียชีวิตราว ฮ.ศ. 231 / ค.ศ. 845) เชื่อว่าการเคลื่อนไหวในระดับจุลภาค (microscopic level) เกิดขึ้นเป็น “การกระโดดแบบไม่ต่อเนื่อง” ซึ่งท่านได้ตั้งทฤษฎีนี้ว่า “อัฏฏ็อฟเราะฮ์” (<span class="ar-inline" lang="ar" dir="rtl">الطفرة</span>)</p>
+
+      <p>ท่านมาถึงแนวคิดนี้เพราะแม้จะเชื่อว่า “อวกาศ” เป็นสิ่งต่อเนื่อง แต่ท่านกลับเห็นว่า “เวลา” เป็นสิ่งที่เกิดขึ้นเป็นหน่วย ๆ (ไม่ต่อเนื่อง) ดังนั้น เพื่ออธิบายว่าการเคลื่อนไหวเกิดขึ้นได้อย่างไรในเวลาแบบนี้ ท่านจึงเสนอว่า “อนุภาค” เคลื่อนที่ผ่านอวกาศโดย “กระโดด” จากตำแหน่งหนึ่งไปยังอีกตำแหน่งหนึ่ง ไม่ใช่การเลื่อนไปอย่างราบรื่น</p>
+
+      <p>นักวิชาการสมัยใหม่บางคนมองว่าแนวคิดของอันนัซซอมนี้เป็นต้นเค้าของแนวคิด “ควอนตัมจัมป์” (quantum jump) ในฟิสิกส์ยุคใหม่ โดยมีผู้กล่าวถึงว่า “ความคิดเรื่องการกระโดด (leap) ของอันนัซซอม ซึ่งอธิบายถึงช่องว่างระหว่างปรากฏการณ์หนึ่งกับอีกปรากฏการณ์หนึ่ง อาจถือได้ว่าเป็นต้นแบบยุคต้นของแนวคิดเรื่องการกระโดดควอนตัมของโบห์ร”</p>
+
+      <p>มีข้อเสนอและกรอบแนวคิดบางสายในฟิสิกส์สมัยใหม่ โดยเฉพาะในกลศาสตร์ควอนตัม (Quantum Mechanics) ที่มีการค้นพบว่า “เวลาในจักรวาล” อาจเกิดขึ้นจากการพันเกี่ยวกันของอนุภาค (quantum entanglement) ซึ่งหมายความว่า “เวลา” เองเกิดจากเหตุการณ์ที่เกิดขึ้นในจักรวาล เวลาอาจไม่ได้ไหลต่อเนื่อง แต่เกิดขึ้นเป็นช่วง ๆ ของ “เหตุการณ์” หรือ “การกระทำ” ซึ่งสัมพันธ์กับการเคลื่อนไหวในระดับจักรวาล</p>
+
+      <p>มีรายงานที่อัฏเฏาะบะรีย์ (เสียชีวิต ฮ.ศ. 310 / ค.ศ. 923) บันทึกไว้ โดยอ้างเป็นคำของท่านนบีมุฮัมมัด ﷺ ว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فإن أحببتم أن تستبينوا ذلك، فانظروا إلى دوران الفلك مرة هاهنا ومرة هاهنا، فذلك دوران السماء، ودوران الكواكب معها كلها سوى هذه الخمسة، ودورانها اليوم كما ترون، وتلك صلاتها، ودورانها إلى يوم القيامة في سرعة دوران الرحا من أهوال يوم القيامة وزلازله، فذلك قوله عز وجل: «يَوْمَ تَمُورُ ٱلسَّمَآءُ مَوْرًا، وَتَسِيرُ ٱلْجِبَالُ سَيْرًا، فَوَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ»</blockquote>
+      <p class="ar-translation">“หากเจ้าต้องการเข้าใจเรื่องนี้ จงพิจารณาการหมุนเวียนของทรงกลม (ฟ้า) ที่หมุนไปมา นั่นคือการหมุนของฟ้าสวรรค์และการหมุนของหมู่ดาวทั้งหลาย เว้นเพียงห้าดวง และการหมุนเวียนของพวกมันในวันนี้คือสิ่งที่เจ้ามองเห็นอยู่ และนั่นคือการละหมาดของพวกมัน (หมายถึงการเชื่อฟังและสรรเสริญต่ออัลลอฮ์) การหมุนเวียนของพวกมันจนถึงวันกิยามะฮ์จะรวดเร็วประหนึ่งการหมุนของโม่หิน เพราะความสั่นสะเทือนและความหวาดกลัวแห่งวันนั้น…” แล้วท่านก็อ้างถึงพระดำรัสของอัลลอฮ์ที่ว่า “ในวันนั้นท้องฟ้าจะสั่นสะเทือน และภูเขาจะเคลื่อนย้ายไปมา ความวิบัติจักประสบแก่บรรดาผู้โป้ปดในวันนั้น” (อัฏฏูร 52:9–11)<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup></p>
+
+      <p>จึงเชื่อมโยงว่าจุดสิ้นสุดของจักรวาลนั้นสัมพันธ์กับการเคลื่อนไหวของมันเอง เมื่อการเคลื่อนไหวนี้ถึงที่สุด โลกและฟ้าสวรรค์ก็จะถึงการสั่นสะเทือนขั้นสุด ซึ่งมีนัยทางวิทยาศาสตร์ว่า จักรวาลสิ้นสุดลงด้วยการแปรปรวนของพลังงานและแรงโน้มถ่วงในระดับจักรวาล</p>
+
+      <p>ในทำนองเดียวกัน อิสลามถือว่าจุดสิ้นสุดของจักรวาลสัมพันธ์กับ “การกระทำของสิ่งมีชีวิตที่มีสติ” โดยเฉพาะมนุษย์ เพราะในที่สุดแล้วมนุษย์คือผู้มี “ผลกระทบต่อการเคลื่อนไหวของจักรวาล” ผ่านการกระทำและการระลึกถึงอัลลอฮ์ ดังคำกล่าวที่ถูกอ้างถึงอิบนุ อะเราะบีย์ (เสียชีวิต ฮ.ศ. 638 / ค.ศ. 1240) ที่ว่า “เวลา (กาล) จะไม่สิ้นสุดลง จนกว่าจะไม่มีผู้ใดบนโลกนี้ที่ยังระลึกถึงอัลลอฮ์อยู่” ซึ่งสอดคล้องกับหะดีษของท่านนบี ﷺ ที่ว่า</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">لَا تَقُومُ السَّاعَةُ حَتَّى لَا يُقَالَ فِي الْأَرْضِ لَا إِلَهَ إِلَّا اللَّهُ</p>
+      </div>
+      <p>“วันสิ้นโลกจะไม่มาถึง จนกว่าจะไม่มีผู้ใดบนโลกกล่าวคำว่า ‘ลาอิลาฮะอิลลัลลอฮ์’ อีกต่อไป”<sup class="fn-ref" id="fnref-6"><a href="#ref-6">⁶</a></sup></p>
+
+      <p>และอีกบทหนึ่งจากอนัส เราะฎิยัลลอฮุอันฮุ ว่า</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">لَا تَقُومُ السَّاعَةُ حَتَّى لَا يُقَالَ فِي الْأَرْضِ اللَّهُ اللَّهُ</p>
+      </div>
+      <p>“วันสิ้นโลกจะไม่มาถึง จนกว่าจะไม่มีผู้ใดบนโลกกล่าวคำว่า ‘อัลลอฮ์ อัลลอฮ์’ อีกต่อไป”<sup class="fn-ref" id="fnref-7"><a href="#ref-7">⁷</a></sup></p>
+
+      <p>อัลกุรอานยังกล่าวไว้ว่า</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">لَهُۥ مُعَقِّبَٰتٌ مِّنۢ بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِۦ يَحْفَظُونَهُۥ مِنْ أَمْرِ ٱللَّهِ</p>
+      </div>
+      <p>{สำหรับแต่ละคน จะมีบรรดามลาอิกะฮ์สืบต่อกันอยู่เบื้องหน้าและเบื้องหลังเขา คอยคุ้มครองเขาตามพระบัญชาของอัลลอฮ์}<sup class="fn-ref" id="fnref-8"><a href="#ref-8">⁸</a></sup></p>
+
+      <p>ซึ่งอาจตีความได้ว่า เหมือนกับที่อนุภาคในจักรวาลมี “แรงเชื่อมโยง” และ “อิทธิพลต่อกัน” มนุษย์เองก็อยู่ภายใต้โครงข่ายแห่งการกระทำและผลลัพธ์ที่เชื่อมโยงกันโดยพระบัญชาแห่งอัลลอฮ์</p>
+
+      <p>และมลาอิกะฮ์ (เทวทูต) คือผู้กำกับดูแลจักรวาลในระดับที่มนุษย์ไม่อาจมองเห็น หรือที่เราอาจเรียกในภาษาฟิสิกส์ว่า “โลกควอนตัม” ซึ่งเป็นระดับของอนุภาคพื้นฐานที่อยู่เบื้องหลังทุกปรากฏการณ์ทางธรรมชาติ</p>
+
+      <p>ในระดับจุลภาคที่สุด โดยทั่วไปแล้วอนุภาคที่มีอยู่มากที่สุดในจักรวาลคือ “โฟตอน” (photon) อนุภาคของแสง ซึ่งเป็นตัวพาหะของแรงแม่เหล็กไฟฟ้า (electromagnetic force) หนึ่งในสี่แรงพื้นฐานของจักรวาล (อีกสามคือ แรงโน้มถ่วง, แรงนิวเคลียร์แบบเข้ม และแรงนิวเคลียร์แบบอ่อน)</p>
+
+      <p>ในเชิงเทววิทยา นักปราชญ์อิสลามจำนวนมากอธิบายว่ามลาอิกะฮ์ถูกสร้างขึ้นจาก “แสง” (แต่ “แสง” ในเชิงศาสนาไม่เท่ากับการนิยามเชิงฟิสิกส์โดยตรง คือเป็นอนุโลมหรืออุปมา ไม่ใช่การเหมารวมเชิงอนุภาค) และทำหน้าที่เป็นสื่อกลางระหว่างพระบัญชาของอัลลอฮ์กับกฎธรรมชาติของสรรพสิ่ง นั่นหมายความว่าการดำรงอยู่ของเอกภพนี้เป็นผลของการเคลื่อนไหวเชิงนามธรรมของมลาอิกะฮ์ในระดับที่เกินการมองเห็นของมนุษย์</p>
+
+      <p>ดังนั้น ความสัมพันธ์ระหว่าง “การสิ้นสุดของจักรวาล” กับ “การกระทำของมนุษย์” จึงเข้าใจได้จากตอนที่อัลลอฮ์ทรงสั่งให้มลาอิกะฮ์ “สุญูด (คำนับ)” ต่ออาดัม (มนุษย์) พระองค์ตรัสในอัลกุรอาน สูเราะฮ์ อัลบะเกาะเราะฮ์ไว้ว่า “และเมื่อเราได้ตรัสแก่มลาอิกะฮ์ว่า ‘จงสุญูดต่ออาดัมเถิด’ แล้วพวกเขาก็สุญูด”</p>
+
+      <p>การสุญูดนี้มิใช่การกราบบูชามนุษย์ แต่เป็นการปฏิบัติตามคำสั่งของอัลลอฮ์โดยตรง ตามคำอธิบายของท่านเกาะตาดะฮ์ (เสียชีวิต ฮ.ศ. 117 / ค.ศ. 735) ซึ่งอัฏเฏาะบะรีย์บันทึกไว้ว่า “การเชื่อฟังเป็นของอัลลอฮ์ ส่วนการสุญูดนั้นอยู่ต่อหน้าอาดัม อัลลอฮ์ทรงให้เกียรติอาดัม และทรงบัญชาให้มลาอิกะฮ์หันความสนใจของพวกเขามายังเขา” นั่นหมายความว่ามลาอิกะฮ์ผู้ควบคุมกฎจักรวาลได้รับคำสั่งให้หันจุดโฟกัสจากฟากฟ้ามาสู่โลกมนุษย์ การกระทำของมนุษย์จึงกลายเป็นศูนย์กลางของการกำกับดูแลแห่งสวรรค์</p>
+
+      <p>อิสรอฟีลคือมลาอิกะฮ์ผู้ได้รับมอบหมายให้ “เป่าแตร” เพื่อเริ่มต้นการสิ้นสุดของจักรวาล การเป่านี้จะไม่เกิดขึ้นจนกว่ามนุษย์จะหลงลืมพระผู้สร้างโดยสิ้นเชิง และหน้าที่ของเอกภพได้สิ้นสุดลงแล้ว</p>
+
+      <p>อัลกุรอานสูเราะฮ์ อัลฮากเกาะฮ์ (บทที่ 69) กล่าวถึง “เสียงแตร” ครั้งแรกว่าเป็นเหตุให้พันธะของสสาร (แรงที่ยึดอนุภาคเข้าด้วยกัน) แตกสลาย ท้องฟ้าจะปรากฏดังทองแดงที่หลอมละลาย ภูเขาจะเคลื่อนเหมือนเมฆฝุ่นที่ลอยผ่านหน้าเรา เสียงเป่านี้ (<span class="ar-inline" lang="ar" dir="rtl">الصيحة</span> – The Shout) จะกระจายไปทั่วจักรวาล เป็นคลื่นพลังที่ทำลายทุกสิ่งที่อยู่ในโครงสร้างของมัน</p>
+
+      <p>การเป่าครั้งแรกจึงเป็นจุดจบของเอกภพ ส่วนการเป่าครั้งที่สอง ซึ่งกล่าวไว้ในสูเราะฮ์ ยาซีน (บทที่ 36) จะเป็นการเริ่มต้นของวันฟื้นคืนชีพ เมื่อทุกชีวิตถูกปลุกขึ้นอีกครั้ง</p>
+
+      <h2 class="article-h2">บทสรุปเชิงปรัชญา–เทววิทยา–จักรวาลวิทยา</h2>
+
+      <p>“เวลา” (<span class="ar-inline" lang="ar" dir="rtl">الزمان</span>) ในทัศนะของเทววิทยาอิสลามมิได้เป็นเพียงปริมาณทางกายภาพที่วัดได้ด้วยนาฬิกา หากแต่เป็น “ร่องรอยของการดำรงอยู่” เป็นสัญญาณของการเปลี่ยนผ่านระหว่าง “ขณะหนึ่ง” (<span class="ar-inline" lang="ar" dir="rtl">آن</span>) กับ “อีกขณะหนึ่ง” ซึ่งสะท้อนถึงการเคลื่อนไหว (<span class="ar-inline" lang="ar" dir="rtl">الحركة</span>) ของสรรพสิ่งในจักรวาลที่อยู่ภายใต้พระประสงค์ของอัลลอฮ์</p>
+
+      <p>นักเทววิทยาอิสลามยุคต้น เช่น อัลอัชอะรีย์ (เสียชีวิต ฮ.ศ. 324 / ค.ศ. 936) และอัลบากิลลานีย์ (เสียชีวิต ฮ.ศ. 403 / ค.ศ. 1013) ได้วางรากฐานให้กับความเข้าใจนี้ โดยมองว่าเวลาและอวกาศเป็น “สิ่งถูกสร้าง” ที่เกิดขึ้นพร้อมกับโลก มิใช่สิ่งที่ดำรงอยู่ก่อนการสร้าง การกล่าวถึงเวลาในอัลกุรอาน เช่นคำว่า <span class="ar-inline" lang="ar" dir="rtl">إلى يوم يبعثون</span> (“จนถึงวันที่พวกเขาถูกฟื้นคืนชีพ”) เป็นการบ่งชี้ถึงการไหลของสภาวะที่มีขอบเขต มิใช่เส้นต่อเนื่องที่ไร้ต้นและปลาย</p>
+
+      <p>อิหม่ามอัลฆอซาลีย์ได้ขยายแนวคิดนี้โดยเทียบ “เวลา” กับ “ระยะทาง” ทั้งสองเป็นคุณสมบัติประจำของสิ่งที่เคลื่อนไหวและสิ่งที่มีมิติทางกายภาพ ท่านชี้ให้เห็นว่ามนุษย์ไม่สามารถจินตนาการ “การเริ่มต้นของเวลา” ได้โดยไม่คิดว่าต้องมี “ก่อนหน้า” เสมอ แต่ในความเป็นจริง เวลาเริ่มต้นพร้อมกับการสร้างเอกภพ เช่นเดียวกับที่อวกาศเกิดขึ้นพร้อมกับวัตถุที่อยู่ในนั้น</p>
+
+      <p>ส่วนอิบนุ หัซม์ให้คำนิยามของเวลาว่า “คือระยะที่ร่างวัตถุหนึ่งดำรงอยู่ ไม่ว่าจะนิ่งหรือเคลื่อนไหว” แสดงให้เห็นว่าเวลาไม่สามารถดำรงอยู่อย่างอิสระจากวัตถุและการเคลื่อนไหวได้ หากไม่มีการเปลี่ยนแปลงของวัตถุ เวลาก็ย่อมดับสูญเช่นกัน แนวคิดนี้สอดคล้องโดยตรงกับแนวคิด space–time ของไอน์สไตน์ในฟิสิกส์สมัยใหม่</p>
+
+      <p>นักกะลามอย่างอันนัซซอมยังได้เสนอทฤษฎี “อัฏฏ็อฟเราะฮ์” (<span class="ar-inline" lang="ar" dir="rtl">الطفرة</span>) ว่าการเคลื่อนไหวในระดับจุลภาคไม่ได้ไหลต่อเนื่อง แต่เกิดขึ้นเป็น “การกระโดดระหว่างจุด” ซึ่งนักฟิสิกส์ยุคใหม่มองว่าคล้ายกับ quantum jump ของโบห์ร ชี้ให้เห็นว่าศาสตร์กะลามมิได้จำกัดอยู่ในกรอบศาสนาเท่านั้น แต่ยังมีความคิดที่ลึกซึ้งทางอภิปรัชญาและใกล้เคียงกับทฤษฎีควอนตัมในเชิงโครงสร้างของเวลา</p>
+
+      <p>ในมิติเทววิทยา “เวลา” จึงเป็นเพียงเครื่องหมายแห่งการดำรงอยู่ของสิ่งถูกสร้าง ขณะที่อัลลอฮ์ผู้ทรงสร้างนั้น “อยู่นอกเหนือปริภูมิ-เวลา” พระองค์ทรงมองเห็นทุกขณะพร้อมกันโดยไม่ต้องเคลื่อนผ่านมัน และเมื่อถึงเวลาสิ้นสุดของจักรวาล “เวลา” เองก็จะถูกทำลายพร้อมกับสรรพสิ่งในเอกภพ ดั่งที่มุฮัมมัด บาซิล อัฏฏออีย์ กล่าวไว้ใน “อัซซะมาน ฟิลกะลาม อัลอิสลามีย์” (Time in Islamic Kalām) ว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الزمان مخلوق مرتبط بالخلق، فكما أن للمكان بداية فله نهاية، ومع نهاية الخلق يتوقف الزمان</blockquote>
+      <p class="ar-translation">“เวลาเป็นสิ่งถูกสร้างที่เชื่อมโยงกับการสร้าง เช่นเดียวกับอวกาศที่มีจุดเริ่มต้น เวลาก็มีจุดสิ้นสุด และเมื่อการสร้างสิ้นสุดลง เวลาเองก็หยุดลงด้วย”<sup class="fn-ref" id="fnref-9"><a href="#ref-9">⁹</a></sup></p>
+
+      <p>และเมื่อนำมาผสานกับคำอธิบายของท่านอัฏเฏาะบะรีย์เกี่ยวกับมลาอิกะฮ์ที่ “สุญูดต่ออาดัม” การหันความสนใจของมลาอิกะฮ์ (ผู้กำกับจักรวาลในระดับที่มองไม่เห็น) มายังมนุษย์ จักรวาลทั้งหมดจึงสัมพันธ์กับ “การกระทำของมนุษย์” ภายใต้พระบัญชาของอัลลอฮ์อย่างละเอียดอ่อน</p>
+
+      <p>ดังนั้น “เวลาในเทววิทยาอิสลาม” จึงมิใช่เพียงมิติของการเคลื่อนไหว แต่คือ “ภาวะของการรับใช้พระเจ้า” ที่สรรพสิ่งทั้งมวล ตั้งแต่โฟตอนแห่งแสงไปจนถึงการหมุนของดวงดาว ดำเนินอยู่เพื่อทำให้พระบัญชาแห่งพระผู้เป็นเจ้าปรากฏในเอกภพ และจะสิ้นสุดลงในวันที่ไม่มีผู้ใดกล่าวคำว่า</p>
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">لا إله إلا الله</blockquote>
+
+      <p>ดังนั้น “เวลา” จึงมิได้เป็นเพียงสัญลักษณ์ของการเปลี่ยนแปลงของสรรพสิ่งเท่านั้น หากแต่เป็น “ร่องรอยของการสร้าง” ที่บ่งชี้ถึงผู้สร้าง ผู้ทรงอยู่นอกเหนือการเปลี่ยนแปลงนั้นโดยสิ้นเชิง</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">มัรกัส อัลอิมาม อัลอัชอะรีย์. (2569). เวลาในเทววิทยาอิสลาม ระหว่างอัลฆอซาลีย์และอิบนุ หัซม์. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/kalam/time-in-islamic-theology.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">เชิงอรรถ</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">القرآن الكريم، سورة المؤمنون (23)، الآية 100. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2" lang="th" dir="ltr">การอ้างถึงทฤษฎีสัมพัทธภาพและกลศาสตร์ควอนตัมในบทความนี้เป็นเพียงอุปมาเชิงแนวคิด เพื่อช่วยทำความเข้าใจมโนทัศน์กะลาม มิใช่การเทียบเคียงเชิงทฤษฎีหรือเชิงประจักษ์โดยตรง ทั้งนี้ ศัพท์ศาสนาอย่าง “นูร” (แสง) มิได้เท่ากับ “photon” ในความหมายทางฟิสิกส์. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">أبو حامد الغزالي، تهافت الفلاسفة، المسألة الأولى في إبطال قولهم بقدم العالم. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">ابن حزم الأندلسي، الفصل في الملل والأهواء والنحل، في حدوث العالم والزمان. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">رواه الطبري؛ والرواية لم نقف على إسنادها في كتب الحديث المعتمدة، فهي محل نظر. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+        <li id="ref-6">أخرجه أحمد في المسند من حديث أنس بن مالك رضي الله عنه، وإسناده صحيح على شرط مسلم. <a class="fn-back" href="#fnref-6" aria-label="กลับไปยังเชิงอรรถที่ 6">↑</a></li>
+        <li id="ref-7">أخرجه مسلم في صحيحه، كتاب الإيمان، رقم 148، من حديث أنس بن مالك رضي الله عنه. <a class="fn-back" href="#fnref-7" aria-label="กลับไปยังเชิงอรรถที่ 7">↑</a></li>
+        <li id="ref-8">القرآن الكريم، سورة الرعد (13)، الآية 11. <a class="fn-back" href="#fnref-8" aria-label="กลับไปยังเชิงอรรถที่ 8">↑</a></li>
+        <li id="ref-9">محمد باسل الطائي، الزمان في الكلام الإسلامي (Daqīq al-Kalām). <a class="fn-back" href="#fnref-9" aria-label="กลับไปยังเชิงอรรถที่ 9">↑</a></li>
+      </ol>
+    </section>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <p class="biblio-subhead">References</p>
+      <ol class="bibliography latin">
+        <li>Altaie, Muhammad Basil. Daqīq al-Kalām: The Islamic Approach to the Philosophy of Nature. Exeter: University of Exeter, 2005.</li>
+        <li>Craig, William L. The Kalām Cosmological Argument. London and Basingstoke: Macmillan, 1979.</li>
+        <li>Dhanani, Alnoor. The Physical Theory of Kalām: Atoms, Space, and Time in Basrian Muʿtazilī Cosmology. Leiden: Brill, 1994.</li>
+        <li>Jammer, Max. The Philosophy of Quantum Theory. New York: Wiley, 1974.</li>
+        <li>Watt, W. Montgomery. Islamic Philosophy and Theology. Edinburgh: Edinburgh University Press, 1985.</li>
+        <li>Walzer, Richard. “Early Islamic Philosophy.” In The Cambridge History of Late Greek and Early Medieval Philosophy, edited by Arthur H. Armstrong. Cambridge: Cambridge University Press, 1970.</li>
+        <li>Wolfson, Harry Austryn. The Philosophy of the Kalām. Cambridge, MA: Harvard University Press, 1976.</li>
+        <li>“The Scientific Value of Daqīq al-Kalām.” Journal of Islamic Thought and Scientific Creativity 4 (1994): 7–18.</li>
+        <li>Cengiz, Yunus. “The Approach of Kalām to the Physical Universe: Schools and Breaks.” n.d.</li>
+        <li>Kheyfets, Arkady, and Warner A. Miller. “Geometrodynamic Quantization and Time Evolution in Quantum Gravity.” 1994.</li>
+        <li>Leaman, Oliver. “Cases from Old Debates: The Size of the Universe and the Fate of the Sun.” n.d.</li>
+      </ol>
+      <p class="biblio-subhead" lang="ar" dir="rtl">المصادر العربية</p>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li>أبو الحسن الأشعري، مقالات الإسلاميين واختلاف المصلين.</li>
+        <li>أبو بكر الباقلاني، تمهيد الأوائل وتلخيص الدلائل، تحقيق: عماد الدين حيدر، بيروت: مؤسسة الكتب الثقافية، 1987م.</li>
+        <li>إمام الحرمين أبو المعالي الجويني، الشامل في أصول الدين.</li>
+        <li>أبو حامد الغزالي، تهافت الفلاسفة.</li>
+        <li>ابن حزم الأندلسي، الفصل في الملل والأهواء والنحل.</li>
+        <li>ابن متويه، التذكرة في الجواهر والأعراض، تحقيق: سامي نصر لطف وآخرون، القاهرة، 1973م.</li>
+        <li>علي بن محمد الجرجاني، التعريفات.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
