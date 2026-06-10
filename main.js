@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
 
     // ตั้งสถานะเริ่มต้นของแผงเครื่องมือช่วยอ่าน (ปุ่มขนาดอักษร + ปุ่มโหมดกลางคืน)
+    if (typeof _applyFontSize === 'function') _applyFontSize();
     if (typeof updateFontButtons === 'function') updateFontButtons();
     if (typeof syncDarkButton === 'function') syncDarkButton(document.documentElement.classList.contains('dark-mode'));
 
@@ -1149,30 +1150,31 @@ function copyArticleLink() {
 // â­ï¸ 7. à¸£à¸°à¸šà¸šà¹€à¸„à¸£à¸·à¹à¸­à¸‡à¸¡à¸·à¸­à¸›à¸£à¸±à¸šà¸‚à¸™à¸²à¸"à¸•à¸±à¸§à¸­à¸±à¸à¸©à¸£ (Reading Tools) â­ï¸
 // ==========================================
 let currentFontSize = 18;
-function changeFontSize(delta) {
-    const content = document.getElementById("main-content");
-    if (!content) return;
-    if (delta === 0) { 
-        currentFontSize = 18; 
-    } else { 
-        currentFontSize += delta; 
-    }
-    if (currentFontSize < 14) currentFontSize = 14;
-    if (currentFontSize > 28) currentFontSize = 28;
-    content.style.fontSize = currentFontSize + "px";
-    updateFontButtons();
+(function () {                                   // restore + snap legacy values
+  var s = parseInt(localStorage.getItem('fontSize'), 10);
+  if (s === 16 || s === 18 || s === 22) currentFontSize = s;
+  else if (!isNaN(s)) currentFontSize = (s < 18 ? 16 : (s > 18 ? 22 : 18));
+})();
+function _applyFontSize() {
+  var content = document.getElementById("main-content");
+  if (!content) return;
+  content.style.fontSize = currentFontSize + "px";
+  content.style.setProperty('--ifp-font-scale', (currentFontSize / 18).toFixed(4));
 }
-// Reflect the active font-size step on the reading-tools buttons (shared template)
+function changeFontSize(delta) {                 // delta sign → 3 ABSOLUTE steps
+  currentFontSize = delta < 0 ? 16 : (delta > 0 ? 22 : 18);
+  _applyFontSize();
+  try { localStorage.setItem('fontSize', String(currentFontSize)); } catch (e) {}
+  updateFontButtons();
+}
 function updateFontButtons() {
-    const btns = document.querySelectorAll('.btn-tool[onclick*="changeFontSize"]');
-    btns.forEach(function(b) {
-        const m = (b.getAttribute('onclick') || '').match(/changeFontSize\((-?\d+)\)/);
-        const d = m ? parseInt(m[1], 10) : 0;
-        const isActive = (currentFontSize === 18 && d === 0) ||
-                         (currentFontSize > 18 && d === 2) ||
-                         (currentFontSize < 18 && d === -2);
-        b.classList.toggle('active', isActive);
-    });
+  var key = currentFontSize <= 16 ? -1 : (currentFontSize >= 22 ? 1 : 0);
+  document.querySelectorAll('.btn-tool[onclick*="changeFontSize"]').forEach(function (b) {
+    var m = (b.getAttribute('onclick') || '').match(/changeFontSize\((-?\d+)\)/);
+    var d = m ? parseInt(m[1], 10) : 0;
+    var bKey = d < 0 ? -1 : (d > 0 ? 1 : 0);
+    b.classList.toggle('active', key === bKey);
+  });
 }
 
 // ==========================================
