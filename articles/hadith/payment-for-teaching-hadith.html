@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การรับค่าตอบแทนในการสอนและรายงานฮะดีษ — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์เชิงวิทยาการหะดีษว่าด้วยข้อชี้ขาดในการรับค่าตอบแทนสำหรับการสอนและรายงานฮะดีษ ทรรศนะฝ่ายห้ามและฝ่ายอนุญาต ผ่านตำรามุศเฏาะละฮุลฮะดีษ">
+<meta name="keywords" content="หะดีษ, มุศเฏาะละฮ์, ค่าตอบแทน, สะนัด, อัสสะคอวีย์, อิหม่ามอะหมัด, วิทยาการหะดีษ">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การรับค่าตอบแทนในการสอนและรายงานฮะดีษ — Islamic Fiqh Publishing">
+<meta property="og:description" content="การรับค่าตอบแทนในการรายงานฮะดีษคือความเสื่อมหรือมีรากเหง้าในประวัติศาสตร์? สำรวจสองทรรศนะของนักวิชาการ">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/hadith/payment-for-teaching-hadith.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+.bibliography.latin { direction: ltr; text-align: left; }
+.bibliography.latin li { font-family: 'Inter', 'Sarabun', sans-serif; }
+.biblio-subhead {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 15px; font-weight: 700;
+  color: var(--text-primary); margin: 24px 0 4px;
+}
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="payment-for-teaching-hadith">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/hadith.html" class="article-feature-eyebrow">หะดีษ / วิทยาการหะดีษ</a>
+      <h1 class="article-feature-title">การรับค่าตอบแทนในการสอนและรายงานฮะดีษ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในแวดวงวิชาการหะดีษ มักมีความเชื่อชุดหนึ่งที่พยายามมองว่า การมอบสายรายงาน (สะนัด) หรืออิญาซะฮ์ในอดีตนั้นดำเนินไปภายใต้บรรทัดฐานเดียว นั่นคือความเข้มงวดกวดขันและการพิจารณาคุณสมบัติผู้รับอย่างละเอียดยิบ โดยมองว่าภาพที่เห็นในปัจจุบันที่มีการแพร่หลายของสะนัดเป็นเพียงความเสื่อมถอยหรือการอวดอ้าง</p>
+
+      <p>แต่หากเราพิจารณาผ่านประวัติศาสตร์กันดี ๆ เราจะพบว่าระบบการสืบทอดความรู้ในยุคก่อนนั้นก็มีความ “หลากหลาย” และมีพลวัตมากกว่าที่หลายคนเข้าใจ และประวัติศาสตร์ระบุชัดว่า การส่งต่อสายรายงานไม่ได้เป็นเพียงเส้นตรงอย่างเดียว แต่ยังมีแง่มุมของการยอมรับเงื่อนไขทางโลก การอนุโลมตามความจำเป็น หรือแม้กระทั่งการมีระบบ “ค่าตอบแทน” ในการถ่ายทอด ซึ่งเกิดขึ้นแม้กระทั่งกับปราชญ์ระดับอาวุโส</p>
+
+      <p>เราจะสำรวจประเด็นการรับค่าตอบแทนในการรายงานฮะดีษ เพื่อให้เห็นว่าสิ่งที่บางคนเรียกว่าความเสื่อมในปัจจุบัน จริง ๆ แล้วมันก็เป็นรูปแบบหนึ่งที่มีรากเหง้ามาแต่อดีต และการด่วนสรุปว่าแก่นของสะนัดต้องปราศจากรูปแบบทางโลกสิ้นเชิงนั้น อาจเป็นการกล่าวอ้างที่คลาดเคลื่อนจากข้อเท็จจริงทางประวัติศาสตร์</p>
+
+      <p>ความจริงแล้ว อัลลอฮ์ก็ทรงส่งเสริมให้ปวงบ่าวแสวงหาความรู้และทรงยกย่องบรรดาผู้รู้ วิชาฮะดีษถือเป็นหนึ่งในศาสตร์ที่ทรงเกียรติและสูงส่งที่สุด ณ ที่อัลลอฮ์ เนื่องจากเป็นวิชาที่ทำให้เข้าถึงความมุ่งหมายแห่งพระดำรัสของพระองค์ และเป็นช่องทางในการศึกษาชีวประวัติและวัตรปฏิบัติของท่านนบีเพื่อนำมาเป็นแบบอย่างในการดำเนินชีวิต ยิ่งไปกว่านั้น ถือเป็นเกียรติอันสูงสุดสำหรับนักวิชาการฮะดีษและผู้ที่แบกรับศาสตร์นี้ ในการได้รับความจำเริญจากคำดุอาอ์ของท่านนบีที่ได้กล่าวไว้ว่า</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">نَضَّرَ اللَّهُ امْرَأً سَمِعَ مِنَّا حَدِيثًا فَحَفِظَهُ حَتَّى يُبَلِّغَهُ غَيْرَهُ فَرُبَّ حَامِلِ فِقْهٍ إِلَى مَنْ هُوَ أَفْقَهُ مِنْهُ وَرُبَّ حَامِلِ فِقْهٍ لَيْسَ بِفَقِيهٍ</p>
+      </div>
+      <p>“ขออัลลอฮ์ทรงทำให้ใบหน้าของบุคคลที่ได้ยินฮะดีษจากเรามีความผุดผ่องเบิกบาน โดยเขาได้จดจำมันไว้จนกระทั่งนำไปถ่ายทอดให้แก่ผู้อื่น เพราะบางทีผู้ที่แบกรับความรู้อาจนำมันไปถ่ายทอดให้แก่ผู้ที่มีความเข้าใจมากกว่าตน และบางทีผู้ที่แบกรับความรู้นั้นก็อาจไม่ใช่ผู้ที่มีความเข้าใจอย่างลึกซึ้งเสมอไป”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>และด้วยสถานะอันสูงส่งของศาสตร์แขนงนี้ กัลยาณชนยุคแรกทั้งจากบรรดาเศาะฮาบะฮ์และตาบิอีน จึงมีความมุ่งมั่นที่จะศึกษาและถ่ายทอดความรู้นี้ให้แก่สาธารณชนโดยไม่หวังผลตอบแทนทางโลก อย่างไรก็ตาม ในเวลาต่อมาได้ปรากฏนักวิชาการอีกกลุ่มหนึ่งที่มีทรรศนะอนุญาตให้สามารถรับค่าตอบแทนในการถ่ายทอดฮะดีษได้ ซึ่งเราจะมาพูดคุยประเด็นดังกล่าว โดยเริ่มต้นจากการนิยามความหมายของการรับค่าตอบแทนในการรายงานฮะดีษ ตลอดจนบริบททางประวัติศาสตร์ที่เกี่ยวข้อง</p>
+
+      <h2 class="article-h2">ความหมายและบริบทของการรับค่าตอบแทนในการรายงานฮะดีษ</h2>
+
+      <p>การรับค่าตอบแทนในการรายงานฮะดีษ หมายถึง การรับทรัพย์สินหรือสินจ้างจากผู้เรียน เพื่อเป็นค่าตอบแทนในการถ่ายทอดและสอนฮะดีษให้แก่พวกเขา หรือจะให้พูดอีกทางหนึ่งอย่างตรงไปตรงมาก็คือ การซื้อ-ขายฮะดีษนั่นเอง</p>
+
+      <p>ในอดีต มีนักวิชาการยุคสลัฟบางท่านที่พิจารณารับค่าตอบแทนดังกล่าว อันเนื่องมาจากการอุทิศตนให้กับการสอนและการรายงานฮะดีษอย่างเต็มเวลา จนส่งผลให้พวกเขาไม่มีเวลาในการประกอบอาชีพเพื่อแสวงหาปัจจัยยังชีพ ตัวอย่างของนักวิชาการในกลุ่มนี้ ได้แก่ ครูของท่านอิหม่ามอัลบุคอรีย์ (เสียชีวิต ฮ.ศ. 256 / ค.ศ. 870) อย่างอบู นุอัยม์ อัลฟัฎล์ บิน ดุกัยน์ (เสียชีวิต ฮ.ศ. 218 / ค.ศ. 833) ซึ่งมีความจำเป็นต้องรับค่าตอบแทนในการสอนฮะดีษเนื่องจากภาวะความยากจนขัดสน โดยท่านได้กล่าวชี้แจงว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يلومونني على الأخذ، وفي بيتي ثلاثة عشر نفسا، وما في بيتي رغيف</blockquote>
+      <p class="ar-translation">“ผู้คนพากันตำหนิฉันในเรื่องการรับเงิน ทั้ง ๆ ที่ในบ้านของฉันมีสมาชิกที่ต้องดูแลถึงสิบสามชีวิต และไม่มีขนมปังเหลืออยู่เลยแม้แต่ก้อนเดียว”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>รวมถึงอะลี บิน อับดุลอะซีซ อัลบะเฆาะวีย์ (เสียชีวิต ฮ.ศ. 252 / ค.ศ. 866) ก็เป็นอีกท่านหนึ่งที่ได้เรียกเก็บค่าตอบแทนในการรายงานฮะดีษเช่นกัน อัลเคาะฏีบ อัลบัฆดาดีย์ (เสียชีวิต ฮ.ศ. 463 / ค.ศ. 1071) ได้บันทึกเรื่องราวที่สนับสนุนประเด็นนี้ไว้ด้วยสายรายงานของท่านที่เชื่อมโยงไปถึงอิหม่ามอันนะสาอีย์ (เสียชีวิต ฮ.ศ. 303 / ค.ศ. 915) โดยเล่าว่า เมื่อครั้งที่อิหม่ามอันนะสาอีย์ถูกถามถึงอะลี บิน อับดุลอะซีซ ท่านได้กล่าวประณามขึ้นว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قبح الله علي بن عبد العزيز ثلاثا فقيل له: يا أبا عبد الرحمن أتروي عنه؟ قال: لا أكان كذابا؟ فقال: لا؛ ولكن قوما اجتمعوا ليقرؤوا عليه شيئا وبروه بما سهل وكان فيهم إنسان غريب فقير لم يكن في جملة من بره فأبي أن يقرأ عليهم وهو حاضر حتى يخرج أو يدفع كما دفعوا</blockquote>
+      <p class="ar-translation">“ขออัลลอฮ์ทรงให้อะลี บิน อับดุลอะซีซ ได้รับความอัปยศ (ท่านกล่าวทวนเช่นนี้ถึงสามครั้ง) มีผู้ถามท่านว่า โอ้ อบู อับดุรเราะฮ์มาน (ฉายานามของอันนะสาอีย์) ท่านรับรายงานฮะดีษจากเขาหรือไม่? ท่านตอบว่า ไม่, ผู้คนจึงถามต่อว่า เขาเป็นคนโกหกปั้นแต่งฮะดีษกระนั้นหรือ? ท่านอธิบายว่า เปล่าเลย แต่เคยมีคนกลุ่มหนึ่งมารวมตัวกันเพื่อขออ่านศึกษาฮะดีษกับเขา โดยพวกเขาได้รวบรวมทรัพย์สินมอบให้เขาเป็นค่าตอบแทนตามกำลังที่จะหาได้ แต่ในมัจลิสนั้น มีชายแปลกหน้าผู้ยากไร้คนหนึ่งนั่งร่วมอยู่ด้วย ซึ่งเขาไม่ได้มีส่วนร่วมในการสมทบเงินค่าตอบแทนนั้น ผลปรากฏว่า อะลี บิน อับดุลอะซีซปฏิเสธที่จะอ่านฮะดีษให้คนกลุ่มนั้นฟังในขณะที่ชายยากไร้ผู้นี้ยังนั่งอยู่ด้วย เขาขู่ว่าจะไม่อ่านจนกว่าชายผู้นั้นจะลุกออกไปจากวง หรือไม่ก็ต้องหาเงินมาจ่ายให้เหมือนกับที่คนอื่น ๆ เขาจ่ายกัน”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+
+      <p>อย่างไรก็ตาม การปฏิบัติในลักษณะนี้ถือว่าขัดแย้งกับแนวทางปฏิบัติดั้งเดิมของบรรดาเศาะฮาบะฮ์และตาบิอีน ซึ่งดำรงตนในการรายงานฮะดีษให้แก่ผู้คนโดยปราศจากการคิดค่าใช้จ่ายใด ๆ ทั้งสิ้น เพื่อมุ่งหวังเพียงผลบุญและการตอบแทนจากอัลลอฮ์เท่านั้น จนกระทั่งคำกล่าวที่ว่า</p>
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">علم مجانا كما علمت مجانا</blockquote>
+      <p class="ar-translation">“จงสอนผู้อื่นแบบให้เปล่า ดั่งที่ท่านเองก็เคยได้รับการสอนมาแบบให้เปล่าเช่นกัน” ได้กลายเป็นบรรทัดฐานและคติพจน์ที่แพร่หลายในหมู่พวกเขาอย่างกว้างขวาง</p>
+
+      <p>ปรากฏการณ์ดังกล่าวได้นำไปสู่ความเห็นที่แตกต่างกันในหมู่นักปราชญ์เกี่ยวกับข้อชี้ขาดทางศาสนาในประเด็นนี้ ดังรายละเอียดที่จะกล่าวถึงต่อไป</p>
+
+      <h2 class="article-h2">ข้อชี้ขาดทางนิติศาสตร์ว่าด้วยการรับค่าตอบแทนในการสอนและรายงานฮะดีษ</h2>
+
+      <p>บรรดานักวิชาการฮะดีษได้หยิบยกประเด็นข้อชี้ขาดเกี่ยวกับการรับค่าตอบแทนในการรายงานฮะดีษไว้ในตำราว่าด้วยวิทยาการและวิจารณ์ฮะดีษ หรือมุศเฏาะละฮุลฮะดีษ โดยได้อ้างอิงถึงทรรศนะของนักปราชญ์ในเรื่องนี้ ซึ่งสามารถจำแนกออกเป็น 2 ทรรศนะหลัก ดังนี้</p>
+
+      <h2 class="article-h2">ทรรศนะที่ 1: การปฏิเสธและไม่อนุญาตให้รับค่าตอบแทน</h2>
+
+      <p>ทรรศนะนี้ได้รับการสนับสนุนโดยนักวิชาการชั้นนำ อาทิ ท่านอิสฮาก บิน อิบรอฮีม ซึ่งเป็นที่รู้จักในนามอิบนุ รอฮะวัยฮ์ (เสียชีวิต ฮ.ศ. 238 / ค.ศ. 853), อิหม่ามอะหมัด บิน ฮันบัล (เสียชีวิต ฮ.ศ. 241 / ค.ศ. 855) และอิหม่ามอบู ฮาติม อัรรอซี (เสียชีวิต ฮ.ศ. 277 / ค.ศ. 890) ตลอดจนนักวิชาการท่านอื่น ๆ โดยกลุ่มนี้มีจุดยืนว่าจะไม่ยอมรับสายรายงานจากบุคคลที่เรียกรับค่าตอบแทนในการสอนฮะดีษ เนื่องจากถือว่าพฤติกรรมดังกล่าวเป็นการลดทอนคุณธรรมและมุรูอะฮ์</p>
+
+      <p>เมื่อท่านอิสฮาก บิน รอฮะวัยฮ์ถูกถามถึงผู้รายงานฮะดีษที่ทำการสอนแลกกับค่าตอบแทน ท่านตอบว่า “ห้ามบันทึกฮะดีษจากเขา” ซึ่งท่านอบู ฮาติม อัรรอซี ก็ได้ให้ทรรศนะในทำนองเดียวกัน นอกจากนี้ เมื่ออิหม่ามอะหมัด บิน ฮันบัล ถูกตั้งคำถามเกี่ยวกับผู้ที่เสมือน “ขาย” ฮะดีษ ว่าสมควรจดบันทึกจากเขาหรือไม่ ท่านตอบอย่างหนักแน่นว่า “ไม่ และไม่ถือว่าเขามีเกียรติใด ๆ ทั้งสิ้น”</p>
+
+      <p>อัลเคาะฏีบ อัลบัฆดาดีย์และท่านอิหม่ามอัสสะคอวีย์ (เสียชีวิต ฮ.ศ. 902 / ค.ศ. 1497) ได้อธิบายถึงเหตุผลเบื้องหลังของทรรศนะนี้ไว้ว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وإنما منعوا من ذلك تنزيها للراوي عن سوء الظن به؛ فإن بعض من كان يأخذ الأجرة على الرواية عثر على تزيده وادعائه ما لم يسمع لأجل ما كان يعطى، ومن هنا بالغ شعبة فيما حكي عنه وقال: لا تكتبوا عن الفقراء شيئا؛ فإنهم يكذبون، ولذا امتنع من الأخذ من امتنع، بل تورع الكثير منهم عن قبول الهدية والهبة، فقال سعيد بن عامر: لما جلس الحسن البصري للحديث أهدي له، فرده وقال: إن من جلس هذا المجلس فليس له عند الله خلاق، يعني إن أخذ. وكذا لم يكن النووي يقبل ممن له به علقة من إقراء أو انتفاع ما.</blockquote>
+      <p class="ar-translation">“การที่พวกเขาห้ามกระทำการดังกล่าว ก็เพื่อเป็นการปกป้องเกียรติของผู้รายงานให้พ้นจากข้อครหาและความหวาดระแวง เพราะเคยปรากฏว่ามีผู้ที่รับค่าตอบแทนในการรายงานฮะดีษบางคนถูกจับได้ว่ามีการปั้นแต่งเพิ่มเติมและอ้างอิงเนื้อหาที่ตนไม่เคยได้ยินมาก่อน เพียงเพื่อแลกกับผลประโยชน์และทรัพย์สินที่ได้รับ จากจุดนี้เอง ท่านชุอ์บะฮ์จึงได้กล่าวเตือนอย่างหนักแน่น (จนอาจดูเกินเลยไปบ้าง) ตามที่มีการรายงานจากท่านความว่า พวกท่านจงอย่าจดบันทึกสิ่งใดจากบรรดาคนยากจน เพราะพวกเขา (อาจ) โกหก และด้วยเหตุนี้ ผู้ที่ยืนกรานปฏิเสธการรับค่าตอบแทนจึงยังคงละเว้นอย่างเคร่งครัด ยิ่งไปกว่านั้น นักวิชาการจำนวนมากยังมีความสำรวมตน (วาเราะอ์) จนถึงขั้นปฏิเสธที่จะรับแม้กระทั่งของขวัญและของกำนัลใด ๆ ดังที่สะอีด บิน อามิรได้เล่าว่า เมื่อครั้งที่อัลฮะซัน อัลบัศรีย์ จัดกลุ่มเพื่อสอนฮะดีษ ได้มีผู้นำของขวัญมามอบให้ท่าน ทว่าท่านกลับส่งคืนพร้อมกับกล่าวว่า ผู้ใดที่มานั่ง ณ ที่แห่งนี้ (เพื่อสอนศาสนา) เขาผู้นั้นย่อมไม่มีส่วนแบ่งแห่งความดีงามใด ๆ ณ ที่อัลลอฮ์อีกแล้ว ซึ่งท่านหมายถึง หากเขายอมรับของขวัญชิ้นนั้น ในทำนองเดียวกัน อิหม่ามอันนะวาวีย์ก็ไม่เคยยอมรับของขวัญจากบุคคลใดก็ตามที่มีสายสัมพันธ์เกี่ยวข้องกันในฐานะลูกศิษย์ที่ท่านสอน หรือผู้ที่ได้รับประโยชน์ทางวิชาการอื่นใดจากท่าน”<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+
+      <p>ท่านอิหม่ามอัสสะคอวีย์ยังได้บันทึกไว้ว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقد قال سليمان بن حرب: لم يبق أمر من أمر السماء إلا الحديث والقضاء، وقد فسدا جميعا، القضاة يرشون حتى يولوا، والمحدثون يأخذون على حديث رسول الله صلى الله عليه وسلم الدراهم</blockquote>
+      <p class="ar-translation">“สุลัยมาน บิน ฮัรบ์ ได้กล่าวไว้ว่า บัดนี้ ไม่มีกิจการใดอันเป็นบัญชาจากฟากฟ้า (เรื่องของศาสนา) หลงเหลืออยู่อีกแล้ว นอกเสียจากวิชาฮะดีษและระบบตุลาการ ทว่าทั้งสองสิ่งนี้กลับเสื่อมทรามลงไปจนสิ้น บรรดาผู้พิพากษาต่างติดสินบนเพื่อให้ได้รับการแต่งตั้ง ในขณะที่บรรดานักวิชาการฮะดีษกลับเรียกรับเงินตรา เพื่อเป็นข้อแลกเปลี่ยนกับการถ่ายทอดฮะดีษของท่านรอซูลุลลอฮ์”</p>
+
+      <p>ท่านกล่าวต่อว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">( وهو ) أي: أخذ الأجرة ( شبيه أجرة ) معلم ( القرآن ) ونحوه؛ كالتدريس، يعني في الجواز، إلا أنه هناك العادة جارية بالأخذ فيه، وهو هنا في العرف ( يخرم ) أي: ينقص ( من مروءة الإنسان ) الفاعل له؛ لكونه شاع بين أهله التخلق بعلو الهمم، وطهارة الشيم، وتنزيه العرض عن مد العين إلى شيء من العرض.</blockquote>
+      <p class="ar-translation">“การรับค่าตอบแทนนี้ มีสถานะคล้ายคลึงกับค่าตอบแทนของครูผู้สอนอัลกุรอาน และศาสตร์อื่น ๆ เช่น การบรรยายสอนทั่วไป กล่าวคือมีความคล้ายคลึงกันในมิติของ ‘การเป็นที่อนุญาต’ ทว่าความแตกต่างนั้นอยู่ที่ ในกรณีของการสอนอัลกุรอาน การรับค่าตอบแทนถือเป็นธรรมเนียมปฏิบัติที่ได้รับการยอมรับและดำเนินกันมาอย่างปกติ ในขณะที่ในกรณีของการรายงานฮะดีษนี้ ตามบรรทัดฐานทางสังคม การรับค่าตอบแทนกลับถูกมองว่าเป็นการ ‘ทำลาย’ ซึ่งหมายถึงการลดทอน ‘คุณธรรมและมุรูอะฮ์’ ของผู้กระทำการดังกล่าว สาเหตุที่เป็นเช่นนั้น เนื่องจากเป็นที่ประจักษ์ชัดและเป็นจารีตที่เลื่องลือในแวดวงนักวิชาการฮะดีษว่า พวกเขาคือกลุ่มชนที่ประดับประดาตนด้วยปณิธานอันสูงส่ง มีอุปนิสัยที่บริสุทธิ์งดงาม และคอยปกป้องเกียรติยศของตนให้รอดพ้นจากการทอดสายตาหมายปองต่อผลประโยชน์ทางโลกและทรัพย์สินเงินทองใด ๆ ทั้งสิ้น”<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup></p>
+
+      <p>ญะอ์ฟัร อัลบัรมะกีย์ (เสียชีวิต ฮ.ศ. 187 / ค.ศ. 803) ได้รายงานไว้ว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ما رأينا في القراء مثل عيسى بن يونس بن أبي إسحاق السبيعي، عرضت عليه مائة ألف، فقال: لا والله، لا يتحدث أهل العلم أني أكلت للسنة ثمنا، ألا كان هذا قبل أن ترسلوا إلي، فأما على الحديث فلا، ولا شربة ماء، ولا إهليلجة.</blockquote>
+      <p class="ar-translation">“เราไม่เคยพบเห็นผู้ใดในหมู่นักปราชญ์ที่จะมีจุดยืนอันเด็ดเดี่ยวเฉกเช่นอีซา บิน ยูนุส บิน อบี อิสฮาก อัสสะบีอีย์อีกแล้ว ครั้งหนึ่งเขาเคยได้รับการเสนอเงินจำนวนถึงหนึ่งแสน (ดิรฮัม) ทว่าเขากลับปฏิเสธและกล่าวว่า ไม่ ขอสาบานต่ออัลลอฮ์! จะต้องไม่มีนักวิชาการคนใดเอาฉันไปกล่าวขานได้ว่า ฉันรับค่าตอบแทนเพื่อแลกกับการถ่ายทอดซุนนะฮ์ หากพวกท่านมอบสิ่งนี้ให้ฉันก่อนที่จะส่งคนมาเชิญฉัน (เพื่อไปสอน) ก็อาจเป็นอีกเรื่องหนึ่ง แต่หากจะให้รับเพื่อเป็นข้อแลกเปลี่ยนกับฮะดีษแล้วล่ะก็ ฉันขอปฏิเสธ แม้ว่าสิ่งนั้นจะเป็นเพียงน้ำสักอึก หรือสมุนไพรสักชิ้นก็ตาม!”</p>
+
+      <p>อัสสะคอวีย์ได้เสริมว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وهذا بمعناه وأزيد عند أبي الفرج النهرواني في الجليس الصالح قال: دخل الرشيد الكوفة، ومعه ابناه الأمين والمأمون، فسمعا من عبد الله بن إدريس وعيسى بن يونس، فأمر لهما بمال جزيل، فلم يقبلا، وقال له عيسى: لا، ولا إهليلجة، ولا شربة ماء على حديث رسول الله صلى الله عليه وسلم، ولو ملأت لي هذا المسجد إلى السقف ذهبا</blockquote>
+      <p class="ar-translation">“เหตุการณ์ในทำนองเดียวกันนี้พร้อมรายละเอียดที่เพิ่มเติมขึ้น ได้ถูกบันทึกไว้โดยอบุลฟะร็อจญ์ อันนะฮ์เราะวานีย์ (เสียชีวิต ฮ.ศ. 390 / ค.ศ. 1000) ในตำราอัลญะลีส อัศศอลิห์ โดยท่านได้เล่าว่า เมื่อครั้งที่คอลีฟะฮ์ฮารูน อัรรอชีดได้เยือนเมืองกูฟะฮ์ พร้อมด้วยโอรสทั้งสองพระองค์ คืออัลอะมีนและอัลมะอ์มูน ทั้งสองได้ร่วมรับฟังฮะดีษจากอับดุลลอฮ์ บิน อิดรีส และอีซา บิน ยูนุส คอลีฟะฮ์จึงมีรับสั่งให้ประทานทรัพย์สินจำนวนมหาศาลแก่ปราชญ์ทั้งสอง ทว่าพวกท่านกลับปฏิเสธรับไว้ โดยอีซาได้กล่าวว่า ไม่, ข้าไม่รับ ถึงแม้จะเป็นเพียงสมุนไพรสักชิ้นก็เถอะ หรือน้ำเพียงอึกเดียวเพื่อแลกกับฮะดีษของท่านรอซูลุลลอฮ์ ข้าก็ขอปฏิเสธ ต่อให้พระองค์จะทรงประทานทองคำให้ข้าจนเต็มมัสยิดแห่งนี้จรดเพดานก็ตาม”<sup class="fn-ref" id="fnref-6"><a href="#ref-6">⁶</a></sup></p>
+
+      <h2 class="article-h2">ทรรศนะที่ 2: การอนุญาตให้รับค่าตอบแทน</h2>
+
+      <p>ในบรรดานักวิชาการที่มีทรรศนะอนุโลมและเคยรับค่าตอบแทนในการรายงานฮะดีษ ได้แก่ ท่านอบู นุอัยม์ อัลฟัฎล์ บิน ดุกัยน์, อัฟฟาน บิน มุสลิม (เสียชีวิต ฮ.ศ. 219 / ค.ศ. 834) และอะลี บิน อับดุลอะซีซ อัลบะเฆาะวีย์ ตลอดจนนักปราชญ์ท่านอื่น ๆ</p>
+
+      <p>ท่านอิบนุศเศาะลาฮ์ (เสียชีวิต ฮ.ศ. 643 / ค.ศ. 1245) ได้อธิบายเหตุผลของทรรศนะนี้ไว้ว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لأن ذلك شبيه بأخذ الأجرة على تعليم القرآن وغيره، لحديث النبي صلى الله عليه وسلم: إن أحق ما أخذتم عليه أجرا كتاب الله</blockquote>
+      <p class="ar-translation">“เนื่องจากสิ่งนี้มีความคล้ายคลึงกับการรับค่าตอบแทนในการสอนอัลกุรอานและศาสตร์อื่น ๆ โดยอ้างอิงจากฮะดีษของท่านนบีที่ว่า สิ่งที่คู่ควรที่สุดที่พวกท่านจะรับเป็นค่าตอบแทนได้คือ คัมภีร์ของอัลลอฮ์”<sup class="fn-ref" id="fnref-7"><a href="#ref-7">⁷</a></sup></p>
+
+      <p>ท่านอัสสะคอวีย์ยังได้กล่าวเพิ่มเติมว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والأحاديث الواردة في الوعيد على ذلك لا تنهض بالمعارضة؛ إذ ليس فيها ما تقوم به الحجة، خصوصا وليس فيها تصريح بالمنع على الإطلاق، بل هي وقائع أحوال محتملة للتأويل لتوافق الصحيح، وقد حملها بعض العلماء على الأخذ فيما تعين عليه تعليمه، لا سيما عند عدم الحاجة، وكذا يمكن أن يقال في تفسير أبي العالية لقوله تعالى: «وَلَا تَشْتَرُوا۟ بِـَٔايَـٰتِى ثَمَنًا قَلِيلًا»؛ أي: لا تأخذوا عليه أجرا، وهو مكتوب عندهم في الكتاب الأول: يا ابن آدم، علم مجانا كما علمت مجانا، وليس في قول عازب لأبي بكر، حين سأله أن يأمر ابنه البراء رضي الله عنه بحمل ما اشتراه منه معه: لا حتى يحدثنا بكذا، متمسك للجواز؛ لتوقفه كما قال شيخنا على أن عازبا لو استمر على الامتناع من إرسال ابنه لاستمر أبو بكر على الامتناع من التحديث، يعني: فإنه حينئذ لو لم يجز لما امتنع أبو بكر، ولا أقر عازبا عليه، ولكن ليس هذا بلازم؛ لاحتمال أن يكون امتناعه تأديبا وزجرا، وتقريره عازبا فلكونه فهم عنه قصد المبادرة لإسماع ابنه، وكونه حاضرا معه خوفا من الفوات، لا خصوص هذا المحكي وعلى هذا، فما بقي فيهما متمسك، وعلى كل حال، فقد سبق للمنع من الاستدلال به الخطابي وابن الجوزي، وقال: ومن المهم هنا أن نقول: قد علم أن حرص الطلبة للعلم قد فتر، لا بل قد بطل، فينبغي للعلماء أن يحببوا لهم العلم، وإلا فإذا رأى طالب الأثر أن الإسناد يباع، والغالب على الطلبة الفقر، ترك الطلب، فكان هذا سببا لموت السنة، ويدخل هؤلاء في معنى الذين يصدون عن ذكر الله، وقد رأينا من كان على مأثور السلف في نشر السنة بورك له في حياته وبعد مماته، وأما من كان على السيرة التي ذممناها لم يبارك له على غزارة علمه - انتهى.</blockquote>
+      <p class="ar-translation">“สำหรับบรรดาฮะดีษที่ระบุถึงบทลงโทษ (ต่อการรับค่าตอบแทน) ในเรื่องนี้นั้น ไม่ได้มีน้ำหนักเพียงพอที่จะนำมาหักล้าง (ทรรศนะที่อนุญาต) ได้ เนื่องจากสายรายงานเหล่านั้นไม่ได้อยู่ในระดับที่สามารถนำมาเป็นหลักฐานอ้างอิงได้อย่างเด็ดขาด โดยเฉพาะอย่างยิ่งมันไม่ได้มีการระบุถึงการห้ามโดยเด็ดขาดในทุกบริบท แต่มันเป็นเพียงเหตุการณ์เฉพาะกรณีที่สามารถตีความให้สอดคล้องกับทรรศนะที่ถูกต้องได้ นักวิชาการบางท่านได้ตีความสายรายงานเหล่านั้นว่า เป็นการห้ามรับค่าตอบแทนในกรณีที่การสอนนั้นเป็นข้อบังคับส่วนบุคคล (ฟัรฎูอัยน์) ที่เขาจำเป็นต้องสอน โดยเฉพาะอย่างยิ่งเมื่อผู้สอนไม่ได้มีความขัดสนหรือมีความจำเป็นทางปัจจัยยังชีพ ในทำนองเดียวกันนี้ เราสามารถนำหลักการนี้ไปอธิบายถึงการตีความของอบุลอาลิยะฮ์ ต่อพระดำรัสของอัลลอฮ์ที่ว่า {และพวกเจ้าจงอย่าแลกเปลี่ยนโองการทั้งหลายของข้ากับราคาอันน้อยนิด} ซึ่งท่านได้อธิบายความหมายว่า คือการที่พวกท่านไม่รับค่าจ้างในการสอนอัลกุรอาน ดังที่มีจารึกไว้ในคัมภีร์เล่มก่อน ๆ ว่า โอ้ ลูกหลานอาดัมเอ๋ย จงสอนผู้อื่นแบบให้เปล่า ดั่งที่เจ้าเองก็เคยได้รับการสอนมาแบบให้เปล่าเช่นกัน ส่วนเหตุการณ์ของอาซิบ (บิดาของบะรออ์) กับท่านอบู บักร ในขณะที่อบู บักรขอให้อาซิบสั่งให้บะรออ์ช่วยแบกสัมภาระที่เพิ่งซื้อไปส่งให้ โดยอาซิบตอบว่า ไม่ จนกว่าท่านจะเล่าฮะดีษเรื่องนั้นเรื่องนี้ให้เราฟังเสียก่อน เหตุการณ์นี้ก็ไม่สามารถนำมาเป็นหลักฐานเพื่อสนับสนุนการอนุญาตรับค่าตอบแทนได้เช่นกัน เพราะดังที่ท่านอาจารย์ของเราได้กล่าวไว้ว่า มันขึ้นอยู่กับสมมติฐานที่ว่า หากอาซิบยังคงยืนกรานที่จะไม่ส่งลูกชายไป อบู บักรก็คงจะยืนกรานไม่เล่าฮะดีษให้ฟังเช่นกัน กล่าวคือ หากการตั้งเงื่อนไขแลกเปลี่ยนไม่อนุญาต อบู บักรก็คงจะไม่ยอมรับข้อเสนอของอาซิบแต่แรก ทว่าข้อสรุปนี้ก็ไม่ได้ตายตัวเสมอไป เพราะเป็นไปได้ว่า การที่ท่านอบู บักรปฏิเสธ (หรือประวิงเวลา) นั้นอาจเป็นเพียงการดัดนิสัยหรือตักเตือน และการที่ท่านยอมตามคำขอของอาซิบ ก็เพราะท่านเข้าใจเจตนาอันแรงกล้าของอาซิบที่ต้องการให้ลูกชายของตนได้ฟังฮะดีษโดยเร็ว และการที่บะรออ์มาอยู่ด้วยก็เพราะเกรงว่าจะพลาดโอกาสรับฟัง ไม่ใช่เพราะจงใจใช้ฮะดีษเป็นข้อแลกเปลี่ยนกับแรงงานแต่อย่างใด เมื่อเป็นเช่นนี้ เหตุการณ์ดังกล่าวจึงไม่มีน้ำหนักเพียงพอที่จะนำมาเป็นข้ออ้างอิงสำหรับทั้งสองฝ่าย ไม่ว่าในกรณีใดก็ตาม อัลค็อฏฏอบีย์และอิบนุลเญาซีย์ได้เคยกล่าวห้ามการนำเหตุการณ์นี้มาเป็นหลักฐานอ้างอิงไว้ก่อนแล้ว โดยท่านได้ให้ข้อคิดอันทรงคุณค่าไว้ว่า สิ่งสำคัญที่เราต้องกล่าวถึง ณ ที่นี้คือ เป็นที่ทราบกันดีว่า ความกระตือรือร้นของบรรดานักศึกษาในการแสวงหาความรู้นั้นได้ถดถอยลง หรืออาจจะถึงขั้นเหือดแห้งไปแล้วด้วยซ้ำ ดังนั้น บรรดานักวิชาการจึงสมควรอย่างยิ่งที่จะต้องหาวิธีทำให้พวกเขาเกิดความรักในวิชาความรู้ เพราะหากนักศึกษาฮะดีษต้องมาพบเห็นว่าสายรายงานกำลังถูกนำมาซื้อขายกัน ในขณะที่นักศึกษาส่วนใหญ่นั้นยากจนขัดสน พวกเขาก็ย่อมจะท้อถอยและละทิ้งการศึกษาไปในที่สุด ซึ่งนั่นจะเป็นสาเหตุที่ทำให้ซุนนะฮ์ต้องตายลง และบรรดาผู้ที่เรียกเก็บเงินเหล่านี้ก็จะเข้าข่ายกลุ่มชนที่กีดกันผู้คนออกจากการรำลึกถึงอัลลอฮ์ เราได้ประจักษ์แล้วว่า ผู้ที่ดำเนินตามรอยกัลยาณชนยุคสลัฟในการเผยแพร่ซุนนะฮ์อย่างบริสุทธิ์ใจ พวกเขาล้วนได้รับความจำเริญ ทั้งในขณะที่มีชีวิตและหลังจากที่เสียชีวิตไปแล้ว ในขณะที่ผู้ที่ดำเนินตามวิถีทางที่เราได้ตำหนิไปนั้น พวกเขากลับไม่ได้รับความจำเริญใด ๆ เลย แม้ว่าจะมีวิชาความรู้มากมายมหาศาลเพียงใดก็ตาม”<sup class="fn-ref" id="fnref-8"><a href="#ref-8">⁸</a></sup></p>
+
+      <p>อัลฮาฟิซ อิบนุ อัลอันมาฏีย์ ได้บอกเล่าถึงเหตุการณ์ประทับใจครั้งหนึ่งว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">رغبت أبا علي حنبل بن عبد الله البغدادي الرصافي راوي مسند أحمد في السفر إلى الشام، وكان فقيرا جدا، فقلت له: يحصل لك من الدنيا طرف صالح، ويقبل عليك وجوه الناس ورؤساؤهم، فقال: دعني، فوالله ما أسافر لأجلهم، ولا لما يحصل منهم، وإنما أسافر خدمة لحديث رسول الله صلى الله عليه وسلم، أروي أحاديثه في بلد لا تروى فيه، قال: ولما علم الله منه هذه النية الصالحة أقبل بوجوه الناس إليه، وحرك الهمم للسماع عليه، فاجتمع إليه جماعة لا نعلمها، اجتمعت في مجلس سماع قبل هذا بدمشق، بل لم يجتمع مثلها قط لأحد ممن روى المسند، نسأل الله الإخلاص قولا وفعلا</blockquote>
+      <p class="ar-translation">“ฉันเคยชักชวนอบู อะลี ฮัมบัล บิน อับดุลลอฮ์ อัลบัฆดาดีย์ อัรรุศอฟีย์ ผู้สืบทอดการรายงานตำรา ‘มุสนัด อิหม่ามอะหมัด’ ให้เดินทางไปยังชาม ซึ่งในเวลานั้นท่านมีฐานะที่ยากจนขัดสนเป็นอย่างมาก ฉันได้กล่าวจูงใจท่านว่า ท่านจะได้รับทรัพย์สมบัติทางโลกพอสมควร และบรรดาผู้นำตลอดจนชนชั้นสูงจะพากันหันมาให้ความเคารพยกย่องท่าน ทว่าท่านกลับตอบปฏิเสธอย่างหนักแน่นว่า ปล่อยฉันไปเถิด ขอสาบานต่ออัลลอฮ์! ฉันจะไม่มีวันเดินทางเพื่อคนเหล่านั้น หรือเพื่อแสวงหาผลประโยชน์ใด ๆ จากพวกเขา แต่ฉันเดินทางก็เพื่ออุทิศตนรับใช้ฮะดีษของท่านรอซูลุลลอฮ์เท่านั้น เพื่อนำฮะดีษของท่านไปถ่ายทอดในดินแดนที่ยังไม่มีการรายงาน และเมื่ออัลลอฮ์ทรงประจักษ์ถึงเจตนารมณ์อันบริสุทธิ์งดงามของเขา พระองค์จึงทรงดลใจให้ผู้คนหันมาให้ความสนใจ และทรงปลุกเร้าความมุ่งมั่นของผู้คนให้ปรารถนาที่จะรับฟังฮะดีษจากเขา จนกระทั่งมีฝูงชนจำนวนมหาศาลมารวมตัวกันรายล้อมเขา เป็นภาพการชุมนุมที่ยิ่งใหญ่ในระดับที่เราไม่เคยพบเห็นในมัจลิสการฟังฮะดีษใด ๆ ในนครดามัสกัสมาก่อนหน้านี้เลย ยิ่งไปกว่านั้น ยังไม่เคยปรากฏฝูงชนที่มืดฟ้ามัวดินเยี่ยงนี้มารวมตัวกันเพื่อรับฟังผู้รายงานตำรามุสนัดท่านใดมาก่อนอีกด้วย เราขอวิงวอนต่ออัลลอฮ์ให้ทรงประทานความบริสุทธิ์ใจ (อิคลาศ) ให้แก่เรา ทั้งในถ้อยคำและการกระทำด้วยเถิด”<sup class="fn-ref" id="fnref-9"><a href="#ref-9">⁹</a></sup></p>
+
+      <p>หากเมื่อเราได้วิเคราะห์ทรรศนะทั้งสองอย่างถี่ถ้วน จะพบว่าจริง ๆ แล้วไม่ได้มีความขัดแย้งกันแต่อย่างใด เนื่องจากกลุ่มนักวิชาการที่มีทรรศนะห้ามนั้น ในบางสถานการณ์พวกเขากลับผ่อนปรนให้ผู้รายงานบางท่านสามารถรับค่าตอบแทนได้ หากบุคคลนั้นมีความน่าเชื่อถือในระดับสูง</p>
+
+      <p>ด้วยเหตุนี้ ทรรศนะที่สั่งห้ามจึงมีสาเหตุหลักมาจากความกังวลที่ว่า การรับผลประโยชน์อาจชักนำให้ผู้รายงานแสวงหาผลกำไรด้วยการรายงานฮะดีษให้มากที่สุด ซึ่งอาจนำไปสู่การปั้นแต่งหรือการโกหกได้ ในขณะที่ทรรศนะอนุญาตนั้น ครอบคลุมเฉพาะผู้รายงานที่ได้รับการยืนยันถึงความน่าเชื่อถือสูง และมีเหตุจำเป็นอันสมควรในการรับค่าตอบแทน เช่น ประสบกับภาวะความยากจนขัดสน เป็นต้น</p>
+
+      <p>อิหม่ามอัสสะคอวีย์ได้ชี้ให้เห็นถึงการผสานทรรศนะนี้ไว้อย่างกระจ่างชัด ซึ่งถือเป็นบทสรุปที่ดีที่สุดสำหรับหัวข้อนี้ โดยท่านได้อธิบายไว้ความว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قال حنبل بن إسحاق: سمعت أبا عبد الله يعني الإمام أحمد يقول: شيخان كان الناس يتكلمون فيهما ويذكرونهما، وكنا نلقى من الناس في أمرهما ما الله به عليم، قاما لله بأمر لم يقم به أحد، أو كبير أحد، مثل ما قاما به: عفان، وأبو نعيم. يعني بقيامهما عدم الإجابة في المحنة، وبكلام الناس من أجل أنهما كانا يأخذان على التحديث. ووصف أحمد مع هذا عفان بالمتثبت. وقيل له: من تابع عفان على كذا؟ فقال: وعفان يحتاج إلى أن يتابعه أحد، وأبا نعيم الحجة الثبت، وقال مرة أنه يزاحم به ابن عيينة، وهو على قلة روايته أثبت من وكيع، إلى غير ذلك من الروايات عنه، بل وعن أبي حاتم في توثيقه وإجلاله، فيمكن الجمع بين هذا، وإطلاقهما كما مضى أولا، عدم الكتابة بأن ذلك في حق من لم يبلغ هذه المرتبة في الثقة والتثبت، والأخذ مختلف في الموضعين</blockquote>
+      <p class="ar-translation">“ฮัมบัล บิน อิสฮากเล่าว่า ฉันได้ยินอบู อับดิลลาฮ์ (อิหม่ามอะหมัด บิน ฮันบัล) กล่าวว่า มีนักปราชญ์อาวุโสสองท่านที่ผู้คนมักพูดถึงและวิพากษ์วิจารณ์ ซึ่งเราต้องเผชิญกับคำครหาของสังคมเกี่ยวกับพวกท่านอย่างหนักหน่วง แต่ทว่าปราชญ์ทั้งสองท่านนี้ได้ยืนหยัดเพื่ออัลลอฮ์ในวิกฤตการณ์ที่แทบไม่มีผู้ใด หรือแทบไม่มีปราชญ์อาวุโสท่านใดยืนหยัดได้เทียบเท่าพวกท่านเลย นั่นคืออัฟฟานและอบู นุอัยม์ (การยืนหยัดที่ว่านี้หมายถึง การปฏิเสธที่จะโอนอ่อนตามอิทธิพลรัฐในยุคมิห์นะฮ์ หรือยุคแห่งการทดสอบทางความเชื่อ ส่วนคำวิพากษ์วิจารณ์จากสังคมนั้น เกิดจากการที่พวกท่านรับค่าตอบแทนในการสอนฮะดีษ) อย่างไรก็ตาม แม้จะมีคำครหา แต่อิหม่ามอะหมัดก็ยังคงกล่าวยกย่องอัฟฟานว่าเป็นผู้ที่มีความแม่นยำรัดกุม เมื่อมีผู้ถามท่านว่า มีใครรายงานสนับสนุนสายรายงานของอัฟฟานบ้างหรือไม่? อิหม่ามอะหมัดตอบอย่างหนักแน่นว่า ระดับอัฟฟานแล้ว ยังต้องรอให้ใครมารายงานสนับสนุนอีกกระนั้นหรือ? ส่วนอบู นุอัยม์นั้น อิหม่ามอะหมัดเคยกล่าวว่า เขาสามารถนำอบู นุอัยม์ไปเทียบชั้นกับอิบนุ อุยัยนะฮ์ได้เลย และแม้อบู นุอัยม์จะมีปริมาณการรายงานฮะดีษที่น้อยกว่า แต่เขามีความแม่นยำยิ่งกว่าวะเกี้ยะอ์ นอกเหนือจากนี้ยังมีคำยกย่องอื่น ๆ จากอิหม่ามอะหมัด หรือแม้กระทั่งจากอิหม่ามอบู ฮาติม ที่ได้ยืนยันความน่าเชื่อถือและให้เกียรติแก่ปราชญ์ทั้งสองท่าน ดังนั้น เราจึงสามารถผสานความเข้าใจระหว่างเหตุการณ์นี้ กับคำกล่าวชี้ขาดของพวกท่าน (อิหม่ามอะหมัดและอิหม่ามอบู ฮาติม) ในตอนต้นที่สั่งห้ามจดบันทึกฮะดีษจากผู้รับค่าตอบแทนได้ว่า การห้ามจดบันทึกนั้นจะมีผลบังคับใช้เฉพาะกับบุคคลที่ยังไม่บรรลุถึงขั้นความน่าเชื่อถือและความแม่นยำในระดับสูงเท่านั้น ซึ่งชี้ให้เห็นว่าบริบทและเงื่อนไขของการรับค่าตอบแทนในสองกรณีนี้มีความแตกต่างกันอย่างชัดเจน”<sup class="fn-ref" id="fnref-10"><a href="#ref-10">¹⁰</a></sup></p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>จากเนื้อหาที่ได้นำเสนอมาทั้งหมดข้างต้น เราสามารถสรุปประเด็นสำคัญได้ดังนี้</p>
+
+      <ol class="article-summary">
+        <li>การรับค่าตอบแทนในการรายงานฮะดีษ คือการรับทรัพย์สินเงินทองจากผู้เรียน หรือซื้อ-ขาย เพื่อเป็นข้อแลกเปลี่ยนกับการถ่ายทอดและสอนฮะดีษให้แก่พวกเขา</li>
+        <li>มีนักวิชาการบางท่านในอดีตที่รับค่าตอบแทนจากการสอนและถ่ายทอดฮะดีษ ซึ่งถือเป็นการปฏิบัติที่ขัดแย้งกับแนวทางดั้งเดิมของบรรดาเศาะฮาบะฮ์และตาบิอีน</li>
+        <li>บรรดานักวิชาการฮะดีษได้กล่าวถึงข้อชี้ขาดเกี่ยวกับการรับค่าตอบแทนในการสอนฮะดีษไว้ในตำรามุศเฏาะละฮุลฮะดีษ โดยได้ระบุถึงทรรศนะของนักปราชญ์ในประเด็นนี้ ซึ่งแบ่งออกเป็น 2 ทรรศนะหลัก ได้แก่ ทรรศนะแรกคือการปฏิเสธ (ไม่อนุญาต) และทรรศนะที่สองคือการอนุญาต</li>
+        <li>ทรรศนะทั้งสองไม่ได้มีความขัดแย้งกันเลย เนื่องจากทรรศนะที่ห้ามนั้นมีสาเหตุหลักมาจากความกังวลที่ว่า การรับผลประโยชน์อาจชักนำให้ผู้รับแสวงหากำไรด้วยการมุ่งรายงานฮะดีษในปริมาณมาก ๆ ซึ่งอาจนำไปสู่การโกหกปั้นแต่งได้ ในขณะที่ทรรศนะอนุญาตนั้น ถูกตีความว่าเจาะจงใช้เฉพาะกับผู้รายงานที่ได้รับการยืนยันถึงความน่าเชื่อถือขั้นสูง และมีเหตุจำเป็นอันสมควรในการรับค่าตอบแทน เช่น การตกอยู่ในภาวะยากจนขัดสน เป็นต้น</li>
+      </ol>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การรับค่าตอบแทนในการสอนและรายงานฮะดีษ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/hadith/payment-for-teaching-hadith.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">เชิงอรรถ</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">أخرجه الترمذي (2656) وأبو داود (3660) وابن ماجه وأحمد، من حديث جماعة من الصحابة، وهو حديث صحيح. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">ذكره الذهبي في سير أعلام النبلاء في ترجمة أبي نعيم الفضل بن دكين. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">الخطيب البغدادي، الجامع لأخلاق الراوي وآداب السامع. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">السخاوي، فتح المغيث بشرح ألفية الحديث للعراقي. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">السخاوي، فتح المغيث بشرح ألفية الحديث للعراقي. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+        <li id="ref-6">السخاوي، فتح المغيث؛ والمعافى بن زكريا النهرواني، الجليس الصالح الكافي. <a class="fn-back" href="#fnref-6" aria-label="กลับไปยังเชิงอรรถที่ 6">↑</a></li>
+        <li id="ref-7">ابن الصلاح، معرفة أنواع علوم الحديث (مقدمة ابن الصلاح)؛ والحديث أخرجه البخاري. <a class="fn-back" href="#fnref-7" aria-label="กลับไปยังเชิงอรรถที่ 7">↑</a></li>
+        <li id="ref-8">السخاوي، فتح المغيث بشرح ألفية الحديث للعراقي. <a class="fn-back" href="#fnref-8" aria-label="กลับไปยังเชิงอรรถที่ 8">↑</a></li>
+        <li id="ref-9">السخاوي، فتح المغيث بشرح ألفية الحديث للعراقي. <a class="fn-back" href="#fnref-9" aria-label="กลับไปยังเชิงอรรถที่ 9">↑</a></li>
+        <li id="ref-10">السخاوي، فتح المغيث بشرح ألفية الحديث للعراقي. <a class="fn-back" href="#fnref-10" aria-label="กลับไปยังเชิงอรรถที่ 10">↑</a></li>
+      </ol>
+    </section>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li>القرآن الكريم.</li>
+        <li>الترمذي، محمد بن عيسى، الجامع (سنن الترمذي).</li>
+        <li>الخطيب البغدادي، أحمد بن علي، الجامع لأخلاق الراوي وآداب السامع.</li>
+        <li>ابن الصلاح، عثمان بن عبد الرحمن، معرفة أنواع علوم الحديث.</li>
+        <li>السخاوي، محمد بن عبد الرحمن، فتح المغيث بشرح ألفية الحديث للعراقي.</li>
+        <li>المعافى بن زكريا النهرواني، الجليس الصالح الكافي والأنيس الناصح الشافي.</li>
+        <li>الذهبي، محمد بن أحمد، سير أعلام النبلاء.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
