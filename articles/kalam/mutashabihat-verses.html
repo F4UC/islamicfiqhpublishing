@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ความนัยแห่งโองการมุตะชาบิฮาต — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์เชิงเทววิทยาว่าด้วยโองการมุตะชาบิฮาต (โองการที่มีนัยคลุมเครือ) ในอัลกุรอาน ผ่านทัศนะของอิบนุ กุตัยบะฮ์ อิหม่ามอันนะวาวีย์ อัลฆอซาลีย์ และอิบนุ อาดิล อัลฮัมบาลีย์">
+<meta name="keywords" content="มุตะชาบิฮาต, มุห์กัม, ตะอ์วีล, อิบนุ กุตัยบะฮ์, อันนะวาวีย์, อัลฆอซาลีย์, กะลาม, ตัฟซีร">
+<meta name="author" content="มัรกัส อัลอิมาม อัลอัชอะรีย์">
+
+<meta property="og:title" content="ความนัยแห่งโองการมุตะชาบิฮาต — Islamic Fiqh Publishing">
+<meta property="og:description" content="ความคลุมเครือในอัลกุรอานคือข้อบกพร่องหรือกลไกการเรียนรู้? ทัศนะของปราชญ์ตั้งแต่อิบนุ กุตัยบะฮ์ถึงอิบนุ อาดิล">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/kalam/mutashabihat-verses.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260607a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+.bibliography.latin { direction: ltr; text-align: left; }
+.bibliography.latin li { font-family: 'Inter', 'Sarabun', sans-serif; }
+.biblio-subhead {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 15px; font-weight: 700;
+  color: var(--text-primary); margin: 24px 0 4px;
+}
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="mutashabihat-verses">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/kalam.html" class="article-feature-eyebrow">กะลาม / เทววิทยา</a>
+      <h1 class="article-feature-title">ความนัยแห่งโองการมุตะชาบิฮาต</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">หากอัลลอฮ์ประทานอัลกุรอานลงมาเพื่อเป็นทางนำ เหตุใดจึงมี “โองการมุตะชาบิฮาต” อันมีนัยคลุมเครืออยู่ด้วย? คำถามนี้เป็นปุจฉาเก่าแก่ที่บรรดาปราชญ์ได้ครุ่นคิดและให้คำตอบไว้อย่างลึกซึ้ง บทความนี้จะสำรวจคำอธิบายของพวกท่านตั้งแต่อิบนุ กุตัยบะฮ์ จนถึงอิบนุ อาดิล อัลฮัมบาลีย์</p>
+
+      <h2 class="article-h2">ปุจฉาว่าด้วยความชัดแจ้งและความคลุมเครือ</h2>
+
+      <p>หากมีคนถามเราว่า “หากอัลลอฮ์ประทานอัลกุรอานมาเพื่อให้คลุมเครือ สร้างความสงสัย และไม่รู้เป้าหมาย แล้วโองการมากมายที่ยืนยันว่าอัลกุรอานถูกประทานมาเพื่อให้ใคร่ครวญ จะมีความหมายอย่างไร? จะใคร่ครวญได้อย่างไร หากไม่รู้เป้าหมาย และจะใคร่ครวญได้อย่างไร หากมันคลุมเครือ?”</p>
+
+      <p>เราสามารถให้คำตอบได้ว่า อันที่จริง “ความคลุมเครือ” มิใช่สิ่งที่เกิดขึ้นเพราะตัวบทพร่องความชัดเจน หากแต่เกิดขึ้นเพราะธรรมชาติของภาษาและธรรมชาติของมนุษย์ผู้รับภาษา มนุษย์มีระดับความเข้าใจไม่เท่ากัน มีศักยภาพและประสบการณ์ต่างกัน และภาษาเองก็มีวิธีสื่อสารหลายชั้น ทั้งชัดแจ้ง ทั้งเปรียบเปรย ทั้งซ่อนนัย และทั้งท้าทายให้คิดต่อ</p>
+
+      <h2 class="article-h2">คำตอบของอิบนุ กุตัยบะฮ์</h2>
+
+      <p>ด้วยเหตุนี้เอง ท่านอิบนุ กุตัยบะฮ์ (เสียชีวิต ฮ.ศ. 276 / ค.ศ. 889) จึงได้ระบุไว้ว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما قولهم: ماذا أريد بإنزال المتشابه في القرآن، ممن أراد بالقرآن لعباده الهدى والتبيان؟</blockquote>
+      <p class="ar-translation">“สำหรับคำกล่าวของพวกเขาที่ว่า ‘เหตุใดจึงมีการประทานโองการที่มีนัยความหมายคลุมเครือ (มุตะชาบิฮาต) ลงมาในอัลกุรอาน ทั้งที่พระผู้ประทานอัลกุรอานทรงมุ่งหมายให้มันเป็นทางนำและเป็นสิ่งที่ชี้แจงให้กระจ่างแจ้งแก่ปวงบ่าวของพระองค์?’”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فالجواب عنه: أن القرآن نزل بألفاظ العرب ومعانيها، ومذاهبها في الإيجاز والاختصار، والإطالة والتوكيد، والإشارة إلى الشيء، وإغماض بعض المعاني حتى لا يظهر عليه إلا اللقن، وإظهار بعضها، وضرب الأمثال لما خفي.</blockquote>
+      <p class="ar-translation">“คำตอบสำหรับประเด็นนี้คือ ความจริงแล้วอัลกุรอานถูกประทานลงมาด้วยถ้อยคำของชาวอาหรับและนัยความหมายของพวกเขา ตลอดจนขนบทางภาษาของพวกเขา ไม่ว่าจะเป็นความกระชับรัดกุมและการย่อความ, การขยายความให้ยาวและการเน้นย้ำ, การชี้ชวนให้เห็นสิ่งหนึ่งโดยนัย, การซ่อนเร้นบางความหมายเพื่อให้มีเพียงผู้ที่มีปัญญาฉับไวเท่านั้นที่จะเข้าใจได้, การเปิดเผยบางความหมายให้ชัดแจ้ง และการยกอุทาหรณ์เปรียบเปรยสำหรับสิ่งที่ซ่อนเร้น”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولو كان القرآن كله ظاهرا مكشوفا، حتى يستوي في معرفته العالم والجاهل، لبطل التفاضل بين الناس، وسقطت المحنة، وماتت الخواطر، ومع الحاجة تقع الفكرة والحيلة، ومع الكفاية يقع العجز والبلادة، وقد قالوا: عيب الغنى أنه يورث البله، وفضيلة الفقر أنه يبعث الحيلة، وقال أكثم بن صيفي: «ما يسرني أني مكفى كل أمر الدنيا». قيل له: ولم؟ قال: «أكره عادة العجز».</blockquote>
+      <p class="ar-translation">“หากแม้นว่าอัลกุรอานทั้งหมดเป็นสิ่งที่ชัดแจ้งและเปิดเผย จนกระทั่งผู้รู้และผู้ไม่รู้มีความเข้าใจเท่าเทียมกันแล้วไซร้ ความเหลื่อมล้ำ (ทางปัญญาและสถานะ) ระหว่างมนุษย์ย่อมเป็นโมฆะ บททดสอบย่อมตกไป และกระบวนการทางความคิดย่อมตายด้าน เพราะเมื่อมีความจำเป็น การใช้ความคิดและการขวนขวายหาทางออกจึงจะเกิดขึ้น และเมื่อมีความเพียงพอ (โดยไม่ต้องดิ้นรน) ความเฉื่อยชาและความทื่อทางปัญญาก็จะตามมา ดังที่มีคำกล่าวว่า ‘ข้อเสียของความมั่งคั่งคือมันก่อให้เกิดความเขลาเบาปัญญา และคุณธรรมของความขาดแคลนคือมันกระตุ้นให้เกิดการขวนขวายหาหนทาง’ ท่านอักษัม บิน ศ็อยฟีย์กล่าวว่า ‘ข้าพเจ้าไม่ยินดีเลยหากข้าพเจ้าได้รับการตอบสนองในทุกกิจการงานของโลกนี้อย่างเสร็จสรรพ (โดยไม่ต้องลงมือทำ)’ มีผู้ถามท่านว่า ‘เพราะเหตุใด?’ ท่านตอบว่า ‘เพราะข้าพเจ้ารังเกียจความคุ้นชินกับความไร้ความสามารถ’”</p>
+
+      <p>วรรคนี้ของท่านอิบนุ กุตัยบะฮ์ชี้ให้เห็นแก่นประเด็นอย่างหนึ่งว่า “ความไม่ราบเรียบ” ของความรู้มิใช่ความพร่อง แต่เป็นเงื่อนไขของการเติบโต และด้วยเหตุนี้ ท่านจึงต่อยอดไปยังตรรกะของสรรพวิชาโดยรวมว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكل باب من أبواب العلم: من الفقه، والحساب، والفرائض، والنحو؛ فمنه ما يجل، ومنه ما يدق، ليرتقي المتعلم فيه رتبة بعد رتبة، حتى يبلغ منتهاه، ويدرك أقصاه، ولتكون للعالم فضيلة النظر، وحسن الاستخراج، ولتقع المثوبة من الله على حسن العناية، ولو كان كل فن من العلوم شيئا واحدا، لم يكن عالم ولا متعلم، ولا خفي ولا جلي؛ لأن فضائل الأشياء تعرف بأضدادها: فالخير يعرف بالشر، والنفع بالضر، والحلو بالمر، والقليل بالكثير، والصغير بالكبير، والباطن بالظاهر.</blockquote>
+      <p class="ar-translation">“และในทุกประตูแห่งสรรพวิชา ไม่ว่าจะเป็นนิติศาสตร์ (ฟิกฮ์), คณิตศาสตร์, กฎหมายมรดก (ฟะรออิฎ) และไวยากรณ์ ล้วนมีทั้งส่วนที่ชัดเจนและส่วนที่ละเอียดอ่อน ทั้งนี้เพื่อให้ผู้เรียนได้ยกระดับความรู้ของตนขึ้นทีละลำดับขั้น จนกระทั่งบรรลุถึงจุดสูงสุดและเข้าใจถึงแก่นแท้ของมัน เพื่อให้ผู้รู้ได้รับเกียรติแห่งการพินิจพิเคราะห์และการสกัดองค์ความรู้ที่งดงาม และเพื่อให้ได้รับผลบุญตอบแทนจากอัลลอฮ์ต่อความเพียรพยายามอันน่าสรรเสริญนั้น หากแม้นว่าศิลปวิทยาการแต่ละแขนงเป็นสิ่งเดียวกัน (ราบเรียบเสมอกันหมด) ย่อมไม่มีทั้งผู้รู้และผู้เรียน ไม่มีสิ่งที่ซ่อนเร้นและสิ่งที่เปิดเผย เพราะแท้จริงแล้วคุณค่าของสิ่งต่าง ๆ ย่อมถูกระบุได้ด้วยคู่ตรงข้ามของมัน นั่นคือความดีถูกรู้ได้ด้วยความชั่ว, คุณประโยชน์ถูกรู้ได้ด้วยโทษภัย, ความหวานถูกรู้ได้ด้วยความขม, ความน้อยถูกรู้ได้ด้วยความมาก, ความเล็กถูกรู้ได้ด้วยความใหญ่ และสิ่งที่ซ่อนเร้นถูกรู้ได้ด้วยสิ่งที่เปิดเผย”</p>
+
+      <p>จากนั้น ท่านอิบนุ กุตัยบะฮ์จึงยกตัวอย่างให้เห็นว่า “นัยละเอียด” แบบนี้ไม่ได้เกิดเฉพาะในอัลกุรอานเท่านั้น แต่มันเป็นธรรมชาติของภาษาชั้นสูงในทุกพื้นที่ ทั้งในวจนะของท่านนบี ﷺ ถ้อยคำของศอฮาบะฮ์และตาบิอีน ไปจนถึงบทกวีและวาทศิลป์ของชาวอาหรับ</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وعلى هذا المثال كلام رسول الله ﷺ، وكلام صحابته والتابعين، وأشعار الشعراء، وكلام الخطباء؛ ليس منه شيء إلا وقد يأتي فيه المعنى اللطيف، الذي يتخير فيه العالم المتقدم، ويقر بالقصور عنه النقاب المبرز، ومن ذلك قوله ﷺ: «تجدون الناس كإبل مائة ليس فيها راحلة»، «لا تستضيئوا بنار المشركين»، «إن مما ينبت الربيع ما يقتل حبطا أو يلم»، وقال للضحاك بن سفيان حين بعثه إلى قومه: «إذا أتيتهم فاربض في دارهم ظبيا»، «الكاسيات العاريات لا يدخلن الجنة»، وكتب في كتاب الصلح: «وإن بيننا وبينكم عيبة مكفوفة»، وقال: «أجد نفس ربكم من قبل اليمن».</blockquote>
+      <p class="ar-translation">“บนบรรทัดฐานเดียวกันนี้ คือถ้อยคำของท่านศาสนทูตแห่งอัลลอฮ์ ﷺ, ถ้อยคำของเหล่าอัครสาวกและชนรุ่นตาบิอีน, บทกวีของกวี และสุนทรพจน์ของนักวาทศิลป์ ซึ่งไม่มีสิ่งใดในถ้อยคำเหล่านั้น เว้นแต่จะมีนัยความหมายอันลึกซึ้งปรากฏอยู่ ซึ่งปราชญ์ผู้เชี่ยวชาญจะคัดสรรเฟ้นหา และแม้แต่นักวิจารณ์ผู้ช่ำชองยังต้องยอมจำนนถึงความลึกล้ำนั้น ดังเช่นวาทะของท่านศาสนทูตฯ (ที่ต้องอาศัยการตีความ) เช่น ‘พวกท่านจะพบเห็นผู้คนเปรียบดั่งอูฐหนึ่งร้อยตัว ที่แทบจะหาตัวที่ใช้เป็นพาหนะในฝูงนั้นไม่ได้เลย’, ‘จงอย่าใช้แสงสว่างจากไฟของพวกตั้งภาคี’ (ความหมายโดยนัยคืออย่าตั้งถิ่นฐานปะปนกับพวกเขา), ‘แท้จริงส่วนหนึ่งจากสิ่งที่ฤดูใบไม้ผลิทำให้ออกผลนั้น มีสิ่งที่ฆ่าให้ตายด้วยอาการท้องอืด หรือเกือบจะฆ่าให้ตาย’, ท่านยังได้กล่าวแก่อัฎฎอห์หาก บิน สุฟยาน เมื่อส่งเขาไปยังกลุ่มชนของเขาว่า ‘เมื่อเจ้าไปถึงพวกเขา จงหมอบลงในบ้านของพวกเขาประดุจกวางหมอบ’, ‘สตรีผู้สวมใส่เสื้อผ้าแต่ (ประหนึ่ง) เปลือยกาย จะไม่ได้เข้าสวรรค์’ และท่านเขียนในสนธิสัญญาสงบศึกว่า ‘แท้จริงระหว่างเราและพวกท่านนั้นคือภาชนะที่ถูกปิดผนึก’ (หมายถึงการสงบศึกที่ปราศจากการลอบกัด) และท่านยังกล่าวว่า ‘ข้าพเจ้าสัมผัสได้ถึงลมปราณแห่งพระเจ้าของพวกท่าน จากทางทิศเยเมน’”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>เมื่อมองมาถึงจุดนี้ จะเห็นว่า “ความคลุมเครือ” ในสายตาของท่านอิบนุ กุตัยบะฮ์ มิได้ถูกมองเป็นข้อบกพร่องของอัลกุรอาน หากแต่เป็นส่วนหนึ่งของโครงสร้างการเรียนรู้ และเป็นเงื่อนไขของการยกระดับทางสติปัญญา</p>
+
+      <h2 class="article-h2">กรอบของอิหม่ามอันนะวาวีย์และอัลฆอซาลีย์</h2>
+
+      <p>แต่แน่นอนว่า เมื่อมุตะชาบิฮาตเป็น “พื้นที่ของการตีความ” มันก็ย่อมเป็น “พื้นที่ของความเห็นต่าง” ไปพร้อมกัน และนี่เองที่ทำให้นักวิชาการด้านอุศูลและนักตัฟซีรพยายามจัดระบบความหมายของมุห์กัมและมุตะชาบิฮ์ให้เข้าที่เข้าทาง เพื่อกันไม่ให้คำเหล่านี้ถูกใช้ตามอำเภอใจ โองการที่เป็นแกนของประเด็นนี้คือดำรัสของอัลลอฮ์ในสูเราะฮ์ อาลิอิมรอน อายะฮ์ที่ 7 ที่ว่า</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">هُوَ ٱلَّذِىٓ أَنزَلَ عَلَيْكَ ٱلْكِتَـٰبَ مِنْهُ ءَايَـٰتٌ مُّحْكَمَـٰتٌ هُنَّ أُمُّ ٱلْكِتَـٰبِ وَأُخَرُ مُتَشَـٰبِهَـٰتٌ ۖ فَأَمَّا ٱلَّذِينَ فِى قُلُوبِهِمْ زَيْغٌ فَيَتَّبِعُونَ مَا تَشَـٰبَهَ مِنْهُ ٱبْتِغَآءَ ٱلْفِتْنَةِ وَٱبْتِغَآءَ تَأْوِيلِهِۦ ۗ وَمَا يَعْلَمُ تَأْوِيلَهُۥٓ إِلَّا ٱللَّهُ ۗ وَٱلرَّٰسِخُونَ فِى ٱلْعِلْمِ يَقُولُونَ ءَامَنَّا بِهِۦ كُلٌّ مِّنْ عِندِ رَبِّنَا ۗ وَمَا يَذَّكَّرُ إِلَّآ أُو۟لُوا۟ ٱلْأَلْبَـٰبِ</p>
+      </div>
+      <p>{พระองค์คือผู้ทรงประทานคัมภีร์ลงมาแก่เจ้า ในคัมภีร์นั้นมีบรรดาโองการที่มีความหมายชัดเจน (มุห์กะมาต) ซึ่งเป็นแม่บทของคัมภีร์ และมีโองการอื่น ๆ ที่มีนัยคลุมเครือ (มุตะชาบิฮาต) ส่วนบรรดาผู้ที่ในหัวใจของพวกเขามีความเอนเอียง (ออกจากสัจธรรม) นั้น พวกเขาจะติดตามโองการที่คลุมเครือ เพื่อแสวงหาความวุ่นวาย (ฟิตนะฮ์) และแสวงหาการตีความ (ที่บิดเบือน) ของมัน และไม่มีผู้ใดรู้การตีความของมันนอกจากอัลลอฮ์ และบรรดาผู้ที่หยั่งรู้อย่างลึกซึ้งในวิชาการ พวกเขากล่าวว่า เราศรัทธาต่อมัน ทั้งหมดนั้นมาจากพระเจ้าของเรา และไม่มีผู้ใดใคร่ครวญนอกจากบรรดาผู้มีสติปัญญา}<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>หนึ่งในคำอธิบายที่มีความรอบด้านและเป็นระบบ คือคำอธิบายของท่านอิหม่ามอันนะวาวีย์ (เสียชีวิต ฮ.ศ. 676 / ค.ศ. 1277) ซึ่งอาศัยกรอบคิดของอัลฆอซาลีย์ (เสียชีวิต ฮ.ศ. 505 / ค.ศ. 1111) เป็นฐาน โดยมุ่งชี้ให้เห็นว่าความคลุมเครือมิได้เกิดจากตัวบทลอย ๆ หากแต่เกิดจาก “ความเป็นไปได้ของความหมาย” และ “ระดับความสามารถของผู้รับสาร” โดยท่านอิหม่ามอันนะวาวีย์ให้คำอธิบายว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قد اختلف المفسرون والأصوليون وغيرهم في المحكم والمتشابه اختلافا كثيرا. قال الغزالي في المستصفى: إذا لم يرد توقيف في تفسيره فينبغي أن يفسر بما يعرفه أهل اللغة. وتناسب اللفظ من حيث الوضع. ولا يناسبه قول من قال: المتشابه الحروف المقطعة في أوائل السور، والمحكم ما سواه. ولا قولهم: المحكم ما يعرفه الراسخون في العلم، والمتشابه ما انفرد الله تعالى بعلمه. ولا قولهم: المحكم الوعد والوعيد، والحلال والحرام، والمتشابه القصص والأمثال. فهذا أبعد الأقوال. قال: بل الصحيح أن المحكم يرجع إلى معنيين: أحدهما المكشوف المعنى الذي لا يتطرق إليه إشكال واحتمال، والمتشابه ما يتعارض فيه الاحتمال. والثاني أن المحكم ما انتظم ترتيبه مفيدا إما ظاهرا وإما بتأويل، وأما المتشابه فالأسماء المشتركة كالقرء وكالذي بيده عقدة النكاح، وكالمس. فالأول متردد بين الحيض والطهر، والثاني بين الولي والزوج، والثالث بين الوطء والمس باليد، ونحوها. قال: ويطلق على ما ورد في صفات الله تعالى مما يوهم ظاهره الجهة والتشبيه، ويحتاج إلى تأويل.</blockquote>
+      <p class="ar-translation">“บรรดานักอรรถาธิบายอัลกุรอานและนักวิชาการด้านหลักนิติศาสตร์ (นักอุศูล) ตลอดจนท่านอื่น ๆ ได้มีความเห็นขัดแย้งกันอย่างมากเกี่ยวกับความหมายของ ‘มุห์กัม’ (โองการที่มีความหมายชัดเจน/รัดกุม) และ ‘มุตะชาบิฮ์’ (โองการที่มีความหมายคลุมเครือ/มีหลายนัย) ท่านอัลฆอซาลีย์ได้กล่าวไว้ในหนังสืออัลมุสตัศฟาว่า ‘หากไม่มีคำชี้แจงที่ระบุไว้เฉพาะเจาะจง (จากตัวบทศาสนา) ในการอรรถาธิบายเรื่องนี้ ก็สมควรที่จะนิยามมันตามสิ่งที่นักภาษาศาสตร์รับรู้ และตามความเหมาะสมของถ้อยคำในแง่ของการบัญญัติศัพท์’ และคำนิยามต่อไปนี้ไม่สอดคล้องกับหลักเกณฑ์ดังกล่าว ซึ่งคือคำกล่าวของผู้ที่ว่า มุตะชาบิฮ์คืออักษรย่อที่ปรากฏต้นสูเราะฮ์ และมุห์กัมคือสิ่งอื่นนอกจากนั้น และคำกล่าวที่ว่า มุห์กัมคือสิ่งที่บรรดาผู้หยั่งรู้ในวิชาการล่วงรู้ ส่วนมุตะชาบิฮ์คือสิ่งที่อัลลอฮ์ทรงเก็บงำความรู้ไว้เพียงผู้เดียว และคำกล่าวที่ว่า มุห์กัมคือสัญญาดีและสัญญาคาดโทษ, สิ่งอนุมัติและสิ่งต้องห้าม ส่วนมุตะชาบิฮ์คือเรื่องเล่าและอุปมาอุปไมย ซึ่งทัศนะเหล่านี้นับว่าเป็นทัศนะที่ห่างไกลจากความถูกต้องที่สุด ท่านอัลฆอซาลีย์ยังกล่าวต่อว่า ‘ทว่าทัศนะที่ถูกต้องคือ มุห์กัมนั้นกลับไปสู่ความหมายสองนัย นั่นคือสิ่งที่ความหมายเปิดเผยชัดเจน โดยไม่มีความคลุมเครือหรือความเป็นไปได้ (ในทางความหมายอื่น) เข้ามาแทรกแซง, คือสิ่งที่การเรียบเรียงของมันเป็นระเบียบและให้ความหมายที่เป็นประโยชน์ ไม่ว่าจะโดยความหมายภายนอกหรือโดยการตีความ (ตะอ์วีล) ส่วนมุตะชาบิฮ์นั้น ในนัยแรกคือสิ่งที่มีความเป็นไปได้ (หลายทาง) ขัดแย้งกันอยู่ ในนัยที่สองได้แก่ คำนามที่มีความหมายร่วม (คำพ้องความหมาย) เช่นคำว่า กุรุอ์, คำว่า ผู้ที่ปมการสมรสอยู่ในมือของเขา และคำว่า อัลลัมส์ (การสัมผัส)’ โดยคำแรก (กุรุอ์) นั้นก้ำกึ่งระหว่างการมีประจำเดือนและความสะอาด, คำที่สองก้ำกึ่งระหว่างผู้ปกครอง (วะลีย์) และสามี และคำที่สาม (อัลลัมส์) ก้ำกึ่งระหว่างการร่วมประเวณีและการสัมผัสด้วยมือ และคำอื่น ๆ ในทำนองนี้ ท่านกล่าวว่า และคำนี้ (มุตะชาบิฮ์) ยังถูกใช้เรียกสิ่งที่ปรากฏในเรื่องคุณลักษณะ (ศิฟัต) ของอัลลอฮ์ ตะอาลา ซึ่งความหมายภายนอกของมันทำให้เกิดความเข้าใจผิดว่า (พระองค์) มีทิศทางหรือมีการเปรียบเทียบ (กับสิ่งถูกสร้าง) และจำเป็นต้องมีการตีความ”</p>
+
+      <p>หลังจากวางกรอบนิยามแล้ว อิหม่ามอันนะวาวีย์ยังชี้ให้เห็นอีกชั้นว่า ความต่างในประเด็นนี้ไม่ได้มีแค่เชิงทฤษฎี แต่กระทบถึง “วิธีอ่าน” ดังที่ปรากฏในโองการอาลิอิมรอนโดยตรง โดยเฉพาะเรื่องตำแหน่งวะกัฟหรือการหยุด และการเป็นคำเชื่อมของ “วาว” ในโองการ <span class="ar-inline" lang="ar" dir="rtl">وَالرَّاسِخُونَ فِي الْعِلْمِ</span> ซึ่งท่านสรุปว่า แนววินิจฉัยที่หนักแน่นยิ่งกว่า คือการยืนยันว่าผู้หยั่งรู้ในวิชาการมีส่วนในการล่วงรู้การตีความ เพราะเป็นเรื่องไกลเกินจริงที่อัลลอฮ์จะตรัสกับปวงบ่าวด้วยสิ่งที่ “ไม่มีทางเป็นประโยชน์แก่การรับรู้เลย” ดังที่ท่านได้กล่าวว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">واختلف العلماء في الراسخين في العلم هل يعلمون تأويل المتشابه؟ وتكون الواو في والراسخون عاطفة أم لا؟ ويكون الوقف على وما يعلم تأويله إلا الله، ثم يبتدئ قوله تعالى: والراسخون في العلم يقولون آمنا به وكل واحد من القولين محتمل، واختاره طوائف، والأصح الأول، وأن الراسخين يعلمونه لأنه يبعد أن يخاطب الله عباده بما لا سبيل لأحد من الخلق إلى معرفته، وقد اتفق أصحابنا وغيرهم من المحققين على أنه يستحيل أن يتكلم الله تعالى بما لا يفيد. والله أعلم.</blockquote>
+      <p class="ar-translation">“อนึ่ง บรรดานักวิชาการมีความเห็นขัดแย้งกันเกี่ยวกับ ‘บรรดาผู้หยั่งรู้ในวิชาการ’ ว่าพวกเขาล่วงรู้การตีความของมุตะชาบิฮ์หรือไม่? และอักษร ‘วาว’ ในโองการ {วัรรอสิคูน…} นั้นเป็นคำเชื่อมหรือไม่? หรือว่าตำแหน่งการหยุดประโยคจะอยู่ที่ {และไม่มีผู้ใดล่วงรู้การตีความมันเว้นแต่อัลลอฮ์} จากนั้นจึงเริ่มประโยคใหม่ด้วยดำรัสที่ว่า {ส่วนบรรดาผู้หยั่งรู้ในวิชาการนั้น พวกเขากล่าวว่า เราศรัทธาต่อมัน…} ทั้งสองทัศนะนี้ต่างมีความเป็นไปได้ และมีกลุ่มนักวิชาการเลือกยึดถือทั้งสองฝ่าย แต่ทัศนะที่ถูกต้องที่สุดคือทัศนะแรก (คืออักษรวาวเป็นคำเชื่อม) และว่าบรรดาผู้หยั่งรู้ในวิชาการย่อมล่วงรู้การตีความมัน มันเป็นเรื่องไกลเกินจริงที่อัลลอฮ์จะทรงสื่อสารกับปวงบ่าวของพระองค์ด้วยสิ่งที่ไม่มีหนทางใดเลยที่มนุษย์คนใดจะสามารถล่วงรู้ได้ และบรรดานักวิชาการของเรา (ในมัสฮับชาฟิอีย์) และท่านอื่น ๆ จากหมู่นักวิจัยผู้ตรวจสอบความจริง ต่างเห็นพ้องต้องกันว่าเป็นไปไม่ได้ที่อัลลอฮ์ ตะอาลาจะทรงตรัสด้วยถ้อยคำที่ไม่ก่อให้เกิดประโยชน์อันใด (สื่อสารไม่ได้) วัลลอฮุอะลัม”</p>
+
+      <p>แต่อย่างไรก็ตาม ตรงนี้คือจุดที่คนจำนวนมากพลาด การพูดว่า “ตีความได้” ไม่ได้แปลว่า “ใครอยากตีความอย่างไรก็ได้” เพราะทันทีที่มุตะชาบิฮาตถูกใช้เป็นเครื่องมือสร้างความปั่นป่วน มันจะเปลี่ยนจากสนามของความรู้ไปเป็นสนามของฟิตนะฮ์ทันที</p>
+
+      <p>ด้วยเหตุนี้ อิหม่ามอันนะวาวีย์จึงไม่ได้หยุดเพียงการอธิบายความหมายของคำว่า “มุห์กัม” และ “มุตะชาบิฮ์” แต่ยังเน้นย้ำมุมมองในทางจริยธรรมของการตั้งคำถามด้วย โดยท่านได้แยกแยะอย่างชัดเจนระหว่างผู้ที่ถามเพื่อแสวงหาทางนำ กับผู้ที่ถามเพื่อเสาะหา “ข้อยาก” ไปปั่นให้คนหลง โดยท่านได้จบท้ายว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وفي هذا الحديث التحذير من مخالطة أهل الزيغ، وأهل البدع، ومن يتبع المشكلات للفتنة. فأما من سأل عما أشكل عليه منها للاسترشاد، وتلطف في ذلك، فلا بأس عليه، وجوابه واجب. وأما الأول فلا يجاب، بل يزجر، ويعزر كما عزر عمر بن الخطاب رضي الله عنه صبيغ بن عسيل حين كان يتبع المتشابه. والله أعلم.</blockquote>
+      <p class="ar-translation">“และในหะดีษบทนี้ เป็นการแจ้งเตือนให้ระวังการคลุกคลีกับกลุ่มชนผู้เบี่ยงเบนและพวกอุตริกรรม รวมถึงผู้ที่ติดตามเสาะหาประเด็นปัญหาที่ซับซ้อนเพื่อก่อความวุ่นวาย (ฟิตนะฮ์) ส่วนผู้ที่สอบถามถึงสิ่งที่ตนเกิดความสับสนจากประเด็นเหล่านั้นเพื่อแสวงหาทางนำ และมีมารยาทอันนุ่มนวลในการถาม เช่นนี้ย่อมไม่เป็นไร (ไม่มีความผิด) และจำเป็น (วาญิบ) ต้องให้คำตอบแก่เขา แต่สำหรับกลุ่มแรก (ผู้ที่ถามเพื่อก่อความวุ่นวาย) นั้น จะต้องไม่ให้คำตอบ ทว่าเขาจะต้องถูกตำหนิปรามและถูกลงโทษ ดังเช่นที่ท่านอุมัร บิน อัลค็อฏฏอบ เราะฎิยัลลอฮุอันฮุ ได้เคยลงโทษเศาะบีฆ บิน อุซัยล์ เมื่อครั้งที่เขาติดตามเสาะหาโองการที่มีนัยคลุมเครือ วัลลอฮุอะลัม”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+
+      <h2 class="article-h2">ปมทางสังคมของการตีความ: อิบนุ อาดิล อัลฮัมบาลีย์</h2>
+
+      <p>และเมื่อมองลึกไปอีกชั้นหนึ่ง อบู หัฟศ์ อุมัร อิบนุ อาดิล อัลฮัมบาลีย์ (เสียชีวิตหลัง ฮ.ศ. 880) ก็ได้ชี้ปมสำคัญทางสังคมของการตีความไว้แบบแทงใจในตัฟซีรของท่าน “อัลลุบาบ ฟี อุลูม อัลกิตาบ” ว่า มนุษย์จำนวนไม่น้อยมักเรียก “สิ่งที่เข้าพวกเรา” ว่ามุห์กัม และเรียก “สิ่งที่ขัดเรา” ว่ามุตะชาบิฮ์ จนท้ายที่สุด การให้น้ำหนักระหว่างหลักฐานถูกลากไปผูกกับการให้เหตุผลที่ซ่อนเร้นและแง่มุมที่อ่อนแอ ท่านได้กล่าวอย่างยืดยาวว่า</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن كل واحد يسمي الآيات الموافقة لمذهبه محكمة، والآيات المخالفة لمذهبه متشابهة، وإنما يرجع في ترجيح بعضها على البعض إلى ترجيحات خفية، ووجوه ضعيفة، فكيف يليق بالحكيم أن يجعل الكتاب الذي هو المرجوع إليه في كل الدين إلى قيام القيامة هكذا أليس أنه لو جعله ظاهرا جليا خاليا عن هذه المتشابهات كان أقرب إلى حصول الغرض؟</blockquote>
+      <p class="ar-translation">“ความจริงแล้ว ทุกคนต่างเรียกขานบรรดาโองการที่สอดคล้องกับแนวทางของตนว่า ‘มุห์กัม’ และเรียกโองการที่ขัดแย้งกับแนวทางของตนว่า ‘มุตะชาบิฮ์’ การที่เราจะตัดสินให้น้ำหนักฝ่ายหนึ่งเหนือกว่าอีกฝ่ายหนึ่งนั้น จำต้องกลับไปพึ่งพาการให้น้ำหนักที่ซ่อนเร้นและแง่มุมที่อ่อนแอ แล้วจะเป็นไปได้อย่างไรที่พระผู้ทรงปรีชาญาณจะทรงทำให้คัมภีร์ซึ่งเป็นที่อ้างอิงในทุกเรื่องของศาสนาตราบจนวันกิยามะฮ์มีสภาพเช่นนี้? มิใช่หรือว่า หากพระองค์ทรงทำให้มันชัดเจนแจ่มแจ้งไปเลยโดยปราศจากความคลุมเครือเหล่านี้ ย่อมจะเป็นการใกล้เคียงต่อการบรรลุวัตถุประสงค์มากกว่า?”</p>
+
+      <p>จากนั้น ท่านจึงตอบโดยระบุถึงคุณูปการของการมีอยู่ของมุตะชาบิฮาตไว้ห้าประการ</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فذكر العلماء في فوائد المتشابهات وجوها: الأول: أنه متى كانت المتشابهات موجودة كان الوصول إلى الحق أصعب وأشق، وزيادة المشقة توجب مزيد الثواب.</blockquote>
+      <p class="ar-translation">“ในการนี้ บรรดานักวิชาการได้ระบุถึงคุณูปการของการมีอยู่ของโองการมุตะชาบิฮาตไว้หลายประการ ดังนี้ ประการที่หนึ่ง เมื่อใดก็ตามที่สิ่งคลุมเครือยังดำรงอยู่ การเข้าถึงสัจธรรมย่อมยากลำบากและเหนื่อยยากยิ่งขึ้น และความยากลำบากที่เพิ่มขึ้นนั้นย่อมนำมาซึ่งผลบุญที่มากขึ้นทวีคูณ”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الثاني: أن القرآن إذا كان مشتملا على المحكم والمتشابه افتقر الناظر إلى الاستعانة بدليل العقل، وحينئذ يتخلص عن ظلمة التقليد، ويصل إلى ضياء الاستدلال، ولو كان كله محكما لم يفتقر إلى التمسك بالدلائل العقلية، وكان يبقى - حينئذ - في الجهل والتقليد.</blockquote>
+      <p class="ar-translation">“ประการที่สอง หากอัลกุรอานประกอบด้วยทั้งมุห์กัมและมุตะชาบิฮ์ ผู้พินิจพิเคราะห์จำเป็นต้องอาศัย ‘หลักฐานทางสติปัญญา’ เข้าช่วย เมื่อนั้นเขาจะหลุดพ้นจากความมืดมนของ ‘การทำตามแบบหลับหูหลับตา’ (หรือการตักลีด) และบรรลุสู่แสงสว่างแห่ง ‘การอนุมานหาเหตุผล’ แล้วหากอัลกุรอานเป็นมุห์กัมทั้งหมด เขาคงไม่ต้องพึ่งพาการยึดกุมหลักฐานทางสติปัญญา และในขณะนั้นเขาคงยังจมอยู่ในความเขลาและการทำตามเขาว่า”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الثالث: أن القرآن لما كان مشتملا على المحكم والمتشابه افتقر إلى تعلم طرق التأويلات، وترجيح بعضها على بعض، وافتقر في تعلم ذلك إلى تحصيل علوم كثيرة من علوم اللغة، والنحو، وأصول الفقه، ولو لم يكن الأمر كذلك لما كان الإنسان يحتاج إلى تحصيل هذه العلوم الكثيرة، فكان في إيراد هذه المتشابهات هذه الفوائد.</blockquote>
+      <p class="ar-translation">“ประการที่สาม ในเมื่ออัลกุรอานประกอบด้วยมุห์กัมและมุตะชาบิฮ์ จึงจำเป็นต้องเรียนรู้ ‘กระบวนการการตีความ’ และการให้น้ำหนักระหว่างทัศนะต่าง ๆ ซึ่งในการเรียนรู้สิ่งดังกล่าวนั้น จำเป็นต้องขวนขวายหาความรู้มากมายจากศาสตร์แขนงต่าง ๆ เช่นภาษาศาสตร์, ไวยากรณ์ และหลักนิติศาสตร์ (อุศูลุลฟิกฮ์) หากมิใช่เช่นนี้ มนุษย์คงไม่จำเป็นต้องขวนขวายศึกษาสรรพวิชาเหล่านี้ ดังนั้น การมีอยู่ของมุตะชาบิฮาตนี้จึงก่อให้เกิดคุณูปการดังกล่าว”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الرابع: أن القرآن يشتمل على دعوة الخواص، والعوام بالكلية، وطباع العوام تنبو - في أكثر الأمر - عن إدراك الحقائق، فمن سمع من العوام - في أول الأمر - إثبات موجود ليس بجسم ولا متحرك ولا يشار إليه ظن بأن هذا عدم ونفي، فوقع في العطيل، فكان الأصلح أن يخاطبوا بألفاظ دالة على بعض ما يناسب ما توهموه، وتخيلوه، ويكون ذلك مخلوطا بما يدل على الحق الصريح فالمخاطبة في أول الأمر تكون من أبواب المتشابهات، والثاني وهو الذي انكشف لهم في آخر الأمر هو المحكم.</blockquote>
+      <p class="ar-translation">“ประการที่สี่ อัลกุรอานครอบคลุมการเชิญชวนทั้ง ‘ชนชั้นปัญญาชน’ และ ‘ชาวบ้านทั่วไป’ (เอาวาม) โดยสิ้นเชิง ธรรมชาติของชาวบ้านนั้น โดยมากแล้วมักไม่สามารถรับรู้ความจริงเชิงนามธรรมได้โดยตรง ดังนั้น หากชาวบ้านได้ยินตั้งแต่แรกว่า ‘อัลลอฮ์มิใช่วัตถุ (ญิสม์) ไม่มีการเคลื่อนไหว และไม่อาจชี้ระบุตำแหน่งได้’ พวกเขาจะคิดว่านี่คือ ‘ความว่างเปล่า’ และนำไปสู่ ‘การปฏิเสธการมีอยู่’ และด้วยความเข้าใจผิดนี้ พวกเขาย่อมตกไปสู่การปฏิเสธคุณลักษณะของอัลลอฮ์ เพราะฉะนั้น ‘ทางที่เหมาะสมกว่า’ คือเริ่มสื่อสารกับชาวบ้านด้วยถ้อยคำที่พอจะแตะจินตนาการเดิมของเขาได้ (คือไม่พูดนามธรรมล้วนจนเขาคิดว่า ‘ไม่มีอยู่จริง’) แล้วค่อย ‘ผสม’ ถ้อยคำนั้นเข้ากับถ้อยคำที่ชี้ไปสู่สัจธรรมที่ชัดเจนจริง ๆ ดังนั้น ในระยะแรกการสื่อสารจึงจำเป็นต้องผ่านถ้อยคำที่อยู่ในหมวด ‘มุตะชาบิฮาต’ ส่วนระยะหลัง เมื่อเขาเริ่มเข้าใจแล้ว สิ่งที่ถูกเปิดเผยให้เห็นชัดในท้ายที่สุด นั่นแหละคือ ‘มุห์กัม’”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لو كان القرآن محكما بالكلية لما كان مطابقا إلا لمذهب واحد، وكان تصريحه مبطلا لكل ما سوى ذلك المذهب، وذلك مما ينفر أرباب المذاهب عن قبوله، وعن النظر فيه، فالانتفاع به إنما حصل لما كان مشتملا على المحكم والمتشابه، فحينئذ يطمع صاحب كل مذهب أن يجد فيه ما يقوي له حكمه ويؤثر مقالته، فحينئذ ينظر فيه جميع أرباب المذاهب، ويجتهد في التأمل فيه كل صاحب مذهب، فإذا بالغوا في ذلك صارت المحكمات مفسرة للمتشابهات، فبهذا الطريق يتخلص المبطل عن باطله، ويصل إلى الحق، والله أعلم</blockquote>
+      <p class="ar-translation">“ประการที่ห้า หากอัลกุรอานเป็นมุห์กัมทั้งหมด มันย่อมสอดคล้องกับแนวทางเพียงหนึ่งเดียว และความชัดแจ้งของมันย่อมทำให้แนวทางอื่นนอกเหนือจากนั้นเป็นโมฆะ ผลก็คือบรรดาผู้ยึดถือแนวทางอื่นย่อมรู้สึกต่อต้าน ไม่ยอมรับ และไม่อยากแม้แต่จะพินิจพิเคราะห์อัลกุรอาน แต่การที่อัลกุรอานประกอบด้วยทั้งโองการที่ชัดเจน (มุห์กัม) และโองการที่มีนัยคลุมเครือ (มุตะชาบิฮ์) กลับทำให้ทุกแนวทาง ‘ยังเปิดใจอ่าน’ เพราะต่างก็หวังว่าจะพบสิ่งที่สนับสนุนข้อวินิจฉัยหรือมุมมองของตน ทำให้เจ้าของทุกแนวทางหันมาพินิจพิเคราะห์และทุ่มเทความพยายามในการไตร่ตรองอัลกุรอาน เมื่อพวกเขาเพียรพยายามในเรื่องดังกล่าวถึงที่สุด บรรดาโองการมุห์กัมก็จะทำหน้าที่อธิบายโองการมุตะชาบิฮาต ด้วยหนทางนี้เอง ผู้ยึดถือความเท็จจะหลุดพ้นจากความเท็จของตนและบรรลุสู่สัจธรรมในที่สุด วัลลอฮุอะลัม”<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>สรุปแล้ว เมื่อเราพิจารณาจากคำอธิบายของนักวิชาการตั้งแต่อิบนุ กุตัยบะฮ์, อัลฆอซาลีย์, อันนะวาวีย์ ไปจนถึงอิบนุ อาดิล อัดดิมัชกีย์ อัลฮัมบาลีย์ จะเห็นได้ว่า “มุตะชาบิฮาต” เป็นกลไกที่เราต้องทำความเข้าใจ</p>
+
+      <p>ความคลุมเครือในอัลกุรอานจึงไม่ใช่การปิดทางสติปัญญา แต่เป็นการเปิดประตูไปสู่การพินิจ ความเพียร และการไต่ระดับของความรู้ เป็นบททดสอบที่แยกแยะระหว่างผู้แสวงหาสัจธรรมกับผู้แสวงหาความวุ่นวาย และในที่สุด มุตะชาบิฮาตก็ทำหน้าที่ของมัน มิใช่ด้วยการให้คำตอบที่ง่าย หากแต่ด้วยการบ่มเพาะมนุษย์ให้คู่ควรกับคำตอบนั้นเอง</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">มัรกัส อัลอิมาม อัลอัชอะรีย์. (2569). ความนัยแห่งโองการมุตะชาบิฮาต. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/kalam/mutashabihat-verses.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">เชิงอรรถ</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">ابن قتيبة الدينوري، تأويل مشكل القرآن. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">القرآن الكريم، سورة آل عمران (3)، الآية 7. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">النووي، المنهاج شرح صحيح مسلم بن الحجاج؛ والنقل عن الغزالي من المستصفى من علم الأصول. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">ابن عادل الحنبلي، اللباب في علوم الكتاب. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+      </ol>
+    </section>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li>القرآن الكريم.</li>
+        <li>ابن قتيبة الدينوري، عبد الله بن مسلم، تأويل مشكل القرآن.</li>
+        <li>أبو حامد الغزالي، المستصفى من علم الأصول.</li>
+        <li>النووي، يحيى بن شرف، المنهاج شرح صحيح مسلم بن الحجاج.</li>
+        <li>ابن عادل الحنبلي، عمر بن علي الدمشقي، اللباب في علوم الكتاب.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260606e" charset="UTF-8"></script>
+</body>
+</html>
