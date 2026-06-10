@@ -1238,6 +1238,22 @@ p:not(.ar-translation) + .hadith-block { margin-top: -16px; }
 }
 
 /* ============================================================
+   Arabic font-scaling — track the reading-tools font-size control.
+   #main-content sets --ifp-font-scale (= currentFontSize / 18) via main.js;
+   each Arabic block wraps its REAL current base (1.45rem — the uniform size
+   from the block above / the body#article-page .ar-feature override) in
+   calc(base × scale) so it grows/shrinks with the Thai body. At scale=1 every
+   block renders 1.45rem, byte-identical to before (no shift). Prefixed with
+   body#article-page #main-content so it outranks the (1,1,1) .ar-feature
+   override and stays article-scoped (Rule 54). .ar-inline is em-based and
+   already scales with surrounding Thai — untouched. Base sizes still governed
+   by article.css (Rule 68); this only multiplies by the scale variable. */
+body#article-page #main-content .ar-quote            { font-size: calc(1.45rem * var(--ifp-font-scale, 1)); }
+body#article-page #main-content .ar-feature          { font-size: calc(1.45rem * var(--ifp-font-scale, 1)); }
+body#article-page #main-content .aya-block .block-ar { font-size: calc(1.45rem * var(--ifp-font-scale, 1)); }
+body#article-page #main-content .hadith-block .block-ar { font-size: calc(1.45rem * var(--ifp-font-scale, 1)); }
+
+/* ============================================================
    CINEMATIC OVERLAY FEATURE-IMAGE COMPONENT (.article-feature)
    Per-article opt-in. Add the .article-feature block in HTML
    between #header-placeholder and <article>. Other articles
