@@ -434,6 +434,23 @@ VERIFICATION (non-negotiable)
 
 TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentions in Thai/English prose)
 - Use one consistent system: IJMES.
+
+## Arabic-Authority Scope — Content-Pass Mandate (ขอบเขตอำนาจแตะตัวอาหรับ)
+
+> **อนุมัติแล้วโดยเจ้าของ (gibraltar2580) — เป็นลายลักษณ์อักษรก่อนเริ่ม content-pass กฎ 53/61.** กรอบนี้นิยาม "ทุกกรณีที่ตัวแทน AI ได้รับอนุญาตให้แตะตัวอักษรอาหรับ" ในงาน audit/แก้บทเก่า อยู่นอกเหนือ 2 กรณีนี้ = **ห้ามแตะ** (ให้ FLAG ขอบรรณาธิการแทน)
+
+**Audit แตะตัวอาหรับได้ 2 กรณีเท่านั้น:**
+
+1. **Strip ฮะเราะกาตตามกฎ 60 (ALL-OR-NOTHING สำหรับคำพูดปราชญ์):** ลบ **เฉพาะเครื่องหมายสระ U+064B–U+0652** (และ mark ที่เกี่ยวข้อง) ออกจากบล็อกคำพูดปราชญ์ (`.ar-quote`, ข้อความปราชญ์/คำถามใน `.ar-feature`) เมื่อบทนั้นลงสระไม่ครบทุกบล็อก — **skeleton (โครงพยัญชนะ) และช่องว่างห้ามเปลี่ยนเด็ดขาด** ห้ามพิมพ์โครงขึ้นใหม่
+
+2. **Vowel ตัวบทอายะฮ์/หะดีษด้วยการคัดลอก byte-exact จากแหล่ง canonical เท่านั้น:** เติมสระให้บล็อกอายะฮ์ (`.aya-block`) และหะดีษ (`.hadith-block`) โดย **คัดลอกตัวบทที่มีสระครบจากแหล่งอ้างอิงที่เป็นทางการเท่านั้น** — อัลกุรอาน: **quran.com (imlaei / Hafs ʿan ʿĀṣim)**; หะดีษ: **sunnah.com** — **★ห้ามพิมพ์สระเอง ห้ามแก้ skeleton★** หากผู้เขียนยกตัวบทแบบตัดตอน (fragment) ให้คัดลอก **substring ที่มีสระต่อเนื่องแบบ byte-exact** จากตัวบท canonical (ไม่ใช่พิมพ์ขึ้นใหม่); หากผู้เขียนตัดคำเชื่อมต้นประโยค (เช่น ละ ‌فَ‌ ในรูปยกเดี่ยว) ให้คงโครงของผู้เขียนไว้แล้วซ้อนสระจาก substring ของแหล่งเท่านั้น
+
+**ขั้นตอนบังคับทุกครั้ง (non-negotiable):**
+- **Byte-diff ยืนยัน:** ก่อน-หลัง ต้องพิสูจน์ว่า skeleton (โครงพยัญชนะหลังลบสระ) ตรงกับต้นฉบับ/แหล่งทุกตัวอักษร — ใช้สคริปต์ strip-marks เทียบ ไม่เดาด้วยตา
+- **Log ใน `AUDIT-FIXES.md`:** ทุกการแตะตัวอาหรับต้องบันทึก (ไฟล์/บล็อก/แหล่ง/เลขอ้างอิง/ผล byte-diff) ในไฟล์ `AUDIT-FIXES.md` ที่รากโปรเจกต์
+- **ไม่เจอสำนวนตรงในแหล่ง canonical → คง bare ตามต้นฉบับ + FLAG (กฎ 1)** ห้ามตัดสินใจแก้สำนวน/skeleton โดยลำพัง
+- **ห้าม Purge** จนกว่าเจ้าของจะสั่ง (Custom Purge เฉพาะ URL หลัง merge เท่านั้น — ห้าม Purge Everything)
+
 ## Push & safety discipline
 - NEVER read, extract, or use credentials or tokens from config files, env vars, or disk to call any API directly. NEVER circumvent the proxy, tool payload limits, or any guardrail.
 - If a push fails (503 / payload too large / auth error): STOP and report. Do not seek an alternative channel.
