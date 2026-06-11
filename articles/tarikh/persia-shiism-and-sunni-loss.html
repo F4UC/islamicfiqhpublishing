@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>โลกซุนนีสูญเสียอะไรจากการเปลี่ยนเปอร์เซียเป็นชีอะฮ์? — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="เมื่อราชวงศ์ซาฟาวิดสถาปนาชีอะฮ์อิมามสิบสองเป็นศาสนาประจำรัฐในเปอร์เซีย โลกซุนนีสูญเสียเครือข่ายความรู้แห่งคุรอซานและสายพานการผลิตปราชญ์ระดับพหูสูตไปอย่างไร พร้อมการปะทะออตโตมัน-ซาฟาวิดที่ยุทธการชาลดิราน">
+<meta name="keywords" content="ซาฟาวิด, เปอร์เซีย, ชีอะฮ์, ซุนนี, คุรอซาน, ออตโตมัน, ชาห์อิสมาอีล, ชาลดิราน, ประวัติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="โลกซุนนีสูญเสียอะไรจากการเปลี่ยนเปอร์เซียเป็นชีอะฮ์? — Islamic Fiqh Publishing">
+<meta property="og:description" content="โลกซุนนีสูญเสียอะไรจากการที่ราชวงศ์ซาฟาวิดเปลี่ยนเปอร์เซียเป็นชีอะฮ์ - มันสมองและหัวใจทางปัญญาของโลกตะวันออก">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/persia-shiism-and-sunni-loss.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="persia-shiism-and-sunni-loss">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">โลกซุนนีสูญเสียอะไรจากการเปลี่ยนเปอร์เซียเป็นชีอะฮ์?</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p>“ประเด็นในเรื่องนี้ เรามิได้มุ่งตัดสินว่า ฝ่ายใดถูก-ฝ่ายใดผิดในเชิงนิติ-เทววิทยา หากมุ่งอธิบายว่า เมื่อรัฐทำให้ความเชื่อกลายเป็นนโยบายสาธารณะ ความขัดแย้งทางศาสนาย่อมถูกทำให้เป็นการเมือง และความขัดแย้งทางการเมืองก็ถูกทำให้เป็นศาสนาไปพร้อมกัน ไม่ว่าจะเป็นซาฟาวิดที่ใช้ชีอะฮ์เป็นฐานสร้างรัฐ หรือออตโตมันที่ใช้สำนักซุนนีเป็นฐานสร้างเอกภาพของจักรวรรดิ”</p>
+      <p class="lead-text">การสถาปนาชีอะฮ์อิมามสิบสองเป็นศาสนาประจำรัฐในยุคราชวงศ์ซาฟาวิด ไม่ได้เป็นเพียงการเปลี่ยนแปลงทางความเชื่อของประชากร หากเป็นกระบวนการทางการเมืองที่ทำให้เครือข่ายอำนาจ ศูนย์กลางความรู้ และภูมิทัศน์ความสัมพันธ์ระหว่างรัฐมุสลิมเปลี่ยนรูปไปอย่างถาวร ในมุมของโลกซุนนี เหตุการณ์นี้หมายถึงการสูญเสียพื้นที่หนึ่งซึ่งเคยเป็นแหล่งผลิตอุละมาอ์ สถาบันวิชาการ และทุนทางวัฒนธรรมที่มีบทบาทสำคัญต่อประวัติศาสตร์อิสลามมาอย่างยาวนาน</p>
+      <p>ทั้งนี้เพราะในทางประวัติศาสตร์นั้น พื้นที่เปอร์เซียจัดเป็นหนึ่งในศูนย์กลางการผลิตองค์ความรู้ที่ต่อเนื่องมายาวนานและลุ่มลึกที่สุดเท่าที่ประวัติศาสตร์ทางความคิดของมนุษยชาติเคยรู้จัก ไม่ว่าจะในยุคก่อนอิสลามหรือหลังจากนั้น เพียงแค่ท่านอ่านชื่อแคว้นและนครสำคัญของเปอร์เซียที่ได้ให้กำเนิดบรรดาปวงปราชญ์ผู้ยิ่งใหญ่และบางท่านยังอยู่ในระดับพหูสูต ซึ่งได้ถือกำเนิดหรือเติบโตในพื้นที่ซึ่งได้รับอิทธิพลของวัฒนธรรมเปอร์เซีย แค่นั้นก็เพียงพอแล้วที่จะประจักษ์ถึงความยิ่งใหญ่นี้ อาทิ อิศฟะฮาน, ตับรีซ, กอซวีน, อัรร็อยย์, บัยฮัก, ชีรอซ, นัยซาบูร, ฏ็อบะริสตาน, ฏูส, ญุวัยน์, ญุรญาน, สิญิสตาน, ตัฟตาซาน, อัลบัยฎออ์, สุฮ์เราะวัรด์, บีรูน, อิสฟะรออีน เป็นต้น</p>
+      <p>ความเป็นเลิศทางวิชาการในยุครุ่งเรืองนั้น ได้รับการสนับสนุนจากสถาบันการศึกษาอย่างสถาบันนิซอมียะฮ์ เพื่อเสริมสร้างบุคลากรซุนนีในนิติศาสตร์อัชชาฟิอีย์และเทววิทยาอัชอารีย์ สำหรับรับมือข้อถกเถียงทางความเชื่อและขบวนการคู่แข่งในยุคนั้น</p>
+      <p>สำหรับภาษาเปอร์เซียนั้น นับเป็นหนึ่งในภาษาที่ไพเราะ อ่อนหวาน และอุดมด้วยสุนทรียภาพทางกวีนิพนธ์มากที่สุดภาษาหนึ่งของโลก เพียงแค่ท่านได้อ่านบทกวีของมหากวีผู้ยิ่งใหญ่ อาทิ ฮาฟิซ อัชชีรอซีย์, ชัมส์ อัตตับรีซีย์ และญะลาลุดดีน อัรรูมีย์ เจ้าของมหากาพย์ “มัษนะวีย์” ก็เพียงพอแล้วที่จะตระหนักถึงความยิ่งใหญ่นี้</p>
+      <p>อิทธิพลของภาษาเปอร์เซียนั้น แผ่ซ่านอย่างลึกซึ้งในภาษาแห่งเอเชียหลายภาษา ไม่ว่าจะเป็นภาษาตุรกีออตโตมัน ภาษาเคิร์ด ภาษาปัชตุน และภาษาอุรดู ด้วยเหตุที่ภาษาเปอร์เซียเคยดำรงสถานะเป็นภาษาแห่งวรรณกรรมและราชสำนักในเอเชียกลางและเอเชียตะวันตก โดยเฉพาะอย่างยิ่งภายหลังการล่มสลายของจักรวรรดิมองโกลในคริสต์ศตวรรษที่สิบสี่เป็นต้นมา ยิ่งไปกว่านั้น อิทธิพลของภาษาเปอร์เซียยังปรากฏชัดเจนแม้กระทั่งในภาษาอาหรับ รวมถึงในบางศัพท์ของอัลกุรอาน เช่นคำว่า <span class="ar-inline" lang="ar" dir="rtl">أباريق</span> (อบารีก - เหยือกน้ำ) ตามมุมมองของนักวิชาการบางกลุ่ม ตลอดจนในบางภาษาสมัยใหม่ เช่น ภาษาอังกฤษและภาษาฝรั่งเศสอีกด้วย</p>
+      <p>และเมื่อกล่าวถึงอิหร่านและแผ่นดินเปอร์เซีย นามอันโดดเด่นและโด่งดังยิ่งจะผุดขึ้นมาในห้วงความคิดของท่านทันที อาทิ มุสลิม อิบนุลหัจญาจ อันนัยซาบูรีย์ เจ้าของตำราอัศศอเฮี้ยะฮ์ อันเป็นหนึ่งในตำราหะดีษที่ได้รับการยอมรับสูงสุด, อบู ดาวูด อัสสิญิสตานีย์ ผู้รวบรวมหนึ่งในสุนันทั้งสี่, อิบนุ ญะรีร อัฏเฏาะบะรีย์ นักอรรถาธิบายกุรอานและนักประวัติศาสตร์ผู้ยิ่งใหญ่, อบู บักร์ อัลบัยฮะกีย์ ปราชญ์ด้านหะดีษและนิติศาสตร์อิสลามแห่งมัสฮับชาฟิอีย์, อบู หาติม อัรรอซีย์ นักวิพากษ์หะดีษชั้นแนวหน้า, ฟัครุดดีน อัรรอซีย์ นักเทววิทยาและนักอรรถาธิบายกุรอานที่โด่งดัง, อบุลมะอาลีย์ อัลญุวัยนีย์ ผู้ได้รับสมญาว่า “อิมามุลหะเราะมัยน์”, อบู หามิด อัลฆอซาลีย์ อัฏฏูซีย์ นักปรัชญาและนักจริยศาสตร์อิสลามผู้ได้รับการขนานนามว่า “หุจญะตุลอิสลาม”, อบู นุอัยม์ อัลอัศบะฮานีย์ และอบุลฟะรอจญ์ อัลอัศบะฮานีย์ และอัลอิมาด อัลอัศบะฮานีย์, อับดุลกอฮิร อัลญุรญานีย์ ผู้วางรากฐานศาสตร์แห่งวาทศิลป์อาหรับ, อัสสัยยิด อัชชะรีฟ อัลญุรญานีย์ นักตรรกศาสตร์และเทววิทยา, อัลเคาะฏีบ อัลกอซวีนีย์ และอัลเคาะฏีบ อัตตับรีซีย์, อะฎุดุดดีน อัลอีญีย์ นักเทววิทยาเจ้าของตำราอัลมะวากิฟอันโด่งดัง, สะอ์ดุดดีน อัตตัฟตาซานีย์ นักวิชาการสารพัดศาสตร์, นาศิรุดดีน อัลบัยฎอวีย์ เจ้าของตำราตัฟซีร์อันโด่งดัง, อบู อิสหาก อัลอิสฟะรอยินีย์และอบู อิสหาก อัชชีรอซีย์, ชิฮาบุดดีน อัสสุฮ์เราะวัรดีย์ ผู้ก่อตั้งสำนักปรัชญาอิชรอกียะฮ์, อบู รอยหาน อัลบีรูนีย์ นักวิทยาศาสตร์และนักภูมิศาสตร์ผู้ยิ่งใหญ่ เป็นต้น และไม่ว่าผู้ใดจะสืบค้นหรือรวบรวมรายชื่อนักวิชาการทั้งหมดสักเพียงใด ก็ไม่อาจบรรลุถึงขีดสุดของรายนามเหล่านี้ได้ รายชื่อเหล่านี้มิได้ถูกยกมาเพื่ออวดจำนวน หากเพื่อชี้ให้เห็นว่า “โครงสร้างความรู้ของซุนนี” เคยพึ่งพาเครือข่ายเมือง-สถาบัน-อุละมาอ์ในพื้นที่เปอร์เซียอย่างเป็นระบบ</p>
+      <p>จากรายชื่อข้างต้น จะเห็นได้ว่ารากฐานของศาสนาอิสลามสายซุนนี ตั้งแต่การบันทึกวจนะศาสดา (หะดีษ) ระบบกฎหมาย (ฟิกฮ์) ไปจนถึงแนวทางซูฟี ล้วนต้องพึ่งพาผลงานของปัญญาชนชาวเปอร์เซีย มันจึงไม่ใช่เพียงการเปลี่ยนผ่านเชิงท้องถิ่น หากเป็นการเปลี่ยนเส้นทางการไหลเวียนของทุนทางปัญญา จากเครือข่ายเปอร์เซียเดิม ไปสู่ศูนย์กลางใหม่อย่างออตโตมัน เอเชียกลาง และอนุทวีปอินเดีย</p>
+      <h2 class="article-h2">นัยยะทางภูมิศาสตร์และเครือข่ายวิชาการมัสฮับชาฟิอีย์แห่งคุรอซาน</h2>
+      <p>ประเด็นที่ควรตระหนักเพิ่มเติมในแวดวงวิชาการนิติศาสตร์อิสลามโดยเฉพาะสำนักของอิมามอัชชาฟิอีย์คือ กลุ่มนักวิชาการชาวคุรอซาน มักถูกเรียกขานอีกนามหนึ่งว่า “ชาวมัรว์” (มะรอวิซะฮ์) ในตำราต่างๆ บางครั้งใช้คำว่า “สหายชาวคุรอซานของเรา” และบางคราก็ใช้ “สหายชาวมัรว์ของเรา” ซึ่งทั้งสองคำนี้มีความหมายเทียบเท่ากัน ดังที่อิบนุ อัลมุลักกินได้อธิบายไว้ในตำราเฏาะบะกอตของท่านว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لأنأكثرالخراسانيينمنمرووماوالاها</blockquote>
+      <p class="ar-translation">“เนื่องจากชาวคุรอซานส่วนใหญ่มาจากเมืองมัรว์และพื้นที่ใกล้เคียง”</p>
+      <p>ซึ่งหากคำว่า “พื้นที่ใกล้เคียง” หมายรวมถึงเมืองอื่นๆ ในคุรอซาน อาทิ นัยซาบูร, เฮรัต (ฮะรอต), บัลค์ และบริเวณรอบนอก คำอธิบายนี้ย่อมถูกต้องตามความเป็นจริง</p>
+      <p>แต่หากตีความว่าชาวคุรอซานส่วนใหญ่มาจาก “นครมัรว์” เพียงแห่งเดียว ย่อมคลาดเคลื่อนจากความเป็นจริง เนื่องจากมัรว์ไม่ใช่นครที่ใหญ่ที่สุดในแคว้นคุรอซาน ประวัติศาสตร์ได้บันทึกถึงรอยร้าวระหว่างนักปราชญ์อย่างอบุลกอซิม อัลฟูรอนีย์ และอิมามอัลหะรอมัยน์ อัลญุวัยนีย์ไว้ว่า เมื่ออัลฟูรอนีย์เดินทางจากมัรว์มายังนัยซาบูรเพื่อร่วมพิธีศพของบิดาแห่งอิมามอัลหะรอมัยน์ เขาคาดหวังว่าบรรดานักนิติศาสตร์แห่งนัยซาบูรจะยกย่องให้เขาดำรงตำแหน่งผู้นำทางวิชาการแทนบิดาของอิมามฯ เนื่องจากนัยซาบูรเป็นเมืองที่ใหญ่กว่ามัรว์ที่เขาเคยเป็นผู้นำอยู่ แต่เขาต้องประหลาดใจเมื่อชาวนัยซาบูรกลับแต่งตั้งอิมามอัลหะรอมัยน์ให้นั่งในตำแหน่งของบิดาเขา อัลฟูรอนีย์จึงแสร้งทำเป็นว่าตนเพียงมาร่วมพิธีศพเท่านั้น</p>
+      <p>ด้วยธรรมเนียมของนักปราชญ์ในยุคนั้น อัลฟูรอนีย์ยังคงพำนักอยู่ในนัยซาบูรเพื่อทำการสอนและโต้วาที แม้อิมามอัลหะรอมัยน์จะเข้าร่วมฟังการสอนและการโต้วาทีของเขา แต่กลับมิได้ให้ความสนใจหรือให้เกียรติในระดับที่คู่ควร จึงก่อให้เกิดความบาดหมางที่ถูกจารึกไว้ในหน้าประวัติศาสตร์ ดังที่ปรากฏร่องรอยในตำรานิฮายะตุลมัฎลับ ซึ่งอิมามอัลหะรอมัยน์ไม่เคยเอ่ยนามของอัลฟูรอนีย์เลยแม้แต่ครั้งเดียวตลอดทั้งเล่ม หากจำต้องอ้างอิงถึง ท่านจะใช้เพียงคำว่า “นักเขียนบางท่าน” หรือ “ในตำราบางเล่ม” เท่านั้น</p>
+      <p>เหตุการณ์นี้เป็นเครื่องยืนยันว่า มัรว์ไม่ใช่นครที่ใหญ่ที่สุดของคุรอซานในยุคนั้น แล้วเหตุใดการใช้คำว่า “ชาวมัรว์” แทน “ชาวคุรอซาน” จึงกลายเป็นที่ยอมรับ?</p>
+      <p>สาเหตุหลักมาจากความบังเอิญที่ปรมาจารย์ผู้ก่อตั้งสายสกุลความคิด (เฏาะรีเกาะฮ์) ในแถบนี้ล้วนเป็นชาวมัรว์ อาทิ อัลกอฟฟาล ซึ่งเป็นชาวมัรว์ อาจารย์ของท่านคือ อบู ซัยด์ อัลมัรวะซีย์และอาจารย์ของอาจารย์ท่านคือ อบู อิสฮาก อัลมัรวะซีย์ ด้วยเหตุนี้ การสลับใช้ชื่อทั้งสองจึงเป็นที่ยอมรับ และนักวิชาการชาวคุรอซานทุกคนอาจถูกเรียกรวมๆ ว่าเป็น “ชาวมัรว์” ได้ แม้ว่าผู้นั้นจะไม่เคยเหยียบย่างเข้าสู่นครมัรว์เลยก็ตาม</p>
+      <p>ยิ่งไปกว่านั้น การใช้คำว่า “ชาวคุรอซาน” ในบริบทนี้ มิได้ถูกจำกัดความอยู่เพียงขอบเขตพรมแดนทางภูมิศาสตร์ของแคว้นคุรอซานเท่านั้น แต่มีความหมายครอบคลุมถึง “ปีกตะวันออกของดินแดนแห่งอิสลาม” ทั้งมวล ซึ่งทอดยาวข้ามแม่น้ำไปจนจรดพรมแดนของอินเดียและจีน อิบนุ อัลมุลักกินได้ตอกย้ำถึงความกว้างใหญ่ของเครือข่ายนี้เมื่อท่านสาธยายถึงถิ่นฐานของชาวคุรอซานว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وجماعةمنأصحابنامنبلادالمشرقكأصبهان، وجرجان، وسمرقند، ونسف، وهراة، ومرو، وبخارى، وشيراز، والري، وطوس، وهمدان، ودامغان، وساوة، وتبريز، وبيهق، وميهنة، وإستراباذ، وغيرذلكمنالمدنالداخلةفيأقاليمماوراءالنهر، وخراسانوأذربيجان، وماريدان، وخوارزم، وغزنة، وكرمان، إلىبلادالهند، وجميعمارواءالنهرإلىأطرافالصينوالعراقينوغيرذلك</blockquote>
+      <p class="ar-translation">“และกลุ่มนักวิชาการสหายของเราจากดินแดนตะวันออก เช่น อิศฟะฮาน, ญุรญาน, ซามัรกอนด์, นัสฟ์, เฮรัต, มัรว์, บุคอรอ, ชีรอซ, อัรร็อยย์, ฏูส, ฮะมะดาน, ดามฆอน, ซาวะฮ์, ตับรีซ, บัยฮัก, มัยฮะนะฮ์, อิสตะรอบาด และนครอื่นๆ ที่อยู่ในเขตแดนข้ามแม่น้ำ, คุรอซาน, อาเซอร์ไบจาน, มารีดาน, คาวาริซม์, ฆอซนะฮ์, กัรมาน เรื่อยไปจนถึงแผ่นดินอินเดีย และดินแดนพ้นแม่น้ำทั้งหมดไปจนถึงสุดขอบของจีน ตลอดจนอิรักทั้งสอง (อิรักฝั่งอาหรับและอิรักฝั่งเปอร์เซีย) และอื่นๆ ”</p>
+      <p>จากบันทึกนี้ ก็ดูเหมือนว่า “นัยซาบูร” จะดำรงสถานะเป็นเมืองหลวง หรือศูนย์กลางที่เทียบเท่าเมืองหลวงของภูมิภาคคุรอซาน อิบนุ อัลมุลักกินได้เปรียบเทียบความสัมพันธ์เชิงพื้นที่ไว้อย่างน่าสนใจว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكلنيسابوريخراساني، ولاعكس؛ فالخراسانيونأعممنهم، وليسالخراسانيونمعنيسابوركالعراقيينمعبغداد، فثمجمعمنخراسانلميدخلوانيسابوربخلافالعراقيين، لاتساعبلادخراسان، وكثرةالمدنبها</blockquote>
+      <p class="ar-translation">“ชาวนัยซาบูรทุกคนคือชาวคุรอซาน แต่ไม่ใช่ชาวคุรอซานทุกคนที่จะเป็นชาวนัยซาบูร ความเป็นชาวคุรอซานนั้นกว้างขวางกว่า และความสัมพันธ์ระหว่างชาวคุรอซานกับนัยซาบูรนั้น ไม่เหมือนกับชาวอิรักกับกรุงแบกแดด เพราะมีชาวคุรอซานจำนวนมากที่ไม่เคยเดินทางเข้านัยซาบูรเลย แตกต่างจากชาวอิรัก (ที่มักต้องเข้าแบกแดด) ทั้งนี้เพราะดินแดนคุรอซานนั้นกว้างใหญ่ไพศาลและมีนครใหญ่น้อยมากมาย”</p>
+      <p>ดังนั้น “เครือข่ายความรู้แห่งคุรอซาน” จึงเป็นคำเรียกขานทางวิชาการที่แผ่ขยายไกลกว่าขอบเขตทางภูมิศาสตร์จริง ยากูต อัลฮะมะวีย์ได้เตือนไว้ในตำรามุอ์ญัม บุลดานไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ومنالناسمنيدخلأعمالخوارزمفيخراسان، ويعدماوراءالنهرمنها، وليسالأمركذلك</blockquote>
+      <p class="ar-translation">“มีผู้คนบางกลุ่มเหมารวมเอาเขตปกครองคาวาริซม์และดินแดนข้ามแม่น้ำ เข้าเป็นส่วนหนึ่งของคุรอซาน ซึ่งในความเป็นจริงมิได้เป็นเช่นนั้น”</p>
+      <p>การท้วงติงนี้สะท้อนให้เห็นว่า นิยามทางภูมิศาสตร์ในตำรานิติศาสตร์และระบบเครือข่ายปัญญาชนของนิกายซุนนีในยุคนั้น มีการขยายขอบเขตอย่างกว้างขวางเพื่อหลอมรวมศูนย์กลางความรู้แห่งตะวันออกเข้าไว้ด้วยกัน</p>
+      <p>ความโดดเด่นของเครือข่ายวิชาการแห่งคุรอซานนี้ มิได้จำกัดอยู่เพียงความกว้างใหญ่ของพื้นที่ หากแต่หยั่งรากลึกถึง “ระเบียบวิธีวิทยา” ที่เป็นเอกลักษณ์เฉพาะตัว ซึ่งมีความแตกต่างจากศูนย์กลางวิชาการดั้งเดิมอย่างอิรัก อิมามอันนะวะวีย์ได้อธิบายเปรียบเทียบความแตกต่างระหว่างสองสายสกุลความคิดนี้ไว้อย่างดีในบทนำของตำราอัลมัจญ์มูอ์ โดยท่านกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">واعلمأننقلأصحابناالعراقيينلنصوصالشافعيوقواعدمذهبهووجوهمتقدميأصحابناأتقنوأثبتمننقلالخراسانيينغالبا، والخراسانيونأحسنتصرفاوبحثاوتفريعاوترتيباغالبا</blockquote>
+      <p class="ar-translation">“พึงทราบเถิดว่า การถ่ายทอดตัวบทของอิมามอัชชาฟิอีย์ กฎเกณฑ์แห่งมัสฮับของท่าน และทรรศนะของปวงปราชญ์รุ่นก่อนในสายสกุลของเรา โดยกลุ่มสหายจากชาวอิรักนั้น มักจะมีความแม่นยำและหนักแน่นกว่าการถ่ายทอดของชาวคุรอซาน ในขณะเดียวกัน กลุ่มชาวคุรอซานนั้นมักจะมีความเป็นเลิศและโดดเด่นกว่าในด้านการประยุกต์พลิกแพลง การศึกษาวิจัย การแตกฉานในประเด็นย่อยและการจัดระเบียบโครงสร้างเนื้อหา”</p>
+      <p>คำกล่าวนี้สะท้อนให้เห็นอย่างชัดเจนว่า ศูนย์กลางทางปัญญาในเปอร์เซียและคุรอซานนั้น ดำรงสถานะเป็น “ขุมกำลังทางความคิดและการวิเคราะห์” ที่คอยต่อยอดและจัดระบบองค์ความรู้ให้แก่มัสฮับชาฟิอีย์และโลกซุนนีโดยรวม การสูญเสียพื้นที่เปอร์เซียไป จึงเท่ากับการสูญเสียสายพานการผลิตปัญญาชนที่มีความเชี่ยวชาญด้านการวิจัยและการแตกฉานทางนิติศาสตร์ไปอย่างน่าเสียดาย</p>
+      <h2 class="article-h2">ภูมิทัศน์และการกระจายตัวของมัสฮับชาฟิอีย์ก่อนการเปลี่ยนผ่าน</h2>
+      <p>มัสฮับชาฟิอีย์ได้แผ่ขยายอิทธิพลไปทั่วทุกมุมของโลกอิสลาม ในอดีตนั้น สำนักคิดนี้ได้หยั่งรากลงในทุกดินแดนที่อิมามอัชชาฟิอีย์ได้เดินทางไปเยือน โดยเฉพาะในอียิปต์ที่มีผู้ปฏิบัติตามแนวทางนี้มากกว่าดินแดนอื่นใด จนสามารถเอาชนะอิทธิพลของมัสฮับหะนะฟีย์และมาลิกีย์ลงได้ แต่บทบาทของมัสฮับชาฟิอีย์ในอียิปต์ต้องหยุดชะงักลงเมื่อราชวงศ์ฟาฏิมียะฮ์ก้าวขึ้นสู่อำนาจและสถาปนามัสฮับชีอะฮ์อิสมาอีลียะฮ์ขึ้นแทนที่ อย่างไรก็ตาม มัสฮับชาฟิอีย์ได้หวนกลับมาเฟื่องฟูอีกครั้งในยุคราชวงศ์อัยยูบียะฮ์และสืบเนื่องมาจนถึงยุคมัมลู้ก กระทั่งถูกลดบทบาทลงในยุคจักรวรรดิออตโตมัน เนื่องจากผู้ปกครองออตโตมันได้สงวนตำแหน่งผู้พิพากษา (กอฎี) ไว้เฉพาะสำหรับมัสฮับหะนะฟีย์อันเป็นสำนักประจำรัฐ แม้มัสฮับชาฟิอีย์จะสูญเสียสถานะอย่างเป็นทางการในอียิปต์ แต่ยังคงฝังรากลึกในวิถีชีวิตของประชาชนร่วมกับมัสฮับมาลิกีย์ ด้วยเหตุนี้ ประชากรส่วนใหญ่ในอียิปต์ตอนล่าง (ทางเหนือ) จึงยึดถือมัสฮับชาฟิอีย์ ในขณะที่ประชากรในอียิปต์ตอนบน (ทางใต้) ยึดถือมัสฮับมาลิกีย์เป็นหลัก</p>
+      <p>สำหรับในภูมิภาคชาม มัสฮับชาฟิอีย์ได้เข้ามาแทนที่มัสฮับอัลเอาซาอีย์ ภายหลังการเข้ารับตำแหน่งผู้พิพากษาแห่งดามัสกัสของอบู ซุรอะฮ์ อัชชาฟิอีย์ ในช่วงกลางศตวรรษที่ 4 แห่งฮิจเราะห์ศักราช</p>
+      <p>ส่วนในแผ่นดินอิรัก มัสฮับชาฟิอีย์ได้ขับเคี่ยวกับมัสฮับของอบู หะนีฟะฮ์ ซึ่งได้รับความนิยมในหมู่คอลีฟะฮ์และชนชั้นปกครอง กระนั้น มัสฮับชาฟิอีย์ก็ยังคงรักษาสถานะไว้ได้ อันเป็นผลมาจากการดำรงอยู่ของลูกศิษย์รุ่นแรกๆ ของอิมามอัชชาฟิอีย์ ประกอบกับการอพยพของปราชญ์ชาวชาฟิอีย์จำนวนมากเข้าสู่อิรัก ทำให้พวกเขาได้รับการยกย่องจากคอลีฟะฮ์ แม้ว่าอำนาจตุลาการจะอยู่ในมือของชาวหะนะฟีย์ก็ตาม</p>
+      <p>ในดินแดนคุรอซาน, สิญิสตาน และพื้นที่ข้ามแม่น้ำ มัสฮับชาฟิอีย์ได้แพร่หลายอย่างกว้างขวาง โดยได้รับการผลักดันจากปวงปราชญ์คนสำคัญ อาทิ มุฮัมมัด อิบนุ อิสมาอีล อัชชาชีย์, อับดุลลอฮ์ อัลมัรวะซีย์, อะหมัด อิบนุ ซัยยาร และยะอ์กูบ อัลอิสฟะรอยินีย์</p>
+      <p>นอกจากนี้ อิทธิพลของมัสฮับชาฟิอีย์ยังแผ่ขยายไปถึงสุดขอบซีกโลกตะวันออก เช่น อินโดนีเซีย, มาเลเซีย, ฟิลิปปินส์, ศรีลังกา, ออสเตรเลีย และบางส่วนของอินเดีย รวมถึงในเยเมนและบางส่วนของฮิญาซ อย่างไรก็ดี มัสฮับนี้ไม่ประสบความสำเร็จในการเผยแพร่เข้าสู่ภูมิภาคมัฆริบหรือบริเวณแอฟริกาเหนือและอันดาลุส (สเปน) เนื่องจากพื้นที่ดังกล่าวอยู่ภายใต้อิทธิพลที่แข็งแกร่งของมัสฮับมาลิกีย์</p>
+      <p>อิบนุ คอลดูน (เสียชีวิต ฮ.ศ. 808) ได้บันทึกไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقدانتشرمذهبهبالعراقوخراسانوماوراءالنهر، وقاسمواالحنفيةفيالفتوىوالتدريسفيجميعالأمصاروعظمتمجالسالمناظراتبينهم، وشحنتكتبالخلافياتبأنواعاستدلالاتهم، ثمدرسذلككلهبدروسالمشرقوأقطاره</blockquote>
+      <p class="ar-translation">“มัสฮับของท่าน (อัชชาฟิอีย์) ได้แพร่หลายในอิรัก คุรอซาน และดินแดนข้ามแม่น้ำ พวกเขาได้แบ่งปันบทบาทการให้ฟัตวาและการสอนร่วมกับชาวหะนะฟีย์ในทุกหัวเมือง วงเสวนาโต้แย้งทางวิชาการระหว่างทั้งสองกลุ่มดำเนินไปอย่างเข้มข้น ตำราว่าด้วยความขัดแย้งทางทรรศนะ (คิลาฟียาต) อัดแน่นไปด้วยรูปแบบการให้เหตุผลของพวกเขา ก่อนที่สรรพวิทยาเหล่านี้จะสูญสลายไปพร้อมกับการล่มสลายของศูนย์กลางการศึกษาในภูมิภาคตะวันออก...”</p>
+      <p>ตาญุดดีน อัสสุบกีย์ (เสียชีวิต ฮ.ศ. 771) ได้ระบุถึงอิทธิพลในเปอร์เซียไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ومنهمأهلفارس…ولميبرحواشافعيةأوظاهريةعلىمذهبداودوالغالبعليهمالشافعيةوهيمدائنكثيرةقاعدتهاشيراز…ونحومائةمنبرفيبلادأذربيجانوماوراءهايختصبالشافعيةلايستطيعأحدأنيذكرفيهاغيرمذهبالشافعي</blockquote>
+      <p class="ar-translation">“ส่วนหนึ่งของพวกเขาคือชาวเปอร์เซีย...พวกเขาดำรงตนเป็นชาวชาฟิอีย์ หรือไม่ก็เป็นชาวซอฮิรีย์ตามแนวทางของดาวูด แต่ส่วนใหญ่แล้วมักเป็นชาวชาฟิอีย์ ซึ่งครอบคลุมเมืองใหญ่น้อยมากมาย โดยมีชีรอซเป็นราชธานี... และมีมินบัร (ธรรมมาสน์) นับร้อยแห่งในดินแดนอาเซอร์ไบจานและพื้นที่โดยรอบ ที่สงวนไว้เฉพาะสำหรับมัสฮับชาฟิอีย์ โดยไม่อนุญาตให้ผู้ใดเผยแพร่มัสฮับอื่นนอกจากมัสฮับของอิมามอัชชาฟิอีย์”</p>
+      <p>แต่ภูมิทัศน์ทางวิชาการและประชากรศาสตร์แห่งตะวันออกที่เจริญรุ่งเรืองมาอย่างยาวนาน ต้องเผชิญกับจุดเปลี่ยนสำคัญสองระลอก ระลอกแรกคือการรุกรานของจักรวรรดิมองโกลภายใต้การนำของเจงกิสข่านและฮูลากู กองทัพมองโกลได้กวาดล้างชาวอาหรับและเผ่าพันธุ์ของพวกเขาในดินแดนเหล่านั้น อีกทั้งยังสังหารหมู่ชาวเปอร์เซียจำนวนมหาศาล ซึ่งสร้างความบอบช้ำอย่างหนักให้แก่โครงสร้างทางสังคม</p>
+      <p>อย่างไรก็ตาม หายนะจากมองโกลยังเป็นเพียงการทำลายล้างทางกายภาพ เพราะจุดเปลี่ยนระลอกที่สองที่กำลังจะตามมานั้น คือการพลิกโฉมรากฐานทางอุดมการณ์และโครงสร้างประชากรอย่างถอนรากถอนโคน เมื่อพายุแห่งความขัดแย้งทางภูมิรัฐศาสตร์ลูกใหม่ได้ก่อตัวขึ้น นั่นคือ “การผงาดขึ้นของราชวงศ์ศอฟาวียะฮ์” กระบวนการกลืนกลินทางอุดมการณ์โดยอำนาจรัฐที่จะเกิดขึ้นหลังจากนี้ ส่งผลให้มัสฮับชาฟิอีย์อันยิ่งใหญ่ต้องเสื่อมถอยลงอย่างรุนแรงในภูมิภาคดังกล่าว จนท้ายที่สุดเหลือรอดเพียงในพื้นที่ชายฝั่งทางตะวันตกเฉียงใต้ของอิหร่านในปัจจุบัน ดังที่อบู ซะฮ์เราะฮ์ ได้กล่าวบรรยายถึงสภาพในยุคหลังไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وفيفارسهوالذييجاورالمذهبالجعفري</blockquote>
+      <p class="ar-translation">“ในแผ่นดินเปอร์เซีย มัสฮับชาฟิอีย์คือกลุ่มที่ดำรงอยู่เคียงข้างมัสฮับญะอ์ฟะรีย์”</p>
+      <p>โดยหนึ่งในปราชญ์ชาวชาฟิอีย์คนสุดท้ายในอิหร่านร่วมสมัยคือ ชัยค์อับดุลลอฮ์ อิบนุ ฮะซัน อาล ฮะซัน อัลคูฮะญีย์ ซึ่งเสียชีวิตในปี ฮ.ศ. 1400 ปิดฉากหน้าประวัติศาสตร์อันรุ่งโรจน์ของมัสฮับซุนนีในแผ่นดินเปอร์เซียลงอย่างสิ้นเชิง</p>
+      <h2 class="article-h2">การผงาดขึ้นของราชวงศ์ศอฟาวียะฮ์</h2>
+      <p>เพื่อทำความเข้าใจกลไกของการเปลี่ยนแปลงที่ครอบคลุม จำเป็นต้องวิเคราะห์ต้นกำเนิดของอุดมการณ์ซาฟาวิด ราชวงศ์ซาฟาวิดไม่ได้ถือกำเนิดขึ้นในฐานะรัฐชีอะฮ์โดยทันที แต่มีวิวัฒนาการที่ซับซ้อนและย้อนแย้งในตัวเอง รากฐานของราชวงศ์มาจากกลุ่มซาฟาวียะห์/ศอฟาวียะฮ์ ซึ่งเป็นคณะซูฟีที่ก่อตั้งโดยชัยค์ศอฟียุดดีน ในเมืองอาร์ดะบีล ช่วงศตวรรษที่ 13 ถึง 14 ประเด็นสำคัญเชิงโครงสร้างคือ ในยุคเริ่มต้น คณะซาฟาวียะห์เป็นกลุ่มซูฟีที่ยึดถือซุนนีและปฏิบัติตามนิติศาสตร์สำนักชาฟิอีย์ ซึ่งสะท้อนให้เห็นว่าพวกเขาถือกำเนิดมาจากกลุ่มแนวคิดกระแสหลักของบริบทสังคมในขณะนั้น</p>
+      <p>จุดพลิกผันเกิดขึ้นอย่างค่อยเป็นค่อยไปเมื่อคณะซาฟาวียะห์เริ่มดึงดูดความนิยมผ่านการแสดงความเคารพยกย่องต่อท่านอาลีอย่างสูงส่ง เมื่ออำนาจสืบทอดมาถึงผู้นำรุ่นที่สี่คือ ชัยค์จูนัยด์ แนวคิดของคณะได้เปลี่ยนผ่านจากซูฟีแบบซุนนี ไปสู่การเป็นขบวนการเคลื่อนไหวทางการเมืองและการทหารที่ยึดถือแนวทางชีอะฮ์อย่างเปิดเผย อุดมการณ์นี้ได้รับการตอบรับอย่างดีจากกลุ่มนักรบชนเผ่าเติร์กเมนที่ถูกทำให้เป็นชายขอบ ซึ่งต่อมาถูกเรียกว่า “กิซิลบาช” หรือ “พวกหัวแดง” ตามลักษณะหมวกสีแดง 12 จีบที่เป็นสัญลักษณ์ของการสวามิภักดิ์ต่ออิมามทั้ง 12 ท่านของชีอะฮ์</p>
+      <p>จุดสูงสุดของการบ่มเพาะทางอำนาจปะทุขึ้นในเดือนกรกฎาคม ค.ศ. 1501 เมื่อชาห์ อิสมาอิลที่ 1 ผู้นำวัยเยาว์ของคณะซาฟาวียะห์ นำกองทัพกิซิลบาชบุกยึดเมืองตับริซ จากสมาพันธ์ชนเผ่าอ็อก กูยูนลูและสถาปนาตนเองขึ้นเป็นชาห์แห่งเปอร์เซีย การประกาศตั้งราชวงศ์ครั้งนี้ได้นำไปสู่หนึ่งในการตัดสินใจที่ส่งผลมากที่สุดในประวัติศาสตร์อิสลาม นั่นคือการป่าวประกาศให้สำนักชีอะฮ์อิมามสิบสอง เป็นศาสนาประจำชาติอย่างเป็นทางการ แม้ว่าประชากรส่วนใหญ่ในดินแดนที่พระองค์ปกครอง ณ ขณะนั้น รวมถึงชาวเมืองตับริซเอง จะเป็นชาวซุนนีสำนักชาฟิอีย์อย่างท่วมท้นก็ตาม การผนวกมิติทางการเมืองเข้ากับอำนาจทางศาสนาอย่างแนบแน่นนี้ กลายเป็นจุดเริ่มต้นของโครงสร้างทางสังคมที่ส่งผลสะเทือนไปทั่วทั้งตะวันออกกลาง</p>
+      <p>การปรับเปลี่ยนเปอร์เซียจากรัฐซุนนีให้กลายเป็นศูนย์กลางของชีอะฮ์ ไม่ใช่พัฒนาการทางสังคมที่เกิดขึ้นตามธรรมชาติ แต่เป็นแคมเปญการบังคับเปลี่ยนแนวคิดใหม่ที่ขับเคลื่อนโดยอำนาจเบ็ดเสร็จของรัฐ ซึ่งถือเป็นการแทรกแซงระดับโครงสร้างประชากรครั้งใหญ่ที่สุดนับตั้งแต่การเข้ายึดครองเปอร์เซียของกองทัพมุสลิมในศตวรรษที่ 7 นโยบายของชาห์อิสมาอีลที่ 1 ในดินแดนอิรักสะท้อนรูปแบบการใช้อำนาจรัฐเพื่อปรับโครงสร้างศาสนาและความทรงจำทางสังคม โดยการทำลายสัญลักษณ์ฝ่ายตรงข้ามและปราบปรามชุมชนซุนนีในวงกว้าง</p>
+      <h2 class="article-h2">ชาห์อิสมาอีลบุกยึดกรุงแบกแดด</h2>
+      <p>ชาห์อิสมาอีลมุ่งหมายจะยึดครองอิรัก จึงเคลื่อนทัพเข้าสู่กรุงแบกแดด เยือนเมืองกัรบะลาอ์และนะญัฟ แล้วตกแต่งสถานที่เหล่านั้นด้วยทองคำ พรม และสิ่งทอราคาแพง จากนั้นชาห์อิสมาอีลได้สั่งการให้แม่ทัพของตนคือ หุเซน ลาละฮ์ทำลายนครแบกแดดและสังหารชาวซุนนีและผู้ทรงศีลธรรมมากมาย แล้วมุ่งหน้าไปยังสุสานของชาวซุนนี ขุดหลุมศพผู้ตายขึ้นมาและเผาอัฐิของพวกเขา จากนั้นเริ่มทรมานชาวซุนนีอย่างสาหัสก่อนจะสังหาร ทั้งยังทำลายสุสานของท่านอบู หะนีฟะฮ์ และท่านอับดุลกอดิร อัลญัยลานีย์ โดยกระทำการย่ำยีสุสานของท่านอบู หะนีฟะฮ์และขุดหลุมศพของท่านขึ้นมา นอกจากนี้ยังสังหารทุกคนที่สืบเชื้อสายจากคอลิด อิบนุลวะลีด (เราะฎิยัลลอฮุอันฮ์) ในกรุงแบกแดด เพียงเพราะพวกเขาเป็นลูกหลานของท่าน โดยสังหารด้วยวิธีอันโหดเหี้ยมถึงขนาดที่อิบนุ ชัดก็อม นักเขียนชีอะฮ์ได้กล่าวไว้ในหนังสือตุหฟะตุลอัซฮาร วะซุลาลุลอันฮารว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فتحبغدادوفعلبأهلهاالنواصبذويالعنادمالميسمعبمثلهقطفيسائرالدهوربأشدأنواعالعذابحتىنبشموتاهممنالقبور</blockquote>
+      <p class="ar-translation">“เขา (ชาห์อิสมาอีล) ได้พิชิตกรุงแบกแดดและกระทำต่อชาวนาศิบี (คำที่ชีอะฮ์ใช้เรียกชาวซุนนี) ผู้ดื้อรั้นในสิ่งที่ไม่เคยมีผู้ใดได้ยินมาก่อนตลอดทุกยุคสมัย ด้วยการทรมานอันสาหัสที่สุด จนถึงขั้นขุดศพของพวกเขาขึ้นจากหลุม”</p>
+      <p>ชาวซุนนีจำนวนมากในกรุงแบกแดดได้หลบหนีออกไป ในบรรดาผู้ที่ลี้ภัยมีตระกูลญัยลานีย์ ซึ่งหนีออกมาภายหลังจากที่ชาห์อิสมาอีลทำลายสุสานของท่านอับดุลกอดิร พวกเขาลี้ภัยไปยังชามและอียิปต์ แล้วเล่าขานให้โลกอิสลามได้รับรู้ถึงสิ่งที่ราชวงศ์ศอฟาวียะฮ์ชีอะฮ์ได้กระทำต่อกรุงแบกแดดและชาวเมือง ผลกระทบระดับภูมิรัฐศาสตร์จากนโยบายและการปราบปรามวงกว้างแบบนี้ บีบบังคับให้นักวิชาการซุนนีชาวเปอร์เซียที่ปฏิเสธการเปลี่ยนแนวคิดต้องลี้ภัย ทิ้งถิ่นฐานบ้านเกิดเพื่ออพยพไปยังจักรวรรดิออตโตมัน, เอเชียกลาง (อุซเบก), ดินแดนอาระเบีย และอินเดีย ทำให้เกิดปรากฏการณ์สมองไหลครั้งใหญ่ที่เปลี่ยนโครงสร้างทางปัญญาของเอเชียตะวันตกไปตลอดกาล</p>
+      <p>รายงานเหตุการณ์ในแบกแดดนั้น ปรากฏในบันทึกหลายสาย ซึ่งให้ภาพไม่เท่ากันตามจุดยืนของผู้บันทึก อย่างไรก็ตาม สิ่งที่เห็นร่วมกันคือการใช้ความรุนแรงของรัฐและการทำลายสัญลักษณ์ฝ่ายตรงข้ามในวงกว้าง</p>
+      <p>หากมองผ่านเลนส์ทางภูมิรัฐศาสตร์ การยึดครองอิรักและการกระทำอันรุนแรงในกรุงแบกแดด ไม่ได้มีเพียงมิติของการชำระแค้นทางอุดมการณ์ศาสนาเท่านั้น แต่แบกแดดคือ “ศูนย์กลางทางยุทธศาสตร์และเส้นทางการค้า” ที่เชื่อมต่อตะวันออกและตะวันตก การบุกทำลายสุสานและการกวาดล้างชนชั้นนำฝ่ายซุนนี จึงเป็นความพยายามทางการเมืองในการ “ถอนรากถอนโคนอิทธิพลของขั้วอำนาจเก่า” เพื่อตัดกำลังบำรุง ทำลายฐานเศรษฐกิจของฝ่ายตรงข้าม และป้องกันไม่ให้เครือข่ายเดิมสามารถรวมตัวกลับมาท้าทายอำนาจของราชวงศ์ซาฟาวิดได้อีกในอนาคต</p>
+      <p>การประกาศให้เปอร์เซียเป็นรัฐชีอะฮ์อย่างแข็งกร้าว ไม่เพียงแต่นำมาซึ่งความขัดแย้งภายในประเทศ แต่ยังเป็นชนวนเหตุของการแบ่งขั้วทางการเมืองและการทหารระดับมหภาค ระหว่างจักรวรรดิซาฟาวิดที่อุปถัมภ์ชีอะฮ์ และจักรวรรดิออตโตมันที่สถาปนาตนเป็นผู้นำของโลกซุนนี ออตโตมันมองว่าพัฒนาการของซาฟาวิดไม่ได้เป็นเพียงเรื่องของความแตกต่างทางความเชื่อ แต่เป็นภัยคุกคามต่อความมั่นคงของรัฐโดยตรง เนื่องจากมีประชากรเชื้อสายเติร์กเมนในดินแดนอนาโตเลียตะวันออก (ฝั่งออตโตมัน) จำนวนมากที่ฝักใฝ่แนวคิดแบบกิซิลบาช (ชีอะฮ์อิมามสิบสอง) และพร้อมที่จะก่อกบฏต่อต้านสุลต่านออตโตมันตลอดเวลา</p>
+      <p>กระทั่งต่อมาข่าวการสังหารหมู่อันมหึมาต่อชาวซุนนีได้แพร่ไปถึงดินแดนของรัฐออตโตมัน นอกเหนือจากข่าวก่อนหน้านี้เกี่ยวกับการบังคับเปลี่ยนชาวซุนนีในเปอร์เซียให้เป็นชีอะฮ์ และการสังหารผู้คนนับหมื่นนับแสน ยิ่งไปกว่านั้น ซาฟาวิดยังส่งผู้เผยแพร่อุดมการณ์และเครือข่ายกิซิลบาชเข้าไปในดินแดนออตโตมัน ซึ่งถูกมองว่าเป็นภัยคุกคามด้านความมั่นคงภายในโดยตรง ทั้งที่ก่อนหน้านี้ออตโตมันเองก็กำลังมีปัญหากับชีอะฮ์อาลาวียะฮ์แห่งอนาโตเลียอยู่</p>
+      <p>ความตึงเครียดนี้พุ่งขึ้นถึงขีดสุดเมื่อสุลต่านเซลิม ที่ 1 ขึ้นครองราชย์ในปี ค.ศ. 1512 ปฏิกิริยาอันแข็งกร้าวของจักรวรรดิออตโตมันไม่ได้จำกัดอยู่เพียงความกังวลทางเทววิทยา แต่เกิดจากความตระหนกต่อภัยคุกคามด้านความมั่นคงแห่งรัฐอย่างรุนแรง ในขณะนั้นอนาโตเลียตะวันออกมีประชากรชนเผ่าเติร์กเมนจำนวนมากที่ฝักใฝ่แนวคิดแบบกิซิลบาชที่พร้อมจะบ่อนทำลายรัฐและก่อกบฏจากภายใน</p>
+      <p>เมื่อเผชิญกับความท้าทายนี้ สุลต่านเซลิมที่หนึ่งแห่งออตโตมันจึงได้ประชุมในปี ฮ.ศ. 920 (ค.ศ. 1514) ร่วมกับบรรดาขุนนาง ตุลาการ อุละมาอ์ และนักการเมืองของรัฐ แล้วมีมติว่ารัฐศอฟาวียะฮ์เป็นภัยคุกคามต่อโลกอิสลามโดยรวมและต่อรัฐออตโตมันโดยเฉพาะ สุลต่านจึงตัดสินใจประกาศญิฮาดต่อรัฐนี้และเคลื่อนทัพเข้าโจมตีดังฟัตวาของมุฟตีอิบนุ กะมาล ปาชา ซาดะฮ์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الحمدللهالعليالعظيمالقويالكريموالصلاةعلىمحمدالهاديإلىصراطمستقيموعلىالذيناتبعوهفيالدينالقويم، وبعد.قدتواترتالأخباروالآثارفيبلادالمسلمينوديارالمؤمنينأنطائفةمنالشيعةقدغلبواعلىبلادكثيرةمنبلادالمسلمينحتىأظهروامذاهبهمالباطلةفأظهرواسبالإمامأبيبكروالإمامعمروالإمامعثمانرضواناللهعليهمأجمعين، وأنهمكانوايستحقرونالشريعةوأهلهاويسبونالمجتهدينزعمامنهمبأنسلوكمذهبهؤلاءالمجتهدينلايخلوعنمشقةبخلافسلوكطريقرأسهمورئيسهمالذيسموهبشاهإسماعيل، فإنهميزعمونأنسلوكطريقهفيغايةالسهولةونهايةالمنفعة، ويزعمونأنماأحلهشاهإسماعيلفهوحلال، وماحرمهفهوحرام، وقدأحلشاهالخمر، فيكونالخمرحلالا.وبالجملةإنأنواعكفرهمالمنقولةإلينابالتواترممالايعدولايحصى، فنحنلانشكفيكفرهموارتدادهم، وإنديارهمدارحرب.وإننكاحذكورهموإناثهمباطلبالاتفاق، فكلواحدمنأولادهميصيرولدالزنالامحالة.وماذبحهواحدمنهميصيرميتة.وإنمنلبسقلنسوتهمالحمراءالمخصوصةبهممنغيرضرورةكانخوفالكفرعليهغالبا، فإنفيذلكمنأماراتالكفروالإلحادظاهرا.ثمإنأحكامهمكانتمنأحكامالمرتدينحتىأنهملوغلبواعلىمدائنهمصارتهيدارالحرب، فيحلللمسلمينأموالهموأولادهم، وأمارجالهمفواجبقتلهم، إلاإذاأسلموا، فحينئذيكونونأحراراكسائرأحرارالمسلمين؛ بخلافمنأظهركونهزنديقا، فإنهيجبقتلهالبتة.ولوتركواحدمنالناسدارالإسلام، واختاردينهمالباطلفلحقبدارهمفللقاضيأنيحكمبموته، ويقسممالهبينالورثة، وينكحزوجتهلزوجآخر.ويجبأنيعلمأيضاأنجهادهمكانفرضعينعلىجميعأهلالإسلامالذينكانواقادرينعلىقتالهم…، فالواجبعلىسلطانالمسلمينأنيجاهدهؤلاءالكفاركماقالتعالى: {يَـٰٓأَيُّهَا ٱلنَّبِىُّ جَـٰهِدِ ٱلْكُفَّارَ وَٱلْمُنَـٰفِقِينَ وَٱغْلُظْ عَلَيْهِمْ ۚ وَمَأْوَىٰهُمْ جَهَنَّمُ ۖ وَبِئْسَ ٱلْمَصِيرُ}تم.</blockquote>
+      <p class="ar-translation">“มวลการสรรเสริญเป็นสิทธิแด่อัลลอฮ์ ผู้ทรงสูงสุด ผู้ทรงยิ่งใหญ่ ผู้ทรงพลานุภาพ ผู้ทรงเมตตาเสมอ และขอความศานติจงมีแด่มุฮัมมัด ผู้นำพาไปสู่หนทางอันเที่ยงตรง ตลอดจนบรรดาผู้เจริญรอยตามท่านในศาสนาอันเที่ยงธรรม อนึ่ง เป็นที่ประจักษ์ชัดและได้รับการยืนยันอย่างต่อเนื่องในดินแดนของชาวมุสลิมและถิ่นฐานของผู้ศรัทธาว่า กลุ่มชนหนึ่งที่มาจากกลุ่มชีอะฮ์ได้เข้ายึดครองดินแดนของมุสลิมเป็นจำนวนมาก จนกระทั่งพวกเขากล้าเผยแพร่ลัทธิความเชื่ออันเป็นเท็จ พวกเขาแสดงออกอย่างเปิดเผยในการสาปแช่งบรรดาผู้นำทางศาสนา ได้แก่ท่านอบู บักร์, ท่านอุมัร, และท่านอุษมาน ขออัลลอฮ์ทรงพอพระทัยพวกท่านทั้งปวง</p>
+      <p class="ar-translation">พวกเขาได้เหยียดหยามกฎหมายชะรีอะฮ์และบรรดานักปราชญ์ ตลอดจนบริภาษกลุ่มนักนิติศาสตร์ (มุจญ์ตะฮิด) โดยกล่าวอ้างว่าการปฏิบัติตามแนวทางของนักนิติศาสตร์เหล่านี้ ล้วนเต็มไปด้วยความยากลำบาก ซึ่งสวนทางกับแนวทางของผู้นำสูงสุดของพวกเขาที่ได้รับการขนานนามว่า ‘ชาห์ อิสมาอีล’ พวกเขาอุปโลกน์ว่าแนวทางของเขานั้นง่ายดายและเปี่ยมด้วยผลประโยชน์ขั้นสูงสุด พวกเขายึดถือว่า สิ่งใดก็ตามที่ชาห์ (อิสมาอีล) อนุมัติ (ฮะลาล) สิ่งนั้นย่อมเป็นที่อนุมัติ และสิ่งใดที่เขาสั่งห้าม (ฮะรอม) สิ่งนั้นย่อมเป็นที่ต้องห้าม ถึงขั้นที่ชาห์ได้อนุมัติให้การดื่มสุราเป็นสิ่งถูกหลักศาสนา กล่าวโดยสรุปคือ รูปแบบการปฏิเสธศรัทธา (กุฟุร) ของพวกเขาที่ถูกรายงานมาถึงเราอย่างต่อเนื่องนั้น มีมากมายจนเหลือคณานับ</p>
+      <p class="ar-translation">ดังนั้น เราจึงปราศจากข้อกังขาใดๆ ในสถานะการเป็นผู้ปฏิเสธศรัทธาและการเป็นผู้ก่อกบฏต่อศาสนา (มุรตัด) ของพวกเขา และขอประกาศว่า ดินแดนของพวกเขาคือ “ดินแดนแห่งสงคราม” การสมรสของบุรุษและสตรีของพวกเขาถือเป็นโมฆะโดยมติเอกฉันท์ ดังนั้น บุตรทุกคนที่เกิดมาย่อมถือเป็นบุตรนอกสมรสอย่างหลีกเลี่ยงไม่ได้ สัตว์ที่ถูกเชือดโดยพวกเขาถือเป็นซากสัตว์ที่ห้ามบริโภค ผู้ใดที่สวมใส่ ‘หมวกสีแดง’ (หรือเครื่องแต่งกายที่เรียกว่า กิซิลบาช) อันเป็นสัญลักษณ์เฉพาะของพวกเขา โดยปราศจากความจำเป็นอันหลีกเลี่ยงไม่ได้ ย่อมมีความเสี่ยงสูงที่จะตกเป็นผู้ปฏิเสธศรัทธา เนื่องจากพฤติกรรมดังกล่าวคือภาพสะท้อนของการเป็นผู้ปฏิเสธและพวกนอกรีตอย่างชัดเจน</p>
+      <p class="ar-translation">ระเบียบกฎเกณฑ์ที่ใช้บังคับแก่พวกเขาคือระเบียบว่าด้วย ‘ผู้ก่อกบฏต่อศาสนา’ (มุรตัด) หากพวกเขาเข้ายึดครองเมืองใด เมืองนั้นย่อมแปรสภาพเป็นดินแดนแห่งสงคราม ทรัพย์สินและบุตรหลานของพวกเขาถือเป็นสิ่งที่อนุมัติ (เป็นสมบัติสงคราม) สำหรับชาวมุสลิม สำหรับบุรุษของพวกเขาถือเป็นพันธะผูกพันที่ต้องถูกประหารชีวิต เว้นเสียแต่ว่าพวกเขาจะยอมรับอิสลาม ซึ่งในกรณีนั้นพวกเขาจะได้รับอิสรภาพเฉกเช่นเสรีชนมุสลิมทั่วไป แต่ข้อยกเว้นนี้มิอาจใช้ได้กับผู้ที่แสดงตนว่าเป็น ‘พวกนอกรีต’ ซึ่งผู้นั้นจำต้องถูกประหารชีวิตในทุกกรณี และจำต้องเป็นที่รับรู้โดยทั่วกันว่า การทำสงคราม (ญิฮาด) ปราบปรามพวกเขา ถือเป็น ‘พันธะผูกพันส่วนบุคคล’ (ฟัรฎุอีน) สำหรับชาวมุสลิมทุกคนที่มีศักยภาพในการสู้รบ... ดังนั้น จึงเป็นหน้าที่อันมิอาจหลีกเลี่ยงได้สำหรับสุลต่านแห่งมุสลิม ในการทำสงครามต่อต้านบรรดาผู้ปฏิเสธศรัทธาเหล่านี้ ดังที่พระผู้เป็นเจ้าตรัสไว้ว่า: {โอ้ ศาสดาเอ๋ย จงต่อสู้กับพวกปฏิเสธศรัทธาและพวกสับปลับ และจงแข็งกร้าวต่อพวกเขา และที่พำนักของพวกเขาคือนรกญะฮันนัม และมันเป็นจุดหมายปลายทางที่เลวร้ายยิ่ง}”</p>
+      <p>การออกฟัตวาโดยมุฟตีอิบนุ กะมาล ปาชา ซาดะฮ์ ที่ประกาศชี้ขาดให้รัฐศอฟาวียะฮ์เป็นดินแดนแห่งสงคราม และกำหนดสถานะให้พวกเขาเป็นผู้กบฏต่อศาสนา จึงเป็นการใช้กฎหมายศาสนาเป็นเครื่องมือทางการเมืองที่ทรงประสิทธิภาพที่สุดในการสร้างความชอบธรรม เพื่อระดมสรรพกำลัง กวาดล้างศัตรูทางการเมือง และรักษาเสถียรภาพของจักรวรรดิ</p>
+      <p>สุลต่านเซลิมที่ 1 แห่งจักรวรรดิออตโตมันจึงทรงมีพระราชสาส์นถึงอิสมาอีลว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إنعلماءناورجالالشريعةقدحكمواعليكبالقصاصياإسماعيل، بصفتكمرتدا، وأوجبواعلىكلمسلمحقيقيأنيدافععندينه، وأنيحطمالهراطقةفيشخصك، أنتوأتباعكالبلهاء، ولكنقبلأنتبدأالحربمعكمفإنناندعوكملحظيرةالدينالصحيحقبلأننشهرسيوفنا، وزيادةعلىذلكفإنهيجبعليكأنتتخلىعنالأقاليمالتياغتصبتهامنااغتصابا، ونحنعلىاستعدادلتأمينسلامتك</blockquote>
+      <p class="ar-translation">“อิสมาอีล แท้จริงแล้วบรรดาอุละมาอ์และนักนิติศาสตร์อิสลามของเรา ได้มีคำวินิจฉัยทางกฎหมายให้ลงทัณฑ์ท่านในฐานะ ‘ผู้กบฏต่อศาสนา’ และได้บัญญัติให้เป็นพันธกรณีสำหรับมุสลิมที่แท้จริงทุกคน ในการพิทักษ์รักษาศาสนาของตน ตลอดจนบดขยี้กลุ่มชนนอกรีตที่ปรากฏรอบตัวท่านและเหล่าบริวารผู้งมงายของท่าน แต่ก่อนที่เราจะเปิดศึกกับพวกท่าน เราขอเชิญชวนท่านกลับสู่ร่มเงาแห่งศาสนาที่ถูกต้องเสียก่อน ก่อนที่เราจะชักดาบออกจากฝัก ยิ่งไปกว่านั้น ท่านจะต้องสละดินแดนที่ท่านช่วงชิงไปจากเราด้วย และเราพร้อมที่จะรับประกันความปลอดภัยของท่าน”</p>
+      <p>อิสมาอีล อัศศอฟาวีตอบโต้พระราชสาส์นฉบับนี้ด้วยการส่งฝิ่นเป็นของกำนัลไปยังสุลต่านออตโตมัน พร้อมบอกกล่าวว่า เขาเชื่อว่าพระราชสาส์นฉบับนี้ถูกเขียนขึ้นภายใต้อิทธิพลของสารเสพติด สุลต่านทรงกริ้วโกรธยิ่งขึ้น จึงทรงมีพระบัญชาให้ส่งพระราชสาส์นฉบับที่สอง มีความว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أنازعيمسلاطينآلعثمان، أناسيدفرسانهذاالزمان، أناالجامعبينشجاعةوبأسأفريدونالحائزلعزالإسكندر، المتصفبعدلكسرى، أناكاسرالأصنام، ومبيدأعداءالإسلام، أناخوفالظالمين، وفزعالجبارينالمتكبرين، أناالذيتذلأمامهالملوكالمتصفونبالكبروالجبروتوتتحكملدىقوتيصوالجالعزةوالعظموت، أناالملكالهمامالسلطانخانبنالسلطانالأعظممرادخان، أتنازلبتوجيهإليكأيهاالأميرإسماعيل، يازعيمالجنودالفارسية.ولماكنتمسلمامنخاصةالمسلمين، وسلطانالجماعةالمؤمنينأهلالسنةالموحدين…وإذقدأفتىالعلماءالفقهاءالذينبينظهرانينابوجوبقتلكومقاتلةقومكفقدحقعليناأنننشطلحربك، ونخلصالناسمنشركك.</blockquote>
+      <p class="ar-translation">“ข้าคือองค์ประมุขแห่งเหล่าสุลต่านแห่งราชวงศ์อุษมาน (ออตโตมัน) ข้าคือจอมราชันย์แห่งอัศวินในยุคสมัยนี้ ข้าคือผู้รวบรวมไว้ซึ่งความกล้าหาญและพลานุภาพแห่งอัฟรีดูน, ผู้ครอบครองเกียรติภูมิแห่งอเล็กซานเดอร์ และผู้เป็นเลิศด้วยความยุติธรรมแห่งคอสโรว์ ข้าคือผู้บดขยี้เจว็ดรูปเคารพ และคือผู้ล้างผลาญเหล่าศัตรูแห่งอิสลาม ข้าคือความประหวั่นพรั่นพรึงของเหล่าผู้อธรรม และคือความหวาดผวาของเหล่าทรราชผู้หยิ่งผยอง ข้าคือผู้ที่กษัตริย์ผู้อวดดีและจองหองทั้งหลายต้องคุกเข่าศิโรราบแทบเบื้องหน้า และภายใต้อำนาจของข้า คทาแห่งเกียรติยศและความยิ่งใหญ่ทั้งปวงย่อมถูกสยบลง ข้าคือกษัตริย์ผู้ทรงเดชานุภาพ สุลต่านคาน บุตรแห่งสุลต่านผู้ยิ่งใหญ่ มูร้อด คาน ข้าขอลดตัวลงมาเพื่อส่งสาส์นนี้ถึงเจ้า โอ้ เจ้าชายอิสมาอีล ผู้เป็นหัวหน้าแห่งกองทหารเปอร์เซีย... และในฐานะที่ข้าคือมุสลิมจากหมู่ชนชั้นนำแห่งมุสลิม นามว่า เซลิม และเป็นสุลต่านแห่งปวงชนผู้ศรัทธาชาวซุนนีผู้ให้เอกภาพแด่พระผู้เป็นเจ้า... และในเมื่อบรรดานักปราชญ์และนักนิติศาสตร์อิสลามที่อยู่ท่ามกลางพวกเรา ได้ออกคำวินิจฉัย (ฟัตวา) ชี้ขาดถึงความจำเป็นในการสังหารเจ้าและทำศึกกับพรรคพวกของเจ้า ดังนั้น จึงเป็นหน้าที่อันชอบธรรมสำหรับเราที่จะต้องลุกขึ้นทำสงครามกับเจ้า และปลดปล่อยผู้คนให้รอดพ้นจากการตั้งภาคี (ชิริก) ของเจ้า”</p>
+      <p>ชาห์อิสมาอีลสัมผัสได้ถึงอันตรายจึงขอสงบศึก บ้างก็ว่าชาห์ได้วางยุทธศาสตร์ประวิงเวลาจนกว่าจะเข้าสู่ฤดูหนาว เพื่อปล่อยให้กองทัพออตโตมันต้องพินาศลงด้วยความหนาวเหน็บและความอดอยาก แต่สุลต่านยังคงเดินทัพต่อไปจนถึงที่ราบชาลดิราน ที่อยู่ทางเหนือของตับรีซ ในปี ฮ.ศ. 920 (ค.ศ. 1514) และถล่มกองทัพศอฟาวียะฮ์ชีอะฮ์อย่างราบคาบบนแผ่นดินของตนเอง ชาห์อิสมาอีลหนีไปโดยทิ้งทรัพย์สมบัติทั้งหมดไว้ ด้วยเหตุนี้ราชวงศ์ศอฟาวียะฮ์จึงถูกขับออกจากอิรักภายหลังการยึดครองที่ยาวนานหกปี นับตั้งแต่ปี ฮ.ศ. 914 จนถึงปี ฮ.ศ. 920</p>
+      <p>ชาห์อิสมาอีลใช้ชีวิตอยู่ในเมืองฮะมะดาน จากนั้นกลับสู่ตับรีซภายหลังการถอนทัพของสุลต่านออตโตมัน และสิ้นพระชนม์ในปี ฮ.ศ. 930 (ค.ศ. 1524) ต่อมากรุงแบกแดดได้รับการบูรณะใหม่โดยจักรวรรดิออตโตมันภายหลังการยึดกรุงแบกแดดคืนโดยสุลต่านสุลัยมานในปี ค.ศ. 1534</p>
+      <p>ราชวงศ์ศอฟาวียะฮ์ปกครองเป็นระยะเวลาราว 250 ปี (ฮ.ศ. 907-1148 / ค.ศ. 1501-1736) และถือเป็นรัฐชีอะสายอิมามียะฮ์แห่งแรกในประวัติศาสตร์ ทั้งนี้เพราะรัฐอุบัยดียะฮ์ (ที่รู้จักกันในนามราชวงศ์ฟาฏิมียะฮ์) เป็นรัฐชีอะสายอิสมาอีลียะฮ์ ส่วนรัฐบูวัยฮียะฮ์ เป็นรัฐสายซัยดียะฮ์ ดังนั้น ราชวงศ์ศอฟาวียะฮ์จึงเป็นรัฐชีอะอิมามียะฮ์แห่งแรกที่บังคับให้อิหร่านเปลี่ยนนิกายเป็นชีอะฮ์ด้วยกำลัง อย่างไรก็ตาม ความขัดแย้งทางอุดมการณ์ระหว่างนิกายซุนนีในจักรวรรดิออตโตมันและนิกายชีอะฮ์ในเปอร์เซีย มิได้ยุติลงพร้อมกับยุทธการที่ชาลดิรอน ในทางตรงกันข้าม ความบาดหมางกลับทวีความรุนแรงและหยั่งรากลึกยิ่งขึ้น โดยที่ทั้งสองฝ่ายต่างจ้องจับตาและหาโอกาสบั่นทอนอำนาจซึ่งกันและกัน</p>
+      <p>และการค้นคว้าถึงพัฒนาการทางประวัติศาสตร์นี้จะไม่สมบูรณ์หากไม่กล่าวถึงพัฒนาการในระยะยาว แม้ว่าชาห์อิสมาอิลที่ 1 จะเป็นผู้ริเริ่มนโยบายการเปลี่ยนศาสนาด้วยดาบ แต่กระบวนการในการดึงประชาชนเปอร์เซียส่วนใหญ่ให้เข้ารีตสู่ชีอะฮ์อย่างแท้จริงนั้นเป็นกระบวนการที่ค่อยเป็นค่อยไปและกินเวลายาวนานกว่าสามศตวรรษ</p>
+      <p>ชุมชนชาวซุนนียังคงดำรงอยู่และแอบแฝงปฏิบัติศาสนกิจในเมืองต่างๆ อย่างอิสฟาฮานและกอซวีน เรื่อยมาจนถึงช่วงปลายศตวรรษที่ 16 และต้นศตวรรษที่ 17 ชนเผ่าเร่ร่อนและกลุ่มชนแถบขอบชายแดน เช่น อัฟกัน, ชาวเคิร์ด และเติร์กเมนบางกลุ่ม ยังคงยึดมั่นในซุนนีอย่างเหนียวแน่น จนกระทั่งในรัชสมัยของสุลต่าน ฮุสเซน ระหว่างปี ค.ศ. 1694 - 1722 กระบวนการเปลี่ยนชาวเปอร์เซียให้เป็นชีอะฮ์โดยสมบูรณ์ได้ถูกขับเคลื่อนอีกครั้งผ่านการนำของมูฮัมหมัด บากิร มัจลีซี หนึ่งในนักปราชญ์ชีอะฮ์อิมามสิบสองที่ทรงอิทธิพลมากที่สุดตลอดกาล การบังคับนั้นลุกลามและเลวร้ายยิ่งขึ้น จนกระทั่งเป็นเหตุให้กรุงอิสฟาฮานล่มสลายในปี ค.ศ. 1722 ปิดฉากยุคทองของราชวงศ์ซาฟาวิด อย่างไรก็ตาม แม้ราชวงศ์จะล่มสลาย แต่โครงสร้างความเป็นรัฐชีอะฮ์ที่ถูกฝังลึกลงในจิตวิญญาณของชาวเปอร์เซียเกือบสามร้อยปีก็ไม่อาจถูกทำลายลงได้อีกต่อไป</p>
+      <p>เมื่อมองย้อนกลับไป การเปลี่ยนผ่านเปอร์เซียจากซุนนีสู่ชีอะฮ์ และการปะทะกันอย่างดุเดือดระหว่างราชวงศ์ศอฟาวียะฮ์และจักรวรรดิออตโตมัน แม้จะถูกห่มคลุมด้วยความแตกต่างทางนิติ-เทววิทยาและวาทกรรมทางศาสนา แต่แก่นแท้เบื้องหลังคือการปะทะกันทางภูมิรัฐศาสตร์ การแย่งชิงทรัพยากร และการรักษาความอยู่รอดของรัฐ</p>
+      <p>แต่หากย้อนกลับมาตอบคำถามที่ว่า “โลกซุนนีสูญเสียอะไรจากการเปลี่ยนเปอร์เซียเป็นชีอะฮ์?” คำตอบย่อมประจักษ์ชัดแล้วว่า โลกซุนนีมิได้สูญเสียเพียงขอบขัณฑสีมาหรือพื้นที่ทางยุทธศาสตร์บนแผนที่โลกเท่านั้น แต่เราได้สูญเสีย “มันสมอง” และ “หัวใจ” ทางปัญญาของโลกตะวันออกไปอย่างไม่อาจหวนคืน การผลัดแผ่นดินครั้งนั้น ได้ตัดขาดสายพานการผลิตนักวิชาการระดับพหูสูต ทำลายเครือข่ายความรู้แห่งคุรอซานที่มีระเบียบวิธีวิจัยอันเป็นเลิศ และทำให้ทุนทางวัฒนธรรม ภาษา ตลอดจนวรรณกรรมเปอร์เซียที่เคยหล่อเลี้ยงโครงสร้างความคิดของซุนนีมาหลายศตวรรษ ต้องแปรสภาพไปสู่อัตลักษณ์ใหม่ภายใต้รัฐอิมามียะฮ์ ท้ายที่สุดแล้ว การสูญเสียเปอร์เซียจึงเป็นการสูญเสียหน้าประวัติศาสตร์ทางปัญญาที่สว่างไสวที่สุดบทหนึ่ง ซึ่งเคยค้ำจุนและขับเคลื่อนอารยธรรมอิสลามสายกระแสหลักมาอย่างยาวนานนั่นเอง</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). โลกซุนนีสูญเสียอะไรจากการเปลี่ยนเปอร์เซียเป็นชีอะฮ์?. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/persia-shiism-and-sunni-loss.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
