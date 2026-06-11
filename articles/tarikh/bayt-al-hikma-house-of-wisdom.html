@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>คลังปัญญาที่มอดไหม้: ตำนานบัยตุลฮิกมะฮ์ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ตำนานบัยตุลฮิกมะฮ์ (House of Wisdom) คลังปัญญาแห่งกรุงแบกแดด ตั้งแต่ยุคทองการแปลของอัลมันศูร-ฮารูน อัรเราะชีด-อัลมะอ์มูน บะนู มูซากับการวัดโลก นครวงกลม อุตสาหกรรมกระดาษ จนถึงการล่มสลายด้วยน้ำมือมองโกลปี ค.ศ. 1258">
+<meta name="keywords" content="บัยตุลฮิกมะฮ์, House of Wisdom, แบกแดด, อัลมะอ์มูน, การแปล, มองโกล, ฮูลากู, ประวัติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="คลังปัญญาที่มอดไหม้: ตำนานบัยตุลฮิกมะฮ์ — Islamic Fiqh Publishing">
+<meta property="og:description" content="ในค่ำคืนที่กรุงแบกแดดล่มสลาย ประทีปแห่งโลกยุคโบราณได้ดับวูบลงชั่วนิรันดร์ - เรื่องราวคลังปัญญาที่มอดไหม้">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/bayt-al-hikma-house-of-wisdom.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="bayt-al-hikma-house-of-wisdom">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">คลังปัญญาที่มอดไหม้: ตำนานบัยตุลฮิกมะฮ์</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">เมื่อกล่าวถึงรายนามของบรรดาหอสมุดที่ยิ่งใหญ่ที่สุดในหน้าประวัติศาสตร์ หนึ่งในนั้นคือ บัยตุลฮิกมะฮ์ (‘บ้าน/คลังแห่งปัญญา’) ซึ่งก่อตั้งขึ้นในกรุงแบกแดด เมืองหลวงแห่งจักรวรรดิอับบาซียะฮ์ราวศตวรรษที่ 8 โดยเคาะลีฟะฮ์ฮารูน อัรเราะชีด (ทรงครองราชย์ระหว่างปี ค.ศ. 786-809) ในช่วงยุคทองของอิสลาม ศูนย์กลางแห่งนี้ยังคงรุ่งเรืองสืบต่อมาในสมัยของอัลมะอ์มูน พระโอรสของอัรเราะชีด ผู้ซึ่งบางครั้งได้รับการยกย่องว่าเป็นผู้ก่อตั้งดั้งเดิมของบ้านแห่งปัญญาแห่งนี้</p>
+      <p>ประเด็นเรื่องการยอมรับว่าใครคือผู้ก่อตั้งดั้งเดิมของศูนย์กลางแห่งนี้อาจสร้างความสับสน รายละเอียดเพิ่มเติมที่อธิบายลำดับเหตุการณ์อาจช่วยให้ทำความเข้าใจในประเด็นนี้ได้ดียิ่งขึ้น ความเป็นจริงแล้ว อัรเราะชีดคือผู้ที่รวบรวมหนังสือ เอกสารตัวเขียน และวัตถุต่างๆ ส่วนใหญ่ที่ตกทอดมาจากพระบิดาและพระอัยกาของพระองค์ และได้ทรงริเริ่มการสะสมขึ้น ในที่สุด การรวบรวมสรรพวิชาเหล่านี้ก็มีขนาดใหญ่โตขึ้นจนกระทั่งอัลมะอ์มูนจำเป็นต้องสร้างส่วนต่อขยายเพิ่มเติมจากอาคารเดิม เปลี่ยนมันให้กลายเป็นสถาบันวิชาการขนาดใหญ่ ซึ่งต่อมาเป็นที่รู้จักกันในนาม “คลังปัญญา” สถานที่แห่งนี้ได้กลายเป็นหนึ่งในศูนย์กลางแห่งภูมิปัญญาที่ยิ่งใหญ่ที่สุดในยุคกลาง และมีคุณูปการอย่างใหญ่หลวงต่อความเคลื่อนไหวทางวิทยาศาสตร์ซึ่งได้เริ่มต้นขึ้นในหลายศตวรรษก่อนหน้า</p>
+      <p>คลังแห่งปัญญานี้มีวัตถุประสงค์ดั้งเดิมเพื่อเป็นศูนย์รวมของเหล่านักแปลและเพื่อเก็บรักษาผลงานแปลของพวกเขา แต่ในเวลาต่อมาก็ได้ขยายขอบเขตให้ครอบคลุมถึงกิจกรรมการวิจัยเพิ่มเติมในสาขาการแพทย์ วิทยาศาสตร์ และดาราศาสตร์ เคาะลีฟะฮ์องค์สำคัญที่สุดสองพระองค์ คืออัรเราะชีดและอัลมะอ์มูน ทรงมีความสนพระทัยในงานด้านวิทยาศาสตร์เป็นส่วนพระองค์ หอสมุดแห่งนี้มีระบบการจัดการที่เป็นระเบียบอย่างน่าทึ่ง โดยมีการจัดแบ่งห้องเป็นสัดส่วนสำหรับผู้คัดลอก ช่างเข้าเล่ม บรรณารักษ์ และยังมีหอดูดาวทางดาราศาสตร์อีกด้วย</p>
+      <h2 class="article-h2">ความมั่งคั่งที่หลั่งไหลเข้ามา</h2>
+      <p>เมื่อเทียบกับดินแดนโดยรอบแล้ว กรุงแบกแดดถือเป็นศูนย์กลางอันยิ่งใหญ่ในการเผยแพร่องค์ความรู้ในสาขาศิลปศาสตร์ วิทยาศาสตร์ และปรัชญา สถานที่แห่งนี้ไม่เพียงแต่จะกลายเป็นศูนย์กลางแห่งภูมิปัญญาเท่านั้น แต่ยังเป็นศูนย์กลางแห่งความมั่งคั่งทางวัตถุอีกด้วย ยิ่งไปกว่านั้น การบริจาคเพื่อการกุศลยังเป็นสิ่งที่ได้รับการส่งเสริมในหลักบทบัญญัติอิสลาม สิ่งนี้จึงได้เปิดช่องทางที่เอื้อให้เกิดการแบ่งปันทั้งแนวคิดและความมั่งคั่ง ซึ่งเป็นปัจจัยจำเป็นสำหรับการลงทุนเพื่อการขยายตัวอย่างต่อเนื่องของสถาบันแห่งนี้</p>
+      <h2 class="article-h2">การแปลศิลปวิทยาการจากดินแดนอันไกลโพ้น</h2>
+      <p>การพิชิตดินแดนของอิสลามได้นำไปสู่การผนวกรวมพื้นที่ส่วนใหญ่ของโลกยุคโบราณเข้าไว้ด้วยกัน และได้รวบรวมเมืองและชนชาติต่างๆ ที่ขาดการเชื่อมโยงกันมานานหลายศตวรรษ (นับตั้งแต่สมัยจักรวรรดิของอเล็กซานเดอร์มหาราช) ให้กลับมาอยู่ภายใต้ร่มเดียวกัน ผลลัพธ์ที่ตามมาคือความสะดวกในการเดินทางระหว่างดินแดนต่างๆ ซึ่งนำไปสู่การผสมผสานและการพัฒนาแนวคิดและองค์ความรู้ทางวิทยาศาสตร์</p>
+      <p>ในสมัยรัฐอับบาซียะฮ์ การผสมผสานระหว่างชาวอาหรับกับชนชาติอื่นๆ ที่อยู่ภายใต้การปกครองได้เกิดขึ้นอย่างกว้างขวาง การหลอมรวมของอารยธรรมและความหลากหลายทางชาติพันธุ์นี้ได้ส่งอิทธิพลอย่างยิ่งต่อเหล่าเคาะลีฟะฮ์อับบาซียะฮ์ในยุคแรกเริ่ม จุดเริ่มต้นที่แท้จริงของยุคฟื้นฟูทางวิทยาการได้เริ่มขึ้นในสมัยของเคาะลีฟะฮ์องค์ที่สอง อบู ญะอ์ฟัร อัลมันศูร (ค.ศ. 714-775) ผู้ซึ่งได้มีรับสั่งให้แปลผลงานของอินเดีย, เปอร์เซีย และกรีก สู่ภาษาอาหรับในทุกแขนงวิชา ไม่ว่าจะเป็นการแพทย์, วิศวกรรมศาสตร์, ปรัชญา และอื่นๆ จากนั้นได้มีรับสั่งให้นำตำราเหล่านี้ไปเก็บไว้ในห้องสมุดส่วนพระองค์ในวังของเคาะลีฟะฮ์</p>
+      <p>และท่านอัลมันศูรคือเคาะลีฟะฮ์พระองค์แรกที่ได้ทรงมีพระราชสาส์นถึงกษัตริย์แห่งโรม (ไบแซนไทน์) เพื่อทูลขอตำราปรัชญา กษัตริย์จึงได้ทรงส่งตำราของนักคณิตศาสตร์ชาวกรีกนามว่า ยุคลิดแห่งอเล็กซานเดรียมาถวาย ซึ่งเคาะลีฟะฮ์ทรงหลงใหลในตำราเล่มนี้และกฎเกณฑ์ทางเรขาคณิตของเขาเป็นอย่างยิ่ง และนี่คือแรงบันดาลใจเบื้องหลังการก่อตั้งกรุงแบกแดดที่มีลักษณะทางสถาปัตยกรรมเชิงเรขาคณิตอันน่าทึ่งและแม่นยำ</p>
+      <p>นักประวัติศาสตร์และนักภูมิศาสตร์อย่างอบุลหะสัน อัลมัสอูดีย์ (ค.ศ. 896-956) ได้กล่าวถึงท่านอัลมันศูรไว้ในหนังสือมุรูจ อัซซะฮับ (ทุ่งหญ้าทองคำ) ของเขาว่า:</p>
+      <p>“และท่านคือเคาะลีฟะฮ์พระองค์แรกที่ได้ทรงนำนักโหราศาสตร์เข้ามาใกล้ชิดและปฏิบัติตามคำทำนายของดวงดาว ท่านมีนูบัคต์ อัลมะญูสีย์ เป็นนักโหราศาสตร์ประจำราชสำนัก ซึ่งต่อมาได้เข้ารับอิสลามด้วยมือของท่าน... และยังมีอิบรอฮีม อัลฟะซารีย์ นักโหราศาสตร์... และอะลี บิน อีซา อัลอัสฏุรลาบีย์ นักโหราศาสตร์ และท่าน (อัลมันศูร) คือเคาะลีฟะฮ์พระองค์แรกที่มีการแปลตำราจากภาษาต่างชาติสู่ภาษาอาหรับเพื่อท่าน ซึ่งรวมถึงหนังสือกะลีละฮ์ วะ ดิมนะฮ์, หนังสืออัสสินด์ฮินด์ (ตำราดาราศาสตร์อินเดีย), ตำราของอริสโตเติลในด้านตรรกศาสตร์และอื่นๆ , หนังสืออัลมะญิสฏีย์ (Almagest) ของปโตเลมี, หนังสืออัลอัรตมาฏีกีย์ (Arithmetica), หนังสือของยุคลิด และตำราโบราณอื่นๆ ทั้งของกรีก, โรมัน, ปาห์ลาวี (เปอร์เซียโบราณ), เปอร์เซีย และซีรีแอก จากนั้นตำราเหล่านี้ก็ได้ถูกเผยแพร่ออกสู่สาธารณชน ผู้คนจึงได้ศึกษาและยึดมั่นในองค์ความรู้เหล่านั้น”</p>
+      <p>และในสมัยของท่านนี่เองที่ผลงานวรรณกรรมอินเดียอันโด่งดังที่สุด “กะลีลา วะดิมนะฮ์” (Kalila wa Dimna) วรรณคดีประเภทนิทานอุทาหรณ์ที่ได้รับการแปลโดยนักแปลนามว่า อับดุลลอฮ์ บิน อัลมุก็อฟฟะอ์ โดยแปลจากภาษาปาห์ลาวี ซึ่งก่อนหน้านี้ได้รับการแปลมาจากภาษาสันสกฤตอีกทอดหนึ่ง</p>
+      <h2 class="article-h2">ผลงานและเหล่านักปราชญ์</h2>
+      <p>ผู้เชี่ยวชาญหลากหลายแขนงได้ทำงานอยู่ภายใต้ชายคาของคลังแห่งปัญญาแห่งนี้ ไม่ว่าจะเป็นนักแปล, นักวิทยาศาสตร์, อาลักษณ์ (ผู้คัดลอก), นักประพันธ์, นักวิจัยในสาขาต่างๆ และนักเขียน เอกสารตัวเขียนและหนังสือจำนวนมากในหัวข้อทางปรัชญาและวิทยาศาสตร์อันหลากหลายได้ถูกแปลขึ้นที่นี่ และได้รับการยกย่องว่ามีความสำคัญอย่างยิ่งยวดต่อประชาคม คลังแห่งปัญญาเปิดกว้างสำหรับทั้งบุรุษและสตรี นักศึกษาจากทุกเชื้อชาติและศาสนาล้วนได้รับการต้อนรับ และบรรดานักปราชญ์ที่ถูกข่มเหงจากจักรวรรดิไบแซนไทน์ก็ได้รับการสนับสนุนให้มาศึกษาที่นี่ มีการใช้ภาษาต่างๆ มากมายในสถาบันแห่งนี้ อาทิ ภาษาอาหรับ, ฟาร์ซี (เปอร์เซีย), อราเมอิก, ฮีบรู, ซีรีแอก, กรีก และละติน</p>
+      <p>จึงไม่น่าแปลกใจที่จะมีการนำเทคโนโลยีใหม่ๆ เข้ามาปรับใช้ เนื่องจากคลังแห่งปัญญาเป็นศูนย์รวมที่เปิดกว้างต่อความหลากหลายทางวัฒนธรรมและแนวความคิด กระดาษซึ่งนำเข้ามาจากประเทศจีน ได้กลายเป็นวัสดุชนิดใหม่สำหรับการเขียนที่มีราคาถูกกว่า ซึ่งก่อนหน้านี้ การเขียนจะทำลงบนแผ่นหนังที่ทำจากหนังสัตว์ ซึ่งเป็นกระบวนการที่ใช้เวลานานและมีราคาแพงกว่ามาก</p>
+      <h2 class="article-h2">อัลมะอ์มูน นักปราชญ์และองค์อุปถัมภ์</h2>
+      <p>อัลมะอ์มูนทรงเป็นนักปราชญ์ด้วยพระองค์เอง และบางทีสิ่งนี้อาจเป็นแรงบันดาลพระทัยให้พระองค์ปรารถนาที่จะสร้างสถาบันแห่งนี้ให้เป็นศูนย์กลางแห่งองค์ความรู้ที่ยิ่งใหญ่ที่สุดในโลก ตามคำกล่าวของอิซาเบลลา เบนโกเชีย (Isabella Bengoechea):</p>
+      <p>“เคาะลีฟะฮ์อัลมะอ์มูนทรงมีความเชี่ยวชาญในศาสตร์แขนงต่างๆ ที่ทำการสอนในคลังแห่งปัญญาด้วยพระองค์เอง ซึ่งรวมถึงการแพทย์, ปรัชญา และโหราศาสตร์ และมักจะเสด็จไปเยี่ยมนักปราชญ์ที่นั่นเพื่อทรงสนทนาเกี่ยวกับงานวิจัยของพวกเขา ในยุคสมัยนั้น โหราศาสตร์ได้รับการยกย่องอย่างสูงสุดในฐานะวิทยาศาสตร์แขนงหนึ่งในสังคมอาหรับ เชื่อกันว่าดวงดาวและดาวเคราะห์มีอิทธิพลต่อเหตุการณ์บนโลก ดังนั้น โหราศาสตร์จึงได้รับการปฏิบัติด้วยความใส่ใจในรายละเอียดอย่างสูงสุด บ่อยครั้งที่อัลมะอ์มูนจะทรงมอบหมายให้นักปราชญ์ผู้มีชื่อเสียงที่ทรงคัดเลือกมาเป็นพิเศษเพื่อแปลผลงานชิ้นสำคัญโดยเฉพาะ ตัวอย่างหนึ่งคือการคัดเลือกนักปราชญ์ผู้โด่งดังอย่างอบู ยูซุฟ ยะอ์กูบ อัลกินดี ผู้ซึ่งมีคุณสมบัติอันน่าทึ่งครบถ้วน ทั้งการเป็นแพทย์, นักปรัชญา, นักคณิตศาสตร์, นักเรขาคณิต, นักตรรกศาสตร์ และนักดาราศาสตร์ ให้เป็นผู้รับผิดชอบในการแปลผลงานของอริสโตเติล”</p>
+      <p>มีบันทึกบางฉบับระบุว่า เพื่อเป็นขวัญและกำลังใจแก่นักแปลและนักปราชญ์ในการเพิ่มพูนผลงานภาษาอาหรับให้แก่หอสมุด อัลมะอ์มูนจะทรงจ่ายค่าตอบแทนให้พวกเขาเป็นทองคำที่มีน้ำหนักเท่ากับหนังสือแต่ละเล่มที่แปลเสร็จสมบูรณ์ ไม่ต้องสงสัยเลยว่า องค์ความรู้มากมายจากอดีตคงจะสูญหายไป หากปราศจากงานแปลที่ดำเนินไปอย่างต่อเนื่อง ณ คลังแห่งปัญญาแห่งนี้ กรุงแบกแดดเป็นเมืองที่มั่งคั่งและรุ่งเรืองอย่างยิ่ง ซึ่งทำให้อัลมะอ์มูนสามารถทุ่มเทงบประมาณได้อย่างไม่จำกัดเพื่อจัดซื้อผลงานเพิ่มเติม รวมถึงผลงานจากต่างแดน ตามคำกล่าวของศุบฮีย์ อัลอัซซาวีย์ (Subhi Al-Azzawi):</p>
+      <p>“มีเรื่องเล่าว่า อัลมะอ์มูนได้ทรงสดับถึงความงดงามของหอสมุดแห่งซิซิลี จึงทรงมีพระราชสาส์นถึงกษัตริย์แห่งซิซิลีเพื่อทูลขอหนังสือทั้งหมดจากหอสมุดแห่งซิซิลี (ซึ่งเปี่ยมไปด้วยหนังสือปรัชญาและวิทยาศาสตร์ของชาวกรีก) เพื่อนำมารวบรวมไว้ในหอสมุดแห่งคลังแห่งปัญญา กษัตริย์ทรงปรึกษาเหล่าบิชอปของพระองค์ (ซึ่งทูลว่าเนื้อหาในหนังสือเหล่านี้ไม่ได้สร้างคุณประโยชน์ใดๆ แก่ผู้คนในโลกยุคโบราณ) และได้ทรงส่งมอบหนังสือทั้งหมดจากหอสมุดซิซิลีให้แก่เคาะลีฟะฮ์”</p>
+      <h2 class="article-h2">บัยตุลฮิกมะฮ์และฮารูน อัรเราะชีด: ยุคทองแห่งการแปลและวิทยาการ</h2>
+      <p>เคาะลีฟะฮ์ฮารูน อัรเราะชีด เคาะลีฟะฮ์องค์ที่ห้าแห่งราชวงศ์อับบาซียะฮ์ ผู้เป็นพระราชนัดดาได้ทรงสืบทอดเจตนารมณ์ของท่านอัลมันศูรในการให้ความสำคัญกับวิทยาศาสตร์ธรรมชาติ, ปรัชญา และองค์ความรู้แขนงต่างๆ และเมื่อพระองค์ทรงเห็นว่าห้องสมุดภายในวังของเคาะลีฟะฮ์นั้นได้เต็มไปด้วยตำรับตำราและม้วนหนังสือแล้ว พระองค์จึงได้มีรับสั่งให้ก่อตั้งหอสมุดแห่งใหม่ขึ้นภายนอกกำแพงวัง และให้เปิดประตูต้อนรับนักศึกษา, นักปราชญ์ และผู้อ่านทุกคน ศูนย์กลางแห่งองค์ความรู้แห่งใหม่นี้ได้รับการขนานนามว่า “บัยตุลฮิกมะฮ์” (คลังแห่งปัญญา) เพื่อเป็นเกียรติแก่ภูมิปัญญาที่บรรจุอยู่ในตำราเหล่านั้น</p>
+      <p>ในเวลาอันรวดเร็ว บัยตุลฮิกมะฮ์ก็ได้เจริญรุ่งเรืองและขยายออกเป็นแผนกต่างๆ มากมาย ซึ่งประกอบด้วยสำนักแปล, หอสมุด, คลังเก็บเอกสาร และสถาบันบัณฑิตที่รวบรวมเหล่านักปราชญ์และนักคิดจากทั่วทุกมุมของจักรวรรดิ จนกระทั่งบัยตุลฮิกมะฮ์ได้กลายเป็นจุดหมายปลายทางที่นักวิจัยจากทั่วทุกสารทิศต่างใฝ่ฝันที่จะมาเยือน</p>
+      <p>และเมื่อครั้งที่ฮารูน อัรเราะชีด ทรงพิชิตเมืองอามูริยัม (Amorium) และอังการา (Ankara) มาจากชาวโรม (ไบแซนไทน์) ได้ พระองค์ได้มีรับสั่งให้เก็บรักษาหอสมุดและตำราทั้งหมดของเมืองเหล่านั้นไว้ และทรงคัดเลือกเล่มที่มีค่าที่สุดเพื่อส่งกลับไปยังกรุงแบกแดด โดยทรงมอบหมายให้แพทย์ผู้ยิ่งใหญ่ที่สุดในยุคสมัยของพระองค์ ยูฮันนา อิบนุ มาซะวัยฮ์ ซึ่งมีเชื้อสายซีรีแอก เป็นผู้รับผิดชอบในการแปลตำราเหล่านั้น</p>
+      <p>ในยุคสมัยนั้น กระแสความเคลื่อนไหวทางการแปลได้แพร่หลายและเฟื่องฟูอย่างถึงขีดสุด จนกระทั่งกลายเป็นอาชีพที่ทรงเกียรติที่สุดในสังคม บรรดานักแปลได้ทำงานใกล้ชิดกับเหล่าเคาะลีฟะฮ์และได้รับรางวัลและของกำนัลมากมาย และนี่คือหนึ่งในสาเหตุสำคัญที่นำไปสู่ความรุ่งโรจน์ของยุคทองแห่งอิสลามในสมัยของฮารูน อัรเราะชีด</p>
+      <h2 class="article-h2">บะนู มูซา: เมล็ดพันธุ์แห่งปัญญาที่ผลิดอกในวงการคณิตศาสตร์</h2>
+      <p>เมื่อตำแหน่งเคาะลีฟะฮ์ตกทอดมาถึงอับดุลลอฮ์ อัลมะอ์มูน (ค.ศ. 786-833) เคาะลีฟะฮ์องค์ที่เจ็ดแห่งราชวงศ์อับบาซียะฮ์ พระองค์ได้ทรงทุ่มเทความพยายามอย่างยิ่งยวดในด้านการแปล ถึงขนาดที่ทรงใช้งบประมาณไปถึง 300,000 ดินาร์ทองคำในรัชสมัยของพระองค์ และอัลมะอ์มูนได้ทรงแต่งตั้งนักแปลและนักภาษาศาสตร์นามว่า หุนัยน์ บิน อิสหาก ให้เป็นผู้อำนวยการของบัยตุลฮิกมะฮ์ และท่านคือผู้มีคุณูปการในการแปลตำรากรีกอันล้ำค่าที่สุดเล่มหนึ่งของนักคณิตศาสตร์ชาวกรีกนามว่า ปโตเลมี นั่นคือหนังสือ “อัลมะญิสฏีย์” (Almagest) (ซึ่งในภาษากรีกคือ Mathematikē Syntaxis อันหมายถึง “บทความทางคณิตศาสตร์”)</p>
+      <p>จากนั้น อัลมะอ์มูนได้มีรับสั่งให้สร้างหอดูดาวสองแห่ง แห่งหนึ่งตั้งอยู่บนเชิงเขาของเทือกเขากอซิยูนในแคว้นชาม (ซีเรีย) และอีกแห่งหนึ่งคือ หอดูดาวอัชชัมมาสิยะฮ์ในกรุงแบกแดด ซึ่งได้ผนวกเข้าเป็นส่วนหนึ่งของบัยตุลฮิกมะฮ์ จะเห็นได้ว่าแนวทางด้านดาราศาสตร์ในรัชสมัยของพระองค์นั้นมีความชัดเจนอย่างยิ่ง ถึงขนาดที่พระองค์ทรงมอบหมายให้ “บะนู มูซา” (พี่น้องตระกูลมูซา) ทำการวัดเส้นผ่านศูนย์กลางและเส้นรอบวงของโลก</p>
+      <p>และบะนู มูซา บิน ชากิร คือสามพี่น้องผู้เชี่ยวชาญอย่างยิ่งในสาขาคณิตศาสตร์, ดาราศาสตร์ และกลศาสตร์ และพวกเขาก็สามารถสร้างแบบจำลองทางวิทยาศาสตร์ที่ถูกต้องในการคำนวณเส้นผ่านศูนย์กลางของโลก (ด้วยวิธีการของอัลมะอ์มูน) ได้อย่างแม่นยำอย่างยิ่งยวด ล้ำหน้าความสำเร็จของนักดาราศาสตร์ร่วมสมัยไปนานหลายศตวรรษ และการเดินทางของพวกเขาถือเป็นคณะสำรวจทางวิทยาศาสตร์คณะแรกที่ได้รับการสนับสนุนจากรัฐ โดยพวกเขาได้ถูกส่งไปยังทะเลทรายซินจารทางตอนเหนือของอิรัก พร้อมด้วยเหล่านักปราชญ์, อูฐ และเชือกสำหรับวัดระยะทาง</p>
+      <p>นักประวัติศาสตร์อย่างอิบนุ ค็อลลิกาน (ค.ศ. 1211-1282) ได้บันทึกถึงความสำเร็จของบะนู มูซา ไว้อย่างละเอียดในหนังสือวะฟะยาต อัลอะอ์ยาน (ชีวประวัติบุคคลสำคัญ) ของเขา และขอยกเพียงคำกล่าวของท่านที่ว่า: “พวกเขาคือกลุ่มแรก (ในโลกอิสลาม) ที่ได้ทำการพิสูจน์ยืนยันการคำนวณเส้นผ่านศูนย์กลางของโลกให้สอดคล้องกับสิ่งที่ได้รับการแปลมาจากตำรากรีก” โดยกล่าวว่า: “และหนึ่งในสิ่งที่พวกเขาได้สร้างสรรค์ขึ้นเป็นพิเศษในประชาชาติอิสลาม คือการนำองค์ความรู้จากภาคทฤษฎีมาสู่ภาคปฏิบัติ แม้ว่าบรรดาปรมาจารย์ด้านการสังเกตการณ์ทางดาราศาสตร์ก่อนยุคอิสลามจะได้เคยทำมาแล้วก็ตาม แต่ก็ไม่ได้มีบันทึกว่ามีผู้ใดจากประชาชาตินี้ (อิสลาม) ที่ได้ลุกขึ้นมาทำการคำนวณนี้และทำได้สำเร็จ เว้นแต่พวกเขาเท่านั้น”</p>
+      <h2 class="article-h2">มรดกแห่งอัลมะอ์มูนที่กระจัดกระจายไปทั่วทุกดินแดน</h2>
+      <p>หลังสิ้นรัชสมัยของอัลมะอ์มูน บัยตุลฮิกมะฮ์ก็เริ่มสูญเสียความสำคัญลำดับแรกลงไปในสายพระเนตรของเหล่าเคาะลีฟะฮ์รุ่นต่อมา เนื่องจากปัญหาการปฏิวัติและการรุกรานที่พวกเขากำลังเผชิญ แต่ถึงกระนั้น รัศมีภาพของมันก็ไม่ได้เลือนหายไปจากโลกอิสลามและทั่วทั้งโลก ด้วยเหตุนี้ จึงได้มีการก่อตั้งสถาบันทางวิทยาการที่คล้ายคลึงกันขึ้นตามแบบอย่างของมัน และที่โดดเด่นที่สุดคือ บัยตุลฮิกมะฮ์ในเมืองก็อยเราะวานในสมัยรัฐอัฆละบิด, ดารุลฮิกมะฮ์ในกรุงไคโร ในสมัยฟาฏิมิด, ดารุลฮิกมะฮ์ในเมืองฏอริบุลุส (ทริโปลี) ในแคว้นชาม และดารุลฮิกมะฮ์ในเมืองมะราเกฮฺ นอกจากนี้ ยังมีการสร้างคลังปัญญาขึ้นตามแบบอย่างซึ่งแพร่หลายไปทั่วโลกอิสลาม เช่น คลังปัญญาแห่งวงศ์อัลมุนัจญิม และคลังปัญญาในเมืองบุคอรอ เป็นต้น</p>
+      <p>สิ่งหนึ่งที่เราสามารถสังเกตได้คือ บัยตุลฮิกมะฮ์ในกรุงแบกแดดนั้น เปรียบเสมือนเวทีเปิดสำหรับการโต้วาทีและการอภิปรายทางวิทยาการ เนื่องจากมันได้รวบรวมผู้คนจากหลากหลายชาติพันธุ์, ศาสนา, ลัทธิ และนิกายความเชื่อไว้ภายใต้ชายคาเดียวกัน ถึงขนาดที่นักแปลจำนวนมากไม่ได้เป็นชาวมุสลิม แต่เป็นชาวยิวหรือชาวคริสต์นิกายเนสโตเรียน</p>
+      <p>บรรดานักแปลและนักปราชญ์ที่ไม่ใช่มุสลิมเหล่านี้ยังได้ร่วมโต้วาทีและถกเถียงกับชาวมุสลิมในประเด็นปัญหาทางศาสนาต่อหน้าพระพักตร์ของเคาะลีฟะฮ์ บัยตุลฮิกมะฮ์จึงเป็นเสมือนศูนย์กลางที่โอบอุ้มความเคลื่อนไหวทางวิทยาการของมวลมนุษยชาติในยุคสมัยนั้นเอาไว้ จนกระทั่งนักประวัติศาสตร์บางท่านถึงกับมองว่า บัยตุลฮิกมะฮ์คือ “มหาวิทยาลัยแห่งแรกที่ได้รับการก่อตั้งขึ้นในประวัติศาสตร์”</p>
+      <h2 class="article-h2">การต่อยอดองค์ความรู้ที่ปูทางสู่ยุคฟื้นฟูของนานาอารยธรรม</h2>
+      <p>แต่ยังมีอีกแง่มุมหนึ่งของเรื่องราว นั่นคือหนังสือจำนวนหนึ่งได้รอดพ้นจากการทำลายล้างด้วยการช่วยเหลือของนักดาราศาสตร์ชาวเปอร์เซียนามว่า นะศีรุดดีน อัฏฏูสีย์ เนื่องจากท่านมีความสัมพันธ์อันดีกับฮูลากู ผู้ซึ่งเคยขอความช่วยเหลือจากท่านในการทำนายปรากฏการณ์ทางดาราศาสตร์บางอย่าง ท่านจึงได้ทำการรวบรวมหนังสือถึง 400,000 เล่ม และนำไปเก็บไว้ที่หอสมุดแห่งหอดูดาวมะราเกฮฺ ซึ่งตั้งอยู่ทางตะวันตกเฉียงเหนือของเปอร์เซีย</p>
+      <p>และเป็นการปิดท้าย แต่ยังไม่ใช่อวสานของประวัติศาสตร์แห่งยุคฟื้นฟูของอิสลาม ผู้เขียนหนังสือ “ความคิดแบบกรีกและวัฒนธรรมอาหรับ” (Greek Thought, Arabic Culture) ได้ระบุเอาไว้ว่า: “คุณูปการของอารยธรรมอิสลาม โดยเฉพาะอย่างยิ่งในยุคอับบาซียะฮ์และอัลอันดะลุส ในการปกป้องรักษามรดกของกรีก ซึ่งได้มีส่วนสำคัญต่อยุคฟื้นฟูศิลปวิทยาในสมัยกลางนั้น... สุดที่จะประเมินค่าได้”</p>
+      <p>การที่ชาวอาหรับไม่ได้พึงพอใจเพียงแค่การแปลผลงานทางวิทยาศาสตร์และปรัชญาโบราณเท่านั้น แต่ยังรวมถึงการอรรถาธิบาย, ความเข้าใจ, การวิเคราะห์, การวิจารณ์, การเรียบเรียง และการต่อยอดเพิ่มพูนเนื้อหาทางวิทยาการ ได้ปูทางไปสู่ยุคฟื้นฟูของนานาอารยธรรมในเวลาต่อมา และจึงไม่น่าแปลกใจเลยที่หนังสือเล่มแรกสุดที่ได้รับการตีพิมพ์เป็นภาษาอังกฤษในปี ค.ศ. 1477 จะเป็นคำแปลผลงานของนักปรัชญาชาวดามัสกัสนามว่า อัลมุบัชชิร บิน ฟาติก นั่นคือหนังสือ “มุคตาร อัลหิกัม วะมะหาสิน อัลกะลิม” ซึ่งได้รับการแปลเป็นภาษาอังกฤษในชื่อ Dictes and Sayings of the Philosophers (วจนาและอมตะวาจาของเหล่านักปราชญ์) และได้ถูกทูลเกล้าฯ ถวายแด่กษัตริย์เอ็ดเวิร์ดที่ 4 แห่งอังกฤษในพระราชพิธีอีกด้วย</p>
+      <h2 class="article-h2">อวสานศูนย์กลางแห่งปัญญา</h2>
+      <p>เป็นเรื่องน่าเศร้าที่บัยตุลฮิกมะฮ์ต้องเผชิญกับชะตากรรมอันมืดมนเช่นเดียวกับสิ่งก่อสร้างสำคัญมากมายในหน้าประวัติศาสตร์ สถาบันแห่งนี้ถูกทำลายลงอย่างราบคาบโดยกองทัพของมองโกลในปี ค.ศ. 1258 พวกเขาได้สังหารข้าราชสำนักของเคาะลีฟะฮ์และสมาชิกราชวงศ์ของพระองค์เกือบทั้งหมด</p>
+      <p>กองทัพมองโกลอันบ้าคลั่งได้เคลื่อนทัพมาด้วยความพร้อมรบสูงสุดและด้วยยุทโธปกรณ์ที่ยิ่งใหญ่ที่สุดในประวัติศาสตร์การสงครามของพวกเขา ชนิดที่สามารถบุกทำลายล้างทุกสิ่งที่ขวางหน้าทั้งบนผืนดินและผืนน้ำ ไม่เหลือไว้ซึ่งชีวิตมนุษย์ที่ปลอดภัยหรือบ้านเมืองที่สมบูรณ์ ภายใต้การนำทัพของฮูลากู ข่าน หลานชายของเจงกิส ข่าน ผู้ก่อตั้งจักรวรรดิมองโกล กองทัพได้มุ่งหน้าสู่เอเชียตะวันตก สู่ดินแดนเมโสโปเตเมีย ที่ตั้งของอาณาจักรราฟิเดน (เมโสโปเตเมีย) และกรุงแบกแดด เมืองหลวงแห่งอาณาจักรเคาะลีฟะฮ์อับบาซียะฮ์</p>
+      <p>ฮูลากู ข่านตั้งเป้าหมายที่กรุงแบกแดดหลังจากที่ได้ทำลายอำนาจของจักรวรรดิควาริซเมียนทางตอนเหนือของเปอร์เซียและบางส่วนของเอเชียกลางลงได้สำเร็จ ซึ่งจักรวรรดินี้เคยเปรียบเสมือนเกราะป้องกันที่แข็งแกร่งของรัฐอับบาซียะฮ์ในอิรักในการต้านทานการโจมตีของมองโกล แต่เมื่อการปกครองของรัฐควาริซเมียนภายใต้ชาห์ ญะลาลุดดีน มันกุบิรฏีได้สิ้นสุดลง เส้นทางสู่เมืองหลวงของอาณาจักรเคาะลีฟะฮ์ก็เปิดโล่ง โดยไม่มีสิ่งใดขวางกั้นระหว่างสองกองทัพอีกต่อไป นอกจากแม่น้ำไทกริสและยูเฟรติสเท่านั้น</p>
+      <p>นั่นจึงเปรียบเสมือน “โอกาสทอง” สำหรับจักรวรรดิมองโกลที่จะเสริมสร้างการมีอยู่และแผ่ขยายอิทธิพลของตนไปทั่วทั้งเอเชียกลางและเอเชียตะวันตก ด้วยกำลังพลนักรบชาวมองโกลและตาตาร์ถึงสองแสนนาย เสริมด้วยกองกำลังจากราชอาณาจักรอาร์เมเนียแห่งซิลิเชียและราชอาณาจักรจอร์เจีย โดยมีเป้าหมายเพื่อโค่นล้มรัฐอับบาซียะฮ์ ซึ่งในช่วงปลายยุคนั้นได้แตกแยกออกจากกันเนื่องจากอาณาเขตที่กว้างใหญ่ไพศาล สภาพของรัฐจึงไม่ต่างอะไรกับกลุ่มรัฐเอมิเรตที่ปกครองตนเอง เคาะลีฟะฮ์แห่งมุสลิมผู้ประทับในกรุงแบกแดดแทบจะไม่มีอำนาจใดๆ เหนือดินแดนเหล่านั้น นอกจากการถูกกล่าวถึงในเทศน์ธรรมของวันศุกร์เท่านั้น ส่วนอำนาจการปกครองที่แท้จริงกลับตกอยู่ในมือของผู้ว่าการและผู้ปกครองท้องถิ่นในแต่ละพื้นที่</p>
+      <p>ในช่วงต้นปี ค.ศ. 1258 ฮูลากูได้ส่งสาส์นถึงเคาะลีฟะฮ์แห่งอับบาซียะฮ์อัลมุสตะอ์ศิม บิลลาฮ์ เรียกร้องให้พระองค์ยอมจำนนและสวามิภักดิ์ต่อการปกครองของมองโกล มิเช่นนั้นสงครามก็คือคำตัดสินสุดท้าย แม้ว่ากองทัพของรัฐอับบาซียะฮ์จะอ่อนแอและมีกำลังพลไม่เกินหนึ่งหมื่นนาย (ตามการประเมินของอิบนุ กะษีร) แต่เคาะลีฟะฮ์ก็ทรงปฏิเสธที่จะยอมจำนน และได้พยายามยับยั้งสงครามด้วยการส่งของกำนัลและทรัพย์สินไปให้ แต่ฮูลากูกลับดูหมิ่นของเหล่านั้นและตัดสินใจที่จะเปิดฉากรบ</p>
+      <h2 class="article-h2">เครื่องยิงกระสุนของฮูลากู ดั่งอุกกาบาตถล่มกรุงแบกแดด</h2>
+      <p>ในวันที่ 18 มกราคม ฮูลากูได้เข้าปิดล้อม “นครแห่งสันติภาพ” หรือกรุงแบกแดด ด้วยกองทัพที่ไม่เคยปรากฏมาก่อนในประวัติศาสตร์ ใหญ่โตจนมองไม่เห็นจุดเริ่มต้นและจุดสิ้นสุด แผ่ขยายตั้งแต่ทิศตะวันตกจรดทิศตะวันออก เครื่องยิงกระสุนถูกระดมยิงถล่มเมืองประหนึ่งห่าฝนที่ลุกโชน ราวกับเป็นดวงดาวจากฟากฟ้าที่ร่วงหล่นสู่ผืนดิน ด้วยความรุนแรงของการโจมตี ควันไฟหนาทึบได้เข้าปกคลุมทั่วทั้งเมือง จนราตรีไม่ได้มืดมิดอีกต่อไป (เพราะแสงเพลิง) และดวงตะวันก็ไม่อาจทอแสงให้เห็นได้เมื่อความมืดจางลง (เพราะควันไฟ)</p>
+      <p>ในขณะเดียวกัน กองทัพอับบาซียะฮ์ได้พยายามปกป้องกำแพงเมืองโดยใช้เครื่องยิงขนาดเล็กที่เรียกว่า “อัลอัรรอดาต” (เครื่องยิงหินโบราณขนาดเล็ก) แต่ก็ไม่อาจต้านทานได้นาน เพียง 12 วันหลังจากนั้น กองทัพมองโกลก็สามารถบุกทะลวงเข้าเมืองได้สำเร็จ และนั่นคือจุดเริ่มต้นของหายนะครั้งใหญ่หลวงที่สุดครั้งหนึ่งในประวัติศาสตร์แห่งอารยธรรมอิสลาม และเป็นการสังหารหมู่ครั้งใหญ่ที่สุดในประวัติศาสตร์ของมวลมนุษยชาติ</p>
+      <p>กองทัพมองโกลได้ย่ำยีไปทั่วทุกท้องถนนในกรุงแบกแดด ไม่พบชีวิตใดเว้นแต่จะสังหารเสียสิ้น ไม่เหลืออาคารใดตั้งอยู่เว้นแต่จะถูกทำลายลง มีคำกล่าวว่า เลือดของผู้พลีชีพถึงหนึ่งล้านคนได้หลั่งนองไปทั่วในระยะเวลาเพียง 40 วัน เลือดได้ไหลไปตามท้องถนนของเมืองประหนึ่งสายน้ำแห่งไทกริส จนกระทั่งฮูลากูและกองทัพของเขาต้องไปตั้งค่ายอยู่ห่างจากใจกลางเมืองเนื่องจากกลิ่นซากศพที่คละคลุ้ง</p>
+      <p>และเนื่องจากกรุงแบกแดดคือต้นแบบแห่งอารยธรรมอันรุ่งโรจน์ที่เลื่องลือไปทั่ว เมืองแห่งนี้จึงเป็นศูนย์รวมของความเคลื่อนไหวทางวิทยาการ ซึ่งสะท้อนผ่านสถาปัตยกรรมที่งดงามและวิจิตรที่สุด เมืองแห่งนี้คราคร่ำไปด้วยโรงเรียน (ซึ่งเทียบได้กับมหาวิทยาลัยในปัจจุบัน) พร้อมด้วยส่วนประกอบอื่นๆ ทั้งห้องสมุด, โรงพิมพ์ และหอดูดาว แต่สัญลักษณ์ที่โดดเด่นและมีชื่อเสียงที่สุดก็คือ “บัยตุลฮิกมะฮ์” (คลังแห่งปัญญา) ซึ่งก็ไม่อาจรอดพ้นจากความโหดร้ายของมองโกลไปได้ และผลลัพธ์ของการรุกรานที่ถูกทำลายล้างครั้งนี้ก็คือ ประทีปแห่งโลกยุคโบราณได้ดับวูบลงชั่วนิรันดร์ ในค่ำคืนที่กรุงแบกแดดล่มสลาย</p>
+      <p>ส่วนองค์เคาะลีฟะฮ์นั้นถูกไว้ชีวิตและถูกบังคับให้ทอดพระเนตรการสังหารหมู่และการทำลายล้างทั้งหมด</p>
+      <p>ถึงแม้ว่าบัยตุลฮิกมะฮ์จะเป็นที่เคารพยำเกรงในจิตใจของนานาอารยธรรม แต่นั่นก็ไม่ได้ยับยั้งชั่งใจให้กองทัพมองโกลละเว้นจากการย่ำยีความศักดิ์สิทธิ์และทำลายมันลง หนึ่งในอาชญากรรมอันใหญ่หลวงที่สุดที่กองทัพตาตาร์ได้ก่อขึ้นในค่ำคืนที่กรุงแบกแดดล่มสลาย นอกเหนือจากการสังหารหมู่ผู้คนในเมืองแล้ว คือการที่พวกเขาได้เผาทำลายตำราของบัยตุลฮิกมะฮ์และโยนหนังสือจำนวนมากลงสู่แม่น้ำไทกริส ถึงขนาดที่แหล่งข้อมูลบางแห่งระบุว่า เหล่าม้าศึกสามารถเดินข้ามแม่น้ำได้บนกองหนังสือที่ถูกโยนลงไปจนกลายเป็นสะพานเชื่อมระหว่างสองฝั่ง และสายน้ำก็ได้แปดเปื้อนไปด้วยสีของน้ำหมึกจนเปลี่ยนสีไป และนี่คือวิถีแห่งการทำลายล้างที่เป็นเอกลักษณ์ของเจงกิส ข่าน และฮูลากู หลานชายของเขา และมีเล่าขานกันว่า สายน้ำในแม่น้ำได้เปลี่ยนเป็นสีดำสนิทจากหมึกของหนังสือ และเป็นสีแดงฉานจากโลหิตของผู้คนนานหลายวัน</p>
+      <h2 class="article-h2">นครวงกลมแห่งอัลมันศูร: การสถาปนาราชธานี</h2>
+      <p>เมื่อราชวงศ์อับบาซียะฮ์ขึ้นครองอำนาจในปี ค.ศ. 750 (ฮ.ศ. 132) พวกเขาได้ย้ายเมืองหลวงของอาณาจักรเคาะลีฟะฮ์จากดามัสกัสมายังดินแดนเมโสโปเตเมีย เคาะลีฟะฮ์องค์ที่สองแห่งอับบาซียะฮ์ อบู ญะอ์ฟัร อัลมันศูร ได้ทรงคัดเลือกที่ตั้งทางภูมิศาสตร์สำหรับเมืองหลวงของพระองค์อย่างพิถีพิถันและหลังจากการปรึกษาหารืออย่างรอบคอบ จนในที่สุดได้ทรงเลือกที่ตั้งของกรุงแบกแดดบนฝั่งตะวันตกของแม่น้ำไทกริส และอยู่ใกล้กับแม่น้ำยูเฟรติส</p>
+      <p>องค์เคาะลีฟะฮ์ทรงควบคุมการก่อสร้างเมืองอย่างเข้มงวด ถึงขนาดที่พระองค์ทรงเป็นผู้วางศิลาฤกษ์ด้วยพระองค์เอง และได้มีรับสั่งให้ช่างก่อสร้างนำก้อนฝ้ายชุบของเหลวที่ทำจากน้ำมัน แล้วจุดไฟ จากนั้นนำไปวางตามแนวขอบเขตด้านนอกของเมืองซึ่งจะเป็นที่ตั้งของกำแพงสูงตระหง่านที่สร้างจากอิฐแดงเพื่อใช้ในการป้องกันเมือง รูปทรงของเมืองเป็นวงกลมที่สมบูรณ์แบบ ซึ่งสะท้อนถึงผลงานของนักคณิตศาสตร์ชาวกรีกนามว่า “ยุคลิด” ที่เคาะลีฟะฮ์ได้ทรงศึกษาและโปรดปรานเป็นอย่างยิ่ง และจากรูปทรงทางเรขาคณิตนี้เอง เมืองแห่งนี้จึงได้รับการขนานนามว่า “นครวงกลม” (อัลมะดีนะฮ์ อัลมุดะวะเราะฮ์)</p>
+      <p>เมืองถูกล้อมรอบด้วยประตูสี่แห่ง โดยแต่ละประตูจะตั้งอยู่ตรงข้ามกันเป็นคู่ๆ ระยะห่างระหว่างประตูแต่ละแห่งเท่ากัน และจากประตูแต่ละบานจะมีถนนทอดตรงไปยังใจกลางเมืองอันเป็นที่ตั้งของราชสำนักของเคาะลีฟะฮ์ ประตูแต่ละแห่งถูกตั้งชื่อตามทิศทางที่มันชี้ไป ได้แก่ ประตูแห่งกูฟะฮ์, ประตูแห่งบัศเราะฮ์, ประตูแห่งชาม (ซีเรีย) และประตูแห่งคุรอซาน</p>
+      <p>นักประวัติศาสตร์อย่างอัลเคาะฏีบ อัลบัฆดาดีย์ (ค.ศ. 1002-1071) ได้กล่าวถึงกรุงแบกแดดไว้ว่า: “ไม่มีเมืองใดในโลกหล้าที่จะเทียบเคียงแบกแดดได้ ทั้งในด้านความยิ่งใหญ่แห่งสถานะ, ความโอ่อ่าแห่งกิจการ, ความมากมายของเหล่านักปราชญ์และปูชนียบุคคล, ความโดดเด่นของบ้านเรือนและที่พำนัก, ถนนหนทางและตรอกซอกซอย, ตลาดและย่านการค้า, สุเหร่าและโรงอาบน้ำ, ที่พักแรมและโรงแรม, อากาศที่บริสุทธิ์, สายน้ำที่หอมหวาน, ร่มเงาที่เย็นสบาย, ฤดูร้อนและฤดูหนาวที่พอเหมาะ, ฤดูใบไม้ผลิและฤดูใบไม้ร่วงที่ดีต่อสุขภาพ และจำนวนประชากรที่มากมายเกินคณานับ และยุคที่เมืองมีความเจริญรุ่งเรืองและมีผู้คนอาศัยอยู่หนาแน่นที่สุดคือ ในสมัยของ (ฮารูน) อัรเราะชีด เมื่อโลกสงบสุข, การดำรงชีวิตมีความอุดมสมบูรณ์, ทรัพยากรมากล้น และหนทางสู่ความเจริญรุ่งเรืองเปิดกว้าง”</p>
+      <p>กรุงแบกแดดจึงเป็นภาพสะท้อนอันสมบูรณ์แบบของความรุ่งเรืองทางเศรษฐกิจและสังคม และเป็นบ่อเกิดแห่งแรงบันดาลใจให้แก่พ่อค้า, นักกวี, นักปราชญ์, นักวิจัย, นักเขียน, นักปรัชญา, นักดาราศาสตร์ และคนอื่นๆ ที่ต่างใฝ่ฝันจะยกระดับตนเองให้ทัดเทียมกับความสูงส่งและความมีรสนิยมของชาวเมือง จนกระทั่งมีคำกล่าวที่แพร่หลายว่า ผู้คนผู้นั้น “ตะบัฆดะดะ” (<span class="ar-inline" lang="ar" dir="rtl">تبغدد</span>) ซึ่งหมายถึง การทำตัวสุภาพอ่อนโยนและนุ่มนวล หรือหมายถึงการมองว่า ตนเองมีสถานะที่สูงส่งขึ้น และนักปราชญ์อย่างยากูต อัลหะมะวีย์ (ค.ศ. 1179-1229) ได้บรรยายถึงการหลั่งไหลของผู้คนสู่ “นครแห่งสันติภาพ” แห่งนี้ว่า: “ข้าไม่เคยเดินผ่านถนนสายใดในเมืองนี้เลย เว้นแต่จะรู้สึกราวกับว่าได้มีการป่าวประกาศให้ผู้คนทั้งหมดออกมาพร้อมกัน”</p>
+      <h2 class="article-h2">ตลาดนักทำกระดาษและค้าหนังสือ: สินสงครามจากจีนที่หล่อเลี้ยงอารยธรรมอาหรับ</h2>
+      <p>เมื่ออาณาเขตของรัฐอิสลามขยายไปถึงตะวันออกไกลในสมัยเคาะลีฟะฮ์อับบาซียะฮ์ ล้ำพรมแดนของประเทศคีร์กีซสถานในปัจจุบันและลึกเข้าไปในเอเชียกลาง ได้เกิดการปะทะกันระหว่างกองทัพอับบาซียะฮ์ภายใต้การนำทัพของอบู มุสลิม อัลคุรอซานีย์ และกองทัพจีนภายใต้การปกครองของราชวงศ์ถัง ในเหตุการณ์ประวัติศาสตร์อันเลื่องลือที่เรียกว่า “สมรภูมิแม่น้ำทาลัส” และชัยชนะในครั้งนั้นเป็นของฝ่ายมุสลิม</p>
+      <p>และชุดความคิดหนึ่งที่ว่ากันว่าคือผลลัพธ์อันยิ่งใหญ่ที่สุดของชัยชนะครั้งนั้นคือ การจับกุมเชลยศึก “ช่างทำกระดาษชาวจีน” ซึ่งในเวลานั้น เทคนิคการผลิตกระดาษยังคงเป็นความลับที่สงวนไว้สำหรับชาวจีนเท่านั้น แต่หลังจากนั้นไม่นาน ศาสตร์แขนงนี้ก็ได้แพร่หลายเข้าสู่ดินแดนของชาวมุสลิม และได้เจริญรุ่งเรืองอย่างยิ่งในเมืองสำคัญต่างๆ เช่น ซามาร์กันด์, ดามัสกัส และชาฏิบะฮ์ในอันดะลุส</p>
+      <p>ส่วนในกรุงแบกแดด อุตสาหกรรมการผลิตกระดาษได้ก้าวไปสู่ระดับใหม่โดยสิ้นเชิง กระดาษจากที่นี่มีชื่อเสียงเลื่องลือไปทั่วทั้งภูมิภาคเนื่องจากคุณภาพที่สูงมาก ถึงขนาดที่แหล่งข้อมูลของไบแซนไทน์-กรีกบางฉบับได้เรียกขานกระดาษด้วยคำว่า “บักดาติกซอน” (bagdatixon) ซึ่งเป็นการพาดพิงถึงกรุงแบกแดดโดยตรง</p>
+      <p>นักทำกระดาษและค้าหนังสือมีจำนวนเพิ่มขึ้นอย่างรวดเร็วในกรุงแบกแดด และตลาดค้ากระดาษก็ได้กลายเป็นสัญลักษณ์ที่โดดเด่นของชีวิตในเมือง และเนื่องจากอุตสาหกรรมกระดาษมีความผูกพันอย่างแยกไม่ออกกับการเขียน มันจึงทำให้การบันทึกองค์ความรู้ในทุกแขนงกลายเป็นเรื่องง่ายดายขึ้นอย่างมหาศาล</p>
+      <p>ดร.ค็อยรุลลอฮ์ สะอีด นักวิจัยผู้เชี่ยวชาญด้านต้นกำเนิดของอุตสาหกรรมกระดาษในโลกอิสลาม ระบุกล่าวว่า: “ประวัติศาสตร์ของคำศัพท์คำหนึ่ง ก็คือประวัติศาสตร์ทางวัฒนธรรมที่บ่งบอกถึงความรับผิดชอบของแต่ละชนชาติ และในขณะเดียวกัน มันก็คือพันธะทางประวัติศาสตร์ในจิตสำนึกของนักวิจัย ที่จะต้องติดตามเส้นทางอันถูกต้องของคำศัพท์นั้นผ่านทุกอุปสรรคและจุดเปลี่ยนในแต่ละยุคสมัย บนพื้นฐานของพันธะทางประวัติศาสตร์นี้ ปรากฏการณ์แห่งอัลวะรอกอฮ์ (อุตสาหกรรมกระดาษและหนังสือ) และอัลวัรรอกีน (กลุ่มนักทำกระดาษและค้าหนังสือ) ในอารยธรรมอาหรับ-อิสลาม ถือเป็นหนึ่งในสัญลักษณ์อันโดดเด่นที่สุดของความเป็นเมืองและความเจริญทางอารยธรรมที่ยุคอับบาซียะฮ์ได้สร้างสรรค์ขึ้น และในทางกลับกัน มันก็ได้ให้กำเนิดศิลปะแขนงต่างๆ มากมาย และได้แตกหน่อออกเป็นคุณลักษณะทางวัฒนธรรมอื่นๆ ซึ่งมีหลักฐานยืนยันทั้งในเชิงประจักษ์พยาน, สถานที่, มรดก และวัตถุที่จับต้องได้ ซึ่งรวมถึง ห้องสมุด, ศิลปะการประดับตกแต่ง, การแปล และอื่นๆ อีกมากมาย”</p>
+
+      <section class="bibliography-section">
+        <h2 class="article-h2">บรรณานุกรม</h2>
+        <ol class="bibliography" lang="ar" dir="rtl">
+          <li>ابن كثير. البداية والنهاية. بيروت: مكتبة المعارف، ١٣٧٣هـ. الجزء الثالث عشر، ص٢٠٠.</li>
+          <li>أبو الحسن المسعودي. مروج الذهب. الجزء الثاني، ص١٧٢ (٩٧٣م).</li>
+          <li>الخطيب البغدادي. تاريخ مدينة السلام. تحقيق: بشار عواد معروف. بيروت: دار الغرب الإسلامي. المجلد الأول، ص٤٤٠.</li>
+          <li>ياقوت الحموي. معجم البلدان. تحقيق: مصطفى جواد. بغداد: مطبعة المعارف. المجلد الأول، ص٤٦٢.</li>
+          <li>ابن خلكان. وفيات الأعيان وأنباء أبناء الزمان. تحقيق: إحسان عباس. بيروت: دار صادر، ١٩٩٤م. ص١٦٢.</li>
+          <li>خيرالله سعيد. الوراقة والوراقون في الحضارة العربية الإسلامية. ٢٠١١م.</li>
+          <li>الديوه جي، سعيد. بيت الحكمة. بيروت: الدار العربية للموسوعات، الطبعة الثانية، ١٩٧٢م. ص٣٢.</li>
+          <li>الشريف، يمان. مراصد الفلك الإسلامي: تاريخ عريق من التجسس على السماء. ٢٠٢١م.</li>
+          <li>جوناثان ليونز. بيت الحكمة: كيف غيّر العرب الحضارة الغربية. لندن: بلومزبري، ٢٠٠٨م. ص٥٨.</li>
+        </ol>
+        <ol class="bibliography">
+          <li>Cem Nizamoglu. “The House of Wisdom: Baghdad’s Intellectual Powerhouse.” muslimheritage.com.</li>
+          <li>Isabella Bengoechea. “Iraq’s Golden Age: The Rise and Fall of the House of Wisdom.” theculturetrip.com.</li>
+          <li>Mohd Roslan Mohd Nor. “The Significance of the Bayt Al-Hikma (House of Wisdom) in Early Abbasid Caliphate.” academia.edu.</li>
+          <li>Subhi Al-Azzawi. “The Abbasids’ House of Wisdom in Baghdad.” muslimheritage.com.</li>
+          <li>“House of Wisdom: One of the Greatest Libraries in History.” ancient-origins.net.</li>
+        </ol>
+      </section>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). คลังปัญญาที่มอดไหม้: ตำนานบัยตุลฮิกมะฮ์. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/bayt-al-hikma-house-of-wisdom.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
