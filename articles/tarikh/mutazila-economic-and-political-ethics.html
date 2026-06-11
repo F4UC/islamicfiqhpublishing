@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>จริยธรรมทางเศรษฐกิจ สังคม และการเมืองในมุมมองของมุอ์ตะซิละฮ์ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="สำรวจมิติทางจริยธรรมของสำนักคิดมุอ์ตะซิละฮ์ ตั้งแต่ทฤษฎีการแยกแยะดี-ชั่วด้วยสติปัญญา สู่จุดยืนเรื่องปัจจัยยังชีพ ราคาสินค้า ความเท่าเทียม ความยุติธรรม และการต่อต้านเผด็จการ">
+<meta name="keywords" content="มุอ์ตะซิละฮ์, จริยธรรมอิสลาม, อิลมุลกะลาม, กอฎีอับดุลญับบาร, อัซซะมัคชะรีย์, ความยุติธรรม, ประวัติศาสตร์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="จริยธรรมทางเศรษฐกิจ สังคม และการเมืองในมุมมองของมุอ์ตะซิละฮ์ — Islamic Fiqh Publishing">
+<meta property="og:description" content="เมื่อสำนักคิดที่ขึ้นชื่อเรื่องเทววิทยา กลับซ่อนทฤษฎีจริยธรรมที่ลึกซึ้งว่าด้วยเศรษฐกิจ ความเท่าเทียม และการต่อต้านอำนาจอธรรม">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/mutazila-economic-and-political-ethics.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="mutazila-economic-and-political-ethics">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">จริยธรรมทางเศรษฐกิจ สังคม และการเมืองในมุมมองของมุอ์ตะซิละฮ์</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">หากเราจะพูดถึงสำนักคิดมุอ์ตะซิละฮ์ ซึ่งถือเป็นหนึ่งในสำนักด้านเทววิทยาหรืออิลมุลกะลามที่โดดเด่นที่สุดในประวัติศาสตร์ความคิดอิสลาม ซึ่งโผล่ขึ้นมาในช่วงต้นศตวรรษที่ 2 ฮิจเราะฮ์ เราก็จะนึกถึง 5 หลักการอันโด่งดังของพวกเขา</p>
+      <p>นั่นคือ 1. การให้เอกภาพต่อพระเจ้า 2. การให้ความยุติธรรม 3. การแจ้งสัญญาถึงสวรรค์และคำขู่จากนรก 4. สถานะกึ่งกลางของผู้ทำบาปใหญ่ และ 5. การสั่งใช้ความดีและห้ามปรามความชั่ว</p>
+      <p>ซึ่งหลักการเหล่านี้ถูกใช้เพื่อถกเถียงประเด็น “หลักความเชื่อ” (อะกีดะฮ์) และปัญหา “เทววิทยา” ต่างๆ จนยกระดับการถกเถียงจากเรื่องศาสนาล้วนๆ ไปสู่ “ปรัชญา”</p>
+      <p>แต่มีสิ่งหนึ่งที่คนมักมองข้ามคือ “ประเด็นทางจริยธรรม” ต้องบอกว่า “มิติทางจริยธรรม” ในความคิดของมุอ์ตะซิละฮ์นั้นไม่เคยหายไปไหน เพียงแต่มีนักวิชาการไม่มากนักที่ให้ความสำคัญกับมัน</p>
+      <p>หัวใจหลักด้านจริยธรรมของพวกเขาปักหมุดอยู่บนทฤษฎีที่เรียกว่า “อัตตะห์ซีน วัตตักบีห์ อัลอักลียัยน์” (<span class="ar-inline" lang="ar" dir="rtl">التحسين والتقبيح العقليين</span>) ถ้าจะแปลเป็นไทยง่ายๆ ก็คือทฤษฎีที่ว่า “สติปัญญาสามารถแยกแยะ ‘ความดี’ และ ‘ความชั่ว’ ได้ด้วยตัวเอง” นี่คือ “รากฐาน” ที่สำนักคิดนี้ตั้งอยู่</p>
+      <h2 class="article-h2">สติปัญญากับวะฮีย์: ความต่างระหว่างอะฮ์ลุซซุนนะฮ์กับมุอ์ตะซิละฮ์</h2>
+      <p>ท่านอัชชะฮ์รอสตานีย์เคยอธิบาย “ความต่าง” เรื่องนี้ไว้ ซึ่งขอสรุปให้เห็นภาพชัดๆ ระหว่างชาวอะฮ์ลุซซุนนะฮ์กับมุอ์ตะซิละฮ์ดังนี้</p>
+      <p>ฝั่งอะฮ์ลุซซุนนะฮ์มองว่า “ข้อบังคับ” (วาญิบ) เรารู้ได้จากวะฮีย์เท่านั้น ส่วน “ความรู้” เรารู้ได้จากสติปัญญา สรุปคือสติปัญญา “คิดเอง” ไม่ได้ว่าอะไร “ดี” หรือ “ชั่ว” และ “บังคับ” ให้เราทำอะไรไม่ได้ ส่วน “วะฮีย์” ก็ไม่ได้ “สร้าง” ความรู้ (เพราะสติปัญญารู้เองอยู่แล้ว) แต่วะฮีย์มีหน้าที่สั่ง (บังคับ) ให้เราทำ</p>
+      <p>ฝั่งมุอ์ตะซิละฮ์มองว่า “ความรู้” เรารู้ได้จาก “สติปัญญา” และ “สติปัญญา” ก็ “บังคับ” ให้เรายอมรับความรู้นั้นด้วย เช่น การขอบคุณพระเจ้า สติปัญญารู้ได้เองว่าจำเป็นต้องทำโดยไม่ต้องรอให้วะฮีย์ (ศาสนา) มาบอก สรุปคือ “ความดี” และ “ความชั่ว” มันเป็น “คุณสมบัติ” ที่ติดตัวสิ่งนั้นๆ มาตั้งแต่แรก (สติปัญญามีหน้าที่แค่ไปค้นพบมัน)</p>
+      <p>ท่านกอฎีอับดุลญับบาร ปราชญ์ใหญ่ของมุอ์ตะซิละฮ์ ยืนยันว่า “คุณค่า” ที่สำคัญที่สุดของมุอ์ตะซิละฮ์ก็คือสติปัญญา ทำไมล่ะ? เพราะสติปัญญาช่วยให้เราแยกแยะดี-ชั่วได้ และเพราะสติปัญญาอีกเช่นกันที่ทำให้เรา “รู้” ว่าอัลกุรอาน สุนนะฮ์ และอิจมาอ์ (ฉันทมติ) เป็นหลักฐานที่เชื่อถือได้</p>
+      <p>หลักการของท่านคือ “สิ่งต่างๆ นั้นต้องถูก ‘เข้าใจ’ ก่อน แล้วจึงจะค่อยถูก ‘นิยาม’” ด้วยเหตุนี้ สติปัญญาจึงเป็นรากฐานทั้งในแง่หลักการและในแง่ญาณวิทยาของมุอ์ตะซิละฮ์ มันเป็นแกนกลางในการมองโลก ทั้งธรรมชาติ พระเจ้า มนุษย์ ไปจนถึงศาสนาทั้งระบบ</p>
+      <p>พวกเขาให้เหตุผลว่า ในเมื่อศาสนามาจากเบื้องบน (เป็นของอัลลอฮ์) สติปัญญาก็มาจากเบื้องบน (เป็นของอัลลอฮ์) เช่นกัน และตรงนี้นี่เองคือจุดที่ทำให้มุอ์ตะซิละฮ์สลักชื่อของตัวเองไว้ในประวัติศาสตร์ความคิดอิสลาม เพราะพวกเขาได้ค้นพบ “ญาณวิทยา” แบบใหม่ที่ไม่เคยมีใครรู้จักมาก่อน</p>
+      <p>มันคือ “ญาณวิทยา” ที่เป็นทั้งวิภาษวิธี ปรัชญา การเมือง สังคมและจริยธรรม ซึ่งเป็นแนวคิดที่ต่อต้านความหยุดนิ่ง พวกเขาได้เติมสิ่งใหม่ๆ เข้าไปในโลกความคิดของอิสลามมากมายด้วย “กระบวนทัศน์แบบวิภาษวิธี” ที่พัฒนาตลอดเวลา แม้ว่าสุดท้ายพวกเขาจะถูกล้อมปราบและกวาดล้างไปตั้งแต่ศตวรรษที่ 3 ฮิจเราะฮ์ก็ตาม</p>
+      <h2 class="article-h2">เมื่อสติปัญญานำไปสู่ข้อชี้ขาดที่ก้าวหน้า</h2>
+      <p>และก็ต้องขอบคุณ “ทฤษฎี” ที่ว่า “สติปัญญาสามารถแยกแยะดี-ชั่วได้เอง” นี่แหละ ที่ทำให้เกิด “แนวคิด” และ “ข้อชี้ขาด” ทางนิติศาสตร์ (ฟิกฮ์) ที่ “ก้าวหน้า” มากๆ ซึ่งมันแตกต่างไปจากแนวคิดกระแสหลักที่เจอกันในตำราฟิกฮ์ทั่วไป</p>
+      <p>“รากฐาน” ของแนวคิดเหล่านี้ก็คือการให้ความสำคัญกับ “ประโยชน์สาธารณะ” (<span class="ar-inline" lang="ar" dir="rtl">المصالح العامة</span>), “คุณค่าแห่งความยุติธรรม” (<span class="ar-inline" lang="ar" dir="rtl">قيم العدالة</span>), “ความเท่าเทียม” (<span class="ar-inline" lang="ar" dir="rtl">المساواة</span>) และ “การเคารพผู้อื่น” (<span class="ar-inline" lang="ar" dir="rtl">احترام الآخر</span>) ตัวอย่างที่ล้ำมากในยุคสมัยนั้นคือ ท่านอบูบักร อัลอะศ็อม และท่านอิบนุ อุลัยยะฮ์ ทั้งสองท่านนี้มีทัศนะว่า “ค่าสินไหมทดแทน” (ดียะฮ์) ของผู้หญิงต้องเท่ากับของผู้ชาย ซึ่งขัดแย้งกับสำนักฟิกฮ์ยุคคลาสสิกทั้งหมดที่บอกว่าของผู้หญิงคือครึ่งหนึ่งของผู้ชาย</p>
+      <p>และพวกท่านยังเห็นว่า “การแต่งงานกับเด็กหญิง” (ที่ยังไม่บรรลุนิติภาวะ) ถือว่า “ไม่เป็นที่อนุมัติ”</p>
+      <p>ท่านษุมามะฮ์ บิน อัลอัชรัส มีความเห็นว่าท่านไม่ยอมรับเรื่อง “การจับเชลยศึกมาเป็นทาส” ท่านอ้างหลักฐานจากอัลกุรอาน สูเราะฮ์มุฮัมมัด อายะฮ์ที่ 4 ที่ว่า</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">فَإِمَّا مَنًّا بَعْدُ وَإِمَّا فِدَاءً</p>
+      </div>
+      <p>{ดังนั้น เมื่อจับเชลยได้ ก็จงปล่อยพวกเขาเป็นอิสระ หรือไม่ก็เรียกค่าไถ่}</p>
+      <p>ท่านตีความว่า อัลกุรอานให้แค่ 2 ทางเลือกนี้เท่านั้น ไม่มีทางเลือกที่สามคือการเอามาเป็นทาส และยังมีตัวอย่างอีกมากที่ถูกบันทึกไว้</p>
+      <p>ทั้งหมดนี้เป็น “หลักฐาน” ที่แสดงให้เห็นว่า ชาวมุอ์ตะซิละฮ์นั้น “เปิดกว้าง” ต่อตัวบท และใช้ “สติปัญญาเป็นตัวชี้ขาด” พวกเขาถึงขั้นที่ว่า “หลักฐานทางสติปัญญา” ต้อง “มาก่อน” หลักฐานทาง “ศาสนา” เช่น ตัวบทอัลกุรอาน</p>
+      <p>ไม่ใช่เพราะพวกเขาคิดว่าสติปัญญาคือผู้ออกกฎหมายเอง และไม่ใช่เพราะคิดว่าสติปัญญากับศาสนาขัดแย้งกัน แต่เป็นเพราะพวกเขามองว่าสติปัญญาและศาสนา ทั้งคู่ “มีที่มาเดียวกัน” คือมาจากอัลลอฮ์ อย่างที่ท่านกอฎีอับดุลญับบารได้กล่าวไว้ว่า</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ليس في القرآن إلا ما يوافق طريقة العقل</blockquote>
+      <p class="ar-translation">“ไม่มีอะไรในอัลกุรอานเลย นอกจากสิ่งนั้นจะต้องสอดคล้องกับวิถีแห่งสติปัญญา”</p>
+      <p>“ญาณวิทยาเชิงจริยธรรม” หรือทฤษฎีความรู้ด้านจริยธรรมของมุอ์ตะซิละฮ์จึงสมบูรณ์และลึกซึ้ง ชนิดที่หาไม่ได้ในสำนักคิดเทววิทยา (กะลาม) อื่นๆ โดยเฉพาะอย่างยิ่งเมื่อเทียบกับสำนักคิดอัชอะรียะฮ์ ผู้ซึ่งเคยเป็นมุอ์ตะซิละฮ์มาก่อน ก่อนที่จะหันหลังให้กับหลักการของมุอ์ตะซิละฮ์</p>
+      <p>ชาวมุอ์ตะซิละฮ์ให้ความสำคัญกับธรรมชาติเชิงจริยธรรมเป็นอย่างมาก พวกเขาดึงมันเข้าไปเป็นแกนกลางของประเด็นปัญหาทางโลกแทบทุกเรื่องที่เกี่ยวกับชีวิตและความเป็นจริงของมนุษย์ ซึ่งนั่นคือสิ่งที่ทำให้มุอ์ตะซิละฮ์กลายเป็นกระแสความคิดที่มีความเอนเอียงไปทางจริยธรรมอย่างเข้มข้น</p>
+      <p>ในบทความสั้นๆ นี้ เราจะมาดูกันว่ามุอ์ตะซิละฮ์เชื่อมโยงประเด็นปัญหาทางเศรษฐกิจ สังคมและการเมืองเข้ากับคุณค่าทางจริยธรรมที่สูงส่งได้อย่างไร แม้ว่าเรื่องเหล่านี้จะต้องไปพัวพันกับเรื่องเร้นลับ ซึ่งเป็นรากฐานของศรัทธาและความยำเกรงก็ตาม</p>
+      <h2 class="article-h2">ประเด็นปัญหาทางเศรษฐกิจ</h2>
+      <p>แค่เราดู 2 ประเด็นนี้คือ ปัจจัยยังชีพ (ริสกี) และราคาสินค้า นั่นก็เป็นหลักฐานชั้นดีที่แสดงถึงจิตวิญญาณนักวิพากษ์ที่มุอ์ตะซิละฮ์มี และมันยังแสดงถึงความกล้าหาญทางปัญญาที่ไม่เคยมีมาก่อนในยุคสมัยนั้น</p>
+      <p>เพราะอะไร? เพราะนั่นคือ “เรื่องต้องห้าม” มันเป็นเรื่องที่ไปแตะกับสิ่งเร้นลับและกอฎอ-กอดัร (การกำหนดสภาวะ) ซึ่งเป็นหลักศรัทธา</p>
+      <p><strong>1. ประเด็นเรื่องริสกี (ปัจจัยยังชีพ)</strong></p>
+      <p>ดังกล่าวนี้คือประเด็นเศรษฐกิจโดยตรง แต่ชาวมุอ์ตะซิละฮ์กลับเอาแง่มุมทางจริยธรรมมาเป็น “รัฐธรรมนูญ” ที่ “คุม” ทิศทางความเชื่อ (อะกีดะฮ์) ในเรื่องนี้ พวกเขาสร้างจริยธรรมให้กับประเด็นเหล่านี้ โดยผูกมันเข้ากับอะกีดะฮ์ เพื่อสร้างกฎเกณฑ์ทางคุณค่าและศีลธรรมที่สูงส่ง ซึ่งทำให้พวกเขาโดดเด่นออกมาจากสำนักคิดเทววิทยาอื่นๆ</p>
+      <p>ทีนี้ พอเราหันมาดูฝั่งอัชอะรียะฮ์บ้าง เราจะเห็นเลยว่าท่านอิหม่ามอบุลหะสัน อัลอัชอะรีย์ (ผู้ก่อตั้ง) ยืนยันว่า ริสกี (ปัจจัยยังชีพ) ทั้งหมดมาจากอัลลอฮ์ ไม่ว่ามันจะเป็นของหะลาล (ถูกกฎหมาย) หรือหะรอม (ผิดกฎหมาย) ก็ตาม พูดง่ายๆ คือ ในมุมมองของอัชอะรียะฮ์ เงินหะรอม เช่น เงินขโมยมา เงินสินบน ก็คือริสกีเหมือนกัน ไม่ต่างจากเงินหะลาลเลย</p>
+      <p>ซึ่งทัศนะแบบนี้ ถ้ามองดีๆ มันไม่ได้อยู่บนกรอบจริยธรรม เพราะมันกลายเป็นการเปิดประตูให้คนอ้างหรือหาเหตุผลเข้าข้างตัวเองเพื่อไปหาเงินหะรอมได้ง่ายขึ้น ก็แค่พูดว่า “เอาน่า ริสกีทั้งหมดก็มาจากอัลลอฮ์นั่นแหละ”</p>
+      <p>และนั่นคือจุดที่มุอ์ตะซิละฮ์ไม่เห็นด้วยอย่างแรง พวกเขาปฏิเสธที่จะเรียกเงินหะรอมว่า “ริสกี” เหตุผลง่ายๆ ตามหลักดี-ชั่วด้วยสติปัญญาของพวกเขาก็คือ ของหะรอมมันเลว และอัลลอฮ์ไม่ทำสิ่งที่เลวและไม่ต้องการมันด้วย</p>
+      <p>แล้วมุอ์ตะซิละฮ์ “นิยาม” มันอย่างไร? พวกเขา “แบ่ง” ทรัพย์สินที่มนุษย์หามาได้เป็น 2 ด้านชัดเจน ด้านที่ 1 คือด้านที่ถูกกฎหมาย ไม่หะรอม ไม่คลุมเครือ ซึ่งอันนี้แหละที่เขาเรียกว่าริสกี ส่วนด้านที่ 2 คือด้านที่หะรอม อันนี้เขาไม่เรียกว่าริสกี แต่เขาจะเรียกมันตามชื่อที่ได้มันมา เช่น เงินขโมย เงินยักยอก เงินสินบน เงินจากการกักตุน เงินที่ใช้อิทธิพลได้มา ฯลฯ</p>
+      <p>นั่นแสดงให้เห็นว่ามุอ์ตะซิละฮ์ซีเรียสมากกับการเรียกทุกอย่างให้ตรงชื่อ และไม่เล่นคำหรือไม่ใช้คำพูดสวยๆ มาเป็นข้ออ้างให้กับการใช้อำนาจกดขี่ และแนวคิดแบบ “ทุกอย่างถูกกำหนดไว้แล้ว” ซึ่งการเรียกให้ชัดแบบนี้ มันคืออาวุธที่ดีในการต่อสู้กับการคอร์รัปชันและการปล้นของพวกที่อยู่บนหอคอยงาช้าง ที่มักแอบอ้างทำในนามของรัฐ</p>
+      <p><strong>หลักฐานจากปราชญ์ของมุอ์ตะซิละฮ์</strong></p>
+      <p>ท่านกอฎีอับดุลญับบารกล่าวว่า</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الأرزاق كلها كأنها من جهة الله، فهو الذي خلقها وجعلها، حيث يمكن الانتفاع بها، فهو الرازق حقيقة، وإذا وصف الواحد منا، فيقال: رزق الأمير جنده، والسلطان رعيته، كان على نوع من التوسع والمجاز</blockquote>
+      <p class="ar-translation">“ริสกีทั้งหมดมาจากอัลลอฮ์นั่นแหละ ท่านคือผู้สร้างมัน แต่ถ้าเราพูดว่าเจ้าเมืองให้ริสกีแก่ทหารน่ะ นั่นมันเป็นแค่การเปรียบเปรยเฉยๆ (หมายความว่าริสกีจริงๆ ต้องดี แต่อันที่คนให้กันมันอาจไม่ดีก็ได้)”</p>
+      <p>อัลมุห์ซิน อัลญุชะมีกล่าวว่า</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الرزق مال ينتفع به، وليس لأحد منعه، ولا يكون إلا حلال، والحرام لا يكون رزقا</blockquote>
+      <p class="ar-translation">“ริสกีคือทรัพย์สินที่มีประโยชน์ และต้องเป็นหะลาลเท่านั้น ของหะรอมไม่เรียกว่าริสกี”</p>
+      <p>อัลกอเสม อัรร็อสสีบอกว่า การทำมาค้าขายในยุคที่กฎหมายพัง ยุคที่เงินของคนอ่อนแอ (เด็กกำพร้า หญิงม่าย) ถูกปล้นไป มันไม่เหมือนกับการทำมาค้าขายในยุคที่ผู้ปกครองยุติธรรม คือเงินในยุคเผด็จการมันปนเปื้อนความชั่วร้ายไปแล้ว ซึ่งสงครามนี้มีการเมืองซ่อนอยู่ และดูเหมือนว่าสงครามการถกเถียงเรื่องริสกีนี้ มันไม่ได้เป็นแค่เรื่องหลักการศรัทธาล้วนๆ แต่มันมีเป้าหมายทางการเมืองซ่อนเร้นอยู่</p>
+      <p><strong>ระหว่างการลงมือทำกับการนอนรอ</strong></p>
+      <p>ข้อดีของมุมมองแบบมุอ์ตะซิละฮ์ก็คือ มันสอนว่ามนุษย์ต้องขยัน สู้ และทำงานเพื่อให้ได้มาซึ่งริสกีหะลาล ไม่ใช่นอนรอแล้วอ้างวลีติดปากที่มาจากกลุ่มญับบะรียะฮ์ที่เชื่อว่าทุกอย่างถูกกำหนด 100%</p>
+      <p>ท่านกอฎีอับดุลญับบารเรียกพวกขี้เกียจที่อ้างแบบนี้ว่าพวกสมองทึบ เพราะมุอ์ตะซิละฮ์ผูกเรื่องริสกีไว้กับเหตุและผล คุณต้องพยายามหา เหมือนกับที่คุณอยากได้ลูกก็ต้องมีเพศสัมพันธ์ อยากได้พืชผลก็ต้องหว่านเมล็ด อยากหายป่วยก็ต้องกินยา ในมุมมองนี้ ริสกีจะเพิ่มเมื่อขยัน และจะลดเมื่อขี้เกียจ</p>
+      <p><strong>2. ประเด็นเรื่องราคาสินค้า</strong></p>
+      <p>มุอ์ตะซิละฮ์มองว่า ของถูกหรือแพงนั้นบางทีก็โทษอัลลอฮ์ได้ บางทีก็ต้องโทษมนุษย์ (ผู้ปกครอง) โดยแยกแยะว่า กรณีที่โทษอัลลอฮ์ได้คือถ้าของมันแพงเพราะผลผลิตน้อยด้วยเหตุสุดวิสัย เช่น ศัตรูพืช อากาศแย่ อันนี้มาจากอัลลอฮ์ ส่วนกรณีที่โทษอัลลอฮ์ไม่ได้ ต้องโทษคน คือถ้าผู้ปกครองไปบังคับให้คนขายของในราคาที่คุมไว้ หรือที่เรียกว่าการคุมราคา อันนี้ไม่ใช่มาจากอัลลอฮ์แล้ว</p>
+      <p>มุอ์ตะซิละฮ์มองว่า การคุมราคาแบบนี้ “ทำได้” ตราบใดที่มันเป็นประโยชน์ต่อส่วนรวม แต่ถ้าไม่ เช่น คุมราคาเพื่อเอื้อนายทุน นั่นคือความอธรรมที่มาจากมนุษย์ ไม่ใช่มาจากอัลลอฮ์ เพราะอัลลอฮ์ไม่พอใจความอธรรมและความเลว</p>
+      <h2 class="article-h2">มาตรฐานทางสังคม</h2>
+      <p>ถ้าจะพูดถึงประเด็นสังคม “หลักการแห่งความเท่าเทียม” คือสิ่งที่ชาวมุอ์ตะซิละฮ์เน้นย้ำมากที่สุด ซึ่งก็เป็นเรื่องปกติ เพราะมันคือสิ่งที่อัลกุรอานก็ชี้ไว้แล้ว ในสูเราะฮ์อัลหุญุรอต อายะฮ์ที่ 13 ว่า</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا ۚ إِنَّ أَكْرَمَكُمْ عِندَ اللَّهِ أَتْقَاكُمْ ۚ إِنَّ اللَّهَ عَلِيمٌ خَبِيرٌ</p>
+      </div>
+      <p>{โอ้มนุษยชาติทั้งหลาย แท้จริงเราได้สร้างพวกเจ้ามาจากเพศชายและเพศหญิง และเราได้ทำให้พวกเจ้าเป็นเผ่าพันธุ์และตระกูล เพื่อพวกเจ้าจะได้ “รู้จักกัน” แท้จริงผู้ที่มีเกียรติที่สุดในหมู่พวกเจ้า ณ ที่อัลลอฮ์ คือผู้ที่ยำเกรงที่สุด}</p>
+      <p>ด้วยเหตุนี้ ชาวมุอ์ตะซิละฮ์จึงวิพากษ์วิจารณ์การแบ่งแยกและการเลือกปฏิบัติทุกรูปแบบ การที่มนุษย์ถูกแบ่งเป็นเผ่าพันธุ์ ตระกูล หรือเชื้อชาติที่ต่างกันนั้น มันไม่สามารถถูกนำมาใช้เป็นข้ออ้างในการบอกว่าใครดีกว่าใครหรือเลือกปฏิบัติได้เลย แต่ในทางกลับกัน มุอ์ตะซิละฮ์ใช้ความแตกต่างนั้นแหละเป็นประตูไปสู่การทำความรู้จักกัน และการพบปะกันแบบที่ในอายะฮ์กุรอานบอกไว้</p>
+      <p>อบู อุษมาน อัลญาฮิซ ได้เขียนไว้ในสาส์นอันโด่งดังของท่านที่ชื่อ “ฟัครุสสูดาน อะลัลบีฎาน” (การโอ้อวดของคนผิวดำต่อคนผิวขาว / <span class="ar-inline" lang="ar" dir="rtl">فخر السودان على البيضان</span>) ว่า ท่านปฏิเสธการอ้างว่าคนผิวขาวดีกว่าคนผิวดำในทุกมิติ ไม่แค่นั้น ท่านยังวิจารณ์การจัดลำดับชั้นโดยอิงจากชนชั้นทางสังคมหรือตำแหน่งหน้าที่การงานอีกด้วย โดยบอกว่าไม่ว่าจะเป็นสถานะทางสังคมที่สูงส่งหรือตำแหน่งที่ใหญ่โต มันก็ไม่สามารถถูกนำมาใช้เป็นมาตรฐานในการวัดว่าใครดีกว่าใครได้</p>
+      <p>และในจุดยืนที่ก้าวหน้าของท่าน มันตอกย้ำว่าการที่คนเราจะเกิดมาเป็นเชื้อชาติอะไรน่ะ มนุษย์ไม่ได้เลือก อัลลอฮ์ทรงสามารถทำให้บ่าวของพระองค์เป็นอาหรับหรืออะญัม (ไม่ใช่อาหรับ) เป็นกุเรชหรือแอฟริกันผิวดำก็ได้ เหมือนกับที่ทรงทำให้คนเป็นผู้ชายหรือผู้หญิง ซึ่งหลักการนี้มันคือการรื้อแนวคิดเรื่องชาตินิยมเผ่าพันธุ์ทิ้งไปเลย</p>
+      <p><strong>ความยุติธรรม เสาหลักของสังคม</strong></p>
+      <p>รองจากความเท่าเทียมก็คือหลักการแห่งความยุติธรรม นี่คือเสาหลักทางจริยธรรมที่ค้ำจุนรัฐทุกรัฐอยู่ และเป็นรากฐานของระบบการปกครองและสังคมทั้งหมด ท่านกอฎีอับดุลญับบารนิยามความยุติธรรมว่า</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يذكر ويراد به الفعل، ويذكر ويراد به الفاعل، فإذا وصف به الفعل فالمراد به كل فعل حسن يفعله الفاعل، لينفع به غيره أو ليضره... فهو توفير حق الغير واستيفاء الحق منه</blockquote>
+      <p class="ar-translation">“มันคือการกระทำ ซึ่งหมายถึงทุกการกระทำที่ดีที่คนๆ หนึ่งทำเพื่อให้ประโยชน์หรือปกป้องผู้อื่น สรุปสั้นๆ มันคือการส่งมอบสิทธิ์ของผู้อื่นให้เขา และการรักษาสิทธิ์ของตัวเองจากเขา”</p>
+      <p>พูดง่ายๆ ก็คือ ชาวมุอ์ตะซิละฮ์มองความยุติธรรมจากสองมุม ไม่ใช่มุมเดียว ประโยชน์ของผู้อื่นต้องเท่าเทียมกับประโยชน์ส่วนตน และนั่นคือ “จุดสูงสุด” ของการเข้าใจ “ความยุติธรรม” เลย</p>
+      <p>มุอ์ตะซิละฮ์มองว่าอัลลอฮ์ยุติธรรม พระองค์ไม่อธรรมและไม่พอใจสิ่งเลวร้าย และนี่คือข้อแตกต่างชัดๆ ระหว่างมุอ์ตะซิละฮ์กับพวกญับบะรียะฮ์และอัชอะรียะฮ์ (ที่มองว่าอัลลอฮ์สร้างการกระทำของมนุษย์) ไม่ต้องสงสัยเลยว่ามุมมองของพวกเขาต่อความยุติธรรมนั้น มันเป็นมุมมองทางสังคม การเมืองและจริยธรรม ก่อนที่มันจะเป็นมุมมองทางศาสนาด้วยซ้ำ และนั่นคือจุดเด่นที่ทำให้มัสฮับของมุอ์ตะซิละฮ์เชื่อมโยงกับความเป็นจริงที่เปลี่ยนแปลงตลอดเวลา มันจึงเป็นมัสฮับที่เคลื่อนไหว พัฒนา และมีมิติที่เกาะติดกับชีวิตจริงอยู่เสมอ</p>
+      <h2 class="article-h2">มาตรฐานทางการเมือง</h2>
+      <p>แนวคิดของมุอ์ตะซิละฮ์ก็คือ เมื่อรัฐตั้งอยู่บนเสาหลักสองต้น คือความเท่าเทียมและความยุติธรรมแล้ว แน่นอนว่าการปกครองแบบเผด็จการจะต้องไม่มีที่ยืนในระบบการเมืองและสังคมนั้น และเหตุผลที่ชาวมุอ์ตะซิละฮ์ปฏิเสธอำนาจและนโยบายของรัฐอุมะวิยะฮ์ก็ไม่ใช่เรื่องอื่นเลย แต่เป็นเพราะความเผด็จการของบรรดาเคาะลีฟะฮ์ของพวกเขานั่นเอง</p>
+      <p><strong>ญับบะรียะฮ์ เครื่องมือทางการเมืองของเผด็จการ</strong></p>
+      <p>มุอ์ตะซิละฮ์วิพากษ์ว่า พวกอุมะวิยะฮ์ใช้ประโยชน์จากหลักการเรื่อง “อัลญับร์” (แนวคิดที่ว่าทุกอย่างถูกกำหนดไว้แล้ว 100% มนุษย์ไม่มีเจตจำนงเสรี) และผลักดันมันจนกลายเป็นลัทธิที่ “ครอบงำ” สังคม เพราะอะไร? เพราะการเชื่อใน “ญับร์” คือประตูสู่การยอมจำนนต่อความอธรรม มันคือ “ข้ออ้างชั้นดี” ให้กับความเลวร้ายของผู้ปกครอง</p>
+      <p>เพราะพวกเผด็จการและลิ่วล้อที่คอยประจบสอพลอ ก็จะเที่ยวป่าวประกาศว่า “ที่มันเลวร้ายแบบนี้ ก็เพราะมันถูกกำหนดมาแล้ว ถ้าอัลลอฮ์ไม่พอใจ เดี๋ยวมันก็หายไปเองแหละน่า!” นั่นคือตรรกะที่ทำให้คนไม่กล้าลุกขึ้นสู้และวิพากษ์วิจารณ์ ชาวมุอ์ตะซิละฮ์ยังถึงขั้นเปรียบเปรยพวกเผด็จการว่าเป็น “ฟิรเอาน์คนหนึ่งในบรรดาฟิรเอาน์ทั้งหลาย”</p>
+      <p><strong>เผด็จการอยู่ได้เพราะลิ่วล้อ</strong></p>
+      <p>ชาวมุอ์ตะซิละฮ์ยังมองทะลุไปอีกว่า อำนาจของผู้ปกครองอธรรมนั้นมันจะตั้งตระหง่านอยู่ไม่ได้เลย ถ้าไม่มีพวกลิ่วล้อที่คอยสนับสนุนความอธรรมนั้น ดังนั้น ถ้าลิ่วล้อพวกนี้หนีหายและลอยแพเจ้านาย รัฐเผด็จการของพวกเขาก็จะล่มสลาย</p>
+      <p>เรื่องนี้ ท่านอัซซะมัคชะรีย์ ปราชญ์มุอ์ตะซิละฮ์ผู้ยิ่งใหญ่ท่านหนึ่งถึงกับแนะนำเลยว่า ใครก็ตามที่ต้องเผชิญกับความอธรรมและเผด็จการ ก็จงอพยพหนีออกจากเมืองแห่งเผด็จการนั้นเสีย แม้ว่าท่านจะใช้ชีวิตอยู่ที่นั่นอย่างหรูหราหรือมีเกียรติก็ตาม เพราะอัลลอฮ์ไม่พอใจความอธรรมและเผด็จการ และพระองค์อาจจะทำลายล้างเมืองนั้นด้วยแผ่นดินไหวหรือไฟก็ได้</p>
+      <p>แม้มุมมองของท่านอัซซะมัคชะรีย์ตรงนี้จะออกแนว “เทศนา” ไปหน่อย แต่มันก็สะท้อนให้เห็นว่าชาวมุอ์ตะซิละฮ์ “ปฏิเสธเผด็จการ” ในทุกรูปแบบและด้วยทุกวิถีทางเท่าที่จะทำได้</p>
+      <p><strong>นายทุน เสาค้ำระบอบเผด็จการ</strong></p>
+      <p>และในมุมมองที่เฉียบแหลมและสำคัญมากๆ นั้น ท่านอิหม่ามยะห์ยา บิน อัลหุเซน ได้พูดถึงไว้ในหนังสือจดหมายว่าด้วยความยุติธรรมและเอกภาพของอัลลอฮ์ เกี่ยวกับบทบาทของพวกนายทุนที่พอใจกับระบอบเผด็จการ ท่านยะห์ยาบอกว่าคนพวกนี้แหละคือตัวการที่สร้างและเสริมความแข็งแกร่งให้กับระบบของเผด็จการ ด้วยการช่วยส่งเสริมเรื่องเงินและสนับสนุนระบบของมันด้วยการจ่ายภาษี หลักการคือ ทุกการสนับสนุนทางวัตถุและเศรษฐกิจ มันคือการช่วยให้เผด็จการสามารถกดขี่ข่มเหงต่อไปได้</p>
+      <p>ท่านอิหม่ามยะห์ยากล่าวว่า</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا كان الفقير على غير استواء، ثم دفع صاحب الزكاة إليه شيئا من المال فقد قواه على فسقه وفجوره وطغيانه، وكان شريكا له في عصيانه، كدأب الذين يعينون الظالمين ويقيمون دولتهم بزرعهم وتجارتهم</blockquote>
+      <p class="ar-translation">“ถ้าคนจนคนหนึ่งเป็นคนเลว แล้วคนรวยก็เอาซะกาตไปให้เขา มันก็เท่ากับคนรวยไปสนับสนุนเขาให้เลวและชั่วต่อไป และคนรวยก็จะกลายเป็นหุ้นส่วนในความผิดนั้นด้วย ซึ่งนี่มันตรรกะเดียวกับพวกที่ค้ำจุนพวกโกงกินและสร้างรัฐให้พวกมัน ด้วยการทำไร่และการค้าขายของพวกเขา”</p>
+      <p>“ถ้าไม่มี” พ่อค้าและชาวไร่ที่ยอมจ่ายส่วยหรือภาษี รัฐของพวกอธรรมก็ตั้งอยู่ไม่ได้ ท่านจึงอ้างอิงอัลกุรอาน สูเราะฮ์ฮูด อายะฮ์ที่ 113 มาสนับสนุนว่า</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَلَا تَرْكَنُوا إِلَى الَّذِينَ ظَلَمُوا فَتَمَسَّكُمُ النَّارُ</p>
+      </div>
+      <p>{และจงอย่าเอนเอียงไปหาบรรดาผู้อธรรม มิเช่นนั้นไฟนรกจะสัมผัสพวกเจ้า}</p>
+      <p>ดังนั้น ในสายตามุอ์ตะซิละฮ์ “ประชาชนทั่วไป” ที่ “ยอม” ต่อความอธรรม ที่ก้มหัวให้กับเผด็จการ พวกเขาก็คือหุ้นส่วนที่ทำให้อำนาจนี้ยังคงอยู่ และเพิ่มความเลวร้ายยิ่งขึ้นไปอีก แล้วลองคิดดูว่ามันจะเลวร้ายขนาดไหน ถ้าพวกคนรวยของพวกเขาเป็นคนปั๊มเงินสนับสนุนรัฐเผด็จการนั้นเสียเอง</p>
+
+      <section class="bibliography-section">
+        <h2 class="article-h2">บรรณานุกรม</h2>
+        <ul lang="ar" dir="rtl">
+          <li>أبو الحسن الأشعري، الإبانة عن أصول الديانة</li>
+          <li>الأشعري، مقالات الإسلاميين</li>
+          <li>الجاحظ، الرسائل</li>
+          <li>الجاحظ، العثمانية</li>
+          <li>الزمخشري، أطواق الذهب</li>
+          <li>القاضي عبد الجبار بن أحمد، فضل الاعتزال وطبقات المعتزلة</li>
+          <li>القاضي عبد الجبار، شرح الأصول الخمسة</li>
+          <li>القاضي عبد الجبار، المغني</li>
+          <li>المحسِن الجُشَمي، تحكيم العقول في تصحيح الأصول</li>
+          <li>الشهرستاني، الملل والنحل</li>
+          <li>عادل العوا، المعتزلة والفكر الحُرّ</li>
+          <li>القاسم الرسي، رسالة الأصول الخمسة، ضمن رسائل العدل والتوحيد</li>
+          <li>يحيى بن الحسين، رسائل العدل والتوحيد</li>
+        </ul>
+      </section>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). จริยธรรมทางเศรษฐกิจ สังคม และการเมืองในมุมมองของมุอ์ตะซิละฮ์. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/mutazila-economic-and-political-ethics.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
