@@ -347,6 +347,10 @@ details[open] .legend-summary::after { content:'−'; }
 .leg-line { width:30px; height:0; flex-shrink:0; }
 .leg-solid { border-top:2px solid var(--text-dim); }
 .leg-dashed { border-top:2px dashed var(--text-dim); }
+.leg-glossary { grid-column:1 / -1; border-top:1px solid var(--rule); padding-top:16px; margin-top:4px; }
+.glossary { display:grid; grid-template-columns:auto 1fr; gap:5px 16px; margin-top:4px; font-family:var(--thai); font-size:13px; align-items:baseline; }
+.glossary dt { font-weight:600; color:var(--paper); white-space:nowrap; }
+.glossary dd { margin:0; color:var(--text-mute); line-height:1.7; }
 
 /* ── Disclaimer ─────────────────────────────────────────── */
 .disclaimer { border-top:1px solid var(--rule); padding:48px 0 80px; }
@@ -357,6 +361,8 @@ details[open] .legend-summary::after { content:'−'; }
 .disc-num { font-family:var(--serif); font-weight:600; color:var(--accent); font-size:15px; flex-shrink:0; }
 .disc-text { font-family:var(--thai); font-size:14px; color:var(--text-dim); line-height:1.85; text-align:left; word-break:break-word; }
 .disc-text strong { color:var(--paper); font-weight:600; }
+.prov-sha { font-family:var(--ui); font-size:12px; background:var(--ink-3); border:1px solid var(--rule); border-radius:4px; padding:1px 7px; color:var(--accent-deep); }
+html.dark-mode .prov-sha { color:var(--gold-bright); }
 
 /* ── Reveal (Rule 35) ───────────────────────────────────── */
 [data-reveal] { opacity:0; transform:translateY(26px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
@@ -533,6 +539,20 @@ details[open] .legend-summary::after { content:'−'; }
           <div class="leg-item"><span class="status-badge sb-scholarship">ตรวจทานวิชาการแล้ว</span></div>
           <div class="leg-item"><span class="status-badge sb-demo">ตัวอย่าง</span></div>
         </div>
+        <div class="leg-glossary">
+          <div class="leg-group-title">อภิธานศัพท์</div>
+          <dl class="glossary">
+            <dt>สะมาอฺ</dt><dd>การฟัง/รับหะดีษจากครูโดยตรง</dd>
+            <dt>อิญาซะฮ์</dt><dd>การอนุญาตให้สืบทอด/รายงานวิชาต่อ</dd>
+            <dt>มุสัลซัล</dt><dd>สายที่ผู้รายงานทุกชั้นมีลักษณะ/ถ้อยคำตรงกันต่อเนื่อง</dd>
+            <dt>ษิเกาะฮ์</dt><dd>ผู้รายงานที่เชื่อถือได้ (ความจำดี + เที่ยงธรรม)</dd>
+            <dt>เศาะดูก</dt><dd>สัตย์จริง ความจำรองจากษิเกาะฮ์เล็กน้อย</dd>
+            <dt>มักบูล</dt><dd>ยอมรับได้เมื่อมีสายอื่นหนุน</dd>
+            <dt>เฎาะอีฟ</dt><dd>อ่อน ไม่ถึงเกณฑ์การรับ</dd>
+            <dt>มัจญ์ฮูล</dt><dd>ไม่ทราบสถานะ/ประวัติของผู้รายงาน</dd>
+            <dt>ฆ็อป (ช่วงขาด)</dt><dd>จุดที่สายการสืบทอดไม่ต่อเนื่อง</dd>
+          </dl>
+        </div>
       </div>
     </details>
   </div>
@@ -548,7 +568,7 @@ details[open] .legend-summary::after { content:'−'; }
       <div class="section-eyebrow">หมายเหตุ</div>
     </div>
     <div data-reveal data-delay="1">
-      <div class="disc-card"><div class="disc-num">ก</div><div class="disc-text">ข้อมูลนำเข้าจากโครงการ <strong>Transmission-Network</strong> (สายอิญาซะฮ์ curate จากตำราที่ระบุแหล่ง) — ทุกสายตามรอย provenance ได้</div></div>
+      <div class="disc-card"><div class="disc-num">ก</div><div class="disc-text">ข้อมูลนำเข้าจากโครงการ <strong>F4UC/-Transmission-Network</strong> (สายอิญาซะฮ์ curate จากตำราที่ระบุแหล่ง) — ทุกสายตามรอย provenance ได้ · pin ที่ commit <code class="prov-sha">a12aed3</code> · อัปเดตข้อมูลทำผ่าน PR เปลี่ยน SHA แล้วรัน validate_chains ซ้ำทุกครั้ง</div></div>
       <div class="disc-card"><div class="disc-num">ข</div><div class="disc-text">การประเมินสถานะผู้รายงานอ้างตามแหล่งที่ระบุ <strong>ไม่ใช่คำตัดสินสุดท้าย</strong></div></div>
       <div class="disc-card"><div class="disc-num">ค</div><div class="disc-text"><strong>ประมวลผลบนเครื่องผู้ใช้ทั้งหมด ไม่มีการส่งข้อมูลออก</strong> — ทุกไฟล์โหลดจากเซิร์ฟเวอร์ของเว็บไซต์นี้เท่านั้น</div></div>
       <div class="disc-card"><div class="disc-num">ง</div><div class="disc-text"><strong>นี่คือแบบจำลอง (MOCKUP)</strong> รอเจ้าของอนุมัติแบบก่อน build เต็ม</div></div>
@@ -581,11 +601,10 @@ details[open] .legend-summary::after { content:'−'; }
 <!-- Header/footer + scroll-reveal — Rule 26 -->
 <script src="../../main.js?v=20260610a"></script>
 
-<!-- Graph libraries (cdnjs) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.30.2/cytoscape.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
-<!-- cytoscape-dagre is not published on cdnjs; use the official npm build via jsDelivr -->
-<script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+<!-- Graph libraries — self-hosted (no external CDN / supply-chain dep), version pinned in filename. See vendor/README.md -->
+<script src="vendor/cytoscape-3.30.2.min.js"></script>
+<script src="vendor/dagre-0.8.5.min.js"></script>
+<script src="vendor/cytoscape-dagre-2.5.0.min.js"></script>
 
 <script>
 /* =========================================================
