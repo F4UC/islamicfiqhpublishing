@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>มรดกของวิกลจริตชนแห่งอาหรับ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="มรดกทางวรรณกรรมและญาณวิทยาว่าด้วย “วิกลจริตชนผู้มีสติปัญญา” (อุกอลาอ์ อัลมะญานีน) ในวัฒนธรรมอาหรับ-อิสลาม ตั้งแต่อัลญาฮิซ อิบนุลเญาซีย์ ถึงอัลเฆาะซาลี และความใส่ใจของมุอ์ตะซิละฮ์">
+<meta name="keywords" content="วิกลจริตชน, อุกอลาอ์ อัลมะญานีน, มุอ์ตะซิละฮ์, อัลญาฮิซ, อิบนุลเญาซีย์, ความวิกลจริต, ประวัติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="มรดกของวิกลจริตชนแห่งอาหรับ — Islamic Fiqh Publishing">
+<meta property="og:description" content="“จงรับเอาวิทยาทานจากริมฝีปากของคนวิกลจริต” มรดกของวิกลจริตชนผู้มีสติปัญญาในวัฒนธรรมอาหรับ-อิสลาม">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/the-wise-mad-in-arab-heritage.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="the-wise-mad-in-arab-heritage">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">มรดกของวิกลจริตชนแห่งอาหรับ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">رُفِعَ الْقَلَمُ عَنْ ثَلاَثَةٍ عَنِ النَّائِمِ حَتَّى يَسْتَيْقِظَ وَعَنِ الصَّبِيِّ حَتَّى يَحْتَلِمَ وَعَنِ الْمَجْنُونِ حَتَّى يَعْقِلَ</p>
+      </div>
+      <p class="ar-translation">“ปากกาแห่งการบันทึกบัญชีจะถูกยกขึ้น (ละเว้นการเอาผิด) จากบุคคลสามจำพวก จากผู้หลับใหลจวบจนกว่าเขาจะตื่น, จากเด็กน้อยจวบจนกว่าเขาจะเติบใหญ่บรรลุนิติภาวะ และจากวิกลจริตชนจวบจนกว่าเขาจะฟื้นคืนสติสัมปชัญญะและกลับมามีปัญญาอีกครั้ง”</p>
+      <p>(บันทึกโดยอบู ดาวูด หมายเลข 4403 รายงานจากอะลี บิน อบี ฏอลิบ เราะฎิยัลลอฮุอันฮุ; เศาะฮีฮ์)</p>
+      <p class="lead-text">ในหมู่ชาวอาหรับนั้น เป็นที่ประจักษ์กันดีว่า “วิกลจริตชน” ถูกจำแนกออกเป็นหลากหลายประเภท บางคนคือ “ผู้เลอะเลือน” (ผู้มีความบกพร่องทางสติปัญญา), บางคนคือ “ผู้ถูกแผดเผาด้วยน้ำดีดำ” (ผู้มีภาวะซึมเศร้าหดหู่), บางคนคือ “ผู้ถูกสิงสู่” (ผู้ถูกวิญญาณร้ายจากหมู่ญินและปีศาจรังควาน) และบางคนก็คือ “นักรัก” ผู้ซึ่งความลุ่มหลงได้เข้ามาจองจำและพรากสติสัมปชัญญะของเขาไป</p>
+      <p>แต่แพทย์แห่งยุคทองอย่างอัรรอซีย์ (เสียชีวิต ฮ.ศ. 311 / ค.ศ. 923) กลับมีทัศนะเชิงประจักษ์ที่ลุ่มลึกยิ่งกว่านั้น ท่านได้ขีดเส้นแบ่งอย่างชัดเจนระหว่างความเจ็บป่วยทางจิตใจบางประการ กับ “ความวิกลจริต” อย่างแท้จริง โดยชี้ให้เห็นว่า ไม่ใช่ทุกความบกพร่องที่รุมเร้าสติปัญญาของมนุษย์จะสมควรถูกตีตราว่าเป็นความวิกลจริต ดังที่ชาวบ้านทั่วไปมักทึกทักเอาเอง</p>
+      <p>ในห้วงยามที่เคาะลีฟะฮ์แห่งราชวงศ์อุมัยยะฮ์ นามว่า อัลวะลีด บิน อับดุลมะลิก (สิ้นพระชนม์ ฮ.ศ. 95 / ค.ศ. 715) ได้สถาปนาโรงพยาบาลแห่งแรกขึ้นในร่มเงาอิสลามเมื่อปลายศตวรรษที่ 1 แห่งฮิจเราะห์ (ต้นศตวรรษที่ 8 แห่งคริสตกาล) โดยครอบคลุมถึงการบริบาลผู้ป่วยทางจิตวิญญาณและจริต ดินแดนยุโรปกลับเพิ่งรู้จักสถานพยาบาลผู้ป่วยจิตเวชแห่งแรกเมื่อล่วงเข้าสู่ศตวรรษที่ 9 แห่งฮิจเราะห์ (ศตวรรษที่ 15 แห่งคริสตกาล) ผ่านการสร้างสถานพำนักสำหรับผู้ป่วยทางจิตแห่งแรกในฝรั่งเศส ซึ่งจำลองแบบมาจากบีมาริสตาน กอลาวูน ที่ถูกสร้างขึ้นในกรุงไคโรเมื่อปี ฮ.ศ. 683 (ค.ศ. 1284)</p>
+      <p>เป็นที่ประจักษ์ชัดว่า ชาวอาหรับมิได้พินิจปรากฏการณ์แห่งความวิกลจริตเพียงในมิติของการเยียวยาและการบริบาลเท่านั้น แต่พวกเขายังดำดิ่งลงไปขบคิดถึงมันในฐานะ “สภาวะทางญาณวิทยา” พวกเขาได้รังสรรค์ระบบระเบียบวิธีอันลุ่มลึกสุดหยั่งถึงเพื่อเฝ้าสังเกตการณ์ความวิกลจริต ทั้งยังรวบรวมร่องรอย บทกวี และวาทะของเหล่าวิกลจริตชนเอาไว้ พร้อมทั้งจำแนกแยกแยะอย่างวิจิตรบรรจง ระหว่างความวิกลจริตที่กัดกินสติปัญญาอันเนื่องมาจากความบกพร่องทางสติสัมปชัญญะ กับสภาวะที่โหมกระหน่ำจิตใจอันเกิดจากความสับสน, ภาพลวงตา, ภวังค์แห่งความปีติ, รักวิปโยค และความระทมทุกข์</p>
+      <p>สิ่งหนึ่งที่ชวนให้ตื่นตาตื่นใจในบทความที่เรากำลังนำพาไปนี้ คือความใส่ใจอันน่าพิศวงที่บรรดาบุคคลชั้นนำจากสำนักคิด “มุอ์ตะซิละฮ์” มีต่อสภาวะของวิกลจริตชน พวกเขาปรารถนาอย่างแรงกล้าที่จะเสวนาและทดสอบห้วงความคิดของคนเหล่านั้น ความน่าฉงนสนเท่ห์อยู่ตรงที่ว่า สำนักคิดมุอ์ตะซิละฮ์นั้นยึดมั่นในสติปัญญา (เหตุผลนิยม) เชิดชูเกียรติแห่งตรรกะ และรังเกียจเดียดฉันท์การลบเลือนตรรกะทางสติปัญญาอย่างถึงที่สุด</p>
+      <p>ซึ่งบางทีเราอาจไม่มีคำอธิบายใดต่อปรากฏการณ์นี้ได้ดีไปกว่าคำเฉลยของนักปราชญ์แห่งมุอ์ตะซิละฮ์ นามว่า อบู อุษมาน อัลญาฮิซ (เสียชีวิต ฮ.ศ. 255 / ค.ศ. 869) ซึ่งการศึกษาในครั้งนี้ได้เผยให้เห็นเป็นครั้งแรกเท่าที่เราทราบถึงคัมภีร์หรือตำราที่สาบสูญของท่านที่อุทิศให้แก่บรรดาวิกลจริตชนโดยเฉพาะ</p>
+      <p>อบู อุษมานมองว่า ความพิลึกพิลั่นที่แปลกแยกไปจากสสารแห่งสติปัญญานั้น กลับเป็นปุ๋ยชั้นดีที่หล่อเลี้ยงความคิดและดับกระหายความปรารถนาที่จะใคร่ครวญ ด้วยเหตุนี้ การคลุกคลีอยู่กับสภาวะอันน่าอัศจรรย์และแปลกประหลาดจึงนับเป็นหนึ่งในปัจจัยกระตุ้นให้เกิดการคิดวิเคราะห์ ซึ่งจริงแล้ว ไม่ใช่เพียงสำนักคิดมุอ์ตะซิละฮ์เท่านั้นที่มีทัศนะเช่นนี้ แต่ยังมีปรมาจารย์ด้านนิติศาสตร์อิสลามและปราชญ์ด้านหะดีษอีกมากมายที่เอาใจใส่ในการบันทึก ศึกษา และอนุรักษ์วาทะ บทกวี และเรื่องราวขบขันของวิกลจริตชน</p>
+      <p>ยิ่งไปกว่านั้น เรายังได้เฝ้ารอบทวิเคราะห์อันสำคัญยิ่งที่เหล่านักนิติศาสตร์และนักคิดมุสลิมได้นำเสนอต่อปรากฏการณ์ “วิกลจริตชนผู้มีสติปัญญา” โดยอธิบายถึงต้นสายปลายเหตุที่นำพาบางคนไปสู่สภาวะดังกล่าว นักคิดบางท่านลงความเห็นว่า สภาวะเช่นนี้ก่อตัวขึ้นจากการที่บุคคลเหล่านั้นหันหลังให้แก่ทางโลก หรือเลือกที่จะใช้ชีวิตอยู่บนปากเหวแห่งชีวิต, ดำรงตนเป็นผู้เฝ้ามองจากวงนอกที่คอยเย้ยหยันความเป็นไปรอบกาย และด้วยการละทิ้งและปลีกวิเวกจากรายละเอียดอันวุ่นวายของชีวิต จิตวิญญาณของพวกเขาจึงบริสุทธิ์ผุดผ่อง นำพามาซึ่งแรงดึงดูดทางจิตวิญญาณและจิตใจอันลึกซึ้ง</p>
+      <p>สภาวะเหล่านี้มิได้เรียกร้องให้มีการไล่ล่าหรือกระทำทารุณกรรมต่อพวกเขาแต่อย่างใด แต่กลับเรียกร้องให้พวกเขาถูกโอบกอดด้วยการดูแลอย่างใกล้ชิด เปี่ยมล้นด้วยความเข้าอกเข้าใจและเมตตาธรรม</p>
+      <p>ในขณะที่วัฒนธรรมอื่นมักมองผู้ป่วยจิตเวชเป็นดั่งอสุรกาย และมองความวิกลจริตเป็นสภาวะแห่งปีศาจร้ายที่จำต้องถูกกักขัง เนรเทศ และขจัดทิ้ง ดังที่นักคิดชาวฝรั่งเศส Michel Foucault (เสียชีวิต ฮ.ศ. 1415 / ค.ศ. 1984) ได้กล่าวไว้ในหนังสือ History of Madness ซึ่งเป็นการศึกษาประวัติศาสตร์ความวิกลจริตในตะวันตกยุคคลาสสิกที่สำคัญที่สุด</p>
+      <h2 class="article-h2">วิกลจริตชนผู้มีสติปัญญา คุรุในคราบคนบ้า</h2>
+      <p>บางทีสิ่งสำคัญที่สุดในการเปิดประตูสู่ความเข้าใจของชาวมุสลิมที่มีต่อปรากฏการณ์ความวิกลจริต และมุมมองที่พวกเขามีต่อกลุ่มชนผู้เสียจริต คือการทอดสายตาผ่านบริบทแห่งคัมภีร์อัลกุรอาน คำว่า “มัจญ์นูน” (วิกลจริต/คนบ้า) ปรากฏในคัมภีร์อัลกุรอานถึง 11 ครั้ง ซึ่งมักถูกใช้เป็นวาทกรรมเพื่อกล่าวหาและโจมตีบรรดาศาสดา โดยหลุดรอดออกมาจากปากของกลุ่มชนผู้ปฏิเสธสาส์นของพวกท่าน อิหม่ามอบุลกอซิม บิน ฮะบีบ อันนัยซาบูรีย์ (เสียชีวิต ฮ.ศ. 406 / ค.ศ. 1016) ได้วิเคราะห์สาเหตุที่บรรดาศาสดาถูกตราหน้าว่าวิกลจริตไว้ในหนังสือ “อุกอลาอ์ อัลมะญานีน” (วิกลจริตชนผู้มีสติปัญญา) ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">دعت الأمم الرسل مجانين لأنهم شقوا عصاهم فنابذوهم وأتوا بخلاف ما هم فيه</blockquote>
+      <p class="ar-translation">“เหตุที่ประชาชาติต่างๆ เรียกขานบรรดารอซูล (ศาสดาทูต) ว่าเป็นคนบ้า ก็เพราะพวกท่านได้ผ่าจารีตประเพณี ต่อต้านค่านิยมของพวกเขา และนำพาสิ่งที่ทวนกระแสสังคมมามอบให้”</p>
+      <p>นอกจากนี้ ในตำราที่รวมหะดีษเศาะฮีฮ์ของอัลบุคอรีย์และมุสลิม คำว่า “มัจญ์นูน” หรือประโยคที่ว่า “เขามีอาการวิกลจริต” ก็ปรากฏอยู่ถึง 21 ครั้ง</p>
+      <p>สิ่งแรกที่ดึงดูดความสนใจในมุมมองของชาวอาหรับที่มีต่อความวิกลจริตหรือสภาวะที่ใกล้เคียงกัน คือความอุดมสมบูรณ์ของ “ไวพจน์” (คำพ้องความหมาย) ทางภาษา นักวิชาการร่วมสมัยอย่างอะห์มัด อัลคุศูศีย์ ได้ตั้งข้อสังเกตไว้ในหนังสืออัลฮุมก์ วัลญุนูน ฟิตตุรอษ อัลอะเราะบีย์ (ความเขลาและความวิกลจริตในมรดกอาหรับ) ถึงความอเนกอนันต์ของคำศัพท์หมวดนี้ในพจนานุกรมลิซานุลอะร็อบ โดยพบว่ามีคำพ้องความหมายของความวิกลจริต (ญุนูน/มัจญ์นูน) ถึง 80 คำ ในขณะที่คำศัพท์แตกแขนงที่รากมาจากความโง่เขลามีมากถึงราว 400 คำ</p>
+      <p>และนั่นอาจเป็นแรงผลักดันให้ท่านอบู ฮัยยาน อัตเตาฮีดีย์ (เสียชีวิตหลัง ฮ.ศ. 400 / ค.ศ. 1010) ได้กล่าววาทะอันลุ่มลึกไว้ในหนังสืออัลอิมตาอ์ วัลมุอานะซะฮ์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن العقل بين أصحابه ذو عرض واسع، وبقدر ذلك يتفاضلون التفاضل الذي لا سبيل إلى حصره، وكذلك الجنون بين أهله ذو عرض واسع، وبحسب ذلك يتفاوتون التفاوت الذي لا مطمع في تحصيله. وكما أنه يبدر من العاقل بعض ما لا يتوقع إلا من المجنون؛ كذلك يبدر من المجنون بعض ما لا يتوقع إلا من العاقل، ولا يعتد بذلك ولا بهذا، أعني أن العاقل بذلك المقدار لا يرى مجنونا، والمجنون بذلك المقدار لا يسمى عاقلا</blockquote>
+      <p class="ar-translation">“สติปัญญาของมนุษย์นั้นมีช่วงกว้างมาก ผู้คนจึงต่างกันในระดับความฉลาดอย่างไม่มีทางจำกัดให้หมดได้ ความวิปลาสก็เช่นเดียวกัน มีช่วงกว้างไม่ต่างกัน ผู้คนจึงต่างกันในระดับความวิปลาสอย่างยากจะรวบรวมแจกแจงให้ครบ และเหมือนที่บางครั้งคนมีสติอาจแสดงอาการบางอย่าง ซึ่งเรามักคาดว่าจะพบได้ในคนเสียสติเท่านั้น คนเสียสติเองก็อาจแสดงบางสิ่ง ซึ่งเรามักคาดว่าจะพบได้ในคนมีสติเท่านั้นเช่นกัน แต่สิ่งเหล่านี้เพียงลำพัง ยังไม่พอจะใช้ตัดสินว่าใครเป็นอะไร คนมีสติไม่กลายเป็นคนบ้าเพียงเพราะอาการบางขณะ และคนบ้าก็ไม่กลายเป็นคนมีสติ เพียงเพราะมีแววแห่งเหตุผลบางคราว”</p>
+      <p>จากทฤษฎีเชิงปรัชญานี้ เป็นที่ประจักษ์ชัดว่าบรรดานักคิดมุสลิมได้ตระหนักถึง “เส้นขนาน” ระหว่างสติปัญญาและความวิกลจริต และตราบใดที่สติปัญญายังคงเคลื่อนไหวและขยายตัว ความวิกลจริตก็จะขับเคลื่อนและขยายอาณาเขตตีคู่กันไปอย่างไม่หยุดยั้ง</p>
+      <p>สิ่งที่น่าประหลาดใจยิ่งขึ้นคือสิ่งที่อิบนุ อันนะดีม (เสียชีวิต ฮ.ศ. 384 / ค.ศ. 995) ได้บันทึกไว้ในหนังสืออัลฟิฮ์ริสต์ ซึ่งเผยให้เห็นความจริงที่ว่า มุสลิมได้จัดหมวดหมู่และศึกษาปรากฏการณ์แห่งความวิกลจริตและความโง่เขลามาตั้งแต่ยุคบุกเบิก ท่านระบุว่า นักประวัติศาสตร์อย่างอบุลฮะซัน อัลมะดาอินีย์ (เสียชีวิต ฮ.ศ. 225 / ค.ศ. 840) ได้ประพันธ์ตำราชื่อ กิตาบ อัลฮัมกอ (คัมภีร์แห่งคนเขลา) ซึ่งอาจนับเป็นวรรณกรรมที่เก่าแก่ที่สุดในหัวข้อนี้ได้เลย นอกจากนี้ ยังมีตำราอีกหลายเล่มที่รังสรรค์ขึ้นเพื่อเฝ้าสังเกตปรากฏการณ์นี้ ดังที่อันนะดีมและอันนัยซาบูรีย์ได้ระบุไว้ โดยท่านอันนัยซาบูรีย์ได้ยืนยันว่าเคยสดับรับฟังเนื้อหาจากตำราเหล่านี้ ซึ่งผู้ประพันธ์ล้วนมีชีวิตอยู่ในศตวรรษที่ 3 แห่งฮิจเราะห์ (ศตวรรษที่ 9 แห่งคริสตกาล) แต่ตำราเหล่านั้นกลับสูญหายไปตามกาลเวลา ท่านรำลึกความหลังว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكنت في حداثة سني سمعت كتبا في هذا الباب، مثل كتاب الجاحظ وكتاب ابن أبي الدنيا، وأحمد بن لقمان، وأبي علي سهل بن علي البغدادي</blockquote>
+      <p class="ar-translation">“ในวัยเยาว์ ข้าพเจ้าเคยได้สดับรับฟังตำราหลายเล่มในหมวดหมู่นี้ อาทิ ตำราของอัลญาฮิซ (เสียชีวิต ฮ.ศ. 255 / ค.ศ. 869), ตำราของอิบนุ อบิดดุนยา (เสียชีวิต ฮ.ศ. 281 / ค.ศ. 894), ตำราของอะห์มัด บิน ลุกมาน (ปราชญ์ช่วงครึ่งแรกของศตวรรษที่ 4 ฮ.ศ. / 10 ค.ศ.) และตำราของอบู อะลี ซะฮ์ล บิน อะลี อัลบัฆดาดีย์ (เสียชีวิต ฮ.ศ. 290 / ค.ศ. 903)”</p>
+      <h2 class="article-h2">การไล่ล่าหาคัมภีร์ที่สาบสูญ</h2>
+      <p>จากบันทึกที่กล่าวมา สิ่งนี้มีความหมายว่า อัลญาฮิซมีตำราเฉพาะที่ว่าด้วยเรื่องของคนวิกลจริต ซึ่งย่อมไม่อาจรอดพ้นไปจากแวดวงการสังเกตและความสนใจของท่านไปได้ ในฐานะที่ท่านเป็นนักวิจัยผู้หลงใหลในการศึกษาปรากฏการณ์ทางสังคมและความแปลกประหลาด</p>
+      <p>เนื้อหาส่วนใหญ่ของตำราเล่มนี้จะถูกสอดแทรกอยู่ในตำราอันโด่งดังของท่าน ซึ่งอัดแน่นไปด้วยเรื่องราวขบขันและเกร็ดชีวิตของวิกลจริตชน ไม่ว่าจะมาจากสภาพสังคมจริงที่ท่านพานพบ หรือเสกสรรค์ขึ้นจากจินตนาการทางวรรณกรรมอันบรรเจิดของท่านก็ตาม</p>
+      <p>เฉกเช่นเดียวกับอันนัยซาบูรีย์ นักประวัติศาสตร์อย่างสิบฏ์ อิบนุลเญาซีย์ (เสียชีวิต ฮ.ศ. 654 / ค.ศ. 1256) ได้กล่าวไว้ในมิรอาตุซซะมาน ฟี ตะวารีค อัลอะอ์ยาน ในส่วนที่บันทึกชีวประวัติของอิบนุ อบิดดุนยา (เสียชีวิต ฮ.ศ. 281 / ค.ศ. 894) ว่า ท่านได้รังสรรค์ตำราขึ้นเล่มหนึ่งในชื่อหุกะมาอ์ อัลมะญานีน (ปราชญ์ในคราบคนบ้า) ซึ่งบางทีชื่อหนังสือนี้ก็อาจเป็นเครื่องยืนยันถึงสุภาษิตที่อาหรับมักกล่าวกันว่า</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">خذوا الحكمة من أفواه المجانين</blockquote>
+      <p class="ar-translation">“จงรับเอาวิทยาทานจากริมฝีปากของคนวิกลจริตเถิด”</p>
+      <p>แต่สิ่งที่ดึงดูดสายตายิ่งกว่า คือการที่ชื่อเรื่องอย่าง “อุกอลาอ์ อัลมะญานีน” (วิกลจริตชนผู้มีสติปัญญา) ได้ปรากฏหราอยู่บนหน้าปกของตำรามรดกทางปัญญาจำนวนมาก อบู บักร อิบนุ อบิลอัซฮัร (เสียชีวิต ฮ.ศ. 325 / ค.ศ. 937) ได้ใช้ชื่อนี้ตั้งเป็นชื่อตำราของท่านในหัวข้อเดียวกันนี้ และยังมีเอกสารตีพิมพ์ในชื่อ “อุกอลาอ์ อัลมะญานีน วัลมุวัซวิซีน” (วิกลจริตชนผู้มีสติปัญญาและผู้หมกมุ่นในภวังค์) ของอิบนุ อิสมาอีล อัฎฎ็อรรอบ อัลมิศรีย์ (เสียชีวิต ฮ.ศ. 392 / ค.ศ. 1003)</p>
+      <p>และแม้ว่าอัฎฎ็อรรอบจะเป็นปราชญ์ร่วมสมัยเดียวกับอิบนุ ฮะบีบ อันนัยซาบูรีย์ก็ตาม แต่ตำราของท่านที่ชื่อ “อุกอลาอ์ อัลมะญานีน” กลับยังคงยืนหยัดในฐานะผลงานที่โดดเด่นที่สุดในหมวดหมู่นี้ ตำราเล่มนี้ถูกเขียนขึ้นในรูปแบบของการถ่ายทอดเรื่องเล่า (สายรายงาน) โดยผู้ประพันธ์ได้กล่าวแนะนำหนังสือของท่านไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ألفت هذا الكتاب على غير سمت تلك الكتب السابقة عليه، وهو كتاب يكفي الناظر فيه الترداد وتصفح الكتب، وأرجو أني لم أسبق إلى مثله</blockquote>
+      <p class="ar-translation">“ข้าพเจ้าได้ประพันธ์คัมภีร์เล่มนี้ขึ้นโดยหลีกหนีจากระเบียบวิธีของตำราเล่มก่อนๆ มันเป็นหนังสือที่พรั่งพร้อมจนผู้อ่านไม่จำเป็นต้องพลิกหาจากตำราเล่มอื่นอีก และข้าพเจ้าหวังใจว่าคงไม่มีผู้ใดเคยรังสรรค์ผลงานเยี่ยงนี้มาก่อนข้าพเจ้า”</p>
+      <p>สำหรับวาทกรรมที่ว่า “อุกอลาอ์ อัลมะญานีน” ในตัวมันเองนั้น เปรียบเสมือน “คำศัพท์สัญจร” ที่กักเก็บความพยายามทางญาณวิทยา ในการรวบรวมเศษเสี้ยววาทะของบุคคลสำคัญทางประวัติศาสตร์ที่ถูกความปั่นป่วนทางจิตใจหรือสติปัญญาสัมผัสแตะต้อง วาทะเหล่านั้นถูกรวบรวมและจดบันทึกไว้ เพื่อรองรับช่วงเวลาหนึ่งในอนาคต... เวลาที่คนบ้าในวันวาน อาจกลายเป็นปราชญ์ผู้มีสติปัญญาในวันนี้</p>
+      <p>ในตารีค บัฆดาด (ประวัติศาสตร์มหานครแบกแดด) ของอัลเคาะฏีบ อัลบัฆดาดีย์ (เสียชีวิต ฮ.ศ. 463 / ค.ศ. 1071) ระบุว่า อัลอับบาส บิน มุฮัมมัด อิบนุ อัฎเฎาะฮาก อัลอัชฮะลีย์ (เสียชีวิต ฮ.ศ. 263 / ค.ศ. 877) ได้รายงานเรื่องราวของวิกลจริตชนผู้มีสติปัญญาจากบิดาของเขา ส่วนอิบนุลเญาซีย์ (เสียชีวิต ฮ.ศ. 597 / ค.ศ. 1201) ได้จัดสรรพื้นที่บทหนึ่งในหนังสือศิฟะฮ์ อัศศอฟวะฮ์ โดยตั้งชื่อบแต่ “ว่าด้วยเรื่องราวของวิกลจริตชนผู้มีสติปัญญาแห่งบัสเราะฮ์”</p>
+      <p>นอกจากนี้ อิหม่ามอัซซะฮะบีย์ยังได้บันทึกประวัติของบุคคลประเภทนี้ไว้ในตำราประวัติศาสตร์เล่มเอกอย่างตารีค อัลอิสลาม วะวะฟะยาต อัลมะชาฮีร อัลอะอ์ลามของท่าน โดยท่านได้กล่าวถึงชีวประวัติของช่างฝีมืออับดุลลอฮ์ อัลฟาตูละฮ์ อัลฮะละบีย์ (เสียชีวิต ฮ.ศ. 700 / ค.ศ. 1300) ว่า พิธีศพของเขามีผู้เข้าร่วมอย่างล้นหลาม แม้ว่าผู้คนจะนับขานเขาให้เป็นหนึ่งในวิกลจริตชนผู้มีสติปัญญาก็ตาม</p>
+      <h2 class="article-h2">วัคซีนแห่งสติปัญญา โอสถขนานเอกแห่งความคิด</h2>
+      <p>ยังมีคัมภีร์อีกหลายเล่มที่หยิบยกปรากฏการณ์นี้มากล่าวถึง แต่อยู่ในกรอบของกลุ่ม “ผู้โง่เขลา” ซึ่งเป็นแวดวงที่กว้างกว่าความวิกลจริต แม้จะมีจุดร่วมกันในหลายมิติทางจิตวิทยาและสติปัญญาก็ตาม ดังที่อิบนุ อันนะดีมได้อ้างอิงถึงอัลกะตันญีย์ (เสียชีวิตหลัง ฮ.ศ. 275 / ค.ศ. 888) ผู้ซึ่งถูกพรรณนาว่าอยู่ในระดับเดียวกับอบุลอันบัซ (เสียชีวิต ฮ.ศ. 275 / ค.ศ. 888) และอบุลอิบัร (เสียชีวิต ฮ.ศ. 250 / ค.ศ. 862) ว่าเป็นผู้ประพันธ์ตำราสองเล่ม ได้แก่ กิตาบ อัลมุละห์ วัลมุฮัมมะกีน (คัมภีร์ว่าด้วยเรื่องขบขันและเหล่าคนเขลา) และกิตาบ ญามิอ์ อัลฮะมากอต วะ อัศล์ อัรเราะกออาต (คัมภีร์ประมวลความเขลาและรากเหง้าแห่งความเบาปัญญา)</p>
+      <p>แต่อิบนุลเญาซีย์โดดเด่นที่สุดในหมวดหมู่นี้ ด้วยผลงานที่ชื่ออัคบาร อัลฮัมกอ วัลมุฆอฟฟะลีน (เรื่องราวของคนเขลาและผู้เลินเล่อ) อิบนุลเญาซีย์ได้แจกแจงถึงแรงจูงใจ 3 ประการที่ผลักดันให้ท่านจับปากกาประพันธ์ตำราเล่มนี้ขึ้น โดยท่านได้รจนาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">آثرت أن أجمع أخبار الحمقى والمغفلين لثلاثة أشياء؛ أن العاقل إذا سمع أخبارهم عرف قدر ما وهب له مما حرموا منه، فحثه ذلك على الشكر. والثاني: أن ذكر المغفلين يحث المتيقظ على اتقاء أسباب الغفلة إذا كان ذلك داخلا تحت الكسب وعامله فيه الرياضة، وأما إذا كانت الغفلة مجبولة في الطباع، فإنها لا تكاد تقبل التغيير. والثالث: أن يروح الإنسان قلبه بالنظر في سير هؤلاء المبخوسين حظوظا يوم القسمة، فإن النفس قد تمل من الدؤوب في الجد، وترتاح إلى بعض المباح من اللهو</blockquote>
+      <p class="ar-translation">“ข้าพเจ้าปรารถนาที่จะรวบรวมเรื่องราวของคนเขลาและผู้เลินเล่อเบาปัญญา ด้วยเหตุผล 3 ประการ กล่าวคือ: ประการแรก: เพื่อให้วิญญูชนผู้มีสติปัญญา เมื่อได้สดับรับฟังเรื่องราวของพวกเขาแล้ว จะได้ตระหนักรู้ถึงคุณค่าอันยิ่งใหญ่ของสติปัญญาที่ตนได้รับประทานมา ในขณะที่ชนเหล่านั้นกลับถูกลิดรอนไป ซึ่งความตระหนักรู้นี้จะกระตุ้นเตือนให้เขารู้จัก ‘ขอบคุณ’ ต่อความโปรดปรานนั้น ประการที่สอง: การกล่าวถึงผู้ที่เลินเล่อเบาปัญญา ย่อมเป็นเครื่องเตือนสติให้ผู้ที่ตื่นรู้ คอยระแวดระวังและหลีกหนีจากต้นเหตุแห่งความเลินเล่อนั้น หากแม้นว่าความเลินเล่อนั้นเป็นพฤติกรรมที่เกิดจากการซึมซับรับมา ซึ่งสามารถแก้ไขเยียวยาได้ด้วย ‘การฝึกฝนขัดเกลา’ แต่หากความเลินเล่อนั้นเป็นกมลสันดานที่ฝังรากลึกในสัญชาตญาณมาแต่กำเนิดแล้วไซร้ มันก็ยากยิ่งนักที่จะยอมรับการเปลี่ยนแปลงใดๆ ประการที่สาม: เพื่อให้มนุษย์ได้หย่อนใจและผ่อนคลายความตึงเครียด ผ่านการพินิจพิเคราะห์เรื่องราวชีวิตของ ‘ผู้ที่ถูกริดรอนโชคชะตาในวันแห่งการแบ่งปัน’ เพราะแท้จริงแล้ว จิตวิญญาณของมนุษย์ย่อมมีความเหนื่อยหน่ายจากการคร่ำเคร่งแบกรับความจริงจังอยู่ตลอดเวลา และมันย่อมโหยหาการพักพิงในความบันเทิงเริงรมย์บางประการที่เป็นที่อนุมัติ”</p>
+      <p>ซึ่งท่านยังได้ตอกย้ำแนวคิดที่อัตเตาฮีดีย์เคยกล่าวไว้เกี่ยวกับการเคลื่อนตัวคู่ขนานระหว่างสติปัญญาและความวิกลจริตหรือความเขลาว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إني لما شرعت في جمع أخبار الأذكياء وذكرت بعض المنقول عنهم ليكون مثالا يحتذى -لأن أخبار الشجعان تعلم الشجاعة- آثرت أن أجمع أخبار الحمقى والمغفلين</blockquote>
+      <p class="ar-translation">“เมื่อข้าพเจ้าเริ่มรวบรวมเรื่องราวของบรรดาอัจฉริยบุคคล และได้กล่าวถึงสิ่งที่ถูกรายงานจากพวกเขาเพื่อให้เป็นแบบอย่างที่ควรดำเนินรอยตาม (เพราะเรื่องราวของผู้กล้าย่อมสอนให้เกิดความกล้าหาญ) ข้าพเจ้าจึงปรารถนาที่จะรวบรวมเรื่องราวของคนเขลาและผู้เลินเล่อไว้ด้วยเช่นกัน”</p>
+      <p>อิบนุลเญาซีย์ได้อุทิศเนื้อหาเป็นบทเฉพาะเพื่อพรรณนาความหมายของ “ความเขลา” ทั้งในแง่ลักษณะนิสัย อุปนิสัยประจำตัว ตลอดจนภาพลักษณ์ทางกายภาพของคนเขลา พร้อมกันนั้นท่านยังพยายามจำแนกเส้นแบ่งระหว่าง “ความเขลา” กับ “ความวิกลจริต” อย่างชัดเจน โดยนิยามประการแรกไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الغلط في الوسيلة والطريق إلى المطلوب مع صحة المقصود</blockquote>
+      <p class="ar-translation">“การผิดพลาดในวิธีการและหนทางสู่สิ่งที่มุ่งหมาย ทั้งที่ตัวเป้าหมายนั้นถูกต้อง”</p>
+      <p>ส่วน “ความวิกลจริต” ท่านนิยามว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">عبارة عن الخلل في الوسيلة والمقصود جميعا</blockquote>
+      <p class="ar-translation">“ภาวะแห่งความบกพร่องที่เกิดขึ้นทั้งในวิธีการและในตัวเป้าหมายพร้อมกัน”</p>
+      <p>ด้วยเหตุนี้ ท่านจึงขีดเส้นแบ่งระหว่างสิ่งที่มีลักษณะเป็นภาวะเจ็บป่วย เช่น ความวิกลจริต กับสิ่งที่เป็นความอ่อนด้อยหรือความปั่นป่วนทางความคิด เช่น ความเขลา ในทัศนะของอิบนุลเญาซีย์ ความเขลามีลักษณะเป็นอุปนิสัยฝังตัวอย่างหนึ่ง ซึ่งไม่อาจเยียวยาได้ด้วยการลงโทษหรือการเฆี่ยนตี แต่เจ้าของอาการดังกล่าวยังสามารถได้รับประโยชน์จากการฝึกฝนและการขัดเกลา</p>
+      <p>และการขัดเกลานี้เองย่อมช่วยบรรเทาและปัดเป่าอาการอันเลวร้ายให้เบาบางลงได้ แนวคิดนี้สอดรับกับสุภาษิตอาหรับโบราณที่กล่าวไว้อย่างคมคายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الحماقة أعيت من يداويها</blockquote>
+      <p class="ar-translation">“ความเขลาทำให้ผู้พยายามรักษามันเหนื่อยเปล่า (เสียเวลาชีวิตของตนเอง)”</p>
+      <p>ความหมายของสุภาษิตนี้ชี้ว่า การเผชิญหน้ากับพฤติกรรมเช่นนี้ด้วยความรุนแรงหรือวิธีการอันหยาบกระด้างย่อมไม่เกิดผล ในตรงกันข้าม ผู้ที่มีอาการดังกล่าวจำเป็นต้องได้รับการฟื้นฟูและการขัดเกลาอย่างเหมาะสม จึงจะสามารถลดทอนอาการเหล่านั้นลงได้อย่างแท้จริง</p>
+      <p>นอกเหนือจากตำราเฉพาะทางในโลกของวิกลจริตชนและคนเขลาแล้ว หอสมุดอาหรับยังรู้จักตำราวรรณกรรมและตำราทั่วไปอีกมากมายที่บรรจุเรื่องเล่าของพวกเขานับร้อยเรื่อง โดยมีตำราของอัลญาฮิซ, อบุลฟะร็อจญ์ อัลอัศฟะฮานีย์ (เสียชีวิต ฮ.ศ. 356 / ค.ศ. 967), อิบนุ อับดิร็อบบิฮ์ อัลอันดะลุซีย์ (เสียชีวิต ฮ.ศ. 328 / ค.ศ. 940) และอบู ฮัยยาน อัตเตาฮีดีย์อยู่ในแถวหน้า</p>
+      <p>ซึ่งดูเหมือนว่าปราชญ์เหล่านี้ทั้งหมดปรารถนาผ่านการหยิบยกเรื่องราวเหล่านี้ที่จะผสานและสอดแทรกความเรียบง่ายธรรมดากับความน่าอัศจรรย์ไว้ด้วยกันในผลงานบางชิ้นของพวกเขา อัลญาฮิซได้กล่าวไว้ในบทที่ท่านจัดทำขึ้นว่าด้วย “คำพูดของคนโง่เขลาและผู้หมกมุ่นในภวังค์” ในหนังสืออัลบะยาน วัตตับยีนว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأحببنا ألا يكون مجموعا في مكان واحد إبقاء على نشاط القارئ والمستمع</blockquote>
+      <p class="ar-translation">“เราปรารถนาที่จะไม่รวบรวมสิ่งเหล่านี้ไว้ในที่เดียวกันทั้งหมด ทั้งนี้เพื่อรักษากำลังวังชา (ความกระตือรือร้น) ของผู้อ่านและผู้ฟังเอาไว้”</p>
+      <p>และบางทีอัลญาฮิซอาจเป็นข้อยกเว้นในหมู่ปราชญ์เหล่านี้ เพราะท่านได้ผสานระเบียบวิธีทั้งสองเข้าด้วยกันในการประพันธ์ ดังที่เราได้เห็นในตำราที่สาบสูญของท่าน</p>
+      <p>อิหม่ามอัชชาฟิอีย์ (เสียชีวิต ฮ.ศ. 204 / ค.ศ. 819) ผู้ซึ่งเป็นหนึ่งในนักเล่าบทกวีของกวีวิกลจริตชนที่โด่งดังที่สุด ปราชญ์หะดีษทั้งสองท่านได้แก่ อัลบัยฮะกีย์ (เสียชีวิต ฮ.ศ. 458 / ค.ศ. 1067) ในมะนากิบ อัชชาฟิอีย์ และอันนะวะวีย์ (เสียชีวิต ฮ.ศ. 676 / ค.ศ. 1277) ในตะฮ์ซีบ อัลอัสมาอ์ วัลลุฆอตได้รายงานว่า มุฮัมมัด บิน อับดิลฮะกัม (เสียชีวิต ฮ.ศ. 268 / ค.ศ. 881) ลูกศิษย์ของอัชชาฟิอีย์ได้กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">سمعت الشافعي يقول: أروي لثلاثمئة شاعر مجنون</blockquote>
+      <p class="ar-translation">“ข้าพเจ้าได้ยินท่านอัชชาฟิอีย์กล่าวว่า: ข้าพเจ้าท่องจำและถ่ายทอดบทกวีของกวีที่เป็นวิกลจริตชนถึง 300 ท่าน”</p>
+      <p>อิบนุ อับดิร็อบบิฮ์ได้สรุปบทบาทของวรรณกรรมประเภทนี้ไว้ในหนังสืออัลอิกด์ อัลฟะรีดว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا ما أصغى إليها السامع وجدها ملهى للسمع، ومرتعا للنظر، وسكنا للروح، ولقاحا للعقل، وسميرا في الوحدة وأنيسا في الوحشة، وقد يأتي لهؤلاء المجانين كلام نادر محكم لا يسمع بمثله، كما قالوا: رب رمية من غير رام</blockquote>
+      <p class="ar-translation">“หากเมื่อใดที่ผู้ฟังได้เงี่ยหูฟัง มันจะเป็นดั่งสนามเด็กเล่นแห่งโสตประสาท เป็นทุ่งหญ้าอันอุดมแห่งจักษุ เป็นความสงบร่มเย็นแห่งดวงวิญญาณ เป็นวัคซีนแห่งสติปัญญา เป็นเพื่อนคุยในยามโดดเดี่ยว และเป็นผู้ปลอบประโลมในยามว้าเหว่...และบางครา วิกลจริตชนเหล่านี้อาจเปล่งวาจาอันหาได้ยากยิ่งและรัดกุมอย่างที่ไม่มีผู้ใดเคยได้ยินมาก่อน ดังสุภาษิตที่ว่า: บางครั้งลูกธนูก็เข้าเป้าได้โดยไร้ผู้ยิง”</p>
+      <p>และหลายทศวรรษก่อนหน้าอิบนุ อับดิร็อบบิฮ์...อัลญาฮิซ ได้ให้ทัศนะไว้ในอัลบะยาน วัตตับยีนว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أن الشيء من غير معدنه أغرب، وكلما كان أعجب كان أبدع! وإنما ذلك كنوادر كلام الصبيان وملح المجانين</blockquote>
+      <p class="ar-translation">“สรรพสิ่งที่หลุดรอดมาจากนอกแหล่งกำเนิดตามธรรมชาติของมัน ย่อมแปลกประหลาดยิ่งกว่า...และยิ่งมันน่าพิศวงเพียงใด มันก็ยิ่งล้ำเลิศเพียงนั้น! สิ่งนี้ก็ดุจเดียวกับวาทะอันหาฟังยากของเด็กไร้เดียงสา และเกร็ดขบขันของวิกลจริตชนนั่นแล”</p>
+      <h2 class="article-h2">เมื่อตรรกะเผชิญหน้ากับความวิกลจริต</h2>
+      <p>อิบนุลเญาซีย์ได้ถ่ายทอดวาทะของอัลอัศมะอีย์ (เสียชีวิต ฮ.ศ. 216 / ค.ศ. 831) ไว้ในอัคบาร อัลฮุมก์ว่า ข้าพเจ้าได้ยินเคาะลีฟะฮ์ ฮารูน อัรเราะชีด (เสียชีวิต ฮ.ศ. 193 / ค.ศ. 809) ตรัสว่า เรื่องราวแปลกประหลาดขบขันนั้น มันย่อมลับสติปัญญาให้แหลมคม และเปิดโสตประสาทให้กว้างขึ้น</p>
+      <p>ส่วนอิบนุ คอลดูนได้ให้ทัศนะไว้ในอัลมุก็อดดิมะฮ์ว่า วิกลจริตชนบางคนนั้นสติสัมปชัญญะของเขาได้ดับวูบไปโดยสิ้นเชิง แต่เขากลับสัมผัสได้ถึงแสงเรืองรองจากโลกแห่งจิตวิญญาณ ภาพบางอย่างได้ประทับลงในนั้นและถูกขับเคลื่อนด้วยจินตนาการ บางคราเขาอาจเอื้อนเอ่ยวาจาออกมาในสภาวะนั้นโดยปราศจากเจตจำนง และการรับรู้ของคนเหล่านี้ล้วนเจือปนไปด้วยสัจธรรมและความเท็จ เพราะการเชื่อมต่อของพวกเขา (แม้จะสูญเสียประสาทสัมผัสไปแล้ว) จะเกิดขึ้นไม่ได้เลยหากปราศจากการพึ่งพามโนภาพแปลกปลอมดังที่เราได้อธิบายไว้ และจากจุดนี้เอง ความเท็จจึงแทรกซึมเข้ามาในการรับรู้เหล่านี้</p>
+      <p>มุศเฏาะฟา ศอดิก อัรรอฟิอีย์ (เสียชีวิต ฮ.ศ. 1356 / ค.ศ. 1937) ได้พยายามอธิบาย (ผ่านหนังสือวะห์ยุลเกาะลัม) ถึงสายสัมพันธ์ที่ก่อตัวขึ้นระหว่างชนชั้นนำทางวรรณกรรมและนักคิดอิสลามกับกลุ่มคนวิกลจริตเหล่านี้ โดยท่านมองว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أن من المجانين قوما ظرفاء يدخلهم الفساد في عقولهم من ناحية فكرة ملازمة لا تبرح، فلا يكون جنونهم جنونا إلا من هذا الوجه، وسائر أحوالهم كأحوال العقلاء، ومثل هذا لا بد له ممن يستجيب لهذيانه كيما يحرك فيه خفته وطيشه وزهوه، وليكون عنده الشاهد على هذا الوجود الخيالي المبدع الذي لا يوجد إلا في عقله المختل، فإذا هو ظفر بمن يحاسنه أو يصانعه أو يجاريه، حسبه مذعنا مؤمنا مصدقا، فلا يدعه من بعدها ويتعلق به أشد التعلق، ويراه كأنه في ملكه، فيتخذه صفيا وهو يعتقد أنه رقيق، وقد يزعمه أستاذه ليفهمه من ذلك بحساب عقله أنه تلميذه</blockquote>
+      <p class="ar-translation">“มีคนวิกลจริตอยู่จำพวกหนึ่ง ซึ่งกลับมีความละเมียดละไมและน่าคบหาอยู่ไม่น้อย ความเสียหายในสติของพวกเขานั้น มิได้แผ่ไปทั่วทุกด้าน หากแต่แทรกเข้ามาทาง ‘ความคิดหนึ่ง’ ที่เกาะกินอยู่เนืองนิตย์ ไม่ยอมคลาย ไม่ยอมจาก ด้วยเหตุนี้ ความวิกลจริตของพวกเขาจึงเป็นความวิกลจริตอยู่เพียงในมุมนั้นเท่านั้น ส่วนสภาพอื่นๆ ของชีวิตและพฤติกรรม ก็ยังคล้ายคลึงกับคนมีสติทั้งหลาย... คนเช่นนี้ย่อมต้องการใครสักคนที่ตอบรับถ้อยคำเพ้อพร่ำของเขา เพื่อปลุกเร้าความคึกคะนอง ความพลุ่งพล่าน และความลำพองในตัวเขาให้เคลื่อนไหวขึ้น และเพื่อให้มี ‘พยาน’ รับรองการมีอยู่ของโลกจินตนาการอันวิจิตรนั้น โลกซึ่งไม่มีอยู่ที่ใดเลย นอกจากในห้วงสำนึกอันวิปลาสของเขาเอง ครั้นเมื่อเขาได้พบผู้ใดสักคนที่แสร้งเห็นดีด้วยหรือคล้อยตาม หรือแม้เพียงเล่นไปตามกระแสความคิดของเขา เขาก็จะนับว่าผู้นั้นเป็นผู้ยอมรับโดยดุษณี เป็นผู้ศรัทธา เป็นผู้เชื่ออย่างสิ้นสงสัย แล้วจากนั้น เขาจะไม่ปล่อยคนผู้นั้นไปอีก แต่จะยึดติดเสียแน่นหนายิ่งนัก มองเขาราวกับว่าอยู่ในอาณัติของตน...เขาจะตั้งผู้นั้นขึ้นเป็น ‘สหายคนสนิท’ ในขณะที่ลึกลงไป เขากลับเชื่อว่าอีกฝ่ายเป็นเพียง ‘คนในบังคับ’ ของตน และบางคราว เขาอาจยกอีกฝ่ายขึ้นเป็น ‘อาจารย์’ ของตนเสียด้วยซ้ำ เพื่อจะสื่อให้เข้าใจ ตามตรรกะแห่งสติที่บิดเบี้ยวของเขา ว่าแท้จริงแล้ว อีกฝ่ายนั้นเป็นเพียง ‘ศิษย์’ ของเขาเท่านั้นเอง”</p>
+      <p>เป็นเรื่องที่น่าตื่นตาอย่างยิ่งกับความสนอกสนใจที่ชาวมุอ์ตะซิละฮ์มีต่อวิกลจริตชน ตลอดจนความใส่ใจของบรรดาปรมาจารย์ของพวกเขาในการรวบรวมเกร็ดขบขัน เรื่องราว และการสนทนาพาทีกับคนเหล่านั้น สิ่งที่ชวนให้พิศวงก็คือ เป็นที่รู้กันดีว่าสำนักคิดมุอ์ตะซิละฮ์นั้นหมกมุ่นอยู่กับสติปัญญา สภาวะ และรูปแบบของมันอย่างถอนตัวไม่ขึ้น แล้วสิ่งใดเล่าที่ผลักดันให้พวกเขาออกแสวงหาขั้วตรงข้ามของสติปัญญาและกระโจนเข้าสู่ห้วงอวกาศแห่งความวิกลจริต?</p>
+      <p>อันนัยซาบูรีย์ได้เล่าถึงอบุลฮุซัยล์ อัลอัลล๊าฟ (เสียชีวิต ฮ.ศ. 235 / ค.ศ. 850) บรมครูแห่งมุอ์ตะซิละฮ์ว่า ครั้งหนึ่งท่านได้แวะพักที่อารามคริสต์แห่งหนึ่ง และได้โต้วาทีกับคนวิกลจริตที่พำนักอยู่ที่นั่น หลังจากที่คนวิกลจริตผู้นั้นได้ตั้งคำถามกับท่านหลายข้อ เขาก็จับทิศทางวาทศิลป์ของท่านได้ และเอ่ยทักขึ้นมาว่า ท่านต้องเป็นอบุลฮุซัยล์ อัลอัลล๊าฟแน่ๆ</p>
+      <p>และอบู อิสฮาก อัลกุตุบีย์ ผู้เป็นที่รู้จักในนาม “อัลวัฏวาฏ” (เสียชีวิต ฮ.ศ. 718 / ค.ศ. 1318) ได้เล่าให้ฟังว่า อิหม่ามแห่งมุอ์ตะซิละฮ์นามว่า ษุมามะฮ์ บิน อัชร็อส (เสียชีวิต ฮ.ศ. 213 / ค.ศ. 828) เคยกล่าวว่า: “เคาะลีฟะฮ์ฮารูน อัรเราะชีดได้ส่งข้าพเจ้าไปยังสถานพักพิงของคนวิกลจริต (โรงพยาบาลจิตเวช) เพื่อเยียวยาสภาพความเป็นอยู่ที่ย่ำแย่ของพวกเขา”</p>
+      <p>หมายความว่าท่านได้รับมอบหมายอย่างเป็นทางการจากรัฐให้ไปตรวจเยี่ยมและดูแลทุกข์สุขของคนเหล่านั้น และษุมามะฮ์ได้เล่าถึงเหตุการณ์อันน่าขบขันที่เกิดขึ้นกับท่านระหว่างการโต้วาทีทางเทววิทยากับผู้ป่วยคนหนึ่งในสถานพักพิงแห่งนั้น หนึ่งในบทสนทนาระหว่างษุมามะฮ์กับวิกลจริตชน ซึ่งอันนัยซาบูรีย์ได้บันทึกไว้ในตำราอุกอลาอ์ อัลมะญานีน คือคำบอกเล่าของษุมามะฮ์ที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">دخلت دير هرقل فرأيت فيه شابا مشدودا إلى سارية؛ فقال لي: ما اسمك؟ قلت: ثمامة، قال: المتكلم؟ قلت: نعم! قال: يا ثمامة، هل للنوم لذة؟ قلت: نعم! قال: متى يجدها صاحبها؟ إن قلت: قبل النوم أحلت، وإن قلت: مع النوم أخطأت لأنه ذاهب العقل، وإن قلت: بعد النوم أخطأت لأنه قد انقضى! قلت: وما تقول أنت؟ قال: إن النعاس داء يحل بالبدن ودواؤه النوم</blockquote>
+      <p class="ar-translation">“ข้าพเจ้าเดินเข้าไปในอารามเฮราคลิอัส (ซึ่งเป็นอารามนักบวชทางตอนใต้ของแบกแดด) ข้าพเจ้าเห็นชายหนุ่มคนหนึ่งถูกมัดติดกับเสา เขาถามข้าพเจ้าว่า: ท่านชื่ออะไร? ข้าพเจ้าตอบว่า: ษุมามะฮ์ เขาถามต่อ: นักเทววิทยาคนนั้นน่ะหรือ? ข้าพเจ้าตอบ: ใช่แล้ว! เขากล่าวว่า: โอ้ ษุมามะฮ์เอ๋ย การนอนหลับนั้นมีความรื่นรมย์หรือไม่? ข้าพเจ้าตอบ: มีสิ! เขาต้อนต่อว่า: แล้วผู้ที่นอนหลับจะสัมผัสถึงความรื่นรมย์นั้นได้เมื่อใด? หากท่านตอบว่า ‘ก่อนนอน’ ย่อมเป็นเรื่องเพ้อเจ้อ (เป็นไปไม่ได้) หากท่านตอบว่า ‘ขณะหลับ’ ท่านก็ผิด เพราะในเวลานั้นเขาสิ้นสติสัมปชัญญะไปแล้ว และหากท่านตอบว่า ‘หลังตื่นนอน’ ท่านก็ผิดอีก เพราะการนอนหลับได้สิ้นสุดลงแล้ว! ข้าพเจ้าจึงย้อนถามว่า: แล้วเจ้าล่ะคิดเห็นเช่นไร? เขาตอบว่า: ความง่วงงุนนั้นคือโรคร้ายที่กัดกินร่างกาย และยารักษาของมันก็คือการนอนหลับอย่างไรเล่า”</p>
+      <p>และนักปราชญ์ภาษาศาสตร์อย่างอบุลอับบาส อัลมุบัรร็อด (เสียชีวิต ฮ.ศ. 285 / ค.ศ. 898) มักจะแวะเวียนไปยังสถานพักพิงและวงเสวนาของวิกลจริตชนอยู่เป็นประจำ อัลมุบัรร็อดมีประสบการณ์อันน่าพิศวงและบททดสอบทางวิชาการร่วมกับคนเหล่านั้นมากมาย ครั้งหนึ่งสหายของท่านได้เอ่ยถามว่า: โอ้ อบุลอับบาส ข้าได้ยินมาว่าท่านมักจะปลีกตัวออกจากวงเสวนาของเรา เพื่อมุ่งหน้าไปยังอัลมุก็อยยิซ (คุก/โรงพยาบาล) และไปยังสถานที่ของคนบ้าและผู้ถูกทำการรักษา ท่านมีจุดประสงค์อันใดหรือ? อัลมุบัรร็อดตอบว่า: ข้าบอกไปว่า ความจริงในหมู่พวกเขานั้นมีถ้อยวาจาอันแปลกประหลาดน่าทึ่งซ่อนอยู่ ตามบันทึกของอัลเคาะฏีบ อัลบัฆดาดีย์ในตารีค บัฆดาด</p>
+      <p>อัลมุบัรร็อดไม่ได้ไปเยือนสถานพักพิงเหล่านั้นเพียงลำพัง แต่มักจะพาสหายชาวมุอ์ตะซิละฮ์บางคนไปด้วยเสมอ สิ่งนี้เป็นเครื่องบ่งชี้ถึงความใส่ใจอย่างเป็นระบบที่พวกเขามีต่อพฤติกรรมของวิกลจริตชนผู้มีสติปัญญาเหล่านี้ อิหม่ามอิบนุ กะษีร (เสียชีวิต ฮ.ศ. 774 / ค.ศ. 1372) ได้บันทึกเรื่องราวต่อไปนี้ไว้ในอัลบิดายะฮ์ วันนิฮายะฮ์ (ซึ่งขอนำเสนอสักหน่อย แม้ว่ามันอาจมีกลิ่นอายของการแต่งแต้มจินตนาการอยู่บ้างก็ตาม):</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قال المبرد: دخلنا يوما على المجانين نزورهم -أنا وأصحاب معي- بالرقة، فإذا فيهم شاب قريب العهد بالمكان عليه ثياب ناعمة، فلما بصر بنا قال: حياكم الله! ممن أنتم؟ قلنا: من أهل العراق؛ فقال: بأبي العراق وأهلها! أنشدوني أو أنشدكم؟ قال المبرد: بل أنشدنا أنت؛ فأنشأ يقول: يا راحل العيس عجل كي أودعهم * يا راحل العيس في ترحالك الأجل! إني على العهد لم أنقض مودتهم * فليت شعري لطول العهد ما فعلوا؟! فقال رجل من البغضاء الذين معي: ماتوا! فقال الشاب: إذن أموت! فقال: إن شئت! فتمطى واستند إلى سارية عنده ومات، وما برحنا حتى دفناه، رحمه الله</blockquote>
+      <p class="ar-translation">“อัลมุบัรร็อดเล่าว่า: วันหนึ่ง ข้าพเจ้าและสหายได้เข้าไปเยี่ยมเยียนเหล่าวิกลจริตชนที่เมืองอัรร็อกเกาะฮ์ ที่นั่นมีชายหนุ่มคนหนึ่งซึ่งดูเหมือนเพิ่งเข้ามาใหม่ เขาสวมใส่อาภรณ์เนื้อดี เมื่อเขาเหลือบมาเห็นพวกเรา เขาเอ่ยทักทายว่า: ขออัลลอฮ์ทรงคุ้มครองพวกท่าน! พวกท่านมาจากที่ใด? พวกเราตอบว่า: จากอิรัก เขาอุทานว่า: ขอเอาชีวิตเป็นประกันแด่อิรักและชาวเมือง! พวกท่านจะขับลำนำให้ข้าฟัง หรือจะให้ข้าเป็นผู้ขับลำนำให้พวกท่านฟังดี? อัลมุบัรร็อดตอบว่า: เจ้าจงขับลำนำให้พวกเราฟังเถิด ชายหนุ่มจึงเริ่มร่ายกวีว่า: โอ้ผู้ควบอูฐเดินทาง จงรีบเถิด เพื่อให้ข้าได้ล่ำลาพวกเขา / โอ้ผู้ควบอูฐเอ๋ย ในการเดินทางของเจ้านั้น มีวาระสุดท้ายซ่อนอยู่! / ข้ายังคงอยู่ในสัตย์แห่งความรัก มิได้ลบล้างไมตรีของพวกเขาเลย / แต่ข้าไม่รู้จริงๆ ว่า เมื่อกาลเวลายืดยาวไปเช่นนี้ พวกเขาเป็นอย่างไรกันบ้างแล้ว? ทันใดนั้น ชายผู้มีนิสัยน่ารำคาญคนหนึ่งที่มากับข้าพเจ้าก็โพล่งขึ้นมาว่า: พวกเขาตายหมดแล้ว! ชายหนุ่มได้ยินดังนั้นจึงกล่าวว่า: เช่นนั้นข้าก็ขอตายตาม! ชายหยาบคายตอบกลับไปว่า: ก็ตามใจเจ้าสิ! สิ้นคำนั้น ชายหนุ่มก็เอนกายพิงเสาข้างตัว แล้วสิ้นลมหายใจลงตรงนั้น... พวกเรามิได้จากไปไหนจนกระทั่งได้ฝังศพเขาเสร็จสิ้น ขออัลลอฮ์ทรงเมตตาเขาด้วยเถิด”</p>
+      <h2 class="article-h2">ศิลปะแห่งความวิกลจริต</h2>
+      <p>ความจริงชาวอาหรับได้ตระหนักมาตั้งแต่เนิ่นนานถึงการดำรงอยู่ของอัจฉริยภาพทางวรรณกรรม ซึ่งรากศัพท์ของคำว่าความวิกลจริตในภาษาอาหรับ มาจากคำว่า ญิน หรือสิ่งเร้นลับ พวกเขาขนานนามหุบเขาแห่งหนึ่งว่า วาดีย์ อับก็อร (หุบเขาแห่งอับก็อร) และนำมาใช้เป็นคำคุณศัพท์ว่า “อับเกาะรีย์” (อัจฉริยะ) เพื่อเรียกขานบุคคล แนวคิด หรือสรรพสิ่งใดๆ ที่สร้างความประทับใจและน่าทึ่งแก่พวกเขา ท่านอบู อุบัยด์ อัลกอซิม บิน ซัลลาม อัลฮะเราะวีย์ (เสียชีวิต ฮ.ศ. 224 / ค.ศ. 839) ได้อธิบายความหมายของคำว่า อับเกาะรีย์ไว้ในหนังสือเฆาะรีบ อัลหะดีษว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أصل هذا فيما يقال: إنه نسب إلى عبقر، وهي أرض تسكنها الجن، فصارت مثلا لكل منسوب إلى شيء رفيع وبديع بين أمثاله</blockquote>
+      <p class="ar-translation">“รากศัพท์ของคำนี้มาจากสิ่งที่เล่าขานกันว่า มันถูกพาดพิงไปยังอับก็อร ดินแดนอันเป็นที่พำนักของเหล่าญิน ต่อมาจึงกลายเป็นอุปมาอุปไมยสำหรับทุกสิ่งที่เชื่อมโยงกับความสูงส่ง และความวิจิตรบรรจงที่เหนือชั้นกว่าสิ่งอื่นใดในระดับเดียวกัน”</p>
+      <p>วลีที่ว่า “ความวิกลจริตคือศิลปะ” จริงแล้วมันมีความเก่าแก่หยั่งรากลึกในมรดกทางวัฒนธรรมของอาหรับดังที่อบู มันศูร อัษษะอาลิบีย์ (เสียชีวิต ฮ.ศ. 429 / ค.ศ. 1039) ได้แจ้งให้เราทราบในหนังสือยะตีมะฮ์ อัดดะฮ์รว่า วลีนี้ปรากฏขึ้นเมื่อนับพันปีก่อนในบทกวีของกวีราชสำนักแห่งราชวงศ์ฆ็อซนะวีย์ในภูมิภาคคุรอซาน (มีชีวิตช่วง ฮ.ศ. 388-432 / ค.ศ. 998-1040) นามว่า อบู มุฮัมมัด อับดุลลอฮ์ บิน มุฮัมมัด อัดดูเฆาะบาดีย์ (เสียชีวิตราว ฮ.ศ. 429 / ค.ศ. 1039) ที่ร่ายกวีไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ويشرب من فيه المدام معلقا * على لهب، إن الجنون فنون</blockquote>
+      <p class="ar-translation">“และความเมามายนั้นถูกดื่มด่ำจากโอษฐ์ โดยแขวนอยู่...เหนือเปลวเพลิง, แท้จริง ความวิกลจริตนั้นคือศิลปะนานาประการ” หรือแปลให้เข้าใจง่ายๆ ว่า ความวิปลาสของมนุษย์นั้น มีเชิงชั้นอยู่สารพัด</p>
+      <p>ต่อมาอิหม่ามญารุลลอฮ์ อัซซะมัคชะรีย์ แห่งสำนักคิดมุอ์ตะซิละฮ์ (เสียชีวิต ฮ.ศ. 538 / ค.ศ. 1143) ได้นำวลีนี้มาประยุกต์ใช้ในเชิงวรรณศิลป์ในบทที่ 56 ของหนังสือมะกอมาต (บทกวีและร้อยแก้ว) ของท่าน โดยตั้งชื่อบทอย่างวิจิตรว่า “ความวิกลจริตคือศิลปะ และศิลปะก็คือความวิกลจริต” ขณะเดียวกันอัลญาฮิซ ได้ถ่ายทอดคำกล่าวของกลุ่มคนที่ท่านเรียกว่า ชาวมัสยิดในเมืองบัสเราะฮ์ไว้ในหนังสืออัลบะยาน วัตตับยีนว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أن من لم يرو أشعار المجانين كانوا لا يعدونه من الرواة</blockquote>
+      <p class="ar-translation">“ผู้ใดที่...ไม่ท่องจำและถ่ายทอดบทกวีของวิกลจริตชน...พวกเขาจะไม่ถูกนับว่าคนผู้นั้นเป็นนักเล่าเรื่อง (ผู้สืบทอดสายรายงาน) อย่างเด็ดขาด”</p>
+      <p>และในหนังสือตารีค อัลอิสลาม ขณะบันทึกประวัติของกะมาลุดดีน บิน วะรีดะฮ์ อัลฮัมบะลีย์ (เสียชีวิต ฮ.ศ. 697 / ค.ศ. 1298) นักอ่านอัลกุรอานและเชคแห่งสถาบันดารุลหะดีษ อัลมุสตันศิรียะฮ์ในกรุงแบกแดด อัซซะฮะบีย์ระบุว่า เขาผู้นี้ได้เข้าฟังการสอนบางส่วนของตำราอุกอลาอ์ อัลมะญานีนจากอิบนุ อบี ฮัรบ์ (อบุลกอซิม อัลฟัฎล์ บิน อบี ฮัรบ์ อัลญุรญานีย์ ผู้เสียชีวิต ฮ.ศ. 488 / ค.ศ. 1095)</p>
+      <p>เฉกเช่นเดียวกับอบู ยะอ์กูบ อัลอัฏฏ็อร อัลบัฆดาดีย์ (เสียชีวิตหลัง ฮ.ศ. 281 / ค.ศ. 894) ซึ่งอิบนุ อัยบัก อัศเศาะฟะดีย์ (เสียชีวิต ฮ.ศ. 764 / ค.ศ. 1363) ได้กล่าวถึงเขาไว้ในอัลวาฟีย์ บิลวะฟะยาตว่า: เขาได้รวบรวมตำราที่บรรจุเรื่องราวของวิกลจริตชนผู้มีสติปัญญา และได้นำมันมาสอนที่เมืองเฏาะเราะซูซ (ปัจจุบันอยู่ทางตอนใต้ของตุรกี) โดยเขาได้รายงานเนื้อหาจากอบู บักร อิบนุ อบิดดุนยา...และผู้ที่รายงานต่อจากเขาก็คือ อบู อัมร์ (อะห์มัด บิน มุฮัมมัด อิบนุ ฮะกีม อัลมะดะนีย์ อัลอัศบะฮานีย์ เสียชีวิต ฮ.ศ. 334 / ค.ศ. 946) ศิษย์ของอิหม่ามอิบนุ มาญะฮ์ เจ้าของตำราอัสสุนัน (เสียชีวิต ฮ.ศ. 273 / ค.ศ. 886)</p>
+      <p>ดังนั้น หากบรรดาปรมาจารย์ด้านหะดีษผู้ยิ่งใหญ่อย่างอัซซะฮะบีย์ ยังได้จารึกบุคคลประเภทนี้ไว้ในหนังสือชีวประวัติถึงการสดับรับฟัง (การศึกษา) ตำราว่าด้วยเรื่องราวของคนวิกลจริตและคนเขลา ทั้งยังนำไปจัดการเรียนการสอนในสถานที่อย่างเฏาะเราะซูซ ซึ่งเป็นป้อมปราการหน้าด่านอันยิ่งใหญ่แห่งการญิฮาดและการพิทักษ์ดินแดน ตลอดจนร่วมกันประพันธ์ตำราเหล่านี้ด้วยปลายปากกาของตนเอง... ทั้งหมดนี้ย่อมเป็นประจักษ์พยานยืนยันถึง “การโอบรับ” ของชนชั้นนักปราชญ์และปัญญาชนในยุคโบราณที่มีต่อหัวข้อและวรรณกรรมเหล่านี้ โดยที่พวกเขามิได้มองว่ามันเป็นเรื่องไร้สาระหรือสูญเปล่าแต่อย่างใด</p>
+      <p>ยิ่งไปกว่านั้น อัซซะฮะบีย์ยังได้พรรณนาถึงหนึ่งในผู้ที่ถูกขนานนามว่า “คนเขลา” ที่โด่งดังที่สุดในศตวรรษที่ 3 แห่งฮิจเราะห์ (ศตวรรษที่ 9 แห่งคริสตกาล) นั่นคือ อบุลอิบัร อัลฮาชิมีย์ (เสียชีวิต ฮ.ศ. 250 / ค.ศ. 862) ว่าเขาคือ “หนึ่งในอัจฉริยบุคคลแห่งโลกใบนี้” ซึ่งอัซซะฮะบีย์แทบจะไม่เคยใช้คำยกย่องว่า “อัจฉริยบุคคลแห่งโลก” กับผู้ใดเลย นอกจากกลุ่มชนชั้นหัวกะทิส่วนน้อยที่ท่านได้บันทึกไว้ในสิยัร อะอ์ลาม อันนุบะลาอ์เท่านั้น</p>
+      <p>และอิหม่ามอิบนุ เราะญับ อัลฮัมบะลีย์ (เสียชีวิต ฮ.ศ. 795 / ค.ศ. 1393) ได้กล่าวปิดท้ายไว้อย่างงดงามในตำราอิสตินชาก นะซีม อัลอุนส์ มิน นะฟะฮาต ริยาฎ อัลกุดส์ถึงบรรดา “วิกลจริตชนผู้มีสติปัญญา” เหล่านี้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكانت أقوالهم وأحوالهم محفوظة غالبا، ويصدر منهم من الكلام الحسن شيء كثير</blockquote>
+      <p class="ar-translation">“ถ้อยวาจาและสภาวะของพวกเขามักจะถูกจดจำและอนุรักษ์ไว้เสมอ และมีสิ่งล้ำค่ามากมายเหลือเกิน... ที่หลั่งไหลออกมาจากสุนทรพจน์อันงดงามของพวกเขา”</p>
+      <h2 class="article-h2">เมื่อตรรกะผูกขาดความเป็นมนุษย์</h2>
+      <p>บรรดาวิกลจริตชนผู้มีสติปัญญา คือมนุษย์กลุ่มหนึ่งที่สูญเสียสติปัญญาเพียงบางส่วน นั่นคือ สติปัญญาในการใช้ชีวิตทางโลก แต่ผู้ที่สูญเสียคุณสมบัตินี้ ไม่ใช่ผู้ที่สูญเสียตัวตน และไม่ใช่ผู้ที่หลงลืมสัจธรรมของตนเองแต่อย่างใดตามข้อพิสูจน์ของอิบนุ คอลดูนในหนังสืออัลมุก็อดดิมะฮ์</p>
+      <p>อิหม่ามอัลเฆาะซาลีย์ได้อธิบายไว้ในหนังสือมะอาริจญ์ อัลกุดส์ ฟี มะดาริจญ์ มะอ์ริฟัต อันนัฟส์ว่า “คนวิกลจริตนั้นอาจมองเห็นสิ่งที่พวกเขาจินตนาการขึ้นมาได้ ดังนั้น จึงไม่ใช่เรื่องแปลกหากพวกเขาจะบอกเล่าเหตุการณ์ที่เกิดขึ้นและพูดความจริงได้ในหลายๆ ครั้ง”</p>
+      <p>ท่านอธิบายกลไกนี้ว่า “พลังแห่งจินตนาการ” นั้นตั้งอยู่กึ่งกลางระหว่างพลังสองขั้วที่คอยควบคุมมัน ขั้วเบื้องล่างคือ ประสาทสัมผัส และขั้วเบื้องบนคือ สติปัญญา องค์ความรู้ที่ผุดขึ้นมาจากจิตใต้สำนึกอาจถูกสติปัญญาที่ตื่นรู้ตรวจสอบและคัดกรองภาพลวงตาออกไป เพราะด้วยอำนาจของสติปัญญา มันจะสกัดกั้นพลังแห่งจินตนาการจากการเพ้อฝันถึงสิ่งจอมปลอมที่ประสาทสัมผัสและเหตุผลไม่อาจพิสูจน์ได้</p>
+      <p>แต่ในยามที่ความตื่นรู้เริ่มอ่อนแรงและเสื่อมถอย ภาพในจิตใต้สำนึกก็จะลอยตัวขึ้นมาและเข้าครอบงำ ดังที่เกิดขึ้นในยามหลับใหล, ยามเสพของมึนเมาที่บดบังปัญญา, หรือยามใช้สารเสพติดที่ส่งผลต่อการรับรู้ และสิ่งนี้มักเกิดขึ้นอย่างรุนแรงในภาวะวิกลจริต เนื่องจากพลังแห่งจินตนาการมีกำลังกล้าแข็งพอที่จะต้านทานสติปัญญา มันจึงโลดแล่นไปตามวิถีของมันโดยไม่แยแสต่อการขัดขวางของตรรกะ...บางครั้งมันก็หลุดพ้นจากการควบคุมของสติปัญญา อันเนื่องมาจากความเสียหายของเครื่องมือ (อวัยวะ/สมอง) ที่สติปัญญาใช้ในการควบคุมร่างกาย</p>
+      <p>อัลเฆาะซาลีย์ได้ขีดเส้นแบ่งอย่างชัดเจน ระหว่างสภาวะที่สติปัญญาขาดหายไปเพราะความเจ็บป่วยกับสภาวะที่สติปัญญาถอยร่นไปเพื่อเปิดทางให้แก่ “ญาณทัศน์แห่งซูฟี” ซึ่งท่านพรรณนาว่ามันคือ แสงสว่างที่อัลลอฮ์ทรงสาดส่องลงมาในผืนอก และแสงสว่างนั้นคือลูกกุญแจที่ไขไปสู่องค์ความรู้ส่วนใหญ่... ผู้ใดที่คิดว่าการเปิดเผยสัจธรรมนั้นจำกัดอยู่เพียงแค่หลักฐานที่ถูกจดจารึก (ตรรกะเหตุผล) ผู้นั้นย่อมตีกรอบพระเมตตาอันกว้างใหญ่ไพศาลของอัลลอฮ์ให้คับแคบลง แต่ท่านก็ยืนยันอย่างหนักแน่นว่า ญาณทัศน์นี้จะไม่มีวันลบล้างความจำเป็นทางตรรกะขั้นพื้นฐาน ซึ่งยังคงเป็นสิ่งที่เป็นที่ยอมรับและเชื่อถือได้ด้วยความปลอดภัยและมั่นใจ</p>
+      <p>ระเบียบวิธีทางญาณวิทยาอันลุ่มลึกและซับซ้อนของอิสลามที่มีต่อปรากฏการณ์ความวิกลจริตและกลุ่มคนวิกลจริต (รวมถึงวิกลจริตชนผู้มีสติปัญญาด้วย) นี่เอง คือเกราะป้องกันมิให้เกิดการผลักไสไล่ส่ง ความป่าเถื่อน และการกวาดล้างวิกลจริตชนและผู้ที่คิดต่าง ดังที่เคยเกิดขึ้นมาแล้วในอารยธรรมตะวันตก</p>
+      <p>ด้วยเหตุนี้ วัฒนธรรมอาหรับ-อิสลามจึงสามารถธำรงรักษาพื้นที่แห่งการพึ่งพาอาศัยและการอยู่ร่วมกันอย่างสันติ ระหว่างเรือนแห่งสติปัญญาและวงล้อมแห่งความวิกลจริตเอาไว้ได้อย่างงดงาม... ดังที่อิหม่ามอิบนุลเญาซีย์ได้กล่าวจารึกไว้นั่นเอง</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). มรดกของวิกลจริตชนแห่งอาหรับ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/the-wise-mad-in-arab-heritage.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
