@@ -31,6 +31,11 @@
   (`unverified | transcription-checked | scholarship-verified | demo`)
 - **meta**: `gid, books, bab, matn, n_hadith, n_nodes, n_edges, continuous, srcId, srcLoc`
 
+## รายการที่ซ่อนใน UI (ไม่ลบไฟล์)
+- `ijaza_demo` (bab: "โครงสร้างสายอิญาซะฮ์ (ตัวอย่าง)") เป็น **สายตัวอย่างเชิงโครงสร้าง**
+  ไม่ใช่สนัดจริง — กรองออกจากหน้าเครื่องมือ ณ รันไทม์ (ตามมติเจ้าของ) แต่ **คงไฟล์ไว้
+  byte-exact** เพื่อไม่ให้ข้อมูลที่นำเข้าต่างจาก upstream — รายการที่แสดงจริงจึงเหลือ 22 สาย
+
 ## หลักการใช้งานในเครื่องมือ
 - **Provenance:** ทุก edge ต้องตามรอยได้ว่ามาจาก `srcId` ใด และแสดง `status` (ระดับการตรวจสอบ)
   ไม่กลบสายที่ยัง `unverified`/`needsSource`

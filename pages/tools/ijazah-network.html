@@ -117,12 +117,6 @@ select, input { font:inherit; }
     radial-gradient(55% 50% at 82% 16%, rgba(211,47,47,.08), transparent 60%),
     radial-gradient(80% 60% at 8% 92%, rgba(211,47,47,.04), transparent 72%);
 }
-.mockup-ribbon {
-  display:inline-block; font-family:var(--ui); font-size:11px; letter-spacing:.18em;
-  text-transform:uppercase; color:#fff; background:var(--accent-deep);
-  padding:7px 16px; border-radius:999px; margin-bottom:24px; font-weight:600;
-  box-shadow:0 6px 18px rgba(179,27,27,.25);
-}
 .hero-eyebrow {
   font-family:var(--ui); font-size:11px; letter-spacing:.24em; text-transform:uppercase;
   color:var(--text-mute); display:flex; align-items:center; gap:14px; margin-bottom:22px;
@@ -420,7 +414,6 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
      ========================================================== -->
 <section class="page-hero">
   <div class="wrap">
-    <div data-reveal><span class="mockup-ribbon">MOCKUP — รอเจ้าของอนุมัติแบบก่อน build เต็ม</span></div>
     <div class="hero-eyebrow" data-reveal>IJĀZAH NETWORK</div>
     <h1 class="hero-title" data-reveal data-delay="1">เครือข่ายสายอิญาซะฮ์</h1>
     <p class="hero-tagline" data-reveal data-delay="1">สายแห่งการรับอนุญาตสืบทอดวิชา · จากครูสู่ศิษย์ต่อเนื่องเป็นสายโซ่</p>
@@ -571,7 +564,6 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       <div class="disc-card"><div class="disc-num">ก</div><div class="disc-text">ข้อมูลนำเข้าจากโครงการ <strong>F4UC/-Transmission-Network</strong> (สายอิญาซะฮ์ curate จากตำราที่ระบุแหล่ง) — ทุกสายตามรอย provenance ได้ · pin ที่ commit <code class="prov-sha">a12aed3</code> · อัปเดตข้อมูลทำผ่าน PR เปลี่ยน SHA แล้วรัน validate_chains ซ้ำทุกครั้ง</div></div>
       <div class="disc-card"><div class="disc-num">ข</div><div class="disc-text">การประเมินสถานะผู้รายงานอ้างตามแหล่งที่ระบุ <strong>ไม่ใช่คำตัดสินสุดท้าย</strong></div></div>
       <div class="disc-card"><div class="disc-num">ค</div><div class="disc-text"><strong>ประมวลผลบนเครื่องผู้ใช้ทั้งหมด ไม่มีการส่งข้อมูลออก</strong> — ทุกไฟล์โหลดจากเซิร์ฟเวอร์ของเว็บไซต์นี้เท่านั้น</div></div>
-      <div class="disc-card"><div class="disc-num">ง</div><div class="disc-text"><strong>นี่คือแบบจำลอง (MOCKUP)</strong> รอเจ้าของอนุมัติแบบก่อน build เต็ม</div></div>
     </div>
   </div>
 </section>
@@ -690,7 +682,9 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     fetch(DATA_BASE + 'index.json').then(function(r){ return r.json(); }),
     fetch(DATA_BASE + 'sources.json').then(function(r){ return r.json(); })
   ]).then(function(res){
-    groups  = (res[0] && res[0].groups) || [];
+    /* EXCLUDE the demo-only chain (ijaza_demo) from the UI per editorial —
+       imported data files stay byte-exact to the pinned upstream commit. */
+    groups  = ((res[0] && res[0].groups) || []).filter(function(g){ return g.gid !== 'ijaza_demo'; });
     sources = (res[1] && res[1].sources) || {};
     var totalNodes = groups.reduce(function(s,g){ return s + (g.n_nodes||0); }, 0);
     $statNodes.textContent = totalNodes.toLocaleString('en-US');
