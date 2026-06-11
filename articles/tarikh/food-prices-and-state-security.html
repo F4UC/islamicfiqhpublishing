@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>เมื่อปากท้องกำหนดชะตากรรมรัฐ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="เมื่อ “ราคาอาหาร” และความมั่นคงบนเส้นทางการค้าเป็นตัวชี้วัดความล่มสลายและความรุ่งเรืองของรัฐอิสลาม จากการล่มของฟาฏิมียะฮ์ ความอดอยากในอิรัก-อิสฟาฮาน-โมร็อกโก ถึงความรุ่งเรืองในอันดาลุสและยุคเซลจุก">
+<meta name="keywords" content="ราคาอาหาร, ความมั่นคง, ฟาฏิมียะฮ์, อิรัก, อันดาลุส, เซลจุก, เศรษฐกิจ, ประวัติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="เมื่อปากท้องกำหนดชะตากรรมรัฐ — Islamic Fiqh Publishing">
+<meta property="og:description" content="ในประวัติศาสตร์อิสลาม “ความมั่นคงของรัฐ” กับ “ความอิ่มท้องของประชาชน” คือเหรียญสองด้านที่แยกจากกันไม่ได้">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/food-prices-and-state-security.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="food-prices-and-state-security">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">เมื่อปากท้องกำหนดชะตากรรมรัฐ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">จากบทที่แล้วที่เราได้เห็นภาพกว้างของ “วิกฤตอาหาร” ในฐานะชนวนสงครามและการเมืองระหว่างรัฐ มาในตอนนี้ เราจะลึกลงไปสู่ไส้ในของความล่มสลายและความรุ่งเรืองที่แขวนอยู่บนเส้นด้ายของ “ราคาอาหาร”</p>
+      <p>เรื่องราวในนี้จะพาเราย้อนกลับไปดูช่วงอวสานของความยิ่งใหญ่อย่างราชวงศ์ฟาติมียะฮ์ที่ค่อยๆ ล่มสลายเพราะเรื่องอาหาร เราจะได้เห็นกลไกที่ซับซ้อนยิ่งขึ้น เมื่อความมั่นคงปลอดภัยบนท้องถนน กลายเป็นตัวแปรสำคัญที่ชี้วัดราคาสินค้าในตลาด ตั้งแต่แบกแดดที่วุ่นวาย ไปจนถึงอันดาลุสที่รุ่งโรจน์ และการที่เหล่าผู้ปกครองใช้นโยบายเศรษฐกิจเป็นเดิมพัน เพื่อรักษาบัลลังก์ท่ามกลางยุคเข็ญ</p>
+      <p>สำหรับราชวงศ์ฟาติมียะฮ์ในอียิปต์และชามนั้น พวกเขาต้องเผชิญกับความวุ่นวายอย่างรุนแรงในช่วงต้นศตวรรษที่ 5 แห่งฮิจเราะห์ (ศตวรรษที่ 11 แห่งคริสตกาล)</p>
+      <p>อัลมักรีซีย์ได้เล่าไว้ในหนังสืออิตติอาซ อัลหุนะฟาว่า: รัฐบาลฟาติมียะฮ์ได้ตัดสินใจห้ามประชาชนเชือดวัว เนื่องจากจำนวนวัวที่ใช้สำหรับไถนามีไม่เพียงพอ อีกทั้งเสบียงอาหารในอียิปต์กลายเป็นของหายาก และสัตว์เลี้ยงทั้งหมดมีจำนวนลดน้อยลง</p>
+      <p>ข่าวลือแพร่สะพัดไปทั่วว่า รัฐบาลฟาติมียะฮ์มีเจตนาจะยึดทรัพย์สินของพ่อค้า เพื่อนำมาใช้จ่ายในการปราบปรามกลุ่มกบฏที่ลุกฮือขึ้นต่อต้านผู้ปกครองในปาเลสไตน์ สถานการณ์เลวร้ายลงจนเกือบลามมาถึงกรุงไคโร ก่อให้เกิดความโกลาหลวุ่นวายไปทั่ว</p>
+      <p>นอกจากนี้ บรรดาผู้นำรัฐต่างอิจฉาริษยากันเอง, ภาวะข้าวยากหมากแพงรุนแรงขึ้น โรคระบาดแพร่กระจาย ผู้คนล้มตายเป็นจำนวนมาก สัตว์เลี้ยงสูญหาย และการบุกปล้นบ้านเรือนโดยพวกโจรผู้ร้ายเกิดขึ้นบ่อยครั้ง จนกระทั่งผู้คนตะโกนร้องตามท้องถนนว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الجوع الجوع يا أمير المؤمنين! لم يصنع بنا هذا أبوك ولا جدك</blockquote>
+      <p class="ar-translation">“หิวเหลือเกิน หิวเหลือเกิน! โอ้ ผู้นำแห่งศรัทธาชน (อะมีรุลมุอ์มินีน)! แม้แต่บิดาและปู่ของท่านยังไม่เคยทำกับเราถึงเพียงนี้เลย!”</p>
+      <p>อิบนุลเญาซีย์ (เสียชีวิต ฮ.ศ. 597 / ค.ศ. 1201) ได้บันทึกไว้ในหนังสืออัลมุนตะซ็อมเกี่ยวกับคลื่นความแพงของราคาสินค้าที่พุ่งสูงขึ้นอย่างรุนแรงในอิรักเมื่อปี ฮ.ศ. 448 (ค.ศ. 1057) และดำเนินต่อเนื่องไปอีกหลายปี จนกระทั่งแม่ทัพตุรกีนาม อัรสลาน อัลบะซาสิรีย์ (เสียชีวิต ฮ.ศ. 451 / ค.ศ. 1060) ได้เข้ายึดกรุงแบกแดด เมืองหลวงของราชวงศ์อับบาซียะฮ์ และสั่งให้มีการกล่าวขอดุอาอ์บนธรรมาสน์ (คุฏบะฮ์) ให้แก่ราชวงศ์ฟาติมียะฮ์แห่งไคโรแทน</p>
+      <p>อิบนุลเญาซีย์กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وفي هذا الوقت غلت الأسعار فبلغ الكر من الحنطة -وقد كان يساوي نيفا وعشرين دينارا- تسعين دينارا</blockquote>
+      <p class="ar-translation">“และในเวลานี้ ราคาสินค้าพุ่งสูงขึ้น จนข้าวสาลีปริมาณ 1 กุรร์ (ประมาณ 1,560 กก.) ซึ่งเคยมีราคาเพียง 20 กว่าดีนาร์ ได้พุ่งขึ้นไปถึง 90 ดีนาร์”</p>
+      <p>ท่านเชื่อมโยงสาเหตุนี้เข้ากับความไม่มั่นคงและความปลอดภัย โดยระบุว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">انقطعت الطريق من القوافل للنهب المتدارك</blockquote>
+      <p class="ar-translation">“เส้นทางสัญจรถูกตัดขาดจากกองคาราวาน เนื่องจากการปล้นสะดมที่เกิดขึ้นอย่างต่อเนื่อง”</p>
+      <p>จนผู้คนต้องขนทรัพย์สินมีค่าของตนโดยจ้างเวรยามคุ้มกันเพื่อนำไปขายในแบกแดด อิบนุลเญาซีย์ได้บรรยายถึงสภาพของชนชั้นล่างภายใต้วิกฤตเศรษฐกิจที่ครอบคลุมนี้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولحق الفقراء والمتجملين من معاناة الغلاء ما كان سببا للوباء والموت حتى دفنوا بغير غسل ولا تكفين، وكان الناس يأكلون الميتة…، وعدمت الأشربة فبلغ المن من الشراب دينارا</blockquote>
+      <p class="ar-translation">“ความทุกข์ทรมานจากข้าวยากหมากแพงได้ถาโถมเข้าใส่คนยากจนและผู้ที่พยายามรักษาเกียรติ (คนชั้นกลางที่ปกปิดความขัดสนของตน) ซึ่งเป็นสาเหตุของโรคระบาดและความตาย จนกระทั่งพวกเขาถูกฝังโดยไม่มีการอาบน้ำศพและไม่มีผ้าห่อศพ ผู้คนถึงกับต้องกินซากสัตว์... และยาหรือเครื่องดื่มบำรุงกำลังก็ขาดแคลน จนราคาของมันพุ่งสูงถึง 1 ดีนาร์ ต่อปริมาณ 1 มันน์ (หนักประมาณ 800 กรัม)”</p>
+      <h2 class="article-h2">สภาพอากาศวิปริตและหายนะในอิรัก</h2>
+      <p>สภาพความเป็นอยู่ยิ่งเลวร้ายลงไปอีกจากความเปลี่ยนแปลงของสภาพอากาศ อันเนื่องมาจากจำนวนศพที่มากมายและการกระจัดกระจาย รวมถึงการฝังศพที่ไม่ถูกสุขลักษณะ ส่งผลให้บรรยากาศมัวหมอง อากาศเป็นพิษ และแมลงวันชุกชุม</p>
+      <p>ยอดผู้เสียชีวิตในอิรักพุ่งสูงถึง 1,000 คนต่อวัน และเนื่องจากราคาโลงศพที่แพงลิบลิ่ว ผู้คนจึงต้องถูกแบกหามไปโดยยัดรวมกัน 4 ถึง 5 ศพในโลงเดียว</p>
+      <p>และด้วยความต้องการยารักษาโรค คนขายยาสามารถขายยาน้ำได้ถึงวันละ 1,000 ขวด โรคระบาดและภาวะข้าวยากหมากแพงได้แผ่ขยายไปทั่วทั้งมักกะฮ์, ฮิญาซ, ดิยารบักร์, โมซุล, คุรอซาน... และทั่วทั้งโลก (ในยุคนั้น)</p>
+      <p>ภูมิภาคและเมืองอิสลามเหล่านี้ล้วนตั้งอยู่ภายในขอบเขตทางภูมิศาสตร์ที่อยู่ภายใต้การควบคุมของราชวงศ์บูวัยฮีย์ที่กำลังล่มสลาย ในขณะที่พวกเซลจุกกำลังขยายอิทธิพลเข้ามาแทนที่จากทางทิศตะวันออก</p>
+      <h2 class="article-h2">ความโกลาหลในอิสฟาฮาน</h2>
+      <p>ความโกลาหลด้านความมั่นคงและความขัดแย้งระหว่างชนชั้นนำในเมืองอิสฟาฮานแห่งเปอร์เซีย ได้นำไปสู่คลื่นภาวะข้าวยากหมากแพงที่รุนแรงในปี ฮ.ศ. 582 (ค.ศ. 1186)</p>
+      <p>อะบู ชามะฮ์ อัลมักดิซีย์ (เสียชีวิต ฮ.ศ. 665 / ค.ศ. 1267) ท่านได้เล่าไว้ในหนังสืออัรเราเฎาะตัยน์ ฟี อัคบาร อัดเดาละตัยน์ (บันทึกเรื่องราวของสองรัฐ ซันกีย์และอัยยูบีย์) ว่า อิสฟาฮานต้องเผชิญกับความขัดแย้งทางการเมืองระหว่างเหล่าคหบดี:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فكثر القتل في البلد، فكل من في قلبه على أحد شر وثب عليه</blockquote>
+      <p class="ar-translation">“การฆ่าฟันกันในเมืองทวีความรุนแรง ใครที่มีความเคียดแค้นต่อผู้อื่นในใจก็จะกระโจนเข้าใส่ทันที”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">بطل الناس من المعايش، وخربت الأسواق ووقع الغلاء، ومات الناس من الجوع، وبقي أهل أصفهان على قدم الخوف</blockquote>
+      <p class="ar-translation">“ผู้คนละทิ้งการทำมาหากิน ตลาดรกร้าง ภาวะข้าวยากหมากแพงเกิดขึ้น ผู้คนล้มตายเพราะความหิวโหย และชาวอิสฟาฮานต้องใช้ชีวิตอยู่บนความหวาดกลัว”</p>
+      <h2 class="article-h2">ความวุ่นวายภายใน</h2>
+      <p>ในช่วงยุคสงครามครูเสด ภัยคุกคามด้านความมั่นคงต่อเส้นทางการค้าระหว่างแคว้นชามและอียิปต์ได้กลายเป็นเหตุผลความชอบธรรมในการทำสงครามต่อต้านพวกครูเสด</p>
+      <p>ซึ่งสิ่งนี้ผลักดันให้สุลต่านศอลาฮุดดีน อัลอัยยูบีย์ (เสียชีวิต ฮ.ศ. 589 / ค.ศ. 1193) ต้องเปิดฉากโจมตีซ้ำแล้วซ้ำเล่าต่อป้อมปราการอัลกัรด์ ซึ่งอยู่ภายใต้การควบคุมของพวกครูเสด และทำหน้าที่ควบคุมจุดยุทธศาสตร์ทางแยกที่สำคัญในภูมิภาคนั้น</p>
+      <p>กอฎีย์บะหาอุดดีน อิบนุ ชัดดาด อัลเมาศิลีย์ (เสียชีวิต ฮ.ศ. 632 / ค.ศ. 1235) ผู้ติดตามส่วนตัวและผู้บันทึกชีวประวัติของศอลาฮุดดีนได้บันทึกภาพรวมของการรบและสาเหตุทางเศรษฐกิจเหล่านั้นไว้ในหนังสืออันนะวาดิร อัสสุลฏอนียะฮ์ โดยบรรยายถึงความเสียหายที่ป้อมปราการครูเสดแห่งนี้สร้างแก่ชาวมุสลิมว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكان على المسلمين منه ضرر عظيم فإنه كان يقطع عن قصد طريق مصر، بحيث كانت القوافل لا يمكنها الخروج إلا مع العساكر الجمة الغفيرة، فاهتم السلطان بأمره ليكون الطريق سابلة إلى مصر</blockquote>
+      <p class="ar-translation">“ป้อมแห่งนี้สร้างความเสียหายอย่างใหญ่หลวงแก่ชาวมุสลิม เพราะมันได้ตัดขาดเส้นทางสู่อียิปต์ จนกระทั่งกองคาราวานไม่สามารถเดินทางออกไปได้หากปราศจากกองทัพขนาดใหญ่คุ้มกัน สุลต่านจึงให้ความสำคัญกับเรื่องนี้อย่างยิ่ง เพื่อให้เส้นทางสู่อียิปต์กลับมาสัญจรได้โดยสะดวก”</p>
+      <p>ความพยายามโจมตีป้อมนี้ดำเนินเรื่อยมา จนกระทั่งเกิดสมรภูมิฮิตตีนในปี ฮ.ศ. 583 (ค.ศ. 1187) ซึ่งผู้ปกครองป้อมแห่งนี้ คือแม่ทัพครูเสด เรนัลด์ เดอ ชาติยอง (Raynald de Châtillon) หรือที่ชาวมุสลิมรู้จักในนาม “อัรนาฏ” (เสียชีวิต ฮ.ศ. 583 / ค.ศ. 1187) ได้ถูกสังหารลงด้วยมือของศอลาฮุดดีนเอง</p>
+      <p>นอกจากนี้ เหตุการณ์ความไม่สงบและความวุ่นวายในอียิปต์ตอนบนช่วงปี ฮ.ศ. 818 (ค.ศ. 1415) ก็เป็นสาเหตุให้เกิดคลื่นสินค้าราคาแพง ทั้งที่ผลผลิตทางการเกษตรมีอยู่อย่างอุดมสมบูรณ์</p>
+      <p>ท่านอิบนุ หะญัร อัลอัสเกาะลานีย์ (เสียชีวิต ฮ.ศ. 852 / ค.ศ. 1448) ได้บันทึกไว้ในอินบาอ์ อัลฆุมร์ถึงผลกระทบของภาวะข้าวยากหมากแพงที่เกิดขึ้นในปีนั้นว่า ทั้งที่มีธัญพืชอยู่ และระดับน้ำในแม่น้ำไนล์ก็เพิ่มสูงขึ้น (เอื้อต่อการเพาะปลูก) และแม้ว่าปีนั้นจะเริ่มต้นด้วยการที่สินค้าราคาถูกอย่างเห็นได้ชัดก็ตาม (แต่ความไม่สงบกลับทำให้สถานการณ์พลิกผัน)</p>
+      <p>ท่านอัลอัสเกาะลานีย์ได้ระบุถึงสาเหตุของภาวะข้าวยากหมากแพงนี้ว่าเกิดจากความวุ่นวายที่เกิดขึ้นบ่อยครั้งในเขตชานเมืองของอียิปต์จากกลุ่มอาหรับ (ชนเผ่า) และการเคลื่อนทัพของกองทหารซ้ำแล้วซ้ำเล่า</p>
+      <p>ซึ่งในทุกครั้งที่มีการเคลื่อนทัพ พืชผลทางการเกษตรจะได้รับความเสียหาย และความปลอดภัยบนท้องถนนลดน้อยลง ส่งผลให้การลำเลียงสินค้าไม่สามารถทำได้ตามปกติ นอกจากนี้ กองกำลังที่ถูกส่งออกไปเพื่อควบคุมสถานการณ์ภายใต้การนำของแม่ทัพมัมลูกระดับสูง กลับกลายเป็นว่า ผู้ที่ติดตามเขาไปได้ก่อความเสียหายและทำลายล้างธัญพืชเสียเอง</p>
+      <p>เหตุการณ์นี้ยังประจวบเหมาะกับช่วงเวลาที่เกิดภัยแล้งอย่างรุนแรงในฮิญาซและชาม ส่งผลให้มีการขนย้ายธัญพืชจำนวนมากไปยังดินแดนเหล่านั้น จากพื้นที่เกษตรกรรมของอียิปต์และอียิปต์ตอนบน จนทำให้สินค้าในประเทศขาดแคลนยิ่งขึ้น</p>
+      <h2 class="article-h2">วิกฤตการณ์ในโมร็อกโก</h2>
+      <p>ในช่วงกลางศตวรรษที่ 12 แห่งฮิจเราะห์ (ศตวรรษที่ 18 แห่งคริสตกาล) ภูมิภาคโมร็อกโกได้เผชิญกับช่วงเวลาแห่งความปั่นป่วนทางการเมืองอย่างรุนแรง อะห์มัด บิน คอลิด อันนาศิรีย์ อัสสะลาวีย์ (เสียชีวิต ฮ.ศ. 1315 / ค.ศ. 1898) ได้บันทึกรายละเอียดไว้ในหนังสืออัลอิสติกศอ ฟี อัคบาร อัลมัฆริบ อัลอักศอไว้ว่า: แม้ว่าสุลต่าน อับดุลลอฮ์ บิน อิสมาอีล อัลอะละวีย์ (เสียชีวิต ฮ.ศ. 1204 / ค.ศ. 1790) จะได้รับชัยชนะเหนือกลุ่มกบฏในปี ฮ.ศ. 1150 (ค.ศ. 1737) แต่ผลกระทบที่ตามมากลับเลวร้าย</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ارتفعت الأسعار جدا، وجعل اللصوص يهجمون على الناس في دورهم ليلا ويقتلونهم وهم يستغيثون فلا يغاثون، وبلغ الخوف إلى أبواب الدور المتطرفة بفاس نهارا</blockquote>
+      <p class="ar-translation">“ราคาสินค้าพุ่งสูงขึ้นอย่างมหาศาล กลุ่มโจรผู้ร้ายเริ่มบุกรุกเข้าบ้านเรือนของผู้คนในยามวิกาลและสังหารพวกเขา ทั้งที่พวกเขาร้องขอความช่วยเหลือแต่กลับไร้ผู้เหลียวแล ความหวาดกลัวได้แผ่ขยายไปถึงหน้าประตูบ้านเรือนในแถบชานเมืองเฟส แม้กระทั่งในเวลากลางวันแสกๆ ”</p>
+      <p>สถานการณ์บีบคั้นจนถึงขั้นที่ชาวเมืองเฟสต้องดั้นด้นเดินทางไกลเพื่อไปหาอาหารจากเขตทิฏฏอวีน ซึ่งปัจจุบันตั้งอยู่ทางตอนใต้ของประเทศตูนีเซีย</p>
+      <h2 class="article-h2">ความมั่นคงและความรุ่งเรือง</h2>
+      <p>เป็นเรื่องปกติที่ผลกระทบของความมั่นคงปลอดภัยในบ้านเมืองใดๆ จะสะท้อนออกมาให้เห็นผ่านกิจกรรมทางเศรษฐกิจและการค้า ซึ่งส่งผลให้ราคาสินค้าลดต่ำลงเนื่องจากกองคาราวานสินค้าสามารถเคลื่อนย้ายได้โดยปราศจากความหวาดกลัว และไม่ต้องแบกรับภาระต้นทุนค่าจ้างเวรยามคุ้มกันที่มักจะเป็นตัวการทำให้ราคาสินค้าสูงขึ้น อีกทั้งเมื่อผู้คนรู้สึกปลอดภัยในทรัพย์สิน พวกเขาก็จะกระตือรือร้นที่จะนำมันออกมาลงทุน</p>
+      <p>ในสมัยการปกครองของหัมมาด อัลบัรบะรีย์ (เสียชีวิตหลัง ฮ.ศ. 192 / ค.ศ. 808) ที่ปกครองเยเมนในยุคของเคาะลีฟะฮ์อับบาซียะฮ์ ฮารูน อัรเราะชีด (เสียชีวิต ฮ.ศ. 193 / ค.ศ. 809) นั้น มีรายงานว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أمنت الطرق في أيامه أمانا لم يكد يعهد مثله، حتى إن الجلب كان يسير من اليمامة إلى صنعاء لا يخشون عاسفا…، وأخصب اليمن في أيامه خصبا لم يعهد، ورخصت الأسعار</blockquote>
+      <p class="ar-translation">“ถนนหนทางในยุคของท่านปลอดภัยอย่างที่ไม่เคยปรากฏมาก่อน จนกระทั่งขบวนสินค้าสามารถเดินทางจากอัลยะมามะฮ์ไปยังซอนอาอ์ได้โดยไม่ต้องเกรงกลัวผู้กดขี่ (โจรผู้ร้าย)... เยเมนมีความอุดมสมบูรณ์อย่างที่ไม่เคยมีมาก่อน และราคาสินค้าก็ถูกลง”</p>
+      <p>ตามบันทึกของบะหาอุดดีน อัลญะนะดีย์ (เสียชีวิต ฮ.ศ. 732 / ค.ศ. 1332) ในหนังสืออัซซุลูก ฟี เฏาะบะกอต อัลอุละมาอ์ วัลมุลูก และอิบนุลอะษีรได้กล่าวถึงเหตุการณ์ในปี ฮ.ศ. 476 (ค.ศ. 1083) ในหนังสืออัลกามิลว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">حصل في هذه السنة من الأمن والرخص ما لم يعهد؛ فكانت تسير القوافل من نهر جيحون إلى الشام والتجار بالأموال العظيمة والأمتعة بلا خفير ولا رفيق، على الاجتماع والانفراد، ولا يؤخذ لأحد عقال</blockquote>
+      <p class="ar-translation">“ในปีนี้ ขบวนสินค้าเกิดความปลอดภัยและสินค้าเหล่านั้นก็มีราคาถูกอย่างที่ไม่เคยปรากฏมาก่อน; กองคาราวานเดินทางจากแม่น้ำญัยหูน (ในเอเชียกลาง) ไปยังแคว้นชาม พ่อค้าพกพาเงินทองมหาศาลและมีขบวนสินค้าเดินทางไปโดยไม่มีผู้คุ้มกันหรือเพื่อนร่วมทาง ไม่ว่าจะไปเป็นกลุ่มหรือไปคนเดียว และไม่มีใครสูญเสียแม้แต่เชือกผูกอูฐสักเส้นเดียว”</p>
+      <p>ท่านยังได้นำเสนอรายการราคาสินค้าในยุคนั้นว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">بلغ كر الحنطة ببغداد عشرة دنانير بعد ثمانين دينارا، والشعير بخمسة دنانير بعد خمسين، واللحم ثمانون بدينار</blockquote>
+      <p class="ar-translation">“ข้าวสาลี 1 กุรร์ในแบกแดดราคาเหลือ 10 ดีนาร์ (จากเดิม 80 ดีนาร์), ข้าวบาร์เลย์เหลือ 5 ดีนาร์ (จากเดิม 50) และเนื้อสัตว์ 80 รุฏล์ (ประมาณ 40 กก.) ราคาเพียง 1 ดีนาร์”</p>
+      <p>อัซซะฮะบีย์ อธิบายว่า สินค้าราคาถูกอันเป็นผลจากความมั่นคง เป็นคุณลักษณะทั่วไปของยุคสมัยสุลต่านเซลจุก มะลิกชาห์ (เสียชีวิต ฮ.ศ. 485 / ค.ศ. 1093) โดยท่านได้กล่าวไว้ในชีวประวัติของเขาว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأمنت الطرق في دولته وانحلت الأسعار</blockquote>
+      <p class="ar-translation">“ถนนหนทางปลอดภัยและราคาสินค้าลดต่ำลง (ในช่วงยุคดังกล่าว)”</p>
+      <p>เนื่องจากการมีเสถียรภาพของสถานการณ์ทั่วไป ทำให้ห่วงโซ่อุปทานของสินค้าและอาหารเป็นไปอย่างสม่ำเสมอ เรื่องนี้ขยายผลไปถึงแคว้นชาม โดยเฉพาะเมืองอะเลปโป (ฮะลับ) ซึ่งมีช่วงเวลาแห่งความมั่นคงยาวนานหลังปี ฮ.ศ. 480 (ค.ศ. 1087) โดยเฉพาะภายใต้การนำของแม่ทัพเซลจุกนาม อักซุนกุร อัลบุรซุกีย์ (เสียชีวิต ฮ.ศ. 520 / ค.ศ. 1126) นโยบายของท่านนำไปสู่เสถียรภาพทางเศรษฐกิจ ราคาสินค้าลดลง และอำนาจการซื้อของประชาชนเพิ่มขึ้น</p>
+      <p>อิบนุลอะษีรได้บรรยายถึงการปกครองของท่านว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أحسن السيرة فيها وبسط العدل، وحمى السابلة، وأقام الهيبة، وأنصف الرعية، وأباد المفسدين، وأبعد أهل الشر، فتواترت القوافل، ودر الارتفاع أضعاف ما كان</blockquote>
+      <p class="ar-translation">“ท่านบริหารงานอย่างดีเยี่ยม แผ่ขยายความยุติธรรม ปกป้องผู้เดินทาง สร้างความน่าเกรงขาม (แห่งกฎหมาย) ให้ความเป็นธรรมแก่ราษฎร กวาดล้างผู้บ่อนทำลาย และกำจัดคนชั่ว ส่งผลให้กองคาราวานเดินทางมาอย่างต่อเนื่อง และรายได้ (ภาษี) ก็หลั่งไหลเข้ามาเป็นทวีคูณ”</p>
+      <p>คำว่า “รายได้หลั่งไหลเข้ามา” บ่งชี้ถึงสองเรื่องสำคัญคือ ภาษีที่เข้าสู่ท้องพระคลังของพวกเซลจุกจากเมืองอะเลปโปเพิ่มสูงขึ้นเนื่องจากความมั่นคง และการวนเวียนกันเข้ามาของกองคาราวานที่เป็นไปอย่างสม่ำเสมอเนื่องจากการฟื้นตัวของการค้าในภูมิภาคนี้</p>
+      <h2 class="article-h2">จุดเปลี่ยนผ่านที่สำคัญ</h2>
+      <p>ในดินแดนอันดาลุส เราจะพบว่านักประวัติศาสตร์และนักวรรณกรรมท่านหนึ่งคือ อิบนุ บัสซาม อัชชันตะรีนีย์ (เสียชีวิต ฮ.ศ. 542 / ค.ศ. 1147) ได้บรรยายถึงเจ้าผู้ครองนครแห่งกอร์โดบา อบุลฮัซม์ ญะฮ์วัร บิน มุฮัมมัด อัลฟาริซีย์ (เสียชีวิต ฮ.ศ. 435 / ค.ศ. 1044) ด้วยความชื่นชมในความสุขุมรอบคอบและวิจารณญาณในการปกครอง</p>
+      <p>ท่านมีความสามารถในการพาอาณาจักรใหม่ในกอร์โดบาให้รอดพ้นจากภยันตรายที่รายล้อม ภายหลังการแตกสลายอย่างถาวรของอาณาจักรเคาะลีฟะฮ์อุมัยยะฮ์ในปี ฮ.ศ. 422 (ค.ศ. 1032) ซึ่งส่งผลให้ชีวิตความเป็นอยู่ของผู้คนเจริญรุ่งเรือง ตลาดกลับมาคึกคัก และราคาสินค้าลดต่ำลง</p>
+      <p>อัชชันตะรีนีย์กล่าวไว้ในหนังสืออัซซะคีเราะฮ์ ฟี มะฮาสิน อะฮ์ลิลญะซีเราะฮ์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وألحفها ابن جهور رداء الأمن، ومانع عنها من كان يطلبها من أمراء البرابرة المتكنفين لها المتوزعين أسلابها، بخفض الجناح والرفق في المعاملة، حتى حصل على سلمهم، واستدرار مرافق بلادهم، ودرأ القاسطين عليه من ملوك الفتنة، حتى حفظوا حضرته وأوجبوا لها حرمة، بمكابدته الشدائد حتى ألانها بضروب احتياله؛ فرخت الأسعار وصاح الرخاء بالناس أن هلموا! فلبوه من كل صقع…، فاتصل البنيان بها وغلت الدور وحركوا الأسواق</blockquote>
+      <p class="ar-translation">“ท่าน (อิบนุ ญะฮ์วัร) ได้ห่มคลุมเมืองด้วยอาภรณ์แห่งความปลอดภัย และปกป้องมันจากบรรดาอุปราชชาวเบอร์เบอร์ที่รายล้อมและจ้องจะเข้ามาแย่งชิงผลประโยชน์ โดยใช้ความนอบน้อมและความนุ่มนวลในการเจรจา จนได้รับสันติภาพจากพวกเขา และทำให้สินค้าสาธารณูปโภคจากดินแดนของพวกเขาไหลเวียนเข้ามา... ท่านปัดป้องบรรดาผู้กดขี่จากเหล่ากษัตริย์ที่ก่อความวุ่นวาย จนพวกเขาต้องเกรงใจและให้เกียรตินครของท่าน... ผลลัพธ์คือ ราคาสินค้าถูกลง และความอุดมสมบูรณ์ได้ตะโกนเรียกผู้คนว่า ‘จงมาเถิด!’ ผู้คนจึงหลั่งไหลกันมาจากทุกสารทิศ... อาคารบ้านเรือนขยายตัวเชื่อมต่อกัน อสังหาริมทรัพย์มีราคาสูงขึ้น และเศรษฐกิจในตลาดขับเคลื่อนไปอย่างคึกคัก”</p>
+      <p>เรื่องเดียวกันนี้ได้รับการยืนยันโดยเศาะลาฮุดดีน อัศศ็อฟดีย์ (เสียชีวิต ฮ.ศ. 764 / ค.ศ. 1363) ในหนังสืออะอ์ยาน อัลอัศร์ในชีวประวัติของเจ้าเมืองอะเลปโป สมัยราชวงศ์มัมลูก นามว่า ไซฟุดดีน ตันกุซ บิน อับดุลลอฮ์ อัลหุสามีย์ (เสียชีวิต ฮ.ศ. 741 / ค.ศ. 1340) โดยท่านบรรยายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولم ير الناس أعف من يده…، ولا شاهدوا شمس عدل نزلت أحسن من برجه، وأطار الله طائر حرمته ومهابته في سائر البلاد…، ولذلك كانت الأسعار رخيصة</blockquote>
+      <p class="ar-translation">“ผู้คนไม่เคยเห็นมือใครจะสะอาดบริสุทธิ์ (ซื่อสัตย์สุจริต) ไปกว่ามือของเขา... และไม่เคยเห็นดวงตะวันแห่งความยุติธรรมส่องแสงลงมาได้งดงามยิ่งกว่าในหอคอยแห่งอำนาจของเขา อัลลอฮ์ทรงทำให้ความน่าเกรงขามและบารมีของเขาขจรขจายไปทั่วดินแดน... และด้วยเหตุนี้เอง ราคาสินค้าจึงถูกลง”</p>
+      <p>อัศศ็อฟดีย์ยังระบุด้วยว่า สุลต่านมัมลูก อัลอัชร็อฟ บัรสิบาย (เสียชีวิต ฮ.ศ. 841 / ค.ศ. 1437) นั้น:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كانت أيامه في غاية الحسن من الأمن والخير ورخاء الأسعار وعدم الفتن، مع طول مكثه</blockquote>
+      <p class="ar-translation">“ยุคสมัยของท่านเปี่ยมไปด้วยความดีงาม ความปลอดภัย สินค้าราคาถูก และปราศจากความวุ่นวาย แม้ว่าท่านจะครองราชย์อยู่นานก็ตามที”</p>
+      <p>หนึ่งในตัวอย่างจากอันดาลุสคือ สุลต่านแห่งแกรนาดา อบุลหะซัน อะลี บิน ซะอัด อันนัศรีย์ (เสียชีวิต ฮ.ศ. 890 / ค.ศ. 1485) ซึ่งในปี ฮ.ศ. 882 (ค.ศ. 1477) ท่านสามารถกำจัดอิทธิพลของเหล่าแม่ทัพนายกองได้สำเร็จ จากนั้นท่านก็:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">نظر في مصالح الحصون ونمى الجيش، فهابته النصارى وصالحته برا وبحرا، وكثر الخير وانبسطت الأرزاق ورخصت الأسعار، وانتشر الأمن في جميع بلاد الأندلس وشملتهم العافية في تلك المدة، وضربت سكة جديدة طيبة</blockquote>
+      <p class="ar-translation">“ดูแลผลประโยชน์ของป้อมปราการทั้งหลายและขยายกองทัพ จนพวกคริสเตียนเกรงกลัวและยอมทำสัญญาสงบศึกทั้งทางบกและทางทะเล ความดีงามเพิ่มพูนและปัจจัยยังชีพก็ขยายตัว ราคาสินค้าถูกลง ความปลอดภัยแผ่ขยายไปทั่วดินแดนอันดาลุส และผู้คนอยู่ดีมีสุขในช่วงเวลานั้น อีกทั้งยังมีการผลิตเหรียญกษาปณ์ใหม่ที่มีคุณภาพดีออกมาใช้อีกด้วย”</p>
+      <p>ตามบันทึกในหนังสือนุบซะตุลอัศร์ ฟี อัคบาร มุลูก บะนี นัศร์ และก็ดูเหมือนว่าผู้ประพันธ์ที่ไม่ปรากฏนามท่านนี้ จะเป็นนายทหารที่ร่วมสมัยในเหตุการณ์ที่เขาบันทึกไว้นั่นเอง</p>
+      <h2 class="article-h2">มาตรการที่หลากหลาย</h2>
+      <p>นโยบายทางเศรษฐกิจบางประการที่รัฐดำเนินการผ่านสถาบันบัยตุลมาล (คลังหลวง) มีผลโดยตรงต่อการอำนวยความสะดวกให้การค้าอาหารขับเคลื่อนไปได้ หรือในทางกลับกัน อาจทำให้เส้นทางของมันยุ่งยากซับซ้อนยิ่งขึ้น</p>
+      <p>เมื่อรัฐอำนวยความสะดวกในการขายผลผลิตทางการเกษตร ซึ่งเป็นทรัพย์สินของคลังหลวงให้แก่พ่อค้า ราคาสินค้าก็จะถูกลงและหาซื้อได้ง่าย แต่หากรัฐกีดกันการขายไม่ว่าด้วยรูปแบบใด ผลลัพธ์ก็จะออกมาในทางตรงกันข้าม</p>
+      <p>ตัวอย่างเช่น ในปี ฮ.ศ. 334 (ค.ศ. 945) การสู้รบในตูนีเซียระหว่างราชวงศ์ฟาติมียะฮ์กับกลุ่มกบฏท้องถิ่นภายใต้การนำของผู้นำกลุ่มอิบาฎียะฮ์ อะบู ยะซีด มัคลัด บิน กัยดาด อัซซะนาตีย์ (เสียชีวิต ฮ.ศ. 336 / ค.ศ. 947) ทวีความรุนแรงขึ้น</p>
+      <p>ภาวะข้าวยากหมากแพงได้ลุกลามไปทั่วแผ่นดิน สถานการณ์นี้บีบบังคับให้รัฐบาลฟาติมียะฮ์ต้องตัดสินใจระบายธัญพืชจากคลังสำรองออกมา เนื่องจากเกรงว่าความโกรธแค้นของมวลชนจะรุนแรงจนผลักดันให้พวกเขาหันไปสนับสนุนฝ่ายกบฏ</p>
+      <p>อัลมักรีซีย์เล่าให้เราฟังในหนังสืออัลมุก็อฟฟา อัลกะบีรว่า กองทัพกบฏได้รุกคืบเข้ามาในปีนั้น</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">حاصر المهدية عدة أشهر حتى كثر الجوع والغلاء بها، ففتح القائم الأهراء التي عملها أبوه المهدي وملأها طعاما، وفرق ما فيها على رجاله، وبلغ بلاء الناس من شدة الجوع فخرجوا من المهدية، ولم يبق بها سوى الجند… وكثرت الحروب بين أصحاب القائم وأبي يزيد</blockquote>
+      <p class="ar-translation">“และได้ปิดล้อมเมืองอัลมะฮ์ดียะฮ์ (เมืองหลวงฟาติมียะฮ์ในขณะนั้น) อยู่หลายเดือน จนความหิวโหยและสินค้าราคาแพงแพร่ระบาด เคาะลีฟะฮ์ อัลกออิม (บิอัมริลลาฮ์) จึงได้เปิดอัลอะฮ์รออ์ (ฉางหลวงเก็บธัญพืช) ซึ่งบิดาของท่านอัลมะฮ์ดี ผู้ก่อตั้งราชวงศ์ได้สร้างและเก็บสะสมอาหารไว้จนเต็ม ท่านได้แจกจ่ายเสบียงเหล่านั้นให้แก่ไพร่พลของท่าน... ส่วนประชาชนทั่วไปต้องเผชิญกับความทุกข์ยากจากความหิวโหยอย่างแสนสาหัส จนต้องอพยพออกจากเมืองไป เหลือเพียงทหารเท่านั้นที่ยังปักหลักอยู่... และการสู้รบระหว่างฝ่ายอัลกออิมและอะบู ยะซีด ก็ทวีความดุเดือดขึ้น”</p>
+      <p>ในทางกลับกัน (มาตรการที่ส่งผลเสีย) นาศิรุดดีน อิบนุลมุซ็อฟฟัร อัลอัยยูบีย์ (เสียชีวิต ฮ.ศ. 617 / ค.ศ. 1214) ได้บันทึกไว้ในหนังสือมิฎมาร อัลเคาะลาอิกถึงเหตุการณ์ข้าวยากหมากแพงอย่างรุนแรงในอิรัก ตามด้วยราคาสินค้าที่ลดลงในปี ฮ.ศ. 575 (ค.ศ. 1179) ว่าต้นเหตุเกิดจากการที่ท่านวะซีร (รัฐมนตรี) ซอฮิรุดดีน อิบนุลอัฏฏอร อัลหัรรอนีย์ (เสียชีวิต ฮ.ศ. 575 / ค.ศ. 1179) ได้ทำการ “ฎอมาน” เหมาสัมปทานที่ดินทั้งหมดรอบเมืองวาสิตและในขณะเดียวกันก็ได้สั่งห้ามการขายธัญพืช ส่งผลให้เกิดคลื่นสินค้าราคาแพงอย่างสาหัส</p>
+      <p>อัฎฎอมาน คือมาตรการบริหารการเงินที่หมายถึงการที่ผู้รับประกัน (ผู้รับสัมปทาน) ตกลงจะจ่ายเงินจำนวนหนึ่งที่แน่นอนให้แก่รัฐ แลกกับการที่รัฐอนุญาตให้เขาไป “เก็บภาษี” ในพื้นที่ที่กำหนดด้วยตัวเอง ซึ่งโดยปกติแล้ว เขาจะรีดไถเก็บภาษีเกินกว่าจำนวนที่ตกลงกับรัฐไว้หลายเท่าตัวเพื่อสร้างกำไรส่วนต่าง</p>
+      <p>ซึ่งมติมหาชนในบ้านเมืองต่างรุมประณามท่านวะซีรอิบนุลอัฏฏอร:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فاشتدت بغضته في قلوب الناس وخاصة أرباب دولة الخليفة، وكانوا يقولون: سبب غلو الأسعار منعه لبيع الغلات</blockquote>
+      <p class="ar-translation">“ความเกลียดชังที่มีต่อตัวเขาฝังรากลึกในหัวใจของผู้คน โดยเฉพาะในหมู่ข้าราชบริพารของเคาะลีฟะฮ์ (อัลมุสตะฎีอ์ บิอัมริลลาฮ์) และพวกเขากล่าวว่า: สาเหตุที่ราคาสินค้าพุ่งสูงขึ้น ก็เพราะการที่เขาห้ามการขายธัญพืช” ที่ส่งมาจากพื้นที่เกษตรกรรมในเขตอัสสะวาด (ที่ราบลุ่มทางตอนใต้ของอิรัก) นั่นเอง</p>
+      <p>ในปี ฮ.ศ. 575 (ค.ศ. 1179) วิกฤตการณ์ได้ทวีความรุนแรงขึ้นเมื่อผู้คนต้องเผชิญกับภาวะข้าวยากหมากแพง และโรคระบาดพร้อมกัน</p>
+      <p>เมื่ออันนาศิร ลิดีนิลลาฮ์ แห่งราชวงศ์อับบาซียะฮ์ (เสียชีวิต ฮ.ศ. 622 / ค.ศ. 1225) ได้ขึ้นครองตำแหน่งเคาะลีฟะฮ์ในปีเดียวกันนั้น ท่านได้ออกคำสั่งให้ขายธัญพืชและเมล็ดพันธุ์ที่อยู่ในคลังหลวงออกมาและเปิดเสรีทางการค้ากับเขตวาสิต ผลลัพธ์คือราคาสินค้าลดต่ำลงตามบันทึกของอิบนุลมุซ็อฟฟัร อัลอัยยูบีย์</p>
+      <p>นโยบายของศอลาฮุดดีน อัลอัยยูบีย์ก็ได้นำไปสู่การฟื้นตัวทางเศรษฐกิจในเมืองอะเลปโปและบริเวณโดยรอบ ส่งผลให้ผลผลิตทางการเกษตรมีอยู่อย่างเหลือเฟือ</p>
+      <p>นักประวัติศาสตร์ กะมาลุดดีน อิบนุลอะดีม (เสียชีวิต ฮ.ศ. 660 / ค.ศ. 1262) ท่านได้กล่าวไว้ในหนังสือซุบดะตุลฮะลับ ฟี ตารีค ฮะลับว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وانعمر بلد حلب في زمانه لعدله وحسن سيرته، حتى لم تبق مزرعة في جبل ولا واد إلا وفيها سكان ولها مغل…، وارتفعت الأسعار مع كثرة المغلات لكثرة العالم</blockquote>
+      <p class="ar-translation">“เมืองอะเลปโปมีความเจริญรุ่งเรืองในยุคของท่าน เนื่องด้วยความยุติธรรมและการบริหารงานที่ดีของท่าน จนกระทั่งไม่เหลือพื้นที่เพาะปลูกใดๆ ไม่ว่าจะบนภูเขาหรือในหุบเขาที่ปราศจากผู้อยู่อาศัยและผลผลิตทางการเกษตร... แต่... ราคาสินค้ากลับพุ่งสูงขึ้น ทั้งที่มีผลผลิตมากมาย ทั้งนี้เป็นเพราะมีประชากรจำนวนมาก (แห่กันเข้ามาอยู่อาศัย)”</p>
+      <p>ความหมายก็คือ ราคาสินค้ายังคงสูงและการค้าขายยังคงคึกคัก เนื่องจากจำนวนประชากรที่มาก (Demand สูง) และผลผลิตที่มาก (Supply สูง) เกิดขึ้นในเวลาเดียวกัน ซึ่งเป็นสิ่งที่ผิดไปจากความคุ้นเคยทางการค้าตามปกติในกฎของอุปสงค์และอุปทาน (ที่ปกติของเยอะราคาจะถูก)</p>
+      <p>อิบนุลอะดีมได้ยกตัวอย่างราคาสินค้าในขณะนั้นว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الحنطة مكوك ونصف بدينار، والشعير مكوكان ونصف بدينار</blockquote>
+      <p class="ar-translation">“ข้าวสาลี 1 มักกูกครึ่ง (ประมาณ 7.5 กก.) ราคา 1 ดีนาร์ และข้าวบาร์เลย์ 2 มักกูกครึ่งราคา 1 ดีนาร์”</p>
+      <h2 class="article-h2">เมื่อระบบการนำเข้าเกิดความปั่นป่วน</h2>
+      <p>เมื่อเส้นทางการค้าต้องเผชิญกับความเสี่ยงนานัปการ และสร้างความเสียหายอย่างมหาศาลแก่บรรดาพ่อค้า แม้ว่ารัฐจะพยายามอย่างยิ่งในการปกป้องขบวนคาราวานสินค้า ซึ่งถือเป็นส่วนหนึ่งของหน้าที่ความรับผิดชอบของผู้ว่าการแคว้นต่างๆ</p>
+      <p>ท่านอิบนุ เฮาก็อล อัลเมาศิลีย์ (เสียชีวิตหลัง ฮ.ศ. 367 / ค.ศ. 978) ซึ่งเป็นพ่อค้าและนักเดินทางท่านได้ระบุไว้ในหนังสือบันทึกการเดินทางของท่าน ศูเราะตุลอัรฎ์ว่า เส้นทางระหว่างเปอร์เซียและอิรักนั้นอยู่ภายใต้การคุ้มครองของผู้ว่าการ:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ضمن الوالي خراج كل ناحية، وألزم صلاح أحوال ناحيته، وتنفيذ القوافل وحفظ الطرق</blockquote>
+      <p class="ar-translation">“โดยผู้ว่าการจะรับประกันการจัดเก็บภาษีของทุกเขต และผูกมัดตนเองที่จะต้องดูแลความเรียบร้อยของพื้นที่ในปกครอง รวมถึงอำนวยความสะดวกในการผ่านทางและรักษาความปลอดภัยให้แก่กองคาราวาน”</p>
+      <p>แต่บ่อยครั้งที่เส้นทางการค้าต้องสูญหายไป สาเหตุหลักมาจากความบกพร่องด้านความมั่นคง ไม่ว่าจะเกิดจากสงครามหรือการปล้นสะดม หรือการขูดรีดส่วย/ภาษีอย่างไม่เป็นธรรมในพื้นที่ที่ต้องเดินทางผ่าน</p>
+      <p>ด้วยเหตุนี้ อิบนุ เฮาก็อลจึงกล่าวถึงการที่พ่อค้าต้องเปลี่ยนเส้นทางบางสายในแคว้นชามว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">باعتراض السلطان عليهم، وبما سرح الروم بالشام في غير وقت؛ فلجؤوا إلى طريق البادية…، وعن قريب يكف التجار فقرهم وتنقطع سابلتهم وطرقهم</blockquote>
+      <p class="ar-translation">“(เนื่องจากได้รับผลกระทบ) จากการขัดขวางรังควานจากผู้มีอำนาจ (สุลต่าน) และการที่พวกโรม (ไบแซนไทน์) ปล่อยทหารเข้ามาในชามในเวลาที่ไม่ปกติ พวกเขา (พ่อค้า) จึงจำต้องหันไปใช้เส้นทางทะเลทราย... และในไม่ช้าความยากจนจะหยุดยั้งพ่อค้าเหล่านั้น ตลอดจนเส้นทางดังกล่าวก็จะขาดสะบั้นลง ไม่มีผู้ใดเข้าไปเหยียบอีก”</p>
+      <p>เฉกเช่นเดียวกับเส้นทางบก กองเรือพาณิชย์ทางทะเลก็มีมาตรการเพื่อรับประกันความปลอดภัยจากโจรสลัด ในเรื่องนี้อัลมักรีซีย์ได้กล่าวไว้ในหนังสืออัซซุลูกว่า เมื่อจักรพรรดิอุซเบก ตีมูร์เลนก์ (เสียชีวิต ฮ.ศ. 807 / ค.ศ. 1404) ได้นำกองทัพอันเกรียงไกรบุกเข้ายึดครองดินแดนชามในปี ฮ.ศ. 803 (ค.ศ. 1401) และปิดล้อมเมืองดามัสกัส:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">بطلت الأسواق كلها…، وقدم الخبر إلى القاهرة أن الفرنج أخذوا ستة مراكب موسقة قمحا، سار بها المسلمون من دمياط إلى سواحل الشام ليباع بها من كثرة ما أصابها من القحط والغلاء</blockquote>
+      <p class="ar-translation">“ตลาดทั้งหมดหยุดชะงัก... และมีข่าวมาถึง (ไคโร) ว่า พวกแฟรงก์ (ชาวยุโรป) ได้ยึดเรือสินค้า 6 ลำที่บรรทุกข้าวสาลีจนเต็ม ซึ่งชาวมุสลิมได้ส่งออกจากเมืองดุมยาต (อียิปต์) ไปยังชายฝั่งทะเลของชาม เพื่อนำไปขายเนื่องจากที่นั่นกำลังประสบภัยแล้งและภาวะข้าวยากหมากแพงอย่างหนัก”</p>
+      <p>เพื่อปกป้องเรือสินค้าของมุสลิมจากภัยคุกคามของโจรสลัดในคราบทหารยุโรปนี้ อิบนุ ตัฆรี บัรดีย์ (เสียชีวิต ฮ.ศ. 874 / ค.ศ. 1470) ได้บอกเล่าไว้ในหนังสืออันนุญูม อัซซาฮิเราะฮ์ว่า ในปี ฮ.ศ. 844 (ค.ศ. 1439) สุลต่านมัมลูก ไซฟุดดีน ญักมัก (เสียชีวิต ฮ.ศ. 857 / ค.ศ. 1453) ได้จัดเตรียมกองทัพครั้งแรกในรัชสมัยของท่าน โดยมีสาเหตุมาจากการก่อความเสียหายของพวกแฟรงก์ในท้องทะเล และการที่พวกมันยึดเรือของพ่อค้าไป</p>
+      <p>ความปั่นป่วนด้านความมั่นคงอาจนำไปสู่การเปลี่ยนแปลงเส้นทางลำเลียงอาหารและเสบียง เพราะพ่อค้าย่อมต้องการให้สินค้าของตนไปถึงที่หมายอย่างปลอดภัย แม้จะต้องแลกมาด้วยต้นทุนที่สูงขึ้นจากการเปลี่ยนเส้นทางก็ตาม ดังที่เราได้อ้างอิงคำพูดของอิบนุ เฮาก็อลไปก่อนหน้านี้เกี่ยวกับเส้นทางคาราวานในแคว้นชาม</p>
+      <p>เหตุการณ์ทำนองเดียวกันนี้เคยเกิดขึ้นในฮิญาซ ในช่วงศตวรรษก่อนหน้านั้น ระหว่างการกบฏของอัลอุชค็อยฎิร อัลหะสะนีย์ ในปี ฮ.ศ. 251 (ค.ศ. 865) ซึ่งได้กล่าวถึงไปแล้ว โดยเขาได้ปิดล้อมมักกะฮ์จากทางทิศของอิรัก และทำให้พิธีฮัจญ์ในปีนั้นต้องหยุดชะงักลง</p>
+      <p>ผลพวงจากเหตุการณ์เหล่านั้นทำให้เส้นทางการขนส่งเสบียงสู่ดินแดนหะเราะมัยน์ต้องเปลี่ยนแปลงไป โดยเปลี่ยนมาใช้เส้นทางเยเมนแทนเส้นทางอิรัก อิบนุลอะษีรกล่าวไว้ในอัลกามิลว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن الأخيضر قطع الميرة عن مكة حتى جلبت من اليمن، فتسبب ذلك مع نهب جنوده بضائع التجار في ارتفاع الأسعار حتى صارت كل شربة ماء بدرهم</blockquote>
+      <p class="ar-translation">“อัลอุค็อยฎิรได้ตัดขาดเสบียงจากมักกะฮ์ จนกระทั่งต้องมีการขนส่งมาจากเยเมน เหตุการณ์นี้ประกอบกับการที่ทหารของเขาปล้นชิงสินค้าของพ่อค้า ส่งผลให้ราคาสินค้าพุ่งสูงขึ้น จนกระทั่งน้ำเพียงอึกเดียวมีราคาถึง 1 ดิรฮัม”</p>
+      <p>อิบนุ วาศิล อัลหะมะวีย์ (เสียชีวิต ฮ.ศ. 697 / ค.ศ. 1298) ได้ระบุในหนังสือมุฟัรริจญ์ อัลกุรูบ ฟี ตารีค บะนี อัยยูบว่า: ความขัดแย้งระหว่างกษัตริย์ราชวงศ์อัยยูบีย์ในปี ฮ.ศ. 620 (ค.ศ. 1223) ได้บีบบังคับให้พ่อค้าต้องเปลี่ยนเส้นทางขนส่งเสบียงที่มาจากทางดามัสกัสไปยังเมืองฮะมาฮ์</p>
+      <p>โดยกษัตริย์แห่งดามัสกัส อัลมุอัซซ็อม อีซา บิน อัลอาดิล (เสียชีวิต ฮ.ศ. 624 / ค.ศ. 1227) ได้ออกคำสั่งแก่ชนเผ่าอาหรับให้ตัดเสบียงจากฮะมาฮ์ นอกเหนือจากการกีดกันไม่ให้ทหารเดินทางไปสมทบกับกษัตริย์แห่งฮะมาฮ์ คืออันนาศิรที่ 2 ยูซุฟ อัลอัยยูบีย์ (เสียชีวิต ฮ.ศ. 659 / ค.ศ. 1261)</p>
+      <p>นอกจากนี้ ท่านยังได้กำหนดให้เส้นทางคาราวานเบี่ยงไปทางเมืองสะลัมยะฮ์ (ปัจจุบันอยู่ในจังหวัดฮะมาฮ์) ซึ่งในขณะนั้นอยู่ภายใต้การปกครองของท่าน ทั้งนี้เพื่อเป็นหลักประกันว่าเสบียงอาหารและสินค้าจะตกอยู่ในมือของท่าน และเพื่อเสริมสร้างทรัพยากรทางการเงินจากการเก็บภาษีของท่านให้แข็งแกร่งยิ่งขึ้น</p>
+      <p>เรื่องราวทั้งหมดนี้ได้พิสูจน์ให้เห็นสัจธรรมข้อหนึ่งว่า ในหน้าประวัติศาสตร์อิสลาม “ความมั่นคงของรัฐ” กับ “ความอิ่มท้องของประชาชน” คือเหรียญสองด้านที่ไม่สามารถแยกออกจากกันได้</p>
+      <p>เมื่อใดก็ตามที่อำนาจรัฐอ่อนแอและปล่อยให้ความโกลาหลครอบงำ เส้นเลือดใหญ่แห่งการค้าขายก็จะถูกตัดขาด นำมาซึ่งหายนะที่รุนแรงยิ่งกว่าสงคราม นั่นคือความอดอยากที่เปลี่ยนมนุษย์ให้กลายเป็นสิ่งอื่น แต่ในทางกลับกัน เมื่อผู้ปกครองสามารถสถาปนา “ความยุติธรรม” และ “ความปลอดภัย” ให้เกิดขึ้นได้ ความเจริญรุ่งเรืองก็จะหลั่งไหลตามมาดั่งสายน้ำ และราคาสินค้าที่ลดลงก็คือดัชนีชี้วัดความผาสุกที่ชัดเจนที่สุด</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). เมื่อปากท้องกำหนดชะตากรรมรัฐ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/food-prices-and-state-security.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
