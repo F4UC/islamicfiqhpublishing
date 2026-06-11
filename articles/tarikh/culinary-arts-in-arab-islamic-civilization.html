@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>ศิลปะการทำอาหารในอารยธรรมอาหรับ-อิสลาม — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ประวัติศาสตร์และวัฒนธรรมการทำอาหารในอารยธรรมอาหรับ-อิสลาม ตั้งแต่ความเรียบง่ายของครัวทะเลทราย การหลอมรวมรสนิยมเปอร์เซีย-โรมัน บทบาทอัลหิสบะฮ์คุ้มครองผู้บริโภค ไปจนถึงเกร็ดอาหารของเศาะฮาบะฮ์">
+<meta name="keywords" content="อาหารอิสลาม, ครัวอาหรับ, อัลญาฮิซ, อัลหิสบะฮ์, ษะรีด, อินทผลัม, ประวัติศาสตร์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ศิลปะการทำอาหารในอารยธรรมอาหรับ-อิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="ห้องครัวในอารยธรรมคือกระจกสะท้อนเศรษฐกิจ อารมณ์ และวัฒนธรรม - เรื่องราวศิลปะการทำอาหารในอารยธรรมอาหรับ-อิสลาม">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/culinary-arts-in-arab-islamic-civilization.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="culinary-arts-in-arab-islamic-civilization">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">ศิลปะการทำอาหารในอารยธรรมอาหรับ-อิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในหนังสือ ‘อะดับ อัลกาติบ’ (มารยาทของนักเขียน) ของอบู บักร์ อัศศูลีย์ (เสียชีวิต ฮ.ศ. 339 / ค.ศ. 950) มีเรื่องเล่าเกี่ยวกับการโต้แย้งระหว่างชาวเปอร์เซียกับชาวอาหรับต่อหน้ายะห์ยา บิน คอลิด อัลบัรมะกีย์ (เสียชีวิต ฮ.ศ. 190 / ค.ศ. 806) รัฐมนตรีเปอร์เซียในยุคอับบาซียะฮ์ สิ่งที่ชาวเปอร์เซียใช้โต้ตอบชาวอาหรับคือคำกล่าวที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ما احتجنا إليكم قط في عمل ولا تسمية، ولقد ملكتم فما استغنيتم عنا في أعمالكم ولا لغتكم، حتى إن طبيخكم وأشربتكم ودواوينكم وما فيها على ما سمينا، ما غيرتموه! فقال الأعرابي: اصبر لنا نملك كما ملكتم ألف سنة بعد ألف سنة كانت قبلها، فإننا بعدها لا نحتاج إليكم ولا إلى شيء كان لكم</blockquote>
+      <p class="ar-translation">“เราไม่เคยต้องการพวกท่านเลยในการทำงานหรือการตั้งชื่อใดๆ และเมื่อพวกท่านได้ปกครอง พวกท่านก็ยังคงต้องพึ่งพาพวกเรา ทั้งในเรื่องงานและการใช้ภาษาของพวกท่าน แม้กระทั่งอาหาร, เครื่องดื่มและสำนักงานของพวกท่าน รวมถึงสิ่งที่อยู่ในสำนักงานนั้น ล้วนใช้ชื่อที่เราตั้งไว้ โดยที่พวกท่านไม่เคยเปลี่ยนแปลงมันเลย! ชายชาวอาหรับจึงตอบว่า: จงอดทนกับพวกเราเถิด เมื่อพวกเราได้ปกครองเหมือนที่พวกท่านปกครองมาเป็นพันปี หลังจากพันปีที่ล่วงไปแล้ว พวกเราจะไม่ต้องการพวกท่านอีกเลย และไม่ต้องการสิ่งใดๆ ที่เคยเป็นของพวกท่านด้วย!”</p>
+      <p>การโต้แย้งนี้ดูเหมือนจะเป็นส่วนหนึ่งของการโต้เถียงเชิงเชื้อชาติ/ชาตินิยม ซึ่งเคยเกิดขึ้นในสังคมอิสลามในช่วงศตวรรษแรกๆ ของการปะทะทางวัฒนธรรมและอารยธรรม แต่มันก็สะท้อนให้เห็นถึงการรวมตัวกันของวัฒนธรรมและรสนิยมของเชื้อชาติที่แตกต่างกันในห้องครัวของอารยธรรมอิสลาม อารยธรรมอิสลามคือ ‘พ่อครัว’ ที่หลอมรวมประสบการณ์ของประชาชาติและวัฒนธรรมที่ถูกพิชิตไว้ในเตาปฏิกรณ์ของตน</p>
+      <p>ห้องครัวในอารยธรรมของมนุษย์ เป็นกระจกสะท้อนสถานการณ์ทางเศรษฐกิจ และยังเป็นภาพสะท้อนของอารมณ์และวัฒนธรรมของพวกเขาด้วย เมื่อใดที่ชีวิตโน้มเอียงไปสู่ความเรียบง่ายและความเป็นดั้งเดิม ย่อมส่งผลต่ออาหารของผู้คน และเมื่อใดที่ชีวิตมีความซับซ้อน โต๊ะอาหารของพวกเขาก็จะมีความหลากหลายมากขึ้น</p>
+      <p>ดังนั้น อาหารของชาวอาหรับทะเลทรายจึงคล้ายคลึงกับชีวิตในถิ่นทุรกันดารของพวกเขาเอง คือแห้ง, หยาบกระด้าง, มีการปรุงแต่งและแปรรูปน้อยและปราศจากความซับซ้อน เมนูอาหารของชาวอาหรับในทะเลทรายเป็นเพียงรายการพืชและสัตว์ที่อยู่รอบตัวพวกเขาเท่านั้น</p>
+      <p>เมื่อเกิดการพิชิตดินแดนอิสลามในแผ่นดินชามและอิรัก การปะทะกับอารยธรรมโบราณที่ตามมาจึงส่งผลกระทบอย่างใหญ่หลวงต่อวัฒนธรรมอาหาร ศิลปะ และวิธีการปรุงอาหารของชาวอาหรับ โดยครัวอาหรับได้รับประโยชน์จากการเปิดรับสิ่งที่ดีที่สุดในด้านนี้จากอารยธรรมโรมันและเปอร์เซีย ช่วงยุคอุมัยยะฮ์นั้นเต็มไปด้วยการเลียนแบบและความประทับใจ แต่ความสัมพันธ์กับอาหารได้พัฒนาขึ้นในยุคอับบาซียะฮ์ โดยครัวได้เริ่มสร้างสรรค์และมีการประดิษฐ์ประดอยมากขึ้น ไม่ได้จำกัดอยู่แค่การลอกเลียนแบบเทคนิคการทำอาหารของผู้อื่นอย่างตรงไปตรงมาอีกต่อไป</p>
+      <p>นอกจากนี้ ผู้เชี่ยวชาญด้านอาหารยังก้าวข้ามขีดจำกัดของสูตรอาหารไปสู่การศึกษาธรรมเนียมของโต๊ะอาหาร ประโยชน์และโทษของอาหารและเครื่องดื่ม พวกเขาได้เขียนตำราที่ถ่ายทอดเคล็ดลับและลักษณะการปรุงอาหาร และเจาะลึกความเข้าใจเกี่ยวกับความสัมพันธ์ระหว่างอาหารกับสุขภาพของร่างกาย ในช่วงที่อารยธรรมรุ่งเรือง วัฒนธรรม ‘การคุ้มครองผู้บริโภค’ ได้รับการส่งเสริมผ่านกลไกของ อัลหิสบะฮ์ (หน่วยงานกำกับดูแลตลาดและศีลธรรม) ชาวมุสลิมได้บังคับใช้ระบบการควบคุมดูแลร้านอาหารอย่างเข้มงวดเพื่อต่อต้านการโกงอาหารประเภทต่างๆ และกำหนดมาตรการสุขอนามัยที่เข้มงวดสำหรับภาชนะและผู้ทำอาหารด้วย</p>
+      <h2 class="article-h2">อาหารแห่งทะเลทราย</h2>
+      <p>ชาวอาหรับส่วนใหญ่อาศัยอยู่ในสภาพแวดล้อมที่เป็นทะเลทรายแห้งแล้ง ดังนั้นอาหารที่พวกเขารู้จักมากที่สุดคือ ‘ษะรีด’ ซึ่งก็คือขนมปังที่ถูกฉีกเป็นชิ้นเล็กๆ และนำไปชุบในน้ำซุปที่มีเนื้ออยู่ข้างบน และเนื้อย่าง ซึ่งมีทั้งแบบที่ย่างบนไม้ฟืนและถ่าน และแบบที่ย่างบนหินที่ถูกทำให้ร้อนด้วยไฟ ซึ่งแบบหลังนี้พวกเขาเรียกว่า ‘มัรฎูฟ’</p>
+      <p>นอกจากนี้ยังมีอาหารอีกกลุ่มหนึ่งที่คล้ายกันในแง่ของความเรียบง่ายและโครงสร้างคำในภาษาศาสตร์ จนกระทั่งอะบู มันซูร อัษษะอาลิบีย์ (เสียชีวิต ฮ.ศ. 429 / ค.ศ. 1039) ได้กล่าวไว้ในหนังสือฟิกฮุลลุเฆาะฮ์ วะสิรรุ อัลอะเราะบียะฮ์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأطعمة العرب على وزن فعيلة كالسخينة والعصيدة والحريرة؛ وكذلك الهريسة والمضيرة</blockquote>
+      <p class="ar-translation">“อาหารของชาวอาหรับส่วนใหญ่มีโครงสร้างคำแบบ ‘ฟะอีละฮ์’ เช่น อัสสะคีนะฮ์ (ข้าวต้มข้น), อัลอะศีดะฮ์ (โจ๊กข้น) และอัลหะรีเราะฮ์ รวมถึง อัลฮะรีสะฮ์ และอัลมะฎีเราะฮ์” ซึ่งคือการปรุงเนื้อกับนมเปรี้ยว</p>
+      <p>สำหรับ ‘หะรีเราะฮ์’ นั้น มัจญ์ดุดดีน อิบนุลอะษีร (เสียชีวิต ฮ.ศ. 606 / ค.ศ. 1209) ได้นิยามไว้ในหนังสืออันนิฮายะฮ์ ฟี ฆ่อรีบ อัลหะดีษ วัลอะษัรว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الحريرة: الحسا المطبوخ من الدقيق والدسم والماء؛ وقد تكرر ذكر الحريرة في أحاديث الأطعمة والأدوية</blockquote>
+      <p class="ar-translation">“อัลหะรีเราะฮ์ คือซุปข้นที่ต้มจากแป้ง, ไขมันและน้ำ และมีการกล่าวถึงอัลหะรีเราะฮ์ซ้ำๆ ในหะดีษเกี่ยวกับอาหารและยา”</p>
+      <p>อัลหะรีเราะฮ์ได้พัฒนาตามความเจริญของเมือง จนกลายเป็นซุปในรูปแบบปัจจุบันที่ชาวโมร็อกโกนิยมปรุงอย่างประณีตและเสิร์ฟบนโต๊ะอาหารอิฟฏอร (อาหารไว้ละศีลอด) ในเดือนรอมฎอน อาหารง่ายๆ อีกอย่างคือ ‘เคาะซีเราะฮ์’ และเกี่ยวกับวิธีการเตรียมและข้อแตกต่างระหว่างเคาะซีเราะฮ์กับอัลอะศีดะฮ์นั้น อิบนุ มันซูร (เสียชีวิต ฮ.ศ. 711 / ค.ศ. 1311) ได้กล่าวไว้ในหนังสือลิซาน อัลอาหรับ ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الخزيرة والخزير: اللحم يؤخذ فيقطع صغارا في القدر، ثم يطبخ بالماء الكثير والملح، فإذا أميت طبخا ذر عليه الدقيق فعصد به، ثم أدم بأي إدام شيء. ولا تكون الخزيرة إلا وفيها لحم، فإذا لم يكن فيها لحم فهي عصيدة</blockquote>
+      <p class="ar-translation">“อัลเคาะซีเราะฮ์และอัลเคาะซีร คือเนื้อสัตว์ที่นำมาหั่นเป็นชิ้นเล็กๆ ในหม้อ แล้วต้มกับน้ำและเกลือจำนวนมาก เมื่อต้มจนสุกแล้ว ก็จะโรยแป้งลงไปเพื่อทำให้ข้น จากนั้นก็นำมาคลุกเคล้ากับเครื่องปรุงตามชอบ และอัลเคาะซีเราะฮ์จะต้องมีเนื้อสัตว์อยู่ด้วยเท่านั้น หากไม่มีเนื้อสัตว์ จะเรียกว่า อัลอะศีดะฮ์”</p>
+      <p>อิบนุ กุตัยบะฮ์ อัดดีนะวะรีย์ (เสียชีวิต ฮ.ศ. 276 / ค.ศ. 889) ได้เล่าไว้ในหนังสืออุยูนุนอัคบารว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قيل لأعرابي: ما لكم تأكلون اللحم وتدعون الثريد؟ فقال: لأن اللحم ظاعن والثريد باق! وكان أطيب اللحم لديهم ما اختلط بعظم، حتى قال قائلهم إن أطيب اللحم عوذه، أي أطيبه ما ولي العظم كأنه عاذ به</blockquote>
+      <p class="ar-translation">“มีคนถามชาวอาหรับทะเลทรายว่า: ทำไมพวกท่านถึงกินแต่เนื้อและทิ้งษะรีด (ขนมปังชุบน้ำซุป) ไว้? เขาตอบว่า: เพราะเนื้อสัตว์นั้นจากไป (หมดไปอย่างรวดเร็ว) แต่ษะรีดนั้นยังคงอยู่ (สามารถเก็บไว้ได้) เนื้อสัตว์ที่อร่อยที่สุดสำหรับพวกเขาคือเนื้อที่ติดกระดูก จนกระทั่งมีคนกล่าวว่า ‘เนื้อที่อร่อยที่สุดคือเนื้อที่พันรอบกระดูก ราวกับว่ามันหลบภัยอยู่ที่นั่น’”</p>
+      <p>พึงทราบว่าอาหารที่เรากล่าวถึงก่อนหน้านี้ไม่ได้เป็นรายการอาหารปกติ แต่เป็นอาหารสำหรับคนมีฐานะในเมืองและชาวทะเลทรายที่อยู่ในช่วงอุดมสมบูรณ์เท่านั้น หากพวกเขาประสบภัยแล้ง พวกเขาก็จะกิน ‘ทุกสิ่งที่เคลื่อนไหวและเดินได้’ ในหนังสืออุยูน อัลอัคบารมีบันทึกอีกว่า ชาวเมืองคนหนึ่งถามชาวอาหรับทะเลทรายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ما تأكلون وما تدعون؟ قال الأعرابي: نأكل ما دب ودرج، إلا أم حبين</blockquote>
+      <p class="ar-translation">“พวกท่านกินอะไรและไม่กินอะไร? ชาวอาหรับตอบว่า: เรากินทุกสิ่งที่เคลื่อนไหวและเดินได้ ยกเว้น อุมมุ ฮุบัยน์ (กิ้งก่าคาเมเลียน)”</p>
+      <p>ว่ากันว่า ความหิวคือเครื่องปรุงที่อร่อยที่สุด ดังนั้น ในยามแห้งแล้ง ชาวอาหรับจึงกินสิ่งที่หาได้ง่าย เพราะการกินคือหนทางเพื่อความอยู่รอด ไม่ใช่เพื่อความเพลิดเพลินหรือความสนุก</p>
+      <h2 class="article-h2">พฤติกรรมการกินที่ไม่เหมือนใคร</h2>
+      <p>เนื่องจากช่วงภัยแล้งเกิดขึ้นซ้ำๆ ชาวอาหรับจึงมีนิสัยการกินที่เป็นเอกลักษณ์ หนึ่งในนั้นคือ ความเร่งรีบในการกิน อัดดีนะวะรีย์เล่าว่า มีคนถามชาวอาหรับทะเลทรายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ما تسمون المرق؟ قال السخين، قيل له فإذا برد، قال لا نتركه يبرد! قيل لأعرابي أتحسن أن تأكل الرأس؟ فقال: نعم، أبخص عينيه، وأسحي خديه، وأفك لحييه، وأرمي بالدماغ إلى من هو أحوج مني إليه</blockquote>
+      <p class="ar-translation">“พวกท่านเรียกน้ำซุปว่าอะไร? เขาตอบว่า: สะคีน (สิ่งที่ร้อน) มีคนถามต่อว่า: แล้วถ้ามันเย็นลงล่ะ? เขาตอบว่า: เราจะไม่ปล่อยให้มันเย็นลง! นอกจากนี้ พวกเขาบางคนก็รังเกียจอาหารบางชนิดเพราะถือตัว ตัวอย่างเช่น ไขกระดูกแกะ มีคนถามว่า: ท่านกินหัว (แกะ) เป็นหรือไม่? เขาตอบว่า: กินสิ! ฉันจะควักลูกตา, ลอกแก้ม, แยกขากรรไกรออก และโยนสมองทิ้งไปให้คนที่ต้องการมันยิ่งกว่าฉัน!”</p>
+      <p>นอกจากนี้ สิ่งที่ชาวอาหรับทะเลทรายรังเกียจก็คืออาหารบางชนิดที่ชาวเมืองชอบ เช่น ‘กอมัค’ (เครื่องจิ้มหรืออาหารหมักดองทำจากนมและข้าวสาลี) อบู ฮัยยาน อัตเตาฮีดีย์ (เสียชีวิตหลัง ฮ.ศ. 400 / ค.ศ. 1010) ได้บันทึกไว้ในหนังสืออัลบะศออิร วะ อัซซะคออิรว่า: มีการนำอัลกอมัคมาให้ชาวอาหรับทะเลทรายคนหนึ่ง เขาถามว่า ทำมาจากอะไรนี่? พวกเขาตอบว่า ทำมาจากนมและข้าวสาลี เขาจึงกล่าวว่า: เป็นรากฐานที่สูงส่ง แต่ผลผลิตที่ได้กลับไม่ดีงามเอาเลย!</p>
+      <p>และในหนังสือชัรห์ มะกอมาต อัลหะรีรีย์ของอบุลอับบาส อะห์มัด บิน อับดุลมุอ์มิน อัลก็อยซีย์ อัชชะรีชีย์ (เสียชีวิต ฮ.ศ. 619 / ค.ศ. 1222) มีบันทึกว่า: มีการนำอัลกอมัคมาให้ชาวอาหรับทะเลทรายคนหนึ่ง แต่เขาไม่ชอบมัน เขาจึงกินไปเล็กน้อย แล้วออกไป และเข้าไปในมัสยิดขณะที่อิมามกำลังละหมาดและอ่านโองการจากซูเราะฮ์อัลมาอิดะฮ์ อายะฮ์ที่ 3 ว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">حُرِّمَتْ عَلَيْكُمُ الْمَيْتَةُ وَالدَّمُ وَلَحْمُ الْخِنزِيرِ</p>
+      </div>
+      <p class="ar-translation">“ที่ถูกห้ามแก่พวกเจ้าคือ ซากสัตว์ เลือด และเนื้อสุกร”</p>
+      <p>ชายชาวอาหรับคนนั้นจึงตะโกนขึ้นว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والكامخ، لا تنسه أصلحك الله</blockquote>
+      <p class="ar-translation">“และอัลกอมัคด้วยนะ ท่านจงอย่าลืมมัน ขออัลลอฮ์ทรงปรับปรุงมันด้วย!”</p>
+      <h2 class="article-h2">ความสุขที่มาจากการไม่เปรียบเทียบ</h2>
+      <p>หากความสงสารเกิดขึ้นกับท่านผู้อ่าน ว่าทำไมชาวอาหรับเบดูอินมีอาหารการกินเยี่ยงนั้น โปรดทราบว่าพวกเขาไม่ได้รู้สึกเป็นทุกข์เลย เพราะพวกเขาไม่รู้จักสิ่งอื่นใดนอกเหนือจากสิ่งที่พวกเขามี ความทุกข์จะเกิดขึ้นเมื่อมีการเปรียบเทียบและมีทางเลือกอื่นเท่านั้น มีคนถามชนเผ่าบะนู อะสัดคนหนึ่งเกี่ยวกับชีวิตความเป็นอยู่ในทะเลทรายของพวกเขา เขาตอบด้วยความพึงพอใจว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">طعامنا أطيب طعام وأهنؤه وأمرؤه، الغث، والهبيد، والفطس، والعنكث، والعلهز، والعراجين، والضباب، واليرابيع والقنافذ والحيات؛ فما أرى أن أحدا أحسن منا عيشا وأرضى بالا</blockquote>
+      <p class="ar-translation">“อาหารของเราอร่อยที่สุด, พึงพอใจที่สุดและดีที่สุด คือ อัลฆุษษ์ (ขนมปังชนิดหนึ่ง), อัลฮะบีด (เมล็ดถั่วฮันซ็อล), อัลฟัฏส์ (เมล็ดต้นอาส), อัลอันกัษ (พืชชนิดหนึ่ง), อัลอิลฮิซ (เลือดและขนอูฐย่าง), อัลอะรอญีน (เห็ดราชนิดหนึ่ง), อัฎฎิบาบ (กิ้งก่าก่าม), ยะราบีอ์ (หนูเจอร์บิล) และเม่น และงู ดังนั้นฉันไม่เห็นว่าใครจะมีชีวิตที่ดีและสบายใจไปกว่าพวกเราอีกแล้ว!”</p>
+      <h2 class="article-h2">การวิพากษ์วิจารณ์จากชาวเปอร์เซีย</h2>
+      <p>กลุ่มพวกชุอูบีย์ (กลุ่มชนนิยมที่ไม่ใช่ชาวอาหรับ) จากเปอร์เซียได้ใช้เรื่องนี้เป็นข้อตำหนิชาวอาหรับ อบู ฮัยยาน อัตเตาฮีดีย์ได้ถ่ายทอดข้อมูลไว้ในหนังสืออัลอิมตาอ์ วัลมุอานะสะฮ์ โดยอ้างคำพูดของมุฮัมมัด บิน อะห์มัด อัลญัยฮานีย์ รัฐมนตรีเปอร์เซียว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن العرب يأكلون اليرابيع والضباب والجرذان والحيات، وكأنهم قد سلخوا من فضائل البشر، ولبسوا أهب الخنازير، ولهذا كان كسرى يسمي ملك العرب سكان شاه، أي ملك الكلاب. وهذا لشبههم بالكلاب وجرائها والذئاب وأطلائها</blockquote>
+      <p class="ar-translation">“ชาวอาหรับกินหนูเจอร์บิล, กิ้งก่าก่าม, หนูตัวใหญ่, และงู... ราวกับว่าพวกเขาถูกลอกทิ้งคุณสมบัติที่ดีของมนุษย์ออกไป และสวมหนังสุกร และด้วยเหตุนี้เอง กษัตริย์กิสรา (โคสโรว์) จึงเรียกกษัตริย์ของชาวอาหรับว่า ‘สะกอน ชาฮ์’ ซึ่งแปลว่า ‘ราชาแห่งสุนัข’ และนี่เป็นเพราะพวกเขาคล้ายกับสุนัข, ลูกสุนัข, หมาป่า และลูกหมาป่า”</p>
+      <p>อัตเตาฮีดีย์ได้บันทึกการโต้ตอบที่หักล้างได้อย่างสิ้นเชิงต่ออัลญัยฮานีย์ ผู้เป็นชุอูบีย์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أتراه لا يعلم أنه لو نزل ذلك القفر وتلك الجزيرة وذلك المكان الخاوي وتلك الفيافي المومي كل كسرى كان في الفرس، وكل قيصر كان في الروم، وكل بلهور كان بالهند، وكل خاقان بالترك، ما كانوا يعدون هذه الأحوال، لأن من جاع أكل ما وجد، وطعم ما لحق، وشرب ما قدر عليه، حبا للحياة وطلبا للبقاء، وجزعا من الموت وهربا من الفناء! أترى أنوشروان إذا وقع إلى فيافي بني أسد وبر وبار وسفوح طيبة ورمل يبرين، وجاع وعطش وعري، أما كان يأكل اليربوع والجرذان، وما كان يشرب بول الجمل وماء البئر وما أسن في تلك الوهدات ويأكل حشرات الأرض؟! قلنا: بلى والله!</blockquote>
+      <p class="ar-translation">“ท่านไม่รู้หรือไรว่า หากโคสโรว์แห่งเปอร์เซียทุกพระองค์, ซีซาร์แห่งโรมันทุกพระองค์, บะละฮ์วัร (ตำแหน่งกษัตริย์อินเดีย) ทุกพระองค์ และคอกาน (ตำแหน่งกษัตริย์เติร์ก) ทุกพระองค์ เดินทางไปยังดินแดนรกร้างนั้น, คาบสมุทรอาหรับนั้น, สถานที่ว่างเปล่านั้นและทะเลทรายอันเวิ้งว้างนั้น พวกเขาก็ต้องตกอยู่ในสภาพเดียวกันนี้ เพราะเมื่อใดที่ผู้ใดหิว เขาก็จะกินทุกสิ่งที่หาได้ ดื่มทุกสิ่งที่หามาได้ เพื่อรักชีวิตและต้องการอยู่รอด และด้วยความกลัวความตายและหนีจากการดับสูญ! ท่านคิดว่า อะนูชิรวาน (โคสโรว์ เสียชีวิต ค.ศ. 579) หากเขาตกไปอยู่ในทะเลทรายของบะนู อะสัด, บัรร์ วะบาริน, เนินเขาฏอยยิบะฮ์และเนินทรายยับรีน (ในทะเลทรายรุบอุลคอลี) และเขารู้สึกหิว, กระหายและไม่มีเสื้อผ้า, เขาจะไม่กินหนูเจอร์บิลและหนูตัวใหญ่หรือ? และเขาจะไม่ดื่มปัสสาวะอูฐ, น้ำบ่อ หรือน้ำที่เน่าเสียในหุบเขาเหล่านั้นหรือ? และเขาจะไม่กินแมลงและสัตว์เลื้อยคลานที่อยู่บนพื้นดินหรือ? เราขอกล่าวว่า: เปล่าเลย! ขอสาบานด้วยอัลลอฮ์! (พวกเขาย่อมต้องกิน)”</p>
+      <p>ก่อนหน้าอบู ฮัยยาน ชาวอาหรับทะเลทรายบางคนก็มีความตระหนักถึงความแตกต่างทางอารยธรรมในการตอบคำกล่าวหาเหล่านี้ ดังการโต้แย้งระหว่างชาวเปอร์เซียกับชาวอาหรับต่อหน้ายะห์ยา บิน คอลิด อัลบัรมะกีย์ ที่เราได้ยกมาในตอนต้น ซึ่งสะท้อนความตระหนักในขั้นตอนของความคิดสร้างสรรค์ทางอารยธรรม ที่เริ่มต้นจากการเลียนแบบ ก่อนจะจบลงด้วยความเป็นเอกลักษณ์</p>
+      <h2 class="article-h2">การยืนหยัดในรสชาติ</h2>
+      <p>แม้จะมีข้อกล่าวหาทั้งหมดนี้ แต่ชาวอาหรับทะเลทรายก็ยังคงยืนกรานตามความเคยชินในการปกป้องรสนิยมด้านอาหารของตน อัดดีนะวะรีย์เล่าว่า: มีชาวอาหรับทะเลทรายถูกนำตัวเข้าไปหาโคสโรว์ (กษัตริย์เปอร์เซีย) เพื่อให้กษัตริย์แปลกใจกับความหยาบกระด้างและความไม่รู้ของเขา โคสโรว์จึงถามเขาว่า: เนื้ออะไรอร่อยที่สุด? เขาตอบว่า: เนื้ออูฐ... โคสโรว์จึงถามว่า: เนื้ออูฐจะอร่อยกว่าเนื้อเป็ด, ไก่, ลูกไก่, นกกระทาและแพะได้อย่างไร? ชายชาวอาหรับคนนั้นจึงตอบว่า: เนื้ออูฐถูกปรุงด้วยน้ำและเกลือ และสิ่งที่ท่านกล่าวมาก็ถูกปรุงด้วยน้ำและเกลือเช่นกัน ท่านลองปรุงดูสิ แล้วท่านจะรู้ถึงความแตกต่างระหว่างรสชาติทั้งสอง!</p>
+      <p>และหากท่านได้ลิ้มรสเนื้ออูฐ ท่านก็จะเข้าใจเหตุผลของเพื่อนชาวอาหรับทะเลทราย เพราะเนื้ออูฐเป็นหนึ่งในเนื้อที่อร่อยที่สุด และสามารถอร่อยได้ด้วยตัวมันเองโดยไม่ต้องพึ่งพาเครื่องเทศหรือเครื่องปรุงรสอื่นใด</p>
+      <p>บางครั้งชาวอาหรับก็มีอารมณ์ที่อ่อนโยนขึ้นและได้รับประโยชน์จากการไปเยือนวังของกษัตริย์ โดยนำสูตรอาหารดีๆ กลับมาให้ชนเผ่าของตน เช่น ขนมหวานอัลฟาลูซะจญ์ (ขนมหวานคล้ายพุดดิ้ง) คนแรกที่นำขนมนี้มาสู่ชาวอาหรับ หลังจากที่ได้ลิ้มรสบนโต๊ะอาหารของกษัตริย์โคสโรว์ คือผู้นำเผ่ากุเรช อับดุลลอฮ์ บิน ญุดอาน (เสียชีวิต ค.ศ. 592) ท่านได้พาเด็กหนุ่มชาวเปอร์เซียมาทำขนมนี้ให้ท่านในมักกะฮ์ อุมัยยะฮ์ บิน อบี อัศศ็อลต์ (เสียชีวิต ฮ.ศ. 5 / ค.ศ. 627) ได้บันทึกสูตรของขนมนี้ไว้ในบทกวีของท่านว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لباب البر يلبك بالشهاد؛ فهي بر يخلط به العسل</blockquote>
+      <p class="ar-translation">“มันคือเนื้อในของข้าวสาลีที่นวดกับน้ำผึ้ง ซึ่งก็คือข้าวสาลีที่ผสมกับน้ำผึ้ง”</p>
+      <h2 class="article-h2">ความยิ่งใหญ่ของอินทผลัม</h2>
+      <p>อย่างไรก็ตาม ไม่มีขนมหวานใดที่ชาวอาหรับจะยกให้เหนือกว่า “อินทผลัม” เพราะไม่มีขนมชนิดใดที่สามารถเดินทางผ่านช่องท้องไปถึงข้อเท้าได้เท่าอินทผลัม บางคนกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">تمرنا جرد فطس، يغيب فيه الضرس، كأن نواه ألسنة الطير، تضع الثمرة في فيك فتجد حلاوتها في كعبيك</blockquote>
+      <p class="ar-translation">“อินทผลัมของเรากลมและแบน ฟันจะจมหายไปในเนื้อของมัน เมล็ดของมันราวกับลิ้นนก เมื่อท่านใส่ผลไม้ในปาก ท่านจะรู้สึกถึงความหวานที่ข้อเท้าของท่าน!”</p>
+      <p>ความเชื่อด้านรสนิยมนี้ยังคงฝังรากลึกในหมู่ชาวอาหรับทะเลทราย ในหนังสืออุยูน อัลอัคบาร มีบันทึกจากอิมามภาษาศาสตร์อบู อัมร์ บิน อัลอะลาอ์ อัลบัศรีย์ (เสียชีวิต ฮ.ศ. 158 / ค.ศ. 776) ว่า อัลหัจญาจญ์ บิน ยูซุฟ อัษษะเกาะฟีย์ (เสียชีวิต ฮ.ศ. 95 / ค.ศ. 715) ได้กล่าวกับผู้ร่วมโต๊ะของเขาว่า: ให้ทุกคนเขียนชื่ออาหารที่ตนชอบที่สุดลงในกระดาษ แล้ววางไว้ใต้พรมละหมาดของฉัน ปรากฏว่าในกระดาษทุกแผ่นเขียนไว้ว่า: เนยกับอินทผลัม!</p>
+      <h2 class="article-h2">พืชพรรณอันเป็นเอกลักษณ์</h2>
+      <p>ท่านนบี ﷺ ไม่ได้หลงใหลในอาหาร แต่ท่านชื่นชอบอาหารบางชนิด เช่น อัดดุบบาอ์ (ฟักทองหรือน้ำเต้า) ดังที่ท่านอะนัส บิน มาลิก (เสียชีวิต ฮ.ศ. 93 / ค.ศ. 713) ได้กล่าวไว้ และท่านชอบแตงโมกับอินทผลัมสด และบางครั้งก็กินคู่กัน อัลฮาฟิซ อิบนุ หะญัร อัลอัสเกาะลานีย์ (เสียชีวิต ฮ.ศ. 852 / ค.ศ. 1448) ได้ถ่ายทอดในหนังสือฟัตฮุลบารีย์โดยอ้างอิงจากอบู นุอัยม์ อัลอัสฟาฮานีย์ (เสียชีวิต ฮ.ศ. 430 / ค.ศ. 1040) ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أن النبي ﷺ كان يأخذ الرطب بيمينه والبطيخ بيساره، فيأكل الرطب بالبطيخ، وكان أحب الفاكهة إليه</blockquote>
+      <p class="ar-translation">“ท่านอะนัสกล่าวว่า ท่านนบี ﷺ จะหยิบอินทผลัมสดด้วยมือขวา และแตงโมด้วยมือซ้าย แล้วกินอินทผลัมสดกับแตงโม และมันเป็นผลไม้ที่ท่านชอบที่สุด”</p>
+      <p>อิบนุ หะญัรมีความเห็นว่า แตงโมที่กล่าวถึงในหะดีษคือ แตงโมสีเหลือง ซึ่งถูกเรียกว่า “อัลคิรบิซ” ในดินแดนฮิญาซ ไม่ใช่แตงโมสีเขียว คำกล่าวนี้ได้รับการสนับสนุนจากสิ่งที่อิมามอะห์มัด (เสียชีวิต ฮ.ศ. 241 / ค.ศ. 855) ได้รายงานในหนังสืออัลมุสนัดจากท่านอะนัสว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">رأيت رسول الله ﷺ يجمع بين الرطب والخربز</blockquote>
+      <p class="ar-translation">“ฉันเห็นท่านเราะซูล ﷺ กินอินทผลัมสดคู่กับอัลคิรบิซ”</p>
+      <p>อัลญาฮิซ (เสียชีวิต ฮ.ศ. 255 / ค.ศ. 869) ให้ข้อมูลเพิ่มเติมว่า ชื่อ “อัลคิรบิซ” มีต้นกำเนิดมาจากภาษาเปอร์เซีย โดยกล่าวไว้ในหนังสืออัลบะยาน วัตตับยีนว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن أهل المدينة لما نزل فيهم ناس من الفرس في قديم الدهر علقوا بألفاظ من ألفاظهم؛ ولذلك يسمون البطيخ: الخربز</blockquote>
+      <p class="ar-translation">“เมื่อชาวเปอร์เซียมาอาศัยอยู่ในมะดีนะฮ์ในสมัยโบราณ ชาวมะดีนะฮ์บางคนก็รับเอาคำศัพท์ของพวกเขามาใช้ และนั่นคือเหตุผลที่พวกเขาเรียกแตงโมว่า อัลคิรบิซ”</p>
+      <h2 class="article-h2">อาหารเพื่อเสริมความงาม</h2>
+      <p>อาหารสำหรับพวกเขานั้นไม่ได้มีไว้เพื่อดับความหิวและเพื่อความเพลิดเพลินเท่านั้น แต่ยังรวมถึงการรักษาทางการแพทย์และความงามด้วย บางครั้งพวกเขาใช้อินทผลัมคู่กับผลไม้อื่นๆ เพื่อวัตถุประสงค์ในการทำให้อ้วนสำหรับเด็กสาว ตามหลักการที่อิมามอามิร อัชชะอ์บีย์ (เสียชีวิต ฮ.ศ. 103 / ค.ศ. 722) กล่าวไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">حلي النساء الشحم</blockquote>
+      <p class="ar-translation">“เครื่องประดับของผู้หญิงคือไขมัน”</p>
+      <p>ดังที่ยากูต อัลหะมะวีย์ (เสียชีวิต ฮ.ศ. 626 / ค.ศ. 1229) ได้บันทึกไว้ในหนังสือมุอ์ญัม อัลอุดะบาอ์ และอิมามอิบนุ มาญะฮ์ (เสียชีวิต ฮ.ศ. 273 / ค.ศ. 886) ได้บันทึกจากพระนางอาอิชะฮ์ (ขออัลลอฮ์ทรงพอพระทัยนาง) ว่า นางกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أرادت أمي أن تعالجني للسمنة لتدخلني على النبي ﷺ، فما استقام لها ذلك حتى أكلت الرطب بالقثاء، فسمنت كأحسن سمنة</blockquote>
+      <p class="ar-translation">“มารดาของฉันพยายามจะรักษาน้ำหนักตัวของฉันให้เพิ่มขึ้นเพื่อที่จะนำฉันไปมอบให้แก่ท่านนบี ﷺ แต่ก็ไม่สำเร็จ จนกระทั่งฉันกินอินทผลัมสดคู่กับแตงกวา (อัลกุษษาอ์) แล้วฉันก็อ้วนขึ้นอย่างสวยงามที่สุด”</p>
+      <p>นั่นจึงเป็นเหตุผลว่า ทำไมชาวอาหรับโดยเฉพาะหญิงสาวหลังแต่งงานในปัจจุบันหลายคนถึงใส่ใจการเสริมน้ำหนักเพื่อความงาม เป็นภูมิปัญญาที่สืบทอดกันมาแต่โบราณ แต่ในแง่สุขภาพแล้ว การไม่ทำตามย่อมดีที่สุด</p>
+      <h2 class="article-h2">ความเรียบง่ายของเศาะฮาบะฮ์</h2>
+      <p>บรรดาเศาะฮาบะฮ์ (ขออัลลอฮ์ทรงพอพระทัยพวกเขา) ได้ดำเนินชีวิตตามวิถีของชาวอาหรับในยุคแรก โดยไม่บริโภคอาหารที่มากมายเกินไป และไม่ได้คิดค้นการทำอาหารที่ประณีต แต่พวกเขายึดติดกับสิ่งที่พวกเขาคุ้นเคย อัดดีนะวะรีย์เล่าจากอะนัส บิน มาลิก ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">رأيت عمر بن الخطاب يلقى إليه الصاع من التمر فيأكله حتى حشفه</blockquote>
+      <p class="ar-translation">“ฉันเห็นอุมัร บิน อัลค็อฏฏอบ (เสียชีวิต ฮ.ศ. 23 / ค.ศ. 645) มีคนนำอินทผลัมหนึ่งเศาะอ์มาให้ ท่านกินมันจนกระทั่งถึงส่วนที่หยาบที่สุด (อัลหะชัฟ) ซึ่งเป็นอินทผลัมที่คุณภาพต่ำที่สุด”</p>
+      <p>ในหนังสืออัฏเฏาะบะกอต อัลกุบรอของมุฮัมมัด บิน สะอัด อัซซุฮ์รีย์ (เสียชีวิต ฮ.ศ. 230 / ค.ศ. 845) กล่าวถึงอับดุลลอฮ์ บิน อุมัร (เสียชีวิต ฮ.ศ. 73 / ค.ศ. 693) ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">رأيت عمر يتحلب فوه فقلت له: ما شأنك؟ فقال: أشتهي جرادا مقليا</blockquote>
+      <p class="ar-translation">“ฉันเห็นน้ำลายไหลออกจากปากของอิบนุ อุมัร ฉันจึงถามท่านว่า: ท่านเป็นอะไรไป? ท่านตอบว่า: ฉันอยากกินตั๊กแตนทอด!”</p>
+      <h2 class="article-h2">นักกินมังสวิรัติคนแรกของอาหรับ</h2>
+      <p>เรายังพบโปรแกรมอาหารพิเศษในหมู่บุคคลสำคัญบางคนของพวกเขาด้วย ในหนังสืออัลบุคอลาอ์ของอัลญาฮิซกล่าวว่า อับดุลลอฮ์ บิน หะบีบ อัลอันบะรีย์ ผู้นำเผ่าบะนู อันบัรในยุคก่อนอิสลาม ถูกเรียกว่า “ผู้กินขนมปัง” เนื่องจากเขาไม่กินอินทผลัมและไม่ชอบนมเลย ในทำนองเดียวกัน ท่านอับดุลลอฮ์ บิน อับดุลมะลิก อัลฆิฟารีย์ (เสียชีวิต ฮ.ศ. 8 / ค.ศ. 630) เศาะฮาบะฮ์คนหนึ่งถูกเรียกว่า “ผู้ปฏิเสธเนื้อ” เนื่องจากเขาไม่กินเนื้อ ซึ่งท่านผู้นี้คือคนแรกที่เราทราบว่าเป็นนักกินมังสวิรัติชาวอาหรับ</p>
+      <p>และนี่เป็นเพียงเกร็ดเล็กน้อยจากประวัติศาสตร์อาหารในสังคมอาหรับ เรื่องราวยังทอดยาวต่อไปอย่างน่าสนใจ รอให้เราได้ติดตามต่อ…</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ศิลปะการทำอาหารในอารยธรรมอาหรับ-อิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/culinary-arts-in-arab-islamic-civilization.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
