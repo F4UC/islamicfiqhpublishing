@@ -1,0 +1,18 @@
+{
+  "_schema": "registry of bibliographic sources; edges reference srcId; status reflects verification level",
+  "sources": {
+    "tahrir_wajiz":      {"title": "التحرير الوجيز فيما يبتغيه المستجيز", "author": "محمد زاهد الكوثري", "medium": "scan", "needsSource": false},
+    "mujam_mufahras":    {"title": "المعجم المفهرس (تجريد أسانيد الكتب المشهورة)", "author": "ابن حجر العسقلاني", "medium": "scan", "needsSource": false},
+    "faid_rahmani":      {"title": "الفيض الرحماني", "author": "ياسين بن عيسى الفاداني", "medium": "scan", "needsSource": false},
+    "jiyad_ashari":      {"title": "سند علم الكلام الأشعري (الأشاعرة الجاويون)", "author": "—", "medium": "digital", "needsSource": false},
+    "matii_dimashqi":    {"title": "إجازات وأسانيد عالية", "author": "محمد مطيع الحافظ الدمشقي", "medium": "unknown", "needsSource": true},
+    "sardar_halabi":     {"title": "أسانيد أحمد بن محمد سردار الحلبي", "author": "أحمد سردار الحلبي", "medium": "unknown", "needsSource": true},
+    "shafii_silsila":    {"title": "السلسلة الفقهية للمذهب الشافعي", "author": "—", "medium": "unknown", "needsSource": true},
+    "zamzami_silsila":   {"title": "سلسلة الفقه الشافعي عند آل الزمزمي", "author": "—", "medium": "unknown", "needsSource": true},
+    "musnad_shafii_tijani": {"title": "مسند الإمام الشافعي (طريق التيجاني)", "author": "—", "medium": "unknown", "needsSource": true},
+    "musalsal_awwaliyya":{"title": "المسلسل بالأولية (حديث الرحمة)", "author": "—", "medium": "unknown", "needsSource": true},
+    "ghaya_taqrib":      {"title": "إسناد متن الغاية والتقريب لأبي شجاع", "author": "—", "medium": "unknown", "needsSource": true},
+    "shafii_base":       {"title": "إجازة الفقه الشافعي والسلسلة الذهبية (أصل الاتحاد)", "author": "—", "medium": "unknown", "needsSource": true},
+    "DEMO":              {"title": "بيانات عرض توضيحية (ليست سنداً حقيقياً)", "author": "—", "medium": "demo", "needsSource": false}
+  }
+}
