@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>อิบนุ บะฏูเฏาะฮ์เห็นอะไรในป้อมปราการด่านสุดท้ายของอิสลามในยุโรป? — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="การเดินทางของอิบนุ บะฏูเฏาะฮ์สู่อัลอันดาลุสในบั้นปลายชีวิต ผ่านยิบรอลตาร์ มาลากา และกรานาดา ราชธานีสุดท้ายของอิสลามในไอบีเรีย ในฐานะราชทูตของราชวงศ์มะรีนียะฮ์ ท่ามกลางภัยคุกคามของกัสติยา">
+<meta name="keywords" content="อิบนุ บะฏูเฏาะฮ์, อัลอันดาลุส, กรานาดา, ยิบรอลตาร์, ราชวงศ์มะรีนียะฮ์, นัสริด, ประวัติศาสตร์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="อิบนุ บะฏูเฏาะฮ์เห็นอะไรในป้อมปราการด่านสุดท้ายของอิสลามในยุโรป? — Islamic Fiqh Publishing">
+<meta property="og:description" content="เจ้าชายแห่งนักเดินทางในบั้นปลายชีวิต กับการเยือนป้อมปราการด่านสุดท้ายของอิสลามในยุโรป">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/ibn-battuta-in-al-andalus.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="ibn-battuta-in-al-andalus">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">อิบนุ บะฏูเฏาะฮ์เห็นอะไรในป้อมปราการด่านสุดท้ายของอิสลามในยุโรป?</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในแวดวงวรรณกรรมบันทึกการเดินทาง แทบจะไม่มีใครในโลกที่ไม่รู้จัก “อิบนุ บะฏูเฏาะฮ์” ผู้ได้รับสมญานามว่าเจ้าชายแห่งนักเดินทางและเป็นหนึ่งในมหาบุรุษนักท่องเที่ยวผู้ยิ่งใหญ่ของโลกตลอดหน้าประวัติศาสตร์ ดังที่อิกนาติอุส คราตช์คอฟสกี (Ignatius Kratchkovsky) นักประวัติศาสตร์ชาวรัสเซียได้กล่าวไว้ในหนังสือ History of Arabic Geographical Literature ว่า: “อิบนุ บะฏูเฏาะฮ์ คือนักภูมิศาสตร์ระดับโลกคนสุดท้ายในทางปฏิบัติ” กล่าวคือ ไม่ได้เป็นเพียงแค่ผู้คัดลอกข้อมูลที่พึ่งพาแต่ตำราของผู้อื่น แต่เป็นนักเดินทางผู้บุกเบิกเส้นทางครอบคลุมดินแดนต่างๆ เป็นจำนวนมาก โดยระยะทางที่ท่านได้สัญจรไปนั้น ยาวไกลกว่า 175,000 ไมล์</p>
+      <p>แน่นอนว่าการเดินทางดังกล่าวคือมหากาพย์อันยาวนานที่อิบนุ บะฏูเฏาะฮ์ได้จารึกไปทั่วทวีปของโลกยุคเก่า โดยเริ่มออกเดินทางจากฏอนญะฮ์ หรือแทนเจียร์แห่งโมร็อกโก เมืองเล็กๆ อันเงียบสงบซึ่งเป็นบ้านเกิดของเขาเอง ด้วยความมุ่งมั่นที่จะไปประกอบพิธีฮัจญ์ในขณะที่เขายังเป็นเพียงชายหนุ่มวัยฉกรรจ์ที่เพิ่งเริ่มต้นเปิดรับประสบการณ์ชีวิต</p>
+      <p>แต่การเดินทางครั้งนั้นกลับพาเขาท่องไปทั่วทั้งแอฟริกาเหนือ, อียิปต์, ฮิญาซ, คาบสมุทรอาหรับ, อิรัก, ชาม, อิหร่าน, มหาสมุทรอินเดีย, อินเดีย, เอเชียตะวันออกเฉียงใต้ และจีน ก่อนจะหวนกลับมาเยือนอนาโตเลีย, รัสเซีย, แอฟริกาตะวันตก และอัลอันดาลุส</p>
+      <p>หลังจากรอนแรมในผืนแผ่นดินอันกว้างใหญ่ไพศาลของพระผู้เป็นเจ้ามาเป็นเวลาร่วม 30 ปี ในที่สุดอิบนุ บะฏูเฏาะฮ์ผู้พลัดถิ่นก็ได้เดินทางกลับคืนสู่อ้อมอกของมาตุภูมิที่เขาถวิลหา และกลับมายังถิ่นพำนักเมื่อครั้งวัยเยาว์ ณ ดินแดน “อัลมัฆริบ อัลอักศอ” (โมร็อกโก) ในเดือนชะอ์บาน ฮ.ศ. 750 (ตรงกับเดือนพฤศจิกายน ค.ศ. 1349)</p>
+      <p>แต่สิ่งที่สังเกตได้ชัดเจนเมื่อเขากลับมาคือ การที่เขาแสดงความชื่นชมสดุดีต่อประมุขแห่งมัฆริบในขณะนั้น คือสุลต่านอะบู อินาน อัลมะรีนีย์อย่างมากมายเกินจริง ซึ่งถือเป็นพฤติการณ์ที่ผิดแปลกไปจากธรรมเนียมปฏิบัติปกติในบันทึกการเดินทางของเขา ในประเด็นนี้ ฮุเซน มุอ์นิส นักประวัติศาสตร์ผู้คร่ำหวอดอยู่กับการศึกษาชีวประวัติบุคคล ได้ให้คำอธิบายถึงสาเหตุของการสรรเสริญเยินยอเช่นนี้ไว้ว่า เป็นเพราะนักเดินทางของเราผู้นี้ ไม่สามารถอาศัยพักพิงตามซาวิยะฮ์ (ที่พักพิงสาธารณะ) และรับของกำนัลจากบรรดาปราชญ์หรือสาธารณชน เหมือนดังที่เคยทำตลอดการเดินทางในต่างแดนในฐานะอิบนุ สะบีล (ผู้เดินทางสัญจร) ได้อีกต่อไป</p>
+      <p>เมื่อย่างเข้าสู่วัยที่ใกล้จะชราภาพ เขาจำเป็นต้องหาหนทางในการดำรงชีพอย่างสมเกียรติ ซึ่งหนทางดังกล่าวจะหาได้ก็แต่เพียงการพึ่งพาพระบารมีของสุลต่านผู้ทรงเข้าพระทัย นอกจากนี้ หากพิจารณาจากงานเขียนอัลอิสติกศออ์ของอันนาศิรีย์จะพบข้อสังเกตว่า กษัตริย์แห่งมัฆริบผู้อุปถัมภ์อิบนุ บะฏูเฏาะฮ์พระองค์นี้ ทรงมีความปรีชาสามารถในการขยายอาณาเขตของราชวงศ์มะรีนียะฮ์ แต่หลังจากนั้นไม่นาน อาณาจักรของพระองค์ก็เริ่มเข้าสู่ภาวะระส่ำระสายและเสื่อมถอย ตลอดจนต้องเผชิญกับความขัดแย้งภายในราชสำนัก</p>
+      <h2 class="article-h2">อิบนุ บะฏูเฏาะฮ์ ในฐานะข้าราชบริพารของอะบู อินาน</h2>
+      <p>ในส่วนของอิบนุ บะฏูเฏาะฮ์นั้น เปี่ยมไปด้วยความทะเยอทะยานที่ปรารถนาจะให้ผู้คนหันมาสนใจเรื่องราวการเดินทางและการผจญภัยที่เขาได้ประสบพบเจอ และหวังจะให้มันกลายเป็นใบเบิกทางสู่ชื่อเสียงและเกียรติยศ แต่เป้าหมายนี้ไม่อาจบรรลุผลได้เลยหากปราศจากการผ่านเข้าทางประตูแห่งอำนาจของสุลต่านอะบู อินาน ฟาริส อัลมุตะวักกิล ผู้ทรงมีชื่อเสียงในเรื่องความใจกว้างและการเปิดกว้างทางปัญญา แม้ว่าการกระทำบางอย่างของพระองค์จะไม่ได้ถึงพร้อมด้วยคุณธรรมอย่างสมบูรณ์ โดยเฉพาะเหตุการณ์การยึดอำนาจจากพระราชบิดา แต่ถึงกระนั้น พระองค์ก็ยังคงเป็นหนทางเดียวที่เปิดกว้างสำหรับอิบนุ บะฏูเฏาะฮ์</p>
+      <p>ด้วยเหตุนี้ อิบนุ บะฏูเฏาะฮ์จึงพยายามเข้าหาและกระชับความสัมพันธ์กับสุลต่านแห่งราชวงศ์มะรีนียะฮ์ ผ่านการกล่าวคำสดุดี โดยใช้ความแปลกประหลาดมหัศจรรย์และเกร็ดเล็กเกร็ดน้อยจากการเดินทางมาเป็นเครื่องดึงดูดความสนใจ การสานสัมพันธ์ครั้งนี้เกิดขึ้นผ่านการประสานงานของอิบนุ ญุซัยย์ อัลกัลบีย์ ปราชญ์เมธีชาวมัฆริบ ผู้ซึ่งนำพาอิบนุ บะฏูเฏาะฮ์เข้าสู่ราชสำนัก เมื่อสุลต่านอะบู อินาน ได้สดับรับฟังเรื่องราว ก็ทรงประทับใจในการเดินทางนั้น และได้มีพระราชโองการสั่งให้อิบนุ ญุซัยย์ ทำหน้าที่จดบันทึกเรียบเรียงขึ้น จนกระทั่งปรากฏออกมาเป็นผลงานอมตะดังที่เรารู้จักกันในทุกวันนี้</p>
+      <p>ณ จุดนี้ อิบนุ บะฏูเฏาะฮ์รู้สึกมั่นคงในเรื่องการดำรงชีพและสถานะของตนแล้ว แต่จิตวิญญาณของผู้ที่เคยสัญจรไปทั่วโลก และขณะนี้กำลังยืนอยู่ห่างจากฝั่งอัลอันดาลุสเพียงแค่ก้าวเดียว ทำให้เขาปรารถนาที่จะออกไปสำรวจ “ปราการแห่งอิสลามที่กำลังสั่นคลอน” ในทวีปยุโรปแห่งนี้ เมื่อเขาตัดสินใจผละออกจากเมืองเฟส เขาจึงมุ่งหน้ากลับไปยังแทนเจียบ้านเกิด เพื่อไปเยี่ยมเยียนและเคารพหลุมศพของบรรพบุรุษ ดังที่เขาได้บันทึกไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولما حصلت لي مشاهدة هذا المقام الكريم وعمني فضل إحسانه العميم قصدت زيارة قبر الوالدة فوصلت إلى بلدي طنجة وزرتها، وتوجهت إلى بلدة سبتة فأقمت بها أشهرا، وأصابني بها المرض 3 أشهر ثم عافاني الله</blockquote>
+      <p class="ar-translation">“และเมื่อข้าพเจ้าได้รับโอกาสให้มาเยือนยังสถานที่อันทรงเกียรตินี้ และได้รับพระมหากรุณาธิคุณอันเปี่ยมล้นแผ่ปกคลุม ข้าพเจ้าจึงตั้งใจไปเยี่ยมหลุมศพของมารดา โดยเดินทางไปถึงเมืองแทนเจียบ้านเกิดและได้ทำการเยี่ยมเยียนนาง จากนั้นข้าพเจ้าได้มุ่งหน้าสู่เมืองซับตะฮ์ (ใกล้กับช่องแคบยิบรอลตาร์) และพำนักอยู่ที่นั่นหลายเดือน ซึ่งข้าพเจ้าได้ล้มป่วยลงเป็นเวลา 3 เดือน ก่อนที่อัลลอฮ์จะทรงประทานความหายป่วยให้แก่ข้าพเจ้า”</p>
+      <h2 class="article-h2">เส้นทางสู่อันดาลุส</h2>
+      <p>ณ จุดนี้ อิบนุ บะฏูเฏาะฮ์ได้เปิดเผยถึงมูลเหตุจูงใจที่ผลักดันให้เขาเดินทางเยือนอันดาลุส รวมถึงสะท้อนให้เห็นถึงจิตวิญญาณของผู้คนในยุคสมัยนั้นที่ต้องเผชิญหน้ากับแผนการคุกคามของฝ่ายคาทอลิกแห่งกัสตียา โดยเขากล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أردت أن يكون لي حظ من الجهاد والرباط، فركبت البحر لأصل بلدة أصيلا، فوصلت بلاد الأندلس حيث الأجر موفور للساكن، والثواب مدخور للمقيم والظاعن</blockquote>
+      <p class="ar-translation">“ข้าพเจ้าปรารถนาที่จะมีส่วนร่วมในผลบุญแห่งการญิฮาดและการเฝ้าระวังพรมแดน ข้าพเจ้าจึงโดยสารเรือไปยังเมืองอะศิร (ในโมร็อกโก) และเดินทางต่อไปยังดินแดนอันดาลุส ดินแดนที่ผลบุญมีอยู่อย่างมากมายสำหรับผู้อยู่อาศัย และกุศลผลบุญถูกตระเตรียมไว้สำหรับทั้งผู้พำนักและผู้เดินทางสัญจร”</p>
+      <p>เดือนมีนาคม ค.ศ. 1350 พระเจ้าอัลฟอนโซที่ 11 สิ้นพระชนม์จากกาฬโรคที่กำลังแพร่ระบาดไปทั่วยุโรปขณะกำลังปิดล้อมชาวมัวร์ในฐานที่มั่นในยิบรอลตาร์มาเป็นเวลาหลายเดือน ซึ่งหากป้อมปราการแห่งนี้แตกพ่ายไปในเวลานั้น ย่อมหมายถึงจุดจบของอันดาลุสทางตอนใต้ทั้งหมด การสิ้นชีพของกษัตริย์ผู้นี้ทำให้ชาวอันดาลุสได้ปลดเปลื้องจากความทุกข์เข็ญและถอนหายใจด้วยความโล่งอกจากการถูกปิดล้อม ดังที่อิบนุ บะฏูเฏาะฮ์บันทึกไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فأخذه الله من حيث لم يحتسب، ومات بالوباء الذي كان أشد الناس خوفا منه</blockquote>
+      <p class="ar-translation">“พระองค์อัลลอฮ์ทรงพรากเขาไปในทางที่เขาไม่คาดคิด เขาตายด้วยโรคระบาด (กาฬโรค) ซึ่งเป็นสิ่งที่เขาหวาดกลัวที่สุด”</p>
+      <p>บัลลังก์กัสติยาได้ตกเป็นของเปโดรที่มีพระชนมายุไม่ถึง 16 พรรษาดี ราชสำนักถูกพระมารดาและขุนนางคนโปรดของพระนางครอบงำเนื่องจากกษัตริย์คนใหม่ยังอ่อนวัยและไร้ประสบการณ์ จุดเปลี่ยนทางการเมืองครั้งสำคัญนี้ส่งผลดีต่อการเดินทางของอิบนุ บะฏูเฏาะฮ์ ทำให้เขาสามารถเดินทางเข้าสู่ยิบรอลตาร์ได้ และได้ประจักษ์ถึงป้อมปราการที่สร้างโดยสุลต่านแห่งมัฆริบรุ่นก่อน โดยเฉพาะผู้สถาปนาราชวงศ์อัลมุวาฮิดีนอย่างอับดุลมุอ์มิน อิบนุ อะลีย์</p>
+      <p>ในเวลาต่อมาอีกหลายทศวรรษ อบุลฮะซัน อัลมะรีนีย์และพระราชโอรสอะบู อินาน อัลมุตะวักกิล ได้ให้ความสำคัญอย่างยิ่งกับการเสริมสร้างความแข็งแกร่งให้แก่ป้อมปราการยิบรอลตาร์ และขนานนามสถานที่แห่งนี้ว่า “ญะบัล อัลฟัตห์” (ภูเขาแห่งชัยชนะ) ด้วยตระหนักถึงความสำคัญทางยุทธศาสตร์ว่า การสูญเสียที่มั่นแห่งนี้ ย่อมหมายถึงการล่มสลายของมัฆริบที่อยู่เบื้องหลัง</p>
+      <p>เมื่ออิบนุ บะฏูเฏาะฮ์เดินทางออกจากยิบรอลตาร์ เขาได้มุ่งหน้าสู่เมืองรอนดา (Ronda) ซึ่งนับเป็นหนึ่งในป้อมปราการของมุสลิมที่แข็งแกร่งและงดงามที่สุด โดยมีผู้ปกครองเมืองในขณะนั้นคือ เชค อบุรรอบีอ์ สุลัยมาน อิบนุ ดาวูด และมีผู้พิพากษาประจำเมืองเป็นลูกพี่ลูกน้องของเขาเอง คือฟากิห์ อบุลกอซิม มุฮัมมัด อิบนุ ยะห์ยา อิบนุ บะฏูเฏาะฮ์ เขาได้รับการต้อนรับอย่างสมเกียรติเป็นเวลา 5 วัน</p>
+      <p>จากนั้น เขาตัดสินใจเดินทางต่อไปยังเมืองมาร์เบลลา (Marbella) ปัจจุบันเป็นหนึ่งในเมืองตากอากาศที่มีชื่อเสียงที่สุดในสเปนและในระดับโลก จากที่นั่น เขาตั้งใจจะเดินทางต่อไปยังเมืองมาลากา (Malaga) โดยร่วมขบวนไปกับกลุ่มทหารม้า แต่ด้วยเหตุสุดวิสัยบางประการทำให้เขาพลัดหลงหรือล้าหลังกว่ากลุ่มดังกล่าว แต่ความล่าช้านี้กลับกลายเป็นเหตุให้เขารอดพ้นจากความตายหรือการถูกจับกุม เพราะเมื่อกลุ่มทหารม้านั้นเดินทางไปถึงเมืองที่ชื่อว่า ซุฮัยล์ (ฮุเซน มุอ์นิส ระบุว่าเป็นเมือง Fuengirola ในปัจจุบัน) พวกเขาถูกกองกำลังกัสตียาซุ่มโจมตี ส่งผลให้มีผู้เสียชีวิตหนึ่งราย หลบหนีไปได้หนึ่งราย และที่เหลือถูกจับเป็นเชลย ส่วนอิบนุ บะฏูเฏาะฮ์นั้นสามารถเดินทางไปถึงมาลากาได้อย่างปลอดภัยในภายหลัง เขาได้บรรยายถึงเมืองมาลากาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إحدى قواعد الأندلس وبلادها الحسان، جامعة بين مرافق البر والبحر، كثيرة الخيرات والفواكه، رأيت العنب يباع في أسواقها بحساب ثمانية أرطال بدرهم صغير، ورمانها المرسى الياقوتي لا نظير له في الدنيا، وأما التين واللوز فيجلبان منها ومن أحوازها إلى بلاد المشرق والمغرب</blockquote>
+      <p class="ar-translation">“หนึ่งในเมืองหลักของอันดาลุสและยังเป็นดินแดนอันงดงามยิ่ง ครบครันไปด้วยทรัพยากรทั้งทางบกและทางทะเล อุดมสมบูรณ์ด้วยเสบียงอาหารและผลไม้ ข้าพเจ้าเห็นองุ่นขายในตลาดแปดชั่งต่อหนึ่งดิรฮัมเล็ก และทับทิมของที่นี่ไม่มีที่ใดในโลกเสมอเหมือน ส่วนมะเดื่อและอัลมอนด์นั้นถูกส่งออกจากที่นี่และจากเขตปริมณฑลไปยังดินแดนทั้งโลกตะวันออกและตะวันตก”</p>
+      <p>เมื่อเขาตระเวนไปทั่วเมืองและแวะเข้าสู่มัสยิดกลาง เขาได้พบกับอะบู ญะอ์ฟัร อิบนุ อับดุลลอฮ์ อัลฏ็อนญาลี ผู้เป็นคอฏีบ (ผู้แสดงธรรม) กำลังร่วมกับบรรดาบุคคลสำคัญของเมืองเรี่ยไรเงินบริจาคและซะกาตเพื่อนำไปไถ่ตัวเชลยที่ตกอยู่ในมือข้าศึก ซึ่งรวมถึงกลุ่มทหารม้าที่เพิ่งถูกจับไปเหล่านั้นด้วย อิบนุ บะฏูเฏาะฮ์จึงกล่าวขึ้นด้วยเสียงอันดังต่อหน้าธารกำนัลและคอฏีบผู้นั้นว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الحمد لله الذي عافاني ولم يجعلني منهم! وأخبرته بما اتفق لي بعدهم</blockquote>
+      <p class="ar-translation">“มวลการสรรเสริญเป็นสิทธิ์ของอัลลอฮ์ ผู้ทรงให้ข้าพเจ้าปลอดภัยและไม่ทำให้ข้าพเจ้าเป็นหนึ่งในพวกเขา!” จากนั้นจึงเล่าเรื่องราวความโชคดีของตนให้ฟัง ซึ่งทำให้โต๊ะครูประจำมัสยิดประหลาดใจในเรื่องราวของเขา และได้เชิญเขาไปพำนักพร้อมดูแลต้อนรับอย่างดี</p>
+      <p>อิบนุ บะฏูเฏาะฮ์ ไม่ลืมที่จะบันทึกถึงสิ่งที่ได้พบเห็นเกี่ยวกับศิลปวัตถุและสถาปัตยกรรมสำคัญของมาลากา โดยกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">بمالقة يصنع الفخار المذهب العجيب، ويجلب منها، إلى أقاصي البلاد، ومسجدها كبير الساحة، شهير البركة وصحنه لا نظير له في الحسن، فيه أشجار النارنج البعيدة</blockquote>
+      <p class="ar-translation">“ณ เมืองมาลากา มีการผลิตเครื่องปั้นดินเผาเคลือบสีทองอันวิจิตรพิสดาร ซึ่งถูกส่งออกไปยังดินแดนอันไกลโพ้น และมัสยิดของเมืองนี้มีลานกว้างขวาง เป็นที่เลื่องลือในความจำเริญ ลานกลางมัสยิดนั้นงดงามหาที่เปรียบมิได้ และยังประดับประดาไปด้วยต้นส้มอันสูงตระหง่าน”</p>
+      <h2 class="article-h2">ป้อมปราการแห่งอันดาลุสและการเดินทางกลับ</h2>
+      <p>จากเมืองมาลากา อิบนุ บะฏูเฏาะฮ์ตัดสินใจมุ่งหน้าขึ้นเหนือสู่เมืองบัลลิช (Ballish) หรือที่ปัจจุบันรู้จักกันในนามเบเลซ-มาลากา (Vélez-Málaga) ซึ่งในขณะนั้นถือเป็นหนึ่งในเมืองบริวารของอาณาจักรกรานาดาอันยิ่งใหญ่ จากนั้นจึงเดินทางต่อไปยังอัลฮัมมะฮ์ (Alhama) เมืองขนาดเล็กที่มีมัสยิดที่ถูกสร้างสรรค์อย่างวิจิตรพิสดาร และมีบ่อน้ำพุร้อนตั้งอยู่ริมฝั่งหุบเขา จากจุดนั้น อิบนุ บะฏูเฏาะฮ์ได้เดินทางเข้าสู่ “กรานาดา” (Granada) ราชธานีสุดท้ายของโลกอิสลามในคาบสมุทรไอบีเรีย เจ้าสาวแห่งนครทั้งหลาย ซึ่งมีพื้นที่กินอาณาบริเวณกว้างไกลถึง 40 ไมล์ มีแม่น้ำชะนีล (Genil) ไหลผ่าน รายล้อมไปด้วยเรือกสวนไร่นา, อุทยาน, พระราชวัง และไร่องุ่นอยู่รอบทิศทาง</p>
+      <p>อิบนุ บะฏูเฏาะฮ์ไม่ได้ละเลยที่จะกล่าวถึงองค์สุลต่านผู้สืบเชื้อสายราชวงศ์บะนู อัลอะห์มัรหรือราชวงศ์นัสริดในขณะนั้น โดยบันทึกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كان ملك غرناطة في عهد دخولي إليها السلطان أبو الحجاج يوسف بن السلطان أبي الوليد إسماعيل ابن فرج بن إسماعيل بن يوسف بن نصر ولم ألقه بسبب مرض كان به، وبعثت إلي والدته الحرة الصالحة الفاضلة بدنانير ذهب ارتفقت بها</blockquote>
+      <p class="ar-translation">“กษัตริย์แห่งกรานาดาในยามที่ข้าพเจ้าเดินทางไปถึงคือสุลต่านอบุลฮัจญาจ ยูซุฟ บุตรของสุลต่าน อบุลวะลีด อิสมาอีล... แต่ข้าพเจ้าไม่ได้เข้าเฝ้าพระองค์เนื่องจากทรงพระประชวร แต่พระราชมารดาของพระองค์ ผู้ทรงเกียรติและเปี่ยมด้วยคุณธรรม ได้ส่งเหรียญทองมาให้ข้าพเจ้า ซึ่งข้าพเจ้าก็ได้ใช้ประโยชน์จากมัน”</p>
+      <p>ตามธรรมเนียมปฏิบัติของอิบนุ บะฏูเฏาะฮ์ เขาไม่พลาดที่จะหาโอกาสพบปะกับเหล่าปราชญ์ นักนิติศาสตร์ นักเทศน์ และนักประพันธ์แห่งกรานาดา ดังเช่นการพบปะกับประธานผู้พิพากษา ผู้เป็นอัจฉริยะแห่งยุคสมัย อบุลบะเราะกัต อัลบัลฟิกีย์ ซึ่งเดินทางมาจากเมืองอัลเมเรีย (Almeria) ในช่วงนั้น เป็นเรื่องบังเอิญที่น่าเหลือเชื่อที่บุคคลสำคัญที่สุดสามท่านแห่งโลกตะวันตกของอิสลามได้แก่ อิบนุ คอลดูน, อิบนุลเคาะฏีบ และอิบนุ บะฏูเฏาะฮ์ มีชีวิตอยู่ในยุคสมัยเดียวกัน โดยสองท่านแรกได้มีโอกาสพบปะกันในกรานาดา แต่อิบนุ บะฏูเฏาะฮ์กลับคลาดโอกาสที่จะได้ร่วมวงสนทนานั้น สิ่งที่น่าสนใจคือ อิบนุ คอลดูนได้กล่าวถึงอิบนุ บะฏูเฏาะฮ์ไว้ในหนังสืออัลมุก็อดดิมะฮ์อันโด่งดังของท่านว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إنه ورد بالمغرب لعهد السلطان أبي عنان من ملوك بني مرين رجل من مشيخة طنجة يعرف بابن بطوطة كان رحل منذ 20 سنة قبلها إلى المشرق وتقلب في بلاد العراق واليمن والهند ودخل مدينة دهلي حاضرة ملك الهند وهو السلطان محمد شاه، واتصل بملكها لذلك العهد وهو فيروزجوه وكان له منه مكان، واستعمله في خطة القضاء بمذهب المالكية في عمله، ثم انقلب إلى المغرب واتصل بالسلطان أبي عنان وكان يحدث عن شأن رحلته وما رأى من العجائب بممالك الأرض</blockquote>
+      <p class="ar-translation">“ในรัชสมัยของสุลต่านอะบู อินาน แห่งราชวงศ์มะรีนียะฮ์ ได้มีชายผู้หนึ่งจากตระกูลผู้นำแห่งเมืองแทนเจียร์ นามว่า อิบนุ บะฏูเฏาะฮ์ เดินทางกลับเข้ามายังมัฆริบ เขาได้ออกเดินทางไปยังดินแดนตะวันออกเมื่อ 20 ปีก่อนหน้านั้น ท่องไปในอิรัก เยเมน และอินเดีย ได้เข้าไปยังเมืองเดลี ราชธานีของกษัตริย์อินเดีย สุลต่านมูฮัมหมัด ชาห์ และได้สานสัมพันธ์กับกษัตริย์แห่งแดนนั้น... จนได้รับการแต่งตั้งให้ดำรงตำแหน่งผู้พิพากษาตามแนวทางมาลิกีย์ จากนั้นเขาจึงเดินทางกลับมายังมัฆริบ เข้าพบสุลต่านอะบู อินาน และได้บอกเล่าเรื่องราวการเดินทางรวมถึงสิ่งมหัศจรรย์ต่างๆ ที่เขาได้พบเห็นในอาณาจักรทั่วพิภพ”</p>
+      <p>อิบนุ บะฏูเฏาะฮ์ได้สานต่อเส้นทางของเขาในอันดาลุส โดยกล่าวถึงสถานที่ประทับใจว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ومن عجيب مواضعها عين الدمع، وهو جبل فيه الرياض والبساتين، ولا مثيل له بسواها</blockquote>
+      <p class="ar-translation">“และหนึ่งในสถานที่อันน่าอัศจรรย์คือ อัยนุลดัมอ์ ซึ่งเป็นขุนเขาที่เต็มไปด้วยสวนพฤกษชาติและอุทยาน จะหาที่ใดเสมอเหมือนสถานที่แห่งนี้ไม่ได้เลย”</p>
+      <p>ประเด็นที่น่าสนใจและถือเป็นข้อมูลจำเพาะที่อิบนุ บะฏูเฏาะฮ์ได้บันทึกไว้เพียงผู้เดียวเกี่ยวกับเหตุการณ์ในกรานาดาช่วงกลางศตวรรษที่ 8 แห่งฮิจเราะห์ (ศตวรรษที่ 14 แห่งคริสตกาล) คือการปรากฏตัวของกลุ่มศูฟีจากเอเชียและอานาโตเลีย ทั้งชาวเปอร์เซียและชาวตุรกี อาศัยอยู่ในเขตชานเมืองกรานาดา ท่านได้บันทึกไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وبغرناطة جملة من فقراء العجم استوطنوها لشبهها ببلادهم، منهم الحاج أبو عبد الله السمرقندي، والحاج أحمد التبريزي، والحاج إبراهيم القونوي، والحاج حسين الخراساني والحاجان علي ورشيد الهنديان وسواهم</blockquote>
+      <p class="ar-translation">“และในกรานาดานั้น มีกลุ่มผู้ยากไร้จากต่างแดนเข้ามาพำนักอาศัย เนื่องจากดินแดนนี้มีความคล้ายคลึงกับบ้านเกิดของพวกเขา อาทิ อัลฮัจญ์ อะบู อับดุลลอฮ์ อัลซามัรกอนดีย์, อัลฮัจญ์ อะห์มัด อัตตับรีซีย์, อัลฮัจญ์ อิบรอฮีม อัลกูนาวีย์, อัลฮัจญ์ ฮุเซน อัลคุรอซานีย์และสองฮุจญาจชาวอินเดีย นามว่า อะลีย์และเราะชีด”</p>
+      <p>เป็นไปได้ว่า การเดินทางมายังกรานาดาของเหล่าศูฟีเหล่านี้ มีเป้าหมายเพื่อการญิฮาด ปกป้องดินแดนในช่วงเวลาที่ฝ่ายคาทอลิกกำลังรุกรานอันดาลุสครั้งใหญ่ มุฮัมมัด อับดุลลอฮ์ อะนานได้อ้างอิงบันทึกของอิบนุ บะฏูเฏาะฮ์ ในผลงานสารานุกรมประวัติศาสตร์ชิ้นเอกเรื่อง “รัฐอิสลามในอัลอันดาลุส” โดยมองว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أوصاف ابن بطوطة تدلي بأن الأندلس كانت يومئذ، بالرغم من توالي غارات النصارى عليها وعبثهم في ربوعها، بلادا زاهرة نضرة، تزخر بالخيرات والنعم، وتموج بالملايين من سكانها النشطين الأذكياء، وصناعاتها الممتازة، وتحتشد فيها جمهرة كبيرة من العلماء والفقهاء والكتاب والشعراء مما يدل على أنها كانت في هذا العصر تجوز أيضا نهضة أدبية زاهرة</blockquote>
+      <p class="ar-translation">“คำพรรณนาของอิบนุ บะฏูเฏาะฮ์ เป็นหลักฐานชี้ชัดว่า แม้อันดาลุสในขณะนั้นจะต้องเผชิญกับการรุกรานอย่างต่อเนื่องจากฝ่ายคริสเตียนที่สร้างความเสียหายในหลายพื้นที่ แต่แผ่นดินแห่งนี้ก็ยังคงเป็นดินแดนที่เจริญรุ่งเรือง เขียวขจี อุดมสมบูรณ์ไปด้วยทรัพยากร คลาคล่ำไปด้วยประชากรนับล้านที่มีความกระตือรือร้นและชาญฉลาด มีอุตสาหกรรมที่ยอดเยี่ยม อีกทั้งยังคึกคักไปด้วยเหล่าปราชญ์ นักนิติศาสตร์ นักเขียน และกวี ซึ่งบ่งชี้ว่าในยุคสมัยดังกล่าว อัลอันดาลุสยังคงดำรงอยู่ในยุคแห่งการฟื้นฟูทางวรรณกรรมอันรุ่งโรจน์”</p>
+      <p>เมื่ออิบนุ บะฏูเฏาะฮ์ได้เยี่ยมเยียนกรานาดาจนเป็นที่พอใจแล้ว เขาจึงตัดสินใจเดินทางกลับสู่มาตุภูมิในมัฆริบ โดยย้อนกลับมาทางเส้นทางเดิมคือ อัลฮัมมะฮ์, บัลลิช และเดินทางต่อไปยังป้อมปราการซักวาน จากนั้นจึงเดินทางต่อไปยังเมืองรอนดา และเข้าสู่หมู่บ้านบะนีรียาห์ (Bani Riyah) โดยกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فأنزلني شيخها أبو الحسن علي بن سليمان الرياحي وهو أحد كرماء الرجال، وفضلاء الأعيان يطعم الصادر والوارد وأضافني ضيافة حسنة</blockquote>
+      <p class="ar-translation">“เชคประจำหมู่บ้าน อบุลฮะซัน อะลี อิบนุ สุลัยมาน อัลริยาฮีย์ ซึ่งเป็นบุรุษผู้ใจบุญและเป็นปราชญ์คนสำคัญ ได้ให้ข้าพเจ้าเข้าพักพำนัก เขาเป็นผู้เลี้ยงดูทั้งคนเดินทางขาเข้าและขาออก และได้ให้การต้อนรับข้าพเจ้าอย่างดีเยี่ยม”</p>
+      <p>ดร.ฮุเซน มุอ์นิสตั้งข้อสังเกตว่า หมู่บ้านบะนีรียาห์แห่งนี้ น่าจะเป็นหมู่บ้านแรกในอันดาลุสยุคนั้นที่มีกลุ่มชาวอาหรับจากเผ่าบะนีรียาห์ ซึ่งสืบเชื้อสายมาจากเผ่าบะนีฮิลาลที่อพยพเข้ามาตั้งรกราก หมู่บ้านแห่งนี้ตั้งอยู่บริเวณชายฝั่งทางตอนใต้ของอันดาลุส ใกล้กับยิบรอลตาร์ หรือที่เรียกกันในสมัยนั้นว่า “ญะบัล อัลฟัตห์” นั่นเอง</p>
+      <h2 class="article-h2">จากยิบรอลตาร์สู่ราชสำนักมาราเกช</h2>
+      <p>จากจุดนั้น อิบนุ บะฏูเฏาะฮ์ได้มุ่งตรงไปยังยิบรอลตาร์ และโดยสารเรือของชาวเมืองอะศิรข้ามฝั่งกลับมา ท่านบันทึกไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فوصلت إلى سبتة وكان قائدها إذا ذاك الشيخ أبو مهدي عيسى بن سليمان بن منصور وقاضيها الفقيه أبو محمد الزجندري، ثم سافرت منها إلى أصيلا وأقمت بها شهورا، ثم سافرت منها إلى مدينة سلا، ثم سافرت من سلا فوصلت إلى مدينة مراكش، وهي من أجمل المدن، فسيحة الأرجاء متسعة الأقطار كثيرة الخيرات، بها المساجد الضخمة كمسجدها الأعظم المعروف بمسجد الكتبيين وبها الصومعة الهائلة العجيبة، صعدتها وظهر لي جميع البلد منها</blockquote>
+      <p class="ar-translation">“ข้าพเจ้าเดินทางมาถึงซับตะฮ์ (เซวตา) ซึ่งในขณะนั้นมีผู้ปกครองเมืองคือ เชคอะบู มะฮ์ดี อีซา อิบนุ สุลัยมาน อิบนุ มันศูร และมีผู้พิพากษาคือ ฟากิห์ อะบู มุฮัมมัด อัลซะญันดารีย์ จากนั้นข้าพเจ้าเดินทางต่อไปยังเมืองอะศิรและพำนักอยู่ที่นั่นหลายเดือน ต่อมาจึงเดินทางไปยังเมืองซะลา และเดินทางต่อจนถึงเมืองมาราเกช ซึ่งเป็นเมืองที่งดงามที่สุด มีอาณาเขตกว้างขวาง อุดมสมบูรณ์ด้วยทรัพยากร มีมัสยิดขนาดใหญ่หลายแห่ง เช่น มัสยิดหลวงที่รู้จักกันในนามมัสยิดอัลกุตุบียีน ซึ่งมีหออะซานสูงตระหง่านน่าอัศจรรย์ ข้าพเจ้าได้ขึ้นไปบนหอนั้นและสามารถมองเห็นทัศนียภาพของเมืองได้ทั้งหมด”</p>
+      <p>ณ เมืองมาราเกช อิบนุ บะฏูเฏาะฮ์ได้มีโอกาสเข้าเฝ้าสุลต่านแห่งราชวงศ์มะรีนียะฮ์ ซึ่งพระองค์ทรงให้ความโปรดปรานและรับเขาไว้ในอุปการะ แต่งตั้งให้เป็นหนึ่งในข้าราชบริพาร พร้อมทั้งส่งเสริมให้เขาเดินทางต่อไป ท่านเล่าว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ثم سافرت من مراكش صحبة الركاب العلي: ركاب مولانا أيده الله، فوصلنا إلى مدينة سلا ثم إلى مدينة مكناسة العجيبة الخضرة النضرة ذات البساتين والجنات المحيطة بها بحائر الزيتون من جميع نواحيها، ثم وصلنا إلى حضرة فاس حرسها الله تعالى فوادعت بها مولانا أيده الله</blockquote>
+      <p class="ar-translation">“จากนั้นข้าพเจ้าได้เดินทางออกจากมาราเกชโดยร่วมไปกับขบวนเสด็จขององค์เหนือหัว ขออัลลอฮ์ทรงสนับสนุนพระองค์ จนกระทั่งถึงเมืองซะลา และต่อไปยังเมืองแม็กแนสอันเขียวขจีและสดชื่น รายล้อมไปด้วยสวนพฤกษชาติและสวนมะกอกที่โอบล้อมเมืองไว้ทุกทิศทาง จนกระทั่งถึงนครหลวงเฟส ขออัลลอฮ์ตะอาลาทรงพิทักษ์รักษาเมืองแห่งนี้ และ ณ ที่แห่งนั้น ข้าพเจ้าได้กราบทูลลาองค์เหนือหัว”</p>
+      <p>นักวิจัยชาวสเปนร่วมสมัยหลายท่านที่ได้ศึกษาบันทึกการเดินทางของอิบนุ บะฏูเฏาะฮ์สู่อันดาลุส ได้ตั้งข้อสังเกตว่า ในการเยือนครั้งนั้น อิบนุ บะฏูเฏาะฮ์ไม่ได้เป็นเพียงนักท่องเที่ยวผู้สัญจรไปมา หากแต่เป็น “ราชทูต” หรือผู้แทนทางการที่ถูกส่งมาจากสุลต่านแห่งราชวงศ์มะรีนียะฮ์ (โมร็อกโก) ไปยังสุลต่านแห่งราชวงศ์นัศรียะฮ์ (กรานาดา) โดยมีหลักฐานบ่งชี้คือการที่อิบนุ ญุซัยย์ ซึ่งเป็นข้าราชบริพารในราชสำนักมัฆริบ ได้เดินทางร่วมไปกับเขาด้วย หนึ่งในนักวิจัยเหล่านั้นคือ Arturo Sánchez Sanz ได้ระบุว่า อิบนุ บะฏูเฏาะฮ์ ถูกส่งไปในฐานะทูตของสุลต่าน และได้พำนักอยู่ในอันดาลุสราวหนึ่งปี ระหว่างปี ค.ศ. 1351 ถึง 1352</p>
+      <p>เมื่อกลับถึงมัฆริบ อิบนุ บะฏูเฏาะฮ์ได้ถวายรายงานอย่างละเอียดต่อสุลต่านเกี่ยวกับสถานการณ์ทางการเมืองอันเปราะบางของอาณาจักรอิสลามแห่งสุดท้ายในคาบสมุทรไอบีเรีย ซึ่งกำลังเผชิญกับภัยคุกคามอย่างต่อเนื่องจากพระเจ้าเปโดรแห่งกัสติยา เจ้าของฉายา เปโดรผู้โหดร้าย กษัตริย์ชาวสเปนแห่งกัสติยาและเลออนตั้งแต่ ค.ศ. 1350 ถึง ค.ศ. 1369 แต่แทนที่จะต่อสู้กับชาวมุสลิมแห่งกรานาดาเหมือนเช่นกษัตริย์พระองค์ก่อนๆ กลับมีสงครามภายในเกิดขึ้น จนสุดท้ายพระองค์ก็ถูกลอบสังหาร กว่าชาวคริสเตียนจะบุกอันดาลุสก็ล่วงเลยไปอีกหลายปี</p>
+      <p>แต่ ณ จุดนี้ อิบนุ บะฏูเฏาะฮ์ได้ตัดสินใจออกเดินทางอีกครั้งเพื่อสำรวจโลกอิสลามในแอฟริกาตะวันตก หรือที่เขาเรียกว่า บิลาด อัซซูดาน (ดินแดนแห่งคนผิวดำ) โดยเริ่มต้นจากนครหลวงเฟส มุ่งหน้าสู่เมืองสิจิลมาซา ผ่านดินแดนมอริเตเนีย เข้าสู่เขตทะเลทรายซาฮารา อาณาจักรมาลี และดินแดนใกล้เคียง สมกับที่เขาเป็นบุรุษผู้ถูกสร้างมาเพื่อการเดินทางและการค้นพบอย่างที่สุด แม้ว่าในขณะนั้นเขาจะมีอายุล่วงเข้าสู่วัย 50 ปีแล้วก็ตาม</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). อิบนุ บะฏูเฏาะฮ์เห็นอะไรในป้อมปราการด่านสุดท้ายของอิสลามในยุโรป?. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/ibn-battuta-in-al-andalus.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
