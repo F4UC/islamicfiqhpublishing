@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>ฆูลในวรรณกรรมและความเชื่อของอาหรับโบราณ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ฆูล (กูล) ในวรรณกรรมและความเชื่อของอาหรับก่อนอิสลาม ตั้งแต่รากศัพท์ บทกวีญาฮิลียะฮ์ การแปรกาย ไปจนถึงกรอบความเข้าใจในอิสลามผ่านหะดีษ และการเดินทางของคำสู่วรรณกรรมโกธิกตะวันตก">
+<meta name="keywords" content="ฆูล, กูล, ญิน, วรรณกรรมอาหรับ, ญาฮิลียะฮ์, อัลญาฮิซ, ตำนาน, ประวัติศาสตร์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ฆูลในวรรณกรรมและความเชื่อของอาหรับโบราณ — Islamic Fiqh Publishing">
+<meta property="og:description" content="ฆูลเป็นเพียงสิ่งมีชีวิตในตำนานที่จินตนาการขึ้น หรือเป็นสิ่งที่ผู้คนเคยพบเห็นและตระหนักถึงอันตรายของมันจริง?">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/the-ghoul-in-old-arab-literature.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="the-ghoul-in-old-arab-literature">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">ฆูลในวรรณกรรมและความเชื่อของอาหรับโบราณ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในประวัติศาสตร์ของชาวอาหรับก่อนอิสลาม เราจะพบกับคำพรรณนาที่ทั้งน่าพิศวงและชวนใคร่ครวญอยู่มากมาย ว่าด้วยสิ่งที่ชาวอาหรับได้เผชิญพบในทะเลทรายและทุ่งอันเวิ้งว้างอันกว้างใหญ่ ชาวอาหรับอย่างที่เราทราบกันดีว่าเป็นนักเดินทางโดยวิสัยเดิม ร่อนแรมไปทั่ว เป็นนักสำรวจโดยสัญชาตญาณ พวกเขาต่างก็หลงรักผืนทะเลทรายไม่ต่างจากที่ชาวเมืองรักบ้านเรือน ปราสาท และไร่นาของตน หากไร้สหายร่วมทาง เสียงลมที่พัดผ่าน เสียงกระทบของดาบ เสียงม้าควบ และเสียงนกเค้ากู่ร้อง ก็กลายเป็นเพื่อนของเขา และหากไม่พบผู้ใดเป็นที่พึ่งพา จินตนาการก็จะทำหน้าที่เป็นสหายแทน</p>
+      <p>ภายใต้บริบทเช่นนี้ เราจึงจะพบว่าชาวอาหรับได้กล่าวถึงชัยฏอนและญิน พวกเขาเชื่อมั่นในการดำรงอยู่ของสิ่งเหล่านี้ บางคนถึงกับถือว่า สิ่งเหล่านั้นถือเป็นเพื่อนร่วมทางหรือสหายคนสนิท และบางคนที่โดดเด่นเหนือเพื่อนฝูงจะถูกเรียกว่า “อับเกาะรีย์” โดยโยงชื่อไปถึง “หุบเขาอับก็อร” ซึ่งเป็นหุบเขาที่เลื่องชื่อว่าเป็นถิ่นฐานของญินในทะเลทรายอาหรับอันกว้างใหญ่ อย่างไรก็ตาม สิ่งที่กระตุ้นความอยากรู้อยากเห็นยิ่งกว่านั้น คือคำบรรยายเกี่ยวกับ “ฆูล” หรือหากจะให้เรียกอย่างคุ้นหูกันในภาษาไทยก็คงจะเป็น “กูล”</p>
+      <p>นับเป็นโชคดีของเราที่มรดกวรรณกรรมอาหรับได้ทิ้งวัสดุอันมีคุณค่าไว้มากมาย ทั้งในร้อยกรองและร้อยแก้ว ซึ่งบันทึกการรับรู้ของชาวอาหรับโบราณเกี่ยวกับฆูล ทั้งลักษณะ เครื่องหมาย ประเภท วิธีการทำลาย และแม้แต่เหตุผลของการเรียกขานด้วยชื่อนี้ และหนึ่งในผู้ที่ให้ความสนใจศึกษามรดกก่อนอิสลามของชาวอาหรับอย่างจริงจังคือ อบู อุษมาน อัลญาฮิซ (เสียชีวิต ฮ.ศ. 255 / ค.ศ. 869) นักอักษรศาสตร์และนักคิดผู้เฉียบแหลม ซึ่งผลงานที่มีชื่อเสียงที่สุดของเขาคือ ตำราอัลหะยาวาน อัลญาฮิซท่านได้หยุดพิจารณาปรากฏการณ์นี้ด้วยความสุขุม รอบคอบ และเชิงวิพากษ์</p>
+      <p>สำหรับชาวอาหรับ ฆูลถูกนับเป็นหนึ่งใน “สามสิ่งที่เป็นไปไม่ได้” อันเลื่องชื่อ ได้แก่ ฆูล อังกา (นกในตำนาน) และอัลคิล อัลวาฟีย์ (ญินที่เป็นดั่งมิตรแท้ผู้ซื่อสัตย์) แต่หากฆูลเป็นสิ่งที่เป็นไปไม่ได้จริง เหตุใดเราจึงพบเนื้อหาที่ว่าด้วยสิ่งนี้มีอย่างกว้างขวาง ทั้งในยุคญาฮิลียะฮ์ และแม้กระทั่งในสมัยของท่านนบี ﷺ? ฆูลเป็นเพียงสิ่งมีชีวิตในตำนานที่ถูกจินตนาการขึ้นโดยเรื่องเล่าและมายาคติของอาหรับโบราณหรือ? หรือแท้จริงแล้วมันคือสิ่งมีชีวิตที่ผู้คนเคยพบเห็น คลุกคลี และตระหนักถึงตัวตน รวมถึงอันตรายของมันอย่างแท้จริง?</p>
+      <h2 class="article-h2">รากศัพท์ทางภาษา</h2>
+      <p>คำว่า “ฆูล” สืบย้อนกลับไปยังรากศัพท์ภาษาอาหรับจากคำว่า เฆาะละ ซึ่งมีความหมายว่า “ทำลายล้าง”, “คร่าชีวิต” หรือ “เข่นฆ่าอย่างฉับพลัน” ในการใช้ภาษาอาหรับยุคโบราณ คำนี้เดิมทีแล้วถูกใช้ในรูปของเพศหญิง ก่อนที่ต่อมาจะค่อยๆ ถูกใช้ในฐานะคำนามเพศชาย ขณะที่คำว่า สิอ์ลาฮ์ ถูกมองว่าเป็นรูปแบบหรือคู่ตรงข้ามในเพศหญิงของฆูล</p>
+      <p>ในเชิงประวัติศาสตร์ภาษา คำว่า “ฆูล” ได้เดินทางออกจากโลกอาหรับเข้าสู่ภาษายุโรปผ่านการแปลภาษาฝรั่งเศสของวรรณกรรมเรื่องอาหรับราตรี ในช่วงคริสต์ศตวรรษที่ 18 และจากจุดนั้นเอง คำดังกล่าวได้ปรากฏในวรรณกรรมภาษาอังกฤษเป็นครั้งแรกในปี ค.ศ. 1786 ผ่านนวนิยายเรื่อง Vathek (แปลเป็นอาหรับว่า อัลวาษิก) ผลงานของนักเขียนชาวอังกฤษ William Beckford ที่บอกเล่าเรื่องราวของคอลีฟะฮ์อัลวาษิก คอลีฟะฮ์องค์ที่เก้าแห่งราชวงศ์อับบาซิด ผู้เป็นทรราชโลเลและชั่วร้าย มีชื่อเสียงในด้านความกระหายความรู้ที่ไม่รู้จักจบสิ้น</p>
+      <p>เส้นทางของคำว่า “ฆูล” จากทะเลทรายอาหรับสู่จินตนาการแบบโกธิกของยุโรป ไม่ใช่เป็นแค่การยืมคำ หากแต่ยังได้ถ่ายโอนโลกทัศน์ ความหวาดกลัว และภาพแทนของ “สิ่งลี้ลับ” จากวัฒนธรรมหนึ่งไปสู่อีกวัฒนธรรมหนึ่ง แปลงร่างจากสิ่งที่เคยถูกเล่าในคืนนับพัน มาเป็นตัวละครในวรรณกรรมตะวันตกอย่างแนบเนียน</p>
+      <p>นักภาษาศาสตร์อาหรับเห็นพ้องกันว่า ความหมายหนึ่งของคำว่า “ฆูล” คือการแปรเปลี่ยนรูปลักษณ์, การปรากฏในหลายรูปแบบและการลอบทำร้ายหรือสังหาร โดยในทรรศนะของนักภาษาโบราณ ฆูลถูกมองว่าเป็น “เพศหญิง” ส่วนเพศชายของมันเรียกว่า “กุฏรุบ” และด้วยคุณลักษณะของการแปรสภาพและไม่คงอยู่ในรูปใดรูปแบบหนึ่ง จึงมีการเรียกฆูลว่า “หัยตะมูรอ” หมายถึงสิ่งที่ไม่ดำรงอยู่ในสภาพเดียว เปลี่ยนแปลงอยู่ตลอด และเลือนหายไปดั่งภาพลวงตา</p>
+      <p>ในคำบรรยายถึงเล่ห์กลของฆูล มีการกล่าวว่า เมื่อมันต้องการหลอกลวงมนุษย์ มันจะก่อไฟขึ้นให้เห็นจากระยะไกล นักเดินทางจึงมุ่งหน้าไปหา เมื่อเข้าใกล้ มันจะค่อยๆ แสดงตนในรูปลักษณ์ต่างๆ จนทำให้เหยื่อตกใจกลัวอย่างรุนแรงและถึงแก่ชีวิต ว่ากันว่ารูปร่างโดยรวมของฆูลคล้ายมนุษย์ แต่ขาทั้งสองเป็นขาของลา</p>
+      <h2 class="article-h2">ฆูลในวรรณกรรมอาหรับ</h2>
+      <p>ฆูลในฐานะ “ภาพมีชีวิต” แห่งจินตนาการของชาวเบดูอิน ปรากฏอย่างเด่นชัดในบทกวีอาหรับก่อนอิสลาม โดยเฉพาะอย่างยิ่งในผลงานของกวีชื่อกระฉ่อนอย่าง “ตะอับบัฎ ชัรรอ” หรือ ษาบิต บุตรของญาบิร อัลฟะฮ์มีย์ ผู้ซึ่งบทกวีของเขาเต็มไปด้วยบรรยากาศแห่งการเดินทางยามค่ำคืน ความหวาดระแวง และการเผชิญหน้ากับสิ่งลี้ลับในทะเลทราย</p>
+      <p>สำหรับโลกอาหรับร่วมสมัย คำว่า “ฆูล” ได้ขยายความหมายออกไปจากกรอบเดิม โดยมักใช้เรียก “ผู้กินเนื้อมนุษย์” ไม่ว่าจะเป็นมนุษย์หรืออมนุษย์ก็ตาม และในชีวิตประจำวัน คำนี้ยังถูกใช้เป็นเครื่องมือทางภาษาเพื่อข่มขู่หรืออบรมเด็กที่ดื้อรั้น ฆูลจึงดำรงอยู่ทั้งในฐานะมรดกวรรณกรรม และในฐานะเงาทางวัฒนธรรมที่ยังหลอกหลอนจินตนาการของผู้คนมาจนถึงปัจจุบัน</p>
+      <p>นักปราชญ์บางท่านยังอธิบายว่า “ฆูล” เป็นชื่อเรียกโดยรวมของสิ่งมีชีวิตจำพวกญินทุกชนิดที่ปรากฏตัวต่อหน้านักเดินทาง และสามารถแปรเปลี่ยนรูปร่างและเครื่องแต่งกายได้หลากหลาย ไม่ว่าจะเป็นเพศชายหรือหญิงก็ตาม ท่านกะอับ บิน ศุฮัยร์ เศาะหาบะฮ์ท่านหนึ่งผู้ซึ่งเคยสดุดีท่านนบี ﷺ ได้กล่าวถึงคุณลักษณะการแปรเปลี่ยนของฆูลไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فما تدوم على حال تكون بها … كما تلون في أثوابها الغول</blockquote>
+      <p class="poem-th">“มันไม่อาจดำรงอยู่ในสภาพใดสภาพหนึ่งได้<br>ดั่งฆูลที่เปลี่ยนรูปลักษณ์อยู่เสมอ”</p>
+      <p>ในทำนองเดียวกัน อับบาส บิน มิรดาส อัสสุลามีย์ (เสียชีวิต ฮ.ศ. 18) กล่าวถึงการแปรเปลี่ยนของฆูลว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أصابت العام رعلا غول قومهم … وسط البيوت ولون الغول ألوان</blockquote>
+      <p class="poem-th">“ปีนั้นฝูงฆูลได้เข้าทำร้ายชนเผ่าของพวกเขา<br>กลางหมู่บ้าน และสีสันของฆูลก็หลากหลายเหลือเกิน”</p>
+      <p>จากถ้อยคำเหล่านี้ ฆูลในความเข้าใจของชาวอาหรับสามารถแปลงกายเป็นรูปใดก็ได้ตามใจปรารถนา และปรากฏในหลากหลายสภาพ ยกเว้นเพียงสิ่งเดียวที่ไม่อาจแปรเปลี่ยนได้ นั่นคือขาทั้งสองซึ่งต้องเป็นขาของลา ตามความเชื่อที่เล่าขานกันมา นอกจากนี้ยังมีผู้กล่าวว่า “ฆูล” กับ “สิอ์ลาฮ์” เป็นคำที่มีความหมายเดียวกัน และว่า “ฆีลาน” เป็นเผ่าพันธุ์หนึ่งของญินและชัยฏอน อีกทั้งในภาษาอาหรับยังใช้คำว่า “ฆูล” ไว้เรียกงูด้วย</p>
+      <p>ในบทกวีของก็อยส์ อัลกินดีย์ (เสียชีวิต ฮ.ศ. 540) มีวลี “เขี้ยวของฆูล” ซึ่งนักอรรถาธิบายตีความต่างกัน บ้างว่าเป็นงู บ้างว่าเป็นชัยฏอน เขากล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أيقتلني والمشرفي مضاجعي … ومسنونة زرق كأنياب أغوال</blockquote>
+      <p class="poem-th">“หรือเขาจะสังหารข้า ทั้งที่ดาบมัชรอฟีย์อยู่เคียงข้างข้า<br>และลูกศรคมกริบสีฟ้า ราวกับเขี้ยวของฆูล”</p>
+      <p>คำว่า มัชรอฟีย์ คือดาบที่ผลิตในแถบ “อัลมะชาริฟ” ซึ่งเป็นหมู่บ้านใกล้ดินแดนชาม ส่วน “ลูกศรสีฟ้าคมกริบ” เป็นการพรรณนาความแวววาวและความคมของอาวุธ โดยเปรียบกับเขี้ยวของฆูลเพื่อเน้นความน่าหวาดกลัว อบู ฮาติม อัสสิญิสตานีย์อธิบายว่า: การเปรียบเช่นนี้เป็นการขยายภาพให้ดูยิ่งใหญ่และน่าสะพรึง เพราะชาวอาหรับมักนำสิ่งที่น่ารังเกียจในเพศชายไปเปรียบกับชัยฏอน และสิ่งที่น่าหวาดหวั่นในเพศหญิงไปเปรียบกับฆูล</p>
+      <p>แม้กระนั้น เสียงส่วนใหญ่ของนักเล่าก็ยังคงยืนยันว่า ฆูลเป็นเพศหญิง โดยอุบัยด์ บิน อัยยูบ อัลอันบารีย์ กวีแห่งยุคอุมัยยะฮ์ได้กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وحالفت الوحوش وحالفتني … بقرب عهودهن وبالبعاد * وأمسى الذئب يرصدني مخشا … لخفة ضربتي ولضعف آدي * وغولا قفرة ذكر وأنثى … كأن عليهما قطع البجاد</blockquote>
+      <p class="poem-th">“ข้าผูกมิตรกับสัตว์ป่า และพวกมันก็ผูกมิตรกับข้า ทั้งยามใกล้และยามห่าง<br>หมาป่าจ้องจับตาข้าในยามค่ำ เพราะแรงฟาดฟันของข้าแผ่วเบาและกำลังอ่อนล้า<br>และในถิ่นกันดารนั้น มีทั้งฆูลเพศชายและเพศหญิง ราวกับว่าทั้งสองสวมผ้าคลุมหยาบผืนเดียวกัน”</p>
+      <p>อบู อุษมาน อัลญาฮิซได้สังเกตจากบทกวีนี้ว่า กวีอาหรับก่อนอิสลามบางคนยอมรับการมีอยู่ของฆูลทั้งเพศชายและเพศหญิง ดังที่ปรากฏในถ้อยคำของอันบารีย์ และในเรื่องราวการผจญภัยของอันตาเราะฮ์ บิน ชัดด้าด กวีและนักรบเผ่าอับซีย์ ก็ปรากฏฉากที่เขาเผชิญกับฆูล มันแสดงตนราวกับแสงสว่างจ้าในทะเลทราย บางคราวก็เลือนหายจากสายตา แล้วกลับปรากฏขึ้นมาใหม่ เขากล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والغول بين يدي يختفي تارة … ويعود يظهر مثل ضوء المشعل</blockquote>
+      <p class="poem-th">“ฆูลเบื้องหน้าข้า เลือนหายไปในบางครา<br>แล้วหวนกลับมาปรากฏอีกครั้ง ดุจดังแสงคบเพลิง”</p>
+      <h2 class="article-h2">ฆูลในอารยธรรมอิสลาม</h2>
+      <p>ฆูลถูกมองว่าเป็นสิ่งมีชีวิตในจินตนาการแบบอาหรับ ที่ปรากฏอยู่ในนิทานพื้นบ้านและเรื่องเล่าปากต่อปาก โดยมักถูกพรรณนาว่าเป็นผู้หลอกล่อและทำร้ายนักเดินทาง ผู้หลงทาง หรือผู้ที่ลึกเข้าไปในพงไพร มันส่งเสียงหวีดแหลมดั่งเสียงชัยฏอน บางคราวดังมาจากด้านหน้า แล้วฉับพลันก็เปลี่ยนเป็นดังจากด้านหลัง และหนึ่งในคุณสมบัติที่เลื่องชื่อที่สุดของฆูล คือความสามารถในการแปลงกายเป็น “คนรู้จัก” ของเหยื่อ ซึ่งนักภาษาศาสตร์คลาสสิกอย่างอิบนุ ซีดะฮ์อธิบายว่า คำว่า “ฆูล” ใช้เรียกทุกสิ่งที่ “ลอบทำร้ายมนุษย์จนถึงแก่ความพินาศ”</p>
+      <p>ในมุสนัดอิหม่ามอะห์มัดได้บันทึกเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">عليكم بالدلجة فإن الأرض تطوى بالليل، وإذا تغولت لكم الغيلان فبادروا بالأذان، ولا تنزلوا على جواد الطريق، ولا تصلوا عليها، فإنها مأوى الحيات والسباع</blockquote>
+      <p class="ar-translation">“จงออกเดินทางในยามค่ำคืน เพราะแผ่นดินจะถูกย่นระยะทางลงในเวลากลางคืน และหากพวกฆีลาน (ฆูล) ปรากฏแก่พวกท่าน จงรีบกล่าวอะซาน และอย่าหยุดพักบนเส้นทางหลัก อย่าละหมาดบนทางนั้น เพราะเป็นที่อยู่อาศัยของงูและสัตว์ร้าย”</p>
+      <p>แน่นอนว่าความหมายดังที่นักวิชาการอธิบายไว้คือ ให้ป้องกันอันตรายของมันด้วยการรำลึกถึงพระนามของอัลลอฮ์ ไม่ใช่การปฏิเสธการมีอยู่ของฆูลแต่อย่างใด มีการรายงานจากอบู อัยยูบ อัลอันศอรีย์ว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">أَنَّهُ كَانَتْ لَهُ سَهْوَةٌ فِيهَا تَمْرٌ فَكَانَتْ تَجِيءُ الْغُولُ فَتَأْخُذُ مِنْهُ قَالَ فَشَكَا ذَلِكَ إِلَى النَّبِيِّ صلى الله عليه وسلم قَالَ فَاذْهَبْ فَإِذَا رَأَيْتَهَا فَقُلْ بِسْمِ اللَّهِ أَجِيبِي رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ فَأَخَذَهَا فَحَلَفَتْ أَنْ لاَ تَعُودَ فَأَرْسَلَهَا فَجَاءَ إِلَى رَسُولِ اللَّهِ صلى الله عليه وسلم فَقَالَ مَا فَعَلَ أَسِيرُكَ قَالَ حَلَفَتْ أَنْ لاَ تَعُودَ فَقَالَ كَذَبَتْ وَهِيَ مُعَاوِدَةٌ لِلْكَذِبِ قَالَ فَأَخَذَهَا مَرَّةً أُخْرَى فَحَلَفَتْ أَنْ لاَ تَعُودَ فَأَرْسَلَهَا فَجَاءَ إِلَى النَّبِيِّ صلى الله عليه وسلم فَقَالَ مَا فَعَلَ أَسِيرُكَ قَالَ حَلَفَتْ أَنْ لاَ تَعُودَ فَقَالَ كَذَبَتْ وَهِيَ مُعَاوِدَةٌ لِلْكَذِبِ فَأَخَذَهَا فَقَالَ مَا أَنَا بِتَارِكِكِ حَتَّى أَذْهَبَ بِكِ إِلَى النَّبِيِّ صلى الله عليه وسلم فَقَالَتْ إِنِّي ذَاكِرَةٌ لَكَ شَيْئًا آيَةَ الْكُرْسِيِّ اقْرَأْهَا فِي بَيْتِكَ فَلاَ يَقْرَبُكَ شَيْطَانٌ وَلاَ غَيْرُهُ قَالَ فَجَاءَ إِلَى النَّبِيِّ صلى الله عليه وسلم فَقَالَ مَا فَعَلَ أَسِيرُكَ قَالَ فَأَخْبَرَهُ بِمَا قَالَتْ قَالَ صَدَقَتْ وَهِيَ كَذُوبٌ</p>
+      </div>
+      <p class="ar-translation">“อบู อัยยูบเขามีห้องเก็บอินทผลัม และมีฆูลมาขโมยอยู่เนืองๆ เมื่อเขาร้องเรียนต่อท่านนบี ﷺ ก็ได้รับคำสั่งให้กล่าวว่า ‘ด้วยพระนามของอัลลอฮ์ จงตอบรับคำเรียกของรอซูลุลลอฮ์’ จนเขาจับมันไว้ได้ และมันสาบานว่าจะไม่กลับมา แต่ก็ผิดคำสาบานซ้ำแล้วซ้ำเล่า จนในที่สุดมันบอกเคล็ดลับว่า: ‘จงอ่านอายะฮ์อัลกุรซีย์ในบ้านของท่าน แล้วจะไม่มีชัยฏอนหรือสิ่งอื่นใดเข้าใกล้ได้เลย’ เมื่อเหตุการณ์นี้ถูกเล่าต่อหน้าท่านนบี ﷺ ท่านกล่าวว่า: ‘มันก็พูดความจริง ทั้งที่มันเองก็เป็นผู้โกหก’” (บันทึกโดยอัตติรมิซีย์)</p>
+      <p>ท่านอิหม่ามอัตติรมิซีย์ระบุว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هذا حديث حسن غريب وفي الباب عن أبي بن كعب</blockquote>
+      <p class="ar-translation">“หะดีษนี้มีสถานะ ‘หะซัน ฆอรีบ’ และยังมีรายงานในประเด็นเดียวกันจากอุบัยด์ บิน กะอับด้วย”</p>
+      <p>ในอีกสายรายงานหนึ่งจากบุรัยดะฮ์ ซึ่งบันทึกโดยอัลบัยฮะกีย์ได้เล่าว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كان لي طعام فتبينت فيه النقصان. فكمنت في الليل، فإذا غول قد سقطت عليها، فقبضت عليها، فقلت: لا أفارقك حتى أذهب بك إلى النبي. فقالت: إني امرأة كثيرة العيال، لا أعود. فجاءت الثانية والثالثة، فأخذتها. فقالت: ذرني حتى أعلمك شيئا إذا قلته لم يقرب متاعك أحد منا. إذا أويت إلى فراشك فاقرأ على نفسك ومالك آية الكرسي. فأخبرت النبي فقال: صدقت وهي كذوب</blockquote>
+      <p class="ar-translation">“ครั้งหนึ่งอาหารของเขาลดลงอย่างผิดปกติ เขาจึงดักเฝ้าในเวลากลางคืน และพบฆูลมาขโมย เมื่อจับมันไว้และขู่ว่าจะพาไปหาท่านนบี ﷺ มันอ้างว่าตนเองมีลูกมากและขอสัญญาว่าจะไม่กลับมา แต่ก็กลับมาอีกเป็นครั้งที่สองและสาม ในที่สุดมันจึงสอนว่า ก่อนที่จะนอนให้อ่านอายะฮ์อัลกุรซีย์เหนือทรัพย์สินของตน จะไม่มีใครจากหมู่พวกมันเข้าใกล้ได้ เมื่อเขานำเรื่องไปเล่า ท่านนบี ﷺกล่าวยืนยันเช่นเดิมว่า: ‘มันพูดความจริง ทั้งที่มันเป็นผู้โกหก’”</p>
+      <p>ภาพของฆูลในรายงานเหล่านี้จึงน่าสนใจอย่างยิ่ง เพราะมันยืนอยู่กึ่งกลางระหว่างโลกของนิทานพื้นบ้านกับโลกของคำสอนทางศาสนา เป็นสิ่งมีชีวิตที่หลอกลวง เป็นภัย แต่ในขณะเดียวกันก็กลายเป็นสื่อที่ย้ำให้เห็นความสำคัญของการซิเกร และบทบาทของวจนะของท่านนบี ﷺในการคุ้มครองมนุษย์จากสิ่งเร้นลับในโลกที่มองไม่เห็น ท่านมุบาร้อกฟูรีย์ได้บรรยายไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الغول أحد الغيلان وهي من الجن والشياطين كانت العرب تزعم أن الغول في الفلاة تتراءى للناس فتتغول تغولا، أي تتلون تلونا في صور شتى، وتغولهم، أي تضلهم عن الطريق وتهلكهم، فنفاه النبي وأبطله، يعني بقوله: لا غول ولا صفر، وقيل قوله لا غول ليس نفيا لعين الغول ووجوده، وإنما فيه إبطال زعم العرب في تلونه بالصور المختلفة واغتياله. فيكون المعنى بقوله لا غول أنها لا تستطيع أن تضل أحدا، ثم ذكر الجزري حديث: إذا تغولت الغيلان فبادروا بالأذان. وقال: أي ادفعوا شرها بذكر الله، وهذا يدل على أنها لم يرد بنفيها عدمها، ثم ذكر حديث أبي أيوب: كان لي تمر في سهوة فكانت الغول تجيء فتأخذ</blockquote>
+      <p class="ar-translation">“(ท่านอิหม่ามอัลญะซะรีย์กล่าวว่า) ฆูลถูกจัดให้อยู่ในจำพวก ‘ฆีลาน’ ซึ่งถือเป็นเผ่าพันธุ์หนึ่งในกลุ่มญินและชัยฏอน ตามความเชื่อของชาวอาหรับโบราณ พวกเขาเห็นว่า ฆูลในที่รกร้างจะปรากฏกายให้มนุษย์เห็น แล้ว ‘แปรสภาพ’ เปลี่ยนรูปลักษณ์ไปมาในรูปแบบต่างๆ และ ‘ทำให้หลงทาง’ คือหลอกล่อผู้คนให้ออกนอกเส้นทางจนถึงแก่ความพินาศ อย่างไรก็ตาม ในคำสอนของท่านนบี ﷺมีถ้อยคำที่ว่า ‘ไม่มีฆูล และไม่มีศอฟัร’ ซึ่งนักวิชาการอธิบายว่า เป็นการลบล้างและทำให้ความเชื่อเดิมของชาวอาหรับเป็นโมฆะ ไม่ใช่การปฏิเสธ ‘ตัวตน’ ของฆูล หากแต่ปฏิเสธความเชื่อที่ว่า ฆูลสามารถแปรกายได้หลากหลายรูปแบบและลอบทำร้ายผู้คนอย่างอิสระตามอำเภอใจ ด้วยเหตุนี้ ความหมายของคำกล่าวว่า ‘ไม่มีฆูล’ จึงถูกตีความว่า ฆูลไม่อาจทำให้ใครหลงทางหรือทำลายผู้ใดได้อย่างที่ชาวอาหรับเชื่อกันมาแต่เดิม”</p>
+      <p>รายงานนี้เองเป็นอีกหลักฐานหนึ่งที่นักวิชาการใช้ชี้ว่า แนวคิดของอิสลามไม่ได้ยกเลิกการกล่าวถึงฆูลในฐานะสิ่งมีชีวิตเร้นลับ หากแต่ปรับกรอบความเข้าใจใหม่ให้สอดคล้องกับหลักศรัทธา โดยตัดอำนาจ ความน่ากลัว และบทบาทเหนือธรรมชาติแบบที่จินตนาการของชาวอาหรับก่อนอิสลามเคยให้มันไว้</p>
+      <h2 class="article-h2">การแปรเปลี่ยนในมรดกวัฒนธรรมตะวันตก</h2>
+      <p>คำว่า “ฆูล” ได้เข้าสู่ขนบวรรณกรรมและจินตนาการของโลกที่ใช้ภาษาอังกฤษในรูปคำว่า Ghoul และค่อยๆ ถูกกำหนดความหมายใหม่ให้หมายถึง สิ่งมีชีวิตที่ขุดคุ้ยหลุมศพและกินซากศพ รวมถึงเด็กเล็ก ภาพของฆูลในโลกตะวันตกจึงค่อยๆ หลุดออกจากบริบททะเลทรายและนักเดินทาง มาอยู่ในพื้นที่ของสุสาน ความตาย และความสยองขวัญ</p>
+      <p>อย่างไรก็ดี วัฒนธรรมตะวันตกไม่ได้มี “ภาพจำ” ของฆูลที่ตายตัว แต่เปิดพื้นที่ให้มันคลุมเครือ ลื่นไหล และกำกวม นักเขียนอย่าง Edgar Allan Poe ได้อธิบายฆูลไว้ด้วยถ้อยคำที่สะท้อนความกำกวมนี้อย่างชัดเจนว่า: “มันไม่ใช่ชาย และไม่ใช่หญิง… ไม่ใช่สัตว์ และไม่ใช่มนุษย์” ในวรรณกรรมแบบตะวันตก ฆูลถูกเชื่อว่ามีความสามารถในการปลอมตัวและแปลงกาย สามารถขี่สุนัขหรือกระต่ายได้ และยังใช้กลอุบายแบบเดียวกับเรื่องเล่าอาหรับโบราณ คือการจุดไฟในยามค่ำคืน เพื่อหลอกล่อนักเดินทางให้ออกนอกเส้นทางหลัก แม้ฆูลจะถูก “แปลความใหม่” ในบริบทตะวันตก แต่แก่นสำคัญบางประการ เช่นการหลอกลวง ความคลุมเครือของตัวตน และอันตรายที่ซ่อนอยู่ยามราตรี ยังคงถูกสืบทอดต่อมาอย่างชัดเจน</p>
+      <h2 class="article-h2">สิอ์ลาฮ์ และการสมสู่ระหว่างฆูลกับมนุษย์</h2>
+      <p>นักภาษาศาสตร์บางสายเสนอว่า ฆูลเพศชายจัดอยู่ในกลุ่มญิน ส่วนสิอ์ลาฮ์เป็นเพศหญิง โดยถือว่าฆูลคือ “แม่มดแห่งหมู่ญิน” เรื่องเล่ากล่าวว่า ฆูลมักปรากฏตัวในทุ่งเวิ้งว้าง หลอกล่อผู้คนให้หลงทาง ส่วนคำว่า “สิอาลีย์” ซึ่งรูปเอกพจน์คือสิอ์ลาฮ์นั้น ถูกอธิบายว่าเป็น “แม่มดของญิน” เช่นกัน โดยสิอ์ลาฮ์ถูกมองว่าเป็นพวกที่ชั่วร้ายที่สุด พบมากในป่าดง และหากจับมนุษย์ได้ จะ “เล่น” กับเหยื่อเหมือนแมวเล่นกับหนู โดยจะทรมานยืดเยื้อก่อนจบชีวิต</p>
+      <p>ความเชื่อมโยงระหว่างฆูลกับญิน น่าจะตั้งอยู่บนคุณสมบัติร่วมสำคัญคือ ความสามารถในการแปลงกายและเปลี่ยนรูปอย่างอิสระ คุณลักษณะนี้ทำให้หลายคนเห็นพ้องว่า ฆูลและสิอ์ลาฮ์เป็นเผ่าพันธุ์หนึ่งของญิน ท่านอิหม่ามอัซซุหัยลีย์เคยกล่าวไว้ว่า: สิอ์ลาฮ์เป็นสิ่งมีชีวิตที่ปรากฏตัวในเวลากลางวัน และออกหลอกลวงในยามค่ำคืน พบมากในป่าดง หากสิอ์ลาฮ์พบมนุษย์ที่อยู่ตามลำพังและจับได้ ก็จะทำให้เหยื่อเต้นระบำและเล่นด้วยอย่างทารุณ</p>
+      <p>อีกความเชื่อที่เล่าขานกันคือ ญิน ชัยฏอน และฆีลาน สามารถจำแลงกายเป็นมนุษย์ได้ แต่มีข้อยกเว้นสำคัญโดยเฉพาะฆูล เท้าไม่อาจเปลี่ยน จะต้องเป็นเท้าลาเสมอ ดังที่อัลญาฮิซบันทึกว่า: คนทั่วไปเชื่อว่าอัลลอฮ์ทรงอนุญาตให้ญิน ชัยฏอน อุมมาร และฆีลานแปรกายได้ทุกแบบตามใจ ยกเว้นฆูลที่แม้จะจำแลงเป็นหญิงพร้อมอาภรณ์ได้ครบถ้วน แต่เท้าทั้งสองต้องเป็นเท้าลา</p>
+      <p>เรื่องราวของฆูลยิ่งพิสดารขึ้น เมื่อกล่าวถึง “กฎของการฟัน” ว่าหากถูกฟันด้วยดาบเพียงครั้งเดียว มันจะตาย แต่ถ้าผู้ฟันลงดาบซ้ำก่อนที่มันจะสิ้นใจ จะทำให้มันไม่ตาย บทกวีอาหรับจึงเตือนถึงอันตรายของ “การฟันครั้งที่สอง” และย้ำว่าฟันในครั้งแรกต้องหนักหน่วงถึงตาย ความหมายนี้ปรากฏในถ้อยคำของกวีอย่างตะอับบัฎ ชัรรอ และอบุลบิลาด อัฏฏอฮาวีย์ในบทกวีที่บางครั้งสืบโยงให้เป็นของคนหนึ่ง บางครั้งก็เป็นของอีกคนหนึ่ง กวีคนแรกกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فقالت: عد، فقلت لها رويدا … مكانك إنني ثبت الجنان</blockquote>
+      <p class="poem-th">“นางว่า: กลับมาฟันอีกหนึ่งดาบสิ ข้าตอบ: ช้าก่อน จงอยู่ที่เดิมเถิด เพราะข้าไม่หวั่นไหวหรอก”</p>
+      <p>อีกคนกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فقالت: زد، قلت رويدا إني … على أمثالها ثبت الجنان</blockquote>
+      <p class="poem-th">“นางว่า: ฟันเพิ่มอีกหนึ่งดาบสิ ข้าตอบ: ช้าก่อน ข้าเคยฆ่าพวกนางมาแล้ว ใจต้องแน่วแน่”</p>
+      <p>ตามความเชื่อนี้ ฆูลต้องการให้ถูกลงดาบซ้ำ เพราะการฟันครั้งที่สองและต่อๆ ไปจะทำให้มัน (ในจินตนาการของผู้เล่า) ยิ่งแข็งแกร่งและดุร้ายขึ้น กวีญาฮิลียะฮ์จึงไม่ตกหลุมกลนี้ เรื่องเล่าลักษณะดังกล่าวยิ่งเพิ่มความคลุมเครือและความย้อนแย้งให้แก่สิ่งมีชีวิตในตำนานชนิดนี้ โดยการที่มันจะตายด้วยดาบแรก แต่กลับฟื้นด้วยดาบที่สองและสาม</p>
+      <p>ความแพร่หลายของเรื่องเล่าลักษณะนี้ยิ่งได้รับแรงหนุนจากจำนวนเรื่องราวที่มากมาย และการเล่าขานอย่างกว้างขวางในหมู่ชาวอาหรับจากหลากหลายเผ่า ถึงขั้นมีการเล่าว่า ชายผู้หนึ่งชื่ออัมร์ บิน ยัรบุอ์ บิน ฮันศอละฮ์ได้สมรสกับฆูล และมีบุตรร่วมกันหลายคน นางอยู่กินกับเขาเป็นเวลานาน และมักกำชับว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا لاح البرق من جهة بلادي، وهي جهة كذا فاستره عني، فإني إن لم تستره عني تركت ولدك عليك، وطرت إلى بلاد قومي</blockquote>
+      <p class="ar-translation">“เมื่อใดที่ฟ้าแลบมาจากทิศแผ่นดินของข้า ซึ่งคือทิศนั้นทิศนี้ จงเอาผ้าปิดหน้าข้าไว้ หากเจ้าไม่ปิด ข้าจะทิ้งลูกของเจ้าไว้กับเจ้า แล้วบินกลับไปยังดินแดนของชนเผ่าข้า”</p>
+      <p>อัมร์ อิบนุ ยัรบุอ์ทุกครั้งที่เห็นแสงฟ้าแลบ จะรีบเอาผ้าคลุมปิดหน้านางไว้ ไม่ให้นางเห็นมัน กระทั่งคืนหนึ่งเขาเผลอละเลย ขณะที่ฟ้าแลบวาบขึ้น และไม่ได้ปิดหน้านาง นางจึงบินหนีไป พร้อมร้องกล่าวขณะโผขึ้นฟ้าว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أمسك بنيك عمرو إني أبرق على أرض السعالي آلق</blockquote>
+      <p class="poem-th">“จงดูแลลูกของเจ้าเถิดอัมร์ เพราะแสงฟ้าแลบเหนือแผ่นดินของสิอาลีย์กำลังทอประกายอยู่!”</p>
+      <p>ในประเด็นเรื่องการสมรสระหว่างมนุษย์กับญินหรือในทางกลับกัน นักคิดคนสำคัญอย่างอัลญาฮิซได้กล่าวถึงไว้โดยตรง เขาได้พาดพิงถึงความเห็นที่ว่า บิลกีสราชินีแห่งสะบะอ์ มีมารดาเป็นญิน และได้นำเสนอทัศนะของผู้คนต่อการแต่งงานข้ามภพเช่นนี้ โดยเฉพาะข้อสงสัยสำคัญว่า การสมรสเช่นนี้จะให้กำเนิดลูกหลานได้จริงหรือไม่ อัลญาฮิซกล่าวอย่างระมัดระวังว่า เรื่องเหล่านี้อาจเป็นเพียงนิทานที่นักเล่าเรื่องแต่งขึ้น เพื่อความบันเทิงในราชสำนัก</p>
+      <p>เขายังชี้ว่า ชาวเยเมนมีคลังเรื่องเล่าและตำนานจำนวนมาก ซึ่งเห็นได้จากข้อเท็จจริงที่ว่า ผู้เล่าเรื่องโบราณในช่วงต้นอิสลามจำนวนมากล้วนมาจากเยเมน เหตุผลหนึ่งก็คือการที่คนกลุ่มนี้มีปฏิสัมพันธ์กับยิวและคริสต์ โดยรับเอาคัมภีร์และเรื่องเล่าของอะฮ์ลุลกิตาบ รวมถึงตำนานโบราณ มาผสมผสานเข้ากับเรื่องเล่าพหุเทวนิยมดั้งเดิมของตน อัลญาฮิซเรียกความเชื่อเรื่องการสมรสระหว่างมนุษย์กับญินนี้ว่า “การสมรสแบบผสม” ซึ่งรวมถึงการแต่งงานระหว่างมนุษย์กับสิอ์ลาฮ์หรือฆูลด้วย</p>
+      <p>ยังมีการอ้างคำกล่าวของอัลหะกัม บิน อัมร์ อัลบะฮ์รอนีย์ ชายตาบอดผู้หนึ่ง ซึ่งอ้างว่าตนได้แต่งงานกับฆูล และกำหนดค่าสินสอดเป็นละมั่งหนึ่งตัว และถุงหนังใส่เหล้าองุ่น เพราะในความเชื่อของคนทั่วไป ละมั่งถือเป็นหนึ่งในพาหนะที่ดีที่สุดของญิน เขากล่าวเป็นร้อยกรองว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وتزوجت في الشبيبة غولا … بغزال وصدقتي زق خمر</blockquote>
+      <p class="poem-th">“ในวัยหนุ่ม ข้าได้แต่งงานกับฆูล ด้วยละมั่งหนึ่งตัว และสินสอดคือถุงเหล้าองุ่น”</p>
+      <p>ที่น่าสนใจคือ อัลญาฮิซเองกลับเอนเอียงไปในทางยอมรับความเชื่อที่แพร่หลายเรื่องการสมรสระหว่างมนุษย์กับญิน โดยอาศัยการตีความจากอัลกุรอาน เขาอ้างโองการจากซูเราะฮ์อัลอิสรออ์ อายะฮ์ที่ 64 ว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَشَارِكْهُمْ فِي الْأَمْوَالِ وَالْأَوْلَادِ</p>
+      </div>
+      <p class="ar-translation">“และจงมีส่วนร่วมกับพวกเขาในทรัพย์สินและลูกหลาน”</p>
+      <p>และโองการจากซูเราะฮ์อัรเราะห์มาน อายะฮ์ที่ 56 ว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">لَمْ يَطْمِثْهُنَّ إِنسٌ قَبْلَهُمْ وَلَا جَانٌّ</p>
+      </div>
+      <p class="ar-translation">“ไม่มีมนุษย์หรือญินใดเคยล่วงล้ำพวกนางมาก่อน”</p>
+      <p>ผู้ที่ยกหลักฐานเหล่านี้อธิบายว่า หากญินไม่อาจมีความสัมพันธ์ใดๆ กับมนุษย์ได้เลย และหากการสมสู่ระหว่างญินกับหญิงมนุษย์เป็นสิ่งที่เป็นไปไม่ได้โดยสิ้นเชิง ก็ย่อมไม่ปรากฏถ้อยคำลักษณะนี้ในอัลกุรอาน</p>
+      <p>สุดท้ายแล้ว เรื่องราวของ “ฆูล” ก็คงเหมือนกับการเดินทางของมันนั่นแหละ จากปีศาจกลางทะเลทรายที่คอยหลอกนักเดินทาง เปลี่ยนผ่านสู่ยุคที่มีความเชื่อทางศาสนาเข้ามากำกับ และสุดท้ายก็ข้ามน้ำข้ามทะเลกลายเป็นตัวละครในนิยายฝรั่ง</p>
+      <p>ถึงแม้ว่าทุกวันนี้โลกเราจะมีแสงไฟสว่างไสว และเราคงไม่ได้เดินหลงในทะเลทรายกันบ่อยๆ แล้ว แต่ตำนานเหล่านี้ก็ยังสะท้อนให้เห็นความกลัวลึกๆ ของมนุษย์ที่มีต่อความมืดและสิ่งที่เรามองไม่เห็นและสิ่งที่เราไม่รู้ได้เป็นอย่างดี ไม่แน่ว่า ครั้งหน้าที่เราได้ยินเสียงแปลกๆ ในที่เปลี่ยวๆ หรือรู้สึกเหมือนเห็นเงาอะไรวูบวาบที่หางตา เราอาจจะเผลอนึกถึง “ฆูล” และตำนานพันปีของมันขึ้นมาก็ได้</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ฆูลในวรรณกรรมและความเชื่อของอาหรับโบราณ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/the-ghoul-in-old-arab-literature.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
