@@ -439,7 +439,7 @@ function jdToGregorian(jd) {
 }
 
 function hijriToJD(y, m, d) {
-  return d + Math.ceil(29.5001 * (m - 1)) + (y - 1) * 354 + Math.floor((3 + 11 * y) / 30) + 1948440 - 385;
+  return d + Math.ceil(29.5 * (m - 1)) + (y - 1) * 354 + Math.floor((3 + 11 * y) / 30) + 1948439;
 }
 
 function jdToHijri(jd) {
