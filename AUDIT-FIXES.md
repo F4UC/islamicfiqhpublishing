@@ -164,3 +164,14 @@
 
 ## FLAG B9 — finalize (audit บทฆูล)
 - **B9 = หะดีษฆูลที่คง bare** ในบทฆูล (อะหมัด composite + บัยฮะกีย์ ไม่พบ canonical) — สอดคล้องมติเจ้าของ **"คง bare ตาม precedent"** (แนว FLAG-3/asabiyyah: ไม่ byte-exact กับ canonical ฉบับเดียว → คงสำนวนผู้เขียนเปลือยสระ) · ✅ ปิดสมบูรณ์
+
+## 2026-06-11 — audit บทใหม่ #7 · `articles/tarikh/culinary-arts-in-arab-islamic-civilization.html` (#96, ศิลปะการทำอาหาร) — rolling catch-up
+
+**จุดพิเศษ (verify อาหรับ):**
+- **อายะฮ์ 5:3 (อัลมาอิดะฮ์):** `حُرِّمَتْ عَلَيْكُمُ الْمَيْتَةُ وَالدَّمُ وَلَحْمُ الْخِنزِيرِ` → ✅ **byte-exact substring กับ quran.com imlaei** (Drive มีแค่คำแปลไทย `{…}` — Alpha เติมตัวอาหรับจาก quran.com ถูกต้อง) · เลขอายะฮ์ระบุในย่อหน้า (S7)
+- **scholar `.ar-quote` 20 บล็อก uniformly BARE (Rule 60)** ✓ · เทียบ Drive ปวศ.48: skeleton spot-check 5/5 ตรง
+- **gloss-cut + bracket-unwrap (เหมือน polo/food-prices):** glosses `(= ...)` และวงเล็บ `[...]` ใน Drive ถูก **ตัด/แกะออกจากอาหรับครบ** (เหลือ 0) และ **ความหมายอยู่ในคำแปลไทย** (ظاعن→"จากไป", أقتلِع→"ควัก", `ت 23هـ`→"ฮ.ศ. 23/ค.ศ. 645") ✓
+
+**house-style audit-fix:**
+- **Rule 12:** `อิมาม` → `อิหม่าม` **5 จุด** (อิหม่ามนำละหมาด, อิหม่ามภาษาศาสตร์, อิหม่ามอะห์มัด, อิหม่ามอามิร อัชชะอ์บีย์, อิหม่ามอิบนุ มาญะฮ์) — ทุกกรณีเป็น "Imam" จริง
+- ﷺ=7 ครบทุกการเอ่ยนามท่านนบี · ไม่มี ทว่า/มิใช่ · em-dash ใน comment/title · aya translation ใช้ `{…}` (golden master) อยู่แล้ว
