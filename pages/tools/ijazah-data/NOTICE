@@ -1,0 +1,22 @@
+NOTICE
+======
+
+This project includes narrator (rijāl) and chain (isnād) data DERIVED FROM:
+
+  KASHAF — https://github.com/OmarShafie/hadith
+  Licensed under the GNU General Public License v3.0 (GPL-3.0).
+
+The generated dataset under public/data/ (index.json and graphs/*.json) is a
+derivative work of the KASHAF data and is therefore distributed under the
+GPL-3.0. See sources/kashaf/LICENSE for the full license text.
+
+Grade assessments (ثقة، صدوق، ضعيف ...) originate from Taqrīb al-Tahdhīb and are
+provided as a starting point for evaluation, not as a final ruling.
+
+Other components retain their own licenses:
+  - Application code (index.html, scripts/): project license (MIT-compatible).
+  - Cytoscape.js, dagre, cytoscape-dagre: MIT.
+  - Fonts: Amiri and Google Sans — SIL Open Font License (OFL).
+
+(Phase 2) Matn text / English translation / canonical numbering may be enriched
+from AhmedBaset/hadith-json — https://github.com/AhmedBaset/hadith-json (ISC).
