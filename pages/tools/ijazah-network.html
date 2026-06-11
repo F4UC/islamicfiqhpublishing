@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เครือข่ายสายอิญาซะฮ์ — Islamic Fiqh Publishing</title>
+
+<script>
+(function(){
+  var s = localStorage.getItem('theme');
+  var p = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if(s === 'dark' || (!s && p)) document.documentElement.classList.add('dark-mode');
+})();
+</script>
+
+<meta name="description" content="เครื่องมือแสดงผลเครือข่ายสายอิญาซะฮ์ (สายการรับอนุญาตสืบทอดวิชา) แบบโต้ตอบได้ ครอบคลุม 23 สาย จาก 13 แหล่งอ้างอิง ประมวลผลบนเครื่องผู้ใช้ทั้งหมด">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+<meta property="og:title" content="เครือข่ายสายอิญาซะฮ์ — Islamic Fiqh Publishing">
+<meta property="og:description" content="เครื่องมือแสดงผลเครือข่ายสายอิญาซะฮ์แบบโต้ตอบได้ — ติดตามรอย provenance ของทุกสาย">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Sarabun:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/tokens.css?v=20260529n">
+
+<style>
+/* =========================================================
+   TOKENS — red accent, NO GOLD (matches sibling tool override)
+   ========================================================= */
+:root {
+  --bg-primary:     #ffffff;
+  --bg-secondary:   #f6f5f3;
+  --bg-tertiary:    #ecebe8;
+  --text-primary:   #141414;
+  --text-secondary: #3f3f3f;
+  --text-tertiary:  #6a6a6a;
+  --border-primary:   rgba(0,0,0,0.10);
+  --border-secondary: rgba(0,0,0,0.18);
+
+  --ink:      var(--bg-primary);
+  --ink-2:    var(--bg-secondary);
+  --ink-3:    var(--bg-tertiary);
+  --paper:    var(--text-primary);
+  --text:     var(--text-primary);
+  --text-dim: var(--text-secondary);
+  --text-mute:var(--text-tertiary);
+  --gold:        #b31b1b;   /* overridden to deep red (no gold) */
+  --gold-bright: #d32f2f;
+  --accent:      #d32f2f;
+  --accent-deep: #b31b1b;
+  --rule:        rgba(0,0,0,0.07);
+  --rule-strong: rgba(0,0,0,0.13);
+
+  --green:     #2e7d52;
+  --green-bg:  rgba(46,125,82,0.10);
+
+  --serif:  'IBM Plex Sans Thai', system-ui, sans-serif;
+  --thai:   'Sarabun', system-ui, sans-serif;
+  --arabic: 'Amiri', serif;
+  --ui:     'Inter', system-ui, sans-serif;
+}
+html.dark-mode {
+  --bg-primary:   #0a0a0a;
+  --bg-secondary: #131313;
+  --bg-tertiary:  #1c1c1c;
+  --text-primary: #f3f3f3;
+  --text-secondary:#c4c4c4;
+  --text-tertiary: #9a9a9a;
+  --border-primary:   rgba(255,255,255,0.12);
+  --border-secondary: rgba(255,255,255,0.24);
+  --ink:      var(--bg-primary);
+  --ink-2:    var(--bg-secondary);
+  --ink-3:    var(--bg-tertiary);
+  --paper:    var(--text-primary);
+  --text:     var(--text-primary);
+  --text-dim: var(--text-secondary);
+  --text-mute:var(--text-tertiary);
+  --rule:        rgba(255,255,255,.13);
+  --rule-strong: rgba(255,255,255,.30);
+  --green:     #4ade80;
+  --green-bg:  rgba(74,222,128,0.12);
+}
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html,body { background-color:var(--bg-primary); color:var(--text); font-family:var(--thai); overflow-x:hidden; }
+body {
+  font-size:16px; line-height:1.7; font-weight:300;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+a { color:inherit; text-decoration:none; }
+img { display:block; max-width:100%; }
+button { font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
+select, input { font:inherit; }
+::selection { background:var(--accent); color:#fff; }
+
+:lang(ar) { font-family:var(--arabic); }
+
+/* ── Layout ─────────────────────────────────────────────── */
+.wrap        { max-width:1280px; margin:0 auto; padding:0 40px; }
+.wrap-narrow { max-width:880px;  margin:0 auto; padding:0 40px; }
+
+/* ── Reading progress (Rule 39) ─────────────────────────── */
+#readingProgress {
+  position:fixed; top:0; left:0; height:2px; width:0%;
+  background:var(--accent); z-index:10000; transition:width .1s linear; pointer-events:none;
+}
+
+/* ── Hero ───────────────────────────────────────────────── */
+.page-hero { position:relative; padding:150px 0 64px; border-bottom:1px solid var(--rule); overflow:hidden; }
+.page-hero::before {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(55% 50% at 82% 16%, rgba(211,47,47,.08), transparent 60%),
+    radial-gradient(80% 60% at 8% 92%, rgba(211,47,47,.04), transparent 72%);
+}
+.mockup-ribbon {
+  display:inline-block; font-family:var(--ui); font-size:11px; letter-spacing:.18em;
+  text-transform:uppercase; color:#fff; background:var(--accent-deep);
+  padding:7px 16px; border-radius:999px; margin-bottom:24px; font-weight:600;
+  box-shadow:0 6px 18px rgba(179,27,27,.25);
+}
+.hero-eyebrow {
+  font-family:var(--ui); font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--text-mute); display:flex; align-items:center; gap:14px; margin-bottom:22px;
+}
+.hero-eyebrow::before { content:''; width:32px; height:1px; background:var(--accent); }
+.hero-title {
+  font-family:var(--serif); font-weight:600;
+  font-size:clamp(38px,7vw,82px); line-height:1.05;
+  letter-spacing:-.01em; color:var(--paper); margin-bottom:18px;
+}
+.hero-tagline {
+  font-family:var(--serif); font-weight:300; font-size:clamp(16px,2.4vw,22px);
+  color:var(--accent-deep); margin-bottom:24px; letter-spacing:.01em;
+}
+html.dark-mode .hero-tagline { color:var(--gold-bright); }
+.hero-lede {
+  font-family:var(--thai); font-weight:300; font-size:17px; line-height:1.9;
+  color:var(--text-dim); max-width:680px; margin:0 0 40px;
+  text-align:left; word-break:break-word;
+}
+.hero-stats { display:flex; gap:48px; flex-wrap:wrap; }
+.stat-item  { display:flex; flex-direction:column; gap:4px; }
+.stat-num   { font-family:var(--serif); font-weight:600; font-size:40px; color:var(--accent); line-height:1; }
+.stat-label { font-family:var(--ui); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-mute); }
+
+/* ── Section scaffolding ────────────────────────────────── */
+.section { padding:72px 0; position:relative; }
+.section-head { margin-bottom:40px; }
+.section-no   { font-family:var(--serif); font-weight:600; color:var(--accent); font-size:15px; letter-spacing:.02em; }
+.section-eyebrow {
+  font-family:var(--thai); font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--text-mute); display:flex; align-items:center; gap:12px; margin:6px 0 14px;
+}
+.section-eyebrow::before { content:''; width:28px; height:1px; background:var(--accent); }
+.section-title {
+  font-family:var(--thai); font-weight:700;
+  font-size:clamp(28px,4vw,52px); line-height:1.15; letter-spacing:-.01em; color:var(--paper);
+}
+.section-lede {
+  font-family:var(--thai); font-weight:300; font-size:16px; line-height:1.85;
+  color:var(--text-dim); margin-top:14px; max-width:620px; text-align:left; word-break:break-word;
+}
+
+/* ── Search ─────────────────────────────────────────────── */
+.search-wrap { position:relative; max-width:680px; margin-bottom:28px; }
+.search-input {
+  width:100%; padding:16px 56px 16px 22px;
+  border:1px solid var(--rule-strong); border-radius:999px;
+  background:var(--ink-2); color:var(--text);
+  font-family:var(--thai); font-size:16px; font-weight:300; outline:none;
+  transition:border-color .3s, box-shadow .3s;
+}
+.search-input::placeholder { color:var(--text-mute); }
+.search-input:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(211,47,47,.12); }
+.search-clear {
+  position:absolute; right:16px; top:50%; transform:translateY(-50%);
+  font-size:22px; color:var(--text-mute); display:none; cursor:pointer; line-height:1;
+  padding:4px 8px; transition:color .25s;
+}
+.search-clear:hover { color:var(--accent); }
+.search-clear.visible { display:block; }
+
+/* ── Chain cards ────────────────────────────────────────── */
+.chain-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:16px; margin-top:8px;
+}
+.chain-card {
+  display:flex; flex-direction:column; gap:12px;
+  padding:22px 22px 20px; border:1px solid var(--rule-strong);
+  background:var(--ink-2); border-radius:12px; cursor:pointer;
+  transition:border-color .28s, background .28s, transform .2s cubic-bezier(.2,.7,.2,1), box-shadow .28s;
+  position:relative; overflow:hidden;
+}
+.chain-card::before {
+  content:''; position:absolute; left:0; top:0; bottom:0; width:0;
+  background:var(--accent); transition:width .28s cubic-bezier(.2,.7,.2,1);
+}
+.chain-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.06); }
+.chain-card:hover::before { width:3px; }
+.chain-card.active { border-color:var(--accent); background:rgba(211,47,47,.06); }
+.chain-card.active::before { width:3px; }
+.chain-bab {
+  font-family:var(--arabic); font-size:18px; line-height:1.7; color:var(--paper);
+  direction:rtl; text-align:right;
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+}
+.chain-books { font-family:var(--thai); font-size:13px; color:var(--text-dim); line-height:1.6; }
+.chain-foot { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-top:auto; }
+.chain-counts { font-family:var(--ui); font-size:11px; letter-spacing:.06em; color:var(--text-mute); }
+.pill {
+  font-family:var(--thai); font-size:11px; font-weight:500;
+  padding:4px 11px; border-radius:999px; white-space:nowrap;
+}
+.pill-cont { background:var(--green-bg); color:var(--green); border:1px solid var(--green); }
+.pill-gap  { background:rgba(211,47,47,.08); color:var(--accent-deep); border:1px solid rgba(211,47,47,.4); }
+html.dark-mode .pill-gap { color:var(--gold-bright); }
+.list-empty { font-family:var(--thai); color:var(--text-mute); padding:40px 0; text-align:center; grid-column:1/-1; }
+
+/* ── Graph panel ────────────────────────────────────────── */
+.graph-bar {
+  display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
+  margin-bottom:14px;
+}
+.graph-title-ar {
+  font-family:var(--arabic); font-size:19px; color:var(--paper); direction:rtl; text-align:right;
+  line-height:1.6; flex:1 1 240px; min-width:0;
+}
+.graph-status { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.cy-wrap {
+  position:relative; width:100%; min-height:560px; height:60vh; max-height:760px;
+  border:1px solid var(--rule-strong); border-radius:14px; overflow:hidden;
+  background:
+    radial-gradient(var(--border-secondary) 1px, transparent 1px) 0 0/18px 18px,
+    var(--ink-2);
+}
+#cy { position:absolute; inset:0; width:100%; height:100%; }
+.cy-overlay {
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:14px; text-align:center;
+  background:var(--ink-2); padding:24px; z-index:5;
+}
+.cy-overlay.hidden { display:none; }
+.cy-spinner { width:26px; height:26px; border:2px solid var(--rule-strong); border-top-color:var(--accent); border-radius:50%; animation:spin .8s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.cy-overlay-th { font-family:var(--thai); font-size:14px; color:var(--text-mute); line-height:1.7; }
+.cy-hint { font-family:var(--thai); font-size:12px; color:var(--text-mute); margin-top:10px; line-height:1.7; }
+
+/* ── Path-between panel ─────────────────────────────────── */
+.path-panel {
+  margin-top:24px; padding:22px; border:1px solid var(--rule-strong);
+  background:var(--ink-2); border-radius:12px;
+}
+.path-title { font-family:var(--thai); font-weight:600; font-size:15px; color:var(--paper); margin-bottom:14px; }
+.path-controls { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+.sel-field { display:flex; flex-direction:column; gap:5px; flex:1 1 200px; min-width:0; }
+.sel-label { font-family:var(--ui); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-mute); }
+.path-select {
+  width:100%; font-family:var(--thai); font-size:13px; color:var(--text);
+  background:var(--ink); border:1px solid var(--rule-strong);
+  padding:9px 12px; border-radius:6px; outline:none; cursor:pointer; transition:border-color .2s;
+}
+.path-select:focus { border-color:var(--accent); }
+.path-select option:lang(ar) { font-family:var(--arabic); }
+.btn-accent {
+  font-family:var(--thai); font-size:13px; font-weight:500; color:#fff;
+  background:var(--accent-deep); padding:10px 20px; border-radius:6px;
+  transition:background .22s, transform .15s; align-self:flex-end;
+}
+.btn-accent:hover { background:var(--accent); transform:translateY(-1px); }
+.btn-ghost {
+  font-family:var(--thai); font-size:12px; color:var(--text-dim);
+  border:1px solid var(--rule-strong); padding:9px 16px; border-radius:6px;
+  transition:border-color .2s, color .2s;
+}
+.btn-ghost:hover { border-color:var(--accent); color:var(--accent); }
+.path-result {
+  margin-top:16px; font-family:var(--thai); font-size:14px; color:var(--text-dim); line-height:1.9;
+}
+.path-chain { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:10px; }
+.path-node-ar { font-family:var(--arabic); font-size:16px; color:var(--paper); direction:rtl; }
+.path-arrow { color:var(--accent); font-size:14px; }
+
+/* ── Narrator drawer ────────────────────────────────────── */
+.drawer-backdrop {
+  position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:600;
+  opacity:0; pointer-events:none; transition:opacity .3s;
+}
+.drawer-backdrop.open { opacity:1; pointer-events:auto; }
+.drawer {
+  position:fixed; top:0; right:0; height:100%; width:420px; max-width:92vw; z-index:601;
+  background:var(--bg-primary); border-left:1px solid var(--rule-strong);
+  box-shadow:-16px 0 48px rgba(0,0,0,.18);
+  transform:translateX(100%); transition:transform .34s cubic-bezier(.2,.7,.2,1);
+  display:flex; flex-direction:column; overflow:hidden;
+}
+.drawer.open { transform:translateX(0); }
+.drawer-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:24px 24px 16px; border-bottom:1px solid var(--rule); }
+.drawer-name { font-family:var(--arabic); font-size:24px; color:var(--paper); direction:rtl; text-align:right; line-height:1.6; flex:1; }
+.drawer-close { width:34px; height:34px; border-radius:50%; display:grid; place-items:center; color:var(--text-dim); border:1px solid var(--rule-strong); transition:all .2s; flex-shrink:0; }
+.drawer-close:hover { border-color:var(--accent); color:var(--accent); }
+.drawer-body { padding:20px 24px 40px; overflow-y:auto; flex:1; }
+.dfield { margin-bottom:18px; }
+.dfield-label { font-family:var(--ui); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-mute); margin-bottom:6px; }
+.dfield-val { font-family:var(--thai); font-size:15px; color:var(--text); line-height:1.7; }
+.dfield-val:lang(ar) { font-family:var(--arabic); direction:rtl; text-align:right; font-size:17px; }
+.tier-chip { display:inline-block; font-family:var(--thai); font-size:13px; font-weight:500; padding:5px 14px; border-radius:999px; }
+.tier-strong { background:var(--green-bg); color:var(--green); border:1px solid var(--green); }
+.tier-mid    { background:rgba(120,120,120,.12); color:var(--text-dim); border:1px solid var(--border-secondary); }
+.tier-weak   { background:rgba(211,47,47,.08); color:var(--accent-deep); border:1px solid rgba(211,47,47,.4); }
+html.dark-mode .tier-weak { color:var(--gold-bright); }
+.prov-list { display:flex; flex-direction:column; gap:12px; margin-top:8px; }
+.prov-item { padding:13px 14px; border:1px solid var(--rule); border-radius:9px; background:var(--ink-2); }
+.prov-dir { font-family:var(--ui); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-mute); margin-bottom:5px; }
+.prov-title { font-family:var(--arabic); font-size:15px; color:var(--paper); direction:rtl; text-align:right; line-height:1.6; }
+.prov-author { font-family:var(--arabic); font-size:13px; color:var(--text-dim); direction:rtl; text-align:right; margin-top:3px; }
+.prov-foot { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:8px; }
+.status-badge { font-family:var(--thai); font-size:11px; font-weight:500; padding:3px 10px; border-radius:999px; }
+.sb-unverified { background:rgba(211,47,47,.07); color:var(--accent-deep); border:1px solid rgba(211,47,47,.35); }
+html.dark-mode .sb-unverified { color:var(--gold-bright); }
+.sb-transcription { background:rgba(120,120,120,.12); color:var(--text-dim); border:1px solid var(--border-secondary); }
+.sb-scholarship { background:var(--green-bg); color:var(--green); border:1px solid var(--green); }
+.sb-demo { background:rgba(120,120,120,.10); color:var(--text-mute); border:1px solid var(--rule-strong); }
+.needs-src { font-family:var(--thai); font-size:11px; color:var(--accent-deep); }
+html.dark-mode .needs-src { color:var(--gold-bright); }
+.edge-type-th { font-family:var(--thai); font-size:11px; color:var(--text-mute); }
+
+/* ── Legend ─────────────────────────────────────────────── */
+.legend-box { border:1px solid var(--rule-strong); border-radius:12px; background:var(--ink-2); overflow:hidden; }
+.legend-summary {
+  list-style:none; cursor:pointer; padding:18px 22px;
+  font-family:var(--thai); font-weight:600; font-size:15px; color:var(--paper);
+  display:flex; align-items:center; justify-content:space-between;
+}
+.legend-summary::-webkit-details-marker { display:none; }
+.legend-summary::after { content:'+'; font-family:var(--ui); font-size:20px; color:var(--accent); transition:transform .25s; }
+details[open] .legend-summary::after { content:'−'; }
+.legend-body { padding:0 22px 22px; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+.leg-group-title { font-family:var(--ui); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-mute); margin-bottom:10px; }
+.leg-item { display:flex; align-items:center; gap:10px; font-family:var(--thai); font-size:13px; color:var(--text-dim); margin-bottom:8px; }
+.leg-swatch { width:26px; height:16px; border-radius:4px; flex-shrink:0; }
+.leg-line { width:30px; height:0; flex-shrink:0; }
+.leg-solid { border-top:2px solid var(--text-dim); }
+.leg-dashed { border-top:2px dashed var(--text-dim); }
+
+/* ── Disclaimer ─────────────────────────────────────────── */
+.disclaimer { border-top:1px solid var(--rule); padding:48px 0 80px; }
+.disc-card {
+  display:flex; gap:14px; align-items:flex-start; padding:16px 18px;
+  border:1px solid var(--rule); border-radius:10px; background:var(--ink-2); margin-bottom:12px;
+}
+.disc-num { font-family:var(--serif); font-weight:600; color:var(--accent); font-size:15px; flex-shrink:0; }
+.disc-text { font-family:var(--thai); font-size:14px; color:var(--text-dim); line-height:1.85; text-align:left; word-break:break-word; }
+.disc-text strong { color:var(--paper); font-weight:600; }
+
+/* ── Reveal (Rule 35) ───────────────────────────────────── */
+[data-reveal] { opacity:0; transform:translateY(26px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+[data-reveal].is-in { opacity:1; transform:none; }
+[data-reveal][data-delay="1"] { transition-delay:.08s; }
+[data-reveal][data-delay="2"] { transition-delay:.16s; }
+[data-reveal][data-delay="3"] { transition-delay:.24s; }
+
+/* ── Back to top (Rule 36) ──────────────────────────────── */
+#backToTopBtn {
+  display:none; position:fixed; bottom:32px; right:32px; z-index:500;
+  width:48px; height:48px; border:1px solid var(--border-primary); border-radius:50%;
+  background:var(--ink-2); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  color:var(--text-secondary); box-shadow:0 8px 32px rgba(0,0,0,.18);
+  transition:all .35s cubic-bezier(.2,.7,.2,1); cursor:pointer; place-items:center; padding:0;
+}
+#backToTopBtn:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-5px); }
+#backToTopBtn svg { transition:transform .3s ease; }
+#backToTopBtn:hover svg { transform:translateY(-3px); }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media(max-width:900px){
+  .wrap, .wrap-narrow { padding:0 22px; }
+  .page-hero { padding:118px 0 52px; }
+  .section { padding:54px 0; }
+  .hero-stats { gap:26px; }
+  .stat-num { font-size:32px; }
+}
+@media(max-width:640px){
+  .cy-wrap { min-height:440px; height:64vh; }
+  #backToTopBtn { bottom:20px; right:20px; }
+  .chain-grid { grid-template-columns:1fr; }
+  /* Drawer becomes a bottom-sheet on mobile */
+  .drawer {
+    top:auto; bottom:0; right:0; left:0; width:100%; max-width:100%;
+    height:84vh; border-left:none; border-top:1px solid var(--rule-strong);
+    border-radius:18px 18px 0 0; transform:translateY(100%);
+    box-shadow:0 -16px 48px rgba(0,0,0,.22);
+  }
+  .drawer.open { transform:translateY(0); }
+  .btn-accent { align-self:stretch; }
+}
+</style>
+</head>
+<body lang="th">
+
+<!-- Reading progress — Rule 39 -->
+<div id="readingProgress"></div>
+
+<!-- Header placeholder — Rule 25 -->
+<div id="header-placeholder"></div>
+
+<!-- ==========================================================
+     HERO
+     ========================================================== -->
+<section class="page-hero">
+  <div class="wrap">
+    <div data-reveal><span class="mockup-ribbon">MOCKUP — รอเจ้าของอนุมัติแบบก่อน build เต็ม</span></div>
+    <div class="hero-eyebrow" data-reveal>IJĀZAH NETWORK</div>
+    <h1 class="hero-title" data-reveal data-delay="1">เครือข่ายสายอิญาซะฮ์</h1>
+    <p class="hero-tagline" data-reveal data-delay="1">สายแห่งการรับอนุญาตสืบทอดวิชา · จากครูสู่ศิษย์ต่อเนื่องเป็นสายโซ่</p>
+    <p class="hero-lede" data-reveal data-delay="2">
+      เครื่องมือนี้แสดงผล <strong>สายอิญาซะฮ์</strong> (สายการรับอนุญาตให้สืบทอดวิชา ตำรา หรือสายรายงาน)
+      ในรูปแบบแผนภูมิเครือข่ายที่โต้ตอบได้ — มิใช่เพียงสายหะดีษ แต่ครอบคลุมสายการถ่ายทอดตำราฟิกฮ์ กะลาม
+      และสายสะมาอฺ (การฟังตรงจากครู) แต่ละสายตามรอยถึงผู้รายงานทีละท่าน พร้อมแหล่งอ้างอิงที่ตรวจสอบได้
+    </p>
+    <div class="hero-stats" data-reveal data-delay="3">
+      <div class="stat-item"><span class="stat-num">23</span><span class="stat-label">สาย</span></div>
+      <div class="stat-item"><span class="stat-num" id="statNodes">—</span><span class="stat-label">ผู้รายงาน</span></div>
+      <div class="stat-item"><span class="stat-num">13</span><span class="stat-label">แหล่งอ้างอิง</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     SECTION: SEARCH + CHAIN LIST
+     ========================================================== -->
+<section class="section" id="chainSection">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="section-no">01</div>
+      <div class="section-eyebrow">เลือกสาย</div>
+      <h2 class="section-title">รายการสายอิญาซะฮ์</h2>
+      <p class="section-lede">ค้นหาและเลือกสายที่ต้องการ — คลิกการ์ดเพื่อโหลดแผนภูมิเครือข่ายของสายนั้น</p>
+    </div>
+
+    <div class="search-wrap" data-reveal>
+      <input type="text" id="chainSearch" class="search-input"
+             placeholder="ค้นหาสาย / ตำรา / ปราชญ์…" autocomplete="off" dir="auto">
+      <span class="search-clear" id="chainSearchClear" title="ล้างการค้นหา">×</span>
+    </div>
+
+    <div class="chain-grid" id="chainGrid" data-reveal data-delay="1">
+      <div class="list-empty">กำลังโหลดรายการสาย…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     SECTION: GRAPH PANEL
+     ========================================================== -->
+<section class="section" id="graphSection" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="section-no">02</div>
+      <div class="section-eyebrow">แผนภูมิเครือข่าย</div>
+      <h2 class="section-title">สายต่อเนื่องของผู้รายงาน</h2>
+      <p class="section-lede">รากของสาย (ผู้ให้อิญาซะฮ์ระดับสูงสุด) อยู่ด้านบน ไล่ลงสู่ผู้รับอนุญาตด้านล่าง — แตะที่โหนดเพื่อเน้นสายเชื่อมและดูประวัติผู้รายงาน</p>
+    </div>
+
+    <div class="graph-bar" data-reveal>
+      <div class="graph-title-ar" id="graphTitleAr" lang="ar" dir="rtl"></div>
+      <div class="graph-status" id="graphStatus"></div>
+    </div>
+
+    <div class="cy-wrap" data-reveal data-delay="1">
+      <div id="cy"></div>
+      <div class="cy-overlay" id="cyOverlay">
+        <div class="cy-spinner"></div>
+        <div class="cy-overlay-th" id="cyOverlayTh">กำลังเตรียมแผนภูมิ…</div>
+      </div>
+    </div>
+    <p class="cy-hint">เคล็ดลับ: ลากเพื่อเลื่อน · ล้อเมาส์/บีบสองนิ้วเพื่อซูม · แตะพื้นที่ว่างเพื่อล้างการเน้น</p>
+
+    <!-- Path between two narrators -->
+    <div class="path-panel" data-reveal>
+      <div class="path-title">เส้นทางระหว่างบุคคล</div>
+      <div class="path-controls">
+        <div class="sel-field">
+          <span class="sel-label">จากผู้รายงาน</span>
+          <select class="path-select" id="pathFrom"><option value="">— เลือก —</option></select>
+        </div>
+        <div class="sel-field">
+          <span class="sel-label">ถึงผู้รายงาน</span>
+          <select class="path-select" id="pathTo"><option value="">— เลือก —</option></select>
+        </div>
+        <button class="btn-accent" id="pathBtn">หาเส้นทาง</button>
+        <button class="btn-ghost" id="pathClear">ล้าง</button>
+      </div>
+      <div class="path-result" id="pathResult"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     SECTION: LEGEND
+     ========================================================== -->
+<section class="section" id="legendSection" style="padding-top:0;">
+  <div class="wrap">
+    <details class="legend-box" data-reveal>
+      <summary class="legend-summary">คำอธิบายสัญลักษณ์</summary>
+      <div class="legend-body">
+        <div>
+          <div class="leg-group-title">ระดับผู้รายงาน (สี)</div>
+          <div class="leg-item"><span class="leg-swatch" style="background:#f6f5f3;border:1px solid #b31b1b;"></span>เชื่อถือได้สูง (นบี · เศาะหาบะฮ์ · ษิเกาะฮ์)</div>
+          <div class="leg-item"><span class="leg-swatch" style="background:#9aa0a6;"></span>ระดับกลาง (เศาะดูก · มักบูล)</div>
+          <div class="leg-item"><span class="leg-swatch" style="background:#d32f2f;"></span>อ่อน/ไม่ทราบ/ช่วงขาด (เฎาะอีฟ · มัจญ์ฮูล · ฆ็อป)</div>
+        </div>
+        <div>
+          <div class="leg-group-title">ชนิดการเชื่อม (เส้น)</div>
+          <div class="leg-item"><span class="leg-line leg-solid"></span>เส้นทึบ = สะมาอฺ / มุสัลซัล (ฟังตรง)</div>
+          <div class="leg-item"><span class="leg-line leg-dashed"></span>เส้นประ = อิญาซะฮ์ (อนุญาตให้สืบทอด)</div>
+          <div class="leg-item"><span class="leg-swatch" style="background:transparent;border:2px solid #b31b1b;"></span>ขอบหนา = รากของสาย (r0)</div>
+        </div>
+        <div>
+          <div class="leg-group-title">ความต่อเนื่อง</div>
+          <div class="leg-item"><span class="pill pill-cont">สายต่อเนื่อง</span></div>
+          <div class="leg-item"><span class="pill pill-gap">พบช่วงที่สายขาด</span></div>
+        </div>
+        <div>
+          <div class="leg-group-title">สถานะแหล่งอ้างอิง</div>
+          <div class="leg-item"><span class="status-badge sb-unverified">รอตรวจสอบ</span></div>
+          <div class="leg-item"><span class="status-badge sb-transcription">ตรวจทานตัวบทแล้ว</span></div>
+          <div class="leg-item"><span class="status-badge sb-scholarship">ตรวจทานวิชาการแล้ว</span></div>
+          <div class="leg-item"><span class="status-badge sb-demo">ตัวอย่าง</span></div>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ==========================================================
+     DISCLAIMER
+     ========================================================== -->
+<section class="disclaimer">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="section-no">03</div>
+      <div class="section-eyebrow">หมายเหตุ</div>
+    </div>
+    <div data-reveal data-delay="1">
+      <div class="disc-card"><div class="disc-num">ก</div><div class="disc-text">ข้อมูลนำเข้าจากโครงการ <strong>Transmission-Network</strong> (สายอิญาซะฮ์ curate จากตำราที่ระบุแหล่ง) — ทุกสายตามรอย provenance ได้</div></div>
+      <div class="disc-card"><div class="disc-num">ข</div><div class="disc-text">การประเมินสถานะผู้รายงานอ้างตามแหล่งที่ระบุ <strong>ไม่ใช่คำตัดสินสุดท้าย</strong></div></div>
+      <div class="disc-card"><div class="disc-num">ค</div><div class="disc-text"><strong>ประมวลผลบนเครื่องผู้ใช้ทั้งหมด ไม่มีการส่งข้อมูลออก</strong> — ทุกไฟล์โหลดจากเซิร์ฟเวอร์ของเว็บไซต์นี้เท่านั้น</div></div>
+      <div class="disc-card"><div class="disc-num">ง</div><div class="disc-text"><strong>นี่คือแบบจำลอง (MOCKUP)</strong> รอเจ้าของอนุมัติแบบก่อน build เต็ม</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     NARRATOR DRAWER
+     ========================================================== -->
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside class="drawer" id="narratorDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <div class="drawer-name" id="drawerName" lang="ar" dir="rtl"></div>
+    <button class="drawer-close" id="drawerClose" title="ปิด" aria-label="ปิด">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</aside>
+
+<!-- Footer placeholder — Rule 25 -->
+<div id="footer-placeholder"></div>
+
+<!-- Back to top — Rule 36 -->
+<button id="backToTopBtn" title="กลับขึ้นบนสุด" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
+
+<!-- Header/footer + scroll-reveal — Rule 26 -->
+<script src="../../main.js?v=20260610a"></script>
+
+<!-- Graph libraries (cdnjs) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.30.2/cytoscape.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+<!-- cytoscape-dagre is not published on cdnjs; use the official npm build via jsDelivr -->
+<script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+
+<script>
+/* =========================================================
+   IJĀZAH NETWORK — interactive viewer (client-side only)
+   All Arabic strings are read from fetched JSON at runtime
+   and injected via textContent — never hardcoded in source.
+   ========================================================= */
+(function(){
+  'use strict';
+
+  var DATA_BASE  = 'ijazah-data/';
+  var GRAPH_BASE = 'ijazah-data/graphs/';
+
+  /* ── State ─────────────────────────────────────────────── */
+  var groups   = [];     /* index.json groups */
+  var sources  = {};     /* sources.json sources map */
+  var cy        = null;
+  var curGraph  = null;  /* {meta, nodes, edges} */
+  var nodeById  = {};    /* id -> node */
+  var adj       = {};    /* id -> [neighbour ids] (undirected) */
+  var edgeMap   = {};    /* nodeId -> {in:[edge], out:[edge]} */
+
+  /* ── Tier mapping (gc -> tier + Thai label) ────────────── */
+  var TIER = {
+    prophet: {tier:'strong', th:'ท่านนบี (รากของสาย)'},
+    sahabi:  {tier:'strong', th:'เศาะหาบะฮ์'},
+    thiqa:   {tier:'strong', th:'ษิเกาะฮ์ (เชื่อถือได้)'},
+    saduq:   {tier:'mid',    th:'เศาะดูก (สัตย์จริง)'},
+    maqbul:  {tier:'mid',    th:'มักบูล (ยอมรับได้)'},
+    daif:    {tier:'weak',   th:'เฎาะอีฟ (อ่อน)'},
+    majhul:  {tier:'weak',   th:'มัจญ์ฮูล (ไม่ทราบประวัติ)'},
+    gap:     {tier:'weak',   th:'ช่วงขาด (อินกิฏออฺ)'},
+    unknown: {tier:'weak',   th:'ไม่ระบุระดับ'}
+  };
+  function tierOf(gc){ return (TIER[gc] || TIER.unknown).tier; }
+  function tierTh(gc){ return (TIER[gc] || TIER.unknown).th; }
+
+  /* colour family by tier (for cytoscape) */
+  var TIER_FILL = {
+    strong: '#f3efe6', strongText:'#141414', strongBorder:'#b31b1b',
+    mid:    '#9aa0a6', midText:'#ffffff',    midBorder:'#6a6e73',
+    weak:   '#d32f2f', weakText:'#ffffff',   weakBorder:'#8e1414'
+  };
+
+  var EDGE_TYPE_TH = { sama:'สะมาอฺ (ฟังตรง)', ijaza:'อิญาซะฮ์ (อนุญาตสืบทอด)', musalsal:'มุสัลซัล (สายต่อเนื่องพิเศษ)' };
+  var STATUS = {
+    'unverified':            {cls:'sb-unverified',    th:'รอตรวจสอบ'},
+    'transcription-checked': {cls:'sb-transcription', th:'ตรวจทานตัวบทแล้ว'},
+    'scholarship-verified':  {cls:'sb-scholarship',   th:'ตรวจทานวิชาการแล้ว'},
+    'demo':                  {cls:'sb-demo',          th:'ตัวอย่าง'}
+  };
+
+  /* ── DOM refs ──────────────────────────────────────────── */
+  var $grid       = document.getElementById('chainGrid');
+  var $search     = document.getElementById('chainSearch');
+  var $searchClear= document.getElementById('chainSearchClear');
+  var $titleAr    = document.getElementById('graphTitleAr');
+  var $status     = document.getElementById('graphStatus');
+  var $overlay    = document.getElementById('cyOverlay');
+  var $overlayTh  = document.getElementById('cyOverlayTh');
+  var $statNodes  = document.getElementById('statNodes');
+  var $pathFrom   = document.getElementById('pathFrom');
+  var $pathTo     = document.getElementById('pathTo');
+  var $pathResult = document.getElementById('pathResult');
+  var $drawer     = document.getElementById('narratorDrawer');
+  var $drawerBd   = document.getElementById('drawerBackdrop');
+  var $drawerName = document.getElementById('drawerName');
+  var $drawerBody = document.getElementById('drawerBody');
+
+  /* small helper: create element, set textContent (byte-exact Arabic) */
+  function el(tag, cls, text, langAr){
+    var e = document.createElement(tag);
+    if(cls) e.className = cls;
+    if(text != null && text !== '') e.textContent = text;
+    if(langAr){ e.setAttribute('lang','ar'); e.setAttribute('dir','rtl'); }
+    return e;
+  }
+
+  /* ========================================================
+     BOOTSTRAP — load index + sources
+     ======================================================== */
+  Promise.all([
+    fetch(DATA_BASE + 'index.json').then(function(r){ return r.json(); }),
+    fetch(DATA_BASE + 'sources.json').then(function(r){ return r.json(); })
+  ]).then(function(res){
+    groups  = (res[0] && res[0].groups) || [];
+    sources = (res[1] && res[1].sources) || {};
+    var totalNodes = groups.reduce(function(s,g){ return s + (g.n_nodes||0); }, 0);
+    $statNodes.textContent = totalNodes.toLocaleString('en-US');
+    renderChainList(groups);
+    if(groups.length){ loadGraph(groups[0].gid); }
+  }).catch(function(err){
+    console.error('[Ijāzah Network] index load failed', err);
+    $grid.innerHTML = '';
+    $grid.appendChild(el('div','list-empty','ไม่สามารถโหลดรายการสายได้ — โปรดลองใหม่อีกครั้ง'));
+    overlayError('ไม่สามารถโหลดข้อมูลเริ่มต้นได้');
+  });
+
+  /* ========================================================
+     CHAIN LIST
+     ======================================================== */
+  function renderChainList(list){
+    $grid.innerHTML = '';
+    if(!list.length){
+      $grid.appendChild(el('div','list-empty','ไม่พบสายที่ตรงกับคำค้น'));
+      return;
+    }
+    list.forEach(function(g){
+      var card = document.createElement('div');
+      card.className = 'chain-card';
+      card.setAttribute('data-gid', g.gid);
+
+      card.appendChild(el('div','chain-bab', g.bab || '', true));
+
+      var books = (g.books || []).join(' · ');
+      card.appendChild(el('div','chain-books', books));
+
+      var foot = document.createElement('div');
+      foot.className = 'chain-foot';
+      foot.appendChild(el('span','chain-counts',
+        (g.n_nodes||0) + ' ผู้รายงาน · ' + (g.n_edges||0) + ' การเชื่อม'));
+      var pill = g.continuous
+        ? el('span','pill pill-cont','สายต่อเนื่อง')
+        : el('span','pill pill-gap','พบช่วงที่สายขาด');
+      foot.appendChild(pill);
+      card.appendChild(foot);
+
+      card.addEventListener('click', function(){ loadGraph(g.gid); });
+      $grid.appendChild(card);
+    });
+    markActiveCard(curGraph && curGraph.meta ? curGraph.meta.gid : null);
+  }
+
+  function markActiveCard(gid){
+    var cards = $grid.querySelectorAll('.chain-card');
+    for(var i=0;i<cards.length;i++){
+      cards[i].classList.toggle('active', cards[i].getAttribute('data-gid') === gid);
+    }
+  }
+
+  /* Search filter (case-insensitive substring over bab + books) */
+  function applyFilter(){
+    var q = ($search.value || '').trim().toLowerCase();
+    $searchClear.classList.toggle('visible', !!q);
+    if(!q){ renderChainList(groups); return; }
+    var filtered = groups.filter(function(g){
+      var hay = ((g.bab||'') + ' ' + (g.books||[]).join(' ')).toLowerCase();
+      return hay.indexOf(q) > -1;
+    });
+    renderChainList(filtered);
+  }
+  $search.addEventListener('input', applyFilter);
+  $searchClear.addEventListener('click', function(){ $search.value=''; applyFilter(); });
+
+  /* ========================================================
+     GRAPH LOADING
+     ======================================================== */
+  function showOverlay(msg){
+    $overlay.classList.remove('hidden');
+    $overlayTh.textContent = msg || 'กำลังโหลด…';
+    $overlay.querySelector('.cy-spinner').style.display = '';
+  }
+  function overlayError(msg){
+    $overlay.classList.remove('hidden');
+    $overlayTh.textContent = msg;
+    var sp = $overlay.querySelector('.cy-spinner');
+    if(sp) sp.style.display = 'none';
+  }
+  function hideOverlay(){ $overlay.classList.add('hidden'); }
+
+  function loadGraph(gid){
+    showOverlay('กำลังโหลดแผนภูมิของสายนี้…');
+    $titleAr.textContent = '';
+    $status.innerHTML = '';
+    $pathResult.textContent = '';
+    fetch(GRAPH_BASE + gid + '.json')
+      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+      .then(function(data){
+        curGraph = data;
+        buildIndices(data);
+        renderGraphHeader(data);
+        renderCytoscape(data);
+        populatePathSelectors(data);
+        markActiveCard(gid);
+      })
+      .catch(function(err){
+        console.error('[Ijāzah Network] graph load failed', gid, err);
+        overlayError('ไม่สามารถโหลดแผนภูมิของสายนี้ได้ — โปรดลองสายอื่น');
+      });
+  }
+
+  function buildIndices(data){
+    nodeById = {}; adj = {}; edgeMap = {};
+    (data.nodes||[]).forEach(function(n){
+      nodeById[n.id] = n;
+      adj[n.id] = [];
+      edgeMap[n.id] = {in:[], out:[]};
+    });
+    (data.edges||[]).forEach(function(e){
+      if(adj[e.source]) adj[e.source].push(e.target);
+      if(adj[e.target]) adj[e.target].push(e.source);
+      if(edgeMap[e.target]) edgeMap[e.target].in.push(e);
+      if(edgeMap[e.source]) edgeMap[e.source].out.push(e);
+    });
+  }
+
+  function renderGraphHeader(data){
+    var meta = data.meta || {};
+    $titleAr.textContent = meta.bab || '';   /* Arabic via textContent — byte-exact */
+
+    $status.innerHTML = '';
+    /* continuity: respect meta.continuous AND presence of gap nodes */
+    var hasGap = (data.nodes||[]).some(function(n){ return n.gc === 'gap'; });
+    var continuous = !!meta.continuous && !hasGap;
+    $status.appendChild(continuous
+      ? el('span','pill pill-cont','สายต่อเนื่อง')
+      : el('span','pill pill-gap','พบช่วงที่สายขาด'));
+    $status.appendChild(el('span','chain-counts',
+      (meta.n_nodes||(data.nodes||[]).length) + ' ผู้รายงาน · ' +
+      (meta.n_edges||(data.edges||[]).length) + ' การเชื่อม'));
+  }
+
+  /* ========================================================
+     CYTOSCAPE RENDER
+     ======================================================== */
+  var dagreReady = false;
+  function ensureDagre(){
+    if(dagreReady) return true;
+    try {
+      if(window.cytoscape && window.cytoscapeDagre){
+        cytoscape.use(window.cytoscapeDagre);
+        dagreReady = true;
+      }
+    } catch(e){ /* already registered */ dagreReady = true; }
+    return dagreReady;
+  }
+
+  function renderCytoscape(data){
+    if(typeof cytoscape === 'undefined'){
+      overlayError('ไลบรารีแผนภูมิยังโหลดไม่สำเร็จ'); return;
+    }
+    ensureDagre();
+
+    var elements = [];
+    (data.nodes||[]).forEach(function(n){
+      var tier = tierOf(n.gc);
+      elements.push({ data: {
+        id: n.id,
+        label: n.disp || n.full || n.id,
+        tier: tier,
+        isRoot: (n.id === 'r0') ? 1 : 0
+      }});
+    });
+    (data.edges||[]).forEach(function(e, i){
+      elements.push({ data: {
+        id: 'e'+i, source: e.source, target: e.target,
+        etype: e.type || 'sama'
+      }});
+    });
+
+    if(cy){ try{ cy.destroy(); }catch(e){} cy = null; }
+
+    cy = cytoscape({
+      container: document.getElementById('cy'),
+      elements: elements,
+      minZoom: 0.15, maxZoom: 2.5,
+      wheelSensitivity: 0.25,
+      style: [
+        { selector: 'node', style: {
+            'label': 'data(label)',
+            'font-family': 'Amiri, serif',
+            'font-size': '13px',
+            'text-valign': 'center', 'text-halign': 'center',
+            'text-wrap': 'wrap', 'text-max-width': '120px',
+            'width': 'label', 'height': 'label',
+            'padding': '10px',
+            'shape': 'round-rectangle',
+            'background-color': function(ele){ return TIER_FILL[ele.data('tier')]; },
+            'color': function(ele){ var t=ele.data('tier'); return t==='strong'?TIER_FILL.strongText:(t==='mid'?TIER_FILL.midText:TIER_FILL.weakText); },
+            'border-width': 1.4,
+            'border-color': function(ele){ var t=ele.data('tier'); return t==='strong'?TIER_FILL.strongBorder:(t==='mid'?TIER_FILL.midBorder:TIER_FILL.weakBorder); },
+            'transition-property': 'border-color, border-width, background-color',
+            'transition-duration': '180ms'
+        }},
+        { selector: 'node[isRoot = 1]', style: {
+            'font-size': '15px',
+            'border-width': 3,
+            'border-color': '#b31b1b',
+            'padding': '14px'
+        }},
+        { selector: 'edge', style: {
+            'width': 1.6,
+            'line-color': '#9aa0a6',
+            'target-arrow-color': '#9aa0a6',
+            'target-arrow-shape': 'triangle',
+            'arrow-scale': 0.9,
+            'curve-style': 'bezier',
+            'transition-property': 'line-color, width',
+            'transition-duration': '180ms'
+        }},
+        { selector: 'edge[etype = "ijaza"]', style: { 'line-style': 'dashed' } },
+        { selector: '.hl-node', style: {
+            'border-color': '#d32f2f', 'border-width': 3,
+            'background-color': '#d32f2f', 'color': '#ffffff'
+        }},
+        { selector: '.hl-edge', style: {
+            'line-color': '#d32f2f', 'target-arrow-color': '#d32f2f', 'width': 3
+        }},
+        { selector: '.dim', style: { 'opacity': 0.22 } }
+      ],
+      layout: { name: 'preset' } /* replaced below once dagre confirmed */
+    });
+
+    /* node tap -> drawer + highlight path */
+    cy.on('tap', 'node', function(evt){
+      var id = evt.target.id();
+      highlightConnected(id);
+      var node = nodeById[id];
+      if(node) openDrawer(node);
+    });
+    cy.on('tap', function(evt){
+      if(evt.target === cy){ clearHighlight(); }
+    });
+
+    var layoutName = dagreReady ? 'dagre' : 'breadthfirst';
+    var layoutOpts = dagreReady
+      ? { name:'dagre', rankDir:'TB', nodeSep:24, rankSep:60, edgeSep:12, fit:false }
+      : { name:'breadthfirst', directed:true, spacingFactor:1.1, fit:false };
+
+    var lay = cy.layout(layoutOpts);
+    lay.on('layoutstop', function(){
+      cy.resize();
+      cy.fit(cy.elements(), 40);
+      hideOverlay();
+    });
+    lay.run();
+  }
+
+  /* highlight predecessors ∪ successors path of a node */
+  function highlightConnected(id){
+    if(!cy) return;
+    clearHighlight();
+    var keep = {}; keep[id] = true;
+    /* successors (downstream) */
+    walk(id, 'out', keep);
+    /* predecessors (upstream) */
+    walk(id, 'in', keep);
+
+    cy.batch(function(){
+      cy.nodes().forEach(function(n){
+        if(keep[n.id()]) n.addClass('hl-node'); else n.addClass('dim');
+      });
+      cy.edges().forEach(function(e){
+        var s = e.source().id(), t = e.target().id();
+        if(keep[s] && keep[t]) e.addClass('hl-edge'); else e.addClass('dim');
+      });
+    });
+  }
+  function walk(start, dir, keep){
+    var stack = [start];
+    while(stack.length){
+      var cur = stack.pop();
+      var bucket = edgeMap[cur] ? edgeMap[cur][dir] : null;
+      if(!bucket) continue;
+      bucket.forEach(function(e){
+        var nxt = (dir === 'out') ? e.target : e.source;
+        if(!keep[nxt]){ keep[nxt] = true; stack.push(nxt); }
+      });
+    }
+  }
+  function clearHighlight(){
+    if(!cy) return;
+    cy.batch(function(){
+      cy.elements().removeClass('hl-node hl-edge dim');
+    });
+  }
+
+  /* ========================================================
+     NARRATOR DRAWER
+     ======================================================== */
+  function openDrawer(node){
+    $drawerName.textContent = node.full || node.disp || '';
+    $drawerBody.innerHTML = '';
+
+    /* tier */
+    var tf = document.createElement('div'); tf.className = 'dfield';
+    tf.appendChild(el('div','dfield-label','ระดับความน่าเชื่อถือ'));
+    var chip = el('span','tier-chip tier-' + tierOf(node.gc), tierTh(node.gc));
+    tf.appendChild(chip);
+    $drawerBody.appendChild(tf);
+
+    /* grade (Arabic verbatim) + gradedBy */
+    if(node.grade){
+      var gf = document.createElement('div'); gf.className='dfield';
+      gf.appendChild(el('div','dfield-label','คำตัดสิน (ตัวบทอาหรับ)'));
+      gf.appendChild(el('div','dfield-val', node.grade, true));
+      if(node.gradeBy) gf.appendChild(el('div','dfield-val', node.gradeBy, true));
+      $drawerBody.appendChild(gf);
+    }
+
+    /* death */
+    if(node.death){
+      var df = document.createElement('div'); df.className='dfield';
+      df.appendChild(el('div','dfield-label','ปีเสียชีวิต'));
+      df.appendChild(el('div','dfield-val', node.death, true));
+      $drawerBody.appendChild(df);
+    }
+
+    /* places */
+    if(node.places){
+      var pf = document.createElement('div'); pf.className='dfield';
+      pf.appendChild(el('div','dfield-label','ถิ่นฐาน'));
+      pf.appendChild(el('div','dfield-val', node.places, true));
+      $drawerBody.appendChild(pf);
+    }
+
+    /* provenance: incoming + outgoing edges */
+    var prov = document.createElement('div'); prov.className='dfield';
+    prov.appendChild(el('div','dfield-label','แหล่งอ้างอิงของการเชื่อม (provenance)'));
+    var em = edgeMap[node.id] || {in:[], out:[]};
+    var list = document.createElement('div'); list.className='prov-list';
+    var combined = []
+      .concat(em.in.map(function(e){ return {e:e, dir:'รับจาก'}; }))
+      .concat(em.out.map(function(e){ return {e:e, dir:'ส่งต่อสู่'}; }));
+    if(!combined.length){
+      list.appendChild(el('div','edge-type-th','— ไม่มีการเชื่อมที่บันทึกไว้ —'));
+    } else {
+      combined.forEach(function(item){
+        list.appendChild(provItem(item.e, item.dir, node.id));
+      });
+    }
+    prov.appendChild(list);
+    $drawerBody.appendChild(prov);
+
+    $drawer.classList.add('open');
+    $drawerBd.classList.add('open');
+    $drawer.setAttribute('aria-hidden','false');
+  }
+
+  function provItem(e, dirTh, selfId){
+    var wrap = document.createElement('div'); wrap.className='prov-item';
+    /* who's on the other end */
+    var otherId = (e.source === selfId) ? e.target : e.source;
+    var other = nodeById[otherId];
+    wrap.appendChild(el('div','prov-dir', dirTh + ' · ' + (EDGE_TYPE_TH[e.type] || e.type || '')));
+    if(other) wrap.appendChild(el('div','prov-title', other.disp || other.full || '', true));
+
+    var src = sources[e.srcId];
+    if(src){
+      wrap.appendChild(el('div','prov-author', src.title || '', true));
+      if(src.author && src.author !== '—') wrap.appendChild(el('div','prov-author', src.author, true));
+    }
+
+    var foot = document.createElement('div'); foot.className='prov-foot';
+    var st = STATUS[e.status] || STATUS.unverified;
+    foot.appendChild(el('span','status-badge ' + st.cls, st.th));
+    if(src && src.needsSource) foot.appendChild(el('span','needs-src','แหล่งรอยืนยัน'));
+    wrap.appendChild(foot);
+    return wrap;
+  }
+
+  function closeDrawer(){
+    $drawer.classList.remove('open');
+    $drawerBd.classList.remove('open');
+    $drawer.setAttribute('aria-hidden','true');
+  }
+  document.getElementById('drawerClose').addEventListener('click', closeDrawer);
+  $drawerBd.addEventListener('click', closeDrawer);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeDrawer(); });
+
+  /* ========================================================
+     PATH BETWEEN TWO NARRATORS (undirected BFS)
+     ======================================================== */
+  function populatePathSelectors(data){
+    [$pathFrom, $pathTo].forEach(function(sel){
+      sel.innerHTML = '';
+      var opt0 = document.createElement('option');
+      opt0.value=''; opt0.textContent='— เลือก —';
+      sel.appendChild(opt0);
+    });
+    (data.nodes||[]).forEach(function(n){
+      [$pathFrom, $pathTo].forEach(function(sel){
+        var o = document.createElement('option');
+        o.value = n.id;
+        o.textContent = n.disp || n.full || n.id;  /* Arabic via textContent */
+        o.setAttribute('lang','ar');
+        sel.appendChild(o);
+      });
+    });
+    $pathResult.textContent = '';
+  }
+
+  function bfsPath(from, to){
+    if(from === to) return [from];
+    var q = [from], prev = {}; prev[from] = null;
+    while(q.length){
+      var cur = q.shift();
+      var nbrs = adj[cur] || [];
+      for(var i=0;i<nbrs.length;i++){
+        var nx = nbrs[i];
+        if(!(nx in prev)){
+          prev[nx] = cur;
+          if(nx === to){
+            var path = [to], p = cur;
+            while(p != null){ path.unshift(p); p = prev[p]; }
+            return path;
+          }
+          q.push(nx);
+        }
+      }
+    }
+    return null;
+  }
+
+  document.getElementById('pathBtn').addEventListener('click', function(){
+    var a = $pathFrom.value, b = $pathTo.value;
+    $pathResult.innerHTML = '';
+    if(!a || !b){
+      $pathResult.appendChild(el('div','','โปรดเลือกผู้รายงานทั้งสองฝั่ง'));
+      return;
+    }
+    if(a === b){
+      $pathResult.appendChild(el('div','','โปรดเลือกผู้รายงานที่ต่างกัน'));
+      return;
+    }
+    var path = bfsPath(a, b);
+    if(!path){
+      clearHighlight();
+      $pathResult.appendChild(el('div','','ไม่พบเส้นทางเชื่อมระหว่างสองท่านนี้ในสายปัจจุบัน'));
+      return;
+    }
+    highlightPath(path);
+    $pathResult.appendChild(el('div','', 'พบเส้นทาง ' + path.length + ' ท่าน (' + (path.length-1) + ' ขั้นการเชื่อม):'));
+    var chain = document.createElement('div'); chain.className='path-chain';
+    path.forEach(function(id, i){
+      var n = nodeById[id];
+      chain.appendChild(el('span','path-node-ar', (n ? (n.disp || n.full || id) : id), true));
+      if(i < path.length-1) chain.appendChild(el('span','path-arrow','→'));
+    });
+    $pathResult.appendChild(chain);
+  });
+
+  document.getElementById('pathClear').addEventListener('click', function(){
+    $pathFrom.value=''; $pathTo.value='';
+    $pathResult.textContent='';
+    clearHighlight();
+  });
+
+  function highlightPath(path){
+    if(!cy) return;
+    clearHighlight();
+    var inPath = {}; path.forEach(function(id){ inPath[id] = true; });
+    var pairSet = {};
+    for(var i=0;i<path.length-1;i++){
+      pairSet[path[i]+'|'+path[i+1]] = true;
+      pairSet[path[i+1]+'|'+path[i]] = true;
+    }
+    cy.batch(function(){
+      cy.nodes().forEach(function(n){
+        if(inPath[n.id()]) n.addClass('hl-node'); else n.addClass('dim');
+      });
+      cy.edges().forEach(function(e){
+        if(pairSet[e.source().id()+'|'+e.target().id()]) e.addClass('hl-edge'); else e.addClass('dim');
+      });
+    });
+  }
+
+  /* ========================================================
+     RE-FIT ON RESIZE (debounced)
+     ======================================================== */
+  var rtimer = null;
+  window.addEventListener('resize', function(){
+    if(rtimer) clearTimeout(rtimer);
+    rtimer = setTimeout(function(){
+      if(cy){ cy.resize(); cy.fit(cy.elements(), 40); }
+    }, 200);
+  });
+
+  /* ========================================================
+     READING PROGRESS — Rule 39
+     ======================================================== */
+  window.addEventListener('scroll', function(){
+    var bar = document.getElementById('readingProgress');
+    if(!bar) return;
+    var st = document.documentElement.scrollTop;
+    var docH = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    bar.style.width = (docH > 0 ? (st/docH)*100 : 0) + '%';
+  });
+
+  /* ========================================================
+     BACK TO TOP — Rule 36
+     ======================================================== */
+  window.addEventListener('scroll', function(){
+    var btn = document.getElementById('backToTopBtn');
+    if(!btn) return;
+    btn.style.display = document.documentElement.scrollTop > 400 ? 'grid' : 'none';
+  });
+
+  /* ========================================================
+     REVEAL ON SCROLL — Rule 35
+     ======================================================== */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+    });
+  }, {threshold:.12});
+  document.querySelectorAll('[data-reveal]').forEach(function(elm){
+    var r = elm.getBoundingClientRect();
+    if(r.top < window.innerHeight && r.bottom > 0){ elm.classList.add('is-in'); }
+    else { io.observe(elm); }
+  });
+
+})();
+</script>
+
+</body>
+</html>
