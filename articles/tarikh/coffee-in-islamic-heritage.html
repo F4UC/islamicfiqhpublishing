@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>เรื่องราวของกาแฟในมรดกอิสลาม — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ประวัติศาสตร์ของกาแฟในมรดกอิสลาม ตั้งแต่การค้นพบโดยปราชญ์ซูฟีในเยเมน เรื่องเล่าต้นกำเนิด การโต้เถียงหะลาล-หะรอมตลอดศตวรรษที่ 16 นิรุกติศาสตร์ของ “เกาะฮ์วะฮ์” ไปจนถึงการเดินทางของกาแฟสู่ยุโรปและสยาม">
+<meta name="keywords" content="กาแฟ, เกาะฮ์วะฮ์, ซูฟี, เยเมน, ออตโตมัน, หะลาลหะรอม, ประวัติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="เรื่องราวของกาแฟในมรดกอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="ทำไมเครื่องดื่มแก้วโปรดในตอนเช้าจึงกลายเป็นประเด็นถกเถียงในหมู่นักนิติศาสตร์อิสลาม เรื่องราวของกาแฟในมรดกอิสลาม">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/coffee-in-islamic-heritage.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="coffee-in-islamic-heritage">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">เรื่องราวของกาแฟในมรดกอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p>ทำไมเครื่องดื่มแก้วโปรดในตอนเช้าของคอกาแฟจึงกลายเป็นประเด็นถกเถียงในหมู่นักนิติศาสตร์?</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أنا المعشوقة السمرا … أجلى في الفناجين * وعود الهند لي عطر … وذكري شاع في الصين</blockquote>
+      <p class="ar-translation">“ฉันคือยอดรักผิวสีน้ำผึ้งขำ<br>สุกปลั่งดำงามตาในถ้วยแก้ว<br>หอมกฤษณาจากอินเดียกระจายแล้ว<br>ชื่อขจรเลื่องลับแลถึงแดนจีน”</p>
+      <p>บทกวีที่คอกาแฟอย่างมามียะฮ์ อัรรูมีย์ หรืออับดุลลอฮ์ บิน อะห์มัด (เสียชีวิต ค.ศ. 1580) แต่งขึ้นเพื่อแสดงความหลงใหลในรสชาติของกาแฟ</p>
+      <p class="lead-text">ต้นกาแฟยังไม่เป็นที่รู้จักจนกระทั่งเข้าสู่ศตวรรษที่ 15 และการค้นพบนั้นเกิดขึ้นโดยปราชญ์ซูฟีผู้รู้แจ้งนามว่า อบู บักร บิน อับดุลลอฮ์ อัชชาซิลีย์ อัลอีดะรูซ (เสียชีวิต ฮ.ศ. 909 / ค.ศ. 1504) ในระหว่างการเดินทาง ท่านได้เห็นต้นกาแฟและลองกินผลของมัน ท่านรู้สึกประทับใจพืชชนิดนี้มาก เพราะมันช่วยให้ท่านตื่นตัวและมีพลังในการทำอิบาดะฮ์ ท่านจึงนำมันมาเป็นอาหารและเครื่องดื่มประจำตัว และแนะนำให้ลูกศิษย์และผู้ติดตามของท่านทำเช่นเดียวกัน ทำให้กาแฟได้แพร่หลายในเยเมน จากนั้นก็เข้าสู่ดินแดนฮิญาซ (ซาอุดีอาระเบียในปัจจุบัน) แล้วแพร่ขยายไปยังชามและอียิปต์</p>
+      <p>ตามคำกล่าวของนักประวัติศาสตร์อย่างอิบนุลอิม้าด อัลฮัมบะลีย์ (เสียชีวิต ฮ.ศ. 1089 / ค.ศ. 1679) อัลอีดะรูซีย์จึงกลายเป็น “ผู้ริเริ่มกาแฟที่ทำจากเมล็ดกาแฟที่นำมาจากเยเมน”</p>
+      <p>แต่กระนั้นก็มีเรื่องเล่าหรือชุดความคิดมากมายที่เกี่ยวกับต้นกำเนิดและการค้นพบกาแฟ ซึ่งสามารถแบ่งออกเป็นสามประเภทหลักคือ</p>
+      <h2 class="article-h2">ศตวรรษที่ 9: เรื่องเล่าของคัลดี และพระสงฆ์</h2>
+      <p>เรื่องเล่าในศตวรรษที่ 9 ซึ่งมีรายละเอียดที่ค่อนข้างจะแตกต่างกันมาก แต่โดยสรุปจะเล่ากันว่า มีเด็กหนุ่มเลี้ยงแกะชื่อคัลดี เขาสังเกตเห็นว่าฝูงแกะของเขาดูมีความกระปรี้กระเปร่า และกระฉับกระเฉงขึ้นหลังจากกินผลไม้สีแดงสดจากพุ่มไม้ที่กระจัดกระจายอยู่ตามเนินเขา อยู่มาวันหนึ่ง คัลดีก็ได้ลองกินผลไม้เหล่านี้ด้วยตัวเองและรู้สึกถึงความปีติยินดีและความสุขที่แผ่ซ่านไปทั่วร่าง ทำให้เขาตัดสินใจเก็บตัวอย่างผลเบอร์รี่ไปมอบให้พระรูปหนึ่งในอารามใกล้เคียง</p>
+      <p>เรื่องเล่าหนึ่งระบุว่า ตอนแรกพระสงฆ์ปฏิเสธที่จะใช้ผลไม้เหล่านี้และโยนมันเข้าไปในกองไฟ แต่แล้วกลิ่นหอมหวนและน่าสนใจก็กระจายออกมาอย่างรวดเร็ว ทำให้พระสงฆ์รูปอื่นๆ มารวมตัวกันด้วยความอยากรู้อยากเห็นเพื่อตรวจสอบเรื่องนี้</p>
+      <p>ในอีกบริบทหนึ่ง กล่าวกันว่า คัลดีได้ปรึกษาพระสงฆ์ผู้ทรงปัญญา ซึ่งตระหนักว่าผลไม้สีแดงนั้นเป็นต้นเหตุของอาการกระปรี้กระเปร่าของแกะ หลังจากการค้นพบนี้ พระสงฆ์เริ่มใช้มันเพื่อเอาชนะอาการง่วงนอนระหว่างการสวดมนต์ในตอนกลางคืน ในการนำผลดังกล่าวมาทำเป็นเครื่องดื่มเพื่อการบริโภค พระสงฆ์ได้คั่วเมล็ดกาแฟบนถ่านอย่างรวดเร็ว จากนั้นก็บดมันและละลายในน้ำร้อน ทำให้ได้กาแฟถ้วยแรก แหล่งข้อมูลที่เป็นลายลักษณ์อักษรของเรื่องนี้มาจากหนังสือเล่มเล็กๆ ว่า “ริซาละฮ์ ฟิลเกาะฮ์วะฮ์ เคาะศออิศุฮา วะฟะวาอิดุฮา” (สารว่าด้วยเรื่องเกี่ยวกับกาแฟ: คุณสมบัติและคุณประโยชน์ของกาแฟ) ซึ่งเขียนโดยมุรฮิจ บิน นิมรูน ชาวคริสเตียนจากเลบานอนในปี ค.ศ. 1671 และยังได้ตีพิมพ์เป็นภาษาละติน เขาได้กล่าวถึงเรื่องราวของ ‘อารามที่ไม่รู้จักการหลับไหล’ โดยระบุว่าเป็นเรื่องเล่าพื้นบ้านในฝั่งตะวันออกที่สืบทอดกันมาโดยที่ไม่มีการระบุเวลาและสถานที่ที่แน่นอน</p>
+      <p>เมื่อเรื่องนี้แพร่หลายไปทั่วยุโรป มันก็ได้รับการปรับปรุงและตกแต่งให้เข้ากับการเติบโตของความนิยมในกาแฟ และมีการย้ายเหตุการณ์ไปที่เอธิโอเปีย ซึ่งเป็นแหล่งกำเนิดดั้งเดิมของกาแฟ และตั้งชื่อเด็กเลี้ยงแกะว่า ‘คัลดี’ ซึ่งเป็นชื่อที่มีลักษณะแบบอาหรับ แม้ว่าเรื่องนี้จะโด่งดังอย่างกว้างขวาง แต่เป็นที่น่าสังเกตว่า ข้อมูลเช่นนี้ไม่ได้ปรากฏอยู่ในแหล่งข้อมูลที่เป็นลายลักษณ์อักษรก่อนปี ค.ศ. 1671 ซึ่งห่างจากเวลาที่คาดว่าคือเหตุการณ์ที่ค้นพบกาแฟจะเกิดขึ้นประมาณ 800 ปี ทำให้มีความเป็นไปได้สูงว่าเรื่องนี้เป็นเรื่องที่แต่งขึ้นและถูกถ่ายทอดด้วยวาจาและพัฒนามาตามกาลเวลาเท่านั้น</p>
+      <h2 class="article-h2">ศตวรรษที่ 13: เรื่องเล่าของชัยค์อุมัร</h2>
+      <p>ในขณะที่ชัยค์อุมัร ปราชญ์ซูฟีถูกเนรเทศออกจากเมืองมุเคาะอ์ (หรือจะรู้จักกันแบบชื่อคุ้นหูว่า ‘มอคค่า’ เมืองแห่งท่าหนึ่งในเยเมนที่อยู่บริเวณปากทางเข้าสู่อ่าวเอเดนหรือริมทะเลแดง สุดท้ายชื่อนี้ก็ได้เข้าสู่ตลาดกาแฟ ตามหลังรุ่นพี่อย่างเกาะฮ์วะฮ์ไป) เนื่องจากความเข้าใจผิดต่อท่าน (ที่มีข้อสงสัยว่าท่านหลงรักเจ้าหญิง) นกบนภูเขาได้นำทางท่านไปสู่การค้นพบผลไม้สีแดง ซึ่งท่านเองก็ได้ชิมมันแล้วรู้สึกดีขึ้นอย่างแปลกประหลาด ไม่นานหลังจากนั้น ท่านก็ได้รับอนุญาตให้กลับมายังเมืองมุเคาะอ์ แล้วชัยค์อุมัรก็เผยแพร่ประโยชน์ของผลไม้ชนิดนี้</p>
+      <p>แหล่งที่มาดั้งเดิมของเรื่องนี้คือ หนังสือ “อุมดะฮ์ อัศศ็อฟวะฮ์ ฟี ฮิลลิ อัลเกาะฮ์วะฮ์” (ค.ศ. 1587) ของอับดุลกอดิร อัลญะซีรีย์ และเป็นที่รู้จักในยุโรปผ่านหนังสือ “อัศลุลเกาะฮ์วะฮ์ วะอินติชารุฮา” (ค.ศ. 1699) ของ Antoine Galland จากฝรั่งเศส ผู้ซึ่งแนะนำให้ชาวยุโรปรู้จักกับ “อาหรับราตรี” หรือที่เป็นฉบับแปลไทยโดยเสฐียรโกเสศและนาคะประทีปว่า “พันหนึ่งทิวา” สุดยอดอมตะนิยายพันปีของเปอร์เซีย</p>
+      <p>ส่วนเรื่องเล่าอีกเรื่องระบุกล่าวว่า ชัยค์นูรุดดีน อบุลฮะซัน อะลี บิน อุมัร อัชชาซิลีย์ แห่งเยเมน เมื่อท่านเดินทางไปยังเอธิโอเปีย ท่านสังเกตเห็นว่า นกดูมีชีวิตชีวาอย่างผิดปกติเมื่อกินผลไม้เหล่านี้ และท่านก็รู้สึกถึงความมีชีวิตชีวาเช่นเดียวกันเมื่อท่านกินมัน</p>
+      <p>และยังมีเรื่องเล่าอื่นๆ ที่ต่างก็อ้างว่า การค้นพบกาแฟเป็นผลงานของชัยค์อุมัรเอง ซึ่งเป็นศิษย์ของชัยค์อบุลฮะซัน อัชชาซิลีย์ เช่น เมื่อชัยค์อุมัรถูกเนรเทศจากมุเคาะอ์ไปยังถ้ำในทะเลทราย และเมื่อท่านรู้สึกหิว ท่านได้เคี้ยวผลของพุ่มไม้ที่อยู่ใกล้เคียง แต่พบว่ามันมีรสขม ท่านพยายามคั่วเมล็ดดังกล่าวนั้นเพื่อปรับปรุงรสชาติ แต่มันกลับแข็งขึ้น ท่านจึงลองต้มมันเพื่อให้นิ่ม จึงส่งผลให้เกิดของเหลวสีน้ำตาลที่มีกลิ่นหอม เมื่อชัยค์อุมัรดื่มของเหลวชนิดนี้ ท่านรู้สึกกระปรี้กระเปร่าอยู่หลายวัน</p>
+      <p>หลังจากเรื่องราวของ ‘ยาเสพติดมหัศจรรย์’ นี้แพร่หลายในมุเคาะอ์ ชัยค์อุมัรก็ได้รับอนุญาตให้กลับสู่เมือง และได้เผยแพร่ประโยชน์ของผลไม้ชนิดดังกล่าวหลังจากการกลับมาของท่าน</p>
+      <h2 class="article-h2">ศตวรรษที่ 5: เรื่องเล่าของญะมาลุดดีน อัซซับฮานีย์</h2>
+      <p>นักประวัติศาสตร์และนักวิจัยหลายท่าน เช่น ชัยค์ชิฮาบุดดีน อะห์มัด บิน มูซา บิน อับดุลฆ็อฟฟาร อัลมาลิกีย์ อัลมิศรีย์ ได้เขียนไว้ในหนังสือ ‘ริซาละฮ์ อะนิลเกาะฮ์วะฮ์’ อีกท่านคืออับดุลกอดิร บิน มุฮัมมัด อัลญะซีรีย์ อัลอันศอรีย์ ได้เขียนไว้ในหนังสือ ‘อุมดะฮ์ อัศศ็อฟวะฮ์ ฟี ฮิลลิ อัลเกาะฮ์วะฮ์’ และอีกท่านที่เป็นนักวิชาการรวมถึงยังเป็นหมออย่างมะดีน บิน อับดุรเราะห์มาน ได้ระบุในหนังสือ ‘ตัลคีศ อุมดะฮ์ อัศศ็อฟวะฮ์ ฟี ฮิลลิ อัลเกาะฮ์วะฮ์’ ได้ระบุกล่าวว่า การค้นพบกาแฟมีที่มาจากนักปราชญ์มุฟตีซูฟี ญะมาลุดดีน อบู อับดุลลอฮ์ มุฮัมมัด บิน ซะอีด หรือที่รู้จักกันในนาม อัซซับฮานีย์ อัลมัดฮิจีย์ อัลยะมานีย์</p>
+      <p>แหล่งข้อมูลต่างๆ หลายแห่งเห็นพ้องต้องกันว่า จุดเริ่มต้นของการปรากฏและการแพร่หลายของกาแฟนั้นมาจากชัยค์อัซซับฮานีย์ โดยเฉพาะในเมืองเอเดนระหว่างศตวรรษที่ 15 (ศตวรรษที่ 9 แห่งปีฮิจเราะฮ์) ในเวลานั้น เมื่อสุขภาพของมุฟตีแห่งเอเดน อบู อับดุลลอฮ์ มุฮัมมัด บิน ซะอีด อัซซับฮานีย์ทรุดโทรมลง ท่านก็นึกถึงประโยชน์ของกาแฟที่ท่านเคยรู้จักระหว่างการเดินทางไปเอธิโอเปียในอดีต หลังจากที่ท่านได้ทดลองประโยชน์ของมันด้วยตัวเอง ท่านได้แนะนำกาแฟให้นักเรียนของท่าน ซึ่งเป็นวิธีที่จะเอาชนะอาการง่วงนอนและช่วยให้พวกเขากระปรี้กระเปร่าและตื่นตัว โดยเฉพาะในช่วงเวลาเรียนและค้นคว้าวิชาการ และอัซซับฮานีย์ก็ได้พบว่ากาแฟมีคุณสมบัติพิเศษที่ช่วยขจัดความง่วงและความเกียจคร้าน และทำให้ร่างกายรู้สึกเบาและกระปรี้กระเปร่าขึ้น</p>
+      <p>หลังจากที่ชัยค์อัซซับฮานีย์ได้ทดลองแล้ว ธรรมเนียมการดื่มกาแฟก็แพร่หลายในหมู่บรรดานักวิชาการและซูฟีในเมืองเอเดน ซึ่งมีการใช้มันเพื่อช่วยในการทำกิยามุลลัยล์ (การละหมาดในยามค่ำคืน) และการศึกษาวิชาการ จากนั้นการแพร่หลายของกาแฟก็ขยายไปถึงช่างฝีมือและพ่อค้าที่ต้องเดินทางในเวลากลางคืน และผู้คนทั่วไปในเอเดน ซึ่งพบว่ามันเป็นตัวช่วยในการทำงานและประกอบสัมมาอาชีพต่างๆ ของพวกเขาให้ดียิ่ง</p>
+      <p>แม้ว่าเรื่องราวการค้นพบกาแฟของชัยค์อัซซับฮานีย์จะกลายเป็นเรื่องเล่าที่ฝังรากลึก แต่หนังสือ All about Coffee (ค.ศ. 1935) ของวิลเลียม เอช. ยูเคอร์ส (William H. Ukers) ตั้งข้อสังเกตว่า เครื่องดื่มที่อัซซับฮานีย์ดื่มอาจไม่ใช่กาแฟ แต่เป็น ‘กัต’ (พืชชนิดหนึ่งที่ใช้เคี้ยวเพื่อกระตุ้น หรือก็คือชาอาหรับ) เท่านั้นเอง</p>
+      <p>แล้วชุดความคิดใดมีความน่าเชื่อถือมากที่สุด? ทุกทัศนะตลอดหลายยุคสมัยเห็นพ้องต้องกันว่า ผู้คิดค้นและค้นพบกาแฟคือ ชัยค์อะลี บิน อุมัร อัชชาซิลีย์ นับตั้งแต่การบันทึกครั้งแรกๆ เกี่ยวกับกาแฟจนถึงปัจจุบัน อัลญะซีรีย์ได้กล่าวโดยอ้างอิงจากฟัครุดดีน อบู บักร บิน อบี ยะซีด อัลมักกีย์ จากหนังสือของท่าน ‘อิษารอตุลนัควะฮ์ บิฮิลลี อัลเกาะฮ์วะฮ์’ ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والذي بلغنا عن جمع يبلغ حد التواتر أن أول من أنشأها وأظهرها وبأرض اليمن أشاعها وأشهرها الشيخ العارف بالله تعالى علي بن عمر الشاذلي، أحد تلامذة سيدنا الشيخ العارف بالله تعالى ناصر الدين بن ميلق أحد السادة المشايخ الشاذلية</blockquote>
+      <p class="ar-translation">“มีรายงานมาถึงเราจากกลุ่มคนจำนวนมากจนถึงขั้นมีน้ำหนักที่น่าเชื่อถือว่า คนแรกที่ริเริ่มและเผยแพร่กาแฟในเยเมนจนเป็นที่รู้จักอย่างกว้างขวางคือ ชัยค์ อะลี บิน อุมัร อัชชาซิลีย์ ซึ่งเป็นหนึ่งในลูกศิษย์ของท่านอาริฟ บิลละฮ์นาศิรุดดีน บิน มัยลัก ซึ่งเป็นหนึ่งในบรรดาชัยค์แห่งสำนักชาซิลียะฮ์”</p>
+      <p>จากนั้น ท่านอับดุลกอดิร บิน ชัยค์ อัลอีดะรูส ได้เขียนไว้ในหนังสือ ‘ศ็อฟวะฮ์ อัศศ็อฟวะฮ์ ฟี บะยาน ฮุกมี อัลเกาะฮ์วะฮ์’ ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وهو -أي الشيخ علي بن عمر الشاذلي- أول من أظهر القهوة فنسبت اليه، واشتهرت به اشتهارا عظيما، وحكي عنه أنه: عاد هذه القهوة تبلغ من المشرق إلى المغرب، فكان كذلك، وشاعت في أكثر البلدان حتى وصلت إلى الأقطار البعيدة والأمصار النائية، وكان الناس قبل اتخاذه لها إنما يستعملون لب القشر وهو البن ويرمون القشر على المزابل ولا يحتفلون به، فقال الشيخ: عادهم يحملون القشر إلى أطراف البلاد وتسير به القوافل على أكتاف الرجال ويعز بين الناس وتغلى قيمته وتزيد بزته حتى يباع بالذهب والورق، فكان كذلك</blockquote>
+      <p class="ar-translation">“ท่าน (ชัยค์อะลี บิน อุมัร อัชชาซิลีย์) เป็นคนแรกที่เผยแพร่กาแฟ ดังนั้นมันจึงถูกอ้างอิงถึงท่าน และยังเป็นที่รู้จักอย่างกว้างขวาง... มีเรื่องเล่าจากท่านว่า: กาแฟนี้ (ในช่วงเวลาข้างหน้า) มันจะเดินทางจากตะวันออกไปถึงตะวันตก (คำว่า ‘อาดา’ ในสำเนียงเยเมนหมายถึง ‘มันจะกลายเป็น’) และมันก็เป็นเช่นนั้นจริงๆ มันแพร่หลายในเมืองส่วนใหญ่จนไปถึงดินแดนอันห่างไกล และยังมีคำกล่าวอีกว่า: ก่อนที่ผู้คนจะดื่มกาแฟ พวกเขาจะใช้เนื้อในของเมล็ดกาแฟที่เรียกว่า ‘อัลบุน’ และทิ้งเปลือกไว้ในกองขยะโดยไม่สนใจมันเลย แต่ชัยค์ได้กล่าวว่า: ‘พวกเขาจะนำเปลือกนี้ไปทั่วทุกมุมโลก กองคาราวานจะบรรทุกมันไปบนบ่าของบุรุษ และมันจะกลายเป็นของมีค่าในหมู่ผู้คน ราคามันจะสูงขึ้นจนถูกขายในราคาเท่าทองคำและเงิน’ ซึ่งมันก็เป็นเช่นนั้นจริงๆ ”</p>
+      <p>และอัลมุรตะฎอ อัซซะบีดีย์ ได้กล่าวไว้ในตำราที่ยังคงเป็นฉบับเขียนมือชื่อว่า ‘ตุฮ์ฟะตุ อิควาน อัซซะมัน ฟี ฮุกมี เกาะฮ์วะติลยะมัน’ ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأجمعوا على أن أول من نشر صيتها القطب الكامل سيدي أبو الحسن علي بن عمر القرشي الشافعي الشاذلي، فأظهر منافعها، وبين خواصها، وحث تلامذته على شربها في مجلس الأذكار والعبادات، فوجدوا فيها منافع غريبة، وخواص عجيبة، فصنفوا فيها الكتب</blockquote>
+      <p class="ar-translation">“นักวิชาการต่างเห็นพ้องต้องกันว่าคนแรกที่ทำให้กาแฟเป็นที่รู้จักคือ ท่านซัยยิด อบุลฮะซัน อะลี บิน อุมัร อัลกุเราะชีย์ อัชชาฟิอีย์ อัชชาซิลีย์... ท่านได้เผยแพร่ประโยชน์ของมัน, อธิบายคุณสมบัติพิเศษของมัน และกระตุ้นให้นักเรียนของท่านดื่มมันในวงซิเกร และการอิบาดัต ซึ่งพวกเขาได้พบว่ามันมีประโยชน์ที่น่าอัศจรรย์และคุณสมบัติที่น่าทึ่ง พวกเขาจึงได้ประพันธ์หนังสือเกี่ยวกับเรื่องนี้ออกมาหลายเล่ม”</p>
+      <h2 class="article-h2">กาแฟ: ระหว่างเรื่องหะลาลและหะรอม</h2>
+      <p>ในปี ฮ.ศ. 917 / ค.ศ. 1511 ขณะที่อะมีร คอยร์ บัก ผู้ดูแลกิจการของมักกะฮ์กำลังเดินทางจากมักกะฮ์ไปยังบ้านของเขาในคืนวันที่ 23 เราะบีอุลเอาวัล ท่านได้เห็นกลุ่มคนกำลังเฉลิมฉลองวันเมาลิดของท่านนบีมุฮัมมัด ﷺ ท่านเห็นพวกเขากำลังดื่มบางอย่างจากแก้วที่หมุนเวียนกันไปมาเหมือนกับการดื่มเหล้า ท่านจึงถามว่าเครื่องดื่มนั้นคืออะไร</p>
+      <p>มีคนตอบว่า: “มันคือเครื่องดื่มที่เพิ่งเกิดขึ้นในยุคนี้ ชื่อว่า ‘อัลเกาะฮ์วะฮ์’ ซึ่งทำมาจากการต้มเปลือกของเมล็ดพืชที่มาจากเยเมนซึ่งเรียกว่า ‘อัลบุน’ (เมล็ดกาแฟ) เครื่องดื่มนี้แพร่หลายในมักกะฮ์และมีจำนวนมากขึ้นเรื่อยๆ จนถูกขายเกลื่อนเหมือนสิ่งมึนเมาในร้านเหล้า และมีบางคนมารวมตัวกันเพื่อเล่นการพนันหรือทำสิ่งอื่นๆ อันเป็นที่ต้องห้ามในอิสลาม”</p>
+      <p>เรื่องนี้ทำให้ผู้ดูแลกิจการศาสนาซึ่งมีหน้าที่รับผิดชอบด้านศีลธรรมและมารยาทสาธารณะรู้สึกกังวล วันรุ่งขึ้นท่านจึงเรียกประชุมกับบรรดาผู้พิพากษา, นักวิชาการ, นักศึกษาและบุคคลสำคัญอื่นๆ เช่น ผู้พิพากษาเศาะลาฮุดดีน บิน เฎาะฮีเราะฮ์ อัชชาฟิอี (ซึ่งตระกูลของท่านมีบทบาทในการให้ฟัตวาและเป็นผู้พิพากษาในมักกะฮ์ช่วงนั้น), ผู้พิพากษานัจมุดดีน บิน อับดุลวะฮ์ฮาบ อัลมาลิกีย์และคนอื่นๆ</p>
+      <p>พวกเขาเริ่มถกเถียงกันในประเด็นใหม่นี้ และในท้ายที่สุด ผู้เข้าร่วมประชุมเห็นพ้องต้องกันที่จะแยกแยะระหว่างตัวกาแฟเองกับพฤติกรรมที่ไม่เหมาะสมที่มาพร้อมกับการดื่มกาแฟ แต่พวกเขามอบหมายให้แพทย์ให้ความเห็นเกี่ยวกับผลกระทบของ “พืชชนิดนี้” ต่อร่างกายและจิตใจ อะมีร คอยร์ บัก จึงเรียกแพทย์ที่เก่งที่สุดสองคนในมักกะฮ์ในตอนนั้น คือสองพี่น้องนูรุดดีน อัลกาซิรูนีย์ และอะลาอุดดีน อัลกาซิรูนีย์ ซึ่งทั้งสองได้ให้การว่า เครื่องดื่มที่ทำจากเปลือกกาแฟนั้นเย็นและแห้ง เป็นอันตราย มันยังทำให้ผู้ดื่มเสียสมดุลในร่างกายอีกด้วย</p>
+      <p>แต่หนึ่งในนักนิติศาสตร์ที่เข้าร่วมการประชุมอันดุเดือดนี้ได้โต้แย้งคำตัดสินนั้นโดยกล่าวว่า เมล็ดกาแฟนั้นเป็นที่อนุมัติและมีประโยชน์ แต่พวกเขาก็โต้ตอบว่า “แม้จะเป็นสิ่งที่อนุมัติ แต่มันได้นำไปสู่การทำความชั่ว และการอิบาดัตใดๆ ที่นำไปสู่การทำความชั่วก็จะถูกยกเลิกไป”</p>
+      <p>ดังนั้น อะมีร คอยร์ บักจึงได้ออกคำสั่งและประกาศให้ทั่วทั้งมักกะฮ์และบริเวณใกล้เคียงห้ามดื่มกาแฟ คำสั่งนี้ถูกประกาศวันนี้ คือวันที่ 28 เราะบีอุลเอาวัล ปี ฮ.ศ. 917 หรือเมื่อ 500 กว่าปีที่แล้วนี่เอง</p>
+      <p>แต่คำสั่งของคอยร์ บักเป็นเพียงจุดเริ่มต้นของการโต้เถียงที่ร้อนแรงตลอดศตวรรษต่อมา ระหว่างผู้ที่สนับสนุนและผู้ที่คัดค้าน ซึ่งรวมถึงบรรดานักนิติศาสตร์, ผู้พิพากษา, สุลต่านและผู้ปกครอง</p>
+      <h2 class="article-h2">นิรุกติศาสตร์ของ “เกาะฮ์วะฮ์”</h2>
+      <p>มีเครื่องดื่มสามชนิดที่ปรากฏในบทกวีและวรรณกรรมที่ใช้ชื่อ ‘อัลเกาะฮ์วะฮ์’ ได้แก่ ‘กาแฟ’ ซึ่งเป็นเครื่องดื่มที่ทำจากเมล็ดกาแฟต้มซึ่งเป็นหัวข้อของบทความนี้, นม และสิ่งมึนเมา</p>
+      <p>ก่อนหน้านี้ คำว่า ‘เกาะฮ์วะฮ์’ เคยเป็นชื่อเรียกของ ‘เหล้า’ หรือ ‘สิ่งมึนเมา’ มาตั้งแต่ ‘ยุคญาฮิลียะฮ์’ หรือ ‘ยุคก่อนอิสลาม’ ส่วนใหญ่จะมาในรูปแบบที่กระจัดกระจายเป็นบทกลอน บทกวี เช่นบทกวีของอบี้ด บุตรของอัลอับร้อศ จากเผ่าอะซัด เขาเกิดในปี ค.ศ. 598 หรือ 25 ปีก่อนเข้าสู่ยุคปฏิทินฮิจเราะฮ์ เขาได้ร่ายกวีบทหนึ่งเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقهوة كرافت المسك طال بها * في دنها كر حول بعد احوال</blockquote>
+      <p class="ar-translation">“น้ำเมาหอมดังมัสก์หมักถังใหญ่<br>หมุนเวียนไปกี่ครั้งยังขลังข้น<br>ผ่านกาลนานฤๅเลือนกลิ่นรื่นล้น<br>ยังเวียนวนจากถังดุจดังเดิม”</p>
+      <p>กระทั่งถึงยุคศตวรรษที่ 9 แห่งฮิจเราะฮ์ศักราช / ศตวรรษที่ 14 ของคริสตศักราช ยังคงมีการใช้คำว่า ‘อัลเกาะฮ์วะฮ์’ = ‘สิ่งมึนเมา’ อยู่ ซึ่งเราจะพบคำนี้ได้ในพจนานุกรมภาษาอาหรับหลายเล่ม แต่แหล่งข้อมูลจากพจนานุกรมภาษาอาหรับได้ระบุคำว่า ‘อัลเกาะฮ์วะฮ์’ ไว้ด้วยความหมายที่หลากหลายไว้เช่นกันดังที่แจ้งไปในตอนต้น เช่น ในตำราภาษาอาหรับของท่านอิบนุ ฟาริส ซึ่งท่านได้ใช้ชีวิตระหว่างปีฮิจเราะฮ์ศักราชที่ 329 จนถึงปี 395 ได้เขียนเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">القاف والهاء والحرف المعتل أصل يدل على خصب وكثرة. يقال للرجل المخصب الرحل: قاه. يقال: إنه لفي عيش قاه. فأما قولهم: أقهى الرجل من طعام، إذا اجتواه، فليس ذلك من جهة اجتوائه إياه، وإنما هو من كثرته عنده حتى يتملأ عنده فيجتويه. وأما القهوة فالخمر، قالوا: وسميت قهوة أنها تقهي عن الطعام؛ والقياس واحد.</blockquote>
+      <p class="ar-translation">“คำว่า ‘กอฟ-ฮา-วะ’ ซึ่งเป็นรากคำที่แสดงถึงความ ‘อุดมสมบูรณ์’ และ ‘ความมากมาย’ เมื่อกล่าวถึงคนที่มีเครื่องใช้ไม้สอยครบครันหรือเพอร์เฟ็คอย่างที่สุด จะเรียกว่า ‘กอฮีน’ และจะบอกว่า ‘อินนะฮู ละฟี อัยชิน กอฮิน’ (เขาอยู่ในชีวิตที่เพียบพร้อม อุดมสมบูรณ์) สำหรับคำกล่าวที่ว่า: ‘อักฮา อัรเราะญุล มิน เฏาะอาม (ชายคนนั้นละความอยากอาหาร)’ เมื่อเขาไม่ชอบอาหารนั้น มันไม่ได้หมายความว่าเขาไม่ชอบอาหารนั้นจริงๆ แต่เป็นเพราะเขามีอาหารนั้นมากมายจนอิ่ม จึงทำให้เขาไม่รู้สึกอยากอาหาร ส่วนคำว่า ‘อัลเกาะฮ์วะฮ์’ หมายถึง ‘สิ่งมึนเมา’ มีผู้กล่าวว่า มันถูกเรียกว่า ‘เกาะฮ์วะฮ์’ เพราะมันทำให้ผู้ดื่มไม่รู้สึกอยากอาหาร ซึ่งหลักการนี้ก็สอดคล้องกับความหมายของรากคำที่ว่าด้วยความอุดมสมบูรณ์เช่นกัน”</p>
+      <p>จากตรงนี้คำว่า ‘เกาะฮ์วะฮ์’ ไม่ได้มาจากรสชาติของเครื่องดื่ม แต่มาจากผลลัพธ์ที่ทำให้ผู้ดื่มรู้สึกอิ่มหรือไม่อยากอาหารนั่นเอง ท่านอิบนุลมันซูรได้กล่าวไว้ในหนังสือลิซานุลอะหรับ ซึ่งถูกประพันธ์ขึ้นประมาณสองศตวรรษก่อนที่จะมีการค้นพบเมล็ดกาแฟว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">القهوة: الخمر، سميت بذلك لأنها تقهي شاربها عن الطعام أي تذهب بشهوته</blockquote>
+      <p class="ar-translation">“อัลเกาะฮ์วะฮ์ หมายถึง ‘สิ่งมึนเมา’ ที่มันถูกเรียกเช่นนั้นเพราะมันทำให้ผู้ดื่มรู้สึกไม่หิวอาหาร”</p>
+      <p>ผู้เชี่ยวชาญด้านภาษาศาสตร์อีกท่านหนึ่งคือ มุรตะฎอ อัซซาบิดีย์ได้เขียนเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والقهوة: الخمر، يقال: سميت بذلك لأنها تقهي شاربها عن الطعام، أي تذهب بشهوته؛ كما في الصحاح، وفي التهذيب: أي تشبعه، قلت: هذا هو الأصل في اللغة ثم أطلقت على ما يشرب الآن من البن لثمر شجر باليمن، تقدم ذكره في النون يقلى على النار قليلا ثم يدق، ويغلى بالماء وقد سبق لي في خصوص ذلك تأليف لطيف سميته تحفة بني الزمن في حكم قهوة اليمن، ولهم في حلها وحرمتها وطبائعها وخواصها أقوال بسطت غالبها فيه، القهوة: الشبعة المحكمة، قيل: وبه سميت الخمر قهوة لأنها تشبع شاربها، تطلق على اللبن المحض لأنه يدار كما تدار القهوة، أو هو مقلوب القوهة لبياض لونه؛ وقد تقدم، كالقهة، كعدة، ويحتمل أن يكون ذاهبها واوا، وقد تقدم.</blockquote>
+      <p class="ar-translation">“คำว่า ‘อัลเกาะฮ์วะฮ์’ หมายถึง ‘สิ่งมึนเมา’ กล่าวกันว่าที่มันถูกเรียกเช่นนี้เป็นเพราะมันทำให้ผู้ดื่มรู้สึก ‘อิ่มท้อง’ และลดความอยากอาหาร ดังที่ระบุไว้ในหนังสืออัศศิหาห์ และในหนังสืออัตตะฮ์ซีบก็ได้ระบุเอาไว้ว่า ‘มันทำให้อิ่มท้อง’ ฉัน (อัซซาบิดีย์) ขอเสริมว่า นี่คือความหมายดั้งเดิมในเชิงภาษาศาสตร์ จากนั้นอัลเกาะฮ์วะฮ์จึงถูกนำมาใช้เรียกเครื่องดื่มที่ทำจากเมล็ดกาแฟที่ปลูกในเยเมน โดยมันจะถูกคั่วบนไฟเล็กน้อย จากนั้นก็นำมาบดและต้มกับน้ำ ฉันได้เขียนหนังสือสั้นๆ เกี่ยวกับเรื่องนี้ ชื่อว่า ‘ตุฮ์ฟะฮ์ บะนิซซะมัน ฟี ฮุกมี กะฮ์วะติลยะมัน’ ซึ่งฉันได้อธิบายทัศนะส่วนใหญ่ของนักวิชาการเกี่ยวกับความหะลาล, ความหะรอม, ธรรมชาติและคุณสมบัติของมันในหนังสือเล่มนั้น คำว่า ‘อัลเกาะฮ์วะฮ์’ ยังหมายถึง ความอิ่มที่สมบูรณ์ บางคนกล่าวว่าด้วยเหตุนี้ ‘สิ่งมึนเมา’ จึงถูกเรียกว่า ‘เกาะฮ์วะฮ์’ เพราะมันทำให้ผู้ดื่มรู้สึกอิ่ม คำนี้ยังถูกใช้เรียกถึง ‘นมบริสุทธิ์’ เพราะมันถูกเทวนเวียนเหมือนกับการเทกาแฟ หรืออาจมาจากคำว่า ‘อัลเกาะวะฮ์’ ที่สะท้อนถึงสีขาวของนม นอกจากนี้ ยังมีคำว่า ‘อัลกิฮะฮ์’ ที่มีความหมายคล้ายคลึงกัน และมีความเป็นไปได้ว่าคำนี้มีรากมาจากตัวอักษร ‘วาว’ ซึ่งได้กล่าวถึงไปแล้ว”</p>
+      <p>ซึ่งเมื่อย้อนกลับไปดูคำอธิบายที่ท่านได้อธิบายไว้แล้ว ท่านเขียนไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقال الحكيم داود، رحمه الله تعالى: بن ثمر شجر باليمن يغرس حبه في مارس وينمو ويقطف في أغسطس، ويطول نحو ثلاثة أذرع على ساق في غلظ الإبهام ويزهر أبيض يخلف حبا كالبندق وربما تفرطح كالباقلا، وإذا تقشر انقسم نصفين، وقد جرب لتجفيف الرطوبات والسعال والبلغم والنزلات وفتح السدد وإدرار البول، وقد شاع الآن اسمه بالقهوة إذا حمص وطبخ بالغا</blockquote>
+      <p class="ar-translation">“ปราชญ์ดาวูด ขออัลลอฮ์ทรงเมตตาท่าน กล่าวว่า: ‘อัลบุน (เมล็ดกาแฟ)’ คือผลของต้นไม้ชนิดหนึ่งในเยเมน ซึ่งเมล็ดของมันจะถูกปลูกในเดือนมีนาคม เติบโตและเก็บเกี่ยวในเดือนสิงหาคม ต้นของมันสูงประมาณหนึ่งเมตร มีลำต้นที่หนาเท่ากับนิ้วหัวแม่มือ มันจะออกดอกสีขาวและให้ผลคล้ายกับเมล็ดถั่วเฮเซลนัท และบางครั้งก็แบนเหมือนถั่วปากอ้า เมื่อถูกปอกเปลือกจะแยกออกเป็นสองซีก มีการนำมันมาใช้ประโยชน์เพื่อลดความชื้นในร่างกาย, แก้ไอ, ขับเสมหะ, รักษาหวัด, เปิดทางเดินที่อุดตันและช่วยขับปัสสาวะ ปัจจุบัน ชื่อของมันเป็นที่รู้จักอย่างแพร่หลายว่า ‘อัลเกาะฮ์วะฮ์’ (กาแฟ) เมื่อมันถูกนำไปคั่วและต้มจนสุกเต็มที่”</p>
+      <p>ด้วยเหตุนี้ คำว่า ‘อัลเกาะฮ์วะฮ์’ จึงมีความหมายในเชิงลบสำหรับนักนิติศาสตร์ เพราะมันหมายถึงสิ่งมึนเมาที่มีค่าเท่ากับสุราเมรัย (บางครั้งก็มีการแปล ‘อัลเกาะฮ์วะฮ์’ หมายถึง ‘ไวน์’ ถือว่าเป็นความเข้าใจที่คลาดเคลื่อน เพราะคำว่า ‘ไวน์’ ความหมายในภาษาอาหรับที่ใกล้เคียงที่สุดคือคำว่า ‘นะบีซ’)</p>
+      <p>ในเวลาต่อมา บรรดาผู้ที่สนับสนุนการดื่มกาแฟก็ได้แสดงให้เห็นถึงความแตกต่างที่แท้จริงระหว่าง ‘เกาะฮ์วะฮ์ทั้งสองชนิด’ โดยชี้ว่า เกาะฮ์วะฮ์ชนิดที่หนึ่ง ซึ่งเป็นคำภาษาอาหรับโบราณ ทำให้สูญเสียสติปัญญา ในขณะที่เกาะฮ์วะฮ์ หรือกาแฟชนิดที่สองนี้ ช่วยกระตุ้นความกระปรี้กระเปร่าและช่วยในการปฏิบัติภารกิจต่างๆ</p>
+      <h2 class="article-h2">คาราวานทางภาษา จาก ‘อัลเกาะฮ์วะฮ์’ สู่ ‘อัลคอฟฟี่’</h2>
+      <p>หลังจากที่กาแฟได้หยั่งรากลึกในโลกอาหรับแล้ว คำศัพท์ ‘อัลเกาะฮ์วะฮ์’ นี้ก็ได้เริ่มเดินทางข้ามพรมแดนทางวัฒนธรรมและภูมิศาสตร์ โดยมีจักรวรรดิออตโตมันเป็นสะพานเชื่อมที่สำคัญที่สุด การเดินทางครั้งนี้ไม่ได้เป็นเพียงการถ่ายทอดคำศัพท์เท่านั้น แต่ยังเป็นการปรับเปลี่ยนเสียงเพื่อให้เข้ากับระบบเสียงของภาษาใหม่ๆ อีกด้วย</p>
+      <p>เครื่องดื่มกาแฟและชื่อของมันนี่เองที่เดินทางจากต้นกำเนิดในเยเมนขึ้นเหนือผ่านแคว้นฮิญาซ (มักกะฮ์และมะดีนะฮ์) จนเข้าสู่ใจกลางของจักรวรรดิออตโตมัน ในกระบวนการนี้คำภาษาอาหรับ ‘เกาะฮ์วะฮ์’ ซึ่งออกเสียงด้วยเสียง /q/ จากส่วนลึกของลำคอ และมีเสียงพ่นลม /h/ ที่ท้ายคำ ได้ถูกปรับเปลี่ยนให้เข้ากับระบบเสียงของภาษาตุรกีออตโตมันเป็น กะฮ์เว (kahve) การเปลี่ยนแปลงทางเสียงที่สำคัญคือการเปลี่ยนจากเสียงก้อง /q/ เป็นเสียงไม่ก้อง /k/ และการไม่ออกเสียง /h/ ที่ท้ายคำ</p>
+      <p>อีกประการหนึ่งคือ การก่อตั้งร้านกาแฟแห่งแรกๆ ของโลก หรือกะฮ์เว ฮาเน (Qahveh khaneh) เกิดขึ้นในกรุงคอนสแตนติโนเปิล (อิสตันบูล) ในช่วงกลางศตวรรษที่ 16 ซึ่งเหตุการณ์ตรงนี้ได้เปลี่ยนโฉมกาแฟจากเครื่องดื่มส่วนบุคคลให้กลายเป็นสถาบันทางสังคม สิ่งนี้ทำให้จักรวรรดิออตโตมันกลายเป็นประตูทางวัฒนธรรมและภาษาที่สำคัญที่สุด ซึ่งกาแฟและชื่อของมันได้เดินทางผ่านเข้าสู่ทวีปยุโรป</p>
+      <p>คำว่า ‘เกาะฮ์วะฮ์’ ได้เข้าสู่ยุโรปผ่านเส้นทางการค้าทางทะเลซึ่งถูกควบคุมโดยสาธารณรัฐเวนิสและสาธารณรัฐดัตช์ ทั้งสองชาติมหาอำนาจทางทะเลนี้มีความสัมพันธ์ทางการค้าที่กว้างขวางกับจักรวรรดิออตโตมัน การถ่ายทอดคำศัพท์จึงเกิดขึ้นผ่านสองเส้นทางหลักที่แตกต่างกันเล็กน้อย</p>
+      <p><strong>เส้นทางฝั่งอิตาลี-ฝรั่งเศส</strong> คำว่า ‘กะฮ์เว’ ในภาษาตุรกีถูกยืมเข้าไปในภาษาอิตาลีเป็น ‘Caffè’ ในราวปี 1600 รูปแบบคำนี้ซึ่งมีการเน้นเสียงที่พยางค์สุดท้าย ได้ส่งอิทธิพลต่อไปยังคำว่า ‘Café’ ในภาษาฝรั่งเศส ซึ่งคนไทยจะเรียกกันว่า ‘คาเฟ่’, Kaffee ในภาษาเยอรมัน และภาษาอื่นๆ ในยุโรป</p>
+      <p><strong>เส้นทางฝั่งดัตช์-อังกฤษ</strong> คำว่า ‘กะฮ์เว’ เดียวกันนี้ ถูกยืมเข้าไปในภาษาดัตช์เป็น ‘Koffie’ ในราวปี 1600 เช่นกัน จากนั้นรูปแบบคำในภาษาดัตช์นี้ก็ถูกยืมโดยตรงเข้าไปในภาษาอังกฤษเป็น ‘Coffee’ โดยมีการบันทึกการใช้ครั้งแรกในปี 1582 แต่มหาวิทยาลัย Oxford ได้บันทึกไว้ว่า มีการแปลครั้งแรกในปี 1598 ซึ่งแปลโดย William Phillip</p>
+      <p>แน่นอนว่า ร้านกาแฟแห่งแรกได้เกิดขึ้นในอิตาลีในปี ค.ศ. 1645 ซึ่งคนไทยเรียกกันติดหูว่า ‘ร้านคาเฟ่’ ส่วนในอังกฤษก็ช่วงประมาณทศวรรษ 1650 ซึ่งจะเรียกกันว่า ‘Coffee Shop’ และในฝรั่งเศสก็มีร้านกาแฟชื่อดังที่ยังคงเปิดให้บริการอยู่ในปัจจุบันคือ Café de Flore ที่ก่อตั้งขึ้นเมื่อปี 1887</p>
+      <p>แต่สองวัฒนธรรมนี้ คือคนพูดภาษาอังกฤษและภาษาฝรั่งเศส มีการตั้งต้นรูปแบบในการเปิดร้านสองอย่างนี้มาแตกต่างกัน โดย ‘Coffee Shop’ ของคนพูดภาษาอังกฤษ เน้นขายกาแฟเป็นหลักและขนมทานกับกาแฟเท่านั้น</p>
+      <p>ส่วน ‘Café’ แตกหน่อออกมาหรือเป็นเพียงสาขาย่อยของ Restaurant (ภัตตาคาร) ซึ่งก็ยังมีการแตกหน่ออื่นๆ อีกเช่น Bistro ซึ่ง Café ตัวจริงๆ ของมันเมื่อแรกเริ่มเดิมทีจึงเน้นขายอาหารที่เบาและไม่จัดหนักเท่า Restaurant โดยบวกกาแฟเข้าไปด้วย แต่กระนั้น ‘Café’ และ ‘Coffee Shop’ มีสิ่งที่เหมือนกันคือ ‘ขายกาแฟ’</p>
+      <p>ด้วยการติดตามคำศัพท์เพียงคำเดียวนี้ เราสามารถสร้างประวัติศาสตร์โลกาภิวัตน์ในช่วงศตวรรษที่ 16-18 ขึ้นมาใหม่ได้อย่างละเอียดยิบ การเดินทางของคำศัพท์นี้เป็นสิ่งประดิษฐ์ทางประวัติศาสตร์ที่บอกเล่าเรื่องราวของปฏิสัมพันธ์ระหว่างศาสนา (ซูฟี) การค้า (ออตโตมัน-ยุโรป) และจักรวรรดินิยม (ยุโรป) ได้เป็นอย่างดี</p>
+      <p>นี่ยังไม่ได้พูดถึงประเด็นของเกาะฮ์วะฮ์ที่สามารถเชื่อมโยงกับรากศัพท์จากกลุ่มภาษาเซมิติก รวมถึงรากศัพท์นี้ยังมีคำร่วมเชื้อสายย่อยลงไปอีกในภาษาฮีบรูและภาษาแอราเมอิกอีกด้วย ซึ่งทฤษฎีนี้อาจเป็นนิรุกติศาสตร์คู่ขนานหรือเป็นอิทธิพลร่วมก็เป็นไปได้</p>
+      <p>และยังไม่รวมถึงทฤษฎีที่มาของคำว่า ‘กะอ์วะฮ์’ ที่แพร่หลายที่สุด แต่ก็เป็นที่ถกเถียงกันมากที่สุดว่าคำดังกล่าว อาจมีที่มาจากชื่อ “กัฟฟา” (Kaffa หรือ Kefa) ซึ่งคำที่มาจากภูมิภาคทางตะวันตกเฉียงใต้ของเอธิโอเปียที่ได้รับการยอมรับว่าเป็นถิ่นกำเนิดของต้นกาแฟ แม้ว่าทฤษฎีนี้จะดูสมเหตุสมผลในแวบแรก แต่เมื่อพิจารณาจากหลักฐานทางประวัติศาสตร์และภาษาศาสตร์แล้วกลับพบข้อบกพร่องที่สำคัญหลายประการ เช่น ลำดับเวลาทางประวัติศาสตร์ ที่มีการใช้ ‘อัลเกาะฮ์วะฮ์’ มานานหลายร้อยปี หรือความไม่เชื่อมโยงทางภาษา ซึ่งชื่อเรียกต้นกาแฟในภาษาท้องถิ่นของภูมิภาคกัฟฟาเองนั้นไม่มีความคล้ายคลึงทางเสียงกับคำว่า ‘เกาะฮ์วะฮ์’ เลย แต่กลับเรียกว่า ‘บูโน’ หรือ ‘บุนน์’ ที่สำคัญคือ ชาวอาหรับได้รับเอาคำว่า บุนน์ มาใช้เรียก “เมล็ดกาแฟ” โดยเฉพาะ ซึ่งเป็นการแยกความแตกต่างระหว่าง ‘วัตถุดิบ’ กับ ‘เครื่องดื่มที่ชงเสร็จแล้ว’ หากชาวอาหรับตั้งใจจะตั้งชื่อเครื่องดื่มตามชื่อภูมิภาค ก็คงไม่มีเหตุผลที่จะยืมคำศัพท์พื้นเมืองของภูมิภาคนั้นมาใช้เรียกเมล็ดกาแฟไปพร้อมๆ กัน</p>
+      <p>และยังไม่รวมถึงประเด็นด้านมืดของวงการกาแฟในการใช้แรงงานทาสที่เกิดขึ้นในหมู่เกาะชวาช่วงที่อินโดนีเซียยังตกอยู่ใต้อำนาจของมหาอำนาจ</p>
+      <h2 class="article-h2">ความขัดแย้งของผู้สนับสนุนและผู้คัดค้าน</h2>
+      <p>กลับมาเข้าสู่เรื่องเดิมจากตอนที่แล้ว ผลกระทบของกาแฟที่ช่วยกระตุ้นร่างกาย ประกอบกับการที่มันกลายเป็นศูนย์กลางของการรวมตัวทางสังคมในร้านกาแฟที่เริ่มเกิดขึ้นใหม่ ได้นำไปสู่การถกเถียงอย่างเผ็ดร้อนในหมู่นักนิติศาสตร์อิสลามสายอนุรักษนิยมเกี่ยวกับสถานะของมันว่า ‘หะลาล’ หรือ ‘หะรอม’ ดังที่มีการถกเถียงกันก่อนหน้านี้ และเมื่อผู้ว่าการรัฐมัมลูกได้ส่งบันทึกการประชุมดังกล่าวไปถึงสุลต่านก็อนศูวะฮ์ อัลฆูรีย์ที่กรุงไคโร พระองค์ได้อนุมัติมติของการประชุมนั้นและสั่งห้ามการดื่มกาแฟในทันที และการตัดสินของพระองค์ก็ได้รับการสนับสนุนจากนักนิติศาสตร์ผู้ยิ่งใหญ่ที่สุดในยุคนั้นคือ ท่านชัยคุลอิสลามซะกะรียา อัลอันศอรีย์ (เสียชีวิต ฮ.ศ. 926 / ค.ศ. 1520)</p>
+      <p>อย่างไรก็ตาม มีเกล็ดประวัติช่วงหนึ่งที่ได้มีการบันทึกเอาไว้ว่า กลุ่มนักนิติศาสตร์จากสำนักมาลิกีย์ที่เป็นคอกาแฟและชอบกาแฟมาก ได้เดินทางไปหาชัยคุลอิสลามอัลอันศอรีย์เพื่อโต้แย้งกับท่านในประเด็นที่ท่านเห็นควรว่าต้องปรามการดื่มกาแฟ ในขณะที่ท่านอัลอันศอรีย์ต้องการทราบความจริงของเรื่องนี้ ตามที่ผู้เขียนหนังสืออันนูรุซซาฟิร อัน อัคบาร อัลก็อรน์ อัลอาชิรได้กล่าวไว้ ท่านจึงได้นำเปลือกกาแฟมาต้ม และสั่งให้ผู้ที่มาปกป้องกาแฟเหล่านี้ดื่มมัน แล้วท่านก็เริ่มสนทนากับพวกเขาอยู่นานชั่วครู่หนึ่ง และท่านก็ไม่พบว่าพวกเขาพูดจาเปลี่ยนไปหรือแสดงอาการร่าเริงเกินควรเลย ท่านเพียงแต่เห็นว่าพวกเขามีความสดชื่นขึ้นเล็กน้อยเท่านั้น</p>
+      <p>หลังจากนั้นไม่นาน ท่านชัยคุลอิสลามอัลอันศอรีย์ก็ได้ประพันธ์หนังสือเกี่ยวกับเกาะฮ์วะฮ์ขึ้นมา ซึ่งมีข้อสรุปอย่างเด็ดขาดว่ามันเป็นสิ่ง “หะลาล” (ปัจจุบันยังไม่พบต้นฉบับของหนังสือเล่มที่ว่านี้)</p>
+      <p>แต่การตัดสินใจนี้ไม่เป็นที่พอใจสำหรับผู้ที่คัดค้านในมักกะฮ์, ไคโรและดามัสกัส เช่น ชัยค์อัลกาซิรูนีย์ ที่ได้เขียนบทความเกี่ยวกับกาแฟว่า ‘เป็นสิ่งต้องห้าม’ ในทางตรงกันข้าม นักวิชาการบางท่านเช่น ชัยค์อบู บักร อัลมักกีย์ได้สนับสนุนว่ากาแฟเป็นสิ่งที่หะลาลโดยได้ประพันธ์บทความชื่อ “อิษารอฮ์ อันนัควะฮ์ บิฮุกมี อัลเกาะฮ์วะฮ์” และได้ตอบโต้ด้วยการเขียนบทความอีกเล่มหนึ่งชื่อ “อิญาบะฮ์ อัดดะอ์วะฮ์ บินัศศี อัลเกาะฮ์วะฮ์”</p>
+      <p>และในไม่ช้า การค้าเมล็ดกาแฟก็เฟื่องฟูอย่างรวดเร็ว และช่วยส่งเสริมเศรษฐกิจภายในจักรวรรดิออตโตมัน ซึ่งในขณะนั้นได้ยึดครองประเทศอาหรับแล้ว</p>
+      <p>ในตอนที่อียิปต์ได้สูญเสียสถานะการเป็นศูนย์กลางหลักในการค้าเครื่องเทศ ซึ่งเป็นคนกลางแต่เพียงผู้เดียวระหว่างอินเดียกับยุโรปมาหลายศตวรรษ เนื่องจากมีการค้นพบเส้นทางอื่นที่ไม่ผ่านอียิปต์ในช่วงปลายยุคมัมลูก (คือเส้นทางแหลมกู๊ดโฮป) ซึ่งทำให้การค้านี้เสื่อมลง แต่การเพาะปลูกและการค้ากาแฟก็กลับมาสร้างความคึกคักให้กับการค้าภายในระหว่างดินแดนต่างๆ ของจักรวรรดิออตโตมันอีกครั้ง เราได้เห็นบรรดาพ่อค้าใหญ่ เช่น อิสมาอีล อบู ฏอกียะฮ์ เจ้าของท่าเรือผู้มั่งคั่งของอียิปต์ในศตวรรษที่ 17 ได้สร้างรายได้มหาศาลจากการค้าขายกาแฟ นอกจากนี้ อบู ฏอกียะฮ์ยังช่วยส่งเสริมให้กาแฟเป็นที่นิยมด้วยการสร้างร้านกาแฟขึ้นกลางกรุงไคโรในช่วงต้นศตวรรษนั้น</p>
+      <p>บรรดานักนิติศาสตร์และนักกวีผู้สนับสนุนกาแฟต่างแต่งบทกวีและประพันธ์บทความเพื่อปกป้องกาแฟจากการคัดค้านตลอดทั้งศตวรรษที่ 10 (ฮ.ศ.) หรือศตวรรษที่ 16 (ค.ศ.) ซึ่งเป็นที่รู้จักในนาม ‘ศตวรรษแห่งการโต้เถียงเกี่ยวกับกาแฟ’ อับดุรเราะอูฟ บิน ยะห์ยา อัลวาอิซ ศิษย์ของนักปราชญ์ผู้โด่งดังอย่างท่านอิบนุ ฮะญัร อัลฮัยษะมีย์ ได้กล่าวไว้ในบทกวีของเขาว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قد شربنا قهوة بنية … ولها شربنا غدا بالنية * لونها قد حكي أذا يبمسك … أو زباد وسط الزباد الجلية</blockquote>
+      <p class="ar-translation">“วานนี้ดื่มกาแฟดำช่างขำขัน<br>พรุ่งนี้พลันยังจะดื่มด้วยรื่นรมย์<br>สีดั่งมัสก์หอมหวานซ่านอารมณ์<br>ชะมดชมผสมกลิ่นถวิลใจ”</p>
+      <p>เมื่อเข้าสู่เวทีความขัดแย้งในดามัสกัส อบุลฟัตฮ์ อัลมักกีย์ (เสียชีวิต ฮ.ศ. 975 / ค.ศ. 1567) ซึ่งนักประวัติศาสตร์บางท่านบรรยายว่า ‘เป็นผู้ที่ออกหน้าออกตาในการปกป้องกาแฟ’ เป็นเอามาก ได้มีเหตุการณ์และเรื่องราวกับยูนุส อัลอัยษาวีย์ ผู้เป็นปฏิปักษ์กับกาแฟและออกฟัตวาว่า กาแฟเป็นสิ่งต้องห้าม ความขัดแย้งระหว่างทั้งสอง ‘ได้ยืดเยื้อและเต็มไปด้วยความอิจฉาริษยา’</p>
+      <p>เมื่อทั้งสองได้พบกันครั้งหนึ่งที่บ้านของอาลี อาฟันดีย์ อัรรูมีย์ ผู้พิพากษาชาวออตโตมันแห่งดามัสกัส และได้ถกเถียงกันในประเด็นเกี่ยวกับกาแฟ โดยต่างฝ่ายต่างนำเสนอหลักฐานของตน ปรากฏว่าท่านอบุลฟัตฮ์ อัลมักกีย์ ได้รับชัยชนะในการโต้แย้งครั้งนั้น เนื่องจากหลักฐานในการห้ามดื่มกาแฟนั้นไม่ชัดเจน</p>
+      <p>ความขัดแย้งระหว่างนักวิชาการผู้สนับสนุนและผู้คัดค้านกาแฟได้ทวีความรุนแรงขึ้นในยุคของผู้ปกครองออตโตมันคนใหม่แห่งดามัสกัสคือ ลาลา มุศฏอฟา บาชา ซึ่งขึ้นปกครองเมืองอยู่ห้าปี (ฮ.ศ. 971-976 / ค.ศ. 1563-1568) ผู้ปกครองท่านนี้เป็นคนแข็งกร้าวและเข้มงวด แต่ก็ให้ความเคารพแก่นักนิติศาสตร์ และดูเหมือนว่าท่านจะเป็นผู้สนับสนุนกาแฟ ดังนั้น ท่านอบุลฟัตฮ์จึงได้กล่าวชื่นชมเขาในขณะที่ยูนุส อัลอัยษาวีย์กลับโต้แย้ง</p>
+      <p>ในขณะที่กาแฟกำลังแทรกซึมเข้าไปในทุกชนชั้นของสังคมและมีการสร้างร้านกาแฟโดยเฉพาะ สถานการณ์ก็กลับตาลปัตรทันทีในปี ฮ.ศ. 968 / ค.ศ. 1572 เมื่อมีคำสั่งจากสุลต่านสุลัยมาน อัลกอนูนีย์ ส่งมาถึงกรุงไคโร ‘ให้ห้ามสิ่งไม่ดี, เครื่องดื่มมึนเมา, และสิ่งต้องห้าม, ให้ปิดประตูโรงเหล้าและโรงเตี๊ยม, ห้ามการดื่มกาแฟและการแสดงออก (โฆษณา) ว่าดื่ม, ให้ทุบเตาและทำลายภาชนะเครื่องทำกาแฟ’ การบังคับใช้คำสั่งของสุลต่านนี้ มาพร้อมกับความรุนแรงและโหดร้ายจากเจ้าหน้าที่ ซึ่งอัลญะซีรีย์ นักประวัติศาสตร์ร่วมสมัยที่เห็นเหตุการณ์นี้และเป็นผู้สนับสนุนกาแฟ ได้บันทึกไว้ด้วยความขมขื่นว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وضربوا وأشهروا، وهدموا البيوت، وكسروا أوانيها المحترمة الطاهرة التي هي مال لرجل مسلم، ولم يبلغنا فعلهم مثل ذلك في أواني الخمر والحشيشة</blockquote>
+      <p class="ar-translation">“พวกเขาได้ทำร้ายและประจานผู้คน, ทุบบ้านเรือนพังเสียหาย, ทำลายของมีค่าต่างๆ ซึ่งเป็นทรัพย์สินของมุสลิม...และเราไม่เคยได้ยินว่าพวกเขาทำเช่นนี้กับภาชนะที่ไว้ใส่สิ่งมึนเมาและกัญชาเลย”</p>
+      <h2 class="article-h2">ชัยชนะของคอกาแฟ</h2>
+      <p>แต่ในไม่ช้า รัฐก็เริ่มผ่อนปรนการบังคับใช้คำสั่งเหล่านี้ และในที่สุด บรรดาคอกาแฟซึ่งเป็นนักนิติศาสตร์และนักกวีก็ได้รับชัยชนะเหนือคู่ต่อสู้ของพวกเขาซึ่งกลายเป็นชนกลุ่มน้อยในช่วงปลายศตวรรษนั้น ชัยชนะนี้ถูกบันทึกไว้โดยบุรฮานุดดีน บิน อัลมุบัลลิฏ (เสียชีวิต ฮ.ศ. 991 / ค.ศ. 1583) นักกวีแห่งไคโรในยุคของท่าน ที่เขียนไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أرى قهوة البن في عصرنا … على شربها الناس قد أجمعوا * وصارت لشرابها عادة … وليستضر ولا تنفع</blockquote>
+      <p class="ar-translation">“กาแฟดำฉ่ำขมชมดื่มเล่น<br>เช้าเย็นเห็นคนล้อมถ้วยไม่เว้นวัน<br>เป็นวิสัยใครใครได้ลิ้มเช่น<br>ต่างพากเพียรเพลินอยู่ไม่รู้วาย<br>บางคนว่าไม่โทษไม่เกิดคุณ<br>ก็แค่หนุนอารมณ์ให้ล่องฝัน<br>เพียงของเล่นโลกีย์ที่หมุนกัน<br>แต่ใจฉันเมามายไม่คลายเลย” (ไม่ได้แปลตามตัวต้นฉบับ)</p>
+      <p>ร้านกาแฟสองแห่งแรกเปิดขึ้นในอิสตันบูลในปี ค.ศ. 1554 โดยเจ้าของทั้งสองคนนั้นมาจากชาม คนหนึ่งมาจากหะลับ อีกคนหนึ่งมาจากดามัสกัส และในช่วงปลายศตวรรษนั้น ในกรุงไคโรก็เต็มไปด้วยร้านกาแฟ ซึ่งเป็นสิ่งที่นักเดินทางชาวยุโรปชื่อ เฮนรี กัสเตลา (Henry Castela) ได้สังเกตเห็นเมื่อเขามาเยือนไคโรในปี ค.ศ. 1600-1601 เขาได้เห็นว่าในกรุงไคโรนั้นมีร้านค้ามากมายที่ผู้คนดื่มน้ำร้อนสีดำตลอดทั้งวัน ซึ่งแสดงให้เห็นว่าเขาเองก็ไม่เคยเห็นกาแฟมาก่อนเลย และนักเดินทางอีกคนหนึ่งชื่อ โยฮัน วิลด์ (Johan Wild) ที่เดินทางมายังอียิปต์ในช่วงปี ค.ศ. 1606-1610 ก็ได้สังเกตเห็นในเมืองดุมยาตถึงสิ่งที่ผู้คนเรียกกันว่า ‘เกาะฮ์วะฮ์ กอนาต’ (ร้านกาแฟ) ซึ่งผู้คนมักจะแวะเวียนไปดื่ม ‘น้ำต้มสีดำ’ ตามที่เขากล่าวไว้ ตั้งแต่นั้นมา กาแฟและร้านกาแฟก็ได้หยั่งรากลึกในภูมิภาคอาหรับเป็นต้นมา (พร้อมมีเครื่องเคียงอย่างบะรากู่ตามมา)</p>
+      <p>สำหรับประเทศไทยเอง การดื่มกาแฟก็มีร่องรอยย้อนไปได้ไกลถึงสมัยอยุธยา ดังปรากฏในบันทึกของชาวต่างชาติ เช่น จดหมายเหตุลาลูแบร์ ราชอาณาจักรสยามของเอกอัครราชทูตของพระเจ้าหลุยส์ที่ 14 แห่งฝรั่งเศส และสำเภากษัตริย์สุลัยมาน (The Ship of Sulaiman) บันทึกของอิบนุ มุฮัมหมัด อิบรอฮีม</p>
+      <p>ก่อนจะกลายเป็นที่แพร่หลายและมีหลักฐานชัดเจนยิ่งขึ้นในยุครัตนโกสินทร์ช่วงรัชกาลที่ 3 จากบันทึกของสังฆราชชอง-บาติสต์ ปาเลอกัว (Mgr.Jean-Baptiste Pallegoix) จนมีร้านกาแฟนรสิงห์ ซึ่งเป็นคาเฟ่แห่งแรกในสยาม สร้างขึ้นในช่วงสมัยของรัชกาลที่ 6 ปี 2468 ที่เปิดให้บริการอยู่ ณ วังพญาไท</p>
+      <p>หลังจากนั้น จึงมีการพัฒนาสูตรกันเรื่อยมากลายเป็นเครื่องดื่มที่มีความหลากหลายเช่น โกปี๊ออ, โอเลี้ยง, โอเลี้ยงยกล้อ, โกปี๊เตี่ยม, โอยั๊วะ, จั้มบ๊ะและสารพัดสารพันชื่อเรียกต่างๆ ที่ปรากฏอย่างมากมายในปัจจุบัน ซึ่งก็แล้วแต่กรรมวิธีการผลิตและสูตรของแต่ละเจ้า</p>
+      <p>ซึ่ง ‘น้ำต้มสีดำ’ ที่เคยถูกจดบันทึกไว้ด้วยความฉงนนี้ ก็ได้เดินทางข้ามผ่านกาลเวลา กลายมาเป็นส่วนหนึ่งในชีวิตประจำวันของหลายๆ คนอย่างสมบูรณ์ บางที การได้จิบกาแฟไปพลาง ค้นคว้าประวัติศาสตร์ไปพลาง อาจจะเป็นความสุขที่แท้จริงของนักเดินทางข้ามกาลเวลาก็เป็นได้</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). เรื่องราวของกาแฟในมรดกอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/coffee-in-islamic-heritage.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
