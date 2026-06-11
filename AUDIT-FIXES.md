@@ -113,3 +113,14 @@
 - **S5:** เติม ﷺ ให้การเอ่ยนามท่านนบี/ท่านเราะซูล ที่ตกหล่น **4 จุด** (ท่านเราะซูล×2, ท่านนบี×2) → ﷺ ครบทุกการเอ่ยนาม (18→22)
 - ทว่า×2 = false positive ("บทว่า" = บท+ว่า) · em-dash อยู่ใน comment/title เท่านั้น · Ibn/Abu spacing + Rule 12/12.1/12.2 ผ่าน
 - reading-time: รันใหม่ยืนยัน
+
+## 2026-06-11 — audit บทใหม่ #4 · `articles/tarikh/bayt-al-hikma-house-of-wisdom.html` — ✅ VERIFY (ไม่แตะ)
+
+**จุดพิเศษ (โครงต่างจากปกติ — เนื้อหาไทยล้วน + อ้างอิงอาหรับ ไม่มี aya/hadith-block):**
+- **S1-S8:** ผ่านครบ — ไม่มี ทว่า/มิใช่ (Drive มี "ทว่า" → publishing แก้เป็น "แต่" แล้ว), ไม่มี อิมาม/ศ่อเหี้ยห์/มัซฮับ · em-dash อยู่ใน JS-comment/title เท่านั้น · ﷺ N/A (ไม่อ้างท่านนบี) · S1 colon ก่อน quote ครบ
+- **บรรณานุกรม 14 รายการ:** 9 อาหรับ (`<ol lang="ar" dir="rtl">`) + 5 ต่างประเทศ — ถูกต้องตาม Bibliography & Citation Standard: อาหรับมากกว่า (9>5) → **RTL, อาหรับขึ้นก่อน** · อาหรับเป็น Arabic script เต็มรูป (ผู้แต่ง/ตำรา/ตหฺกีก/สถานที่/ผู้พิมพ์/ปี/เล่ม-หน้า) · ต่างประเทศคงภาษาต้นฉบับ
+- **URL de-mangle ใช้งานได้จริง:** Drive ต้นฉบับมี TLD เพี้ยนเป็นไทย (`muslimheritage.คอม`, `academia.อีดียู`, `ancient-origins.เน็ต`) → บทความ **de-mangle ถูกต้องเป็น .com/.edu/.net** · ทดสอบ HTTP: muslimheritage.com (article) **200**, academia.edu **200**, ancient-origins.net (article) **200**, theculturetrip.com **503** (anti-bot/throttle ชั่วคราว โดเมนจริง ไม่ใช่ลิงก์ตาย) · ไม่มี TLD ไทยหลงเหลือ
+- บทตัด steemit/eduscapes (แหล่งคุณภาพต่ำ) จาก Drive ออก — curation ที่เหมาะสม
+
+### ⚐ NOTE (ไม่ใช่ defect)
+- อ้างอิงต่างประเทศใช้ **bare domain** (ไม่ใส่ full path) — ผู้แต่ง+ชื่อเรื่องครบ พอค้นได้ · หากต้องการ full URL (ที่ verify 200 แล้ว) ใส่เพิ่มได้ แจ้งได้ — เป็น citation-completeness decision ไม่ดำเนินการเอง
