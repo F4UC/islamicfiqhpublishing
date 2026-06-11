@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>โปโล หมากรุก และสุลต่าน: เรื่องเล่าของกีฬาในประวัติศาสตร์มุสลิม — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ประวัติศาสตร์ของกีฬาและการละเล่นในอารยธรรมอิสลาม ตั้งแต่หมากรุกของตาบิอีน โปโลของสุลต่านนูรุดดีนและเศาะลาหุดดีน มวยปล้ำของท่านนบี ﷺ กติกาการแข่งที่ยุติธรรม ไปจนถึงวัฒนธรรมการเชียร์และการเดิมพัน">
+<meta name="keywords" content="กีฬาอิสลาม, หมากรุก, โปโล, นูรุดดีน ซังกี, มวยปล้ำ, ยิงธนู, ประวัติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="โปโล หมากรุก และสุลต่าน: เรื่องเล่าของกีฬาในประวัติศาสตร์มุสลิม — Islamic Fiqh Publishing">
+<meta property="og:description" content="ชาวมุสลิมไม่ได้เป็นแค่ชาวมัสยิดหรือนักรบ แต่รู้จักกีฬาที่ใช้ทั้งกายและสมอง เล่นกันแบบมืออาชีพ มีกติกาและมีเป้าหมาย">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/sports-and-games-in-islamic-history.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="sports-and-games-in-islamic-history">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">โปโล หมากรุก และสุลต่าน: เรื่องเล่าของกีฬาในประวัติศาสตร์มุสลิม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">อิหม่ามอัชชาฟิอีเล่าว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لعب سعيد بن جبير بالشطرنج من وراء ظهره فيقول: بأيش دفع كذا؟ قال: بكذا قال: ادفع بكذا</blockquote>
+      <p class="ar-translation">“ท่านสะอีด บิน ญุเบรเล่นหมากรุกแบบไม่มองกระดาน (คือหันหลังเล่น)... ท่านจะถาม (คนดู) ว่า ‘เขา (คู่แข่ง) เดินตัวไหน?’ พอมีคนบอกว่า ‘เขาเดินตัวนั้นครับ’ ท่านก็จะสั่งเลยว่า ‘งั้นเดินตัวนี้สู้ไป!’”</p>
+      <p>อิหม่ามอัชชาฟิอียังเล่าอีกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كان محمد بن سيرين، وهشام بن عروة يلعبان بالشطرنج استدبارا</blockquote>
+      <p class="ar-translation">“ท่านมุฮัมมัด บิน ซีรีนกับท่านฮิชาม บิน อุรวะฮ์ก็เล่นหมากรุกแบบไม่มองกระดานเหมือนกัน”... แถมยังมีรายงานอีกว่า ท่านอัชชะอ์บีก็เล่นด้วย</p>
+      <p>เรื่องเล่านี้ถูกถ่ายทอดโดยนักหะดีษผู้ยิ่งใหญ่คือ ท่านอิหม่ามอัลบัยฮะกีในหนังสือมะอ์ริฟะตุสสุนัน วัลอาษารและอัสสุนัน อัลกุบรอ</p>
+      <p>ประเด็นคือ ตัวละครเอกในเรื่องนี้ คืออิหม่ามระดับสูงของยุคตาบิอีน ภาพจำที่เรามีต่อท่านเหล่านี้คือ... พวกเขาคือนักกฎหมาย, นักอิจติฮาด และผู้กล้าท้าชนกับผู้มีอำนาจทางการเมือง</p>
+      <p>แต่การที่ทักษะด้านกีฬาอย่างหมากรุกของพวกเขาถูกเล่าขานต่อๆ กันมา... จนถึงขั้นที่หนึ่งในนั้น (สะอีด บิน ญุเบร) กลายเป็นตำนานด้าน “มันสมอง”... แถม “คนเล่า” และคนสังเกตการณ์เรื่องนี้ ก็เป็นอิหม่ามชั้นผู้ใหญ่อย่างท่านชาฟิอี และท่านบัยฮะกีเสียเอง...</p>
+      <p>ความจริงก็คือ... ใครก็ตามที่รู้จัก “ท่านอิบนุ ญุเบร” ในฐานะนักกฎหมายจอมปฏิวัติและนักการเมือง... ก็จะเข้าใจทันทีว่าทำไมท่านถึงอินและเชี่ยวชาญในกีฬาที่ต้องใช้มันสมองอย่าง “หมากรุก”</p>
+      <p>และใครที่ศึกษาประวัติศาสตร์กีฬาในโลกอิสลามก็จะรู้ว่า... “ส่วนใหญ่” มันเชื่อมโยงกับ “กิจกรรมทางทหาร” และ “การเตรียมพร้อมรบ” ตัวอย่างเช่น... อิหม่ามอัซซะฮะบีได้เขียนเล่าประวัติของสุลต่าน นูรุดดีน ซังกี ผู้ที่เป็นอาจารย์ของเศาะลาหุดดีนไว้ว่า: “ท่านนูรุดดีนเป็นผู้ที่ถือศีลอดบ่อยมาก... ท่านมีบทซิกรุลลอฮ์ที่ทำประจำทั้งวันทั้งคืน... และท่านเล่นโปโลบ่อยมาก”</p>
+      <h2 class="article-h2">คนเคร่งศาสนาทำไมเล่นกีฬา?</h2>
+      <p>เพราะสุลต่านผู้เป็นชะฮีดท่านนี้มองว่า “กีฬา” มันแยกไม่ขาดจากยุทธศาสตร์การเมืองและการวางแผนการรบ และการฝึกฝนกีฬาโปโลมันช่วยลับคมทักษะการรุก-รับ-พลิกแพลงและความคล่องตัวของม้าศึกนั่นเอง</p>
+      <p>และหากจะพูดถึงเรื่องกีฬา ท่านนบีมุฮัมมัด ﷺ เองก็คือหนึ่งในนักมวยปล้ำ และในยุคของท่านลานของมัสยิดอันนะบะวีย์ที่มะดีนะฮ์จะถูกเตรียมในวันอีดเพื่อการละเล่นที่มีเป้าหมาย</p>
+      <p>ท่านนบี ﷺ จะเข้าร่วมชมการแข่งขันกีฬา ให้กำลังใจทีมที่ลงแข่ง และสอนให้นักกีฬาทุกคนมีน้ำใจนักกีฬา ยิ่งไปกว่านั้น ท่านยังเป็นแบบอย่างให้เห็นด้วยตัวท่านเองในการยอมรับช่วงเวลาที่ชัยชนะตกเป็นของคู่แข่ง</p>
+      <p>ท่านนบี ﷺ มีอูฐตัวเมียอยู่ตัวหนึ่งซึ่ง “ไม่เคยแพ้ใคร” ในการแข่งวิ่งอูฐเลย... จนกระทั่งวันหนึ่ง สัจธรรมแห่งความผันผวนก็มาถึง... เมื่อมีชาวอาหรับเบดูอิน ขี่อูฐหนุ่มของเขาวิ่งแซงอูฐของท่านนบี ﷺ ไปได้!</p>
+      <p>เหตุการณ์นี้ทำให้เหล่ามุสลิม (เศาะหาบะฮ์) รู้สึกแย่และเสียหน้ามาก... จนท่านนบี ﷺ สังเกตเห็นความผิดหวังบนใบหน้าของพวกเขา ท่านจึงกล่าวสอนพวกเขาว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">حَقٌّ عَلَى اللَّهِ أَنْ لاَ يَرْتَفِعَ شَىْءٌ مِنَ الدُّنْيَا إِلاَّ وَضَعَهُ</p>
+      </div>
+      <p class="ar-translation">“มันเป็นสิทธิ์ของอัลลอฮ์ ที่จะไม่ปล่อยให้สิ่งใดในดุนยา (โลกนี้) สูงขึ้น (โดดเด่น/เป็นที่หนึ่ง)... เว้นแต่ (ในสักวันหนึ่ง) พระองค์จะทรงทำให้มันต่ำลง” (บันทึกโดยอัลบุคอรีย์)</p>
+      <p>นครมะดีนะฮ์ซึ่งเป็นเมืองหลวงแห่งแรกของรัฐอิสลาม ก็รู้จักทั้งกีฬาเชิงแข่งขันและกีฬาเชิงเฉลิมฉลอง ตัวอย่างเช่น ท่านอบู ฮุร็อยเราะฮ์ ท่านมีชื่อเสียงมากเรื่องชอบเล่นกับเด็กๆ ท่านจะคลุกคลีและร่วมสนุกกับพวกเขา... จนถึงขั้นลืมวัยและลืมสถานะ (ที่ท่านเองเป็นเศาะหาบะฮ์อาวุโส) ของท่านไป... จนดูเหมือนเด็กน้อยที่ร่าเริงในร่างของผู้ใหญ่</p>
+      <p>ในขณะที่เด็กๆ ยอมให้ผู้ใหญ่ลงมาเล่นด้วยภายใต้กติกาที่ยุติธรรม ฝั่งนักนิติศาสตร์อย่างอิหม่ามอัชชาฟิอีก็ได้วางข้อกำหนดทางกฎหมายกีฬาเอาไว้มากมาย เพื่อควบคุม “การแข่งขันที่ยุติธรรม” ในกีฬาอย่างการยิงธนูหรือการขว้างหอก เช่น กฎการเดิมพันที่ถูกอนุญาต ฯลฯ</p>
+      <p>ในขณะที่อัลญาฮิซก็ได้เรียกร้อง (ดังที่ปรากฏในหนังสืออัตตาจ ที่เชื่อกันว่าเป็นของท่าน) ให้บรรดากษัตริย์และผู้ปกครอง “ยึดมั่นในกติกา” โดย “ไม่มีอภิสิทธิ์” อัลญาฮิซยืนยันว่า: “ในสนามกีฬา... ไม่มีกษัตริย์ ไม่มีทาส ผู้เล่นทุกคน ‘เท่าเทียม’ กับกษัตริย์อย่างเลี่ยงไม่ได้”</p>
+      <p>ไม่แค่นั้น กษัตริย์ต้องยอมรับการปะทะอารมณ์และการกระทบกระทั่ง (การเถียงกัน) ที่มันเกิดขึ้นเป็นธรรมดาในสนามแข่งด้วย และสุลต่านนูรุดดีน ซังกีผู้เป็นนักรบก็ต้องกลายเป็นเหยื่อของการปะทะคารมทางกีฬาที่ว่านี้... เมื่อท่านเสียชีวิตด้วยความเครียดจัดหรือตรอมใจ หลังจากการถกเถียงเรื่องโปโลที่ดุเดือดกับผู้เล่นคนหนึ่ง... ตามที่มีการบันทึกไว้</p>
+      <p>ดังนั้น... มันจึงชัดเจนแล้วว่า ชีวิตในอารยธรรมอิสลามนั้นมีหน้าตาอื่นๆ อีกมาก มันไม่เหมือนกับภาพจำที่ซ้ำซากที่ถูกตัดแปะมาแค่บางส่วนที่เราได้ยินกันบ่อยๆ ซึ่งก็น่าเศร้าที่หลักสูตรประวัติศาสตร์สมัยใหม่ที่ถูกอัดเข้าระบบมา... ดันเป็นตัวตอกย้ำและฝังหัวภาพจำเหล่านี้ให้แน่นขึ้น</p>
+      <p>ผลก็คือ... รายละเอียดของความสนุกการละเล่น มันหายไปและภาพของชีวิตประจำวันที่แสนจะธรรมดาและความเป็นมนุษย์ของชาวมุสลิมก็ “จืดจาง” ไปเลย เพราะมีแต่ประวัติศาสตร์เรื่องสงครามและการเมือง</p>
+      <p>ภาพจำเหล่านั้นทำให้ชาวมุสลิมไม่ได้เป็นแค่... ชาวมัสยิด, นักเรียนหรือหนอนหนังสือ, นักสู้... หรือเป็นแค่เจ้าของจักรวรรดิที่ยิ่งใหญ่, ทรงพลัง และเก็บภาษีมหาศาล แต่ชาวมุสลิมรู้จักอารมณ์ขัน รู้จักการเล่นแบบยุติธรรม และรู้จักกีฬาที่ใช้ทั้งกายและสมองที่มีชีวิตชีวาอีกสารพัด</p>
+      <p>พวกเขาเล่นและสนุกกันแบบมีกติกาและมีเป้าหมาย... เล่นกันแบบมืออาชีพ และนักปราชญ์ผู้ยิ่งใหญ่กับผู้นำที่ดีของพวกเขาหลายคนก็มีความคลั่งไคล้ ทั้งว่ายน้ำ, โปโล/ฟุตบอล, ล่าสัตว์และกรีฑา</p>
+      <p>ดังนั้น เราจะมาขุดค้นมุมมองใหม่ๆ ของประวัติศาสตร์ที่ถูกลืมนี้... และขยายภาพจำที่ซ้ำซากที่เรามีต่อประวัติศาสตร์มุสลิม และเพื่อสะท้อนแง่มุมของวัฒนธรรมแห่งความรื่นเริงในสังคมอิสลาม แต่ครั้งนี้ เราจะมองผ่านประตูของการละเล่น, การแข่งกีฬาและความสนุกสนาน</p>
+      <p>เราจะดำดิ่งสู่โลกแห่งกีฬาเพื่อพูดถึงประวัติศาสตร์ของเกมในอารยธรรมอิสลาม และเปิดเผยให้เห็นว่า มันเต็มไปด้วยกีฬาทั้งทางกายและสมองที่สนุกและมีประโยชน์ขนาดไหน... มันเต็มไปด้วยความเป็นมืออาชีพ, ความหลากหลาย, วินัย, การสนับสนุนและมันแพร่หลายในหมู่คน “ทุกชนชั้น” อย่างไร</p>
+      <h2 class="article-h2">มรดกจากอดีต</h2>
+      <p>ชาวอาหรับในยุคญาฮิลียะฮ์ (ยุคก่อนอิสลาม) รู้จักเกมที่เล่นเป็นกลุ่มหลายชนิด พวกเขาเล่นกันตั้งแต่เด็กจนโต</p>
+      <p>พจนานุกรมภาษาอาหรับได้ลิสต์รายชื่อเกมไว้เป็นสิบๆ เกม อิหม่ามด้านภาษาอย่างอิบนุ สิดะฮ์แห่งอัลอันดาลุส (เสียชีวิต ฮ.ศ. 458) ถึงกับเปิดบทหนึ่งในหนังสือของท่านชื่ออัลมุค็อศศ็อศ เป็นบทว่าด้วยเรื่อง “ชื่อเรียกทั่วไปของความบันเทิงและการละเล่นต่างๆ ” ในนั้นมีหัวข้อย่อยเรื่องเกมหรือการละเล่นซึ่งท่านรวบรวมไว้ถึง 42 เกม</p>
+      <p>ต่อมา ท่านอิบนุ มันซูร (เสียชีวิต ฮ.ศ. 711) ก็มาเพิ่มรายชื่อเกมเข้าไปอีกในหนังสือลิซานุลอาหรับ แถมยังอธิบายวิธีเล่นบางเกมให้ด้วย</p>
+      <p>ถ้าพูดถึงสังคมมักกะฮ์โดยเฉพาะเลยนั้น นักประวัติศาสตร์อย่างอัลฟากิฮีย์ (เสียชีวิต ฮ.ศ. 272) ก็อุทิศบทหนึ่งในหนังสืออัคบาร มักกะฮ์ (ข่าวคราวของมักกะฮ์) โดยตั้งชื่อบทว่า “เรื่องเล่าถึงสิ่งที่ชาวมักกะฮ์เคยเล่นกันในยุคญาฮิลียะฮ์และอิสลาม... แล้วก็เลิกเล่นกันไป” ในบทนั้นเล่าว่า ท่านอุมัร บิน อัลค็อฏฏอบมาที่มักกะฮ์ แล้วท่านก็เห็นคนกำลังเล่นเกมอัลกุรร็อก</p>
+      <p>ท่านอุมัรพูดขึ้นมา (ในเชิงกึ่งรับรอง) ว่า: “ถ้าไม่ใช่เพราะท่านเราะซูลเคยรับรองพวกท่าน (ที่เล่นเกมนี้) ไว้ก่อนนะ... ฉันไม่รับรอง (ปล่อยให้เล่น) แน่!”</p>
+      <p>ชาวมักกะฮ์ก็เลยบอกว่า: โอ้ มันเป็นเกมเก่าแก่พวกเราเล่นกันมานานแล้ว... และพวกเขาก็เล่นกันต่อมาเรื่อยๆ จนถึงปีฮิจเราะฮ์ที่ 210</p>
+      <p>อัลฟากิฮีย์ยังเล่าต่อถึงความฮิตของเกมนี้ว่า: ชาวมักกะฮ์จะเล่นเกมนี้กันทุกวันอีด... และทุกย่าน (ทุกชุมชน) ในมักกะฮ์ จะมีทีมประจำถิ่น</p>
+      <p>พวกเขาจะนัดรวมตัวกันเล่นตามย่านต่างๆ แล้วผู้คนก็จะแห่กันไปดู... พวกเขาเล่นกันแบบนี้จนกระทั่งเลิกเล่นกันไปพักใหญ่... แล้วก็กลับมาฮิตอีกทีในปี 252... แล้วก็เลิกเล่นกันไปจนถึงทุกวันนี้ (วันที่อัลฟากิฮีย์เขียน)”</p>
+      <p>เมื่อไปเปิดพจนานุกรมดูก็น่าเชื่อว่าเกมนี้คือเกมเดียวกับที่เรียกว่า “อัลกุรร็อก” ซึ่งเป็นคำยืมจากภาษาเปอร์เซีย มันคือม้าไม้ (หุ่นไม้) ที่ทำเป็นรูปม้าหนุ่ม (ลูกม้า) แล้วคนก็ขึ้นไปเล่นบนนั้น ตามที่อิบนุ มันซูรอธิบายไว้</p>
+      <p>ส่วนเกมลับสมองที่ดังในหมู่ชาวอาหรับ ก็คือเกมที่ชื่อ “อัลกิรก์” ท่านอะบู อุบัยด์ อัลฮะเราะวีย์ (เสียชีวิต ฮ.ศ. 401) พูดถึงเกมนี้ไว้ในหนังสือของท่าน ท่านได้อ้างอิงรายงานจากท่านอบู ฮุร็อยเราะฮ์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أنه كان ربما يراهم يلعبون بالقرق فلا ينهاهم</blockquote>
+      <p class="ar-translation">“บางครั้งท่านนบี ﷺ เห็นพวกเขา (เศาะหาบะฮ์) เล่นเกมอัลกิรก์ ท่านก็ไม่ได้ห้ามอะไร”</p>
+      <p>วิธีเล่นคือ มันเป็นตารางสี่เหลี่ยมซ้อนกัน 3 ชั้น (คือสี่เหลี่ยมในสี่เหลี่ยมในสี่เหลี่ยม) แล้วก็มีเส้นลากจากมุมชั้นนอกไปชั้นใน และลากเชื่อมระหว่างมุม... จนกลายเป็นช่อง 24 ช่อง (หรือ 24 เส้น)</p>
+      <p>วิธีเล่นก็คือ ใช้ก้อนกรวดหรืออะไรคล้ายๆ กันมาเดินบนเส้น... ซึ่งคนก็ยังเล่นกันมาถึงทุกวันนี้ ในแถบซีเรีย เขาเรียกเกมนี้ว่า “ดะรีส” หรือบางพื้นที่จะเรียกว่า “อิดรีส”</p>
+      <p>และหนึ่งในเกมที่ฮิตที่สุด ก็คือมวยปล้ำ แน่นอนว่าเรื่องที่ดังที่สุดก็คือ ตอนที่ท่านนบี ﷺ ปล้ำกับอิบนุ รุกานะฮ์ นักมวยปล้ำชื่อดังของกุเรชที่มักกะฮ์</p>
+      <p>เรื่องนี้ถูกเล่าโดยอิหม่ามอิบนุ กะษีร (เสียชีวิต ฮ.ศ. 774) ในหนังสืออัลบิดายะฮ์ วันนิฮายะฮ์ ท่านบอกว่า เล่ามาจากท่านอิบนุ อับบาส (เสียชีวิต ฮ.ศ. 68)</p>
+      <p>สรุปสั้นๆ คือ ยะซีด บิน รุกานะฮ์ซึ่งเป็นแชมป์ที่เก่งกาจมากมาท้าปล้ำกับท่านนบี ﷺ ... ปรากฏว่าท่านนบีจับเขาทุ่มถึง 3 ครั้ง พอโดนครั้งที่สาม อิบนุ รุกานะฮ์ถึงกับอุทานว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يا محمد، ما وضع ظهري إلى الأرض أحد قبلك</blockquote>
+      <p class="ar-translation">“โอ้ มุฮัมมัด! บอกเลยนะ... ไม่มีใครเคยจับฉันทุ่มหลังติดพื้นได้มาก่อนท่านเลย!”</p>
+      <h2 class="article-h2">กติกาที่เป็นมาตรฐาน</h2>
+      <p>จากบรรทัดฐานและแบบอย่างของท่านนบี ﷺ ที่เล่ามา... มันจึงกลายเป็นข้อสรุปในหมู่นักปราชญ์ว่า... “อนุญาตให้มีการละเล่นได้” ตราบใดที่มันช่วยลับสมองและสอนกลยุทธ์สงคราม รวมถึงวิธีป้องกันตัวจากแผนของศัตรู</p>
+      <p>ข้อสรุปนี้มาจากท่านมะห์มูด ชุกรี อัลอาลูซีย์... ท่านบอกว่า เกมเหล่านี้ก็มีสถานะเดียวกับกีฬาที่ถูกอนุญาตอื่นๆ เช่น การแข่งม้าหรือการยิงธนูนั่นเอง</p>
+      <p>และด้วยเหตุนี้... ตำราฟิกฮ์ (นิติศาสตร์อิสลาม) จึงต้องอุทิศเนื้อหาและอธิบายข้อกฎหมายที่เกี่ยวกับกีฬาการแข่งขัน, การยิงธนู... รวมถึงกฎในการตั้งรางวัลและการรับรางวัลด้วย</p>
+      <p>ไม่ต้องสงสัยเลยว่า... การที่ท่านนบี ﷺ เข้าไปควบคุมดูแลการแข่งขันบางกีฬา เช่นแข่งม้า... มันได้สร้างข้อบังคับที่เราสามารถพูดได้เต็มปากว่า มันคือรากฐานของสิ่งที่นักกีฬาวันนี้เรียกว่า... “กฎกติกาการเล่นที่ยุติธรรม”</p>
+      <p>มีหะดีษที่รายงานโดยอบู ดาวูด, ติรมิซีย์ และนะซาอีย์ระบุว่า ท่านนบี ﷺ กล่าวว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">لاَ جَلَبَ وَلاَ جَنَبَ</p>
+      </div>
+      <p class="ar-translation">“ห้ามการโกงแบบ ‘ญะลับ’ และห้ามการโกงแบบ ‘ญะนับ’” (บันทึกโดยอบู ดาวูด, อัตติรมิซีย์ และอันนะซาอีย์)</p>
+      <p>และในอีกสายรายงานหนึ่ง ท่านเจาะจงว่า: “ในการแข่งขันที่มีเดิมพัน”</p>
+      <p>มันคืออะไร?... อิหม่ามมาลิกได้อธิบายคำต้องห้าม 2 คำนี้ไว้ในหนังสืออัลมุวัฏเฏาะอ์ของท่านว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أما الجلب فأن يتخلف الفرس في التسابق، فيحرك وراءه الشيء يستحث به فيسبق؛ فهذا الجلب. وأما الجنب فإنه يجنب مع الفرس الذي يسابق به فرسا، حتى إذا دنا تحول راكبه على الفرس المجنوب وأخذ السبق</blockquote>
+      <p class="ar-translation">1. อัลญะลับ (การโกงแบบแรก) คือ: เวลาที่ม้าที่กำลังแข่งเริ่มแผ่ว ก็มีคนไปส่งเสียงดังหรือตะโกนกระตุ้นจากด้านหลัง เพื่อให้ม้าตกใจ (หรือฮึดสู้) แล้ววิ่งแซงกลับมาชนะ นี่คือการโกง โดยใช้ตัวช่วยกระตุ้นจากภายนอก  2. อัลญะนับ (การโกงแบบที่สอง) คือ: การที่นักแข่งที่ขี่ม้าตัวจริง จูงม้าอีกตัวซึ่งเป็นม้าแข่งวิ่งขนาบข้างไปด้วย พอใกล้ถึงเส้นชัย นักขี่คนนั้นก็กระโดดสลับไปขี่ม้าตัวที่แข่ง (ที่วิ่งตัวเปล่ามาตลอดทาง) แล้วควบเข้าเส้นชัยเพื่อเอารางวัลไป นี่คือการโกง โดยการสลับตัวที่ผิดกติกา</p>
+      <p>ในกติกาของกีฬายิงธนู เราจะเห็นอิหม่ามอัชชาฟิอีออกฟัตวา (คำวินิจฉัย) ไว้เลยว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا يجوز السبق حتى يعرف كل واحد من المتناضلين من يرمي معه وعليه، بأن يكون حاضرا يراه أو غائبا يعرفه</blockquote>
+      <p class="ar-translation">“ห้ามรับรางวัลจนกว่านักกีฬาทุกคนจะรู้ชัดเจนว่า ใครคือคู่แข่งของตน (คู่แข่ง) ต้องปรากฏตัวให้เห็นหน้าค่าตา หรือถ้าเขาไม่มา ก็ต้องรู้จักเขาอยู่แล้ว (เช่น รู้ชื่อเสียง, รู้ฝีมือ, รู้ว่าเป็นใคร ไม่ใช่การส่งม้ามืดนิรนามมาสวมรอย)”</p>
+      <p>อิหม่ามอัชชาฟิอีได้ขยายความกฎกติกาการเล่นที่ยุติธรรมเหล่านี้ไว้เยอะมากในหนังสือเล่มดังของท่านที่ชื่อ “อัลอุมม์”</p>
+      <h2 class="article-h2">วัฒนธรรมการเชียร์ที่หลากหลาย</h2>
+      <p>การเชียร์และบทบาทของกองเชียร์ในการสร้างชัยชนะ ก็มีมาตั้งแต่ยุคแรกของอิสลามเช่นกัน เรื่องแรกที่ต้องนึกถึงเลย คือตอนที่ท่านนบี ﷺ เชียร์ทีมหนึ่งในขณะที่กำลังแข่งยิงธนู ในหะดีษของท่านสะละมะฮ์ บิน อัลอักวะอ์ ท่านนบี ﷺ ตะโกนว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">ارْمُوا وَأَنَا مَعَ بَنِي فُلاَنٍ</p>
+      </div>
+      <p class="ar-translation">“ยิงเลย! ฉันอยู่กับทีมฝั่งนี้!” (คือท่านเลือกข้างเชียร์)</p>
+      <p>ท่านสะละมะฮ์เล่าว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">فَأَمْسَكَ أَحَدُ الْفَرِيقَيْنِ بِأَيْدِيهِمْ</p>
+      </div>
+      <p class="ar-translation">“(พอท่านนบี ﷺ พูดจบ) ทีมฝั่งตรงข้าม (ที่ท่านไม่ได้เชียร์) ก็หยุดยิง (วางธนู) ทันที”</p>
+      <p>ท่านเราะซูล ﷺ เลยถามว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">مَا لَكُمْ لاَ تَرْمُونَ</p>
+      </div>
+      <p class="ar-translation">“อ้าว พวกท่านเป็นอะไร? ทำไมไม่ยิงล่ะ?”</p>
+      <p>พวกเขาก็ตอบว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">كَيْفَ نَرْمِي وَأَنْتَ مَعَهُمْ</p>
+      </div>
+      <p class="ar-translation">“โอ้ ท่านเราะซูล... พวกเราจะยิงได้ยังไง ในเมื่อท่านอยู่กับพวกเขา (ท่านเชียร์ทีมนั้น)”</p>
+      <p>(พอได้ยินดังนั้น) ท่านนบีเลยเปลี่ยนทันที แล้วกล่าวว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">ارْمُوا فَأَنَا مَعَكُمْ كُلِّكُمْ</p>
+      </div>
+      <p class="ar-translation">“ยิงเลยๆ ! (เอาใหม่ๆ ) ฉันอยู่กับพวกเจ้าทุกคนนั่นแหละ” (บันทึกโดยอัลบุคอรีย์)</p>
+      <p>ตรงนี้เราจะเห็นเลยว่า การที่ท่านนบี ﷺ ผู้ซึ่งมีเกียรติและเป็นเหมือนพ่อของทุกคนไปเลือกข้างเชียร์ มันทำให้ทีมฝั่งตรงข้ามเสียกำลังใจจนไม่ยอมเล่นต่อ... พอท่านเห็นดังนั้น ท่านก็เลยต้องประกาศตัวเป็นกลางทันที เพื่อรักษาน้ำใจของอีกทีมนั่นเอง</p>
+      <p>ในยุคท่านนบี ﷺ ทีมที่แข่งกันอาจจะแบ่งตามสายตระกูล แต่หลังจากที่รัฐอิสลามขยายตัวออกไป (เกิดบ้านเมืองใหม่ๆ ) ประวัติศาสตร์ก็ได้จารึกการแข่งขันระหว่างทีมที่แบ่งตามเมือง หรือประเทศ (ภูมิลำเนา) ของตัวเอง</p>
+      <p>พูดง่ายๆ คือ มันเป็นหลักการเดียวกันกับที่องค์กรกีฬาในยุคปัจจุบันใช้ เช่น แข่งกันในนามทีมชาติ, สโมสรหรือเทศบาล ตัวอย่างชัดๆ ก็คือเรื่องที่ท่านอัศเศาะฟะดีย์ (เสียชีวิต ฮ.ศ. 764) เล่าไว้ถึงศึกคู่ปรับระหว่างเจ้าชายนาศิรุดดีน บิน อัลเญากันดาร กับเจ้าชายอะลาอุดดีน กอฏลีญา</p>
+      <p>อิหม่ามเศาะฟะดีย์เล่าว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كنا نتفرج عليهما، ويقول الناس: هذا طبجي مصر وهذا طبجي دمشق. وكان الأمير ناصر الدين أرشق على ظهر الفرس وأسرع حركة، والأمير علاء الدين قطليجا إذا تناول الكرة بصولجانه ما يحتاج معه إلا ضربة واحدة وقد بلغها المدى</blockquote>
+      <p class="ar-translation">“พวกเรา (ชาวบ้าน) จะไปมุงดูกัน แล้วคนก็จะตะโกนเชียร์ว่า: นี่คือเซียนโปโลแห่งอียิปต์ (คือนาศิรุดดีน) ส่วนนั่นคือเซียนโปโลแห่งดามัสกัส (อะลาอุดดีน) ฝั่งอียิปต์ (นาศิรุดดีน) น่ะ เขาคล่องตัวบนหลังม้าและไวกว่า แต่ฝั่งดามัสกัส (กอฏลีญา) นี่สิ... ถ้าบอลถึงไม้ตีของเขาเมื่อไหร่... เขาต้องการแค่ทีเดียวบอลก็เข้าประตูเลย! (คือยิงคม)”</p>
+      <p>เศาะฟะดีย์เล่าต่อว่า... ทั้งๆ ที่อะลาอุดดีน (ฝั่งดามัสกัส) ก็ดังเรื่องความคล่องตัวมากๆ อยู่แล้ว... เขาควบม้าอย่างเร็วแล้วเอื้อมมือไปหยิบลูกควินซ์ (ผลไม้คล้ายสาลี่) ครึ่งลูกออกจากกิ่งของมัน โดยที่อีกครึ่งลูกยังคาอยู่บนต้น ทั้งหมดนี้เกิดขึ้นขณะที่ม้าวิ่งด้วยความเร็วสูงสุดซึ่งเป็นอะไรที่คนอื่นทำไม่ได้เลย</p>
+      <h2 class="article-h2">ประตูสู่การไต่เต้าขึ้นสู่อำนาจ</h2>
+      <p>และหนึ่งในเจ้าชายที่คลั่งไคล้กีฬาโปโลนี้มากก็คือ อะห์มัด บิน ฏูลูน ผู้ก่อตั้งรัฐฏูลูนียะฮ์ในอียิปต์... และความคลั่งไคล้นี้ก็ยังคงฝังรากอยู่ในอียิปต์ต่อมาอีกหลายศตวรรษ นักประวัติศาสตร์อย่างอิบนุ ตัฆรี บัรดีได้เล่าไว้ในหนังสือของท่านว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وجعل ابن طولون قصرا كبيرا فيه ميدانه الذي يلعب فيه بالكرة، وسمى القصر كله الميدان</blockquote>
+      <p class="ar-translation">“อิบนุ ฏูลูนได้สร้างวังขนาดใหญ่ และในนั้นก็มีสนามที่เขาใช้เล่นโปโล... (เขาชอบมันมาก) จนเขาเรียกทั้งวังนั้นว่า ‘อัลเมย์ดาน’ (ที่แปลว่า สนาม) ไปเลย”</p>
+      <p>แต่ถ้าจะถามว่าใครคือคนที่ดังที่สุด (ในยุคหลัง) ที่เล่นกีฬานี้... ก็คงหนีไม่พ้นสุลต่าน นูรุดดีน มะห์มูด ซังกี ท่านอบู ชามะฮ์ อัลมักดิสี (นักประวัติศาสตร์ประจำตัวท่าน) เล่าไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن نور الدين لم ير على ظهر الفرس أحسن منه، كأنه خلق عليه لا يتحرك ولا يتزلزل، وكان من أحسن الناس لعبا بالكرة وأقدرهم عليها، لم ير جوكانه يعلو على رأسه، وكان ربما ضرب الكرة ويجري الفرس ويتناولها بيده من الهواء، ويرميها إلى آخر الميدان، وكانت يده لا ترى والجوكان فيها، بل تكون في كم قبائه استهانة باللعب</blockquote>
+      <p class="ar-translation">“ไม่เคยมีใคร (ในยุคนั้น) ที่อยู่บนหลังม้าได้สง่างามเท่าเขาอีกแล้ว... ราวกับว่าเขาถูกสร้างขึ้นมาบนหลังม้า (คือเป็นหนึ่งเดียวกับม้า)... นิ่งสนิท ไม่ขยับ ไม่สั่นไหว ท่านคือนักโปโลที่เก่งที่สุด... ไม้ตีของท่านไม่เคย (ถูกเหวี่ยง) สูงเกินหัวเลย บางครั้ง... ท่านตีลูกบอลออกไป และควบม้าตาม แล้วใช้มือ (ข้างที่ว่าง) คว้าลูกบอลที่ลอยอยู่กลางอากาศขึ้นมา แล้วขว้างไปสุดสนามอีกฝั่ง มือ (ข้างที่ถือไม้ตี) ของท่าน คนอื่นแทบมองไม่เห็น เพราะท่านจะสอดมันไว้ในแขนเสื้อคลุมของท่าน เหมือนเป็นการดูแคลนว่ากีฬานี้มันง่ายสำหรับท่าน”</p>
+      <p>แต่ถึงแม้สุลต่านผู้ยิ่งใหญ่ท่านนี้จะคลั่งโปโลมาก มันก็ไม่เคยทำให้ท่านเสียงานเลย (ไม่ว่าจะงานอิบาดะฮ์, งานญิฮาด หรืองานบริหารบ้านเมือง) เพราะท่านมองว่า มันคือส่วนหนึ่งของกิจกรรมการญิฮาด มันคือการฝึกม้าให้ชินกับการรุก-รับ-พลิกแพลง</p>
+      <p>อิหม่ามอัซซะฮะบีย์เล่าว่า... ท่านนูรุดดีนถือศีลอดบ่อย ทำวิริดทั้งวันทั้งคืน... และเล่นโปโลบ่อยมาก... มีครั้งหนึ่งคนดีๆ (ที่เคร่งศาสนา) บางคนเขียนจดหมายมาตำหนิท่านว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">تتعب الخيل في غير فائدة</blockquote>
+      <p class="ar-translation">“ท่านทำให้ม้าเหนื่อยโดยไร้ประโยชน์”</p>
+      <p>สุลต่านนูรุดดีนเขียนจดหมายตอบกลับ (ด้วยลายมือตัวเอง) ทันทีว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والله ما أقصد اللعب، وإنما نحن في ثغر، فربما وقع الصوت، فتكون الخيل قد أدمنت على سرعة الانعطاف بالكر والفر</blockquote>
+      <p class="ar-translation">“ขอสาบานต่ออัลลอฮ์... ฉันไม่ได้ตั้งใจจะเล่น (เพื่อสนุกอย่างเดียว) พวกเรา (ตอนนี้) อยู่ที่ชายแดน (ที่ต้องรบกับพวกครูเสด)... และสัญญาณเตือน (เสียงระฆัง) อาจดังขึ้นได้ทุกเมื่อ (เมื่อศัตรูบุก) ถ้าวันนั้นมาถึง ม้าที่ฉันฝึกมันก็จะคุ้นชินกับความคล่องตัวในการรุก-รับ-พลิกแพลงนี้แล้วยังไงล่ะ”</p>
+      <p>และที่น่าทึ่งที่สุดก็คือ การที่เศาะลาหุดดีน อัลอัยยูบีย์ได้ใกล้ชิดกับสุลต่านนูรุดดีน (เจ้านาย) ในยุคเริ่มต้นที่ท่านเศาะลาหุดดีนเพิ่งจะไต่เต้าเข้าสู่วงการเมือง หนึ่งในเหตุผลสำคัญที่สุดก็คือ การที่ท่านเศาะลาหุดดีนเล่นโปโลเก่งเหมือนกัน</p>
+      <p>อิหม่ามอิบนุ กะษีรเล่าไว้ชัดเจนว่า สุลต่านนูรุดดีนดึงเศาะลาหุดดีนเข้ามาใกล้ชิด ทำให้เป็นคนสนิท (วงใน) ไม่เคยให้ห่างกาย (ไม่ว่าจะอยู่ที่วัง หรือตอนเดินทาง) ก็เพราะว่าท่านเศาะลาหุดดีนเป็นคนดูดี (หน้าตา/บุคลิกดี)... และเล่นโปโลเก่งมากนั่นเอง</p>
+      <p>จากที่เล่ามาทั้งหมดหลังจากนี้ มันก็อาจจะไม่ใช่เรื่องน่าแปลกใจถ้าจะบอกว่า การเสียชีวิตของสุลต่านนูรุดดีน ซังกีนั้น เกิดขึ้น (หรือมีเหตุสืบเนื่อง) หลังจากการปะทะคารมกันในสนามโปโล</p>
+      <p>อิหม่ามอิบนุ กะษีรได้เล่าไว้ว่า: มีอยู่ครั้งหนึ่งในวันอีดฟิฏร์ ซึ่งท่านก็ทำตามธรรมเนียมคือ เมืองทั้งเมืองถูกประดับประดาและมีการตีกลอง (เฉลิมฉลอง)... จากนั้น ท่านก็ลงเล่นโปโลในวันนั้น (แต่คราวนี้ไม่เหมือนเดิม) ท่านเกิดโมโหอย่างรุนแรงต่อเจ้าชาย (ผู้เล่น) คนหนึ่ง (ซึ่งปกติท่านไม่เคยเป็นแบบนี้เลย) ท่านรีบกลับเข้าป้อมปราการ (ที่พัก) ทันที ทั้งๆ ที่ยังโกรธจัด ท่านอารมณ์เสียหงุดหงิด และเริ่มจมอยู่กับความเจ็บปวด (ทางกายและใจ) ของตัวเอง จนสติสัมปชัญญะและนิสัยของท่านเปลี่ยนไปหมด ท่านปลีกตัวออกจากผู้คนจนกระทั่งท่านเสียชีวิตในเวลาต่อมาไม่นาน</p>
+      <p>ส่วนท่านเศาะลาหุดดีน ผู้เป็นลูกศิษย์ ท่านก็ยังคงซื่อสัตย์และรักกีฬาโปโลสุดโปรดของท่านไม่เสื่อมคลาย... แม้ว่าท่านจะขึ้นเป็นสุลต่านหลังจากนูรุดดีนเสียชีวิตแล้วก็ตาม</p>
+      <p>และท่านก็คงไม่รอดจากการบาดเจ็บที่เป็นเรื่องปกติของกีฬานี้ เหมือนที่เคยเกิดขึ้นในวันที่ท่านกำลังเล่น แล้วลูกบอล (โปโล) กระแทกเข้าที่ปากของท่าน จากไม้ตี (ที่พลาด) ของเพื่อนร่วมทีมคนหนึ่ง ตามที่ท่านกะมาลุดดีน อิบนุ ชะอารได้บันทึกไว้</p>
+      <p>ความคลั่งไคล้นี้ยังไม่จบ เพราะมีกษัตริย์บางพระองค์ถึงขั้นกำหนดวันนัดเอาไว้เลยว่า วันนี้คือวันเล่นโปโล เช่น สุลต่านแห่งรัฐมัมลูก อันนาศิร มุฮัมมัด บิน กอลาวูน ซึ่งเก่งกีฬานี้มากๆ</p>
+      <p>อิบนุ ตัฆรี บัรดีเล่าว่า สุลต่านท่านนี้สร้างสนามไว้ใต้ป้อมปราการภูเขา (ในไคโร) ขุดน้ำเข้าไป (ดูแลอย่างดี) ปลูกต้นอินทผลัม และต้นไม้ต่างๆ รอบสนาม และท่านจะเล่นโปโลที่สนามนี้ทุกวันอังคารร่วมกับบรรดาเจ้าชาย, คนสนิทและลูกหลานกษัตริย์ และที่สำคัญคือ สุลต่านอันนาศิรนั้น เล่นโปโลเก่งมาก... เก่งชนิดที่ว่า ไม่มีใครในยุคสมัยของท่านที่จะเทียบชั้นท่านได้เลย</p>
+      <h2 class="article-h2">ความนุ่มนวลและความดุดัน</h2>
+      <p>แม้ว่าโปโลจะเป็นกีฬาที่ยากต้องใช้พละกำลังและอันตราย แต่ประวัติศาสตร์อิสลามก็ไม่เคยขาดสิ่งที่เรียกว่า “โปโลหญิง”</p>
+      <p>อิบนุ ตัฆรี บัรดีเล่าถึงสุลต่านมัมลูกแห่งอียิปต์อัศศอลิห์ อิสมาอีล (เสียชีวิต ฮ.ศ. 746) ว่า: บรรดานางใน (หรือสตรีในวัง) ของท่าน จะขี่ม้าอาหรับมาแข่งกัน และบางครั้งพวกเธอก็จะสวมชุดผ้าไหม (แบบเต็มยศ) แล้วลงเล่นโปโล พวกเธอจะทำกิจกรรมแนวๆ นี้เป็นประจำในเทศกาล วันอีด หรือเวลาไปพักผ่อน</p>
+      <p>ท่านอิบนุ ค็อลดูน (เสียชีวิต ฮ.ศ. 808) ก็เล่าถึงความเก่าแก่ของกีฬาที่สตรีมักจะเล่น ท่านเล่าในอัลมุก็อดดิมะฮ์ว่าในยุคนั้น:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اتخذت آلات أخرى للرقص تسمى بالكرج، وهي تماثيل خيل مسرجة من الخشب معلقة بأطراف أقبية يلبسها النسوان، ويحاكين بها امتطاء الخيل فيكرون ويفرون ويتثاقفون، وأمثال ذلك من اللعب المعد للولائم والأعراس وأيام الأعياد ومجالس الفراغ واللهو. وكثر ذلك ببغداد وأمصار العراق وانتشر منها إلى غيرها</blockquote>
+      <p class="ar-translation">“มีการประดิษฐ์อุปกรณ์สำหรับการเต้นรำ (หรือการแสดง) ขึ้นมา มันคือหุ่นม้าไม้ที่มีอานเรียบร้อย หุ่นม้านี้จะถูกผูกติดกับชายเสื้อคลุม (อับอิยะฮ์ คือเสื้อคลุม) ที่พวกผู้หญิงสวมใส่ พวกเธอก็จะจำลอง (เลียนแบบ) การขี่ม้า ทำท่ารุก (บุก) ถอย (หนี) และต่อสู้กัน (ด้วยหุ่นม้า) ซึ่งจะจัดแสดงในงานเลี้ยง, งานแต่งงาน, วันอีดหรืองานรื่นเริงต่างๆ ... และมันก็ฮิตมากในแบกแดดและอิรัก ก่อนจะแพร่หลายออกไป”</p>
+      <p>ส่วนเด็กๆ ก็ฮิตเล่นบอล (หรือโปโล) เหมือนกัน ซึ่งเรื่องเล่าในประวัติศาสตร์นั้นมีเยอะมาก.. มีเรื่องหนึ่ง เล่าโดยอิหม่ามอัซซะฮะบีย์ว่า: ท่านกอฎี อับดุศศอมัดเล่าว่า: ฉันได้ยินมุฮัมมัด บิน เอาฟ์ (เสียชีวิต ฮ.ศ. 272) เล่าว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كنت ألعب في الكنيسة بالكرة وأنا حدث، فدخلت الكرة إلى المسجد فوقعت بالقرب من المعافى بن عمران يعني الحمصي فدخلت لآخذها، فقال: ابن من أنت؟ قلت: ابن عوف! قال: أما إن أباك كان من إخواننا وكان ممن يكتب معنا العلم، والذي يشبهك أن تتبع ما كان عليه والدك! فصرت إلى أمي فأخبرتها، فقالت: صدق يا بني! فألبستني ثوبا وإزارا، ثم جئت إليه ومعي محبرة وورق</blockquote>
+      <p class="ar-translation">“ตอนฉันเป็นวัยรุ่น ฉันกำลังเล่นบอล (หรือโปโล) อยู่แถวๆ โบสถ์ ทันใดนั้น ลูกบอลมันดันกระเด็นเข้าไปในมัสยิด แล้วไปตกอยู่ใกล้ๆ ท่านอัลมุอาฟา บิน อิมรอน (ปราชญ์ใหญ่) พอดี ฉันก็เลยวิ่งเข้าไปเก็บลูก ท่านมุอาฟาเลยถามว่า: เจ้าเป็นลูกใครกัน? ฉันตอบ: ลูกของเอาฟ์ ท่านอุทานว่า: โอ้! พ่อของเจ้าน่ะ เพื่อนข้าเอง! เขาเคยเป็นผู้แสวงหาความรู้เหมือนกับพวกเรา... สิ่งที่เหมาะ (หรือคู่ควร) กับเจ้า คือการเจริญรอยตามสิ่งที่พ่อเจ้าทำนะ ฉันเลยวิ่งกลับไปบอกแม่ แม่ฉันพูดว่า: ลูกเอ๊ย... เขาพูดถูกแล้ว! ว่าแล้วแม่ก็จับฉันแต่งตัว (ด้วยชุดนักศึกษา) แล้วยื่นตลับหมึกกับกระดาษให้... แล้วฉันก็กลับไปหาท่านอัลมุอาฟา (เพื่อเริ่มเรียน)”</p>
+      <h2 class="article-h2">ความแพรวพราวและการเดิมพัน</h2>
+      <p>อย่างที่ทราบกันว่า “การพนันขันต่อ” หรือการวางเดิมพันในการแข่งม้า แข่งอูฐ หรือยิงธนู มันเป็นเรื่องปกติในหมู่มุสลิม และปรากฏว่า การเดิมพันก็ลามไปถึงเกมอื่นอย่างหมากรุกด้วย... แม้ว่าจะมีนักปราชญ์หลายท่านจะสั่งห้ามก็ตาม</p>
+      <p>เรื่องนี้ท่านอัชชาบุชตีย์ (เสียชีวิต ฮ.ศ. 388) เล่าไว้ว่า: ท่านอบุลอัยนาอ์ (เสียชีวิต ฮ.ศ. 283) เล่าว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">دخلت على أبي أحمد عبيد الله بن عبد الله بن طاهر، وكان يوما صائفا وقوم بين يديه يلعبون بالشطرنج؛ فقال: يا أبا عبد الله، في أي الحزبين تحب أن تكون؟ قلت: في حزب الأمير، فإنه أعلى وأبهى، فغلبنا! فقال أبو أحمد: يا أبا عبد الله، قد غلبنا! وقد أصابك بقسطك عشرون رطلا ثلجا</blockquote>
+      <p class="ar-translation">“ฉันเข้าไปหาท่านอะบู อะห์มัด อุบัยดิลละฮ์ บิน อับดุลลอฮ์ บิน ฏอฮิร ในวันฤดูร้อนวันหนึ่ง มีคนกลุ่มหนึ่งกำลังนั่งเล่นหมากรุกกันอยู่ ท่านเจ้าบ้านก็หันมาถามฉันว่า: ท่านอบู อับดุลลอฮ์ ท่านอยากจะเชียร์ฝ่ายไหน? ฉันก็ตอบว่า: อยู่ฝ่ายท่านเจ้าบ้านสิครับ ดูสูงส่งและอลังการกว่า ปรากฏว่า... เราแพ้! (ทีมเจ้าบ้านแพ้) ท่านอะบู อะห์มัด (เจ้าบ้าน) เลยหันมาบอกฉันว่า: ท่านอบู อับดุลลอฮ์ เราแพ้ซะแล้ว! ดังนั้นส่วนแบ่ง (ที่ท่านต้องจ่าย) ในการเดิมพันครั้งนี้คือ น้ำแข็ง 20 ริฏล์ (หรือประมาณ 10 กิโลกรัม คือให้ไปหาน้ำแข็งมาจ่ายแทนเงิน)”</p>
+      <p>หมากรุกในสมัยนั้นก็มีหลายรูปแบบและหลายขนาด อัลมัสอูดี (เสียชีวิต ฮ.ศ. 346) เล่าว่า หมากรุกที่อินเดียจะมีตัวหมากเป็นรูปสัตว์หรือรูปคน แถมตัวหมากแต่ละตัวสูงเป็นคืบ (ประมาณหนึ่งฝ่ามือ) หรือใหญ่กว่านั้นอีก</p>
+      <p>และหมากรุกยักษ์แบบอินเดียนี่เอง ที่น่าจะเป็นแรงบันดาลใจให้กับสุลต่านอุซเบกผู้โด่งดัง “ตีมูร์ แบง” (หรือตีมูร์ลังก์ - เสียชีวิต ฮ.ศ. 807) ท่านอิบนุ ตัฆรี บัรดีเล่าว่า: ท่านตีมูร์ติดการเล่นหมากรุกมากจนกระทั่งความทะเยอทะยานของท่าน มันเหนือกว่าการเล่นหมากรุกตัวเล็กๆ ที่ชาวบ้านเขาเล่นกัน ท่านเลยหันไปเล่นหมากรุกยักษ์แทน กระดานของท่านมีขนาด 10 คูณ 11 ช่อง และมีตัวหมากมากกว่าหมากรุกปกติ</p>
+      <p>นอกจากนี้ คนสมัยก่อนก็ยังเชี่ยวชาญในเกมอีกหลายประเภทนอกเหนือจากที่เล่ามา ซึ่งบางอย่างก็ยังอยู่มาถึงทุกวันนี้ เช่น พวกนักเล่นงู หรือพวกโชว์งูมืออาชีพที่มาแสดงให้ชาวบ้านดูเพื่อแลกกับเงิน</p>
+      <p>ท่านสิบฏ์ อิบนุลเญาซีย์ (หลานของอิบนุ เญาซีย์) เล่าว่า ท่านอบู มุฮัมมัด อิบนุ อบี ฮาติม อัรรอซีย์ (เสียชีวิต ฮ.ศ. 327) เคยเล่าว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قدمت مع أبي إلى الشام، فدخلنا مدينة فرأينا رجلا قائما بيده حية يلعب بها ويقول: من يعطيني درهما حتى أبلعها؟ فالتفت إلي أبي وقال: احفظ دراهمك يا بني، فمن أجلها تبلع الحيات</blockquote>
+      <p class="ar-translation">“ฉันเดินทางไปชามกับพ่อ พอเข้าไปในเมืองก็เห็นชายคนหนึ่งยืนถืองูอยู่ในมือ... เขากำลังเล่นกับมัน แล้วก็ตะโกนว่า: ใครจะให้ข้า 1 เหรียญ (ดิรฮัม) แล้วข้าจะกลืนมันให้ดู (อบู ฮาติม) พ่อของฉันก็หันมา แล้วพูดกับฉัน (ลูกชาย) ว่า: เก็บเหรียญของเจ้าไว้ให้ดีเถอะลูกเอ๊ย ก็เพราะไอ้เหรียญนี่แหละที่ทำให้พวกเขายอมกลืนงูกันน่ะ”</p>
+      <p>ท่านอัลมักรีซีย์ (เสียชีวิต ฮ.ศ. 845) ก็เล่าถึงลานกลางเมืองในไคโรว่าเป็นที่รวมตัวของพวกนักเล่นเกม, นักมายากล, นักแสดงภาพลวงตาและพวกโชว์งู</p>
+      <p>อีกเกมที่ฮิตมากคือ การเล่นนกพิราบ (เลี้ยงนก/ล่านก) และนกชนิดต่างๆ ถึงขนาดที่ว่า คอลีฟะฮ์บางคนก็คลั่งเรื่องนี้มาก เช่น คอลีฟะฮ์แห่งอุมาวิยะฮ์ อัลวะลีด บิน อับดุลมะลิก (เสียชีวิต ฮ.ศ. 96) ที่คลั่งไคล้การเลี้ยงนกพิราบและเล่นกับมันตามคำบอกเล่าของสิบฏ์ อิบนุลเญาซีย์</p>
+      <p>เช่นเดียวกับคอลีฟะฮ์แห่งอับบาซียะฮ์ อัลมุสตักฟี บิลลาฮ์ (เสียชีวิต ฮ.ศ. 334) ที่ท่านอัลฮะมะซานีย์เล่าว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كان يلعب قبل الخلافة بالطيور ويرمي بالبندق ويخرج الى البساتين للفرجة واللعب</blockquote>
+      <p class="ar-translation">“(ท่านมุสตักฟี) ก่อนที่จะได้เป็นคอลีฟะฮ์น่ะ ท่านมัวแต่เล่นนก, ยิงหนังสติ๊กและหนีเที่ยวไปตามสวนต่างๆ เพื่อหาความสนุกและเล่นไปวันๆ ”</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). โปโล หมากรุก และสุลต่าน: เรื่องเล่าของกีฬาในประวัติศาสตร์มุสลิม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/sports-and-games-in-islamic-history.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
