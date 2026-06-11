@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>วิถีอาหรับเบดูอินในสายตาของอิบนุ ค็อลดูน — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ทัศนะอันตรงไปตรงมาของอิบนุ ค็อลดูนต่อชาวอาหรับเบดูอินในมุก็อดดิมะฮ์ ตั้งแต่ธรรมชาติที่เป็นปฏิปักษ์ต่ออารยธรรม การห่างไกลจากการปกครองรัฐและงานช่างฝีมือ ไปจนถึงสมการที่ศาสนาแปรพลังเร่ร่อนให้เป็นจักรวรรดิ">
+<meta name="keywords" content="อิบนุ ค็อลดูน, มุก็อดดิมะฮ์, เบดูอิน, อะเศาะบียะฮ์, อารยธรรม, ฟิฏเราะฮ์, ประวัติศาสตร์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="วิถีอาหรับเบดูอินในสายตาของอิบนุ ค็อลดูน — Islamic Fiqh Publishing">
+<meta property="og:description" content="อิบนุ ค็อลดูนกำลังโจมตีชาวอาหรับเบดูอินหรือเปล่า? หรือกำลังพาเรามองทะลุกฎธรรมชาติของการเกิดดับแห่งอารยธรรม">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/ibn-khaldun-on-the-bedouin-arabs.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="ibn-khaldun-on-the-bedouin-arabs">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">วิถีอาหรับเบดูอินในสายตาของอิบนุ ค็อลดูน</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">หนึ่งในประเด็นที่อิบนุ ค็อลดูนพูดถึงอย่างตรงไปตรงมาและค่อนข้างจะหนักมือพอใช้ได้คือทัศนะของท่านที่มีต่อชาวอาหรับเบดูอิน หรืออาหรับบะดาวีย์ ซึ่งแทรกอยู่ในหลายบทของมุก็อดดิมะฮ์ มันคือข้อสรุปจากกรอบทฤษฎีที่ท่านวางไว้เกี่ยวกับวัฏจักรของอารยธรรม</p>
+      <p>ท่านตั้งหัวข้อไว้อย่างชัดเจนว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">باب في أن العرب إذا تغلبوا على أوطان أسرع إليها الخراب</blockquote>
+      <p class="ar-translation">“บทที่ว่าด้วยเมื่อชนชาติอาหรับเข้าครอบครองดินแดนใด ความพินาศย่อมมาเยือนดินแดนนั้นอย่างรวดเร็ว”</p>
+      <p>ท่านอธิบายว่าวิถีชีวิตที่แร้นแค้นได้หล่อหลอมให้ชาวเบดูอินมีสัญชาตญาณที่ขัดแย้งกับการสร้างความเจริญ:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والسبب في ذلك أنهم أمة وحشية باستحكام عوائد التوحش وأسبابه فيهم فصار لهم خلقا وجبلة، وكان عندهم ملذوذ لما فيه من الخروج عن ربقة الحكم وعدم الانقياد لسياسة وهذه الطبيعة منافية للعمران. فالحجر مثلا إنما حاجتهم إليه لنصبه أثافي القدر، فينقلونه من المباني ويخربونها عليه ويعدونه لذلك. والخشب أيضا إنما حاجتهم إليه ليعمروا به خيامهم ويتخذوا الأوتاد منه لبيوتهم فيخربون السقف عليه لذلك فصارت طبيعة وجودهم منافية للبناء الذي هو أصل العمران هذا في حالهم على العموم.</blockquote>
+      <p class="ar-translation">“สาเหตุของปรากฏการณ์นี้คือ พวกเขาเป็นชนชาติที่ดำรงวิถีชีวิตแบบอนารยะ (วิถีชนเผ่าเร่ร่อน) ด้วยความคุ้นชินและปัจจัยแห่งความดิบเถื่อนที่ฝังรากลึกจนกลายเป็นอุปนิสัยและสัญชาตญาณดั้งเดิม พวกเขามักพึงพอใจกับวิถีชีวิตเช่นนี้ เพราะมันหมายถึงการหลุดพ้นจากพันธนาการแห่งอำนาจรัฐและการปฏิเสธที่จะอยู่ภายใต้การปกครอง</p>
+      <p class="ar-translation">ธรรมชาติเช่นนี้เป็นปฏิปักษ์ต่อความเจริญรุ่งเรืองและการสร้างอารยธรรม ตัวอย่างเช่น ความต้องการหินของพวกเขามีไว้เพียงเพื่อนำมาทำเป็นที่รองรับหม้อหุงต้ม พวกเขาจึงมักรื้อถอนก้อนหินออกจากสิ่งปลูกสร้าง ทำให้สถาปัตยกรรมเหล่านั้นพังทลายลง และความต้องการไม้ก็มีไว้เพียงเพื่อค้ำยันเต็นท์พักและทำหลักตรึงที่พัก พวกเขาจึงรื้อหลังคาอาคารเพื่อการนี้ ด้วยเหตุนี้ ธรรมชาติแห่งการดำรงอยู่ของพวกเขาจึงเป็นขั้วตรงข้ามกับการก่อสร้าง ซึ่งเป็นรากฐานของการสร้างเมือง นี่คือสภาวการณ์โดยทั่วไปของพวกเขา”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أيضا طبيعتهم انتهاب ما في أيدي الناس، وأن رزقهم في ظلال رماحهم وليس عندهم في أخذ أموال الناس حد ينتهون إليه بل كلما امتدت أعينهم إلى مال أو متاع أو ماعون انتهبوه لا يكلفون على أهل الأعمال من الصنائع والحرف أعمالهم ولا يرون لها قيمة ولا قسطا من الأجر والثمن. ليست لهم عناية بالأحكام وزجر الناس عن المفاسد ودفاع بعضهم عن بعض إنما همهم ما يأخذونه من أموال الناس نهبا وغرامة.</blockquote>
+      <p class="ar-translation">“นอกจากนี้ ธรรมชาติของพวกเขายังมักเกี่ยวข้องกับการปล้นชิงสิ่งที่อยู่ในมือของผู้อื่น และถือว่าปัจจัยยังชีพของพวกเขานั้นซุกซ่อนอยู่ใต้เงาหอกของตน พวกเขาไม่มีขีดจำกัดในการยึดครองทรัพย์สินของผู้คน เมื่อใดก็ตามที่สายตาของพวกเขาจับจ้องไปที่ทรัพย์สมบัติ สินค้า หรือเครื่องใช้ พวกเขาก็จะเข้าปล้นชิงสิ่งเหล่านั้น พวกเขาไม่เห็นคุณค่าในการจ่ายค่าตอบแทนให้แก่ช่างฝีมือหรือผู้ประกอบวิชาชีพ โดยไม่ตระหนักถึงมูลค่าหรือค่าจ้างที่คู่ควรแก่แรงงานเหล่านั้น พวกเขาไม่ใส่ใจในกระบวนการยุติธรรม ไม่สนใจที่จะยับยั้งผู้คนจากความเสื่อมทราม หรือปกป้องสิทธิของผู้อื่น เป้าหมายหลักของพวกเขาคือสิ่งที่สามารถกอบโกยมาจากทรัพย์สินของผู้คนผ่านการปล้นสะดมและการเรียกเก็บค่าปรับ”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأيضا فهم متنافسون في الرئاسة وقل أن يسلم أحد منهم الأمر لغيره ولو كان أباه أو أخاه أو كبير عشيرته إلا في الأقل وعلى كره من أجل الحياء، فيتعدد الحكام منهم والأمراء وتختلف الأيدي على الرعية في الجباية والأحكام فيفسد العمران وينقض… وانظر إلى ما ملكوه وتغلبوا عليه من الأوطان من لدن الخليقة كيف تقوض عمرانه وأقفر ساكنه وبدلت الأرض فيه غير الأرض: فاليمن قرارهم خراب إلا قليلا من الأمصار وعراق العرب كذلك قد خرب عمرانه الذي كان للفرس أجمع والشام لهذا العهد كذلك وإفريقية والمغرب لما جاز إليها بنو هلال وبنو سليم منذ أول المائة الخامسة وتمرسوا بها لثلاثمائة وخمسين من السنين قد لحق بها وعادت بسائطه خرابا كلها بعد أن كان ما بين السودان والبحر الرومي كله عمرانا تشهد بذلك آثار العمران فيه من المعالم وتماثيل البناء وشواهد القرى والمدر.</blockquote>
+      <p class="ar-translation">“ยิ่งไปกว่านั้น พวกเขายังมักแก่งแย่งชิงดีกันเพื่อความเป็นผู้นำ เป็นเรื่องยากมากที่ใครคนใดคนหนึ่งในหมู่พวกเขาจะยอมสละอำนาจให้แก่ผู้อื่น แม้ว่าบุคคลนั้นจะเป็นบิดา พี่น้อง หรือผู้อาวุโสในเผ่าก็ตาม เว้นแต่ในกรณีที่หายากยิ่งหรือจำยอมด้วยความละอาย ด้วยเหตุนี้ จึงเกิดสถานการณ์ที่มีผู้ปกครองและผู้นำจำนวนมาก ส่งผลให้เกิดความซ้ำซ้อนในการใช้อำนาจเหนือราษฎร ทั้งในด้านการจัดเก็บภาษีและกระบวนการยุติธรรม ซึ่งนำไปสู่ความเสื่อมโทรมและพังทลายของอารยธรรมในที่สุด…</p>
+      <p class="ar-translation">จงพิจารณาดูดินแดนที่พวกเขาเข้ายึดครองและมีอำนาจเหนือมาตั้งแต่ยุคโบราณกาลเถิด ว่าอารยธรรมในดินแดนเหล่านั้นล่มสลายลงอย่างไร ประชากรทิ้งถิ่นฐาน และสภาพแวดล้อมถูกเปลี่ยนแปลงไปอย่างไร เยเมน ซึ่งเคยเป็นถิ่นฐานของพวกเขา ปัจจุบันกลายเป็นซากปรักหักพัง เว้นแต่เพียงบางเมืองเท่านั้น อิรักก็เช่นกัน อารยธรรมที่เคยเป็นของชาวเปอร์เซียทั้งหมดได้พังทลายลง อัชชามในปัจจุบันก็ตกอยู่ในสภาพเดียวกัน รวมถึงภูมิภาคแอฟริกาเหนือและอัลมัฆริบ (โมร็อกโก) นับตั้งแต่ชนเผ่าบะนู ฮิลาล และบะนู สุลัยม์ได้อพยพเข้าไปในช่วงต้นศตวรรษที่ 5 (แห่งฮิจเราะห์ศักราช) และสร้างความวุ่นวายยาวนานถึง 350 ปี พื้นที่ราบของภูมิภาคเหล่านั้นก็กลับกลายเป็นซากปรักหักพังไปทั้งสิ้น ทั้งที่ก่อนหน้านี้ พื้นที่ระหว่างดินแดนคนผิวดำ (แถบซูดาน) และทะเลเมดิเตอร์เรเนียน ล้วนเต็มไปด้วยความเจริญรุ่งเรือง ดังที่ปรากฏหลักฐานจากซากสิ่งก่อสร้าง ร่องรอยสถาปัตยกรรม และเศษซากของหมู่บ้านและเมืองต่างๆ ...”</p>
+      <p>และด้วยความที่เป็นกลุ่มชนที่คุ้นชินกับพื้นที่โล่งกว้าง อิบนุ ค็อลดูนชี้ให้เห็นถึงยุทธวิธีและข้อจำกัดของพวกเขาในบทที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">باب في أن العرب لا يتغلبون إلا على البسائط</blockquote>
+      <p class="ar-translation">“ว่าด้วยเรื่อง ชนชาติอาหรับมักมีชัยชนะและครอบครองได้เฉพาะในพื้นที่ราบเท่านั้น”</p>
+      <p>ท่านอธิบายเรื่องนี้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وذلك أنهم بطبيعة التوحش الذي فيهم أهل انتهاب وعيث وينتهبون ما قدروا عليه من غير مغالبة ولا ركوب خطر، ويفرون إلى منتجعهم بالقفر ولا يذهبون إلى المزاحفة والمحاربة إلا إذا دفعوا بذلك عن أنفسهم فكل معقل أو مستصعب عليهم فهم تاركوه إلى ما يسهل عنه ولا يعرضون له.</blockquote>
+      <p class="ar-translation">“สาเหตุที่เป็นเช่นนั้นก็เพราะว่า ด้วยธรรมชาติแห่งความอนารยะ (วิถีเร่ร่อน) ที่ฝังอยู่ในตัว พวกเขาจึงเป็นกลุ่มชนที่นิยมการปล้นสะดมและสร้างความวุ่นวาย พวกเขาจะฉกฉวยกอบโกยทุกสิ่งที่สามารถทำได้โดยหลีกเลี่ยงการปะทะที่ยืดเยื้อหรือการนำตนเองไปเผชิญกับความเสี่ยง และมักจะล่าถอยกลับไปยังถิ่นพำนักของตนในดินแดนทุรกันดาร พวกเขาจะไม่เคลื่อนทัพเข้าประจัญบานหรือทำสงครามเต็มรูปแบบ เว้นแต่ในยามที่ถูกบีบบังคับให้ต้องป้องกันตนเอง ดังนั้น ป้อมปราการหรือสถานที่ใดก็ตามที่ยากต่อการพิชิต พวกเขาจะละทิ้งมันไปเพื่อแสวงหาเป้าหมายอื่นที่เข้าถึงได้ง่ายกว่า และจะไม่พยายามนำตนเองเข้าไปเสี่ยงกับอุปสรรคเหล่านั้น”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والقبائل الممتنعة عليهم بأوعار الجبال بمنجاة من عيثهم وفسادهم لأنهم لا يتسنمون إليهم الهضاب ولا يركبون الصعاب ولا يحاولون الخطر. وأما البسائط فمتى اقتدروا عليها بفقدان الحامية وضعف الدولة فهي نهب لهم وطعمة لآكلهم يرددون عليها الغارة والنهب والزحف لسهولتها عليهم إلى أن يصبح أهلها مغلبين لهم ثم يتعاورونهم باختلاف الأيدي وانحراف السياسة إلى أن ينقرض عمرانهم</blockquote>
+      <p class="ar-translation">“ด้วยเหตุนี้ ชนเผ่าที่ตั้งมั่นและปกป้องตนเองอยู่บนเทือกเขาอันสลับซับซ้อน จึงมักรอดพ้นจากการทำลายล้างและการสร้างความเสียหายต่อพวกเขา เพราะพวกเขาจะไม่ปีนป่ายขึ้นสู่ที่ราบสูง ไม่ฝ่าฟันความยากลำบาก และไม่พยายามเสี่ยงอันตราย ในทางตรงกันข้าม สำหรับพื้นที่ราบนั้น เมื่อใดก็ตามที่พวกเขาสามารถฉวยโอกาสจากความไร้ประสิทธิภาพของกองทหารรักษาการณ์และความอ่อนแอของอำนาจรัฐ พื้นที่เหล่านั้นก็จะตกเป็นเหยื่อของการปล้นสะดมและกลายเป็นอาหารอันโอชะของพวกเขา พวกเขาจะยกทัพเข้าปล้นชิงและรุกรานพื้นที่ราบซ้ำแล้วซ้ำเล่าเนื่องจากความง่ายดายในการเข้าปะทะ จนกระทั่งชนพื้นเมืองในพื้นที่นั้นตกเป็นผู้อยู่ใต้สภาวะจำยอมอย่างสมบูรณ์ จากนั้น พวกเขาก็จะผลัดเปลี่ยนหมุนเวียนกันเข้ามาใช้อำนาจปกครองและดำเนินนโยบายที่ผิดเพี้ยน จนกระทั่งอารยธรรมและความเจริญในพื้นที่เหล่านั้นสูญสลายไปในที่สุด...”</p>
+      <p>และเมื่อยึดครองได้แล้ว การบริหารบ้านเมืองกลับกลายเป็นจุดอ่อนที่ร้ายแรงที่สุด ท่านตั้งข้อสังเกตในบทที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">باب في أن العرب أبعد الأمم عن سياسة الملك</blockquote>
+      <p class="ar-translation">“ชนชาติอาหรับเป็นกลุ่มชนที่ห่างไกลจากศิลปะแห่งการบริหารรัฐกิจมากที่สุด”</p>
+      <p>ท่านอธิบายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والسبب في ذلك أنهم أكثر بداوة من سائر الأمم وأبعد مجالا في القفر وأغنى عن حاجات التلول وحبوبها لاعتيادهم الشظف وخشونة العيش، فاستغنوا عن غيرهم فصعب انقياد بعضهم لبعض، ورئيسهم محتاج إليهم غالبا للعصبية التي بها المدافعة، فكان مضطرا إلى إحسان ملكتهم وترك مراغمتهم لئلا يختل عليه شأن عصبيته فيكون فيها هلاكه وهلاكهم.</blockquote>
+      <p class="ar-translation">“สาเหตุที่เป็นเช่นนั้นก็เพราะว่า พวกเขามีความเป็นชนเผ่าเร่ร่อน (อนารยะ) มากกว่าชนชาติอื่นๆ มักร่อนเร่เข้าไปในดินแดนทุรกันดารลึกกว่า และมีความต้องการพึ่งพาผลผลิตทางการเกษตรและธัญพืชจากที่ราบลุ่มน้อยกว่า เนื่องจากพวกเขาคุ้นชินกับความแร้นแค้นและความยากลำบากในการดำรงชีวิต พวกเขาจึงสามารถพึ่งพาตนเองได้โดยไม่ต้องง้อผู้อื่น ด้วยเหตุนี้ จึงเป็นเรื่องยากที่พวกเขาจะยอมสยบหรือปฏิบัติตามคำสั่งของผู้อื่น แม้แต่ผู้นำของพวกเขาเองก็ยังต้องพึ่งพาพวกเขา เพื่อรักษาสายสัมพันธ์แห่งความสามัคคีในเผ่า ซึ่งเป็นสิ่งจำเป็นสำหรับการป้องกันตนเอง ผู้นำจึงถูกบีบบังคับให้ต้องปกครองผู้คนด้วยความโอนอ่อนผ่อนตาม และหลีกเลี่ยงการใช้อำนาจบีบบังคับ เพื่อไม่ให้พลังแห่งพวกพ้องหรือความสามัคคีต้องสั่นคลอน ซึ่งหากเกิดความแตกแยก ย่อมนำไปสู่ความพินาศของทั้งตัวผู้นำและชนเผ่าเอง”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وسياسة الملك والسلطان تقتضي أن يكون السائس وازعا بالقهر وإلا لم تستقم سياسته وأيضا فإن من طبيعتهم كما قدمناه أخذ ما في أيدي الناس خاصة والتجافي عما سوى ذلك من الأحكام بينهم ودفاع بعضهم عن بعض فإذا ملكوا أمة من الأمم جعلوا غاية ملكهم الانتفاع بأخذ ما في أيديهم وتركوا ما سوى ذلك من الأحكام بينهم وربما جعلوا العقوبات على المفاسد في الأموال حرصا على تكثير الجبايات وتحصيل الفوائد فلا يكون ذلك وازعا وربما يكون باعثا بحسب الأغراض الباعثة على المفاسد واستهانة ما يعطي من ماله في جانب غرضه فتنمو المفاسد بذلك ويقع تخريب العمران فتبقى تلك الأمة كأنها فوضى مستطيلة أيدي بعضها على بعض فلا يستقيم لها عمران وتخرب سريعا شأن الفوضى كما قدمناه فبعدت طباع العرب لذلك كله عن سياسة الملك.</blockquote>
+      <p class="ar-translation">“แต่ศิลปะแห่งการบริหารรัฐกิจและอำนาจแห่งกษัตริย์นั้น เรียกร้องให้ผู้ปกครองต้องมีอำนาจเด็ดขาดในการควบคุมและบังคับบัญชา หากปราศจากสิ่งนี้ การปกครองย่อมไม่อาจตั้งมั่นอยู่ได้ และดังที่ได้กล่าวไปแล้ว ธรรมชาติของพวกเขาคือการมุ่งยึดครองทรัพย์สินในมือผู้อื่นเป็นหลัก โดยละเลยต่อการจัดระเบียบกฎเกณฑ์ทางสังคมหรือการปกป้องคุ้มครองสิทธิของประชาชน ดังนั้น เมื่อพวกเขาเข้าปกครองชนชาติใด เป้าหมายสูงสุดของพวกเขาจึงมีเพียงการกอบโกยผลประโยชน์จากทรัพย์สินของผู้ใต้ปกครอง โดยเพิกเฉยต่อการบังคับใช้กฎหมายอื่นๆ</p>
+      <p class="ar-translation">บางครั้งพวกเขาอาจกำหนดบทลงโทษสำหรับการกระทำผิดในรูปแบบของการปรับเป็นทรัพย์สิน ด้วยความมุ่งหวังที่จะเพิ่มพูนรายได้จากการจัดเก็บภาษีและผลประโยชน์ส่วนตน แต่วิธีการนี้ไม่ได้ทำหน้าที่เป็นเครื่องมือป้องปรามอาชญากรรมแต่อย่างใด ซ้ำร้ายมันอาจกลายเป็นแรงจูงใจให้เกิดการกระทำผิดมากขึ้น หากผู้กระทำผิดประเมินแล้วว่าผลประโยชน์ที่จะได้จากการละเมิดกฎหมายนั้นคุ้มค่ากว่าทรัพย์สินที่จะต้องจ่ายไปเป็นค่าปรับ ความเสื่อมทรามจึงงอกงามขึ้น และนำไปสู่การทำลายล้างอารยธรรม ชนชาติที่ตกอยู่ภายใต้การปกครองเช่นนี้จะดำรงอยู่ในสภาวะคล้ายกับสังคมอนาธิปไตยที่ผู้คนต่างแย่งชิงและล่วงละเมิดสิทธิของกันและกัน อารยธรรมและบ้านเมืองไม่อาจตั้งมั่นอยู่ได้ในสภาวะเช่นนี้ และจะล่มสลายลงอย่างรวดเร็วดังธรรมชาติของความโกลาหล ด้วยเหตุผลทั้งหมดที่กล่าวมา ธรรมชาติของชนชาติอาหรับ (เบดูอิน) จึงห่างไกลจากวิถีแห่งการปกครองรัฐอย่างยิ่ง”</p>
+      <p>ด้วยความเป็นปัจเจกชนสูงและพึ่งพาตนเองได้ พวกเขาจึงยอมจำนนต่อผู้อื่นได้ยาก แม้แต่ผู้นำเผ่าก็ยังต้องปกครองด้วยความประนีประนอมเพื่อรักษา “อะเศาะบียะฮ์” หรือสำนึกร่วมเอาไว้ แต่ศิลปะแห่งการปกครองรัฐนั้นเรียกร้องอำนาจเด็ดขาด เมื่อพวกเขาปกครองชนชาติอื่น เป้าหมายจึงมีเพียงการกอบโกยผลประโยชน์ ขาดการบังคับใช้กฎหมายที่ยับยั้งความเสื่อมทราม รัฐที่ตกอยู่ภายใต้การปกครองของพวกเขาจึงมักมีสภาพคล้ายสังคมอนาธิปไตยที่เสื่อมสลายอย่างรวดเร็ว</p>
+      <p>ท่านยกตัวอย่างดินแดนเยเมน อิรัก ชาม หรือแม้แต่แอฟริกาเหนือ ที่อารยธรรมเก่าแก่พังทลายลงเมื่อชาวเบดูอินเข้ายึดครอง หรือตัวอย่างที่ชัดเจนอย่างราชวงศ์อุมัยยะฮ์ในอันดะลุสที่รบชนะชาวคริสเตียนอย่างรวดเร็ว แต่เมื่อปราศจากศัตรูภายนอก การแย่งชิงอำนาจระหว่างเผ่าก็ปะทุขึ้นจนอาณาจักรแตกเป็นรัฐเล็กรัฐน้อย นำไปสู่การล่มสลายในที่สุด</p>
+      <p>แม้จะวิพากษ์อย่างรุนแรง แต่อิบนุ ค็อลดูนได้ค้นพบสมการที่สำคัญที่สุด นั่นคือการเปลี่ยนผ่านจากวิถีอนารยชนสู่การสร้างจักรวรรดิ ท่านสรุปไว้ในบทที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">باب في أن العرب لا يحصل لهم الملك إلا بصبغة دينية من نبوة أو ولاية أو أثر عظيم من الدين على الجملة</blockquote>
+      <p class="ar-translation">“ว่าด้วยเรื่อง ชนชาติอาหรับไม่อาจสถาปนาอำนาจรัฐได้ เว้นแต่ด้วยการหล่อหลอมทางศาสนา ผ่านความเป็นศาสดา ความเป็นผู้นำ หรือผลกระทบอันยิ่งใหญ่จากศาสนาโดยรวม”</p>
+      <p>ท่านได้อธิบายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والسبب في ذلك أنهم لخلق التوحش الذي فيهم أصعب الأمم انقيادا بعضهم لبعض للغلظة والأنفة وبعد الهمة والمنافسة في الرئاسة فقلما تجتمع أهواؤهم فإذا كان الدين بالنبوة أو الولاية كان الوازع لهم من أنفسهم وذهب خلق الكبر والمنافسة منهم فسهل انقيادهم واجتماعهم، وذلك بما يشملهم من الدين المذهب للغلظة والإلفة الوازع عن التحاسد والتنافس فإذا كان فيهم النبي أو الولي الذي يبعثهم على القيام بأمر الله يذهب عنهم مذمومات الأخلاق ويأخذهم بمحمودها ويؤلف كلمتهم لإظهار الحق تم اجتماعهم وحصل لهم التغلب والملك.</blockquote>
+      <p class="ar-translation">“สาเหตุที่เป็นเช่นนั้นก็เพราะว่า ด้วยอุปนิสัยแห่งความเป็นอนารยะ (วิถีชนเผ่าเร่ร่อน) ที่ฝังอยู่ในตัว พวกเขาจึงเป็นชนชาติที่ยอมจำนนต่อกันและกันได้ยากที่สุด อันเนื่องมาจากความหยาบกระด้าง ความหยิ่งทะนง ความทะเยอทะยานอันแรงกล้า และการแก่งแย่งชิงดีกันเพื่อความเป็นผู้นำ ดังนั้น ความปรารถนาของพวกเขาจึงแทบจะไม่มีวันบรรจบกันได้ แต่เมื่อใดก็ตามที่มีศาสนาเข้ามา ไม่ว่าจะผ่านความเป็นศาสดา หรือความเป็นผู้นำ เครื่องยึดเหนี่ยวและป้องปรามก็จะบังเกิดขึ้นจากภายในจิตใจของพวกเขาเอง อุปนิสัยแห่งความเย่อหยิ่งและการแก่งแย่งแข่งขันจะมลายหายไป ทำให้การยอมจำนนและการรวมเป็นน้ำหนึ่งใจเดียวกันกลายเป็นเรื่องง่าย สิ่งนี้เกิดขึ้นได้เพราะศาสนาได้แผ่ซ่านครอบคลุมพวกเขา ช่วยขจัดความหยาบกระด้าง สร้างความผูกพัน และยับยั้งความอิจฉาริษยาและการแข่งขันชิงดี เมื่อใดก็ตามที่มีศาสดาหรือผู้นำปรากฏตัวขึ้นท่ามกลางพวกเขา เพื่อปลุกระดมให้พวกเขาลุกขึ้นมาปฏิบัติตามพระบัญชาแห่งอัลลอฮ์ บุคคลผู้นั้นจะขจัดคุณลักษณะอันเลวร้ายออกไป นำพาพวกเขาไปสู่จริยธรรมอันงดงาม และหลอมรวมเจตนารมณ์ของพวกเขาให้เป็นหนึ่งเดียวเพื่อประกาศสัจธรรม เมื่อนั้น การรวมตัวกันของพวกเขาจึงจะสมบูรณ์ นำไปสู่ชัยชนะและการสถาปนาอำนาจรัฐได้ในที่สุด”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وهم مع ذلك أسرع الناس قبولا للحق والهدى لسلامة طباعهم من عوج الملكات وبراءتها من ذميم الأخلاق إلا ما كان من خلق التوحش القريب المعاناة المتهيئ لقبول الخير ببقائه على الفطرة الأولى وبعده عما ينطبع في النفوس من قبيح العوائد وسوء الملكات فإن كل مولود يولد على الفطرة كما ورد في الحديث.</blockquote>
+      <p class="ar-translation">“ถึงกระนั้นก็ตาม พวกเขากลับเป็นกลุ่มชนที่ตอบรับต่อสัจธรรมและทางนำได้รวดเร็วที่สุด ทั้งนี้เป็นเพราะธรรมชาติอันบริสุทธิ์ของพวกเขาที่ยังคงปลอดภัยจากความบิดเบี้ยวของความเคยชิน และไร้มลทินจากจริยธรรมอันเลวร้าย แต่ข้อยกเว้นเพียงประการเดียวคืออุปนิสัยแห่งความเป็นอนารยะ ซึ่งเป็นสิ่งที่สามารถขัดเกลาและรักษาได้ง่าย พวกเขาพร้อมที่จะเปิดรับความดีงามเนื่องจากยังคงดำรงอยู่บนฟิฏเราะฮ์ (สภาวะบริสุทธิ์ดั้งเดิมของมนุษย์) และห่างไกลจากจารีตประเพณีอันเลวร้ายรวมถึงนิสัยเสียที่มักฝังรากลึกอยู่ในจิตใจของชาวเมือง ดังที่ปรากฏในวจนะของศาสดาที่ว่า: ‘ทารกทุกคนล้วนถือกำเนิดมาบนฟิฏเราะฮ์ (ความบริสุทธิ์ดั้งเดิม)’”</p>
+      <p>แม้ท่านจะวิจารณ์วิถีชีวิตแบบเบดูอินว่าดิบเถื่อนและทำลายล้างอารยธรรม แต่ในขณะเดียวกัน ท่านก็ยกย่องว่าความไร้อารยธรรมนั้นคือ กระดาษเปล่าหรือฟิฏเราะฮ์ สังคมเมืองนั้นเต็มไปด้วยกิเลส ความฟุ่มเฟือย และความเสื่อมโทรมทางศีลธรรมที่แก้ไขได้ยาก ในขณะที่ความดิบเถื่อนของเบดูอินเป็นเพียงสภาพภายนอกที่ปรับเปลี่ยนได้ง่าย เมื่อได้รับทางนำทางศาสนา พวกเขาจึงเป็นกำลังสำคัญที่แข็งแกร่งและบริสุทธิ์ที่สุดในการเผยแผ่และปกป้องศรัทธา</p>
+      <p>อิบนุ ค็อลดูนขยายการวิเคราะห์ไปสู่มิติเศรษฐกิจในบทที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">باب في أن العرب أبعد الناس عن الصنائع</blockquote>
+      <p class="ar-translation">“ชนชาติอาหรับเป็นกลุ่มชนที่ห่างไกลจากงานช่างฝีมือ (อุตสาหกรรม/ศิลปหัตถกรรม) มากที่สุด”</p>
+      <p>ท่านได้อธิบายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والسبب في ذلك أنهم أعرق في البدو وأبعد عن العمران الحضري وما يدعو إليه من الصنائع وغيرها والعجم من أهل المشرق وأمم النصرانية عدوة البحر الرومي أقوم الناس عليها لأنهم أعرق في العمران الحضري وأبعد عن البدو وعمرانه حتى إن الإبل التي أعانت العرب على التوحش وفي القفر والإعراق في البدو مفقودة لديهم بالجملة ومفقودة مراعيها والرمال المهيئة لنتاجها ولهذا نجد أوطان العرب وما ملكوه في الإسلام قليل الصنائع بالجملة حتى تجلب إليه من قطر آخر.</blockquote>
+      <p class="ar-translation">“สาเหตุที่เป็นเช่นนั้นก็เพราะว่า พวกเขาเป็นชนชาติที่ฝังรากลึกอยู่ในวิถีชีวิตแบบเบดูอิน (ชนเผ่าเร่ร่อน) มากที่สุด และอยู่ห่างไกลจากอารยธรรมแบบสังคมเมือง ตลอดจนอยู่ห่างไกลจากความต้องการที่สังคมเมืองเรียกร้องให้มีขึ้น เช่น งานช่างฝีมือและอุตสาหกรรมแขนงต่างๆ ในขณะที่ชนต่างชาติในดินแดนตะวันออก และชนชาติคริสเตียนอีกฟากฝั่งของทะเลเมดิเตอร์เรเนียน กลับเป็นผู้ที่มีความเชี่ยวชาญในงานเหล่านี้มากที่สุด นั่นเป็นเพราะพวกเขาฝังรากลึกอยู่ในอารยธรรมแบบสังคมเมือง และอยู่ห่างไกลจากวิถีชีวิตรวมถึงสภาพแวดล้อมแบบเบดูอิน ถึงขั้นที่ว่า อูฐซึ่งเป็นพาหนะที่เกื้อหนุนให้ชาวอาหรับสามารถดำรงชีวิตแบบอนารยะในถิ่นทุรกันดารและหยั่งรากลึกในวิถีเร่ร่อนได้นั้น กลับไม่ปรากฏให้เห็นเลยในกลุ่มชนเหล่านั้น รวมถึงไร้ซึ่งทุ่งหญ้าเลี้ยงสัตว์และทะเลทรายที่เอื้อต่อการเพาะพันธุ์อูฐ ด้วยเหตุนี้ เราจึงพบว่าดินแดนมาตุภูมิของชาวอาหรับ ตลอดจนดินแดนที่พวกเขาเข้าครอบครองในยุคอิสลาม มักจะขาดแคลนงานช่างฝีมือโดยรวม จนกระทั่งต้องมีการนำเข้าสินค้าเหล่านี้จากดินแดนอื่น”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وانظر بلاد العجم من الصين والهند وأرض الترك وأمم النصرانية كيف استكثرت فيهم الصنائع واستجلبها الأمم من عندهم وعجم المغرب من البربر مثل العرب في ذلك لرسوخهم في البداوة منذ أحقاب من السنين ويشهد لك بذلك قلة الأمصار بقطرهم كما قدمناه فالصنائع بالمغرب لذلك قليلة وغير مستحكمة الأماكن من صناعة الصوف من نسجه والجلد في خرزه ودبغه فإنهم لما استحضروا بلغوا فيها المبالغ لعموم البلوى بها وكون هذين أغلب السلع في قطرهم لما هم عليه من حال البداوة.</blockquote>
+      <p class="ar-translation">“ท่านจงพิจารณาดูดินแดนของกลุ่มที่ไม่ใช่ชาวอาหรับสิ นับตั้งแต่แผ่นดินจีน อินเดีย ดินแดนของชาวเติร์ก และชาติคริสเตียน ว่างานช่างฝีมือและศิลปหัตถกรรมในหมู่พวกเขานั้นมีอยู่อย่างดาษดื่นและหลากหลายเพียงใด จนชนชาติอื่นๆ ต้องนำเข้าสินค้าจากพวกเขา ในขณะเดียวกัน กลุ่มที่ไม่ใช่ชาวอาหรับจากดินแดนมัฆริบ (แถบแอฟริกาเหนือ) อย่างชนชาติเบอร์เบอร์ ก็มีสถานะเฉกเช่นเดียวกับชาวอาหรับในเรื่องนี้ เนื่องจากการฝังรากลึกอยู่ในวิถีชีวิตแบบเร่ร่อนมานานนับศตวรรษ ซึ่งสิ่งที่ยืนยันความจริงข้อนี้คือการมีหัวเมืองตั้งอยู่น้อยมากในดินแดนของพวกเขา ดังที่เราได้กล่าวไว้ก่อนหน้านี้ ด้วยเหตุนี้ งานช่างฝีมือในดินแดนมัฆริบจึงมีอยู่น้อยนิดและไม่มั่นคงเป็นหลักแหล่ง เว้นแต่เพียงอุตสาหกรรมที่เกี่ยวกับขนแกะ (การทอ) และเครื่องหนัง (การเย็บและการฟอกหนัง) เท่านั้น ซึ่งเมื่อพวกเขาเริ่มตั้งถิ่นฐานกลายเป็นสังคมเมือง พวกเขาก็ได้พัฒนาทักษะในงานสองแขนงนี้จนถึงขีดสุด เนื่องจากเป็นสิ่งที่จำเป็นอย่างยิ่งยวด และสินค้าทั้งสองประเภทนี้ก็เป็นสินค้าหลักในดินแดนของพวกเขา ซึ่งสอดคล้องกับสภาพการดำรงชีวิตแบบเบดูอินของพวกเขาเอง”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما المشرق فقد رسخت الصنائع فيه منذ ملك الأمم الأقدمين من الفرس والنبط والقبط وبني إسرائيل ويونان والروم أحقابا متطاولة فرسخت فيهم أحوال الحضارة ومن جملتها الصنائع كما قدمناه فلم يمح رسمها وأما اليمن والبحرين وعمان والجزيرة وإن ملكه العرب إلا أنهم تداولوا ملكه آلافا من السنين في أمم كثيرين منهم واختطوا أمصاره ومدنه وبلغوا الغاية من الحضارة والترف مثل عاد وثمود والعمالقة وحمير من بعدهم والتبابعة والأذواء فطال أمد الملك والحضارة واستحكمت صبغتها وتوفرت الصنائع ورسخت فلم تبل ببلى الدولة كما قدمناه فبقيت مستجدة حتى الآن واختصت بذلك للوطن كصناعة الوشي والعصب وما يستجاد من حول الثياب والحرير فيها</blockquote>
+      <p class="ar-translation">“สำหรับดินแดนตะวันออกนั้น งานช่างฝีมือได้หยั่งรากลึกมาตั้งแต่ยุคที่ชนชาติโบราณเป็นผู้ปกครอง ไม่ว่าจะเป็นชาวเปอร์เซีย ชาวนาบาเทียน ชาวคอปติก (อียิปต์โบราณ) วงศ์วานอิสราเอล ชาวกรีก และชาวโรมัน เป็นเวลายาวนานนับศตวรรษ วิถีแห่งอารยธรรมแบบเมืองจึงฝังรากลึกในหมู่พวกเขา ซึ่งรวมถึงวิชาชีพช่างฝีมือดังที่ได้กล่าวมา ร่องรอยของสิ่งเหล่านี้จึงไม่เคยถูกลบเลือนไป ส่วนภูมิภาคอย่างเยเมน, บาห์เรน, โอมาน และคาบสมุทรอาระเบียนั้น แม้ว่าชาวอาหรับจะเป็นผู้ปกครอง แต่พวกเขาก็ได้ผลัดเปลี่ยนหมุนเวียนกันครอบครองแผ่นดินนี้มานานนับพันปีผ่านหลากหลายชนเผ่า พวกเขาได้วางผังเมืองและสร้างมหานคร และก้าวไปสู่จุดสูงสุดของอารยธรรมและความหรูหราฟุ่มเฟือย เช่นเดียวกับอารยธรรมโบราณอย่างชนเผ่าอ๊าด, ชนเผ่าษะมูด, ชนเผ่าอะมาเล็ก และชนเผ่าฮิมยัร ตลอดจนบรรดากษัตริย์ตุบบะอ์ และเหล่าผู้ครองนครรัฐ ระยะเวลาอันยาวนานแห่งการปกครองและการสร้างอารยธรรมทำให้เอกลักษณ์ของมันฝังรากลึก งานช่างฝีมือมีอยู่อย่างอุดมสมบูรณ์และมั่นคง มันจึงไม่สูญสลายไปพร้อมกับการเสื่อมอำนาจของรัฐ ดังที่เราได้อธิบายไว้ก่อนหน้านี้ ร่องรอยเหล่านี้จึงยังคงได้รับการฟื้นฟูมาจนถึงปัจจุบัน และกลายเป็นเอกลักษณ์เฉพาะของดินแดนเหล่านั้น เช่น หัตถกรรมผ้าวะชีย์ (ผ้าทอลายวิจิตรด้วยด้ายทองหรือเงิน เป็นสินค้าราคาแพงที่ราชสำนักนิยมใช้ ผลิตมากในซีเรียและเยเมน), ผ้าอะศ็อบ (ผ้าทอโดยการมัดด้ายก่อนย้อมสีแล้วค่อยทอ ทำให้เกิดลวดลายสีสันมีเสน่ห์เฉพาะตัว เป็นเอกลักษณ์ของเยเมนมาแต่โบราณ) และการผลิตเครื่องแต่งกายชั้นดีและผ้าไหม”</p>
+      <p>ท่านเปรียบเทียบกับดินแดนของชาวจีน อินเดีย เติร์ก และคริสเตียน ที่งานหัตถกรรมมีอยู่อย่างดาษดื่นจนชนชาติอื่นต้องนำเข้าสินค้าจากพวกเขา ส่วนชาวเบอร์เบอร์ในมัฆริบก็มีสถานะเฉกเช่นเดียวกับชาวอาหรับในด้านนี้ เพราะการฝังรากลึกในวิถีเร่ร่อนมานับศตวรรษ</p>
+      <p>ประเด็นสุดท้ายและน่าประหลาดใจที่สุดในสายตาของอิบนุ ค็อลดูนคือ:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">باب في أن حملة العلم في الإسلام أكثرهم من العجم</blockquote>
+      <p class="ar-translation">“ผู้แบกรับความรู้ในศาสนาอิสลามส่วนใหญ่นั้น ไม่ใช่ชาวอาหรับ”</p>
+      <p>ท่านได้ขยายความไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">من الغريب الواقع أن حملة العلم في الملة الإسلامية أكثرهم العجم وليس في العرب حملة علم لا في العلوم الشرعية ولا في العلوم العقلية إلا في القليل النادر، وإن كان منهم العربي في نسبه فهو أعجمي في لغته ومرباه ومشيخته مع أن الملة عربية وصاحب شريعتها عربي.</blockquote>
+      <p class="ar-translation">“เป็นความจริงที่น่าประหลาดใจยิ่งนักที่ผู้ทรงความรู้ในสังคมอิสลามส่วนใหญ่นั้นไม่ใช่อาหรับ แทบจะไม่มีชาวอาหรับที่เป็นผู้ทรงความรู้เลย ไม่ว่าจะเป็นในด้านวิชาการทางศาสนา (ทางบทบัญญัติ) หรือวิทยาการทางปัญญา เว้นแต่เพียงส่วนน้อยที่หาได้ยากยิ่ง และแม้ว่าจะมีบุคคลที่มีสายเลือดอาหรับโดยเชื้อสาย แต่เขาก็มักจะมีสถานะเป็นชนต่างชาติในแง่ของภาษา การอบรมเลี้ยงดู และครูบาอาจารย์ที่ประสิทธิ์ประสาทวิชา แม้ว่าศาสนานี้จะเป็นศาสนาที่มีจุดกำเนิดจากอาหรับ และผู้ประกาศศาสนา (ท่านนบีมุฮัมมัด ﷺ) จะเป็นชาวอาหรับก็ตาม”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والسبب في ذلك أن الملة في أولها لم يكن فيها علم ولا صناعة لمقتضى أحوال السذاجة والبداوة وإنما أحكام الشريعة التي هي أوامر الله ونواهيه كان الرجال ينقلونها في صدورهم وقد عرفوا مأخذها من الكتاب والسنة بما تلقوه من صاحب الشرع وأصحابه.</blockquote>
+      <p class="ar-translation">“สาเหตุของปรากฏการณ์นี้คือ ในยุคเริ่มต้นของศาสนา ยังไม่มีวิทยาการหรืออุตสาหกรรมเชิงวิชาชีพใดๆ เกิดขึ้น เนื่องจากบริบทของความเรียบง่ายและวิถีชีวิตแบบชนเผ่าเร่ร่อน บัญญัติทางศาสนาซึ่งประกอบด้วยข้อบังคับและข้อห้ามของอัลลอฮ์นั้น บรรดาบุรุษต่างจดจำและถ่ายทอดกันผ่านการท่องจำไว้ในอก พวกเขาทราบถึงแหล่งที่มาของข้อบัญญัติเหล่านั้นจากคัมภีร์อัลกุรอาน และแบบฉบับ (ซุนนะฮ์) ผ่านสิ่งที่พวกเขาได้รับฟังและเรียนรู้โดยตรงจากผู้ประกาศศาสนาและบรรดาสหาย (เศาะหาบะฮ์) ของท่าน”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والقوم يومئذ عرب لم يعرفوا أمر التعليم والتأليف والتدوين ولا دفعوا إليه ولا دعتهم إليه حاجة وجرى الأمر على ذلك زمن الصحابة والتابعين وكانوا يسمون المختصين بحمل ذلك ونقله: القراء: أي الذين يقرؤون الكتاب وليسوا أميين لأن الأمية يومئذ صفة عامة في الصحابة بما كانوا عربا فقيل لحملة القرآن يومئذ: قراء إشارة إلى هذا فهم قراء لكتاب الله والسنة المأثورة عن رسول الله.</blockquote>
+      <p class="ar-translation">“กลุ่มชนในยุคนั้นล้วนเป็นชาวอาหรับที่ยังไม่รู้จักกระบวนการจัดการศึกษา การประพันธ์หนังสือ หรือการจดบันทึกรวบรวมอย่างเป็นระบบ พวกเขาไม่ถูกผลักดันให้กระทำเช่นนั้น และไม่มีความจำเป็นใดที่จะต้องทำ สถานการณ์ดำเนินไปเช่นนี้ตลอดยุคของบรรดาเศาะหาบะฮ์และชนรุ่นถัดมา (ตาบิอีน) บุคคลที่เชี่ยวชาญในการจดจำและถ่ายทอดความรู้จะถูกเรียกว่า ‘อัลกุรรออ์’ ซึ่งหมายถึงผู้ที่สามารถอ่านตำราได้และไม่ใช่ผู้ที่ไม่รู้หนังสือ เนื่องจากการไม่รู้หนังสือในเวลานั้นเป็นคุณลักษณะทั่วไปของบรรดาเศาะหาบะฮ์ด้วยความเป็นชาวอาหรับ ผู้ที่แบกรับอัลกุรอานในยุคนั้นจึงถูกเรียกว่า ‘อัลกุรรออ์’ เพื่อเป็นสัญลักษณ์บ่งชี้ว่าพวกเขาคือผู้อ่านคัมภีร์ของอัลลอฮ์และซุนนะฮ์ที่ได้รับการถ่ายทอดมาจากศาสนทูตของอัลลอฮ์”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فلما بعد النقل من لدن دولة الرشيد فما بعد احتيج إلى وضع التفاسير القرآنية وتقييد الحديث مخافة ضياعه ثم احتيج إلى معرفة الأسانيد وتعديل الناقلين للتمييز بين الصحيح من الأسانيد وما دونه ثم كثر استخراج أحكام الواقعات من الكتاب والسنة وفسد مع ذلك اللسان فاحتيج إلى وضع القوانين النحوية وصارت العلوم الشرعية كلها ملكات في: الاستنباطات والاستخراج والتنظير والقياس واحتاجت إلى علوم أخرى وهي وسائل لها من: معرفة قوانين العربية وقوانين ذلك الاستنباط والقياس والذب عن العقائد الإيمانية بالأدلة لكثرة البدع والإلحاد فصارت هذه العلوم كلها علوما ذات ملكات محتاجة إلى التعليم فاندرجت في جملة الصنائع.</blockquote>
+      <p class="ar-translation">“ครั้นเมื่อระยะเวลาของการถ่ายทอดมุขปาฐะทอดห่างออกไป นับตั้งแต่ยุคราชวงศ์ของฮารูน อัรรอชีดเป็นต้นมา ความจำเป็นในการจัดทำตำราอรรถาธิบายอัลกุรอานและการจดบันทึกวจนะของศาสดาอย่างเป็นลายลักษณ์อักษรจึงเกิดขึ้นเพื่อป้องกันการสูญหาย จากนั้นจึงเกิดความจำเป็นที่จะต้องศึกษาลึกซึ้งถึงสายรายงาน และการประเมินความน่าเชื่อถือของผู้รายงาน เพื่อแยกแยะระหว่างสายรายงานที่ถูกต้อง (เศาะฮีฮ์) ออกจากสายรายงานที่อ่อนแอกว่า ต่อมา การสกัดข้อกฤษฎีกาทางกฎหมายจากอัลกุรอานและซุนนะฮ์เพื่อตอบโจทย์สถานการณ์ใหม่ๆ ก็มีมากขึ้น ประกอบกับภาษาอาหรับเริ่มเกิดความวิบัติ (จากการปะปนกับชาวต่างชาติ) จึงเกิดความจำเป็นในการวางกฎเกณฑ์ทางไวยากรณ์ ด้วยเหตุนี้ วิทยาการทางศาสนาทั้งหมดจึงกลายเป็นทักษะเชิงระบบที่ต้องอาศัยการสกัดความรู้, การอนุมาน (อิสติมบาฏ) และการเทียบเคียง (กิยาส) อีกทั้งยังต้องการวิทยาการแขนงอื่นๆ เป็นเครื่องมือ เช่น การรู้กฎเกณฑ์ภาษาอาหรับ, กฎเกณฑ์การอนุมาน, การปกป้องหลักศรัทธาด้วยข้อพิสูจน์เพื่อต่อต้านพวกอุตริกรรมและพวกปฏิเสธศาสนา เมื่อวิทยาการเหล่านี้ล้วนกลายเป็นศาสตร์ที่ต้องอาศัยทักษะและการเรียนการสอนอย่างเป็นระบบจนชำนาญ มันจึงถูกจัดเข้าไว้ในหมวดหมู่ของ ‘ศิลปวิทยา’”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقد كنا قدمنا أن الصنائع من منتحل الحضر وأن العرب أبعد الناس عنها فصارت العلوم لذلك حضرية وبعد عنها العرب وعن سوقها، والحضر لذلك العهد هم: العجم أو من في معناهم من الموالي وأهل الحواضر الذين هم يومئذ تبع للعجم في الحضارة وأحوالها من: الصنائع والحرف لأنهم أقوم على ذلك للحضارة الراسخة فيهم منذ دولة الفرس.</blockquote>
+      <p class="ar-translation">“ดังที่เราได้กล่าวไว้ก่อนหน้านี้แล้วว่า อุตสาหกรรมและการงานวิชาชีพนั้น เป็นของคนในสังคมเมือง และชาวอาหรับก็เป็นกลุ่มชนที่ห่างไกลจากสิ่งเหล่านี้มากที่สุด ด้วยเหตุนี้ วิทยาการความรู้จึงกลายเป็นสิ่งที่เป็นของสังคมเมือง ชาวอาหรับจึงเหินห่างจากมันและห่างไกลจากตลาดวิชาการเหล่านี้ และชาวเมืองในยุคสมัยนั้นก็คืออะญัม (คนต่างชาติ) รวมถึงชาวเมืองอื่นๆ ซึ่งในเวลานั้นล้วนดำเนินรอยตามชาวต่างชาติในด้านอารยธรรมและวิถีชีวิต ไม่ว่าจะเป็นอุตสาหกรรมหรือวิชาชีพต่างๆ เนื่องจากพวกเขามีความเชี่ยวชาญในด้านเหล่านี้มากที่สุด อันเป็นผลมาจากอารยธรรมที่ฝังรากลึกอยู่ในหมู่พวกเขามาตั้งแต่ยุคจักรวรรดิเปอร์เซีย”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما العلوم العقلية أيضا: فلم تظهر في الملة إلا بعد أن تميز حملة العلم ومؤلفوه واستقر العلم كله صناعة فاختصت بالعجم وتركتها العرب وانصرفوا عن انتحالها فلم يحملها إلا المعربون من العجم شأن الصنائع كما قلناه أولا فلم يزل ذلك في الأمصار ما دامت الحضارة في العجم وبلادهم من: العراق وخراسان وما وراء النهر.</blockquote>
+      <p class="ar-translation">“สำหรับวิทยาการทางปัญญานั้น ก็ไม่ปรากฏขึ้นในสังคมอิสลาม เว้นแต่ภายหลังจากที่บรรดาผู้ทรงความรู้และผู้ประพันธ์ได้แยกตัวและจำแนกสถานะกันอย่างชัดเจน และองค์ความรู้ทั้งมวลได้ตกผลึกจนกลายเป็น ‘ศาสตร์’ อย่างเป็นระบบ วิทยาการเหล่านี้จึงกลายเป็นความเชี่ยวชาญเฉพาะของชนต่างชาติ ชาวอาหรับได้ละทิ้งมันและหันเหออกจากการยึดเป็นอาชีพ ดังนั้น ผู้ที่แบกรับวิทยาการเหล่านี้จึงมีเพียงชนต่างชาติที่ถูกผสานเข้ากับวัฒนธรรมอาหรับ ซึ่งก็เป็นไปในทำนองเดียวกันกับอุตสาหกรรมงานฝีมือดังที่เราได้กล่าวไปแล้วในตอนต้น ปรากฏการณ์เช่นนี้ยังคงดำเนินต่อไปในหัวเมืองต่างๆ ตราบเท่าที่ความเจริญรุ่งเรืองแห่งอารยธรรมยังคงดำรงอยู่ในหมู่ชนต่างชาติและในดินแดนของพวกเขา อาทิ อิรัก คุรอซาน และภูมิภาคแถบเอเชียกลาง”</p>
+      <p>เราอาจจะรู้สึกว่าท่านอิบนุ ค็อลดูนกำลังโจมตีหรือมีอคติกับชาวอาหรับเบดูอินหรือเปล่า? คำตอบคือไม่ใช่ แต่ท่านกำลังพาเราให้มองทะลุลงไปให้เห็นถึงกฎธรรมชาติและวัฏจักรของการเกิดดับของอารยธรรม ความแร้นแค้นได้หล่อหลอมให้ชาวเบดูอินรักอิสระ ดิบเถื่อน และเกลียดชังการถูกตีกรอบ</p>
+      <p>แต่จุดเปลี่ยนที่มหัศจรรย์ที่สุดในสมการนี้ก็คือ “ศาสนา” อิบนุ ค็อลดูนมองว่าความไร้อารยธรรมของเบดูอินนั้น ในอีกมุมหนึ่งมันคือความบริสุทธิ์ดั้งเดิม (ฟิฏเราะฮ์) ที่ยังไม่ถูกกิเลสและความฉ้อฉลของสังคมเมืองกัดกิน เมื่อใดก็ตามที่ความศรัทธาแห่งอิสลามเข้ามาหล่อหลอมจิตใจ พายุที่เคยพัดอย่างสะเปะสะปะก็ถูกรวมทิศทางให้เป็นหนึ่งเดียว และมันถูกแปรเปลี่ยนเป็นพลังอันมหาศาลในการสร้างจักรวรรดิและเผยแผ่สัจธรรม</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). วิถีอาหรับเบดูอินในสายตาของอิบนุ ค็อลดูน. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/ibn-khaldun-on-the-bedouin-arabs.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
