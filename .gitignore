@@ -16,3 +16,19 @@ wrangler.jsonc
 *.avi
 *.webm
 *.mkv
+
+# Scratch / drafts / raw sources — never publish to the static site root.
+# Cloudflare Pages serves the repo root verbatim, so any of these committed
+# at root become world-readable. Keep working drafts out of the deploy.
+scratch/
+scratch_draft.txt
+*.draft
+*.draft.*
+itibar-source.md
+DHL.txt
+temp.css
+
+# Local build / migration helpers — not part of the published site
+migrate.ps1
+fix_arabic_order.py
+strip_scholar_tashkeel.py
