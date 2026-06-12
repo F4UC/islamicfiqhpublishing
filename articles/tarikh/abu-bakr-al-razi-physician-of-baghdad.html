@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>อบู บักร อัรรอซี แพทย์หลวงแห่งแบกแดด — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ชีวประวัติอบู บักร มุฮัมมัด บิน ซะกะรียา อัรรอซี (Rhazes) ยอดนายแพทย์-นักปรัชญาแห่งอารยธรรมอิสลาม ผู้อำนวยการบีมาริสตานแบกแดด เจ้าของตำราอัลฮาวีและอัคลาก อัฏเฏาะบีบ จนถึงวาระสุดท้ายของชีวิต">
+<meta name="keywords" content="อบู บักร อัรรอซี, Rhazes, แพทย์อิสลาม, บีมาริสตาน, อัลฮาวี, จริยธรรมแพทย์, ประวัติศาสตร์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="อบู บักร อัรรอซี แพทย์หลวงแห่งแบกแดด — Islamic Fiqh Publishing">
+<meta property="og:description" content="จากชายผู้เริ่มเรียนแพทย์ตอนวัยสามสิบ สู่กาเลนแห่งโลกอาหรับ ผู้ทิ้งมรดกเวชศาสตร์และจริยธรรมแพทย์ไว้นับพันปี">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/abu-bakr-al-razi-physician-of-baghdad.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="abu-bakr-al-razi-physician-of-baghdad">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">อบู บักร อัรรอซี แพทย์หลวงแห่งแบกแดด</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ย้อนกลับไปในปี ฮ.ศ. 148 (ช่วงปี ค.ศ. 765) คอลีฟะฮ์ อบู ญะอ์ฟัร อัลมันศูร แห่งราชวงศ์อับบาซียะฮ์ ได้ล้มป่วยด้วยโรคเกี่ยวกับกระเพาะอาหารจนไม่สามารถรับประทานอาหารได้ บรรดาแพทย์แห่งกรุงแบกแดดต่างอับจนปัญญาที่จะทำการรักษา และอาการก็ทรุดหนักลงเรื่อยๆ พวกเขาจึงได้ประชุมหารือเพื่อตามหาผู้ที่ปราดเปรื่องด้านการแพทย์ที่สุดในยุคนั้น และได้ให้คำแนะนำให้เชิญตัว ญุรญีส บิน บุคติชูอ์ จากมหานครญุนดีชาปูรในเปอร์เซียมาเข้าเฝ้า โดยตระกูลนี้เป็นตระกูลแพทย์คริสเตียนจากนิกายเนสโตเรียนแห่งญุนดีชาปูรที่สืบทอดวิชาแพทย์สายกรีก-เปอร์เซียข้ามมาหลายชั่วอายุคน และได้กลายเป็นแพทย์หลวงประจำราชสำนักอับบาซียะฮ์ต่อเนื่องกันกว่าสองศตวรรษ</p>
+      <p>เมื่อเขาเดินทางมาถึง เขาได้เข้าเฝ้าและสนทนาด้วยภาษาเปอร์เซียและภาษาอาหรับ คอลีฟะฮ์ทรงประทับใจในบุคลิกภาพและวาทศิลป์อันยอดเยี่ยม จึงโปรดให้นั่งลงเบื้องหน้าและซักถามข้อกังขาต่างๆ ซึ่งญุรญีสเขาก็ตอบกลับด้วยความสุขุมเยือกเย็น จากนั้นพระองค์ทรงเล่าถึงอาการป่วยและจุดเริ่มต้นของโรคให้ฟัง ญุรญีสจึงได้แจ้งว่า เราจะทำการรักษาตามที่พระองค์ทรงประสงค์ วันรุ่งขึ้น เขาได้เข้ามาตรวจจับชีพจรและวิเคราะห์ปัสสาวะ พร้อมทั้งมีคำแนะนำให้ลดปริมาณอาหารลง ญุรญีสทำการรักษาอย่างประณีตและนุ่มนวลจนกระทั่งร่างกายของคอลีฟะฮ์กลับคืนสู่สมดุลตามปกติ พระองค์ทรงพอใจอย่างมาก และมีคำสั่งให้ประทานรางวัลแก่เขาทุกสิ่งที่เขาปรารถนา</p>
+      <p>หลังจากที่องค์ความรู้ทางการแพทย์ได้ถูกพัฒนาและสั่งสมมาอย่างต่อเนื่อง นับตั้งแต่ยุคของท่านนบี ﷺ, ยุคราชวงศ์อุมัยยะฮ์ จวบจนถึงช่วงต้นยุคราชวงศ์อับบาซียะฮ์ในกลางศตวรรษที่ 2 แห่งฮิจเราะห์ศักราช คอลีฟะฮ์ อัลมะอ์มูน ได้ทรงต่อยอดความรู้เหล่านี้ให้ก้าวไปถึงขีดสุดด้วยการสถาปนา “บัยตุลฮิกมะฮ์” ซึ่งให้ความสำคัญกับการแปลวิทยาการของชาวกรีก เช่น ปรัชญา แพทยศาสตร์ คณิตศาสตร์ และวิทยาการแขนงอื่นๆ มาเป็นภาษาอาหรับ แน่นอนว่าสิ่งนี้ได้กลายเป็นแรงผลักดันสำคัญที่ทำให้เกิดบุคคลสำคัญและนักปราชญ์ผู้ยิ่งใหญ่มากมายในยุคสมัยนั้น</p>
+      <h2 class="article-h2">อัรรอซี แพทย์ผู้เป็นนักปรัชญา</h2>
+      <p>ในช่วงครึ่งหลังของศตวรรษที่ 3 แห่งฮิจเราะห์ศักราช (ช่วงศตวรรษที่ 9 ของสากล) ได้ปรากฏหนึ่งในแพทย์ที่สำคัญและยิ่งใหญ่ที่สุดของอารยธรรมอิสลามในช่วงสี่ศตวรรษแรก แพทย์ผู้นั้นคือ อบู บักร มุฮัมมัด บิน ซะกะรียา อัรรอซี ท่านเกิดที่เมืองรอย ใกล้กับกรุงเตหะราน ในปี ฮ.ศ. 250 (ช่วงปี ค.ศ. 864) และเสียชีวิตที่กรุงแบกแดด ในเดือนชะอ์บาน ปี ฮ.ศ. 313 (ปี ค.ศ. 925)</p>
+      <p>อัลคุฟฏีย์ได้กล่าวยกย่องท่านไว้ในหนังสือตารีค อัลฮุกะมาอ์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">محمد بن زكريا أبو بكر الرازي طبيب المسلمين وأحد المشهورين في علم المنطق والهندسة وغيرهما من علوم الفلسفة</blockquote>
+      <p class="ar-translation">“มุฮัมมัด บิน ซะกะรียา อบู บักร อัรรอซี คือสุดยอดแพทย์แห่งประชาชาติมุสลิม และเป็นหนึ่งในบุคคลผู้มีชื่อเสียงโดดเด่นในสาขาวิชาตรรกศาสตร์ เรขาคณิต และวิทยาการแขนงอื่นๆ ทางปรัชญา”</p>
+      <p>อิบนุ อบี อุศ็อยบิอะฮ์ได้ระบุไว้ในตำราของท่านที่รวบรวมรายชื่อของบรรดาแพทย์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كان الرازي ذكيا فطنا رءوفا بالمرضى، مجتهدا في علاجهم وفي برئهم بكل وجه يقدر عليه، مواظبا للنظر في غوامض صناعة الطب والكشف عن حقائقها وأسرارها وكذلك في غيرها من العلوم بحيث انه لم يكن له دأب ولا عناية في جل أوقاته إلا في الاجتهاد والتطلع فيما قد دونه الأفاضل من العلماء في كتبهم</blockquote>
+      <p class="ar-translation">“อัรรอซีเป็นผู้ที่เปี่ยมไปด้วยความฉลาดหลักแหลม มีปฏิภาณไหวพริบ และมีความเมตตาอาทรต่อผู้ป่วยอย่างลึกซึ้ง ท่านมีความวิริยะอุตสาหะอย่างยิ่งในการบำบัดรักษาและฟื้นฟูสุขภาพของผู้ป่วยด้วยทุกวิถีทางที่ท่านสามารถทำได้ ท่านอุทิศตนอย่างสม่ำเสมอในการเจาะลึกถึงความเร้นลับแห่งวิชาชีพเวชกรรม เพื่อเปิดเผยสัจธรรมและไขความลับที่ซ่อนอยู่ ไม่เพียงแต่ในด้านการแพทย์เท่านั้น แต่ยังรวมถึงวิทยาการแขนงอื่นๆ อีกด้วย จนถึงขั้นที่ว่า ในห้วงเวลาส่วนใหญ่ของชีวิต ท่านแทบจะไม่มีกิจวัตรหรือความพึงใจอื่นใดเลย นอกเสียจากความมุ่งมั่นทุ่มเทและการเพ่งพินิจศึกษาในองค์ความรู้ที่บรรดานักปราชญ์และปัญญาชนผู้ทรงคุณธรรมได้จารึกไว้ในตำราของพวกเขา”</p>
+      <p>อัซซะฮะบีย์ ท่านก็ได้ระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الأستاذ الفيلسوف أبو بكر، محمد بن زكريا الرازي الطبيب، صاحب التصانيف، من أذكياء أهل زمانه، وكان كثير الأسفار، وافر الحرمة، صاحب مروءة وإيثار ورأفة بالمرضى، وكان واسع المعرفة، مكبا على الاشتغال، مليح التأليف، وكان في بصره رطوبة لكثرة أكله الباقلى، ثم عمي. أخذ عن البلخي الفيلسوف، وكان إليه تدبير بيمارستان الري، ثم كان على بيمارستان بغداد في دولة المكتفي، بلغ الغاية في علوم الأوائل.</blockquote>
+      <p class="ar-translation">“อบู บักร มุฮัมมัด บิน ซะกะรียา อัรรอซี ปรมาจารย์และนักปรัชญา ยอดนายแพทย์และนักประพันธ์ผู้มีผลงานมากมาย ท่านคือหนึ่งในอัจฉริยบุคคลแห่งยุคสมัย เป็นผู้ที่เดินทางสัญจรบ่อยครั้งและได้รับการเคารพยกย่องอย่างสูงส่ง ท่านเปี่ยมไปด้วยคุณธรรม ความเสียสละ และมีความเมตตากรุณาต่อผู้ป่วยอย่างลึกซึ้ง ท่านเป็นผู้มีความรอบรู้อย่างกว้างขวาง อุทิศตนให้กับการทำงานอย่างหนัก และมีลีลาการประพันธ์ตำราที่งดงามยิ่ง</p>
+      <p class="ar-translation">แต่ในเวลาต่อมา ดวงตาของท่านเกิดอาการชื้น (โรคตาตามความเชื่อทางการแพทย์ในยุคนั้น) ซึ่งมีบันทึกระบุว่าเกิดจากการบริโภคถั่วปากอ้ามากเกินไป จนส่งผลให้ท่านสูญเสียการมองเห็นและตาบอดในบั้นปลายชีวิต</p>
+      <p class="ar-translation">ท่านได้รับการถ่ายทอดวิชาความรู้มาจากอัลบัลคีย์ ผู้เป็นนักปรัชญา ท่านได้รับความไว้วางใจให้บริหารจัดการโรงพยาบาล (หรือบีมาริสตาน) ประจำเมืองรอยถิ่นบ้านเกิดของท่าน ก่อนที่จะก้าวขึ้นไปดำรงตำแหน่งผู้อำนวยการโรงพยาบาลแห่งกรุงแบกแดดในรัชสมัยของคอลีฟะฮ์ อัลมุกตะฟี ท่านได้ก้าวไปสู่จุดสูงสุดขององค์ความรู้และวิทยาการโบราณแห่งชนยุคก่อนอย่างแท้จริง.…”</p>
+      <p>อัรรอซีเติบโตมาด้วยความรักในวิชาความรู้ และมีชื่อเสียงในด้านความฉลาดหลักแหลมและปฏิภาณไหวพริบ นักบูรพคดีศึกษาชาวตะวันตกหลายท่านได้กล่าวยกย่องความเชี่ยวชาญของท่าน โดยมักจะเรียกขานท่านในนามภาษาละตินว่า “Rhazes”</p>
+      <p>ก่อนหน้านั้น บรรดานักประวัติศาสตร์การแพทย์ในอารยธรรมอาหรับก็เคยมอบคำบรรยายในทำนองเดียวกันนี้ให้แก่ท่าน คำถามคือ ชายผู้นี้ได้สร้างผลงานใดในวงการแพทย์เมื่อนับพันปีก่อน จึงทำให้เขาสมควรได้รับสถานะอันทรงเกียรติเช่นนี้มาจนถึงปัจจุบัน?</p>
+      <p>สิ่งที่น่าประหลาดใจประการหนึ่งก็คือ อัรรอซีเริ่มต้นศึกษาวิชาแพทยศาสตร์เมื่ออายุล่วงเข้าสู่วัยผู้ใหญ่แล้ว โดยอยู่ในช่วงวัยสามสิบกว่าปี บ้างก็ว่าสี่สิบปี และเมื่อครั้งที่ท่านเดินทางจากเมืองรอยเข้าสู่กรุงแบกแดด ท่านได้ไปเยือนโรงพยาบาล (บีมาริสตาน) สำคัญๆ ในเมืองหลวง ณ ที่แห่งนั้น ท่านได้สอบถามความรู้เกี่ยวกับตัวยาต่างๆ และได้ศึกษาอาการป่วยที่แปลกประหลาดบางกรณี ซึ่งทำให้ท่านได้มีโอกาสสังเกตการณ์การแลกเปลี่ยนความเห็นและข้อเสนอแนะของบรรดาแพทย์ผู้เชี่ยวชาญ</p>
+      <p>อิบนุ อุศ็อยบิอะฮ์ได้บันทึกว่า: อบู ซะอีด ซาฮิด อัลอุละมาอ์ ได้กล่าวไว้ในตำราของท่านที่ว่าด้วยเรื่องโรงพยาบาล (บีมาริสตาน) ถึงสาเหตุที่อัรรอซีหันมาศึกษาวิชาแพทยศาสตร์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قال أبو سعيد زاهد العلماء في كتابه في البيمارستانات سبب تعلم أبي بكر محمد بن زكريا الرازي صناعة الطب أنه عند دخوله مدينة السلام بغداد دخل إلى البيمارستان العضدي ليشاهده فاتفق له أن ظفر برجل شيخ صيدلاني البيمارستان فسأله عن الأدوية ومن كان المظهر لها في البدء فأجابه بأن قال إن أول ما عرف منها كان حي العالم وكان سببه أفلولن سليلة أسقليبيوس وذلك أن أفلولن كان به ورم حار في ذراعه مؤلم ألما شديدا فلما أشفي منه ارتاحت نفسه إلى الخروج إلى شاطئ نهر فأمر غلمانه فحملوه إلى شاطئ نهر كان عليه هذا النبات وأنه وضعه عليه تبردا به فخف ألمه بذلك فاستطال وضع يده عليه وأصبح من غد فعل مثل ذلك فبرأ فلما رأى الناس سرعة برئه وعلموا أنه إنما كان بهذا الدواء سموه حياة العالم وتداولته الألسن وخففته فسمي حي العالم فلما سمع الرازي ذلك أعجب به ودخل تارة أخرى إلى هذا البيمارستان فرأى صبيا مولودا بوجهين ورأس واحد فسأل الأطباء عن سبب ذلك فأخبر به فأعجبه ما سمع ولم يزل يسأل عن شيء شيء ويقال له وهو يعلق بقلبه حتى تصدى لتعلم الصناعة وكان منه جالينوس العرب هذه حكاية أبي سعيد وقال بعضهم إن الرازي كان في جملة من اجتمع على بناء هذا البيمارستان العضدي وأن عضد الدولة استشاره في الموضع الذي يجب أن يبنى فيه المارستان وأن الرازي أمر بعض الغلمان أن يعلق في كل ناحية من جانبي بغداد شقة لحم ثم اعتبر التي لم يتغير ولم يسهك فيها اللحم بسرعة فأشار بأن ببني في تلك الناحية وهو الموضع الذي بني فيه البيمارستان</blockquote>
+      <p class="ar-translation">“เมื่อครั้งที่อัรรอซีเดินทางเข้าสู่นครแห่งสันติภาพอย่างกรุงแบกแดด ท่านได้เข้าไปยังโรงพยาบาลอัลอะฎุฎีย์เพื่อสังเกตการณ์ บังเอิญว่าท่านได้พบกับชายชราผู้หนึ่งซึ่งเป็นเภสัชกรประจำโรงพยาบาล อัรรอซีจึงได้สอบถามเขาเกี่ยวกับตัวยาต่างๆ และใครคือบุคคลแรกที่เป็นผู้ค้นพบยาดังกล่าว ชายชราผู้นั้นตอบว่า ยาขนานแรกที่เป็นที่รู้จักคือสมุนไพรที่ชื่อว่า ฮัยยุลอาลัม โดยผู้ที่เป็นต้นเหตุของการค้นพบนี้คือ อพอลโล แห่งวงศ์วานของแอสคลีเพียส (แต่ตามตำนานกรีกจริงๆ คือ แอสคลีเพียส เทพแห่งการแพทย์ เป็นบุตรชายของเทพอพอลโล)</p>
+      <p class="ar-translation">เรื่องราวมีอยู่ว่า อพอลโลผู้นี้มีอาการบวมแดงที่แขนและเจ็บปวดอย่างแสนสาหัส เมื่ออาการเริ่มทุเลาลง จิตใจของเขาก็ปรารถนาที่จะออกไปพักผ่อนริมฝั่งแม่น้ำ เขาจึงสั่งให้บรรดาข้ารับใช้นำตัวเขาไปยังริมแม่น้ำซึ่งมีพืชชนิดนี้ขึ้นอยู่ เขาได้นำพืชดังกล่าวมาประคบที่แขนเพื่อบรรเทาความร้อน และพบว่าความเจ็บปวดนั้นลดทอนลง เขาจึงประคบมือทิ้งไว้อย่างนั้นเป็นเวลานาน ครั้นรุ่งอรุณของวันถัดมา เขาก็ได้กระทำเช่นเดิมอีกจนกระทั่งบาดแผลหายขาด</p>
+      <p class="ar-translation">เมื่อผู้คนประจักษ์ถึงความรวดเร็วในการฟื้นตัวของเขา และทราบว่าการเยียวยานั้นเกิดจากยาสมุนไพรชนิดนี้ พวกเขาจึงขนานนามมันว่า ฮะยาตุลอาลัม แต่เมื่อผู้คนเรียกขานกันจนติดปาก คำจึงถูกกร่อนให้สั้นลงและออกเสียงง่ายขึ้นเหลือเพียง ‘ฮัยยุลอาลัม’ เมื่ออัรรอซีได้สดับฟังเรื่องราวนี้ ท่านก็รู้สึกประทับใจเป็นอย่างยิ่ง</p>
+      <p class="ar-translation">ในกาลต่อมา ท่านได้เข้าไปยังโรงพยาบาลแห่งนี้อีกครั้ง และได้พบกับทารกแรกเกิดที่มีความผิดปกติทางกายวิภาค คือมีสองใบหน้าในศีรษะเดียว ท่านจึงตั้งคำถามต่อบรรดาแพทย์ถึงสาเหตุดังกล่าว ซึ่งพวกเขาก็ได้ให้คำอธิบายแก่ท่าน และอัรรอซีก็รู้สึกทึ่งกับสิ่งที่ได้ยิน</p>
+      <p class="ar-translation">ท่านยังคงเฝ้าเพียรถามถึงสิ่งต่างๆ ทีละประเด็น และทุกครั้งที่ได้รับคำตอบ ความรู้เหล่านั้นก็ฝังแน่นจดจารอยู่ในใจของท่าน จวบจนกระทั่งท่านได้ออกเดินทางเพื่อศึกษาวิชาชีพเวชกรรมอย่างเต็มตัว และท้ายที่สุด ท่านก็ได้กลายเป็น ‘กาเลนแห่งโลกอาหรับ’ (เปรียบเปรยว่าเป็นยอดนายแพทย์ผู้ยิ่งใหญ่เฉกเช่นกาเลนแห่งกรีก) ...นี่คือเรื่องราวที่เล่าขานโดยอบู ซะอีด</p>
+      <p class="ar-translation">ในขณะเดียวกัน นักประวัติศาสตร์บางท่านได้กล่าวอ้างว่า อัรรอซีเป็นหนึ่งในคณะทำงานที่ถูกรวบรวมมาเพื่อดำเนินการก่อสร้างโรงพยาบาลอัลอะฎุฎีย์ และระบุว่า เจ้าชายอะฎุฎุดเดาละฮ์ ได้ทรงขอคำปรึกษาจากท่านเกี่ยวกับทำเลที่เหมาะสมที่สุดในการสร้างโรงพยาบาล อัรรอซีจึงได้สั่งให้บรรดาคนรับใช้นำชิ้นเนื้อสดไปแขวนไว้ตามเขตแดนต่างๆ ทั้งสองฝั่งของกรุงแบกแดด จากนั้นท่านได้ประเมินว่าชิ้นเนื้อ ณ บริเวณใดที่เกิดการเปลี่ยนแปลงและส่งกลิ่นเหม็นเน่าช้าที่สุด ท่านจึงได้ชี้แนะให้สร้างโรงพยาบาลในเขตพื้นที่นั้น ซึ่งก็คือสถานที่ตั้งของโรงพยาบาลในท้ายที่สุดนั่นเอง (แต่ในความเป็นจริงทางประวัติศาสตร์ อัรรอซีเสียชีวิตไปก่อนที่โรงพยาบาลนี้จะถูกสร้างขึ้นกว่าครึ่งศตวรรษ ท่านเลือกสถานที่สร้างโรงพยาบาลให้คอลีฟะฮ์อัลมุกตะฟี ไม่ใช่เจ้าชายอะฎุฎุดเดาละฮ์)”</p>
+      <p>ประเด็นเรื่องการสร้างโรงพยาบาล หากเราลำดับเวลาได้ถูกต้องจะรู้ว่า ข้อมูลที่บันทึกนั้นมีความคลาดเคลื่อน เพราะอัรรอซีเกิดราวปี ค.ศ. 865 และเสียชีวิตในปี ค.ศ. 925 (ฮ.ศ. 313) และคอลีฟะฮ์อัลมุกตะฟี ปกครองอาณาจักรอับบาซียะฮ์ในช่วง ค.ศ. 902 - 908 (ฮ.ศ. 289-295) ซึ่งตรงกับช่วงที่อัรรอซีอยู่ในวัยผู้ใหญ่และกำลังรุ่งเรืองในวิชาชีพแพทย์พอดี</p>
+      <p>เจ้าชายอะฎุฎุดเดาละฮ์ เป็นผู้ปกครองแห่งราชวงศ์บูวัยฮ์ที่ทรงอำนาจในช่วง ค.ศ. 949 - 983 และโรงพยาบาลอัลอะฎุฎีย์ที่โด่งดังที่สุดในกรุงแบกแดด ถูกสั่งให้สร้างโดยเจ้าชายอะฎุฎุดเดาละฮ์ ในปี ค.ศ. 981 (ฮ.ศ. 371)</p>
+      <p>หากคำนวณตามปีศักราช จะเห็นได้ชัดเจนว่า อัรรอซีเสียชีวิตไปก่อนที่โรงพยาบาลอัลอะฎุฎีย์จะเริ่มสร้างถึง 56 ปี จึงเป็นไปไม่ได้เลยในทางประวัติศาสตร์ที่ท่านจะไปแขวนชิ้นเนื้อเพื่อเลือกสถานที่สร้างโรงพยาบาลให้เจ้าชายอะฎุฎุดเดาละฮ์ตามที่นักประวัติศาสตร์บางท่านในยุคหลังบันทึกไว้</p>
+      <p>อาจารย์ผู้ประสิทธิ์ประสาทวิชาการแพทย์ให้แก่ท่านคือ อะลี อิบนุ ซะฮล์ ร็อบบาน อัฏเฏาะบะรีย์ แพทย์และนักปรัชญาผู้ถือกำเนิดในครอบครัวชาวยิวแห่งเมืองเมิร์ฟ (มัรวา) จากแคว้นเฏาะบะริสตาน (ปัจจุบันตั้งอยู่ในประเทศอิหร่าน) อิบนุ ร็อบบานได้เข้ารับอิสลามในรัชสมัยของคอลีฟะฮ์ อัลมุอ์ตะศิม แห่งราชวงศ์อับบาซียะฮ์ ซึ่งพระองค์ทรงรับเขาเข้าทำงานในราชสำนัก และเขายังคงปฏิบัติหน้าที่เรื่อยมาจนถึงรัชสมัยของคอลีฟะฮ์ อัลมุตะวักกิล</p>
+      <p>อัรรอซีได้ศึกษาวิชาแพทยศาสตร์และอาจรวมถึงวิชาปรัชญากับอิบนุ ร็อบบาน ด้วยเหตุนี้ ความสนใจด้านปรัชญาและจิตวิญญาณของท่านจึงสามารถสืบย้อนไปถึงผู้เป็นอาจารย์ท่านนี้ได้ แต่ในเวลาไม่นานนัก อัรรอซีก็ก้าวล้ำหน้าอาจารย์ของตนและกลายเป็นแพทย์ผู้มีชื่อเสียงโด่งดัง ท่านได้รับการแต่งตั้งให้เป็นผู้อำนวยการโรงพยาบาลในเมืองรอยอันเป็นบ้านเกิด ในช่วงการปกครองของ มันศูร บิน อิสฮาก แห่งราชวงศ์ซามานียะฮ์</p>
+      <h2 class="article-h2">วิทยาการของอัรรอซี</h2>
+      <p>อัรรอซีได้ทิ้งมรดกทางวิชาการไว้มากมาย ทั้งในรูปแบบของความเรียงและตำราที่ครอบคลุมทุกแขนงของวิทยาการทางการแพทย์ในยุคสมัยของท่าน ตัวอย่างเช่น ตำราว่าด้วยโรคฝีดาษและโรคหัด (<span class="ar-inline" lang="ar" dir="rtl">الجدري والحصبة</span>) ซึ่งถือเป็นหนึ่งในผลงานที่โด่งดังที่สุดในบรรดาผลงานทั้งหมดของท่าน ในตำราเล่มนี้ อัรรอซีได้แสดงให้เห็นถึงความใส่ใจอย่างลึกซึ้งในด้านเวชศาสตร์บำบัด ซึ่งความลึกซึ้งนี้ได้โดดเด่นและตัดกันอย่างชัดเจนกับความเงียบงันของตำราการแพทย์ยุคเฮลเลนิสติกและไบแซนไทน์ที่ตกทอดมาถึงยุคเรา ซึ่งแทบไม่ได้กล่าวถึงการรับมือกับโรคนี้เลย อันที่จริง จวบจนกระทั่งถึงยุคสมัยใหม่ โรคฝีดาษถือเป็นหนึ่งในสาเหตุหลักที่ทำให้ผู้คนในโลกอาหรับตาบอด เนื่องจากภาวะแทรกซ้อนที่พบได้บ่อยที่สุดคือการเกิดแผลเป็นที่กระจกตาและการถูกทำลายของกระจกตาอันเนื่องมาจากตุ่มหนอง</p>
+      <p>อัรรอซีได้กล่าวไว้ในตำราแพทย์เล่มเอกของท่านที่ชื่อ “อัลฮาวี ฟิฏฏิบบ์” เกี่ยวกับวิธีรักษาโรคฝีดาษไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا بدت أمارات الجدري فابدأ بالفصد، وإن لم يتمكن فالحجامة إن كانت القوة ضعيفة. وإذا خرج فاسق ماء الشعير مع عدس مقشر مطبوخ. قبل أن يظهر في العين جدري فقطر فيها ماء ورد قد أنقع فيه سماق أو ماء شحم الرمان. فإن ظهر في العين جدري فقطر فيه كحلا قد حككته بماء الكزبرة الرطبة أو بماء كزبرة يابسة قد طبخت بماء المطر، واسقه طبيخ اللك والعدس والتين ليسرع الخروج، ولا تغذه بفروج ولا بغيره مما يشبهه حتى تبطل الحمى البتة ويخف الجدري، واجعل غذاءه الماش والعدس والبقول</blockquote>
+      <p class="ar-translation">“เมื่อใดที่สัญญาณของโรคฝีดาษปรากฏขึ้น จงเริ่มต้นด้วยการเจาะเลือดออก แต่หากไม่สามารถทำได้ ก็ให้ใช้วิธีครอบแก้ว ในกรณีที่ผู้ป่วยมีเรี่ยวแรงอ่อนแอ และเมื่อตุ่มฝีเริ่มผุดขึ้นมา ให้ผู้ป่วยดื่มน้ำข้าวบาร์เลย์ผสมกับถั่วเลนทิลที่ถูกลอกเปลือกแล้วก็ต้ม ก่อนที่ตุ่มฝีดาษจะลุกลามเข้าไปในดวงตา ให้หยอดตาด้วยน้ำกุหลาบที่นำไปแช่กับเครื่องเทศซูแมค (เครื่องเทศโบราณที่มีสีแดง อันเป็นเอกลักษณ์สะกดตา มีรสเปรี้ยวอมหวานคล้ายมะนาว แต่มีความหอมนุ่มนวลกว่า) หรือน้ำสกัดจากเยื่อทับทิม แต่หากฝีดาษปรากฏขึ้นในดวงตาแล้ว ให้หยอดตาด้วยผงโคห์ล (ผงทาขอบตา) ที่นำไปฝนผสมกับน้ำคั้นผักชีสด หรือน้ำต้มเมล็ดผักชีแห้งกับน้ำฝน และให้ผู้ป่วยดื่มน้ำต้มครั่ง ถั่วเลนทิล และมะเดื่อฝรั่ง เพื่อเร่งให้ตุ่มฝีขับพิษออกมา จงอย่าป้อนอาหารผู้ป่วยด้วยเนื้อไก่หรือสิ่งอื่นๆ ที่คล้ายคลึงกัน จนกว่าไข้จะสร่างลงอย่างสมบูรณ์และฝีดาษทุเลาลง และจงจัดเตรียมอาหารของเขาให้เป็นถั่วเขียว ถั่วเลนทิล และพืชตระกูลถั่ว”</p>
+      <p>นอกจากความเชี่ยวชาญด้านการรักษาแล้ว อัรรอซียังไม่ลืมที่จะจารึกเกี่ยวกับเรื่องจรรยาบรรณวิชาชีพแพทย์ โดยท่านได้ประพันธ์ความเรียงชิ้นสำคัญชื่อ “อัคลาก อัฏเฏาะบีบ” (จริยธรรมแพทย์) เพื่อให้คำแนะนำอันทรงคุณค่าแก่บรรดาแพทย์ โดยกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اعلم أنه من أصعب الأشياء للطبيب خدمة الأمراء، ومعالجة المترفين والنساء، فإن الطبيب الحر السيرة إذا اشتغل بصناعته، وحفظ الخاصة والعامة، فإنه يعيش بخير، ويكون عليهم أميرا، وإذا توسم بخدمة الملوك، ربما صار بخدمتهم أميرا لا سيما إذا كان الملك عاميا</blockquote>
+      <p class="ar-translation">“จงพึงรู้เถิดว่า หนึ่งในสิ่งที่ยากลำบากที่สุดสำหรับแพทย์ คือการรับใช้บรรดาเจ้าชาย ตลอดจนการรักษาผู้ที่จมอยู่กับความหรูหราฟุ่มเฟือยและสตรี (ในราชสำนัก) ความจริง แพทย์ผู้มีวิถีชีวิตที่เป็นอิสระ หากเขามุ่งมั่นกับวิชาชีพของตน และคอยดูแลสุขภาพของทั้งชนชั้นนำและชาวบ้านทั่วไป เขาจะมีชีวิตที่ผาสุกและกลายเป็น ผู้นำของคนเหล่านั้นโดยปริยาย แต่หากเขาเอาตัวไปผูกติดกับการรับใช้กษัตริย์ เขาอาจได้เป็นเพียงข้ารับใช้ตำแหน่งสูง โดยเฉพาะอย่างยิ่งหากกษัตริย์ผู้นั้นเป็นเพียงผู้ที่ขาดวิจารณญาณทางปัญญา”</p>
+      <p>นี่คือคำแนะนำในด้านจริยธรรมทางการแพทย์ ที่อัรรอซีได้จารึกไว้เมื่อหนึ่งพันปีก่อน</p>
+      <p>และท่านยังกล่าวไว้อีกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ينبغي للطبيب أن يوهم المريض أبدا الصحة ويرجيه بها وإن كان غير واثق بذلك فمزاج الجسم تابع لأخلاق النفس</blockquote>
+      <p class="ar-translation">“แพทย์พึงปลูกฝังความหวังและทำให้ผู้ป่วยเชื่อมั่นในการฟื้นคืนสุขภาพที่ดีอยู่เสมอ แม้ว่าตัวแพทย์เองอาจจะไม่ได้มีความมั่นใจต่อการรักษานั้นก็ตาม ทั้งนี้ เพราะสภาวะการตอบสนองของร่างกายนั้น ย่อมแปรผันและคล้อยตามสภาวะทางจิตใจ”</p>
+      <p>หลังยุคของอัรรอซีในศตวรรษที่ 4 และ 5 แห่งฮิจเราะห์ศักราช วิทยาการทางการแพทย์ได้พัฒนาไปอย่างก้าวกระโดด แพทย์มุสลิมสามารถนำเสนอส่วนผสมใหม่ๆ เข้าไปในตำรับยาและเวชภัณฑ์ เช่น อำพันทอง, การบูร, กานพลู, ปรอท, มะขามแขก และมดยอบ นอกจากนี้ พวกเขายังได้คิดค้นเวชภัณฑ์รูปแบบใหม่ๆ เข้าสู่ระบบการรักษา เช่น ยาน้ำเชื่อม, ยาจูแลป (น้ำเชื่อมสกัดสมุนไพร), น้ำกุหลาบ และอื่นๆ ซึ่งการนำเข้าเวชภัณฑ์และยาสมุนไพรของโลกอิสลามนี้ ถือเป็นหนึ่งในกิจกรรมทางการค้าที่สำคัญที่สุดระหว่างอิตาลีและภูมิภาคตะวันออกใกล้ในยุคสมัยนั้น</p>
+      <h2 class="article-h2">ชีวิตช่วงสุดท้าย</h2>
+      <p>อัรรอซีใช้ชีวิตในช่วงบั้นปลาย ณ เมืองรอย อันเป็นถิ่นกำเนิดของท่าน โดยต้องเผชิญกับความทุกข์ทรมานจากโรคต้อหิน อาการป่วยทางจักษุของท่านเริ่มต้นจากการเกิดภาวะต้อกระจก และลุกลามจนนำไปสู่การสูญเสียการมองเห็นอย่างสมบูรณ์ในท้ายที่สุด สาเหตุที่ของการสูญเสียการมองเห็นดังกล่าวยังคงเป็นที่ถกเถียงและไม่เป็นที่ยุติ บ้างก็ว่า สาเหตุดังกล่าวเกิดจากการถูกทำร้ายบริเวณศีรษะโดยมันศูร บิน อิสฮาก ผู้อุปถัมภ์ของท่าน สืบเนื่องจากความล้มเหลวในการนำเสนอข้อพิสูจน์เชิงประจักษ์สำหรับทฤษฎีการเล่นแร่แปรธาตุของท่าน บ้างก็ว่า สาเหตุดังกล่าวเป็นผลมาจากการบริโภคถั่วเพียงอย่างเดียวเป็นอาหาร อิบนุ อุศ็อยบิอะฮ์บันทึกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وعمي في آخر عمره بماء نزل في عينيه فقيل له لو قدحت فقال لا قد نظرت من الدنيا حتى مللت فلم يسمح بعينيه للقدح</blockquote>
+      <p class="ar-translation">“ในช่วงบั้นปลายชีวิต ท่านได้สูญเสียการมองเห็นอันเนื่องมาจากภาวะต้อ มีผู้เสนอแนะต่อท่านว่า เหตุใดท่านจึงไม่เข้ารับการผ่าตัดลอกต้อเล่า? ท่านได้ตอบปฏิเสธและกล่าววาทะว่า: ‘ไม่ล่ะ ข้าได้ทอดสายตามองโลกใบนี้มามากพอจนรู้สึกเบื่อหน่ายแล้ว’ ด้วยเหตุนี้ ท่านจึงไม่อนุญาตให้ผู้ใดทำการผ่าตัดดวงตาของท่านเลย”</p>
+      <p>การบรรยายทางวิชาการของอัรรอซีได้รับความสนใจและดึงดูดสานุศิษย์จำนวนมหาศาล ดังที่อิบนุ อันนะดีมได้บันทึกไว้ในอัลฟิฮ์ริสต์ว่า</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قال لي محمد بن الحسن الوراق، قال لي رجل من أهل الري شيخ كبير سألته عن الرازي فقال: كان شيخا كبير الرأس مسفطه، وكان يجلس في مجلسه ودونه التلاميذ ودونهم تلاميذهم ودونهم تلاميذ أخر، وكان يجيء الرجل فيصف ما يجد لأول من يلقاه، فإن كان عندهم علم، وإلا تعداهم إلى غيرهم، فإن أصابوا وإلا تكلم الرازي في ذلك. وكان كريما متفضلا بارا بالناس، حسن الرأفة بالفقراء والأعلاء، حتى كان يجري عليهم الجرايات الواسعة ويمرضهم. قال: ولم يكن يفارق المدارج والنسخ، ما دخلت عليه قط إلا رأيته ينسخ، إما يسود أو يبيض. وكان في بصره رطوبة لكثرة أكله للباقلاء، وعمي في آخر عمره</blockquote>
+      <p class="ar-translation">มุฮัมมัด บิน อัลฮะซัน อัลวัรรอก ได้ถ่ายทอดคำบอกเล่าให้ข้าพเจ้าฟังว่า ชายชราอาวุโสผู้หนึ่งจากเมืองรอยได้เล่าให้ข้าพเจ้าฟังเมื่อข้าพเจ้าได้สอบถามเขาเกี่ยวกับอัรรอซี โดยเขาตอบว่า: ท่านเป็นชายชราที่มีศีรษะใหญ่ลักษณะโดดเด่นและเป็นชัยค์ผู้อาวุโส โดยท่านมักจะถูกแวดล้อมด้วยวงเสวนาของบรรดาสานุศิษย์หลายระดับชั้นในกระบวนการเรียนการสอน เมื่อมีผู้ตั้งปุจฉา คำถามนั้นจะถูกส่งมอบให้แก่สานุศิษย์ใน ‘วงปฐมภูมิ’ ก่อน หากพวกเขาไม่สามารถตอบคำถามได้ คำถามจึงจะถูกส่งต่อไปยังสานุศิษย์ใน ‘วงทุติยภูมิ’ และดำเนินการสืบเนื่องไปตามลำดับชั้น และเมื่อบรรดาสานุศิษย์ในทุกระดับชั้นไม่สามารถให้คำตอบได้ อัรรอซีจึงจะเป็นผู้วินิจฉัยและตอบคำถามนั้นด้วยตัวท่านเอง โดยอุปนิสัยพื้นฐาน อัรรอซีเป็นบุคคลที่เปี่ยมไปด้วยความโอบอ้อมอารี และมีทัศนคติที่เปี่ยมด้วยความเมตตาและเอาใจใส่ต่อผู้ป่วย ท่านมักจะให้การสงเคราะห์แก่ผู้ยากไร้และผู้เจ็บไข้ได้ป่วย โดยดำเนินการรักษาพยาบาลให้โดยปราศจากการเรียกร้องค่าตอบแทนในทุกรูปแบบ (นอกจากนี้ ท่านยังได้ประพันธ์ตำราทางการแพทย์ที่ชื่อว่า มันลา ยะฮ์ฎุรุฮู อัฏเฏาะบีบ หรือ “ผู้ซึ่งไร้แพทย์ดูแล” เพื่อเป็นคู่มือและคำแนะนำด้านสุขภาพ)</p>
+      <p class="ar-translation">เขาเล่าต่อไปว่า: ท่านไม่เคยละทิ้งการศึกษาค้นคว้าและการคัดลอกตำราเลย ข้าพเจ้าไม่เคยเข้าไปหาท่านเลยสักครั้ง เว้นแต่จะได้เห็นท่านกำลังขะมักเขม้นอยู่กับการคัดลอก ไม่ว่าจะเป็นการร่างต้นฉบับ หรือการคัดลอกเพื่อทำฉบับสมบูรณ์ แต่ในเวลาต่อมา ดวงตาของท่านเกิดอาการชื้น ซึ่งเชื่อว่าเกิดจากการที่ท่านบริโภคถั่วปากอ้ามากเกินไป และส่งผลให้ท่านต้องสูญเสียการมองเห็นในบั้นปลายชีวิต”</p>
+      <p>มีบันทึกว่า อดีตสานุศิษย์ผู้หนึ่งจากแคว้นเฏาะบะริสตาน ได้เดินทางมาเพื่อคอยปรนนิบัติดูแลท่าน แต่ตามบันทึกของอัลบัยรูนีระบุว่า อัรรอซีได้มอบรางวัลตอบแทนแก่สานุศิษย์ผู้นั้นสำหรับเจตนารมณ์อันดีงาม และได้ส่งตัวเขากลับภูมิลำเนา พร้อมทั้งประกาศว่าวาระสุดท้ายแห่งชีวิตของท่านกำลังใกล้เข้ามาแล้ว และหากอ้างอิงจากหลักฐานของอัลบัยรูนี อัรรอซีได้เสียชีวิต ณ เมืองรอย ในปี ค.ศ. 925 ด้วยวัยหกสิบปี อัลบัยรูนี ผู้ซึ่งยกย่องอัรรอซีในฐานะปรมาจารย์ของตน ถือเป็นนักปราชญ์กลุ่มแรกๆ ที่ได้เรียบเรียงชีวประวัติฉบับย่อของอัรรอซี ซึ่งครอบคลุมถึงบรรณานุกรมผลงานทางวิชาการอันมหาศาลของท่านด้วย</p>
+      <p>ภายหลังการเสียชีวิต กิตติศัพท์ของท่านได้ขจรขจายข้ามพรมแดนตะวันออกกลางไปสู่ภูมิภาคยุโรปในยุคกลาง และยังคงได้รับการเชิดชูสืบมา ปรากฏหลักฐานในบัญชีรายชื่อหนังสือ (ที่ไม่ระบุปีในการบันทึก) ของห้องสมุด ณ ปีเตอร์โบโรห์ ซึ่งนักวิชาการสันนิษฐานว่าน่าจะถูกจัดทำขึ้นในช่วงศตวรรษที่ 14 ได้ระบุนามของอัรรอซีในฐานะหนึ่งในผู้ประพันธ์ร่วมของตำราทางการแพทย์จำนวนสิบเล่ม</p>
+      <p>หนึ่งในบทกวีของท่านที่ลึกซึ้งคือ</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لعمري ما أدري وقد آذن البلى بعاجل ترحال إلى أين ترحالي وأين محل الروح بعد خروجه من الهيكل المنحل والجسد البالي</blockquote>
+      <p class="ar-translation">“ด้วยสัตย์แห่งชีวิต... ข้าหาได้ล่วงรู้ไม่<br>เมื่อความร่วงโรยได้มาเยือน<br>เพื่อเตือนถึงการจากลาอันเร่งด่วน<br>ว่าปลายทางแห่งการเดินทางของข้านั้น... จะมุ่งสู่หนใด<br><br>และที่พำนักแห่งดวงวิญญาณจะอยู่ ณ แดนดินใด<br>ภายหลังจากที่มันได้หลุดลอย... จากโครงร่างที่เสื่อมสลาย และสังขารที่ผุพังทลาย”</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). อบู บักร อัรรอซี แพทย์หลวงแห่งแบกแดด. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/abu-bakr-al-razi-physician-of-baghdad.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
