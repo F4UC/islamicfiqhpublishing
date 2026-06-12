@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>อิหม่ามอันนะวาวีย์กับมรดกอรรถาธิบายศอเฮี้ยะฮ์มุสลิม — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ระเบียบวิธีของอิหม่ามอันนะวาวีย์ในการอ้างอิงตำราอรรถาธิบายศอเฮี้ยะฮ์มุสลิมจากปราชญ์มัฆริบ อัลมาซิรีย์และกอฎี อิยาฎ และการสังเคราะห์องค์ความรู้ฮะดีษจากตะวันตกสู่ตะวันออกของโลกอิสลาม">
+<meta name="keywords" content="อันนะวาวีย์, ศอเฮี้ยะฮ์มุสลิม, อัลมาซิรีย์, กอฎี อิยาฎ, อรรถาธิบายฮะดีษ, มัฆริบ-มัชริก, ประวัติศาสตร์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="อิหม่ามอันนะวาวีย์กับมรดกอรรถาธิบายศอเฮี้ยะฮ์มุสลิม — Islamic Fiqh Publishing">
+<meta property="og:description" content="เมื่อตำราอรรถาธิบายของปราชญ์มัฆริบกลายเป็นเสาหลักให้อิหม่ามอันนะวาวีย์รังสรรค์อรรถาธิบายศอเฮี้ยะฮ์มุสลิมที่ทรงอิทธิพลที่สุด">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/al-nawawi-sahih-muslim-commentary.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="al-nawawi-sahih-muslim-commentary">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">อิหม่ามอันนะวาวีย์กับมรดกอรรถาธิบายศอเฮี้ยะฮ์มุสลิม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในบทความนี้เราจะมาพูดถึงการอ้างอิงของอิหม่ามอันนะวาวีย์จากตำราอรรถาธิบายศอเฮี้ยะฮ์มุสลิม และระเบียบวิธีในการนำมาใช้จากนักวิชาการแห่งมัฆริบ นั่นคือจากตำราอัลมุอ์ลิม ของอัลมาซิรีย์ (เสียชีวิต ฮ.ศ. 536) และตำราอิกมาล อัลมุอ์ลิม ของกอฎี อิยาฎ (เสียชีวิต ฮ.ศ. 544) เป็นกรณีศึกษา</p>
+      <p>ตำราศอเฮี้ยะฮ์ของอิหม่ามมุสลิม บิน อัลฮัจญาจญ์ นับเป็นหนึ่งในรากฐานสำคัญของวิทยาการฮะดีษในโลกอิสลาม และได้รับการอรรถาธิบายอย่างต่อเนื่องจากบรรดานักวิชาการในหลากหลายภูมิภาค ความต่อเนื่องดังกล่าวไม่ได้เป็นเพียงการสืบทอดตัวบท หากแต่เป็นกระบวนการสะสม สังเคราะห์ และปรับใช้ความรู้ที่ซับซ้อน ซึ่งสะท้อนพลวัตของการผลิตองค์ความรู้ในอารยธรรมอิสลามอย่างดี โดยเฉพาะในบริบทของความสัมพันธ์ระหว่างโลกอิสลามฝั่งตะวันตก (มัฆริบ) และฝั่งตะวันออก (มัชริก)</p>
+      <p>ในช่วงหลายทศวรรษที่ผ่านมา งานศึกษาร่วมสมัยได้เสนอให้มองความสัมพันธ์ระหว่างสองภูมิภาคนี้ผ่านกรอบของ “เครือข่ายความรู้” แทนที่จะอธิบายในลักษณะศูนย์กลาง-ชายขอบแบบเดิม ดังปรากฏในบทความ The Maghrib in the Mashriq: Knowledge, Travel and Identity โดย Maribel Fierro และ Mayte Penelas ที่ชี้ให้เห็นว่าการถ่ายทอดองค์ความรู้ไม่ได้จำกัดอยู่เพียงการเคลื่อนย้ายตัวบท หากแต่รวมถึงการเคลื่อนย้ายบุคคล ระเบียบวิธี และกรอบการตีความ ซึ่งล้วนมีบทบาทในการก่อรูปอำนาจทางวิชาการในบริบทใหม่ ยิ่งไปกว่านั้น การศึกษาดังกล่าวยังเน้นว่าความรู้สามารถไหลจาก “ชายขอบสู่ชายขอบ” ได้โดยไม่จำเป็นต้องผ่านศูนย์กลางทางวิชาการแบบดั้งเดิม</p>
+      <p>ในบริบทของวิทยาการฮะดีษ งานเขียนของ Khaoula Trad เรื่อง The Impact of Maghribi Ḥadīth Commentaries on the Mashriq ได้แสดงให้เห็นว่าอรรถาธิบายฮะดีษของนักวิชาการแห่งมัฆริบ โดยเฉพาะผลงานของกอฎี อิยาฎ ไม่ได้จำกัดอิทธิพลอยู่ในบริบทท้องถิ่นเท่านั้น หากแต่ถูกนำไปใช้และตีความใหม่ในโลกมัชริกอย่างกว้างขวาง การถ่ายทอดดังกล่าวจึงควรถูกเข้าใจในฐานะกระบวนการ “สังเคราะห์ใหม่” มากกว่าการคัดลอกไปเฉยๆ ซึ่งนักวิชาการในมัชริกมีบทบาทเชิงรุกในการเลือกสรรและจัดวางองค์ความรู้ที่ได้รับมา โดยผลงานอรรถาธิบายของอิหม่ามอันนะวาวีย์ต่อศอเฮี้ยะฮ์มุสลิม ไม่ได้เป็นเพียงการรวบรวมคำอธิบายของคนยุคก่อนหน้า หากแต่เป็นกระบวนการ “สังเคราะห์เชิงระเบียบวิธี” ที่นำมรดกทางวิชาการจากมัฆริบ โดยเฉพาะผลงานของอัลมาซิรีย์และกอฎี อิยาฎ มาปรับใช้และจัดวางใหม่ภายใต้กรอบความคิดของตนเอง</p>
+      <p>กล่าวอีกนัยหนึ่งคือ อิหม่ามอันนะวาวีย์ไม่ได้เป็นเพียง “ผู้ถ่ายทอด” แต่ท่านเป็น “ตัวกลางทางปัญญา” ที่เชื่อมโยงองค์ความรู้จากมัฆริบเข้าสู่โลกมัชริก พร้อมทั้งทำหน้าที่คัดเลือก สรุป เปรียบเทียบ และให้ความสำคัญกับทรรศนะต่างๆ ในลักษณะที่สะท้อนทั้งความต่อเนื่องและความเปลี่ยนแปลงของประเพณีทางวิชาการ</p>
+      <p>เพื่อพิสูจน์ข้อเสนอนี้ บทความจะใช้กรณีศึกษาการอ้างอิงของอันนะวาวีย์จากตำราอัลมุอ์ลิม ของอัลมาซิรีย์ และอิกมาล อัลมุอ์ลิม ของกอฎี อิยาฎ โดยวิเคราะห์ทั้งในระดับของรูปแบบการอ้างอิงและในระดับของระเบียบวิธี เพื่อแสดงให้เห็นว่าการถ่ายทอดองค์ความรู้ระหว่างมัฆริบและมัชริกในกรณีนี้ ไม่ใช่เพียงการย้ายไปมาของตัวบท แต่เป็นกระบวนการสร้างความหมายใหม่ที่มีบทบาทสำคัญต่อพัฒนาการของฮะดีษในโลกอิสลามในเวลาต่อมา แต่ก่อนอื่นจะขอเกริ่นถึงตำราของสองนักปราชญ์ที่อิหม่ามอันนะวาวีย์ใช้เป็นแหล่งอ้างอิงหลักเสียก่อน</p>
+      <h2 class="article-h2">อัลมุอ์ลิม บิฟะวาอิด มุสลิม โดยอัลมาซิรีย์</h2>
+      <p>ท่านตะกียุดดีน อัซซุบกีย์ได้ชมเชยอัลมาซิรีย์เอาไว้ขณะบันทึกชีวประวัติของอิหม่ามอัลเฆาะซาลีย์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أما المازري فقبل الخوض معه في الكلام أقدم لك مقدمة، وهي أن هذا الرجل كان من أذكى المغاربة قريحة، وأحدهم ذهنا بحيث اجترأ على شرح البرهان لإمام الحرمين، وهو لغز الأمة الذي لا يحوم نحو حماه، ولا يدندن حول مغزاة إلا غواص على المعاني ثاقب الذهن مبرز في العلم... ثم هو مع ذلك مالكي المذهب شديد الميل إلى مذهبه كثير المناضلة عنه</blockquote>
+      <p class="ar-translation">“สำหรับอัลมาซิรีย์นั้น ก่อนที่เราจะลงลึกในรายละเอียดเกี่ยวกับตัวเขา ฉันขอเกริ่นนำประการหนึ่งให้ท่านทราบเสียก่อน นั่นคือ ชายผู้นี้ถือเป็นหนึ่งในปราชญ์ชาวมัฆริบที่มีสติปัญญาเฉียบแหลมและมีไหวพริบปฏิภาณอันเป็นเลิศที่สุด ถึงขั้นที่เขามีความหาญกล้าพอที่จะรังสรรค์คำอธิบายตำราอัลบุรฮานของอิหม่ามอัลฮะเราะมัยน์ ซึ่งตำราเล่มนี้เปรียบเสมือนปริศนาแห่งประชาชาติที่ไม่มีผู้ใดหาญกล้าเฉียดกรายเข้าใกล้ หรือโคจรเข้าถึงแก่นแท้ของมันได้เลย นอกเสียจากผู้ที่เป็นเสมือนนักประดาน้ำที่ดำดิ่งสู่ห้วงลึกแห่งความหมาย เป็นผู้มีสติปัญญาทะลุปรุโปร่งและปราดเปรื่องโดดเด่นในแวดวงวิชาการ แต่ในขณะเดียวกัน เขาก็เป็นนักวิชาการสังกัดมัสฮับมาลิกีย์ที่ยึดมั่นในสำนักคิดของตนอย่างแน่วแน่ และอุทิศตนปกป้องมัสฮับของเขาอย่างแข็งขัน”</p>
+      <p>ท่านอัลมาซิรีย์ไม่ได้ตั้งใจประพันธ์ตำราเล่มนี้ขึ้นมาตั้งแต่แรก แต่มันคือการบอกจดคำอธิบายที่อัลมาซิรีย์กล่าวแทรกขึ้นในขณะที่มีการอ่านตำราศอเฮี้ยะฮ์มุสลิมให้ท่านฟังในวงฮะละเกาะฮ์ช่วงเดือนรอมฎอน ฮ.ศ. 499 ดังที่ปรากฏในบทนำของตำราอัลมุอ์ลิมว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هذا كتاب قصد فيه إلى تعليق ما جرى في مجلس الفقيه الإمام الجليل أبي عبد الله محمد بن علي المازري رضي الله عنه حين القراءة عليه لكتاب مسلم بن الحجاج رحمه الله في شهر رمضان المكرم من سنة تسع وتسعين وأربعمائة منقولا ذلك بعضه بحكاية لفظ الفقيه الإمام أيده الله وأكثره بمعناه</blockquote>
+      <p class="ar-translation">“นี่คือตำราที่มุ่งรวบรวมและบันทึกคำอธิบายที่เกิดขึ้นในมัจลิสของอัลฟะกีฮ์ อบู อับดิลลาฮ์ มุฮัมมัด บิน อะลี อัลมาซิรีย์ เราะฎิยัลลอฮุอันฮ์ ในขณะที่มีการอ่านตำราของมุสลิม บิน อัลฮัจญาจญ์ เราะหิมะฮุลลอฮ์ ให้ท่านฟังในเดือนรอมฎอนอันประเสริฐ ฮ.ศ. 499 โดยเนื้อหาบางส่วนถูกถ่ายทอดมาตามถ้อยคำของท่านอิหม่ามโดยตรง และส่วนใหญ่ถูกถ่ายทอดมาโดยสรุปเอาใจความสำคัญ”</p>
+      <p>จากนั้น หลังจากที่มีการจดบันทึกและรวบรวมเสร็จสิ้น ตำราเล่มนี้ก็ถูกนำเสนอต่ออัลมาซิรีย์ ซึ่งท่านได้ตรวจทานและขัดเกลาเนื้อหาอีกครั้ง อิบนุลอับบารได้ระบุไว้ในประวัติของอุบัยดุลลอฮ์ บิน อับดุลลอฮ์ อิบนุ อัยชูน ในตำราอัตตักมิละฮ์ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لقي أيضا أبا عبد الله المازري بالمهدية، وحكى عنه أنه سمعه يقول وقد جرى كتابه المعلم بفوائد صحيح مسلم: أني لم أقصد تأليفه وإنما كان السبب فيه أنه قرئ علي كتاب مسلم في شهر رمضان، فتكلمت على نقط منه، فلما فرغنا من القراءة عرض علي الأصحاب ما أمليته عليهم، فنظرت فيه، وهذبته فهذا كان سبب جمعه. أو كلاما معناه</blockquote>
+      <p class="ar-translation">“เขาได้พบกับอบู อับดิลลาฮ์ อัลมาซิรีย์ที่เมืองอัลมะฮ์ดียะฮ์ และได้เล่าถึงตอนที่ตำราอัลมุอ์ลิม บิฟะวาอิด ศอเฮี้ยะฮ์มุสลิมของท่านถูกหยิบยกขึ้นมาพูดถึง โดยได้ยินอัลมาซิรีย์กล่าวว่า: ‘ฉันไม่ได้ตั้งใจจะประพันธ์ตำราเล่มนี้ แต่สาเหตุคือมีการอ่านตำราศอเฮี้ยะฮ์มุสลิมให้ฉันฟังในเดือนรอมฎอน ฉันจึงอธิบายขยายความในบางประเด็น ครั้นเมื่อเราอ่านกันจบ บรรดาสานุศิษย์ก็นำสิ่งที่ฉันบอกจดแก่พวกเขามาเสนอแก่ฉัน ฉันจึงตรวจทานและขัดเกลามัน และนี่คือสาเหตุของการรวบรวมตำราเล่มนี้’”</p>
+      <p>อัลมาซิรีย์ไม่ได้อรรถาธิบายและขยายความฮะดีษทุกบทในตำราศอเฮี้ยะฮ์มุสลิม เนื่องจากความตั้งใจเดิมไม่ใช่การประพันธ์ตำรา แต่เป็นเพียงคำอธิบายเชิงอรรถที่กล่าวแทรกขึ้นระหว่างที่มีการอ่านตำราให้ฟัง ด้วยเหตุนี้ ท่านจึงไม่ได้มีระเบียบวิธีตายตัวในการอรรถาธิบาย บางครั้งอธิบายยืดยาว บางครั้งสรุปรวบรัด และบางครั้งก็ข้ามบางบทไป โดยส่วนใหญ่ท่านมักใช้ความรวบรัด ทั้งนี้ จำนวนฮะดีษที่ท่านหยิบยกขึ้นมาอธิบายในตำรานี้มีทั้งสิ้น 1,363 บท</p>
+      <p>แม้ระเบียบวิธีจะไม่ได้ถูกกำหนดไว้อย่างตายตัว แต่ก็มีมิติบางประการที่ปรากฏเด่นชัดในตำราของท่าน ได้แก่:</p>
+      <p><strong>1. การอธิบายคำศัพท์ที่เข้าใจยาก</strong></p>
+      <p>อัลมาซิรีย์ให้ความสำคัญอย่างมากกับการอธิบายคำศัพท์ที่แปลกหรือเข้าใจยาก ท่านชี้แจงความหมายของถ้อยคำพร้อมวิเคราะห์อย่างลึกซึ้ง โดยนำเสนอความขัดแย้งทางภาษาศาสตร์ในประเด็นนั้นก่อนจะให้น้ำหนักกับความหมายที่ท่านเห็นว่าถูกต้องที่สุด โดยอาศัยหลักฐานจากโองการอัลกุรอาน ฮะดีษของท่านนบี ﷺ ตลอดจนบทกวีของปรมาจารย์ด้านภาษาและวรรณคดี ในฮะดีษหลายบท ท่านจำกัดขอบเขตไว้เพียงอธิบายความหมายทางภาษาของคำศัพท์ โดยคัดลอกความหมายมาจากผู้นำทางภาษาศาสตร์ เช่น อัลอัศมะอีย์, อิบนุ อัลอันบารีย์, อิบนุ ดุรัยด์, อัซซัจญาจญ์, อิบนุ อัสสิกกีต, อัลมุบัรริด, อบู อุบัยด์ และท่านอื่นๆ อีกมากมาย</p>
+      <p><strong>2. การสกัดข้อกฎหมายและการเทียบมัสฮับ</strong></p>
+      <p>นอกเหนือจากการอธิบายคำศัพท์ยากแล้ว ท่านยังให้ความสำคัญกับข้อกฎหมายที่แฝงอยู่ในฮะดีษ การสกัดข้อชี้ขาด ตลอดจนการระบุทรรศนะของนักปราชญ์ในประเด็นนั้นพร้อมหลักฐานของแต่ละทรรศนะ จากนั้นจะวิเคราะห์ให้น้ำหนักเปรียบเทียบระหว่างมัสฮับต่างๆ พร้อมอธิบายสาเหตุเบื้องหลังที่ทำให้เกิดความขัดแย้งในประเด็นดังกล่าว</p>
+      <p><strong>3. การวิจารณ์สายรายงาน</strong></p>
+      <p>อัลมาซิรีย์ให้ความใส่ใจในตำราอัลมุอ์ลิมเกี่ยวกับการวิจารณ์สายรายงาน ท่านอธิบายถึงเส้นทางการรายงานและสายรายงานที่หลากหลายของฮะดีษ ตลอดจนชี้แจงตอบโต้ข้อครหาที่พาดพิงถึงสายรายงานบางสายในบางโอกาส ทั้งหมดนี้คือคุณลักษณะที่โดดเด่นที่สุดในตำราอัลมุอ์ลิม บิฟะวาอิด มุสลิม แต่ก็ยังมีคุณลักษณะอื่นๆ ที่อาจไม่เด่นชัดเท่า เช่น การโต้แย้งในประเด็นที่เกี่ยวกับหลักความเชื่อ การพูดถึงการคัดลอกตำราและสายรายงานต่างๆ ตลอดจนการแจ้งเตือนให้เห็นความแตกต่างและข้อขัดแย้งที่ปรากฏระหว่างสายการคัดลอกเหล่านั้น</p>
+      <h2 class="article-h2">อัลอิกมาล อัลมุอ์ลิม บิฟะวาอิด มุสลิม โดยกอฎี อิยาฎ</h2>
+      <p>และหากตำราอัลมุอ์ลิมของอัลมาซิรีย์ถือเป็นผลงานบุกเบิกที่ไขกุญแจเปิดความเร้นลับของตำราศอเฮี้ยะฮ์เล่มนี้แล้ว ตำราอิกมาล อัลมุอ์ลิมของกอฎี อิยาฎ ก็ได้ก้าวเข้ามาเติมเต็มโครงสร้างดังกล่าวให้สมบูรณ์ ชดเชยสิ่งที่ตกหล่น และคลี่คลายเนื้อหาที่ยังคลุมเครือ เพื่อก้าวขึ้นเป็นตำราอรรถาธิบายที่ครอบคลุมและเก่าแก่ที่สุดที่ตกทอดมาถึงเราอย่างครบถ้วนสมบูรณ์</p>
+      <p>ความสัมพันธ์ทางวิชาการระหว่างตำราทั้งสองเล่มนี้ เหนือไปกว่าการเป็นเพียงตำราอรรถาธิบายและตำราภาคผนวก เพราะมันคือความสัมพันธ์แห่ง “การเติมเต็ม” เชิงวิพากษ์ แม้ว่ากอฎี อิยาฎจะดำเนินรอยตามวิถีแห่งความกตัญญูต่อผู้เป็นอาจารย์ โดยกล่าวสรรเสริญการวินิจฉัยของอัลมาซิรีย์และยืนหยัดปกป้องทรรศนะของท่านในหลายวาระ แต่ด้วยความซื่อสัตย์ทางวิชาการและวิสัยทัศน์อันกว้างไกล ได้ผลักดันให้กอฎี อิยาฎต้องใช้ทักษะการวินิจฉัยของตนในการตรวจสอบและท้วงติงอาจารย์ในหลายประเด็น ซึ่งนำไปสู่ความเห็นที่แตกต่างกันในมิติของการอ้างอิงหลักฐานและการเลือกให้น้ำหนักทรรศนะ</p>
+      <p>กอฎี อิยาฎมีความรอบรู้ในศาสตร์แขนงต่างๆ มากมาย แต่ความเชี่ยวชาญที่โดดเด่นที่สุดของท่านคือวิทยาการฮะดีษ ดังที่อิบนุ คอลลิกานได้กล่าวไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إمام الحديث في وقته، وأعرف الناس بعلومه. ومثل ذلك جاء عن ابن الأبار في معجم أصحاب الصدفي ذاكرا أنه لا يدرك شأوه، ولا يبلغ مداه في العناية بصناعة الحديث وتقييد الآثار، وخدمة العلم مع حسن التفنن، والتصرف الكامل في فهم معانيه إلى اضطلاعه بالأدب، وتحققه بالنظم والنثر، ومهارته في الفقه</blockquote>
+      <p class="ar-translation">“ท่านคืออิหม่ามแห่งฮะดีษในยุคสมัยของท่าน และเป็นผู้รู้ซึ้งในวิทยาการฮะดีษมากที่สุด ในทำนองเดียวกัน อิบนุลอับบารได้บันทึกไว้ในมุอ์ญัม อัศฮาบ อัศเศาะดะฟีย์ โดยระบุว่าไม่มีผู้ใดก้าวตามทันหรือไปถึงจุดสูงสุดของท่านได้ในแง่ของความใส่ใจในกระบวนการประเมินฮะดีษ การจดบันทึกร่องรอยสายรายงาน และการอุทิศตนเพื่อรับใช้วิชาความรู้ ควบคู่ไปกับความแตกฉานอย่างงดงาม ความสามารถอันสมบูรณ์แบบในการทำความเข้าใจความหมาย ตลอดจนความเชี่ยวชาญด้านวรรณคดี ความลึกซึ้งในการประพันธ์ทั้งร้อยกรองและร้อยแก้ว และความชำนาญในด้านนิติศาสตร์”</p>
+      <p>กอฎี อิยาฎให้ความสำคัญกับอัลมาซิรีย์เป็นอย่างมาก โดยให้เกียรติเรียกขานท่านด้วยคำว่า “อิหม่าม” ในตำราอัลอิกมาล เพื่อเป็นการยอมรับในสถานะความเป็นผู้นำและความเป็นเลิศของอัลมาซิรีย์ที่เหนือกว่าผู้ใด สิ่งนี้เองเป็นแรงผลักดันให้ท่านยึดเอาตำราอรรถาธิบายศอเฮี้ยะฮ์มุสลิมของอัลมาซิรีย์เป็นเสาหลักในงานอรรถาธิบายของท่านเอง ซึ่งตั้งชื่อว่า “อิกมาล อัลมุอ์ลิม”</p>
+      <p>แต่กอฎี อิยาฎกลับไม่ได้มีท่าทีถ่อมตนต่อผลงานตนเองในลักษณะเดียวกับที่อิบนุ ฮะญัรมีต่ออิหม่ามอัซซะฮะบีย์ เมื่อครั้งที่อิบนุ ฮะญัรประพันธ์ตำราลิซาน อัลมีซานแล้วพบว่าผลงานของตนขยายขอบเขตจนดูเหมือนจะข่มทับต้นฉบับเดิม จนอิบนุ ฮะญัรถึงกับกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لو استقبلت من أمري ما استدبرت ما سميته بلسان الميزان</blockquote>
+      <p class="ar-translation">“หากฉันรู้ล่วงหน้าอย่างที่รู้ในภายหลัง ฉันคงไม่ตั้งชื่อมันว่า ลิซาน อัลมีซาน หรอก”</p>
+      <p>ท่านกอฎี อิยาฎได้ให้ความเอาใจใส่อย่างลึกซึ้งต่อตำราของอัลมาซิรีย์ และได้ตรวจสอบท้วงติงอัลมาซิรีย์ในบางประเด็นทางวิชาการ พร้อมให้ข้อชี้แนะต่อบางทรรศนะและการเลือกให้น้ำหนักของอัลมาซิรีย์ในประเด็นเหล่านั้น ตลอดจนแก้ไขเพิ่มเติมและต่อยอดผลงานของอาจารย์ ในการนี้ท่านได้เลือกใช้สำนวนเฉพาะทางในการท้วงติงหลายประการ อาทิ “สิ่งที่ถูกต้องคือ” (<span class="ar-inline" lang="ar" dir="rtl">والصواب</span>), “และนั่นคือสิ่งที่ทำให้ความหมายถูกต้องสมบูรณ์” (<span class="ar-inline" lang="ar" dir="rtl">وهو الذي يصح به المعنى</span>), “การตีความเช่นนี้ไม่สอดคล้องกับบริบทของฮะดีษ” (<span class="ar-inline" lang="ar" dir="rtl">وهذا التأويل لا يستقيم على مساق الحديث</span>), “เป็นการคับแคบเกินไปที่จะนำไปตีความว่า” (<span class="ar-inline" lang="ar" dir="rtl">يضيق حمله على</span>) และ “สิ่งที่ฉันได้อ่านพบใน” (<span class="ar-inline" lang="ar" dir="rtl">الذي قرأته في</span>) ตลอดจนสำนวนอื่นๆ อีกมากมาย</p>
+      <p>กอฎี อิยาฎได้ให้ความสำคัญกับศอเฮี้ยะฮ์มุสลิมผ่านผลงาน 2 เล่ม ดังที่ท่านกล่าวไว้ในบทนำของตำราอัลอิกมาลว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الحمد لله المستفتح بحمد كل أمر ذي بال والصلاة والسلام على محمد المصطفى نبيه وعلى آله خير آل، والضراعة إليه جل اسمه في توفيقي وتسديدي لما أدبره وأحبره من مقال وأن يخلصه عن التصنع لغير وجهه ذي الجلال، وبعد فإني عند اجتماع طلبة العلم لدي في التفقه في صحيم الإمام أبي الحسين مسلم بن الحجاج رحمه الله، ولم يكن في ذلك كتاب مختص بهذه الأم، ولا تأليف اعتنى به كالاعتناء بغيره ممن تقدم إلا كتابي شيخنا الحافظ أبي علي الحسن بن محمد الغساني الجياني في الكلام على مشكل أسانيده في كتابه الذي ألفه على هذا الكتاب وكتاب الصحيح للإمام أبي عبد الله البخاري المسمى بتقييد المهمل، وكتاب الإمام أبي عبد الله محمد بن علي بن عمر التميمي المازري في شرح معانيه المسمى بالمعلم، وإن كان قد أودعه جملة صالحة مما في كتاب الحافظ أبي علي من الكلام على إسناده، وكلام كل من الكتابين بارع في فنه، بالغ في بابه، مودع في فنون المعارف وفوائدها، وغرائب علوم الأثر وشواردها، ما تلقى كل واحد منهما بالقبول، وبلغ الطالب من رغبته المأمول، وكل واحد من الكتابين أجازه لنا مؤلفه أعظم الله أجورهما وأشرق بما سعيا فيه بين أيديهما وبأيمانهما نورهما ... لكن الإحاطة على البشر ممتنعة</blockquote>
+      <p class="ar-translation">“มวลการสรรเสริญเป็นสิทธิแด่อัลลอฮ์ ผู้ซึ่งทุกกิจการอันสำคัญล้วนเริ่มต้นด้วยการสรรเสริญพระองค์ ขอความศานติและพรจงประสบแด่มุฮัมมัด ศาสดาผู้ทรงถูกคัดเลือก ตลอดจนวงศ์วานของท่านซึ่งประเสริฐยิ่ง... อนึ่ง เมื่อบรรดานักศึกษาได้มารวมตัวกัน ณ มัจลิสของฉัน เพื่อศึกษาทำความเข้าใจตำราศอเฮี้ยะฮ์ของอิหม่ามอบู ฮุเซน มุสลิม บิน อัลฮัจญาจญ์ ฉันพบว่ายังไม่มีตำราเล่มใดที่เจาะจงอธิบายตำราแม่บทเล่มนี้โดยเฉพาะ นอกเสียจากตำราของอาจารย์ของเรา คือ อัลฮาฟิซ อบู อะลี อัลฆ็อสซานีย์ อัลญัยยานีย์ ที่อธิบายความซับซ้อนของสายรายงานในชื่อ ‘ตักยีด อัลมุฮ์มัล’ และตำราของอิหม่ามอบู อับดิลลาฮ์ อัลมาซิรีย์ ที่อธิบายความหมายของฮะดีษในชื่อ ‘อัลมุอ์ลิม’ เนื้อหาของตำราทั้งสองล้วนเป็นเลิศในแขนงวิชาของตน ถูกบรรจุไว้ด้วยสรรพวิทยาการและเกร็ดความรู้อันทรงคุณค่า... ผู้ประพันธ์ตำราทั้งสองต่างมอบอิญาซะฮ์ให้เราถ่ายทอดผลงานของพวกเขา ขออัลลอฮ์ทรงทวีผลบุญแก่ทั้งสอง... แต่การที่มนุษย์จะมีความรู้ครอบคลุมไปเสียทุกสรรพสิ่งนั้น ย่อมเป็นสิ่งที่เป็นไปไม่ได้”</p>
+      <p>แนวทางการประพันธ์ของกอฎี อิยาฎจะระบุสิ่งที่ต้นฉบับคือตำราอัลมุอ์ลิมได้กล่าวไว้ จากนั้นจึงให้ความเห็นเพิ่มเติมด้วยถ้อยคำของท่านเอง โดยมุ่งเน้นความใส่ใจไปใน 2 ด้านหลัก ได้แก่ ประการแรก การเติมเต็มการอธิบายความหมายของฮะดีษ ไม่ว่าจะเป็นประเด็นที่อัลมาซิรีย์ไม่ได้กล่าวถึง หรือประเด็นที่กล่าวไว้แล้วแต่ยังจำเป็นต้องเติมเต็มให้สมบูรณ์ และประการที่สอง การให้ความสำคัญกับการวิเคราะห์สายรายงาน อันถือเป็นการเติมเต็มให้แก่ตำราตักยีด อัลมุฮ์มัลของอบู อะลี อัลญัยยานีย์ ทั้งนี้เพราะดังที่กอฎี อิยาฎกล่าวไว้ว่า “ความสมบูรณ์แบบในหมู่มนุษย์นั้นเป็นสิ่งที่เป็นไปไม่ได้”</p>
+      <p>ปัจจุบันตำราอัลอิกมาลมีฉบับคัดลอก (ต้นฉบับตัวเขียน) กระจายอยู่ในหอสมุดหลายแห่งในประเทศตูนิเซียและที่อื่นๆ นอกจากนี้ยังมีตำราอื่นที่เกี่ยวเนื่อง ซึ่งผู้ประพันธ์รุ่นหลังเขียนต่อยอด (เรียกว่า ซัยล์) จากตำราอิกมาล หรือเป็นตำราที่ว่าด้วยการเติมเต็มหรือการสรุปความ (เรียกว่า อิคติศอร) เพื่อให้เนื้อหารัดกุมยิ่งขึ้น เช่น ตำราอิกมาล อัลอิกมาล และมุกัมมิล อิกมาล อัลอิกมาล ดังนั้น อัลกอฎี อิยาฎจึงยกคำของอัลมาซิรีย์มาแล้วต่อยอดเพิ่มเติม ทำให้หนังสือของท่านสามารถใช้แทนอัลมุอ์ลิมได้ แต่ถึงอย่างนั้น อัลมุอ์ลิมก็ยังคงเป็นต้นฉบับดั้งเดิมที่คำอธิบายกระชับแต่อัดแน่นไปด้วยประโยชน์</p>
+      <p>ทั้งนี้ ตัวกอฎี อิยาฎเองก็ยังได้ทำการย่อและขยายความหนังสืออัลอิกมาลด้วยตัวท่านเอง และตั้งชื่อหนังสือว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-feature">منة الرب المنعم في ترتيب وتهذيب إكمال المعلم بفوائد مسلم</blockquote>
+      <p>โดยท่านยังคงมุ่งรักษาสาระประโยชน์ที่รวบรวมไว้ในตำราอิกมาล อัลมุอ์ลิม อรรถาธิบายฉบับนี้มีจุดเด่นหลายประการ อาทิ การยึดหลักการอรรถาธิบายด้วยตัวบทหลักฐานทางศาสนาที่ถ่ายทอดมาจากอดีต ควบคู่ไปกับการอรรถาธิบายด้วยการวิเคราะห์เชิงเหตุผล และอุดมไปด้วยเนื้อหาที่ครอบคลุมทั้งศาสตร์แห่งการตีความอัลกุรอาน, การอธิบายคำศัพท์ยากในฮะดีษ, การระบุการออกเสียงและการสะกดคำอย่างรัดกุม, รายชื่อผู้รายงานและสายสกุล, ชื่อสถานที่และเมืองต่างๆ ตลอดจนวิทยาการภาษาอาหรับ โดยจะเริ่มจากการแจกแจงทรรศนะของมัสฮับมาลิกีย์ของท่านก่อนเป็นลำดับแรก จากนั้นจึงนำเสนอข้อกฎหมายของมัสฮับอื่นๆ ด้วยความยุติธรรม เป็นกลาง และปราศจากอคติ</p>
+      <p>ข้อท้วงติงของกอฎี อิยาฎในตำราอิกมาล อัลมุอ์ลิม เผยให้เห็นสถานะทางวิชาการอันสูงส่ง และความรอบรู้ลึกซึ้งในศาสตร์แห่งการริวายะฮ์และการวิเคราะห์ทำความเข้าใจตัวบท (ดิรอยะฮ์) การทบทวนและต่อยอดทางวิชาการเหล่านี้สะท้อนให้เห็นแก่นแท้อันสูงสุดของความเป็นธรรมทางวิชาการ เนื่องจากความเห็นต่างที่ท่านมีต่ออัลมาซิรีย์ผู้เป็นอาจารย์นั้น ไม่ใช่อื่นใดนอกจากมิติหนึ่งของความซื่อสัตย์ทางวิชาการที่ถูกหุ้มไว้ด้วยมารยาทอันงดงาม ระเบียบวิธีซึ่งตั้งอยู่บนการผสานรวมระหว่างการวิพากษ์และการให้เกียรตินี้ ถือเป็นแบบอย่างอันทรงคุณค่าที่หาได้ยากยิ่งในการบริหารจัดการความเห็นต่างทางวิชาการในสังคมร่วมสมัย</p>
+      <h2 class="article-h2">จุดเริ่มต้นของตำราอรรถาธิบายของอิหม่ามอันนะวาวีย์</h2>
+      <p>ไม่มีสำเนาใดเลยที่ระบุวันที่ท่านเริ่มเขียนตำราไว้ นอกจากฉบับของห้องสมุดอัสสะลีมียะฮ์ที่ตุรกี ซึ่งคัดลอกมาจากต้นฉบับของอิหม่ามอันนะวาวีย์โดยตรง โดยผู้คัดลอกได้เขียนกำกับไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قال مؤلفه: بدأت فيه أول يوم الاثنين ثالث رجب سنة أربع وستين وستمائة</blockquote>
+      <p class="ar-translation">“ผู้ประพันธ์ (คืออิหม่ามอันนะวาวีย์) ระบุว่า: ฉันได้เริ่มเขียนตำราเล่มนี้ในวันจันทร์ที่ 3 เดือนรอญับ ฮ.ศ. 664”</p>
+      <p>และวันที่เขียนเล่มแรกจบ ท่านระบุไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فرغت منه يوم الجمعة الثاني من جمادى الآخرة سنة ست وستين وستمائة</blockquote>
+      <p class="ar-translation">“ฉันได้ประพันธ์ (เล่มแรก) เสร็จสิ้นในวันศุกร์ที่ 2 เดือนญุมาดัลอาคิเราะฮ์ ฮ.ศ. 666”</p>
+      <p>ซึ่งได้ความว่าเล่มแรกท่านใช้เวลาเขียน 2 ปี กับอีก 5 วัน ส่วนวันที่เขียนเล่มที่ 2 เสร็จสิ้น ท่านระบุไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فرغت منه يوم الأحد الخامس عشر من شهر ربيع الآخر سنة ثنتين وسبعين وستمائة</blockquote>
+      <p class="ar-translation">“ฉันได้ประพันธ์ (เล่มสอง) เสร็จสิ้นในวันอาทิตย์ที่ 15 เดือนรอบิอุลอาคิร ฮ.ศ. 672”</p>
+      <p>ซึ่งหากนับจากวันที่เขียนเล่มแรกเสร็จจนถึงวันที่เขียนเล่มที่สองเสร็จ ท่านใช้เวลา 6 ปี กับอีก 13 วัน ส่วนในเล่มที่ 3 มีระบุไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قال مؤلفه: بدأت فيه أول يوم الإثنين السادس عشر من شهر ربيع الآخر سنة ثنتين وسبعين وستمائة</blockquote>
+      <p class="ar-translation">“ผู้ประพันธ์ระบุว่า: ฉันได้เริ่มเขียนตำรา (เล่มสาม) ในวันจันทร์ที่ 16 เดือนรอบิอุลอาคิร ฮ.ศ. 672”</p>
+      <p>ก็คือหลังจากเขียนเล่มสองเสร็จเมื่อวาน วันรุ่งขึ้นท่านก็เขียนเล่มที่สามต่อทันที แต่เล่มที่สามไม่มีฉบับใดระบุว่าท่านเขียนเสร็จเมื่อไร ส่วนเล่มที่ 4 ซึ่งเป็นเล่มสุดท้าย ท่านไม่ได้ระบุวันเริ่มต้น แต่ระบุวันที่เขียนเสร็จไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فرغت منه أول يوم الإثنين الثالث والعشرين من جمادى الأولى سنة خمس وسبعين وستمائة وأجزته روايته لجميع المسلمين</blockquote>
+      <p class="ar-translation">“ฉันได้ประพันธ์ (เล่มสุดท้าย) เสร็จสิ้นในวันจันทร์ที่ 23 เดือนญุมาดัลอูลา ฮ.ศ. 675 และฉันอิญาซะฮ์ตำราชุดนี้ให้แก่มุสลิมทุกคน”</p>
+      <p>โดยใช้เวลาเขียนทั้งหมด 11 ปี กับอีก 20 วัน และหลังจากนั้นอีก 1 ปี 2 เดือน กับอีก 9 วัน ท่านจึงเสียชีวิตลง โดยในช่วงนี้ยังมีหนังสืออีก คือ อรรถาธิบายอัลบุคอรีย์ที่ท่านประพันธ์ไว้ก่อนแล้ว และอัลมัจมูอ์ ชัรห์ อัลมุฮัซซับที่ประพันธ์ขึ้นทีหลัง</p>
+      <h2 class="article-h2">ระเบียบวิธีอ้างอิงของอันนะวาวีย์จากอัลมาซิรีย์และกอฎี อิยาฎ</h2>
+      <p>อิหม่ามอันนะวาวีย์ได้รับประโยชน์อย่างมหาศาลในการเขียนอรรถาธิบายศอเฮี้ยะฮ์มุสลิม จากตำราอรรถาธิบายของสองอิหม่ามผู้ยิ่งใหญ่ ท่านยึดตำราทั้งสองเป็นแหล่งข้อมูลหลัก โดยอัญเชิญทรรศนะและคำอธิบายของทั้งสองมานำเสนออย่างรอบด้าน ทั้งในมิติการรายงานฮะดีษ (ริวายะฮ์) การวิเคราะห์ตัวบท (ดิรอยะฮ์) ตลอดจนนิติศาสตร์ หลักความเชื่อ ภาษาศาสตร์ และแขนงวิชาอื่นๆ</p>
+      <p>ระเบียบวิธีของท่านโดดเด่นด้วยการรักษา “ความซื่อสัตย์ทางวิชาการ” อย่างเคร่งครัดในการอ้างอิงและคัดลอกเนื้อหา โดยจะระบุชื่อของทั้งสองท่านอย่างชัดเจน บางครั้งระบุเพียงชื่อตำรา หรือระบุทั้งชื่อตำราและชื่อผู้แต่งควบคู่กัน หนึ่งในความละเอียดอ่อนของท่านคือ การกำหนดขอบเขตของคำกล่าวด้วยวลีที่แบ่งแยกชัดเจน เช่น “นี่คือคำกล่าวของ...” หรือ “นี่คือจุดสิ้นสุดคำกล่าวของเขา” และบางครั้งจะเตือนว่าสิ่งที่คัดลอกมาเป็นเพียง “บทสรุป” เพื่อปกป้องต้นฉบับจากการถูกเข้าใจผิดว่าเป็นการคัดลอกคำต่อคำ หรือระบุการอ้างอิงผ่านคนกลางว่า “อัลมาซิรีย์กล่าวว่า กอฎี อิยาฎกล่าวว่า” เป็นต้น</p>
+      <p>ระเบียบวิธีของท่านยังหลากหลายขึ้นอยู่กับเนื้อหา บางครั้งนำเสนอทรรศนะของทั้งสองควบคู่กันพร้อมให้น้ำหนักทรรศนะใดทรรศนะหนึ่ง ตัวอย่างเช่น ในประเด็นฮะดีษเรื่องการถือศีลอดวันอาชูรออ์ของชาวยิว หลังจากที่ท่านยกคำกล่าวของอัลมาซิรีย์และการท้วงติงของกอฎี อิยาฎแล้ว ท่านได้สรุปว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قلت: المختار قول المازري ومختصر ذلك أنه صلى الله عليه وسلم كان يصومه كما تصومه قريش في مكة، ثم قدم المدينة فوجد اليهود يصومونه فصامه أيضا بوحي، أو تواتر، أو اجتهاد، لا بمجرد أخبار آحادهم والله أعلم</blockquote>
+      <p class="ar-translation">“ฉันขอกล่าวว่า: ทรรศนะที่ถูกเลือกคือทรรศนะของอัลมาซิรีย์ ซึ่งสรุปได้ว่า แท้จริงท่านนบี ﷺ เคยถือศีลอดในวันนั้นตามที่ชาวกุเรชเคยปฏิบัติในนครมักกะฮ์ ต่อมาเมื่อท่านอพยพมายังนครมะดีนะฮ์ ท่านพบว่าชาวยิวก็ถือศีลอดในวันนั้น ท่านจึงถือศีลอดตามด้วยเช่นกันโดยอาศัยวะฮีย์ หรือการรายงานระดับมุตะวาติร หรือผ่านการวินิจฉัยของท่านเอง ไม่ใช่เพียงเพราะรับฟังจากคำบอกเล่าของสายรายงานเดี่ยว (อาฮาด) ของชาวยิวแต่เพียงอย่างเดียว วัลลอฮุอะอ์ลัม”</p>
+      <p>อีกตัวอย่างหนึ่งคือ เมื่อครั้งที่ท่านอธิบายความหมายของวจนะของท่านนบี ﷺ ที่กล่าวถึงผู้เสียชีวิตในสมรภูมิบะดัร ซึ่งบันทึกโดยอัลบุคอรีย์ว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">مَا أَنْتُمْ بِأَسْمَعَ لِمَا أَقُولُ مِنْهُمْ</p>
+      </div>
+      <p class="ar-translation">{พวกท่านไม่ได้ยินสิ่งที่ฉันพูดนี้ชัดเจนไปกว่าพวกเขา (ผู้ตาย) แต่อย่างใด}</p>
+      <p>ท่านอันนะวาวีย์ระบุว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قال المازري: قال بعض الناس: الميت يسمع عملا بظاهر هذا الحديث، ثم أنكره المازري وادعى أن هذا خاص في هؤلاء، ورد عليه القاضي عياض، وقال: يحمل سماعهم على ما يحمل عليه سماع الموتى في أحاديث عذاب القبر وفتنته التي لامدفع لها، وذلك بإحيائهم، أو إحياء جزء منهم يعقلون به ويسمعون في الوقت الذي يريد الله هذا كلام القاضي وهو الظاهر المختار الذي يقتضيه أحاديث السلام على القبور</blockquote>
+      <p class="ar-translation">“อัลมาซิรีย์กล่าวว่า: มีคนบางกลุ่มให้ทรรศนะว่าคนตายสามารถได้ยินได้ โดยยึดตามความหมายตามตัวอักษรของฮะดีษบทนี้ จากนั้นอัลมาซิรีย์ก็ปฏิเสธความเข้าใจนี้ โดยอ้างว่าเป็นกรณีเฉพาะสำหรับผู้ที่เสียชีวิตในสมรภูมินั้นเท่านั้น แต่กอฎี อิยาฎโต้แย้งทรรศนะนี้และกล่าวว่า: การได้ยินของพวกเขาควรถูกตีความในบริบทเดียวกับการได้ยินของคนตายในฮะดีษที่ว่าด้วยการลงโทษและการทดสอบในหลุมศพซึ่งไม่อาจปฏิเสธได้ นั่นคือการที่อัลลอฮ์ทรงให้พวกเขากลับมีชีวิต หรือให้ชีวิตคืนสู่บางส่วนของร่างกาย เพื่อให้พวกเขารับรู้และได้ยินในห้วงเวลาที่พระองค์ทรงประสงค์... นี่คือคำกล่าวของกอฎี และเป็นทรรศนะที่ชัดเจนและถูกเลือก ซึ่งสอดคล้องกับบรรดาฮะดีษที่ว่าด้วยการให้สลามแก่ผู้ที่อยู่ในหลุมศพ”</p>
+      <p>อีกหนึ่งระเบียบวิธีในการอ้างอิงของท่านคือ การคล้อยตามและตอกย้ำเพื่อสนับสนุนทรรศนะที่ปราชญ์ทั้งสองนำเสนอ โดยเมื่อท่านวางรากฐานคำอธิบายในประเด็นใดแล้ว ท่านจะนำทรรศนะของอัลมาซิรีย์และกอฎี อิยาฎมากล่าวเสริมต่อท้าย โดยระบุว่า “และนัยแห่งความหมายที่ฉันได้กล่าวไปนั้น ก็เป็นไปตามที่...ได้กล่าวไว้” (<span class="ar-inline" lang="ar" dir="rtl">وقد قال معنى ما ذكرته</span>) ตัวอย่างเช่น คำอธิบายของท่านเมื่อขยายความวจนะของท่านนบี ﷺ ที่กล่าวถึงการละหมาดว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">من توضأ مثل وضوئي هذا، ثم صلى ركعتين لا يحدث فيهما نفسه، غفر له ما تقدم من ذنبه</p>
+      </div>
+      <p class="ar-translation">{ผู้ใดอาบน้ำละหมาดเหมือนกับการอาบน้ำละหมาดของฉันนี้ แล้วละหมาดสองร็อกอะฮ์ โดยไม่ปล่อยให้ใจของเขาฟุ้งซ่านไปกับสิ่งอื่น เขาจะได้รับการอภัยโทษต่อบาปที่ผ่านมาของเขา}</p>
+      <p>โดยท่านกล่าวอธิบายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فالمراد لا يحدث بشيء من أمور الدنيا، ومالا يتعلق بالصلاة ولو عرض له حديث فأعرض عنه بمجرد عروضه عفي عن ذلك، وحصلت له هذه الفضيلة إن شاء الله تعالى ؛لأن هذا ليس من فعله، وقد عفي لهذه الأمة عن الخواطر التي تعرض ولا تستقر، وقد تقدم بيان هذه القاعدة في كتاب الإيمان والله تعالى أعلم، وقد قال معنى ما ذكرته الإمام أبو عبد الله المازري، وتابعه عليه القاضي عياض فقال: يريد بحديث النفس الحديث المجتلب والمكتسب، وأما ما يقع في الخواطر غالبا فليس هو المراد</blockquote>
+      <p class="ar-translation">“จุดประสงค์ก็คือ เขาจะต้องไม่นำเรื่องราวทางโลกหรือสิ่งที่ไม่เกี่ยวกับการละหมาดมาคิดในใจ แต่หากมีเรื่องใดแวบเข้ามาในหัวแล้วเขารีบปัดทิ้งไปทันที สิ่งนั้นย่อมได้รับการอภัย และเขาก็ยังคงได้รับความประเสริฐของการละหมาดนี้ อินชาอัลลอฮ์ เพราะสิ่งที่เกิดขึ้นไม่ได้เกิดจากความตั้งใจของเขา และประชาชาตินี้ได้รับการอภัยให้แก่ความคิดที่แวบเข้ามาตราบใดที่ยังไม่ฝังรากลึก ซึ่งกฎเกณฑ์เรื่องนี้ได้อธิบายไว้แล้วในหมวดที่ว่าด้วยการศรัทธา วัลลอฮุอะอ์ลัม ทั้งนี้ อิหม่ามอบู อับดิลลาฮ์ อัลมาซิรีย์ก็อธิบายไว้ในทำนองเดียวกับที่ฉันได้กล่าวไป และกอฎี อิยาฎก็เห็นพ้องตามนั้น โดยระบุว่า ความหมายของการพูดคุยกับตัวเองในที่นี้ หมายถึงการตั้งใจคิดหรือจงใจนึกขึ้นมาเอง ส่วนความคิดที่เพียงแวบเข้ามาในหัวซึ่งเกิดขึ้นเป็นปกตินั้น ไม่เข้าข่ายกรณีนี้”</p>
+      <p>นอกจากนี้ ในบางครั้งอิหม่ามอันนะวาวีย์ก็อาศัยการอ้างอิงจากอิหม่ามทั้งสอง หรือจากท่านใดท่านหนึ่ง เพื่อเป็นพื้นที่ในการนำเสนอทรรศนะของสำนักคิดทางนิติศาสตร์ของท่านเอง นั่นคือสำนักคิดอัชชาฟิอียะฮ์ เนื่องจากอิหม่ามทั้งสองเป็นนักปราชญ์จากสำนักคิดมาลิกียะฮ์ ตัวอย่างเช่น ในประเด็นการทำน้ำละหมาดของสตรีที่มีประจำเดือน ท่านเริ่มต้นด้วยการนำเสนอทรรศนะของอัลมาซิรีย์ก่อน จากนั้นจึงตามด้วยมติเอกฉันท์ของนักวิชาการมัสฮับชาฟิอีย์ของท่าน โดยท่านกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قال المازري: ويجري هذا الخلاف في وضوء الحائض قبل أن تنام، فمن علل بالمبيت على طهارة استحبه لها هذا كلام المازري، وأما أصحابنا فإنهم متفقون على أنه لا يستحب الوضوء للحائض والنفساء؛ لأن الوضوء لا يؤثر في حدثهما فإن كانت الحائض قد انقطعت حيضتها صارت كالجنب والله أعلم</blockquote>
+      <p class="ar-translation">“อัลมาซิรีย์กล่าวว่า: ความขัดแย้งในประเด็นนี้ครอบคลุมถึงกรณีการทำน้ำละหมาดของสตรีที่มีประจำเดือนก่อนเข้านอนด้วย โดยผู้ที่ให้เหตุผลว่าเพื่อให้การนอนหลับดำเนินไปบนความบริสุทธิ์ ก็จะมองว่าเป็นสิ่งที่ส่งเสริมให้ทำ นี่คือคำกล่าวของอัลมาซิรีย์ แต่สำหรับนักวิชาการของเรา (มัสฮับชาฟิอีย์) พวกเขาลงมติเห็นพ้องว่าการทำน้ำละหมาดไม่เป็นที่ส่งเสริมสำหรับสตรีที่มีประจำเดือนและสตรีที่มีเลือดหลังคลอดบุตร เพราะน้ำละหมาดไม่ส่งผลต่อการยกเลิกสถานะความไม่บริสุทธิ์ของพวกนาง แต่หากประจำเดือนของนางหยุดลงแล้ว สถานะของนางก็เทียบเท่าผู้ที่มีญะนาบะฮ์ วัลลอฮุอะอ์ลัม”</p>
+      <p>และเมื่อท่านเผชิญกับการวินิจฉัยที่สำคัญยิ่งในบางประเด็น ท่านจะไม่เพียงคัดลอกทรรศนะจากทั้งสอง แต่ยังประดับประดาการอ้างอิงด้วยถ้อยคำสรรเสริญและยกย่อง พร้อมยืนยันความหนักแน่นของหลักฐานในมัสฮับนั้น แม้จะไม่ใช่มัสฮับที่ท่านสังกัด ตัวอย่างเช่น ในบทที่ว่าด้วยการหลงลืมในการละหมาดและการสุญูดชดเชย ท่านได้ยกคำกล่าวของอัลมาซิรีย์มา จากนั้นจึงกล่าวชื่นชมว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هذا كلام المازري وهو كلام حسن نفيس وأقوى المذاهب هنا مذهب مالك رحمه الله تعالى، ثم مذهب الشافعي</blockquote>
+      <p class="ar-translation">“นี่คือคำกล่าวของอัลมาซิรีย์ ซึ่งเป็นถ้อยคำที่งดงามและมีคุณค่ายิ่ง และมัสฮับที่มีน้ำหนักที่สุดในประเด็นนี้คือมัสฮับของอิหม่ามมาลิก ขออัลลอฮ์ทรงเมตตาท่าน รองลงมาคือมัสฮับของอิหม่ามชาฟิอีย์”</p>
+      <p>ยังมีตัวอย่างอื่นอีกมากมายที่ไม่อาจนำมากล่าวได้ทั้งหมด ซึ่งภาพรวมเหล่านี้ล้วนเป็นประจักษ์พยานยืนยันถึงความวิจิตรบรรจงและสถานะอันโดดเด่นของสำนักคิดแห่งมัฆริบ และสะท้อนให้เห็นว่าตัวบทจากตำราอัลมุอ์ลิมและอิกมาล อัลมุอ์ลิม สามารถสถาปนาตัวตนและสร้างอิทธิพลอย่างแข็งแกร่งในซีกโลกตะวันออกได้อย่างไร ตัวอย่างการอ้างอิงบางส่วนที่นำเสนอมานี้ ล้วนตอกย้ำข้อเท็จจริงที่ว่า ตำราอรรถาธิบายของนักวิชาการชาวมัฆริบนั้น เคยเป็นและยังคงเป็นแหล่งอ้างอิงและรากฐานสำคัญที่ผู้ปรารถนาจะทำความเข้าใจตำราอัลญามิอ์ อัศศอเฮี้ยะฮ์ของอิหม่ามมุสลิมอย่างถ่องแท้ จะขาดไปเสียมิได้เลย</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). อิหม่ามอันนะวาวีย์กับมรดกอรรถาธิบายศอเฮี้ยะฮ์มุสลิม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/al-nawawi-sahih-muslim-commentary.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
