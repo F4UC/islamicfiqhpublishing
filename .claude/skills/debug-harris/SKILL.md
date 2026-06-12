@@ -1,6 +1,6 @@
 ---
 name: debug-harris
-description: Harris debugging discipline for Islamic Fiqh Publishing. Use when the user reports a bug, blank page, slow site, broken deployment, DNS/SSL/Cloudflare/GitHub issue, console error, responsive/layout regression, animation performance problem, or asks to debug/check/investigate why something failed. Apply reproducibility, fail-path tracing, hypothesis falsification, and an experiment ledger. Agent has full autonomy to commit and push without asking permission. Must verify the live site after every deployment.
+description: Harris debugging discipline for Islamic Fiqh Publishing. Use when the user reports a bug, blank page, slow site, broken deployment, DNS/SSL/Cloudflare/GitHub issue, console error, responsive/layout regression, animation performance problem, or asks to debug/check/investigate why something failed. Apply reproducibility, fail-path tracing, hypothesis falsification, and an experiment ledger. The agent diagnoses and fixes on a fresh branch and opens a PR; it never merges to main on its own.
 ---
 
 # Debug Harris
@@ -21,19 +21,20 @@ If the user asks for speed or says to skip the checklist, apply the protocol sil
 
 ## Autonomy & Reporting
 
-- **Full autonomy granted.** Commit and push changes without asking the user for permission.
-- **Always verify the live site** after every deploy. Fetch `https://islamicfiqhpublishing.com` and `https://www.islamicfiqhpublishing.com` to confirm the fix is live and the page is not blank.
-- **Report what changed**, not what you plan to do. After completing work, summarize: what was broken, what was changed (file, line, value), and what was verified on the live site.
+- **Bounded autonomy.** Investigate freely (read files, fetch URLs, inspect config, add throwaway probes). For any *change*, commit to a fresh branch cut from the latest `main` and open a PR. **Never push to `main` and never merge to `main` without the owner's review** — this holds even when a fix looks trivial or urgent.
+- **Verify on the PR preview, not production.** Cloudflare builds a preview deployment per branch/PR. Confirm the fix there. Production verification happens only *after* the owner merges.
+- **Report what changed**, not what you plan to do. After completing work, summarize: what was broken, what was changed (file, line, value), and what was verified on the preview.
 - Keep Thai user-facing explanations clear and practical; avoid noisy internal narration.
 
 ## Project constraints
 
-- Do not remove, simplify, or alter Islamic academic content unless the user explicitly approves the exact content change.
+- Do not remove, simplify, or alter Islamic academic content unless the owner explicitly approves the exact content change.
+- **Child safety overrides fidelity.** If a Drive source or any content contains material that sexualizes a minor, do not reproduce, restore, or surface it. Flag its location to the owner and stop. Never merge an article carrying a child-safety flag.
 - Do not sacrifice animations, visual identity, Arabic typography, QOTD behavior, or editorial charter compliance without calling out the tradeoff first.
 - Treat DNS, SSL, Cloudflare Workers/Pages, cache, and deployment state as separate layers.
 - Record absolute times or concrete dates when diagnosing recent deploy/DNS/cache behavior.
-- Always develop on branch `claude/rules-full-update-kGLfz`, then merge to `main` to trigger Cloudflare deploy.
-- After pushing to `main`, wait for Cloudflare to deploy (typically 30–60 seconds), then fetch the live URL to verify.
+- **Always cut a fresh branch from the latest `main`** for each task (name it `claude/<short-task>`), open a PR, and let the owner merge to trigger the production Cloudflare deploy.
+- After the owner merges to `main`, Cloudflare deploys (typically 30–60 seconds); the owner (or an agent on request) then fetches the live URL to verify.
 
 ## 1. Reproduce
 
@@ -93,17 +94,16 @@ Use the ledger to avoid contradicting prior observations. Before declaring the r
 
 ## Fix Rules
 
-- Proceed directly — no permission needed for commit, push, or merge to main.
+- Work on a fresh branch and open a PR. **No direct push or merge to `main`** — the owner reviews and merges every change.
 - Keep changes minimal and reversible.
-- Validate the exact failing path after the fix by fetching the live URL.
-- For web changes, verify both `https://islamicfiqhpublishing.com` and `https://www.islamicfiqhpublishing.com`.
-- For UI fixes, verify that Arabic text direction, punctuation, mobile layout, and animations still comply with the 51 Iron Rules in `CLAUDE.md`.
-- State what was verified and what remains pending, such as DNS propagation or Cloudflare cache purge.
+- Validate the failing path on the PR preview deployment after the fix.
+- For UI fixes, verify that Arabic text direction, punctuation, mobile layout, and animations still comply with the Iron Rules in `CLAUDE.md`.
+- State what was verified on the preview and what remains pending for after-merge (such as DNS propagation or Cloudflare cache purge).
 
 ---
 
-## Editorial Charter — The 51 Iron Rules
+## Editorial Charter — The Iron Rules
 
 The authoritative source is **`CLAUDE.md`** at the repository root. Claude Code loads it automatically every session — read it there. Do not maintain a copy here; `CLAUDE.md` is the single source of truth.
 
-Before committing any fix, confirm it does not violate any rule in `CLAUDE.md`.
+Before opening any fix PR, confirm it does not violate any rule in `CLAUDE.md`.
