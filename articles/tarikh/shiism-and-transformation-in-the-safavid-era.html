@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>ชีอะฮ์และการเปลี่ยนผ่านในยุคซาฟาวิด — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="บทวิจารณ์หนังสือ Islam without Allah? ของโคลิน เทิร์นเนอร์ ว่าด้วยการก่อรูปของชีอะฮ์สิบสองอิหม่ามในยุคซาฟาวิด ตั้งแต่ชาฮ์อิสมาอิล อัลการากี จนถึงมัจญ์ลิซีกับบิฮารุลอันวาร และกำเนิดวิลายะตุ้ลฟะกีฮ์">
+<meta name="keywords" content="ซาฟาวิด, ชีอะฮ์สิบสองอิหม่าม, โคลิน เทิร์นเนอร์, อัลการากี, มัจญ์ลิซี, บิฮารุลอันวาร, วิลายะตุ้ลฟะกีฮ์, ประวัติศาสตร์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ชีอะฮ์และการเปลี่ยนผ่านในยุคซาฟาวิด — Islamic Fiqh Publishing">
+<meta property="og:description" content="อิหร่านที่เคยเป็นซุนนีสายซูฟีกลายเป็นรัฐชีอะฮ์ได้อย่างไร - การก่อรูปของชีอะฮ์สมัยใหม่ผ่านสายตาของโคลิน เทิร์นเนอร์">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/shiism-and-transformation-in-the-safavid-era.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="shiism-and-transformation-in-the-safavid-era">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">ชีอะฮ์และการเปลี่ยนผ่านในยุคซาฟาวิด</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในแวดวงอิหร่านศึกษา คำถามอย่าง “ชีอะฮ์ที่เราเห็นอยู่ทุกวันนี้มีที่มาอย่างไร?” มักไม่ได้รับการอธิบายอย่างเป็นระบบหรือชัดเจนนัก หลายงานเขียนอาจแตะประเด็นนี้เพียงผิวเผิน หรือมุ่งไปที่ช่วงเวลาใดช่วงเวลาหนึ่งโดยไม่เชื่อมโยงภาพรวมให้ครบถ้วน ท่ามกลางช่องว่างเช่นนี้ Colin Turner นักวิชาการชาวอังกฤษผู้ทำงานด้านอิสลามศึกษาและอิหร่านศึกษา ได้เลือกหยิบคำถามพื้นฐานข้อนี้ขึ้นมาพิจารณาอย่างจริงจังในหนังสือของเขา</p>
+      <p>สิ่งที่น่าสนใจคือ วิธีการของเขาพยายามจะวางกรอบการวิเคราะห์ในเชิงประวัติศาสตร์และพัฒนาการของแนวคิด โดยติดตามว่า แนวคิด ความเชื่อ และสถาบันต่างๆ ภายในโลกชีอะฮ์ค่อยๆ ก่อตัว เปลี่ยนแปลง และสั่งสมความหมายขึ้นมาอย่างไรในบริบททางสังคม การเมือง และวัฒนธรรมของอิหร่าน</p>
+      <p>ด้วยสายตาเช่นนี้ งานของเขาจึงไม่เพียงตอบคำถามว่า “ชีอะฮ์มาจากไหน” ในเชิงกำเนิดเท่านั้น แต่ยังชี้ให้เห็นถึงกระบวนการที่ทำให้ชีอะฮ์ในรูปแบบที่เราคุ้นเคยในปัจจุบัน กลายเป็นสิ่งที่มีโครงสร้าง มีระบบความคิด และมีบทบาททางสังคมการเมืองอย่างที่เห็นอยู่ทุกวันนี้ กล่าวอีกนัยหนึ่งคือ หนังสือเล่มนี้พยายามพาผู้อ่านย้อนกลับไปมอง “การก่อรูป” ของชีอะฮ์ มากกว่าจะมองมันเป็นสิ่งที่หยุดนิ่งหรือมีอยู่โดยสมบูรณ์ตั้งแต่ต้น</p>
+      <p>ผลลัพธ์คือ งานเขียนที่เปิดพื้นที่ให้ผู้อ่านได้ทำความเข้าใจชีอะฮ์ในฐานะปรากฏการณ์ทางประวัติศาสตร์ที่มีพลวัตนั่นเองที่ทำให้คำถามเดิมๆ ถูกขยายให้ลึกขึ้น และได้รับคำตอบที่มีน้ำหนักมากกว่าที่เคยปรากฏในงานศึกษาโดยทั่วไป</p>
+      <p>และหนังสือเล่มนั้น คือหนังสือเรื่อง “ชีอะฮ์และการเปลี่ยนผ่านในยุคซาฟาวิด” (<span class="ar-inline" lang="ar" dir="rtl">التشيّع والتحوّل في العصر الصفوي</span>) ได้รับการตีพิมพ์โดยสำนักพิมพ์ดารุลญะมาล ณ เมืองโคโลญจน์ ในปี ค.ศ. 2008 โดยมีฮุเซน อาลี อับดุลซาติรเป็นผู้แปลจากภาษาอังกฤษ</p>
+      <p>หนังสือเล่มนี้ถือเป็นหนึ่งในงานเขียนชิ้นสำคัญเล่มหนึ่งของยุคสมัยใหม่ในแวดวงอิหร่านศึกษา และโดยเฉพาะอย่างยิ่งในประเด็นที่เกี่ยวข้องกับประวัติศาสตร์ยุคซาฟาวิด ทั้งนี้ โคลิน เทิร์นเนอร์ นักบูรพคดีศึกษาชาวอังกฤษ สามารถตอบคำถามสำคัญหลายประการเกี่ยวกับความดั้งเดิมของแนวคิดชีอะฮ์กระแสหลักที่ปรากฏอยู่ในปัจจุบัน</p>
+      <h2 class="article-h2">ที่มาของชื่อหนังสือ: “อิสลามที่ปราศจากอัลลอฮ์?”</h2>
+      <p>ตั้งแต่แรกเห็น สิ่งที่ดึงดูดความสนใจคือ ชื่อหนังสือที่ปรากฏในต้นฉบับและฉบับแปล ฮุเซน อาลี ผู้แปลไม่ได้คงชื่อหนังสือตามต้นฉบับภาษาอังกฤษไว้ทั้งหมด เหตุผลก็คือ เขากลัวว่ามันจะไปกระตุกต่อมดราม่าหรือสร้างความแตกแยกเข้า เนื่องจากหนังสือฉบับภาษาอังกฤษที่ตีพิมพ์ในปี ค.ศ. 2000 นั้น ใช้ชื่อว่า “Islam without Allah? The Rise of Religious Externalism in Safavid Iran” หรือแปลไทยว่า “อิสลามที่ปราศจากอัลลอฮ์? การผงาดขึ้นของแนวคิดศาสนาที่เน้นรูปแบบภายนอกในอิหร่านยุคซาฟาวิด” คำว่า Islam without Allah? อธิบายเกริ่นก่อนว่า มันคือการตั้งคำถามเชิงวิพากษ์ ว่าเป็น “อิสลามที่เหลือแค่รูปแบบ แต่ขาดแก่นศรัทธา”</p>
+      <p>ชื่อหนังสือภาษาอังกฤษนี้แบ่งออกเป็น 2 ส่วน โดยส่วนแรกจบลงด้วยเครื่องหมายคำถาม ซึ่งสะท้อนถึงความประหลาดใจและการตั้งข้อกังขา มีที่มาจากเกร็ดเหตุการณ์ที่จุดประกายให้เทิร์นเนอร์ตั้งชื่อว่า “อิสลามที่ปราศจากอัลลอฮ์” นั่นคือเหตุการณ์ที่นักปราชญ์ศาสนาชาวชีอะฮ์ท่านหนึ่งได้ออกมาประท้วงและวิพากษ์วิจารณ์การปฏิวัติอิสลามรวมถึงวาทกรรมหลักของการปฏิวัติในอิหร่านเมื่อปี ค.ศ. 1979 โดยหลังจากการสถาปนาสาธารณรัฐอิสลามในอิหร่านได้ไม่นาน ชัยค์มะห์มูด อัลบัยซานีได้ให้ทรรศนะไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ما نحتاجه ليس ثورة إسلامية، بل ثورة إيمان؛ فبدون الإيمان لا يتبقى لنا إلا إسلام بلا الله</blockquote>
+      <p class="ar-translation">“สิ่งที่เราต้องการไม่ใช่การปฏิวัติอิสลาม แต่คือการปฏิวัติศรัทธา (อีหม่าน) เพราะหากปราศจากศรัทธา สิ่งที่หลงเหลืออยู่สำหรับเราก็คือ อิสลามที่ไม่มีอัลลอฮ์”</p>
+      <p>ซึ่งก็ดูเหมือนว่าผู้แปลจงใจละทิ้งชื่อหนังสือในส่วนนี้ไปเนื่องจากเกรงว่าจะเกิดความเข้าใจผิด และสำหรับส่วนที่สองของชื่อเรื่องภาษาอังกฤษนั้น กล่าวถึงการก่อตัวของแนวคิดทางศาสนาที่เน้นเปลือกนอกในอิหร่านยุคซาฟาวิด เมื่อพิจารณาผ่านบทต่างๆ ของหนังสือ เราจะตระหนักถึงความสำคัญของ “ยุคก่อตั้ง” ในมุมมองของเทิร์นเนอร์ เนื่องจากเขาต้องการหาคำตอบให้กับคำถามสำคัญที่ว่า “อิหร่านกลายมาเป็นรัฐชีอะฮ์ได้อย่างไร ทั้งที่ก่อนหน้านั้นเคยเป็นสังคมซุนนีสายซูฟีมานานนับศตวรรษ?”</p>
+      <p>ผู้แปลได้อาศัยการค้นคว้าของนักบูรพคดีศึกษาเกี่ยวกับเบื้องหลังการเปลี่ยนผ่านนี้ มาตั้งเป็นชื่อเรื่องในทางเลือกใหม่ว่า “ชีอะฮ์และการเปลี่ยนผ่านในยุคซาฟาวิด” งานเขียนชิ้นนี้ตั้งต้นจากสมมติฐานที่ว่า ชีอะฮ์ได้สูญเสียอัตลักษณ์ดั้งเดิมไปในยุคซาฟาวิด และได้ก่อร่างเป็นรูปแบบใหม่ๆ ที่แทบไม่มีความเชื่อมโยงกับแนวทางชีอะฮ์ยุคแรกเริ่มเลย ราชวงศ์ซาฟาวิดสามารถประกอบสร้างแนวคิดชีอะฮ์แบบใหม่ขึ้นมา ซึ่งได้รับการถ่ายทอดจากรุ่นสู่รุ่นในฐานะแนวคิดดั้งเดิมที่แท้จริง</p>
+      <p>ฮัยดัร ฮุบบุลลอฮ์ได้อธิบายไว้ในคำนำของหนังสือว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">آثار العصر الصفوي ما تزال حاضرة بقوة اليوم في الحياة الشيعية، مهما كان موقفنا-إيجابيا أو سلبيا-منها، بل يمكنني القول بأن الإنسان الشيعي قد أعيدت صياغته من جديد بعد هذه الحقبة</blockquote>
+      <p class="ar-translation">“ร่องรอยของยุคซาฟาวิดยังคงฝังลึกอยู่ในวิถีชีวิตของชาวชีอะฮ์จนถึงทุกวันนี้ ไม่ว่าใครจะมองยุคสมัยนั้นในแง่ดีหรือแง่ร้ายก็ตาม ข้าพเจ้าขอกล่าวเลยว่า ความเป็นมนุษย์ชาวชีอะฮ์อย่างที่เรารู้จักกันในวันนี้ ถูกหล่อหลอมขึ้นใหม่ทั้งหมดในยุคนั้น”</p>
+      <p>ฮุบบุลลอฮ์กำลังบอกว่า ยุคซาฟาวิดไม่ใช่แค่เหตุการณ์ที่ผ่านไปแล้ว แต่มันยังฝังอยู่ในตัวตนของชาวชีอะฮ์ทุกคนจนถึงปัจจุบัน ไม่ว่าคุณจะรู้สึกดีหรือไม่ดีกับยุคนั้น ก็หนีไม่พ้นว่าความเป็นชีอะฮ์ที่คุณรู้จัก ถูกหล่อหลอมขึ้นในยุคนั้นแทบทั้งสิ้น</p>
+      <p>ท้ายที่สุด ผู้เขียนได้สรุปรวบยอดวัฒนธรรมยุคซาฟาวิดผ่านตำรา “บิฮารุลอันวาร” (<span class="ar-inline" lang="ar" dir="rtl">بحار الأنوار</span>) ของ มุฮัมมัด บากิร อัลมัจญ์ลิซี ซึ่งจริงๆ แล้วโปรเจกต์ช่วงแรกของหนังสือเล่มนี้ตั้งใจจะโฟกัสไปที่ตัวมัจญ์ลิซีคนเดียวเลย เพราะเขาถูกมองว่าเป็น “ตัวแทนของชัยชนะที่เปลือกนอกของศาสนามีเหนือแก่นแท้ภายใน” แต่เผอิญว่าแหล่งข้อมูลอ้างอิงเกี่ยวกับเขามันมีจำกัด ผู้เขียนก็เลยต้องขยายสเกลงานเขียนให้ครอบคลุมบริบททั้งยุคแทน</p>
+      <p>โคลิน เทิร์นเนอร์ได้แบ่งหนังสือของเขาออกเป็นห้าบทที่มีความสอดคล้องและสมบูรณ์ในตัว โดยพยายามติดตามการเปลี่ยนผ่านทางวัฒนธรรมในยุคซาฟาวิดจากหลากหลายมุมมอง</p>
+      <h2 class="article-h2">บทที่หนึ่ง: อีหม่านกับอิสลาม</h2>
+      <p>ในบทแรก เขาได้ศึกษาความคลาดเคลื่อนและการเปลี่ยนผ่านที่เกิดขึ้นในยุคนี้ ผ่านแนวคิดคู่ขนานระหว่าง “อีหม่าน” (ศรัทธา) และ “อิสลาม” (การยอมจำนน) นักบูรพคดีศึกษาผู้นี้มุ่งเน้นไปที่ความหมายของคำทั้งสองในคัมภีร์อัลกุรอานและซุนนะฮ์ โดยมองว่าความคลาดเคลื่อนดังกล่าวได้ก้าวล่วงขอบเขตของตัวบท และนำไปสู่การสร้างระบบอ้างอิงใหม่ที่ทำให้ความหมายเกิดความสับสนปนเป จนเกิด “การปะปนกันระหว่างคำว่า อีหม่านและ อิสลาม”</p>
+      <p>ผลสืบเนื่องจากความสับสนนี้คือ การก้าวขึ้นมามีอำนาจนำของวิชานิติศาสตร์อิสลาม (ฟิกฮ์) และบรรดานักนิติศาสตร์ (เหล่าฟุกอฮาอ์) ตลอดจนการฝังรากลึกของการแตกแขนงประเด็นย่อยทางนิติศาสตร์ และทำให้สิ่งนี้กลายเป็นภารกิจหลักของนักวิชาการมุสลิม ผู้เขียนมีทรรศนะว่า อีหม่านมีความเชื่อมโยงกับการคิดไตร่ตรอง การพินิจพิจารณา และความเข้าใจ ในขณะที่อิสลามในช่วงแรกเริ่มนั้น เรียกร้องให้เกิดการยอมรับและปฏิบัติตามพระบัญชาของพระผู้สร้าง ซึ่งพระบัญชาเหล่านี้ถูกรวบรวมเป็นประมวลกฎหมายทางสังคม เศรษฐกิจ และการเมือง ที่เรียกว่า “ชะรีอะฮ์” (กฎหมายอิสลาม)</p>
+      <p>ผู้เขียนพิจารณาว่า อีหม่าน คืออิสลามจากภายใน ซึ่งอยู่ตรงข้ามกับอิสลามจากภายนอกที่เกี่ยวข้องกับการแสดงออกถึงการเชื่อฟัง เขาได้แยกแยะระหว่างอิสลามในฐานะการยอมจำนนต่ออัลลอฮ์ กับอิสลามในฐานะการยอมจำนนต่อคำสั่งของพระองค์ โดยอ้างอิงและสนับสนุนด้วยโองการอัลกุรอานที่กล่าวถึงอิสลามและอีหม่าน ตลอดจนทรรศนะของนักปราชญ์มุสลิมชั้นนำทั้งฝ่ายซุนนีและชีอะฮ์</p>
+      <h2 class="article-h2">บทที่สอง: ศาสนาในอิหร่านยุคกลางและการผงาดของซาฟาวิด</h2>
+      <p>บทที่สองของหนังสือให้ความสนใจกับ “ศาสนาในอิหร่านยุคกลางและการผงาดขึ้นของราชวงศ์ซาฟาวิด” ในบทนี้ ผู้เขียนพยายามวางประเด็นปัญหาลงในบริบททางประวัติศาสตร์และวัฒนธรรม โดยกล่าวถึงแนวคิดแบบขั้วตรงข้ามที่มีส่วนสำคัญยิ่งในการก่อร่างวัฒนธรรมเปอร์เซีย-อิสลาม ซึ่งเกี่ยวข้องกับความเป็นภายใน และความเป็นภายนอก, กลุ่มผู้ยึดถือความหมายเร้นลับ และกลุ่มผู้ยึดถือความหมายตามตัวอักษร, กลุ่มผู้รู้แจ้ง และกลุ่มผู้ยึดถือการถ่ายทอดตำรา ตลอดจนนักซูฟีและนักนิติศาสตร์</p>
+      <p>เขาอธิบายว่า สายภายใน คือนักวิชาการมุสลิมที่พุ่งเป้าไปที่แก่นแท้ของศรัทธา โดยเฉพาะการแสวงหาความรู้จักอัลลอฮ์และคุณลักษณะของพระองค์ ในขณะที่นักวิชาการสายภายนอก คือนักวิชาการมุสลิมที่ทุ่มเทความพยายามให้กับการศึกษาวิทยาการสายรายงาน และความสนใจส่วนใหญ่ของเขามุ่งเน้นไปที่การเจาะลึกในประเด็นข้อย่อยทางกฎหมาย</p>
+      <p>ผู้เขียนมาถึงข้อสรุปแรงๆ ข้อหนึ่ง โดยยืมคำพูดของมุฮัมมัด ยูซุฟี นักปราชญ์ชีอะฮ์คนหนึ่งที่บอกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أكثر المسلمين مسلمون بالاسم والعرف والموقع الجغرافي فحسب، هم لا يتدبرون ولا يفكرون، ويأخذون ايمانهم أخذ المسلمات</blockquote>
+      <p class="ar-translation">“มุสลิมส่วนใหญ่เป็นมุสลิมแค่ชื่อ แค่ทำตามๆ กันมา หรือแค่เกิดมาในพื้นที่ที่เป็นมุสลิมเท่านั้น พวกเขาไม่ได้ไตร่ตรอง ไม่ได้คิด และรับเอาศรัทธามาแบบมักง่ายว่าเป็นของตาย”</p>
+      <p>ในบทเดียวกันนี้ เทิร์นเนอร์ยังได้กล่าวถึงการก่อตั้งรัฐซาฟาวิด โดยเริ่มตั้งแต่การที่อิสมาอิล ผู้นำฝ่ายซาฟาวิด ยาตราทัพเข้าสู่เมืองทาบริซในปี ฮ.ศ. 907 (ค.ศ. 1502) และสถาปนาตนเองขึ้นเป็น “ชาฮ์” ซึ่งที่จริงแล้ว การที่ชาฮ์อิสมาอิลประกาศสมาทานชีอะฮ์สิบสองอิหม่ามและนำมาตรึงเป็นศาสนาประจำชาตินั้น ไม่ได้สะท้อนถึงทางเลือกทางความคิดหรือความเชื่อทางศาสนาแต่อย่างใด หากแต่เป็นการเผยให้เห็นถึงแผนยุทธศาสตร์ในการขยายอิทธิพลและการบรรลุอำนาจนำทางการเมือง เศรษฐกิจ และการทหาร</p>
+      <p>เทิร์นเนอร์แกะรอยเบื้องหลังพวกนี้ผ่านการศึกษาผลกระทบของยุคซาฟาวิด เราจะเข้าใจจุดเปลี่ยนนี้ไม่ได้เลยถ้าไม่หันไปดูว่าสถานะของชีอะฮ์สิบสองอิหม่ามในอิหร่านก่อนยุคซาฟาวิดมันเป็นยังไง เขางัดหลักฐานมาหักล้างคำเคลมของนูรุลลอฮ์ อัชชูชตารีที่พยายามอย่างหนักหน่วงที่จะพิสูจน์ว่า อิหร่านส่วนใหญ่เป็นชีอะฮ์อิมามียะฮ์มาก่อนที่พวกซาฟาวิดจะมาซะอีก</p>
+      <p>แต่ความจริงคือ อิหร่านยุคนั้นส่วนใหญ่เป็นซุนนีสายซูฟีต่างหาก ถึงขนาดที่ว่าตอนที่อิสมาอิลตีเมืองทาบริซแตก เขายังหาตำราหลักการพื้นฐานของชีอะฮ์อิมามียะฮ์ไม่เจอสักเล่ม ยกเว้นต้นฉบับตำรานิติศาสตร์เก่าๆ โทรมๆ เล่มเดียวที่ฝุ่นเขรอะอยู่ในห้องสมุดที่ไกลปืนเที่ยง</p>
+      <p>แรกเริ่มเดิมทีขบวนการซาฟาวิดเป็นแค่สำนักซูฟีเล็กๆ ในเมืองอัรดาบิล แคว้นอาเซอร์ไบจาน ช่วงต้นศตวรรษที่ 8 ของฮิจเราะห์ศักราช ผู้ก่อตั้งสำนักนี้คือ ศอฟียุดดีน ซึ่งเป็นซูฟีสายซุนนี จากมัสฮับชาฟีอี ที่ได้รับความเคารพจากทั้งชาวบ้านและนักการเมือง รุ่นลูก รุ่นหลาน และรุ่นเหลนของเขาก็ยังรักษาแนวทางนี้ไว้ จนสำนักนี้มีบารมีมากพอที่จะทำหน้าที่เป็นคนกลางไกล่เกลี่ยระหว่างผู้ปกครองกับฝ่ายค้านได้เลย</p>
+      <p>แต่แล้วจุดหักเหก็มาถึงในยุคของชัยค์ญุนัยด์ (เสียชีวิต ค.ศ. 1460) ซึ่งเกิดการกลายพันธุ์ที่เทิร์นเนอร์มองว่าอธิบายได้ยากมาก มันไม่ใช่แค่การเปลี่ยนผ่านทางความคิด แต่มันคือการเปลี่ยนจากสำนักซูฟีสายซุนนี ไปเป็นกองกำลังชีอะฮ์หัวรุนแรงที่คลั่งไคล้และบูชาท่านอาลี บิน อบี ตอลิบ แถมยังหันมาใช้กำลังอาวุธในการเปลี่ยนแปลงสังคม และในเวลาไม่ถึงครึ่งศตวรรษ พวกเขาก็ยึดทาบริซได้ แล้วก็ดัน อิสมาอิล (หลานชายของญุนัยด์) ขึ้นเป็นกษัตริย์แห่งอิหร่าน</p>
+      <h2 class="article-h2">บทที่สาม: ชีอะฮ์สายเปลือกนอกและชัยค์การากี</h2>
+      <p>ในบทที่ 3 จะเป็นการพูดถึงการลงหลักปักฐานของซาฟาวิด และการขึ้นหม้อของชีอะฮ์สายเปลือกนอก โดยบทนี้ถือเป็นไฮไลท์ของหนังสือเลย ผู้เขียนอธิบายว่า อิสมาอิล แห่งซาฟาวิด แทบจะไม่รู้เรื่องรู้ราวเกี่ยวกับกฎหมายหรือฟิกฮ์ของชีอะฮ์อิมามียะฮ์เลย เขาเป็นพวกคลั่งไคล้ศาสนาแบบสุดโต่งเหมือนปู่ของเขา เขาถึงขั้นอ้างตัวว่าเป็นเทพเจ้า และชาวบ้านก็เชื่อว่าเขาเป็นอมตะ จนท้ายสุดออตโตมันได้ยกทัพมาตีจนเลือดตกยางออก เมื่อทำให้เทพเจ้าหลั่งเลือดได้ เมื่อนั้นแหละชาวบ้านจึงบรรลุทันทีว่านี่มันของเก๊</p>
+      <p>โคลิน เทิร์นเนอร์ฟันธงว่า การที่พวกซาฟาวิดหันมาสมาทานชีอะฮ์อิมามียะฮ์ มันคือแทคติกทางการเมืองเพื่อรักษาเก้าอี้ไว้ล้วนๆ เหมือนกับที่บรรพบุรุษของอิสมาอิลใช้แนวคิดสุดโต่งเพื่อก้าวขึ้นสู่อำนาจ ตัวเขาและกุนซือก็เลยใช้แนวคิดชีอะฮ์อิมามียะฮ์แบบกระแสหลักมาเป็นเครื่องมือเพื่อรักษาอำนาจนั้นไว้</p>
+      <p>เทิร์นเนอร์ยังโคว้ทคำพูดของนักปราชญ์ชีอะฮ์คนหนึ่งที่บอกว่า พวกซาฟาวิดไม่ได้สร้างอาณาจักรของพวกเขาบนรากฐานของศรัทธาหรือแม้แต่อิสลามด้วยซ้ำ เทิร์นเนอร์ยังได้ไปโฟกัสที่บทบาทของชัยค์อาลี อัลการากี อัลอามิลีในการเผยแพร่ลัทธิอิมามียะฮ์ในอิหร่านยุคอิสมาอิล จนบางคนถึงกับยกให้เขาเป็นผู้ริเริ่มแนวคิดชีอะฮ์ขึ้นมาใหม่เลยทีเดียว การากีคนนี้อินกับพวกซาฟาวิดมาก ถึงขนาดเขียนหนังสือฟัตวา (คำวินิจฉัย) อนุญาตให้ทำตามธรรมเนียมโบราณของเปอร์เซียที่ให้ก้มกราบกษัตริย์ได้ แน่นอนว่าเขาได้รับอภิสิทธิ์และที่ดินทำกินเพียบ ซึ่งเป็นรางวัลสำหรับความภักดีแบบถวายหัว</p>
+      <p>ผู้เขียนยังตามติดการเปลี่ยนแปลงทางความคิดและสังคมที่มาพร้อมกับการประกาศตนเป็นชีอะฮ์ของรัฐซาฟาวิด และการอิมพอร์ตนักวิชาการชีอะฮ์ชาวอาหรับมาจากเลบานอนตอนใต้, ซีเรีย และบาห์เรน การากีใช้อำนาจกวาดล้างซุนนีอย่างหนัก และบังคับให้มีการด่าทอประจานคอลีฟะฮ์สามท่านแรกของซุนนี คือ อบู บักร, อุมัร และอุสมาน อย่างเป็นทางการ โดยมีตัวเขาเองลงมาคุมงานนี้ด้วย</p>
+      <p>แถมยังออกฟัตวาบังคับให้สาปแช่งคอลีฟะฮ์ และตัดสินว่าพวกซุนนีและพวกซูฟีนั้น “เป็นสิ่งสกปรก (นะญิส)” จัดให้อยู่ในเลเวลเดียวกับสุนัข หมู คนนอกศาสนา และของโสโครกอื่นๆ ในอิสลาม เขาแอบปรับเปลี่ยนคำในบทอาซาน (คำประกาศเรียกละหมาด) นิดหน่อย และที่สำคัญที่สุด การากีคือ นักวิชาการชีอะฮ์อิมามียะฮ์คนแรก ที่กล้าประกาศว่า นักกฎหมาย (เหล่าฟุกอฮาอ์) คือตัวแทนอย่างเป็นทางการของอิหม่ามมะห์ดีที่เร้นกายอยู่ ซึ่งนี่แหละคือจุดกำเนิดของการปั้นไอเดีย “วิลายะตุ้ลฟากีฮ์” (การปกครองโดยนักนิติศาสตร์อิสลาม) ที่กลายมาเป็นระบบการปกครองอย่างเป็นทางการของอิหร่านหลังการปฏิวัติอิสลามในยุคปัจจุบัน</p>
+      <p>พอชาฮ์อิสมาอิลสวรรคต “ชาฮ์ตอห์มาซิป” ลูกชายของเขาก็สานต่อนโยบายเปลี่ยนประเทศให้เป็นชีอะฮ์ และใช้ความเด็ดขาดปราบปรามกลุ่มซุนนีที่ยังคงรุ่งเรืองอยู่ เทิร์นเนอร์เน้นให้เห็นภาพขบวนการนักวิชาการชีอะฮ์ชาวอาหรับที่หลั่งไหลเข้าสู่อิหร่าน และมีส่วนสำคัญในการปั่นกระแสความคิดแบบอิมามียะฮ์ เปลี่ยนภูมิทัศน์ทางวัฒนธรรมของเปอร์เซียไปตลอดกาล ชาฮ์ตอห์มาซิป (โดยมีเชคการากีคอยกระซิบข้างหู) บังคับใช้คำสอนของชีอะฮ์สิบสองอิหม่าม สั่งให้อ่านคำสอนพวกนี้ในมัสยิด และให้ถือเป็นข้อบังคับที่ต้องอยู่ในคุตบะห์ (บทเทศนา) วันศุกร์ ซึ่งเนื้อหาส่วนใหญ่ก็คือการอวยยศและเยินยอบรรดาอิหม่ามแบบอลังการงานสร้างนั่นเอง</p>
+      <p>เป็นที่น่าสังเกตว่า ผู้เขียนได้ตระหนักถึงประเด็นสำคัญที่ยังคงขับเคลื่อนทิศทางทางการเมืองและวัฒนธรรมของอิหร่านมาจนถึงปัจจุบัน นั่นคือความขัดแย้งระหว่างวัฒนธรรมท้องถิ่นกับวัฒนธรรมนำเข้า เทิร์นเนอร์มองว่านี่คือการปะทะกันระหว่างกลุ่มปัญญาชนท้องถิ่น และกลุ่มคัมภีร์นิยม โดยกลุ่มแรกหมายถึงชนชั้นนำหรือผู้มีอิทธิพลในท้องถิ่น ในขณะที่กลุ่มหลังหมายถึงบรรดานักนิติศาสตร์อิมามียะฮ์ ที่อพยพเข้ามายังประเทศนี้ในยุคซาฟาวิด</p>
+      <p>ความขัดแย้งและความบาดหมางระหว่างทั้งสองฝ่ายได้ก่อตัวขึ้นและยังคงสืบเนื่องมาจนถึงทุกวันนี้ ในขณะที่บรรดานักวิชาการชาวอาหรับที่อพยพเข้ามามุ่งเน้นไปที่วิชานิติศาสตร์และวิทยาการหะดีษ นักวิชาการท้องถิ่นชาวอิหร่านกลับให้ความสนใจมากกว่าในด้านปรัชญา ไวยากรณ์ ตรรกศาสตร์ คณิตศาสตร์ ดาราศาสตร์ วรรณกรรม และกวีนิพนธ์ โดยรวมแล้วอาจกล่าวได้ว่า พวกเขามีความเชี่ยวชาญในวิทยาการทางปัญญา (กระบวนการคิด) มากกว่าวิทยาการสายรายงานรหือด้านศาสนาอย่างหะดีษ ฟิกฮ์โดยตรง แต่นักวิชาการผู้อพยพกลับสามารถก้าวขึ้นมาควบคุมตำแหน่งสำคัญทางศาสนาในประเทศได้ หลังจากที่ตำแหน่งเหล่านี้เคยอยู่ภายใต้การควบคุมของคนท้องถิ่น ส่วนกลุ่มชนชั้นนำสายโลกวิสัย (กลุ่มเซคิวลาร์) ตามคำเรียกของผู้เขียน ก็ยังคงรักษาอำนาจในตำแหน่งขุนนางระดับสูงไว้ได้ ซึ่งชาฮ์ตอห์มาซิปสามารถสร้างสมดุลระหว่างคนทั้งสองกลุ่มนี้ได้เป็นอย่างดี อย่างไรก็ตาม ในขณะที่อิสมาอิลที่ 2 พยายามปราบปรามแนวคิดสุดโต่งและสั่งห้ามการด่าทอท่านหญิงอาอิชะฮ์ มารดาแห่งศรัทธาชน ชาฮ์อับบาสกลับใช้นโยบายกวาดล้างชาวซุนนีและทำให้ความสุดโต่งแบบอิมามียะฮ์ฝังรากลึกยิ่งขึ้น</p>
+      <p>นับตั้งแต่การนำเข้านักนิติศาสตร์ชาวอาหรับ ความคิดแบบชีอะฮ์สิบสองอิหม่ามในดินแดนเปอร์เซียได้เผชิญหน้ากับสองสำนักคิดที่จะสืบทอดเรื่อยมาข้ามยุคสมัยและปรับเปลี่ยนรูปแบบไปต่างๆ นานา จนกลายมาเป็นความขัดแย้งในยุคปัจจุบัน ระหว่างกลุ่มที่เรียกกันโดยอุปมาว่า กลุ่มอนุรักษ์นิยมและกลุ่มปฏิรูป เทิร์นเนอร์ได้เน้นย้ำถึงความสำคัญของมิติทางภูมิศาสตร์ที่มีอิทธิพลต่อทิศทางของความขัดแย้งนี้ โดยนักวิชาการอิมามียะฮ์ที่อพยพเข้ามานั้น ส่วนใหญ่มาจากหมู่บ้านเล็กๆ ของชาวอาหรับ และพกพาเอาวัฒนธรรมที่ตั้งอยู่บนพื้นฐานของการเร่ร่อนและการเคลื่อนย้ายมาด้วย ในขณะที่นักวิชาการชาวอิหร่านล้วนผูกพันกับเมืองใหญ่ที่พวกเขาและครอบครัวตั้งถิ่นฐานมานานนับพันปี</p>
+      <p>เราสามารถสังเกตเห็นเบื้องหลังของความแตกต่างนี้รวมถึงผลกระทบของมันได้ ผ่านจุดยืนที่ขัดแย้งกันในเรื่องการแต่งงานชั่วคราว หรือมุตอะฮ์ โดยกลุ่มนักวิชาการอาหรับผู้อพยพต่างสนับสนุนแนวคิดนี้อย่างกระตือรือร้น ในขณะที่นักวิชาการชาวอิหร่านกลับมีท่าทีระมัดระวัง พวกเขาออกมาเตือนและปฏิเสธที่จะยอมรับหลักการนี้ในระดับของจารีตประเพณีทางศาสนาและการปฏิบัติทางสังคม ความรุนแรงของความขัดแย้งนี้ (ทั้งโดยเปิดเผยและโดยนัย) สามารถเห็นได้ชัดจากการโต้วาทีและการวิวาทะที่จัดขึ้นระหว่างทั้งสองฝ่าย ซึ่งที่โด่งดังที่สุดน่าจะเป็นการปะทะคารมระหว่าง ชัยค์การากี กับมีร ฆิยาษุดดีน ในราชสำนักของชาฮ์ตอห์มาซิป โดยผู้ปกครองซาฟาวิดได้ตัดสินเข้าข้างการากี และสั่งปลดฆิยาษุดดีนออกจากตำแหน่ง นอกจากนี้ ผู้เขียนยังได้ถ่ายทอดถึงข้อถกเถียงระหว่างกลุ่มอัคบารียะฮ์ (กลุ่มมุหัดดีษ) และกลุ่มมุจญ์ตะฮิด (นักฟิกฮ์) ในประเด็นว่าด้วยตัวแทนของอิหม่ามผู้เร้นกายและการจัดการละหมาดวันศุกร์ เนื่องจากในระบบความคิดของชีอะฮ์ยุคนั้น การจะคิดหาผู้ที่มาทำหน้าที่แทนอิหม่ามผู้เร้นกายไม่ใช่เรื่องง่ายเลย</p>
+      <h2 class="article-h2">บทที่สี่: มัจญ์ลิซีกับบิฮารุลอันวาร</h2>
+      <p>เข้าเรื่องในบทที่สี่ เทิร์นเนอร์เลือกที่จะให้ความสนใจกับมุฮัมมัด บากิร อัลมัจญ์ลิซี ผู้ประพันธ์ตำราบิฮารุลอันวาร ซึ่งถือเป็นหนึ่งในเสาหลักของกลุ่มชีอะฮ์ การเลือกมัจญ์ลิซีไม่ได้เกิดขึ้นด้วยความบังเอิญ แต่เป็นความตั้งใจ เพราะชายผู้นี้คือแก่นแท้ของวัฒนธรรมซาฟาวิด และเป็นผู้มีบทบาทสำคัญในการจดบันทึกทุกความเปลี่ยนแปลง ความคลาดเคลื่อน และการบิดเบือนที่เกิดขึ้นในแนวคิดชีอะฮ์ ซึ่งคนรุ่นหลังได้ปฏิบัติและรับเอาสิ่งเหล่านั้นมาในฐานะสัจธรรมและความจริงอันสมบูรณ์ มัจญ์ลิซีเป็นนักนิติศาสตร์อิมามียะฮ์ที่โดดเด่นที่สุดในช่วงปลายยุคซาฟาวิด และเป็นผู้ก่อตั้งแนวคิดกระแสหลักใหม่ จนถึงขั้นที่นักวิจารณ์บางคนเรียกแนวคิดชีอะฮ์แบบนี้ว่า “ศาสนาของมัจญ์ลิซี”</p>
+      <p>มัจญ์ลิซีเป็นที่รู้จักกันดีถึงความใกล้ชิดกับระบอบซาฟาวิด เขาคอยปกป้องระบอบกษัตริย์และมอบความชอบธรรมทางศาสนาให้แก่ระบบนี้ หลังจากได้รับการแต่งตั้งให้ดำรงตำแหน่ง “ชัยคุลอิสลาม” มัจญ์ลิซีได้ทำการกวาดล้างชาวซุนนีและพวกซูฟี อีกทั้งยังทำลายเทวรูปในศาสนสถานของชาวฮินดู ผู้เขียนมีทรรศนะว่า การที่มัจญ์ลิซีเลือกกดขี่ชาวซุนนีนั้น เป็นสาเหตุหลักที่สร้างความโกรธแค้นให้กับชาวอัฟกันซุนนี ซึ่งนำไปสู่การรุกรานอิหร่านและล้มล้างรัฐซาฟาวิดในเวลาต่อมา และเมื่ออำนาจเปลี่ยนมือไปสู่สุลต่านฮุเซน (ที่เสียชีวิตในปี ค.ศ. 1722) มัจญ์ลิซีได้ขอให้ออกพระราชกฤษฎีกาขับไล่ชาวซูฟีออกจากเมืองหลวง และมีการบังคับใช้อย่างเข้มงวด</p>
+      <p>ในผลงานทั้งภาษาอาหรับและภาษาเปอร์เซียของมัจญ์ลิซี เขามักจะเน้นย้ำถึงปาฏิหาริย์และชีวประวัติของบรรดาอิหม่าม โดยนำคำกล่าวของพวกเขามาเป็นรากฐานในการกำหนดพิธีกรรมทางศาสนา ดังที่เขาได้กล่าวไว้ในหนังสือตุห์ฟาตุซซาอิร ในบทว่าด้วยมารยาทในการเยี่ยมชมสุสานของบรรดาอิหม่ามและบทขอดุอาอ์ที่แนะนำให้ใช้ ผู้เขียนได้ชี้ให้เห็นถึงประเด็นสำคัญอย่างยิ่งว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">زيارة المقامات كانت تحظى نسبيا بقليل اهتمام من متقدمي علماء الإمامية، لكن المجلسي رأى أنها جزء مهم من مذهب الإمامية</blockquote>
+      <p class="ar-translation">“ในอดีต การเยี่ยมเยียนสุสานหรือสถานที่ศักดิ์สิทธิ์แทบจะไม่ได้รับความสนใจจากนักวิชาการอิมามียะฮ์ยุคก่อนเลย แต่มัจญ์ลิซีกลับมองว่าสิ่งนี้คือองค์ประกอบสำคัญของแนวคิดอิมามียะฮ์”</p>
+      <h2 class="article-h2">บทที่ห้า: หลักการรอคอยอิหม่ามมะฮ์ดี</h2>
+      <p>โคลิน เทิร์นเนอร์เห็นควรให้ปิดท้ายหนังสือเล่มนี้ด้วยบทที่ห้า ซึ่งเขาให้ชื่อว่า “สายนอก (ความเป็นภายนอก) ภายใต้กล้องจุลทรรศน์ หลักความเชื่อเรื่องการรอคอยและการหวนกลับมาของกลุ่มอิมามียะฮ์” บทนี้เปรียบเสมือนส่วนสรุปสังเคราะห์ ซึ่งผู้เขียนได้หยุดพิจารณาถึงความคลาดเคลื่อนและการบิดเบือนที่สำคัญที่สุดที่เกิดขึ้นกับแนวคิดชีอะฮ์ในยุคซาฟาวิด เขาได้เจาะลึกแนวคิดเรื่อง “อิหม่ามมะฮ์ดี” ดังที่ปรากฏในการนำเสนอของชีอะฮ์โดยทั่วไป และในตำรับตำรายุคซาฟาวิดโดยเฉพาะ พร้อมทั้งนำไปเปรียบเทียบกับแนวคิดเรื่องพระเมสสิยาห์ในศาสนาอื่นๆ ในบริบทนี้ เทิร์นเนอร์ได้ศึกษาวิเคราะห์แนวคิดการรอคอย ในระบบความคิดของชีอะฮ์ โดยพิจารณาถึงเบื้องหลังทางวัฒนธรรม ประวัติศาสตร์ และจิตวิทยา นอกจากนี้ ผู้เขียนยังคงให้ความสนใจกับการวิเคราะห์ตำราบิฮารุลอันวาร ซึ่งถือเป็นหนึ่งในงานเขียนที่ทรงอิทธิพลที่สุดในประวัติศาสตร์ของชีอะฮ์</p>
+      <p>ผู้เขียนสามารถนำพาผู้อ่านไปเผชิญหน้ากับสัจธรรมที่ว่า แนวคิดชีอะฮ์สิบสองอิหม่ามในภาพรวมนั้น จริงแล้วถูกก่อร่างสร้างตัวขึ้นในยุคซาฟาวิด หลักความเชื่อและพิธีกรรมส่วนใหญ่ของชีอะฮ์ที่แพร่หลายในปัจจุบัน ล้วนตกผลึกในยุคสมัยนี้ ราชวงศ์ซาฟาวิดและบรรดานักนิติศาสตร์ได้นำเอาองค์ประกอบใหม่ๆ เข้ามาเสริมในระบบคิดของชีอะฮ์ พวกเขาให้ความสนใจกับเรื่องลี้ลับเหนือธรรมชาติและเรื่องอภินิหารแปลกประหลาด นำเอาประเพณีการทุบตีหน้าอกและการใช้ของมีคมทำร้ายร่างกายเพื่อหลั่งเลือดไว้อาลัย เข้ามาเป็นส่วนหนึ่งของพิธีกรรม สนับสนุนให้มีการด่าทอประณามบรรดาเคาะลีฟะฮ์ สหายของศาสดา และบรรดาภริยาของท่านศาสดา ﷺ ตลอดจนตัดสินว่าชาวซุนนีและบรรดานักซูฟีเป็นผู้ปฏิเสธศรัทธา ยิ่งไปกว่านั้น พวกเขายังได้สวมรัศมีแห่งความยิ่งใหญ่เกินมนุษย์ให้กับบรรดาอิหม่ามแห่งอะฮ์ลุลบัยต์ ซึ่งสะท้อนให้เห็นผ่านการให้ความสำคัญกับสุสานของพวกเขา และการประพันธ์บทขอดุอาอ์จำนวนมหาศาลไว้ให้โดยเฉพาะ</p>
+      <p>ผู้เขียนได้พยายามอย่างหนักในการแจกแจงถึงความคลาดเคลื่อนในหลากหลายมิติ โดยยกตัวอย่างหลายประการที่เกี่ยวข้องกับหลักศรัทธา ข้อบังคับทางกฎหมาย หรือภาพแทนความเชื่อของผู้ศรัทธา ซึ่งตัวอย่างเหล่านี้ไม่เคยปรากฏมาก่อนนอกจากในยุคซาฟาวิด แต่คนรุ่นหลังกลับสืบทอดมันมาในฐานะส่วนหนึ่งของจารีตชีอะฮ์ขนานแท้ จะขอยกตัวอย่างหนึ่งที่ผู้เขียนได้ลงลึกในการศึกษา นั่นคือประเด็นว่าด้วย “อิหม่าม” และการเปลี่ยนแปลงที่เกิดขึ้นกับแนวคิดนี้ในยุคซาฟาวิด</p>
+      <p>มุมมองที่เกี่ยวข้องกับตำแหน่งอิหม่ามได้เผชิญกับการเปลี่ยนแปลงครั้งประวัติศาสตร์ ทั้งในแง่โครงสร้างและกรอบความคิดทางศาสนา โดยเปลี่ยนจากความเชื่อที่มีมโนธรรม เป็นศูนย์กลาง และมีความสูงส่งทางจิตวิญญาณ เป็นเป้าหมาย ไปสู่แนวคิดที่ตั้งอยู่บนหลักการของอิหม่ามทางการเมือง และขับเคลื่อนอยู่ในวังวนของการเมือง เทิร์นเนอร์พยายามแกะรอยการเปลี่ยนผ่านจากระบบจิตวิญญาณที่มีอัลลอฮ์เป็นศูนย์กลาง ไปสู่แนวคิดทางการเมืองที่มีอิหม่ามเป็นศูนย์กลาง ข้อพิสูจน์ในเรื่องนี้คือ ตำแหน่งอิหม่าม แม้จะเป็นเพียงหลักการย่อยในระบบหลักความเชื่อของอิมามียะฮ์ แต่มันก้าวข้ามและมีความสำคัญเหนือกว่าหลักการอื่นๆ ทั้งหมด... ด้วยเหตุนี้ จำนวนสายรายงานของอิมามียะฮ์ที่กล่าวถึงตัวบุคคล (บรรดาอิหม่าม) จึงมีปริมาณมากกว่าสายรายงานที่อธิบายถึงวัตรปฏิบัติและการใช้ชีวิตประจำวันของบุคคลศูนย์กลางแห่งอิสลามอย่างท่านนบีมุฮัมมัด ﷺเอง อย่างมหาศาล</p>
+      <p>สถานะของอิหม่ามได้ถูกยกระดับขึ้นมาเทียบเท่ากับสถานะของศาสดา หรือในบางครั้งก็เหนือกว่าด้วยซ้ำ และเช่นเดียวกับที่อิหม่ามทำหน้าที่เป็นตัวแทนของศาสดาและลงนามในนามของท่าน จารีตของชีอะฮ์ หลังจากความลังเลใจหลายศตวรรษ ก็ได้เสนอชื่ออิหม่ามผู้เป็นนักนิติศาสตร์ ให้มาทำหน้าที่แทนอิหม่ามมะฮ์ดีผู้เร้นกาย และลงนามแทนท่านในนามของอัลลอฮ์ และจากจุดนี้เอง อำนาจปกครองของนักนิติศาสตร์ (ระบบวิลายะตุ้ลฟะกีฮ์) จึงถูกมองว่าเทียบเท่ากับอำนาจปกครองของอิหม่ามผู้บริสุทธิ์ การเชื่อในอิหม่ามจึงไม่ได้เป็นเพียงแขนงหนึ่งของศาสนาอีกต่อจากนั้น แต่ได้กลายมาเป็นรากฐานแห่งหลักศรัทธาและหลักการสำคัญของศาสนา ซึ่งผู้ใดที่ปฏิเสธหลักการนี้ ย่อมถูกตัดสินว่าเป็นผู้หลงผิด</p>
+      <h2 class="article-h2">บทสรุป</h2>
+      <p>ซึ่งก็ไม่ใช่เรื่องง่ายที่จะนำเสนอทุกสิ่งที่ปรากฏในหนังสือเล่มนี้ได้หมด เนื่องจากมีหัวข้อที่หลากหลาย และให้ประโยชน์ในหลายมิติ ผู้เขียนได้มอบเนื้อหาทางวิชาการที่ดี ผ่านการวิเคราะห์อย่างละเอียดถี่ถ้วน และปิดท้ายหนังสือด้วยรายชื่อแหล่งข้อมูลและเอกสารอ้างอิงที่ทรงคุณค่า เขาได้บอกเล่าถึงช่วงเวลาหัวเลี้ยวหัวต่อที่สำคัญที่สุดในการก่อตัวของแนวคิดชีอะฮ์สิบสองอิหม่าม โดยระบุถึงบุคคลสำคัญ ตำราที่เป็นรากฐาน และเมืองต่างๆ ที่เป็นสักขีพยานในเหตุการณ์ประวัติศาสตร์ ผู้อ่านหนังสือเล่มนี้จะได้รับคลังความรู้ที่ไม่อาจมองข้ามได้ อีกทั้งจะได้พบกับคำตอบของคำถามที่ค้างคาใจเกี่ยวกับแนวคิดชีอะฮ์สิบสองอิหม่าม และบทบาทของราชวงศ์ซาฟาวิดในการตกผลึกและชี้แนะทิศทางของกลุ่มนี้จนกลายเป็นกระแสหลักในโลกปัจจุบัน</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ชีอะฮ์และการเปลี่ยนผ่านในยุคซาฟาวิด. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/shiism-and-transformation-in-the-safavid-era.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
