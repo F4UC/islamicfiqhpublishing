@@ -184,3 +184,16 @@
 - หะดีษอื่น (แตงโม/อุมัร ฯลฯ) คง bare ar-quote สม่ำเสมอตามแนวบท (อาหรับ uniformly bare ยกเว้นอายะฮ์) — ผู้ใช้โฟกัสตรวจความหมาย ไม่ขอ re-level
 
 **สรุป #96: RE-DERIVE ครบ — main audited 100%** (บทความใหม่ทั้งหมดบน main audit + verify เสร็จ)
+
+## 2026-06-12 — Beta loop · audit `articles/tarikh/ibn-battuta-in-al-andalus.html` (#101, อิบนุ บะฏูเฏาะฮ์) — **MAJOR Rule 1 restore**
+
+**อาหรับ: ไม่แตะแม้แต่ไบต์เดียว** — ar-quote 14/14 byte-identical กับ main (d7b6e70) · ไม่มีอายะฮ์/หะดีษในบท · ZW=0 · Uthmani=0 · scholar quotes uniformly BARE (Rule 60) ✓ — การ audit นี้ไม่อยู่ในขอบเขต Arabic-Authority (ไม่มี Arabic touch)
+
+**พบ Rule 1 violation ของ Alpha (กู้คืนจาก Drive ปวศ.25 ตามมติเจ้าของ "Beta กู้คืนเนื้อจาก Drive เอง"):**
+- Alpha **ตัดเนื้อหาสาระไทย ~2,400 ตัวอักษร (~13%)** ทั่วทั้งบท (~33 ช่วง) — ไม่ได้ระบุใน CHANGES ของ PR #101 (= FAIL ตามโหมด)
+- **กู้คืน byte-exact จาก Drive** ทุกช่วง รวมย่อหน้าบทบาทอิบนุ ญุซัยย์, การพบแม่ทัพนายกอง, เหตุผลของเปโดร 2 ฉายา, อัยนุลดัมอ์(narrative), ฯลฯ · reading-time 19→**21** (gen-reading-time.js, 18,808 ตัวอักษร)
+- **คง typo-fix ที่ถูกต้องของ Alpha:** `คว่ำ→คร่ำหวอด`, `บุคล→บุคคล`, **`อัลฟอนโซที่ 10→11`** (ข้อเท็จจริง: Alfonso XI สิ้นพระชนม์ที่ Siege of Gibraltar 1350)
+- **house-style ที่ใส่ตอนกู้คืน:** S2 `ทว่า→แต่`/`มิใช่→ไม่ใช่`/`มิได้→ไม่ได้` (ร้อยแก้ว), S4 เว้นวรรคหลัง ๆ, S1 โคลอนก่อน quote (14 จุด), Rule 16b ครอบชื่อตำรา 3 เล่ม (“History of Arabic Geographical Literature”/“อัลอิสติกศออ์”/“อัลมุก็อดดิมะฮ์”)
+
+**FLAG-IB1 (ชื่อตำราอาหรับ inline):** Drive D46 มี `(دولة الإسلام في الأندلس)` ต่อท้ายชื่อไทย “รัฐอิสลามในอัลอันดาลุส” — **ตัดออก + FLAG** (เป็น inline Arabic ที่ต้องตัดสินใจเรื่อง `.ar-inline` span; ความหมายคงอยู่ในชื่อไทยแล้ว) — รอเจ้าของชี้ขาดว่าจะเติม inline Arabic หรือไม่
+**FLAG-IB2 (Rule 52, pre-existing):** al-compounds ในบท (อบุลฮัจญาจ/อบุลวะลีด/อบุลกอซิม/อบุลบะเราะกัต/อบุลฮะซัน, อิบนุลเคาะฏีบ) — รูปถูกต้อง (สระอุ, ไม่มี อบูล) แต่แจ้งตาม mandate Rule 52 (มาจาก Drive+Alpha เดิม ไม่ได้สร้างใหม่)
