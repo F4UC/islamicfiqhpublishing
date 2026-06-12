@@ -20,7 +20,7 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="../../favicon.png?v=2" type="image/png">
 <link rel="apple-touch-icon" href="../../favicon.png?v=2">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#F2EDE3">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,17 +29,34 @@
 
 <style>
 /* =========================================================
-   TOKENS — red accent, NO GOLD (matches sibling tool override)
+   PLATE 01 / FILAMENT ORDER — antique scientific-plate system
+   Color is legal language, not decoration. ONE crimson reserved
+   for origin + holder + chosen path. NO GOLD, no sparkle.
+   Day = parchment that breathes · Night = deep warm archive.
    ========================================================= */
 :root {
-  --bg-primary:     #ffffff;
-  --bg-secondary:   #f6f5f3;
-  --bg-tertiary:    #ecebe8;
-  --text-primary:   #141414;
-  --text-secondary: #3f3f3f;
-  --text-tertiary:  #6a6a6a;
-  --border-primary:   rgba(0,0,0,0.10);
-  --border-secondary: rgba(0,0,0,0.18);
+  /* ── Plate palette (day / parchment) ──────────────────── */
+  --plate-paper:  #F2EDE3;   /* parchment */
+  --plate-panel:  #ECE6DA;   /* slightly deeper parchment for panels */
+  --plate-panel2: #E4DDCD;
+  --plate-ink:    #161210;   /* near-black ink */
+  --plate-red:    #B31B1B;   /* the ONE crimson: origin + holder + path */
+  --plate-green:  #1B7A4A;   /* seal/stamp accent only */
+  --plate-blue:   #2156C8;   /* seal/stamp accent only */
+  --plate-gray:   #6F7785;   /* stone gray seal/pending/weak */
+  --plate-rule:        rgba(22,18,16,0.12);
+  --plate-rule-strong: rgba(22,18,16,0.22);
+  --plate-grid:        rgba(22,18,16,0.07);  /* faint plate grid dots */
+
+  /* ── Map plate vars onto the tool's existing token names ─ */
+  --bg-primary:     var(--plate-paper);
+  --bg-secondary:   var(--plate-panel);
+  --bg-tertiary:    var(--plate-panel2);
+  --text-primary:   var(--plate-ink);
+  --text-secondary: #3b332c;
+  --text-tertiary:  #6b6258;
+  --border-primary:   var(--plate-rule);
+  --border-secondary: var(--plate-rule-strong);
 
   --ink:      var(--bg-primary);
   --ink-2:    var(--bg-secondary);
@@ -48,15 +65,15 @@
   --text:     var(--text-primary);
   --text-dim: var(--text-secondary);
   --text-mute:var(--text-tertiary);
-  --gold:        #b31b1b;   /* overridden to deep red (no gold) */
-  --gold-bright: #d32f2f;
-  --accent:      #d32f2f;
-  --accent-deep: #b31b1b;
-  --rule:        rgba(0,0,0,0.07);
-  --rule-strong: rgba(0,0,0,0.13);
+  --gold:        var(--plate-red);   /* "gold" name kept; value = crimson (NO GOLD) */
+  --gold-bright: var(--plate-red);
+  --accent:      var(--plate-red);
+  --accent-deep: var(--plate-red);
+  --rule:        var(--plate-rule);
+  --rule-strong: var(--plate-rule-strong);
 
-  --green:     #2e7d52;
-  --green-bg:  rgba(46,125,82,0.10);
+  --green:     var(--plate-green);
+  --green-bg:  rgba(27,122,74,0.10);
 
   --serif:  'IBM Plex Sans Thai', system-ui, sans-serif;
   --thai:   'Sarabun', system-ui, sans-serif;
@@ -64,14 +81,27 @@
   --ui:     'Inter', system-ui, sans-serif;
 }
 html.dark-mode {
-  --bg-primary:   #0a0a0a;
-  --bg-secondary: #131313;
-  --bg-tertiary:  #1c1c1c;
-  --text-primary: #f3f3f3;
-  --text-secondary:#c4c4c4;
-  --text-tertiary: #9a9a9a;
-  --border-primary:   rgba(255,255,255,0.12);
-  --border-secondary: rgba(255,255,255,0.24);
+  /* ── Plate palette (night / deep warm archive) ────────── */
+  --plate-paper:  #14110D;
+  --plate-panel:  #1b1712;
+  --plate-panel2: #221d17;
+  --plate-ink:    #E8E2D4;
+  --plate-red:    #d8443f;
+  --plate-green:  #3fa56e;
+  --plate-blue:   #5b86e6;
+  --plate-gray:   #9aa1ab;
+  --plate-rule:        rgba(232,226,212,0.13);
+  --plate-rule-strong: rgba(232,226,212,0.28);
+  --plate-grid:        rgba(232,226,212,0.06);
+
+  --bg-primary:   var(--plate-paper);
+  --bg-secondary: var(--plate-panel);
+  --bg-tertiary:  var(--plate-panel2);
+  --text-primary: var(--plate-ink);
+  --text-secondary:#cfc7b6;
+  --text-tertiary: #9a9384;
+  --border-primary:   var(--plate-rule);
+  --border-secondary: var(--plate-rule-strong);
   --ink:      var(--bg-primary);
   --ink-2:    var(--bg-secondary);
   --ink-3:    var(--bg-tertiary);
@@ -79,10 +109,14 @@ html.dark-mode {
   --text:     var(--text-primary);
   --text-dim: var(--text-secondary);
   --text-mute:var(--text-tertiary);
-  --rule:        rgba(255,255,255,.13);
-  --rule-strong: rgba(255,255,255,.30);
-  --green:     #4ade80;
-  --green-bg:  rgba(74,222,128,0.12);
+  --gold:        var(--plate-red);
+  --gold-bright: var(--plate-red);
+  --accent:      var(--plate-red);
+  --accent-deep: var(--plate-red);
+  --rule:        var(--plate-rule);
+  --rule-strong: var(--plate-rule-strong);
+  --green:     var(--plate-green);
+  --green-bg:  rgba(63,165,110,0.14);
 }
 
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
@@ -229,11 +263,65 @@ html.dark-mode .pill-gap { color:var(--gold-bright); }
 .cy-wrap {
   position:relative; width:100%; min-height:560px; height:60vh; max-height:760px;
   border:1px solid var(--rule-strong); border-radius:14px; overflow:hidden;
+  /* parchment plate: faint scientific-plate grid that "breathes" */
   background:
-    radial-gradient(var(--border-secondary) 1px, transparent 1px) 0 0/18px 18px,
-    var(--ink-2);
+    radial-gradient(var(--plate-grid) 1px, transparent 1px) 0 0/22px 22px,
+    var(--plate-paper);
 }
-#cy { position:absolute; inset:0; width:100%; height:100%; }
+#cy { position:absolute; inset:0; width:100%; height:100%; z-index:1; }
+
+/* ── Plate corner index marks (scientific-plate framing) ─── */
+.cy-wrap::before, .cy-wrap::after {
+  content:''; position:absolute; width:14px; height:14px; pointer-events:none; z-index:2;
+  border-color:var(--plate-rule-strong); border-style:solid; border-width:0;
+}
+.cy-wrap::before { top:10px; left:10px; border-left-width:1.5px; border-top-width:1.5px; }
+.cy-wrap::after  { bottom:10px; right:10px; border-right-width:1.5px; border-bottom-width:1.5px; }
+.plate-index {
+  position:absolute; top:9px; left:30px; z-index:3; pointer-events:none;
+  font-family:var(--ui); font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--text-mute);
+}
+
+/* ── Origin emblem (al-manba' / ต้นสาย) — decorative, NO Arabic ── */
+.origin-emblem {
+  position:absolute; z-index:2; pointer-events:none;
+  width:120px; height:120px; transform:translate(-50%,-50%);
+  opacity:.9; transition:left .25s, top .25s, opacity .25s;
+  display:none;  /* shown once positioned over r0 */
+}
+.origin-emblem.ready { display:block; }
+.origin-emblem .ring {
+  position:absolute; inset:0; border-radius:50%; border:1px solid var(--plate-red);
+}
+.origin-emblem .ring.r1 { inset:0;   opacity:.55; }
+.origin-emblem .ring.r2 { inset:16px; opacity:.35; }
+.origin-emblem .ring.r3 { inset:34px; opacity:.20; }
+.origin-caption {
+  position:absolute; left:50%; bottom:-8px; transform:translateX(-50%);
+  white-space:nowrap; font-family:var(--thai); font-size:10px; letter-spacing:.04em;
+  color:var(--plate-red); opacity:.85;
+}
+
+/* ── Control bar (whisper style, top-right of graph) ─────── */
+.cy-controls {
+  position:absolute; top:12px; right:12px; z-index:4;
+  display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;
+}
+.cy-ctrl {
+  min-width:44px; min-height:44px; padding:0 12px;
+  display:inline-flex; align-items:center; justify-content:center; gap:6px;
+  font-family:var(--ui); font-size:13px; font-weight:500; line-height:1;
+  color:var(--plate-ink);
+  background:color-mix(in srgb, var(--plate-paper) 88%, transparent);
+  -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);
+  border:1px solid var(--plate-rule-strong); border-radius:999px;
+  transition:border-color .2s, color .2s, background .2s;
+}
+.cy-ctrl:hover { border-color:var(--plate-red); color:var(--plate-red); }
+.cy-ctrl[aria-pressed="false"] { opacity:.62; }
+.cy-ctrl .ctrl-ar { font-family:var(--arabic); font-size:16px; }
+.cy-ctrl .ctrl-th { font-family:var(--thai); font-size:11px; font-weight:500; }
 .cy-overlay {
   position:absolute; inset:0; display:flex; flex-direction:column;
   align-items:center; justify-content:center; gap:14px; text-align:center;
@@ -341,6 +429,19 @@ details[open] .legend-summary::after { content:'−'; }
 .leg-line { width:30px; height:0; flex-shrink:0; }
 .leg-solid { border-top:2px solid var(--text-dim); }
 .leg-dashed { border-top:2px dashed var(--text-dim); }
+.leg-dotted-red { border-top:2px dotted var(--plate-red); }
+/* capsule legend swatches: parchment fill + seal-coloured border (matches graph) */
+.leg-cap { width:30px; height:15px; border-radius:999px; flex-shrink:0;
+           background:var(--plate-paper); border:2px solid var(--plate-gray); }
+.leg-cap-red       { border-color:var(--plate-red);  }
+.leg-cap-ink       { border-color:var(--plate-ink);  }
+.leg-cap-green     { border-color:var(--plate-green);}
+.leg-cap-blue      { border-color:var(--plate-blue); }
+.leg-cap-gray-dash { border-style:dashed; border-color:var(--plate-gray); }
+.leg-cap-gray-thin { border-width:1.2px; border-color:var(--plate-gray); }
+.leg-cap-red-dot   { border-style:dotted; border-color:var(--plate-red); }
+.leg-chevron { width:24px; flex-shrink:0; text-align:center; font-family:var(--ui);
+               font-weight:700; font-size:18px; color:var(--plate-gray); line-height:1; }
 .leg-glossary { grid-column:1 / -1; border-top:1px solid var(--rule); padding-top:16px; margin-top:4px; }
 .glossary { display:grid; grid-template-columns:auto 1fr; gap:5px 16px; margin-top:4px; font-family:var(--thai); font-size:13px; align-items:baseline; }
 .glossary dt { font-weight:600; color:var(--paper); white-space:nowrap; }
@@ -388,6 +489,9 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
 @media(max-width:640px){
   .cy-wrap { min-height:440px; height:64vh; }
   #backToTopBtn { bottom:20px; right:20px; }
+  /* control bar sticks to the top of the graph, full-width, large taps */
+  .cy-controls { left:12px; right:12px; justify-content:flex-end; }
+  .cy-ctrl { min-width:48px; min-height:48px; }
   .chain-grid { grid-template-columns:1fr; }
   /* Drawer becomes a bottom-sheet on mobile */
   .drawer {
@@ -473,6 +577,30 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
 
     <div class="cy-wrap" data-reveal data-delay="1">
       <div id="cy"></div>
+
+      <!-- Scientific-plate index label (Thai/Latin only, no Arabic) -->
+      <div class="plate-index">PLATE 01 · FILAMENT ORDER</div>
+
+      <!-- Origin emblem — decorative concentric rings over r0 (no Arabic) -->
+      <div class="origin-emblem" id="originEmblem" aria-hidden="true">
+        <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+        <span class="origin-caption">ต้นสาย (R0)</span>
+      </div>
+
+      <!-- Control bar — day/night + Arabic on/off (whisper style) -->
+      <div class="cy-controls" id="cyControls">
+        <button type="button" class="cy-ctrl" id="themeToggle" aria-pressed="false"
+                title="สลับโหมดกลางวัน/กลางคืน" aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span id="themeIcon">☀</span>
+          <span class="ctrl-th" id="themeLabel">กลางวัน</span>
+        </button>
+        <button type="button" class="cy-ctrl" id="arabicToggle" aria-pressed="true"
+                title="เปิด/ปิดอักษรอาหรับ" aria-label="เปิดหรือปิดอักษรอาหรับ">
+          <span class="ctrl-ar" id="arabicGlyph">&#x639;</span>
+          <span class="ctrl-th" id="arabicLabel">อาหรับ: เปิด</span>
+        </button>
+      </div>
+
       <div class="cy-overlay" id="cyOverlay">
         <div class="cy-spinner"></div>
         <div class="cy-overlay-th" id="cyOverlayTh">กำลังเตรียมแผนภูมิ…</div>
@@ -509,16 +637,21 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       <summary class="legend-summary">คำอธิบายสัญลักษณ์</summary>
       <div class="legend-body">
         <div>
-          <div class="leg-group-title">ระดับผู้รายงาน (สี)</div>
-          <div class="leg-item"><span class="leg-swatch" style="background:#f6f5f3;border:1px solid #b31b1b;"></span>เชื่อถือได้สูง (นบี · เศาะหาบะฮ์ · ษิเกาะฮ์)</div>
-          <div class="leg-item"><span class="leg-swatch" style="background:#9aa0a6;"></span>ระดับกลาง (เศาะดูก · มักบูล)</div>
-          <div class="leg-item"><span class="leg-swatch" style="background:#d32f2f;"></span>อ่อน/ไม่ทราบ/ช่วงขาด (เฎาะอีฟ · มัจญ์ฮูล · ฆ็อป)</div>
+          <div class="leg-group-title">ระดับผู้รายงาน (ขอบแคปซูล = คำตัดสิน)</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-red"></span>ต้นสาย / ผู้รับสุดท้าย (นบี · ผู้ถือสายสุดท้าย) — แดง</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-ink"></span>เศาะหาบะฮ์ — ขอบหมึกเข้ม</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-green"></span>ษิเกาะฮ์ (เชื่อถือได้) — เขียว ขอบทึบ</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-blue"></span>เศาะดูก · มักบูล — น้ำเงิน ขอบทึบ</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-gray-dash"></span>เฎาะอีฟ · มัจญ์ฮูล — เทา ขอบเส้นประ</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-gray-thin"></span>ไม่ระบุระดับ — เทาเส้นบาง (รอตรวจ)</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-red-dot"></span>ช่วงขาด (อินกิฏออฺ) — แดง ขอบจุดประ</div>
         </div>
         <div>
           <div class="leg-group-title">ชนิดการเชื่อม (เส้น)</div>
           <div class="leg-item"><span class="leg-line leg-solid"></span>เส้นทึบ = สะมาอฺ / มุสัลซัล (ฟังตรง)</div>
           <div class="leg-item"><span class="leg-line leg-dashed"></span>เส้นประ = อิญาซะฮ์ (อนุญาตให้สืบทอด)</div>
-          <div class="leg-item"><span class="leg-swatch" style="background:transparent;border:2px solid #b31b1b;"></span>ขอบหนา = รากของสาย (r0)</div>
+          <div class="leg-item"><span class="leg-line leg-dotted-red"></span>จุดประแดง = ช่วงขาด (ไม่มีหัวลูกศร)</div>
+          <div class="leg-item"><span class="leg-chevron">›</span>หัวลูกศรเชฟรอน = ครู → ศิษย์</div>
         </div>
         <div>
           <div class="leg-group-title">ความต่อเนื่อง</div>
@@ -593,6 +726,11 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   var DATA_BASE  = 'ijazah-data/';
   var GRAPH_BASE = 'ijazah-data/graphs/';
 
+  /* Arabic-script detector (escaped \u ranges only — no literal Arabic
+     glyph appears in this source file). Covers Arabic, Arabic Supplement,
+     and the Presentation Forms A/B blocks. */
+  var RE_ARABIC = new RegExp('[\\u0600-\\u06FF\\u0750-\\u077F\\uFB50-\\uFDFF\\uFE70-\\uFEFF]');
+
   /* ── State ─────────────────────────────────────────────── */
   var groups   = [];     /* index.json groups */
   var sources  = {};     /* sources.json sources map */
@@ -601,6 +739,9 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   var nodeById  = {};    /* id -> node */
   var adj       = {};    /* id -> [neighbour ids] (undirected) */
   var edgeMap   = {};    /* nodeId -> {in:[edge], out:[edge]} */
+  var nodeOrder = {};    /* id -> 1-based load index (Arabic-off fallback label) */
+  var holderIds = {};    /* id -> true for terminal sinks (out-degree 0 = hamil al-sanad) */
+  var lastDrawerNode = null;  /* re-render the open drawer on Arabic toggle */
 
   /* ── Tier mapping (gc -> tier + Thai label) ────────────── */
   var TIER = {
@@ -617,12 +758,49 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   function tierOf(gc){ return (TIER[gc] || TIER.unknown).tier; }
   function tierTh(gc){ return (TIER[gc] || TIER.unknown).th; }
 
-  /* colour family by tier (for cytoscape) */
-  var TIER_FILL = {
-    strong: '#f3efe6', strongText:'#141414', strongBorder:'#b31b1b',
-    mid:    '#9aa0a6', midText:'#ffffff',    midBorder:'#6a6e73',
-    weak:   '#d32f2f', weakText:'#ffffff',   weakBorder:'#8e1414'
-  };
+  /* ── Arabic on/off state (default ON). When OFF: zero Arabic glyphs
+     render anywhere (DOM or graph canvas); fallbacks substitute. ───── */
+  var arabicOn = true;
+
+  /* ── PLATE colour reads from CSS custom properties so day/night the
+     graph canvas tracks the same parchment palette as the DOM. ────── */
+  function plateVar(name, fallback){
+    try {
+      var v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+      return v || fallback;
+    } catch(e){ return fallback; }
+  }
+  function plate(){
+    return {
+      paper:  plateVar('--plate-paper',  '#F2EDE3'),
+      panel:  plateVar('--plate-panel2', '#E4DDCD'),
+      ink:    plateVar('--plate-ink',    '#161210'),
+      red:    plateVar('--plate-red',    '#B31B1B'),
+      green:  plateVar('--plate-green',  '#1B7A4A'),
+      blue:   plateVar('--plate-blue',   '#2156C8'),
+      gray:   plateVar('--plate-gray',   '#6F7785')
+    };
+  }
+
+  /* ── Capsule node VERDICT by gc — border colour = grade, border style
+     = continuity: solid=reliable, thin=pending, dashed=weak, dotted=break.
+     Fill is always parchment (an OUTLINE capsule, never a saturated fill).
+     ───────────────────────────────────────────────────────────────── */
+  function nodeVerdict(gc){
+    var P = plate();
+    switch(gc){
+      case 'prophet': return {border:P.red,   width:2.4, style:'solid',  origin:true};
+      case 'sahabi':  return {border:P.ink,   width:2,   style:'solid'};
+      case 'thiqa':   return {border:P.green, width:2,   style:'solid'};
+      case 'saduq':   return {border:P.blue,  width:2,   style:'solid'};
+      case 'maqbul':  return {border:P.blue,  width:2,   style:'solid'};   /* FLAG: maqbul grouped with saduq */
+      case 'daif':    return {border:P.gray,  width:2,   style:'dashed'};
+      case 'majhul':  return {border:P.gray,  width:2,   style:'dashed'};  /* FLAG: majhul treated as daif */
+      case 'gap':     return {border:P.red,   width:2,   style:'dotted'};  /* inqitāʿ: declared break */
+      case 'unknown': return {border:P.gray,  width:1.2, style:'solid'};   /* pending status */
+      default:        return {border:P.gray,  width:1.2, style:'solid'};
+    }
+  }
 
   var EDGE_TYPE_TH = { sama:'สะมาอฺ (ฟังตรง)', ijaza:'อิญาซะฮ์ (อนุญาตสืบทอด)', musalsal:'มุสัลซัล (สายต่อเนื่องพิเศษ)' };
   var STATUS = {
@@ -656,6 +834,45 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     if(text != null && text !== '') e.textContent = text;
     if(langAr){ e.setAttribute('lang','ar'); e.setAttribute('dir','rtl'); }
     return e;
+  }
+
+  /* ── arabicEl: like el() but Arabic-script content is GATED. When
+     arabicOn is false, the Arabic text is suppressed entirely (no glyph
+     reaches the DOM) and an optional Thai/Latin fallback is shown instead.
+     Always byte-exact via textContent — never innerHTML. ──────────────── */
+  function arabicEl(tag, cls, arText, fallback){
+    var e = document.createElement(tag);
+    if(cls) e.className = cls;
+    if(arabicOn){
+      if(arText != null && arText !== '') e.textContent = arText;
+      e.setAttribute('lang','ar'); e.setAttribute('dir','rtl');
+    } else {
+      if(fallback != null && fallback !== '') e.textContent = fallback;
+      /* no lang=ar / dir=rtl when suppressed */
+    }
+    return e;
+  }
+
+  /* Re-render every open/visible view after an Arabic on/off toggle. */
+  function rerenderAll(){
+    renderChainList(currentList());
+    if(curGraph){
+      renderGraphHeader(curGraph);
+      refreshGraphLabels();
+      populatePathSelectors(curGraph);
+    }
+    if($drawer.classList.contains('open') && lastDrawerNode){
+      openDrawer(lastDrawerNode);
+    }
+  }
+  /* the list currently being shown (respects the active search filter) */
+  function currentList(){
+    var q = ($search.value || '').trim().toLowerCase();
+    if(!q) return groups;
+    return groups.filter(function(g){
+      var hay = ((g.bab||'') + ' ' + (g.books||[]).join(' ')).toLowerCase();
+      return hay.indexOf(q) > -1;
+    });
   }
 
   /* ========================================================
@@ -694,10 +911,18 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       card.className = 'chain-card';
       card.setAttribute('data-gid', g.gid);
 
-      card.appendChild(el('div','chain-bab', g.bab || '', true));
+      /* bab is Arabic — gated. When Arabic is off, show a Thai placeholder. */
+      card.appendChild(arabicEl('div','chain-bab', g.bab || '', 'สายอิญาซะฮ์'));
 
-      var books = (g.books || []).join(' · ');
-      card.appendChild(el('div','chain-books', books));
+      var books = (g.books || []).join(' · ');   /* book titles may be Arabic */
+      if(arabicOn){
+        card.appendChild(el('div','chain-books', books));
+      } else if((g.books||[]).some(function(b){ return RE_ARABIC.test(b); })){
+        /* titles are Arabic-script → suppress, show neutral Thai label */
+        card.appendChild(el('div','chain-books','(ชื่อตำราภาษาอาหรับ — ปิดการแสดงผล)'));
+      } else {
+        card.appendChild(el('div','chain-books', books));
+      }
 
       var foot = document.createElement('div');
       foot.className = 'chain-foot';
@@ -774,11 +999,12 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   }
 
   function buildIndices(data){
-    nodeById = {}; adj = {}; edgeMap = {};
-    (data.nodes||[]).forEach(function(n){
+    nodeById = {}; adj = {}; edgeMap = {}; nodeOrder = {}; holderIds = {};
+    (data.nodes||[]).forEach(function(n, i){
       nodeById[n.id] = n;
       adj[n.id] = [];
       edgeMap[n.id] = {in:[], out:[]};
+      nodeOrder[n.id] = i + 1;   /* 1..N in load order — Arabic-off fallback */
     });
     (data.edges||[]).forEach(function(e){
       if(adj[e.source]) adj[e.source].push(e.target);
@@ -786,11 +1012,32 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       if(edgeMap[e.target]) edgeMap[e.target].in.push(e);
       if(edgeMap[e.source]) edgeMap[e.source].out.push(e);
     });
+    /* HOLDER (hamil al-sanad): any non-origin node that is a terminal sink
+       (out-degree 0 from teacher->student edges). The chain's destination. */
+    (data.nodes||[]).forEach(function(n){
+      var em = edgeMap[n.id] || {out:[]};
+      if(n.id !== 'r0' && n.gc !== 'gap' && em.out.length === 0){
+        holderIds[n.id] = true;
+      }
+    });
+  }
+
+  /* Label for a graph node: Arabic disp when on, else its load index. */
+  function nodeLabel(n){
+    if(arabicOn) return n.disp || n.full || n.id;
+    return String(nodeOrder[n.id] || '');
   }
 
   function renderGraphHeader(data){
     var meta = data.meta || {};
-    $titleAr.textContent = meta.bab || '';   /* Arabic via textContent — byte-exact */
+    /* Arabic title is gated: byte-exact via textContent when on, blank when off. */
+    if(arabicOn){
+      $titleAr.textContent = meta.bab || '';
+      $titleAr.setAttribute('lang','ar'); $titleAr.setAttribute('dir','rtl');
+    } else {
+      $titleAr.textContent = '';
+      $titleAr.removeAttribute('lang'); $titleAr.removeAttribute('dir');
+    }
 
     $status.innerHTML = '';
     /* continuity: respect meta.continuous AND presence of gap nodes */
@@ -825,20 +1072,31 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     }
     ensureDagre();
 
+    var P = plate();   /* live palette snapshot (tracks day/night) */
+    /* taxi (orthogonal) routing matches the plate look; if it misbehaves
+       in this Cytoscape build, fall back to bezier. */
+    var EDGE_CURVE = 'taxi';
+
     var elements = [];
     (data.nodes||[]).forEach(function(n){
-      var tier = tierOf(n.gc);
       elements.push({ data: {
         id: n.id,
-        label: n.disp || n.full || n.id,
-        tier: tier,
-        isRoot: (n.id === 'r0') ? 1 : 0
+        label: nodeLabel(n),
+        gc: n.gc || 'unknown',
+        isRoot:   (n.id === 'r0') ? 1 : 0,
+        isHolder: holderIds[n.id] ? 1 : 0
       }});
     });
+    /* inqitāʿ = real break: an edge touching a gc:"gap" node. (Chain-level
+       meta.continuous===false flags that a gap node exists somewhere; the
+       break itself is the edge adjacent to that gap node — data-driven.) */
     (data.edges||[]).forEach(function(e, i){
+      var srcN = nodeById[e.source], tgtN = nodeById[e.target];
+      var isGap = (srcN && srcN.gc === 'gap') || (tgtN && tgtN.gc === 'gap') ? 1 : 0;
       elements.push({ data: {
         id: 'e'+i, source: e.source, target: e.target,
-        etype: e.type || 'sama'
+        etype: e.type || 'sama',
+        isGap: isGap
       }});
     });
 
@@ -850,45 +1108,68 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       minZoom: 0.15, maxZoom: 2.5,
       wheelSensitivity: 0.25,
       style: [
+        /* ── Capsule node: parchment fill, ONE line of name, ink text,
+           grade-coloured thin border (the "seal" verdict). ──────────── */
         { selector: 'node', style: {
             'label': 'data(label)',
             'font-family': 'Amiri, serif',
             'font-size': '13px',
             'text-valign': 'center', 'text-halign': 'center',
-            'text-wrap': 'wrap', 'text-max-width': '120px',
-            'width': 'label', 'height': 'label',
-            'padding': '10px',
+            'text-wrap': 'none',                 /* exactly one line — no wrap */
+            'width': 'label', 'height': '16px',  /* fixed-ish capsule height */
+            'padding': '9px',
             'shape': 'round-rectangle',
-            'background-color': function(ele){ return TIER_FILL[ele.data('tier')]; },
-            'color': function(ele){ var t=ele.data('tier'); return t==='strong'?TIER_FILL.strongText:(t==='mid'?TIER_FILL.midText:TIER_FILL.weakText); },
-            'border-width': 1.4,
-            'border-color': function(ele){ var t=ele.data('tier'); return t==='strong'?TIER_FILL.strongBorder:(t==='mid'?TIER_FILL.midBorder:TIER_FILL.weakBorder); },
+            'corner-radius': '40px',             /* large radius → reads as a pill */
+            'background-color': P.paper,         /* OUTLINE capsule, parchment fill */
+            'background-opacity': 1,
+            'color': P.ink,
+            'border-width': function(ele){ return nodeVerdict(ele.data('gc')).width; },
+            'border-color': function(ele){ return nodeVerdict(ele.data('gc')).border; },
+            'border-style': function(ele){ return nodeVerdict(ele.data('gc')).style; },
             'transition-property': 'border-color, border-width, background-color',
             'transition-duration': '180ms'
         }},
+        /* HOLDER (terminal sink, hamil al-sanad): crimson border like origin. */
+        { selector: 'node[isHolder = 1]', style: {
+            'border-color': P.red, 'border-width': 2.2, 'border-style': 'solid'
+        }},
+        /* ORIGIN (r0): crimson, slightly larger — the al-manba'. */
         { selector: 'node[isRoot = 1]', style: {
             'font-size': '15px',
-            'border-width': 3,
-            'border-color': '#b31b1b',
-            'padding': '14px'
+            'border-width': 2.6, 'border-color': P.red, 'border-style': 'solid',
+            'padding': '12px'
         }},
+        /* ── Edges: thin, calm, sharp chevron (vee), teacher→student.
+           Orthogonal taxi routing for the modeling-plate look. ──────── */
         { selector: 'edge', style: {
             'width': 1.6,
-            'line-color': '#9aa0a6',
-            'target-arrow-color': '#9aa0a6',
-            'target-arrow-shape': 'triangle',
-            'arrow-scale': 0.9,
-            'curve-style': 'bezier',
+            'line-color': P.gray,
+            'target-arrow-color': P.gray,
+            'target-arrow-shape': 'vee',         /* sharp chevron, NOT triangle */
+            'arrow-scale': 0.95,
+            'curve-style': EDGE_CURVE,
+            'taxi-direction': 'downward',
+            'taxi-turn': '50%',
             'transition-property': 'line-color, width',
             'transition-duration': '180ms'
         }},
-        { selector: 'edge[etype = "ijaza"]', style: { 'line-style': 'dashed' } },
+        { selector: 'edge[etype = "ijaza"]',    style: { 'line-style': 'dashed' } },
+        { selector: 'edge[etype = "sama"]',     style: { 'line-style': 'solid'  } },
+        /* FLAG: musalsal styled as sama (continuous); not in Plate B */
+        { selector: 'edge[etype = "musalsal"]', style: { 'line-style': 'solid'  } },
+        /* inqitāʿ: a real break — red dotted, NO arrowhead. Data-driven. */
+        { selector: 'edge[isGap = 1]', style: {
+            'line-style': 'dotted',
+            'line-color': P.red,
+            'target-arrow-shape': 'none'
+        }},
+        /* trace / chosen path — the ONE crimson, kept as-is. */
         { selector: '.hl-node', style: {
-            'border-color': '#d32f2f', 'border-width': 3,
-            'background-color': '#d32f2f', 'color': '#ffffff'
+            'border-color': P.red, 'border-width': 2.8, 'border-style': 'solid',
+            'color': P.red
         }},
         { selector: '.hl-edge', style: {
-            'line-color': '#d32f2f', 'target-arrow-color': '#d32f2f', 'width': 3
+            'line-color': P.red, 'target-arrow-color': P.red, 'width': 2.6
         }},
         { selector: '.dim', style: { 'opacity': 0.22 } }
       ],
@@ -916,8 +1197,62 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       cy.resize();
       cy.fit(cy.elements(), 40);
       hideOverlay();
+      positionOriginEmblem();
     });
     lay.run();
+
+    /* keep the origin emblem glued over r0 through pan / zoom / drag */
+    cy.on('pan zoom render', positionOriginEmblem);
+    cy.on('position', 'node[isRoot = 1]', positionOriginEmblem);
+  }
+
+  /* ── Refresh graph node labels in place (Arabic on/off toggle) without
+     a full reload — preserves layout/zoom/pan. ────────────────────── */
+  function refreshGraphLabels(){
+    if(!cy) return;
+    cy.batch(function(){
+      cy.nodes().forEach(function(ele){
+        var n = nodeById[ele.id()];
+        if(n) ele.data('label', nodeLabel(n));
+      });
+    });
+  }
+
+  /* ── ORIGIN EMBLEM (D): concentric-ring halo glued over r0. Purely
+     decorative; contains NO Arabic (Thai caption only). ───────────── */
+  function positionOriginEmblem(){
+    var emblem = document.getElementById('originEmblem');
+    if(!emblem || !cy) return;
+    var root = cy.getElementById('r0');
+    if(!root || root.empty()){ emblem.classList.remove('ready'); return; }
+    var rp = root.renderedPosition();
+    var wrap = document.getElementById('cy');
+    if(!rp || !wrap){ emblem.classList.remove('ready'); return; }
+    emblem.style.left = rp.x + 'px';
+    emblem.style.top  = rp.y + 'px';
+    emblem.classList.add('ready');
+  }
+
+  /* Re-apply the live palette to the graph after a day/night switch so the
+     parchment fills, ink labels and seal borders track the theme. */
+  function restyleGraphForTheme(){
+    if(!cy) return;
+    var P = plate();
+    cy.batch(function(){
+      cy.style()
+        .selector('node')
+          .style('background-color', P.paper)
+          .style('color', P.ink)
+          .style('border-color', function(ele){ return nodeVerdict(ele.data('gc')).border; })
+        .selector('node[isHolder = 1]').style('border-color', P.red)
+        .selector('node[isRoot = 1]').style('border-color', P.red)
+        .selector('edge')
+          .style('line-color', P.gray).style('target-arrow-color', P.gray)
+        .selector('edge[isGap = 1]').style('line-color', P.red)
+        .selector('.hl-node').style('border-color', P.red).style('color', P.red)
+        .selector('.hl-edge').style('line-color', P.red).style('target-arrow-color', P.red)
+        .update();
+    });
   }
 
   /* highlight predecessors ∪ successors path of a node */
@@ -963,38 +1298,54 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
      NARRATOR DRAWER
      ======================================================== */
   function openDrawer(node){
-    $drawerName.textContent = node.full || node.disp || '';
+    lastDrawerNode = node;
+    /* drawer name is Arabic — gated. Fallback = the node's load index. */
+    if(arabicOn){
+      $drawerName.textContent = node.full || node.disp || '';
+      $drawerName.setAttribute('lang','ar'); $drawerName.setAttribute('dir','rtl');
+    } else {
+      $drawerName.textContent = 'ผู้รายงาน #' + (nodeOrder[node.id] || '');
+      $drawerName.removeAttribute('lang'); $drawerName.removeAttribute('dir');
+    }
     $drawerBody.innerHTML = '';
 
-    /* tier */
+    /* tier (Thai chrome — always shown) */
     var tf = document.createElement('div'); tf.className = 'dfield';
     tf.appendChild(el('div','dfield-label','ระดับความน่าเชื่อถือ'));
     var chip = el('span','tier-chip tier-' + tierOf(node.gc), tierTh(node.gc));
     tf.appendChild(chip);
     $drawerBody.appendChild(tf);
 
-    /* grade (Arabic verbatim) + gradedBy */
+    /* grade (Arabic verbatim) + gradedBy — gated */
     if(node.grade){
       var gf = document.createElement('div'); gf.className='dfield';
       gf.appendChild(el('div','dfield-label','คำตัดสิน (ตัวบทอาหรับ)'));
-      gf.appendChild(el('div','dfield-val', node.grade, true));
-      if(node.gradeBy) gf.appendChild(el('div','dfield-val', node.gradeBy, true));
+      if(arabicOn){
+        gf.appendChild(el('div','dfield-val', node.grade, true));
+        if(node.gradeBy) gf.appendChild(el('div','dfield-val', node.gradeBy, true));
+      } else {
+        gf.appendChild(el('div','dfield-val','(ตัวบทอาหรับ — ปิดการแสดงผล)'));
+      }
       $drawerBody.appendChild(gf);
     }
 
-    /* death */
+    /* death (may contain an Arabic-script year + hijri marker) — gated */
     if(node.death){
       var df = document.createElement('div'); df.className='dfield';
       df.appendChild(el('div','dfield-label','ปีเสียชีวิต'));
-      df.appendChild(el('div','dfield-val', node.death, true));
+      if(arabicOn) df.appendChild(el('div','dfield-val', node.death, true));
+      else if(RE_ARABIC.test(node.death)) df.appendChild(el('div','dfield-val','(ระบุเป็นภาษาอาหรับ — ปิดการแสดงผล)'));
+      else df.appendChild(el('div','dfield-val', node.death));
       $drawerBody.appendChild(df);
     }
 
-    /* places */
+    /* places — gated */
     if(node.places){
       var pf = document.createElement('div'); pf.className='dfield';
       pf.appendChild(el('div','dfield-label','ถิ่นฐาน'));
-      pf.appendChild(el('div','dfield-val', node.places, true));
+      if(arabicOn) pf.appendChild(el('div','dfield-val', node.places, true));
+      else if(RE_ARABIC.test(node.places)) pf.appendChild(el('div','dfield-val','(ระบุเป็นภาษาอาหรับ — ปิดการแสดงผล)'));
+      else pf.appendChild(el('div','dfield-val', node.places));
       $drawerBody.appendChild(pf);
     }
 
@@ -1027,12 +1378,23 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     var otherId = (e.source === selfId) ? e.target : e.source;
     var other = nodeById[otherId];
     wrap.appendChild(el('div','prov-dir', dirTh + ' · ' + (EDGE_TYPE_TH[e.type] || e.type || '')));
-    if(other) wrap.appendChild(el('div','prov-title', other.disp || other.full || '', true));
+    /* other narrator name (Arabic) — gated; fallback = its load index */
+    if(other){
+      if(arabicOn) wrap.appendChild(el('div','prov-title', other.disp || other.full || '', true));
+      else wrap.appendChild(el('div','prov-title','ผู้รายงาน #' + (nodeOrder[otherId] || '')));
+    }
 
     var src = sources[e.srcId];
     if(src){
-      wrap.appendChild(el('div','prov-author', src.title || '', true));
-      if(src.author && src.author !== '—') wrap.appendChild(el('div','prov-author', src.author, true));
+      /* source title + author are Arabic — gated */
+      if(arabicOn){
+        if(src.title) wrap.appendChild(el('div','prov-author', src.title, true));
+        if(src.author && src.author !== '—') wrap.appendChild(el('div','prov-author', src.author, true));
+      } else if(src.title && RE_ARABIC.test(src.title)){
+        wrap.appendChild(el('div','prov-author','(แหล่งอ้างอิงภาษาอาหรับ — ปิดการแสดงผล)'));
+      } else if(src.title){
+        wrap.appendChild(el('div','prov-author', src.title));
+      }
     }
 
     var foot = document.createElement('div'); foot.className='prov-foot';
@@ -1066,8 +1428,12 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       [$pathFrom, $pathTo].forEach(function(sel){
         var o = document.createElement('option');
         o.value = n.id;
-        o.textContent = n.disp || n.full || n.id;  /* Arabic via textContent */
-        o.setAttribute('lang','ar');
+        if(arabicOn){
+          o.textContent = n.disp || n.full || n.id;  /* Arabic via textContent */
+          o.setAttribute('lang','ar');
+        } else {
+          o.textContent = 'ผู้รายงาน #' + (nodeOrder[n.id] || '');  /* fallback index */
+        }
         sel.appendChild(o);
       });
     });
@@ -1118,7 +1484,11 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     var chain = document.createElement('div'); chain.className='path-chain';
     path.forEach(function(id, i){
       var n = nodeById[id];
-      chain.appendChild(el('span','path-node-ar', (n ? (n.disp || n.full || id) : id), true));
+      if(arabicOn){
+        chain.appendChild(el('span','path-node-ar', (n ? (n.disp || n.full || id) : id), true));
+      } else {
+        chain.appendChild(el('span','path-node-ar','#' + (nodeOrder[id] || id)));
+      }
       if(i < path.length-1) chain.appendChild(el('span','path-arrow','→'));
     });
     $pathResult.appendChild(chain);
@@ -1193,6 +1563,49 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     if(r.top < window.innerHeight && r.bottom > 0){ elm.classList.add('is-in'); }
     else { io.observe(elm); }
   });
+
+  /* ========================================================
+     CONTROL BAR — day/night + Arabic on/off (whisper style)
+     ======================================================== */
+  var $themeToggle = document.getElementById('themeToggle');
+  var $themeIcon   = document.getElementById('themeIcon');
+  var $themeLabel  = document.getElementById('themeLabel');
+  var $arabicToggle= document.getElementById('arabicToggle');
+  var $arabicLabel = document.getElementById('arabicLabel');
+
+  function syncThemeButton(){
+    var dark = document.documentElement.classList.contains('dark-mode');
+    if($themeIcon)  $themeIcon.textContent  = dark ? '☾' : '☀';  /* ☾ / ☀ */
+    if($themeLabel) $themeLabel.textContent = dark ? 'กลางคืน' : 'กลางวัน';
+    if($themeToggle) $themeToggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
+  }
+  if($themeToggle){
+    syncThemeButton();
+    $themeToggle.addEventListener('click', function(){
+      var dark = document.documentElement.classList.toggle('dark-mode');
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch(e){}
+      syncThemeButton();
+      /* re-skin the graph canvas to the new palette (DOM uses CSS vars) */
+      restyleGraphForTheme();
+    });
+  }
+
+  var $arabicGlyph = document.getElementById('arabicGlyph');
+  function syncArabicButton(){
+    if($arabicLabel) $arabicLabel.textContent = 'อาหรับ: ' + (arabicOn ? 'เปิด' : 'ปิด');
+    if($arabicToggle) $arabicToggle.setAttribute('aria-pressed', arabicOn ? 'true' : 'false');
+    /* the button's own ayn icon is an Arabic glyph — hide it when OFF so a
+       DOM scan yields zero rendered Arabic. (Glyph shown via &#x639; when ON.) */
+    if($arabicGlyph) $arabicGlyph.style.display = arabicOn ? '' : 'none';
+  }
+  if($arabicToggle){
+    syncArabicButton();
+    $arabicToggle.addEventListener('click', function(){
+      arabicOn = !arabicOn;
+      syncArabicButton();
+      rerenderAll();   /* re-render every visible view with the new gate */
+    });
+  }
 
 })();
 </script>
