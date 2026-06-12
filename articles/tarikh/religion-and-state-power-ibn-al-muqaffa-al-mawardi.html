@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>ศาสนาและอำนาจรัฐ ในทัศนะของอิบนุ อัลมุก็อฟฟะอ์และอัลมาวัรดีย์ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="วิเคราะห์วรรณกรรมราชสำนักของอิบนุ อัลมุก็อฟฟะอ์ (ริซาละห์ อัศศอฮาบะห์) และอัลมาวัรดีย์ (อัลอะห์กาม อัสซุลฏอนียะห์) เมื่ออำนาจนิยมแบบเปอร์เซียรุกเข้าสู่ความคิดทางการเมืองอิสลาม">
+<meta name="keywords" content="อิบนุ อัลมุก็อฟฟะอ์, อัลมาวัรดีย์, ริซาละห์ อัศศอฮาบะห์, อัลอะห์กาม อัสซุลฏอนียะห์, รัฐศาสตร์อิสลาม, อิบนุ คอลดูน, ประวัติศาสตร์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ศาสนาและอำนาจรัฐ ในทัศนะของอิบนุ อัลมุก็อฟฟะอ์และอัลมาวัรดีย์ — Islamic Fiqh Publishing">
+<meta property="og:description" content="เมื่อปลายปากกาของอาลักษณ์ราชสำนักเปลี่ยนศาสนาให้กลายเป็นเครื่องค้ำบัลลังก์ และริบระบบชูรอไปจากประชาชน">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/religion-and-state-power-ibn-al-muqaffa-al-mawardi.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="religion-and-state-power-ibn-al-muqaffa-al-mawardi">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">ศาสนาและอำนาจรัฐ ในทัศนะของอิบนุ อัลมุก็อฟฟะอ์และอัลมาวัรดีย์</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ระบอบคอลีฟะฮ์อันรุ่งโรจน์ได้เลือนหายไปจากหน้าประวัติศาสตร์และโลกความจริงของอิสลามมาอย่างยาวนานนับพันปี ทิศทางของงานเขียนทางการเมืองก็เริ่มแปรเปลี่ยน จากเดิมที่เคยมุ่งเรียกร้องให้สร้าง “สังคมอุดมคติที่เป็นไปได้” ซึ่งหมายถึงระบอบคอลีฟะฮ์ที่ตั้งอยู่บนฐานการปรึกษาหารือ (หรือระบบชูรอ) กลับกลายมาเป็นการประคับประคองระบอบกษัตริย์สืบสันตติวงศ์ให้ดำรงอยู่อย่างยุติธรรมที่สุดเท่าที่จะทำได้</p>
+      <p>ด้วยเหตุนี้ จึงเกิดกระแสงานเขียนประเภทคติพจน์ คำสอน และโอวาททางการเมืองที่หยิบยืมรากฐานความคิดมาจากปรัชญากรีก เปอร์เซีย และไบแซนไทน์ แล้วนำแนวคิดเหล่านั้นมาสวมครอบลงบนสังคมอิสลาม ทั้งที่บริบทสังคมต้นกำเนิดกับสังคมปลายทางนั้นแตกต่างกันอย่างสิ้นเชิง ซึ่งการกระทำเช่นนี้เกิดขึ้นท่ามกลางภาวะสุญญากาศทางนิติศาสตร์และการขาดรากฐานทางกฎหมายที่ควรจะสังเคราะห์ขึ้นจากจารีตและค่านิยมของอิสลามเอง นี่คือเหตุผลที่อิบนุ คอลดูนได้วิพากษ์วิจารณ์อิบนุ อัลมุก็อฟฟะอ์ในวิธีการนำเสนอประเด็นการเมืองที่ขาดน้ำหนักของพยานหลักฐาน โดยมุ่งเน้นแต่เพียงศิลปะการประดิษฐ์ถ้อยคำและโวหารที่สละสลวยตามขนบวรรณศิลป์เท่านั้น</p>
+      <p>อีกทั้งยังตำหนิอบู บักร อัฏฏุรฏูชี ผู้ประพันธ์หนังสือซิรอญุลมุลู้ก (ประทีปแห่งราชา) ที่พยายามจะจับคู่ตัวบทโองการทางศาสนาให้เข้ากับความจำเป็นทางการเมืองอย่างไม่สัมฤทธิ์ผล อิบนุ คอลดูนมองว่า อัฏฏุรฏูชียิงธนูไม่เข้าเป้าและเกาไม่ถูกที่ ไม่สามารถอธิบายหลักฐานให้กระจ่างแจ้ง วิธีการของเขาเป็นเพียงการตั้งหัวข้อปัญหาขึ้นมา แล้วระดมยัดเยียดบทฮะดีษและคำสอนโบราณเข้าไป ตามด้วยการยกคำคมกระจัดกระจายของปราชญ์เปอร์เซียอย่างบัรซะญัมฮัรหรืออัลเมาบะซาน รวมถึงปราชญ์อินเดีย คำสอนของดาเนียลและเฮอร์มีส โดยมิได้กระชากหน้ากากความจริงออกมาตีแผ่ หรือใช้หลักฐานเชิงประจักษ์มาอธิบายปรากฏการณ์แต่อย่างใด เป็นเพียงการตัดแปะถ้อยคำที่ดูคล้ายกับคำเทศนาสั่งสอนเสียมากกว่า</p>
+      <p>ต้นตอของคำวิจารณ์เหล่านี้ เกิดจากจุดยืนพื้นฐานของอิบนุ คอลดูนที่มีต่อการเข้ามายุ่มย่ามในกิจการเมืองของเหล่านักวิชาการ ท่านมองว่าแนวคิดเชิงทฤษฎีของพวกเขานั้นห่างไกลจากพลวัตของการปกครองที่ผันผวน การเมืองนั้นเรียกร้องการเกาะติดสถานการณ์รายวันและการเฝ้าระวังสภาพสังคมที่เปลี่ยนแปลงตลอดเวลา เพื่อที่จะตอบสนองต่อปัญหาและข้อเรียกร้องใหม่ๆ ด้วยการวินิจฉัยที่ทันต่อเหตุการณ์ ไม่ใช่การมักง่ายด้วยการนำเหตุการณ์ใหม่ไปเทียบเคียงกับเรื่องเก่าเพื่อหาจุดเหมือน แล้วตัดสินตามแบบแผนเดิมๆ เหมือนอย่างที่ทำกันในกระบวนการวินิจฉัยข้อกฎหมายศาสนา ซึ่งบริบทมันคนละเรื่องกัน จากจุดนี้เอง อิบนุ คอลดูนจึงได้ตกผลึกเป็นบทสรุปทางรัฐศาสตร์สังคมอันลือลั่นที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">العلماء من بين البشر أبعد عن السياسة ومذاهبها، والسبب في ذلك أنهم... يقيسون الأمور على أشباهها وأمثالها بما اعتادوه من القياس الفقهي، فلا تزال أحكامهم وأنظارهم كلها في الذهن ولا تصير إلى المطابقة إلا بعد الفراغ من البحث والنظر (...) فهم متعودون في سائر أنظارهم الأمور الذهنية والأنظار الفكرية لا يعرفون سواها، والسياسة يحتاج صاحبها إلى مراعاة ما في الخارج وما يلحقها من الأحوال و يتبعها فإنها خفية</blockquote>
+      <p class="ar-translation">“ในบรรดาผู้คนทั้งหลาย นักวิชาการคือผู้ที่ห่างไกลจากความเข้าใจในโลกการเมืองมากที่สุด สาเหตุก็เพราะพวกเขา...คุ้นชินกับการเทียบเคียงเรื่องราวต่างๆ กับสิ่งที่คล้ายคลึงกันตามความถนัดแบบนักนิติศาสตร์ ทำให้การตัดสินและมุมมองของพวกเขาวนเวียนอยู่แต่ในมโนสำนึก และจะถือว่าถูกต้องสมบูรณ์ก็ต่อเมื่อการขบคิดทางทฤษฎีจบลง... พวกเขาคุ้นชินอยู่แต่ในโลกแห่งความคิดนามธรรมและไม่รู้จักวิธีอื่น ในขณะที่การเมืองนั้น ผู้ปกครองจำต้องพินิจพิเคราะห์ความเป็นไปในโลกภายนอกและเงื่อนไขแวดล้อมที่ซ่อนเร้น”</p>
+      <p>ในเมื่อเรากำลังพูดถึงงานเขียนทางการเมืองของเหล่าปราชญ์ เราจึงขอเลือกหยิบยกประสบการณ์ของสองปราชญ์เด่นที่เป็นทั้งนักเขียนและข้าราชสำนัก คืออับดุลลอฮ์ อิบนุลมุก็อฟฟะอ์ และอบุลฮะซัน อาลี บิน มุฮัมมัด บิน ฮะบีบ อัลมาวัรดีย์ อัชชาฟิอีย์</p>
+      <p>และแม้ว่าอัลญะฮิซจะวิพากษ์วิจารณ์อาชีพอาลักษณ์ (หรือเลขานุการในราชสำนัก) ไว้อย่างเจ็บแสบ โดยตีแผ่ถึงวิธีการทำงานที่ย่ำแย่และนิสัยใจคอที่เลวร้ายของพวกเขา แต่เขาก็ยังบรรยายภาพความอวดดีของคนกลุ่มนี้ไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">في الذروة القصوى من الصلف، والسنام الأعلى من البذخ، وفي البحر الطامي من التيه والسرف، يتوهم الواحد منهم إذا عرض جبته وطول ذيله وعقص على خده صدغه وتحذف الشابورتين على وجهه أنه المتبوع ليس التابع والمليك فوق المالك</blockquote>
+      <p class="ar-translation">“พวกเขาอยู่บนจุดสูงสุดของความโอหัง บนยอดภูเขาแห่งความฟุ้งเฟ้อ และจมอยู่ในมหาสมุทรแห่งความถือตัวและความสุรุ่ยสุร่าย...เพียงแค่ขยับเสื้อคลุม ปล่อยชายเสื้อยาว จัดทรงผมจอนข้างแก้ม และสวมหมวกทรงสูง พวกเขาก็หลงคิดไปเองว่า ตัวเองเป็นนายไม่ใช่บ่าวไพร่ เป็นราชาที่อยู่เหนือเจ้าของบัลลังก์เสียอีก...”</p>
+      <p>จากนั้นเขาก็ลดสถานะพวกนี้ลงว่าเป็นเพียงผู้ตามซึ่งมีความหมายเท่ากับคนรับใช้โดยกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فكل كاتب فمحكوم عليه بالوفاء ومطلوب منه الصبر على الأواء، وتلك شروط متنوعة عليه ومحنة مستكملة لديه، وليس للكاتب اشتراط شيء من ذلك بل يناله الاستبطاء عند أول الزلة وإن أكدى، ويدركه العذل بأول هفوة وإن لم يرض</blockquote>
+      <p class="ar-translation">“อาลักษณ์ทุกคนถูกตีตราว่าต้องรักเจ้าและอดทนต่อความยากลำบาก...แต่น่าแปลกที่อาลักษณ์กลับไม่มีสิทธิ์เรียกร้องสิ่งใดๆ ในขณะที่มักถูกเพ่งเล็งตำหนิเมื่อทำพลาดเพียงครั้งแรก และถูกต่อว่าเมื่อเผลอไผลแม้จะไม่ตั้งใจก็ตาม”</p>
+      <p>กระนั้นก็ตาม พวกเขากลับมีอิทธิพลอย่างยิ่งในการกำหนดทิศทางของกษัตริย์ และเติมเต็มคลังศัพท์แห่งอำนาจด้วยมโนทัศน์ใหม่ๆ ทางวัฒนธรรมและวิชาการ เพราะอาลักษณ์ไม่ได้เป็นเพียงเจ้าหน้าที่เทคนิค หรือช่างศิลป์ประดิษฐ์ถ้อยคำในราชสาส์นเท่านั้น แต่ด้วยความใกล้ชิดกับศูนย์กลางอำนาจการตัดสินใจ พวกเขาจึงเป็นนักเขียนการเมืองไปโดยปริยาย ยิ่งกว่านั้น พวกเขาไม่ได้เป็นแค่นักเขียนการเมือง แต่ด้วยความจำเป็นที่กษัตริย์ต้องพึ่งพาพวกเขา พวกเขาจึงสวมบทบาทอีกอย่างที่ยืมมาจากกษัตริย์ นั่นคือการเป็นผู้อารักขาศาสนาและผู้ดูแลผลประโยชน์ของราษฎร</p>
+      <p>ด้วยเหตุนี้ จึงไม่น่าแปลกใจที่อิบนุ อับดุ ร็อบบิฮ์จะเปรียบเทียบอาลักษณ์ว่ามีศักดิ์ศรีเทียบเท่ากับผู้พิพากษา (กอฎี) โดยแฝงนัยทางการเมืองถึงบทบาทในการบริหารรัฐไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">للكتاب أحكام بينة كأحكام القضاة يعرفون بها وينسبون إليها ويتقلدون التدبير وسياسة الملك دون غيرهم، وبهم يقام أود الدين وأمور العالمين</blockquote>
+      <p class="ar-translation">“อาลักษณ์มีกฎเกณฑ์ที่ชัดเจนเช่นเดียวกับคำตัดสินของผู้พิพากษา...พวกเขาคือผู้กุมบังเหียนการบริหารและนโยบายของกษัตริย์แต่เพียงผู้เดียว ศาสนาค้ำจุนอยู่ได้และกิจการของโลกดำเนินไปได้ก็ด้วยมือของพวกเขา”</p>
+      <p>ดังนั้น ปลายปากกาทางการเมืองทั้งหลายจึงแข่งขันกันเพื่อเข้าสู่ความใกล้ชิดกับผู้ปกครอง เพื่อหวังความโปรดปรานและตำแหน่งแห่งที่ในราชสำนัก</p>
+      <h2 class="article-h2">อิบนุ อัลมุก็อฟฟะอ์ กับศิลปะการประพฤติตนในการถวายคำแนะนำกษัตริย์</h2>
+      <p>เริ่มกันที่ประสบการณ์ของอิบนุ อัลมุก็อฟฟะอ์ (เสียชีวิต ฮ.ศ. 148) ยอดนักเขียนและหนึ่งในนักทฤษฎีวรรณกรรมราชสำนัก เขาเป็นชาวต่างชาติที่เข้ารับอิสลามที่มีเชื้อสายเปอร์เซีย ซึ่งภูมิหลังนี้ทำให้เขาแตกฉานในมรดกภูมิปัญญาของเปอร์เซีย ทั้งปรัชญาการปกครองและจริยธรรมของกษัตริย์ เขาจึงมักมองข้ามความสามารถทางการเมืองของชาวอาหรับ และเข้ามาเพื่อสอนระบบระเบียบและมารยาทแบบราชสำนักเปอร์เซียแก่พวกอาหรับ โดยเริ่มจากการเขียนหนังสือที่เป็นทั้งคำแนะนำและคำสั่งสอนแก่ผู้ปกครอง และคำเตือนแก่สามัญชน</p>
+      <p>ผลงานชิ้นเอกของเขาคือ “ริซาละห์ อัศศอฮาบะห์” (สาส์นถึงคนวงใน) ซึ่งชื่อนี้ก็แฝงนัยยะหลายประการ เพราะมันเผยเจตนาเฉพาะเจาะจงว่าเขียนถึงใคร นั่นคือเขียนถึง “ศอฮาบะห์” ในที่นี้หมายถึง “คนสนิทหรือข้าราชบริพาร” ระดับสูงที่เป็นอาลักษณ์เช่นเดียวกับเขา ผู้ซึ่งมีโอกาสได้ยืนต่อหน้าพระพักตร์กษัตริย์ ซึ่งจำเป็นต้องรู้จักรักษามารยาทและบารมีของสถานที่ เพราะการรักษาเรื่องนี้สำคัญยิ่งกว่าการรักษาเกียรติยศ และจำเป็นต่อชีวิตยิ่งกว่าความสมบูรณ์ของร่างกาย ภารกิจของอาลักษณ์จึงเป็นการยึดมั่นในจริยธรรมการถวายคำแนะนำ โดยต้องเข้าหาผู้ปกครองด้วยมนต์เสน่ห์แห่งวาทศิลป์ที่ผสมผสานความละมุนละไมทางจิตวิญญาณและความอ่อนโยนทางอารมณ์</p>
+      <p>มุมมองแบบอุดมคติที่สวยหรูต่อกษัตริย์เช่นนี้ ทำให้อาลักษณ์จำนวนมากต้องถูกฉีกกระชากความรู้สึก ระหว่างหลักการกับโลกความจริง ฝั่งหลักการเรียกร้องความเสมอภาค เสรีภาพ และศักดิ์ศรี แต่ฝั่งความจริงขับเคลื่อนด้วยตรรกะของการเอาชีวิตรอดและเงินตรา ซึ่งมาก่อนความคิดและค่านิยม ทำให้เจ้าตัวต้องยืนอยู่บนทางสามแพร่ง...แต่ท้ายที่สุด ก็จำนนต่อความเป็นจริง ย้ายสำมะโนครัวจากความมืดมิดของความสมถะ ไปสู่โลกแห่งทรัพย์สินและความมั่งคั่ง เพราะเงินตรากลายเป็นกุญแจไขทุกสิ่ง</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فلا يظهر المروءة إلا المال، ولا الرأي والقوة إلا المال (...) ومن لا مال له فلا شيء له، والفقر داعية إلى صاحبه مقت الناس، وهو مسلبة للعقل والمروءة ومذهبة للعلم والأدب، ومعدن للتهمة ومجمعة للبلايا</blockquote>
+      <p class="ar-translation">“ความเป็นผู้ดีจะไม่ปรากฏหากไร้เงิน ความเห็นและอำนาจจะไม่เกิดหากขาดเงิน...ผู้ใดไร้เงิน ผู้นั้นก็ไร้ตัวตน ความยากจนชักนำความเกลียดชัง ทำลายสติปัญญาและศักดิ์ศรี ขจัดความรู้และมารยาท เป็นบ่อเกิดแห่งข้อครหาและศูนย์รวมแห่งหายนะ”</p>
+      <p>เพื่อให้ได้มาซึ่งทรัพย์สินนี้ เขาจำต้องอุทิศความรู้รับใช้กษัตริย์ และนำเสนอความคิดผ่าน “ริซาละห์ อัศศอฮาบะห์” ซึ่งเปลือกนอกดูเป็นการบริหารจัดการ แต่เป้าหมายที่แท้จริงคืออุดมการณ์ทางการเมือง ในนั้นเขาได้วางระบบการปกครองตามทัศนะของตน เช่น เมื่อเขาหยิบยกประเด็นทางนิติศาสตร์และหลักการศาสนาที่สำคัญอย่างเรื่อง “การวินิจฉัยบทบัญญัติ” (อิจญ์ติฮาด) ซึ่งเป็นเรื่องที่นักวิชาการถกเถียงกันไม่จบไม่สิ้น เขาจะดึงเรื่องนี้ออกจากมุมมองทางวิชาการแบบเดิมๆ ของนักการศาสนา แล้วจัดการตีความใหม่ด้วยแว่นตาทางการเมือง หรืออาจเรียกได้ว่าเป็นแว่นตาแห่งอุดมการณ์ล้วนๆ</p>
+      <p>เขายังเรียกร้องให้มีการจัดทำประมวลกฎหมายชะรีอะฮ์และระบบตุลาการให้เป็นหนึ่งเดียว เพื่อยุติความขัดแย้งของฟัตวาและทัศนะที่หลากหลายในประเด็นเดียวกัน โดยให้ยึดถือเพียงทัศนะของสถาบันอำนาจรัฐเท่านั้น แทนที่จะปล่อยให้เลือกปฏิบัติตามทัศนะของปราชญ์มุจญ์ตะฮิดในหมู่ศอฮาบะฮ์และตาบิอีนอย่างเสรี ในบริบทนี้ อิบนุ อัลมุก็อฟฟะอ์ได้แสดงความปรารถนาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لو رأى أمر أمير المؤمنين أن يأمر بهذه الأقضية والسير المختلفة فترفع إليه في كتاب، ويرفع معها ما يحتج به كل قوم من سنة أو قياس، ثم نظر أمير المؤمنين في ذلك وأمضى في كل قضية رأيه الذي يلهمه الله ويعظم له عليه وينهى عن القضاء بخلافه وكتب بذلك كتابا جامعا</blockquote>
+      <p class="ar-translation">“หากท่านผู้นำศรัทธาชน (อะมีรุลมุอ์มินีน) เห็นสมควรที่จะบัญชาให้รวบรวมคำพิพากษาและแนวปฏิบัติที่แตกต่างกันเหล่านี้ แล้วนำขึ้นทูลเกล้าฯ ถวายในรูปของบันทึก พร้อมแนบข้ออ้างอิงที่แต่ละกลุ่มใช้ ทั้งจากซุนนะห์และการเทียบเคียง (กิยาส) จากนั้นท่านผู้นำศรัทธาชนจะได้พิจารณาและตัดสินใจเลือกแนวทางในแต่ละเรื่อง ตามที่อัลลอฮ์ทรงดลใจและประทานความเห็นชอบให้ แล้วสั่งห้ามมิให้ตัดสินเป็นอื่น พร้อมทั้งจารึกเป็นประมวลกฎหมายฉบับสมบูรณ์...”</p>
+      <p>เป็นที่ทราบกันดีว่า ในยุคของอิบนุ อัลมุก็อฟฟะอ์นั้น สำนักคิดทางนิติศาสตร์ต่างๆ ยังไม่ก่อตัวขึ้นอย่างชัดเจน แต่เขากลับมีวิสัยทัศน์ล้ำหน้ากาลเวลา ด้วยการเรียกร้องให้สร้างมัสฮับแห่งรัฐเพียงหนึ่งเดียวที่รวบรวมกฎหมายและตุลาการเข้าไว้ด้วยกัน ข้อเรียกร้องนี้สะท้อนความทะเยอทะยานทางการเมืองที่ฝ่ายอำนาจรัฐเองก็เคยแสดงออกอย่างโจ่งแจ้ง และพยายามผลักดันให้นักวิชาการยอมรับมาก่อนแล้ว ดังเช่นกรณีที่คอลีฟะฮ์อบู ญะอ์ฟัร อัลมันซูร แห่งราชวงศ์อับบาสิยะฮ์เคยบัญชาให้อิหม่ามมาลิกยินยอมให้ใช้หนังสืออัลมุวัฏเฏาะอ์ของท่านเป็นกฎหมายฉบับทางการของรัฐ และบังคับให้ประชาชนใช้ตัดสินคดีความ แต่อิหม่ามมาลิกปฏิเสธข้อเสนอนี้ โดยให้เหตุผลว่าความเห็นต่างในหมู่ศอฮาบะฮ์และตาบิอีนเป็นเรื่องปกติที่มีมานาน การบังคับให้ผู้คนยึดถือความเห็นเดียวหลังจากยุคสมัยเหล่านั้น จึงเป็นเรื่องไร้เหตุผล และเป็นการสร้างความลำบาก ทั้งที่อัลลอฮ์ทรงประทานความยืดหยุ่นให้แล้ว</p>
+      <p>เมื่อพิจารณาในแง่นี้ ข้อเรียกร้องของอิบนุ อัลมุก็อฟฟะอ์จึงเป็นท่าทีทางการเมืองที่มุ่งหมายจะลดทอนกำลังของฝ่ายต่อต้านที่คอยวิพากษ์วิจารณ์รัฐ มากกว่าจะเป็นเรื่องทางวิชาการ อีกทั้งยังเป็นสิ่งที่ยอมรับไม่ได้ทั้งในทางเหตุผลและทางศาสนา ถือเป็นความถดถอยทางภูมิปัญญาที่แฝงอันตรายต่อสังคมการเมือง และสิ่งที่ทำให้มันดูน่ากังขาและขาดความน่าเชื่อถือทางวิชาการยิ่งขึ้นไปอีก คือการที่นักเขียนผู้นี้กลับโยนอำนาจการวินิจฉัยบทบัญญัติ (อิจญ์ติฮาด) ไปใส่มือของผู้ที่ขาดความน่าเชื่อถือและความลึกซึ้งในความรู้ โดยเสนอให้กษัตริย์เป็นผู้ตัดสินชี้ขาดในข้อขัดแย้งต่างๆ ด้วยวิจารณญาณที่อ้างว่า “อัลลอฮ์ทรงดลใจ”</p>
+      <p>อิบนุ อัลมุก็อฟฟะอ์ย้ำจุดยืนนี้อีกครั้งในริซาละห์ อัศศอฮาบะห์โดยกล่าวว่า หลังจากที่อัลลอฮ์ทรงประทานศาสนาให้แก่มนุษย์ ซึ่งสติปัญญาของพวกเขาไม่อาจหยั่งถึงได้ทั้งหมดแล้ว พระองค์ทรงกำหนดให้ส่วนอื่นๆ นอกเหนือจากนั้น ทั้งเรื่องการปกครองและการบริหารจัดการ เป็นเรื่องที่ต้องใช้ดุลยพินิจ</p>
+      <p>คำว่า “ดุลยพินิจ” ในที่นี้หมายถึง การอิจญ์ติฮาดหรือการทุ่มเทสติปัญญาเพื่อค้นหาข้อตัดสินในเรื่องที่ไม่มีตัวบทระบุเอาไว้ หรือเรื่องที่ต้องการการตีความและพิจารณา เพื่อนำหลักศาสนามาปรับใช้กับความเป็นจริงและแก้ไขปัญหาชีวิต แต่คำถามคือ ตามทัศนะของอิบนุ อัลมุก็อฟฟะอ์ ใครเล่าที่มีสิทธิ์ใช้ดุลยพินิจนี้? เหล่านักปราชญ์ผู้เชี่ยวชาญการออกฟัตวา หรือเหล่ากษัตริย์ผู้บริหารบ้านเมือง?</p>
+      <p>อิบนุ อัลมุก็อฟฟะอ์ก็ฟันธงอย่างเด็ดขาดว่า อำนาจนี้เป็นของผู้ปกครองเท่านั้น ผู้ซึ่งคำสั่งของเขาต้องได้รับการปฏิบัติตามและห้ามขัดขืน โดยสงวนสิทธิ์นี้ไว้ให้เขาเพียงผู้เดียว ดังนั้น ดุลยพินิจจึงเป็นเรื่องที่...ขึ้นอยู่กับผู้มีอำนาจปกครอง ประชาชนหรือปราชญ์เมธีไม่มีสิทธิ์ใดๆ ทั้งสิ้น ในเรื่องนี้ นอกเสียจากการเสนอแนะเมื่อถูกขอคำปรึกษา การตอบรับเมื่อถูกเรียกใช้ และการให้คำแนะนำด้วยความหวังดีในที่ลับ</p>
+      <p>ด้วยเหตุนี้ อิบนุ อัลมุก็อฟฟะอ์จึงประกาศเจตนาที่จะจำกัดวงของเหล่านักปราชญ์และนักวิจัย โดยรวบยอดอำนาจการตัดสินใจไว้ที่กษัตริย์แต่เพียงผู้เดียว หากประชาชนจะมีส่วนร่วม ก็เป็นเพียงในรูปแบบการให้คำปรึกษาเพื่อทราบ หรือคือการให้คำแนะนำหรือเสนอไอเดียที่ถูกใจกษัตริย์ ซึ่งจะทำตามหรือไม่ก็ได้ เพราะไม่ได้มีผลผูกมัดอะไร ตามทัศนะทางนิติศาสตร์บางสำนัก ดังนั้น คำตัดสินของกษัตริย์จึงเป็นที่สิ้นสุด ไม่มีผู้ใดคัดค้าน และห้ามผู้ใดคัดค้าน พระองค์ทรงมีอำนาจตัดสินใจทั้งก่อนและหลังรับคำปรึกษา การปรึกษาหารือจึงกลายเป็นเพียงรูปแบบหนึ่งของการรับฟังคำแนะนำเท่านั้น</p>
+      <p>ในจุดนี้ อัฏฏุรฏูชีก็รับไม้ต่อจากอิบนุ อัลมุก็อฟฟะอ์โดยไม่ตะขิดตะขวงใจที่จะกระซิบข้างหูกษัตริย์ด้วยความนอบน้อมฉันมิตร นำเสนอความเห็นด้วยถ้อยคำที่นุ่มนวล ผสมผสานการเชิญชวนให้ปรึกษาหารือ เข้ากับการยืนยันถึงสถานะอันสูงส่งของกษัตริย์ เพื่อชี้ให้เห็นความสำคัญของการเปิดใจรับฟังคนอื่น โดยกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لا تقذفن في روعك أنك إذا استشرت الرجال ظهر منك الحاجة إلى رأي غيرك</blockquote>
+      <p class="ar-translation">“ขอพระองค์อย่าได้ทรงดำริว่า การขอคำปรึกษาจากบุรุษอื่น จะเป็นการแสดงให้เห็นว่าพระองค์ขาดพระปรีชาสามารถจนต้องพึ่งพาความคิดผู้อื่นเลย”</p>
+      <p>คำว่า “บุรุษอื่น” ในที่นี้เป็นคำกว้างๆ ที่ต้องตีความให้แคบลง เมื่ออยู่ในบริบทของผู้ที่กษัตริย์จะทรงปรึกษา ย่อมหมายถึงผู้ใกล้ชิดราชบัลลังก์ที่ได้รับเกียรติยศและตำแหน่งสูงส่ง ซึ่งก็หนีไม่พ้นข้าราชบริพารอย่างรัฐมนตรี นักเทศน์ หรืออาลักษณ์ อิบนุ อัลมุก็อฟฟะอ์กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لا يستطاع السلطان إلا بالوزراء والأعوان، ولا ينفع الوزراء إلا بالمودة، ولا المودة إلا مع الرأي والعفاف</blockquote>
+      <p class="ar-translation">“กษัตริย์มิอาจทำการบริหารได้หากไร้รัฐมนตรีและผู้ช่วย และรัฐมนตรีก็ไร้ประโยชน์หากขาดความจงรักภักดี และความจงรักภักดีจะยั่งยืนได้ก็ด้วยสติปัญญาและความซื่อสัตย์”</p>
+      <p>ถึงกระนั้น อิบนุ อัลมุก็อฟฟะอ์ก็ยอมรับความจริงที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قد يسعى إلى أبواب السلطان أجناس من الناس كثيرا (...) فهو مجمع البر والفاجر والعالم والجاهل والشريف والوضيع</blockquote>
+      <p class="ar-translation">“ผู้คนหลากหลายประเภทมักมุ่งหน้าสู่ประตูวัง... เป็นแหล่งรวมทั้งคนดีและคนชั่ว นักปราชญ์และคนเขลา ผู้มีเกียรติและผู้ต่ำต้อย”</p>
+      <p>แต่สำหรับกลุ่มคนพิเศษ (อาลักษณ์และข้าราชบริพาร) พวกเขามี…“คุณความดีและวาสนา เป็นเกียรติยศอันสูงส่งที่คู่ควรแก่การเป็นความภาคภูมิใจของวงศ์ตระกูล เป็นสิ่งที่ต้องรักษาและหวงแหน พื้นที่ตรงนี้มีไว้สำหรับผู้ที่มีคุณสมบัติโดดเด่น หรือผู้มีความสัมพันธ์ใกล้ชิด หรือมีความดีความชอบต่อท่านผู้นำศรัทธาชน หรือผู้ที่มีเกียรติยศ สติปัญญา และผลงาน คู่ควรแก่การร่วมวงสนทนาและถวายคำปรึกษาแด่พระองค์...” อิบนุ อัลมุก็อฟฟะอ์กล่าว</p>
+      <p>จากตรงนี้ เราจึงเข้าใจได้ว่า นักเขียนผู้นี้มีความทะเยอทะยานเพียงใดที่จะคว้าโอกาสทองในการเข้าใกล้ผู้ปกครอง เพื่อจะได้ร่วมทุกข์ร่วมสุขและสถาปนาตนเองเป็นผู้ที่กษัตริย์ไว้วางใจและมอบความจงรักภักดี ให้ ได้ถวายคำแนะนำและรับใช้เมื่อถูกเรียกหา ซึ่งนั่นคือความปรารถนาสูงสุดของเขา</p>
+      <p>เราสังเกตได้จากที่กล่าวมาว่า หลังจากที่อิบนุ อัลมุก็อฟฟะอ์ได้ริบอำนาจการวินิจฉัย (อิจญ์ติฮาด) ไปจากประชาชน แล้วยกให้เป็นสิทธิ์ขาดของกษัตริย์ จากนั้นก็ลดทอนระบบชูรอให้เป็นเพียงสิทธิ์ของเจ้าผู้ปกครอง เขาจึงไม่เหลือที่ว่างใดๆ ให้แก่ประชาชน นอกจากการเชื่อฟัง ปฏิบัติตามคำสั่ง และห้ามตั้งคำถามหรือคัดค้าน โดยอ้างเหตุผลเพื่อป้องกันความวุ่นวาย (ฟิตนะห์) และรักษาความมั่นคงของสังคม เพราะราษฎรนั้น...</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن أخذت بالشدة حميت، وإن أخذت باللين طغت</blockquote>
+      <p class="ar-translation">“หากถูกปกครองด้วยความเข้มงวด พวกเขาก็จะเจียมตัว แต่หากถูกปกครองด้วยความอ่อนข้อ พวกเขาก็จะกำเริบเสิบสาน”</p>
+      <p>บนพื้นฐานนี้ ความสัมพันธ์ระหว่างผู้ปกครองกับราษฎร จึงกลายเป็นการแลกเปลี่ยนหน้าที่ ผู้นำมีหน้าที่ใช้ดุลยพินิจและบริหาร ส่วนประชาชนมีหน้าที่เชื่อฟังและปฏิบัติตาม ทั้งในยามที่พอใจและไม่พอใจ แม้ว่าผู้นำจะทำผิด ก็ไม่อนุญาตให้ประชาชนลุกฮือต่อต้านหรือไปเข้าข้างฝ่ายอื่นที่ทำถูก เพราะผลประโยชน์ส่วนรวมเรียกร้องให้รักษาระบบระเบียบสาธารณะ ซึ่งมีผู้ปกครองเป็นหัวเรือใหญ่ในการดูแลและปกป้อง</p>
+      <p>ข้อสมมติฐานที่ว่า “ผู้ปกครองผิดแต่ฝ่ายค้านถูก” นี้ อิบนุ อัลมุก็อฟฟะอ์ก็รู้ทันและได้แสดงทัศนะดักคอไว้แล้ว ซึ่งไม่ได้หลุดไปจากจุดยืนเดิม แต่แสดงให้เห็นถึงเล่ห์เหลี่ยมทางการเมืองอันแพรวพราว โดยใช้การเปรียบเทียบระหว่างผู้นำกับราษฎร และผลกระทบต่ออนาคตของสังคมว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فإذا كان الإمام يعصى في المعصية، وكان غير الإمام يطاع في الطاعة، فالإمام ومن سواه على حق الطاعة سواء، وهذا قول معلوم يجده الشيطان ذريعة إلى خلع الطاعة، والذي فيه أمنيته لئلا يكون الناس نظائر، ولا يقوم بأمرهم إمام ولا يكون على عدوهم منهم ثقل</blockquote>
+      <p class="ar-translation">“หากผู้นำถูกขัดขืนเมื่อทำผิด และคนที่ไม่ใช่ผู้นำได้รับการเชื่อฟังเมื่อทำถูก ผู้นำและคนอื่นก็จะมีค่าเท่ากันในเรื่องสิทธิ์การได้รับการเชื่อฟัง นี่คือวาทกรรมที่ปีศาจร้ายใช้เป็นช่องทางในการล้มสถาบัน และเป็นสิ่งที่มันปรารถนา เพื่อให้สังคมไร้ลำดับชั้น ไม่มีผู้นำคอยจัดการ และไม่มีใครรับมือกับศัตรู”</p>
+      <p>ผู้อ่านลองสังเกตดูว่า นักเขียนผู้นี้ใช้เล่ห์เหลี่ยมพลิกแพลงเพียงใด เขาเลือกที่จะปัดตกความเห็นของผู้อื่นแม้จะเป็นความจริง เพื่อไปอุ้มชูทัศนะของผู้ปกครองแม้จะคลาดเคลื่อนจากความถูกต้อง ทั้งนี้ก็เพราะความหวาดระแวงว่าชนชั้นปกครองจะถูกดึงลงมาเสมอชั้นกับราษฎร ซึ่งจะนำไปสู่ความระส่ำระสายของระบบ การล่มสลายของรัฐ และการสิ้นอำนาจวาสนาหากบารมีของผู้นำถูกทำลายลง จนเกิดการปฏิวัติและความโกลาหล โดยมีฝ่ายต่อต้านเป็นแกนนำชักจูงฝูงชน...หรืออย่างน้อยนั่นคือภาพจำลองความกลัวที่นักเขียนผู้นี้วาดไว้</p>
+      <p>ด้วยจุดยืนสุดท้ายนี้ ถือว่าอิบนุ อัลมุก็อฟฟะอ์ได้บรรจบวงจรทฤษฎีอำนาจนิยมที่มีรากเหง้ามาจากเปอร์เซียไว้อย่างสมบูรณ์ ทฤษฎีที่วางให้ “ผู้นำ” เป็นศูนย์กลางจักรวาล และผลัก “ประชาชาติ” ไปอยู่ที่ชายขอบ สิ่งนี้ยืนยันถึงความจงรักภักดีที่เขามีต่อมรดกทางวัฒนธรรมดั้งเดิม และความพยายามที่จะรุกคืบเข้าสู่ความคิดทางการเมืองของชาวอาหรับในยุคนั้น เพื่อสร้างจุดเปลี่ยนครั้งสำคัญให้แก่ระบอบการปกครองในโลกอาหรับ-อิสลาม ซึ่งในขณะนั้นกำลังกระหายที่จะรับแนวคิดการบริหารจัดการแบบจักรวรรดิเข้ามาปรับใช้</p>
+      <h2 class="article-h2">ความคิดฟื้นฟูสังคมของอัลมาวัรดีย์</h2>
+      <p>หลังจากที่เราได้กะเทาะเปลือกงานเขียนทางการเมืองชิ้นสำคัญของอิบนุ อัลมุก็อฟฟะอ์จนเห็นภาพร่างโครงความคิดของเขาแล้ว คราวนี้เราจะมาเคาะประตูบ้านของนักเขียนอีกท่านหนึ่งที่มีความสำคัญไม่ยิ่งหย่อนไปกว่ากัน นั่นคือ “ท่านอบุลฮะซัน อัลมาวัรดีย์” เจ้าของผลงานอมตะอย่าง “อัลฮาวีย์ อัลกะบีร” ชุดตำรานิติศาสตร์ในสายของสำนักคิดอัชชาฟิอียะฮ์ และตำราในด้านการเมืองอย่างอัลอะห์กาม อัสซุลฏอนียะห์ (กฎหมายปกครองและการบริหารรัฐกิจ) ซึ่งถือเป็นเสาหลักแห่งรัฐศาสตร์อิสลาม</p>
+      <p>ท่านมาวัรดีย์เป็นนักนิติศาสตร์สังกัดสำนักคิดชาฟิอีที่มีความแตกฉานในตัวบทกฎหมายและรากฐานวิชาการ แต่ในขณะเดียวกัน ท่านก็รอบรู้ในมรดกการเมืองของเปอร์เซียเป็นอย่างดี ความรู้ทั้งสองสายนี้สร้างความลุ่มลึกและหลากหลายทางความคิดให้แก่ท่าน จนทำให้ท่านไม่ตะขิดตะขวงใจที่จะปรับประยุกต์และผสมผสาน “หลักศรัทธา” ให้เข้ากับ “การเมือง”</p>
+      <p>การผสมผสานและการเปิดกว้างทางวัฒนธรรมนี้ หล่อหลอมให้ท่านมาวัรดีย์มีความสามารถในการยกระดับวรรณกรรมราชสำนัก จากเดิมที่พึ่งพิงแหล่งความรู้เพียงสายเดียวคือนิติศาสตร์ศาสนา (ฟิกฮ์) ให้กว้างขวางขึ้นด้วยการหยิบยืมภูมิปัญญาจากอารยธรรมต่างชาติอย่างเปอร์เซีย มาผนวกเข้ากับมรดกของอาหรับ อย่างไรก็ตาม การผสมผสานนี้ไม่ได้สร้างความกลมกลืนอย่างที่ควรจะเป็น ซึ่งมันดูเหมือนการปะติดปะต่อเสียมากกว่า จนกระทั่งภูมิปัญญาทางโลกได้เข้าครอบงำเนื้อหา ส่วนมรดกทางศาสนากลายสภาพเป็นเพียงตัวบทที่ใช้สร้างความชอบธรรมให้แก่การกระทำเท่านั้น</p>
+      <p>ปัญหาเชิงโครงสร้างที่ว่านี้ (คือการที่ศาสนาต้องตกเป็นผู้ตามทางความคิดของเปอร์เซียในวรรณกรรมราชสำนัก) ปรากฏอยู่ในงานเขียนทางการเมืองชื่อดังส่วนใหญ่ สาเหตุหลักมาจากการเปลี่ยนแปลงอย่างถอนรากถอนโคนในภูมิทัศน์ทางการเมืองยุคราชวงศ์อุมัยยะฮ์และอับบาสิยะฮ์ เมื่อจริยธรรมการปกครองแบบอิสลามดั้งเดิม เช่น ระบบการปรึกษาหารือ (ระบบชูรอ) และหน้าที่ในการกำชับความดีห้ามปรามความชั่ว รวมถึงนโยบายที่ตั้งอยู่บนเจตนารมณ์ของศาสนาได้เลือนหายไป ข้อกฎหมายทางศาสนาที่เกี่ยวข้องกับเรื่องเหล่านี้จึงกลายเป็นสิ่งแปลกปลอมสำหรับการเมืองภาคปฏิบัติ ดังนั้น ระบอบใหม่จึงโหยหาพจนานุกรมทางการเมืองฉบับใหม่ที่สอดรับกับความทะยานอยากและสถานการณ์ของตน</p>
+      <p>ความจริงที่ปฏิเสธไม่ได้คือ ความฟุ้งเฟ้อหรูหราที่ปรากฏขึ้น และการแปรสภาพของรัฐจากวิถีแห่งคอลีฟะฮ์ไปสวมใส่อาภรณ์แห่งจักรวรรดิต่างหาก ที่บีบบังคับให้ชาวมุสลิมต้องนำเข้าโซลูชันทางการเมืองจากต่างแดน เพื่อเลียนแบบความทันสมัยทางรัฐธรรมนูญและการบริหารที่เกิดขึ้นในขณะนั้น</p>
+      <p>การรุกรานทางความคิดนี้สร้างบรรยากาศทางการเมืองใหม่ เขย่าฐานรากจุดอ้างอิงทางการเมือง จากเดิมที่มีวัฒนธรรมอิสลามเป็นศูนย์กลาง ไปสู่พหุวัฒนธรรมที่ผสมปนเปกันระหว่างของเดิมกับของใหม่ ซึ่งเหล่านักเขียนวรรณกรรมราชสำนักทั้งที่มีเชื้อสายเปอร์เซียอย่างอิบนุ อัลมุก็อฟฟะอ์ หรือแม้แต่ชาวอาหรับแท้อย่างอัลมาวัรดีย์ ต่างก็มีส่วนช่วยเผยแพร่สิ่งนี้</p>
+      <p>อัลมาวัรดีย์ได้พยายามเชื่อมโยงระหว่างบทบัญญัติศาสนา (ชะรีอะฮ์) กับภูมิปัญญาโบราณ ระหว่างหลักฟิกฮ์กับเกร็ดความรู้จากเปอร์เซีย โดยเฉพาะในหนังสือกฎแห่งเสนาบดีและนโยบายแห่งกษัตริย์ ซึ่งหนีไม่พ้นที่จะถูกครอบงำด้วยโมเดลการจัดการสังคมและการเมืองแบบเปอร์เซีย ทั้งที่ผู้เขียนเป็นถึงปราชญ์สำนักชาฟิอี หนำซ้ำเขายังยอมรับระบบการแบ่งชนชั้นวรรณะแบบเปอร์เซียมาใช้อย่างหน้าตาเฉย โดยยกมากล่าวอ้างในเชิงยกย่องสรรเสริญเสียด้วยซ้ำ</p>
+      <p>องค์ประกอบทางศาสนาในแนวคิดของอัลมาวัรดีย์นั้น ค่อยๆ เลือนหายไปทีละน้อยเมื่อต้องเผชิญหน้ากับอิทธิพลอันแข็งแกร่งของวัฒนธรรมเปอร์เซีย โดยศาสนาจะถูกเอ่ยถึงก็ต่อเมื่อต้องทำหน้าที่เสริมความแข็งแกร่งให้กับบัลลังก์กษัตริย์และรัฐเท่านั้น ซึ่งในมุมมองของเขา รัฐตั้งอยู่บนเสาหลักสองประการ คือ นโยบายการปกครองและการสถาปนารากฐานอำนาจ</p>
+      <p>การสถาปนารากฐานอำนาจนั้นประกอบด้วย 3 ส่วน คือ การสร้างฐานทางศาสนา, การสร้างฐานกำลังทหารและการสร้างฐานทางความมั่งคั่ง โดยอัลมาวัรดีย์มองว่า ฐานทางศาสนานั้น เป็นรากฐานที่มั่นคงที่สุด ยั่งยืนที่สุด และสร้างความจงรักภักดีที่บริสุทธิ์ใจที่สุด</p>
+      <p>เพราะศาสนาช่วยขัดเกลาพฤติกรรมผู้คน เป็นเกราะป้องกันความเสื่อมทรามและความแตกแยก ทั้งยังช่วยขยายอิทธิพลของรัฐและทำให้กษัตริย์ได้รับการเชื่อฟัง ด้วยการใช้งานศาสนาในลักษณะนี้ ฝ่ายการเมืองจึงสามารถรีเซ็ตความชอบธรรมและสร้างรากฐานอำนาจใหม่ โดยมองว่าศาสนาเป็นเสมือนพรรคพวกทางการเมืองที่เป็นหนึ่งเดียวกับรัฐ</p>
+      <p>ซึ่งนี่คือสิ่งที่รัฐบาลอับบาสิยะฮ์ทำอย่างชัดเจน พวกเขาสร้างความชอบธรรมบนฐานของศาสนา แล้วในไม่ช้า นิกายความเชื่อและสำนักกฎหมายทางศาสนา ก็กลายสภาพเป็นโฆษกประจำรัฐบาล เป็นเครื่องมือกดทับทางความคิดต่อฝ่ายตรงข้าม และเป็นกลไกตุลาการในการระงับข้อพิพาท แนวคิดการจับมือปรองดองระหว่างศาสนากับการเมืองนี้ ได้รับแรงบันดาลใจมาจากมรดกความคิดของ “อาร์ดาชีร” (กษัตริย์เปอร์เซีย) ที่มองว่าศาสนาและรัฐเป็นเนื้อเดียวกัน ดังวาทะที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فالملك والدين أخوان توأمان لا قوام لأحدهما إلا بصاحبه، لأن الدين أساس الملك وعماده، ثم صار الملك بعد حارس الدين</blockquote>
+      <p class="ar-translation">“กษัตริย์และศาสนาคือพี่น้องฝาแฝด ไม่อาจขาดสิ่งใดสิ่งหนึ่งได้ เพราะศาสนาคือรากฐานของกษัตริย์ และกษัตริย์คือผู้พิทักษ์ศาสนา”</p>
+      <p>อย่างไรก็ตาม กษัตริย์จะไม่ยอมรับศาสนา เว้นแต่ศาสนานั้นจะยอมเป็น “แบ็คอัพ” อย่างเป็นทางการให้กษัตริย์ คอยปกป้องผลประโยชน์และเสริมสร้างความชอบธรรมทั้งในทางทฤษฎีและปฏิบัติ ผ่านความสัมพันธ์แบบครอบงำเบ็ดเสร็จ ไม่ใช่แบบพันธมิตรที่เท่าเทียม</p>
+      <p>นี่คือนัยยะที่ซ่อนอยู่ในแนวคิดของอัลมาวัรดีย์ เมื่อเขาพูดถึงการเชิดชูศาสนาในรัฐ ท่านไม่ได้หมายถึงศาสนาที่มีสถานะสูงสุดเหนือรัฐ หรือศาสนาที่มองว่าประชาชนคือเจ้าของอำนาจที่แท้จริงและผู้นำเป็นเพียงตัวแทน... แต่ท่านหมายถึง “ศาสนาที่เปลี่ยนการเชื่อฟังผู้นำให้เป็นหลักศรัทธา เปลี่ยนการต่อต้านให้เป็นเรื่องนอกรีต และเปลี่ยนการสืบทอดอำนาจให้เป็นผลประโยชน์จำเป็นและเป็นรากฐานของศาสนา” ไม่ใช่เพียงเรื่องปลีกย่อยที่เห็นต่างกันได้</p>
+      <p>ดังนั้น จิตวิญญาณในจุดยืนของอัลมาวัรดีย์เรื่องความสัมพันธ์ระหว่างศาสนากับกษัตริย์ จึงแทบไม่ต่างจากจุดยืนของเหล่าสุลต่านอับบาสิยะฮ์ หรือบรรดารัฐสุลต่านที่ท่านเขียนทฤษฎีรับรองให้ ทั้งในงานเขียนประเภทคำสอนที่กระจัดกระจายอยู่ในแหล่งอื่นๆ และในหนังสืออัลอะห์กาม อัสซุลฏอนียะห์</p>
+      <h2 class="article-h2">บทสรุป</h2>
+      <p>จากการสำรวจวรรณกรรมราชสำนักผ่านแว่นตาของนักทฤษฎีรุ่นบุกเบิกอย่างอิบนุ อัลมุก็อฟฟะอ์ และอัลมาวัรดีย์ ทำให้เราเห็นชัดเจนถึงอันตรายที่ความคิดทางการเมืองอิสลามต้องเผชิญตลอดหน้าประวัติศาสตร์</p>
+      <p>นับตั้งแต่การล่มสลายของระบอบคอลีฟะฮ์ผู้ทรงธรรม ห่วงโซ่ที่ยึดโยงศาสนาไว้ก็เริ่มขาดลงทีละเปลาะ เริ่มต้นที่ระบบการปกครองซึ่งเกิดการเปลี่ยนแปลงอย่างถอนรากถอนโคน เนื้อในของมันที่เคยตักตวงมาจากบ่อน้ำอันใสสะอาดของ “ชะรีอะฮ์” ถูกแทนที่และยัดทะนานด้วยภูมิปัญญาและอุบายทางการเมืองที่นำเข้ามาจากเปอร์เซีย จนระบบโครงสร้างเกิดอาการข้อต่ออักเสบ ขยับเขยื้อนลำบาก และแบกรับความขัดแย้งภายในมากมาย อันเกิดจากการพยายามตัดแปะสิ่งที่เป็นของเดิม (อิสลาม) ให้เข้ากับของใหม่ (เปอร์เซีย) อย่างไม่ลงรอย</p>
+      <p>ผลลัพธ์คือ ความคิดทางการเมืองอิสลามต้องเผชิญกับภาวะเข่าเสื่อมและความเจ็บปวดทางสังคม ในระยะแรก (ศตวรรษแรก) เริ่มต้นด้วยการต่อต้านอย่างดุเดือด...แต่แล้วเมื่อวาระระลอกถัดมาได้ถือกำเนิดขึ้น มันก็ได้ประกาศการเริ่มต้นของยุคใหม่ ยุคที่วิชาความรู้ถูกเกณฑ์ไปรับใช้จุดยืนของผู้มีอำนาจและยุคที่นักวิชาการกลายสภาพเป็นเพียงเงาตามตัวที่ไม่เคยห่างจากบัลลังก์ของสุลต่าน</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ศาสนาและอำนาจรัฐ ในทัศนะของอิบนุ อัลมุก็อฟฟะอ์และอัลมาวัรดีย์. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/religion-and-state-power-ibn-al-muqaffa-al-mawardi.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
