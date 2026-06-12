@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>พิราบสื่อสาร ผู้พิทักษ์ความลับ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="ประวัติศาสตร์ของ ‘พิราบสื่อสาร’ (อัซซาจิล) ในอารยธรรมอิสลาม ตั้งแต่การฝึกฝน หอคอยพิราบ และไปรษณีย์ลับของรัฐมัมลุก จนถึงสาส์นรักแห่งอันดาลูเซีย">
+<meta name="keywords" content="พิราบสื่อสาร, อัซซาจิล, ไปรษณีย์, อัลญาฮิซ, อัลก็อลกะชันดีย์, มัมลุก, ประวัติศาสตร์อิสลาม, ตารีค">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="พิราบสื่อสาร ผู้พิทักษ์ความลับ — Islamic Fiqh Publishing">
+<meta property="og:description" content="เรื่องราวของนกพิราบสื่อสาร ผู้พิทักษ์ความลับและไปรษณีย์ด่วนที่สุดแห่งโลกอิสลาม">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/carrier-pigeons-in-islamic-history.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="carrier-pigeons-in-islamic-history">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">พิราบสื่อสาร ผู้พิทักษ์ความลับ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p>อัลญาฮิซ (เสียชีวิต ฮ.ศ. 255) กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولولا الحمام الهدي (الزاجل)، لما جاز أن يعلم أهل الرقة والموصل وبغداد ما كان بالبصرة وحدث بالكوفة في يوم واحد، حتى إن الحادثة لتكون بالكوفة غدوة (صباحا) فيعلمها أهل البصرة عشية ذلك</blockquote>
+      <p class="ar-translation">“หากแม้นปราศจากซึ่ง ‘พิราบสื่อสาร’ ไซร้ ชาวเมืองร็อกเกาะฮ์, โมซุล และแบกแดด คงมิอาจล่วงรู้ถึงเหตุการณ์ที่บังเกิด ณ นครบัสเราะฮ์และกูฟะฮ์ได้ภายในทิวาเดียว จนถึงขั้นที่ว่า เหตุการณ์อุบัติขึ้น ณ นครกูฟะฮ์ในยามรุ่งสาง แต่ชาวบัสเราะฮ์กลับสามารถรับรู้ข่าวสารนั้นได้ในยามอัสดงของวันเดียวกัน”</p>
+
+      <p class="lead-text">ในยุคบรรพกาล เมื่อมนุษยชาติยังไม่อาจเอื้อมถึงเทคโนโลยีล้ำสมัยที่ช่วยย่อระยะทางและกาลเวลาเฉกเช่นปัจจุบัน ความจำเป็นในการติดต่อสื่อสารกับมิตรสหายและสังคมต่างถิ่นต่างแดนยังคงเป็นเรื่องเร่งด่วน อารยธรรมโบราณต่างรู้จักระบบไปรษณีย์ในรูปแบบที่หลากหลาย ไม่ว่าจะเป็นการใช้นักวิ่งผลัดระหว่างหมู่บ้านและเมืองใกล้เคียง หรือการใช้ม้าเร็วและสิงสาราสัตว์เพื่อบรรลุเป้าหมายและทำธุระปะปัง</p>
+
+      <p>แต่ยังมีระบบไปรษณีย์ชนิดหนึ่งที่รวดเร็วเหนือสิ่งอื่นใด เปรียบประดุจ “โทรเลข” แห่งยุคสมัย ที่ทำหน้าที่ส่งสารสั้นๆ กระชับได้ใจความ ในเวลาอันรวดเร็วสำหรับภารกิจที่เร่งด่วน ซึ่งไม่อาจพึ่งพาระบบไปรษณีย์แบบดั้งเดิมให้ทันท่วงทีได้</p>
+
+      <p>ดูแรนต์ได้บอกเล่าไว้ในสารานุกรม “The Story of Civilization” ว่า ชาวกรีกโบราณรู้จักการส่งสารด้วยนกพิราบมาตั้งแต่ยุคก่อนคริสตกาล โดยพวกเขาระบุว่า: “จดหมายส่วนตัวนั้นจำต้องรอคอยจนกว่าจะมีผู้เดินทางนำส่งให้ แต่สำหรับข่าวสารสำคัญที่มีความเร่งด่วน จะถูกส่งผ่านสัญญาณไฟที่ส่งต่อกันจากยอดเขาสู่ยอดเขา หรือมิฉะนั้นก็ส่งผ่านทางนกพิราบสื่อสาร”</p>
+
+      <p>ชาวอาหรับขนานนามนกพิราบชนิดนี้ว่า “อัซซาจิล” (<span class="ar-inline" lang="ar" dir="rtl">الزاجل</span>) ซึ่งมีความหมายว่า “ผู้ผลักดัน” หรือ “ผู้นำส่ง” มีข้อสันนิษฐานว่าคำว่า “ซาจิล” นี้มีรากศัพท์มาจากภาษาเปอร์เซีย หมายถึง “แม่ทัพ” หรือ “ผู้นำกองทหาร” โดยคำคำนี้ถูกนำมาใช้เรียกนกพิราบทุกสายพันธุ์ที่ถูกฝึกฝนเพื่อการส่งสาส์น ไม่ว่าจะเป็นข่าวสารทั่วไป หรือข่าวสงครามและการทหาร</p>
+
+      <p>เมื่อกาลเวลาผันผ่าน ชาวมุสลิมได้พัฒนากลไกการใช้นกพิราบสื่อสารจนแตกฉาน สั่งสมภูมิปัญญาและความเชี่ยวชาญจนถึงขีดสุด...แต่มีคำถามคือ พิราบสื่อสารเหล่านี้ถูกใช้งานท่ามกลางผู้คนตลอดหลายศตวรรษที่ผ่านมาอย่างไร? มีตำนานเรื่องเล่าขานใดบ้างที่รายล้อมเจ้านกสื่อสารตัวน้อยนี้? และบรรดานักประวัติศาสตร์มีทัศนะและบันทึกอย่างไรเกี่ยวกับสาส์นลับสุดยอดและความสำคัญยิ่งยวดที่มันซุกซ่อนไว้ใต้ปีก? ทั้งหมดนี้คือสิ่งที่เราจะได้รู้ในเรื่องราวถัดไป</p>
+
+      <h2 class="article-h2">จากเรื่องสนุก... สู่การฝึกฝนอย่างจริงจัง</h2>
+
+      <p>ร่องรอยแรกที่บ่งบอกถึงความสำคัญของนกพิราบในหน้าประวัติศาสตร์อิสลาม คือเรื่องราวของนกพิราบสองตัวที่ทำรังและวางไข่ปิดปากถ้ำช่วงในเหตุการณ์การอพยพ (ฮิจเราะห์) ของท่านศาสนทูต ﷺ จากนครมักกะฮ์สู่นครมาดีนะฮ์</p>
+
+      <p>และเมื่อครั้งที่ท่านศาสนทูต ﷺ พิชิตนครมักกะฮ์ และทำการทำลายเจว็ดรูปปั้นรอบกะอ์บะฮ์นั้น ปรากฏว่าหนึ่งในรูปปั้นเหล่านั้นมีรูปสลักไม้จากต้นอินทผลัมที่เป็นรูปนกพิราบรวมอยู่ด้วย ซึ่งเป็นหลักฐานชี้ชัดถึงความผูกพันและความชุกชุมของนกชนิดนี้ในดินแดนแถบนี้</p>
+
+      <p>แต่ในสมัยของเคาะลีฟะฮ์อุษมาน บิน อัฟฟาน ชาวมุสลิมเริ่มใช้นกพิราบเพื่อความบันเทิงเริงรมย์ เหล่าวัยรุ่นหนุ่มสาวต่างพากันปล่อยนกพิราบเพื่อแข่งขันประลองความเร็ว จนก่อให้เกิดปัญหาความเดือดร้อนรำคาญ บ่อยครั้งที่นกเหล่านี้บินไปจิกทำร้ายผู้คนจนถึงขั้นตาบอด โดยที่ผู้เสียหายไม่อาจติดตามหาตัวเจ้าของเพื่อเรียกร้องการลงโทษหรือค่าทำขวัญได้</p>
+
+      <p>สถานการณ์บานปลายจนทำให้เคาะลีฟะฮ์อุษมานจำต้องออกคำสั่งห้ามการละเล่นนกพิราบ และอนุญาตให้เชือดนกพิราบตัวใดก็ตามที่ตกมาอยู่ในมือ โดยที่รู้ว่าถูกปล่อยมาเพื่อการเล่นพนันขันต่อหรือเพื่อก่อความรำคาญ</p>
+
+      <p>ภายหลังจากยุคต้นของอิสลาม ชาวอาหรับเริ่มมีชื่อเสียงในเรื่องความรอบรู้เกี่ยวกับธรรมชาติของนกและความเชี่ยวชาญในการฝึกพิราบสื่อสาร ถึงขั้นมีการเขียนตำราวิชาการเกี่ยวกับเรื่องนี้มาตั้งแต่ยุคต้นๆ ในศตวรรษที่ 2 และ 3 แห่งฮิจเราะห์ศักราช อาทิ อบู ฮาติม อัสสิญิสตานีย์ (เสียชีวิต ฮ.ศ. 250) ได้ประพันธ์หนังสือ “กิตาบ อัฏฏ็อยรฺ” (คัมภีร์วิหค), กวีชาวอันดาลูเซีย ยูซุฟ บิน ฮารูน อัลกินดีย์ อัรเราะมาดีย์ ได้แต่งตำราว่าด้วยนกพิราบเป็นบทกวีล้วนๆ หลายเล่มจบ และอบู อุบัยดะฮ์ มะอ์มัร บิน อัลมุษันนา (เสียชีวิต ฮ.ศ. 208) ก็ได้เขียน “กิตาบ อัลฮะมาม” (คัมภีร์นกพิราบ) ไว้เช่นกัน</p>
+
+      <p>ล่วงเลยมาถึงช่วงปลายศตวรรษที่ 7 ฮิจเราะห์ มุห์ยิดดีน บิน อับดุซซอฮิร (เสียชีวิต ฮ.ศ. 692) หัวหน้ากองงานราชเลขาธิการและไปรษณีย์ในสมัยของสุลต่าน อัซซอฮิร บัยบัรส์ (เสียชีวิต ฮ.ศ. 676) ก็ได้นิพนธ์ “กิตาบ ตะมาอิม อัลฮะมาม” (เครื่องรางแห่งพิราบ) ซึ่งเจาะจงเฉพาะเรื่องนกพิราบสื่อสารโดยตรง</p>
+
+      <h2 class="article-h2">เทคโนโลยีการทหารยุคโบราณ</h2>
+
+      <p>ในมิติทางการทหาร คนโบราณมีกรรมวิธีอันแยบยลเมื่อเกิดเหตุการณ์สำคัญ พวกเขาจะผูกข่าวสารไว้ที่คอของนกพิราบ หรือบรรจุไว้ในหลอดขนาดจิ๋วที่ทำจากกระดาษทองคำ ซึ่งเป็นทองคำบริสุทธิ์ที่ตีจนบางเฉียบและเบาหวิว เพื่อไม่ให้เป็นภาระแก่นก และยังทำหน้าที่เป็นเกราะป้องกันสารจากสภาพอากาศ ลมฝน และความชื้น</p>
+
+      <p>ภายในหลอดทองคำนั้นจะบรรจุกระดาษเนื้อบางเบาที่เขียนข้อความด้วยปากกาชนิดพิเศษที่เรียกว่า กอลัม อัลฆุบาร (ปากกาที่เขียนตัวอักษรได้เล็กละเอียดราวกับละอองฝุ่น) สิ่งสำคัญคือพวกเขาจะระบุ “วันเวลาที่ปล่อยนก” ไว้อย่างละเอียดแม่นยำที่ด้านหลังของจดหมาย และหลังจากปล่อยตัวแรกไปไม่นาน พวกเขาจะปล่อยนกพิราบตัวที่สองซึ่งนำข่าวเดียวกันบินตามไปติดๆ เป็นมาตรการสำรอง เพื่อป้องกันกรณีที่นกตัวแรกอาจสูญหายหรือไปไม่ถึงจุดหมาย</p>
+
+      <h2 class="article-h2">บันทึกของอัลญาฮิซ อินเทอร์เน็ตแห่งยุคกลาง</h2>
+
+      <p>อัลญาฮิซ ปราชญ์นักเขียนผู้ยิ่งใหญ่ (เสียชีวิต ฮ.ศ. 255) ได้กล่าวถึงความหลงใหลของชาวอาหรับที่มีต่อนกพิราบสื่อสารในหนังสือ “อัลฮะยะวาน” โดยระบุว่าชาวอาหรับเรียกมันว่า พิราบนำทาง และพวกเขามีการจดบันทึกสายตระกูลของนกพิราบอย่างจริงจัง ประหนึ่งการจดบันทึกสายตระกูลของมนุษย์เลยทีเดียว</p>
+
+      <p>ท่านกล่าวไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولولا الحمام الهدي (الزاجل)، لما جاز أن يعلم أهل الرقة والموصل وبغداد ما كان بالبصرة وحدث بالكوفة في يوم واحد، حتى إن الحادثة لتكون بالكوفة غدوة (صباحا) فيعلمها أهل البصرة عشية ذلك</blockquote>
+      <p class="ar-translation">“หากแม้นปราศจากซึ่งพิราบนำทางไซร้ ชาวเมืองร็อกเกาะฮ์, โมซุล และแบกแดด คงมิอาจล่วงรู้ถึงเหตุการณ์ที่บังเกิด ณ นครบัสเราะฮ์และกูฟะฮ์ได้ภายในทิวาเดียว จนถึงขั้นที่ว่า เหตุการณ์อุบัติขึ้น ณ นครกูฟะฮ์ในยามรุ่งสาง แต่ชาวบัสเราะฮ์กลับสามารถรับรู้ข่าวสารนั้นได้ในยามอัสดงของวันเดียวกัน”</p>
+
+      <p>หากท่านอัลญาฮิซขนานนามพวกมันว่า พิราบนำทาง ปราชญ์รุ่นหลานที่มาทีหลังท่านถึงห้าศตวรรษอย่างอัลก็อลกะชันดีย์ (เสียชีวิต ฮ.ศ. 831) กลับเรียกขานมันว่า พิราบไปรษณีย์ ท่านได้พรรณนาถึงความสามารถในการย่อระยะทางและกาลเวลาของมัน ที่สามารถเปลี่ยนการเดินทางอันยาวนานนับเดือนให้เหลือเพียงชั่วอึดใจไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والحمام الرسائلي وما يحمل من بطائق (رسائل)، ويتحمل من الأنباء ما ليس سواه له بطائق، ويخوض من قطع الأنهار، ويقطع إلينا ما بعد مسافة شهر وأكثر منه في ساعة من نهار</blockquote>
+      <p class="ar-translation">“เจ้าพิราบไปรษณีย์ และบรรดาสาส์นที่มันนำพาไปนั้น มันแบกรับข่าวสารที่ไม่มีผู้อื่นใดมีความสามารถที่จะแบกรับได้ มันโฉบผ่านข้ามแม่น้ำลำธาร และตัดระยะทางที่หากเป็นเรา คงต้องใช้เวลาเดินทางเป็นเดือน เป็นแรมหรือมากกว่านั้น ให้เหลือเพียงแค่ชั่วชั่วโมงเดียวในตอนกลางวัน”</p>
+
+      <p>การฝึกฝนพิราบสื่อสารในยุคสมัยนั้น วางรากฐานอยู่บนการสร้างความคุ้นเคยให้มันรู้จัก “เป้าหมาย” ผ่านสติปัญญา การจดจำทิศทาง และความรักที่จะหวนคืนสู่เจ้าของ กระบวนการนี้เริ่มต้นด้วยการคัดเลือกลูกนกที่กำลังหิวโหย นำพวกมันขึ้นไปบนดาดฟ้าในเวลาเที่ยงวัน โปรยเมล็ดธัญพืชไว้รอบๆ เสาที่มีธงปักอยู่ โดยครูฝึกมีเงื่อนไขว่าธงนั้นต้องมีสีสันที่เด่นชัด เพื่อให้นกจดจำตำแหน่งได้ง่าย</p>
+
+      <p>ส่วนใหญ่แล้ว การปล่อยบินครั้งแรกจะทำหลังจากที่ลูกนกถูกขลิบปีกไประยะหนึ่งแล้ว โดยจะปล่อยเป็นคู่ๆ (ทีละ 2 ตัว) ในลักษณะที่ตัวหนึ่งเพิ่งถูกขลิบปีก (บินไม่ได้ไกล) ส่วนอีกตัวปีกงอกยาวสมบูรณ์แล้ว เมื่อครูฝึกปล่อยตัวที่ปีกสมบูรณ์ มันจะบินไปได้ไม่นานและรีบวนกลับมาหาคู่ของมันด้วยความโหยหา ด้วยวิธีการนี้ ครูฝึกจึงมั่นใจได้ว่านกจะเชื่องและผูกพันกับสถานที่ฝึก ซึ่งเรียกกันว่า “อัลมะซาจิล” หรือหอคอยพิราบ</p>
+
+      <p>การฝึกฝนมิได้จำกัดอยู่เพียงแค่หอคอยบนบกเท่านั้น แต่พวกเขาพากเพียรนำนกไปฝึกบนดาดฟ้าเรือกลางทะเล เพื่อสร้างความคุ้นเคยกับการบินข้ามมหาสมุทร หัวใจสำคัญของการฝึกคือการทำให้เจ้าซาจิล สามารถบินกลับสู่ต้นทางได้ด้วยตัวมันเอง ไม่ว่าจะถูกปล่อยจากบนบกหรือกลางทะเล ซึ่งความสามารถในการแยกแยะทิศทางนี้เองที่อัลญาฮิซได้บัญญัติศัพท์เรียกไว้ในศตวรรษที่ 3 แห่งฮิจเราะห์ว่า “อัลฆอยะฮ์” (เป้าหมาย)</p>
+
+      <p>ประสิทธิภาพในการปฏิบัติภารกิจและความสามารถในการแยกแยะระหว่างจุดปล่อยกับจุดหมายปลายทางของนกพิราบ ได้สร้างความตื่นตะลึงให้แก่เหล่าปัญญาชน นักปราชญ์ และเสนาบดีในยุคนั้นเป็นอย่างมาก</p>
+
+      <p>แม้แต่อัลกอฎี อัลฟาฎิล อับดุรเราะฮีม อัลไบซานีย์ (เสียชีวิต ฮ.ศ. 596) มหาเสนาบดีและราชเลขาธิการคู่ใจของสุลต่านเศาะลาฮุดดีน อัลอัยยูบีย์ ยังได้กล่าวสดุดีเจ้านกน้อยและสาส์นที่ซุกซ่อนอยู่ใต้ปีกของมันด้วยถ้อยคำอันวิจิตรว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كان هذا الطائر أحد الرسل المسيرة بل المبشرة، والجنود المجردة بل المسخرة؛ فإنها لا تزال أجنحتها تحمل من البطائق أجنحة، وتجهز من جيوش المقاصد والأقلام أسلحة؛ وتحمل من الأخبار ما تحمل الضمائر، وتطوي الأرض إذا نشرت الجناح الطائر؛ وتزوى لها حتى ترى ما سيبلغه ملك هذه الأمة، وتقرب بها السماء حتى ترى ما لا يبلغه وهم ولا همة</blockquote>
+      <p class="ar-translation">“วิหคนี้คือหนึ่งในทูตานุทูตที่ถูกส่งออกไป มิหนำซ้ำยังเป็นผู้นำมาซึ่งข่าวดี มันคือกองทหารที่ถูกจัดทัพ มิหนำซ้ำยังเป็นผู้ภักดี ปีกของมันไม่เคยหยุดที่จะแบกรับสาส์น มันแบกรับข่าวสารชนิดที่มีแต่จิตวิญญาณเท่านั้นที่แบกรับได้ และมันม้วนแผ่นดิน (ย่อระยะทาง) ยามที่มันสยายปีกบิน แผ่นดินหดสั้นลงสำหรับมันจนมันมองเห็นขอบเขตแห่งอำนาจของประชาชาตินี้ และท้องฟ้าโน้มลงมาใกล้มัน จนมันมองเห็นสิ่งที่แม้แต่จินตนาการหรือความมุ่งมาดปรารถนาของมนุษย์ก็ไม่อาจเอื้อมถึง”</p>
+
+      <h2 class="article-h2">ด่วนที่สุดและลับสุดยอด</h2>
+
+      <p>เจ้านกพิราบสื่อสารได้ถูกนำมาใช้งานในทุกสมรภูมิความขัดแย้งของโลกอิสลาม ไม่ว่าจะเป็นการต่อต้านไบแซนไทน์ (โรมันตะวันออก) กองทัพครูเสด หรือพวกมองโกล เหล่าสุลต่านและเคาะลีฟะฮ์ต่างได้รับทราบข่าวสารล่าสุดและความเคลื่อนไหวในสนามรบก็ด้วยวิธีการนี้</p>
+
+      <p>มีเหตุการณ์สำคัญเมื่อครั้งที่กองทัพมองโกลรุกคืบเข้าใกล้เมืองฮะมาในปี ฮ.ศ. 659 แม่ทัพท่านหนึ่งได้แนะนำรองเจ้าเมืองว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اكتب الساعة إلى السلطان، على جناح طائر، وعرفه أن القوم ثمانون ألف مقاتل فى القلب، منهم أربعة وأربعون ألفا من المغل (المغول) وهم طالبون القلب، وميمنتهم قوية جدا، فتقوى ميسرة المسلمين، وتحترز على الصناجق. فكتب النائب بذلك إلى السلطان</blockquote>
+      <p class="ar-translation">“ท่านจงเขียนสาส์นบรรจุใส่นกส่งถึงองค์สุลต่านเดี๋ยวนี้ จงแจ้งให้พระองค์ทราบว่า ข้าศึกมีกำลังพล 80,000 นาย โดยมีกองกำลังมองโกล 44,000 นายตรึงอยู่ที่ทัพหลวงและกำลังมุ่งเป้าโจมตีทัพหลวงของเรา ปีกขวาของพวกมันแข็งแกร่งมาก ดังนั้นขอให้เสริมความแข็งแกร่งให้ปีกซ้ายของฝ่ายมุสลิม และจงระวังรักษาธงรบไว้ให้ดี”</p>
+
+      <p>รองเจ้าเมืองรีบเขียนสาส์นตามคำแนะนำส่งไป สาส์นนั้นบินไปถึงมือของสุลต่านบัยบัรส์ พระองค์จึงวางแผนรับมือและสั่งการป้องกันล่วงหน้า ส่งผลให้กองทัพมัมลุกสามารถพิชิตกองทัพมองโกลได้ในสมรภูมินั้น ซึ่งนับเป็นชัยชนะต่อเนื่องปีที่สองหลังจากสมรภูมิอัยน์ ญาลูต</p>
+
+      <p>จากนั้นบัตรสาส์น (บนปีกนกพิราบ) ก็บินไปถึงเมืองเราะห์บะฮ์ (ริมฝั่งแม่น้ำยูเฟรทีส) แจ้งข่าวถึงชัยชนะและความพ่ายแพ้ของพวกมองโกล ในขณะนั้นเมืองกำลังถูกปิดล้อมโดยโอรสของฮูลากู ข่าน เมื่อชาวเมืองทราบข่าวชัยชนะจึงตีกลองประโคมชัยและป่าวประกาศความสำเร็จ ฝ่ายมองโกลเมื่อทราบข่าวจึงจำต้องถอนทัพและมุ่งหน้ากลับไปยังแบกแดด เห็นได้ชัดว่านกพิราบสื่อสารมีบทบาทสำคัญยิ่งต่อชัยชนะของกองทัพมัมลุก</p>
+
+      <p>อัลก็อลกะชันดีย์ (เสียชีวิต ฮ.ศ. 831) ได้บันทึกไว้ในสารานุกรม “ศุบห์ อัลอะอ์ชา” ว่า ในยุคของท่าน อาณาจักรมัมลุกทั้งในอียิปต์และดินแดนชามได้จัดสรรงบประมาณเพื่อสร้างหอคอยและจุดพักสำหรับนกพิราบสื่อสารโดยเฉพาะ มีการแต่งตั้งเจ้าหน้าที่ดูแลที่เรียกว่า “บัรรอจญ์” (ผู้ดูแลหอคอย) ซึ่งถือเป็นตำแหน่งทางยุทธศาสตร์ในการดูแลไปรษณีย์ลับของรัฐ</p>
+
+      <p>เส้นทางบินถูกวางไว้อย่างเป็นระบบ มีสถานีรับส่งระหว่างอียิปต์และชามชัดเจน โดยมีจุดศูนย์กลางเริ่มต้นที่ป้อมเศาะลาฮุดดีนในกรุงไคโร ส่วนสายตะวันออกจะไปยังหอคอยเมืองบิลเบส → กาซา → เยรูซาเล็ม → ดามัสกัส → อะเลปโป และเมืองอื่นๆ</p>
+
+      <p>ส่วนสายใต้มาจากไคโรลงไปยังหอคอยเมืองกูศ → และจากกูศไปยังเมืองอัยซาบ ริมฝั่งทะเลแดง</p>
+
+      <h2 class="article-h2">ระเบียบพิธีการ เมื่อสาส์นมาถึง</h2>
+
+      <p>อัลก็อลกะชันดีย์ยังได้อธิบายถึงขั้นตอนปฏิบัติที่เคร่งครัดเมื่อมีการส่งสาส์น รวมถึงผู้ที่มีอำนาจรับสาส์นและการจำแนกประเภทความสำคัญของข่าวสาร ท่านกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا وصل الطائر إلى البرج الذي وجه به إليه، أمسكه البراج (موظف الحمام) وأخذ البطاقة من جناحه وعلقها بجناح طائر من حمام البرج الذي يليه، أي من المنقول إلى ذلك البرج، وعلى ذلك حتى ينتهي إلى برج القلعة [في القاهرة] فيأخذ البراج الطائر والبطاقة في جناحه ويحضره بين يدي الدوادار الكبير [سكرتير السلطان] فيعرض عليه، فيضع البطاقة عن جناحه بيده: فإن كان الأمر الذي حضرت البطاقة بسببه خفيفا لا يحتاج إلى مطالعة السلطان به، استقل الدوادار به؛ وإن كان مهما يحتاج إلى إعلام السلطان به، استدعى كاتب السر [وزير الخارجية والديوان السلطاني] وطلع لقراءة البطاقة على السلطان كما يفعل في المكاتبات الواردة</blockquote>
+      <p class="ar-translation">“เมื่อนกบินมาถึงหอคอยปลายทาง บัรรอจญ์ (เจ้าหน้าที่) จะจับมันไว้ แล้วแกะเอาสาส์นออกจากปีกของมัน นำไปผูกติดกับปีกของนกตัวใหม่ที่ประจำอยู่ที่หอคอยนั้น (นกผลัดเวร) เพื่อส่งต่อไปยังหอคอยถัดไป ทำเช่นนี้เรื่อยไปจนกระทั่งถึงหอคอยที่ป้อมปราการในไคโร เมื่อถึงปลายทาง บัรรอจญ์จะนำนกพร้อมสาส์นที่ยังผูกติดอยู่กับปีก เข้าเฝ้าต่อหน้าสมุหราชองครักษ์หรือเลขาธิการใหญ่แห่งสำนักสุลต่าน เพื่อนำเสนอ</p>
+      <p class="ar-translation">สมุหราชองครักษ์จะเป็นผู้แกะสาส์นออกจากปีกนกด้วยมือของเขาเอง หากเป็นเรื่องราวทั่วไปที่ไม่สลักสำคัญถึงขั้นต้องรบกวนสุลต่าน สมุหราชองครักษ์ก็จะจัดการเรื่องนั้นด้วยอำนาจของตนเอง</p>
+      <p class="ar-translation">แต่หากเป็นเรื่องสำคัญเร่งด่วนที่จำเป็นต้องกราบบังคมทูลให้สุลต่านทรงทราบ เขาจะเรียกตัวกาติบ อัสซิร์ หรืออาลักษณ์หลวงหรือราชเลขาธิการฝ่ายความลับให้เข้ามา เพื่อนำสาส์นนั้นขึ้นไปอ่านถวายต่อหน้าพระพักตร์สุลต่าน เฉกเช่นเดียวกับธรรมเนียมปฏิบัติในการรับสาส์นทางการทูตทั่วไป”</p>
+
+      <p>อาจจะดูเหมือนว่าธรรมเนียมการจัดตั้งสถาบันหรือหน่วยงานอิสระเพื่อดูแลกิจการ “พิราบสื่อสาร” นั้น จะมีมาก่อนยุคสมัยของพวกมัมลุกในอียิปต์และชามเสียอีก โดยเฉพาะอย่างยิ่งในยุคของราชวงศ์ฟาติมียะฮ์ และต่อมาในยุคราชวงศ์ซังกี ภายใต้การปกครองของสุลต่าน นูรุดดีน มะห์มูด บิน ซังกี (เสียชีวิต ฮ.ศ. 569)</p>
+
+      <p>อิบนุ ฟัฎลุลลอฮ์ อัลอุมะรีย์ได้บันทึกไว้ในหนังสือ “อัตตะอ์รีฟ บิลมุศเฏาะละห์ อัชชะรีฟ” ว่า เหล่าเคาะลีฟะฮ์ราชวงศ์ฟาติมียะฮ์ให้ความสำคัญกับนกพิราบประเภทนี้อย่างยิ่งยวด ถึงขั้นจัดตั้งดีวาน (กระทรวง/ทบวง) ที่มีโครงสร้างการบริหารจัดการชัดเจน และสำหรับเคาะลีฟะฮ์ฟาติมียะฮ์แต่ละพระองค์ จะมีผู้เชี่ยวชาญเฉพาะทางที่ดำรงตำแหน่ง “ศอฮิบ อัลฮะมาม” (เจ้ากรมพิราบ) ซึ่งนับเป็นหนึ่งในขุนนางระดับสูงของรัฐ</p>
+
+      <p>และสารลับที่ถูกนำพาโดยพิราบไปรษณีย์หรือพิราบสื่อสารเหล่านี้ หากจะให้นิยามตามภาษาปัจจุบันก็คงหนีไม่พ้นคำว่า “ลับที่สุด” หรือ “สำคัญและด่วนที่สุด”</p>
+
+      <p>ความสำคัญนี้สะท้อนผ่านบันทึกของท่านกอฎี มุห์ยิดดีน บิน อับดุซซอฮิร (เสียชีวิต ฮ.ศ. 692) ผู้ดำรงตำแหน่งหัวหน้ากองงานอาลักษณ์และราชเลขาธิการ (เทียบเท่ารัฐมนตรีต่างประเทศและเลขาธิการสำนักพระราชวังในปัจจุบัน) ให้กับสามสุลต่านมัมลุกผู้ยิ่งใหญ่ (บัยบัรส์, กอลาวูน และอัลอัชร็อฟ) ท่านได้กล่าวไว้ในหนังสือ “ตะมาอิม อัลฮะมาอิม” ถึงกฎเหล็กแห่งราชสำนักว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الذي استقرت قواعد الملك عليه أن طائر البطاقة [الحمام الزاجل] لا يلهو المالك عنه ولا يغفل ولا يمهل لحظة واحدة فيفوت مهمات لا تستدرك… ولا يقطع البطاقة من الحمام إلا السلطان بيده من غير واسطة أحد، فإن كان يأكل لا يمهل حتى يفرغ، وإن كان نائما لا يمهل حتى يستيقظ بل ينبه</blockquote>
+      <p class="ar-translation">“กฎมณเฑียรบาลที่ยึดถือปฏิบัติกันมาคือ สาส์นจากวิหคนี้ ผู้ปกครองจะละเลยมิได้ จะเผลอไผลหรือประวิงเวลาแม้เพียงชั่วขณะหนึ่งก็มิได้ เพราะอาจทำให้เสียงานใหญ่ที่ไม่อาจแก้ไขคืน...และผู้เดียวที่มีสิทธิ์เด็ดสาส์นออกจากปีกนกพิราบนั่นคือ องค์สุลต่าน และด้วยกับพระหัตถ์ของพระองค์เองโดยไม่ผ่านคนกลาง หากพระองค์กำลังเสวยอยู่ก็ต้องหยุดจนกว่าจะอ่านจบ หากพระองค์ทรงบรรทมอยู่ก็ห้ามรอช้า แต่จำต้องปลุกให้ตื่น”</p>
+
+      <p>การเน้นย้ำว่าสุลต่านคือผู้เดียวที่มีสิทธิ์เปิดอ่านสาส์น เป็นเครื่องยืนยันชั้นดีว่า ข่าวสารเหล่านี้มีความสำคัญและเป็นความลับขั้นสูงสุดเพียงใด</p>
+
+      <h2 class="article-h2">จากสมรภูมิรบ... สู่สมรภูมิรัก</h2>
+
+      <p>แม้ว่าพิราบสื่อสารจะเป็นเครื่องมือหลักในการแจ้งข่าวราชการ ข่าวศึกสงคราม ระหว่างหัวเมืองกับราชธานี เพื่อความรวดเร็วในการสั่งการของกษัตริย์และข้าหลวง แต่...ผู้คนทั่วไปก็นำมันมาใช้เพื่อวัตถุประสงค์อื่นเช่นกัน โดยเฉพาะการส่งสาส์นรักระหว่างคู่รักผู้ถวิลหา ดังเช่นจดหมายที่อัลมุอ์ตะมิด บิน อับบาด (เสียชีวิต ฮ.ศ. 488) เจ้าผู้ครองนครเซบียาแห่งอันดาลูเซีย ส่งถึงสหายและเหล่านางห้ามของเขา หรือสาส์นที่อัลมุอ์ตะศิม บิน ศุมาดิห์ เจ้าผู้ครองนครอัลเมเรีย (มารียะฮ์) ส่งถึงนางสนมกำนัลเมื่อครั้งต้องพลัดพรากไปพำนักที่อื่นเพื่อพักผ่อนหย่อนใจ โดยเขาได้ประพันธ์บทกวีแนบไปในสาส์นว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وحملت ذات الطوق مني تحية … تكون على أفق ألمرية مجمرا</blockquote>
+      <p class="poem-th">“วิหคสวมสร้อยคอ (นกพิราบ) ได้นำพาคำทักทายจากข้า<br>บินไปเพื่ออบร่ำให้ขอบฟ้าแห่งอัลเมเรียหอมกรุ่น (ดั่งเตารมควันหอม)”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">تبلغ من ودي إليكم رسائلا … بأعبق من نشر العبير وأعطرا</blockquote>
+      <p class="poem-th">“นำพาความรักของข้าไปส่งถึงพวกเจ้าผ่านสาส์น<br>ที่หอมฟุ้งขจรขจายยิ่งกว่ากลิ่นน้ำอบและเครื่องหอมใดๆ”</p>
+
+      <p>นั่นคือเสี้ยวหนึ่งของภาพสะท้อนแห่งการคมนาคมและการสื่อสารในยุคโบราณกาล ยุคที่พิราบสื่อสารครองตำแหน่งพาหนะที่รวดเร็วที่สุด เชื่อมโยงดินแดนอันไกลโพ้นจากตะวันออกสุดจดตะวันตก ให้ใกล้กันเพียงไม่กี่วันกี่ชั่วโมง ผ่านปีกของวิหคตัวน้อยที่อาณาจักรอิสลามต่างทุ่มเทงบประมาณ ก่อตั้งสถาบัน และมอบบุริมสิทธิ์ให้มันอยู่เสมอในหน้าประวัติศาสตร์</p>
+
+      <!-- CITATION (อ้างอิงบทความนี้) Rule 40. -->
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). พิราบสื่อสาร ผู้พิทักษ์ความลับ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/carrier-pigeons-in-islamic-history.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
