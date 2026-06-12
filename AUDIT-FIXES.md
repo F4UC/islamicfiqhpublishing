@@ -197,3 +197,14 @@
 
 **FLAG-IB1 (ชื่อตำราอาหรับ inline):** Drive D46 มี `(دولة الإسلام في الأندلس)` ต่อท้ายชื่อไทย “รัฐอิสลามในอัลอันดาลุส” — **ตัดออก + FLAG** (เป็น inline Arabic ที่ต้องตัดสินใจเรื่อง `.ar-inline` span; ความหมายคงอยู่ในชื่อไทยแล้ว) — รอเจ้าของชี้ขาดว่าจะเติม inline Arabic หรือไม่
 **FLAG-IB2 (Rule 52, pre-existing):** al-compounds ในบท (อบุลฮัจญาจ/อบุลวะลีด/อบุลกอซิม/อบุลบะเราะกัต/อบุลฮะซัน, อิบนุลเคาะฏีบ) — รูปถูกต้อง (สระอุ, ไม่มี อบูล) แต่แจ้งตาม mandate Rule 52 (มาจาก Drive+Alpha เดิม ไม่ได้สร้างใหม่)
+
+## 2026-06-12 — PHASE 2 · `articles/tarikh/bimaristan-and-psychiatric-care.html` — aya Uthmani→imlaei (ไม่ใช่ drop)
+
+**กรณีที่ใช้:** case (2) normalize อักขรวิธีอายะฮ์ Uthmani→imlaei byte-exact จาก quran.com (กฎ 53) — ★ไม่ใช่ Arabic drop★ (อายะฮ์มีอยู่แล้วใน aya-block แต่เป็น Uthmani)
+
+| บล็อก | การกระทำ | แหล่ง (byte-exact) | byte-diff |
+|---|---|---|---|
+| อายะฮ์ 91:9-10 (`قد أفلح من زكاها…`) | `زَكَّىٰهَا`→`زَكَّاهَا`, `دَسَّىٰهَا`→`دَسَّاهَا` ( ىٰ→ا) | quran.com imlaei 91:9 + 91:10 (space-join, ไม่มี comma ตามโครงบทความ) | PASS (rasm-invariant: skeleton ก่อน=หลัง=แหล่ง) |
+
+- การ์ตรวจ Arabic completeness รายงานผิดว่า "drop 1 บล็อก" เพราะ skeleton ของ Uthmani (`زكىها`) ≠ imlaei (`زكاها`) → false positive · ที่จริงอายะฮ์ครบ แค่ orthography ต่าง
+- Thai coverage 100.4% (ครบอยู่แล้ว) · reading-time ไม่เปลี่ยน (aya ยกเว้น) · articles.json ไม่แตะ
