@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>ถึงกาลอันดาลุสล่มสลาย — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="เรื่องราวการล่มสลายของอัลอันดาลุส จากมหาอำนาจอารยธรรมแปดศตวรรษ สู่การเสียกอร์โดบา เซบียา และที่มั่นสุดท้ายกรานาดาในปี 1492 พร้อมบทวิเคราะห์สาเหตุแห่งความเสื่อมโดยอิบนุ คอลดูนและอิบนุ หัซมิน">
+<meta name="keywords" content="อันดาลุส, กรานาดา, Reconquista, อิบนุ คอลดูน, อิบนุ หัซมิน, อัลฮัมบรา, ประวัติศาสตร์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ถึงกาลอันดาลุสล่มสลาย — Islamic Fiqh Publishing">
+<meta property="og:description" content="จากสวนสวรรค์แห่งอารยธรรมสู่กาลวิบัติ 1492 - บทเรียนแห่งความแตกแยกที่กัดกินอาณาจักรอิสลามในไอบีเรีย">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/the-fall-of-al-andalus.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="the-fall-of-al-andalus">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">ถึงกาลอันดาลุสล่มสลาย</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ศาสนาอิสลามได้แผ่ขยายเข้าสู่คาบสมุทรไอบีเรียหรือ "อัลอันดาลุส" ภายหลังการพิชิตดินแดนได้ในปี ฮ.ศ. 92 (ค.ศ. 711) ชาวมุสลิมได้สถาปนารัฐที่ยืนยงยาวนานถึงแปดศตวรรษ โดยเฉพาะอย่างยิ่งในรัชสมัยของเคาะลีฟะฮ์อับดุรเราะห์มาน อันนาศิร (ฮ.ศ. 300-350 / ค.ศ. 912-961) รัฐแห่งนี้ได้ก้าวขึ้นสู่ความเป็นมหาอำนาจที่มีความเจริญรุ่งเรืองทางวิชาการ อารยธรรม และความเป็นเมืองที่ก้าวหน้ามากที่สุดแห่งหนึ่งของโลก</p>
+      <p>ชาวมุสลิมในยุคนั้นใช้ชีวิตอย่างเกษมสำราญท่ามกลางผืนแผ่นดินที่อุดมสมบูรณ์ สายน้ำอันจืดสนิท สวนสวรรค์อันเขียวขจี และสภาพอากาศที่อบอุ่น ดังที่กวีท่านหนึ่งได้ร้อยกรองพรรณนาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يا أهل أندلس لله دركم ماء وظل وأنهار وأشجار<br>ما جنة الخلد إلا في دياركم ولو تخيرت هذا كنت أختار<br>لا تحسبوا في غد أن تدخلوا سقرا فليس تدخل بعد الجنة النار</blockquote>
+      <p class="poem-th">“โอ้ชาวอันดาลุสเอ๋ย... ช่างน่าอัศจรรย์ใจยิ่งนัก ในดินแดนของท่านมีทั้งสายน้ำ ร่มเงา ธารใส และแมกไม้<br>หากแม้นสวนสวรรค์นิรันดร์มีอยู่จริง ก็คงมิพ้นดินแดนของพวกท่าน และหากให้ข้าเลือกได้...ที่แห่งนี้แหละคือที่ที่ข้าปักใจ<br>จงอย่าได้กังวลไปเลยว่า พรุ่งนี้พวกท่านจะต้องตกนรก เพราะคงไม่มีผู้ใด...ที่ได้อยู่ในสวรรค์แล้วจะต้องลงนรกอีก”</p>
+      <p>ในยุคสมัยนั้น บุตรหลานของคหบดีในยุโรปต่างมุ่งหน้าเดินทางเข้ามาศึกษาหาความรู้ในโรงเรียนและมหาวิทยาลัยของอันดาลุส ครั้นเมื่อพวกเขากลับไปยังมาตุภูมิ ก็จะโอ้อวดด้วยความภาคภูมิใจว่าตนได้รับการถ่ายทอดวิชาความรู้มาจากปราชญ์ชาวอาหรับมุสลิม พวกเขามักจงใจใช้คำทับศัพท์ภาษาอาหรับในบทสนทนา จนกลายเป็นรากศัพท์ที่ตกทอดมาสู่ภาษาตะวันตกในปัจจุบัน อาทิ Magazine (นิตยสาร), Syrup (น้ำเชื่อม), Sofa (โซฟา), Admiral (นายพลเรือ) และ Arsenal (ทีมฟุตบอล) เพื่อแสดงให้ผู้คนเลื่อมใสว่าเป็นปัญญาชนผู้มีการศึกษา แม้กระทั่งกษัตริย์และเจ้าเมืองในอาณาจักรคริสเตียนทางตอนเหนือของสเปน ยังต้องส่งสาส์นมาขอความช่วยเหลือจากผู้ปกครองอันดาลุสในยามที่เกิดศึกชิงบัลลังก์กันเอง กองทัพมุสลิมจึงมักเข้าแทรกแซงและเปลี่ยนแปลงดุลอำนาจทางการเมือง โดยแลกเปลี่ยนกับป้อมปราการและดินแดนที่ผู้ขอความช่วยเหลือต้องยอมยกให้</p>
+      <h2 class="article-h2">ปฐมบทแห่งการล่มสลาย</h2>
+      <p>แต่ในกาลต่อมา รัฐอิสลามในอันดาลุสเริ่มอ่อนแอลง อันเนื่องมาจากการแตกความสามัคคี ความขัดแย้ง และการแก่งแย่งชิงดีกันเอง ไฟสงครามการยึดดินแดนคืน หรือเรียกกันในฝั่งตะวันตกว่า Reconquista ที่มาจากฝั่งคริสเตียนเริ่มปะทุขึ้นอย่างรุนแรง</p>
+      <p>หากเรามองย้อนกลับไป ปฐมบทแห่งการสูญเสียได้เริ่มก่อตัวขึ้นที่เมืองปัมโปลนา (Pamplona) ทางตอนเหนือ ซึ่งต่อมากลายเป็นศูนย์กลางของอาณาจักรนาวาร์ พื้นที่นี้เริ่มหลุดออกจากวงอำนาจของอัลอันดาลุสตั้งแต่ช่วงต้นประวัติศาสตร์ ราวปี ฮ.ศ. 130 (ค.ศ. 748) อำนาจของผู้ปกครองมุสลิมเหนือเมืองนี้เริ่มสั่นคลอนจากการต่อต้านของชาวคริสต์ จนกระทั่งในราวครึ่งแรกของคริสต์ศตวรรษที่ 9 ปัมโปลนาก็หลุดพ้นจากอำนาจมุสลิมโดยสมบูรณ์ และกลายเป็นรากฐานของ “ราชอาณาจักรนาวาร์” ที่เข้มแข็ง จนได้ขยายอำนาจและสร้างพันธมิตรกับราชอาณาจักรคริสเตียนอื่นๆ กลายเป็นภัยคุกคามสำคัญต่อสมดุลอำนาจในคาบสมุทรไอบีเรีย</p>
+      <p>จากนั้น โดมิโนแห่งความพ่ายแพ้ก็เริ่มล้มลงทีละตัว เมืองบาร์เซโลนาหลุดมือไปในปี ฮ.ศ. 375 (ค.ศ. 985) ตามมาด้วยเมืองซานติอาโกในปี ฮ.ศ. 387 (ค.ศ. 997) เมืองลีออน (Leon) ในอีก 5 ปีถัดมา และเมืองซาลามังกา (Salamanca) แตกพ่ายในปี ฮ.ศ. 447 (ค.ศ. 1055)</p>
+      <p>เหตุการณ์สำคัญที่สั่นสะเทือนโลกมุสลิมเกิดขึ้นเมื่อกษัตริย์อัลฟอนโซที่ 6 สามารถช่วงชิงนครฏุไลฏุละฮ์ (โทเลโด) อดีตเมืองหลวงเก่าไปจากมือของชาวมุสลิมได้สำเร็จในปี ฮ.ศ. 478 (ค.ศ. 1085) ถือเป็นจุดเปลี่ยนครั้งใหญ่ทางยุทธศาสตร์</p>
+      <h2 class="article-h2">การล่มสลายของหัวเมืองใหญ่</h2>
+      <p>เมื่อเข้าสู่ศตวรรษที่ 13 แห่งคริสตกาล (ฮ.ศ. ศตวรรษที่ 7) กองทัพคริสเตียนสเปนได้กรีธาทัพเข้ามารุกรานครั้งใหญ่ นครหลวงที่เคยเฉิดฉายอยู่บนจุดสูงสุดแห่งความรุ่งโรจน์อย่างกุรฏุบะฮ์ (กอร์โดบา) ได้ถูกพิชิตในปี ฮ.ศ. 633 (ค.ศ. 1236) ตามมาด้วยอิชบีลิยะฮ์ (เซบียา) ในปี ฮ.ศ. 646 (ค.ศ. 1248)</p>
+      <p>เหล่าผู้พิชิตได้ทำลายล้างร่องรอยแห่งอารยธรรมอาหรับมุสลิมจนแทบจะราบเป็นหน้ากลอง สิ่งหนึ่งที่ยังคงหลงเหลือและยืนหยัดเล่าขานตำนานคือ หอคอยอันสูงตระหง่านนามว่า “ญิรัลดา” (Giralda) เดิมทีถูกสร้างขึ้นเป็นหออะซานของมัสยิดกลางในเซบียาภายใต้การปกครองของราชวงศ์อัลโมฮัด แต่ปัจจุบันได้ถูกเปลี่ยนสภาพเป็นหอระฆังของอาสนวิหารเซบียา โดยส่วนบนของหอถูกต่อเติมด้วยศิลปะสมัยเรอเนสซองส์ จนญิรัลดาได้รับการขึ้นทะเบียนเป็นมรดกโลก ถ้าอยากจะรู้ว่าอาณาจักรมุสลิมในอันดาลุสเมื่ออดีตกาลรุ่งเรืองเพียงใด นอกจากอัลฮัมบราแล้ว เรายังสามารถดูเสี้ยวนึงของสัญลักษณ์นั้นได้ ณ หอระฆังนี้</p>
+      <p>หลังจากยึดครองเมืองได้ กษัตริย์สเปนตระหนักว่าพวกตนขาดแคลนช่างฝีมือและสถาปนิกที่เก่งกาจ จึงจำต้องเรียกหาช่างฝีมือชาวอาหรับมุสลิมมาสร้างและดัดแปลงพระราชวังต่างๆ เช่น พระราชวังอัลคาซาร์ ซึ่งสร้างทับบนซากป้อมปราการเดิมของชาวมุสลิม จารึกภาษาอาหรับและลวดลายเรขาคณิตในห้องท้องพระโรงแห่งคณะทูต (Hall of Ambassadors) ยังคงเป็นพยานหลักฐานถึงศิลปะในการใช้ชีวิตอันประณีตนั้น ล้วนเป็นมรดกตกทอดจากชาวอาหรับ</p>
+      <h2 class="article-h2">ที่มั่นสุดท้าย ณ ฆอรนาฏาะฮ์</h2>
+      <p>เมื่อดินแดนส่วนใหญ่ถูกยึดครอง ชาวอาหรับมุสลิมจำต้องถอยร่นลงมาทางใต้ ก่อให้เกิดเป็นอาณาจักรสุดท้าย ณ ฆอรนาฏาะฮ์ (กรานาดา) ซึ่งกลายเป็นที่ลี้ภัยของประชากรมุสลิมกว่าสามล้านคน</p>
+      <p>และด้วยภูมิปัญญาจนถึงความวิริยะอุตสาหะ ชาวมุสลิมได้พลิกฟื้นกรานาดาให้กลายเป็นอุทยานสวรรค์ พวกเขาชักนำสายน้ำจากยอดเขาเซียร์ราเนวาดาที่สูงตระหง่านเหนือเมืองเข้าสู่พื้นที่เพาะปลูก ส่งผลให้การกสิกรรมเจริญรุ่งเรืองถึงขีดสุด กรานาดากลายเป็นนครที่มั่งคั่งและวิจิตรตระการตาเฉกเช่นที่กอร์โดบาเคยเป็น แน่นอนว่า พระราชวังอัลฮัมบราคือมรดกชิ้นเอกที่หลงเหลืออยู่ในปัจจุบันที่สะท้อนถึงความโอ่อ่า ความประณีตบรรจงของเสาหินอ่อน ลวดลายพรรณพฤกษา และถ้อยคำสุภาษิตที่จารึกบนผนังอย่างงดงามจนผู้พบเห็นต้องเพลิดเพลิน</p>
+      <p>แต่ความงดงามนี้ไม่อาจยั่งยืน... เมื่อกษัตริย์คาทอลิกทั้งสอง คือเฟอร์ดินานด์และอิซาเบลลา ได้รวมตัวกันและระดมไพร่พลมหาศาลเข้าปิดล้อมกรานาดา ในขณะที่ฝ่ายมุสลิมกำลังอ่อนแอและแตกแยกกันเองจากภายใน</p>
+      <h2 class="article-h2">กาลวิบัติแห่งอันดาลุสในปี 1492</h2>
+      <p>วันที่ 2 มกราคม ฮ.ศ. 897 (ค.ศ. 1492) เมื่อกษัตริย์องค์สุดท้าย อบู อับดุลลอฮ์ อัศเศาะฆีร (หรือ โบอับดิล) จำต้องลงนามในสนธิสัญญายอมจำนน เพื่อรักษาชีวิตของประชาชน แลกกับการสูญเสียอำนาจอธิปไตยอย่างถาวร</p>
+      <p>แม้เงื่อนไขในสนธิสัญญาจะระบุไว้อย่างสวยหรูว่า: “กรานาดาจะเป็นเขตปลอดภัย... มุสลิมจะได้ธำรงไว้ซึ่งกฎหมาย จารีตประเพณี และศาสนา... มัสยิดจะได้รับการคุ้มครอง” แต่ในความเป็นจริง สัญญาเหล่านั้นกลับถูกฉีกทิ้งในเวลาต่อมา เหล่าบาทหลวงและนักบวชผู้คลั่งแค้นได้ยุยงให้ผู้ปกครองยกเลิกความอดกลั้นต่อคนต่างศาสนา จนนำไปสู่ข้อเสนออันโหดร้ายที่ว่า: “จะยอมรับศีลล้างบาป หรือจะถูกเนรเทศ”</p>
+      <p>ชาวมุสลิมและชาวยิวนับแสนจำยอมต้องละทิ้งแผ่นดินเกิด มุ่งหน้าสู่ชายฝั่งแอฟริกาเหนือ ทิ้งไว้เพียงตำนานและความทรงจำ เหล่าอัศวินผู้พิชิตได้เผาทำลายตำราวิชาการอันประเมินค่ามิได้ กองทับถมกันเป็นภูเขาเลากา ปิดฉากแสงสว่างแห่งปัญญาในคาบสมุทรไอบีเรียลงอย่างมืดมน</p>
+      <h2 class="article-h2">สาเหตุแห่งการล่มสลาย</h2>
+      <p>อิบนุ คอลดูน ปราชญ์ผู้ยิ่งใหญ่ได้วิเคราะห์ถึงสัจธรรมแห่งการล่มสลายไว้ในตำราอัลมุก็อดดิมะฮ์ของท่านว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والسبب في ذلك أن النفس أبدا تعتقد الكمال فيمن غلبها وانقادت اليه: إما لنظره بالكمال بما وقر عندها من تعظيمه، او لما تغالط به من أن انقيادها ليس لغلب طبيعي إنما هو لكمال الغالب، فإذا غالطت بذلك واتصل لها حصل اعتقادا، فانتحلت جميع مذاهب الغالب وتشبهت به، وذلك هو الاقتداء، أو لما تراه والله أعلم من أن غلب الغالب لها ليس بعصبية ولا قوة بأس، وإنما هو بما انتحلته من العوائد والمذاهب، تغالط ايضا بذلك عن الغلب، وهذا راجع للأول، ولذلك ترى المغلوب يتشبه ابدا بالغالب في ملبسه ومركبه وسلاحه في اتخاذها وأشكالها، بل في سائر أحواله، وانظر الى ذلك في الأبناء مع آبائهم كيف تجدهم متشبهين بهم دائما، وما ذلك إلا لإعتقادهم الكمال فيهم، وانظر الى كل قطر من الأقطار كيف يغلب على أهله زي الحامية جند السلطان في الأكثر لأنهم الغالبون لهم، حتى إنه إذا كانت أمة تجاور أخرى ولها الغلب عليها فيسري إليهم من هذا التشبه والإقتداء حظ كبير، كما هو في الأندلس لهذا العهد مع أمم الجلالقة، فإنك تجدهم يتشبهون بهم في ملابسهم وشاراتهم والكثير من عوائدهم وأحوالهم، حتى في رسم التماثيل في الجدران والمصانع والبيوت، حتى لقد يستشعر عن ذلك الناظر بعين الحكمة أنه من علامات الاستيلاء، والأمر لله، وتأمل في هذا سر قولهم العامة على دين الملك فإنه من بابه، إذ الملك غالب لمن تحت يده والرعية مقتدون به لإعتقاد الكمال فيه اعتقاد الأبناء بآبائهم والمتعلمين بمعلميهم، والله العليم الحكيم وبه سبحانه وتعالى التوفيق</blockquote>
+      <p class="ar-translation">“ธรรมชาติของจิตใจมนุษย์มักจะเชื่อมั่นในความสมบูรณ์แบบของผู้ที่เอาชนะตน...ความเชื่อเช่นนี้อาจเกิดขึ้นเพราะความเคารพยำเกรงที่ฝังแน่นจนมองเห็นแต่ความยิ่งใหญ่ของฝ่ายตรงข้าม หรืออาจเกิดจากความเข้าใจผิดที่หลอกตัวเองว่า การที่ตนต้องจำยอมนั้น ไม่ใช่เพราะพ่ายแพ้ต่อกำลังตามธรรมชาติของมนุษย์ แต่เป็นเพราะความสมบูรณ์แบบของผู้ชนะต่างหาก</p>
+      <p>เมื่อจิตใจหลงผิดเช่นนั้นและยึดติดกับความคิดนี้จนกลายเป็นความเชื่อ มันก็จะรับเอาวิถีทางทั้งหมดของผู้ชนะมาปฏิบัติและพยายามทำตัวเลียนแบบเขา นั่นคือความหมายของการเจริญรอยตาม</p>
+      <p>หรือมิเช่นนั้น (อัลลอฮ์ทรงรู้ดียิ่ง) อาจเป็นเพราะผู้แพ้เข้าใจไปเองว่า ชัยชนะของผู้ชนะนั้นมิได้เกิดจากความสามัคคีกลมเกลียว หรือความเข้มแข็งห้าวหาญ แต่เกิดจากขนบธรรมเนียมและวิถีปฏิบัติเหล่านั้นต่างหากที่ทำให้เขาชนะ ซึ่งนี่ก็ย้อนกลับไปสู่เหตุผลข้อแรก (คือการหลงผิด)</p>
+      <p>ด้วยเหตุนี้ ท่านจึงจะเห็นผู้พ่ายแพ้พยายามเลียนแบบผู้ชนะเสมอ ไม่ว่าจะเป็นเสื้อผ้าอาภรณ์ ยานพาหนะ อาวุธยุทโธปกรณ์ รูปทรงสัณฐาน หรือแม้แต่สภาพความเป็นอยู่ทั่วไป จงดูตัวอย่างจากบุตรหลานที่เลียนแบบบิดามารดาเถิด ท่านจะพบว่าพวกเขาทำตามพ่อแม่เสมอ เพราะเชื่อว่าพ่อแม่นั้นสมบูรณ์แบบ (เหนือกว่าตน)</p>
+      <p>และจงดูในทุกดินแดนเถิด ว่าผู้คนมักแต่งกายตามอย่างทหารรักษาการณ์ขององค์สุลต่านเป็นส่วนใหญ่ เพราะทหารเหล่านั้นคือผู้มีอำนาจเหนือพวกเขา แม้กระทั่งเมื่อชาติหนึ่งอาศัยอยู่ติดกับอีกชาติหนึ่ง และฝ่ายหลังมีอำนาจเหนือกว่า ก็จะเกิดการลื่นไหลทางวัฒนธรรม การเลียนแบบ และการเจริญรอยตามอย่างมากมาย</p>
+      <p>ดังเช่นที่ปรากฏในแผ่นดินอันดาลุสในยุคสมัยนี้ ที่ผู้คนพากันเลียนแบบพวกญะลาลิเกาะฮ์ (ชาวคริสต์ทางตอนเหนือของสเปน) ท่านจะพบว่าพวกเขา (ชาวมุสลิมในอันดาลุส) เลียนแบบคนเหล่านั้นทั้งในเครื่องแต่งกาย เครื่องหมายยศ และขนบธรรมเนียมมากมาย ถึงขั้นที่มีการวาดภาพรูปเหมือน (รูปปั้น/จิตรกรรมฝาผนัง) บนกำแพง โรงงาน และบ้านเรือน จนกระทั่งผู้ที่มองดูด้วยสายตาแห่งสติปัญญาอาจสัมผัสได้ว่า นี่คือสัญญาณบ่งบอกถึงการถูกยึดครอง (การล่มสลาย) ที่กำลังจะมาถึง...แต่กิจการทั้งมวลนั้นเป็นสิทธิ์ของอัลลอฮ์...</p>
+      <p>จงใคร่ครวญถึงความลับในคำกล่าวที่ว่า “ราษฎรย่อมดำเนินตามศาสนา (วิถี) ของกษัตริย์” เถิด เพราะมันอยู่ในตรรกะเดียวกัน กษัตริย์คือผู้ชนะเหนือราษฎรที่อยู่ใต้การปกครอง ราษฎรจึงเลียนแบบเพราะเชื่อมั่นในความสมบูรณ์แบบของกษัตริย์ เฉกเช่นลูกเลียนแบบพ่อ หรือศิษย์เลียนแบบครู...และอัลลอฮ์คือผู้ทรงรอบรู้ ผู้ทรงปรีชาญาณ และความสำเร็จทั้งมวลมาจากพระองค์”</p>
+      <p>สอดคล้องกับมุมมองของอิบนุ หัซมินที่ท่านได้วิพากษ์วิจารณ์ความอ่อนแอของผู้ปกครองในยุคของท่านไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والله لو علموا أن في عبادة الصلبان تمشية أمورهم بادروا إليها، فحن نراهم يستمدون النصارى فيمكنوهم من حرم المسلمين وأبنائهم ... وربما عطوهم المدن والقلاع طوعا فأخلوها من الإسلام وعمروها بالنواقيس</blockquote>
+      <p class="ar-translation">“ขอสาบานต่ออัลลอฮ์...หากแม้นพวกเขาล่วงรู้ว่าการก้มหัวบูชาไม้กางเขนจะช่วยค้ำจุนอำนาจวาสนาของตนให้อยู่รอดต่อไปได้ พวกเขาก็คงจะรีบกระทำมันโดยมิรีรอ</p>
+      <p>และด้วยเราได้ประจักษ์ชัดแก่สายตาแล้วว่า พวกเขาต่างมุ่งหน้าไปขอความช่วยเหลือจากพวกคริสเตียน เปิดช่องให้ศัตรูเข้ามาครอบงำย่ำยีสตรีและลูกหลานชาวมุสลิม...ซ้ำร้าย บางครายังถึงขั้นยอมยกบ้านเมืองและป้อมปราการให้แก่ศัตรูไปโดยดุษณี ทำให้ดินแดนเหล่านั้นสิ้นสภาพจากการเป็นแผ่นดินอิสลาม และถูกแทนที่ด้วยเสียงระฆังระงมของชาวคริสต์”</p>
+      <p>อีกหนึ่งปัจจัยสำคัญคือการที่บรรดาปราชญ์ศาสนาละเลยหน้าที่ในการตักเตือนผู้นำและสังคม หันไปหมกมุ่นกับเรื่องปลีกย่อย หรือกลายเป็นผู้ประจบสอพลอเหล่าเจ้าเมืองและผู้ปกครองดังที่ท่านอิบนุ หัซมินได้กล่าวพรรณนาถึงคนเหล่านี้ไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا يغرنكم الفساق والمنتسبون إلى الفقه، اللابسون جلود الضأن على قلوب السباع، المزينون لأهل الشر شرهم، الناصرون لهم على فسقهم</blockquote>
+      <p class="ar-translation">“พวกท่านจงอย่าได้หลงกลเหล่าคนชั่วและพวกที่แอบอ้างตนว่าเป็นผู้รู้ทางศาสนา พวกที่สวมหนังแกะห่มคลุมหัวใจราชสีห์ (สัตว์ร้าย) ผู้ซึ่งคอยประดับประดาความชั่วร้ายของคนพาลให้ดูดีงาม และคอยสนับสนุนพวกเขาในการทำชั่ว”</p>
+      <p>และแทนที่จะทำหน้าที่ปลุกให้ผู้คนหวนกลับสู่หลักธรรม ยึดมั่นในศาสนา และยืนหยัดต่อสู้ ก็กลับพบว่านักวิชาการบางท่านกลับชักชวนให้ผู้คนละทิ้งแผ่นดินอันดาลุส ดังที่อับดุลลอฮ์ บิน ฟะร็อจ อัลยะห์ศุบี หรือที่รู้จักกันในนาม อิบนุลอัสซาล ได้ร้อยกรองบทกวีไว้ภายหลังจากที่นครฏุไลฏุละฮ์ตกอยู่ในมือของชาวคริสต์ในปี ฮ.ศ. 475 ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يا أهل أندلس حثوا مطيكم فما المقام بها إلا من الغلط<br>الثوب ينسل من أطرافه وأرى ثوب الجزيرة منسولا من الوسط<br>ونحن بين عدو لا يفارقنا كيف الحياة مع الحيات في سفط</blockquote>
+      <p class="poem-th">“โอ้ ชาวอันดาลุสเอ๋ย... จงเร่งควบอาชาของพวกท่านออกไปเถิด เพราะการพำนักอยู่ที่นี่ต่อไป...มีแต่ความผิดพลาดมหันต์<br>อาภรณ์นั้นมักจะเริ่มหลุดลุ่ย...จากชายขอบของผืนผ้า แต่ข้ากลับเห็นว่าอาภรณ์แห่งคาบสมุทรนี้...กำลังถูกฉีกกระชากจากใจกลาง<br>พวกเราติดอยู่ท่ามกลางศัตรู...ที่รายล้อมไม่ห่างกาย แล้วจะมีชีวิตอยู่อย่างไร...เมื่อต้องร่วมเรียงเคียงหมอนกับอสรพิษในตะกร้าใบเดียวกัน”</p>
+      <h2 class="article-h2">บทส่งท้าย: วัฏจักรแห่งอำนาจและการล่มสลาย</h2>
+      <p>ประวัติศาสตร์แห่งอันดาลุส เมื่อความแตกแยกคือสนิมเนื้อในก็กัดกินความยิ่งใหญ่ให้ผุกร่อนได้เช่นกันดังที่อิบนุ คอลดูนได้บันทึกสัจธรรมนี้ไว้ในอัลมุก็อดดิมะฮ์ ว่าด้วยเรื่องความผันผวนของระบบชนชั้นในยามที่รัฐเริ่มเสื่อมถอย ท่านได้กล่าวไว้อย่างน่าสนใจว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لقد يقع في الدول اضطراب في المراتب من أهل هذا الخلق، ويرتفع فيها كثير من السفلة وينزل كثير من العلية بسبب ذلك، وذلك أن الدول إذا بلغت نهايتها من التغلب والاستيلاء انفرد منها منبت الملك بملكهم و سلطانهم، ويئس من سواهم من ذلك، وإنما صاروا في مراتب دون مرتبة الملك وتحت يد السلطان و كأنهم خول له، فإذا استمرت الدولة وشمخ الملك تساوى حينئذ في المنزلة عند السلطان كل من انتمى إلى خدمته وتقرب إليه بنصيحته واصطنعه السلطان لغنائه في كثير من مهماته، فتجد كثيرا من السوقة يسعى في التقرب من السلطان بجده و نصحه، ويتزلف إليه بوجوه خدمته و يستعين على ذلك بعظيم من الخضوع والتملق له ولحاشيته وأهل نسبه، حتى ترسخ قدمه معهم، وينظمه السلطان في جملته، فيحصل له بذلك حظ عظيم من السعادة، وينتظم في عدد أهل الدولة، وناشئة الدولة حينئذ من أبناء قومها الذين ذللوا صعابها، ومهدوا أكنافها مغترين بما كان لآبائهم في ذلك من الآثار، وتشمخ به نفوسهم على السلطان ويعتدون بآثاره، ويجرون في مضمار الدالة بسببه، فيمقتهم السلطان لذلك و يباعدهم، ويميل إلى هؤلاء المصطنعين الذين لا يعتدون بقديم ولا يذهبون إلى دالة ولا ترفع، إنما دأبهم الخضوع له والتملق والاعتمال في غرضه متى ذهب إليه، فيتسع جاههم وتعلو منازلهم، وتنصرف إليهم الوجوه والخواص بما يحصل لهم من ميل السلطان والمكانة عنده، ويبقى ناشئة الدولة فيما هم فيه من الترفع والاعتداد بالقديم لا يزيدهم ذلك إلا بعدا من السلطان ومقتا، وإيثارا لهؤلاء المصطنعين عليهم إلى أن تنقرض الدولة، وهذا أمر طبيعي في الدول، ومنه جاء شأن المصطنعين في الغالب والله سبحانه وتعالى أعلم و به التوفيق لا رب سواه</blockquote>
+      <p class="ar-translation">“ในบางครั้งรัฐย่อมเกิดความปั่นป่วนในลำดับชั้นทางสังคม คนต่ำต้อยไร้สกุลรุนชาติจำนวนมากถูกยกย่องให้สูงส่ง ในขณะที่ชนชั้นสูงผู้มีเกียรติกลับถูกลดทอนศักดิ์ศรีให้ต่ำลง...</p>
+      <p>เหตุที่เป็นเช่นนั้น เพราะเมื่ออาณาจักรดำเนินมาถึงจุดอิ่มตัวและอำนาจถูกรวบเข้าสู่ศูนย์กลาง กษัตริย์มักจะผูกขาดอำนาจไว้เพียงผู้เดียว และเริ่มระแวงบรรดาเชื้อสายของผู้ร่วมก่อตั้งรัฐ (หรือกลุ่มคนที่เคยร่วมทุกข์ร่วมสุขกันมา) เพราะคนเหล่านี้ถือตัวว่าตนมีบุญคุณและมีความสำคัญ ทำให้กษัตริย์รู้สึกว่าพวกเขาควบคุมยาก</p>
+      <p>เมื่อเป็นเช่นนั้น กษัตริย์จึงหันไปโปรดปรานกลุ่มคนใหม่ที่เป็นพวกคนสอพลอ ที่มิได้มีหัวนอนปลายเท้าและไม่ได้มีบารมีเก่าแก่ คนเหล่านี้เข้าหาอำนาจด้วยการหมอบกราบ พินอบพิเทา และใช้ลิ้นตลบตะแลงเพื่อเอาใจเจ้า พวกเขาพยายามแสวงหาความก้าวหน้าด้วยการรับใช้ใกล้ชิด ยอมทำตามประสงค์ของกษัตริย์ทุกอย่างโดยไร้ข้อโต้แย้ง</p>
+      <p>ผลที่ตามมาคือ คนสอพลอเหล่านี้ได้รับการอวยยศถาบรรดาศักดิ์ กลายเป็นคนโปรดที่มีอำนาจวาสนา ในขณะที่เหล่าผู้ภักดีที่แท้จริงและลูกหลานของผู้สร้างชาติ ซึ่งมีความหยิ่งทะนงในเกียรติยศและกล้าที่จะตักเตือนผู้นำ กลับถูกกษัตริย์มองด้วยความเกลียดชังและถูกผลักไสให้ห่างไกลจากวงโคจรแห่งอำนาจ...</p>
+      <p>และนี่คือธรรมชาติที่มักเกิดขึ้นในวาระสุดท้ายของทุกอาณาจักร...วัลลอฮุอะลัม และความสำเร็จทั้งมวลมาจากพระองค์”</p>
+      <p>อิบนุ คอลดูนท่านได้กล่าวไว้เช่นนี้ และบางที...ประวัติศาสตร์อาจกำลังซ้ำรอยเดิม ช่างสอดคล้องกับกวีอาหรับของอะลี บิน มุกร็อบ ที่ได้ร้อยกรองเตือนใจถึงภัยของคนใกล้ชิดที่ไร้สัจจะไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لا تركنن إلى من لا وفاء له الذئب من طبعه إن يقتدر يثب</blockquote>
+      <p class="poem-th">“ท่านจงอย่าได้วางใจ ให้พักพิงอิงแอบผู้ที่ไร้ซึ่งความภักดี<br>เฉกเช่นสุนัขจิ้งจอก...ที่วิสัยของมันย่อมกระโจนเข้าตะครุบเหยื่อทันทีเมื่อสบโอกาส”</p>
+      <p>ประวัติศาสตร์อันดาลุสยังสะท้อนให้เห็นถึงสัจธรรมแห่งการเกิดขึ้น ตั้งอยู่ และดับไป ดังบทกวีริษาอ์ อัลอันดาลุสของอบุลบะกอ อัรรุนดีที่จารึกไว้เตือนใจว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لكل شيء إذا ما تم نقصان فلا يغر بطيب العيش إنسان</blockquote>
+      <p class="poem-th">“ทุกสรรพสิ่งเมื่อถึงคราวบริบูรณ์พร้อม... ย่อมต้องมีวันร่วงโรยเสื่อมถอย มนุษย์เอ๋ย...จงอย่าได้หลงระเริงไปกับความหอมหวานของชีวิตเลย”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هي الأيام كما شاهدتها دول من سره زمن ساءته أزمان</blockquote>
+      <p class="poem-th">“กาลเวลาคือสิ่งที่ผันแปร ดั่งอาณาจักรที่ผลัดเปลี่ยนหมุนเวียน ผู้ที่ยิ้มรับความสุขในวันนี้... อาจต้องหลั่งน้ำตาให้กับความทุกข์ในวันหน้า”</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ถึงกาลอันดาลุสล่มสลาย. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/the-fall-of-al-andalus.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
