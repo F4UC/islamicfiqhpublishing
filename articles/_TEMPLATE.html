@@ -270,7 +270,20 @@ html.no-arabic .ar-quote { display: none; }
 
 <div id="header-placeholder"></div>
 
-<!-- HERO / FEATURE IMAGE: replace src, alt, eyebrow (category link+label), H1, credit. -->
+<!-- HERO — DEFAULT = no-hero (Rule 67): solid banner + eyebrow + H1, NO <img> (กัน 404).
+     เติม hero image ทีหลังเป็น batch ได้. แทนที่ CATEGORY (path+label) และ ARTICLE_TITLE. -->
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/CATEGORY.html" class="article-feature-eyebrow">CATEGORY_LABEL / ฟิกฮ์</a>
+      <!-- ARTICLE_TITLE: H1 text only; em-dash + site name go in <title> (Rule 44) -->
+      <h1 class="article-feature-title">ARTICLE_TITLE</h1>
+    </div>
+  </div>
+</div>
+
+<!-- OPTIONAL hero WITH image — ใช้เฉพาะเมื่อมีรูปจริงบน CDN เท่านั้น (ห้ามชี้ไฟล์ 404).
+     ถ้ามีรูป ให้สลับบล็อกด้านบนเป็นบล็อกนี้ (เอา no-hero ออก, ใส่ <img> + เครดิต):
 <div class="article-feature">
   <img
     src="https://images.islamicfiqhpublishing.com/articles/SLUG.jpg"
@@ -283,12 +296,12 @@ html.no-arabic .ar-quote { display: none; }
   <div class="article-feature-content">
     <div class="article-feature-inner">
       <a href="../../pages/CATEGORY.html" class="article-feature-eyebrow">CATEGORY_LABEL / ฟิกฮ์</a>
-      <!-- ARTICLE_TITLE: H1 text only; em-dash + site name go in <title> (Rule 44) -->
       <h1 class="article-feature-title">ARTICLE_TITLE</h1>
     </div>
     <p class="article-feature-credit">ภาพ: IMAGE_CREDIT</p>
   </div>
 </div>
+-->
 
 <article>
 <div class="article-wrap">
@@ -423,6 +436,13 @@ html.no-arabic .ar-quote { display: none; }
       <!-- EXAMPLE — replace -->
       <blockquote lang="ar" dir="rtl" class="ar-quote">وقد تأملت هذا الحديث فوجدت معناه إلغاء ما يقوله أهل الهيئة والحساب من أن الشهر عندهم عبارة عن مفارقة الهلال شعاع الشمس فهو أول الشهر عندهم ويبقى الشهر إلى أن يجتمع معها ويفارقها فالشهر عندهم ما بين ذلك وهذا باطل في الشرع قطعا لا اعتبار به</blockquote>
       <p class="ar-translation">“ข้าพเจ้าได้พิจารณาใคร่ครวญหะดีษบทนี้ และพบว่าความหมายของมันคือการยกเลิกทรรศนะของนักดาราศาสตร์ และนักคำนวณที่กล่าวว่า เดือนในทรรศนะของพวกเขานั้น หมายถึงการที่จันทร์เสี้ยว (ฮิลาล) ได้แยกตัวออกจากรัศมีของดวงอาทิตย์ ซึ่งนั่นคือการเริ่มต้นเดือนสำหรับพวกเขา และเดือนจะดำเนินต่อไปจนกว่าดวงจันทร์จะกลับมาบรรจบกับดวงอาทิตย์และแยกตัวออกไปอีกครั้ง ดังนั้น เดือนสำหรับพวกเขาจึงหมายถึงระยะเวลาที่อยู่ระหว่างเหตุการณ์ทั้งสองนี้ ซึ่งทรรศนะนี้ถือเป็นโมฆะ (บาฏิล) อย่างเด็ดขาดในทางบทบัญญัติศาสนา และจะไม่ได้รับการนำมาพิจารณา”</p>
+
+      <!-- POEM block: Arabic verse (ar-quote, BARE per Rule 60) + Thai verse translation
+           (poem-th: centered, non-italic, <br> between hemistichs/lines — Rule 68 / S6 / S8).
+           One bayt per ar-quote+poem-th pair; hemistich separator in Arabic = " … ". -->
+      <!-- EXAMPLE — replace -->
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فما تدوم على حال تكون بها … كما تلون في أثوابها الغول</blockquote>
+      <p class="poem-th">“มันไม่อาจดำรงอยู่ในสภาพใดสภาพหนึ่งได้<br>ดั่งฆูลที่เปลี่ยนรูปลักษณ์อยู่เสมอ”</p>
 
       <!-- SECTION: optional <h2> + paragraphs. -->
       <h2 class="article-h2">SECTION_HEADING</h2>

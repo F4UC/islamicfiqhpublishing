@@ -1,10 +1,12 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 62 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all **74 rules (ข้อ 1–74), plus sub-rules 12.1/12.2 and House-Style S1–S8**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+>
+> **★ Rule 71 (Child-Safety Override) supersedes every fidelity/coverage rule, for every agent. Read it first. ★**
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (62 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (74 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -197,7 +199,7 @@
 
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 62 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 74 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -447,7 +449,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 **ขั้นตอนบังคับทุกครั้ง (non-negotiable):**
 - **Byte-diff ยืนยัน:** ก่อน-หลัง ต้องพิสูจน์ว่า skeleton (โครงพยัญชนะหลังลบสระ) ตรงกับต้นฉบับ/แหล่งทุกตัวอักษร — ใช้สคริปต์ strip-marks เทียบ ไม่เดาด้วยตา
-- **Log ใน `AUDIT-FIXES.md`:** ทุกการแตะตัวอาหรับต้องบันทึก (ไฟล์/บล็อก/แหล่ง/เลขอ้างอิง/ผล byte-diff) ในไฟล์ `AUDIT-FIXES.md` ที่รากโปรเจกต์
+- **Log ใน `AUDIT-FIXES.md`:** ทุกการแตะตัวอาหรับต้องบันทึก (ไฟล์/บล็อก/แหล่ง/เลขอ้างอิง/ผล byte-diff + **blob SHA ของบล็อกอาหรับ** เป็นหลักฐานยืนยัน byte-exact) ในไฟล์ `AUDIT-FIXES.md` ที่รากโปรเจกต์
 - **ไม่เจอสำนวนตรงในแหล่ง canonical → คง bare ตามต้นฉบับ + FLAG (กฎ 1)** ห้ามตัดสินใจแก้สำนวน/skeleton โดยลำพัง
 - **ห้าม Purge** จนกว่าเจ้าของจะสั่ง (Custom Purge เฉพาะ URL หลัง merge เท่านั้น — ห้าม Purge Everything)
 
@@ -464,3 +466,38 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 ## Integrity checks
 - After any change, confirm via the diff that ONLY the intended files changed.
 - Regression-check shared/protected files (article.css, main.js, any multi-article HTML) against other live articles before merge. Verify by diff + rendering — do not rely on hardcoded byte counts (they go stale on every edit).
+
+---
+
+## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง (Section 14 — Rules 71–74)
+
+* **กฎข้อที่ 71:** **★[ความปลอดภัยเด็ก — Child-Safety Override · เหนือกฎความครบถ้วนทุกข้อ · บังคับกับทุกเอเยนต์]★** หากต้นฉบับจาก Drive หรือเนื้อหาใดๆ มีสาระที่ทำให้**ผู้เยาว์เป็นวัตถุทางเพศ (sexualizes a minor)** มาตรการนี้อยู่เหนือกฎ 1/49/56 และเกตทุกชนิด ให้ปฏิบัติโดยเด็ดขาด:
+  1. **PASS-with-flag (ตัดทิ้ง ไม่ใช่ปัดตก):** ถือว่าบทความ "ผ่าน" ได้โดย**ตัด (drop) เฉพาะส่วนที่ละเมิดออกทั้งหมด** แล้วตั้ง **child-safety flag** กำกับ — ส่วนที่ตัดนี้**ไม่นับในตัวหารของ coverage (กฎ 72)** การตัดตามกฎนี้ไม่ถือว่า coverage ตก
+  2. **ห้าม surface / quote / reproduce / restore เด็ดขาด:** ห้ามคัดลอก อ้างถึง ทำซ้ำ กู้คืน หรือแสดงสาระนั้น ไม่ว่าในบทความ, PR/commit, log, ข้อความแชท หรือที่ใด — แม้เพื่ออธิบายก็ตาม (อธิบายได้เฉพาะ "ตำแหน่ง" ไฟล์/บล็อกเท่านั้น)
+  3. **Route แล้วหยุด:** แจ้งตำแหน่ง (ไฟล์/บล็อก) ต่อ **One และ Claude** ทันที แล้ว**หยุด** รอการตัดสิน
+  4. **No self-merge:** **ห้ามเอเยนต์ใดๆ merge** บทความ/PR ที่ติด child-safety flag โดยเด็ดขาด เฉพาะ One เท่านั้นที่ตัดสิน (สอดคล้อง pipeline owner-merge)
+  *English:* Child-safety overrides fidelity, for every agent. If any source/content sexualizes a minor: (1) PASS-with-flag — drop only the offending span and set a child-safety flag; the dropped span is excluded from the Rule 72 coverage denominator; (2) never surface, quote, reproduce, or restore it anywhere (article, PR, commit, log, chat) — report only its location; (3) route the location to One + Claude and stop; (4) no agent may self-merge a child-safety-flagged article — only the owner decides.
+
+* **กฎข้อที่ 72:** **[VERBATIM — เกตความครบถ้วนเนื้อหา ≥ 99% · Content Coverage Gate]** บทความใหม่ทุกบทต้องผ่านเกตวัดความครบถ้วนก่อน publish: สัดส่วน **char-diff coverage ระหว่างเนื้อหาที่เผยแพร่ (`.article-body`) กับต้นฉบับ Drive ต้อง ≥ 99%**
+  - **Harakat-normalized:** ก่อนเทียบ ให้ลบฮะเราะกาต **U+064B–U+0652 ทั้งสองฝั่ง** และ normalize ช่องว่าง (การถอดสระตามกฎ 60 ไม่ใช่การตัดเนื้อหา จึงต้องไม่ถูกนับเป็น diff)
+  - **★ child-safety drop ไม่นับ denominator ★:** ส่วนที่ถูกตัดตามกฎ 71 ให้**หักออกจากตัวหาร**ก่อนคำนวณ (ไม่ทำให้ coverage ตกเพราะการตัดเชิงความปลอดภัย)
+  - **วัดด้วยสคริปต์เท่านั้น** (เช่น `scripts/coverage.py`) ห้ามประเมินด้วยตา และรายงานเป็น % ใน PR
+  - ห้าม condense / ย่อ / ถอดความ (สอดคล้องกฎ 1/56) — artifact ของการวัด (H1 ใน hero นอก body, การสลับลำดับบล็อกกลอน, การ normalize ทับศัพท์/ลูกศรเส้นทาง) ไม่ถือเป็นเนื้อหาหาย แต่ต้องตรวจยืนยันว่าไม่มีประโยคจริงหาย
+
+* **กฎข้อที่ 73:** **[Normalize ทับศัพท์ตาม corpus · Transliteration Corpus Normalization]** การทับศัพท์ชื่อเฉพาะ/คำเทคนิคต้อง normalize ให้ตรง**รูปที่ corpus ใช้บ่อยที่สุด (corpus-dominant)** เพื่อความสม่ำเสมอทั้งเว็บ (ไม่ย้อนแก้บทเก่าเว้นแต่สั่ง) ตารางเริ่มต้น (seed — ขยายเพิ่มได้เมื่อ normalize คำใหม่):
+
+  | ใช้ (canonical) | ห้าม (deprecated) | หมายเหตุ |
+  |---|---|---|
+  | เศาะหาบะฮ์ | ศอฮาบัต | ṣaḥābah |
+  | อัลญาฮิซ | อัลญาฮิส | al-Jāḥiẓ |
+  | เศาะลาฮุดดีน | ศอลาฮุดดีน | Ṣalāḥ al-Dīn |
+  | บัยบัรส์ | ไบบาร์ส · ไบบัรส์ | Baybars |
+  | นิซอมุลมุลก์ | นิซามุลมุลก์ | Niẓām al-Mulk |
+
+  ขอบเขต: ใช้กับ**ร้อยแก้วไทย**เท่านั้น **ห้ามแตะตัวบทอาหรับ / อายะฮ์ / หะดีษ / ชื่อในบล็อก `lang="ar"`** (สอดคล้องกฎ 7/8/53/60); คำที่มีกฎสะกดเฉพาะแล้ว (12.1 ศอเฮี้ยะฮ์, 12.2 มัสฮับ) ให้ยึดกฎนั้น
+
+* **กฎข้อที่ 74:** **[มาตรฐานความมั่นคงและ HTTP headers · Security & Headers Policy]** นโยบายความมั่นคงกำหนดไว้ใน **`docs/SECURITY.md`** (authoritative) บังคับใช้จริงผ่าน **`_headers`** สาระบังคับ:
+  - **CSP** บังคับใน `_headers` — **★ห้ามตัด `'unsafe-inline'` จาก `script-src`/`style-src` และห้าม refactor inline event handler (`onclick` ฯลฯ) / inline `<script>` ในเทมเพลต-บทความ★** เพราะ control bar + chrome + no-flash theme bootstrap พึ่งพา inline เหล่านี้ทั้งเว็บ การ harden CSP ต้องผ่าน One เท่านั้น
+  - **Cache:** `/*.html` ต้อง `Cache-Control: no-cache, no-store, must-revalidate` (กันเสิร์ฟ HTML เก่า) กำหนดใน `_headers`
+  - **Branch protection / ruleset:** push ตรง `main` ถูกบล็อก (503) ทุกการเปลี่ยนแปลงต้องผ่าน PR → preview → QA/byte-QC → **owner-merge**; **เอเยนต์ห้าม merge `main`, ห้าม Purge Everything** (Custom Purge เฉพาะ URL หลัง merge) สอดคล้องกฎ 66 + Push & safety discipline · บทที่ติด child-safety flag (กฎ 71) ห้าม merge จนกว่า One ตัดสิน
+  - รายละเอียดทั้งหมด: **`docs/SECURITY.md`**

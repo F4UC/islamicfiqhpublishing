@@ -1,8 +1,10 @@
 # AGENTS.md — แนวทางสำหรับ AI ที่ทำงานกับรีโปนี้ (รวม Codex code review)
 
 โปรเจกต์: เว็บเผยแพร่ตำราอิสลามคลาสสิกภาษาไทย (static site, Cloudflare Pages)
-เอกสาร authoritative: CLAUDE.md (~70 ข้อ) + golden-master.md
+เอกสาร authoritative: CLAUDE.md (74 ข้อ: 1–74 + ข้อย่อย 12.1/12.2 + House Style S1–S8) + golden-master.md + docs/SECURITY.md
 บทอ้างอิงมาตรฐาน: articles/nitisart/moon-sighting-vs-astronomy.html
+
+★ ก่อนแตะเนื้อหา: (1) **Child-safety (Rule 71)** เหนือทุกกฎ — เจอเนื้อ sexualize ผู้เยาว์ = drop+flag, ห้าม surface/quote, route One+Claude, ห้าม self-merge · (2) **Coverage ≥99% (Rule 72)** harakat-normalized · (3) **Normalize ทับศัพท์ (Rule 73)** corpus-dominant (เศาะหาบะฮ์ ไม่ใช่ ศอฮาบัต)
 
 ## ตั้งใจให้เป็นเช่นนั้น — อย่า flag เป็น bug
 - อาหรับ byte-exact จากต้นฉบับ (Rule 1): ห้ามเสนอ "แก้" สะกด/ไวยากรณ์/อักขรวิธี — variant และ orthography ต้นฉบับ (เช่น อียิปต์ دينى/فى/التى) เป็นความตั้งใจ
@@ -18,4 +20,5 @@
 - คำแปลไทย ↔ อาหรับ ไม่ตรง
 - HTML/แท็กพัง, อัญประกาศโค้งไม่สมดุล
 - สายรายงาน/การพาดพิง (isnad) ผิด
-- ลิงก์เสีย, articles.json ไม่ valid / id ซ้ำ
+- ลิงก์เสีย, articles.json ไม่ valid / id ซ้ำ / ไม่ใช่ union-entry
+- coverage < 99% เทียบต้นฉบับ (Rule 72), Arabic skeleton ไม่ byte-exact (เทียบ byte-diff + blob SHA)
