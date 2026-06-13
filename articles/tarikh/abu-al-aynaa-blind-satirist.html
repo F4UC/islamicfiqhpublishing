@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>อบุลอัยนาอ์ บัณฑิตตาบอดนักเสียดสีแห่งราชวงศ์อับบาซิด — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ชีวประวัติอบุลอัยนาอ์ บัณฑิตตาบอดนักเสียดสีและนักประพันธ์ผู้กล้าแห่งราชวงศ์อับบาซิด ในศตวรรษที่ 3 ฮิจเราะฮ์ ผู้ใช้คมวาจาและไหวพริบฝ่าฟันเข้าสู่ราชสำนักเคาะลีฟะฮ์ ระหว่างบัสเราะฮ์ แบกแดด และซามัรรอ">
+<meta name="keywords" content="อบุลอัยนาอ์, ประวัติศาสตร์, อับบาซิด, วรรณกรรมอาหรับ, การเสียดสี, อัลมุตะวักกิล, อัลญาฮิซ">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="อบุลอัยนาอ์ บัณฑิตตาบอดนักเสียดสีแห่งราชวงศ์อับบาซิด — Islamic Fiqh Publishing">
+<meta property="og:description" content="เรื่องราวของชายผู้พิสูจน์ว่า วาจาที่คมคายเฉียบแหลมยิ่งกว่าคมดาบ และเสียงหัวเราะสามารถสั่นสะเทือนบัลลังก์ได้">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/abu-al-aynaa-blind-satirist.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/abu-al-aynaa-blind-satirist.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="abu-al-aynaa-blind-satirist">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">อบุลอัยนาอ์ บัณฑิตตาบอดนักเสียดสีแห่งราชวงศ์อับบาซิด</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">เมื่อพันกว่าปีที่แล้ว ในใจกลางอาณาจักรอับบาซิดอันรุ่งเรือง มีบัณฑิตตาบอดผู้หนึ่งที่ไม่ได้ใช้ไม้เท้านำทางในความมืด แต่ใช้ ‘คมวาจา’ และ ‘ไหวพริบ’ นำทางตนเองฝ่าฟันเข้าไปถึงใจกลางอำนาจของเหล่าเคาะลีฟะฮ์ เขาคือชายผู้พิสูจน์ให้เห็นว่า การมองเห็นไม่ได้วัดกันที่ดวงตาเสมอไป</p>
+      <p>และในห้วงเวลาที่ผ่านมา คือวันที่ 15 ตุลาคมนั้น เป็นวันเพื่อรำลึกถึงผู้พิการทางสายตา เรื่องราวของเขาจึงเปรียบเสมือนแสงสว่างที่ฉายให้เห็นว่า ท่ามกลางความมืดมิดทางสายตา ‘ปัญญา’ คือดวงไฟที่นำทางได้ดีที่สุด</p>
+      <p>สำหรับผู้ที่ไม่คุ้นเคยกับประวัติศาสตร์อิสลามในยุคแรกๆ อาจจินตนาการไปว่าเหตุการณ์ต่างๆ ดำเนินไปในทิศทางเดียวกันอย่างต่อเนื่อง เป็นชีวิตที่บางครั้งเสียงแห่งเหตุผลก็ดังกว่า และบางครั้งเสียงแห่งดาบก็ก้องกังวานกว่า ระหว่างการพิชิตและการได้มาซึ่งทรัพย์เชลย หรือระหว่างความรู้ที่เป็นประโยชน์ในลานมัสยิดและบ้านของเหล่านักปราชญ์ หรือระหว่างห้องสมุดและการโต้คารมทางวิชาการ</p>
+      <p>แม้ว่ามุมมองเช่นนี้จะมีความถูกต้องอยู่บ้าง แต่มันก็ยังคงเป็นภาพที่ไม่สมบูรณ์และไม่สามารถสะท้อนความจริงทั้งหมดได้ ความจริงของชีวิตชีวา ความซับซ้อน และรายละเอียดของชีวิตประจำวันในสังคมที่รุ่งเรืองถึงขีดสุดในระดับโลก ณ เวลานั้น ในเมืองต่างๆ เช่น บัสเราะฮ์, แบกแดด และซามัรรอ</p>
+      <p>แน่นอนว่า แบกแดดคือถิ่นของความรู้และนักปราชญ์ และซามัรรอก็เคยเป็นที่ตั้งของศูนย์กลางอำนาจคอลีฟะฮ์และกองทัพ แต่ในตรอกซอกซอยและถนนหนทางเหล่านั้น ยังมีกลุ่มคนที่ใช้ชีวิตอย่างหรูหราสุขสบายจากผลกำไรทางการค้า และท่ามกลางกระแสความมั่งคั่งทางเศรษฐกิจ ผู้คนส่วนใหญ่ก็หันเหไปสู่ความบันเทิงและการขับร้อง การดื่มด่ำกับเครื่องอำนวยความสุขสบาย การหมกมุ่นกับวรรณกรรม และการห้อมล้อมตนเองด้วยผู้มีโวหารคมคายและมีไหวพริบ</p>
+      <p>ในสภาพแวดล้อมอันอุดมสมบูรณ์นี้เอง กลุ่มผู้มีปฏิภาณไหวพริบ มีอารมณ์ขัน และเชี่ยวชาญในวรรณกรรมเสียดสี ได้ค้นพบว่าตนเองมีบทบาทสำคัญในการแสวงหาผลประโยชน์จากชนชั้นสูง ไม่ว่าจะเป็นคอลีฟะฮ์, ผู้ว่าการ, นายทหาร, นักธุรกิจ, พ่อค้าใหญ่ และบุคคลด้านอื่นๆ หรือเพื่อสร้างชื่อเสียงในหมู่สามัญชนและคนยากจน</p>
+      <p>และจากคนกลุ่มนี้ ก็ได้ปรากฏบุคคลที่ถูกขนานนามว่ามี “มุญูน” (<span class="ar-inline" lang="ar" dir="rtl">المجون</span> - ความกล้าบ้าบิ่นหรือตรงไปตรงมาอย่างถึงที่สุด) อันเนื่องมาจากความเปิดเผยอย่างไม่เกรงกลัวใครของพวกเขา เช่น อบู เนาวาส กวีเอก, อัลญาฮิซ นักประพันธ์, และอบุลอัยนาอ์ นักเสียดสี ซึ่งคนหลังนี้มีชื่อเสียงโด่งดังอย่างกว้างขวางจนอาจกล่าวได้ว่าเขาคือหนึ่งใน “เซเลบริตี้” แห่งวงการวรรณกรรมเสียดสี หรือวรรณกรรมแห่งไหวพริบปฏิภาณในยุคต้นของราชวงศ์อับบาซิด ช่วงศตวรรษที่ 3 แห่งฮิจเราะห์ศักราช</p>
+      <p>แล้วอบุลอัยนาอ์คือใครกัน? อะไรคือเหตุการณ์ชวนขันที่โดดเด่นที่สุดของเขาทั้งในหมู่คนทั่วไปและชนชั้นสูง? และเหตุใดเขาจึงมีชื่อเสียงโด่งดังได้ถึงเพียงนี้? และนี่คือเรื่องราวของชายผู้พิสูจน์ให้เห็นว่า วาจาที่คมคายนั้น เฉียบแหลมยิ่งกว่าคมดาบ และเสียงหัวเราะสามารถสั่นสะเทือนบัลลังก์ได้</p>
+      <p>ในช่วงปลายศตวรรษที่ 2 แห่งฮิจเราะห์ศักราช ราวปี ฮ.ศ. 191 อบู อับดุลลอฮ์ มุฮัมมัด อิบนุลกอเซม อบุลอัยนาอ์ อัลฮาชิมี ได้ถือกำเนิดขึ้นที่เมืองบัสเราะฮ์ทางตอนใต้ของอิรัก เขาเติบโตขึ้นมาในสภาพแวดล้อมของศูนย์กลางความเจริญ ซึ่งเป็นแหล่งรวมของสรรพวิทยาการ, ภาษา, หะดีษนบี, นิติศาสตร์อิสลาม (ฟิกฮ์), วรรณกรรม และอื่นๆ เขาได้ร่ำเรียนวิชากับเหล่านักปราชญ์และคณาจารย์ของที่นั่น แต่สิ่งที่ทำให้เขาเป็นที่เลื่องลือในหมู่ผู้คนคือไหวพริบปฏิภาณอันรวดเร็ว, อารมณ์ขัน, และความเฉลียวฉลาด และเมื่ออายุย่างเข้าสู่ปีที่สี่สิบ เขาก็ต้องสูญเสียการมองเห็น</p>
+      <p>อบุลอัยนาอ์เป็นผู้มีความทะเยอทะยาน เขารักการได้เข้าพบปะกับเหล่าผู้ว่าการ และการได้ไปเยือนราชสำนักของบรรดาเคาะลีฟะฮ์ เขาเคยสั่งสอนบุตรชายของตนไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يا بني، إذا أردت أن تكون منادما للخلفاء وذوي المروءة فعليك بنتف الأشعار وملح الأخبار</blockquote>
+      <p class="ar-translation">“โอ้ลูกรัก หากเจ้าปรารถนาที่จะเป็นคนสนิทของเคาะลีฟะฮ์และผู้ทรงคุณธรรมแล้วไซร้ เจ้าก็จงหมั่นศึกษาบทกวีที่ถูกคัดสรรแล้วและเกร็ดเรื่องเล่าที่คมคายเถิด”</p>
+      <p>ซึ่งคำสอนนี้ก็ได้ปรากฏเป็นจริงในชีวิตของเขา จนกระทั่งนักประพันธ์และนักประวัติศาสตร์ต่างกล่าวถึงเขาว่า เขาคือ “ผู้มีความคิดเฉียบแหลมที่สุด, มีเกร็ดเรื่องเล่าที่หยิบยกมาได้ทันท่วงทีที่สุด, มีคำตอบที่รวดเร็วที่สุด และมีวาทศิลป์ที่ลึกซึ้งที่สุด” ดังที่อบู อิสหาก อัลก็อยเราะวานีย์ได้บันทึกไว้ในหนังสือของเขา “ซะฮ์รุล อาดาบ วะษะมะรุลอัลบาบ” ด้วยเหตุนี้เอง เขาจึงได้เข้าใกล้ชิดกับเหล่าผู้ว่าการเมืองบัสเราะฮ์ และกลายเป็นผู้ที่ได้รับการอุปถัมภ์จากพวกเขา และเขาเองก็ไม่ลังเลที่จะเอ่ยปากขอความช่วยเหลือเมื่อชีวิตตกอยู่ในความยากลำบาก มีเรื่องเล่าว่า “อบุลอัยนาอ์ได้เขียนสาส์นสั้นๆ ถึงอบุลกอเซม อิบนุ อุบัยดิลลาฮ์ อิบนุ สุลัยมาน (ผู้ว่าการเมืองบัสเราะฮ์) โดยมีใจความว่า: ‘ตัวข้าพเจ้า-ขออัลลอฮ์ทรงประทานเกียรติแก่ท่าน-พร้อมด้วยบุตรและครอบครัว เปรียบดังพืชผลในไร่นาของท่าน หากท่านรดน้ำพรวนดิน มันก็จะงอกงามและสมบูรณ์ แต่หากท่านละเลย มันก็จะเหี่ยวเฉาและร่วงโรย บัดนี้ ข้าพเจ้ากำลังสัมผัสได้ถึงความห่างเหินจากท่านหลังจากที่เคยได้รับความเมตตา และการถูกละเลยหลังจากที่เคยได้รับการดูแล ส่งผลให้ศัตรูได้ใจ, ผู้อิจฉาพากันนินทา และความคลางแคลงใจก็เริ่มกัดกินข้าพเจ้า และการถูกถอดถอนจากความเคยชินนั้นเป็นเรื่องที่เจ็บปวดยิ่ง”</p>
+      <p>เขายังไม่ลังเลที่จะไปเยี่ยมเยียนพวกเขาถึงบ้านและวัง และพวกเขาก็ยินดีต้อนรับเขาเสมอ ด้วยการหยอกเย้า อารมณ์ขัน และไหวพริบปฏิภาณอันรวดเร็วของเขา มีเรื่องเล่าอีกว่า “วันหนึ่งเขาได้เดินทางไปยังบ้านของอัลวาษิกีย์ ซึ่งเป็นเจ้าเมืองบัสเราะฮ์ในขณะนั้น เขาถูกเชิญให้นั่งรออยู่ที่โถงทางเข้าเป็นเวลาหนึ่ง จนกระทั่งมีผู้เข้าไปขออนุญาตให้ ระหว่างที่รอ ก็มีการพูดคุยกัน และมีชายคนหนึ่งเอ่ยขึ้นมาว่า ‘ท่านอบุลอัยนาอ์ วันนี้ท่านถือศีลอดหรือ?’ เขาจึงตอบกลับไปว่า: ‘หากหมายถึงในบ้านหลังนี้ล่ะก็...ใช่แล้วแหละ’” เมื่อได้ยินเช่นนั้น เจ้าเมืองก็รู้สึกกระดากอายและรีบอนุญาตให้เขาเข้าไปข้างในทันที คำตอบของเขาเป็นการเหน็บแนมอย่างเจ็บแสบว่า เขาถูกปล่อยให้นั่งรอนานจนเหมือนกำลังถือศีลอด เพราะไม่มีใครนำน้ำหรืออาหารมาต้อนรับเลย ซึ่งทำให้เจ้าเมืองต้องรีบเชิญเขาเข้าไปด้วยความละอายใจ</p>
+      <p>อบุลอัยนาอ์เป็นผู้ที่ไม่เกรงกลัวผู้ใด อาจเป็นเพราะเขาทราบดีว่าการที่ตนเป็นคนตาบอดคงไม่มีผู้ใดกล้าทำร้ายเขา ซึ่งเป็นสิ่งที่เขาฉวยใช้ให้เป็นประโยชน์แก่ตนเอง ดังเรื่องเล่าที่ว่า “อบุลอัยนาอ์ได้เข้าไปหาท่านกอฎี (ผู้พิพากษา) อิสมาอีล และเริ่มท้วงติงท่านเมื่อท่านเอ่ยชื่อหรือฉายาของชายคนหนึ่งผิดไป ผู้ที่อยู่ในที่นั้นคนหนึ่งจึงกล่าวแก่เขาว่า: ‘ท่านกล้าท้วงติงท่านกอฎีเชียวหรือ?’ เขาตอบกลับไปว่า: ‘ใช่แล้ว! เหตุใดข้าพเจ้าจะท้วงติงท่านกอฎีไม่ได้ ในเมื่อนกฮุดฮุดยังเคยท้วงติงท่านนบีสุลัยมานมาแล้ว โดยกล่าวว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">أَحَطتُ بِمَا لَمْ تُحِطْ بِهِ</p>
+        <p class="ar-translation">“ข้าพระองค์ได้ล่วงรู้ในสิ่งที่ท่านไม่เคยล่วงรู้”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+      </div>
+      <p>และตัวข้าพเจ้าก็ย่อมมีความรู้มากกว่านกฮุดฮุด ในขณะที่ท่านนบีสุลัยมานก็ย่อมมีความรู้มากกว่าท่านกอฎีเป็นแน่’”</p>
+      <p>เรายังได้เห็นภาพของอบุลอัยนาอ์นั่งร่วมโต๊ะอาหารกับเหล่าชนชั้นสูง เขาได้บอกเล่าถึงช่วงเวลาแห่งความเพลิดเพลินและเสียงหัวเราะของพวกเขาในวงสนทนาเหล่านั้น “อบุลอัยนาอ์เล่าว่า: ข้าพเจ้าได้ร่วมรับประทานอาหารกับเจ้าเมืองบัสเราะฮ์ท่านหนึ่ง มีการนำลูกแพะที่อ้วนพีมาเสิร์ฟ และผู้คนก็พากันยื่นมือไปยังอาหารนั้นอย่างตะกรุมตะกราม เจ้าเมืองจึงกล่าวขึ้นว่า: ‘โอ้ย โปรดเบามือกับมันหน่อยเถิด เพราะมันเป็นเพียงสัตว์เดรัจฉานตัวหนึ่งเท่านั้น’”</p>
+      <p>ยิ่งไปกว่านั้น เขายังสามารถหาความสุขได้จากโต๊ะอาหารของคนทุกชนชั้น แม้แต่กับ “พวกคนขี้เหนียว” ซึ่งเป็นคนกลุ่มหนึ่งที่มีชื่อเสียงอย่างมากในยุคนั้น จนถึงขนาดที่อัลญาฮิซ นักประพันธ์ผู้เป็นสหายของอบุลอัยนาอ์ได้เขียนสารานุกรมเล่มดังเกี่ยวกับพวกเขาในชื่อ “อัลบุเคาะลาอ์” (บรรดาคนขี้เหนียว)</p>
+      <p>และดูเหมือนว่าหนึ่งในคนขี้เหนียวเหล่านั้นจะจำใจต้องเชิญอบุลอัยนาอ์มาเป็นแขกที่บ้าน ซึ่งเขาได้เล่าถึงเหตุการณ์นี้ว่า: “เพื่อนบ้านคนหนึ่งได้เชิญข้าพเจ้าไปร่วมงานเลี้ยง เขาเป็นคนขี้เหนียว ข้าพเจ้าเห็นเขาเดินวนเวียนอยู่รอบโต๊ะอาหารพลางถอนหายใจยาว แล้วกล่าวว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَجَزَاهُم بِمَا صَبَرُوا جَنَّةً وَحَرِيرًا</p>
+        <p class="ar-translation">“และพระองค์จะทรงตอบแทนพวกเขาด้วยสวนสวรรค์และอาภรณ์ไหม เนื่องด้วยความอดทนของพวกเขา”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+        <p class="block-source">สูเราะฮ์อัลอินซาน อายะฮ์ที่ 12</p>
+      </div>
+      <p>...ช่างเป็นภาพที่ชัดเจน เพราะคนขี้เหนียวผู้นั้นไม่คุ้นเคยกับการต้อนรับแขกและจัดงานเลี้ยง และเขาคงถือว่าการกระทำครั้งนี้เป็นการต่อสู้กับความตระหนี่ของตนเองครั้งยิ่งใหญ่ ซึ่งสมควรจะได้รับรางวัลตอบแทนเป็น “สวรรค์” เลยทีเดียว</p>
+
+      <h2 class="article-h2">ระหว่างซามัรรอและแบกแดด</h2>
+      <p>สังคมเมืองบัสเราะฮ์จะยังไม่สามารถตอบสนองความทะเยอทะยานของอบุลอัยนาอ์ บัณฑิตตาบอดผู้มีอารมณ์ขันผู้นี้ได้ เขาจึงออกเดินทางจากแบกแดดไปยังซามัรรอ เมืองหลวงแห่งใหม่ของราชวงศ์อับบาซิดที่สร้างขึ้นโดยเคาะลีฟะฮ์อัลมุอ์ตะศิม บิลละฮ์ (เสียชีวิตปี ฮ.ศ. 227) ณ ที่แห่งนี้ อบุลอัยนาอ์ ได้สร้างชื่อเสียงโด่งดังอย่างกว้างขวางจากผลงานวรรณกรรม อารมณ์ขัน และที่สำคัญคือความกล้าบ้าบิ่นและการกล่าววาจาเสียดสีอย่างไม่เกรงกลัว จนกระทั่งเรื่องราวของเขาดังไปถึงหูของบรรดาเคาะลีฟะฮ์แห่งราชวงศ์อับบาซิด โดยเฉพาะอย่างยิ่งเคาะลีฟะฮ์อัลมุตะวักกิล อะลัลลอฮ์ (เสียชีวิตปี ฮ.ศ. 247)</p>
+      <p>เคาะลีฟะฮ์ผู้นี้เคยตรัสกับคนสนิทของพระองค์ว่า: “หากไม่ใช่เพราะการที่ตาบอดสนิทของอบุลอัยนาอ์แล้วไซร้ ข้าคงจะแต่งตั้งให้เขาเป็นสหายร่วมโต๊ะเสวยของข้าไปแล้ว” เมื่อเรื่องนี้ทราบถึงหูของอบุลอัยนาอ์ เขาจึงกล่าวตอบไปว่า: “หากพระองค์ต้องการข้าพเจ้าไว้สำหรับอ่านลายสลักบนแหวน หรือไว้สำหรับมองจันทร์เสี้ยวเพื่อกำหนดเดือนใหม่ล่ะก็ ข้าพเจ้าคงไม่เหมาะกับตำแหน่งนั้นเป็นแน่” เมื่อได้ยินดังนั้น เคาะลีฟะฮ์ก็ทรงพระสรวลและรับเขาไว้เป็นสหายคนสนิท</p>
+      <p>อบุลอัยนาอ์ได้เล่าถึงเหตุการณ์ที่เขาถูกเรียกตัวเข้าเฝ้าเคาะลีฟะฮ์อัลมุตะวักกิล เนื่องจากความปากกล้าและความบ้าบิ่นของเขาว่า: “เมื่อข้าพเจ้าเข้าเฝ้าอัลมุตะวักกิล ข้าพเจ้าได้กล่าวขอพรให้พระองค์และสนทนากับพระองค์ พระองค์ทรงพอพระทัยในคำพูดของข้าพเจ้าและตรัสว่า: ‘โอ้มุฮัมมัด ข้าได้ยินมาว่าในตัวเจ้ามีความชั่วร้ายอยู่’ ข้าพเจ้าจึงทูลตอบไปว่า: ‘โอ้ท่านผู้นำแห่งศรัทธาชน หากความชั่วร้ายนั้นหมายถึงการกล่าวถึงผู้ทำดีด้วยความดีของเขา และผู้ทำชั่วด้วยความชั่วของเขาแล้วไซร้ แม้แต่อัลลอฮ์ผู้ทรงเกริกไกรก็ยังทรงทั้งสรรเสริญและตำหนิมาแล้ว โดยพระองค์ได้ตรัสสรรเสริญว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">نِّعْمَ الْعَبْدُ ۖ إِنَّهُ أَوَّابٌ</p>
+        <p class="ar-translation">“ช่างเป็นบ่าวที่ดีเสียนี่กระไร แท้จริงเขาเป็นผู้กลับเนื้อกลับตัวเสมอ”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+        <p class="block-source">สูเราะฮ์ศอด อายะฮ์ที่ 44</p>
+      </div>
+      <p>และได้ตรัสตำหนิว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">هَمَّازٍ مَّشَّاءٍ بِنَمِيمٍ مَّنَّاعٍ لِّلْخَيْرِ مُعْتَدٍ أَثِيمٍ عُتُلٍّ بَعْدَ ذَٰلِكَ زَنِيمٍ</p>
+        <p class="ar-translation">“ผู้นินทา ผู้ตระเวนใส่ร้ายป้ายสี, ผู้ขัดขวางความดี ผู้ละเมิด ผู้มีบาปหนา, ผู้แข็งกระด้าง และยิ่งไปกว่านั้น ยังเป็นลูกไม่มีพ่ออีกด้วย”<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+        <p class="block-source">สูเราะฮ์อัลเกาะลัม อายะฮ์ที่ 11-13</p>
+      </div>
+      <p>อัลมุตะวักกิลทรงประทับใจในตัวอบุลอัยนาอ์อย่างยิ่ง และได้พบกับอารมณ์ขันและการหยอกเย้าที่บรรดาเคาะลีฟะฮ์ต่างมองหาในหมู่คนสนิท จนถึงขั้นที่พระองค์ต้องยอมจ่ายเงินเพื่อป้องกันตนเองจากคมวาจาของเขา “อบุลอัยนาอ์เล่าว่า: เมื่อข้าพเจ้าถูกนำตัวเข้าเฝ้าอัลมุตะวักกิล บรรดาคนสนิทของพระองค์ก็พากันหยอกล้อข้าพเจ้า แต่เมื่อข้าพเจ้าโต้ตอบจนพวกเขาจนมุม อัลมุตะวักกิลจึงตรัสว่า: ‘เอาเงินให้เขาไปสักหมื่นดิรฮัมหน่อยสิ อย่าให้เขาได้พูดออกมาเยอะ”</p>
+      <p>นักประวัติศาสตร์และนักวิจัยบางท่านมองว่า อบุลอัยนาอ์ คือตัวอย่างของนักประพันธ์ที่หาเลี้ยงชีพด้วยงานเขียน เขาวิงวอนขอจากเคาะลีฟะฮ์และคนร่ำรวย แต่ไม่ได้วิงวอนในฐานะผู้อ่อนแอที่น่าสงสาร หากแต่ร้องขอด้วยความกล้า ราวกับกำลังทวงสิทธิ์อันชอบธรรมของตนที่อยู่ในมือของพวกเขา ดังจะเห็นได้จากลีลาการเสียดสีอันกล้าหาญของเขา เมื่อเขาได้เข้าพบราชมนตรีอับบาซิด อบู อัศศ็อกร์ หลังจากที่มาช้ากว่ากำหนด ราชมนตรีจึงถามว่า: “อะไรเล่าทำให้ท่านมาช้า?” เขาตอบ: “ลาของข้าพเจ้าถูกขโมยไปนะสิ!” ราชมนตรีถามต่อ: “แล้วมันถูกขโมยไปได้อย่างไรกัน?” เขาตอบ: “ข้าพเจ้าก็ไม่ได้อยู่กับโจรเสียด้วยสิ ถึงจะเล่าให้ท่านฟังได้! ไม่งั้นก็คงได้ถามกันแล้ว” ราชมนตรีจึงถามอีก: “แล้วเหตุใดท่านจึงไม่เดินทางมาด้วยพาหนะอื่นเล่า?” เขาตอบ: “ความยากจนทำให้ข้าพเจ้าไม่มีเงินซื้อตัวใหม่ และข้าพเจ้าก็รังเกียจความอัปยศจากการเช่า และความรู้สึกเป็นหนี้บุญคุณจากการหยิบยืม”</p>
+      <p>หนึ่งในคำตอบที่เหนือความคาดหมายของเขาเกิดขึ้นเมื่อเศรษฐีผู้มั่งคั่งคนหนึ่งได้ให้สัญญาว่าจะมอบล่อให้เขาหนึ่งตัว แต่ก็ผัดวันประกันพรุ่งไปเรื่อย “เขาได้พบกับเศรษฐีผู้นั้นกลางทาง เศรษฐีจึงเอ่ยทักว่า: ‘เช้านี้ท่านเป็นอย่างไรบ้าง ท่านอบุลอัยนาอ์?’ เขาจึงตอบกลับไปทันทีว่า: ‘ดูเอาสิ เช้านี้ข้าพเจ้าตื่นมาโดยไม่มีล่อสักตัว!’ เศรษฐีผู้นั้นถึงกับหัวเราะในคำตอบของเขาและรีบส่งล่อไปให้ทันที”</p>
+      <p>วันหนึ่ง เขาได้เข้าพบราชมนตรีอับบาซิด อุบัยดิลละฮ์ อิบนุ ยะห์ยาอย่างอาจหาญ ราชมนตรีได้ต้อนรับเขาพลางถามว่า: “ความเป็นอยู่ของท่านเป็นอย่างไรบ้าง?” อบุลอัยนาอ์ตอบกลับไปว่า: “ก็ท่านนี่แหละคือ ‘ความเป็นอยู่’ ของข้าพเจ้า ดังนั้น ก็สุดแล้วแต่ว่าท่านจะเป็น ‘อย่างไร’ ให้กับข้าพเจ้าเถิด!” ราชมนตรีจึงได้มอบเงินให้แก่เขาและสั่งให้จัดเบี้ยเลี้ยงให้เป็นประจำ</p>
+      <p>และบางที การเสียดสีที่แยบยลที่สุดของอบุลอัยนาอ์ ที่เขาใช้เพื่อเย้ยหยันการกระทำของเจ้าเมืองบางคนและวิธีการกดขี่ประชาชนของพวกเขา อาจเป็นเหตุการณ์ที่เกิดขึ้นในท้องพระโรงของเคาะลีฟะฮ์ เกี่ยวกับเจ้าเมืองนามว่า “มูซา” ผู้ซึ่งได้กดขี่เศรษฐีคนหนึ่งด้วยการจับกุมและยึดทรัพย์สิน จนกระทั่งเศรษฐีผู้นั้นเสียชีวิตจากการถูกโบยตีโดยเจ้าเมือง เมื่ออบุลอัยนาอ์ถูกถามถึงเรื่องของเจ้าเมืองผู้นี้ เขาจึงกล่าวอ้างอิงโองการอัลกุรอาน (เกี่ยวกับนบีมูซา) ว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">فَوَكَزَهُ مُوسَىٰ فَقَضَىٰ عَلَيْهِ</p>
+        <p class="ar-translation">“ดังนั้น มูซาจึงได้ชกเขา และทำให้เขาสิ้นใจ”<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup></p>
+        <p class="block-source">สูเราะฮ์อัลเกาะศ็อศ อายะฮ์ที่ 15</p>
+      </div>
+      <p>และเมื่อคำพูดนี้ดังไปถึงหูของเจ้าเมืองมูซา เขาจึงได้มาพบและข่มขู่อบุลอัยนาอ์ แต่อบุลอัยนาอ์กลับกล่าวตอบโต้ด้วยโองการถัดมาในเรื่องเดียวกันว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">أَتُرِيدُ أَن تَقْتُلَنِي كَمَا قَتَلْتَ نَفْسًا بِالْأَمْسِ</p>
+        <p class="ar-translation">“ท่านประสงค์จะฆ่าข้า เหมือนดังที่ท่านได้ฆ่าชีวิตหนึ่งไปเมื่อวานนี้กระนั้นหรือ?”<sup class="fn-ref" id="fnref-6"><a href="#ref-6">⁶</a></sup></p>
+        <p class="block-source">สูเราะฮ์อัลเกาะศ็อศ อายะฮ์ที่ 19</p>
+      </div>
+      <p>นี่แสดงให้เห็นว่าเขายังคงยืนกรานที่จะพุ่งคมหอกแห่งการเสียดสีไปยังเจ้าเมืองผู้นั้น เพื่อเปิดโปงอาชญากรรมของเขาต่อหน้าเคาะลีฟะฮ์ และประจานเขาต่อหน้าสาธารณชน”</p>
+
+      <h2 class="article-h2">ในหมู่สามัญชน</h2>
+      <p>และถึงแม้ว่าอบุลอัยนาอ์จะโปรดปรานการได้พบปะกับเหล่าเคาะลีฟะฮ์, เจ้าเมืองและผู้มั่งคั่งทั้งหลายเพื่อรับผลประโยชน์จากของกำนัลและของขวัญอันมากมายมหาศาลจากพวกเขา แต่ในขณะเดียวกัน เขาก็รักการได้พบปะกับสามัญชนและคนยากจนเช่นกัน ไม่ว่าจะเป็นคนตาบอดเหมือนกับเขา, ชาวเบดูอิน (กลุ่มสังคมที่อยู่อาศัยในทะเลทราบ), หรือชนชั้นล่างอื่นๆ ในสังคมอับบาซิด</p>
+      <p>มีเรื่องเล่าว่า “วันหนึ่งอบุลอัยนาอ์ และอบู อะลี อัลบะศีร (ซึ่งเป็นคนตาบอดเหมือนกัน) ได้มาพบกันในวงสนทนาแห่งหนึ่ง อบุลอัยนาอ์ก็เริ่มโอ้อวดตนเอง อบู อะลี จึงกล่าวขึ้นว่า: ‘เห้อ เราต่างก็เป็นคนตาบอดเหมือนกันเลยนิ แล้วท่านจะมาโอ้อวดอะไรกันนักกันหนา?’ อบุลอัยนาอ์จึงตอบกลับไปว่า: ‘เหอะ! ไม่เหมือนสิ จะเหมือนกันกี่โมง ท่านน่ะเป็นคนตาบอดแห่งไม้เท้า [หมายถึงคนจนที่ต้องใช้ไม้เท้าขอทาน] ส่วนข้าพเจ้า คือคนตาบอดแห่งขบวนเสด็จ [หมายถึงผู้ที่อยู่ในขบวนของเคาะลีฟะฮ์และเจ้าเมือง] ดังนั้น เราจะมาเหมือนกันไม่ได้!”</p>
+      <p>อบุลอัยนาอ์ยังชอบที่จะรับฟังเรื่องราวของผู้คนในเมืองบัสเราะฮ์, แบกแดดและที่อื่นๆ และผู้ที่ชื่นชอบอารมณ์ขันและเรื่องตลกก็จะมาหาเขาเพื่อปรับทุกข์ “มีชายคนหนึ่งมาร้องทุกข์เรื่องภรรยาของเขากับอบุลอัยนาอ์ เขาจึงถามชายผู้นั้นไปว่า: ท่านอยากให้นางตายไหมล่ะ? ชายผู้นั้นตอบ: ไม่เลย ขอสาบานต่ออัลลอฮ์ผู้ซึ่งไม่มีพระเจ้าอื่นใดนอกจากพระองค์ เขาจึงถามต่อ: แล้วเหตุใดเล่า พ่อคนน่าสงสาร ทั้งๆ ที่ท่านก็ทุกข์ทรมานกับนางถึงเพียงนี้? ชายผู้นั้นจึงตอบว่า: ขอสาบานต่ออัลลอฮ์ ข้าเกรงว่า...(ถ้าบอกไป) ข้าจะดีใจจนตายเสียก่อน!”</p>
+      <p>เขายังมีเรื่องเล่าและเกร็ดเล็กเกร็ดน้อยกับชาวเบดูอินที่เดินทางจากคาบสมุทรอาหรับมายังอิรักอยู่เสมอ และเขามักจะมองเห็นวิทยปัญญา, ความหยิ่งในศักดิ์ศรี, เกียรติยศ, และความสง่างามในตัวพวกเขา เขาเล่าว่า: “ข้าพเจ้าได้กล่าวกับชาวเบดูอินคนหนึ่งว่า: แท้จริงอัลลอฮ์จะทรงสอบสวนท่าน เขาจึงตอบกลับมาว่า: ท่านทำให้ข้าพเจ้ายินดีเสียอีก เพราะเมื่อผู้ทรงเกียรติทำการสอบสวน พระองค์ย่อมกระทำด้วยความเมตตา”</p>
+      <p>เขายังชอบที่จะเชิญพวกเขาให้มาร่วมรับประทานอาหารและเครื่องดื่มด้วยกัน ดังเช่นชาวเบดูอินคนหนึ่งที่ “เดินทางมาจากมะดีนะฮ์ เมื่อพวกเรานั่งลงเพื่อรับประทานอาหาร ข้าพเจ้าก็เริ่มพูดถึงเรื่องค่าครองชีพที่แพงขึ้นในปีนั้น ชาวเบดูอินผู้นั้นจึงยกมือออกจากอาหารทันที แล้วกล่าวว่า: การเอ่ยถึงเรื่องค่าครองชีพที่แพงขึ้นต่อหน้าแขกนั้น ไม่ใช่วิถีแห่งลูกผู้ชาย จากนั้นเขาก็ลุกขึ้น ข้าพเจ้าพยายามคะยั้นคะยอให้เขารับประทานอะไรสักหน่อย แต่เขาก็ปฏิเสธและจากไป”</p>
+      <p>และด้วยวิถีชีวิตเช่นนี้เอง อบุลอัยนาอ์ ได้มีอายุยืนยาวกว่าเก้าสิบปี เขาเดินทางไปมาระหว่างเมืองต่างๆ เข้าร่วมวงสนทนาของเหล่าชนชั้นสูงผู้มั่งคั่งสุขสบาย ในขณะเดียวกัน เขาก็ยังคงใช้ชีวิตอยู่ท่ามกลางสามัญชน, คนยากจน, และชาวเบดูอิน อัลอัศมะอีย์ และอัลญาฮิซ คือสหายที่ใกล้ชิดที่สุดของเขา เช่นเดียวกับอัลญัมมาซ อัลบัสรีย์ ผู้เป็นเจ้าแห่งอารมณ์ขันและเรื่องตลก</p>
+      <p>และเฉกเช่นชีวิตของเขาที่เต็มไปด้วยเรื่องราวโต้เถียงและเหตุการณ์น่าจดจำ วาระสุดท้ายของชีวิตเขาก็เต็มไปด้วยความน่าฉงนและแปลกประหลาดไม่แพ้กัน อบู สะอัด อัลอาบีย์ ได้บันทึกไว้ในหนังสือของเขา “นัษรุดดุรร์” ว่า อบุลอัยนาอ์ได้ออกเดินทาง (ในสภาพที่ตาบอดและมีอายุเก้าสิบกว่าปี) ไปยังเมืองบัสเราะฮ์ด้วยเรือลำหนึ่ง ซึ่งมีผู้โดยสารแปดสิบชีวิต แต่เรือกลับอับปางลง และไม่มีผู้ใดรอดชีวิตเลย...นอกจากเขา แต่เมื่อเดินทางถึงบัสเราะฮ์ เขาก็ได้เสียชีวิตลงที่นั่น” เหตุการณ์นี้เกิดขึ้นในปี ฮ.ศ. 282</p>
+      <p>และแล้ว ยุคของอบุลอัยนาอ์ บัณฑิตตาบอดนักเสียดสี ผู้เป็นดั่งตัวแทนของ “เกลือแห่งแผ่นดิน” ที่มาจากสามัญชนและคนยากจนในยุคสมัยนั้น ก็ได้สิ้นสุดลง</p>
+
+      <!-- CITATION (อ้างอิงบทความนี้): replace title + CATEGORY/SLUG + year (พ.ศ.), Rule 40. -->
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). อบุลอัยนาอ์ บัณฑิตตาบอดนักเสียดสีแห่งราชวงศ์อับบาซิด. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/abu-al-aynaa-blind-satirist.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <!-- BIBLIOGRAPHY: Arabic sources, numbered; each ↑ back-links to its #fnref-N.
+         Native script, no translation (Rule 6). Keep ids in sync with the <sup> refs. -->
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">القرآن الكريم، سورة النمل (27)، الآية 22. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">القرآن الكريم، سورة الإنسان (76)، الآية 12. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">القرآن الكريم، سورة ص (38)، الآية 44. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">القرآن الكريم، سورة القلم (68)، الآيات 11-13. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">القرآن الكريم، سورة القصص (28)، الآية 15. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+        <li id="ref-6">القرآن الكريم، سورة القصص (28)، الآية 19. <a class="fn-back" href="#fnref-6" aria-label="กลับไปยังเชิงอรรถที่ 6">↑</a></li>
+        <li id="ref-7">ابن الجوزي 5/160.</li>
+        <li id="ref-8">ابن قتيبة: عيون الأخبار 3/217.</li>
+        <li id="ref-9">التنوخي البصري: نشوار المحاضرة 3/48.</li>
+        <li id="ref-10">أبو حيان التوحيدي: البصائر والذخائر 5/134.</li>
+        <li id="ref-11">أبو حيان: البصائر 7/179.</li>
+        <li id="ref-12">أبو سعد الآبي: نثر الدر 3/200.</li>
+        <li id="ref-13">الراغب الأصفهاني: محاضرات الأدباء 2/315.</li>
+        <li id="ref-14">أبو هلال العسكري: كتاب الصناعتين ص427.</li>
+        <li id="ref-15">أبو حيان التوحيدي: البصائر والذخائر 1/78.</li>
+        <li id="ref-16">الحموي: 6/2607</li>
+        <li id="ref-17">الآبي: نثر الدر 3/198.</li>
+        <li id="ref-18">أبو هلال العسكري: ديوان المعاني 2/221.</li>
+        <li id="ref-19">السخرية والفكاهة ص64.</li>
+        <li id="ref-20">التنوخي: نشوار 3/49.</li>
+        <li id="ref-21">أبو حيان التوحيدي: البصائر 5/198.</li>
+        <li id="ref-22">الآبي: نثر الدر 6/38.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
