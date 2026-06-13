@@ -294,7 +294,7 @@ html, body {
 <body class="ifp-tools-page" lang="th">
 
 <div id="readingProgress"></div>
-<button id="backToTopBtn" title="กลับขึ้นบนสุด" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
+<button id="backToTopBtn" title="กลับขึ้นบนสุด"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
 <div id="header-placeholder"></div>
 
 <main>
@@ -306,8 +306,8 @@ html, body {
   </div>
 
   <div class="htm-tabs" role="tablist">
-    <button class="htm-tab active" onclick="switchTab('converter')" role="tab">แปลงปฏิทิน</button>
-    <button class="htm-tab" onclick="switchTab('explorer')" role="tab">สำรวจไทม์ไลน์</button>
+    <button class="htm-tab active" data-tab="converter" role="tab">แปลงปฏิทิน</button>
+    <button class="htm-tab" data-tab="explorer" role="tab">สำรวจไทม์ไลน์</button>
   </div>
 
   <!-- Converter Panel -->
@@ -343,7 +343,7 @@ html, body {
             <input type="number" id="h-year" min="1" max="1500" placeholder="เช่น 771" value="1">
           </div>
         </div>
-        <button class="btn-convert" onclick="convertHijriToGregorian()">แปลงเป็นคริสต์ศักราช</button>
+        <button class="btn-convert" id="btnConvertH2G">แปลงเป็นคริสต์ศักราช</button>
         <div>
           <div class="conv-result-label">ผลลัพธ์</div>
           <div class="conv-result" id="result-gregorian">กรอกวันที่ฮิจเราะฮ์แล้วกดแปลง</div>
@@ -379,7 +379,7 @@ html, body {
             <input type="number" id="g-year" min="622" max="2100" placeholder="เช่น 2024" value="622">
           </div>
         </div>
-        <button class="btn-convert" onclick="convertGregorianToHijri()">แปลงเป็นฮิจเราะฮ์</button>
+        <button class="btn-convert" id="btnConvertG2H">แปลงเป็นฮิจเราะฮ์</button>
         <div>
           <div class="conv-result-label">ผลลัพธ์</div>
           <div class="conv-result" id="result-hijri">กรอกวันที่คริสต์ศักราชแล้วกดแปลง</div>
@@ -405,7 +405,7 @@ html, body {
           <label>ปี ฮ.ศ.</label>
           <input type="number" class="year-input" id="explore-year" min="1" max="1500" value="500">
           <span class="year-suffix">ฮ.ศ.</span>
-          <button class="btn-explore" onclick="exploreYear()">สำรวจ</button>
+          <button class="btn-explore" id="btnExplore">สำรวจ</button>
         </div>
       </div>
       <div id="explorer-output">
@@ -423,11 +423,11 @@ html, body {
 <script src="../../main.js?v=20260610a"></script>
 <script>
 /* ─── Tab switching ─── */
-function switchTab(name) {
+function switchTab(name, btn) {
   document.querySelectorAll('.htm-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.htm-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('panel-' + name).classList.add('active');
-  event.target.classList.add('active');
+  if (btn) btn.classList.add('active');
 }
 
 /* ─── Calendar conversion math ─── */
@@ -698,6 +698,19 @@ function exploreYear() {
     if(r.top < window.innerHeight && r.bottom > 0){ el.classList.add('is-in'); }
     else { io.observe(el); }
   });
+
+  /* CSP-safe event wiring (replaces former inline onclick handlers) */
+  var topBtn = document.getElementById('backToTopBtn');
+  if(topBtn) topBtn.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+  document.querySelectorAll('.htm-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){ switchTab(tab.getAttribute('data-tab'), tab); });
+  });
+  var bH2G = document.getElementById('btnConvertH2G');
+  if(bH2G) bH2G.addEventListener('click', convertHijriToGregorian);
+  var bG2H = document.getElementById('btnConvertG2H');
+  if(bG2H) bG2H.addEventListener('click', convertGregorianToHijri);
+  var bExp = document.getElementById('btnExplore');
+  if(bExp) bExp.addEventListener('click', exploreYear);
 })();
 </script>
 </body>
