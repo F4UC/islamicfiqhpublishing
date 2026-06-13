@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>บะยาฎและริยาฎ ตำนานรักท่ามกลางเถ้าถ่านแห่งอันดาลุส — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="การศึกษาวรรณกรรมต้นฉบับยุคกลางแห่งอันดาลุส หะดีษ บะยาฎ วะริยาฎ ตำนานรักอันบริสุทธิ์สูงส่งที่รอดพ้นจากกองเพลิงเผาหนังสือที่กรานาดา ปี 1492 และโครงสร้างการเล่าเรื่องอันประณีตของวรรณกรรมร้อยแก้วอาหรับ">
+<meta name="keywords" content="บะยาฎและริยาฎ, อันดาลุส, วรรณกรรมอาหรับ, ตำนานรัก, ความรักในราชสำนัก, นิคเคิล, ประวัติศาสตร์, กรานาดา">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="บะยาฎและริยาฎ ตำนานรักท่ามกลางเถ้าถ่านแห่งอันดาลุส — Islamic Fiqh Publishing">
+<meta property="og:description" content="ตำนานรักบะยาฎและริยาฎ ต้นฉบับวรรณกรรมอันดาลุสที่รอดพ้นจากกองเพลิงแห่งกรานาดา และเรื่องราวรักที่ถูกบดบัง">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/bayad-wa-riyad-andalusian-romance.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/bayad-wa-riyad-andalusian-romance.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<!-- PLACEMENT: copy this file to articles/<CATEGORY>/<SLUG>.html (depth 2). The ../../
+     asset paths resolve to the repo root from there (and from this preview path too,
+     via root-clamping). Set data-article-id="SLUG" and add the matching entry to
+     articles.json so the byline + reading time inject (Rules 55/57). -->
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="bayad-wa-riyad-andalusian-romance">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<!-- HERO — DEFAULT = no-hero (Rule 67): solid banner + eyebrow + H1, NO <img> (กัน 404).
+     เติม hero image ทีหลังเป็น batch ได้. แทนที่ CATEGORY (path+label) และ ARTICLE_TITLE. -->
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <!-- ARTICLE_TITLE: H1 text only; em-dash + site name go in <title> (Rule 44) -->
+      <h1 class="article-feature-title">บะยาฎและริยาฎ ตำนานรักท่ามกลางเถ้าถ่านแห่งอันดาลุส</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ชาวอาหรับและชาวมุสลิมในแผ่นดินอันดาลุส เคยมีหน้าประวัติศาสตร์อันเจิดจรัสและได้รังสรรค์วรรณกรรมอันเปี่ยมด้วยความฉลาดลึกล้ำ สิ่งที่ตกทอดมาถึงเรานั้นมีเพียงแค่หยิบมือ หากแต่สิ่งที่เลือนหายไปในกาลเวลานั้นกลับมีมากมายมหาศาล โดยเฉพาะอย่างยิ่งภายหลังการสิ้นสูญอำนาจรัฐอิสลามและการขับไล่ชาวมุสลิมออกจากแผ่นดิน ชะตากรรมของตำราเหล่านั้นมิต่างอันใดกับเจ้าของ พวกมันถูกไล่ล่าและทำลายล้าง... ต้นฉบับลายมือนับหมื่นเล่มถูกกวาดต้อนมากองรวมกันและจุดไฟเผา ณ ลานกลางเมืองฆอรนาฏาะฮ์ (กรานาดา) ภายใต้น้ำมือของสองกษัตริย์คาทอลิก เฟอร์ดินานด์และอิซาเบลลา ในปี ค.ศ. 1492</p>
+      <p>มีเพียงหนังสือส่วนน้อยนิดที่รอดพ้นจากกองเพลิงมาได้ เพราะในยามนั้น หนังสือภาษาอาหรับทุกเล่มถูกเหมารวมว่าเป็นคัมภีร์อัลกุรอานหรือตำรามนต์ดำอันชั่วร้าย นั่นคือปฏิบัติการ “ล้างบาง” ทั้งทางวัตถุและทางจิตวิญญาณ เพื่อขจัดทุกสิ่งที่มีความเชื่อมโยงกับมุสลิมให้สิ้นซากไปจากอันดาลุส</p>
+      <p>ท่ามกลางมรดกที่รอดชีวิตมาได้อย่างปาฏิหาริย์ คือต้นฉบับเรื่องหะดีษ บะยาฎ วะริยาฎ (ตำนานรักบะยาฎและริยาฎ) ซึ่งเอ.อาร์. นิคเคิล (A.R. Nykl) ผู้ชำระและตรวจทานต้นฉบับได้สันนิษฐานว่ามันน่าจะถูกคัดลอกขึ้นในช่วงศตวรรษที่ 7 แห่งฮิจเราะห์ศักราช (ศตวรรษที่ 13 แห่งคริสตกาล) ปัจจุบันหลงเหลือเพียงฉบับเดียว ซึ่งถูกเก็บรักษาไว้ ณ หอสมุดวาติกัน โดยมีการจารึกด้วยอักษรแบบมัฆริบี (อักษรอาหรับแบบตะวันตก)</p>
+      <p>มีตำนานเล่าขานว่า ต้นฉบับนี้ถูกปล้นชิงมาจากเมืองตูนิสโดยกองทัพของจักรพรรดิชาร์ลส์ที่ 5 ด้วยเหตุนี้ นักวิชาการบางส่วนจึงมองว่ามันอาจเป็นงานจากแอฟริกาเหนือ แต่นิคเคิล และนักวิชาการอีกกลุ่มเชื่อว่ามันถูกคัดลอกขึ้นในอันดาลุส ช่วงต้นศตวรรษที่ 13 นอกจากนี้ ยังมีการถกเถียงถึงฉากหลังของเรื่องราว ส่วนใหญ่เทความเห็นไปทางเมืองอิชบีลิยะฮ์ (เซบียา) แม้จะไม่มีการระบุชื่อเมืองอย่างชัดเจนก็ตาม</p>
+      <p>แต่ผู้ชำระต้นฉบับอีกท่านหนึ่ง ซอบาห์ ญะมาลุดดีนที่เป็นชาวอาหรับกลับมีมุมมองที่ต่างออกไป โดยเชื่อว่ามันเป็นเรื่องราวจากฝั่งตะวันออก (จากอิรัก) เพราะมีการเอ่ยถึงสถานที่ชื่อ “อัษษัรษาร” (<span class="ar-inline" lang="ar" dir="rtl">الثرثار</span>) ซึ่งน่าจะหมายถึงแม่น้ำสายหนึ่งในอิรัก อีกทั้งบทกวีในเรื่องก็มีกลิ่นอายแบบตะวันออก และที่สำคัญคือภาพประกอบที่วาดใบหน้าตัวละครมีลักษณะคล้ายชาวมองโกล ซึ่งเป็นศิลปะสกุลช่างแบกแดดที่แพร่หลายในโลกอิสลามฝั่งตะวันออก...เป็นที่น่าเสียดายยิ่งที่ต้นฉบับนี้ชำรุดเสียหาย ทั้งส่วนต้นและส่วนท้ายขาดหายไป เนื้อเรื่องบางช่วงกระโดดข้ามไปมา ซึ่งอาจเกิดจากความผิดพลาดในการคัดลอก หรือแผ่นกระดาษบางส่วนได้สูญหายไป</p>
+      <p>แม้จะมีส่วนที่เว้าแหว่ง แต่หะดีษ บะยาฎ วะริยาฎ ก็เผยให้เห็นชั้นเชิงการเล่าเรื่องที่กระชับและเปี่ยมเสน่ห์ ถือเป็นจิ๊กซอว์ชิ้นสำคัญในวิวัฒนาการของวรรณกรรมร้อยแก้วอาหรับ โดยมีแก่นเรื่องว่าด้วย “ความรักในราชสำนัก” หรือรักอันบริสุทธิ์สูงส่ง ซึ่งส่งอิทธิพลต่อวรรณกรรมยุโรปในยุคกลางอย่างลึกซึ้ง</p>
+      <p>ความเลอค่าอีกประการของต้นฉบับนี้คือ ภาพจิตรกรรมย่อส่วน ปิดทองคำเปลวจำนวนสิบกว่าภาพ ซึ่งในยุคนั้นถือเป็นของสูงค่าราคาแพง บ่งบอกว่าผู้ครอบครองเดิมต้องเป็นคหบดีผู้มั่งคั่ง และนั่นคือหนึ่งในสามของต้นฉบับที่มีภาพประกอบเพียงไม่กี่เล่มที่รอดพ้นจากมหกรรมเผาหนังสือที่กรานาดามาให้คนรุ่นหลังได้ยลโฉม</p>
+
+      <h2 class="article-h2">ตำนานรักบะยาฎและริยาฎ</h2>
+      <p>เรื่องราวในหะดีษ บะยาฎ วะริยาฎถ่ายทอดความรักระหว่างหนุ่มสาวคู่นี้ ฝ่ายชายคือหนุ่มชาวดามัสกัสผู้มีนามว่า “บะยาฎ” เขาแนะนำตัวไว้เพียงว่า: “ข้ามีนามว่า บะยาฎ บุตรฮุเซน บุตรมูฮัมหมัด บุตรอิดรีส อัลคุซาอี จากนครดามัสกัสแห่งแผ่นดินชาม ข้าเดินทางมายังบ้านเมืองของพวกท่านพร้อมกับบิดาเพื่อทำการค้า แต่บิดาของข้าได้ด่วนจากไปเสียก่อน ทิ้งข้าไว้กับสินค้าจำนวนหนึ่ง” ซึ่งเราก็ไม่ได้ล่วงรู้ประวัติชีวิตหรือเชื้อสายของเขามากไปกว่าสิ่งที่เขาได้เอื้อนเอ่ยออกมา</p>
+      <p>ส่วนฝ่ายหญิงนั้น คือสาวน้อยนางทาสีนามว่า “ริยาฎ” นางเป็นทาสในครอบครองของบุคคลสำคัญผู้ดำรงตำแหน่ง “ฮาญิบ” (ซึ่งอาจหมายถึงมหาดเล็กคนสนิทของเคาะลีฟะฮ์ หรือรัฐมนตรี) โดยนางสังกัดอยู่ในกลุ่มบริวารของบุตรสาวท่านฮาญิบ ซึ่งในเรื่องเรียกขานนางว่า “นายหญิง” (ซัยยิดะฮ์)</p>
+      <p>เรื่องราวความรักอันบริสุทธิ์สูงส่งหรือรักแบบอุซรี (รักที่เน้นความบริสุทธิ์ใจ) นี้ มีโครงสร้างการเล่าเรื่องตามแบบฉบับนิยายรักตะวันออกดั้งเดิมเฉกเช่นในพันหนึ่งราตรี ซึ่งประกอบด้วยองค์ประกอบที่คล้ายคลึงกัน ได้แก่ความรักและการพานพบ การพลัดพรากและความโหยหา และการกลับมาครองคู่กันอีกครั้ง</p>
+      <p>เรื่องราวเริ่มต้นขึ้นโดยมี “หญิงชราผู้มีพื้นเพจากบาบิโลน” ทำหน้าที่เป็นผู้เล่าเรื่อง นางเล่าถึงตอนที่บะยาฎได้ยินกิตติศัพท์ความงามของริยาฎจนเกิดใจปฏิพัทธ์ จากนั้นหญิงชราจึงทำหน้าที่เป็นแม่สื่อ นำความรักของบะยาฎไปบอกกล่าวแก่ริยาฎ และพยายามจัดแจงให้ทั้งสองได้พบกัน โดยได้รับความช่วยเหลือจาก “นายหญิง” ผู้ซึ่งรักและเอ็นดูริยาฎเป็นอย่างยิ่ง</p>
+      <p>แต่ในระหว่างที่ทั้งสองได้พานพบกันในสวนสวย ต่อหน้าธารกำนัลทั้งนายหญิง หญิงชรา และเหล่าบริวาร กลับเกิดเหตุเข้าใจผิดขึ้นระหว่างนายหญิงกับริยาฎ เมื่อริยาฎได้ขับบทกวีซึ่งลงท้ายว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا مسعد في الناس يسعدني على شجون الهوى إلا المدامع والجفن</blockquote>
+      <p class="poem-th">“ไร้มิตรรัก ผู้ใด ในหล้าโลก<br>ช่วยคลายโศก แห่งรัก ที่หนักอึ้ง<br>มีเพียงแค่ น้ำตา ที่ตราตรึง<br>กับสองตา รำพึง อย่างเดียวดาย”</p>
+
+      <p>แม่สื่อได้ยินนั้น คงอุทานเรือหายในใจ นายหญิงจึงกล่าวสวนขึ้นด้วยความน้อยใจระคนโกรธเกรี้ยว เมื่อได้สดับฟังบทกวีนั้นเสร็จว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأي شيء لم أساعدك عليه يا رياض؟ وما الذي طلبت ولم أقضه لك، فوالله طلبت رضاك حتى جمعتك مع محبوبك في مجلس واحد وأنا بالحضرة، وتلاهيت عن الأمر كأني لم أعرفه، وقلت إلى غد قضاء وحكم والله يعلم كم بقي من أجلي وأجلها، وطلبك أبي مني ولم أجد من نفسي معينا على ذلك، وبعتني باليسير فوالله لأبيعنك باطلا بغير ثمن.</blockquote>
+      <p class="ar-translation">“มีสิ่งใดหรือที่ข้ามิได้ช่วยเหลือเจ้าเล่าริยาฎ? มีสิ่งใดที่เจ้าขอแล้วข้าไม่ทำให้? ขอสาบานต่ออัลลอฮ์ ข้าปรารถนาให้เจ้าพึงพอใจถึงขนาดพาเจ้ามาพบกับคนรักในที่เดียวกันต่อหน้าข้า แล้วข้าก็แสร้งทำเป็นไม่รู้ไม่เห็นราวกับไม่มีอะไรเกิดขึ้น... อีกทั้งวันพรุ่งนี้จะเป็นวันตัดสินชะตา ซึ่งอัลลอฮ์เท่านั้นที่รู้ว่าข้าและเจ้าจะมีชีวิตเหลืออยู่อีกนานเท่าใด แม้แต่บิดาของข้าเคยเอ่ยปากขอตัวนางจากข้า แต่ข้าก็ตัดใจยกให้ไม่ได้... แต่เจ้ากลับขายข้า (ทรยศน้ำใจ) ด้วยราคาแสนถูก ขอสาบานเลยว่า ข้าก็จะขายเจ้าทิ้งด้วยราคาเปล่าดาย (อย่างคนไร้ค่า) เช่นกัน!”</p>
+
+      <p>สิ้นคำกล่าวนั้น นางก็ฉีกทึ้งเสื้อผ้าของตน (ด้วยความโกรธจัด) แล้วลุกขึ้นจากไปอย่างเกรี้ยวกราด เหล่านางกำนัลต่างพากันแตกตื่นหนีเข้าไปในสวน ลนลานหาทางออกไม่ได้ด้วยเกรงกลัวต่อเรื่องอื้อฉาวที่กำลังจะตามมา...</p>
+      <p>เหตุการณ์นี้ก่อให้เกิดรอยร้าวระหว่างนายหญิงกับริยาฎ ด้วยความกริ้วโกรธ นายหญิงจึงสั่งขังนางทาสีไว้ในห้องภายในตำหนักของนาง และกีดกันมิให้ได้พบปะกับบะยาฎชายคนรักอีก เมื่อสายสัมพันธ์ถูกตัดสะบั้น เพลิงแห่งความคิดถึงจึงลุกโชน ความรวดร้าวทวีความรุนแรง และทั้งสองต่างต้องทนทุกข์ทรมานจากพิษรักอันแสนสาหัส</p>
+      <p>เรื่องราวได้ถ่ายทอดสภาพของคู่รักและความเจ็บปวดจากการพลัดพรากผ่านบทกวีจำนวนมาก ทั้งสองพยายามติดต่อกันผ่านจดหมายและคนนำสาส์น เรื่องราวได้ดำเนินไปในแนวทางเชิงสั่งสอน โดยแจกแจงถึงสภาวะของคนรักและความผันผวนของอารมณ์ความรู้สึกที่ถาโถมเข้ามา ภายใต้รูปแบบการเล่าเรื่อง ซึ่งคล้ายคลึงกับวรรณกรรมเรื่อง “ลอวะอะฮ์ อัชชากี วะดัมอะฮ์ อัลบากี” (<span class="ar-inline" lang="ar" dir="rtl">لوعة الشاكي ودمعة الباكي</span> - ความระทมของผู้พร่ำบ่นและน้ำตาของผู้ร่ำไห้) ของอิบนุ อัยบัก อัศเศาะฟะดี</p>
+      <p>หญิงชรายังคงเพียรพยายามสมานรอยร้าวระหว่างริยาฎกับนายหญิง พร้อมทั้งคอยส่งข่าวของริยาฎให้บะยาฎได้รับรู้ จนกระทั่งในท้ายที่สุดนางก็ทำสำเร็จตามความมุ่งหมาย นายหญิงยอมอภัยให้บะยาฎและอนุญาตให้จัดการนัดพบเพื่อรวมตัวคู่รักอีกครั้ง เรื่องราวในต้นฉบับจบลงที่ฉากบะยาฎเดินออกจากบ้านของหญิงชราที่เขาพำนักอยู่ โดยปลอมตัวสวมผ้าคลุมหน้าปะปนไปกับกลุ่มนางกำนัลที่คลุมหน้าเช่นกัน มุ่งหน้าสู่ตำหนักของนายหญิงเพื่อไปหาริยาฎ</p>
+      <p>เรื่องราวถูกเล่าผ่านปากคำของหญิงชรา ซึ่งถูกขนานนามว่า “หญิงชราแห่งบาบิโลน” นางเป็นจุดศูนย์กลางของการเล่าเรื่อง เป็นจุดบรรจบของเสียงเล่าต่างๆ และเป็นผู้คอยควบคุมทิศทางและจังหวะของเหตุการณ์ นางถ่ายทอดสิ่งที่ได้เห็นด้วยตาตนเองหรือสิ่งที่ได้ยินมา และในบางครั้งนางก็สวมบทบาทเป็นผู้เล่าเรื่องที่เฝ้าสังเกตการณ์อยู่ในฉากนั้นๆ โดยมิได้เข้าไปมีส่วนร่วมหรือกระทำการใดๆ การดำเนินเรื่องมีความขลุกขลักอยู่บ้างเนื่องจากช่องว่างในเนื้อหาหรือการกระโดดข้ามเหตุการณ์ ซึ่งบ่งบอกถึงความไม่สมบูรณ์ของต้นฉบับ อีกทั้งยังมีการเปลี่ยนเสียงของผู้เล่าจากบุคคลที่สามมาเป็นเสียงของหญิงชราโดยไม่มีการชี้แจงหรือแบ่งแยกให้ชัดเจน ราวกับว่าทั้งสองเป็นเสียงเดียวกัน</p>
+      <p>กระแสของการเล่าเรื่องถูกคั่นจังหวะด้วยบทกวีจำนวนมากที่ถูกขับขานผ่านตัวละคร ซึ่งเป็นบทกวีเชิงขับร้อง จนทำให้นักวิชาการบางท่านมองว่านี่เป็นหนังสือรวมเพลง รวมกวีมากกว่า ในแง่นี้ เรื่องราวยังคงยึดมั่นตามขนบของนิยายอาหรับดั้งเดิมที่มีการสอดแทรกบทกวีไว้ในเนื้อหา เพื่อถ่ายทอดความรู้สึกของตัวละคร ไม่ว่าจะผ่านปากของผู้เล่าเรื่องหรือตัวละครเองก็ตาม บทกวีในเรื่องบะยาฎและริยาฎนั้นกินเนื้อที่เกินกว่าครึ่งหนึ่งของตัวบท ส่งผลให้การเล่าเรื่องขาดความต่อเนื่อง เพราะบทกวีถูกยัดเยียดเข้ามาจนขัดจังหวะหน้าที่ของการดำเนินเรื่อง จนอาจกล่าวได้ว่าบทประพันธ์นี้สามารถนำมาดัดแปลงเป็นละครเพลงได้เลยทีเดียว</p>
+      <p>ในขณะเดียวกัน กลวิธีการเล่าเรื่องก็มีจุดเด่นที่ชัดเจน ได้แก่ การพรรณนาลักษณะทางกายภาพของตัวละคร แม้จะมีไม่มากนักและจำกัดอยู่เพียงการชมความงามภายนอกของเหล่านางกำนัล หรือการบรรยายความสามารถทางวรรณศิลป์ของบะยาฎ ซึ่งแม้จะเป็นการใช้ถ้อยคำสำนวนที่ดาษดื่นและไม่แปลกใหม่นัก แต่ก็นับเป็นความดีความชอบของผู้แต่งที่รู้จักนำมาใช้เพื่อสร้างภาพลักษณ์และตัวตนให้กับตัวละคร นอกจากนี้ เรื่องราวยังโดดเด่นด้วยบทสนทนาระหว่างตัวละคร ซึ่งช่วยสร้างโครงสร้างแบบบทละคร</p>
+      <p>ส่วน “พื้นที่” หรือฉากหลังในเรื่องนั้น มีความหลากหลายตั้งแต่พระราชวัง บ้านของหญิงชรา สวนดอกไม้ และสถานที่ที่บะยาฎนั่งพักซึ่งเรียกว่า “อัษษัรษาร” อย่างไรก็ตาม สถานที่เหล่านี้มิได้ถูกบรรยายอย่างละเอียดลออพอที่จะทำให้เรากล่าวได้ว่า ผู้แต่งให้ความสำคัญกับฉากสถานที่ในขณะที่สร้างสรรค์ผลงานชิ้นนี้ แต่การสอดแทรกจดหมายโต้ตอบระหว่างคู่รักเข้ามาในโครงสร้างการเล่าเรื่อง ทำให้ภาพรวมของนิยายเรื่องนี้มีโครงสร้างที่โดดเด่นและผ่านการรังสรรค์มาอย่างประณีต นับเป็นจิ๊กซอว์ชิ้นสำคัญที่ควรค่าแก่การพิจารณาในวิวัฒนาการโครงสร้างของวรรณกรรมร้อยแก้วอาหรับ</p>
+
+      <h2 class="article-h2">ตำนานรักที่ถูกบดบัง</h2>
+      <p>เรื่องราวของริยาฎและบะยาฎแทบจะเป็นเพียง “เรื่องรอง” ที่ดำเนินอยู่ ณ ชายขอบของเรื่องราวที่ยิ่งใหญ่กว่า ซึ่งเป็นเรื่องราวที่เราแทบไม่รู้อะไรเกี่ยวกับมันเลย นั่นคือเรื่องราวความรักของท่านฮาญิบที่มีต่อริยาฎ</p>
+      <p>แม้ท่านฮาญิบจะมิได้เข้ามามีบทบาทโดยตรงในเรื่องราวความรักระหว่างริยาฎกับบะยาฎ แต่บทบาทของเขานั้นดำรงอยู่และอิทธิพลของเขาก็แผ่ปกคลุมอย่างชัดเจน ดูประหนึ่งว่าความสัมพันธ์ระหว่างสองหนุ่มสาวนั้น เป็นเพียง “ความรักตามประสาเด็ก” และปลายทางสุดท้ายของริยาฎก็หนีไม่พ้นการต้องตกเป็นภรรยาของท่านฮาญิบ</p>
+      <p>เรื่องราวเปิดขึ้นด้วยการเอ่ยถึงท่านฮาญิบและการเรียกตัวริยาฎให้ไปเข้าเฝ้า และในยามที่นายหญิง (บุตรสาวของฮาญิบ) มีปากเสียงกับริยาฎ นางได้หลุดปากออกมาว่า แม้แต่บิดาของข้าเคยเอ่ยปากขอตัวเจ้าจากข้า แต่ข้าก็ไม่อาจตัดใจยกให้ได้ วาจานี้ได้เปิดเผยให้เห็นเส้นเรื่องอีกเส้นหนึ่งที่ถูกปิดบังอำพรางจากเราโดยสิ้นเชิง ซึ่งทำให้พวกเราคนอ่าน รวมถึงคู่รักทั้งสองกลายเป็นเพียงผู้ยืนมองอยู่ริมขอบสนามเท่านั้น</p>
+      <p>ในอีกช่วงตอนหนึ่ง หญิงชราได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كذا وكذا ووصفت له الأمر كما جرى من قصة لاعب وكاعب وما جرى مع الوصائف كلهن وقصة الحاجب وحبه في رياض وحب سيدتها لها وتدللها عليها وطلب السيدة رضاها…</blockquote>
+      <p class="ar-translation">“ข้าได้เล่าเรื่องราวให้เขาฟังตามจริง...ทั้งเรื่องของหนุ่มเจ้าสำราญกับสาวงาม เรื่องราวที่เกิดขึ้นกับเหล่านางกำนัล และเรื่องราวของท่านฮาญิบกับความรักที่เขามีต่อริยาฎ...”</p>
+
+      <p>เราจะต้องสะดุดใจตรงประโยคที่ว่า “เรื่องราวของท่านฮาญิบกับความรักที่เขามีต่อริยาฎ”...มันคือเรื่องราวอะไร? เป็นเรื่องที่ทั้งหญิงชรา นายหญิง ริยาฎ และแม้กระทั่งบะยาฎต่างก็รับรู้ แต่ผู้อ่านกลับไม่รู้อะไรเลย ซึ่งก็นี่แหละคือ “เรื่องราวหลัก” ที่แท้จริง ซึ่งเรื่องราวของริยาฎและบะยาฎเป็นเพียง “ส่วนขยาย” ที่แทรกอยู่ข้างๆเท่านั้น</p>
+      <p>ในหะดีษ บะยาฎ วะริยาฎนี้ ได้เกิดการกลับตาลปัตร โดยสิ่งที่ควรเป็นส่วนขยายกลับถูกยกขึ้นมาเป็นเนื้อหาหลัก และเนื้อหาหลักกลับถูกผลักให้ไปเป็นส่วนประกอบ ผู้อ่านถูกกันออกจากแก่นเรื่องและถูกขังไว้กับเรื่องราวรองที่อยู่ชายขอบ ด้วยเหตุนี้ การที่ต้นฉบับของเรื่องบะยาฎและริยาฎจะไม่สมบูรณ์จึงไม่ใช่เรื่องคอขาดบาดตาย เพราะเรารู้อยู่เต็มอกว่า สิ่งที่ริยาฎกำลังเผชิญอยู่นั้นเป็นเพียงช่วงเวลาชั่วคราว และเมื่อเรารู้ว่านางเป็นทาสในเรือนเบี้ยของท่านฮาญิบ เราย่อมตระหนักได้ว่าการตัดสินใจมิได้อยู่ในกำมือของนาง และชะตากรรมของนางคือการเป็น “นางห้าม” หรือทาสีของท่านฮาญิบ</p>
+      <p>ส่วนบะยาฎนั้น ก็จักต้องหายตัวไปจากชีวิตนางโดยไม่อาจทำสิ่งใดได้ โดยเฉพาะอย่างยิ่งด้วยความอ่อนด้อยประสบการณ์และความเป็นคนต่างถิ่นของเขา ความจริงข้อนี้ประจักษ์ชัดเมื่อการนัดพบครั้งที่สองระหว่างคู่รักต้องล่าช้าออกไปถึงสองเดือน เนื่องจากนายหญิงติดภารกิจในการเตรียมการเดินทางของท่านฮาญิบ</p>
+      <p>เรื่องราวของริยาฎและบะยาฎ จบลงโดยมีความเชื่อมโยงกับข่าวการเดินทางของท่านฮาญิบ เฉกเช่นเดียวกับตอนเริ่มต้นเรื่องที่เปิดฉากด้วยบารมีของเขา...ท่านฮาญิบ ผู้ที่เราไม่อาจล่วงรู้เรื่องราวตื้นลึกหนาบางหรือรายละเอียดความรักที่เขามีต่อริยาฎ แต่สิ่งหนึ่งที่เรารู้แน่ชัดคือ เขาคือ คนรักที่ถูกซ่อนเร้น ผู้ซึ่งเรื่องราวที่เขากุมไว้นั้น ย่อมมีมากมายยิ่งกว่าสิ่งที่หญิงชราแห่งบาบิโลนได้พร่ำบอกแก่เราเสียอีก</p>
+
+      <!-- CITATION (อ้างอิงบทความนี้): Rule 40. -->
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). บะยาฎและริยาฎ ตำนานรักท่ามกลางเถ้าถ่านแห่งอันดาลุส. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/bayad-wa-riyad-andalusian-romance.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
