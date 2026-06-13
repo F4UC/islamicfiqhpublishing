@@ -1,5 +1,6 @@
 # Provenance manifest — sha256 of each imported file
 # upstream: F4UC/-Transmission-Network  commit: a12aed3d10afd7665f312b1b956453c20ed9cc0a  imported: 2026-06-11
+# note: ijaza_demo.json removed (editorial — synthetic demo chain, not a real sanad)
 1ad92e6995117d1f3e6c2840ad4ff00712dbe180f74518baddf99b16fdc50412  index.json
 35dc53ee51e741e38ace4a27120098e5fc86e56e1ac27a209c12bf4b92dd57e1  sources.json
 12b6b45997ad3d2149eb73ac9a4bb439189eaed5181ec6fe7ecf4773a61479a5  NOTICE
@@ -10,7 +11,6 @@ aff1b6c389b206b7daf7e7a707987956dfb5f0f0e5b7c742acc8ba9c07f5c3fd  graphs/fadani_
 20a556fae82e786e5251b9761a2707de17a502ad921cf1e7be7b7d5adfd16683  graphs/hajar_bukhari_nisa.json
 c90f3eafe4c01475bdacac4e33ee56b8f6035e5791d196cb1b65edabbb145ef4  graphs/hajar_hammad.json
 810cd7b466375e4ba7c6052c72d66b97a44d85dcaac12d9e98f17049333fd13f  graphs/hajar_ibnabidunya.json
-add28ed7b53ac775260322fb3b4f508f7d49ff9e8a3f45283e650694389169ce  graphs/ijaza_demo.json
 95b094a0b73ce6d7e24ee298445bb41cf59f63986517f4d21d25407acc29d3ed  graphs/ijaza_shafii.json
 55d439a3ae4f29c66657bd8fc7340362f5467085ff061aa0a6ce1fd3c12d9d09  graphs/kalam_ashari.json
 565faf12d2a6e9715c0a0d02de1615ab4720c423744707decbb816a10c64680e  graphs/kawthari_kutub.json
