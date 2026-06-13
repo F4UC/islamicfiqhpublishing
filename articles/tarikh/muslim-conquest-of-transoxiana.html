@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>การพิชิตดินแดนหลังแม่น้ำ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ประวัติศาสตร์การพิชิตดินแดนหลังแม่น้ำ (มาวะรออันนะฮร์ / ทรานซ็อกเซียนา) ในเอเชียกลาง โดยกุตัยบะฮ์ บิน มุสลิม อัลบาฮิลีย์ ในสมัยราชวงศ์อุมัยยะฮ์ ผ่าน 4 ขั้นตอนสำคัญ จนภูมิภาคนี้กลายเป็นดินแดนแห่งอิสลาม">
+<meta name="keywords" content="การพิชิตดินแดนหลังแม่น้ำ, ทรานซ็อกเซียนา, มาวะรออันนะฮร์, กุตัยบะฮ์ บิน มุสลิม, เอเชียกลาง, อุมัยยะฮ์, ประวัติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การพิชิตดินแดนหลังแม่น้ำ — Islamic Fiqh Publishing">
+<meta property="og:description" content="กุตัยบะฮ์ บิน มุสลิม กับการพิชิตดินแดนหลังแม่น้ำในเอเชียกลางสมัยอุมัยยะฮ์ จากสมรภูมิสู่ศูนย์กลางวิทยาการอิสลาม">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/muslim-conquest-of-transoxiana.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/muslim-conquest-of-transoxiana.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="muslim-conquest-of-transoxiana">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<!-- HERO — DEFAULT = no-hero (Rule 67): solid banner + eyebrow + H1, NO <img> (กัน 404).
+     เติม hero image ทีหลังเป็น batch ได้. แทนที่ CATEGORY (path+label) และ ARTICLE_TITLE. -->
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <!-- ARTICLE_TITLE: H1 text only; em-dash + site name go in <title> (Rule 44) -->
+      <h1 class="article-feature-title">การพิชิตดินแดนหลังแม่น้ำ</h1>
+    </div>
+  </div>
+</div>
+
+<!-- OPTIONAL hero WITH image — ใช้เฉพาะเมื่อมีรูปจริงบน CDN เท่านั้น (ห้ามชี้ไฟล์ 404).
+     ถ้ามีรูป ให้สลับบล็อกด้านบนเป็นบล็อกนี้ (เอา no-hero ออก, ใส่ <img> + เครดิต):
+<div class="article-feature">
+  <img
+    src="https://images.islamicfiqhpublishing.com/articles/SLUG.jpg"
+    alt="FEATURE_IMAGE_ALT — คำอธิบายภาพ (Rule 42)"
+    width="1600"
+    height="900"
+    loading="eager"
+    fetchpriority="high"
+  >
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/CATEGORY.html" class="article-feature-eyebrow">CATEGORY_LABEL / ฟิกฮ์</a>
+      <h1 class="article-feature-title">ARTICLE_TITLE</h1>
+    </div>
+    <p class="article-feature-credit">ภาพ: IMAGE_CREDIT</p>
+  </div>
+</div>
+-->
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">นักวิชาการได้ขนานนามดินแดนที่ถูกกั้นขวางจากแคว้นคุรอซานด้วยแม่น้ำญัยฮูนว่า <span class="ar-inline" lang="ar" dir="rtl">ما وراء النهر</span> ซึ่งเป็นดินแดนที่ตั้งอยู่ถัดจากแม่น้ำไปทางทิศตะวันออกและทิศเหนือ และในปัจจุบัน ดินแดนแห่งนี้เป็นที่รู้จักในนาม “เอเชียกลาง” ประกอบไปด้วยสาธารณรัฐมุสลิม 5 แห่งที่เคยตกอยู่ภายใต้การปกครองของสหภาพโซเวียต ต่อมาเมื่อสหภาพโซเวียตล่มสลาย รัฐเหล่านั้นก็ได้รับเอกราชอันได้แก่ อุซเบกิสถาน, ทาจิกิสถาน, คาซัคสถาน, เติร์กเมนิสถาน และคีร์กีซสถาน</p>
+      <p>ดินแดนมาวะรออันนะฮร์ตั้งอยู่ระหว่างแม่น้ำญัยฮูน (แถบอามูดาร์ยา) ทางทิศใต้ และแม่น้ำสัยฮูน (ซึ่งปัจจุบันตั้งอยู่ในคาซัคสถาน) ทางทิศเหนือ โดยประชากรเดิมเป็นพวกบูชารูปเคารพที่มีเชื้อสายเติร์ก ซึ่งได้เข้ามาตั้งถิ่นฐาน ณ ที่แห่งนี้ตั้งแต่ศตวรรษที่ 6 แห่งคริสตกาล</p>
+      <p>ดินแดนแห่งนี้มีลักษณะเด่นคือความอุดมสมบูรณ์ของแหล่งน้ำ เนื่องด้วยการมีอยู่ของแม่น้ำญัยฮูนและแม่น้ำสัยฮูน พร้อมด้วยแม่น้ำสาขาจำนวนมาก ซึ่งเอื้ออำนวยต่อความอุดมสมบูรณ์ของพื้นที่ ความมั่งคั่งของการเกษตรและสถาปัตยกรรม และเป็นปัจจัยดึงดูดประชากรให้เข้ามาอยู่อาศัย</p>
+
+      <h2 class="article-h2">การพิชิตดินแดนของมุสลิม</h2>
+      <p>ชาวมุสลิมได้กรีฑาทัพเข้าสู่ดินแดนแห่งนี้หลายครั้งนับตั้งแต่สมัยของท่านเคาะลีฟะฮ์อุษมาน บิน อัฟฟานช่วงปี ฮ.ศ. 23-35</p>
+      <p>ต่อมาในสมัยราชวงศ์อุมัยยะฮ์ แม่ทัพมุสลิมหลายท่านได้ยกทัพเข้าโจมตีจนถึงปี ฮ.ศ. 86 อาทิ อุบัยดุลลอฮ์ บิน ซิยาด, สะอีด บิน อุษมาน บิน อัฟฟาน, อัลมุฮัลลับ บิน อบี ศุฟเราะฮ์ และบุตรชายทั้งสองของเขาคือ ยะซีด และอัลมุฟัฎฎ็อล แต่การรณรงค์ทางทหารของแม่ทัพเหล่านี้ยังไม่สัมฤทธิผลถึงขั้นเป็นการพิชิตอย่างสมบูรณ์</p>
+      <p>ความขัดแย้งและการแตกแยกที่เกิดขึ้นภายหลังการเสียชีวิตของมุอาวิยะฮ์ บิน อบี ศุฟยาน ตั้งแต่ปี ฮ.ศ. 60 ถึง ฮ.ศ. 72 ได้ส่งผลกระทบต่อการพิชิตดินแดนในแถบนี้ ฝ่ายมุสลิมต้องตกอยู่ในสถานะการตั้งรับ โดยพวกเติร์กได้ฉวยโอกาสในช่วงที่มุสลิมสาละวนอยู่กับความขัดแย้งภายในอาณาจักรและเข้าโจมตีดินแดนของอิสลาม รวมถึงยุยงปลุกปั่นชาวเมืองที่เคยทำสัญญาสงบศึกให้ลุกฮือขึ้นก่อกบฏ ในการโจมตีบางครั้งพวกเขารุกคืบเข้ามาใกล้ถึงเมือง “นัยซาบูร์” ในแคว้นคุรอซาน ส่งผลให้มุสลิมต้องสูญเสียดินแดนที่เคยครอบครองไปเป็นจำนวนมาก จวบจนกระทั่งอับดุลมะลิก บิน มัรวาน (ฮ.ศ. 65-86) สามารถกำจัดศัตรูทางการเมืองจนหมดสิ้น พระองค์จึงเริ่มหันมาให้ความสำคัญกับการพิชิตดินแดนอย่างจริงจัง โดยมีข้าหลวงแห่งแคว้นอิรักเป็นกุญแจสำคัญสู่ความสำเร็จในสมรภูมิตะวันออก นั่นคืออัลฮัจญ์ญาด บิน ยูซุฟ อัษษะกอฟีย์ ผู้ซึ่งได้รับแต่งตั้งให้ปกครองอิรักและดินแดนตะวันออกในปี ฮ.ศ. 75 ที่เขาเองมีบทบาทอันยิ่งใหญ่ เนื่องด้วยความเข้มงวดและความเด็ดขาดในการสร้างเสถียรภาพแม้จะเป็นเพียงภายนอกให้เกิดขึ้นในอิรัก ซึ่งเอื้ออำนวยให้สามารถส่งกองทัพออกไปพิชิตแคว้นทางตะวันออกได้</p>
+      <p>ผู้ที่แบกรับภาระหน้าที่ในการพิชิตดินแดนเอเชียกลางในครั้งนี้คือสามขุนพลผู้มีชื่อเสียงภายใต้สังกัดของอัลฮัจญ์ญาด ได้แก่ อัลมุฮัลลับ บิน อบี ศุฟเราะฮ์ อัลอะซะดีย์, กุตัยบะฮ์ บิน มุสลิม อัลบาฮิลีย์ และมุฮัมมัด บิน อัลกอซิม อัษษะกอฟีย์</p>
+      <p>สำหรับอัลมุฮัลลับ บิน อบี ศุฟเราะฮ์นั้น อัลฮัจญ์ญาดได้แต่งตั้งให้เป็นข้าหลวงครองแคว้นคุรอซานในปี ฮ.ศ. 78 เขาได้ดำเนินการพิชิตดินแดนหลังแม่น้ำอย่างกว้างขวาง และทำสงครามหลายครั้ง โดยสามารถพิชิตเมือง “กิช” ในอาณาจักรอัศศุฆด์ หรือศ็อกเดียนาได้สำเร็จ</p>
+      <p>จากที่นั่น เขายังได้ส่งกองทัพภายใต้การนำของบุตรชายชื่อ “ยะซีด” ไปยังกษัตริย์แห่งแคว้น “อัลคุตตัล” และบีบบังคับให้ยอมจ่ายภาษีญิซยะฮ์ได้ นอกจากนี้ ยะซีดยังสามารถพิชิตป้อมปราการ “นัยซัก” ในแคว้น “บาดฆีส” ซึ่งตั้งอยู่ระหว่างเมือง “มัรวา” และ “ฮะรอต” รวมถึงได้บุกโจมตีแคว้น “ควาริซึม” อีกด้วย</p>
+      <p>อัลมุฮัลลับและบุตรชายใช้เวลาประมาณสองปีในการฟื้นฟูเกียรติภูมิและบารมีของมุสลิมในภูมิภาคนี้ให้กลับคืนมา แม้ว่าจะยังไม่ประสบความสำเร็จในการตั้งฐานที่มั่นอย่างถาวรในดินแดนดังกล่าวก็ตาม</p>
+      <p>ส่วนระยะที่ถือเป็นจุดชี้ขาดในการพิชิตและการสร้างเสถียรภาพนั้น เริ่มต้นขึ้นเมื่อ “กุตัยบะฮ์ บิน มุสลิม อัลบาฮิลีย์” ได้รับมอบหมายให้เป็นแม่ทัพใหญ่และข้าหลวงปกครองแคว้นคุรอซานและดินแดนตะวันออกในปี ฮ.ศ. 85 และท่านได้ดำรงตำแหน่งนี้เรื่อยมาจนถึงปี ฮ.ศ. 99</p>
+      <p>สภาวการณ์ในขณะนั้นเอื้ออำนวยอย่างยิ่งแก่กุตัยบะฮ์ บิน มุสลิม เนื่องจากราชวงศ์อุมัยยะฮ์กำลังอยู่ในช่วงเวลาที่มั่นคง สงบสุข และมั่งคั่งที่สุด เมื่อความสามารถของแม่ทัพมารวมเข้ากับความมุ่งมั่นและการสนับสนุนของข้าหลวงอย่างอัลฮัจญ์ญาด บิน ยูซุฟ อัษษะกอฟีย์ ผนวกกับพลานุภาพและบารมีของรัฐ จึงทำให้การพิชิตดินแดน “หลังแม่น้ำ” หรือทรานซ็อกเซียนาครั้งนี้กลายเป็นชัยชนะที่ยิ่งใหญ่</p>
+      <p>กุตัยบะฮ์ บิน มุสลิมยังเป็นรัฐบุรุษ นักยุทธศาสตร์ และนักบริหารจัดการระบบอีกด้วย หลังจากเข้ารับตำแหน่งข้าหลวง ท่านได้เริ่มจัดการกับปัญหาความขัดแย้งทางชนเผ่าที่รุมเร้าบรรดาเผ่าอาหรับในแคว้น “คุรอซาน” ซึ่งเกิดจากการแก่งแย่งตำแหน่งการปกครอง จนท่านได้รวบรวมเหล่าผู้นำให้เป็นหนึ่งเดียวกันได้สำเร็จ</p>
+      <p>นอกจากนี้ ท่านยังทำงานเพื่อซื้อใจชาวพื้นเมืองดั้งเดิมของ “คุรอซาน” ด้วยการปฏิบัติดีต่อพวกเขา ดึงพวกเขาเข้ามาใกล้ชิด และมอบหมายหน้าที่การงานให้ ส่งผลให้ทุกคนเกิดความอุ่นใจและมอบความไว้วางใจแก่ท่านและการนำของท่าน</p>
+      <p>กุตัยบะฮ์ บิน มุสลิม ดำเนินยุทธวิธีตามแบบแผนเดียวกับที่ตระกูลมุฮัลลับเคยใช้ นั่นคือยุทธวิธี “การโจมตีข้าศึกอย่างรวดเร็วและต่อเนื่อง” เพื่อไม่ให้ข้าศึกมีเวลาตั้งตัวหรือรวมพล แต่อย่างไรก็ตาม จุดเด่นที่ทำให้ท่านเหนือกว่าตระกูลมุฮัลลับคือ ท่านจะวางแผนการที่แน่นอนสำหรับการเดินทัพแต่ละครั้ง จะมีการกำหนดเป้าหมายที่ชัดเจน และมุ่งมั่นที่จะไปให้ถึงเป้าหมายนั้นโดยไม่หวั่นเกรงต่ออุปสรรคใดๆ ด้วยการตะวักกัลต่ออัลลอฮ์ ตามด้วยความกล้าหาญอันหาตัวจับยาก</p>
+      <p>ย่างก้าวของกุตัยบะฮ์ บิน มุสลิมในการพิชิตดินแดนหลังแม่น้ำตลอดระยะเวลา 10 ปี ตั้งแต่ฮ.ศ. 86-96 ได้ดำเนินผ่าน 4 ขั้นตอนสำคัญ ซึ่งในแต่ละขั้นตอน ท่านสามารถพิชิตอาณาเขตอันกว้างใหญ่ได้อย่างเด็ดขาด และได้วางรากฐานของชาวมุสลิมและศาสนาอิสลามให้มั่นคงในดินแดนเหล่านั้น โดยมีรายละเอียดดังนี้</p>
+
+      <h2 class="article-h2">ขั้นที่หนึ่ง (ปี ฮ.ศ. 86-87)</h2>
+      <p>ในขั้นตอนนี้ กุตัยบะฮ์ บิน มุสลิมได้สยบแคว้น “ฏุคอริสตาน” ซึ่งตั้งอยู่บนสองฝั่งแม่น้ำ “ญัยฮูน” ให้อยู่ภายใต้อำนาจได้ ซึ่งสถานการณ์ในแคว้นนี้ยังไม่นิ่งสนิทสำหรับฝ่ายมุสลิมนับตั้งแต่ที่อัลอะห์นัฟ บิน ก็อยส์ ได้เคยพิชิตไว้ในสมัยของท่านเคาะลีฟะฮ์อุษมาน บิน อัฟฟาน แต่ประสบความสำเร็จในช่วงของกุตัยบะฮ์ เพราะหากปราศจากการวางรากฐานที่มั่นคงใน “ฏุคอริสตาน” แล้ว การจะรุกคืบเข้าสู่ดินแดน “ทรานซ็อกเซียนา” ย่อมเป็นไปไม่ได้</p>
+      <p>ด้วยเหตุนี้ ท่านจึงกลายเป็นผู้ทรงบารมีอย่างยิ่งในดินแดนแถบนั้น ถึงขั้นที่ว่าทันทีที่บรรดากษัตริย์ได้ยินข่าวการเดินทัพของท่าน พวกเขาก็รีบรุดมาพบท่านเพื่อขอเจรจาสงบศึกในทันที</p>
+
+      <h2 class="article-h2">ขั้นที่สอง (ปี ฮ.ศ. 87-90)</h2>
+      <p>ในห้วงเวลานี้ กุตัยบะฮ์ได้พิชิตแคว้น “บุคอรอ” จนราบคาบอย่างสมบูรณ์ ภายหลังจากผ่านพ้นสงครามอันดุเดือดและการระดมพลเข้าโจมตีอย่างต่อเนื่อง</p>
+
+      <h2 class="article-h2">ขั้นที่สาม (ปี ฮ.ศ. 91-93)</h2>
+      <p>ในขั้นตอนนี้ ท่านได้ดำเนินการพิชิตลุ่มน้ำ “ญัยฮูน” จนเสร็จสิ้นสมบูรณ์ พร้อมทั้งพิชิตแคว้น “สิจิสตาน” ในปี ฮ.ศ. 92 และแคว้น “ควาริซึม” ในปี ฮ.ศ. 93 และผลงานที่เป็นดั่งมงกุฎเพชรของท่านคือการเข้ายึดครอง “ซามัรกันด์” ซึ่งเป็นมหานครที่ยิ่งใหญ่ที่สุดของดินแดนทรานซ็อกเซียนา ซึ่งดินแดนนี้เปรียบเหมือนสวรรค์บนโลกดังที่มีการบรรยายเอาไว้ว่า</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">للناس في أخراهم جنة وجنة الدنيا سمرقند<br>يا من يسوي أرض بلخ بها هل يستوي الحنظل والقند</blockquote>
+      <p class="poem-th">“ผู้คนมีสวรรค์ของตนในปรโลก<br>และสวรรค์แห่งโลกนี้คือซะมัรกันด์<br>โอ้ผู้ที่เอาแผ่นดินบัลค์ไปเทียบกับซะมัรกันด์<br>จะนำไปเทียบได้อย่างไรเล่าระหว่างมะระขมกับน้ำตาลกรวด”</p>
+      <p>หนึ่งในเกร็ดประวัติศาสตร์อันงดงามที่ถูกเล่าขานเกี่ยวกับการพิชิตซามัรกันด์คือ เมื่อชาวมุสลิมกรีฑาทัพเข้าเมืองได้ พวกเขาได้นำบรรดารูปเจว็ดที่อยู่ในเมืองออกมาเผาทำลาย ชาวซามัรกันด์นั้นมีความเชื่อฝังใจว่า ผู้ใดที่ลบหลู่ดูหมิ่นรูปเคารพเหล่านี้จะต้องมีอันเป็นไป แต่เมื่อชาวมุสลิมเผามันแล้วมิได้ได้รับอันตรายใดๆ ชาวเมืองจำนวนมากจึงหันมารับนับถือศาสนาอิสลาม</p>
+
+      <h2 class="article-h2">ขั้นที่สี่ (ปี ฮ.ศ. 94-96)</h2>
+      <p>ในขั้นตอนนี้ กุตัยบะฮ์ได้ข้ามแม่น้ำสัยฮูน และพิชิตสามอาณาจักรแห่งลุ่มน้ำสัยฮูน ได้แก่ “อัชชาช”, “อุชรูสะนะฮ์” และ “ฟัรฆอนะฮ์” จากนั้นท่านได้รุกคืบเข้าสู่แผ่นดินจีน ลึกเข้าไปในเขตมณฑล “ซินเจียง” จนถึงเมือง “คัชการ์” และสถาปนาให้เป็นฐานที่มั่นของอิสลาม ท่านเตรียมความพร้อมที่จะพิชิตประเทศจีน แต่การเสียชีวิตของ “อัลฮัจญ์ญาด บิน ยูซุฟ อัษษะกอฟีย์” (ฮ.ศ. 95) และเคาะลีฟะฮ์ “อัลวะลีด บิน อับดุลมะลิก” (ฮ.ศ. 96) ทำให้ท่านต้องยุติการเดินทัพไว้เพียงแค่นั้น อย่างไรก็ตาม ท่านก็สามารถบีบบังคับให้จักรพรรดิแห่งจีนยอมจ่ายภาษีญิซยะฮ์ได้</p>
+
+      <h2 class="article-h2">ข้อสังเกตเกี่ยวกับการพิชิตของกุตัยบะฮ์ บิน มุสลิม</h2>
+      <p>ณ ที่นี้มีข้อสังเกตที่ควรค่าแก่การจดจำไว้ 3 ประการ ดังนี้</p>
+      <ol class="article-summary">
+        <li><strong>การเปลี่ยนผ่านทัศนคติของผู้คน</strong> ชาวเมืองในดินแดนเหล่านี้เคยขาดความรู้ในแก่นแท้ของอิสลาม พวกเขาจินตนาการไปเองว่าชาวมุสลิมมาเพียงเพื่อกอบโกยทรัพยากรในบ้านเมืองของตน จึงทำการต่อต้านอย่างดุเดือด แต่เมื่อพวกเขาทราบความจริงว่าชาวมุสลิมไม่ใช่ผู้รุกราน หากแต่เป็น ผู้นำทางที่นำสาส์นแห่งอิสลามมามอบให้ พวกเขาก็ต่างมุ่งหน้าเข้าสู่การยอมรับนับถือและศรัทธาในหลักการของศาสนานี้ นักบูรพาคดีชาวฮังการีนามอาร์มิเนียส วัมเบอรี (Arminius Vambery) ได้ระบุว่า:</li>
+      </ol>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن بخارى التي قاموت العرب في البداية مقاومة عنيفة قد فتحت لهم أبوابا لتستقبلهم ومعهم تعاليم نبيهم محمد صلى الله عليه وسلم، تلك التعاليم التي قوبلت أول الأمر بمعارضة شديدة، ثم أقبل القوم عليها بعد ذلك في غيرة شديدة حتى لنري الإسلام -الذي أخذ شأنه يضعف اليوم في جهات آسيا الأخرى- وقد غدا في بخارى اليوم 1873م على الصورة التي كان عليها أيام الخلفاء الراشدين</blockquote>
+      <p class="ar-translation">“ชาวเมืองบุคอรอที่เคยต่อต้านชาวอาหรับอย่างรุนแรงในตอนแรก ได้เปิดประตูต้อนรับพวกเขาพร้อมกับคำสอนของศาสดาของพวกเขา นั่นคือ มุฮัมมัด ﷺ คำสอนซึ่งถูกต่อต้านอย่างหนักในคราแรก แต่ต่อมาผู้คนกลับยอมรับมันด้วยความหวงแหนอย่างยิ่ง จนกระทั่งเราได้เห็นอิสลาม ซึ่งสถานะเริ่มอ่อนแอลงในส่วนอื่นๆ ของเอเชีย แต่มันกลับดำรงอยู่ในบุคอรอในวันนี้ (ค.ศ. 1873) ในภาพลักษณ์เดียวกับที่เคยเป็นในสมัยของบรรดาเคาะลีฟะฮ์ผู้ทรงธรรม”</p>
+      <ol class="article-summary" start="2">
+        <li><strong>ความจำเป็นของการพิชิตทางจิตวิญญาณ</strong> ในช่วงเริ่มต้น ประชากรในพื้นที่เหล่านี้มักจะยอมทำสัญญาสงบศึกหรือเข้ารับอิสลามเพียงแค่ภายนอก และทันทีที่กองทหารมุสลิมถอนกำลังออกไป พวกเขาก็จะฉีกสัญญาหรือตกศาสนา (มุรตัด) ปรากฏการณ์นี้แสดงถึงความสมเหตุสมผลอย่างชัดเจนในแนวคิดของ “อุกบะฮ์ บิน นาฟิอ์” ผู้พิชิตแอฟริกาและผู้สถาปนาเมืองก็อยเราะวานที่ว่า มีความจำเป็นอย่างยิ่งที่การพิชิตจะต้องเป็น “การพิชิตทางจิตวิญญาณ” ด้วย ไม่ใช่เพียงแค่การพิชิตทางทหาร เพราะการพิชิตทางจิตวิญญาณนั้น จำเป็นต้องมีชาวมุสลิมพำนักอยู่ในพื้นที่ภายหลังการพิชิต เพื่อทำหน้าที่เปิดหัวใจผู้คนด้วยศรัทธาและวิชาความรู้</li>
+      </ol>
+      <p>ในขณะที่ “การพิชิตทางทหาร” นั้น ดำเนินการโดยกองทหาร ซึ่งจะเคลื่อนย้ายออกไปเมื่อภารกิจทางทหารสำเร็จลุล่วง ในความเป็นจริงแล้วมันไม่ก่อให้เกิดสิ่งใดนอกจากการยึดครองแผ่นดิน ซึ่งผู้คนพร้อมที่จะลุกฮือเข้าใส่ทันทีที่พวกเขาถอนกำลังกลับไป</p>
+      <ol class="article-summary" start="3">
+        <li><strong>ภาวะผู้นำและการสนับสนุนจากส่วนกลาง</strong> ภาวะผู้นำอันหาตัวจับยากของกุตัยบะฮ์ บิน มุสลิมและแผนการทางทหารที่รัดกุม ผนวกกับการสนับสนุนจากกองบัญชาการสูงสุด ซึ่งนำโดยอัลฮัจญ์ญาดในอิรัก และเคาะลีฟะฮ์อับดุลมะลิก ต่อด้วยเคาะลีฟะฮ์อัลวะลีดผู้เป็นบุตรในชาม อีกทั้งพลังแห่งความศรัทธาที่มีอยู่ในตัวของเหล่าทหารหาญ ล้วนเป็นปัจจัยที่ทำให้ชัยชนะตกเป็นของฝ่ายมุสลิมในสมรภูมินี้ และสิ่งเหล่านี้เมื่อประกอบกับการปฏิบัติต่อชาวเมืองอย่างดีงามได้ช่วยเปลี่ยนสถานะของภูมิภาคนี้ให้กลายเป็น “ดินแดนแห่งอิสลาม”</li>
+      </ol>
+
+      <h2 class="article-h2">ดินแดนหลังแม่น้ำภายหลังการเสียชีวิตของกุตัยบะฮ์ บิน มุสลิม</h2>
+      <p>ด้วยการเสียชีวิตของ “กุตัยบะฮ์ บิน มุสลิม” การพิชิตของมุสลิมในแนวรบด้านนี้จึงหยุดชะงักลง ณ จุดที่ท่านได้ทำไว้</p>
+      <p>ทั้งนี้ เมื่อ “ยะซีด บิน อัลมุฮัลลับ บิน อบี ศุฟเราะฮ์” เข้ารับตำแหน่งข้าหลวงปกครองคุรอซาน โดยการแต่งตั้งของเคาะลีฟะฮ์สุลัยมาน บิน อับดุลมะลิก ในปี ฮ.ศ. 97 ท่านได้เบนความสนใจไปที่การพิชิตแคว้น “ญุรญาน” และ “เฏาะบะริสตาน” ซึ่งเป็นดินแดนที่มุสลิมยังไม่เคยย่างกรายเข้าไปมาก่อน เพื่อหวังจะสร้างผลงานการพิชิตให้เป็นที่พอพระทัยแก่สุลัยมาน เฉกเช่นความสำเร็จของ “กุตัยบะฮ์” ที่เคยเป็นที่พอพระทัยแก่อัลวะลีด</p>
+      <p>“ยะซีด” สามารถพิชิต “ญุรญาน” ได้จริงด้วยการเจรจาสงบศึก จากนั้นจึงมุ่งหน้าสู่ “เฏาะบะริสตาน” แต่ท่านไม่ประสบความสำเร็จ ณ ที่นั่น ทำให้ชาว “ญุรญาน” ฉีกสัญญา ท่านจึงหวนกลับมาทำสงครามกับพวกเขาและพิชิตมันได้อีกครั้งด้วยกำลังพลทางทหาร</p>
+      <p>อนึ่ง การญิฮาดและการเตรียมความพร้อมเพื่อการทำสงครามยังคงดำเนินต่อไปในภูมิภาคนี้ของโลกจวบจนสิ้นสุดยุคสมัยราชวงศ์อุมัยยะฮ์ สิ่งที่เป็นข้อสังเกตในสมรภูมินี้คือ พวกเติร์กที่ยังคงปักหลักอยู่นอกเขตอำนาจของมุสลิมในดินแดนหลังแม่น้ำ ภายหลังยุคการพิชิตของกุตัยบะฮ์ บิน มุสลิมยังไม่หยุดหย่อนในการเข้าโจมตีพื้นที่ที่อยู่ภายใต้อำนาจของมุสลิม และคอยยุยงปลุกปั่นชาวเมืองให้ก่อการกบฏและขัดขืน ทำให้ฝ่ายมุสลิมต้องคอยปราบปรามพวกเขาและนำดินแดนกลับเข้าสู่ความสงบเรียบร้อย สู่การเชื่อฟังอยู่เสมอ</p>
+      <p>แน่นอนว่าสมรภูมินี้เป็นหนึ่งในสมรภูมิที่มีการสู้รบดุเดือดที่สุด และไม่มี ‘ดินแดนสงคราม’ แห่งใดที่จะหนักหน่วงไปกว่าดินแดนของพวกเติร์ก</p>
+      <p>แต่ภายหลังจากความพยายามอย่างต่อเนื่อง ดินแดนแห่งนี้ก็ได้แปรเปลี่ยนไปสู่การเป็น ‘ดินแดนแห่งอิสลาม’ และในยุคสมัยต่อมา มันได้กลายเป็น ‘ศูนย์กลาง’ แห่งวิทยาการและเหล่านักปราชญ์ ตลอดจนได้มีศูนย์กลางทางวิชาการและอารยธรรมถือกำเนิดขึ้นในดินแดนแถบนี้ อาทิ เมืองบุคอรอ ถิ่นกำเนิดผู้นำของเหล่านักวิชาการในวิชาหะดีษ, บัลค์ ถิ่นกำเนิดอบู มุเฏี้ยะอ์ อัลบัลคีย์ สหายและศิษย์ของท่านอบู หะนีฟะฮ์ผู้รายงานอัลฟิกฮุลอักบัร, ซามัรกันด์ ถิ่นกำเนิดของท่านอบู มันศูร อัลมาตูรีดีย์, นัยซาบูร์ ถิ่นกำเนิดของอัลฮากิม อันนัยซาบูรีย์, ฮะรอต (ปัจจุบันอยู่ในปากีสถาน) ถิ่นกำเนิดของอบู ซัร อัลฮะรอวีย์ อัลอัชอะรีย์หนึ่งในนักรายงานศอเฮี้ยะฮ์อัลบุคอรีย์ที่สำคัญ, มัรวาถิ่นกำเนิดของอบู อิสหาก อัลมัรวาซีย์ อัชชาฟิอีย์, อัรร็อยย์ ถิ่นกำเนิดของฟัครุดดีน อัรรอซีย์, ญุรญาน ถิ่นกำเนิดของอับดุลกอฮิรและอัชชะรีฟ อัลญุรญานีย์, ซะร็อคส์ ถิ่นกำเนิดของชัมซุลอะอิมมะฮ์ อัซซะร็อคซีย์ อัลหะนาฟีย์, เฏาะบะริสตาน ถิ่นกำเนิดของอบู ญะอ์ฟัร อัฏเฏาะบะรีย์และเมืองอื่นๆ</p>
+      <p>เมืองเหล่านี้ยังได้ให้กำเนิดนักวิชาการจำนวนมากมายมหาศาล ผู้ซึ่งประชาชาติอิสลามได้รับแสงสว่างทางปัญญาจากพวกเขาแทบทั้งสิ้นในช่วงอดีต และนามของพวกเขาเหล่านี้ได้ขจรขจายและเป็นที่ประจักษ์ไปทั่วสารทิศ เต็มโสตประสาทและสายตาของโลกมุสลิม</p>
+      <p>ในปัจจุบัน ดินแดนเหล่านี้กระจายตัวอยู่ระหว่างประเทศอิหร่าน และอัฟกานิสถาน ส่วนพื้นที่ส่วนใหญ่นั้นตั้งอยู่ใน 5 สาธารณรัฐอิสลามแห่งเอเชียกลางได้แก่ คาซัคสถาน, อุซเบกิสถาน, เติร์กเมนิสถาน, ทาจิกิสถาน และคีร์กีซสถาน</p>
+
+      <!-- CITATION (อ้างอิงบทความนี้) — Rule 40. -->
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การพิชิตดินแดนหลังแม่น้ำ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/muslim-conquest-of-transoxiana.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <!-- BIBLIOGRAPHY: Arabic sources, numbered; each ↑ back-links to its #fnref-N.
+         Native script, no translation (Rule 6). Keep ids in sync with the <sup> refs. -->
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">الدكتور طه عبد المقصود: موجز عن الفتوحات الإسلامية، الناشر: دار النشر للجامعات – القاهرة، ص7- 16.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
