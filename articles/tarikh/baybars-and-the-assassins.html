@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>ศอฮีร บัยบัรส์ปราบกลุ่มบาฏินียะฮ์ได้อย่างไรโดยไม่หลั่งเลือดแม้แต่หยดเดียว — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="สุลต่านศอฮีร บัยบัรส์แห่งราชวงศ์มัมลูกปราบกลุ่มบาฏินียะฮ์ (ฮัชชาชูน/อิสมาอีลียะฮ์) ในซีเรียได้อย่างไร ด้วยยุทธศาสตร์การเงิน การทูต และการแบ่งแยกอำนาจ โดยไม่ต้องหลั่งเลือด">
+<meta name="keywords" content="บัยบัรส์, มัมลูก, บาฏินียะฮ์, ฮัชชาชูน, อิสมาอีลียะฮ์, ครูเสด, ประวัติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ศอฮีร บัยบัรส์ปราบกลุ่มบาฏินียะฮ์ได้อย่างไรโดยไม่หลั่งเลือดแม้แต่หยดเดียว — Islamic Fiqh Publishing">
+<meta property="og:description" content="ยุทธศาสตร์อันแยบยลของสุลต่านบัยบัรส์ในการปราบกลุ่มฮัชชาชูนในซีเรีย โดยไม่ต้องใช้อาวุธแม้แต่น้อย">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/baybars-and-the-assassins.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/baybars-and-the-assassins.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="baybars-and-the-assassins">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">ศอฮีร บัยบัรส์ปราบกลุ่มบาฏินียะฮ์ได้อย่างไรโดยไม่หลั่งเลือดแม้แต่หยดเดียว</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">กลุ่มบาฏินียะฮ์ หรือที่รู้จักกันในชื่ออื่น เช่น กลุ่มฮัชชาชูน หรือคุ้นหูกันในฝั่งตะวันตกว่า แอสแซซซิน, อิสมาอีลียะฮ์, อะฮ์ลุลบัยต์ อัดดะอ์วะฮ์ ทั้งหมดนี้เป็นชื่อเรียกหลากหลายรูปแบบที่ใช้กับกลุ่มหนึ่งในนิกายชีอะฮ์ ซึ่งถือกำเนิดขึ้นหลังการเสียชีวิตของอิมามอิสมาอีล บิน ญะอ์ฟัร อัศศอดิก ในปีฮ.ศ. 143/ค.ศ. 755 ซึ่งท่านผู้นี้นับเป็นอิมามลำดับที่ 7 ตามแนวทางของชีอะฮ์อิษนาอะชารียะฮ์ (ชีอะฮ์สิบสองอิมาม) ด้วยเหตุนี้เอง กลุ่มผู้ติดตามอิมามอิสมาอีลจึงถูกขนานนามว่า “ชีอะฮ์สะบะอียะฮ์” หรือ “ชีอะฮ์เจ็ดอิมาม”</p>
+
+      <p>เป้าหมายสำคัญของขบวนการนี้คือการต่อต้านและล้มล้างอำนาจของรัฐอับบาสียะฮ์ เพื่อสถาปนารัฐใหม่ภายใต้การปกครองของลูกหลานอิมามอิสมาอีล บิน ญะอ์ฟัร อัศศอดิก ดังนั้น พวกเขาจึงได้จัดตั้งระบบ “ดะอ์วะฮ์ลับ” โดยเลียนแบบกลยุทธ์ของอับบาสียะฮ์ในอดีต ซึ่งเคยใช้ดะอ์วะฮ์ลับในแคว้นคุรอซานนานนับสามทศวรรษก่อนจะสามารถโค่นราชวงศ์อุมัยยะฮ์ลงได้และตั้งรัฐอับบาสียะฮ์ขึ้นในที่สุด</p>
+
+      <p>ในทำนองเดียวกัน อิสมาอีลียะฮ์สามารถเผยแพร่แนวคิดของตนในหลายภูมิภาค ได้แก่ เปอร์เซีย เยเมน อิรัก ชาม (ซีเรีย) ตลอดจนถึงแอฟริกาเหนือ ทั้งในเขตมัฆริบกลางและมัฆริบตะวันตก แนวคิดสำคัญของกลุ่มนี้คือความเชื่อที่ว่า ทุกหลักความเชื่อในศาสนาอิสลามนั้น มีทั้ง “เปลือกนอก” และ “ความหมายภายใน” (ซอฮิรและบาฏิน) ด้วยเหตุนี้เอง พวกเขาจึงเป็นที่รู้จักในชื่อว่า “บาฏินียะฮ์”</p>
+
+      <p>ความพยายามของพวกเขาบรรลุผลในช่วงปลายศตวรรษที่ 3 ฮิจเราะฮ์ (ประมาณคริสต์ศตวรรษที่ 9) หลังจากดำเนินงานลับมาเป็นเวลากว่า 150 ปี ด้วยการสถาปนารัฐฟาฏิมียะฮ์ ซึ่งขยายอำนาจจากมัฆริบ (แอฟริกาเหนือ) ไปจนถึงอียิปต์ และครอบคลุมถึงบางส่วนของแถบชาม รัฐนี้กลายเป็นภัยคุกคามครั้งใหญ่ที่สุดต่อรัฐอับบาสียะฮ์ในประวัติศาสตร์</p>
+
+      <p>อิทธิพลของรัฐฟาฏิมียะฮ์ไม่ได้จำกัดอยู่เพียงแค่นั้น พวกเขายังสามารถซื้อใจผู้นำทหารเติร์กนามว่า อัลบะสาสีรีย์ ซึ่งในเวลาต่อมาได้ทรยศต่อรัฐอับบาสียะฮ์ ประกาศสวามิภักดิ์ต่อรัฐฟาฏิมียะฮ์ และประกาศยกธงของฟาฏิมียะฮ์ขึ้นบนหออะซานในกรุงแบกแดดตลอดทั้งปีในปีฮ.ศ. 450 (ค.ศ. 1058)</p>
+
+      <p>ต่อมาในปีฮ.ศ. 487/ค.ศ. 1094 หลังจากการถึงแก่อสัญกรรมของคอลีฟะฮ์แห่งรัฐฟาฏิมียะฮ์ คือ อัลมุสตันศิร บิลลาฮ์ ได้เกิดข้อขัดแย้งเรื่องการสืบราชสมบัติระหว่างบุตรชายของท่านสองคน ได้แก่ อัลมุสตะอ์ลีย์ และนิซาร ผู้ติดตามของแต่ละฝ่ายต่างแสดงความจงรักภักดีต่ออิมามของตนอย่างเข้มข้น จนความขัดแย้งทางการเมืองบานปลายกลายเป็นความขัดแย้งทางหลักความเชื่อ</p>
+
+      <p>ในท้ายที่สุด ฝ่ายของอัลมุสตะอ์ลีย์สามารถยึดอำนาจไว้ได้ และอัลมุสตะอ์ลีย์ บิลลาฮ์ก็ขึ้นครองบัลลังก์ในช่วงปีฮ.ศ. 487-495 ขณะที่กลุ่มผู้สนับสนุนนิซารถูกปราบปรามและขับไล่ออกไป พวกเขาหลบหนีไปตั้งหลักใหม่ในแคว้นเปอร์เซียและซีเรีย ซึ่งในดินแดนเปอร์เซียนี้เอง หะซัน อัศศ็อบบาฮ์ หนึ่งในผู้นำอิสมาอีลียะฮ์สายนี้ ได้สร้างฐานที่มั่นขึ้นหลายแห่ง และเริ่มเผยแผ่แนวคิดของเขาอย่างเป็นระบบ โดยมีการยึดครองป้อมปราการสำคัญหลายแห่ง โดยเฉพาะ “ป้อมอัลมูต” ที่กลายเป็นศูนย์กลางของลัทธิใหม่ที่มีอิทธิพลทั้งในเชิงการเมืองและศาสนา</p>
+
+      <h2 class="article-h2">กลุ่มฮัชชาชูนในเปอร์เซียและซีเรีย</h2>
+
+      <p>จากฐานที่มั่นซึ่งเป็นป้อมปราการทางทหารเหล่านี้เอง ขบวนการบาฏินียะฮ์สายอิสมาอีลียะฮ์ได้ขยายตัวอย่างกว้างขวาง จนกลายเป็นภัยคุกคามอย่างรุนแรงต่อโลกซุนนี โดยเฉพาะต่อรัฐเซลจูก, อำนาจของซังกีย์ และราชวงศ์อัยยูบียะฮ์ รวมถึงพวกมัมลูกในยุคถัดมา กลุ่มนี้ใช้นโยบายหลายรูปแบบในการแทรกแซงทางการเมืองและศาสนา เช่น การเผยแผ่แนวคิดความเชื่อของตน และการดึงผู้นำการเมืองบางรายให้เข้าข้างพวกเขา ตัวอย่างที่ชัดเจนที่สุดคือกรณีของริฏวาน บิน ตุตช์ บุตรของอัลป์ อัรสลาน แห่งราชวงศ์เซลจูก ผู้ครองเมืองอะเลปโป ที่ได้แสดงการสนับสนุนแนวคิดของกลุ่มนี้</p>
+
+      <p>แต่กิจกรรมที่โด่งดังและเป็นอันตรายที่สุดของพวกเขาคือ การลอบสังหารผู้นำทางการเมือง ซึ่งดำเนินการต่อเนื่องมาหลายทศวรรษ โดยมุ่งเป้าหมายไปที่ผู้นำชาวมุสลิมฝ่ายซุนนีที่มีบทบาทในการต่อต้านพวกครูเสดในช่วงสงครามครูเสด และกลุ่มลัทธินอกรีตต่างๆ เช่น นิซอม อัลมุลก์ อัตตูซี วะซีรผู้ทรงอิทธิพลของรัฐเซลจูก, ญะนาห์ อัดเดาละฮ์ เจ้าเมืองฮิมส์, คอลัฟ บิน มุลาอิบ ผู้ปกครองเมืองฟะมียะฮ์, เมาดู้ด อะตาเบก แห่งเมืองโมซุล</p>
+
+      <p>แม้แต่เศาะลาฮุดดีน อัลอัยยูบีก็เคยตกเป็นเป้าหมายในการลอบสังหาร และถึงกับได้รับบาดเจ็บ แต่ก็รอดชีวิตมาได้ อำนาจของกลุ่มบาฏินียะฮ์อิสมาอีลียะฮ์ในซีเรียยิ่งเข้มแข็งมากขึ้นในช่วงสงครามครูเสด เนื่องจากพวกเขามีป้อมปราการทางทหารจำนวนมากครอบครองไว้</p>
+
+      <p>ความเป็นปฏิปักษ์อย่างรุนแรงต่อชาวซุนนี ทำให้พวกเขาเริ่มเข้าใกล้ชาวครูเสดในซีเรีย และร่วมมือกันต่อต้านอำนาจของอัยยูบียะฮ์และมัมลูกในเวลาต่อมา ในอีกด้านหนึ่ง พวกครูเสดเองก็มองว่ากลุ่มบาฏินียะฮ์เป็นกำลังสำคัญที่สามารถช่วยจำกัดอำนาจของสุลต่านและเจ้าเมืองฝ่ายมุสลิมที่แข็งแกร่ง</p>
+
+      <p>ความสัมพันธ์ระหว่างทั้งสองฝ่ายพัฒนาไปถึงขั้นที่ครูเสดส่งของขวัญ ของกำนัลให้แก่กลุ่มบาฏินียะฮ์เพื่อกระชับสัมพันธ์และป้องกันไม่ให้ตกเป็นเป้าหมายของการลอบสังหาร ซึ่งเป็นกิจกรรมที่กลุ่มนี้มีชื่อเสียงในด้านความแม่นยำและโหดเหี้ยม</p>
+
+      <h2 class="article-h2">การเผชิญหน้ากับสุลต่านศอฮีร บัยบัรส์</h2>
+
+      <p>เมื่อสุลต่านศอฮีร บัยบัรส์ ขึ้นครองราชย์แห่งอาณาจักรมัมลูกในปีฮ.ศ. 658/ค.ศ. 1260 และสามารถกำจัดภัยคุกคามจากพวกมองโกล ซึ่งเป็นศัตรูสำคัญของทั้งฮัชชาชูนและมัมลูก กลุ่มบาฏินียะฮ์จึงส่งผู้นำระดับสูงของตน คือ รอฎียุดดีน อะบุลมะอาริฟ และนัจมุดดีน อัชชะอ์รอนีไปเจรจากับสุลต่านบัยบัรส์ โดยเรียกร้องให้ฟื้นฟูสถานะทางการเงิน ทรัพย์สิน และที่ดินที่พวกเขาเคยครอบครองในยุคของสุลต่านอันนาศิรที่สองแห่งราชวงศ์อัยยูบียะฮ์ พร้อมทั้งแสดงท่าทีอวดอำนาจและออกแนวข่มขู่ในบางช่วงของการเจรจา แต่สุลต่านบัยบัรส์กลับตอบโต้ด้วยท่าทีที่เด็ดขาด ไม่ประนีประนอม</p>
+
+      <p>ตามที่บันทึกไว้โดยนักประวัติศาสตร์ร่วมสมัยคือ มุฮียุดดีน อิบนุ อับดุซซอฮิร ผู้เขียนพงศาวดาร <span class="ar-inline" lang="ar" dir="rtl">الروض الزاهر</span> ได้กล่าวว่า: ในอดีต กลุ่มฮัชชาชูนเคยเป็นกลุ่มที่มีอำนาจที่น่าเกรงขาม มีอิทธิพลและสร้างความหวาดกลัวแก่ผู้คนอย่างมาก แต่หลังจากที่พวกมองโกลได้ทำลายป้อมปราการของพวกเขาทั้งในเปอร์เซียและซีเรีย และอำนาจของมัมลูกได้ก้าวขึ้นสู่จุดสูงสุด กลุ่มฮัชชาชูนก็สูญเสียอิทธิพลอย่างรุนแรง</p>
+
+      <p>ในความเป็นจริงแล้ว แนวทางทางการเมืองและการทูตของกลุ่มบาฏินียะฮ์ในการสื่อสารกับฝ่ายมัมลูกกลับสะท้อนถึงความหยิ่งผยอง และความไม่รู้เท่าทันสถานการณ์ แทนที่จะปรับตนและแสวงหาความร่วมมือกับผู้ปกครองใหม่ของภูมิภาค พวกเขากลับไปยั่วยุและแสดงท่าทีที่กระตุ้นความไม่พอใจของสุลต่านบัยบัรส์ ซึ่งกำลังพยายามควบคุมสถานการณ์ในภูมิภาคที่เต็มไปด้วยศัตรูรอบด้าน ทั้งมองโกล พวกครูเสด ชาวอาร์เมเนีย และกลุ่มอื่นๆ อีกมาก</p>
+
+      <p>ท่ามกลางภัยคุกคามอย่างใกล้ชิดจากกองทัพครูเสดที่กำลังรุกรานซีเรียและอียิปต์ และการที่พวกครูเสดจับมือกับพวกมองโกล โดยมีบาฏินียะฮ์หนุนหลังอีกทอดหนึ่งนั้น สุลต่านบัยบัรส์ยิ่งมั่นใจว่า การขจัดกลุ่มอิสมาอีลียะฮ์นั้น ไม่ใช่แค่ทางเลือก แต่เป็นสิ่งจำเป็นอย่างยิ่ง</p>
+
+      <p>อย่างไรก็ตาม บัยบัรส์มิได้เลือกใช้อำนาจทหารทันที แต่กลับแสดงความชาญฉลาดในการเลือกวิธีจัดการอย่างไร้การหลั่งเลือด เขาสังเกตว่า พวกครูเสดในซีเรียมักส่งเงินและของขวัญให้กับกลุ่มบาฏินียะฮ์อิสมาอีลียะฮ์ เพื่อรักษาความสัมพันธ์และป้องกันการถูกลอบสังหาร และเนื่องจากบัยบัรส์สามารถมีชัยเหนือครูเสดในหลายสนามรบ เขาจึงใช้อำนาจทางภาษีในการควบคุมของกำนัลและทรัพย์สินเหล่านี้</p>
+
+      <p>กล่าวคือ เขาสั่งให้เก็บภาษีในอัตราสูงจากบรรดาของกำนัลที่ถูกส่งผ่านอาณาเขตของรัฐมัมลูกมายังผู้นำของกลุ่มบาฏินียะฮ์ เพื่อทำลายระบบของพวกเขาจากภายใน</p>
+
+      <p>ท่านบัดรุดดีน อัลอัยนีบันทึกว่า อิทธิพลของกลุ่มอิสมาอีลียะฮ์ในขณะนั้น แผ่ขยายไปถึงอาณาจักรไบแซนไทน์ ชาวครูเสด ชาวยุโรป และกองกำลังนานาชาติอื่นๆ โดยกล่าวไว้ว่า: ทูตจากจักรพรรดิแห่งโรม, จากฝรั่งเศส, จากกษัตริย์ครูเสดและจากเยเมน ล้วนแล้วแต่นำของกำนัลไปถวายผู้นำของกลุ่มอิสมาอีลียะฮ์…สุลต่านจึงมีคำสั่งให้เก็บภาษีศุลกากรจากเรือบรรทุกของขวัญเหล่านี้ เพื่อทำลายระบบความสัมพันธ์อันลี้ลับของกลุ่มบาฏินียะฮ์ และทำให้ผู้ที่เคยใช้วิธีนี้เพื่อหลีกเลี่ยงอันตรายจากพวกเขาต้องลำบากใจ</p>
+
+      <p>ต่อมา หลังจากสุลต่านบัยบัรส์สามารถคว้าชัยเหนือพวกครูเสดในซีเรียได้หลายครั้ง เขาก็เจรจาสงบศึกกับ “Knights Hospitaller” ซึ่งเป็นกลุ่มทหารครูเสดสายแข็ง หรือกลุ่มอัศวินในคราบหมอ ในเดือนเชาวาล ปีฮ.ศ. 664 โดยในการเจรจานั้น บัยบัรส์ได้ เปิดโปงกลยุทธ์ลับของกลุ่มบาฏินียะฮ์ ที่แม้จะได้รับของกำนัลจากอำนาจต่างชาติ แต่ในขณะเดียวกัน พวกเขาก็จ่ายส่วยให้กับกลุ่ม Knights Hospitaller ทุกปี เพื่อขอรับการคุ้มครอง</p>
+
+      <p>บัยบัรส์จึงใช้โอกาสนี้วางเงื่อนไขสำคัญในการสงบศึก โดยระบุให้กลุ่ม Knights Hospitaller ต้อง “ยกเลิกการเก็บส่วยจากกลุ่มบาฏินียะฮ์” ซึ่งฮอสปิเทลเลอร์ก็จำใจยอมตาม เพราะไม่มีทางเลือก</p>
+
+      <p>บัยบัรส์เขาตัดเส้นทางการเงินที่เคยหล่อเลี้ยงอำนาจของศัตรูสองฝ่ายพร้อมกัน ทั้งกลุ่มฮอสปิเทลเลอร์ และกลุ่มบาฏินียะฮ์ ขณะเดียวกัน เขาก็วางกลไกใหม่ให้พวกบาฏินียะฮ์จำต้องจ่ายเงินส่วยให้แก่รัฐมัมลูกแทน ทำให้เขาจัดการกับทั้งศัตรูเก่าและใหม่ได้ในการเคลื่อนไหวเดียว</p>
+
+      <p>และในที่สุด กลุ่มบาฏินียะฮ์ก็ยอมจำนนและส่งทูตมายังกรุงไคโร เมืองหลวงของมัมลูกเป็นครั้งแรก ในเดือนญุมาดิลอาคิร ปีฮ.ศ. 665/ค.ศ. 1267 โดยนำเงินส่วยมามอบให้แก่คลังหลวงของรัฐมัมลูก</p>
+
+      <p>ตามบันทึกของมักริซีย์ กล่าวไว้ว่า:</p>
+
+      <p class="ar-translation thai-quote">“บรรดาสมาชิกของ ‘อะฮ์ลุลบัยติลดะอ์วะฮ์’ ในอดีตนั้น เคยเป็นฝ่ายเจรจา เรียกร้อง และเก็บเงินส่วยจากบรรดากษัตริย์และคอลีฟะฮ์ แต่บัดนี้ พวกเขากลับต้องนำเงินมามอบให้แก่สุลต่านศอฮีร บัยบัรส์ เพื่อสนับสนุนภารกิจญิฮาดในหนทางของอัลลอฮ์”</p>
+
+      <p>เหล่าสมาชิกของกลุ่มบาฏินียะฮ์ยังประกาศอีกว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هذا المال الذي كنا نحمله قطيعة (فريضة أو جزية) للفرنج قد حملناه لبيت المسلمين؛ لينفق في المجاهدين</blockquote>
+      <p class="ar-translation">“เงินจำนวนนี้ ที่เราเคยมอบให้แก่พวกครูเสดเป็นค่าคุ้มครอง บัดนี้เราขอเปลี่ยนมาให้แก่ ‘คลังของชาวมุสลิม’ เพื่อให้ใช้จ่ายในกิจกรรมของนักรบในหนทางของพระเจ้า”</p>
+
+      <h2 class="article-h2">จากศัตรู…สู่เครื่องมือของรัฐ</h2>
+
+      <p>อำนาจและบารมีของสุลต่านบัยบัรส์ขยายตัวจนถึงจุดที่เขาสามารถเปลี่ยนกลุ่มบาฏินียะฮ์ (ฮัชชาชูน) ซึ่งเคยเป็นศัตรูสำคัญให้กลายเป็นเครื่องมือทางการเมืองภายใต้แผนการใหญ่ของเขาในการปลดปล่อยดินแดนซีเรียจากการยึดครองของชาวครูเสด ซึ่งแม้แต่สุลต่านเศาะลาฮุดดีน อัลอัยยูบี และเหล่าทายาทของเขาก็ยังไม่สามารถทำให้สำเร็จได้</p>
+
+      <p>ในปีฮ.ศ. 668 (ค.ศ. 1269) บัยบัรส์ได้สั่งให้กลุ่มบาฏินียะฮ์ดำเนินภารกิจลอบสังหารผู้นำของฝ่ายครูเสดในซีเรีย ได้แก่ฟิลิปแห่งมองท์เฟอร์รัท (Philip of Montferrat) หรือพระเจ้าฟิลิปที่ 2 แห่งฝรั่งเศส, พระเจ้าเอ็ดเวิร์ดที่ 1</p>
+
+      <p>การลอบสังหารเหล่านี้สร้างแรงสะเทือนให้แก่แนวร่วมของครูเสด และก่อให้เกิดความหวาดกลัวอย่างรุนแรงในหมู่พวกเขา แต่ถึงกระนั้น บัยบัรส์เองก็ไม่เคยไว้วางใจกลุ่มบาฏินียะฮ์อย่างแท้จริง เพราะรู้ดีถึงนิสัยลับลมคมในและความไม่แน่นอนในความภักดีของพวกเขา ดังนั้น ทันทีที่เขาสถาปนาอำนาจได้มั่นคงในอียิปต์ ซีเรีย และอะเลปโป เขาก็เริ่มดำเนินการตามแผนที่ไม่เคยมีผู้ปกครองคนใดกล้าทำมาก่อน</p>
+
+      <p>สุลต่านบัยบัรส์ตระหนักดีว่า การเก็บส่วยประจำปีจากกลุ่มบาฏินียะฮ์นั้น จะทำให้พวกเขารู้สึกไม่พอใจ และอาจก่อให้เกิดการหันหลังให้กับรัฐมัมลูกในภายหลัง ซึ่งสุ่มเสี่ยงต่อความมั่นคง</p>
+
+      <p>เมื่อผู้นำกลุ่มบาฏินียะฮ์ในขณะนั้นคือ นัจมุดดีน ฮะซัน บิน อัชชะอ์รอนีส่งจดหมายถึงสุลต่านบัยบัรส์ในช่วงที่เขากำลังล้อมป้อม “อัลอักร็อด” ในซีเรียในปีฮ.ศ. 668 เพื่อขอลดจำนวนเงินส่วยประจำปีที่กลุ่มบาฏินียะฮ์ต้องส่งให้แก่รัฐสุลต่าน บัยบัรส์ได้ตอบปฏิเสธทันที และดำเนินการเด็ดขาดคือ ปลดนัจมุดดีนออกจากตำแหน่งผู้นำ, ตั้งศอริมุดดีน มุบาร็อก บิน อัรเราะฎี ซึ่งเป็นเจ้าของป้อมอัลอะลีเกาะฮ์ (หนึ่งในฐานสำคัญของกลุ่มบาฏินียะฮ์) ขึ้นเป็นผู้นำคนใหม่แทน</p>
+
+      <p>ศอริมุดดีนตอบรับตำแหน่ง และเดินทางไปยังเมืองมัสยาฟ เมืองหลวงของกลุ่มอิสมาอีลียะฮ์ในซีเรีย โดยมีผู้แทนจากบัยบัรส์ร่วมเดินทางไปด้วย เพื่อทำหน้าที่ควบคุมและตรวจสอบการยอมจำนนต่ออำนาจรัฐมัมลูก ตามเงื่อนไขที่เคยตกลงไว้ กลุ่มบาฏินียะฮ์ต้องชำระส่วยปีละหนึ่งแสนดีนาร์, เมืองหลวงอย่างมัสยาฟ, มุนีเกะฮ์, อะลิเกะฮ์, ก็อดมูสและอัรรอซอฟะฮ์ต้องอยู่ภายใต้อำนาจสูงสุดของสุลต่าน</p>
+
+      <p>ด้วยแผนการที่รอบคอบและการแต่งตั้งเชิงยุทธศาสตร์นี้ บัยบัรส์สามารถควบคุมกลุ่มอิสมาอีลียะฮ์ได้โดยไม่ต้องใช้อาวุธแม้แต่น้อย และเมื่อถูกปลด นัจมุดดีน อัชชะอ์รอนีและบุตรชายของเขาก็ไม่อาจปฏิเสธอำนาจของสุลต่านบัยบัรส์ได้ พวกเขาจึงร้องขออนุญาตเดินทางไปเข้าเฝ้าเพื่อแสดงความจงรักภักดี ซึ่งบัยบัรส์ก็อนุญาต</p>
+
+      <p>เมื่อเข้าเฝ้าแล้ว นัจมุดดีนกล่าวคำขอโทษต่อพฤติกรรมในอดีต บัยบัรส์ยอมรับคำขอโทษนั้น และตัดสินใจแต่งตั้งให้เขากลับมาร่วมบริหารกลุ่มบาฏินียะฮ์อีกครั้ง โดยเป็นการแบ่งอำนาจร่วมกันกับศอริมุดดีน</p>
+
+      <p>อย่างไรก็ตาม บัยบัรส์ใช้โอกาสนี้ในการเพิ่มส่วยประจำปี อีกขั้น คือการบังคับให้นัจมุดดีนจ่ายเงิน ปีละ 120,000 ดีรฮัม ส่วนศอริมุดดีนต้องจ่ายอีก 1,000 ดีนาร์เข้าคลังหลวงของมัมลูก</p>
+
+      <p>ด้วยกลยุทธ์นี้ บัยบัรส์ไม่เพียงแต่เพิ่มรายได้เข้ารัฐจากกลุ่มบาฏินียะฮ์เท่านั้น แต่ยังบั่นทอนอำนาจภายในของพวกเขา ด้วยการแบ่งตำแหน่งผู้นำออกเป็นสองสาย ทำให้กลุ่มนี้เข้าสู่ภาวะอ่อนแอ แยกกันบริหาร และขาดเอกภาพ</p>
+
+      <h2 class="article-h2">การล่มสลายอย่างเป็นระบบภายใต้ยุคของบัยบัรส์</h2>
+
+      <p>สุลต่านบัยบัรส์ยังคงยืนหยัดในเจตนารมณ์ของตนที่จะกวาดล้างอิทธิพลของกลุ่มบาฏินียะฮ์ (ฮัชชาชูน) อย่างสิ้นซาก ไม่เปิดโอกาสให้พวกเขากลับมายืนหยัดเผชิญหน้าเขาได้อีกครั้ง ด้วยเหตุนี้ เขาจึงจับตัวซัยฟุดดีน บิน นัจมุดดีน ซึ่งเป็นผู้นำคนใหม่ของกลุ่มบาฏินียะฮ์ไว้เป็นตัวประกันที่กรุงไคโร เมืองหลวงของมัมลูก</p>
+
+      <p>ว่ากันว่า บัยบัรส์ฉวยโอกาสจากการยอมรับผิดของกลุ่มฮัชชาชูน ซึ่งเกิดขึ้นในช่วงที่พวกเขาส่งจดหมายมาขอลดภาษีส่วยในระหว่างที่สุลต่านกำลังล้อม “ป้อมอัลอักร็อด” ในซีเรีย อีกทั้งมีการเปิดเผยด้วยตนเองว่า พวกเขาเคยร่วมมือกับชาวครูเสดอย่างลับๆ เพื่อโค่นล้มสุลต่านบัยบัรส์และเอาชนะรัฐมัมลูก</p>
+
+      <p>เมื่อได้หลักฐานและคำสารภาพอย่างชัดเจน บัยบัรส์จึงเข้าสู่การเจรจาต่อรองกับผู้นำกลุ่มโดยมีข้อตกลงให้พวกเขายอมส่งมอบป้อมปราการทั้งหมดของตนให้แก่รัฐมัมลูก ทั้งบิดา (นัจมุดดีน) และบุตร (ซัยฟุดดีน) ต้องอพยพออกจากซีเรีย และเดินทางไปอยู่ที่อียิปต์ โดยรัฐมัมลูกจะมอบพื้นที่ทำกินและเงินบำเหน็จอย่างเหมาะสม แทนค่าป้อมปราการและที่ดินที่ยกให้</p>
+
+      <p>อย่างไรก็ตาม ในเวลาต่อมาบัยบัรส์ก็ลงโทษผู้นำคนใหม่ของกลุ่มอิสมาอีลียะฮ์ โดยจับกุมและคุมขังไว้ที่อียิปต์เช่นกัน จนกลายเป็นการตัดหัวอำนาจของกลุ่มทั้งสองสาย ทั้งสายผู้นำเดิมและสายผู้นำใหม่ ซึ่งนับว่าเป็นจุดหักเหที่เด็ดขาดที่นำไปสู่การล่มสลายของกลุ่มฮัชชาชูนในซีเรีย และการที่ป้อมปราการของพวกเขาทั้งหมดตกอยู่ภายใต้อำนาจของสุลต่านโดยตรง โดยไม่ต้องผ่านผู้ดูแลหรือตัวแทนเหมือนในอดีต โดยกระบวนการนี้เกิดขึ้นอย่างเป็นระบบ</p>
+
+      <ol class="article-summary">
+        <li>ป้อมอัลอะลีเกะฮ์ล่มสลายเป็นแห่งแรก ในเดือนเชาวาล ปีฮ.ศ. 669 / พฤษภาคม ค.ศ. 1262</li>
+        <li>ตามมาด้วยการล่มสลายของป้อมอัรรอซอฟะฮ์ ในปีเดียวกัน</li>
+        <li>ภายใต้แรงกดดันจากกองทัพมัมลูกที่ทรงพลัง และผู้นำของกลุ่มที่ถูกจับไปไว้ที่ไคโร ป้อมอื่นๆ ก็ทยอยยอมจำนน โดยไม่มีแรงต่อต้านมากนัก โดยเฉพาะป้อมอัลคอวาบีและป้อมอัลกุลัยอะฮ์ ยอมจำนนในปีฮ.ศ. 670, ป้อมอัลมุนีเกะฮ์, อัลก็อดมูส และป้อมอัลกะฮ์ฟฺ ก็ยอมจำนนในปีฮ.ศ. 671</li>
+      </ol>
+
+      <p>ความพ่ายแพ้นี้ไม่เพียงแต่เกิดจากการปราบทางทหารเท่านั้น หากแต่เกิดจากการที่กลุ่มบาฏินียะฮ์ถูกบังคับให้ละทิ้งวิถีชีวิตแบบนักรบในป้อมปราการ แล้วหันไปสู่วิถีชีวิตแบบเกษตรกรและชนชั้นพลเรือนในเมือง</p>
+
+      <p>การเปลี่ยนผ่านนี้เองที่เป็นการบั่นทอนอำนาจและบารมีของกลุ่มโดยสิ้นเชิง และสุลต่านบัยบัรส์ก็ เข้าใจและใช้ประโยชน์จากจุดอ่อนนี้อย่างชาญฉลาด ถือเป็นแบบอย่างของยุทธศาสตร์ทางทหารและการเมืองที่เฉียบแหลม ซึ่งเราเห็นบ่อยๆ ในรัฐต่างๆ ที่ต้องการยุติการลุกฮือของขบวนการติดอาวุธหรือแบ่งแยกดินแดน แทนที่จะปราบอย่างรุนแรงเพียงอย่างเดียว รัฐกลับเสนอทางเลือกแห่งความมั่นคง ความสะดวกสบาย และวิถีชีวิตพลเรือน จนขบวนการเหล่านั้นค่อยๆ ละทิ้งอุดมการณ์และหลอมรวมเข้าสู่ระบบรัฐในที่สุด</p>
+
+      <!-- CITATION (อ้างอิงบทความนี้) -->
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ศอฮีร บัยบัรส์ปราบกลุ่มบาฏินียะฮ์ได้อย่างไรโดยไม่หลั่งเลือดแม้แต่หยดเดียว. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/baybars-and-the-assassins.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <!-- BIBLIOGRAPHY: Arabic sources, numbered. Native script, no translation (Rule 6). -->
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li>ابن عبد الظاهر، الروض الزاهر في سيرة الملك الظاهر</li>
+        <li>العيني، عقد الجمان</li>
+        <li>عبد العزيز الخويطر، الملك الظاهر بيبرس</li>
+        <li>عثمان عبد الحميد عشري، الإسماعيليون في بلاد الشام</li>
+        <li>سعيد عبد الفتاح عاشور، الظاهر بيبرس</li>
+        <li>جمال الدين سرور، الظاهر بيبرس</li>
+        <li>المقريزي، السلوك</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
