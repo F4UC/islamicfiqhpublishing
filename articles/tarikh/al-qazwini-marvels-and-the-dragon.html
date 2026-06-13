@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>มังกรและกาลอวสานของโลก — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="แบกแดดล่มสลายในเงื้อมมือมองโกล ค.ศ. 1258 กับสารานุกรม อะญาอิบ อัลมัคลูกอต ของอัลกอซวีนี วรรณกรรมแนวอัศจรรย์ ยะอ์ญูจญ์และมะอ์ญูจญ์ และตำนานมังกร (อัตตินนีน) ในฐานะอุปมาแห่งความโกลาหลของโลก">
+<meta name="keywords" content="ประวัติศาสตร์, อัลกอซวีนี, มองโกล, มังกร, อะญาอิบ อัลมัคลูกอต, ยะอ์ญูจญ์และมะอ์ญูจญ์, แบกแดด, วรรณกรรมแนวอัศจรรย์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="มังกรและกาลอวสานของโลก — Islamic Fiqh Publishing">
+<meta property="og:description" content="เมื่อมองโกลโค่นแบกแดด ค.ศ. 1258 อัลกอซวีนีรวบรวมความมหัศจรรย์แห่งสรรพสิ่ง และมังกรกลายเป็นอุปมาแห่งความโกลาหลที่ถูกอำนาจของพระเจ้าสยบ">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/al-qazwini-marvels-and-the-dragon.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/al-qazwini-marvels-and-the-dragon.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<!-- PLACEMENT: copy this file to articles/<CATEGORY>/<SLUG>.html (depth 2). The ../../
+     asset paths resolve to the repo root from there (and from this preview path too,
+     via root-clamping). Set data-article-id="SLUG" and add the matching entry to
+     articles.json so the byline + reading time inject (Rules 55/57). -->
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="al-qazwini-marvels-and-the-dragon">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<!-- HERO — DEFAULT = no-hero (Rule 67): solid banner + eyebrow + H1, NO <img> (กัน 404).
+     เติม hero image ทีหลังเป็น batch ได้. แทนที่ CATEGORY (path+label) และ ARTICLE_TITLE. -->
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <!-- ARTICLE_TITLE: H1 text only; em-dash + site name go in <title> (Rule 44) -->
+      <h1 class="article-feature-title">มังกรและกาลอวสานของโลก</h1>
+    </div>
+  </div>
+</div>
+
+<!-- OPTIONAL hero WITH image — ใช้เฉพาะเมื่อมีรูปจริงบน CDN เท่านั้น (ห้ามชี้ไฟล์ 404).
+     ถ้ามีรูป ให้สลับบล็อกด้านบนเป็นบล็อกนี้ (เอา no-hero ออก, ใส่ <img> + เครดิต):
+<div class="article-feature">
+  <img
+    src="https://images.islamicfiqhpublishing.com/articles/SLUG.jpg"
+    alt="FEATURE_IMAGE_ALT — คำอธิบายภาพ (Rule 42)"
+    width="1600"
+    height="900"
+    loading="eager"
+    fetchpriority="high"
+  >
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/CATEGORY.html" class="article-feature-eyebrow">CATEGORY_LABEL / ฟิกฮ์</a>
+      <h1 class="article-feature-title">ARTICLE_TITLE</h1>
+    </div>
+    <p class="article-feature-credit">ภาพ: IMAGE_CREDIT</p>
+  </div>
+</div>
+-->
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">เป็นเวลายาวนานหลายศตวรรษที่แบกแดดภายใต้ร่มเงาแห่งราชวงศ์อับบาสิยะฮ์ ดำรงตระหง่านดุจมหานครเอกและศูนย์กลางทางทฤษฎีแห่งโลกอิสลามในสายตาของประชาคมมุสลิม...จวบจนกระทั่งกงล้อแห่งกาลเวลาหมุนเวียนมาถึงปี ค.ศ. 1258 เมื่อกองทัพมองโกลกรีฑาทัพเข้ามาพลิกโฉมหน้าแผนที่การเมืองโลกและโค่นล้มระบอบคอลีฟะฮ์แห่งอับบาสิยะฮ์ลงเพียงชั่วข้ามคืน เป็นการประกาศก้องถึงการล่มสลายของระบอบการปกครองที่ยืนหยัดมานานนับศตวรรษ ระบอบที่เคยได้รับความชอบธรรมจากนิติศาสตร์อิสลามเสมือนหนึ่งลิขิตจากฟากฟ้าที่ไม่อาจหลีกเลี่ยง</p>
+      <p>นับจากห้วงเวลานั้น แบกแดดไม่ใช่นครหลวงแห่งอาณาจักรอิสลามอีกต่อไป หากแต่ลดทอนสถานะลงเป็นเพียงเมืองรองในโลกของชาวมองโกลอันไพศาลที่ทอดตัวยาวเหยียดตั้งแต่มหาอำนาจจีนจรดทุ่งหญ้าสเตปป์แห่งอานาโตเลีย</p>
+      <p>ปฏิเสธไม่ได้เลยว่าการรุกรานของมองโกลนั้นรุนแรงและโหดร้าย สร้างความตระหนกตกใจไปทั่วแวดวงอิสลาม ในพงศาวดารและเรื่องเล่าขานต่างพรรณนาเหตุการณ์นี้ว่าเป็นดั่ง “วันโลกาวินาศ” สัญญาณแห่งการดับสูญและกาลอวสานของโลก ถึงขั้นที่มีการเชื่อมโยงชาวมองโกลเข้ากับเผ่าพันธุ์ “ยะอ์ญูจญ์และมะอ์ญูจญ์” ที่ถูกกล่าวถึงในพระมหาคัมภีร์อัลกุรอาน ซึ่งการปรากฏตัวและการแพร่กระจายของชนกลุ่มนี้ถือเป็นปฐมบทแห่งวันกิยามะฮ์ดังปรากฏในบทอัลอันบิยาอ์ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">حَتَّىٰ إِذَا فُتِحَتْ يَأْجُوجُ وَمَأْجُوجُ وَهُم مِّن كُلِّ حَدَبٍ يَنسِلُونَ وَاقْتَرَبَ الْوَعْدُ الْحَقُّ فَإِذَا هِيَ شَاخِصَةٌ أَبْصَارُ الَّذِينَ كَفَرُوا يَا وَيْلَنَا قَدْ كُنَّا فِي غَفْلَةٍ مِّنْ هَٰذَا بَلْ كُنَّا ظَالِمِينَ</p>
+      </div>
+      <p>“จนกระทั่งเมื่อยะอ์ญูจญ์และมะอ์ญูจญ์ถูกปล่อยออกมา และพวกเขาจะหลั่งไหลลงมาจากทุกทิศทาง และสัญญาแห่งสัจธรรมนั้นได้ใกล้เข้ามาแล้ว เมื่อนั้นสายตาของผู้ปฏิเสธศรัทธาก็จะเบิกโพลง (ด้วยความตระหนก พลางกล่าวว่า) โอ้วิบัติแก่เรา แท้จริงเราเคยวางเฉยต่อเรื่องนี้ ยิ่งกว่านั้นเรายังเป็นผู้อธรรมเสียเอง”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>เฉกเช่นเหตุการณ์พลิกโลกครั้งสำคัญอื่นๆ วิกฤตการณ์นี้โอบอุ้มความย้อนแย้งระหว่างความเสื่อมโทรมและการปฏิรูปไว้ในคราเดียว คงจะเป็นการละเลยเกินไปหากเรามองข้ามคุณูปการของจักรวรรดิมองโกลในการก่อให้เกิดพลวัตทางวัฒนธรรมท่ามกลางภูมิทัศน์ทางภูมิรัฐศาสตร์ใหม่ ชาวมองโกลได้โอบรับแนวทางประสานความเชื่อที่หลอมรวมศาสนาและปรัชญาต่างๆ ภายใต้อาณัติของตนเข้าด้วยกัน ก่อให้เกิดสภาพแวดล้อมที่เอื้อต่อการแลกเปลี่ยนทางวัฒนธรรม ไม่ว่าจะโดยตั้งใจหรือไม่ก็ตาม จนนำไปสู่การถือกำเนิดของรสนิยมและรูปแบบทางศิลปะและวรรณกรรมแนวใหม่ท่ามกลางกระแสความเปลี่ยนแปลงที่ไม่เคยปรากฏมาก่อน เหล่าปัญญาชนและศิลปินชั้นนำได้เคลื่อนย้ายเดินทางเป็นวงกว้าง ได้ขบคิดและทดลองแนวคิดที่ไม่เคยพานพบมาก่อน ช่วงเวลานี้เองที่ในกาลต่อมาถูกมองว่าเป็นยุคสมัยแห่งการวางรากฐานมรดกทางวัฒนธรรมแก่มหาจักรวรรดิทั้งสาม นั่นคือ จักรวรรดิโมกุล, จักรวรรดิซาฟาวิดและจักรวรรดิออตโตมัน</p>
+
+      <h2 class="article-h2">ความมหัศจรรย์แห่งสรรพสิ่งและความพิศวงของสิ่งที่มีอยู่จริง</h2>
+      <p>ในช่วงหลายทศวรรษหลังการรุกรานของมองโกลในดินแดนตะวันออกของโลกอิสลาม ทั้งในอิรัก อิหร่าน และเอเชียกลาง แวดวงวัฒนธรรมใหม่เริ่มนิยมสะสมและเผยแพร่ “ต้นฉบับเอกสารทางวิทยาศาสตร์ที่มีภาพประกอบ” เอกสารเหล่านี้ครอบคลุมเนื้อหาหลากหลายและอุดมไปด้วยภาพวาดวิจิตรตระการตา ผลงานที่โด่งดังที่สุดและเป็นที่กล่าวขานมากที่สุดเห็นจะเป็นตำราที่มีชื่อว่า “อะญาอิบ อัลมัคลูกอต วะเฆาะรออิบ อัลเมาญูดาต” หรือที่รู้จักกันในนาม “สารานุกรมอัลกอซวีนี” หรือ “จักรวาลวิทยาของอัลกอซวีนี”</p>
+      <p>หนังสือเล่มนี้ได้ผ่านการเดินทางและมีลมหายใจหลายยุคหลายสมัย นับตั้งแต่ปรากฏโฉมครั้งแรกในปี ค.ศ. 1280 ณ เมืองวาสิต ประเทศอิรัก มันได้จุดประกายแรงบันดาลใจให้ผู้คนมากมายรังสรรค์ผลงานในท่วงทำนองเดียวกัน จนกลายเป็นต้นแบบของงานเขียนด้านจักรวาลวิทยาในหลากภาษา ทั้งอาหรับ เปอร์เซีย ตุรกีออตโตมัน และอื่นๆ สืบเนื่องยาวนานตั้งแต่ศตวรรษที่ 13 จวบจนศตวรรษที่ 19 และเป็นรากฐานของสิ่งที่เรียกว่า “วรรณกรรมแนวอัศจรรย์”</p>
+      <p>คำว่า “วรรณกรรมแนวอัศจรรย์” นี้ ใช้เรียกขานคลังเอกสารต้นฉบับอันมหาศาลที่ถูกรังสรรค์ขึ้นในโลกอิสลามยุคกลาง เนื้อหาโดยมากว่าด้วยธรรมชาติวิทยาและชีววิทยา เอกสารประเภทนี้พรั่งพร้อมไปด้วยภาพวาดประกอบที่เป็นตัวแทนถ่ายทอดความมหัศจรรย์ของทั้งฟากฟ้าและผืนดิน ไล่เรียงตั้งแต่มวลทูตสวรรค์ จักรราศี และสัตว์ในตำนานปรัมปรา ไปจนถึงความอัศจรรย์ที่สามัญกว่านั้น เช่น หมู่ภมร ฝูงมด และเหล่าอูฐ</p>
+      <p>ผู้ประพันธ์หนังสือ “อะญาอิบ อัลมัคลูกอต วะเฆาะรออิบ อัลเมาญูดาต” ได้ไขความกระจ่างว่า เจตจำนงของผลงานชิ้นนี้คือการชักชวนให้ผู้อ่านบังเกิดความอัศจรรย์ใจในสรรพสิ่งที่พระเจ้าทรงรังสรรค์ ด้วยเหตุว่า “ความอัศจรรย์ใจ” นั้นไซร้ คือหนทางที่นำพามนุษย์ไปสู่การตั้งคำถาม และล่วงรู้ถึงปัญญาในท้ายที่สุด ท่านได้นิยาม “ความอัศจรรย์” ไว้ว่า คือความตื่นตะลึงพรึงเพริดที่เข้าเกาะกุมจิตใจ เมื่อบุคคลเผชิญหน้ากับสิ่งที่ตนไม่อาจหยั่งรู้หรือไม่อาจทำความเข้าใจได้</p>
+      <p>สายใยสัมพันธ์ระหว่างความอัศจรรย์และการรังสรรค์นี้ ปรากฏแน่นแฟ้นยิ่งนักในตำราโบราณที่ว่าด้วยศาสตร์แขนงต่างๆ โดยเฉพาะวิทยาศาสตร์ธรรมชาติ ตลอดจนในงานวรรณกรรมและปรัชญา อุทาหรณ์ที่เด่นชัดคือ นวนิยายปรัชญาของ “อิบนุ ฏุฟัยล์” นามว่า “หัยย์ บิน ยักซอน” (ราว ค.ศ. 1175) [ผู้อ่านสามารถศึกษารายละเอียดเพิ่มเติมได้จากบทความ <a href="../kalam/al-jahiz-and-evolution.html">“มรดกของอัลญาฮิซ: จากการรังสรรค์อันประณีต สู่ข้อถกเถียงเรื่องวิวัฒนาการ”</a>] ซึ่งสะท้อนให้เห็นว่าความสัมพันธ์ระหว่างความอัศจรรย์และการรังสรรค์นั้นถูกตีความอย่างไรในสังคมอิสลามยุคกลาง เรื่องราวพรรณนาถึง “หัยย์ บิน ยักซอน” ดรุณน้อยผู้เติบโตอย่างโดดเดี่ยวบนเกาะร้าง ตัดขาดจากอารยธรรม เขาเรียนรู้จากสิ่งรอบกาย พินิจพิเคราะห์สรรพสิ่ง จนกระทั่งผ่านกระบวนการตั้งคำถามต่างๆมากมาย</p>
+      <p>ผู้ประพันธ์ต้นฉบับที่เก่าแก่ที่สุดของหนังสือ “อะญาอิบ อัลมัคลูกอตฯ” คืออบู ยะห์ยา ซะกะรียา บิน มุฮัมมัด อัลกอซวีนี ท่านเป็นปราชญ์ด้านวิทยาศาสตร์ ผู้มีชีวิตอยู่ในช่วงรอยต่อแห่งการปกครองของมองโกล เป็นอาจารย์ด้านนิติศาสตร์อิสลามและแตกฉานในปรัชญาตามแนวทางของอิบนุ ซีนา และเท่าที่ทราบ ท่านรอดพ้นจากเงื้อมมือมัจจุราชถึงสองครา คราแรกท่านลี้ภัยจากการสังหารหมู่ของพวกมองโกลในเมืองมาตุภูมิคือ “กอซวีน” ซึ่งอยู่ทางตอนเหนือของอิหร่าน ในปี ค.ศ. 1220 เฉกเช่นเดียวกับชนชั้นปัญญาชนจำนวนมากในอิหร่านตอนเหนือและเอเชียกลาง ที่มุ่งหน้าอพยพสู่ตะวันตกเพื่อหนีให้พ้นจากการรุกคืบของกองทัพมองโกล</p>
+      <p>อัลกอซวีนีเดินทางมาถึงเมืองโมซุล ทางตอนเหนือของอิรัก และได้ศึกษาวิชาปรัชญาที่นั่น ต่อมาท่านได้รับแต่งตั้งให้ดำรงตำแหน่งผู้พิพากษา (กอฎี) ณ เมืองวาสิต และเป็นอาจารย์สอนในสถาบันนิติศาสตร์ที่มีชื่อเสียงนามว่า “ชะรอบียะฮ์” และเมื่อนครแบกแดดล่มสลายลงในเงื้อมมือของมองโกลเมื่อต้นเดือนกุมภาพันธ์ ค.ศ. 1258 เพียงไม่ถึงสามสัปดาห์ให้หลัง เมืองวาสิตก็ประสบชะตากรรมเดียวกัน ซึ่งนั่นคือครั้งที่สองที่อัลกอซวีนีรอดชีวิตมาได้ สาเหตุแห่งการรอดพ้นนั้นน่าจะมาจากการคัดเลือกเหยื่อของพวกมองโกลในการยึดครองเมือง ซึ่งมักจะละเว้นชีวิตผู้ที่พวกตนเห็นว่ามีประโยชน์ อันได้แก่ เหล่านักปราชญ์ กวี และช่างฝีมือ</p>
+      <p>เป็นที่ประจักษ์ว่า อัลกอซวีนีจัดอยู่ในกลุ่มชนชั้นปัญญาชนผู้พ่ายแพ้ นักเขียนในยุคนั้นบางท่านถึงกับพรรณนาห้วงเวลานี้ด้วยถ้อยคำแห่ง “กาลอวสาน” สหายร่วมยุคสมัยของอัลกอซวีนีหลายคนตีความการรุกรานดินแดนอิสลามของมองโกลว่าเป็นสัญญาณแห่งวันสิ้นโลก บ้างก็เชื่อมโยงชาวมองโกลเข้ากับอำนาจแห่งความโกลาหลนิรันดร์ โดยเปรียบเปรยพวกเขากับชนเผ่าเถื่อนอย่างยะอ์ญูจญ์และมะอ์ญูจญ์ ผู้กรุยทางสู่จุดจบของโลกตามคัมภีร์กุรอาน จากจุดนี้จึงเห็นได้ชัดว่า มหันตภัยครั้งนี้ส่งผลกระทบทางจิตใจอย่างรุนแรงยิ่งต่อเหล่าปัญญาชนเหล่านั้น</p>
+      <p>เราไม่อาจล่วงรู้ถึงจุดยืนที่แท้จริงของอัลกอซวีนีที่มีต่อการรุกรานของมองโกลได้ ด้วยเหตุที่ท่านไม่ได้กล่าวถึงเรื่องนี้ไว้อย่างโจ่งแจ้ง แต่ในสารานุกรมของท่าน ท่านได้พรรณนาถึงเผ่าพันธุ์คนเถื่อนในจินตนาการอย่างยะอ์ญูจญ์และมะอ์ญูจญ์ไว้ในฐานะหนึ่งในความมหัศจรรย์แห่งการสร้างสรรค์ ส่วนในผลงานทางภูมิศาสตร์ที่มีชื่อว่า “อาษาร อัลบิลาด วะอัคบาร อัลอิบาด” (ร่องรอยแห่งแผ่นดินและเรื่องราวของปวงบ่าว) ท่านได้ใช้สัญลักษณ์แทนชนกลุ่มนี้บนแผนที่โลกด้วยภาพวาดของ “กำแพง” อันเป็นการอ้างอิงถึงตำนานอันเลื่องลือของอเล็กซานเดอร์มหาราช ผู้ซึ่งสร้างกำแพงบรอนซ์หลอมขนาดมหึมาเพื่อแบ่งแยกโลกที่ศิวิไลซ์ออกจากโลกแห่งความป่าเถื่อน ซึ่งมีเผ่าพันธุ์ยะอ์ญูจญ์และมะอ์ญูจญ์เป็นตัวแทน</p>
+      <p>เรื่องราวนี้ถือกำเนิดขึ้นในยุคคลาสสิกผ่านวรรณกรรม “อเล็กซานเดอร์ โรมานซ์” (Alexander Romance) ผลงานชิ้นนี้บอกเล่าชีวิตและการผจญภัยของอเล็กซานเดอร์มหาราชซึ่งส่วนใหญ่ดูเหมือนจะเป็นเรื่องแต่งแต้มจินตนาการ และได้แพร่หลายไปทั่วดินแดนตะวันออกใกล้ในช่วงศตวรรษแรกๆของคริสตกาลและยุคต้นของอิสลาม นอกจากนี้ เรื่องราวของกำแพงหรือ “เขื่อนกั้น” ยังปรากฏในพระมหาคัมภีร์อัลกุรอาน บทอัลกะฮ์ฟี โดยมีตัวเอกคือบุคคลผู้เป็นที่รู้จักในนาม “ซุลก็อรนัยน์”</p>
+
+      <h2 class="article-h2">มังกรกับปีแห่งมังกร</h2>
+      <p>ปี ค.ศ. 1280 ซึ่งเป็นปีที่อัลกอซวีนีจรดปากกาเสร็จสิ้นภารกิจรวบรวมสารานุกรมของท่านนั้น ตรงกับ “ปีมะโรง” หรือ “ปีมังกร” ตามปฏิทินมองโกลพอดี และ “มังกร” นั้นเป็นนัยยะเปรียบเปรยถึงอำนาจแห่งความโกลาหลที่ขับเคลื่อนอยู่ในโลก เป็นอำนาจที่มุ่งหมายจะทำลายล้างอารยธรรมในสงครามชั่วนิรันดร์ที่ต่อกรกับอำนาจแห่งพระผู้เป็นเจ้าผู้จัดระเบียบจักรวาล ในสารานุกรมของอัลกอซวีนี เราพบหัวข้อว่าด้วย “มังกร” (<span class="ar-inline" lang="ar" dir="rtl">التنين</span>) ในบทที่เกี่ยวกับสัตว์ทะเล ซึ่งมีใจความว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">تنين، حيوان عظيم الخلقة، هائل المنظر، طويل الجثة، عريضها، كبير الرأس، براق العينين، واسع الفم والجوف، كثير الأسنان، يبلع من الحيوان ما لا يحصى، كافة حيوانات الماء لشدة قوته، وإذا تحرك تموج البحر من سباحته، وإذا امتلأ جوفه من الحيوان أتخم وتقوس، ورفع وسطه من الماء مثل قوس قزح، ليستمرئ ما في بطنه بحرارة الشمس...</blockquote>
+      <p class="ar-translation">“มังกร สัตว์ที่มีสรีระมหึมา รูปลักษณ์น่าสะพรึงกลัว ลำตัวยาวและกว้าง ศีรษะใหญ่โต ดวงตาวาวโรจน์ ปากและช่องท้องกว้างขวาง ฟันดกหนา ด้วยพละกำลังอันมหาศาล มันกลืนกินสัตว์อื่นจนสุดคณานับ กินสัตว์น้ำได้แทบทั้งมวล ยามเมื่อมันขยับกาย ท้องทะเลจะปั่นป่วนด้วยแรงแหวกว่าย และเมื่อท้องของมันเต็มไปด้วยสัตว์ที่กินเข้าไป มันจะจุกเสียดและโก่งตัว ยกส่วนกลางของลำตัวขึ้นเหนือน้ำดุจสายรุ้ง เพื่อย่อยสิ่งที่อยู่ในท้องด้วยความร้อนจากดวงอาทิตย์...</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">روى شداد بن أفلح المقري، قال: كنت في مجلس عمر البقالي، فجرى ذكر التنين، فقال: أتدرون كيف يكون التنين؟ قلنا: لا، قال: قد يكون حية في البر متمردة، تأكل من دواب البر حتى تعظم، فإذا كثر فسادها ضجّت دواب الأرض منها، فيرسل الله تعالى إليها ملكاً يحملها ويلقيها في البحر،</blockquote>
+      <p class="ar-translation">ชัดดาด บิน อัฟละห์ อัลมุกรีได้เล่าว่า: ข้าพเจ้าเคยอยู่ในวงสนทนาของอุมัร อัลบักกอลี เมื่อมีการเอ่ยถึงมังกร เขาได้ถามขึ้นว่า: พวกท่านรู้หรือไม่ว่ามังกรนั้นเกิดขึ้นได้อย่างไร? พวกเราตอบว่า: ไม่รู้ เขาจึงกล่าวว่า: เดิมทีมันอาจเป็นงูบนบกที่ดุร้าย เที่ยวกัดกินสัตว์บกจนตัวใหญ่โต เมื่อมันก่อความวิบัติหนักเข้า เหล่าสัตว์บนหน้าแผ่นดินต่างส่งเสียงร้องระงมร้องทุกข์ อัลลอฮ์ตะอาลาจึงทรงส่งเทวทูตลงมาแบกมันไปทิ้งลงในทะเล</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فتفعل بدواب البحر فعلها بدواب البر، فيعظم جسمها فتضج دواب البحر أيضاً منها، فيبعث الله تعالى ملكاً ليخرج رأسها من البحر فيتدلى سحاب فيحملها ويلقيها إلى يأجوج ومأجوج،</blockquote>
+      <p class="ar-translation">ณ ที่ทะเลเอง มันก็กระทำต่อสัตว์ทะเลเฉกเช่นที่เคยทำต่อสัตว์บก ร่างกายของมันขยายใหญ่โตขึ้นจนสัตว์ทะเลต่างส่งเสียงร้องระงม อัลลอฮ์ตะอาลาจึงทรงส่งเทวทูตมาดึงหัวมันขึ้นจากน้ำ แล้วก้อนเมฆก็ลอยต่ำลงมาแบกมันไปโยนทิ้งให้แก่พวกยะอ์ญูจญ์และมะอ์ญูจญ์</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولقد حملتها السحابة من بحر أنطاكية، فضربت بذنبها سور المدينة فرمت بضعة عشر من أبراجها. ويقال إن السحاب الموكل بها يختطفها حيثما رآها كما تختطف المغناطيس الحديد، فلا تطلع رأسها من الماء خوفاً من السحاب، ولا تخرج إلا في القيظ إذا صحت الدنيا</blockquote>
+      <p class="ar-translation">ครั้งหนึ่ง เมฆเคยแบกมังกรตัวหนึ่งมาจากทะเลแอนติอ็อก หางของมันฟาดเข้ากับกำแพงเมืองจนหอคอยพังทลายลงไปสิบกว่าแห่ง ว่ากันว่าเมฆที่ได้รับมอบหมายหน้าที่นี้จะโฉบจับมังกรทันทีที่เห็น ราวกับแม่เหล็กดูดเหล็ก ด้วยเหตุนี้ มันจึงไม่กล้าโผล่หัวขึ้นเหนือน้ำเพราะกลัวเมฆ และจะไม่ออกมานอกจากในช่วงฤดูร้อนยามที่ท้องฟ้าปลอดโปร่งเท่านั้น”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>ข้อมูลในส่วนนี้ได้นำเสนอเกร็ดความรู้ทั่วไปเกี่ยวกับมังกรและพฤติกรรมอันเป็นเอกลักษณ์ของมัน และในบทสรุปได้ยืนยันว่า อานุภาพการทำลายล้างของมันนั้นเป็นสิ่งที่สามารถควบคุมยับยั้งได้ ตามนิยามของอัลกอซวีนีในบทนำของสารานุกรม “มังกร” ถูกจัดอยู่ในหมวดหมู่ของ “สิ่งพิศวง” ท่านอธิบายว่าสิ่งพิศวงคือเหตุการณ์ที่เกิดขึ้นได้ยาก ขัดแย้งกับความคุ้นชินและสิ่งที่พบเห็นได้ทั่วไป อัลกอซวีนีตระหนักดีว่าผู้อ่านร่วมสมัยและเหล่าลูกศิษย์อาจไม่ปักใจเชื่อในการมีอยู่ของสิ่งพิศวงมากมายที่ระบุไว้ในตำรา แต่ท่านใคร่ขอให้พวกเขาพิจารณามันอย่างจริงจัง แม้มันจะดูประหลาดเหลือเชื่อเพียงใด ด้วยเจตนาให้พวกเขาสืบเสาะหา “สัจธรรมที่ซ่อนเร้น” และทำความเข้าใจในนัยยะเชิงสัญลักษณ์ของปรากฏการณ์ธรรมชาติและสิ่งที่เหนือธรรมชาติ</p>
+      <p>เป็นที่แน่ชัดว่า คนร่วมยุคสมัยและลูกศิษย์ของอัลกอซวีนีสามารถจดจำรูปลักษณ์ของมังกรได้เมื่อแรกเห็นในต้นฉบับปี ค.ศ. 1280 เพราะในช่วงเวลานี้เองที่องค์ประกอบของ “มังกรจีน” ได้ก้าวเข้าสู่ศิลปะอิสลามเป็นครั้งแรก เป็นไปได้มากว่าพวกเขาจำแนกมันในฐานะมังกรจีนหรือมังกรจากบูรพาทิศ ลูกศิษย์เหล่านี้คือทายาทของชนชั้นนำผู้พ่ายแพ้ที่เอาชีวิตรอดมาได้ และย่อมเป็นไปไม่ได้เลยที่พวกเขาจะมองข้ามความเชื่อมโยงนี้ พวกเขาคงมองมังกรที่เที่ยวระรานสร้างความวิบัติไปทั่วทั้งผืนดินและแผ่นน้ำ ว่าเป็น “ภาพสะท้อนเชิงอุปมา” ของกองทัพมองโกลที่กรีฑาทัพมาจากดินแดนตะวันออกอันไกลโพ้น</p>
+      <p>ยังมีอีกหนึ่งบันทึกที่น่าสนใจเกี่ยวกับมังกร ปรากฏในต้นฉบับภาษาเปอร์เซียปี ค.ศ. 1388 ซึ่งสันนิษฐานว่าผลิตขึ้นในแบกแดด รู้จักกันในชื่อ “อะญาอิบ นามะฮ์” (หนังสือแห่งความอัศจรรย์) หรือ “อะญาอิบ อัลมัคลูกอต” ฉบับภาษาเปอร์เซีย ประพันธ์โดยมุฮัมมัด บิน มะห์มูด บิน อะห์มัด อัฏฏูซี อัสสัลมานี บันทึกนี้นำเสนอเรื่องเล่าของอัลบักกอลีเกี่ยวกับมังกรในฉบับย่อและในบริบทที่ต่างออกไป โดยกล่าวถึงคุณสมบัติของเมฆที่สามารถดึงดูดมังกรจากทะเลและเหวี่ยงพวกมันขึ้นมาบนบก เราได้อ่านพบว่า มังกรไม่กล้าโผล่หัวจากห้วงลึกของมหาสมุทรเพราะเกรงกลัวเมฆ เฉกเช่นแม่เหล็กที่ดึงดูดเหล็ก เมฆก็ดึงดูดหัวมังกรฉันนั้น</p>
+      <p>จากนั้นเป็นเรื่องเล่าของอัลบักกอลีที่ว่า มังกรนั้นดุร้าย ไล่กินงูบนบกและปลาในทะเลจนร่างกายมหึมา หางยาวถึงหนึ่งฟัรซัค (ประมาณ 5-6 กม.) จนเหล่าสัตว์ทะเลร้องทุกข์ต่ออัลลอฮ์ถึงความชั่วร้ายของมัน พระองค์จึงส่งเมฆมาดึงดูดมังกรแล้วนำไปทิ้งยังดินแดนของยะอ์ญูจญ์และมะอ์ญูจญ์เพื่อเป็นอาหารแก่พวกมัน แนบท้ายบันทึกนี้มีภาพวาดของมังกรยักษ์กำลังกลืนกินมนุษย์ โดยมีคนอีกหกคนห้อมล้อมหยอกล้อกับมัน พวกเขาถูกวาดในสภาพเปลือยเปล่าเพื่อสื่อถึงความป่าเถื่อน ซึ่งเราอนุมานจากบริบทได้ว่า หกคนนั้นคือชนเผ่ายะอ์ญูจญ์และมะอ์ญูจญ์นั่นเอง</p>
+      <p>แม้การดำรงอยู่ของชาวมองโกลจะเป็นข้อเท็จจริงทางประวัติศาสตร์ แต่การเปรียบเปรยพวกเขาเป็นชนเผ่าคนเถื่อนและมังกรในตำนานผ่านวรรณกรรมยุคนั้น มีจุดประสงค์เพื่อเชื่อมโยงพวกเขาเข้ากับ “อำนาจแห่งความโกลาหลอันนิรันดร์” ของโลกใบนี้ ในสมรภูมินี้ “มังกร” คือสัญลักษณ์แห่งความโกลาหลวุ่นวาย ในขณะที่ “เมฆ” ที่โฉบจับมันจากเบื้องบน คือสัญญาณแห่ง “อำนาจแห่งพระผู้เป็นเจ้า” ที่สยบทุกสิ่ง</p>
+
+      <h2 class="article-h2">เมื่อสิ่งสามัญกลายเป็นความอัศจรรย์</h2>
+      <p>ไม่ใช่เรื่องแปลกอันใดที่ผลงานชิ้นนี้ ตลอดจนงานเขียนอื่นๆ ที่ว่าด้วยความมหัศจรรย์ จะพรรณนาถึงเรื่องราวที่คุ้นเคยและเป็นสามัญวิสัย มากกว่าที่จะกล่าวถึงปรากฏการณ์เหนือธรรมชาติอันพิสดาร และในสารานุกรมของอัลกอซวีนีนั้น บทที่ว่าด้วยพฤกษชาติและพันธุ์ไม้นานา กินเนื้อที่ถึง 31 หน้ากระดาษ และประกอบไปด้วยภาพวาดถึง 193 ภาพ จนผู้ที่พลิกหน้าสมุดข่อยเล่มนี้อาจสำคัญผิดคิดว่าเป็นตำราพฤกษศาสตร์ เนื้อหาที่ว่าด้วยเรื่องราวสามัญธรรมดา ไม่ใช่เรื่องอิทธิปาฏิหาริย์เหล่านี้ ครอบงำพื้นที่ส่วนใหญ่ในต้นฉบับยุคแรกๆ และดูเหมือนว่ามูลเหตุแห่งปรากฏการณ์นี้ คือความโหยหาของชนชั้นนำผู้พ่ายแพ้ ที่ปรารถนาจะรำลึกถึงสิ่งที่คุ้นเคยและรู้จักมักคุ้น ท่ามกลางกระแสความโกลาหลวุ่นวายที่โหมกระหน่ำในยุคสมัยนั้น</p>
+      <p>เป็นที่ประจักษ์ชัดว่า อัลกอซวีนีและเหล่าปราชญ์ร่วมสมัย ปรารถนาที่จะตอกย้ำถึงการดำรงอยู่และความต่อเนื่องของระเบียบแห่งพระผู้เป็นเจ้า ที่ขับเคลื่อนจักรวาลไปตามครรลองอันแม่นยำ แม้นว่าโลกเบื้องล่างอาจดูเหมือนกำลังพลิกคว่ำคะมำหงาย แต่ระบบระเบียบแห่งฟากฟ้านั้นยังคงทำงานอย่างเที่ยงธรรม จากมโนทัศน์นี้เอง สิ่งสามัญธรรมดาเฉกเช่นดอกไม้สักดอกหรือผึ้งสักตัว จึงปรากฏเป็นปรากฏการณ์อันน่าอัศจรรย์ แม้มันจะเป็นสิ่งที่พบเห็นได้ทั่วไปในยามปกติ แต่ในห้วงเวลาที่ “ไม่ปกติ” มันกลับดูวิเศษพิศวง หากเราพินิจมันในฐานะฟันเฟืองหนึ่งของระบบจักรวาลที่ดำรงอยู่บนกฎเกณฑ์อันละเอียดอ่อนและซับซ้อนยิ่ง</p>
+      <p>กวีร่วมสมัยอย่างมะห์มูด ดาร์วิช (เสียชีวิต ค.ศ. 2008) ได้พรรณนาถึงความโหยหาสิ่งปกติสามัญในยามที่บ้านเมืองลุกเป็นไฟด้วยความขัดแย้ง ไว้ในผลงาน “ซากิเราะฮ์ ลิลนิสยาน” ความว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن من طبيعة الحروب أن تحقّر الرموز، وتعود بعلاقات البشر والمكان والعناصر والوقت إلى خاماتها الأولى، لنفرح بماء يتدفق من ماسورة مكسورة على طريق، لأن الماء هنا يتقدم منا معجزة</blockquote>
+      <p class="ar-translation">“ธรรมชาติของสงคราม มักจะลดทอนคุณค่าของสัญลักษณ์<br>และฉุดกระชากความสัมพันธ์ของมนุษย์ สถานที่, องค์ประกอบ และกาลเวลา<br>ให้หวนคืนสู่ธาตุแท้ดั้งเดิมของมัน<br>เพื่อให้เราได้ปีติยินดีกับเพียงแค่น้ำที่พุ่งออกมาจากท่อประปาที่แตกบนท้องถนน<br>เพราะ ณ ที่แห่งนั้น สายน้ำได้รินไหลมาหาเราประหนึ่งดั่งปาฏิหาริย์”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+
+      <!-- CITATION (อ้างอิงบทความนี้): replace title + CATEGORY/SLUG + year (พ.ศ.), Rule 40. -->
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). มังกรและกาลอวสานของโลก. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/al-qazwini-marvels-and-the-dragon.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <!-- BIBLIOGRAPHY: Arabic sources, numbered; each ↑ back-links to its #fnref-N.
+         Native script, no translation (Rule 6). Keep ids in sync with the <sup> refs. -->
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">القرآن الكريم، سورة الأنبياء (21)، الآيتان 96-97. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">القزويني، زكريا بن محمد. عجائب المخلوقات وغرائب الموجودات. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">درويش، محمود. ذاكرة للنسيان. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
