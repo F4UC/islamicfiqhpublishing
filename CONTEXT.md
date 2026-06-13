@@ -4,7 +4,7 @@
 
 ## Stack & Workflow
 - Static site บน Cloudflare Pages
-- Repo: if-publishing/islamicfiqhpublishing
+- Repo: F4UC/islamicfiqhpublishing
 - Branch: main (production); งานทุกชิ้น cut **fresh branch ใหม่จาก main ต่อ task** (เช่น `claude/<short-task>` หรือ `tarikh-<slug>`) — ห้าม push ตรง main
 - เปิด PR → Cloudflare preview → QA/byte-QC → **owner-merge เท่านั้น** (เอเยนต์ห้าม merge)
 - Components: components/header.html + components/footer.html inject ผ่าน main.js
@@ -48,7 +48,7 @@
 ## กฎสำคัญ (CLAUDE.md)
 - Rule 15: ใช้อัญประกาศโค้ง "..." ในเนื้อหาที่ผู้อ่านเห็น (ไม่ใช้ใน HTML attribute)
 - Rule 24: Amiri (Arabic), Sarabun (Thai body), Inter (English) + IBM Plex Sans Thai (heading)
-- Rule 51: QOTD setInterval = 9000ms (9 วินาที) ห้ามเปลี่ยน
+- Rule 51: QOTD setInterval = 19000ms ห้ามเปลี่ยน
 - Rule 1-4: ห้ามตัดทอน/แต่งเติมเนื้อหาวิชาการ
 - มาตรฐานวิชาการ: ทุก claim ต้องมีแหล่งปฐมภูมิจริง (ผู้แต่ง/ชื่อเรื่อง/สำนักพิมพ์/ปี/เลขหน้า) — ห้ามสร้าง citation ลอย
 
