@@ -1,10 +1,12 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all 62 rules below before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all **74 rules (ข้อ 1–74), plus sub-rules 12.1/12.2 and House-Style S1–S8**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+>
+> **★ Rule 71 (Child-Safety Override) supersedes every fidelity/coverage rule, for every agent. Read it first. ★**
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (62 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (74 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -127,7 +129,7 @@
   - **ความสูงบรรทัด:** กำหนด `line-height: 2.4` สำหรับย่อหน้าที่มีส่วนผสมอาหรับ เพื่อป้องกันสระอาหรับซ้อนทับ
 
 * **กฎข้อที่ 51:** **[มาตรฐานส่วน QUOTE OF THE DAY]** ระบบวาทะปราชญ์ประจำวัน (QOTD) ต้องปฏิบัติตามข้อกำหนดต่อไปนี้อย่างเคร่งครัด:
-  - **ความถี่ในการสลับ:** `setInterval` ใช้ค่า **9,000ms (9 วินาที)** เป็นมาตรฐาน ห้ามเปลี่ยนแปลงค่านี้โดยไม่ได้รับอนุมัติจากกองบรรณาธิการ
+  - **ความถี่ในการสลับ:** `setInterval` ใช้ค่า **19,000ms (19 วินาที)** เป็นมาตรฐาน (ตรงกับโค้ดจริงใน `index.html` และ `CONTEXT.md`) ห้ามเปลี่ยนแปลงค่านี้โดยไม่ได้รับอนุมัติจากกองบรรณาธิการ
   - **มาตรฐานตัวบทอาหรับ:** ข้อความอาหรับทุกรายการต้องใส่สระกำกับ (Harakat) ครบถ้วน และต้องระบุ `lang="ar" dir="rtl"` บน element ที่บรรจุตัวบท ห้ามใส่อัญประกาศหรือจุด (.) ในฟิลด์ `ar` โดยเด็ดขาด
   - **[สำคัญมาก] ความถูกต้องและสมบูรณ์ของตัวบท:** หากผู้เขียน/กองบรรณาธิการ **ระบุตัวบทมาให้โดยตรง** ให้ยึดตามนั้นทุกประการโดยไม่ต้องค้นหาหรือเปลี่ยนแปลงสำนวน แต่ยังต้องปฏิบัติ 2 ข้อนี้: (1) **ใส่สระกำกับ (Harakat)** ให้ครบถ้วนหากยังไม่มี และ (2) **ระบุแหล่งอ้างอิง** (ชื่อหนังสือ/แหล่งข้อมูล) กำกับไว้ทุกครั้ง — แต่หากไม่มีการระบุมาให้ ต้องค้นหาจากอินเทอร์เน็ตและแหล่งปฐมภูมิเพื่อยืนยันว่าตัวบทไม่ถูกตัดตอน ไม่มีคำเกิน และการระบุผู้กล่าวถูกต้อง
   - **มาตรฐานคำแปลภาษาไทย:** คำแปลต้องใช้ภาษาธรรมชาติที่สอดคล้องกับโทนของแหล่งที่มา (กวี, วรรณกรรม, เทววิทยา, หรือการเมือง) — ถูกต้อง, เข้าใจง่าย, กระชับ; ใช้ `\n` ในตำแหน่งที่สอดคล้องกับจุดหยุดธรรมชาติเพื่อควบคุมการตัดบรรทัดบนมือถือ
@@ -197,7 +199,7 @@
 
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 62 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 74 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -282,7 +284,7 @@
   - **Line height:** Set `line-height: 2.4` on paragraphs containing inline Arabic to prevent diacritic overlap.
 
 * **Rule 51:** **[QUOTE OF THE DAY Standard]** The QOTD system must comply with the following requirements:
-  - **Rotation interval:** `setInterval` is fixed at **9,000ms (9 seconds)**. Do not change this value without editorial approval.
+  - **Rotation interval:** `setInterval` is fixed at **19,000ms (19 seconds)** (matching the live code in `index.html` and `CONTEXT.md`). Do not change this value without editorial approval.
   - **Arabic text standard:** Every Arabic entry must carry full Harakat (diacritics), with `lang="ar" dir="rtl"` on the containing element. Quotation marks and periods (`.`) are strictly prohibited inside the `ar` field.
   - **[Critical] Text completeness & attribution:** If the author/editor **explicitly provides the text**, accept it as-is without searching or altering the wording — but still: (1) **add full Harakat** if not present, and (2) **cite the source reference** (book title / database). If no text is provided, conduct a web search against primary sources to verify the text is not truncated, contains no spurious words, and that the attribution is accurate.
   - **Thai translation standard:** Translations must use natural language matching the tone of the source (poetry, literature, theology, or political writing) — accurate, easy to understand, and concise. Use `\n` at natural sentence-break positions to control mobile line wrapping.
@@ -447,7 +449,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 **ขั้นตอนบังคับทุกครั้ง (non-negotiable):**
 - **Byte-diff ยืนยัน:** ก่อน-หลัง ต้องพิสูจน์ว่า skeleton (โครงพยัญชนะหลังลบสระ) ตรงกับต้นฉบับ/แหล่งทุกตัวอักษร — ใช้สคริปต์ strip-marks เทียบ ไม่เดาด้วยตา
-- **Log ใน `AUDIT-FIXES.md`:** ทุกการแตะตัวอาหรับต้องบันทึก (ไฟล์/บล็อก/แหล่ง/เลขอ้างอิง/ผล byte-diff) ในไฟล์ `AUDIT-FIXES.md` ที่รากโปรเจกต์
+- **Log ใน `AUDIT-FIXES.md`:** ทุกการแตะตัวอาหรับต้องบันทึก (ไฟล์/บล็อก/แหล่ง/เลขอ้างอิง/ผล byte-diff + **blob SHA ของบล็อกอาหรับ** เป็นหลักฐานยืนยัน byte-exact) ในไฟล์ `AUDIT-FIXES.md` ที่รากโปรเจกต์
 - **ไม่เจอสำนวนตรงในแหล่ง canonical → คง bare ตามต้นฉบับ + FLAG (กฎ 1)** ห้ามตัดสินใจแก้สำนวน/skeleton โดยลำพัง
 - **ห้าม Purge** จนกว่าเจ้าของจะสั่ง (Custom Purge เฉพาะ URL หลัง merge เท่านั้น — ห้าม Purge Everything)
 
@@ -464,3 +466,72 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 ## Integrity checks
 - After any change, confirm via the diff that ONLY the intended files changed.
 - Regression-check shared/protected files (article.css, main.js, any multi-article HTML) against other live articles before merge. Verify by diff + rendering — do not rely on hardcoded byte counts (they go stale on every edit).
+
+---
+
+## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง (Section 14 — Rules 71–74)
+
+* **กฎข้อที่ 71:** **★[ความปลอดภัยเด็ก — Child-Safety Override · เหนือกฎความครบถ้วนทุกข้อ · บังคับกับทุกเอเยนต์]★** หากต้นฉบับจาก Drive หรือเนื้อหาใดๆ มีสาระที่ทำให้**ผู้เยาว์เป็นวัตถุทางเพศ (sexualizes a minor)** มาตรการนี้อยู่เหนือกฎ 1/49/56 และเกตทุกชนิด ให้ปฏิบัติโดยเด็ดขาด:
+  1. **PASS-with-flag (ตัดทิ้ง ไม่ใช่ปัดตก):** ถือว่าบทความ "ผ่าน" ได้โดย**ตัด (drop) เฉพาะส่วนที่ละเมิดออกทั้งหมด** แล้วตั้ง **child-safety flag** กำกับ — ส่วนที่ตัดนี้**ไม่นับในตัวหารของ coverage (กฎ 72)** การตัดตามกฎนี้ไม่ถือว่า coverage ตก
+  2. **ห้าม build / surface / quote / reproduce / restore เด็ดขาด:** ห้าม**สร้าง (build) บทความ**ที่มีสาระนั้น, คัดลอก อ้างถึง ทำซ้ำ กู้คืน หรือแสดงสาระนั้น ไม่ว่าในบทความ, PR/commit, log, ข้อความแชท หรือที่ใด — แม้เพื่ออธิบายก็ตาม (อธิบายได้เฉพาะ "ตำแหน่ง" ไฟล์/บล็อกเท่านั้น)
+  3. **Route แล้วหยุด:** แจ้งตำแหน่ง (ไฟล์/บล็อก) ต่อ **One และ Claude** ทันที แล้ว**หยุด** รอการตัดสิน
+  4. **No self-merge:** **ห้ามเอเยนต์ใดๆ merge** บทความ/PR ที่ติด child-safety flag โดยเด็ดขาด เฉพาะ One เท่านั้นที่ตัดสิน (สอดคล้อง pipeline owner-merge)
+  *English:* Child-safety overrides fidelity, for every agent. If any source/content sexualizes a minor: (1) PASS-with-flag — drop only the offending span and set a child-safety flag; the dropped span is excluded from the Rule 72 coverage denominator; (2) never surface, quote, reproduce, or restore it anywhere (article, PR, commit, log, chat) — report only its location; (3) route the location to One + Claude and stop; (4) no agent may self-merge a child-safety-flagged article — only the owner decides.
+
+* **กฎข้อที่ 72:** **[VERBATIM — เกตความครบถ้วนเนื้อหา ≥ 99% · Content Coverage Gate]** บทความใหม่ทุกบทต้องผ่านเกตวัดความครบถ้วนก่อน publish: สัดส่วน **char-diff coverage ระหว่างเนื้อหาที่เผยแพร่ (`.article-body`) กับต้นฉบับ Drive ต้อง ≥ 99%**
+  - **Harakat-normalized:** ก่อนเทียบ ให้ลบฮะเราะกาต **U+064B–U+0652 ทั้งสองฝั่ง** และ normalize ช่องว่าง (การถอดสระตามกฎ 60 ไม่ใช่การตัดเนื้อหา จึงต้องไม่ถูกนับเป็น diff)
+  - **★ child-safety drop ไม่นับ denominator ★:** ส่วนที่ถูกตัดตามกฎ 71 ให้**หักออกจากตัวหาร**ก่อนคำนวณ (ไม่ทำให้ coverage ตกเพราะการตัดเชิงความปลอดภัย)
+  - **วัดด้วยสคริปต์เท่านั้น** (เช่น `scripts/coverage.py`) ห้ามประเมินด้วยตา และรายงานเป็น % ใน PR
+  - ห้าม condense / ย่อ / ถอดความ (สอดคล้องกฎ 1/56) — artifact ของการวัด (H1 ใน hero นอก body, การสลับลำดับบล็อกกลอน, การ normalize ทับศัพท์/ลูกศรเส้นทาง) ไม่ถือเป็นเนื้อหาหาย แต่ต้องตรวจยืนยันว่าไม่มีประโยคจริงหาย
+
+* **กฎข้อที่ 73:** **[Normalize ทับศัพท์ตาม corpus · Transliteration Corpus Normalization]** การทับศัพท์ชื่อเฉพาะ/คำเทคนิคต้อง normalize ให้ตรง**รูปที่ corpus ใช้บ่อยที่สุด (corpus-dominant)** เพื่อความสม่ำเสมอทั้งเว็บ (ไม่ย้อนแก้บทเก่าเว้นแต่สั่ง) ตารางเริ่มต้น (seed — ขยายเพิ่มได้เมื่อ normalize คำใหม่):
+
+  | ใช้ (canonical) | ห้าม (deprecated) | หมายเหตุ |
+  |---|---|---|
+  | เศาะหาบะฮ์ | ศอฮาบัต | ṣaḥābah |
+  | อัลญาฮิซ | อัลญาฮิส | al-Jāḥiẓ |
+  | เศาะลาฮุดดีน | ศอลาฮุดดีน | Ṣalāḥ al-Dīn |
+  | บัยบัรส์ | ไบบาร์ส · ไบบัรส์ | Baybars |
+  | นิซอมุลมุลก์ | นิซามุลมุลก์ | Niẓām al-Mulk |
+
+  ขอบเขต: ใช้กับ**ร้อยแก้วไทย**เท่านั้น **ห้ามแตะตัวบทอาหรับ / อายะฮ์ / หะดีษ / ชื่อในบล็อก `lang="ar"`** (สอดคล้องกฎ 7/8/53/60); คำที่มีกฎสะกดเฉพาะแล้ว (12.1 ศอเฮี้ยะฮ์, 12.2 มัสฮับ) ให้ยึดกฎนั้น
+
+* **กฎข้อที่ 74:** **[มาตรฐานความมั่นคงและ HTTP headers · Security & Headers Policy]** นโยบายความมั่นคงกำหนดไว้ใน **`docs/SECURITY.md`** (authoritative) บังคับใช้จริงผ่าน **`_headers`** สาระบังคับ:
+  - **CSP** บังคับใน `_headers` — **★ห้ามตัด `'unsafe-inline'` จาก `script-src`/`style-src` และห้าม refactor inline event handler (`onclick` ฯลฯ) / inline `<script>` ในเทมเพลต-บทความ★** เพราะ control bar + chrome + no-flash theme bootstrap พึ่งพา inline เหล่านี้ทั้งเว็บ การ harden CSP ต้องผ่าน One เท่านั้น
+  - **Cache:** `/*.html` ต้อง `Cache-Control: no-cache, no-store, must-revalidate` (กันเสิร์ฟ HTML เก่า) กำหนดใน `_headers`
+  - **Branch protection / ruleset:** push ตรง `main` ถูกบล็อก (503) ทุกการเปลี่ยนแปลงต้องผ่าน PR → preview → QA/byte-QC → **owner-merge**; **เอเยนต์ห้าม merge `main`, ห้าม Purge Everything** (Custom Purge เฉพาะ URL หลัง merge) สอดคล้องกฎ 66 + Push & safety discipline · บทที่ติด child-safety flag (กฎ 71) ห้าม merge จนกว่า One ตัดสิน
+  - รายละเอียดทั้งหมด: **`docs/SECURITY.md`**
+
+---
+
+## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security (Rules 71–74)
+
+* **Rule 71:** **★[Child-Safety Override · supersedes every fidelity/coverage rule · binds every agent]★** If any Drive source or other content sexualizes a minor, this measure overrides Rules 1/49/56 and every gate. Act decisively:
+  1. **PASS-with-flag (drop, do not reject):** the article may be considered "passing" by **dropping only the offending span entirely** and setting a **child-safety flag** — the dropped span is **excluded from the Rule 72 coverage denominator**; a drop under this rule does not lower coverage.
+  2. **Never build / surface / quote / reproduce / restore:** never **build** an article containing that substance, nor copy, cite, reproduce, restore, or display it — whether in an article, PR/commit, log, chat, or anywhere — not even to explain it (you may state only the file/block "location").
+  3. **Route then stop:** report the location (file/block) to **One and Claude** immediately, then **stop** and await the decision.
+  4. **No self-merge:** **no agent may merge** an article/PR carrying a child-safety flag — only One decides (consistent with the owner-merge pipeline).
+
+* **Rule 72:** **[VERBATIM — Content Coverage Gate ≥ 99%]** Every new article must pass a completeness gate before publish: the **char-diff coverage between the published content (`.article-body`) and the Drive source must be ≥ 99%**.
+  - **Harakat-normalized:** before comparing, strip harakat **U+064B–U+0652 on both sides** and normalize whitespace (de-voweling per Rule 60 is not content removal and must not register as a diff).
+  - **★ child-safety drop is excluded from the denominator ★:** spans dropped under Rule 71 are **subtracted from the denominator** before computing (a safety drop must not lower coverage).
+  - **Measured by script only** (e.g. `scripts/coverage.py`) — never by eye — and reported as a % in the PR.
+  - No condensing / abridging / paraphrasing (per Rules 1/56) — measurement artifacts (the H1 in the hero outside `.article-body`, reordering of verse blocks, transliteration/path-arrow normalization) are not lost content, but verify no real sentence is missing.
+
+* **Rule 73:** **[Transliteration Corpus Normalization]** Transliteration of proper nouns / technical terms must normalize to the **corpus-dominant form** for site-wide consistency (do not retro-fix old articles unless instructed). Seed table (expand as new terms are normalized):
+
+  | Use (canonical) | Prohibited (deprecated) | Note |
+  |---|---|---|
+  | เศาะหาบะฮ์ | ศอฮาบัต | ṣaḥābah |
+  | อัลญาฮิซ | อัลญาฮิส | al-Jāḥiẓ |
+  | เศาะลาฮุดดีน | ศอลาฮุดดีน | Ṣalāḥ al-Dīn |
+  | บัยบัรส์ | ไบบาร์ส · ไบบัรส์ | Baybars |
+  | นิซอมุลมุลก์ | นิซามุลมุลก์ | Niẓām al-Mulk |
+
+  Scope: **Thai prose only**. **Never touch Arabic text / Quran / Hadith / names inside `lang="ar"` blocks** (per Rules 7/8/53/60); terms with a dedicated spelling rule (12.1 ศอเฮี้ยะฮ์, 12.2 มัสฮับ) follow that rule.
+
+* **Rule 74:** **[Security & HTTP Headers Policy]** The security policy lives in **`docs/SECURITY.md`** (authoritative), enforced at the edge via **`_headers`**. Mandatory points:
+  - **CSP** is enforced in `_headers` — **★never remove `'unsafe-inline'` from `script-src`/`style-src`, and never refactor inline event handlers (`onclick`, etc.) / inline `<script>` in templates or articles★**, because the control bar + chrome + no-flash theme bootstrap depend on them site-wide. Hardening CSP requires One's approval only.
+  - **Cache:** `/*.html` must be `Cache-Control: no-cache, no-store, must-revalidate` (to avoid serving stale HTML), set in `_headers`.
+  - **Branch protection / ruleset:** direct push to `main` is blocked (503); every change goes through PR → preview → QA/byte-QC → **owner-merge**; **agents never merge `main` and never Purge Everything** (Custom Purge by URL only, after merge), consistent with Rule 66 + Push & safety discipline. Child-safety-flagged articles (Rule 71) must not be merged until One decides.
+  - Full details: **`docs/SECURITY.md`**

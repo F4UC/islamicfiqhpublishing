@@ -5,10 +5,10 @@
 ## Stack & Workflow
 - Static site บน Cloudflare Pages
 - Repo: F4UC/islamicfiqhpublishing
-- Branch: main (production) + claude/rules-full-update-kGLfz (deploy/dev — ต้อง sync กับ main เสมอ)
-- พัฒนาบน claude/rules-full-update-kGLfz เสมอ แล้ว merge เข้า main
+- Branch: main (production); งานทุกชิ้น cut **fresh branch ใหม่จาก main ต่อ task** (เช่น `claude/<short-task>` หรือ `tarikh-<slug>`) — ห้าม push ตรง main
+- เปิด PR → Cloudflare preview → QA/byte-QC → **owner-merge เท่านั้น** (เอเยนต์ห้าม merge)
 - Components: components/header.html + components/footer.html inject ผ่าน main.js
-- ก่อนแก้โค้ดทุกครั้ง อ่าน /mnt/skills/.claude/skills/debug-harris/SKILL.md และ CLAUDE.md (51 ข้อ)
+- ก่อนแก้โค้ดทุกครั้ง อ่าน .claude/skills/debug-harris/SKILL.md และ CLAUDE.md (74 ข้อ: 1–74 + 12.1/12.2 + S1–S8)
 
 ## Design System
 - Reference: SpaceX, Tesla — dark, minimal, ไม่มี decoration, typography เด่น
