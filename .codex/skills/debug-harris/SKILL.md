@@ -29,11 +29,12 @@ If the user asks for speed or says to skip the checklist, apply the protocol sil
 ## Project constraints
 
 - Do not remove, simplify, or alter Islamic academic content unless the user explicitly approves the exact content change.
+- **Child safety overrides fidelity (CLAUDE.md Rule 71), for every agent.** If a Drive source or any content sexualizes a minor: drop only the offending span and set a child-safety flag (PASS-with-flag); never surface, quote, reproduce, or restore it anywhere — report only its location to the owner (One) + Claude and stop. Never self-merge a child-safety-flagged article.
 - Do not sacrifice animations, visual identity, Arabic typography, QOTD behavior, or editorial charter compliance without calling out the tradeoff first.
 - Treat DNS, SSL, Cloudflare Workers/Pages, cache, and deployment state as separate layers.
 - Record absolute times or concrete dates when diagnosing recent deploy/DNS/cache behavior.
-- Always develop on branch `claude/rules-full-update-kGLfz`, then merge to `main` to trigger Cloudflare deploy.
-- After pushing to `main`, wait for Cloudflare to deploy (typically 30–60 seconds), then fetch the live URL to verify.
+- **Always cut a fresh branch from the latest `main`** for each task (name it `claude/<short-task>`), open a PR, and let the **owner merge** to trigger the production Cloudflare deploy. **Agents never push or merge to `main`.**
+- After the owner merges to `main`, Cloudflare deploys (typically 30–60 seconds); the owner (or an agent on request) then fetches the live URL to verify.
 
 ## 1. Reproduce
 

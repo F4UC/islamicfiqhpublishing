@@ -1,6 +1,6 @@
 # Golden Master — เกณฑ์ "ความเป็นดาราศาสตร์"
 
-> บทความอ้างอิง (golden master): `articles/nitisart/moon-sighting-vs-astronomy.html` (main @ 559d4c7)
+> บทความอ้างอิง (golden master): `articles/nitisart/moon-sighting-vs-astronomy.html` (main @ 4b208b2)
 > โครงเปล่า: `articles/_TEMPLATE.html`
 > เอกสารนี้ = เช็คลิสต์ที่ **บทความใหม่ทุกบท** ต้องผ่านก่อน merge เข้า main
 > ขอบเขต: บังคับใช้กับบทใหม่ตั้งแต่ ดาราศาสตร์ เป็นต้นไป (บทเก่าไม่ย้อนทำ)
@@ -14,7 +14,8 @@
 - [ ] `<head>` ครบและเรียงลำดับเหมือน template: theme-bootstrap script, description/keywords/author, OG (title/description/image/type=article/url), twitter:card, theme-color `#e3edf7`, viewport, fonts, favicons
 - [ ] โหลด `article.css?v=…` และ `main.js?v=…` ด้วย **เวอร์ชันสตริงล่าสุด** ตรงกับ golden master (ยึดเวอร์ชันจาก `articles/_TEMPLATE.html` ปัจจุบันเป็นความจริง — เอกสารนี้ไม่ระบุเลขตายตัว ห้ามอ้างเลขในเอกสารนี้แทนไฟล์จริง) — ถ้า bump เวอร์ชันต้อง bump พร้อมกันทั้งเว็บ
 - [ ] `<body id="article-page" … data-article-id="SLUG">` — `SLUG` = ชื่อ slug จริงของบทความ และต้องมี entry ใน `articles.json`
-- [ ] meta-og:url + canonical ชี้ path จริง `…/articles/<category>/<slug>.html`
+- [ ] **`articles.json`: เพิ่มเป็น union-entry** (append) — **ห้าม `id` ซ้ำ**, JSON parse ผ่าน, แก้ merge-conflict โดยคงทุก entry เดิม (Rule 55/57); diff ต้องแตะเฉพาะ entry ใหม่ ไม่กระทบ `readingTime` บทอื่น
+- [ ] meta-og:url **และ `<link rel="canonical">`** ต้องมีทั้งคู่และ**ตรงกันเป๊ะ** ชี้ path จริง `…/articles/<category>/<slug>.html` (N-A)
 - [ ] asset paths ใช้ `../../` (root-clamp) ไม่ใช้ absolute domain
 
 ## 2. Hero / feature image
@@ -32,6 +33,7 @@
 
 ## 4. ร้อยแก้วไทย & การจัดย่อหน้า
 - [ ] เนื้อหาไทยตรงกับ Google Doc ต้นฉบับ **ทุกบรรทัด** (เทียบ A1 ↔ Doc ก่อน publish)
+- [ ] **Coverage gate (Rule 72): char-diff coverage ≥ 99%** เทียบต้นฉบับ Drive — **harakat-normalized** (ลบ U+064B–U+0652 สองฝั่ง) + normalize ช่องว่าง; วัดด้วยสคริปต์ (`scripts/coverage.py`) ห้ามด้วยตา · **ส่วนที่ตัดตาม Rule 71 (child-safety) ไม่นับ denominator** · รายงาน % ใน PR
 - [ ] จัดย่อหน้าตาม "หน่วยความคิด" ของ Doc ไม่ใช่ตามบรรทัดว่างทางกายภาพ:
       Doc ต้นฉบับมักคั่นบรรทัดว่างแทบทุกประโยค ห้าม map 1:1 จนได้ย่อหน้าประโยคเดียว
       เรียงเป็นท่อนสั้นๆ — ประโยคที่อยู่ใน argument/ประเด็นเดียวกันต่อเนื่องกัน
@@ -65,6 +67,7 @@
 - [ ] footnote ลิงก์สองทาง: `#ref-N` ↔ `#fnref-N` ครบทุกคู่ ไม่มี orphan
 - [ ] บรรณานุกรมเป็น Arabic, เรียงเลข, มี back-link ↑ กลับไปจุดอ้างใน body
 - [ ] กล่อง "อ้างอิงบทความนี้" (citation) มี APA ไทย + ปุ่มคัดลอก ตามรูปแบบ golden master
+- [ ] **exemplar มาตรฐานอยู่ใน `articles/_TEMPLATE.html`** (footnote `<sup class="fn-ref">` → `<section class="bibliography-section"><ol class="bibliography">`); ใช้เมื่อบทมีอายะฮ์/หะดีษหรืออ้างแหล่งที่ต้องเชิงอรรถ — บทประวัติศาสตร์ที่ใช้ inline attribution ล้วน (ไม่มีอายะฮ์/หะดีษ) ไม่ต้องมี footnote/bibliography
 - [ ] **ห้ามกุ quote ปราชญ์** — อ้างเฉพาะ primary source ที่ verify แล้ว; จะค้านต้นฉบับได้ต่อเมื่อมี counter-source จริง
 
 ## 7. เวลาอ่าน (Rule 55/57)
@@ -87,6 +90,8 @@
 
 ## 10. Merge gate
 - [ ] ทุกข้อ 1–9 PASS แล้วเท่านั้น
+- [ ] **★ Child-safety (Rule 71): ถ้ามี child-safety flag ห้าม merge เด็ดขาด ★** — route ให้ One ตัดสิน เอเยนต์ห้าม self-merge
+- [ ] **Beta byte-QC** ผ่าน: Arabic skeleton byte-exact (byte-diff + blob SHA), coverage ≥ 99% (Rule 72) — ก่อนถึงขั้น owner-merge
 - [ ] A1 fetch per-deployment URL (ไม่ใช่ branch alias ที่อาจ cache เก่า / ไม่ใช่ production ที่ WAF 403) verify เนื้อหา + เวลาอ่าน
 - [ ] ผู้ใช้ eyeball control bar บนมือถือ (โหมดกลางวัน + สลับสองโหมด)
 - [ ] merge ผ่าน GitHub API/PR (push ตรง main ถูกบล็อก 503)

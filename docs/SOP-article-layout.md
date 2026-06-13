@@ -178,7 +178,7 @@ CSS แนะนำ:
 ```
 Read /mnt/skills/.claude/skills/debug-harris/SKILL.md, CLAUDE.md,
 and the attached SOP-article-layout.md first.
-Develop on branch claude/rules-full-update-kGLfz, merge to main when done.
+Cut a fresh branch from main per task (e.g. claude/<short-task> or tarikh-<slug>); open a PR — owner merges (agents never push/merge to main).
 
 TASK: Convert the attached article <ชื่อไฟล์>.docx into a new HTML
 article page following SOP-article-layout.md EXACTLY.
@@ -219,7 +219,7 @@ OUTPUT:
 - bump version query strings in main.js to today's date
 
 CONSTRAINTS:
-- All 51 rules in CLAUDE.md remain in force
+- All 74 rules in CLAUDE.md remain in force (ข้อ 1–74 + sub 12.1/12.2 + House Style S1–S8)
 - Strict citation integrity — do not alter author, title, dates, or any reference
 - After deploy, also confirm the new article appears in the category list
   and (later) gets added to sitemap.xml
