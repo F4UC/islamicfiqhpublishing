@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>อุมัร ค็อยยาม: ปราชญ์ผู้ปฏิรูปปฏิทินและบุกเบิกทฤษฎีสมการกำลังสาม — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ชีวประวัติของอุมัร ค็อยยาม ปราชญ์แห่งยุคเซลจุก ผู้บุกเบิกทฤษฎีสมการกำลังสามด้วยภาคตัดกรวย ปฏิรูปปฏิทินศักราชจาลีลี และเจ้าของบทกวีรุไบยาตอันโด่งดัง">
+<meta name="keywords" content="ประวัติศาสตร์, อุมัร ค็อยยาม, คณิตศาสตร์, ดาราศาสตร์, พีชคณิต, รุไบยาต, สมการกำลังสาม, เซลจุก">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="อุมัร ค็อยยาม: ปราชญ์ผู้ปฏิรูปปฏิทินและบุกเบิกทฤษฎีสมการกำลังสาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="จากหอดูดาวแห่งอิสฟาฮานถึงบทกวีรุไบยาต เส้นทางของอุมัร ค็อยยาม นักคณิตศาสตร์ผู้บุกเบิกทฤษฎีสมการกำลังสามและปฏิรูปปฏิทิน">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/omar-khayyam-mathematician-and-poet.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/omar-khayyam-mathematician-and-poet.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<!-- PLACEMENT: copy this file to articles/<CATEGORY>/<SLUG>.html (depth 2). The ../../
+     asset paths resolve to the repo root from there (and from this preview path too,
+     via root-clamping). Set data-article-id="SLUG" and add the matching entry to
+     articles.json so the byline + reading time inject (Rules 55/57). -->
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="omar-khayyam-mathematician-and-poet">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<!-- HERO — DEFAULT = no-hero (Rule 67): solid banner + eyebrow + H1, NO <img> (กัน 404).
+     เติม hero image ทีหลังเป็น batch ได้. แทนที่ CATEGORY (path+label) และ ARTICLE_TITLE. -->
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <!-- ARTICLE_TITLE: H1 text only; em-dash + site name go in <title> (Rule 44) -->
+      <h1 class="article-feature-title">อุมัร ค็อยยาม: ปราชญ์ผู้ปฏิรูปปฏิทินและบุกเบิกทฤษฎีสมการกำลังสาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">อุมัร ค็อยยาม คือปราชญ์ผู้เป็นทั้งกวีและนักคณิตศาสตร์ เขาได้รวบรวมตารางดาราศาสตร์ และมีส่วนในการปฏิรูปปฏิทิน และค้นพบวิธีการทางเรขาคณิตเพื่อแก้สมการกำลังสาม ด้วยการหาจุดตัดระหว่างพาราโบลากับวงกลม</p>
+      <p>ชื่อเต็มของอุมัร ค็อยยามคือ ฆิยาษุดดีน อะบุลฟัตห์ อุมัร บุตรแห่งอิบรอฮีม อันนัยซาบูรีย์ อัลค็อยยามีย์ หากแปลตามตัวอักษร นามสกุล “อัลค็อยยามีย์” (หรือ อัลค็อยยาม) หมายถึง “ผู้ทำกระโจม” ซึ่งอาจเป็นอาชีพของอิบรอฮีม บิดาของเขาเอง</p>
+
+      <h2 class="article-h2">โลกของเซลจุกและเส้นทางของนักปราชญ์</h2>
+      <p>เหตุการณ์ทางการเมืองในศตวรรษที่ 11 มีบทบาทสำคัญอย่างยิ่งต่อเส้นทางชีวิตของค็อยยาม ชาวเติร์กเผ่าเซลจุกคือชนเผ่าที่รุกรานเอเชียตะวันตกเฉียงใต้ในศตวรรษที่ 11 และได้สถาปนาจักรวรรดิที่ครอบคลุมเมโสโปเตเมีย และพื้นที่ส่วนใหญ่ของอิหร่านในเวลาต่อมา ชาวเซลจุกได้เข้ายึดครองทุ่งหญ้าในแคว้นคุรอซาน และระหว่างปี ค.ศ. 1038 ถึง 1040 ก็ได้พิชิตดินแดนทางตะวันออกเฉียงเหนือของอิหร่านทั้งหมด โตฆรุล เบก ผู้ปกครองเซลจุก ได้ประกาศตนเป็นสุลต่านที่เมืองนีชาปูร์ในปี ค.ศ. 1038 และเข้าสู่กรุงแบกแดดในปี ค.ศ. 1055</p>
+      <p>ค็อยยามได้ศึกษาวิชาปรัชญาที่เมืองนีซาปูร์ และหนึ่งในเพื่อนร่วมชั้นของเขาได้บันทึกไว้ว่า เขาคือ…ผู้เปี่ยมด้วยสติปัญญาอันเฉียบแหลมและพรสวรรค์อันสูงสุด…</p>
+      <p>แต่ในจักรวรรดินี้ ชีวิตของบัณฑิตนักปราชญ์ แม้จะมีความรู้สูงส่งเพียงใด ก็หาได้ง่ายดายไม่ เว้นแต่จะได้รับการอุปถัมภ์จากผู้ปกครองในราชสำนักต่างๆ แต่ถึงกระนั้น แม้การอุปถัมภ์นั้นก็มิได้มอบความมั่นคงที่แท้จริงนัก เนื่องจากอำนาจการปกครองในแต่ละท้องถิ่นขึ้นอยู่กับการเมืองและการทหารที่ผันผวนอยู่ตลอดเวลา ค็อยยามเองได้บรรยายถึงความยากลำบากของเหล่าผู้รู้ในยุคสมัยนั้นไว้ในบทนำของตำรา “ว่าด้วยการพิสูจน์ปัญหาแห่งพีชคณิต” ของเขาว่า:</p>
+      <blockquote class="thai-quote">“ข้าพเจ้ามิอาจทุ่มเทให้กับการศึกษาพีชคณิตและจดจ่ออยู่กับมันได้อย่างต่อเนื่อง ด้วยอุปสรรคจากความผันผวนแห่งยุคสมัยที่คอยขัดขวาง ด้วยว่าเราได้สูญสิ้นผู้รู้ไปจนเกือบหมดสิ้นแล้ว เหลือเพียงคนกลุ่มน้อยที่ต้องเผชิญกับความยากลำบากมากมาย ความใส่ใจของพวกเขาในชีวิตนี้คือการฉกฉวยโอกาสในยามที่กาลเวลาเผลอไผล เพื่ออุทิศตนให้กับการสืบค้นและสร้างสรรค์ศาสตร์ให้สมบูรณ์</blockquote>
+      <blockquote class="thai-quote">เหตุเพราะคนส่วนใหญ่ที่แสร้งทำตนเป็นนักปราชญ์นั้น มักสับสนระหว่างของจริงกับของปลอม ไม่ทำสิ่งใดนอกจากหลอกลวงและเสแสร้งว่ามีความรู้ และไม่เคยใช้ความรู้ทางวิทยาศาสตร์ที่ตนมี เว้นแต่เพื่อจุดประสงค์ทางวัตถุอันต่ำช้า และหากพวกเขาเห็นผู้ใดที่เสาะแสวงหาสัจธรรมและความถูกต้อง พยายามอย่างสุดกำลังที่จะหักล้างความเท็จและสิ่งที่ไม่จริง พร้อมทั้งละทิ้งความหน้าไหว้หลังหลอกและการหลอกลวง พวกเขาก็จะเยาะเย้ยและมองว่าผู้นั้นเป็นคนโง่เขลา”</blockquote>
+      <p>อย่างไรก็ตาม ค็อยยามคือนักคณิตศาสตร์และนักดาราศาสตร์ผู้มีความสามารถเป็นเลิศ และถึงแม้จะมีความยากลำบากดังที่เขาบรรยายไว้ เขาก็ได้ประพันธ์ผลงานหลายชิ้นตั้งแต่อายุยังไม่ถึง 25 ปี ซึ่งรวมถึงตำราปัญหาคณิตศาสตร์ ตำราเกี่ยวกับดนตรี และตำราพีชคณิตอีกหนึ่งเล่ม ในปี ค.ศ. 1070 เขาย้ายไปยังเมืองซามาร์กันด์ในประเทศอุซเบกิสถาน ซึ่งเป็นหนึ่งในเมืองที่เก่าแก่ที่สุดในเอเชียกลาง ที่นั่นค็อยยามได้รับการอุปถัมภ์จากอะบู ฏอฮิร นักนิติศาสตร์ผู้ทรงอิทธิพลแห่งซามาร์กันด์ ซึ่งทำให้เขาสามารถเขียนผลงานพีชคณิตชิ้นเอกที่มีชื่อเสียงที่สุด นั่นคือ “Treatise on Demonstration of Problems of Algebra” (ว่าด้วยการพิสูจน์ปัญหาแห่งพีชคณิต) ซึ่งเราได้คัดย่อคำพูดของเขามาในตอนต้น ส่วนเนื้อหาทางคณิตศาสตร์จะกล่าวถึงในลำดับต่อไป</p>
+      <p>โตฆรุล เบก ผู้ก่อตั้งราชวงศ์เซลจุก ได้สถาปนาเมืองอิสฟาฮานขึ้นเป็นเมืองหลวงแห่งอาณาจักร และมาลิก ชาห์ ผู้เป็นพระราชนัดดาของพระองค์ ก็ได้ขึ้นเป็นผู้ปกครองเมืองแห่งนี้ในปี ค.ศ. 1073 มาลิก ชาห์ และราชมนตรีนิซอม อัลมุลก์ ได้ส่งคำเชิญไปยังค็อยยามให้เดินทางมายังอิสฟาฮานเพื่อก่อตั้งหอดูดาวขึ้นที่นั่น นักดาราศาสตร์ชั้นนำคนอื่นๆ ก็ถูกเชิญมายังหอดูดาวแห่งอิสฟาฮานเช่นกัน ตลอดระยะเวลา 18 ปี ค็อยยามได้เป็นผู้นำคณะนักวิทยาศาสตร์และสร้างสรรค์ผลงานคุณภาพเป็นเลิศ ช่วงเวลานั้นเป็นยุคแห่งสันติสุข ซึ่งสถานการณ์ทางการเมืองเอื้ออำนวยให้ค็อยยามได้อุทิศตนให้กับงานวิชาการอย่างเต็มที่</p>
+
+      <h2 class="article-h2">การปฏิรูปปฏิทินและความแม่นยำของศักราชจาลีลี</h2>
+      <p>ในช่วงเวลานี้ ค็อยยามได้เป็นผู้นำในการรวบรวมตารางดาราศาสตร์ และยังมีส่วนสำคัญในการปฏิรูปปฏิทินในปี ค.ศ. 1079 โดยโคเวลล์ (Cowell) ได้อ้างอิงบทความจาก The Calcutta Review ฉบับที่ 59 ว่า: “เมื่อมาลิก ชาห์ ทรงมีพระประสงค์จะปฏิรูปปฏิทิน อุมัรคือหนึ่งในแปดนักปราชญ์ที่ได้รับมอบหมายให้ทำงานนี้ ผลลัพธ์ที่ได้คือ ปฏิทิน ‘ศักราชจาลีลี’ (ซึ่งตั้งชื่อตามญาลาลุดดีน หนึ่งในพระนามของกษัตริย์) เป็นปฏิทินที่เหนือกว่าปฏิทินจูเลียน และมีความแม่นยำเทียบเคียงได้กับปฏิทินเกรกอเรียน’</p>
+      <p>ค็อยยามคำนวณความยาวของปีได้เท่ากับ 365.24219858156 วัน ซึ่งผลลัพธ์นี้มีข้อสังเกตสองประการคือ</p>
+      <p>ประการแรก มันแสดงให้เห็นถึงความเชื่อมั่นอย่างน่าเหลือเชื่อที่พยายามจะให้ผลลัพธ์ที่มีความแม่นยำในระดับทศนิยมขนาดนี้ เรารู้กันในปัจจุบันว่าความยาวของปีนั้นเปลี่ยนแปลงอยู่ตลอดในช่วงชีวิตของคนคนหนึ่ง</p>
+      <p>ประการที่สอง มันมีความแม่นยำอย่างยิ่ง เมื่อเปรียบเทียบกันแล้ว ความยาวของปีในช่วงปลายศตวรรษที่ 19 คือ 365.242196 วัน ในขณะที่ปัจจุบันคือ 365.242190 วัน</p>
+      <p>ในปี ค.ศ. 1092 เหตุการณ์ทางการเมืองได้ยุติช่วงเวลาแห่งความสงบสุขของค็อยยามลง มาลิก ชาห์ สิ้นพระชนม์ในเดือนพฤศจิกายนของปีนั้น เพียงหนึ่งเดือนหลังจากราชมนตรีนิซอม อัลมุลก์ถูกลอบสังหารระหว่างเดินทางจากอิสฟาฮานไปยังแบกแดดโดยขบวนการก่อการร้ายที่รู้จักกันในนาม “กลุ่มนักฆ่า” (Assassins)</p>
+      <p>พระมเหสีองค์ที่สองของมาลิก ชาห์ ขึ้นมามีอำนาจปกครองอยู่สองปี แต่เนื่องจากพระนางทรงขัดแย้งกับนิซอม อัลมุลก์ มาก่อน ผู้ที่เคยได้รับการสนับสนุนจากเขาจึงถูกถอนการอุปถัมภ์ทั้งหมด เงินทุนสำหรับดำเนินงานหอดูดาวถูกระงับ และโครงการปฏิรูปปฏิทินของค็อยยามก็ต้องหยุดชะงักลง นอกจากนี้ ค็อยยามยังถูกโจมตีจากกลุ่มมุสลิมสายอนุรักษ์นิยมที่รู้สึกว่า ความคิดช่างซักถามของเขาไม่สอดคล้องกับหลักศรัทธา</p>
+      <p>แม้จะตกเป็นที่รังเกียจจากทุกฝ่าย ค็อยยามก็ยังคงอยู่ในราชสำนักและพยายามจะกลับมาเป็นที่โปรดปรานอีกครั้ง เขาได้เขียนผลงานชิ้นหนึ่งซึ่งบรรยายถึงเหล่าผู้ปกครองในอดีตของอิหร่านว่าเป็นบุรุษผู้ทรงเกียรติอย่างสูงส่ง ผู้ซึ่งสนับสนุนทั้งงานสาธารณะ วิทยาศาสตร์ และการศึกษา</p>
+      <p>ซันจาร์ พระโอรสองค์ที่สามของมาลิก ชาห์ ซึ่งเป็นผู้ปกครองแคว้นคุรอซาน ได้ขึ้นเป็นประมุขแห่งจักรวรรดิเซลจุกในปี ค.ศ. 1118 หลังจากนั้นไม่นาน ค็อยยามก็ได้เดินทางออกจากอิสฟาฮานไปยังเมืองเมิร์ฟ (ปัจจุบันคือเมืองมารีในประเทศเติร์กเมนิสถาน) ซึ่งซันจาร์ได้สถาปนาขึ้นเป็นเมืองหลวงแห่งใหม่ของจักรวรรดิเซลจุก ที่เมืองเมิร์ฟแห่งนี้ ซันจาร์ได้สร้างศูนย์กลางการเรียนรู้ที่ยิ่งใหญ่ของโลกอิสลามขึ้น ซึ่งเป็นสถานที่ที่ค็อยยามได้ประพันธ์ผลงานทางคณิตศาสตร์เพิ่มเติม</p>
+
+      <h2 class="article-h2">พีชคณิตและทฤษฎีสมการกำลังสาม</h2>
+      <p>เขาได้พิจารณาโจทย์ปัญหาที่ว่า: “จงหาจุดบนหนึ่งในสี่ของวงกลม ซึ่งเมื่อลากเส้นตั้งฉากจากจุดนั้นไปยังรัศมีเส้นหนึ่งที่ประกอบกันเป็นควอดรันต์แล้ว อัตราส่วนของความยาวเส้นตั้งฉากต่อความยาวของรัศมี จะเท่ากับอัตราส่วนของส่วนของเส้นตรงที่ถูกแบ่งโดยจุดปลายของเส้นตั้งฉากนั้น”</p>
+      <p>ค็อยยามได้แสดงให้เห็นว่าปัญหานี้เทียบเท่ากับการแก้ปัญหาข้อที่สอง: “จงหาสามเหลี่ยมมุมฉากที่มีคุณสมบัติว่า ด้านตรงข้ามมุมฉากมีความยาวเท่ากับผลบวกของด้านประกอบมุมฉากด้านหนึ่งกับความสูงที่ลากจากมุมฉากไปยังด้านตรงข้ามมุมฉาก”</p>
+      <p>โจทย์ปัญหานี้ได้นำค็อยยามไปสู่การแก้สมการกำลังสาม x<sup>3</sup> + 200x = 20x<sup>2</sup> + 2000 และเขาได้ค้นพบรากที่เป็นบวกของสมการนี้โดยการพิจารณาจุดตัดของไฮเพอร์โบลามุมฉาก (rectangular hyperbola) และวงกลม</p>
+      <p>หลังจากนั้น เขาได้ค้นพบคำตอบเชิงตัวเลขโดยประมาณด้วยวิธีการประมาณค่าในช่วง (interpolation) จากตารางตรีโกณมิติ แต่สิ่งที่น่าทึ่งยิ่งกว่านั้นก็คือ ข้อเท็จจริงที่ว่า ค็อยยามได้ระบุว่าการแก้สมการกำลังสามนี้จำเป็นต้องใช้ภาคตัดกรวย (conic sections) และไม่สามารถแก้ได้ด้วยวิธีการใช้เพียงไม้บรรทัดและวงเวียน ซึ่งเป็นผลลัพธ์ที่จะได้รับการพิสูจน์ในอีก 750 ปีต่อมา ค็อยยามยังได้เขียนไว้ว่า เขาหวังว่าจะได้นำเสนอคำอธิบายฉบับสมบูรณ์ของผลเฉลยสมการกำลังสามในงานเขียนชิ้นต่อไป “หากโอกาสอำนวยและข้าพเจ้าทำได้สำเร็จ ข้าพเจ้าจะนำเสนอรูปแบบทั้งสิบสี่นี้พร้อมด้วยแขนงและกรณีต่างๆ ทั้งหมด และวิธีแยกแยะว่าสิ่งใดเป็นไปได้หรือเป็นไปไม่ได้ เพื่อจัดทำเป็นบทความที่รวบรวมองค์ประกอบอันเป็นประโยชน์อย่างยิ่งในศาสตร์แขนงนี้”</p>
+      <p>และค็อยยามก็ได้สร้างสรรค์ผลงานชิ้นนั้นขึ้นมาจริงๆ นั่นคือ “Treatise on Demonstration of Problems of Algebra” (ว่าด้วยการพิสูจน์ปัญหาแห่งพีชคณิต) ซึ่งบรรจุการจำแนกประเภทของสมการกำลังสามไว้อย่างสมบูรณ์ พร้อมด้วยผลเฉลยเชิงเรขาคณิตที่ได้จากการหาจุดตัดของภาคตัดกรวย</p>
+      <p>ในความเป็นจริง ค็อยยามได้ให้ข้อมูลเชิงประวัติศาสตร์ที่น่าสนใจ โดยอ้างว่าชาวกรีกโบราณไม่ได้ทิ้งผลงานเกี่ยวกับทฤษฎีสมการกำลังสามไว้เลย และดังที่ค็อยยามเขียนไว้ ผลงานของนักวิชาการรุ่นก่อนหน้าอย่าง อัลมาฮานี และอัลคอซิน เป็นเพียงการแปลงปัญหาเรขาคณิตไปเป็นสมการพีชคณิต</p>
+      <p>อย่างไรก็ตาม ดูเหมือนว่าค็อยยามเองจะเป็นคนแรกที่คิดค้นทฤษฎีทั่วไปของสมการกำลังสามขึ้นมา ค็อยยามได้เขียนไว้ว่า: “ในศาสตร์แห่งพีชคณิต เราจะพบกับปัญหาที่ต้องอาศัยทฤษฎีบทเบื้องต้นบางประเภทที่ยากอย่างยิ่ง ซึ่งผู้ที่พยายามหาคำตอบส่วนใหญ่มักไม่ประสบความสำเร็จ สำหรับชาวกรีกโบราณนั้น ไม่มีผลงานใดๆ จากพวกเขาที่เกี่ยวข้องกับเรื่องนี้ตกทอดมาถึงเราเลย บางทีหลังจากที่พวกเขาได้ค้นหาและตรวจสอบผลเฉลยแล้ว พวกเขาอาจไม่สามารถหยั่งถึงความยากของมันได้ หรือบางทีการสืบค้นของพวกเขาอาจไม่จำเป็นต้องมีการตรวจสอบเช่นนั้น หรือท้ายที่สุด ผลงานของพวกเขาในหัวข้อนี้ หากเคยมีอยู่ ก็อาจไม่ได้รับการแปลเป็นภาษาของเรา”</p>
+      <p>อีกหนึ่งความสำเร็จในตำราพีชคณิตของเขาก็คือ การที่ค็อยยามตระหนักว่าสมการกำลังสามสามารถมีคำตอบได้มากกว่าหนึ่งคำตอบ เขาได้แสดงให้เห็นถึงการมีอยู่ของสมการที่มีสองคำตอบ แต่น่าเสียดายที่ดูเหมือนว่าเขาเองจะยังไม่ค้นพบว่าสมการกำลังสามสามารถมีได้ถึงสามคำตอบ เขามีความหวังว่า “ผลเฉลยเชิงเลขคณิต” อาจถูกค้นพบในวันหนึ่งข้างหน้า ดังที่เขาเขียนไว้ว่า: “บางทีอาจมีคนรุ่นหลังจากเราที่สามารถค้นพบมันได้ ในกรณีที่ไม่ใช่มีเพียงกำลังสามชั้นแรกที่รู้จักกัน คือ ตัวเลข, สิ่งของ (ตัวแปร) และกำลังสอง”</p>
+      <p>ในผลงานชื่อ “Commentaries on the difficult postulates of Euclid's book” (บทวิจารณ์สมมติบทที่ซับซ้อนในหนังสือของยูคลิด) ค็อยยามได้สร้างคุณูปการต่อเรขาคณิตนอกแบบยุคลิด แม้ว่านั่นจะไม่ใช่เจตนาของเขาก็ตาม ในความพยายามที่จะพิสูจน์สัจพจน์เส้นขนาน เขาได้พิสูจน์คุณสมบัติของรูปทรงในเรขาคณิตนอกแบบยุคลิดโดยบังเอิญ</p>
+      <p>นอกจากนี้ ค็อยยามยังได้นำเสนอผลลัพธ์ที่สำคัญเกี่ยวกับอัตราส่วนในหนังสือเล่มนี้ โดยเป็นการต่อยอดงานของยูคลิดให้ครอบคลุมถึงการคูณอัตราส่วนด้วย ความสำคัญในผลงานของค็อยยามคือการที่เขาได้ตรวจสอบนิยามความเท่ากันของอัตราส่วนสองแนวทาง ทั้งนิยามของยูคลิด (ซึ่งเสนอเป็นครั้งแรกโดยยูโดซัส) และนิยามของนักคณิตศาสตร์อิสลามรุ่นก่อนหน้าอย่างอัลมาฮานี ซึ่งมีพื้นฐานอยู่บนเศษส่วนต่อเนื่อง ค็อยยามได้พิสูจน์ว่านิยามทั้งสองนั้นสมมูลกัน เขายังได้ตั้งคำถามว่าอัตราส่วนสามารถถือเป็นจำนวนได้หรือไม่ แต่ก็ไม่ได้ให้คำตอบสำหรับคำถามนั้นไว้</p>
+
+      <h2 class="article-h2">รุไบยาต กวีที่บดบังนักวิทยาศาสตร์</h2>
+      <p>นอกเหนือจากโลกแห่งคณิตศาสตร์ ค็อยยามเป็นที่รู้จักมากที่สุดจากผลงานแปลอันโด่งดังของเอ็ดเวิร์ด ฟิตซ์เจอรัลด์ (Edward Fitzgerald) ในปี ค.ศ. 1859 ซึ่งเป็นบทกวีสี่บาทขนาดสั้นเกือบ 600 บทในชื่อ “รุไบยาต” หรือ “รุบาอียาต” (<span class="ar-inline" lang="ar" dir="rtl">رباعيات</span>) ชื่อเสียงของค็อยยามในฐานะกวีได้บดบังความสำเร็จทางวิทยาศาสตร์ของเขาเอง ซึ่งมีความสำคัญมากกว่าเป็นอย่างมาก จนทำให้บางคนหลงลืมไป รูปแบบและฉันทลักษณ์ที่ใช้ในรุไบยาตนั้น มีอยู่แล้วในวรรณคดีเปอร์เซียก่อนสมัยค็อยยาม และมีเพียงประมาณ 120 บทเท่านั้นที่สามารถระบุได้อย่างแน่ชัดว่าเป็นผลงานของเขา</p>
+      <p>ในบรรดาบทกวีทั้งหมด หนึ่งในบทที่เป็นที่รู้จักมากที่สุดคือ</p>
+      <blockquote lang="en">The Moving Finger writes; and, having writ,<br>
+Moves on: nor all thy Piety nor Wit<br>
+Shall lure it back to cancel half a Line,<br>
+Nor all thy Tears wash out a Word of it.</blockquote>
+      <p class="poem-th">ลิขิตฟ้าเขียนไว้ให้ประจักษ์,<br>
+จะแก้ไขเยียวไฉนไม่สำเร็จ;<br>
+แม้จะวิงวอนด้วยใจภักดิ์,<br>
+จะลบสักกึ่งบรรทัดก็ขัดขวาง;<br>
+ถึงจะร่ำไห้จนน้ำตาตก,<br>
+ก็ไม่อาจลบแม้สักอักษรจาง.</p>
+      <p>คำแปลโดย กรมพระนราธิปประพันธ์พงศ์ ซึ่งทรงแปลเป็นกาพย์และโคลงสี่สุภาพจำนวน 204 บท พิมพ์ครั้งแรก พ.ศ. 2457 หลังสุดพิมพ์ครั้งที่ 6 พ.ศ. 2513 โดยสำนักพิมพ์คลังวิทยา หลังจากนั้นมีผู้แปลอีกหลายคน เช่น แคน สังคีต (พ.ศ. 2508) และสุริยฉัตร ชัยมงคล (พ.ศ. 2528) เป็นต้น</p>
+      <p>บทที่เป็นที่รู้จักกันทั่วไปอีกบทได้แก่</p>
+      <p class="poem-th">ดูหนังดูละคร แล้วย้อนดูตัว ขำอุราน่าหัว เต้นยั่วอย่างฝัน<br>
+ดอกเอ๋ยดอกเจ้า ดอกทานตะวัน ละครคนละคนขัน ประชันกันสนุกเอย</p>
+      <p>ส่วนฉบับที่แปลจากสำนวนแปลภาษาอังกฤษของ โรเบิร์ต เกรฟส์ และโอมาร์ อาลีชาห์ได้แก่สำนวนของวีนัส กิติรังษี (นามปากกาของไรน่าน อรุณรังษี) แปลจากพิมพ์ครั้งแรกเมื่อ พ.ศ. 2521 ต่อมามีการแก้ไขปรับปรุงและตีพิมพ์ใหม่ในนามของน่าน กิติรังษี เมื่อ พ.ศ. 2536 และตีพิมพ์อีกครั้งในนาม ไรน่าน กิติรังษีเมื่อ พ.ศ. 2546 นอกจากนี้ยังมีสำนวนแปลของมนตรี อุมะวิชนี โดยชมรมการประชุมสภากวีโลกเมื่อ พ.ศ. 2546</p>
+
+      <!-- CITATION (อ้างอิงบทความนี้): replace title + CATEGORY/SLUG + year (พ.ศ.), Rule 40. -->
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). อุมัร ค็อยยาม: ปราชญ์ผู้ปฏิรูปปฏิทินและบุกเบิกทฤษฎีสมการกำลังสาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/omar-khayyam-mathematician-and-poet.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <!-- BIBLIOGRAPHY: Latin-script sources only (27 vs 0 Arabic) → LTR / left-aligned
+         (Bibliography & Citation Standard). Plain text (Rule 16). No inline footnote
+         markers in the source, so no fn-back links. -->
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography">
+        <li id="ref-1">B A Rosenfeld, A P Youschkevitch, Biography in Dictionary of Scientific Biography (New York 1970-1990).</li>
+        <li id="ref-2">Biography in Encyclopaedia Britannica.http://www.britannica.com/biography/Omar-Khayyam</li>
+        <li id="ref-3">J L Coolidge, The mathematics of the great amateurs (Oxford, 1949).</li>
+        <li id="ref-4">J N Crossley, The emergence of number(Singapore, 1980).</li>
+        <li id="ref-5">D S Kasir, The Algebra of Omar Khayyam, trans. from Arabic (1972).</li>
+        <li id="ref-6">C H Mossaheb, Hakim Omare Khayyam as an Algebraist (Tehran, 1960).</li>
+        <li id="ref-7">R Rashed and A Djebbar (eds), L'Oeuvre algébrique d'al-Khayyam (Arabic), Sources and Studies in the History of Arabic Mathematics 3(Aleppo, 1981).</li>
+        <li id="ref-8">B A Rozenfel'd and A P Yushkevich, Omar Khayyam (Russian), Akademija Nauk SSSR Izdat.'Nauka' (Moscow, 1965).</li>
+        <li id="ref-9">R Rashed, The development of Arabic mathematics : between arithmetic and algebra (London, 1994).</li>
+        <li id="ref-10">R Rashed, Entre arithmétique et algèbre: Recherches sur l'histoire des mathématiques arabes(Paris, 1984).</li>
+        <li id="ref-11">S G Tirtha, The Nectar of Grace, Omar Khayyam's Life and Works (Allahbad, 1941).</li>
+        <li id="ref-12">A R Amir-Moéz, Khayyam, al-Biruni, Gauss, Archimedes, and quartic equations, Texas J. Sci. 46(3) (1994), 241-257.</li>
+        <li id="ref-13">R C Archibald, Notes on Omar Khayyam (1050-1122) and recent discoveries, Pi Mu Epsilon J. 1 (1953), 350-358.</li>
+        <li id="ref-14">A V Dorofeeva, Omar Khayyam (1048-1131)(Russian), Mat. v Shkole (2) (1989), i, 145-147.</li>
+        <li id="ref-15">A E-A Hatipov, Omar Khayyam and Newton's binomial (Russian), Trudy Samarkand. Gos. Univ. (N.S.) 181 (1970), 84-88.</li>
+        <li id="ref-16">A E-A Hatipov, A trigonometric treatise of Omar Khayyam (?) (Russian), Trudy Samarkand. Gos. Univ. (N.S.) 181 (1970), 83-84.</li>
+        <li id="ref-17">A E-A Hatipov, The first book of Omar Khayyam's treatise on geometry (Russian), Trudy Samarkand. Gos. Univ. (N.S.) Vyp. 107 (1960), 9-16.</li>
+        <li id="ref-18">O Khayyam, A paper of Omar Khayyam, Scripta Math. 26 (1963), 323-337.</li>
+        <li id="ref-19">O Khayyam, The mathematical treatises of Omar Khayyam (Russian), Istor.-Mat. Issled. 6 (1953), 9-112.</li>
+        <li id="ref-20">K M Mamedov and O Khayyam, Newton's binomial formula was first published by Omar Khayyam (Azerbaijani), Izv. Akad. Nauk Azerbaidzan. SSR Ser. Fiz.-Tehn. Mat. Nauk (3)(1972), 3-8.</li>
+        <li id="ref-21">V A Ogannisjan, Omar Khayyam (Russian), Armjan. Gos. Ped. Inst. Sb. Nauv cn. Trud. Ser. Fiz.-Mat. Vyp. 3 (1966), 89-98.</li>
+        <li id="ref-22">B A Rozenfel'd and A P Yushkevich, Notes to the mathematical treatises of Omar Khayyam (Russian), Istor.-Mat. Issled. 6 (1953), 113-172.</li>
+        <li id="ref-23">D Struik, Omar Khayyam, Mathematics Teacher 4(1958), 280-285.</li>
+        <li id="ref-24">B Vahabzadeh, Al-Khayyam's conception of ratio and proportionality, Arabic Sci. Philos. 7 (2)(1997), 159, 161, 247-263.</li>
+        <li id="ref-25">H J J Winter and W Arafat, The algebra of Omar Khayyam, J. Roy. Asiatic Soc. Bengal. Sci. 16(1950), 27-77.</li>
+        <li id="ref-26">P D Yardley, Graphical solution of the cubic equation developed from the work of Omar Khayyam, Bull. Inst. Math. Appl. 26 (5-6) (1990), 122-125.</li>
+        <li id="ref-27">A P Yushkevich, Omar Khayyam and his 'Algebra' (Russian), Akad. Nauk SSSR. Trudy Inst. Istorii Estestvoznaniya 2 (1948), 499-534.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
