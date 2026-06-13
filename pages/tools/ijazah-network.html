@@ -489,10 +489,13 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   .stat-num { font-size:32px; }
 }
 @media(max-width:640px){
-  .cy-wrap { min-height:440px; height:64vh; }
+  .cy-wrap { min-height:440px; height:70vh; display:flex; flex-direction:column; }
+  /* graph leaves the absolute layer so it can sit BELOW the control bar */
+  #cy { position:relative; inset:auto; height:auto; flex:1 1 0; min-height:0; }
   #backToTopBtn { bottom:20px; right:20px; }
-  /* control bar sticks to the top of the graph, full-width, large taps */
-  .cy-controls { left:12px; right:12px; justify-content:flex-end; }
+  /* control bar moves ABOVE the graph (static, full-width) so it never overlaps it */
+  .cy-controls { position:static; order:-1; top:auto; left:auto; right:auto;
+                 justify-content:center; padding:8px 4px 10px; }
   .cy-ctrl { min-width:48px; min-height:48px; }
   .chain-grid { grid-template-columns:1fr; }
   /* Drawer becomes a bottom-sheet on mobile */
@@ -1117,10 +1120,11 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
         { selector: 'node', style: {
             'label': 'data(label)',
             'font-family': 'Amiri, serif',
-            'font-size': '13px',
+            'font-size': '14px',
             'text-valign': 'center', 'text-halign': 'center',
-            'text-wrap': 'none',                 /* exactly one line — no wrap */
-            'width': 'label', 'height': '16px',  /* fixed-ish capsule height */
+            'text-wrap': 'wrap',
+            'text-max-width': '130px',
+            'width': 'label', 'height': 'label',  /* fit the (wrapped) label */
             'padding': '9px',
             'shape': 'round-rectangle',
             'corner-radius': '40px',             /* large radius → reads as a pill */
@@ -1191,9 +1195,25 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       if(evt.target === cy){ clearHighlight(); }
     });
 
+    /* PR D: emphasise hub teachers — scale node size + label by out-degree.
+       Per-element bypass keeps the grade-colour stylesheet (and theme re-skin)
+       intact and untouched; r0 (origin) is excluded so it keeps its special
+       styling. Grade colours / border styles are NOT changed. */
+    (function(){
+      var ods = cy.nodes().map(function(n){ return n.outdegree(false); });
+      var maxOD = ods.length ? Math.max.apply(null, ods) : 0;
+      if(maxOD < 1){ maxOD = 1; }
+      cy.nodes('[isRoot = 0]').forEach(function(n){
+        var od = n.outdegree(false);
+        var sz = 36 + Math.min(od / maxOD * 36, 36);   /* 36–72px */
+        var fs = 13 + Math.min(od / maxOD * 4, 4);      /* 13–17px */
+        n.style({ 'width': sz + 'px', 'height': sz + 'px', 'font-size': fs + 'px' });
+      });
+    })();
+
     var layoutName = dagreReady ? 'dagre' : 'breadthfirst';
     var layoutOpts = dagreReady
-      ? { name:'dagre', rankDir:'TB', nodeSep:24, rankSep:60, edgeSep:12, fit:false }
+      ? { name:'dagre', rankDir:'TB', nodeSep:40, rankSep:80, edgeSep:12, fit:false }
       : { name:'breadthfirst', directed:true, spacingFactor:1.1, fit:false };
     graphLayoutOpts = layoutOpts;   /* FLAG 4: reuse for in-place re-layout */
 
@@ -1245,8 +1265,10 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     /* FLAG 3: scale the ring halo to the live zoom so it tracks r0's
        rendered size at every zoom level (not a fixed CSS size). */
     var z = cy.zoom();
-    emblem.style.left = rp.x + 'px';
-    emblem.style.top  = rp.y + 'px';
+    /* offset by #cy's own position within .cy-wrap so the emblem stays glued to
+       r0 even when #cy is pushed below the control bar (mobile flex column). */
+    emblem.style.left = (wrap.offsetLeft + rp.x) + 'px';
+    emblem.style.top  = (wrap.offsetTop + rp.y) + 'px';
     emblem.style.transform = 'translate(-50%,-50%) scale(' + z + ')';
     emblem.classList.add('ready');
   }
