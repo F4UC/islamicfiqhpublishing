@@ -41,9 +41,10 @@
   --plate-panel2: #E4DDCD;
   --plate-ink:    #161210;   /* near-black ink */
   --plate-red:    #B31B1B;   /* the ONE crimson: origin + holder + path */
-  --plate-green:  #1B7A4A;   /* seal/stamp accent only */
-  --plate-blue:   #2156C8;   /* seal/stamp accent only */
-  --plate-gray:   #6F7785;   /* stone gray seal/pending/weak */
+  --plate-green:  #1B7A4A;   /* legacy seal accent (unused by grades) */
+  --plate-gold:   #c49a45;   /* thiqa — premium brand gold (Rule 29) */
+  --plate-blue:   #2563eb;   /* saduq / maqbul */
+  --plate-gray:   #6b7280;   /* majhul / daif / pending */
   --plate-rule:        rgba(22,18,16,0.12);
   --plate-rule-strong: rgba(22,18,16,0.22);
   --plate-grid:        rgba(22,18,16,0.07);  /* faint plate grid dots */
@@ -88,6 +89,7 @@ html.dark-mode {
   --plate-ink:    #E8E2D4;
   --plate-red:    #d8443f;
   --plate-green:  #3fa56e;
+  --plate-gold:   #d4ad55;
   --plate-blue:   #5b86e6;
   --plate-gray:   #9aa1ab;
   --plate-rule:        rgba(232,226,212,0.13);
@@ -435,11 +437,11 @@ details[open] .legend-summary::after { content:'−'; }
            background:var(--plate-paper); border:2px solid var(--plate-gray); }
 .leg-cap-red       { border-color:var(--plate-red);  }
 .leg-cap-ink       { border-color:var(--plate-ink);  }
-.leg-cap-green     { border-color:var(--plate-green);}
+.leg-cap-gold      { border-color:var(--plate-gold); border-width:3px; }
 .leg-cap-blue      { border-color:var(--plate-blue); }
-.leg-cap-blue-dash { border-style:dashed; border-color:var(--plate-blue); border-width:1.5px; }
-.leg-cap-gray-dot  { border-style:dotted; border-color:var(--plate-gray); border-width:1.5px; }
-.leg-cap-gray-dash { border-style:dashed; border-color:var(--plate-gray); }
+.leg-cap-blue-dash { border-style:dashed; border-color:var(--plate-blue); border-width:2px; }
+.leg-cap-gray-dot  { border-style:dotted; border-color:var(--plate-gray); border-width:2px; }
+.leg-cap-gray-dash { border-style:dashed; border-color:var(--plate-gray); border-width:1.5px; }
 .leg-cap-gray-thin { border-width:1.2px; border-color:var(--plate-gray); }
 .leg-cap-red-dot   { border-style:dotted; border-color:var(--plate-red); }
 .leg-chevron { width:24px; flex-shrink:0; text-align:center; font-family:var(--ui);
@@ -489,10 +491,13 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   .stat-num { font-size:32px; }
 }
 @media(max-width:640px){
-  .cy-wrap { min-height:440px; height:64vh; }
+  .cy-wrap { min-height:440px; height:70vh; display:flex; flex-direction:column; }
+  /* graph leaves the absolute layer so it can sit BELOW the control bar */
+  #cy { position:relative; inset:auto; height:auto; flex:1 1 0; min-height:0; }
   #backToTopBtn { bottom:20px; right:20px; }
-  /* control bar sticks to the top of the graph, full-width, large taps */
-  .cy-controls { left:12px; right:12px; justify-content:flex-end; }
+  /* control bar moves ABOVE the graph (static, full-width) so it never overlaps it */
+  .cy-controls { position:static; order:-1; top:auto; left:auto; right:auto;
+                 justify-content:center; padding:8px 4px 10px; }
   .cy-ctrl { min-width:48px; min-height:48px; }
   .chain-grid { grid-template-columns:1fr; }
   /* Drawer becomes a bottom-sheet on mobile */
@@ -642,10 +647,11 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
           <div class="leg-group-title">ระดับผู้รายงาน (ขอบแคปซูล = คำตัดสิน)</div>
           <div class="leg-item"><span class="leg-cap leg-cap-red"></span>ต้นสาย / ผู้รับสุดท้าย (นบี · ผู้ถือสายสุดท้าย) — แดง</div>
           <div class="leg-item"><span class="leg-cap leg-cap-ink"></span>เศาะหาบะฮ์ — ขอบหมึกเข้ม</div>
-          <div class="leg-item"><span class="leg-cap leg-cap-blue"></span>ษิเกาะฮ์ · เศาะดูก (เชื่อถือได้) — น้ำเงิน ขอบทึบ</div>
-          <div class="leg-item"><span class="leg-cap leg-cap-blue-dash"></span>มักบูล (ยอมรับแบบมีเงื่อนไข) — น้ำเงิน ขอบเส้นประ</div>
-          <div class="leg-item"><span class="leg-cap leg-cap-gray-dot"></span>มัจญ์ฮูล (ไม่ทราบสถานะ) — เทา ขอบจุดประ</div>
-          <div class="leg-item"><span class="leg-cap leg-cap-gray-dash"></span>เฎาะอีฟ (อ่อน ยืนยันแล้ว) — เทา ขอบเส้นประ</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-gold"></span>ษิเกาะฮ์ (ทอง/ทึบหนา — น่าเชื่อถือสูงสุด)</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-blue"></span>เศาะดูก (น้ำเงิน/ทึบ — สัตย์จริง)</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-blue-dash"></span>มักบูล (น้ำเงิน/ประ — มีเงื่อนไข)</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-gray-dot"></span>มัจญ์ฮูล (เทา/จุด — ไม่ทราบประวัติ)</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-gray-dash"></span>เฎาะอีฟ (เทา/ประบาง — อ่อน)</div>
           <div class="leg-item"><span class="leg-cap leg-cap-gray-thin"></span>ไม่ระบุระดับ — เทาเส้นบาง (รอตรวจ)</div>
           <div class="leg-item"><span class="leg-cap leg-cap-red-dot"></span>ช่วงขาด (อินกิฏออฺ) — แดง ขอบจุดประ</div>
         </div>
@@ -780,8 +786,9 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       ink:    plateVar('--plate-ink',    '#161210'),
       red:    plateVar('--plate-red',    '#B31B1B'),
       green:  plateVar('--plate-green',  '#1B7A4A'),
-      blue:   plateVar('--plate-blue',   '#2156C8'),
-      gray:   plateVar('--plate-gray',   '#6F7785')
+      gold:   plateVar('--plate-gold',   '#c49a45'),
+      blue:   plateVar('--plate-blue',   '#2563eb'),
+      gray:   plateVar('--plate-gray',   '#6b7280')
     };
   }
 
@@ -794,11 +801,12 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     switch(gc){
       case 'prophet': return {border:P.red,   width:2.4, style:'solid',  origin:true};
       case 'sahabi':  return {border:P.ink,   width:2,   style:'solid'};
-      case 'thiqa':   return {border:P.blue,  width:2,   style:'solid'};   /* reliable */
-      case 'saduq':   return {border:P.blue,  width:2,   style:'solid'};   /* reliable */
-      case 'maqbul':  return {border:P.blue,  width:1.5, style:'dashed'};  /* conditional acceptance — not equal to saduq */
-      case 'daif':    return {border:P.gray,  width:2,   style:'dashed'};  /* confirmed weak */
-      case 'majhul':  return {border:P.gray,  width:1.5, style:'dotted'};  /* unknown — not confirmed weak */
+      /* colour-blind safe: each grade differs by colour + border-style + width */
+      case 'thiqa':   return {border:P.gold, width:3,   style:'solid'};   /* highest — gold, thick solid */
+      case 'saduq':   return {border:P.blue, width:2,   style:'solid'};   /* truthful — blue solid */
+      case 'maqbul':  return {border:P.blue, width:2,   style:'dashed'};  /* conditional — blue dashed */
+      case 'majhul':  return {border:P.gray, width:2,   style:'dotted'};  /* unknown history — gray dotted */
+      case 'daif':    return {border:P.gray, width:1.5, style:'dashed'};  /* confirmed weak — gray thin dashed */
       case 'gap':     return {border:P.red,   width:2,   style:'dotted'};  /* inqitāʿ: declared break */
       case 'unknown': return {border:P.gray,  width:1.2, style:'solid'};   /* pending status */
       default:        return {border:P.gray,  width:1.2, style:'solid'};
@@ -1117,10 +1125,11 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
         { selector: 'node', style: {
             'label': 'data(label)',
             'font-family': 'Amiri, serif',
-            'font-size': '13px',
+            'font-size': '14px',
             'text-valign': 'center', 'text-halign': 'center',
-            'text-wrap': 'none',                 /* exactly one line — no wrap */
-            'width': 'label', 'height': '16px',  /* fixed-ish capsule height */
+            'text-wrap': 'wrap',
+            'text-max-width': '130px',
+            'width': 'label', 'height': 'label',  /* fit the (wrapped) label */
             'padding': '9px',
             'shape': 'round-rectangle',
             'corner-radius': '40px',             /* large radius → reads as a pill */
@@ -1191,9 +1200,25 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       if(evt.target === cy){ clearHighlight(); }
     });
 
+    /* PR D: emphasise hub teachers — scale node size + label by out-degree.
+       Per-element bypass keeps the grade-colour stylesheet (and theme re-skin)
+       intact and untouched; r0 (origin) is excluded so it keeps its special
+       styling. Grade colours / border styles are NOT changed. */
+    (function(){
+      var ods = cy.nodes().map(function(n){ return n.outdegree(false); });
+      var maxOD = ods.length ? Math.max.apply(null, ods) : 0;
+      if(maxOD < 1){ maxOD = 1; }
+      cy.nodes('[isRoot = 0]').forEach(function(n){
+        var od = n.outdegree(false);
+        var sz = 36 + Math.min(od / maxOD * 36, 36);   /* 36–72px */
+        var fs = 13 + Math.min(od / maxOD * 4, 4);      /* 13–17px */
+        n.style({ 'width': sz + 'px', 'height': sz + 'px', 'font-size': fs + 'px' });
+      });
+    })();
+
     var layoutName = dagreReady ? 'dagre' : 'breadthfirst';
     var layoutOpts = dagreReady
-      ? { name:'dagre', rankDir:'TB', nodeSep:24, rankSep:60, edgeSep:12, fit:false }
+      ? { name:'dagre', rankDir:'TB', nodeSep:40, rankSep:80, edgeSep:12, fit:false }
       : { name:'breadthfirst', directed:true, spacingFactor:1.1, fit:false };
     graphLayoutOpts = layoutOpts;   /* FLAG 4: reuse for in-place re-layout */
 
@@ -1245,8 +1270,10 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     /* FLAG 3: scale the ring halo to the live zoom so it tracks r0's
        rendered size at every zoom level (not a fixed CSS size). */
     var z = cy.zoom();
-    emblem.style.left = rp.x + 'px';
-    emblem.style.top  = rp.y + 'px';
+    /* offset by #cy's own position within .cy-wrap so the emblem stays glued to
+       r0 even when #cy is pushed below the control bar (mobile flex column). */
+    emblem.style.left = (wrap.offsetLeft + rp.x) + 'px';
+    emblem.style.top  = (wrap.offsetTop + rp.y) + 'px';
     emblem.style.transform = 'translate(-50%,-50%) scale(' + z + ')';
     emblem.classList.add('ready');
   }
