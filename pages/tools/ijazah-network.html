@@ -437,6 +437,8 @@ details[open] .legend-summary::after { content:'−'; }
 .leg-cap-ink       { border-color:var(--plate-ink);  }
 .leg-cap-green     { border-color:var(--plate-green);}
 .leg-cap-blue      { border-color:var(--plate-blue); }
+.leg-cap-blue-dash { border-style:dashed; border-color:var(--plate-blue); border-width:1.5px; }
+.leg-cap-gray-dot  { border-style:dotted; border-color:var(--plate-gray); border-width:1.5px; }
 .leg-cap-gray-dash { border-style:dashed; border-color:var(--plate-gray); }
 .leg-cap-gray-thin { border-width:1.2px; border-color:var(--plate-gray); }
 .leg-cap-red-dot   { border-style:dotted; border-color:var(--plate-red); }
@@ -640,9 +642,10 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
           <div class="leg-group-title">ระดับผู้รายงาน (ขอบแคปซูล = คำตัดสิน)</div>
           <div class="leg-item"><span class="leg-cap leg-cap-red"></span>ต้นสาย / ผู้รับสุดท้าย (นบี · ผู้ถือสายสุดท้าย) — แดง</div>
           <div class="leg-item"><span class="leg-cap leg-cap-ink"></span>เศาะหาบะฮ์ — ขอบหมึกเข้ม</div>
-          <div class="leg-item"><span class="leg-cap leg-cap-green"></span>ษิเกาะฮ์ (เชื่อถือได้) — เขียว ขอบทึบ</div>
-          <div class="leg-item"><span class="leg-cap leg-cap-blue"></span>เศาะดูก · มักบูล — น้ำเงิน ขอบทึบ</div>
-          <div class="leg-item"><span class="leg-cap leg-cap-gray-dash"></span>เฎาะอีฟ · มัจญ์ฮูล — เทา ขอบเส้นประ</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-blue"></span>ษิเกาะฮ์ · เศาะดูก (เชื่อถือได้) — น้ำเงิน ขอบทึบ</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-blue-dash"></span>มักบูล (ยอมรับแบบมีเงื่อนไข) — น้ำเงิน ขอบเส้นประ</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-gray-dot"></span>มัจญ์ฮูล (ไม่ทราบสถานะ) — เทา ขอบจุดประ</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-gray-dash"></span>เฎาะอีฟ (อ่อน ยืนยันแล้ว) — เทา ขอบเส้นประ</div>
           <div class="leg-item"><span class="leg-cap leg-cap-gray-thin"></span>ไม่ระบุระดับ — เทาเส้นบาง (รอตรวจ)</div>
           <div class="leg-item"><span class="leg-cap leg-cap-red-dot"></span>ช่วงขาด (อินกิฏออฺ) — แดง ขอบจุดประ</div>
         </div>
@@ -791,11 +794,11 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     switch(gc){
       case 'prophet': return {border:P.red,   width:2.4, style:'solid',  origin:true};
       case 'sahabi':  return {border:P.ink,   width:2,   style:'solid'};
-      case 'thiqa':   return {border:P.green, width:2,   style:'solid'};
-      case 'saduq':   return {border:P.blue,  width:2,   style:'solid'};
-      case 'maqbul':  return {border:P.blue,  width:2,   style:'solid'};   /* FLAG: maqbul grouped with saduq */
-      case 'daif':    return {border:P.gray,  width:2,   style:'dashed'};
-      case 'majhul':  return {border:P.gray,  width:2,   style:'dashed'};  /* FLAG: majhul treated as daif */
+      case 'thiqa':   return {border:P.blue,  width:2,   style:'solid'};   /* reliable */
+      case 'saduq':   return {border:P.blue,  width:2,   style:'solid'};   /* reliable */
+      case 'maqbul':  return {border:P.blue,  width:1.5, style:'dashed'};  /* conditional acceptance — not equal to saduq */
+      case 'daif':    return {border:P.gray,  width:2,   style:'dashed'};  /* confirmed weak */
+      case 'majhul':  return {border:P.gray,  width:1.5, style:'dotted'};  /* unknown — not confirmed weak */
       case 'gap':     return {border:P.red,   width:2,   style:'dotted'};  /* inqitāʿ: declared break */
       case 'unknown': return {border:P.gray,  width:1.2, style:'solid'};   /* pending status */
       default:        return {border:P.gray,  width:1.2, style:'solid'};
@@ -1055,6 +1058,7 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
      CYTOSCAPE RENDER
      ======================================================== */
   var dagreReady = false;
+  var graphLayoutOpts = null;   /* FLAG 4: stored so Arabic toggle can re-layout in place */
   function ensureDagre(){
     if(dagreReady) return true;
     try {
@@ -1191,6 +1195,7 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     var layoutOpts = dagreReady
       ? { name:'dagre', rankDir:'TB', nodeSep:24, rankSep:60, edgeSep:12, fit:false }
       : { name:'breadthfirst', directed:true, spacingFactor:1.1, fit:false };
+    graphLayoutOpts = layoutOpts;   /* FLAG 4: reuse for in-place re-layout */
 
     var lay = cy.layout(layoutOpts);
     lay.on('layoutstop', function(){
@@ -1216,6 +1221,15 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
         if(n) ele.data('label', nodeLabel(n));
       });
     });
+    /* FLAG 4: node widths change when labels switch Arabic <-> index, so
+       re-run the layout. fit:false keeps the user's current pan/zoom. */
+    if(graphLayoutOpts){
+      var opts = {}; for(var k in graphLayoutOpts){ opts[k] = graphLayoutOpts[k]; }
+      opts.fit = false;
+      var l2 = cy.layout(opts);
+      l2.on('layoutstop', positionOriginEmblem);
+      l2.run();
+    }
   }
 
   /* ── ORIGIN EMBLEM (D): concentric-ring halo glued over r0. Purely
@@ -1228,8 +1242,12 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     var rp = root.renderedPosition();
     var wrap = document.getElementById('cy');
     if(!rp || !wrap){ emblem.classList.remove('ready'); return; }
+    /* FLAG 3: scale the ring halo to the live zoom so it tracks r0's
+       rendered size at every zoom level (not a fixed CSS size). */
+    var z = cy.zoom();
     emblem.style.left = rp.x + 'px';
     emblem.style.top  = rp.y + 'px';
+    emblem.style.transform = 'translate(-50%,-50%) scale(' + z + ')';
     emblem.classList.add('ready');
   }
 
