@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>ปัญญาชนกับอำนาจ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="ปัญญาชนกับอำนาจ บทวิเคราะห์เชิงอะดับว่าด้วยความสัมพันธ์ระหว่างปัญญาชนกับอำนาจทางการเมือง ผ่านวาทะของอิบนุลมุก็อฟฟะอ์ อัลญาฮิซ และมิสกะวัยฮ์">
+<meta name="keywords" content="ประวัติศาสตร์, ปัญญาชน, อำนาจ, อิบนุลมุก็อฟฟะอ์, อัลญาฮิซ, มิสกะวัยฮ์, อะดับ">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ปัญญาชนกับอำนาจ — Islamic Fiqh Publishing">
+<meta property="og:description" content="เมื่อต้องเผชิญหน้ากับอำนาจ ปัญญาชนมักมีทางเลือกอยู่สองทาง คุกเข่าต่ออำนาจ หรือทำตัวสมถะ บทวิเคราะห์เชิงอะดับผ่านวาทะของปราชญ์อาหรับ">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/intellectuals-and-power.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/intellectuals-and-power.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="intellectuals-and-power">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">ปัญญาชนกับอำนาจ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">เมื่อต้องเผชิญหน้ากับอำนาจ ปัญญาชนมักมีทางเลือกอยู่สองทาง</p>
+
+      <h2 class="article-h2">ทางเลือกแรก คุกเข่าต่ออำนาจ</h2>
+      <p>ทางเลือกแรก คือการยอม “หมอบกราบ” คาบแก้วอยู่ใต้เท้าของอำนาจ ยอมถูกบดขยี้ตามความต้องการและรองรับอารมณ์ของอำนาจ เพื่อแลกกับเศษเงินหรือความมีหน้ามีตาที่อาจจะได้รับ หรืออย่างน้อยที่สุด ก็เพื่อรักษาปากท้อง (อาชีพการงาน) อันจืดชืดของตัวเองไว้</p>
+      <p>สถานการณ์นี้บังคับให้เขาต้องเสพติดความเป็นทาส ต้องไปขุดคุ้ยคำศัพท์จากพจนานุกรมแห่งทาส ไม่ว่าจะเป็นตำแหน่งหรือคำขยายความที่แสดงถึงความต่ำต้อย ความอัปยศ และการถูกเหยียดหยาม แล้วเอามาสวมให้ตัวเองจนกลายเป็นตำแหน่งโปรด เช่น ผู้รับใช้ที่ภักดีต่อนายเหนือหัว, ผู้ติดตาม, บ่าวผู้ซื่อสัตย์</p>
+      <p>และนั่นก็อาจจะยังไม่พอ เขายังต้องยกระดับการบูชาเจ้านายของเขา ด้วยตำแหน่งและคำยกยอที่จะทำให้ตัวเขาดูเป็นทาสยิ่งขึ้นไปอีก เช่น นายท่าน, เจ้านายของข้า, ผู้มีพระคุณสูงสุดของข้า</p>
+      <p>และเพื่อให้ไปถึงความสุขจากการเป็นทาสระดับนี้ เขาต้องเชี่ยวชาญในทักษะการเสพติดความเป็นทาสและมีความสุขกับมัน หรือยิ่งไปกว่านั้น คือต้องทำให้เหนือชั้นกว่าคนอื่น เขาจึงต้องทำตัวเป็นนักกายกรรมหรือเป็นปลาไหลที่คอยตีลังกาไหลลื่นไปตามความต้องการและอารมณ์ที่ผันผวนของเจ้านาย</p>
+      <p>อิบนุลมุก็อฟฟะอ์ ได้ให้คำแนะนำเชิงประชดแก่ปัญญาชนประเภทนี้ ถึงวิธีปฏิบัติตัวต่อหน้าผู้มีอำนาจ หรือเจ้านายเพื่อรักษาสถานะความเป็นทาสไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فإن كنت حافظا إن بلوك، جلدا إن قربوك..، تعلمهم وأنت تريهم أنك تتعلم منهم، وتؤدبهم وكأنهم يؤدبونك، تشكرهم ولا تكلفهم الشكر، بصيرا بأهوائهم، مؤثرا لمنافعهم، ذليلا إن ظلموك، راضيا إن أسخطوك، وإلا فالحذر منهم كل الحذر</blockquote>
+      <p class="ar-translation poem-th">“ถ้าหากพวกเขายกย่องท่าน ก็จงอดทนให้มั่น ถ้าพวกเขาเข้ามาใกล้ จงหนักแน่นให้พอ…<br>สอนเขาในขณะที่ทำให้เขารู้สึกว่าท่านก็กำลังเรียนรู้จากเขาอยู่เช่นกัน<br>อบรมเขาในท่าทีราวกับว่าเขาต่างหากที่กำลังอบรมท่าน<br>ขอบคุณเขาโดยไม่ทำให้เขาต้องลำบากตอบแทน<br>รู้เท่าทันความต้องการของเขา ให้ความสำคัญแก่ประโยชน์ของเขา<br>ถ่อมตนแม้เมื่อเขากระทำอยุติธรรมต่อท่าน<br>ยอมรับแม้เมื่อเขาทำให้ท่านไม่พอใจ<br>แต่ถ้าทำไม่ได้เช่นนี้ไซร้ ก็จงระวังพวกเขาให้ถึงที่สุด”</p>
+      <p>นอกจากนี้ ปัญญาชนประเภทนี้ต้องตระหนักอยู่เสมอว่า ตนเองเป็นเพียง “ทาสรับใช้” เท่านั้น เป้าหมายสูงสุดของเขาคือการคอยสรรเสริญเยินยอเจ้านายผู้มีพระคุณของเขาทั้งกลางวันกลางคืน โดยไม่มีสิทธิ์เหนื่อยหรือเบื่อ และไม่ต้องหวังผลตอบแทน...เพราะโดยพื้นฐานแล้ว เขาเป็นแค่ “ผลงานชิ้นหนึ่ง” ที่เจ้านายปั้นขึ้นมา และตัวเขาก็ไม่มีอะไรจะมอบให้เจ้านายได้เลยนอกจากตัวของเขาเอง</p>
+      <p>อิบนุลมุก็อฟฟะอ์ กล่าวในนามของทาสผู้ภักดีว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وإني إن هديتك نفسي فهي ملك لك، لا حظ بها لغيرك، ورميت بطرفي إلى كرائم مالي فوجدتها منك، فإن كنت أهديت منها شيئا فإني لمهد مالك إليك</blockquote>
+      <p class="ar-translation">“และเมื่อข้าฯ มอบตัวตนของข้าฯ แก่ท่านไปแล้ว นั่นย่อมกลายเป็นสมบัติของท่านโดยสมบูรณ์ ไม่มีส่วนใดเหลือไว้ให้ผู้อื่นอีก และเมื่อข้าฯทอดสายตามองดูทรัพย์สินอันล้ำค่าที่ข้าฯมีอยู่ ข้าฯก็พบว่าแท้จริงมันเป็นของท่านอยู่แล้ว ดังนั้น หากข้าฯจะมอบสิ่งใดจากทรัพย์สมบัติเหล่านั้นให้ท่าน ข้าฯก็เพียงแต่มอบ ‘ของของท่าน’ กลับคืนไปให้ท่านเท่านั้นเอง”</p>
+      <p>ปัญญาชนประเภทนี้ต้องตระหนักด้วยว่า ตัวเองเป็นแค่สิ่งที่ไร้ค่า เกียรติยศสูงสุดที่เขามีก็คือการที่ผู้มีอำนาจอนุญาตให้เขานำความรู้ของตนไปรับใช้</p>
+      <p>เขาไม่ควรแม้แต่จะคิดว่าตัวเองมี “ความเห็น” หรือ “สามารถออกความเห็น” เป็นของตัวเอง และแม้ว่าเขาจะเสนอความเห็นอะไรไปให้ผู้ปกครอง ความเห็นนั้นก็จะกลายเป็นสมบัติของผู้มีอำนาจทันที จะเอาไปทำอะไรหรือไม่ทำอะไรก็ได้ แค่การที่เจ้านาย ยอมถามความเห็นจากปัญญาชนเหล่านี้ หรือยอมพูดคุยด้วย ไม่ว่าจะทำตามหรือไม่ก็ตาม ก็ถือเป็นเกียรติยศสูงสุดที่เจ้านายมอบให้แล้ว</p>
+      <p>ดังนั้น อิบนุลมุก็อฟฟะอ์จึงได้เตือนเจ้านายและผู้มีอำนาจว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لا تقذفن في روعك أنك إذا استشرت الرجال ظهر منك الحاجة إلى رأي غيرك</blockquote>
+      <p class="ar-translation poem-th">“อย่าได้ปล่อยให้ความคิดแล่นเข้าสู่ใจว่า เมื่อใดที่เจ้าขอคำปรึกษาจากผู้อื่น<br>ผู้คนจะเห็นว่าเจ้านั้นขาดปัญญา หรือจำต้องพึ่งพาความเห็นใคร”</p>
+      <p>ปัญญาชนประเภทนี้ต้องตระหนักอยู่เสมอว่า ต่อให้เขาจะได้รับยศถาบรรดาศักดิ์หรือผลประโยชน์จากผู้มีอำนาจมากเพียงใด แต่เขาก็ยังคงตกอยู่ในอันตรายตลอดเวลา และในช่วงเวลาใดเวลาหนึ่ง เขาอาจกลายเป็นแพะรับบาป หรือเป็นเหยื่อจากความผิดพลาดเพียงเล็กน้อย หรืออารมณ์ฉุนเฉียวเพียงชั่ววูบของผู้มีอำนาจ</p>
+      <p>บางที เกียรติยศและจุดจบอันน่าสลดของอิบนุลมุก็อฟฟะอ์ อาจเป็นหลักฐานที่ชัดเจนที่สุดของ “ความย้อนแย้ง” ที่น่าเกลียดนี้ อัลญะฮ์ชิยารีย์ได้บันทึกไว้ในหนังสืออัลวุซะรออ์ วัลกุตตาบ ถึงความโหดร้ายของวิธีการประหารชีวิตเขา และผลกระทบที่กว้างขวางที่เกิดขึ้น จนทำให้เคาะลีฟะฮ์ อัลมันศูร ต้องรีบลอยตัวออกจากเหตุการณ์ และโยนความรับผิดชอบทั้งหมดไปให้ผู้ว่าการเมืองบัสเราะห์ เพื่อเอาตัวรอดจากวิกฤตนี้</p>
+
+      <h2 class="article-h2">ทางเลือกที่สอง สมถะ</h2>
+      <p>ส่วนทางเลือกที่สอง ที่รอปัญญาชนอยู่ก็คือ การทำตัวสมถะ ไม่สนใจยศศักดิ์หรือของกำนัลจากผู้มีอำนาจ แต่ถึงอย่างนั้น การทำตัวสมถะที่ว่านี้ก็อาจจะเป็นแค่การเสแสร้ง พูดง่ายๆ ก็คือ สมถะเพราะไม่มีปัญญาที่จะเข้าไปโกยเงินหรือตำแหน่งจากผู้มีอำนาจ</p>
+      <p>เพราะตลาดของชนชั้นสูงและผู้มีอำนาจคือ ตลาดที่คุ้มค่าที่สุดที่บรรดาปัญญาชนต่างพากันไปแย่งชิงพื้นที่กันที่หน้าประตู แต่มันเป็นตลาดที่จำกัด มีแค่ไม่กี่คนที่จะแทรกตัวเข้าไปได้ ที่สำคัญคือ ไม่ใช่ผลงานทุกชิ้นที่จะขายออกในตลาดนี้ได้</p>
+      <p>อัลญาฮิซกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">السلطان سوق، وإنما يجلب إلى كل سوق ما يتفق معها</blockquote>
+      <p class="ar-translation">“ผู้ทรงอำนาจนั้นคือตลาด และคนเราจะเอาของไปขายในตลาดที่เขายอมรับเท่านั้น”</p>
+      <p>ซึ่งนั่นหมายถึง การต้องไปเบียดเสียดกันที่หน้าประตูแห่งอำนาจ, มีคนไปถึงฝั่งฝันน้อยมาก, แถมตำแหน่งที่ได้มาก็ไม่มั่นคง และมีความกลับไปกลับมาตลอดเวลา</p>
+      <p>ปัญญาชนประเภทนี้บางคน อาจจะพยายามอย่างหนักที่จะปฏิเสธว่าตัวเองเป็นปัญญาชนรับจ้าง หรือลบล้างตราบาปที่ว่า “รับใช้อำนาจ” หรือ “คอยเชียร์” ให้ผู้มีอำนาจ</p>
+      <p>พวกเขาจะแสดงความภูมิใจในคุณค่าของตัวเองและคุณค่าของความรู้ที่แบกรับไว้, ประกาศว่า “ตนเองไม่มีไว้ขาย” พวกเขาจะพยายามปฏิเสธและแสดงความรังเกียจการไปแย่งชิงพื้นที่หน้าประตูอำนาจอย่างเต็มที่ แต่...นั่นมันก็ไม่ได้เปลี่ยนความจริงที่ว่า เขาคือหนึ่งในคนที่ “อยากได้” สิ่งนั้นมากที่สุด</p>
+      <p>อย่างมิสกะวัยฮ์ที่เที่ยวประกาศว่าตัวเองหมกมุ่นอยู่กับการใช้เหตุผล, คอยเชิดชูคุณค่าของความรู้และวัฒนธรรม และโอ้อวดเรื่องนี้ตลอดเวลา แต่ความจริงก็คือ เขาใช้ทั้งชีวิตเกาะติดอยู่หน้าประตูบ้านของผู้มีอำนาจ และพยายามหาทองด้วยการเล่นแร่แปรธาตุ เขาใช้เวลาทั้งชีวิตและเหนื่อยทั้งกายใจเพื่อรับใช้สุลต่าน</p>
+      <p>สิ่งที่ตอกย้ำความจอมปลอมของเขาก็คือ “คำสารภาพ” ของตัวเขาเองที่ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الدنيا هذه العاجلة محبوبة، والرفاهية مطلوبة، والمكانة عند الوزراء بكل حول وقوة مخطوبة</blockquote>
+      <p class="ar-translation poem-th">“โลกดุนยาอันฉับไวนี้ เป็นสิ่งที่ผู้คนรักใคร่<br>ความสะดวกสบายผ่อนคลาย เป็นสิ่งที่แสวงหา<br>ส่วนหน้าตาและฐานะใกล้ชิดบรรดารัฐมนตรีนั้น<br>ก็เป็นสิ่งที่ผู้คนหมายปอง ไล่ไขว่คว้าด้วยเรี่ยวแรงและอำนาจทั้งหมดที่มี”</p>
+      <p>และหากปัญญาชนประเภทนี้ตัดสินใจที่จะเคารพในศักดิ์ศรีของตนเองจริงๆ, ภาคภูมิใจในคุณค่าของตนในฐานะผู้ครอบครององค์ความรู้ (ปัญญา) ที่สูงส่งในตัวมันเอง และพึ่งพาความรู้และภูมิปัญญาของตนโดยไม่ง้อผู้มีอำนาจและอิทธิพลของเขา</p>
+      <p>เขายอมถือว่า กินแกลบยังเบากว่าการไปยืนรอหน้าประตูที่พอเข้าใกล้ก็ถูกผลักไส และต้องอดทนต่อความจำเป็นในการหาเลี้ยงชีพจากแหล่งผลประโยชน์ของผู้มีอำนาจและชนชั้นสูง</p>
+      <p>ถึงกระนั้น เขาก็จะพบว่าการประเมินคุณค่าในตนเอง และความรู้ที่เขามีนั้นมันช่างน่าผิดหวัง เขาจะตกใจเมื่อเห็นคนอื่นตีค่าสินค้า (นั่นคือความรู้) ของเขา และเขาจะถูกความเจ็บปวดจากความยากจน และเสียงครวญจากความหิวโหยทิ่มแทง</p>
+      <p>แล้วใครจะทนความยากจนไหว ในโลกที่เงินคือสิ่งที่มีคุณค่าเหนือทุกสิ่ง?</p>
+      <p>อิบนุลมุก็อฟฟะอ์กล่าวไว้อย่างยืดยาวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">المال كل شيء: ما التبع والأعوان والصديق والحشم إلا للمال، ولا يظهر المروءة إلا المال، ولا الرأي ولا القوة إلا بالمال. ومن لا إخوان له فلا أهل له، ومن لا أولاد له فلا ذكر له، ومن لا عقل له فلا دنيا له ولا آخرة، ومن لا مال له فلا شيء له، الفقر مجمعة للبلايا، والفقر داعية إلى صاحبه مقت الناس، وهو مسلبة للعقل والمروءة، ومذهبة للعلم والأدب، ومعدن للتهمة، ومجمعة للبلايا. ومن نزل به الفقر والفاقة لم يجد بدا من ترك الحياء، ومن ذهب حياؤه ذهب سروره. ومن ذهب سروره مقت، ومن مقت أوذي، ومن أوذي حزن، ومن حزن فقد ذهب عقله, واستنكر حفظه, وفهمه ومن أصيب في عقله وفهمه وحفظه, كان أكثر قوله وعمله فيما يكون عليه, لا له. فإذا افتقر الرجل اتهمه من كان له مؤتمنا، وأساء به الظن من كان يظن به حسنا، فإذا أذنب غيره ظنوه, وكان للتهمة وسوء الظن موضعا. وليس من خلة هي للغني مدح إلا هي للفقير عيب، فإن كان شجاعا سمي أهوج، وإن كان جوادا سمي مفسدا، وإن كان حليما سمي ضعيفا، وإن كان وقورا سمي بليدا، وإن كان لسنا سمي مهذرا، وإن كان صموتا سمي عييا.</blockquote>
+      <p class="ar-translation poem-th">“ทรัพย์สินนั้นคือทุกสิ่ง<br>ทั้งบรรดาผู้ติดตาม ผู้ช่วย เพื่อน และบ่าวไพร่ ล้วนก็เพราะทรัพย์สินทั้งนั้น<br>ความมีศักดิ์ศรีก็ไม่อาจปรากฏได้นอกจากด้วยทรัพย์<br>ทั้งความเห็นอันหนักแน่นและพลังอำนาจ ก็ล้วนต้องอาศัยทรัพย์เป็นฐาน<br>ผู้ใดไม่มีพี่น้อง ก็เหมือนไม่มีวงศ์ญาติ<br>ผู้ใดไม่มีลูก ก็เหมือนไม่มีใครกล่าวขวัญสืบไป<br>ผู้ใดไร้สติปัญญา ก็ไร้ทั้งโลกนี้และโลกหน้า<br>และผู้ใดไร้ทรัพย์สิน ก็ไม่มีสิ่งใดเลย<br>ความยากจนคือที่รวมของเคราะห์กรรมทั้งปวง<br>ความยากจนเป็นผู้เรียกเชื้อเชิญให้ผู้คนพากันเกลียดชังเจ้าของมัน<br>มันปล้นเอาทั้งสติและศักดิ์ศรี ทำให้ความรู้และมารยาทสูญหาย<br>และกลายเป็นบ่อเกิดแห่งข้อครหา และเป็นจุดรวมของบรรดาบททดสอบทั้งหลาย<br>ผู้ใดถูกความยากจนและขัดสนรุมเร้า เขาย่อมจำต้องละทิ้งความละอายใจ<br>เมื่อความละอายของเขาหมดไป ความรื่นรมย์ในชีวิตก็หายไป<br>เมื่อความรื่นรมย์หายไป เขาย่อมถูกเกลียดชัง<br>เมื่อถูกเกลียดชัง เขาย่อมถูกทำร้าย<br>เมื่อถูกทำร้าย เขาย่อมโศกเศร้า<br>เมื่อเขาโศกเศร้า สติปัญญาของเขาก็พลันเลือนหาย ความจำและความเข้าใจของเขาก็วิปลาสไป<br>เมื่อปัญญา ความเข้าใจ และความจำของเขาถูกทำร้ายแล้ว<br>ส่วนมากถ้อยคำและการกระทำของเขาก็จะกลายเป็นสิ่งที่ย้อนร้ายใส่ตัวเขาเอง หาได้เป็นคุณแก่เขาไม่<br>ยิ่งไปกว่านั้น เมื่อชายคนหนึ่งตกอยู่ในความยากจน<br>คนที่เคยไว้วางใจเขาก็กลับหันมาสงสัยเขา<br>คนที่เคยคิดดีกับเขาก็กลับกลายเป็นคิดร้ายต่อเขา<br>เมื่อผู้อื่นทำผิด เขากลับถูกมองเป็นผู้ต้องสงสัย<br>เขากลายเป็นเป้าหมายของข้อครหาและการคิดร้าย<br>ไม่มีคุณลักษณะใดที่เมื่ออยู่กับคนรวยแล้วเป็น “คำชม”<br>แล้วจะไม่กลายเป็น “คำด่า” เมื่อลักษณะเดียวกันนั้นอยู่กับคนจน<br>คนจน ถ้าเขากล้าหาญ ก็ถูกเรียกว่า “บุ่มบ่ามไม่รู้คิด”<br>คนจน ถ้าเขาโอบอ้อมอารี ก็ถูกเรียกว่า “มือเติบทำบ้านแตก”<br>คนจน ถ้าเขาใจกว้างอดทน ก็ถูกเรียกว่า “อ่อนแอไร้เรี่ยวแรง”<br>คนจน ถ้าเขาสงบขรึม ก็ถูกเรียกว่า “ทึ่มทื่อไม่มีไหวพริบ”<br>คนจน ถ้าเขาพูดเก่งมีวาทศิลป์ ก็ถูกเรียกว่า “คนพร่ำเพ้อพูดมากไร้สาระ”<br>คนจน ถ้าเขานิ่งไม่ค่อยพูด ก็ถูกเรียกว่า “คนใบ้ พูดไม่เป็น””</p>
+      <p>มนุษย์ผู้หิวหาความหมายในความรู้ ไม่ว่าจะแต่งชุดนักปราชญ์หรือแบกสมุดจดบนหลังจนหลังคด ย่อมต้องเดินอยู่บนสะพานแคบๆ ระหว่างศักดิ์ศรีกับการเอาตัวรอด ราวกับเดินบนเส้นลวดที่ผูกระหว่างวังของผู้มีอำนาจกับเพิงผุพังของคนยากไร้</p>
+      <p>ไม่มีใครเดินเส้นนี้โดยไม่สั่นคลอน</p>
+      <p>บางคนยอมคุกเข่าต่ออำนาจเพื่อให้ได้เป็น “อะไรสักอย่าง” ในสายตาโลก แม้ต้องแลกด้วยการปิดตาตัวเอง</p>
+      <p>บางคนยอมเดินลุยฝุ่นแกลบ เพื่อรักษาศักดิ์ศรี แม้ต้องแลกด้วยความหิวที่กัดกระดูก</p>
+      <p>และบางคนก็หลอกตัวเองว่าไม่ได้ต้องการอะไร ทั้งที่หัวใจวิ่งชนประตูอำนาจทุกครั้งที่มีช่องว่างให้เบียดเข้าไป</p>
+      <p>เส้นทางของปัญญาชนจึงไม่เคยโรยด้วยดอกกุหลาบ มันโรยด้วยคำถามเชิงจริยธรรมที่คอยกัดกินหัวใจมากกว่าอำนาจใดๆ ทั้งสิ้น</p>
+      <p>ท้ายที่สุดแล้ว ปัญญาชนทุกคนต้องเลือกคำตอบของตนเองว่า…จะยืนอยู่ด้วยกระดูกสันหลังของตัวเองหรือจะยืนด้วยเงาของคนอื่น</p>
+      <p>การตัดสินใจแบบไหนก็ไม่มีใครตัดสินแทนได้ แต่สิ่งหนึ่งที่ประวัติศาสตร์สอนเรามาเสมอคือ อำนาจนั้นไม่เคยยอมให้ใครยืมมันโดยไม่คิดดอกเบี้ย และความรู้…ก็ไม่เคยให้อภัยกับผู้ที่ขายมันถูกเกินไป</p>
+      <p>ในโลกที่ทั้งอำนาจและความยากจนต่างกัดกินคนได้เหมือนสัตว์นักล่า ปัญญาชนจะเหลือเส้นทางเดียวที่เขากำหนดเองได้จริงเพียงหนึ่งเดียวเท่านั้น คือการเลือกว่าจะเป็น “มนุษย์แบบไหน” ในวันที่ไม่มีใครมองอยู่</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ปัญญาชนกับอำนาจ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/intellectuals-and-power.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
