@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>อิหม่ามอบุลหะสัน อัลอัชอะรีย์ และบทบาทในการยุติความแตกแยกและความขัดแย้ง — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทบาทของอิหม่ามอบุลหะสัน อัลอัชอะรีย์ ในการรวมประชาชาติอิสลามให้เป็นหนึ่งเดียวภายใต้ธงอะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์ ความสมดุลระหว่างบทบัญญัติและปัญญา และหลักการห้ามตักฟีรชาวกิบลัต">
+<meta name="keywords" content="กะลาม, อัลอัชอะรีย์, อะฮ์ลุสซุนนะฮ์, ตักฟีร, เทววิทยา, อิลมุลกะลาม, มุอ์ตะซิละฮ์">
+<meta name="author" content="มัรกัส อัลอิมาม อัลอัชอะรีย์">
+
+<meta property="og:title" content="อิหม่ามอบุลหะสัน อัลอัชอะรีย์ และบทบาทในการยุติความแตกแยกและความขัดแย้ง — Islamic Fiqh Publishing">
+<meta property="og:description" content="บทบาทของอิหม่ามอบุลหะสัน อัลอัชอะรีย์ ในการรวมประชาชาติอิสลามให้เป็นหนึ่งเดียว ความสมดุลระหว่างบทบัญญัติและปัญญา และหลักการห้ามตักฟีรชาวกิบลัต">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/kalam/al-ashari-and-the-unity-of-the-ummah.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/kalam/al-ashari-and-the-unity-of-the-ummah.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="al-ashari-and-the-unity-of-the-ummah">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/kalam.html" class="article-feature-eyebrow">กะลาม / เทววิทยา</a>
+      <h1 class="article-feature-title">อิหม่ามอบุลหะสัน อัลอัชอะรีย์ และบทบาทในการยุติความแตกแยกและความขัดแย้ง</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ไม่ต้องสงสัยเลยว่านับตั้งแต่รุ่งอรุณของโลกอิสลามและการก่อตั้งเสาหลักแรกๆ โลกนี้ได้เป็นพยานถึงความเคลื่อนไหวทางความคิดในยุคแรกเริ่มและการฟื้นฟูทางวิชาการที่ประดับประดาท้องฟ้าและส่องสว่างผืนแผ่นดิน การศึกษาและงานวิจัยทางวิทยาศาสตร์ที่กล่าวถึงสภาพทางปัญญาของชาวอาหรับก่อนและหลังการมาของอิสลาม ล้วนยืนยันว่า ศาสนาอิสลามเป็นแหล่งทรัพยากรเดียวของวัฒนธรรม ความคิด และวิทยาการในสังคมอาหรับเสมอมา</p>
+
+      <p>และไม่ต้องสงสัยเลยว่า นับตั้งแต่ท่านศาสดามุฮัมมัด ﷺ ได้ก่อตั้งรากฐานแรกๆ นั้น มันเต็มไปด้วยแบบอย่างมากมายที่สร้างคุณค่าและอิทธิพลต่อทั่วทุกมุมโลก ซึ่งเป็นที่น่าชื่นชมของนักตะวันออกศึกษาชาวยุโรปจำนวนมาก</p>
+
+      <p>หลักฐานที่ยืนยันเรื่องนี้คือ ความเคลื่อนไหวทางวิชาการที่ห้องสมุดอะเล็กซานเดรียเป็นผู้นำและริเริ่ม ผ่านโครงการฟื้นฟูมรดกทางปัญญาในศตวรรษที่ 13 และ 14 (ฮ.ศ.) โดยการตรวจสอบ, ทบทวน, วิเคราะห์และแปลเป็นภาษาต่างๆ เพื่อให้โลกตระหนักว่า โลกอาหรับ-อิสลามไม่ได้และจะไม่มีวันอยู่เฉยต่อความเคลื่อนไหวทางวิทยาศาสตร์และการปฏิวัติอุตสาหกรรมและเทคโนโลยีที่เกิดขึ้น ซึ่งเรายังคงเห็นผลสะท้อนไปทั่วโลก</p>
+
+      <p>โลกอิสลามยังคงมีแบบอย่างที่สว่างไสวมากมายเช่นเดียวกับในอดีต เนื่องจากพวกเขาได้นำเสนอการปฏิรูป, ความเข้าใจ, การตีความและการสรุปที่ถูกต้องต่อสาส์นของท่านศาสดามุฮัมมัด ﷺ และเนื่องจากพวกเขาได้สร้างผลงานทางปัญญาและมรดกทางมนุษยชาติที่เป็นประโยชน์ต่อโลกโดยรวมและต่อโลกอิสลามโดยเฉพาะ</p>
+
+      <p>อันที่จริง การยืนยันและความมั่นใจนี้ได้รับการยืนยันโดยคำมั่นสัญญาและการพยากรณ์ของท่านเราะซูล ซึ่งกล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">إِنَّ اللَّهَ يَبْعَثُ لِهَذِهِ الأُمَّةِ عَلَى رَأْسِ كُلِّ مِائَةِ سَنَةٍ مَنْ يُجَدِّدُ لَهَا دِينَهَا</p>
+      </div>
+      <p>ท่านนบีมุฮัมมัด ﷺ กล่าวว่า: “แท้จริงอัลลอฮ์จะส่งผู้ที่มาปฏิรูปกิจการศาสนาของประชาชาตินี้ ณ ทุกต้นหนึ่งร้อยปี”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup> (บันทึกโดยอบู ดาวูด)</p>
+
+      <p>ท่านยังชี้ให้เห็นว่าบทบาทของนักวิชาการคือการเป็นทายาทของบรรดาศาสดา ซึ่งพวกเขาเหมาะสมที่สุดที่จะเข้าใจและกำหนดสาระสำคัญของสาส์นเหล่านั้น และนำไปสู่ประชาชาติของพวกเขาและประชาชาติอื่นๆ ท่านนบีมุฮัมมัด ﷺ ผู้ทรงเกียรติกล่าวในเรื่องนี้ว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَإِنَّ الْعُلَمَاءَ وَرَثَةُ الأَنْبِيَاءِ وَإِنَّ الأَنْبِيَاءَ لَمْ يُوَرِّثُوا دِينَارًا وَلاَ دِرْهَمًا وَرَّثُوا الْعِلْمَ فَمَنْ أَخَذَهُ أَخَذَ بِحَظٍّ وَافِرٍ</p>
+      </div>
+      <p>ท่านนบีมุฮัมมัด ﷺ กล่าวว่า: “แท้จริงบรรดานักวิชาการคือทายาทของบรรดาศาสดา แท้จริงบรรดาศาสดาไม่ได้ทิ้งมรดกเป็นเงินดีนาร์หรือเงินดิรฮัม แต่พวกเขาได้ทิ้งมรดกเป็นความรู้ ดังนั้นผู้ใดที่รับเอาความรู้นั้นไว้ เขาก็ได้รับส่วนแบ่งอันสมบูรณ์แล้ว”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup> (บันทึกโดยอบู ดาวูด และอัตติรมิซีย์)</p>
+
+      <p>ด้วยเหตุนี้ และจากภัยคุกคามที่รายล้อมและบ่อนทำลายมรดกของประชาชาติอิสลามนี้ รวมถึงปากกาที่ยังคงโจมตีนักวิชาการและนักคิดของพวกเขา จึงเป็นแรงผลักดันให้มีการเขียนบทความนี้ขึ้น เพื่อยืนยันว่านับตั้งแต่ก่อตั้งขึ้น ประชาชาติอิสลามได้เห็นการกำเนิดของบรรดาอิหม่ามและผู้นำทางความคิดของมนุษยชาติ ซึ่งเหมาะสมกับทุกยุคทุกสมัย และอิหม่ามอบุลหะสัน อัลอัชอะรีย์ ก็เป็นหนึ่งในบุคคลเหล่านั้น</p>
+
+      <p>ท่านคือ อิหม่ามของชาวอะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์ ซึ่งแนวคิดของท่านยังคงเป็นแสงสว่างนำทางให้กับสถาบันศาสนาและปัญญาที่ยิ่งใหญ่หลายแห่งทั่วโลก</p>
+
+      <h2 class="article-h2">บทบาทของท่านอบุลหะสัน อัชอะรีย์ ในการรวมความเป็นหนึ่งเดียวของประชาชาติอิสลาม</h2>
+
+      <p>ในที่นี้เองที่บทบาทของท่านอบุลหะสันได้ปรากฏชัดเจนในการรวมคำกล่าวของประชาชาติอิสลามให้เป็นหนึ่งเดียว และนำพวกเขากลับคืนสู่ยุคเริ่มแรกของอิสลาม บทบาททางประวัติศาสตร์นี้เกิดขึ้นผ่านสามประเด็นหลักดังต่อไปนี้:</p>
+
+      <p><strong>1. อิสลามรวบรวมและครอบคลุมทุกคน</strong></p>
+
+      <p>ผู้ที่พิจารณาคัมภีร์อัลกุรอานอย่างถี่ถ้วนจะตระหนักได้อย่างรวดเร็วถึงความหลากหลายนี้ และเห็นว่าคุณค่าของความแตกต่างคือหลักการพื้นฐานที่มนุษย์ทุกคนควรจะมี บางทีคุณค่าและเป้าหมายอันสูงส่งนี้อาจเป็น “กฎเกณฑ์ของอัลลอฮ์” บนโลกนี้ที่ว่า “และพวกเขายังคงแตกต่างกันตลอดไป และด้วยเหตุนั้น พระองค์จึงสร้างพวกเขาขึ้นมา” ซึ่งราวกับว่าความแตกต่างนี้เป็นแหล่งกำเนิดความมั่งคั่งและรากฐานของการเจริญเติบโตและความรุ่งเรืองของพวกเขา</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَلَا يَزَالُونَ مُخْتَلِفِينَ إِلَّا مَن رَّحِمَ رَبُّكَ ۚ وَلِذَٰلِكَ خَلَقَهُمْ</p>
+        <p class="ar-translation">“และพวกเขายังคงแตกต่างกันตลอดไป และด้วยเหตุนั้น พระองค์จึงสร้างพวกเขาขึ้นมา”</p>
+        <p class="block-source">สูเราะฮ์ฮูด อายะฮ์ที่ 118-119<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+      </div>
+
+      <p>นอกเหนือจากถ้อยคำในอัลกุรอานเองที่กล่าวถึงคุณค่าของความแตกต่างและความจำเป็นของความหลากหลายแล้ว นักวิชาการและนักคิดยังบอกเราอีกว่า อัลกุรอานเองก็มีรูปแบบการสื่อสารที่หลากหลายและแตกต่างกันไปตามสถานะของผู้รับสาร</p>
+
+      <p>โองการในอัลกุรอานบางส่วนเริ่มต้นด้วยคำว่า “โอ้มนุษย์เอ๋ย” (<span class="ar-inline" lang="ar" dir="rtl">يَا أَيُّهَا الْإِنسَانُ</span>) เช่น พระดำรัสของอัลลอฮ์ที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">يَا أَيُّهَا الْإِنسَانُ مَا غَرَّكَ بِرَبِّكَ الْكَرِيمِ</p>
+        <p class="ar-translation">“โอ้มนุษย์เอ๋ย อะไรเล่าที่หลอกลวงเจ้าต่อพระเจ้าของเจ้าผู้ทรงเกียรติยิ่ง”</p>
+        <p class="block-source">สูเราะฮ์อัลอินฟิฏอร อายะฮ์ที่ 6<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+      </div>
+
+      <p>และพระดำรัสที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">يَا أَيُّهَا الْإِنسَانُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَاقِيهِ</p>
+        <p class="ar-translation">“โอ้มนุษย์เอ๋ย แท้จริงเจ้าเป็นผู้มุ่งมั่นไปยังพระเจ้าของเจ้าอย่างขยันขันแข็ง แล้วเจ้าก็จะได้พบพระองค์”</p>
+        <p class="block-source">สูเราะฮ์อัลอินชิกอก อายะฮ์ที่ 6<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup></p>
+      </div>
+
+      <p>บางโองการเริ่มต้นด้วยคำว่า “โอ้มนุษยชาติเอ๋ย” (<span class="ar-inline" lang="ar" dir="rtl">يَا أَيُّهَا النَّاسُ</span>) เช่น พระดำรัสที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا ۚ إِنَّ أَكْرَمَكُمْ عِندَ اللَّهِ أَتْقَاكُمْ ۚ إِنَّ اللَّهَ عَلِيمٌ خَبِيرٌ</p>
+        <p class="ar-translation">“โอ้มนุษยชาติเอ๋ย แท้จริงเราได้สร้างพวกเจ้ามาจากเพศชายและเพศหญิง และเราได้ทำให้พวกเจ้าเป็นประชาชาติและเผ่าต่างๆ เพื่อพวกเจ้าจะได้รู้จักกัน แท้จริงผู้ที่มีเกียรติที่สุดในหมู่พวกเจ้า ณ ที่อัลลอฮ์ คือผู้ที่ยำเกรงที่สุดในหมู่พวกเจ้า แท้จริงอัลลอฮ์เป็นผู้ทรงรอบรู้ ผู้ทรงตระหนักยิ่ง”</p>
+        <p class="block-source">สูเราะฮ์อัลหุญุรอต อายะฮ์ที่ 13<sup class="fn-ref" id="fnref-6"><a href="#ref-6">⁶</a></sup></p>
+      </div>
+
+      <p>และพระดำรัสที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ وَالَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ</p>
+        <p class="ar-translation">“โอ้มนุษยชาติเอ๋ย จงเคารพภักดีพระเจ้าของพวกเจ้าผู้สร้างพวกเจ้าและผู้ที่อยู่ก่อนพวกเจ้า เพื่อพวกเจ้าจะได้ยำเกรง”</p>
+        <p class="block-source">สูเราะฮ์อัลบะเกาะเราะฮ์ อายะฮ์ที่ 21<sup class="fn-ref" id="fnref-7"><a href="#ref-7">⁷</a></sup></p>
+      </div>
+
+      <p>โองการบางส่วนเริ่มต้นด้วยคำว่า “โอ้บรรดาผู้ศรัทธาเอ๋ย” (<span class="ar-inline" lang="ar" dir="rtl">يَا أَيُّهَا الَّذِينَ آمَنُوا</span>) เช่น พระดำรัสที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَسْأَلُوا عَنْ أَشْيَاءَ إِن تُبْدَ لَكُمْ تَسُؤْكُمْ وَإِن تَسْأَلُوا عَنْهَا حِينَ يُنَزَّلُ الْقُرْآنُ تُبْدَ لَكُمْ عَفَا اللَّهُ عَنْهَا ۗ وَاللَّهُ غَفُورٌ حَلِيمٌ</p>
+        <p class="ar-translation">“โอ้บรรดาผู้ศรัทธาเอ๋ย พวกเจ้าอย่าได้ไต่ถามถึงเรื่องราวต่างๆ ซึ่งหากมันถูกเปิดเผยแก่พวกเจ้า มันก็จะทำให้พวกเจ้าเสียใจ และถ้าพวกเจ้าไต่ถามถึงมันขณะที่อัลกุรอานถูกประทานลงมา มันก็จะถูกเปิดเผยแก่พวกเจ้า อัลลอฮ์ได้ให้อภัยพวกเจ้าในเรื่องนั้นแล้ว และอัลลอฮ์เป็นผู้ทรงอภัย ผู้ทรงขันติ”</p>
+        <p class="block-source">สูเราะฮ์อัลมาอิดะฮ์ อายะฮ์ที่ 101<sup class="fn-ref" id="fnref-8"><a href="#ref-8">⁸</a></sup></p>
+      </div>
+
+      <p>โองการบางส่วนเริ่มต้นด้วยการสื่อสารโดยตรงไปยังชาวคัมภีร์ เช่น พระดำรัสที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">قُلْ يَا أَهْلَ الْكِتَابِ تَعَالَوْا إِلَىٰ كَلِمَةٍ سَوَاءٍ بَيْنَنَا وَبَيْنَكُمْ أَلَّا نَعْبُدَ إِلَّا اللَّهَ وَلَا نُشْرِكَ بِهِ شَيْئًا وَلَا يَتَّخِذَ بَعْضُنَا بَعْضًا أَرْبَابًا مِّن دُونِ اللَّهِ ۚ فَإِن تَوَلَّوْا فَقُولُوا اشْهَدُوا بِأَنَّا مُسْلِمُونَ</p>
+        <p class="ar-translation">“จงกล่าวเถิดว่า โอ้ชาวคัมภีร์เอ๋ย จงมาสู่คำกล่าวที่เป็นธรรมระหว่างเรากับพวกท่าน คือการที่เราจะไม่เคารพภักดีผู้ใดนอกจากอัลลอฮ์ และจะไม่ตั้งภาคีใดๆ กับพระองค์ และพวกเราบางคนจะไม่ยึดเอาบางคนเป็นพระเจ้าอื่นจากอัลลอฮ์ แต่ถ้าพวกเขายังคงหันหลังให้ ก็จงกล่าวเถิดว่า จงเป็นพยานด้วยว่า แท้จริงเราเป็นผู้นอบน้อม (มุสลิม)”</p>
+        <p class="block-source">สูเราะฮ์อาลิ อิมรอน อายะฮ์ที่ 64<sup class="fn-ref" id="fnref-9"><a href="#ref-9">⁹</a></sup></p>
+      </div>
+
+      <p>โองการบางส่วนเป็นการสื่อสารเฉพาะไปยังผู้ปฏิเสธศรัทธา เช่น พระดำรัสที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">قُلْ يَا أَيُّهَا الْكَافِرُونَ</p>
+        <p class="ar-translation">“จงกล่าวเถิดว่า โอ้บรรดาผู้ปฏิเสธศรัทธาเอ๋ย”</p>
+        <p class="block-source">สูเราะฮ์อัลกาฟิรูน อายะฮ์ที่ 1<sup class="fn-ref" id="fnref-10"><a href="#ref-10">¹⁰</a></sup></p>
+      </div>
+
+      <p>และบางโองการเป็นการสื่อสารไปยังผู้ที่ตั้งภาคี เช่น</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَإِن كُنتُمْ فِي رَيْبٍ مِّمَّا نَزَّلْنَا عَلَىٰ عَبْدِنَا فَأْتُوا بِسُورَةٍ مِّن مِّثْلِهِ وَادْعُوا شُهَدَاءَكُم مِّن دُونِ اللَّهِ إِن كُنتُمْ صَادِقِينَ</p>
+        <p class="ar-translation">“และหากพวกเจ้าสงสัยในสิ่งที่เราได้ประทานแก่บ่าวของเรา ก็จงนำมาสักบทหนึ่งเยี่ยงนั้น และจงเรียกผู้ช่วยเหลือพวกเจ้ามา นอกเหนือจากอัลลอฮ์ หากพวกเจ้าเป็นผู้สัตย์จริง”</p>
+        <p class="block-source">สูเราะฮ์อัลบะเกาะเราะฮ์ อายะฮ์ที่ 23<sup class="fn-ref" id="fnref-11"><a href="#ref-11">¹¹</a></sup></p>
+      </div>
+
+      <p>นอกจากนี้ ยังมีถ้อยคำที่บ่งชี้อย่างชัดเจนถึงความหลากหลายที่น่ายกย่อง ซึ่งชี้ให้เห็นถึงความแตกต่างที่ยกระดับประชาชาติ ไม่ว่าศาสนา รูปแบบการใช้ชีวิต และโครงสร้างของพวกเขาจะเป็นเช่นไร ดังที่ปรากฏในพระดำรัสของอัลลอฮ์ที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">إِنَّ الَّذِينَ آمَنُوا وَالَّذِينَ هَادُوا وَالنَّصَارَىٰ وَالصَّابِئِينَ مَنْ آمَنَ بِاللَّهِ وَالْيَوْمِ الْآخِرِ وَعَمِلَ صَالِحًا فَلَهُمْ أَجْرُهُمْ عِندَ رَبِّهِمْ وَلَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ</p>
+        <p class="ar-translation">“แท้จริงบรรดาผู้ศรัทธา และบรรดาชาวยิว และชาวคริสเตียน และพวกศอบิอีน ใครก็ตามที่ศรัทธาต่ออัลลอฮ์และวันปรโลก และกระทำความดีแล้ว พวกเขาจะได้รับรางวัลของพวกเขา ณ ที่พระเจ้าของพวกเขา และจะไม่มีความกลัวใดๆ เกิดขึ้นแก่พวกเขา และพวกเขาจะไม่โศกเศร้า”</p>
+        <p class="block-source">สูเราะฮ์อัลบะเกาะเราะฮ์ อายะฮ์ที่ 62<sup class="fn-ref" id="fnref-12"><a href="#ref-12">¹²</a></sup></p>
+      </div>
+
+      <p>วิสัยทัศน์ในอัลกุรอานซึ่งปรากฏชัดในพระดำรัสของอัลลอฮ์ที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَأَنَّ هَٰذَا صِرَاطِي مُسْتَقِيمًا فَاتَّبِعُوهُ ۖ وَلَا تَتَّبِعُوا السُّبُلَ فَتَفَرَّقَ بِكُمْ عَن سَبِيلِهِ ۚ ذَٰلِكُمْ وَصَّاكُم بِهِ لَعَلَّكُمْ تَتَّقُونَ</p>
+        <p class="ar-translation">“และแท้จริงนี่คือทางตรงของเรา ดังนั้นพวกเจ้าจงปฏิบัติตามมันเถิด และอย่าได้ปฏิบัติตามหลายๆ ทาง เพราะมันจะทำให้พวกเจ้าแตกแยกออกห่างจากทางของพระองค์ นั่นคือสิ่งที่พระองค์ได้สั่งเสียพวกเจ้าไว้ หวังว่าพวกเจ้าจะยำเกรง”</p>
+        <p class="block-source">สูเราะฮ์อัลอันอาม อายะฮ์ที่ 153<sup class="fn-ref" id="fnref-13"><a href="#ref-13">¹³</a></sup></p>
+      </div>
+
+      <p>รวมถึงการประยุกต์ใช้ธรรมชาติอันบริสุทธิ์ของพระเจ้าโดยท่านนบีมุฮัมมัด ﷺ ผ่านคำพูด การกระทำ และการรับรองของท่านนั้น ได้ประสบกับการเปลี่ยนแปลงและผันผวนมากมายตลอดหน้าประวัติศาสตร์อันยาวนานของประชาชาติอิสลาม แนวคิดตามธรรมชาติอันบริสุทธิ์นี้ได้รับความบิดเบือนอย่างมาก จนนำไปสู่การเบี่ยงเบนของประชาชาติอิสลามออกจากเส้นทางที่ถูกต้อง จนกระทั่งพวกเขาแตกออกเป็นรัฐเล็กๆ, เผ่าต่างๆ, และกลุ่มชนนิยม หลังจากที่เคยเป็นประชาชาติเดียวภายใต้ธงเดียวกัน</p>
+
+      <p>คำกล่าวของท่านนบีมุฮัมมัด ﷺ ผู้ทรงเกียรติได้เป็นจริงในหมู่พวกเขาที่ว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">يُوشِكُ الأُمَمُ أَنْ تَدَاعَى عَلَيْكُمْ كَمَا تَدَاعَى الأَكَلَةُ إِلَى قَصْعَتِهَا</p>
+      </div>
+      <p>ท่านนบีมุฮัมมัด ﷺ กล่าวว่า: “บรรดาประชาชาติใกล้จะรุมล้อมพวกเจ้า เหมือนผู้คนรุมล้อมถาดอาหารของพวกเขา”<sup class="fn-ref" id="fnref-14"><a href="#ref-14">¹⁴</a></sup> (บันทึกโดยอบู ดาวูด)</p>
+
+      <p>ด้วยเหตุนี้ อิหม่ามอัลอัชอะรีย์จึงตระหนักถึงอันตรายเหล่านั้นที่กำลังเข้ามารุมเร้าประชาชาติอิสลาม ทั้งกระแสและสำนักเทววิทยาต่างๆ และภัยคุกคามภายนอกที่เกิดขึ้นซ้ำแล้วซ้ำเล่าจากการพิชิตดินแดนใหม่ของอิสลามที่ขยายตัวอย่างต่อเนื่อง และการเข้ารับอิสลามของคนจำนวนมากที่ไม่ได้มาจากศาสนาอิสลามแต่เดิม ซึ่งสิ่งนี้สร้างอันตรายอีกรูปแบบหนึ่งต่อบรรดามุสลิม</p>
+
+      <p>อิหม่ามอัลอัชอะรีย์ได้รวมประชาชาติอิสลามไว้ภายใต้ธงเดียว นั่นคือ ธงของอะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์ ท่านได้กล่าวไว้ในบทนำของหนังสืออันทรงคุณค่าของท่านที่ชื่อ “มะกอลาต อัลอิสลามียีน วัคติลาฟ อัลมุศ็อลลีน” (หลักการของบรรดามุสลิมและความเห็นที่แตกต่างกันของผู้ทำการละหมาด) ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اختلف الناس بعد نبيهم صلي الله عليه وسلم في أشياء كثيرة ضلل فيها بعضهم بعضا، وبرئ بعضهم من بعض، فصاروا فرقا متباينين، وأحزابا متشتتين، إلا أن الإسلام يجمعهم ويشتمل عليهم</blockquote>
+      <p class="ar-translation">อิหม่ามอบุลหะสัน อัลอัชอะรีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า: “ผู้คนมีความเห็นต่างกันในหลายเรื่องหลังจากการจากไปของท่านนบีมุฮัมมัด ﷺ จนบางกลุ่มประกาศว่าอีกกลุ่มหนึ่งเป็นผู้หลงผิด และบางกลุ่มก็ตัดขาดจากอีกกลุ่มหนึ่ง พวกเขาจึงกลายเป็นกลุ่มที่แตกต่างกันและเป็นพรรคพวกที่แตกกระจาย เว้นแต่ว่าความเป็นอิสลามนั้นรวบรวมพวกเขาและครอบคลุมพวกเขาไว้”</p>
+
+      <p>การยอมรับและระเบียบวิธีที่อิหม่ามอบุลหะสัน อัลอัชอะรีย์ยึดถือนั้น ถือเป็นแสงสว่างนำทางที่ประชาชาติอิสลามควรปฏิบัติตามตลอดประวัติศาสตร์อันยาวนานของพวกเขา และท่านอิหม่ามอัลอัชอะรีย์คือคนแรกที่ใช้คำว่า “อัลอิสลามียูน” (บรรดามุสลิม) ในมรดกอิสลามทั้งหมด เพื่อหักล้างข้อกล่าวอ้างของกลุ่มและกระแสที่ขัดแย้งกันตลอดหลายยุคสมัยที่อ้างว่าตนเองเป็น “กลุ่มที่รอดพ้น” และกระแสอื่นๆ เป็นกลุ่มที่ “หลงผิดและเบี่ยงเบน”</p>
+
+      <p>เป็นเรื่องที่เหมาะสมที่เราจะหยุดพิจารณาสำนวนนี้ที่เกิดขึ้นในสังคมมุสลิมหลังจากที่ไม่เคยมีมาก่อน เพราะแนวทางของท่านนบีและเศาะหาบะฮ์ไม่ใช่ความแตกแยกและความขัดแย้ง แต่ตรงกันข้ามอย่างสิ้นเชิง ดังที่อัลลอฮ์ผู้ทรงสร้างได้กล่าวไว้ในอัลกุรอาน:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا</p>
+        <p class="ar-translation">“และพวกเจ้าจงยึดมั่นในสายใยเชือกของอัลลอฮ์โดยพร้อมเพรียงกันเถิด และอย่าแตกแยกกันเป็นกลุ่มๆ”</p>
+        <p class="block-source">สูเราะฮ์อาลิ อิมรอน อายะฮ์ที่ 103<sup class="fn-ref" id="fnref-15"><a href="#ref-15">¹⁵</a></sup></p>
+      </div>
+
+      <h2 class="article-h2">ความสมดุลและการบูรณาการระหว่างสองหลักฐาน บทบัญญัติและปัญญา</h2>
+
+      <p>อิหม่ามอบุลหะสัน อัลอัชอะรีย์ เป็นตัวแทนของแนวทางสายกลางที่ท่านยึดถือในการใช้หลักฐานระหว่างทุกกลุ่มและสำนักเทววิทยา จนทำให้ท่านได้รับความพึงพอใจจากนักวิชาการทั่วประชาชาติอิสลาม ทั้งในแง่ของภูมิศาสตร์และช่วงเวลา</p>
+
+      <p>สำนักมุอ์ตะซิละฮ์ มีแนวโน้มไปทางใช้ปัญญามากเกินไป จนทำให้พวกเขาสูญเสียและเบี่ยงเบนจากแนวทางที่ถูกต้องของอิสลาม เนื่องจากพวกเขาให้น้ำหนักเครื่องมือคือปัญญาเหนือบทบัญญัติอันศักดิ์สิทธิ์</p>
+
+      <p>ในขณะที่อะฮ์ลุลหะดีษ (ชาวหะดีษ) มีแนวโน้มไปทางตัวบทศาสนา (อัลกุรอานและซุนนะฮ์) มากเกินไป จนทำให้พวกเขาไม่ให้ความสำคัญกับเหตุผลและปัญญา ซึ่งส่งผลให้บทบาทของปัญญาถูกลดทอนลงในหลายกรณี</p>
+
+      <p>ท่านอบุลหะสัน อัลอัชอะรีย์ให้ความสำคัญกับการสร้างความสมดุลและการบูรณาการระหว่างหลักฐานทางบทบัญญัติและหลักฐานทางปัญญา ท่านเริ่มต้นด้วยหลักฐานทางบทบัญญัติ จากนั้นจึงเพิ่มหลักฐานทางปัญญาเข้ามาสนับสนุนและยืนยันสิ่งที่บทบัญญัติมุ่งหมาย</p>
+
+      <p>สิ่งนี้ปรากฏชัดเจนในทัศนะที่ท่านนำเสนอในหนังสือ “อัลอิบานะฮ์”, “อัลลุมะอ์” และงานอื่นๆ ยิ่งไปกว่านั้น ในบางทัศนะ ท่านยังเรียกร้องให้ยึดมั่นในหลักฐานทางบทบัญญัติ และไม่ละเลยมัน เพื่อหลีกเลี่ยงการตกอยู่ในความผิดพลาดแบบที่พวกนอกรีตทำ ซึ่งคือการแยกตัวออกจากหลักฐานทางบทบัญญัติและทำตามแนวทางของนักปรัชญา</p>
+
+      <p>ท่านได้ชี้แจงในหลายแห่งว่า: “ท่านเราะซูลได้อธิบายให้ทุกกลุ่มที่ท่านถูกส่งมาหาทราบถึงความผิดพลาดในสิ่งที่พวกเขายึดถือด้วยหลักฐานและข้อพิสูจน์ของอัลลอฮ์ และชี้แจงความถูกต้องในสิ่งที่ท่านเรียกร้องด้วยข้อพิสูจน์และสัญญาณของอัลลอฮ์ จนไม่มีข้อสงสัยใดๆ เหลืออยู่ และท่านไม่ต้องเพิ่มสิ่งใดจากภายนอกอีกเลย”</p>
+
+      <h2 class="article-h2">คุณค่าของปัญญาในทัศนะของอัลเฆาะซาลี</h2>
+
+      <p>เกี่ยวกับคุณค่าของปัญญาในทัศนะของอบู ฮามิด อัลเฆาะซาลี (เสียชีวิต ฮ.ศ. 505) ซึ่งเป็นหนึ่งในเสาหลักของสำนักอะชาอิเราะฮ์ และเป็นผู้หนึ่งที่มีอิทธิพลมากที่สุด โดยเฉพาะอย่างยิ่งในโลกตะวันตกปัจจุบัน มีนักวิจัยบางท่านได้กล่าวไว้ในบทความชื่อ “สถานะของปัญญาและวิทยาการในทัศนะของอัลเฆาะซาลี” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لقد كان الإمام الغزالي من فلاسفة الإسلام المعتدلين الذين عرفوا للعقل وللحجاج العقلي مكانته، وعرفوا للعلم والعلماء أيا ما كانت تخصصاتهم مكانتهم السامية عند الله. وليس معنى أنه هاجم بعض فلاسفة الإسلام في بعض أقوالهم التي خالفت بعض أسس العقيدة من وجهة نظره، أنه تسبب بذلك في الجمود والتخلف؛ لأن العكس هو الصحيح؛ فلولا كتابات الغزالي وموقفه المعتدل الداعي إلى استخدام المنطق والحجاج العقلي في الدعوة وفى الفقه وعلم الأصول، ما كان للفلسفة والفلاسفة وجود في عصره ولا بعده، وخاصة أن حملة غلاة الفقهاء ضد الفلسفة والمنطق كانت في أوجها، حيث كانت هذه الحملات كفيلة بوقف الترجمة من اليونانية إلى العربية وبتوقف الفلاسفة عن التفلسف</blockquote>
+      <p class="ar-translation">นักวิจัยท่านนี้กล่าวว่า: “ความเป็นจริงแล้ว อิหม่ามอัลเฆาะซาลีเป็นนักปรัชญาสายกลางของอิสลามที่ตระหนักถึงสถานะของปัญญาและเหตุผลเชิงตรรกะ และตระหนักถึงสถานะที่สูงส่งของวิทยาการและนักวิชาการในทุกสาขา ณ ที่อัลลอฮ์ การที่ท่านโจมตีนักปรัชญาอิสลามบางคนในบางประเด็นที่ขัดแย้งกับหลักการพื้นฐานของหลักความเชื่อในมุมมองของท่านนั้น ไม่ได้หมายความว่าท่านเป็นต้นเหตุของการหยุดนิ่งและความล้าหลัง เพราะความจริงแล้วตรงกันข้ามต่างหาก หากปราศจากงานเขียนของอัลเฆาะซาลีและจุดยืนสายกลางของท่านที่เรียกร้องให้ใช้ตรรกะและเหตุผลในการเผยแผ่ศาสนา, นิติศาสตร์และหลักการศาสนาแล้ว ปรัชญาและนักปรัชญาอาจไม่มีที่ยืนในยุคสมัยของท่านและยุคหลังจากนั้นอีกเลย โดยเฉพาะอย่างยิ่งเมื่อการโจมตีจากกลุ่มนักนิติศาสตร์หัวรุนแรงต่อปรัชญาและตรรกะกำลังถึงจุดสูงสุด ซึ่งการโจมตีเหล่านั้นเพียงพอที่จะหยุดการแปลตำราจากภาษากรีกเป็นภาษาอาหรับและหยุดนักปรัชญาจากการคิดค้นได้เลยทีเดียว!”</p>
+
+      <h2 class="article-h2">ต้องถือว่ามีศรัทธา จะถือว่าปฏิเสธศรัทธาไม่ได้</h2>
+
+      <p>ลักษณะสุดท้ายนี้ที่เราไม่ควรละเลยคือ ภัยพิบัติเหนือภัยพิบัติทั้งปวง และการที่มันแพร่หลายในสังคมใด ย่อมเป็นสัญญาณที่บ่งชี้ถึงความล่มสลายและความเสื่อมของอำนาจอย่างไม่ต้องสงสัย ซึ่งเป็นบทเรียนที่เส้นทางของประวัติศาสตร์สอนเรา</p>
+
+      <p>กลุ่มการเมืองอิสลามิสต์หลายกลุ่มได้หวนกลับมาใช้ภัยพิบัตินี้อีกครั้งในช่วงหลัง แม้ว่าการห้ามประกาศว่าใครเป็นผู้ปฏิเสธศรัทธา (ห้ามการตักฟีร) จะถือเป็นหลักการพื้นฐานและเป็นเสาหลักที่โดดเด่นในหลักความเชื่อของอะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์ ทั้งจากกลุ่มยึดหะดีษและกลุ่มใช้เหตุผล</p>
+
+      <p>ในหลักความเชื่อของอิหม่ามอัลอัชอะรีย์ (ฮ.ศ. 260-324) ท่านกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا يكفرون أحدا من أهل القبلة بذنب يرتكبه كنحو الزنا والسرقة وما أشبه ذلك من الكبائر، وهم بما معهم من الإيمان مؤمنون، وإن ارتكبوا الكبائر، والإيمان عندهم هو الإيمان بالله وملائكته وكتبه ورسله وبالقدر خيره وشره حلوه ومره، وأن ما أخطأهم لم يكن ليصيبهم وأن ما أصابهم لم يكن ليخطئهم. والإسلام هو: أن يشهد أن لا إله إلا الله، وأن محمدا رسول الله على ما جاء في الحديث والإسلام عندهم غير الإيمان</blockquote>
+      <p class="ar-translation">อิหม่ามอบุลหะสัน อัลอัชอะรีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า: “พวกเขา (อะฮ์ลุสซุนนะฮ์) ไม่ประกาศว่าผู้ใดจากชาวกิบลัต (มุสลิม) เป็นผู้ปฏิเสธศรัทธา ด้วยเหตุผลของการทำบาปใหญ่ เช่น การผิดประเวณี, การลักขโมย, และบาปใหญ่ที่คล้ายคลึงกัน และพวกเขาถือว่าการที่ผู้กระทำบาปเหล่านั้นยังมีศรัทธาอยู่ พวกเขาก็ยังเป็นผู้ศรัทธาอยู่ แม้จะกระทำบาปใหญ่ก็ตาม และศรัทธาในทัศนะของพวกเขาคือการศรัทธาต่ออัลลอฮ์, มลาอิกะฮ์ของพระองค์, คัมภีร์ของพระองค์, ศาสนทูตของพระองค์และการกำหนดสภาวะการณ์ทั้งความดีและความชั่ว ความหวานและความขม และการศรัทธาว่าสิ่งที่พลาดไปจากพวกเขาจะไม่เกิดขึ้นกับพวกเขา และสิ่งที่เกิดขึ้นกับพวกเขาจะไม่พลาดไปจากพวกเขา และอิสลามคือการปฏิญาณว่า ไม่มีพระเจ้าอื่นใดนอกจากอัลลอฮ์ และมุฮัมมัดเป็นศาสนทูตของอัลลอฮ์ ตามที่ระบุในหะดีษ และอิสลามในทัศนะของพวกเขาไม่เหมือนกับอีมาน (ศรัทธา)”</p>
+
+      <p>อิหม่ามมุฮัมมัด อับดุฮ์ก็ได้กล่าวถึงภัยพิบัติของการประกาศว่าใครเป็นผู้ปฏิเสธศรัทธา โดยท่านกล่าวไว้ในหนังสือ “อัลอิสลาม บัยนัลอิลม์ วัลมะดะนียะฮ์ วันนัศรอนียะฮ์” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا صدر قول من قائل يحتمل الكفر من مائة وجه ويحتمل الإيمان من وجه واحد حمل على الإيمان، ولا يجوز حمله على الكفر</blockquote>
+      <p class="ar-translation">อิหม่ามมุฮัมมัด อับดุฮ์ เราะหิมะฮุลลอฮ์ กล่าวว่า: “หากมีคำพูดใดที่ออกมาจากผู้พูดมีความเป็นไปได้ที่จะถูกมองว่าเป็นการปฏิเสธศรัทธาถึงหนึ่งร้อยทาง แต่มีความเป็นไปได้ที่จะถูกมองว่าเป็นการศรัทธาเพียงทางเดียว คำพูดนั้นต้องถูกถือว่าเป็นการศรัทธา และไม่อนุญาตให้ถือว่าเป็นการปฏิเสธศรัทธา”</p>
+
+      <p>ดังนั้น จากลักษณะที่กล่าวมาทั้งหมด ซึ่งชี้ให้เห็นถึงบทบาทและอิทธิพลของท่านอบุลหะสัน อัลอัชอะรีย์ในการยุติความวุ่นวายของความขัดแย้งและความแตกแยก จึงแสดงให้เห็นว่า อิหม่ามท่านนี้มีวิสัยทัศน์ที่กว้างไกลและสามารถคาดการณ์อนาคตได้</p>
+
+      <p>ท่านได้ทิ้งแนวทางทางความคิดและหลักความเชื่อที่เป็นสายกลางไว้ให้กับประชาชาติอิสลาม ซึ่งเป็นสิ่งที่สอดคล้องและรวมกลุ่มที่แตกต่างกันให้เป็นหนึ่งเดียว และช่วยปกป้องประชาชาติอิสลามจากการตกอยู่ในเงื้อมมือของความไม่รู้, การยึดติดกลุ่มชน, และการทำเกินขอบเขต</p>
+
+      <h2 class="article-h2">สรุป</h2>
+      <ol class="article-summary">
+        <li><strong>การรวมประชาชาติให้เป็นหนึ่ง:</strong> อิหม่ามอบุลหะสัน อัลอัชอะรีย์ ได้รวมประชาชาติอิสลามไว้ภายใต้ธงของอะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์ และเป็นคนแรกที่ใช้คำว่า “อัลอิสลามียูน” เพื่อหักล้างการอ้างตนเป็น “กลุ่มที่รอดพ้น” เพียงกลุ่มเดียว โดยยืนยันว่าอิสลามนั้นรวบรวมและครอบคลุมทุกคน</li>
+        <li><strong>ความสมดุลระหว่างบทบัญญัติและปัญญา:</strong> ท่านวางแนวทางสายกลางระหว่างมุอ์ตะซิละฮ์ที่เน้นปัญญามากเกินไป และอะฮ์ลุลหะดีษที่ลดทอนบทบาทของปัญญา โดยเริ่มจากหลักฐานทางบทบัญญัติแล้วเสริมด้วยหลักฐานทางปัญญา</li>
+        <li><strong>การห้ามตักฟีรชาวกิบลัต:</strong> ในหลักความเชื่อของท่าน อะฮ์ลุสซุนนะฮ์ไม่ประกาศว่าผู้ใดจากชาวกิบลัตเป็นผู้ปฏิเสธศรัทธาด้วยเหตุของบาปใหญ่ และอิหม่ามมุฮัมมัด อับดุฮ์ ก็ย้ำว่าหากคำพูดหนึ่งมีความเป็นไปได้ที่จะตีความเป็นศรัทธาแม้เพียงทางเดียว ก็ต้องถือว่าเป็นการศรัทธา</li>
+        <li><strong>มรดกแห่งความเป็นกลาง:</strong> ท่านได้ทิ้งแนวทางทางความคิดและหลักความเชื่อสายกลางไว้ให้ประชาชาติอิสลาม ซึ่งช่วยปกป้องประชาชาติจากความไม่รู้ การยึดติดกลุ่มชน และการทำเกินขอบเขต</li>
+      </ol>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">มัรกัส อัลอิมาม อัลอัชอะรีย์. (2569). อิหม่ามอบุลหะสัน อัลอัชอะรีย์ และบทบาทในการยุติความแตกแยกและความขัดแย้ง. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/kalam/al-ashari-and-the-unity-of-the-ummah.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">أخرجه أبو داود في سننه، كتاب الملاحم، رقم 4291، من حديث أبي هريرة رضي الله عنه. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">أخرجه أبو داود في سننه، رقم 3641، والترمذي في سننه، رقم 2682، من حديث أبي الدرداء رضي الله عنه. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">القرآن الكريم، سورة هود (11)، الآيتان 118-119. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">القرآن الكريم، سورة الانفطار (82)، الآية 6. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">القرآن الكريم، سورة الانشقاق (84)، الآية 6. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+        <li id="ref-6">القرآن الكريم، سورة الحجرات (49)، الآية 13. <a class="fn-back" href="#fnref-6" aria-label="กลับไปยังเชิงอรรถที่ 6">↑</a></li>
+        <li id="ref-7">القرآن الكريم، سورة البقرة (2)، الآية 21. <a class="fn-back" href="#fnref-7" aria-label="กลับไปยังเชิงอรรถที่ 7">↑</a></li>
+        <li id="ref-8">القرآن الكريم، سورة المائدة (5)، الآية 101. <a class="fn-back" href="#fnref-8" aria-label="กลับไปยังเชิงอรรถที่ 8">↑</a></li>
+        <li id="ref-9">القرآن الكريم، سورة آل عمران (3)، الآية 64. <a class="fn-back" href="#fnref-9" aria-label="กลับไปยังเชิงอรรถที่ 9">↑</a></li>
+        <li id="ref-10">القرآن الكريم، سورة الكافرون (109)، الآية 1. <a class="fn-back" href="#fnref-10" aria-label="กลับไปยังเชิงอรรถที่ 10">↑</a></li>
+        <li id="ref-11">القرآن الكريم، سورة البقرة (2)، الآية 23. <a class="fn-back" href="#fnref-11" aria-label="กลับไปยังเชิงอรรถที่ 11">↑</a></li>
+        <li id="ref-12">القرآن الكريم، سورة البقرة (2)، الآية 62. <a class="fn-back" href="#fnref-12" aria-label="กลับไปยังเชิงอรรถที่ 12">↑</a></li>
+        <li id="ref-13">القرآن الكريم، سورة الأنعام (6)، الآية 153. <a class="fn-back" href="#fnref-13" aria-label="กลับไปยังเชิงอรรถที่ 13">↑</a></li>
+        <li id="ref-14">أخرجه أبو داود في سننه، كتاب الملاحم، رقم 4297، من حديث ثوبان رضي الله عنه. <a class="fn-back" href="#fnref-14" aria-label="กลับไปยังเชิงอรรถที่ 14">↑</a></li>
+        <li id="ref-15">القرآن الكريم، سورة آل عمران (3)، الآية 103. <a class="fn-back" href="#fnref-15" aria-label="กลับไปยังเชิงอรรถที่ 15">↑</a></li>
+        <li id="ref-16">الأشعري، أبو الحسن علي بن إسماعيل. مقالات الإسلاميين واختلاف المصلين.</li>
+        <li id="ref-17">الأشعري، أبو الحسن علي بن إسماعيل. الإبانة عن أصول الديانة.</li>
+        <li id="ref-18">محمد عبده. الإسلام بين العلم والمدنية.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
