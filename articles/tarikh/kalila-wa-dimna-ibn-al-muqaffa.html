@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>กาลีละฮ์ วะดิมนะฮ์ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="การศึกษาวรรณกรรม “กาลีละฮ์ วะดิมนะฮ์” ฉบับภาษาอาหรับที่อิบนุ อัลมุก็อฟฟะอ์ถ่ายทอดจากปัญจตันตระ กับกลวิธีเรื่องเล่าซ้อนเรื่องเล่าและบทบาทของชาวอาหรับในการบุกเบิกศิลปะการรวบรวมเรื่อง">
+<meta name="keywords" content="ประวัติศาสตร์, วรรณกรรมอาหรับ, อิบนุ อัลมุก็อฟฟะอ์, กาลีละฮ์ วะดิมนะฮ์, นิทานสัตว์, ปัญจตันตระ, เรื่องเล่าซ้อนเรื่องเล่า">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="กาลีละฮ์ วะดิมนะฮ์ — Islamic Fiqh Publishing">
+<meta property="og:description" content="เมื่ออิบนุ อัลมุก็อฟฟะอ์ถ่ายทอดนิทานสัตว์สู่ภาษาอาหรับ และวางรากฐานศิลปะเรื่องเล่าซ้อนเรื่องเล่าให้แก่วรรณกรรมโลก">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/kalila-wa-dimna-ibn-al-muqaffa.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/kalila-wa-dimna-ibn-al-muqaffa.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260610a">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="kalila-wa-dimna-ibn-al-muqaffa">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์ / ตารีค</a>
+      <h1 class="article-feature-title">กาลีละฮ์ วะดิมนะฮ์</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">กาลีละฮ์ วะดิมนะฮ์ (<span class="ar-inline" lang="ar" dir="rtl">كليلة ودمنة</span>) นับเป็นปฐมบทแห่งวรรณกรรมชิ้นเอกที่อิบนุ อัลมุก็อฟฟะอ์ ได้ถ่ายทอดจากภาษาปาห์ลาวี (ตามข้อมูลส่วนใหญ่) ซึ่งมีต้นธารมาจากวรรณกรรมอินเดียภาษาสันสกฤตที่รู้จักกันในนาม “ปัญจตันตระ” สู่ภาษาอาหรับ ผลงานชิ้นนี้ได้สร้างความงอกงามให้แก่วรรณคดีอาหรับโบราณอย่างยิ่งยวด จนปราชญ์บางท่านยกย่องให้เทียบเคียงกับงานเขียนชั้นครูของอัลญาฮิซ และอิบนุ อัลมุบัรร็อดเลยทีเดียว</p>
+      <p>เรื่องราวที่เล่าขานผ่านโอษฐ์ของสรรพสัตว์นี้ โดดเด่นด้วยภาษาที่สูงส่งและสำนวนโวหารอันคมคาย ยิ่งขับเน้นให้แก่นเรื่องที่มุ่งเน้นการเทศนาสั่งสอนและคติธรรมดูเจิดจรัสและเปี่ยมด้วยความลุ่มลึกทางปัญญาและโครงสร้าง เป็นที่แน่ชัดว่าอิบนุ อัลมุก็อฟฟะอ์ ไม่ได้เพียงแค่แปลความหมาย แต่ยังได้รังสรรค์มันขึ้นมาใหม่ด้วยกับสำนวนภาษาและลีลาเฉพาะตัวของเขาเอง ทำให้งานเขียนชิ้นนี้มีความวิจิตรบรรจงยิ่งขึ้น แทบไม่มีนิทานเรื่องใดที่ปราศจากประโยคอันจับใจผู้อ่าน ด้วยความไพเราะของถ้อยคำ ความงดงามของความหมาย และความสละสลวยในการร้อยเรียงถ้อยความให้สอดประสานกันดั่งสายสร้อยไข่มุกและอัญมณีล้ำค่า</p>
+      <p>แม้เนื้อหาจะมีความหลากหลาย แต่แก่นแท้กลับพุ่งเป้าไปที่เรื่องของการปกครองและอำนาจรัฐ ศาสตร์แห่งสงครามและกลอุบาย มิตรภาพและกัลยาณมิตร ตลอดจนมารยาทที่งดงาม ความประพฤติที่เที่ยงธรรม ความซื่อสัตย์ และจริยวัตรอันประเสริฐ การเลือกใช้สัตว์เป็นตัวเดินเรื่องนั้น ดังที่วิญญูชนย่อมตระหนักดี เป็นเพียงสัญลักษณ์เพื่ออำพรางเจตนาที่แท้จริงของผู้ประพันธ์ และเพื่อหลีกเลี่ยงข้อครหาหรือภัยร้ายที่อาจตามมา อีกทั้งยังเป็นกลวิธีทางศิลปะในการเล่าเรื่องอีกด้วย</p>
+      <p>อิบนุ อัลมุก็อฟฟะอ์ได้ชี้แจงประเด็นนี้ไว้ในบทนำว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وينبغي للناظر في هذا الكتاب أن يعلم أنه ينقسم إلى أربعة أغراض:  أحدها: ما قصد فيه إلى وضعه على ألسنة البهائم غير الناطقة، ليسارع إلى قراءته أهل الهزل من الشبان، فتستمال به قلوبهم، لأنه الغرض بالنوادر من حيل الحيوان، والثاني: إظهار خيالات الحيوان بصنوف الأصباغ والألوان، ليكون أنسا لقلوب الملوك، ويكون حرصهم عليه أشد للنزهة في تلك الصور، والثالث: أن يكون على هذه الصفة، فيتخذه الملوك والسوقة، فيكثر بذلك انتساخه، ولا يبطل فيخلق على مرور الأيام ولينتفع بذلك المصور والناسخ.  والرابع: وهو الأقصى، وذلك مخصوص بالفيلسوف خاصة.</blockquote>
+      <p class="ar-translation">“ผู้ที่พินิจพิเคราะห์หนังสือเล่มนี้ พึงทราบเถิดว่ามันถูกแบ่งออกตามวัตถุประสงค์สี่ประการ ประการแรก: การผูกเรื่องให้ดำเนินไปผ่านตัวละครที่เป็นสัตว์เดรัจฉาน เพื่อดึงดูดใจเหล่ายุวชนผู้รักความสนุกสนานให้อ่านอย่างกระตือรือร้น โน้มน้าวจิตใจพวกเขาด้วยเรื่องราวแปลกประหลาดและเล่ห์เหลี่ยมของสัตว์นานาชนิด ประการที่สอง: การถ่ายทอดจินตภาพของสัตว์ผ่านสีสันอันหลากหลาย เพื่อเป็นเครื่องเจริญใจแก่เหล่ากษัตริย์ ให้พระองค์ทรงปรารถนาที่จะเก็บรักษาหนังสือนี้ไว้เพื่อความเพลิดเพลินในการทอดพระเนตรภาพเหล่านั้น ประการที่สาม: เพื่อให้หนังสือมีคุณลักษณะที่ดึงดูดทั้งกษัตริย์และสามัญชน นำไปสู่การคัดลอกเผยแพร่อย่างแพร่หลาย มิให้สูญหายหรือเก่าเก็บไปตามกาลเวลา อันจะก่อให้เกิดประโยชน์แก่ทั้งจิตรกรผู้วาดภาพประกอบและอาลักษณ์ผู้คัดลอก ประการที่สี่: ซึ่งถือเป็นเป้าหมายสูงสุด นั่นคือสารัตถะที่มุ่งสื่อถึงเหล่านักปราชญ์โดยเฉพาะ”</p>
+      <p>เรื่องเล่าซ้อนเรื่องเล่าในกาลีละฮ์ วะดิมนะฮ์ คือโครงเรื่องหลักเพียงหนึ่งเดียวที่โอบอุ้มเรื่องราวย่อยๆ ไว้ภายในเนื้อหา โดยที่เรื่องย่อยเหล่านั้นอาจมิได้มีความเชื่อมโยงกันโดยตรง แต่ละเรื่องต่างมีความสมบูรณ์ในตัวเอง ทั้งในแง่ของโครงสร้าง พล็อตเรื่อง สาระสำคัญ และตัวละคร</p>
+
+      <h2 class="article-h2">เรื่องเล่าซ้อนเรื่องเล่าในกาลีละฮ์ วะดิมนะฮ์</h2>
+      <p>โครงเรื่องหลักที่เป็นกรอบห่อหุ้มในกาลีละฮ์ วะดิมนะฮ์นั้น นับเป็นผลงานสร้างสรรค์ของอิบนุ อัลมุก็อฟฟะอ์โดยแท้ เขาได้กำหนดให้ปราชญ์ชาวอินเดียนามว่า “บัยดะบา” เป็นผู้ถ่ายทอดนิทานย่อยทั้งสิบสี่เรื่องผ่านบทสนทนาที่มีต่อกษัตริย์ดับซะลีม</p>
+      <p>ชาวอาหรับถือเป็นชนชาติแรกๆ ที่วางรากฐานกลวิธีการประพันธ์ที่ใช้รวบรวมเรื่องราวในลักษณะนี้ โดยผ่านฝีมือของอิบนุ อัลมุก็อฟฟะอ์ เขาคือผู้บุกเบิกการใช้กรอบของเรื่องเล่าในรูปแบบเฉพาะตัวนี้ แม้ว่าเทคนิคการให้ตัวละครหนึ่งเล่าเรื่องราวแทรกซ้อนจะเคยปรากฏมาก่อนแล้วในวรรณกรรมยุคก่อนหน้าอย่างมหาภารตะ, โอดิสซีย์, รามเกียรติ์ (รามายณะ) หรือ The Golden Ass ก็ตาม</p>
+      <p>แต่เราสามารถจำแนกความแตกต่างของโครงเรื่องซ้อนเรื่องเล่าในแบบฉบับของอิบนุ อัลมุก็อฟฟะอ์ (ซึ่งภายหลังได้ส่งอิทธิพลต่อพันหนึ่งราตรี, The Canterbury Tales และ The Decameron) ได้จากอัตลักษณ์สำคัญดังต่อไปนี้:</p>
+      <ol class="article-summary">
+        <li><strong>มุ่งเน้นศิลปะแห่งการรวบรวม:</strong> โครงเรื่องหลักทำหน้าที่เป็นเพียง “กรอบ” หรือ “ภาชนะ” เพื่อรวบรวมเรื่องราวต่างๆ เข้าไว้ด้วยกัน บทบาทของมันจึงเด่นชัดในฐานะสื่อกลางในการจัดหมวดหมู่ มากกว่าจะเป็นแก่นของเรื่อง (แม้ว่าจะยังคงไว้ซึ่งเป้าหมายเชิงสารัตถะและสุนทรียะทางวรรณศิลป์ก็ตาม)</li>
+        <li><strong>ผู้เล่าไม่ใช่ส่วนหนึ่งของเรื่องเล่า:</strong> ผู้ที่ทำหน้าที่เล่าเรื่อง (ในที่นี้คือบัยดะบา) ดำรงอยู่ในสถานะที่แยกขาดจากเรื่องราวที่เขาเล่า เขาไม่ได้อยู่ในห้วงเวลาหรือสถานที่เดียวกันกับตัวละครในนิทาน และมิได้มีส่วนร่วมในเหตุการณ์เหล่านั้น หน้าที่ของเขาจำกัดอยู่เพียงการเป็น “ผู้เล่า” เท่านั้น</li>
+        <li><strong>เรื่องเล่าภายในคือหัวใจสำคัญ:</strong> เป้าหมายที่แท้จริงของกาลีละฮ์ วะดิมนะฮ์ คือคติธรรมจากนิทานสัตว์ ไม่ใช่เรื่องราวการสนทนาระหว่างกษัตริย์กับนักปราชญ์ ดังนั้น สารัตถะหลักของงานประพันธ์จึงโฟกัสไปที่นิทานย่อยที่ถูกถ่ายทอดออกมา</li>
+      </ol>
+      <p>อัตลักษณ์เหล่านี้เองที่ทำให้โครงเรื่องของอิบนุ อัลมุก็อฟฟะอ์ เป็นนวัตกรรมทางวรรณศิลป์ที่โดดเด่นและแตกต่าง ตัวอย่างเช่น ในนวนิยายเรื่อง The Golden Ass แม้จะมีลักษณะเรื่องซ้อนเรื่อง แต่กรอบหลักมิได้เป็นเพียงทางผ่าน หากแต่เน้นหนักไปที่การผจญภัยของลา และตัวผู้เล่าก็มีส่วนร่วมในเหตุการณ์ หรือในมหากาพย์มหาภารตะ ยามที่ฤษีวยาสขับขานเรื่องราวถวายแด่พระคเณศ แม้จะเข้าข่ายลักษณะที่ 1 และ 2 แต่เนื้อหาภายในกลับเป็นเรื่องราวเดียวที่ต่อเนื่องและแตกแขนงออกไป (เรื่องราวของกษัตริย์ศานตนุและวงศาคณาญาติ) มิได้ประกอบด้วยนิทานเอกเทศหลายเรื่อง</p>
+      <p>เฉกเช่นเดียวกับในโอดิสซีย์ เมื่อโอดิสซุสสวมบทบาทเป็นนักเล่าเรื่องถ่ายทอดเหตุการณ์แก่กษัตริย์แห่งเฟเชียนก่อนจะกลับถึงอิธากา โครงเรื่องหลักในที่นี้คือการเดินทางกลับบ้านอันเต็มไปด้วยภยันตราย ซึ่งโอดิสซุสเองเป็นตัวเอกของเรื่อง (เป็นส่วนหนึ่งของเรื่องเล่า) และเรื่องราวที่เล่าก็ร้อยเรียงกันด้วยตัวของเขาเอง มิได้แยกขาดจากกัน</p>
+      <p>แต่ในงานยุคต่อมาอย่างพันหนึ่งราตรี เราได้เห็นอิทธิพลของอิบนุ อัลมุก็อฟฟะอ์อย่างชัดเจนผ่านเรื่องราวของกษัตริย์ชะห์ริยาร์และชะฮ์ราซาด นางได้เล่าขานนิทานหลากหลายรสชาติที่ไม่มีความเกี่ยวเนื่องกันและไม่มีตัวละครร่วมกัน โดยที่ตัวนางเอง (ผู้เล่า) ดำรงอยู่ในสถานะที่แยกขาดจากโลกของนิทานเหล่านั้น อิทธิพลของโครงเรื่องลักษณะนี้ได้ข้ามพรมแดนไปสู่วรรณกรรมของชาติอื่น</p>
+      <p>ฉบับแปลของอิบนุ อัลมุก็อฟฟะอ์ นับเป็น “ต้นฉบับเพียงหนึ่งเดียว” ของหนังสือปัญจตันตระ ที่ยังคงหลงเหลืออยู่ ภายหลังจากที่ต้นฉบับภาษาปาห์ลาวีและภาษาสันสกฤตดั้งเดิมได้สูญหายไปสิ้น โดยฉบับภาษาสันสกฤตที่ปรากฏอยู่ในปัจจุบันล้วนเป็นการแปลกลับมาจากฉบับภาษาอาหรับของอิบนุ อัลมุก็อฟฟะอ์ทั้งสิ้น นอกจากนี้ ชาวอาหรับคือผู้ริเริ่มนำเรื่องราวเหล่านี้มาจัดวางไว้ภายใต้กรอบเรื่องเล่าเดียวกัน</p>
+      <p>อนึ่ง แนวคิดในการร้อยเรียงแก่นเรื่องที่หลากหลายไว้ภายในกรอบเดียวกันนั้น เป็นขนบที่หยั่งรากลึกอยู่ในกวีนิพนธ์อาหรับมาช้านาน ซึ่งในบทกวีหนึ่งๆ มักประกอบด้วยเนื้อหาที่วิจิตรพิสดาร ตั้งแต่การพรรณนาความอาลัยต่อซากปรักหักพัง การรำพันถึงหญิงคนรัก การสดุดีความภาคภูมิใจในตนเอง ไปจนถึงการบอกเล่าตำนานวีรกรรมของชนเผ่า เป็นต้น รูปแบบเรื่องเล่าซ้อนเรื่องเล่านี้ได้สืบสานต่อมายังพันหนึ่งราตรี ก่อนจะข้ามผ่านไปยังวรรณกรรมตะวันตก ซึ่งเป็นที่น่าสังเกตว่า วรรณกรรมกรีกโบราณนั้นมักจะเคร่งครัดในเรื่อง “เอกภาพแห่งแก่นเรื่อง” ไม่ว่าจะเป็นสุขนาฏกรรมหรือโศกนาฏกรรมก็ตาม</p>
+      <p>ผู้แรกที่นำพา “เรื่องเล่าซ้อนเรื่องเล่า” เข้าสู่โลกวรรณกรรมยุโรปคือ อัลฟอนซี (Petrus Alphonsi) ในศตวรรษที่ 12 โดยเขาได้ยึดกาลีละฮ์ วะดิมนะฮ์เป็นต้นแบบในการประพันธ์หนังสือ Disciplina Clericalis ภายหลังจากที่เขาเดินทางไปยังอังกฤษ เขาได้กลายเป็นสะพานเชื่อมระหว่างสองวัฒนธรรมอันยิ่งใหญ่ คืออิสลามและคริสต์ อิทธิพลของเขาได้ส่งต่อไปยังจิโอวานนี (Giovanni Boccaccio) ในการประพันธ์ The Decameron ซึ่งเป็นการรวบรวมเรื่องเล่าจากเหล่าหนุ่มสาว และยังส่งอิทธิพลต่อกวีชาวอังกฤษอย่างเจฟฟรีย์ (Geoffrey Chaucer)</p>
+      <p>ด้วยประการฉะนี้ ชาวอาหรับจึงได้รับการยกย่องว่าเป็นผู้ริเริ่มจารึกเรื่องเล่าซ้อนเรื่องเล่าลงในหน้าประวัติศาสตร์วรรณกรรมโลก และเป็นผู้บุกเบิกกรรมวิธีทางวรรณศิลป์ในการรวบรวมเรื่องราวผ่านผลงานกาลีละฮ์ วะดิมนะฮ์ที่อิบนุ อัลมุก็อฟฟะอ์ได้ถ่ายทอดสู่ภาษาอาหรับนั่นเอง</p>
+
+      <h2 class="article-h2">ศิลปะการเล่าเรื่องและกลวิธีในกาลีละฮ์ วะดิมนะฮ์</h2>
+      <p>โครงสร้างการเล่าเรื่องในกาลีละฮ์ วะดิมนะฮ์นั้นแบ่งออกเป็นสองระดับหลัก ระดับแรกคือโครงเรื่องหลัก ซึ่งดำเนินเรื่องผ่านการบอกเล่าของปราชญ์บัยดะบาถวายแด่กษัตริย์ดับชะลีม โดยตัวละครทั้งสองนี้มีปูมหลังร่วมกันมาก่อน กล่าวคือ ปราชญ์บัยดะบาเคยอาจหาญตักเตือนกษัตริย์ดับชะลีมถึงความบกพร่องในการปกครองและการดูแลทุกข์สุขของราษฎร เป็นเหตุให้กษัตริย์กริ้วและสั่งจำคุกปราชญ์ผู้นั้น แต่ในกาลต่อมา พระองค์ทรงสำนึกผิดจึงได้ปล่อยตัวเขา พร้อมทั้งปูนบำเหน็จและเลื่อนฐานันดรให้สูงส่ง</p>
+      <p>หลังจากนั้น พระองค์ได้บัญชาให้บัยดะบารังสรรค์หนังสือเล่มหนึ่งขึ้น เพื่อเชิดชูเกียรติและจารึกพระนามของพระองค์ไว้เฉกเช่นบรรพชนที่มีผลงานประดับอยู่ในหอสมุดหลวง ผลลัพธ์ที่ได้จึงออกมาเป็นนิทานชุดนี้ ดังที่ประจักษ์ชัดว่า โครงเรื่องหลักนี้คือผลงานสร้างสรรค์ของอิบนุ อัลมุก็อฟฟะอ์โดยแท้ เพราะบทสนทนาและการเสวนาระหว่างบุรุษทั้งสองมิได้ปรากฏอยู่ในต้นฉบับดั้งเดิม หากแต่เป็นเหตุการณ์ภายนอกที่อิบนุ อัลมุก็อฟฟะอ์ได้แปรสภาพให้กลายเป็นภาชนะเพื่อรองรับเรื่องราวทั้งหมดของบัยดะบา</p>
+      <p>ณ จุดนี้เองที่ระดับการเล่าเรื่องชั้นแรกได้ก่อตัวขึ้น บัยดะบาสวมบทบาทเป็นผู้เล่าเรื่องคนแรก (และเป็นผู้แต่งเรื่องในท้องเรื่อง) แต่ผู้เล่าเรื่องหลักที่ซ่อนเร้นอยู่ แท้จริงแล้วคืออิบนุ อัลมุก็อฟฟะอ์ ผู้ซึ่งกำลังถ่ายทอดเรื่องราวของบัยดะบาและกษัตริย์ให้เราฟัง (เกิดการซ้อนทับกันระหว่างโลกสมมติในเรื่องเล่ากับโลกแห่งการประพันธ์จริง ผ่านกลวิธีเรื่องเล่าซ้อนเรื่องที่อิบนุ อัลมุก็อฟฟะอ์สร้างขึ้น)</p>
+      <p>ส่วนระดับการเล่าเรื่องชั้นที่สอง ปรากฏขึ้นเมื่อตัวละครสัตว์ในนิทานหลัก เริ่มเล่าเรื่องราวแทรกซ้อนให้สัตว์ตัวอื่นฟัง และดำเนินต่อเนื่องกันไปเป็นลูกโซ่แห่งการเล่าเรื่อง จนกระทั่งความลึกของเรื่องเล่าก้าวไปถึงระดับที่สี่ ดังลำดับต่อไปนี้:</p>
+      <ol class="article-summary">
+        <li><strong>ผู้เล่าเรื่องหลัก (อิบนุ อัลมุก็อฟฟะอ์):</strong> เล่าเรื่องราวของบัยดะบากับกษัตริย์ [ระดับการเล่าเรื่องที่ 1]</li>
+        <li><strong>ผู้เล่าเรื่องคนแรก (บัยดะบา):</strong> เล่านิทานสัตว์ถวายแด่กษัตริย์ดับชะลีม [ระดับการเล่าเรื่องที่ 2]</li>
+        <li><strong>ผู้เล่าเรื่องคนที่สอง (สัตว์ที่เป็นตัวละครเอก):</strong> เล่าเรื่องราวแทรกซ้อนให้สัตว์ตัวอื่นฟัง [ระดับการเล่าเรื่องที่ 3]</li>
+        <li><strong>ผู้เล่าเรื่องคนที่สาม (สัตว์ที่เป็นตัวละครรองในเรื่องแทรก):</strong> เล่าเรื่องราวซ้อนลึกลงไปอีกชั้นให้สัตว์อื่นฟัง [ระดับการเล่าเรื่องที่ 4]</li>
+      </ol>
+      <p>ด้วยเหตุนี้ ลำดับชั้นของการเล่าเรื่องจึงมีลักษณะเป็นเส้นโค้งที่ลาดลึกลงไป (สู่เรื่องเล่าที่ซ้อนกันหลายชั้น) แล้วจึงวกกลับไต่ระดับขึ้นมา จนบรรจบที่ระดับการเล่าเรื่องชั้นแรกในที่สุด</p>
+
+      <h2 class="article-h2">บทกวีแห่งกาลีละฮ์ วะดิมนะฮ์</h2>
+      <p>เหล่ากวีจำนวนไม่ใช่น้อยได้นำวรรณกรรมเรื่องกาลีละฮ์ วะดิมนะฮ์มาถ่ายทอดใหม่ในรูปแบบร้อยกรอง หนึ่งในผู้บุกเบิกยุคแรกคือ อะบาน อัลลาหิกี (เสียชีวิต ฮ.ศ. 200) ซึ่งปรากฏความในหนังสืออัลอะฆอนีว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كان ابان نقل كتاب كليلة ودمنة فجعله شعرا يسهل حفظه وهو معروف أوله</blockquote>
+      <p class="ar-translation">“อะบานได้ถ่ายทอดหนังสือกาลีละฮ์ วะดิมนะฮ์เสียใหม่ โดยร้อยเรียงเป็นบทกวีเพื่อให้ง่ายต่อการจดจำ ซึ่งเป็นที่รู้จักกันดีด้วยบทขึ้นต้นที่ว่า:”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هذا كتاب أدب وفطنة</blockquote>
+      <p class="poem-th">“นี่คือสาส์น แห่งอักษร และปัญญา”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وهو الذي يدعى كليلة ودمنه</blockquote>
+      <p class="poem-th">“นามระบือ ลือชานั้น กาลีละฮ์ วะ ดิมนะฮ์”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فيه خيالات وفي رشد</blockquote>
+      <p class="poem-th">“เปี่ยมด้วยเรื่อง จินตนาการ ผสานสัจธรรม”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وهو كتاب وضعته الهند</blockquote>
+      <p class="poem-th">“ชาวอินเดีย คือผู้ทำ รังสรรค์มา”</p>
+      <p>แต่น่าเสียดายยิ่งนักที่บทประพันธ์ฉบับนี้ได้สูญหายไปตามกาลเวลา หลงเหลือเพียงเศษเสี้ยวบทกวีบางท่อนเท่านั้น แต่อย่างไรก็ตามก็ยังมีกวีท่านอื่นๆ ที่ได้ร้อยกรองเรื่องนี้ไว้เช่นกัน อาทิ อิบนุ อัลฮับบารียะฮ์ (เสียชีวิต ฮ.ศ. 509)</p>
+
+      <h2 class="article-h2">ทั้งหมดคือเรื่องจริงหรือเรื่องแต่ง?</h2>
+      <p>ความจริงโลกของสัตว์นั้นคืออาณาจักรที่มีความเป็นประชาชาติเฉกเช่นเดียวกับประชาชาติของมนุษย์ ดังนั้น ความเป็นแฟนตาซีหรือจินตนาการที่ปรากฏในกาลีละฮ์ วะดิมนะฮ์ จึงมิได้หมายความว่ามันเป็นเพียงจินตนาการเพ้อฝันของมนุษย์ที่ตัดขาดจากความจริงเสมอไป เป็นไปได้ว่าเรื่องราวเหล่านี้อาจเกิดขึ้นจริง หรือเป็นวิสัยที่เกิดขึ้นได้ในโลกของสัตว์ ไม่ใช่เป็นเพียงสัญลักษณ์แทนตัวมนุษย์เท่านั้น</p>
+      <p>ในโลกของสัตว์ ย่อมไม่มีสิ่งใดขัดขวางมิให้เกิดเหตุการณ์เฉกเช่นในโลกมนุษย์ ไม่ว่าจะเป็นการหลอกลวง สงคราม ความขัดแย้ง การทรยศหักหลัง การผูกมิตร ชัยชนะ ความพ่ายแพ้ การพิพากษา หรือแม้แต่ระบอบราชสำนักและกองทัพ สิ่งที่จะชี้ให้เห็นคือ เรื่องราวเหล่านี้ไม่ใช่เรื่องสมมติโดยสิ้นเชิง และเราไม่อาจเพิกเฉยต่อความเป็นไปได้ (หรือความน่าเชื่อถือ) ที่ว่าเรื่องราวเหล่านี้มีมูลฐานมาจากพฤติกรรมของสัตว์จริงๆ</p>
+      <p>การปรุงแต่งบรรยากาศแบบมนุษย์ หรือการใช้วิธีคิดแบบมนุษย์เข้าไปจับในแง่ของภาษา พล็อตเรื่อง หรือคติสอนใจนั้น มิได้พรากความเป็นสัตว์ออกไปจากตัวเรื่อง มากไปกว่าการทำหน้าที่แปลงสาส์นจากโลกของสัตว์สู่โลกของมนุษย์ เพื่อให้ผู้อ่านที่เป็นมนุษย์สามารถเข้าใจและเข้าถึงได้</p>
+      <p>สัตว์นั้นมีบทบาทสำคัญในวรรณกรรมของมนุษยชาติมาเนิ่นนาน ในฐานะเพื่อนเก่าแก่ มิตรสหายที่ซื่อสัตย์ คู่หูทั้งยามศึกและยามสงบ ยามตั้งถิ่นฐานและยามรอนแรม รวมถึงบทบาทในการเอื้อนเอ่ยหรือแสดงความรู้สึกผ่านสื่อต่างๆ ดังที่ปรากฏบ่อยครั้งในวรรณกรรมโลก เช่น การพูดได้ของสัตว์ใน The Golden Ass ของลูเชียส (Lucius Apuleius) หรือก่อนหน้านั้นใน Iliad สองบทกวีมหากาพย์กรีกโบราณของโฮเมอร์กับฉากการร่ำไห้ของม้าศึกที่มีต่อปาโตรคลัส และใน Aeneid กับฉากอาลัยของม้าศึกนามว่า “มีเซนติอุส” ที่มีต่อเจ้านายของมัน</p>
+      <p>ดังนั้น การที่สัตว์พูดได้จึงไม่ใช่ความแปลกใหม่ที่ผู้ประพันธ์เรื่องนี้คิดค้นขึ้นเป็นคนแรก แต่ความพิเศษอยู่ที่การรังสรรค์ให้หนังสือทั้งเล่มเป็นการเล่าเรื่องผ่านปากของสัตว์ต่างหาก และความโดดเด่นอีกประการคือ การเนรมิตโลกแฟนตาซีที่เป็นของสัตว์โดยเฉพาะ ซึ่งมีวิถีชีวิตไม่ต่างจากโลกมนุษย์ โดยใช้โลกของสัตว์นี้เป็นสัญลักษณ์สะท้อนภาพเหตุการณ์ในโลกมนุษย์ เพื่อสื่อสารความคิดและวัตถุประสงค์บางอย่าง จนดูประหนึ่งว่าโลกทั้งสองใบนี้ มนุษย์และสัตว์ ต่างเป็นประชาชาติที่คล้ายคลึงกันจนแยกไม่ออก</p>
+
+      <!-- CITATION (อ้างอิงบทความนี้) -->
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). กาลีละฮ์ วะดิมนะฮ์. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/kalila-wa-dimna-ibn-al-muqaffa.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script src="../../main.js?v=20260610a" charset="UTF-8"></script>
+</body>
+</html>
