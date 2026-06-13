@@ -27,6 +27,9 @@
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
 
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/CATEGORY/SLUG.html">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
@@ -56,7 +59,7 @@ body { position: relative; }
 .ar-feature {
   font-family: 'Amiri', serif;
   direction: rtl;
-  font-size: 1.6rem;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
   color: var(--text-primary);
   padding: 24px 24px;
   background: rgba(255,255,255,0.02);
@@ -412,6 +415,23 @@ html.no-arabic .ar-quote { display: none; }
       <!-- EXAMPLE — replace -->
       <blockquote class="ar-feature" lang="ar" dir="rtl">فيمن شهد برؤية الهلال منفردا بشهادته واقتضى الحساب تكذيبه</blockquote>
       <p class="ar-translation">“ในกรณีของผู้ที่อ้างตนเป็นพยานว่ามองเห็นจันทร์เสี้ยว (ฮิลาล) เพียงลำพัง (หรือสองสามคน) แต่ผลการคำนวณทางดาราศาสตร์ กลับบ่งชี้ว่าคำกล่าวอ้างของเขาเป็นเท็จ (จะให้คำตอบอย่างไร?)”</p>
+
+      <!-- ===== INLINE & MISC blocks (N1 / N2 / N3) ===== -->
+      <!-- N1 — AR_INLINE: Arabic word/phrase inside a Thai sentence (Rule 50):
+           <span class="ar-inline" lang="ar" dir="rtl">…</span> — ยังแสดงเมื่อปิด Arabic. -->
+      <p>คำศัพท์ทับศัพท์ เช่น <span class="ar-inline" lang="ar" dir="rtl">شريعة</span> (ชะรีอะฮ์) แทรกอยู่ในบรรทัดไทยได้</p>
+
+      <!-- N2 — BLOCK_SOURCE: ระบุที่มาของอายะฮ์/หะดีษ "ในบล็อก" แทนเชิงอรรถ (Rule S7) —
+           คำแปลเหลือเนื้อล้วน, ที่มาอยู่บรรทัด .block-source (ต้องอยู่ใน .aya-block/.hadith-block). -->
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">…آية كاملة التشكيل منسوخة من quran.com…</p>
+        <p class="ar-translation">“…คำแปลอายะฮ์…”</p>
+        <p class="block-source">สูเราะฮ์อัลบะเกาะเราะฮ์ อายะฮ์ที่ 189</p>
+      </div>
+
+      <!-- N3 — THAI_QUOTE: คำแปล/คำพูดภาษาไทยที่ต้อง "นับ" ใน reading time แม้อยู่คู่บล็อก
+           กลุ่ม ar-* ที่ปกติถูกยกเว้น (Rule 55) — เติมคลาส thai-quote. -->
+      <p class="ar-translation thai-quote">“คำแปลไทยที่ต้องการให้นับใน reading time แม้อยู่คู่บล็อกอาหรับ”</p>
 
       <!-- AYA_BLOCK: Quran verse — FULLY VOWELED, byte-exact from quran.com (Rule 53).
            Thai meaning follows in a plain <p> wrapped in { } with a footnote <sup>. -->
