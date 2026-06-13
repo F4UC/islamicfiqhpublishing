@@ -41,9 +41,10 @@
   --plate-panel2: #E4DDCD;
   --plate-ink:    #161210;   /* near-black ink */
   --plate-red:    #B31B1B;   /* the ONE crimson: origin + holder + path */
-  --plate-green:  #1B7A4A;   /* seal/stamp accent only */
-  --plate-blue:   #2156C8;   /* seal/stamp accent only */
-  --plate-gray:   #6F7785;   /* stone gray seal/pending/weak */
+  --plate-green:  #1B7A4A;   /* legacy seal accent (unused by grades) */
+  --plate-gold:   #c49a45;   /* thiqa — premium brand gold (Rule 29) */
+  --plate-blue:   #2563eb;   /* saduq / maqbul */
+  --plate-gray:   #6b7280;   /* majhul / daif / pending */
   --plate-rule:        rgba(22,18,16,0.12);
   --plate-rule-strong: rgba(22,18,16,0.22);
   --plate-grid:        rgba(22,18,16,0.07);  /* faint plate grid dots */
@@ -88,6 +89,7 @@ html.dark-mode {
   --plate-ink:    #E8E2D4;
   --plate-red:    #d8443f;
   --plate-green:  #3fa56e;
+  --plate-gold:   #d4ad55;
   --plate-blue:   #5b86e6;
   --plate-gray:   #9aa1ab;
   --plate-rule:        rgba(232,226,212,0.13);
@@ -435,11 +437,11 @@ details[open] .legend-summary::after { content:'−'; }
            background:var(--plate-paper); border:2px solid var(--plate-gray); }
 .leg-cap-red       { border-color:var(--plate-red);  }
 .leg-cap-ink       { border-color:var(--plate-ink);  }
-.leg-cap-green     { border-color:var(--plate-green);}
+.leg-cap-gold      { border-color:var(--plate-gold); border-width:3px; }
 .leg-cap-blue      { border-color:var(--plate-blue); }
-.leg-cap-blue-dash { border-style:dashed; border-color:var(--plate-blue); border-width:1.5px; }
-.leg-cap-gray-dot  { border-style:dotted; border-color:var(--plate-gray); border-width:1.5px; }
-.leg-cap-gray-dash { border-style:dashed; border-color:var(--plate-gray); }
+.leg-cap-blue-dash { border-style:dashed; border-color:var(--plate-blue); border-width:2px; }
+.leg-cap-gray-dot  { border-style:dotted; border-color:var(--plate-gray); border-width:2px; }
+.leg-cap-gray-dash { border-style:dashed; border-color:var(--plate-gray); border-width:1.5px; }
 .leg-cap-gray-thin { border-width:1.2px; border-color:var(--plate-gray); }
 .leg-cap-red-dot   { border-style:dotted; border-color:var(--plate-red); }
 .leg-chevron { width:24px; flex-shrink:0; text-align:center; font-family:var(--ui);
@@ -645,10 +647,11 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
           <div class="leg-group-title">ระดับผู้รายงาน (ขอบแคปซูล = คำตัดสิน)</div>
           <div class="leg-item"><span class="leg-cap leg-cap-red"></span>ต้นสาย / ผู้รับสุดท้าย (นบี · ผู้ถือสายสุดท้าย) — แดง</div>
           <div class="leg-item"><span class="leg-cap leg-cap-ink"></span>เศาะหาบะฮ์ — ขอบหมึกเข้ม</div>
-          <div class="leg-item"><span class="leg-cap leg-cap-blue"></span>ษิเกาะฮ์ · เศาะดูก (เชื่อถือได้) — น้ำเงิน ขอบทึบ</div>
-          <div class="leg-item"><span class="leg-cap leg-cap-blue-dash"></span>มักบูล (ยอมรับแบบมีเงื่อนไข) — น้ำเงิน ขอบเส้นประ</div>
-          <div class="leg-item"><span class="leg-cap leg-cap-gray-dot"></span>มัจญ์ฮูล (ไม่ทราบสถานะ) — เทา ขอบจุดประ</div>
-          <div class="leg-item"><span class="leg-cap leg-cap-gray-dash"></span>เฎาะอีฟ (อ่อน ยืนยันแล้ว) — เทา ขอบเส้นประ</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-gold"></span>ษิเกาะฮ์ (ทอง/ทึบหนา — น่าเชื่อถือสูงสุด)</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-blue"></span>เศาะดูก (น้ำเงิน/ทึบ — สัตย์จริง)</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-blue-dash"></span>มักบูล (น้ำเงิน/ประ — มีเงื่อนไข)</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-gray-dot"></span>มัจญ์ฮูล (เทา/จุด — ไม่ทราบประวัติ)</div>
+          <div class="leg-item"><span class="leg-cap leg-cap-gray-dash"></span>เฎาะอีฟ (เทา/ประบาง — อ่อน)</div>
           <div class="leg-item"><span class="leg-cap leg-cap-gray-thin"></span>ไม่ระบุระดับ — เทาเส้นบาง (รอตรวจ)</div>
           <div class="leg-item"><span class="leg-cap leg-cap-red-dot"></span>ช่วงขาด (อินกิฏออฺ) — แดง ขอบจุดประ</div>
         </div>
@@ -783,8 +786,9 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       ink:    plateVar('--plate-ink',    '#161210'),
       red:    plateVar('--plate-red',    '#B31B1B'),
       green:  plateVar('--plate-green',  '#1B7A4A'),
-      blue:   plateVar('--plate-blue',   '#2156C8'),
-      gray:   plateVar('--plate-gray',   '#6F7785')
+      gold:   plateVar('--plate-gold',   '#c49a45'),
+      blue:   plateVar('--plate-blue',   '#2563eb'),
+      gray:   plateVar('--plate-gray',   '#6b7280')
     };
   }
 
@@ -797,11 +801,12 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     switch(gc){
       case 'prophet': return {border:P.red,   width:2.4, style:'solid',  origin:true};
       case 'sahabi':  return {border:P.ink,   width:2,   style:'solid'};
-      case 'thiqa':   return {border:P.blue,  width:2,   style:'solid'};   /* reliable */
-      case 'saduq':   return {border:P.blue,  width:2,   style:'solid'};   /* reliable */
-      case 'maqbul':  return {border:P.blue,  width:1.5, style:'dashed'};  /* conditional acceptance — not equal to saduq */
-      case 'daif':    return {border:P.gray,  width:2,   style:'dashed'};  /* confirmed weak */
-      case 'majhul':  return {border:P.gray,  width:1.5, style:'dotted'};  /* unknown — not confirmed weak */
+      /* colour-blind safe: each grade differs by colour + border-style + width */
+      case 'thiqa':   return {border:P.gold, width:3,   style:'solid'};   /* highest — gold, thick solid */
+      case 'saduq':   return {border:P.blue, width:2,   style:'solid'};   /* truthful — blue solid */
+      case 'maqbul':  return {border:P.blue, width:2,   style:'dashed'};  /* conditional — blue dashed */
+      case 'majhul':  return {border:P.gray, width:2,   style:'dotted'};  /* unknown history — gray dotted */
+      case 'daif':    return {border:P.gray, width:1.5, style:'dashed'};  /* confirmed weak — gray thin dashed */
       case 'gap':     return {border:P.red,   width:2,   style:'dotted'};  /* inqitāʿ: declared break */
       case 'unknown': return {border:P.gray,  width:1.2, style:'solid'};   /* pending status */
       default:        return {border:P.gray,  width:1.2, style:'solid'};
