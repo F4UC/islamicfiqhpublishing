@@ -30,6 +30,7 @@
 })();
 </script>
 
+<link rel="stylesheet" href="/css/index-list.css?v=20260614a">
 <style>
 @font-face {
   font-family: 'D-DIN';
@@ -342,38 +343,8 @@ body::before {
    ARTICLE INDEX
    ========================================================= */
 .index-list { display: flex; flex-direction: column; }
-.idx-row {
-  display: grid; grid-template-columns: 80px 220px 1fr 240px 120px; gap: 32px; align-items: center;
-  padding: 36px 0; border-top: 1px solid var(--rule);
-  transition: all .4s cubic-bezier(.2,.7,.2,1); position: relative; overflow: hidden;
-}
-.idx-row:last-child { border-bottom: 1px solid var(--rule); }
-.idx-row::before {
-  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--gold);
-  transition: width .4s cubic-bezier(.2,.7,.2,1);
-}
-.idx-row:hover { padding-left: 32px; background: linear-gradient(to right, rgba(59,130,246,.04), transparent 60%); }
-.idx-row:hover::before { width: 3px; }
-.idx-row:hover .idx-title { color: var(--gold-bright); }
-.idx-row:hover .idx-arrow { transform: translateX(8px); color: var(--gold); }
-.idx-num { font-family: var(--serif); font-style: italic; color: rgba(0,0,0,0.72); font-size: 22px; letter-spacing: .02em; }
-.idx-cat { font-family: var(--thai); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(0,0,0,0.72); white-space: nowrap; }
-.idx-title { font-family: var(--thai); font-weight: 500; font-size: 22px; line-height: 1.4; color: var(--paper); transition: color .3s; }
-.idx-meta { font-family: var(--thai); font-size: 14px; color: rgba(0,0,0,0.55); letter-spacing: .02em; }
-.idx-read { display: none; } /* homepage: reading time shown inside .idx-meta; standalone cell is for category pages only */
-.idx-arrow { text-align: right; color: rgba(0,0,0,0.7); transition: all .35s; font-family: var(--thai); font-size: 18px; }
-html.dark-mode .idx-num { color: rgba(255,255,255,0.75); }
-html.dark-mode .idx-cat { color: rgba(255,255,255,0.75); }
-html.dark-mode .idx-meta { color: rgba(255,255,255,0.65); }
-html.dark-mode .idx-arrow { color: rgba(255,255,255,0.7); }
-.idx-arrow::after { content: ' →'; }
 
 .archive-footer { margin-top: 64px; display: flex; justify-content: flex-end; align-items: center; }
-
-@media(max-width:1100px){
-  .idx-row { grid-template-columns: 60px 1fr 100px; gap: 20px; }
-  .idx-cat, .idx-meta { display: none; }
-}
 
 /* =========================================================
    CATEGORY GRID — SpaceX-style layout
@@ -829,7 +800,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 }
 </script>
 </head>
-<body lang="th">
+<body class="idx-home" lang="th">
 
 <div id="header-placeholder"></div>
 

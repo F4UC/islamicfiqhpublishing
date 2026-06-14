@@ -1,0 +1,57 @@
+/* index-list.css — shared article-index (.idx-*) list styles (PERF-3 dedup).
+   De-duplicated from index.html + the 6 category pages. Scoped to preserve
+   each context's exact look:
+     .idx-home        = homepage (index.html) — light/dark themed
+     .ifp-tools-page  = category pages — fixed-dark palette
+   Display rules kept: idx-meta home=visible/category=none · idx-read home=none/category=block. */
+
+/* ============ Homepage list (body.idx-home) ============ */
+.idx-home .idx-row {
+  display: grid; grid-template-columns: 80px 220px 1fr 240px 120px; gap: 32px; align-items: center;
+  padding: 36px 0; border-top: 1px solid var(--rule);
+  transition: all .4s cubic-bezier(.2,.7,.2,1); position: relative; overflow: hidden;
+}
+.idx-home .idx-row:last-child { border-bottom: 1px solid var(--rule); }
+.idx-home .idx-row::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--gold);
+  transition: width .4s cubic-bezier(.2,.7,.2,1);
+}
+.idx-home .idx-row:hover { padding-left: 32px; background: linear-gradient(to right, rgba(59,130,246,.04), transparent 60%); }
+.idx-home .idx-row:hover::before { width: 3px; }
+.idx-home .idx-row:hover .idx-title { color: var(--gold-bright); }
+.idx-home .idx-row:hover .idx-arrow { transform: translateX(8px); color: var(--gold); }
+.idx-home .idx-num { font-family: var(--serif); font-style: italic; color: rgba(0,0,0,0.72); font-size: 22px; letter-spacing: .02em; }
+.idx-home .idx-cat { font-family: var(--thai); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(0,0,0,0.72); white-space: nowrap; }
+.idx-home .idx-title { font-family: var(--thai); font-weight: 500; font-size: 22px; line-height: 1.4; color: var(--paper); transition: color .3s; }
+.idx-home .idx-meta { font-family: var(--thai); font-size: 14px; color: rgba(0,0,0,0.55); letter-spacing: .02em; }
+.idx-home .idx-read { display: none; }
+.idx-home .idx-arrow { text-align: right; color: rgba(0,0,0,0.7); transition: all .35s; font-family: var(--thai); font-size: 18px; }
+html.dark-mode .idx-home .idx-num { color: rgba(255,255,255,0.75); }
+html.dark-mode .idx-home .idx-cat { color: rgba(255,255,255,0.75); }
+html.dark-mode .idx-home .idx-meta { color: rgba(255,255,255,0.65); }
+html.dark-mode .idx-home .idx-arrow { color: rgba(255,255,255,0.7); }
+.idx-home .idx-arrow::after { content: ' →'; }
+@media(max-width:1100px){
+  .idx-home .idx-row { grid-template-columns: 60px 1fr 100px; gap: 20px; }
+  .idx-home .idx-cat, .idx-home .idx-meta { display: none; }
+}
+
+/* ============ Category list (body.ifp-tools-page) ============ */
+.ifp-tools-page .idx-list-grid { display: flex; flex-direction: column; max-width: 100%; margin: 0 auto; padding: 48px 48px 0; }
+.ifp-tools-page .idx-row { display: grid; grid-template-columns: 56px 1fr auto 48px; gap: 0 32px; align-items: center; padding: 32px 0; border-top: 0.5px solid rgba(255,255,255,0.08); transition: all .3s ease; position: relative; }
+.ifp-tools-page .idx-row:last-child { border-bottom: 0.5px solid rgba(255,255,255,0.08); }
+.ifp-tools-page .idx-num { font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-style: normal; color: rgba(255,255,255,0.8); font-size: 14px; font-weight: 400; }
+.ifp-tools-page .idx-cat { display: none; }
+.ifp-tools-page .idx-meta { display: none; }
+.ifp-tools-page .idx-read { display: block; text-align: right; white-space: nowrap; font-family: var(--thai); font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: .02em; }
+.ifp-tools-page .idx-title { font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-weight: 500; font-size: 26px; line-height: 1.45; letter-spacing: -0.01em; color: #f5f1ea; opacity: 1 !important; white-space: normal; transition: color .3s, font-weight .3s; }
+.ifp-tools-page .idx-arrow { text-align: right; white-space: nowrap; color: rgba(255,255,255,0.6); transition: all .3s ease; font-family: var(--thai); font-size: 20px; }
+.ifp-tools-page .idx-arrow::after { content: ' →'; }
+.ifp-tools-page .idx-row:hover .idx-title { color: #ffffff; font-weight: 600; }
+.ifp-tools-page .idx-row:hover .idx-arrow { color: #b31b1b; transform: translateX(6px); }
+@media(max-width:768px) {
+  .ifp-tools-page .idx-list-grid { padding: 32px 24px 0; }
+  .ifp-tools-page .idx-title { font-size: 20px; }
+  .ifp-tools-page .idx-row { grid-template-columns: 44px 1fr auto 28px; gap: 0 14px; }
+  .ifp-tools-page .idx-read { font-size: 11px; }
+}
