@@ -13,20 +13,14 @@
 
 | Family | Role | Source / loading | License | CSS variable | Files in repo (if self-hosted) |
 |---|---|---|---|---|---|
-| **Sarabun** | Thai body text (เนื้อหาหลักภาษาไทย) | Google Fonts `<link>` ในทุกหน้า (`index.html`, `pages/*.html`, `articles/**/*.html`, `article-template.html`) | SIL OFL 1.1 (Google Fonts) | `--thai`, `--ph-thai` | — (ไม่ได้ self-host) |
-| **IBM Plex Sans Thai** | Thai display / heading (หัวเรื่อง, page-display, UI ค้นหา) | Google Fonts `<link>` ในทุกหน้า | SIL OFL 1.1 (Google Fonts) | `--serif`, `--ph-serif` | — |
-| **Amiri** | Arabic (อายะฮ์/หะดีษ/คำพูดอุละมาอ์/คำศัพท์) | Google Fonts `<link>` ในทุกหน้า | SIL OFL 1.1 (Google Fonts) | `--arabic` | — |
-| **Inter** | English / Latin UI (ข้อความอังกฤษ, ป้าย UI, fallback ของ `--ui`) | Google Fonts `<link>` ในทุกหน้า | SIL OFL 1.1 (Google Fonts) | (ผ่าน `--ui` fallback; ใช้ตรง ๆ ในหลาย selector) | — |
+| **Sarabun** | Thai body text (เนื้อหาหลักภาษาไทย) | Self-hosted `@font-face` ใน `/css/fonts.css` (`index.html`, `pages/*.html`, `articles/**/*.html`, `article-template.html`) | SIL OFL 1.1 (Google Fonts) | `--thai`, `--ph-thai` | — (ไม่ได้ self-host) |
+| **IBM Plex Sans Thai** | Thai display / heading (หัวเรื่อง, page-display, UI ค้นหา) | Self-hosted `@font-face` ใน `/css/fonts.css` | SIL OFL 1.1 (Google Fonts) | `--serif`, `--ph-serif` | — |
+| **Amiri** | Arabic (อายะฮ์/หะดีษ/คำพูดอุละมาอ์/คำศัพท์) | Self-hosted `@font-face` ใน `/css/fonts.css` | SIL OFL 1.1 (Google Fonts) | `--arabic` | — |
+| **Inter** | English / Latin UI (ข้อความอังกฤษ, ป้าย UI, fallback ของ `--ui`) | Self-hosted `@font-face` ใน `/css/fonts.css` | SIL OFL 1.1 (Google Fonts) | (ผ่าน `--ui` fallback; ใช้ตรง ๆ ในหลาย selector) | — |
 | **D-DIN** (Datto) | Latin display / UI ตัวเลข-ป้าย (ตัวเลือกแรกของ `--ui`) | **Self-hosted `@font-face`** ใน `index.html` (inline `<style>`) และ `css/tokens.css` | SIL OFL 1.1 (Datto Inc., Reserved Font Name "D-DIN") | ตัวเลือกแรกของ `--ui` | `/D-DIN.e58c68e58b09fc0e.woff2`, `/D-DIN.105cb3e9fde868e3.woff`, `/D-DIN.e77db3e5eeb79c76.otf` |
 | `monospace` | คีย์บอร์ดฮินต์ในกล่องค้นหา (`<kbd>`, `.search-esc-badge`) | ฟอนต์ระบบ (ไม่โหลด) | — | — | — |
 
-**หมายเหตุการโหลด Google Fonts** — `<link>` เดียวกันโหลด 4 ตระกูลพร้อมกัน:
-```
-https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300..700
-  &family=Amiri:ital,wght@0,400;0,700;1,400;1,700
-  &family=Sarabun:ital,wght@(full range)
-  &family=Inter:ital,opsz,wght@(variable)&display=swap
-```
+**หมายเหตุการโหลดฟอนต์ (self-hosted)** — ฟอนต์ทั้ง 4 ตระกูล self-host แล้ว (ตัด Google Fonts เพื่อความเป็นส่วนตัว/ไม่รั่ว IP + เร็วขึ้น) ผ่าน `/css/fonts.css` (`@font-face`, `font-display: swap`, ไฟล์ `.woff2` ใน `/fonts/`). woff2 ดึงจากแหล่งต้นทางเวอร์ชันเดิมแบบ byte-identical (glyph ไม่เปลี่ยน) · subset: arabic, thai, latin, latin-ext · น้ำหนัก 300-700 (Amiri 400/700) · preload `amiri-400-arabic` + `sarabun-400-thai`. ไม่มี request ไปโดเมนฟอนต์ภายนอกอีกต่อไป (CSP `font-src 'self'`).
 
 ---
 
