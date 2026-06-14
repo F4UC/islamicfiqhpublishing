@@ -360,6 +360,7 @@ body::before {
 .idx-cat { font-family: var(--thai); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(0,0,0,0.72); white-space: nowrap; }
 .idx-title { font-family: var(--thai); font-weight: 500; font-size: 22px; line-height: 1.4; color: var(--paper); transition: color .3s; }
 .idx-meta { font-family: var(--thai); font-size: 14px; color: rgba(0,0,0,0.55); letter-spacing: .02em; }
+.idx-read { display: none; } /* homepage: reading time shown inside .idx-meta; standalone cell is for category pages only */
 .idx-arrow { text-align: right; color: rgba(0,0,0,0.7); transition: all .35s; font-family: var(--thai); font-size: 18px; }
 html.dark-mode .idx-num { color: rgba(255,255,255,0.75); }
 html.dark-mode .idx-cat { color: rgba(255,255,255,0.75); }
@@ -1053,7 +1054,7 @@ html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
 
 <div id="footer-placeholder"></div>
 
-<script src="/main.js?v=20260610a" charset="UTF-8"></script>
+<script src="/main.js?v=20260614a" charset="UTF-8"></script>
 
 <script>
 /* ----- WEBGL FLUID EFFECT ----- */
