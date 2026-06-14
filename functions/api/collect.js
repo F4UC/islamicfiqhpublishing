@@ -49,14 +49,22 @@ function noContent(origin) {
   return new Response(null, { status: 204, headers: corsHeaders(origin) });
 }
 
-export async function onRequestOptions(context) {
-  // CORS preflight (courtesy).
-  return noContent(context.request.headers.get("Origin"));
-}
-
-export async function onRequestPost(context) {
+// Single catch-all handler so the function owns EVERY method on this route
+// (exporting only onRequestPost lets other methods fall through to static
+// asset serving instead of being rejected). OPTIONS → preflight 204,
+// POST → counter, anything else → 405.
+export async function onRequest(context) {
   const { request, env } = context;
+  const method = request.method;
   const origin = request.headers.get("Origin");
+
+  if (method === "OPTIONS") return noContent(origin); // CORS preflight (courtesy)
+  if (method !== "POST") {
+    return new Response(null, {
+      status: 405,
+      headers: { ...corsHeaders(origin), Allow: "POST" },
+    });
+  }
 
   // Server-side bot skip — silently 204 (counted as no-op).
   const ua = request.headers.get("User-Agent") || "";
