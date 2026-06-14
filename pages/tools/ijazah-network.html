@@ -279,31 +279,6 @@ html.dark-mode .pill-gap { color:var(--gold-bright); }
 }
 .cy-wrap::before { top:10px; left:10px; border-left-width:1.5px; border-top-width:1.5px; }
 .cy-wrap::after  { bottom:10px; right:10px; border-right-width:1.5px; border-bottom-width:1.5px; }
-.plate-index {
-  position:absolute; top:9px; left:30px; z-index:3; pointer-events:none;
-  font-family:var(--ui); font-size:9px; letter-spacing:.18em; text-transform:uppercase;
-  color:var(--text-mute);
-}
-
-/* ── Origin emblem (al-manba' / ต้นสาย) — decorative, NO Arabic ── */
-.origin-emblem {
-  position:absolute; z-index:2; pointer-events:none;
-  width:120px; height:120px; transform:translate(-50%,-50%);
-  opacity:.9; transition:left .25s, top .25s, opacity .25s;
-  display:none;  /* shown once positioned over r0 */
-}
-.origin-emblem.ready { display:block; }
-.origin-emblem .ring {
-  position:absolute; inset:0; border-radius:50%; border:1px solid var(--plate-red);
-}
-.origin-emblem .ring.r1 { inset:0;   opacity:.55; }
-.origin-emblem .ring.r2 { inset:16px; opacity:.35; }
-.origin-emblem .ring.r3 { inset:34px; opacity:.20; }
-.origin-caption {
-  position:absolute; left:50%; bottom:-8px; transform:translateX(-50%);
-  white-space:nowrap; font-family:var(--thai); font-size:10px; letter-spacing:.04em;
-  color:var(--plate-red); opacity:.85;
-}
 
 /* ── Control bar (whisper style, top-right of graph) ─────── */
 .cy-controls {
@@ -584,15 +559,6 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
 
     <div class="cy-wrap" data-reveal data-delay="1">
       <div id="cy"></div>
-
-      <!-- Scientific-plate index label (Thai/Latin only, no Arabic) -->
-      <div class="plate-index">PLATE 01 · FILAMENT ORDER</div>
-
-      <!-- Origin emblem — decorative concentric rings over r0 (no Arabic) -->
-      <div class="origin-emblem" id="originEmblem" aria-hidden="true">
-        <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
-        <span class="origin-caption">ต้นสาย (R0)</span>
-      </div>
 
       <!-- Control bar — day/night + Arabic on/off (whisper style) -->
       <div class="cy-controls" id="cyControls">
@@ -970,7 +936,7 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     renderChainList(filtered);
   }
   $search.addEventListener('input', applyFilter);
-  $searchClear.addEventListener('click', function(){ $search.value=''; applyFilter(); });
+  $searchClear.addEventListener('click', function(){ $search.value=''; applyFilter(); $search.focus(); });
 
   /* ========================================================
      GRAPH LOADING
@@ -1104,6 +1070,7 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
        break itself is the edge adjacent to that gap node — data-driven.) */
     (data.edges||[]).forEach(function(e, i){
       var srcN = nodeById[e.source], tgtN = nodeById[e.target];
+      if(!srcN || !tgtN) return;   /* skip edges that reference a missing node */
       var isGap = (srcN && srcN.gc === 'gap') || (tgtN && tgtN.gc === 'gap') ? 1 : 0;
       elements.push({ data: {
         id: 'e'+i, source: e.source, target: e.target,
@@ -1146,11 +1113,14 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
         { selector: 'node[isHolder = 1]', style: {
             'border-color': P.red, 'border-width': 2.2, 'border-style': 'solid'
         }},
-        /* ORIGIN (r0): crimson, slightly larger — the al-manba'. */
+        /* ORIGIN (r0): the al-manba' — a stamped seal: doubled crimson border
+           + soft crimson halo (canvas underlay, GPU-drawn, no DOM overlay). */
         { selector: 'node[isRoot = 1]', style: {
             'font-size': '15px',
-            'border-width': 2.6, 'border-color': P.red, 'border-style': 'solid',
-            'padding': '12px'
+            'padding': '12px',
+            'border-width': 6, 'border-style': 'double', 'border-color': P.red,
+            'underlay-color': P.red, 'underlay-padding': 12,
+            'underlay-opacity': 0.15, 'underlay-shape': 'ellipse'
         }},
         /* ── Edges: thin, calm, sharp chevron (vee), teacher→student.
            Orthogonal taxi routing for the modeling-plate look. ──────── */
@@ -1227,13 +1197,8 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       cy.resize();
       cy.fit(cy.elements(), 40);
       hideOverlay();
-      positionOriginEmblem();
     });
     lay.run();
-
-    /* keep the origin emblem glued over r0 through pan / zoom / drag */
-    cy.on('pan zoom render', positionOriginEmblem);
-    cy.on('position', 'node[isRoot = 1]', positionOriginEmblem);
   }
 
   /* ── Refresh graph node labels in place (Arabic on/off toggle) without
@@ -1252,30 +1217,8 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       var opts = {}; for(var k in graphLayoutOpts){ opts[k] = graphLayoutOpts[k]; }
       opts.fit = false;
       var l2 = cy.layout(opts);
-      l2.on('layoutstop', positionOriginEmblem);
       l2.run();
     }
-  }
-
-  /* ── ORIGIN EMBLEM (D): concentric-ring halo glued over r0. Purely
-     decorative; contains NO Arabic (Thai caption only). ───────────── */
-  function positionOriginEmblem(){
-    var emblem = document.getElementById('originEmblem');
-    if(!emblem || !cy) return;
-    var root = cy.getElementById('r0');
-    if(!root || root.empty()){ emblem.classList.remove('ready'); return; }
-    var rp = root.renderedPosition();
-    var wrap = document.getElementById('cy');
-    if(!rp || !wrap){ emblem.classList.remove('ready'); return; }
-    /* FLAG 3: scale the ring halo to the live zoom so it tracks r0's
-       rendered size at every zoom level (not a fixed CSS size). */
-    var z = cy.zoom();
-    /* offset by #cy's own position within .cy-wrap so the emblem stays glued to
-       r0 even when #cy is pushed below the control bar (mobile flex column). */
-    emblem.style.left = (wrap.offsetLeft + rp.x) + 'px';
-    emblem.style.top  = (wrap.offsetTop + rp.y) + 'px';
-    emblem.style.transform = 'translate(-50%,-50%) scale(' + z + ')';
-    emblem.classList.add('ready');
   }
 
   /* Re-apply the live palette to the graph after a day/night switch so the
