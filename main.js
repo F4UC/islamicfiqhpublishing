@@ -740,6 +740,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // shared .idx-row builder — identical markup/format on homepage, category & all-articles
         // opts.showDate (default true): include · dateDisplay in the meta.
         // Homepage passes showDate:false; category & all-articles keep the date.
+        // .idx-read = standalone reading-time cell: hidden on homepage (read stays inside
+        // .idx-meta there), shown as its own grid column on category pages where .idx-meta
+        // is hidden. Visibility is controlled purely by each page's CSS, not here.
         function _buildRow(art, idx, opts) {
             var showDate = !opts || opts.showDate !== false;
             var num = String(idx + 1).padStart(2, '0');
@@ -755,6 +758,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 '<div class="idx-meta">โดย <span>' + _esc(art.author || '') + '</span>' +
                 datePart +
                 ' &nbsp;·&nbsp; อ่าน ' + readTime + ' นาที</div>' +
+                '<span class="idx-read">อ่าน ' + readTime + ' นาที</span>' +
                 '<div class="idx-arrow"></div>';
             return row;
         }
