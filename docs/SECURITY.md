@@ -11,9 +11,9 @@
 CSP ถูกบังคับใช้ใน `_headers` สำหรับทุก path (`/*`). นโยบายปัจจุบัน (สรุป):
 
 - `default-src 'self'`
-- `script-src 'self' 'unsafe-inline'`
+- `script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com`
 - `style-src 'self' 'unsafe-inline'`
-- `font-src 'self'`
+- `font-src 'self'` · `connect-src 'self' https://cloudflareinsights.com`
 - `img-src 'self' data: blob: https:`
 - `connect-src 'self'`
 - `frame-ancestors 'self'` · `base-uri 'self'` · `object-src 'none'` · `form-action 'self'` · `upgrade-insecure-requests`
