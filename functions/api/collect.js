@@ -88,12 +88,8 @@ export async function onRequest(context) {
 
   // Increment the aggregate counter. Never let analytics break UX: on any
   // failure (or a missing binding) we still answer 204.
-  // TEMP DIAGNOSTIC (remove before merge): x-db-bound = is env.DB present;
-  // x-db-write = did the upsert run without throwing. No data is exposed.
-  var dbBound = !!(env && env.DB);
-  var dbWrite = "0";
   try {
-    if (dbBound) {
+    if (env && env.DB) {
       await env.DB.prepare(
         "INSERT INTO article_hits (article_id, views, last_viewed) " +
           "VALUES (?1, 1, CURRENT_TIMESTAMP) " +
@@ -102,14 +98,10 @@ export async function onRequest(context) {
       )
         .bind(articleId)
         .run();
-      dbWrite = "1";
     }
   } catch (e) {
-    dbWrite = "err:" + (e && e.message ? e.message.slice(0, 80) : "unknown");
+    // swallow — aggregate analytics is best-effort
   }
 
-  var headers = corsHeaders(origin);
-  headers["x-db-bound"] = dbBound ? "1" : "0";
-  headers["x-db-write"] = dbWrite;
-  return new Response(null, { status: 204, headers });
+  return noContent(origin);
 }
