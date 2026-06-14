@@ -202,11 +202,11 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 <main>
   <section class="page-hero">
     <div class="hero-slide hero-slide-1"><picture><source srcset="/images/heroes/hero-hajj-1.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-hajj-1.jpg" alt="ภาพมัสยิดอัลหะรอมและกะอ์บะฮ์ในนครมักกะฮ์" loading="eager" fetchpriority="high" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-2"><picture><source srcset="/images/heroes/hero-hajj-2.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-hajj-2.jpg" alt="ภาพผู้แสวงบุญในพิธีหัจญ์" loading="lazy" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-3"><picture><source srcset="/images/heroes/hero-hajj-3.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-hajj-3.jpg" alt="ภาพมัสยิดนบีในนครมะดีนะฮ์" loading="lazy" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-4"><picture><source srcset="/images/heroes/hero-hajj-4.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-hajj-4.jpg" alt="ภาพพิธีกรรมเฏาะวาฟรอบกะอ์บะฮ์" loading="lazy" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-5"><picture><source srcset="/images/heroes/hero-hajj-5.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-hajj-5.jpg" alt="ภาพทุ่งอะเราะฟะฮ์ในพิธีหัจญ์" loading="lazy" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-6"><picture><source srcset="/images/heroes/hero-hajj-6.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-hajj-6.jpg" alt="ภาพมิน่าและเต็นท์ผู้แสวงบุญ" loading="lazy" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-2"><picture><source data-srcset="/images/heroes/hero-hajj-2.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-hajj-2.jpg" alt="ภาพผู้แสวงบุญในพิธีหัจญ์" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-3"><picture><source data-srcset="/images/heroes/hero-hajj-3.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-hajj-3.jpg" alt="ภาพมัสยิดนบีในนครมะดีนะฮ์" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-4"><picture><source data-srcset="/images/heroes/hero-hajj-4.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-hajj-4.jpg" alt="ภาพพิธีกรรมเฏาะวาฟรอบกะอ์บะฮ์" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-5"><picture><source data-srcset="/images/heroes/hero-hajj-5.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-hajj-5.jpg" alt="ภาพทุ่งอะเราะฟะฮ์ในพิธีหัจญ์" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-6"><picture><source data-srcset="/images/heroes/hero-hajj-6.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-hajj-6.jpg" alt="ภาพมิน่าและเต็นท์ผู้แสวงบุญ" decoding="async"></picture></div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-inner">
       <h1 class="page-display" data-reveal>หัจญ์ & <em>อุมเราะฮ์</em></h1>
@@ -261,5 +261,7 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 })();
 </script>
 
+<script>/* defer non-initial hero slides until after load so only slide-1 is fetched up front */
+addEventListener("load",function(){requestAnimationFrame(function(){document.querySelectorAll(".hero-slide picture").forEach(function(p){var s=p.querySelector("source[data-srcset]");if(s){s.srcset=s.dataset.srcset;}var i=p.querySelector("img[data-src]");if(i){i.src=i.dataset.src;}});});});</script>
 </body>
 </html>

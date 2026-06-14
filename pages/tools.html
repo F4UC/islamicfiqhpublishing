@@ -145,9 +145,9 @@ body { background: var(--ink); color: var(--paper); }
   <!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
   <section class="page-hero">
     <div class="hero-slide hero-slide-1"><picture><source srcset="/images/heroes/hero-tools-1.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-tools-1.jpg" alt="ภาพเครื่องมือดิจิทัลสำหรับนักวิชาการอิสลาม" loading="eager" fetchpriority="high" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-2"><picture><source srcset="/images/heroes/hero-tools-2.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-tools-2.jpg" alt="ภาพปฏิทินฮิจเราะฮ์และการคำนวณเวลา" loading="lazy" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-3"><picture><source srcset="/images/heroes/hero-tools-3.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-tools-3.jpg" alt="ภาพการค้นคว้าตำราและห้องสมุดดิจิทัล" loading="lazy" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-4"><picture><source srcset="/images/heroes/hero-tools-4.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-tools-4.jpg" alt="ภาพเทคโนโลยีกับการศึกษาอิสลาม" loading="lazy" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-2"><picture><source data-srcset="/images/heroes/hero-tools-2.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-tools-2.jpg" alt="ภาพปฏิทินฮิจเราะฮ์และการคำนวณเวลา" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-3"><picture><source data-srcset="/images/heroes/hero-tools-3.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-tools-3.jpg" alt="ภาพการค้นคว้าตำราและห้องสมุดดิจิทัล" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-4"><picture><source data-srcset="/images/heroes/hero-tools-4.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-tools-4.jpg" alt="ภาพเทคโนโลยีกับการศึกษาอิสลาม" decoding="async"></picture></div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-inner">
       <p class="page-hero-sub" data-reveal data-delay="2">แพลตฟอร์มดิจิทัลที่พัฒนาขึ้นเพื่อประยุกต์ใช้เทคโนโลยีร่วมกับหลักนิติศาสตร์อิสลาม มุ่งอำนวยความสะดวกในวิถีชีวิตประจำวันของมุสลิม</p>
@@ -207,6 +207,8 @@ body { background: var(--ink); color: var(--paper); }
   });
 })();
 </script>
+<script>/* defer non-initial hero slides until after load so only slide-1 is fetched up front */
+addEventListener("load",function(){requestAnimationFrame(function(){document.querySelectorAll(".hero-slide picture").forEach(function(p){var s=p.querySelector("source[data-srcset]");if(s){s.srcset=s.dataset.srcset;}var i=p.querySelector("img[data-src]");if(i){i.src=i.dataset.src;}});});});</script>
 </body>
 </html>
 

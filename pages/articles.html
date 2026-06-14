@@ -176,11 +176,11 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 <main>
   <section class="page-hero">
     <div class="hero-slide hero-slide-1"><picture><source srcset="/images/heroes/hero-nitisart-1.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-nitisart-1.jpg" alt="ภาพตำราฟิกฮ์คลาสสิกและหนังสืออิสลาม" loading="eager" fetchpriority="high" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-2"><picture><source srcset="/images/heroes/hero-nitisart-2.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-nitisart-2.jpg" alt="ภาพห้องสมุดตำราอิสลาม" loading="lazy" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-3"><picture><source srcset="/images/heroes/hero-nitisart-3.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-nitisart-3.jpg" alt="ภาพการศึกษาศาสตร์อิสลาม" loading="lazy" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-4"><picture><source srcset="/images/heroes/hero-nitisart-4.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-nitisart-4.jpg" alt="ภาพต้นฉบับกฎหมายอิสลามโบราณ" loading="lazy" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-5"><picture><source srcset="/images/heroes/hero-nitisart-5.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-nitisart-5.jpg" alt="ภาพมัสยิดและสถาบันการศึกษาอิสลาม" loading="lazy" decoding="async"></picture></div>
-    <div class="hero-slide hero-slide-6"><picture><source srcset="/images/heroes/hero-nitisart-6.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-nitisart-6.jpg" alt="ภาพนักวิชาการและตำราศาสนา" loading="lazy" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-2"><picture><source data-srcset="/images/heroes/hero-nitisart-2.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-nitisart-2.jpg" alt="ภาพห้องสมุดตำราอิสลาม" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-3"><picture><source data-srcset="/images/heroes/hero-nitisart-3.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-nitisart-3.jpg" alt="ภาพการศึกษาศาสตร์อิสลาม" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-4"><picture><source data-srcset="/images/heroes/hero-nitisart-4.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-nitisart-4.jpg" alt="ภาพต้นฉบับกฎหมายอิสลามโบราณ" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-5"><picture><source data-srcset="/images/heroes/hero-nitisart-5.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-nitisart-5.jpg" alt="ภาพมัสยิดและสถาบันการศึกษาอิสลาม" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-6"><picture><source data-srcset="/images/heroes/hero-nitisart-6.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-nitisart-6.jpg" alt="ภาพนักวิชาการและตำราศาสนา" decoding="async"></picture></div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-inner">
       <h1 class="page-display" data-reveal>บทความ<em>ทั้งหมด</em></h1>
@@ -278,5 +278,7 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 })();
 </script>
 
+<script>/* defer non-initial hero slides until after load so only slide-1 is fetched up front */
+addEventListener("load",function(){requestAnimationFrame(function(){document.querySelectorAll(".hero-slide picture").forEach(function(p){var s=p.querySelector("source[data-srcset]");if(s){s.srcset=s.dataset.srcset;}var i=p.querySelector("img[data-src]");if(i){i.src=i.dataset.src;}});});});</script>
 </body>
 </html>
