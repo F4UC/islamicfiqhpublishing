@@ -112,6 +112,17 @@ a{text-decoration:none;color:inherit;transition:color 0.2s ease;}
   .idx-title { font-size: 20px; } .idx-row { grid-template-columns: 44px 1fr auto 28px; gap: 0 14px; } .idx-read { font-size: 11px; }
 }
 
+/* --- Reading-time filter chips (articles page only) --- */
+.rt-filter { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; padding: 36px 48px 0; }
+.rt-chip { font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.7); background: transparent; border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 9px 20px; cursor: pointer; transition: color .25s ease, background .25s ease, border-color .25s ease; -webkit-tap-highlight-color: transparent; }
+.rt-chip:hover { color: #ffffff; border-color: rgba(255,255,255,0.45); }
+.rt-chip.active { color: #1a1410; background: #c49a45; border-color: #c49a45; font-weight: 600; }
+.rt-chip:focus-visible { outline: 2px solid #c49a45; outline-offset: 2px; }
+@media(max-width:768px) {
+  .rt-filter { gap: 8px; padding: 28px 24px 0; }
+  .rt-chip { font-size: 12px; padding: 7px 14px; }
+}
+
 /* ========================================== */
 /* CSS สำหรับเมนูและ Footer ที่จะถูกดึงเข้ามา */
 /* ========================================== */
@@ -180,6 +191,13 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
     </div>
   </section>
 
+  <div class="rt-filter" role="group" aria-label="กรองบทความตามเวลาอ่าน">
+    <button type="button" class="rt-chip active" data-min="0">ทั้งหมด</button>
+    <button type="button" class="rt-chip" data-min="10">10+ นาที</button>
+    <button type="button" class="rt-chip" data-min="20">20+ นาที</button>
+    <button type="button" class="rt-chip" data-min="30">30+ นาที</button>
+  </div>
+
   <section class="idx-list-grid" id="articleList" data-category="all">
 
   </section>
@@ -214,6 +232,48 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
   document.querySelector('.hero-scroll-hint')?.addEventListener('click', function() {
     window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
   });
+})();
+</script>
+
+<script>
+/* Reading-time filter chips — articles page only. CSP-safe (addEventListener, no inline onclick).
+   Reads minutes from each rendered .idx-read cell; does NOT touch main.js render logic or articles.json.
+   Cards are appended asynchronously by main.js, so re-apply on list mutation. */
+(function(){
+  var listEl = document.getElementById('articleList');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.rt-chip'));
+  if (!listEl || !chips.length) return;
+  var currentMin = 0;
+
+  function rowMinutes(row){
+    var el = row.querySelector('.idx-read');
+    var m = el && el.textContent.match(/\d+/);
+    return m ? parseInt(m[0], 10) : NaN;
+  }
+  function applyFilter(){
+    var rows = listEl.querySelectorAll('.idx-row');
+    var visible = 0;
+    Array.prototype.forEach.call(rows, function(row){
+      var mins = rowMinutes(row);
+      var show = currentMin === 0 || (!isNaN(mins) && mins >= currentMin);
+      row.style.display = show ? '' : 'none';
+      if (show) {
+        visible++;
+        var num = row.querySelector('.idx-num');
+        if (num) num.textContent = String(visible).padStart(2, '0');
+      }
+    });
+  }
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      currentMin = parseInt(chip.getAttribute('data-min'), 10) || 0;
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      applyFilter();
+    });
+  });
+  new MutationObserver(applyFilter).observe(listEl, { childList: true });
+  if (listEl.querySelector('.idx-row')) applyFilter();
 })();
 </script>
 
