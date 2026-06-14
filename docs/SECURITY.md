@@ -11,11 +11,11 @@
 CSP ถูกบังคับใช้ใน `_headers` สำหรับทุก path (`/*`). นโยบายปัจจุบัน (สรุป):
 
 - `default-src 'self'`
-- `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com`
+- `script-src 'self' 'unsafe-inline'`
 - `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`
 - `font-src 'self' https://fonts.gstatic.com`
 - `img-src 'self' data: blob: https:`
-- `connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com`
+- `connect-src 'self'`
 - `frame-ancestors 'self'` · `base-uri 'self'` · `object-src 'none'` · `form-action 'self'` · `upgrade-insecure-requests`
 
 ### ★ ข้อบังคับ — ห้ามแตะ `'unsafe-inline'` (Rule 74 / audit D-3)
