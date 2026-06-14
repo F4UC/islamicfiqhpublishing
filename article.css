@@ -1556,6 +1556,13 @@ html:not(.dark-mode) .ifp-iconbtn .ic-moon{opacity:1;transform:translateY(0) sca
   font-style: normal;
 }
 
+/* Rule 68 / S6 — Thai poem (verse) blocks are centered. Raise specificity above
+   `.article-body p { text-align: left }` (Rule 28, 0,1,1) so the intended centering
+   wins for `<p class="poem-th">`. NOTE: .thai-quote is intentionally NOT centered
+   here — it is overloaded onto long prose quotes (e.g. al-tusi) that read better
+   flush-left; CSS can't distinguish short vs long. See PR #170 Codex P2. */
+.article-body p.poem-th { text-align: center; }
+
 /* Hero-less title banner (Rule 67: solid banner, NO <img>, no 404). */
 .article-feature.no-hero { height: auto; min-height: 0; background: #1d2537; }
 .article-feature.no-hero::after { display: none; }
