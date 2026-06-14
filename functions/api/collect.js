@@ -58,6 +58,16 @@ export async function onRequest(context) {
   const method = request.method;
   const origin = request.headers.get("Origin");
 
+  // TEMP gated diagnostic (removed before merge): responds only to a private
+  // probe token, so normal/public callers never see it — no public leak.
+  // Reports only whether the D1 binding is present (boolean), never any error.
+  if (new URL(request.url).searchParams.get("probe") === "ifp-d1-checkX9q2") {
+    return new Response(null, {
+      status: 204,
+      headers: { "x-db-bound": env && env.DB ? "1" : "0" },
+    });
+  }
+
   if (method === "OPTIONS") return noContent(origin); // CORS preflight (courtesy)
   if (method !== "POST") {
     return new Response(null, {
