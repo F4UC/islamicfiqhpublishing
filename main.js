@@ -1314,9 +1314,10 @@ function initReadingToolsUI() {
 
     if (!navigator.sendBeacon) return;         // no beacon support → skip
 
-    // Client-side bot skip (the server re-checks too).
+    // Client-side bot skip (the server re-checks too). Only unambiguous bots —
+    // never messaging-app in-app browsers (real readers), so shared-link views count.
     var ua = navigator.userAgent || '';
-    if (/bot|crawl|spider|slurp|preview|headless|phantom|puppeteer|playwright|lighthouse|gtmetrix|pingdom|uptime|monitor/i.test(ua)) return;
+    if (/bot|crawl|spider|slurp|headless|phantom|puppeteer|playwright|lighthouse|gtmetrix|pingdom|uptime|monitor/i.test(ua)) return;
 
     var key = 'viewed_' + slug;
     var sent = false;

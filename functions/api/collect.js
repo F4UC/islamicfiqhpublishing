@@ -26,7 +26,10 @@ const VALID_IDS = new Set(
 const APEX_ORIGIN = "https://islamicfiqhpublishing.com";
 
 // Server-side bot/crawler skip (the client skips too, but never trust the client).
-const BOT_RE = /bot|crawl|spider|slurp|mediapartners|bingpreview|facebookexternalhit|embedly|quora|pinterest|vkshare|whatsapp|telegram|preview|headless|phantom|puppeteer|playwright|lighthouse|gtmetrix|pingdom|uptime|monitor|curl|wget|python-requests|axios|go-http/i;
+// Only unambiguous non-interactive crawlers / HTTP clients — NOT messaging-app
+// in-app browsers (Telegram/WhatsApp/etc.), which are real readers that run JS
+// and fire the beacon; filtering those would undercount shared-link views.
+const BOT_RE = /bot|crawl|spider|slurp|mediapartners|bingpreview|facebookexternalhit|embedly|headless|phantom|puppeteer|playwright|lighthouse|gtmetrix|pingdom|uptime|monitor|curl|wget|python-requests|axios|go-http/i;
 
 function corsHeaders(origin) {
   // Only name the apex origin; same-origin beacons don't need CORS at all.
