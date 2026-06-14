@@ -1,6 +1,6 @@
 ---
 name: debug-harris
-description: Harris debugging discipline for Islamic Fiqh Publishing. Use when the user reports a bug, blank page, slow site, broken deployment, DNS/SSL/Cloudflare/GitHub issue, console error, responsive/layout regression, animation performance problem, or asks to debug/check/investigate why something failed. Apply reproducibility, fail-path tracing, hypothesis falsification, and an experiment ledger. Agent has full autonomy to commit and push without asking permission. Must verify the live site after every deployment.
+description: Harris debugging discipline for Islamic Fiqh Publishing. Use when the user reports a bug, blank page, slow site, broken deployment, DNS/SSL/Cloudflare/GitHub issue, console error, responsive/layout regression, animation performance problem, or asks to debug/check/investigate why something failed. Apply reproducibility, fail-path tracing, hypothesis falsification, and an experiment ledger. The agent diagnoses and fixes on a fresh branch and opens a PR; it never merges to main on its own.
 ---
 
 # Debug Harris
@@ -21,9 +21,9 @@ If the user asks for speed or says to skip the checklist, apply the protocol sil
 
 ## Autonomy & Reporting
 
-- **Full autonomy granted.** Commit and push changes without asking the user for permission.
-- **Always verify the live site** after every deploy. Fetch `https://islamicfiqhpublishing.com` and `https://www.islamicfiqhpublishing.com` to confirm the fix is live and the page is not blank.
-- **Report what changed**, not what you plan to do. After completing work, summarize: what was broken, what was changed (file, line, value), and what was verified on the live site.
+- **Bounded autonomy.** Investigate freely (read files, fetch URLs, inspect config, add throwaway probes). For any *change*, commit to a fresh branch cut from the latest `main` and open a PR. **Never push to `main` and never merge to `main` without the owner's review** — this holds even when a fix looks trivial or urgent.
+- **Verify on the PR preview, not production.** Cloudflare builds a preview deployment per branch/PR. Confirm the fix there. Production verification happens only *after* the owner merges.
+- **Report what changed**, not what you plan to do. After completing work, summarize: what was broken, what was changed (file, line, value), and what was verified on the preview.
 - Keep Thai user-facing explanations clear and practical; avoid noisy internal narration.
 
 ## Project constraints
@@ -94,7 +94,7 @@ Use the ledger to avoid contradicting prior observations. Before declaring the r
 
 ## Fix Rules
 
-- Proceed directly — no permission needed for commit, push, or merge to main.
+- Work on a fresh branch and open a PR. **No direct push or merge to `main`** — the owner reviews and merges every change.
 - Keep changes minimal and reversible.
 - Validate the exact failing path after the fix by fetching the live URL.
 - For web changes, verify both `https://islamicfiqhpublishing.com` and `https://www.islamicfiqhpublishing.com`.
