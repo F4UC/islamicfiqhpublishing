@@ -77,12 +77,13 @@ a{text-decoration:none;color:inherit;transition:color 0.2s ease;}
 :root{--ph-paper:var(--heading);--ph-dim:var(--text);--ph-gold:var(--accent-deep);--ph-serif:'IBM Plex Sans Thai', system-ui, sans-serif;--ph-thai:'Sarabun',sans-serif}
 .page-hero{position:relative;height:100vh;overflow:hidden;background:var(--ink,#0a0907)}
 .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0}
-.hero-slide-1{background-image:url('/images/heroes/hero-hajj-1.jpg');opacity:1;animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:0s,0s}
-.hero-slide-2{background-image:url('/images/heroes/hero-hajj-2.jpg');animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:7.5s,0s}
-.hero-slide-3{background-image:url('/images/heroes/hero-hajj-3.jpg');animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:15s,0s}
-.hero-slide-4{background-image:url('/images/heroes/hero-hajj-4.jpg');animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:22.5s,0s}
-.hero-slide-5{background-image:url('/images/heroes/hero-hajj-5.jpg');animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:30s,0s}
-.hero-slide-6{background-image:url('/images/heroes/hero-hajj-6.jpg');animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:37.5s,0s}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-slide-1{opacity:1;animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:0s,0s}
+.hero-slide-2{animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:7.5s,0s}
+.hero-slide-3{animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:15s,0s}
+.hero-slide-4{animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:22.5s,0s}
+.hero-slide-5{animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:30s,0s}
+.hero-slide-6{animation:hero-fade 45s linear infinite,ken-burns 8s ease-in-out infinite alternate;animation-delay:37.5s,0s}
 .page-hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0) 100%)}
 .page-hero-inner{position:absolute;left:60px;bottom:120px;max-width:560px;z-index:3;text-align:left}
 .page-display{font-family:var(--ph-serif);font-weight:400;font-size:clamp(3rem,6vw,7rem);line-height:1.05;letter-spacing:-.01em;white-space:nowrap;color:#f5f1ea;text-shadow:0 2px 24px rgba(0,0,0,0.6)}
@@ -200,12 +201,12 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 
 <main>
   <section class="page-hero">
-    <div class="hero-slide hero-slide-1" role="img" aria-label="ภาพมัสยิดอัลหะรอมและกะอ์บะฮ์ในนครมักกะฮ์"></div>
-    <div class="hero-slide hero-slide-2" role="img" aria-label="ภาพผู้แสวงบุญในพิธีหัจญ์"></div>
-    <div class="hero-slide hero-slide-3" role="img" aria-label="ภาพมัสยิดนบีในนครมะดีนะฮ์"></div>
-    <div class="hero-slide hero-slide-4" role="img" aria-label="ภาพพิธีกรรมเฏาะวาฟรอบกะอ์บะฮ์"></div>
-    <div class="hero-slide hero-slide-5" role="img" aria-label="ภาพทุ่งอะเราะฟะฮ์ในพิธีหัจญ์"></div>
-    <div class="hero-slide hero-slide-6" role="img" aria-label="ภาพมิน่าและเต็นท์ผู้แสวงบุญ"></div>
+    <div class="hero-slide hero-slide-1"><picture><source srcset="/images/heroes/hero-hajj-1.webp" type="image/webp"><img class="hero-img" src="/images/heroes/hero-hajj-1.jpg" alt="ภาพมัสยิดอัลหะรอมและกะอ์บะฮ์ในนครมักกะฮ์" loading="eager" fetchpriority="high" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-2"><picture><source data-srcset="/images/heroes/hero-hajj-2.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-hajj-2.jpg" alt="ภาพผู้แสวงบุญในพิธีหัจญ์" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-3"><picture><source data-srcset="/images/heroes/hero-hajj-3.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-hajj-3.jpg" alt="ภาพมัสยิดนบีในนครมะดีนะฮ์" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-4"><picture><source data-srcset="/images/heroes/hero-hajj-4.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-hajj-4.jpg" alt="ภาพพิธีกรรมเฏาะวาฟรอบกะอ์บะฮ์" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-5"><picture><source data-srcset="/images/heroes/hero-hajj-5.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-hajj-5.jpg" alt="ภาพทุ่งอะเราะฟะฮ์ในพิธีหัจญ์" decoding="async"></picture></div>
+    <div class="hero-slide hero-slide-6"><picture><source data-srcset="/images/heroes/hero-hajj-6.webp" type="image/webp"><img class="hero-img" data-src="/images/heroes/hero-hajj-6.jpg" alt="ภาพมิน่าและเต็นท์ผู้แสวงบุญ" decoding="async"></picture></div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-inner">
       <h1 class="page-display" data-reveal>หัจญ์ & <em>อุมเราะฮ์</em></h1>
@@ -260,5 +261,7 @@ footer { background: var(--footer-bg); color: var(--inverted-text); padding: 40p
 })();
 </script>
 
+<script>/* hydrate non-initial hero slides during idle after DOMContentLoaded — slide-1 still loads eager+priority first, but slides 2-N are requested well before the 7.5s fade-in regardless of window load timing */
+(function(){function h(){document.querySelectorAll(".hero-slide picture").forEach(function(p){var s=p.querySelector("source[data-srcset]");if(s){s.srcset=s.dataset.srcset;}var i=p.querySelector("img[data-src]");if(i){i.src=i.dataset.src;}});}var ric=window.requestIdleCallback||function(f){return setTimeout(f,1);};if(document.readyState!=="loading"){ric(h,{timeout:1500});}else{addEventListener("DOMContentLoaded",function(){ric(h,{timeout:1500});});}})();</script>
 </body>
 </html>
