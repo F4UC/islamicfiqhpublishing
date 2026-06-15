@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
+<link rel="icon" href="/favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png?v=2">
+<meta name="theme-color" content="#0a0907">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ไม่พบหน้า (404) — Islamic Fiqh Publishing</title>
+<meta name="robots" content="noindex, follow">
+
+<link rel="stylesheet" href="/css/tokens.css?v=20260529n">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+/* --- Fixed Dark Palette — all colors resolve via css/tokens.css --- */
+:root {
+  --bg-primary: var(--ink);
+  --bg-secondary: var(--ink-2);
+  --bg-tertiary: var(--ink-3);
+  --text-primary: var(--heading);
+  --text-secondary: var(--text);
+  --text-tertiary: var(--muted);
+  --border-primary: var(--line);
+  --border-secondary: var(--line-strong);
+  --accent-color: var(--accent-deep);
+  --footer-bg: #050403; --footer-border: var(--line-strong);
+}
+#themeToggleBtn { display: none !important; }
+
+body {
+  margin: 0; background: var(--bg-primary); color: var(--text-secondary);
+  font-family: 'Sarabun', sans-serif; -webkit-font-smoothing: antialiased;
+}
+.nf-wrap {
+  min-height: 60vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  padding: 80px 24px; gap: 8px;
+}
+.nf-code {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 700;
+  font-size: clamp(64px, 18vw, 140px); line-height: 1; color: var(--accent-color);
+  letter-spacing: 2px;
+}
+.nf-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 700;
+  font-size: clamp(20px, 5vw, 28px); color: var(--text-primary); margin: 8px 0 4px;
+}
+.nf-text { font-size: 16px; line-height: 2.0; color: var(--text-tertiary); max-width: 460px; }
+.nf-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 24px; }
+.nf-btn {
+  display: inline-block; padding: 12px 24px; border-radius: 8px;
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 600; font-size: 15px;
+  text-decoration: none; transition: transform 0.2s ease, background 0.2s ease;
+}
+.nf-btn.primary { background: var(--accent-color); color: #fff; }
+.nf-btn.ghost { border: 1px solid var(--border-secondary); color: var(--text-primary); }
+.nf-btn:hover { transform: translateY(-2px); }
+</style>
+</head>
+<body class="ifp-about-page" lang="th">
+
+<div id="header-placeholder"></div>
+
+<main>
+  <section class="nf-wrap">
+    <div class="nf-code">404</div>
+    <h1 class="nf-title">ไม่พบหน้าที่คุณค้นหา</h1>
+    <p class="nf-text">หน้านี้อาจถูกย้าย เปลี่ยนที่อยู่ หรือไม่เคยมีอยู่ ลองกลับไปยังหน้าแรกหรือเรียกดูบทความทั้งหมดได้</p>
+    <div class="nf-actions">
+      <a href="/" class="nf-btn primary">กลับสู่หน้าแรก</a>
+      <a href="/pages/articles" class="nf-btn ghost">ดูบทความทั้งหมด</a>
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script defer src="/main.js?v=20260614d"></script>
+</body>
+</html>
