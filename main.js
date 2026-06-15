@@ -10,6 +10,13 @@ const savedTheme = localStorage.getItem('theme');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const isDarkModeActive = savedTheme === 'dark' || (!savedTheme && prefersDark);
 
+// Internal article links → canonical EXTENSIONLESS URL (the ".html" form
+// 308-redirects). Keeps JS-rendered hrefs consistent with canonical/og:url and
+// the sitemap so no duplicate-URL signal is reintroduced. (SEO P1.1)
+function cleanUrl(u) {
+  return typeof u === 'string' ? u.replace(/\.html(?=$|[?#])/, '') : u;
+}
+
 // à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸›à¸£à¸±à¸šà¹ƒà¸Šà¹à¸˜à¸µà¸¡à¹ƒà¸™à¸£à¸°à¸"à¸±à¸šà¸ªà¸¹à¸‡
 function applyTheme(isDark) {
     if (isDark) {
@@ -455,7 +462,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 searchResults.innerHTML = '';
                 matches.forEach(article => {
                     const resultItem = document.createElement('a');
-                    resultItem.href = article.url;
+                    resultItem.href = cleanUrl(article.url);
                     resultItem.className = 'search-result-item';
                     
                     const highlight = (text) => {
@@ -518,7 +525,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 var totalMatches = getMatches(q).length;
                 var items = matches.map(function(a) {
-                    return '<a class="inline-dd-item" href="' + escapeHtml(a.url) + '">' +
+                    return '<a class="inline-dd-item" href="' + escapeHtml(cleanUrl(a.url)) + '">' +
                            '<span class="inline-dd-cat">' + escapeHtml(a.categoryLabel) + '</span>' +
                            '<span class="inline-dd-title">' + escapeHtml(a.title) + '</span>' +
                            '</a>';
@@ -736,7 +743,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var readTime = art.readingTime != null ? art.readingTime : '—';
             var datePart = showDate ? (' &nbsp;·&nbsp; ' + _esc(art.dateDisplay || '')) : '';
             var row = document.createElement('a');
-            row.href = art.url || '#';
+            row.href = cleanUrl(art.url) || '#';
             row.className = 'idx-row';
             row.innerHTML =
                 '<div class="idx-num">' + num + '</div>' +
@@ -901,7 +908,7 @@ document.addEventListener("DOMContentLoaded", function() {
             listEl.innerHTML = '';
             picks.slice(0, 3).forEach(function(art) {
                 var a = document.createElement('a');
-                a.href = art.url;
+                a.href = cleanUrl(art.url);
                 a.className = 'related-row reveal';
                 a.innerHTML =
                     '<span class="related-article-category">' + _esc(art.categoryLabel) + '</span>' +
