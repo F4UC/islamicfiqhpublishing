@@ -23,12 +23,32 @@
 <meta property="og:title" content="ARTICLE_TITLE — Islamic Fiqh Publishing">
 <meta property="og:description" content="OG_DESCRIPTION — ประโยคดึงดูดสำหรับการแชร์โซเชียล">
 <meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
-<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/CATEGORY/SLUG.html">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/CATEGORY/SLUG">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
-<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/CATEGORY/SLUG.html">
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — extensionless (ไม่มี .html, ตรงกับ sitemap) — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/CATEGORY/SLUG">
+
+<!-- ARTICLE JSON-LD (schema.org Article): แทน ARTICLE_TITLE, ARTICLE_DATE (ISO YYYY-MM-DD จาก articles.json), CATEGORY/SLUG. author: หมวด kalam เปลี่ยนเป็น "มัรกัส อัลอิมาม อัลอัชอะรีย์" (กฎ 69) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ARTICLE_TITLE",
+  "inLanguage": "th",
+  "datePublished": "ARTICLE_DATE",
+  "dateModified": "ARTICLE_DATE",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/CATEGORY/SLUG"
+}
+</script>
 
 <link rel="icon" href="../../favicon.png?v=2" type="image/png">
 <link rel="apple-touch-icon" href="../../favicon.png?v=2">
