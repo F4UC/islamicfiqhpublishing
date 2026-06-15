@@ -15,7 +15,10 @@
 - [ ] โหลด `article.css?v=…` และ `main.js?v=…` ด้วย **เวอร์ชันสตริงล่าสุด** ตรงกับ golden master (ยึดเวอร์ชันจาก `articles/_TEMPLATE.html` ปัจจุบันเป็นความจริง — เอกสารนี้ไม่ระบุเลขตายตัว ห้ามอ้างเลขในเอกสารนี้แทนไฟล์จริง) — ถ้า bump เวอร์ชันต้อง bump พร้อมกันทั้งเว็บ
 - [ ] `<body id="article-page" … data-article-id="SLUG">` — `SLUG` = ชื่อ slug จริงของบทความ และต้องมี entry ใน `articles.json`
 - [ ] **`articles.json`: เพิ่มเป็น union-entry** (append) — **ห้าม `id` ซ้ำ**, JSON parse ผ่าน, แก้ merge-conflict โดยคงทุก entry เดิม (Rule 55/57); diff ต้องแตะเฉพาะ entry ใหม่ ไม่กระทบ `readingTime` บทอื่น
-- [ ] meta-og:url **และ `<link rel="canonical">`** ต้องมีทั้งคู่และ**ตรงกันเป๊ะ** ชี้ path จริง `…/articles/<category>/<slug>.html` (N-A)
+- [ ] meta-og:url **และ `<link rel="canonical">`** ต้องมีทั้งคู่และ**ตรงกันเป๊ะ** **★extensionless★** ชี้ `…/articles/<category>/<slug>` (**★ไม่มี `.html`★** — Cloudflare Pages serve แบบ extensionless; ลิงก์ที่มี `.html` จะถูก **308 redirect**) และต้องตรงกับ URL ใน `sitemap.xml` (N-A)
+- [ ] **JSON-LD Article** (`<script type="application/ld+json">` ใน `<head>`): กรอก `ARTICLE_TITLE`, **`ARTICLE_DATE` (ISO `YYYY-MM-DD` จาก `articles.json` — ต้องใส่ทั้ง `datePublished` และ `dateModified`)**, `CATEGORY`/`SLUG` — **★ห้ามปล่อย token ค้าง (ARTICLE_DATE ฯลฯ)★**
+- [ ] JSON-LD ครบฟิลด์: `headline`, `author`, `image`, `publisher` (+ `logo`), `mainEntityOfPage` (extensionless, ตรง canonical) · **★ parse เป็น JSON valid ★** (เช่น `node -e "JSON.parse(require('fs')...)"`)
+- [ ] **บท kalam: JSON-LD `author.name` = "มัรกัส อัลอิมาม อัลอัชอะรีย์"** (Rule 69) — หมวดอื่นคง `"กองบรรณาธิการ Islamic Fiqh Publishing"`
 - [ ] asset paths ใช้ `../../` (root-clamp) ไม่ใช้ absolute domain
 
 ## 2. Hero / feature image
@@ -95,5 +98,9 @@
 - [ ] A1 fetch per-deployment URL (ไม่ใช่ branch alias ที่อาจ cache เก่า / ไม่ใช่ production ที่ WAF 403) verify เนื้อหา + เวลาอ่าน
 - [ ] ผู้ใช้ eyeball control bar บนมือถือ (โหมดกลางวัน + สลับสองโหมด)
 - [ ] merge ผ่าน GitHub API/PR (push ตรง main ถูกบล็อก 503)
+- [ ] **★ หลัง merge: re-deploy (trigger Cloudflare Pages build ใหม่) ★** — จำเป็นเสมอสำหรับบทใหม่ เพราะ:
+      · `functions/api/collect.js` ฝัง id-set จาก `articles.json` ตอน **build/deploy** — ถ้าไม่ re-deploy analytics จะ **ไม่นับ view บทใหม่**
+      · `scripts/gen-sitemap.js` regenerate `sitemap.xml` (commit ใน PR) แล้ว deploy ใหม่ให้ sitemap สด → **บทใหม่เข้า Google**
+      · `index.html` `<noscript>` link list อัปเดตให้รวมบทใหม่
 - [ ] หลัง merge: Custom Purge production URL (อย่า Purge Everything)
 - [ ] ลบ feature branch หลัง merge
