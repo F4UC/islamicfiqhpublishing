@@ -1300,3 +1300,51 @@ function initReadingToolsUI() {
         }
     }
 }
+
+// ==========================================
+// ⭐ 13. Anonymous article view beacon (cookieless, no PII) ⭐
+// ==========================================
+// Fires once per browser session per article when the page is visible.
+// Shared here so the 68 article pages need no per-file code; the article id is
+// read from <body data-article-id="…">. Posts to /api/collect via sendBeacon.
+(function() {
+    var body = document.body;
+    var slug = body && body.getAttribute('data-article-id');
+    if (!slug) return;                         // not an article page
+
+    if (!navigator.sendBeacon) return;         // no beacon support → skip
+
+    // Client-side bot skip (the server re-checks too). Only unambiguous bots —
+    // never messaging-app in-app browsers (real readers), so shared-link views count.
+    var ua = navigator.userAgent || '';
+    if (/bot|crawl|spider|slurp|headless|phantom|puppeteer|playwright|lighthouse|gtmetrix|pingdom|uptime|monitor/i.test(ua)) return;
+
+    var key = 'viewed_' + slug;
+    var sent = false;
+
+    function alreadyCounted() {
+        try { return sessionStorage.getItem(key) === '1'; } catch (e) { return false; }
+    }
+    function markCounted() {
+        try { sessionStorage.setItem(key, '1'); } catch (e) {}
+    }
+
+    function fire() {
+        if (sent || document.visibilityState !== 'visible' || alreadyCounted()) return;
+        var ok = false;
+        try {
+            var blob = new Blob([JSON.stringify({ article_id: slug })], { type: 'application/json' });
+            ok = navigator.sendBeacon('/api/collect', blob);
+        } catch (e) { ok = false; }
+        if (ok) {
+            sent = true;
+            markCounted();
+            document.removeEventListener('visibilitychange', onVisible);
+        }
+    }
+    function onVisible() { if (document.visibilityState === 'visible') fire(); }
+
+    // main.js is deferred, so the DOM is ready here.
+    if (document.visibilityState === 'visible') fire();
+    else document.addEventListener('visibilitychange', onVisible);
+})();
