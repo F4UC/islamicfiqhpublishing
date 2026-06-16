@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll-Scrub Hero (Baghdad) — Prototype — Islamic Fiqh Publishing</title>
+<link rel="icon" href="/favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<meta name="description" content="คลังบทแปลและบทวิเคราะห์วิชาการอิสลามคลาสสิกภาษาไทย ครอบคลุมนิติศาสตร์ เทววิทยา หะดีษ และประวัติศาสตร์">
+<meta name="keywords" content="อิสลาม, นิติศาสตร์อิสลาม, ฟิกฮ์, กะลาม, ประวัติศาสตร์อิสลาม, Islamic Fiqh">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+<meta property="og:title" content="Islamic Fiqh Publishing">
+<meta property="og:description" content="คลังบทแปลและบทวิเคราะห์วิชาการอิสลามคลาสสิกภาษาไทย ครอบคลุมนิติศาสตร์ เทววิทยา หะดีษ และประวัติศาสตร์">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<script>
+(function(){
+  var s = localStorage.getItem('theme');
+  var p = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if(s === 'dark' || (!s && p)) document.documentElement.classList.add('dark-mode');
+})();
+</script>
+
+<link rel="stylesheet" href="/css/index-list.css?v=20260614a">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+@font-face {
+  font-family: 'D-DIN';
+  src: url('/D-DIN.e58c68e58b09fc0e.woff2') format('woff2'),
+       url('/D-DIN.105cb3e9fde868e3.woff') format('woff'),
+       url('/D-DIN.e77db3e5eeb79c76.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+/* =========================================================
+   TOKENS
+   ========================================================= */
+:root {
+  /* Elegant light blue academic theme */
+  --bg-primary: #e3edf7;       /* Soft premium sky-blue background */
+  --bg-secondary: #d6e2ee;     /* Pale elegant blue-gray container */
+  --bg-tertiary: #c8d7e5;      /* Soft medium blue-gray */
+  --text-primary: #111111;     /* Charcoal primary text */
+  --text-secondary: #444444;   /* Muted gray text */
+  --text-tertiary: #777777;    /* Very muted text */
+  --border-primary: rgba(0,50,100,0.06); /* Clean thin blue-tinted border line */
+  --border-secondary: rgba(0,50,100,0.12); /* Darker blue-tinted border line */
+  
+  --ink: var(--bg-primary);
+  --ink-2: var(--bg-secondary);
+  --ink-3: var(--bg-tertiary);
+  --ink-4: var(--border-secondary);
+  --paper: var(--text-primary);
+  --paper-2: var(--text-secondary);
+  --bone: #556270;
+  --text: var(--text-primary);
+  --text-dim: var(--text-secondary);
+  --text-mute: var(--text-tertiary);
+  --gold: #b31b1b;             /* Brand Red — Rule 29 */
+  --gold-bright: #d32f2f;      /* Bright Red */
+  --rule: rgba(0,50,100,0.06);
+  --rule-strong: rgba(0,50,100,0.12);
+  --serif: 'IBM Plex Sans Thai', system-ui, sans-serif;
+  --thai: 'Sarabun', system-ui, sans-serif;
+  --arabic: 'Amiri', serif;
+  --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
+}
+
+html.dark-mode {
+  /* Rich, premium dark mode overrides */
+  --bg-primary: #0a0907;       /* Rich dark ink background */
+  --bg-secondary: #14110d;     /* Deep charcoal warm brown */
+  --bg-tertiary: #1d1814;      /* Medium dark */
+  --text-primary: #e8e0d0;     /* Warm ivory text */
+  --text-secondary: #9a907e;   /* Sand colored muted text */
+  --text-tertiary: #6b6357;    /* Earthy dark gray muted text */
+  --border-primary: rgba(232,224,208,0.12);
+  --border-secondary: rgba(232,224,208,0.24);
+
+  --ink: var(--bg-primary);
+  --ink-2: var(--bg-secondary);
+  --ink-3: var(--bg-tertiary);
+  --ink-4: var(--border-secondary);
+  --paper: var(--text-primary);
+  --paper-2: var(--text-secondary);
+  --bone: #9a907e;
+  --text: var(--text-primary);
+  --text-dim: var(--text-secondary);
+  --text-mute: var(--text-tertiary);
+  --rule: rgba(232,224,208,.14);
+  --rule-strong: rgba(232,224,208,.32);
+}
+
+/* Click Ripple Effect */
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(179, 27, 27, 0.18);
+  transform: scale(0);
+  animation: ripple-animation 0.65s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+  pointer-events: none;
+  z-index: 10;
+}
+@keyframes ripple-animation {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* WebGL Background Fluid Canvas */
+#fluidCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 1.0;
+  mix-blend-mode: multiply; /* Multiply blend mode for light mode to transparent white base */
+  transition: opacity 0.3s ease;
+}
+html.dark-mode #fluidCanvas {
+  mix-blend-mode: screen; /* Screen blend mode for glowing dark-mode waves */
+  opacity: 0.18; /* Subtle glowing wave overlay */
+}
+
+
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--ink); color: var(--text); font-family: var(--thai); overflow-x: hidden; }
+body { font-size: 16px; line-height: 1.7; font-weight: 300; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+::selection { background: var(--gold); color: var(--ink); }
+
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 9000; opacity: .05; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.9 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+.thin-rule { height: 1px; background: var(--rule); width: 100%; }
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  position: relative; min-height: 100vh; padding: 140px 0 80px;
+  display: grid; grid-template-columns: 1fr; align-content: space-between;
+  overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 50% at 80% 18%, rgba(59,130,246,.10), transparent 60%),
+    radial-gradient(80% 60% at 10% 90%, rgba(59,130,246,.05), transparent 70%);
+}
+
+@media (max-width: 1023px) {
+  .hero { padding-top: 80px; }
+  .hero-body { margin-top: 40px; }
+}
+
+.hero-body { margin-top: 112px; text-align: center; position: relative; z-index: 2; }
+
+.hero-arabic {
+  font-family: var(--arabic); font-weight: 400;
+  font-size: clamp(46px, 8.3vw, 127px);
+  line-height: 1.35; color: var(--paper); direction: rtl; letter-spacing: 0;
+  margin-bottom: 36px; text-shadow: 0 0 60px rgba(179,27,27,.12);
+}
+
+.hero-arabic-ref {
+  font-family: var(--thai); font-size: 18px; color: var(--text-primary);
+  letter-spacing: 0; margin-bottom: 128px; font-weight: 400;
+}
+
+.hero-display {
+  font-family: 'IBM Plex Sans Thai', 'IBM Plex Sans', system-ui, sans-serif; font-weight: 300;
+  font-size: clamp(56px, 11vw, 180px);
+  line-height: 1.05; letter-spacing: -.02em; color: var(--paper);
+}
+.hero-display em { font-style: normal; font-weight: 700; color: var(--gold); letter-spacing: -0.02em; }
+.hero-display .br { display: block; }
+
+.hero-sub {
+  max-width: 680px; margin: 48px auto 0;
+  font-family: var(--thai); font-weight: 300; font-size: 18px; line-height: 1.8; color: var(--text-dim);
+}
+
+.hero-actions { margin-top: 56px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+.btn {
+  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-weight: 500; font-size: 15px;
+  letter-spacing: 0.04em; color: #f5f1ea;
+  padding: 12px 28px; border: 1px solid rgba(255,255,255,0.65); border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 12px;
+  transition: all .35s cubic-bezier(.2,.7,.2,1); position: relative; overflow: hidden;
+}
+.btn .arrow { display: inline-block; transition: transform .35s; color: inherit; }
+.btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(179,27,27,0.1); }
+.btn:hover .arrow { transform: translateX(4px); color: var(--gold); }
+
+.scroll-hint {
+  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  font-family: var(--ui); font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--text-mute);
+}
+.scroll-hint .line {
+  width: 1px; height: 48px; background: linear-gradient(to bottom, transparent, var(--gold));
+  animation: flow 2.2s infinite;
+}
+@keyframes flow {
+  0%  { transform: scaleY(.2); transform-origin: top; }
+  50% { transform: scaleY(1);  transform-origin: top; }
+  51% { transform: scaleY(1);  transform-origin: bottom; }
+  100%{ transform: scaleY(.2); transform-origin: bottom; }
+}
+
+/* =========================================================
+   MARQUEE
+   ========================================================= */
+.marquee {
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  padding: 40px 0; overflow: hidden; background: var(--ink-2); position: relative;
+}
+.marquee::before, .marquee::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 200px; z-index: 2; pointer-events: none;
+}
+.marquee::before { left: 0; background: linear-gradient(to right, var(--ink-2), transparent); }
+.marquee::after  { right: 0; background: linear-gradient(to left,  var(--ink-2), transparent); }
+.marquee-track {
+  display: flex; gap: 80px; white-space: nowrap;
+  animation: slide 67s linear infinite;
+  font-family: var(--arabic); font-size: 42px; color: var(--text-dim);
+}
+@media (max-width: 768px) {
+  .marquee-track {
+    animation-duration: 27s;
+  }
+}
+.marquee-track span { display: inline-flex; align-items: center; gap: 80px; }
+.marquee-track .sep { color: var(--gold); font-family: var(--serif); font-size: 24px; font-style: italic; }
+@keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+.section { padding: 140px 0; position: relative; }
+.section-head { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; margin-bottom: 80px; align-items: end; }
+.section-no { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--gold); font-size: 18px; letter-spacing: .02em; }
+.section-no .slash { color: var(--text-mute); margin: 0 6px; }
+.section-eyebrow {
+  font-family: var(--thai); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--text-mute);
+  display: flex; align-items: center; gap: 14px; margin-top: 8px;
+}
+.section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+.section-title {
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(36px, 5vw, 72px); line-height: 1.1; letter-spacing: -.01em; color: var(--paper);
+}
+.section-title em { font-style: normal; font-weight: 700; color: #d32f2f; }
+.section-lede { font-family: var(--thai); font-weight: 300; font-size: 17px; line-height: 1.8; color: var(--text-dim); margin-top: 24px; max-width: 560px; }
+
+@media(max-width:880px){ .section-head { grid-template-columns: 1fr; gap: 24px; } }
+
+/* =========================================================
+   FEATURED
+   ========================================================= */
+.section-featured { padding-top: 140px; padding-bottom: 0; }
+.featured {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 0;
+  border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule);
+}
+.featured-img {
+  position: relative; min-height: 580px; overflow: hidden; border-right: 1px solid var(--rule);
+  background: radial-gradient(120% 80% at 30% 30%, rgba(59,130,246,.18), transparent 60%),
+              linear-gradient(135deg, #1a1612 0%, #2a1f15 50%, #0f0c08 100%);
+}
+.featured-img::before {
+  content: 'بِسْمِ اللَّـهِ'; position: absolute; inset: 0; display: grid; place-items: center;
+  font-family: var(--arabic); font-size: 240px; color: var(--gold); opacity: .10;
+  pointer-events: none; line-height: 1;
+}
+.featured-img::after { content: ''; position: absolute; inset: 24px; border: 1px solid var(--rule); pointer-events: none; }
+.featured-ribbon {
+  position: absolute; top: 48px; left: -12px;
+  background: var(--gold); color: var(--ink);
+  font-family: var(--ui); font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+  padding: 8px 18px;
+}
+.featured-corner-num {
+  position: absolute; bottom: 48px; left: 48px;
+  font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 14px; letter-spacing: .04em;
+}
+.featured-read-time {
+  position: absolute; bottom: 48px; right: 48px;
+  font-family: var(--ui); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-dim);
+}
+.featured-body { padding: 64px; }
+.featured-cat {
+  font-family: var(--ui); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold);
+  display: flex; align-items: center; gap: 14px; margin-bottom: 32px;
+}
+.featured-cat::before { content: '●'; color: var(--gold); font-size: 8px; }
+.featured-title { font-family: var(--thai); font-weight: 600; font-size: clamp(28px,2.6vw,40px); line-height: 1.25; color: var(--paper); margin-bottom: 24px; }
+.featured-arabic { font-family: var(--arabic); font-size: 24px; color: var(--gold); direction: rtl; margin-bottom: 24px; line-height: 1.6; }
+.featured-excerpt { font-family: var(--thai); font-weight: 300; font-size: 16px; line-height: 1.85; color: var(--text-dim); margin-bottom: 40px; }
+.featured-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 32px; border-top: 1px solid var(--rule);
+  font-family: var(--ui); font-size: 12px; letter-spacing: .06em; color: var(--text-mute);
+}
+.featured-meta-label { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-mute); margin-bottom: 4px; }
+.featured-meta .author { color: var(--text); font-family: var(--serif); font-style: italic; font-size: 15px; letter-spacing: 0; }
+.featured-cta {
+  margin-top: 32px; display: inline-flex; align-items: center; gap: 14px;
+  font-family: var(--ui); font-size: 12px; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--gold); padding-bottom: 6px; border-bottom: 1px solid var(--gold); transition: gap .3s;
+}
+.featured-cta:hover { gap: 24px; }
+
+@media(max-width:980px){
+  .featured { grid-template-columns: 1fr; }
+  .featured-img { min-height: 340px; border-right: 0; border-bottom: 1px solid var(--rule); }
+  .featured-img::before { font-size: 140px; }
+  .featured-body { padding: 48px 32px; }
+}
+
+/* =========================================================
+   ARTICLE INDEX
+   ========================================================= */
+.index-list { display: flex; flex-direction: column; }
+
+.archive-footer { margin-top: 64px; display: flex; justify-content: flex-end; align-items: center; }
+
+/* =========================================================
+   CATEGORY GRID — SpaceX-style layout
+   ========================================================= */
+@keyframes ken-burns {
+  0%   { transform: scale(1)    translateX(0%);   }
+  100% { transform: scale(1.12) translateX(-2%);  }
+}
+@keyframes hist-float {
+  0%   { opacity: 0; transform: translateY(60px);  }
+  15%  { opacity: 0.52; }
+  80%  { opacity: 0.52; }
+  100% { opacity: 0;  transform: translateY(-90px); }
+}
+
+.wrap-spacex {
+  display: block;
+  position: relative;
+  width: 98%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 941px;
+  gap: 28px;
+  background: transparent;
+}
+.cat-card {
+  position: relative; overflow: hidden;
+  padding: 56px 72px; display: flex; flex-direction: column; justify-content: center;
+  transition: box-shadow .3s, transform .3s; background: #0a0c10;
+  text-decoration: none; border-radius: 12px;
+}
+.cat-bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center; z-index: 0;
+  opacity: 0.50; filter: brightness(80%) saturate(90%);
+  transition: opacity 0.7s ease, filter 0.7s ease, transform 0.8s cubic-bezier(.2,.7,.2,1);
+}
+.cat-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(5,6,10,0.55) 0%, rgba(5,6,10,0.15) 50%, rgba(5,6,10,0.88) 100%);
+  z-index: 1; pointer-events: none; transition: background 0.5s ease;
+}
+.cat-card:hover { box-shadow: 0 0 0 1px rgba(59,130,246,0.55), 0 12px 48px rgba(0,0,0,0.50); transform: translateY(-4px); }
+.cat-card:hover .cat-bg { opacity: 0.72; filter: brightness(100%) saturate(110%); transform: scale(1.03); }
+.cat-card:hover .cat-overlay { background: linear-gradient(180deg, rgba(5,6,10,0.40) 0%, rgba(5,6,10,0.08) 50%, rgba(5,6,10,0.80) 100%); }
+.cat-wave-canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 2;
+}
+
+/* ── Backgrounds via CSS (Rule 30 — no inline style) ── */
+.cat-kalam .cat-bg {
+  background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+  animation: ken-burns 26s ease-in-out infinite alternate;
+}
+.cat-nitisart .cat-bg {
+  background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+  background-color: #0c0f16;
+}
+.cat-hadith .cat-bg {
+  background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+}
+.cat-history .cat-bg {
+  background-image: url('https://lh3.googleusercontent.com/ci/AL18g_RzzjlE2jlyK1lWChHdwSBCLkvx8ZndHHrmG85pv5dqrH0_denJx8SMYtDEXOqcc0E9C8LH1IE=s1600');
+  background-size: cover; background-position: center;
+}
+.cat-hajj .cat-bg {
+  background-image: url('/images/heroes/hero-hajj-1.jpg');
+  background-size: cover; background-position: center;
+}
+.cat-about .cat-bg {
+  background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+}
+.cat-htm .cat-bg {
+  background-image: url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+}
+.cat-isnad .cat-bg {
+  background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+}
+
+/* ── Typography ── */
+.cat-tag { font-family: var(--ui); font-size: 9px; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); opacity: 0.75; }
+.cat-name { font-family: var(--serif); font-weight: 700; color: #f0ece4; font-size: clamp(38px, 5vw, 72px); line-height: 1.05; letter-spacing: -0.02em; transition: color 0.3s; }
+.cat-card:hover .cat-name { color: #e8c16a; }
+.cat-sub { font-family: var(--thai); font-weight: 300; font-size: 13px; color: rgba(240,236,228,0.60); letter-spacing: .08em; line-height: 1.6; }
+.section-support { padding-top: 40px; padding-bottom: 80px; }
+.support-compact { border-top: 1px solid var(--rule); padding: 60px 0; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.tea-btn { font-family: var(--thai); font-size: 14px; font-weight: 500; padding: 14px 36px; border: 1px solid var(--rule-strong); border-radius: 999px; background: transparent; color: var(--text); cursor: pointer; transition: all .3s; display: inline-flex; align-items: center; gap: 10px; }
+.tea-btn:hover { border-color: var(--gold); color: var(--gold); }
+.tea-icon { font-size: 16px; }
+.qr-container { display: none; max-width: 280px; width: 100%; }
+.qr-container.open { display: block; }
+.qr-inner { background: var(--ink-2); border: 1px solid var(--rule); padding: 28px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.qr-frame { width: 200px; height: 200px; background: #fff; padding: 12px; }
+.qr-frame img { width: 100%; height: 100%; display: block; }
+.qr-note { font-family: var(--thai); font-size: 12px; color: var(--text-mute); line-height: 1.6; text-align: center; }
+.cat-em  { font-style: italic; color: var(--gold); font-family: inherit; }
+.cat-body {
+  position: relative; z-index: 3;
+  display: flex; flex-direction: column; gap: 14px;
+  max-width: 68%;
+}
+
+/* ── History floating Hijri years ── */
+.hist-years { position: absolute; inset: 0; z-index: 2; overflow: hidden; pointer-events: none; }
+.hy {
+  position: absolute; bottom: -20px;
+  font-family: var(--arab); font-size: 12px; color: var(--gold);
+  opacity: 0; animation: hist-float linear infinite;
+  white-space: nowrap; letter-spacing: .04em;
+}
+.hy-en { font-family: var(--ui); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; }
+.hy-th { font-family: var(--thai); font-size: 11px; letter-spacing: .05em; font-weight: 300; }
+.hy-sm { font-size: 9px; }
+.hy-lg { font-size: 15px; }
+/* Arabic */
+.hy-1  { left:  7%; animation-duration: 14s; animation-delay: 0s;    }
+.hy-4  { left: 72%; animation-duration: 12s; animation-delay: 4s;    }
+.hy-7  { left: 40%; animation-duration: 17s; animation-delay: 8.5s;  }
+.hy-10 { left: 57%; animation-duration: 13s; animation-delay: 1.5s;  }
+/* English */
+.hy-2  { left: 26%; animation-duration: 18s; animation-delay: 5s;    }
+.hy-5  { left: 86%; animation-duration: 15s; animation-delay: 2s;    }
+.hy-8  { left: 62%; animation-duration: 11s; animation-delay: 7s;    }
+.hy-11 { left:  2%; animation-duration: 16s; animation-delay: 12s;   }
+/* Thai */
+.hy-3  { left: 50%; animation-duration: 13s; animation-delay: 10s;   }
+.hy-6  { left: 17%; animation-duration: 15s; animation-delay: 6s;    }
+.hy-9  { left: 80%; animation-duration: 14s; animation-delay: 3.5s;  }
+.hy-12 { left: 33%; animation-duration: 19s; animation-delay: 14s;   }
+
+/* ── Responsive ── */
+@media(max-width:980px){
+  .cat-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 260px;
+    gap: 20px;
+  }
+  .cat-card { padding: 32px 40px; }
+  .cat-body { max-width: 85%; }
+  .cat-name { font-size: 40px; }
+}
+
+@media(max-width:600px){
+  .cat-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+    gap: 16px;
+  }
+  .cat-card { padding: 24px 28px; }
+  .cat-body { max-width: 90%; gap: 10px; }
+  .cat-name { font-size: 32px; }
+  .cat-sub { font-size: 12px; }
+}
+
+/* =========================================================
+   QUOTE — PARCHMENT
+   ========================================================= */
+.parchment {
+  background: var(--paper); color: var(--ink); position: relative;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.parchment::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.05 0 0 0 0 0.04 0 0 0 0 0.03 0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: .4; mix-blend-mode: multiply;
+}
+.quote-section { padding: 140px 0; text-align: center; position: relative; }
+.quote-eyebrow {
+  font-family: var(--ui); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-3);
+  display: inline-flex; align-items: center; gap: 14px; margin-bottom: 64px;
+}
+.quote-eyebrow::before, .quote-eyebrow::after { content: ''; width: 48px; height: 1px; background: var(--ink-3); }
+.eyebrow-en { display: inline; }
+.eyebrow-en::after { content: ' · '; }
+.eyebrow-th { display: inline; }
+.quote-body {
+  min-height: 640px; width: 100%;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.quote-ar {
+  font-family: var(--arabic); font-size: clamp(24px,3.2vw,44px); line-height: 2.2; color: var(--ink);
+  direction: rtl; margin-bottom: 32px; max-width: 1100px; margin-left: auto; margin-right: auto; font-weight: 400;
+  display: flex; align-items: center; justify-content: center; text-align: center; width: 100%;
+}
+.quote-th {
+  font-family: var(--thai); font-weight: 300;
+  font-size: clamp(22px,2vw,30px); line-height: 1.8; color: var(--ink-3);
+  max-width: 840px; margin: 0 auto 32px; white-space: pre-line;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+}
+.quote-author-line {
+  font-family: var(--thai); font-size: 15px; color: var(--ink-3);
+  display: block; text-align: center;
+}
+#quoteAuthor {
+  border: 1px solid rgba(179,27,27,0.55);
+  border-radius: 2px;
+  padding: 3px 12px;
+  display: inline-block;
+  letter-spacing: normal;
+}
+.quote-controls { margin-top: 64px; display: flex; justify-content: center; gap: 12px; }
+.quote-dot {
+  width: 24px; height: 24px; display: grid; place-items: center;
+  border: 1px solid var(--ink-3); border-radius: 50%; color: var(--ink-3);
+  font-family: var(--ui); font-size: 10px; transition: all .25s;
+}
+.quote-dot.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.quote-dot:hover { border-color: var(--ink); }
+
+/* =========================================================
+   TOOLS
+   ========================================================= */
+.tools-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
+.tool-card {
+  position: relative; padding: 48px 36px; border: 1px solid var(--rule);
+  display: flex; flex-direction: column; gap: 24px; min-height: 340px;
+  background: linear-gradient(180deg, var(--ink-2), var(--ink));
+  transition: all .4s cubic-bezier(.2,.7,.2,1); overflow: hidden;
+}
+.tool-card:hover { border-color: var(--gold); transform: translateY(-6px); }
+.tool-card::before {
+  content: ''; position: absolute; top: 0; right: 0; width: 160px; height: 160px;
+  background: radial-gradient(circle, rgba(59,130,246,.15), transparent 70%); pointer-events: none;
+}
+.tool-card-header { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.tool-status {
+  font-family: var(--ui); font-size: 10px; letter-spacing: .24em; text-transform: uppercase;
+  color: var(--gold); display: inline-flex; align-items: center; gap: 10px; align-self: flex-start;
+  padding: 6px 12px; border: 1px solid var(--gold); border-radius: 999px;
+}
+.tool-status.live { color: #a8e6a8; border-color: #3a6d3a; }
+.tool-status::before { content: ''; width: 6px; height: 6px; background: currentColor; border-radius: 50%; }
+.tool-icon-mark { font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 14px; }
+.tool-name { font-family: var(--serif); font-weight: 400; font-size: 42px; line-height: 1.05; color: var(--paper); letter-spacing: -.01em; }
+.tool-name em { font-style: italic; color: var(--gold); }
+.tool-desc { font-family: var(--thai); font-weight: 300; font-size: 15px; line-height: 1.7; color: var(--text-dim); flex: 1; }
+.tool-cta {
+  font-family: var(--ui); font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--text); display: inline-flex; align-items: center; gap: 10px; transition: gap .3s;
+}
+.tool-cta:hover { gap: 18px; color: var(--gold); }
+.tool-arabic { position: absolute; bottom: 24px; right: 32px; font-family: var(--arabic); color: var(--gold); opacity: .4; font-size: 36px; line-height: 1; }
+
+@media(max-width:880px){ .tools-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   SUPPORT
+   ========================================================= */
+.support {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  padding: 140px 0; border-top: 1px solid var(--rule);
+}
+.support-h { font-family: var(--serif); font-weight: 300; font-size: clamp(40px,4.6vw,72px); line-height: 1; letter-spacing: -.015em; color: var(--paper); margin-bottom: 32px; }
+.support-h em { font-style: italic; color: var(--gold); }
+.support-p { font-family: var(--thai); font-weight: 300; font-size: 17px; line-height: 1.85; color: var(--text-dim); max-width: 480px; margin-bottom: 40px; }
+.email-form { display: flex; border: 1px solid var(--rule-strong); border-radius: 999px; overflow: hidden; background: var(--ink-2); max-width: 520px; }
+.email-form input { flex: 1; background: transparent; border: 0; outline: 0; color: var(--text); font-family: var(--thai); font-size: 15px; padding: 18px 28px; }
+.email-form input::placeholder { color: var(--text-mute); }
+.email-form button { background: var(--paper); color: var(--ink); padding: 0 32px; font-family: var(--ui); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; transition: background .25s; font-weight: 600; }
+.email-form button:hover { background: var(--gold-bright); }
+.support-note { margin-top: 24px; font-family: var(--ui); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--text-mute); }
+
+.donate-card {
+  background: var(--ink-2); border: 1px solid var(--rule); padding: 48px;
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; position: relative;
+}
+.donate-card::before { content: ''; position: absolute; inset: 16px; border: 1px solid var(--rule); pointer-events: none; }
+.donate-eyebrow { font-family: var(--ui); font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+.donate-title { font-family: var(--serif); font-weight: 300; font-size: 32px; line-height: 1.1; color: var(--paper); letter-spacing: -.01em; }
+.donate-title em { font-style: italic; color: var(--gold); }
+.qr-frame { width: 200px; height: 200px; background: #fff; padding: 14px; position: relative; }
+.donate-note { font-family: var(--thai); font-weight: 300; font-size: 14px; color: var(--text-mute); line-height: 1.6; max-width: 280px; }
+
+@media(max-width:880px){ .support { grid-template-columns: 1fr; gap: 48px; padding: 80px 0; } }
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+#backToTopBtn {
+  display: none; position: fixed; bottom: 32px; right: 32px; z-index: 500;
+  width: 48px; height: 48px;
+  border: 1px solid var(--border-primary); border-radius: 50%;
+  background: #1a1612;
+  color: #f5f1ea;
+  box-shadow: 0 8px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.05);
+  transition: all .35s cubic-bezier(.2,.7,.2,1); cursor: pointer;
+  place-items: center;
+  padding: 0;
+}
+#backToTopBtn svg {
+  transition: transform 0.3s ease;
+}
+#backToTopBtn:hover {
+  border-color: var(--gold); color: var(--gold);
+  background: #2a2118;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(59,130,246,0.18), 0 8px 32px rgba(0,0,0,0.36);
+}
+#backToTopBtn:hover svg {
+  transform: translateY(-3px);
+}
+html:not(.dark-mode) .tool-card { border-color: rgba(0,50,100,0.22); }
+
+/* =========================================================
+   REVEAL ON SCROLL
+   ========================================================= */
+[data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+[data-reveal].is-in { opacity: 1; transform: none; }
+[data-reveal][data-delay="1"] { transition-delay: .08s; }
+[data-reveal][data-delay="2"] { transition-delay: .16s; }
+[data-reveal][data-delay="3"] { transition-delay: .24s; }
+[data-reveal][data-delay="4"] { transition-delay: .32s; }
+
+
+
+/* =========================================================
+   RESPONSIVE GLOBAL
+   ========================================================= */
+@media(max-width:600px){
+  .wrap { padding: 0 20px; }
+  .hero { padding: 80px 0 60px; }
+  .hero-tag { text-align: left; }
+  .section { padding: 80px 0; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .hero-arabic { font-size: 6.5vw; white-space: nowrap; }
+  .quote-eyebrow { flex-direction: row; gap: 6px; width: auto; font-size: 9px; letter-spacing: 0.1em; white-space: nowrap; }
+  .quote-eyebrow::before, .quote-eyebrow::after { width: 20px; display: block; }
+  .eyebrow-en { display: inline; }
+  .eyebrow-en::before { display: none; }
+  .eyebrow-en::after { content: ' · '; display: inline; background: none; width: auto; height: auto; }
+  .quote-section { padding: 80px 0; }
+  .quote-body { min-height: 580px; }
+  .tool-name { font-size: 28px; white-space: nowrap; }
+}
+
+/* =========================================================
+   CATEGORIES — SpaceX dark cards, always dark background
+   ========================================================= */
+#categories .section-head {
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-bottom: 48px;
+}
+#categories .section-title { color: #f0ece4; }
+#categories .section-lede  { color: #f5f1ea; }
+#categories { background: #0a0907; position: relative; padding-bottom: 0; }
+#categories .wrap { position: relative; z-index: 1; }
+.cat-name { color: #f0ece4; }
+.cat-sub { color: rgba(240,236,228,0.62); }
+
+/* ─── CAT-STACK — SpaceX-style vertical full-bleed panels ─── */
+.cat-stack { display: flex; flex-direction: column; }
+.cat-panel {
+  position: relative; height: 100vh; overflow: hidden;
+  display: flex; align-items: flex-end; text-decoration: none;
+}
+.cat-panel-bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center; z-index: 0;
+  transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+}
+.cat-panel-video {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: 0;
+  transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+}
+.cat-panel:hover .cat-panel-bg,
+.cat-panel:hover .cat-panel-video { transform: scale(1.04); }
+.cat-panel-overlay {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(135deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.0) 100%);
+}
+.cat-panel-body {
+  position: relative; z-index: 2; padding: 0 40px 56px;
+  display: flex; flex-direction: column; gap: 12px; max-width: 720px;
+}
+.cat-panel-num {
+  font-family: var(--ui); font-size: 9px; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.75;
+}
+.cat-panel-title {
+  font-family: 'IBM Plex Sans Thai', 'IBM Plex Sans', system-ui, sans-serif;
+  font-weight: 400; line-height: 1.0;
+  font-size: clamp(2.8rem, 6.5vw, 7rem);
+  color: #f5f1ea; letter-spacing: -0.01em;
+}
+.cat-panel-title em {
+  font-style: normal; font-weight: 700; color: #b31b1b; letter-spacing: -0.02em;
+}
+.cat-panel-sub {
+  font-family: 'Sarabun', sans-serif; font-weight: 300; font-size: 15px;
+  color: rgba(245,241,234,0.65); letter-spacing: .04em; line-height: 1.6;
+}
+.cat-panel-cta {
+  font-family: 'Sarabun', system-ui, sans-serif; font-size: 13px;
+  letter-spacing: 0.04em; color: rgba(245,241,234,0.50);
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 6px;
+  transition: color .3s;
+}
+.cat-panel:hover .cat-panel-cta { color: #f5f1ea; }
+.cat-panel-kalam .cat-panel-bg   { background-image: url('/images/heroes/hero-kalam-1.jpg'); }
+.cat-panel-nitisart .cat-panel-bg { background-image: url('/images/heroes/hero-nitisart-1.jpg'); }
+.cat-panel-history .cat-panel-bg  { background-image: url('/images/heroes/hero-history-1.jpg'); }
+.cat-panel-hajj .cat-panel-bg    { background-image: url('/images/heroes/hero-hajj-1.jpg'); }
+.cat-panel-tools .cat-panel-bg   { background-image: url('/images/heroes/hero-tools-1.jpg'); }
+@media(max-width:768px){
+  .cat-panel { height: 80vh; }
+  .cat-panel-title { font-size: clamp(2.4rem, 9vw, 4rem); }
+  .cat-panel-body { padding: 0 24px 48px; }
+  .quote-section { padding: 40px 0; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://islamicfiqhpublishing.com/#organization",
+      "name": "Islamic Fiqh Publishing",
+      "alternateName": "دار الفقه الإسلامي للنشر والتوزيع والترجمة",
+      "url": "https://islamicfiqhpublishing.com",
+      "logo": "https://islamicfiqhpublishing.com/favicon.png",
+      "description": "คลังบทแปลและบทวิเคราะห์วิชาการอิสลามคลาสสิกภาษาไทย ครอบคลุมนิติศาสตร์ เทววิทยา หะดีษ และประวัติศาสตร์",
+      "sameAs": ["https://www.facebook.com/IslamicFiqhPublishing"],
+      "foundingDate": "2020"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://islamicfiqhpublishing.com/#website",
+      "name": "Islamic Fiqh Publishing",
+      "url": "https://islamicfiqhpublishing.com",
+      "inLanguage": "th",
+      "publisher": {
+        "@id": "https://islamicfiqhpublishing.com/#organization"
+      }
+    }
+  ]
+}
+</script>
+<style id="bg-hero-css">
+/* ===== Scroll-scrub hero (Baghdad) — prototype ===== */
+.bg-hero{position:relative;height:100vh;background:#0a0907}
+.bg-hero.is-scrub{height:var(--scrub-vh,400vh)}
+.bg-hero__sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:grid}
+.bg-hero__poster,.bg-hero__canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bg-hero__canvas{opacity:0;transition:opacity .5s ease}
+.bg-hero.is-ready .bg-hero__canvas{opacity:1}
+.bg-hero__scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.25) 45%,rgba(0,0,0,.12) 100%)}
+.bg-hero__tagline{position:relative;z-index:2;align-self:end;justify-self:center;text-align:center;max-width:760px;padding:0 24px 14vh;color:#f5f1ea}
+.bg-hero__ar{font-family:'Amiri',serif;font-size:clamp(1.4rem,3.2vw,2.4rem);color:var(--gold,#c49a45);margin:0 0 14px;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.bg-hero__h1{font-family:'IBM Plex Sans Thai',system-ui,sans-serif;font-weight:600;font-size:clamp(2rem,5vw,3.6rem);line-height:1.08;letter-spacing:-.01em;margin:0;text-shadow:0 2px 24px rgba(0,0,0,.6)}
+.bg-hero__sub{font-family:'Sarabun',sans-serif;font-size:clamp(.95rem,1.6vw,1.1rem);line-height:1.8;color:rgba(245,241,234,.86);margin:18px auto 0;max-width:620px;text-shadow:0 1px 12px rgba(0,0,0,.7)}
+.bg-hero__scrollcue{width:1px;height:46px;margin:34px auto 0;background:linear-gradient(to bottom,rgba(255,255,255,.7),transparent);animation:bgHeroCue 2s ease-in-out infinite}
+@keyframes bgHeroCue{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(8px)}}
+@media (prefers-reduced-motion:reduce){.bg-hero__scrollcue{animation:none}}
+</style>
+<meta name="robots" content="noindex, follow"><!-- prototype page: not for index, links still crawlable -->
+</head>
+<body class="idx-home" lang="th">
+
+<div id="header-placeholder"></div>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<!-- =========================================================
+     SCROLL-SCRUB HERO — Baghdad (Clip A · image-sequence on <canvas>)
+     Progressive enhancement: poster <img> + real-text tagline + the crawlable
+     <main> directory below all work with NO JS. Engine = /scrub-hero.js
+     (vanilla, self-hosted, CSP-safe). Feature-gated (reduced-motion / no-JS /
+     saveData / mobile) → poster stays, no scrub.
+     ========================================================= -->
+<section class="bg-hero" id="scrubHero">
+  <div class="bg-hero__sticky">
+    <picture>
+      <source srcset="/assets/hero-baghdad/poster.avif" type="image/avif">
+      <source srcset="/assets/hero-baghdad/poster.webp" type="image/webp">
+      <img class="bg-hero__poster" src="/assets/hero-baghdad/poster.webp"
+           width="832" height="464" alt="" fetchpriority="high" decoding="async">
+    </picture>
+    <canvas class="bg-hero__canvas" aria-hidden="true"></canvas>
+    <div class="bg-hero__scrim" aria-hidden="true"></div>
+    <div class="bg-hero__tagline">
+      <p class="bg-hero__ar" lang="ar" dir="rtl">مدينة السلام</p>
+      <h1 class="bg-hero__h1">The Library of Inherited Knowledge</h1>
+      <p class="bg-hero__sub">สืบสานมรดกทางวิชาการของอุละมาอ์ ผ่านบทแปลและบทวิเคราะห์เชิงลึก ในนิติศาสตร์ เทววิทยา หะดีษ ประวัติศาสตร์ และวรรณกรรมอิสลาม</p>
+      <div class="bg-hero__scrollcue" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     MARQUEE
+     ========================================================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" lang="ar" dir="rtl">
+    <span lang="ar" dir="rtl">
+      الْيَقِينُ لَا يَزُولُ بِالشَّكِّ <em class="sep">·</em>
+      إِزَالَةُ الضَّرَرِ <em class="sep">·</em>
+      الْمَشَقَّةُ تَجْلِبُ التَّيْسِيرَ <em class="sep">·</em>
+      الْعَادَةُ مُحَكَّمَةٌ <em class="sep">·</em>
+      الْأُمُورُ بِمَقَاصِدِهَا <em class="sep">·</em>
+      لَا يُنْسَبُ إِلَى سَاكِتٍ قَوْلٌ، لَكِنَّ السُّكُوتَ فِي مَعْرِضِ الْحَاجَةِ بَيَانٌ <em class="sep">·</em>
+      مَنْ شَكَّ هَلْ فَعَلَ شَيْئًا أَوْ لَا فَالْأَصْلُ أَنَّهُ لَمْ يَفْعَلْهُ <em class="sep">·</em>
+      الْأَصْلُ الْعَدَمُ <em class="sep">·</em>
+      دَرْءُ الْمَفَاسِدِ أَوْلَى مِنْ جَلْبِ الْمَنَافِعِ <em class="sep">·</em>
+      الْأَمْرُ إِذَا ضَاقَ اتَّسَعَ <em class="sep">·</em>
+      الضَّرُورَاتُ تُقَدَّرُ بِقَدَرِهَا <em class="sep">·</em>
+      الْعِبْرَةُ لِلْغَالِبِ الشَّائِعِ لَا لِلنَّادِرِ <em class="sep">·</em>
+      لَا يُنْكَرُ تَغَيُّرُ الْأَحْكَامِ بِتَغَيُّرِ الْأَزْمَانِ <em class="sep">·</em>
+      الْأَصْلُ فِي الْكَلَامِ الْحَقِيقَةُ <em class="sep">·</em>
+      الِاجْتِهَادُ لَا يُنْقَضُ بِمِثْلِهِ <em class="sep">·</em>
+      الْعِبْرَةُ فِي الْعُقُودِ لِلْمَقَاصِدِ وَالْمَعَانِي، لَا لِلْأَلْفَاظِ وَالْمَبَانِي <em class="sep">·</em>
+    </span>
+    <span aria-hidden="true" lang="ar" dir="rtl">
+      الْيَقِينُ لَا يَزُولُ بِالشَّكِّ <em class="sep">·</em>
+      إِزَالَةُ الضَّرَرِ <em class="sep">·</em>
+      الْمَشَقَّةُ تَجْلِبُ التَّيْسِيرَ <em class="sep">·</em>
+      الْعَادَةُ مُحَكَّمَةٌ <em class="sep">·</em>
+      الْأُمُورُ بِمَقَاصِدِهَا <em class="sep">·</em>
+      لَا يُنْسَبُ إِلَى سَاكِتٍ قَوْلٌ، لَكِنَّ السُّكُوتَ فِي مَعْرِضِ الْحَاجَةِ بَيَانٌ <em class="sep">·</em>
+      مَنْ شَكَّ هَلْ فَعَلَ شَيْئًا أَوْ لَا فَالْأَصْلُ أَنَّهُ لَمْ يَفْعَلْهُ <em class="sep">·</em>
+      الْأَصْلُ الْعَدَمُ <em class="sep">·</em>
+      دَرْءُ الْمَفَاسِدِ أَوْلَى مِنْ جَلْبِ الْمَنَافِعِ <em class="sep">·</em>
+      الْأَمْرُ إِذَا ضَاقَ اتَّسَعَ <em class="sep">·</em>
+      الضَّرُورَاتُ تُقَدَّرُ بِقَدَرِهَا <em class="sep">·</em>
+      الْعِبْرَةُ لِلْغَالِبِ الشَّائِعِ لَا لِلنَّادِرِ <em class="sep">·</em>
+      لَا يُنْكَرُ تَغَيُّرُ الْأَحْكَامِ بِتَغَيُّرِ الْأَزْمَانِ <em class="sep">·</em>
+      الْأَصْلُ فِي الْكَلَامِ الْحَقِيقَةُ <em class="sep">·</em>
+      الِاجْتِهَادُ لَا يُنْقَضُ بِمِثْلِهِ <em class="sep">·</em>
+      الْعِبْرَةُ فِي الْعُقُودِ لِلْمَقَاصِدِ وَالْمَعَانِي، لَا لِلْأَلْفَاظِ وَالْمَبَانِي <em class="sep">·</em>
+    </span>
+  </div>
+</div>
+
+
+<!-- =========================================================
+     ARCHIVE
+     ========================================================= -->
+<section class="section" id="archive">
+  <div class="wrap">
+    <div class="section-head">
+      <div data-reveal data-delay="1">
+        <h2 class="section-title">บทความ<em>ล่าสุด</em></h2>
+      </div>
+    </div>
+
+    <!-- Populated at runtime by main.js (Section 10) from articles.json: newest 6, all categories. -->
+    <div class="index-list" id="indexList"></div>
+
+    <div class="archive-footer" data-reveal>
+      <a href="/pages/articles.html" class="btn">ดูทั้งหมด <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CATEGORIES
+     ========================================================= -->
+<section class="section" id="categories">
+  <div class="wrap">
+    <div class="section-head">
+      <div data-reveal>
+        <h2 class="section-title">หมวด<em>หมู่</em></h2>
+        <p class="section-lede">เรียงร้อยศาสตร์อิสลามคลาสสิกเป็นหกสาขา แต่ละสาขามีตำราแม่บท ระเบียบวิธี และคลังบรรณานุกรมของตนเอง</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cat-stack">
+
+    <!-- 01 กะลาม / เทววิทยา -->
+    <a href="/pages/kalam.html" class="cat-panel cat-panel-kalam">
+      <div class="cat-panel-bg"></div>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">01</span>
+        <div class="cat-panel-title">กะลาม<br><em>เทววิทยา</em></div>
+        <div class="cat-panel-sub">ปรัชญาเทววิทยา · อภิปรัชญา · อะกีดะฮ์</div>
+        <span class="cat-panel-cta">ดูบทความ →</span>
+      </div>
+    </a>
+
+    <!-- 02 นิติศาสตร์ -->
+    <a href="/pages/nitisart.html" class="cat-panel cat-panel-nitisart">
+      <div class="cat-panel-bg"></div>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">02</span>
+        <div class="cat-panel-title">นิติ<em>ศาสตร์</em></div>
+        <div class="cat-panel-sub">สังคม · กฎหมาย · วิถีชีวิต</div>
+        <span class="cat-panel-cta">ดูบทความ →</span>
+      </div>
+    </a>
+
+    <!-- 03 หะดีษ (video background) -->
+    <a href="/pages/hadith.html" class="cat-panel cat-panel-hadith">
+      <video class="cat-panel-video" src="/images/heroes/hero-hadith.mp4" autoplay muted loop playsinline></video>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">03</span>
+        <div class="cat-panel-title">หะ<em>ดีษ</em></div>
+        <div class="cat-panel-sub">ตัวบท · สายรายงาน · การวิเคราะห์</div>
+        <span class="cat-panel-cta">ดูบทความ →</span>
+      </div>
+    </a>
+
+    <!-- 04 ประวัติศาสตร์ -->
+    <a href="/pages/history.html" class="cat-panel cat-panel-history">
+      <div class="cat-panel-bg"></div>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">04</span>
+        <div class="cat-panel-title">ประวัติ<em>ศาสตร์</em></div>
+        <div class="cat-panel-sub">ราชวงศ์ · อำนาจ · อารยธรรม</div>
+        <span class="cat-panel-cta">ดูบทความ →</span>
+      </div>
+    </a>
+
+    <!-- 05 หัจญ์ & อุมเราะฮ์ -->
+    <a href="/pages/hajj.html" class="cat-panel cat-panel-hajj">
+      <div class="cat-panel-bg"></div>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">05</span>
+        <div class="cat-panel-title">หัจญ์ & <em>อุมเราะฮ์</em></div>
+        <div class="cat-panel-sub">พิธีกรรม · จิตวิญญาณ · ประวัติศาสตร์</div>
+        <span class="cat-panel-cta">ดูบทความ →</span>
+      </div>
+    </a>
+
+    <!-- 06 เครื่องมือนักวิชาการ -->
+    <a href="/pages/tools.html" class="cat-panel cat-panel-tools">
+      <div class="cat-panel-bg"></div>
+      <div class="cat-panel-overlay"></div>
+      <div class="cat-panel-body">
+        <span class="cat-panel-num">06</span>
+        <div class="cat-panel-title">เครื่องมือ<br><em>นักวิชาการ</em></div>
+        <div class="cat-panel-sub">เครื่องมือดิจิทัลสำหรับนักศึกษาวิชาอิสลามคลาสสิก</div>
+        <span class="cat-panel-cta">สำรวจเครื่องมือ →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     QUOTE — PARCHMENT
+     ========================================================= -->
+<div class="parchment">
+  <section class="quote-section">
+    <div class="wrap">
+      <div class="quote-eyebrow" data-reveal><span class="eyebrow-en">Quote of the Day</span><span class="eyebrow-th">วาทะปราชญ์ประจำวัน</span></div>
+      <div class="quote-body">
+        <div id="quoteAr" class="quote-ar" lang="ar" dir="rtl" data-reveal data-delay="1"></div>
+        <div id="quoteTh" class="quote-th" data-reveal data-delay="2"></div>
+      </div>
+      <div class="quote-author-line" data-reveal data-delay="3"><span id="quoteAuthor"></span></div>
+      <div class="quote-controls" id="quoteDots" data-reveal data-delay="3"></div>
+    </div>
+  </section>
+</div>
+
+<!-- =========================================================
+     SUPPORT
+     ========================================================= -->
+<section class="section section-support" id="support">
+  <div class="wrap">
+    <div class="support-compact">
+      <p class="support-compact-text" data-reveal>เป็นส่วนหนึ่งของการเดินทางอันไร้จุดสิ้นสุด</p>
+      <button id="teaBtn" class="tea-btn" data-reveal data-delay="1">เลี้ยงน้ำชาทีมงาน <span class="tea-icon">🍵</span></button>
+      <div id="qrContainer" class="qr-container">
+        <div class="qr-inner">
+          <div class="qr-frame"><img src="/q-qr.jpg" alt="QR Code พร้อมเพย์ เลี้ยงน้ำชาทีมงาน"></div>
+          <p class="qr-note">สนับสนุนค่าน้ำชา</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<button id="backToTopBtn" title="กลับขึ้นบนสุด" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
+
+<div id="footer-placeholder"></div>
+
+<script src="/main.js?v=20260614e" charset="UTF-8"></script>
+
+<script>
+/* ----- WEBGL FLUID EFFECT ----- */
+(function() {
+  var canvas = document.getElementById('fluidCanvas');
+  if (!canvas) return;
+  var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+
+  // Shader compilation helpers
+  function createShader(gl, type, source) {
+    var shader = gl.createShader(type);
+    gl.shaderSource(shader, source);
+    gl.compileShader(shader);
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+      console.error('Shader compile error:', gl.getShaderInfoLog(shader));
+      gl.deleteShader(shader);
+      return null;
+    }
+    return shader;
+  }
+
+  var vsSource = `
+    attribute vec2 position;
+    void main() {
+      gl_Position = vec4(position, 0.0, 1.0);
+    }
+  `;
+
+  var fsSource = `
+    precision mediump float;
+    uniform vec2 u_resolution;
+    uniform vec2 u_mouse;
+    uniform float u_time;
+    uniform float u_dark;
+
+    void main() {
+      vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+      vec2 mouse = u_mouse / u_resolution;
+      mouse.y = 1.0 - mouse.y;
+      
+      float dist = distance(uv, mouse);
+      
+      float wave1 = sin(uv.x * 8.0 + u_time * 1.2) * cos(uv.y * 8.0 - u_time * 0.9);
+      float wave2 = cos(dist * 22.0 - u_time * 2.2) * exp(-dist * 3.5);
+      float wave3 = sin(uv.y * 12.0 + u_time * 0.7);
+      
+      float wave_b = (wave1 * 0.5 + wave3 * 0.5) * 0.5 + 0.5;
+      float wave_r = clamp(wave2, 0.0, 1.0);
+      
+      vec3 final_color;
+      float alpha;
+      
+      if (u_dark > 0.5) {
+        // Dark Mode: Screen blend
+        vec3 dark_bg = vec3(0.04, 0.04, 0.03);
+        vec3 dark_blue = vec3(0.02, 0.28, 0.65);
+        vec3 dark_bluewhite = vec3(0.60, 0.85, 1.0); // Icy blue-white glow
+        
+        vec3 temp = mix(dark_bg, dark_blue, wave_b * 0.45);
+        final_color = mix(temp, dark_bluewhite, wave_r * (1.0 - dist * 0.4));
+        alpha = 0.18;
+      } else {
+        // Light Mode: Multiply blend
+        vec3 light_bg = vec3(1.0, 1.0, 1.0); // Pure white base
+        vec3 light_blue = vec3(0.12, 0.43, 0.82); // Royal Blue waves
+        vec3 light_bluewhite = vec3(0.40, 0.70, 0.95); // Royal blue-white accent waves
+        
+        // Multiplied blend: White is transparent, dark colors overlay
+        vec3 temp = mix(light_bg, light_blue, wave_b * 0.18);
+        final_color = mix(temp, light_bluewhite, wave_r * 0.22 * (1.0 - dist * 0.45));
+        alpha = 1.0;
+      }
+      
+      gl_FragColor = vec4(final_color, alpha);
+    }
+  `;
+
+  var vertexShader = createShader(gl, gl.VERTEX_SHADER, vsSource);
+  var fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fsSource);
+  if (!vertexShader || !fragmentShader) return;
+
+  var program = gl.createProgram();
+  gl.attachShader(program, vertexShader);
+  gl.attachShader(program, fragmentShader);
+  gl.linkProgram(program);
+  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+    console.error('Program link error:', gl.getProgramInfoLog(program));
+    return;
+  }
+
+  var positionAttributeLocation = gl.getAttribLocation(program, 'position');
+  var resolutionUniformLocation = gl.getUniformLocation(program, 'u_resolution');
+  var mouseUniformLocation = gl.getUniformLocation(program, 'u_mouse');
+  var timeUniformLocation = gl.getUniformLocation(program, 'u_time');
+  var darkUniformLocation = gl.getUniformLocation(program, 'u_dark');
+
+  var positionBuffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+  var positions = [
+    -1, -1,
+     1, -1,
+    -1,  1,
+    -1,  1,
+     1, -1,
+     1,  1,
+  ];
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+
+  var isDesktop = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 769px)').matches;
+  var mouseX = 0, mouseY = 0;
+  var targetMouseX = isDesktop ? 0 : -9999;
+  var targetMouseY = isDesktop ? 0 : -9999;
+
+  if (isDesktop) {
+    window.addEventListener('mousemove', function(e) {
+      var rect = canvas.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+  }
+
+  // Cache canvas size; recompute only on resize (avoids per-frame layout read)
+  var dpr = window.devicePixelRatio || 1;
+  canvas.width = canvas.clientWidth * dpr;
+  canvas.height = canvas.clientHeight * dpr;
+  gl.viewport(0, 0, canvas.width, canvas.height);
+  window.addEventListener('resize', function() {
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = canvas.clientWidth * dpr;
+    canvas.height = canvas.clientHeight * dpr;
+    gl.viewport(0, 0, canvas.width, canvas.height);
+  });
+
+  // Cache dark-mode state; update via MutationObserver (no per-frame DOM read)
+  var isDarkUniform = document.documentElement.classList.contains('dark-mode') ? 1.0 : 0.0;
+  new MutationObserver(function() {
+    isDarkUniform = document.documentElement.classList.contains('dark-mode') ? 1.0 : 0.0;
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+  var startTime = Date.now();
+  var rafId = null;
+  var lastFrameTime = 0;
+  var FRAME_MIN_MS = 33; // ~30fps cap
+
+  function render(ts) {
+    if (ts - lastFrameTime < FRAME_MIN_MS) { rafId = requestAnimationFrame(render); return; }
+    lastFrameTime = ts;
+
+    gl.clearColor(0, 0, 0, 0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+
+    gl.useProgram(program);
+
+    gl.enableVertexAttribArray(positionAttributeLocation);
+    gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+    gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
+
+    gl.uniform2f(resolutionUniformLocation, canvas.width, canvas.height);
+
+    // Ease mouse coordinates
+    mouseX += (targetMouseX - mouseX) * 0.08;
+    mouseY += (targetMouseY - mouseY) * 0.08;
+    gl.uniform2f(mouseUniformLocation, mouseX * dpr, mouseY * dpr);
+
+    gl.uniform1f(timeUniformLocation, (Date.now() - startTime) * 0.001);
+    gl.uniform1f(darkUniformLocation, isDarkUniform);
+
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+    rafId = requestAnimationFrame(render);
+  }
+
+  function startRender() { if (!rafId) rafId = requestAnimationFrame(render); }
+  function stopRender()  { if (rafId) { cancelAnimationFrame(rafId); rafId = null; } }
+
+  // Pause when tab is hidden; resume when visible
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) stopRender(); else startRender();
+  });
+
+  // Pause when canvas is scrolled off-screen; resume when it re-enters
+  new IntersectionObserver(function(entries) {
+    entries[0].isIntersecting ? startRender() : stopRender();
+  }, { threshold: 0 }).observe(canvas);
+
+  startRender();
+})();
+
+/* ----- CLICK RIPPLE EFFECT ----- */
+document.addEventListener('click', function(e) {
+  var target = e.target.closest('.btn, .cat-card, .tool-card, .idx-row');
+  if (!target) return;
+  
+  var ripple = document.createElement('span');
+  ripple.className = 'ripple-effect';
+  
+  var rect = target.getBoundingClientRect();
+  var size = Math.max(rect.width, rect.height);
+  ripple.style.width = ripple.style.height = size + 'px';
+  
+  var x = e.clientX - rect.left - size / 2;
+  var y = e.clientY - rect.top - size / 2;
+  ripple.style.left = x + 'px';
+  ripple.style.top = y + 'px';
+  
+  target.appendChild(ripple);
+  
+  setTimeout(function() {
+    ripple.remove();
+  }, 650);
+});
+
+
+
+
+/* ----- REVEAL ON SCROLL ----- */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); } });
+},{threshold:.12});
+document.querySelectorAll('[data-reveal]').forEach(function(el){
+  var r = el.getBoundingClientRect();
+  if(r.top < window.innerHeight && r.bottom > 0){ el.classList.add('is-in'); }
+  else { io.observe(el); }
+});
+
+/* ----- BACK TO TOP ----- */
+window.addEventListener('scroll',function(){
+  var btn = document.getElementById('backToTopBtn');
+  if(!btn) return;
+  btn.style.display = (document.documentElement.scrollTop > 400) ? 'grid' : 'none';
+});
+
+
+/* ----- QUOTES ----- */
+var quotes = [
+  {
+    ar: "يُرِيدُ الْمَرْءُ أَنْ يُعْطَى مُنَاهُ<br>وَيَأْبَى اللَّـهُ إِلَّا مَا أَرَادَا",
+    th: "“มนุษย์ใฝ่ปรารถนาสิ่งที่ตนต้องการ\nแต่พระผู้ทรงอภิบาลย่อมทรงลิขิตตามพระประสงค์”",
+    author: "อิหม่ามอัชชาฟิอีย์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 204"
+  },
+  {
+    ar: "يَا أَقْدَامَ الصَّبْرِ! احْمِلِي! بَقِيَ الْقَلِيلُ",
+    th: "“โอ้…ผู้อดทนเอ๋ย! จงแบกรับความอดทนต่อไปอีกเพียงนิดเดียวเถิด\nอีกเพียงนิดเดียว อีกเพียงนิดเดียวเท่านั้น”",
+    author: "อิบนุลก็อยยิม เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 751"
+  },
+  {
+    ar: "فَمَا شِدَّةٌ يَوْمًا وَإِنْ جَلَّ خَطْبُهَا<br>بِنَازِلَةٍ إِلَّا سَيَتْبَعُهَا يُسْرُ<br>وَإِنْ عَسِرَتْ يَوْمًا عَلَى الْمَرْءِ حَاجَةٌ<br>وَضَاقَتْ عَلَيْهِ كَانَ مِفْتَاحُهَا الصَّبْرُ",
+    th: "“ไม่มีความทุกข์ยากใดในวันหนึ่ง แม้มันจะหนักหนาสาหัสเพียงไร\nเว้นแต่จะมีความง่ายดายติดตามมาหลังจากนั้นเสมอ\nและหากวันใดความปรารถนาของคนเรานั้นยากเข็ญและตีบตัน\nกุญแจที่จะไขมันออกได้... ก็คือความอดทน”",
+    author: "กวีไร้นาม"
+  },
+  {
+    ar: "إِنَّ رَبًّا كَفَاكَ بِالْأَمْسِ مَا كَانَ<br>سَيَكْفِيكَ فِي غَدٍ مَا يَكُونُ",
+    th: "“พระผู้เป็นเจ้าผู้ทรงคุ้มครองเจ้าเมื่อวาน\nย่อมจะทรงคุ้มครองเจ้าในวันพรุ่งนี้เช่นกัน\nทุกสิ่งที่จักบังเกิดขึ้น พระองค์ย่อมเพียงพอแก่เจ้าเสมอ”",
+    author: "อิหม่ามอัชชาฟิอีย์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 204"
+  },
+  {
+    ar: "مَا جَادَلْتُ جَاهِلًا إِلَّا غَلَبَنِي",
+    th: "“ฉันไม่เคยโต้เถียงกับคนโง่เขลาคนใด เว้นแต่เขาจะเป็นฝ่ายเอาชนะฉันได้เสมอ”",
+    author: "อิหม่ามอัชชาฟิอีย์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 204"
+  },
+  {
+    ar: "نَحْنُ بِتَأْيِيدِ السُّنَنِ أَوْلَى مِنْ تَشْيِيدِ الْفِتَنِ",
+    th: "“เราย่อมสมควรให้การสนับสนุนซุนนะฮ์ มากกว่าการเป็นผู้ก่อร่างสร้างฟิตนะฮ์”",
+    author: "นิซอม อัลมุลก์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 485"
+  },
+  {
+    ar: "سَهِرَتْ أَعْيُنٌ وَنَامَتْ عُيُونُ<br>فِي أُمُورٍ تَكُونُ أَوْ لَا تَكُونُ<br>فَادْرَأِ الْهَمَّ مَا اسْتَطَعْتَ عَنِ النَّفْسِ<br>فَحَمْلُكَ الْهُمُومَ جُنُونُ",
+    th: "“บางตาไม่หลับยังคิดพร่ำ บางตาเหนื่อยล้าเข้าสู่นิทรา เรื่องราวบางสิ่งอาจจริง อาจลวงตา จงผ่อนวางกังวลเท่าที่ไหว\nอย่าให้ทุกข์รุมใจจนสับสน แบกทุกข์เกินจำเป็นดุจคนบ้าเวียนวน”",
+    author: "อิหม่ามอัชชาฟิอีย์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 204"
+  },
+  {
+    ar: "وَلَيْسَ مِنْ أَحَدٍ أَذَلَّ مِنْ مُغْتَابٍ، لِأَنَّهُ يُخْفِي شَخْصَهُ، وَيُطَامِنُ حِسَّهُ، وَيَغُضُّ مِنْ صَوْتِهِ، وَلَا يُرِيدُ بِمَا يَنَالُهُ مِنْ ذَلِكَ إِلَّا أَنْ يَرْفَعَ مِنْ قَدْرِ خَصْمِهِ",
+    th: "“ไม่มีใครต่ำต้อยไปยิ่งกว่าผู้ที่นินทาผู้อื่น เพราะเขาต้องซ่อนตัวเอง ลดระดับประสาทสัมผัสของตน กดเสียงให้เบาลง ทั้งหมดนั้นเขาไม่ได้ต้องการสิ่งใดเลย นอกจากยกฐานะของคู่กรณีให้สูงขึ้น”",
+    author: "อัลญาฮิซ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 255"
+  },
+  {
+    ar: "الْوَهْمُ نِصْفُ الدَّاءِ، وَالِاطْمِئْنَانُ نِصْفُ الدَّوَاءِ، وَالصَّبْرُ أَوَّلُ خُطُوَاتِ الشِّفَاءِ",
+    th: "“ความกระวนกระวายคือครึ่งหนึ่งของการเจ็บป่วย ความสงบของจิตใจคือครึ่งหนึ่งของยารักษา และความอดทนคือก้าวแรกของการรักษาโรค”",
+    author: "อิบนุ ซีนา เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 428"
+  },
+  {
+    ar: "إِنَّكَ إِنْ كُنْتَ تَقْصِدُ بِالْعِلْمِ الْمُنَافَسَةَ وَالْمُبَاهَاةَ وَالتَّقَدُّمَ عَلَى الْأَقْرَانِ وَاسْتِمَالَةَ وُجُوهِ النَّاسِ إِلَيْكَ وَجَمْعَ حُطَامِ الدُّنْيَا فَأَنْتَ سَاعٍ فِي هَدْمِ دِينِكَ وَإِهْلَاكِ نَفْسِكَ وَبَيْعِ آخِرَتِكَ بِدُنْيَاكَ",
+    th: "“หากท่านตั้งเจตนารมณ์การเรียนเพื่อการแข่งขัน ความผยองตน การก้าวหน้าเหนือผู้อื่น การให้ผู้คนนับหน้าถือตา และการสะสมทรัพย์สมบัติ แน่แท้ท่านกำลังทำลายศาสนาของตนเอง และขายโลกหน้าด้วยโลกนี้”",
+    author: "อิหม่ามอัลเฆาะซาลีย์ เราะหิมะฮุลลอฮ์ · เสียชีวิตปี ฮ.ศ. 505"
+  }
+];
+
+var dots = document.getElementById('quoteDots');
+var qi = 0;
+function shortAuthor(a){ return a.split(/\s+(?:[·(]|เราะ)/)[0].trim(); }
+function paintQuote(i){
+  qi = (i + quotes.length) % quotes.length;
+  document.getElementById('quoteAr').innerHTML = quotes[qi].ar;
+  document.getElementById('quoteTh').textContent = quotes[qi].th;
+  document.getElementById('quoteAuthor').textContent = window.innerWidth <= 600 ? shortAuthor(quotes[qi].author) : quotes[qi].author;
+  [].forEach.call(dots.children,function(d,idx){ d.classList.toggle('active', idx===qi); });
+}
+quotes.forEach(function(_,i){
+  var d = document.createElement('button');
+  d.className = 'quote-dot';
+  d.textContent = String(i+1).padStart(2,'0');
+  d.addEventListener('click', function(){ paintQuote(i); });
+  dots.appendChild(d);
+});
+paintQuote(0);
+setInterval(function(){ paintQuote(qi+1); }, 19000);
+window.addEventListener('resize', function(){ document.getElementById('quoteAuthor').textContent = window.innerWidth <= 600 ? shortAuthor(quotes[qi].author) : quotes[qi].author; });
+
+
+/* ----- CARD RIPPLE WAVE (Google Gravity style) ----- */
+(function(){
+  var SPACING = 20, R = 1.5;
+  document.querySelectorAll('.cat-card').forEach(function(card){
+    var canvas = card.querySelector('.cat-wave-canvas');
+    if(!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var ripples = [], mx = 0, my = 0, hovering = false, raf = null;
+
+    function resize(){
+      canvas.width = card.offsetWidth;
+      canvas.height = card.offsetHeight;
+    }
+
+    function draw(ts){
+      var now = (ts || 0) * 0.001;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      var cols = Math.ceil(canvas.width / SPACING) + 2;
+      var rows = Math.ceil(canvas.height / SPACING) + 2;
+      var isDark = document.documentElement.classList.contains('dark-mode');
+      var waveColor = isDark ? 'rgba(200, 230, 255, ' : 'rgba(70, 130, 240, ';
+
+      for(var r = 0; r < rows; r++){
+        for(var c = 0; c < cols; c++){
+          var bx = c * SPACING, by = r * SPACING;
+          var dx = 0, dy = 0, alpha = 0;
+
+          if(hovering){
+            var hx = mx - bx, hy = my - by;
+            var hd = Math.sqrt(hx*hx + hy*hy) || 1;
+            var hwave = Math.sin(hd * 0.12 - now * 3.5) * 5;
+            var hfactor = Math.max(0, 1 - hd / 140);
+            dx += (hx/hd) * hwave * hfactor;
+            dy += (hy/hd) * hwave * hfactor;
+            alpha += hfactor * 0.22;
+          }
+
+          for(var i = 0; i < ripples.length; i++){
+            var rp = ripples[i];
+            var px = rp.x - bx, py = rp.y - by;
+            var pd = Math.sqrt(px*px + py*py) || 1;
+            var progress = rp.t / rp.maxT;
+            var front = progress * 240;
+            var prox = Math.abs(pd - front);
+            if(prox < 28){
+              var amp = (1 - prox/28) * (1 - progress) * 9 * rp.str;
+              dx -= (px/pd) * amp;
+              dy -= (py/pd) * amp;
+              alpha += (1 - prox/28) * (1 - progress) * 0.40;
+            }
+          }
+
+          if(alpha < 0.04) continue;
+          ctx.beginPath();
+          ctx.arc(bx + dx, by + dy, R, 0, 6.2832);
+          ctx.fillStyle = waveColor + Math.min(0.90, alpha) + ')';
+          ctx.fill();
+        }
+      }
+
+      for(var i = ripples.length - 1; i >= 0; i--){
+        ripples[i].t++;
+        if(ripples[i].t >= ripples[i].maxT) ripples.splice(i, 1);
+      }
+
+      if(hovering || ripples.length > 0){
+        raf = requestAnimationFrame(draw);
+      } else {
+        raf = null;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+
+    function start(){
+      if(!raf){ resize(); raf = requestAnimationFrame(draw); }
+    }
+
+    card.addEventListener('mouseenter', function(e){
+      if (window.innerWidth <= 980) return;
+      var rect = card.getBoundingClientRect();
+      mx = e.clientX - rect.left; my = e.clientY - rect.top;
+      hovering = true; start();
+    });
+    card.addEventListener('mousemove', function(e){
+      if (window.innerWidth <= 980) return;
+      var rect = card.getBoundingClientRect();
+      mx = e.clientX - rect.left; my = e.clientY - rect.top;
+    });
+    card.addEventListener('mouseleave', function(){
+      hovering = false;
+    });
+    card.addEventListener('click', function(e){
+      if (window.innerWidth <= 980) return;
+      var rect = card.getBoundingClientRect();
+      ripples.push({x: e.clientX - rect.left, y: e.clientY - rect.top, t: 0, maxT: 70, str: 2.0});
+      start();
+    });
+    window.addEventListener('resize', resize);
+  });
+  new MutationObserver(function(){
+    document.querySelectorAll('.cat-card').forEach(function(card){
+      var canvas = card.querySelector('.cat-wave-canvas');
+      if (canvas) {
+        canvas.width = card.offsetWidth;
+        canvas.height = card.offsetHeight;
+      }
+    });
+  }).observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+})();
+
+/* ----- TEA BUTTON ----- */
+var teaBtn2 = document.getElementById('teaBtn');
+var qrCont = document.getElementById('qrContainer');
+if(teaBtn2 && qrCont){
+  teaBtn2.addEventListener('click', function(){
+    qrCont.classList.toggle('open');
+    teaBtn2.querySelector('.tea-icon').textContent = qrCont.classList.contains('open') ? '✕' : '🍵';
+  });
+}
+</script>
+
+<!-- SEO-INDEX:START — generated by scripts/gen-sitemap.js (static crawlable article directory; do not hand-edit) -->
+<noscript>
+  <nav class="seo-index" aria-label="สารบัญบทความทั้งหมด">
+    <h2>สารบัญบทความทั้งหมด</h2>
+    <ul>
+    <li><a href="/pages/nitisart">นิติศาสตร์</a>
+      <ul>
+        <li><a href="/articles/nitisart/asabiyyah-tribalism-and-solidarity">อะศอบียะฮ์: ความคลั่งไคล้ที่ผิดเพี้ยน</a></li>
+        <li><a href="/articles/nitisart/orientalists-and-ijtihad">นักบูรพาคดีกับการตีความกฎหมายอิสลาม</a></li>
+        <li><a href="/articles/nitisart/fiqh-al-waqi">ความสำคัญของการเข้าใจสภาพแห่งความเป็นจริง (ฟิกฮุลวากิอ์)</a></li>
+        <li><a href="/articles/nitisart/extremism-in-islam">ความสุดโต่งในอิสลาม</a></li>
+        <li><a href="/articles/nitisart/wearing-black-for-mourning">การแต่งชุดดำไว้ทุกข์: มุมมองเชิงศาสนาและวัฒนธรรม</a></li>
+        <li><a href="/articles/nitisart/marital-coercion-in-islam">การบังคับขืนใจคู่สมรสในอิสลาม</a></li>
+        <li><a href="/articles/nitisart/protest-in-islamic-law">การชุมนุมประท้วงในกฎหมายอิสลาม</a></li>
+        <li><a href="/articles/nitisart/shia-takfir">ชีอะฮ์และปัญหาการตักฟีร</a></li>
+        <li><a href="/articles/nitisart/itibar-al-maal">ทฤษฎีการพิจารณาผลลัพธ์บั้นปลาย</a></li>
+        <li><a href="/articles/nitisart/moon-sighting-vs-astronomy">เมื่อพยานบุคคลขัดแย้งกับผลการคำนวณทางดาราศาสตร์</a></li>
+      </ul>
+    </li>
+    <li><a href="/pages/kalam">กะลาม</a>
+      <ul>
+        <li><a href="/articles/kalam/al-ashari-and-the-unity-of-the-ummah">อิหม่ามอบุลหะสัน อัลอัชอะรีย์ และบทบาทในการยุติความแตกแยกและความขัดแย้ง</a></li>
+        <li><a href="/articles/kalam/time-in-islamic-theology">เวลาในเทววิทยาอิสลาม ระหว่างอัลฆอซาลีย์และอิบนุ หัซม์</a></li>
+        <li><a href="/articles/kalam/al-jahiz-and-evolution">มรดกของอัลญาฮิซ: จากการรังสรรค์อันประณีต สู่ข้อถกเถียงเรื่องวิวัฒนาการ</a></li>
+        <li><a href="/articles/kalam/mutashabihat-verses">ความนัยแห่งโองการมุตะชาบิฮาต</a></li>
+        <li><a href="/articles/kalam/shia-scholars-challenge-asharism">นักปราชญ์ชีอะฮ์ผู้ท้าทายอัชอะรียะฮ์</a></li>
+        <li><a href="/articles/kalam/ashariyya-vs-shia-confrontation">พัฒนาการการเผชิญหน้าระหว่างอัชอะรียะฮ์กับชีอะฮ์</a></li>
+        <li><a href="/articles/kalam/ghazali-and-ilm-al-kalam">อิมามอัลฆอซาลี หันหลังให้ ‘อิลมุลกะลาม’ และประณามมันจริงหรือ?</a></li>
+        <li><a href="/articles/kalam/al-razi-miraj-science">มุมมองของท่านฟัครุดดีน อัรรอซีย์ในเหตุการณ์อิสรออ์และเมี๊ยะอ์รอจ อธิบายอย่างวิทยาศาสตร์</a></li>
+      </ul>
+    </li>
+    <li><a href="/pages/history">ประวัติศาสตร์</a>
+      <ul>
+        <li><a href="/articles/tarikh/banu-musa-ibn-shakir">มูซา บิน ชากิร และสามอัจฉริยะแห่งบะนู มูซา</a></li>
+        <li><a href="/articles/tarikh/intellectuals-and-power">ปัญญาชนกับอำนาจ</a></li>
+        <li><a href="/articles/tarikh/muhammad-fuad-abd-al-baqi">อาจารย์มุฮัมมัด ฟุอาด อับดุลบากี ชายที่อยู่เบื้องหลังทุกการอ้างอิงหะดีษ</a></li>
+        <li><a href="/articles/tarikh/kalila-wa-dimna-ibn-al-muqaffa">กาลีละฮ์ วะดิมนะฮ์</a></li>
+        <li><a href="/articles/tarikh/bayad-wa-riyad-andalusian-romance">บะยาฎและริยาฎ ตำนานรักท่ามกลางเถ้าถ่านแห่งอันดาลุส</a></li>
+        <li><a href="/articles/tarikh/muslim-conquest-of-transoxiana">การพิชิตดินแดนหลังแม่น้ำ</a></li>
+        <li><a href="/articles/tarikh/arib-al-mamuniyya-court-poetess">อะรีบ อัลมะอ์มูนียะฮ์ กวีหญิงผู้โดดเด่นแห่งราชสำนักอับบาซียะฮ์ ผู้เป็นเลิศในคีตศิลป์</a></li>
+        <li><a href="/articles/tarikh/floods-of-baghdad-abbasid-era">บรรดาอุทกภัยในกรุงแบกแดดในช่วงสมัยของราชวงศ์อับบาซียะฮ์</a></li>
+        <li><a href="/articles/tarikh/baybars-and-the-assassins">ศอฮีร บัยบัรส์ปราบกลุ่มบาฏินียะฮ์ได้อย่างไรโดยไม่หลั่งเลือดแม้แต่หยดเดียว</a></li>
+        <li><a href="/articles/tarikh/omar-khayyam-mathematician-and-poet">อุมัร ค็อยยาม: ปราชญ์ผู้ปฏิรูปปฏิทินและบุกเบิกทฤษฎีสมการกำลังสาม</a></li>
+        <li><a href="/articles/tarikh/al-tusi-and-the-fall-of-baghdad">นะศีรุดดีน อัฏฏูซีย์ ผู้ขายราชวงศ์อับบาซีย์ให้มองโกล</a></li>
+        <li><a href="/articles/tarikh/al-shafii-founder-of-usul-al-fiqh">อิหม่ามอัชชาฟิอีย์ ผู้สถาปนา ผู้ฟื้นฟู และบิดาแห่งศาสตร์อูศูลุลฟิกฮ์</a></li>
+        <li><a href="/articles/tarikh/abu-al-aynaa-blind-satirist">อบุลอัยนาอ์ บัณฑิตตาบอดนักเสียดสีแห่งราชวงศ์อับบาซิด</a></li>
+        <li><a href="/articles/tarikh/al-qazwini-marvels-and-the-dragon">มังกรและกาลอวสานของโลก</a></li>
+        <li><a href="/articles/tarikh/young-scholars-academic-leadership">คนหนุ่ม นักวิชาการ และการก้าวขึ้นเป็นผู้นำในอารยธรรมอิสลาม</a></li>
+        <li><a href="/articles/tarikh/defining-islamic-art-calligraphy">พินิจอักษรวิจิตร กุญแจสู่นิยาม “ศิลปะอิสลาม”</a></li>
+        <li><a href="/articles/tarikh/salahuddin-sunni-revival">ยุทธศาสตร์ของเศาะลาฮุดดีน อัลอัยยูบีย์ในการฟื้นฟูซุนนะฮ์ ณ แผ่นดินอียิปต์และแคว้นชาม</a></li>
+        <li><a href="/articles/tarikh/al-turtushi-andalusian-scholar">อัฏฏุรฏูชี ปราชญ์แห่งอันดาลูเซีย ผู้หลงรักอเล็กซานเดรีย แต่เป็นที่ชิงชังของราชวงศ์ฟาฏิมียะฮ์</a></li>
+        <li><a href="/articles/tarikh/the-wise-mad-in-arab-heritage">มรดกของวิกลจริตชนแห่งอาหรับ</a></li>
+        <li><a href="/articles/tarikh/persia-shiism-and-sunni-loss">โลกซุนนีสูญเสียอะไรจากการเปลี่ยนเปอร์เซียเป็นชีอะฮ์?</a></li>
+        <li><a href="/articles/tarikh/coffee-in-islamic-heritage">เรื่องราวของกาแฟในมรดกอิสลาม</a></li>
+        <li><a href="/articles/tarikh/al-razi-final-days-and-burial">ว่าด้วยวาระสุดท้ายแห่งชีวิตของฟัครุดดีน อัรรอซี: คำไว้อาลัยจากนามปากกานิรนาม</a></li>
+        <li><a href="/articles/tarikh/food-prices-and-state-security">เมื่อปากท้องกำหนดชะตากรรมรัฐ</a></li>
+        <li><a href="/articles/tarikh/sports-and-games-in-islamic-history">โปโล หมากรุก และสุลต่าน: เรื่องเล่าของกีฬาในประวัติศาสตร์มุสลิม</a></li>
+        <li><a href="/articles/tarikh/bayt-al-hikma-house-of-wisdom">คลังปัญญาที่มอดไหม้: ตำนานบัยตุลฮิกมะฮ์</a></li>
+        <li><a href="/articles/tarikh/ibn-khaldun-on-the-bedouin-arabs">วิถีอาหรับเบดูอินในสายตาของอิบนุ ค็อลดูน</a></li>
+        <li><a href="/articles/tarikh/the-ghoul-in-old-arab-literature">ฆูลในวรรณกรรมและความเชื่อของอาหรับโบราณ</a></li>
+        <li><a href="/articles/tarikh/culinary-arts-in-arab-islamic-civilization">ศิลปะการทำอาหารในอารยธรรมอาหรับ-อิสลาม</a></li>
+        <li><a href="/articles/tarikh/ibn-battuta-in-al-andalus">อิบนุ บะฏูเฏาะฮ์เห็นอะไรในป้อมปราการด่านสุดท้ายของอิสลามในยุโรป?</a></li>
+        <li><a href="/articles/tarikh/raja-ibn-haywah-umayyad-architect">สถาปนิกผู้อยู่เบื้องหลังการผงาดของรัฐอุมัยยะฮ์</a></li>
+        <li><a href="/articles/tarikh/nizam-al-mulk-al-tusi">นิซอมุลมุลก์ อัฏฏูซีย์: เสนาบดีผู้พลิกโฉมหน้าอารยธรรมอิสลาม</a></li>
+        <li><a href="/articles/tarikh/mutazila-economic-and-political-ethics">จริยธรรมทางเศรษฐกิจ สังคม และการเมืองในมุมมองของมุอ์ตะซิละฮ์</a></li>
+        <li><a href="/articles/tarikh/al-nawawi-sahih-muslim-commentary">อิหม่ามอันนะวาวีย์กับมรดกอรรถาธิบายศอเฮี้ยะฮ์มุสลิม</a></li>
+        <li><a href="/articles/tarikh/food-blockade-as-political-weapon">วิกฤตอาหารและข้าวยากหมากแพงที่ทำลายรัฐอิสลาม</a></li>
+        <li><a href="/articles/tarikh/religion-and-state-power-ibn-al-muqaffa-al-mawardi">ศาสนาและอำนาจรัฐ ในทัศนะของอิบนุ อัลมุก็อฟฟะอ์และอัลมาวัรดีย์</a></li>
+        <li><a href="/articles/tarikh/abu-bakr-al-razi-physician-of-baghdad">อบู บักร อัรรอซี แพทย์หลวงแห่งแบกแดด</a></li>
+        <li><a href="/articles/tarikh/shiism-and-transformation-in-the-safavid-era">ชีอะฮ์และการเปลี่ยนผ่านในยุคซาฟาวิด</a></li>
+        <li><a href="/articles/tarikh/the-fall-of-al-andalus">ถึงกาลอันดาลุสล่มสลาย</a></li>
+        <li><a href="/articles/tarikh/bimaristan-and-psychiatric-care">การดูแลผู้ป่วยจิตเวชและระบบ ‘บีมาริสตาน’</a></li>
+        <li><a href="/articles/tarikh/sexuality-in-caliphal-court">เพศวิถีในราชสำนักแห่งคอลีฟะฮ์ จากอุมัยยะฮ์ถึงอับบาซียะฮ์</a></li>
+        <li><a href="/articles/tarikh/hammam-bathhouses-in-muslim-lands">ฮัมมาม โรงอาบน้ำในดินแดนมุสลิม</a></li>
+        <li><a href="/articles/tarikh/al-tufayli-freeloaders">กินฟรีมีปรัชญา ‘อัฏฏุฟัยลีย์’ และปรากฏการณ์ ‘นักลักแกง’ แห่งโลกอาหรับ</a></li>
+        <li><a href="/articles/tarikh/political-reform-under-the-mamluks">การปฏิรูปการเมืองในร่มเงาของมัมลู้ก</a></li>
+        <li><a href="/articles/tarikh/evliya-celebi-travels">อิบนุ บะฏูเฏาะฮ์ แห่งออตโตมัน</a></li>
+        <li><a href="/articles/tarikh/ibn-al-subki-reform">อิบนุ อัซซุบกีย์ และวิสัยทัศน์การปฏิรูป</a></li>
+        <li><a href="/articles/tarikh/ibn-khaldun-scholars-and-power">เมื่อนักปราชญ์มิอาจครองบัลลังก์</a></li>
+      </ul>
+    </li>
+    <li><a href="/pages/hadith">หะดีษ</a>
+      <ul>
+        <li><a href="/articles/hadith/payment-for-teaching-hadith">การรับค่าตอบแทนในการสอนและรายงานฮะดีษ</a></li>
+      </ul>
+    </li>
+    <li><a href="/pages/hajj">หัจญ์ &amp; อุมเราะฮ์</a>
+      <ul>
+        <li><a href="/articles/hajj/hardships-of-hajj-journey">ความยากแค้นของการเดินทางสู่พิธีหัจญ์ในอดีต</a></li>
+        <li><a href="/articles/hajj/hajj-bandits-and-epidemics">หัจญ์ในยุคแห่งความยากลำบาก: กองโจรปล้นสะดม ความตายจากความกระหาย และโรคระบาด</a></li>
+        <li><a href="/articles/hajj/pre-islamic-influence-on-hajj">หัจญ์: อิทธิพลของวิถีปฏิบัติยุคก่อนอิสลามต่อกรอบความคิดในโลกอิสลาม</a></li>
+      </ul>
+    </li>
+    </ul>
+  </nav>
+</noscript>
+<!-- SEO-INDEX:END -->
+
+<script src="/scrub-hero.js?v=20260616a" charset="UTF-8"></script>
+</body>
+</html>
