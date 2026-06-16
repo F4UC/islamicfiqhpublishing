@@ -61,7 +61,6 @@ const staticRoutes = [
   { loc: "/pages/tools/hijri-time-machine", lastmod: today, changefreq: "monthly", priority: "0.5" },
   { loc: "/pages/tools/ijazah-network", lastmod: today, changefreq: "monthly", priority: "0.5" },
   { loc: "/pages/about", lastmod: today, changefreq: "yearly", priority: "0.3" },
-  { loc: "/pages/privacy", lastmod: today, changefreq: "yearly", priority: "0.3" },
 ];
 
 const articleRoutes = articles.map((a) => ({
