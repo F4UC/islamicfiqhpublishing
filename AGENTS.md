@@ -1,7 +1,7 @@
 # AGENTS.md — แนวทางสำหรับ AI ที่ทำงานกับรีโปนี้ (รวม Codex code review)
 
 โปรเจกต์: เว็บเผยแพร่ตำราอิสลามคลาสสิกภาษาไทย (static site, Cloudflare Pages)
-เอกสาร authoritative: CLAUDE.md (74 ข้อ: 1–74 + ข้อย่อย 12.1/12.2 + House Style S1–S8) + golden-master.md + docs/SECURITY.md
+เอกสาร authoritative: CLAUDE.md (81 ข้อ: 1–81 + ข้อย่อย 12.1/12.2 + House Style S1–S8, +S9/S10 placeholders → Rules 76/77) + golden-master.md + docs/SECURITY.md
 บทอ้างอิงมาตรฐาน: articles/nitisart/moon-sighting-vs-astronomy.html
 
 ★ ก่อนแตะเนื้อหา: (1) **Child-safety (Rule 71)** เหนือทุกกฎ — เจอเนื้อ sexualize ผู้เยาว์ = drop+flag, ห้าม surface/quote, route One+Claude, ห้าม self-merge · (2) **Coverage ≥99% (Rule 72)** harakat-normalized · (3) **Normalize ทับศัพท์ (Rule 73)** corpus-dominant (เศาะหาบะฮ์ ไม่ใช่ ศอฮาบัต)

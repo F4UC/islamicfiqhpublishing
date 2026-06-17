@@ -1,12 +1,12 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all **74 rules (ข้อ 1–74), plus sub-rules 12.1/12.2 and House-Style S1–S8**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all **81 rules (ข้อ 1–81), plus sub-rules 12.1/12.2 and House-Style S1–S8 (+ placeholders S9/S10 → Rules 76/77, linter pending)**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 >
 > **★ Rule 71 (Child-Safety Override) supersedes every fidelity/coverage rule, for every agent. Read it first. ★**
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (74 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (81 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -199,7 +199,7 @@
 
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 74 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 81 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
