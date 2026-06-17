@@ -8,7 +8,7 @@
 - Branch: main (production); งานทุกชิ้น cut **fresh branch ใหม่จาก main ต่อ task** (เช่น `claude/<short-task>` หรือ `tarikh-<slug>`) — ห้าม push ตรง main
 - เปิด PR → Cloudflare preview → QA/byte-QC → **owner-merge เท่านั้น** (เอเยนต์ห้าม merge)
 - Components: components/header.html + components/footer.html inject ผ่าน main.js
-- ก่อนแก้โค้ดทุกครั้ง อ่าน .claude/skills/debug-harris/SKILL.md และ CLAUDE.md (74 ข้อ: 1–74 + 12.1/12.2 + S1–S8)
+- ก่อนแก้โค้ดทุกครั้ง อ่าน .claude/skills/debug-harris/SKILL.md และ CLAUDE.md (81 ข้อ: 1–81 + 12.1/12.2 + S1–S8 +S9/S10)
 
 ## Design System
 - Reference: SpaceX, Tesla — dark, minimal, ไม่มี decoration, typography เด่น

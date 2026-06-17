@@ -219,7 +219,7 @@ OUTPUT:
 - bump version query strings in main.js to today's date
 
 CONSTRAINTS:
-- All 74 rules in CLAUDE.md remain in force (ข้อ 1–74 + sub 12.1/12.2 + House Style S1–S8)
+- All 81 rules in CLAUDE.md remain in force (ข้อ 1–81 + sub 12.1/12.2 + House Style S1–S8, +S9/S10 placeholders → Rules 76/77)
 - Strict citation integrity — do not alter author, title, dates, or any reference
 - After deploy, also confirm the new article appears in the category list
   and (later) gets added to sitemap.xml
