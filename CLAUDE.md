@@ -439,13 +439,15 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 ## Arabic-Authority Scope — Content-Pass Mandate (ขอบเขตอำนาจแตะตัวอาหรับ)
 
-> **อนุมัติแล้วโดยเจ้าของ (gibraltar2580) — เป็นลายลักษณ์อักษรก่อนเริ่ม content-pass กฎ 53/61.** กรอบนี้นิยาม "ทุกกรณีที่ตัวแทน AI ได้รับอนุญาตให้แตะตัวอักษรอาหรับ" ในงาน audit/แก้บทเก่า อยู่นอกเหนือ 2 กรณีนี้ = **ห้ามแตะ** (ให้ FLAG ขอบรรณาธิการแทน)
+> **อนุมัติแล้วโดยเจ้าของ (gibraltar2580) — เป็นลายลักษณ์อักษรก่อนเริ่ม content-pass กฎ 53/61.** กรอบนี้นิยาม "ทุกกรณีที่ตัวแทน AI ได้รับอนุญาตให้แตะตัวอักษรอาหรับ" ในงาน audit/แก้บทเก่า อยู่นอกเหนือ 3 กรณีนี้ = **ห้ามแตะ** (ให้ FLAG ขอบรรณาธิการแทน)
 
-**Audit แตะตัวอาหรับได้ 2 กรณีเท่านั้น:**
+**Audit แตะตัวอาหรับได้ 3 กรณีเท่านั้น:**
 
 1. **Strip ฮะเราะกาตตามกฎ 60 (ALL-OR-NOTHING สำหรับคำพูดปราชญ์):** ลบ **เฉพาะเครื่องหมายสระ U+064B–U+0652** (และ mark ที่เกี่ยวข้อง) ออกจากบล็อกคำพูดปราชญ์ (`.ar-quote`, ข้อความปราชญ์/คำถามใน `.ar-feature`) เมื่อบทนั้นลงสระไม่ครบทุกบล็อก — **skeleton (โครงพยัญชนะ) และช่องว่างห้ามเปลี่ยนเด็ดขาด** ห้ามพิมพ์โครงขึ้นใหม่
 
 2. **Vowel ตัวบทอายะฮ์/หะดีษด้วยการคัดลอก byte-exact จากแหล่ง canonical เท่านั้น:** เติมสระให้บล็อกอายะฮ์ (`.aya-block`) และหะดีษ (`.hadith-block`) โดย **คัดลอกตัวบทที่มีสระครบจากแหล่งอ้างอิงที่เป็นทางการเท่านั้น** — อัลกุรอาน: **quran.com (imlaei / Hafs ʿan ʿĀṣim)**; หะดีษ: **sunnah.com** — **★ห้ามพิมพ์สระเอง ห้ามแก้ skeleton★** หากผู้เขียนยกตัวบทแบบตัดตอน (fragment) ให้คัดลอก **substring ที่มีสระต่อเนื่องแบบ byte-exact** จากตัวบท canonical (ไม่ใช่พิมพ์ขึ้นใหม่); หากผู้เขียนตัดคำเชื่อมต้นประโยค (เช่น ละ ‌فَ‌ ในรูปยกเดี่ยว) ให้คงโครงของผู้เขียนไว้แล้วซ้อนสระจาก substring ของแหล่งเท่านั้น
+
+3. **Normalize เครื่องหมายวรรคตอนอาหรับใน scholar Arabic เท่านั้น (กฎ 77):** เฉพาะบล็อกร้อยแก้วปราชญ์ (`.ar-quote`, ข้อความปราชญ์/คำถามใน `.ar-feature`) อนุญาตให้แก้ทิศทางเครื่องหมายวรรคตอนให้เป็นแบบอาหรับ — จุลภาคลาติน `,` → `،` (U+060C), ลบจุดมหัพภาคลาติน `.` ที่หลงเหลือ, `?` → `؟` (U+061F) (อัฒภาค `؛` U+061B ตามบริบท). **★อายะฮ์ (`.aya-block`) / หะดีษ (`.hadith-block`) ไม่อยู่ในขอบเขตนี้ — ห้ามแก้ด้วยมือเด็ดขาด ถ้าเครื่องหมายผิดให้ RE-FETCH จาก quran.com / sunnah.com (paste-only, byte-exact) เพราะแหล่งถูกอยู่แล้ว เครื่องหมายผิด = ขั้นตอน copy พลาด → คัดลอกใหม่★** · **ห้าม blind replace ทั้งไฟล์** (sed `,`→`،` ดิบจะทำลายจุลภาคใน JSON / HTML attribute / code / CSS) — normalize **เฉพาะภายในบล็อกอาหรับ** โดย mask head/style/script/comment เหมือน masking ของ linter · **EDGE CASE:** ถ้าคำพูดปราชญ์มีอายะฮ์อัลกุรอานแทรก ช่วงนั้นเป็นอายะฮ์ (ไม่ใช่ร้อยแก้วปราชญ์) → re-fetch ช่วงนั้น; ถ้าแยกอายะฮ์/ร้อยแก้วไม่ออก → **FLAG**
 
 **ขั้นตอนบังคับทุกครั้ง (non-negotiable):**
 - **Byte-diff ยืนยัน:** ก่อน-หลัง ต้องพิสูจน์ว่า skeleton (โครงพยัญชนะหลังลบสระ) ตรงกับต้นฉบับ/แหล่งทุกตัวอักษร — ใช้สคริปต์ strip-marks เทียบ ไม่เดาด้วยตา
@@ -469,7 +471,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 ---
 
-## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง (Section 14 — Rules 71–74)
+## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–81)
 
 * **กฎข้อที่ 71:** **★[ความปลอดภัยเด็ก — Child-Safety Override · เหนือกฎความครบถ้วนทุกข้อ · บังคับกับทุกเอเยนต์]★** หากต้นฉบับจาก Drive หรือเนื้อหาใดๆ มีสาระที่ทำให้**ผู้เยาว์เป็นวัตถุทางเพศ (sexualizes a minor)** มาตรการนี้อยู่เหนือกฎ 1/49/56 และเกตทุกชนิด ให้ปฏิบัติโดยเด็ดขาด:
   1. **PASS-with-flag (ตัดทิ้ง ไม่ใช่ปัดตก):** ถือว่าบทความ "ผ่าน" ได้โดย**ตัด (drop) เฉพาะส่วนที่ละเมิดออกทั้งหมด** แล้วตั้ง **child-safety flag** กำกับ — ส่วนที่ตัดนี้**ไม่นับในตัวหารของ coverage (กฎ 72)** การตัดตามกฎนี้ไม่ถือว่า coverage ตก
@@ -502,9 +504,29 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **Branch protection / ruleset:** push ตรง `main` ถูกบล็อก (503) ทุกการเปลี่ยนแปลงต้องผ่าน PR → preview → QA/byte-QC → **owner-merge**; **เอเยนต์ห้าม merge `main`, ห้าม Purge Everything** (Custom Purge เฉพาะ URL หลัง merge) สอดคล้องกฎ 66 + Push & safety discipline · บทที่ติด child-safety flag (กฎ 71) ห้าม merge จนกว่า One ตัดสิน
   - รายละเอียดทั้งหมด: **`docs/SECURITY.md`**
 
+* **กฎข้อที่ 75:** **[ความถูกต้องของคำแปล · Translation Accuracy]** คำแปลไทยของตัวบทอาหรับทุกชนิด (`.ar-translation`, คำแปลอายะฮ์/หะดีษ, คำแปลคำพูดปราชญ์) ต้องตรวจ **ความถูกต้องเชิงความหมาย (semantic)** เทียบกับตัวบทอาหรับต้นทาง ไม่ใช่แค่ความมี/ความครบ (presence/coverage) — **แยกขอบเขตจากกฎ 72** (72 วัดว่าเนื้อหาครบ; 75 วัดว่าแปลถูก) · แปลผิด / ความหมายตกหล่น = **FLAG** · ให้ใช้คำแปลไทยเชิงวิชาการที่เป็นที่ยอมรับ; เมื่อไม่แน่ใจให้ **FLAG ขอเจ้าของ** ห้ามเดา
+
+* **กฎข้อที่ 76:** **[ห้ามอักขระพิเศษในร้อยแก้วไทย · No Special Symbols in Thai Prose]** ร้อยแก้วในเนื้อบทความ (`.article-body`) **ห้ามมี `#`, `|`, `@`** หรืออักขระมาร์กอัป/ควบคุมอื่น (มักหลุดมาจาก Markdown / การ paste) เว้นแต่เจ้าของอนุมัติ · อัญประกาศโค้ง “ ” ‘ ’ และเครื่องหมายวรรคตอนไทยมาตรฐานยังใช้ได้ตามปกติ · (จะบังคับด้วย linter ภายหลัง — เป็นงานแยก ดู S9)
+
+* **กฎข้อที่ 77:** **[ทิศทางเครื่องหมายวรรคตอนอาหรับ · Arabic Punctuation Orientation]** ตัวบทอาหรับต้องใช้เครื่องหมายแบบอาหรับ: จุลภาค **`،` (U+060C)** ไม่ใช่ `,` ลาติน; ปรัศนี **`؟` (U+061F)** ไม่ใช่ `?`; อัฒภาค **`؛` (U+061B)**; และลบจุดมหัพภาค `.` ลาตินที่หลงเหลือในอาหรับ · **การจัดการขึ้นกับชนิดบล็อก:**
+  - **`.aya-block` / `.hadith-block` → RE-FETCH จาก quran.com / sunnah.com** ห้ามแก้ด้วยมือ (paste-only, byte-exact, กฎ 53/8/60) — ตัวบทแหล่งถูกต้องอยู่แล้ว เครื่องหมายผิด = ขั้นตอน copy พลาด จึงต้อง **คัดลอกใหม่ ไม่ใช่ซ่อมในที่**
+  - **`.ar-quote` / `.ar-feature` (ร้อยแก้วปราชญ์) → normalize ได้:** `,` → `،`, ลบ `.` ที่หลงเหลือ, `?` → `؟` — **แต่ต้องมี byte-diff ก่อน/หลัง + log `AUDIT-FIXES.md`**
+  - **`.ar-translation` (ไทย) → ไม่เกี่ยว** (ข้อความไทย ใช้วรรคตอนไทยปกติ)
+  - **★ห้าม blind whole-file replace★:** การ sed `,` → `،` แบบดิบจะทำลายจุลภาคใน JSON / HTML attribute / code / CSS — ให้ normalize **เฉพาะภายในบล็อกอาหรับ** โดย mask head/style/script/comment (masking เดียวกับ linter)
+  - **EDGE CASE:** ถ้าคำพูดปราชญ์มีอายะฮ์อัลกุรอานแทรก ช่วงนั้นเป็น **อายะฮ์** (ไม่ใช่ร้อยแก้วปราชญ์) → re-fetch ช่วงนั้น; ถ้าแยกอายะฮ์/ร้อยแก้วไม่ออก → **FLAG**
+  - (สอดคล้อง **Arabic-Authority scope กรณี (3)** ด้านบน: normalize เครื่องหมายเฉพาะ scholar Arabic; อายะฮ์/หะดีษ = re-fetch เท่านั้น · ต้องมี byte-diff + blob SHA + log `AUDIT-FIXES.md`)
+
+* **กฎข้อที่ 78:** **[ขออนุมัติอักขระ · Symbol Pre-approval]** อักขระใดที่อยู่นอก **ชุดที่อนุมัติ** (ไทยมาตรฐาน, อักษรอาหรับ + ฮะเราะกาต + เครื่องหมายวรรคตอนอาหรับ, อัญประกาศโค้ง, `ﷺ`, เครื่องหมายเชิงอรรถ) **ต้องได้รับอนุมัติจากเจ้าของก่อนนำมาใช้**
+
+* **กฎข้อที่ 79:** **[รวมต้นฉบับหลายส่วน — ห้ามตัดทอน · Multi-part Source Merging]** เมื่อต้นฉบับมาเป็น 2–3 ส่วนที่เชื่อมโยงกันเชิงตรรกะ ให้ **รวมเป็นบทความเดียว** · เนื้อหาคงไว้ **100%** (กฎ 1/56) — การรวมเป็นเชิง **โครงสร้างเท่านั้น** ห้ามย่อ / สรุป / ตัดข้อความ (passage) ทิ้ง · ถ้าส่วนต่างๆเชื่อมไม่สนิท ให้คงแยกไว้ หรือ **FLAG**
+
+* **กฎข้อที่ 80:** **[ย่อชื่อเรื่องได้ · Title May Be Shortened]** ชื่อเรื่อง/H1 บนหน้าอาจ **กระชับ/ย่อ** จากชื่อต้นฉบับที่ยาวได้ ถ้าความหมายคงอยู่ · **H1 ห้ามตัดทิ้งเด็ดขาด (กฎ 67)** · ชื่อต้นฉบับเต็มสามารถเก็บไว้ใน metadata / citation ได้
+
+* **กฎข้อที่ 81:** **[คุณภาพการจัดรูปแบบหน้า · Page Formatting Quality]** บทความต้องจัดรูปแบบสะอาด: ลำดับหัวข้อ (heading hierarchy) ชัดเจน, สไตล์บล็อกอาหรับ/ไทยตาม **S6/S8**, ไม่มี layout พัง (overflow/ทับซ้อน), hero/no-hero ตามกฎ 67
+
 ---
 
-## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security (Rules 71–74)
+## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–81)
 
 * **Rule 71:** **★[Child-Safety Override · supersedes every fidelity/coverage rule · binds every agent]★** If any Drive source or other content sexualizes a minor, this measure overrides Rules 1/49/56 and every gate. Act decisively:
   1. **PASS-with-flag (drop, do not reject):** the article may be considered "passing" by **dropping only the offending span entirely** and setting a **child-safety flag** — the dropped span is **excluded from the Rule 72 coverage denominator**; a drop under this rule does not lower coverage.
@@ -535,3 +557,23 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **Cache:** `/*.html` must be `Cache-Control: no-cache, no-store, must-revalidate` (to avoid serving stale HTML), set in `_headers`.
   - **Branch protection / ruleset:** direct push to `main` is blocked (503); every change goes through PR → preview → QA/byte-QC → **owner-merge**; **agents never merge `main` and never Purge Everything** (Custom Purge by URL only, after merge), consistent with Rule 66 + Push & safety discipline. Child-safety-flagged articles (Rule 71) must not be merged until One decides.
   - Full details: **`docs/SECURITY.md`**
+
+* **Rule 75:** **[Translation Accuracy]** Every Thai rendering of an Arabic passage (`.ar-translation`, aya/hadith translations, scholar-quote translations) must be checked for **SEMANTIC correctness** against the Arabic source, not merely presence/coverage — **distinct from Rule 72** (72 measures completeness; 75 measures correctness). Mistranslation or dropped meaning = **FLAG**. Prefer established scholarly Thai renderings; when unsure, **FLAG for the owner** — never guess.
+
+* **Rule 76:** **[No Special Symbols in Thai Prose]** Article body prose (`.article-body`) must not contain **`#`, `|`, `@`**, or other markup/control characters (common Markdown/paste leakage) unless owner-approved. Curly quotes “ ” ‘ ’ and standard Thai punctuation remain allowed. (Enforced later by linter — separate task; see S9.)
+
+* **Rule 77:** **[Arabic Punctuation Orientation]** Arabic text must use Arabic-oriented marks: comma **`،` (U+060C)** NOT Latin `,`; question mark **`؟` (U+061F)** NOT `?`; semicolon **`؛` (U+061B)**; and remove stray Latin full-stops `.` from Arabic. **Handling depends on block type:**
+  - **`.aya-block` / `.hadith-block` → RE-FETCH from quran.com / sunnah.com.** NEVER hand-edit (paste-only, byte-exact, Rules 53/8/60). The source is already correct; a wrong mark means the copy step failed, so **re-copy — do not repair in place**.
+  - **`.ar-quote` / `.ar-feature` (scholar prose) → normalize allowed:** `,` → `،`, remove stray `.`, `?` → `؟` — **BUT requires byte-diff before/after + `AUDIT-FIXES.md` log**.
+  - **`.ar-translation` (Thai) → not applicable** (Thai text; normal Thai punctuation).
+  - **★NO blind whole-file replace★:** a raw sed `,` → `،` would corrupt commas in JSON / HTML attributes / code / CSS. Normalize **ONLY inside Arabic blocks**, masking head/style/script/comment (same masking as the linter).
+  - **EDGE CASE:** if a scholar quote contains a Quranic aya, that span is **aya** (not scholar prose) → re-fetch that span; if aya vs prose can't be separated, **FLAG**.
+  - (Consistent with **Arabic-Authority scope case (3)** above: normalize punctuation in scholar Arabic ONLY; aya/hadith = re-fetch, never edit · byte-diff + blob-SHA proof + `AUDIT-FIXES.md` log required.)
+
+* **Rule 78:** **[Symbol Pre-approval]** Any character outside the **approved set** (standard Thai, Arabic letters + harakat + Arabic punctuation, curly quotes, `ﷺ`, footnote markers) requires **owner approval before use**.
+
+* **Rule 79:** **[Multi-part Source Merging (no truncation)]** When a source comes in 2–3 parts that connect logically, **merge into a single article**. Content stays **100% preserved** (Rules 1/56) — merging is **structural only**; never abridge, summarize, or drop passages. If parts don't connect cleanly, keep separate or **FLAG**.
+
+* **Rule 80:** **[Title May Be Shortened]** The on-page title / H1 may be **tightened/shortened** from a long source title if meaning is preserved; **H1 is NEVER omitted (Rule 67)**. The full source title may live in metadata/citation.
+
+* **Rule 81:** **[Page Formatting Quality]** Articles must be cleanly formatted: clear heading hierarchy, Arabic/Thai block styling per **S6/S8**, no layout breakage, hero/no-hero per Rule 67.
