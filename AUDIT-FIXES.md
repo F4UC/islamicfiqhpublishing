@@ -237,3 +237,14 @@
 - บล็อกปราชญ์ที่ 4 (`كان المسجد الجامع...` อัลลาล อัลฟาซี) ไม่มีสระใน source → ไม่เปลี่ยน
 - เครื่องหมายวรรคตอนอาหรับเป็นแบบอาหรับอยู่แล้ว (`،` U+060C) → ไม่ต้อง normalize (R77)
 - ตัดสระรวม 10 ตัว · วิธี: `re.sub(r'[ً-ْ]','',…)` ทั้งไฟล์ + assert skeleton ตรง · Thai coverage 99.91% · reading-time 23
+
+## 2026-06-18 — PHASE 2 PILOT · #183 · al-Zirikli title correction (approved R1 deviation, One precedent)
+
+**กรณีพิเศษ (นอก 3 audit cases ปกติ) — APPROVED ภายใต้ phase precedent ของ One ("correct-in-body where the right value is CERTAIN") + Codex flag + R6 (ชื่อตำราอาหรับต้องถูกอักขรวิธี):** แก้ชื่อสารานุกรมของอัซซิริกลีในบล็อก `.ar-inline` ที่ source สะกดตกฮัมซะฮ์
+
+| บล็อก | before → after | เหตุผล | blob-SHA(after,12) |
+|---|---|---|---|
+| `.ar-inline` (ชื่อตำรา) | `الاعلام` → `الأعلام` | al-A'lām ของ Khayr al-Dīn al-Zirikli สะกดถูกต้องคือ `الأعلام` (ฮัมซะฮ์บนอลิฟ); source/Drive ตกฮัมซะฮ์ → R6/R4 + Codex | `80f2b9ef7546` |
+
+- เป็น **skeleton edit** (เติมฮัมซะฮ์) ไม่ใช่ strip-harakat/canonical-paste → **flag ใน REVIEW-QUEUE ขอ One ยืนยัน/revert ได้**
+- ไม่ใช่อายะฮ์/หะดีษ/ตัวบท-matn ของปราชญ์ (เป็นชื่อตำรา proper noun ที่รูปถูกต้องแน่นอน) · coverage 99.91% (Arabic ยกเว้น) · HTMLParser OK · lint PASS

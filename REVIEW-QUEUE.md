@@ -52,3 +52,5 @@
 - [ ] **⚑ ชื่อ "ดร.ลุฏฟี อีซา" vs "ดร.ลุตฟี อีซา":** source สะกด 2 แบบ (ฏ vs ต) — คงตาม source, flag ให้รวมเป็นรูปเดียว
 - [ ] **⚑ Latin ในร้อยแก้ว (R78 — อนุญาตในบริบท translit/proper noun):** euergetism, Historiography, University of Bologna, Oxford, Guinness World Records — คงไว้เป็น translit aid/ชื่อเฉพาะ (R78 ใหม่อนุญาต) · แจ้งเพื่อ review
 - **byte-diff Arabic:** ดู AUDIT-FIXES.md (4 บล็อก, skeleton-equal, blob-SHA)
+
+- [ ] **⚑ Arabic book-title correction (Codex, approved-deviation):** `الاعلام` → `الأعلام` (al-Zirikli's al-A'lām; source ตกฮัมซะฮ์) — แก้ตาม One precedent (correct-where-certain) + R6 · skeleton edit, logged ใน AUDIT-FIXES · ขอ One ยืนยัน/revert ได้
