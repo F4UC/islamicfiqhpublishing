@@ -54,3 +54,5 @@
 - **byte-diff Arabic:** ดู AUDIT-FIXES.md (4 บล็อก, skeleton-equal, blob-SHA)
 
 - [ ] **⚑ Arabic book-title correction (Codex, approved-deviation):** `الاعلام` → `الأعلام` (al-Zirikli's al-A'lām; source ตกฮัมซะฮ์) — แก้ตาม One precedent (correct-where-certain) + R6 · skeleton edit, logged ใน AUDIT-FIXES · ขอ One ยืนยัน/revert ได้
+
+- [x] **✅ quote-close (Codex, R56 polish):** ปิดอัญประกาศโค้งนอกของย่อหน้าอิบนุ อบี ซัรอ์ (source เปิด “ หลัง "ว่า" แต่ไม่ปิด — 4 เปิด/3 ปิด) → เพิ่ม ” ท้าย passage ให้สมดุล (R15/R81) · ไม่ใช่ content change
