@@ -208,3 +208,18 @@
 
 - การ์ตรวจ Arabic completeness รายงานผิดว่า "drop 1 บล็อก" เพราะ skeleton ของ Uthmani (`زكىها`) ≠ imlaei (`زكاها`) → false positive · ที่จริงอายะฮ์ครบ แค่ orthography ต่าง
 - Thai coverage 100.4% (ครบอยู่แล้ว) · reading-time ไม่เปลี่ยน (aya ยกเว้น) · articles.json ไม่แตะ
+
+## 2026-06-18 — PHASE 2 PILOT · `articles/tarikh/fatima-al-fihriya-founder-of-al-qarawiyyin.html` (#52) · branch claude/phase2-fatima-al-fihriya
+
+**กรณีที่ใช้:** case (1) strip ฮะเราะกาตตามกฎ 60 (ALL-OR-NOTHING) — คำพูดปราชญ์ในบทนี้ลงสระไม่สม่ำเสมอใน source จึงตัดสระให้เปลือยสระทั้งหมด (uniformly bare) · ลบเฉพาะ U+064B–U+0652 · skeleton ก่อน=หลัง ทุกบล็อก (พิสูจน์ด้วย strip-marks byte-diff) · บทนี้ไม่มีอายะฮ์/หะดีษ
+
+| # | บล็อก | before → after | skeleton-equal | blob-SHA(after, 12) |
+|---|-------|----------------|----------------|---------------------|
+| 1 | `.ar-quote` (อิบนุ คอลดูน, มุก็อดดิมะฮ์) | `نبّهت` → `نبهت` | ✅ | `a12ccd032fcc` |
+| 2 | `.ar-inline` (ชื่อมัสญิด) | `الْقَرَوِيِّينَ` → `القرويين` | ✅ | `880fd2d41295` |
+| 3 | `.ar-quote` (อัซซิริกลี, الأعلام) | `ووُسع` → `ووسع` | ✅ | `55f94a7247dd` |
+| 4 | `.ar-quote` (อัลลาล อัลฟาซี) | `مراراً` → `مرارا` | ✅ | `3017a613582d` |
+
+- บล็อกปราชญ์ที่ 4 (`كان المسجد الجامع...` อัลลาล อัลฟาซี) ไม่มีสระใน source → ไม่เปลี่ยน
+- เครื่องหมายวรรคตอนอาหรับเป็นแบบอาหรับอยู่แล้ว (`،` U+060C) → ไม่ต้อง normalize (R77)
+- ตัดสระรวม 10 ตัว · วิธี: `re.sub(r'[ً-ْ]','',…)` ทั้งไฟล์ + assert skeleton ตรง · Thai coverage 99.91% · reading-time 23
