@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>การสัมผัสสุนัขในอิสลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="เปรียบเทียบทัศนะนิติศาสตร์อิสลามทั้งสี่มัสฮับว่าด้วยการสัมผัสสุนัข สถานะความสะอาด (นะญิส) และวิธีการชำระล้างภาชนะที่สุนัขเลีย">
+<meta name="keywords" content="การสัมผัสสุนัข, สุนัขในอิสลาม, นะญิส, ความสะอาดในอิสลาม, สี่มัสฮับ, นิติศาสตร์อิสลาม, ฟิกฮ์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การสัมผัสสุนัขในอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="เปรียบเทียบทัศนะนิติศาสตร์อิสลามทั้งสี่มัสฮับว่าด้วยการสัมผัสสุนัข สถานะความสะอาด (นะญิส) และวิธีการชำระล้างภาชนะที่สุนัขเลีย">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/touching-dogs-in-islam">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/nitisart/touching-dogs-in-islam">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "การสัมผัสสุนัขในอิสลาม",
+  "inLanguage": "th",
+  "datePublished": "2026-06-18",
+  "dateModified": "2026-06-18",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/nitisart/touching-dogs-in-islam"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="touching-dogs-in-islam">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">การสัมผัสสุนัขในอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">กรณีศึกษาและเปรียบเทียบทางนิติศาสตร์อิสลามระหว่างสำนักคิดทั้งสี่</p>
+      <p>การสัมผัสสุนัขและทัศนะในอิสลามมีรายละเอียดต่างๆ มากมาย เนื่องจากมีความเห็นที่ต่างกันในหมู่นักวิชาการอิสลามจากสำนักคิดต่างๆ ซึ่งโดยทั่วไปแล้วมุมมองเกี่ยวกับการสัมผัสสุนัขสามารถแบ่งออกได้เป็นสองประเด็นหลัก คือเรื่องของความสะอาด และสถานะของสุนัขในศาสนาอิสลาม</p>
+      <h2 class="article-h2">สถานะของสุนัขในอิสลาม</h2>
+      <p>ในอิสลาม สุนัขเป็นสัตว์ที่มีประโยชน์ โดยสามารถใช้ในการเฝ้าบ้านหรือใช้เป็นเครื่องมือในการล่าสัตว์ได้ ซึ่งมีการกล่าวถึงในคัมภีร์อัลกุรอาน (สูเราะฮ์อัลมาอิดะฮ์ 5:4) ว่าการใช้สุนัขในการล่าสัตว์เป็นสิ่งที่ได้รับอนุญาต นักวิชาการบางท่านชี้ว่าการใช้สุนัขเพื่อการทำงาน เช่น เฝ้าบ้าน ล่าสัตว์ หรือช่วยเหลือผู้พิการ เป็นเรื่องที่ยอมรับได้ และสุนัขไม่ถือเป็นสัตว์ต้องห้าม</p>
+      <p>อย่างไรก็ตาม การนำสุนัขมาเลี้ยงในบ้านโดยไม่มีเหตุผลที่จำเป็น (เช่น ไม่ใช้เพื่อการเฝ้าบ้านหรือการทำงานอื่นๆ) นั้นเป็นสิ่งที่ไม่เกิดประโยชน์ มีหะดีษระบุว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">مَنِ اتَّخَذَ كَلْبًا إِلاَّ كَلْبَ مَاشِيَةٍ أَوْ صَيْدٍ أَوْ زَرْعٍ انْتَقَصَ مِنْ أَجْرِهِ كُلَّ يَوْمٍ قِيرَاطٌ</p>
+      </div>
+      <p>“ผู้เลี้ยงสุนัข (โดยไม่มีเหตุผลที่จำเป็น) ไม่ใช่สุนัขเฝ้าปศุสัตว์ สุนัขล่าสัตว์ หรือเพื่อแปลงเกษตร แน่นอนผลบุญของเขาจะพร่องลงวันละหนึ่งกีร๊อต”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+      <p>อิบนุ อับดิลบัรได้กล่าวเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وفي معنى هذا الحديث تدخل عندي إباحة اقتناء الكلاب للمنافع كلها ودفع المضار إذا احتاج الإنسان إلى ذلك إلا أنه مكروه اقتناؤها في غير الوجوه المذكورة في هذه الآثار لنقصان أجر مقتنيها.</blockquote>
+      <p class="ar-translation">“และตามหะดีษนี้ ข้าพเจ้าเข้าใจว่าอนุญาตให้เลี้ยงสุนัขเพื่อประโยชน์ต่างๆได้ และเลี้ยงเพื่อป้องกันอันตรายได้ หากมนุษย์มีความจำเป็นต้องใช้สุนัขในเรื่องเหล่านี้ ยกเว้นว่าจะเป็นที่ไม่บังควร (มักรูฮ์) หากจะเลี้ยงสุนัขในลักษณะที่ไม่เกี่ยวข้องกับเหตุผลที่กล่าวไว้ในตัวบทข้างต้น เนื่องจากการเลี้ยงสุนัขในกรณีเช่นนี้ (คือไม่มีเหตุผลใดๆ) จะทำให้ผู้เลี้ยงสูญเสียผลบุญบางส่วน”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكذلك ما كان مثل ذلك كما يقتنى للصيد ، والماشية وما أشبه ذلك ، وإنما كره من ذلك اقتناؤها لغير منفعة وحاجة وكيدة فيكون حينئذ فيه ترويع الناس ، وامتناع دخول الملائكة في البيت ، والموضع الذي فيه الكلب ، فمن هاهنا - والله أعلم - كره اتخاذها</blockquote>
+      <p class="ar-translation">“และเช่นเดียวกันเหตุผลที่คล้ายกัน เช่น การเลี้ยงสุนัขเพื่อการล่าสัตว์หรือดูแลปศุสัตว์และกิจการอื่นๆที่คล้ายคลึงกัน การเลี้ยงสุนัขนั้นจะถือเป็นสิ่งที่ไม่สมควร (มักรูฮ์) ก็ต่อเมื่อเป็นการเลี้ยงโดยไม่มีประโยชน์ใดๆ หรือไม่มีความจำเป็นที่สำคัญ เพราะนั่นอาจสร้างความหวาดกลัวให้กับผู้คนและยังเป็นการขัดขวางไม่ให้มลาอิกะฮ์เข้ามาในบ้าน ณ สถานที่ที่มีสุนัขอยู่ ดังนั้นนี่จึงเป็นเหตุผลที่การเลี้ยงสุนัขไม่ถูกส่งเสริม และอัลลอฮ์นั้นทรงรอบรู้ที่สุด”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما اتخاذها للمنافع فما أظن شيئا من ذلك مكروها ، لأن الناس يستعملون اتخاذها للمنافع ، ودفع المضرة قرنا بعد قرن في كل مصر وبادية فيما بلغنا - والله أعلم - وبالأمصار علماء ينكرون المنكر ويأمرون بالمعروف ، ويسمع السلطان منهم فما بلغنا عنهم تغيير ذلك إلا عند أذى يحدث من عقر الكلب ونحوه.</blockquote>
+      <p class="ar-translation">“และสำหรับการเลี้ยงสุนัขเพื่อใช้ประโยชน์นั้น ข้าพเจ้าไม่คิดว่าสิ่งนี้จะเป็นที่น่าตำหนิ เพราะผู้คนมักใช้สุนัขเพื่อทำประโยชน์และป้องกันความเสียหาย ซึ่งเป็นธรรมเนียมที่ปฏิบัติกันมาจากรุ่นสู่รุ่น ในทุกๆมุมเมืองและทุกพื้นที่ตามที่เราได้รับรายงานมา ทั้งที่เมืองต่างๆนั้นก็มีบรรดานักปราชญ์ที่คอยปราบปรามความไม่ถูกต้องและส่งเสริมความดีอยู่ ซึ่งผู้ปกครองเองก็รับฟังในสิ่งพวกเขาให้คำปรึกษา กระนั้นเราไม่เคยได้รับรายงานว่ามีการห้าม (เลี้ยงสุนัขทุกกรณี) ในเรื่องนี้ นอกจากในกรณีที่สุนัขบ้า ที่ก่อให้เกิดอันตราย เช่น กัดคนหรือทำให้เกิดความเสียหาย”</p>
+      <h2 class="article-h2">การสัมผัสสุนัขและประเด็นเรื่องความสะอาด</h2>
+      <p>การสัมผัสสุนัขเป็นประเด็นที่มีความเห็นแตกต่างกันในหมู่นักวิชาการ เนื่องจากเกี่ยวข้องกับเรื่องความสะอาด ซึ่งเป็นข้อกำหนดสำคัญในการปฏิบัติศาสนกิจในอิสลาม</p>
+      <p>อะฏียะฮ์ ศ้อกร์ อดีตประธานคณะกรรมการฟัตวาของอัซฮัรแห่งอียิปต์ ได้กล่าวในหนังสือของท่าน “อะห์ซะนุลกะลาม ฟิลฟัตวา วัลอะห์กาม” ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ذكر العالم الإسلامي كمال الدين الدميري المتوفي سنة ٨٠٨ ه في كتابه الجامع (حياة الحيوان الكبرى) أن الكلاب نجسة سواء منها المعلمة وغير المعلمة ، والصغير والكبير ، وبه قال الأوزاعي وأحمد وأبو حنيفة وإسحاق وأبو ثور وأبو عبيد ، وكذلك الإمام الشافعي . ثم قال : لا فرق بين المأذون في اقتنائه وغيره ، ولا بين كلب البدوي والحضري ، وذلك لعموم الأدلة .</blockquote>
+      <p class="ar-translation">“นักปราชญ์อิสลาม เฉกเช่นกะมาลุดดีน อัดดุมีรีย์ ท่านได้ล่วงลับในฮิจเราะฮ์ศักราชที่ 808 ได้กล่าวในหนังสือของท่าน “หะยาตุลฮะยาวาน อัลกุบรอ” ว่า: สุนัขถือว่าเป็นนะญิส (สิ่งสกปรก) ไม่ว่าจะเป็นสุนัขที่ได้รับการฝึก (เพื่อการล่าสัตว์หรือเพื่อการอื่น) หรือไม่ได้รับการฝึก ทั้งสุนัขตัวเล็กและตัวใหญ่ ซึ่งเป็นทัศนะที่สอดคล้องกับนักปราชญ์อิสลามมากมายหลายท่าน เช่น อัลเอาซาอีย์, อะห์มัด, อบู ฮะนีฟะฮ์, อิสหาก, อบู เษาร์ และอบู อุบัยด์ ตลอดจนอิหม่ามอัชชาฟีอีย์ นอกจากนั้น ท่านยังกล่าวเพิ่มเติมว่า: ไม่มีความแตกต่างระหว่างสุนัขที่ได้รับอนุญาตให้เลี้ยงกับสุนัขทั่วไป หรือระหว่างสุนัขของชาวชนบทกับสุนัขของคนในเมือง (ในประเด็นของความสะอาด) เพราะหลักฐานที่ระบุไว้นั้นมีความครอบคลุมทั่วถึง”</p>
+      <p>ทัศนะที่แพร่หลายที่สุดมีดังนี้</p>
+      <h2 class="article-h2">มัสฮับชาฟีอีย์</h2>
+      <p>น้ำลายสุนัขถือเป็นนะญิส (สิ่งสกปรกทางศาสนา) การสัมผัสน้ำลายสุนัขจะทำให้สิ่งที่สัมผัสนั้นเป็นนะญิส และต้องทำความสะอาดตามวิธีการเฉพาะที่มีในหะดีษ นั่นคือ การล้างด้วยน้ำเจ็ดครั้ง และหนึ่งในนั้นต้องใช้น้ำผสมดิน</p>
+      <p>นอกจากนี้ตัวสุนัขเอง (นอกเหนือจากน้ำลาย) เหล่านักวิชาการมัสฮับชาฟีอีย์ส่วนใหญ่มีทัศนะว่าทุกส่วนของสุนัขถือเป็นนะญิส ไม่เพียงแต่น้ำลายเท่านั้น ดังนั้นเมื่อมือเราเปียก แล้วได้ไปสัมผัสกับสุนัข ก็จะถือว่าเป็นนะญิส แต่ถ้าหากเรามือแห้ง ตัวสุนัขเองก็แห้ง ก็ไม่จำเป็นต้องล้างถึง 7 ครั้ง ไม่ว่าจะสัมผัสโดนเสื้อผ้า หน้าผม หรือจุดไหนก็ตาม</p>
+      <p>อิหม่ามอันนะวาวีย์ได้กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">واعلم أنه لا فرق عندنا بين ولوغ الكلب وغيره من أجزائه فإذا أصاب بوله أو روثه أو دمه أو عرقه أو شعره أو لعابه أو عضو من أعضائه شيئا طاهرا في حال رطوبة أحدهما وجب غسله سبع مرات إحداهن بالتراب ، ولو ولغ كلبان أو كلب واحد مرات في إناء ففيه ثلاثة أوجه لأصحابنا : الصحيح أنه يكفيه للجميع سبع مرات والثاني : يجب لكل ولغة سبع والثالث : يكفي لولغات الكلب الواحد سبع ، ويجب لكل كلب سبع ، ولو وقعت نجاسة أخرى في الإناء الذي ولغ فيه الكلب كفى عن الجميع سبع</blockquote>
+      <p class="ar-translation">“พึงทราบเถิดว่า ตามทัศนะของเรา ไม่มีความแตกต่างระหว่างน้ำลายสุนัขและส่วนอื่นๆของมัน ดังนั้น หากปัสสาวะ อุจจาระ เลือด เหงื่อ ขน น้ำลาย หรืออวัยวะส่วนใดของสุนัขสัมผัสกับสิ่งที่สะอาดในสภาพที่เปียกชื้น ไม่ว่าจะฝั่งสุนัขหรือสิ่งที่ถูกสัมผัส ฝั่งใดฝั่งหนึ่ง จำเป็นต้องล้างสิ่งนั้นเจ็ดครั้ง โดยหนึ่งในนั้นต้องใช้น้ำผสมดิน และหากสุนัขสองตัวหรือสุนัขตัวเดียวเลียหลายครั้ง (หลังจากทำความสะอาดไปครั้งแรก) ในภาชนะเดียวกัน มีทัศนะจากนักวิชาการของเราในประเด็นนี้ 3 ทัศนะ:”</p>
+      <ol class="article-summary">
+        <li>ทัศนะที่มีน้ำหนัก คือใช้ได้ด้วยการล้างเจ็ดครั้งสำหรับทั้งหมด</li>
+        <li>ทัศนะที่สอง คือต้องล้างเจ็ดครั้งสำหรับการเลียในแต่ละครั้ง</li>
+        <li>ทัศนะที่สาม คือล้างเจ็ดครั้งก็เพียงพอสำหรับการเลียของสุนัขตัวเดียว แต่ต้องล้างเจ็ดครั้งสำหรับสุนัขทุกตัวที่เลีย</li>
+      </ol>
+      <p>และหากมีสิ่งสกปรกอื่นๆปนเปื้อนในภาชนะที่สุนัขเลีย ก็เพียงพอแล้วที่จะล้างเจ็ดครั้งสำหรับทั้งหมด”</p>
+      <p>อิหม่ามอันนะวาวีย์ได้ระบุไว้อีกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">مذهبنا أن الكلاب كلها نجسة المعلم وغيره الصغير والكبير وبه قال الأوزاعي وأبو حنيفة وأحمد وإسحق وأبو ثور وأبو عبيد وقال الزهري ومالك وداود هو طاهر وإنما يجب غسل الإناء من ولوغه تعبدا وحكي هذا عن الحسن البصري وعروة بن الزبير واحتج لهم بقول الله تعالى (فكلوا مما أمسكن عليكم) ولم يذكر غسل موضع إمساكها</blockquote>
+      <p class="ar-translation">“มัสฮับของเรา (มัสฮับชาฟิอีย์) เห็นว่าทุกส่วนของสุนัขนั้นเป็นนะญิส (สิ่งไม่สะอาด) ไม่ว่าจะเป็นสุนัขที่ผ่านการฝึกมาแล้วหรือยังไม่ได้รับการฝึก รวมถึงสุนัขตัวเล็กหรือตัวใหญ่ ซึ่งทัศนะนี้สอดคล้องกับทัศนะของอัลเอาซาอีย์, อบู หะนีฟะฮ์, อะห์มัด, อิสห้าก, อบู เษาร์ และอบู อุบัยด์ ส่วนทัศนะของอัซซุฮ์รี, อิหม่ามมาลิก, ดาวูด เห็นว่าสุนัขนั้นเป็นสิ่งที่สะอาด (ฏอฮิร) ทั้งนี้ (พวกเขายังอธิบายว่า) การล้างภาชนะเมื่อโดนสุนัขเลียนั้น เป็นเพียงการล้างตามคำสั่งศาสนา (ตะอับบุด ไม่ใช่ล้างเพราะนะญิส) ทั้งนี้ยังมีรายงานว่าทัศนะนี้มาจากอัลหะซัน อัลบัศรีย์ และอุรวะฮ์ บิน อัซซุบัยร์ด้วย”</p>
+      <p>หลักฐานที่ผู้เห็นว่าสุนัขสะอาดนำมาอ้างคือพระดำรัสของอัลลอฮ์ที่ว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">فَكُلُوا۟ مِمَّآ أَمْسَكْنَ عَلَيْكُمْ</p>
+      </div>
+      <p>“ดังนั้นพวกเจ้าจงกินจากสิ่งที่สุนัขจับมาให้พวกเจ้า”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup> โดยในอายะฮ์นี้ไม่ได้กล่าวถึงการต้องล้าง (ร่องรอย) บริเวณที่สุนัขจับ”</p>
+      <p>อิหม่ามอันนะวาวีย์ยังได้กล่าวต่ออีกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">واحتج أصحابنا بحديث أبي هريرة رضي الله عنه أن رسول الله صلى الله عليه وسلم قال (إذا ولغ الكلب في إناء أحدكم فليرقه ثم ليغسله سبع مرات) رواه مسلم وعن أبي هريرة أيضا قال قال رسول الله صلى الله عليه وسلم (طهور إناء أحدكم إذا ولغ فيه الكلب أن يغسله سبع مرات أو لاهن بالتراب) رواه مسلم وفي رواية له (طهر إناء أحدكم إذا ولغ الكلب فيه أن يغسل سبع مرات)</blockquote>
+      <p class="ar-translation">“บรรดานักวิชาการในมัสฮับของเรา (มัสฮับชาฟิอีย์) ได้นำเสนอหลักฐานจากหะดีษของอบู ฮุร็อยเราะฮ์ เราะฎิยัลลอฮุอันฮุ ว่า: ท่านเราะสูลุลลอฮ์ ﷺ กล่าวว่า: “เมื่อสุนัขเลียภาชนะของใครสักคนหนึ่ง พึงเทสิ่งที่อยู่ในนั้นทิ้ง แล้วล้างภาชนะนั้นเจ็ดครั้ง” (รายงานโดยมุสลิม) และอีกหะดีษหนึ่งจากอบู ฮุร็อยเราะฮ์กล่าวว่า: ท่านเราะสูลุลลอฮ์ ﷺ กล่าวว่า: “วิธีการทำความสะอาดภาชนะของพวกท่านเมื่อสุนัขโดนเลีย คือให้ล้างเจ็ดครั้ง ครั้งแรกด้วยน้ำผสมดิน” (รายงานโดยมุสลิม) และในรายงานอื่น: “การทำความสะอาดภาชนะของพวกท่านเมื่อโดนสุนัขเลียเข้าไป คือให้ล้างเจ็ดครั้ง””</p>
+      <p>ท่านยังได้กล่าวต่อว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والدلالة من الحديث الأول ظاهرة لأنه لو لم يكن نجسا لما أمر بإراقته لأنه يكون حينئذ إتلاف مال وقد نهينا عن إضاعة المال والدلالة من الحديث الثاني ظاهرة أيضا فإن الطهارة تكون من حدث أو نجس وقد تعذر الحمل هنا على طهارة الحدث فتعينت طهارة النجس وأجاب أصحابنا عن احتجاجهم بالآية بأن لنا خلافا معروفا في أنه يجب غسل ما أصابه الكلب أم لا فإن لم نوجبه فهو معفو للحاجة والمشقة في غسله بخلاف الإناء</blockquote>
+      <p class="ar-translation">“นัยยะหลักฐานจากหะดีษแรกนั้นชัดเจน เพราะถ้าหากว่าสุนัขไม่เป็นนะญิส (สิ่งสกปรก) ท่านนบีคงจะไม่สั่งให้เทสิ่งที่อยู่ในภาชนะนั้นทิ้ง เพราะนั่นจะเป็นการทำลายทรัพย์สิน ซึ่งอิสลามห้ามทำลายทรัพย์สินโดยเปล่าประโยชน์ และนัยยะหลักฐานจากหะดีษที่สองก็ชัดเจนเช่นกัน เนื่องจากการทำความสะอาดเกิดขึ้นจากการชำระล้างสิ่งสกปรก (นะญิส) หรือชำระจากการมีฮะดัษ (สถานะที่ต้องอาบน้ำละหมาด) ซึ่งในกรณีนี้ไม่สามารถตีความว่าเป็นการชำระฮะดัษได้ ดังนั้นจึงต้องเป็นการชำระนะญิส นักวิชาการในมัสฮับของเราได้วิพากษ์ (ผู้ที่อ้าง) หลักฐานจากอายะห์ (ในสูเราะฮ์อัลมาอิดะฮ์ 5:4) ว่ามีข้อขัดแย้งกันในเรื่องการล้างสิ่งที่สุนัขสัมผัส หากเราไม่เห็นว่าการล้างนั้นเป็นข้อบังคับ ก็ถือว่ามีการผ่อนปรน เนื่องจากความจำเป็นและความลำบากในการล้าง ยกเว้นในกรณีของภาชนะ”</p>
+      <p>นอกจากนี้อิบนุ ดะกีก อัลอีดได้กล่าวในประเด็นนี้ไว้เช่นกันว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فيه مسائل. الأولى: الأمر بالغسل ظاهر في تنجيس الإناء وأقوى من هذا الحديث في الدلالة على ذلك: الرواية الصحيحة وهي قوله - صلى الله عليه وسلم - «طهور إناء أحدكم، إذا ولغ فيه الكلب: أن يغسل سبعا» فإن لفظة "طهور" تستعمل إما عن الحدث، أو عن الخبث ولا حدث على الإناء بالضرورة فتعين الخبث وحمل مالك هذا الأمر على التعبد، لاعتقاده طهارة الماء والإناء وربما رجحه أصحابه بذكر هذا العدد المخصوص، وهو السبع؛ لأنه لو كان للنجاسة: لاكتفى بما دون السبع فإنه لا يكون أغلظ من نجاسة العذرة.</blockquote>
+      <p class="ar-translation">“ในประเด็นนี้มีสิ่งที่ต้องพิจารณาหลายเรื่อง: ประเด็นแรก: การที่ท่านนบี ﷺ สั่งให้ล้างภาชนะหลังจากที่สุนัขเลียเข้าไปนั้น แสดงถึงความเป็นนะญิสของภาชนะ และมีหะดีษที่ชัดเจนมากกว่านี้ในแง่ของการบ่งบอกถึงความเป็นนะญิส นั่นคือหะดีษที่ท่านนบี ﷺ กล่าวว่า: “วิธีการทำความสะอาดภาชนะของคนใดคนหนึ่งของพวกท่าน เมื่อสุนัขเลียได้เข้าไป คือให้ล้างเจ็ดครั้ง“ คำว่า “ฏุฮูร” (การทำความสะอาด) ในหะดีษนี้ ใช้ในบริบทของการชำระล้างสิ่งสกปรก (นะญิส) หรือการชำระล้างฮะดัษ ซึ่งในกรณีของหะดีษนี้ ไม่สามารถตีความว่าเป็นการชำระฮะดัษได้ ดังนั้นจึงต้องเป็นการชำระล้างนะญิส”</p>
+      <p>ท่านยังกล่าวต่อว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وحمل مالك هذا الأمر على التعبد، لاعتقاده طهارة الماء والإناء وربما رجحه أصحابه بذكر هذا العدد المخصوص، وهو السبع؛ لأنه لو كان للنجاسة: لاكتفى بما دون السبع فإنه لا يكون أغلظ من نجاسة العذرة وقد اكتفى فيها بما دون السبع والحمل على التنجيس أولى. ؛ لأنه متى دار الحكم بين كونه تعبدا، أو معقول المعنى، كان حمله على كونه معقول المعنى أولى لندرة التعبد بالنسبة إلى الأحكام المعقولة المعنى</blockquote>
+      <p class="ar-translation">“อิหม่ามมาลิกตีความคำสั่งนี้ว่าเป็นการกระทำลักษณะตะอับบุดียะฮ์ (ไม่ทราบเหตุผล) เพราะเขาเชื่อว่าภาชนะและน้ำยังคงสะอาด และบางครั้งบรรดาสานุศิษย์ของเขาก็ให้ความเห็นสนับสนุน ด้วยการตั้งข้อสังเกตุจากการที่มีการสั่งให้ล้างเจ็ดครั้งนั้น เป็นตัวชี้วัดว่า หากนี่เป็นการล้างเพื่อขจัดสิ่งสกปรกจริง ก็ใช้ได้ด้วยการล้างที่น้อยกว่าเจ็ดครั้ง เพราะคงไม่สกปรกมากไปกว่าสิ่งปฏิกูล ซึ่งการล้างสิ่งปฏิกูลนั้นไม่ต้องถึงเจ็ดครั้ง แต่การตีความว่ามันเกี่ยวข้องกับการทำให้สะอาดเนื่องจากสิ่งสกปรกทางศาสนา (นะญิส) ย่อมเป็นมุมมองที่ดีกว่าเพราะเมื่อข้อบังคับวนเวียนอยู่ระหว่างการปฏิบัติตามคำสั่งทางศาสนา (กล่าวคือล้าง โดยไม่ทราบเหตุผล) และระหว่างการทราบเหตุผล (ว่าเพราะเป็นนะญิส) กับการตีความว่าทราบเหตุผล (ที่กินกับปัญญา) ย่อมมีความเหมาะสมมากกว่า เนื่องจากการปฏิบัติตามคำสั่งทางศาสนา (ในประเด็นด้านนิติศาสตร์) โดยไม่ทราบเหตุผลนั้น มีอยู่น้อยนิดเมื่อเทียบกับข้อบังคับที่มีเหตุผล”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما كونه لا يكون أغلظ من نجاسة العذرة، فممنوع عند القائل بنجاسته، نعم ليس بأقذر من العذرة، ولكن لا يتوقف التغليظ على زيادة الاستقذار. وأيضا فإذا كان أصل المعنى معقولا قلنا به.</blockquote>
+      <p class="ar-translation">“(คำอธิบายต่อ) ข้อวิพากษ์ที่ว่า สุนัขนั้นไม่สกปรกไปมากกว่าสิ่งปฏิกูลนั้น อาจถูกปฏิเสธจากผู้ที่กล่าวว่าสุนัขเป็นนะญิส ใช่ สุนัขอาจไม่ดูสกปรกมากกว่าสิ่งปฏิกูล แต่ความเข้มงวดของการทำความสะอาดไม่ได้ขึ้นอยู่กับระดับความสกปรกเพียงอย่างเดียว และอีกเหตุผลหนึ่งคือ เมื่อหลักการหรือข้อกำหนดเบื้องต้นมีเหตุผลที่สมเหตุสมผล เราก็ยอมรับตามนั้น”</p>
+      <h2 class="article-h2">มัสฮับมาลิกีย์</h2>
+      <p>น้ำลายสุนัขไม่ถือเป็นนะญิส แต่นักวิชาการอัลมาลิกียะฮ์มีทัศนะที่แตกต่างกัน โดยถือว่าน้ำลายสุนัขไม่ใช่นะญิส และการสัมผัสสุนัขไม่ทำให้ผู้สัมผัสหรือสิ่งของที่สัมผัสนะญิส เว้นแต่จะมีหลักฐานชัดเจนถึงความสกปรกของสุนัขในบริบททางศาสนา</p>
+      <p>อิหม่ามอันนะวาวีย์ได้สาธยายทัศนะที่เห็นต่างตรงนี้ไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وفي مذهب مالك أربعة أقوال : طهارته ونجاسته وطهارة سؤر المأذون في اتخاذه دون غيره ، وهذه الثلاثة عن مالك ، والرابع عن عبد الملك بن الماجشون المالكي أنه يفرق بين البدوي والحضري وفيه : الأمر بإراقته وهذا متفق عليه عندنا ، ولكن هل الإراقة واجبة لعينها أم لا تجب إلا إذا أراد استعمال الإناء أراقه ؟ فيه خلاف</blockquote>
+      <p class="ar-translation">“ในมัสฮับมาลิกมีสี่ทัศนะเกี่ยวกับสถานะของสุนัข: (1) สุนัขเป็นสิ่งที่สะอาด (2) สุนัขเป็นสิ่งที่ไม่สะอาด (นะญิส) (3) น้ำลายจากสุนัขที่ได้รับอนุญาตให้เลี้ยงถือว่าสะอาด แต่ของสุนัขที่ไม่ได้รับอนุญาตถือว่าไม่สะอาด (ทัศนะทั้งสามนี้มาจากอิหม่ามมาลิก) (4) ทัศนะนี้มาจากอับดุลมาลิก บิน มาญิชูน อัลมาลิกีย์ ซึ่งท่านได้แบ่งแยกระหว่างสุนัขจากชนบทและสุนัขในเมือง ในเรื่องนี้ ยังมีประเด็นความเห็นต่างในเรื่องของคำสั่งให้เทน้ำที่สุนัขดื่มทิ้ง ซึ่งทัศนะนี้เป็นที่เห็นพ้องในหมู่นักวิชาการ แต่ก็มีความเห็นต่างว่า การเทน้ำนั้นจำเป็นหรือไม่ หรือจำเป็นก็ต่อเมื่อจะนำภาชนะไปใช้งาน”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ذكر أكثر أصحابنا أن الإراقة لا تجب لعينها بل هي مستحبة فإن أراد استعمال الإناء أراقه ، وذهب بعض أصحابنا إلى أنها واجبة على الفور ، ولو لم يرد استعماله ، حكاه الماوردي من أصحابنا في كتابه الحاوي . . .ويحتج للأول بالقياس على باقي المياه النجسة ، فإنه لا تجب إراقتها بلا خلاف ، ويمكن أن يجاب عنها بأن المراد في مسألة الولوغ الزجر والتغليظ والمبالغة في التنفير عن الكلاب.</blockquote>
+      <p class="ar-translation">“(มาญิชูนได้กล่าวว่า:) นักวิชาการส่วนใหญ่ในหมู่เราต่างเห็นว่า การเทน้ำที่สุนัขเลียทิ้ง ไม่ใช่สิ่งที่จำเป็น แต่เป็นสิ่งที่แนะนำให้กระทำ หากผู้ใดต้องการใช้ภาชนะนั้น ก็ควรเทน้ำทิ้งเสียก่อน บางคนในหมู่นักวิชาการของเรามีความเห็นว่าเป็นสิ่งที่จำเป็นต้องทำทันที แม้ว่าจะไม่มีเจตนาจะใช้ภาชนะนั้นก็ตาม (อิหม่ามอันนะวาวีย์ระบุว่า:) เรื่องนี้ถูกบันทึกโดยอัลมาวัรดีย์ในหนังสือของเขาที่ชื่อ อัลฮาวีย์ สำหรับทัศนะที่ว่าไม่จำเป็น (ต้องเททิ้งทันที) ก็มีการเทียบกับน้ำที่มีสิ่งสกปรกอื่นๆปนเปื้อน ซึ่งไม่จำเป็นต้องเททิ้งทันที โดยไม่มีความเห็นที่ขัดแย้งในเรื่องนี้ และอาจมีการโต้แย้งเพิ่มเติมว่า ในกรณีของสุนัขที่เลียภาชนะนั้น เจตนารมณ์คือต้องการห้ามปรามและเน้นหนักถึง (เชื้อโรคต่างๆใน) สุนัขด้วยการเน้นย้ำและเตือนอย่างจริงจัง”</p>
+      <p>อิบนุ อับดิลบัร นักกฎหมายผู้เลื่องลือแห่งมัสฮับมาลิกีย์ได้ระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اختلف العلماء في العمل بظاهر هذا الحديث واختلفوا في معناه أيضا على ما نذكره بعون الله ، فأما أكثر أهل العلم من الصحابة والتابعين ومن بعدهم من فقهاء المسلمين فإنهم يقولون إن الإناء يغسل من ولوغ الكلب سبع مرات بالماء</blockquote>
+      <p class="ar-translation">“บรรดานักวิชาการมีความเห็นแตกต่างกันเกี่ยวกับการปฏิบัติตามนัยยะผิวเผินของความหมายตามตัวอักษรดังที่ปรากฎของหะดีษนี้ (คือหะดีษที่สุนัขได้เลียภาชนะ) และพวกเขายังมีความเห็นที่แตกต่างกันเกี่ยวกับความหมายของหะดีษบทนี้อีกด้วย ซึ่งเราจะกล่าวถึง (ประเด็นดังกล่าวนี้) และสำหรับนักวิชาการส่วนใหญ่จากหมู่เศาะหาบะฮ์ (ผู้ร่วมสมัยกับศาสดา) และตาบิอีน (ผู้สืบทอดยุคหลัง) และผู้ที่อยู่ในยุคสมัยถัดมาหลังจากพวกเขาจากหมู่นักนิติศาสตร์อิสลามนั้น พวกเขากล่าวว่า ภาชนะที่ถูกสุนัขเลียต้องล้างด้วยน้ำเจ็ดครั้ง“</p>
+      <p>และท่านได้ระบุถัดไปว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">واختلف الفقهاء أيضا في سؤر الكلب وما ولغ فيه من الماء والطعام ، فجملة ما ذهب إليه مالك واستقر عليه مذهبه عند أصحابه أن سؤر الكلب طاهر ويغسل الإناء من ولوغه سبعا تعبدا استحبابا أيضا لا إيجابا ، وكذلك يستحب لمن وجد ماء لم يلغ فيه الكلب مع ماء قد ولغ فيه كلب أن يترك الذي ولغ فيه الكلب وغيره أحب إليه منه</blockquote>
+      <p class="ar-translation">“นักนิติศาสตร์อิสลามมีความเห็นแตกต่างกันในเรื่องน้ำลายของสุนัขและสิ่งที่สุนัขเลีย ไม่ว่าจะเป็นน้ำหรืออาหาร โดยข้อสรุปที่อิหม่ามมาลิกและเหล่าสานุศิษย์และนักวิชาการในมัสฮับของท่านได้ยึดถือคือ น้ำลายของสุนัขนั้นถือว่ามีความสะอาด และการล้างภาชนะที่สุนัขเลียเจ็ดครั้งนั้นเป็นการปฏิบัติแบบ “ตะอับบุด” (ไม่ทราบเหตุผล) เพื่อเป็นการแนะนำส่งเสริมที่ดี การล้างภาชนะดังกล่าวนั้นไม่ใช่เป็นข้อบังคับ นอกจากนี้ ยังแนะนำให้ผู้ที่พบว่า เมื่อน้ำที่ไม่ถูกสุนัขเลียอยู่คู่กับน้ำที่ถูกสุนัขเลีย ให้เลือกใช้น้ำที่ไม่ถูกเลียจะดีกว่า”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وجاءت عنه روايات في ظاهرها اضطراب ، والذي تحصل عليه مذهبه ما أخبرتك ، ولا بأس عنده بأكل ما ولغ فيه الكلب من اللبن والسمن وغير ذلك ، ويستحب هرق ما ولغ فيه من الماء ، وفي الجملة هو عنده طاهر ، وقال : هذا الحديث ما أدري ما حقيقته ؟ وضعفه مرارا فيما ذكر ابن القاسم عنه</blockquote>
+      <p class="ar-translation">“และได้มีการรายงานจากอิหม่ามมาลิกหลายเรื่องที่ในเบื้องต้นอาจดูขัดแย้งกัน แต่สรุปที่ได้จากแนวทางของท่าน ก็คือสิ่งที่ได้กล่าวไว้แล้วในข้างต้น นั่นคือ อิหม่ามมาลิกไม่เห็นว่าเป็นปัญหาในการบริโภคสิ่งที่สุนัขได้เลียไปแล้ว เช่น ขนม นม เนย หรือสิ่งอื่นๆ และแนะนำให้เทน้ำที่สุนัขเลียทิ้ง อย่างไรก็ตาม โดยทั่วไปแล้วอิหม่ามมาลิกถือว่าสิ่งเหล่านั้นสะอาด และท่านได้กล่าวว่า “ฉันไม่รู้ว่าแท้จริงแล้วหะดีษนี้ต้องการจะสื่อถึงแก่นสารไปยังแนวทางใด” และท่านได้วิจารณ์หะดีษนี้หลายครั้งว่าอยู่ในระดับที่อ่อน ตามที่อิบนุลกอซิมได้รายงานเอาไว้”</p>
+      <p>อิบนุ รุชด์ ผู้หลาน ซึ่งเป็นนักกฎหมายและผู้พิพากษาที่มีชื่อเสียงอันโด่งดังแห่งเมืองอันดาลุสได้ระบุไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فذهب مالك في الأمر بإراقة سؤر الكلب وغسل الإناء منه ، إلى أن ذلك عبادة غير معللة ، وأن الماء الذي يلغ فيه ليس بنجس ، ولم ير إراقة ما عدا الماء من الأشياء التي يلغ فيها الكلب في المشهور عنه ، وذلك كما قلنا لمعارضة ذلك القياس له ، ولأنه ظن أيضا أنه إن فهم منه أن الكلب نجس العين عارضه ظاهر الكتاب ، وهو قوله تعالى : (فكلوا مما أمسكن عليكم) يريد أنه لو كان نجس العين لنجس الصيد بمماسته ، وأيد هذا التأويل بما جاء في غسله من العدد ، والنجاسات ليس يشترط في غسلها العدد فقال : إن هذا الغسل إنما هو عبادة ، ولم يعرج على سائر تلك الآثار لضعفها عنده .</blockquote>
+      <p class="ar-translation">“อิหม่ามมาลิกมีความเห็นว่า คำสั่งที่ให้เทน้ำที่สุนัขเลียและล้างภาชนะนั้นเป็นการปฏิบัติแบบ “ตะอับบุด” ที่ไม่สามารถทราบเหตุผลทั่วไปได้ และน้ำที่สุนัขเลียไม่ถือว่าเป็นนะญิส (สิ่งสกปรก) โดยเขาไม่เห็นด้วยกับการเททิ้งสิ่งอื่นๆที่สุนัขเลียนอกจากน้ำ ซึ่งเป็นความเห็นที่โด่งดังมากในมัสฮับของเขา สาเหตุที่อิหม่ามมาลิกมีความเห็นเช่นนี้ เนื่องจากการตีความเกี่ยวกับความเป็นนะญิสของสุนัข ซึ่งขัดแย้งกับหลักการของเขาอย่างชัดเจน และเพราะหากสุนัขถือเป็นนะญิสทั้งหมดทุกส่วน ก็จะขัดแย้งกับอายะฮ์ในอัลกุรอานที่กล่าวว่า “จงกินจากสิ่งที่สุนัขล่าให้แก่พวกเจ้า” ซึ่งจะหมายความว่าหากสุนัขเป็นนะญิส สิ่งที่มันจับไว้ (เช่น สัตว์ที่ล่า) ก็จะกลายเป็นนะญิสไปด้วยเพราะการสัมผัสกับสุนัข นอกจากนี้ เขายังสนับสนุนแนวคิดนี้ด้วยการพูดถึงจำนวนครั้งในหะดีษ เกี่ยวกับการล้างภาชนะเจ็ดครั้ง โดยที่นะญิสทั่วไปไม่จำเป็นต้องระบุจำนวนครั้งที่เจาะจง ดังนั้น อิหม่ามมาลิกจึงสรุปว่าการล้างภาชนะจากการที่สุนัขเลียเป็นเรื่องของการปฏิบัติแบบ “ตะอับบุด” ไม่ใช่เพราะเหตุนะญิส และเขาไม่ได้ยึดติดกับรายงานอื่นๆ ซึ่งอิหม่ามมาลิกเห็นว่า หะดีษเหล่านั้นไม่มีความแข็งแรงเพียงพอ”</p>
+      <h2 class="article-h2">มัสฮับฮัมบาลีย์</h2>
+      <p>มัสฮับฮัมบาลีย์มีความใกล้เคียงกับมัสฮับชาฟิอีในหลายๆ ด้าน โดยเฉพาะในเรื่องของการถือว่าสุนัขเป็นนะญิส (สิ่งสกปรกทางศาสนา) และวิธีการทำความสะอาดหลังจากสัมผัสสุนัข เช่น การล้างด้วยน้ำ 7 ครั้ง โดยหนึ่งในนั้นต้องใช้น้ำผสมดิน</p>
+      <p>อย่างไรก็ตาม ทั้งสองมัสฮับก็ยังคงมีความแตกต่างบางประการ เช่น ในมัสฮับชาฟิอีย์ น้ำลายของสุนัขถูกถือว่าเป็นนะญิส (นะญิสหนัก) เช่นเดียวกับมัสฮับฮัมบาลีย์ แต่การเลี้ยงสุนัขจะถูกอนุญาตในบางกรณี เช่น เพื่อการล่าสัตว์ การรักษาความปลอดภัย และการคุ้มครองทรัพย์สิน ในภาพรวมแม้ว่ามัสฮับฮัมบาลีย์จะมีความคล้ายคลึงกับมัสฮับชาฟิอีย์ในหลายด้าน แต่ก็ยังมีความเข้มงวดมากกว่าในบางประเด็น</p>
+      <p>อิบนุ กุดามะฮ์ นักวิชาการด้านกฎหมายอิสลามแห่งมัสฮับฮัมบาลีย์ได้กล่าวระบุไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">مسألة قال : ( وكل إناء حلت فيه نجاسة ; من ولوغ كلب ، أو بول ، أو غيره ، فإنه يغسل سبع مرات إحداهن بالتراب ) النجاسة تنقسم قسمين : أحدهما ; نجاسة الكلب والخنزير والمتولد منهما ، فهذا لا يختلف المذهب في أنه يجب غسلها سبعا ، إحداهن بالتراب ، وهو قول الشافعي وعن أحمد : أنه يجب غسلها ثمانيا ، إحداهن بالتراب</blockquote>
+      <p class="ar-translation">“ประเด็นนี้ได้ระบุว่า: “และภาชนะใดก็ตามที่มีนะญิสตกลงไป เช่น น้ำลายของสุนัข ปัสสาวะ หรือสิ่งอื่นๆที่มาจากสุนัข จำเป็นต้องล้างเจ็ดครั้ง โดยหนึ่งในนั้นต้องล้างด้วยน้ำผสมดิน” ซึ่งนะญิสนั้น แบ่งออกเป็นสองประเภท: (1) หนึ่งในนั้นคือนะญิสของสุนัขและหมู รวมถึงสัตว์ที่เกิดจากทั้งสองชนิดนี้ ซึ่งไม่เป็นที่ถกเถียงกันในมัสฮับ (ฮัมบาลีย์) ว่า การล้างนะญิสประเภทนี้ต้องทำเจ็ดครั้ง โดยหนึ่งในนั้นต้องล้างด้วยน้ำผสมดิน ซึ่งความเห็นนี้ยังเป็นทัศนะของอิหม่ามอัชชาฟิอีย์ด้วย ในขณะที่ทัศนะของอิหม่ามอะห์มัดระบุว่า การล้างนะญิสดังกล่าวต้องทำแปดครั้ง โดยหนึ่งในนั้นต้องล้างด้วยดิน”</p>
+      <p>และท่านยังได้ระบุถัดไปว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا فرق بين النجاسة من ولوغ الكلب ، أو يده ، أو رجله ، أو شعره ، أو غير ذلك من أجزائه ; لأن حكم كل جزء من أجزاء الحيوان حكم بقية أجزائه ، على ما قررناه ، وحكم الخنزير حكم الكلب ; لأن النص وقع في الكلب ، والخنزير شر منه وأغلظ ; لأن الله تعالى نص على تحريمه ، وأجمع المسلمون على ذلك ، وحرم اقتناؤه .</blockquote>
+      <p class="ar-translation">”และไม่มีความแตกต่างใดๆระหว่างนะญิสที่มาจากน้ำลายของสุนัข มือ เท้า ขนหรือส่วนอื่นๆของร่างกายสุนัข เพราะทุกส่วนของสัตว์นั้นใช้หลักการและข้อบัญญัติเดียวกันทั้งสิ้น ตามที่เราได้ชี้แจงไว้ และข้อบัญญัติของสุกรก็เหมือนกับของสุนัข เพราะตัวบทระบุถึงสุนัข ในขณะที่สุกรนั้นมีความเข้มงวดในเรื่องของความสกปรกมากกว่าสุนัข เพราะเนื่องจากอัลลอฮ์ทรงกำหนดห้าม (บริโภคเนื้อ) สุกรไว้อย่างชัดเจน และบรรดาปราชญ์มุสลิมจึงต่างมีฉันทามติในเรื่องนี้ และการครอบครองสุกรก็ถือว่าถูกห้ามอย่างเด็ดขาด”</p>
+      <h2 class="article-h2">มัสฮับหะนาฟีย์</h2>
+      <p>อัลกะซานีย์ ผู้เชี่ยวชาญด้านกฎหมายแห่งมัสฮับอัลหะนาฟียะฮ์ได้ระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أن النجاسة نوعان : حقيقية ، وحكمية ، ولا خلاف في أن النجاسة الحكمية - وهي الحدث والجناية - تزول بالغسل مرة واحدة ، ولا يشترط فيها العدد . وأما النجاسة الحقيقية فإن كانت غير مرئية ، كالبول ونحوه ، ذكر في ظاهر الرواية أنه لا تطهر إلا بالغسل ثلاثا ، وعند الشافعي  تطهر بالغسل مرة واحدة ... ، إلا في ولوغ الكلب في الإناء ، فإنه لا يطهر إلا بالغسل سبعا إحداهن بالتراب بالحديث ، وهو قول النبي صلى الله عليه وسلم : أنه قال : { إذا ولغ الكلب في إناء أحدكم فليغسله سبعا إحداهن بالتراب } . ( ولنا ) ما روي عن النبي صلى الله عليه وسلم أنه قال : { يغسل الإناء من ولوغ الكلب ثلاثا } فقد أمر بالغسل ثلاثا ، وإن كان ذلك غير مرئي</blockquote>
+      <p class="ar-translation">“นะญิสนั้นแบ่งออกเป็นสองประเภท: (1) นะญิสทางกายภาพ (รูปธรรม) และ (2) นะญิสทางบทบัญญัติ (นามธรรม) ในกรณีของนะญิสทางบทบัญญัติ เช่น ความเป็นนะญิสที่เกิดจากหะดัสเล็ก (ไม่มีน้ำละมาด) หรืออยู่ในสภาวะที่ไม่สะอาดตามหลักศาสนา (เช่น การมีประจำเดือนหรือหลังจากความสัมพันธ์ทางเพศ) ไม่มีข้อขัดแย้งว่า สามารถชำระล้างด้วยการล้างครั้งเดียว และไม่จำเป็นต้องล้างจำนวนหลายครั้ง ส่วนความเป็นนะญิสทางกายภาพ ถ้าเป็นสิ่งที่มองไม่เห็น เช่น ปัสสาวะหรือของเหลวอื่นๆ ต้องล้างสามครั้งเพื่อให้สะอาด แต่ตามทัศนะของอิหม่ามชาฟิอีย์ การล้างเพียงครั้งเดียวก็เพียงพอแล้ว ยกเว้นในกรณีที่มีสุนัขเลียลงในภาชนะ ซึ่งจะต้องล้างเจ็ดครั้ง หนึ่งในนั้นต้องล้างด้วยน้ำผสมดินเหนียว ซึ่งเป็นไปตามคำสอนของท่านนบีมุฮัมมัด ﷺ ที่กล่าวว่า: “หากสุนัขเลียลงในภาชนะของท่าน ท่านจงล้างมันเจ็ดครั้ง หนึ่งในนั้นให้ล้างด้วยดิน” แต่สำหรับเรา (ที่ยึดถือว่าล้างสามครั้งก็เพียงพอแล้วไม่ต้องเจ็ด) ได้ยกหลักฐานจากท่านนบีมุฮัมมัด ﷺ ที่กล่าวว่า: “ภาชนะที่สุนัขเลีย จะต้องล้างสามครั้ง” ดังนั้น ตามหะดีษบทนี้การล้างเพียงสามครั้งก็เพียงพอแล้ว แม้นะญิสจะมองไม่เห็นก็ตาม”</p>
+      <p>อิบนุ นุญัยม์ นักกฎหมายอีกท่านหนึ่งนามอุโฆษได้ระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقد قدمنا أن سؤر الكلب نجس عند أصحابنا جميعا أما على القول بنجاسة عينه فظاهر ، وأما على القول المصحح بطهارة عينه ; فلأن لحمه نجس ولعابه متولد من لحمه ولا يلزم من طهارة عينه طهارة سؤره لنجاسة لحمه ولا يلزم من نجاسة سؤره نجاسة عينه ، وإنما يلزم من نجاسة سؤره نجاسة لحمه المتولد منه اللعاب كما صرح به في التجنيس وفتح القدير وغيرهما</blockquote>
+      <p class="ar-translation">“เราได้กล่าวมาก่อนหน้านี้ว่าน้ำที่เหลือจากการดื่มของสุนัข ถือว่าเป็นนะญิส (สิ่งสกปรก) ตามทัศนะของนักวิชาการทุกคนในมัสฮับของเรา (หมายถึงมัสฮับหะนาฟีย์) ทั้งนี้ หากยึดตามทัศนะที่ถือว่าสุนัขทั้งตัวเป็นนะญิส ก็เห็นได้ชัดเจน (ว่าน้ำที่เหลือก็จะเป็นนะญิสไปด้วย) แต่อย่างไรก็ตาม หากยึดตามทัศนะที่ถูกต้อง (อัศศอเฮี้ยะฮ์) ที่ระบุว่าสุนัขนั้น ตัวมันเองสะอาด แต่น้ำที่เหลือจากการดื่มก็ยังถือเป็นนะญิส เพราะเนื้อของมันเป็นนะญิส ทั้งนี้น้ำลายของมันก็มาจากเนื้อ (จึงเป็นนะญิสด้วย) ดังนั้น การที่สุนัขตัวมันเองสะอาดไม่ได้หมายความว่าน้ำที่เหลือจะสะอาดตามไปด้วย เพราะเนื้อของมันยังคงเป็นนะญิส และการที่น้ำที่เหลือจากสุนัขดื่มเป็นนะญิสไม่ได้หมายความจะบ่งชี้ว่า สุนัขทั้งตัวจะเป็นนะญิสด้วย แต่สิ่งที่สรุปได้ก็คือ เมื่อเนื้อของสุนัขเป็นนะญิส น้ำลายที่เกิดจากเนื้อของมันก็เป็นนะญิสตามไปด้วย ดังที่ได้อธิบายไว้อย่างชัดเจนในหนังสือ “อัตตัจญ์นีส” และ “ฟัตหุลเกาะดีร” รวมถึงหนังสืออื่นๆ”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وسيأتي إيضاحه في الكلام على سؤر السباع والمذكور في كتب الشافعية كالمهذب أنه لا فرق بين الولوغ ووضع بعض عضو في الإناء ولم أر هذا في كتبنا والذي يقتضيه كلامهم على القول بنجاسة عينه تنجس الماء وعلى القول بطهارة عينه عدم تنجسه أخذا من قولهم إذا ولغ الكلب في البئر كما قدمناه ; لأن ماء البئر في حكم الماء القليل كماء الآنية كما قدمناه ولا فرق بين ولوغ كلب أو كلبين في الاكتفاء بالثلاث ; لأن الثاني لم يوجب تنجسا كما لا يخفى</blockquote>
+      <p class="ar-translation">“และต่อจากนี้จะมีการอธิบายเพิ่มเติมเกี่ยวกับน้ำที่เหลือจากการดื่มของสัตว์ดุร้าย ซึ่งในหนังสือของมัสฮับอัชชาฟิอียะฮ์ เช่น อัลมุฮับซับได้ระบุว่า: ไม่มีข้อแบ่งแยกระหว่างการดื่มน้ำของสุนัขกับการเอาส่วนหนึ่งส่วนใดของร่างกายของสุนัข (เช่น ขาหรือหาง) ไปสัมผัสกับน้ำในภาชนะ (กล่าวคือ น้ำก็ยังคงเป็นนะญิสเมื่อถูกสุนัขสัมผัส) ทั้งนี้ข้าพเจ้า (อิบนุ นุญัยม์) ไม่พบข้อมูลในทำนองนี้ ในหนังสือของนักวิชาการอัลหะนาฟียะฮ์ แต่สิ่งที่สอดคล้องกับคำกล่าวของอัชชาฟิอียะฮ์ คือทัศนะที่ว่า เมื่อสุนัขเป็นนะญิส น้ำในภาชนะนั้นก็จะกลายเป็นนะญิสไปด้วย แต่ในทัศนะที่ว่าสุนัขสะอาด น้ำในภาชนะจะไม่กลายเป็นนะญิส เหตุผลที่เป็นเช่นนี้ ก็มาจากคำกล่าวของพวกเขา (คือนักวิชาการหะนาฟียะฮ์ในยุคก่อน) ที่ระบุว่าหากสุนัขดื่มน้ำจากบ่อน้ำ น้ำในบ่อนั้นจะอยู่ภายใต้กฎเดียวกับน้ำในภาชนะเล็กๆ ซึ่งเราได้กล่าวไว้แล้วก่อนหน้านี้ นอกจากนี้ ไม่มีความแตกต่างระหว่างการดื่มของสุนัขหนึ่งตัวหรือสองตัว ในแง่ที่ว่าน้ำต้องล้างสามครั้ง เนื่องจากการดื่มของสุนัขตัวที่สองไม่ได้ทำให้น้ำกลายเป็นนะญิสมากขึ้น”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وإذا ولغ الكلب في طعام فالذي يقتضيه كلامهم أنه إن كان جامدا قور ما حوله وأكل الباقي ، وإن كان مائعا انتفع به في غير الأبدان</blockquote>
+      <p class="ar-translation">“และเมื่อสุนัขเลียอาหาร ตามสำนวนของพวกเขาระบุว่า หากอาหารนั้นเป็นของแข็ง ให้ขูดเอาบริเวณที่มันเลียออกและกินส่วนที่เหลือได้ แต่หากอาหารนั้นเป็นของเหลว ให้ใช้ประโยชน์จากมันในทางอื่นที่ไม่เกี่ยวกับร่างกาย”</p>
+      <h2 class="article-h2">ข้อแนะนำในการเลี้ยงสุนัข</h2>
+      <p>สำหรับท่านที่ประสงค์และมีความจำเป็นจะเลี้ยงสุนัข ควรมีการปฏิบัติด้วยความรับผิดชอบและเป็นไปตามหลักการของศาสนา เช่น ควรให้การดูแลที่ดีและพยายามหลีกเลี่ยงการละเมิดข้อกำหนดทางศาสนาที่ว่าด้วยสิทธิต่อสัตว์ การปฏิบัติต่อสุนัขด้วยความเมตตาและการให้ความรักเป็นสิ่งที่สำคัญ ซึ่งเป็นที่ทราบกันแล้วว่าในศาสนาอิสลามเอง การสัมผัสสุนัขมีข้อกำหนดที่ชัดเจน มุสลิมนั้นไม่ได้เป็นคนกลัวสุนัข แต่เรื่องดังกล่าวเป็นเรื่องปัจเจกมากกว่าเป็นเรื่องศาสนา เนื่องจากสุนัขถูกมองว่ามีสถานะที่ไม่สะอาดในหลายกรณีตามมติส่วนใหญ่ของนักวิชาการอิสลาม ยกเว้นฝั่งของนักวิชาการอัลมาลิกียะฮ์ที่มองว่าสะอาด ทั้งนี้การมีทัศนะว่าสุนัขไม่สะอาด ไม่ได้แปลว่า ห้ามสัมผัส จับหรือเล่นกับสุนัขไม่ได้</p>
+      <p>อย่างไรก็ตาม การสัมผัส จับและเล่นกับสุนัขไม่ถือว่าเป็นสิ่งต้องห้ามโดยตรง แต่จะมีข้อกำหนดเกี่ยวกับการทำความสะอาดเมื่อต้องเข้าสู่การประกอบศาสนกิจตามมาเพียงเท่านั้น</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การสัมผัสสุนัขในอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/touching-dogs-in-islam.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">أخرجه مسلم في صحيح مسلم، كتاب المساقاة، رقم 1575، من حديث ابن عمر رضي الله عنهما. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">القرآن الكريم، سورة المائدة (5)، الآية 4. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>
