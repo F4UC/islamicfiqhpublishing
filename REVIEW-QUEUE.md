@@ -150,3 +150,29 @@
 - [ ] **⚑ R56 quote-balance:** 4 translations closed with opening “ in source → fixed to ”
 - [ ] **⚑ Arabic source quirk kept byte-exact:** B2 "ا تَجَاوَزْنَا" (likely dropped مـ) + editorial brackets `[ أَنْ ]`, `( فِي التُّرْبِ وَالدُّورِ )`
 - [ ] self-made: มุหัมหมัด→มุฮัมมัด (~5×); typo-fix ทึ่→ที่, ไส้ใช้→ไว้ใช้ (correct-where-certain); S4 yamok; +1 editorial h2
+
+---
+
+# Batch A + QC cleanup (extends PR #190) · branch `claude/loving-ride-m41v40`
+
+> Per One: extend PR #190 to "Batch A + QC cleanup" (same branch, no new PR). Keep DRAFT, no merge.
+
+## (A) aya/hadith placement fix — golden-master conformance (Rule, moon-sighting)
+Bug = `<p class="ar-translation">` (and `<p class="block-source">`) **inside** `<div class="aya-block">`/`<div class="hadith-block">`. Correct = block holds ONLY `<p class="block-ar">`; Thai translation is a normal `<p>` **outside** (āyah `{…}`, hadith `“…”`); `block-source` removed (citation via footnote/attribution).
+Scope = exactly the files matching One's grep (`ar-translation` before `</div>` of an aya/hadith block):
+- `tarikh/madain-salih.html` (Batch A #8) — 11 blocks
+- `nitisart/eating-liver-spleen-of-sacrificial-animal.html` (#25, live) — 2 blocks
+- `tarikh/abu-al-aynaa-blind-satirist.html` (live) — 6 blocks
+- `kalam/al-ashari-and-the-unity-of-the-ummah.html` (live) — 12 blocks
+- `_TEMPLATE.html` — 1 (N2 example)
+All: `block-ar` kept **byte-exact** (before==after verified); every `<sup class="fn-ref">` preserved (incl. al-ashari where it sat inside `block-source`); footnote counts unchanged; lint/HTMLParser PASS.
+- **madain-salih:** its āyāt were cited only by `block-source`; after removal, citations restored via R49 intro attribution ("…ในสูเราะฮ์อัชชุอะรออ์ อายะฮ์ที่ 149 ว่า:", "…ในสูเราะฮ์อัลอะอ์รอฟ อายะฮ์ที่ 74 ว่า:"); coverage 99.03% (PASS).
+- **⚑ pre-existing (NOT changed here):** abu-al-aynaa (ref-7…22) and al-ashari (ref-16…18) have bibliography entries without in-text fnref — counts identical to `origin/main`, so pre-existing, left as-is (out of cleanup scope).
+
+## (B) editorial — live merged articles
+- **#25 eating-liver-spleen:** removed duplicate "คือ คือ"→"คือ"; unified ฮานะฟียะฮ์→ฮะนะฟียะฮ์ + ฮานะฟีย์→ฮะนะฟีย์ (2×, to dominant ฮะ-stem); removed informal aside "ที่ตัวเล็กยังมีความน่ารัก" (R5 register); "ฎ้อบ" = ضبّ (Uromastyx/spiny-tailed lizard) — translit reviewed OK; "อิบนุ อาบิดีน" — only one rendering present (already consistent, spaced per R52).
+- **#70 kumushtakin:** สุล่าน→สุลต่าน (1×); unified เมอร์ซิน/เมอร์ซิฟ→เมอร์ซิฟอน (Merzifon) ×5 incl. H2; **fact-geo:** corrected the wrong identification "ปัจจุบันคือเมืองเมอร์ซินในตุรกี" — the 1101 battle site is Mersivan/Merzifon (จ.อามาสยา), NOT the Mediterranean-coast city Mersin → rewrote the parenthetical with a contrast note.
+
+## (C) content-gate (5 Batch A) + reading-time
+- #6 (aya/hadith translation outside block): only madain-salih had such blocks → fixed; #81/#56/#72/#2 have none. #1–5 (translit/proofread/register/fact-geo/citations) verified at build.
+- reading-time re-run (placement moved translations into counted prose): madain-salih 9, eating-liver-spleen 9, abu-al-aynaa 17, al-ashari 17. articles.json stays **77 entries** (no new entries; readingTime updated per Rule 55).

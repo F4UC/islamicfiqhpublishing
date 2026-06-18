@@ -318,3 +318,11 @@
 | 7 | وَسَمِعَ أَبُو تَمَامٍ… (+unescape `( … )`) | keep voweled | 1ec8d55ab15b |
 | 8 | وَلَمَّا انْتَهَى خَبَرُ إِحْرَاقِ الْمَشْهَدِ… | keep voweled | 90ba57dc6d09 |
 - extracted byte-exact จาก source ที่ดาวน์โหลด (no hand-retype); ลบเฉพาะ invisibles + unescape `\[`/`\]`; harakat untouched. source quirk "ا تَجَاوَزْنَا" + editorial brackets คง byte-exact (FLAG).
+
+## 2026-06-18 — QC cleanup (aya/hadith placement) · branch `claude/loving-ride-m41v40` (PR #190)
+
+**ไม่มีการแตะตัวอักษรอาหรับ (no Arabic harakat/skeleton touched).** การย้ายคำแปลออกนอกบล็อก aya/hadith เป็นการจัดวาง HTML ล้วน:
+- ทุก `<p class="block-ar">` (ตัวบทอายะฮ์/หะดีษ) คงไว้ **byte-exact** — พิสูจน์ว่า before==after ของรายการ block-ar ทั้งหมดในไฟล์ (madain-salih, eating-liver-spleen, abu-al-aynaa, al-ashari, _TEMPLATE) ก่อน/หลัง transform
+- สิ่งที่ลบคือ `<p class="block-source">` ซึ่งเป็น **ป้ายที่มาภาษาไทย** ("สูเราะฮ์… อายะฮ์ที่ …" / "บันทึกโดยอัลบุคอรีย์") ไม่ใช่ตัวบทอาหรับ
+- ไม่มีการ re-fetch/แก้ canonical ใหม่ · madain-salih: re-verify Quran (quran.com) + hadith Bukhari 433 (sunnah.com) ยังคง byte-exact หลัง transform
+- editorial #25/#70 เป็นร้อยแก้วไทย/translit ไม่แตะตัวบทอาหรับ
