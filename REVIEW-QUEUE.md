@@ -83,3 +83,11 @@
 - **[4] อิบนุ ญุซัยย์ เสียชีวิต 1355 (date):** คง 1355 verbatim + footnote ² (ref-2): แหล่งส่วนใหญ่ ~ค.ศ. 1356-1357
 - §6 footnote↔bib: fnref-1/2 ↔ ref-1/2 bidirectional ครบ ไม่มี orphan · coverage 99.47% · HTMLParser OK · lint PASS · reading-time 22 (ไม่เปลี่ยน → articles.json ไม่แตะ)
 - หลักการ (precedent ทั้งเฟส): source factual slip → ไม่ silent-fix/ไม่เดาค่าแทน; correct-in-body เฉพาะที่ค่าถูกต้องแน่นอน (#1,#2), ที่ไม่แน่ใจ/ต้องเดา (#3,#4) → คง verbatim + footnote
+
+## kumushtakin-ibn-danishmend — กุมุชตะกีน อิบนุ ดานิชเมนด์ (Batch A #70) · branch claude/phase2a-kumushtakin
+- **source:** Drive `1H4_UozOC9PtMk3cHwGFZGFLDWhsrziqmYd1NXKxNAp0` (#70) · ตอน: 1 · category history
+- **child-safety (R71):** ✅ ผ่าน — ประวัติศาสตร์การทหาร (ครูเสด/ดานิชเมนด์) ไม่มีประเด็นเด็ก
+- **สถานะ:** ✅ lint PASS · coverage **99.99%** · reading-time 24 · HTMLParser OK
+- **Arabic:** ไม่มี aya/hadith/scholar-quote · inline Latin "Manzikert" (translit aid, R78) → ไม่มี footnote/bib, ไม่มี AUDIT-FIXES
+- **self-made:** R80 ย่อชื่อ (`...` → `:`), ทว่า→แต่ (S2, 1×), markdown `\!`→`!` (2×), section `[…]`→`<h2>`, S4 ไม้ยมก (7×)
+- **⚑ typo source (คงไว้, flag):** "สุล่านเซลจุก" (น่าจะ "สุลต่าน") — คงตาม source (R1), ขอ One ยืนยันแก้
