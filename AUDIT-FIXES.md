@@ -248,3 +248,7 @@
 
 - เป็น **skeleton edit** (เติมฮัมซะฮ์) ไม่ใช่ strip-harakat/canonical-paste → **flag ใน REVIEW-QUEUE ขอ One ยืนยัน/revert ได้**
 - ไม่ใช่อายะฮ์/หะดีษ/ตัวบท-matn ของปราชญ์ (เป็นชื่อตำรา proper noun ที่รูปถูกต้องแน่นอน) · coverage 99.91% (Arabic ยกเว้น) · HTMLParser OK · lint PASS
+
+## 2026-06-18 — PHASE 2 · #182 editorial pass (ibn-battuta) — NON-ARABIC approved R1 deviations (One-confirmed)
+
+**ไม่ใช่การแตะตัวอาหรับ** (บันทึกที่นี่ตามที่ One สั่งให้ log ทั้ง REVIEW-QUEUE + AUDIT-FIXES) — เป็น approved R1 deviation ในร้อยแก้วไทย + เพิ่ม footnote (ไม่มีการแก้ skeleton/harakat อาหรับ): [1] 1324→1325 (consistency)+note · [2] แอฟริกาใต้→แอฟริกาตะวันตก+note · [3] Port Said คง verbatim+footnote · [4] Ibn Juzayy 1355 คง verbatim+footnote · รายละเอียดใน REVIEW-QUEUE.md · ดูแนวทาง: correct-in-body เฉพาะค่าที่แน่นอน, ไม่แน่ใจ→คง+footnote

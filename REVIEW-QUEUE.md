@@ -74,3 +74,12 @@
 - [ ] **⚑ Arabic book-title correction (Codex, approved-deviation):** `الاعلام` → `الأعلام` (al-Zirikli's al-A'lām; source ตกฮัมซะฮ์) — แก้ตาม One precedent (correct-where-certain) + R6 · skeleton edit, logged ใน AUDIT-FIXES · ขอ One ยืนยัน/revert ได้
 
 - [x] **✅ quote-close (Codex, R56 polish):** ปิดอัญประกาศโค้งนอกของย่อหน้าอิบนุ อบี ซัรอ์ (source เปิด “ หลัง "ว่า" แต่ไม่ปิด — 4 เปิด/3 ปิด) → เพิ่ม ” ท้าย passage ให้สมดุล (R15/R81) · ไม่ใช่ content change
+
+## editorial-pass — ibn-battuta-the-great-traveler (#182 follow-up) · branch editorial/ibn-battuta-factual-pass
+> #182 ถูก merge ไปแล้ว → editorial pass นี้เป็น follow-up PR แยก (One สั่ง §1–4, approved R1 deviations, ต้อง VISIBLE บนหน้า ไม่ใช่ silent rewrite)
+- **[1] 1324 → 1325 (internal consistency):** body แก้ให้สม่ำเสมอเป็น 1325 (lead/closing ใช้ 1325) + note ในวงเล็บ `[ต้นฉบับบางช่วงระบุ 1324 - ใช้ 1325 ตามที่ต้นฉบับใช้เป็นหลัก]` (คงคำ "1324" ไว้ใน note)
+- **[2] แอฟริกาใต้ → แอฟริกาตะวันตก (factual, Mali=West Africa):** body แก้ + note `[ต้นฉบับ: แอฟริกาใต้]` (คงคำเดิมใน note)
+- **[3] Port Said (geographic):** คงคำต้นฉบับ verbatim + footnote ¹ (ref-1): Port Said อยู่เมดิเตอร์เรเนียน; ทะเลแดงมักผ่านอัยซาบ/สุเอซ — **ไม่แทนชื่อเมืองลง body**
+- **[4] อิบนุ ญุซัยย์ เสียชีวิต 1355 (date):** คง 1355 verbatim + footnote ² (ref-2): แหล่งส่วนใหญ่ ~ค.ศ. 1356-1357
+- §6 footnote↔bib: fnref-1/2 ↔ ref-1/2 bidirectional ครบ ไม่มี orphan · coverage 99.47% · HTMLParser OK · lint PASS · reading-time 22 (ไม่เปลี่ยน → articles.json ไม่แตะ)
+- หลักการ (precedent ทั้งเฟส): source factual slip → ไม่ silent-fix/ไม่เดาค่าแทน; correct-in-body เฉพาะที่ค่าถูกต้องแน่นอน (#1,#2), ที่ไม่แน่ใจ/ต้องเดา (#3,#4) → คง verbatim + footnote
