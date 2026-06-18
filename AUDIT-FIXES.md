@@ -222,3 +222,29 @@
 - **scholar quotes (.ar-quote) ทั้งหมด: คงสระครบตาม source (R60 all fully-voweled → keep voweled, ไม่ strip) — ไม่ถือเป็นการแตะ (byte-exact จาก source)**
 - **★FLAG (R77 / nested-aya):** scholar quotes ของอัลกะซานีย์ + อิบนุ อาบิดีน มี **อายะฮ์แทรกในตัวบท** (รูปอักขรวิธีฉบับพิมพ์ เช่น `الطَّيِّبَاتِ` ไม่ใช่ `ٱلطَّيِّبَـٰتِ`) และมีจุดมหัพภาคลาติน `.`/`اهـ.` ปนใน scholar prose — **คงตัวบท scholar ไว้ byte-exact (ไม่แตะ)** เพราะอายะฮ์ฝังในประโยคปราชญ์แยกไม่ออกอย่างปลอดภัย → **FLAG ขอ Claude ตัดสิน** (re-fetch span อายะฮ์ในตัว scholar หรือคงไว้; และ normalize `.` ลาตินใน scholar prose หรือไม่)
 - **★FLAG (R8 / hadith wording):** หะดีษ `أُحِلَّ لَنَا مَيْتَتَانِ...` ฝังในคำพูดอันนะวาวีย์ (สำนวน `فَالسَّمَكُ`) — sunnah.com Ibn Majah 3314 (เศาะฮีฮ์) ใช้สำนวน `فَالْحُوتُ` (ริวายะฮ์ต่างสำนวน) → **คงสำนวนอันนะวาวีย์ byte-exact** (ไม่ทับด้วย sunnah.com เพราะจะบิดเบือนคำพูดปราชญ์), takhrij อ้างใน บรรณานุกรม ref-3 → FLAG ขอ Claude ยืนยันแนวทาง
+
+## 2026-06-18 — PHASE 2 PILOT · `articles/tarikh/fatima-al-fihriya-founder-of-al-qarawiyyin.html` (#52) · branch claude/phase2-fatima-al-fihriya
+
+**กรณีที่ใช้:** case (1) strip ฮะเราะกาตตามกฎ 60 (ALL-OR-NOTHING) — คำพูดปราชญ์ในบทนี้ลงสระไม่สม่ำเสมอใน source จึงตัดสระให้เปลือยสระทั้งหมด (uniformly bare) · ลบเฉพาะ U+064B–U+0652 · skeleton ก่อน=หลัง ทุกบล็อก (พิสูจน์ด้วย strip-marks byte-diff) · บทนี้ไม่มีอายะฮ์/หะดีษ
+
+| # | บล็อก | before → after | skeleton-equal | blob-SHA(after, 12) |
+|---|-------|----------------|----------------|---------------------|
+| 1 | `.ar-quote` (อิบนุ คอลดูน, มุก็อดดิมะฮ์) | `نبّهت` → `نبهت` | ✅ | `a12ccd032fcc` |
+| 2 | `.ar-inline` (ชื่อมัสญิด) | `الْقَرَوِيِّينَ` → `القرويين` | ✅ | `880fd2d41295` |
+| 3 | `.ar-quote` (อัซซิริกลี, الأعلام) | `ووُسع` → `ووسع` | ✅ | `55f94a7247dd` |
+| 4 | `.ar-quote` (อัลลาล อัลฟาซี) | `مراراً` → `مرارا` | ✅ | `3017a613582d` |
+
+- บล็อกปราชญ์ที่ 4 (`كان المسجد الجامع...` อัลลาล อัลฟาซี) ไม่มีสระใน source → ไม่เปลี่ยน
+- เครื่องหมายวรรคตอนอาหรับเป็นแบบอาหรับอยู่แล้ว (`،` U+060C) → ไม่ต้อง normalize (R77)
+- ตัดสระรวม 10 ตัว · วิธี: `re.sub(r'[ً-ْ]','',…)` ทั้งไฟล์ + assert skeleton ตรง · Thai coverage 99.91% · reading-time 23
+
+## 2026-06-18 — PHASE 2 PILOT · #183 · al-Zirikli title correction (approved R1 deviation, One precedent)
+
+**กรณีพิเศษ (นอก 3 audit cases ปกติ) — APPROVED ภายใต้ phase precedent ของ One ("correct-in-body where the right value is CERTAIN") + Codex flag + R6 (ชื่อตำราอาหรับต้องถูกอักขรวิธี):** แก้ชื่อสารานุกรมของอัซซิริกลีในบล็อก `.ar-inline` ที่ source สะกดตกฮัมซะฮ์
+
+| บล็อก | before → after | เหตุผล | blob-SHA(after,12) |
+|---|---|---|---|
+| `.ar-inline` (ชื่อตำรา) | `الاعلام` → `الأعلام` | al-A'lām ของ Khayr al-Dīn al-Zirikli สะกดถูกต้องคือ `الأعلام` (ฮัมซะฮ์บนอลิฟ); source/Drive ตกฮัมซะฮ์ → R6/R4 + Codex | `80f2b9ef7546` |
+
+- เป็น **skeleton edit** (เติมฮัมซะฮ์) ไม่ใช่ strip-harakat/canonical-paste → **flag ใน REVIEW-QUEUE ขอ One ยืนยัน/revert ได้**
+- ไม่ใช่อายะฮ์/หะดีษ/ตัวบท-matn ของปราชญ์ (เป็นชื่อตำรา proper noun ที่รูปถูกต้องแน่นอน) · coverage 99.91% (Arabic ยกเว้น) · HTMLParser OK · lint PASS
