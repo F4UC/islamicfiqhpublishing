@@ -332,3 +332,4 @@
 - FIX2: stray `<p class="ar-translation">…ต้องห้าม”</p>` → plain `<p>…ต้องห้าม</p>` (ตัด ” ค้าง, ถ้อยคำคงเดิม) — pre-existing artifact
 - ทุก `<p class="block-ar">` + `.ar-quote` byte-identical vs HEAD (no Arabic touched); reading-time #25 = 9 (unchanged); HTMLParser OK
 - **⚑ FLAG to One:** L387 body prose ยังเป็น `อัลฮะนาฟียะฮ์` (นา) — ไม่แตะตามคำสั่ง "Do not touch any other ฮะนา/ฮะนะ token" ฉะนั้น `grep ฮะนาฟียะฮ์` = 1 (ไม่ใช่ 0); ขอ One ยืนยันจะให้แก้ L387 ด้วยหรือคงไว้
+- follow-up (One approved): L387 body `อัลฮะนาฟียะฮ์`→`อัลฮะนะฟียะฮ์` (นา→นะ) — `grep ฮะนาฟียะฮ์` now = 0; no Arabic touched (block-ar/ar-quote byte-identical), reading-time #25 unchanged
