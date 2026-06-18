@@ -222,3 +222,7 @@
 - **scholar quotes (.ar-quote) ทั้งหมด: คงสระครบตาม source (R60 all fully-voweled → keep voweled, ไม่ strip) — ไม่ถือเป็นการแตะ (byte-exact จาก source)**
 - **★FLAG (R77 / nested-aya):** scholar quotes ของอัลกะซานีย์ + อิบนุ อาบิดีน มี **อายะฮ์แทรกในตัวบท** (รูปอักขรวิธีฉบับพิมพ์ เช่น `الطَّيِّبَاتِ` ไม่ใช่ `ٱلطَّيِّبَـٰتِ`) และมีจุดมหัพภาคลาติน `.`/`اهـ.` ปนใน scholar prose — **คงตัวบท scholar ไว้ byte-exact (ไม่แตะ)** เพราะอายะฮ์ฝังในประโยคปราชญ์แยกไม่ออกอย่างปลอดภัย → **FLAG ขอ Claude ตัดสิน** (re-fetch span อายะฮ์ในตัว scholar หรือคงไว้; และ normalize `.` ลาตินใน scholar prose หรือไม่)
 - **★FLAG (R8 / hadith wording):** หะดีษ `أُحِلَّ لَنَا مَيْتَتَانِ...` ฝังในคำพูดอันนะวาวีย์ (สำนวน `فَالسَّمَكُ`) — sunnah.com Ibn Majah 3314 (เศาะฮีฮ์) ใช้สำนวน `فَالْحُوتُ` (ริวายะฮ์ต่างสำนวน) → **คงสำนวนอันนะวาวีย์ byte-exact** (ไม่ทับด้วย sunnah.com เพราะจะบิดเบือนคำพูดปราชญ์), takhrij อ้างใน บรรณานุกรม ref-3 → FLAG ขอ Claude ยืนยันแนวทาง
+
+## 2026-06-18 — PHASE 2 · #182 editorial pass (ibn-battuta) — NON-ARABIC approved R1 deviations (One-confirmed)
+
+**ไม่ใช่การแตะตัวอาหรับ** (บันทึกที่นี่ตามที่ One สั่งให้ log ทั้ง REVIEW-QUEUE + AUDIT-FIXES) — เป็น approved R1 deviation ในร้อยแก้วไทย + เพิ่ม footnote (ไม่มีการแก้ skeleton/harakat อาหรับ): [1] 1324→1325 (consistency)+note · [2] แอฟริกาใต้→แอฟริกาตะวันตก+note · [3] Port Said คง verbatim+footnote · [4] Ibn Juzayy 1355 คง verbatim+footnote · รายละเอียดใน REVIEW-QUEUE.md · ดูแนวทาง: correct-in-body เฉพาะค่าที่แน่นอน, ไม่แน่ใจ→คง+footnote
