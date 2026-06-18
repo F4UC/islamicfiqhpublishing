@@ -349,3 +349,6 @@
 ### ⚑ FLAGS (editorial)
 - **★ S5 vs coverage.py (2 articles):** dogs 98.53% & sunglasses 98.60% fall under the raw ≥99 gate SOLELY because mandatory S5 (long salawat → ﷺ) removes countable Thai chars that coverage.py (Thai-only) cannot credit — no content lost (Rule 72 classes normalization as non-loss). S5-adjusted: dogs 99.43%, sunglasses 99.79%. Per the hard-gate rule NO workaround applied (honorific not restored, coverage.py not modified). **One to rule: accept S5-adjusted, or credit ﷺ in coverage.py.**
 - **R52 (al-/name confirmation):** the-age-of-khadija: อิบนุลมุลักกิน, อิบนุลก็อตฏอน, อบุนนัฎร์, อบุลวะลีด. conjoined-twins: อิบนุลเญาซีย์, อิบนุลอิม้าด, อบุลบะศ็อล. ethics-of-war: อิบนุลก็อยยิม, อิบนุซุบัยร (no space in source). dogs: อิบนุลกอซิม. hadith-vs-jurists: อบุลฟัตห์.
+
+### 2026-06-18 — R52 resolution (One approved) · ethics-of-war-in-islamic-law
+- war: "อิบนุซุบัยร" → "อิบนุซซุบัยร์" (Ibn al-Zubayr; ز sun-letter → al- assimilation → ซซ + ์), 1 occurrence (in a Thai .ar-translation attribution). Other batch fused forms (khadija/twins/dogs/hadith) = standard, left as-is. Re-run this file only: [c] no bare "อิบนุซุบัยร" remain (0), [d] HTMLParser OK, [e] coverage 99.01% (no regression). No Arabic block touched; articles.json/sitemap/index untouched.
