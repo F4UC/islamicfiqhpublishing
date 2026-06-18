@@ -333,3 +333,19 @@
 - ทุก `<p class="block-ar">` + `.ar-quote` byte-identical vs HEAD (no Arabic touched); reading-time #25 = 9 (unchanged); HTMLParser OK
 - **⚑ FLAG to One:** L387 body prose ยังเป็น `อัลฮะนาฟียะฮ์` (นา) — ไม่แตะตามคำสั่ง "Do not touch any other ฮะนา/ฮะนะ token" ฉะนั้น `grep ฮะนาฟียะฮ์` = 1 (ไม่ใช่ 0); ขอ One ยืนยันจะให้แก้ L387 ด้วยหรือคงไว้
 - follow-up (One approved): L387 body `อัลฮะนาฟียะฮ์`→`อัลฮะนะฟียะฮ์` (นา→นะ) — `grep ฮะนาฟียะฮ์` now = 0; no Arabic touched (block-ar/ar-quote byte-identical), reading-time #25 unchanged
+
+## 2026-06-18 — PHASE-2 "PROVE-THE-GATE" BATCH · 6 articles · branch `claude/phase2-batch-prove-gate`
+> āyāt re-fetched byte-exact from quran.com (text_uthmani); hadith from sunnah.com (arabic_text_details); scholar Arabic extracted byte-exact from Drive source, R60 ALL-OR-NOTHING. Built via per-article agents reading on-disk source (sub-agents content-blocked when downloading+processing fresh source; reading from disk avoided it). byte-diff + blob SHA logged per article in /tmp/p2/audit (orchestrator-verified gate suite a–h re-run on final files).
+
+| article | category | Arabic | R60 | coverage |
+|---|---|---|---|---|
+| the-age-of-khadija | history | 51 scholar .ar-quote (isnād/jarh); embedded التهلكة fragment kept in-quote; no standalone aya/hadith | strip→BARE | 99.23% |
+| sunglasses-during-ihram | hajj | hadith Muslim 1298a (Umm Husayn); 5 scholar .ar-quote | KEEP voweled (source consistent) | 98.60% raw / 99.79% S5-adj |
+| conjoined-twins-in-islamic-law | nitisart | 19 scholar/historian .ar-quote; no aya/hadith | strip→BARE | 99.65% |
+| ethics-of-war-in-islamic-law | nitisart | 15 aya/hadith byte-exact (8:61, 60:8, 5:32, 2:190/191, 9:5/6, 22:39, 2:204-205; bukhari:3015, muslim:1744, ibnmajah:2842, abudawud:2614) + 25 scholar .ar-quote | scholar strip→BARE; aya/hadith voweled | 99.01% |
+| touching-dogs-in-islam | nitisart | hadith Muslim 1575b + standalone 5:4 (re-fetched); 22 scholar .ar-quote; embedded 5:4 kept in-quote | strip→BARE | 98.53% raw / 99.43% S5-adj |
+| hadith-scholars-vs-jurists | hadith | Ibn Khaldun .ar-quote + 2 book titles ar-inline; no aya/hadith | strip→BARE (source bare) | 99.69% |
+
+### ⚑ FLAGS (editorial)
+- **★ S5 vs coverage.py (2 articles):** dogs 98.53% & sunglasses 98.60% fall under the raw ≥99 gate SOLELY because mandatory S5 (long salawat → ﷺ) removes countable Thai chars that coverage.py (Thai-only) cannot credit — no content lost (Rule 72 classes normalization as non-loss). S5-adjusted: dogs 99.43%, sunglasses 99.79%. Per the hard-gate rule NO workaround applied (honorific not restored, coverage.py not modified). **One to rule: accept S5-adjusted, or credit ﷺ in coverage.py.**
+- **R52 (al-/name confirmation):** the-age-of-khadija: อิบนุลมุลักกิน, อิบนุลก็อตฏอน, อบุนนัฎร์, อบุลวะลีด. conjoined-twins: อิบนุลเญาซีย์, อิบนุลอิม้าด, อบุลบะศ็อล. ethics-of-war: อิบนุลก็อยยิม, อิบนุซุบัยร (no space in source). dogs: อิบนุลกอซิม. hadith-vs-jurists: อบุลฟัตห์.

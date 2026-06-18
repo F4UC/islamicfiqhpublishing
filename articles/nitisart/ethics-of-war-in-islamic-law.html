@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>จริยธรรมการทำสงครามในกฎหมายอิสลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์เชิงนิติศาสตร์อิสลามว่าด้วยจริยธรรมและขอบเขตการทำสงคราม โดยพื้นฐานเดิมคือสันติภาพ และมีมติเอกฉันท์ของนักวิชาการห้ามสังหารพลเรือน สตรี เด็ก และผู้ไม่เกี่ยวข้องกับการสู้รบ">
+<meta name="keywords" content="จริยธรรมสงคราม, ญิฮาด, นิติศาสตร์อิสลาม, ฟิกฮ์, กฎหมายสงครามอิสลาม, พลเรือน, ความสุดโต่ง, สันติภาพในอิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="จริยธรรมการทำสงครามในกฎหมายอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="อิสลามวางพื้นฐานความสัมพันธ์ไว้ที่สันติภาพ และห้ามการสังหารพลเรือนผู้บริสุทธิ์ บทความนี้รวบรวมหลักฐานและมติของนักวิชาการที่หักล้างความเข้าใจสุดโต่งเรื่องญิฮาด">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/ethics-of-war-in-islamic-law">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/nitisart/ethics-of-war-in-islamic-law">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "จริยธรรมการทำสงครามในกฎหมายอิสลาม",
+  "inLanguage": "th",
+  "datePublished": "2026-06-18",
+  "dateModified": "2026-06-18",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/nitisart/ethics-of-war-in-islamic-law"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="ethics-of-war-in-islamic-law">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์ / ฟิกฮ์</a>
+      
+      <h1 class="article-feature-title">จริยธรรมการทำสงครามในกฎหมายอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">การทำสงครามหรือการญิฮาด คือการต่อสู้ในหนทางของอัลลอฮ์ ถูกบัญญัติขึ้นเพื่อเป้าหมายอันสูงส่งและวัตถุประสงค์ที่มีเกียรติ ไม่ใช่เพื่อทำสงครามเพียงเพื่อก่อสงคราม หรือเพื่อยึดครองดินแดนของผู้อื่นเพื่อแสวงหาทรัพย์สมบัติ กดขี่ผู้ชาย หรือจับผู้หญิงเป็นเชลย ดังที่<strong>สถาบันวินิจฉัยปัญหาศาสนาแห่งประเทศอียิปต์</strong>ได้ระบุเอาไว้</p>
+      <p>แต่กระนั้นก็มีกลุ่มสุดโต่งได้ทำความผิดร้ายแรงในการเข้าใจเรื่องญิฮาดหรือการทำสงครามและคำสอนทางศาสนาเกี่ยวกับประเด็นการทำสงคราม พวกเขาบิดเบือนความหมายของโองการอัลกุรอานและหะดีษ แยกแยะสิ่งที่ควรจะรวมเป็นหนึ่งเดียว และสร้างแนวคิดเกี่ยวกับญิฮาดขึ้นมาเอง โดยไม่อ้างอิงต่อความเข้าใจของบรรดานักวิชาการ</p>
+      <p>พวกเขาลุกขึ้นต่อสู้ ไม่ใช่เพื่อต่อต้านผู้ที่รุกรานแผ่นดิน ตามที่พวกเขาอ้างและประกาศไว้ แต่กลับเป็นการต่อสู้กับบรรดามุสลิมที่เป็นเอกภาพในการศรัทธา ซึ่งเป็นญิฮาดที่พวกเขาสร้างขึ้นเอง ตามแนวทางเฉพาะของพวกคอวาริจ ไม่ใช่ญิฮาดที่อัลลอฮ์และศาสดาของพระองค์ได้บัญญัติไว้</p>
+      <p>สำหรับกลุ่มเหล่านี้ ญิฮาดได้กลายเป็นแนวทางเฉพาะและมีรูปแบบการปฏิบัติเฉพาะตัว ซึ่งจะเกิดขึ้นได้ก็ต่อเมื่อเป็นไปตามแนวคิดของพวกเขาเท่านั้น เป็นแนวทางที่ทำให้มุสลิมละทิ้งความเป็นมนุษย์และคุณธรรมตามหลักอิสลาม กลายเป็นผู้ทำความเสียหายในแผ่นดินภายหลังจากที่มันได้รับการปรับปรุงให้ดีแล้ว เผาทำลาย ตัดขาด และตอบสนองต่อกิเลสตัณหาของตนเอง ภายใต้ฉากหน้าของศาสนา ทั้งที่แท้จริงแล้วพวกเขาไม่มีส่วนเกี่ยวข้องกับศาสนาเลย และพระดำรัสของอัลลอฮ์ได้กล่าวไว้อย่างถูกต้องว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَمِنَ ٱلنَّاسِ مَن يُعْجِبُكَ قَوْلُهُۥ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَيُشْهِدُ ٱللَّهَ عَلَىٰ مَا فِى قَلْبِهِۦ وَهُوَ أَلَدُّ ٱلْخِصَامِ وَإِذَا تَوَلَّىٰ سَعَىٰ فِى ٱلْأَرْضِ لِيُفْسِدَ فِيهَا وَيُهْلِكَ ٱلْحَرْثَ وَٱلنَّسْلَ ۗ وَٱللَّهُ لَا يُحِبُّ ٱلْفَسَادَ</p>
+      </div>
+      <p>“และในหมู่มนุษย์ มีบางคนที่ทำให้เจ้าหลงใหลในคำพูดของเขาเกี่ยวกับชีวิตในโลกนี้ และเขาก็อ้างให้อัลลอฮ์เป็นพยานต่อสิ่งที่อยู่ในหัวใจของเขา ทั้งที่แท้จริงแล้วเขาคือศัตรูที่ร้ายกาจที่สุด และเมื่อเขามีอำนาจ เขาก็จะก่อความเสียหายในแผ่นดิน ทำลายพืชผลและลูกหลาน อัลลอฮ์ไม่ทรงรักผู้ที่ก่อความเสียหาย”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">1</a></sup></p>
+      <h2 class="article-h2">พื้นฐานเดิมคือการอยู่ร่วมกันอย่างสันติ</h2>
+      <p>พื้นฐานเดิมในความสัมพันธ์ระหว่างประเทศ หรือระหว่างมุสลิมกับผู้ที่ไม่ใช่มุสลิมคือ <strong>การอยู่ร่วมกันอย่างสันติ</strong> ดังที่ในคัมภีร์อัลกุรอานได้ระบุไว้ว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">۞ وَإِن جَنَحُوا۟ لِلسَّلْمِ فَٱجْنَحْ لَهَا وَتَوَكَّلْ عَلَى ٱللَّهِ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ</p>
+      </div>
+      <p>“แต่หากพวกเขาจะโน้มมาสู่สันติภาพโดยทำสัญญาสันติภาพ เจ้าจงทำสัญญาตามนั้นกับพวกเขาเหล่านั้นเถิด”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">2</a></sup></p>
+      <p>ท่านอบู ญะอ์ฟัร อัฎเฏาะบะรีย์ได้อธิบายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يقول تعالى ذكره لنبيه محمد صلى الله عليه وسلم : وإما تخافن من قوم خيانة وغدرا ، فانبذ إليهم على سواء وآذنهم بالحرب ( وإن جنحوا للسلم فاجنح لها ) ، وإن مالوا إلى مسالمتك ومتاركتك الحرب ، إما بالدخول في الإسلام ، وإما بإعطاء الجزية ، وإما بموادعة ، ونحو ذلك من أسباب السلم والصلح ( فاجنح لها ) ، يقول : فمل إليها ، وابذل لهم ما مالوا إليه من ذلك وسألوكه .</blockquote>
+      <p class="ar-translation">“อัลลอฮ์ทรงตรัสแก่ศาสนทูตมุฮัมมัด ﷺ ว่า: และหากเจ้า (ท่านนบี) หวั่นเกรงว่าชนกลุ่มหนึ่งจะทรยศ ก็จงประกาศยกเลิกสัญญากับพวกเขาอย่างเปิดเผย และแจ้งให้พวกเขาทราบถึงการทำสงคราม และหากพวกเขาโน้มเอียงสู่สันติภาพ ก็จงโน้มเอียงตามนั้น หากพวกเขาประสงค์ความสงบ ไม่ว่าจะโดยการเข้าสู่อิสลาม การจ่ายญิซยะฮ์ การทำสนธิสัญญาสันติภาพ หรือแนวทางใดที่นำไปสู่การเลิกทำสงคราม ก็จงยอมรับและตอบสนองตามนั้น”</p>
+      <p>ฟัครุดดีน อัรรอซีย์ เจ้าของหนังสือ “ตัฟซีร อัลกะบีร” ยังได้อธิบายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">واعلم أنه لما بين ما يرهب به العدو من القوة والاستظهار ، بين بعده أنهم عند الإرهاب إذا جنحوا أي مالوا إلى الصلح ، فالحكم قبول الصلح</blockquote>
+      <p class="ar-translation">“และจงรู้เถิดว่า เมื่อพระองค์ทรงชี้แจงเกี่ยวกับการสร้างความหวาดกลัวแก่ศัตรูผ่านทางอำนาจและการเตรียมความพร้อมแล้ว พระองค์ก็ทรงชี้แจงต่อไปว่า หากศัตรูเกิดความหวั่นเกรงและโน้มเอียงไปสู่การทำสัญญาสันติภาพ ก็ให้ยอมรับสัญญาสันติภาพนั้น”</p>
+      <p>ท่านอิบนุ กะษีรยังได้อธิบายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا خفت من قوم خيانة فانبذ إليهم عهدهم على سواء ، فإن استمروا على حربك ومنابذتك فقاتلهم ، ( وإن جنحوا ) أي : مالوا ( للسلم ) أي المسالمة والمصالحة والمهادنة ، ( فاجنح لها ) أي : فمل إليها ، واقبل منهم ذلك ؛ ولهذا لما طلب المشركون عام الحديبية الصلح ووضع الحرب بينهم وبين رسول الله - صلى الله عليه وسلم - تسع سنين ؛ أجابهم إلى ذلك مع ما اشترطوا من الشروط الأخر .</blockquote>
+      <p class="ar-translation">“หากเกรงว่ากลุ่มชนใดจะทรยศ ก็จงบอกเลิกพันธสัญญากับพวกเขาอย่างเปิดเผย หากพวกเขายังคงสู้รบและต่อต้าน ก็จงทำสงครามกับพวกเขา (และหากพวกเขาเอนเอียงไปสู่สันติภาพ) กล่าวคือ พวกเขาต้องการการสมานฉันท์ การเจรจาสันติ และการสงบศึก (ก็จงเอนเอียงไปสู่สันติภาพเช่นกัน) นั่นคือ จงตอบรับและยอมรับข้อตกลงจากพวกเขา ด้วยเหตุนี้ เมื่อเหล่ามุชริกีน (ผู้ตั้งภาคี) ได้ร้องขอข้อตกลงสงบศึกในปีอัลฮุดัยบิยะฮ์ พร้อมเงื่อนไขที่จะยุติสงครามกับท่านนบีมุฮัมมัด ﷺ เป็นเวลาสิบปี ท่านก็ทรงยอมรับข้อตกลงนั้น แม้ว่าจะมีเงื่อนไขอื่นๆ ที่พวกเขาได้กำหนดไว้ก็ตาม”</p>
+      <p>อิสลามยังส่งเสริมอย่างเป็นรูปธรรมในการทำดีแก่มนุษย์ทุกคนด้วยเช่นกัน ดังที่อัลลอฮ์ทรงตรัสว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">لَّا يَنْهَىٰكُمُ ٱللَّهُ عَنِ ٱلَّذِينَ لَمْ يُقَـٰتِلُوكُمْ فِى ٱلدِّينِ وَلَمْ يُخْرِجُوكُم مِّن دِيَـٰرِكُمْ أَن تَبَرُّوهُمْ وَتُقْسِطُوٓا۟ إِلَيْهِمْ ۚ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُقْسِطِينَ</p>
+      </div>
+      <p>“อัลลอฮ์ไม่ได้ทรงห้ามพวกเจ้า ในการทำความดีกับผู้ที่ไม่ได้ต่อต้านพวกเจ้าในเรื่องศาสนา อีกทั้งพวกเขาก็ยังไม่ได้ขับไล่พวกเจ้าออกจากบ้านเรือนของพวกเจ้า เป็นการสมควรในการที่พวกเจ้าจะมีปฏิสัมพันธ์ที่ดีกับพวกเขา และให้ความยุติธรรมแก่พวกเขา แท้จริงอัลลอฮ์ทรงรักผู้มีความยุติธรรม”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">3</a></sup></p>
+      <p>ท่านอบู ญะอ์ฟัร อัฎเฏาะบะรีย์ได้อธิบายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأولى الأقوال في ذلك بالصواب قول من قال : عني بذلك : لا ينهاكم الله عن الذين لم يقاتلوكم في الدين ، من جميع أصناف الملل والأديان أن تبروهم وتصلوهم ، وتقسطوا إليهم . إن الله عز وجل عم بقوله : ( الذين لم يقاتلوكم في الدين ولم يخرجوكم من دياركم ) جميع من كان ذلك صفته ، فلم يخصص به بعضا دون بعض ، ولا معنى لقول من قال : ذلك منسوخ ، لأن بر المؤمن من أهل الحرب ممن بينه وبينه قرابة نسب ، أو ممن لا قرابة بينه وبينه ولا نسب غير محرم ولا منهي عنه إذا لم يكن في ذلك دلالة له ، أو لأهل الحرب على عورة لأهل الإسلام ، أو تقوية لهم بكراع أو سلاح . قد بين صحة ما قلنا في ذلك ، الخبر الذي ذكرناه عن ابن الزبير في  قصة أسماء  وأمها .</blockquote>
+      <p class="ar-translation">“และคำกล่าวที่ถูกต้องที่สุดในเรื่องนี้คือ คำกล่าวของผู้ที่กล่าวว่า: อัลลอฮ์ไม่ได้ทรงห้ามพวกเจ้าเกี่ยวกับบรรดาผู้ที่ไม่ได้ทำสงครามกับพวกเจ้าในเรื่องศาสนา (หมายถึงผู้ที่ไม่ได้เป็นศัตรูทางศาสนาและไม่ได้แสดงความเป็นปรปักษ์ต่อมุสลิม) จากทุกศาสนาและกลุ่มความเชื่อทั้งหลาย ว่าพวกเจ้าจะต้องทำดีต่อพวกเขา (ด้วยการปฏิบัติอย่างสุภาพและมีเมตตา) เชื่อมความสัมพันธ์กับพวกเขา (เช่น การดูแลญาติที่ไม่ใช่มุสลิม) และปฏิบัติต่อพวกเขาด้วยความยุติธรรม (เช่น การไม่กดขี่ข่มเหงหรือปฏิเสธสิทธิของพวกเขา) แท้จริง อัลลอฮ์ได้กล่าวไว้โดยทั่วไปว่า ‘บรรดาผู้ที่ไม่ได้ทำสงครามกับพวกเจ้าในเรื่องศาสนา และไม่ได้ขับไล่พวกเจ้าออกจากถิ่นฐานของพวกเจ้า’ ซึ่งครอบคลุมทุกผู้คนที่มีลักษณะดังกล่าว (ทั้งที่เป็นมุสลิมหรือไม่ก็ตาม) โดยไม่ได้จำกัดความหมายให้กับกลุ่มใดกลุ่มหนึ่งโดยเฉพาะ (เช่น ไม่เพียงแต่ชาวคริสต์หรือชาวยิวเท่านั้น แต่รวมถึงทุกศาสนาหรือกลุ่มความเชื่อที่ไม่เป็นศัตรูกับมุสลิม) ดังนั้น จึงไม่มีเหตุผลใดที่จะกล่าวว่าโองการนี้ถูกยกเลิกไปแล้ว เพราะการที่มุอ์มิน (ผู้ศรัทธา) จะปฏิบัติดีต่อผู้ที่เป็นศัตรูสงคราม (เช่น ศัตรูที่อยู่ในภาวะสงบและไม่ได้โจมตีมุสลิม) ไม่ว่าจะเป็นผู้ที่มีเครือญาติกับเขาหรือไม่ก็ตาม ไม่ใช่สิ่งต้องห้าม เว้นเสียแต่ว่าการกระทำดังกล่าวจะเป็นการนำไปสู่การเปิดเผยความลับของมุสลิมแก่ศัตรู (เช่น การให้ข้อมูลสำคัญที่อาจใช้ทำร้ายมุสลิม) หรือช่วยเสริมความแข็งแกร่งแก่พวกเขาด้วยการมอบทรัพยากร อาวุธ หรือกำลังทหาร (ซึ่งอาจเป็นภัยต่อชุมชนมุสลิมโดยตรง) และสิ่งที่เรากล่าวนี้ได้รับการยืนยันจากรายงานที่กล่าวถึงเรื่องราวของอิบนุซุบัยรเกี่ยวกับกรณีของอัสมาอ์และมารดาของนาง (ซึ่งบ่งบอกว่าอัสมาอ์ได้รับอนุญาตให้ปฏิบัติดีต่อมารดาของตนที่ยังเป็นมุชริก โดยไม่มีข้อห้ามใดจากอิสลาม)”</p>
+      <p>และแน่นอนว่านักวิชาการอิสลามส่วนใหญ่มองว่าโองการนี้ยังไม่ได้ถูกยกเลิก โดยอ้างอิงเหตุการณ์ที่เกิดขึ้นกับอัสมาอ์นั่นเอง</p>
+      <h2 class="article-h2">การห้ามสังหารพลเรือน สตรี และเด็ก</h2>
+      <p>ในที่นี้เราจะกล่าวถึงกฎหมายอิสลามกับการสังหารพลเรือน และการทำสงครามในเดือนรอมฎอนอันประเสริฐ แน่นอนว่าการสังหาร “พลเรือน” ที่เป็นเด็กและผู้หญิงนั้น <strong>เป็นที่ต้องห้ามอย่างแน่นอน</strong> ซึ่งมีการรายงานมติเอกฉันท์ของนักวิชาการมาด้วย อัลบุคอรีย์ได้บันทึกไว้ว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">وُجِدَتِ امْرَأَةٌ مَقْتُولَةً فِي بَعْضِ مَغَازِي رَسُولِ اللَّهِ صلى الله عليه وسلم، فَنَهَى رَسُولُ اللَّهِ صلى الله عليه وسلم عَنْ قَتْلِ النِّسَاءِ وَالصِّبْيَانِ</p>
+      </div>
+      <p>“มีการพบศพของสตรีที่ถูกสังหารตายในหนึ่งในสงครามของท่านนบีมุฮัมมัด ﷺ เมื่อท่านนบีทราบเรื่อง จึงมีคำสั่งห้ามการฆ่าสตรีและเด็กในสงคราม”<sup class="fn-ref" id="fnref-4"><a href="#ref-4">4</a></sup></p>
+      <p>อัลกะซาอีย์ จากมัสฮับอัลหะนาฟีย์ได้ระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لا يحل فيها قتل امرأة ولا صبي، ولا شيخ فان، ولا مقعد ولا يابس الشق، ولا أعمى، ولا مقطوع اليد والرجل من خلاف، ولا مقطوع اليد اليمنى، ولا معتوه، ولا راهب في صومعة، ولا سائح في الجبال لا يخالط الناس، وقوم في دار أو كنيسة ترهبوا وطبق عليهم الباب، أما المرأة والصبي، فلقول النبي ﷺ «لا تقتلوا امرأة ولا وليدا»</blockquote>
+      <p class="ar-translation">“ไม่เป็นที่อนุญาตให้สังหารสตรี เด็ก คนชราที่หมดสิ้นเรี่ยวแรง ผู้พิการ ผู้ที่เป็นอัมพาตครึ่งซีก คนตาบอด ผู้ที่ถูกตัดมือและเท้าสลับด้าน (ตัดมือขวาและเท้าซ้าย) ผู้ที่ถูกตัดเฉพาะมือขวา ผู้ที่มีความบกพร่องทางสติปัญญา พระนักบวชที่จำพรรษาในอาราม นักพรตที่พำนักอยู่บนภูเขาโดยไม่คลุกคลีกับผู้คน และกลุ่มคนที่อยู่ในบ้านหรือโบสถ์ ซึ่งอุทิศตนเพื่อการบำเพ็ญเพียรและปิดประตูขังตนเองไว้ สำหรับสตรีและเด็กนั้น การห้ามสังหารพวกเขามีหลักฐานจากหะดีษของท่านนบี ﷺ ที่ว่า: ‘อย่าได้สังหารสตรีและเด็กเล็ก’”</p>
+      <p>ท่านอัดดัรดีร จากมัสฮับมาลิกีย์ได้ระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">المرأة فلا تقتل إلا في مقاتلتها فيجوز قتلها إن قتلت أحدا أو قاتلت بسلاح كالرجال ولو بعد أسرها لا إن قاتلت بكرمي حجر فلا تقتل ولو حال القتال و إلا الصبي المطيق للقتال فلا يجوز قتله، ويجري فيه ما في المرأة من التفصيل، وإلا المعتوه أي ضعيف العقل فالمجنون أولى كشيخ فان لا قدرة له على القتال وزمن بكسر الميم أي عاجز وأعمى عطف خاص على عام وراهب منعزل عن أهل دينه بدير أو صومعة لأنهم صاروا كالنساء حال كونهم بلا رأي وتدبير و إذا لم يقتلوا ترك لهم من مال الكفار الكفاية فقط أي ما يكفيهم حياتهم على العادة، وقدم مالهم على مال غيرهم، ويؤخذ ما يزيد على الكفاية، فإن لم يكن لهم ولا للكفار مال وجب على المسلمين مواساتهم إن أمكن</blockquote>
+      <p class="ar-translation">“สำหรับสตรี ไม่ควรถูกสังหาร เว้นแต่ในกรณีที่เธอเข้าร่วมต่อสู้ ซึ่งในกรณีนี้สามารถสังหารเธอได้ หากเธอได้สังหารผู้อื่นหรือเข้าร่วมการต่อสู้ด้วยการจับอาวุธเช่นเดียวกับผู้ชาย แม้ว่าเธอจะถูกจับเป็นเชลยแล้วก็ตาม แต่หากเธอเพียงแค่ขว้างก้อนหินโดยไม่ใช้อาวุธ ก็ไม่ควรถูกสังหาร แม้ในระหว่างการต่อสู้ สำหรับเด็กที่สามารถต่อสู้ได้ ก็ไม่เป็นที่อนุญาตให้สังหารเขา และเขาก็มีสถานะเช่นเดียวกับสตรีในแง่ของรายละเอียดข้างต้น สำหรับผู้ที่มีสติปัญญาไม่สมบูรณ์ เช่น คนวิกลจริต หรือผู้สูงวัยที่ไม่สามารถต่อสู้ได้ ผู้ที่เป็นอัมพาต หรือคนตาบอด รวมถึงพระและนักบวชที่แยกตัวออกจากสังคมและพำนักอยู่ในอารามหรืออาศรม พวกเขามีสถานะเช่นเดียวกับสตรี เนื่องจากพวกเขาไม่มีบทบาทด้านความคิดและการวางแผน หากพวกเขาไม่ถูกสังหาร มุสลิมต้องปล่อยให้พวกเขามีทรัพย์สินเพียงพอสำหรับการดำรงชีพตามปกติ โดยให้ความสำคัญกับทรัพย์สินของพวกเขาก่อนทรัพย์สินของผู้อื่น และสามารถยึดได้เฉพาะส่วนที่เกินความจำเป็นเท่านั้น แต่หากพวกเขาและพวกผู้ปฏิเสธศรัทธาไม่มีทรัพย์สินใดๆ เลย มุสลิมจำเป็นต้องช่วยเหลือพวกเขาตามความสามารถ”</p>
+      <p>ท่านอันนะวาวีย์ จากมัสฮับอัชชาฟิอีย์ได้ระบุไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أجمع العلماء على تحريم قتل النساء والصبيان إذا لم يقاتلوا</blockquote>
+      <p class="ar-translation">“บรรดานักวิชาการอิสลามมีมติเอกฉันท์ว่า ห้ามฆ่าสตรีและเด็กในสงคราม ตราบใดที่พวกเขาไม่ได้มีส่วนร่วมในการต่อสู้”</p>
+      <p>ท่านอิบนุ ดะกีก อัลอีดได้ระบุว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هذا حكم مشهور متفق عليه فيمن لا يقاتل، ويحمل هذا الحديث على ذلك لغلبة عدم القتال على النساء والصبيان، ولعل سر هذا الحكم: أن الأصل عدم إتلاف النفوس، وإنما أبيح منه ما يقتضيه دفع المفسدة، ومن لا يقاتل ولا يتأهل للقتال في العادة: ليس في إحداث الضرر كالمقاتلين، فرجع إلى الأصل فيهم، وهو المنع. هذا مع ما في نفوس النساء والصبيان من الميل، وعدم التشبث الشديد بما يكونون عليه كثيرا أو غالبا، فرفع عنهم القتل، لعدم مفسدة المقاتلة في الحال الحاضر، ورجاء هدايتهم عند بقائهم.</blockquote>
+      <p class="ar-translation">“นี่คือคำตัดสินที่เป็นที่รู้จักและได้รับการยอมรับโดยทั่วไปเกี่ยวกับผู้ที่ไม่ได้เข้าร่วมการต่อสู้ และหะดีษนี้ถูกตีความในแนวทางดังกล่าว เนื่องจากโดยส่วนใหญ่แล้ว ผู้หญิงและเด็กมักจะไม่ได้เข้าร่วมในการรบ เหตุผลสำคัญของคำตัดสินนี้ อาจเป็นเพราะโดยหลักการแล้ว การทำลายชีวิตคนๆ หนึ่งเป็นสิ่งที่ต้องห้าม และสิ่งที่ได้รับอนุญาตนั้น มีเพียงสิ่งที่จำเป็นต่อการป้องกันภัยอันตรายเท่านั้น ส่วนผู้ที่ไม่ได้เข้าร่วมการต่อสู้ และโดยปกติแล้วไม่อยู่ในฐานะที่เหมาะสมสำหรับการรบ ซึ่งไม่ได้ก่อให้เกิดอันตรายเช่นเดียวกับนักรบ ดังนั้น พวกเขาจึงยังคงอยู่ภายใต้หลักการเดิม นั่นคือการห้ามฆ่า นอกจากนี้ ธรรมชาติของจิตใจของผู้หญิงและเด็กนั้น มักจะโน้มเอียงและไม่ได้ยึดมั่นอย่างแน่วแน่ต่อแนวคิดหรืออุดมการณ์ที่พวกเขาเติบโตมา ในหลายกรณีหรือโดยทั่วไป ดังนั้น การสังหารพวกเขาจึงถูกยกเว้น เนื่องจากพวกเขาไม่ได้เป็นภัยต่อการต่อสู้ในขณะนั้น อีกทั้งยังมีความหวังว่าพวกเขาอาจได้รับทางนำที่ดีในอนาคตหากพวกเขายังมีชีวิตอยู่”</p>
+      <p>ท่านอิบนุ อับดิลบัรได้ระบุว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وروى عن النبي - صلى الله عليه وسلم - أنه نهى عن قتل النساء والولدان في دار الحرب : ابن عباس ، وعائشة ، وأبو سعيد الخدري ، وأنس ، والأسود بن سريع ، وغيرهم</blockquote>
+      <p class="ar-translation">“มีรายงานจากท่านนบี ﷺ ที่สั่งห้ามสังหารผู้หญิงและเด็กในภาวะสงคราม จากท่านอิบนุ อับบาส, และอบู สะอี้ด อัลคุดรีย์, และท่านอนัส, และอัลอัสวัด บิน สะรีอ์ และเศาะหาบะฮ์ท่านอื่นๆ”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأجمع العلماء على القول بجملة هذا الحديث، ولا يجوز عندهم قتل نساء الحربيين ولا أطفالهم؛ لأنهم ليسوا ممن يقاتل في الأغلب</blockquote>
+      <p class="ar-translation">“และนักวิชาการก็มีมติเอกฉันท์โดยวินิจฉัยจากคำพูดของท่านนบีดังกล่าวคือ ไม่อนุญาตให้มีการสังหารสตรีและเด็ก เพราะพวกเขาเหล่านี้ไม่ใช่คู่สงครามโดยส่วนใหญ่”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">واختلفوا في النساء والصبيان إذا قاتلوا :</blockquote>
+      <p class="ar-translation">“แต่นักวิชาการขัดแย้งกันว่า หากสตรีและเด็กมีการเข้าร่วมสงคราม จะมีทางออกอย่างไร?”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فجمهور العلماء على أنهم إذا قاتلوا قوتلوا .</blockquote>
+      <p class="ar-translation">“นักวิชาการส่วนใหญ่มีมติเป็นเสียงเดียวกันว่า หากพวกเขาเข้าร่วมสงคราม ก็ให้สู้กลับได้”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وممن قال ذلك : الثوري ، ومالك ، والأوزاعي ، والليث ، والشافعي ، وأبو حنيفة ، وأحمد ، وإسحاق ، وأبو ثور كل هؤلاء وغيرهم ينهون عن قتلهم إذا لم يقاتلوا</blockquote>
+      <p class="ar-translation">“และนักวิชาการที่มีทัศนะดังกล่าวคือ อัษเษารีย์, มาลิก บิน อนัส, อัลเอาซาอีย์, อัลลัยษ์, อัชชาฟิอีย์, อบู ฮานีฟะฮ์, อะห์มัด, อิสห้าก, อบู ษูร นักวิชาการเหล่านี้ทั้งหมดและท่านอื่นๆ มีความเห็นไปในทางเดียวกันว่า ห้ามฆ่าสตรีและเด็ก หากบุคคลเหล่านี้ไม่ได้เข้าสู่สงคราม”</p>
+      <p>และไม่ใช่ว่าเฉพาะสตรีและเด็กเท่านั้นที่ห้ามฆ่า แต่รวมถึงพลเรือนทุกคนที่ไม่เกี่ยวข้องกับสงคราม มีบางกรณีเท่านั้นที่สามารถกระทำได้ ท่านอิบนุ กุดามะฮ์ จากมัสฮับอัลฮัมบาลีย์ได้ระบุไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ومن قاتل من هؤلاء أو النساء أو المشايخ أو الرهبان في المعركة قتل، لا نعلم فيه خلافا</blockquote>
+      <p class="ar-translation">“และหากบุคคลใดจากกลุ่มนี้หรือสตรีหรือเหล่าชายผู้สูงอายุหรือพระและนักบวช หากพวกเขาร่วมกระโจนเข้าสู่สงคราม ก็ให้สังหารพวกเขาได้ เราไม่พบว่ามีความเห็นขัดแย้งในเรื่องนี้”</p>
+      <p>แต่นักวิชาการในยุคถัดมาคือท่านอันนะวาวีย์ยังได้ระบุว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما شيوخ الكفار فإن كان فيهم رأي قتلوا ، وإلا ففيهم وفي الرهبان خلاف ، قال مالك وأبو حنيفة : لا يقتلون ، والأصح في مذهب الشافعي : قتلهم</blockquote>
+      <p class="ar-translation">“สำหรับบรรดาผู้สูงอายุในหมู่ผู้ปฏิเสธศรัทธา หากพวกเขามีบทบาทด้านความคิด (เช่น เป็นที่ปรึกษาหรือยุยงสงคราม) ก็ให้สังหารพวกเขาได้ แต่หากไม่เป็นเช่นนั้น ก็มีข้อขัดแย้งเกี่ยวกับพวกเขาและพระนักบวช มาลิกและอบู ฮานีฟะฮ์เห็นว่า “ไม่ให้สังหารพวกเขา” แต่ทัศนะที่ถูกต้องที่สุดในมัสฮับของอิหม่ามชาฟิอีย์คือ “ให้สังหารพวกเขาได้”</p>
+      <p>ดังนั้น การสังหารชีวิตหนึ่งที่บริสุทธิ์ และไม่เป็นธรรมจึงขัดต่อกฎหมายอิสลามอย่างยิ่ง ในคัมภีร์อัลกุรอานให้ความสำคัญอย่างยิ่งในการเคารพและให้เกียรติต่อการรักษาชีวิตของเพื่อนมนุษย์ผู้บริสุทธิ์ อิสลามให้ความสำคัญและให้คุณค่าดังกล่าวนี้มากถึงขั้นที่ว่า <strong>การสังหารชีวิตของคนบริสุทธิ์เพียงคนเดียวเท่ากับการสังหารมนุษย์ทั้งมวล</strong> และจากจุดนี้เองที่พระผู้เป็นเจ้าจึงทรงสั่งห้ามผู้ศรัทธาไว้อย่างรุนแรงไม่ให้สังหารผู้บริสุทธิ์ไม่ว่าจะสถานการณ์ใดๆ ก็ตาม พระองค์ได้ทรงตรัสว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl"></p>
+      </div>
+      <p>“ผู้ใดสังหารชีวิตหนึ่งโดยไม่ใช่เป็นการชดเชยอีกชีวิตหนึ่ง หรือไม่ใช่เนื่องจากการบ่อนทำลายในแผ่นดินแล้ว ก็ประหนึ่งว่าเขาได้สังหารมนุษย์ชาติทั้งมวล”<sup class="fn-ref" id="fnref-5"><a href="#ref-5">5</a></sup></p>
+      <h2 class="article-h2">ประวัติโองการอัลกุรอานเกี่ยวกับการทำสงครามหรือญิฮาด</h2>
+      <p>สถาบันวินิจฉัยปัญหาศาสนาแห่งประเทศอียิปต์ยังได้อธิบายต่อว่า สำหรับญิฮาดในอิสลาม ในขั้นต้นนั้นได้ถูกกำหนดไว้ตั้งแต่ช่วงที่ท่านนบีมุฮัมมัด ﷺ เชิญชวนประชาชนของพระองค์ในมักกะฮ์ แต่ความแตกต่างระหว่างญิฮาดในช่วงมักกะฮ์กับญิฮาดหลังจากการอพยพก็คือ ญิฮาดในมักกะฮ์ยังไม่มีการอนุญาตให้ต่อสู้ อันนะวาวีย์กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكان القتال ممنوعا منه في أول الإسلام وأمروا بالصبر على أذى الكفار، فلما هاجر رسول الله ﷺ إلى المدينة، وجبت الهجرة على من قدر، فلما فتحت مكة، ارتفعت الهجرة منها إلى المدينة، ونفي وجوب الهجرة من دار الحرب على ما سنذكره- إن شاء الله تعالى- ثم أذن الله سبحانه وتعالى في القتال للمسلمين إذا ابتدأهم الكفار بقتال</blockquote>
+      <p class="ar-translation">“ในช่วงแรกของอิสลาม การต่อสู้ถูกห้ามไว้ และบรรดามุสลิมได้รับคำสั่งให้มีความอดทนต่อการถูกกดขี่จากผู้ปฏิเสธศรัทธา จนกระทั่งท่านนบีมุฮัมมัด ﷺ อพยพไปยังมะดีนะฮ์ จากนั้นการอพยพกลายเป็นสิ่งที่จำเป็นสำหรับผู้ที่สามารถกระทำได้ และเมื่อมักกะฮ์ถูกพิชิต การอพยพจากมักกะฮ์ไปยังมะดีนะฮ์ก็ถูกยกเลิก และไม่มีข้อบังคับให้ต้องอพยพจากดินแดนที่ไม่ใช่ของอิสลาม ตามที่เราจะกล่าวถึงต่อไป หากอัลลอฮ์ทรงประสงค์ จากนั้น อัลลอฮ์ได้ทรงอนุญาตให้มุสลิมทำสงคราม หากพวกผู้ปฏิเสธศรัทธาเป็นฝ่ายเริ่มต้นโจมตีพวกเขาก่อน (หมายถึง การต่อสู้ในอิสลามไม่ได้เริ่มต้นจากมุสลิม แต่เกิดขึ้นเพื่อตอบโต้การโจมตีจากศัตรู)”</p>
+      <p>ท่านอิบนุ อาบิดีนระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">«ثم اعلم أن الأمر بالقتال نزل مرتبا فقد كان ﷺ مأمورا أولا بالتبليغ، والإعراض: ﴿ فاصدع بما تؤمر وأعرض عن المشركين ﴾ ثم بالمجادلة بالأحسن ﴿ادع إلى سبيل ربك ﴾ الآية- ثم أذن لهم بالقتال- ﴿ أذن للذين يقاتلون بأنهم ظلموا ﴾ الآية، ثم أمروا بالقتال إن قاتلوهم- ﴿فإن قاتلوكم فاقتلوهم ﴾ ثم أمروا به بشرط انسلاخ الأشهر الحرم ﴿ فإذا انسلخ الأشهر الحرم فاقتلوا المشركين ﴾ ثم أمروا به مطلقا ﴿ وقاتلوا في سبيل الله ﴾»</blockquote>
+      <p class="ar-translation">“จงรู้เถิดว่า คำสั่งเกี่ยวกับการทำสงครามนั้นถูกประทานลงมาอย่างเป็นลำดับขั้นเป็นตอน ในช่วงแรก ท่านนบีมุฮัมมัด ﷺ ได้รับคำสั่งให้เผยแผ่ศาสนาและเมินเฉยต่อพวกตั้งภาคี โดยมีโองการอัลกุรอานระบุเอาไว้ว่า: ‘จงประกาศสิ่งที่เจ้าถูกบัญชา และจงเมินเฉยต่อพวกตั้งภาคี’ (สูเราะฮ์อัลหิจร์) จากนั้น ท่านได้รับคำสั่งให้โต้แย้งและเชิญชวนด้วยแนวทางที่ดีที่สุด ดังที่มีโองการระบุไว้ว่า: ‘จงเรียกร้องสู่แนวทางของพระเจ้าของเจ้าด้วยปัญญา…’ (สูเราะฮ์อันนะห์ลฺ) ต่อมา อัลลอฮ์ทรงอนุญาตให้มุสลิมทำสงครามได้ ดังที่มีโองการระบุ: ‘ได้ถูกอนุญาตแก่บรรดาผู้ที่ถูกต่อสู้ (ให้ตอบโต้) เนื่องจากพวกเขาถูกอธรรม’ (สูเราะฮ์อัลหัจญ์) จากนั้น มุสลิมได้รับคำสั่งให้ต่อสู้เฉพาะเมื่อศัตรูเป็นฝ่ายโจมตีก่อน ดังที่มีโองการระบุไว้ว่า: ‘หากพวกเขาทำสงครามกับพวกเจ้า ก็จงสังหารพวกเขา’ (สูเราะฮ์อัลบากอเราะฮ์) ต่อมา มีคำสั่งให้ทำสงครามหลังจากเดือนต้องห้ามสิ้นสุดลง ดังที่มีระบุเอาไว้ว่า: ‘ดังนั้น เมื่อเดือนต้องห้ามสิ้นสุดลง ก็จงสังหารพวกตั้งภาคี’ (สูเราะฮ์อัตเตาบะฮ์) สุดท้าย คำสั่งให้ทำสงครามได้ถูกกำหนดอย่างเด็ดขาด ดังที่มีระบุไว้ว่า: ‘และจงต่อสู้ในหนทางของอัลลอฮ์’ (สูเราะฮ์อัลบากอเราะฮ์)”</p>
+      <p>(หมายความว่าคำสั่งเกี่ยวกับการทำสงครามในอิสลามไม่ได้ถูกกำหนดในทันที แต่มีการพัฒนาอย่างเป็นลำดับขั้น เริ่มจากการอดทนและเผยแผ่ศาสนา ไปจนถึงการปกป้องตนเอง และในที่สุด การทำสงครามเพื่อรักษาศาสนาและความยุติธรรมได้ถูกกำหนดขึ้นอย่างเป็นทางการ)</p>
+      <p>อาจมีคำถามขึ้นมาว่า แล้วโองการต่อไปนี้จะให้คำอธิบายอย่างไร?</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَقَـٰتِلُوا۟ فِى سَبِيلِ ٱللَّهِ ٱلَّذِينَ يُقَـٰتِلُونَكُمْ وَلَا تَعْتَدُوٓا۟ ۚ إِنَّ ٱللَّهَ لَا يُحِبُّ ٱلْمُعْتَدِينَ</p>
+      </div>
+      <p>“และจงต่อสู้ในหนทางของอัลลอฮ์กับผู้ที่ทำสงครามกับพวกเจ้า และอย่าได้ละเมิด (ขอบเขต) แท้จริงอัลลอฮ์ไม่ทรงรักผู้ที่ละเมิด”<sup class="fn-ref" id="fnref-7"><a href="#ref-7">7</a></sup></p>
+      <p>ท่านอบู ญะอ์ฟัร อัฎเฏาะบะรีย์ได้อธิบายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فتأويل الآية - إذا كان الأمر على ما وصفنا - : وقاتلوا أيها المؤمنون في سبيل الله ، وسبيله : طريقه الذي أوضحه ، ودينه الذي شرعه لعباده يقول لهم تعالى ذكره : قاتلوا في طاعتي وعلى ما شرعت لكم من ديني ، وادعوا إليه من ولى عنه واستكبر بالأيدي والألسن ، حتى ينيبوا إلى طاعتي ، أو يعطوكم الجزية صغارا إن كانوا أهل كتاب وأمرهم تعالى ذكره بقتال من كان منه قتال من مقاتلة أهل الكفر دون من لم يكن منه قتال من نسائهم وذراريهم ، فإنهم أموال وخول لهم إذا غلب المقاتلون منهم فقهروا ، فذلك معنى قوله : " قاتلوا في سبيل الله الذين يقاتلونكم " لأنه أباح الكف عمن كف ، فلم يقاتل من مشركي أهل الأوثان والكافين عن قتال المسلمين من كفار أهل الكتاب على إعطاء الجزية صغارا</blockquote>
+      <p class="ar-translation">“การตีความของโองการนี้ - หากเรื่องราวเป็นไปตามที่เราได้อธิบายไว้ก่อนหน้านี้ - ก็คือ: ‘โอ้บรรดาผู้ศรัทธา จงต่อสู้ในหนทางของอัลลอฮ์’ และ ‘หนทางของพระองค์’ หมายถึง แนวทางที่พระองค์ได้ทรงกำหนดไว้อย่างชัดเจน และตามหลักศาสนาที่พระองค์ได้ทรงบัญญัติให้แก่ปวงบ่าวของพระองค์ อัลลอฮ์ตรัสแก่พวกเขาว่า: ‘จงทำสงครามในความเชื่อฟังต่อข้า และบนรากฐานของศาสนาที่ข้าได้บัญญัติแก่พวกเจ้า และจงเรียกร้องผู้ที่หันเหจากศาสนานี้ที่แสดงความหยิ่งผยอง ให้มาสู่แนวทางนี้ (คืออิสลาม) - ทั้งด้วยมือและด้วยลิ้นของพวกเจ้า - จนกว่าพวกเขาจะสำนึกและกลับมายังการเชื่อฟังข้า หรือพวกเขาจะมอบค่าภาษี (ญิซยะฮ์) ให้แก่พวกเจ้าในฐานะผู้ที่ยอมจำนน หากพวกเขาเป็นชาวคัมภีร์’ (หมายถึงชาวยิวและคริสเตียนที่ได้รับอนุญาตให้อยู่ภายใต้การปกครองของรัฐอิสลามโดยจ่ายญิซยะฮ์) และพระองค์ได้ทรงบัญชาให้พวกเขาทำสงครามกับผู้ที่ต่อสู้กับพวกเขาจากหมู่ผู้ปฏิเสธศรัทธา โดยยกเว้นผู้ที่ไม่ได้ทำสงครามกับพวกเขา เช่น สตรีและเด็ก เพราะพวกเขาเป็นทรัพย์สมบัติและเป็นเชลยของบรรดามุสลิม หากนักรบของพวกเขาพ่ายแพ้และถูกปราบปราม นี่คือความหมายของพระดำรัสที่ว่า ‘จงต่อสู้ในหนทางของอัลลอฮ์กับผู้ที่ทำสงครามกับพวกเจ้า’ เพราะอัลลอฮ์ทรงอนุญาตให้ละเว้นจากการทำสงครามกับผู้ที่ละเว้นจากการสู้รบ กล่าวคือ ผู้ตั้งภาคีที่ไม่ได้ทำสงครามกับมุสลิม และบรรดาผู้ปฏิเสธศรัทธาจากหมู่ชาวคัมภีร์ที่หยุดการต่อสู้กับมุสลิม โดยยอมจำนนและจ่ายค่าภาษี (ญิซยะฮ์) ด้วยความนอบน้อม”</p>
+      <p>และยังกล่าวต่ออีกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فمعنى قوله : " ولا تعتدوا " : لا تقتلوا وليدا ولا امرأة ، ولا من أعطاكم الجزية من أهل الكتابين والمجوس " إن الله لا يحب المعتدين " الذين يجاوزون حدوده ، فيستحلون ما حرمه الله عليهم من قتل هؤلاء الذين حرم قتلهم من نساء المشركين وذراريهم</blockquote>
+      <p class="ar-translation">“ดังนั้น ความหมายของพระดำรัสที่ว่า ‘และอย่าได้ละเมิด’ ก็คือ อย่าสังหารเด็กทารก (ทารกและเด็กเล็ก) อย่าสังหารสตรี และอย่าสังหารผู้ที่จ่ายภาษีญิซยะฮ์แก่พวกเจ้า ไม่ว่าจะเป็นชาวคัมภีร์ (ยิวและคริสเตียน) หรือชาวมะญูซี (โซโรอัสเตอร์) ‘แท้จริงอัลลอฮ์ไม่ทรงรักผู้ที่ละเมิด’ หมายถึง ผู้ที่ล่วงละเมิดขอบเขตของพระองค์ โดยอนุญาตให้ตนเองทำในสิ่งที่อัลลอฮ์ทรงห้าม เช่น การสังหารบุคคลที่พระองค์ทรงห้ามไว้ ได้แก่ สตรีและเด็กในหมู่พวกตั้งภาคี”</p>
+      <p>ชัมซุดดีนอัลกุรฏุบีย์ ได้อธิบายเหตุแห่งการประทานโองการนี้ไว้อย่างละเอียดว่า โองการที่ว่า: ‘และจงต่อสู้ในหนทางของอัลลอฮ์กับผู้ที่ทำสงครามกับพวกเจ้า’ เป็นโองการแรกที่ถูกประทานลงมาเกี่ยวกับการอนุญาตให้ทำสงคราม ไม่มีใครขัดแย้งกันว่า ก่อนการอพยพไปยังมะดีนะฮ์ การทำสงครามนั้นยังไม่ถูกอนุญาต ซึ่งอัลกุรอานในช่วงนั้นได้ระบุว่า: ‘จงตอบโต้ความชั่วด้วยสิ่งที่ดียิ่งกว่า’, ‘จงให้อภัยพวกเขาและมองข้ามมันไป’, ‘จงออกห่างจากพวกเขาด้วยการออกห่างที่งดงาม’, ‘เจ้าไม่ใช่ผู้ที่มีอำนาจบังคับพวกเขาได้’</p>
+      <p>แต่เมื่อท่านนบีมุฮัมมัด ﷺ อพยพไปยังมะดีนะฮ์ พระองค์ทรงบัญชาให้ทำสงคราม และโองการนี้ถูกประทานลงมา อัรรอบีอ์ บิน อะนัส และนักตัฟซีรคนอื่นๆ ได้ระบุว่า นี่เป็นโองการแรกที่อนุญาตให้มุสลิมทำสงคราม มีรายงานจากอบู บักร์ อัศศิดดีกว่า โองการแรกเกี่ยวกับการทำสงครามคือ:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">أُذِنَ لِلَّذِينَ يُقَـٰتَلُونَ بِأَنَّهُمْ ظُلِمُوا۟</p>
+      </div>
+      <p>“ได้ถูกอนุญาตแก่บรรดาผู้ที่ถูกทำสงคราม (ให้ตอบโต้) เนื่องจากพวกเขาถูกอธรรม” (จากสูเราะฮ์อัลหัจญ์)</p>
+      <p>อัลกุรฏุบีย์ได้อธิบายต่อว่า โองการที่อนุญาตให้ทำสงครามนั้นถูกประทานลงมาเพื่อครอบคลุมทั้งผู้ที่ต่อสู้กับมุสลิม และผู้ที่ไม่ได้ทำสงครามกับพวกเขาในหมู่พวกตั้งภาคี เรื่องนี้เกี่ยวข้องกับเหตุการณ์ที่ท่านนบีมุฮัมมัด ﷺ และเหล่าเศาะหาบะฮ์ได้ออกเดินทางไปทำอุมเราะฮ์ แต่เมื่อพวกเขาไปถึงฮุไดบียะฮ์ พวกตั้งภาคีได้ขัดขวางพวกเขาไม่ให้เข้าสู่มักกะฮ์ ท่านนบีมุฮัมมัด ﷺ และเหล่าเศาะหาบะฮ์จึงหยุดพักที่นั่นเป็นเวลาหนึ่งเดือน จนกระทั่งมีการทำสัญญาสงบศึกกัน ซึ่งมีข้อตกลงว่ามุสลิมจะต้องเดินทางกลับในปีนั้น และปีหน้าจะได้รับอนุญาตให้ทำอุมเราะฮ์เป็นเวลา 3 วัน โดยไม่มีสงครามระหว่างทั้งสองฝ่ายเป็นเวลา 10 ปี เมื่อถึงปีถัดมา มุสลิมเตรียมตัวไปทำอุมเราะฮ์อีกครั้ง แต่ก็เกิดความกังวลว่า พวกตั้งภาคีอาจหักหลังและทำสงครามกับพวกเขา อีกทั้งพวกเขาไม่ต้องการต่อสู้ในเขตหะรอม หรือในเดือนที่ต้องห้าม ดังนั้น โองการนี้จึงถูกประทานลงมา เพื่อบอกว่าหากพวกตั้งภาคีโจมตีพวกเขาก่อน ก็ได้รับอนุญาตให้ต่อสู้ตอบโต้ได้ นักตัฟซีรบางท่านกล่าวว่า: ‘จงสังหารพวกตั้งภาคี ณ ที่ใดก็ตามที่พวกเจ้าพบพวกเขา’ (สูเราะฮ์อัตเตาบะฮ์) ได้มาทำการยกเลิกโองการนี้</p>
+      <p>อิบนุ ซัยด์ และอัรรอบีอ์กล่าวว่า โองการ ‘จงสู้รบกับพวกตั้งภาคีทั้งหมด’ (จากสูเราะฮ์อัตเตาบะฮ์) ได้ยกเลิกโองการเดิมที่มีมาก่อน และท่านนบีมุฮัมมัด ﷺ ได้รับคำสั่งให้ทำสงครามกับผู้ปฏิเสธศรัทธาทั้งหมด แต่อิบนุ อับบาส, อุมัร บิน อับดุลอะซีซ และมุญาฮิด เห็นว่าโองการนี้ก็ยังคงมีผลบังคับใช้ พวกเขาให้ความหมายว่า ‘จงต่อสู้กับผู้ที่ทำสงครามกับพวกเจ้า’ หมายถึง ให้ทำสงครามกับผู้ที่โจมตีมุสลิมก่อน และห้ามละเมิดขอบเขตเช่น การสังหารสตรี เด็ก พระ นักบวช และผู้ที่ไม่เกี่ยวข้องกับสงคราม</p>
+      <p>อบู ญะอ์ฟัร อันนะฮ์ฮาสกล่าวว่า ทัศนะนี้เป็นทัศนะที่ถูกต้องที่สุด ทั้งจากหลักฐานทางซุนนะฮ์และการพิจารณาเชิงตรรกะ หลักฐานจากซุนนะฮ์ก็รายงานจากอิบนุ อุมัรที่ว่า: “ท่านนบีมุฮัมมัด ﷺ เคยเห็นศพของสตรีในสนามรบ และท่านไม่พอใจเรื่องนี้ และได้ทรงห้ามการสังหารสตรีและเด็ก” (บันทึกโดยอิหม่ามมุสลิม และนักรายงานคนอื่นๆ) ดังหะดีษที่ว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">أَنَّ امْرَأَةً، وُجِدَتْ، فِي بَعْضِ مَغَازِي رَسُولِ اللَّهِ صلى الله عليه وسلم مَقْتُولَةً فَأَنْكَرَ رَسُولُ اللَّهِ صلى الله عليه وسلم قَتْلَ النِّسَاءِ وَالصِّبْيَانِ</p>
+      </div>
+      <p>“มีรายงานว่าสตรีคนหนึ่งถูกพบว่าถูกสังหารในสงครามหนึ่งของท่านนบีมุฮัมมัด ﷺ ท่านนบีมุฮัมมัด ﷺ จึงทรงตำหนิการสังหารสตรีและเด็ก”<sup class="fn-ref" id="fnref-6"><a href="#ref-6">6</a></sup></p>
+      <p>ส่วนหลักฐานทางตรรกะ ในภาษาอาหรับ คำกริยารูป ‘فاعلَ’ (ที่มีความหมายว่าทำต่อกัน เช่น يُقَاتِلُونَ - การต่อสู้กัน) โดยทั่วไปใช้กับการกระทำที่เกิดขึ้นระหว่างสองฝ่าย เช่น การต่อสู้ การโต้เถียง หรือการทะเลาะวิวาท ดังนั้น คำว่า ‘จงต่อสู้กับผู้ที่ทำสงครามกับพวกเจ้า’ จึงหมายถึงการทำสงครามกับผู้ที่โจมตีมุสลิมก่อนเท่านั้น และด้วยเหตุนี้เอง อบู บักร์ อัศศิดดีก ได้กำชับยะซีด บิน อบี สุฟยาน ขณะส่งเขาไปทำสงครามในดินแดนชามว่า: ‘อย่าสังหารสตรี เด็ก พระ นักบวช คนชรา หรือผู้ใช้แรงงาน เว้นแต่ว่าพวกเขาจะเป็นศัตรู’ (บันทึกโดยอิหม่ามมาลิกและนักรายงานอื่นๆ)</p>
+      <h2 class="article-h2">โองการดาบและเงื่อนไขของการทำสงคราม</h2>
+      <p>โองการที่สอง ซึ่งมีปรากฏในโองการที่ 5 ของสูเราะฮ์อัตเตาบะฮ์ได้ระบุไว้ว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">فَإِذَا ٱنسَلَخَ ٱلْأَشْهُرُ ٱلْحُرُمُ فَٱقْتُلُوا۟ ٱلْمُشْرِكِينَ حَيْثُ وَجَدتُّمُوهُمْ وَخُذُوهُمْ وَٱحْصُرُوهُمْ وَٱقْعُدُوا۟ لَهُمْ كُلَّ مَرْصَدٍ ۚ فَإِن تَابُوا۟ وَأَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ فَخَلُّوا۟ سَبِيلَهُمْ ۚ إِنَّ ٱللَّهَ غَفُورٌ رَّحِيمٌ</p>
+      </div>
+      <p>“ดังนั้น เมื่อเดือนต้องห้ามสิ้นสุดลงแล้ว ก็จงสังหารพวกตั้งภาคี ณ ที่ใดก็ตามที่พวกเจ้าพบพวกเขา และจงจับกุมพวกเขา และจงปิดล้อมพวกเขา และจงซุ่มโจมตีพวกเขาในทุกที่ที่พวกเจ้าเฝ้ารออยู่ แต่หากพวกเขากลับเนื้อกลับตัว ดำรงการละหมาด และจ่ายซะกาต ก็จงปล่อยพวกเขาเป็นอิสระ แท้จริงอัลลอฮ์เป็นผู้ทรงอภัยโทษและทรงเมตตาเสมอ}<sup class="fn-ref" id="fnref-8"><a href="#ref-8">8</a></sup></p>
+      <p>บัดรุดดีน อัลอัยนัย์ได้อธิบายไว้อย่างกระชับว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هذه الآية الكريمة في سورة براءة، وأولها قوله عز وجل ﴿فإذا انسلخ الأشهر الحرم فاقتلوا المشركين حيث وجدتموهم وخذوهم واحصروهم واقعدوا لهم كل مرصد فإن تابوا وأقاموا الصلاة وآتوا الزكاة فخلوا سبيلهم إن الله غفور رحيم﴾ نزلت في مشركي مكة وغيرهم من العرب. وذلك أنهم عاهدوا المسلمين ثم نكثوا إلا ناسا منهم، وهم بنو ضمرة وبنو كنانة، فنبذوا العهد إلى الناكثين، وأمروا أن يسيحوا في الأرض أربعة أشهر آمنين إن شاؤا لا يتعرض لهم، وهي الأشهر الحرم، وذلك لصيانة الأشهر الحرم من القتل والقتال فيها، فإذا انسلخت قاتلوهم</blockquote>
+      <p class="ar-translation">“โองการอันทรงเกียรตินี้อยู่ในสูเราะฮ์อัตเตาบะฮ์ โดยเริ่มต้นด้วยพระดำรัสของอัลลอฮ์ว่า: ‘ดังนั้น เมื่อเดือนต้องห้ามสิ้นสุดลง ก็จงสังหารพวกตั้งภาคี ณ ที่ใดก็ตามที่พวกเจ้าพบพวกเขา และจงจับกุมพวกเขา และจงปิดล้อมพวกเขา และจงซุ่มโจมตีพวกเขาในทุกที่ที่พวกเจ้าเฝ้ารออยู่ แต่หากพวกเขากลับเนื้อกลับตัว ดำรงการละหมาด และจ่ายซะกาต ก็จงปล่อยพวกเขาเป็นอิสระ แท้จริงอัลลอฮ์เป็นผู้ทรงอภัยโทษและทรงเมตตาเสมอ’ โองการนี้ถูกประทานลงมาเกี่ยวกับพวกตั้งภาคีในมักกะฮ์และกลุ่มอื่นๆ ในหมู่ชาวอาหรับ เนื่องจากพวกเขาได้ทำสัญญาสงบศึกกับมุสลิมเรียบร้อยแล้ว แต่แล้วก็ทรยศและละเมิดสัญญา เว้นแต่บางเผ่า เช่น เผ่าบนู ฎ็อมเราะฮ์และบนู กินานะฮ์ ที่ยังคงรักษาสัญญา ดังนั้น มุสลิมจึงได้รับคำสั่งให้ฉีกสัญญากับพวกที่ละเมิด และให้เวลาแก่พวกเขาเป็นเวลาสี่เดือนในการอพยพออกไปจากพื้นที่อย่างปลอดภัย หากพวกเขาประสงค์ โดยไม่ถูกโจมตี ระยะเวลาสี่เดือนนี้อยู่ในช่วง ‘เดือนต้องห้าม’ ซึ่งเป็นเดือนที่ห้ามทำสงคราม เพื่อรักษาเกียรติของช่วงเวลานี้ และเมื่อเดือนต้องห้ามสิ้นสุดลง มุสลิมจึงได้รับอนุญาตให้ทำสงครามกับพวกเขา”</p>
+      <p>(หมายความว่าโองการนี้ไม่ได้เป็นคำสั่งให้สังหารทุกคนที่ไม่ใช่มุสลิมโดยไม่มีเงื่อนไข แต่มีพื้นฐานมาจากการละเมิดสัญญาของคนบางกลุ่ม และพวกเขายังได้รับโอกาสให้หลีกเลี่ยงการทำสงครามด้วยการกลับเนื้อกลับตัวหรือออกจากดินแดนของมุสลิมภายในเวลาที่กำหนด)</p>
+      <p>เมื่อเราได้พิจารณาโองการเหล่านี้โดยรวม จะพบว่าหลักการบัญญัติเรื่องญิฮาดในขั้นต้นนั้น มีเป้าหมายเพื่อปกป้องมุสลิมจากการถูกกดขี่เท่านั้น เนื่องจากพวกตั้งภาคีได้ทรมานมุสลิม และทำร้ายพวกเขา ขับไล่พวกเขาออกจากบ้านเกิด และยึดทรัพย์สินของพวกเขา จนกระทั่งมีคำบัญชาให้มีการอพยพ ดังนั้น อัลลอฮ์จึงบัญญัติให้มีการญิฮาดหรือทำสงครามเพื่อปกป้องศาสนาอิสลาม ปกป้องผู้มุสลิมและรัฐของมุสลิม รวมถึงเป็นการตอบโต้ความอยุติธรรมและการรุกรานที่พวกเขาได้รับมา ในช่วงแรก คำสั่งเกี่ยวกับสงครามนั้นจำกัดอยู่เพียงแค่การป้องกันตัวเองจากการโจมตีของศัตรูเท่านั้น ดังที่อัลลอฮ์ตรัสว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَقَـٰتِلُوا۟ فِى سَبِيلِ ٱللَّهِ ٱلَّذِينَ يُقَـٰتِلُونَكُمْ وَلَا تَعْتَدُوٓا۟</p>
+      </div>
+      <p>“และจงต่อสู้ในหนทางของอัลลอฮ์กับผู้ที่ทำสงครามกับพวกเจ้า และอย่าได้ละเมิด” (สูเราะฮ์อัลบากอเราะฮ์)</p>
+      <p>และโองการที่ว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">فَإِن قَـٰتَلُوكُمْ فَٱقْتُلُوهُمْ</p>
+      </div>
+      <p>“หากพวกเขาทำสงครามกับพวกเจ้า ก็จงสังหารพวกเขา” (สูเราะฮ์อัลบากอเราะฮ์)</p>
+      <p>ต่อมา เมื่อมีการต่อต้านจากชาวอาหรับอย่างต่อเนื่อง พวกเขาไม่เคารพต่อสัญญาที่ทำไว้ และยังคงแสดงท่าทีดื้อรั้น แข็งข้อ อัลลอฮ์จึงทรงบัญชาให้ทำสงครามกับพวกตั้งภาคีในคาบสมุทรอาหรับทั้งหมด เพราะพวกเขายังคงมีลักษณะของผู้รุกราน (الحرابة) ซึ่งหมายถึงการรุกรานและก่อสงคราม อย่างไรก็ตาม อัลลอฮ์ยังคงให้โอกาสแก่ผู้ที่ต้องการแสวงหาความจริง โดยอนุญาตให้พวกเขาขอความคุ้มครองจากมุสลิมเพื่อรับฟังพระดำรัสของพระองค์ได้ ดังที่พระองค์ได้ตรัสว่า:</p>
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَإِنْ أَحَدٌ مِّنَ ٱلْمُشْرِكِينَ ٱسْتَجَارَكَ فَأَجِرْهُ حَتَّىٰ يَسْمَعَ كَلَـٰمَ ٱللَّهِ ثُمَّ أَبْلِغْهُ مَأْمَنَهُۥ ۚ ذَٰلِكَ بِأَنَّهُمْ قَوْمٌ لَّا يَعْلَمُونَ</p>
+      </div>
+      <p>“และหากผู้ใดในหมู่พวกตั้งภาคีขอความคุ้มครองจากเจ้า ก็จงให้เขาได้รับความคุ้มครองจนกว่าเขาจะได้ยินพระดำรัสของอัลลอฮ์ จากนั้นจงส่งเขาไปยังที่ปลอดภัย นั่นเป็นเพราะว่าพวกเขาเป็นกลุ่มชนที่ไม่รู้”<sup class="fn-ref" id="fnref-9"><a href="#ref-9">9</a></sup></p>
+      <p>ด้วยเหตุนี้ คำว่าญิฮาดในที่นี้ จึงมีความหมายเกี่ยวข้องกับ ‘การต่อต้านผู้รุกราน’ (الحرابة) ซึ่งหมายถึงการป้องกันตนเองจากศัตรูที่เป็นฝ่ายเปิดสงคราม ท่านกะมาล อิบนุ ฮุมามได้ระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا يقتلوا امرأة ولا صبيا ولا شيخا فانيا ولا مقعدا ولا أعمى؛ لأن المبيح للقتل عندنا هو الحراب ولا يتحقق منهم</blockquote>
+      <p class="ar-translation">“และอย่าได้สังหารสตรี เด็ก คนชราที่หมดสิ้นเรี่ยวแรง ผู้พิการ หรือคนตาบอด เพราะสิ่งที่ทำให้การสังหารเป็นที่อนุญาตตามทัศนะของเราคือ ‘การเป็นผู้รุกราน’ (الحرابة) ซึ่งบุคคลเหล่านี้ไม่ได้เข้าข่ายของผู้รุกราน”</p>
+      <p>ดังนั้น การบัญญัติเรื่องการต่อสู้ในอิสลาม ไม่ได้เกิดขึ้นเพราะต้องการทำลายล้างผู้ปฏิเสธศรัทธาเพียงเพราะพวกเขามีศาสนาแตกต่างออกไป แต่เกิดขึ้นเพราะพวกเขาเป็นผู้ที่รุกรานก่อน อีกทั้งยังทำร้าย และขัดขวางเสรีภาพทางศาสนา แล้วเมื่อพวกเขายุติการกระทำเหล่านี้ การต่อสู้ก็จะยุติตามไปด้วย ดร.อัลบูฏีย์ได้ระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فهذه الآيات صريحة الدلالة على أن علة الجهاد القتالي للكافرين هي الحرابة، وقد تفرق نزولها في آماد مختلفة من العهد المدني، وفيها ما قد نزل قبل وفاة رسول الله ﷺ بأشهر، ومن ثم فيه الحجة لمذهب الجمهور</blockquote>
+      <p class="ar-translation">“โองการเหล่านี้ (ที่เราได้กล่าวถึงกันมาแล้ว) แสดงให้เห็นอย่างชัดเจนว่า ‘เหตุผลของการทำสงครามกับคนที่ปฏิเสธศรัทธาคือ มีการรุกรานจากพวกเขาและมันทำให้ก่อเกิดสงคราม โองการเหล่านี้ถูกประทานลงมาในช่วงเวลาต่างๆ ของยุคมะดีนะฮ์ และบางโองการถูกประทานลงมาเพียงไม่กี่เดือนก่อนที่ท่านนบีมุฮัมมัด ﷺ จะเสียชีวิต ดังนั้น โองการเหล่านี้จึงเป็นหลักฐานที่สนับสนุนทัศนะของนักวิชาการส่วนใหญ่ (ที่เห็นว่าการทำสงครามในอิสลามมีเป้าหมายเพื่อป้องกันการรุกราน ไม่ใช่เพียงเพราะเอาไว้ฆ่าคนปฏิเสธศรัทธา)”</p>
+      <h2 class="article-h2">หลักฐานจากซุนนะฮ์ว่าความเป็นผู้ปฏิเสธศรัทธาไม่ใช่เหตุให้สังหาร</h2>
+      <p>หลักฐานจากคำพูดและการกระทำของท่านนบี (หะดีษ) ที่แสดงว่า <strong>‘ความเป็นผู้ปฏิเสธศรัทธา’ ไม่ใช่เหตุผลที่ทำให้การสังหารเป็นที่อนุญาต</strong> ประการแรก หะดีษจากฮันซอละฮ์ อัลกาติบ:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">غَزَوْنَا مَعَ رَسُولِ اللَّهِ صلى الله عليه وسلم فَمَرَرْنَا عَلَى امْرَأَةٍ مَقْتُولَةٍ قَدِ اجْتَمَعَ عَلَيْهَا النَّاسُ فَأَفْرَجُوا لَهُ فَقَالَ مَا كَانَتْ هَذِهِ تُقَاتِلُ فِيمَنْ يُقَاتِلُ ثُمَّ قَالَ لِرَجُلٍ انْطَلِقْ إِلَى خَالِدِ بْنِ الْوَلِيدِ فَقُلْ لَهُ إِنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم يَأْمُرُكَ يَقُولُ لاَ تَقْتُلَنَّ ذُرِّيَّةً وَلاَ عَسِيفًا</p>
+      </div>
+      <p>“เราได้ออกทำสงครามร่วมกับท่านนบีมุฮัมมัด ﷺ และเราได้ผ่านไปเห็นศพของหญิงคนหนึ่งที่ถูกสังหาร มีผู้คนมุงดูเธออยู่ เมื่อพวกเขาเปิดทางให้ท่านนบี ท่านจึงกล่าวว่า: ‘นางไม่ได้ร่วมต่อสู้กับฝ่ายศัตรู’ จากนั้น ท่านสั่งให้ชายคนหนึ่งไปหาคอลิด บิน อัลวะลีด และกล่าวกับเขาว่า: ‘แท้จริง ท่านนบีมุฮัมมัด ﷺ มีคำสั่งให้เจ้าอย่าสังหารเด็กและผู้ใช้แรงงาน (ลูกจ้างที่ไม่มีส่วนเกี่ยวข้องกับสงคราม)’”<sup class="fn-ref" id="fnref-10"><a href="#ref-10">10</a></sup></p>
+      <p>ประการที่สอง หะดีษจากท่านนบีมุฮัมมัด ﷺ:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">انْطَلِقُوا بِاسْمِ اللَّهِ وَبِاللَّهِ وَعَلَى مِلَّةِ رَسُولِ اللَّهِ وَلاَ تَقْتُلُوا شَيْخًا فَانِيًا وَلاَ طِفْلاً وَلاَ صَغِيرًا وَلاَ امْرَأَةً وَلاَ تَغُلُّوا وَضُمُّوا غَنَائِمَكُمْ وَأَصْلِحُوا وَأَحْسِنُوا إِنَّ اللَّهَ يُحِبُّ الْمُحْسِنِينَ</p>
+      </div>
+      <p>“จงออกไปในหนทางของอัลลอฮ์ด้วยพระนามของพระองค์ แต่จงอย่าสังหารผู้สูงอายุที่ไร้เรี่ยวแรง เด็กเล็ก หรือสตรี และจงอย่าทรยศ อย่าฉ้อฉล จงรวบรวมทรัพย์เชลยศึก และจงทำให้ทุกสิ่งเป็นไปในทางที่ดี จงปฏิบัติตนให้ดี เพราะแท้จริง อัลลอฮ์ทรงรักผู้ที่ทำความดี”<sup class="fn-ref" id="fnref-11"><a href="#ref-11">11</a></sup></p>
+      <p>การกระทำของอบู บักร์และคำสั่งเสียที่ท่านให้แก่อุซามะฮ์ และกองทัพของเขาในเช้าวันที่ส่งพวกเขาออกไปทำสงคราม เป็นหนึ่งในสิ่งแรกที่อบู บักร์ได้ปฏิบัติหลังจากขึ้นเป็นคอลีฟะฮ์ ในคำสั่งเสียของท่านอบู บักร์กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لا تخونوا ولا تغدروا لا تغلوا ولا تمثلوا، ولا تقتلوا طفلا ولا شيخا كبيرا ولا امرأة... وإذا مررتم بقوم قد فرغوا أنفسهم في الصوامع فدعوهم وما فرغوا أنفسهم له</blockquote>
+      <p class="ar-translation">“อย่าทรยศ อย่าหักหลัง อย่าฉ้อโกง อย่าทารุณศพ อย่าสังหารเด็กเล็ก ผู้สูงอายุ หรือสตรี… และหากพวกเจ้าเดินทางผ่านกลุ่มคนที่อุทิศตนในอารามของพวกเขา ก็จงปล่อยพวกเขาไว้กับสิ่งที่พวกเขาอุทิศตนให้”</p>
+      <p>หลักฐานที่นักวิชาการส่วนใหญ่ใช้จากหะดีษเหล่านี้ คือคำสั่งห้ามทำสงครามกับผู้ที่ไม่ได้เป็นนักรบ - หมายถึงผู้ที่ไม่มีอำนาจต่อสู้หรือก่ออันตราย ดังนั้น เมื่อท่านนบีมุฮัมมัด ﷺ ผ่านไปเห็นศพของผู้ที่ถูกสังหาร และพบว่ามีสตรีคนหนึ่งถูกฆ่า ท่านกล่าวว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">مَا كَانَتْ هَذِهِ تُقَاتِلُ فِيمَنْ يُقَاتِلُ</p>
+      </div>
+      <p>“นางไม่ได้ร่วมต่อสู้กับฝ่ายศัตรูเลย”</p>
+      <p>นี่เป็นการแสดงออกถึงการปฏิเสธและตำหนิของท่านนบีมุฮัมมัด ﷺ ต่อการสังหารสตรีเช่นนี้ ซึ่งเป็นผู้ที่ไม่สามารถเข้าร่วมต่อสู้หรือก่อการรุกรานได้</p>
+      <h2 class="article-h2">การวินิจฉัยบทบัญญัติสงครามโดยคำนึงถึงประโยชน์ (المصلحة)</h2>
+      <p>และบทบัญญัติต่างๆ เกี่ยวกับญิฮาดที่ปรากฏอยู่ในตำราฟิกฮ์ส่วนใหญ่นั้น ได้รับการกำหนดโดยคำนึงถึง<strong>ประโยชน์ (المصلحة)</strong> เป็นหลัก ดังนั้น ในกระบวนการวินิจฉัยบทบัญญัติเกี่ยวกับการทำสงคราม บรรดานักนิติศาสตร์อิสลาม (ฟุกอฮาอ์) ได้ใช้ ‘ประโยชน์ของอิสลามและมุสลิม’ เป็นจุดตั้งต้นในการออกคำตัดสิน ซึ่งเป็นแนวคิดที่ชัดเจน และสามารถสังเกตได้จากเนื้อหาทางฟิกฮ์ของพวกเขา</p>
+      <p>อย่างไรก็ตาม หากพิจารณาสถานการณ์ของมุสลิมในปัจจุบัน จะพบว่าประโยชน์ที่เคยเป็นพื้นฐานของบทบัญญัติทางฟิกฮ์ในอดีตนั้นไม่ได้เป็นเช่นเดียวกันอีกต่อไป เนื่องจากในปัจจุบัน อิสลามอยู่ในภาวะอ่อนแอ มุสลิมถูกกดขี่และอยู่ในสภาพล้าหลัง ด้วยเหตุนี้ ‘ประโยชน์’ ที่เคยมีในอดีตจึงเปลี่ยนแปลงไป และเมื่อประโยชน์เปลี่ยนไป บทบัญญัติก็สามารถเปลี่ยนแปลงตามไปด้วย ดังนั้น เราสามารถเปลี่ยนจากบทบัญญัติที่เคยถูกใช้มา ไปสู่บทบัญญัติใหม่ที่เหมาะสมกับประโยชน์ที่เกิดขึ้นจากเงื่อนไขและเหตุการณ์ที่เรากำลังเผชิญ</p>
+      <p>ประเด็นสำคัญที่ต้องเน้นย้ำในบริบทนี้คือ นักนิติศาสตร์อิสลามส่วนใหญ่ จำกัดการเปลี่ยนแปลงบทบัญญัติให้อยู่ในกรอบของเรื่องที่ ‘ไม่มีหลักฐานจากอัลกุรอานและหะดีษที่แน่ชัด’ หรือ ‘ไม่มีมติเอกฉันท์ของบรรดานักวิชาการ’ ทั้งนี้เพื่อปิดกั้นช่องทางของการบิดเบือนศาสนา และการใช้หลักการศาสนาไปตามอารมณ์หรือผลประโยชน์ส่วนตัว แนวคิดเกี่ยวกับการเปลี่ยนแปลงบทบัญญัติตามความจำเป็นของประโยชน์ ได้รับการยืนยันจากบรรดานักวิชาการที่เข้าใจจิตวิญญาณของบทบัญญัติอิสลามและเป้าหมายของมัน อิบนุลก็อยยิมกล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أن تغيير الفتوى بحسب الأمكنة والأحوال والنيات والعوائد معنى عظيم النفع جدا، وقع بسبب الجهل به غلط عظيم على الشريعة، أوجب من الحرج والمشقة ما يعلم أن الشريعة لا يعقل أن تأتي به</blockquote>
+      <p class="ar-translation">“การเปลี่ยนแปลงคำวินิจฉัย (ฟัตวา) ตามกาลเวลา สถานที่ เงื่อนไข เจตนา และขนบธรรมเนียม เป็นหลักการที่มีประโยชน์อย่างยิ่ง ซึ่งการไม่เข้าใจหลักการนี้อย่างชัดเจน ได้ทำให้เกิดข้อผิดพลาดร้ายแรงต่อศาสนา และทำให้เกิดความยุ่งยากและความลำบาก ซึ่งขัดกับแนวทางของอิสลาม (หมายความว่า การยึดติดกับบทบัญญัติเก่าโดยไม่คำนึงถึงการเปลี่ยนแปลงของสถานการณ์ อาจทำให้เกิดปัญหาทางศาสนาที่ขัดแย้งกับเป้าหมายของชะรีอะฮ์)”</p>
+      <p>คำกล่าวนี้สนับสนุนแนวคิดที่ว่า การเปลี่ยนแปลงบทบัญญัติที่อิงอยู่บน ‘ประโยชน์’ เป็นสิ่งที่จำเป็น เพื่อให้แน่ใจว่าไม่มีช่องว่างระหว่างบทบัญญัติทางฟิกฮ์กับชีวิตความเป็นอยู่และผลประโยชน์ของผู้คน เพราะหากเกิดช่องว่างระหว่างบทบัญญัติทางศาสนากับสภาพชีวิตของประชาชน สิ่งนี้จะขัดแย้งกับหลักการสำคัญของศาสนา ซึ่งระบุไว้อย่างชัดเจนว่า อิสลามนั้นเป็นศาสนาที่เหมาะสมกับทุกยุคสมัยและทุกสถานที่ ดังนั้น บทบัญญัติจำเป็นต้องปรับตัวให้สอดคล้องกับความเป็นจริงของสังคมและประโยชน์ของประชาชน ตราบใดที่ยังคงอยู่ในขอบเขตของจิตวิญญาณแห่งชะรีอะฮ์ และเป็นไปตามแนวทางที่บรรดานักวิชาการได้เข้าใจ</p>
+      <h2 class="article-h2">การทำสงครามในเดือนรอมฎอนประเสริฐกว่าเดือนอื่นจริงหรือไม่?</h2>
+      <p>และคำถามสุดท้ายคือ การทำสงครามในเดือนรอมฎอนประเสริฐกว่าเดือนอื่นจริงหรือไม่? <strong>ประการที่ 1</strong> โดยทั่วไป ‘เดือนรอมฎอน’ ถือเป็น ‘เดือนแห่งการอิบาดะฮ์ (การเคารพภักดี)’ ซึ่งมุสลิมจะต้องถือศีลอด ทำอิบาดะฮ์ และแสวงหาความโปรดปรานจากอัลลอฮ์เป็นพิเศษ แต่อย่างไรก็ตาม ในประวัติศาสตร์อิสลาม มีสงครามสำคัญเกิดขึ้นในเดือนรอมฎอนช่วงที่ท่านศาสดายังมีชีวิตอยู่เพียงสองครั้งคือ สงครามบะดัร (ฮ.ศ. 2) เป็นสงครามครั้งแรกของมุสลิมที่นำไปสู่ชัยชนะครั้งสำคัญ และการพิชิตมักกะฮ์ (ฮ.ศ. 8) เป็นการเดินทัพและการยึดเมืองโดยสันติวิธี</p>
+      <p>แต่ถ้าหากเราขยายระยะเวลาเป็น 30 ปีตั้งแต่สงครามครั้งแรกจนถึงปีฮิจเราะฮ์ที่ 30 หรือสิ้นสุดยุคของท่านอลีย์ จะพบว่าการทำสงครามในเดือนรอมฎอนเพียงแค่ 2 ครั้งเท่านั้น คือสงครามบะดัรและการพิชิตมักกะฮ์ แต่เดือนที่มีสงครามครั้งสำคัญมากที่สุดคือเดือนเชาวาล ซึ่งมีทั้งหมด 5 สงคราม ตั้งแต่สงครามอุหุดในฮิจเราะฮ์ที่ 3, สงครามคอนดักฮิจเราะฮ์ที่ 5, หุนัยน์ฮิจเราะฮ์ที่ 8, การล้อมฏออีฟฮิจเราะฮ์ที่ 8, ยุทธการอัลก้อดดะซียะฮ์ในฮิจเราะฮ์ที่ 15 ทั้งนี้ จำนวนสงครามข้างต้นนับเฉพาะ “สงครามหรือยุทธการสำคัญ” ที่เกิดขึ้นระหว่างปีฮิจเราะฮ์ที่ 1-30</p>
+      <p><strong>ประการที่ 2</strong> ไม่มีหลักฐานเฉพาะที่ระบุว่าการทำสงครามในเดือนรอมฎอน “ประเสริฐ” กว่าเดือนอื่นๆ ในแหล่งอ้างอิงหลักของอิสลาม (อัลกุรอานและหะดีษ) ไม่มีข้อความใดที่ระบุชัดเจนว่าการทำสงครามในเดือนรอมฎอนเป็นสิ่งที่ประเสริฐกว่าเดือนอื่นๆ อย่างไรก็ตาม อัลกุรอานกล่าวถึงเดือนรอมฎอนในฐานะเดือนแห่งการประทานอัลกุรอาน และเน้นเรื่องการถือศีลอดเป็นหลักเท่านั้น ไม่ได้กล่าวถึงสงครามเป็นพิเศษแต่อย่างใด</p>
+      <p><strong>ประการที่ 3</strong> ทำไมมีสงครามเกิดขึ้นในเดือนรอมฎอน? ถึงแม้เดือนรอมฎอนเป็นเดือนแห่งการถือศีลอดและอิบาดะฮ์ แต่ในบางกรณีการทำสงครามอาจจำเป็น เช่น สงครามบะดัร (ฮ.ศ. 2) เกิดขึ้นเพราะมุสลิมต้องปกป้องตนเองจากกองทัพกุเรช หรือช่วงการพิชิตมักกะฮ์ (ฮ.ศ. 8) เป็นยุทธศาสตร์เพื่อยุติการละเมิดสนธิสัญญาฮุดัยบิยะฮ์ สงครามเหล่านี้เกิดขึ้นตามสถานการณ์ ไม่ได้หมายความว่าเดือนรอมฎอนเป็นเดือนที่ควรทำสงครามโดยเฉพาะ ดังนั้นจึงไม่มีหลักฐานทางศาสนาที่บ่งบอกว่าการทำสงครามในเดือนรอมฎอนมีความประเสริฐกว่าการทำสงครามในเดือนอื่น มีรายงานจากท่านอะห์มัด บิน ฮัมบัลว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">لم يكن رسول الله صلى الله عليه وسلم يغزو في الشهر الحرام إلا أن يغزى أو يغزوا، فإذا حضر ذلك أقام بنا حتى ينسلخ</blockquote>
+      <p class="ar-translation">“ท่านนบีมุฮัมมัด ﷺ ไม่เคยเป็นฝ่ายเริ่มทำสงครามในเดือนต้องห้าม เว้นแต่เมื่อถูกโจมตีหรือศัตรูเป็นฝ่ายเริ่มทำสงครามก่อน และหากเกิดสถานการณ์เช่นนั้น ท่านจะหยุดอยู่กับพวกเรา จนกว่าเดือนต้องห้ามจะสิ้นสุดลง”</p>
+      <p>และจากการประมวลผลจากข้อมูลทั้งหมดนี้ ทำให้เข้าใจได้ว่า สถานการณ์ที่ได้รับอนุญาตให้ทำสงครามคือ ถ้าถูกรุกรานก่อนก็สามารถทำสงครามได้เพื่อตอบโต้ และถ้าศัตรูฉวยโอกาสใช้เดือนต้องห้ามเป็นยุทธศาสตร์โจมตีมุสลิมก็สามารถป้องกันตัวได้ และถ้าศัตรูละเมิดกฎของเดือนต้องห้ามก่อน การตอบโต้ถือเป็นสิ่งที่อนุญาต ดังนั้นหากการทำสงครามในเดือนรอมฎอนมีความประเสริฐกว่าเดือนอื่นๆ เช่นนั้นก็คงมีการบันทึกกัน ดังนั้นคนที่อ้างว่าการทำสงครามในเดือนนี้ประเสริฐกว่า ได้ผลบุญยิ่งกว่า เป็นเพียงการสนองแนวคิดของตนเองที่อยากจะก่อความรุนแรงเพียงเท่านั้น นั่นเป็นเพียงข้ออ้างในการทำสงครามเพื่อผลประโยชน์ส่วนตัว</p>
+      <h2 class="article-h2">สรุป</h2>
+      <ol class="article-summary">
+        <li><strong>พื้นฐานเดิมคือสันติภาพ:</strong> ความสัมพันธ์ระหว่างมุสลิมกับผู้อื่นตั้งอยู่บนการอยู่ร่วมกันอย่างสันติ และอิสลามส่งเสริมการทำดีและความยุติธรรมต่อผู้ที่ไม่ได้เป็นศัตรู</li>
+        <li><strong>ห้ามสังหารพลเรือนโดยมติเอกฉันท์:</strong> นักวิชาการทั้งสี่มัสฮับมีมติว่า ห้ามสังหารสตรี เด็ก คนชรา ผู้พิการ และนักบวช ตราบใดที่พวกเขาไม่ได้เข้าร่วมการสู้รบ</li>
+        <li><strong>เหตุของสงครามคือการรุกราน ไม่ใช่ความต่างศาสนา:</strong> สิ่งที่ทำให้การสู้รบเป็นที่อนุญาตคือ ‘การเป็นผู้รุกราน’ (الحرابة) ไม่ใช่เพียงเพราะผู้อื่นปฏิเสธศรัทธา</li>
+        <li><strong>โองการสงครามถูกประทานเป็นลำดับขั้น:</strong> เริ่มจากการอดทนและเผยแผ่ ไปสู่การอนุญาตให้ป้องกันตัว และต้องเข้าใจตามบริบทแห่งการประทาน ไม่ใช่ตัดตอนมาตีความตามอำเภอใจ</li>
+        <li><strong>การสังหารผู้บริสุทธิ์ขัดต่ออิสลามอย่างยิ่ง:</strong> การฆ่าชีวิตบริสุทธิ์เพียงหนึ่งชีวิตเทียบเท่ากับการสังหารมนุษย์ทั้งมวล</li>
+        <li><strong>ไม่มีความประเสริฐพิเศษในการทำสงครามเดือนรอมฎอน:</strong> ไม่มีหลักฐานทางศาสนาว่าการทำสงครามในเดือนรอมฎอนประเสริฐกว่าเดือนอื่น ข้ออ้างเช่นนี้เป็นเพียงการสนองความต้องการก่อความรุนแรงของกลุ่มสุดโต่ง</li>
+      </ol>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). จริยธรรมการทำสงครามในกฎหมายอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/ethics-of-war-in-islamic-law.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">القرآن الكريم، سورة البقرة (2)، الآيتان 204-205. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">القرآن الكريم، سورة الأنفال (8)، الآية 61. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">القرآن الكريم، سورة الممتحنة (60)، الآية 8. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">أخرجه البخاري في صحيح البخاري، كتاب الجهاد والسير، رقم 3015، من حديث ابن عمر رضي الله عنهما. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">القرآن الكريم، سورة المائدة (5)، الآية 32. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+        <li id="ref-6">أخرجه مسلم في صحيح مسلم، كتاب الجهاد والسير، رقم 1744، من حديث عبد الله بن عمر رضي الله عنهما. <a class="fn-back" href="#fnref-6" aria-label="กลับไปยังเชิงอรรถที่ 6">↑</a></li>
+        <li id="ref-7">القرآن الكريم، سورة البقرة (2)، الآية 190. <a class="fn-back" href="#fnref-7" aria-label="กลับไปยังเชิงอรรถที่ 7">↑</a></li>
+        <li id="ref-8">القرآن الكريم، سورة التوبة (9)، الآية 5. <a class="fn-back" href="#fnref-8" aria-label="กลับไปยังเชิงอรรถที่ 8">↑</a></li>
+        <li id="ref-9">القرآن الكريم، سورة التوبة (9)، الآية 6. <a class="fn-back" href="#fnref-9" aria-label="กลับไปยังเชิงอรรถที่ 9">↑</a></li>
+        <li id="ref-10">أخرجه ابن ماجه في سننه، كتاب الجهاد، رقم 2842، من حديث حنظلة الكاتب رضي الله عنه. <a class="fn-back" href="#fnref-10" aria-label="กลับไปยังเชิงอรรถที่ 10">↑</a></li>
+        <li id="ref-11">أخرجه أبو داود في سننه، كتاب الجهاد، رقم 2614، من حديث أنس بن مالك رضي الله عنه. <a class="fn-back" href="#fnref-11" aria-label="กลับไปยังเชิงอรรถที่ 11">↑</a></li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>

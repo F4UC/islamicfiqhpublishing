@@ -176,3 +176,15 @@ All: `block-ar` kept **byte-exact** (before==after verified); every `<sup class=
 ## (C) content-gate (5 Batch A) + reading-time
 - #6 (aya/hadith translation outside block): only madain-salih had such blocks → fixed; #81/#56/#72/#2 have none. #1–5 (translit/proofread/register/fact-geo/citations) verified at build.
 - reading-time re-run (placement moved translations into counted prose): madain-salih 9, eating-liver-spleen 9, abu-al-aynaa 17, al-ashari 17. articles.json stays **77 entries** (no new entries; readingTime updated per Rule 55).
+
+---
+
+# Phase-2 prove-the-gate batch — 6 articles (ONE DRAFT PR) · branch `claude/phase2-batch-prove-gate`
+> Built from main @ 9249fde (articles.json 76 → 82). DRAFT PR only — no merge/deploy/purge. child-safety (R71): all 6 pre-cleared by A1 + re-read by orchestrator/agents (no flags).
+
+- **the-age-of-khadija** (ประวัติศาสตร์) — R79 merge of 2 Drive docs; coverage 99.23%; ⚑R52: อิบนุลมุลักกิน/อิบนุลก็อตฏอน/อบุนนัฎร์/อบุลวะลีด
+- **sunglasses-during-ihram** (หัจญ์) — coverage 98.60% raw / 99.79% S5-adj ⚑; hadith Muslim 1298a
+- **conjoined-twins-in-islamic-law** (นิติศาสตร์) — coverage 99.65%; ⚑R52: อิบนุลเญาซีย์/อิบนุลอิม้าด/อบุลบะศ็อล
+- **ethics-of-war-in-islamic-law** (นิติศาสตร์) — Dar al-Ifta anti-extremism framing preserved; coverage 99.01%; 15 aya/hadith byte-exact; ⚑R52: อิบนุลก็อยยิม/อิบนุซุบัยร
+- **touching-dogs-in-islam** (นิติศาสตร์) — coverage 98.53% raw / 99.43% S5-adj ⚑; hadith Muslim 1575b + āyah 5:4; ⚑R52: อิบนุลกอซิม
+- **hadith-scholars-vs-jurists** (หะดีษ) — balanced conclusion preserved; coverage 99.69%; ⚑R52: อบุลฟัตห์
