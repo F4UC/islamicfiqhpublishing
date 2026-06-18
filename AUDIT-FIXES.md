@@ -209,6 +209,20 @@
 - การ์ตรวจ Arabic completeness รายงานผิดว่า "drop 1 บล็อก" เพราะ skeleton ของ Uthmani (`زكىها`) ≠ imlaei (`زكاها`) → false positive · ที่จริงอายะฮ์ครบ แค่ orthography ต่าง
 - Thai coverage 100.4% (ครบอยู่แล้ว) · reading-time ไม่เปลี่ยน (aya ยกเว้น) · articles.json ไม่แตะ
 
+## 2026-06-18 — PHASE 2 PILOT · `articles/nitisart/eating-liver-spleen-of-sacrificial-animal.html` (#25) · branch claude/phase2-liver-spleen-qurban
+
+**กรณีที่ใช้:** case (2) vowel อายะฮ์ด้วยการ paste byte-exact จากแหล่ง canonical (quran.com, Hafs/uthmani) — บทความยกอายะฮ์ 2 ท่อนแบบ standalone (ผู้เขียนยกมาเกือบครบสระ) จึง **paste ตัวบท canonical byte-exact** ลงใน `.aya-block` แทน (R7/R53)
+
+| บล็อก | ตัวบท (canonical, paste-only) | แหล่ง | blob-SHA(12) |
+|---|---|---|---|
+| `.aya-block` #1 | `وَيُحِلُّ لَهُمُ ٱلطَّيِّبَـٰتِ وَيُحَرِّمُ عَلَيْهِمُ ٱلْخَبَـٰٓئِثَ` | quran.com 7:157 (al-A'raf) | `27e37b5824fa` |
+| `.aya-block` #2 | `أَوْ دَمًا مَّسْفُوحًا` | quran.com 6:145 (al-An'am) | `8d9ecb9dca92` |
+
+- ดึงผ่าน quran.com API (uthmani) → ตัด substring ต่อเนื่องที่มีสระครบ byte-exact (ไม่พิมพ์สระเอง)
+- **scholar quotes (.ar-quote) ทั้งหมด: คงสระครบตาม source (R60 all fully-voweled → keep voweled, ไม่ strip) — ไม่ถือเป็นการแตะ (byte-exact จาก source)**
+- **★FLAG (R77 / nested-aya):** scholar quotes ของอัลกะซานีย์ + อิบนุ อาบิดีน มี **อายะฮ์แทรกในตัวบท** (รูปอักขรวิธีฉบับพิมพ์ เช่น `الطَّيِّبَاتِ` ไม่ใช่ `ٱلطَّيِّبَـٰتِ`) และมีจุดมหัพภาคลาติน `.`/`اهـ.` ปนใน scholar prose — **คงตัวบท scholar ไว้ byte-exact (ไม่แตะ)** เพราะอายะฮ์ฝังในประโยคปราชญ์แยกไม่ออกอย่างปลอดภัย → **FLAG ขอ Claude ตัดสิน** (re-fetch span อายะฮ์ในตัว scholar หรือคงไว้; และ normalize `.` ลาตินใน scholar prose หรือไม่)
+- **★FLAG (R8 / hadith wording):** หะดีษ `أُحِلَّ لَنَا مَيْتَتَانِ...` ฝังในคำพูดอันนะวาวีย์ (สำนวน `فَالسَّمَكُ`) — sunnah.com Ibn Majah 3314 (เศาะฮีฮ์) ใช้สำนวน `فَالْحُوتُ` (ริวายะฮ์ต่างสำนวน) → **คงสำนวนอันนะวาวีย์ byte-exact** (ไม่ทับด้วย sunnah.com เพราะจะบิดเบือนคำพูดปราชญ์), takhrij อ้างใน บรรณานุกรม ref-3 → FLAG ขอ Claude ยืนยันแนวทาง
+
 ## 2026-06-18 — PHASE 2 PILOT · `articles/tarikh/fatima-al-fihriya-founder-of-al-qarawiyyin.html` (#52) · branch claude/phase2-fatima-al-fihriya
 
 **กรณีที่ใช้:** case (1) strip ฮะเราะกาตตามกฎ 60 (ALL-OR-NOTHING) — คำพูดปราชญ์ในบทนี้ลงสระไม่สม่ำเสมอใน source จึงตัดสระให้เปลือยสระทั้งหมด (uniformly bare) · ลบเฉพาะ U+064B–U+0652 · skeleton ก่อน=หลัง ทุกบล็อก (พิสูจน์ด้วย strip-marks byte-diff) · บทนี้ไม่มีอายะฮ์/หะดีษ
