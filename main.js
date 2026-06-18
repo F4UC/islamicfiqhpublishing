@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     {text: 'ประวัติศาสตร์',   href: '/pages/history.html'},
                     {text: 'นิติศาสตร์',      href: '/pages/nitisart.html'},
                     {text: 'หัจญ์ & อุมเราะฮ์', href: '/pages/hajj.html'},
+                    {text: 'มุมพักใจ',         href: '/pages/reflections.html'},
                     {text: 'เครื่องมือ',      href: '/pages/tools.html'}
                 ];
 
