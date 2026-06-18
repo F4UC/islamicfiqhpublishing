@@ -91,3 +91,88 @@
 - **Arabic:** ไม่มี aya/hadith/scholar-quote · inline Latin "Manzikert" (translit aid, R78) → ไม่มี footnote/bib, ไม่มี AUDIT-FIXES
 - **self-made:** R80 ย่อชื่อ (`...` → `:`), ทว่า→แต่ (S2, 1×), markdown `\!`→`!` (2×), section `[…]`→`<h2>`, S4 ไม้ยมก (7×)
 - **⚑ typo source (คงไว้, flag):** "สุล่านเซลจุก" (น่าจะ "สุลต่าน") — คงตาม source (R1), ขอ One ยืนยันแก้
+
+---
+
+# Batch A — 5 history articles (ONE DRAFT PR) · branch `claude/loving-ride-m41v40`
+
+> Built from main @ 9d6d0d2 (articles.json=72 → 77). DRAFT PR only — no merge/deploy/purge.
+> child-safety (R71): all 5 PRE-CLEARED ✅. Coverage measured by `scripts/coverage.py` (≥99 gate).
+> Arabic: every āyah re-fetched byte-exact from quran.com, every hadith from sunnah.com (curl, paste-only);
+> scholar quotes per R60; byte-diff + blob-SHA in AUDIT-FIXES.md.
+
+## madain-salih — มะดาอิน ศอลิห์: สถานที่ต้องห้ามหรือแค่เข้าใจผิด (#8)
+- source Drive `1QhbOklgYtSkAYA3IWayvw_2S3vAMjF0maAgz3U5uLqc` · history · กองบรรณาธิการ · child-safety ✅
+- coverage **99.03%** · lint PASS · HTMLParser OK · reading-time 9 · footnotes 1–7 bidirectional
+- Arabic: 11 standalone sacred-text blocks re-fetched byte-exact — an-Naml 27:45–52 (8 `.aya-block`), ash-Shuʿarāʾ 26:149, al-Aʿrāf 7:74 (opening substring), hadith Bukhari 433 `.hadith-block`. 3 bare scholar `.ar-quote` (Ibn Nasir al-Din al-Dimashqi, Ibn ʿAbd al-Barr, al-Ṭabari).
+- **★ R8:** source's hadith wording `أن يصيبكم مثل ما أصابهم` (non-canonical) → replaced with canonical `لاَ يُصِيبُكُمْ مَا أَصَابَهُمْ` (Bukhari 433); Thai translation kept as author's.
+- **★ verse-id:** 26:149 cited to ash-Shuʿarāʾ (has مِنَ + فارهين), NOT 7:74; 7:74 opening cited separately.
+### ⚑
+- [ ] self-made R12.1 ศอเฮี้ยะห์→ศอเฮี้ยะฮ์ (2×) · S5 long-salawat→ﷺ (2×)+intro · R73 ศอฮาบัต→เศาะหาบะฮ์ · R9 "เสียชีวิตปี…"→"(เสียชีวิต ฮ.ศ. …)" (×2) · markdown \!→! · list 1]…8]→prose
+- [ ] **⚑ R52 FLAG:** "อิบนุลเญาซีย์" (al- fused) — confirm
+- [ ] **⚑ attribution inference:** alifta.gov.sa attached as footnote on the Ibn Nasir al-Din/al-Birzali quote (likely its fatwa source); source listed alifta as general bibliography — confirm
+
+## remembering-the-mawlid — รำลึกเมาลิดินนบี: นอกจากเพื่อความเมตตาแห่งสากลโลก (#81)
+- source Drive `1DjZv9AIMuifR1aEbBeE9fdss9iHsQv1hcRHkneSXzxI` · history · กองบรรณาธิการ · child-safety ✅
+- coverage **99.90%** · lint PASS · HTMLParser OK · reading-time 10 · footnotes 1–4 bidirectional
+- Arabic: 1 voweled Ibn Hajar (Fath al-Bari) `.ar-quote` KEPT verbatim (embeds 3:159 + 21:107 in printed orthography) + closing Shawqi couplet.
+- **★ R77/R1 edge case (#185 / pilot #25):** quote kept byte-exact (no canonical splice); the 2 āyāt supplied as takhrij in bib (ref-3/ref-4), re-fetched byte-exact from quran.com. Aisha "day of Aqaba" hadith → takhrij Bukhari 3231 / Muslim 1795.
+### ⚑
+- [ ] **★ FLAG (Shawqi couplet untranslated):** source gave no Thai translation → Arabic kept + editorial note "รอการตรวจทานคำแปล" (no fabrication) · One to provide translation or confirm
+- [ ] self-made: removed tatweel U+0640 (decorative) from couplet; dropped trailing Latin "." in Ibn Hajar quote (R77); ทว่า→แต่ (1×); ศอเฮี้ยะห์→ศอเฮี้ยะฮ์ (2×); "ท่านท่านนบี"→"ท่านนบี" (3×); +2 editorial h2 (coverage-neutral)
+
+## scholars-of-the-nile — บันทึกจุดยืนของปราชญ์แห่งลุ่มแม่น้ำไนล์ (#56)
+- source Drive `1GWpCh4OtAGM7cTjp2W8cW-F_VDcWdGwLTsCYdz4u1lY` · history · กองบรรณาธิการ · child-safety ✅
+- coverage **99.77%** · lint PASS · HTMLParser OK · reading-time 6 · footnote 1↔1 bidirectional
+- Arabic: 2 bare scholar `.ar-quote` (al-Ramli, al-Shaʿrani — bare in source) + 1 Arabic bib (al-Jaziri, al-Durar al-Fawāʾid 1/711–713, RTL). No aya/hadith.
+### ⚑
+- [ ] self-made R12/R73 มุหัมหมัด→มุฮัมมัด (al-Jaziri byline) · S2 แต่ทว่า→แต่ (2×) · markdown \!→! (2×) · R80 H1 shortened (subtitle kept as dek + citation) · +1 editorial h2 (coverage-neutral)
+- [ ] R52: none (อิบนุ อันนัจญาร spaced). Source mixes อับดุลกอดีร/อับดุลกอดิร — kept verbatim
+
+## crusades-after-salahuddin — เรื่องราวของชัยชนะและการทรยศในยุคครูเสดหลังยุคเศาะลาฮุดดีน (#72)
+- source Drive `1fPxUtecIArUFucnfxTRc2v1BD2CDjwyxuGODfCydcUw` · history · กองบรรณาธิการ · child-safety ✅
+- coverage **99.74%** · lint PASS · HTMLParser OK · reading-time 21
+- Arabic: 15 historian/scholar `.ar-quote` STRIPPED TO BARE (R60 all-or-nothing; source voweling mixed) — Ibn Wasil, Felix Fabri (via Suhayl Zakkar), Ibn Shaddad, al-Dhahabi, Sibt Ibn al-Jawzi, Jirjis Ibn al-Amid, al-Mu'ayyad, Ibn Taghri Birdi, al-Dawadari, Abu al-Fida. No aya/hadith → no footnote/bib (inline attribution).
+- R77: no Latin punctuation present (already ، ؛) → no-op.
+### ⚑
+- [ ] **⚑ R52 FLAG:** อิบนุลอะษีร (×4), สิบฏ์ อิบนุลเญาซีย์ (×2), อบุลฟิดาอ์, อิบนุลวัรดี; ญิรญิส อิบนุ อัลอะมีด (source spaced) — confirm
+- [ ] **⚑ author editorial glosses inside Arabic** kept byte-exact (`[لي صلاح الدين]`, `(= الصليبيين)`, `[فـ]ـيا`, etc.) · stray ASCII `"` in blocks 1–2 kept · author ellipsis `..` kept (not R77-stripped)
+- [ ] **⚑ source Thai typo** "สมรภูมิทแห่งกาซา" kept verbatim · ambiguous quote-boundary L68 (Ibn Shaddad) flagged
+- [ ] self-made: ทว่า→แต่ (8×); R9 death-years; S4 yamok (5×); S1 colon; section [..]→h2 (3×); >60w quotes use source naming lead-in `<p>` as attribution (vs `.attribution` span) — confirm convention
+
+## sunni-shia-conflict-baghdad-443 — บันทึกเหตุการณ์ความขัดแย้งระหว่างซุนนีย์และชีอะฮ์ในปี 443 ฮ.ศ. (#2)
+- source Drive `1d5el3g3JASc_JUqGwGLRjBSETrbuHX-D5rU-9SQuexc` · history · กองบรรณาธิการ · child-safety ✅
+- coverage **99.75%** · lint PASS · HTMLParser OK · reading-time 10
+- Arabic: 9 Ibn al-Athir (al-Kāmil) `.ar-quote` KEPT VOWELED byte-exact (R60: source fully voweled → keep); extracted byte-exact from the downloaded source (programmatic, no hand-retype). No aya/hadith → no footnote/bib.
+- NOTE: delegated sub-agent hit an API content-policy false-positive on the sectarian-violence narrative; built by orchestrator instead. Source downloaded byte-exact (34239 B); 9 blocks extracted via script.
+### ⚑
+- [ ] **⚑ R52 FLAG:** อิบนุลอะษีร (×many), อิบนุลมุซฮิบ — confirm
+- [ ] **⚑ R56 quote-balance:** 4 translations closed with opening “ in source → fixed to ”
+- [ ] **⚑ Arabic source quirk kept byte-exact:** B2 "ا تَجَاوَزْنَا" (likely dropped مـ) + editorial brackets `[ أَنْ ]`, `( فِي التُّرْبِ وَالدُّورِ )`
+- [ ] self-made: มุหัมหมัด→มุฮัมมัด (~5×); typo-fix ทึ่→ที่, ไส้ใช้→ไว้ใช้ (correct-where-certain); S4 yamok; +1 editorial h2
+
+---
+
+# Batch A + QC cleanup (extends PR #190) · branch `claude/loving-ride-m41v40`
+
+> Per One: extend PR #190 to "Batch A + QC cleanup" (same branch, no new PR). Keep DRAFT, no merge.
+
+## (A) aya/hadith placement fix — golden-master conformance (Rule, moon-sighting)
+Bug = `<p class="ar-translation">` (and `<p class="block-source">`) **inside** `<div class="aya-block">`/`<div class="hadith-block">`. Correct = block holds ONLY `<p class="block-ar">`; Thai translation is a normal `<p>` **outside** (āyah `{…}`, hadith `“…”`); `block-source` removed (citation via footnote/attribution).
+Scope = exactly the files matching One's grep (`ar-translation` before `</div>` of an aya/hadith block):
+- `tarikh/madain-salih.html` (Batch A #8) — 11 blocks
+- `nitisart/eating-liver-spleen-of-sacrificial-animal.html` (#25, live) — 2 blocks
+- `tarikh/abu-al-aynaa-blind-satirist.html` (live) — 6 blocks
+- `kalam/al-ashari-and-the-unity-of-the-ummah.html` (live) — 12 blocks
+- `_TEMPLATE.html` — 1 (N2 example)
+All: `block-ar` kept **byte-exact** (before==after verified); every `<sup class="fn-ref">` preserved (incl. al-ashari where it sat inside `block-source`); footnote counts unchanged; lint/HTMLParser PASS.
+- **madain-salih:** its āyāt were cited only by `block-source`; after removal, citations restored via R49 intro attribution ("…ในสูเราะฮ์อัชชุอะรออ์ อายะฮ์ที่ 149 ว่า:", "…ในสูเราะฮ์อัลอะอ์รอฟ อายะฮ์ที่ 74 ว่า:"); coverage 99.03% (PASS).
+- **⚑ pre-existing (NOT changed here):** abu-al-aynaa (ref-7…22) and al-ashari (ref-16…18) have bibliography entries without in-text fnref — counts identical to `origin/main`, so pre-existing, left as-is (out of cleanup scope).
+
+## (B) editorial — live merged articles
+- **#25 eating-liver-spleen:** removed duplicate "คือ คือ"→"คือ"; unified ฮานะฟียะฮ์→ฮะนะฟียะฮ์ + ฮานะฟีย์→ฮะนะฟีย์ (2×, to dominant ฮะ-stem); removed informal aside "ที่ตัวเล็กยังมีความน่ารัก" (R5 register); "ฎ้อบ" = ضبّ (Uromastyx/spiny-tailed lizard) — translit reviewed OK; "อิบนุ อาบิดีน" — only one rendering present (already consistent, spaced per R52).
+- **#70 kumushtakin:** สุล่าน→สุลต่าน (1×); unified เมอร์ซิน/เมอร์ซิฟ→เมอร์ซิฟอน (Merzifon) ×5 incl. H2; **fact-geo:** corrected the wrong identification "ปัจจุบันคือเมืองเมอร์ซินในตุรกี" — the 1101 battle site is Mersivan/Merzifon (จ.อามาสยา), NOT the Mediterranean-coast city Mersin → rewrote the parenthetical with a contrast note.
+
+## (C) content-gate (5 Batch A) + reading-time
+- #6 (aya/hadith translation outside block): only madain-salih had such blocks → fixed; #81/#56/#72/#2 have none. #1–5 (translit/proofread/register/fact-geo/citations) verified at build.
+- reading-time re-run (placement moved translations into counted prose): madain-salih 9, eating-liver-spleen 9, abu-al-aynaa 17, al-ashari 17. articles.json stays **77 entries** (no new entries; readingTime updated per Rule 55).

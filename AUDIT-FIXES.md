@@ -252,3 +252,84 @@
 ## 2026-06-18 — PHASE 2 · #182 editorial pass (ibn-battuta) — NON-ARABIC approved R1 deviations (One-confirmed)
 
 **ไม่ใช่การแตะตัวอาหรับ** (บันทึกที่นี่ตามที่ One สั่งให้ log ทั้ง REVIEW-QUEUE + AUDIT-FIXES) — เป็น approved R1 deviation ในร้อยแก้วไทย + เพิ่ม footnote (ไม่มีการแก้ skeleton/harakat อาหรับ): [1] 1324→1325 (consistency)+note · [2] แอฟริกาใต้→แอฟริกาตะวันตก+note · [3] Port Said คง verbatim+footnote · [4] Ibn Juzayy 1355 คง verbatim+footnote · รายละเอียดใน REVIEW-QUEUE.md · ดูแนวทาง: correct-in-body เฉพาะค่าที่แน่นอน, ไม่แน่ใจ→คง+footnote
+
+## 2026-06-18 — BATCH A · 5 history articles · branch `claude/loving-ride-m41v40`
+
+> ทุกอายะฮ์ re-fetch byte-exact จาก quran.com (uthmani/Hafs), ทุกหะดีษจาก sunnah.com (paste-only ผ่าน curl, ไม่พิมพ์เอง).
+> scholar quotes: R60 — strip-to-bare (ถ้า source ลงสระไม่สม่ำเสมอ) หรือ keep-voweled (ถ้าครบทุกบล็อก); ลบเฉพาะ invisibles + unescape markdown.
+> byte-diff ยืนยันทุกบล็อก (re-fetch diff สำหรับ aya/hadith; skeleton-equal สำหรับ scholar). blob-SHA = git blob sha1(12) ของ UTF-8 ในไฟล์.
+
+### `articles/tarikh/madain-salih.html` (#8) — case (2) paste byte-exact canonical + scholar bare (no touch)
+| บล็อก | การกระทำ | แหล่ง (paste-only) | blob-SHA(12) |
+|---|---|---|---|
+| .hadith-block Bukhari 433 | re-fetch byte-exact | sunnah.com bukhari:433 (matn `لاَ … مَا أَصَابَهُمْ`) | 15e969cb42a8 |
+| .aya-block 27:45–52 (8) | re-fetch byte-exact | quran.com 27:45..27:52 | 00e02863252f, b28bbee570e2, a37145a269d5, e4cbadfde8f6, 2c7767df7a6b, ce56fc2de935, ceb408fb8bae, 9ee7785d266c |
+| .aya-block 26:149 | re-fetch byte-exact | quran.com 26:149 | 965ea462af26 |
+| .aya-block 7:74 (opening substring) | re-fetch byte-exact prefix → عَادٍ | quran.com 7:74 | 6182901aa5c5 |
+| .ar-quote ×3 (Ibn Nasir al-Din, Ibn ʿAbd al-Barr, al-Ṭabari) | BARE จาก source, ไม่แตะ harakat | source manuscript | 9626ef357205, 3c547423a19f, 547c79b4dfbc |
+- byte-diff: aya/hadith = re-fetch matched (verified). scholar = bare (strip_marks==self), skeleton = source. R8: source non-canonical hadith → ใช้ canonical sunnah.com.
+
+### `articles/tarikh/remembering-the-mawlid.html` (#81) — Ibn Hajar keep-voweled (R1/#185) + aya takhrij re-fetch
+| บล็อก | การกระทำ | แหล่ง | blob-SHA(12) |
+|---|---|---|---|
+| .ar-quote Ibn Hajar (Fath al-Bari) | KEEP voweled byte-exact (clean_invis; drop trailing Latin `.` R77) — embeds 3:159+21:107 verbatim (no canonical splice) | source manuscript (R1) | 5f8ae0773d61 |
+| .ar-quote Shawqi couplet | keep + remove tatweel U+0640 + invisibles (decorative; rasm unchanged) | source manuscript | 9f87b8ee24c9 |
+| bib ref-3 āyah 3:159 (takhrij) | re-fetch byte-exact | quran.com 3:159 | 238b46702c9a |
+| bib ref-4 āyah 21:107 (takhrij) | re-fetch byte-exact | quran.com 21:107 | 86a403733102 |
+
+### `articles/tarikh/scholars-of-the-nile.html` (#56) — scholar bare + Arabic bib paste
+| บล็อก | การกระทำ | แหล่ง | blob-SHA(12) |
+|---|---|---|---|
+| .ar-quote al-Ramli (`لا مدخل لي في أحوال البلد والرعية، وإنما أنا رجل فقيه لا غير`) | BARE (source bare) | source manuscript | 354dffeef415 |
+| .ar-quote al-Shaʿrani (`ذلك ليس من شأني`) | BARE (source bare) | source manuscript | 19b2bf9766a2 |
+| bib ref-1 al-Jaziri (al-Durar al-Fawāʾid 1/711–713) | paste byte-exact | source manuscript | c52dc71fd03f |
+- skeleton-equal ✅ ทั้งหมด; R77: quote 1 มี ، อยู่แล้ว → no-op.
+
+### `articles/tarikh/crusades-after-salahuddin.html` (#72) — case (1) strip-to-bare ×15 (R60 all-or-nothing)
+| # | บล็อก (historian) | การกระทำ | blob-SHA(12) |
+|---|---|---|---|
+| 0 | Ibn Wasil | strip→bare | fb33fe82d120 |
+| 1 | Felix Fabri (via Suhayl Zakkar) | strip→bare | 674d4df5607c |
+| 2 | Ibn Shaddad (al-Nawadir al-Sultaniyya) | strip→bare | 7f67b7c9e1e8 |
+| 3 | Jirjis Ibn al-Amid (Akhbar al-Ayyubiyyin) | strip→bare | 1b4d426fa841 |
+| 4 | Ibn al-Athir (al-Kamil) | strip→bare | 0653e7d2dc8e |
+| 5 | Sibt Ibn al-Jawzi (Mir'at al-Zaman) | strip→bare | 04ea29182f2a |
+| 6 | al-Kamil's letter via Ibn al-Athir (>60w) | strip→bare | a30d6099e679 |
+| 7 | al-Dhahabi (al-Siyar) | strip→bare | e29b2a7ce273 |
+| 8 | al-Dhahabi (Tarikh al-Islam, Gaza) | strip→bare | f2b645122e1b |
+| 9 | al-Mu'ayyad (al-Mukhtasar) | strip→bare | f7da84ca2825 |
+| 10 | al-Dawadari (Kanz al-Durar, al-Mansura) | strip→bare | 624d19e6c6a9 |
+| 11 | Ibn Taghri Birdi (al-Manhal al-Safi) | strip→bare | dddfeee5b6d1 |
+| 12 | Ibn Wasil (Baybars, >60w) | strip→bare | 7d8c78066960 |
+| 13 | Abu al-Fida (al-Mukhtasar, Tripoli) | strip→bare | 890da326ae43 |
+| 14 | al-Dawadari (Kanz al-Durar, Acre, >60w) | strip→bare | 787b1d906857 |
+- skeleton-equal `strip_marks(source)==strip_marks(file)` = True ทั้ง 15; no residual harakat. R77 = no-op (no Latin ,/?). editorial glosses + stray ASCII `"` + ellipsis `..` kept byte-exact (R1, FLAG).
+
+### `articles/tarikh/sunni-shia-conflict-baghdad-443.html` (#2) — keep-voweled ×9 (R60 all-voweled→keep)
+| # | บล็อก (Ibn al-Athir, al-Kāmil) | การกระทำ | blob-SHA(12) |
+|---|---|---|---|
+| 0 | فِي هَذِهِ السَّنَةِ فِي صَفَرٍ… | keep voweled, clean_invis | 078d6d1439ad |
+| 1 | وَكَانَ سَبَبُ هَذِهِ الْفِتْنَةِ… | keep voweled | 60e2a7f16272 |
+| 2 | وَأَنْكَرَ أَهْلُ الْكَرْخِ… (+unescape `[ أَنْ ]`) | keep voweled | 5c5b8c0bf136 |
+| 3 | وَدَامَ الْقِتَالُ… | keep voweled | 9915aa272423 |
+| 4 | فَلَمَّا رَجَعُوا مِنْ دَفْنِهِ… | keep voweled | ace9e22da4fe |
+| 5 | فَلَمَّا كَانَ الْغَدُ كَثُرَ الْجَمْعُ… | keep voweled | 7ec52b2a9e2e |
+| 6 | فَلَمَّا كَانَ الْغَدُ خَامِسُ الشَّهْرِ… | keep voweled | 4aba5bc2dbb9 |
+| 7 | وَسَمِعَ أَبُو تَمَامٍ… (+unescape `( … )`) | keep voweled | 1ec8d55ab15b |
+| 8 | وَلَمَّا انْتَهَى خَبَرُ إِحْرَاقِ الْمَشْهَدِ… | keep voweled | 90ba57dc6d09 |
+- extracted byte-exact จาก source ที่ดาวน์โหลด (no hand-retype); ลบเฉพาะ invisibles + unescape `\[`/`\]`; harakat untouched. source quirk "ا تَجَاوَزْنَا" + editorial brackets คง byte-exact (FLAG).
+
+## 2026-06-18 — QC cleanup (aya/hadith placement) · branch `claude/loving-ride-m41v40` (PR #190)
+
+**ไม่มีการแตะตัวอักษรอาหรับ (no Arabic harakat/skeleton touched).** การย้ายคำแปลออกนอกบล็อก aya/hadith เป็นการจัดวาง HTML ล้วน:
+- ทุก `<p class="block-ar">` (ตัวบทอายะฮ์/หะดีษ) คงไว้ **byte-exact** — พิสูจน์ว่า before==after ของรายการ block-ar ทั้งหมดในไฟล์ (madain-salih, eating-liver-spleen, abu-al-aynaa, al-ashari, _TEMPLATE) ก่อน/หลัง transform
+- สิ่งที่ลบคือ `<p class="block-source">` ซึ่งเป็น **ป้ายที่มาภาษาไทย** ("สูเราะฮ์… อายะฮ์ที่ …" / "บันทึกโดยอัลบุคอรีย์") ไม่ใช่ตัวบทอาหรับ
+- ไม่มีการ re-fetch/แก้ canonical ใหม่ · madain-salih: re-verify Quran (quran.com) + hadith Bukhari 433 (sunnah.com) ยังคง byte-exact หลัง transform
+- editorial #25/#70 เป็นร้อยแก้วไทย/translit ไม่แตะตัวบทอาหรับ
+
+### 2026-06-18 — #25 eating-liver-spleen small polish (text-only, no Arabic)
+- FIX1: H2 `มัสฮับอัลฮะนาฟียะฮ์`→`มัสฮับอัลฮะนะฟียะฮ์` (นา→นะ, heading เดียวตามคำสั่ง "ONE heading only")
+- FIX2: stray `<p class="ar-translation">…ต้องห้าม”</p>` → plain `<p>…ต้องห้าม</p>` (ตัด ” ค้าง, ถ้อยคำคงเดิม) — pre-existing artifact
+- ทุก `<p class="block-ar">` + `.ar-quote` byte-identical vs HEAD (no Arabic touched); reading-time #25 = 9 (unchanged); HTMLParser OK
+- **⚑ FLAG to One:** L387 body prose ยังเป็น `อัลฮะนาฟียะฮ์` (นา) — ไม่แตะตามคำสั่ง "Do not touch any other ฮะนา/ฮะนะ token" ฉะนั้น `grep ฮะนาฟียะฮ์` = 1 (ไม่ใช่ 0); ขอ One ยืนยันจะให้แก้ L387 ด้วยหรือคงไว้
+- follow-up (One approved): L387 body `อัลฮะนาฟียะฮ์`→`อัลฮะนะฟียะฮ์` (นา→นะ) — `grep ฮะนาฟียะฮ์` now = 0; no Arabic touched (block-ar/ar-quote byte-identical), reading-time #25 unchanged
