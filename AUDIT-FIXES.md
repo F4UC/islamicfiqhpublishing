@@ -326,3 +326,9 @@
 - สิ่งที่ลบคือ `<p class="block-source">` ซึ่งเป็น **ป้ายที่มาภาษาไทย** ("สูเราะฮ์… อายะฮ์ที่ …" / "บันทึกโดยอัลบุคอรีย์") ไม่ใช่ตัวบทอาหรับ
 - ไม่มีการ re-fetch/แก้ canonical ใหม่ · madain-salih: re-verify Quran (quran.com) + hadith Bukhari 433 (sunnah.com) ยังคง byte-exact หลัง transform
 - editorial #25/#70 เป็นร้อยแก้วไทย/translit ไม่แตะตัวบทอาหรับ
+
+### 2026-06-18 — #25 eating-liver-spleen small polish (text-only, no Arabic)
+- FIX1: H2 `มัสฮับอัลฮะนาฟียะฮ์`→`มัสฮับอัลฮะนะฟียะฮ์` (นา→นะ, heading เดียวตามคำสั่ง "ONE heading only")
+- FIX2: stray `<p class="ar-translation">…ต้องห้าม”</p>` → plain `<p>…ต้องห้าม</p>` (ตัด ” ค้าง, ถ้อยคำคงเดิม) — pre-existing artifact
+- ทุก `<p class="block-ar">` + `.ar-quote` byte-identical vs HEAD (no Arabic touched); reading-time #25 = 9 (unchanged); HTMLParser OK
+- **⚑ FLAG to One:** L387 body prose ยังเป็น `อัลฮะนาฟียะฮ์` (นา) — ไม่แตะตามคำสั่ง "Do not touch any other ฮะนา/ฮะนะ token" ฉะนั้น `grep ฮะนาฟียะฮ์` = 1 (ไม่ใช่ 0); ขอ One ยืนยันจะให้แก้ L387 ด้วยหรือคงไว้
