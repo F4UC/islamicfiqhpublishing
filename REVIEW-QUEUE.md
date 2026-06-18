@@ -5,7 +5,7 @@
 
 ---
 
-## ibn-battuta-the-great-traveler — อิบนุ บะตูเตาะฮ์: นักเดินทางรอบโลกแห่งศตวรรษ · DRAFT PR · branch claude/phase2-ibn-battuta-traveler
+## ibn-battuta-the-great-traveler — อิบนุ บะฏูเฏาะฮ์: นักเดินทางรอบโลกแห่งศตวรรษ · DRAFT PR · branch claude/phase2-ibn-battuta-traveler
 - **source:** Drive `13_4aKk6WvZRvi5FdaXiQlxL2XGP-cZJj4Th5ty9ToaI` (#51) · ตอน: 1 (เดี่ยว)
 - **category:** history (ประวัติศาสตร์) · author: กองบรรณาธิการ
 - **child-safety (R71):** ✅ ผ่าน — สารคดีการเดินทาง ไม่มีประเด็นเด็ก
@@ -14,7 +14,7 @@
 - **§6 footnote/bib:** ไม่มี aya/hadith → ไม่มี footnote (ตาม §6.3) · บรรณานุกรม = 2 URL ที่ผู้เขียนให้มา (BBC Arabic + Britannica), LTR
 
 ### ต้องอนุมัติ/ท้วงติง
-- [ ] **⚑ ทับศัพท์ชื่อขัดกับบทเดิม:** บทนี้ใช้ **"อิบนุ บะตูเตาะฮ์"** (ตาม source) แต่บทที่มีอยู่แล้ว `ibn-battuta-in-al-andalus.html` ใช้ **"อิบนุ บะฏูเฏาะฮ์"** (ฏ) — คงรูป source ไว้ตาม R1 · ขอ One ตัดสินว่าจะ normalize ทั้งเว็บเป็นรูปใด
+- [x] **✅ RESOLVED (One): ทับศัพท์ → "อิบนุ บะฏูเฏาะฮ์"** (ต→ฏ, ตรงกับบทเดิม `ibn-battuta-in-al-andalus` + precise translit ط→ฏ) — แก้แล้วทั้ง title + body + meta + articles.json (50 จุด) · เพิ่ม "Ibn Battuta = อิบนุ บะฏูเฏาะฮ์" เข้า R73 corpus ใน rulebook PR (D)
 - [ ] **⚑ หัวข้อซ้ำกับบทเดิม (subject overlap):** `ibn-battuta-in-al-andalus` = เฉพาะช่วงอันดะลุส; บทนี้ = ชีวประวัติ/การเดินทางเต็ม → ใช้ slug ใหม่ `ibn-battuta-the-great-traveler` · ขอยืนยันว่าให้อยู่คู่กันได้
 - [ ] **self-made: มุหัมหมัด → มุฮัมมัด** (3×: ชื่ออิบนุ บะตูเตาะฮ์ในย่อหน้านำ + สุลต่านมุฮัมมัด บิน ตุฆลุฆ ×2) — normalize ทับศัพท์ตาม corpus (R12/R73) · **ไม่ใช่พระนามท่านนบี** (เป็นชื่ออิบนุ บะตูเตาะฮ์เองและสุลต่านเดลี) → ไม่มี ﷺ · ขอยืนยัน
 - [ ] **self-made: ทว่า → แต่** (1×, ในร้อยแก้ว ไม่ใช่กลอน) ตาม S2
