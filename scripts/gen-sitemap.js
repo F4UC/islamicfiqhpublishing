@@ -35,8 +35,10 @@ const esc = (s) =>
 const extensionless = (url) => url.replace(/\.html$/, "");
 
 const today = new Date().toISOString().slice(0, 10);
-const maxDate = (list) =>
-  list.reduce((m, a) => (a.date && a.date > m ? a.date : m), "0000-00-00") || today;
+const maxDate = (list) => {
+  const m = list.reduce((m, a) => (a.date && a.date > m ? a.date : m), "0000-00-00");
+  return m === "0000-00-00" ? today : m;
+};
 
 // Category registry order + Thai labels (Rule 70). Label is taken from the data
 // when available so it never drifts from articles.json.
