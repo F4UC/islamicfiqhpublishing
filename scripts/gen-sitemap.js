@@ -40,10 +40,12 @@ const maxDate = (list) =>
 
 // Category registry order + Thai labels (Rule 70). Label is taken from the data
 // when available so it never drifts from articles.json.
-const CATEGORY_ORDER = ["nitisart", "kalam", "history", "hadith", "hajj"];
+const CATEGORY_ORDER = ["nitisart", "kalam", "history", "hadith", "hajj", "reflections"];
+// Fallback labels for registry categories that may have no articles yet (Rule 70).
+const FALLBACK_LABELS = { reflections: "มุมพักใจ" };
 const labelFor = (key) => {
   const hit = articles.find((a) => a.categoryKey === key && a.categoryLabel);
-  return hit ? hit.categoryLabel : key;
+  return hit ? hit.categoryLabel : (FALLBACK_LABELS[key] || key);
 };
 
 // --- 1. sitemap.xml ------------------------------------------------------

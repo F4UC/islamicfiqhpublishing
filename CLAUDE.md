@@ -187,6 +187,7 @@
   - `history` → ประวัติศาสตร์
   - `hadith` → หะดีษ
   - `hajj` → หัจญ์ & อุมเราะฮ์
+  - `reflections` → มุมพักใจ
   บทความใหม่ทุกบท **ต้องใช้ `categoryKey` ที่มีอยู่แล้ว** และ**คัดลอก `categoryLabel` มาจากทะเบียนนี้แบบตรงตัวอักษร** ห้ามสร้าง key ใหม่หรือ label ที่เพี้ยนไปจากทะเบียน — แหล่งอ้างอิงที่เป็นความจริง (source of truth) คือ nav CAT_LINKS ใน `main.js` + หัวเรื่องของแต่ละ `/pages/{key}.html`
 
 ### หมวดที่ 13: การจัดวางและการแสดงผลตัวบทอาหรับในบทความ (Arabic Block Layout & Tashkeel)
@@ -342,6 +343,7 @@
   - `history` → ประวัติศาสตร์
   - `hadith` → หะดีษ
   - `hajj` → หัจญ์ & อุมเราะฮ์
+  - `reflections` → มุมพักใจ
   Every new article **must reuse an existing `categoryKey`** and **copy its `categoryLabel` verbatim from this registry** — never create new keys or labels that diverge from the registry. Source of truth = nav CAT_LINKS in `main.js` + each `/pages/{key}.html` hero.
 
 ## Section 13: Arabic Block Layout & Tashkeel
