@@ -533,6 +533,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **คำไทยทั่วไป** ต้องสะกดถูกตามพจนานุกรม (ราชบัณฑิตยสภา) เว้นที่ house style กำหนดไว้เป็นอื่น (เช่น S4 ไม้ยมก, 12.1/12.2)
   - **ขอบเขต:** ร้อยแก้วไทย + คำทับศัพท์เท่านั้น — **ห้ามแตะตัวบทอาหรับ** (อายะฮ์/หะดีษ/คำพูดปราชญ์/ชื่อในบล็อก `lang="ar"`) ด้วยกฎนี้ (สอดคล้องกฎ 7/8/53/60)
   - **เมื่อไม่แน่ใจ** รูปสระ/ตัวสะกดของชื่อเฉพาะ (โดยเฉพาะรูป "อิบนุล…/อบุล…" ตามกฎ 52) → **FLAG ขอบรรณาธิการ ห้ามเดา** (สอดคล้องกฎ 3/52/73); typo ที่ปรากฏใน**ต้นฉบับ** ให้คงไว้ตามกฎ 1 แล้ว FLAG — ไม่แก้เงียบ
+  - **บังคับใช้อัตโนมัติ:** `scripts/lint-article.js` ตรวจรูปต้องห้าม `[R5–R9]` (กฎ 12.1/12.2/73/82) — ERROR = บล็อกบทใหม่, WARN (`อบูล`) = FLAG ให้ตรวจ; ไม่ย้อนแก้บทเก่า (กฎ 73)
 
 ---
 
@@ -595,3 +596,4 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **Ordinary Thai words** follow dictionary (Royal Institute) spelling, except where house style overrides (e.g. S4 mai-yamok, 12.1/12.2).
   - **Scope:** Thai prose + transliteration only — this rule **never touches Arabic text** (aya/hadith/scholar quotes/names in `lang="ar"` blocks), consistent with Rules 7/8/53/60.
   - **When unsure** of a proper noun's vowel/spelling (especially the Ibn al-/Abu al- forms in Rule 52) → **FLAG for the editor, never guess** (consistent with Rules 3/52/73); a typo present in the **source** is kept per Rule 1 and FLAGGED — never silently changed.
+  - **Automated enforcement:** `scripts/lint-article.js` checks deprecated forms `[R5–R9]` (Rules 12.1/12.2/73/82) — ERROR blocks new prose, WARN (`อบูล`) flags for review; old articles are not retro-fixed (Rule 73).
