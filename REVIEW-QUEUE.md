@@ -188,3 +188,25 @@ All: `block-ar` kept **byte-exact** (before==after verified); every `<sup class=
 - **ethics-of-war-in-islamic-law** (นิติศาสตร์) — Dar al-Ifta anti-extremism framing preserved; coverage 99.01%; 15 aya/hadith byte-exact; ⚑R52: อิบนุลก็อยยิม/อิบนุซุบัยร
 - **touching-dogs-in-islam** (นิติศาสตร์) — coverage 98.53% raw / 99.43% S5-adj ⚑; hadith Muslim 1575b + āyah 5:4; ⚑R52: อิบนุลกอซิม
 - **hadith-scholars-vs-jurists** (หะดีษ) — balanced conclusion preserved; coverage 99.69%; ⚑R52: อบุลฟัตห์
+
+---
+
+# PHASE-2 BATCH 10 — review flags (10 articles, branch `claude/phase2-batch-10`, DRAFT PR)
+> Built fresh from Drive by orchestrated agents; orchestrator independently byte-verified all standalone Quran/hadith against quran.com/sunnah.com (see AUDIT-FIXES). All 10 child-safety CLEAR (R71). Coverage (Thai char-diff, R72): usul 99.74 · fidyah 99.99 · taysir 99.27 · harmony 99.92 · arafah 99.68 (body; raw 96.01 = source ref-list lives in excluded `.bibliography-section`, all entries preserved) · mihna 99.28 · mamluks 99.66 · politics 99.69 · paper 99.97 · clockmaking 99.93.
+
+## R52 fused-form flags (al- vs name-initial — needs editorial confirmation; kept fused, not silently altered)
+- usul-al-fiqh-foundations: **อิบนุศศอลาห์** (Ibn al-Salah)
+- arafah-time-and-place: **อิบนุลหะสัน** (Muhammad ibn al-Hasan al-Shaybani, in al-Shawkani's quote)
+- mamluks-of-sword-and-pen: **อิบนุลเคาะฏีบ** (Ibn al-Khatib)
+- politics-power-and-scholarship: **อบุลอับบาส** (Abu al-ʿAbbas, kunya of Ibn Taymiyya; normalized from source สระอู "อบูล" → สระอุ "อบุล" per R52)
+- clockmaking-in-the-mamluk-era: **อบุลอิซซ์** (Abu al-ʿIzz al-Jazari), **อบุลหะซัน** (Ibn al-Shatir's kunya), **อิบนุลมัจดีย์**, **อิบนุลลับบานี**, **อิบนุลมุซัลลัก**, **อิบนุชชาฏิร** (sun-letter), **อิบนุสซิรรอจญ์** (sun-letter)
+
+## Arabic / sacred-text verification flags
+- taysir-vs-tasahul-in-fatwa: **Jabir "al-hanifiyya al-samha" hadith** (`بعثت بالحنيفية السمحة…`) rendered as a BARE scholar `.ar-quote` from the source (within al-Munawi's discussion), NOT a re-fetched standalone `.hadith-block` — not cleanly verifiable as a single canonical sunnah.com matn (Munawi grades hasan via multiple chains, chiefly Musnad Ahmad). No takhrij fabricated. Needs editorial verification of wording/grading.
+- taysir-vs-tasahul-in-fatwa: embedded **2:185** inside Ibn ʿAbd al-Barr's quote kept verbatim+bare within the quote (R1>R53, #185); canonical voweled 2:185 supplied as a standalone aya-block earlier.
+- arafah-time-and-place: **2 al-Bayhaqi narrations** (`يوم عرفة الذي يعرف فيه الناس`, `وعرفتكم يوم تعرفون`) + chapter title `باب خطأ الناس يوم عرفة` (al-Sunan al-Kubra) NOT byte-exact-verifiable from sunnah.com graded collections — kept as the author's quoted material in BARE scholar `.ar-quote` (no `.hadith-block`/takhrij claimed). Needs editorial wording/grading verification.
+- arafah-time-and-place: 3 hadith retrieved via WebFetch render of sunnah.com (raw curl is Cloudflare-blocked in build env); orchestrator independently byte-verified muslim:1977e + tirmidhi:697; tirmidhi:802 advisable to spot-confirm.
+- the-mihna-under-al-mamun: scholar blocks kept FULLY VOWELED (R60 ALL path) byte-exact from the al-Tabari/Ibn Kathir printed source; embedded Quran fragments **Q16:106, Q2:156, Q42:11** woven inside the scholar quotes kept byte-exact verbatim (R1>R53, #185) — a takhrij could be added editorially; orchestrator confirmed 20/20 skeletons byte-exact in source.
+
+## Bibliography note (Bibliography Standard — no fabrication)
+- Across the batch, bibliography entries include ONLY details the Drive source provided (author + native-Arabic title, or source-given page/publisher as in arafah's numbered list). Where building agents had reconstructed muhaqqiq/place/publisher/year not in the source (usul ×6, paper Bloom/Goitein), the orchestrator trimmed them to the source-provided form. Fuller Chicago-style citations may be added editorially after verification.
