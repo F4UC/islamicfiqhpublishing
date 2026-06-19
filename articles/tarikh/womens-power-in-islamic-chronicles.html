@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>อำนาจสตรีที่ถูกฝังในพงศาวดารอิสลาม — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="เรื่องราวของราชินีชีอะฮ์แห่งเยเมน อัรวาและอัสมาอ์ และสตรีผู้ทรงอำนาจที่ถูกลบเลือนออกจากหน้าประวัติศาสตร์อิสลาม ทั้งฝ่ายซุนนีและชีอะฮ์">
+<meta name="keywords" content="ประวัติศาสตร์อิสลาม, ราชินีอัรวา, ราชินีอัสมาอ์, รัฐศุลัยฮียะฮ์, รัฐฟาฏิมียะฮ์, ชีอะฮ์, อำนาจสตรี, เคาะลีฟะฮ์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="อำนาจสตรีที่ถูกฝังในพงศาวดารอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="เหตุใดเรื่องราวของราชินีผู้ปกครองในประวัติศาสตร์อิสลามจึงเลือนหายไป? บทวิเคราะห์การหลงลืมโดยเจตนาต่อสตรีผู้ทรงอำนาจ">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/womens-power-in-islamic-chronicles">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — extensionless (ไม่มี .html, ตรงกับ sitemap) — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/womens-power-in-islamic-chronicles">
+
+<!-- ARTICLE JSON-LD (schema.org Article): แทน ARTICLE_TITLE, ARTICLE_DATE (ISO YYYY-MM-DD จาก articles.json), CATEGORY/SLUG. author: หมวด kalam เปลี่ยนเป็น "มัรกัส อัลอิมาม อัลอัชอะรีย์" (กฎ 69) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "อำนาจสตรีที่ถูกฝังในพงศาวดารอิสลาม",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/tarikh/womens-power-in-islamic-chronicles.html"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="womens-power-in-islamic-chronicles">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<!-- HERO — DEFAULT = no-hero (Rule 67): solid banner + eyebrow + H1, NO <img> (กัน 404). -->
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์</a>
+      <h1 class="article-feature-title">อำนาจสตรีที่ถูกฝังในพงศาวดารอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในพงศาวดารที่เขียนด้วยหมึกของผู้ชาย และบัลลังก์ที่มั่นคงบนผืนทรายของประวัติศาสตร์อิสลาม ความทรงจำเกี่ยวกับสตรีผู้ปกครองกลับปรากฏเพียงริ้วรอยจางๆ ราวกับภาพฝันที่ไม่ควรถูกกล่าวถึงซ้ำ พวกนางเคยยืนอยู่บนจุดสูงสุดของอำนาจ ปกครองอาณาจักรในนามของศาสนา มีผู้จงรักภักดี มีศัตรูผู้เกรงกลัว และบางครั้ง มีเลือดหลั่งเพื่อรักษาบัลลังก์ไว้</p>
+
+      <p>แต่ชื่อของพวกนางกลับแทบไม่ปรากฏในหน้าหนังสือเรียนศาสนา มีเพียงข้อมูลกระจัดกระจายและบันทึกเพียงน้อยนิดในตำนานท้องถิ่นและงานประวัติศาสตร์บางฉบับ ราวกับว่าความทรงจำของพวกนางถูกทับถมไว้ภายใต้เศษทรายของอำนาจเพศชาย</p>
+
+      <p>หากตำแหน่ง “เคาะลีฟะฮ์” เป็นจุดสูงสุดแห่งอำนาจทั้งทางโลกและทางจิตวิญญาณ แล้วเหตุใดในหน้าประวัติศาสตร์ที่เต็มไปด้วยสงคราม ความศักดิ์สิทธิ์ และการสืบทอดอำนาจ จึงไม่มีหญิงใดได้นั่งบนบัลลังก์นี้อย่างเปิดเผย หรือหากเคยนั่ง ทำไมเราจึงจำพวกนางได้เพียงเลือนราง?</p>
+
+      <p>ชีอะฮ์ ในฐานะนิกายที่ผูกพันกับสตรีเพศอย่างลึกซึ้ง ผ่านตัวแทนอย่างท่านหญิงฟาฏิมะฮ์ อัซซะฮ์รออ์ อาจเป็นแนวทางเดียวที่สตรีสามารถไต่ขึ้นสู่จุดสูงสุดของอำนาจได้อย่างแท้จริงในประวัติศาสตร์อิสลาม แต่คำถามก็ยังคงอยู่ เป็นเพราะแนวคิดทางเทววิทยาที่เปิดกว้างกว่านิกายและแนวความคิดอื่น หรือเป็นเพราะการเมืองของพวกเขาบีบบังคับให้ต้องยอมรับบทบาทของสตรีในฐานะ “ผู้กอบกู้”?</p>
+
+      <p>คำตอบนั้นย่อมไม่อาจเข้าใจได้ หากเราไม่เริ่มจากการทำความเข้าใจว่า ตำแหน่ง “เคาะลีฟะฮ์” แท้จริงแล้วคืออะไร และเหตุใดตำแหน่งนี้จึงกลายเป็นเส้นแบ่งระหว่างความศักดิ์สิทธิ์กับข้อจำกัดทางเพศในโลกมุสลิม</p>
+
+      <h2 class="article-h2">นิยามของตำแหน่งเคาะลีฟะฮ์</h2>
+
+      <p>ตำแหน่งเคาะลีฟะฮ์ หมายถึง อำนาจทางการเมืองในทางโลกควบคู่ไปกับอำนาจทางจิตวิญญาณ เคาะลีฟะฮ์ของชาวมุสลิมไม่ได้เป็นเพียงผู้ปกครองเท่านั้น แต่ยังมีบทบาททางจิตวิญญาณในฐานะผู้สืบทอดจากศาสนทูต ﷺ ในประชาชาติอิสลาม ด้วยเหตุนี้ ตำแหน่งเคาะลีฟะฮ์จึงแวดล้อมไปด้วยรัศมีแห่งความศักดิ์สิทธิ์ทางจิตวิญญาณและศาสนา คุณสมบัติสำคัญประการหนึ่งของผู้ที่จะดำรงตำแหน่งนี้คือ ต้องเป็นบุรุษเพศ ซึ่งเป็นเหตุผลที่ทำให้สตรีไม่สามารถก้าวขึ้นสู่บัลลังก์ในฐานะเคาะลีฟะฮ์ของชาวมุสลิมได้ตลอดช่วงประวัติศาสตร์การปกครองของอิสลามโดยทั่วไป</p>
+
+      <p>ในอดีต สตรีถูกมองว่าไม่มีคุณสมบัติพอที่จะปกครองแม้ในตำแหน่งราชินีทางโลก แล้วจะเป็นไปได้อย่างไรที่สตรีจะสามารถมีบทบาททั้งทางโลกและทางจิตวิญญาณในฐานะเคาะลีฟะฮ์ของพระเจ้าบนโลกนี้ได้? ประเด็นนี้ไม่เคยถูกหยิบยกมาถกเถียงในยุคสมัยแห่งความขัดแย้งเพื่อแย่งชิงอำนาจ แต่ละฝ่ายต่างอ้างสิทธิ์ในตำแหน่งเคาะลีฟะฮ์โดยอาศัยความใกล้ชิดทางสายเลือดกับศาสนทูต ﷺ เช่น ราชวงศ์อุมัยยะฮ์และอับบาซิด ซึ่งสืบเชื้อสายจากบรรพบุรุษและลุงของท่านศาสดา ﷺ หรือกลุ่มชีอะฮ์อะละวีย์ ผู้สืบเชื้อสายจากท่านอาลี บิน อบีฏอลิบ ซึ่งมองว่าตนเองใกล้ชิดกับศาสดา ﷺ มากที่สุดในฐานะผู้สืบเชื้อสายโดยตรง</p>
+
+      <p>อย่างไรก็ตาม การสืบเชื้อสายของพวกเขามาจากท่านหญิงฟาฏิมะฮ์ อัซซะฮ์รออ์ บุตรสาวของศาสดา ﷺ ผู้เป็นภรรยาของท่านอาลี บิน อบีฏอลิบ ซึ่งเป็นลูกพี่ลูกน้องของท่านศาสดา ﷺ นั่นหมายความว่าการสืบเชื้อสายในที่นี้มาจากฝ่ายหญิง แล้วสตรีจะสามารถถ่ายทอดอำนาจได้หรือไม่?</p>
+
+      <p>ข้อถกเถียงนี้ถือเป็นประเด็นที่สำคัญที่สุดประเด็นหนึ่งในโลกอิสลามในยุคนั้น (และยังคงดำเนินมาจนถึงปัจจุบัน) และเป็นต้นเหตุของความขัดแย้งมากมายระหว่างอำนาจทางการเมืองของฝ่ายซุนนีและชีอะฮ์ บรรดาผู้ปกครองฝ่ายซุนนียอมรับอำนาจของบุรุษในการสืบทอดตำแหน่งเคาะลีฟะฮ์เท่านั้น ในขณะที่ฝ่ายค้าน ซึ่งส่วนใหญ่เป็นกลุ่มชีอะฮ์อะละวีย์ที่สืบเชื้อสายมาจากท่านหญิงฟาฏิมะฮ์ บุตรสาวของศาสดา ﷺ มองว่า สตรีสามารถถ่ายทอดอำนาจการปกครองและตำแหน่งเคาะลีฟะฮ์ได้</p>
+
+      <h2 class="article-h2">นิกายชีอะฮ์ในฐานะฝ่ายค้านต่อระบอบการปกครอง</h2>
+
+      <p>แนวคิดและหลักความเชื่อของนิกายชีอะฮ์เป็นประเด็นสำคัญที่มีการค้นคว้าวิจัยอย่างกว้างขวางและใช้เวลายาวนานหลายปี มีตำรามากมายที่พยายามอธิบายและขยายความเกี่ยวกับนิกายนี้ เนื่องจากชีอะฮ์ถูกมองว่าเป็นรูปแบบหนึ่งของการต่อต้านทางการเมืองและศาสนาที่แข็งแกร่งและต่อเนื่อง ซึ่งศาสนาและความรุนแรงมีความเชื่อมโยงกันอย่างใกล้ชิด นับตั้งแต่แรกเริ่ม นิกายชีอะฮ์เป็นที่รู้จักในฐานะขบวนการที่ต่อต้านระบอบการปกครอง ไม่ยอมรับอำนาจทางศาสนาและทางโลกของผู้ปกครองมุสลิมฝ่ายซุนนี โดยชาวชีอะฮ์เชื่อว่าเคาะลีฟะฮ์ที่แท้จริงเพียงหนึ่งเดียวของศาสนทูต ﷺ คือ ท่านอาลี บิน อบีฏอลิบ และวงศ์วานของท่านที่สืบเชื้อสายผ่านทางท่านหญิงฟาฏิมะฮ์และท่านอาลีเท่านั้น</p>
+
+      <p>การเป็นศัตรูกับระบอบการปกครองทำให้ชาวชีอะฮ์ต้องเผชิญกับการถูกเนรเทศ การสังหาร และการไล่ล่า ส่งผลให้การปฏิบัติตามแนวทางชีอะฮ์ต้องกระทำกันอย่างลับๆ เป็นเวลายาวนาน และเนื่องจากผู้คนในกลุ่มนี้ต้องทนทุกข์จากการกดขี่ข่มเหงและการเลือกปฏิบัติจากผู้ปกครองมุสลิมบางท่าน จึงมีผู้ถูกกดขี่และถูกละเมิดสิทธิ์จำนวนมากเข้าร่วมกับพวกเขา</p>
+
+      <p>แล้วชีอะฮ์คือใคร?</p>
+
+      <p>นิยามของชีอะฮ์ตามทัศนะของท่านอิบนุ มันซูร ผู้เชี่ยวชาญและเป็นปรมาจารย์ด้านภาษาอาหรับ ท่านได้ระบุไว้ในพจนานุกรม “ลิซานุลอาหรับ” ว่า: “ชีอะฮ์ถูกนิยามว่าเป็นกลุ่มคนที่รวมตัวกันในเรื่องใดเรื่องหนึ่ง และทุกกลุ่มคนที่มีเป้าหมายเดียวกันและปฏิบัติตามความคิดเห็นของกันและกัน พวกเขาคือชีอะฮ์” นอกจากนี้ท่านยังระบุว่า “รากศัพท์ของคำว่า ‘ชีอะฮ์’ คือการสนับสนุน ซึ่งหมายถึงการปฏิบัติตามและความนอบน้อม” ชีอะฮ์คือผู้ติดตามของท่านอาลี บิน อบีฏอลิบ หรือกลุ่มคนที่เชื่อว่าท่านอาลี บิน อบีฏอลิบ คือผู้มีสิทธิ์โดยชอบธรรมที่สุดในตำแหน่งเคาะลีฟะฮ์ พวกเขาได้ให้สัตยาบันต่อท่านหลังการอสัญกรรมของศาสดา ﷺ และถือว่าท่านเป็นผู้นำทางศาสนาของพวกเขา แม้ว่าท่านจะไม่ได้เป็นผู้ปกครองทางการเมืองในขณะนั้นก็ตาม</p>
+
+      <p>อบุลหะสัน อัลมัสอูดีย์ นักประวัติศาสตร์และภูมิศาสตร์ (เสียชีวิต ฮ.ศ. 346) ได้กล่าวไว้ในหนังสืออัลมุรูญุซซะฮับ หรือ “ทุ่งหญ้าแห่งทองคำ” ว่า: “เพื่อที่จะเข้าใจสถานะของอาลี บิน อบีฏอลิบในทัศนะของชาวชีอะฮ์ เราต้องรำลึกถึงการเสียชีวิตของท่านก่อนสิ่งอื่นใด ท่านเสียชีวิตในฐานะชะฮีด (ผู้พลีชีพ) และตกเป็นเหยื่อของการลอบสังหารทางการเมืองที่วางแผนไว้อย่างรัดกุม หลังจากที่มุอาวิยะฮ์ได้ปลดท่านออกจากอำนาจ หลังจากการอสัญกรรมของท่าน บรรดาบุตรและหลานของท่านถูกกดขี่ข่มเหงอย่างแสนสาหัส ชื่อของท่านจึงผูกพันอยู่กับความอยุติธรรมและการสังหารผู้บริสุทธิ์ และได้สร้างสารแห่งภราดรภาพและความเสมอภาคในหมู่ชาวมุสลิม ด้วยเหตุนี้ ท่านจึงกลายเป็นสัญลักษณ์ที่ผู้ถูกลิดรอนสิทธิ์และถูกปฏิบัติอย่างไม่เป็นธรรมทั้งหลายต่างมารวมตัวกัน”</p>
+
+      <p>ประวัติศาสตร์อิสลามได้เปิดเผยให้เห็นถึงการใช้อำนาจเกินขอบเขตของผู้ปกครองในดินแดนต่างๆ ต่อประชาชน ซึ่งประชาชนก็ได้ตอบโต้ความอยุติธรรมนี้ผ่านการปฏิวัติที่นำโดยคนในท้องถิ่นในหลายภูมิภาคของโลกอิสลาม และการปฏิวัติเหล่านี้มักปรากฏในรูปแบบของการต่อต้านทางศาสนามากกว่าจะเป็นเพียงเรื่องการเมือง</p>
+
+      <p>ในศตวรรษที่ 7 ในช่วงการปกครองของเคาะลีฟะฮ์รอชิดีนคนที่สาม ท่านอุษมาน บิน อัฟฟาน ซึ่งยุคสมัยของท่านเต็มไปด้วยข้อผิดพลาดและการใช้อำนาจเกินขอบเขตของผู้ปกครองในอิรัก อียิปต์ และเยเมน เรื่องนี้ได้สร้างความไม่พอใจให้กับประชาชนในพื้นที่เหล่านี้ และผลักดันให้พวกเขามีแนวคิดปฏิวัติต่อระบอบการปกครองมากยิ่งขึ้น ซึ่งนิกายชีอะฮ์ได้กลายเป็นแหล่งบ่มเพาะความโกรธแค้นนี้ และชี้นำความโกรธแค้นนั้นให้เป็นการต่อต้านระบอบการปกครองทั้งทางศาสนาและทางโลกของรัฐบาลซุนนี</p>
+
+      <p>ตามธรรมชาติที่ซับซ้อนของมนุษย์ เมื่อคนกลุ่มหนึ่งกลายเป็นกลุ่มชายขอบที่ถูกกดขี่และถูกละเลยสิทธิ สิ่งนี้มักจะทำให้พวกเขามีความเห็นอกเห็นใจต่อกลุ่มชายขอบอื่นๆ มากขึ้น เพราะพวกเขาสามารถรับรู้ได้ถึงความทุกข์ทรมานของผู้อื่น แล้วเป็นไปได้หรือไม่ว่าชาวชีอะฮ์มีความเห็นอกเห็นใจต่อสตรีและยอมรับพวกเธอในตำแหน่งที่มีอำนาจมากกว่า?</p>
+
+      <h2 class="article-h2">รัฐฟาฏิมียะฮ์และการสืบเชื้อสายจากท่านหญิงฟาฏิมะฮ์ อัซซะฮ์รออ์</h2>
+
+      <p>หลังจากหลายปีแห่งการเผยแผ่อย่างลับๆ ของกลุ่มอิสมาอีลียะฮ์ (หนึ่งในนิกายย่อยของชีอะฮ์) ในที่สุดพวกเขาก็สามารถสร้างความสั่นสะเทือนครั้งใหญ่ต่อการปกครองของราชวงศ์อับบาซิดที่มาจากฝ่ายซุนนีในกรุงแบกแดดได้สำเร็จ โดยชาวชีอะฮ์สามารถสถาปนารัฐเคาะลีฟะฮ์ของตนเองขึ้นในกรุงไคโร ซึ่งก็คือรัฐฟาฏิมียะฮ์ที่เป็นปฏิปักษ์ต่อการปกครองของอับบาซิดฝ่ายซุนนี</p>
+
+      <p>รัฐฟาฏิมียะฮ์ได้ขยายอาณาเขตออกไปอย่างกว้างขวาง และชาวฟาฏิมียะฮ์ได้ใช้การสืบเชื้อสายของตนเพื่อยืนยันว่าพวกเขาคือผู้ที่คู่ควรที่สุดในตำแหน่งเคาะลีฟะฮ์เหนือชาวมุสลิมทั้งปวง เนื่องจากเป็นผู้ใกล้ชิดกับศาสนทูต ﷺ มากที่สุดและสืบเชื้อสายมาจากท่านหญิงฟาฏิมะฮ์ อัซซะฮ์รออ์ ผู้เป็นธิดา ซึ่งเป็นที่มาของชื่อรัฐ</p>
+
+      <p>เมื่อชาวชีอะฮ์ตั้งชื่อรัฐของตนตามชื่อของสตรี มีความภาคภูมิใจในการสืบเชื้อสายจากนาง และเชื่อว่านางสามารถถ่ายทอดอำนาจการปกครองได้ ประกอบกับการที่พวกเขาเองก็เป็นกลุ่มชายขอบมาก่อน คำถามสำคัญจึงผุดขึ้นในใจของเราว่า: ความแตกต่างระหว่างอิสลามนิกายชีอะฮ์และนิกายซุนนีในประเด็นที่เกี่ยวกับสตรี สะท้อนให้เห็นถึงการที่ชาวชีอะฮ์ปฏิบัติต่อสตรีในเชิงบวกกว่าหรือไม่? พวกเขายอมรับในความเสมอภาคมากกว่าหรือ? และพวกเขาจะรับมืออย่างไรหากถูกปกครองโดยสตรี ในเมื่อพวกเขาเองก็ภาคภูมิใจในการสืบเชื้อสายจากสตรี?</p>
+
+      <p>ก่อนอื่นต้องชี้ให้เห็นว่า ชาวชีอะฮ์วางตนเป็นฝ่ายค้านต่ออำนาจรัฐในเกือบทุกรูปแบบ ในขณะที่ชาวชีอะฮ์ยึดมั่นในความเป็นสตรีผ่านการสืบเชื้อสายฝ่ายหญิงที่ย้อนไปถึงท่านหญิงฟาฏิมะฮ์ อัซซะฮ์รออ์ และท่านหญิงคอดีญะฮ์ ภรรยาของศาสนทูต ﷺ ซึ่งทั้งสองท่านมีสถานะอันสูงส่งและศักดิ์สิทธิ์ในทัศนะของชีอะฮ์</p>
+
+      <p>สถานะของสตรีกลับถูกปฏิเสธจากบรรดาผู้ปกครองซุนนี ซึ่งมองว่าเป็นไปไม่ได้ที่สตรีจะถ่ายทอดอำนาจนี้ได้ พวกเขายกเหตุผลว่า สตรีที่ไม่สามารถเป็นผู้นำละหมาด (อิมามัต อัศศุฆรอ หรือการเป็นผู้นำเล็ก) ก็ไม่สามารถถ่ายทอดตำแหน่งอิมามัตอัลกุบรอ (การเป็นผู้นำในระดับสูงหรือตำแหน่งใหญ่) ได้</p>
+
+      <p>มีสาส์นสองฉบับที่มีความสำคัญอย่างยิ่งในเรื่องนี้ ซึ่งเป็นการโต้ตอบกันระหว่างเคาะลีฟะฮ์อัลมันศูร เคาะลีฟะฮ์องค์ที่สองแห่งราชวงศ์อับบาซิด (ครองราชย์ระหว่าง ฮ.ศ. 136-158) กับฝ่ายค้านชาวชีอะฮ์ของเขา ซึ่งเป็นหนึ่งในกลุ่มอะละวีย์ที่สืบเชื้อสายมาจากท่านหญิงฟาฏิมะฮ์ อัซซะฮ์รออ์ และท่านอาลี บิน อบีฏอลิบ นามว่า มุฮัมมัด บิน อับดุลลอฮ์ บิน อัลฮุเซน บิน อัลฮะซัน บิน อาลี ซึ่งมีฉายาว่า “อันนัฟส์ อัซซะกียะฮ์” (วิญญาณอันบริสุทธิ์)</p>
+
+      <p>นักประวัติศาสตร์ และปรัชญาเมธีอย่างท่านอิหม่ามอัฏเฏาะบะรีย์ได้บันทึกว่า: “อันนัฟส์ อัซซะกียะฮ์ ได้แสดงความภาคภูมิใจในการสืบเชื้อสายจากสตรีระหว่างการโต้แย้ง โดยเชื้อสายของเขาย้อนไปถึงท่านหญิงคอดีญะฮ์ ภรรยาคนแรกของศาสนทูต ﷺ และเป็นคนแรกที่ศรัทธาในตัวท่านหลังจากที่ท่าน ﷺ ได้แจ้งข่าวการรับวะฮีย์ (วิวรณ์) จากเทวทูตญิบรีลให้ทราบ ท่านหญิงคอดีญะฮ์เป็นนักการค้าและได้ใช้ทรัพย์สินส่วนใหญ่ของนางเพื่อสนับสนุนศาสนาใหม่ และเป็นคนแรกที่ให้กำลังใจท่านเมื่อท่านเริ่มประกาศศาสนา ท่านศาสดา ﷺ มีบุตรกับนางคือท่านหญิงฟาฏิมะฮ์ อัซซะฮ์รออ์ ซึ่งชาวชีอะฮ์สืบเชื้อสายมาจากท่าน ในสาส์นที่ส่งถึงอัลมันศูรนั้น อันนัฟส์ อัซซะกียะฮ์ ได้พรรณนาถึงท่านหญิงฟาฏิมะฮ์ว่าเป็น “สตรีผู้ประเสริฐที่สุดและเป็นสตรีผู้ทรงคุณธรรมคนแรกที่จะได้เข้าสู่สรวงสวรรค์” แล้วเคาะลีฟะฮ์อัลมันศูรตอบสนองต่อการอ้างเชื้อสายอันสูงส่งจากฝ่ายหญิงนี้อย่างไร?</p>
+
+      <p>เคาะลีฟะฮ์อัลมันศูรได้ปกป้องความชอบธรรมและสิทธิ์ในตำแหน่งเคาะลีฟะฮ์ของตนโดยอ้างการสืบเชื้อสายจากศาสนทูต ﷺ ผ่านทางบุรุษ ซึ่งก็คือท่านอับบาส ผู้เป็นลุงของท่าน ท่านตอบกลับอย่างเรียบง่าย ไม่ซับซ้อนหรือยืดเยื้อ เพราะท่านไม่เชื่อเลยว่าสตรีจะสามารถถ่ายทอดอำนาจการปกครองได้ โดยกล่าวว่า “ข้าได้รับสารของท่านแล้ว หากความภาคภูมิใจอันยิ่งใหญ่ของท่านมาจากสตรี...อัลลอฮ์ไม่ได้ทรงทำให้สตรีเป็นเช่นลุง หรือบิดาเป็นเช่นผู้สืบสายเลือด...พวกท่านเป็นเพียงลูกของลูกสาว (ของศาสดา ﷺ ) แม้จะเป็นความสัมพันธ์ที่ใกล้ชิด แต่ก็เป็นสตรี นางไม่ได้รับมรดกและไม่อนุญาตให้นางเป็นผู้นำละหมาด แล้วจะให้นางถ่ายทอดตำแหน่งอิมามได้อย่างไร?”</p>
+
+      <p>ความทะเยอทะยานในอำนาจของกลุ่มอะละวีย์จึงไม่มีมูลในความคิดของราชวงศ์อับบาซิด เพราะการถ่ายทอดตำแหน่งเคาะลีฟะฮ์ผ่านการสืบเชื้อสายจากสตรีนั้น เป็นสิ่งที่เป็นไปไม่ได้ในมุมมองของพวกเขา</p>
+
+      <h2 class="article-h2">เหล่าเคาะลีฟะฮ์ (ผู้ปกครอง) หญิงในโลกอิสลาม</h2>
+
+      <p>นอกเหนือจากเรื่องราวของราชินีบิลกีสผู้ปกครองเยเมนมาเนิ่นนานก่อนยุคอิสลาม เยเมนมีความโดดเด่นกว่าดินแดนอาหรับมุสลิมอื่นๆ ในยุคนั้น ไม่เพียงเพราะมีสตรีจำนวนมากได้ก้าวขึ้นสู่ตำแหน่งสูงในอำนาจ แต่ยังเป็นเพราะมีราชินีถึงสองพระองค์ที่ได้รับการยอมรับอย่างชัดเจนในฐานะประมุขของรัฐ นั่นคือ ราชินีอัรวา บุตรแห่งอะห์มัด (ครองราชย์ระหว่าง ฮ.ศ. 492-532) และราชินีอัสมาอ์ บุตรแห่งชิฮาบ ซึ่งเป็นสิ่งที่ไม่เคยเกิดขึ้นที่ใดมาก่อนในกลุ่มประเทศที่มีการปกครองแบบอาหรับ-อิสลาม เหตุการณ์นี้เกิดขึ้นในสมัยรัฐศุลัยฮียะฮ์ (Sulayhid dynasty) ซึ่งเป็นราชวงศ์อิสมาอีลียะฮ์ชีอะฮ์ที่ปกครองเยเมน และอาจกล่าวได้ว่าเป็นส่วนขยายอำนาจของรัฐฟาฏิมียะฮ์ในกรุงไคโร การที่รัฐศุลัยฮียะฮ์จะถือกำเนิดขึ้นในเยเมน ย่อมเป็นไปไม่ได้เลย หากรัฐฟาฏิมียะฮ์ไม่ได้ขึ้นสู่อำนาจในอียิปต์เสียก่อน</p>
+
+      <p>อัซซิริกลีย์ได้คัดลอกข้อความจากคุฏบะฮ์ (บทเทศนา) ที่ถูกประกาศในวันศุกร์ ณ มัสยิดต่างๆ ที่อยู่ภายใต้การควบคุมของรัฐศุลัยฮียะฮ์ในเยเมน ซึ่งเป็นการประกาศในนามของราชินีอัรวา ในหนังสือของเขาความว่า: “โอ้อัลลอฮ์ โปรดประทานความยั่งยืนแก่วันเวลาของสตรีผู้เป็นอิสระ ผู้สมบูรณ์แบบ ท่านหญิงผู้เป็นผู้นำแห่งศรัทธาชน (เคาะลีฟะฮ์แห่งปวงผู้ศรัทธา)”</p>
+
+      <p>ในช่วงการปกครองของเหล่าราชินีแห่งเยเมนและรัฐฟาฏิมียะฮ์ นิกายชีอะฮ์ไม่ได้เป็นเพียงขบวนการต่อต้านที่ประกอบด้วยกลุ่มชนเผ่าและผู้คนที่ถูกกดขี่ลิดรอนสิทธิ์อีกต่อไป แต่ได้กลายเป็นรัฐที่แข็งแกร่ง มีกองทัพเป็นของตนเอง ซึ่งมุ่งหวังที่จะปกครองชาวมุสลิมทั้งมวลและโค่นล้มรัฐอับบาซิดของฝ่ายซุนนีในนามของ “อะฮ์ลุลบัยต์” (วงศ์วานของศาสดา)</p>
+
+      <p>นอกจากนี้ แนวคิดของนิกายชีอะฮ์ยังได้แผ่ขยายไปสู่ดินแดนต่างๆ ทั่วโลกในช่วงการปกครองของฟาฏิมียะฮ์ เนื่องด้วยการควบคุมทรัพยากรที่จำเป็นต่อการเผยแพร่แนวคิดและหลักการของพวกเขา</p>
+
+      <p>ราชินีอัสมาอ์เป็นพระมเหสีของอาลี อัศศุลัยฮีย์ (ผู้ก่อตั้งรัฐศุลัยฮียะฮ์) เขาให้ความไว้วางใจในตัวนางและคำปรึกษาของนางเป็นอย่างยิ่ง จนในที่สุดได้มอบหมายให้นางบริหารจัดการกิจการของรัฐในขณะที่เขายังมีชีวิตอยู่ มุฮัมมัด อัตตาวีรนักประวัติศาสตร์ชาวเยเมนได้กล่าวถึงราชินีอัสมาอ์ไว้ว่า: “นางเป็นผู้มีชื่อเสียงที่สุดในหมู่สตรีร่วมสมัย เช่นเดียวกับในหมู่ผู้ปกครองคนอื่นๆ นางเป็นผู้มีเกียรติและเป็นกวีที่สามารถแต่งโคลงกลอนได้ด้วยตนเอง หนึ่งในเกียรติยศที่สามีของนาง อัศศุลัยฮีย์ภาคภูมิใจและเป็นที่ขับขานโดยเหล่ากวีก็คือ การที่นางเป็นภรรยาของเขา และเมื่อสามีของนางได้ประจักษ์ถึงความสมบูรณ์แบบในอุปนิสัยของนางแล้ว เขาจึงมอบหมายการบริหารราชการแผ่นดินให้นางและไม่เคยขัดแย้งกับนางในเรื่องส่วนใหญ่เลย”</p>
+
+      <p>หลังจากการอสัญกรรมของอัศศุลัยฮีย์ ราชินีอัสมาอ์ได้ปกครองในฐานะเคาะลีฟะฮ์และผู้ปกครองรัฐศุลัยฮียะฮ์จนกระทั่งสิ้นพระชนม์ และหลังจากนั้น ราชินีอัรวาก็ได้ขึ้นปกครองต่อ นางเป็นภรรยาของอาลี บิน มุฮัมมัด อัศศุลัยฮีย์ (ซึ่งอาลีคือน้องชายของอัสมาอ์) สามีของนางซึ่งป่วยกระเสาะกระแสะ ราชินีอัรวาจึงได้ปกครองในฐานะเคาะลีฟะฮ์แห่งรัฐชีอะฮ์แห่งนี้ ราชินีอัรวามีความโดดเด่นกว่าราชินีอัสมาอ์ตรงที่นางได้รับมิติทางจิตวิญญาณที่ยิ่งใหญ่กว่า โดยได้รับการยกย่องให้เป็นหนึ่งในบุคคลสำคัญของนิกายชีอะฮ์ อิสมาอีลียะฮ์ ในฐานะผู้นำทางจิตวิญญาณ นางจึงไม่ได้เป็นเพียงผู้ปกครองทั้งทางโลกและทางศาสนาเท่านั้น แต่ยังมีส่วนสำคัญในการเผยแพร่นิกายชีอะฮ์ไปยังทวีปเอเชียอย่างรวดเร็ว ซึ่งแสดงให้เราเห็นถึงคุณสมบัติความเป็นผู้นำที่ราชินีอัรวามี และมุมมองที่ผู้คนมีต่อนางว่าเป็นมากกว่าแค่ผู้ปกครองทางโลก</p>
+
+      <p>อัซซิริกลีย์กล่าวถึงนางในหนังสือของเขา (พจนานุกรมบุคคลสำคัญชายและหญิง) ว่า: “อัรวาคือราชินีผู้มีความสามารถ เป็นนักบริหารที่หาใครเทียบมิได้” และยังนับว่านางเป็น “หนึ่งในผู้นำของนิกายอิสมาอีลียะฮ์”</p>
+
+      <p>ในยุคการปกครองของอัรวา แนวทางอิสมาอีลียะฮ์ได้เริ่มแผ่ขยายอิทธิพลเข้าไปในอนุทวีปอินเดีย รัฐเจริญรุ่งเรืองและพัฒนาไปอย่างมาก ในสมัยของนางมีการสร้างมัสยิด ถนนหนทาง และโครงการก่อสร้างต่างๆ มากมาย นอกจากนี้นางยังให้ความสำคัญกับการส่งเสริมศูนย์กลางทางวัฒนธรรมและศาสนาผ่านการให้เงินเดือนจำนวนมากแก่ครูและนักวิชาการอีกด้วย</p>
+
+      <p>นักประวัติศาสตร์นามว่า อับดุลลอฮ์ อะห์มัด มุฮัมมัด อัตตาวีรยังได้กล่าวทิ้งท้ายว่า “หากมีราชินีถึงสองพระองค์ที่ได้ปกครองอย่างชัดเจนในประวัติศาสตร์อิสลามของภูมิภาคนี้ คำถามก็ยังคงมีอยู่ว่า: เหตุใดเรื่องราวนี้จึงไม่ถูกพูดถึง? มีความพยายามที่จะลบเลือนประวัติศาสตร์ส่วนนี้หรือไม่? หรือว่าบรรดานักประวัติศาสตร์ได้หลงลืมไป หรือพยายามที่จะลืมมันเสีย?”</p>
+
+      <h2 class="article-h2">การหลงลืมโดยเจตนา</h2>
+
+      <p>ฟาฏิมะฮ์ อัลมัรนีซี นักเขียนและนักสตรีนิยมชาวโมร็อกโก ได้ตอบคำถามนี้ไว้ในหนังสือของเธอเรื่อง “Sultanes oubliées” (สุลตานาที่ถูกลืม) โดยกล่าวว่า: “ราชินีทั้งสองพระองค์นี้ถูกมองข้ามและถูกลืมไปอย่างสิ้นเชิง ราวกับว่าพวกนางถูกลบไปจากความทรงจำของเหล่านักประวัติศาสตร์ เราไม่พบเรื่องราวของพวกนางเลยนอกจากข้อมูลเพียงน้อยนิด ราวกับว่าไม่เคยมีใครได้ยินชื่อของพวกนางมาก่อน” เธอกล่าวเสริมว่า: “เพราะการสูญเสียความทรงจำนี้ ดูเหมือนจะเชื่อมโยงกับการเป็นส่วนหนึ่งของพื้นที่ทางภูมิศาสตร์และวัฒนธรรม ชาวอาหรับไม่ได้ลืมสิ่งเดียวกันทั้งหมด การหลงลืมของพวกเขาขึ้นอยู่กับบริบทของชาติและความทรงจำในท้องถิ่น และดูเหมือนว่านักประวัติศาสตร์ชาวเยเมนจะมีความจำที่เสื่อมน้อยกว่าใครเพื่อน เมื่อเป็นเรื่องที่เกี่ยวกับสตรีและอำนาจ พวกเขาป่าวประกาศให้โลกรู้ว่าในอดีตเคยมีสตรีเป็นราชินีปกครองแผ่นดิน ซึ่งหากนักประวัติศาสตร์เยเมนยุคใหม่ไม่รู้สึกกระอักกระอ่วนใจที่จะยอมรับและภาคภูมิใจในราชินีผู้เป็นประมุขแห่งรัฐอันยิ่งใหญ่ และหลังจากวิเคราะห์ข้อเท็จจริงแล้วยังยืนยันว่านางมีความสามารถทางการเมืองมากกว่าอิหม่าม (ผู้นำ) ชายหลายคน แล้วเหตุใดนักประวัติศาสตร์อาหรับชาติอื่นจึงประสบปัญหาในการเดินตามแนวทางเดียวกันนี้? อะไรคือลักษณะพิเศษที่กำหนดความสัมพันธ์ของชาวเยเมนที่มีต่อสตรีในฐานะองค์ประกอบหนึ่งของประวัติศาสตร์ของพวกเขา? เป็นเพราะสถานะของสตรีในพิธีกรรมความเชื่อโบราณ? หรือเป็นความทรงจำเกี่ยวกับราชินีแห่งสะบะอ์? หรือเป็นธรรมเนียมการมีสามีหลายคนของชาวสะบะอ์ในอดีตกาล?”</p>
+
+      <p>อับดุลลอฮ์ อัษเษาเราะอ์ นักประวัติศาสตร์ชาวเยเมนกล่าวว่า: “เพียงพอแล้วสำหรับนักประวัติศาสตร์ผู้ซื่อสัตย์ที่จะเปรียบเทียบการปกครองของเหล่าอิหม่าม (ผู้นำชายในเยเมน) อย่างย่นย่อที่สุด กับยุคสมัยที่สตรีชาวเยเมนผู้หนึ่งได้ปกครอง นางเป็นผู้ยึดมั่นในหลักการ รักประชาชนของตน และจงรักภักดีต่อพวกเขาเสมอมา นางคือ ท่านหญิงอัรวา บินตี อะห์มัด อัศศุลัยฮีย์ ผู้สร้างคุณูปการอันยิ่งใหญ่ สร้างบ้านเมือง ถนนหนทาง มัสยิด และสิ่งอื่นๆ อีกมากมายที่เหล่าอิหม่ามไม่เคยทำได้สำเร็จตลอดช่วงการปกครองอันยาวนานของพวกเขา”</p>
+
+      <p>จากนั้น อัลมัรนีซี ก็ได้กลับมาพยายามอธิบายถึงการหลงลืมนี้อีกครั้ง โดยให้เหตุผลว่า “อาจเป็นเพราะราชินีทั้งสองพระองค์เป็นชาวชีอะฮ์” ความจริงที่อัลมัรนีซีใช้อธิบายปรากฏการณ์ความจำเสื่อมนี้ก็คือ การที่ราชินีอัรวาและราชินีอัสมาอ์เป็นชีอะฮ์ เธอกล่าวว่า: “เงาที่น่าอึดอัดใจซึ่งความทรงจำเกี่ยวกับอัสมาอ์และอัรวาได้พาดพิงถึงก็คือ ‘ชีอะฮ์’ ในฐานะขบวนการต่อต้านทางการเมืองที่ผูกพันกับความรุนแรงรูปแบบพิเศษ เพราะเป็นความรุนแรงที่มุ่งเน้นไปที่ศาสนา มันคือการต่อต้านที่สั่นคลอนรากฐานของอำนาจทางการเมือง นั่นคือความชอบธรรมอันศักดิ์สิทธิ์ของตัวมันเองในนามของศาสนา เป็นเวลาหลายศตวรรษแล้วที่ชีอะฮ์ได้เขย่ารากฐานของอิสลามนิกายซุนนีในฐานะแนวทางออร์โธดอกซ์ที่ใช้อำนาจเด็ดขาด และนับตั้งแต่ที่ชีอะฮ์ได้ก้าวเข้ามาสู่เวทีโลกอย่างเกรี้ยวกราดหลังการขึ้นสู่อำนาจของโคมัยนี (ในการปฏิวัติอิหร่าน) ในช่วงทศวรรษที่ 1970 และสงครามอิรัก-อิหร่าน เวลาก็ไม่เหมาะสมอีกต่อไปที่จะรื้อฟื้นความทรงจำบางอย่างขึ้นมา และการสูญเสียความทรงจำก็กลายเป็นสิ่งที่พึงปรารถนามากยิ่งขึ้น”</p>
+
+      <p>ท้ายที่สุด เราไม่สามารถสรุปได้อย่างชัดเจนว่าสาเหตุนั้นมาจากการถูกกดขี่และถูกทำให้เป็นชายขอบ ซึ่งทำให้ชาวชีอะฮ์ยอมรับการปกครองโดยสตรีได้มากกว่า หรือเป็นเพราะประเด็นนี้สอดคล้องกับเป้าประสงค์ทางการเมืองของพวกเขาในการเข้าสู่อำนาจ เพราะหากชาวชีอะฮ์ปฏิเสธบทบาทของสตรีโดยสิ้นเชิง พวกเขาก็เท่ากับได้ทำลายความชอบธรรมของตนเองที่ใช้อ้างสิทธิ์ในการเข้าถึงอำนาจการปกครองไปพร้อมกัน แต่ไม่ว่าจะเป็นกรณีใดก็ตาม สตรี “มุสลิม” ก็เคยสามารถก้าวขึ้นสู่ตำแหน่ง “เคาะลีฟะฮ์” และปกครองดินแดนอันกว้างใหญ่ไพศาลภายใต้การปกครองของชีอะฮ์ในอดีตได้สำเร็จ และนิกายชีอะฮ์ยังถือเป็นแนวทางเดียวในกลุ่มศาสนาอับราฮัม (ยูดาห์ คริสต์ อิสลาม) ที่การดำรงอยู่ของนิกายนั้นสืบเนื่องมาจากสตรี ซึ่งก็คือ ท่านหญิงฟาฏิมะฮ์ อัซซะฮ์รออ์ ธิดาของศาสดามุฮัมมัด ﷺ นั่นเอง</p>
+
+      <p>แต่คำตอบต่อคำถามที่ว่า “เหตุใดเรื่องราวของราชินีชีอะฮ์แห่งเยเมนจึงถูกลืม?” นั้น มีคำตอบที่ซับซ้อนกว่าแค่ประเด็นเรื่อง “การเป็นชีอะฮ์” แม้ว่านั่นจะเป็นเหตุผลที่สำคัญอย่างยิ่งตามที่อัลมัรนีซีได้วิเคราะห์ไว้ก็ตาม</p>
+
+      <p>หากเรานำข้อมูลจากประวัติศาสตร์อิสลามในภาพรวมมาพิจารณา จะพบว่าปรากฏการณ์ “การหลงลืมโดยเจตนา” นี้ ไม่ได้เกิดขึ้นเฉพาะกับราชินีชีอะฮ์เท่านั้น แต่เป็นชะตากรรมร่วมของสตรีผู้มีอำนาจจำนวนมากในโลกอิสลามรวมถึงฝ่ายซุนนีด้วย การทำความเข้าใจในประเด็นนี้ต้องมองผ่านหลายมิติประกอบกัน ดังนี้</p>
+
+      <h3 class="article-h3">1. บริบทที่กว้างกว่า: สตรีผู้ทรงอำนาจในโลกซุนนีที่ถูก “ลืม” เช่นกัน</h3>
+
+      <p>ข้อโต้แย้งที่ว่าราชินีชีอะฮ์ถูกลืมเพราะแนวคิดของพวกเธอนั้นเป็นความจริง แต่เรื่องราวจะยังไม่สมบูรณ์หากไม่กล่าวถึงสตรีผู้ทรงอำนาจในโลกซุนนีซึ่งประสบชะตากรรมคล้ายคลึงกัน บทบาทของพวกเธอแสดงให้เห็นว่าอุปสรรคสำคัญไม่ได้มีเพียงเรื่องแนวคิด แต่คือเรื่อง “เพศสภาพ” ที่ท้าทายโครงสร้างอำนาจปิตาธิปไตยโดยตรง</p>
+
+      <p><strong>ก) กษัตรีย์ผู้ปกครองโดยสมบูรณ์ (Sovereign Rulers)</strong></p>
+
+      <p>- รอฎียะฮ์หรือราซียา สุลต่านแห่งเดลี: แม้จะได้รับการแต่งตั้งจากพระบิดา แต่พระนางต้องเผชิญการต่อต้านอย่างรุนแรงจากกลุ่มขุนนางเติร์กที่ไม่ยอมรับการปกครองของผู้หญิง พระนางทรงฉลองพระองค์เช่นบุรุษ ปกครองอย่างเด็ดขาด และพยายามสร้างฐานอำนาจของตนเอง แต่สุดท้ายก็ถูกโค่นล้ม เรื่องราวของพระนางมักถูกเล่าในลักษณะของ “ความล้มเหลว” หรือ “ข้อยกเว้นที่น่าแปลกใจ” มากกว่าจะเป็นส่วนหนึ่งของประวัติศาสตร์การปกครองที่เป็นปกติ</p>
+
+      <p>- ชะญัร อัดโดร สุลตานาแห่งอียิปต์ จากศตวรรษที่ 13: อดีตทาสีที่ก้าวขึ้นสู่ตำแหน่งสุลตานา ปกครองอียิปต์ในช่วงเปลี่ยนผ่านราชวงศ์อัยยูบิดสู่มัมลูก พระนางซ่อนข่าวการสิ้นพระชนม์ของสวามีเพื่อนำทัพเอาชนะสงครามครูเสดครั้งที่ 7 และมีการออกเหรียญในนามของตนเอง แต่การปกครองของพระนางก็ถูกคัดค้านอย่างหนักจากเคาะลีฟะฮ์อับบาซิดแห่งแบกแดด ซึ่งปฏิเสธความชอบธรรมของผู้นำสตรี ทำให้พระนางต้องสละราชบัลลังก์ในที่สุด เรื่องราวของพระนางก็ถูกทำให้เลือนหายไปจากการรับรู้ในวงกว้างเช่นกัน</p>
+
+      <p><strong>ข) ผู้สำเร็จราชการและผู้มีอำนาจโดยพฤตินัย (Regents &amp; De Facto Rulers)</strong> เป็นรูปแบบอำนาจที่พบได้บ่อยกว่าและได้รับการยอมรับมากกว่า สตรีเหล่านี้ไม่ได้ดำรงตำแหน่งสูงสุดโดยตรง แต่มีอำนาจมหาศาลเบื้องหลังผู้ปกครองชาย</p>
+
+      <p>- จันท์ บีบี (Chand Bibi, รัฐสุลต่านเดคข่าน, ศตวรรษที่ 16): ผู้สำเร็จราชการที่ทรงอำนาจและเป็นนักรบผู้กล้าหาญ เป็นที่รู้จักจากการป้องกันเมืองอาเหม็ดนครจากการรุกรานของจักรพรรดิอักบัรแห่งโมกุล</p>
+
+      <p>- ทูรคาน คาทูน (Turkan Khatun, จักรวรรดิควาราซเมีย, ศตวรรษที่ 13): ปกครองร่วมกับพระโอรส มีราชสำนักและอำนาจบัญชาการเป็นของตนเอง คำสั่งจะไม่มีผลหากปราศจากการลงนามของพระนาง</p>
+
+      <h3 class="article-h3">แล้วเหตุใดจึง “ถูกลืม”?</h3>
+
+      <p>เมื่อนำข้อมูลทั้งหมดมาประกอบกัน เราสามารถตอบคำถามของอัตตาวีรและอัลมัรนีซีได้ว่า การหลงลืมเรื่องราวของราชินีแห่งเยเมนมีสาเหตุจากปัจจัยที่ซับซ้อนหลายประการ:</p>
+
+      <p>1- เพราะพวกเธอเป็นชีอะฮ์ (ตามทฤษฎีของอัลมัรนีซี): นี่คือเหตุผลสำคัญอันดับแรก ในโลกที่ประวัติศาสตร์ส่วนใหญ่ถูกเขียนโดยผู้ชนะหรือฝ่ายเสียงข้างมาก (ซุนนี) จึงไม่มีแรงจูงใจที่จะบันทึกหรือเชิดชูความสำเร็จของผู้ปกครองจากแนวทางที่เป็นคู่แข่งทางการเมืองและเทววิทยา</p>
+
+      <p>2- เพราะพวกเธอเป็นผู้หญิง: นี่คือปัจจัยร่วมที่ทรงพลังยิ่งกว่าเรื่องพลังทางความคิด การที่สตรีขึ้นสู่ตำแหน่งอำนาจสูงสุดเป็นการท้าทายโครงสร้างอำนาจปิตาธิปไตยอย่างรุนแรง ไม่ว่าจะเป็นในสังคมชีอะฮ์หรือซุนนี ดังที่เห็นจากชะตากรรมของราซียา สุลต่าน และชะญัร อัดโดร ที่ถูกโค่นล้มโดยกลุ่มอำนาจชาย ดังนั้น การลบเลือนเรื่องราวของพวกเธอจึงเป็นการธำรงรักษาระเบียบสังคมที่ชายเป็นใหญ่</p>
+
+      <p>3- เพราะธรรมชาติของอำนาจแตกต่างกัน: อำนาจของราชินีชีอะฮ์ (อัรวาและอัสมาอ์) มีความพิเศษตรงที่เป็นการผนวกรวมอำนาจทางการเมือง (ผู้ปกครอง) เข้ากับอำนาจทางศาสนาในระดับสูง (ฮุจญะฮ์) ซึ่งเป็นไปได้ภายใต้หลักเทววิทยาของอิสมาอีลียะฮ์ ในขณะที่ในโลกซุนนี อำนาจทั้งสองส่วนนี้มักจะแยกจากกันอย่างชัดเจน ผู้นำสตรีทางการเมืองจะขาดความชอบธรรมทางศาสนา ในขณะที่ผู้นำสตรีทางศาสนาก็ไม่มีอำนาจทางการเมือง การรวมอำนาจที่สมบูรณ์ของราชินีชีอะฮ์จึงอาจเป็นสิ่งที่ “แปลกแยก” และยากที่จะทำความเข้าใจหรือยอมรับในกรอบประวัติศาสตร์กระแสหลัก</p>
+
+      <h2 class="article-h2">บทสรุปสุดท้าย</h2>
+
+      <p>การหลงลืมเรื่องราวของราชินีชีอะฮ์แห่งเยเมน จึงไม่ใช่เพียงเรื่องของความขัดแย้งระหว่างนิกาย แต่เป็นภาพสะท้อนของกระบวนการทางประวัติศาสตร์ที่ใหญ่กว่านั้น นั่นคือการลบเลือนบทบาทและอำนาจของผู้หญิงออกจากหน้าประวัติศาสตร์อิสลามในภาพรวม ไม่ว่าจะเป็นอำนาจทางการเมืองของสุลตานาฝ่ายซุนนีหรือชีอะฮ์ เพื่อให้สอดคล้องกับระเบียบสังคมและโครงสร้างอำนาจที่ชายเป็นใหญ่ในยุคสมัยต่อมา ดังนั้น การรื้อฟื้นเรื่องราวของราชินีอัรวาและอัสมาอ์ จึงเป็นการเปิดประตูสู่การทวงคืนประวัติศาสตร์ที่หายไปของสตรีผู้ทรงอำนาจทั้งหมดในโลกมุสลิมนั่นเอง</p>
+
+      <h2 class="article-h2">เชิงอรรถ</h2>
+
+      <p>1- แม้ชีอะฮ์สายหลักอย่างอิมามียะฮ์ ก็ไม่ได้ยอมรับให้สตรีดำรงตำแหน่งอิหม่ามอย่างเป็นทางการ แต่กรณีของรัฐฟาฏิมียะฮ์และศุลัยฮียะฮ์เป็น ‘ข้อยกเว้นที่โดดเด่น’ ซึ่งอาจสะท้อนอิทธิพลท้องถิ่นจากยุคโบราณ วัฒนธรรมเยเมน และความจำเป็นทางการเมืองมากกว่าเป็นหลักเทววิทยาสากลของชีอะฮ์</p>
+
+      <p>2- ในชีอะฮ์สายอิสมาอีลียะฮ์ การใช้คำว่า ‘เคาะลีฟะฮ์’ หรือ ‘อิหม่าม’ อาจมีความหมายเฉพาะภายในโครงสร้างความเชื่อของตน บางครั้ง “อิหม่าม” เป็นสัญลักษณ์เหนือกว่า “เคาะลีฟะฮ์” ในความเข้าใจของชีอะฮ์สายนี้ การเรียกอัรวาว่า “เคาะลีฟะฮ์” จึงควรเข้าใจในบริบทท้องถิ่น-กลุ่มก๊ก มากกว่าการเทียบตรงกับ “คอลีฟะฮ์แห่งรัฐอิสลาม” แบบคลาสสิก และโดยทั่วไปแล้ว ฝ่ายซุนนีใช้คำว่า “เคาะลีฟะฮ์” ในความหมายของผู้ปกครองทางการเมืองและผู้นำประชาชาติอิสลาม ในขณะที่ฝ่ายชีอะฮ์ ใช้คำว่า “อิหม่าม” ซึ่งมีความหมายครอบคลุมถึงผู้นำทางจิตวิญญาณที่ถูกแต่งตั้งจากอัลลอฮ์และสืบเชื้อสายจากท่านศาสดา ﷺ การที่รัฐฟาฏิมียะฮ์และรัฐศุลัยฮียะฮ์ใช้ตำแหน่งที่เทียบเท่า “เคาะลีฟะฮ์” จึงเป็นการท้าทายอำนาจของฝ่ายซุนนีโดยตรง</p>
+
+      <p>3- ราชินีอัรวา บินตี อะหมัด อัศศุลัยฮียะฮ์ (ราชินีอัรวาแห่งเยเมน) พระนางทรงเป็นราชินีแห่งรัฐศุลัยฮียะฮ์ (เยเมน) ในฐานะผู้นำฝ่ายชีอะฮ์นิกายอิสมาอีลียะฮ์ พระนางครองอำนาจยาวนานตั้งแต่ปี ค.ศ. 1067 จนสิ้นพระชนม์ในปี ค.ศ. 1138 โดยช่วงแรกทรงร่วมปกครองกับพระสวามีและต่อมาทรงปกครองโดยลำพัง ถือเป็น “ราชินีนาถ” องค์แรกในโลกมุสลิมที่ครองราชย์ด้วยสิทธิ์ของตนเอง เมื่อพระสวามีป่วยเป็นอัมพาต พระนางก็เข้าบริหารราชการแทนอย่างเต็มที่</p>
+
+      <p>4- พระนางอัสมาอ์ บินตี ชิฮาบ อัศศุลัยฮียะฮ์ พระนางอัสมาอ์เป็นพระราชินีคู่สมรสของพระเจ้าฏอฮิร อาลี อัศศุลัยฮีย์ (ผู้สถาปนาราชวงศ์ศุลัยฮียะฮ์) และทรงดำรงสถานะ “ซัยยิดะฮ์ อัลหุรรอฮ์” (ท่านหญิงผู้ทรงอิสรภาพ) พระนางมีชื่อเสียงในความกล้าหาญและบทบาทโดดเด่นในการเมือง แม้แต่บันทึกของท่านอิบนุ คอลดูนและนักประวัติศาสตร์ร่วมสมัยยังกล่าวว่าช่วงปลายรัชกาลกษัตริย์อาลี พระนางอัสมาอ์คือผู้กุมอำนาจตัวจริงอยู่เบื้องหลังราชบัลลังก์ พระนางขึ้นชื่อว่าเป็นสตรีที่เข้าประชุมสภาขุนนางโดยไม่สวมผ้าคลุมหน้า ซึ่งผิดธรรมเนียมสังคมมุสลิมยุคนั้น สะท้อนถึงความมั่นใจและอำนาจบารมีที่พระนางมีเหนือเหล่าขุนนางชายร่วมที่ประชุม หลังการสิ้นพระชนม์ของกษัตริย์อาลีในปี ค.ศ. 1067 พระนางยังมีบทบาทช่วยเหลือพระโอรส (กษัตริย์มุกัรรอม อะห์มัด) ในการบริหารแผ่นดิน กล่าวได้ว่าพระนางทำหน้าที่เสมือนผู้สำเร็จราชการร่วมกับราชินีอัรวาในช่วงแรกเริ่มของรัชกาลใหม่ นักวิชาการบางท่านเสนอว่า ประสบการณ์ที่ราชินีอัรวาได้เห็นจากพระนางอัสมาอ์ในราชสำนัก ช่วยให้พระนางอัรวาสามารถก้าวขึ้นมาปกครองด้วยความมั่นใจหลังพระนางอัสมาอ์ถึงแก่อสัญกรรม โดยหลังปี ค.ศ. 1074 ที่อัสมาอ์สิ้นพระชนม์ ราชินีอัรวาจึงเริ่มรวบอำนาจทั้งหมดและครองราชย์สมบูรณ์</p>
+
+      <p>5- เจ้าหญิงซิตตี อัลมุลก์ (<span class="ar-inline" lang="ar" dir="rtl">الملكة ست الملك</span>) อีกตัวอย่างหนึ่งคือ เจ้าหญิงซิตตี อัลมุลก์ แห่งราชวงศ์ฟาฏิมียะฮ์ (ชีอะฮ์อิสมาอีลียะฮ์) ในอียิปต์ แม้พระนางจะไม่ได้ขึ้นครองราชย์อย่างเป็นทางการ แต่หลังการสวรรคตอย่างเป็นปริศนาของพระอนุชา (คอลีฟะฮ์อัลฮากิม) ในปี ค.ศ. 1021 พระนางซิตตีก็เข้าควบคุมราชสำนักในฐานะผู้สำเร็จราชการ ให้หลานชาย (คอลีฟะฮ์อาลี อัศศอฮิร) พระชนม์เพียง 16 พรรษา ขณะนั้นเจ้าหญิงสิทธิ์ทรงบริหารราชกิจบ้านเมืองหลายปีอย่างมีประสิทธิภาพ ทรงยกเลิกกฎเกณฑ์สุดโต่งบางอย่างที่พระอนุชาเคยบังคับใช้ และนำความสงบเรียบร้อยกลับคืนสู่รัฐฟาฏิมียะฮ์ ถึงแม้บทบาทของพระนางในฐานะผู้สำเร็จราชการหญิงจะผิดธรรมเนียมและเผชิญแรงต้านจากขุนนางหัวเก่า แต่ก็ไม่อาจปฏิเสธว่าพระนางเป็นหนึ่งในสตรีผู้ทรงอำนาจที่สุดของรัฐฟาฏิมียะฮ์ พระนางซิตตีถึงแก่อสัญกรรมในปี ค.ศ. 1023 ในขณะที่ยังครองอำนาจอยู่ เหตุการณ์นี้แสดงให้เห็นว่าภายใต้บริบทชีอะฮ์ การที่สตรีขึ้นสู่อำนาจทางการเมืองเป็นไปได้หากสถานการณ์เอื้ออำนวยและสตรีนั้นมีพระปรีชาสามารถเพียงพอ</p>
+
+      <p>หมายเหตุ: ตัวอย่างราชินีและผู้นำหญิงในฝ่ายชีอะฮ์เหล่านี้ มักเกิดขึ้นในบริบทที่เฉพาะเจาะจง เช่น ในราชสำนักชีอะฮ์อิสมาอีลียะฮ์ที่แนวคิดทางศาสนาเปิดช่องให้สตรีมีบทบาท (กรณีราชินีอัรวาได้รับการยอมรับทางจิตวิญญาณ) หรือในยามวิกฤตที่ขาดผู้นำชาย (กรณีเจ้าหญิงซิตตี อัลมุลก์) อย่างไรก็ดี ทุกกรณีล้วนสะท้อนว่าสตรีสามารถปกครองได้อย่างมีประสิทธิภาพไม่แพ้บุรุษ เมื่อได้รับโอกาสและความชอบธรรมทางสังคม</p>
+
+      <p>6- ในฝ่ายของซุนนีเอง ก็มีกรณีที่สตรีก้าวขึ้นสู่ตำแหน่งปกครองรัฐหลายตัวอย่าง แม้จะพบได้น้อยและมักเป็นช่วงเวลาสั้นๆ เช่น สุลต่านรอฎิยะฮ์ (<span class="ar-inline" lang="ar" dir="rtl">السلطانة رَضِيَّة</span>) ในอินเดีย, ราชินีชะญัร อัดโดร (<span class="ar-inline" lang="ar" dir="rtl">شجر الدرّ</span>) ในอียิปต์จากราชวงศ์อัยยูบิด หรือผู้นำหญิงในราชสำนักเติร์ก-มองโกลอย่างทูรคาน คาทูน (Terken Khatun) และบาดิชาห์ คาตุน (Padishah Khatun) สิ่งที่น่าสังเกตคือ หลายกรณีเหล่านี้เกิดขึ้นในสังคมที่วัฒนธรรมชนเผ่าเร่ร่อนหรือเติร์ก-มองโกลเปิดโอกาสให้สตรีมีบทบาทกว่าธรรมเนียมอาหรับดั้งเดิม ตลอดจนเกิดขึ้นในภาวะวิกฤตการสืบทอดอำนาจที่สตรีสามารถฉวยโอกาสขึ้นมาเป็นผู้นำ อย่างไรก็ดี การขึ้นมามีบทบาทของสตรีเหล่านี้ มักถูกท้าทายโดยบรรทัดฐานสังคมซึ่งให้ชายเป็นใหญ่ ดังจะเห็นได้จากกรณีรอฎิยะฮ์และชะญัร อัดโดร ที่ถูกกดดันให้สละอำนาจ ถึงกระนั้น เรื่องราวของพวกนางก็ได้รับการบันทึกไว้เป็นตำนาน และตอกย้ำว่าสตรีก็มีศักยภาพในการปกครองบ้านเมืองในสายตาของคนร่วมยุค</p>
+
+      <!-- CITATION (อ้างอิงบทความนี้) -->
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). อำนาจสตรีที่ถูกฝังในพงศาวดารอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/womens-power-in-islamic-chronicles.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <!-- BIBLIOGRAPHY: source-provided URLs only (Rule 16a plain text; Rule 6/78 keep
+         original language). No footnote back-links — source gives no in-text markers. -->
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography">
+        <li>https://www.britannica.com/topic/Sulayhid-dynasty</li>
+        <li>https://teamqueens.org/sitt-al-mulk/</li>
+        <li>https://en.wikipedia.org/wiki/Razia_Sultan</li>
+        <li>https://www.worldhistory.org/Shajara_al-Durr/</li>
+        <li>https://www.encyclopedia.com/.../shajar-al-durr-d-1259</li>
+        <li>https://www.iranicaonline.org/articles/terken-katun/</li>
+        <li>From Central Asia to India: Women of the Mughal Empire - Voices On Cental Asia</li>
+        <li>https://voicesoncentralasia.org/from-central-asia-to.../</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>
