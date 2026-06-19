@@ -232,3 +232,30 @@ All: `block-ar` kept **byte-exact** (before==after verified); every `<sup class=
 - **husband-maintenance**: the Drive doc's «كلكم راع» wording differed from sunnah.com; canonical Bukhari 2554 matn was pasted into the block, but the Thai translation reflects the source's fuller narration — confirm the intended narration length.
 - **#3 taxation distinctness CONFIRMED**: taxation/jibāyah/Laffer-curve angle, distinct from live `ibn-khaldun-scholars-and-power` and `ibn-khaldun-on-the-bedouin-arabs`.
 - **Bibliography (all 10)**: source-provided detail ONLY (no muḥaqqiq/place/publisher/year/page invented). Some sources gave only truncated/placeholder URLs (womens-power, shadow-puppet) — preserved verbatim per the strict rule; editor may resolve.
+
+---
+
+# PHASE-2 BATCH 12 — reflections (มุมพักใจ) review flags (11 articles, branch `claude/phase2-batch-12-reflections`, DRAFT PR)
+> All 11 child-safety CLEAR (R71, scanned from disk; the two love/poetry docs read personally by orchestrator). articles.json 102→113; reflections category now populated (0→11). Coverage (R72): self-effacement 99.98 · salaf 99.73 · patience 99.98 · value-of-time 99.93 · society 99.79 · guarding-time 99.22 · brotherhood 99.84 (S5-adj; raw 98.90) · sleep 99.96 · barakah 99.94 (S5-adj; raw 96.61) · power 99.87 · love 99.61. All gate[a]/lint-article.js/lint-arabic-ortho.py/comments=0 clean.
+
+## ★ Beta byte-QC (raw quran.com/sunnah.com)
+- **barakah-of-eating-together**: independently byte-verify the 4 hadith (Ibn Mājah 3287, Abū Dāwūd 3764, Muslim 2059a, Bukhari 5392) — agent reported paste-only byte-exact; orchestrator did not re-fetch all 4.
+- **what-the-salaf-left-us**: āyah 11:111 silah `إِنَّهُۥ` — confirm the silah-damma against raw quran.com JSON (WebFetch renders it unreliably).
+
+## R52 fused-name flags (kept fused, confirm al- vs name-initial)
+- brotherhood **อิบนุลเญาซีย์** · barakah **อิบนุลค็อตฏ้อบ**, **อิบนุลมุนซีร์** · guarding-time **อบุลกอเซม**, **อบุลฟัฎล์** · patience **อบุลวะลีด**, **อิบนุลกอเซม** · power **อบุลบะเราะกาต**, **อิบนุลอะเราะบีย์** · love **อิบนุลก็อยยิม**.
+
+## Source-faithfulness flags (kept verbatim per R1, NOT silently changed)
+- **scholars-and-the-value-of-time**: Arabic `أبو سيف` where context = `أبو يوسف` (Abū Yūsuf).
+- **scholars-patience-in-poverty**: Ibn Ḥazm block `أبن حزام` / `الفقيةأبى` / `مخزفة` / `المامون` / `واالله`.
+- **barakah-of-eating-together**: Thai `ปรากฎ` (ฎ; dict = `ปรากฏ`/ฏ).
+- **the-etiquette-of-sleep**: Arabic mid-word split `ت طول` (canon `تطول`; public digitized text carries same split).
+- **on-love-and-longing**: transliteration tail variance `อัฎเฎาะห์ฮาก` (Doc A) vs `อัฎเฎาะห์หาก` (Doc B) — unify if desired.
+
+## Hadith variant decisions (Drive vs canonical — canonical pasted per R8, Drive variant kept as Thai gloss)
+- salaf: Muslim 1017a (`من سن…` vs Drive `…فعمل بها بعده كتب…`). · society: Bukhari 3416 «لعبد» (Drive «لنبي»). · barakah: Abū Dāwūd 3764 (`تفترقون` vs Drive `تأكلون متفرقين`).
+
+## Content notes
+- **on-love-and-longing** (R79 merge): dropped one Facebook cross-reference nav line from Doc B (sequel pointer, not article content).
+- **guarding-time-and-aging** bibliography lists `دار صادر` for Ibn Khallikān's Wafayāt — confirm it was source-provided (else trim per Bibliography Standard).
+- **Deferred OUT of reflections** (One-approved, for later category batches): สูงสุดคืนสู่สามัญ→history · มนุษย์เป็นสัตว์สังคม→kalam/nitisart · วางไม้เรียวลง→nitisart · ศิลปะแห่งการถามตอบ→kalam/adab · มายาคติ→kalam.
