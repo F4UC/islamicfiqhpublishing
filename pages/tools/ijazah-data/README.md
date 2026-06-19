@@ -6,7 +6,8 @@
 ## ต้นทาง (upstream)
 - repo: **F4UC/-Transmission-Network**
 - path: `docs/data/ijazah/`
-- **pinned commit:** `a12aed3d10afd7665f312b1b956453c20ed9cc0a` · นำเข้าเมื่อ **2026-06-11**
+- **pinned commit:** `fe81861bc71beb1506bb3f1d622db22190f97632` · นำเข้าเมื่อ **2026-06-19**
+  (อัปเดตจาก `a12aed3…` ผ่าน upstream PR #2 — แก้อักขรวิธีอาหรับ hamzat al-qaṭʿ 47 tokens; pin ชี้คอมมิตของ fix branch รอ upstream merge)
 - ยืนยันแล้วว่าไฟล์ที่ก๊อปมา **byte-identical** กับ `docs/data/ijazah/` ที่ commit นี้ (diff ผ่าน)
   และ pin ซ้ำด้วย sha256 ใน `MANIFEST.sha256` (ตรวจด้วย `sha256sum -c MANIFEST.sha256`)
 - **การอัปเดต:** ทำผ่าน PR ที่เปลี่ยน commit SHA นี้ + ดึงไฟล์ใหม่ + รัน `validate_chains.py`
