@@ -57,7 +57,7 @@ def article_body(html: str) -> str:
     """Extract the .article-body region, plus the hero H1 title (published content
     that lives outside .article-body — a Rule-72 non-loss artifact, so it must be
     counted); fall back to <body> if .article-body is not found."""
-    h1 = re.search(r'class="[^"]*\barticle-feature-title\b[^"]*"[^>]*>(.*?)</', html, flags=re.S | re.I)
+    h1 = re.search(r'class="[^"]*\barticle-feature-title\b[^"]*"[^>]*>(.*?)</h1>', html, flags=re.S | re.I)
     title = (h1.group(1) + ' ') if h1 else ''
     m = re.search(r'<(\w+)[^>]*class="[^"]*\barticle-body\b[^"]*"[^>]*>(.*)', html, flags=re.S | re.I)
     region = m.group(2) if m else html
