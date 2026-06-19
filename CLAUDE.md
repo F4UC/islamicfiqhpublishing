@@ -1,12 +1,12 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all **81 rules (ข้อ 1–81), plus sub-rules 12.1/12.2 and House-Style S1–S8 (+ placeholders S9/S10 → Rules 76/77, linter pending)**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all **83 rules (ข้อ 1–83), plus sub-rules 12.1/12.2 and House-Style S1–S8 (+ placeholders S9/S10 → Rules 76/77, linter pending)**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 >
 > **★ Rule 71 (Child-Safety Override) supersedes every fidelity/coverage rule, for every agent. Read it first. ★**
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (81 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (83 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -200,7 +200,7 @@
 
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 81 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 83 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -485,7 +485,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 ---
 
-## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–81)
+## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–83)
 
 * **กฎข้อที่ 71:** **★[ความปลอดภัยเด็ก — Child-Safety Override · เหนือกฎความครบถ้วนทุกข้อ · บังคับกับทุกเอเยนต์]★** หากต้นฉบับจาก Drive หรือเนื้อหาใดๆ มีสาระที่ทำให้**ผู้เยาว์เป็นวัตถุทางเพศ (sexualizes a minor)** มาตรการนี้อยู่เหนือกฎ 1/49/56 และเกตทุกชนิด ให้ปฏิบัติโดยเด็ดขาด:
   1. **PASS-with-flag (ตัดทิ้ง ไม่ใช่ปัดตก):** ถือว่าบทความ "ผ่าน" ได้โดย**ตัด (drop) เฉพาะส่วนที่ละเมิดออกทั้งหมด** แล้วตั้ง **child-safety flag** กำกับ — ส่วนที่ตัดนี้**ไม่นับในตัวหารของ coverage (กฎ 72)** การตัดตามกฎนี้ไม่ถือว่า coverage ตก
@@ -539,9 +539,22 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 * **กฎข้อที่ 81:** **[คุณภาพการจัดรูปแบบหน้า · Page Formatting Quality]** บทความต้องจัดรูปแบบสะอาด: ลำดับหัวข้อ (heading hierarchy) ชัดเจน, สไตล์บล็อกอาหรับ/ไทยตาม **S6/S8**, ไม่มี layout พัง (overflow/ทับซ้อน), hero/no-hero ตามกฎ 67
 
+* **กฎข้อที่ 82:** **[ความถูกต้องของสระและตัวสะกดตามไวยากรณ์ · Vowel & Spelling Correctness]** ทุกคำในร้อยแก้วไทยและคำทับศัพท์ภาษาอาหรับ ต้องเขียน **สระ** (สั้น/ยาว, บน/ล่าง/หน้า/หลัง) และ **ตัวสะกด** (มาตราตัวสะกด, ตัวการันต์/ทัณฑฆาต) ให้ถูกต้องตามหลักไวยากรณ์/อักขรวิธีไทย และตรงเสียงต้นฉบับ:
+  - **สระสั้น/ยาวต้องตรงเสียงอาหรับ:** เช่น "อบุล…" (สระอุ) ไม่ใช่ "อบูล…" (กฎ 52); "ฟัตห์" ไม่ใช่ "ฟาตห์"
+  - **ตัวสะกดต้องถูกมาตราและครบ:** ไม่พิมพ์ตก/สลับ เช่น "สุลต่าน" ไม่ใช่ "สุล่าน"; ใส่ตัวการันต์ท้ายชื่อให้ถูก (…ฮ์, …ย์, …ก์)
+  - **คำไทยทั่วไป** ต้องสะกดถูกตามพจนานุกรม (ราชบัณฑิตยสภา) เว้นที่ house style กำหนดไว้เป็นอื่น (เช่น S4 ไม้ยมก, 12.1/12.2)
+  - **ขอบเขต:** ร้อยแก้วไทย + คำทับศัพท์เท่านั้น — **ห้ามแตะตัวบทอาหรับ** (อายะฮ์/หะดีษ/คำพูดปราชญ์/ชื่อในบล็อก `lang="ar"`) ด้วยกฎนี้ (สอดคล้องกฎ 7/8/53/60)
+  - **เมื่อไม่แน่ใจ** รูปสระ/ตัวสะกดของชื่อเฉพาะ (โดยเฉพาะรูป "อิบนุล…/อบุล…" ตามกฎ 52) → **FLAG ขอบรรณาธิการ ห้ามเดา** (สอดคล้องกฎ 3/52/73); typo ที่ปรากฏใน**ต้นฉบับ** ให้คงไว้ตามกฎ 1 แล้ว FLAG — ไม่แก้เงียบ
+  - **บังคับใช้อัตโนมัติ:** `scripts/lint-article.js` ตรวจรูปต้องห้าม `[R5–R9]` (กฎ 12.1/12.2/73/82) — ERROR = บล็อกบทใหม่, WARN (`อบูล`) = FLAG ให้ตรวจ; ไม่ย้อนแก้บทเก่า (กฎ 73)
+
+* **กฎข้อที่ 83:** **[ความถูกต้องอักขรวิธีอาหรับ · Arabic-Script Orthography]** ข้อความ**อักษรอาหรับ**ต้องสะกดถูกตามอักขรวิธี — **ฮัมซะฮ์** (همزة قطع ต้องมี أ/إ/ء; همزة وصل เขียนอลิฟเปล่าถูกแล้ว), **ยาอ์ท้ายคำ** (นิสบะฮ์ ـيّ ใช้ ـي มีจุด ต่างจากอลิฟมักศูเราะฮ์ ـى), **ตาอ์มัรบูเฏาะฮ์** ة ฯลฯ — จัดการแยกตามชนิดข้อความ:
+  - **ตรวจด้วย** `scripts/lint-arabic-ortho.py` — curated whole-word + allow-list (`ـى` ที่ถูก เช่น إلى/مصطفى/يحيى ไม่ถูกจับ) → false positive เกือบศูนย์ · list ขยายได้เมื่อพบรูปผิดใหม่ (เหมือนตาราง corpus กฎ 73)
+  - **★DETECTION เท่านั้น — ห้ามแก้ไฟล์ตรงๆ★** เพราะ: (ก) `ijazah-data/` pin **byte-exact** จาก upstream (`F4UC/-Transmission-Network` + `MANIFEST.sha256`) → แก้ที่ **upstream แล้ว re-sync** เท่านั้น; (ข) อายะฮ์/หะดีษในบทความ byte-exact จาก quran.com/sunnah.com → ผิด = **re-fetch** ไม่ใช่พิมพ์ซ่อม (กฎ 7/8/53/60)
+  - **ขอบเขต:** อักษรอาหรับจริง (เสริมกฎ 82 ที่คุมทับศัพท์ไทย) · ไม่แน่ใจว่า qaṭʿ/waṣl หรือ นิสบะฮ์/มักศูเราะฮ์ → **FLAG ห้ามเดา** (กฎ 3)
+
 ---
 
-## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–81)
+## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–83)
 
 * **Rule 71:** **★[Child-Safety Override · supersedes every fidelity/coverage rule · binds every agent]★** If any Drive source or other content sexualizes a minor, this measure overrides Rules 1/49/56 and every gate. Act decisively:
   1. **PASS-with-flag (drop, do not reject):** the article may be considered "passing" by **dropping only the offending span entirely** and setting a **child-safety flag** — the dropped span is **excluded from the Rule 72 coverage denominator**; a drop under this rule does not lower coverage.
@@ -593,3 +606,16 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 * **Rule 80:** **[Title May Be Shortened]** The on-page title / H1 may be **tightened/shortened** from a long source title if meaning is preserved; **H1 is NEVER omitted (Rule 67)**. The full source title may live in metadata/citation.
 
 * **Rule 81:** **[Page Formatting Quality]** Articles must be cleanly formatted: clear heading hierarchy, Arabic/Thai block styling per **S6/S8**, no layout breakage, hero/no-hero per Rule 67.
+
+* **Rule 82:** **[Vowel & Spelling Correctness]** Every word in Thai prose and every Arabic transliteration must spell its **vowels** (short/long; above/below/leading/trailing) and **final consonants / spelling** (correct mātrā final, the karan/thanthakhat silent mark) correctly per Thai orthography and faithful to the source sound:
+  - **Short vs long vowel must match the Arabic** — e.g. "อบุล…" (สระอุ) not "อบูล…" (Rule 52); "ฟัตห์" not "ฟาตห์".
+  - **Final consonants must be correct and complete** — no dropped/swapped letters (e.g. "สุลต่าน" not "สุล่าน"); trailing silent marks placed correctly (…ฮ์, …ย์, …ก์).
+  - **Ordinary Thai words** follow dictionary (Royal Institute) spelling, except where house style overrides (e.g. S4 mai-yamok, 12.1/12.2).
+  - **Scope:** Thai prose + transliteration only — this rule **never touches Arabic text** (aya/hadith/scholar quotes/names in `lang="ar"` blocks), consistent with Rules 7/8/53/60.
+  - **When unsure** of a proper noun's vowel/spelling (especially the Ibn al-/Abu al- forms in Rule 52) → **FLAG for the editor, never guess** (consistent with Rules 3/52/73); a typo present in the **source** is kept per Rule 1 and FLAGGED — never silently changed.
+  - **Automated enforcement:** `scripts/lint-article.js` checks deprecated forms `[R5–R9]` (Rules 12.1/12.2/73/82) — ERROR blocks new prose, WARN (`อบูล`) flags for review; old articles are not retro-fixed (Rule 73).
+
+* **Rule 83:** **[Arabic-Script Orthography]** Arabic-**script** text must be orthographically correct — **hamza** (hamzat al-qaṭʿ needs أ/إ/ء; hamzat al-waṣl is correctly written bare alif), **final ya** (nisba ـيّ uses dotted ـي, distinct from alif maqsura ـى), **tāʾ marbūṭa** ة, etc. Handle by text type:
+  - **Detect with** `scripts/lint-arabic-ortho.py` — curated whole-word map + an allow-list of correct ـى words (إلى/مصطفى/يحيى…) → near-zero false positives; the list grows as new wrong forms are found (like the Rule-73 corpus table).
+  - **★DETECTION ONLY — never edit files in place★** because: (a) `ijazah-data/` is byte-exact pinned from upstream (`F4UC/-Transmission-Network` + `MANIFEST.sha256`) → fix UPSTREAM then re-sync; (b) article Quran/Hadith is byte-exact from quran.com/sunnah.com → an error means **RE-FETCH**, never retype (Rules 7/8/53/60).
+  - **Scope:** actual Arabic script (complements Rule 82, which governs Thai transliteration) · when unsure whether a form is qaṭʿ/waṣl or nisba/maqsura → **FLAG, never guess** (Rule 3).

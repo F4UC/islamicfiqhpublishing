@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>มองเรื่องภาษีตะอ์รีฟผ่านมุมมองของอิบนุ คอลดูน — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="ภาษีในมุมมองของอิบนุ คอลดูน คือดัชนีชี้วัดพลังชีวิตของรัฐ บทวิเคราะห์จากมุก้อดดิมะฮ์ว่าด้วยวงจรภาษี เศรษฐกิจ และการล่มสลายของรัฐ เชื่อมโยงถึงนโยบายภาษีศุลกากรในยุคปัจจุบัน">
+<meta name="keywords" content="อิบนุ คอลดูน, ภาษีตะอ์รีฟ, ภาษีศุลกากร, มุก้อดดิมะฮ์, การล่มสลายของรัฐ, Laffer Curve, เศรษฐศาสตร์อิสลาม, ประวัติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="มองเรื่องภาษีตะอ์รีฟผ่านมุมมองของอิบนุ คอลดูน — Islamic Fiqh Publishing">
+<meta property="og:description" content="ภาษีไม่ใช่แค่ตัวเลข แต่คือดัชนีชี้วัดพลังชีวิตของรัฐ อ่านบทวิเคราะห์ของอิบนุ คอลดูนว่าด้วยวงจรภาษีและการล่มสลายของรัฐ">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/taxation-through-ibn-khaldun">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/taxation-through-ibn-khaldun">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "มองเรื่องภาษีตะอ์รีฟผ่านมุมมองของอิบนุ คอลดูน",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/tarikh/taxation-through-ibn-khaldun.html"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="taxation-through-ibn-khaldun">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์</a>
+      
+      <h1 class="article-feature-title">มองเรื่องภาษีตะอ์รีฟผ่านมุมมองของอิบนุ คอลดูน</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">การเก็บภาษีเป็นเครื่องมือพื้นฐานของรัฐ แต่ในบางห้วงเวลา ภาษีอาจกลายเป็นภาพสะท้อนของภาวะภายในรัฐที่เริ่มสั่นคลอน นักคิดอิสลามผู้ยิ่งใหญ่ในศตวรรษที่ 14 อย่างอิบนุ คอลดูน ได้ทิ้งคำวิเคราะห์อันเฉียบคมไว้ใน “มุก้อดดิมะฮ์” เกี่ยวกับความสัมพันธ์ระหว่างภาษี เศรษฐกิจ และการล่มสลายของรัฐ</p>
+
+      <p>เมื่อพูดถึงภาษี เรามักคิดถึงเพียงรายได้ของรัฐหรือเครื่องมือเชิงนโยบาย แต่ในสายตาของอิบนุ คอลดูน ภาษีคือ <strong>“ดัชนีชี้วัดพลังชีวิตของรัฐและสังคม”</strong></p>
+
+      <p>ในศตวรรษที่ 21 สหรัฐอเมริกาได้นำนโยบาย ‘ภาษีศุลกากร (tariff)’ มาใช้อย่างเข้มข้นเพื่อสร้างอำนาจต่อรองทางการค้า เช่นกับจีน สหภาพยุโรป หรือแม้แต่ประเทศคู่ค้าขนาดเล็ก จนไปถึงประเทศที่ไม่มีแม้แต่ประชากรอาศัยอยู่ แต่หากไม่พิจารณาผลสะท้อนที่เกิดกับ “กิจกรรมทางเศรษฐกิจภายในประเทศ” แล้ว นโยบายเช่นนี้อาจกลายเป็น “ภาระ” ที่ค่อยๆ สะสมจนบั่นทอนเศรษฐกิจของตนเอง</p>
+
+      <h2 class="article-h2">เมื่อรัฐเริ่มต้นจากความเรียบง่าย สู่ภาวะอ่อนแรงจากความฟุ่มเฟือย</h2>
+
+      <p>หนึ่งในข้อสังเกตสำคัญของอิบนุ คอลดูนคือ การเปลี่ยนแปลงของระบบภาษีเมื่อรัฐเข้าสู่ช่วงต้นและช่วงปลายของอำนาจ เขากล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اعلم أن الجباية أول الدولة تكون قليلة الوزائع كثيرة الجملة وآخر الدولة تكون كثيرة الوزائع قليلة الجملة</blockquote>
+      <p class="ar-translation">“ในช่วงเริ่มต้นของรัฐ การจัดเก็บภาษีจะมีจำนวนรายการภาษี (ชนิดหรือประเภท) น้อย แต่รายได้รวมจากภาษีกลับสูงมาก แต่เมื่อเวลาผ่านไปและรัฐได้เข้าสู่ปลายยุค (ที่จะถึงช่วงเศรษฐกิจเสื่อมถอย) รายการภาษีจะเพิ่มขึ้นมากมาย แต่รายได้รวมกลับลดน้อยลง”</p>
+
+      <p>เหตุใดจึงเป็นเช่นนั้น? อิบนุ คอลดูนอธิบายว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والسبب في ذلك أن الدولة إن كانت على سنن الدين فليست تقتضي إلا المغارم الشرعية من الصدقات والخراج والجزية وهي قليلة الوزائع لأن مقدار الزكاة من المال قليل كما علمت وكذا زكاة الحبوب والماشية وكذا الجزية والخراج وجميع المغارم الشرعية وهي حدود لا تتعدى</blockquote>
+      <p class="ar-translation">“(กรณีรัฐศาสนา) หากรัฐบริหารด้วยหลักการทางศาสนา ภาษีที่เก็บจะเป็นภาษีที่ศาสนากำหนดไว้ เช่น ภาษีจากมุสลิมโดยตรง (ซะกาต) ภาษีที่ดิน และภาษีจากคนที่ไม่ใช่มุสลิม (ญิซยะฮ์) ซึ่งทั้งหมดนี้เป็นภาษีที่มีเพดานที่แน่นอน และเป็นภาระที่มีอยู่น้อย เช่นเดียวกับซะกาตพืชผลและสัตว์เลี้ยง ตลอดจนภาษีอื่นๆ ที่ถูกกำหนดไว้ในศาสนา ทั้งหมดนี้ล้วนมีขอบเขตจำกัดที่ไม่อาจล่วงละเมิดได้ ไม่สามารถเรียกเก็บเกินกว่าที่กำหนดไว้ตามบทบัญญัติทางศาสนาได้”</p>
+
+      <p>ด้วยเหตุนี้ ภาระภาษีจึงไม่หนักเกินไป คนในสังคมรู้สึกมั่นใจว่าสิ่งที่พวกเขาต้องจ่ายจะไม่มากจนเกินไป และยังมั่นใจได้ว่าภาษีที่จ่ายไปจะถูกใช้ไปในทางที่ชอบธรรม พวกเขาจึงมีแรงจูงใจในการทำมาหากิน ผลิตสินค้า และลงทุนกิจกรรมทางเศรษฐกิจต่างๆ เพราะรู้ว่าผลตอบแทนจากแรงงานจะไม่ถูกพรากไปโดยภาษีอันเกินควร หลักการนี้ตรงกันข้ามกับวิธีคิดแบบรัฐนิยมที่เน้นการควบคุมผ่านภาษีที่สูง</p>
+
+      <p>ในช่วงเริ่มต้นของรัฐ การเก็บภาษีมีความพอดี ราษฎรจึงมีแรงจูงใจ แต่เมื่อรัฐเติบโต ความต้องการรายได้เพิ่มขึ้น ภาษีถูกเพิ่มอย่างต่อเนื่อง ทำให้ผลลัพธ์กลายเป็นว่า กิจกรรมทางเศรษฐกิจลดลง เพราะประชาชนรู้สึกว่า “ไม่คุ้มค่าที่จะทำงาน” นี่คือหัวใจของสิ่งที่เรียกว่า “tax disincentive effect” ในเศรษฐศาสตร์สมัยใหม่ หรือในคำของอิบนุ คอลดูนคือ:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ذهاب الأمل من نفوسهم بقلة النفع إذا قابل بين نفعه ومغارمه</blockquote>
+      <p class="ar-translation">“เมื่อประชาชนหมดหวัง เพราะรู้ว่าผลตอบแทนที่ได้ ไม่คุ้มกับภาระภาษีที่ต้องจ่าย”</p>
+
+      <p>แต่หากรัฐใช้ระบบอำนาจนิยม…</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وإن كانت على سنن التغلب والعصبية فلا بد من البداوة في أولها كما تقدم والبداوة تقتضي المسامحة والمكارمة وخفض الجناح والتجافي عن أموال الناس والغفلة عن تحصيل ذلك إلا في النادر فيقل لذلك مقدار الوظيفة الواحدة والوزيعة التي تجمع الأموال من مجموعها وإذا قلت الوزائع والوظائف على الرعايا نشطو للعمل ورغبوا فيه فيكثر الاعتمار ويتزايد لحصول الاغتباط بقلة المغرم</blockquote>
+      <p class="ar-translation">“แต่หากรัฐปกครองด้วยอำนาจนิยมหรืออำนาจที่มีเส้นสาย ในช่วงแรกมักยังมีลักษณะอ่อนโยน ไม่รีดไถมากนัก เพราะอาศัยความสัมพันธ์แบบเครือญาติหรือคนกันเองเป็นหลัก จึงยังไม่เน้นการเก็บภาษีอย่างจริงจัง รวมถึงการไม่ให้ความสำคัญกับการเก็บภาษีอย่างเข้มงวด และไม่ค่อยใส่ใจหรือเรียกร้องทรัพย์สินจากราษฎรและประชาชนนัก ภาษีจึงมีจำนวนไม่มาก รายการภาษีต่างๆ ก็มีน้อย ประชาชนจึงไม่รู้สึกถูกกดดันจากรัฐ พวกเขารู้สึกปลอดภัยในการผลิตและขายสินค้า จึงเกิดการลงทุนอย่างเต็มที่ในระบบเศรษฐกิจ ส่งผลให้เศรษฐกิจเฟื่องฟู รายได้ภาษีรวมกลับกลายเป็นสูงขึ้น แม้จำนวนภาษีจะไม่มากก็ตาม”</p>
+
+      <h2 class="article-h2">เมื่อรัฐเติบโต…แล้วภาษีก็กลายเป็นภาระ</h2>
+
+      <p>อิบนุ คอลดูนเล่าต่อว่า ในช่วงที่เศรษฐกิจกำลังเฟื่องฟูและรัฐยังอยู่ในช่วงขาขึ้นของวงจรอำนาจ การเก็บภาษีมีแนวโน้มเพิ่มขึ้นเช่นกัน แต่ครั้งนี้แตกต่างจากช่วงต้น เพราะการเพิ่มภาษีไม่ได้เกิดจากความจำเป็นอะไรเลย หรือเพื่อส่งเสริมกิจกรรมเศรษฐกิจ หากแต่เกิดจาก ‘ความเคยชินในความหรูหราของชนชั้นปกครอง’</p>
+
+      <p>รัฐเริ่มมีระบบราชการที่ซับซ้อน มีข้าราชการมากขึ้น มีกองทัพขยายใหญ่ขึ้น และผู้ปกครองก็เคยชินกับความสะดวกสบาย จึงต้องมีการจัดเก็บภาษีในรูปแบบใหม่เพิ่มขึ้นเรื่อยๆ ทั้งภาษีทางตรงและทางอ้อม เช่น ภาษีการค้า ภาษีสินค้านำเข้า ภาษีด่านเมือง ฯลฯ จนกลายเป็นว่า <strong>“รัฐกลายเป็นเครื่องดูดทรัพยากรจากประชาชนมากกว่าจะเป็นผู้ดูแลประชาชน”</strong></p>
+
+      <h2 class="article-h2">ภาษีที่เพิ่มขึ้นอย่างเงียบๆ</h2>
+
+      <p>อิบนุ คอลดูนเล่าว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">تتدرج الزيادات فيها بمقدار بعد مقدار… ولم يشعر أحد بمن زادها على التعيين</blockquote>
+      <p class="ar-translation">“ภาษีจะถูกเพิ่มขึ้นทีละเล็กทีละน้อย โดยไม่มีใครรู้ว่าเริ่มมาจากใคร จนกลายเป็นสิ่งที่ประชาชนต้องยอมรับอย่างหลีกเลี่ยงไม่ได้”</p>
+
+      <p>นี่คือสิ่งที่น่ากลัวที่สุด การเพิ่มภาษีอย่างค่อยเป็นค่อยไป ซึ่งประชาชนไม่ได้ตระหนักหรือไม่สามารถปฏิเสธได้ เพราะมันเกิดขึ้นทีละน้อย อย่างต่อเนื่อง จนกลายเป็น “เรื่องปกติ” โดยไม่มีใครรู้ว่าใครเป็นผู้ริเริ่ม หรือเริ่มต้นจากตรงไหน อย่างไร</p>
+
+      <p>เมื่อภาษีสะสมสูงขึ้นเรื่อยๆ จนถึงระดับที่ประชาชนเริ่มรู้สึกว่า “ไม่คุ้มแล้วที่จะทำงานหรือค้าขาย” เพราะเมื่อเปรียบเทียบต้นทุนจากภาษีที่ต้องจ่าย กับกำไรที่ได้กลับมา ความหวังในการสร้างรายได้ที่แท้จริงก็ค่อยๆ เลือนหายไป คนจำนวนมากจึงเลิกลงทุน หยุดทำการผลิต หรือย้ายออกจากตลาด นำไปสู่การลดลงของกิจกรรมทางเศรษฐกิจโดยรวม</p>
+
+      <h2 class="article-h2">กับดักของการขึ้นภาษีเพื่อ “อุด” รายได้ที่หายไป</h2>
+
+      <p>เมื่อรายได้ของรัฐเริ่มลดลงจากการที่กิจกรรมทางเศรษฐกิจซบเซา ผู้มีอำนาจมักเลือกวิธีที่ง่ายที่สุดคือ “เพิ่มภาษีเข้าไปอีก” เพื่อชดเชยสิ่งที่ขาดไป โดยเข้าใจผิดว่า ถ้ากดดันมากขึ้น จะได้เงินมากขึ้น ทั้งที่ในความเป็นจริง การกระทำเช่นนี้ยิ่งผลักดันให้เศรษฐกิจตกต่ำลงอีก อิบนุ คอลดูนระบุต่อว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وربما يزيدون في مقدار الوظائف إذا رأوا ذلك النقص في الجباية ويحسبونه جبرا لما نقص</blockquote>
+      <p class="ar-translation">“รัฐพยายามแก้ปัญหาด้วยการเพิ่มภาษีอีกเพื่อ ‘ชดเชย’ รายได้ที่ลดลง โดยคิดว่านั่นจะเป็นการชดเชยส่วนที่ขาดไป (แต่นั่นกลับยิ่งทำลายเศรษฐกิจในวงกว้าง)”</p>
+
+      <p>การจัดเก็บภาษีจึงเข้าสู่ภาวะที่ภาษีเพิ่มขึ้น ไปสู่กิจกรรมเศรษฐกิจลดลง และรายได้รัฐโดยรวมก็ลดลง จนรัฐยิ่งเพิ่มภาษีอีก และนำไปสู่การที่ระบบเศรษฐกิจโดยรวมพังทลาย ดังที่อิบนุ คอลดูนบอกว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إلى أن ينتقص العمران بذهاب الآمال من الاعتمار ويعود وبال ذلك على الدولة</blockquote>
+      <p class="ar-translation">“ตราบใดที่กิจกรรมทางเศรษฐกิจและความเจริญทางสังคมยังคงถดถอยลง เนื่องจากความคาดหวังในการพัฒนาและลงทุนของผู้คนลดน้อยลง ผลกระทบในทางลบก็จะย้อนกลับไปกระทบต่อเสถียรภาพและอำนาจของรัฐโดยตรง”</p>
+
+      <h2 class="article-h2">บทเรียนจากวงจรภาษี</h2>
+
+      <p>สิ่งที่อิบนุ คอลดูนชี้ให้เห็นอย่างชัดเจนคือ ภาษีมากไปจะฆ่าเศรษฐกิจด้วยมือของรัฐเอง และทางออกที่แท้จริงคือ การลดภาษีเพื่อหนทางสู่การฟื้นฟู ดังที่อิบนุ คอลดูนระบุว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا فهمت ذلك علمت أن أقوى الأسباب في الاعتمار تقليل مقدار الوظائف على المعتمرين ما أمكن</blockquote>
+      <p class="ar-translation">“หากเข้าใจหลักการข้อนี้ ก็จะตระหนักได้ว่า หนึ่งในปัจจัยสำคัญที่สุดในการส่งเสริมความเจริญทางเศรษฐกิจและสังคม คือ การลดภาระภาษีรัฐเรียกเก็บจากประชาชนให้ได้มากที่สุดเท่าที่จะเป็นไปได้”</p>
+
+      <p>เพื่อให้ประชาชนมีกำลังใจและความหวังในการประกอบอาชีพ ซึ่งในท้ายที่สุดจะกลับกลายเป็นประโยชน์ต่อรัฐเองในระยะยาว ในบริบทนี้ หมายถึง รัฐไม่ควร “เก็บภาษีเพื่อควบคุม” แต่ควร “ลดภาระเพื่อกระตุ้น” ภาษีที่สร้างแรงจูงใจ คือภาษีที่ทำให้ประชาชน “เห็นว่าคุ้มค่าที่จะทำงาน” ซึ่งนั่นคือสิ่งที่เรียกกันว่า “Tax Incentive”</p>
+
+      <h2 class="article-h2">นโยบายภาษีที่สร้างอำนาจภายนอก แต่อาจทำลายความหวังภายใน</h2>
+
+      <p>อิบนุ คอลดูนมองรัฐในสองมิติ คือ</p>
+
+      <ol class="article-summary">
+        <li><strong>รัฐที่จัดเก็บภาษีเพื่อเสริมพลังภายใน</strong> นั่นทำให้ประชาชนมีกำลังใจ แล้วจะทำให้มีกำลังการผลิตเพิ่ม จนนำไปสู่การขยายเศรษฐกิจ</li>
+        <li><strong>รัฐที่เก็บภาษีเพื่อควบคุมหรือต่อรอง</strong> นั่นจะสร้างแรงต้าน กลายเป็นภาระ ผลักเศรษฐกิจสู่ความซบเซา</li>
+      </ol>
+
+      <p>นโยบาย tariff ของสหรัฐในปัจจุบัน สะท้อนรัฐที่พยายามรักษา “อำนาจต่อรองในเวทีโลก” แต่คำถามที่ควรถามคือ รัฐนั้นยังรักษา “แรงจูงใจของประชาชนในระบบเศรษฐกิจ” ไว้ได้หรือไม่? หากประชาชนหมดแรงทำงาน ระบบเศรษฐกิจก็จะไม่เดิน และรัฐที่วางอยู่บนเศรษฐกิจอ่อนแรง ย่อมไม่อาจรักษาอำนาจต่อรองไว้ได้นาน</p>
+
+      <p>ประการต่อมาอิบนุ คอลดูนได้อธิบายเสริมว่า ‘รัฐนั้นมีวงจรชีวิตที่คล้ายมนุษย์ คือเริ่มจากความเรียบง่าย สู่การมีอำนาจ และลงท้ายด้วยการเสื่อมถอย จนอาจนำไปสู่การล่มสลายของรัฐ โดยภาษีเป็นหนึ่งในดัชนีชี้วัดสำคัญของสถานะรัฐในแต่ละช่วง’ เขาเล่าว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اعلم أن الدولة تكون في أولها بدوية كما قلنا فتكون لذلك قليلة الحاجات لعدم الترف وعوائده فيكون خرجها وإنفاقها قليلا فيكون في الجباية حينئذ وفاء بأزيد منها كثيرا عن حاجاتهم</blockquote>
+      <p class="ar-translation">“จงรู้เถิดว่า รัฐในระยะแรกเริ่มนั้นจะมีลักษณะคล้ายสังคมเร่ร่อน ดังที่ได้กล่าวมาแล้ว ซึ่งหมายความว่าความต้องการพื้นฐานของรัฐยังมีอยู่น้อย เนื่องจากยังไม่มีความฟุ้งเฟ้อหรือวัฒนธรรมบริโภคที่ซับซ้อน ทำให้รายจ่ายของรัฐในช่วงนั้นยังอยู่ในระดับต่ำ และด้วยเหตุนี้ รายได้จากการจัดเก็บภาษีก็ยังสามารถครอบคลุมค่าใช้จ่ายได้อย่างเหลือเฟือ”</p>
+
+      <p>นี่คือภาพของรัฐที่เริ่มต้นจากความมัธยัสถ์ รายจ่ายน้อย ภาษีต่ำ แต่สามารถดำรงอยู่ได้อย่างมั่นคง อย่างไรก็ตาม อิบนุ คอลดูนได้ชี้ต่อว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ثم لا تلبث أن تأخذ بدين الحضارة في الترف وعوائدها وتجري على نهج الدول السابقة قبلها فيكثر لذلك خراج أهل الدولة ويكثر خراج السلطان خصوصا كثرة بالغة بنفقته في خاصته وكثرة عطائه ولا تفي بذلك الجباية</blockquote>
+      <p class="ar-translation">“จากนั้น ไม่นานรัฐก็จะเริ่มรับเอาวิถีแห่งความศิวิไลซ์มาใช้ โดยเริ่มมีรสนิยมในความฟุ้งเฟ้อและพฤติกรรมบริโภคตามแบบรัฐที่รุ่งเรืองมาก่อนหน้า ส่งผลให้รายจ่ายของประชาชนในรัฐเพิ่มสูงขึ้น และโดยเฉพาะอย่างยิ่ง รายจ่ายของสุลต่านก็จะเพิ่มขึ้นอย่างมาก ทั้งในด้านการใช้จ่ายส่วนตัวและการแจกจ่ายทรัพย์ให้กับผู้ใกล้ชิด จนกระทั่งรายได้จากการจัดเก็บภาษีไม่อาจครอบคลุมรายจ่ายทั้งหมดได้อีกต่อไป”</p>
+
+      <p>และนี่คือจุดเปลี่ยนของรัฐ เมื่ออำนาจต้องแลกมากับรายจ่ายที่สูงขึ้น ซึ่งการบริหารภายในรัฐเริ่มเน้นการขยายตัวทางอำนาจ มากกว่าการบริหารเชิงยั่งยืน ซึ่งยังสะท้อนหลักคิดเรื่อง “วัฏจักรแห่งรัฐ” (cycle of dynasties) และการล่มสลายจากภายใน ซึ่งอิบนุ คอลดูนเห็นว่ามีต้นเหตุมาจากการเปลี่ยนผ่านจากความเรียบง่ายสู่ความฟุ้งเฟ้อ และการขยายรายจ่ายจนเกินศักยภาพรายได้ของรัฐ</p>
+
+      <p>หลังจากนั้นอิบนุ คอลดูนระบุถึงพฤติกรรมของรัฐในช่วงเสื่อมว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فتحتاج الدولة إلى الزيادة في الجباية لما تحتاج إليه الحامية من العطاء والسلطان من النفقة فيزيد في مقدار الوظائف والوزائع أولا كما قلناه ثم يزيد الخراج والحاجات والتدريج في عوائد الترف وفي العطاء للحامية ويدرك الدولة الهرم وتضعف عصابتها عن جباية الأموال من الأعمال والقاصية فتقل الجباية وتكثر العوائد ويكثر بكثرتها أرزاق الجند وعطاؤهم</blockquote>
+      <p class="ar-translation">“รัฐจึงจำเป็นต้องเพิ่มการจัดเก็บภาษี เพื่อรองรับค่าใช้จ่ายที่จำเป็นสำหรับกองทัพ และรายจ่ายส่วนตัวของสุลต่านเอง ซึ่งนำไปสู่การเพิ่มภาระภาษีและค่าธรรมเนียมต่างๆ ต่อประชาชนในขั้นแรก ตามที่ได้กล่าวมาแล้ว จากนั้นรายจ่ายและความต้องการก็จะเพิ่มขึ้นเรื่อยๆ ตามลำดับ ทั้งในเรื่องวัฒนธรรมความฟุ้งเฟ้อ และการแจกจ่ายทรัพย์สินให้แก่กองทหารของรัฐ จนในที่สุด รัฐเข้าสู่สภาวะเสื่อมถอย อำนาจในการควบคุมและเก็บภาษีจากพื้นที่ห่างไกลก็อ่อนแอลง รายได้ของรัฐลดลง ขณะที่รายจ่ายกลับเพิ่มสูงขึ้นเรื่อยๆ โดยเฉพาะในส่วนของเงินเดือนและสิ่งตอบแทนที่ต้องจัดสรรให้แก่กองทัพ”</p>
+
+      <p>อิบนุ คอลดูน อธิบายถึงจุดเริ่มต้นของความเสื่อมถอยของรัฐอย่างเป็นระบบ โดยชี้ว่า “ค่าใช้จ่ายของรัฐที่สูงขึ้นโดยไม่มีรายได้รองรับ” บั่นทอนเสถียรภาพในระยะยาว และแสดงให้เห็นหลัก fiscal imbalance หรือความไม่สมดุลทางการคลังอย่างชัดเจน ในโลกยุคปัจจุบัน นโยบายภาษีศุลกากรถูกนำมาใช้ไม่เพียงเพื่อหารายได้ แต่เพื่อปกป้องอุตสาหกรรมภายในประเทศ แม้เหตุผลที่นำมาใช้จะเป็นด้านความมั่นคง แต่ผลกระทบที่แท้จริงคือ ราคาสินค้าภายในประเทศสูงขึ้น และผู้บริโภคต้องรับภาระเพิ่ม</p>
+
+      <h2 class="article-h2">เมื่อรายจ่ายยังเพิ่มไม่หยุด รัฐจึงเก็บภาษีจากกิจกรรมเศรษฐกิจโดยตรง</h2>
+
+      <p>อิบนุ คอลดูนเล่าว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فيستحدث صاحب الدولة أنواعا من الجباية يضربها على البياعات ويفرض لها قدرا معلوما على الأثمان في الأسواق وعلى أعيان السلع في أموال المدينة وهو مع هذا مضطر لذلك بما دعاه إليه طرق الناس من كثرة العطاء من زيادة الجيوش والحامية</blockquote>
+      <p class="ar-translation">“ในสถานการณ์เช่นนี้ ผู้มีอำนาจของรัฐจึงต้องสรรหาสร้างวิธีการเก็บภาษีในรูปแบบใหม่ๆ เช่นการเก็บภาษีจากการขายสินค้า กำหนดอัตราภาษีที่แน่นอนสำหรับสินค้าในตลาด และเก็บภาษีจากสินค้า ทรัพย์สินต่างๆ จากในเมือง ซึ่งแม้ว่าการกระทำเช่นนี้จะไม่พึงประสงค์นัก แต่สถานการณ์ได้บีบคั้นให้เขาทำ เพราะมีการเพิ่มจำนวนกองทัพอย่างต่อเนื่อง”</p>
+
+      <h2 class="article-h2">ความเสี่ยงที่จะเกิดขึ้น</h2>
+
+      <p>อิบนุ คอลดูนได้เล่าต่อว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وربما يزيد ذلك في أواخر الدولة زيادة بالغة فتكسد الأسواق لفساد الآمال ويؤذن ذلك باختلال العمران ويعود على الدولة ولا يزال ذلك يتزايد إلى أن تضمحل وقد كان وقع منه بأمصار المشرق في أخرات الدولة العباسية والعبيدية كثير وفرضت المغارم حتى على الحاج في الموسم وأسقط صلاح الدين أيوب تلك الرسوم جملة وأعاضها بآثار الخير، وكذلك وقع بالأندلس لعهد الطوائف حتى محا رسمه يوسف بن تاشفين أمير المرابطين، وكذلك وقع بأمصار الجريد بإفريقية لهذا العهد حين استبد بها رؤساؤها</blockquote>
+      <p class="ar-translation">“ในช่วงปลายของรัฐ ภาระภาษีเหล่านี้มักจะเพิ่มขึ้นอย่างรุนแรงจนเกินขอบเขต ทำให้ตลาดเกิดความซบเซา เนื่องจากความหวังในการค้าขายและลงทุนของผู้คนถูกบั่นทอนลง สิ่งนี้จึงกลายเป็นสัญญาณแห่งความปั่นป่วนของโครงสร้างอารยธรรม และผลร้ายก็จะย้อนกลับไปกระทบรัฐเอง วงจรเช่นนี้จะดำเนินต่อไปเรื่อยๆ จนรัฐเสื่อมสลายลงในที่สุด ตัวอย่างของสถานการณ์เช่นนี้เคยเกิดขึ้นอย่างมากมายในเมืองต่างๆ ของภาคตะวันออกในปลายยุคราชวงศ์อับบาสิยะฮ์และอุบัยดียะฮ์ (ฟาฏิมียะฮ์) ถึงขั้นที่มีการเรียกเก็บภาษีแม้กระทั่งจากผู้แสวงบุญในฤดูฮัจญ์ ซึ่งต่อมาเศาะลาฮุดดีน อัยยูบีย์ได้ล้มเลิกภาษีอันอยุติธรรมเหล่านั้นทั้งหมด และแทนที่ด้วยระบบที่เอื้อต่อการสร้างประโยชน์แก่สังคม เช่นเดียวกันนี้ก็เกิดขึ้นในอันดะลุสในยุคที่มีการแบ่งการปกครองออกเป็นหลายแคว้น จนกระทั่งยูซุฟ บิน ตาชฟีน ผู้นำแห่งราชวงศ์มุรอบิฏูนได้เข้ามายกเลิกภาษีที่ไม่เป็นธรรมเหล่านั้น และในยุคปัจจุบันก็มีปรากฏการณ์ลักษณะเดียวกันในเมืองต่างๆ ของแคว้นญะรีดในแถบแอฟริกา (ตูนิเซียปัจจุบัน) เมื่อผู้นำท้องถิ่นเข้ามายึดอำนาจและครอบงำรัฐ”</p>
+
+      <p>ในหลายกรณี เราเห็นสัญญาณเหล่านี้ในระบบเศรษฐกิจโลก เช่น ต้นทุนวัตถุดิบในประเทศสูงขึ้นเพราะนำเข้าแพง, บริษัทหันไปตั้งฐานการผลิตในประเทศอื่น, ผู้บริโภคแบกรับภาระราคาสินค้าที่สูงขึ้น แต่รายได้ไม่โตตาม สถานการณ์นี้สะท้อนภาพที่อิบนุ คอลดูนเคยยกตัวอย่างเอาไว้ที่ในช่วงปลาย ที่รัฐต้องเก็บภาษีถึงขั้น “กับผู้แสวงบุญในช่วงฮัจญ์” เพราะไม่สามารถควบคุมรายจ่ายของตนเองได้อีกต่อไป</p>
+
+      <p>ความเห็นของอิบนุ คอลดูนนั้น ยังได้ให้ความสำคัญกับเศรษฐศาสตร์ โดยเฉพาะในเรื่องของการเก็บภาษีและการผลิต เขาเชื่อว่าการเก็บภาษีมากเกินไปจะส่งผลให้ประชาชนและฝั่งผู้ผลิตขาดแรงจูงใจในการทำงาน ทำให้เศรษฐกิจของรัฐเสื่อมถอย เพราะคุณจะทำงานไปทำไม ถ้าไม่ได้อะไรกลับมา เมื่อรัฐเข้าสู่ภาวะที่ภาษีและภาระทางเศรษฐกิจเกินระดับความสามารถของประชาชน ระบบเศรษฐกิจจะล่มสลาย ตลาดจะหยุดนิ่ง และรัฐจะสูญเสียเสถียรภาพอย่างไม่อาจหลีกเลี่ยงได้</p>
+
+      <p>แนวคิดนี้สอดคล้องอย่างยิ่งกับ “Laffer Curve” ของ Arthur Laffer นักเศรษฐศาสตร์ฝั่งอุปทานในยุคสมัยใหม่ที่ชี้ว่า อัตราภาษีที่สูงเกินไปจะนำไปสู่การลดลงของรายได้รัฐ เพราะมันทำลายแรงจูงใจในภาคการผลิตและการทำงานของคน อาเธอร์มองว่าการขึ้นภาษีคือการกระจายรายได้ มากกว่าการทำให้เศรษฐกิจเติบโต</p>
+
+      <p>อิบนุ คอลดูนเองก็เตือนว่า รัฐในช่วงปลายของวัฏจักรจะกลายเป็น “ผู้บริโภคทรัพยากร” มากกว่าจะเป็นผู้สร้างสมดุลให้กับประชาชน โดยเฉพาะเมื่อรัฐต้องใช้จ่ายมากขึ้น นั่นจึงเป็นคำกล่าวของอิบนุ คอลดูนที่ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا كثرت الجباية أشرفت الدولة على الفناء</blockquote>
+      <p class="ar-translation">“เมื่อภาษีถูกเรียกเก็บอย่างมากเกินไป รัฐก็เข้าใกล้ขอบเหวแห่งความล่มสลาย”</p>
+
+      <p>คำเตือนนี้สะท้อนภาพความเป็นจริงที่เกิดขึ้นในเวลาปัจจุบัน นั่นคือ</p>
+
+      <ol class="article-summary">
+        <li><strong>การเก็บภาษีศุลกากรสูง</strong> ทำให้ต้นทุนการผลิตเพิ่ม</li>
+        <li><strong>ตลาดผู้บริโภคภายในประเทศ</strong> ได้รับผลกระทบ</li>
+        <li><strong>ความไม่แน่นอนทางการค้า</strong> และความตึงเครียดระหว่างประเทศ</li>
+      </ol>
+
+      <p>แม้จุดประสงค์จะมุ่งฟื้นอุตสาหกรรมในประเทศ หรืออาจต้องการเพียงแค่เพิ่มอำนาจต่อรองในตลาดโลก แต่ในความเป็นจริง นโยบายบางประการกลับสร้างแรงกดดันมากกว่าการบรรเทา แนวคิดนี้เชื่อมโยงกับความเชื่อของท่านอิบนุ คอลดูนว่า ‘การจัดการทรัพยากรอย่างเหมาะสมและการเก็บภาษีอย่างยุติธรรมเป็นหัวใจสำคัญในการรักษาเสถียรภาพของรัฐ’</p>
+
+      <p>หากอิบนุ คอลดูนมีชีวิตอยู่ในช่วงเหตุการณ์ปัจจุบัน เขาอาจกล่าวกับนักการเมืองบางท่านว่า:</p>
+
+      <p class="ar-translation thai-quote">“การเรียกเก็บภาษีหรือตอบโต้ภาษีที่สูงในยามที่เศรษฐกิจอ่อนแรง คือการตอกตะปูปิดฝาโลงให้รัฐตัวเอง”</p>
+
+      <p>กระนั้นเอง อิบนุ คอลดูนก็ไม่ได้ต่อต้านภาษี หากแต่เน้นว่า ภาษีต้องไม่ทำลายความสามารถในการผลิต และรัฐควรสร้างแรงจูงใจ มากกว่าการเพิ่มภาระให้กับประชาชน</p>
+
+      <h2 class="article-h2">สรุป</h2>
+
+      <p>จากแนวคิดของอิบนุ คอลดูน เราจะเห็นได้ชัดว่า ภาษีไม่ใช่แค่เรื่องของตัวเลข แต่คือเครื่องมือที่สามารถสร้างหรือทำลายรัฐได้เลย การเก็บภาษีอย่างไม่เหมาะสมในช่วงวิกฤต คือการเร่งสลายโครงสร้างรัฐ รัฐที่ยิ่งใหญ่ไม่ใช่รัฐที่เก็บภาษีมากที่สุด แต่คือรัฐที่รักษาความหวังและแรงจูงใจของประชาชนไว้ได้มากที่สุด</p>
+
+      <p>แปลว่า ทางออกที่เหมาะสมตามแนวคิดอิบนุ คอลดูน ไม่ใช่การขึ้นภาษี แต่คือการลดภาระภาษีและกระตุ้นการผลิต รวมทั้งเสริมสร้างแรงจูงใจให้ผู้คนอยากกลับมาทำงานและใช้จ่ายกันมากขึ้น หากรัฐกำลังใช้การขึ้นภาษี เพื่อปกป้องโครงสร้างที่อ่อนแอของตนเอง แทนที่จะใช้เพื่อสนับสนุนประชาชน นั่นคือสัญญาณที่อิบนุ คอลดูนได้เตือนเราไว้ชัดเจน เพราะสุดท้าย รัฐไม่ได้ล่มสลายเพราะศัตรูภายนอก หากแต่เพราะประชาชนภายใน “หมดหวัง” และตลาด “หมดแรงที่จะเติบโต”</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). มองเรื่องภาษีตะอ์รีฟผ่านมุมมองของอิบนุ คอลดูน. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/taxation-through-ibn-khaldun.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ul class="bibliography" lang="ar" dir="rtl">
+        <li>ابن خلدون، عبد الرحمن بن محمد. المقدمة.</li>
+      </ul>
+    </section>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>

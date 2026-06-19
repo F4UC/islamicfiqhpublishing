@@ -268,3 +268,24 @@ mirror ใน docs/golden-master.md §6:
 - นิยามใหม่: `<li id="ref-N">` ที่ไม่มี `fn-back` ↑ = แหล่งอ้างอิง/อ่านเพิ่มเติม (uncited) ที่ถูกต้อง
   ไม่นับ orphan; บทความมีบรรณานุกรมล้วนได้ ตราบที่ไม่มีลิงก์พัง (precedent #190)
 - bidirectional integrity ยังบังคับเฉพาะเชิงอรรถที่อ้างในเนื้อ (fnref↔ref + back-link ต้องชี้ marker จริง)
+---
+
+# PHASE-2 BATCH 11 — review flags (10 articles, branch `claude/phase2-batch-11`, DRAFT PR)
+> Built fresh from Drive; all 10 child-safety CLEAR (R71, scanned from disk). articles.json 92→102, author = bare `กองบรรณาธิการ` for all 10. Coverage (Thai char-diff R72): secularism 99.82 · governance 99.95 · taxation 99.93 · women 99.64 · art 99.95 · nur-al-din 99.68 · surnames 99.32 · maintenance 99.86 · jurisprudence 99.91 · ikhtilāf 99.06.
+
+## ★ Beta byte-QC (raw quran.com/sunnah.com — small marks lossy through WebFetch)
+- **husband-maintenance** Bukhari 2554, ʿabd clause: file `وَهُوَ مَسْئُولٌ` vs canonical `وَهْوَ مَسْئُولٌ` (the other 3 clauses match `وَهْوَ`). One orthographic harakat (damma vs sukun on ه); confirm against raw sunnah.com and correct via paste if needed.
+- **justice-belief-and-power** āyah 99:8 silah: file `يَرَهُۥ`; confirm the silah-damma against raw quran.com JSON (matches the mushaf where 99:7 and 99:8 end identically).
+
+## R52 fused-form flags (kept fused, not silently altered — confirm al- vs name-initial)
+- justice-belief-and-power: **อบุลหะสัน** (al-Māwardī, Abū al-Ḥasan)
+- womens-power: **อบุลหะสัน** (al-Masʿūdī, Abū al-Ḥasan)
+- origins-of-nur-al-din-zangi: 11× **อิบนุล…** — incl. **อิบนุลอะษีร** (Ibn al-Athīr), **อิบนุลอะดีม** (Ibn al-ʿAdīm), **อิบนุลเญาซีย์** (Ibn al-Jawzī)
+- surnames-and-lineage-in-islam: **อิบนุลก็อยยิม** (Ibn al-Qayyim)
+- divergent-opinions: **อิบนุศศอลาห์** (Ibn al-Ṣalāḥ — sun-letter ص assimilation of al-, source-fused; not an อิบนุล form)
+
+## Content / editorial flags
+- **surnames-and-lineage-in-islam**: built from the doc titled with the Ḥunayn hadith line, but its actual topic is **nasab/lineage & surnames fiqh** (Ḥunayn hadith = closing proof-text). Per owner decision (AskUserQuestion), slug renamed `battle-of-hunayn → surnames-and-lineage-in-islam` and recategorized **history → nitisart**.
+- **husband-maintenance**: the Drive doc's «كلكم راع» wording differed from sunnah.com; canonical Bukhari 2554 matn was pasted into the block, but the Thai translation reflects the source's fuller narration — confirm the intended narration length.
+- **#3 taxation distinctness CONFIRMED**: taxation/jibāyah/Laffer-curve angle, distinct from live `ibn-khaldun-scholars-and-power` and `ibn-khaldun-on-the-bedouin-arabs`.
+- **Bibliography (all 10)**: source-provided detail ONLY (no muḥaqqiq/place/publisher/year/page invented). Some sources gave only truncated/placeholder URLs (womens-power, shadow-puppet) — preserved verbatim per the strict rule; editor may resolve.

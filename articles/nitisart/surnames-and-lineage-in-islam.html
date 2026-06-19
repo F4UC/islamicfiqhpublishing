@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ข้าคือบุตรแห่งอับดุลมุฏฏอลิบ: นามสกุลและสายตระกูลในอิสลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="หลักการนะซับ (สายตระกูล) ในอิสลาม การใช้นามสกุลของสามี และคำชี้แจงของปราชญ์ว่าด้วยข้อห้ามการปฏิเสธบิดาแท้จริง จากอัลกุรอาน หะดีษ และทัศนะปราชญ์">
+<meta name="keywords" content="นะซับ, นามสกุล, สายตระกูล, อุรุฟ, อาดัต, ประวัติศาสตร์, นิติศาสตร์อิสลาม, ฟิกฮ์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ข้าคือบุตรแห่งอับดุลมุฏฏอลิบ: นามสกุลและสายตระกูลในอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="นะซับ นามสกุล และการใช้นามสกุลของสามี: อิสลามห้ามปฏิเสธบิดาแท้จริง แต่ไม่ได้ห้ามการใช้นามสกุลในรูปแบบอื่น">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/surnames-and-lineage-in-islam">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/nitisart/surnames-and-lineage-in-islam">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ข้าคือบุตรแห่งอับดุลมุฏฏอลิบ: นามสกุลและสายตระกูลในอิสลาม",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/nitisart/surnames-and-lineage-in-islam.html"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="surnames-and-lineage-in-islam">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์</a>
+      
+      <h1 class="article-feature-title">ข้าคือบุตรแห่งอับดุลมุฏฏอลิบ: นามสกุลและสายตระกูลในอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">العادة محكمة</blockquote>
+      <p class="ar-translation">“ขนบธรรมเนียมประเพณีที่ผู้คนปฏิบัติกันอย่างแพร่หลายคือสิ่งที่จะนำมาซึ่งข้อตัดสิน”</p>
+
+      <p class="lead-text">ในกฎหมายอิสลามนั้นขนบประเพณี อุรุฟ หรืออาดัต เป็นสิ่งที่บรรดานักนิติศาสตร์อิสลามให้ความสำคัญเป็นพิเศษและนำมาใช้ในการวินิจฉัยข้อกฎหมายมานมนานแล้ว</p>
+
+      <p>ก่อนที่จะวินิจฉัยข้อตัดสินข้อใดข้อหนึ่งนั้น นักนิติศาสตร์จำเป็นต้องเข้าใจจารีตประเพณีของผู้คน เพราะถ้าไม่เข้าใจจารีตประเพณีแล้ว ทำให้เกิดความยากในการศึกษาค้นคว้าตำรา ทำให้ไม่เข้าใจสภาพความเป็นจริง (<span class="ar-inline" lang="ar" dir="rtl">فقه الواقع</span>) และแก่นแท้ของปัญหาที่เกิดขึ้น ทำให้เกิดความลำบากในการใช้ชะรีอะฮ์ของอิสลาม และทำให้ไม่ค่อยเข้าใจเรื่องของมนุษย์และสังคม</p>
+
+      <p>ท่านอิบนุลก็อยยิม กล่าวว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ومن تأمل الشريعة وقضايا الصحابة وجدها طافحة بهذا، ومن سلك غير هذا أضاع على الناس حقوقهم ونسب ذلك إلى الشريعة التي بعث الله بها رسوله</blockquote>
+      <p class="ar-translation">“ผู้ที่ไตร่ตรองกฎหมายชะรีอะฮ์และไตร่ตรองความเข้าใจของบรรดาเศาะหาบะฮ์อย่างลึกซึ้ง จะพบว่า (พวกเขาเหล่านั้นจะ) มีการใช้จารีตประเพณีประกอบในการพิจารณาข้อตัดสิน (ฮูก่ม) กันอย่างแพร่หลาย กอปรหากผู้ใดไม่เข้าใจถึงจารีตประเพณี อาจจะเข้าไม่ถึงแก่นแท้ของสิทธิและความต้องการของมนุษย์ได้ จะกลายเป็นว่าชะรีอะฮ์ของอัลลอฮ์และท่านรอซู้ลนั้นขึ้นอยู่กับตัวเขาเพียงคนเดียว”</p>
+
+      <h2 class="article-h2">ที่มาของนามสกุลในสังคมไทย</h2>
+
+      <p>ก่อนรัชสมัยพระบาทสมเด็จพระมงกุฎเกล้าเจ้าอยู่หัวรัชกาลที่ 6 ในขณะนั้นประเทศสยามยังไม่มีการใช้นามสกุล มีเพียงชื่อที่บิดามารดา หรือผู้เป็นที่เคารพนับถือตั้งให้ การจะรู้ว่าใครเป็นใครจึงต้องจำแนกจากรูปลักษณ์ หรือต้องถามว่าเป็นลูกเต้าเหล่าใครและตั้งบ้านเรือนที่ใด ดังเรียกกันว่า “ฉายา”</p>
+
+      <p>และหากย้อนไปถึงสมัยสุโขทัย พ่อขุนรามคำแหงก็ยังทรงประกาศพระนามของพระองค์ โดยอ้างอิงถึงพระนามของพระชนกและพระชนนีประกอบไว้ในศิลาจารึกว่า “พ่อกูชื่อศรีอินทราทิตย์ แม่กูชื่อนางเสือง”</p>
+
+      <p>หรืออย่างในนิทานมหากาพย์พื้นบ้านของไทยสมัยอยุธยาอย่าง เสภาเรื่องขุนช้างขุนแผน ก็จะพบว่ามีการเรียกชื่อตัวละครเพียงว่า พลายแก้ว นางพิม ขุนช้าง ขุนแผน และเมื่อจะอ้างให้จำกัดความเฉพาะตัวลงไปว่าเป็นใครมาจากไหน ก็จะต้องระบุไปถึงบิดามารดา เช่น พลายแก้ว ลูกของขุนไกรพลพ่ายและนางทองประศรี เป็นต้น</p>
+
+      <p>ซึ่งการเรียกขานชื่อของคนไทยจะแตกต่างจากชาวต่างชาติ เช่น คนจีนจะนิยมชื่อเรียกพร้อมกับชื่อแซ่ของต้นตระกูล หรือชาวตะวันตกก็จะมีนามสกุลใช้ เพื่อระบุถึงวงศ์วานว่านเครือ</p>
+
+      <p>และเมื่อสังคมเริ่มมีการขยายตัว การเรียกเฉพาะชื่ออย่างเดียวของคนไทยก็เกิดปัญหาขึ้น เริ่มมีความไม่สะดวกและเกิดความยุ่งยาก โดยเฉพาะเมื่อเริ่มมีระบบราชการ</p>
+
+      <p>ดังนั้น ในหลวงรัชกาลที่ 6 จึงโปรดเกล้าฯ ให้ตรา “พระราชบัญญัติขนานนามสกุล พ.ศ. 2456” ขึ้น โดยมีการประกาศและบังคับใช้เป็นกฎหมายตั้งแต่วันที่ 1 กรกฎาคม พ.ศ. 2456 ด้วยทรงดำริเห็นว่าคนไทยทุกคนควรจะมีทั้งชื่อตัวและชื่อสกุล เพื่อช่วยกำหนดตัวบุคคลได้แน่นอนกว่าการเรียกชื่อเพียงอย่างเดียว ซึ่งจะเป็นประโยชน์อย่างมากในทางราชการ</p>
+
+      <h2 class="article-h2">หลักการตั้งชื่อสกุล</h2>
+
+      <p>แล้วหลักการตั้งชื่อสกุลคืออะไร?</p>
+
+      <p>หลังจากมีการตราพระราชบัญญัติขนานนามสกุลแล้ว การดำเนินงานขนานนามสกุลแก่ประชาชน จะมีการแบ่งท้องที่ที่จะจดทะเบียนนามสกุลทั่วราชอาณาจักร โดยมีหลักการตั้งชื่อสกุลดังนี้</p>
+
+      <ol class="article-summary">
+        <li>ตั้งตามชื่อของบรรพบุรุษ (ปู่ ย่า ตา หรือยาย)</li>
+        <li>ข้าราชการที่มีราชทินนาม มักจะนำราชทินนามมาตั้งเป็นนามสกุลของตน</li>
+        <li>ตั้งตามชื่อตำบลที่อยู่อาศัย</li>
+        <li>ชาวไทยเชื้อสายจีนอาจแปลความหมายจาก “แซ่” ของตน หรือใช้คำว่าแซ่นำหน้าชื่อแซ่ หรือใช้ชื่อแซ่นำหน้า หรือสอดแทรกไว้ในนามสกุล</li>
+        <li>หม่อมเจ้า หม่อมราชวงศ์ และหม่อมหลวง ใช้นามราชสกุลของตนเป็นนามสกุล แต่ลูกของหม่อมหลวงและต่อไปเป็นหลาน เหลน ใช้นามราชสกุลโดยลำพังไม่ได้ ต้องมีคำว่า “ณ อยุธยา” ต่อท้าย สำหรับเชื้อพระวงศ์</li>
+        <li>ห้ามมิให้หญิงตั้งชื่อสกุลของตนเอง ให้ใช้ของบุรุษหัวหน้าครอบครัว หรือญาติฝ่ายชายผู้มีสิทธิ์ใช้ชื่อสกุลร่วมกัน</li>
+      </ol>
+
+      <p>ในอดีตนั้น กฎหมายไทยกำหนดให้ผู้หญิงที่แต่งงานแล้ว จำเป็นจะต้องเปลี่ยนมาใช้นามสกุลสามี แต่ในปัจจุบัน ศาลรัฐธรรมนูญได้ชี้ขาดให้ผู้หญิงมีสิทธิในการเลือกใช้นามสกุลของตัวเองหรือของสามีได้ ซึ่งถือเป็นการให้สิทธิแก่สตรีตรงตามที่รัฐธรรมนูญ พ.ศ. 2540 มาตรา 30 ระบุไว้</p>
+
+      <p>นามสกุล คือชื่อที่บ่งบอกถึงตระกูล (หรือสกุล) เพื่อแสดงที่มาของบุคคลนั้นๆ ว่ามาจากครอบครัวไหน ตระกูลใด ธรรมเนียมการใช้นามสกุลปรากฏอยู่ทั่วไปในหลายๆ ประเทศและวัฒนธรรม ซึ่งในแต่ละที่ก็อาจจะมีลักษณะเฉพาะแตกต่างกันไป ซึ่งก็ต้องศึกษารายละเอียดกัน</p>
+
+      <h2 class="article-h2">กรณีของมุสลิม: ภรรยาใช้นามสกุลสามี</h2>
+
+      <p>แต่เราจะมาพูดถึงในกรณีของมุสลิม การที่ผู้หญิงมุสลิมเปลี่ยนนามสกุลของตนเป็นนามสกุลของสามีเมื่อแต่งงานนั้น เป็นเรื่องที่พบเห็นได้บ่อยในปัจจุบัน</p>
+
+      <p>อย่างไรก็ตาม มีความคิดเห็นที่แตกต่างกันในเรื่องนี้ บางคนกล่าวว่าเป็นเรื่องหะรอม (ต้องห้าม) ในขณะที่บางคนกล่าวว่าจำเป็นต้องทำ ซึ่งอาจทำให้หลายคนเกิดความสับสน ในขณะที่บางคนบอกว่าจำเป็นต้องเปลี่ยนตามสามี</p>
+
+      <p>แต่กระนั้นการที่ภรรยานำเอานามสกุลของสามีมาใช้หลังแต่งงานนั้น ไม่ถือว่าผิดหลักศาสนาอิสลาม (หะรอม) และไม่ใช่สิ่งที่จำเป็นตามหลักชะรีอะฮ์ ดังนั้น ทั้งสองความเห็น - ที่ว่าเป็นหะรอมหรือจำเป็น - ถือว่าไม่ถูกต้องและมีความสุดโต่งในแง่ใดแง่หนึ่ง</p>
+
+      <p>เพื่อที่จะเข้าใจประเด็นนี้อย่างถูกต้อง จำเป็นต้องตระหนักว่าหนึ่งในเป้าหมายสำคัญ (มะกอซิด) ของชะรีอะฮ์คือ การรักษาสายตระกูล (นะซับ) ของแต่ละคน การเปลี่ยนสายตระกูลและอ้างตนเองไปสู่บุคคลที่ไม่ใช่พ่อผู้ให้กำเนิด ถือว่าเป็นสิ่งที่ผิดกฎหมายอิสลามและเป็นบาปใหญ่ โดยมีข้อความหลายตอนจากอัลกุรอานและซุนนะฮ์ที่กล่าวถึงเรื่องนี้อย่างชัดเจน ตัวอย่างเช่น:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَمَا جَعَلَ أَدْعِيَآءَكُمْ أَبْنَآءَكُمْ ۚ ذَٰلِكُمْ قَوْلُكُم بِأَفْوَٰهِكُمْ ۖ وَٱللَّهُ يَقُولُ ٱلْحَقَّ وَهُوَ يَهْدِى ٱلسَّبِيلَ ٱدْعُوهُمْ لِـَٔابَآئِهِمْ هُوَ أَقْسَطُ عِندَ ٱللَّهِ ۚ فَإِن لَّمْ تَعْلَمُوٓا۟ ءَابَآءَهُمْ فَإِخْوَٰنُكُمْ فِى ٱلدِّينِ وَمَوَٰلِيكُمْ ۚ وَلَيْسَ عَلَيْكُمْ جُنَاحٌ فِيمَآ أَخْطَأْتُم بِهِۦ وَلَـٰكِن مَّا تَعَمَّدَتْ قُلُوبُكُمْ ۚ وَكَانَ ٱللَّهُ غَفُورًا رَّحِيمًا</p>
+      </div>
+      <p>{และพระองค์ (อัลลอฮ์) มิได้ทรงทำให้บุตรบุญธรรมกลายเป็นบุตรที่แท้จริงของพวกเจ้า (ซัยด์ บุตรมุหัมมัด) การกล่าวว่าพวกเขาเป็นบุตรของพวกเจ้าเป็นเพียงถ้อยคำที่ออกจากปากของพวกเจ้าเท่านั้น (ซึ่งความเป็นจริงเขาไม่ใช่บุตรที่แท้จริง) และอัลลอฮ์นั้นทรงตรัสความจริง และพระองค์ทรงชี้ทางที่ถูกต้องยิ่ง ดังนั้นจงเรียกพวกเขาตามชื่อของบิดาที่แท้จริงของพวกเขา (ซัยด์ บุตรแห่งฮาริษะฮ์) เพราะนั่นคือสิ่งที่ยุติธรรมในสายตาของอัลลอฮ์ และหากพวกเจ้าไม่ทราบว่าบิดาที่แท้จริงของพวกเขาคือใคร พวกเขาก็เป็นพี่น้องในศรัทธาหรือมิตรของพวกเจ้า และไม่มีบาปใดแก่พวกเจ้าหากพวกเจ้าทำผิดพลาดโดยไม่ตั้งใจ แต่บาปนั้นอยู่ในสิ่งที่ตั้งใจไว้ในหัวใจของพวกเจ้า อัลลอฮ์นั้นทรงเป็นผู้ทรงอภัยและทรงเมตตาเสมอ}<sup class="fn-ref" id="fnref-1"><a href="#ref-1">1</a></sup></p>
+
+      <p>เบื้องหลังการประทานอายะฮ์นี้คือ ในยุคญาฮิลียะฮ์ ผู้คนมักปฏิบัติต่อบุตรบุญธรรมเหมือนเป็นบุตรที่แท้จริงในทุกๆ ด้าน และเรียกบุตรบุญธรรมนั้นตามชื่อผู้ที่รับเลี้ยงมา ซึ่งให้ความเข้าใจผิดว่าผู้ที่รับเลี้ยงนั้นเป็นบิดาที่แท้จริงของบุตรบุญธรรม</p>
+
+      <p>ท่านศาสนทูตแห่งอัลลอฮ์ ﷺ ได้รับเลี้ยงท่านซัยด์ อิบนุ ฮาริษะฮ์ และด้วยความเคยชินนี้ เหล่าเศาะหาบะฮ์จึงเริ่มเรียกท่านว่า “ซัยด์ อิบนุ มุฮัมมัด” แต่เมื่ออายะฮ์นี้ถูกประทานลงมา พวกเขากลับมาเรียกท่านด้วยชื่อ “ซัยด์ อิบนุ ฮาริษะฮ์” ตามบิดาแท้จริงของท่าน ดังนั้น อายะฮ์นี้จึงถูกประทานมาเพื่อวางหลักการที่ว่า บุตรบุญธรรมต้องไม่ถูกมองว่าเป็นบุตรที่แท้จริงของพ่อแม่บุญธรรม</p>
+
+      <p>ท่านอิหม่ามอัลกุรฏุบีย์ได้กล่าวว่า:</p>
+      <blockquote class="thai-quote">“ในยุคญาฮิลียะฮ์ หากชายคนใดชื่นชมในตัวบุคคลหนึ่ง เขาก็จะรับคนๆ นั้นมาเป็นบุตร และจะให้สิทธิ์แก่เขาในมรดกเสมือนเป็นบุตรชายจริง โดยจะเรียกเขาว่าเป็น “บุตรของคนนั้น” เช่นเดียวกับบุตรแท้จริง โองการนี้ถูกประทานลงมาเพื่อยกเลิกธรรมเนียมการรับบุตรบุญธรรม และกำหนดให้เรียกผู้ที่ถูกเรียกเป็นบุตรบุญธรรมนั้นตามชื่อบิดาแท้จริงของเขา หากไม่มีบิดาที่รู้จัก ก็ให้ระบุว่าเป็นพี่น้องในศาสนาแทน เพราะอัลลอฮ์ทรงตรัสว่า “แท้จริง ผู้ศรัทธาทั้งหมดเป็นพี่น้องกัน”<br><br>ในกรณีที่มีผู้เรียกคนหนึ่งว่า ‘เป็นบุตรของบิดาบุญธรรม’ หากการเรียกนั้นเป็นไปโดยความผิดพลาด หรือเป็นการเรียกโดยไม่ตั้งใจ ก็ไม่มีบาปใดๆ เช่นเดียวกับหากเรียกบุคคลหนึ่งโดยเข้าใจผิดว่าเขาเป็นบิดาแท้จริง ก็ไม่มีปัญหาอะไร ในบางกรณี ชื่อบุตรบุญธรรมก็เป็นที่รู้จักและถูกใช้จนกลายเป็นชื่อที่ติดปาก เช่นกรณีของอัลมิกดาด อิบนุ อัมรู ซึ่งเป็นที่รู้จักกันในชื่อ “อัลมิกดาด อิบนุ อัลอัซวัด” เนื่องจากอัซวัด อิบนุ อับดุลยะฆูษได้รับเขาเป็นบุตรบุญธรรมในยุคญาฮิลียะฮ์”</blockquote>
+
+      <p>ในหะดีษหนึ่งจากศอเฮี้ยะฮ์อัลบุคอรีย์ได้ระบุไว้ว่า: ท่านสะอัด บิน อบี วักก้อศได้กล่าวว่า: ฉันได้ยินท่านศาสดามุฮัมมัด ﷺ กล่าวว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">مَنِ ادَّعَى إِلَى غَيْرِ أَبِيهِ، وَهْوَ يَعْلَمُ أَنَّهُ غَيْرُ أَبِيهِ، فَالْجَنَّةُ عَلَيْهِ حَرَامٌ</p>
+      </div>
+      <p>“ผู้ใดที่อ้างว่าเป็นบุตรของผู้ที่ไม่ใช่พ่อของเขาจริงๆ ทั้งที่รู้ว่าคนนั้นไม่ใช่พ่อของเขา สวรรค์ก็ถูกห้ามสำหรับเขา” ฉันได้กล่าวหะดีษนี้ต่อหน้าอบู บักเราะฮ์ แล้วเขากล่าวว่า “ฉันก็ได้ยินด้วยหูของฉันเองและใจของฉันก็จำได้จากท่านศาสนทูตของอัลลอฮ์” (บันทึกโดยอัลบุคอรีย์)<sup class="fn-ref" id="fnref-2"><a href="#ref-2">2</a></sup></p>
+
+      <p>อย่างไรก็ตาม สำนวนข้างต้นและข้อความที่คล้ายกัน ต้องตีความให้ถูกบริบท และมองให้ถูกประเด็นระหว่าง ‘เปลี่ยนชื่อบิดา’ กับ ‘เปลี่ยนนามสกุล’ เจตนาของหลักศาสนาไม่ได้ห้ามการใช้นามสกุลอื่นที่ไม่ใช่ชื่อบิดา ตราบใดที่ไม่ได้สมอ้างนามสกุลหลอก</p>
+
+      <p>แต่สิ่งที่ห้ามเด็ดขาดคือ การอ้างว่าสืบเชื้อสายหรือเป็นลูกแท้ๆ ของคนอื่นที่ไม่ใช่บิดาแท้ๆ ของตน การกระทำเช่นนี้ถือว่าผิดหลักศาสนาอย่างแน่นอน เพราะทำให้ผู้อื่นหลงเข้าใจผิด</p>
+
+      <p>ท่านอิหม่ามอันนะวาวีย์ได้ระบุเอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ومعنى ادعى لغير أبيه أي انتسب إليه ، واتخذه أبا</blockquote>
+      <p class="ar-translation">“และความหมายของสำนวนที่ว่า “อ้างตัวกับบุคคลที่ไม่ใช่บิดาที่แท้จริงของตน” คือการที่บุคคลนั้นแสดงตนว่าเป็นลูกของคนผู้นั้น และยึดถือเขาเป็นบิดา (แทนบิดาตัวจริง) ของตน”</p>
+
+      <p>ท่านยังกล่าวอีกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقوله - صلى الله عليه وسلم - : ( وهو يعلم ) تقييد لا بد منه فإن الإثم إنما يكون في حق العالم بالشيء</blockquote>
+      <p class="ar-translation">“คำพูดของท่านนบีมุฮัมมัด ﷺ ที่ว่า “และเขารู้อยู่แล้ว (ว่าคนนั้นไม่ใช่บิดาของตน)” เป็นการระบุเงื่อนไขที่จำเป็น เนื่องจากความผิดบาปจะเกิดขึ้นในกรณีของบุคคลที่รู้ถึงสิ่งนั้นเท่านั้น”</p>
+
+      <p>ท่านบัดรุดดีน อัลอัยนีย์ได้อธิบายไว้เช่นกันว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قوله: من ادعى ، أي من انتسب إلى غير أبيه ، والحال يعلم أنه غير أبيه</blockquote>
+      <p class="ar-translation">“คำว่า “ผู้ใดอ้างว่า…” หมายถึง ผู้ใดที่อ้างตนว่าเป็นลูกของบุคคลที่ไม่ใช่บิดาของตน โดยที่เขารู้อยู่แล้วว่าบุคคลนั้นไม่ใช่บิดาของเขา”</p>
+
+      <p>สิ่งที่ถูกห้ามอย่างเด็ดขาดในกรณีนี้คือ การที่บุคคลหนึ่งได้อ้างโดยเจตนาว่าบุคคลอื่นเป็นบิดาแท้ของตน หรือการปฏิเสธสายสัมพันธ์ที่แท้จริงกับบิดาของตน</p>
+
+      <p>หากบุคคลหนึ่งยังคงใช้นามสกุลของบิดา แต่ปฏิเสธหรือปกปิดความจริงด้วยการบอกว่าเขามีบิดาเป็นบุคคลอื่น การกระทำเช่นนี้ถือว่าผิดในหลักศาสนาอิสลาม</p>
+
+      <p>ในทางกลับกัน หากบุคคลหนึ่งเลือกใช้นามสกุลอื่นแต่ยอมรับและเปิดเผยชัดเจนว่าบิดาที่แท้จริงของตนเป็นใคร และสังคมรอบข้างก็ทราบดีว่าบิดาแท้ๆ ของเขาคือใคร กรณีนี้ถือว่าไม่ผิดในหลักศาสนา กล่าวได้ว่าประเด็นนี้ไม่ใช่เรื่องของการเลือกใช้นามสกุลใด แต่คือการไม่อ้างสิทธิ์การเป็นบิดาแท้ให้แก่บุคคลอื่น</p>
+
+      <h2 class="article-h2">ผลต่อหลักการของศาสนา</h2>
+
+      <p>เมื่อพิจารณาสิ่งที่กล่าวมาข้างต้นแล้ว มาดูกันว่าการที่ภรรยาใช้นามสกุลของสามีมีผลต่อหลักการของศาสนาอิสลามอย่างไร</p>
+
+      <p><strong>1) หากภรรยาใช้นามสกุลหรือนามตระกูลของสามี</strong> เราจำเป็นต้องเข้าใจว่า การใช้นามสกุลนั้นไม่เป็นที่แพร่หลายสมัยท่านศาสดามุฮัมมัด ﷺ และในหมู่มุสลิมยุคแรก ในสมัยนั้นผู้คนมักเป็นที่รู้จักโดยนามบิดาของตน เช่น อับดุลลอฮ์ อิบนุ อุมัร, อับดุลลอฮ์ อิบนุ อับบาส, และคอดีญะฮ์ บินติ คุวัยลิด โดยใช้คำว่า “อิบนุ” (บุตรของ…) และ “บินติ” (ธิดาของ…) ต่อท้ายชื่อ แทนการใช้นามสกุล</p>
+
+      <p>ดังนั้นภรรยาจะคงชื่อตามที่ได้รับจากบิดาหลังแต่งงาน เพราะบิดาของเธอยังคงเป็นบิดาของเธอ ไม่ว่าเธอจะแต่งงานกับใคร</p>
+
+      <p>ดังนั้น หากเธอเป็นที่รู้จักในนามของอาอิชะฮ์ บินติ อบู บักร ก่อนการแต่งงาน เธอก็จะยังคงชื่อเดิมนั้นหลังแต่งงาน</p>
+
+      <p>ในส่วนของนามสกุล นามสกุลนั้นเราได้กล่าวมาตั้งแต่ช่วงแรกๆ แล้วว่า นามสกุลจะถูกใช้เพื่อการระบุตัวตนเท่านั้น เมื่อมีลูกเกิดมา ก็มักจะใช้ชื่อสกุลของครอบครัว และด้วยเหตุนี้ภรรยาจึงอาจใช้นามสกุลเดียวกันกับสามี เพื่อให้มีความเป็นหนึ่งเดียวกันในชื่อสกุลของครอบครัว เป็นเพียงการใช้นามสกุลของสามีเพื่อความสะดวกในการระบุตัวตน ภรรยาไม่ได้ปฏิเสธบิดาแท้ของเธอ เธอยังคงยอมรับบิดาของเธออย่างชัดเจน และคนในชุมชนก็รับรู้ดีว่าเธอเป็นบุตรสาวของใคร จึงไม่มีการหลอกลวงใดๆ เกิดขึ้น ซึ่งไม่ได้ทำให้ข้อกฎหมายหรือสิทธิพึงมีของเธอกับบิดาขาดสะบั้นไป</p>
+
+      <p><strong>2) การเปลี่ยนนามสกุลในบริบทเฉพาะของภรรยาหรือในกรณีทั่วไปนั้น</strong> ไม่ได้อยู่ในข้อห้ามของการอ้างถึงใครอื่นนอกจากพ่อแท้ๆ ของตน เมื่อมีการเปลี่ยนนามสกุล ไม่ได้หมายถึงการปฏิเสธพ่อของตน ข้อห้ามจะมีผลก็ต่อเมื่อบุคคลหนึ่งปฏิเสธพ่อของตนจริงๆ เช่น การเปลี่ยนชื่อพ่อในสูติบัตรเป็นชื่อคนอื่น</p>
+
+      <p>อย่างไรก็ตาม การเปลี่ยนนามสกุลไม่ได้หมายถึงการปฏิเสธความสัมพันธ์กับบิดาของตนแต่อย่างใด และไม่ได้บ่งบอกหรือมีนัยใดๆ ที่จะสื่อว่าการเปลี่ยนนามสกุลหมายถึงบิดาคือบุคคลอื่น ซึ่งการเปลี่ยนนามสกุลในยุคปัจจุบันนี้เป็นที่ยอมรับอย่างแพร่หลายในสังคม และไม่มีใครตีความหรือคิดว่าการเปลี่ยนนามสกุลคือการเปลี่ยนบิดา ฉะนั้นการเปลี่ยนนามสกุลจึงไม่ได้ขัดต่อหลักการที่กล่าวถึงในหะดีษ</p>
+
+      <p>และการที่ภรรยาใช้นามสกุลของสามีหลังจากแต่งงานเองไม่ถือเป็นสิ่งต้องห้าม ตราบใดที่เธอยังคงยอมรับบิดาโดยกำเนิดของตนอย่างชัดเจนและไม่ปฏิเสธความเป็นบุตรของเขา หากเธอยังคงใช้นามสกุลของบิดาแต่ปฏิเสธการเป็นบุตรของเขาด้วยวาจาและแจ้งผู้อื่นว่าคนอื่นเป็นบิดา สิ่งนี้ก็จะถือว่าผิดเช่นกัน</p>
+
+      <p>นอกจากนี้ ยังควรกล่าวถึงว่าภรรยาหลายคนของท่านศาสดามุฮัมมัด ﷺ ไม่ได้เปลี่ยนชื่อตนหลังจากแต่งงาน เช่น อาอิชะฮ์ บินติ อบู บักร และคอดีญะฮ์ บินติ คุวัยลิด</p>
+
+      <p>ดังนั้น แนวคิดที่ว่าผู้หญิงจำเป็นต้องเปลี่ยนนามสกุลหลังจากแต่งงาน ไม่ได้มีรากฐานมาจากประเพณีในอิสลาม แต่เป็นเรื่องของวัฒนธรรมที่แตกต่างกันไปในแต่ละภูมิภาค</p>
+
+      <p>โดยสรุปแล้ว ทั้งสองแนวคิดที่ว่าการที่ภรรยาจะใช้นามสกุลของสามีเป็นสิ่งที่หะรอม (ต้องห้าม) หรือว่าจำเป็นนั้น ถือว่าไม่ถูกต้องทั้งคู่ ภรรยาสามารถตัดสินใจได้ด้วยตัวเองว่าจะใช้นามสกุลของสามีหลังแต่งงานหรือไม่ ตราบใดที่เธอไม่ได้อ้างว่าเป็นบุตรของบุคคลอื่น</p>
+
+      <p><strong>3) มีการกล่าวว่าการใช้นามสกุลของสามีไม่เป็นที่อนุมัติในศาสนาอิสลาม</strong> อย่างไรก็ตาม หลักฐานที่นำมานั้นไม่ได้ชี้ชัดให้เห็นถึงข้อห้ามนี้ เราเห็นพ้องต้องกันว่าการเปลี่ยนนามสกุลเดิมของผู้หญิงหลังการแต่งงานไม่ใช่ข้อกำหนดของศาสนาอิสลามอย่างแน่นอน แต่ประเด็นนี้ไม่ได้อยู่ที่การกำหนดหรือไม่กำหนดจากศาสนา หากแต่เป็นเรื่องของการอนุญาตว่าผู้หญิงจะเปลี่ยนนามสกุลได้หรือไม่ การพิสูจน์ว่าไม่มีข้อกำหนดในศาสนา ไม่ได้หมายความว่าการเปลี่ยนแปลงจะเป็นสิ่งต้องห้ามแต่อย่างใด</p>
+
+      <p>เพื่อให้เข้าใจง่ายขึ้น ยกตัวอย่างเช่น การสวมเสื้อผ้าใหม่สำหรับการละหมาดไม่ใช่ข้อกำหนดของศาสนาอิสลาม แต่เป็นสิ่งที่สามารถทำได้ ดังนั้น การพิสูจน์ว่าในสมัยของศาสดามุฮัมมัด ﷺ ไม่ได้มีการเปลี่ยนนามสกุลหลังแต่งงาน ก็ไม่ได้แปลว่าการเปลี่ยนนามสกุลเป็นสิ่งต้องห้าม</p>
+
+      <p><strong>4) มีการกล่าวอ้างอีกว่า นามสกุลเป็นตัวบ่งชี้ถึงชื่อบิดาและแสดงถึงเชื้อสายของบุคคลคนนั้น</strong> แต่อย่างไรก็ตาม หากเราวิเคราะห์จาก ‘อาดัต’ แนวโน้มทั่วโลก แม้ในหมู่ชาวมุสลิมเองจะพบว่า นามสกุล ‘เป็นเพียงชื่อของครอบครัว’ ไม่ใช่ชื่อของบิดาโดยตรง นามสกุลแสดงถึงความเกี่ยวข้องของบุคคลกับครอบครัวหนึ่ง</p>
+
+      <p>ในกรณีที่ผู้หญิงใช้นามสกุลของสามี ก็เป็นเพียงการระบุว่าเธอแต่งงานกับครอบครัวนั้นๆ ซึ่งสิ่งนี้เป็นสิ่งที่รับรู้โดยทั่วกันทั้งประเทศไทย</p>
+
+      <p><strong>5) เป็นที่ชัดเจนว่าคำสั่งห้ามจากหลักฐานต่างๆ คือการห้ามปฏิเสธการสืบสายเลือดที่แท้จริงของบิดา</strong> แต่ไม่ใช่การห้ามการใช้นามสกุลในรูปแบบอื่นๆ ทั้งหมด</p>
+
+      <p>การใช้นามสกุลของสามีจึงควรทำโดยความยินยอมร่วมกัน หากมีความจำเป็นที่ภรรยาจะต้องใช้นามสกุลของสามี ก็ขึ้นอยู่กับสามีที่จะชักจูงให้ภรรยายอมรับ</p>
+
+      <h2 class="article-h2">ข้าคือบุตรแห่งอับดุลมุฏฏอลิบ</h2>
+
+      <p>ดังนั้น การเปลี่ยนนามสกุลของคนไทยไม่ได้แปลว่าเปลี่ยนบิดาหรือสับเชื้อสาย แต่เป็นเพียงการแจ้งให้ทราบ ดังที่ท่านศาสดามุฮัมมัด ﷺ ได้กล่าวว่า:</p>
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">أَنَا النَّبِيُّ لاَ كَذِبْ أَنَا ابْنُ عَبْدِ الْمُطَّلِبْ</p>
+      </div>
+      <p>“ข้าคือศาสนทูตแห่งอัลลอฮ์ ไม่ใช่เรื่องโกหก ข้าคือบุตรแห่งอับดุลมุฏฏอลิบ” (บันทึกโดยอัลบุคอรีย์)<sup class="fn-ref" id="fnref-3"><a href="#ref-3">3</a></sup></p>
+
+      <p>ท่านอิหม่ามอันนะวาวีย์ได้อธิบายไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فإن قيل : كيف قال النبي صلى الله عليه وسلم : أنا ابن عبد المطلب ؟ فانتسب إلى جده دون أبيه وافتخر بذلك مع أن الافتخار في حق أكثر الناس من عمل الجاهلية ؟ فالجواب أنه صلى الله عليه وسلم كانت شهرته بجده أكثر ، لأن أباه عبد الله توفي شابا في حياة أبيه عبد المطلب قبل اشتهار عبد الله ، وكان عبد المطلب مشهورا شهرة ، ( ابن عبد المطلب ) ينسبونه إلى جده لشهرته ، ومنه حديث همام بن ثعلبة في قوله : أيكم ابن عبد المطلب؟ وقد كان مشتهرا عندهم أن عبد المطلب بشر بالنبي صلى الله عليه وسلم ، وأنه سيظهر وسيكون شأنه عظيما ، وكان قد أخبره بذلك سيف بن ذي يزن ، وقيل : إن عبد المطلب رأى رؤيا تدل على ظهور النبي صلى الله عليه وسلم ، وكان ذلك مشهورا عندهم ، فأراد النبي صلى الله عليه وسلم تذكيرهم بذلك ، وتنبيههم بأنه صلى الله عليه وسلم لا بد من ظهوره على الأعداء ، وأن العاقبة له ، لتقوى نفوسهم ، وأعلمهم أيضا بأنه ثابت ملازم للحرب ، لم يول مع من ولى ، وعرفهم موضعه ليرجع إليه الراجعون</blockquote>
+      <p class="ar-translation"><span class="attribution">อันนะวาวีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span> “หากมีผู้ถามว่าเหตุใดท่านศาสดามุฮัมมัด ﷺ จึงกล่าวว่า “ฉันคือบุตรแห่งอับดุลมุฏฏอลิบ” โดยท่านกล่าวถึงปู่ของท่านแทนที่จะกล่าวถึงบิดา และแสดงออกด้วยความภาคภูมิใจ ทั้งที่การแสดงความภาคภูมิใจเช่นนี้ถือเป็นลักษณะของยุคญาฮิลียะฮ์ (ยุคก่อนอิสลาม)? คำตอบคือ ท่านศาสดามีชื่อเสียงในนามของท่านอับดุลมุฏฏอลิบมากกว่า เนื่องจากบิดาของท่านคืออับดุลลอฮ์ได้เสียชีวิตตั้งแต่วัยหนุ่มในช่วงที่อับดุลมุฏฏอลิบยังมีชีวิตอยู่ ทำให้ท่านอับดุลลอฮ์ไม่ได้มีชื่อเสียงเท่าท่านอับดุลมุฏฏอลิบซึ่งได้รับการเคารพนับถืออย่างกว้างขวาง<br><br>ชาวอาหรับในสมัยนั้นจึงนิยมเรียกท่านศาสดาว่า “บุตรแห่งอับดุลมุฏฏอลิบ” เพราะชื่อเสียงของท่าน และในบางรายงานระบุว่าท่านอับดุลมุฏฏอลิบได้รับข่าวสารจากนักบุญว่า จากเชื้อสายของท่านจะมีศาสดาผู้ยิ่งใหญ่ปรากฏขึ้น ซึ่งต่อมาได้ยืนยันผ่านความฝันของท่านอับดุลมุฏฏอลิบอีกครั้ง<br><br>ดังนั้นท่านศาสดาจึงใช้การอ้างถึงปู่ของท่านเพื่อเตือนใจผู้คนในยุคนั้นถึงคำทำนายที่ว่าท่านจะนำประชาชนให้ก้าวสู่ความสำเร็จและมีชัยชนะเหนือศัตรู ทั้งนี้เพื่อเพิ่มขวัญกำลังใจให้แก่บรรดาสหายในการต่อสู้กับศัตรูของท่าน และเพื่อให้พวกเขารู้ว่าท่านยังคงอยู่ในสนามรบ และจะไม่ทิ้งพวกเขาไป”</p>
+
+      <p>อัลฮาฟิศอิบนุ หะญัร อัลอัสกอลานีย์ได้อธิบายว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما نسبته إلى عبد المطلب دون أبيه عبد الله فكأنها لشهرة عبد المطلب بين الناس لما رزق من نباهة الذكر وطول العمر ، بخلاف عبد الله فإنه مات شابا ، ولهذا كان كثير من العرب يدعونه ابن عبد المطلب ، كما قال ضمام بن ثعلبة لما قدم : أيكم ابن عبد المطلب؟ وقيل : لأنه كان اشتهر بين الناس أنه يخرج من ذرية عبد المطلب رجل يدعو إلى الله ويهدي الله الخلق على يديه ويكون خاتم الأنبياء ، فانتسب إليه ليتذكر ذلك من كان يعرفه ، وقد اشتهر ذلك بينهم ، وذكره سيف بن ذي يزن قديما لعبد المطلب قبل أن يتزوج عبد الله آمنة وأراد النبي - صلى الله عليه وسلم - تنبيه أصحابه بأنه لا بد من ظهوره وأن العاقبة له لتقوى قلوبهم إذا عرفوا أنه ثابت غير منهزم وأما قوله لا كذب ففيه إشارة إلى أن صفة النبوة يستحيل معها الكذب ، فكأنه قال : أنا النبي ، والنبي لا يكذب ، فلست بكاذب فيما أقول حتى أنهزم ، وأنا متيقن بأن الذي وعدني الله به من النصر حق ، فلا يجوز علي الفرار وقيل : معنى قوله : لا كذب أي أنا النبي حقا لا كذب في ذلك</blockquote>
+      <p class="ar-translation"><span class="attribution">อิบนุ หะญัร อัลอัสกอลานีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span> “เหตุผลที่ท่านนบีมุฮัมมัด ﷺ กล่าวยืนยันตัวเองว่าเป็น “บุตรแห่งอับดุลมุฏฏอลิบ” แทนที่จะอ้างอิงถึงบิดาคือท่านอับดุลลอฮ์ เป็นเพราะท่านอับดุลมุฏฏอลิบเป็นที่รู้จักในหมู่คนด้วยชื่อเสียงและความมีเกียรติ อีกทั้งท่านยังมีอายุยืนยาวและได้รับความเคารพนับถือมากกว่าท่านอับดุลลอฮ์ ซึ่งเสียชีวิตตั้งแต่ยังหนุ่ม ด้วยเหตุนี้ หลายคนในเผ่ากุเรชมักเรียกท่านนบีว่า “บุตรแห่งอับดุลมุฏฏอลิบ”<br><br>การเรียกขานเช่นนี้ยังสอดคล้องกับความเชื่อในหมู่คนอาหรับในยุคนั้นที่เชื่อว่าจากเชื้อสายของอับดุลมุฏฏอลิบจะมีบุคคลหนึ่งเกิดขึ้นเพื่อชี้ทางสู่ศรัทธาในอัลลอฮ์และจะเป็นศาสนทูตองค์สุดท้าย ผู้ที่ทราบเรื่องนี้จึงยิ่งมีความมั่นใจในตัวท่านนบีว่าเป็นผู้ที่อัลลอฮ์ทรงส่งมา ท่านนบีต้องการเน้นให้บรรดาสหายมีความเชื่อมั่นว่าอัลลอฮ์ทรงรับรองการเป็นศาสนทูตของท่าน ซึ่งย่อมไม่พ่ายแพ้ต่อศัตรู ความมั่นใจนี้ช่วยให้หัวใจของบรรดาสหายเข้มแข็งในการยืนหยัดเคียงข้างท่าน<br><br>คำกล่าว “ไม่ใช่เรื่องโกหก” ของท่านนบีเป็นการยืนยันว่า ศาสนทูตนั้นย่อมไม่มีความเท็จอยู่ในตัว ท่านจึงกล่าวถึงความมั่นใจในศาสนทูตอย่างแท้จริงว่า “ข้าคือศาสนทูตของอัลลอฮ์โดยแท้จริง ไม่มีความเท็จในสิ่งที่ข้าพเจ้าพูด””</p>
+
+      <h2 class="article-h2">สรุป</h2>
+
+      <p>โดยสรุปจากการอธิบายในประเด็นเรื่อง “นามสกุล” เป็นที่ชัดเจนว่าไม่มีข้อห้ามสำหรับผู้หญิงที่จะเปลี่ยนชื่อสกุลเป็นนามสกุลของสามีหรือนามสกุลครอบครัวของเขาหลังการแต่งงาน ตราบใดที่ยังคงเป็นที่ทราบกันว่าบิดาผู้ให้กำเนิดของเธอคือใคร หากเธอคงนามสกุลเดิมไว้หลังแต่งงาน นั่นก็ถือว่าเป็นสิ่งที่ดี ทั้งนี้ การเปลี่ยนชื่อสกุลนั้นไม่ใช่ข้อบังคับทั้งในทางกฎหมายอิสลามและกฎหมายไทย และเธอเองก็ไม่ควรถูกบังคับให้เปลี่ยนเพียงเพราะแรงกดดันจากครอบครัว</p>
+
+      <p>ทั้งนี้ ทั้งประเด็นการเปลี่ยนชื่อสกุล เปลี่ยนชื่อเชื้อสายและเผ่า และเปลี่ยนชื่อบิดา แม้กระทั่งนามชื่อของตัวเอง มีตัวอย่างให้เห็นมากมายในอดีต โดยเฉพาะนามชื่อของเหล่านักวิชาการที่โด่งดัง แต่ไม่มีนักวิชาการท่านใดคัดค้าน ทั้งที่รู้เป็นอย่างดีว่านั่นไม่ใช่ชื่อจริงของพวกเขา</p>
+
+      <p>ศาสนาอิสลามไม่ได้ส่งเสริมให้มุสลิมตั้งใจขัดต่อขนบธรรมเนียมในประเด็นนี้ แต่อยากให้มุสลิมปรับตัวเข้ากับสังคมและไม่แยกตัวออกจากสังคม</p>
+
+      <p>การที่มุสลิมสามารถอยู่ร่วมกับสังคมได้อย่างกลมกลืนโดยไม่มีความขัดแย้งหรือความขัดแย้งที่ก่อขึ้นโดยไม่มีเหตุจำเป็น ทำให้สามารถอยู่ร่วมกันและเผยแผ่คำสอนที่ถูกต้องของศาสนาได้ ซึ่งทั้งหมดนี้จะต้องอยู่ในเงื่อนไขที่ไม่ขัดแย้งกับหลักการพื้นฐานทางชะรีอะฮ์ของอิสลาม</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ข้าคือบุตรแห่งอับดุลมุฏฏอลิบ: นามสกุลและสายตระกูลในอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/surnames-and-lineage-in-islam.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">القرآن الكريم، سورة الأحزاب (33)، الآيتان 4-5. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">أخرجه البخاري في صحيح البخاري، رقم 6766، من حديث سعد بن أبي وقاص رضي الله عنه. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">أخرجه البخاري في صحيح البخاري، رقم 2864، من حديث البراء بن عازب رضي الله عنه. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>

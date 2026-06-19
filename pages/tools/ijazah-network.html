@@ -13,7 +13,7 @@
 })();
 </script>
 
-<meta name="description" content="เครื่องมือแสดงผลเครือข่ายสายอิญาซะฮ์ (สายการรับอนุญาตสืบทอดวิชา) แบบโต้ตอบได้ ครอบคลุม 23 สาย จาก 13 แหล่งอ้างอิง">
+<meta name="description" content="เครื่องมือแสดงผลเครือข่ายสายอิญาซะฮ์ (สายการรับอนุญาตสืบทอดวิชา) แบบโต้ตอบได้ ครอบคลุม 22 สาย จาก 12 แหล่งอ้างอิง">
 <meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
 <meta property="og:title" content="เครือข่ายสายอิญาซะฮ์ — Islamic Fiqh Publishing">
 <meta property="og:description" content="เครื่องมือแสดงผลเครือข่ายสายอิญาซะฮ์แบบโต้ตอบได้ — ติดตามรอย provenance ของทุกสาย">
@@ -509,9 +509,9 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       และสายสะมาอฺ (การฟังตรงจากครู) แต่ละสายตามรอยถึงผู้รายงานทีละท่าน พร้อมแหล่งอ้างอิงที่ตรวจสอบได้
     </p>
     <div class="hero-stats" data-reveal data-delay="3">
-      <div class="stat-item"><span class="stat-num">23</span><span class="stat-label">สาย</span></div>
+      <div class="stat-item"><span class="stat-num" id="statChains">—</span><span class="stat-label">สาย</span></div>
       <div class="stat-item"><span class="stat-num" id="statNodes">—</span><span class="stat-label">ผู้รายงาน</span></div>
-      <div class="stat-item"><span class="stat-num">13</span><span class="stat-label">แหล่งอ้างอิง</span></div>
+      <div class="stat-item"><span class="stat-num" id="statSources">—</span><span class="stat-label">แหล่งอ้างอิง</span></div>
     </div>
   </div>
 </section>
@@ -717,6 +717,14 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   var nodeOrder = {};    /* id -> 1-based load index (Arabic-off fallback label) */
   var holderIds = {};    /* id -> true for terminal sinks (out-degree 0 = hamil al-sanad) */
   var lastDrawerNode = null;  /* re-render the open drawer on Arabic toggle */
+  var graphCache   = {};    /* gid -> fetched graph JSON (avoid refetch) */
+  var narratorText = {};    /* gid -> lowercased blob of narrator names (search) */
+
+  /* Read the current chain id from the URL hash (#gid). gids are ASCII. */
+  function gidFromHash(){
+    try { return decodeURIComponent((location.hash || '').replace(/^#/, '')).trim(); }
+    catch(e){ return (location.hash || '').replace(/^#/, '').trim(); }
+  }
 
   /* ── Tier mapping (gc -> tier + Thai label) ────────────── */
   var TIER = {
@@ -796,6 +804,8 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   var $overlay    = document.getElementById('cyOverlay');
   var $overlayTh  = document.getElementById('cyOverlayTh');
   var $statNodes  = document.getElementById('statNodes');
+  var $statChains = document.getElementById('statChains');
+  var $statSources= document.getElementById('statSources');
   var $pathFrom   = document.getElementById('pathFrom');
   var $pathTo     = document.getElementById('pathTo');
   var $pathResult = document.getElementById('pathResult');
@@ -842,14 +852,20 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       openDrawer(lastDrawerNode);
     }
   }
+  /* Does a chain match the query? Searches bab + book titles, plus narrator
+     names once that chain's graph has been indexed by prefetchForSearch(). */
+  function matchGroup(g, q){
+    var hay = ((g.bab||'') + ' ' + (g.books||[]).join(' ')).toLowerCase();
+    if(hay.indexOf(q) > -1) return true;
+    var nt = narratorText[g.gid];
+    return nt ? (nt.indexOf(q) > -1) : false;
+  }
+
   /* the list currently being shown (respects the active search filter) */
   function currentList(){
     var q = ($search.value || '').trim().toLowerCase();
     if(!q) return groups;
-    return groups.filter(function(g){
-      var hay = ((g.bab||'') + ' ' + (g.books||[]).join(' ')).toLowerCase();
-      return hay.indexOf(q) > -1;
-    });
+    return groups.filter(function(g){ return matchGroup(g, q); });
   }
 
   /* ========================================================
@@ -863,10 +879,27 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
        imported data files stay byte-exact to the pinned upstream commit. */
     groups  = ((res[0] && res[0].groups) || []).filter(function(g){ return g.gid !== 'ijaza_demo'; });
     sources = (res[1] && res[1].sources) || {};
+    /* Hero stats — data-driven so they always match what the UI actually shows
+       (demo chain + demo source are excluded above / below). */
     var totalNodes = groups.reduce(function(s,g){ return s + (g.n_nodes||0); }, 0);
+    var realSources = Object.keys(sources).filter(function(k){
+      var s = sources[k];
+      return k !== 'DEMO' && (!s || s.medium !== 'demo');
+    }).length;
+    if($statChains)  $statChains.textContent  = groups.length.toLocaleString('en-US');
     $statNodes.textContent = totalNodes.toLocaleString('en-US');
+    if($statSources) $statSources.textContent = realSources.toLocaleString('en-US');
     renderChainList(groups);
-    if(groups.length){ loadGraph(groups[0].gid); }
+    /* Deep-link: open the chain named in the URL hash (#gid) if it's valid,
+       otherwise default to the first chain. */
+    var startGid = gidFromHash();
+    if(!startGid || !groups.some(function(g){ return g.gid === startGid; })){
+      startGid = groups.length ? groups[0].gid : null;
+    }
+    if(startGid){ loadGraph(startGid); }
+    /* Build the narrator search index in the background (also warms the
+       per-chain graph cache so clicking a card is instant). */
+    prefetchForSearch();
   }).catch(function(err){
     console.error('[Ijāzah Network] index load failed', err);
     $grid.innerHTML = '';
@@ -887,6 +920,13 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       var card = document.createElement('div');
       card.className = 'chain-card';
       card.setAttribute('data-gid', g.gid);
+      /* a11y: the card acts as a button — keyboard-focusable & activatable.
+         Label is Thai (the bab is Arabic and may be gated off). */
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-label',
+        'แสดงแผนภูมิสายอิญาซะฮ์ · ' + (g.n_nodes||0) + ' ผู้รายงาน · ' +
+        (g.continuous ? 'สายต่อเนื่อง' : 'พบช่วงที่สายขาด'));
 
       /* bab is Arabic — gated. When Arabic is off, show a Thai placeholder. */
       card.appendChild(arabicEl('div','chain-bab', g.bab || '', 'สายอิญาซะฮ์'));
@@ -912,6 +952,12 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       card.appendChild(foot);
 
       card.addEventListener('click', function(){ loadGraph(g.gid); });
+      card.addEventListener('keydown', function(ev){
+        if(ev.key === 'Enter' || ev.key === ' ' || ev.key === 'Spacebar'){
+          ev.preventDefault();
+          loadGraph(g.gid);
+        }
+      });
       $grid.appendChild(card);
     });
     markActiveCard(curGraph && curGraph.meta ? curGraph.meta.gid : null);
@@ -920,7 +966,10 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   function markActiveCard(gid){
     var cards = $grid.querySelectorAll('.chain-card');
     for(var i=0;i<cards.length;i++){
-      cards[i].classList.toggle('active', cards[i].getAttribute('data-gid') === gid);
+      var on = cards[i].getAttribute('data-gid') === gid;
+      cards[i].classList.toggle('active', on);
+      if(on) cards[i].setAttribute('aria-current', 'true');
+      else cards[i].removeAttribute('aria-current');
     }
   }
 
@@ -929,11 +978,7 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     var q = ($search.value || '').trim().toLowerCase();
     $searchClear.classList.toggle('visible', !!q);
     if(!q){ renderChainList(groups); return; }
-    var filtered = groups.filter(function(g){
-      var hay = ((g.bab||'') + ' ' + (g.books||[]).join(' ')).toLowerCase();
-      return hay.indexOf(q) > -1;
-    });
-    renderChainList(filtered);
+    renderChainList(groups.filter(function(g){ return matchGroup(g, q); }));
   }
   $search.addEventListener('input', applyFilter);
   $searchClear.addEventListener('click', function(){ $search.value=''; applyFilter(); $search.focus(); });
@@ -954,26 +999,82 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   }
   function hideOverlay(){ $overlay.classList.add('hidden'); }
 
+  /* Index a chain's narrator names (disp/full) for the search filter. */
+  function indexNarrators(gid, data){
+    if(narratorText[gid]) return;
+    var parts = [];
+    (data.nodes||[]).forEach(function(n){
+      if(n.disp) parts.push(n.disp);
+      if(n.full && n.full !== n.disp) parts.push(n.full);
+    });
+    narratorText[gid] = parts.join(' ').toLowerCase();
+  }
+
+  /* Render an already-fetched graph and reflect it in the URL hash. */
+  function applyGraph(data, gid){
+    curGraph = data;
+    buildIndices(data);
+    renderGraphHeader(data);
+    renderCytoscape(data);
+    populatePathSelectors(data);
+    markActiveCard(gid);
+    /* Deep-link: keep the URL in sync (no history spam, no scroll jump).
+       replaceState does not fire hashchange, so this won't loop. */
+    if(gidFromHash() !== gid){
+      try { history.replaceState(null, '', '#' + gid); }
+      catch(e){ location.hash = gid; }
+    }
+  }
+
   function loadGraph(gid){
     showOverlay('กำลังโหลดแผนภูมิของสายนี้…');
     $titleAr.textContent = '';
     $status.innerHTML = '';
     $pathResult.textContent = '';
+    if(graphCache[gid]){ applyGraph(graphCache[gid], gid); return; }
     fetch(GRAPH_BASE + gid + '.json')
       .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
       .then(function(data){
-        curGraph = data;
-        buildIndices(data);
-        renderGraphHeader(data);
-        renderCytoscape(data);
-        populatePathSelectors(data);
-        markActiveCard(gid);
+        graphCache[gid] = data;
+        indexNarrators(gid, data);
+        applyGraph(data, gid);
       })
       .catch(function(err){
         console.error('[Ijāzah Network] graph load failed', gid, err);
         overlayError('ไม่สามารถโหลดแผนภูมิของสายนี้ได้ — โปรดลองสายอื่น');
       });
   }
+
+  /* Warm every chain's graph in the background: builds the narrator search
+     index and makes subsequent card clicks instant. Best-effort — a failed
+     chain simply stays searchable by bab/books only. */
+  function prefetchForSearch(){
+    var run = function(){
+      groups.forEach(function(g){
+        if(narratorText[g.gid]) return;
+        fetch(GRAPH_BASE + g.gid + '.json')
+          .then(function(r){ return r.ok ? r.json() : null; })
+          .then(function(data){
+            if(!data) return;
+            graphCache[g.gid] = data;
+            indexNarrators(g.gid, data);
+            if(($search.value||'').trim()){ applyFilter(); }
+          })
+          .catch(function(){});
+      });
+    };
+    if(window.requestIdleCallback){ requestIdleCallback(run, {timeout:2000}); }
+    else { setTimeout(run, 800); }
+  }
+
+  /* Browser back/forward or a manually-edited hash → switch chains. */
+  window.addEventListener('hashchange', function(){
+    var gid = gidFromHash();
+    if(gid && groups.some(function(g){ return g.gid === gid; }) &&
+       (!curGraph || !curGraph.meta || curGraph.meta.gid !== gid)){
+      loadGraph(gid);
+    }
+  });
 
   function buildIndices(data){
     nodeById = {}; adj = {}; edgeMap = {}; nodeOrder = {}; holderIds = {};
@@ -1179,17 +1280,21 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
       var maxOD = ods.length ? Math.max.apply(null, ods) : 0;
       if(maxOD < 1){ maxOD = 1; }
       cy.nodes('[isRoot = 0]').forEach(function(n){
-        var od = n.outdegree(false);
-        var sz = 36 + Math.min(od / maxOD * 36, 36);   /* 36–72px */
-        var fs = 13 + Math.min(od / maxOD * 4, 4);      /* 13–17px */
-        n.style({ 'width': sz + 'px', 'height': sz + 'px', 'font-size': fs + 'px' });
+        var r  = n.outdegree(false) / maxOD;            /* 0..1 hub weight */
+        var pad = 9 + Math.round(r * 9);                /* 9–18px capsule padding */
+        var fs  = 13 + Math.round(r * 4);               /* 13–17px label */
+        /* Emphasise hubs via PADDING + font only — keep width/height = label
+           (base style) so the capsule always fits its Arabic name and never
+           clips. Bigger hubs read larger without truncation; sizes scale
+           smoothly (no fixed-square jumps) → clearer + more balanced. */
+        n.style({ 'padding': pad + 'px', 'font-size': fs + 'px' });
       });
     })();
 
     var layoutName = dagreReady ? 'dagre' : 'breadthfirst';
     var layoutOpts = dagreReady
-      ? { name:'dagre', rankDir:'TB', nodeSep:40, rankSep:80, edgeSep:12, fit:false }
-      : { name:'breadthfirst', directed:true, spacingFactor:1.1, fit:false };
+      ? { name:'dagre', rankDir:'TB', nodeSep:55, rankSep:110, edgeSep:20, fit:false }
+      : { name:'breadthfirst', directed:true, spacingFactor:1.3, fit:false };
     graphLayoutOpts = layoutOpts;   /* FLAG 4: reuse for in-place re-layout */
 
     var lay = cy.layout(layoutOpts);
