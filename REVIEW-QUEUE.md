@@ -210,3 +210,18 @@ All: `block-ar` kept **byte-exact** (before==after verified); every `<sup class=
 
 ## Bibliography note (Bibliography Standard — no fabrication)
 - Across the batch, bibliography entries include ONLY details the Drive source provided (author + native-Arabic title, or source-given page/publisher as in arafah's numbered list). Where building agents had reconstructed muhaqqiq/place/publisher/year not in the source (usul ×6, paper Bloom/Goitein), the orchestrator trimmed them to the source-provided form. Fuller Chicago-style citations may be added editorially after verification.
+
+## Repo-wide audit (2026-06-19)
+### excerpts written — need editorial review before publish (4 articles)
+4 entries had empty `excerpt` in articles.json; drafted 1-sentence summaries from each
+.article-body intro (user-approved). Verify wording/accuracy:
+- hammam-bathhouses-in-muslim-lands
+- al-tufayli-freeloaders
+- political-reform-under-the-mamluks  (the Mamluk tie is inferred from the title — confirm)
+- ghazali-and-ilm-al-kalam
+### FLAG: lint-article.js over-flags verse inside .ar-translation (S2 verse exception)
+Poetry translations that use `.ar-translation` (not `.poem-th`) get flagged for ทว่า/มิใช่
+but are legitimate S2 verse exceptions — e.g. kalam/shia-scholars-challenge-asharism.html L445;
+tarikh/sexuality-in-caliphal-court.html L474/489/516/533/534. Options: (a) wrap the Thai verse
+in `.poem-th`, or (b) extend the linter mask to verse `.ar-translation`. NOT auto-fixed
+(re-classing affects rendering). No real prose S2 violations exist.
