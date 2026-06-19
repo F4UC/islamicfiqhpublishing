@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ความสมานฉันท์ระหว่างมัสฮับ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="ทัศนะของอิหม่ามอัชชะอ์รอนีย์ว่าด้วยการประนีประนอมและความสมานฉันท์ระหว่างมัสฮับทั้งสี่ ผ่านหนังสือ อัลมีซาน อัลกุบรอ และทฤษฎีตัคฟีฟ-ตัชดีด">
+<meta name="keywords" content="นิติศาสตร์อิสลาม, ฟิกฮ์, มัสฮับ, อัชชะอ์รอนีย์, อัลมีซาน อัลกุบรอ, การประนีประนอมมัสฮับ, ตัคฟีฟ, ตัชดีด">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ความสมานฉันท์ระหว่างมัสฮับ — Islamic Fiqh Publishing">
+<meta property="og:description" content="แนวทางของอิหม่ามอัชชะอ์รอนีย์ในการประนีประนอมความแตกต่างทางนิติศาสตร์ระหว่างมัสฮับ ผ่านหนังสือ อัลมีซาน อัลกุบรอ">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/harmony-between-the-madhabs">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/nitisart/harmony-between-the-madhabs">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ความสมานฉันท์ระหว่างมัสฮับ",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/nitisart/harmony-between-the-madhabs"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="harmony-between-the-madhabs">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<!-- HERO — no-hero (Rule 67): solid banner + eyebrow + H1, NO <img>. -->
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์</a>
+      <h1 class="article-feature-title">ความสมานฉันท์ระหว่างมัสฮับ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">การศึกษานิติศาสตร์อิสลาม (ฟิกฮ์) มีลักษณะเด่นคือการมีอยู่ของสำนักคิด (มัสฮับ) ที่หลากหลาย ซึ่งแต่ละสำนักคิดได้นำเสนอการตีความและระเบียบวิธีที่แตกต่างกันในการปรับใช้กฎหมายชะรีอะฮ์ ในบรรดานักปราชญ์เหล่านี้ อิหม่ามอัชชะอ์รอนีย์ นักวิชาการชาวอียิปต์ผู้มีชื่อเสียงในศตวรรษที่ 16 มีความโดดเด่นจากความพยายามบุกเบิกในการสนับสนุนการประนีประนอมและความอดทนอดกลั้นระหว่างสำนักคิดที่หลากหลายเหล่านี้ หนังสือเล่มหนึ่งของท่านที่มีชื่อว่า “อัลมีซาน อัลกุบรอ”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">1</a></sup> ได้นำเสนอกรอบความคิดหนึ่งในการทำความเข้าใจความแตกต่างระหว่างมัสฮับต่างๆ ท่านเชื่อว่าความแตกต่างเหล่านี้เป็นบ่อเกิดแห่งความสมบูรณ์และความยืดหยุ่นในกฎหมายอิสลาม มากกว่าที่จะเป็นสาเหตุของความแตกแยก แนวทางของท่านมีรากฐานมาจากความเคารพอย่างลึกซึ้งต่อหลักการและระเบียบวิธีของแต่ละสำนักคิด พร้อมทั้งยืนยันถึงความเข้าใจที่เป็นหนึ่งเดียวในหลักการแก่นแท้ของอิสลาม</p>
+
+      <p>หนังสือ “อัลมีซาน อัลกุบรอ” เป็นเครื่องพิสูจน์ถึงวิสัยทัศน์ของอิหม่ามอัชชะอ์รอนีย์ในเรื่องเอกภาพทางนิติศาสตร์และจิตวิญญาณ หนังสือเล่มนี้ได้สรุปทัศนะและคำวินิจฉัยต่างๆ ของมัสฮับที่แตกต่างกัน โดยเน้นให้เห็นถึงความคล้ายคลึงและความแตกต่างที่สามารถประนีประนอมกันได้ งานของอิหม่ามอัชชะอ์รอนีย์ไม่ได้เป็นเพียงการศึกษาเชิงเปรียบเทียบ แต่ยังเป็นการเรียกร้องให้เกิดการปฏิบัติกฎหมายอิสลามในเชิงบูรณาการและสอดคล้องควบคู่ไปกับเอกภาพทางจิตวิญญาณ เราจะสำรวจมุมมองของอิหม่ามอัชชะอ์รอนีย์เกี่ยวกับการประนีประนอมระหว่างมัสฮับตามที่นำเสนอในหนังสือ “อัลมีซาน อัลกุบรอ” โดยจะเจาะลึกถึงแนวทางเชิงระเบียบวิธี, บริบททางประวัติศาสตร์ของผลงานของท่าน และผลกระทบต่อแนวคิดทางนิติศาสตร์อิสลามในยุคต่อมา ด้วยการตรวจสอบการเน้นย้ำของอิหม่ามอัชชะอ์รอนีย์ในเรื่องความอดทนอดกลั้นและการประนีประนอมความแตกต่างทางนิติศาสตร์ ทั้งนี้เราก็มุ่งหวังที่จะชี้ให้เห็นถึงความเกี่ยวข้องที่ไม่เคยล้าสมัยของแนวคิดของท่านในการสนทนาร่วมสมัยเกี่ยวกับนิติศาสตร์อิสลามและเอกภาพ</p>
+
+      <h2 class="article-h2">ประวัติโดยย่อของอิหม่ามอัชชะอ์รอนีย์</h2>
+
+      <p>นามของท่านคือ อับดุลวะฮ์ฮาบ บิน อะห์มัด บิน อะลี อัชชะอ์รอนีย์ เกิดเมื่อวันที่ 27 เดือนรอมฎอน ปีฮิจเราะห์ศักราชที่ 898 (ค.ศ. 1493) ณ ประเทศอียิปต์ปัจจุบัน ตั้งแต่วัยเยาว์ ท่านได้ทุ่มเทให้กับการศึกษาศาสตร์ตะเซาวุฟ เชคซูฟีของท่านในเวลาต่อมา คือ อะลี อัลเคาวาศ ซึ่งมีบทบาทสำคัญอย่างยิ่งต่อการเติบโตทางจิตวิญญาณของท่าน</p>
+
+      <p>การศึกษาของท่านอิหม่ามอัชชะอ์รอนีย์นั้น กว้างขวางมาก ท่านได้ศึกษาทั้งฟิกฮ์, หะดีษ, ซีเราะฮ์, นะห์วู (ไวยากรณ์), กะลาม (เทววิทยา) และตะเซาวุฟ ในด้านฟิกฮ์ ท่านได้ศึกษาตำราของทั้งสี่มัสฮับ ในบรรดาคณาจารย์ที่ท่านอัชชะอ์รอนีย์ได้ศึกษาด้วยนั้น มีชื่อของอะมีนุดดีน อัลฆ็อมรีย์, ชัยคุลอิสลาม ซะกะรียา อัลอันศอรีย์ และญะลาลุดดีน อัสสุยูฏีย์ เป็นที่โดดเด่น ภายใต้การชี้แนะของชัยคุลอิสลาม ซะกะรียา อัลอันศอรีย์ อิหม่ามอัชชะอ์รอนีย์ได้อ่านตำราด้านฟิกฮ์, อุศูลุลฟิกฮ์ (หลักนิติศาสตร์) และตะเซาวุฟ เช่น เราเฎาะฮ์, มินฮาจ , ตัฟซีร อัลกุรอาน อัลอะซีม, ฮาชิยะฮ์ ฏิบบีย์ อธิบายตัฟซีรของอัลกัชชาฟ, ญัมอุลญะวามิอ์และอื่นๆ อีกมากมาย ความรู้ที่ลึกซึ้งและกว้างขวางของอิหม่ามอัชชะอ์รอนีย์ยังสามารถเห็นได้จากเนื้อหาในหนังสือ “อัลมีซาน อัลกุบรอ” อิทธิพลของท่านที่มีต่อนิติศาสตร์อิสลามและจิตวิญญาณในยุคออตโตมันเป็นที่ยอมรับอย่างกว้างขวาง</p>
+
+      <h2 class="article-h2">การวิเคราะห์โครงสร้าง, รูปแบบ และแนวทางของ อัลมีซาน</h2>
+
+      <p>หนังสือ “อัลมีซาน อัลกุบรอ” เริ่มต้นด้วยบทนำที่ครอบคลุม ซึ่งผู้เขียนได้สรุปวัตถุประสงค์และหลักการพื้นฐานของอัลมีซาน โดยได้รับการสนับสนุนจากการอ้างอิงโองการอัลกุรอานและวจนะของท่านศาสดา ﷺ ที่เกี่ยวข้อง หนังสือเล่มนี้มีโครงสร้างแบ่งออกเป็น 29 ส่วน โดยแต่ละส่วนจะกล่าวถึงคำถามสมมติและคำตอบที่สอดคล้องกัน ท่านยังใช้แผนภาพประกอบเพื่อยกตัวอย่างที่เป็นรูปธรรม เช่น แผนภาพต้นไม้ ซึ่งแสดงถึงความเชื่อมโยงระหว่างแหล่งที่มาของชะรีอะฮ์กับกิ่งก้านสาขาของมัน (คือทัศนะของมัสฮับต่างๆ) ท่านใช้วงกลม, ตาข่าย และแผนภาพอื่นๆ เพื่อแสดงให้เห็นว่า ทัศนะของนักนิติศาสตร์ทั้งหลายล้วนมีต้นกำเนิดมาจากแหล่งที่มาจากพระผู้เป็นเจ้าแหล่งเดียวกัน และด้วยเหตุนี้จึงมีความถูกต้องเท่าเทียมกัน การปฏิบัติตามมัสฮับใดๆ ก็ล้วนเป็นการปฏิบัติตามพระบัญชาของพระผู้เป็นเจ้าทั้งสิ้น</p>
+
+      <p>หนังสือเล่มนี้ยังรวมถึงส่วนที่ปกป้องบรรดามุจตะฮิด (นักวินิจฉัยบทบัญญัติ) จากข้อกล่าวหาว่าพวกเขาออกทัศนะตามการใช้เหตุผลส่วนตัว และเน้นย้ำถึงความระมัดระวังและความเคารพของพวกเขาต่อเรื่องราวทางศาสนา ตัวอย่างเช่น ท่านอัชชะอ์รอนีย์ได้อุทิศหลายส่วนเพื่อปกป้องอิหม่ามอบู หะนีฟะฮ์ ท่านได้ตอบโต้คำวิจารณ์เกี่ยวกับการใช้กิยาส (การเทียบเคียง) ในเชิงรุกของอิหม่ามอบู หะนีฟะฮ์ และเน้นย้ำว่า การเปลี่ยนแปลงทัศนะไปตามกาลเวลา เช่นเดียวกับกรณีของอิหม่ามอัชชาฟิอีย์นั้น เป็นเรื่องธรรมชาติเมื่อนักวิชาการได้รับความรู้มากขึ้น</p>
+
+      <p>อิหม่ามอัชชะอ์รอนีย์อนุญาตให้ย้ายมัสฮับได้ โดยเฉพาะในกรณีที่มีความจำเป็น (ฎ่อรูเราะฮ์) และได้วางเงื่อนไขสำหรับการย้ายดังกล่าว เช่น ต้องไม่ขัดแย้งกับมติเอกฉันท์ (อิจมาอ์) และต้องไม่กระทำไปเพราะความไม่รู้ ท่านได้กล่าวถึงนักวิชาการคนสำคัญๆ ที่เคยเปลี่ยนมัสฮับของตน เพื่อชี้ให้เห็นว่าการเปลี่ยนผ่านเช่นนี้เป็นสิ่งที่อนุญาต ตราบใดที่ไม่ละเมิดหลักการพื้นฐาน</p>
+
+      <p>ท่านอัชชะอ์รอนีย์ได้กล่าวถึงทั้งหะดีษที่ศอเฮี้ยะฮ์ (ถูกต้อง) และเฎาะอีฟ (อ่อน) ผ่านทฤษฎีการผ่อนปรนและตัชดีด (ความเข้มงวด) ของท่าน ท่านไม่ได้เลือกหะดีษหนึ่งเหนืออีกหะดีษหนึ่ง แต่กลับจัดหมวดหมู่หะดีษเหล่านั้นตามความสามารถของมุกัลลัฟ (ผู้ที่ต้องรับผิดชอบตามบัญญัติอิสลาม) และใช้หนังสือรวบรวมหะดีษที่ครอบคลุมของอัลฮาฟิศ อัลบัยฮะกีย์ โดยจัดเรียงเป็นหมวดหมู่ต่างๆ เช่น หะดีษที่ขัดแย้งกัน, หะดีษที่สนับสนุนกันและหะดีษที่มีทัศนะของนักวิชาการประกอบ ท่านจัดลำดับความสำคัญของหะดีษตามระบบ โดยให้ความสำคัญแก่หะดีษมัรฟูอ์ (ที่สืบย้อนถึงท่านศาสดา ﷺ), หะดีษจากบุคอรีและมุสลิม, หะดีษที่มีคำสั่งชัดเจนและหะดีษที่รายงานโดยเศาะหาบะฮ์ (สหายของท่านศาสดา ﷺ) ซึ่งมีลำดับเหนือกว่าตาบิอีน (ผู้ตามเศาะหาบะฮ์)</p>
+
+      <p>นอกจากนี้ ท่านยังพิจารณาสถานะของผู้รายงาน โดยเศาะหาบะฮ์ที่มีสถานะสูงกว่าจะได้รับความสำคัญก่อน</p>
+
+      <p>ท่านอัชชะอ์รอนีย์ได้ประยุกต์ใช้หลักการตัคฟีฟและ ตัชดีดในฟิกฮ์ โดยจัดหมวดหมู่ทัศนะของนักวิชาการ และบางครั้งก็ให้เหตุผลสำหรับความแตกต่างของพวกเขา ท่านใช้คำศัพท์อย่างมุค็อฟฟัฟ (ผ่อนปรน), มุชัดดัด (เข้มงวด), และมุฟัศศ็อล (มีรายละเอียด) เพื่ออธิบายทัศนะที่หลากหลาย ตัวอย่างเช่น ในประเด็นการขายแป้งสาลี ทัศนะที่เข้มงวดของอิหม่ามมาลิกและอิหม่ามอัชชาฟิอีย์นั้นตรงกันข้ามกับทัศนะที่ผ่อนปรนกว่าของอิหม่ามอะห์มัดและอิหม่ามอบู หะนีฟะฮ์</p>
+
+      <p>ท่านมักจะอ้างถึงคุณสมบัติที่คาดหวังจากมุกัลลัฟ โดยแบ่งพวกเขาออกเป็นอะกาบิร (ผู้ที่มีศรัทธาและความสามารถทางกายภาพที่เข้มแข็ง) และอะศอฆิร (ผู้ที่มีศรัทธาและความสามารถทางกายภาพที่อ่อนแอกว่า) หนังสือเล่มนี้อ้างถึงตัวอย่างเฉพาะ เช่น การคืนสินค้าที่ชำรุดโดยทันที หรือการควบคุมราคา เพื่ออธิบายการแบ่งประเภทเหล่านี้ ท่านอัชชะอ์รอนีย์เน้นย้ำถึงลำดับชั้นของมุกัลลัฟและการเชื่อฟังชะรีอะฮ์ของพวกเขาตามสถานะและคุณลักษณะของแต่ละคน</p>
+
+      <p>อัชชะอ์รอนีย์สรุปว่ากฎเกณฑ์ทางศาสนาที่แตกต่างกัน (วาญิบ, มุสตะฮับ, มุบาห์, มักรูฮ์, หะรอม) ล้วนมีที่มาจากพระผู้เป็นเจ้า และทำหน้าที่เป็นความเมตตาต่อการล่วงละเมิดของมนุษยชาติ ซึ่งสอดคล้องกับหลักการของชะรีอะฮ์</p>
+
+      <h2 class="article-h2">สาเหตุของความหลากหลายในชะรีอะฮ์</h2>
+
+      <p>ตามทัศนะของอิหม่ามอัชชะอ์รอนีย์ ชะรีอะฮ์มีความหลากหลายตามความสามารถทางกายภาพและสติปัญญาของมุกัลลัฟ และตามกาลเวลาและสถานที่ของการบังคับใช้ชะรีอะฮ์ อัลลอฮ์ได้ทรงสร้างจักรวาลให้มีเงื่อนไขและสภาวะที่หลากหลาย ทำให้สรรพสิ่งทั้งปวงรวมถึงมนุษย์ สอดคล้องกับพระประสงค์ของพระองค์ พระองค์ทรงแบ่งสรรพสิ่งที่ทรงสร้างออกเป็นหมวดหมู่ตามความสามารถและสถานการณ์ของพวกเขา เพื่อให้เกิดความสมดุลในหมู่พวกเขา</p>
+
+      <p>ความหลากหลายในชะรีอะฮ์เหล่านี้มีไว้เพื่อวัดความจริงใจและการเชื่อฟังของบ่าวของพระองค์ เนื่องจากอัลลอฮ์ทรงสร้างมนุษย์ให้มีความเข้มแข็งและจุดอ่อนที่แตกต่างกัน อิหม่ามอัชชะอ์รอนีย์ยืนยันว่า ความแตกต่างเหล่านี้ไม่ได้อยู่ในแก่นแท้ของศาสนา แต่อยู่ในกฎหมายส่วนปลีกย่อย (อัลฟุรูอ์) ความหลากหลายในทัศนะทางนิติศาสตร์นี้มีจุดมุ่งหมายเพื่อยกระดับและปกป้องปัจเจกบุคคล โดยแต่ละคนจะได้รับการชี้นำโดยอิหม่ามที่เหมาะสมกับความต้องการของตนท้ายที่สุด แม้ว่าจะมีหนทางที่หลากหลาย แต่แหล่งที่มาของชะรีอะฮ์ยังคงเป็นหนึ่งเดียว และอัลลอฮ์ได้ทรงแสดงหนทางที่จะประนีประนอมความแตกต่างเหล่านี้แล้ว</p>
+
+      <p>ท่านอัชชะอ์รอนีย์อธิบายว่า ชะรีอะฮ์ได้เสนอข้อบัญญัติและข้อห้ามในสองระดับ คือ ตัคฟีฟ (การผ่อนปรน) และตัชดีด (ความเข้มงวด) โดยขึ้นอยู่กับความสามารถทางกายภาพและสติปัญญาของแต่ละบุคคล ผู้ที่แข็งแรงทั้งร่างกายและศรัทธาจะได้รับบัญญัติที่เข้มงวดกว่า (ตัชดีด) ในขณะที่ผู้อ่อนแอจะได้รับบัญญัติที่ง่ายกว่า (ตัคฟีฟ) ความหลากหลายนี้ช่วยให้ทุกคนสามารถปฏิบัติตามชะรีอะฮ์ได้ตามความสามารถของตน ท่านอัชชะอ์รอนีย์เน้นย้ำถึงความสำคัญของการจำแนกทัศนะที่ขัดแย้งกันให้อยู่ในสองหมวดหมู่นี้ เพื่อประนีประนอมความแตกต่างในชะรีอะฮ์ ท่านได้ให้เหตุผลไว้ว่า ทัศนะของบรรดามุจตะฮิดนั้น ครอบคลุมความเป็นไปได้ในหลายระดับ และชะรีอะฮ์ก็ครอบคลุมทัศนะเหล่านี้ทั้งหมด ซึ่งสะท้อนให้เห็นถึงความหลากหลายในระดับของ อิสลาม, อีหม่านและอิห์ซาน โดยท่านได้อ้างคำกล่าวของอิหม่ามอัชชาฟิอีย์ ผู้ซึ่งเลือกที่จะปฏิบัติทั้งสองสายรายงานที่ขัดแย้งกัน ดีกว่าที่จะทิ้งสายรายงานใดสายรายงานหนึ่งไป</p>
+
+      <h2 class="article-h2">การประนีประนอมมัสฮับของอิหม่ามอัชชะอ์รอนีย์</h2>
+
+      <p>เกี่ยวข้องกับการหาจุดร่วมและทำความเข้าใจเหตุผลเบื้องหลังทัศนะของแต่ละมัสฮับ นี่คือตัวอย่างบางส่วน:</p>
+
+      <ol class="article-summary">
+        <li><strong>การละหมาด:</strong> เกี่ยวกับทัศนะของมัสฮับฮะนะฟีย์และชาฟิอีย์ในเรื่องการละหมาดขณะเดินทาง ทั้งสองมัสฮับเห็นพ้องต้องกันในหลักการของการย่อละหมาด แต่แตกต่างกันในเรื่องระยะทางที่กำหนดเพื่อให้ถือว่า นั่นเป็นการเดินทาง</li>
+        <li><strong>การถือศีลอด:</strong> เกี่ยวกับทัศนะของมัสฮับฮะนะฟีย์และมาลิกีย์ในเรื่องการถือศีลอดใน “วันแห่งความคลุมเครือ” (วันที่ไม่แน่ใจว่าเดือนรอมฎอนได้เริ่มขึ้นแล้วหรือไม่) ทั้งสองมัสฮับเห็นพ้องในหลักการของการถือศีลอด แต่แตกต่างกันในเรื่องวันที่เจาะจง</li>
+        <li><strong>มรดก:</strong> เกี่ยวกับทัศนะของมัสฮับฮะนะฟีย์และชาฟิอีย์ในเรื่องมรดกของหลาน ท่านได้แสดงให้เห็นว่าทั้งสองมัสฮับเห็นพ้องในหลักการของการสืบทอดมรดก แต่แตกต่างกันในเรื่องส่วนแบ่งที่เจาะจง ท่านได้ประนีประนอมเรื่องนี้โดยยอมรับทั้งสองทัศนะ โดยพิจารณาจากบริบทและความสัมพันธ์ระหว่างผู้เสียชีวิตและทายาท</li>
+        <li><strong>การทำความสะอาด:</strong> เกี่ยวกับทัศนะของมัสฮับฮะนะฟีย์และมาลิกีย์ในเรื่องการทำความสะอาดของผู้ที่สัมผัสร่างผู้เสียชีวิต ทั้งสองมัสฮับเห็นพ้องในหลักการของการทำความสะอาด แต่แตกต่างกันในเรื่องวิธีการที่เจาะจง</li>
+      </ol>
+
+      <p>ท่านอิหม่ามอัชชะอ์รอนีย์ได้เตือนถึงการนำหลักการเหล่านี้ไปใช้ในทางที่ผิด โดยเน้นย้ำว่าผู้ที่มีความสามารถไม่ควรเลือกทางเลือกที่ง่ายกว่า เว้นแต่ในกรณีจำเป็น ท่านสรุปว่าความแตกต่างทางทัศนะสามารถประนีประนอมได้โดยการทำความเข้าใจบริบทและเจตนาของทัศนะนั้นๆ ซึ่งจะช่วยขจัดความขัดแย้งและทำให้มั่นใจได้ว่า ทุกทัศนะสอดคล้องกับอัลกุรอานและซุนนะฮ์</p>
+
+      <p>ความแตกต่างในการอนุมานกฎหมายปลีกย่อยจากแหล่งที่มาหลักของกฎหมายอิสลามส่งผลให้เกิดมัสฮับต่างๆ ขึ้นมา มัสฮับเหล่านี้สะท้อนถึงความแตกต่างในการรับรู้ของบรรดาอิหม่ามต่อบทบัญญัติทางกฎหมาย</p>
+
+      <p>ดังนั้น ผู้ใดก็ตามที่ยึดมั่นในมัสฮับใดมัสฮับหนึ่ง หรืออิหม่ามท่านใดท่านหนึ่ง จะถูกเรียกว่าเป็นมุก็อลลิด (ผู้ปฏิบัติตาม) ของมัสฮับนั้นๆ หรืออิหม่ามท่านนั้น</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>แนวทางของอิหม่ามอัชชะอ์รอนีย์ในการประนีประนอมมัสฮับมีลักษณะเด่นคือความระมัดระวังและการตระหนักถึงบริบท ท่านได้ค้นหาจุดร่วมระหว่างแนวทางนิติศาสตร์ที่หลากหลาย โดยเน้นถึงความปลอดภัยทางจิตวิญญาณและการหลีกเลี่ยงข้อผิดพลาด ผลงานของท่านได้มอบความเข้าใจเกี่ยวกับมัสฮับในระดับสูง โดยนำเสนอโครงสร้างที่เปิดกว้างสำหรับการแก้ไขข้อขัดแย้งทางกฎหมายในขณะที่ยังคงยอมรับทัศนะและสถานการณ์ที่หลากหลาย แนวทางการวิจัยในอนาคตควรรวมถึงการพิจารณาการประยุกต์ใช้แนวคิดนี้ในบริบททางกฎหมายร่วมสมัย และการวิเคราะห์ผลกระทบต่อปรัชญานิติศาสตร์อิสลาม นักวิจัยสามารถได้รับความเข้าใจที่ลึกซึ้งยิ่งขึ้นเกี่ยวกับทฤษฎีนิติศาสตร์อิสลามและความสามารถในการส่งเสริมเอกภาพ ความเมตตา และความยุติธรรม โดยการศึกษาผลงานของท่านอิหม่ามอัชชะอ์รอนีย์ให้ลึกซึ้งยิ่งขึ้น</p>
+
+      <!-- CITATION (อ้างอิงบทความนี้) Rule 40. -->
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ความสมานฉันท์ระหว่างมัสฮับ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/harmony-between-the-madhabs.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <!-- BIBLIOGRAPHY: only the author + title the source provides (Bibliography Standard).
+         Arabic title kept native script (Rule 6). -->
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">عبد الوهاب بن أحمد الشعراني، الميزان الكبرى. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>
