@@ -55,3 +55,14 @@ html.dark-mode .idx-home .idx-arrow { color: rgba(255,255,255,0.7); }
   .ifp-tools-page .idx-row { grid-template-columns: 44px 1fr auto 28px; gap: 0 14px; }
   .ifp-tools-page .idx-read { font-size: 11px; }
 }
+
+/* ============ Pagination (.ifp-tools-page #pagination .page-btn) ============ */
+.ifp-tools-page .pagination-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px; padding: 48px 24px 8px; margin: 0 auto; }
+.ifp-tools-page .page-btn { min-width: 42px; height: 42px; padding: 0 14px; display: inline-flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-size: 15px; font-weight: 500; line-height: 1; color: rgba(255,255,255,0.72); background: transparent; border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; cursor: pointer; transition: color .2s ease, background .2s ease, border-color .2s ease; }
+.ifp-tools-page .page-btn:hover:not(:disabled) { color: #ffffff; border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.06); }
+.ifp-tools-page .page-btn.active { color: #ffffff; background: #b31b1b; border-color: #b31b1b; font-weight: 600; }
+.ifp-tools-page .page-btn:disabled { opacity: .35; cursor: default; }
+@media (max-width: 768px) {
+  .ifp-tools-page .pagination-container { padding: 32px 16px 4px; gap: 6px; }
+  .ifp-tools-page .page-btn { min-width: 38px; height: 38px; font-size: 14px; padding: 0 10px; }
+}
