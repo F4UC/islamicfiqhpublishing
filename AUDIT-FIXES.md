@@ -352,3 +352,48 @@
 
 ### 2026-06-18 — R52 resolution (One approved) · ethics-of-war-in-islamic-law
 - war: "อิบนุซุบัยร" → "อิบนุซซุบัยร์" (Ibn al-Zubayr; ز sun-letter → al- assimilation → ซซ + ์), 1 occurrence (in a Thai .ar-translation attribution). Other batch fused forms (khadija/twins/dogs/hadith) = standard, left as-is. Re-run this file only: [c] no bare "อิบนุซุบัยร" remain (0), [d] HTMLParser OK, [e] coverage 99.01% (no regression). No Arabic block touched; articles.json/sitemap/index untouched.
+
+---
+
+# PHASE-2 BATCH 10 — Arabic touches log (10 articles, branch `claude/phase2-batch-10`)
+> DRAFT PR. Each scholar `.ar-quote`/`.ar-feature` touch = harakat-strip (R60) and/or R77 punctuation-normalize, operated byte-exact on the consonant skeleton (only U+064B–U+0652/U+0670 deleted). Quran āyāt re-fetched paste-only from api.quran.com (uthmani, R53); hadith re-fetched paste-only from sunnah.com (R8). Skeletons verified against source/canonical (orchestrator independently byte-verified the sacred texts marked ✔).
+
+## nitisart/usul-al-fiqh-foundations — 5 scholar blocks, 0 aya/hadith
+- R60: all 5 blocks stripped to uniformly BARE (source vowelling partial). Skeleton byte-exact.
+- Block 1 (Ibn Khaldun): source typo `الأحكاما` (extra ا) → `الأحكام` (per editor note; R60/R77).
+- Block 5 (al-Juwayni via Ibn al-Salah): R77 removed 2 stray Latin `.`.
+- Bibliography: orchestrator trimmed agent-reconstructed muhaqqiq/place/publisher/year → author+title only (source gave none).
+
+## nitisart/fidyah-kaffarah-and-qada — 17 scholar blocks, 0 aya/hadith
+- R60: all 17 stripped BARE (source partial). Skeleton byte-exact (17/17).
+- R77: removed trailing stray Latin `.` from 13 blocks; block 3 `السنين. والمد` → `السنين، والمد`.
+
+## nitisart/taysir-vs-tasahul-in-fatwa — 9 scholar blocks BARE + 2 aya + 5 hadith
+- aya 2:185 ✔ `يُرِيدُ ٱللَّهُ بِكُمُ ٱلْيُسْرَ وَلَا يُرِيدُ بِكُمُ ٱلْعُسْرَ` (api.quran.com 2:185, paste-only) — orchestrator byte-verified.
+- aya 7:157 ✔ `وَيَضَعُ عَنْهُمْ إِصْرَهُمْ وَٱلْأَغْلَـٰلَ ٱلَّتِى كَانَتْ عَلَيْهِمْ` (api.quran.com 7:157, substring byte-exact) — orchestrator byte-verified.
+- hadith ✔ bukhari:69 `يَسِّرُوا وَلاَ تُعَسِّرُوا، وَبَشِّرُوا وَلاَ تُنَفِّرُوا` — orchestrator byte-verified.
+- hadith ✔ bukhari:6128 `دَعُوهُ، وَأَهْرِيقُوا عَلَى بَوْلِهِ ذَنُوبًا…بُعِثْتُمْ مُيَسِّرِينَ…` — orchestrator byte-verified.
+- hadith bukhari:887 (siwak), muslim:1828 (du'a), bukhari:3560 (ma-khuyyira) — re-fetched paste-only sunnah.com.
+- R60: 9 scholar blocks BARE; R77 normalized (Latin `.`/`,` inside Arabic). Embedded 2:185 inside Ibn ʿAbd al-Barr's quote kept verbatim (R1>R53, #185); canonical voweled 2:185 supplied standalone.
+
+## nitisart/harmony-between-the-madhabs — 0 Arabic blocks (source pure Thai prose; no touch)
+
+## hajj/arafah-time-and-place — 29 scholar blocks BARE + 3 hadith
+- hadith ✔ muslim:1977e `إِذَا رَأَيْتُمْ هِلاَلَ ذِي الْحِجَّةِ…فَلْيُمْسِكْ عَنْ شَعْرِهِ وَأَظْفَارِهِ` — orchestrator byte-verified.
+- hadith ✔ tirmidhi:697 `الصَّوْمُ يَوْمَ تَصُومُونَ…وَالأَضْحَى يَوْمَ تُضَحُّونَ` — orchestrator byte-verified.
+- hadith tirmidhi:802 `الْفِطْرُ يَوْمَ يُفْطِرُ النَّاسُ…` — re-fetched paste-only sunnah.com.
+- R60: 29 scholar blocks BARE (source partial). R77: removed 4 stray Latin `.`, 1 Latin `;` → `؛`. Embedded sacred fragments inside Ibn Hazm / al-Shawkani quotes kept verbatim (R1, #185).
+
+## tarikh/the-mihna-under-al-mamun — 20 scholar blocks VOWELED (R60 ALL path)
+- Source (al-Tabari / Ibn Kathir printed edition) fully voweled (~0.85 ratio across all). R60 ALL path chosen — kept FULLY VOWELED byte-exact from source (no stripping, no auto-vowel). Orchestrator verified 20/20 Arabic skeletons byte-exact in source.
+- R77: removed 3 stray Latin `.` inside scholar Arabic.
+- Embedded Quran fragments Q16:106 / Q2:156 / Q42:11 woven inside scholar quotes kept byte-exact verbatim (R1>R53, #185); no standalone aya-block, no splice.
+
+## tarikh/mamluks-of-sword-and-pen — 13 scholar blocks BARE, 0 aya/hadith
+- R60: all 13 stripped BARE (source partial). Skeleton byte-exact (13/13). R77: no change needed (source already used `،`/`؛`).
+
+## tarikh/politics-power-and-scholarship — 15 scholar blocks BARE, 0 standalone aya/hadith
+- R60: all 15 stripped BARE (source partial). R77: removed stray Latin `.` from blocks 6 (Ibn Hajar) and 7 (Ibn Kathir, incl. mid-sentence `بسبب . الشيخ`→`بسبب الشيخ`).
+
+## tarikh/paper-industry-medieval-islam — 0 Arabic blocks (no touch)
+## tarikh/clockmaking-in-the-mamluk-era — 0 Arabic blocks (no touch)
