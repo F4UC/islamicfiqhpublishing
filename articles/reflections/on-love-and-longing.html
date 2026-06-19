@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ว่าด้วยความรัก ความทุกข์ และการพลัดพราก — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="ความเรียงว่าด้วยนิยามของความรัก ความทุกข์ และการพลัดพราก จากรากศัพท์ของคำว่าดีนและอินซาน สู่บทกวีอุซรีย์และทรรศนะของอิบนุ หัซม์ อัลกุชัยรีย์ และอัลยูซีย์">
+<meta name="keywords" content="มุมพักใจ, ความรัก, การพลัดพราก, บทกวีอุซรีย์, อิบนุ หัซม์, อัลยูซีย์, มัจญ์นูน, ความทุกข์, จิตวิญญาณ">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ว่าด้วยความรัก ความทุกข์ และการพลัดพราก — Islamic Fiqh Publishing">
+<meta property="og:description" content="สำรวจนิยามของความรัก ความทุกข์ และการพลัดพราก ผ่านรากศัพท์ บทกวีอุซรีย์ และทรรศนะของปราชญ์มุสลิม">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/reflections/on-love-and-longing">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/reflections/on-love-and-longing">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ว่าด้วยความรัก ความทุกข์ และการพลัดพราก",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/reflections/on-love-and-longing.html"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="on-love-and-longing">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/reflections.html" class="article-feature-eyebrow">มุมพักใจ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">ว่าด้วยความรัก ความทุกข์ และการพลัดพราก</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">คำว่า “ดีน” (دين) ในธรรมเนียมอิสลามของเรานั้น ไม่ได้ถูกทำความเข้าใจในความหมายเดียวกับคำว่า “ศาสนา” ที่ใช้กันทั่วไปในประวัติศาสตร์ศาสนาของโลกตะวันตก หากแต่แฝงนัยสำคัญหลักไว้หลากหลายประการด้วยกัน เช่น (1) ภาวะหนี้สิน; (2) การยอมจำนน; (3) อำนาจในการตัดสินอันเที่ยงธรรม; (4) สัญชาตญาณหรือแนวโน้มตามธรรมชาติ</p>
+
+      <p>คำกริยา “ดานะ” (دان) ซึ่งมีรากศัพท์มาจากคำว่า “ดีน” นั้น สื่อความหมายถึงการเป็นหนี้ “ดาอิน” (دائن) หรือผู้ที่เป็นหนี้ จะพบว่าตนเองอยู่ภายใต้ข้อบัญญัติต่างๆ ที่ควบคุมหนี้สินและอยู่ใต้อำนาจของเจ้าหนี้โดยตรง ซึ่งโดยธรรมชาติแล้ว ย่อมเกี่ยวข้องกับการตัดสินชี้ขาด ซึ่งเป็นสิ่งที่เกิดขึ้นในสังคมและบ้านเมืองที่มีการจัดระเบียบ ที่เรียกว่า “มุดุน” (مدن) หรือ “มะดาอิน” (مدائن) การมีอยู่ของชุดกฎหมายย่อมต้องตั้งอยู่บนสมมติฐานของวิถีการปฏิบัติที่สอดคล้องกับสิ่งที่สะท้อนอยู่ในกฎหมายนั้นๆ ดังนั้นจึงหมายรวมถึงการยอมรับวิถีการปฏิบัติที่ถือเป็นเรื่องปกติตามธรรมชาติ ซึ่งนำไปสู่นัยสุดท้ายที่สืบเนื่องมาจากคำว่า “ดีน” นั่นคือ:</p>
+
+      <p>สัญชาตญาณตามธรรมชาติของคนเรา หรือ “ฟิฏเราะฮ์” (فطرة) ขณะที่ฟิฏเราะฮ์โหยหาที่จะยอมจำนนต่อพระผู้สร้างและดำรงอยู่ในสภาวะแห่งการนอบน้อมอย่างกลมเกลียว เรื่องนี้ไม่ใช่เป็นเพียงแค่แนวโน้มตามธรรมชาติของมนุษย์ที่จะยอมนอบน้อมต่อพระเจ้าเท่านั้น หากแต่ยังเป็นเรื่องของ “การรักพระองค์” อีกด้วย เป็นองค์ประกอบหนึ่งของฟิฏเราะฮ์ที่จะต้องรักพระเจ้า มันปรารถนาที่จะเห็นผู้เป็นที่รักพอใจในตัวมัน และรังเกียจความไม่พอใจจากพระองค์ หากเราจะอ้างอิงถึงบทกวีร่วมสมัยที่สามารถจับแก่นแท้ของเรื่องนี้ได้ เราอาจยกคำกล่าวของมะห์มูด ดัรวีช ที่เขียนไว้ว่า: “บ้างว่ารักคือแก่นแท้ของชีวา, บ้างว่ามันคือมายาหลอกลวง, แต่อันที่จริงแล้ว ทั้งสองล้วนสัจจริง, เพราะฝ่ายแรกนั้นได้พบพานจิตวิญญาณของตน, ส่วนอีกฝ่ายกลับถูกพรากไปจากมัน”</p>
+
+      <p>นี่คือแก่นแท้แห่งธรรมชาติของมนุษย์ที่จะต้องรักพระผู้สร้างและยอมจำนนต่อพระบัญชาของพระองค์ ยินดีในการกระทำสิ่งที่ทำให้พระองค์พอพระทัย และไม่พอใจในสิ่งที่ทำให้พระองค์ไม่พอพระทัย นี่คือคุณธรรมอันสูงสุดเพื่อการบรรลุถึงความสุขในชีวิตทางโลกนี้</p>
+
+      <p>การมีความยุติธรรมคือการกระทำด้วยวิทยปัญญา โดยที่วิทยปัญญานั้นหมายรวมถึงความรู้ในตำแหน่งที่เหมาะสมของสิ่งต่างๆ และมนุษย์จะยุติธรรมต่อตนเองได้ก็ต่อเมื่อเขาตระหนักถึงสถานะของตนเองเบื้องพระพักตร์พระเจ้า และยอมมอบจิตวิญญาณของตนแด่พระองค์ผ่านการอุทิศตนและดื่มด่ำในการภักดี และในสภาวะเช่นนี้เองที่ความหมายของ “ความรัก” จะปรากฏชัดเจนขึ้น</p>
+
+      <p>เป็นที่พึงระลึกไว้ว่า สตรีคือผู้ที่เข้ามาเติมเต็มและทำให้บุรุษสมบูรณ์ ดังที่นางคือผู้ทำให้ “ระเบียบแห่งการเป็นคู่” ในกรณีของบุรุษนั้นเสร็จสมบูรณ์ ซึ่งเป็นระเบียบที่อัลลอฮ์ได้ทรงใช้ในการสร้างสรรพสิ่งดังคำตรัสของพระองค์ที่ว่า: “และจากทุกสิ่งนั้น เราได้สร้างมาเป็นคู่ๆ” ด้วยเหตุนี้ จึงเป็นเรื่องธรรมดาที่ความสมบูรณ์ของหัวใจจะบรรลุได้ก็ต่อเมื่อการเป็นคู่นี้เสร็จสมบูรณ์ และแนวคิดเช่นนี้ก็ยังถูกถ่ายทอดไว้ในภาษาอีกด้วย</p>
+
+      <p>เป็นที่ทราบกันดีว่าชาวอาหรับเคยเรียกสตรีของพวกเขาว่า “หินนะฮ์” ซึ่งหมายถึง สิ่งที่ (หรือผู้ที่) หัวใจโหยหา เป็นการบ่งชี้ถึงระดับของความว่างเปล่าที่จะเข้าครอบงำเมื่อต้องอยู่ห่างไกลจากผู้เป็นที่รัก นอกจากนี้ยังสะท้อนอยู่ในชื่อของ “ลัยลา” และ “มัจญ์นูน” ซึ่งเรื่องราวของพวกเขานั้นเป็นดั่งอุปมาและการขยายความแนวคิดที่ฝังรากลึกอยู่ในชื่อของพวกเขาเอง ตัวอย่างเช่น สุราเป็นที่รู้จักของชาวอาหรับในนาม “อุมมุ ลัยลา” (แปลตรงตัวว่า “มารดาของลัยลา”) เนื่องจากมันสามารถชักนำให้เข้าสู่สภาวะแห่งความปลาบปลื้มใจ และก็ไม่ใช่เรื่องบังเอิญที่คำว่า “สุรา” (ค็อมร์ - خمر) เองก็เป็นหนึ่งในชื่อที่ใช้เรียก “ความรัก”</p>
+
+      <p>อิบนุลก็อยยิมได้รวบรวมชื่ออื่นๆ อีกมากมายที่ใช้เรียกสภาวะนี้ไว้ เช่น ฮะวา, ศ็อบวะฮ์, สะดัม, หุซน์, อิสติคอนะฮ์, สุฮด์ และอื่นๆ ซึ่งทั้งหมดนี้ล้วนมีรากฐานวนเวียนอยู่กับความปรารถนา, ความทุกข์ทรมาน, ความแผดเผา เป็นการแสดงให้เห็นว่าคำๆ นี้ในทางนิรุกติศาสตร์แล้ว ไม่อาจแยกออกจากอารมณ์ความรู้สึกที่คู่รักประสบเมื่อต้องพรากจากกันได้เลย</p>
+
+      <p>แนวคิดเรื่องความรักไม่ได้ปรากฏอย่างเด่นชัดเช่นนี้เพียงในภาษาอาหรับเท่านั้น แต่ยังสะท้อนอยู่ในอัลกุรอานอย่างชัดเจนอีกด้วย คัมภีร์ของอัลลอฮ์ได้พรรณนาถึงคู่ครอง ซึ่งในที่นี้จะถูกตีความว่าเป็นคู่รัก เนื่องจากมีการพาดพิงถึงความรักระหว่างกันอย่างชัดเจนว่าเป็นดั่ง “อาภรณ์” ให้แก่กันและกัน</p>
+
+      <p>คำๆ นี้ได้รับการตีความจากนักวิชาการบางท่านว่าหมายถึง “ที่พำนักของหัวใจ” โดยที่ผู้เป็นที่รักนั้นจะพำนักอยู่ในหัวใจของผู้รัก ดังที่อัฏเฏาะบะรีย์ ได้เขียนไว้ ในทำนองเดียวกัน มีผู้เสนอว่าคำว่า “ลิบาสัน” (อาภรณ์ - لباسا) ถูกนำมาใช้เพื่อหมายถึง “การโอบกอด” ซึ่งคู่รักจะได้หลอมรวมเป็นหนึ่งเดียวกัน ทั้งในทางกายภาพและในสิ่งที่อยู่เหนือขอบเขตของกายภาพ</p>
+
+      <p>ท่านอัลกุชัยรีย์ ได้อุทิศเนื้อหาส่วนหนึ่งในตำรา “ริสาละฮ์” ของท่านเพื่ออภิปรายเรื่องความรักที่เกี่ยวข้องกับอัลลอฮ์ แม้ว่านัยของมันจะสามารถนำมาปรับใช้กับกรณีของคนรักที่เป็นปุถุชนได้เช่นกันท่านระบุว่า:</p>
+
+      <p>“อัลลอฮ์ได้ทรงพรรณนาถึงเหล่าผู้รักต่อไปอีกว่า พวกเขา “ถ่อมตนต่อหน้าบรรดาผู้ศรัทธา” เพราะพวกเขาได้สละหัวใจของตนเพื่อผู้เป็นที่รักโดยปราศจากความเกลียดชัง และสละจิตวิญญาณของตนเพื่อปกป้องผู้เป็นที่รัก โดยไม่เก็บแม้แต่เศษเสี้ยวเล็กๆ ไว้เพื่อความสุขสบายของตนเองเลย</p>
+
+      <p>จากนั้น พระองค์ได้ตรัสถึงพวกเขาว่า “พวกเขาต่อสู้ในหนทางของอัลลอฮ์ และพวกเขาไม่หวั่นเกรงต่อคำตำหนิติเตียนของผู้ใด” เพราะพวกเขาต่อสู้กับตนเองเพื่อปฏิบัติตามศาสนบัญญัติทั้งหมด, ต่อสู้กับหัวใจของตนเพื่อควบคุมความปรารถนาและอารมณ์ใฝ่ต่ำ, ต่อสู้กับจิตวิญญาณของตนเพื่อขจัดความผูกพัน (กับสิ่งอื่น) และต่อสู้กับแก่นแท้ของหัวใจเพื่อยืนหยัดอย่างมั่นคงในการใคร่ครวญถึงพระองค์ตลอดเวลา</p>
+
+      <p>แล้วพระองค์ก็ตรัสว่า “พวกเขาไม่หวั่นเกรงต่อคำตำหนิติเตียนของผู้ใด” เพราะพวกเขาไม่ใส่ใจต่อการคบหาสมาคมกับมิตรสหาย, ไม่แสวงหาผลประโยชน์ส่วนตน และไม่รู้สึกถึงภาระของโชคชะตา ในขณะที่ไม่เคยหันเหออกจากเส้นทางแห่งความภักดีเลยแม้แต่น้อย”</p>
+
+      <p>ความยากลำบากที่มนุษย์คนหนึ่งยินดีจะเผชิญเพื่อสิ่งใดสิ่งหนึ่งนั้น ย่อมขึ้นอยู่กับความรักที่เขามีต่อสิ่งนั้น ซึ่งท่านนบีมุฮัมมัด ﷺ ได้กล่าวว่า: “การงานทั้งหลายนั้นขึ้นอยู่กับเจตนา และทุกคนจะได้รับตามที่เขาได้ตั้งเจตนาไว้ ผู้ใดที่อพยพเพื่ออัลลอฮ์และศาสนทูตของพระองค์ การอพยพของเขาก็จะเป็นไปเพื่ออัลลอฮ์และศาสนทูตของพระองค์ และผู้ใดที่อพยพเพื่อผลประโยชน์ทางโลก (ดุนยา) หรือเพื่อแต่งงานกับสตรีคนหนึ่ง การอพยพของเขาก็จะเป็นไปตามที่เขาได้แสวงหา”</p>
+
+      <p>“การอพยพ” นั้นเป็นการริเริ่มที่ต้องอาศัยความยากลำบาก (ศาสนทูตของอัลลอฮ์ ﷺ ก็ทรงถูกบังคับให้อพยพภายใต้สถานการณ์ที่โหดร้าย) และหากเราจะใช้คำว่า “การอพยพ” และ “ความยากลำบาก” ในความหมายเดียวกัน หะดีษบทนี้ก็ดูเหมือนจะฉายภาพให้เห็นถึงระดับความรักที่เราอาจมีต่อสิ่งหนึ่งเหนือกว่าอีกสิ่งหนึ่ง เพราะความจริงแล้ว คนเราอาจให้ความสำคัญแก่ผู้เป็นที่รักมากกว่าอัลลอฮ์ หรือให้ความสำคัญแก่ผลประโยชน์ทางวัตถุมากกว่าผู้เป็นที่รัก ซึ่งในทั้งสองกรณีนี้ ล้วนเป็นการขัดขวางการบรรลุถึงรูปแบบของความรักอันบริสุทธิ์และสูงสุด และนำไปสู่การหลงทางด้วยความรักในรูปแบบที่ไม่ได้รับการขัดเกลา</p>
+
+      <p>อย่างไรก็ตาม สำหรับผู้ที่ได้บรรลุถึงสภาวะแห่งความรักแล้ว ไม่ว่าความรักนั้นจะบริสุทธิ์หรือลึกซึ้งเพียงใด แม้ว่าในสายตาของผู้สังเกตการณ์ภายนอก การกล่าวอ้างอย่างง่ายดายถึงวิธีที่ “ผู้ตกเป็นเหยื่อของความรัก” จะหลุดพ้นจากความเจ็บปวดรวดร้าวในหัวใจที่เปี่ยมด้วยรักนั้นอาจดูเป็นเรื่องพื้นฐาน แต่แนวทางเช่นนี้กลับเป็นสิ่งที่ผิดพลาดและมีรากฐานมาจากความไม่รู้อย่างแท้จริง แม้เราจะยอมรับว่าผู้ที่ให้คำแนะนำนั้นเคยตกอยู่ในสถานการณ์เดียวกับผู้ฟังมาก่อน เราก็ต้องไม่ลืมว่าประสบการณ์และจุดยืนของเราไม่ได้ขึ้นอยู่กับธรรมชาติของเหตุการณ์เพียงอย่างเดียว แต่ยังผูกพันอยู่กับความเข้มแข็ง, ความอ่อนไหว, ความรู้, วิทยปัญญา และประสบการณ์ก่อนหน้าที่หล่อหลอมมุมมองของเรา โดยเฉพาะอย่างยิ่ง ความรักนั้นเป็นสิ่งที่ท้าทายความเข้าใจจากภายนอก ความเข้าใจในสภาวะนี้อย่างถ่องแท้ไม่อาจเกิดขึ้นได้จากการศึกษาตำราที่เกี่ยวข้องเพียงอย่างเดียว</p>
+
+      <p>แต่ในทางกลับกัน เขาจะพบว่ามันมีประโยชน์เพียงน้อยนิด จนกว่าเขาจะได้ดื่มด่ำลงไปในสภาวะนั้นด้วยตนเอง เพราะมันไม่ใช่เป็นเพียงเรื่องของความรู้ที่ก่อตัวขึ้นในสมอง แต่เป็นเรื่องของประสบการณ์ที่ส่งผลกระทบต่อทั้งสมองและหัวใจ</p>
+
+      <p>ความศักดิ์สิทธิ์ของมันไม่อาจถูกลดทอนได้ด้วยการนำไปปะปนกับ “การหลงใหล” เพราะอย่างหลังนั้นเกี่ยวข้องกับความพึงพอใจของดวงตาที่มีต่อคุณลักษณะหรือบุคคลใดบุคคลหนึ่งโดยเฉพาะ โดยปราศจากการมีส่วนร่วมในความสุขหรือความเจ็บปวดที่ผู้ถูกหลงใหลนั้นประสบ</p>
+
+      <p>ในขณะที่ “ความรัก” เป็นเรื่องของหัวใจ และในทางตรงกันข้าม การหลงใหลจะเลือนหายไปเมื่อสิ่งที่หลงใหลนั้นกลายเป็นบ่อเกิดแห่งความเจ็บปวด, ความขุ่นเคือง หรือแม้กระทั่งความรำคาญใจ</p>
+
+      <p>มันคือสภาวะหนึ่ง สภาวะอันบริสุทธิ์ที่สุดเท่าที่จะจินตนาการได้ แม้ว่าการจะสร้างคำนิยามที่ครอบคลุมทุกแง่มุมของมันจะเป็นเรื่องยาก แต่มีคำนิยามหนึ่งที่สามารถรวบรวมนัยต่างๆ ที่มีอยู่ไว้ได้ นั่นคือ “ความรักคือความปีติยินดีของหัวใจเมื่อได้พบพานผู้เป็นที่รัก”</p>
+
+      <p>ในสภาวะนี้ สองหัวใจที่หลอมรวมกันจะก้าวข้ามผ่านมโนทัศน์ทางวัตถุไป แม้ว่าผลลัพธ์ของการรวมกันนั้นจะสามารถรับรู้และสัมผัสได้จากภายนอกก็ตาม เช่น ความสุขเกษมเปรมปรีดิ์เมื่อได้อยู่ร่วมกัน และความโหยหา, ความร้อนรุ่มและความปั่นป่วนเมื่อต้องพรากจากกัน ในยามที่พวกเขาต่างกระหายและปรารถนาอย่างแรงกล้าที่จะได้กลับมาอยู่ร่วมกันอีกครั้ง ความรักจะไม่อาจบรรลุถึงรูปแบบที่สมบูรณ์ได้ด้วยการหยุดนิ่ง หากแต่จะต้องเติบโตขึ้นผ่านการตอบรับซึ่งกันและกันและความทุกข์ยาก</p>
+
+      <p>แม้ว่าการรักใครสักคนข้างเดียวจะเป็นไปได้อย่างแน่นอน แต่สำหรับสิ่งที่รักที่ไม่สมหวังนั้นมอบให้นอกเหนือจากความเจ็บปวดที่ผู้รักต้องเผชิญ ก็คือความมุมานะอย่างแรงกล้า แต่มันก็เป็นดั่งอุปสรรคที่ขวางกั้นไม่ให้บรรลุถึงความรักในรูปแบบสูงสุด ผู้ที่รักอาจพบว่าเป็นไปไม่ได้ที่จะดับไฟที่โหมกระหน่ำในใจ หรือละทิ้งสิ่งที่ยึดถือไว้เพื่ออนาคตที่เขาวาดฝันไว้กับคนรัก และปล่อยให้ไฟนั้นลุกลามต่อไป</p>
+
+      <p>เพราะไม่มีพรใดอีกแล้วที่จะสามารถชโลมหัวใจของเขาได้อย่างงดงามเท่า และมอบเป้าหมายให้แก่ความคิดคำนึงที่เขาพร้อมจะก้าวไปสู่อนาคตอย่างเปี่ยมสุข แต่ถึงกระนั้น แม้หัวใจจะร้อนรุ่มเพียงใด เขาก็จะยังไม่บรรลุถึงสภาวะแห่งรักที่สมบูรณ์ที่สุด เพราะองค์ประกอบของการตอบรับซึ่งกันและกันนั้นจำเป็นต้องมีอยู่ เพื่อที่คู่รักจะได้ร่วมกันบ่มเพาะความรัก และบ่มเพาะหัวใจของพวกเขาไปพร้อมๆ กัน</p>
+
+      <p>ขณะที่ประสบการณ์ส่วนตนอาจมอบความเข้าใจในชีวิตและเตรียมเราให้พร้อมรับมือกับบททดสอบที่ยากขึ้น แต่การได้เผชิญความทุกข์ยากร่วมกันต่างหากคือสิ่งที่ทำให้สายใยของคู่รักแข็งแกร่งขึ้น เพราะการจะตระหนักรู้ถึงคุณค่าของพรได้นั้น จำเป็นต้องตระหนักรู้ถึงการสูญเสียเสียก่อน</p>
+
+      <p>แนวคิดเรื่อง “การพลัดพราก” สามารถให้ความกระจ่างในเรื่องนี้ได้ มุฮัมมัด บิน อุมัยยะฮ์ ได้เขียนไว้ว่า: การพรากจากเกิดซ้ำแล้วซ้ำเล่า, ทุกการพบพานปราศจากการอยู่ร่วม, ยามอัศวกรลงจากหลังม้าเพื่อชุมนุม, เหล่าอูฐก็ส่งเสียงครวญครางพร้อมจะจากไปแล้ว, จิตวิญญาณของฉันอยู่ที่ซีเรีย ที่ซึ่งเธออยู่ ไม่ใช่ที่อิรัก, ฉันโหยหาเธอ หากเธอได้เห็นหัวใจของฉัน เธอก็จะรู้ ว่าฉันรักและร้อนรุ่มเพื่อเธอมากเพียงใด</p>
+
+      <p>บ่อยครั้งที่การต้องอยู่ห่างไกลจากคนรักคือสิ่งที่เราจำเป็นต้องเผชิญ แม้ว่ามันจะไม่ใช่สิ่งที่เราปรารถนาโดยเนื้อแท้ก็ตาม มันคือสิ่งที่ทำให้หัวใจของเราได้โหยหาผู้เป็นที่รัก ทำให้เราสามารถมองเห็นคุณค่าอันประเสริฐของสภาวะในอดีต ได้ประจักษ์ถึงความสำคัญของของขวัญที่เราเคยมองข้าม และได้ซาบซึ้งในคุณค่าของมันเมื่อมันได้หวนกลับคืนมาอีกครั้ง</p>
+
+      <p>ในยามสุขสบาย มนุษย์เราไม่ค่อยจะใคร่ครวญถึงสภาวะของตนเองนัก แต่ในยามทุกข์ ตราบเท่าที่ความทุกข์นั้นเกี่ยวข้องกับการสูญเสีย เขากลับสามารถมองเห็นสิทธิพิเศษต่างๆ ที่เคยห้อมล้อมตัวเขา คำว่า “อินซาน” (إنسان) ซึ่งหมายถึงมนุษย์ในภาษาอาหรับนั้น มีรากศัพท์มาจากคำว่า “นะซียะ” (نسي) ที่แปลว่า “ลืม” โดยธรรมชาติแล้ว มนุษย์คือสิ่งมีชีวิตที่หลงลืม และการที่ชีวิตประกอบด้วยการสลับสับเปลี่ยนระหว่างความง่ายดายและความทุกข์ยาก ก็เพื่อให้เขาได้ระลึกถึงพรต่างๆ ที่ได้รับ และได้รับการปลดเปลื้องจากความยากลำบาก</p>
+
+      <p>ดังนั้น การต้องเผชิญกับความทุกข์จึงไม่ใช่การถูกสาปแช่ง แต่คือการได้รับของขวัญ เพราะการตระหนักรู้ถึงความเป็นจริงของโลกนี้ (ดุนยา) ขึ้นอยู่กับว่าเราได้เคยสัมผัสกับการสูญเสียมามากน้อยเพียงใดท่านอัลยูซีย์ได้เขียนไว้ว่า:</p>
+
+      <p>“สิ่งที่ทดสอบและท้าทายเรานั้นมีประโยชน์ เพราะมันช่วยฝึกฝนและส่งเสริมจิตวิญญาณให้รับมือกับเภทภัยได้ ช่วยลดแรงปะทะของมัน และมอบความปลอบประโลมเมื่อต้องเผชิญหน้ากับมัน และเผชิญหน้ากับการทดสอบทางศาสนาและทางโลกที่เกิดขึ้น บททดสอบยังช่วยให้ความรู้แก่สติปัญญาโดยทำให้คุ้นเคยกับความผันผวนของกาลเวลา และมอบความเข้าใจอย่างลึกซึ้งต่อวิถีของสรรพสิ่ง”</p>
+
+      <p>ความเจ็บปวดที่เราประสบเมื่อต้องสูญเสียนั้น มีค่าเท่ากับความผูกพันที่เรามีต่อสิ่งนั้น และจากความสูญเสียนี้เองที่ความทุกข์ทรมานได้ถือกำเนิดขึ้น ดังนั้น เราอาจพบว่าตนเองเศร้าโศกกับการสูญเสียวัตถุที่ดูเล็กน้อย มากกว่าการสูญเสียวัตถุที่หรูหราวิจิตรบรรจง ทั้งนี้ก็เนื่องมาจากความผูกพันพิเศษที่เขามีต่อสิ่งแรก</p>
+
+      <p>มนุษย์จะพบว่าตนเองจมดิ่งอยู่ในความเศร้าหมองเมื่อขาดอนาคตที่จะเฝ้ารอคอยอย่างกระตือรือร้น เขาจึงยึดติดอยู่กับอดีตของตนเองในความพยายามอันอ่อนล้าที่จะประคับประคองชีวิตให้อยู่รอดในปัจจุบัน แต่เมื่อผู้ใดปล้นชิงความเป็นจริงไปจากปัจจุบัน เขาก็ได้ปล้นชิงโอกาสของตนเองที่จะเติบโตทางจิตวิญญาณและสติปัญญาให้ก้าวข้ามขีดจำกัดของตน และนั่นคือการปลิดเปลื้องชีวิตของเขาให้ปราศจากความหมายใดๆ เพราะเขาลืมไปว่า หากชีวิตมีความหมายใดๆ ในความทุกข์ก็ย่อมต้องมีความหมายเช่นกัน</p>
+
+      <p>เราหลั่งน้ำตาเมื่อต้องสูญเสีย เพราะสิ่งที่สูญเสียไปนั้นเคยเป็นที่รักยิ่งของเรา หรือเพราะมันนำไปสู่การสูญเสีย “สภาวะแห่งความไม่รู้” ที่เราเคยยึดติดอยู่ เพราะสภาวะที่เราจะต้องก้าวเข้าไปหลังจากนั้น คือสภาวะที่จะเผยให้เราเห็นถึงความเป็นจริงสูงสุด</p>
+
+      <p>ไม่มีสิ่งใดที่ผู้รักจะไม่ยอมทำเพื่อผู้เป็นที่รัก ไม่มีบททดสอบใดที่เขาจะไม่ยินดีเผชิญ หรือทะเลใดที่เขาจะไม่ยอมล่องเรือไป และแม้ว่าผู้รักจะมีทั้งความมุมานะแรงกล้าและความทุ่มเทอยู่ในหัวใจ ความเศร้าโศกก็คือราคาที่เขาต้องจ่ายเพื่อแลกกับความรัก ดังที่อัลหุซัยน์ อิบนุ อัฎเฎาะห์ฮาก ได้คร่ำครวญไว้ว่า:</p>
+
+      <p class="poem-th">“ข้าสาบานต่ออกงามนั่น นำข้าถึงความบรรลัย<br>ถอนใจลึกสะท้อนใน ทุกข์ท่วมใจเพราะใฝ่ชม<br>เคยหัวเราะเพราะสุขซ่าน ดุจเบิกบานด้วยรักห่ม<br>กลับพังภินท์สิ้นอารมณ์ ชีพสลายด้วยดวงนวล”</p>
+
+      <p>และเมื่ออัลยูซีย์ได้ไตร่ตรองถึงน้ำตาของน้องสาว ขณะที่นางกำลังคิดว่าจะต้องปล่อยมือจากเขาไปอีกครั้ง ท่านก็ได้ประพันธ์ไว้ว่า:</p>
+
+      <p class="poem-th">“เธอเศร้าเพราะพรากไกล เศร้าเพราะรักที่มีต่อข้า<br>ไฟใคร่ครวญแทรกกลางซี่โครง เจ็บปวดจนสุดจะทานทน<br>ถึงขั้นที่ดวงตานั้นต่อกรกับสายฝน น้ำตาหลั่งไหลแข่งหยาดฟ้า<br>และแท่นบรรทมที่เธอนอนเอนพิง กลับร้อนแรงเผาแผดสีข้างของเธอ”</p>
+
+      <p>มาร์เซล เคอร์เปอร์ชุกได้เขียนไว้ว่า: “ด้วยการทั้งผลักทั้งดึงของนาง นางได้ดึงดูดผู้รักและล่อลวงให้เขาเข้ามาติดในใยของนาง กวีพยายามจะควบคุมสติอารมณ์ แต่กลับไร้กำลังเมื่อต้องเผชิญกับคำบงการของหัวใจ และหัวใจของเขานั้นก็อยู่ภายใต้ความเมตตาปรานีของสตรีผู้งดงาม นางคือผู้กุมบังเหียนหัวใจ” ดังที่เขาได้ขยายความจากบทกวีของอิบนุ สบัยยิลที่ว่า: “นางบิดเกลียวเชือก แล้วคลายปมตามใจชอบ ข้าไม่อาจเข้าใจหัวหรือก้อยของมันได้เลย”</p>
+
+      <p>และด้วยเหตุนี้ หัวใจจึงตกอยู่ในสภาวะแห่งการขบถอยู่ตลอดเวลา และเมื่อต้องสูญเสีย ผู้ที่รักก็จะดิ้นรนอย่างหนักเพื่อจะให้เหตุผลของตนกลับมามีอำนาจอีกครั้ง ทั้งๆ ที่มันได้ตกเป็นเชลยในเงื้อมมือของผู้เป็นที่รักไปแล้ว</p>
+
+      <p>แต่ถึงแม้การสูญเสียจะเกิดขึ้นจริง ก็ยังดีกว่าสำหรับมนุษย์ที่จะต้องชดใช้ด้วยความเศร้าโศก ดีกว่าการไม่ได้รักเลย ความเศร้าโศกคือบทสรุปอันสมบูรณ์ของความรัก การโศกเศร้าอย่างสุดซึ้ง คือการได้รักอย่างสุดหัวใจ มนุษย์จะต้องเปิดหัวใจของตนเพื่อยอมรับมันแทนที่จะปิดกั้น; โอบกอดความทุกข์ทรมานแทนที่จะเบี่ยงเบนหัวใจไปจากมัน มิเช่นนั้นแล้วเขาก็จะยิ่งทำให้สภาวะของตนเลวร้ายลงและขัดขวางการเติบโตและความเข้าใจ และจงอย่าเป็นเหมือนผู้ที่ปล่อยให้ “นัฟสู” (ตัวตนฝ่ายต่ำ) ของตนเข้าครอบงำ โดยไม่ตระหนักว่าหนทางหลีกหนีใดๆ ที่พวกเขาแสวงหานั้นเป็นเพียงสิ่งชั่วคราว และจะยิ่งดึงพวกเขาให้จมลึกลงไปในห้วงเหวที่ตนเองได้สร้างขึ้น</p>
+
+      <p>เพราะในขณะที่ความโศกเศร้าเป็นผลพลอยได้ตามธรรมชาติ แต่ความทุกข์ทรมานนั้นเป็นทางเลือก</p>
+
+      <p>มนุษย์เลือกที่จะทุกข์ทรมานด้วยการทรมานตนเองด้วยภาพของ “สิ่งที่น่าจะเป็นไปได้” เป็นส่วนหนึ่งของธรรมชาติของผู้ที่ทุกข์ทรมานที่จะปฏิบัติต่อพรที่ตนเคยได้รับราวกับเป็นคำสาปแช่ง เพราะเขาเชื่อมั่นว่าการไม่มีพรนั้นเสียแต่แรกจะหมายถึงการไม่มีความทุกข์ของเขาในวันนี้ โดยหลงลืมไปว่ามันก็จะหมายถึงการที่เขาจะต้องทนทุกข์ (จากความอ้างว้าง) ต่อไปอย่างที่เคยเป็นมา พร้อมกับการสูญเสียความสุขเกษมเปรมปรีดิ์ที่เขาเคยได้รับจากพรชิ้นเดียวกันกับที่เขากำลังคร่ำครวญถึงอยู่นั่นเอง และนั่นคือการขโมยความพึงพอใจใดๆ ก็ตามที่เขาอาจเคยมีโอกาสได้รับไป</p>
+
+      <p>ความพึงพอใจที่แท้จริงหาใช่การปราศจากความเจ็บปวดและความไม่สบายใจไม่ เพราะคนเราสามารถพึงพอใจได้แม้ในขณะที่กำลังทุกข์ทรมาน เพราะความพึงพอใจนั้นตั้งอยู่บนความเชื่อมั่นอย่างเด็ดเดี่ยวในสัจธรรม ไม่ใช่เพียงแค่สัจธรรมที่เกี่ยวกับการดำรงอยู่ของพระเจ้าเท่านั้น แต่ยังรวมถึงการตระหนักในพระเดชานุภาพและอิทธิพลของพระองค์เหนือทุกสรรพสิ่ง และสถานะอันสูงส่งของพระองค์ในสายตาของผู้ศรัทธา “มันคือความมั่นคงแห่งองค์ความรู้ที่หยั่งลึกลงสู่หัวใจ เพราะเมื่อหัวใจได้ประสบกับความเป็นจริงแห่งความรู้ มันก็จะบรรลุถึงความพึงพอใจ” แม้ผู้ศรัทธาอาจจะเจ็บปวดอย่างแสนสาหัส แต่เขาก็จะไม่รู้สึกไม่พึงพอใจ หากเขามีวิทยปัญญาที่มั่นคง</p>
+
+      <p>มนุษย์จะต้องไม่ยึดถือสิ่งที่เกิดขึ้นชั่วคราวว่าเป็นสิ่งถาวร และต้องไม่ทำให้มันเป็นเป้าหมายของการมีอยู่ของตน การหลีกเลี่ยงความผูกพันนั้นเป็นไปไม่ได้ เพราะความรักย่อมนำไปสู่การก่อตัวของมันอย่างเลี่ยงไม่ได้</p>
+
+      <p>แต่คนเราต้องไม่ใช้ชีวิต เพื่อผู้เป็นที่รัก แต่ต้องใช้ชีวิตร่วมกับนาง เพราะความสมบูรณ์สูงสุดในชีวิตจะบรรลุได้ ไม่ใช่ด้วยการมุ่งเป้าหมายไปที่คนรักผู้ต้องตาย แต่ด้วยการมุ่งเป้าหมายนั้นไปสู่ความจีรังยั่งยืน ผ่าน พรที่ได้รับมาเพียงชั่วคราว</p>
+
+      <p>โลกนี้คือสิ่งที่ปรากฏขึ้นแล้วก็ผ่านไปโดยปราศจากความมั่นคง และหากผู้ใดทำให้สิ่งที่ไม่จีรังเป็นเป้าหมายของชีวิต ชีวิตของเขาก็จะสิ้นสุดลงทั้งความหมายและเป้าหมายเมื่อสิ่งนั้นเลือนหายไป ความอ้างว้างอย่างที่สุดจะเข้าครอบงำมนุษย์เมื่อเขาปฏิเสธหรือสงสัยในพระเจ้า หรือบอกล้างพันธสัญญาที่จิตวิญญาณของเขาได้ทำไว้กับพระองค์ เพราะพันธสัญญานี้เองคือสิ่งที่สถาปนาอัตลักษณ์ของเขาขึ้นมา</p>
+
+      <p>ดังนั้น ความผูกพันอันติมะและสุดท้ายจึงต้องถูกสร้างขึ้นกับพระผู้ทรงนิรันดร์ เพราะผู้ที่ผูกพันตนเองไว้กับพระองค์จะไม่มีวันประสบกับการสูญเสีย จะได้รับการแสดงให้เห็นถึงวิทยปัญญาเบื้องหลังการกระทำของพระองค์ และจะไม่ผิดหวังในรางวัลตอบแทนของพระองค์ แท้จริงแล้ว ณ เบื้องพระพักตร์ของพระองค์เท่านั้น ที่ความพึงพอใจอันแท้จริงจะบังเกิดขึ้นได้ และอัลลอฮ์นั้นทรงรอบรู้ดียิ่ง</p>
+
+      <h2 class="article-h2">สำรวจนิยาม “รัก” ผ่านบทกวี</h2>
+
+      <p>คำว่า “อัลหุบบ์” (الحب - ความรัก) ในภาษาอาหรับนั้น มีคำว่า “ค็อมร์” (الخمر - สุรา) เป็นคำไวพจน์ และในทางกลับกัน ชาวอาหรับโบราณก็เรียก “ค็อมร์” ว่า “อุมม์ ลัยลา”</p>
+
+      <p>ในบริบทนี้ “ลัยลา” หมายถึงสภาวะแห่งความเคลิบเคลิ้มและความมัวเมา ส่วนคำว่า “อุมม์” (แม่) ถูกนำมาใช้ก็เพราะสุรานั้น ให้กำเนิดสภาวะดังกล่าว ดุจดังมารดาให้กำเนิดบุตรฉันใดก็ฉันนั้น</p>
+
+      <p>“ความรัก” ก็เช่นเดียวกัน มันทำให้ผู้รักมัวเมา และในบางกรณีก็เข้าครอบงำจนทำให้เขาคลุ้มคลั่ง ดังเช่นกรณีของ “มัจญ์นูน” ซึ่งชื่อของเขาแปลตรงตัวว่า “ผู้คลุ้มคลั่ง” ในกรณีนี้คือ คลุ้มคลั่งเพราะความรักนั่นเอง</p>
+
+      <p>ประเด็นเรื่อง “ความสุข” นั้นได้รับความสนใจจากหลากหลายจารีตความคิด แต่การรับรู้ของเราต่อเรื่องนี้มีความแตกต่างในเชิงรากฐานบางประการ เราไม่เห็นด้วยกับแนวคิดของอริสโตเติลที่มองว่า “การไล่ล่าตามหาความสุข” คือเป้าหมายสูงสุดของชีวิตมนุษย์</p>
+
+      <p>หากมันเป็นสิ่งที่ต้อง “ไล่ล่า” ก็ย่อมแสดงว่าในขณะนี้เรา “ไม่มี” มันอยู่</p>
+
+      <p>แต่ในขณะเดียวกัน ปรัชญาของเราก็ไม่ได้เป็นสุขนิยมหรือวัตถุนิยมสุดโต่งถึงขั้นที่จะลดทอนคุณค่าของความสุขให้เหลือเพียงเรื่องของการสนองความต้องการของตนเอง</p>
+
+      <p>เราเชื่อว่า “ความสุข” คือ “ผลพลอยได้” ที่ผุดขึ้นมาจาก “ความเชื่อมั่นอันเด็ดเดี่ยวในการรู้จักอัลลอฮ์ (มะอ์ริฟะตุลลอฮ์)” ไม่ใช่เพียงแค่การรู้จักว่าพระองค์ทรงมีอยู่จริง แต่คือการตระหนักรู้อย่างแท้จริงว่า พระองค์คือผู้ทรงควบคุมกิจการทั้งหมดของมนุษย์ ทั้งในยามสุขและยามเศร้า ทั้งในยามโล่งใจและยามกังวล และคือการปรับเปลี่ยนการกระทำของเราให้สอดคล้องกับความจริงข้อนี้</p>
+
+      <p>แต่ถึงแม้เราจะนิยามความสุขว่าเป็นเพียงการผสมผสานระหว่าง “ความพึงใจ” และ “ความพอใจ” มันก็ยังมีแง่มุมที่ลึกซึ้งยิ่งกว่านั้นรอให้เราไปขุดค้น</p>
+
+      <p>สิ่งที่กล่าวมาข้างต้นนั้นให้ความกระจ่างในแง่มุมเชิงอภิปรัชญาของความสุขทางจิตวิญญาณ และแม้ว่ามันจะส่งอิทธิพลต่อแง่มุมอื่นๆ ก็ตาม แต่ประเด็น “ความสุขในเชิงจิตวิทยา” ซึ่งเชื่อมโยงอย่างแนบแน่นกับความพึงพอใจของจิตใจและหัวใจนั้น ก็จำเป็นต้องได้รับการพิจารณาเป็นพิเศษ</p>
+
+      <p>จิตใจนั้นต้องการความก้าวหน้า ตรงกันข้ามกับความหยุดนิ่งเฉื่อยชา จิตใจปรารถนาอนาคตที่ตัวเองเป็นที่ต้องการ “ความปรารถนาอันแรงกล้า” จึงเป็นสิ่งที่ขาดไม่ได้ การขาดซึ่งสิ่งนี้มักจะสะท้อนถึงจิตใจที่อ่อนแอ อย่างไรก็ตาม แม้ว่าสภาวะของจิตใจและหัวใจจะเชื่อมโยงกัน แต่เราก็ต้องดูแลแต่ละส่วนเป็นพิเศษ มิฉะนั้นความกลมเกลียวก็จะสูญเสียไปเพราะความละเลย</p>
+
+      <p>เพื่อขยายความให้ชัดเจนขึ้น ความทะเยอทะยานนั้นโดยส่วนใหญ่แล้วเกี่ยวข้องกับความพึงพอใจของ “จิตใจ” แต่ธรรมชาติของมนุษย์นั้นไม่ได้เรียบง่ายถึงขั้นที่จะถูกลดทอนให้เหลือเพียงความต้องการประสบการณ์ใหม่ๆ หรือความทะเยอทะยานเพื่อความสุขเท่านั้น และเราก็ไม่อาจปฏิเสธได้ว่ามนุษย์ได้พัฒนาความต้องการใหม่ๆ ขึ้นมา ซึ่งอาจไม่เคยมีอยู่เลยในปีก่อนๆ ซึ่งรวมถึง และโดยเฉพาะอย่างยิ่ง “ความรักฉันท์หนุ่มสาว”</p>
+
+      <p>นักไวยากรณ์เองก็มีความเห็นต่างกันว่ารากศัพท์ของคำว่า “อินซาน” (إنسان - มนุษย์) นั้นมาจากไหน</p>
+
+      <p>กลุ่มที่ 1: เสนอว่ามาจากคำว่า “นะสิยะ” (نَسِيَ) ที่แปลว่า “หลงลืม”</p>
+
+      <p>กลุ่มที่ 2: โต้แย้งว่ามาจากคำว่า “อะนัส” (أنس) ที่แปลว่า “ความคุ้นเคย” หรือ “ความโหยหาในมิตรภาพ”</p>
+
+      <p>แม้ว่าทั้งสองความหมายจะเชื่อมโยงกับธรรมชาติของมนุษย์อย่างแนบแน่น แต่นักวิจารณ์ยุคสมัยใหม่มักจะเน้นย้ำในแง่มุมที่สองนี้ โดยชี้ว่าแนวคิด “ปัจเจกชนนิยมสุดโต่ง” ไม่เพียงแต่ทำลายโครงสร้างครอบครัว แต่ยังทำลายความมั่นคงของชุมชนอีกด้วย</p>
+
+      <p>พันธสัญญาที่มนุษย์ได้ให้ไว้กับพระเจ้านั้น แม้จะเป็นการให้คำมั่นแบบ “รายบุคคล” แต่การที่มวลมนุษยชาติทั้งหมดต้องอยู่ภายใต้พันธสัญญานั้น ก็ได้แสดงให้เห็นถึงการมีอยู่ของ “ส่วนรวม” ที่ยิ่งใหญ่กว่า</p>
+
+      <p>ด้วยเหตุนี้เอง จึงเกิดความแตกต่างระหว่าง “ฟัรฎุอัยน์” (หน้าที่จำเป็นส่วนบุคคล) กับ “ฟัรฎุกิฟายะฮ์” (หน้าที่จำเป็นสำหรับส่วนรวม) ขึ้นมา เพราะการที่ทุกคนต้องรับผิดชอบต่อพันธสัญญาร่วมกันนี้ ย่อมบ่งชี้ถึงความสัมพันธ์สองทางในแง่ของสิทธิและหน้าที่ที่เรามีต่อกัน</p>
+
+      <p>มิตรภาพในความหมายแรก (ซึ่งเป็นมิตรภาพในฐานะส่วนรวม) ไม่ได้จำกัดอยู่แค่เพียงการตอบสนองความรักใคร่ต่อกัน หรือการช่วยเหลือผู้ยากไร้เท่านั้น แต่ยังขยายไปถึงการต้องพึ่งพาผู้อื่นเพื่อค้นพบและสร้างตัวตนของเราเองขึ้นมา ในกระบวนการของการบ่มเพาะสายสัมพันธ์ที่แท้จริง</p>
+
+      <p>ความรักในหมวดหมู่นี้ เช่นความรักของพ่อแม่ที่มีต่อลูก หรือของเพื่อนที่มีต่อเพื่อน อาจเป็นความรักที่ลึกซึ้ง และการสูญเสียมันไปอาจหมายถึงการแตกสลาย</p>
+
+      <p>ส่วนความรักประเภทที่สองนั้น ถูกกล่าวถึงในอัลกุรอาน, ปรากฏซ้ำแล้วซ้ำเล่าในบทกวีและเห็นได้อย่างชัดเจนในชีวประวัติของท่านศาสนทูต ﷺ และเหล่าสหายของท่านเอง</p>
+
+      <p>โดย “ความรัก” ในที่นี้ เราไม่ได้หมายถึงรักบริสุทธิ์ในอุดมคติแบบเพลโต แต่หมายถึง ความรักที่เกิดขึ้นโดยเฉพาะระหว่างชายและหญิง เป็นความรักที่ค่อยๆ เติบโต และงอกงามขึ้นสู่รูปแบบที่สวยงามที่สุด ผ่านอุปสรรคและการตอบสนองซึ่งกันและกัน</p>
+
+      <p>ท่านอิบนุ หัซม์ (ขออัลลอฮ์ทรงเมตตาท่าน) ได้เขียนถึงนิยามของความรักไว้อย่างลึกซึ้งและงดงามว่า: “สำหรับฉันแล้ว ฉันมองว่า ‘ความรัก’ คือการเชื่อมต่อกันระหว่างชิ้นส่วนของดวงวิญญาณที่กระจัดกระจาย ซึ่งได้พลัดพรากจากกันไปในจักรวาลทางกายภาพนี้...มันคือการหลอมรวมที่เกิดขึ้นภายในธาตุแท้อันสูงส่งดั้งเดิมของพวกมันเอง”</p>
+
+      <p>ความรักไม่ใช่เพียงกลุ่มก้อนอารมณ์ชั่ววูบที่ถูกจุดขึ้นมาแล้วก็ดับไป แต่คือพันธกิจที่หลอมรวมดวงวิญญาณให้เป็นหนึ่ง สร้างสภาวะที่ไม่มีความทุกข์ใดจะยิ่งใหญ่ไปกว่าการพลัดพราก และไม่มีความสุขใดจะยิ่งใหญ่ไปกว่าการได้พบกันอีกครั้ง</p>
+
+      <p>มีชายผู้หนึ่งเคยกล่าวไว้ว่า การพลัดพรากคือพี่น้องของความตาย แต่ปราชญ์ท่านหนึ่งได้กล่าวแก้ว่า “หามิได้...แต่ความตายต่างหากที่เป็นพี่น้องของการพลัดพราก”</p>
+
+      <p>กวีแห่งเผ่านะบาฏีย์ ท่านอับดุลลอฮ์ บิน สุบัยยิล ได้รจนาไว้ว่า: “โปรดสอนข้าเถิด ถึงปริศนาแห่งห้วงรัก ท่านผู้ช่ำชองทั้งในสุขและทุกข์ของมัน ถึงโรคาที่ซ่อนเร้นในใจคน ที่ยิ่งปรารถนาการรักษา ก็ยิ่งถูกเผาผลาญ”</p>
+
+      <p>อบู ฏ็อยยิบ อัลมุตะนับบีย์ ครุ่นคิดว่า: “และจะไม่มีการพลัดพรากใดบังเกิดแก่คนรัก เว้นแต่ตัณหาจะหาหนทางเข้าสู่ดวงวิญญาณของพวกเขาได้”</p>
+
+      <p>แม้จะตระหนักดีถึงความสงบสุขที่เกิดจากการได้อยู่ร่วมกัน แต่เหล่ากวีก็ยังคงจำแนกให้ความรักเป็นดั่ง “โรคภัย” ชนิดหนึ่ง ด้วยธรรมชาติของมันที่นำมาซึ่งความเจ็บปวดรวดร้าว</p>
+
+      <p>ดังถ้อยคำของอิบนุ สุบัยยิล ที่ว่า “ข้าได้จรดริมฝีปากลงบนโอษฐ์อันหอมหวานของนางและลิ้มรสมัน และรู้สึกได้ว่าหัวใจของข้าได้กลับบ้าน...หลังรอนแรมมาเนิ่นนาน” ซึ่งดูเหมือนจะเป็นคำตอบให้กับบทกวีของเขาเองที่ว่า: “โฉมงามของข้า ขอข้าได้ขโมยจุมพิตสักครั้ง เพียงจุมพิตเดียว เพื่อปลุกหัวใจที่รุ่มร้อนดั่งกระหายน้ำให้ฟื้นคืน”</p>
+
+      <p>อัลหุซัยน์ บิน อัฎเฎาะห์หากคร่ำครวญว่า: ขอสาบาน...อกงามนั้นคือผู้หยิบยื่นความตายแก่ข้า และบังคับให้ข้าต้องถอนหายใจอย่างสุดระทม แม้ข้าจะหัวเราะให้แก่ความสุขสมที่มันมอบให้ แต่มันก็ทำให้ข้าแหลกสลายด้วยความเศร้า”</p>
+
+      <p>ท่านอิบนุ หัซม์ ได้ขยายความประเด็นนี้ไว้อย่างชัดเจนว่า: “สำหรับผู้รักแล้ว ดวงวิญญาณของเขานั้นเป็นอิสระและตระหนักรู้อยู่เสมอว่า ดวงวิญญาณอีกดวงหนึ่งที่เคยร่วมแบ่งปันความใกล้ชิดครั้งบรรพกาลนั้นอยู่ที่ใด; ดวงวิญญาณของเขาเฝ้าแสวงหาอีกฝ่ายอยู่เสมอ, มุ่งมั่น, ค้นคว้าและโหยหาที่จะได้พบพานอีกครั้ง, พลางดึงดูดอีกฝ่ายเข้ามาหาตน...ดุจดังแม่เหล็กที่ดึงดูดเหล็กกล้า”</p>
+
+      <p>กาลเวลาหยุดนิ่ง...ทั้งในห้วงขณะแห่งการได้พบกันอีกครั้งและการพลัดพราก แม้ว่าจะให้ผลลัพธ์ที่แตกต่างกันอย่างสิ้นเชิงก็ตาม</p>
+
+      <p>ห้วงขณะแรกนั้น คือการฟื้นฟูหัวใจ และสาดส่องมันด้วยความสงบสุขรูปแบบหนึ่งที่นำพาจิตใจให้เชื่อว่าประสบการณ์อันล้ำลึกนี้จะดำรงอยู่ชั่วนิรันดร์; แต่ในกรณีของการพลัดพราก มันกลับแปรเปลี่ยนเป็น หุบเหวไร้ก้นบึ้ง ที่ซึ่งผู้รักร่วงหล่นลงไปอย่างไม่มีที่สิ้นสุด และบังเกิดปรารถนาอย่างยิ่งที่จะหลีกหนีจากความทรมานที่ดูเหมือนจะไม่มีวันจบสิ้น เหล่ากวีอุซรีย์ได้ยืนหยัดในแนวคิดนี้ผ่านผลงานของพวกเขา</p>
+
+      <p>ตัวอย่างเช่น อุรวะฮ์ ได้เฝ้ารอคอยวันที่จะได้พบกับอัฟรออ์คนรักของเขา: “ข้ารักวันแห่งการพิพากษา...เพราะมีผู้บอกข้าว่า ณ ที่แห่งนั้น...ข้าจะได้พบนาง”</p>
+
+      <p>ก็อยส์ได้แสดงให้เห็นถึงความเป็นอมตะแห่งรักของเขาว่า: “รักของเราจะอยู่รอดเกินทุกเหตุการณ์ และจะมาเยี่ยมเยือนเราในความมืดมิดแห่งหลุมฝัง”</p>
+
+      <p>มัจญ์นูนประกาศว่า: โอ้...หากเพียงเราได้ใช้ชีวิตร่วมกัน และหากชีพวาย...ขอเพียงกระดูกของข้าได้เคียงข้างกระดูกของนาง (ก็เพียงพอแล้ว)</p>
+
+      <p>และญะมีลได้รจนาไว้อย่างลึกซึ้งว่า: “ดวงใจข้าผูกพันกับใจนาง...ตั้งแต่ก่อนเราถูกสร้าง หลังครั้งเป็นเมล็ดพันธุ์...จวบจนกระทั่งในเปลนอน มันเติบโต...ดั่งที่เราเติบโตในยามหลับและยามตื่น พันธสัญญาแห่งรักมิได้แหลกสลายเมื่อเราจากไป แต่กลับได้รับการเชิดชูในทุกห้วงขณะ แม้ในยามที่เราก้าวสู่ความมืดมิดแห่งสุสาน”</p>
+
+      <p>กวีอุซรีย์ คือกลุ่มกวีในยุคอิสลามตอนต้น ที่มีชื่อเสียงด้านการประพันธ์บทกวีเกี่ยวกับความรักอันบริสุทธิ์ จริงใจ และมักจะไม่สมหวัง โดยเน้นย้ำถึงความรักที่เป็นอมตะและอยู่เหนือขีดจำกัดทางโลก</p>
+
+      <p>ท่านอิหม่ามอัฏเฏาะบะรีย์ ได้อรรถาธิบายอายะฮ์อัลกุรอานที่ว่าคู่ครองนั้นเป็นดั่ง “ลิบาส” (อาภรณ์) ให้แก่กันและกันไว้ว่า คำดังกล่าวนั้นหมายถึง “ที่พำนักอาศัยของและในดวงใจ”</p>
+
+      <p>ดังนั้น แม้ว่าร่างกายของคนรักอาจจะไม่ได้อยู่ด้วยกัน แต่ภาพอันอมตะของนางจึงแทบไม่เคยเลือนหายไปจากใจเลย</p>
+
+      <p>ท่านอิหม่ามอัรรอซีย์ก็เห็นพ้อง โดยตีความคำนี้ว่าหมายถึง “การโอบกอด” เพราะคู่ครองนั้นได้กลายเป็นหนึ่งเดียวกันผ่านการโอบล้อมซึ่งกันและกัน ดุจดังอาภรณ์ที่อีกฝ่ายสวมใส่</p>
+
+      <p>คนรักไม่ได้เป็นเพียงปัจเจกบุคคลของตัวเองอีกต่อไป แต่ได้กลายเป็นส่วนขยายของตัวผู้รัก ร่วมรับรู้ทั้งในความสุขและความเจ็บปวดของเขา</p>
+
+      <p>การลืมจึงกลายเป็นสิ่งที่เป็นไปไม่ได้ เพราะแม้ในขณะที่ผู้รักพยายามจะหันเหตัวเองไปจากการรำลึกถึงนาง การกระทำนั้นเองกลับยิ่งสะท้อนถึงความไร้ความสามารถที่จะเอาชนะความเศร้าโศกของตน</p>
+
+      <p>ท่านศาสดา ﷺ เอง แม้ว่าจะได้มีความรักอันลึกซึ้งอีกครั้ง แต่ก็ไม่เคยทรงลืมเลือนรักแท้ครั้งแรกของพระองค์เลย นั่นคือท่านหญิงเคาะดีญะฮ์ ดังที่อิบนุ สุบัยยิล ได้พรรณนาไว้ว่า: “ผู้คนกล่าวว่า “ท่านควรแต่งงานใหม่เสีย แล้วลืมนางไป อา...ข้าตอบ “แม้ข้าจะมีภรรยาสักสี่คน ข้าก็ไม่มีวันลืมนางได้เลย”</p>
+
+      <p>ความสุข ตราบเท่าที่มันถูกตีความว่าเป็นความสุขเปี่ยมล้นที่มาพร้อมกับความพึงพอใจ ล้วนผุดขึ้นมาจากการผสมผสานของปัจจัยทั้งหมดที่ได้กล่าวมาแล้ว หัวใจแสวงหาความสุขในการรำลึกถึงพระผู้อภิบาลของมัน และในดวงวิญญาณทั้งหลายที่ได้ให้พันธสัญญาไว้</p>
+
+      <p>และความสุขทั้งหมดนั้นจะมาบรรจบอย่างสมบูรณ์ที่สุด ณ “คนรัก” เพราะไม่มีความสุขใดในชีวิตนี้จะยิ่งใหญ่ไปกว่าการได้อยู่ในอ้อมแขนของนางอีกแล้ว</p>
+
+      <p>ท่านอิบนุ หัซม์ได้ขยายความไว้อย่างสละสลวยยิ่งว่า: “หากโลกเบื้องล่างนี้ไม่ใช่เพียงที่พำนักชั่วคราวอันเต็มไปด้วยบททดสอบและความยากลำบาก และหากสวรรค์ไม่ใช่บ้านที่ซึ่งคุณงามความดีจะได้รับรางวัลตอบแทนและปลอดภัยจากความขุ่นข้องหมองใจทั้งปวงแล้วไซร้...ข้าก็คงจะกล่าวไปแล้วว่า การได้อยู่ร่วมกับคนรักนั้นคือความสุขอันบริสุทธิ์ที่ไร้สิ่งเจือปน และคือความปีติยินดีที่ปราศจากความเศร้าโศก เป็นการบรรลุถึงความหวังอย่างสมบูรณ์แบบ และเป็นการเติมเต็มความฝันทั้งมวลอย่างแท้จริง</p>
+
+      <p>ข้าได้ทดลองความสุขทุกรูปแบบ และได้รู้จักความยินดีทุกแขนงแล้ว และข้าพบว่า ไม่ว่าจะเป็นความใกล้ชิดกับเจ้าชาย, ความมั่งคั่งที่ได้มา, การค้นพบสิ่งที่ขาดหายไป, การได้กลับคืนหลังจากการพลัดพรากอันยาวนานหรือความปลอดภัยหลังผ่านพ้นภยันตราย...ไม่มีสิ่งใดเลยที่จะส่งผลกระทบต่อจิตวิญญาณได้อย่างทรงพลังเท่ากับการได้อยู่ร่วมกับคนรัก โดยเฉพาะอย่างยิ่ง หากมันเกิดขึ้นหลังจากการถูกปฏิเสธอย่างยาวนานและการพลัดพรากอย่างต่อเนื่อง”</p>
+
+      <p>นางคือที่สุดแห่งความงามเหนือจินตนาการ กลายเป็นศูนย์รวมของความใคร่รู้และความรักใคร่ทั้งมวล เช่นเดียวกับทุกสิ่งที่เกี่ยวข้องกับนาง ไม่ว่าจะเป็นบ้านเกิด, ความชอบส่วนตัว (แม้จะเล็กน้อยเพียงใด), หรืออุปนิสัยของนาง</p>
+
+      <p>มัจญ์นูนเคยกล่าวว่า: “ข้าเดินผ่านถิ่นพำนัก (ของลัยลา) จุมพิตผนังนี้ที ผนังนั้นที ด้วยใจคะนึงหาผู้ที่เคยอาศัยอยู่ ณ ที่แห่งนี้ หาใช่ตัวสถานที่เองไม่”</p>
+
+      <p>ก็อยส์เองได้ประกาศว่า: “ข้ามิได้หลงใหลในบ้านเกิดของเจ้าดอก แต่ข้ากำลังจุมพิตทุกรอยเท้าของผู้ที่เคยย่างเหยียบผืนดินนี้ต่างหาก”</p>
+
+      <p>และกุษัยยิรในระหว่างการเดินทาง ได้ร้องขอต่อสหายของเขาว่า: “สหายของข้าเอ๋ย ที่นี่คือที่พักแรมของอัซซะฮ์ จงหยุดและสัมผัสผืนแผ่นดินที่อาจเคยสัมผัสผิวของนาง และจงพักค้างแรมในที่ที่นางเคยพักและค้างแรมเถิด และจงอย่าสงสัยเลยว่าพระเจ้าจะทรงอภัยบาปของพวกท่าน หากพวกท่านได้วิงวอน ณ ที่ที่นางเคยวิงวอน”</p>
+
+      <p>เหล่าผู้รักมักจะเชิดชูคนรักของตนขึ้นสู่สถานะอันสูงส่งจนมิอาจเอื้อมถึง บ่อยครั้งที่พวกเขาเชื่อว่าแม้แต่ผืนดินที่คนรักเคยย่างเหยียบก็ย่อมต้องเปี่ยมไปด้วยบะเราะกัต (ความจำเริญ) ด้วยแรงขับที่อาจนำไปสู่ความคลุ้มคลั่ง พวกเขาเฝ้าสัมผัสวัตถุสิ่งของที่อาจเคยเป็นของคนรัก เพื่อหวังจะได้สัมผัสกับเศษเสี้ยวของการได้อยู่ร่วมกันอีกครั้ง</p>
+
+      <p>ในประเด็นนี้ มะห์มูด ดัรวีชได้กล่าวถ้อยคำอันโด่งดังไว้ว่า: “พวกเขาถามว่า ‘ท่านคลุ้มคลั่งเพราะลัยลาหรือ?’ ฉันตอบว่า ‘ชีวิตนี้จะมีความสุขใดเล่า หากไม่ใช่เพื่อคนบ้าคลั่ง’</p>
+
+      <p>ความลึกซึ้งของความสิ้นหวังนั้นขึ้นอยู่กับความแข็งแกร่งของความรักโดยตรง แม้กระทั่ง ท่านอะลี บิน อบี ฏอลิบ บุรุษผู้เลื่องชื่อในความเข้มแข็งอดทน ก็มิอาจต้านทานการแตกสลายจากภายในได้ และไม่อาจมองเห็นว่าชีวิตจะมีสิ่งใดมอบให้ได้อีก นอกจากความมืดมิดว่างเปล่า เมื่อต้องสูญเสียคนรักของท่านไป (คือท่านหญิงฟาฏิมะฮ์ ขออัลลอฮ์ทรงพอพระทัยนาง) ซึ่งเห็นได้อย่างชัดเจนจากถ้อยคำของท่านระหว่างการฝังศพของนาง:</p>
+
+      <p>“เหตุใดข้าจึงต้องหยุดยืน ณ สุสานของผู้วายชนม์ สุสานของคนรัก...ผู้ไม่เอ่ยคำทักทายตอบข้าอีกต่อไป? โอ้...ที่รักของข้า เหตุใดเจ้าจึงไม่ตอบข้า? หรือเจ้าได้ลืมเลือนความผูกพันที่เราเคยมีแล้ว? (เสียงตอบจากคนรัก): ข้าจะตอบท่านได้อย่างไร ในเมื่อข้าถูกจองจำด้วยผืนดิน? ธุลีดินได้กัดกินความงดงามของข้าไปแล้ว และข้าก็ได้ลืมเลือนท่าน มันได้บดบังข้าจากครอบครัวและผู้เป็นที่รัก ดังนั้น...ขอความสันติจงมีแด่ท่าน และขอตัดซึ่งสายใยที่เคยผูกพันเราไว้”</p>
+
+      <p>แล้วจะกล่าวอะไรได้เล่า ถึงบุรุษผู้ซึ่งไม่ได้มีความเข้มแข็งอดทนถึงเพียงนั้น?</p>
+
+      <p>ไม่ใช่เพียงความเศร้าโศกที่เข้าครอบงำและกดขี่ แต่คือ “ตัวตน” ของสิ่งที่เคยแสดงให้พวกเขาเห็นว่าชีวิตนี้ยังมีความสุขอันเปี่ยมล้นให้ค้นพบ คือสิ่งที่ทำให้โลกซึ่งเคยมืดมิดมาอย่างยาวนาน สามารถถูกมองเห็นในเฉดสีอันหลากหลายที่มอบความงดงามอลังการให้แก่มัน บัดนี้นางได้หายไปแล้ว พลางนำพาเอา “เป้าหมาย” และ “เศษเสี้ยวแห่งชีวิต” ทั้งหมดที่หัวใจของพวกเขาเคยมีไปจนหมดสิ้น</p>
+
+      <p>ดังที่มัจญ์นูนได้พรรณนาไว้ว่า: “ราวกับว่าเส้นทางภูเขานั้นคือวงแหวน ที่ล้อมรอบตัวข้า...ไม่เคยยาวขึ้นหรือสั้นลงเลย”</p>
+
+      <p>สิ่งที่บทกวีนี้ฉายภาพให้เห็นคือ ความหยุดนิ่งของกาลเวลา ความซ้ำซากจำเจที่มนุษย์ถูกสาปให้ต้องทนทุกข์เมื่อขาดคนรักไป</p>
+
+      <p>อิบนุ สุบัยยิลคร่ำครวญว่า: “หากข้าตายก่อน...นางคงจะกล่าวว่า “คนผู้นั้นได้จากไปแล้ว” แต่หากนางตายก่อน...ชีวิตของข้าก็สูญสิ้นความหมาย”</p>
+
+      <p>นางได้กลายเป็น “ความหมาย” ของชีวิตเขา และด้วยเหตุนี้เอง ผู้รักจึงทำทุกวิถีทางเพื่อทำให้นางสมบูรณ์, สวยงามและมอบทุกสิ่งที่ทำให้นางมีความสุข เพราะในขอบเขตของรักแท้ ผู้รักจะค้นพบความสุขผ่าน “การเสียสละ” หาใช่ “การช่วงชิง”</p>
+
+      <p>ญะมีลได้กล่าวอย่างโศกเศร้าว่า: “ข้าพึงใจแล้วกับสิ่งเล็กน้อยเหลือเกินที่บุษัยนะฮ์มอบให้ มันช่างเล็กน้อยเสียจน หากผู้สอดแนมล่วงรู้ถึงมัน เขาก็คงไม่ขุ่นเคืองใจในรักของข้า ข้าพึงใจ...แม้ในยามที่นางเอ่ยว่า “ไม่” หรือ “ฉันทำไม่ได้” และเมื่อนางให้ข้าอยู่ด้วยคำสัญญา สัญญาที่เป็นเพียงความหวัง...แต่ก็นำมาซึ่งความผิดหวังเสมอ ข้าพึงใจกับเพียงชำเลืองมองนางชั่วครู่ และแม้กระทั่งกับการที่หนึ่งปีเต็มผ่านไปโดยที่เรามิได้พบกันเลย ไม่ว่าจะตอนต้นปี...หรือท้ายปีก็ตาม”</p>
+
+      <p>ความหม่นหมองที่บุรุษเพศต้องเผชิญนั้น ไม่ได้ขึ้นอยู่กับความแข็งแกร่งของอุปนิสัยของเขาเพียงอย่างเดียว เพราะความรักนั้น...ย่อมทำให้หัวใจอ่อนโยนลงโดยมิอาจเลี่ยง แม้แต่ผู้ที่แข็งแกร่งที่สุดก็ยังพบว่า ตนเองมิอาจต้านทานการแตกสลายจากภายในได้เมื่อนึกถึงคนรัก และจะรู้สึกราวกับไร้ชีวิตหากความรักนั้นไม่ได้รับการตอบสนองหรือหากสายใยแห่งรักได้ขาดสะบั้นลง</p>
+
+      <p>เพราะเมื่อไม่มีความสุขใดในชีวิตจะยิ่งใหญ่ไปกว่าการได้อยู่ในอ้อมแขนของนาง ก็ย่อมไม่มีความเศร้าใดจะยิ่งใหญ่ไปกว่าการที่นางเอื้อมมือมาไม่ถึงอีกต่อไป</p>
+
+      <p>ความเศร้าโศกเช่นนี้อาจเป็นสิ่งที่ไม่อาจเอาชนะได้ การก้าวข้ามขอบเขตของความทุกข์ระทมไม่ใช่สิ่งที่เป็นไปได้อีกต่อไป ดังนั้นทางเลือกเดียวที่มนุษย์เหลืออยู่คือการก้าวเดินต่อไปพร้อมกับสิ่งที่รบกวนจิตใจของเขา</p>
+
+      <p>สำหรับบางคน อาจถึงเวลาที่ความเศร้านั้นจะแปรเปลี่ยนเป็นความโหยหาในอดีต โดยเฉพาะอย่างยิ่งหากเขาสามารถพบรักได้อีกครั้ง; สำหรับบางคน พวกเขาจำเป็นต้องยอมรับในภาระนั้น ขณะที่เฝ้ารอวิทยปัญญาที่ซ่อนอยู่เบื้องหลังบททดสอบของตน แต่ไม่ว่าจะอย่างไร ความเศร้านั้นก็จะยังคงอยู่ อาจถูกกระตุ้นขึ้นมาด้วยถ้อยคำ, ภาพภาพหนึ่งหรือวัตถุสิ่งของ ผ่านสายใยแห่งความทรงจำที่เขาอาจสร้างขึ้นมาโดยรู้ตัวหรือไม่ก็ตาม</p>
+
+      <p>แต่ความเศร้านี้...กลับผูกพันอยู่กับขั้วตรงข้ามอันสุดโต่งของมัน นั่นคือ “ความงดงาม” และ “ความรัก”</p>
+
+      <p>ผู้รักจะถูกปลุกให้นึกถึงคนรักของเขาได้ด้วยสิ่งของที่แสนจะธรรมดาที่สุด ในขณะที่คนนอกอาจมองเห็นเพียงแค่ต้นไม้ต้นหนึ่ง แต่ผู้รักกลับมองเห็นร่มเงาที่เคยให้ที่พักพิงแก่เขายามสารภาพรัก; ในขณะที่ทุกคนมองเห็นความธรรมดาสามัญ ผู้รักกลับมองเห็นไข่มุกอันล้ำค่า</p>
+
+      <p>แต่ในห้วงขณะแห่งการพลัดพรากหรือความกังวลว่ารักนั้นจะสมหวังหรือไม่ เขาจะถูกรบกวนด้วยความสงสัยและความกระสับกระส่าย ซึ่งในบางครั้งอาจทำให้เขาถึงกับหลุดปากกล่าวคำสาปแช่งออกมา</p>
+
+      <p>ญะมีลได้เขียนไว้ว่า: “ขอพระเจ้าโปรดประทานเศษผงในดวงตาของบุษัยนะฮ์ด้วยเถิด และขอให้ฟันอันขาวผ่องของนางมืดดำไป”</p>
+
+      <p>และในที่อื่น เขาก็ปรารถนาว่า: “ข้าหวังเพียงให้ข้าได้หลุดพ้นจากเจ้า, โอ้ความรัก เจ้าจะไม่ปล่อยให้ข้าได้พักผ่อนเลยกระนั้นหรือ?”</p>
+
+      <p>ความคิดที่คล้ายกันนี้สามารถพบได้ในบทกวีของอิบนุ สุบัยยิลที่ว่า: “นางจะโปรยปรายหัวใจข้า...ก่อนที่มันจะร่วงโรยไป หรือนี่คือแผนของนางที่หมายจะให้ข้าตายเพราะนาง? นางช่างไร้เมตตา ขอความเมตตาของพระองค์โปรดอย่าได้ไปถึงญาติของนางเลย โอ้พระผู้เป็นเจ้า...เหล็กร้อนแดงของนางทรมานข้าจนตาย”</p>
+
+      <p>แต่ญะมีลไม่ได้มีเจตนาจะสาปแช่งบุษัยนะฮ์จริงๆ และอิบนุ สุบัยยิล ก็ไม่ได้ปรารถนาให้คนรักของเขาต้องปราศจากความเมตตาของพระเจ้า สิ่งที่ซ่อนอยู่เบื้องหลังถ้อยคำของคนแรกคือ ความรังเกียจขยะแขยงต่อความคิดที่ว่าชายอื่นใดนอกจากเขาจะได้เข้าใกล้บุษัยนะฮ์ และสิ่งที่ซ่อนอยู่เบื้องหลังถ้อยคำของคนที่สองคือ ความเจ็บปวดที่เกิดจากรักที่ไม่สมหวัง ซึ่งทั้งสองบทกวีนี้ได้ฉายภาพความจริงแห่งหัวใจที่กำลังบ้าคลั่งของพวกเขาออกมาได้อย่างสมบูรณ์</p>
+
+      <p>ความโกรธมักจะเป็นผลพลอยได้ของรักที่ไม่สมหวัง เหล่าผู้รักต้องทนทุกข์ทรมาน ถูกบังคับให้เผชิญหน้ากับความจริงที่ว่า อนาคตที่พวกเขาปรารถนาได้เลื้อยไหลผ่านร่องนิ้วมือไป และแล้วพวกเขาก็เริ่มต้นไล่ตามความฝันอันห่างไกล</p>
+
+      <p>ท่านอิบนุ หัซม์ได้เล่าถึงเกร็ดเรื่องราวหนึ่ง ซึ่งท่านได้สนทนากับชายผู้หนึ่งที่ดวงตาแห้งผากด้วยความอ่อนล้าหลังผ่านมหาสมุทรแห่งน้ำตาที่เขาได้หลั่งริน และชีวิตของเขาก็ชุ่มโชกไปด้วยห้วงน้ำแห่งความเศร้า เขารู้ดีว่าไม่มีหนทางใดที่จะได้ครองรัก แต่กระนั้น เมื่อเขาวิงวอน (ดุอาอ์) เขากลับวิงวอนขอให้ได้สมหวัง แทนที่จะวิงวอนขอให้ตนเองได้หลุดพ้น</p>
+
+      <p>ดังนั้น เมื่อท่านอิหม่าม (อิบนุ หัซม์) ได้ขอดุอาอ์ต่ออัลลอฮ์ ตะอาลาให้ทรงช่วยเหลือชายผู้นั้น เขากลับแสดงความไม่พอใจออกมา เพราะสิ่งที่ชายผู้นั้นแสวงหานั้นไม่ใช่เพียงการหลุดพ้นจากความทุกข์ แต่คือการหลุดพ้นผ่านการได้รับความรักตอบกลับมาเท่านั้น</p>
+
+      <p>มันคือการต่อสู้ที่เกิดขึ้นอยู่เสมอระหว่าง เหตุผลแห่งสมองกับบัญชาแห่งหัวใจ เพราะหากเราพิจารณาว่าสมองคือเครื่องมือที่ใช้เหตุผลบริสุทธิ์ เราจะเห็นว่ามันเร่งเร้าให้มนุษย์มุ่งสู่แนวทางปฏิบัติที่ตั้งอยู่บนความเป็นจริง แต่ในขณะเดียวกัน หัวใจก็สามารถรับรู้ได้ถึงสิ่งที่ได้สูญเสียไปเช่นกัน</p>
+
+      <p>แต่สภาวะภายในนั้น ยังคงโหยหาในสิ่งที่ได้สูญเสียไป และภาวะที่กลืนไม่เข้าคายไม่ออกนี้เองที่นำมาซึ่งกลียุคภายในใจ</p>
+
+      <p>บทกวีของอิบนุ สุบัยยิลได้สะท้อนแนวคิดนี้ไว้อย่างสมบูรณ์แบบว่า: “หัวใจคือสุลต่านผู้ทรงอำนาจเผด็จการ ปกครองทุกอย่างตามอำเภอใจ ดวงตาคือหน่วยสอดแนมที่หัวใจส่งไป เฝ้าไปกลับ ณ บ่อน้ำ...จากศัตรูสู่มิตร ความรักคือโรคาที่เคลื่อนไหวไม่หยุดนิ่ง ที่ไม่เคยเปิดทางหนีให้แก่กลอุบายอันชาญฉลาดที่สุด”</p>
+
+      <p>แม้ว่าการได้พบกันอีกครั้งที่รอคอยมานานจะกรีดสายพิณแห่งหัวใจได้อย่างไพเราะจับใจที่สุด แต่ความสับสนงุนงงที่เกิดขึ้นจากรักครั้งใหม่ หรือจากกระบวนการครุ่นคิดว่าจะยอมจำนนต่อบัญชาแห่งหัวใจหรือไม่ หรือแม้กระทั่งจากการรับรู้ว่าคนรักไม่ได้อยู่กับตนอีกต่อไปแล้วนั้น...ล้วนขโมยการพักผ่อนทั้งหมดที่ดวงตาเฝ้าแสวงหาในห้วงลึกแห่งความมืดมิด</p>
+
+      <p>ท่านอิหม่ามอัชชาฟิอีย์ (ขออัลลอฮ์ทรงเมตตาท่าน) ได้เขียนไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">سهرت أعين، ونامت عيون … في أمور تكون أو لاتكون</blockquote>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فادرأ الهم ما استطعت عن النف … س فحملا نك الهموم جنون</blockquote>
+      <p class="poem-th">“บางตาไม่หลับยังคิดพร่ำ<br>บางตาเหนื่อยล้าเข้าสู่นิทรา<br>เรื่องราวบางสิ่งอาจจริง อาจลวงตา<br>อย่าแบกพะวงหนักหนาเกินใจตน<br>จงผ่อนวางกังวลเท่าที่ไหว<br>อย่าให้ทุกข์รุมใจจนสับสน<br>แบกทุกข์เกินจำเป็นดุจคนบ้าเวียนวน<br>ปลดวางเสียเถิดหนา จิตาจะได้เป็นสุข”</p>
+
+      <p>แม้ว่า “ความไม่รู้” จะถูกตีความในเชิงลบ แต่มันก็เป็นสิ่งที่อยู่คู่กับเรามาแต่กำเนิด และเปี่ยมไปด้วยวิทยปัญญาในแบบของมันเอง ที่เป็นเช่นนี้ก็เพราะความไม่รู้ของเรานั่นเองที่ทำให้เราสามารถมีความหวังได้ แม้จะมีความเศร้าโศกเข้าครอบงำหัวใจก็ตาม เพราะผู้ที่ได้ประจักษ์ถึงวิทยปัญญาเบื้องหลังบททดสอบของตนแล้ว ย่อมรู้ดีว่าความเศร้าของพวกเขานั้นควรจะให้กำเนิดเพียง “ความกตัญญู” เท่านั้น</p>
+
+      <p>หากการสูญเสียคือราคาที่ต้องจ่ายเพื่อให้ได้มาซึ่งวิทยปัญญา ราคานั้นก็แทบจะไม่สูงเลย เพราะไม่มีสิ่งใดยิ่งใหญ่ไปกว่า “สมบัติที่สูญหายไปของผู้ศรัทธา” ชิ้นนี้อีกแล้ว หากมันได้สอนให้เขารู้ว่า “ไม่มีแม้แต่เศษเสี้ยวเดียวของการดำรงอยู่อันแหลกสลายของเขา ที่จะแยกขาดออกจากพระผู้อภิบาลของเขาได้”</p>
+
+      <p>เพราะด้วยหัวใจที่แหลกสลายนี้เอง ที่มนุษย์จะได้ประจักษ์ถึงแก่นแท้ของความจริง นั่นคือ ไม่มีสิ่งใดดำรงอยู่ได้โดยไม่ได้รับการค้ำจุนจากอัลลอฮ์ และไม่มีการดำรงอยู่ที่แท้จริงใดๆ ที่แยกขาดจากพระองค์ พระองค์คือผู้ทรงค้ำจุนทุกสรรพสิ่ง ในขณะที่สิ่งอื่นทั้งหมดเป็นเพียงเงา เป็นเพียงการสำแดงที่ผ่านมาแล้ว…ก็ผ่านไป โดยปราศจากความจีรังยั่งยืน</p>
+
+      <p>หากเขาผูกสร้างชีวิตของตนไว้กับสิ่งที่ไม่เที่ยงแท้โดยธรรมชาติ ชีวิตของเขาก็จะสูญสิ้นความหมายไปทันทีที่สิ่งนั้นสลายไป “ไม่มีรักใดที่ปราศจากความเศร้า แต่หากความเศร้าคือราคาที่มนุษย์ต้องจ่ายเพื่อความรัก มนุษย์ก็ยังคงต้องรักต่อไป” เพราะหัวใจของเขารู้ดีว่าไม่มีความงดงามใดในชีวิตจะยิ่งใหญ่ไปกว่าสิ่งที่ค้นพบผ่านมัน</p>
+
+      <p>มนุษย์ไม่ได้เป็นผลผลิตจากประสบการณ์ของเขา แต่เป็นผลผลิตจาก “ท่าที” ที่เขามีต่อประสบการณ์นั้นต่างหาก เขาสามารถดิ่งลงสู่ความสิ้นหวังและสูญเสียสิ่งที่มอบชีวิตให้แก่เขา หรือจะยึดมั่นในความหวังของตนและมองเห็นเหตุการณ์ที่เขาไม่เคยจินตนาการมาก่อนกำลังสร้างสิ่งที่ไม่เคยคาดคิดขึ้นมา...หากเพียงแต่เขาได้มอบหมายต่อพระผู้อภิบาลของเขาอย่างไม่หยุดหย่อน</p>
+
+      <p>การมอบหมาย (ตะวักกัล) ไม่ใช่เรื่องของการหวังว่าตนจะได้รับในสิ่งที่ตนหวัง แต่คือการตระหนักรู้ว่ากิจการทั้งหมดของเขานั้นอยู่ในพระหัตถ์ของผู้ทรงดูแล ดังนั้น เมื่อราคาได้ถูกจ่ายไปแล้วด้วยความเศร้าโศก เขาจะต้องรวบรวมความอดทนและก้าวต่อไปสู่สิ่งที่จะทำให้พระผู้อภิบาลของเขาพึงพอใจ ขณะที่เฝ้ารอคอยให้ผู้ทรงวางแผนที่ยอดเยี่ยมที่สุดได้ทรงแสดงให้เห็นว่า เขานั้นมีเป้าหมายที่ยิ่งใหญ่กว่า</p>
+
+      <p>จึงเป็นการเหมาะสมอย่างยิ่งที่จะปิดท้ายด้วยถ้อยคำของท่านอิหม่ามอัชชาฟิอีย์ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن ربا كفاك بالأمس ما كا … ن سيكفيك في غد ما يكون</blockquote>
+      <p class="poem-th">“พระผู้เป็นเจ้าผู้ทรงคุ้มครองเจ้าเมื่อวาน<br>ย่อมจะทรงคุ้มครองเจ้าในวันพรุ่งนี้เช่นกัน<br>ทุกสิ่งที่จักบังเกิดขึ้น พระองค์ย่อมเพียงพอแก่เจ้าเสมอ”</p>
+
+      <p>และอัลลอฮ์ คือผู้ทรงรอบรู้ที่สุด</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ว่าด้วยความรัก ความทุกข์ และการพลัดพราก. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/reflections/on-love-and-longing.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography">
+        <li>المحاضرات في الأدب واللغة - الحسن اليوسي</li>
+        <li>روضة المحبين ونزهة المشتاقين - ابن قيم الجوزية</li>
+        <li>Syed Muhammad Naquib al-Attas. Islam and Secularism.</li>
+        <li>Viktor Frankl. Man’s Search for Meaning.</li>
+        <li>Ibn Ḥazm. The Ring of the Dove, pg. 15.</li>
+        <li>Marcel Kurpershoek. Arabian Romantic, Poem 6.</li>
+        <li>Carl Jung. Approaching the Unconscious.</li>
+        <li>Jokha Alharthi. The Body in Arabic Love Poetry: The ʿUdhrī Tradition, pg. 211.</li>
+        <li>Wael Hallaq. The Impossible State.</li>
+        <li>al-Aṭṭās. Prolegomena.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>
