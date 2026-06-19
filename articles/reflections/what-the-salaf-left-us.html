@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คนรุ่นแรกได้ทิ้งอะไรไว้ให้คนรุ่นหลัง — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทสะท้อนว่าด้วยมรดกทางวิชาการที่คนรุ่นแรกทิ้งไว้ให้คนรุ่นหลัง ประตูแห่งการอิจติฮาดและการต่อยอดความรู้ที่ไม่เคยปิดลง ผ่านทรรศนะของอันนะวาวีย์ อบู หัยยาน อัซซัรรู้ก และอัซซะบีดีย์">
+<meta name="keywords" content="มุมพักใจ, มรดกคนรุ่นแรก, อิจติฮาด, การต่อยอดความรู้, อันนะวาวีย์, อบู หัยยาน, อัซซัรรู้ก, นิติศาสตร์อิสลาม, ฟิกฮ์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="คนรุ่นแรกได้ทิ้งอะไรไว้ให้คนรุ่นหลัง — Islamic Fiqh Publishing">
+<meta property="og:description" content="ประตูแห่งวิชาความรู้ไม่เคยปิดลง บทสะท้อนว่าด้วยมรดกของคนรุ่นแรกและโอกาสของคนรุ่นหลังในการต่อยอดความรู้">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/reflections/what-the-salaf-left-us">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/reflections/what-the-salaf-left-us">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "คนรุ่นแรกได้ทิ้งอะไรไว้ให้คนรุ่นหลัง",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/reflections/what-the-salaf-left-us"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="what-the-salaf-left-us">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/reflections.html" class="article-feature-eyebrow">มุมพักใจ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">คนรุ่นแรกได้ทิ้งอะไรไว้ให้คนรุ่นหลัง</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">วลีที่ว่า “คนรุ่นแรกได้ทิ้งอะไรไว้ให้คนรุ่นหลัง” เป็นวลีที่กระตุ้นให้ประชาชาติออกค้นคว้าและศึกษาค้นหา แต่ตรงกันข้าม จะมีอีกประโยคหนึ่งที่ว่า:</p>
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">إن الأول لم يدع للآخر شيئا</blockquote>
+      <p class="ar-translation">“บรรพชนได้ทิ้งมรดกทุกอย่างไว้หมดแล้ว ไม่เหลืออะไรให้คนรุ่นหลังอีก”</p>
+
+      <p>กลับเป็นวลีที่นำไปสู่การปิดกั้นแนวคิดของโลกอิสลาม แทนที่จะทำให้มันมีชีวิตชีวาและสามารถพัฒนาได้อย่างต่อเนื่อง กลับถูกปิดกั้นลง</p>
+
+      <p>คำกล่าวนี้ได้ปิดกั้นแนวทางการทำความเข้าใจและเส้นทางแห่งปัญญาที่จะทำให้จิตใจของนักศึกษาและผู้ที่สนใจในเรื่องศาสนาอิสลามเติบโตขึ้น และยังส่งผลให้เกิดการปฏิเสธการสร้างกลยุทธ์และสิ่งใหม่ๆ ในการแสวงหาความเข้าใจเกี่ยวกับศาสนา ผ่านแนวทางทางปัญญาที่ได้รับการยอมรับ และขัดขวางความเป็นไปได้ในการนำเสนอศาสนาในมิติใหม่</p>
+
+      <p>นักวิชาการบางคนยึดติดกับคำกล่าวที่ว่า</p>
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">ما ترك الأول للآخر شيئا</blockquote>
+      <p class="ar-translation">“คนรุ่นแรกไม่ได้เหลืออะไรไว้ให้คนรุ่นหลังเลย”</p>
+
+      <p>และก็ไม่เคยออกนอกกรอบความคิดนี้เลย อย่างไรก็ตาม นักวิชาการส่วนใหญ่เลือกที่จะปฏิเสธคำกล่าวนี้ และกลับใช้คำว่า:</p>
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">كم ترك الأول للآخر</blockquote>
+      <p class="ar-translation">“คนรุ่นแรกได้ทิ้งอะไรไว้ให้คนรุ่นหลังบ้าง?”</p>
+
+      <p>ซึ่งกลายเป็นวลีที่ได้รับความนิยมและถูกใช้เสมือนสุภาษิต โดยถือเป็นหลักการสำคัญที่เปิดประตูสู่การศึกษาค้นคว้า การโต้แย้ง และการตรวจสอบแก้ไข ซึ่งล้วนเป็นเครื่องมือสำคัญของความคิดสร้างสรรค์และการต่อยอดทางวิชาการ</p>
+
+      <p>ซึ่งความจริงแล้ว ท่านนบีมุฮัมมัด ﷺ ได้เปิดประตูสู่การต่อยอดและให้พัฒนาในศาสนาโดยรวม ท่านนบีมุฮัมมัด ﷺ กล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">مَنْ سَنَّ فِي الإِسْلاَمِ سُنَّةً حَسَنَةً فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا بَعْدَهُ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أُجُورِهِمْ شَىْءٌ وَمَنْ سَنَّ فِي الإِسْلاَمِ سُنَّةً سَيِّئَةً كَانَ عَلَيْهِ وِزْرُهَا وَوِزْرُ مَنْ عَمِلَ بِهَا مِنْ بَعْدِهِ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أَوْزَارِهِمْ شَىْءٌ</p>
+      </div>
+      <p>“ผู้ใดที่วางรากฐานแบบอย่างที่ดีงามในอิสลาม และมีผู้ปฏิบัติตามหลังจากเขา เขาจะได้รับผลบุญเช่นเดียวกับผู้ที่ปฏิบัติตาม โดยที่ผลบุญของพวกเขาจะไม่ลดน้อยลงเลย และผู้ใดที่วางรากฐานแบบอย่างที่ชั่วร้ายในอิสลาม และมีผู้ปฏิบัติตามหลังจากเขา เขาจะได้รับบาปเช่นเดียวกับผู้ที่ปฏิบัติตาม โดยที่บาปของพวกเขาจะไม่ลดลงเลย”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>คำกล่าวนี้แสดงให้เห็นว่า ท่านนบีมุฮัมมัด ﷺ มีความคาดหวังให้ชาวมุสลิมใช้ความคิดและคิดค้นสิ่งใหม่ๆ ในศาสนา โดยต้องผ่านกระบวนการพิจารณาและไตร่ตรองเพื่อให้แน่ใจว่าแนวทางดังกล่าวนั้นถูกต้อง</p>
+
+      <p>ดังนั้น หะดีษนี้จึงเปิดประตูสู่ความคิดสร้างสรรค์ในทุกด้านของชีวิต และเปิดโอกาสให้เกิดการต่อยอดในเรื่องศาสนา ตราบใดที่ไม่ขัดแย้งกับหลักการและบทบัญญัติของศาสนาอิสลาม</p>
+
+      <p>ท่านอิหม่ามอันนะวาวีย์ได้อธิบายว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قوله صلى الله عليه وسلم : ( من سن سنة حسنة ومن سن سنة سيئة ) الحديث وفي الحديث الآخر ( من دعا إلى الهدى ومن دعا إلى الضلالة ) ، هذان الحديثان صريحان في الحث على استحباب سن الأمور الحسنة ، وتحريم سن الأمور السيئة ، وأن من سن سنة حسنة كان له مثل أجر كل من يعمل بها إلى يوم القيامة ، ومن سن سنة سيئة كان عليه مثل وزر كل من يعمل بها إلى يوم القيامة ، وأن من دعا إلى هدى كان له مثل أجور متابعيه ، أو إلى ضلالة كان عليه مثل آثام تابعيه ، سواء كان ذلك الهدى والضلالة هو الذي ابتدأه ، أم كان مسبوقا إليه ، وسواء كان ذلك تعليم علم ، أو عبادة ، أو أدب ، أو غير ذلك</blockquote>
+      <p class="ar-translation">“คำกล่าวของท่านนบีมุฮัมมัด ﷺ ว่า: “ผู้ใดวางรากฐานแบบอย่างที่ดีงาม และผู้ใดวางรากฐานแบบอย่างที่ชั่วร้าย” และในอีกหะดีษหนึ่งมีคำกล่าวว่า: “ผู้ใดเชิญชวนไปสู่ทางนำ และผู้ใดเชิญชวนไปสู่ทางหลงผิด” หะดีษทั้งสองนี้เป็นหลักฐานที่ชัดเจนในการส่งเสริมให้กระทำสิ่งที่ดีงาม และห้ามกระทำสิ่งที่ชั่วร้าย อีกทั้งยังชี้ให้เห็นว่า “ผู้ใดวางรากฐานแบบอย่างที่ดีงาม เขาจะได้รับผลบุญเช่นเดียวกับผู้ที่ปฏิบัติตามจนถึงวันกิยามะฮ์ และผู้ใดวางรากฐานแบบอย่างที่ชั่วร้าย เขาจะได้รับบาปเช่นเดียวกับผู้ที่ปฏิบัติตามจนถึงวันกิยามะฮ์” เช่นเดียวกัน “ผู้ใดเชิญชวนไปสู่ทางนำ เขาจะได้รับผลบุญเช่นเดียวกับผู้ที่ปฏิบัติตาม และผู้ใดเชิญชวนไปสู่ทางหลงผิด เขาจะได้รับบาปเช่นเดียวกับผู้ที่ปฏิบัติตาม” ไม่ว่าแนวทางแห่งทางนำหรือทางหลงผิดนั้น เขาจะเป็นผู้ริเริ่มขึ้นเอง หรือมีผู้ริเริ่มมาก่อนแล้วก็ตาม และไม่ว่าแนวทางดังกล่าวจะอยู่ในลักษณะของ การเผยแพร่ความรู้, การปฏิบัติศาสนกิจ, มารยาท หรือสิ่งอื่นๆ ก็ตาม”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>และท่านยังสำทับไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فيه : الحث على الابتداء بالخيرات وسن السنن الحسنات ، والتحذير من اختراع الأباطيل والمستقبحات ، وسبب هذا الكلام في هذا الحديث أنه قال في أوله : ( فجاء رجل بصرة كادت كفه تعجز عنها ، فتتابع الناس ) وكان الفضل العظيم للبادي بهذا الخير ، والفاتح لباب هذا الإحسان</blockquote>
+      <p class="ar-translation">“ในหะดีษนี้มีการส่งเสริมให้ริเริ่มการทำความดี สร้างแนวทางที่ดีงาม และเตือนให้ระวังการคิดค้นสิ่งเท็จและสิ่งที่น่ารังเกียจ สาเหตุที่มีคำกล่าวนี้ในหะดีษนี้ คือ ในตอนต้นของหะดีษกล่าวไว้ว่า: “แล้วมีชายคนหนึ่งได้นำห่อเงินจำนวนมากมา จนมือของเขาแทบจะรับไม่ไหว จากนั้นผู้คนก็ติดตามทำตามเขา” ดังนั้น ผู้ที่เริ่มต้นความดีนี้จึงได้รับคุณูปการอันยิ่งใหญ่ เพราะเป็นผู้เปิดประตูแห่งความเมตตาและการทำความดีให้แก่ผู้อื่น”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+
+      <p>ดังนั้น หากปราศจากการศึกษาค้นคว้าของบรรดานักวิชาการในแต่ละยุคสมัย วิชาความรู้เหล่านี้ย่อมไม่อาจถ่ายทอดมาถึงพวกเราในปัจจุบันได้ แต่คำถามคือ วิชาความรู้เหล่านี้ได้สิ้นสุดลงแล้วหรือไม่? และประตูแห่งการเรียบเรียงและพัฒนาต่อยอดความรู้ได้ถูกปิดตายแล้วหรือ? คำตอบที่แน่ชัดคือ “ไม่” และนี่คือสิ่งที่ต้องเน้นย้ำให้เข้าใจ</p>
+
+      <p>บางครั้ง เราอาจพบว่านักวิชาการบางท่านปิดกั้นโอกาสของนักศึกษา แต่เป็นความเข้าใจที่ผิดหากคิดว่าการปิดกั้นนี้มีผลครอบคลุมทุกช่วงของการศึกษา เพราะในช่วงแรกของการเรียนรู้ เป้าหมายของนักเรียนคือการยอมรับสิ่งที่เรียนรู้ และหน้าที่ของเขาคือ การตั้งใจฟังและมุ่งมั่นจดจำสิ่งที่ครูผู้สอนถ่ายทอด เนื่องจากหากนักเรียนในระดับเริ่มต้นมุ่งเน้นการโต้แย้งและตรวจสอบข้อเท็จจริงมากเกินไป เขาอาจพลาดโอกาสในการสะสมความรู้ที่มั่นคงได้</p>
+
+      <p>แต่เมื่อเข้าสู่ระดับกลาง หน้าที่ของอาจารย์คือการเปิดมุมมองทางความคิดของนักเรียน กระตุ้นให้เขาค้นคว้าและพิจารณา เพราะการศึกษาที่แท้จริงนั้น ไม่ใช่เพียงการท่องจำ แต่ต้องสามารถนำมาวิเคราะห์และพัฒนาได้ต่อไป</p>
+
+      <p>ก่อนที่เราจะเข้าสู่รายละเอียดของประเด็นนี้ เราต้องยึดถือแนวทางของอัลกุรอานที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَلَا تَنسَوُا۟ ٱلْفَضْلَ بَيْنَكُمْ</p>
+      </div>
+      <p>{และอย่าลืมความเมตตาระหว่างพวกเจ้า}<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+
+      <p>และคำกล่าวของท่านนบีมุฮัมมัด ﷺ ที่ว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">خَيْرُ النَّاسِ قَرْنِي، ثُمَّ الَّذِينَ يَلُونَهُمْ، ثُمَّ الَّذِينَ يَلُونَهُمْ</p>
+      </div>
+      <p>“ผู้คนที่ดีที่สุดคือคนในยุคของฉัน จากนั้นก็คือผู้ที่มาหลังจากพวกเขา และจากนั้นก็คือผู้ที่มาหลังจากนั้น”<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup></p>
+
+      <p>ไม่มีข้อสงสัยเลยว่า ‘ผู้ที่มาก่อนย่อมมีความเหนือกว่าผู้ที่มาภายหลัง ทั้งในแง่ของประสบการณ์และความรู้’ ไม่ว่าพวกเขาจะถูกต้องในทุกสิ่งที่ถ่ายทอดมา หรือถูกต้องในส่วนใหญ่และผิดพลาดในบางประเด็นก็ตาม</p>
+
+      <p>ดังนั้น แนวคิดที่ว่า</p>
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">كم ترك الأول للآخر</blockquote>
+      <p class="ar-translation">“บรรพชนได้ทิ้งสิ่งใดไว้ให้คนรุ่นหลัง”</p>
+
+      <p>เป็นการยืนยันว่า ความรู้ที่ถูกทิ้งไว้โดยผู้ที่มาก่อน ยังคงเป็นประตูที่เปิดกว้างสำหรับผู้ที่มาภายหลัง ให้สามารถศึกษาต่อยอดและพัฒนาได้อย่างไม่มีที่สิ้นสุด</p>
+
+      <h2 class="article-h2">ขุมทรัพย์ใต้กุญแจแห่งความเข้าใจ</h2>
+
+      <p>อบู หัยยาน อัลอันดะลุซีย์ได้กล่าวไว้ใน “อัลบะห์รุลมุฮีฏ” อย่างกระชับและงดงามเมื่ออธิบายความหมายของพระดำรัสของอัลลอฮ์ที่ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَإِنَّ كُلًّا لَّمَّا لَيُوَفِّيَنَّهُمْ رَبُّكَ أَعْمَـٰلَهُمْ ۚ إِنَّهُۥ بِمَا يَعْمَلُونَ خَبِيرٌ</p>
+      </div>
+      <p>{และแท้จริง ทุกคนนั้น พระเจ้าของเจ้าจะตอบแทนการกระทำของพวกเขาอย่างครบถ้วน}<sup class="fn-ref" id="fnref-6"><a href="#ref-6">⁶</a></sup></p>
+
+      <p>โดยเฉพาะในการอ่านของอับดุลลอฮ์ อิบนุ อามิร, ฮัมซะฮ์ และฮัฟศ์ที่มีการเน้นตัวมีม <span class="ar-inline" lang="ar" dir="rtl">م</span> ในคำว่า <span class="ar-inline" lang="ar" dir="rtl">لَمَّا</span> (ลัมมา)</p>
+
+      <p>อบู หัยยานกล่าวว่า:</p>
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">والعلوم كنوز تحت مفاتيح الفهوم</blockquote>
+      <p class="ar-translation">“และวิชาความรู้เปรียบเสมือนขุมทรัพย์ ที่ถูกซ่อนอยู่ภายใต้กุญแจของความเข้าใจ”</p>
+
+      <p>ความหมายของคำพูดของท่านอบู หัยยาน คือ กุญแจแห่งวิชาความรู้ไม่ได้จำกัดอยู่กับบุคคลใดบุคคลหนึ่ง แต่ถูกซ่อนอยู่ในคลังแห่งสติปัญญาที่กว้างขวาง จิตใจที่เฉียบแหลม และสายตาแห่งการพินิจพิเคราะห์ที่ลึกซึ้ง</p>
+
+      <p>ใครก็ตามที่ได้รับความเข้าใจอย่างละเอียดถี่ถ้วน ขุมทรัพย์แห่งวิชาความรู้ก็จะเปิดประตูต้อนรับเขา พาเขาเข้าสู่ห้องลับแห่งความรู้ และมอบอัญมณีแห่งปัญญาแก่เขา</p>
+
+      <p>ข้อคิดที่สามารถสรุปได้จากคำพูดของเขา แม้จะสั้นแต่ลึกซึ้งก็คือ:</p>
+
+      <ol class="article-summary">
+        <li><strong>ประตูแห่งวิชาความรู้ไม่เคยปิดลง</strong></li>
+        <li><strong>ขุมทรัพย์แห่งวิชาการไม่มีวันหมดสิ้น</strong></li>
+        <li><strong>ผู้ที่มาในยุคหลังสามารถค้นพบสิ่งที่ผู้ที่มาก่อนอาจยังไม่พบ</strong></li>
+        <li><strong>ความล่าช้าในการมาถึงไม่ใช่ข้อบกพร่อง</strong> เช่นเดียวกับที่ ความเป็นผู้นำในยุคแรกไม่ได้หมายความว่าจะไม่มีความผิดพลาด</li>
+      </ol>
+
+      <p>ดังนั้น ความเข้าใจและการคิดวิเคราะห์ที่ลึกซึ้งคือกุญแจสำคัญในการเข้าถึงวิชาความรู้ และเป็นเส้นทางที่นำไปสู่การค้นพบความจริงใหม่ๆ ที่แม้แต่คนรุ่นก่อนอาจมองข้ามไป</p>
+
+      <h2 class="article-h2">วิชาความรู้คือของประทานจากอัลลอฮ์</h2>
+
+      <p>อิหม่ามอะห์มัด ซัรรู้ก ได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولله در ابن مالك رحمه الله (صاحب الألفية)، حيث يقول: "إذا كانت العلوم منحا إلهية، ومواهب اختصاصية، فغير مستبعد أن يدخر لبعض المتأخرين ما عسر على كثير من المتقدمين، نعوذ بالله من حسد يسد باب الإنصاف، ويصد عن جميل الأوصاف</blockquote>
+      <p class="ar-translation">“ขออัลลอฮ์ประทานความเมตตาแก่อิบนุ มาลิก (เจ้าของอัลฟียะฮ์) ซึ่งกล่าวไว้ว่า: เมื่อวิชาความรู้เป็นสิ่งที่อัลลอฮ์ทรงประทานให้ เป็นพรและของขวัญพิเศษจากพระองค์ จึงไม่ใช่เรื่องที่เป็นไปไม่ได้ ที่บางสิ่งอาจถูกเก็บรักษาไว้ให้กับผู้ที่มาในยุคหลัง ในขณะที่มันเป็นเรื่องยากสำหรับหลายๆ คนในยุคก่อน ขออัลลอฮ์ทรงปกป้องเราจากความอิจฉาริษยา ซึ่งเป็นสิ่งที่ปิดกั้นประตูแห่งความยุติธรรม และขัดขวางจากคุณสมบัติอันดีงาม”<sup class="fn-ref" id="fnref-7"><a href="#ref-7">⁷</a></sup></p>
+
+      <p>อิหม่ามซัรรู้กได้แสดงความเห็นเกี่ยวกับคำพูดของ อิบนุ มาลิก ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وهو عجيب لما فيه من الإشارة إلى أن العلوم هي مواهب ربانية وعطايا من المولى عز وجل، وباب العطاء مفتوح لم يخص به أحدا دون أحد</blockquote>
+      <p class="ar-translation">“คำพูดนี้น่าประหลาดใจมาก เพราะมันชี้ให้เห็นว่า วิชาความรู้เป็นของขวัญจากอัลลอฮ์ เป็นการประทานจากพระองค์ และประตูแห่งการประทานนี้ยังคงเปิดอยู่ โดยที่พระองค์ไม่ได้จำกัดให้กับใครเพียงคนเดียว หรือปิดกั้นไม่ให้ผู้อื่นได้รับ”</p>
+
+      <p>บทเรียนที่สามารถสรุปได้จากคำพูดนี้คือ:</p>
+
+      <ol class="article-summary">
+        <li><strong>วิชาความรู้เป็นพรอันประเสริฐจากอัลลอฮ์</strong> ไม่ได้ขึ้นอยู่กับความเก่าแก่ของผู้รับหรือยุคสมัยของเขา</li>
+        <li><strong>ผู้ที่มาในภายหลังอาจได้รับความรู้ที่ผู้ที่มาก่อนอาจยังไม่ค้นพบ</strong></li>
+        <li><strong>ความอิจฉาเป็นสิ่งที่ปิดกั้นประตูแห่งความยุติธรรม</strong> และทำให้เรามองข้ามความจริง</li>
+        <li><strong>อัลลอฮ์สามารถมอบความรู้ให้กับใครก็ตามที่พระองค์ทรงประสงค์</strong> และไม่มีใครสามารถผูกขาดความรู้ไว้ได้</li>
+      </ol>
+
+      <p>ดังนั้น การแสวงหาความรู้ควรมาพร้อมกับจิตใจที่เปิดกว้าง ความเป็นธรรม และความถ่อมตน เพราะ ประตูแห่งวิชาการยังคงเปิดกว้างสำหรับทุกคน</p>
+
+      <h2 class="article-h2">กาลเวลาไม่ใช่เกณฑ์วัดคุณค่า</h2>
+
+      <p>ท่านซัยยิด มุรตะฎอ อัซซะบีดีย์ได้อธิบายว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والمعنى أن تقدم الزمان وتأخره ليست له فضيلة في نفسه؛ لأن الأزمان كلها متساوية، وإنما المعتبر الرجال الموجودون في تلك الأزمان؛ فالمصيب في رأيه ونقله ونقده لا يضره تأخر زمانه الذي أظهره الله فيه والمخطئ الفاسد الرأي الفاسد الفهم لا ينفعه تقدم زمانه، والتقليد المحض وبال على صاحبه وعذاب</blockquote>
+      <p class="ar-translation">“ความหมายของคำกล่าวนี้คือ การที่เวลาผ่านไป ไม่ว่าจะเป็นอดีตหรือปัจจุบันนั้น ไม่ใช่สิ่งที่มีคุณค่าในตัวมันเอง เพราะกาลเวลาทั้งหมดนั้นเท่าเทียมกัน แต่สิ่งที่สำคัญคือ ผู้คนที่อยู่ในช่วงเวลานั้นๆ ผู้ที่มีความเห็นถูกต้อง การถ่ายทอดความรู้ที่ถูกต้อง และการวิเคราะห์ที่แม่นยำ ย่อมไม่ได้รับผลกระทบจากการที่เขามาเกิดในยุคหลัง พระองค์อัลลอฮ์ทรงให้เขาปรากฏตัวในช่วงเวลาของเขาเอง ส่วนผู้ที่มีความเห็นผิดพลาด มีความเข้าใจที่บกพร่อง ย่อมไม่ได้รับประโยชน์จากการที่เขาเกิดในยุคก่อนหน้าแต่อย่างใด การยึดติดกับการเลียนแบบโดยไม่พิจารณา (ตักลีด) อย่างสิ้นเชิงนั้น เป็นภาระหนักแก่เจ้าของ และอาจกลายเป็นการข้อเสียแก่เขาเอง”<sup class="fn-ref" id="fnref-8"><a href="#ref-8">⁸</a></sup></p>
+
+      <p>ท่านอิหม่ามซัรรู้กได้วางหลักเกณฑ์อีกข้อหนึ่งที่อธิบายจุดยืนเกี่ยวกับการพิจารณาความเป็นมาหรือความล่าช้าตามกาลเวลาโดยกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">النظر للأزمنة والأشخاص لا من حيث أصل شرعي أمر جاهلي، النظر للأزمنة والأشخاص لا باعتبار الإتقان والإحسان ولا باعتبار فضيلة شرعية، لمجرد الزمان ولمجرد أن قائل هذا القول أو صاحب هذا الرأي هو زيد وعمرو، هذا أمر جاهلي، حيث قال الكفار: لولا نزل هذا القرآن على رجل من القريتين عظيم"، فرد الله عليهم بقوله: "أهم يقسمون رحمة ربك"، وقالوا: "إنا وجدنا آباءنا على أمة وإنا على آثارهم مقتدون فرد الله تعالى عليهم بقوله: "قل أولو جئتكم بأهدى مما وجدتم عليه آباءكم"، فلزم هذا النظر العام فضل الله تعالى من غير مبالاة بوقت ولا شخص، إلا من حيث ما خصه الله تعالى به</blockquote>
+      <p class="ar-translation">“การพิจารณากาลเวลาและบุคคล โดยไม่อ้างอิงจากหลักการทางศาสนา ถือเป็นแนวคิดของยุคญาฮิลียะฮ์ หากพิจารณากาลเวลาและบุคคลโดยไม่คำนึงถึงคุณภาพและความดีงาม หรือคุณค่าทางศาสนา แต่พิจารณาเพียงเพราะเป็นยุคหนึ่งหรืออีกยุคหนึ่ง หรือเพียงเพราะผู้กล่าวคำนั้นคือบุคคลใดบุคคลหนึ่ง เช่น ซัยด์ หรืออัมร์ นั่นถือเป็นแนวคิดของยุคญาฮิลียะฮ์ ดังที่พวกปฏิเสธศรัทธากล่าวไว้ว่า: ‘ทำไมอัลกุรอานจึงไม่ถูกประทานลงมาแก่ชายผู้ยิ่งใหญ่จากสองเมืองใหญ่?’ อัลลอฮ์ได้ทรงโต้ตอบพวกเขาว่า: ‘พวกเขาคือผู้ที่จะแบ่งปันความเมตตาของพระเจ้าของเจ้ากระนั้นหรือ?’ และพวกเขายังกล่าวอีกว่า: ‘แท้จริงเราได้พบว่าบรรพบุรุษของเราอยู่บนแนวทางหนึ่ง และเราเองก็ปฏิบัติตามรอยเท้าของพวกเขา’ อัลลอฮ์จึงตอบพวกเขาว่า: ‘จงกล่าวเถิด แม้ว่าข้าจะนำมาซึ่งทางนำที่ถูกต้องยิ่งกว่าสิ่งที่พวกท่านพบว่าบรรพบุรุษของพวกท่านยึดถืออยู่ก็ตามกระนั้นหรือ?’ ดังนั้น การพิจารณาโดยทั่วไปควรอยู่บนพื้นฐานของความโปรดปรานของอัลลอฮ์ โดยไม่ยึดติดกับกาลเวลาใดหรือบุคคลใด เว้นแต่ว่าอัลลอฮ์ได้ทรงให้เกียรติพวกเขาด้วยคุณค่าที่แท้จริง”<sup class="fn-ref" id="fnref-9"><a href="#ref-9">⁹</a></sup></p>
+
+      <p>ท่านฮาญีย์ คอลีฟะฮ์ ได้กล่าวไว้ในหนังสือ “กัชฟุซซุนูน” ไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اعلم أن نتائج الأفكار لا تقف عند حد، وتصرفات الأنظار لا تنتهي إلى غاية، بل لكل عالم ومتعلم منها حظ يحرزه في الوقت المقدر له، وليس لأحد أن يزاحمه فيه؛ لأن العالم المعنوي واسع كالبحر الزاخر، والفيض الإلهي ليس له قطاع ولا آخر، والعلوم منح إلهية ومواهب ربانية</blockquote>
+      <p class="ar-translation">“พึงรู้เถิดว่า ผลลัพธ์ของความคิดไม่มีขีดจำกัด และการพินิจพิจารณาทางปัญญาไม่มีที่สิ้นสุด แต่ละนักวิชาการและนักศึกษา ล้วนมีส่วนแบ่งของความรู้ที่เขาจะได้รับตามเวลาที่ถูกกำหนดไว้สำหรับเขา และไม่มีใครสามารถแย่งชิงสิ่งเหล่านั้นไปจากเขาได้ เพราะว่า โลกแห่งปัญญานั้นกว้างใหญ่ดุจมหาสมุทรอันใหญ่ไพศาล และความโปรดปรานของอัลลอฮ์นั้น เป็นสายน้ำแห่งพระเมตตาที่ไม่มีจุดสิ้นสุด วิทยาการทั้งปวงล้วนเป็นของขวัญจากอัลลอฮ์และเป็นพรจากพระองค์ ประทานให้แก่ผู้ที่พระองค์ทรงประสงค์”<sup class="fn-ref" id="fnref-10"><a href="#ref-10">¹⁰</a></sup></p>
+
+      <p>คำกล่าวเหล่านี้ชี้ให้เห็นถึง ความสำคัญของการวิจัยและการพิจารณาในหลักการของศาสนาอิสลาม และแสดงให้เห็นว่า แนวคิดที่ว่า “คนรุ่นแรกได้ทิ้งทุกสิ่งไว้ให้กับคนรุ่นหลังแล้ว” ไม่เคยเป็นอุปสรรคต่อการแสวงหาความรู้และการค้นคว้าของนักศึกษาและผู้ที่ปรารถนาที่จะเรียนรู้เลย</p>
+
+      <p>หากแนวคิดดังกล่าวเป็นจริง เราคงไม่เห็นนักวิชาการรุ่นหลังสามารถวินิจฉัยและอนุมานกฎเกณฑ์ทางศาสนาสำหรับประเด็นร่วมสมัย เช่น การโคลนนิ่ง การทำเด็กหลอดแก้ว ซึ่งเป็นประเด็นที่เกิดขึ้นในยุคปัจจุบัน</p>
+
+      <p>เป็นที่ควรกล่าวถึงว่าอิสลามส่งเสริมและสนับสนุนให้ใช้เวลาและความพยายามในการศึกษาค้นคว้า ซึ่งเป็นแนวทางสำคัญในการเอาชนะความเฉื่อยชาในการคิดวิเคราะห์ และนำไปสู่ความสำเร็จในด้านต่างๆ ของชีวิต</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). คนรุ่นแรกได้ทิ้งอะไรไว้ให้คนรุ่นหลัง. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/reflections/what-the-salaf-left-us.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">أخرجه مسلم في صحيح مسلم، كتاب الزكاة، رقم 1017، من حديث جرير بن عبد الله رضي الله عنه. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">النووي، يحيى بن شرف. المنهاج شرح صحيح مسلم بن الحجاج. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">النووي، يحيى بن شرف. المنهاج شرح صحيح مسلم بن الحجاج. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">القرآن الكريم، سورة البقرة (2)، الآية 237. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">أخرجه البخاري في صحيح البخاري، كتاب الشهادات، رقم 2652، من حديث عبد الله بن مسعود رضي الله عنه. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+        <li id="ref-6">القرآن الكريم، سورة هود (11)، الآية 111. <a class="fn-back" href="#fnref-6" aria-label="กลับไปยังเชิงอรรถที่ 6">↑</a></li>
+        <li id="ref-7">أبو حيان الأندلسي، محمد بن يوسف. البحر المحيط. <a class="fn-back" href="#fnref-7" aria-label="กลับไปยังเชิงอรรถที่ 7">↑</a></li>
+        <li id="ref-8">الزروق، أحمد بن أحمد. <a class="fn-back" href="#fnref-8" aria-label="กลับไปยังเชิงอรรถที่ 8">↑</a></li>
+        <li id="ref-9">الزبيدي، محمد مرتضى. تاج العروس من جواهر القاموس. <a class="fn-back" href="#fnref-9" aria-label="กลับไปยังเชิงอรรถที่ 9">↑</a></li>
+        <li id="ref-10">حاجي خليفة، مصطفى بن عبد الله. كشف الظنون عن أسامي الكتب والفنون. <a class="fn-back" href="#fnref-10" aria-label="กลับไปยังเชิงอรรถที่ 10">↑</a></li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>

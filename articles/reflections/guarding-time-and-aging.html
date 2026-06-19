@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การรักษาเวลา และบทเรียนแห่งวัยที่ล่วงเลย — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทเรียนจากชัยค์อับดุลฟัตตาห์ อบู ฆุดดะฮ์ ว่าด้วยการรักษาเวลาของเหล่านักปราชญ์ ผ่านชีวประวัติของอัลฮาฟิศ อิบนุ อะซากิร และความจริงของวัยที่ล่วงเลย">
+<meta name="keywords" content="มุมพักใจ, การรักษาเวลา, อบู ฆุดดะฮ์, อิบนุ อะซากิร, วัยชรา, อัลญาฮิซ, คุณค่าของเวลา">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การรักษาเวลา และบทเรียนแห่งวัยที่ล่วงเลย — Islamic Fiqh Publishing">
+<meta property="og:description" content="ผลงานอันมหาศาลของเหล่านักปราชญ์เกิดขึ้นได้ด้วยการรักษาเวลาทุกชั่วขณะ และความจริงที่ว่ายิ่งอายุมากขึ้น ภาระก็ยิ่งเพิ่มพูน">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/reflections/guarding-time-and-aging">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/reflections/guarding-time-and-aging">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "การรักษาเวลา และบทเรียนแห่งวัยที่ล่วงเลย",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/reflections/guarding-time-and-aging.html"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="guarding-time-and-aging">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/reflections.html" class="article-feature-eyebrow">มุมพักใจ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">การรักษาเวลา และบทเรียนแห่งวัยที่ล่วงเลย</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">“สิ่งที่กระตุ้นให้ข้าพเจ้า (หมายถึงท่านชัยค์อับดุลฟัตตาห์ อบู ฆุดดะฮ์) ต้องนำเสนอรายชื่อตำรับตำราอันน่าทึ่งเหล่านั้น ก็เพื่อชี้ให้เห็นว่า ผลงานอันมากมายมหาศาลที่หลั่งไหลราวกับสายน้ำเช่นนี้ ถูกเขียนขึ้นมาได้อย่างไร? และถูกรวบรวมขึ้นเมื่อใด? คำตอบก็คือ ทั้งหมดนั้นเกิดขึ้นได้ด้วยการให้ความสำคัญกับเวลา, การแสวงหาประโยชน์จากมัน และการไขว่คว้าทุกโอกาส โดยไม่ปล่อยให้แม้แต่ชั่วโมงเดียวหรือเพียงชั่วขณะหนึ่งสูญเปล่าไป</p>
+
+      <p>ด้วยการรักษาเวลาเยี่ยงนี้เองที่ทำให้ผลงานทางวิชาการเพิ่มพูน, อายุขัย (ในเชิงคุณค่าและผลงาน) ยืนยาวขึ้น และอัลลอฮ์จะทรงประทานความจำเริญ (บะเราะกะฮ์) ให้แก่วันเวลาอันสั้นและอายุขัยที่ไม่ยืนยาว และอัลลอฮ์นั้นทรงประทานความโปรดปรานของพระองค์แก่ผู้ที่พระองค์ทรงประสงค์ และพระองค์คือเจ้าของความโปรดปรานอันยิ่งใหญ่”</p>
+
+      <h2 class="article-h2">ความมากของผลงานไม่ใช่เครื่องวัดความรู้</h2>
+
+      <p>ชัยค์อับดุลฟัตตาห์ได้อธิบายส่วนนี้ว่า: “ท่านจงพึงระวังอย่างยิ่งที่จะเข้าใจผิดจากสิ่งที่ข้าพเจ้าได้กล่าวมา เกี่ยวกับความยิ่งใหญ่ของตำราและความมากมายของผลงานของเหล่านักปราชญ์ผู้ยิ่งใหญ่เหล่านั้น แล้วด่วนสรุปไปว่าพวกเขาเป็นผู้ที่มีความรู้มากกว่านักปราชญ์ในยุคก่อนหน้าและบรรพชนยุคแรก (อัสสลัฟ) นี่เป็นความเข้าใจที่ผิดมหันต์ เพราะความมากมายของผลงานหรือความใหญ่โตของตำรา รวมถึงถ้อยคำที่ยืดยาวและเนื้อหามากมายในนั้น ไม่ใช่มาตรฐานในการชี้วัดว่า คนยุคหลังมีความรู้เหนือกว่าและล้ำหน้ากว่าคนในยุคก่อนหน้า</p>
+
+      <p>ข้อเท็จจริงก็คือ บรรพชนยุคสลัฟนั้น มีความรู้ในเรื่องศาสนาและบัญญัติของอัลลอฮ์ลึกซึ้งกว่าคนยุคหลัง แต่คำพูดของคนยุคสลัฟนั้นมีน้อย ส่วนคำพูดของคนยุคหลังกลับมีมาก และนี่คือสิ่งที่อาจสร้างความเข้าใจผิดได้</p>
+
+      <h2 class="article-h2">ตัวอย่างถ้อยคำของเหล่าตาบิอีนที่ยืนยันถึงความรู้ที่ลึกซึ้งกว่าของชาวสะลัฟ</h2>
+
+      <p>หนึ่ง - มุญาฮิด บิน ญับร์ อัลมักกีย์ (ตาบิอีนผู้ทรงเกียรติ, ปรมาจารย์แห่งนักกอรีย์และนักอรรถาธิบายอัลกุรอาน, เสียชีวิต ฮ.ศ. 104) ได้กล่าวว่า: “เหล่านักปราชญ์ (ที่แท้จริง) ได้จากไปแล้ว จึงไม่เหลือผู้ใดอีกนอกจากผู้ที่กำลังศึกษา และผู้ที่ขยันขันแข็งที่สุดในหมู่พวกท่าน ณ วันนี้ ก็เปรียบได้ดั่งผู้ละเล่นเท่านั้นเมื่อเทียบกับคนในยุคก่อนหน้าพวกท่าน”</p>
+
+      <p>สอง - บิลาล บิน สะอัด อัลอัชอะรีย์ อัดดิมัชกีย์ (ตาบิอีนผู้ทรงเกียรติ, อิหม่ามร็อบบานีย์, นักเทศนาแห่งดามัสกัส, เสียชีวิตราว ฮ.ศ. 120) ได้กล่าวว่า: “ผู้ที่สมถะที่สุดในหมู่พวกท่าน (ในวันนี้) ก็ยังเป็นผู้ที่โหยหา (ในดุนยา), ผู้ที่ขยันหมั่นเพียรที่สุดในหมู่พวกท่าน ก็ยังเป็นผู้ที่บกพร่อง, ผู้ที่มีความรู้ที่สุดในหมู่พวกท่าน ก็ยังเป็นผู้ที่โง่เขลา และผู้ที่โง่เขลาที่สุดในหมู่พวกท่านก็ยังเป็นผู้ที่หลงตน”</p>
+
+      <p>สาม - ฮัมมาด บิน ซัยด์ได้เล่าว่า: “มีผู้กล่าวกับอัยยูบ อัสสักติยานีย์ (ตาบิอีนผู้ทรงเกียรติ, อิหม่ามผู้เป็นหัวหน้าของเหล่านักนิติศาสตร์และปราชญ์แห่งบัศเราะฮ์, เสียชีวิต ฮ.ศ. 131) ว่า: ‘ความรู้ในวันนี้มีมากกว่าหรือน้อยกว่า (ในอดีต)?’ ท่านตอบว่า: ‘คำพูดในวันนี้ มีมากกว่าในอดีต แต่ความรู้ในวันวานนั้นมีมากกว่า’”</p>
+
+      <p>สี่ - อบู อัมร์ บิน อัลอะลาอ์ อัลบัศรีย์ (ตาบิอีนผู้ทรงเกียรติ, หนึ่งในนักกอรีย์ทั้งเจ็ด, เสียชีวิต ฮ.ศ. 154) ซึ่งเป็นผู้ที่รอบรู้ที่สุดในยุคของท่านเกี่ยวกับอัลกุรอาน, ภาษาอาหรับและกวีนิพนธ์ ได้กล่าวว่า: “พวกเราเมื่อเทียบกับผู้ที่ล่วงลับไปแล้ว ก็เปรียบได้ดั่งต้นพืชเล็กๆ ที่ขึ้นอยู่ ณ โคนต้นอินทผลัมที่สูงตระหง่าน”</p>
+
+      <p>ปราชญ์แห่งตาบิอีนทั้งสี่ท่านนี้ แม้จะมาจากต่างเมืองและต่างยุคสมัย แต่ถ้อยคำของพวกท่านกลับสอดคล้องกันในเนื้อหาเดียวกัน นั่นคือ ความรู้ที่ลึกซึ้งกว่าของบรรพชนยุคก่อนหน้า เมื่อเทียบกับคนรุ่นหลังอย่างพวกเขาเอง แล้วจะกล่าวเป็นอย่างอื่นได้อย่างไรกับผู้ที่มาหลังจากพวกเขาทั้งในเวลาอันใกล้หรือไกล ความแตกต่างระหว่างพวกเขานั้นช่างยิ่งใหญ่และห่างไกลนัก แม้ว่าคนรุ่นหลังจะเป็นอิหม่ามผู้ยิ่งใหญ่ก็ตาม</p>
+
+      <p>ประเด็นนี้ได้รับการชี้แนะจากนักปราชญ์ผู้ยิ่งใหญ่หลายท่าน และหากไม่ใช่เพราะถ้อยคำของพวกท่านนั้นยืดยาวและเนื้อที่ในที่นี้มีจำกัดแล้ว ข้าพเจ้าคงได้ยกคำพูดของอิหม่ามอีกหลายท่านในหัวข้อนี้มาแสดงไว้ แต่ข้าพเจ้าจะขอยกมาเพียงบางประโยคจากคำกล่าวของอิหม่ามอัลฮาฟิศ อิบนุ เราะญับ อัลฮัมบะลีย์ (เสียชีวิต ฮ.ศ. 795) ซึ่งท่านได้กล่าวไว้ในหนังสืออันล้ำค่าของท่านชื่อว่า “ฟัฎล์ อิลม์ อัสสลัฟ อะลา อัลเคาะลัฟ” (ความประเสริฐแห่งความรู้ของชนยุคสลัฟเหนือชนยุคหลัง)<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup> ว่า: “มีคนยุคหลังจำนวนมากที่ต้องเผชิญกับบททดสอบ (ฟิตนะฮ์) ในเรื่องนี้ (คือเรื่องคำพูดมากมายความหมายเป็นศูนย์) พวกเขาจึงหลงคิดไปว่าคนพูดมาก, การโต้เถียง และการถกเถียงในประเด็นศาสนามาก คือผู้ที่มีความรู้มากกว่าผู้ที่ไม่ได้เป็นเช่นนั้น เช่นนี้คือความโง่เขลาอย่างที่สุด จงดูบรรดาเศาะหาบะฮ์ชั้นแนวหน้าและปราชญ์ของพวกเขาเถิด เช่น อบู บักร, อุมัร, อุษมาน, อะลี, มุอาซ, อิบนุ มัสอูด และซัยด์ บิน ษาบิต พวกเขาเป็นอย่างไร? คำพูดของพวกเขานั้นน้อยกว่าคำพูดของอิบนุ อับบาส แต่พวกท่านมีความรู้มากกว่าเขา</p>
+
+      <p>ในทำนองเดียวกัน คำพูดของเหล่าตาบิอีนก็มีมากกว่าคำพูดของเศาะหาบะฮ์ แต่เศาะหาบะฮ์มีความรู้มากกว่าพวกเขา และเหล่าตาบิอิตตาบิอีนก็มีคำพูดมากกว่าเหล่าตาบิอีน แต่เหล่าตาบิอีนก็มีความรู้มากกว่าพวกเขา</p>
+
+      <p>ดังนั้น ความรู้มิได้วัดกันที่การรายงานหรือคำพูดที่มากมาย หากแต่คือรัศมี (นูร) ที่ถูกประทานลงในหัวใจ ซึ่งบ่าวของอัลลอฮ์จะใช้มันเพื่อทำความเข้าใจในสัจธรรม, เพื่อจำแนกสัจธรรมออกจากความเท็จ และเพื่อถ่ายทอดความหมายนั้นออกมาด้วยถ้อยคำที่สั้นกระชับแต่ครอบคลุมเป้าหมาย</p>
+
+      <p>นบีมุฮัมมัด ﷺ เองก็ได้รับ “ญะวามิอุลกะลิม” (ถ้อยคำที่สั้นกระชับแต่มีความหมายครอบคลุม) และคำพูดของท่านก็ถูกทำให้สั้นกระชับ ด้วยเหตุนี้จึงมีข้อห้ามไม่ให้พูดมากและขยายความในเรื่อง “กอล-กาล” (เรื่องซุบซิบหรือเรื่องไร้สาระ)</p>
+
+      <p>แต่พวกเรากลับถูกทดสอบด้วยกลุ่มคนโง่เขลา ที่เชื่อว่านักวิชาการยุคหลังบางคนที่พูดจายืดยาวนั้น มีความรู้มากกว่าคนยุคก่อน บางคนถึงกับคิดว่าบุคคลผู้นั้นมีความรู้มากกว่าเศาะหาบะฮ์และผู้คนหลังจากพวกท่านทั้งหมด เพียงเพราะเขามีคำอธิบายและคำพูดที่มากมาย บางคนก็กล่าวว่า: เขามีความรู้มากกว่าบรรดานักนิติศาสตร์ (ฟุกอฮาอ์) ที่มีชื่อเสียงและเป็นที่ปฏิบัติตามเสียอีก…นี่คือการดูแคลนบรรพชนผู้ประเสริฐอย่างใหญ่หลวง และเป็นการคิดในแง่ร้ายต่อพวกเขา และเป็นการกล่าวหาพวกเขาว่าโง่เขลาและมีความรู้ที่บกพร่อง” - จบคำกล่าวโดยสรุปและย่อความ ซึ่งคำพูดของท่านในหัวข้อนี้ยังมีความยาวอีกมาก กระนั้นเนื้อที่ในที่นี้ไม่เอื้ออำนวยที่จะนำมากล่าวถึงได้ทั้งหมด</p>
+
+      <h2 class="article-h2">มรดกอันยิ่งใหญ่ไพศาลที่อัลฮาฟิศ อิบนุ อะซากิร มอบไว้แก่คลังปัญญาอิสลาม</h2>
+
+      <p>ชัยค์อับดุลฟัตตาห์ยังได้กล่าวต่อไปว่า:</p>
+
+      <p>“ข้าพเจ้าขอปิดท้ายการอภิปรายในหัวข้อ ‘เหล่านักปราชญ์ผู้พิทักษ์เวลา, ผู้รักษาเวลาทุกชั่วขณะ, ผู้เก็บเกี่ยวและมอบผลไม้อันหอมหวานที่สุด (แห่งความรู้)’ ด้วยการนำเสนอชีวประวัติโดยสังเขปของ อัลฮาฟิศ อบุลกอเซม อิบนุ อะซากิร อัดดิมัชกีย์ ซึ่งในชีวประวัติของท่านนั้นมีเรื่องราวที่สามารถปลุกพลังใจและปลุกผู้ที่หลับใหลให้ตื่นขึ้นได้ ข้าพเจ้าจึงขอตั้งหัวข้อเรื่องนี้ว่า: ‘มรดกอันยิ่งใหญ่ไพศาลที่อัลฮาฟิศ อิบนุ อะซากิร มอบไว้แก่คลังปัญญาอิสลาม’</p>
+
+      <p>อัลฮาฟิศ อบุลกอเซม อิบนุ อะซากิร อัดดิมัชกีย์ (มีนามว่า อะลี บิน อัลฮะซัน) เกิดที่ดามัสกัส ใน ฮ.ศ. 499 และเสียชีวิตที่นั่นใน ฮ.ศ. 571 (ขออัลลอฮ์ทรงเมตตาท่าน) ท่านเป็นผู้ที่รักษาเวลาอย่างเคร่งครัด ด้วยเหตุนี้ ท่านจึงได้มอบผลงานประพันธ์อันล้ำค่าไว้แก่คลังปัญญาอิสลาม ซึ่งเป็นผลงานที่แม้แต่สถาบันวิชาการในปัจจุบันก็ยังยากที่จะจัดพิมพ์ได้ทั้งหมด ท่านได้เขียนมันขึ้นมาเพียงลำพัง, เรียบเรียงมันด้วยมือและปากกาของท่านเอง, ตรวจชำระและพิสูจน์ความถูกต้อง, รวบรวมแหล่งข้อมูล, คัดกรอง, จัดระบบและลำดับเนื้อหา ก่อนจะนำเสนอสู่สายตาผู้คนในฐานะสัญลักษณ์อันเป็นอมตะที่ประกาศก้องว่า ท่านคือ <span class="ar-inline" lang="ar" dir="rtl">أعجوبة الأعاجيب</span> (หนึ่งในสิ่งมหัศจรรย์แห่งสิ่งมหัศจรรย์ทั้งหลาย) ในด้านความจำอันไพศาล, ความรู้ที่มากมายมหาศาล และความมุ่งมั่นอันแรงกล้าที่มาพร้อมกับความสามารถในการประพันธ์และสร้างสรรค์ผลงานอันน่าทึ่งจำนวนมหาศาล</p>
+
+      <p>ณ ที่นี้ ข้าพเจ้า (ชัยค์อับดุลฟัตตาห์) จะขอยกเพียงเศษเสี้ยวหนึ่งจากชีวประวัติของท่าน ซึ่งคัดมาจากหนังสือสามเล่ม โดยจะจำกัดเนื้อหาเฉพาะส่วนที่เกี่ยวข้องกับการเดินทางอันกว้างขวาง, ผลงานที่มากมาย และความเคร่งครัดของท่านในการรักษาเวลาและทุกชั่วขณะ</p>
+
+      <h3 class="article-h3">1. คำกล่าวของนักประวัติศาสตร์ อัลกอฎีย์ อิบนุ ค็อลลิกาน ในหนังสือ “วะฟะยาต อัลอะอ์ยาน”</h3>
+
+      <p>ท่านอิบนุ ค็อลลิกาน (นักชีวประวัติผู้มีชื่อเสียงในศตวรรษที่ 13) ได้กล่าวในชีวประวัติของท่าน (อิบนุ อะซากิร) ความว่า:<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup> “ท่านคือปรมาจารย์ด้านหะดีษ (มุฮัดดิษ) แห่งแคว้นชามในยุคสมัยของท่าน และเป็นหนึ่งในปราชญ์ชั้นแนวหน้าของสำนักนิติศาสตร์ชาฟิอีย์ แต่ศาสตร์แห่งหะดีษได้เข้ามามีอิทธิพลเหนือท่าน จนกระทั่งท่านมีชื่อเสียงโด่งดังในด้านนี้ ท่านได้ทุ่มเทอย่างสุดกำลังในการเสาะแสวงหาหะดีษจนสามารถรวบรวมได้ในสิ่งที่ไม่มีผู้ใดทำได้เสมอเหมือน</p>
+
+      <p>ท่านได้เดินทางรอนแรมไปทั่วทุกสารทิศและได้พบปะกับคณาจารย์ (ชัยค์) จำนวนมาก ท่านเคยเป็นสหายร่วมเดินทางของอัลฮาฟิศ อบู สะอัด อับดุลกะรีม อิบนุ อัสสัมอานีย์ (นักประวัติศาสตร์และนักหะดีษผู้ยิ่งใหญ่ร่วมสมัย) ในการเดินทางเสาะแสวงหาความรู้ (ซึ่งมีบันทึกว่า จำนวนคณาจารย์ที่อิบนุ อัสสัมอานีย์ได้พบเจอและรับความรู้มาในโลกอิสลามนั้น มีมากถึงเจ็ดพันคน ซึ่งสะท้อนให้เห็นถึงขนาดของเครือข่ายวิชาการและการเดินทางอันแสนยาวไกลของปราชญ์ในยุคนั้น)</p>
+
+      <p>ท่านเป็นผู้มีความจำเป็นเลิศ และมีความเคร่งครัดในศาสนา ท่านได้รวบรวมความรู้ทั้งในส่วนของตัวบท (มะตัน - <span class="ar-inline" lang="ar" dir="rtl">المتون</span>) และสายรายงาน (อะซานีด - <span class="ar-inline" lang="ar" dir="rtl">الأسانيد</span>) ท่านได้สดับรับฟังความรู้ที่แบกแดด จากนั้นจึงกลับสู่ดามัสกัส แล้วจึงเดินทางต่อไปยังแคว้นคุรอซาน เข้าไปยังเมืองนัยซาบูร, ฮะรอต, อัศบะฮาน และแคว้นอัลญิบาล ท่านได้ประพันธ์ตำราอันทรงคุณค่าและได้ทำตัครีจ (<span class="ar-inline" lang="ar" dir="rtl">التخريج</span> - คือการตรวจสอบและระบุที่มาของสายรายงานหะดีษที่ปรากฏในหนังสือต่างๆ) ท่านมีความสามารถในการอธิบายหะดีษอย่างสละสลวย และเป็นผู้ที่ได้รับความจำเริญเป็นพิเศษในด้านการรวบรวมและประพันธ์</p>
+
+      <p>ท่านได้ประพันธ์หนังสือ “ตารีค ดิมัชก์” (ประวัติศาสตร์แห่งดามัสกัส) ซึ่งมีความยาวถึง 80 เล่มใหญ่ ท่านได้นำเสนอเรื่องราวมหัศจรรย์มากมายไว้ในนั้น รูปแบบการเขียนนั้นดำเนินตามรอยของหนังสือ “ตารีค แบกแดด” (ประวัติศาสตร์แห่งแบกแดด) ของอัลเคาะฏีบ อัลบัฆดาดีย์ แต่หนังสือของท่าน (อิบนุ อะซากิร) มีขนาดใหญ่กว่าหลายเท่า ทั้งเนื้อเองนั้นยังมีข้อมูลที่กว้างขวาง, ครอบคลุม และเปี่ยมไปด้วยคุณประโยชน์ที่หลากหลายกว่ามาก</p>
+
+      <p>ชัยค์ของเรา, ปรมาจารย์ผู้เป็นดั่งดวงประทีป, ซะกียุดดีน อบู มุฮัมมัด อับดุลอะซีม อัลมุนซิรีย์ (แห่งอียิปต์) ได้กล่าวกับข้าพเจ้า (อิบนุ ค็อลลิกาน) ขณะที่เรากำลังสนทนากันถึงหนังสือประวัติศาสตร์เล่มนี้ และท่านได้นำเล่มหนึ่งออกมาให้ข้าพเจ้าดู การสนทนาเกี่ยวกับความยิ่งใหญ่ของมันช่างยาวนานยิ่งนัก ท่านกล่าวว่า: ‘ข้าพเจ้าไม่คิดเป็นอื่นเลย นอกจากว่าชายผู้นี้ (อิบนุ อะซากิร) คงได้ตั้งปณิธานที่จะเขียนประวัติศาสตร์เล่มนี้ตั้งแต่วันแรกที่ท่านบรรลุสติปัญญา และได้เริ่มรวบรวมข้อมูลตั้งแต่วินาทีนั้นเป็นต้นมา มิเช่นนั้นแล้ว อายุขัยเพียงชั่วชีวิตหนึ่งย่อมสั้นเกินกว่าที่มนุษย์จะสามารถรวบรวมหนังสือเช่นนี้ได้’</p>
+
+      <p>และท่าน (อิบนุ ค็อลลิกาน) ได้กล่าวว่า: “ผู้ใดก็ตามที่ได้อ่านหนังสือเล่มนี้จะประจักษ์ในความจริงของคำพูดนี้ เวลาของมนุษย์คนหนึ่งจะกว้างขวางพอที่จะสร้างสรรค์ผลงานเช่นนี้ได้อย่างไร? และสิ่งที่ปรากฏออกมาให้เราเห็นนี้ (คือฉบับ 80 เล่ม) ก็เป็นเพียงฉบับที่ท่านได้คัดกรองและเลือกสรรแล้วเท่านั้น ซึ่งมันจะสำเร็จออกมาเช่นนี้ไม่ได้เลยหากไม่ผ่านการร่างต้นฉบับที่มีจำนวนมากมายจนแทบจะนับไม่ถ้วน</p>
+
+      <p>นอกจากนี้ ท่านยังมีผลงานประพันธ์อันทรงคุณค่าและบทความขนาดสั้นที่น่าอ่านอีกมากมาย” - จบคำกล่าวของอัลกอฎีย์อิบนุ ค็อลลิกาน</p>
+
+      <p>ผลงานของอัลฮาฟิศ อบุลกอเซม อิบนุ อะซากิรนั้น มีมากกว่าห้าสิบเรื่อง ซึ่งหนึ่งในนั้นคือ “ประวัติศาสตร์แห่งดามัสกัส” ที่มีความยาวถึง 80 เล่มใหญ่ ดังที่ได้กล่าวไปแล้ว</p>
+
+      <h3 class="article-h3">2. คำกล่าวของอัลฮาฟิศ อัซซะฮะบีย์ ในหนังสือ “ตัซกิเราะตุลฮุฟฟาซ”</h3>
+
+      <p>ท่านได้กล่าวว่า:<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup> “ท่านเกิดในช่วงต้น ฮ.ศ. 499 และเริ่มสดับรับฟังความรู้ ใน ฮ.ศ. 505 (คือเริ่มศึกษาอย่างจริงจังตั้งแต่อายุ 6 ขวบ) ด้วยการดูแลเอาใจใส่จากบิดาและพี่ชายของท่าน คือ อิหม่ามฎิยาอุดดีน ฮิบะตุลลอฮ์ ท่านจึงได้ศึกษา…ที่ดามัสกัส</p>
+
+      <p>ท่านได้ออกเดินทาง (เพื่อเสาะแสวงหาความรู้) ใน ฮ.ศ. (5)20 (เมื่ออายุได้ 21 ปี) และได้สดับรับฟังความรู้…ที่แบกแดด, …ที่มักกะฮ์, …ที่กูฟะฮ์, …ที่นัยซาบูร, …ที่อัศบะฮาน, …ที่มัรว์ และ…ที่ฮะรอต (รายชื่อเมืองเหล่านี้ล้วนเป็นศูนย์กลางความรู้ที่สำคัญที่สุดของโลกอิสลามในยุคนั้น)</p>
+
+      <p>ท่านได้รวบรวมหนังสือ “อัลอัรบะอีน อัลบุลดานียะฮ์” (<span class="ar-inline" lang="ar" dir="rtl">الأربعين البلدانية</span>) ซึ่งก็คือ “สี่สิบหะดีษ จากสี่สิบคณาจารย์ จากสี่สิบเมือง” (ซึ่งเป็นรูปแบบการรวบรวมหะดีษประเภทหนึ่งที่แสดงให้เห็นถึงความอุตสาหะและเครือข่ายทางวิชาการอันกว้างขวางของผู้รวบรวม ที่ต้องเดินทางไปยังเมืองต่างๆ เพื่อรับหะดีษเพียงบทเดียวจากชัยค์ท่านเดียวในเมืองนั้นๆ ให้ครบ 40 เมือง)</p>
+
+      <p>และจำนวนคณาจารย์ (ชัยค์) ของท่านนั้นมีถึง 1,300 ท่าน และเป็นสตรีอีกแปดสิบกว่าท่าน (การมีอาจารย์เป็นสตรี หรือ “ชัยเคาะฮ์” ในจำนวนมากขนาดนี้ เป็นหลักฐานสำคัญที่ชี้ให้เห็นถึงบทบาทอันโดดเด่นของสตรีในฐานะผู้สืบทอดและถ่ายทอดความรู้ โดยเฉพาะอย่างยิ่งในศาสตร์แห่งหะดีษในประวัติศาสตร์อิสลาม)</p>
+
+      <p>มีผู้คนจำนวนมหาศาลที่ได้รายงานความรู้ต่อจากท่าน ซึ่งหนึ่งในนั้นคือสหายร่วมเดินทางของท่านอัสสัมอานีย์ (จากนั้นอิหม่ามอัซซะฮะบีย์ก็ได้ร่ายยาวถึงรายชื่อผลงานของท่าน ซึ่งมีจำนวนราวห้าสิบเรื่อง) และท่านได้จัด “มัจญ์ลิสอิมลาอ์” ในแขนงวิชาความรู้ต่างๆ ถึง 408 มัจญ์ลิส (ครั้ง) (ซึ่งการอิมลาอ์ คือการสอนในระดับสูงที่ปรมาจารย์จะบอกให้ลูกศิษย์จดบันทึกความรู้จากความจำของท่านโดยตรง) และแต่ละมัจญ์ลิสแห่งการอิมลาอ์นั้น ก็เปรียบได้กับการประพันธ์หนังสือหนึ่งเล่ม (ชี้ถึงความหนาแน่นของเนื้อหา, ความลุ่มลึกทางวิชาการ และความเป็นต้นฉบับของความรู้ในแต่ละครั้งที่ท่านทำการสอน ซึ่งเทียบเท่ากับการเขียนหนังสือเล่มใหม่ในทุกครั้ง)</p>
+
+      <h3 class="article-h3">ความทุ่มเทเพื่อองค์ความรู้, เครือข่ายคณาจารย์ที่กว้างใหญ่ และความแม่นยำอันน่าตกใจ</h3>
+
+      <h3 class="article-h3">3. คำกล่าวของอิหม่ามตาญุดดีน อัซซุบกีย์ ในหนังสือ “เฏาะบะกอต อัชชาฟิอียะฮ์ อัลกุบรอ”</h3>
+
+      <p>ท่านได้กล่าวว่า:<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup> “อิหม่ามผู้ทรงเกียรติ, ฮาฟิศแห่งประชาชาติอิสลาม เขาคือ อบุลกอเซม อิบนุ อะซากิร (และเราไม่เคยทราบว่ามีบรรพบุรุษท่านใดของท่านที่ชื่อ ‘อะซากิร’ เลย แต่ท่านมีชื่อเสียงเป็นที่รู้จักด้วยนามนี้) ท่านคือ ผู้ช่วยเหลือและผู้รับใช้ซุนนะฮ์, อิหม่ามแห่งปวงปราชญ์หะดีษในยุคสมัยของท่าน เป็นจุดหมายปลายทางของเหล่านักแสวงหาความรู้</p>
+
+      <p>ท่านได้อุทิศตนเพื่อรวบรวมศาสตร์แขนงต่างๆ ที่กระจัดกระจาย ท่านไม่เคยยึดถือสิ่งใดเป็นสหายเลยเว้นสองสิ่งนอกจาก “ความรู้และการปฏิบัติ” ซึ่งทั้งสองสิ่งนี้คือเป้าหมายสูงสุดในชีวิตของท่าน ท่านมีความจำเป็นเลิศที่ไม่มีรายละเอียดใดๆ ที่หลงหูหลงตาแล้วสามารถหลุดรอดจากความจำของท่านได้ ท่านมีความแม่นยำที่ทำให้ทั้งความรู้ที่เพิ่งได้รับมาใหม่ๆ และความรู้ที่มีมาแต่เดิมอยู่ในระดับเดียวกัน (คือเชี่ยวชาญเท่าเทียมกัน), มีความเจนจัดที่ทำให้ท่านทัดเทียมกับปราชญ์ยุคก่อนหน้าท่าน…หากไม่เหนือกว่าพวกเขา และท่านมีความรู้อันไพศาลที่ทำให้ท่านมั่งคั่ง และทิ้งให้ผู้คนทั้งปวงกลายเป็นผู้ยากไร้ (ในเชิงความรู้) เมื่ออยู่เบื้องหน้าท่าน</p>
+
+      <p>ท่านได้สดับรับฟังความรู้จากผู้คนจำนวนมหาศาล จำนวนคณาจารย์ชายของท่านมีถึง 1,300 ท่าน และเป็นสตรีอีกแปดสิบกว่าท่าน ท่านได้เดินทางไปยังอิรัก, มักกะฮ์, มะดีนะฮ์ และได้เดินทางต่อไปยังดินแดนของชาวอะญัม (ดินแดนที่ไม่ใช่อาหรับ) ท่านจึงได้ศึกษาที่เมืองอัศบะฮาน, นัยซาบูร, มัรว์, ตับรีซ, มัยฮะนะฮ์, บัยฮัก, คุสเราญิรด์, บิสฏอม, ดามฆอน, อัรรอย, ซันญาน, ฮะมะซาน, อะซะดาบาซ, ญัย, ฮะรอต, บูน, บัฆ, บูชันจ์, สะรัคส์, เนาวคอน, สัมนาน, อับฮัร, มะรันด์, ค็อย, ญัรบาซกอน, มัชกาน, รูซรอวัร, ฮุลวาน และอัรญีช</p>
+
+      <p>และท่านยังได้ศึกษาที่เมืองอัลอันบาร, อัรรอฟิเกาะฮ์, อัรเราะห์บะฮ์, มาริดีน, มากะซีน และเมืองอื่นๆ อีกมากมาย ทั้งนครที่กว้างใหญ่และแว่นแคว้นที่แตกต่างกัน ท่านคือผู้เดินทางไกลจากบ้านเกิดอย่างไม่หยุดหย่อน, ทุ่มเทแรงกายไปในดินแดนทุรกันดารอันห่างไกล และเดียวดายโดยไม่มีมิตรสหายใด นอกจากความยำเกรง (ตักวา) ที่ท่านยึดเป็นเพื่อนสนิท และความมุ่งมั่นตั้งใจที่ไม่เคยมองเห็นสิ่งใดล้ำค่าไปกว่าการบรรลุเป้าหมาย</p>
+
+      <p>ชัยค์ของท่านคือ อัลเคาะฏีบ อบุลฟัฎล์ อัฏฏูซีย์ ได้กล่าวว่า: ‘ณ วันนี้ เราไม่รู้จักผู้ใดอีกแล้วที่คู่ควรกับสมัญญานามนี้ (คือ อัลฮาฟิศ) ยิ่งไปกว่าเขา’</p>
+
+      <p>และอิบนุ อันนัจญาร์ได้กล่าวว่า: ‘ท่านคืออิหม่ามของเหล่านักหะดีษในยุคสมัยของท่าน และเป็นผู้ที่ความเป็นผู้นำในด้านความจำ, ความแม่นยำและความรู้อันสมบูรณ์แบบในศาสตร์แห่งหะดีษได้มาสิ้นสุดลงที่ท่าน ท่านคือผู้มีความน่าเชื่อถือ, ความสูงส่ง, ความงดงามในการเขียนประพันธ์ และความยอดเยี่ยมในการเรียบเรียง ศาสตร์แขนงนี้ได้ถูกปิดท้ายลงด้วยตัวท่าน’”</p>
+
+      <p>ชัยค์อับดุลฟัตตาห์กล่าวว่า: “นี่เป็นเพียงแสงสว่างวาบหนึ่งจากชีวประวัติของอิหม่ามผู้มีเอกลักษณ์โดดเด่นท่านนี้ ‘อัลฮาฟิศ อิบนุ อะซากิร อัดดิมัชกีย์’ ซึ่งในเรื่องราวของท่านนั้นมีสิ่งมหัศจรรย์และน่าทึ่ง, เรื่องราวที่น่าประหลาดใจและชวนให้จิตใจเบิกบานอย่างที่ท่านได้เห็น</p>
+
+      <p>และหากไม่ใช่เพราะการพิทักษ์รักษาเวลาของท่าน และการไขว่คว้าทุกนาทีและทุกชั่วขณะแล้วไซร้ ผลงานประพันธ์อันยิ่งใหญ่, ครอบคลุมและเปี่ยมด้วยสุนทรียะเหล่านั้น ย่อมไม่อาจเกิดขึ้นได้เลย ผลงานซึ่งสถาบันวิชาการในปัจจุบันยังมิอาจจัดพิมพ์ได้ทั้งหมด นับประสาอะไรกับการที่จะประพันธ์ผลงานเช่นนั้นขึ้นมาใหม่</p>
+
+      <p>ดังนั้น จงรักษา จงรักษาไว้ซึ่งเวลาและทุกชั่วขณะเถิด เพราะมันคือขุมทรัพย์แห่งความจำเริญและความดีงามทั้งปวง”</p>
+
+      <h2 class="article-h2">เมื่ออายุมากขึ้น ภาระก็ยิ่งเพิ่มพูน ร่างกายก็ยิ่งอ่อนแอ</h2>
+
+      <p>บางคนอาจวาดฝันว่าในอนาคต วันเวลาของพวกเขาจะว่างเว้นจากภาระหน้าที่ต่างๆ และจะปลอดโปร่งจากเรื่องขุ่นข้องหมองใจและอุปสรรคทั้งปวง พวกเขาคิดว่าตนเองจะมีเวลาว่างมากกว่าในอดีตสมัยที่ยังเป็นหนุ่มสาว</p>
+
+      <p>แต่ โอ้สหายผู้เป็นที่รัก ความเป็นจริงที่ปรากฏต่อสายตานั้น กลับตรงกันข้ามโดยสิ้นเชิง ในฐานะคนที่ผ่านโลกและเข้าใจในสัจธรรมข้อนี้มาแล้ว</p>
+
+      <p>ข้าพเจ้าขอบอกท่านว่า: ยิ่งอายุที่ยิ่งมาก มาพร้อมกับความรับผิดชอบอันใหญ่ยิ่ง ความสัมพันธ์ของผู้คนรอบตัวท่านก็จะยิ่งขยายกว้าง เวลาของท่านก็จะยิ่งหดสั้นลง และพละกำลังของท่านก็จะยิ่งถดถอย</p>
+
+      <p>เวลาในวัยชรานั้นคับแคบยิ่งกว่า ร่างกายก็อ่อนแอกว่า สุขภาพก็น้อยลง ความกระฉับกระเฉงก็ลดต่ำลง แต่ภาระหน้าที่และเรื่องวุ่นวายกลับมีมากกว่าและหนักหนาสาหัสกว่า</p>
+
+      <p>ดังนั้น จงรีบฉกฉวยโมงยามแห่งชีวิตไว้ในขณะที่มันยังอำนวย และอย่าได้ยึดเหนี่ยวอยู่กับอนาคตที่ยังมาไม่ถึงและมองไม่เห็น เพราะทุกช่วงของชีวิตล้วนเต็มไปด้วยภาระและภารกิจของมันเอง รวมถึงเรื่องไม่คาดฝันที่จะเกิดขึ้นเสมอ</p>
+
+      <p>มีกวีท่านหนึ่งได้ชี้ให้เห็นถึงความน้อยนิดของวันแห่งความสุขและความมากมายของวันแห่งความทุกข์ระทมไว้ว่า:</p>
+
+      <p class="poem-th">“พวกเขากล่าวว่า กาลเวลานั้นมีเพียงสองวัน<br>วันหนึ่งคือวันแห่งความสุขสันต์ และอีกวันคือวันแห่งความทุกข์ยาก<br>แต่พวกเขาไม่ได้กล่าวความจริง<br>เพราะกาลเวลานั้นคือวันแห่งความสุขสันต์เพียงวันเดียว<br>แต่อีกหลายวันคือวันแห่งความทุกข์ยากที่ถาโถมเข้ามาไม่ขาดสาย”</p>
+
+      <p>ตรงนี้กำลังเตือนสติเราว่า ความคิดที่ว่า “รอให้ว่างก่อน” หรือ “รอให้แก่ก่อนแล้วค่อยทำ” เป็นภาพลวงตา เพราะในความเป็นจริง ยิ่งเราอายุมากขึ้น เวลาว่างจะน้อยลง ในขณะที่ภาระและความเสื่อมถอยของร่างกายจะเพิ่มขึ้นเป็นเงาตามตัว ดังนั้น เวลาที่ดีที่สุดในการทำสิ่งต่างๆ คือ “ตอนนี้”</p>
+
+      <p>วัยหนุ่มคือช่วงเวลาแห่งความมุ่งมั่นและความสุขสันต์ แต่วัยชรา คือยุคแห่งความอ่อนแอและมีเรื่องกวนใจ</p>
+
+      <p>ดังนั้น การทำงาน, ความมุ่งมั่นพากเพียร, พละกำลัง, ความรุ่งโรจน์, การบรรลุเป้าหมาย และความสุขสันต์อันบริสุทธิ์นั้น…ความจริงแล้วมันอยู่ในวัยหนุ่มสาว ไม่ใช่วัยชรา เพราะวัยชรานั้นคือ “เวทีของสารพัดโรคภัยและอาการเจ็บป่วย มันคือที่รวมของเรื่องขุ่นข้องหมองใจและสิ่งรบกวนนานัปการ”</p>
+
+      <p>และช่างสัตย์จริงเสียเหลือเกินคำกล่าวของกวีที่ว่า:</p>
+
+      <p class="poem-th">“ความจริงแล้ววัยหนุ่ม ซึ่งมีบั้นปลายอันรุ่งโรจน์<br>คือช่วงที่เราได้ลิ้มรสความสุขสันต์<br>และไม่มีความสุขใดเหลือไว้สำหรับคนชรา”</p>
+
+      <p>และเมื่อความชราและโรคภัยไข้เจ็บได้มาเยือน อบู อุษมาน อัลญาฮิซ (ปรมาจารย์ด้านร้อยแก้วและนักคิดคนสำคัญในยุคอับบาซียะฮ์) ท่านมักจะขับขานบทกวีสองบทนี้ด้วยความเสียดายและเจ็บปวดจากความอ่อนแอ ความชรา และความเจ็บป่วยที่รุมล้อมท่านว่า:</p>
+
+      <p class="poem-th">“ท่านหวังจะให้ตนเองเป็นดั่งเดิมในยามชรา<br>เหมือนดั่งที่ท่านเคยเป็นในครั้งเยาว์วัยกระนั้นหรือ?<br>ตัวของท่านเองนั่นแหละที่กำลังหลอกลวงท่าน<br>เพราะอาภรณ์ที่เก่าคร่ำคร่า<br>ย่อมไม่เหมือนอาภรณ์ที่ใหม่เอี่ยมจากโรงทอ”</p>
+
+      <p>บทกวีของอัลญาฮิซนี้ เปรียบร่างกายที่ร่วงโรยไปตามวัยกับเสื้อผ้าที่เก่าขาด ย่อมไม่อาจเทียบกับร่างกายในวัยหนุ่มสาวที่เปรียบเสมือนเสื้อผ้าตัวใหม่ที่ยังคงแข็งแรงและงดงามได้ เป็นบทสะท้อนความจริงของชีวิตและยังน่าเศร้าใจ</p>
+
+      <h2 class="article-h2">สรุป</h2>
+      <ol class="article-summary">
+        <li><strong>การรักษาเวลาคือเคล็ดลับเบื้องหลังผลงานอันมหาศาล:</strong> ผลงานของเหล่านักปราชญ์ที่หลั่งไหลราวสายน้ำมิได้เกิดจากปาฏิหาริย์ แต่เกิดจากการให้ความสำคัญกับเวลาทุกชั่วขณะและการไขว่คว้าทุกโอกาสโดยไม่ปล่อยให้สูญเปล่า ซึ่งนำมาซึ่งความจำเริญ (บะเราะกะฮ์) ในอายุขัย</li>
+        <li><strong>ความมากของถ้อยคำไม่ใช่เครื่องวัดความรู้:</strong> ตามคำชี้แนะของชัยค์อับดุลฟัตตาห์และอิบนุ เราะญับ ชนยุคสลัฟมีความรู้ลึกซึ้งกว่าแม้คำพูดจะน้อยกว่า เพราะความรู้ที่แท้จริงคือรัศมี (นูร) ในหัวใจ ไม่ใช่ปริมาณการรายงานหรือการถกเถียง</li>
+        <li><strong>อัลฮาฟิศ อิบนุ อะซากิร คือแบบอย่างของผู้พิทักษ์เวลา:</strong> ด้วยการเดินทางอันกว้างไกล, คณาจารย์กว่า 1,300 ท่าน และผลงาน “ตารีค ดิมัชก์” 80 เล่ม ท่านได้ทิ้งมรดกที่แม้สถาบันวิชาการยุคนี้ก็ยังยากจะจัดพิมพ์ได้ครบ ทั้งหมดเป็นผลจากการรักษาเวลา</li>
+        <li><strong>วัยที่ล่วงเลยมิได้นำพาความว่างมาให้:</strong> ความเชื่อที่ว่า “รอให้แก่ก่อนแล้วค่อยทำ” คือภาพลวงตา เพราะยิ่งอายุมากขึ้น ภาระและความรับผิดชอบยิ่งเพิ่ม ขณะที่เวลาและพละกำลังยิ่งถดถอย</li>
+        <li><strong>เวลาที่ดีที่สุดคือ “ตอนนี้”:</strong> วัยหนุ่มคือช่วงแห่งความมุ่งมั่นและพละกำลัง ดังบทกวีของอัลญาฮิซที่เปรียบร่างกายในวัยชรากับอาภรณ์ที่เก่าคร่ำคร่า จึงควรฉกฉวยโมงยามแห่งชีวิตไว้ขณะที่มันยังอำนวย</li>
+      </ol>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การรักษาเวลา และบทเรียนแห่งวัยที่ล่วงเลย. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/reflections/guarding-time-and-aging.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">ابن رجب الحنبلي، عبد الرحمن بن أحمد. فضل علم السلف على الخلف. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">ابن خلكان، أحمد بن محمد. وفيات الأعيان وأنباء أبناء الزمان. بيروت: دار صادر. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">الذهبي، محمد بن أحمد. تذكرة الحفاظ. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">السبكي، تاج الدين عبد الوهاب بن علي. طبقات الشافعية الكبرى. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>
