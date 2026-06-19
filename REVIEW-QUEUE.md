@@ -225,3 +225,27 @@ but are legitimate S2 verse exceptions — e.g. kalam/shia-scholars-challenge-as
 tarikh/sexuality-in-caliphal-court.html L474/489/516/533/534. Options: (a) wrap the Thai verse
 in `.poem-th`, or (b) extend the linter mask to verse `.ar-translation`. NOT auto-fixed
 (re-classing affects rendering). No real prose S2 violations exist.
+
+### Harness bug-audit (2026-06-19) — verified findings
+AUTO-FIXED (safe/LOCAL):
+- ✅ tarikh/the-age-of-khadija.html — breadcrumb ชี้ pages/tarikh.html (404) → แก้เป็น pages/history.html
+  (เป็นไฟล์เดียวในทั้ง repo ที่ผิด; อีก 60 บท tarikh ชี้ history.html ถูกแล้ว)
+
+FLAGGED — ต้องตัดสินเชิงบรรณาธิการ (กระทบเนื้อหา/แชร์โค้ด — ไม่ auto-fix):
+**Bibliography orphans** (บรรณานุกรมมี ref แต่ไม่มี <sup> footnote ในเนื้อ — แก้ได้ 2 ทาง: เพิ่ม footnote marker
+ในเนื้อ หรือลบ ref; กฎ 1 ห้ามทิ้งแหล่ง → ควรเพิ่ม marker ให้ครบ) — verify แล้วของจริง:
+- tarikh/al-shafii-founder-of-usul-al-fiqh.html — 15 entries, 0 marker (HIGH)
+- tarikh/omar-khayyam-mathematician-and-poet.html — 27 entries, 0 marker (HIGH)
+- tarikh/abu-al-aynaa-blind-satirist.html — ref-7..22 orphaned (MED) [pre-existing, ดู #190]
+- kalam/al-ashari-and-the-unity-of-the-ummah.html — ref-16..18 orphaned (MED) [pre-existing, ดู #190]
+- tarikh/floods-of-baghdad-abbasid-era.html — 2 orphaned (MED)
+- tarikh/muslim-conquest-of-transoxiana.html — 1 orphaned (LOW)
+
+**Script / shared-code** (แก้แล้วเปลี่ยน output หลายไฟล์ → ขออนุมัติก่อน):
+- scripts/gen-reading-time.js — open/close handling ไม่สมมาตร อาจทำ counter (exclude/thaiQuote/articleBody) เพี้ยนถาวร (MED)
+- scripts/build_tabaqah_json.py — death year -1 (sentinel) ถูก map เป็น tabaqah 12 (รุ่นล่าสุด) เงียบๆ (LOW)
+- scripts/gen-sitemap.js — noscript directory ตัดบทใน category ที่ไม่ลงทะเบียนทิ้งเงียบ (ตอนนี้ไม่ trigger เพราะทุก cat ลงทะเบียน) (LOW)
+- scripts/coverage.py — จับ H1 title หยุดที่ nested closing tag แรก ทำให้ตัด title หลังจากนั้น (LOW)
+- main.js — reading-progress bar หารด้วยศูนย์ → NaN%/Infinity% บนหน้าที่ scroll ไม่ได้ (LOW)
+
+REFUTED (agent อ้างแต่ verify แล้ว = ไม่จริง): muslim-conquest CATEGORY_LABEL placeholder, articles.json/index.html "broken" — สะอาด
