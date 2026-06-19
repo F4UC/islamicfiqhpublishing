@@ -368,6 +368,18 @@ reading-time, control bar/alignment, QC เรนเดอร์ desktop+mobile,
 ถ้าข้อใด FAIL ให้แก้บน feature branch + Cloudflare preview แล้ว verify ก่อน
 ห้าม merge ทั้งที่ยัง FAIL
 
+**ข้อยกเว้น footnote↔บรรณานุกรม (บรรณานุกรมล้วน / uncited references):** เกณฑ์
+bidirectional integrity บังคับเฉพาะ **เชิงอรรถที่อ้างในเนื้อ** เท่านั้น คือ ทุก
+`<sup class="fn-ref" id="fnref-N">` ต้องมี `<li id="ref-N">` คู่กัน และทุก back-link
+`<a class="fn-back" href="#fnref-N">` ต้องชี้ marker ที่มีอยู่จริง — **ห้ามมี back-link
+เสีย (ชี้ fnref ที่ไม่มี)**. แต่ entry `<li id="ref-N">` ที่ **ไม่มี back-link `fn-back`**
+ถือเป็น **แหล่งอ้างอิง/อ่านเพิ่มเติม (uncited reference) ที่ถูกต้อง** ไม่นับเป็น orphan —
+บทความสามารถมี **บรรณานุกรมล้วน** (ไม่มี `<sup>` อ้างในเนื้อเลย) หรือมีรายการอ้างอิงเสริม
+ท้ายเชิงอรรถได้ ตราบใดที่ **ไม่มีลิงก์พัง**. *(EN: footnote↔bibliography parity is
+required only for cited footnotes; a `ref-N` entry with no `fn-back` back-link is a valid
+uncited reference, not an orphan — bibliography-only articles are allowed as long as no
+back-link points to a missing marker. Audit 2026-06-19; precedent #190: abu-al-aynaa, al-ashari.)*
+
 **Rule 65 — Template drift control (template ต้องตาม golden master)**
 `_TEMPLATE.html` ต้องสะท้อนโครงของ golden master ฉบับล่าสุดเสมอ หากแก้โครง/สไตล์/สคริปต์
 ที่ใช้ร่วมกัน (head order, control bar, ifpAlign, version string ฯลฯ) ใน golden master

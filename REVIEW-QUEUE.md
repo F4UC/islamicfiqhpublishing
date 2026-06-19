@@ -259,3 +259,12 @@ REFUTED (agent อ้างแต่ verify แล้ว = ไม่จริง
 - ④ gen-sitemap.js — เพิ่ม console.warn ถ้าเจอ categoryKey นอกทะเบียน (defensive; ปัจจุบันไม่ trigger)
 - ⑤ build_tabaqah_json.py + data/tabaqah-*.json (14 ไฟล์, 6.3MB) — **ลบทิ้ง** (dead feature:
   build script อ่านจาก /tmp/kashaf CSV ที่ไม่อยู่ใน repo, ไม่มี html/js consumer; กู้คืนได้จาก git history)
+
+### Resolution (2026-06-19) — bibliography orphans → รับเป็น uncited references (Option B)
+มติเจ้าของ: ปล่อยบรรณานุกรมทั้ง 6 บทไว้ตามเดิม + เพิ่ม **ข้อยกเว้นกฎ 64** (CLAUDE.md) และ
+mirror ใน docs/golden-master.md §6:
+- ทั้ง 6 บท (al-shafii, omar-khayyam, floods-of-baghdad, muslim-conquest, abu-al-aynaa, al-ashari)
+  **ไม่มี back-link เสียเลย** (ยืนยัน repo-wide: 0 broken back-link) → ไม่ใช่ dead-link bug
+- นิยามใหม่: `<li id="ref-N">` ที่ไม่มี `fn-back` ↑ = แหล่งอ้างอิง/อ่านเพิ่มเติม (uncited) ที่ถูกต้อง
+  ไม่นับ orphan; บทความมีบรรณานุกรมล้วนได้ ตราบที่ไม่มีลิงก์พัง (precedent #190)
+- bidirectional integrity ยังบังคับเฉพาะเชิงอรรถที่อ้างในเนื้อ (fnref↔ref + back-link ต้องชี้ marker จริง)
