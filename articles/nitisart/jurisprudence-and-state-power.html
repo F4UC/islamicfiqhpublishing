@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>มิติความสัมพันธ์ระหว่างนิติศาสตร์อิสลามและอำนาจรัฐ — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="มิติความสัมพันธ์ระหว่างนิติศาสตร์อิสลามและอำนาจรัฐ ผ่านการทบทวนงานศึกษาเรื่องสำนักฮะนะฟียุคหลังกับรัฐออตโตมันของบูร็อค โยฮันเซน ปีเตอร์ส ฮัลลาก แจ็กสัน และโรเซน">
+<meta name="keywords" content="นิติศาสตร์อิสลาม, ฟิกฮ์, อำนาจรัฐ, สำนักฮะนะฟี, จักรวรรดิออตโตมัน, ชัยคุลอิสลาม, ฟัตวา, สำนักนิติศาสตร์แห่งรัฐ">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="มิติความสัมพันธ์ระหว่างนิติศาสตร์อิสลามและอำนาจรัฐ — Islamic Fiqh Publishing">
+<meta property="og:description" content="รัฐออตโตมันเป็นผู้ชี้ขาดเพียงหนึ่งเดียวของสำนักฮะนะฟี หรือนักนิติศาสตร์เองที่รับรองบทบาทของรัฐในวาทกรรมทางนิติศาสตร์?">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/jurisprudence-and-state-power">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/nitisart/jurisprudence-and-state-power">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "มิติความสัมพันธ์ระหว่างนิติศาสตร์อิสลามและอำนาจรัฐ",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/nitisart/jurisprudence-and-state-power.html"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="jurisprudence-and-state-power">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์</a>
+      <h1 class="article-feature-title">มิติความสัมพันธ์ระหว่างนิติศาสตร์อิสลามและอำนาจรัฐ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">งานศึกษาจำนวนมากได้ชี้ให้เห็นถึงบทบาทของรัฐในการพัฒนาและการดำรงอยู่ของนิติศาสตร์อิสลาม ในบริบทของจักรวรรดิออตโตมัน งานศึกษาเชิงวิชาการของนักวิชาการหลายท่าน อาทิ เจมส์ บอลด์วิน (James Baldwin), กาย บูร็อค (Guy Burak), โคลิน อิมเบอร์ (Colin Imber), บาเบอร์ โยฮันเซน (Baber Johansen) และรูดอล์ฟ ปีเตอร์ส (Rudolph Peters) ได้ฉายภาพให้เห็นถึงความสัมพันธ์อันสลับซับซ้อนระหว่างอำนาจรัฐออตโตมันกับสำนักคิดฮะนะฟี (สำนักนิติศาสตร์อิสลามสายหนึ่ง) ซึ่งผู้เขียนในงานศึกษาชิ้นนี้ก็ได้นำองค์ความรู้จากนักวิชาการเหล่านี้มาต่อยอด ในส่วนนี้ และเราจะทบทวนและกลั่นกรองข้อค้นพบบางประการของพวกเขา เพื่อใช้เป็นฐานในการศึกษาสำนักคิดของนักนิติศาสตร์ฮะนะฟียุคหลัง (หรือที่เรียกว่า กลุ่มมุตะอัคคิรีน) ต่อไป</p>
+
+      <h2 class="article-h2">บทบาทของมุฟตีและฟัตวาในการขับเคลื่อนการเปลี่ยนแปลงทางกฎหมาย</h2>
+
+      <p>ในงานศึกษาเรื่อง “กฎหมายอิสลามว่าด้วยภาษีที่ดินและค่าเช่าในอียิปต์ยุคกลางตอนปลาย” (Islamic Law of Land Tax and Rent in Late Medieval Egypt) บาเบอร์ โยฮันเซน ได้แสดงให้เห็นถึงบทบาทอันแข็งขันของบรรดามุฟตี (ผู้ชี้ขาดปัญหาศาสนา) และคำวินิจฉัย (ฟัตวา) ของพวกเขาในการผลักดันให้เกิดการเปลี่ยนแปลงทางนิติบัญญัติ</p>
+
+      <p>โยฮันเซนชี้ให้เห็นว่า อิบนุ นุญัยม์ ผู้เป็นมุฟตีแห่งอียิปต์ ได้ทบทวนและตีความหลักการของสำนักฮะนะฟีในประเด็นเรื่องภาษีที่ดินและการเช่าที่ดินใหม่ (ซึ่งเป็นประเด็นสำคัญเกี่ยวกับการจัดการทรัพย์สินและที่ดินสาธารณะ) ในแนวทางที่เป็นประโยชน์ต่อรัฐและเอื้อผลประโยชน์แก่ชนชั้นสูงผ่านงานเขียนของเขาที่เกี่ยวกับทรัพย์สินสาธารณประโยชน์ (เอากอฟ) และด้วยคำวินิจฉัยของเขา อิบนุ นุญัยม์ จึงสามารถสร้างการเปลี่ยนแปลงทางกฎหมาย ซึ่งท้ายที่สุดได้นำไปสู่การเปลี่ยนแปลงทางสังคมตามที่มุ่งหวัง ด้วยเหตุนี้ โยฮันเซนจึงยกให้เหล่ามุฟตีเป็นผู้มีบทบาทรับผิดชอบและมีขีดความสามารถในการสร้างการเปลี่ยนแปลงทางกฎหมาย</p>
+
+      <p>นอกจากนี้ ในทัศนะของโยฮันเซนนั้น อิบนุ นุญัยม์ยังเป็นผู้กำหนดแนวทางของสำนักคิดที่ได้รับการยอมรับและยึดถือปฏิบัติในยุคสมัยของเขา แม้ว่าโดยหลักการแล้วคำวินิจฉัยของมุฟตีจะไม่มีสถานะเป็นกฎหมายที่ต้องปฏิบัติตามโดยตรง แต่ก็เป็นที่ประจักษ์ว่า มุฟตีสามารถใช้ตำแหน่งและคำวินิจฉัยของตนเองเพื่อเปิดทางไปสู่การเปลี่ยนแปลงทางกฎหมายและสังคมที่สำคัญยิ่งได้</p>
+
+      <p>โยฮันเซนอาจเป็นนักวิชาการเพียงคนเดียวที่ไม่เพียงแต่สังเกตเห็นความเปลี่ยนแปลงที่เกิดขึ้นกับบทบัญญัติทางนิติศาสตร์ที่เกี่ยวข้องกับการถือครองกรรมสิทธิ์ที่ดินเท่านั้น แต่ยังตระหนักถึงการมีอยู่ของ ‘จารีตแห่งสำนักฮะนะฟียุคหลัง’ ที่ซึ่งองค์ความรู้ คำวินิจฉัย และฉันทามติใหม่ๆ ได้ถือกำเนิดและก่อตัวขึ้น ซึ่งนับเป็นประเด็นที่สำคัญอย่างยิ่ง</p>
+
+      <p>การเปลี่ยนแปลงที่เกิดขึ้นกับบทบัญญัติทางนิติศาสตร์ในสมัยจักรวรรดิออตโตมันนั้น ควรถูกพิจารณาในฐานะที่เป็นส่วนหนึ่งของพัฒนาการในภาพรวมของสำนักฮะนะฟียุคหลัง มากกว่าที่จะวิเคราะห์ว่าเป็นเพียงการกระทำของนักนิติศาสตร์เป็นรายบุคคลที่แยกขาดจากบริบททางประวัติศาสตร์และสังคม โดยทั่วไปแล้ว ข้อถกเถียงในหมู่นักนิติศาสตร์ฮะนะฟีในยุคดังกล่าว ต่างก็ยอมรับว่าอำนาจในการสร้างความเปลี่ยนแปลงทางนิติศาสตร์นั้นเป็นของนักวิชาการกลุ่มยุคหลัง (อัลมุตะอัคคิรูน)</p>
+
+      <h2 class="article-h2">‘ประมวลนิติศาสตร์แห่งรัฐ’ และตำแหน่งชัยคุลอิสลาม</h2>
+
+      <p>ขณะเดียวกัน กาย บูร็อค ในงานเขียนของเขาเรื่อง “การก่อตัวครั้งที่สองของนิติศาสตร์อิสลาม: สำนักฮะนะฟีในรุ่งอรุณแห่งจักรวรรดิออตโตมันยุคใหม่” (The Second Formation of Islamic Law: The Ḥanafī School in the Early Modern Ottoman Empire) ได้ชี้ให้เห็นถึงบทบาทสำคัญของตำแหน่งชัยคุลอิสลาม (ประมุขสูงสุดทางศาสนาในจักรวรรดิออตโตมัน) ในกระบวนการเปลี่ยนแปลงทางนิติบัญญัติ คุณูปการที่สำคัญที่สุดของงานเขียนชิ้นนี้คือ การอธิบายว่ารัฐออตโตมัน โดยผ่านกลไกของตำแหน่งชัยคุลอิสลาม ได้จัดตั้ง ‘ประมวลนิติศาสตร์แห่งรัฐ’ ขึ้นมา เพื่อขับเคลื่อนการเปลี่ยนแปลงทางกฎหมายให้ดำเนินไปอย่างต่อเนื่อง บูร็อคชี้ว่า ชัยคุลอิสลามได้รับมอบอำนาจในการ “คัดเลือกตำราที่จะบรรจุไว้ในประมวลนิติศาสตร์แห่งรัฐ อันเป็นผลมาจากลักษณะโครงสร้างแบบรวมศูนย์อำนาจตามลำดับชั้นขององค์กรตุลาการและศาสนาในจักรวรรดิ”</p>
+
+      <p>ดังนั้น บทบาทแบบรวมศูนย์ของรัฐออตโตมันในการสร้างประมวลกฎหมายของตนเองจึงเป็นประเด็นที่ควรค่าแก่การพิจารณา</p>
+
+      <p>บูร็อคเห็นว่า การที่รัฐออตโตมันรับรองสำนักคิดฮะนะฟีนั้น ไม่สามารถจะสรุปได้เพียงว่าเป็นการที่รัฐให้การอุปถัมภ์แก่สำนักคิดนี้เท่านั้น หากแต่เขากลับเสนอว่ามันคือ “การแทรกแซงอย่างมีนัยสำคัญของรัฐออตโตมันต่อโครงสร้างและคำสอนของสำนักคิด” การสนับสนุนสำนักฮะนะฟีของออตโตมันจึงแตกต่างจากการอุปถัมภ์ที่ผู้ปกครองมุสลิมในยุคก่อนๆ มอบให้แก่เหล่าผู้รู้และนักนิติศาสตร์</p>
+
+      <p>การแทรกแซงของรัฐออตโตมันดังจะประจักษ์ชัดผ่าน “แนวปฏิบัติเชิงสถาบันและการบริหารจัดการหลายประการ เช่น การแต่งตั้งมุฟตี และการจัดตั้งองค์กรนักวิชาการแห่งรัฐที่มีโครงสร้างแบบลำดับชั้น” ลักษณะเด่นที่สำคัญในงานของบูร็อคคือการเน้นย้ำแนวคิดที่ว่า “การก่อกำเนิดของสำนักคิดที่เป็นทางการของออตโตมันนั้น ขึ้นอยู่กับแนวคิดเรื่องกฎหมายออตโตมันเป็นอย่างมาก” บูร็อคยืนยันว่ารัฐออตโตมันพยายามที่จะ “จัดระเบียบโครงสร้างและคำสอนของแขนงความคิดหนึ่งภายในสำนักฮะนะฟี ผ่านการแต่งตั้งมุฟตี และการสร้างองค์กรนักวิชาการแห่งรัฐที่มีลักษณะเป็นลำดับชั้น”</p>
+
+      <p>บูร็อคเชื่อว่ามีพัฒนาการสี่ประการที่ส่งผลต่อการก่อตัวของแนวคิด ‘สำนักนิติศาสตร์แห่งรัฐ’ ได้แก่: (๑) การเกิดขึ้นขององค์กรนักวิชาการแห่งรัฐที่มีโครงสร้างแบบลำดับชั้น (๒) ธรรมเนียมการแต่งตั้งมุฟตีโดยรัฐ (๓) การที่รัฐ/ราชวงศ์เข้ามาจัดระเบียบโครงสร้างและคำสอนของสำนักคิด และ (๔) การปรากฏขึ้นของกฎหมายที่ตราขึ้นโดยสุลต่าน (หรือที่เรียกว่า กอนูน, <span class="ar-inline" lang="ar" dir="rtl">قانون</span>)</p>
+
+      <p>ในดินแดนอิสลามตะวันออกยุคหลังมองโกล บูร็อคเน้นย้ำว่าสามปัจจัยแรกนั้นล้วนตั้งอยู่บนฐานของปัจจัยที่สี่ และอธิบายต่อไปว่า “รัฐออตโตมันได้มีส่วนในการก่อร่างสร้างสำนักฮะนะฟีแบบฉบับออตโตมันขึ้น ผ่านแนวปฏิบัติทางการบริหารและการออกพระราชกฤษฎีกาและกฎหมายต่างๆ ซึ่งทั้งหมดนี้ได้ประกอบกันขึ้นเป็นส่วนหนึ่งของประมวลกฎหมายและวาทกรรมทางกฎหมายของจักรวรรดิออตโตมันเอง”</p>
+
+      <p>ข้อเสนอที่สำคัญยิ่งในคำอธิบายของบูร็อค คือการท้าทายทัศนะกระแสหลักที่มักกล่าวว่าความขาดตอนในประวัติศาสตร์นิติศาสตร์อิสลามเพิ่งจะเกิดขึ้นในศตวรรษที่ 19 ซึ่งเป็นยุคที่รัฐชาติสมัยใหม่ถือกำเนิดขึ้น “เมื่อกฎหมายของรัฐชาติและองค์กรนิติบัญญัติได้เข้ามาแทนที่นิติศาสตร์อิสลามแบบเดิม ซึ่งเคยมีความยืดหยุ่นและหลากหลายกว่า”</p>
+
+      <p>แต่บูร็อคยืนยันว่า “บทบาทของรัฐในการจัดระเบียบนิติศาสตร์อิสลาม และการเข้ามาแทรกแซงที่เพิ่มขึ้นของผู้ปกครองยุคหลังมองโกลนั้น สามารถสืบร่องรอยย้อนกลับไปได้ถึงศตวรรษที่ 15 (หรืออาจจะก่อนหน้านั้น)” ด้วยเหตุนี้ “จักรวรรดิออตโตมันจึงมุ่งมั่นที่จะกำหนดเนื้อหาของนิติศาสตร์อิสลาม ผ่านการแต่งตั้งนักนิติศาสตร์ ไม่ว่าจะโดยตรงหรือผ่านตำแหน่งชัยคุลอิสลาม (และองค์กรนักวิชาการแบบลำดับชั้นโดยรวม) นับตั้งแต่กลางศตวรรษที่ 16 เป็นต้นมา หรืออีกนัยหนึ่งคือ การสร้างสรรค์สำนักฮะนะฟีในฉบับของตนเองขึ้นมาจากบรรดาคำวินิจฉัยของนักนิติศาสตร์ที่มีอยู่มากมาย”</p>
+
+      <h2 class="article-h2">ข้อท้าทายต่อทัศนะที่ยึดรัฐเป็นศูนย์กลาง</h2>
+
+      <p>บทความที่ท่านกำลังอ่านอยู่นี้มุ่งทบทวนมุมมองของบูร็อคเกี่ยวกับการประเมิน “ประมวลนิติศาสตร์แห่งรัฐ” ของออตโตมัน ซึ่งเป็นทัศนะที่ยึดรัฐเป็นศูนย์กลาง ในคำอธิบายของบูร็อค รัฐออตโตมันดูประหนึ่งเป็นผู้ชี้ขาดเพียงหนึ่งเดียวของสำนักฮะนะฟีในยุคหลังนี้ จริงอยู่ที่การแบ่งประเภทนักนิติศาสตร์ที่บูร็อคนำเสนอออกเป็น “กลุ่มที่อิงกับรัฐ” และ “กลุ่มที่เป็นอิสระจากรัฐ” อาจช่วยอธิบายแง่มุมบางประการของจารีตฮะนะฟีท้องถิ่นในอนาโตเลีย ซีเรีย ปาเลสไตน์ และอียิปต์ได้</p>
+
+      <p>แต่การแบ่งขั้วระหว่างนักนิติศาสตร์กับรัฐเช่นนี้จะใช้ไม่ได้ผล เมื่อพิจารณาถึงสถานะอันโดดเด่นที่ ‘ความน่าเชื่อถือของพระบรมราชโองการ’ (<span class="ar-inline" lang="ar" dir="rtl">حُجِّيَّةُ الأوامر السلطانية</span>) และนักนิติศาสตร์ของรัฐได้รับในองค์ความรู้ทางนิติศาสตร์ส่วนใหญ่ที่นำเสนอโดยนักนิติศาสตร์และมุฟตีที่ไม่ได้มาจากการแต่งตั้งของรัฐออตโตมัน เราจะเชื่อว่าแนวทางอื่นในการทำความเข้าใจพัฒนาการนี้ คือการมองไปที่ความเปลี่ยนแปลงที่แก่นแกนของพันธกรณีทางนิติศาสตร์ในหมู่นักนิติศาสตร์ฮะนะฟียุคหลัง นั่นคือ การที่วาทกรรมของสำนักฮะนะฟีโดยรวม (หาใช่เพียงนักนิติศาสตร์รายบุคคล) ได้ยอมรับบทบาทในเชิงนิติบัญญัติของสุลต่าน และให้คุณค่าเชิงรับรองแก่พระบรมราชโองการและกฤษฎีกาของพระองค์</p>
+
+      <p>ยิ่งไปกว่านั้น จารีตฮะนะฟีท้องถิ่นในอนาโตเลีย ซีเรีย ปาเลสไตน์ และอียิปต์ ถือเป็นส่วนหนึ่งของพัฒนาการที่ใหญ่กว่าของจารีตฮะนะฟียุคหลังในช่วงต้นยุคสมัยใหม่ โดยยอมรับในความน่าเชื่อถือของพระบรมราชโองการซึ่งกลายเป็นคุณลักษณะร่วมกันของสำนักคิดไปแล้ว</p>
+
+      <p>ลักษณะเด่นอย่างหนึ่งของจารีตนิติศาสตร์ท้องถิ่นเหล่านี้คือ การที่มันได้รับอิทธิพลจากจารีตประเพณีท้องถิ่นและสภาพความเป็นจริงทางสังคม ซึ่งก่อให้เกิดการถกเถียงอย่างมีชีวิตชีวาและข้อโต้แย้งที่เผ็ดร้อนในหลากหลายประเด็น เราเชื่อว่าแนวคิดเรื่อง ‘สำนักนิติศาสตร์แห่งรัฐ’ (<span class="ar-inline" lang="ar" dir="rtl">مذهب الدولة</span>) ดังที่มีการอธิบายในทางทฤษฎีโดยนักบูรพาคดีศึกษาบางแขนง แฝงไว้ด้วยความย้อนแย้งในเชิงศัพท์บัญญัติ เพราะสำนักฮะนะฟีไม่ได้สละโครงสร้างแห่งอำนาจของตนให้แก่สุลต่านออตโตมัน เพียงเพราะรัฐเข้ามามีบทบาท ‘เชิงโครงสร้าง’ ในการแต่งตั้งมุฟตีและผู้พิพากษาตามที่มีการกล่าวอ้าง งานศึกษาของบูร็อคได้ละเลยธรรมชาติของกรอบคิดทางนิติศาสตร์ ซึ่งแสดงตัวตนผ่านแนวคิดเรื่อง ‘สำนักนิติศาสตร์’ ในฟิกฮ์อิสลาม นักนิติศาสตร์ฮะนะฟีเองต่างหากที่ได้ยืนยันและยอมรับความชอบธรรมในบทบาทของรัฐออตโตมันภายในวาทกรรมทางนิติศาสตร์ เนื่องจากพวกเขาพยายามสร้างระบบกฎหมายที่นำเอานโยบายของรัฐเข้ามาพิจารณาด้วย</p>
+
+      <p>นอกจากนี้ บทความชิ้นนี้ยังได้ทบทวนข้อสรุปบางประการของบูร็อคที่เกี่ยวข้องกับประเด็นใจกลางของการศึกษานิติศาสตร์ฮะนะฟียุคหลัง ตัวอย่างเช่น เขามองว่าชัยคุลอิสลามในรัฐออตโตมันจำเป็นต้องได้รับการอนุมัติจากสุลต่านเพื่อที่จะออกคำวินิจฉัยตามทัศนะของเสียงส่วนน้อยในสำนักคิด และโดยผ่านการออกกฤษฎีกาเพื่อการนี้ สุลต่านออตโตมันจึงสามารถกำหนดบทบัญญัติของสำนักคิดและชี้ขาดได้ว่าสิ่งใดคือชะรีอะฮ์ (กฎหมายอิสลาม)</p>
+
+      <p>แต่เราก็ต้องตั้งคำถามว่า เหตุใดการเลือกใช้ทัศนะของเสียงส่วนน้อยจึงขึ้นอยู่กับการอนุมัติของสุลต่าน? ในตำรานิติศาสตร์ของตน นักนิติศาสตร์ฮะนะฟียุคหลังได้เน้นย้ำอยู่เสมอว่า ‘ทัศนะที่มีน้ำหนัก’ (<span class="ar-inline" lang="ar" dir="rtl">القول الراجح</span>) ควรเป็นจุดเริ่มต้นที่ผู้พิพากษายึดถือในการให้เหตุผลทางตุลาการและการพิจารณาคดีความระหว่างราษฎรของจักรวรรดิ</p>
+
+      <p>พวกเขายังวิพากษ์วิจารณ์นักนิติศาสตร์และผู้พิพากษาที่ยึดถือทัศนะที่อ่อนกว่าหรือมีน้ำหนักน้อยกว่าอยู่เสมอ ข้อถกเถียงของนักนิติศาสตร์ฮะนะฟียุคหลังที่เกี่ยวกับขอบเขตอำนาจของผู้พิพากษายืนยันว่า สุลต่านมีสิทธิ์ที่จะบังคับให้ผู้พิพากษายึดถือทัศนะที่มีน้ำหนักมากกว่าในสำนักคิดของตน และยังระบุด้วยว่า สุลต่านสามารถสั่งให้ผู้พิพากษาตัดสินคดีความตามทัศนะที่เฉพาะเจาะจงในประเด็นที่มีความเห็นต่างภายในสำนักคิดได้ ‘เพื่อธำรงไว้ซึ่งประโยชน์สาธารณะ’ (<span class="ar-inline" lang="ar" dir="rtl">المصلحة العامَّة</span>) และพวกเขามีฉันทามติร่วมกันว่า สุลต่านต้องระบุเงื่อนไขนี้ไว้อย่างชัดแจ้งในสารตราแต่งตั้งผู้พิพากษา ดูเหมือนว่าการทำความเข้าใจการปรับโครงสร้างของสำนักคิดและการปรับเปลี่ยนวาทกรรมภายในของสำนักฮะนะฟี ถือเป็นเงื่อนไขที่จำเป็นอย่างยิ่งในการวิเคราะห์พัฒนาการทางนิติศาสตร์ยุคหลังในจักรวรรดิออตโตมัน</p>
+
+      <h2 class="article-h2">อำนาจของชัยคุลอิสลามเหนือสุลต่าน</h2>
+
+      <p>อย่างไรก็ตาม เป็นเรื่องสำคัญอย่างยิ่งที่ต้องตระหนักว่า ความน่าเชื่อถือของพระบรมราชโองการนั้นมิได้มีสถานะเป็นอำนาจเด็ดขาดในประเด็นทางศาสนาหรือนิติศาสตร์ ซึ่งในความเป็นจริงแล้ว ตำแหน่งชัยคุลอิสลาม (ซึ่งโดยปกติมาจากการแต่งตั้งโดยกฤษฎีกาของสุลต่าน) กลับเป็นผู้กุมอำนาจมหาศาลไว้</p>
+
+      <p>เรเจป เชนเติร์ก (Recep Şentürk) ตั้งข้อสังเกตว่า ผู้ดำรงตำแหน่งนี้มีอำนาจครอบคลุมทั้งในด้านกระบวนการยุติธรรม การศึกษา และกิจการศาสนา และได้รับมอบหมายให้สร้างความสอดคล้องระหว่างการดำเนินงานของรัฐ โดยเฉพาะอย่างยิ่งการดำเนินการของสุลต่านและอัครมหาเสนาบดีกับหลักชะรีอะฮ์ (กฎหมายอิสลาม) ทั้งยังมีสิทธิ์คัดค้านการกระทำใดๆ ของรัฐที่เขาเห็นว่าขัดต่อหลักชะรีอะฮ์</p>
+
+      <p>นอกจากนี้ หนึ่งในภารกิจสำคัญของชัยคุลอิสลามคือการตรวจสอบว่าสุลต่านองค์ใหม่มีคุณสมบัติครบถ้วนตามที่หลักชะรีอะฮ์กำหนดไว้สำหรับตำแหน่งเคาะลีฟะฮ์ (ผู้นำสูงสุดของประชาชาติมุสลิม) หรือไม่ หากตรวจสอบแล้วว่าครบถ้วน เขาจะให้สัตยาบัน (บัยอะฮ์) และสถาปนาสุลต่านขึ้นครองราชย์ในพิธีซึ่งจัดขึ้นตามธรรมเนียม ณ สุสานของสุลต่านอัยยูบ [อบู อัยยูบ อัลอันศอรี] อัครสาวกผู้ทรงเกียรติของนบีมุฮัมมัด ﷺ ซึ่งถูกฝังร่างไว้ในอิสตันบูล ในทำนองเดียวกัน ชัยคุลอิสลามก็มีอำนาจในการถอดถอนสุลต่านได้หากพิจารณาแล้วว่าพระองค์ไม่ทรงมีคุณสมบัติเหมาะสมที่จะดำรงตำแหน่งอีกต่อไป และยังเป็นที่น่าสังเกตว่า สุลต่านออตโตมันเกือบหนึ่งในสามถูกถอดถอนจากราชบัลลังก์ด้วยฟัตวา (คำวินิจฉัย) ของชัยคุลอิสลาม</p>
+
+      <h2 class="article-h2">ทัศนะของปีเตอร์ส: ความร่วมมือที่มีเงื่อนไข</h2>
+
+      <p>งานศึกษาของรูดอล์ฟ ปีเตอร์ส (Rudolph Peters) ก็ช่วยเสริมสร้างความเข้าใจของเราเกี่ยวกับแนวคิดเรื่อง ‘สำนักฮะนะฟีที่เป็นทางการ’ ได้เช่นกัน โดยเขากล่าวว่า “สำนักฮะนะฟีได้ถูกหล่อหลอมขึ้นระหว่างศตวรรษที่ 12 ถึง 16 จนกลายเป็นโครงสร้างของบทบัญญัติต่างๆ ที่ชัดเจน ซึ่งผู้พิพากษาสามารถนำไปใช้ได้” ปีเตอร์สเห็นว่ารัฐออตโตมันและนักนิติศาสตร์ฮะนะฟีได้ “ร่วมกันวางชุดกฎเกณฑ์ซึ่งแทบไม่เหลือพื้นที่ให้ผู้พิพากษาใช้ดุลยพินิจในประเด็นทางนิติศาสตร์ได้เลย” เนื่องจาก “[พวก]เขากำหนดลักษณะของสำนักฮะนะฟีที่ยึดถือเป็นหลักได้อย่างแม่นยำ และด้วยเหตุนั้นจึงได้สร้างชุดบทบัญญัติที่ชัดเจนขึ้นมา ทั้งยังจำกัดอิสระของผู้พิพากษาในการเลือกทัศนะหนึ่งทัศนะใดจากสำนักฮะนะฟี”</p>
+
+      <p>ปีเตอร์สอ้างว่า “สำนักฮะนะฟีคือสำนักคิดที่ยอมรับแนวปฏิบัติทางการบริหารเช่นนี้ โดยไม่มีการแสดงข้อโต้แย้งใดๆ”</p>
+
+      <p>ปีเตอร์สได้ชี้ให้เห็นว่ารัฐออตโตมันได้ดำเนินรอยตามนโยบายที่ใช้ในสมัยมัมลูก คือการแต่งตั้งผู้พิพากษาจากสำนักฮะนะฟีและกำหนดให้ผู้พิพากษาต้องยึดถือเฉพาะทัศนะที่มีน้ำหนักที่สุด (<span class="ar-inline" lang="ar" dir="rtl">القول الراجح</span>) ในสำนักคิดของตนเท่านั้น อย่างไรก็ตาม คำอธิบายของปีเตอร์สที่ว่านโยบายของออตโตมันนี้เป็นนโยบายที่ ‘จำกัดสิทธิ์’ นั้น จำเป็นต้องได้รับการทบทวนใหม่ ในแง่ที่ว่ามีฉันทามติเกิดขึ้นแล้วในตำราอรรถาธิบายฟิกฮ์ของสำนักฮะนะฟีว่า “ผู้พิพากษาฮะนะฟีสมควรยึดมั่นในทัศนะที่มีน้ำหนักมากกว่าในสำนึกคิดของตน” ในมุมมองของนักนิติศาสตร์ฮะนะฟี ผู้พิพากษาที่ไม่ยึดมั่นในหลักการและทัศนะของสำนักคิดของตนนั้น ถือว่ากำลังใช้วิจารณญาณส่วนตัวล้วนๆ ในการปฏิบัติหน้าที่</p>
+
+      <p>อันที่จริง ปีเตอร์สกล่าวถูกต้องแล้วว่ามีความร่วมมืออย่างใกล้ชิดระหว่างนักนิติศาสตร์ฮะนะฟีกับรัฐ ซึ่งนำไปสู่การตกผลึกของสำนักฮะนะฟีในจักรวรรดิออตโตมัน แต่เป็นการไม่ถูกต้องที่จะสรุปว่านักนิติศาสตร์ฮะนะฟียอมรับแนวปฏิบัติทางการบริหารของออตโตมันโดยไม่มีเงื่อนไขหรือข้อแม้ใดๆ</p>
+
+      <h2 class="article-h2">ฮัลลาก: อำนาจของนักนิติศาสตร์กับอำนาจของรัฐ</h2>
+
+      <p>วาเอล ฮัลลาก (Wael Hallaq) ยืนยันว่า “แม้ว่านักกฎหมายหรือนักนิติศาสตร์ตะวันตกจะมองว่าการที่รัฐมีอำนาจเหนือและใช้อำนาจทางกฎหมายนั้นเป็นเรื่องปกติที่ยอมรับได้ แต่มุมมองเช่นนี้กลับไม่เคยเป็นที่ประจักษ์ชัดหรือเป็นบรรทัดฐานสำหรับนักกฎหมายมุสลิมเลย ยิ่งไปกว่านั้น สำหรับมวลชนมุสลิมทั่วโลกแล้ว มุมมองดังกล่าวก็ยิ่งเลือนรางจนเทียบกันไม่ได้”</p>
+
+      <p>ฮัลลากสังเกตว่า “ความคิดอิสลามร่วมสมัยกำลังเผชิญกับความฉีกขาดอย่างชัดเจนระหว่างสองมโนทัศน์ว่าด้วยอำนาจทางนิติศาสตร์: โดยมโนทัศน์หนึ่งกำเนิดจากรัฐ ในขณะที่อีกมโนทัศน์หนึ่งมาจากแหล่งอื่น” ฮัลลากหมายถึง “อำนาจของนักนิติศาสตร์” ซึ่งเขาเน้นย้ำว่าเป็น “มโนทัศน์ที่ครอบงำโดยไร้คู่แข่งมาเป็นเวลากว่าหนึ่งพันปี ในขณะที่มโนทัศน์ซึ่งมองว่ารัฐคือศูนย์กลางของอำนาจนี้เพิ่งจะถูกสร้างขึ้นในรัฐเหล่านี้ช่วงศตวรรษที่ 19 และ 20 เท่านั้น</p>
+
+      <p>ความฉีกขาดระหว่างสองแหล่งอำนาจนี้สรุปให้เห็นถึงความขาดตอนทางนิติศาสตร์ (หากไม่ใช่ความขาดตอนทางวัฒนธรรมและสังคม) ซึ่งเกิดขึ้นพร้อมกับการก่อตัวของสิ่งที่เรียกว่าการปฏิรูปยุคใหม่”</p>
+
+      <p>โดยสรุปแล้ว ฮัลลากเชื่อว่าอำนาจทางนิติบัญญัติในนิติศาสตร์อิสลามถูกสร้างขึ้นในเชิงญาณวิทยาให้แยกขาดจากอำนาจทางการเมือง และองค์ความรู้ทางนิติศาสตร์คือขอบเขตที่สงวนไว้สำหรับนักนิติศาสตร์โดยเฉพาะ ฮัลลากยืนยันว่า “นิติศาสตร์อิสลามเป็นระบบที่ทำงานเป็นอิสระจากอำนาจของรัฐและรัฐบาล และด้วยแนวทางนี้เอง มันจึงบรรลุถึงความเป็นอิสระและความสำเร็จในระดับที่น่าทึ่ง”</p>
+
+      <p>ฮัลลากได้ข้อสรุปเช่นนี้ “เพราะนักนิติศาสตร์มุสลิมโดยปกติมักจะเชื่อมโยงรัฐบาลและรัฐเข้ากับความเสื่อมทราม การฉกฉวย และการมัวเมาในทางโลก”</p>
+
+      <p>อันที่จริง เราก็มิได้โต้แย้งข้อสรุปของฮัลลากที่ว่า การถ่ายโอนอำนาจทางนิติศาสตร์จากนักนิติศาสตร์มุสลิมไปสู่รัฐ ถือเป็นปรากฏการณ์ที่สำคัญที่สุดของการเปลี่ยนแปลงทางนิติศาสตร์อิสลามในยุคใหม่</p>
+
+      <p>แต่การที่ตำรานิติศาสตร์ของนักนิติศาสตร์ฮะนะฟียุคหลังได้กล่าวถึงอำนาจของสุลต่านนั้น ผลักดันให้เราต้องทบทวนข้อกล่าวอ้างที่ว่า “นิติศาสตร์อิสลามเป็นอิสระจากอำนาจทางการเมืองโดยสิ้นเชิง” เมื่อพิจารณาจากตำราของสำนักฮะนะฟี จะเห็นได้ชัดว่าสุลต่านออตโตมันทรงมีบทบาทที่เป็นที่ยอมรับในการบังคับใช้กฎหมาย การระงับข้อพิพาท และการพิจารณาเรื่องร้องทุกข์ผ่านสภาตุลาการ ซึ่งการดำรงอยู่ของสภานี้ถือว่าชอบด้วยหลัก ‘สิยาซะฮ์ ชัรอียะฮ์’ (<span class="ar-inline" lang="ar" dir="rtl">السياسة الشرعية</span>, การปกครองที่สอดคล้องกับหลักชะรีอะฮ์) นอกเหนือจากบทบาทนี้ พระบรมราชโองการและกฤษฎีกาที่ออกโดยรัฐ ยังได้แทรกซึมเข้าไปในตำราอรรถาธิบายที่ได้รับการยอมรับในสำนักฮะนะฟีและวรรณกรรมฟัตวา และได้รับ ‘คุณค่าเชิงรับรอง’ ในวาทกรรมทางนิติศาสตร์อีกด้วย</p>
+
+      <h2 class="article-h2">แจ็กสันกับ ‘การปฏิบัติทางกฎหมาย’ ในงานของอัลกอรอฟี</h2>
+
+      <p>ในงานศึกษาชิ้นสำคัญเกี่ยวกับชิฮาบุดดีน อัลกอรอฟี (เสียชีวิตปี 1285) เชอร์แมน แจ็กสัน (Sherman Jackson) ได้คัดค้านการยืนกรานที่จะนิยามนิติศาสตร์อิสลามว่าเป็นกฎหมาย ‘ศักดิ์สิทธิ์’ หรือ ‘ศาสนกฎ’ และชี้ว่าการจัดประเภทเช่นนี้เป็นผลมาจากแนวทางการศึกษากฎหมายที่ยึดเอากฎเกณฑ์เป็นศูนย์กลาง แจ็กสันเรียกร้องให้มีการทบทวนแนวคิดเรื่องกฎหมายจากมุมมองของ ‘การปฏิบัติทางกฎหมาย’ โดยอ้างอิงจากประสบการณ์ทางกฎหมายของอเมริกา โดยเฉพาะอย่างยิ่งแนวคิด ‘สัจนิยมทางกฎหมาย’ (Legal Realism) แจ็กสันยืนยันว่าข้อดีของแนวทางนี้คือ “การมอบกรอบการศึกษาที่ใช้การได้จริงมากขึ้น ซึ่งเราสามารถใช้เพื่อศึกษาความสัมพันธ์ระหว่างกฎหมายกับรัฐบาลได้” การแยกแยะระหว่าง ‘ตัวบทกฎหมาย’ กับ ‘การปฏิบัติทางกฎหมาย’ นั้น “เป็นการขีดเส้นแบ่งที่ชัดเจนระหว่างกิจกรรมหลักในการสร้างหรือตีความกฎหมาย กับกิจกรรมรองในการนำกฎหมายนั้นไปบังคับใช้” แจ็กสันเห็นว่าแนวทางนี้เป็นสิ่งจำเป็นในการระบุความเชื่อมโยงระหว่างนิติศาสตร์อิสลามกับรัฐบาล ในบทความจึงขอเสนอว่า บทบาทของรัฐออตโตมันใน ‘การปฏิบัติทางนิติศาสตร์’ (<span class="ar-inline" lang="ar" dir="rtl">الممارسة الفقهية</span>) นั้น เชื่อมโยงอย่างใกล้ชิดกับบทบาทที่ถูกคาดหวังจากรัฐในด้าน ‘การปกครอง’ (<span class="ar-inline" lang="ar" dir="rtl">الحُكْم</span>)</p>
+
+      <p>แจ็กสันชี้ให้เห็นว่า นิติศาสตร์อิสลามนั้นครอบคลุมทุกด้านเมื่อมองจากมุมของบทบัญญัติทางกฎหมาย แต่จะจำกัดอยู่เพียงบางขอบเขตความสนใจเท่านั้นหากมองจากมุมของการปฏิบัติทางกฎหมาย จากงานศึกษาชีวประวัติอัลกอรอฟีของเขา แจ็กสันได้ตั้งคำถามว่า อำนาจของรัฐนั้นครอบคลุมถึงตัวบทกฎหมายหรือการปฏิบัติทางกฎหมายกันแน่ และเขาได้พบหนึ่งในบทบาทที่อำนาจรัฐแสดงออกในขอบเขตที่สำคัญยิ่ง นั่นคือ กระบวนการพิจารณาคดีแพ่งและอาญา ซึ่งในศัพท์บัญญัติอิสลามเรียกว่า มุอามะลาต (<span class="ar-inline" lang="ar" dir="rtl">المعاملات</span>, ธุรกรรมและปฏิสัมพันธ์ระหว่างบุคคล)</p>
+
+      <p>แจ็กสันเห็นว่า อัลกอรอฟีได้มอบทั้งอำนาจศาลโดยตรงและอำนาจในการใช้ดุลยพินิจให้แก่รัฐ เพื่อช่วยให้รัฐสามารถปฏิบัติหน้าที่ต่างๆ ได้ เช่น การระดมพล การประกาศสงคราม การมอบหมายตำแหน่งข้าราชการให้แก่ผู้มีคุณสมบัติครบถ้วน และอื่นๆ</p>
+
+      <p>อย่างไรก็ตาม แนวทางของอัลกอรอฟีในการวางมาตรฐานสำหรับการปฏิบัติทางกฎหมายก็มุ่งที่จะ ‘จำกัดขอบเขต’ ที่รัฐจะสามารถอ้างอำนาจตามกฎหมายในการระงับข้อพิพาทได้ แจ็กสันได้พิสูจน์ให้เห็นผ่านอัลกอรอฟีว่า ประมุขของรัฐมีบทบาทในเชิงนิติบัญญัติ แม้ว่าคำวินิจฉัยทางนิติศาสตร์ของเขาจะไม่มีสถานะเทียบเท่ากับฟัตวาก็ตาม</p>
+
+      <h2 class="article-h2">การหันสู่มานุษยวิทยา: โรเซน เวเบอร์ และพาวเวอร์ส</h2>
+
+      <p>นับตั้งแต่ทศวรรษท้ายๆ ของศตวรรษที่ 20 เป็นต้นมา อิสลามศึกษาได้เกิดการเปลี่ยนแปลงครั้งสำคัญโดยหันไปให้ความสนใจกับการวิจัยและการทำงานภาคสนามเชิงชาติพันธุ์วรรณนาและมานุษยวิทยามากขึ้น ซึ่งการเปลี่ยนแปลงนี้ได้สร้างภาพที่ซับซ้อนหลายมิติมากขึ้นเกี่ยวกับบทบาทของวัฒนธรรมท้องถิ่นในการหล่อหลอมการปฏิบัติทางนิติศาสตร์ ตัวอย่างที่ชัดเจนคือหนังสือของลอว์เรนซ์ โรเซน (Lawrence Rosen) เรื่อง มานุษยวิทยาแห่งความยุติธรรม: กฎหมายในฐานะวัฒนธรรมในสังคมอิสลาม (Anthropology of Justice: Law as Culture in Islamic Society) ซึ่งตีพิมพ์ครั้งแรกในปี 1989 ในงานศึกษาเชิงมานุษยวิทยาเกี่ยวกับการปฏิบัติทางกฎหมายของผู้พิพากษาและศาลของพวกเขาในเมืองหนึ่งของประเทศโมร็อกโก ในช่วงทศวรรษ 1960 และ 1970 โรเซนเห็นว่า “ผู้พิพากษามุสลิมไม่ได้มุ่งเน้นไปที่หลักการของกฎหมายสารบัญญัติ [กล่าวคือ กฎหมายที่ไม่ใช่ส่วนของกระบวนพิจารณา] ไม่ได้ให้ความสำคัญกับบรรทัดฐานที่มีอยู่ก่อน และไม่ได้ใช้เหตุผลเชิงตุลาการในแนวทางที่จะนำไปสู่การวิเคราะห์ทางกฎหมายที่แม่นยำยิ่งขึ้น” หากแต่เป้าหมายหลักที่ผู้พิพากษาต้องการบรรลุจากการตัดสินคดีความคือ การทำความเข้าใจถึงผลกระทบที่คำตัดสินของตนจะมีต่อความสัมพันธ์ทางสังคมของคู่ความ จุดมุ่งหมายสูงสุดที่ผู้พิพากษาต้องการ (ในทัศนะของโรเซน) คือ “การช่วยให้ผู้คนสามารถเจรจาต่อรองเกี่ยวกับความสัมพันธ์ของพวกเขาได้นอกขอบเขตของกฎหมาย”</p>
+
+      <p>ในหนังสือเรื่อง กฎหมาย สังคม และวัฒนธรรมในมัฆริบ (ระหว่างปี ค.ศ. 1300-1500) (Law, Society, and Culture in the Maghrib, 1300-1500) ของเดวิด พาวเวอร์ส (David Powers) ได้อธิบายข้อค้นพบของโรเซนว่าเป็นความพยายามที่จะกลั่นกรองแนวคิดของมักซ์ เวเบอร์ เรื่อง ‘ความยุติธรรมแบบกอฎี’ ซึ่งเวเบอร์ได้นิยามไว้ว่าเป็น “ระบบกฎหมายที่ให้อำนาจผู้พิพากษาในการตัดสินแต่ละคดีตามที่พวกเขาเชื่อว่าเป็นข้อเท็จจริงเฉพาะของแต่ละคดี โดยไม่ได้อ้างอิงถึงโครงสร้างของบรรทัดฐานหรือบทบัญญัติที่ตายตัวและสอดคล้องกัน และปราศจากการใช้กระบวนการพิจารณาคดีที่เป็นระบบตามหลักเหตุผล”</p>
+
+      <p>แม็กซ์ เวเบอร์ เชื่อว่าผู้พิพากษาถูกขับเคลื่อนในการตัดสินคดีด้วยข้อพิจารณาต่างๆ ที่เกี่ยวข้องกับการเมือง ศีลธรรม ผลประโยชน์ส่วนตน และประโยชน์สาธารณะ พาวเวอร์สได้ชี้ว่า “โรเซน (ซึ่งความเห็นแตกต่างจากแม็กซ์ เวเบอร์) อ้างว่า นิติศาสตร์อิสลามนั้นมีทั้งเหตุผลและความสอดคล้อง แม้ว่าในแง่มุมเหล่านี้มันจะขึ้นอยู่กับทักษะของผู้พิพากษาในการตีความคำให้การของพยานที่น่าเชื่อถือ การประเมินผลประโยชน์ทางสังคมที่ขัดแย้งกัน และการพึ่งพาผู้เชี่ยวชาญในท้องถิ่นก็ตาม” ด้วยเหตุนี้ แม้งานศึกษาของโรเซนจะนำเสนอข้อมูลเชิงลึกที่สำคัญเกี่ยวกับสถาบันทางสังคมและวัฒนธรรมในมัฆริบ แต่สำหรับประเด็นที่เกี่ยวกับวาทกรรมภายในของนิติศาสตร์อิสลามแล้ว งานชิ้นนี้กลับเปิดเผยข้อมูลเพียงน้อยนิด อย่างไรก็ตาม เราก็เห็นต่างจากพาวเวอร์ส โดยเชื่อว่าแนวทางของโรเซนไม่สามารถถือได้ว่าเป็นการกลั่นกรองแนวคิดเรื่องความยุติธรรมแบบกอฎีของเวเบอร์ได้ หากแต่จุดสนใจหลักของเขาอยู่ที่องค์ประกอบที่อยู่เบื้องหลังวาทกรรมทางนิติศาสตร์ โดยทั่วไปแล้ว การศึกษาเชิงมานุษยวิทยา (ในฐานะที่เป็นระเบียบวิธีวิจัยแขนงหนึ่ง) ไม่ได้มุ่งสนใจวาทกรรมเชิงนิติศาสตร์ภายในของระบบกฎหมายและระบบนิติศาสตร์โดยตรง</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). มิติความสัมพันธ์ระหว่างนิติศาสตร์อิสลามและอำนาจรัฐ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/jurisprudence-and-state-power.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+</article>
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
+    // the line count reflects text only, per the ONE-line-centered rule.
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
+// main.js is shared/off-limits, so observe the class change here instead.
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>

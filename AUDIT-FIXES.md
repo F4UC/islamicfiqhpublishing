@@ -397,3 +397,19 @@
 
 ## tarikh/paper-industry-medieval-islam — 0 Arabic blocks (no touch)
 ## tarikh/clockmaking-in-the-mamluk-era — 0 Arabic blocks (no touch)
+
+---
+
+# PHASE-2 BATCH 11 — Arabic touches log (10 articles, branch `claude/phase2-batch-11`)
+> DRAFT PR. Scholar `.ar-quote`/`.ar-feature` tashkeel = R60 ALL-OR-NOTHING (strip only U+064B–U+0652/U+0670, skeleton byte-exact). Quran āyāt re-fetched paste-only from api.quran.com uthmani (R53); hadith from sunnah.com (R8). Orchestrator independently byte-verified every standalone āyah/hadith (✓). Bibliographies: source-provided detail only — no fabrication (Batch-10 lesson). articles.json author = bare `กองบรรณาธิการ`; HTML meta/JSON-LD keep long-form per site convention. Blob SHAs below.
+
+- **secularism-religion-and-politics** `24857e1` — 0 āyah/hadith/scholar blocks; 5 `.ar-inline` terms byte-exact from source (1 corrected: shadda/fatha order on حلوليَّة → matches source). No tashkeel/R77 ops.
+- **justice-belief-and-power-classical-governance** `bc2bda1` — āyāt **99:7-8** + **42:38** (clause) paste-only, ✓ byte-verified (99:8 silah-damma → Beta byte-QC note). 6 scholar `.ar-quote/.ar-feature` → BARE (R60). R77: removed stray Latin `.` from al-Baqir + Ibn Jamaʿah blocks. Embedded sacred text kept verbatim (#185).
+- **taxation-through-ibn-khaldun** `04ac5d3` — 0 āyah/hadith; 14 scholar `.ar-quote` → BARE (R60, byte-diff 14/14 verified). R77: none needed (source already `،`).
+- **womens-power-in-islamic-chronicles** `a023fa2` — 0 āyah/hadith/scholar; 3 `.ar-inline` name-glosses byte-exact.
+- **visual-art-and-shadow-puppets-in-islam** `44e3afe` — 0 āyah/hadith/scholar; 21 `.ar-inline` terms byte-exact.
+- **origins-of-nur-al-din-zangi** `35048d4` — 0 āyah/hadith; 15 scholar `.ar-quote` → BARE (R60, 15/15 byte-exact). R77: none needed.
+- **surnames-and-lineage-in-islam** `3512d24` (renamed from battle-of-hunayn, recategorized → nitisart per content) — āyah **33:4 (tail)+33:5** ✓; hadith **Bukhari 2864** `أَنَا النَّبِيُّ لاَ كَذِبْ أَنَا ابْنُ عَبْدِ الْمُطَّلِبْ` ✓ + **Bukhari 6766** ✓ — all byte-verified. 6 scholar `.ar-quote` + 1 `.ar-feature` → BARE (R60). R77: removed stray Latin `.` from al-ʿAyni + Ibn Hajar. Embedded Quran phrase in al-Qurtubi thai-quote kept verbatim (#185).
+- **husband-maintenance-and-marital-rights** `511fc58` — āyah **2:229 (tail)** ✓; hadith **Abu Dawud 3571** ✓ byte-verified; **Bukhari 2554** byte-verified EXCEPT one word in the ʿabd clause (file `وَهُوَ` vs canonical `وَهْوَ`) → Beta byte-QC. 16 scholar `.ar-quote` → BARE (R60). R77: removed 1 stray Latin `.` (fiqh-maxim).
+- **jurisprudence-and-state-power** `9c80cd4` — 0 āyah/hadith/scholar; 9 `.ar-inline` terms byte-exact.
+- **divergent-opinions-on-one-issue** `d76d9c6` — āyāt **39:9, 4:83, 16:43** (fragments) paste-only, all ✓ byte-verified as exact substrings of canonical. 8 scholar `.ar-quote` → BARE (R60). R77: none needed.
