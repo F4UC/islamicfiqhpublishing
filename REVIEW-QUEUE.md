@@ -319,3 +319,5 @@ mirror ใน docs/golden-master.md §6:
 
 ## Phase-2 Batch 4 — flags (ดู AUDIT-FIXES)
 - logic-from-maghrib-to-cairo = doc 1Ev_ ที่ split จาก logic merge (batch 3) — build เป็นบทแยกแล้ว
+
+## Reconcile (2026-06-19): พบ 1 doc ตกหล่นจาก manifest → praying-with-doubt-about-time (1QWs) — build แล้ว เพิ่มใน batch 4
