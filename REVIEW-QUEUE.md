@@ -316,3 +316,6 @@ mirror ใน docs/golden-master.md §6:
 - **on-love-and-longing** (R79 merge): dropped one Facebook cross-reference nav line from Doc B (sequel pointer, not article content).
 - **guarding-time-and-aging** bibliography lists `دار صادر` for Ibn Khallikān's Wafayāt — confirm it was source-provided (else trim per Bibliography Standard).
 - **Deferred OUT of reflections** (One-approved, for later category batches): สูงสุดคืนสู่สามัญ→history · มนุษย์เป็นสัตว์สังคม→kalam/nitisart · วางไม้เรียวลง→nitisart · ศิลปะแห่งการถามตอบ→kalam/adab · มายาคติ→kalam.
+
+## Phase-2 Batch 1 (2026-06-19) — R52/R1 flags
+(ดูรายละเอียด byte-exact + R52/R1 ใน AUDIT-FIXES.md ส่วน Batch 1 — flags ต่อบท)

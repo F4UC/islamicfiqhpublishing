@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>วางไม้เรียวลง — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="ข้อชี้ขาดทางนิติศาสตร์อิสลามว่าด้วยการตีและทำโทษนักเรียน เหตุใดการวางไม้เรียวลงแล้วหันมาสร้างวินัยด้วยความเมตตาจึงสอดคล้องทั้งกับชะรีอะฮ์และกฎหมายไทย">
+<meta name="keywords" content="การลงโทษนักเรียน, การตีเด็ก, การสร้างวินัยเชิงบวก, ความเมตตาในอิสลาม, นิติศาสตร์อิสลาม, ฟิกฮ์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="วางไม้เรียวลง — Islamic Fiqh Publishing">
+<meta property="og:description" content="เหตุใดการวางไม้เรียวลงแล้วหันมาสร้างวินัยด้วยความเมตตาจึงสอดคล้องทั้งกับเจตนารมณ์ของชะรีอะฮ์และกฎหมายไทยว่าด้วยการลงโทษนักเรียน">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/putting-down-the-rod">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/nitisart/putting-down-the-rod">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "วางไม้เรียวลง",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/nitisart/putting-down-the-rod"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="putting-down-the-rod">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">วางไม้เรียวลง...แล้วสร้างวินัยอย่างยั่งยืน</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในวงสนทนาของเหล่าพ่อแม่ แทบไม่มีหัวข้อไหนจะร้อนแรงเท่าเรื่อง “การทำโทษลูก” อีกแล้ว เราต่างถูกรายล้อมไปด้วยความปรารถนาดีที่มาจากหลากหลายทิศทาง เสียงจากผู้ใหญ่ที่เคารพมักจะบอกว่า “ต้องมีไม้เรียวบ้างนะ เด็กจะได้หลาบจำ” ในขณะที่ผู้เชี่ยวชาญยุคใหม่กลับย้ำว่า “ห้ามตีเด็ดขาด เพราะจะสร้างแผลในใจ”</p>
+
+      <p>ท่ามกลางความเห็นที่แตกต่างนี้ คนต่างพ่อต่างแม่หลายคนจึงเกิดคำถามในใจว่า “ถ้าเราไม่ตี ไม่ลงโทษเลย ลูกจะกลายเป็นเด็กเทวดา เอาแต่ใจตัวเองหรือเปล่า?” หรือเมื่อเห็นคนรุ่นก่อนที่ประสบความสำเร็จ ก็อดคิดไม่ได้ว่า “ดูสิ สมัยก่อนโดนกันมาทั้งนั้น ก็ยัง ‘ได้ดีเพราะไม้เรียว’ เลยนี่นา”</p>
+
+      <p>วันนี้เลยอยากจะชวนมาถอดรหัสถึงประเด็นเหล่านี้ และค้นหาเส้นทางที่สาม ที่ไม่ใช่การตามใจ แต่คือการสร้างวินัยที่ยั่งยืนจากความเข้าใจ</p>
+
+      <p>มีคำถามเข้ามาว่า: อะไรคือข้อชี้ขาดของศาสนาต่อการที่ครูตีนักเรียนในโรงเรียน? ทั้งในโรงเรียนสามัญและโรงเรียนสอนศาสนา พร้อมทั้งขอความกรุณาให้ช่วยชี้แจงรายละเอียดตามกรณีต่างๆ ดังต่อไปนี้:</p>
+
+      <p>ประการแรก: นักเรียนชายและนักเรียนหญิงในระดับประถมศึกษา ไม่ว่าความผิดของนักเรียนจะเป็นด้านวิชาการทั่วไปหรือวิชาการศาสนา เช่น ไม่ทำการบ้าน ได้คะแนนไม่ดี หรือเป็นด้านพฤติกรรม เช่น การแสดงพฤติกรรมที่ไม่ถูกต้องหรือไม่เหมาะสมในการปฏิบัติต่อเพื่อนหรือครู หรือในการพูดคุยกัน หรืออาจเป็นเหตุสุดวิสัย มีอุบัติเหตุ รถติด อยู่ในถิ่นทุรกันดาร จนมาสาย</p>
+
+      <p>ประการที่สอง: นักเรียนชายและนักเรียนหญิงในระดับมัธยมศึกษาตอนต้น ซึ่งโดยส่วนใหญ่จะเริ่มเข้าสู่วัยบรรลุศาสนภาวะในช่วงนี้ หรือที่เรียกว่าช่วงวัยรุ่นตอนต้น โดยพิจารณาตามรายละเอียดที่คล้ายคลึงกับที่กล่าวไว้ในประการแรก</p>
+
+      <p>ประการที่สาม: นักเรียนชายและนักเรียนหญิงในระดับมัธยมศึกษาตอนปลาย ซึ่งเป็นช่วงที่การเปลี่ยนแปลงทางร่างกายเพิ่มขึ้น และความรู้สึกกับอารมณ์จะรุนแรงขึ้น โดยพิจารณาตามรายละเอียดที่คล้ายคลึงกับที่เคยกล่าวไว้ที่ผ่านมา</p>
+
+      <h2 class="article-h2">คำตอบ</h2>
+
+      <p>สิ่งแรกที่เราต้องทำความเข้าใจในฐานะผู้ปกครองและครูที่ดูแลเด็กเหล่านี้คือ การไม่ตี หรือไม่ใช้การลงโทษที่รุนแรง ไม่ได้เท่ากับการไม่สอน หรือการปล่อยปละละเลย แต่คือการเปลี่ยนเครื่องมือจาก ‘การลงโทษ’ มาเป็น ‘การสร้างวินัย’ ซึ่งแตกต่างกันโดยสิ้นเชิง</p>
+
+      <p>‘การลงโทษ’ คือการกระทำที่มุ่งเน้นไปที่ “อดีต” เป็นการทำให้เด็กรู้สึกแย่หรือเจ็บปวดจากสิ่งที่ทำผิดไปแล้ว มันสอนให้เด็กเรียนรู้ที่จะ “กลัว” และ “หลีกเลี่ยง” การถูกจับได้ แต่ไม่ได้สอนทักษะว่าครั้งต่อไปควรทำอย่างไร</p>
+
+      <p>ในทางกลับกัน ‘การสร้างวินัย’ คือกระบวนการที่มุ่งเน้นไปยัง “อนาคต” คือการสอนและชี้แนะ เพื่อให้เด็กมีเครื่องมือในการตัดสินใจและรับมือกับสถานการณ์ต่างๆ ได้ดีขึ้น</p>
+
+      <p>แนวคิดเรื่องการสร้างวินัยด้วยความเข้าใจนี้เอง ที่สอดคล้องกันกับหัวใจของคำสอนในศาสนาอิสลาม ทึ่ตั้งอยู่บนรากฐานอันมั่นคงของ ‘ความเมตตา’</p>
+
+      <p>อิสลามนั้นโดนแก่นแท้แล้ว คือศาสนาแห่งความเมตตา และอัลลอฮ์ได้ทรงให้ลักษณะแก่ท่านนบีมุฮัมมัด ﷺ ผู้เป็นที่รักของพระองค์ - ศ็อลลัลลอฮุอะลัยฮิวะอาลิฮิวะสัลลัม - ว่า เป็นความเมตตาแก่สากลโลก โดยพระองค์ตรัสว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَمَآ أَرْسَلْنَـٰكَ إِلَّا رَحْمَةً لِّلْعَـٰلَمِينَ</p>
+      </div>
+      <p>{และเรามิได้ส่งเจ้ามาเพื่ออื่นใด นอกจากเพื่อเป็นความเมตตาแก่ประชาชาติทั้งหลาย}<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>และศาสนบัญญัติได้เน้นย้ำถึงสิทธิของผู้อ่อนแอในการที่จะต้องได้รับความเมตตา โดยท่านนบีมุฮัมมัด ﷺ - ศ็อลลัลลอฮุอะลัยฮิวะอาลิฮิวะสัลลัม - ได้กล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">اللَّهُمَّ إنِّي أُحَرِّجُ حَقَّ الضَّعِيفَينِ: اليَتِيم، وَالمَرْأة</p>
+      </div>
+      <p>“โอ้อัลลอฮ์ แท้จริงข้าพระองค์ขอประกาศให้การละเมิดสิทธิของผู้อ่อนแอทั้งสองเป็นเรื่องต้องห้ามอย่างเด็ดขาด นั่นคือ เด็กกำพร้าและสตรี”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>บันทึกโดยอันนะสาอีย์ และอิบนุ มาญะฮ์ด้วยสายรายงานที่ดี ดังที่ท่านอิหม่ามอันนะวาวีย์กล่าวไว้ในหนังสือริยาฎุศศอลิฮีน</p>
+
+      <p>และผู้ที่สมควรได้รับความเมตตามากที่สุดคือบรรดาเด็กๆ ในทุกช่วงวัย เนื่องด้วยความอ่อนแอและการที่ต้องเอาใจใส่ในการดูแล จนกระทั่งท่านนบีมุฮัมมัด ﷺ - ศ็อลลัลลอฮุอะลัยฮิวะอาลิฮิวะสัลลัม - ได้ถือว่า การไม่มีความเมตตาต่อเด็กเล็กเป็นหนึ่งในบาปใหญ่ โดยท่านกล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">لَيْسَ مِنَّا مَنْ لَمْ يَرْحَمْ صَغِيرَنَا وَيَعْرِفْ شَرَفَ كَبِيرِنَا</p>
+      </div>
+      <p>“ไม่ใช่ส่วนหนึ่งจากพวกเรา สำหรับผู้ที่ไม่เมตตาต่อเด็กเล็กของเรา และไม่รู้จักให้เกียรติผู้ใหญ่ของเรา”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+
+      <p>บันทึกโดยอิหม่ามอะห์มัด, อบู ดาวูด และอัตติรมิซีย์ ซึ่งท่านอัตติรมิซีย์ระบุว่า เป็นหะดีษเศาะฮีห์ และสำนวนนี้ก็เป็นของท่าน จากหะดีษของท่านอับดุลลอฮ์ บิน อัมร์ เราะฎิยัลลอฮุอันฮุมา</p>
+
+      <p>ดังนั้น เมื่อเราเลือกที่จะวาง ‘การลงโทษ’ ที่เกิดจากอารมณ์ลง และหันมาใช้ ‘การสร้างวินัย’ ที่เปี่ยมด้วยความเมตตาและการชี้แนะ เราไม่ได้กำลังตามกระแสการเลี้ยงลูกยุคใหม่เพียงอย่างเดียว แต่เรากำลังปฏิบัติตามแบบอย่างอันสูงส่งของท่านนบีมุฮัมมัด ﷺ และตอบรับคำสอนของอิสลามอย่างแท้จริง การกระทำของเราที่มุ่งเน้นการสอนแทนการสร้างความกลัว คือการแสดงออกถึงความเมตตาต่อเด็กๆ ซึ่งเป็นผู้ที่อยู่ในความดูแลของเรา และเป็นการยืนยันว่า เราคือส่วนหนึ่งจากประชาชาติแห่งความเมตตานี้</p>
+
+      <p>นอกจากนี้ ศาสนบัญญัติยังได้ส่งเสริมให้มีความอ่อนโยนไว้ด้วยเช่นกัน ซึ่งท่านนบีมุฮัมมัด ﷺ - ศ็อลลัลลอฮุอะลัยฮิวะอาลิฮิวะสัลลัม - ได้เรียกร้องสู่ความอ่อนโยนในทุกๆ กิจการ โดยท่านกล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">إِنَّ الرِّفْقَ لاَ يَكُونُ فِي شَىْءٍ إِلاَّ زَانَهُ وَلاَ يُنْزَعُ مِنْ شَىْءٍ إِلاَّ شَانَهُ</p>
+      </div>
+      <p>“แท้จริงความอ่อนโยนนั้น เมื่อไปอยู่ในสิ่งใด มันย่อมประดับประดาสิ่งนั้นให้งดงาม และเมื่อมันถูกถอดถอนออกจากสิ่งใด มันย่อมทำให้สิ่งนั้นมัวหมอง”<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+
+      <p>บันทึกโดยมุสลิม จากหะดีษของท่านหญิงอาอิชะฮ์ อุมมุลมุอ์มินีน เราะฎิยัลลอฮุอันฮา</p>
+
+      <p>และภาวะที่มนุษย์มีความต้องการความอ่อนโยนมากที่สุด ก็คือในการอบรมเลี้ยงดูบุตรและนักเรียน</p>
+
+      <h2 class="article-h2">ประเด็นเรื่องการตีหรือทำโทษในรูปแบบอื่นๆ</h2>
+
+      <p>หลักการพื้นฐานในศาสนบัญญัติคือการห้ามมีการให้ร้ายและทำร้ายในทุกรูปแบบ ดังที่อัลลอฮ์ทรงตรัสว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَٱلَّذِينَ يُؤْذُونَ ٱلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ بِغَيْرِ مَا ٱكْتَسَبُوا۟ فَقَدِ ٱحْتَمَلُوا۟ بُهْتَـٰنًا وَإِثْمًا مُّبِينًا</p>
+      </div>
+      <p>{และบรรดาผู้กล่าวร้ายแก่บรรดาผู้ศรัทธาชายและบรรดาผู้ศรัทธาหญิงในสิ่งที่พวกเขามิได้กระทำ แน่นอนพวกเขาได้แบกการกล่าวร้ายและบาปอันชัดแจ้งไว้}<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup></p>
+
+      <p>และท่านนบีมุฮัมมัด ﷺ - ศ็อลลัลลอฮุอะลัยฮิวะอาลิฮิวะสัลลัม - ได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ظهر المؤمن حمى إلا بحقه</blockquote>
+      <p class="ar-translation">“แผ่นหลังของผู้ศรัทธานั้นเป็นที่ต้องห้ามละเมิด เว้นแต่ด้วยสิทธิอันชอบธรรม”</p>
+
+      <p>บันทึกโดยอัฏเฏาะบะรอนีย์ในหนังสืออัลมุอ์ญัม อัลกะบีร จากหะดีษของท่านอิศมะฮ์ บิน มาลิก อัลคอฏมีย์ เราะฎิยัลลอฮุอันฮ์ ซึ่งท่านอิหม่ามอัลบุคอรีย์ได้ตั้งเป็นชื่อบทในหนังสือเศาะฮีห์ของท่านว่า: “บทว่าด้วย แผ่นหลังของผู้ศรัทธานั้นเป็นที่ต้องห้ามละเมิด เว้นแต่ในการลงโทษตามที่ศาสนากำหนดหรือในสิทธิอันชอบธรรม”</p>
+
+      <p>ท่านอัลฮาฟิศอิบนุ หะญัร ได้กล่าวไว้ในหนังสือ “ฟัตหุลบารีย์” ว่า: คำว่า <span class="ar-inline" lang="ar" dir="rtl">حمى</span> หมายถึง เป็นที่คุ้มครองและต้องห้ามจากการถูกทำร้าย และคำกล่าวที่ว่า “เว้นแต่ในการลงโทษตามที่ศาสนากำหนด หรือในสิทธิอันชอบธรรม” หมายความว่า เขาจะไม่ถูกตีหรือถูกทำให้เสื่อมเสียเกียรติ เว้นแต่ในฐานะการลงโทษตามขอบเขตศาสนา และการลงโทษเพื่อสั่งสอนเท่านั้น”</p>
+
+      <p>ท่านอัลฮาฟิศ อัสสะคอวีย์ ได้กล่าวในหนังสืออัลมะกอศิด อัลหะสะนะฮ์” เกี่ยวกับหะดีษดังกล่าวว่า: “‘และความหมายคือ แผ่นหลังของเขาจะไม่ถูกตี เว้นแต่ในการลงโทษตามขอบเขตที่ศาสนากำหนดไว้’ บรรดานักนิติศาสตร์อิสลาม (ฟุเกาะฮาอ์) ได้เน้นย้ำในความหมายนี้ โดยบางท่านระบุว่า การตีเด็กนั้นต้องไม่ใช้แส้ ไม้เท้า หรือสิ่งอื่นใดทำนองเดียวกัน แต่ให้ใช้เพียงมือเท่านั้น เพื่อเป็นการแสดงการตำหนิและว่ากล่าว และต้องไม่กระทำด้วยเจตนาแก้แค้น แต่เพื่อการอบรมสั่งสอน พวกเขายังระบุอีกว่า ผู้ตีจำเป็นต้องหลีกเลี่ยงจุดตาย และต้องเว้นจากบริเวณที่ละเอียดอ่อนและอวัยวะสำคัญที่การตีจะสร้างความอัปยศอดสูได้ เช่น ใบหน้า ศีรษะ ลำคอ อวัยวะเพศ และท้ายทอย เนื่องจากคำกล่าวของท่านนบีมุฮัมมัด ﷺ - ศ็อลลัลลอฮุอะลัยฮิวะอาลิฮิวะสัลลัม - ที่ว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">إِذَا قَاتَلَ أَحَدُكُمْ فَلْيَجْتَنِبِ الْوَجْهَ</p>
+      </div>
+      <p>“เมื่อคนใดในหมู่พวกท่านทะเลาะเบาะแว้งกัน ก็จงหลีกเลี่ยงการตีที่ใบหน้า” (บันทึกโดยอัลบุคอรีย์)<sup class="fn-ref" id="fnref-6"><a href="#ref-6">⁶</a></sup></p>
+
+      <p>และการตีนั้นต้องไม่รุนแรง ไม่ทำให้เลือดตกยางออก หรือเป็นอันตราย นอกจากนี้ นักนิติศาสตร์บางท่านยังระบุว่า ห้ามตีเกิน 3 ครั้ง ดังที่มีรายงานว่าท่านนบีมุฮัมมัด ﷺ - ศ็อลลัลลอฮุอะลัยฮิวะอาลิฮิวะสัลลัม - ได้กล่าวกับท่านมัรดาสผู้เป็นครูว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إياك أن تضرب فوق الثلاث؛ فإنك إن ضربت فوق ثلاث اقتص الله منك</blockquote>
+      <p class="ar-translation">“ท่านจงระวังเถิด อย่าได้ตีเกินสามครั้ง หากท่านตีเกินสามครั้ง อัลลอฮ์จะทรงตัดสินให้มีการชดใช้จากท่าน”</p>
+
+      <p>ท่านชัยค์อัลอับดะรีย์ อัลมาลิกีย์ กล่าวในหนังสืออัตตาจ วัลอิกลีลว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقال أشهب في مؤدب الصبيان: إن زاد على ثلاثة أسواط اقتص منه</blockquote>
+      <p class="ar-translation">“ท่านอัชฮับกล่าวเกี่ยวกับผู้ที่อบรมสั่งสอนเด็กว่า: หากเขาตีเกินสามที เขาจะต้องถูกตัดสินให้ชดใช้”</p>
+
+      <p>หะดีษนี้ (เกี่ยวกับท่านมัรดาส) เป็นคำเตือนให้ระวังจากการกระทำดังในลักษณะที่เป็นอันตราย และหากการกระทำนั้นเกินเลยไปจากการเป็นเพียงการแสดงการว่ากล่าวแล้ว ก็ถือว่าเป็นสิ่งที่ไม่เป็นที่อนุมัติ</p>
+
+      <p>ด้วยเหตุนี้ การตีที่ถูกกล่าวถึงในบางหะดีษจึงต้องถูกตีความในลักษณะดังกล่าว เช่น คำกล่าวของท่านนบีมุฮัมมัด ﷺ - ศ็อลลัลลอฮุอะลัยฮิวะอาลิฮิวะสัลลัม - ที่ว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">مُرُوا أَبْنَاءَكُمْ بِالصَّلَاةِ لِسَبْعِ سِنِينَ، وَاضْرِبُوهُمْ عَلَيْهَا لِعَشْرِ سِنِينَ</p>
+      </div>
+      <p>“จงใช้ให้บุตรหลานของพวกท่านให้ละหมาดเมื่ออายุเจ็ดขวบ และจงตีพวกเขา (เพื่อสั่งสอน) ในเรื่องละหมาดเมื่ออายุสิบขวบ”<sup class="fn-ref" id="fnref-7"><a href="#ref-7">⁷</a></sup></p>
+
+      <p>บันทึกโดยอะห์มัด ซึ่งในความเป็นจริงแล้ว การตีในที่นี้คือรูปแบบหนึ่งของการอบรม การฝึกฝน และการสั่งสอนทางจิตใจ ซึ่งมีเจตนาเพื่อแสดงการตำหนิ การว่ากล่าว และการไม่พอใจต่อการกระทำนั้นๆ ไม่ใช่ว่าการรับรองให้มีการเฆี่ยนตีหรือการลงโทษทางร่างกาย แต่หากมีการตีเกิดขึ้นจริง ก็เป็นเพียงการตีในลักษณะเดียวกับการใช้ไม้สีฟัน (สิวาก) ตี (เป็นการตีที่เบามากๆ) ซึ่งไม่ได้มีเจตนาให้เกิดความเจ็บปวด หากแต่เพื่อแสดงการตำหนิว่ากล่าวเท่านั้น</p>
+
+      <p>และหากการตีด้วยเงื่อนไขและข้อจำกัดเหล่านี้จะเคยเป็นวิธีการอบรมที่เหมาะสมในบางสภาพแวดล้อม ก็ไม่ได้หมายความว่ามันจะเหมาะสมกับทุกสภาพแวดล้อมและทุกยุคสมัย และไม่ใช่กับทุกสถานการณ์หรือทุกคน ดังคำกล่าวที่ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">العبد يقرع بالعصا … والحر تكفيه الإشارة</blockquote>
+      <p class="poem-th">“ทาสนั้นถูกกำราบด้วยไม้เท้า<br>ส่วนผู้เป็นไท แค่เพียงสัญญาณก็เพียงพอ”</p>
+
+      <p>ยิ่งไปกว่านั้น ความเป็นจริงของ “การตีในปัจจุบันได้หลุดออกไปจากความหมายเชิงอบรมสั่งสอนเหล่านี้ไปตั้งนานแล้ว และในรูปแบบส่วนใหญ่ได้กลายเป็นเครื่องมือสำหรับการลงโทษทางกายที่รุนแรง หรือกระทั่งเพื่อการแก้แค้นในบางครั้ง ซึ่งการกระทำเช่นนี้เป็นที่ต้องห้าม (หะรอม) โดยไม่มีข้อขัดแย้งใดๆ ทั้งสิ้น</p>
+
+      <h2 class="article-h2">ขยายประเด็นขอบเขตของการลงโทษ</h2>
+
+      <p>บ่อยครั้งที่การลงโทษทางร่างกาย แม้จะเริ่มต้นจากเจตนาที่ดี ก็อาจกลายเป็น “ข้ออ้าง” ให้ผู้กระทำเลยเถิดไปสู่ความรุนแรง หรือใช้เป็นที่ระบายอารมณ์โกรธและความหงุดหงิดของตนเอง จนนำไปสู่ผลลัพธ์อันเลวร้าย ทั้งการบาดเจ็บทางกายและจิตใจของนักเรียน หรืออาจถึงขั้นเสียชีวิตดังที่มีปรากฏในข่าว และยังสร้างบรรยากาศก้าวร้าวและความไม่ไว้วางใจในสถานศึกษา</p>
+
+      <p>ด้วยเหตุนี้ หลักการที่ว่า “กันไว้ดีกว่าแก้” จึงมีความสำคัญอย่างยิ่ง ซึ่งสอดคล้องโดยตรงกับหลักนิติศาสตร์อิสลามที่เรียกว่า “การป้องกันหนทางสู่ความเสื่อมเสีย” คือการสั่งห้ามการกระทำที่แม้จะดูไม่ร้ายแรง แต่มีแนวโน้มสูงที่จะนำไปสู่ความเสียหายที่ควบคุมไม่ได้</p>
+
+      <p>ในบริบทของประเทศไทย หลักการ “กันไว้ดีกว่าแก้” นี้ ได้ถูกนำมาบัญญัติเป็นกฎหมายที่ชัดเจน ผ่าน ระเบียบกระทรวงศึกษาธิการว่าด้วยการลงโทษนักเรียนและนักศึกษา (ฉบับที่ ๒) พ.ศ. ๒๕๖๒ ซึ่งได้แก้ไขเพิ่มเติมระเบียบเดิมในปี ๒๕๔๘ โดยมีสาระสำคัญคือ:</p>
+
+      <ol class="article-summary">
+        <li><strong>ยกเลิกการลงโทษด้วยวิธีการรุนแรงโดยสิ้นเชิง</strong> กฎหมายไทยได้ปิดช่องว่างของความเสี่ยงนี้ โดยห้ามการลงโทษด้วยการตีหรือการทำร้ายร่างกายนักเรียนอย่างเด็ดขาด</li>
+        <li><strong>กำหนดกรอบการลงโทษเชิงสร้างสรรค์</strong> แทนที่ความรุนแรง กฎหมายได้กำหนดวิธีการลงโทษที่มุ่งเน้นการปรับเปลี่ยนพฤติกรรม เช่น การว่ากล่าวตักเตือน, การทำทัณฑ์บน และการทำกิจกรรมเพื่อปรับเปลี่ยนพฤติกรรม</li>
+      </ol>
+
+      <p>มุมมองทางกฎหมายของไทยนี้ สอดคล้องกับคำกล่าวของท่านอิบนุ หะญัร อัลฮัยตะมีย์ที่ได้แจ้งเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قوله (ويضرب) ضربا غير مبرح…ولو لم يفد إلا المبرح تركهما وفاقا لابن عبد السلام وخلافا لقول البلقيني يفعل غير المبرح</blockquote>
+      <p class="ar-translation">“คำกล่าวของอิหม่ามนะวาวีย์ที่ว่า (และให้ตีเขา) หมายถึง การตีที่ไม่รุนแรง…และถึงแม้ว่า (การตีที่ไม่รุนแรง) จะไม่เกิดผลใดๆ เว้นแต่จะต้องใช้การตีที่รุนแรง ก็ให้ละทิ้งการตีทั้งสองรูปแบบนั้นเสีย (คือไม่ต้องตีเลย) ซึ่งทัศนะนี้สอดคล้องกับท่านอิบนุ อับดิสสะลาม แต่ขัดแย้งกับทัศนะของท่านอัลบุลกีนีย์ที่กล่าวว่า: ให้ยังคงกระทำการตีที่ไม่รุนแรงนั้นต่อไป (แม้จะไม่เห็นผล)”</p>
+
+      <p>กฎหมายไทยได้เลือกใช้หลักการนี้ โดยการ “ละทิ้ง” วิธีการตีทั้งหมด และเปลี่ยนไปใช้แนวทางอื่นแทน</p>
+
+      <p>ท่านชัรวานีย์ได้ทำการขยายคำอธิบายในส่วนของท่านอิบนุ หะญัรเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والمعتمد أن يكون بقدر الحاجة وإن زاد على الثلاث لكن بشرط أن يكون غير مبرح ولو لم يفد إلا المبرح تركه على المعتمد خلافا للبلقيني  ولو تلف الولد بالضرب ولو معتادا ضمنه الضارب ؛ لأن التأديب مشروط بسلامة العاقبة</blockquote>
+      <p class="ar-translation">“และทัศนะที่ถูกยึดถือเป็นหลัก (อัลมุอ์ตะมัด) คือ ให้ตีได้ตามความจำเป็น แม้จะเกินสามครั้งก็ตาม แต่มีเงื่อนไขสำคัญว่า ต้องไม่เป็นการตีที่รุนแรง และหากการตีเบาๆ ไม่ได้ผล เว้นแต่จะต้องใช้การตีที่รุนแรง ก็ให้ละทิ้งการตีนั้นเสีย ตามทัศนะที่มีการยึดถือกัน (อัลมุอ์ตะมัด) ซึ่งขัดแย้งกับท่านอัลบุลกีนีย์ และหากเด็กเสียชีวิตจากการตีนั้น แม้ว่าจะเป็นการตีแบบปกติ (ที่ไม่รุนแรง) ก็ตาม ผู้ตีก็จะต้องรับผิดชอบชดใช้ (จากเหตุดังกล่าว) ทั้งหมด เพราะการอบรมสั่งสอนนั้น มีเงื่อนไขที่ผูกอยู่กับความปลอดภัยของผลลัพธ์ที่จะตามมา”</p>
+
+      <p>การที่กฎหมายไทยห้ามการตีหรือลงโทษโดยสิ้นเชิง ก็เพื่อรับประกัน “ความปลอดภัยของผลลัพธ์” นี้ให้เกิดขึ้นได้จริง 100%</p>
+
+      <p>ดังนั้น หลักการห้ามลงโทษนักเรียนในกฎหมายไทย จึงไม่ใช่สิ่งที่ขัดแย้งกับหลักศาสนา แต่กลับเป็นการนำเจตนารมณ์สูงสุดของศาสนาในเรื่องการปกป้องชีวิตและป้องกันความเสียหายมาปรับใช้อย่างเป็นรูปธรรม ซึ่งครอบคลุมนักเรียนทุกคน โดยเฉพาะผู้ที่ยังไม่บรรลุศาสนภาวะ ตั้งแต่ระดับปฐมวัย ประถมศึกษา ไปจนถึงมัธยมศึกษา</p>
+
+      <p>ประเด็นนี้ครอบคลุมนักเรียนที่ยังไม่บรรลุศาสนภาวะ (วัยหนุ่มสาว) ซึ่งตามหลักกฎหมายอิสลามยังถือว่าเป็น “เด็ก” ได้แก่นักเรียนระดับปฐมวัย ประถมศึกษา นักเรียนส่วนใหญ่ในระดับมัธยมศึกษาตอนต้น และนักเรียนบางส่วนในระดับมัธยมศึกษาตอนปลาย</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>สำหรับคำกล่าวที่ยังคงได้ยินอยู่เสมอว่า “ได้ดีเพราะไม้เรียว” นั้น เป็นความจริงที่คนรุ่นก่อนจำนวนมากเติบโตขึ้นมาเป็นผู้ใหญ่ที่น่าเคารพ แม้จะเคยผ่านประสบการณ์เหล่านั้นมา แต่ในวันนี้ เราอาจต้องลองตั้งคำถามในมุมใหม่ว่า ท่านเหล่านั้นได้ดี “เพราะ” ไม้เรียว จริงหรือไม่ หรือเป็นเพียงการเอาคำพูดมาอวดความภูมิใจของตนเองเท่านั้น ทั้งที่หากใช้ตรรกะความคิดเดียวกัน คนที่โดนไม้เรียวหรือโดนทำโทษแล้วชีวิตล้มเหลว ติดยา ใยจึงไม่นำมาคิดในสมการดังกล่าวด้วย</p>
+
+      <p>ความสำเร็จของคนคนหนึ่งมาจากปัจจัยมากมาย ไม่ว่าจะเป็นความรักความเอาใจใส่จากครอบครัว คำสอนดีๆ ที่ได้รับ หรือความเข้มแข็งของตัวบุคคลนั้นเอง การถูกตีถูกทำโทษเป็นเพียงส่วนเสี้ยวหนึ่งของอดีตเท่านั้น ไม่ใช่ปัจจัยที่สร้างความสำเร็จเสมอไป เรื่องนี้เปรียบได้กับการเดินทางในสมัยก่อนที่ยังไม่มีเข็มขัดนิรภัย หลายคนก็ถึงที่หมายอย่างปลอดภัย แต่เมื่อวันนี้เรามีข้อมูลและงานวิจัยที่ชี้ชัดว่าเข็มขัดนิรภัยช่วยลดความเสี่ยงได้อย่างมหาศาล เราทุกคนก็เลือกที่จะคาดเข็มขัดเพื่อปกป้องคนที่เรารัก</p>
+
+      <p>องค์ความรู้ด้านสมองและพัฒนาการเด็กในปัจจุบันก็เป็นเช่นนั้น ได้ชี้ให้เราเห็นว่าการสร้างวินัยเชิงบวกให้ผลลัพธ์ที่ดีกว่าในระยะยาวและไม่สร้างบาดแผลทางใจ</p>
+
+      <p>และด้วยเหตุผลที่องค์ความรู้สมัยใหม่ได้ชี้ให้เห็นถึงผลเสียที่ประจักษ์ชัดนี้เอง ที่ทำให้ “ผู้ปกครองบ้านเมือง” หรือรัฐบาล มีความชอบธรรมในการออกกฎหมายเพื่อห้ามการลงโทษนักเรียนด้วยการตีและขนาดสิ่งที่ศาสนาอนุญาตโดยทั่วไป รัฐยังสามารถออกกฎเพื่อจำกัดได้ แล้วนับประสาอะไรกับการตี การลงโทษนักเรียนซึ่งได้ก่อให้เกิดผลเสียมากมาย จนแทบจะแยกไม่ออกแล้วว่าส่วนไหนคือการสั่งสอนและส่วนไหนคือการทำร้ายนักเรียนเหล่านั้น</p>
+
+      <p>ดังนั้น เมื่อมองจากภาพรวมทั้งหมด การวางไม้เรียวลงจึงไม่ใช่เพียงการเลือกใช้ “เครื่องมือที่ดีกว่า” และ “ปลอดภัยกว่า” ตามความรู้ยุคใหม่เท่านั้น แต่ยังเป็นการปฏิบัติตามกฎหมายของบ้านเมืองที่ออกมาเพื่อปกป้องส่วนรวม ซึ่งถือเป็นหน้าที่ที่ศาสนาส่งเสริมและรับรอง</p>
+
+      <p>ท้ายที่สุดแล้ว การเลือกที่จะจับมือเด็กเหล่านี้ให้แน่นขึ้นและนำทางเขาด้วยความรักความเข้าใจ จึงไม่ใช่แค่การทำเพราะมันคือ “หน้าที่” เท่านั้น แต่ยังเป็นการทำหน้าที่พลเมืองและมุสลิมที่ดีในสังคมที่เราอาศัยอยู่ด้วยเช่นกัน</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). วางไม้เรียวลง. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/putting-down-the-rod.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">القرآن الكريم، سورة الأنبياء (21)، الآية 107. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">أخرجه النسائي وابن ماجه بإسناد جيد، كما ذكره النووي في رياض الصالحين، من حديث عبد الله بن أبي أوفى رضي الله عنه. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">أخرجه أحمد وأبو داود والترمذي، وقال الترمذي حديث حسن صحيح، من حديث عبد الله بن عمرو رضي الله عنهما. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">أخرجه مسلم في صحيح مسلم، رقم 2594، من حديث عائشة رضي الله عنها. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">القرآن الكريم، سورة الأحزاب (33)، الآية 58. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+        <li id="ref-6">أخرجه البخاري في صحيح البخاري، رقم 2559، من حديث أبي هريرة رضي الله عنه. <a class="fn-back" href="#fnref-6" aria-label="กลับไปยังเชิงอรรถที่ 6">↑</a></li>
+        <li id="ref-7">أخرجه أحمد في المسند، من حديث عبد الله بن عمرو رضي الله عنهما. <a class="fn-back" href="#fnref-7" aria-label="กลับไปยังเชิงอรรถที่ 7">↑</a></li>
+        <li>الطبراني، سليمان بن أحمد. المعجم الكبير. القاهرة: مكتبة ابن تيمية.</li>
+        <li>ابن حجر العسقلاني، أحمد بن علي. فتح الباري شرح صحيح البخاري. بيروت: دار المعرفة.</li>
+        <li>السخاوي، محمد بن عبد الرحمن. المقاصد الحسنة. بيروت: دار الكتاب العربي.</li>
+        <li>الهيتمي، ابن حجر. تحفة المحتاج في شرح المنهاج، ومعه حاشية الشرواني. القاهرة: المكتبة التجارية الكبرى.</li>
+        <li>المواق، محمد بن يوسف العبدري. التاج والإكليل لمختصر خليل. بيروت: دار الكتب العلمية.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>
