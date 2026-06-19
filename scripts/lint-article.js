@@ -5,7 +5,7 @@
  * lint-article.js — house-style linter for Thai article prose.
  * Usage:  node scripts/lint-article.js <file.html> [more.html ...]
  *
- * Checks 4 rules on PROSE ONLY. Non-prose regions are masked out first
+ * Checks house-style + transliteration/spelling rules on PROSE ONLY. Non-prose regions are masked out first
  * (line numbers are preserved): <head>, <style>, <script>, HTML comments
  * <!-- ... -->, and any element carrying class "poem-th" (S2 verse exception).
  *
@@ -16,7 +16,20 @@
  *   [R4] ไม้ยมก "ๆ" with no space after it      (S4 — "ๆ" attaches to the word
  *                                                before and needs one space after)
  *
- * Exit code: 0 if all files PASS, 1 if any file FAILs, 2 on usage/IO error.
+ *   --- Transliteration & spelling (Thai prose only; Rules 12.1/12.2/73/82) ---
+ *   [R5] "ศ่อเหี้ยห์"                            (Rule 12.1 — use "ศอเฮี้ยะฮ์")
+ *   [R6] "มัซฮับ"                                (Rule 12.2 — use "มัสฮับ")
+ *   [R7] corpus deprecated forms                 (Rule 73 — ศอฮาบัต/อัลญาฮิส/ศอลาฮุดดีน/
+ *                                                ไบบาร์ส·ไบบัรส์/นิซามุลมุลก์/บะตูเตาะฮ์)
+ *   [R8] "สุล่าน" (dropped final ต)              (Rule 82 — use "สุลต่าน")
+ *   [R9] "อบูล…" al- form  (WARN, not FAIL)      (Rules 82/52 — likely "อบุล…" สระอุ;
+ *                                                flag for review — never auto-decide)
+ *
+ * Severity: rules are 'error' (FAIL, exit 1) unless marked sev:'warn' (reported
+ * but does not fail — for FLAG-not-fix cases like R9 per Rule 52). Old articles
+ * are not retro-fixed (Rule 73); this gate is for NEW prose.
+ *
+ * Exit code: 0 if all files PASS (warnings allowed), 1 if any ERROR finding, 2 on usage/IO error.
  *
  * NOTE ON R4: the source scan request specified the regex /(?<=[^\s\n>])ๆ/.
  * That lookbehind matches every "ๆ" preceded by a non-space char — i.e. the
@@ -37,7 +50,15 @@ const RULES = [
   { id: 'R1', re: /(?<![ก-ฮ])ทว่า/,            desc: '"ทว่า" ในร้อยแก้ว (ใช้ "แต่")' },
   { id: 'R2', re: /มิใช่/,                          desc: '"มิใช่" (ใช้ "ไม่ใช่")' },
   { id: 'R3', re: /—/,                         desc: 'em-dash "—" ในร้อยแก้ว (ใช้ "-")' },
-  { id: 'R4', re: /ๆ(?=[฀-๺a-zA-Z0-9])/,  desc: 'ไม้ยมก "ๆ" ไม่เว้นวรรคหลัง' }
+  { id: 'R4', re: /ๆ(?=[฀-๺a-zA-Z0-9])/,  desc: 'ไม้ยมก "ๆ" ไม่เว้นวรรคหลัง' },
+
+  /* --- Transliteration & spelling (Rules 12.1/12.2/73/82) --- */
+  { id: 'R5', re: /ศ่อเหี้ยห์/,                 desc: '"ศ่อเหี้ยห์" → "ศอเฮี้ยะฮ์" (กฎ 12.1)' },
+  { id: 'R6', re: /มัซฮับ/,                       desc: '"มัซฮับ" → "มัสฮับ" (กฎ 12.2)' },
+  { id: 'R7', re: /ศอฮาบัต|อัลญาฮิส|ศอลาฮุดดีน|ไบบาร์ส|ไบบัรส์|นิซามุลมุลก์|บะตูเตาะฮ์/,
+                                                  desc: 'รูป deprecated ตาม corpus (กฎ 73 — ดูตารางในธรรมนูญ)' },
+  { id: 'R8', re: /สุล่าน/,                       desc: '"สุล่าน" → "สุลต่าน" — ตัวสะกดตก ต (กฎ 82)' },
+  { id: 'R9', re: /อบูล/, sev: 'warn',            desc: '"อบูล…" รูป al- น่าจะ "อบุล…" (สระอุ) — FLAG ตรวจ (กฎ 82/52)' }
 ];
 
 /* Replace every non-newline char of each match with a space, so the text is
@@ -79,7 +100,7 @@ function lintFile(file) {
       var re = new RegExp(rule.re.source, 'g');
       var m;
       while ((m = re.exec(line)) !== null) {
-        findings.push({ id: rule.id, line: i + 1, text: snippet(line, m.index) });
+        findings.push({ id: rule.id, sev: rule.sev || 'error', desc: rule.desc, line: i + 1, text: snippet(line, m.index) });
         if (m.index === re.lastIndex) re.lastIndex++; // guard zero-width
       }
     });
@@ -102,10 +123,12 @@ function main() {
     if (findings.length === 0) {
       console.log('PASS — ' + file);
     } else {
-      anyFail = true;
-      console.log('FAIL — ' + file);
+      var hasError = findings.some(function (f) { return f.sev === 'error'; });
+      if (hasError) { anyFail = true; console.log('FAIL — ' + file); }
+      else { console.log('PASS (warnings) — ' + file); }
       findings.forEach(function (f) {
-        console.log('  [' + f.id + '] line ' + f.line + ': "' + f.text + '"');
+        var tag = (f.sev === 'warn' ? 'WARN ' : 'ERROR') + ' ' + f.id;
+        console.log('  [' + tag + '] line ' + f.line + ': "' + f.text + '"  — ' + f.desc);
       });
     }
   });
