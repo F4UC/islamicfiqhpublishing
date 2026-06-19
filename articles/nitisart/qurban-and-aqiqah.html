@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การเคลื่อนย้ายเนื้อกุรบานและการรวมเจตนาอุฎฮียะฮ์กับอะกีเกาะฮ์ — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="วิเคราะห์ฟิกฮ์ว่าด้วยการเคลื่อนย้ายเนื้อกุรบานข้ามเมือง การมอบหมายให้ผู้อยู่ต่างถิ่นทำกุรบานและอะกีเกาะฮ์แทน และเงื่อนไขการรวมเจตนาอุฎฮียะฮ์กับอะกีเกาะฮ์ในสัตว์ตัวเดียว">
+<meta name="keywords" content="กุรบาน, อุฎฮียะฮ์, อะกีเกาะฮ์, การเคลื่อนย้ายเนื้อกุรบาน, นิติศาสตร์อิสลาม, ฟิกฮ์, มัสฮับชาฟิอีย์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การเคลื่อนย้ายเนื้อกุรบานและการรวมเจตนาอุฎฮียะฮ์กับอะกีเกาะฮ์ — Islamic Fiqh Publishing">
+<meta property="og:description" content="ประเด็นการเคลื่อนย้ายเนื้อกุรบาน การโอนเงินซื้อสัตว์ และการรวมเจตนาอุฎฮียะฮ์กับอะกีเกาะฮ์ในสัตว์ตัวเดียว ตามทัศนะของนักนิติศาสตร์">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/qurban-and-aqiqah">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/nitisart/qurban-and-aqiqah">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "การเคลื่อนย้ายเนื้อกุรบานและการรวมเจตนาอุฎฮียะฮ์กับอะกีเกาะฮ์",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/nitisart/qurban-and-aqiqah"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="qurban-and-aqiqah">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart" class="article-feature-eyebrow">นิติศาสตร์ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">การเคลื่อนย้ายเนื้อกุรบานและการรวมเจตนาอุฎฮียะฮ์กับอะกีเกาะฮ์</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในยุคที่ผู้ศรัทธาจำนวนมากอาศัยอยู่ห่างไกลจากภูมิลำเนาเดิม คำถามเรื่องการทำกุรบานข้ามเมือง ข้ามประเทศ และข้ามทวีปจึงกลายเป็นประเด็นที่ถูกถามถึงอยู่เสมอ บทความนี้รวบรวมและเรียบเรียงคำชี้ขาดของนักนิติศาสตร์ในสองประเด็นที่เกี่ยวเนื่องกัน นั่นคือ การเคลื่อนย้ายเนื้อกุรบานออกจากเมืองที่เชือด และการรวมเจตนาระหว่างอุฎฮียะฮ์กับอะกีเกาะฮ์ไว้ในการเชือดสัตว์ตัวเดียว</p>
+      <p>ทั้งสองประเด็นนี้แม้จะดูแยกจากกัน แต่แท้จริงแล้วต่างก็เป็นการพิจารณาฟิกฮ์ว่าด้วยการเชือดสัตว์เพื่ออิบาดะฮ์ ทั้งในด้านสถานที่ เวลา และเจตนา ซึ่งล้วนเป็นเรื่องที่ผู้ปฏิบัติในยุคปัจจุบันต้องเข้าใจให้ถ่องแท้</p>
+
+      <h2 class="article-h2">การเคลื่อนย้ายเนื้อกุรบาน</h2>
+
+      <p>เชค อัลค่อฏีบ ได้แจงเรื่องนี้ไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَلَا يَجُوزُ نَقْلُ الْأُضْحِيَّةِ مِنْ بَلَدِهَا كَمَا فِي نَقْلِ الزَّكَاةِ.</blockquote>
+      <p class="ar-translation">“และไม่อนุญาตให้เคลื่อนย้ายเนื้อกุรบานไปจากเมือง (ที่เชือด) กุรบาน ดังเช่นประเด็นเรื่องการเคลื่อนย้ายซะกาต”</p>
+
+      <p>เชค อัชชัรวานีย์ เสริมว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أَيْ مُطْلَقًا سَوَاءٌ الْمَنْدُوبَةُ، وَالْوَاجِبَةُ.</blockquote>
+      <p class="ar-translation">“(ที่ว่าไม่อนุญาตให้เคลื่อนย้ายเนื้อกุรบานนั้น) ครอบคลุมถึงทั้งกุรบานที่เป็นสุนัตและกุรบานที่เป็นวายิบ”</p>
+
+      <p>แต่เชคตะกียุดดีน อัลหิศนีย์ได้กล่าวไว้อีกแบบว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وفي نقل الأضحية وجهان؛ تخريجا من نقل الزكاة، والصحيح هنا الجواز</blockquote>
+      <p class="ar-translation">“และในประเด็นเรื่องการเคลื่อนย้ายเนื้อกุรบานนี้ นักวิชาการได้ขัดแย้งกันออกเป็นสองกลุ่ม  ทัศนะที่ศอเฮี้ยะฮ์ถือว่าอนุญาตให้เคลื่อนย้ายได้”</p>
+
+      <p>แต่ประเด็นที่ขัดแย้งกัน อยู่ในเรื่องที่ว่ากุรบ่านนั้น เป็นกุรบ่านที่ถูกบนบานหรือเป็นกุรบ่านประเภทอื่น</p>
+
+      <p>แต่ประเด็นเรื่องการมอบหมายให้บุคคลอื่นที่อยู่ต่างจังหวัดหรือต่างประเทศ ต่างทวีปทำกุรบ่านแทนตัวเองนั้น ไม่มีการขัดแย้งแต่ประการใด สามารถทำได้ ซึ่งทั้งสองประเด็นจะมีความแตกต่างกันระหว่างการให้คนอื่นที่อยู่ต่างเมืองทำกุรบ่านแทน (ไม่เป็นปัญหา) และการทำกุรบ่านแล้วแจกจ่ายให้ผู้ที่อยู่ต่างเมือง (มีข้อขัดแย้ง)</p>
+
+      <h2 class="article-h2">รายละเอียดประเด็นที่น่าสนใจ</h2>
+
+      <p>ในประเด็นการเคลื่อนย้ายเนื้อกุรบานนี้ ยังมีรายละเอียดปลีกย่อยที่นักนิติศาสตร์ได้ค้นคว้าและจำแนกไว้อย่างละเอียด ทั้งในเรื่องช่วงเวลาของข้อห้าม การโอนเงินเพื่อซื้อสัตว์ ขอบเขตของเนื้อที่ถูกห้าม และการกำหนดเวลาเมื่อมีการมอบหมายให้ผู้อื่นทำแทน</p>
+
+      <h2 class="article-h2">ที่ว่าห้ามเคลื่อนย้ายนั้น ก่อนเชือดหรือหลังเชือด</h2>
+
+      <p>เชค อัรรอมลีย์ค้นคว้าจนได้ข้อสรุปว่า การห้ามเคลื่อนย้ายเนื้อกุรบานนั้น คือหลังจากที่ทำการเชือดเรียบร้อยเสร็จเรียบร้อยแล้ว ดังนั้นหากสมมติว่ากุรบานกลายเป็นวายิบเหนือคนหนึ่งๆ ในขณะที่เขาอยู่ในเมืองหนึ่งๆ จากนั้นเขาทำการเคลื่อนย้ายสัตว์กุรบานนั้นไปยังอีกเมืองหนึ่งโดยที้ยังไม่ได้ทำการเชือดมัน ก็ไม่เป็นที่ต้องห้ามแต่งอย่างใด</p>
+
+      <p>ดังมีระบุใน “หาชียะฮ์ อัลญะมั้ล อะลั้ล มันฮัจญ์” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">(فَرْعٌ) يَمْتَنِعُ نَقْلُ الْأُضْحِيَّةِ فَهَلْ الْمُرَادُ أَنَّهُ يَجِبُ ذَبْحُهَا فِي الْمَكَانِ الَّذِي يَكُونُ بِهِ وَقْتَ الْوُجُوبِ أَوْ لَا يَجِبُ ذَلِكَ بَلْ فِي أَيِّ مَكَان أَرَادَ ذَبْحَهَا فِيهِ امْتَنَعَ نَقْلُهَا عَنْهُ بِخِلَافِ الْفِطْرَةِ حَيْثُ يَجِبُ إخْرَاجُهَا فِي مَكَانِ الْوُجُوبِ وَهُوَ الْمَكَانُ الَّذِي غَرُبَتْ فِيهِ الشَّمْسُ قَالَ م ر بِالثَّانِي بَحْثًا ...</blockquote>
+      <p class="ar-translation">“ประเด็น: ห้ามเคลื่อนย้ายกุรบานตามที่ว่า หมายถึง: 1. จะต้องเชือดในพื้นที่ซึ่งกุรบานนั้นได้กลายเป็นวายิบ 2. หรือสามารถที่จะเชือดที่ไหนก็ได้ตามแต่ต้องการ (และเมื่อเชือดแล้วก็) ห้ามเคลื่อนย้ายเนื้อกุรบานออกไปจากที่นั่น ซึ่งต่างจากซะกาตฟิตเราะฮ์ที่วายิบจะต้องจ่ายในพื้นที่ซึ่งซะกาตได้กลายเป็นวายิบ ซึ่งก็คือพื้นที่ซึ่ง (เขาผู้จ่ายอาศัยอยู่ที่นั่นในขณะที่) ดวงอาทิตย์ลับขอบฟ้า เชคอัรรอมลีย์ได้มีทัศนะตรงกับความเห็นที่ 2 (คือเชือดที่ไหนก็ได้) ...”</p>
+
+      <h2 class="article-h2">การสร้างรายได้จากเนื้อ</h2>
+
+      <p>เมื่อประเด็นการเคลื่อนย้ายสัตว์กุรบานก่อนที่จะทำการเชือดเป็นสิ่งที่อนุญาตกระทำได้ ดังนั้นการเคลื่อนย้าย (โอน) เงินเพื่อซื้อสัตว์กุรบานจึงสมควรที่จะเป็นสิ่งอนุญาตใฟห้กระทำได้ยิ่งกว่า มีระบุในอีอานะฮ์ ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما نقل دراهم من بلد إلى بلد أخرى ليشتري بها أضحية فيها فهو جائز.</blockquote>
+      <p class="ar-translation">“และสำหรับการย้าย (โอน) เงินจากเมืองหนึ่งไปยังอีกเมืองหนึ่ง เพื่อนำไปซื้อสัตว์กุรบานในเมืองนั้นๆ ถือเป็นเรืองที่อนุญาต”</p>
+
+      <p>ประเด็นเรื่องกุรบ่านแถบแหลมมลายูนี้โด่งดังจนกระทั่งถูกกล่าวอยู่ในอีอานะฮ์ ไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">في فتاوي العلامة الشيخ محمد بن سليمان الكردي محشي شرح إبن حجر على المختصر ما نصه: (سئل) رحمه الله تعالى: جرت عادة أهل بلد جاوى على توكيل من يشتري لهم النعم في مكة للعقيقة أو الأضحية ويذبحه في مكة، والحال أن من يعق أو يضحي عنه في بلد جاوى فهل يصح ذلك أو لا؟ أفتونا</blockquote>
+      <p class="ar-translation">“มีฟัตวาของท่าน เชค มุหัมหมัด อัลกุรดีย์ (ผู้อธิบายเสริมตำราของท่านอิบนุ หะญัร) ได้ถูกถามถึงประเด็นเรื่องตามธรรมเนียมของคนแถบเอเชียอาคเนย์ (ญาวี) มักจะทำการมอบหมายคนที่อยู่มักกะฮ์ให้ทำการซื้อสัตว์เพื่อทำกุรบาน หรือทำอากีเกาะฮ์ให้ และให้เชือดที่มักกะฮ์ไปเลย ทั้งที่ผู้ประสงค์จะทำกุรบานหรืออากีเกาะฮ์อยู่เมืองญาวี การกระทำแบบนี้ถือว่าทำได้หรือไม่?”</p>
+
+      <p>ท่านได้ตอบไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">نعم ، يصح ذلك ، ويجوز التوكيل في شراء الأضحية والعقيقة وفي ذبحها، ولو ببلد غير بلد المضحي والعاق كما أطلقوه.</blockquote>
+      <p class="ar-translation">“ได้! การกระทำดังกล่าวนั้นถือว่าเสาะใช้ได้ และเป็นที่อนุญาตในการที่จะมอบหมายให้ใครซื้อสัตว์กุรบานและอากีเกาะฮ์ และมอบหมายให้เชือดด้วย แม้ว่า (ผู้รับมอบหมาย) จะอยู่ต่างเมืองกันกับผู้มอบหมายให้ทำกุรบาน หรืออากีเกาะฮ์ก็ตาม ตามที่นักฟิกฮ์ได้เปรยเอาไว้เช่นนั้น”</p>
+
+      <h2 class="article-h2">เนื้อส่วนใดกันที่ห้ามเคลื่อนย้าย</h2>
+
+      <p>มีระบุใน “อีอานะฮ์ อัฏฏอลิบีน” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الممنوع نقله هو ما عين للأضحية بنذر أو جعل، أو القدر الذي يجب التصدق به من اللحم في الأضحية المندوبة.</blockquote>
+      <p class="ar-translation">“(กุรบาน) ส่วนที่ห้ามเคลื่อนย้าย คือส่วนที่ถูกเฉพาะเจาะจงไว้เพื่อทำกุรบาน (จนกลายเป็นวายิบไม่ว่าจะ) ด้วยกับการบนบาน หรือด้วยกับการกล่าวว่า “ฉันทำสัตว์ตัวนี้เป็นกุรบาน” หรือด้วยกับเพราะเป็นส่วนแบ่งกองที่จำเป็นต้องแจกจ่ายเป็นเนื้อ (แก่ผู้ขัดสน) ในกรณีของกุรบานที่เป็นสุนัต (ทั่วไปที่ไม่ใช่กุรบานวายิบ)”</p>
+
+      <p>อัชชัรวานีย์ ได้อธิบายเสริมต่อว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَالْمُرَادُ مِنْ الْحُرْمَةِ فِي الْمَنْدُوبَةِ حُرْمَةُ نَقْلِ مَا يَجِبُ التَّصَدُّقُ بِهِ عَلَى الْفُقَرَاءِ.</blockquote>
+      <p class="ar-translation">“จุดประสงค์ของ (กุรบาน) ที่ว่าห้าม (เคลื่อนย้าย) ในกรณีของกุรบานสุนัต (ทั่วไป) คือห้ามเคลื่อนย้ายสำหรับส่วน (ของกองเนื้อที่ถูกแบ่งสันปันส่วนออก) ซึ่งจำเป็นต้องแจกจ่ายมันให้กับคนยากคนจนคนขัดสน (ในพื้นที่นั้นๆ)”</p>
+
+      <p>กล่าวคือ สำหรับกองเนื้อส่วนอื่นจากนั้นที่เหลือไม่ได้เข้าข่ายเนื้อกุรบานที่ถูกห้ามแต่อย่างใด</p>
+
+      <h2 class="article-h2">เวลาทำกุรบ่านเมื่อมอบหมายให้ผู้อื่นทำแทน</h2>
+
+      <p>หากมีการมอบหมายให้บุคคลอื่นทำกุรบ่าน จะต้องทำกุรบ่านให้ตรงกับเวลาของผู้ที่มอบหมาย (เจ้าของเงิน) หรือทำให้ตรงกับเวลาของผู้ที่ได้รับมอบหมาย? ประเด็นนี้ท่านบุรฮานนุดีน บิน มาซะฮ์ อัลหะนาฟีย์ ได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الرجل إذا كان في مصر وأهله في مصرٍ آخر، فكتب إليهم أن يضحوا عنه، فإنه يعتبر مكان الذبيحة،</blockquote>
+      <p class="ar-translation">“บุคคลหนึ่งหากอยู่ในกรุงเทพฯ แต่ครอบครัวของเขาอยู่กัวลาลัมเปอร์ และเขาก็ได้โทรหาคนในครอบครัวของเขาที่อยู่กัวลาลัมเปอร์ ทำกุรบ่านให้เขา ดังนั้น ช่วงเวลาในการทำกุรบ่านจะคิดที่ผู้ที่ได้รับมอบหมาย (คนที่อยู่กัวลาลัมเปอร์เชือดกุรบ่านได้เลย ไม่ต้องรอ)”</p>
+
+      <p>และอัลลอฮ์ ตะอาลา ทรงรอบรู้ยิ่งและทรงรอบรู้ที่สุดในสิ่งที่ถูกต้อง</p>
+
+      <h2 class="article-h2">อะกีเกาะฮ์และกุรบ่าน</h2>
+
+      <p>ในระบบนิติศาสตร์อิสลาม (<span class="ar-inline" lang="ar" dir="rtl">الفقه الإسلامي</span>) การจำแนกประเภทของการเชือดสัตว์ ตามเจตนาและวัตถุประสงค์ที่ต่างกันนั้น เป็นเรื่องที่ได้รับการพิจารณาอย่างละเอียดจากนักนิติศาสตร์ตามแต่ละมัสฮับ โดยเฉพาะอย่างยิ่งเมื่อมีกรณีที่ผู้ศรัทธาต้องการรวมระหว่าง ‘อุฏฮียะฮ์’ ซึ่งเป็นสุนัตมุอักกัดที่เกี่ยวเนื่องกับเทศกาลอีดอัฎฮา และ ‘อะกีเกาะฮ์’ (ซึ่งเป็นสุนัตมุอักกัดเหมือนกัน) ที่มีความสัมพันธ์กับการขอบคุณต่ออัลลอฮ์จากการได้รับบุตร โดยต้องเชือดสัตว์ภายในระยะเวลาที่กำหนดนั้น</p>
+
+      <p>คำถามจึงเกิดขึ้นว่า สามารถรวมเจตนาทั้งสองไว้ในการเชือดสัตว์ตัวเดียวได้หรือไม่ และภายใต้เงื่อนไขใดบ้างที่การกระทำนั้นจะถือว่าใช้ได้ในทางศาสนา?</p>
+
+      <h2 class="article-h2">เงื่อนไขการรวมอิบาดัต</h2>
+
+      <p>นักนิติศาสตร์ได้กล่าวถึงภาพกรณีต่างๆ ที่ผู้มีภาระทางศาสนามีเจตนาจะรวมระหว่างอิบาดะฮ์ที่เป็นวาญิบกับอิบาดะฮ์ที่เป็นมุสตะหับหรือส่งเสริม โดยมีกรณีที่สามารถได้รับผลตอบแทนของทั้งสองพร้อมกัน และกรณีที่ไม่สามารถได้รับผลของทั้งสอง หรือได้รับเพียงหนึ่งในสอง ทั้งนี้ขึ้นอยู่กับประเภทของอิบาดะฮ์และเจตนาในการกระทำ</p>
+
+      <p>อัลก็อฟฟาลได้กล่าวว่า หากผู้หนึ่งมีเจตนาอาบน้ำสำหรับวันอีดและวันศุกร์ (ซึ่งเป็นสุนัตทั้งคู่) พร้อมกัน ก็ถือว่าได้ปฏิบัติทั้งสองอิบาดะฮ์ร่วมกัน</p>
+
+      <p>และอิหม่ามอัซซุยูฏีย์ อัชชาฟิอีย์ ได้กล่าวว่า หากผู้ใดถือศีลอดในวันอะรอฟะฮ์ ซึ่งตรงกับวันจันทร์ ก็ถือว่าเขาได้รับผลบุญจากทั้งสองวัน นั่นคือการถือศีลอดซุนนะฮ์พร้อมกัน ทั้งวันอะรอฟะฮ์และวันจันทร์</p>
+
+      <p>กรณีเหล่านี้แสดงให้เห็นว่า ในบางสภาพเงื่อนไข ผู้ปฏิบัติสามารถรวมเจตนาเพื่อบรรลุอิบาดะฮ์หลายประเภทในคราวเดียวกันได้ โดยไม่มีการขัดกันของวัตถุประสงค์แห่งชะรีอะฮ์ ทั้งนี้ขึ้นกับความสัมพันธ์ระหว่างลักษณะของอิบาดะฮ์นั้นๆ และความเหมาะสมทางหลักการฟิกฮ์</p>
+
+      <p>ท่านอิหม่ามอัซซุยูฏีย์ได้กล่าวระบุเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">القاعدة التاسعة: إذا اجتمع أمران من جنس واحد، ولم يختلف مقصودهما، دخل أحدهما في الآخر غالبًا... لو دخل المسجد وصلى الفرض دخلت فيه التحية، ولو دخل الحرم محرما، بحج فرض أو عمرة، دخل فيه الإحرام لدخول مكة، ولو طاف القادم عن فرض أو نذر، دخل فيه طواف القدوم، بخلاف ما لو طاف للإفاضة، لا يدخل فيه طواف الوداع؛ لأن كلًّا منهما مقصود في نفسه، ومقصودهما مختلف</blockquote>
+      <p class="ar-translation">“กฎเกณฑ์ที่เก้า: เมื่อมีการรวมกันของการงานสองประการซึ่งอยู่ในประเภทเดียวกัน (เช่นละหมาด, การถือศีลอด) และไม่มีความแตกต่างในวัตถุประสงค์ของทั้งสองโดยสาระสำคัญแล้ว การงานหนึ่งสามารถถูกรวมไว้ในอีกการหนึ่งได้ในกรณีส่วนใหญ่ เช่น [1] หากผู้ใดเข้าสู่มัสยิดแล้วทำการละหมาดฟัรฎู ก็ถือว่าการละหมาดตะฮิยะตุฃมัสยิดได้ถูกรวมไว้ในการละหมาดฟัรฎูนั้นด้วยแล้ว [2] หากผู้หนึ่งเข้าสู่เขตหะรอมในขณะมีอิห์รอม (คืออยู่ในสถานภาพหัจญ์หรืออุมเราะฮ์) โดยมีเจตนาทำหัจญ์ฟัรฎูหรืออุมเราะฮ์ ก็ถือว่าอิห์รอมสำหรับการเข้าสู่มักกะฮ์ได้ถูกรวมไว้ด้วย [3] หากผู้เดินทางไปถึงและได้ฏอวาฟในลักษณะที่เป็นฟัรฎูหรือเป็นการบนบาน ก็ถือว่าได้รวมฏอฟวาฟกุดูมไว้ด้วยแล้ว แต่ในกรณีต่อไปนี้จะไม่ถือว่ารวมกันได้เช่น หากฏอวาฟอิฟาฎอฮ์ จะไม่สามารถรวมกับฏอวาฟวะดาอ์ได้ เนื่องจากแต่ละฏอวาฟมีวัตถุประสงค์เฉพาะที่ต่างกัน และมีเป้าหมายที่ไม่เหมือนกัน”</p>
+
+      <h2 class="article-h2">การรวมเจตนาในการเชือดอุฎฮียะฮ์และอะกีเกาะฮ์ไว้ในการเชือดตัวเดียวกัน</h2>
+
+      <p>อุฎฮียะฮ์ และอะกีเกาะฮ์ ต่างก็เป็นซุนนะฮ์ ซึ่งสามารถรวมเจตนาให้ทั้งสองประการนี้เกิดผลด้วย การเชือดเพียงตัวเดียวกันได้ หากเวลาของอะกีเกาะฮ์ตรงกับเวลาของอุฎฮียะฮ์</p>
+
+      <p>การรวมเจตนาเช่นนี้ถือว่า ชอบด้วยหลักศาสนา เช่นเดียวกับ การอาบน้ำในวันอีด โดยตั้งเจตนาให้ครอบคลุมทั้งการอาบน้ำวันอีด และการอาบน้ำวันศุกร์ในคราวเดียว ซึ่งถือว่าใช้ได้ หรือเช่นการถือศีลอดวันอะรอฟะฮ์ที่ตรงกับวันจันทร์ ซึ่งหากตั้งใจถือศีลอดโดยมีเจตนาเพื่อทั้งวันอะรอฟะฮ์ และวันจันทร์ก็ถือว่าได้ผลทั้งสอง</p>
+
+      <p>ในทำนองเดียวกันนี้ การรวมเจตนาในการเชือดสัตว์หนึ่งตัวเพื่อเป็นทั้งอุฎฮียะฮ์และอะกีเกาะฮ์ก็ถือว่าใช้ได้เช่นกัน หากเวลาของทั้งสองการเชือดนั้นตรงกัน และนี่คือหนึ่งในสองทัศนะที่รายงานจากท่านอิมามอะห์มัด</p>
+
+      <p>โดยอัลอัลลามะฮ์ อัลบุฮูตีย์ อัลหัมบะลีได้กล่าวถึงความเห็นนี้ไว้อย่างชัดเจนในงาน “ชัรห์ มุนตะฮัล อิรอดาต” ของท่านว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وإن اتفق وقت عقيقة وأضحية، بأن يكون السابع أو نحوه من أيام النحر، فعق، أجزأ عن أضحية، أو ضحى أجزأ عن الأخرى؛ كما لو اتفق يوم عيد وجمعة فاغتسل لأحدهما، وكذا ذبح متمتع أو قارن شاةً يوم النحر، فتجزئ عن الهدي الواجب وعن الأضحية</blockquote>
+      <p class="ar-translation">“และหากเวลาของอะกีเกาะฮ์ตรงกับเวลาของอุฎฮียะฮ์ เช่น กำหนดเจ็ดวัน (ของทารก) หรือลำดับใกล้เคียงนั้น ตรงกับวันในช่วงวันอีดอัฎฮาหรือวันตัชรีก แล้วมีการเชือดสัตว์ในวันนั้น หากเขาเชือดโดยมีเจตนาเพื่ออะกีเกาะฮ์ ก็เพียงพอที่จะใช้เป็นอุฎฮียะฮ์ด้วย และหากเชือดโดยเจตนาเพื่ออุฎฮียะฮ์ ก็ถือว่าใช้เป็นอะกีเกาะฮ์ได้เช่นกัน เช่นเดียวกับกรณีที่วันอีดตรงกับวันศุกร์ แล้วผู้ใดอาบน้ำโดยตั้งเจตนาเพื่ออย่างใดอย่างหนึ่ง การอาบน้ำนั้นย่อมใช้ได้สำหรับทั้งสองวัตถุประสงค์ และเช่นเดียวกัน หากผู้แสวงบุญแบบตะมัตตั้วะอ์หรือกอริน เชือดแกะในวันอีด การเชือดนั้นย่อมถือว่าใช้ได้สำหรับทั้งหัจญ์ที่เป็นข้อบังคับ และอุฎฮียะฮ์ที่เป็นซุนนะฮ์พร้อมกัน”</p>
+
+      <p>และในตำรา “กัชชาฟ อัลกินาอ์” ก็ได้ระบุไว้เช่นกันว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولو اجتمع عقيقة وأضحية ونوى الذبيحة عنهما؛ أي: عن العقيقة والأضحية، أجزأت عنهما نصًّا، وقال في "المنتهى": "وإن اتفق وقت عقيقة وأضحية، فعق أو ضحى أجزأ عن الأخرى" اهـ. ومقتضاه: إجزاء إحداهما عن الأخرى وإن لم ينوها، لكن تعبير المصنف موافق لما عبر به في "تحفة الودود": آخرًا، قال الشيخ شمس الدين محمد (ابن القيم في كتابه "تحفة الودود في أحكام المولود": كما لو صلى ركعتين ينوي بهما تحية المسجد وسنة المكتوبة، أو صلى بعد الطواف فرضًا أو سنة مكتوبة وقع)؛ أي: ما صلَّاه عنه؛ أي: عن فرضه</blockquote>
+      <p class="ar-translation">“และหากอะกีเกาะฮ์และอุฎฮียะฮ์เกิดขึ้นพร้อมกัน แล้วผู้ทำการเชือดสัตว์ตั้งเจตนาให้สัตว์ที่เชือดนั้นครอบคลุมทั้งสองประการ กล่าวคือทั้งอะกีเกาะฮ์และอุฎฮียะฮ์ ก็เพียงพอใช้ได้ทั้งสองตามหลักฐานที่มีระบุชัดเจน ส่วนในหนังสือ อัลมุนตะฮา ระบุว่า: “หากเวลาอะกีเกาะฮ์ตรงกับเวลาอุฎฮียะฮ์ แล้วเขาทำอะกีเกาะฮ์ หรือเชือดอุฎฮียะฮ์ ก็ใช้ได้แทนอีกอิบาดัตหนึ่ง” ซึ่งตามความหมายนี้บ่งชี้ว่า แม้ไม่ได้ตั้งเจตนาโดยตรง ก็ถือว่าใช้ได้แทนกันได้ แต่อย่างไรก็ดี รูปแบบที่นักวิชาการ (เช่นผู้แต่งในที่นี้) ใช้ในสำนวนนี้ สอดคล้องกับที่ใช้ในตอนท้ายของหนังสือ ตุห์ฟะตุลวะดูด (ของอิบนุลก็อยยิม) ซึ่งระบุว่า: “เช่นเดียวกับคนที่ละหมาดสองร็อกอะฮ์ โดยตั้งเจตนาเพื่อเป็นตะฮียะตุลมัสยิดและสุนนะฮ์ก่อนละหมาดฟัรฎูในเวลาเดียวกัน หรือเช่นเดียวกับผู้ที่ละหมาดฟัรฎูหรือสุนนะฮ์หลังการฏอวาฟ การละหมาดนั้นถือว่าใช้แทนสิ่งที่เขาตั้งใจละหมาดไว้ได้” กล่าวคือ ละหมาดนั้นย่อมถือว่าใช้ได้แทนวัตถุประสงค์ของฟัรฎูตามที่ตั้งเจตนาไว้”</p>
+
+      <p>มีรายงานจากบรรดานักนิติศาสตร์ในมัสฮับชาฟิอีย์บางท่านว่า พวกเขายอมรับการรวมเจตนา (ระหว่างอะกีเกาะฮ์กับอุฎฮียะฮ์) โดยไม่จำกัดเงื่อนไข และถือว่าสิ่งนี้มีน้ำหนักและน่าเชื่อถือโดยท่านอัลอัลลามะฮ์ อัรรอมลีย์ อัศศอฆีร ท่านได้กล่าวไว้ในหนังสือ “นิฮายะตุลมุห์ตาจญ์ อิลา ชัรห์ อัลมินฮาจญ์” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولو نوى بالشاة المذبوحة الأضحية والعقيقة حصلا خلافًا لمن زعم خلافه</blockquote>
+      <p class="ar-translation">“และหากตั้งเจตนาในสัตว์ที่เชือดว่ามุ่งหมายทั้งอุฏฮิยะฮ์ และอากีเกาะฮ์ ทั้งสองภารกิจนั้นก็ถือว่าได้ผลพร้อมกัน ขัดกับผู้ที่กล่าวว่าทั้งสองไม่สามารถรวมกันได้”</p>
+
+      <p>ชัยคุลอิสลาม ซะการียา อัลอันศอรีย์ท่านได้ระบุไว้เช่นกันว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">والعقيقة كالأضحية في الحقيقة في سنيتها، وجنسها وسنها وسلامتها، والأفضل منها، والأكل والتصدق والإهداء</blockquote>
+      <p class="ar-translation">“อะกีเกาะฮ์นั้นมีฐานะเสมอเหมือนกับอุฏฮิยะฮ์โดยแท้จริง ทั้งในด้านการเป็นซุนนะฮ์, ชนิดของสัตว์ที่ใช้, อายุของสัตว์, เงื่อนไขความสมบูรณ์ของสัตว์, ความประเสริฐในชนิดของสัตว์ที่ใช้, ตลอดจนข้อปฏิบัติในด้านการบริโภค การบริจาค และการมอบเนื้อสัตว์เป็นของขวัญ”</p>
+
+      <p>ดังนั้น เราสามารถรวมเจตนาในการเชือดอุฏฮิยะฮ์และอะกีเกาะฮ์ (คือ การเชือดเพื่อเป็นกุรบานและเชือดเพื่อฉลองการเกิดบุตร) ในวัว แพะ แกะ ตัวเดียวกันได้ ตราบใดที่สัดส่วนของเนื้อสัตว์ที่ตกเป็นของแต่ละภารกิจ ไม่ต่ำกว่าหนึ่งในเจ็ดส่วนของสัตว์นั้น</p>
+
+      <p>กล่าวอีกนัยหนึ่ง หากบุคคลหนึ่งต้องการทำทั้งอุฏฮิยะฮ์ และอะกีเกาะฮ์ แต่มีทรัพย์จำกัดก็สามารถใช้ 1/7 ส่วนของวัวหรือสัตว์นั้น เพื่อให้ครอบคลุมทั้งสองภารกิจได้ โดยมีเจตนาเดียวครอบคลุมทั้งสอง</p>
+
+      <p>เงื่อนไขนี้ได้รับการสนับสนุนจากคณะนักนิติศาสตร์ในหลายมัสฮับ เพื่อเป็นการผ่อนปรนสำหรับผู้ที่ไม่อาจแบกรับค่าใช้จ่ายของทั้งสองอิบาดะฮ์ในช่วงเวลาเดียวกันได้</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>จากประเด็นที่กล่าวมา ในกรณีที่มีคำถามว่า สามารถรวมอุฏฮิยะฮ์ และอะกีเกาะฮ์ ไว้ในสัตว์ตัวเดียวกันได้หรือไม่ คำตอบคือ: สามารถทำรวมทั้งสองภารกิจไว้ในวัวตัวเดียวกันได้ โดยมีเงื่อนไขว่า สัดส่วนของเนื้อที่ตกเป็นของแต่ละภารกิจต้องไม่ต่ำกว่าหนึ่งในเจ็ดของสัตว์นั้น</p>
+
+      <p>ไม่มีข้อห้ามตามหลักศาสนาสำหรับผู้ที่ไม่สามารถจัดหาเงินได้เพียงพอสำหรับทั้งสองภารกิจที่จะตั้งเจตนาเดียวในการเชือดสัตว์เพื่อให้ครอบคลุมทั้งของอะกีเกาะฮ์และอุฏฮิยะฮ์ หากเวลาของอะกีเกาะฮ์ตรงกับช่วงเวลาของอุฏฮิยะฮ์</p>
+
+      <p>ทั้งนี้ อาศัยความเห็นของบรรดานักวิชาการที่อนุญาต และจากคำกล่าวของนักนิติศาสตร์ชาฟิอียะฮ์บางท่าน ที่ยอมรับการรวมเจตนาระหว่างอุฏฮิยะฮ์และอะกีเกาะฮ์ และถือว่าเป็นแนวทางที่มีน้ำหนักและสมเหตุสมผล เพื่อเป็นการผ่อนปรนแก่ผู้ขัดสนที่ไม่ต้องการละเลยภารกิจที่บทบัญญัติศาสนาได้กำหนดไว้</p>
+
+      <h2 class="article-h2">สรุป</h2>
+      <ol class="article-summary">
+        <li><strong>การเคลื่อนย้ายเนื้อกุรบาน:</strong> นักวิชาการมีทัศนะต่างกันเรื่องการเคลื่อนย้ายเนื้อกุรบานออกจากเมืองที่เชือด บ้างถือว่าไม่อนุญาตทั้งกุรบานสุนัตและวายิบ ดังเช่นซะกาต แต่ทัศนะที่ศอเฮี้ยะฮ์ตามอัลหิศนีย์ถือว่าอนุญาตได้</li>
+        <li><strong>ก่อนเชือดไม่ต้องห้าม:</strong> เชคอัรรอมลีย์สรุปว่าข้อห้ามเคลื่อนย้ายอยู่ที่หลังเชือดเท่านั้น การเคลื่อนย้ายสัตว์ก่อนเชือด รวมทั้งการโอนเงินไปซื้อสัตว์ในอีกเมือง ถือเป็นที่อนุญาต</li>
+        <li><strong>การมอบหมายข้ามเมือง:</strong> การมอบหมายให้ผู้อยู่ต่างเมืองหรือต่างประเทศซื้อและเชือดกุรบานหรืออะกีเกาะฮ์แทนนั้น ทำได้โดยไม่มีข้อขัดแย้ง โดยช่วงเวลาให้ยึดตามสถานที่ของผู้ได้รับมอบหมาย</li>
+        <li><strong>เนื้อส่วนที่ห้าม:</strong> ส่วนที่ห้ามเคลื่อนย้ายคือส่วนที่ถูกเจาะจงด้วยการบนบานหรือการกล่าวกำหนด และส่วนที่ต้องแจกจ่ายแก่ผู้ขัดสนในกุรบานสุนัต ส่วนเนื้อที่เหลือไม่เข้าข่ายข้อห้าม</li>
+        <li><strong>การรวมเจตนาอุฎฮียะฮ์กับอะกีเกาะฮ์:</strong> สามารถรวมเจตนาทั้งสองไว้ในสัตว์ตัวเดียวได้ หากเวลาตรงกัน โดยสัดส่วนของแต่ละภารกิจต้องไม่ต่ำกว่าหนึ่งในเจ็ดของสัตว์ เป็นการผ่อนปรนแก่ผู้ขัดสน</li>
+      </ol>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การเคลื่อนย้ายเนื้อกุรบานและการรวมเจตนาอุฎฮียะฮ์กับอะกีเกาะฮ์. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/qurban-and-aqiqah.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li>إعانة الطالبين على حل ألفاظ فتح المعين، للعلامة السيد البكري الدمياطي، دار الفكر، ط: الأولى 1997م.</li>
+        <li>تحفة المحتاج في شرح المنهاج مع حواشيه، للهيتمي والشرواني والعبادي، المكتبة التجارية الكبرى بمصر 1983م.</li>
+        <li>فتوحات الوهاب بتوضيح شرح منهج الطلاب، للعلامة سليمان بن عمر الجمل، دار الفكر، بدون طبعة وتاريخ.</li>
+        <li>نهاية المحتاج إلى شرح المنهاج، لشمس الدين الرملي، دار الفكر، بيروت.</li>
+        <li>شرح منتهى الإرادات، لمنصور بن يونس البهوتي، عالم الكتب.</li>
+        <li>كشاف القناع عن متن الإقناع، لمنصور بن يونس البهوتي، دار الكتب العلمية.</li>
+        <li>تحفة الودود في أحكام المولود، لابن قيم الجوزية.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260619a" charset="UTF-8"></script>
+</body>
+</html>
