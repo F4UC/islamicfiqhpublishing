@@ -44,7 +44,7 @@ const maxDate = (list) => {
 // when available so it never drifts from articles.json.
 const CATEGORY_ORDER = ["nitisart", "kalam", "history", "hadith", "hajj", "reflections"];
 // Fallback labels for registry categories that may have no articles yet (Rule 70).
-const FALLBACK_LABELS = { reflections: "มุมพักใจ" };
+const FALLBACK_LABELS = { reflections: "มุมพักใจ", works: "ผลงาน" };
 const labelFor = (key) => {
   const hit = articles.find((a) => a.categoryKey === key && a.categoryLabel);
   return hit ? hit.categoryLabel : (FALLBACK_LABELS[key] || key);
@@ -60,6 +60,7 @@ const staticRoutes = [
     changefreq: "weekly",
     priority: "0.8",
   })),
+  { loc: "/pages/works", lastmod: today, changefreq: "weekly", priority: "0.6" },
   { loc: "/pages/articles", lastmod: maxDate(articles), changefreq: "weekly", priority: "0.6" },
   { loc: "/pages/tools", lastmod: today, changefreq: "monthly", priority: "0.5" },
   { loc: "/pages/tools/hijri-time-machine", lastmod: today, changefreq: "monthly", priority: "0.5" },
@@ -106,6 +107,10 @@ for (const key of CATEGORY_ORDER) {
   }
   dir += `      </ul>\n    </li>\n`;
 }
+
+// Works showcase is a standalone page (not in articles.json) — emit a single
+// crawlable link so /pages/works is discoverable from the noscript directory.
+dir += `    <li><a href="/pages/works">${esc(FALLBACK_LABELS.works)}</a></li>\n`;
 
 // Guard: the noscript directory only iterates CATEGORY_ORDER, so any article
 // whose categoryKey is NOT registered would be silently dropped. Warn loudly
