@@ -175,6 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     {text: 'นิติศาสตร์',      href: '/pages/nitisart.html'},
                     {text: 'หัจญ์ & อุมเราะฮ์', href: '/pages/hajj.html'},
                     {text: 'มุมพักใจ',         href: '/pages/reflections.html'},
+                    {text: 'ผลงาน',           href: '/pages/works'},
                     {text: 'เครื่องมือ',      href: '/pages/tools.html'}
                 ];
 
