@@ -1,12 +1,12 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all **83 rules (ข้อ 1–83), plus sub-rules 12.1/12.2 and House-Style S1–S8 (+ placeholders S9/S10 → Rules 76/77, linter pending)**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all **85 rules (ข้อ 1–85), plus sub-rules 12.1/12.2 and House-Style S1–S8 (+ placeholders S9/S10 → Rules 76/77, linter pending)**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 >
 > **★ Rule 71 (Child-Safety Override) supersedes every fidelity/coverage rule, for every agent. Read it first. ★**
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (83 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (85 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -200,7 +200,7 @@
 
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 83 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 85 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -485,7 +485,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 ---
 
-## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–83)
+## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–85)
 
 * **กฎข้อที่ 71:** **★[ความปลอดภัยเด็ก — Child-Safety Override · เหนือกฎความครบถ้วนทุกข้อ · บังคับกับทุกเอเยนต์]★** หากต้นฉบับจาก Drive หรือเนื้อหาใดๆ มีสาระที่ทำให้**ผู้เยาว์เป็นวัตถุทางเพศ (sexualizes a minor)** มาตรการนี้อยู่เหนือกฎ 1/49/56 และเกตทุกชนิด ให้ปฏิบัติโดยเด็ดขาด:
   1. **PASS-with-flag (ตัดทิ้ง ไม่ใช่ปัดตก):** ถือว่าบทความ "ผ่าน" ได้โดย**ตัด (drop) เฉพาะส่วนที่ละเมิดออกทั้งหมด** แล้วตั้ง **child-safety flag** กำกับ — ส่วนที่ตัดนี้**ไม่นับในตัวหารของ coverage (กฎ 72)** การตัดตามกฎนี้ไม่ถือว่า coverage ตก
@@ -552,9 +552,20 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **★DETECTION เท่านั้น — ห้ามแก้ไฟล์ตรงๆ★** เพราะ: (ก) `ijazah-data/` pin **byte-exact** จาก upstream (`F4UC/-Transmission-Network` + `MANIFEST.sha256`) → แก้ที่ **upstream แล้ว re-sync** เท่านั้น; (ข) อายะฮ์/หะดีษในบทความ byte-exact จาก quran.com/sunnah.com → ผิด = **re-fetch** ไม่ใช่พิมพ์ซ่อม (กฎ 7/8/53/60)
   - **ขอบเขต:** อักษรอาหรับจริง (เสริมกฎ 82 ที่คุมทับศัพท์ไทย) · ไม่แน่ใจว่า qaṭʿ/waṣl หรือ นิสบะฮ์/มักศูเราะฮ์ → **FLAG ห้ามเดา** (กฎ 3)
 
+* **กฎข้อที่ 84:** **[ควบคุมการเข้าถึง Preview — ดราฟต์ sensitive ห้ามหลุด · Preview-deployment Access Control]** Cloudflare Pages preview (`*.pages.dev`) เป็น **public** — ใครมีลิงก์ hash/branch-alias ก็เปิดได้โดยไม่ต้อง auth ดังนั้น **ดราฟต์ที่ยังไม่เผยแพร่ โดยเฉพาะบทที่ติด child-safety flag (กฎ 71)** ต้องไม่ถูกเปิดผ่าน preview ได้ (สอดคล้องหลักกฎ 71 "ห้าม surface"):
+  - ใส่ **Cloudflare Access** (email/SSO/PIN) ครอบ preview หรือปิด public branch-alias · per-deployment hash URL ใช้ **QA ภายในเท่านั้น** ห้ามแชร์สาธารณะ · บทที่ติดกฎ 71 ห้าม push ขึ้น branch ที่จะสร้าง preview จนกว่า One ตัดสิน · รายละเอียด `docs/SECURITY.md §5`
+  *(EN: pages.dev previews are public — unpublished drafts, especially Rule-71-flagged content, must not be reachable via preview. Put Cloudflare Access on previews or disable public branch aliases; per-deployment URLs are internal-QA only.)*
+
+* **กฎข้อที่ 85:** **[ความมั่นคงห่วงโซ่อุปทาน & รันไทม์ · Supply-chain & Runtime Security Baseline]** (รายละเอียด `docs/SECURITY.md §6`):
+  - **Token/secret:** ใช้ **fine-grained PAT** (เฉพาะ repo + สิทธิ์ขั้นต่ำ contents/pull_requests) + ตั้งวันหมดอายุ + หมุนเปลี่ยน · ห้าม classic broad-scope · **ห้าม commit secret** (เปิด secret scanning + push protection) — สอดคล้อง *Push & safety discipline*
+  - **DOM (กัน stored-XSS):** ข้อมูลจาก JSON/แหล่งภายนอก/ผู้ใช้ ต้อง render ด้วย `textContent`/DOM API เสมอ **ห้าม `innerHTML` กับข้อมูลที่ไม่ trusted**
+  - **Vendored libs:** pin ชื่อไฟล์ + **SRI (`integrity` sha384)** + `MANIFEST.sha256` · `script-src 'self'` เท่านั้น ห้าม CDN ภายนอก (SRI ต้องการ Cloudflare ปิด Auto-Minify/Rocket Loader)
+  - **CI gate:** ทุก PR ต้องผ่าน `.github/workflows/ci.yml` (JSON valid, Arabic-ortho, gitleaks) ก่อน owner-merge
+  *(EN: scoped+expiring fine-grained PATs, never commit secrets; render external/JSON data via textContent — never innerHTML; vendored libs pinned + SRI + self-hosted; every PR must pass CI before owner-merge.)*
+
 ---
 
-## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–83)
+## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–85)
 
 * **Rule 71:** **★[Child-Safety Override · supersedes every fidelity/coverage rule · binds every agent]★** If any Drive source or other content sexualizes a minor, this measure overrides Rules 1/49/56 and every gate. Act decisively:
   1. **PASS-with-flag (drop, do not reject):** the article may be considered "passing" by **dropping only the offending span entirely** and setting a **child-safety flag** — the dropped span is **excluded from the Rule 72 coverage denominator**; a drop under this rule does not lower coverage.
@@ -619,3 +630,11 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **Detect with** `scripts/lint-arabic-ortho.py` — curated whole-word map + an allow-list of correct ـى words (إلى/مصطفى/يحيى…) → near-zero false positives; the list grows as new wrong forms are found (like the Rule-73 corpus table).
   - **★DETECTION ONLY — never edit files in place★** because: (a) `ijazah-data/` is byte-exact pinned from upstream (`F4UC/-Transmission-Network` + `MANIFEST.sha256`) → fix UPSTREAM then re-sync; (b) article Quran/Hadith is byte-exact from quran.com/sunnah.com → an error means **RE-FETCH**, never retype (Rules 7/8/53/60).
   - **Scope:** actual Arabic script (complements Rule 82, which governs Thai transliteration) · when unsure whether a form is qaṭʿ/waṣl or nisba/maqsura → **FLAG, never guess** (Rule 3).
+
+* **Rule 84:** **[Preview-deployment Access Control]** Cloudflare Pages previews (`*.pages.dev`) are **public** — anyone with the hash/branch-alias URL can open them with no auth. Unpublished drafts, **especially Rule-71 child-safety-flagged content**, must not be reachable via preview (consistent with Rule 71 "never surface"): put **Cloudflare Access** (email/SSO/PIN) on previews or disable public branch aliases; per-deployment hash URLs are for **internal QA only** (never share publicly); Rule-71 content must not be pushed to a branch that creates a preview until One decides. Details in `docs/SECURITY.md §5`.
+
+* **Rule 85:** **[Supply-chain & Runtime Security Baseline]** (details in `docs/SECURITY.md §6`):
+  - **Tokens/secrets:** use **fine-grained PATs** (specific repos + minimal scopes: contents/pull_requests) with **expiry + rotation**; no broad classic `repo` PATs; **never commit secrets** (enable GitHub secret scanning + push protection) — consistent with *Push & safety discipline*.
+  - **DOM (stored-XSS):** data from JSON / external sources / users must be rendered via `textContent` or DOM APIs — **never `innerHTML` with untrusted data**.
+  - **Vendored libs:** pin by filename + **SRI (`integrity` sha384)** + `MANIFEST.sha256`; `script-src 'self'` only, no external CDN (SRI requires Cloudflare Auto-Minify/Rocket Loader OFF).
+  - **CI gate:** every PR must pass `.github/workflows/ci.yml` (JSON validity, Arabic orthography, gitleaks) before owner-merge.
