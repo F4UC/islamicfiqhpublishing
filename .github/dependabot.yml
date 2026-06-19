@@ -1,0 +1,15 @@
+# Dependabot — keep CI action versions patched.
+# NOTE: site dependencies (cytoscape/dagre) are vendored as static files with no
+# package manifest, so Dependabot cannot track them automatically — their versions
+# are pinned by filename + SRI + pages/tools/vendor/MANIFEST.sha256 and reviewed by
+# hand. This config covers the GitHub Actions used in .github/workflows/.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "ci"
