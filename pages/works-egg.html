@@ -1,0 +1,370 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>·</title></head><body style="margin:0;background:#05050f">
+<!-- ============================================================
+  WORKS EASTER EGG — "16-BIT WORLD" (hidden in /pages/works.html)
+  Tracks in-progress books. Scene = Bayt al-Hikma observatory at
+  night (NO text in the scene). Looping generative Golden-Age maqam
+  audio (oud + ney drone + daf). Click the scene for a celestial burst.
+  Self-contained: SVG/CSS/vanilla-JS + Web Audio. No external deps.
+  ============================================================ -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  .ee-world{--n1:#08081e;--n2:#15155a;--dusk:#3a2658;--warm:#7c4a2e;--gold:#ffcf4d;--amber:#e0701e;
+    --cyan:#3fe0ff;--mag:#ff5cc8;--green:#4dff8a;--dome:#13123a;--sand:#191540;--ink:#0a0820;
+    font-family:'Press Start 2P',monospace;color:#e9e6ff;background:#05050f;border:3px solid #2e2a66;
+    border-radius:6px;overflow:hidden;image-rendering:pixelated;max-width:880px;margin:0 auto;
+    box-shadow:0 0 0 1px #000,0 10px 40px rgba(0,0,0,.6)}
+  .ee-world *{box-sizing:border-box}
+
+  /* ---------- SCENE (NO TEXT) ---------- */
+  .ee-scene{position:relative;height:300px;cursor:pointer;overflow:hidden;
+    background:linear-gradient(180deg,#06061a 0%,#0d0d3a 30%,#241646 56%,#4a2a55 78%,#6e3f2e 100%);
+    box-shadow:inset 0 0 60px rgba(0,0,0,.6)}
+  .ee-scene>*{position:absolute}
+  .ee-stars{inset:0;background-image:
+    radial-gradient(1px 1px at 30px 30px,#fff,transparent),radial-gradient(1px 1px at 120px 18px,var(--cyan),transparent),
+    radial-gradient(1px 1px at 210px 44px,#fff,transparent),radial-gradient(1px 1px at 300px 22px,var(--gold),transparent),
+    radial-gradient(1px 1px at 400px 50px,#fff,transparent),radial-gradient(1px 1px at 500px 16px,#fff,transparent),
+    radial-gradient(1px 1px at 600px 40px,var(--cyan),transparent),radial-gradient(1px 1px at 700px 26px,#fff,transparent),
+    radial-gradient(1px 1px at 790px 48px,var(--gold),transparent),radial-gradient(1px 1px at 80px 70px,#fff,transparent),
+    radial-gradient(1px 1px at 250px 78px,#fff,transparent),radial-gradient(1px 1px at 460px 84px,var(--cyan),transparent),
+    radial-gradient(1px 1px at 660px 74px,#fff,transparent),radial-gradient(1px 1px at 360px 64px,#fff,transparent);
+    opacity:.8;animation:ee-tw 3.4s steps(2) infinite}
+  @keyframes ee-tw{50%{opacity:.5}}
+  .ee-moon{top:24px;left:78px;width:34px;height:34px;border-radius:50%;
+    background:radial-gradient(circle at 68% 36%,transparent 0 44%,var(--gold) 45% 100%);
+    filter:drop-shadow(0 0 10px rgba(255,207,77,.55));animation:ee-moonglow 5s ease-in-out infinite}
+  @keyframes ee-moonglow{50%{filter:drop-shadow(0 0 18px rgba(255,207,77,.9))}}
+  .ee-astro{top:30px;right:74px;width:90px;height:90px;opacity:.92}
+  .ee-astro .ring{transform-box:fill-box;transform-origin:center}
+  .ee-astro .r-out{animation:ee-spin 26s linear infinite}
+  .ee-astro .r-mid{animation:ee-spin 18s linear infinite reverse}
+  .ee-astro .r-pin{animation:ee-spin 9s linear infinite}
+  @keyframes ee-spin{to{transform:rotate(360deg)}}
+  .ee-comet{top:14px;left:60%;width:60px;height:2px;border-radius:2px;opacity:0;transform:rotate(22deg);
+    background:linear-gradient(90deg,transparent,#fff,rgba(255,255,255,0));box-shadow:0 0 8px #fff;
+    animation:ee-comet 14s ease-in infinite}
+  @keyframes ee-comet{0%,80%{opacity:0;transform:translate(60px,-20px) rotate(22deg) scaleX(.2)}
+    85%{opacity:1}93%{opacity:.9}100%{opacity:0;transform:translate(-220px,70px) rotate(22deg) scaleX(1)}}
+  .ee-cloud{height:auto;opacity:.14;animation:ee-drift linear infinite}
+  .ee-cloud.c1{top:60px;width:80px;animation-duration:60s}
+  .ee-cloud.c2{top:90px;width:54px;opacity:.1;animation-duration:84s;animation-delay:-30s}
+  @keyframes ee-drift{from{left:-90px}to{left:100%}}
+  .ee-bird{width:11px;height:auto;animation:ee-fly linear infinite}
+  .ee-bird path{animation:ee-flap .5s steps(2) infinite}
+  .ee-bird.b1{top:80px;animation-duration:22s}
+  .ee-bird.b2{top:96px;animation-duration:28s;animation-delay:-8s}
+  .ee-bird.b2 path{animation-delay:-.25s}
+  .ee-bird.b3{top:70px;animation-duration:34s;animation-delay:-18s}
+  @keyframes ee-fly{from{left:-14px;transform:translateY(0)}50%{transform:translateY(-8px)}to{left:104%;transform:translateY(0)}}
+  @keyframes ee-flap{50%{transform:scaleY(.4)}}
+  .ee-page{width:9px;height:12px;background:#d9d4c0;opacity:0;border:1px solid #b3ad95;
+    animation:ee-rise-page linear infinite}
+  .ee-page.p1{left:40%;animation-duration:13s}
+  .ee-page.p2{left:46%;animation-duration:17s;animation-delay:-6s}
+  .ee-page.p3{left:34%;animation-duration:15s;animation-delay:-10s}
+  @keyframes ee-rise-page{0%{transform:translateY(170px) rotate(0);opacity:0}
+    12%{opacity:.55}88%{opacity:.4}100%{transform:translateY(0) rotate(220deg);opacity:0}}
+  .ee-smoke{left:calc(50% - 2px);bottom:96px;width:5px;height:5px;border-radius:50%}
+  .ee-smoke i{display:block;width:100%;height:100%;border-radius:50%;background:rgba(220,210,200,.35);
+    animation:ee-smoke 3.4s ease-out infinite}
+  .ee-smoke.s2 i{animation-delay:-1.7s}
+  @keyframes ee-smoke{0%{transform:translate(0,0) scale(.5);opacity:.4}
+    100%{transform:translate(-6px,-46px) scale(2.4);opacity:0}}
+  .ee-dunes{left:-2%;width:104%;bottom:64px;height:60px;z-index:1;opacity:.9}
+  .ee-city{left:50%;transform:translateX(-50%);bottom:30px;width:560px;z-index:3;
+    filter:drop-shadow(0 0 8px rgba(0,0,0,.5))}
+  .ee-fountain{left:calc(50% - 60px);bottom:18px;width:120px;height:34px;z-index:4}
+  .ee-palmL{left:18px;bottom:34px;height:64px;z-index:2}
+  .ee-palmR{right:20px;bottom:30px;height:58px;z-index:2}
+  .ee-quad{transform-box:fill-box;transform-origin:bottom left;animation:ee-quad 7s ease-in-out infinite}
+  @keyframes ee-quad{0%,100%{transform:rotate(0)}50%{transform:rotate(-16deg)}}
+  .ee-fin{filter:drop-shadow(0 0 3px rgba(255,207,77,.85))}
+  .ee-win{animation:ee-tw 2.6s steps(2) infinite}
+  .ee-lamp{animation:ee-lamp 2.4s ease-in-out infinite}
+  @keyframes ee-lamp{50%{opacity:.55}}
+  .ee-rip{transform-origin:center;animation:ee-rip 2.6s ease-out infinite}
+  .ee-rip.r2{animation-delay:-1.3s}
+  @keyframes ee-rip{0%{transform:scaleX(.3);opacity:.7}100%{transform:scaleX(1.3);opacity:0}}
+  .ee-jets{animation:ee-jetglow 1.6s ease-in-out infinite}
+  .ee-jets path{stroke-dasharray:2 3;animation:ee-flow 1.1s linear infinite}
+  @keyframes ee-jetglow{0%,100%{opacity:.5}50%{opacity:.95}}
+  @keyframes ee-flow{to{stroke-dashoffset:-10}}
+  .ee-conl{stroke:var(--cyan);stroke-width:.8;opacity:0;transition:opacity .5s;filter:drop-shadow(0 0 3px var(--cyan))}
+  .ee-scene.lit .ee-conl{opacity:.85}
+
+  .ee-fx{inset:0;z-index:6;pointer-events:none;overflow:hidden}
+  .ee-lantern{position:absolute;bottom:30px;width:9px;height:13px;border-radius:3px 3px 5px 5px;
+    background:radial-gradient(circle at 50% 32%,#fff6d0,#ffcf4d 58%,#e0701e);
+    box-shadow:0 0 10px 1px rgba(255,180,80,.85);animation:ee-riseL ease-in forwards}
+  @keyframes ee-riseL{0%{transform:translate(0,0) scale(.5);opacity:0}14%{opacity:1}
+    100%{transform:translate(var(--dx,0),-200px) scale(1) rotate(var(--rot,8deg));opacity:0}}
+  .ee-spark{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;
+    box-shadow:0 0 6px 2px var(--gold),14px 0 4px var(--cyan),-14px 0 4px var(--mag),0 14px 4px var(--green),
+      0 -14px 4px var(--gold),10px 10px 4px #fff,-10px -10px 4px #fff;animation:ee-burst .9s ease-out forwards}
+  @keyframes ee-burst{0%{transform:scale(.2);opacity:1}100%{transform:scale(2);opacity:0}}
+
+  .ee-audio{position:absolute;top:8px;left:8px;z-index:7;width:30px;height:30px;border:2px solid #6e4d12;
+    border-radius:5px;background:linear-gradient(180deg,#2a2456,#15124a);color:var(--gold);font-size:12px;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 3px 0 #1a1640}
+  .ee-audio.on{color:var(--green);border-color:#1f5a36;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 0 10px rgba(77,255,138,.5),0 3px 0 #1f5a36}
+  .ee-hint{position:absolute;bottom:6px;left:8px;z-index:7;width:14px;height:14px;border-radius:50%;
+    background:radial-gradient(circle at 50% 40%,#fff,var(--gold));opacity:.5;animation:ee-lamp 1.6s ease-in-out infinite;pointer-events:none}
+
+  /* ---------- BOOK PROGRESS PANEL (content; has text) ---------- */
+  .ee-books{background:repeating-linear-gradient(180deg,#0c0a24 0 2px,#0a0820 2px 4px);
+    border-top:3px solid #2e2a66;padding:14px 14px 16px}
+  .ee-bk-head{display:flex;align-items:center;gap:8px;font-size:9px;color:var(--gold);
+    text-shadow:0 0 6px rgba(255,207,77,.4);margin-bottom:12px}
+  .ee-bk-head .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:ee-lamp 1.8s infinite}
+  .ee-grid{display:grid;grid-template-columns:1fr;gap:10px}
+  .ee-card{border:2px solid #322d70;border-radius:4px;background:linear-gradient(180deg,#15124a,#0e0b30);
+    padding:11px 12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 3px 0 #0a0820}
+  .ee-ar{direction:rtl;text-align:right;font-family:'Times New Roman',serif;font-size:20px;line-height:1.5;color:#fff5d6;margin:0 0 6px}
+  .ee-au{font-size:8px;color:#b9b4e8;line-height:1.6;margin-bottom:8px}
+  .ee-au b{color:#d7d2ff;font-weight:normal}
+  .ee-orig{font-family:'Press Start 2P',monospace;font-size:11px;color:#fff5d6;margin:2px 0 8px;line-height:1.5}
+  .ee-th{font-family:'Press Start 2P',monospace;font-size:12px;color:#fff5d6;margin:0 0 7px;line-height:1.55}
+  .ee-au-ar{direction:rtl;text-align:right;font-family:'Times New Roman',serif;font-size:13px;color:#cfc8ff;margin-bottom:9px;line-height:1.5}
+  .ee-pct{font-size:8px;color:var(--gold);min-width:34px;text-align:right}
+  .ee-pct-wait{color:var(--mag)}
+  .ee-bar-wait{border-style:dashed;opacity:.7}
+  .ee-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .ee-badge{font-size:7px;padding:4px 7px;border-radius:3px;letter-spacing:.5px}
+  .ee-b-tr{background:rgba(63,224,255,.14);color:var(--cyan);border:1px solid rgba(63,224,255,.4)}
+  .ee-b-or{background:rgba(255,207,77,.14);color:var(--gold);border:1px solid rgba(255,207,77,.4)}
+  .ee-b-cf{background:rgba(255,92,200,.14);color:var(--mag);border:1px solid rgba(255,92,200,.4)}
+  .ee-bar{flex:1;min-width:90px;height:8px;border:1px solid #322d70;border-radius:4px;background:#0a0820;overflow:hidden;position:relative}
+  .ee-bar i{position:absolute;inset:0;width:42%;background:repeating-linear-gradient(90deg,var(--amber) 0 6px,var(--gold) 6px 12px);
+    animation:ee-pulse 2.4s ease-in-out infinite}
+  @keyframes ee-pulse{50%{opacity:.6}}
+  @media(max-width:560px){.ee-scene{height:230px}.ee-city{width:420px}.ee-ar{font-size:17px}}
+</style>
+
+<div class="ee-world" role="img" aria-label="16-bit world: in-progress books">
+  <div class="ee-scene" id="eeScene">
+    <div class="ee-stars"></div>
+
+    <!-- constellation (lines hidden until click; dots subtle) -->
+    <svg width="100%" height="100%" viewBox="0 0 800 300" preserveAspectRatio="none" style="position:absolute;inset:0;z-index:1">
+      <g>
+        <line class="ee-conl" x1="150" y1="40" x2="200" y2="70"/><line class="ee-conl" x1="200" y1="70" x2="250" y2="55"/>
+        <line class="ee-conl" x1="250" y1="55" x2="300" y2="90"/><line class="ee-conl" x1="300" y1="90" x2="360" y2="64"/>
+        <line class="ee-conl" x1="500" y1="40" x2="560" y2="70"/><line class="ee-conl" x1="560" y1="70" x2="610" y2="50"/>
+        <g fill="#cfe8ff"><circle cx="150" cy="40" r="1.4"/><circle cx="200" cy="70" r="1.4"/><circle cx="250" cy="55" r="1.4"/><circle cx="300" cy="90" r="1.4"/><circle cx="360" cy="64" r="1.4"/><circle cx="500" cy="40" r="1.4"/><circle cx="560" cy="70" r="1.4"/><circle cx="610" cy="50" r="1.4"/></g>
+      </g>
+    </svg>
+
+    <div class="ee-moon"></div>
+
+    <!-- ASTROLABE (rotating brass rings) -->
+    <svg class="ee-astro" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#7a5a1e" stroke-width="3"/>
+      <circle class="ring r-out" cx="50" cy="50" r="40" fill="none" stroke="#caa047" stroke-width="2" stroke-dasharray="2 5"/>
+      <g class="ring r-mid" stroke="#e3c069" stroke-width="1.4" fill="none">
+        <circle cx="50" cy="50" r="32"/><path d="M50 18 L50 82 M18 50 L82 50 M27 27 L73 73 M73 27 L27 73"/>
+      </g>
+      <g class="ring r-pin" stroke="#ffe49a" stroke-width="1.6" fill="none">
+        <path d="M50 50 L50 22 M50 50 L72 60"/><circle cx="50" cy="22" r="2.2" fill="#ffe49a"/>
+      </g>
+      <circle cx="50" cy="50" r="3" fill="#ffcf4d"/>
+    </svg>
+
+    <div class="ee-comet"></div>
+    <svg class="ee-cloud c1" viewBox="0 0 60 18"><path d="M8,14 a7,7 0 0,1 4,-13 a8,8 0 0,1 15,2 a6,6 0 0,1 11,1 a7,7 0 0,1 6,10 Z" fill="#cfd0ff"/></svg>
+    <svg class="ee-cloud c2" viewBox="0 0 60 18"><path d="M8,14 a7,7 0 0,1 4,-13 a8,8 0 0,1 15,2 a6,6 0 0,1 11,1 a7,7 0 0,1 6,10 Z" fill="#cfd0ff"/></svg>
+    <svg class="ee-bird b1" viewBox="0 0 12 6"><path d="M0,5 Q3,0 6,4 Q9,0 12,5" fill="none" stroke="#d7d8ff" stroke-width="1.2"/></svg>
+    <svg class="ee-bird b2" viewBox="0 0 12 6"><path d="M0,5 Q3,0 6,4 Q9,0 12,5" fill="none" stroke="#c7c8ef" stroke-width="1.2"/></svg>
+    <svg class="ee-bird b3" viewBox="0 0 12 6"><path d="M0,5 Q3,0 6,4 Q9,0 12,5" fill="none" stroke="#d7d8ff" stroke-width="1.2"/></svg>
+
+    <svg class="ee-dunes" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,20 L0,10 C16,6 28,12 42,9 C56,6 68,13 82,9 C92,6 100,11 100,10 L100,20 Z" fill="#1d1742"/></svg>
+    <svg class="ee-palmL" viewBox="0 0 30 64"><g stroke="#171338" stroke-width="2" fill="none" stroke-linecap="round"><rect x="14" y="24" width="2" height="40" fill="#171338" stroke="none"/><path d="M15,24 q-9,-2 -14,3"/><path d="M15,24 q-7,-8 -14,-10"/><path d="M15,24 q0,-11 -4,-16"/><path d="M15,24 q7,-8 14,-10"/><path d="M15,24 q9,-2 14,3"/></g></svg>
+    <svg class="ee-palmR" viewBox="0 0 30 58"><g stroke="#171338" stroke-width="2" fill="none" stroke-linecap="round"><rect x="14" y="20" width="2" height="38" fill="#171338" stroke="none"/><path d="M15,20 q-9,-2 -14,3"/><path d="M15,20 q-7,-8 -14,-10"/><path d="M15,20 q0,-11 -4,-16"/><path d="M15,20 q7,-8 14,-10"/><path d="M15,20 q9,-2 14,3"/></g></svg>
+
+    <!-- ROUND CITY skyline: walls, domes, minarets, central observatory dome with astronomer + quadrant -->
+    <svg class="ee-city" viewBox="0 0 560 150">
+      <rect x="0" y="120" width="560" height="30" fill="#0b0922"/>
+      <g fill="#0b0922"><rect x="6" y="116" width="9" height="4"/><rect x="24" y="116" width="9" height="4"/><rect x="42" y="116" width="9" height="4"/><rect x="510" y="116" width="9" height="4"/><rect x="528" y="116" width="9" height="4"/><rect x="546" y="116" width="9" height="4"/></g>
+      <rect x="20" y="92" width="46" height="28" fill="#11102e"/><path d="M19,92 Q43,72 67,92 Z" fill="#11102e"/>
+      <rect x="78" y="56" width="14" height="64" fill="#13123a"/><rect x="76" y="78" width="18" height="4" fill="#0b0922"/><path d="M78,56 Q85,44 92,56 Z" fill="#13123a"/><path d="M85,44 L85,38" stroke="#ffcf4d" stroke-width="1"/><circle class="ee-fin" cx="85" cy="36" r="2.2" fill="#ffcf4d"/>
+      <rect x="232" y="84" width="96" height="36" fill="#16153f"/>
+      <path d="M232,84 Q232,50 280,40 Q328,50 328,84 Z" fill="#16153f"/>
+      <path d="M280,40 L280,30" stroke="#ffcf4d" stroke-width="1.4"/><circle class="ee-fin" cx="280" cy="27.5" r="3" fill="#ffcf4d"/>
+      <path d="M252,84 Q252,62 280,54 Q308,62 308,84" fill="none" stroke="#2a2660" stroke-width="1"/>
+      <g transform="translate(300,98)">
+        <circle cx="0" cy="-9" r="3.4" fill="#0a0820"/><rect x="-3" y="-6" width="6" height="11" fill="#0a0820"/>
+        <g class="ee-quad"><path d="M2,-2 L24,-2 A22,22 0 0,0 19,-13 Z" fill="none" stroke="#caa047" stroke-width="1.4"/><line x1="2" y1="-2" x2="22" y2="-8" stroke="#ffe49a" stroke-width="1"/></g>
+      </g>
+      <rect x="340" y="74" width="44" height="46" fill="#14133e"/><path d="M338,74 Q362,58 386,74 Z" fill="#14133e"/>
+      <rect x="470" y="58" width="14" height="62" fill="#13123a"/><rect x="468" y="80" width="18" height="4" fill="#0b0922"/><path d="M470,58 Q477,46 484,58 Z" fill="#13123a"/><path d="M477,46 L477,40" stroke="#ffcf4d" stroke-width="1"/><circle class="ee-fin" cx="477" cy="38" r="2.2" fill="#ffcf4d"/>
+      <rect x="400" y="96" width="50" height="24" fill="#11102e"/><path d="M399,96 Q425,80 451,96 Z" fill="#11102e"/>
+      <path d="M196,120 L196,104 Q214,88 232,104 L232,120 Z" fill="#090718"/>
+      <rect class="ee-lamp" x="210" y="100" width="4" height="6" rx="1" fill="#ffcf4d"/>
+      <g fill="#ffcf4d"><rect class="ee-win" x="30" y="100" width="2" height="3"/><rect x="40" y="100" width="2" height="3"/><rect class="ee-win" x="50" y="104" width="2" height="3"/><rect x="82" y="70" width="2" height="3"/><rect x="82" y="86" width="2" height="3"/><rect class="ee-win" x="262" y="92" width="3" height="3"/><rect x="294" y="92" width="3" height="3"/><rect class="ee-win" x="278" y="100" width="3" height="3"/><rect x="352" y="86" width="2" height="3"/><rect class="ee-win" x="368" y="92" width="2" height="3"/><rect x="474" y="72" width="2" height="3"/><rect class="ee-win" x="474" y="92" width="2" height="3"/><rect x="414" y="104" width="2" height="3"/><rect class="ee-win" x="436" y="104" width="2" height="3"/></g>
+    </svg>
+
+    <!-- FOUNTAIN: tiered basin + arcing water jets (no central post) -->
+    <svg class="ee-fountain" viewBox="0 0 120 34">
+      <ellipse cx="60" cy="27" rx="48" ry="7" fill="#10204a"/><ellipse cx="60" cy="26" rx="48" ry="6" fill="none" stroke="#1c356b" stroke-width="1"/>
+      <ellipse cx="60" cy="24" rx="23" ry="3.4" fill="#14285a" stroke="#244a8c" stroke-width="1"/>
+      <g class="ee-jets" fill="none" stroke="#7fe9ff" stroke-width="1" stroke-linecap="round">
+        <path d="M60,23 Q47,9 39,22"/><path d="M60,23 Q73,9 81,22"/>
+        <path d="M60,23 Q53,7 47,21"/><path d="M60,23 Q67,7 73,21"/>
+      </g>
+      <ellipse class="ee-rip" cx="60" cy="24" rx="18" ry="2.6" fill="none" stroke="#3fe0ff" stroke-width="1"/>
+      <ellipse class="ee-rip r2" cx="60" cy="24" rx="18" ry="2.6" fill="none" stroke="#3fe0ff" stroke-width="1"/>
+    </svg>
+
+    <div class="ee-smoke s1"><i></i></div>
+    <div class="ee-smoke s2"><i></i></div>
+    <div class="ee-page p1"></div><div class="ee-page p2"></div><div class="ee-page p3"></div>
+
+    <div class="ee-fx" id="eeFx"></div>
+    <button class="ee-audio" id="eeAudio" title="เสียง" aria-label="toggle audio">&#9834;</button>
+    <span class="ee-hint" title="แตะ"></span>
+  </div>
+
+  <!-- ===== IN-PROGRESS BOOKS (content) ===== -->
+  <div class="ee-books">
+    <div class="ee-bk-head"><span class="dot"></span><span>&#1603;&#1614;&#1604;&#1575;&#1605; &middot; IN PROGRESS</span></div>
+    <div class="ee-grid" id="eeGrid"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* ---------- BOOK DATA (4 books, all translating to Thai; pct = rough est from typeset draft; الذب pending .indd) ---------- */
+  var BOOKS = [
+    { ar:"رسالة في استحسان الخوض في علم الكلام", auAr:"الإمام أبو الحسن الأشعري", pct:85 },
+    { thTitle:"บทนำสู่แนวทางของท่านอิมามอัลอัชอะรีย์", auTh:"ค้นคว้าและเรียบเรียงโดย อะห์หมัด เฟาซี", pct:70 },
+    { ar:"ترجمة ابن تيمية", auAr:"تقي الدين علي السبكي", pct:50 },
+    { ar:"رسالة في الذب عن أبي الحسن الأشعري", auAr:"أبو القاسم عبد الملك ابن درباس (ت ٦٩٥)", pct:80 }
+  ];
+  var grid=document.getElementById('eeGrid');
+  BOOKS.forEach(function(b){
+    var c=document.createElement('div'); c.className='ee-card'; var html='';
+    if(b.ar){
+      html+='<p class="ee-ar">'+b.ar+'</p>';
+      html+='<div class="ee-au-ar">'+b.auAr+'</div>';
+    } else {
+      html+='<p class="ee-th">'+b.thTitle+'</p>';
+      html+='<div class="ee-au">'+b.auTh+'</div>';
+    }
+    var bar,pct;
+    if(b.pct==null){
+      pct='<span class="ee-pct ee-pct-wait">รอไฟล์</span>';
+      bar='<span class="ee-bar ee-bar-wait"><i style="width:0"></i></span>';
+    } else {
+      pct='<span class="ee-pct">'+b.pct+'%</span>';
+      bar='<span class="ee-bar"><i style="width:'+b.pct+'%"></i></span>';
+    }
+    html+='<div class="ee-row"><span class="ee-badge ee-b-tr">กำลังแปลไทย</span>'+bar+pct+'</div>';
+    c.innerHTML=html; grid.appendChild(c);
+  });
+
+  /* ---------- CLICK INTERACTION ---------- */
+  var scene=document.getElementById('eeScene'), fx=document.getElementById('eeFx');
+  var rnd=function(a,b){return a+Math.random()*(b-a)};
+  scene.addEventListener('click',function(e){
+    if(e.target.closest('.ee-audio')) return;
+    scene.classList.add('lit');
+    setTimeout(function(){scene.classList.remove('lit')},2600);
+    for(var i=0;i<10;i++){
+      var l=document.createElement('div'); l.className='ee-lantern';
+      l.style.left=rnd(8,92)+'%'; l.style.setProperty('--dx',rnd(-26,26).toFixed(0)+'px');
+      l.style.setProperty('--rot',rnd(-14,14).toFixed(0)+'deg');
+      l.style.animationDuration=rnd(3.2,5).toFixed(2)+'s'; l.style.animationDelay=rnd(0,.5).toFixed(2)+'s';
+      fx.appendChild(l); (function(el){el.addEventListener('animationend',function(){el.remove()})})(l);
+    }
+    for(var j=0;j<4;j++){
+      var s=document.createElement('div'); s.className='ee-spark';
+      s.style.left=rnd(30,90)+'%'; s.style.top=rnd(8,46)+'%'; s.style.animationDelay=(j*0.16).toFixed(2)+'s';
+      fx.appendChild(s); (function(el){el.addEventListener('animationend',function(){el.remove()})})(s);
+    }
+    if(audioOn) chime();
+  });
+
+  /* ---------- GENERATIVE GOLDEN-AGE AUDIO (oud + ney drone + daf), LOOPING ---------- */
+  var actx=null, master=null, droneNodes=null, audioOn=false, loopT=null, step=0, nextT=0;
+  var BPM=90, spb=60/BPM, stepDur=spb/2;
+  var F={D3:146.83,Eb3:155.56,Fs3:185.00,G3:196.00,A3:220.00,Bb3:233.08,C4:261.63,
+         D4:293.66,Eb4:311.13,Fs4:369.99,G4:392.00,A4:440.00,Bb4:466.16,C5:523.25,D5:587.33,R:0};
+  var OUD=[F.D4,F.R,F.Eb4,F.D4,F.Fs4,F.G4,F.Fs4,F.R, F.A4,F.G4,F.Fs4,F.Eb4,F.D4,F.R,F.C4,F.D4,
+           F.Eb4,F.Fs4,F.G4,F.R,F.A4,F.Bb4,F.A4,F.G4, F.Fs4,F.Eb4,F.D4,F.C4,F.D4,F.R,F.A3,F.R];
+  var DAF=['D','t','.','t','D','.','t','.','D','.','D','t','D','.','t','.',
+           'D','t','.','t','D','.','t','t','D','.','D','t','D','t','.','t'];
+
+  function pluck(freq,t,dur,vol){
+    if(freq<=0) return;
+    var o1=actx.createOscillator(),o2=actx.createOscillator(),g=actx.createGain(),lp=actx.createBiquadFilter();
+    o1.type='triangle'; o2.type='sawtooth'; o1.frequency.value=freq; o2.frequency.value=freq*1.004;
+    lp.type='lowpass'; lp.frequency.setValueAtTime(2600,t); lp.frequency.exponentialRampToValueAtTime(700,t+dur);
+    g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(vol,t+0.006);
+    g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+    o1.connect(lp); o2.connect(lp); lp.connect(g); g.connect(master);
+    o1.start(t); o2.start(t); o1.stop(t+dur); o2.stop(t+dur);
+  }
+  function dum(t){
+    var o=actx.createOscillator(),g=actx.createGain();
+    o.type='sine'; o.frequency.setValueAtTime(120,t); o.frequency.exponentialRampToValueAtTime(55,t+0.16);
+    g.gain.setValueAtTime(0.0001,t); g.gain.linearRampToValueAtTime(0.5,t+0.005);
+    g.gain.exponentialRampToValueAtTime(0.0001,t+0.22);
+    o.connect(g); g.connect(master); o.start(t); o.stop(t+0.24);
+  }
+  function tak(t){
+    var dur=0.07, n=actx.createBufferSource(), g=actx.createGain(), hp=actx.createBiquadFilter();
+    var buf=actx.createBuffer(1, Math.floor(actx.sampleRate*dur), actx.sampleRate);
+    var d=buf.getChannelData(0); for(var i=0;i<d.length;i++) d[i]=(Math.random()*2-1)*(1-i/d.length);
+    n.buffer=buf; hp.type='highpass'; hp.frequency.value=1800;
+    g.gain.setValueAtTime(0.0001,t); g.gain.linearRampToValueAtTime(0.32,t+0.003); g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+    n.connect(hp); hp.connect(g); g.connect(master); n.start(t); n.stop(t+dur);
+  }
+  function startDrone(){
+    droneNodes=[];
+    [F.D3,F.A3].forEach(function(fr,idx){
+      var o=actx.createOscillator(),g=actx.createGain(),lfo=actx.createOscillator(),lg=actx.createGain();
+      o.type='sine'; o.frequency.value=fr;
+      lfo.type='sine'; lfo.frequency.value=4.5; lg.gain.value=2.2; lfo.connect(lg); lg.connect(o.frequency);
+      g.gain.setValueAtTime(0,actx.currentTime); g.gain.linearRampToValueAtTime(idx?0.04:0.06,actx.currentTime+1.2);
+      o.connect(g); g.connect(master); o.start(); lfo.start();
+      droneNodes.push({o:o,g:g,lfo:lfo});
+    });
+  }
+  function stopDrone(){
+    if(!droneNodes) return;
+    droneNodes.forEach(function(n){
+      try{ n.g.gain.cancelScheduledValues(actx.currentTime); n.g.gain.linearRampToValueAtTime(0,actx.currentTime+0.3);
+        n.o.stop(actx.currentTime+0.35); n.lfo.stop(actx.currentTime+0.35); }catch(e){}
+    });
+    droneNodes=null;
+  }
+  function tick(){
+    while(nextT < actx.currentTime + 0.12){
+      var i=step % OUD.length;
+      pluck(OUD[i], nextT, stepDur*1.7, 0.16);
+      var dd=DAF[i]; if(dd==='D') dum(nextT); else if(dd==='t') tak(nextT);
+      nextT += stepDur; step++;
+    }
+    loopT=setTimeout(tick,30);
+  }
+  function chime(){
+    if(!actx) return;
+    var t=actx.currentTime, arp=[F.D4,F.Eb4,F.Fs4,F.A4,F.D5];
+    arp.forEach(function(fr,i){ pluck(fr, t+i*0.07, 0.5, 0.14); });
+  }
+  var btn=document.getElementById('eeAudio');
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    if(!audioOn){
+      if(!actx){ actx=new (window.AudioContext||window.webkitAudioContext)(); master=actx.createGain(); master.gain.value=0.5; master.connect(actx.destination); }
+      if(actx.state==='suspended') actx.resume();
+      audioOn=true; btn.classList.add('on'); btn.innerHTML='&#9835;';
+      step=0; nextT=actx.currentTime+0.08; startDrone(); tick();
+    } else {
+      audioOn=false; btn.classList.remove('on'); btn.innerHTML='&#9834;';
+      clearTimeout(loopT); stopDrone();
+    }
+  });
+})();
+</script>
+</body></html>
