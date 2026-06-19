@@ -211,6 +211,63 @@ All: `block-ar` kept **byte-exact** (before==after verified); every `<sup class=
 ## Bibliography note (Bibliography Standard — no fabrication)
 - Across the batch, bibliography entries include ONLY details the Drive source provided (author + native-Arabic title, or source-given page/publisher as in arafah's numbered list). Where building agents had reconstructed muhaqqiq/place/publisher/year not in the source (usul ×6, paper Bloom/Goitein), the orchestrator trimmed them to the source-provided form. Fuller Chicago-style citations may be added editorially after verification.
 
+## Repo-wide audit (2026-06-19)
+### excerpts written — need editorial review before publish (4 articles)
+4 entries had empty `excerpt` in articles.json; drafted 1-sentence summaries from each
+.article-body intro (user-approved). Verify wording/accuracy:
+- hammam-bathhouses-in-muslim-lands
+- al-tufayli-freeloaders
+- political-reform-under-the-mamluks  (the Mamluk tie is inferred from the title — confirm)
+- ghazali-and-ilm-al-kalam
+### FLAG: lint-article.js over-flags verse inside .ar-translation (S2 verse exception)
+Poetry translations that use `.ar-translation` (not `.poem-th`) get flagged for ทว่า/มิใช่
+but are legitimate S2 verse exceptions — e.g. kalam/shia-scholars-challenge-asharism.html L445;
+tarikh/sexuality-in-caliphal-court.html L474/489/516/533/534. Options: (a) wrap the Thai verse
+in `.poem-th`, or (b) extend the linter mask to verse `.ar-translation`. NOT auto-fixed
+(re-classing affects rendering). No real prose S2 violations exist.
+
+### Harness bug-audit (2026-06-19) — verified findings
+AUTO-FIXED (safe/LOCAL):
+- ✅ tarikh/the-age-of-khadija.html — breadcrumb ชี้ pages/tarikh.html (404) → แก้เป็น pages/history.html
+  (เป็นไฟล์เดียวในทั้ง repo ที่ผิด; อีก 60 บท tarikh ชี้ history.html ถูกแล้ว)
+
+FLAGGED — ต้องตัดสินเชิงบรรณาธิการ (กระทบเนื้อหา/แชร์โค้ด — ไม่ auto-fix):
+**Bibliography orphans** (บรรณานุกรมมี ref แต่ไม่มี <sup> footnote ในเนื้อ — แก้ได้ 2 ทาง: เพิ่ม footnote marker
+ในเนื้อ หรือลบ ref; กฎ 1 ห้ามทิ้งแหล่ง → ควรเพิ่ม marker ให้ครบ) — verify แล้วของจริง:
+- tarikh/al-shafii-founder-of-usul-al-fiqh.html — 15 entries, 0 marker (HIGH)
+- tarikh/omar-khayyam-mathematician-and-poet.html — 27 entries, 0 marker (HIGH)
+- tarikh/abu-al-aynaa-blind-satirist.html — ref-7..22 orphaned (MED) [pre-existing, ดู #190]
+- kalam/al-ashari-and-the-unity-of-the-ummah.html — ref-16..18 orphaned (MED) [pre-existing, ดู #190]
+- tarikh/floods-of-baghdad-abbasid-era.html — 2 orphaned (MED)
+- tarikh/muslim-conquest-of-transoxiana.html — 1 orphaned (LOW)
+
+**Script / shared-code** (แก้แล้วเปลี่ยน output หลายไฟล์ → ขออนุมัติก่อน):
+- scripts/gen-reading-time.js — open/close handling ไม่สมมาตร อาจทำ counter (exclude/thaiQuote/articleBody) เพี้ยนถาวร (MED)
+- scripts/build_tabaqah_json.py — death year -1 (sentinel) ถูก map เป็น tabaqah 12 (รุ่นล่าสุด) เงียบๆ (LOW)
+- scripts/gen-sitemap.js — noscript directory ตัดบทใน category ที่ไม่ลงทะเบียนทิ้งเงียบ (ตอนนี้ไม่ trigger เพราะทุก cat ลงทะเบียน) (LOW)
+- scripts/coverage.py — จับ H1 title หยุดที่ nested closing tag แรก ทำให้ตัด title หลังจากนั้น (LOW)
+- main.js — reading-progress bar หารด้วยศูนย์ → NaN%/Infinity% บนหน้าที่ scroll ไม่ได้ (LOW)
+
+REFUTED (agent อ้างแต่ verify แล้ว = ไม่จริง): muslim-conquest CATEGORY_LABEL placeholder, articles.json/index.html "broken" — สะอาด
+
+### Resolution (2026-06-19) — shared-code/script bugs แก้แล้วทั้งหมด
+- ① main.js — เพิ่ม guard `scrollHeight>0` กัน NaN% (progress bar). ⚠️ **main.js เป็น cached asset**:
+  ตอน merge owner ต้อง **Custom Purge `/main.js`** หรือ bump `?v=` site-wide (ไม่ทำเองเพื่อเลี่ยงแตะ ~108 ไฟล์ + ชน PR อื่น)
+- ② gen-reading-time.js — ทำ decrement สมมาตร (ตาม per-frame flags ไม่ใช่ tag whitelist).
+  **พิสูจน์แล้วเป็น no-op**: รัน script ใหม่ → articles.json ไม่เปลี่ยน (บั๊กเดิม latent) → ไม่กระทบ reading-time ที่ ship
+- ③ coverage.py — จับ H1 title ถึง `</h1>` (เดิมหยุดที่ `</` ตัวแรก). เครื่องมือ QA ไม่กระทบเนื้อหา
+- ④ gen-sitemap.js — เพิ่ม console.warn ถ้าเจอ categoryKey นอกทะเบียน (defensive; ปัจจุบันไม่ trigger)
+- ⑤ build_tabaqah_json.py + data/tabaqah-*.json (14 ไฟล์, 6.3MB) — **ลบทิ้ง** (dead feature:
+  build script อ่านจาก /tmp/kashaf CSV ที่ไม่อยู่ใน repo, ไม่มี html/js consumer; กู้คืนได้จาก git history)
+
+### Resolution (2026-06-19) — bibliography orphans → รับเป็น uncited references (Option B)
+มติเจ้าของ: ปล่อยบรรณานุกรมทั้ง 6 บทไว้ตามเดิม + เพิ่ม **ข้อยกเว้นกฎ 64** (CLAUDE.md) และ
+mirror ใน docs/golden-master.md §6:
+- ทั้ง 6 บท (al-shafii, omar-khayyam, floods-of-baghdad, muslim-conquest, abu-al-aynaa, al-ashari)
+  **ไม่มี back-link เสียเลย** (ยืนยัน repo-wide: 0 broken back-link) → ไม่ใช่ dead-link bug
+- นิยามใหม่: `<li id="ref-N">` ที่ไม่มี `fn-back` ↑ = แหล่งอ้างอิง/อ่านเพิ่มเติม (uncited) ที่ถูกต้อง
+  ไม่นับ orphan; บทความมีบรรณานุกรมล้วนได้ ตราบที่ไม่มีลิงก์พัง (precedent #190)
+- bidirectional integrity ยังบังคับเฉพาะเชิงอรรถที่อ้างในเนื้อ (fnref↔ref + back-link ต้องชี้ marker จริง)
 ---
 
 # PHASE-2 BATCH 11 — review flags (10 articles, branch `claude/phase2-batch-11`, DRAFT PR)

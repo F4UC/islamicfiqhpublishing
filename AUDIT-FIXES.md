@@ -398,6 +398,15 @@
 ## tarikh/paper-industry-medieval-islam — 0 Arabic blocks (no touch)
 ## tarikh/clockmaking-in-the-mamluk-era — 0 Arabic blocks (no touch)
 
+## Repo-wide ortho audit (2026-06-19) — Arabic hamzat al-qaṭʿ in .ar-quote (6 tokens)
+Detection: scripts/lint-arabic-ortho.py (curated, word-boundary-safe). Each fix = bare
+alif → hamza; verified every hit is inside .ar-quote (NOT aya/hadith); token-diff = bare→hamza
+only, rest of consonant skeleton unchanged. User-approved (treated as typo-on-copy).
+- kalam/shia-scholars-challenge-asharism.html : الى→إلى (×1) · blob 2497f1b
+- tarikh/salahuddin-sunni-revival.html : ادريس→إدريس (×1) · blob 76dc047
+- tarikh/sexuality-in-caliphal-court.html : الى→إلى (×1) · blob 1fa4066
+- tarikh/sports-and-games-in-islamic-history.html : الى→إلى (×1) · blob fc630a8
+- tarikh/the-fall-of-al-andalus.html : الى→إلى (×2) · blob fdc0daa
 ---
 
 # PHASE-2 BATCH 11 — Arabic touches log (10 articles, branch `claude/phase2-batch-11`)

@@ -73,8 +73,8 @@
 - [ ] **S7** — อ้างอิงอายะฮ์ไม่แขวน inline ท้ายคำแปล: ใช้ footnote → บรรณานุกรม (golden master) หรือ `.block-source`; คำแปลเหลือเนื้อแปลล้วน
 
 ## 6. Footnote & บรรณานุกรม
-- [ ] footnote ลิงก์สองทาง: `#ref-N` ↔ `#fnref-N` ครบทุกคู่ ไม่มี orphan
-- [ ] บรรณานุกรมเป็น Arabic, เรียงเลข, มี back-link ↑ กลับไปจุดอ้างใน body
+- [ ] footnote ลิงก์สองทาง: ทุก `<sup fn-ref id="fnref-N">` มี `<li id="ref-N">` คู่, และทุก back-link `fn-back href="#fnref-N"` ชี้ marker ที่มีจริง — **ห้าม back-link เสีย** (ดูข้อยกเว้นกฎ 64)
+- [ ] บรรณานุกรมเป็น Arabic, เรียงเลข; entry ที่ถูก**อ้างในเนื้อ**ต้องมี back-link ↑ กลับไปจุดอ้าง — ส่วน entry ที่เป็น**แหล่งอ้างอิง/อ่านเพิ่มเติม (uncited)** ไม่ต้องมี ↑ และไม่นับเป็น orphan (กฎ 64 ข้อยกเว้น; บรรณานุกรมล้วนได้)
 - [ ] กล่อง "อ้างอิงบทความนี้" (citation) มี APA ไทย + ปุ่มคัดลอก ตามรูปแบบ golden master
 - [ ] **exemplar มาตรฐานอยู่ใน `articles/_TEMPLATE.html`** (footnote `<sup class="fn-ref">` → `<section class="bibliography-section"><ol class="bibliography">`); ใช้เมื่อบทมีอายะฮ์/หะดีษหรืออ้างแหล่งที่ต้องเชิงอรรถ — บทประวัติศาสตร์ที่ใช้ inline attribution ล้วน (ไม่มีอายะฮ์/หะดีษ) ไม่ต้องมี footnote/bibliography
 - [ ] **ห้ามกุ quote ปราชญ์** — อ้างเฉพาะ primary source ที่ verify แล้ว; จะค้านต้นฉบับได้ต่อเมื่อมี counter-source จริง

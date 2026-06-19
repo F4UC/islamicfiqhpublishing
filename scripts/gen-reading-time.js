@@ -132,11 +132,15 @@ function extractThaiChars(html) {
       // Unwind
       for (let k = stack.length - 1; k >= idx; k--) {
         const frame = stack[k];
-        if (frame.tag === 'div' || frame.tag === 'section' || frame.tag === 'blockquote' || frame.tag === 'ul' || frame.tag === 'ol' || frame.tag === 'details' || frame.tag === 'nav' || frame.tag === 'aside' || frame.tag === 'article' || frame.tag === 'header' || frame.tag === 'footer' || frame.tag === 'main' || frame.tag === 'p' || frame.tag === 'span' || frame.tag === 'h1' || frame.tag === 'h2' || frame.tag === 'h3' || frame.tag === 'h4' || frame.tag === 'h5' || frame.tag === 'h6' || frame.tag === 'li' || frame.tag === 'td' || frame.tag === 'th' || frame.tag === 'tr' || frame.tag === 'tbody' || frame.tag === 'table') {
-          if (frame.isArticleBody) inArticleBody = false;
-          if (frame.excluded) excludeCount = Math.max(0, excludeCount - 1);
-          if (frame.thaiQuote) thaiQuoteCount = Math.max(0, thaiQuoteCount - 1);
-        }
+        // Decrement symmetrically with the open side, which pushes a frame for
+        // EVERY non-void tag. Rely on the per-frame flags, NOT a tag whitelist:
+        // an excluded/thai-quote class on a non-whitelisted tag (e.g. <cite>,
+        // <em>, <figure>) was incremented on open but never decremented here,
+        // permanently corrupting excludeCount/thaiQuoteCount for the rest of the
+        // article. The flags are only true when the open tag actually had them.
+        if (frame.isArticleBody) inArticleBody = false;
+        if (frame.excluded) excludeCount = Math.max(0, excludeCount - 1);
+        if (frame.thaiQuote) thaiQuoteCount = Math.max(0, thaiQuoteCount - 1);
       }
       stack.splice(idx);
       continue;

@@ -619,7 +619,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 requestAnimationFrame(function() {
                     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
                     var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                    progressBar.style.width = (scrollTop / scrollHeight * 100) + '%';
+                    progressBar.style.width = (scrollHeight > 0 ? (scrollTop / scrollHeight * 100) : 0) + '%';
                     var topButton = document.getElementById('backToTopBtn');
                     if (topButton) {
                         topButton.style.setProperty('display', scrollTop > 400 ? 'block' : 'none', 'important');

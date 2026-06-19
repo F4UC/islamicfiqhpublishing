@@ -107,6 +107,18 @@ for (const key of CATEGORY_ORDER) {
   dir += `      </ul>\n    </li>\n`;
 }
 
+// Guard: the noscript directory only iterates CATEGORY_ORDER, so any article
+// whose categoryKey is NOT registered would be silently dropped. Warn loudly
+// instead of letting the report imply everything was injected.
+const unregistered = articles.filter((a) => !CATEGORY_ORDER.includes(a.categoryKey));
+if (unregistered.length) {
+  console.warn(
+    `[gen-sitemap] WARNING: ${unregistered.length} article(s) have an unregistered ` +
+    `categoryKey and were OMITTED from the noscript directory: ` +
+    unregistered.map((a) => `${a.id}(${a.categoryKey})`).join(", ")
+  );
+}
+
 const noscriptBlock =
   `<noscript>\n` +
   `  <nav class="seo-index" aria-label="สารบัญบทความทั้งหมด">\n` +
