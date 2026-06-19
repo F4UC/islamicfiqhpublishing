@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ศพที่สังคมร่วมกันเขียนบทจบ — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="เรื่องราวของชัยค์ตะกีย์ อีซา นักวิชาการตาบอดแห่งดามัสกัสที่สังคมตัดสินจนสิ้นหวัง และบทเรียนแห่งความเมตตาจากอบู ชามะฮ์ และอิบนุลก็อยยิม">
+<meta name="keywords" content="มุมพักใจ, ตะเศาวุฟ, อบู ชามะฮ์, อิบนุ กะษีร, อัซซะฮะบีย์, ความเมตตา, การตัดสินสังคม, ดามัสกัส">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ศพที่สังคมร่วมกันเขียนบทจบ — Islamic Fiqh Publishing">
+<meta property="og:description" content="เมื่อคำพูดของสังคมกลายเป็นเชือกที่ผลักผู้คนสู่ความสิ้นหวัง บทสะท้อนจากเรื่องราวของชัยค์ตะกีย์ อีซา แห่งดามัสกัส">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/reflections/society-and-the-final-chapter">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/reflections/society-and-the-final-chapter">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ศพที่สังคมร่วมกันเขียนบทจบ",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/reflections/society-and-the-final-chapter.html"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="society-and-the-final-chapter">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/reflections.html" class="article-feature-eyebrow">มุมพักใจ</a>
+      <h1 class="article-feature-title">ศพที่สังคมร่วมกันเขียนบทจบ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในสังคมที่ผู้คนต่างสวดภาวนาให้ตนเอง ‘ปลอดภัยจากไฟนรก’ มีใครบ้างที่รู้ตัวว่า คำพูดของตนต่างหาก…คือไฟที่ผลักเพื่อนมนุษย์ให้กระโดดลงไป</p>
+
+      <p>เช้าวันศุกร์ที่ 7 เดือนซุลกิอ์ดะฮ์ ปีฮิจเราะฮ์ศักราช 602 (ค.ศ. 1205) ผู้คนในดามัสกัสตื่นมาพบร่างของนักวิชาการตาบอดคนหนึ่ง ซึ่งชายคนนั้นคือ ชัยค์ตะกีย์ อีซา บิน ยูซุฟ บิน อะห์หมัด อัลอิรอกีย์ นักวิชาการศาสนาผู้ที่ -เคยเป็น- ที่เคารพรัก และยังเป็นผู้พิการทางสายตา ท่านถูกแขวนคออยู่ที่หอคอยข้างมัสยิดอุมาวีย์ พร้อมเสียงซุบซิบที่ดังยิ่งกว่าเสียงซิกิร ชายผู้นี้ไม่ได้ตายเพราะไร้ศรัทธา แต่เพราะเขาถูกทิ้งให้เผชิญสังคมที่มีศรัทธา แต่ขาดความเมตตา…</p>
+
+      <h2 class="article-h2">ชัยค์ตะกีย์ อีซา ผู้เป็นที่เคารพแห่งดามัสกัส</h2>
+
+      <p>ชัยค์อีซาเป็นทั้งนักวิชาการและมุฟตีย์ (ผู้ที่ให้คำปรึกษาด้านศาสนาแก่ผู้คน) ของสถาบันการศึกษาอัลอะมีนียะฮ์ ซึ่งตั้งอยู่ใกล้ประตูอัซซิยาดะฮ์ ของมัสยิดอัลอุมะวีย์ ในนครดามัสกัส ท่านเป็นผู้สอนและให้คำวินิจฉัยศาสนา (ฟัตวา) ตามแนวทางของอิหม่ามอัชชาฟิอีย์ ท่านเป็นที่ยอมรับในฐานะผู้เชี่ยวชาญด้านนิติศาสตร์อิสลาม (ฟิกห์) และมีความรู้รอบด้านในศาสตร์แขนงต่างๆ</p>
+
+      <p>นอกจากนี้ ท่านยังเป็นที่รู้จักในด้านความเคร่งครัดในศาสนา (วะเราะอ์) มีความประพฤติที่ดี และมีคุณธรรมอันสูงส่ง</p>
+
+      <p>ท่านอิหม่ามอบู ชามะฮ์ อัลมักดิซีย์ ได้กล่าวถึงท่านในหนังสือ “อัรเราฎอตาน ฟี อัคบาร อัดเดาละตัยน์” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكان ضريرا عفيفا فقيها مفتيا شافعيا بالمدرسة الأمينية</blockquote>
+      <p class="ar-translation">“ท่านเป็นผู้พิการทางสายตา แต่มีจิตใจที่บริสุทธิ์ เป็นนักนิติศาสตร์และมุฟตีย์ตามแนวทางของอิหม่ามอัชชาฟิอีย์ ประจำสถาบันการศึกษาอัลอะมีนียะฮ์”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>ขณะเดียวกันท่านอิบนุ กอฎีย์ ชุฮบะฮ์ ได้กล่าวถึงท่านว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كان فقيها عارفا بالمذهب مفننا نبيلا</blockquote>
+      <p class="ar-translation">“ท่านเป็นผู้รอบรู้ในศาสตร์ของมัสฮับ (อัชชาฟิอีย์) มีความเชี่ยวชาญในวิชาการ และเป็นบุคคลที่มีความสามารถและเกียรติคุณ”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>ข่าวการจากไปของท่านเป็นที่สะเทือนใจอย่างยิ่งในหมู่ชาวดามัสกัส เนื่องจากท่านเป็นบุคคลที่ได้รับความเคารพอย่างสูง และมีบทบาทสำคัญในแวดวงวิชาการศาสนา</p>
+
+      <h2 class="article-h2">บททดสอบที่นำไปสู่โศกนาฏกรรม</h2>
+
+      <p>เท้าความก่อนวันจากไปของท่าน ไม่กี่วันก่อนวันที่ 7 เดือนซุลเกาะดะฮ์ ฮ.ศ. 602 ชัยค์ตะกีย์ (ขออัลลอฮ์ทรงเมตตาต่อท่าน) ได้ตรวจสอบทรัพย์สินของตนและพบว่าเงินของท่านได้หายไป ท่านจึงสงสัยว่าผู้ที่ขโมยไปอาจเป็นชายหนุ่มคนหนึ่งที่เป็นลูกศิษย์ของท่าน ผู้ที่มักจะอ่านหนังสือกับท่านและพาท่านกลับบ้าน รวมถึงช่วยพาท่านไปทำธุระต่างๆ</p>
+
+      <p>ท่านอบู ชามะฮ์ได้เล่าไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكان يسكن في أحد بيوت منارة الجامع الغربيه وكان ابتلى بأخذ مال له من بيته وأتهم شخصا كان يقرأ عليه ويطلع معه إلى البيت يقضي حاجته ويقوده من المدرسة إلى البيت ومن البيت إلى المدرسة فأنكر الشخص المتهم ذلك وتعصب له أقوام عند نائب البلد وواليها فوقع الناس في عرضه من اتهامه من ليس من أهل التهم ومن كونه جمع ذلك المال وهو وحيد غريب ونسبوه إلى أنه غير صادق فيما ادعاه فزاد عليه الهم من ضياع ماله والوقوع في عرضه ففعل بنفسه ما فعل وبلغني أن جماعة المتفقهة امتنعوا من الصلاة عليه وقالوا قتل نفسه فتقدم شيخنا فخر الدين بن عساكر فصلى عليه فاقتدى الناس به</blockquote>
+      <p class="ar-translation"><span class="attribution">อบู ชามะฮ์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>“เขาเคยอาศัยอยู่ในบ้านหลังหนึ่งของหอคอยทางด้านตะวันตกของมัสยิดอุมาวีย์ และได้เผชิญกับบททดสอบอันหนักหน่วง เมื่อทรัพย์สินของท่านถูกขโมยไปจากบ้าน เขาได้กล่าวหาชายคนหนึ่งซึ่งเคยเรียนกับเขาและมักจะขึ้นไปที่บ้านกับเขาเพื่อช่วยอำนวยความสะดวก เช่น พาเขาไปทำธุระ และคอยนำทางพาท่านเดินไปกลับระหว่างบ้านและสถาบัน เมื่อชายหนุ่มถูกกล่าวหา เขาก็ได้ปฏิเสธอย่างหนักแน่น และได้รับการสนับสนุนจากกลุ่มคนบางกลุ่มที่เข้าข้างเขา และได้มีการไปแจ้งเรื่องต่อรองผู้ว่าการเมืองและเจ้าหน้าที่ให้มาตรวจสอบเรื่องดังกล่าว”</p>
+
+      <p>จากเหตุการณ์นี้ ผู้คนจึงเริ่มพูดถึงชัยค์อัตตะกีย์ในทางเสียหาย บ้างกล่าวว่าท่านกล่าวหาโดยไม่มีมูล บ้างตั้งข้อสงสัยว่าชายตาบอดและไม่มีครอบครัวเช่นท่าน จะมีทรัพย์สินมากมายได้อย่างไร? ท่านชัยค์ตะกีย์จึงโดนกล่าวหาว่าท่านเป็นผู้โกหก</p>
+
+      <p>เหตุการณ์นี้ทำให้เขาได้รับความทุกข์ใจยิ่งขึ้น ทั้งจากการสูญเสียทรัพย์สินและการถูกดูหมิ่นชื่อเสียง จนในที่สุดเขาได้กระทำกับตนเองในสิ่งที่เขาทำ (หมายถึงฆ่าตัวตาย)</p>
+
+      <p>ข้าพเจ้าได้ยินมาว่า “กลุ่มผู้ศึกษาศาสนา” (อัลมุตะฟักกิฮะฮ์) ปฏิเสธที่จะละหมาดญะนาซะฮ์ให้กับท่าน โดยให้เหตุผลว่า “เขาฆ่าตัวตาย” จนกระทั่งอาจารย์ของเรา ชัยค์ฟัครุดดีน อิบนุ อะซากิร (ขออัลลอฮ์ทรงเมตตาท่าน) ได้ก้าวออกมานำละหมาดให้กับท่านเอง และเมื่อผู้คนเห็นเช่นนั้น พวกเขาก็ปฏิบัติตามและเข้าร่วมละหมาดญะนาซะฮ์เพื่อชัยค์อัตตะกีย์</p>
+
+      <p>เหตุการณ์นี้สร้างความทุกข์ให้กับชัยค์ตะกีย์เป็นอย่างมาก นอกจากจะต้องสูญเสียทรัพย์สินของตนแล้ว ท่านยังต้องเผชิญกับการถูกใส่ร้ายในเกียรติของตนเอง ทำให้ภาระความทุกข์ถาโถมเข้าใส่ท่านอย่างหนัก จนมีความเป็นไปได้อย่างสูงว่าเหตุการณ์อันรุนแรงเช่นนี้ มันทำให้ชัยค์ตะกีย์กลายเป็นโรคซึมเศร้า</p>
+
+      <p>ท่านอิบนุ กะษีรได้เล่าว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأتهم الشيخ عيسى هذا بأنه يلوط به ولم يكن يظن ان عنده شيئا من المال فضاع المال وأتهم عرضه فأصبح يوم الجمعة السادس من ذي القعدة مشنوقا ببيته من المنارة الغربية</blockquote>
+      <p class="ar-translation"><span class="attribution">อิบนุ กะษีร เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>“ชัยค์อีซาถูกกล่าวหาว่ามีพฤติกรรมผิดศีลธรรมทางเพศกับชายหนุ่มคนนั้น อีกทั้งผู้คนส่วนใหญ่ไม่เชื่อว่าท่านมีทรัพย์สินมากพอที่จะถูกขโมยไป พวกเขาจึงตั้งคำถามว่า “เขาจะสะสมทรัพย์สินได้อย่างไร ทั้งที่เขาเป็นคนตาบอดและไม่มีครอบครัวอยู่ด้วย?””<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+
+      <p>ด้วยเหตุนี้ นอกจากจะสูญเสียทรัพย์สินของตนแล้ว ท่านยังถูกใส่ร้ายในเกียรติของตัวเอง ความทุกข์ระทมได้ถาโถมเข้าสู่หัวใจของท่านอย่างหนัก</p>
+
+      <p>กระทั่งถึงรุ่งเช้าวันศุกร์ที่ 6 เดือนซุลกิอ์ดะฮ์ (ผู้คนในดามัสกัสต้องตื่นขึ้นมาพบกับข่าวสะเทือนใจ) ท่านถูกพบเป็นศพในบ้านของท่านเอง บริเวณหอคอยฝั่งตะวันตกของมัสยิดอุมาวีย์ ร่างของท่านถูกแขวนคอ (ทิ้งไว้เพียงเรื่องราวอันเศร้าสลดที่สะท้อนถึงความโหดร้ายของสังคมและความเจ็บปวดของผู้ถูกใส่ร้าย)</p>
+
+      <p>ท่านอิหม่ามอัซซะฮะบีย์ได้เล่าไว้เช่นกันว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وفيها توفي التقي الأعمى مدرس الأمينية وجد مشنوقا بالمنارة الغربية امتحن بأخذ ماله فاتهم به قائده وأحرق بيته فأهلك نفسه ودرس بعده جمال الدين المصري وكيل بيت المال انته</blockquote>
+      <p class="ar-translation"><span class="attribution">อัซซะฮะบีย์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>“ในปีนี้เอง ชัยค์อัตตะกีย์ อัลอะอ์มา ซึ่งเป็นอาจารย์ประจำสถาบันอัลอะมีนียะฮ์ ได้เสียชีวิตลง และถูกพบว่าเสียชีวิตในสภาพที่ถูกแขวนคออยู่ที่หอคอยฝั่งตะวันตกของมัสยิดอุมาวีย์ ท่านถูกทดสอบด้วยเหตุการณ์การปล้นทรัพย์สินของตนเอง ท่านจึงสงสัยว่าเป็นลูกศิษย์ที่เป็นคนนำทางให้แก่ท่าน แต่แล้วบ้านของท่านก็ถูกเผาทำลาย ทำให้ท่านสิ้นหวังและจบชีวิตตนเอง หลังจากการจากไปของท่านชัยค์ญะมาลุดดีน อัลมิศรีย์ ซึ่งดำรงตำแหน่ง ผู้ดูแลคลังสมบัติของรัฐได้เข้ามารับหน้าที่สอนแทน”<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+
+      <h2 class="article-h2">จุดยืนของอิบนุ อะซากิร และคำปลอบโยนของอบู ชามะฮ์</h2>
+
+      <p>เมื่อข่าวได้แพร่กระจายออกไป ผู้คนส่วนใหญ่ลังเลที่จะละหมาดญะนาซะฮ์ให้กับท่าน เนื่องจากเห็นว่าท่านได้ปลิดชีวิตตัวเอง ซึ่งในบรรดาผู้ที่ปฏิเสธการละหมาดให้กับท่าน มี “กลุ่มผู้ศึกษาศาสนา” หรือที่อิหม่ามอบู ชามะฮ์เรียกว่า “อัลมุตะฟักกิฮะฮ์” (<span class="ar-inline" lang="ar" dir="rtl">المتفقهة</span>) ซึ่งพวกเขากล่าวว่า “เขาฆ่าตัวตาย เราจะไม่ละหมาดให้เขา!”</p>
+
+      <p>อย่างไรก็ตามท่านอิหม่ามฟัครุดดีน อิบนุ อะซากิร (ขออัลลอฮ์ทรงเมตตาและโปรดปรานท่าน) ซึ่งเป็นผู้นำของมัสฮับชาฟิอีย์ในชาม (ซีเรียในปัจจุบัน) ในยุคนั้น ได้ก้าวออกมาเป็นผู้นำละหมาดญะนาซะฮ์ให้กับชัยค์ตะกีย์ อีซาด้วยตัวเอง เมื่อลูกศิษย์และผู้คนเห็นเช่นนั้น พวกเขาก็ปฏิบัติตามและเข้าร่วมละหมาดให้กับท่านด้วย</p>
+
+      <p>ท่านอบู ชามะฮ์ (ขออัลลอฮ์ทรงเมตตาท่าน) กล่าวไว้หลังจากเล่าเหตุการณ์นี้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقد وقع مثل هذا لجماعة وفعلوا فعله أي الانتحار وجرى لي أخت هذه القضية وعصمني الله سبحانه بفضله</blockquote>
+      <p class="ar-translation"><span class="attribution">อบู ชามะฮ์ เราะหิมะฮุลลอฮ์ กล่าวว่า:</span>“เรื่องราวเช่นนี้เคยเกิดขึ้นกับคนกลุ่มหนึ่ง และพวกเขาก็ได้ทำสิ่งเดียวกัน (หมายถึงการฆ่าตัวตาย) และข้าพเจ้าเองก็เคยเผชิญสถานการณ์ที่คล้ายคลึงกันนี้ แต่อัลลอฮ์ได้คุ้มครองข้าพเจ้าด้วยความเมตตาของพระองค์”</p>
+
+      <p>ถ้อยคำของอิหม่ามอบู ชามะฮ์นี้ นับเป็นหนึ่งในข้อความที่ลึกซึ้งที่สุดที่ซึ่งแฝงไว้ด้วยบทเรียนมากมาย</p>
+
+      <h2 class="article-h2">บทเรียนสามประการจากถ้อยคำของอบู ชามะฮ์</h2>
+
+      <p><strong>ประการแรก:</strong> คำพูดนี้เป็นดั่งการปลอบโยนแก่ชัยค์อัตตะกีย์ อีซา แม้หลังจากที่ท่านล่วงลับไปแล้ว เพราะเมื่อมีผู้อ่านเรื่องราวของท่าน อาจมีบางคนคิดว่านี่เป็นเหตุการณ์ที่เกิดขึ้นเพียงลำพังและอาจกล่าวถึงท่านในทางที่ไม่เหมาะสม แต่ท่านอบู ชามะฮ์กลับชี้ให้เห็นว่า กรณีนี้ไม่ใช่เรื่องที่เกิดขึ้นกับเขาเพียงคนเดียว แต่เคยเกิดขึ้นกับผู้อื่นมาก่อน และพวกเขาก็ได้ทำเช่นเดียวกัน</p>
+
+      <p><strong>ประการที่สอง:</strong> ท่านอิหม่ามอบู ชามะฮ์มิได้รู้สึกละอายที่จะเล่าเหตุการณ์ที่เกิดขึ้นภายในมัสยิดอุมาวีย์ ท่านบันทึกมันตามความเป็นจริง พร้อมทั้งกล่าวว่ามีเหตุการณ์เช่นนี้เกิดขึ้นซ้ำแล้วซ้ำเล่า สิ่งนี้สะท้อนให้เห็นถึงความเป็นนักประวัติศาสตร์ที่แท้จริง เพราะหน้าที่ของนักประวัติศาสตร์คือการบันทึกข้อเท็จจริง ไม่ใช่สร้างภาพที่สวยงามเกินจริง ประวัติศาสตร์อิสลามนั้นมีความยิ่งใหญ่สูงส่งก็จริง แต่ก็ยังเป็นประวัติศาสตร์ของมนุษย์ ซึ่งมีทั้งช่วงเวลาแห่งความแข็งแกร่ง ความยุติธรรม และคุณงามความดี เช่นเดียวกับที่มีช่วงเวลาแห่งความอ่อนแอ ความอยุติธรรม และความกดขี่ข่มเหง</p>
+
+      <p>นี่คือสิ่งที่ทำให้ประวัติศาสตร์อิสลามงดงาม-เพราะมันสะท้อนทั้งความรุ่งเรืองและความท้าทายของมนุษย์อย่างแท้จริง</p>
+
+      <p><strong>ประการที่สาม:</strong> อย่าได้คิดว่าตัวเองดีกว่าชัยค์ตะกีย์ อีซาที่ท่านคิดฆ่าตัวตาย</p>
+
+      <p>ท่านอบู ชามะฮ์ในช่วงท้ายของคำพูดของท่าน ได้เปิดเผยว่า ตัวท่านเองก็เคยเผชิญเหตุการณ์ที่คล้ายกันกับสิ่งที่เกิดขึ้นกับชัยค์อีซา ท่านเองก็เคยถูกกล่าวหา ถูกใส่ร้ายป้ายสี และผู้คนก็กล่าวหาท่านว่าโกหก!</p>
+
+      <p>แต่แล้วท่านกล่าวว่า “และพระองค์อัลลอฮ์ได้คุ้มครองข้าพเจ้าด้วยความเมตตาของพระองค์” นั่นหมายความว่า หากปราศจากความเมตตาของพระองค์อัลลอฮ์ ท่านเองอาจจะตัดสินใจทำสิ่งเดียวกับที่ชัยค์อีซาได้ทำ!</p>
+
+      <p>หมายถึงคือ สิ่งที่ปกป้องข้าพเจ้าไม่ใช่ความรู้ที่มากมาย ไม่ใช่สถานะทางวิชาการ และท่านอบู ชามะฮ์ไม่อาจกล่าวได้ว่าตนเองดีกว่าชัยค์อีซา ดังที่ท่านนบีมุฮัมมัด ﷺ เคยกล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">لاَ يَنْبَغِي لِعَبْدٍ أَنْ يَقُولَ أَنَا خَيْرٌ مِنْ يُونُسَ بْنِ مَتَّى</p>
+      </div>
+      <p>ท่านนบีมุฮัมมัด ﷺ กล่าวว่า: “ไม่ควรที่บ่าวคนใดจะกล่าวว่า ฉันดีกว่ายูนุส บุตรของมัตตา” (บันทึกโดยอัลบุคอรีย์และมุสลิม)<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup> และในอีกสำนวนหนึ่งมีการระบุไว้ว่า “ไม่ควรที่ศาสดาคนใดจะกล่าวเช่นนี้”</p>
+
+      <p>นี่เป็นบทเรียนอันยิ่งใหญ่ที่เตือนใจเราว่า อย่าได้ดูแคลนผู้ที่ล้มลงในความอ่อนแอ เพราะหากไม่ใช่เพราะความเมตตาของอัลลอฮ์ เราเองอาจจะล้มลงเช่นเดียวกับพวกเขา</p>
+
+      <p>นอกจากนี้ เราเองก็ไม่ควรลืมจุดยืนของอิหม่ามฟัครุดดีน อิบนุ อะซากิร ผู้นำในมัสฮับชาฟิอีย์แห่งดามัสกัส ท่านไม่ได้ยึดติดกับสำนวนข้อความในตำราฟิกฮ์เกี่ยวกับการละหมาดให้แก่ผู้ที่กระทำบาปใหญ่ และไม่ได้หวั่นไหวต่อเสียงคัดค้านของ “นักศึกษาศาสนา” และประชาชนทั่วไปที่ปฏิเสธการละหมาดให้แก่ชัยค์อีซา แต่ท่านกลับตัดสินใจนำละหมาดให้เองโดยไม่ลังเล</p>
+
+      <p>สิ่งนี้สะท้อนให้เห็นว่าท่านอิหม่ามอบู ชามะฮ์เอง ก็สนับสนุนจุดยืนของท่านอิหม่ามฟัครุดดีน อิบนุ อะซากิร เพราะท่านใช้คำว่า “อัลมุตะฟักกิฮะฮ์” เพื่อเรียกกลุ่มที่ปฏิเสธการละหมาดให้แก่ชัยค์อีซา ซึ่งคำนี้มักใช้ในเชิงลดทอนความสามารถทางฟิกฮ์ เป็นการบ่งบอกเป็นนัยว่า ‘พวกเขายังขาดความลึกซึ้งทางวิชาการ’</p>
+
+      <h2 class="article-h2">เมื่อ 800 ปีผ่านไป เชือกเส้นเดิมยังคงอยู่</h2>
+
+      <p>แต่กระนั้นเมื่อ 800 ปีผ่านไป ชายอีกคนหนึ่งตัดสินใจจบชีวิตที่โรงพยาบาลยะลา พวกเขาอาจห่างกันคนละยุค…แต่มีสิ่งหนึ่งที่เหมือนกัน:</p>
+
+      <p class="thai-quote">“สังคมไม่เคยฆ่าใครด้วยมือ แต่ใช้คำพูด…แทนเชือกเสมอ”</p>
+
+      <p>การเชื่อมโยงระหว่างเรื่องราวของชัยค์ตะกีย์ อีซา บิน ยูซุฟ ในศตวรรษที่ 13 กับเหตุการณ์ล่าสุดที่ชายวัย 28 ปี กระโดดตึกโรงพยาบาลยะลาเสียชีวิต สามารถสะท้อนถึงบทบาทของสังคมในการผลักดันบุคคลให้เข้าสู่ภาวะสิ้นหวังและตัดสินใจจบชีวิตตนเอง</p>
+
+      <p>ในกรณีของชัยค์อีซา ท่านเป็นนักวิชาการศาสนาที่ได้รับความเคารพ แต่เมื่อทรัพย์สินของท่านสูญหายและท่านสงสัยว่าลูกศิษย์เป็นผู้ขโมย ท่านกลับถูกสังคมกล่าวหาและดูหมิ่น ดูแคลน จนท่านรู้สึกหมดหวังและตัดสินใจจบชีวิตตนเอง</p>
+
+      <p>เหตุการณ์นี้สะท้อนให้เห็นถึงความรุนแรงของการตัดสินและการใส่ร้ายจากสังคม ซึ่งสามารถทำลายจิตใจของบุคคลได้อย่างร้ายแรง</p>
+
+      <p>ในกรณีของชายคนหนึ่ง ที่กระโดดตึกโรงพยาบาลยะลา แม้จะยังไม่ทราบแรงจูงใจที่แน่ชัด แต่เหตุการณ์นี้ก็สะท้อนถึงความทุกข์ทรมานภายในจิตใจที่อาจเกิดจากแรงกดดันทางสังคมหรือปัญหาส่วนตัวที่ไม่ได้รับการช่วยเหลืออย่างเหมาะสม</p>
+
+      <p>ทั้งสองเหตุการณ์นี้ชี้ให้เห็นถึงความสำคัญของการสร้างสังคมที่มีความเข้าใจและเมตตา การให้การสนับสนุนทางจิตใจ และการหลีกเลี่ยงการตัดสินผู้อื่นโดยไม่เข้าใจสถานการณ์อย่างแท้จริง</p>
+
+      <p>การเรียนรู้จากอดีตและปัจจุบันสามารถช่วยให้เราตระหนักถึงบทบาทของตนเองในสังคม และพยายามสร้างสภาพแวดล้อมที่เอื้ออาทรและสนับสนุนซึ่งกันและกัน เพื่อลดโอกาสที่บุคคลจะรู้สึกโดดเดี่ยวและสิ้นหวังจนตัดสินใจจบชีวิตตนเอง</p>
+
+      <p>ขออัลลอฮ์ทรงเมตตาชัยค์อีซา และชายหนุ่มผู้จากไปในยะลา</p>
+
+      <p>ขอพระองค์ทรงอภัยในสิ่งที่เขาทำลงไป และอภัยให้เราในสิ่งที่เราไม่ได้ทำ</p>
+
+      <p>เพราะท้ายที่สุดแล้ว คนที่จากไปอาจไม่ใช่แค่ผู้ตาย…แต่คือบางสิ่งในจิตวิญญาณของสังคมของเราบางส่วนที่ตายไปพร้อมกับเขา</p>
+
+      <h2 class="article-h2">สรุป</h2>
+      <ol class="article-summary">
+        <li><strong>คำพูดของสังคมคือเชือกที่มองไม่เห็น:</strong> ชัยค์ตะกีย์ อีซา นักวิชาการตาบอดผู้เป็นที่เคารพแห่งดามัสกัส มิได้สิ้นใจเพราะไร้ศรัทธา แต่เพราะถูกสังคมที่มีศรัทธาแต่ขาดความเมตตา ตัดสินและใส่ร้ายจนสิ้นหวัง</li>
+        <li><strong>นักประวัติศาสตร์ที่แท้จริงบันทึกความจริง:</strong> อบู ชามะฮ์ มิได้ปกปิดโศกนาฏกรรมที่เกิดขึ้นในมัสยิดอุมาวีย์ ท่านบันทึกไว้ตามจริง เพราะประวัติศาสตร์อิสลามคือประวัติศาสตร์ของมนุษย์ ที่มีทั้งความรุ่งเรืองและความอ่อนแอ</li>
+        <li><strong>อย่าคิดว่าตนดีกว่าผู้ที่ล้มลง:</strong> อบู ชามะฮ์ ยอมรับว่าหากปราศจากความเมตตาของอัลลอฮ์ ท่านเองก็อาจจบลงเช่นเดียวกัน ดังวจนะที่ว่าไม่ควรที่บ่าวคนใดจะอ้างว่าตนดีกว่ายูนุส บุตรของมัตตา</li>
+        <li><strong>ความเมตตาเหนือการยึดติดตำรา:</strong> ฟัครุดดีน อิบนุ อะซากิร ก้าวออกมานำละหมาดญะนาซะฮ์โดยไม่หวั่นไหวต่อเสียงคัดค้าน เป็นแบบอย่างของผู้นำที่เลือกความเมตตาและปัญญา เหนือการตัดสินอย่างแข็งกระด้าง</li>
+        <li><strong>บทเรียนข้ามกาลเวลา:</strong> จากดามัสกัสในศตวรรษที่ 13 ถึงยะลาในวันนี้ สังคมยังคงมีบทบาทในการผลักผู้คนสู่ความสิ้นหวัง การสร้างสังคมแห่งความเข้าใจและเมตตาคือหน้าที่ของเราทุกคน</li>
+      </ol>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ศพที่สังคมร่วมกันเขียนบทจบ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/reflections/society-and-the-final-chapter.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">أبو شامة المقدسي، عبد الرحمن بن إسماعيل. الروضتين في أخبار الدولتين النورية والصلاحية. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">ابن قاضي شهبة، أبو بكر بن أحمد. طبقات الشافعية. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">ابن كثير، إسماعيل بن عمر. البداية والنهاية. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">الذهبي، شمس الدين محمد بن أحمد. تاريخ الإسلام ووفيات المشاهير والأعلام. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">أخرجه البخاري في صحيح البخاري، رقم 3416، ومسلم في صحيح مسلم، رقم 2377، من حديث ابن عباس رضي الله عنهما. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>
