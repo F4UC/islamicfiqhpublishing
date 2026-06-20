@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>มายาคติว่าด้วยอัลฆอซาลี — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="มายาคติที่รายล้อมอบู ฮามิด อัลฆอซาลี ทั้งข้อกล่าวหาว่าเขาฆ่าปรัชญาในโลกตะวันออก และว่าเขาไม่ใช่นักปรัชญา พร้อมเสียงยืนยันจากนักบูรพคดีศึกษา">
+<meta name="keywords" content="อัลฆอซาลี, ตะฮาฟุต อัลฟะลาซิฟะฮ์, ปรัชญาอิสลาม, มายาคติ, นักบูรพคดีศึกษา, กะลาม">
+<meta name="author" content="มัรกัส อัลอิมาม อัลอัชอะรีย์">
+
+<meta property="og:title" content="มายาคติว่าด้วยอัลฆอซาลี — Islamic Fiqh Publishing">
+<meta property="og:description" content="อบู ฮามิด อัลฆอซาลี คือผู้ปล่อยหมัดน็อกเอาต์ใส่ปรัชญาจริงหรือ บทวิเคราะห์มายาคติที่ผูกติดกับ หุจญะตุลอิสลาม ผู้นี้">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/kalam/myth-and-the-rational-mind">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/kalam/myth-and-the-rational-mind">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "มายาคติว่าด้วยอัลฆอซาลี",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "มัรกัส อัลอิมาม อัลอัชอะรีย์" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/kalam/myth-and-the-rational-mind"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="myth-and-the-rational-mind">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/kalam.html" class="article-feature-eyebrow">กะลาม / ฟิกฮ์</a>
+      <h1 class="article-feature-title">มายาคติว่าด้วยอบู ฮามิด อัลฆอซาลี</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">“เขาคือ ‘หุจญะตุลอิสลาม’ ที่จะนำพาทุกคนไปสู่ดินแดนแห่งสันติสุข...มหาบุรุษผู้รวบรวมสรรพวิชาที่กระจัดกระจายให้เป็นหนึ่งเดียว ผู้เชี่ยวชาญทั้งในศาสตร์ที่สืบทอดกันมา (อัลมันกูล) และศาสตร์ที่เกิดจากความเข้าใจ (อัลมะอ์กูล)...วีรบุรุษผู้ดับไฟแห่งอุตริกรรมที่ร้อนแรงเกินกว่าน้ำมือของเหล่านักรบจะสัมผัสได้...</p>
+
+      <p>เขาปรากฏตัวขึ้นในยุคที่ผู้คนต้องการใครสักคนมาหักล้างคำโป้ปดของเหล่านักปรัชญา...ยิ่งกว่ายุคมืดมิดที่โหยหาแสงสว่างจากดวงดาวบนฟากฟ้า และแร้นแค้นยิ่งกว่าผืนดินที่แห้งผากซึ่งรอคอยหยาดน้ำฝนจากเบื้องบน...</p>
+
+      <p>เขาไม่เคยหยุดที่จะต่อสู้เพื่อศาสนาอันบริสุทธิ์ด้วยวาทศิลป์อันเฉียบแหลม ปกป้องอาณาเขตแห่งศรัทธา โดยที่คมดาบของเขามิเคยต้องเปื้อนเลือดของผู้รุกราน...จนกระทั่งศาสนาได้กลับมามีรากฐานที่มั่นคงอีกครั้ง และม่านหมอกแห่งความคลุมเครือทั้งหลายก็ได้มลายหายไปสิ้น”</p>
+
+      <p>นี่คือภาพของอบู ฮามิด อัลฆอซาลีที่ถูกวาดไว้โดย ตาญุดดีน อัสซุบกี นักประวัติศาสตร์ชาวชาฟิอีย์ อัชอะรีย์ ภาพของนักต่อสู้เพื่อศาสนาที่ผูกติดอยู่กับการเปิดโปงความจอมปลอมของเหล่านักปรัชญา ซึ่งเปรียบได้ดั่ง “ไฟแห่งอุตริกรรม” ในยุคสมัยของท่าน</p>
+
+      <p>แต่ตัวตนของอัลฆอซาลีนั้นซับซ้อนกว่าภาพวาดที่สวยหรูนั้นมาก...อัตลักษณ์ของท่านโดดเด่นไปด้วยความปั่นป่วน, ความย้อนแย้ง, ความขัดแย้งในตัวเอง และเต็มไปด้วยปริศนามากมาย ตัวของท่านอบู ฮามิด เองก็คือ “ปริศนา” ก้อนมหึมาตลอดทั้งช่วงชีวิตของท่าน แต่เชื่อหรือไม่ว่า...คุณสมบัติที่ดูเหมือนจะเป็น ‘จุดด้อย’ เหล่านี้เอง ที่หลอมรวมกันขึ้นเป็นความยิ่งใหญ่ของอัลฆอซาลี มันคือเอกลักษณ์ที่ปรากฏอยู่เสมอในทุกสิ่งที่เกี่ยวข้องกับตัวท่าน ไม่ว่าจะเป็นในฐานะระบบคิด, วิถีปฏิบัติ หรือประสบการณ์ ทั้งในฐานะผู้รับอิทธิพลและผู้ส่งอิทธิพล...ไม่ว่าจะในวงการปรัชญา, ตะเซาวุฟ หรือศาสตร์แขนงอื่นๆ ก็ตาม</p>
+
+      <p>บารอน คาร์รา เดอ โวซ์ (Baron Carra de Vaux) นักบูรพคดีศึกษาท่านหนึ่งเคยกล่าวไว้ว่า อัลฆอซาลี สามารถก้าวขึ้นสู่จุดสูงสุดบนยอดเขาแห่งประวัติศาสตร์มนุษยชาติได้ ก็เพราะ...หนึ่ง เขาคือ ‘สุดยอดนักคิด’ และสอง เขาคือ ‘นักศึกษาหาความรู้ชั้นแนวหน้า’ เขาพยายามอย่างสุดความสามารถ ด้วยความจริงใจ, ด้วยความมุมานะ และด้วยความพากเพียรทั้งหมดที่มี...ที่จะเรียนรู้ทุกสิ่งทุกอย่าง เขาศึกษาแนวคิดของนักปรัชญา, ผู้ปฏิเสธพระเจ้า, พวกนอกรีต, นักสร้างนวัตกรรมทางศาสนา, ซุนนีย์, ชีอะฮ์, บาฏินียะฮ์, นักนิติศาสตร์, นักเทววิทยา และนักตะเซาวุฟ</p>
+
+      <p>เขาคือตัวแทนของสติปัญญาที่ไม่เคยหยุดนิ่ง นักแสวงหาผู้ต้องการเติมเต็มความสมบูรณ์ของตัวเองที่พร้อมจะเคาะประตูทุกบานที่เขาจินตนาการว่าจะมีแสงสว่างแห่งความรู้รออยู่</p>
+
+      <p>ด้วยเหตุนี้เอง...ท่านอบู ฮามิด (ขออัลลอฮ์ทรงเมตตา) จึงเดินเข้าสู่สังเวียนของเหล่านักปรัชญาพร้อมกับอาวุธของนักอุศูลุดดีนและได้เปิดโปง “ความล้มเหลวทางตรรกะของพวกเขา” (จึงเป็นที่มาของชื่อตำราว่า ‘ตะฮาฟุต’) ซึ่งถือเป็น ‘อาชญากรรม’ ที่นักปรัชญายุคนี้ไม่มีวันให้อภัย และมองว่าเขาคือ สัญลักษณ์แห่งยุคมืดทางปัญญาในโลกอิสลาม</p>
+
+      <p>และเพราะท่านเป็นบุคคลที่มีสถานะสูงส่งถึงเพียงนี้ ความคิดเห็นเกี่ยวกับตัวท่านทั้งในอดีตและปัจจุบันจึงแตกต่างและขัดแย้งกันอย่างรุนแรง โดยเฉพาะในวงการปรัชญา มีทั้งฝ่ายที่มองว่าท่านคือ ‘นักปรัชญาตัวจริง’ และฝ่ายที่มองว่าท่านคือผู้ที่สร้าง ‘บาดแผลฉกรรจ์’ ให้กับวงการปรัชญา และสร้างความเสียหายใหญ่หลวงให้กับเหล่านักปรัชญาในโลกอิสลาม</p>
+
+      <p>แล้วเรื่องเล่าเหล่านี้จริงเท็จแค่ไหน? และจริงหรือไม่...ที่อบู ฮามิด คือผู้ที่ปล่อยหมัดน็อกเอาต์ใส่ปรัชญาจนไม่สามารถฟื้นคืนกลับมาได้อีก?</p>
+
+      <h2 class="article-h2">ยุคสมัยของอัลฆอซาลี</h2>
+
+      <p>มีสัจธรรมข้อหนึ่งที่ว่า “มนุษย์คือผลิตผลแห่งยุคสมัย” นั่นคือความจริงที่นักสังคมศาสตร์ต่างยอมรับ ดังนั้น การจะทำความเข้าใจบุคลิก ทัศนะ และความคิดเห็นของบุคคลสำคัญคนใด หรือแม้แต่มนุษย์คนใดก็ตาม ความเข้าใจนั้นจะไม่มีวันสมบูรณ์ได้เลยหากเราไม่ได้ศึกษา ‘ยุคสมัย’ ของเขา</p>
+
+      <p>ตัวอย่างเช่น หากเราต้องการจะเข้าใจจุดยืนทางการเมืองของใครสักคน เราก็จำเป็นต้องย้อนกลับไปดูว่าสภาพการเมืองในยุคของเขาเป็นอย่างไร? บ้านเมืองสงบสุขดีหรือไม่? หรือเต็มไปด้วยความขัดแย้ง? เช่นเดียวกันกับสภาพเศรษฐกิจ, วัฒนธรรม และวิชาการ ซึ่งความรุ่งเรืองหรือเสื่อมถอยของสิ่งเหล่านี้ก็มักจะขึ้นอยู่กับเสถียรภาพทางการเมืองเป็นสำคัญ</p>
+
+      <p>ดังนั้นจึงเป็นเรื่องธรรมดาที่เราจะต้องมาทำความรู้จักกับยุคสมัยของอิหม่ามอัลฆอซาลีกันแบบย่อๆ เพราะเหตุการณ์และความผันผวนต่างๆ ในยุคนั้น ย่อมฉายแสงให้เราเห็นแง่มุมทางความคิดของท่านได้อย่างไม่ต้องสงสัย</p>
+
+      <p>ยุคสมัยของอัลฆอซาลีนั้นโดดเด่นด้วยความวุ่นวายโกลาหลอย่างรุนแรง ทั้งทางการเมือง, ศาสนา และแนวคิด หนังสือและทัศนะหลายอย่างของท่านล้วนผูกติดอยู่กับความจำเป็นแห่งยุคสมัย ไม่ว่าจะเป็น ความขัดแย้งภายในราชวงศ์เซลจูก ผู้ปกครอง, การปฏิวัติของขบวนการบาฏินียะฮ์สุดโหด, ความขัดแย้งระหว่างมัสฮับซุนนีย์ด้วยกันเอง, ความบาดหมางระหว่างซุนนีย์กับชีอะฮ์ และการรุกรานของสงครามครูเสด...ทั้งหมดนี้ถาโถมเข้ามาในยุคของอิหม่ามท่านนี้</p>
+
+      <p>เพียงแค่ในปีที่ท่านลืมตาดูโลก...คอลีฟะฮ์แห่งราชวงศ์อับบาซียะฮ์ อัลกออิม บิอัมริลลาฮ์ ก็ถูกปลดออกจากตำแหน่ง และมีการอ่านคุฏบะฮ์ให้แก่อัลมุสตันศิร บิลลาฮ์ แห่งราชวงศ์อุบัยดีย์ (ฟาฏิมียะฮ์) แทน! เหตุการณ์นี้เกิดขึ้นหลังจากที่อัลบะซาซีรีย์ ก่อการปฏิวัติและยึดกรุงแบกแดดได้สำเร็จตามคำสั่งของอัลมุสตันศิร แม้ว่าคอลีฟะฮ์อัลกออิมจะพยายามต่อสู้ แต่ก็ไม่สามารถเอาชนะได้</p>
+
+      <p>นี่คือสถานการณ์ที่น่ากังวลอย่างยิ่งในยุคนั้น เพราะสำหรับชาวซุนนีย์แล้ว อาณาจักรอับบาซียะฮ์เปรียบเสมือนหัวใจที่คอยหล่อเลี้ยงพวกเขา แม้ว่า จักรวรรดิเซลจูกจะเข้ามาช่วยเหลือค้ำจุนอาณาจักรอับบาซียะฮ์ในมหานครแบกแดดและสนับสนุนแนวทางซุนนีย์ หลังจากที่เกือบล่มสลายจากอิทธิพลของราชวงศ์บูวัยฮีย์ (ชีอะฮ์) ในเปอร์เซียและอิรัก และอิทธิพลของอุบัยดีย์ (ฟาฏิมียะฮ์) ในอียิปต์และชาม...แต่แล้วจักรวรรดิเซลจูกเองก็ต้องเผชิญกับความวุ่นวายจากความขัดแย้งภายในไม่แพ้กัน</p>
+
+      <p>เรื่องเริ่มต้นจากการลอบสังหารสุลต่าน ตุฆรุล เบก โอรสของท่านคือ อัลป์ อาร์สลาน จึงขึ้นครองราชย์ต่อ แต่ก็เกิดความขัดแย้งภายในกับลูกพี่ลูกน้องของเขา กุตุลมุช บิน อิสรออีลอยู่เนืองๆ อย่างไรก็ตาม สุลต่านอัลป์ อาร์สลาน ก็เป็นผู้ปกครองที่ยุติธรรมและมีคุณูปการมากมาย อัลลอฮ์ได้ทรงให้ท่านพิชิตดินแดนต่างๆ ได้สำเร็จ การสัประยุทธ์ของท่านกับพวกไบแซนไทน์นั้นเป็นที่เลื่องลือ โดยเฉพาะอย่างยิ่งในสมรภูมิที่เคิร์ด</p>
+
+      <p>ในยุคนั้น สุลต่านมีเสนาบดีคู่ใจผู้เป็นกำลังสำคัญ นามว่า นิซอม อัลมุลก์ เขาไม่ได้เป็นเพียงเสนาบดี แต่ยังเป็นปราชญ์ผู้มีวิสัยทัศน์กว้างไกล และเป็นผู้ก่อตั้ง “สถาบันการศึกษาอันนิซอมียะฮ์” อันเลื่องชื่อ</p>
+
+      <p>และแล้วในปี ฮ.ศ. 478 เมื่อ อิมามอัลหะรอมัยน์ (อาจารย์ของอัลฆอซาลี) ได้เสียชีวิตลง อัลฆอซาลีในวัยหนุ่มที่อายุยังไม่ถึง 28 ปี ก็ได้มุ่งหน้าสู่ราชสำนักเพื่อเข้าพบเสนาบดีนิซอม อัลมุลก์ ชื่อเสียงและความรู้ความสามารถของเขาในตอนนั้นเริ่มเป็นที่ประจักษ์แล้ว</p>
+
+      <p>ราชสำนักของท่านเสนาบดีเปรียบเสมือนศูนย์รวมของเหล่าปราชญ์ เป็นที่พึ่งพิงของนักวิชาการ เวทีประลองปัญญาเกิดขึ้นได้ทุกที่ทุกเวลา แม้กระทั่งในงานศพก็ยังไม่ว่างเว้นจากการโต้วาทีในประเด็นนิติศาสตร์และเทววิทยา!</p>
+
+      <p>ณ ที่แห่งนั้นเอง...อัลฆอซาลี ได้ขึ้นเวทีโต้วาทีกับเหล่าปรมาจารย์และนักวิชาการชั้นครูต่อหน้าท่านเสนาบดี เขาโค่นคู่แข่งลงอย่างราบคาบ วาทศิลป์ของเขาเหนือกว่าทุกคน จนทุกคนต้องยอมรับในความสามารถอันเอกอุของเขา ท่านเสนาบดีรู้สึกทึ่งและชื่นชมในตัวหนุ่มน้อยคนนี้เป็นอย่างมาก จึงได้แต่งตั้งให้เขาดำรงตำแหน่งศาสตราจารย์ใหญ่แห่งนิซอมียะฮ์ ณ กรุงแบกแดด ซึ่งเป็นตำแหน่งสูงสุดที่นักวิชาการทุกคนในยุคนั้นต่างใฝ่ฝันและแข่งขันกันเพื่อให้ได้มันมา</p>
+
+      <p>อัลฆอซาลีเดินทางถึงแบกแดดในปี ฮ.ศ. 484 ขณะที่อายุเพียง 34 ปี...นับเป็นเรื่องที่หาได้ยากยิ่งที่จะมีนักวิชาการอายุน้อยเพียงนี้ได้ครองบัลลังก์ทางวิชาการที่สูงที่สุด ณ นิซอมียะฮ์ อัลฆอซาลีได้เริ่มสอน และผู้คนต่างตกตะลึงในคารมอันงดงาม, ความรู้ที่สมบูรณ์แบบ, วาทศิลป์ที่คมคาย, ประเด็นที่ลึกซึ้ง และการชี้แนะที่อ่อนโยนของเขา...จนทำให้ทุกคนต่างหลงรักเขา</p>
+
+      <p>อิบนุ กะษีร ได้บันทึกไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وفي جمادى الأولى قدم الشيخ أبو حامد الغزالي الطوسي من أصبهان إلى بغداد على تدريس النظامية بها، ولقبه نظام الملك زين الدين شرف الأئمة</blockquote>
+      <p class="ar-translation">“ในเดือนญุมาดัลอูลา ชัยค์อบู ฮามิด อัลฆอซาลี แห่งฏูส ได้เดินทางจากอิศฟาฮานมายังแบกแดด เพื่อรับตำแหน่งสอนที่นิซอมียะฮ์ และนิซอม อัลมุลก์ ได้มอบสมัญญานามให้เขาว่า ‘ซัยนุดดีน ชะเราะฟุล อะอิมมะฮ์’ (มงกุฎแห่งศาสนา เกียรติยศแห่งปวงปราชญ์)”</p>
+
+      <p>ด้านอิบนุลเญาซีย์ กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكان كلامه معسولا وذكاؤه شديدا</blockquote>
+      <p class="ar-translation">“วาจาของเขานั้นหวานราวน้ำผึ้ง และสติปัญญาก็เฉียบแหลมยิ่งนัก”</p>
+
+      <p>หลังจากสุลต่านอัลป์ อาร์สลานได้สิ้นพระชนม์ มะลิกชะฮ์ได้ขึ้นครองราชย์ต่อ พระองค์ทรงโดดเด่นด้านการมีไหวพริบ, การบริหารจัดการที่ดี และมีความเคร่งครัดในศาสนาทั้งภายนอกและภายใน ทั้งยังสร้างวีรกรรมมากมายในสนามรบ</p>
+
+      <p>แต่ท่ามกลางความวุ่นวายทางการเมือง...ภัยคุกคามมืดระลอกใหม่ก็ได้ปรากฏขึ้น นั่นคือพวกอิสมาอีลียะฮ์ บาฏินียะฮ์ องค์กรลับสุดโหดที่ลงมือสังหารนักวิชาการและเจ้าเมืองไปมากมาย แม้แต่เสนาบดีผู้ยิ่งใหญ่อย่างนิซอม อัลมุลก์ ก็ไม่รอดจากเงื้อมมือของพวกเขา เขาถูกลอบสังหาร และต่อมา ฟัครุลมุลก์ บุตรชายของเขาก็ถูกสังหารตามไป</p>
+
+      <p>กลุ่มบาฏินียะฮ์นี้เป็นพวกกระหายเลือด พวกเขามักจะลอบสังหารนักวิชาการอะฮ์ลิสซุนนะฮ์โดยเฉพาะและทุกคนที่กล้าลุกขึ้นมาต่อต้าน ซึ่งนิซอม อัลมุลก์ เองก็ได้พยายามทำทุกวิถีทางเพื่อหยุดยั้งแผนการของพวกเขา ด้วยการส่งเสริมความรู้, สนับสนุนนักวิชาการ และสร้างสถาบันการศึกษา...แต่ขบวนการอิสมาอีลียะฮ์นี้กลับขยายอิทธิพลและมีผู้สนับสนุนมากขึ้นเรื่อยๆ จนกลายเป็นองค์กรลับที่น่าเกรงขามที่ไม่มีใครกล้าต่อกร แต่จุดเปลี่ยนที่อันตรายที่สุดเกิดขึ้นในปี ฮ.ศ. 482 เมื่อฮะซัน บิน ศอบบาห์ ได้ก่อตั้งรัฐอิสมาอีลียะฮ์ นิซารียะฮ์ ขึ้นสำเร็จหลังจากยึดป้อมปราการอะละมุต ซึ่งเป็นป้อมบนภูเขากลางเทือกเขาอัลโบร์ซ ทางตอนใต้ของทะเลแคสเปียนได้</p>
+
+      <p>และนี่คือภารกิจสำคัญของอิหม่ามอัลฆอซาลี ท่านมีบทบาทอย่างยิ่งในการตอบโต้คนกลุ่มนี้และเปิดโปงความวิบัติในความเชื่อของพวกเขา โดยท่านได้ประพันธ์หนังสือเล่มสำคัญชื่อ “ฟะฎออิห์ อัลบาฏินียะฮ์ วะ ฟะฎออิล อัลมุสตัซฮิรียะฮ์” (เปิดโปงความฉาวโฉ่ของพวกบาฏินียะฮ์ และเชิดชูคุณธรรมแห่งรัฐเคาะลีฟะฮ์อัลมุสตัซฮิร) ซึ่งเขียนขึ้นตามพระบัญชาของคอลีฟะฮ์ อัลมุสตัซฮิร บิลลาฮ์นั่นเอง</p>
+
+      <p>ไม่เพียงเท่านั้น ยังมีความขัดแย้งทางมัสฮับและความเชื่อระหว่างกลุ่มต่างๆ โดยเฉพาะความขัดแย้งระหว่างซุนนีย์และชีอะฮ์ อิบนุลเญาซีย์ได้เล่าถึงเหตุการณ์นองเลือดในปี ฮ.ศ. 478 ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وفي هذا الشهر: ثارت الفتنة بين السنة والشيعة، وقتل جماعة منهم أبو الحسن بن المهتدي الخطيب، وكانت الوقعة بين جامع المنصور والقنطرة العتيقة</blockquote>
+      <p class="ar-translation">“ในเดือนนี้เองความขัดแย้งระหว่างซุนนีย์และชีอะฮ์ได้ปะทุขึ้น มีผู้คนล้มตายจำนวนมาก หนึ่งในนั้นคือ อบุลฮะซัน อิบนุ อัลมุฮ์ตะดี ผู้เป็นนักเทศน์ เหตุปะทะเกิดขึ้นระหว่างมัสยิดอัลมันศูรกับสะพานข้ามแม่น้ำ”</p>
+
+      <p>และในท่ามกลางความโกลาหลทั้งหมดนี้...สงครามครูเสดก็ได้เริ่มรุกรานแผ่นดินอิสลาม พวกเขาประสบความสำเร็จในการยึดเมืองโตเลโด ในสเปนจากนั้นก็เข้ายึดนครเยรูซาเล็ม (บัยตุลมักดิส) ได้ในปี ฮ.ศ. 492...อิบนุลอะษีรได้บันทึกโศกนาฏกรรมครั้งนี้ไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقتل الفرنج، بالمسجد الأقصى، ما يزيد على سبعين ألفا، منهم جماعة كثيرة من أئمة المسلمين، وعلمائهم، وعبادهم، وزهادهم، ممن فارق الأوطان وجاور بذلك الموضع الشريف ... وورد المستنفرون من الشام، في رمضان، إلى بغداد صحبة القاضي أبي سعد الهروي، فأوردوا في الديوان كلاما أبكى العيون، وأوجع القلوب، وقاموا بالجامع يوم الجمعة، فاستغاثوا، وبكوا وأبكوا، وذكر ما دهم المسلمين بذلك البلد الشريف المعظم من قتل الرجال، وسبي الحريم والأولاد، ونهب الأموال، فلشدة ما أصابهم أفطروا</blockquote>
+      <p class="ar-translation">“พวกฝรั่ง (ครูเสด) ได้สังหารผู้คนในมัสยิดอัลอักศอไปกว่าเจ็ดหมื่นคน ในจำนวนนั้นมีปราชญ์มุสลิม, นักวิชาการ, ผู้ทรงคุณธรรม และผู้สมถะอยู่มากมาย...ผู้ลี้ภัยจากชามได้เดินทางมาถึงแบกแดดในเดือนรอมฎอนพร้อมกับกอฎี อบู สะอัด อัลฮะเราะวีย์ พวกเขาร้องทุกข์ต่อราชสำนักด้วยถ้อยคำที่ทำให้ทุกคนต้องหลั่งน้ำตาและหัวใจแหลกสลาย ในวันศุกร์ พวกเขายืนขึ้นกลางมัสยิด ร้องขอความช่วยเหลือร่ำไห้จนคนทั้งมัสยิดต้องร้องไห้ตาม...พวกเขาเล่าถึงชะตากรรมที่ชาวมุสลิมต้องเผชิญในนครอันศักดิ์สิทธิ์นั้น ทั้งการฆ่าล้างผู้ชาย, การจับกุมสตรีและเด็กเป็นเชลย และการปล้นสะดมทรัพย์สิน...ด้วยความทุกข์ระทมอย่างแสนสาหัส พวกเขาจึงต้องละศีลอด”</p>
+
+      <p>โดยสรุปแล้ว เราอาจกล่าวได้ว่า...อัลฆอซาลี เติบโตขึ้นท่ามกลางสภาพแวดล้อมที่เต็มไปด้วยความขัดแย้งสารพัดรูปแบบ ทั้งรัฐที่ปกครองโดยอ้างสายเลือดนบีเพื่อแสวงหาอำนาจ ซึ่งท่านเห็นมันกำลังล่มสลาย, แนวคิดยุคก่อนอิสลามที่หยิ่งผยองและยกตนเทียบเท่าพระเจ้า และความแตกแยกเรื้อรังในประชาชาติที่ถูกแทรกซึมโดยกลุ่มบาฏินียะฮ์และกลุ่มศูฟีจอมปลอมที่สวมหน้ากากแห่งสัจธรรม</p>
+
+      <p>ท่ามกลางสมรภูมิทางความคิดและการเมืองที่ดุเดือดนี้...อัลฆอซาลีไม่ใช่นักปรัชญานามธรรมที่นั่งคิดฝันอยู่นอกเหนือกาลเวลาและสถานที่ แต่เขาคือคนที่กระโจนเข้าสู่ปัญหาแห่งยุคสมัยอย่างเต็มตัว เขาทุ่มเทสติปัญญาและความพยายามทั้งหมดเพื่อแก้ไขวิกฤตเหล่านั้น นี่คือเหตุผลที่ทำให้ลีลาการเขียนของเขาร้อนแรงและเฉียบคม เป็นลีลาของนักโต้วาที, นักถกเถียง และนักโน้มน้าวใจ และนี่ก็คือเหตุผลที่ทำให้นักประวัติศาสตร์บางคนที่มองอะไรเพียงผิวเผินและด่วนตัดสิน...มองว่าเขาเป็นคนคลั่งศาสนา, เป็นศัตรูของความคิด และเป็นผู้ส่งเสริมความหยุดนิ่งทางปัญญา ซึ่งเราจะชี้แจงต่อไป... ข้อกล่าวหาเหล่านี้มักจะถูกหยิบยกขึ้นมาโจมตีก็ต่อเมื่อนักคิดคนนั้น...สามารถสร้างแรงสั่นสะเทือนที่แท้จริงและลึกซึ้งในประวัติศาสตร์ของประชาชาติได้สำเร็จ</p>
+
+      <h2 class="article-h2">มายาคติว่าด้วยอัลฆอซาลี</h2>
+
+      <p>ก่อนอื่น เราต้องทำความเข้าใจหลักการสำคัญข้อหนึ่งก่อนว่า การอ่านใจท่านอัลฆอซาลีนั้น เราต้องแยกแยะระหว่างสองจุดยืนที่แตกต่างกันคือ จุดยืนของท่านต่อ “ตัวนักปรัชญา” และจุดยืนของท่านต่อ “วิชาปรัชญา” เพื่อไม่ให้เราเกิดความสับสน</p>
+
+      <p>หนึ่ง - จุดยืนต่อ “ตัวนักปรัชญา” เรื่องนี้ชัดเจนและปฏิเสธไม่ได้ว่า ท่านอิหม่ามอัลฆอซาลีโจมตีนักปรัชญาจริงๆ และการโจมตีของท่านนั้นเกิดขึ้นด้วยความบริสุทธิ์ใจ โดยไม่มีเป้าหมายอื่นใดนอกจากการเปิดเผยความจริงและปกป้องศาสนา</p>
+
+      <p>สอง - จุดยืนต่อ “วิชาปรัชญา” การกล่าวหาว่าท่านปฏิเสธวิชาปรัชญาโดยสิ้นเชิงและรัวหมัดใส่ไม่ยั้งนั้น เป็นข้อกล่าวหาที่ยอมรับไม่ได้และต้องใช้หลักฐานที่หนักแน่นมาก เพราะทั้งข้อเขียนในยุคหลังของท่านเองและคำยืนยันของนักวิชาการรุ่นต่อมา ต่างก็ชี้ไปในทางตรงกันข้าม</p>
+
+      <p>ดังนั้น จึงเป็นความผิดพลาดอย่างยิ่งที่จะกล่าวว่า หลังจากยุคอัลฆอซาลีแล้ว ปรัชญาจำต้องอพยพไปอยู่ทางฟากตะวันตกของโลกอิสลาม หรือกล่าวอีกนัยหนึ่งว่า อัลฆอซาลีคือผู้ที่ทำให้ปรัชญาเสื่อมโทรม หลังจากที่เขาเขียนหนังสือ <span class="ar-inline" lang="ar" dir="rtl">تهافت الفلاسفة</span> นั่นเอง</p>
+
+      <p>และก็เป็นความผิดพลาดเช่นกันที่จะกล่าวว่า: “ปรัชญาไม่สามารถยืนหยัดขึ้นมาได้อีกเลยหลังจากโดนหมัดของอัลฆอซาลี...ในความเป็นจริง ปรัชญายังคงยืนหยัดอยู่ได้ในโลกตะวันออกและไม่ได้ถูกทำลายแต่อย่างใด หลักฐานก็คือลูกศิษย์ของอิบนุ ซีนายังคงสืบทอดวิชากันต่อมาในโลกตะวันออกจนถึงยุคของเรา และตำราปรัชญาชั้นยอดที่ถูกแต่งขึ้นในเมืองอิศฟาฮาน ก็เป็นเครื่องยืนยันว่าการสืบทอดนี้ไม่ได้ลดน้อยถอยลง หรือจำกัดอยู่แค่การทำบทสรุปย่อแต่อย่างใด”</p>
+
+      <p>เราเองก็ไม่เข้าใจว่า เหตุใดจึงมีคนโยนความผิดให้อัลฆอซาลีว่าเป็นผู้ที่ต้องรับผิดชอบต่อความเสื่อมโทรมทางปัญญาของโลกอิสลามในยุคตกต่ำ ทั้งที่การวิเคราะห์เชิงประวัติศาสตร์ก็ชี้ให้เห็นอย่างชัดเจนว่ามันมีสาเหตุและปัจจัยที่ซับซ้อนกว่านั้นมาก</p>
+
+      <p>เป็นเรื่องโง่เขลาอย่างมากที่จะเชื่อว่า คนเพียงคนเดียว จะสามารถเป็นต้นเหตุของความล้าหลังหรือความเจริญที่หยั่งรากลึกมานานหลายศตวรรษได้!</p>
+
+      <p>ภาวะชะงักงันทางปัญญาที่โลกอิสลามประสบในยุคของอัลฆอซาลีนั้น เป็นภาพสะท้อนของสภาพสังคม, เศรษฐกิจ, การเมือง และวัฒนธรรม ซึ่งเราจำเป็นต้องหยุดพิจารณาและวิเคราะห์ปัจจัยเหล่านี้เพื่อทำความเข้าใจผลกระทบของมัน ไม่ใช่การกล่าวหาลอยๆ ที่ปราศจากการวิเคราะห์เชิงประวัติศาสตร์ที่ลึกซึ้ง เราไม่สามารถนำ “วิชาปรัชญา” ไปปะปนกับ “แนวคิดทางปรัชญาบางอย่าง” ที่บังเอิญได้รับการยอมรับและแพร่หลายในบริบททางประวัติศาสตร์และสังคมได้</p>
+
+      <p>และถ้าหากเราลองหันกลับมาฟังนักวิจัยชาวยุโรปร่วมสมัยว่าพวกเขาพูดถึงอัลฆอซาลีว่าอย่างไร...เราจะพบกับเรื่องน่าประหลาดใจ...เราจะสัมผัสได้ถึงความยกย่องและชื่นชมในระดับที่เราอาจไม่เคยคาดคิดมาก่อน</p>
+
+      <p>เดอ บัวร์ (De Boer) นักบูรพคดีศึกษาได้กล่าวไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كثيرا ما يقال إن الغزالي قضى على الفلسفة في الشرق قضاء مبرما، لم تقم بعده قائمة، ولكن هذا زعم خاطئ لا يدل على علم التاريخ، ولا على فهم لحقائق الأمور</blockquote>
+      <p class="ar-translation">“ผู้คนมักจะกล่าวกันว่า อัลฆอซาลี ได้ทำลายล้างปรัชญาในโลกตะวันออกจนสิ้นซาก ชนิดที่ว่าไม่สามารถได้ผุดได้เกิดได้อีกเลย...แต่นี่เป็นข้อกล่าวหาที่ผิดพลาดอย่างสิ้นเชิง มันแสดงให้เห็นถึงความไม่รู้ในประวัติศาสตร์และความไม่เข้าใจในข้อเท็จจริง”</p>
+
+      <p>เช่นเดียวกับที่อ็องรี กอร์แบ็ง (Henry Corbin) ได้ชี้ไว้เมื่อเขาเขียนว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ليبدو من المبتذل القول إن هذا النقد، كما قيل في القرن الماضي قد وجه للفلسفة ضربة لم تقم لها بعدها في الشرق قائمة</blockquote>
+      <p class="ar-translation">“มันคงเป็นเรื่องที่น่าเบื่อหน่ายที่จะต้องมาพูดซ้ำๆ ว่า คำวิจารณ์นี้ (ของอัลฆอซาลี) ได้วิพากษ์ใส่ปรัชญาจนไม่สามารถฟื้นคืนกลับมาได้อีกในโลกตะวันออก อย่างที่เคยพูดกันมาในศตวรรษที่แล้ว”</p>
+
+      <p>นอกเหนือจากมายาคติข้อนี้ที่ไม่มีหลักฐานหนักแน่นพอมายืนยัน...เรายังพบข้อกล่าวหาอีกข้อหนึ่งที่แพร่หลายอย่างมากในประวัติศาสตร์ปรัชญา และยังมีผู้ที่เชื่อเช่นนั้นอยู่จนถึงทุกวันนี้ นั่นก็คือ...“อัลฆอซาลีไม่ใช่นักปรัชญา”</p>
+
+      <p>เหตุผลของพวกเขาก็คือ ก็เพราะเขาโจมตีนักปรัชญาสายกรีกอย่างรุนแรงและโหดเหี้ยม โดยเฉพาะในหนังสือ <span class="ar-inline" lang="ar" dir="rtl">تهافت الفلاسفة</span> ซึ่งผลลัพธ์ของการโจมตีครั้งนั้น ทำให้สิ่งที่เรียกว่า “ปรัชญา” ในโลกอิสลามต้องเงียบเสียงลงนับตั้งแต่นั้นเป็นต้นมา</p>
+
+      <p>และแม้ว่างานวิจัยในยุคหลังจะได้ออกมาเปิดโปงแล้วว่าความเชื่อนี้เป็นสิ่งที่ผิดพลาด...แต่ความเชื่อผิดๆ นี้ก็ยังกลับมาเกิดใหม่อีกครั้งในรูปแบบที่ต่างออกไป โดยอ้างว่า: “โอเค...ถึงแม้อัลฆอซาลีจะไม่ได้ทำลายปรัชญา แต่เราก็ยังเรียกเขาว่าเป็นนักปรัชญาไม่ได้อยู่ดี! เพราะเขาเป็นเพียงแค่คนที่ ‘อนุญาต’ ให้มีการใช้ปรัชญา (และตะเซาวุฟ) ได้ ก็เพื่อที่จะดึงศาสตร์ทั้งสองนี้ออกมาจากค่ายของพวกอุตริกรรม แล้วผนวกรวมเข้ามาเป็นส่วนหนึ่งของอิสลามสายซุนนีย์เท่านั้นเอง”</p>
+
+      <p>และหนึ่งในคำกล่าวที่แปลกใจที่สุดที่เคยพบเจอในเรื่องนี้ คือคำพูดของศาสตราจารย์ ซะกี มุบาร็อก ในหนังสือของเขาคือ “จริยศาสตร์ตามทัศนะของอัลฆอซาลี” ที่กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أبو حامد درس الفلسفة، ولكنه درسها بنية سيئة، درسها ليسبر غورها، ثم ينشر مساوئها في العالمين</blockquote>
+      <p class="ar-translation">“อบู ฮามิด...ศึกษาปรัชญา แต่เขาศึกษามันด้วยเจตนาที่ไม่ดี เขาศึกษามันเพื่อที่จะหยั่งถึงแก่นของมัน จากนั้นก็จะนำข้อเสียของมันมาประจานให้โลกได้รับรู้”</p>
+
+      <p>ศาสตราจารย์ ซะกี มุบาร็อกยังคงเดินหน้าโจมตีและสร้างมายาคติต่ออัลฆอซาลีต่อไป โดยกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وإنه لا حرج علينا أن نقرر أن الغزالي أصلى الفلسفة نار العقوق، فقد كانت سبب حصافته، وذيوع صيته، ثم اطمع فيها العامة، ومكن الجهال من تصغير الحكماء، وليس تكفيره لابن سينا والفارابي بالأمر الهين، وإن فعلته تلك لتحسب بذرة هذه التقاليد الممقوتة التي يعانيها المفكرون الأحرار في جميع الأقطار الإسلامية منذ حين</blockquote>
+      <p class="ar-translation">“เราคงไม่ผิดที่จะยืนยันว่า อัลฆอซาลีได้เผาปรัชญาด้วยไฟแห่งความอกตัญญู ทั้งๆ ที่ปรัชญาคือสิ่งที่ทำให้เขามีปัญญาเฉียบแหลมและมีชื่อเสียงโด่งดัง แต่เขากลับทำให้คนทั่วไปเหยียดหยามมัน และเปิดโอกาสให้คนโง่เขลามาดูแคลนปราชญ์...และการที่เขาตัดสินว่า อิบนุ ซีนา และอัลฟารอบีเป็นผู้ปฏิเสธศรัทธานั้น ก็ไม่ใช่เรื่องเล็กน้อยเลย การกระทำของเขาเปรียบเสมือนเมล็ดพันธุ์แห่งธรรมเนียมอันน่ารังเกียจ ที่เหล่านักคิดอิสระในทุกดินแดนอิสลามต้องทนทุกข์ทรมานมานับตั้งแต่นั้น”</p>
+
+      <p>จนกระทั่งเขาได้สรุปเกี่ยวกับอัลฆอซาลีไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كان فتنة من فتن العصور القديمة، وقد نسي العلماء في الدفاع عنه أن هناك عقلا يجب أن يحكم وأنه لن يخلو العالم من أصحاب العقول ولو كره الجامدون</blockquote>
+      <p class="ar-translation">“เขาคือมหันตภัยทางปัญญาแห่งยุคโบราณ และบรรดานักวิชาการที่ปกป้องเขานั้น ได้ลืมไปว่ายังมี ‘สติปัญญา’ ที่ต้องใช้ตัดสิน และโลกใบนี้จะไม่มีวันว่างเว้นจากผู้มีสติปัญญา แม้ว่าพวกอนุรักษ์นิยมจะเกลียดชังเพียงใดก็ตาม”</p>
+
+      <p>ข้อกล่าวหาทำนองเดียวกันนี้มาจากยูฮันนา กุมัยร์ (Yūḥannā Qumayr) ในหนังสือของเขาชื่อ “อัลฆอซาลี: บทวิเคราะห์และข้อเขียนที่ได้คัดสรร” ซึ่งเขามองว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الغزالي قد حمل على الفلاسفة فكفرهم وضللهم، وحاول إظهار عجز العقل عن إدراك كل حقائق الوحي، والحق ان العقل محدود القوى، وأن الله قد يوحي للناس ما لا يناله عقل أو يفهمه. والحق أيضا أن الفلاسفة قد توغلوا في التأويل، فشرحوا بعض عقائد الإسلام على غير وجهها ...لقد تأثر الغزالي بنزعة فقهاء عصره ومتصوفيه، فهاجم الفلسفة جملة، وما درى أنه يهاجم العقل جملة، فيوقف كل استنباط فكري، وكل تقدم ورقي</blockquote>
+      <p class="ar-translation">“อัลฆอซาลีได้โจมตีเหล่านักปรัชญา ตัดสินว่าพวกเขาเป็นกาฟิรและหลงทาง เขาพยายามแสดงให้เห็นถึงความไร้ความสามารถของสติปัญญาที่จะหยั่งถึงสัจธรรมจากวะฮีย์ได้ทั้งหมด...จริงอยู่ที่ว่าสติปัญญานั้นมีขีดจำกัด และอัลลอฮ์ก็อาจจะประทานวะฮีย์ในสิ่งที่สติปัญญาเข้าไม่ถึงหรือเข้าใจไม่ได้...และก็จริงอีกที่ว่านักปรัชญาได้ตีความเลยเถิดไปไกล จนอธิบายหลักความเชื่อบางอย่างของอิสลามผิดเพี้ยนไป...แต่อัลฆอซาลีนั้นได้รับอิทธิพลจากแนวคิดของนักนิติศาสตร์และนักศูฟีในยุคของเขา เขาจึงโจมตีปรัชญาทั้งหมด โดยที่ไม่รู้ตัวเลยว่าเขากำลังโจมตีสติปัญญาทั้งหมด ซึ่งเท่ากับเป็นการหยุดยั้งการพัฒนาทางความคิดและความก้าวหน้าทั้งปวง”</p>
+
+      <p>อันที่จริงแล้ว...ก็เกรงว่า “ความล้มเหลวทางตรรกะ” ของนักวิจารณ์เหล่านี้และคนอื่นๆ อาจจะหนักหนาสาหัสยิ่งกว่า “ความล้มเหลวของนักปรัชญา” ที่อัลฆอซาลีเคยวิจารณ์ไว้เสียอีก ข้อกล่าวหาเหล่านี้ไม่มีอะไรมากไปกว่าความสับสนและการพูดไปเรื่อยเปื่อย โดยไม่มีหลักฐานหรือวิสัยทัศน์ที่เฉียบคมมาสนับสนุนมายาคติที่พวกเขามีต่อท่านเลย ซึ่งจากนี้ไป เราจะขอชี้แจงในทุกๆ ประเด็น หรือจะพูดให้ถูกก็คือ ในทุกๆ ข้อกล่าวหาและมายาคติที่ถูกหยิบยกขึ้นมาโจมตีเจ้าของตำรา “อิห์ยาอ์ อุลูมิดดีน” ท่านนี้</p>
+
+      <p>ประการแรก: ใช่และถูกต้อง...ยอมรับว่าท่านอิหม่ามเองไม่เคยเรียกตัวเองว่าเป็นนักปรัชญา แต่ข้อโต้แย้งอื่นๆ ที่ฟันธงว่า เราไม่สามารถนับท่านเป็นนักปรัชญาได้นั้น ล้วนเกิดจากความเข้าใจที่ผิดพลาดต่อ “วิชาปรัชญา” เอง เพราะมันเป็นไปได้ที่นักคิดคนหนึ่งอาจจะไม่ได้อ้างตนว่าเป็นนักปรัชญา แต่ในความเป็นจริงแล้ว เขาสามารถถูกนับว่าเป็นนักปรัชญาได้ ในขณะที่ก็มีคนอีกมากมายที่ป่าวประกาศว่าตัวเองเป็นนักปรัชญา แต่กลับอยู่ห่างไกลจากคำๆ นี้อย่างสิ้นเชิง</p>
+
+      <p>ประการที่สอง: ข้อกล่าวหาที่ว่าท่านพยายามแสดงให้เห็นถึงความไร้ความสามารถของสติปัญญา และเป็นมหันตภัยแห่งยุคสมัยนั้น...เราขอตอบว่า ตอนที่อัลฆอซาลีประพันธ์หนังสืออัตตะฮาฟุต ท่านต้องการให้ทุกคนเข้าใจว่า แนวคิดในหนังสือเล่มนี้คือ การวิพากษ์และทำลายล้างคำสอนที่ขัดแย้งกันเองของเหล่านักปรัชญาอาหรับสายอริสโตเติล ไม่ได้มีเจตนาที่จะปฏิเสธ “วิชาปรัชญา” หรือ “สติปัญญาที่ถูกต้อง” เลยแม้แต่น้อย</p>
+
+      <p>หลักฐานก็คือ ชื่อหนังสือ นั่นเอง “ตะฮาฟุต อัลฟะลาซิฟะฮ์” (<span class="ar-inline" lang="ar" dir="rtl">تهافت الفلاسفة</span>)</p>
+
+      <p>นักวิจัยชาวยุโรปส่วนใหญ่ชี้ว่า คำว่า “ตะฮาฟุต” (<span class="ar-inline" lang="ar" dir="rtl">تهافت</span>) ในที่นี้หมายถึง การร่วงหล่นอย่างต่อเนื่อง, ความขัดแย้งกันเอง, หรือความไม่สอดคล้องกันภายใน</p>
+
+      <p>หากท่านต้องการมากกว่านี้ ก็ลองไปเปิดดูในพจนานุกรมชั้นครูอย่างอัลกอมูส อัลมุฮีฏ ของอัลฟัยรูซาบาดีย์, ลิซาน อัลอะหรับ ของอิบนุ มันซูร, อะซาส อัลบะลาเฆาะฮ์ ของอัซซะมัคชะรีย์ หรือตาจญ์ อัลอะรูส ของอัลมุรตะฎอ</p>
+
+      <p>อัลฆอซาลีใช้คำว่า “ตะฮาฟุต” ควบคู่กับ “นักปรัชญา” บ้าง, ควบคู่กับ “คำพูดของพวกเขา” บ้าง, หรือ “แนวทาง” หรือ “ความเชื่อของพวกเขา” บ้าง และท่านมักจะใช้คำว่า “ตะฮาฟุต” ควบคู่ไปกับคำว่า “ตะนากุฎ” (ความขัดแย้งกันเอง) และ “อัจซ์” (ความไร้ความสามารถ) ซึ่งเป็นสิ่งที่ท่านเน้นย้ำตลอดทั้งเล่มในหนังสือตะฮาฟุต อัลฟะลาซิฟะฮ์ โดยมีเป้าหมายเพื่อ ชี้ให้เห็นถึงความขัดแย้งในคำพูดของพวกเขาเอง</p>
+
+      <p>และหนึ่งในงานวิจัยที่สำคัญที่สุดในเรื่องนี้ คือผลงานของมิเกล อาซิน ปาลาซิโอส (Miguel Asín Palacios) นักบูรพคดีศึกษาชาวสเปน ซึ่งท่านได้ข้อสรุปว่า ความหมายของคำว่า “ตะฮาฟุต” เมื่อใช้กับมนุษย์หรือสัตว์นั้น ไม่ได้หมายถึงการร่วงหล่น แต่หมายถึง “การรีบร้อนกระโจนเข้าไปในสิ่งที่นำมาซึ่งอันตรายแก่ตัวเอง”</p>
+
+      <p>ปาลาซิโอสได้สรุปวิสัยทัศน์ของเขาไว้อย่างดีว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أن الغزالي حين سمى كتابه "تهافت الفلاسفة" كان يريد أن يمثل لنا أن العقل الإنساني يبحث عن الحقيقة، ويريد الوصول إليها، كما يبحث البعوض عن ضوء النهار، فإذا أبصر شعاعا يشبه نور الحقيقة، انخدع به، فرمى بنفسه عليه وتهافت فيه، ولكنه يخطئ مخدوعا بأقيسة منطقية خاطئة، فيهلك كما يهلك البعوض (أي العقل). فكأن الغزالي يريد أن يقول إن الفلاسفة خدعوا بأشياء أسرعوا إليها بلا إعمال ولا روية، فتهافتوا وهلكوا الهلاك الأبدي</blockquote>
+      <p class="ar-translation">“เมื่ออัลฆอซาลีตั้งชื่อหนังสือของเขาว่า “ตะฮาฟุต อัลฟะลาซิฟะฮ์” ท่านต้องการจะเปรียบเทียบให้เราเห็นภาพว่า สติปัญญาของมนุษย์ก็เปรียบดั่งแมลงเม่าที่โหยหาแสงสว่างแห่งสัจธรรม และต้องการจะไปให้ถึง เมื่อมันเห็นประกายแสงที่คล้ายกับแสงแห่งสัจธรรม (เช่น ตรรกะวิบัติ) มันก็จะถูกล่อลวง แล้วบินโผเข้าหาแสงนั้นและร่วงหล่นลงไปในกองไฟ...มันทำผิดพลาดเพราะถูกหลอกด้วยตรรกะที่บกพร่อง แล้วก็พินาศไป เช่นเดียวกับที่แมลงเม่าที่ต้องพินาศ (สติปัญญาก็เช่นกัน)</p>
+
+      <p>มันจึงราวกับว่าอัลฆอซาลีต้องการจะบอกเราว่า เหล่านักปรัชญาได้ถูกล่อลวงด้วยสิ่งต่างๆ ที่พวกเขารีบร้อนกระโจนเข้าไปหาโดยขาดการไตร่ตรอง...พวกเขาจึงได้ทำลายตัวเอง และพบกับความพินาศชั่วนิรันดร์”</p>
+
+      <p>แล้วท่านจะปฏิเสธปรัชญาได้อย่างไร...ในเมื่อในหนังสืออิห์ยาอ์ อุลูมิดดีนของท่านเอง ก็ยังมีการอ้างอิงคำพูดของนักปรัชญา ท่านยอมรับในสิ่งที่สอดคล้องกับสัจธรรม และโต้แย้งในสิ่งที่ขัดแย้งกับสัจธรรม ซึ่งน่าขันที่ว่า...นี่คือหนึ่งในสาเหตุหลักที่ทำให้หนังสือเล่มนี้ถูกวิพากษ์วิจารณ์อย่างหนัก</p>
+
+      <p>ยิ่งไปกว่านั้น ท่านอิหม่ามยังยอมรับในความแม่นยำแน่นอนของคณิตศาสตร์ และตรรกศาสตร์ แต่ท่านมองว่า “อภิปรัชญา” (เทววิทยา) ของพวกเขานั้นไม่ได้มีความแม่นยำเช่นนั้น พวกเขาตัดสินเรื่องเหล่านี้ด้วย การคาดเดาและจินตนาการ ท่านกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولو كانت علومهم الإلهية متفقة لما اختلفوا فيها في الحسابية</blockquote>
+      <p class="ar-translation">“หากศาสตร์ด้านเทววิทยาของพวกเขามีความรัดกุมเหมือนคณิตศาสตร์แล้วไซร้ พวกเขาก็คงไม่ขัดแย้งกันเองในเรื่องนี้”</p>
+
+      <p>นี่คือสิ่งที่เผยให้เห็นแรงจูงใจที่แท้จริงของท่านในการเขียนหนังสืออัตตะฮาฟุตหรือเล่มอื่นๆ มันไม่ได้เกิดขึ้นจากเจตนาที่จะ ‘ทำลายล้าง’ อย่างที่กล่าวหา หรือเพื่อโจมตีคำสอนของปรัชญาเพราะมันเป็น ‘ภัยต่อความเชื่อ’...แต่มันมีเหตุผลที่ ‘ยิ่งใหญ่กว่านั้น’</p>
+
+      <p>เหตุผลที่ยิ่งใหญ่กว่านั้นก็คือ...ท่านมองว่าเหล่านักปรัชญาไม่ได้รักษา “เอกภาพแห่งสติปัญญา” (<span class="ar-inline" lang="ar" dir="rtl">وحدة العقل</span>) เอาไว้ กล่าวคือ หลังจากที่พวกเขาวางกฎเกณฑ์อันรัดกุมสำหรับการคิดอย่างถูกต้องไว้ในวิชาตรรกศาสตร์แล้ว...พวกเขากลับไม่ได้นำกฎเกณฑ์เหล่านั้นมาใช้กับศาสตร์ด้านเทววิทยาของตนเอง</p>
+
+      <p>ซามูเอล ซวีเมอร์ (Samuel Zwemer) ได้กล่าวไว้ในหนังสือของเขาว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن إخلاص الغزالي ونشاطه العقلي البديهي كما ظهر في مؤلفاته... يؤكد ويبين الأسباب التي جعلت للغزالي تأثيرا عميقا يفوق جدا تأثيرات الفلاسفة الذين يبحثون في الأمور العقلية الخالصة. فبينما نحن لا نرى أثرا لتعضيد الغزالي للفلسفة التعليمية نراه يشجع الفلسفة العقلية</blockquote>
+      <p class="ar-translation">“ความจริงใจและพลังทางปัญญาของอัลฆอซาลีที่ปรากฏในงานเขียนของท่าน...ได้ยืนยันและชี้ให้เห็นถึงเหตุผลที่ทำให้อิทธิพลของเขานั้นลึกซึ้งและเหนือกว่าอิทธิพลของเหล่านักปรัชญาที่ค้นคว้าอยู่แต่ในเรื่องนามธรรมล้วนๆ...ในขณะที่เราไม่เห็นว่าอัลฆอซาลีจะสนับสนุนปรัชญาเชิงสั่งสอน (Scholastic Philosophy) แต่เรากลับเห็นท่านส่งเสริมปรัชญาเชิงเหตุผล (Rational Philosophy) อย่างชัดเจน”</p>
+
+      <p>ในยุคของอัลฆอซาลี มีนักวิชาการบางกลุ่มที่ประณามปรัชญากรีกทั้งหมด ไม่ว่าจะดีหรือเลว และมองว่ามันคือการปฏิเสธศรัทธาและการนอกรีต ในขณะเดียวกัน พวกเขาก็ปฏิเสธตรรกศาสตร์ด้วย โดยอ้างว่ามันเป็นส่วนหนึ่งของปรัชญาเหล่านั้น แต่อัลฆอซาลีกลับลุกขึ้นมาต่อต้านแนวคิดนี้ ท่านได้อธิบายอย่างละเอียดถึงแก่นแท้ของตรรกศาสตร์ และชี้ให้เห็นว่า แม้แต่นักเทววิทยาเองก็นำมันมาใช้</p>
+
+      <p>แล้วมายาคติที่ว่าท่านปิดกั้นการใช้สติปัญญา หรือโจมตีคำสอนทางปรัชญาทั้งหมดในยุคของท่านนั้น... มันมาจากไหน?</p>
+
+      <p>โดยรวมแล้ว ท่าทีที่ดู “แข็งกร้าว” ของอัลฆอซาลีต่อเหล่านักปรัชญานั้น “มีความเข้มข้นในระดับที่น่าประหลาดใจสำหรับทุกคนที่รู้จักอัลฆอซาลีและจิตใจอันสูงส่งของท่าน” ดังที่นักบูรพคดีศึกษา เดอ บัวร์ ได้กล่าวไว้</p>
+
+      <p>ประการที่สาม: การที่อัลฆอซาลีกระโจนเข้าสู่สมรภูมิเหล่านี้ ไม่ได้เกิดขึ้นจากความโง่เขลาหรือความคึกคะนอง หลักฐานของเราก็คือ...ท่านไม่ได้เขียนหนังสือ <span class="ar-inline" lang="ar" dir="rtl">تهافت الفلاسفة</span> จนกว่าท่านจะได้เขียนตำราที่อธิบายโครงสร้างความคิดทางปรัชญาอย่างละเอียดเสียก่อน นั่นคือหนังสือ <span class="ar-inline" lang="ar" dir="rtl">مقاصد الفلاسفة</span> (เป้าหมายของนักปรัชญา)</p>
+
+      <p>ดังกล่าวนี้คือบทเรียนสำคัญจากอัลฆอซาลีที่ทุกคนพึงสังวร ผู้ที่ต้องการจะวิจารณ์แนวคิดหรือปรัชญาใดๆ จะต้องไม่โง่เขลาในเรื่องนั้น แต่เขาจะต้องเข้าใจถึงเป้าหมายและแก่นแท้ของมันอย่างลึกซึ้งเสียก่อน</p>
+
+      <p>ท่านอิหม่ามถึงกับกล่าวไว้ว่า...ผู้วิจารณ์ปรัชญา จะต้องมีความรู้ในเรื่องนั้น “มากกว่า” ตัวนักปรัชญาเอง ไม่ใช่แค่รู้เท่ากัน</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وعلمت يقينا أنه لا يقف على فساد نوع من العلوم، من لا يقف على منتهى ذلك العلم، حتى يساوي أعلمهم في أصل ذلك العلم، ثم يزيد عليه ويجاوز درجته فيطلع على ما لم يطلع عليه صاحب العلم من غور وغائلة، وإذ ذاك يمكن أن يكون ما يدعيه من فسادها حقا</blockquote>
+      <p class="ar-translation">“และข้าพเจ้าก็ได้รู้แจ้งอย่างแน่นอนแล้วว่า ผู้ใดก็ตามจะมองเห็นความบกพร่องของศาสตร์แขนงใดๆ ไม่ได้เลย หากเขายังไปไม่ถึงจุดสูงสุดของศาสตร์นั้น จนกระทั่งมีความรู้ทัดเทียมกับผู้ที่รู้ดีที่สุดในศาสตร์นั้น จากนั้นก็ต้องก้าวข้ามระดับนั้นขึ้นไปอีก เพื่อที่จะมองเห็นหลุมพรางและหายนะที่แม้แต่เจ้าของศาสตร์นั้นเองก็ยังมองไม่เห็น...เมื่อนั้นแหละ ข้อกล่าวหาของเขาถึงจะนับว่าเป็นความจริงได้”</p>
+
+      <p>และท่านยังย้ำอีกว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أن رد المذهب قبل فهمه، والاطلاع على كنهه، رمي في عماية</blockquote>
+      <p class="ar-translation">“การปฏิเสธแนวคิดใดๆ โดยที่ยังไม่เข้าใจมันและยังไม่เข้าถึงแก่นแท้ของมัน ก็ไม่ต่างอะไรกับการยิงธนูในความมืด”</p>
+
+      <p>ความเข้าใจอันลึกซึ้งและการวิจารณ์เชิงสร้างสรรค์ที่ท่านอัลฆอซาลีใช้นั้น เป็นสิ่งที่น่าทึ่ง จึงไม่น่าแปลกใจเลยที่เราจะเห็นนักบูรพคดีศึกษาชาวฝรั่งเศสอย่าง เอ็ม. แบร์นาร์ด (M. Bernand) แสดงความชื่นชมต่อวิธีการวิเคราะห์และวิจารณ์ของอัลฆอซาลี จนก้าวข้ามจากความชื่นชมไปสู่ระดับที่ต้องทึ่ง หรือ "Remarkable" อย่างที่เขาได้กล่าวไว้</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>อบู ฮามิด อัลฆอซาลี คือหนึ่งในบุคคลที่ปราดเปรื่องที่สุด และเป็นหนึ่งในนักคิดที่อัจฉริยะที่สุดที่เคยปรากฏขึ้นในโลกอิสลาม สมัญญานามอันทรงเกียรติของท่าน “หุจญะตุลอิสลาม” คือเครื่องยืนยันในเรื่องนี้ (ตามคำยืนยันของอ็องรี กอร์แบ็ง)</p>
+
+      <p>อบู ฮามิด อัลฆอซาลีได้สกัดกั้นอิทธิพลของปรัชญากรีกที่ไหลบ่าเข้ามาในโลกอิสลามในช่วงศตวรรษที่ 5 แห่งฮิจเราะห์ศักราชและหลังจากนั้น แรงจูงใจของท่านอิหม่ามในการวิพากษ์วิจารณ์ ไม่ใช่การทำลายล้างปรัชญาเพราะมันเป็นภัยต่อความเชื่อ แต่มีเหตุผลที่ยิ่งใหญ่กว่านั้น นั่นคือ ท่านมองว่าเหล่านักปรัชญาไม่ได้รักษาเอกภาพแห่งสติปัญญา โดยพวกเขาล้มเหลวที่จะใช้กฎเกณฑ์ทางตรรกศาสตร์ที่ตัวเองวางไว้ มาประยุกต์ใช้กับศาสตร์ด้านเทววิทยาของตนเอง</p>
+
+      <p>แม้ว่าท่านอบู ฮามิด จะชี้ว่า “ตัวนักปรัชญา” มีความล้มเหลวทางตรรกะ แต่ท่านไม่เคยกล่าวว่า “วิชาปรัชญา” มีความล้มเหลวทางตรรกะ ดังนั้น การศึกษาแง่มุมต่างๆ ในการปะทะทางความคิดของท่านกับปรัชญา ควรถูกจัดให้อยู่ในขอบเขตของประวัติศาสตร์ความคิดและปรัชญา ไม่ควรนำจุดยืนเหล่านั้นมาสร้างทัศนคติที่เป็นปฏิปักษ์ต่อวิชาปรัชญาโดยรวม</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">มัรกัส อัลอิมาม อัลอัชอะรีย์. (2569). มายาคติว่าด้วยอบู ฮามิด อัลฆอซาลี. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/kalam/myth-and-the-rational-mind.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li>ابن كثير، إسماعيل بن عمر. البداية والنهاية. بيروت: دار إحياء التراث العربي.</li>
+        <li>ابن الجوزي، عبد الرحمن بن علي. المنتظم في تاريخ الملوك والأمم. بيروت: دار الكتب العلمية.</li>
+        <li>ابن الأثير، علي بن محمد. الكامل في التاريخ. بيروت: دار الكتاب العربي.</li>
+        <li>الغزالي، أبو حامد محمد بن محمد. تهافت الفلاسفة. القاهرة: دار المعارف.</li>
+        <li>الغزالي، أبو حامد محمد بن محمد. المنقذ من الضلال. بيروت: دار الكتب العلمية.</li>
+        <li>مبارك، زكي. الأخلاق عند الغزالي. القاهرة: المكتبة العصرية.</li>
+        <li>قمير، يوحنا. الغزالي: دراسة ونصوص مختارة. بيروت: دار المشرق.</li>
+        <li>زويمر، صموئيل. الغزالي. ترجمة عربية. بيروت.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>

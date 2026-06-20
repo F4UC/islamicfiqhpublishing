@@ -316,3 +316,22 @@ mirror ใน docs/golden-master.md §6:
 - **on-love-and-longing** (R79 merge): dropped one Facebook cross-reference nav line from Doc B (sequel pointer, not article content).
 - **guarding-time-and-aging** bibliography lists `دار صادر` for Ibn Khallikān's Wafayāt — confirm it was source-provided (else trim per Bibliography Standard).
 - **Deferred OUT of reflections** (One-approved, for later category batches): สูงสุดคืนสู่สามัญ→history · มนุษย์เป็นสัตว์สังคม→kalam/nitisart · วางไม้เรียวลง→nitisart · ศิลปะแห่งการถามตอบ→kalam/adab · มายาคติ→kalam.
+
+# ===== Phase-2 Batches 1-4 (consolidated) =====
+
+## Phase-2 Batch 1 (2026-06-19) — R52/R1 flags
+(ดูรายละเอียด byte-exact + R52/R1 ใน AUDIT-FIXES.md ส่วน Batch 1 — flags ต่อบท)
+
+## Phase-2 Batch 2 — flags (ดู AUDIT-FIXES)
+- wife-conjugal-rights: Ahmad narration rendered as ar-quote (editor may prefer re-fetch hadith-block)
+- womens-hajj-without-mahram: hadith printed-wording variants kept verbatim (R1/R185)
+
+## Phase-2 Batch 3 — flags
+- logic-in-islamic-civilization: SPLIT per A1 — merged 1q1z+1oH2; DEFERRED doc 1Ev_ (สายธารความรู้มัฆริบสู่ไคโร ตรรกวิทยา) → จะ build เป็นบทแยกใน batch 4 (slug logic-from-maghrib-to-cairo). DO NOT drop.
+- zakat-fiqh-questions: มัซฮับ→มัสฮับ (R12.2), ศอเฮี้ยะห์→ศอเฮี้ยะฮ์ (R12.1) normalized; R52 fused names flagged
+- atomism: Doc1/Doc2 demise-year variant (ฮ.ศ.324 vs 330) kept both per R1
+
+## Phase-2 Batch 4 — flags (ดู AUDIT-FIXES)
+- logic-from-maghrib-to-cairo = doc 1Ev_ ที่ split จาก logic merge (batch 3) — build เป็นบทแยกแล้ว
+
+## Reconcile (2026-06-19): พบ 1 doc ตกหล่นจาก manifest → praying-with-doubt-about-time (1QWs) — build แล้ว เพิ่มใน batch 4

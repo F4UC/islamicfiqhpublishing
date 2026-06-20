@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>อิบนุ คอลดูน: มองอดีตเพื่อเข้าใจอนาคต — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="แนวคิดของอิบนุ คอลดูน จากอัลมุก้อดดิมะฮ์ ว่าด้วยวงจรการเกิด เติบโต และล่มสลายของอาณาจักร พลังอะเศาะบียะฮ์ ความสัมพันธ์ระหว่างเศรษฐกิจกับภาษี และความยุติธรรมในฐานะรากฐานของการปกครอง">
+<meta name="keywords" content="อิบนุ คอลดูน, อัลมุก้อดดิมะฮ์, อะเศาะบียะฮ์, อารยธรรม, ภาษี, ความยุติธรรม, ประวัติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="อิบนุ คอลดูน: มองอดีตเพื่อเข้าใจอนาคต — Islamic Fiqh Publishing">
+<meta property="og:description" content="จากวงจรการล่มสลายของอาณาจักร สู่ความสัมพันธ์ระหว่างภาษี เศรษฐกิจ และความยุติธรรม แนวคิดของอิบนุ คอลดูนที่ยังคงสะท้อนความจริงของสังคมในทุกยุคสมัย">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/ibn-khaldun-past-and-future">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/ibn-khaldun-past-and-future">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "อิบนุ คอลดูน: มองอดีตเพื่อเข้าใจอนาคต",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/tarikh/ibn-khaldun-past-and-future"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="ibn-khaldun-past-and-future">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history.html" class="article-feature-eyebrow">ประวัติศาสตร์</a>
+      <h1 class="article-feature-title">อิบนุ คอลดูน: มองอดีตเพื่อเข้าใจอนาคต</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ท่านอิบนุ คอลดูน เป็นหนึ่งในนักปรัชญา นักประวัติศาสตร์ และนักเศรษฐศาสตร์ที่ยิ่งใหญ่ที่สุดของโลกอิสลามในยุคกลาง ท่านอิบนุ คอลดูนเกิดเมื่อปี ค.ศ. 1332/ ฮ.ศ. 732 ในเมืองตูนิส และได้เสียชีวิต ณ กรุงไคโร วันที่ 26 ของเดือนรอมฎอนอันประเสริฐ ปี ค.ศ. 1406/ ฮ.ศ. 808 รวมอายุขัยได้ 76 ปี</p>
+
+      <p>ผลงานที่มีอิทธิพลมากที่สุดของท่านอิบนุ คอลดูนคือ “อัลมุก้อดดิมะฮ์” ซึ่งเป็นอารัมภบทในการศึกษาเกี่ยวกับประวัติศาสตร์ สังคมศาสตร์ และเศรษฐศาสตร์ ที่ครอบคลุมหลากหลายแง่มุมทั้งทางปรัชญา การเมือง และเศรษฐกิจ แนวคิดของท่านอิบนุ คอลดูนในงานชิ้นนี้ได้สร้างรากฐานสำคัญให้กับสังคมศาสตร์และเศรษฐศาสตร์สมัยใหม่</p>
+
+      <h2 class="article-h2">แนวคิดเรื่องวงจรการเกิด เติบโต และล่มสลายของอาณาจักร</h2>
+
+      <p>ท่านอิบนุ คอลดูนได้กล่าวระบุเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وذلك أنا قررنا في الفصل الأول أن المغالبة والممانعة إنما تكون بالعصبية لما فيها من النعرة والتذامر واستماتة كل واحد منهم دون صاحبه. ثم إن الملك منصب شريف ملذوذ يشتمل على جميع الخيرات الدنيوية والشهوات البدنية والملاذ النفسانية فيقع فيه التنافس غالبا وقل أن يسلمه أحد لصاحبه إلا إذا غلب عليه فتقع المنازعة وتفضي إلى الحرب والقتال والمغالبة وشيء منها لا يقع إلا بالعصبية كما ذكرناه آنفا وهذا الأمر بعيد عن أفهام الجمهور بالجملة ومتناسون له لأنهم نسوا عهد تمهيد الدولة منذ أولها وطال أمد مرباهم في الحضارة وتعاقبهم فيها جيلا بعد جيل فلا يعرفون ما فعل الله أول الدولة إنما يدركون أصحاب الدولة وقد استحكمت صبغتهم ووقع التسليم لهم والاستغناء عن العصبية في تمهيد أمرهم ولا يعرفون كيف كان الأمر من أوله وما لقي أولهم من المتاعب دونه وخصوصا أهل الأندلس في نسيان هذه العصبية وأثرها لطول الأمد واستغنائهم في الغالب عن قوة العصبية بما تلاشى وطنهم وخلا من العصائب والله قادر على ما يشاء وهو بكل شيء عليم وهو حسبنا ونعم الوكيل.</blockquote>
+      <p class="ar-translation">“ในบทแรกเราได้ข้อสรุปกันว่า การต่อสู้และการขัดแย้งกันนั้นเกิดขึ้นจากความสามัคคีในกลุ่มชน เพราะในความสามัคคีนี้มีพลังจากความมุ่งมั่นร่วมกันและการสนับสนุนซึ่งกันและกัน ทุกคนในกลุ่มพร้อมที่จะเสียสละเพื่อประโยชน์ของพวกพ้อง อำนาจการปกครอง ถือเป็นตำแหน่งที่ทรงเกียรติและเป็นที่ปรารถนาอย่างมาก เพราะมันนำมาซึ่งสิ่งดีงามทั้งหลายของโลก ไม่ว่าจะเป็นความสุขทางกายและความสุขทางใจ ดังนั้น จึงมักมีการแข่งขันกันเพื่อแย่งชิงอำนาจนี้ และแทบไม่มีใครยอมสละตำแหน่งให้แก่ผู้อื่น ยกเว้นในกรณีที่เกิดความพ่ายแพ้หรือถูกบังคับให้ยอมแพ้ การแข่งขันนี้จึงนำไปสู่ความขัดแย้ง สงคราม และการต่อสู้แย่งชิงอำนาจ ซึ่งสิ่งเหล่านี้จะไม่เกิดขึ้นได้หากปราศจาก ความสามัคคีในกลุ่ม ดังที่ได้กล่าวไว้แล้วก่อนหน้านี้ อย่างไรก็ตาม สิ่งนี้เป็นเรื่องที่ประชาชนคนทั่วไปไม่สามารถเข้าใจได้หรือเข้าใจได้ยาก เพราะพวกเขาหลงลืมถึงกระบวนการสร้างรัฐในช่วงเริ่มต้น เนื่องจากพวกเขาเกิดและเติบโตในสังคมที่เจริญแล้ว และได้สืบทอดชีวิตในความเจริญนี้มาหลายชั่วอายุคน พวกเขาจึงไม่รู้ว่าในช่วงเริ่มแรกของการก่อตั้งรัฐนั้น มีความยากลำบากอะไรบ้างที่บรรพบุรุษจะต้องเผชิญ และโดยเฉพาะอย่างยิ่งชาวแคว้นอัลอันดะลุส (ปัจจุบันคือสเปน) ที่ได้ลืมความสำคัญของความสามัคคีในหมู่พวกเขา เนื่องจากกาลเวลาผ่านไปนาน พวกเขาก็ไม่จำเป็นต้องพึ่งพาความสามัคคีอีกต่อไป เพราะอาณาจักรของพวกเขาเสื่อมโทรมลง และขาดกลุ่มคนที่แข็งแกร่งที่สามารถรวบรวมพวกเขาให้เป็นหนึ่งเดียวกันได้ อัลลอ์นั้นคือผู้ที่ทรงสามารถทำสิ่งใดก็ได้ตามพระประสงค์ และพระองค์ทรงรอบรู้ในทุกสิ่งสรรพสิ่ง พระองค์คือผู้ที่พึ่งพาได้ที่เพียงพอสำหรับเรา และพระองค์ทรงเป็นผู้ดูแลที่ดีที่สุด”</p>
+
+      <p>ท่านอิบนุ คอลดูนได้เสนอทฤษฎีนี้เกี่ยวกับวงจรของอาณาจักร โดยเขามองว่าอาณาจักรทั้งหมดต้องผ่านสามช่วงหลัก คือ การเกิดขึ้น การเจริญเติบโต และการล่มสลาย ในช่วงแรกของการเกิดขึ้น อาณาจักรจะถูกสร้างโดยกลุ่มชนที่มีความสามัคคีกันและมีความแข็งแกร่ง ซึ่งพลังความสามัคคีนี้เขาเรียกว่า “อัสสะบะบียะฮ์” หรือ “ความเป็นน้ำหนึ่งใจเดียวกัน”</p>
+
+      <p>ท่านได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن الإنسان اجتماعي بالطبع</blockquote>
+      <p class="ar-translation">“มนุษย์เป็นสัตว์สังคมโดยธรรมชาติ”</p>
+
+      <p>ซึ่งทำให้พวกเขาสามารถรวมพลังและร่วมมือกันเพื่อสร้างอำนาจทางการเมืองและสังคมได้</p>
+
+      <p>เมื่ออาณาจักรเริ่มเจริญเติบโต ความมั่งคั่งและอำนาจจะทำให้คนในสังคมเริ่มห่างไกลจากความสามัคคีและกลายเป็นผู้บริโภคที่ฟุ่มเฟือย ซึ่งนำไปสู่ความเสื่อมโทรมในที่สุด</p>
+
+      <p>ท่านอิบนุ คอลดูนชี้ให้เห็นว่า ความฟุ่มเฟือยนี้จะทำให้อาณาจักรเริ่มอ่อนแอลง เนื่องจากผู้คนจะเสียความสามัคคีและขาดความสามารถในการร่วมมือกันเพื่อรักษาอำนาจทางการเมืองและเศรษฐกิจ</p>
+
+      <p>ท่านอิบนุ คอลดูนได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الظلم مؤذن بخراب العمران</blockquote>
+      <p class="ar-translation">“ความอยุติธรรมเป็นสัญญาณแห่งความล่มสลายของอารยธรรม”</p>
+
+      <p>เมื่อความอยุติธรรมและการใช้อำนาจเกินขอบเขตเกิดขึ้น อาณาจักรก็จะเข้าสู่กระบวนการล่มสลาย</p>
+
+      <h2 class="article-h2">ความสัมพันธ์ระหว่างเศรษฐกิจและการเก็บภาษี</h2>
+
+      <p>อิบนุ คอลดูนได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اعلم أن الدولة تكون في أولها بدوية كما قلنا فتكون لذلك قليلة الحاجات لعدم الترف وعوائده فيكون خرجها وإنفاقها قليلا فيكون في الجباية حينئذ وفاء بأزيد منها كثيرا عن حاجاتهم ثم لا تلبث أن تأخذ بدين الحضارة في الترف وعوائدها وتجري على نهج الدول السابقة قبلها فيكثر لذلك خراج أهل الدولة ويكثر خراج السلطان خصوصا كثرة بالغة بنفقته في خاصته وكثرة عطائه ولا تفي بذلك الجباية فتحتاج الدولة إلى الزيادة في الجباية لما تحتاج إليه الحامية من العطاء والسلطان من النفقة فيزيد في مقدار الوظائف والوزائع أولا كما قلناه ثم يزيد الخراج والحاجات والتدريج في عوائد الترف وفي العطاء للحامية ويدرك الدولة الهرم وتضعف عصابتها عن جباية الأموال من الأعمال والقاصية فتقل الجباية وتكثر العوائد ويكثر بكثرتها أرزاق الجند وعطاؤهم فيستحدث صاحب الدولة أنواعا من الجباية يضربها على البياعات ويفرض لها قدرا معلوما على الأثمان في الأسواق وعلى أعيان السلع في أموال المدينة وهو مع هذا مضطر لذلك بما دعاه إليه طرق الناس من كثرة العطاء من زيادة الجيوش والحامية وربما يزيد ذلك في أواخر الدولة زيادة بالغة فتكسد الأسواق لفساد الآمال ويؤذن ذلك باختلال العمران ويعود على الدولة ولا يزال ذلك يتزايد إلى أن تضمحل وقد كان وقع منه بأمصار المشرق في أخرات الدولة العباسية والعبيدية كثير وفرضت المغارم حتى على الحاج في الموسم وأسقط صلاح الدين أيوب تلك الرسوم جملة وأعاضها بآثار الخير، وكذلك وقع بالأندلس لعهد الطوائف حتى محا رسمه يوسف بن تاشفين أمير المرابطين، وكذلك وقع بأمصار الجريد بإفريقية لهذا العهد حين استبد بها رؤساؤها والله تعالى أعلم.</blockquote>
+      <p class="ar-translation">“พึงทราบเถิดว่า รัฐในช่วงแรกนั้นมีลักษณะเรียบง่าย ไร้ความหรูหรา ดังที่เราเคยได้กล่าวไว้แล้ว ความต้องการในช่วงเริ่มนี้นั้นจึงมีน้อย เนื่องจากขาดความฟุ่มเฟือย รายจ่ายและการใช้จ่ายของรัฐจึงน้อยตามไปด้วย รายได้จากการเก็บภาษีในช่วงนี้มีความเพียงพอและเกินความจำเป็นอย่างมาก แต่เมื่อเวลาผ่านไป รัฐเริ่มรับเอาค่านิยมของผู้เจริญเข้ามา ความฟุ่มเฟือยและความต้องการต่างๆ ก็เริ่มเพิ่มมากขึ้นตามเหมือนกับที่รัฐก่อนหน้าเคยได้เผชิญ ทำให้มีการเก็บภาษีเพิ่มขึ้น ไม่ใช่แค่จากประชาชนเท่านั้นที่จะต้องจ่ายภาษีที่มากขึ้น แต่รวมถึงรายจ่ายส่วนตัวของสุลต่านที่เพิ่มขึ้นมาก เช่นการแจกจ่ายเงินทองอย่างฟุ่มเฟือย เมื่อการเก็บภาษีไม่เพียงพอสำหรับรายจ่าย รัฐจึงจำเป็นต้องเพิ่มภาษีขึ้นอีก เพื่อตอบสนองความต้องการจ่ายเงินให้กองทัพเพื่อป้องกันประเทศและค่าใช้จ่ายของสุลต่าน จากนั้นจะเริ่มมีการเพิ่มจำนวนเงินภาษีและการจัดเก็บภาษีจากรูปแบบต่างๆ อย่างที่เราได้กล่าวไว้ก่อนหน้านี้ ความต้องการทางเศรษฐกิจและการแจกจ่ายให้กับกองทัพจะเพิ่มมากขึ้น ในขณะที่รัฐเริ่มเข้าสู่ช่วงเสื่อมโทรม และกลุ่มคนที่เคยสนับสนุนรัฐเริ่มอ่อนแอลง จนการเก็บภาษีจากพื้นที่ห่างไกลกลายเป็นเรื่องยาก ทำให้รายได้จากภาษีลดลง ในขณะเดียวกัน ค่าใช้จ่ายของรัฐยังคงเพิ่มขึ้น ทั้งในเรื่องของการจ่ายเงินเดือนและการแจกจ่ายทรัพย์สินให้แก่ทหาร ในสถานการณ์เช่นนี้ ผู้ปกครองรัฐจึงต้องสรรหาสร้างวิธีการเก็บภาษีในรูปแบบใหม่ๆ เช่น การเก็บภาษีจากการขายสินค้า กำหนดอัตราภาษีที่แน่นอนสำหรับสินค้าในตลาด และเก็บภาษีจากสินค้า ทรัพย์สินต่างๆ ในเมือง แม้ว่าเขาจะไม่อยากทำเช่นนั้นก็ตาม แต่ก็ถูกบังคับให้ทำ เพราะมีความต้องการที่เพิ่มมากขึ้นเรื่อยๆ สถานการณ์นี้ในบางครั้งก็มักจะเกิดขึ้นในช่วงปลายของรัฐที่กำลังล่มสลาย ส่งผลให้ตลาดซบเซาเนื่องจากประชาชนหมดหวังในอนาคต ซึ่งเป็นสัญญาณที่บอกถึงความเสื่อมถอยของอารยธรรม และสถานการณ์จะยิ่งแย่ลงจนกระทั่งรัฐล่มสลายไปในที่สุด แน่นอนว่าเหตุการณ์เช่นนี้เคยเกิดขึ้นมาแล้วอดีตที่ได้มีการบังคับใช้ภาษีและภาระอันหนักหนาในหลายเมืองของภาคตะวันออก ในช่วงปลายของราชวงศ์อับบาซียะห์และฟาติมียะห์ ซึ่งรวมถึงการเรียกเก็บภาษีจากผู้แสวงบุญในช่วงเทศกาลฮัจญ์ จนกระทั่งท่านเศาะลาฮุดดีน อัยยูบีย์ได้ยกเลิกการเก็บภาษีเหล่านั้นทั้งหมด และแทนที่ด้วยการกระทำที่ส่งผลดีต่อประชาชน เช่นเดียวกันในแคว้นอัลอันดะลุส ในยุคที่รัฐได้แบ่งเขตการปกครองต่างๆ มีการเก็บภาษีที่ไม่เป็นธรรม ซึ่งก็ถูกลบล้างโดยยูซุฟ อิบนุ ตาชฟีน เจ้าผู้ครองรัฐมุรอบิฏูน นอกจากนี้ เหตุการณ์ลักษณะเดียวกันนี้ก็ยังเกิดขึ้นในเมืองญะรีดแห่งแอฟริกาเหนือในยุคนี้ (เมืองในตูนีเซียปัจจุบัน) เมื่อผู้นำท้องถิ่นเข้ามากุมอำนาจอย่างเด็ดขาด อัลลอฮ์ผู้ทรงยิ่งใหญ่นั้น พระองค์ทรงรอบรู้ทุกสิ่ง”</p>
+
+      <p>ความเห็นของท่านอิบนุ คอลดูนนั้น ยังได้ให้ความสำคัญกับเศรษฐศาสตร์ โดยเฉพาะในเรื่องของการเก็บภาษีและการผลิต เขาเชื่อว่าการเก็บภาษีมากเกินไปจะส่งผลให้ประชาชนและผู้ผลิตขาดแรงจูงใจในการทำงาน ทำให้เศรษฐกิจของรัฐเสื่อมถอย</p>
+
+      <p>ท่านได้ให้คำกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا كثرت الجباية أشرفت الدولة على الفناء</blockquote>
+      <p class="ar-translation">“เมื่อมีการเก็บภาษีเป็นจำนวนมาก รัฐก็ใกล้ถึงกาลล่มสลาย”</p>
+
+      <p>แนวคิดนี้เชื่อมโยงกับความเชื่อของท่านอิบนุ คอลดูนว่า การจัดการทรัพยากรอย่างเหมาะสมและการเก็บภาษีอย่างยุติธรรมเป็นหัวใจสำคัญในการรักษาเสถียรภาพของรัฐ</p>
+
+      <h2 class="article-h2">การปกครองและความยุติธรรม</h2>
+
+      <p>ในด้านการเมือง ท่านอิบนุ คอลดูนเชื่อว่าความยุติธรรมเป็นรากฐานของการปกครองที่ดี</p>
+
+      <p>ท่านอิบนุ คอลดูนได้มห้รายละเอียดว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اعلم أن العدوان على الناس في أموالهم ذاهب بآمالهم في تحصيلها واكتسابها لما يرونه حينئذ من أن غايتها ومصيرها انتهابها من أيديهم، وإذا ذهبت آمالهم في اكتسابها وتحصيلها انقبضت أيديهم عن السعي في ذلك، وعلى قدر الاعتداء ونسبته يكون انقباض الرعايا عن السعي في الاكتساب، فإذا كان الاعتداء كثيرا عاما في جميع أبواب المعاش كان القعود عن الكسب كذلك لذهابه بالآمال جملة بدخوله من جميع أبوابها، وإن كان الاعتداء يسيرا كان الانقباض عن الكسب على نسبته، والعمران ووفوره ونفاق أسواقه إنما هو بالأعمال وسعي الناس في المصالح والمكاسب ذاهبين وجائين، فإذا قعد الناس عن المعاش وانقبضت أيديهم عن المكاسب كسدت أسواق العمران وانتفضت الأحوال وابذعر الناس في الآفاق من غير تلك الإيالة في طلب الرزق فيما خرج عن نطاقها، فخف ساكن القطر وخلت دياره وخرجت أمصاره، واختل باختلاله حال الدولة والسلطان لما أنها صورة للعمران، تفسد بفساد مادتها ضرورة وانظر في ذلك ما حكاه المسعودي في أخبار الفرس عن الموبذان صاحب الدين عندهم أيام بهرام بن بهرام، وما عرض به للملك في إنكار ما كان عليه من الظلم والغفلة عن عائدته على الدولة بضرب المثل في ذلك على لسان البوم حين سمع الملك أصواتها وسأله عن فهم كلامها، فقال له: «إن بوما ذكرا يروم نكاح بوم أنثى وإنها شرطت عليه عشرين قرية من الخراب في أيام بهرام، فقبل شرطها، وقال لها: إن دامت أيام الملك أقطعتك ألف قرية، وهذا أسهل مرام». فتنبه الملك من غفلته، وخلا بالموبذان وسأله عن مراده، فقال له: «أيها الملك، إن الملك لا يتم عزه إلا بالشريعة والقيام لله بطاعته والتصرف تحت أمره ونهيه، ولا قوام للشريعة إلا بالملك، ولا عز للملك إلا بالرجال، ولا قوام للرجال إلا بالمال، ولا سبيل إلى المال إلا بالعمارة، ولا سبيل إلى العمارة إلا بالعدل، والعدل الميزان المنصوب بين الخليقة نصبه الرب وجعل له قيما وهو الملك، وأنت أيها الملك عمدت إلى الضياع فانتزعتها من أربابها وعمارها، وهم أرباب الخراج ومن تؤخذ منهم الأموال، وأقطعتها الحاشية والخدم وأهل البطالة، فتركوا العمارة والنظر في العواقب وما يصلح الضياع، وسومحوا في الخراج لقربهم من الملك، ووقع الحيف على من بقي من أرباب الخراج وعمار الضياع، فانجلوا عن ضياعهم وخلوا ديارهم، وأووا إلى ما تعذر من الضياع فسكنوها، فقلت العمارة وخربت الضياع وقلت الأموال وهلكت الجنود والرعية».</blockquote>
+      <p class="ar-translation">“พึงทราบเถิดว่า การละเมิดต่อทรัพย์สินของประชาชนนั้น จะทำลายความมุ่งมั่นของพวกเขาในการหาเลี้ยงชีพและสะสมทรัพย์สิน เพราะเมื่อพวกเขาเห็นว่า ท้ายที่สุดแล้วทรัพย์สินที่ได้มาก็จะถูกแย่งชิงไป ความหวังในการสะสมและแสวงหาทรัพย์สินก็จะหายไป และเมื่อไม่มีความหวังในการแสวงหาทรัพย์สินอีกต่อไป พวกเขาก็จะหยุดพยายามทำงานเพื่อหาเลี้ยงชีพ ขอบเขตของการละเมิดที่เกิดขึ้นส่งผลต่อการหยุดทำงานของประชาชน หากการละเมิดนั้นกว้างขวาง ครอบคลุมทุกด้านของการดำรงชีวิต การหยุดทำงานก็จะเกิดขึ้นในทุกๆ สาขาอาชีพ เพราะความหวังของผู้คนถูกทำลายสิ้น แต่ถ้าการละเมิดเกิดขึ้นเพียงเล็กน้อย การหยุดทำงานก็จะเกิดตามขอบเขตที่การละเมิดนั้นมีผล ความเจริญรุ่งเรืองและความคึกคักของสังคม รวมถึงตลาดการค้า ขึ้นอยู่กับการทำงานและความพยายามของผู้คนในการแสวงหาประโยชน์และรายได้ หากผู้คนหยุดทำงานและเลิกแสวงหารายได้ ตลาดก็จะซบเซา เศรษฐกิจจะตกต่ำ ผู้คนจะพากันอพยพออกจากเขตปกครองนั้น และไปแสวงหารายได้และความเป็นอยู่ที่ดีกว่าในที่อื่นๆ เมื่อผู้คนอพยพออกไปจำนวนมาก เมืองและบ้านเรือนก็จะถูกทิ้งร้าง พื้นที่การค้าและเศรษฐกิจจะค่อยๆ ล่มสลาย ซึ่งทั้งหมดนี้จะส่งผลให้รัฐและอำนาจการปกครองเสื่อมสลายตามไปด้วย เพราะรัฐเป็นภาพสะท้อนของสังคม หากสังคมพังทลาย รัฐก็จะต้องล่มสลายไปด้วยตามกฎธรรมชาติ และท่านจงพิจารณาดูจากเรื่องราวที่อัลมัสอูดีย์ได้บันทึกไว้เกี่ยวกับชาวเปอร์เซียเถิดว่า มูบัซดาน (ผู้นำทางศาสนาคนนึงในยุคก่อน) ได้กล่าวตักเตือนกษัตริย์บะห์รัม อิบนุ บะห์รัม ถึงความอยุติธรรมและการเพิกเฉยต่อผลกระทบของมันที่มีต่อรัฐผ่านการยกตัวอย่างเชิงเปรียบเทียบ เมื่อกษัตริย์ได้ยินเสียงนกฮูกร้อง จึงถามมูบัซดานว่าความหมายของเสียงนั้นคืออะไร มูบัซดานตอบว่า: ‘เป็นเสียงของนกฮูกตัวผู้ที่กำลังจะขอแต่งงานกับนกฮูกตัวเมีย โดยที่นกฮูกตัวเมียตั้งเงื่อนไขว่าเธอต้องการหมู่บ้านร้าง 20 แห่งที่ถูกทิ้งร้างในยุคของกษัตริย์บะห์รัมเป็นของขวัญ นกฮูกตัวผู้ตกลงและกล่าวว่า: ถ้าอาณาจักรของกษัตริย์ยังคงอยู่ ไม่เสื่อมสลาย ฉันจะมอบหมู่บ้านอีก 1,000 แห่งให้เจ้า และนั่นเป็นสิ่งที่ทำได้ง่ายดาย’ คำพูดนี้ทำให้กษัตริย์คืนสติและสำนึกได้ จึงเรียกมูบัซดานมาพบเป็นการส่วนตัวและถามถึงความหมายที่แท้จริง มูบัซดานจึงกล่าวว่า: ‘โอ้กษัตริย์เอ๋ย ความยิ่งใหญ่ของอาณาจักรจะสมบูรณ์ได้ก็ต่อเมื่อมีการปกครองด้วยความยุติธรรมและการปฏิบัติตามคำสอนของพระเจ้า การปกครองต้องเป็นไปตามกฎแห่งพระเจ้า เพื่อทำให้รัฐมีเสถียรภาพ และรัฐจะยิ่งใหญ่ได้ด้วยผู้คนที่เข้มแข็ง และผู้คนจะมีความเข้มแข็งก็ต่อเมื่อพวกเขามีทรัพยากรที่เพียงพอ ทรัพยากรของรัฐมาจากการพัฒนาแผ่นดิน และการพัฒนาแผ่นดินจะเกิดขึ้นได้ก็ต่อเมื่อมีความยุติธรรม ความยุติธรรมเป็นเสมือนดุลยภาพที่พระเจ้าทรงสร้างไว้ระหว่างสรรพสิ่ง พระองค์ได้มอบหน้าที่ให้กษัตริย์ดูแลความยุติธรรมนี้ แต่ท่านกลับยึดครองที่ดินจากเจ้าของและผู้ที่ดูแลมัน ซึ่งพวกเขาเหล่านั้นเป็นผู้ที่นำภาษีเข้ารัฐ แต่ท่านกลับมอบที่ดินเหล่านั้นให้แก่ข้าราชสำนักและผู้คนที่ไม่ได้ทำงานหรือไม่ได้มีส่วนร่วมในการพัฒนา พวกเขาละเลยที่ดินและไม่ดูแลทรัพย์สิน และยังได้รับการยกเว้นภาษีอีก เนื่องจากความใกล้ชิดกับท่าน ผลที่ตามมาคือ ความอยุติธรรมนี้ทำให้เจ้าของที่ดินและผู้พัฒนาทรัพย์สินที่ยังคงอยู่ได้รับผลกระทบ พวกเขาจึงละทิ้งที่ดินและบ้านเรือนของตน และอพยพไปยังพื้นที่ที่ไม่ถูกเรียกเก็บภาษี ส่งผลให้การพัฒนาลดลง หมู่บ้านร้างเปล่า รายได้จากภาษีก็ลดลง จนกระทั่งกองทัพและประชาชนของรัฐเริ่มพินาศ’”</p>
+
+      <p>ในเนื้อความนี้ มูบัซดานเตือนกษัตริย์ผ่านการเปรียบเทียบว่า ความอยุติธรรมในการปกครอง โดยเฉพาะการยึดที่ดินจากประชาชนและมอบให้แก่ข้าราชสำนักโดยไม่สนใจการพัฒนาที่ดิน จะนำมาซึ่งการล่มสลายของรัฐในที่สุด ความยุติธรรมเป็นรากฐานที่สำคัญในการสร้างความมั่นคงและความเจริญรุ่งเรืองในระยะยาวของอาณาจักร</p>
+
+      <p>ท่านอิบนุ คอลดูนได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">العدل أساس الملك</blockquote>
+      <p class="ar-translation">“ความยุติธรรมคือรากฐานของการปกครอง”</p>
+
+      <p>เขามองว่าการปกครองที่มีความยุติธรรมนั้นจะทำให้รัฐมีเสถียรภาพและเจริญรุ่งเรือง แต่หากผู้นำขาดความยุติธรรมและใช้อำนาจเพื่อผลประโยชน์ส่วนตน รัฐนั้นก็จะเสื่อมสลายไป ความยุติธรรมไม่ได้เป็นเพียงเรื่องของกฎหมายเท่านั้น แต่ยังหมายถึงการสร้างความสมดุลทางสังคมและการปกครองที่คำนึงถึงความต้องการและความเป็นอยู่ของประชาชนทุกระดับ ท่านอิบนุ คอลดูนจึงได้กล่าวเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا تحسبن الظلم إنما هو أخذ المال أو الملك من يد مالكه من غير عوض ولا سبب كما هو المشهور، بل الظلم أعم من ذلك. وكل من أخذ ملك أحد أو غصبه في عمله، أو طالبه بغير حق، أو فرض عليه حقا لم يفرضه الشرع فقد ظلمه. فجباة الأموال بغير حقها ظلمة، والمعتدون عليها ظلمة، والمنتهبون لها ظلمة، والمانعون لحقوق الناس ظلمة، وخصاب الأملاك على العموم ظلمة. ووبال ذلك كله عائد على الدولة بخراب العمران الذي هو مادتها لإذهابه الآمال من أهله. واعلم أن هذه هي الحكمة المقصودة للشارع في تحريم الظلم، وهو ما ينشأ عنه من فساد العمران وخرابه، وذلك مؤذن بانقطاع النوع البشري. وهي الحكمة العامة المراعاة للشرع في جميع مقاصده الضرورية الخمسة: من حفظ الدين، والنفس، والعقل، والنسل، والمال. فلما كان الظلم كما رأيت مؤذنا بانقطاع النوع لما أدى إليه من تخريب العمران، كانت حكمة الخطر فيه موجودة، فكان تحريمه مهما، وأدلته من القرآن والسنة كثيرة، أكثر من أن يأخذها قانون الضبط والحصر.</blockquote>
+      <p class="ar-translation">“อย่าเข้าใจผิดว่าความอยุติธรรมหมายถึงเพียงแค่การยึดเอาทรัพย์สินหรืออำนาจจากเจ้าของโดยไม่มีการชดเชยหรือไม่มีเหตุผลอันสมควรอย่างที่คนส่วนใหญ่เข้าใจกัน ความอยุติธรรมมีความหมายที่กว้างกว่านั้นมาก ทุกคนที่ยึดครองทรัพย์สินของผู้อื่นหรือแย่งสิทธิ์ของเขาในหน้าที่การงาน หรือเรียกร้องสิ่งที่ไม่เป็นธรรม หรือบังคับให้ผู้อื่นยอมรับในสิ่งที่ไม่ได้กำหนดไว้ในกฎหมายของศาสนา เขากระทำความอยุติธรรมทั้งสิ้น ผู้ที่เรียกเก็บเงินหรือทรัพย์สินโดยไม่มีเหตุอันควรถือว่าเป็นคนอยุติธรรม ผู้ที่ละเมิดสิทธิ์ในการครอบครองทรัพย์สินเป็นคนอยุติธรรม ผู้ที่ขโมยหรือแย่งชิงทรัพย์สินเป็นคนอยุติธรรม และผู้ที่ปฏิเสธสิทธิ์ของประชาชนในการได้รับสิ่งที่พึงมีพึงได้ก็ถือเป็นคนอยุติธรรม การยึดครองทรัพย์สินของผู้อื่นอย่างไม่เป็นธรรมในลักษณะใดๆ ก็ตามถือเป็นความอยุติธรรม และผลลัพธ์ของการกระทำเหล่านี้จะย้อนกลับมาทำลายรัฐ เพราะความอยุติธรรมจะทำลายความหวังของประชาชนและทำให้การพัฒนาของสังคมต้องหยุดชะงัก ขอให้เข้าใจเถิดว่า นี่คือปัญญาอันสูงส่งที่ศาสนาสอนเราในการห้ามความอยุติธรรม เพราะความอยุติธรรมนั้นจะนำไปสู่การทำลายล้างและความเสื่อมโทรมของอารยธรรม และเมื่ออารยธรรมถูกทำลาย มนุษยชาติเองก็จะเสื่อมสลายไปเช่นกัน นี่คือปัญญาที่ศาสนามุ่งรักษาไว้ในหลักสำคัญทั้ง 5 ประการ คือ การปกป้องศาสนา ชีวิต สติสัมปชัญญะ เชื้อสาย และทรัพย์สิน เนื่องจากความอยุติธรรมเป็นภัยที่ทำลายอารยธรรมและทำให้มนุษยชาติเสื่อมลงอย่างที่ท่านได้เห็น จึงเป็นสิ่งจำเป็นอย่างยิ่งที่จะต้องห้ามการกระทำเหล่านี้ หลักฐานในการห้ามความอยุติธรรมในอัลกุรอานและซุนนะห์มีอยู่อย่างมากมาย จนยากที่จะนับหรือรวบรวมได้ทั้งหมด”</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>แม้ว่าท่านอิบนุ คอลดูนจะเขียนผลงานในช่วงยุคกลาง แต่ความลึกซึ้งของแนวคิดของท่านก็ยังคงเป็นที่สนใจและศึกษามาจนถึงปัจจุบัน แม้จะมีผู้ที่ไม่เห็นด้วยกับแนวคิดของท่านอยู่บ้างก็ตาม แต่นักวิชาการยุคใหม่ก็ยังคงตีความและปรับใช้แนวคิดของเขาในการวิเคราะห์การเปลี่ยนแปลงทางสังคม เศรษฐกิจ และการเมืองในโลกปัจจุบัน ไม่ว่าจะเป็นในด้านการศึกษาเกี่ยวกับการพัฒนาอารยธรรม หรือการศึกษาด้านเศรษฐกิจและการบริหารรัฐ</p>
+
+      <p>อิบนุ คอลดูนไม่เพียงแค่เป็นนักประวัติศาสตร์ที่สำคัญ แต่ยังเป็นนักปรัชญาและนักเศรษฐศาสตร์ที่สร้างแนวคิดใหม่ๆ ที่มีความสำคัญต่อการพัฒนาของหลายสาขาวิชา แนวคิดของเขาเกี่ยวกับการพัฒนาของอาณาจักร การล่มสลายของรัฐ ความยุติธรรมในสังคม และผลกระทบของเศรษฐศาสตร์ต่อการปกครอง ยังคงเป็นหัวข้อที่มีความสำคัญและเกี่ยวข้องในยุคปัจจุบัน คำกล่าวของท่าน เช่น</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الظلم مؤذن بخراب العمران</blockquote>
+      <p class="ar-translation">“ความอยุติธรรมเป็นสัญญาณแห่งความล่มสลายของอารยธรรม”</p>
+
+      <p>และคำกล่าวที่ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إن الإنسان اجتماعي بالطبع</blockquote>
+      <p class="ar-translation">“มนุษย์เป็นสัตว์สังคมโดยธรรมชาติ”</p>
+
+      <p>ยังคงสะท้อนให้เห็นถึงความจริงของธรรมชาติของมนุษย์และการเปลี่ยนแปลงทางสังคมที่ยังคงเกิดขึ้นในทุกยุคสมัย</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). อิบนุ คอลดูน: มองอดีตเพื่อเข้าใจอนาคต. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/ibn-khaldun-past-and-future.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ul class="bibliography" lang="ar" dir="rtl">
+        <li>ابن خلدون، عبد الرحمن بن محمد. المقدمة.</li>
+      </ul>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>

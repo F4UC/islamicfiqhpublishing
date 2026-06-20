@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ไวยากรณ์ โครงสร้างแห่งความจริง — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="วิชานะฮูเปรียบดั่งเกลือในอาหาร และไวยากรณ์ในฐานะโครงสร้างแห่งความจริง บทวิเคราะห์อุปมาทางวรรณศิลป์ของอัลก็อซวีนีย์ อัซซุบกีย์ อัตตัฟตะซานีย์ และจารีตไวยากรณ์เชิงจิตวิญญาณของอัลกุชัยรีย์">
+<meta name="keywords" content="ไวยากรณ์, นะฮู, อัลก็อซวีนีย์, อัตตัฟตะซานีย์, อัลกุชัยรีย์, อิบนุ มาลิก, อัลฟียะฮ์, กะลาม, ตะเศาวุฟ">
+<meta name="author" content="มัรกัส อัลอิมาม อัลอัชอะรีย์">
+
+<meta property="og:title" content="ไวยากรณ์ โครงสร้างแห่งความจริง — Islamic Fiqh Publishing">
+<meta property="og:description" content="จากอุปมา ‘ไวยากรณ์เปรียบดั่งเกลือในอาหาร’ สู่ ‘ไวยากรณ์แห่งดวงใจ’ ของชาวศูฟี ว่าด้วยนะฮูในฐานะโครงสร้างแห่งความจริง">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/kalam/grammar-and-reality">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/kalam/grammar-and-reality">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ไวยากรณ์ โครงสร้างแห่งความจริง",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "มัรกัส อัลอิมาม อัลอัชอะรีย์" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/kalam/grammar-and-reality"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+.bibliography.latin { direction: ltr; text-align: left; }
+.bibliography.latin li { font-family: 'Inter', 'Sarabun', sans-serif; }
+.biblio-subhead {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 15px; font-weight: 600;
+  color: var(--text-primary); margin: 18px 0 4px;
+}
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="grammar-and-reality">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/kalam.html" class="article-feature-eyebrow">กะลาม / ฟิกฮ์</a>
+      <h1 class="article-feature-title">ไวยากรณ์ โครงสร้างแห่งความจริง</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในวิชาไวยากรณ์ หรือวิชานะฮูนั้น มีวลีหนึ่งที่ปรากฎตั้งแต่ยุคโบราณกาลเลยว่า ไวยากรณ์เปรียบดั่งเกลือในอาหาร บทความนี้จะเริ่มต้นจากการสำรวจอุปมาดังกล่าวและการถกเถียงของนักวรรณศิลป์ที่ตามมา ก่อนจะนำไปสู่อีกแง่มุมหนึ่งที่ลึกซึ้งกว่า นั่นคือไวยากรณ์ในฐานะ โครงสร้างแห่งความจริง ที่ชาวศูฟีใช้เป็นเครื่องมือขัดเกลาจิตใจ</p>
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">النَّحْوُ فِي الكَلَامِ كَالمِلْحِ فِي الطَّعَامِ، كَوْنُ القَلِيلِ مُصْلِحًا، وَالكَثِيرِ مُفْسِدًا</blockquote>
+      <p class="ar-translation">“วิชานะฮูในประโยคคำพูด ก็เปรียบได้กับเกลือในอาหาร กล่าวคือ ปริมาณน้อยก็เป็นคุณ แต่อย่างมากก็กลายเป็นโทษ”</p>
+
+      <p>ดังกล่าวนี้เป็นสำนวนเปรียบเทียบที่มีการใช้ในหมู่นักวิชาการและนักศึกษา โดยบางคนใช้เพื่อ “ยกย่อง” ว่า การใช้หลักไวยากรณ์ช่วยให้ถ้อยคำสละสลวย มีระเบียบ และปราศจากความกำกวม เหมือนเกลือที่ทำให้อาหารกลมกล่อมขึ้น เมื่อใส่ในปริมาณที่เหมาะสม ขณะเดียวกัน บางคนอ้างสำนวนนี้เพื่อตำหนิการใช้หลักไวยากรณ์มากเกินไป จนทำให้ภาษามีความลึก ยากแก่การสื่อสาร และกลายเป็นอุปสรรคต่อการเข้าใจ คล้ายกับเกลือที่เมื่อใส่มากเกิน ก็ทำให้อาหารเสียรสชาติ</p>
+
+      <p>อย่างไรก็ตาม นักภาษาศาสตร์ชั้นนำ ก็มักปฏิเสธการตีความที่ว่า “มากไป” ในวิชานะฮูว่าจะเป็นโทษ โดยอธิบายว่า ไวยากรณ์ไม่ได้มีลักษณะปริมาณที่ “มากหรือน้อย” แต่คือการ “ใช้หรือไม่ใช้” อย่างถูกต้องตามหลักเท่านั้น ถ้าถูกต้องก็เหมือนอาหารที่มีเกลือพอเหมาะ ถ้าไม่ถูกต้องก็เหมือนไม่ใส่เกลือเลย</p>
+
+      <h2 class="article-h2">ที่มาของวลี “ไวยากรณ์ในคำพูดก็เหมือนเกลือในอาหาร”</h2>
+
+      <p>วลีนี้ ปรากฏอยู่ในวรรณกรรมอาหรับมาแต่โบราณ ถือเป็นคำเปรียบเทียบที่นิยมใช้เพื่อสื่อถึงความสำคัญของไวยากรณ์ในการสื่อความหมายของภาษา โดยทั่วไปมีสองแนวคิด เกี่ยวกับต้นกำเนิดและความหมายดั้งเดิมของวลีนี้</p>
+
+      <p>แนวคิดที่หนึ่ง คือมาจากคำกล่าวของอิหม่ามอัชชะอ์บีย์ มีหลักฐานในตำราโบราณที่รายงานมาจากอัลคอเฏบ อัลบักดาดีย์ในตำรา “อัลญามิอ์ ลิอัคลากิรรอวีย์ วะอาดาบิสซามิอ์” และอิบนุ อับดิลบัรในตำรา “ญามิอ์ บะยานิลอิลม์ วะฟัฎลิฮ์” ที่ระบุว่า อามีร บิน ชะรอฮีล อัชชะอ์บีย์ นักปราชญ์ชาวอาหรับยุคแรก เป็นบุคคลแรกๆ ที่กล่าววลีนี้ไว้ เพื่อย้ำถึงความจำเป็นของวิชาหลักไวยากรณ์ในการพูดภาษาอาหรับอย่างถูกต้อง วลีนี้ในบริบทของอัชชะอ์บีย์มีหมายความว่า ไวยากรณ์เป็นองค์ประกอบเล็กน้อยแต่จำเป็นต่อประโยคคำพูด เช่นเดียวกับเกลือที่แม้ใส่เพียงนิดเดียวก็ทำให้อาหารกลมกล่อมขึ้นได้ ถ้าขาดเสียก็ทำให้อาหารจืดชืดไม่มีรสชาติ ดังจะเห็นว่าท่านอัชชะอ์บีย์กล่าวว่า:</p>
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">النَّحْوُ فِي الْعِلْمِ كَالْمِلْحِ فِي الطَّعَامِ ، لَا يُسْتَغْنَى عَنْهُ</blockquote>
+      <p class="ar-translation">“ไวยากรณ์ในวิชาความรู้ ก็เหมือนเกลือในอาหาร ซึ่งขาดเสียมิได้”</p>
+
+      <p>แนวคิดที่สอง คือวลีนี้ในฐานะสุภาษิตเรื่องความพอดีในการใช้ไวยากรณ์ แหล่งข้อมูลอีกด้านหนึ่งระบุว่าวลี “ไวยากรณ์ในคำพูดก็เหมือนเกลือในอาหาร” ปรากฏในฐานะสำนวนเปรียบเทียบทั่วไปที่ไม่ทราบผู้กล่าวดั้งเดิมที่แน่ชัด โดยถูกใช้แพร่หลายในวรรณกรรมเพื่อเตือนให้ใช้วิชาไวยากรณ์แต่พอเหมาะ ตัวอย่างเช่นหนังสือรวบรวมนิทานคำกล่าวโบราณ “นัษร์ อัดดุรร์” ของมันศู้ร อัรรอซีย์ ได้บันทึกสุภาษิตว่า:</p>
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">قيلَ: النَّحْو مِلْحُ الْعلم، وَمَتى اسْتُكْثِر مِن الْملح فِي الطَّعام فَسدَ.</blockquote>
+      <p class="ar-translation">“มีคำกล่าวว่า: ไวยากรณ์เปรียบดั่งเกลือแห่งความรู้ และเมื่อใส่เกลือมากเกินไปในอาหาร อาหารก็จะเสีย”</p>
+
+      <p>สำนวนนี้สะท้อนทรรศนะของบางนักวิชาการที่เห็นว่าไม่ควรหมกมุ่นกับไวยากรมากเกินไป เพราะการเน้นไวยากรมากไปอาจทำให้สาระของคำพูดเสียไปหรือสื่อสารได้ไม่เป็นธรรมชาติ ทั้งสองแนวทางข้างต้นต่างก็แสดงให้เห็นว่า คติพจน์นี้ถูกตีความได้สองทางในประวัติศาสตร์ ทั้งในเชิงส่งเสริมและเชิงตักเตือน แต่ไม่ว่าจะในความหมายใด แก่นสารของวลียังคงเน้นถึงความสำคัญของไวยากรณ์ต่อภาษา</p>
+
+      <p>ไวยากรณ์เป็นส่วนเล็กๆ ที่จำเป็นต้องมีเพื่อให้ภาษาได้ใจความสมบูรณ์ ดุจเกลือที่ขาดไม่ได้ในอาหาร นักปราชญ์ยุคหลังหลายท่านได้อภิปรายวลีนี้อย่างละเอียด เช่น บะฮาอุดดีน อัซซุบกีย์ที่ชี้ว่า การเปรียบไวยากรณ์กับเกลือไม่ควรมุ่งเรื่อง มากหรือน้อย เพราะไวยากรณ์นั้นไม่อาจแบ่งเป็นปริมาณเช่นนั้นได้ ต่างจากเกลือ อีกทั้งนักปราชญ์ด้านวรรณศิลป์อย่างอัซซักกากีย์และอัลก็อสวีนีย์ ได้อธิบายว่า จุดเปรียบเทียบที่ถูกต้องของวลีนี้ คือการทำให้ดีขึ้นเมื่อมีมัน และเสียดุลยภาพเมื่อขาดมัน เหมือนที่อาหารจะมีรสดีเมื่อใส่เกลือ และจืดชืดเมื่อขาดเกลือ ส่วนการตีความว่าใส่เกลือมากไปจะทำให้อาหารเสีย ไม่อาจเทียบกับไวยากรณ์ได้ตรงๆ เพราะการใช้ไวยากรณ์ไม่มีลักษณะ มากเกิน ในเชิงปริมาณแบบเกลือ ดังที่จะอธิบายถัดไป</p>
+
+      <h2 class="article-h2">คำอธิบายของนักวรรณศิลป์</h2>
+
+      <p>ท่านญะลาลุดดีน อัลก็อซวีนีย์ (เสียชีวิต ฮ.ศ. 739) ได้ระบุว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فَعُلِمَ فَسَادُ جَعْلِهِ فِي قَوْلِ القَائِلِ: النَّحْوُ فِي الكَلَامِ كَالمِلْحِ فِي الطَّعَامِ، كَوْنُ القَلِيلِ مُصْلِحًا، وَالكَثِيرِ مُفْسِدًا؛ لِأَنَّ النَّحْوَ لَا يَحْتَمِلُ القِلَّةَ وَالكَثْرَةَ، بِخِلَافِ المِلْحِ</blockquote>
+      <p class="ar-translation">“ดังนั้น จึงเป็นที่เข้าใจได้ว่า เป็นการเปรียบเทียบที่ผิดพลาดในคำกล่าวที่ว่า ‘วิชานะฮูในประโยคคำพูด ก็เหมือนเกลือในอาหาร’ ในแง่ที่ว่า ‘น้อยนั้นเป็นคุณ แต่มากกลับเป็นโทษ’ เพราะว่า วิชานะฮูนั้น ไม่สามารถถูกพิจารณาในเชิง ‘น้อย’ หรือ ‘มาก’ ได้ แตกต่างจากเกลือโดยสิ้นเชิง”</p>
+
+      <p>แน่นอนว่าท่านก็อซวีนีย์กำลังวิจารณ์การเปรียบเทียบที่ไม่ถูกต้อง โดยระบุว่าเกลือสามารถวัดได้ในปริมาณ เช่น “น้อยดี มากเสีย” แต่นะฮูไม่ใช่สิ่งที่จะวัดแบบนั้นได้ เพราะถ้าใช้ก็ต้องใช้ให้ถูกทั้งหมด เช่น การยกฟาอิล การวางมัฟอูล ไม่ใช่ใช้บางส่วน ดังนั้น ความผิดพลาดของการเปรียบเทียบจึงอยู่ที่การเอาคุณลักษณะของสิ่งหนึ่ง คือความมีมากน้อยส่งผล ไปอธิบายอีกสิ่งหนึ่งที่ไม่มีคุณลักษณะนั้น</p>
+
+      <p>ท่านบะฮาอุดดีน อัซซุบกีย์ (เสียชีวิต ฮ.ศ. 773) ได้อธิบายคำกล่าวของท่านก็อซวีนีย์ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أي لِكَوْنِ وَجْهِ الشَّبَهِ مَا يَشْتَرِكَانِ فِيهِ، عُلِمَ فَسَادُ جَعْلِ الْوَجْهِ كَوْنَ القَلِيلِ مُصْلِحًا، وَالْكَثِيرِ مُفْسِدًا فِي قَوْلِهِمْ: النَّحْوُ فِي الكَلَامِ كَالمِلْحِ فِي الطَّعَامِ، إِذِ القِلَّةُ وَالْكَثْرَةُ إِنَّمَا يُتَصَوَّرُ جَرَيَانُهُمَا فِي المِلْحِ؛ لِأَنَّ قَلِيلَهُ يَنْفَعُ وَكَثِيرَهُ يَضُرُّ بِالطَّعَامِ، دُونَ النَّحْوِ، فَإِنَّهُ إِنْ وُجِدَ انْتُفِعَ بِهِ، كَرَفْعِ الْفَاعِلِ وَنَصْبِ الْمَفْعُولِ، وَإِنْ لَمْ يُوجَدْ لَمْ يُوجَدِ النَّحْوُ، فَهَذَا حِينَئِذٍ لَيْسَ بِوَجْهٍ؛ لِعَدَمِ الاشْتِرَاكِ، وَتَقْرِيرُهُ عَلَى هَذَا الْوَجْهِ، يَقْتَضِي أَنَّ المَانِعَ فِي المُشَابَهَةِ كَوْنُ النَّحْوِ لَا يَتَفَاوَتُ بِالقِلَّةِ وَالكَثْرَةِ، وَلَكِنْ يُمْنَعُ ذَلِكَ؛ لِأَنَّ النَّحْوَ مُتَفَاوِتٌ قَطْعًا، وَقَدْ يَعْرِفُ النَّحْوِيُّ تَرَاكِيبَ كَثِيرَةً لَا يَعْرِفُهَا نَحْوِيٌّ آخَرُ.</blockquote>
+      <p class="ar-translation">“กล่าวคือ เนื่องจาก ‘องค์ประกอบแห่งความเหมือน’ นั้นต้องเป็นสิ่งที่ทั้งสองฝั่งมีร่วมกัน จึงเป็นที่เข้าใจได้ว่าการกำหนด ‘องค์ประกอบแห่งความเหมือน’ ว่าเป็น ‘ความน้อยแล้วเกิดประโยชน์ และความมากแล้วเกิดโทษ’ ในคำกล่าวที่ว่า ‘วิชานะฮูในคำพูด เหมือนเกลือในอาหาร’ นั้น เป็นสิ่งที่ผิด เพราะลักษณะของ ‘ความน้อยและความมาก’ จะสามารถจินตนาการให้นำมาใช้กับ ‘เกลือ’ ได้เท่านั้น เนื่องจากเกลือน้อยให้คุณ แต่ถ้ามากเกินไปจะให้โทษต่ออาหาร ต่างจากวิชานะฮู ซึ่งหากมีอยู่ก็จะเกิดประโยชน์ เช่น การรอเฟาะอ์ฟาอิล (ประธาน) และการนะศับมัฟอูล (กรรม) ให้ถูกต้อง และหากไม่มีอยู่เลย ก็จะไม่มีนะฮูเกิดขึ้นเลย ดังนั้น การเปรียบเทียบในลักษณะนี้จึงไม่ใช่ ‘องค์ประกอบแห่งความเหมือน’ ที่แท้จริง เพราะขาดลักษณะร่วมกัน และหากเรายืนยันการตีความเปรียบเทียบนี้ในทำนองนี้ ก็เท่ากับว่าเรากำลังกล่าวว่า สิ่งที่ขัดขวางการเปรียบเทียบนี้ก็คือ ความจริงที่ว่า ‘นะฮูไม่สามารถมีมากหรือน้อยได้’ แต่ความเข้าใจนี้ก็เป็นสิ่งที่ผิดอีก เพราะในความเป็นจริง วิชานะฮูนั้น ย่อมมีความต่างระดับกันอย่างแน่นอน และบางนักไวยากรณ์อาจรู้รูปประโยคหรือโครงสร้างทางภาษาหลายอย่าง ที่นักไวยากรณ์อีกคนหนึ่งไม่รู้”</p>
+
+      <p>ท่านยังกล่าวต่อถึงความเป็นไปได้อีกแนวหนึ่งว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَيَحْتَمِلُ أَنْ يُرَادَ أَنَّ التَّشْبِيهَ فَاسِدٌ؛ لِأَنَّ النَّحْوَ كَثِيرُهُ وَقَلِيلُهُ يُصْلِحُ، بِخِلَافِ المِلْحِ، وَلِفَسَادِ القِلَّةِ وَالكَثْرَةِ وَجْهًا.</blockquote>
+      <p class="ar-translation">“และก็อาจเป็นไปได้ว่า ความหมายที่ต้องการสื่อก็คือว่า การเปรียบเทียบนั้นผิดพลาด เพราะว่าวิชานะฮูนั้น ไม่ว่าจะมีมากหรือน้อยก็ล้วนก่อให้เกิดประโยชน์ ตรงกันข้ามกับเกลือ ซึ่งไม่เป็นเช่นนั้น อีกทั้ง การใช้ ‘ความน้อย’ และ ‘ความมาก’ มาเป็นพื้นฐานของการเปรียบ ก็เป็นการเลือก ‘องค์ประกอบแห่งความเหมือน’ ที่ผิดพลาดเช่นกัน”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قِيلَ: الْوَجْهُ فِي هَذَا التَّشْبِيهِ كَوْنُ الاسْتِعْمَالِ مُصْلِحًا، وَالتَّرْكِ مُفْسِدًا، لِيَكُونَ مُشْتَرَكًا بَيْنَهُمَا، وَإِلَيْهِ ذَهَبَ عَبْدُ القَاهِرِ، وَقَدْ تَكَلَّفَ لِلْأَوَّلِ بِأَنَّ كَثْرَةَ النَّحْوِ تُوجِبُ الإِقْدَامَ عَلَى مَا لَا يَتَوَهَّمُ قَلِيلُ النَّحْوِ جَوَازَهُ مِنْ تَقْدِيمٍ وَتَأْخِيرٍ وَإِضْمَارٍ، فَيَبْقَى كَبَيْتِ الفَرَزْدَقِ السَّابِقِ، وَلَعَلَّ هَذَا الْمُرَادَ مِنْ قَوْلِ السَّكَاكِيِّ: وَرُبَّمَا أُمْكِنَ تَصْحِيحُ هَذَا، وَلَكِنْ لَيْسَ مَا يُهِمُّنَا الآنَ.</blockquote>
+      <p class="ar-translation">“มีผู้กล่าวว่า: จุดร่วมในอุปมานี้อาจอยู่ที่ ‘การใช้’ (วิชานะฮูหรือเกลือ) เป็นสิ่งที่ก่อให้เกิดผลดี และ ‘การละเว้น’ กลับเป็นสิ่งที่ก่อให้เกิดโทษ เพื่อให้กลายเป็นคุณสมบัติร่วมกันระหว่างทั้งสองสิ่ง และนี่คือแนวทางที่อับดุลกอฮิร อัลญุรญานีย์เลือกไว้ ส่วนการตีความแบบแรกนั้น (ที่เปรียบเทียบโดยอิงกับความน้อย-มาก) เขา (ท่านอับดุลกอฮิร) ได้อธิบายอย่างละเอียดว่า: การใช้วิชานะฮูในปริมาณมาก อาจนำไปสู่การกล้าใช้โครงสร้างที่ผู้มีความรู้ด้านนะฮูน้อยจะไม่กล้าแม้แต่จะจินตนาการว่าอนุญาต เช่น การวางหน้าวางหลัง หรือการละคำบางคำออกไป ซึ่งสุดท้ายก็จะกลายเป็นประโยคที่มีลักษณะคล้ายกับบทกวีของอัลฟะรัซดักที่ได้กล่าวไปก่อนหน้านี้ และบางทีนี่อาจเป็นสิ่งที่อัสสักกากีย์หมายถึง เมื่อเขากล่าวว่า: ‘อาจจะสามารถหาทางทำให้การเปรียบเปรยนี้ถูกต้องก็ได้’ แต่ในตอนนี้ สิ่งนั้นไม่ใช่ประเด็นที่เรากำลังให้ความสำคัญ”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَقِيلَ: الْمُرَادُ أَنَّ الْبَيْتَ قَدْ يَكُونُ لَهُ أَعَارِيبُ، فَحَمْلُهُ عَلَى الْمَعْنَى الْمُرَادِ تَقْلِيلٌ لِلنَّحْوِ وَإِصْلَاحٌ، وَحَمْلُهُ عَلَى تِلْكَ الأَعَارِيبِ، الكَثِيرَةِ كَثْرَةٌ مُضِرَّةٌ، وَقِيلَ: لِأَنَّ النَّحْوَ مَقْصُودٌ لِغَيْرِهِ مِنَ العُلُومِ، فَكَثْرَةُ النَّحْوِ المُسْتَغْرِقَةُ لِلْعُمْرِ مُفْسِدَةٌ لِمَنْعِهَا مِنَ العُلُومِ المَقْصُودَةِ بِالذَّاتِ، وَقِيلَ: لَيْسَ المُرَادُ العِلْمَ بَلِ اسْتِعْمَالَ أَحْكَامِهِ فِي الكَلَامِ وَفِي الإِيضَاحِ</blockquote>
+      <p class="ar-translation">“และมีผู้กล่าวอีกว่า: ความหมายที่ต้องการสื่อก็คือว่า บทกวีบทหนึ่งนั้น อาจอิอ์ร็อบทางไวยากรณ์ได้หลายแบบ ดังนั้น การตีความบทนั้นให้สอดคล้องกับความหมายที่ผู้แต่งต้องการ ถือเป็นการใช้นะฮูอย่างพอเหมาะและเป็นคุณ แต่หากฝืนอิอ์ร็อบตามแบบต่างๆ ที่มีอยู่มากมาย ก็เป็น ‘ความมากเกิน’ ที่ก่อให้เกิดโทษ และมีผู้กล่าวอีกว่า: เพราะวิชานะฮูนั้น ไม่ใช่วิชาที่เป็นเป้าหมายในตัวเอง แต่เป็น ‘เครื่องมือ’ เพื่อเข้าถึงวิชาอื่นๆ ดังนั้นการหมกมุ่นอยู่กับนะฮูอย่างมากมายจนกินเวลาตลอดชีวิต ‘ย่อมเป็นโทษ’ เพราะมันขัดขวางไม่ให้เข้าถึงวิชาที่เป็นเป้าหมายโดยตรง และอีกความเห็นหนึ่งกล่าวว่า: ที่ตั้งใจจะพูดไม่ใช่ตัว ‘วิชา’ นะฮู แต่หมายถึง ‘การนำหลักการของมันมาใช้จริง’ ในคำพูดและการอธิบายต่างหาก”</p>
+
+      <p>และท่านอิหม่ามอัตตัฟตะซานีย์ (เสียชีวิต ฮ.ศ. 793) ก็ได้ระบุไว้เช่นกันว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">(فَعُلِمَ) من وجوبِ اشتراكِ الطرفينِ في وجهِ التشبيهِ (فَسَادُ جَعْلِهِ)، أي وجهِ الشَّبَهِ، (فِي قَوْلِ القَائِلِ: النَّحْوُ فِي الكَلَامِ كَالمِلْحِ فِي الطَّعَامِ، كَوْنُ القَلِيلِ مُصْلِحًا وَالكَثِيرِ مُفْسِدًا)، لأنَّ المُشَبَّهَ، أعني النحو، لا يَشْتَرِكُ في هذا المعنى، (لأَنَّ النَّحْوَ لَا يَحْتَمِلُ القِلَّةَ وَالكَثْرَةَ)، إذ لا يَخْفَى أنَّ المُرَادَ به هاهُنا: رِعَايَةُ قَوَاعِدِهِ وَاسْتِعْمَالُ أَحْكَامِهِ، مِثْلَ رَفْعِ الفَاعِلِ وَنَصْبِ المَفْعُولِ، وَهَذِهِ إِنْ وُجِدَتْ فِي الكَلَامِ بِكَمَالِهَا صَارَ صَالِحًا لِفَهْمِ المَرَادِ، وَإِنْ لَمْ تُوجَدْ بَقِيَ فَاسِدًا، وَلَمْ يُنْتَفَعْ بِهِ، (بِخِلَافِ المِلْحِ)، فَإِنَّهُ يَحْتَمِلُ القِلَّةَ وَالكَثْرَةَ، بِأَنْ يُجْعَلَ فِي الطَّعَامِ القَدْرُ الصَّالِحُ مِنْهُ، أَوْ أَقَلُّ، أَوْ أَكْثَرُ، بَلْ وَجْهُ الشَّبَهِ هُوَ الصَّلَاحُ بِإِعْمَالِهِمَا، وَالفَسَادُ بِإِهْمَالِهِمَا</blockquote>
+      <p class="ar-translation">“(จึงเป็นที่เข้าใจได้) ว่า ด้วยหลักการที่ว่าทั้งสองสิ่งในอุปมาต้องมี ‘องค์ประกอบแห่งความเหมือน’ การวาง ‘คุณลักษณะร่วม’ ไว้ในคำกล่าวของผู้พูดว่า: ‘วิชานะฮูในถ้อยคำ ก็เหมือนเกลือในอาหาร โดยที่ปริมาณน้อยให้คุณ และปริมาณมากให้โทษ’ นั้นจึงถือว่าเป็นการเปรียบเทียบที่ผิดพลาด เพราะสิ่งที่ถูกนำมาเปรียบ (คือวิชานะฮู) ไม่ได้มีคุณลักษณะเช่นนี้ร่วมอยู่เลย กล่าวคือ ‘วิชานะฮูไม่อาจถูกพิจารณาในเชิงว่ามีมากหรือน้อยได้’ ไม่เป็นที่ซับซ้อนอะไรนักว่า สิ่งที่หมายถึงคำว่า ‘นะฮู’ ในบริบทนี้ คือการปฏิบัติตามหลักไวยากรณ์ และการใช้ออกเป็นโครงสร้างในถ้อยคำ เช่น การยกรอเฟาะอ์ประธาน และการวางกรรมนะศับให้ถูกที่ สิ่งเหล่านี้ เมื่อปรากฏอยู่ในถ้อยคำอย่างครบถ้วน ก็ทำให้ถ้อยคำนั้นเหมาะสมต่อการเข้าใจความหมายที่ผู้พูดต้องการจะสื่อ และหากไม่มีอยู่เลย ถ้อยคำนั้นก็จะยังคงบกพร่องและไม่สามารถนำมาใช้ประโยชน์ได้ ซึ่งแตกต่างจากกรณีของเกลือ เพราะเกลือนั้นสามารถพิจารณาได้ในแง่ของ ‘น้อย’ หรือ ‘มาก’ ได้ โดยอาจใส่ในอาหารในปริมาณที่เหมาะสม น้อยกว่านั้น หรือมากกว่านั้นก็ได้ ซึ่งความจริงแล้ว จุดเหมือนที่พอจะตั้งได้ระหว่างทั้งสอง ก็คือ ‘ความดีงามเมื่อใช้อย่างเหมาะสม’ และ ‘ความเสียหายเมื่อถูกละเลย’ ต่างหาก”</p>
+
+      <p>นักวิชาการด้านภาษาอาหรับอีกท่านหนึ่ง ชัยค์อิศอมุดดีน อะรับชาฮ์ อัลหะนาฟีย์ได้อธิบายว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">(فَعُلِمَ) من تصويرِ وجهِ التشبيهِ، وأنَّه المشتركُ بينَ الطرفين، (فَسَادُ جَعْلِهِ) في قولِ القائلِ: «النَّحْوُ فِي الكَلَامِ كَالمِلْحِ فِي الطَّعَامِ، كَوْنُ القَلِيلِ مُصْلِحًا وَالكَثِيرِ مُفْسِدًا»؛ لأنَّ المُشَبَّهَ، أي: النَّحْوَ، لا يَحْتَمِلُ، أي: لا يَحْتَمِلُ سَبَبًا بَيْنَ القِلَّةِ وَالكَثْرَةِ، لا أنه ليس مردودًا بينهما، ويتعيَّن فيه أحدُهما.</blockquote>
+      <p class="ar-translation">“จึงเป็นที่เข้าใจได้จากการพิจารณาภาพของ ‘องค์ประกอบแห่งความเหมือน’ ซึ่งเป็นสิ่งที่ต้องมีร่วมกันระหว่างสองสิ่งที่ถูกเปรียบว่า การกำหนดองค์ประกอบแห่งความเหมือนเช่นนั้น เป็นสิ่งที่ผิดพลาด ในคำกล่าวที่ว่า: ‘นะฮูในถ้อยคำ เปรียบเสมือนเกลือในอาหาร โดยที่น้อยให้คุณ และมากให้โทษ’ เนื่องจากสิ่งที่ถูกนำมาเปรียบคือ ‘นะฮู’ นั้น ไม่อาจรองรับการเปรียบในลักษณะเช่นนี้ได้ กล่าวคือ: มันไม่อาจถูกพิจารณาว่ามี ‘ระดับ’ ที่ไล่ระหว่างความน้อยกับความมาก ไม่ใช่ว่านะฮูนั้นจะไม่เคยอยู่ในสถานะที่ ‘น้อย’ หรือ ‘มาก’ เลย แต่หมายถึงว่า ไม่สามารถพิจารณาแง่ของความน้อยหรือความมากนั้นให้มีผลในการเปรียบเปรยเช่นที่ทำไปได้ เพราะไม่มีลักษณะของการ ‘เปลี่ยนระดับ’ แบบนั้นในตัวของมันเอง”</p>
+
+      <p>กล่าวคือ ประโยคส่วนนี้ขยายความข้อวิจารณ์หลักที่ว่า “องค์ประกอบแห่งความเหมือน” ต้องเป็นสิ่งที่ทั้งสองมีร่วมกัน เช่น เรื่อง “น้อยดี มากเสีย” ในกรณีของเกลือ แต่นะฮูไม่มีคุณสมบัติแบบนั้น จึงไม่อาจนำมาเป็นพื้นฐานในการเปรียบได้ แม้ว่าจะมีคนพูดว่า “บางคนรู้นะฮูมาก บางคนรู้น้อย” นั่นก็ไม่ใช่ประเด็นในเชิงเปรียบเทียบเช่นนี้ เพราะมันไม่ได้ทำให้ถ้อยคำดีขึ้นหรือเสียไปตามปริมาณที่เรียนรู้ ท่านอะรับชาฮ์ยังกล่าวต่อว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كَيْفَ، وإِذَا رُوعِيَ فِي جَمِيعِ أَجْزَاءِ الكَلَامِ، فَقَدْ حَصَلَ النَّحْوُ، وَإِنْ أُهْمِلَ فِي جُزْءٍ، فَلَا نَحْوَ فِي الكَلَامِ، فوجهُ الشَّبَهِ هُنا: أنَّ الكَلَامَ يَصْلُحُ بِوُجُودِهِ، وَيَفْسُدُ بِعَدَمِهِ، بمعنى أنَّه لا يُنْتَفَعُ بهِ لِفَوَاتِ الدَّلَالَاتِ، بل يُضَرُّ به للانْتِقَالِ إِلَى غَيْرِ المَقْصُودِ، كما أنَّه لا يُنْتَفَعُ البَدَنُ بِطَعَامٍ لَا مِلْحَ فِيهِ، بل يُسْتَضَرُّ بِهِ وَيَمْرَضُ، وَلَا يَقْتَصِرُ الفَسَادُ عَلَى فَوْتِ الانْتِفَاعِ، بل كما لا لَذَّةَ لِطَعَامٍ لَا مِلْحَ فِيهِ، لَا لَذَّةَ لِكَلَامٍ لَا نَحْوَ فِيهِ.</blockquote>
+      <p class="ar-translation">“อย่างไรเล่า? ในเมื่อหากมีการรักษาหลักนะฮูไว้ครบถ้วนในทุกส่วนของถ้อยคำ ก็ถือว่า ‘นะฮูได้เกิดขึ้นในถ้อยคำนั้น’ แล้ว แต่หากมีการละเลยหลักไวยากรณ์เพียงบางส่วน ก็ไม่อาจเรียกว่ามีนะฮูอยู่ในถ้อยคำนั้นได้เลย ดังนั้น ‘องค์ประกอบแห่งความเหมือน’ ที่ถูกต้องในที่นี้คือ: ถ้อยคำจะดีงามได้ก็ด้วยการมีนะฮู และจะเลวร้ายลงเมื่อขาดนะฮู ในความหมายว่า: ถ้อยคำย่อมไม่อาจใช้ประโยชน์ได้ หากขาดซึ่งหลักไวยากรณ์ เพราะการขาดไวยากรณ์นั้น ทำให้ความหมายเลือนหายไป ยิ่งไปกว่านั้น ยังอาจนำไปสู่ผลร้ายด้วยซ้ำ เพราะผู้ฟังอาจเข้าใจผิด ไปยังความหมายที่ไม่ได้ตั้งใจจะสื่อ เปรียบเสมือนร่างกายที่ไม่อาจได้รับประโยชน์จากอาหารที่ไม่มีเกลือ แถมอาจได้รับโทษและถึงกับเจ็บป่วยได้ อีกทั้ง ความเสียหายที่เกิดขึ้นนั้น ไม่ได้จำกัดแค่การ ‘ขาดประโยชน์’ เท่านั้น แต่ยังรวมถึงการขาดความรื่นรมย์ เช่นเดียวกับที่อาหารไร้เกลือจะไม่มีรสชาติที่อร่อย ถ้อยคำที่ปราศจากนะฮูก็ย่อมปราศจากความรื่นรมย์ทางภาษาเช่นกัน”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَلَوْ سُلِّمَ أَنَّهُ بِرِعَايَتِهِ فِي بَعْضِ أَجْزَاءِ الكَلَامِ يَحْصُلُ النَّحْوُ، فالفَسَادُ بِقِلَّتِهِ لِفَوْتِهِ فِي البَعْضِ، لَا بِكَثْرَتِهِ.</blockquote>
+      <p class="ar-translation">“และแม้จะยอมรับว่า การมีนะฮูในบางส่วนของถ้อยคำก็เพียงพอให้ถือว่า ‘มีนะฮู’ อยู่ในถ้อยคำนั้น แต่ความเสียหายที่เกิดขึ้นนั้น ย่อมเป็นเพราะ ‘การมีนะฮูน้อยเกินไป’ อันเนื่องมาจากการขาดหายไปในบางส่วน ไม่ใช่เพราะ ‘การมีมากเกินไป’”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قَالَ صَاحِبُ “المِفْتَاحِ”: ورُبَّمَا أُمْكِنَ تَصْحِيحُ جَعْلِهِ، فَقَالَ الشَّارِحُ: فكأنَّهُ أَرَادَ بِكَثْرَةِ النَّحْوِ: استعمالَ الوُجُوهِ العَرَبِيَّةِ، والأقوالِ الضَّعِيفَةِ، ونحوِ ذلكَ مِمَّا يُفْسِدُ بِهِ الكَلَامُ.</blockquote>
+      <p class="ar-translation">“ผู้แต่งหนังสือ อัลมิฟตาฮ์ (คืออัสสักกากีย์) ได้กล่าวว่า: ‘บางทีอาจสามารถทำให้การกำหนดองค์ประกอบแห่งความเหมือนนี้ถูกต้องได้’ ส่วนผู้อธิบาย (คืออัตตัฟตะซานีย์) ก็กล่าวเสริมว่า: ‘ดูราวกับว่า เขาต้องการหมายถึงคำว่า “ความมากของนะฮู” ว่าเป็นการใช้รูปแบบทางภาษาอาหรับที่มากเกินควร การนำเอาความเห็นที่อ่อน (ในด้านไวยากรณ์) มาใช้ และสิ่งทำนองนี้ ก่อให้เกิดความเสียหายต่อถ้อยคำ’”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَفِيهِ: أنَّ استعمالَ الوجهِ الغريبِ بَدَلَ الوَجْهِ المُسْتَفِيضِ، لَا يُجْعَلُ النَّحْوَ كَثِيرًا فِي الكَلَامِ. فكأنَّهُ أَرَادَ بِكَثْرَةِ النَّحْوِ: إيرادَ الكَلَامِ مُحْتَمِلًا لِوُجُوهٍ مُخْتَلِفَةٍ، وَمُحْتَمَلَ التَّطْبِيقِ عَلَى قَوَاعِدَ مُتَبَايِنَةٍ، فَيُوجِبُ تَحَيُّرَ السَّامِعِ، لِصَيْرُورَةِ المُرَكَّبِ بِمَنْزِلَةِ المُفْرَدَاتِ المُشْتَرَكَةِ</blockquote>
+      <p class="ar-translation">“และในคำกล่าวนั้น มีนัยว่า: การใช้รูปแบบทางภาษาที่แปลกประหลาด แทนที่จะใช้รูปแบบที่แพร่หลายและได้รับการยอมรับกันทั่วไปนั้น ไม่ถือว่าเป็น ‘ความเลยเถิดของนะฮู’ ในคำพูด ดูราวกับว่า สิ่งที่เขามุ่งหมายคือ ‘ความมากของนะฮู’ นั้น คือการทำให้ถ้อยคำหนึ่งๆ มีความหมายที่เป็นไปได้หลากหลายแบบ และสามารถนำไปประยุกต์ใช้กับหลักไวยากรณ์ที่หลากหลายและแตกต่างกันได้ ซึ่งสิ่งนี้ทำให้ผู้ฟังเกิดความสับสน เพราะถ้อยคำที่ถูกประกอบขึ้นนั้น กลับกลายไปมีสถานะไม่ต่างจาก ‘คำเดี่ยวที่มีหลายความหมาย’ นั่นเอง”</p>
+
+      <h2 class="article-h2">บทสรุปของอุปมาเกลือ</h2>
+
+      <p>วลี “ไวยากรณ์ในคำพูดก็เหมือนเกลือในอาหาร” เป็นอุปมาอันแพรวพราวที่สะท้อนถึงความสำคัญของวิชานะฮู (ไวยากรณ์อาหรับ) ในการทำให้ภาษามีความหมาย ชัดเจน และงดงาม แม้จะเป็นส่วนเล็กๆ แต่ขาดนะฮูไม่ได้ เช่นเดียวกับเกลือที่เพียงน้อยนิดก็ทำให้อาหารกลมกล่อม อย่างไรก็ตาม การตีความวลีนี้กลับแตกออกเป็นสองทางหลัก ฝ่ายหนึ่งใช้เพื่อ “ยกย่อง” ว่าไวยากรณ์คือรสชาติของภาษา อีกฝ่ายใช้เพื่อ “ตักเตือน” ว่าอย่าใส่มากจนทำลายสาระ แต่นักวิชาการสายภาษาชั้นนำ เช่น อัลก็อซวีนีย์ อัตตัฟตะซานีย์ อัซซุบกีย์และนักภาษาศาสตร์ชั้นนำอีกหลายท่านต่างเห็นพ้องว่า ไวยากรณ์ไม่มี “ความมากหรือน้อย” แบบเกลือ มีแต่ “ถูกหรือผิด” หรือโหมด On และ Off เท่านั้น</p>
+
+      <p>จึงควรเข้าใจว่าวลีนี้ มิได้สื่อให้ใช้ไวยากรณ์แบบหยิบหย่งตามใจชอบ หรือมากไปน้อยไปตามแต่อารมณ์ แต่คือการเตือนให้ใช้ให้ถูก ใช้ให้พอดี และอย่าขาด เพราะคำพูดที่ไร้ไวยากรณ์ก็ไม่ต่างจากอาหารที่ไร้เกลือ ทั้งจืดชืด ไร้รส และไม่อาจหล่อเลี้ยงจิตใจได้</p>
+
+      <h2 class="article-h2">ไวยากรณ์ในฐานะโครงสร้างแห่งความจริง</h2>
+
+      <p>เมื่อพูดถึง “ไวยากรณ์” ภาพแรกที่หลายคนนึกถึงก็คงจะเป็นวิชาที่น่าเบื่อและไร้จินตนาการ เป็นแค่เรื่องกฎเกณฑ์ของการสื่อสารในชีวิตประจำวันอันแสนธรรมดา มันเหมือนถูกรีดเอาชีวิตชีวาออกไปจนหมดสิ้น ภายนอกแล้วมันเป็นอะไรที่ดูไร้แรงบันดาลใจโดยสิ้นเชิง</p>
+
+      <p>ยิ่งสำหรับนักศึกษาความรู้สายดั้งเดิมด้วยแล้ว การต้องมานั่งท่องจำบทกวีภาษาอาหรับโบราณที่ทั้งเก่าทั้งแปลกเพื่อยกมาเป็นหลักฐานทางไวยากรณ์ การวิเคราะห์โครงสร้างประโยคอย่างละเอียดหรือที่เรียกว่า “อิอ์รอบ” และการต้องมานั่งจมอยู่กับรายละเอียดปลีกย่อยของความเห็นต่างระหว่างนักไวยากรณ์แต่ละสำนัก ทั้งหมดนี้อาจดูเป็นอะไรที่น่าท้อแท้ใจ การทำความเข้าใจ “การก” ของคำในประโยค ไม่ว่าจะเป็นประธาน กรรมหรือการแสดงความเป็นเจ้าของ อาจจะไม่ใช่เรื่องคอขาดบาดตายในตำราไวยากรณ์ภาษาอังกฤษ แต่สำหรับนักศึกษาภาษาอาหรับคลาสสิกแล้ว เรื่องนี้แหละคือ “ทุกสิ่งทุกอย่าง”</p>
+
+      <p>ครั้งแรกที่ได้ยินรุ่นพี่คนหนึ่งกำลังนั่งทบทวนบทกลอนเปิดของบทว่าด้วยเรื่อง “คำพูด” (อัลกะลาม) จากตำรา “อัลฟียะฮ์” ของท่านอิบนุ มาลิก (เสียชีวิต ค.ศ. 1274) หลังจากที่เขาเรียนเสร็จในวันนั้นก็ถึงกับหูผึ่งด้วยความสนใจ เมื่อเขาเห็นแววตาที่อยากรู้ เขาก็เริ่มอธิบายสิ่งที่เขากำลังท่องให้ฟัง</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">كَلامُنَا لَفْظٌ مُفِيدٌ كَاسْتَقِمْ ... وَاسْمٌ وَفِعْلٌ ثُمَّ حَرْفٌ الْكَلِمْ</blockquote>
+      <p class="poem-th">“คำพูด (กะลาม) ในทัศนะของนักไวยากรณ์ คือถ้อยคำที่มีความหมายสมบูรณ์ เช่นคำว่า ‘อิสตะกิม’”</p>
+
+      <p>แค่ได้ฟังเท่านี้ สำหรับมือใหม่ที่เพิ่งจะเริ่มหัดลิ้นให้คุ้นเคยกับสัณฐานวิทยาของภาษาอาหรับ (ศ็อร็อฟ) ก็ถึงกับตาโต ความคิดที่ว่ากฎไวยากรณ์ของภาษานี้จะสามารถถูกร้อยเรียงออกมาเป็นบทกวีที่คล้องจองกันนับพันบทได้นั้น เป็นอะไรที่น่าอัศจรรย์ใจที่สุด</p>
+
+      <p>ต่อมาก็ได้เรียนรู้ว่า “ไวยากรณ์” คือหนึ่งในเอกลักษณ์อันโดดเด่นของอารยธรรมอิสลามเราเลยทีเดียว บรรดาอุละมาอ์ผู้ยิ่งใหญ่แห่งศาสนาของเราในบางครั้งก็เลือกที่จะใช้บทกวีมากกว่าตำราที่เป็นร้อยแก้วธรรมดาๆ เพื่อช่วยให้นักเรียนสามารถท่องจำองค์ความรู้ได้ง่ายขึ้น สำหรับการเรียนการสอนที่ให้ความสำคัญกับการท่องจำแบบขึ้นใจ ตำราเรียนของเราจึงเต็มไปด้วยเทคนิคช่วยจำและ “เคล็ดลับ” ต่างๆ นานา เพื่อเจาะระบบความทรงจำของเราให้สามารถจดจำสิ่งที่ “ต้องรู้” ในแต่ละศาสตร์ให้ได้</p>
+
+      <p>แต่เรื่องราวไม่จบแค่นั้น เพื่อนคนนี้ไม่ยอมหยุดอยู่แค่เรื่องผิวเผิน ความรักในความรู้ที่เขามีได้กระตุ้นให้เขาเปิดประเด็นที่ลึกซึ้งยิ่งกว่าสิ่งที่เขาได้เรียนมาจากครูของเขา เขายิงคำถามมาว่า: “คิดว่าทำไมอิบนุ มาลิก ถึงเลือกใช้คำว่า ‘อิสตะกิม’ จากบรรดาคำกริยาคำสั่งที่มีอยู่มากมายนับไม่ถ้วน เพื่อยกมาเป็นตัวอย่างในประเด็นนี้?”</p>
+
+      <p>เจอคำถามนี้เข้าไปก็ถึงกับอึ้งไปเลย ด้วยสมองอันไร้เดียงสาที่เพิ่งจะหัดผันคำกริยาคำสั่งจากรูปกาลไม่สมบูรณ์ เราเองมั่นใจว่าในคลังคำศัพท์ภาษาอาหรับนั้น มีคำกริยาอีกเป็นล้านคำให้เลือกนำมาใช้เป็นตัวอย่างได้ คนยิงคำถามเห็นอย่างนี้จึงยิ้มอย่างมีเลศนัยกับความเงียบที่เกิดขึ้น ก่อนจะเฉลยว่า: “ปราชญ์ผู้ยิ่งใหญ่ด้านไวยากรณ์อย่างอิบนุ มาลิก ไม่ได้เป็นเพียงนักภาษาศาสตร์ธรรมดา ความเชี่ยวชาญของท่านในการร้อยเรียงผลงานชิ้นเอกอย่าง ‘อัลฟียะฮ์’ ทำให้ท่านสามารถซ่อนความหมายสองชั้นไว้ในบทกลอนของท่านได้”</p>
+
+      <p>คำว่า “อิสตะกิม” นั้นปรากฏในซูเราะฮ์ฮูด ในความหมายว่า เจ้าจงยืนหยัดอย่างเที่ยงตรง โดยใช้คำว่าอิสตะกิม ดังที่อัลลอฮ์ตรัสว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">فَٱسْتَقِمْ كَمَآ أُمِرْتَ وَمَن تَابَ مَعَكَ وَلَا تَطْغَوْا۟ ۚ إِنَّهُۥ بِمَا تَعْمَلُونَ بَصِيرٌ</p>
+      </div>
+      <p>{ดังนั้น เจ้าจงยืนหยัดอย่างเที่ยงตรง ดังที่เจ้าถูกบัญชามา และผู้ที่ขอลุแก่โทษพร้อมกับเจ้าก็จงยืนหยัดด้วย และพวกเจ้าอย่าได้ละเมิด แท้จริงพระองค์ทรงเห็นในสิ่งที่พวกเจ้ากระทำ}<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>และมีเรื่องเล่าว่าท่านศาสดา ﷺ เคยตรัสกับเหล่าสหายว่า ซูเราะฮ์ฮูดและซูเราะฮ์ที่คล้ายกันได้ทำให้ผมของท่านกลายเป็นสีเทา (แก่ก่อนวัย) ดังที่ปรากฏในหะดีษ:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">شَيَّبَتْنِي هُودٌ وَالْوَاقِعَةُ وَالْمُرْسَلاَتُ وَ عمَّ يَتَسَاءَلُونَ وَإذَا الشَّمْسُ كُوِّرَتْ</p>
+      </div>
+      <p>“ซูเราะฮ์ฮูด อัลวากิอะฮ์ อัลมุรซะลาต อัมมะยะตะซาอะลูน และอิซัชชัมสุกุวิร็อต ได้ทำให้ฉันแก่ก่อนวัย”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>ดังนั้น เพื่อเป็นการพาดพิงถึงอายะฮ์และหะดีษบทนี้ และเพื่อเป็นการตักเตือนผู้แสวงหาความรู้ตั้งแต่ก้าวแรกของการเดินทางให้ยึดมั่นอยู่บนหนทางที่เที่ยงตรง ท่านอิบนุ มาลิก จึงได้เลือกใช้คำนี้นั่นเอง</p>
+
+      <p>เขาได้มอบคำตอบอันน่าปีติยินดีนี้ พร้อมทั้งขยายความว่า ตำราอธิบายไวยากรณ์ภาษาอาหรับคลาสสิกแทบทุกเล่ม ล้วนอ้างอิงถึงความหมายตามตัวอักษรของคำว่า “นะห์วู” (ไวยากรณ์) ว่าหมายถึง ทิศทาง หนทางหรือรูปแบบ การแสวงหา “หนทาง” แห่งการใช้คำพูดให้ถูกต้อง จะมีประโยชน์ก็ต่อเมื่อมันถูกทำควบคู่ไปกับการแสวงหา “หนทาง” แห่งการขัดเกลาจิตใจ</p>
+
+      <p>คืนนั้นเองที่รู้สึกทึ่ง จนตระหนักถึงความเป็นไปได้อันไร้ขีดจำกัดของ “คำพูด” มันมีความหมายตามตัวอักษรอยู่ชั้นหนึ่ง และมีความหมายเชิงนัย (อิชาเราะฮ์) ซ้อนอยู่อีกชั้นหนึ่ง</p>
+
+      <h2 class="article-h2">บทกลอนนะกิเราะฮ์กับโลกแห่งสัจธรรม</h2>
+
+      <p>เมื่อถึงเวลาที่ต้องศึกษาตำรา “อัลฟียะฮ์” ด้วยตัวเอง จึงพยายามตามหาตำราอธิบายที่ขยายความหมายสองชั้นอันชาญฉลาดของอิบนุ มาลิก แต่หลังจากที่ค้นคว้าและสอบถามอยู่พักหนึ่ง ก็ต้องพบกับความจริงที่น่าเศร้าว่า คำอธิบายแนวนี้ส่วนใหญ่ไม่มีอีกแล้ว มันได้สูญหายไปกับกาลเวลา อย่างไรก็ตาม ก็ยังพอได้พบเห็นเกร็ดเล็กเกร็ดน้อยอยู่บ้างจากการพูดคุยเกี่ยวกับนัยทางจิตวิญญาณของบทกลอนของท่าน มีมิตรสหายคนหนึ่งได้ส่งรูปถ่ายส่วนหนึ่งจากหนังสือที่ไม่ระบุชื่อมาให้ มันเป็นคำอธิบายท่อนแรกของบทกลอนที่ห้ามการใช้คำนามไม่ชี้เฉพาะ (นะกิเราะฮ์) เป็นประธานของประโยค</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَلاَ يَجُوزُ الاِبتدَا بالنّكِرَه ... مَا لَم تُفِد كَعِندَ زَيدٍ نَمِرَه</blockquote>
+      <p class="poem-th">“การเริ่มต้น (ประโยค) ด้วยคำนามไม่ชี้เฉพาะ (นะกิเราะฮ์) นั้น ไม่อนุญาต”</p>
+
+      <p>คำอธิบายนี้ใช้การเล่นคำที่ชาญฉลาดสุดๆ กับคำว่า “นะกิเราะฮ์” ซึ่งนอกจากจะแปลว่า “คำนามไม่ชี้เฉพาะ” แล้ว ยังมีรากศัพท์ที่แปลว่า “ความไม่เป็นที่รู้จัก” ได้อีกด้วย ด้วยการใช้ประโยชน์จากความหมายที่หลากหลายของคำในภาษาอารับ คำอธิบายดังกล่าวได้ตีความเชิงนัยจากบทกลอนนี้ว่า เฉกเช่นเดียวกับที่กฎทางไวยากรณ์ไม่อนุญาตให้เริ่มต้นประโยคด้วย “สิ่งที่ไม่เป็นที่รู้จัก” (นะกิเราะฮ์) ฉันใดก็ฉันนั้น ผู้เดินทางบนเส้นทางจิตวิญญาณก็ไม่อาจ “เริ่มต้น” การเดินทางสู่พระผู้เป็นเจ้าจาก “โลกแห่งความไม่เป็นที่รู้จัก” หรือโลกแห่งสัจธรรมอันสูงสุด (อาลัม อัลหะกออิก) ได้ แต่จำเป็นที่เขาจะต้องเริ่มต้นและผ่านโลกแห่งความรู้ หรือโลกแห่งศาสนบัญญัติ (อาลัม อัชชะรีอะฮ์) เสียก่อน</p>
+
+      <p>คำอธิบายนั้นยังชี้ให้เห็นต่อไปว่า บรรดาผู้ที่เพิกเฉยต่อพื้นฐานของศาสนบัญญัติ (ชะรีอะฮ์) แต่กลับพยายามกระโดดไปไขว่คว้าความรู้แห่งสัจธรรมสูงสุด (หะกีเกาะฮ์) นั้น ได้ตกลงไปสู่การอุตริกรรม (บิดอะฮ์) และการตกศาสนา (มุรตัด) มาแล้วมากมาย</p>
+
+      <h2 class="article-h2">ไวยากรณ์แห่งดวงใจของอัลกุชัยรีย์</h2>
+
+      <p>บทกลอนนี้ทำให้หวนนึกถึงการค้นพบผลงานชิ้นเอกชิ้นหนึ่งจากวรรณกรรมแขนงพิเศษที่เรียกว่า “นะห์วุล กุลูบ” หรือที่แปลตรงตัวว่า “ไวยากรณ์แห่งดวงใจ” ในช่วงที่พักเบรกจากการเรียนไวยากรณ์ภาษาอาหรับก่อนที่จะได้ศึกษาตำรา “อัลฟียะฮ์” ผู้ประพันธ์ตำราเล่มนี้คือ ท่านอับดุลกะรีม อัลกุชัยรีย์ ขออัลลอฮ์ทรงเมตตาท่าน ซึ่งเป็นทั้งนักเทววิทยาแนวทางอะชาอิเราะฮ์และเป็นหนึ่งในดวงประทีปที่สว่างไสวที่สุดแห่งโลกตะเศาวุฟของศาสนาเรา ท่านคือปรมาจารย์ทางจิตวิญญาณที่แท้จริง และยังเป็นผู้ประพันธ์ตำรา “ละฏออิฟ อัลอิชารอต” ซึ่งเป็นการอรรถาธิบายอัลกุรอานเชิงรหัสยนัย และตำรา “อัรริสาละฮ์” อันโด่งดัง ว่าด้วยชีวประวัติของเหล่านักตะเศาวุฟและศัพท์เทคนิคต่างๆ</p>
+
+      <p>ท่านมีชีวิตอยู่ในช่วงหัวเลี้ยวหัวต่อทางประวัติศาสตร์ของตะเศาวุฟ ที่เส้นแบ่งระหว่างแนวทางการปฏิบัติที่ถูกต้องกับแนวทางที่เลยเถิดเริ่มเลือนลาง เพื่อที่จะชี้หนทางไปสู่สถานะอันสูงส่งแห่งการใกล้ชิดต่อพระผู้ทรงสูงส่ง ท่านอัลกุชัยรีย์จึงมุ่งมั่นที่จะเผยแพร่องค์ความรู้และการปฏิบัติที่ถูกต้องสำหรับผู้เดินทางบนเส้นทางจิตวิญญาณ</p>
+
+      <p>สิ่งที่ทำให้ตำราของท่านอัลกุชัยรีย์นั้นสุดยอดมากๆ ก็คือ มันไม่ได้มีเป้าหมายทางไวยากรณ์ในตัวของมันเองเลย ท่านใช้ไวยากรณ์เป็นเพียง “เครื่องมือ” เพื่อนำทางผู้แสวงหาไปสู่พระผู้เป็นเจ้า ท่านได้อธิบาย “การก” หรือ “อัลอิอ์รอบ” ทั้งสี่ประเภท และได้เปรียบเทียบมันเข้ากับการเคลื่อนไหวของหัวใจ ท่านกล่าวว่า: “การกทางไวยากรณ์นั้นมีสี่ประเภทคือ: การยก (อัรร็อฟอ์) การตั้งมั่น (อันนัศบ์) การลดต่ำ (อัลค็อฟฎ์) และการตัดขาด (อัลญัซม์) ซึ่งหัวใจก็มีสภาวะทั้งสี่ประเภทนี้เช่นเดียวกัน”</p>
+
+      <p>ท่านได้ใช้วิธีการแบบศูฟีที่สร้างสรรค์ของท่านในการสกัดความหมายเหนือโลกออกมาจากการใช้คำเหล่านี้ในความหมายที่ไม่ใช่ไวยากรณ์ ตัวอย่างเช่น: “สำหรับการ ‘ยก’ (อัรร็อฟอ์) สถานะของหัวใจนั้น อาจหมายถึงการที่ท่านยกหัวใจของท่านให้อยู่เหนือโลกดุนยา ซึ่งเป็นลักษณะของผู้สมถะ (อัซซุฮด์) หรืออาจหมายถึงการที่ท่านยกหัวใจของท่านให้อยู่เหนือการตามอารมณ์ใฝ่ต่ำและตัณหา ซึ่งเป็นลักษณะของผู้ภักดี (อัลอิบาด) และผู้ที่ปฏิบัติกิจวัตรแห่งความดีงามอย่างสม่ำเสมอ”</p>
+
+      <p>ท่านอัลกุชัยรีย์ได้ใช้ขอบข่ายความหมายของคำศัพท์เพื่อปลุกเร้าความหมายใหม่ที่มีศูนย์กลางอยู่ที่การปฏิบัติทางจิตวิญญาณ: “สำหรับการ ‘ตั้งมั่น’ (อันนัศบ์) ของหัวใจนั้น อาจหมายถึงการจัดระเบียบร่างกายให้อยู่ในแถวที่เที่ยงตรง และจากนั้นคือการทำให้หัวใจตั้งมั่นอยู่ ณ สถานที่แห่งการประจักษ์แจ้ง ด้วยการน้อมศีรษะลงอย่างงดงามในความเงียบ และยิ่งไปกว่านั้น คือการทำให้จิตวิญญาณส่วนลึกที่สุดตั้งมั่น ผ่านคุณลักษณะของการสันโดษและการชำระตนให้บริสุทธิ์จากห้วงขณะแห่งการแตกแยก”</p>
+
+      <p>วิธีการตีความเชิงชี้นำหรือเชิงนัยนี้ได้ปรากฏอย่างเต็มรูปแบบในข้อความที่ยกมาข้างต้น นิยามอันสั้นกระชับของ “อิอ์รอบ” (การก) ก็คือ “ผลกระทบที่มองเห็นได้ภายนอก” (อะษัร ซอฮิร) เฉกเช่นเดียวกับที่ “ตะอ์บีร” (การแสดงออก) คือความหมายตามตัวอักษรภายนอก บรรดาชาวศูฟี หรือ “ผู้คนแห่งโลกภายใน” (อะฮ์ลุลบาฏิน) จึงได้ดึงเอาความหมายที่ซ่อนเร้นอยู่ภายใน (บาฏิน) ออกมาจากคู่ตรงข้าม “ซอฮิร-บาฏิน” (ภายนอก-ภายใน) นี้</p>
+
+      <p>ท่านอัลกุชัยรีย์นั้นอยู่ในสาย “ตะเศาวุฟที่สุขุมและยึดมั่นในหลักการ” ซึ่งเป็นแนวทางที่นักตะเศาวุฟอย่างท่านญุนัยด์ อัลบัฆดาดี ขออัลลอฮ์ทรงเมตตาท่าน ได้วางรากฐานไว้ ท่านยืนกรานอย่างหนักแน่นว่าต้องยึดมั่นในศาสนบัญญัติ (ชะรีอะฮ์) และไม่เคยพิจารณาเลยว่าชาวศูฟีจะได้รับการยกเว้นจากศาสนบัญญัติ ความหมายเชิงลึกของวิวรณ์ (วะฮ์ยู) จะมาลบล้างความหมายภายนอกไม่ได้โดยเด็ดขาด เช่นเดียวกับที่มุสลิมทุกคนมีมาตรฐานความประพฤติ (อะดับ) ของตนเอง ชาวศูฟีก็มีกฎเกณฑ์ความประพฤติสำหรับผู้เดินทางบนเส้นทางจิตวิญญาณในแต่ละย่างก้าวของพวกเขาเช่นกัน</p>
+
+      <h2 class="article-h2">ญัมอ์: พหูพจน์และการรวมเป็นหนึ่ง</h2>
+
+      <p>ในอีกตอนหนึ่ง ท่านอัลกุชัยรีย์ได้อภิปรายถึงแนวคิดเรื่อง “พหูพจน์อันสมบูรณ์” และ “พหูพจน์แตกรูป” โดยท่านได้เล่นคำกับคำว่า “ญัมอ์” ซึ่งในทางไวยากรณ์แปลว่า “พหูพจน์” แต่ในศัพท์เทคนิคของชาวศูฟีแปลว่า “สภาวะแห่งการรวมเป็นหนึ่ง (กับพระเจ้า)” ท่านอธิบายว่า ทั้งในโลกของไวยากรณ์และโลกของตะเศาวุฟนั้น มี “ญัมอ์” อยู่สองประเภท คือ พหูพจน์สมบูรณ์และพหูพจน์แตกรูป ฉันใดก็ฉันนั้น ในการแสดงออกเชิงสัญลักษณ์ สิ่งที่ชาวศูฟีเรียกว่า “สภาวะแห่งการรวมเป็นหนึ่ง” (ญัมอ์) ก็มีอยู่สองประเภทเช่นกัน หนึ่งคือ สภาวะแห่งการรวมเป็นหนึ่งที่เจ้าของสภาวะนั้น “สมบูรณ์ไร้ที่ติ” นี่คือผู้ที่ยังคงรักษาศาสนบัญญัติไว้อย่างเคร่งครัด แม้ในยามที่สภาวะแห่งการรวมเป็นหนึ่งได้มาเยือนเขา และอีกหนึ่งคือ สภาวะแห่งการรวมเป็นหนึ่งที่ความ “สมบูรณ์” ของเจ้าของสภาวะนั้นได้ “แตกสลาย” ไป นี่คือผู้ที่ไม่ได้รักษามารยาทอันดีงาม (อาดับ) ของความรู้ทางจิตวิญญาณให้สอดคล้องกับสิ่งที่เขาถูกเรียกให้ปฏิบัติ</p>
+
+      <p>อย่างไรก็ตาม แม้ว่า “พหูพจน์” ทั้งสองรูปแบบจะถูกต้องตามหลักไวยากรณ์ แต่ “สภาวะแห่งการรวมเป็นหนึ่ง” ที่ถูกต้องในทางจิตวิญญาณนั้นมีเพียงรูปแบบเดียว นี่อาจเป็นนัยยะที่ท่านต้องการจะสื่อถึงความไม่เห็นด้วยต่อแนวทางของศูฟีสาย “เมามาย” ที่มักจะสุดโต่งในการปฏิบัติทางจิตวิญญาณของตน</p>
+
+      <p>ความทุ่มเทของท่านอัลกุชัยรีย์ในการพัฒนาแนวทางการยึดมั่นที่สอดประสานกันระหว่างความหมายภายนอกของวิวรณ์ (วะฮ์ยู) กับความเข้าใจเชิงลึกจากภายในนั้นมีความชัดเจนอย่างยิ่ง โดยที่ความหมายเชิงลึกจะมาลบล้างความหมายภายนอกไม่ได้โดยเด็ดขาด สภาวะแห่งการรวมเป็นหนึ่งกับพระเจ้าที่แท้จริงนั้น จะต้องถูกตีความให้สอดคล้องกับศาสนบัญญัติ (ชะรีอะฮ์) และมารยาท (อะดับ) ของศูฟี ซึ่งทั้งสองสิ่งนี้จะไม่มีวันถูกทำลายไม่ว่าจะอยู่ภายใต้สภาวะการณ์ที่ท่วมท้นเพียงใด ซึ่งทำให้เราหวนนึกถึงบทกลอนอัลฟียะฮ์ที่ห้ามการเริ่มต้นด้วยคำนามไม่ชี้เฉพาะ (นะกิเราะฮ์) อีกครั้ง</p>
+
+      <h2 class="article-h2">ไวยากรณ์เชิงจิตวิญญาณข้ามจารีต</h2>
+
+      <p>ข้อความแปลที่ได้ยกมานี้ มาจากผลงานเชิงเทววิทยาเปรียบเทียบของ เอฟ. โดมินิก ลองโก (F. Dominic Longo) ที่มีชื่อว่า “Spiritual Grammar: Genre and the Saintly Subject in Islam and Christianity” (ไวยากรณ์เชิงจิตวิญญาณ: ว่าด้วยประเภทวรรณกรรมและอัตตาแห่งนักศูฟีในอิสลามและคริสต์ศาสนา)</p>
+
+      <p>และถ้าท่านคิดว่าปรากฏการณ์ “หลอมรวมไวยากรณ์เข้ากับจิตวิญญาณ” แบบนี้มีอยู่แค่ในอารยธรรมอิสลาม ก็ขอบอกเลยว่าคิดผิดถนัด ฌอง เกอร์สัน (Jean Gerson) (เสียชีวิต ค.ศ. 1429) นักเทศน์ชาวคริสต์คาทอลิกและอธิการบดีมหาวิทยาลัยปารีส ผู้เขียนงานเป็นภาษาละติน ได้เคยประพันธ์ตำรา Moralized Grammar (ไวยากรณ์เชิงศีลธรรม) ขึ้นมาสำหรับตำราเรียนที่รู้จักกันอย่างแพร่หลายในชื่อภาษาละตินว่า “โดนาตุส” (Donatus) ที่น่าสนใจคือ ไม่มีหลักฐานใดๆ เลยว่าเกอร์สันจะรู้จักผลงานของปรมาจารย์ศูฟีแห่งนัยศาบูร (อัลกุชัยรีย์) ท่านนี้</p>
+
+      <p>สำหรับลองโกแล้ว ตำราที่แตกต่างกันทั้งสองเล่มนี้ได้แสดงให้เห็นถึงสองตัวอย่างของการ “การสัมพันธ์กันระหว่างตำราไวยากรณ์กับคู่มือชี้แนะทางจิตวิญญาณ” เขามองว่า “วรรณกรรมลูกผสม” เช่นนี้เป็นรูปแบบการผลิตงานเขียนที่เรียกว่า “ไวยากรณ์เชิงจิตวิญญาณ” และจัดให้มันอยู่ในประเภทวรรณกรรมศาสนาเดียวกัน</p>
+
+      <p>นอกจากนี้ยังมีตัวอย่างอื่นๆ ของผลงานที่ผสมผสานประเด็นทางศาสนาและไวยากรณ์เข้าด้วยกัน โดยเฉพาะอย่างยิ่งในจารีตของอินเดีย ซึ่งเต็มไปด้วยตัวอย่างเช่นนี้ ภรรตฤฮริ (Bhartṛhari) ในบทเปิดของ “ภาคว่าด้วยพรหมัน” ในผลงานชิ้นเอกของเขาที่ชื่อว่า “วากยปทียะ” (Vākyapadīya) ได้แสดงให้เห็นถึงความสัมพันธ์อันลึกซึ้งระหว่างภาษา (ที่สำแดงออกผ่านไวยากรณ์) กับวิวรณ์ เดวิด คาร์เพนเตอร์ ผู้เชี่ยวชาญด้านไวยากรณ์สันสกฤตกล่าวว่า “ภรรตฤฮริได้ตรวจสอบปัญหาเรื่องวิวรณ์จากมุมมองของ ‘ภาษาแห่งวิวรณ์’ ในฐานะที่เป็น ‘ภาษา’ ซึ่งสำหรับท่านแล้ว ‘ภาษา’ นั้นเป็นทั้งรูปแบบหนึ่งของ ‘ธรรมะ’ (ระเบียบแห่งสังคมและจักรวาล) และในขณะเดียวกันก็เป็นการสำแดงตัวตนของสัจธรรมสูงสุดที่อยู่เบื้องหลังจักรวาลนั้น นั่นคือ ‘พรหมัน’”</p>
+
+      <p>อีกตัวอย่างหนึ่งของไวยากรณ์เชิงศาสนาของอินเดียคือตำรา “หรินามามฤต-วยากระณัม” (Harināmāmṛta-vyākaraṇam) ของชีวะ โคสวามี (Jīva Gosvāmī - เสียชีวิต ค.ศ. 1608) ซึ่งมีเป้าหมายในการสอนภาษาสันสกฤตแก่สหายของท่าน โดยไม่ทำให้พวกเขาต้องละความสนใจไปจากการสรรเสริญพระกฤษณะ กล่าวคือ ตัวอย่างไวยากรณ์ทุกข้อในตำราของท่าน คือบทสรรเสริญพระกฤษณะนั่นเอง ตำราไวยากรณ์ของชีวะ โคสวามี เป็นตัวอย่างที่การสอนไวยากรณ์คือเป้าหมายหลัก ในขณะที่ตำรา “วากยปทียะ” ของภรรตฤฮริ มีเป้าหมายเพื่อการหลอมรวมวาทกรรมทางเทววิทยาและไวยากรณ์เข้าด้วยกันอย่างสมบูรณ์</p>
+
+      <p>จารีตของชาวศูฟีในการอธิบายตำราไวยากรณ์นั้นไม่ได้เริ่มต้นหรือจบลงที่ท่านอัลกุชัยรีย์ หนึ่งในตำราไวยากรณ์ภาษาอาหรับสำหรับผู้เริ่มต้นที่ได้รับความนิยมอย่างแพร่หลายที่สุดมาจนถึงทุกวันนี้คือ “อัลอาญุรูมียะฮ์” ของท่านอิบนุ อาญุรูม (เสียชีวิต ค.ศ. 1323) ซึ่งก็มีผู้อธิบายไว้หลายท่าน และในหมู่พวกเขาก็คือชาวศูฟี หนึ่งในตัวอย่างนั้นคือ “อัรริสาละฮ์ อัลมัยมูนียะฮ์ ฟี เตาฮีด อัลอาญุรูมียะฮ์” ตำราอธิบายอันโด่งดังที่เขียนโดยชาวศูฟีนามว่า อิบนุ มัยมูน (เสียชีวิต ค.ศ. 1511) รวมถึงนักรหัสยศาสตร์ผู้มีชื่อเสียงชาวโมร็อกโกอย่างท่านอบุลอับบาส อะห์มัด อิบนุ อะญีบะฮ์ (เสียชีวิต ค.ศ. 1809) และท่านอะห์มัด อัซซัรรูก ก็ได้ประพันธ์คำอธิบายเชิงศูฟีให้กับตำราเล่มนี้เช่นกัน ภารกิจของพวกท่านค่อนข้างท้าทายกว่าเดิม เพราะต้องตีความเนื้อหาทั้งหมดผ่านความหมายเชิงนัยอย่างสร้างสรรค์</p>
+
+      <p>เรายังสามารถอ้างอิงถึงย่อหน้าหนึ่งจากผลงานของใครไปไม่ได้นอกจาก “หุจญะตุลอิสลาม” ท่านอบู ฮามิด อัลฆอซาลีย์ ในตำรา “มินฮาจญ์ อัลอาริฟีน” ซึ่งท่านได้ตีความ “การก” ทั้งสี่ในรูปแบบที่เป็นเอกลักษณ์ของท่านเอง: “อัลอิอ์รอบ (การก) ของหัวใจนั้นมีสี่ประเภท: ร็อฟอ์ (การยก) ฟัตห์ (การเปิด) ค็อฟฎ์ (การลดต่ำ) และวักฟ์ (การหยุด) การยก (ร็อฟอ์) ของหัวใจ อยู่ในการรำลึกถึงอัลลอฮ์ การเปิด (ฟัตห์) ของหัวใจ อยู่ในความพึงพอใจต่ออัลลอฮ์ การลดต่ำ (ค็อฟฎ์) ของหัวใจ คือการไปพัวพันกับสิ่งอื่นนอกเหนือจากอัลลอฮ การหยุด (วักฟ์) ของหัวใจ อยู่ในความเผลอเรอจากการรำลึกถึงอัลลอฮ์”</p>
+
+      <p>จากที่กล่าวมาทั้งหมด เราจะเข้าใจได้ว่าคำอธิบายเหล่านี้ไม่ใช่แค่การท่องจำความรู้เก่าๆ มาพูดซ้ำ ปรมาจารย์ศูฟีแต่ละท่านได้ใช้ญาณทัศนะที่ได้รับจากพระผู้เป็นเจ้าของตนเองในการขยายความหมายของตำราไวยากรณ์ แต่สิ่งที่พวกท่านมีร่วมกันคือ การเน้นย้ำถึงความสำคัญของการขัดเกลาจิตใจ และการมี “วาทศิลป์ทางจิตวิญญาณ” ควบคู่ไปกับการแก้ไขคำพูดให้ถูกต้องและ “ความเชี่ยวชาญทางภาษา” เพราะการประดับประดาตนเองด้วยภาษาที่สวยหรูนั้น ง่ายต่อการตกเป็น “กับดักของชัยฏอน” ท่านอัลกุชัยรีย์และปราชญ์ท่านอื่นๆ ได้ใช้ “ไวยากรณ์” ซึ่งเป็นศาสตร์ภายนอกที่เกี่ยวข้องกับอวัยวะที่อ่อนไหว (อย่างลิ้น) มาเป็นเครื่องมืออย่างชาญฉลาด เพื่อปลูกฝังความหมายภายในที่ลึกซึ้ง และท้ายที่สุด ก็เพื่อขัดเกลาจิตใจของผู้อ่าน</p>
+
+      <h2 class="article-h2">เหตุใดต้องเป็นไวยากรณ์</h2>
+
+      <p>คำถามสำคัญก็ยังคงอยู่ว่า ทำไมต้องเป็น “ไวยากรณ์” จากบรรดาสรรพวิชาทั้งหลาย ที่ถูกเลือกมาเป็นพาหนะในการถ่ายทอดความหมายเชิงเทววิทยาและศาสนาเหล่านี้? หนึ่งในรากฐานสำคัญของโลกทัศน์แบบศูฟีคือ การมองเห็นร่องรอยของพระผู้เป็นเจ้าในทุกสรรพสิ่ง ดังคำกล่าวที่ว่า “ชาวศูฟีไม่เคยมองเห็นสิ่งใด นอกจากจะเห็นอัลลอฮ์อยู่ก่อนหน้ามัน ในตัวมัน และหลังจากมัน”</p>
+
+      <p>รูปแบบการสื่อสารในชีวิตประจำวันของเรา ซึ่งดูเหมือนจะเป็นเพียงแค่รูปแบบการสื่อสารธรรมดาๆ กลับกลายเป็นพื้นที่อันอุดมสมบูรณ์สำหรับเพาะเมล็ดพันธุ์แห่งการใคร่ครวญเชิงรหัสยนัย และเมื่อพิจารณาว่า “ภาษา” คือสิ่งที่สร้างโครงสร้างให้กับ “ความเป็นจริง” ของเรา มันจึงเป็นเรื่องที่เกินจะจินตนาการสำหรับปราชญ์เหล่านี้ที่จะคิดว่า แม้แต่คำพูดของมนุษย์จะไม่สามารถสะท้อนภาพของพระผู้เป็นเจ้าได้ ไวยากรณ์แห่งดวงใจ ก็คือไวยากรณ์แห่งสัจธรรมสูงสุด ที่สะท้อนภาพอยู่ในไวยากรณ์แห่งลิ้นของเรานั่นเอง</p>
+
+      <p>นี่จะเป็นเพียงความบังเอิญหรือการกำหนดขึ้นมาลอยๆ ได้หรือ? ในยุคหลังสมัยใหม่ที่สัญญะทางภาษากลายเป็นสิ่งที่ไม่ตายตัว และความหมายก็เลื่อนไหลและไหลลื่น และยังดิ้นได้ไปเรื่อยๆ จนไม่อาจยึดโยงกับ “สัจภาวะ” ใดๆ ได้ แนวทางของชาวศูฟีกลับเชื้อเชิญให้เราคิดต่างออกไป แม้แต่ “สระ” เพียงตัวเดียวก็ไม่รอดพ้นจากการตีความเชิงจิตวิญญาณ ในวงวิชาการของเรามักจะกล่าวกันว่า ผู้กระทำ (ฟาอิล) ในประโยค จะได้รับสระร็อฟอ์ ซึ่งถือเป็นสระที่ “หนัก” ที่สุด ตรงกันข้ามกับผู้ถูกกระทำที่ได้รับสระนัศบ์ ซึ่ง “เบา” กว่า ทำไมผู้กระทำถึงได้รับความสำคัญขนาดนั้น? ชาวศูฟีจะตอบทันที พร้อมทั้งขยายความด้วยเหตุผลว่า ที่เป็นเช่นนั้นก็เพราะในความเป็นจริงอันสูงสุดแล้ว “ไม่มีผู้กระทำที่แท้จริงอื่นใดนอกจากอัลลอฮ์”</p>
+
+      <blockquote class="ar-feature" lang="ar" dir="rtl">لا فاعل إلا الله</blockquote>
+      <p class="ar-translation">“ไม่มีผู้กระทำที่แท้จริงอื่นใดนอกจากอัลลอฮ์”</p>
+
+      <p>ในศาสตร์แห่ง “ไวยากรณ์เชิงจิตวิญญาณ” นี้ มีศักยภาพมหาศาลสำหรับการวิจัยว่าจะมันส่งผลต่อการอรรถาธิบายอัลกุรอาน ตะเศาวุฟ และตัวภาษาเองอย่างไร ผลงานมากมายในสาขานี้สมควรค่าแก่การเอาใจใส่ เพื่อทำความเข้าใจว่าปรมาจารย์ทางจิตวิญญาณที่แตกต่างกันในแต่ละยุคสมัยได้ตีความตำราไวยากรณ์อย่างไร พวกเขาอธิบายสัจธรรมที่ได้จากประสบการณ์ของตนผ่านเส้นทางนี้ได้อย่างไร? ทฤษฎีภาษาอาหรับแบบใดที่อยู่เบื้องหลังการตีความเช่นนี้? และวิถีของชาวศูฟีจะสามารถเข้าไปมีส่วนร่วมในบทสนทนาที่ใหญ่ขึ้นเกี่ยวกับปรัชญาภาษาได้อย่างไร? หวังว่าคำถามที่เร่งด่วนเหล่านี้จะนำมาซึ่งคำตอบที่งอกงาม แต่อย่างน้อยที่สุด มันก็สมควรค่าแก่การพูดคุย เฉกเช่นเดียวกับที่มันเคยเกิดขึ้นกับผู้แสวงหาความรู้สองคนในวงเรียน ที่กำลังนั่งท่องจำบทกลอนจาก “อัลฟียะฮ์” ของอิบนุ มาลิกในวันนั้น</p>
+
+      <h2 class="article-h2">สรุป</h2>
+      <ol class="article-summary">
+        <li><strong>อุปมาเกลือกับนะฮู:</strong> วลี “ไวยากรณ์ในคำพูดก็เหมือนเกลือในอาหาร” ถูกตีความสองทางในประวัติศาสตร์ ทั้งเพื่อยกย่องและเพื่อตักเตือน แต่แก่นสารคือไวยากรณ์เป็นส่วนเล็กที่ขาดไม่ได้</li>
+        <li><strong>คำวิจารณ์ของนักวรรณศิลป์:</strong> อัลก็อซวีนีย์ อัซซุบกีย์ และอัตตัฟตะซานีย์ ชี้ว่าการเปรียบเทียบเรื่อง “น้อยดี มากเสีย” ผิดพลาด เพราะนะฮูไม่มีระดับมากน้อยแบบเกลือ มีแต่ “ใช้หรือไม่ใช้” อย่างถูกต้อง</li>
+        <li><strong>ไวยากรณ์เชิงจิตวิญญาณ:</strong> อิบนุ มาลิกซ่อนความหมายสองชั้นไว้ในอัลฟียะฮ์ และอัลกุชัยรีย์ใช้ “การก” ทั้งสี่ของไวยากรณ์เป็นอุปมาของสภาวะหัวใจ เพื่อนำผู้แสวงหาไปสู่พระผู้เป็นเจ้า</li>
+        <li><strong>ศาสนบัญญัติเป็นจุดเริ่มต้น:</strong> ดุจกฎที่ห้ามเริ่มประโยคด้วยนะกิเราะฮ์ ผู้เดินทางต้องเริ่มจากโลกแห่งชะรีอะฮ์ก่อนเข้าสู่โลกแห่งหะกีเกาะฮ์ ความหมายเชิงลึกจะลบล้างความหมายภายนอกไม่ได้</li>
+        <li><strong>ปรากฏการณ์ข้ามจารีต:</strong> การหลอมรวมไวยากรณ์กับจิตวิญญาณมิได้มีเฉพาะในอิสลาม แต่ปรากฏในงานของเกอร์สันชาวคริสต์ และจารีตอินเดียอย่างภรรตฤฮริและชีวะ โคสวามี สะท้อนว่าภาษาคือโครงสร้างของความจริง</li>
+      </ol>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">มัรกัส อัลอิมาม อัลอัชอะรีย์. (2569). ไวยากรณ์ โครงสร้างแห่งความจริง. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/kalam/grammar-and-reality.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">เชิงอรรถ</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">القرآن الكريم، سورة هود (11)، الآية 112. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">أخرجه الترمذي في سننه، أبواب تفسير القرآن، رقم 3297، من حديث ابن عباس رضي الله عنهما، وقال: حديث حسن غريب. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+      </ol>
+    </section>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <p class="biblio-subhead">المصادر العربية</p>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li>القزويني، جلال الدين. الإيضاح في علوم البلاغة.</li>
+        <li>السبكي، بهاء الدين. عروس الأفراح في شرح تلخيص المفتاح.</li>
+        <li>التفتازاني، سعد الدين. المطول شرح تلخيص مفتاح العلوم.</li>
+        <li>عصام الدين الإسفراييني (ابن عرب شاه). الأطول شرح تلخيص مفتاح العلوم.</li>
+        <li>السكاكي، يوسف بن أبي بكر. مفتاح العلوم.</li>
+        <li>ابن مالك، محمد بن عبد الله. ألفية ابن مالك.</li>
+        <li>القشيري، عبد الكريم. نحو القلوب الصغير.</li>
+        <li>الغزالي، أبو حامد. منهاج العارفين.</li>
+        <li>الخطيب البغدادي. الجامع لأخلاق الراوي وآداب السامع.</li>
+        <li>ابن عبد البر. جامع بيان العلم وفضله.</li>
+        <li>منصور الرازي. نثر الدر.</li>
+      </ol>
+      <p class="biblio-subhead">References</p>
+      <ol class="bibliography latin">
+        <li>Longo, F. Dominic. Spiritual Grammar: Genre and the Saintly Subject in Islam and Christianity. Washington, D.C.: The Catholic University of America Press, 2017.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260619a" charset="UTF-8"></script>
+</body>
+</html>
