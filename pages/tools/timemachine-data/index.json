@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "purpose": "Manifest of Time Machine chronicle shards lazy-loaded by hijri-time-machine.html (R86 ingestion pipeline). The inline EVENTS array in the page is the always-available base; these shards enrich the timeline without bloating the page. Each shard's events map hijriYear->year and summary->desc at load time.",
+    "glossary": "glossary.json",
+    "reviewStatus": "DRAFT — awaiting owner review (ผมแปล คุณตรวจ)"
+  },
+  "shards": [
+    {
+      "file": "bidayah-h132.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 132,
+      "events": 16,
+      "scope": "ปีฮ.ศ. 132 ครบทั้งปี (Shamela หน้า 259–281): สถาปนาอับบาซียะฮ์ → ยุทธการอัซซาบ → สิ้นอุมัยยะฮ์ → ผู้วายชนม์",
+      "reviewStatus": "DRAFT"
+    }
+  ]
+}

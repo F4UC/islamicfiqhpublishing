@@ -640,6 +640,18 @@ function exploreYear() {
         `;
       }
 
+      let sourceHtml = '';
+      if (e.source && e.source.url) {
+        const vol = e.source.vol ? (' เล่ม ' + e.source.vol) : '';
+        const pg = e.source.pageNum ? (' หน้า ' + e.source.pageNum) : '';
+        sourceHtml = `
+          <div class="event-relation event-source">
+            <span class="relation-label">ที่มา:</span>
+            <a href="${e.source.url}" class="relation-link" rel="noopener noreferrer" target="_blank">${e.source.bookArabic || 'อ้างอิง'}${vol}${pg}</a>
+          </div>
+        `;
+      }
+
       html += `
         <div class="event-card">
           <div class="event-header">
@@ -652,6 +664,7 @@ function exploreYear() {
             <div class="event-title">${e.title}</div>
             <div class="event-desc">${e.desc}</div>
             ${relationHtml}
+            ${sourceHtml}
           </div>
         </div>`;
     });
@@ -673,6 +686,61 @@ function exploreYear() {
   document.getElementById('g-month').value = today.getMonth() + 1;
   document.getElementById('g-day').value = today.getDate();
   document.getElementById('explore-year').value = h.year;
+})();
+
+/* ------------------------------------------------------------------------
+ * R86 / Time Machine data-model: lazy-load external chronicle shards
+ * (al-Bidayah wa al-Nihayah, etc.) listed in ./timemachine-data/index.json
+ * and merge them into EVENTS. The inline EVENTS array is the always-available
+ * base; shards enrich the timeline without bloating the page. Each shard event
+ * maps hijriYear->year and summary->desc. Graceful degradation: on any failure
+ * (offline, file://, bad JSON) the tool keeps working with the inline events.
+ * ---------------------------------------------------------------------- */
+(function loadChronicleShards() {
+  if (typeof fetch !== 'function') return;
+  var BASE = './timemachine-data/';
+  var seen = {};
+  EVENTS.forEach(function (e) { if (e.id) seen[e.id] = true; });
+
+  fetch(BASE + 'index.json')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (manifest) {
+      var shards = (manifest && manifest.shards) || [];
+      return Promise.all(shards.map(function (s) {
+        return fetch(BASE + s.file)
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .catch(function () { return null; });
+      }));
+    })
+    .then(function (loaded) {
+      var added = 0;
+      loaded.forEach(function (shard) {
+        if (!shard || !Array.isArray(shard.events)) return;
+        shard.events.forEach(function (ev) {
+          if (ev.id && seen[ev.id]) return;
+          if (ev.id) seen[ev.id] = true;
+          if (typeof ev.hijriYear !== 'number') return;
+          EVENTS.push({
+            id: ev.id,
+            year: ev.hijriYear,
+            cat: ev.cat,
+            title: ev.title,
+            desc: ev.summary,
+            source: ev.source || null
+          });
+          added++;
+        });
+      });
+      /* If the user already ran an exploration before the shards arrived,
+         refresh the view so the newly loaded events appear. */
+      if (added) {
+        var out = document.getElementById('explorer-output');
+        if (out && out.children.length && !out.querySelector('.timeline-empty')) {
+          exploreYear();
+        }
+      }
+    })
+    .catch(function () { /* inline events remain fully functional */ });
 })();
 </script>
 <script>

@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "purpose": "Translation memory / canonical transliteration lock for the Time Machine ingestion pipeline (R86). Seeded from al-Bidayah year 132. Every Thai spelling of a scholar/place/title MUST match canonicalThai; new names append here.",
+    "transliterationBasis": "Locked precedents from REVIEW-QUEUE.md / AUDIT-FIXES.md (e.g. ابن→อิบนุ, ال→อัล, ط→ฏ, ة→ะฮ์, nisba ي→ีย์). Arabic is byte-exact reference only (never edited).",
+    "reviewStatus": "DRAFT — awaiting owner review",
+    "lastExpanded": "ปีฮ.ศ. 132 ครบทั้งปี (al-Bidayah เล่ม 10)"
+  },
+  "persons": [
+    {
+      "id": "qahtaba-b-shabib",
+      "arabic": "قحطبة بن شبيب الطائي",
+      "canonicalThai": "ก็อหฺเฏาะบะฮ์ บิน ชะบีบ อัฏฏออีย์",
+      "note": "แม่ทัพใหญ่ฝ่ายอับบาซียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-muslim-al-khurasani",
+      "arabic": "أبو مسلم الخراساني",
+      "canonicalThai": "อบู มุสลิม อัลคุรอซานีย์",
+      "variantsFound": []
+    },
+    {
+      "id": "marwan-ii",
+      "arabic": "مروان بن محمد",
+      "canonicalThai": "มัรวาน บิน มุหัมมัด",
+      "aliasThai": "มัรวานที่ 2 / มัรวาน อัลหิมาร",
+      "note": "เคาะลีฟะฮ์อุมัยยะฮ์องค์สุดท้าย",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hasan-b-qahtaba",
+      "arabic": "الحسن بن قحطبة",
+      "canonicalThai": "อัลหะซัน บิน ก็อหฺเฏาะบะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-awn",
+      "arabic": "أبو عون",
+      "canonicalThai": "อบู เอาน์",
+      "variantsFound": []
+    },
+    {
+      "id": "uthman-b-sufyan",
+      "arabic": "عثمان بن سفيان",
+      "canonicalThai": "อุษมาน บิน สุฟยาน",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-khalid-al-qasri",
+      "arabic": "محمد بن خالد القسري",
+      "canonicalThai": "มุหัมมัด บิน คอลิด อัลก็อสรีย์",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-hubayra",
+      "arabic": "ابن هبيرة (يزيد بن عمر)",
+      "canonicalThai": "อิบนุ ฮุบัยเราะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "ziyad-b-salih",
+      "arabic": "زياد بن صالح الحارثي",
+      "canonicalThai": "ซิยาด บิน ศอลิห์ อัลหาริษีย์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-salama-al-khallal",
+      "arabic": "أبو سلمة حفص بن سليمان الخلال",
+      "canonicalThai": "อบู สะละมะฮ์ หัฟศ์ บิน สุลัยมาน อัลค็อลลาล",
+      "variantsFound": []
+    },
+    {
+      "id": "muslim-b-qutayba",
+      "arabic": "مسلم بن قتيبة",
+      "canonicalThai": "มุสลิม บิน กุตัยบะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-saffah",
+      "arabic": "أبو العباس السفاح",
+      "canonicalThai": "อบุลอับบาส อัสซัฟฟาห์",
+      "aliasThai": "อับดุลลอฮ์ บิน มุหัมมัด",
+      "note": "เคาะลีฟะฮ์อับบาซียะฮ์องค์แรก (อับดุลลอฮ์ บิน มุหัมมัด)",
+      "variantsFound": []
+    },
+    {
+      "id": "ibrahim-al-imam",
+      "arabic": "إبراهيم بن محمد الإمام",
+      "canonicalThai": "อิบรอฮีม บิน มุหัมมัด อัลอิมาม",
+      "note": "ผู้นำขบวนการอับบาซียะฮ์ ถูกมัรวานจองจำจนสิ้นชีพ",
+      "variantsFound": []
+    },
+    {
+      "id": "abdullah-b-ali",
+      "arabic": "عبد الله بن علي",
+      "canonicalThai": "อับดุลลอฮ์ บิน อะลีย์",
+      "note": "อาของอัสซัฟฟาห์ แม่ทัพผู้ชนะยุทธการอัซซาบ",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-jafar-al-mansur",
+      "arabic": "أبو جعفر المنصور (عبد الله بن محمد)",
+      "canonicalThai": "อบู ญะอ์ฟัร อัลมันศูร",
+      "note": "ภายหลังเป็นเคาะลีฟะฮ์อับบาซียะฮ์องค์ที่ 2",
+      "variantsFound": []
+    },
+    {
+      "id": "dawud-b-ali",
+      "arabic": "داود بن علي",
+      "canonicalThai": "ดาวูด บิน อะลีย์",
+      "note": "อาของอัสซัฟฟาห์",
+      "variantsFound": []
+    },
+    {
+      "id": "salih-b-ali",
+      "arabic": "صالح بن علي",
+      "canonicalThai": "ศอลิห์ บิน อะลีย์",
+      "note": "แม่ทัพอับบาซียะฮ์ ผู้ไล่ติดตามมัรวานเข้าสู่อียิปต์",
+      "variantsFound": []
+    },
+    {
+      "id": "hisham-b-abd-al-malik",
+      "arabic": "هشام بن عبد الملك",
+      "canonicalThai": "ฮิชาม บิน อับดุลมาลิก",
+      "note": "เคาะลีฟะฮ์อุมัยยะฮ์ ศพถูกขุดและเผาที่ดิมัชก์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-muhammad-al-sufyani",
+      "arabic": "أبو محمد السفياني",
+      "canonicalThai": "อบู มุหัมมัด อัสสุฟยานี",
+      "note": "เชื้อสายอุมัยยะฮ์ ผู้ก่อกบฏที่คินนัสรีน",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-ward-al-kilabi",
+      "arabic": "أبو الورد مجزأة بن الكوثر الكلابي",
+      "canonicalThai": "อบุลวัรด์ มัจญ์ซะอะฮ์ บิน อัลเกาษัร อัลกิลาบีย์",
+      "note": "อดีตขุนพลของมัรวาน ผู้นำกบฏคินนัสรีน",
+      "variantsFound": []
+    },
+    {
+      "id": "amir-b-ismail",
+      "arabic": "عامر بن إسماعيل",
+      "canonicalThai": "อามิร บิน อิสมาอีล",
+      "note": "แม่ทัพหน่วยที่สังหารมัรวานที่บูศีร",
+      "variantsFound": []
+    },
+    {
+      "id": "khalid-b-barmak",
+      "arabic": "خالد بن برمك",
+      "canonicalThai": "คอลิด บิน บัรมัก",
+      "note": "ต้นตระกูลบัรมัก (Barmakids) เสนาบดีกรมคลัง",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-hamid-al-katib",
+      "arabic": "عبد الحميد بن يحيى الكاتب",
+      "canonicalThai": "อับดุลหะมีด บิน ยะห์ยา อัลกาติบ",
+      "note": "เลขานุการเอกของมัรวาน ปรมาจารย์ร้อยแก้วจดหมายอาหรับ",
+      "variantsFound": []
+    }
+  ],
+  "places": [
+    {
+      "id": "nahawand",
+      "arabic": "نهاوند",
+      "canonicalThai": "นะฮาวันด์",
+      "variantsFound": []
+    },
+    {
+      "id": "shahrazur",
+      "arabic": "شهرزور",
+      "canonicalThai": "ชะฮ์ระซูร",
+      "variantsFound": []
+    },
+    {
+      "id": "great-zab",
+      "arabic": "الزاب الأكبر",
+      "canonicalThai": "แม่น้ำซาบใหญ่ (อัซซาบ อัลอักบัร)",
+      "variantsFound": []
+    },
+    {
+      "id": "harran",
+      "arabic": "حران",
+      "canonicalThai": "หัรรอน",
+      "variantsFound": []
+    },
+    {
+      "id": "kufa",
+      "arabic": "الكوفة",
+      "canonicalThai": "อัลกูฟะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "wasit",
+      "arabic": "واسط",
+      "canonicalThai": "วาสิฏ",
+      "variantsFound": []
+    },
+    {
+      "id": "basra",
+      "arabic": "البصرة",
+      "canonicalThai": "อัลบัศเราะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-madain",
+      "arabic": "المدائن",
+      "canonicalThai": "อัลมะดาอิน",
+      "variantsFound": []
+    },
+    {
+      "id": "mosul",
+      "arabic": "الموصل",
+      "canonicalThai": "เมาศิล",
+      "variantsFound": []
+    },
+    {
+      "id": "al-jazira",
+      "arabic": "الجزيرة",
+      "canonicalThai": "อัลญะซีเราะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "damascus",
+      "arabic": "دمشق",
+      "canonicalThai": "ดิมัชก์ (ดามัสกัส)",
+      "note": "นครหลวงของรัฐอุมัยยะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "busir",
+      "arabic": "بوصير",
+      "canonicalThai": "บูศีร",
+      "note": "หมู่บ้านในอียิปต์ จุดสิ้นพระชนม์ของมัรวาน",
+      "variantsFound": []
+    },
+    {
+      "id": "egypt",
+      "arabic": "مصر",
+      "canonicalThai": "อียิปต์ (มิศร์)",
+      "variantsFound": []
+    },
+    {
+      "id": "qinnasrin",
+      "arabic": "قنسرين",
+      "canonicalThai": "คินนัสรีน",
+      "variantsFound": []
+    },
+    {
+      "id": "homs",
+      "arabic": "حمص",
+      "canonicalThai": "ฮิมศ์",
+      "variantsFound": []
+    }
+  ],
+  "books": [
+    {
+      "id": "al-bidayah-wa-al-nihayah",
+      "arabic": "البداية والنهاية",
+      "canonicalThai": "อัลบิดายะฮ์ วันนิฮายะฮ์",
+      "author": "อิบนุ กะษีร",
+      "variantsFound": []
+    }
+  ]
+}

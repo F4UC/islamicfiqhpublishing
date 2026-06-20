@@ -1,12 +1,12 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all **85 rules (ข้อ 1–85), plus sub-rules 12.1/12.2 and House-Style S1–S8 (+ placeholders S9/S10 → Rules 76/77, linter pending)**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all **86 rules (ข้อ 1–86), plus sub-rules 12.1/12.2 and House-Style S1–S8 (+ placeholders S9/S10 → Rules 76/77, linter pending)**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 >
 > **★ Rule 71 (Child-Safety Override) supersedes every fidelity/coverage rule, for every agent. Read it first. ★**
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (85 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (86 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -200,7 +200,7 @@
 
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 85 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 86 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -485,7 +485,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 ---
 
-## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–85)
+## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–86)
 
 * **กฎข้อที่ 71:** **★[ความปลอดภัยเด็ก — Child-Safety Override · เหนือกฎความครบถ้วนทุกข้อ · บังคับกับทุกเอเยนต์]★** หากต้นฉบับจาก Drive หรือเนื้อหาใดๆ มีสาระที่ทำให้**ผู้เยาว์เป็นวัตถุทางเพศ (sexualizes a minor)** มาตรการนี้อยู่เหนือกฎ 1/49/56 และเกตทุกชนิด ให้ปฏิบัติโดยเด็ดขาด:
   1. **PASS-with-flag (ตัดทิ้ง ไม่ใช่ปัดตก):** ถือว่าบทความ "ผ่าน" ได้โดย**ตัด (drop) เฉพาะส่วนที่ละเมิดออกทั้งหมด** แล้วตั้ง **child-safety flag** กำกับ — ส่วนที่ตัดนี้**ไม่นับในตัวหารของ coverage (กฎ 72)** การตัดตามกฎนี้ไม่ถือว่า coverage ตก
@@ -563,9 +563,16 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **CI gate:** ทุก PR ต้องผ่าน `.github/workflows/ci.yml` (JSON valid, Arabic-ortho, gitleaks) ก่อน owner-merge
   *(EN: scoped+expiring fine-grained PATs, never commit secrets; render external/JSON data via textContent — never innerHTML; vendored libs pinned + SRI + self-hosted; every PR must pass CI before owner-merge.)*
 
+* **กฎข้อที่ 86:** **[ทะเบียนล็อกการทับศัพท์ · Transliteration Glossary Lock]** งาน **ดูดตำราคลาสสิกจำนวนมาก** (เช่น Time Machine ingestion) ต้องล็อกการทับศัพท์ด้วย **ไฟล์ทะเบียนกลาง (translation memory)** ไม่ใช่สะกดลอยตามใจแต่ละรอบ/แต่ละ agent:
+  - **ที่ตั้ง:** `pages/tools/timemachine-data/glossary.json` — schema `persons/places/books → {id, arabic, canonicalThai, variantsFound[]}`
+  - ทุกการแปลต้องสะกดชื่อปราชญ์/สถานที่/ตำราตรงกับ `canonicalThai` ของทะเบียน · ชื่อใหม่ **append** เข้าทะเบียน · เมื่อหลาย agent แปลขนาน ทุกตัวถือ glossary เดียวกัน → สะกดตรงกันทั้งโปรเจกต์
+  - รวมหลักที่ล็อกแล้วของ **กฎ 52** (อิบนุ/อบู เว้นวรรค, อิบนุล/อบุล), **73** (corpus-dominant), **82** (สระ/ตัวสะกด), **12.1/12.2** เป็นโครงไฟล์เดียวสำหรับ bulk-ingest
+  - **อาหรับ = reference byte-exact เท่านั้น** ห้ามแก้ (กฎ 60/7/8) · ไม่แน่ใจรูปทับศัพท์ → **FLAG ไม่เดา** (กฎ 52/3); บันทึก variant ที่พบใน `variantsFound`
+  *(EN: bulk classical-text ingestion must lock transliteration via a central glossary/translation-memory at pages/tools/timemachine-data/glossary.json; every Thai spelling of a person/place/title must match canonicalThai, new names appended; parallel translators share one glossary so names are identical project-wide; Arabic stays byte-exact reference (Rules 60/7/8); unsure → FLAG, never guess (Rules 52/3). Folds Rules 52/73/82/12.1/12.2 into a file lock for ingestion.)*
+
 ---
 
-## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–85)
+## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–86)
 
 * **Rule 71:** **★[Child-Safety Override · supersedes every fidelity/coverage rule · binds every agent]★** If any Drive source or other content sexualizes a minor, this measure overrides Rules 1/49/56 and every gate. Act decisively:
   1. **PASS-with-flag (drop, do not reject):** the article may be considered "passing" by **dropping only the offending span entirely** and setting a **child-safety flag** — the dropped span is **excluded from the Rule 72 coverage denominator**; a drop under this rule does not lower coverage.
@@ -638,3 +645,5 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **DOM (stored-XSS):** data from JSON / external sources / users must be rendered via `textContent` or DOM APIs — **never `innerHTML` with untrusted data**.
   - **Vendored libs:** pin by filename + **SRI (`integrity` sha384)** + `MANIFEST.sha256`; `script-src 'self'` only, no external CDN (SRI requires Cloudflare Auto-Minify/Rocket Loader OFF).
   - **CI gate:** every PR must pass `.github/workflows/ci.yml` (JSON validity, Arabic orthography, gitleaks) before owner-merge.
+
+* **Rule 86:** **[Transliteration Glossary Lock]** Bulk classical-text ingestion (e.g. the Time Machine pipeline) must lock transliteration via a central glossary / translation-memory file: `pages/tools/timemachine-data/glossary.json` (schema `persons/places/books → {id, arabic, canonicalThai, variantsFound[]}`). Every Thai spelling of a scholar/place/title MUST match the glossary's `canonicalThai`; new names are appended there (never spelled ad-hoc per run/agent); parallel translators all share one glossary so names are identical project-wide. Folds the locked precedents of Rules 52 (Ibn/Abu spacing; Ibn al-/Abu al-), 73 (corpus-dominant), 82 (vowel/spelling), 12.1/12.2 into one file lock for ingestion. Arabic stays byte-exact reference only (Rules 60/7/8). Unsure of a form → FLAG, never guess (Rules 52/3); record observed variants in `variantsFound`.
