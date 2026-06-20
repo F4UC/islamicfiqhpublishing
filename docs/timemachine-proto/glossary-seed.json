@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "purpose": "Translation memory / canonical transliteration lock for the Time Machine ingestion pipeline (proposed R86). Seeded from al-Bidayah year 132. Every Thai spelling of a scholar/place/title MUST match canonicalThai; new names append here.",
+    "transliterationBasis": "Locked precedents from REVIEW-QUEUE.md / AUDIT-FIXES.md (e.g. ابن→อิบนุ, ال→อัล, ط→ฏ, ة→ะฮ์, nisba ي→ีย์). Arabic is byte-exact reference only (never edited).",
+    "reviewStatus": "DRAFT — awaiting owner review"
+  },
+  "persons": [
+    { "id": "qahtaba-b-shabib", "arabic": "قحطبة بن شبيب الطائي", "canonicalThai": "ก็อหฺเฏาะบะฮ์ บิน ชะบีบ อัฏฏออีย์", "note": "แม่ทัพใหญ่ฝ่ายอับบาซียะฮ์", "variantsFound": [] },
+    { "id": "abu-muslim-al-khurasani", "arabic": "أبو مسلم الخراساني", "canonicalThai": "อบู มุสลิม อัลคุรอซานีย์", "variantsFound": [] },
+    { "id": "marwan-ii", "arabic": "مروان بن محمد", "canonicalThai": "มัรวาน บิน มุหัมมัด", "aliasThai": "มัรวานที่ 2 / มัรวาน อัลหิมาร", "note": "เคาะลีฟะฮ์อุมัยยะฮ์องค์สุดท้าย", "variantsFound": [] },
+    { "id": "al-hasan-b-qahtaba", "arabic": "الحسن بن قحطبة", "canonicalThai": "อัลหะซัน บิน ก็อหฺเฏาะบะฮ์", "variantsFound": [] },
+    { "id": "abu-awn", "arabic": "أبو عون", "canonicalThai": "อบู เอาน์", "variantsFound": [] },
+    { "id": "uthman-b-sufyan", "arabic": "عثمان بن سفيان", "canonicalThai": "อุษมาน บิน สุฟยาน", "variantsFound": [] },
+    { "id": "muhammad-b-khalid-al-qasri", "arabic": "محمد بن خالد القسري", "canonicalThai": "มุหัมมัด บิน คอลิด อัลก็อสรีย์", "variantsFound": [] },
+    { "id": "ibn-hubayra", "arabic": "ابن هبيرة (يزيد بن عمر)", "canonicalThai": "อิบนุ ฮุบัยเราะฮ์", "variantsFound": [] },
+    { "id": "ziyad-b-salih", "arabic": "زياد بن صالح الحارثي", "canonicalThai": "ซิยาด บิน ศอลิห์ อัลหาริษีย์", "variantsFound": [] },
+    { "id": "abu-salama-al-khallal", "arabic": "أبو سلمة حفص بن سليمان الخلال", "canonicalThai": "อบู สะละมะฮ์ หัฟศ์ บิน สุลัยมาน อัลค็อลลาล", "variantsFound": [] },
+    { "id": "muslim-b-qutayba", "arabic": "مسلم بن قتيبة", "canonicalThai": "มุสลิม บิน กุตัยบะฮ์", "variantsFound": [] }
+  ],
+  "places": [
+    { "id": "nahawand", "arabic": "نهاوند", "canonicalThai": "นะฮาวันด์", "variantsFound": [] },
+    { "id": "shahrazur", "arabic": "شهرزور", "canonicalThai": "ชะฮ์ระซูร", "variantsFound": [] },
+    { "id": "great-zab", "arabic": "الزاب الأكبر", "canonicalThai": "แม่น้ำซาบใหญ่ (อัซซาบ อัลอักบัร)", "variantsFound": [] },
+    { "id": "harran", "arabic": "حران", "canonicalThai": "หัรรอน", "variantsFound": [] },
+    { "id": "kufa", "arabic": "الكوفة", "canonicalThai": "อัลกูฟะฮ์", "variantsFound": [] },
+    { "id": "wasit", "arabic": "واسط", "canonicalThai": "วาสิฏ", "variantsFound": [] },
+    { "id": "basra", "arabic": "البصرة", "canonicalThai": "อัลบัศเราะฮ์", "variantsFound": [] },
+    { "id": "al-madain", "arabic": "المدائن", "canonicalThai": "อัลมะดาอิน", "variantsFound": [] },
+    { "id": "mosul", "arabic": "الموصل", "canonicalThai": "เมาศิล", "variantsFound": [] },
+    { "id": "al-jazira", "arabic": "الجزيرة", "canonicalThai": "อัลญะซีเราะฮ์", "variantsFound": [] }
+  ],
+  "books": [
+    { "id": "al-bidayah-wa-al-nihayah", "arabic": "البداية والنهاية", "canonicalThai": "อัลบิดายะฮ์ วันนิฮายะฮ์", "author": "อิบนุ กะษีร", "variantsFound": [] }
+  ]
+}
