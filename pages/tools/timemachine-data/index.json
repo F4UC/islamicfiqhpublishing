@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h131.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 131,
+      "events": 7,
+      "eventsSchema": "v2",
+      "scope": "ปี ฮ.ศ. 131 (Shamela 258–259 · islamweb 59/1112) — การล่มของอุมัยยะฮ์ในคุรอซาน",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h132.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 132,
