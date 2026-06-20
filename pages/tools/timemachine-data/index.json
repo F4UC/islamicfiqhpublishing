@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h130.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 130,
+      "events": 9,
+      "eventsSchema": "v2",
+      "scope": "ปี ฮ.ศ. 130 (Shamela 254–257 · islamweb 59/1109–1111)",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h131.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 131,

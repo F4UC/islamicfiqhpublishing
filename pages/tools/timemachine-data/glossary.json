@@ -173,6 +173,82 @@
       "canonicalThai": "อามิร บิน ฎุบาเราะฮ์",
       "note": "แม่ทัพอุมัยยะฮ์ ผู้นำ 'กองทัพแห่งกองทัพ'",
       "variantsFound": []
+    },
+    {
+      "id": "ali-b-al-kirmani",
+      "arabic": "علي بن جديع الكرماني",
+      "canonicalThai": "อะลีย์ บิน ญุดัยอ์ อัลกิรมานีย์",
+      "note": "พันธมิตรอาหรับของอบู มุสลิมในคุรอซาน",
+      "variantsFound": []
+    },
+    {
+      "id": "uthman-b-al-kirmani",
+      "arabic": "عثمان بن الكرماني",
+      "canonicalThai": "อุษมาน บิน อัลกิรมานีย์",
+      "variantsFound": []
+    },
+    {
+      "id": "shayban-al-haruri",
+      "arabic": "شيبان بن سلمة الحروري",
+      "canonicalThai": "ชัยบาน บิน สะละมะฮ์ อัลหะรูรีย์",
+      "note": "ผู้นำเคาะวาริจญ์ พันธมิตรของนัศร์",
+      "variantsFound": []
+    },
+    {
+      "id": "tamim-b-nasr",
+      "arabic": "تميم بن نصر بن سيار",
+      "canonicalThai": "ตะมีม บิน นัศร์",
+      "note": "บุตรของนัศร์ บิน สัยยาร",
+      "variantsFound": []
+    },
+    {
+      "id": "nubata-b-hanzala",
+      "arabic": "نباتة بن حنظلة",
+      "canonicalThai": "นุบาตะฮ์ บิน หันเซาะละฮ์",
+      "note": "แม่ทัพอุมัยยะฮ์ ผู้ปกครองญุรญาน",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-hamza-al-khariji",
+      "arabic": "أبو حمزة الخارجي",
+      "canonicalThai": "อบู หัมซะฮ์ อัลคอริญีย์",
+      "note": "ผู้นำเคาะวาริจญ์อิบาฎีย์ ผู้ยึดมะดีนะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-atiyya",
+      "arabic": "عبد الملك بن محمد بن عطية",
+      "canonicalThai": "อับดุลมาลิก บิน มุหัมมัด บิน อะฏียะฮ์",
+      "note": "แม่ทัพของมัรวานผู้ปราบอบู หัมซะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abdullah-b-yahya",
+      "arabic": "عبد الله بن يحيى",
+      "canonicalThai": "อับดุลลอฮ์ บิน ยะห์ยา",
+      "note": "อิมามอิบาฎีย์ ผู้ปกครองศ็อนอาอ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-dawud-khalid",
+      "arabic": "أبو داود خالد بن إبراهيم",
+      "canonicalThai": "อบู ดาวูด คอลิด บิน อิบรอฮีม",
+      "note": "แม่ทัพของอบู มุสลิม",
+      "variantsFound": []
+    },
+    {
+      "id": "musa-b-kab",
+      "arabic": "موسى بن كعب",
+      "canonicalThai": "มูซา บิน กะอ์บ์",
+      "note": "แม่ทัพของอบู มุสลิม",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-al-munkadir",
+      "arabic": "محمد بن المنكدر",
+      "canonicalThai": "มุหัมมัด บิน อัลมุนกะดิร",
+      "note": "ตาบิอีนและนักรายงานหะดีษ (วายชนม์ปี 130)",
+      "variantsFound": []
     }
   ],
   "places": [
@@ -290,6 +366,72 @@
       "id": "nishapur",
       "arabic": "نيسابور",
       "canonicalThai": "นัยซาบูร",
+      "variantsFound": []
+    },
+    {
+      "id": "merv",
+      "arabic": "مرو",
+      "canonicalThai": "มัรว์",
+      "variantsFound": []
+    },
+    {
+      "id": "sarakhs",
+      "arabic": "سرخس",
+      "canonicalThai": "ซะร็อคส์",
+      "variantsFound": []
+    },
+    {
+      "id": "balkh",
+      "arabic": "بلخ",
+      "canonicalThai": "บัลค์",
+      "variantsFound": []
+    },
+    {
+      "id": "abiward",
+      "arabic": "أبيورد",
+      "canonicalThai": "อะบีวัรด์",
+      "variantsFound": []
+    },
+    {
+      "id": "tus",
+      "arabic": "طوس",
+      "canonicalThai": "ฏูส",
+      "variantsFound": []
+    },
+    {
+      "id": "medina",
+      "arabic": "المدينة النبوية",
+      "canonicalThai": "มะดีนะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "qudayd",
+      "arabic": "قديد",
+      "canonicalThai": "กุดัยด์",
+      "variantsFound": []
+    },
+    {
+      "id": "wadi-al-qura",
+      "arabic": "وادي القرى",
+      "canonicalThai": "วาดิลกุรอ",
+      "variantsFound": []
+    },
+    {
+      "id": "yemen",
+      "arabic": "اليمن",
+      "canonicalThai": "เยเมน",
+      "variantsFound": []
+    },
+    {
+      "id": "sanaa",
+      "arabic": "صنعاء",
+      "canonicalThai": "ศ็อนอาอ์",
+      "variantsFound": []
+    },
+    {
+      "id": "mecca",
+      "arabic": "مكة",
+      "canonicalThai": "มักกะฮ์",
       "variantsFound": []
     }
   ],
