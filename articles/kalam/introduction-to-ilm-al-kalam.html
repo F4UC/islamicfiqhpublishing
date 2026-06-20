@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>บทนำสู่ศาสตร์แห่งกะลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทนำสู่ศาสตร์แห่งกะลาม (เทววิทยาเชิงวิภาษ) ว่าด้วยต้นกำเนิด ที่มาของชื่อ เป้าหมาย และการทวงคืนนิยามดั้งเดิมของอะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์">
+<meta name="keywords" content="กะลาม, อิลมุลกะลาม, เทววิทยา, อัชอะรียะฮ์, มาตุรีดียะฮ์, อะฮ์ลุสซุนนะฮ์, อะกีดะฮ์">
+<meta name="author" content="มัรกัส อัลอิมาม อัลอัชอะรีย์">
+
+<meta property="og:title" content="บทนำสู่ศาสตร์แห่งกะลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="สำรวจต้นกำเนิด ที่มาของชื่อ และเป้าหมายสูงสุดของศาสตร์แห่งกะลาม พร้อมการทวงคืนนิยามดั้งเดิมของอะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/kalam/introduction-to-ilm-al-kalam">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/kalam/introduction-to-ilm-al-kalam">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "บทนำสู่ศาสตร์แห่งกะลาม",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "มัรกัส อัลอิมาม อัลอัชอะรีย์" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/kalam/introduction-to-ilm-al-kalam"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="introduction-to-ilm-al-kalam">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/kalam.html" class="article-feature-eyebrow">กะลาม</a>
+      <h1 class="article-feature-title">บทนำสู่ศาสตร์แห่งกะลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในยุคสมัยที่โลกมุสลิมได้กลับมาเปิดกว้างและยอมรับในความหลากหลายของมัสฮับหรือสำนักคิดทางนิติศาสตร์อิสลามนิกายสุนนีอีกครั้งหนึ่ง ประเด็นสำคัญลำดับถัดไปที่เปรียบเสมือน ‘ช้างในห้อง’ ซึ่งต้องได้รับการหยิบยกมาพิจารณาก็คือประเด็นเรื่อง “หลักความเชื่อ” (Creed) และอาจกล่าวได้ว่า หลักความเชื่อของมุสลิมเป็นหัวข้อที่มีการถกเถียงกันอย่างเผ็ดร้อนที่สุดในตลอดหน้าประวัติศาสตร์มุสลิม</p>
+
+      <p>ในอดีต การโต้วาทีเกี่ยวกับหลักความเชื่อส่วนใหญ่มักเกิดขึ้นระหว่างกลุ่มอะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์ ซึ่งเป็นชาวสุนนีสายหลักดั้งเดิม กับกลุ่มที่ถูกมองว่าอยู่นอกแนวทาง แต่ในปัจจุบัน การถกเถียงได้เปลี่ยนจุดสนใจมาสู่คำถามที่ว่า “ใครคือผู้ที่เป็นอะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์ที่แท้จริง?”</p>
+
+      <p>ตามหน้าประวัติศาสตร์แล้ว กลุ่มอะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์ส่วนใหญ่ ประกอบด้วยสำนักคิดอัลอัชอะรียะฮ์และอัลมาตุรีดียะฮ์ ซึ่งชื่อสำนักคิดทั้งสองนี้ ก็ตั้งตามชื่อของปราชญ์ผู้เป็นศูนย์กลางและวางรากฐานของสำนักคิดนั้นๆ ได้แก่ ท่านอิมามอบุลหะสัน อัลอัชอะรีย์ และท่านอิมามอบู มันซูร อัลมาตุรีดีย์</p>
+
+      <p>หากจะเปรียบเทียบให้เห็นภาพชัดเจน ก็อาจกล่าวได้ว่า สำนักคิดอัชชาฟิอีย์, อัลหะนะฟีย์, อัลหัมบะลีย์, และอัลมาลิกีย์ ต่างก็ให้ความสำคัญกับ “นิติศาสตร์อิสลาม” หรือ “ฟิกฮ์” ซึ่งว่าด้วยเรื่องข้อปฏิบัติทางศาสนบัญญัติ</p>
+
+      <p>ฉันใดก็ฉันนั้น สำนักคิดอัชอะรียะฮ์และมาตุรีดียะฮ์เอง ก็ให้ความสำคัญกับ “เทววิทยาเชิงวิภาษ” หรือ กะลาม ซึ่งว่าด้วยเรื่องหลักการศรัทธาและความเชื่อ</p>
+
+      <h2 class="article-h2">ต้นกำเนิดของศาสตร์กะลาม</h2>
+
+      <p>การพาดพิงของท่านศาสดามุฮัมมัด ﷺ ถึงการจัดวางระเบียบองค์ความรู้ในศาสนาอิสลามนั้นเป็นที่รู้จักกันดี โดยมีโครงสร้างตามที่ปรากฏใน หะดีษญิบรีล<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup> ซึ่งเป็นหะดีษ (วจนะของท่านศาสดา ﷺ) ที่มีความสำคัญอย่างยิ่ง</p>
+
+      <p>ในหะดีษบทนี้ ศาสนาอิสลามถูกนิยามอย่างกว้างๆ ผ่านองค์ประกอบ 3 ประการคือ อิสลาม, อีหม่านและอิห์สาน โดยสององค์ประกอบแรกนั้นเกี่ยวข้องโดยตรงกับบทบัญญัติทางศาสนา ในขณะที่อิห์สานยังคงอยู่ในรูปแบบที่ไม่เป็นทางการนักเป็นระยะเวลานาน</p>
+
+      <p>ในตำราอันโด่งดังของท่านอิมามสะอ์ดุดดีน อัตตัฟตาซานีย์ที่มีชื่อว่า “ชัรห์ อัลอะกออิด อันนะสะฟียะฮ์”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup> ท่านได้แบ่งประเภทของบทบัญญัติทางศาสนาออกเป็น 2 หมวดหมู่หลัก ได้แก่:</p>
+
+      <p>1.สิ่งที่เกี่ยวข้องกับความเชื่อ: ท่านอิมามอัตตัฟตาซานีย์เรียกหมวดหมู่นี้ด้วยศัพท์เทคนิคว่า “อัศลียะฮ์ (เป็นรากฐาน)” และ “อิอ์ติกอดียะฮ์ (เป็นเรื่องความเชื่อ)”</p>
+
+      <p>เหตุที่เรียกว่าเป็นอัศลียะฮ์ (รากฐาน) ก็เพราะความถูกต้องขององค์ความรู้อื่นๆ ทั้งหมดในศาสนาอิสลามนั้น ขึ้นอยู่กับความถูกต้องของความเชื่อในหมวดหมู่นี้เป็นสำคัญ</p>
+
+      <p>และเหตุที่เรียกว่าเป็นเรื่องอิอ์ติกอดียะฮ์ (ความเชื่อ) ก็เพราะมันเกี่ยวข้องกับ “สิ่งที่ต้องเชื่อ” เพียงอย่างเดียว ไม่ใช่ “สิ่งที่ต้องปฏิบัติ” สิ่งนี้คือสิ่งที่เรารู้จักกันในปัจจุบันในชื่อ “อัลอะกีดะฮ” หรือหลักข้อเชื่อ/หลักการศรัทธา ซึ่งสอดคล้องกับองค์ประกอบที่เรียกว่า “อีหม่าน” ในหะดีษญิบรีล หากปราศจากอะกีดะฮฺที่ถูกต้องแล้ว การปฏิบัติศาสนกิจต่างๆ (อิบาดะฮฺ) ก็ย่อมไร้ประโยชน์</p>
+
+      <p>2.สิ่งที่เกี่ยวข้องกับการปฏิบัติ: ท่านอิมามอัตตัฟตาซานีย์เรียกหมวดหมู่นี้ว่า “ฟัรอียะฮ์ (เป็นกิ่งก้าน/ส่วนขยาย)” และ “อะมะลียะฮ์ (เป็นเรื่องการปฏิบัติ)”</p>
+
+      <p>เหตุที่เรียกว่าเป็นฟัรอียะฮ์ (กิ่งก้าน) ก็เพราะมันแตกแขนงและเป็นผลตามมาหลังจากที่ได้สถาปนาอะกีดะฮ์ที่ถูกต้องเป็นแกนกลางแล้ว</p>
+
+      <p>และเหตุที่เรียกว่าเป็นเรื่องอะมะลียะฮ์ (การปฏิบัติ) ก็เพราะมันเกี่ยวข้องกับ “การกระทำ” ไม่ใช่ “ความเชื่อ” สิ่งนี้คือสิ่งที่เรารู้จักกันในปัจจุบันในชื่อ “ฟิกฮ์” หรือ “นิติศาสตร์อิสลาม” ซึ่งสอดคล้องกับองค์ประกอบที่เรียกว่า “อิสลาม” ในหะดีษญิบรีล</p>
+
+      <p>เมื่อเวลาผ่านไป การศึกษาศาสตร์ว่าด้วยอะกีดะฮ์ (หลักความเชื่อ) ก็เป็นที่รู้จักในหลายชื่อ ซึ่งที่มาของแต่ละชื่อก็ยังเป็นที่ถกเถียงกันอยู่ แต่อย่างไรก็ตาม ชื่อที่โด่งดังและเป็นที่รู้จักมากที่สุดคือ “อิลมุลกะลาม” หรือ “ศาสตร์แห่งกะลาม”</p>
+
+      <h2 class="article-h2">ที่มาของชื่อ “กะลาม”</h2>
+
+      <p>ในทางภาษาศาสตร์ คำว่า “กะลาม” มีความหมายตามตัวอักษรว่า “วจนะ” หรือ “การสนทนา/วาทกรรม” ท่านอิมามอัตตัฟตาซานีย์ได้อภิปรายถึงที่มาของชื่อ “กะลาม” ไว้ในบทนำของตำราชัรห์อัลอะกออิดของท่าน</p>
+
+      <p>1-ทฤษฎีแรกที่ท่านกล่าวถึงคือ บรรดานักปราชญ์ในศาสตร์นี้ (นักกะลาม) มักจะตั้งชื่อหัวข้อในบทต่างๆ ของตำราว่า “บทสนทนา (กะลาม) ว่าด้วยเรื่อง..." (เช่น กะลามว่าด้วยเรื่องคุณลักษณะของพระเจ้า) อย่างไรก็ตาม สมมติฐานนี้ไม่น่าจะเป็นที่มาที่แท้จริงของชื่อศาสตร์นี้ ดร.หะซัน มะห์มูด อัชชาฟิอีย์ได้ระบุไว้ในหนังสือของท่านเรื่อง อัลมัดคอล อิลา ดิรอซาต อิลม์ อัลกะลาม (บทนำสู่การศึกษาศาสตร์กะลาม) ว่า คำว่า “กะลาม” นั้นถูกใช้เพื่ออ้างถึงการศึกษาหลักความเชื่อของมุสลิมโดยปราชญ์ยุคแรกๆ เช่น ท่านอิมามอบู หะนีฟะฮ์, อิมามมาลิก, อิมามอัชชาฟิอีย์, ญะอ์ฟัร อัศศอดิกและท่านอื่นๆ ซึ่งทุกท่านล้วนมีชีวิตอยู่ก่อนหน้าที่จะมีการรวบรวมตำราเกี่ยวกับ “อิลมุลกะลาม” อย่างเป็นระบบเสียอีก</p>
+
+      <p>2-ทฤษฎีที่สองที่ท่านอิมามอัตตัฟตาซานีย์กล่าวถึงคือ เป็นประเด็นที่มีการถกเถียงกันอย่างดุเดือดและโด่งดังที่สุดในแวดวงของศาสตร์กะลาม คือประเด็นเรื่อง “พระดำรัส (กะลาม) ของพระเจ้า” ว่าเป็นสิ่งที่ถูกสร้างขึ้น (มัคลูก) หรือไม่<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup> แต่เช่นเดียวกับทฤษฎีแรก แต่ทฤษฎีนี้ก็ขาดน้ำหนักเมื่อพิจารณาตามลำดับเวลาทางประวัติศาสตร์ เนื่องจากการถกเถียงในประเด็นนี้ได้แพร่หลายอย่างกว้างขวางในสมัยของท่านอิมามอะห์หมัด บิน หัมบัล ผู้ซึ่งถูกทรมานเพราะปฏิเสธที่จะยอมรับว่าอัลกุรอาน (ซึ่งเป็นพระดำรัสของพระเจ้า) เป็นสิ่งถูกสร้าง ซึ่งเป็นที่ทราบกันดีว่าท่านอิมามอะห์หมัดนั้น มีชีวิตอยู่หลังท่านอิมามอบู หะนีฟะฮ์เกือบหนึ่งศตวรรษ ทฤษฎีส่วนใหญ่ที่ท่านอิมามอัตตัฟตาซานีย์หยิบยกมานั้น สามารถถูกหักล้างได้ด้วยการศึกษาลำดับเหตุการณ์ทางประวัติศาสตร์อย่างถี่ถ้วน คำอธิบายที่น่าเชื่อถือที่สุดเกี่ยวกับที่มาของชื่อนี้มาจาก ดร.หะซัน มะห์มูด อัชชาฟิอีย์ซึ่งระบุว่า การอภิปรายในเรื่องหลักความเชื่อของมุสลิมนั้นก่อให้เกิดเพียง “วจนะอันบริสุทธิ์” เท่านั้น และไม่ได้เกี่ยวข้องกับการกระทำทางกายภาพเลย ที่เป็นเช่นนี้เพราะการสถาปนาประเด็นทางหลักความเชื่อนั้น เป็นเรื่องของความศรัทธาภายในจิตใจ แตกต่างจากการอภิปรายในเรื่องนิติศาสตร์อิสลาม (ฟิกฮ์) ว่าด้วยการละหมาด เป็นต้น ซึ่งเกี่ยวข้องโดยตรงกับการกระทำ</p>
+
+      <p>นอกจากนี้ “อิลมุลกะลาม” ยังมีชื่อเรียกอื่นๆ อีกหลายชื่อ เช่น</p>
+
+      <p>1-อัลฟิกฮุลอักบัร เชื่อกันว่าผู้ที่บัญญัติศัพท์นี้คือท่านอิมามอบู หะนีฟะฮ์เอง เพื่อชี้ว่าความเข้าใจในหลักความเชื่อนั้นสำคัญและเป็นพื้นฐานยิ่งกว่าความเข้าใจในข้อปฏิบัติ</p>
+
+      <p>2-อุศูลุดดีน ที่หมายถึง “รากฐาน/หลักการแห่งศาสนา”</p>
+
+      <p>3-อิลมุตเตาฮีด ที่หมายถึง “ศาสตร์แห่งเอกภาพของพระเจ้า”</p>
+
+      <p>4-อิลมุลอัสมาอ์ วัศศิฟาต หมายถึง “ศาสตร์แห่งพระนามและคุณลักษณะของพระเจ้า”</p>
+
+      <p>5-อิลมุลอิอ์ติกอด หมายถึง “ศาสตร์แห่งหลักความเชื่อ”</p>
+
+      <h2 class="article-h2">เหตุใดท่านศาสดา ﷺ และสหายของท่านจึงไม่กล่าวถึงศาสตร์นี้?</h2>
+
+      <p>แม้ว่าจะเป็นคำถามที่ดูผิวเผินและสะท้อนถึงความเข้าใจผิดอย่างกว้างขวางเกี่ยวกับอิสลาม แต่คำถามทำนองว่า “เหตุใดเรื่องนั้นเรื่องนี้จึงไม่ถูกกล่าวถึงในซุนนะฮ์ (แบบแผนของท่านศาสดา ﷺ) หากมันเป็นสิ่งจำเป็น?” ก็ยังคงเป็นคำถามที่พบได้ทั่วไป คำถามนี้เต็มไปด้วยชั้นของความเข้าใจที่คลาดเคลื่อน เช่น การตีความว่า “ซุนนะฮ์” ที่มีความหมายเท่ากับ “รายงานวจนะของท่านศาสดา ﷺ (หะดีษ)” เท่านั้น</p>
+
+      <p>อย่างไรก็ตาม การพิจารณาคำอธิบายของท่านอิมามอัตตัฟตาซานีย์ในประเด็นนี้ ก็เพียงพอที่จะให้ความกระจ่างได้</p>
+
+      <p>ท่านอิมามอัตตัฟตาซานีย์อธิบายว่า เหตุที่ชาวมุสลิมยุคแรก (สลัฟ) ไม่จำเป็นต้องรีบจัดระเบียบการศึกษาและการปฏิบัติของศาสนาอิสลามให้เป็นตำราที่เป็นระบบในทันที ก็เนื่องมาจากความใกล้ชิดของพวกเขาต่อท่านศาสดา ﷺ และความบริสุทธิ์หมดจดในหลักความเชื่อของพวกเขา ซึ่งได้รับมาจากการสอนโดยตรงของท่าน ความจริงข้อนี้ครอบคลุมทุกศาสตร์ของอิสลาม ไม่ว่าจะเป็น ฟิกฮ์ (นิติศาสตร์), อุศูลุลฟิกฮ์ (หลักนิติศาสตร์), หะดีษ (วจนศาสตร์), ตัฟซีร (อรรถาธิบายอัลกุรอาน), อะกีดะฮ์ (หลักความเชื่อ), ไวยากรณ์อาหรับและศาสตร์อื่นๆ อีกมากมาย</p>
+
+      <p>ดังนั้น การปฏิเสธศาสตร์แขนงใดแขนงหนึ่ง (เช่น กะลาม) โดยอ้างว่าเป็น “นวัตกรรมใหม่ทางศาสนา” หรือ “บิดอะฮ์” ย่อมหมายความว่าจะต้องปฏิเสธศาสตร์อื่นๆ ทั้งหมดไปด้วย เพราะศาสตร์เหล่านั้นล้วนเป็น “นวัตกรรม” ในแง่ที่ว่ามันถูก “จัดทำให้เป็นระบบ” ขึ้นในภายหลังทั้งสิ้น โดยวัตถุประสงค์ของการจัดระเบียบศาสตร์เหล่านี้ก็เพื่อ “การพิทักษ์รักษา” ศาสนาเอาไว้ ตัวอย่างเช่น: ศาสตร์หะดีษ ถูกจัดทำให้เป็นระบบขึ้น ก็เนื่องมาจากการแพร่หลายของคำพูดที่ถูกอุปโลกน์และอ้างอย่างเป็นเท็จว่าเป็นวจนะของท่านศาสดา ﷺ</p>
+
+      <p>อีกตัวอย่างหนึ่งคือ การจัดระบบไวยากรณ์ภาษาอาหรับก็มีจุดเริ่มต้นอันโด่งดังมาจากเหตุการณ์ที่แสดงให้เห็นถึงการสูญเสียทักษะทางภาษาอาหรับโดยธรรมชาติในหมู่ผู้คน คนในรุ่นของบรรดาสหายของท่านศาสดา ﷺ และคนรุ่นถัดมา (ตาบิอีน) แทบจะไม่มีความเปลี่ยนแปลงใดๆ ในความเข้าใจต่อแบบแผนของอิสลามตามที่ท่านศาสดา ﷺ ได้ปฏิบัติไว้ แต่คนในรุ่นถัดจากนั้นมา (ตาบิอิตตาบิอีน) เริ่มแสดงให้เห็นถึงข้อบกพร่องในความเข้าใจต่อภาษาของอัลกุรอาน ท่านกล่าวว่า สาเหตุอาจมาจากการขยายตัวอย่างไพศาลของจักรวรรดิอิสลาม ซึ่งนำพาผู้คนที่ไม่ได้พูดภาษาอาหรับเป็นภาษาแม่เข้ามาสู่สังคมมุสลิม ไม่ว่ารายละเอียดจะเป็นเช่นไร มีสิ่งหนึ่งที่ชัดเจนคือ การพิทักษ์รักษาอิสลามนั้น ต้องอาศัยการสังเคราะห์ศาสตร์เหล่านี้ขึ้นมา</p>
+
+      <h2 class="article-h2">เป้าหมายสูงสุดของศาสตร์กะลาม</h2>
+
+      <p>โดยสรุป เป้าหมายสูงสุดของศาสตร์กะลาม อาจอธิบายได้ว่าคือ การสถาปนารากฐานทางปัญญาให้กับความเชื่อของมุสลิม ชาวมุสลิมยึดมั่นในความเชื่อที่ว่า “อัลกุรอาน” ซึ่งเป็นคัมภีร์ที่เรียกร้องอยู่เสมอให้มีการ “ตะดับบุร” หรือการใคร่ครวญพิจารณาอย่างลึกซึ้งนั้น ไม่ได้นำเสนอองค์ประกอบแห่งความศรัทธาแม้แต่ข้อเดียวที่ขัดต่อหลักเหตุผล หรืออีกนัยหนึ่งคือ ไม่มี “การก้าวกระโดดทางศรัทธา” ที่ไร้เหตุผลที่บุคคลหนึ่งจำเป็นต้องยอมรับเพื่อที่จะนับถือศาสนาอิสลามสายหลักดั้งเดิม มีผู้เขียนไว้ว่า: ศาสตร์กะลามดำรงอยู่ด้วยเหตุผลดังต่อไปนี้ 1-เพื่อนิยามและจำกัดความเนื้อหาของความศรัทธา 2-เพื่อแสดงให้เห็นว่าความศรัทธานั้นเป็นสิ่งที่สติปัญญาสามารถยอมรับได้ ไม่ใช่เรื่องไร้สาระหรือขัดแย้งในตัวเอง 3-เพื่อให้เหตุผลที่ทำให้คนๆ หนึ่งเกิดความเชื่อมั่นเป็นการส่วนตัว</p>
+
+      <p>โดยธรรมชาติแล้ว ศาสตร์กะลามจึงมีลักษณะเป็น เชิงโต้แย้งเพื่อปกป้องหลักการอย่างมาก ตำรากะลามหลายเล่มใช้วิธีการนำเสนอแบบ วิภาษวิธีในรูปแบบว่า “หากพวกเขากล่าวว่า X เราจะตอบว่า Y” ที่เป็นเช่นนี้ก็เนื่องมาจากสภาพแวดล้อมในช่วงที่ศาสตร์กะลามถือกำเนิดขึ้น กล่าวคือ การแพร่หลายของขบวนการทางปรัชญาที่ถูกมองว่าอยู่นอกแนวทาง ซึ่งเป็นที่รู้จักในนาม “มุอ์ตะซิละฮ์”</p>
+
+      <p>เขาระบุต่อว่า: “ไม่มีสิ่งใดอีกแล้วที่จะสามารถรับมือกับวิกฤตที่ [บรรดาอิหม่ามแห่งศาสตร์กะลาม] ต้องเผชิญได้ นั่นคือความผิดพลาดนอกแนวทางของ [...] กลุ่มมุอ์ตะซิละฮ์” ด้วยเหตุนี้ การสังเคราะห์ศาสตร์กะลามขึ้นมาจึงเป็นที่รับรู้กันว่า เป็นความจำเป็น</p>
+
+      <p>หากปราศจากซึ่งบรรดาอิมามแห่งศาสตร์กะลามแล้ว ภาระหน้าที่ในการเอาชนะแนวคิดของกลุ่มมุอ์ตะซิละฮ์และกลุ่มนอกแนวทางอื่นๆ ก็คงจะไม่สำเร็จลุล่วงไปได้ ดังที่ปรากฏในหลักนิติศาสตร์อิสลามที่ว่า: “สิ่งใดก็ตามที่การปฏิบัติสิ่งที่เป็นวายิบ (ข้อบังคับ) จะไม่สมบูรณ์หากปราศจากมัน สิ่งนั้นย่อมเป็นวายิบด้วยเช่นกัน”</p>
+
+      <h2 class="article-h2">ความขาดแคลนของศาสตร์กะลามในปัจจุบัน</h2>
+
+      <p>การเผยแผ่แนวคิดที่ได้รับการสนับสนุนทางการเงินจากประเทศร่ำรวยน้ำมันในอ่าวอาหรับตลอดหลายทศวรรษที่ผ่านมา ได้เปลี่ยนแปลงมโนทัศน์ของมุสลิมทั่วไปที่มีต่อแบบแผนของอิสลามอย่างมหาศาล ขบวนการซึ่งในอดีตเป็นที่รู้จักในนาม “วะฮาบียะฮ์” และในปัจจุบันรู้จักกันในชื่อ “สะละฟียะฮ์” ได้ถูกฉีดเข้าไปในจิตใต้สำนึกของชาวมุสลิมทั่วโลก เพื่อหล่อหลอมความรู้สึกนึกคิดและอคติของพวกเขาให้สอดคล้องกับหลักความเชื่อของขบวนการนี้</p>
+
+      <p>แนวทางสะละฟีย์ได้กลายมาเป็น “อิสลามกระแสหลักโดยพฤตินัย” แม้ว่าข้อเท็จจริงคือแนวทางดังกล่าวจะตั้งอยู่บนผลงานของนักเทววิทยาอิสลามในยุคกลางเพียงแค่ไม่กี่คน ซึ่งในทางประวัติศาสตร์แล้ว บุคคลเหล่านั้นได้ถูกโต้แย้งอย่างเปิดเผยทั้งในเวทีของการโต้วาทีและในงานเขียนเชิงวิพากษ์หลังการเสียชีวิตของพวกเขา จากนั้นก็ถูกผลักให้เป็นเพียงแนวคิดชายขอบจนแทบไม่เป็นที่สังเกตอีกต่อไป</p>
+
+      <p>รสชาติของอิสลามแบบนี้ได้ก้าวขึ้นมาสู่แถวหน้าของสำนึกรับรู้ในหมู่มุสลิมในช่วงศตวรรษที่ 18 เมื่อ มุหัมหมัด บิน อับดุลวะฮาบได้ทำการตักฟีรหมู่ คือการกล่าวหาว่ามุสลิมสายอื่นเป็นผู้ตกศาสนา ต่อโลกมุสลิมทั้งหมด และได้ก่อสงครามกับผู้ปกครองแห่งจักรวรรดิออตโตมัน</p>
+
+      <p>มุหัมหมัด บิน อับดุลวะฮาบ และมุหัมหมัด บิน สะอูด ได้รวมสายเลือดของตนเข้าไว้ด้วยกัน ก่อกำเนิดเป็นชนชั้นปกครองทางการเมืองและทางศาสนาของประเทศซาอุดีอาระเบียในยุคปัจจุบัน</p>
+
+      <p>บรรดานักการศาสนาสายสะละฟีย์ซึ่งได้รับการสนับสนุนทางการเงินจากธุรกิจน้ำมันอย่างแทบจะไร้ขีดจำกัด ได้เทศนาสั่งสอนว่าสำนักคิดกะลามสายอัชอะรียะฮ์และมาตุรีดียะฮ์นั้น อย่างดีที่สุดก็เป็นเพียง “แนวคิดนอกรีต” และอย่างเลวร้ายที่สุดก็คือ “การตกศาสนา” แม้ว่าข้อเท็จจริงทางประวัติศาสตร์จะชี้ว่าสำนักคิดเทววิทยาทั้งสองนี้ ได้ทำหน้าที่เป็นดั่งกำแพงที่ปกป้องอิสลามสายหลักดั้งเดิมมาเป็นเวลานานกว่า 1,000 ปี แต่ขบวนการสะละฟีย์ก็ได้มีส่วนร่วมใน “การชำระประวัติศาสตร์ใหม่” แม้กระทั่งพยายามที่จะสนับสนุนการตักฟีรหมู่ต่อชาวออตโตมันของมุหัมหมัด บิน อับดุลวะฮาบโดยปริยาย ด้วยการกล่าวถึงจักรวรรดิออตโตมันว่าเป็น “การยึดครองของออตโตมัน”</p>
+
+      <p>การใช้คำว่า “การยึดครอง” แทนที่จะเป็น “การปกครอง” เป็นการสร้างนัยว่า จักรวรรดิออตโตมันเป็นผู้รุกรานที่ไม่ชอบธรรม ซึ่งจะทำให้การประกาศสงครามของมุหัมหมัด บิน อับดุลวะฮาบต่อผู้ปกครองมุสลิมมีความชอบธรรมขึ้นมา</p>
+
+      <p>ผลลัพธ์ก็คือ ทุกสิ่งที่เกี่ยวข้องกับศาสตร์กะลาม (รวมถึงองค์ประกอบอื่นๆ ของอิสลามสายหลักดั้งเดิม) ได้กลายเป็นสิ่งแปลกแยกสำหรับมุสลิมโดยเฉลี่ย นักการศาสนาเริ่มกล่าวถึงชาวอัชอะรียะฮ์และมาตุรีดียะฮ์ในประโยคเดียวกับกลุ่มนอกรีตอื่นๆ ซึ่งเท่ากับว่า นั่นเป็นการผลักไสให้นักเทววิทยาอิสลามแทบทุกคนตลอดช่วงหนึ่งพันปีที่ผ่านมา กลายเป็นคนนอก</p>
+
+      <h2 class="article-h2">การทวงคืนคำนิยามของ “อะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์”</h2>
+
+      <p>คำว่า “อะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์” ได้ถูกขบวนการสะละฟีย์ “ยึดโยงและจำกัดความ” ให้มีความหมายคับแคบลงในช่วงหลายทศวรรษที่ผ่านมา แต่บรรดานักปราชญ์มุสลิมคลาสสิกกลับมีความเห็นที่แตกต่างออกไป รายชื่อของนักปราชญ์เหล่านั้นยาวเกินกว่าจะระบุได้ทั้งหมด ซึ่งรวมถึงปราชญ์ผู้ยิ่งใหญ่ อาทิ อิมามอันนะวะวีย์, อิมามอิบนุ หะญัร อัลอัสกอลานีย์, อิมามอัสสุยูฏีย์, อิมามอัลฆอซาลีย์, อิมามอัลญุวัยนีย์, อิมามอัสซุบกีย์, ชัยคุลอิสลามซะกะรียา อัลอันศอรีย์, อิมามอัลบากิลลานีย์, อิมามอัลบัยฮะกีย์, อิมามอัลบัยฎอวีย์, อิมามอัรรอซีย์, อิมามอิบนุ อาบิดีน, อิมามอัศศอบูนีย์, อิมามอันนับฮานีย์และท่านอื่นๆ อีกหลายแสนคน หนึ่งในนั้นคือปรมาจารย์แห่งศาสตร์นิติศาสตร์อิสลามสำนักชาฟิอีย์นามว่า อิบนุ หะญัร อัลฮัยตะมีย์ ซึ่งท่านได้ให้นิยามของกลุ่มนอกแนวทางไว้ว่าคือ “บรรดาผู้ที่ขัดแย้งต่อแนวทางอิสลามสายหลักและฉันทามติของประชาชาติมุสลิม (อะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์)” จากนั้นท่านได้นิยาม “อะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์” ไว้อย่างชัดเจนว่าคือ: “...เหล่าผู้เจริญรอยตามชัยค์อบุลหะสัน อัลอัชอะรีย์ และท่านอบู มันซูร อัลมาตุรีดีย์ ซึ่งเป็นสองอิมามแห่งอะฮ์ลุสซุนนะฮ์”</p>
+
+      <h2 class="article-h2">สรุปปิดท้าย</h2>
+
+      <p>บทความนี้เริ่มต้นด้วยการชี้ให้เห็นถึงประเด็นสำคัญที่ซ่อนอยู่เบื้องหลังการฟื้นตัวของสำนักคิดทางนิติศาสตร์อิสลาม นั่นคือ “วิกฤตแห่งนิยาม” ของหลักความเชื่อ หรืออะกีดะฮ์ เราได้เดินทางสำรวจย้อนกลับไปสู่รากฐานขององค์ความรู้ในอิสลาม ที่ซึ่งศาสตร์ต่างๆ ได้ถูกจัดวางระเบียบขึ้นจากความจำเป็นในการ “พิทักษ์รักษา” เนื้อหาดั้งเดิมของศาสนา</p>
+
+      <p>ศาสตร์แห่งกะลามได้ถือกำเนิดขึ้นในฐานะเครื่องมือทางปัญญา เพื่อจัดระบบและปกป้องหลักการศรัทธา (อีหม่าน) ให้มั่นคงและชัดเจน ท่ามกลางการรุกคืบของแนวคิดนอกรีต ดังเช่นที่สำนักคิดอัชอะรียะฮ์และมาตุรีดียะฮ์ได้ทำหน้าที่เป็นกำแพงทางปัญญาและเป็นแกนกลางของ “อะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์” มาอย่างยาวนานกว่าหนึ่งสหัสวรรษ</p>
+
+      <p>แต่ ดังที่ได้สำรวจในลำดับต่อมา ภาพของอิสลามสายหลักที่เคยชัดเจนนี้ได้ถูกท้าทายอย่างรุนแรงในยุคสมัยใหม่ ด้วยการขึ้นมาของขบวนการวะฮาบียะฮ์/สะละฟียะฮ์ ซึ่งได้รับการสนับสนุนทางการเงินมหาศาล จนสามารถเผยแผ่แนวคิดและ “ชำระประวัติศาสตร์ใหม่” ได้ในวงกว้าง ผลลัพธ์คือการที่คำว่า “อะฮ์ลุสซุนนะฮ์” ถูกจำกัดความให้แคบลงอย่างที่ไม่เคยเป็นมาก่อน</p>
+
+      <p>และมรดกทางปัญญาอันยิ่งใหญ่ของปราชญ์อัชอะรียะฮ์และมาตุรีดียะฮ์นับแสนท่าน ไล่เรียงตั้งแต่ปราชญ์ยุคแรกเริ่มอย่างอิมามอิบนุ ฟูร็อก, ผ่านยุคทองของอิมามอัลฆอซาลีย์, เรื่อยมาจนถึงปรมาจารย์ยุคหลังอย่างอิมามอิบนุ หะญัร อัลอัสเกาะลานีย์ ถูกผลักไสให้กลายเป็นสิ่งแปลกแยก...การกระทำเช่นนี้ไม่เพียงแต่เป็นการลบประวัติศาสตร์ แต่ยังเป็นการตัดประชาชาติมุสลิมให้ขาดออกจากรากเหง้าทางปัญญาของตนเอง</p>
+
+      <p>การใช้คำว่า “ไล่เรียงตั้งแต่...ผ่าน...เรื่อยมาจนถึง” มันจะช่วยสร้างภาพในใจของผู้อ่านให้เห็นถึงกระแสธารทางปัญญาที่ไม่เคยขาดสายตลอดช่วงเวลาหนึ่งพันปี ซึ่งจะยิ่งตอกย้ำถึงความสูญเสียที่เกิดจากการ “ตัดขาด”</p>
+
+      <p>ดังนั้น การทำความเข้าใจในประวัติศาสตร์ที่แท้จริงของศาสตร์กะลามและนิยามดั้งเดิมของอะฮ์ลุสซุนนะฮ์ วัลญะมาอะฮ์ จึงไม่ใช่เป็นเพียงการเรียนรู้เรื่องราวในอดีตเพื่อความเพลิดเพลิน แต่เป็นภารกิจทางปัญญาที่สำคัญยิ่งยวดสำหรับมุสลิมในยุคปัจจุบัน มันคือการทวงคืนมรดกที่ถูกลืมเลือน คือการต่อจิ๊กซอว์ทางประวัติศาสตร์ที่ขาดหายไป เพื่อให้เราได้เห็นภาพความยิ่งใหญ่และความหลากหลายทางความคิดของอิสลามสายหลักอีกครั้ง การตระหนักรู้ในเรื่องนี้ คือก้าวแรกและก้าวที่สำคัญที่สุดในการเยียวยาความแตกแยก สร้างภูมิคุ้มกันทางปัญญาจากความสับสน และฟื้นฟูความเข้มแข็งทางความคิดให้กับประชาชาติอิสลาม เพื่อให้สามารถยืนหยัดได้อย่างมั่นคงและสง่างามในโลกยุคใหม่อย่างแท้จริง</p>
+
+      <h2 class="article-h2">เชิงอรรถและคำอธิบายเพิ่มเติม</h2>
+
+      <p id="ref-1">[1] หะดีษญิบรีล: เป็นหะดีษที่บันทึกเหตุการณ์ขณะที่เทวทูตญิบรีล มาปรากฏกายในรูปของชายแปลกหน้าเพื่อถามท่านศาสดามุหัมหมัด ﷺ ต่อหน้าเหล่าสหายของท่าน ถึงความหมายของอัลอิสลาม (การกระทำภายนอก เช่น การละหมาด การถือศีลอด), อีหม่าน (การศรัทธาภายใน เช่น ศรัทธาต่ออัลลอฮ์, มะลาอิกะฮ์, คัมภีร์), และอิห์สาน เพื่อเป็นการสอนประชาชาติอิสลามถึงแก่นแท้ของศาสนา <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></p>
+
+      <p id="ref-2">[2] ชัรห์ อัลอะกออิด อันนะสะฟียะฮ์ คือตำราอรรถาธิบายหลักความเชื่อของสำนักคิดมาตุรีดียะฮ์ซึ่งเขียนโดยผู้เชี่ยวชาญและยึดถือสำนักคิดอัลอัชอะรียะฮ์ อิมาม อัตตัฟตาซานีย์ (เสียชีวิต ฮ.ศ. 792 / ค.ศ. 1390) ถือเป็นตำราเรียนขั้นพื้นฐานที่สำคัญที่สุดเล่มหนึ่งในการศึกษาเทววิทยาอิสลามสายสุนนี แม้ว่าอัตตัฟตาซานีย์เองจะมีแนวคิดแบบอะชาอิเราะฮ์ แต่จะเห็นว่า เมื่อเราเข้าสู่เนื้อหาของตำราจริงๆ อัตตัฟตาซานีย์มักจะใช้สไตล์การเขียนที่อธิบายเนื้อหาตามแนวคิดของสำนักนั้นๆ ก่อน ซึ่งเป็นวิธีการที่พบได้บ่อยในหมู่นักวิชาการในยุคนั้น และไม่จำเป็นต้องสะท้อนความคิดเห็นส่วนตัวของผู้เขียนเสมอไป <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></p>
+
+      <p id="ref-3">[3] อ้างถึงตำราชัรห์ อัลอะกออิด อันนะสะฟียะฮ์ ของอิมามอัตตัฟตาซานีย์ ดังที่ได้ระบุไว้แล้วในเชิงอรรถที่ 2 <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">มัรกัส อัลอิมาม อัลอัชอะรีย์. (2569). บทนำสู่ศาสตร์แห่งกะลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/kalam/introduction-to-ilm-al-kalam.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography">
+        <li>Traversing Tradition. An Introduction to ʿIlm al-Kalām. สืบค้นจาก https://traversingtradition.com/.../an-introduction-to.../</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>

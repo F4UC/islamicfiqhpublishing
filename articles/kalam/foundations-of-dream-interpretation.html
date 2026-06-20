@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รากฐานแห่งการทำนายฝันในอิสลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="รากฐานของศาสตร์การทำนายฝัน (อัตตะอ์บีร) ในอิสลาม รากศัพท์ สภาวะที่แท้จริงของความฝัน เงื่อนไขของผู้ทำนาย ประเภทของความฝัน และคำเตือนเรื่องการกุความฝัน">
+<meta name="keywords" content="กะลาม, การทำนายฝัน, อัตตะอ์บีร, ความฝัน, รุอ์ยา, อิบนุ สีรีน, อิบนุ หะญัร, เทววิทยาอิสลาม">
+<meta name="author" content="มัรกัส อัลอิมาม อัลอัชอะรีย์">
+
+<meta property="og:title" content="รากฐานแห่งการทำนายฝันในอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="ศาสตร์การทำนายฝันในอิสลาม รากฐานทางวิชาการ เงื่อนไขของผู้ทำนาย และคำเตือนทางหะดีษเกี่ยวกับการกุความฝัน">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/kalam/foundations-of-dream-interpretation">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/kalam/foundations-of-dream-interpretation">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "รากฐานแห่งการทำนายฝันในอิสลาม",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "มัรกัส อัลอิมาม อัลอัชอะรีย์" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/kalam/foundations-of-dream-interpretation"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="foundations-of-dream-interpretation">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/kalam" class="article-feature-eyebrow">กะลาม</a>
+      <h1 class="article-feature-title">รากฐานแห่งการทำนายฝันในอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">มีคำถามว่า: รากฐานของการอธิบายและทำนายความฝันนั้นคืออะไร? สิ่งนี้ถือเป็นศาสตร์แขนงหนึ่งหรือไม่? มีที่มาจากไหน? เคยมีปรากฏในประชาชาติยุคก่อนหรือไม่? และเมื่อใดที่บุคคลหนึ่งจะสามารถทำการทำนายฝันได้ ในเมื่อมีหะดีษที่กล่าวเตือนในเรื่องนี้?</p>
+
+      <p>คำตอบสามารถแตกประเด็นได้ดังนี้</p>
+
+      <h2 class="article-h2">รากศัพท์และความหมาย</h2>
+
+      <p>การทำนายฝันในภาษาอาหรับเรียกว่า “อัตตะอ์บีร” และรากศัพท์เดิมของคำว่า “อัตตะอ์บีร” (<span class="ar-inline" lang="ar" dir="rtl">التعبير</span>) นั้น มาจากคำว่า “อัลอุบูร” (<span class="ar-inline" lang="ar" dir="rtl">العبور</span>) ที่แปลว่า “การข้ามผ่าน” หรือ “การเดินทางข้ามไป” โดยนัยในที่นี้คือ การข้ามจากสัญลักษณ์ที่ปรากฏในความฝันไปสู่ความหมายหรือเหตุการณ์ที่จะเกิดขึ้นในอนาคต</p>
+
+      <p>ท่านอิหม่ามอัลกุรฏุบีย์ได้อธิบายใน “อัลญามิอ์ ลิอะห์กาม อัลกุรอาน” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قوله تعالى: ﴿يا أيها الملأ أفتوني في رؤياي﴾ [يوسف: 43] جمع الرؤيا رؤى: أي: أخبروني بحكم هذه الرؤيا ﴿إن كنتم للرؤيا تعبرون﴾ [يوسف: 43]، العبارة مشتقة من عبور النهر، فمعنى عبرت النهر: بلغت شاطئه، فعابر الرؤيا يعبر بما يؤول إليه أمرها</blockquote>
+      <p class="ar-translation">“คำว่า ‘อัลอิบาเราะฮ์’ (การทำนาย) นั้นมีรากศัพท์มาจากการข้ามแม่น้ำ ดังนั้น ผู้ทำนายฝันก็คือผู้ที่ ‘ข้ามผ่าน’ ไปสู่ความหมายที่แท้จริงของความฝันนั้น”</p>
+
+      <h2 class="article-h2">สภาวะที่แท้จริงของความฝัน</h2>
+
+      <p>ในทางเทววิทยาอิสลาม ปราชญ์ได้อธิบายถึงสภาวะที่แท้จริงของความฝันไว้ดังนี้ ท่านอิหม่ามอันนะวาวีย์ได้อธิบายทัศนะของอะฮ์ลุสซุนนะฮ์ในหนังสือ “ชัรห์ มุสลิม” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">مذهب أهل السنة في حقيقة الرؤيا أن الله تعالى يخلق في قلب النائم اعتقادات كما يخلقها في قلب اليقظان وهو سبحانه وتعالى يفعل ما يشاء لا يمنعه نوم ولا يقظة فإذا خلق هذه الاعتقادات فكأنه جعلها علما على أمور أخر يخلقها في ثاني الحال أو كان قد خلقها فإذا خلق في قلب النائم الطيران وليس بطائر فأكثر ما فيه أنه اعتقد أمرا على خلاف ما هو فيكون ذلك الاعتقاد علما على غيره كما يكون خلق الله سبحانه وتعالى الغيم علما على المطر والجميع خلق الله تعالى ولكن يخلق الرؤيا والاعتقادات التي جعلها علما على ما يسر بغير حضرة الشيطان ويخلق ما هو علم على ما يضر بحضرة الشيطان فينسب إلى الشيطان مجازا لحضوره عندها وإن كان لا فعل له حقيقة، وهذا معنى قوله صلى الله عليه وآله وسلم: «الرؤيا من الله، والحلم من الشيطان» لا على أن الشيطان يفعل شيئا، فالرؤيا اسم للمحبوب والحلم اسم للمكروه. هذا كلام المازري، وقال غيره: أضاف الرؤيا المحبوبة إلى الله إضافة تشريف بخلاف المكروهة وإن كانتا جميعا من خلق الله تعالى وتدبيره وبإرادته ولا فعل للشيطان فيهما لكنه يحضر المكروهة ويرتضيها ويسر بها</blockquote>
+      <p class="ar-translation">“ทัศนะของอะฮ์ลุสซุนนะฮ์เกี่ยวกับสภาวะที่แท้จริงของความฝันคือ อัลลอฮ์ตะอาลาทรงสร้าง ‘ความเชื่อ’ หรือ ‘สภาวะการรับรู้’ ขึ้นในหัวใจของผู้ที่นอนหลับ เช่นเดียวกับที่พระองค์ทรงสร้างมันขึ้นในหัวใจของผู้ที่ตื่นอยู่...พระองค์ทรงทำให้สภาวะการรับรู้นี้เป็น ‘สัญลักษณ์’ ที่บ่งชี้ถึงเรื่องราวอื่นๆ ที่พระองค์จะทรงสร้างขึ้นในภายหลัง...นี่คือความหมายของวจนะของท่านนบี -ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม- ที่ว่า ‘อัรรุอ์ยา (นิมิตที่ดี) มาจากอัลลอฮ์ และอัลหุลุม (ฝันร้าย) มาจากชัยฏอน’ ซึ่งไม่ได้หมายความว่าชัยฏอนเป็นผู้สร้างสิ่งใดขึ้นมา แต่หมายถึง อัลลอฮ์ทรงสร้างความฝันที่ดี (ซึ่งเป็นสัญลักษณ์ของเรื่องดี) โดยปราศจากการมีอยู่ของชัยฏอน แต่ทรงสร้างความฝันร้าย (ซึ่งเป็นสัญลักษณ์ของเรื่องร้าย) โดยมีชัยฏอนอยู่ ณ ที่นั้นด้วย ดังนั้น ฝันร้ายจึงถูกพาดพิงถึงชัยฏอนในเชิงเปรียบเทียบ เพราะมันปรากฏตัวและพึงพอใจในสิ่งนั้น หรืออีกนัยหนึ่งคือ การพาดพิงนิมิตที่ดีไปยังอัลลอฮ์นั้นเป็นการให้เกียรติ ในขณะที่ฝันร้ายจะไม่ถูกพาดพิงเช่นนั้น แม้ว่าทั้งสองสิ่งจะมาจากการสร้างของอัลลอฮ์ก็ตาม”</p>
+
+      <p>อัลฮาฟิศอิบนุ หะญัรได้กล่าวใน “ฟัตหุลบารีย์” โดยสรุปทัศนะต่างๆ ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الرؤيا إدراكات علقها الله تعالى في قلب العبد على يدي ملك أو شيطان إما بأسمائها -أي حقيقتها- وإما بكناها -أي بعبارتها- وإما تخليط، ونظيرها في اليقظة الخواطر؛ فإنها قد تأتي على نسق في قصة وقد تأتي مسترسلة غير محصلة. هذا حاصل قول الأستاذ أبي إسحاق قال وذهب القاضي أبو بكر بن الطيب إلى أنها اعتقادات واحتج بأن الرائي قد يرى نفسه بهيمة أو طائرا مثلا وليس هذا إدراكا فوجب أن يكون اعتقادا؛ لأن الاعتقاد قد يكون على خلاف المعتقد، قال ابن العربي: والأول أولى، والذي يكون من قبيل ما ذكره ابن الطيب من قبيل المثل فالإدراك إنما يتعلق به لا بأصل الذات</blockquote>
+      <p class="ar-translation">“ความฝันคือ ‘การรับรู้’ ที่อัลลอฮ์ทรงบันดาลให้เกิดขึ้นในหัวใจของบ่าว ผ่านทางมะลาอิกะฮ์หรือชัยฏอน ซึ่งอาจมาในรูปแบบของความจริงโดยตรง หรือมาในรูปแบบของสัญลักษณ์ที่ต้องอาศัยการตีความ...ในขณะที่อัลกอฎีย์อบู บักร อัลบากิลลานีย์มีทัศนะว่า มันคือ ‘ความเชื่อ’ โดยให้เหตุผลว่า บางครั้งคนเราฝันว่าตนเองกลายเป็นสัตว์ ซึ่งนี่ไม่ใช่ ‘การรับรู้’ ตามความเป็นจริง แต่เป็น ‘ความเชื่อ’ ที่เกิดขึ้นซึ่งขัดกับความจริง...อิบนุลอะเราะบีย์เห็นว่าทัศนะแรก (การรับรู้) มีน้ำหนักมากกว่า โดยกรณีที่ฝันว่าตนเองกลายเป็นสิ่งอื่นนั้น ถือเป็น ‘การรับรู้ถึงอุปมาอุปมัย’ (ไม่ใช่การรับรู้ถึงสภาวะที่แท้จริงของตนเอง)”</p>
+
+      <p>ดังนั้นการทำนายฝันเป็นศาสตร์ที่ได้รับการยอมรับและถูกกล่าวถึงโดยปวงปราชญ์อิสลาม บรรดานักอรรถาธิบายอัลกุรอาน (มุฟัสสิรูน) ได้อธิบายเรื่องนี้ไว้อย่างละเอียดเมื่อกล่าวถึงโองการที่เกี่ยวข้อง โดยเฉพาะอย่างยิ่งในซูเราะฮ์ยูซุฟ ในขณะที่บรรดานักวิชาการหะดีษ (มุหัดดิษูน) ก็ได้จัดทำบทเฉพาะเกี่ยวกับการทำนายฝันไว้ในตำราหะดีษของพวกท่านเช่นกัน</p>
+
+      <h2 class="article-h2">การทำนายฝัน</h2>
+
+      <p>การทำนายฝันถือเป็นสิ่งที่ศาสนาอนุญาตสำหรับผู้ที่มีความรู้ความสามารถในเรื่องนี้โดยเฉพาะ ทั้งนี้เพราะอัลลอฮ์ตะอาลาทรงสร้างความฝันขึ้นเพื่อให้มนุษย์ได้รับประโยชน์จากมันผ่านผู้ที่มีความรู้ในการอธิบายความหมาย เช่นเดียวกับที่พระองค์ทรงประทานอัลกุรอานและซุนนะฮ์ลงมาและจำเป็นต้องมีผู้รู้ในการอธิบาย ดังที่อัลลอฮ์ตะอาลาตรัสว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَلَوۡ رَدُّوهُ إِلَى ٱلرَّسُولِ وَإِلَىٰٓ أُوْلِي ٱلۡأَمۡرِ مِنۡهُمۡ لَعَلِمَهُ ٱلَّذِينَ يَسۡتَنۢبِطُونَهُۥ مِنۡهُمۡ</p>
+      </div>
+      <p>{และหากพวกเขาจะนำเรื่องนั้นกลับไปยังท่านเราะซูลและกลับไปยังผู้ปกครองในหมู่พวกเขา แน่นอนบรรดาผู้ที่สามารถวินิจฉัยเรื่องนั้นในหมู่พวกเขาก็ย่อมรู้เรื่องนั้นดี}<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>และได้ตรัสว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">فَسۡـَٔلُوٓاْ أَهۡلَ ٱلذِّكۡرِ إِن كُنتُمۡ لَا تَعۡلَمُونَ</p>
+      </div>
+      <p>{ดังนั้น พวกเจ้าจงถามบรรดาผู้รู้เถิด หากพวกเจ้าไม่รู้}<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>ดังนั้น ผู้ใดที่ไม่ได้เป็น “ผู้รู้” (อะฮ์ลุซซิกร์) ในศาสตร์แขนงนี้ ก็ไม่เป็นที่อนุมัติ (ไม่อนุญาต) ให้เขาพูดถึงศาสตร์นี้ แต่ศาสตร์นี้จำกัดไว้เฉพาะสำหรับผู้ที่มีความรู้ในเรื่องนี้เท่านั้น</p>
+
+      <h2 class="article-h2">ทัศนะของปราชญ์และข้อควรระวัง</h2>
+
+      <p>ท่านอิหม่ามอิบนุ อับดิลบัรได้บันทึกในหนังสือ “อัตตัมฮีด” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قيل لمالك رحمه الله: أيعبر الرؤيا كل أحد؟ فقال: أبالنبوة يلعب؟ وقال مالك: لا يعبر الرؤيا إلا من يحسنها، فإن رأى خيرا أخبر به، وإن رأى مكروها فليقل خيرا أو ليصمت. قيل: فهل يعبرها على الخير وهي عنده على المكروه؛ لقول من قال إنها على ما أولت عليه؟ فقال: لا. ثم قال: الرؤيا جزء من النبوة، فلا يتلاعب بالنبوة</blockquote>
+      <p class="ar-translation">“มีผู้เรียนถามอิหม่ามมาลิก เราะฮิมะฮุลลอฮ์ ว่า: ‘คนทั่วไปสามารถทำนายฝันได้หรือไม่?’ ท่านตอบว่า: ‘จะล้อเล่นกับเรื่องของ (ความเป็น) ศาสดาได้หรือ?’ และอิหม่ามมาลิกกล่าวอีกว่า: ‘จะไม่มีผู้ใดทำนายฝันนอกเสียจากผู้ที่มีความเชี่ยวชาญ หากเขาเห็นว่าเป็นเรื่องดีก็จงบอกไป แต่หากเห็นว่าเป็นเรื่องไม่ดี ก็จงพูดแต่สิ่งที่ดีหรือไม่ก็จงนิ่งเงียบเสีย’ มีผู้ถามต่อว่า: ‘แล้วเขาจะทำนายว่าเป็นเรื่องดีทั้งๆ ที่เขารู้ว่ามันเป็นเรื่องไม่ดีได้หรือไม่? เพราะมีคำกล่าวว่าความฝันจะเป็นไปตามที่มันถูกทำนาย’ ท่านตอบว่า: ‘ไม่ได้’ จากนั้นกล่าวว่า: ‘ความฝันคือส่วนหนึ่งของการเป็นศาสดา ดังนั้น จงอย่าได้ล้อเล่นกับเรื่องของศาสดา’”</p>
+
+      <p>อัลอัลลามะฮ์อบุลวะลีด อัลบาญีย์ กล่าวใน “อัลมุนตะกอ” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولا يعبر الرؤيا إلا من يحسنها، وأما من لا يعلم ذلك ولا يحسنها فليترك</blockquote>
+      <p class="ar-translation">“และจะไม่มีผู้ใดทำนายฝันนอกเสียจากผู้ที่มีความเชี่ยวชาญ ส่วนผู้ที่ไม่มีความรู้และไม่เชี่ยวชาญในเรื่องนี้ ก็จงละเว้นเสีย”</p>
+
+      <h2 class="article-h2">หลักฐานจากซุนนะฮ์</h2>
+
+      <p>มีหลักฐานชัดเจนว่าท่านนบี -ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม- ได้อนุญาตให้ท่านอบู บักร อัศศิดดีก เราะฎิยัลลอฮุอันฮ์ ทำนายฝัน ซึ่งเป็นการยืนยันถึงความอนุญาตสำหรับผู้ที่มีคุณสมบัติพร้อม แม้จะไม่ใช่ศาสดาก็ตาม รายงานจากอิบนุ อับบาส ว่ามีชายผู้หนึ่งมาหาท่านเราะซูลุลลอฮ์ -ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม- แล้วกล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">يَا رَسُولَ اللَّهِ إِنِّي أَرَى اللَّيْلَةَ فِي الْمَنَامِ ظُلَّةً تَنْطِفُ السَّمْنَ وَالْعَسَلَ فَأَرَى النَّاسَ يَتَكَفَّفُونَ مِنْهَا بِأَيْدِيهِمْ فَالْمُسْتَكْثِرُ وَالْمُسْتَقِلُّ وَأَرَى سَبَبًا وَاصِلاً مِنَ السَّمَاءِ إِلَى الأَرْضِ فَأَرَاكَ أَخَذْتَ بِهِ فَعَلَوْتَ ثُمَّ أَخَذَ بِهِ رَجُلٌ مِنْ بَعْدِكَ فَعَلاَ ثُمَّ أَخَذَ بِهِ رَجُلٌ آخَرُ فَعَلاَ ثُمَّ أَخَذَ بِهِ رَجُلٌ آخَرُ فَانْقَطَعَ بِهِ ثُمَّ وُصِلَ لَهُ فَعَلاَ</p>
+      </div>
+      <p>“โอ้ ท่านเราะซูลุลลอฮ์ เมื่อคืนนี้ฉันฝันเห็นหมู่เมฆที่กำลังหยดเนยและน้ำผึ้งลงมา และฉันเห็นผู้คนกำลังใช้มือรองรับมัน บ้างก็ได้ไปมาก บ้างก็ได้ไปน้อย และฉันเห็นเชือกเส้นหนึ่งที่เชื่อมต่อจากฟากฟ้าสู่แผ่นดิน และฉันเห็นท่านจับเชือกนั้นแล้วลอยสูงขึ้นไป จากนั้นมีชายอีกคนมาจับต่อจากท่านแล้วก็ลอยสูงขึ้นไป จากนั้นมีชายอีกคนมาจับแล้วก็ลอยสูงขึ้นไป จากนั้นก็มีชายอีกคนมาจับแล้วเชือกก็ขาด แต่แล้วมันก็ถูกต่อให้เขาอีกครั้งแล้วเขาก็ลอยสูงขึ้นไป”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+
+      <p>ท่านอบู บักร กล่าวว่า: “โอ้ ท่านเราะซูลุลลอฮ์ ขอสาบานด้วยอัลลอฮ์ ขอท่านได้โปรดให้ฉันเป็นผู้ทำนายความฝันนี้เถิด” ท่านเราะซูลุลลอฮ์บอกว่า: “จงทำนายเถิด” ท่านอบู บักรจึงทำนายว่า: “สำหรับหมู่เมฆนั้น คือร่มเงาแห่งอิสลาม สำหรับเนยและน้ำผึ้งที่หยดลงมานั้น คืออัลกุรอาน (ความหอมหวานและนุ่มนวลของมัน) สำหรับการที่ผู้คนใช้มือรองรับนั้น คือผู้ที่ศึกษาอัลกุรอานมากและน้อยแตกต่างกันไป สำหรับเชือกที่เชื่อมจากฟากฟ้าสู่แผ่นดินนั้น คือ สัจธรรมที่ท่านยึดถืออยู่ ท่านได้ยึดมันไว้แล้วอัลลอฮ์ก็ทรงทำให้ท่านสูงส่งขึ้น จากนั้นชายคนหลังๆ ก็คือเคาะลีฟะฮ์ที่มาปกครองต่อจากท่าน...โอ้ ท่านเราะซูลุลลอฮ์โปรดบอกฉันเถิด ฉันทำนายถูกหรือผิด?” ท่านเราะซูลุลลอฮ์ -ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม- กล่าวว่า: “เจ้าทำนายถูกส่วนหนึ่ง และผิดไปส่วนหนึ่ง” ท่านอบู บักรกล่าวว่า: “ขอสาบานด้วยอัลลอฮ์ โอ้ ท่านเราะซูลุลลอฮ์ โปรดบอกฉันเถิดว่าส่วนไหนที่ฉันทำนายผิด” ท่านนบีบอกต่อว่า: “อย่าได้สาบานเลย” บันทึกโดยอัลบุคอรีย์และมุสลิม</p>
+
+      <p>บทเรียนจากหะดีษ: การทำนายฝันเป็นที่อนุญาตสำหรับผู้ที่มีคุณสมบัติเหมาะสม และศาสตร์นี้ไม่ใช่ความรู้ที่สมบูรณ์แบบ แม้แต่บุคคลที่ประเสริฐอย่างท่านอบู บักรก็ยังอาจทำนายผิดพลาดได้ ซึ่งเป็นการสอนให้ผู้ทำนายมีความถ่อมตน การที่ท่านนบีไม่ชี้แจงส่วนที่ผิด อาจเป็นการสอนว่าบางเรื่องก็ไม่จำเป็นต้องสืบสาวจนถึงที่สุด</p>
+
+      <p>โดยสรุปแล้ว การทำนายฝันเป็นศาสตร์แขนงหนึ่งที่ได้รับการยอมรับในอิสลาม ดังที่ปราชญ์หะดีษมักจะจัดทำ “บทว่าด้วยการทำนายฝัน” ไว้ในตำราของพวกท่าน แต่เป็นศาสตร์ที่จำกัดไว้สำหรับผู้รู้จริง และต้องกระทำด้วยความยำเกรงและรอบคอบสูงสุด เพราะดังที่อิหม่ามมาลิกกล่าวไว้ มันคือ “ส่วนหนึ่งของการเป็นศาสดา”</p>
+
+      <h2 class="article-h2">ความฝันไม่ใช่หลักฐานทางศาสนบัญญัติ</h2>
+
+      <p>เช่นเดียวกับที่นักวินิจฉัยปัญหาศาสนา (มุจญ์ตะฮิด) สามารถผิดพลาดได้ ผู้ทำนายฝันก็สามารถผิดพลาดได้เช่นกัน ด้วยเหตุนี้ ความฝันจึงไม่ถือเป็นหลักฐานทางศาสนบัญญัติ (หุจญะฮ์ ชัรอียะฮ์) ที่จะนำมาใช้กำหนดข้อบัญญัติหะลาล-หะรอมได้ แต่อย่างไรก็ตาม สามารถใช้ความฝันเป็นเครื่องชี้นำหรือสร้างแรงบันดาลใจในเรื่องความประเสริฐของอะมัลต่างๆ หรือความประเสริฐของบุคคล และในเรื่องอื่นๆ ที่มีรากฐานในศาสนาอยู่แล้วได้</p>
+
+      <p>ท่านอิหม่ามอัซซัรกะชีย์ได้กล่าวใน “อัลบะห์รุลมุฮีฏ” ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">الصحيح أن المنام لا يثبت حكما شرعيا ولا بينة، وإن كانت رؤيا النبي صلى الله عليه وآله وسلم حقا، والشيطان لا يتمثل به، ولكن النائم ليس من أهل التحمل والرواية لعدم تحفظه، وأما المنام الذي روي في الأذان، وأمر النبي صلى الله عليه وآله وسلم بالعمل به، فليس الحجة فيه المنام، بل الحجة فيه أمره بذلك في مدارك العلم</blockquote>
+      <p class="ar-translation">“ทัศนะที่ถูกต้องคือ ความฝันไม่สามารถใช้เพื่อยืนยันข้อบัญญัติทางศาสนาหรือใช้เป็นพยานหลักฐานได้ แม้ว่าความฝันของท่านนบี -ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม- จะเป็นความจริงและชัยฏอนไม่สามารถจำแลงกายเป็นท่านได้ก็ตาม แต่ผู้ที่นอนหลับนั้น ไม่มีคุณสมบัติของผู้ที่สามารถรับและถ่ายทอดองค์ความรู้ได้ (เหมือนการรายงานหะดีษ) เนื่องจากขาดความแม่นยำในการจดจำ ส่วนความฝันเรื่องการอะซาน (ที่มีเศาะฮาบะฮ์ฝันเห็น) ที่ท่านนบีสั่งให้นำมาปฏิบัตินั้น หลักฐานไม่ได้อยู่ที่ตัวความฝัน แต่อยู่ที่ ‘คำสั่ง’ ของท่านนบี ให้ปฏิบัติตามความฝันนั้นต่างหาก”</p>
+
+      <h2 class="article-h2">ประเภทของความฝัน</h2>
+
+      <p>มีหะดีษที่รายงานโดยอบู ฮุร็อยเราะฮ์ เราะฎิยัลลอฮุอันฮุ ว่า ท่านนบี -ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม- ได้กล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">إِذَا اقْتَرَبَ الزَّمَانُ لَمْ تَكَدْ رُؤْيَا الْمُسْلِمِ تَكْذِبُ وَأَصْدَقُكُمْ رُؤْيَا أَصْدَقُكُمْ حَدِيثًا وَرُؤْيَا الْمُسْلِمِ جُزْءٌ مِنْ خَمْسٍ وَأَرْبَعِينَ جُزْءًا مِنَ النُّبُوَّةِ وَالرُّؤْيَا ثَلاَثَةٌ فَرُؤْيَا الصَّالِحَةِ بُشْرَى مِنَ اللَّهِ وَرُؤْيَا تَحْزِينٌ مِنَ الشَّيْطَانِ وَرُؤْيَا مِمَّا يُحَدِّثُ الْمَرْءُ نَفْسَهُ فَإِنْ رَأَى أَحَدُكُمْ مَا يَكْرَهُ فَلْيَقُمْ فَلْيُصَلِّ وَلاَ يُحَدِّثْ بِهَا النَّاسَ</p>
+      </div>
+      <p>ความฝันหรือนิมิตนั้นมี 3 ประเภท: 1.นิมิตที่ดี ซึ่งเป็นข่าวดีจากอัลลอฮ์ 2.ความฝันที่ทำให้เศร้าโศกซึ่งมาจากชัยฏอน 3.ความฝันที่เกิดจากสิ่งที่บุคคลคิดกับตัวเอง ดังนั้น หากผู้ใดฝันเห็นในสิ่งที่เขาไม่ชอบ ก็จงลุกขึ้นไปละหมาด และอย่าได้นำมันไปเล่าให้ผู้คนฟัง...<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+
+      <p>ท่านอิหม่ามอัลบะเฆาะวีย์ได้อธิบายเพิ่มเติมใน “ชัรห์อัซซุนนะฮ์” อย่างสรุปว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقوله: «الرؤيا ثلاثة» فيه بيان أن ليس كل ما يراه الإنسان في منامه يكون صحيحا، ويجوز تعبيره، إنما الصحيح منها ما كان من الله عز وجل يأتيك به ملك الرؤيا من نسخة أم الكتاب، وما سوى ذلك أضغاث أحلام لا تأويل لها. وهي على أنواع قد يكون من فعل الشيطان يلعب بالإنسان، أو يريه ما يحزنه، وله مكايد يحزن بها بني آدم، كما أخبر الله سبحانه وتعالى عنه: ﴿إنما النجوى من الشيطان ليحزن الذين آمنوا﴾ [المجادلة: 10]، ومن لعب الشيطان به الاحتلام الذي يوجب الغسل، فلا يكون له تأويل، وقد يكون ذلك من حديث النفس، كمن يكون في أمر، أو حرفة يرى نفسه في ذلك الأمر، والعاشق يرى معشوقه ونحو ذلك، وقد يكون ذلك من مزاج الطبيعة</blockquote>
+      <p class="ar-translation">“หะดีษนี้ชี้ให้เห็นว่า ไม่ใช่ทุกสิ่งที่คนเราเห็นในความฝันจะถูกต้องและสามารถทำนายได้ ความฝันที่แท้จริงคือสิ่งที่มาจากอัลลอฮ์โดยผ่านมะลาอิกะฮ์แห่งความฝัน นอกเหนือจากนั้นคือ ‘ฝันเฟื่อง’ ที่ไม่มีความหมาย ซึ่งอาจเกิดจากชัยฏอนที่ล่อลวงให้เศร้าใจ (เช่น ฝันเปียก), เกิดจากจิตใต้สำนึก (เช่น คนที่หมกมุ่นกับอาชีพการงาน หรือคนรักที่ฝันถึงคนรักของตน) หรือเกิดจากสภาวะของร่างกายและธาตุในตัว”</p>
+
+      <h2 class="article-h2">ที่มาของศาสตร์การทำนายฝัน</h2>
+
+      <p>ที่มาของศาสตร์การทำนายฝันนั้น โดยพื้นฐานแล้วมันคือ “ทักษะความสามารถพิเศษ” เช่นเดียวกับทักษะความสามารถในการวินิจฉัยปัญหาศาสนาของนักนิติศาสตร์ (ฟะกีฮ์) มันไม่ใช่สิ่งที่เรียนรู้จากตำราได้เพียงอย่างเดียว และเนื่องจากศาสตร์นี้มีมาแต่โบราณ อัลกุรอานและซุนนะฮ์จึงไม่ใช่แหล่งที่มาเพียงแหล่งเดียว แต่เป็นส่วนหนึ่งของแหล่งที่มา ควบคู่ไปกับหลักการอื่นๆ ดังจะกล่าวต่อไป</p>
+
+      <h2 class="article-h2">ประเภทและวิธีการทำนายฝัน</h2>
+
+      <p>การทำนายฝันมีหลายวิธีและอาศัยการเทียบเคียงจากหลายแหล่ง คร่าวๆ ดังนี้:</p>
+
+      <ol class="article-summary">
+        <li><strong>ทำนายโดยเทียบเคียงกับอัลกุรอาน:</strong> เช่น เชือก ทำนายว่า พันธสัญญา (จากโองการ “และจงยึดมั่นในเชือกของอัลลอฮ์”); เรือ ทำนายว่า การรอดพ้น (จากโองการ “เราได้ช่วยเขาและชาวเรือให้รอดพ้น”)</li>
+        <li><strong>ทำนายโดยเทียบเคียงกับซุนนะฮ์:</strong> เช่น อีกา ทำนายว่า คนชั่ว (เพราะท่านนบีเรียกว่าฟาสิก); หนู ทำนายว่า หญิงชั่ว (เพราะท่านนบีเรียกว่าฟุวัยสิเกาะฮ์)</li>
+        <li><strong>ทำนายโดยเทียบเคียงกับสุภาษิตคำพังเพย:</strong> เช่น ช่างทอง ทำนายว่า คนโกหก (จากสำนวนอาหรับที่ว่า “ผู้ที่โกหกที่สุดคือช่างทอง”); การขุดหลุม ทำนายว่า การวางแผนร้าย (จากสำนวนที่ว่า “ผู้ใดขุดหลุม เขาย่อมตกลงไปในหลุมนั้นเอง”)</li>
+        <li><strong>ทำนายโดยใช้ความหมายตรงกันข้าม:</strong> เช่น ความกลัวในความฝันทำนายว่า ความปลอดภัย (จากโองการ “และพระองค์จะทรงเปลี่ยนความกลัวของพวกเขาให้เป็นความปลอดภัย”); ในทางกลับกัน ความปลอดภัยในความฝัน ก็อาจทำนายว่าความกลัว</li>
+        <li><strong>ทำนายโดยพิจารณาองค์ประกอบเพิ่มเติม:</strong> เช่น การร้องไห้ ทำนายว่า ความสุข แต่ถ้าร้องไห้คร่ำครวญเสียงดัง ทำนายว่า ความวิบัติ; การหัวเราะ ทำนายว่า ความเศร้า แต่ถ้าเป็นเพียงการยิ้ม ทำนายว่าเรื่องดี</li>
+        <li><strong>ทำนายโดยพิจารณาสภาพของผู้ฝัน (สำคัญที่สุด):</strong> สัญลักษณ์เดียวกันอาจมีความหมายต่างกันโดยสิ้นเชิงขึ้นอยู่กับผู้ฝัน</li>
+        <li><strong>โซ่ตรวน:</strong> เป็นสิ่งไม่ดี แต่สำหรับคนดีอาจหมายถึง การยับยั้งมือจากความชั่ว</li>
+        <li><strong>การปราศรัยบนมิมบัร:</strong> สำหรับผู้ที่คู่ควร ทำนายว่าจะได้รับอำนาจ; สำหรับผู้ที่ไม่คู่ควร ทำนายว่าจะถูกตรึงกางเขน</li>
+        <li><strong>เรื่องเล่าของอิบนุ สีรีน:</strong> ชายคนหนึ่งมาเล่าว่าฝันว่าตนเองกำลังอะซาน ท่านทำนายว่า “ท่านจะได้ไปทำฮัจญ์” (จากโองการ “และจงประกาศแก่ปวงมนุษย์เพื่อการทำฮัจญ์”) ต่อมาชายอีกคนฝันเช่นเดียวกัน ท่านกลับทำนายว่า “มือของท่านจะถูกตัดในข้อหาลักขโมย” (จากโองการ “แล้วผู้ประกาศก็ได้ประกาศขึ้นว่า โอ้กองคาราวานเอ๋ย แท้จริงพวกท่านคือหัวขโมย”)</li>
+        <li><strong>การเกิดขึ้นจริงตามความฝัน:</strong> บางครั้งความฝันก็เกิดขึ้นจริงตามที่เห็นทุกประการ เช่น ความฝันของท่านนบีเกี่ยวกับการพิชิตมักกะฮ์</li>
+        <li><strong>การทำนายที่ส่งผลถึงผู้อื่น:</strong> บางครั้งความฝันของคนหนึ่งอาจหมายถึงลูกหลาน ญาติ หรือคนที่มีชื่อเดียวกัน เช่น ท่านนบีฝันว่าอบู ญะฮัลให้สัตยาบันแก่ท่าน แต่ผลนั้นกลับเกิดขึ้นกับอิกริมะฮ์ลูกชายของเขา</li>
+      </ol>
+
+      <h2 class="article-h2">คุณค่าทางจิตวิญญาณของความฝัน</h2>
+
+      <p>ท่านอิหม่ามอัลบาญีย์ได้อธิบายในหนังสือ “อัลมุนตะกอ” ถึงเหตุผลที่ท่านนบี -ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม- มักจะถามบรรดาอัครสาวกหลังละหมาดซุบฮิว่า “เมื่อคืนนี้มีใครฝันอะไรบ้างหรือไม่?” ไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يحتمل -والله أعلم- أن يرجو بذلك رؤيا مبشرة له صلى الله عليه وآله وسلم وللمسلمين ويستدعي ذلك من عندهم فيما ربما توقف عنه الوحي فيه ويحتمل أن يريد بذلك تعليمهم العبادة وتنبيههم على فضلها ولذلك كان يقول: «ليس يبقى بعدي من النبوة إلا الرؤيا الصالحة» حضا لهم على تعليمها والاهتبال بها ليبقى لهم بعده جزء من النبوة يدخل عليهم بها مسرة ويحضهم على مصلحة ويزجرهم بها عن معصيته</blockquote>
+      <p class="ar-translation">“มีความเป็นไปได้ว่า -และอัลลอฮ์ทรงรู้ดียิ่ง- ท่านหวังที่จะได้ยินนิมิตที่ดีที่เป็นข่าวดีสำหรับท่านและสำหรับชาวมุสลิม และท่านอาจต้องการข้อมูลจากพวกเขาในเรื่องที่วะฮีย์อาจจะยังไม่ได้ลงมาในขณะนั้น และก็มีความเป็นไปได้ว่าท่านต้องการจะสอนพวกเขาถึงเรื่องการอิบาดะฮ์และชี้ให้เห็นถึงความประเสริฐของมัน ด้วยเหตุนี้ท่านจึงกล่าวว่า: ‘จะไม่มีสิ่งใดเหลืออยู่จากการเป็นศาสดาหลังจากฉัน นอกจากนิมิตที่ดี’ ทั้งนี้เพื่อเป็นการส่งเสริมให้พวกเขาเรียนรู้และให้ความสำคัญกับมัน เพื่อให้ ‘ส่วนหนึ่งของการเป็นศาสดา’ ยังคงอยู่กับพวกเขาหลังจากท่านจากไป ซึ่งจะนำความปิติยินดีมาสู่พวกเขา กระตุ้นพวกเขาไปสู่ความดีงาม และยับยั้งพวกเขาจากความชั่ว”</p>
+
+      <h2 class="article-h2">การโกหกเรื่องความฝัน</h2>
+
+      <p>การโกหกหรือกุเรื่องความฝันขึ้นมาเองถือเป็นบาปใหญ่หลวงและมีคำเตือนที่หนักหน่วงในหะดีษ มีรายงานจากอิบนุ อับบาสว่า ท่านนบี -ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม- กล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">مَنْ تَحَلَّمَ بِحُلُمٍ لَمْ يَرَهُ، كُلِّفَ أَنْ يَعْقِدَ بَيْنَ شَعِيرَتَيْنِ، وَلَنْ يَفْعَلَ</p>
+      </div>
+      <p>“ผู้ใดที่กุเรื่องความฝันที่ตนเองไม่ได้เห็นขึ้นมา เขาจะถูกบังคับ (ในวันกิยามะฮ์) ให้ผูกปมระหว่างเมล็ดข้าวบาร์เลย์สองเมล็ด และเขาจะไม่มีวันทำมันได้สำเร็จเลย”<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup></p>
+
+      <p>การถูกบังคับให้ทำในสิ่งที่เป็นไปไม่ได้นี้ เป็นรูปแบบหนึ่งของการลงโทษที่จะดำเนินไปอย่างต่อเนื่องและไม่มีที่สิ้นสุด รายงานจากอิบนุ อุมัร เราะฎิยัลลอฮุอันฮุมา ว่า ท่านเราะซูลุลลอฮ์ -ศ็อลลัลลอฮุอะลัยฮิวะสัลลัม- กล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">إِنَّ مِنْ أَفْرَى الْفِرَى أَنْ يُرِيَ عَيْنَيْهِ مَا لَمْ تَرَ</p>
+      </div>
+      <p>“การโกหกที่เลวร้ายที่สุด คือการที่บุคคลหนึ่งอ้างว่าดวงตาของเขาได้เห็นในสิ่งที่มันไม่ได้เห็น”<sup class="fn-ref" id="fnref-6"><a href="#ref-6">⁶</a></sup></p>
+
+      <h2 class="article-h2">เหตุผลเบื้องหลังการห้ามปรามอันหนักหน่วง</h2>
+
+      <p>อัลฮาฟิศ อิบนุ หะญัร ได้อธิบายใน “ฟัตหุลบารีย์” โดยอ้างถึงคำอธิบายของอิหม่ามอัฏเฏาะบะรี ถึงสาเหตุที่การโกหกเรื่องความฝันมีโทษรุนแรง แม้ว่าการโกหกในตอนตื่นบางครั้งอาจสร้างความเสียหายได้มากกว่า (เช่น การเป็นพยานเท็จที่นำไปสู่การฆาตกรรมหรือการยึดทรัพย์สิน) ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما الكذب على المنام فقال الطبري إنما اشتد فيه الوعيد مع أن الكذب في اليقظة قد يكون أشد مفسدة منه إذ قد تكون شهادة في قتل أو حد أو أخذ مال لأن الكذب في المنام كذب على الله أنه أراه ما لم يره، والكذب على الله أشد من الكذب على المخلوقين؛ لقوله تعالى: ﴿ويقول الأشهاد هؤلاء الذين كذبوا على ربهم...﴾ الآية، وإنما كان الكذب في المنام كذبا على الله لحديث: «الرؤيا جزء من النبوة» وما كان من أجزاء النبوة فهو من قبل الله تعالى</blockquote>
+      <p class="ar-translation">“เหตุที่การโกหกเรื่องความฝันมีโทษรุนแรงนั้น เพราะมันคือการโกหกต่ออัลลอฮ์ว่าพระองค์ได้ทรงทำให้เขาเห็นในสิ่งที่พระองค์ไม่ได้ทำให้เห็น และการโกหกต่ออัลลอฮ์นั้น ย่อมร้ายแรงกว่าการโกหกต่อสิ่งถูกสร้าง...และที่ว่าการโกหกเรื่องความฝันเป็นการโกหกต่ออัลลอฮ์นั้น ก็เพราะมีหะดีษที่กล่าวว่า ‘ความฝันคือส่วนหนึ่งของการเป็นศาสดา’ และสิ่งใดก็ตามที่เป็นส่วนหนึ่งของการเป็นศาสดา สิ่งนั้นย่อมมาจากอัลลอฮ์ตะอาลา”</p>
+
+      <h2 class="article-h2">สรุป</h2>
+
+      <p>จากที่ได้กล่าวมาทั้งหมด สามารถสรุปหลักการเกี่ยวกับการทำนายฝันได้ดังนี้</p>
+
+      <ol class="article-summary">
+        <li><strong>ศาสตร์แห่งทักษะและพรสวรรค์:</strong> การทำนายฝันเป็น “ทักษะความสามารถพิเศษ” ที่ต้องอาศัยทั้งความรู้และพรสวรรค์ ศาสตร์นี้มีที่มาจากอัลกุรอาน, ซุนนะฮ์, สุภาษิต และธรรมเนียมปฏิบัติของผู้คน และศาสตร์นี้เคยมีปรากฏมาแล้วในประชาชาติยุคก่อน</li>
+        <li><strong>จำกัดเฉพาะผู้รู้จริง:</strong> ไม่อนุญาตให้ผู้ใดทำการทำนายฝัน นอกเสียจากผู้ที่มีความรู้ความเข้าใจในหลักการทำนายอย่างแท้จริงเท่านั้น ซึ่งตลอดในหน้าประวัติศาสตร์ที่มีการจารึกชื่อไว้นั้น มีเพียงหกคนเท่านั้นที่มีชื่อเสียงโด่งดังในเรื่องนี้คือ 1.ท่านอิบนุ สีรีน 2.อับดุลฆอนีย์ อันนาบะลุซี 3.คอลีล บิน ชาฮีน อัศศอฮิรี 4.อิบรอฮีม บิน ยะห์ยา อัลมักดิซี 5.อิบนุลกอยยิม อัลเญาซียะฮ์ 6.อัลฮาฟิศ อิบนุ หะญัร อัลอัสกอลานีย์</li>
+      </ol>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">มัรกัส อัลอิมาม อัลอัชอะรีย์. (2569). รากฐานแห่งการทำนายฝันในอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/kalam/foundations-of-dream-interpretation.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">القرآن الكريم، سورة النساء (4)، الآية 83. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">القرآن الكريم، سورة الأنبياء (21)، الآية 7. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">أخرجه البخاري في صحيح البخاري، رقم 7046، ومسلم في صحيح مسلم، رقم 2269، من حديث ابن عباس رضي الله عنهما. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">أخرجه مسلم في صحيح مسلم، رقم 2263، من حديث أبي هريرة رضي الله عنه. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">أخرجه البخاري في صحيح البخاري، رقم 7042، من حديث ابن عباس رضي الله عنهما. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+        <li id="ref-6">أخرجه البخاري في صحيح البخاري، رقم 7043، من حديث ابن عمر رضي الله عنهما. <a class="fn-back" href="#fnref-6" aria-label="กลับไปยังเชิงอรรถที่ 6">↑</a></li>
+        <li>القرطبي، الجامع لأحكام القرآن، عند تفسير سورة يوسف.</li>
+        <li>النووي، المنهاج شرح صحيح مسلم بن الحجاج، كتاب الرؤيا.</li>
+        <li>ابن حجر العسقلاني، فتح الباري شرح صحيح البخاري، كتاب التعبير.</li>
+        <li>ابن عبد البر، التمهيد لما في الموطأ من المعاني والأسانيد.</li>
+        <li>الباجي، المنتقى شرح الموطأ.</li>
+        <li>الزركشي، البحر المحيط في أصول الفقه.</li>
+        <li>البغوي، شرح السنة.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260619a" charset="UTF-8"></script>
+</body>
+</html>

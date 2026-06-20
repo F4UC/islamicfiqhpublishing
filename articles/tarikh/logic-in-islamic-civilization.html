@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ตรรกศาสตร์ในสายธารอารยธรรมอิสลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="ตรรกศาสตร์ในสายธารอารยธรรมอิสลาม จากยุคแปลตำรากรีกสู่การถกเถียงของนักนิติศาสตร์เรื่องการอนุญาตให้ศึกษา และการโต้แย้งของอัลยูซีย์ในระหว่างศตวรรษที่ 10-13 ฮิจเราะฮ์">
+<meta name="keywords" content="ตรรกศาสตร์, ตรรกวิทยา, อัลมันติก, ประวัติศาสตร์, อัลฟารอบีย์, อัซซุยูฏีย์, อัลยูซีย์, นิติศาสตร์อิสลาม">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ตรรกศาสตร์ในสายธารอารยธรรมอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="จากยุคแปลตำรากรีกสู่ข้อถกเถียงเรื่องการศึกษาตรรกศาสตร์ในหมู่นักวิชาการอะฮ์ลุซซุนนะฮ์ และการโต้แย้งอันคมคายของอัลยูซีย์">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/tarikh/logic-in-islamic-civilization">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/tarikh/logic-in-islamic-civilization">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ตรรกศาสตร์ในสายธารอารยธรรมอิสลาม",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/tarikh/logic-in-islamic-civilization"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="logic-in-islamic-civilization">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/history" class="article-feature-eyebrow">ประวัติศาสตร์</a>
+      <h1 class="article-feature-title">ตรรกศาสตร์ในสายธารอารยธรรมอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">คงเป็นชุดความคิดที่ไม่กินกับสติปัญญาหากจะกล่าวว่า วิทยาการทุกแขนงที่ถูกค้นพบในอารยธรรมอื่นจะเป็นสิ่งที่ผิดพลาด แต่ความผิดพลาดคือสิ่งที่ขัดแย้งกับความจริง และปัญญาพินิจคือสิ่งที่ผู้ศรัทธาควรแสวงหา พระเจ้าทรงกำหนดให้ทุกสิ่งมีมาตรวัดที่ยุติธรรมและทรงสั่งให้เราปฏิบัติตาม ดังที่พระองค์ตรัสว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">وَأَوْفُوا۟ ٱلْكَيْلَ إِذَا كِلْتُمْ وَزِنُوا۟ بِٱلْقِسْطَاسِ ٱلْمُسْتَقِيمِ ۚ ذَٰلِكَ خَيْرٌ وَأَحْسَنُ تَأْوِيلًا</p>
+      </div>
+      <p>{และทั้งพวกเจ้าจงทำให้บริบูรณ์ในเรื่องตวง เมื่อพวกเจ้าจะทำการตวง และจงชั่งด้วยตราชั่งที่เที่ยงตรง ดังกล่าวนั้นย่อมเป็นการดี และเป็นผลบั้นปลายที่ดีงามยิ่ง}<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>ตรรกศาสตร์หรือวิชาตรรกวิทยา (Logic) เป็นศาสตร์ที่เกี่ยวข้องกับหลักการให้เหตุผลอย่างเป็นระบบ โดยมีเป้าหมายในการกำหนดกฎเกณฑ์ที่ถูกต้องสำหรับกระบวนการคิดและอธิบายเหตุผลอย่างมีประสิทธิภาพ วิชาตรรกศาสตร์ได้รับการพัฒนาและแพร่หลายในหลายอารยธรรมโบราณ และอารยธรรมอิสลามก็เช่นเดียวกัน</p>
+
+      <h2 class="article-h2">ตรรกศาสตร์ในอารยธรรมอิสลาม</h2>
+
+      <p>ในยุคทองหรือยุครุ่งเรืองของอิสลาม ตั้งแต่คริสต์ศตวรรษที่ 8 ถึง 13 นักปราชญ์มุสลิมได้ให้ความสำคัญอย่างมากกับการศึกษาตรรกศาสตร์ โดยมีการนำเอาวิทยาการของกรีก โดยเฉพาะอย่างยิ่งจากผลงานของอริสโตเติล มาศึกษาอย่างละเอียด จนแตกฉาน นักวิชาการมุสลิมได้ทำการแปลผลงานทางด้านตรรกะจากภาษากรีกเป็นภาษาอาหรับ และปรับปรุงเนื้อหาให้สอดรับกับแนวคิดและหลักการของอิสลาม ไม่ปรากฏชัดว่าใครคือบุคคลแรกที่นำพาวิชานี้เข้าสู่สายธารอารยธรรมอิสลาม เพียงแต่นักวิจัยสามารถระบุได้เพียงว่า เริ่มมีขบวนการแปลตำราวิชาตรรกศาสตร์ตั้งแต่ยุคสมัยของราชวงศ์อุมัยยะฮ์แล้ว และเริ่มมีการให้ความสำคัญมากยิ่งขึ้นในยุคของราชวงศ์อับบาซียะฮ์</p>
+
+      <h2 class="article-h2">การศึกษาและการวิพากษ์ตรรกศาสตร์ในอิสลาม</h2>
+
+      <p>นักปราชญ์บางท่านได้แต่งหนังสือและตำราเกี่ยวกับตรรกศาสตร์ที่มีอิทธิพลต่อการศึกษาของมุสลิมรุ่นหลังๆ อย่างมาก หนึ่งในนั้นคืออัลฟารอบีย์ (Al-Farabi) ผู้ซึ่งได้รับการยกย่องว่าเป็น “อริสโตเติลแห่งโลกอิสลาม” เขาได้ประพันธ์งานเขียนหลายชิ้นเกี่ยวกับตรรกศาสตร์ และได้พัฒนาระเบียบวิธีการที่ช่วยในการศึกษาและอธิบายความคิดเชิงเหตุผล ทั้งนี้ท่านศออิด ผู้พิพากษาแห่งอัลอันดาลุเซีย (เสียชีวิต ฮ.ศ. 462) ได้กล่าวยกย่องไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">بَذَّ جَمِيعُ الْفَلَاسِفَةِ فِي صَنْعَةِ الْمَنْطِقِ وَأَرْبَى عَلَيْهِمْ فِي التَّحْقِيقِ بِهَا، فَشَرَحَ غَامِضَهَا، وَكَشَفَ سِرَّهَا وَقَرَّبَ تَنَاوُلَهَا، وَجَمَعَ مَا يُحْتَاجُ إِلَيْهِ مِنْهَا فِي كُتُبٍ صَحِيحَةِ الْعِبَارَةِ، لَطِيفَةِ الْإِشَارَةِ، مُنَبِّهَةٍ عَلَى مَا أَغْفَلَهُ الْكِنْدِيُّ وَغَيْرُهُ مِنْ صِنَاعَةِ التَّحْلِيلِ وَأَنْحَاءِ التَّعْلِيمِ، وَأَوْضَحَ الْقَوْلَ فِيهَا عَنْ مَوَادِّ الْمَنْطِقِ الْخَمْسِ، وَأَفَادَ وُجُوهَ الِانْتِفَاعِ بِهَا، وَعَرَّفَ طُرُقَ اسْتِعْمَالِهَا، وَكَيْفَ تُعْرَفُ صُورَةُ الْقِيَاسِ فِي كُلِّ مَادَّةٍ، فَجَاءَتْ كُتُبُهُ فِي ذَلِكَ الْغَايَةَ الْكَافِيَةَ، وَالنِّهَايَةَ الْفَاصِلَةَ</blockquote>
+      <p class="ar-translation">“ในขณะที่นักปรัชญาทุกคนได้ทุ่มเทอย่างเต็มที่ในการผลิตผลงานทางตรรกศาสตร์ แต่มีคนหนึ่งที่ก้าวหน้ากว่าพวกเขายิ่งนักในเรื่องของการวิเคราะห์ (นั่นก็คืออัลฟารอบีย์) โดยเขาได้อธิบายและไขความลับแห่งตรรกศาสตร์ออกมา ทำให้การศึกษาและความเข้าใจในเรื่องนี้เป็นสิ่งที่ง่ายขึ้น เขาได้รวมทฤษฎีต่างๆ ที่จำเป็นต้องรู้ไว้ในหนังสือต่างๆ ที่มีความชัดเจนในสำนวนเนื้อหา มีการชี้แนะอย่างละเอียด และได้เน้นย้ำในสิ่งที่อัลกินดี้และนักปรัชญาคนอื่นๆ ไม่ได้กล่าวถึง โดยเฉพาะในเรื่องศาสตร์แห่งการวิเคราะห์และระเบียบการสอนมิติต่างๆ นอกจากนี้ เขายังได้อธิบายถึงหน่วยพื้นฐานทั้งห้าทางตรรกศาสตร์ และวิธีการใช้ประโยชน์จากทฤษฎีดังกล่าว รวมถึงวิธีการสร้างเหตุผลเชิงตรรกะในแต่ละด้าน ผลงานของเขาในเรื่องนี้ได้กลายเป็นบรรทัดฐานที่สมบูรณ์ที่สุดในการศึกษาเรื่องตรรกศาสตร์”</p>
+
+      <p>แม้ว่าตรรกศาสตร์จะได้รับการยอมรับในหมู่นักปราชญ์มุสลิมส่วนใหญ่ แต่ก็ไม่ได้หมายความว่าทุกคนจะยอมรับมันอย่างสนิทใจ นักวิชาการบางท่านได้ตั้งคำถามถึงประโยชน์ของตรรกศาสตร์ในมุมมองของอิสลาม โดยบางท่านเห็นว่า ตรรกศาสตร์นั้น อาจนำไปสู่ความสับสนและเบี่ยงเบนจากหลักการทางศาสนาได้ โดยในหมู่นักปราชญ์เองนั้น ก็มีความเห็นที่แตกต่างกันถึง 3 แนวทางด้วยกัน ดังที่ท่านอับดุรเราะห์มาน อัลอัคฎอรีย์ได้รายงานเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَالْخُلْفُ فِي جَوَازِ الاِشْتِـغَـالِ بِـهِ عَـلَى ثَـلَاثَـةِ أَقْـوَالِ<br>فَابْنُ الصَّلاَحِ وَالنَّوَوِي حَرَّمَا وَقَالَ قَوْمٌ يَنْبَغِي أَنْ يُعُـلَـما<br>وَالْقَوْلَةُ الْمَشْهُـورَةُ الصَّحـِيحَة جَوَازُهُ لِـكَـامِـلِ القَرِيـحَـة<br>مُـمَـارِسِ السُّنَّــةِ وَالْكِـتَـابِ لِيهْـتَدِي بِـهِ إِلَى الـصَّـوَاب</blockquote>
+      <p class="poem-th">“และทัศนะความเห็นต่างในประเด็นอนุญาตให้ศึกษาตรรกศาสตร์หรือไม่ แบ่งเป็นสามกลุ่ม<br>(1) อิบนุศศอลาฮ์และอันนะวะวีย์กล่าวห้าม (ศึกษา)<br>(2) อีกกลุ่มหนึ่งเห็นควรเรียนรู้ให้ทราบ<br>(3) ส่วนทัศนะที่แพร่หลายและดีที่สุด คืออนุญาตให้ศึกษาสำหรับผู้มีปัญญาฉลาดพอ<br>ที่ยึดมั่นในซุนนะฮ์และกุรอ่าน<br>เพื่อชี้ทางสู่แสงสว่างและความถูกต้อง”</p>
+
+      <h2 class="article-h2">อธิบายรายละเอียดแต่ละความเห็น</h2>
+
+      <p>ในความเห็นของผู้ที่ห้ามนั้น มีผู้คนได้ถามคำถามต่อท่านอิหม่ามอัซซุยูฏีย์ถึงวิชาตรรกศาสตร์ไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فِي شَخْصٍ يَدَّعِي فِقْهًا ، يَقُولُ : إِنَّ تَوْحِيدَ اللَّهِ مُتَوَقِّفٌ عَلَى مَعْرِفَةِ عِلْمِ الْمَنْطِقِ ، وَإِنَّ عِلْمَ الْمَنْطِقِ فَرْضُ عَيْنٍ عَلَى كُلِّ مُسْلِمٍ ، وَإِنَّ لِمُتَعَلِّمِهِ بِكُلِّ حَرْفٍ مِنْهُ عَشْرُ حَسَنَاتٍ ، وَلَا يَصِحُّ تَوْحِيدُ مَنْ لَا يَعْلَمُهُ ، وَمَنْ أَفْتَى وَهُوَ لَا يَعْلَمُهُ فَمَا يُفْتِي بِهِ بَاطِلٌ ، وَقَالَ : إِنَّ الْحَشِيشَةَ كُلُّ مَنِ اسْتَعْمَلَهَا كَفَرَ ، وَقَالَ : إِنَّ الْمُجْتَهِدَ يُحِلُّ الْحَرَامَ وَيُحَرِّمُ الْحَلَالَ ، وَقَالَ : إِنْ أَبَا حَامِدٍ الْغَزَالِيَّ لَيْسَ بِفَقِيهٍ ، وَإِنَّمَا كَانَ زَاهِدًا فَمَاذَا يَجِبُ عَلَيْهِ فِي ذَلِكَ ؟</blockquote>
+      <p class="ar-translation">“มีบุคคลหนึ่งที่อ้างว่าตนเองเป็นผู้มีความรู้ทางฟิกฮ์ โดยเขากล่าวว่า: การเข้าใจเรื่องของเตาฮีดนั้นต้องอาศัยการศึกษาเรียนรู้วิชาตรรกศาสตร์ และ (เขายังบอกด้วยว่า) การศึกษาวิชาตรรกศาสตร์นั้นเป็นหน้าที่เหนือปัจเจกบุคคล (ฟัรฎุอัยน์) สำหรับมุสลิมทุกคน (กล่าวคือต้องเรียนทุกคน) อีกทั้งยังอ้างว่าผู้ที่ศึกษาวิชานี้นั้น จะได้รับสิบความดีสำหรับแต่ละตัวอักษร และยังบอกด้วยว่า การยึดมั่นของผู้ที่ไม่รู้วิชานี้จะยังคงไม่ถูกต้อง ตราบใดที่ไม่ศึกษาวิชานี้ และกล่าวหาผู้ที่ออกคำวินิจฉัยฟัตวาโดยที่ไม่รู้วิชานี้ว่า การฟัตวาของเขานั้นเป็นโมฆะ ไม่สามารถนำมาใช้ได้ และเขายังกล่าวอีกว่า ผู้ที่ใช้กัญชานั้นเป็นผู้ที่สิ้นศรัทธา (กาฟิร) และว่าผู้ที่เป็นมุจญ์ตะฮิด สามารถทำให้สิ่งต้องห้ามเป็นสิ่งที่อนุญาต และทำให้สิ่งที่อนุญาตเป็นสิ่งต้องห้ามได้ เขายังกล่าวอีกว่า อบู ฮามิด อัลฆอซาลีย์ไม่ใช่นักวิชาการฟิกฮ์เลย แต่เป็นเพียงผู้สันโดษเท่านั้น เราควรตอบเขาอย่างไร?”</p>
+
+      <p>อัซซุยูฏีย์ได้ตอบคำถามนี้ โดยจะนำเนื้อหาส่วนสำคัญมาเท่านั้น ท่านระบุว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فَنُّ الْمَنْطِقِ فَنٌّ خَبِيثٌ مَذْمُومٌ، يَحْرُمُ الِاشْتِغَالُ بِهِ، مَبْنِيٌّ بَعْضُ مَا فِيهِ عَلَى الْقَوْلِ بِالْهَيُولِي الَّذِي هُوَ كُفْرٌ، يَجُرُّ إِلَى الْفَلْسَفَةِ وَالزَّنْدَقَةِ، وَلَيْسَ لَهُ ثَمَرَةٌ دِينِيَّةٌ أَصْلًا، بَلْ وَلَا دُنْيَوِيَّةٌ</blockquote>
+      <p class="ar-translation">“วิชาตรรกศาสตร์ เป็นวิชาที่น่ารังเกียจและน่าตำหนิ การศึกษาในวิชานี้ถือเป็นสิ่งต้องห้าม เนื่องจากส่วนหนึ่งของเนื้อหาในวิชานี้ตั้งอยู่บนแนวคิดเรื่อง “Hylomorphism” (เป็นทฤษฎีในปรัชญาที่เสนอโดยอริสโตเติล (Aristotle) ซึ่งอธิบายถึงธรรมชาติของสรรพสิ่งในแง่ขององค์ประกอบสองอย่างคือ “รูป” (form) และ “วัตถุ” (matter) ซึ่งแนวคิดดังกล่าวนี้) เป็นแนวความคิดที่ขัดกับหลักศาสนาและนำพาไปสู่หลักปรัชญาและการปฏิเสธศาสนา นอกจากนั้นวิชาดังกล่าวนี้ยังไม่มีผลทางศาสนาเลย”</p>
+
+      <p>เรื่องนี้ถูกระบุไว้โดยบรรดาอิหม่ามและนักวิชาการด้านกฎหมายอิสลาม โดยบุคคลแรกที่กล่าวถึงเรื่องนี้ไว้คือท่านอิหม่ามอัชชาฟิอีย์ เราะฎิยัลลอฮุอันฮุ และเหล่านักวิชาการในสังกัดของท่าน เฉกเช่นท่านอิหม่ามอัลหะรอมัยน์, อิหม่ามอัลฆอซาลีย์ (ที่ได้มีการเปลี่ยนทัศนะในช่วงบั้นปลายชีวิตของท่าน), อิบนุศศ็อบบ๊าก, อิบนุลกุชัยรีย์, นัศรุ้ลมักดิซีย์, อัลอิมาด อิบนุยูนุส, อัซซิละฟีย์, อิบนุ บันดาร, อิบนุ อะสากิร, อิบนุลอะษีร, อิบนุศศอลาห์, อิบนุอับดิสสลาม, อบู ชามะฮ์, อันนะวาวีย์, อิบนุ ฎะกี๊ก อัลอีด, อัลบุรฮาน อัลญะอ์บะรีย์, อบู หัยยาน, อัชชะร็อฟ อัดดิมยาฏีย์, อัซซะฮะบีย์, อัฏฏีบีย์, อัลมัลลาวีย์, อัลอัซนาวีย์, อัลอัซรออีย์, วลียุดดีน อัลอิรอกีย์, อัชชะร็อฟ อิบนุลมุกรีย์ และอาจารย์ของเรา หัวหน้าผู้พิพากษาท่านชัรฟุดดีน อัลมุนาวีย์</p>
+
+      <p>และนักวิชาการฝ่ายมาลิกียะฮ์ที่เห็นด้วยกับเรื่องนี้ได้แก่ อิบนุอะบีซัยด์ (เจ้าของหนังสือ “อัรริซาละฮ์”), อัลกอฏีย์ อบูบักร อิบนุลอะรอบีย์, อบูบักร อัฏเฏาะรฺตูซีย์, อบุลวะลีด อัลบาญีย์, อบูฏอลิบ อัลมักกีย์ (เจ้าของหนังสือ “กูตุลกุลูบ”), อบุลหะสัน อิบนุลฮัษษอร, อบู อามิร อิบนุรรอบีอฺ, อบุลหะสัน อิบนุ ฮะบีบ, อบู ฮะบีบ อัลมาลิกีย์, อิบนุลมุนีร, อิบนุรุชด์, อิบนุ อบีญัมเราะฮ์ และนักวิชาการส่วนใหญ่ในแถบโมรอกโก</p>
+
+      <p>ท่านยังกล่าวต่อว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَقَوْلُ هَذَا الْجَاهِلِ : إِنَّ الْمَنْطِقَ فَرْضُ عَيْنٍ عَلَى كُلِّ مُسْلِمٍ ، يُقَالُ لَهُ : إِنَّ عِلْمَ التَّفْسِيرِ وَالْحَدِيثِ وَالْفِقْهِ الَّتِي هِيَ أَشْرَفُ الْعُلُومِ لَيْسَتْ فَرْضَ عَيْنٍ بِالْإِجْمَاعِ ، بَلْ هِيَ فَرْضُ كِفَايَةٍ ، فَكَيْفَ يَزِيدُ الْمَنْطِقُ عَلَيْهَا ؟ فَقَائِلُ هَذَا الْكَلَامِ : إِمَّا كَافِرٌ ، أَوْ مُبْتَدِعٌ ، أَوْ مَعْتُوهٌ لَا يَعْقِلُ .</blockquote>
+      <p class="ar-translation">“และคำกล่าวของผู้โง่เขลาคนนี้ที่ว่า: “วิชาตรรกศาสตร์เป็นฟัรฎุอัยน์ที่จำเป็นต่อมุสลิมทุกคน” ก็ให้ตอบกลับว่า: ขนาดวิชาการอรรถาธิบายอัลกุรอาน (ตัฟซีร), วิชาอัลหะดีษ และวิชาฟิกฮ์ ซึ่งเป็นวิชาที่มีเกียรติที่สุดในบรรดาวิชาเหล่านี้ ยังไม่ถือว่าเป็นฟัรฎุอัยน์เลย โดยมติเอกฉันท์ แต่เป็นแค่หน้าที่ส่วนรวม (เป็นฟัรฎุกิฟายะฮ์) ดังนั้นวิชาตรรกศาสตร์จะเหนือกว่าวิชาเหล่านี้ได้อย่างไรกัน? ผู้ที่กล่าวคำพูดนี้อาจจะเป็นกาฟิรหรือผู้กระทำบิดอะฮ์ หรือคนวิกลจริตที่ไม่มีสติสัมปชัญญะ”</p>
+
+      <p>อย่างไรก็ตาม วิชาตรรกศาสตร์ยังคงเป็นเครื่องมือสำคัญในการพัฒนาการคิดอย่างมีเหตุผล แต่ก็ต้องผ่านการศึกษาขั้นพื้นฐานมาแล้ว และมีความหนักแน่นตามความเห็นของนักปราชญ์ผู้ที่อนุญาตให้ร่ำเรียนวิชาตรรกศาสตร์</p>
+
+      <h2 class="article-h2">ข้อพึงสังวร</h2>
+
+      <p>ท่านอัดดะมันฮูรีย์ได้ระบุเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَاعْلَمْ أَنَّ هَذَا الْخِلَافَ إِنَّمَا هُوَ بِالنِّسْبَةِ لِلْمَنْطِقِ الْمَشُوبِ بِكَلَامِ الْفَلَاسِفَةِ؛ كَالَّذِي فِي طَوَالِعِ الْبَيْضَاوِيِّ، وَأَمَّا الْخَالِصُ مِنْهَا؛ كَمُخْتَصَرِ السَّنُوسِيِّ، وَالشَّمْسِيَّةِ، وَالسُّلَّمِ فَلَا خِلَافَ فِي جَوَازِ الِاشْتِغَالِ بِهِ</blockquote>
+      <p class="ar-translation">“และจงรู้เถิดว่า ทัศนะความเห็นต่างที่เกิดขึ้นนี้เกี่ยวข้องเฉพาะกับวิชาตรรกศาสตร์ที่ปะปนไปด้วยคำพูดของนักปรัชญา (อันจะนำไปสู่ความสับสน) เช่น ตรรกศาสตรที่พบในหนังสือเฏาะวาลิอ์ของอัลบัยฎอวีย์ ส่วนวิชาตรรกศาสตร์ที่บริสุทธิ์จากสิ่งเหล่านั้น เช่น มุคตะศ็อร อัซซะนูซีย์, อัชชัมสิยะฮ์ (ฟิลกอวาอิด อัลมันฏิกียะฮ์), และอัสสุลัม (อัลมุเรานัก) นั้น ไม่มีความเห็นต่างในเรื่องการอนุญาตให้ศึกษาตำราเหล่านี้”</p>
+
+      <p>อย่างไรก็ตามท่านตะกียุดดีน อัซซุบกีย์ได้ให้คำแนะนำเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يَنْبَغِي أَنْ يُقَدِّمَ عَلَى ذَلِكَ الِاشْتِغَالَ بِالْقُرْآنِ وَالسُّنَّةِ وَالْفِقْهِ حَتَّى يَتَرَوَّى مِنْهَا وَيَرْسَخَ فِي ذِهْنِهِ الِاعْتِقَادَاتُ الصَّحِيحَةُ</blockquote>
+      <p class="ar-translation">“สมควรที่จะเริ่มต้นด้วยการศึกษาอัลกุรอาน อัซซุนนะฮ์ และวิชาฟิกห์ (ก่อนทำการศึกษาวิชาตรรกศาสตร์) จนกว่าจะได้รับความรู้ที่ลึกซึ้งและแตกฉานในวิชาเหล่านี้เสียก่อน จนมีพื้นฐานอันมั่นคงและแข็งแรงเกี่ยวกับหลักความเชื่อที่ถูกต้อง”</p>
+
+      <p>ท่านยังระบุไว้อีกว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَمَنْ قَالَ: إِنَّهُ كُفْرٌ أَوْ حَرَامٌ فَهُوَ جَاهِلٌ لَا يَعْرِفُ الْكُفْرَ وَلَا التَّحْرِيمَ وَلَا التَّحْلِيلَ؛ فَإِنَّهُ عِلْمٌ عَقْلِيٌّ مَحْضٌ كَالْحِسَابِ غَيْرَ أَنَّ الْحِسَابَ لَا يَجُرُّ إِلَى فَسَادٍ؛ لِأَنَّهُ إِنَّمَا يُسْتَعْمَلُ فِي فَرِيضَةٍ شَرْعِيَّةٍ، أَوْ مِسَاحَةٍ، أَوْ مَالٍ، ... وَلَيْسَ مُقَدِّمَةً لِعِلْمٍ آخَرَ فِيهِ مُفْسِدَةٌ..</blockquote>
+      <p class="ar-translation">“และผู้ใดที่กล่าวว่า “การศึกษาในวิชาดังกล่าวนี้ถือเป็นการปฏิเสธศรัทธา (กุฟร์) หรือมันเป็นสิ่งต้องห้าม” เขาผู้นั้นเป็นผู้ที่ไม่รู้ความหมายของการปฏิเสธศรัทธา การห้าม หรือการอนุญาตอย่างแท้จริง เนื่องจากวิชานี้เป็นเพียงศาสตร์ทางสติปัญญา เช่นเดียวกับวิชาคณิตศาสตร์ แต่ต่างกันที่วิชาคณิตศาสตร์นั้น ไม่ได้เป็นเหตุที่ชักนำไปสู่ความเสียหาย เพราะมันถูกใช้ในเรื่องที่เกี่ยวกับศาสนา การวัดพื้นที่หรือการจัดการทรัพย์สิน การแบ่งมรดก และไม่ได้เป็นพื้นฐานของวิชาอื่นๆ ที่ก่อให้เกิดความเสียหาย”</p>
+
+      <p>และท่านยังกล่าวอีกว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وَالْمَنْطِقُ وَإِنْ كَانَ سَالِمًا فِي نَفْسِهِ يَتَعَاظَمُ صَاحِبُهُ، وَيَزْدَرِي غَيْرَهُ فِي عَيْنِهِ، وَيَبْقَى يَعْتَقِدُ فِي نَفْسِهِ سَقَاطَةَ نَظَرِ مَنْ لَا يُحْسِنُهُ، وَيَنْفَتِحُ لَهُ بِهِ النَّظَرُ فِي بَقِيَّةِ عُلُومِ الْحِكْمَةِ مِنَ الطَّبِيعِيِّ الَّذِي لَيْسَ فِيهِ الْخَطَأُ وَالْإِلَهِيِّ الَّذِي أَكْثَرُ كَلَامِ الْفَلَاسِفَةِ فِيهِ خَطَأٌ مُنَابِذٌ لِلْإِسْلَامِ وَالشَّرِيعَةِ، فَمَنْ اقْتَصَرَ عَلَيْهِ وَلَمْ تَصُنْهُ سَابِقَةٌ صَحِيحَةٌ خُشِيَ عَلَيْهِ التَّزَنْدُقُ أَوِ التَّغَلْغُلُ بِاعْتِقَادٍ فَلْسَفِيٍّ مِنْ حَيْثُ يَشْعُرُ أَوْ مِنْ حَيْثُ لَا يَشْعُرُ. هَذَا فَصْلُ الْقَوْلِ فِيهِ وَهُوَ كَالسَّيْفِ يَأْخُذُهُ شَخْصٌ يُجَاهِدُ بِهِ فِي سَبِيلِ اللَّهِ وَآخَرُ يَقْطَعُ بِهِ الطَّرِيقَ.</blockquote>
+      <p class="ar-translation">“และส่วนของตรรกศาสตร์นั้น แม้ว่าโดยตัวของมันเองจะเป็นวิชาที่ไม่มีพิษมีภัย แต่มันก็อาจทำให้ผู้ศึกษารู้สึกหยิ่งยโส และดูถูกผู้อื่นที่ไม่เชี่ยวชาญในวิชานี้ นอกจากนี้ ผู้ศึกษาอาจเชื่อมั่นว่าความคิดของผู้ที่ไม่รู้จักตรรกศาสตร์นั้นด้อยกว่า และจากการศึกษาวิชานี้ อาจนำเขาไปสู่การเรียนรู้วิชาอื่นๆ ของวิชาปรัชญา ซึ่งในส่วนของปรัชญาที่มาจากภูมิปัญญานั้น อาจไม่มีข้อผิดพลาด แต่ในส่วนของปรัชญาเทววิทยาอันเป็นส่วนใหญ่ของหลักปรัชญานั้น มีข้อผิดพลาดและขัดแย้งกับหลักการอิสลามและชะรีอะฮ์ (กฎหมายอิสลาม) ดังนั้น ผู้ที่ศึกษาและยึดมั่นในตรรกศาสตร์โดยไม่มีพื้นฐานความรู้ที่ถูกต้องอาจเสี่ยงต่อการหันเหไปสู่การเป็นคนนอกรีต (ละทิ้งศรัทธา) หรือหลงเชื่อในปรัชญา โดยรู้ตัวหรือไม่รู้ตัว ข้อสรุปก็คือ ตรรกศาสตร์เปรียบเสมือนดาบสองคม ซึ่งบางคนใช้เพื่อต่อสู้ในหนทางของอัลลอฮ์ ขณะที่อีกคนอาจใช้มันเพื่อเป็นโจรปล้นสะดม”</p>
+
+      <h2 class="article-h2">ความสำคัญและผลกระทบของตรรกศาสตร์ในอิสลาม</h2>
+
+      <p>ตรรกศาสตร์มีบทบาทสำคัญในการช่วยนักวิชาการมุสลิมในการพัฒนาความคิดและการโต้แย้งที่มีเหตุผล ตรรกศาสตร์ได้ถูกนำมาใช้ในการตีความและทำความเข้าใจคัมภีร์อัลกุรอาน และมีบทบาทสำคัญในการสร้างสรรค์วิชาการต่างๆ ในอารยธรรมอิสลาม ไม่ว่าจะเป็นวิชาปรัชญา คณิตศาสตร์ หรือวิทยาศาสตร์แขนงอื่นๆ</p>
+
+      <p>ท่านอิบนุ อาบิดีน นักปราชญ์ในสายธารของท่านอบู หะนีฟะฮ์ผู้ยิ่งใหญ่ ได้ระบุเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أَمَّا مَنطِقُ الإِسلَامِيِّينَ الَّذِي مُقَدِّمَاتُهُ قَوَاعِدُ إِسلَامِيَّةٌ فَلَا وَجهَ لِلقَولِ بِحُرمَتِهِ، بَل سَمَّاهُ الغَزَالِيُّ مِعيَارَ العُلُومِ، وَقَد أَلَّفَ فِيهِ عُلَمَاءُ الإِسلَامِ.</blockquote>
+      <p class="ar-translation">“ส่วนตรรกศาสตร์ของนักคิดอิสลาม ซึ่งตั้งอยู่บนพื้นฐานของหลักการและกฎเกณฑ์ของอิสลามนั้น ไม่สามารถกล่าวได้ว่ามันเป็นสิ่งที่ต้องห้าม ตรงกันข้าม อัลฆอซาลีถึงกับเรียกมันว่า “มาตรวัดแห่งวิทยาการ” และยังมีบรรดานักวิชาการอิสลามที่มีงานเขียนเกี่ยวกับตรรกศาสตร์นี้อีกด้วย”</p>
+
+      <p>ท่านอัชชัรวานีย์ นักปราชญ์ในสายอัชชาฟิอียะฮ์ได้ระบุเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قَالَ فِي الْإِمْدَادِ بَلْ هُوَ أَيْ الْمَنْطِقُ أَعْلَاهَا أَيْ الْعُلُومِ الْآلِيَّةِ وَإِفْتَاءُ النَّوَوِيِّ كَابْنِ الصَّلَاحِ بِجَوَازِ الِاسْتِنْجَاءِ بِهِ يُحْمَلُ عَلَى مَا كَانَ فِي زَمَنِهِمَا مِنْ خَلْطِ كَثِيرٍ مِنْ كُتُبِهِ بِالْقَوَانِينِ الْفَلْسَفِيَّةِ الْمُنَابِذَةِ لِلشَّرَائِعِ بِخِلَافِ الْمَوْجُودِ الْيَوْمَ فَإِنَّهُ لَيْسَ فِيهِ شَيْءٌ مِنْ ذَلِكَ وَلَا مِمَّا يُؤَدِّي إلَيْهِ فَكَانَ مُحْتَرَمًا بَلْ فَرْضَ كِفَايَةٍ بَلْ فَرْضَ عَيْنٍ إنْ وَقَعَتْ شُبْهَةٌ لَا يُتَخَلَّصُ مِنْهَا إلَّا بِمَعْرِفَتِهِ</blockquote>
+      <p class="ar-translation">“ในหนังสือ “อัลอิมดาด” ได้กล่าวว่า: วิชาตรรกศาสตร์ (อัลมันติก) เป็นวิชาที่เป็นดั่งกลไกลที่ยิ่งใหญ่ที่สุดและสำคัญที่สุดในบรรดาวิชาการต่างๆ (อันเป็นวิชาที่นำไปสู่ความเข้าใจวิชาหลักอย่างลึกซึ้ง) และคำฟัตวาของอันนะวะวีย์ที่สอดคล้องกับอิบนุศศอลาฮ์ เกี่ยวกับประเด็นเรื่องของตรรกศาสตร์ในยุคของพวกเขา ที่ว่าอนุญาตให้นำตำราตรรกศาสตร์มาชำระอุจาระและปัสสาวะได้นั้น หมายถึงตำราทางตรรกศาสตร์ซึ่งมีการผสมผสานอย่างมากกับกฎเกณฑ์ทางปรัชญาที่ขัดแย้งกับบทบัญญัติทางศาสนา แต่นั่นคือเนื้อหาที่อยู่ในตำรายุคก่อน แต่ความแป็นจริงในปัจจุบันนี้นั้น ไม่มีสิ่งใดที่เกี่ยวข้องกับสิ่งเหล่านั้นหรือสิ่งที่จะนำไปสู่สิ่งเหล่านั้นเลย ดังนั้นจึงถือว่าวิชานี้เป็นวิชาที่มีเกียรติ และเป็นหน้าที่ที่จะต้องเรียนรู้ (ฟัรฎุกีฟายะฮ์) และจะถูกยกระดับเป็นหน้าที่ๆ จำเป็น (ฟัรฎุอัยน์) หากมีข้อสงสัยที่ไม่สามารถแก้ไขได้ เว้นแต่จะต้องรู้วิชาตรรกศาสตร์นี้”</p>
+
+      <p>โดยสรุปในตอนแรกนี้ ตรรกศาสตร์อิสลามเป็นศาสตร์ที่ประชาคมนักปราชญ์มุสลิมให้ความสำคัญในการศึกษา เนื่องจากเป็นเครื่องมือสำคัญที่จะใช้เป็นกลไกลในการวิเคราะห์และวินิจฉัยคำถามทางศาสนา และยิ่งไปกว่านั้น ยังเป็นระเบียบวิธีที่ใช้ในการตอบโต้ข้อโต้แย้งจากฝ่ายปรัชญาตะวันตกและนักปรัชญาที่มีความเห็นเป็นปฏิปักษ์กับหลักการศาสนาอิสลาม การใช้ตรรกศาสตร์จึงไม่ได้จำกัดอยู่แค่การวิเคราะห์เชิงปรัชญาเท่านั้น แต่ยังมีบทบาทในการปกป้องและเสริมสร้างความมั่นคงทางศาสนาอีกด้วย</p>
+
+      <p>ตรรกศาสตร์อิสลามในยุคหลังเรื่อยมาจึงวิทยการที่สุกงอมแล้ว เป็นทฤษฎีที่ผ่านการกลั่นกรองจนตกผลึกแล้ว จึงกลายเป็นศาสตร์ที่มีพื้นฐานจากหลักศาสนาและไม่ขัดแย้งกับหลักศาสนา ดังนั้นจึงไม่มีข้อห้ามในการศึกษา แต่กลับเป็นสิ่งจำเป็นอย่างยิ่งในการเรียนรู้ โดยเฉพาะในยุคที่มีข้อโต้แย้งหรือคำถามที่ยากต่อการตอบโต้ด้วยหลักฐานทางตัวบท ทั้งนี้นักวิชาการอิสลามได้พัฒนาและสังคยานาตรรกศาสตร์ขึ้นใหม่ให้เหมาะสมกับความจำเป็นทางศาสนา ทำให้ตรรกศาสตร์ในอิสลามกลายเป็นศาสตร์ที่มีเอกลักษณ์และเป็นเอกเทศจากแนวคิดของปรัชญาตะวันตก นอกจากนี้ นักวิชาการอิสลามยังได้เน้นย้ำถึงความสำคัญของการใช้ตรรกศาสตร์ในบริบทที่ถูกต้องและเหมาะสม โดยแนะนำให้ศึกษาภายใต้การชี้นำของผู้รู้ที่มีความรู้และความเข้าใจในทั้งหลักศาสนาและตรรกศาสตร์ เพื่อป้องกันการเข้าใจผิดหรือการนำไปใช้ในทางที่ไม่สอดคล้องกับหลักการศาสนา</p>
+
+      <h2 class="article-h2">จุดยืนของนักวิชาการอะฮ์ลุซซุนนะฮ์ ในศตวรรษที่ 10-13 ฮิจเราะฮ์</h2>
+
+      <p>เมื่อเลื่อนเวลามาสู่ช่วงระหว่างศตวรรษที่ 10 ถึง 13 ฮิจเราะฮ์ (ราว ค.ศ. 1500-1800) อีกประการหนึ่งอันเป็นเรื่องสำคัญที่จะต้องย้ำคือ “ไม่เคยมีฉันทามติที่ชัดเจนเกี่ยวกับการตัดสินทางกฎหมายอิสลามที่เกี่ยวกับตรรกศาสตร์” แต่กระนั้นการมีทัศนะในแง่ลบต่อตรรกศาสตร์ยังคงปรากฏอยู่หลังศตวรรษที่ 16 ตัวอย่างเช่น นักวิชาการในยุคเดียวกับอัรรอมลีย์และอิบนุ หะญัร อัลฮัยตะมีย์ คืออิบนุ นุญัยม์ (เสียชีวิต ค.ศ. 1563 / ฮ.ศ. 971) นักวิชาการจากสายอัลหะนาฟียะฮ์ ซึ่งได้กล่าวสั้นๆ ว่า “วิชาปรัชญาเป็นศาสตร์ที่ต้องห้ามในมุมมองทางกฎหมายอิสลาม และวิชาตรรกศาสตร์ยังถือเป็นส่วนหนึ่งของปรัชญา”</p>
+
+      <p>อย่างไรก็ตาม หากต้องการตรวจสอบสิ่งที่อาจเรียกได้ว่า “กระแสหลัก” หรือ “แนวโน้มส่วนใหญ่” ในหมู่นักวิชาการอะฮ์ลุซซุนนะฮ์ตามที่ จอร์จ มักดิซีย์ (George Makdisi) และโจนาธาน เบอร์กีย์ (Jonathan Berkey) เคยนำเสนอไว้ จำเป็นต้องชี้ให้เห็นว่า ยังมีอีกฟากหนึ่งในหมู่นักวิชาการอิสลาม โดยเฉพาะในหมู่นักวิชาการของสายอัลหะนะฟียะฮ์ที่แสดงความคิดเห็นที่ต่างออกไปจากที่นักบูรพาทั้งสองท่านคิดไว้</p>
+
+      <p>อีกตัวอย่างหนึ่งคือ อะห์หมัด อัลฮะมาวีย์ (เสียชีวิต ค.ศ. 1687 / ฮ.ศ. 1098) นักวิชาการสายหะนะฟียะฮ์อีกท่านหนึ่งที่มีชื่อเสียง ซึ่งเขาได้ประพันธ์หนังสือที่มาอธิบายเพิ่มเติมเกี่ยวกับงานเขียนของอิบนุ นุญัยม์และกล่าวถึงความคิดเห็นของนักวิชาการรุ่นก่อนเกี่ยวกับตรรกะศาสตร์ โดยกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قوله (ودخل في الفلسفة المنطق إلخ)… لم أَرَ في كتب أصحابنا القول بتحريم المنطق، فإن كان المصنف رآه كان المناسب أن ينقله. ثم في كلام الشافعية، خصوصاً المتأخرين منهم، تصريح كثير بذلك، ولا يبعد أن يكون وجهه أنه تضييع العمر، وأيضاً من اشتغل به يميل إلى الفلسفة غالباً، فكان المنع من قبيل سد الذرائع. وإلا فليس في المنطق ما ينافي الشرع المبين.</blockquote>
+      <p class="ar-translation">“คำพูดของเขาที่ว่า ‘ตรรกศาสตร์เป็นส่วนหนึ่งของปรัชญา จนจบประโยค’… ข้าพเจ้าไม่พบในตำราของนักวิชาการสายเรา (อัลหะนะฟียะฮ์) ว่ามีการกล่าวถึงการห้ามศึกษาวิชาตรรกศาสตร์โดยเด็ดขาด หากผู้ประพันธ์ (คืออิบนุ นุญัยม์) ได้พบข้อความนั้น ก็น่าจะเหมาะสมที่เขาจะยกมาให้เห็นอย่างชัดเจน นอกจากนี้ ในหมู่นักวิชาการสายชาฟิอียะฮ์ โดยเฉพาะนักวิชาการในยุคหลัง มีคำกล่าวที่ชัดเจนมากเกี่ยวกับเรื่องนี้ ซึ่งบางทีอาจมีเหตุผลว่า ตรรกศาสตร์อาจทำให้เสียเวลา หรือผู้ที่ศึกษาตรรกศาสตร์อาจโน้มเอียงไปสู่ปรัชญา ซึ่งเป็นสิ่งที่ไม่เหมาะสม ดังนั้นการห้ามอาจเป็นไปเพื่อป้องกันความเสียหาย (สัดดุซซะรออิอ์) แต่อย่างไรก็ตาม ในตัวของวิชาตรรกศาสตร์เองนั้น ไม่มีสิ่งใดที่ขัดแย้งกับหลักการอิสลามอย่างชัดเจน”</p>
+
+      <p>คำกล่าวนี้แสดงให้เห็นว่า ในหมู่นักวิชาการอิสลามมีการถกเถียงเกี่ยวกับตรรกศาสตร์อย่างลึกซึ้ง และความเห็นที่ว่า ตรรกศาสตร์เป็นสิ่งต้องห้ามนั้น ไม่ได้รับการยอมรับในวงกว้างอย่างที่บางฝ่ายนำเสนอ</p>
+
+      <p>หลังจากนั้นอัลฮะมาวีย์ยังได้แสดงความเห็นอีกประการหนึ่งเพิ่มเติมว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقال بعض الفضلاء: لعل المراد، أي مراد المصنف، المنطق منطق الفلاسفة، أما منطق الإسلاميين فلا وجه للقول بحرمته، إذ ليس فيه ما يخالف القواعد الإسلامية. وقد ألف فيه علماء الأعلام من علماء الإسلام كقطب الدين الرازي من المتقدمين ومن المتأخرين الإمام ابن عرفة وشيخ الإسلام زكريا الأنصاري، وسمَّاه الإمام الغزالي معيار العلوم، وقال: من لا معرفة له به لا ثقة بعلمه. وسماه ابن سينا خادم العلوم</blockquote>
+      <p class="ar-translation">“มีบางท่านได้กล่าวว่า จุดประสงค์ของผู้ประพันธ์ตำราอาจหมายถึงตรรกศาสตร์ของนักปรัชญากรีก ซึ่งแตกต่างจากตรรกศาสตร์ของนักปราชญ์มุสลิม ไม่มีเหตุผลใดที่จะกล่าวว่า ตรรกศาสตร์ของนักปราชญ์มุสลิมเป็นสิ่งต้องห้าม เนื่องจากไม่มีสิ่งใดในวิชาดังกล่าวที่ขัดแย้งกับหลักการอิสลาม มิหนำซ้ำยังมีนักวิชาการมุสลิมที่ยิ่งใหญ่หลายท่านได้ผลิตผลงานเกี่ยวกับวิชาตรรกศาสตร์นี้ เช่น กุฏบุดดีน อัรรอซีย์ (เสียชีวิต ค.ศ. 1364 / ฮ.ศ. 766) ในกลุ่มนักวิชาการรุ่นก่อน และในกลุ่มนักวิชาการรุ่นหลัง เช่น อิบนุ อารอฟะฮ์ (เสียชีวิต ค.ศ. 1401 / ฮ.ศ. 803) และชัยคุลอิสลามซะกะรียา อัลอันศอรีย์ โดยที่อิหม่ามอัลฆอซาลีย์เรียกตรรกศาสตร์นี้ว่า ‘มาตรฐานแห่งศาสตร์ทั้งปวง’ (มิอ์ยารุลอุลูม) และกล่าวว่า ‘ผู้ใดที่ไม่มีความรู้ในตรรกศาสตร์ ก็ไม่สามารถเชื่อถือในความรู้ของเขาได้’ ส่วนอิบนุ ซีนา เรียกมันว่า ‘ผู้รับใช้แห่งศาสตร์ทั้งปวง’ (คอดิมุลอุลูม)”</p>
+
+      <p>ยิ่งไปกว่านั้น ยังพบว่านักนิติศาสตร์และนักปรัชญาชาวอียิปต์ในศตวรรษที่ 17 ได้แบ่งปันมุมมองเดียวกันกับผู้อธิบายตำรา “อัลอัชบาฮ์ วันนะซออิร” ของอิบนุ นุญัยม์ โดยตัวอย่างเช่น นักปรัชญาสายหะนาฟียะฮ์อย่างอะห์หมัด อัลฆุนัยมีย์ (เสียชีวิต ค.ศ. 1634 / ฮ.ศ. 1044) ได้เขียนคำอรรถาธิบายเพิ่มเติมของหนังสือ “อิซาฆูญีย์” ที่เขียนอธิบายอีกชั้นหนึ่งโดยซะการียา อัลอันศอรีย์ และยังมีคำอรรถาธิบายเพิ่มเติมอีกเล่มหนึ่งเกี่ยวกับ “อิซาฆูญีย์” เขียนโดยนักนิติศาสตร์สายชาฟิอียะฮ์ผู้มีชื่อเสียง คืออะห์หมัด อัลกอลยูบีย์ (เสียชีวิต ค.ศ. 1658 / ฮ.ศ. 1069)</p>
+
+      <p>อีกตัวอย่างหนึ่งคือ นักนิติศาสตร์จากสายมาลิกีย์ อลีย์ อัลอัจฮูรีย์ (เสียชีวิต ค.ศ. 1656 / ฮ.ศ. 1066) ซึ่งได้เขียนคำอธิบายเพิ่มเติมของหนังสือ “อัชชัมซียะฮ์ ฟิลกอวาอิด อัลมันติกียะฮ์” ของซะอ์ดุดดีน อัตตัฟตะซานีย์ (เสียชีวิต ค.ศ. 1390 / ฮ.ศ. 792) และเป็นที่รู้กันว่าอัลอัจฮูรีย์นั้น เขาได้สอนหนังสือที่มีเนื้อหาลึกซึ้ง อย่างหนังสืออัชชัมซียะฮ์ ฟิลกอวาอิด อัลมันติกียะฮ์ของนัจมุดดีน อัลกาติบีย์ อัลกอซวินีย์ (เสียชีวิต ค.ศ. 1277 / ฮ.ศ. 675) ให้กับอลีย์ อัชชับรอมิลลีซีย์ (เสียชีวิต ค.ศ. 1676 / ฮ.ศ. 1087) และคนอื่นๆ ซึ่งต่อมาอลีย์ อัชชับรอมิลลีซีย์ได้กลายเป็นนักนิติศาสตร์ชาฟิอีย์ผู้ยิ่งใหญ่ในเวลาถัดมา</p>
+
+      <h2 class="article-h2">ตรรกศาสตร์ในจักรวรรดิออตโตมัน</h2>
+
+      <p>ในอีกมุมหนึ่งของจักรวรรดิออตโตมัน นักวิชาการยังคงศึกษา สอน และเขียนเกี่ยวกับวิชาตรรกศาสตร์ โดยไม่ได้คำนึงถึงคำฟัตวาของอัซซะยูฏีย์และอิบนุ นุญัยม์ ตัวอย่างที่เด่นชัดคือ นักวิชาการและผู้พิพากษาแห่งออตโตมันชื่อ อะห์หมัด ตอชกับรีย์ ซาดะฮ์ (เสียชีวิต ค.ศ. 1560 / ฮ.ศ. 968) ได้มีระบุไว้ในสารานุกรมวิชาการของเขาที่มีชื่อว่า “มิฟตาห์ อัซซะอาดะฮ์” เขาได้ยกย่องตรรกศาสตร์ว่าเป็น “ศาสตร์แห่งเครื่องมือที่สูงส่งที่สุดและเป็นราชาของศาสตร์แห่งหลักสติปัญญา” เขายังยกคำกล่าวของกวีผู้สรรเสริญวิชาตรรกศาสตร์ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">عاب المنطق قوم لا عقول لهم<br>وليس له إذا عابوه من ضرر<br>ما ضرَّ شمس الضحى والشمس طالعة<br>أن لا يرى ضوءها من ليس ذا بصر</blockquote>
+      <p class="poem-th">“ผู้ไร้ปัญญาเท่านั้นที่ตำหนิตรรกศาสตร์<br>คำกล่าวติของพวกเขามิอาจบั่นทอนคุณค่าของมันได้<br>ดั่งแสงตะวันยามสายที่เจิดจ้าเหนือขอบฟ้า<br>มิอาจถูกลดค่าจากผู้ไร้ดวงตา”</p>
+
+      <p>อีกมุมหนึ่งของออตโตมัน มีขบวนการสละฟียะฮ์ของกอฎีย์ซาดะฮ์ (มุฮัมมัด อาฟันดี้) ซึ่งแพร่หลายในภูมิภาคที่ใช้ภาษาเตอร์กในจักรวรรดิออตโตมันช่วงศตวรรษที่ 17 ยังคงรักษาท่าทีต่อต้านวิชาตรรกศาสตร์ไว้ในพื้นที่ดังกล่าว</p>
+
+      <p>ฮาญีย์ คอลีฟะฮ์ (เสียชีวิต ค.ศ. 1657 / ฮ.ศ. 1067) ผู้แต่งสารานุกรมชื่อดัง “กัชฟุซซุนูน” ได้เล่าว่า เขาเคยเข้าร่วมฟังคำเทศนาของมุฮัมมัด อาฟันดี้ (เสียชีวิต ค.ศ. 1635 / ฮ.ศ. 1045) ผู้ก่อตั้งขบวนการกอฎีย์ซาดะฮ์ ซึ่งในคำเทศนาของมุฮัมมัด อาฟันดี้ ได้กล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">بمن يذرف دمعة إذا مات أحد المنطقة ؟</blockquote>
+      <p class="ar-translation">“ใครกันเล่าจะร้องไห้เสียใจเมื่อมีนักตรรกศาสตร์เสียชีวิต?”</p>
+
+      <p>อย่างไรก็ตามฮาญีย์ คอลีฟะฮ์ วิจารณ์ผู้ติดตามขบวนการนี้โดยระบุว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إنه ينبغي ذكره أن أتباع قاضي زاده في هذا العصر معروفون بغلوهم ولقد لحقهم خزي كبير من عموم الناس</blockquote>
+      <p class="ar-translation">“กล่าวได้ว่า ผู้ติดตามของกอฎีย์ซาดะฮ์ในยุคนี้ มีชื่อเสียงในเรื่องความของคลั่งไคล้จนเกินขอบเขต และพวกเขาก็ยังได้รับความอับอายครั้งใหญ่จากประชาชนอีกด้วย”</p>
+
+      <p>แม้ว่าฮาญีย์ คอลีฟะฮ์ จะวิพากษ์ขบวนการกอฎีย์ซาดะฮ์ แต่เขาเองกลับศึกษาและอ่านตำราตรรกศาสตร์หลายเล่ม เช่น อิซาฆูญีย์, ตะห์ซีบุลมันติก ของซะอ์ดุดดีน อัตตัฟตะซานีย์, อัชชัมซิยะฮ์ ของนัจมุดดีน อัลกาติบีย์ นอกจากนี้ เขายังศึกษาตำราต่างๆ ที่อรรถาธิบายตำราเหล่านี้ ซึ่งสะท้อนให้เห็นว่าการศึกษาเรื่องตรรกศาสตร์ในยุคนั้น ไม่ได้เป็นเรื่องที่แปลกใหม่สำหรับนักวิชาการออตโตมัน</p>
+
+      <h2 class="article-h2">นักวิชาการและการสนับสนุนตรรกศาสตร์</h2>
+
+      <p>ในช่วงการครองราชย์ของกษัตริย์สุลัยมานมหาราช (ครองราชย์ช่วงปี 1520-1566) มีการโจมตีด้านตรรกศาสตร์เช่นกัน แต่ตรรกศาสตร์ในศตวรรษที่ 17 กลับไม่ได้รับผลกระทบอย่างรุนแรงจากการต่อต้านนี้ อันเนื่องจากนักวิชาการของออตโตมันหลายคนยังคงเป็นผู้เชี่ยวชาญด้านตรรกศาสตร์ เช่น คอลีล บิน ฮะซัน (เสียชีวิต ค.ศ. 1711 / ฮ.ศ. 1123) ผู้ดำรงตำแหน่งกอฎีอัลอัสกัร (หัวหน้าผู้พิพากษา) แห่งอนาโตเลีย และมุฮัมมัด ซอดิก อัชชัรวานีย์ (เสียชีวิต ค.ศ. 1708 / ฮ.ศ. 1120) ซึ่งยังดำรงตำแหน่งชัยคุลอิสลามแห่งจักรวรรดิออตโตมัน</p>
+
+      <p>ทั้งสองได้ประพันธ์งานด้านตรรกศาสตร์ไว้หลายเล่ม นอกจากนี้ยังมีอบู บักร อัลมัรอาชีย์หรือ ซาญิกลีย์ ซาดะฮ์ (เสียชีวิต ค.ศ. 1732 / ฮ.ศ. 1145) ซึ่งสนับสนุนแนวคิดที่ว่า การศึกษาตรรกศาสตร์ถือเป็นสิ่งที่ควรศึกษา หรือในบางกรณีอาจถึงขั้นเป็นฟัรฎูกิฟายะฮ์ ซาญิกลีย์ ซาดะฮ์ให้เหตุผลว่า การศึกษาตรรกศาสตร์ช่วยในด้านการใช้เหตุผลและพัฒนาความคิด นอกจากนี้ยังมีความจำเป็นในการทำความเข้าใจหลักฐานในวิชาอุศูลุลฟิกฮ์ (รากฐานของนิติศาสตร์อิสลาม) โดยเขากล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ولأن الأحمق يفسد الدين فيستحب، أو يفرض فرض كفاية قراءة بعض النسخ الدقيقة من العلوم الشرعية أو الألوية على وجه يحصل به تشحيذ الخاطر</blockquote>
+      <p class="ar-translation">“เนื่องจากคนที่ขาดความรู้ความเข้าใจ อาจสร้างความเสียหายต่อศาสนาได้ ดังนั้น การศึกษาเล่าเรียนตรรกศาสตร์จึงถือเป็นสิ่งที่ส่งเสริมให้ทำการศึกษาไว้ หรือในบางกรณีอาจถือเป็นฟัรฎูกิฟายะฮ์ที่จะต้องเรียนรู้และอ่านตำราที่ลึกซึ้งเกี่ยวกับวิชาทางศาสนาและวิชาที่ใช้หลักการคิดวิเคราะห์ เพื่อพัฒนาความคิดและเสริมสร้างปัญญาให้เฉียบแหลมยิ่งขึ้น”</p>
+
+      <p>นักวิชาการอีกคนหนึ่งในศตวรรษที่ 17 คือ ฮะซัน อัลยูซีย์ (เสียชีวิต ค.ศ. 1691 / ฮ.ศ. 1102) ซึ่งไม่เห็นด้วยกับนักวิชาการที่ประณามตรรกศาสตร์ อัลยูซีย์เองยังเป็นนักตรรกศาสตร์ที่มีชื่อเสียง และได้เขียนคำอธิบายขยายความเกี่ยวกับตำราตรรกศาสตร์ชื่อ “อัลมุคตะซ้อร” ของนักวิชาการจากศตวรรษที่ 15 อย่างมุฮัมมัด อิบนุ ยูซุฟ อัซซะนูซีย์ นอกจากนี้ อัลยูซีย์ยังเขียนคำอธิบายเพิ่มเติมเกี่ยวกับตำราของอัซซะนูซีย์ โดยเนื้อหาส่วนสำคัญในคำอธิบายของเขาเป็นการโต้แย้งความเห็นที่ว่าตรรกศาสตร์และวิชาอิลมุลกะลาม เป็นสิ่งต้องห้ามหรือไม่น่าสนับสนุน</p>
+
+      <h2 class="article-h2">การโต้แย้งของอัลยูซีย์</h2>
+
+      <p>อัลยูซีย์เริ่มต้นการโต้แย้งกับผู้ที่กล่าวว่าตรรกศาสตร์และวิชากะลามเป็นสิ่งต้องห้ามด้วยเหตุผล 2 ประการ คือ ประการแรก ตรรกศาสตร์และวิชากะลามเป็นบิดอะฮ์ และประการที่สอง การนำตรรกศาสตร์และวิชากะลามเข้ามาเกี่ยวข้อง จะทำให้มีการแทรกความคิดเห็นและหลักฐานของผู้ที่เบี่ยงเบนศาสนา (มุบตะเดี้ยะอ์)</p>
+
+      <p>อัลยูซีย์โต้แย้งทั้งสองประเด็น โดยเฉพาะข้อกล่าวหาที่ว่า ควรละเลยความคิดเห็นของผู้ที่เบี่ยงเบนและยึดมั่นเฉพาะความคิดเห็นของบรรพชนสลัฟ ท่านกล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قيل له كيف يعرف الحق ليقتصر عليه، ويميز عن الباطل إذا لم يعرف الباطل؟ وأما السلف فكانت هذه الشبهة لم تحم بساحتهم، ومن ثم لم يشتغلوا بذكرها وردها، ونحن نقطع أنه لو تعرض لهم بدعي أو أُلقيت عليهم شبهة لأبطلوها… على أن معظم ذلك مذكور في القرآن، وكانوا عرباً يفهمون معانيه فهماً وافياً، وكان مملوءاً بالرد على المبطلين. وقد ذكر الله تعالى عقائد المبطلين كإنكار البعث والتثليث وغيرهما من الكفريات وإبطالها، وفي ذلك لأهل الكلام أعظم حجة</blockquote>
+      <p class="ar-translation">“ก็ให้ตอบแก่พวกเขาว่า พวกท่านจะรู้ได้อย่างไรละว่า อะไรคือความจริงที่ควรยึดมั่น หากไม่รู้จักความเท็จเพื่อแยกแยะมันออกไป? สำหรับบรรพชนในอดีต พวกเขาไม่ต้องเผชิญกับข้อโต้แย้งที่ซับซ้อนเช่นนี้ ดังนั้นพวกเขาจึงไม่ได้ใช้เวลาตอบโต้หรือพูดถึงสิ่งเหล่านี้ เราสามารถยืนยันได้ว่าหากมีใครเสนอข้อโต้แย้งหรือแนวคิดเบี่ยงเบนต่อพวกเขา พวกเขาย่อมตอบโต้ได้สำเร็จ (โดยไม่จำเป็นต้องพึ่งตรรกศาสตร์)… ยิ่งไปกว่านั้น ส่วนใหญ่ของสิ่งเหล่านี้ถูกกล่าวถึงในอัลกุรอ่านอยู่แล้ว บรรพชนที่เป็นชาวอาหรับในยุคนั้นสามารถเข้าใจความหมายในอัลกุรอานได้อย่างลึกซึ้ง และอัลกุรอานเต็มไปด้วยการตอบโต้แนวคิดที่ผิด เช่น การปฏิเสธการฟื้นคืนชีพและการกล่าวว่าอัลลอฮ์นั่นคือตรีเอกานุภาพ ซึ่งแนวคิดเหล่านี้ถือเป็นความเชื่อที่ผิดๆ และเนื้อหาในอัลกุรอานสามารถใช้เป็นหลักฐานสำคัญที่สุดสำหรับผู้ศึกษาวิชากะลาม”</p>
+
+      <p>อัลยูซีย์ชี้ให้เห็นว่าการศึกษาและการเข้าใจตรรกศาสตร์และวิชากะลามไม่ใช่สิ่งที่ควรหลีกเลี่ยง หากแต่มันเป็นเครื่องมือที่สำคัญในการปกป้องความเชื่อและโต้แย้งกับแนวคิดที่ผิดพลาด โดยเฉพาะในบริบทที่ผู้คนต้องเผชิญกับความท้าทายทางปัญญาในยุคของเขา</p>
+
+      <p>อัลยูซีย์ตอบโต้ผู้ที่มองว่าตรรกศาสตร์และวิชากะลาม เป็นสิ่งใหม่ที่ไม่มีอยู่ในยุคบรรพชน โดยชี้ให้เห็นว่า ความรู้ทั้งหมดในยุคปัจจุบันต่างก็เกิดขึ้นหลังจากยุคแรกของศาสนาอิสลามแทบทั้งสิ้น อัลยูซีย์กล่าวว่า หากจะใช้เหตุผลเพียงเพราะว่าวิชาเหล่านี้เกิดขึ้นหลังยุคของศอหาบะฮ์แล้วถือว่าวิชาเหล่านี้เป็นสิ่งต้องห้าม เช่นนั้นก็จะต้องพิจารณาด้วยว่าวิชาอื่นๆ ที่เป็นแกนหลักของศาสนา เช่น การอธิบายอัลกุรอาน (ตัฟซีร) วิชาหะดีษ หรือวิชานิติศาสตร์อิสลาม (ฟิกฮ์) เป็นสิ่งต้องห้ามเช่นกัน เพียงเพราะมันเกิดขึ้นหลังจากยุคศอหาบะฮ์</p>
+
+      <p>อัลยูซีย์ชี้ให้เห็นว่าถึงแม้วิชาต่างๆ เช่น ตัฟซีร หะดีษ และฟิกฮ์ พร้อมด้วยคำศัพท์เฉพาะและระบบการจัดระเบียบของวิชาเหล่านี้ จะเกิดขึ้นในยุคหลังจากบรรพชน แต่สมัยศอหาบะฮ์เองก็ได้อธิบายอัลกุรอาน มีการเล่าหะดีษ และวางรากฐานของฟิกฮ์ไว้แล้ว เช่นเดียวกับที่พวกเขามีการโต้แย้ง ผ่านการใช้เหตุผล และแสดงหลักฐานสนับสนุนข้อโต้แย้ง ดังนั้นจึงไม่มีเหตุผลที่จะยอมรับวิชาเหล่านี้ แต่กลับปฏิเสธวิชาตรรกศาสตร์</p>
+
+      <h2 class="article-h2">ความจำเป็นของตรรกศาสตร์</h2>
+
+      <p>อัลยูซีย์ชี้ว่า ความจำเป็นของตรรกศาสตร์ในยุคปัจจุบันเกิดจากความแตกต่างและข้อโต้แย้งมากมายระหว่างนักวิชาการ เขากล่าวว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وكان كل ما ذكر من الفنون وغيرها دائراً بين إدراك أمرين، والحكم بأحدهما على الآخر، وكان الفكر عند الحكم ليس يصيب دائماً، بدليل مناقضة بعض العقلاء بعضا في مقتضى أفكارها. فاحتيج إلى ما يوصل إلى الإدراك الصحيح ويميز صحيح الفكر من سقيمه. فدونوا علم المنطق وعربوه، لتنتفع به هذه الأمة المشرفة العربية إذ هو المهمين على الأفكار والفهوم والرئيس على سائر العلوم وكان من العلوم التي استخرجتها اليونان</blockquote>
+      <p class="ar-translation">“ศาสตร์ต่างๆ ที่กล่าวถึง รวมถึงศาสตร์อื่นๆ ล้วนหมุนเวียนอยู่ระหว่างการเข้าใจสองสิ่งและการตัดสินว่าสิ่งใดถูกต้องมากกว่ากัน แต่การคิดในขณะที่ตัดสินนั้นไม่ได้แม่นยำเสมอไป ดังที่เห็นได้จากความขัดแย้งของผู้มีปัญญาบางคน จึงเกิดความจำเป็นที่จะต้องมีสิ่งที่ช่วยนำไปสู่ความเข้าใจที่ถูกต้องและสามารถแยกแยะระหว่างความคิดที่ถูกต้องและผิดพลาด ดังนั้นจึงได้มีการบันทึกวิชาตรรกศาสตร์และถ่ายทอดเป็นภาษาอาหรับ เพื่อให้ประชาชาติอันทรงเกียรติของชาวอาหรับได้ใช้ประโยชน์จากวิชานี้ ซึ่งเป็นศาสตร์ที่ควบคุมความคิดและความเข้าใจ และเป็นแกนหลักของศาสตร์ทั้งปวง ซึ่งตรรกศาสตร์นั้นเป็นหนึ่งในศาสตร์ที่ชาวกรีกได้พัฒนาขึ้นมา”</p>
+
+      <p>ท่าทีทั่วไปที่อัลยูซีย์ได้แสดงไว้ในงานเขียนของเขาคือ ศาสตร์ทั้งหลาย โดยตัวของมันเองนั้นเป็นสิ่งอนุญาตอยู่แล้ว โดยเขากล่าวไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فنحن لا نلتفت إلى من يحرّم علم شيء منها، فإن العلم في نفسه غذاء العقل ونزهة الروح وصفة الكمال، وإنما تختلف ثمرته في الشرف والغاية، وتختلف الأحكام بحسب النية. حتى إن علم السحر الذي يحرم استعماله بإجماع لو تعلّمه أحد ليؤذي به معصوم الدم كان تعلّمه حراماً كعلمه لو تعلّمه لمجرد أن يعرفه فيميز بينه وبين المعجزة مع ما تقدّم من الفوائد كان تعلّمه جائزاً أو واجباً كما مر. وعلم الأداب الذي هو جائز بإجماع لو تعلّمه أحد للقصد أن ينبغ في الشعر، فيهجو من لا يجوز هجوه أو يمدح من لا يجوز مدحه كان تعلّمه حراماً في حقه. (وإنما الأعمال بالنيات)</blockquote>
+      <p class="ar-translation">“เรามิได้ใส่ใจต่อผู้ที่ห้ามการเรียนรู้ศาสตร์ใดๆ เพราะศาสตร์ในตัวเองนั้นเป็นอาหารของปัญญา เป็นความเพลิดเพลินของจิตวิญญาณ และเป็นคุณลักษณะแห่งความสมบูรณ์ แต่ผลลัพธ์ของศาสตร์ต่างๆ ย่อมแตกต่างกันไปในด้านเกียรติและเป้าหมาย และคำตัดสินเกี่ยวกับศาสตร์นั้นๆ ย่อมขึ้นอยู่กับเจตนา แม้แต่วิชาไสยศาสตร์ที่ถูกห้ามใช้งานโดยมติเอกฉันท์ หากมีผู้เรียนรู้มันเพื่อทำร้ายผู้บริสุทธิ์ การเรียนรู้นั้นถือเป็นสิ่งต้องห้าม แต่หากผู้เรียน เรียนเพื่อแยกแยะระหว่างไสยศาสตร์กับมัวะอ์ญีซาต การเรียนรู้นั้นจะถือว่าอนุญาตหรืออาจถึงขั้นจำเป็นตามสถานการณ์ วิชาวรรณคดี ซึ่งโดยทั่วไปถือว่าอนุญาตตามมติเอกฉันท์ หากมีผู้เรียนรู้หวังเพื่อที่จะสร้างชื่อเสียงในบทกวี โดยมีเจตนาจะกล่าวร้ายผู้ที่ไม่ควรถูกกล่าวร้าย หรือสรรเสริญผู้ที่ไม่สมควรถูกสรรเสริญ การเรียนรู้นั้น จะถือเป็นสิ่งต้องห้ามสำหรับเขา เพราะ ‘แท้จริงแล้ว การกระทำทั้งหลายขึ้นอยู่กับเจตนา’”</p>
+
+      <p>การวินิจฉัยของอัลยูซีย์ จึงชี้ให้เห็นว่าความชอบธรรมของการเรียนรู้วิชาต่างๆ ไม่ได้อยู่ที่ตัววิชานั้นเอง แต่ขึ้นอยู่กับเจตนาและวัตถุประสงค์ในการใช้งาน</p>
+
+      <p>ในคำอธิบายของอัลยูซีย์ เขาได้วิจารณ์คำกล่าวของอัซซะยูฏีย์ที่โจมตีวิชาตรรกศาสตร์ โดยอัซซะยูฏีย์ระบุว่า “ตรรกศาสตร์ไม่มีประโยชน์ทั้งในด้านศาสนาและโลกียะ เพราะตั้งอยู่บนนามธรรมที่ไม่มีตัวตนในโลกแห่งความจริง เป็นสิ่งที่สัมผัสไม่ได้” อัลยูซีย์ตอบโต้คำกล่าวนี้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وأما قوله: إن الكليات لا وجود لها في الخارج فأعجب أن يصدر هذا الكلام احتجاجا في نحو هذا المقام عن عاقل فضلا عن فاضل، وما كنت أحسبه بهذه المنزلة، ولقد كنت أراه رحمه الله تعالى يرتفع عنها....، وهذا الكلام ينبئ أنه لم يشم رائحة المعقول ، وتلزمه عليه شناعات، منها: أن هذا الكلام الذي استدل به يستدعي ويقتضي أنه يزعم أن جميع العلوم التي ينتحلها خارجية، أي: محسوسة وهذا مع بداهة بطلانه ومضاهاته قول السمنية وكونه من قبيل السوفسطائية، يقتضي أنه لم يدرك قانونا فقهيا ولا أصوليا ولا نحويا، ولا غير ذلك، وأن جميع ما يدركه منها جزئيات خارجية إذ لو كان غير ذلك لكان مما يفيد المنطق فتكون له ثمرة</blockquote>
+      <p class="ar-translation">“สำหรับคำกล่าวที่ว่า “ความคิดรวบยอดนั้นเป็นเพียงแค่นามธรรม ไม่สามารถสัมผัสได้” และสิ่งอื่นที่เขากล่าวไว้ นั้นน่าแปลกใจยิ่งนักที่คำกล่าวนี้จะถูกยกขึ้นมาเป็นข้อโต้แย้งในบริบทเช่นนี้จากผู้ที่มีสติปัญญา นับประสาอะไรกับผู้มีความรู้ ข้าพเจ้าไม่เคยคาดคิดเลยว่าผู้กล่าวจะอยู่ในระดับนี้ ข้าคิดเสมอว่าเขาจะยกระดับความเข้าใจของตนให้สูงกว่านี้ คำพูดนี้บ่งบอกว่าเขาไม่เคยสัมผัสกับแก่นแท้ของความรู้ทางปัญญาเลยแม้แต่น้อย คำกล่าวนี้ยังทำให้เขาต้องเผชิญกับข้อกล่าวหาหลายประการ หนึ่งในนั้นคือ การกล่าวเช่นนี้บ่งชี้และทำให้เห็นได้ว่า เขาอ้างว่าความรู้ทั้งหมดที่เขาเชื่อถือได้เป็นเพียงความรู้ที่รับรู้ได้จากประสาทสัมผัสเท่านั้น ซึ่งความคิดเช่นนี้นอกจากจะผิดโดยธรรมชาติแล้ว ยังคล้ายคลึงกับแนวคิดของพวก “สมณะ” อีกทั้งยังมีลักษณะใกล้เคียงกับแนวคิดของกลุ่มโซฟิสต์ (ที่เชื่อว่าความงามเกิดจากความพึงพอใจของคนแต่ละคน ซึ่งเราจะรู้สึกพอใจได้ ต่อเมื่อภาพของสิ่งนั้นได้ผ่านมาทางอายตนะภายใน คือ ตา หู จมูก ลิ้น กาย เพราะฉะนั้นความงาม จึงไม่มีความจริงในตัวเอง) คำกล่าวนั้นยังสื่อว่า เขาไม่สามารถเข้าใจหลักการทางกฎหมาย (ฟิกฮ์) หลักการรากฐานของกฎหมาย (อุซูล) หรือหลักไวยากรณ์ และความรู้อื่นๆ ได้อย่างลึกซึ้ง และความรู้ทั้งหมดที่เขามีคือองค์ความรู้ที่เชื่อมโยงกับสิ่งที่จับต้องได้เท่านั้น หากไม่เป็นเช่นนั้น การศึกษาตรรกศาสตร์ย่อมแสดงให้เห็นผลลัพธ์ที่มีคุณค่าหรือประโยชน์ได้”</p>
+
+      <p>อัลยูซีย์ยังกล่าวเพิ่มเติมว่า หากยึดตามมุมมองของอัซซะยูฏีย์ นั่นหมายความว่าเขาไม่มีความเข้าใจในวิชากฎหมายอิสลาม รากฐานของกฎหมายหรือไวยากรณ์อย่างแท้จริง และทุกความรู้ของเขาจะถูกจำกัดอยู่แค่การรับรู้ในระดับเฉพาะเจาะจงที่ปรากฏภายนอกและสัมผัสได้เท่านั้น ดังนั้น อัลยูซีย์จึงมองว่า คำกล่าวของอัซซะยูฏีย์ที่ว่า ตรรกศาสตร์ไม่มีประโยชน์เพราะเกี่ยวข้องกับคำนิยามที่เป็นเพียงนามธรรม เป็นความเข้าใจที่ผิดพลาด และหากยึดตามมุมมองนี้ จะนำไปสู่ข้อสรุปที่ว่าไม่มีศาสตร์ใดมีประโยชน์เลย ซึ่งจะทำให้ความรู้ทั้งหมดของอัซซะยูฏีย์ถูกจำกัดอยู่เพียงการรับรู้ในระดับพื้นฐานและไม่มีความลึกซึ้ง</p>
+
+      <h2 class="article-h2">สรุป</h2>
+      <ol class="article-summary">
+        <li><strong>ศาสตร์ที่หล่อหลอมในอารยธรรมอิสลาม:</strong> ตรรกศาสตร์ถูกแปลและพัฒนาในโลกอิสลามตั้งแต่ยุคอุมัยยะฮ์และเฟื่องฟูในยุคอับบาซียะฮ์ โดยอัลฟารอบีย์ได้รับการยกย่องว่าเป็น “อริสโตเติลแห่งโลกอิสลาม”</li>
+        <li><strong>สามทัศนะของนักนิติศาสตร์:</strong> ตามที่อัลอัคฎอรีย์รายงาน ความเห็นต่อการศึกษาตรรกศาสตร์แบ่งเป็นสามแนวทาง คือ ห้าม, ควรเรียนให้ทราบ และอนุญาตสำหรับผู้มีพื้นฐานมั่นคงในซุนนะฮ์และกุรอาน</li>
+        <li><strong>ฝ่ายที่ห้ามและฝ่ายที่ผ่อนปรน:</strong> อัซซุยูฏีย์ถือว่าตรรกศาสตร์เป็นสิ่งต้องห้าม ขณะที่อัซซุบกีย์ อิบนุ อาบิดีน และอัชชัรวานีย์ชี้ว่าตรรกศาสตร์ที่บริสุทธิ์จากปรัชญาเป็นที่อนุญาต และอาจเป็นฟัรฎุกิฟายะฮ์หรือฟัรฎุอัยน์เมื่อจำเป็น</li>
+        <li><strong>การถกเถียงในศตวรรษที่ 10-13 ฮิจเราะฮ์:</strong> ไม่เคยมีฉันทามติชัดเจน นักวิชาการสายหะนะฟียะฮ์อย่างอัลฮะมาวีย์และนักวิชาการออตโตมันยังคงศึกษาและปกป้องตรรกศาสตร์ของนักปราชญ์มุสลิม</li>
+        <li><strong>การโต้แย้งของอัลยูซีย์:</strong> อัลยูซีย์โต้แย้งว่าศาสตร์โดยตัวของมันเองเป็นสิ่งอนุญาต คำตัดสินขึ้นอยู่กับเจตนา และตรรกศาสตร์เป็นเครื่องมือจำเป็นในการปกป้องความเชื่อและแยกแยะความจริงจากความเท็จ พร้อมวิจารณ์ทัศนะของอัซซะยูฏีย์อย่างคมคาย</li>
+      </ol>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ตรรกศาสตร์ในสายธารอารยธรรมอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/tarikh/logic-in-islamic-civilization.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">القرآن الكريم، سورة الإسراء (17)، الآية 35. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li>صاعد الأندلسي، طبقات الأمم.</li>
+        <li>الأخضري، عبد الرحمن، السلم المرونق في علم المنطق.</li>
+        <li>السيوطي، جلال الدين، صون المنطق والكلام عن فني المنطق والكلام.</li>
+        <li>السبكي، تقي الدين، فتاوى السبكي.</li>
+        <li>ابن عابدين، محمد أمين، رد المحتار على الدر المختار (حاشية ابن عابدين).</li>
+        <li>الشرواني، عبد الحميد، حواشي الشرواني على تحفة المحتاج.</li>
+        <li>ابن نجيم، زين الدين، الأشباه والنظائر.</li>
+        <li>الحموي، أحمد بن محمد، غمز عيون البصائر شرح الأشباه والنظائر.</li>
+        <li>طاشكبري زاده، أحمد، مفتاح السعادة ومصباح السيادة في موضوعات العلوم.</li>
+        <li>حاجي خليفة، مصطفى بن عبد الله، كشف الظنون عن أسامي الكتب والفنون.</li>
+        <li>اليوسي، الحسن بن مسعود، حاشية اليوسي على شرح كبرى السنوسي.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260619a" charset="UTF-8"></script>
+</body>
+</html>

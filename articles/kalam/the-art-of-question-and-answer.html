@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ศิลปะแห่งการถามตอบในองค์ความรู้อิสลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="ศิลปะแห่งการถามตอบในมุมมองของอิหม่ามอัชชาฏิบีย์ ทั้งประเภทของคำถาม สถานะของการตอบ และกรณีที่การตั้งคำถามเป็นสิ่งน่าตำหนิในศาสนาอิสลาม">
+<meta name="keywords" content="ศิลปะการถามตอบ, อิลมุลญะดัล, อัชชาฏิบีย์, อัลมุวาฟาก้อต, การโต้แย้งเชิงวิชาการ, กะลาม, อุศูลุลฟิกฮ์">
+<meta name="author" content="มัรกัส อัลอิมาม อัลอัชอะรีย์">
+
+<meta property="og:title" content="ศิลปะแห่งการถามตอบในองค์ความรู้อิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="เมื่อใดการตั้งคำถามคือบ่อเกิดแห่งความรู้ และเมื่อใดที่มันกลายเป็นสิ่งน่าตำหนิ บทวิเคราะห์จาก อัลมุวาฟาก้อต ของอิหม่ามอัชชาฏิบีย์">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/kalam/the-art-of-question-and-answer">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/kalam/the-art-of-question-and-answer">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ศิลปะแห่งการถามตอบในองค์ความรู้อิสลาม",
+  "inLanguage": "th",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "author": { "@type": "Organization", "name": "มัรกัส อัลอิมาม อัลอัชอะรีย์" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/kalam/the-art-of-question-and-answer"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
+.aya-block .block-ar.is-1line,
+.hadith-block .block-ar.is-1line { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="the-art-of-question-and-answer">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/kalam.html" class="article-feature-eyebrow">กะลาม / ฟิกฮ์</a>
+      <h1 class="article-feature-title">ศิลปะแห่งการถามตอบในองค์ความรู้อิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ท่านอิหม่ามอัชชาฏิบีย์ท่านได้ระบุเอาไว้ในตำรา “อัลมุวาฟาก้อต” ของท่านในหัวข้อเรื่อง <span class="ar-inline" lang="ar" dir="rtl">أحكام السؤال والجواب وهو علم الجدل</span> เอาไว้ว่า:</p>
+
+      <p>ปราชญ์อิสลามทั้งในยุคก่อนและยุคหลังได้รจนาตำราเอาไว้มากมายในศาสตร์ที่ว่าด้วยหลักเกณฑ์ของการตั้งคำถามและการตอบ ซึ่งเป็นที่รู้จักในนาม “ศิลปะแห่งการโต้แย้งเชิงวิชาการ” (<span class="ar-inline" lang="ar" dir="rtl">عِلْمُ الْجَدَلِ</span>) ในที่นี้ข้าพเจ้าจะขอนำเสนอประเด็นที่สอดคล้องกับเจตนารมณ์ของหนังสือเล่มนี้ (ในบรรดาตำราที่มีชื่อเสียงซึ่งได้รับการตีพิมพ์ในศาสตร์แขนงนี้ (ศิลปะแห่งการโต้แย้งเชิงวิชาการ) สามารถยกตัวอย่างได้ดังนี้คือ “อัลกาฟิยะฮ์ ฟิลญะดัล” (<span class="ar-inline" lang="ar" dir="rtl">الكافية في الجدل</span>) ของท่านอัลญุวัยนีย์, “อัลญะดัล อะลา เฏาะรีกอติลฟุเกาะฮาอ์” (<span class="ar-inline" lang="ar" dir="rtl">كتاب الجدل على طريقة الفقهاء</span>) ของท่านอิบนุ อะกีล อัลฮัมบะลีย์, “อัลมินฮาจญ์ ฟี ตัรตีบ อัลหิญาจญ์” (<span class="ar-inline" lang="ar" dir="rtl">المنهاج في ترتيب الحجاج</span>) ของท่านอัลบาญีย์, “อัลมะอูนะฮ์ ฟิลญะดัล” (<span class="ar-inline" lang="ar" dir="rtl">المعونة في الجدل</span>) ของท่านอัชชีรอซีย์, “อะลัม อัลญะซัล อะลาอิลมิลญะดัล (<span class="ar-inline" lang="ar" dir="rtl">علم الجذل على علم الجدل</span>) ของท่านอัฏฏูฟีย์)</p>
+
+      <h2 class="article-h2">ประเด็นที่หนึ่ง: ประเภทของคำถามและสถานะของการตอบ</h2>
+
+      <p>โดยพื้นฐานแล้ว การตั้งคำถามสามารถจำแนกได้ตามสถานะของผู้ถามและผู้ถูกถาม กล่าวคือ ผู้ถามอาจเป็น “ผู้รู้” ซึ่งหมายถึงผู้มีความสามารถในการวินิจฉัยปัญหาศาสนา (มุจญ์ตะฮิด) หรืออาจเป็น “ผู้ที่ไม่ใช่ผู้รู้” ซึ่งหมายถึงผู้ปฏิบัติตาม (มุก็อลลิด) ในขณะเดียวกัน ผู้ที่ถูกถามก็อาจเป็นผู้รู้หรือไม่ใช่ผู้รู้ก็ได้ ด้วยเหตุนี้จึงเกิดเป็น 4 กรณี ดังนี้:</p>
+
+      <p><strong>กรณีที่หนึ่ง: ผู้รู้ถามผู้รู้</strong></p>
+
+      <p>การตั้งคำถามในลักษณะนี้เกิดขึ้นได้หลายจุดประสงค์อันชอบด้วยหลักการ เช่น เพื่อยืนยันความถูกต้องในสิ่งที่ตนเองมีความรู้อยู่แล้ว, เพื่อขจัดข้อคลุมเครือที่เกิดขึ้นในใจ, เพื่อทบทวนความรู้ที่เกรงว่าจะลืมเลือน, เพื่อชี้แนะข้อผิดพลาดของผู้ถูกถามอย่างนุ่มนวลในรูปแบบของการขอความรู้, เพื่อถามในฐานะตัวแทนของผู้เรียนคนอื่นๆ ที่อยู่ในวงสนทนา, เพื่อเสาะแสวงหาความรู้เพิ่มเติมในส่วนที่ตนอาจยังไม่รู้</p>
+
+      <p><strong>กรณีที่สอง: ผู้เรียนถามผู้เรียนด้วยกัน</strong></p>
+
+      <p>เกิดขึ้นได้หลายวัตถุประสงค์เช่นกัน อาทิเพื่อทบทวนความรู้ที่ได้ฟังมาร่วมกัน, เพื่อสอบถามในสิ่งที่ตนไม่ได้ฟัง แต่เพื่อนผู้ถูกถามได้ฟังมา, เพื่อฝึกฝนและขัดเกลาความเข้าใจในประเด็นต่างๆ ก่อนที่จะไปพบผู้รู้, เพื่ออาศัยมุมมองของเพื่อนในการทำความเข้าใจสิ่งที่ผู้รู้ได้สอนไป</p>
+
+      <p><strong>กรณีที่สาม: ผู้รู้ถามผู้เรียน</strong></p>
+
+      <p>มีเป้าหมายได้หลายประการ เช่น เพื่อชี้ให้เห็นถึงประเด็นที่ยังคลุมเครือและกระตุ้นให้ผู้เรียนหาทางแก้ไข, เพื่อทดสอบระดับสติปัญญาและความเข้าใจของผู้เรียน, เพื่อขอความช่วยเหลือจากความเข้าใจของผู้เรียน หากผู้เรียนคนนั้นมีความเข้าใจที่เฉียบแหลมเป็นพิเศษ, เพื่อกระตุ้นให้ผู้เรียนนำความรู้ที่มีอยู่แล้วไปต่อยอดสู่ความรู้ใหม่ที่ยังไม่รู้</p>
+
+      <p><strong>กรณีที่สี่: ผู้เรียนถามผู้รู้</strong> (ซึ่งเป็นรากฐานและรูปแบบหลักของการเรียนรู้)</p>
+
+      <p>มีเป้าหมายสำคัญคือ การแสวงหาความรู้ในสิ่งที่ตนยังไม่รู้</p>
+
+      <p>สำหรับสามกรณีแรกนั้น การตอบคำถามถือเป็นสิทธิที่พึงกระทำ หากผู้ถูกถามมีความรู้ในเรื่องนั้น และไม่มีอุปสรรคใดๆ ที่ชอบด้วยหลักศาสนามาขัดขวาง แต่หากไม่รู้ ก็พึงยอมรับว่าตนเองไม่สามารถตอบได้</p>
+
+      <p>แต่ในกรณีที่สี่ (ผู้เรียนถามผู้รู้) การตอบไม่ได้เป็นสิ่งที่จำเป็นเสมอไป แต่มีรายละเอียดที่ต้องพิจารณาคือ</p>
+
+      <p>- <strong>จำเป็นต้องตอบ:</strong> เมื่อผู้รู้มีความรู้ในเรื่องที่ถูกถาม และการตอบนั้นเป็นสิ่งจำเป็นสำหรับสถานการณ์ที่เกิดขึ้นจริง (นาซิละฮ์) หรือเป็นคำถามเกี่ยวกับตัวบทหลักฐานที่ชัดเจน อีกทั้งผู้ถามต้องมีสติปัญญาที่สามารถรองรับคำตอบได้ คำถามนั้นต้องไม่นำไปสู่การเจาะลึกเกินความจำเป็นหรือความพยายามที่ไร้ประโยชน์ และเป็นเรื่องที่สามารถนำไปสู่การปฏิบัติจริงในทางศาสนาได้</p>
+
+      <p>- <strong>อาจไม่จำเป็นต้องตอบ:</strong> ในกรณีที่ผู้รู้ท่านนั้นไม่ใช่คนเดียวที่สามารถตอบได้ หรือคำถามนั้นเป็นประเด็นที่ต้องอาศัยการวินิจฉัย (อิจญ์ติฮาด) ซึ่งไม่มีตัวบทระบุไว้โดยตรง</p>
+
+      <p>- <strong>อาจไม่อนุญาตให้ตอบ:</strong> หากสติปัญญาของผู้ถามไม่สามารถทำความเข้าใจคำตอบได้ หรือคำถามนั้นมีลักษณะเจาะลึกเกินขอบเขต เป็นการตั้งคำถามเพื่อเอาชนะ หรือมีลักษณะของการคัดค้านเชิงโต้เถียง</p>
+
+      <h2 class="article-h2">ประเด็นที่สอง: การตั้งคำถามมากเกินไปเป็นสิ่งที่น่าตำหนิ</h2>
+
+      <p>การตั้งคำถามอย่างพร่ำเพรื่อเป็นสิ่งที่ถูกตำหนิในศาสนาอิสลาม มีหลักฐานยืนยันอย่างมากมายทั้งจากคัมภีร์อัลกุรอาน วจนะของท่านนบีและคำกล่าวของบรรพชนผู้ทรงธรรม (สลัฟ อัศศอลิห์)</p>
+
+      <p>อัลลอฮ์ทรงตรัสไว้ว่า:</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تَسْـَٔلُوا۟ عَنْ أَشْيَآءَ إِن تُبْدَ لَكُمْ تَسُؤْكُمْ وَإِن تَسْـَٔلُوا۟ عَنْهَا حِينَ يُنَزَّلُ ٱلْقُرْءَانُ تُبْدَ لَكُمْ عَفَا ٱللَّهُ عَنْهَا ۗ وَٱللَّهُ غَفُورٌ حَلِيمٌ</p>
+      </div>
+      <p>{โอ้บรรดาผู้ศรัทธาเอ๋ย! พวกเจ้าอย่าได้ถามถึงสิ่งต่างๆ ซึ่งหากมันถูกเปิดเผยแก่พวกเจ้าแล้ว ก็จะทำให้พวกเจ้าเดือดร้อน...}<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>มีรายงานในหะดีษว่า ท่านนบีได้อ่านอายะฮ์ที่ว่า “และสิทธิของอัลลอฮ์ที่มีเหนือมนุษย์นั้น คือการทำหัจญ์ ณ บัยตุลลอฮ์...” (อาลิ อิมรอน: 97) ชายคนหนึ่งจึงถามขึ้นว่า “โอ้ท่านเราะสูลุลลอฮ์ ต้องทำทุกปีหรือขอรับ?” ท่านนบีเมินหน้าหนี แต่ชายคนนั้นก็ยังถามซ้ำเป็นครั้งที่สาม ท่านนบีก็ยังคงเมินเฉย จนกระทั่งครั้งที่สี่ ท่านจึงกล่าวว่า “ขอสาบานด้วยผู้ซึ่งชีวิตของฉันอยู่ในพระหัตถ์ของพระองค์ หากฉันตอบว่า ‘ใช่’ มันก็จะกลายเป็นข้อบังคับ และหากมันเป็นข้อบังคับ พวกท่านก็จะทำไม่ได้ และหากพวกท่านทำไม่ได้ พวกท่านก็จะปฏิเสธศรัทธา ดังนั้น จงปล่อยฉันไว้ในสิ่งที่ฉันได้ปล่อยพวกท่านไว้เถิด”</p>
+
+      <p>วจนะของท่านนบีหลายบทสะท้อนถึงการไม่ส่งเสริมให้ตั้งคำถามในเรื่องที่ไม่จำเป็น ท่านกล่าวว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">إنَّ اللَّهَ تَعَالَى فَرَضَ فَرَائِضَ فَلَا تُضَيِّعُوهَا، وَحَدَّ حُدُودًا فَلَا تَعْتَدُوهَا، وَحَرَّمَ أَشْيَاءَ فَلَا تَنْتَهِكُوهَا، وَسَكَتَ عَنْ أَشْيَاءَ رَحْمَةً لَكُمْ غَيْرَ نِسْيَانٍ فَلَا تَبْحَثُوا عَنْهَا</p>
+      </div>
+      <p>“แท้จริง อัลลอฮ์ได้ทรงกำหนดสิ่งที่เป็นฟัรฎู (ข้อบังคับ) ไว้แล้ว พวกท่านก็อย่าได้ละเลยมัน และได้ทรงห้ามสิ่งต่างๆ ไว้แล้ว พวกท่านก็อย่าได้ล่วงละเมิดมัน และได้ทรงกำหนดขอบเขตไว้แล้ว พวกท่านก็อย่าได้ก้าวล้ำ และได้ทรงนิ่งเงียบ (ไม่บัญญัติ) ในบางสิ่งไว้ด้วยความเมตตาต่อพวกท่าน ไม่ใช่เพราะการหลงลืม ดังนั้น พวกท่านก็อย่าได้ค้นหาหรือไต่ถามถึงมันเลย”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>ท่านอิบนุ อับบาส กล่าวว่า: “ฉันไม่เคยเห็นกลุ่มชนใดที่ดีงามไปกว่าบรรดาอัครสาวกของท่านนบีมุฮัมมัด ﷺ พวกเขาไม่ได้ถามท่านนบีเลยเว้นแต่เพียง 13 คำถามเท่านั้น จนกระทั่งท่านเสียชีวิต ซึ่งทั้งหมดล้วนอยู่ในอัลกุรอาน เช่น ‘และพวกเขาจะถามเจ้าเกี่ยวกับเรื่องระดู...’ หรือ ‘และพวกเขาจะถามเจ้าเกี่ยวกับเด็กกำพร้า...’ พวกเขาไม่ถามสิ่งใดเลยนอกจากสิ่งที่เป็นประโยชน์แก่พวกเขา”</p>
+
+      <p>นอกจากนี้ ท่านนบียังได้เตือนว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">إِنَّ أَعْظَمَ الْمُسْلِمِينَ جُرْمًا مَنْ سَأَلَ عَنْ شَىْءٍ لَمْ يُحَرَّمْ، فَحُرِّمَ مِنْ أَجْلِ مَسْأَلَتِهِ</p>
+      </div>
+      <p>“แท้จริง อาชญากรรมที่ใหญ่หลวงที่สุดของมุสลิมที่มีต่อมุสลิมด้วยกันคือ การที่คนหนึ่งถามถึงสิ่งที่ยังไม่ถูกห้าม แล้วสิ่งนั้นก็กลายเป็นสิ่งต้องห้ามสำหรับพวกเขาเพราะคำถามของเขา”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+
+      <p>และในอีกเหตุการณ์หนึ่ง ท่านนบีได้ลุกขึ้นยืนในสภาพที่เห็นร่องรอยแห่งความโกรธบนใบหน้าของท่าน ท่านกล่าวถึงวันสิ้นโลกและเหตุการณ์ร้ายแรงต่างๆ ก่อนจะประกาศว่า “ผู้ใดอยากจะถามสิ่งใด ก็จงถามเถิด ขอสาบานต่ออัลลอฮ์ พวกท่านจะไม่ถามฉันถึงสิ่งใด เว้นแต่ฉันจะบอกพวกท่าน ตราบที่ฉันยังยืนอยู่ตรงนี้” บรรดาสาวกต่างร่ำไห้เมื่อได้ยินเช่นนั้น ขณะที่ท่านนบียังคงกล่าวซ้ำๆ ว่า “จงถามฉันมา” จนกระทั่งท่านอับดุลลอฮ์ได้ลุกขึ้นถามว่า “ใครคือพ่อของฉัน?” ท่านนบีตอบว่า “พ่อของเจ้าคือหุซาฟะฮ์” เมื่อท่านนบียังคงกล่าวว่า “จงถามฉันมา” อย่างต่อเนื่อง ท่านอุมัร บิน อัลค็อฏฏอบ จึงได้คุกเข่าลงแล้วกล่าวว่า “โอ้ท่านเราะสูลุลลอฮ์! เราพึงพอใจแล้วที่มีอัลลอฮ์เป็นพระเจ้า มีอิสลามเป็นศาสนา และมีมุฮัมมัดเป็นนบี” ท่านนบีจึงนิ่งเงียบไป เหตุการณ์นี้ชี้ให้เห็นว่า การที่ท่านนบีท้าทายให้ถามนั้นเกิดขึ้นในภาวะที่ท่านโกรธ เพื่อเป็นการตักเตือนให้พวกเขาเห็นถึงผลเสียของการตั้งคำถามพร่ำเพรื่อ ซึ่งสอดคล้องกับอายะฮ์ที่ว่า “...หากมันถูกเปิดเผยแก่พวกเจ้าแล้ว ก็จะทำให้พวกเจ้าเดือดร้อน...”</p>
+
+      <p>เช่นเดียวกับเรื่องราวของบนีอิสรออีลกับวัว ที่พวกเขาทำให้เรื่องง่ายกลายเป็นเรื่องยากด้วยคำถามของตนเอง จนกระทั่งอัลลอฮ์ทรงทำให้มันยากสำหรับพวกเขา</p>
+
+      <p>ด้วยเหตุนี้ บรรพชนผู้ทรงธรรมจึงรังเกียจการตั้งคำถามในสิ่งที่ยังไม่เกิดขึ้น ท่านอุมัร บิน อัลค็อฏฏอบ เคยสาปแช่งผู้ที่ถามถึงสิ่งที่ยังไม่เกิดขึ้น ท่านนบีเองก็ห้ามปราม “อัลอุฆลูฏอต” (<span class="ar-inline" lang="ar" dir="rtl">الأغلوطات</span>) ซึ่งถูกอธิบายว่าหมายถึง “ปัญหาที่ซับซ้อนและยุ่งยาก”</p>
+
+      <p>อิหม่ามมาลิก บิน อะนัสเองก็ไม่โปรดปรานการตั้งคำถามที่มากเกินไป จนบรรดาลูกศิษย์ของท่านต่างเกรงใจที่จะถาม</p>
+
+      <p>อะสัด บิน อัลฟุรอต เล่าว่า “บรรดาลูกศิษย์ของอิหม่ามมาลิกมักจะให้ฉันเป็นคนถามท่าน เมื่อท่านตอบแล้ว พวกเขาก็จะบอกให้ฉันถามต่อว่า ‘แล้วถ้าหากเป็นเช่นนั้นเล่า?’ จนวันหนึ่งท่านรู้สึกอึดอัดและกล่าวกับฉันว่า ‘นี่มันคำถามลูกโซ่ไม่รู้จักจบสิ้น ถ้าเจ้าต้องการแนวทางนี้ ก็จงไปที่อิรักเถิด’” ที่เป็นเช่นนี้เพราะอิหม่ามมาลิกรังเกียจแนวทางการศึกษาฟิกฮ์ของชาวอิรัก ที่มักจะเจาะลึกในประเด็นสมมติและแตกแขนงปัญหาออกไปอย่างมากมาย</p>
+
+      <p>ดังนั้น การตั้งคำถามที่มากเกินไปและการสืบค้นปัญหาต่างๆ ด้วยการคาดการณ์ทางสติปัญญาเป็นสิ่งที่ถูกตำหนิ บรรดาสาวกของท่านนบีได้รับบทเรียนในเรื่องนี้จนพวกเขาละเว้นจากการถาม จนกระทั่งพวกเขาปรารถนาให้มีชาวอาหรับชนบทที่ฉลาดๆ เดินทางมาเพื่อจะได้ถามท่านนบี แล้วพวกเขาจะได้นั่งฟังและเรียนรู้จากคำตอบนั้น ดังที่ปรากฏในหะดีษของญิบรีลที่มาในร่างมนุษย์เพื่อถามท่านนบีเกี่ยวกับอิสลาม อีมาน และอิห์สาน เพื่อที่บรรดาสาวกจะได้เรียนรู้ในสิ่งที่พวกเขาไม่กล้าถามนั่นเอง</p>
+
+      <h2 class="article-h2">สิบกรณีที่การตั้งคำถามเป็นสิ่งน่ารังเกียจ</h2>
+
+      <p>จากที่กล่าวมาทั้งหมด สามารถสรุปได้ว่ามีสถานการณ์หลายประการที่การตั้งคำถามเป็นสิ่งน่ารังเกียจ (มักรูฮ์) ในที่นี้จะขอยกตัวอย่าง 10 กรณี ดังนี้:</p>
+
+      <p><strong>1. การถามในสิ่งที่ไม่เป็นประโยชน์ต่อศาสนา</strong></p>
+
+      <p>เช่น คำถามของอับดุลลอฮ์ บิน หุซาฟะฮ์ ที่ว่า “ใครคือพ่อของฉัน?” หรือดังที่มีรายงานในตัฟสีร (อรรถาธิบายอัลกุรอาน) ว่า มีผู้ถามท่านนบีถึงปรากฏการณ์ของดวงจันทร์ว่า เหตุใดจึงปรากฏให้เห็นเป็นเสี้ยวบางๆ ในตอนแรก แล้วค่อยๆ ขยายใหญ่ขึ้นจนเต็มดวง ก่อนจะค่อยๆ ลดขนาดลงดังเดิม? อัลลอฮ์จึงได้ประทานอายะฮ์ว่า</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">۞ يَسْـَٔلُونَكَ عَنِ ٱلْأَهِلَّةِ ۖ قُلْ هِىَ مَوَٰقِيتُ لِلنَّاسِ وَٱلْحَجِّ ۗ وَلَيْسَ ٱلْبِرُّ بِأَن تَأْتُوا۟ ٱلْبُيُوتَ مِن ظُهُورِهَا وَلَـٰكِنَّ ٱلْبِرَّ مَنِ ٱتَّقَىٰ ۗ وَأْتُوا۟ ٱلْبُيُوتَ مِنْ أَبْوَٰبِهَا ۚ وَٱتَّقُوا۟ ٱللَّهَ لَعَلَّكُمْ تُفْلِحُونَ</p>
+      </div>
+      <p>{พวกเขาจะถามเจ้าเกี่ยวกับจันทร์เสี้ยว จงกล่าวเถิดว่า มันคือเครื่องกำหนดเวลาสำหรับมนุษย์และสำหรับการทำหัจญ์... และไม่ใช่คุณธรรมอันใดที่พวกเจ้าจะเข้าบ้านทางหลังบ้านของมัน...}<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+
+      <p>ซึ่งคำตอบที่พระองค์ประทานให้ไม่ได้อธิบายปรากฏการณ์ทางดาราศาสตร์ แต่ชี้ให้เห็นถึงประโยชน์ในทางศาสนา (เช่น การกำหนดเวลา) และจบลงด้วยการสอนว่า “...และไม่ใช่คุณธรรมอันใดที่พวกเจ้าจะเข้าบ้านทางหลังบ้านของมัน...” ซึ่งเป็นการเบี่ยงประเด็นไปสู่สิ่งที่เป็นประโยชน์มากกว่า</p>
+
+      <p><strong>2. การถามเพื่อเจาะจงในสิ่งที่ได้รับความรู้เพียงพอแล้ว</strong></p>
+
+      <p>เช่น การที่ชายคนหนึ่งถามเรื่องการทำหัจญ์ว่า “ต้องทำทุกปีหรือไม่?” ทั้งที่โองการอัลกุรอานที่ว่า</p>
+
+      <div class="aya-block">
+        <p class="block-ar" lang="ar" dir="rtl">فِيهِ ءَايَـٰتٌۢ بَيِّنَـٰتٌ مَّقَامُ إِبْرَٰهِيمَ ۖ وَمَن دَخَلَهُۥ كَانَ ءَامِنًا ۗ وَلِلَّهِ عَلَى ٱلنَّاسِ حِجُّ ٱلْبَيْتِ مَنِ ٱسْتَطَاعَ إِلَيْهِ سَبِيلًا ۚ وَمَن كَفَرَ فَإِنَّ ٱللَّهَ غَنِىٌّ عَنِ ٱلْعَـٰلَمِينَ</p>
+      </div>
+      <p>{และสิทธิของอัลลอฮ์ที่มีเหนือมนุษย์นั้น คือการทำหัจญ์ ณ บัยตุลลอฮ์ สำหรับผู้ที่สามารถหาหนทางไปยังที่นั้นได้}<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup></p>
+
+      <p>มีความหมายครอบคลุมและไม่ได้เจาะจงจำนวนครั้งอยู่แล้ว หรือกรณีของบนีอิสรออีลที่ถามถึงลักษณะของวัวอย่างละเอียด หลังจากที่ได้รับคำสั่งง่ายๆ ว่า “แท้จริงอัลลอฮ์ทรงบัญชาให้พวกเจ้าเชือดวัวตัวหนึ่ง” (อัลบะเกาะเราะฮ์: 67)</p>
+
+      <p><strong>3. การถามในสิ่งที่ยังไม่มีความจำเป็นต้องรู้ในขณะนั้น</strong></p>
+
+      <p>โดยเฉพาะอย่างยิ่งในเรื่องที่ยังไม่มีบทบัญญัติใดๆ ถูกประทานลงมา ซึ่งสอดคล้องกับวจนะของท่านนบีที่ว่า “จงปล่อยฉันไว้ในสิ่งที่ฉันได้ปล่อยพวกท่านไว้เถิด” และ “...และได้ทรงนิ่งเงียบในบางสิ่งไว้ด้วยความเมตตาต่อพวกท่าน ไม่ใช่เพราะการหลงลืม ดังนั้น พวกท่านก็อย่าได้ค้นหาหรือไต่ถามถึงมันเลย”</p>
+
+      <p><strong>4. การถามถึงปัญหาที่ซับซ้อนและนำไปสู่ความชั่วร้าย</strong></p>
+
+      <p>ดังที่ปรากฏในข้อห้ามเกี่ยวกับ “อัลอุฆลูฏอต” (<span class="ar-inline" lang="ar" dir="rtl">الأغلوطات</span>) หรือคำถามที่ยุ่งยากและซับซ้อน</p>
+
+      <p><strong>5. การถามถึงเหตุผลเบื้องหลังของบทบัญญัติที่เป็นอิบาดะฮ์ล้วนๆ</strong></p>
+
+      <p>คือบทบัญญัติที่สติปัญญาไม่อาจเข้าถึงเหตุผลเบื้องหลังได้ (เรียกว่า ตะอับบุดี) หรือในกรณีที่ผู้ถามไม่มีคุณสมบัติพอที่จะเข้าใจคำตอบนั้น เช่น กรณีที่มีผู้ถามว่าเหตุใดสตรีจึงต้องชดใช้การถือศีลอดที่ขาดไป แต่ไม่ต้องชดใช้การละหมาด (หลังหมดประจำเดือน)</p>
+
+      <p><strong>6. การถามจนถึงขั้นเสแสร้งและเจาะลึกเกินขอบเขต</strong></p>
+
+      <p>ดังที่อัลลอฮ์ตรัสว่า “จงกล่าวเถิด (มุฮัมมัด) ฉันมิได้ขอรางวัลใดๆ จากพวกท่านเพื่อการนี้ และฉันก็ไม่ใช่ผู้หนึ่งในหมู่ผู้เสแสร้งแอบอ้าง” (ศอด: 86) และดังเรื่องราวที่ท่านอุมัร บิน อัลค็อฏฏอบ ได้ห้ามชายคนหนึ่งไม่ให้ถามเจ้าของบ่อน้ำว่ามีสัตว์ร้ายลงไปดื่มน้ำในบ่อหรือไม่ โดยท่านกล่าวกับเจ้าของบ่อว่า “โอ้ท่านเจ้าของบ่อ ไม่ต้องบอกเราหรอก” เพื่อเป็นการตัดความสงสัยที่ไม่จำเป็น</p>
+
+      <p><strong>7. การถามที่แสดงออกถึงการนำทัศนะส่วนตัวมาค้านกับอัลกุรอานและสุนนะฮ์</strong></p>
+
+      <p>ด้วยเหตุนี้ ท่านสะอีด บิน อัลมุซัยยิบ จึงเคยถามชายคนหนึ่งว่า “ท่านเป็นชาวอิรักหรือ?” (ซึ่งเป็นการอ้างถึงสำนักคิดที่เน้นใช้ทัศนะ) และเมื่อมีผู้ถามอิหม่ามมาลิกว่า “หากคนผู้หนึ่งมีความรู้ในสุนนะฮ์ เขาควรจะโต้แย้งเพื่อปกป้องมันหรือไม่?” ท่านตอบว่า “ไม่ แต่เขาพึงแจ้งให้ทราบถึงสุนนะฮ์นั้น หากมันถูกยอมรับก็ดีไป แต่หากไม่ ก็จงนิ่งเงียบเสีย”</p>
+
+      <p><strong>8. การถามถึงโองการที่มีความหมายคลุมเครือ (มุตะชาบิฮาต)</strong></p>
+
+      <p>ดังที่อัลลอฮ์ตรัสว่า “ส่วนบรรดาผู้ที่ในหัวใจของพวกเขามีการเอนเอียงนั้น พวกเขาก็จะติดตามโองการที่มีความหมายคลุมเครือ...” (อาลิ อิมรอน: 7) และดังคำกล่าวอันโด่งดังของอิหม่ามมาลิกเมื่อถูกถามถึงการอิสติวาอ์ของอัลลอฮ์ ท่านตอบว่า “การอิสติวาอ์นั้นเป็นที่รู้กัน ส่วนวิธีการอย่างไรนั้นไม่อาจล่วงรู้ได้ และการถามถึงมันคืออุตริกรรม (บิดอะฮ์)”</p>
+
+      <p><strong>9. การถามถึงความขัดแย้งที่เกิดขึ้นในหมู่บรรพชนผู้ทรงธรรม (สลัฟ)</strong></p>
+
+      <p>ดังเช่นเมื่อท่านอุมัร บิน อับดิลอะซีซ ถูกถามถึงสงครามศิฟฟีน ท่านตอบว่า “นั่นคือโลหิตที่อัลลอฮ์ได้ทรงปกป้องมือของฉันมิให้แปดเปื้อน ดังนั้น ฉันจึงไม่ปรารถนาที่จะให้ลิ้นของฉันต้องเปรอะเปื้อนไปกับมันด้วย”</p>
+
+      <p><strong>10. การถามด้วยเจตนาที่จะดื้อรั้น เพื่อหาทางเอาชนะ หรือเพื่อให้คู่สนทนาจนมุม</strong></p>
+
+      <p>อัลกุรอานได้ตำหนิพฤติกรรมเช่นนี้ไว้ว่า “...และเขาคือคู่ปรปักษ์ที่ฉกาจฉกรรจ์ที่สุด” (อัลบะเกาะเราะฮ์: 204) และ “แต่พวกเขาคือกลุ่มชนที่ชอบโต้เถียง” (อัซซุครุฟ: 58) และในหะดีษก็ระบุว่า “บุรุษที่น่ารังเกียจที่สุด ณ อัลลอฮ์ คือผู้ที่ชอบโต้เถียงอย่างไม่ลดละ”</p>
+
+      <p>นี่คือตัวอย่างส่วนหนึ่งของสถานการณ์ที่การตั้งคำถามเป็นสิ่งน่ารังเกียจ ซึ่งสามารถใช้เป็นบรรทัดฐานเทียบเคียงกับกรณีอื่นๆ ได้ โดยระดับของข้อห้ามนั้นแตกต่างกันไป บางกรณีเป็นเพียงเรื่องน่ารังเกียจเล็กน้อย บางกรณีมีความรุนแรงมากขึ้น บางกรณีอาจถึงขั้นต้องห้าม (หะรอม) และบางกรณีก็เป็นพื้นที่ของการวินิจฉัย (อิจญ์ติฮาด)</p>
+
+      <p>แต่โดยภาพรวมแล้ว สถานการณ์เหล่านี้คือสิ่งที่อยู่ภายใต้ข้อห้ามของการโต้เถียงในเรื่องศาสนา ดังที่มีรายงานว่า “การโต้เถียงในเรื่องอัลกุรอานคือการปฏิเสธศรัทธา” และดังที่อัลลอฮ์ทรงตรัสว่า “และเมื่อเจ้าเห็นบรรดาผู้ที่พูดจาเหลวไหลในโองการของเรา ก็จงผินหลังให้พวกเขา...” (อัลอันอาม: 68)</p>
+
+      <p>ดังนั้น การตั้งคำถามในสถานการณ์เช่นนี้จึงเป็นสิ่งที่ถูกห้ามปราม และการตอบคำถามนั้น ก็ย่อมต้องเป็นไปตามสถานะของข้อห้ามดังกล่าว (คือพึงละเว้นจากการตอบ)</p>
+
+      <h2 class="article-h2">สรุป</h2>
+      <ol class="article-summary">
+        <li><strong>ศาสตร์แห่งการถามตอบ:</strong> อิหม่ามอัชชาฏิบีย์ได้วางหลักเกณฑ์ของการตั้งคำถามและการตอบไว้ใน “อัลมุวาฟาก้อต” โดยถือเป็นแขนงหนึ่งของศิลปะแห่งการโต้แย้งเชิงวิชาการ (อิลมุลญะดัล) ซึ่งปราชญ์ทั้งยุคก่อนและยุคหลังได้รจนาตำราไว้มากมาย</li>
+        <li><strong>สี่กรณีของการถาม:</strong> การตั้งคำถามจำแนกตามสถานะของผู้ถามและผู้ถูกถามเป็น 4 กรณี (ผู้รู้ถามผู้รู้, ผู้เรียนถามผู้เรียน, ผู้รู้ถามผู้เรียน, ผู้เรียนถามผู้รู้) โดยสามกรณีแรกการตอบเป็นสิทธิที่พึงกระทำ แต่กรณีที่สี่มีรายละเอียดของการจำเป็นต้องตอบ อาจไม่จำเป็น หรืออาจไม่อนุญาต</li>
+        <li><strong>ข้อตำหนิการถามพร่ำเพรื่อ:</strong> อัลกุรอาน วจนะของท่านนบี ﷺ และคำกล่าวของบรรพชนผู้ทรงธรรม ล้วนตำหนิการตั้งคำถามอย่างพร่ำเพรื่อในเรื่องที่ไม่จำเป็น โดยเฉพาะเรื่องที่ยังไม่มีบทบัญญัติประทานลงมา</li>
+        <li><strong>สิบกรณีที่น่ารังเกียจ:</strong> มีสถานการณ์อย่างน้อยสิบกรณีที่การตั้งคำถามเป็นสิ่งน่ารังเกียจ (มักรูฮ์) ตั้งแต่การถามในสิ่งไร้ประโยชน์ ไปจนถึงการถามด้วยเจตนาดื้อรั้นเพื่อเอาชนะ ซึ่งระดับของข้อห้ามแตกต่างกันไปตั้งแต่มักรูฮ์เล็กน้อยจนถึงหะรอม</li>
+      </ol>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">มัรกัส อัลอิมาม อัลอัชอะรีย์. (2569). ศิลปะแห่งการถามตอบในองค์ความรู้อิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/kalam/the-art-of-question-and-answer.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">القرآن الكريم، سورة المائدة (5)، الآية 101. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">أخرجه الدارقطني في سننه، والبيهقي وغيرهما، من حديث أبي ثعلبة الخشني رضي الله عنه، وهو الحديث الثلاثون في الأربعين النووية. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">أخرجه البخاري في صحيح البخاري، رقم 7289، ومسلم في صحيح مسلم، رقم 2358، من حديث سعد بن أبي وقاص رضي الله عنه. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">القرآن الكريم، سورة البقرة (2)، الآية 189. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">القرآن الكريم، سورة آل عمران (3)، الآية 97. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+        <li id="ref-6">الشاطبي، إبراهيم بن موسى، الموافقات، تحقيق مشهور بن حسن آل سلمان، الخبر: دار ابن عفان، الطبعة الأولى، 1417هـ.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
+  document.querySelectorAll(s).forEach(function(el){
+    var cs=getComputedStyle(el);
+    var lh=parseFloat(cs.lineHeight);
+    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
+    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
+</body>
+</html>
