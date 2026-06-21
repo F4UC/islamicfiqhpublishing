@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h117.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 117,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 117 (Shamela 157–165) — ราชยา + มรณกรรมเกาะตาดะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h118.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 118,
