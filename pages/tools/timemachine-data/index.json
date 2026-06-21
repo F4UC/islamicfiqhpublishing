@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h96.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 96,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 96 (Shamela ~347–360) — อัลวะลีดที่ 1 สิ้น + สุลัยมานขึ้นครองราชย์",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h97.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 97,
