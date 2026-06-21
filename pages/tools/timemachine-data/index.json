@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h99.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 99,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 99 (Shamela 371–384) — สุลัยมานสิ้น + อุมัรที่ 2 ขึ้นครองราชย์",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h100.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 100,
