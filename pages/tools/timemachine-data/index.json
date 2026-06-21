@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h107.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 107,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 107 (Shamela 76–91) — กบฏเยเมน + ศึกอะซัดในคุรอซาน",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h108.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 108,
