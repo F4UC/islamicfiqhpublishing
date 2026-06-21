@@ -215,6 +215,10 @@ html.no-arabic .ar-quote { display: none; }
   .copy-btn { transition: none; }
 }
 
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
 @property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
 .cb-stage{
   --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
