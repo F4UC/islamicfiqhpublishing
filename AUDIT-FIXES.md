@@ -672,3 +672,9 @@ New article (not a retro-audit). Arabic blocks sourced byte-exact; scholar block
 - **hadith-block** Bilāl/Ibn Umm Maktūm — sunnah.com/muslim:1092c (exact wording match `…حَتَّى يُؤَذِّنَ ابْنُ أُمِّ مَكْتُومٍ`; takhrīj al-Bukhārī & Muslim), sha1=8413cd41af5a896da1263205f926644fd592f973
 - **hadith-block** Ibn Masʿūd `لاَ يَمْنَعَنَّ…` — sunnah.com/bukhari:7247, sha1=a670001efc6f5e1ca79ad4c88e1d28a25010a767 [FLAG: author's quoted wording ends `…ويعترض في أفق السماء`, which does NOT match sunnah.com bukhari:7247 matn (`…الفجر أو الصبح`); per prompt directive + R8/R53 used canonical bukhari:7247 byte-exact — editor to confirm desired riwāyah]
 - **R77 embedded sacred text** (Ibn al-Qayyim / Jordan fatwa / Nawawi / Iraq blocks embed āyah+hadith): kept WHOLE scholar block byte-exact & bare (no canonical splice); standalone canonical āyah/hadith appear separately.
+
+## 2026-06-21 — NEW BUILD: daif-hadith-lesson-1 (hadith) — Arabic provenance
+New article (not a retro-audit). Source: Drive fileId 1H5PuklKd-bav_u8jfpPhx0k0nMlg09kmug_lcPWQR_8. No standalone Quran/hadith blocks exist in the source — ALL Arabic is muḥaqqiq/scholar prose (Ibn Ḥajar al-ʿAsqalānī from Nuzhat al-Naẓar; Ibn al-Ṣalāḥ from Maʿrifat Anwāʿ ʿUlūm al-Ḥadīth), so no quran.com/sunnah.com fetch was required.
+- **12 `.ar-quote` scholar blocks** stripped to uniformly BARE per Rule 60 (ALL-OR-NOTHING; source was partially voweled). Operation deleted ONLY marks U+064B–U+0652 + U+0670 (ًٌٍَُِّْٰ); consonant skeleton + spaces + author's editorial bracket [من] unchanged. Verified by byte-diff: removed-set membership only, 0 harakat remaining inside any ar-quote (script-checked).
+- No embedded sacred-text edge case (R77): the Quranic/ḥadīth wording the lesson discusses is conceptual, not quoted as Arabic matn, so nothing was spliced.
+- article blob SHA (git :path) = d641d6f0a3602ba797d81c733c8c4f693ff6e590 (pre-ศอฮาบัต normalization; re-add after final edits).
