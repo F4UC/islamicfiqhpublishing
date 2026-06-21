@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h95.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 95,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 95 (Shamela ~320–330) — มรณกรรมอัลหัจญาจ + อันนะเคาะอีย์",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h96.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 96,
