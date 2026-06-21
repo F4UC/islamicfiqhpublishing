@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h103.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 103,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 103 (Shamela 46–55) — สะอีด อัลหะเราะชีย์เหนือคุรอซาน + ผู้วายชนม์",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h104.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 104,
