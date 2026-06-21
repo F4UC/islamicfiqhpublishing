@@ -56,6 +56,11 @@
   Expires: 0
   Surrogate-Control: no-store
 
+# Service worker must always be fetched fresh so updates ship (never immutable).
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Service-Worker-Allowed: /
+
 /*.js
   Cache-Control: public, max-age=31536000, immutable
 
