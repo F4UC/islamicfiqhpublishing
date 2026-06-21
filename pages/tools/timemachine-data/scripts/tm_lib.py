@@ -47,10 +47,16 @@ def clean_main(nass):
     refs). Use this — not clean() — to build/verify arabicExcerpt so the stored Arabic
     has no chrome/footnotes. Byte-exact gates must compare against clean_main() too."""
     s = nass or ''
+    # Drop the bottom-of-page footnote apparatus (class="hamesh"), the inline
+    # footnote-ref digits (<span class="c2">(٢)</span>), and Shamela copy-buttons
+    # (<a class="btn_tag">). NOTE: Shamela also uses class="hamesh" with a leading
+    # "=" for footnotes that OVERFLOW from the previous page — these are apparatus
+    # too (citations / manuscript variants / hadith-chain elaborations), so dropping
+    # the whole hamesh block is correct; main NARRATIVE text is never in hamesh.
     s = re.sub(r'<p[^>]*class="[^"]*\bhamesh\b[^"]*"[^>]*>.*?</p>', ' ', s, flags=re.S)
-    s = re.sub(r'<hr\s*/?>', ' ', s)
     s = re.sub(r'<span[^>]*class="[^"]*\bc2\b[^"]*"[^>]*>.*?</span>', ' ', s, flags=re.S)
     s = re.sub(r'<a[^>]*class="[^"]*\bbtn_tag\b[^"]*"[^>]*>.*?</a>', ' ', s, flags=re.S)
+    s = re.sub(r'<hr\s*/?>', ' ', s)
     return re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
 
 
