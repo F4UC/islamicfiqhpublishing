@@ -727,7 +727,7 @@ function renderEventCard(e) {
   if (e.figures && e.figures.length) {
     let lis = '';
     e.figures.forEach(f => {
-      const ar = f.arabic ? ` — <span class="tm-ar" dir="rtl" lang="ar">${f.arabic}</span>` : '';
+      const ar = f.arabic ? ` - <span class="tm-ar" dir="rtl" lang="ar">${f.arabic}</span>` : '';
       lis += `<li>${f.thai}${ar}</li>`;
     });
     figuresHtml = `<div class="tm-figures"><span class="tm-lbl">บุคคลสำคัญ</span><ul>${lis}</ul></div>`;
