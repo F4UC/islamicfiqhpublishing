@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h102.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 102,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 102 (Shamela 41–45) — ยุทธการอัลอักร์ ปราบยะซีด บิน อัลมุฮัลลับ",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h103.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 103,
