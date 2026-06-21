@@ -710,6 +710,14 @@ New standalone usul article (not a retro-audit). HTML blob SHA = 85b5d5c648bc819
 - **No standalone aya-block / hadith-block in this article.** Every Arabic passage is a scholar quotation introduced by "ท่าน X กล่าวว่า:" — including the Tirmidhi-cited hadith `عن حنش … من أبواب الكبائر` (Tirmidhi 188, sunnah.com/tirmidhi:188) which is presented as al-Tirmidhi's running citation with isnad → treated as scholar `.ar-quote` (R77 embedded-sacred-text: kept verbatim/bare, NO canonical splice). Takhrij listed in bibliography.
 - **FLAG (R56/R1):** block from al-Zarkashi's "al-Nukat" contains literal backslash-escaped brackets `\[أحدها\]` carried verbatim from the Drive source (Shamela markup artifact). Brackets `[أحدها]` are a meaningful editorial insertion; the backslashes are stray escaping. Kept verbatim per R1/R56 — editor to confirm whether to drop the `\` escapes.
 
+## 2026-06-21 — withdrawing-life-support.html (new article, R60 bare-strip)
+- File: `articles/nitisart/withdrawing-life-support.html`
+- Blocks: 10× `.ar-quote` (fatwa-council prose: Jordan Iftaa res. #117, Egypt Dar al-Iftaa, IIFA 1987; incl. embedded athar of Umar ibn al-Khattab). No Quran/aya, no standalone canonical hadith.
+- Operation (Arabic-Authority case 1): stripped harakat U+064B–U+0652 only, uniformly BARE per Rule 60 (article has no fully-voweled edition for every block). Byte-exact: source text pasted from Drive then vowel-marks deleted programmatically — consonant skeleton + spaces unchanged.
+- Byte-diff: 10/10 ar-quote consonant skeletons match the Drive source skeleton exactly (verified by strip-marks comparison).
+- Punctuation: NOT normalized (R77 is audit-scope; fresh build keeps source byte-exact). Latin `"` inside blocks 6/7 (الموت الإكلينيكي / القتل الرحيم) and in-text `(1)` marker in block 3 kept verbatim per R1.
+- Article blob SHA (at build): 015ab9aea04c05ecc6a140e8a1138265262650ba
+
 ## 2026-06-21 — NEW BUILD: fatwa-of-mufti-vs-ruling-of-qadi (nitisart) — Arabic provenance
 New standalone usul/fiqh article (mufti's fatwā vs qāḍī's binding ḥukm). HTML blob SHA = a0ae94a8418f14a37bce2b455bcecbaa8100baa7 (staged).
 - **Scholar tashkeel R60 ALL-OR-NOTHING → uniformly BARE:** 8 `.ar-quote` blocks (Ibn al-Qayyim, ʿAṭiyyah Ṣaqr ×3, al-Qarāfī, al-Subkī, al-Ghazālī, Kuwaiti Fiqh Encyclopedia). Source had mixed voweling (some fully voweled, some bare), so per R60 ALL stripped to uniformly bare. Byte-exact: deleted ONLY U+064B–U+0652 via `re.sub('[ً-ْ]','')`; consonant skeleton + spaces unchanged. Verified each in-file block skeleton == source skeleton (harakat-stripped): all 8 OK byte-exact (harakat count 0 in file).
