@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h105.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 105,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 105 (Shamela 60–63) — ยะซีดที่ 2 สิ้น + ฮิชามขึ้นครองราชย์",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h106.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 106,
