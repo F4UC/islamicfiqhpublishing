@@ -287,6 +287,16 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
 .tm-src-link:hover { border-bottom-color: var(--accent-color); }
 .tm-note { color: var(--text-tertiary); font-size: 13px; }
 
+/* per-chronicle source tabs (v3 multi-source) */
+.tm-tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; border-bottom: 1px solid var(--border-secondary); }
+.tm-tab { font-family: var(--ui); font-size: 13px; font-weight: 700; color: var(--text-tertiary); background: none; border: none; border-bottom: 2px solid transparent; padding: 7px 13px; cursor: pointer; margin-bottom: -1px; transition: var(--theme-transition); }
+.tm-tab:hover { color: var(--text-primary); }
+.tm-tab.active { color: var(--accent-color); border-bottom-color: var(--accent-color); }
+.tm-acc { display: none; }
+.tm-acc.active { display: block; }
+.tm-acc-src { margin-top: 12px; font-family: var(--thai); font-size: 13px; color: var(--text-tertiary); }
+.tm-cross { margin-top: 16px; padding-top: 12px; border-top: 1px dashed var(--border-secondary); font-family: var(--thai); font-size: 13px; color: var(--text-tertiary); line-height: 1.7; }
+
 /* ─── Hidden panel ─── */
 .htm-panel { display: none; }
 .htm-panel.active { display: block; }
@@ -646,6 +656,8 @@ function hijriYearToGregorianApprox(h) {
   return Math.round(h * 0.9702 + 621.5);
 }
 
+var TM_CHRONICLES = {};  /* chronicle id -> {nameThai, book, ...}; filled by the shard loader */
+
 function exploreYear() {
   const hy = parseInt(document.getElementById('explore-year').value);
   if (!hy || hy < 1 || hy > 1500) {
@@ -739,19 +751,30 @@ function renderEventCard(e) {
       <a href="${e.relatedArticle.url}" class="relation-link"><strong>${e.relatedArticle.title}</strong></a></div>`;
   }
 
-  let sourcesHtml = '';
-  if (e.sources && e.sources.length) {
-    let lis = '';
-    e.sources.forEach(s => {
-      const work = s.work || s.bookArabic || 'อ้างอิง';
-      const loc = s.loc ? (' ' + s.loc) : (s.pageNum ? (' หน้า ' + s.pageNum) : '');
-      let links = '';
-      if (s.url) links += ` <a href="${s.url}" class="tm-src-link" target="_blank" rel="noopener noreferrer">Shamela ↗</a>`;
-      if (s.urlAlt) links += ` <a href="${s.urlAlt}" class="tm-src-link" target="_blank" rel="noopener noreferrer">islamweb ↗</a>`;
-      const note = s.note ? ` <span class="tm-note">(${s.note})</span>` : '';
-      lis += `<li>${work}${loc}${links}${note}</li>`;
-    });
-    sourcesHtml = `<div class="tm-sources"><span class="tm-lbl">ที่มา</span><ul>${lis}</ul></div>`;
+  /* Per-chronicle accounts: one tab + panel each. The tab bar is shown only
+     when more than one chronicle reports the event. Falls back to a single
+     inline detail for older/inline events that lack accounts[]. */
+  var accounts = (e.accounts && e.accounts.length) ? e.accounts
+                 : (e.desc ? [{ chronicle: null, detail: e.desc }] : []);
+  let tabsHtml = '', panelsHtml = '';
+  accounts.forEach(function (a, i) {
+    const ch = (typeof TM_CHRONICLES !== 'undefined' && TM_CHRONICLES[a.chronicle]) || {};
+    const name = ch.nameThai || a.chronicle || 'แหล่งอ้างอิง';
+    const act = i === 0 ? ' active' : '';
+    tabsHtml += `<button type="button" class="tm-tab${act}" data-acc="${i}">${name}</button>`;
+    let links = '';
+    if (a.url) links += ` <a href="${a.url}" class="tm-src-link" target="_blank" rel="noopener noreferrer">Shamela ↗</a>`;
+    if (a.urlAlt) links += ` <a href="${a.urlAlt}" class="tm-src-link" target="_blank" rel="noopener noreferrer">islamweb ↗</a>`;
+    const srcLine = (ch.book || '') + (a.loc ? ' ' + a.loc : '') + links;
+    const srcHtml = srcLine.trim() ? `<div class="tm-acc-src"><span class="tm-lbl">ที่มา</span> ${srcLine}</div>` : '';
+    panelsHtml += `<div class="tm-acc${act}" data-acc="${i}"><div class="tm-detail">${a.detail || ''}</div>${srcHtml}</div>`;
+  });
+  const tabBar = accounts.length > 1 ? `<div class="tm-tabs">${tabsHtml}</div>` : '';
+
+  let crossHtml = '';
+  if (e.crossRefs && e.crossRefs.length) {
+    crossHtml = `<div class="tm-cross"><span class="tm-lbl">อ้างอิงเทียบเคียง</span> ` +
+      e.crossRefs.map(function (c) { return (c.work || '') + (c.loc ? ' ' + c.loc : ''); }).join(' · ') + `</div>`;
   }
 
   return `<details class="tm-event">
@@ -760,10 +783,11 @@ function renderEventCard(e) {
       <span class="tm-event-year">${e.year} ฮ.ศ. · ≈ ค.ศ. ${ceYear}</span>
     </summary>
     <div class="tm-event-body">
-      <div class="tm-detail">${e.desc}</div>
+      ${tabBar}
+      ${panelsHtml}
       ${figuresHtml}
       ${relationHtml}
-      ${sourcesHtml}
+      ${crossHtml}
     </div>
   </details>`;
 }
@@ -816,15 +840,18 @@ function renderEventCard(e) {
       var shards = (manifest && manifest.shards) || [];
       var gloss = fetch(BASE + ((manifest.meta && manifest.meta.glossary) || 'glossary.json'))
         .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+      var chron = fetch(BASE + 'chronicles.json')
+        .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
       var data = Promise.all(shards.map(function (s) {
         return fetch(BASE + s.file).then(function (r) { return r.ok ? r.json() : null; })
           .catch(function () { return null; });
       }));
-      return Promise.all([gloss, data]);
+      return Promise.all([gloss, data, chron]);
     })
     .then(function (res) {
       var gmap = indexGlossary(res[0]);
       var loaded = res[1] || [];
+      if (res[2] && res[2].chronicles) TM_CHRONICLES = res[2].chronicles;
       var added = 0;
       loaded.forEach(function (shard) {
         if (!shard || !Array.isArray(shard.events)) return;
@@ -836,6 +863,10 @@ function renderEventCard(e) {
           var figures = (ev.persons || []).map(function (pid) {
             return gmap[pid] || null;
           }).filter(Boolean);
+          var accounts = ev.accounts ||
+            (ev.detail ? [{ chronicle: 'ibn-kathir', detail: ev.detail,
+              loc: (ev.source && ev.source.loc) || '', url: (ev.source && ev.source.url) || '',
+              urlAlt: (ev.source && ev.source.urlAlt) || '' }] : null);
           EVENTS.push({
             id: ev.id,
             year: ev.hijriYear,
@@ -845,9 +876,9 @@ function renderEventCard(e) {
             order: typeof ev.order === 'number' ? ev.order : 0,
             title: ev.title,
             titleArabic: ev.titleArabic || null,
-            desc: ev.detail || ev.summary || '',
             figures: figures,
-            sources: ev.sources || (ev.source ? [ev.source] : null)
+            accounts: accounts,
+            crossRefs: ev.crossRefs || null
           });
           added++;
         });
@@ -898,6 +929,19 @@ function renderEventCard(e) {
   if(bG2H) bG2H.addEventListener('click', convertGregorianToHijri);
   var bExp = document.getElementById('btnExplore');
   if(bExp) bExp.addEventListener('click', exploreYear);
+
+  /* Delegated handler for per-chronicle source tabs inside event cards.
+     explorer-output persists across re-renders, so one listener suffices. */
+  var expOut = document.getElementById('explorer-output');
+  if(expOut) expOut.addEventListener('click', function(ev){
+    var tab = ev.target.closest && ev.target.closest('.tm-tab');
+    if(!tab) return;
+    var body = tab.closest('.tm-event-body');
+    if(!body) return;
+    var idx = tab.getAttribute('data-acc');
+    body.querySelectorAll('.tm-tab').forEach(function(x){ x.classList.toggle('active', x === tab); });
+    body.querySelectorAll('.tm-acc').forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-acc') === idx); });
+  });
 })();
 </script>
 </body>
