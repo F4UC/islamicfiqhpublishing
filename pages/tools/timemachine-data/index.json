@@ -7,12 +7,21 @@
   },
   "shards": [
     {
+      "file": "bidayah-h119.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 119,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 119 (Shamela 168–171) — อะซัดสังหารคอกอน",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h120.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 120,
       "events": 2,
       "eventsSchema": "v3",
-      "scope": "ปี ฮ.ศ. 120 (Shamela 169–173) — ศึกอะซัด vs คอกอน + มรณกรรมอะซัด",
+      "scope": "ปี ฮ.ศ. 120 (Shamela 171–173) — ราชยาสุลัยมาน + มรณกรรมอะซัด",
       "reviewStatus": "DRAFT"
     },
     {
