@@ -6,7 +6,7 @@
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (88 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (89 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -485,7 +485,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 ---
 
-## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–88)
+## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–89)
 
 * **กฎข้อที่ 71:** **★[ความปลอดภัยเด็ก — Child-Safety Override · เหนือกฎความครบถ้วนทุกข้อ · บังคับกับทุกเอเยนต์]★** หากต้นฉบับจาก Drive หรือเนื้อหาใดๆ มีสาระที่ทำให้**ผู้เยาว์เป็นวัตถุทางเพศ (sexualizes a minor)** มาตรการนี้อยู่เหนือกฎ 1/49/56 และเกตทุกชนิด ให้ปฏิบัติโดยเด็ดขาด:
   1. **PASS-with-flag (ตัดทิ้ง ไม่ใช่ปัดตก):** ถือว่าบทความ "ผ่าน" ได้โดย**ตัด (drop) เฉพาะส่วนที่ละเมิดออกทั้งหมด** แล้วตั้ง **child-safety flag** กำกับ — ส่วนที่ตัดนี้**ไม่นับในตัวหารของ coverage (กฎ 72)** การตัดตามกฎนี้ไม่ถือว่า coverage ตก
@@ -583,9 +583,17 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - บันทึก **ความต่างข้ามแหล่ง** (วันที่/จำนวน/สถานที่ที่ตำราระบุต่างกัน) ในตัวคำแปล = คุณค่าหลักของหลายสำนวน
   *(EN: extends R86 for the Time Machine / multi-book pipeline. A central registry `sources.json` tags every source as `annal` (event-scoped → accounts/tabs) or `tarajim` (person-scoped → glossary.tarajim/links); add a source = one registry entry (see DATA-MODEL.md); the renderer reads names/links from it. ★Every added/edited arabicExcerpt must pass a byte-exact gate before push: it must be a CONTIGUOUS substring of the locked source (re-fetch to verify) — a structural QC pass (scripts/tm_qc.py) is NOT a byte-exact pass; verify separately by re-fetch. Never stitch non-contiguous fragments (= R60 violation); extract via tm_lib.extract() which guarantees a substring. Record cross-source DIFFERENCES (dates/numbers/places that the chronicles report differently) in the translation — the core value of multiple accounts.)*
 
+* **กฎข้อที่ 89:** **[แปลตรงจากตำราเต็มท่อน ไม่ใช่คำบอกเล่า · Full Source Translation, not Summary]** เนื้อหา Time Machine ทุกชิ้นต้องเป็น **คำแปลตรงจากตัวบทตำราจริง (อัลบิดายะฮ์ ฯลฯ) ครบทุกประโยค** — ไม่ใช่การสรุป/เล่าเองว่า "ปีนั้นเกิดอะไร" (เช่น "ปี 1 ท่านนบีฮิจเราะฮ์..." แบบไม่มีแหล่ง = ผิด เพราะกลายเป็นเรื่องเล่า ไม่ใช่คำแปล):
+  - **ต้องมีแหล่งอ้างอิงจริงเสมอ** (เล่ม/หน้า/url) — ไม่มีแหล่ง = ห้ามใส่ · หัวใจคือ "ยกตำราทั้งกองมาวางเรียงแล้วแปล"
+  - **`arabicExcerpt` = อาหรับล้วน** ผ่าน `tm_lib.clean()` — **ห้ามมี HTML/chrome ของ Shamela** (`<span>`/`<a class="btn_tag">`/`<hr>`), **ห้ามมีเชิงอรรถ (`hamesh`)/ปุ่มคัดลอกปน** · เป็น substring ต่อเนื่อง byte-exact (กฎ 60/88)
+  - **`detail` = คำแปลไทยเต็มของท่อนนั้น 1:1** ทุกประโยค (ไม่ย่อ) · ความหมายแม่นยำตามกฎ 75 (قام/خرج/ظهور แปลตามบริบท ไม่ใช่ "ยืน")
+  - **★เคร่ง R5 กับมนุษย์ทุกคนรวมบรรดานบี ﷺ★:** ใช้คำกลาง — `ประสูติ`→`ถือกำเนิด`, `สิ้นพระชนม์`→`เสียชีวิต/วะฟาต` · ราชาศัพท์ (`พระองค์`/`ทรง`) ใช้ได้**เฉพาะกับอัลลอฮ์** (ในคุฏบะฮ์/อายะฮ์) เท่านั้น
+  - persons/places ทุกตัวต้องอยู่ใน glossary ก่อนอ้าง (กฎ 86)
+  *(EN: every Time Machine entry must be a COMPLETE faithful translation of the actual source passage (al-Bidayah etc.), sentence by sentence — never a self-narrated summary of "what happened that year"; a line with no real citation becomes hearsay, not a translation, and is forbidden. arabicExcerpt = pure Arabic via tm_lib.clean() (NO Shamela HTML/chrome/footnote(hamesh)/copy-buttons), a byte-exact contiguous substring (R60/88). detail = full 1:1 Thai translation of that excerpt, semantically accurate (R75: render قام/خرج/ظهور by context, not "stand"). Strict R5 for ALL humans incl. prophets ﷺ — use neutral words (ถือกำเนิด/เสียชีวิต-วะฟาต), reserve royal register (พระองค์/ทรง) for Allah ONLY (khutbah/Qur'an). Every person/place must be glossary-registered before use (R86).)*
+
 ---
 
-## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–88)
+## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–89)
 
 * **Rule 71:** **★[Child-Safety Override · supersedes every fidelity/coverage rule · binds every agent]★** If any Drive source or other content sexualizes a minor, this measure overrides Rules 1/49/56 and every gate. Act decisively:
   1. **PASS-with-flag (drop, do not reject):** the article may be considered "passing" by **dropping only the offending span entirely** and setting a **child-safety flag** — the dropped span is **excluded from the Rule 72 coverage denominator**; a drop under this rule does not lower coverage.
