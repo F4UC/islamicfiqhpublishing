@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h112.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 112,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 112 (Shamela 143–144) — ศึกเคาะซัร: อัลญัรรอห์พลีชีพที่อัรดะบีล",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h113.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 113,
