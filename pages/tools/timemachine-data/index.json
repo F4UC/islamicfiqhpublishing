@@ -901,9 +901,18 @@
       "file": "bidayah-h193.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 193,
-      "events": 2,
+      "events": 3,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 193 - ★★การเสียชีวิตของฮารูน อัรเราะชีดที่ฏูส★★+ชีวประวัติ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h194.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 194,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 194 - กบฏชาวฮิมศ์+ปราบโดยอับดุลลอฮ์ อัลฮะเราะชีย์ (Rule 89)",
       "reviewStatus": "DRAFT"
     }
   ]
