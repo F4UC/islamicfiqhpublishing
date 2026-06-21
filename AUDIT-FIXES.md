@@ -664,3 +664,11 @@ Branch: claude/phase3-arabic-addendum. Method: RE-FETCHED every canonical myself
 
 ### D) iʿrāb verify — NO EDIT
 - **articles/nitisart/collective-eid-takbir.html** · hadith أَمَرَنَا رَسُولَ اللهِ… (al-Ḥasan b. ʿAlī; al-Bukhārī al-Tārīkh / al-Ḥākim / al-Ṭabarānī — outside the six books). رَسُولَ (acc.) reads as a slip for رَسُولُ (nom.). Per directive, did NOT hand-edit harakat (R1/R82). Attempted shamela.ws verification — search is JS-rendered, not retrievable this session → **UNVERIFIABLE → KEPT byte-exact + REVIEW-QUEUE flag** for Beta to supply the printed-edition matn. (Note: also a likely نَجْدُ→نَجِدُ typo in the 2nd clause — same review-queue, not hand-edited.)
+
+## 2026-06-21 — NEW BUILD: eating-suhur-when-hearing-adhan (nitisart) — Arabic provenance
+New article (not a retro-audit). Arabic blocks sourced byte-exact; scholar blocks stripped to uniformly BARE per Rule 60 (delete only U+064B–U+0652; skeleton + spaces unchanged, verified by byte-diff). 26 scholar/institutional `.ar-quote` blocks stripped (source mixed voweled+bare). Standalone sacred-text blocks pasted byte-exact:
+- **aya-block** al-Baqarah 187 fragment `وَكُلُوا…إِلَى اللَّيْلِ` — quran.com/api/v4 imlaei (Hafs), substring of full āyah, sha1=2907207606401a38a0d8819ec6c85dcc094b7f00
+- **hadith-block** Abū Dāwūd 2350 (disputed central hadith, Abū Hurayrah) — sunnah.com/abudawud:2350, sha1=df8f8d235ffd69fbbbda7c57dd1b13cf36c64cc2 (used ×2 where author quotes it standalone; sunnah double-space after إِذَا normalized to single)
+- **hadith-block** Bilāl/Ibn Umm Maktūm — sunnah.com/muslim:1092c (exact wording match `…حَتَّى يُؤَذِّنَ ابْنُ أُمِّ مَكْتُومٍ`; takhrīj al-Bukhārī & Muslim), sha1=8413cd41af5a896da1263205f926644fd592f973
+- **hadith-block** Ibn Masʿūd `لاَ يَمْنَعَنَّ…` — sunnah.com/bukhari:621, sha1=a670001efc6f5e1ca79ad4c88e1d28a25010a767 [FLAG: author's quoted wording ends `…ويعترض في أفق السماء`, which does NOT match sunnah.com bukhari:621 matn (`…الفجر أو الصبح`); per prompt directive + R8/R53 used canonical bukhari:621 byte-exact — editor to confirm desired riwāyah]
+- **R77 embedded sacred text** (Ibn al-Qayyim / Jordan fatwa / Nawawi / Iraq blocks embed āyah+hadith): kept WHOLE scholar block byte-exact & bare (no canonical splice); standalone canonical āyah/hadith appear separately.
