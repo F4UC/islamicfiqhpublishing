@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h110.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 110,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 110 (Shamela 114–141) — มรณกรรมอัลหะสัน อัลบัศรีย์ + อิบนุ สีรีน",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h111.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 111,
