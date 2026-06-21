@@ -473,6 +473,55 @@
       "canonicalThai": "อัลอิศบะฮ์บัซ (กษัตริย์เฏาะบะริสตาน)",
       "note": "ผู้ปกครองเฏาะบะริสตานก่อนการพิชิต",
       "variantsFound": []
+    },
+    {
+      "id": "shayban-al-yashkuri",
+      "arabic": "شيبان بن عبد العزيز اليشكري",
+      "canonicalThai": "ชัยบาน บิน อับดุลอะซีซ อัลยัชกุรีย์",
+      "note": "ผู้นำเคาะวาริจญ์ที่เมาศิล (วายชนม์ภายหลัง)",
+      "variantsFound": []
+    },
+    {
+      "id": "sulayman-b-hisham",
+      "arabic": "سليمان بن هشام بن عبد الملك",
+      "canonicalThai": "สุลัยมาน บิน ฮิชาม บิน อับดุลมาลิก",
+      "note": "เชื้อสายอุมัยยะฮ์ พันธมิตรเคาะวาริจญ์",
+      "variantsFound": []
+    },
+    {
+      "id": "sulayman-b-kathir",
+      "arabic": "سليمان بن كثير الخزاعي",
+      "canonicalThai": "สุลัยมาน บิน กะษีร อัลคุซาอีย์",
+      "note": "นักีบคนสำคัญของขบวนการอับบาซียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "malik-b-al-haytham",
+      "arabic": "مالك بن الهيثم الخزاعي",
+      "canonicalThai": "มาลิก บิน อัลฮัยษัม อัลคุซาอีย์",
+      "note": "แม่ทัพดาอีอับบาซียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "jadi-al-kirmani",
+      "arabic": "جديع بن علي الكرماني",
+      "canonicalThai": "ญุดัยอ์ บิน อะลีย์ อัลกิรมานีย์",
+      "note": "ผู้นำอาหรับในคุรอซาน ถูกนัศร์สังหาร (บิดาของอะลีย์ บิน อัลกิรมานีย์)",
+      "variantsFound": []
+    },
+    {
+      "id": "abdullah-b-muawiya",
+      "arabic": "عبد الله بن معاوية بن عبد الله بن جعفر",
+      "canonicalThai": "อับดุลลอฮ์ บิน มุอาวิยะฮ์",
+      "note": "เชื้อสายญะอ์ฟัร บิน อบีฏอลิบ ผู้ก่อกบฏยึดฟารส์",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-wahid-b-sulayman",
+      "arabic": "عبد الواحد بن سليمان بن عبد الملك",
+      "canonicalThai": "อับดุลวาฮิด บิน สุลัยมาน",
+      "note": "ผู้ปกครองมักกะฮ์-มะดีนะฮ์ของอุมัยยะฮ์",
+      "variantsFound": []
     }
   ],
   "places": [
@@ -795,6 +844,36 @@
       "id": "al-massisa",
       "arabic": "المصيصة",
       "canonicalThai": "อัลมัศศีเศาะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "khurasan",
+      "arabic": "خراسان",
+      "canonicalThai": "คุรอซาน",
+      "variantsFound": []
+    },
+    {
+      "id": "marw-al-rudh",
+      "arabic": "مرو الروذ",
+      "canonicalThai": "มัรว์ อัรรูซ",
+      "variantsFound": []
+    },
+    {
+      "id": "fars",
+      "arabic": "فارس",
+      "canonicalThai": "ฟารส์",
+      "variantsFound": []
+    },
+    {
+      "id": "istakhr",
+      "arabic": "إصطخر",
+      "canonicalThai": "อิศฏ็อคร์",
+      "variantsFound": []
+    },
+    {
+      "id": "sind",
+      "arabic": "السند",
+      "canonicalThai": "สินธ์",
       "variantsFound": []
     }
   ],
