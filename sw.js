@@ -42,11 +42,14 @@ const PRECACHE_URLS = [
 ];
 
 // --- install: precache shell (resilient — one bad asset won't fail install) ---
+// NOTE: no skipWaiting() here on purpose — a new SW must WAIT so pwa-register.js
+// can surface the "new version" toast; it activates only when the user taps it
+// (postMessage 'SKIP_WAITING' below). clients.claim() in activate still lets the
+// FIRST install control the page without a reload.
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(PRECACHE);
     await Promise.allSettled(PRECACHE_URLS.map((u) => cache.add(u)));
-    await self.skipWaiting();
   })());
 });
 

@@ -5,6 +5,11 @@
 (function () {
   if (!('serviceWorker' in navigator)) return;
 
+  // Only reload after a USER-INITIATED update (toast tap). Without this guard the
+  // first install (clients.claim) fires controllerchange null→SW and would force
+  // every first-time visitor through a spurious second page load.
+  var updating = false;
+
   function showUpdateToast(worker) {
     if (document.getElementById('ifp-update-toast')) return;
 
@@ -25,6 +30,7 @@
     toast.addEventListener('click', function () {
       toast.disabled = true;
       toast.textContent = 'กำลังอัปเดต…';
+      updating = true; // arm the controllerchange reload (this update is user-initiated)
       if (worker) worker.postMessage('SKIP_WAITING');
     });
 
@@ -53,7 +59,7 @@
 
     var refreshing = false;
     navigator.serviceWorker.addEventListener('controllerchange', function () {
-      if (refreshing) return;
+      if (!updating || refreshing) return; // ignore the first-install claim
       refreshing = true;
       window.location.reload();
     });
