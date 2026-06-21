@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h104.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 104,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 104 (Shamela 56–59) — ศึกคุจันดะฮ์ + กรณีฟาฏิมะฮ์ บินต์ อัลหุสัยน์",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h105.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 105,
