@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h122.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 122,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 122 (Shamela 178–189) — การพลีชีพของซัยด์ บิน อะลีย์ + อัลบัฏฏอล",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h123.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 123,
