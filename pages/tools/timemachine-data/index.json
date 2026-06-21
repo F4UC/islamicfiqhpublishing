@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h120.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 120,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 120 (Shamela 169–173) — ศึกอะซัด vs คอกอน + มรณกรรมอะซัด",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h121.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 121,
