@@ -283,10 +283,9 @@ html.no-arabic .ar-quote { display: none; }
    Article pages load article.css (not tokens.css), so --gold/--ui are not defined
    there; map them to the brand gold (Rule 29) + UI font stack scoped to this block
    so the verbatim rules below resolve correctly. */
-.series-nav{--gold:#c49a45;--ui:'IBM Plex Sans Thai','Inter',system-ui,sans-serif}
 .series-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:56px 0 8px;padding-top:24px;border-top:1px solid var(--border-secondary)}
-.series-nav a{color:var(--gold);text-decoration:none;font-family:var(--ui);font-weight:600;font-size:.95rem;padding:10px 18px;border:1px solid var(--border-secondary);border-radius:10px;transition:background .2s,border-color .2s}
-.series-nav a:hover{background:var(--bg-tertiary);border-color:var(--gold)}
+.series-nav a{color:var(--accent-color);text-decoration:none;font-family:var(--ph-serif);font-weight:600;font-size:.95rem;padding:10px 18px;border:1px solid var(--border-secondary);border-radius:10px;transition:background .2s,border-color .2s}
+.series-nav a:hover{background:var(--bg-tertiary);border-color:var(--accent-color)}
 .series-nav .series-next{margin-left:auto}
 </style>
 <!-- PWA -->
