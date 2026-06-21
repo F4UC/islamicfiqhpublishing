@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เข้าใจหะดีษฎออีฟ พาร์ท 3: การนำหะดีษฎออีฟมาปฏิบัติ — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทเรียนสุดท้ายของชุดทำความเข้าใจหะดีษฎออีฟ ว่าด้วยประเด็นแวดล้อมและข้อชี้ขาดในการนำหะดีษฎออีฟมาปฏิบัติ ทั้งในเรื่องฟะฎออิลุลอะมาลและบทบัญญัติ ผ่านทรรศนะของนักวิชาการ 3 กลุ่มและเงื่อนไขการอิงหะดีษฎออีฟ">
+<meta name="keywords" content="หะดีษฎออีฟ, ฟะฎออิลุลอะมาล, อันนะวาวีย์, อัซซะคอวีย์, อิบนุ หะญัร, วิทยาการหะดีษ, นิติศาสตร์อิสลาม, ฟิกฮ์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="เข้าใจหะดีษฎออีฟ พาร์ท 3: การนำหะดีษฎออีฟมาปฏิบัติ — Islamic Fiqh Publishing">
+<meta property="og:description" content="ประเด็นแวดล้อมและข้อชี้ขาดในการนำหะดีษฎออีฟมาปฏิบัติ ผ่านทรรศนะของนักวิชาการ 3 กลุ่มและเงื่อนไขการอิงหะดีษฎออีฟ">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/hadith/daif-hadith-lesson-3">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/hadith/daif-hadith-lesson-3">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "เข้าใจหะดีษฎออีฟ พาร์ท 3: การนำหะดีษฎออีฟมาปฏิบัติ",
+  "inLanguage": "th",
+  "datePublished": "2026-06-21",
+  "dateModified": "2026-06-21",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/hadith/daif-hadith-lesson-3"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.aya-block .block-ar.is-short, .hadith-block .block-ar.is-short,
+.ar-translation.is-short { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+/* SERIES NAV — prev/next between lessons in this hadith series (Rule 23, theme vars) */
+.series-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:56px 0 8px;padding-top:24px;border-top:1px solid var(--border-secondary)}
+.series-nav a{color:var(--accent-color);text-decoration:none;font-family:var(--ph-serif);font-weight:600;font-size:.95rem;padding:10px 18px;border:1px solid var(--border-secondary);border-radius:10px;transition:background .2s,border-color .2s}
+.series-nav a:hover{background:var(--bg-tertiary);border-color:var(--accent-color)}
+.series-nav .series-next{margin-left:auto}
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+<!-- PWA -->
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="IF">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<script src="/pwa-register.js?v=2" defer></script>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="daif-hadith-lesson-3">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/hadith.html" class="article-feature-eyebrow">หะดีษ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">เข้าใจหะดีษฎออีฟ พาร์ท 3: การนำหะดีษฎออีฟมาปฏิบัติ</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ในสองบทเรียนที่ผ่านมา ท่านผู้อ่านก็คงจะพอรู้จักประเภทของหะดีษและสาเหตุที่ทำให้หะดีษฎออีฟกันมาคร่าวๆ แล้ว</p>
+
+      <p>ในบทความสุดท้าย ท้ายสุดนี้ เราจะมาพูดถึงประเด็นต่างๆ ที่เกี่ยวข้องกับหะดีษฎออีฟและการนำหะดีษฎออีฟมาใช้ ตามหลักการทำได้หรือไม่ได้ ต้องยึดหะดีษระดับหะซันและศอเฮี้ยะฮ์เท่านั้น หรือผ่อนปรนใช้ของฎออีฟได้ เรามาติดตามกันครับ ซึ่งจะแบ่งเป็น 2 บทสั้นๆ เท่านั้น</p>
+
+      <h2 class="article-h2">บทที่ 1: ประเด็นต่างๆ ที่เกี่ยวข้องกับหะดีษฎออีฟ</h2>
+
+      <p>หากเราเห็นสำนวนที่ว่า <span class="ar-inline" lang="ar" dir="rtl">ضعيف بهذا الإسناد</span> ซึ่งมีความหมายว่า “สายรายงานนี้อ่อน” โดยไม่กล่าวถึงตัวมะตั่นตัวบท นักวิชาการได้ให้เหตุผลไว้ว่า: อาจจะมีสายรายงานอื่นมาสนับสนุนหะดีษต้นนี้ ดังที่อิหม่ามอันนะวาวีย์ได้ระบุไว้ในหนังสือของท่าน<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>ท่านอิหม่ามอันนะวาวีย์ ได้ระบุไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قال العلماء ينبغي لمن أراد رواية حديث أو ذكره أن ينظر فإن كان صحيحا أو حسنا قال رسول الله صلى الله عليه وسلم كذا أو فعله أو نحو ذلك من صيغ الجزم</blockquote>
+      <p class="ar-translation">“นักวิชาการระบุไว้ว่าถือเป็นการสมควรอย่างยิ่งแก่ผู้ที่ต้องการรายงานหะดีษหรือระบุถึงหะดีษ ให้เขาพิจารณา (หะดีษที่จะรายงาน) ดังนี้ ถ้าหากว่าหะดีษดังกล่าวศอเฮี้ยะฮ์หรือหะซัน ก็ให้เขากล่าวว่า ‘ท่านรอซู้ล ﷺ ได้กล่าวไว้เช่นนี้ หรือปฏิบัติเช่นนี้’ หรืออาจใช้คำกล่าวอื่นในทำนองเดียวกันที่ชี้ถึงสำนวนที่ชี้ชัดเด็ดขาด”</p>
+
+      <p><strong>คำถาม:</strong> แล้วหะดีษฎออีฟมีมาตราฐานแบบนี้หรือไม่?</p>
+
+      <p><strong>คำตอบ:</strong> ท่านอิหม่ามอันนะวาวีย์ ได้ระบุไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وإن كان ضعيفا فلا يقل قال أو فعل أو أمر أو نهى وشبه ذلك من صيغ الجزم بل يقول روي عنه كذا أو جاء عنه كذا أو يروى أو يذكر أو يحكى أو يقال أوبلغنا وما أشبهه والله سبحانه أعلم</blockquote>
+      <p class="ar-translation">“ถ้าหากว่าหะดีษดังกล่าว ‘ฎออีฟ’ ก็ไม่สมควรที่จะใช้สำนวนว่า ท่านรอซู้ล ได้กล่าว หรือท่านได้ปฏิบัติ หรือท่านได้สั่งใช้ หรือท่านได้ห้าม หรือสำนวนอื่นๆ ที่ใกล้เคียงกันจากสำนวนที่ชี้ถึงสำนวนที่ชี้ชัดเด็ดขาด แต่ให้ระบุว่า ได้ถูกการรายงานมาเช่นนั้นเช่นนี้ หรือได้มีการบอกเล่ามา หรือมีผู้กล่าวว่า หรือได้รายงานถึงมายังเรา หรือใช้สำนวนอื่นๆ ที่ใกล้เคียงกัน”</p>
+
+      <h2 class="article-h2">บทที่ 2: การนำหะดีษฎออีฟมาปฏิบัติ</h2>
+
+      <p>นักวิชาการมีทัศนะขัดแย้งกันว่า หะดีษฎออีฟจะนำมาปฏิบัติในเรื่องของข้อกำหนดทางศาสนบัญญัติ (หุก่ม) หรือในเรื่องฟะฎออิลุลอะมาล (คุณค่าความประเสริฐ) ได้หรือไม่?</p>
+
+      <p>เราจะแบ่งทัศนะที่เห็นต่างนี้ออกเป็น 3 กลุ่ม</p>
+
+      <p><strong>กลุ่มที่ 1:</strong> นักวิชาการบางท่านในกลุ่มนี้มีทัศนะว่า ‘ไม่อนุญาต’ ให้นำหะดีษฎออีฟมาใช้ในทุกๆ เรื่อง ไม่ว่าจะเป็นฟะฎออิลุลอะมาลหรือในเรื่องหุก่มอะห์กามต่างๆ ซึ่งผู้ที่มีทัศนะดังกล่าวนี้มีท่านอบู ซุรอะฮ์ อัรรอซีย์, ท่านอบู ฮะติม อัรรอซีย์, ท่านอิบนุ อะบี ฮะติม อัรรอซีย์<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup> ท่านยะห์ยา บิน มะอีน, ท่านอิบนุ อัลอะรอบีย์, ท่านมุหัมมัด อัชเชากานีย์, ท่านญะลาลุดดีน อัดดะวานีย์ และอีกหลายท่าน ซึ่งไม่สามารถกล่าวได้ทั้งหมด<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup> ซึ่งทัศนะของนักวิชาการกลุ่มนี้จะรัดกุมที่สุด</p>
+
+      <p><strong>กลุ่มที่ 2:</strong> นักวิชาการบางท่านมองว่าหะดีษฎออีฟสามารถนำมาใช้ในเรื่องของหะลาลและหะรอมได้ เอามาใช้ในเรื่องของฟัรฎูและวายิบก็ได้ รวมถึงเรื่องฟะฎออิลุลอะมาล ซึ่งทัศนะของกลุ่มนี้จะเปิดกว้างที่สุด แต่มีเงื่อนไขว่าต้องไม่ใช่หะดีษในระดับที่ฎออีฟมากจนเกินไป และในเรื่องๆ นั้นต้องไม่มีหะดีษบทใดนอกจากหะดีษต้นดังกล่าวบทเดียว และต้องไม่ขัดกับหะดีษบทอื่นๆ ที่แข็งแรงกว่า<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup> ซึ่งผู้ที่มีทัศนะดังกล่าวนี้ได้แก่ท่านอบู หะนีฟะฮ์, ท่านอิหม่ามอัชชาฟีอีย์, ท่านอิหม่ามอะห์มัด (ในสายรายงานหนึ่ง), ท่านอิหม่ามมาลิก, ท่านอบู ดาวูด อัซซะญิสตานีย์, ท่านยะห์ยา บิน มาอีน (ในสายรายงานหนึ่ง) เป็นต้น<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup></p>
+
+      <p><strong>กลุ่มที่ 3:</strong> นักวิชาการกลุ่มนี้จะเป็นกลางระหว่างกลุ่มที่ 1 และกลุ่มที่ 2 นั่นคือสามารถนำหะดีษฎออีฟมาปฏิบัติได้ แต่ต้องเป็นเรื่องที่เกี่ยวกับการส่งเสริมการทำความดีและห้ามปรามการทำความชั่วหรือความประเสริฐในการทำอิบาดัตเท่านั้น</p>
+
+      <p>ท่านอิบนุ กุดามะฮ์ ได้ระบุไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">النوافل والفضائل لا يشترط صحة الحديث لها</blockquote>
+      <p class="ar-translation">“(การอ้างหลักฐาน) สิ่งที่เป็นสุนัตและและเรื่องของความประเสริฐต่างๆ (ในการปฏิบัติ) ไม่มีเงื่อนไขว่าจะต้องเป็นหะดีษศอเฮี้ยะฮ์เท่านั้น”</p>
+
+      <p>ท่านอิหม่ามอันนะวาวีย์ ได้กล่าวเอาไว้ในหนังสืออรรถาธิบายศอเฮี้ยะฮ์มุสลิมช่วงอารัมภบทและหนังสืออัตตักรี้บว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يجوز عند أهل الحديث وغيرهم التساهل فيه ورواية ما سوى الموضوع منه والعمل به.</blockquote>
+      <p class="ar-translation">“นักวิชาการด้านหะดีษและด้านอื่นๆ อนุญาตและผ่อนปรน (ไม่เคร่งครัด) ในการรายงานหะดีษฎออีฟและหะดีษอื่นจากเมาฎุอ์ และการปฏิบัติตามนัยยะของหะดีษฎออีฟดังกล่าวก็เป็นที่อนุญาตเช่นกัน”</p>
+
+      <p>ท่านอีซูซุยูฏีย์อธิบายเสริมว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وممن نقل عنه ذلك: ابن حنبل، وابن مهدي، وابن المبارك، قالوا: إذا روينا في الحلال والحرام شددنا، وإذا روينا في الفضائل ونحوها تساهلنا</blockquote>
+      <p class="ar-translation">“ส่วนหนึ่งจากผู้ที่รายงานทัศนะดังกล่าวคือ ท่านอิหม่ามอะห์มัด บิน ฮัมบัลและท่านอิบนุ มะฮ์ดี (ซึ่งได้ระบุว่า) เมื่อเรารายงาน (หะดีษ) ในเรื่องของข้อกำหนดหะล้าลและหะรอมเราจะเข้มงวด และเมื่อเรารายงานเรื่องฟะฎออิลุลอะมาลหรือเรื่องในทำนองเดียวกัน เราจะไม่เข้มงวด (ในเรื่องของสายรายงาน)”<sup class="fn-ref" id="fnref-6"><a href="#ref-6">⁶</a></sup></p>
+
+      <p>อัลฮาฟิศ อัลอิรอกีย์ได้ระบุว่าในหนังสือของท่านว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">تقدم أنه لا يجوز ذكر الموضوع إلا مع البيان، في أي نوع كان ،وأما غير الموضوع، فجوزوا التساهل في إسناده وروايته من غير بيان لضعفه، إذا كان في غير الأحكام والعقائد بل في الترغيب والترهيب من المواعظ والقصص وفضائل الأعمال ونحوهما، أما إذا كان في الأحكام الشرعية من الحلال والحرام وغيرهما، أو في العقائد كصفات اللـه تعالى، وما يجوز ويستحيل عليه ونحو ذلك، فلم يروا التساهل في ذلك، وممن نص على ذلك من الأئمة ،عبد الرحمن بن مهدي وأحمد بن حنبل وعبد اللـه بن المبارك وغيرهم</blockquote>
+      <p class="ar-translation">“ตามที่เราได้กล่าวผ่านมาแล้วนั้น ไม่อนุญาตให้รายงานหะดีษปลอม (เมาฎุอ์) นอกจากจะมีคำอธิบายถึงสถานะของหะดีษด้วย ว่ามีสถานะเป็นเช่นไร แต่หากไม่ใช่หะดีษเมาฎุอ์ ก็ผ่อนปรนให้โดยไม่เข้มงวดในการรายงานหะดีษนั้นๆ และสามารถรายงานหะดีษฎออีฟได้ โดยไม่ต้องระบุถึงสาเหตุที่ทำให้หะดีษฎออีฟ หากเป็นหะดีษที่ไม่ได้เกี่ยวข้องกับบทบัญญัติและหลักความเชื่อ กล่าวคือเป็นประเด็นของการส่งเสริมให้กระทำดี ปรามจากความชั่ว จากเรื่องราวที่เกี่ยวข้องกับเรื่องเล่าและคุณค่าความประเสริฐของการปฏิบัติ แต่ถ้าหากเกี่ยวกับบทบัญญัติทางศาสนา เช่น เรื่องหะลาลและหะรอม หรือเรื่องหลักยึดมั่น เช่นคุณลักษณะของอัลลอฮ์ ก็จำเป็นต้องเข้มงวด ไม่ผ่อนปรนในการตรวจสายรายงาน ซึ่งผู้ที่มีทัศนะดังกล่าวนี้คือเหล่านักวิชาการระดับชั้นผู้นำ เช่น ท่านอับดุรเราะห์มาน บิน มะฮ์ดี, ท่านอะห์มัด บิน ฮัมบัล, ท่านอับดุลลอฮ์ บิน มุบาร้อกและท่านอื่นๆ”</p>
+
+      <p>และในบทนำหนังสืออัลอัซก้ารของท่านก็ได้ระบุไว้อีกว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قال العلماء من المحدثين والفقهاء وغيرهم: يجوز ويستحب العمل في الفضائل والترغيب والترهيب بالحديث الضعيف ما لم يكن موضوعا، وأما الأحكام كالحلال والحرام والبيع والنكاح والطلاق وغير ذلك؛ فلا يعمل فيها إلا بالحديث الصحيح أو الحسن</blockquote>
+      <p class="ar-translation">“นักวิชาการด้านหะดีษและนักนิติศาสตร์และจากกลุ่มอื่นๆ ได้ระบุไว้ว่า อนุญาตและส่งเสริมให้ปฏิบัติในเรื่องของความประเสริฐต่างๆ หรือในเรื่องการชักชวนกันให้กระทำความดี และปรามกันซึ่งความชั่ว โดยอาศัยตัวบทหะดีษฎออีฟที่ไม่ได้อยู่ในระดับขั้นเมาดุอ์ (หะดีษปลอม) ส่วน (หะดีษฎออีฟที่เกี่ยวกับ) ข้อบัญญัติในเรื่องของหะลาลและหะรอมและเรื่องธุรกรรมการซื้อขายและการแต่งงานและการหย่าหรือเรื่องอื่นๆ ในทำนองเดียวกันนี้ ไม่อนุญาตให้นำมาปฏิบัติเว้นแต่หะดีษที่อยู่ในระดับศอเฮี้ยะฮ์ หรือหะสันเท่านั้น”</p>
+
+      <p>และท่านอันนะวะวีย์ยังได้ระบุถึงมติในเรื่องนี้ไว้ในบทนำหนังสือหะดีษอัลอัรบะอีน ของท่านไว้ด้วยว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقد اتفق العلماء على جواز العمل بالحديث الضعيف في فضائل الأعمال</blockquote>
+      <p class="ar-translation">“นักวิชาการต่างมีมติกันว่าอนุญาตให้ปฏิบัติตามหะดีษฎออีฟในเรื่องฟะฎออิลุลอะมาลได้”<sup class="fn-ref" id="fnref-7"><a href="#ref-7">⁷</a></sup></p>
+
+      <p>ซึ่งท่านมุลลา อะลีย์ อัลกอรีย์ได้รายงานไว้เช่นเดียวกัน</p>
+
+      <p>แต่มติตรงนี้อาจจะไปขัดกับกลุ่มที่ 1 ก็แนะนำให้พิจารณาตรงเงื่อนไขนะครับ (ซึ่งจะกล่าวในลำดับถัดไป)</p>
+
+      <p><strong>คำถาม:</strong> แล้วหะดีษฎออีฟแบบไหนกันที่นักวิชาการอนุญาตให้นำมาปฏิบัติ?</p>
+
+      <p><strong>คำตอบ:</strong> ท่านอิบนุ หะญัร อัลฮัยตะมีย์ ได้ระบุเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وقد تقرر أن الحديث الضعيف والمرسل والمنقطع والمعضل والموقوف يعمل بها في فضائل الأعمال إجماعا</blockquote>
+      <p class="ar-translation">“มีมติจากปวงปราชญ์ว่า หะดีษฎออีฟ หะดีษมุรซัล หะดีษมุนกอเตี้ยะอ์ หะดีษมุอ์ฎอล หะดีษเมากูฟ สามารถนำมาปฏิบัติในเรื่องเกี่ยวกับฟะฎออิลุลอะมาลได้”</p>
+
+      <p>ท่านอิหม่ามอัสสะคอวีย์ ได้กล่าวเอาไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قد سمعت شيخنا مرارا يقول وكتبه لي بخطه أن شرائط العمل بالضعيف ثلاثة: الأول متفق علیه، وھو أن یكون الضعیف غیر شدید، فیخرج من انفرد من الكذابین والمتھمین ومن فحش غلطه. والثاني أن یكون مندرجا تحت أصل عام فیخرج ما یخترع بحیث لا یكون له أصل أصلا. والثالث أن لا یعتقد عند العمل ثبوته لئلا ینسب إلی النبي صلی الله علیه وسلم ما لم یقله. والأخیران عن ابن عبد السلام وابن دقیق العید، والأول نقل العلائي الاتفاق علیه . . .</blockquote>
+      <p class="ar-translation">“ฉันเคยได้ยินครูของฉัน -คืออัลฮาฟิศ อิบนุ หะญัร- กล่าวไว้หลายครั้งและเขียนถึงฉันด้วยลายมือของท่านเอง เกี่ยวกับเงื่อนไขในการนำหะดีษฎออีฟมาปฏิบัติซึ่งมีทั้งหมด 3 ข้อ</p>
+
+      <p>1-ข้อนี้ถือว่าเป็นมติเอกฉันท์ของนักวิชาการ กล่าวคือ ต้องไม่อยู่ในระดับที่ฎออีฟมากจนเกินไป ดังนั้นจึงไม่อยู่ภายใต้เงื่อนไขข้อนี้ สำหรับสายรายหะดีษที่นักรายงานเป็นจอมมุสา หรือผู้ถูกตราหน้าว่าจอมมุสา และผู้ซึ่งมีความผิดพลาดในการรายงานหะดีษในระดับที่รุนแรง</p>
+
+      <p>2-ต้องอยู่ใต้หลักการสามัญขั้นพื้นฐานทั่วไปของศาสนา ดังนั้นจึงไม่เข้าภายใต้เงื่อนไขข้อนี้ กรณีของการอุตริทำขึ้นมาใหม่ โดยไม่มีรากฐานใดมาสนับสนุน</p>
+
+      <p>3-ต้องไม่ยึดมั่นว่า หะดีษนั้นอยู่ในระดับที่ถูกยึดถือ (แข็งแรง) เพราะเกรงว่าหะดีษฎออีฟที่พาดพิงไปยังท่านนบีนั้นเป็นหะดีษที่ท่านไม่ได้กล่าวเอาไว้ (แต่ให้เผื่อเอาไว้ ไม่ใช่ปฏิเสธโดยสิ้นเชิง)</p>
+
+      <p>สองข้อสุดท้ายมาจากทัศนะของท่านอิบนุ อับดุสสลามและท่านอิบนุ ดะกีก อัลอีด ส่วนข้อแรกที่เป็นมติเอกฉันท์ของนักวิชาการถ่ายทอดมาจากท่านอัลอัลลาอีย์”</p>
+
+      <p>ท่านอัซซะคอวีย์ได้กล่าวไว้ในบรรทัดถัดไปว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فيحصل أن في الضعيف ثلاثة مذاهب: لا يعمل به مطلقا، ويعمل به مطلقا إذا لم يكن في الباب غيره، ثالثها هو الذي عليه الجمهور يعمل به في الفضائل دون الأحكام كما تقدم بشروطه، انتهى</blockquote>
+      <p class="ar-translation">“ข้อสรุปในเรื่องการนำหะดีษฎออีฟมาปฏิบัตินี้นักวิชาการมีทัศนะที่เห็นต่างอยู่ 3 ทัศนะ ทัศนะแรกนั้นไม่อนุญาตทุกกรณี ทัศนะที่สอง สามารถนำมาปฏิบัติได้ ทุกกรณีหากไม่มีหะดีษบทอื่นแล้ว ทัศนะที่สามซึ่งเป็นทัศนะส่วนใหญ่ของนักวิชาการระบุว่า สามารถนำมาใช้ในเรื่องฟะฎออิลุลอะมาลได้ และห้ามนำมาใช้ในเรื่องของบทบัญญัติ ดังเงื่อนไขที่ได้ระบุผ่านมาแล้ว”<sup class="fn-ref" id="fnref-8"><a href="#ref-8">⁸</a></sup></p>
+
+      <p>แต่ท่านอิบนุ หะญัร อัลอัสกอลานีย์ได้เพิ่มเงื่อนไขอีกข้อนึงว่า หะดีษฎออีฟต้องปฏิบัติเป็นการส่วนตัวเท่านั้น ด้วยสาเหตุที่ว่า หากนำหะดีษดังกล่าวมาปฏิบัติอย่างโจ่งแจ้ง แล้วมีชาวบ้านที่มิได้มีความรู้มาเห็นเข้า ก็พลอยทำให้เขาคิดไปว่าการกระทำดังกล่าวนั้นเป็นซุนนะฮ์ที่ศอเฮี้ยะฮ์จากท่านนบี<sup class="fn-ref" id="fnref-9"><a href="#ref-9">⁹</a></sup></p>
+
+      <p>ดังกล่าวนี้คือทัศนะทั้ง 3 กลุ่มของนักวิชาการต่อการนำหะดีษฎออีฟมาปฏิบัติ</p>
+
+      <p>แต่ถึงแม้ทัศนะส่วนใหญ่ของนักวิชาการจะระบุว่า หะดีษฎออีฟที่สามารถนำมาใช้ ต้องเป็นเรื่องฟะฎออิลุลอะมาลเท่านั้น ก็มีนักวิชาการหลายๆ ท่านนำหะดีษฎออีฟไปใช้ในด้านนิติศาสตร์กัน แต่ก็เป็นส่วนน้อย เช่นหะดีษที่ว่า:</p>
+
+      <div class="hadith-block">
+        <p class="block-ar" lang="ar" dir="rtl">الْقَاتِلُ لاَ يَرِثُ</p>
+      </div>
+      <p class="ar-translation">“ฆาตกรจะไม่มีสิทธิ์รับมรดก”<sup class="fn-ref" id="fnref-10"><a href="#ref-10">¹⁰</a></sup></p>
+
+      <p>หะดีษนี้รายงานโดยอิหม่ามอัตติรมีซีย์ในบทว่าด้วยเรื่อง การรับมรดกของผู้ฆ่า (เจ้าของมรดก) นั้นถือเป็นโมฆะ โดยท่านได้ระบุสายรายงานไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">عن إسحاق بن عبد الله، عن الزهري، عن حميد بن عبد الرحمن، عن أبي هريرة</blockquote>
+      <p class="ar-translation">“หะดีษรายงานโดยอิสห้าก บิน อับดุลลอฮ์ จากซุฮ์รีย์ จากหุมัยด์ บิน อับดุรเราะห์มาน จากอบี ฮุรอยเราะฮ์”</p>
+
+      <p>ท่านอิหม่ามอัตติรมีซีย์ได้อธิบายไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هذا حديث لا يصح ولا يعرف إلا من هذا الوجه ‏وإسحاق بن عبد الله بن أبي فروة قد تركه بعض أهل الحديث منهم أحمد بن حنبل ‏.‏ والعمل على هذا عند أهل العلم أن القاتل لا يرث كان القتل عمدا أو خطأ ‏.‏ وقال بعضهم إذا كان القتل خطأ فإنه يرث وهو قول مالك ‏.‏</blockquote>
+      <p class="ar-translation">“หะดีษนี้ไม่ศอเฮี้ยะฮ์ และไม่มีสายรายงานด้านอื่นนอกจากสายนี้ ซึ่งตัวอิสห้าก บิน อับดุลลอฮ์นี้นักวิชาการบางส่วนได้ปฏิเสธที่จะรับหะดีษของเขา เช่น ท่านอะห์มัด บิน ฮัมบัล กระนั้นก็ตามนักวิชาการก็ยังคงถือปฏิบัติกันมาว่า ‘ฆาตกรจะไม่มีสิทธิ์รับมรดก’ ไม่ว่าจะเป็นการฆาตกรรมโดยไม่ตั้งใจหรือตั้งใจก็ตาม ในขณะที่นักวิชาการบางท่านระบุว่า การฆ่าโดยไม่เจตนาสามารถรับมรดกได้ ดังกล่าวนี้คือทัศนะของท่านมาลิก”<sup class="fn-ref" id="fnref-11"><a href="#ref-11">¹¹</a></sup></p>
+
+      <h2 class="article-h2">กรณีตัวอย่างหะดีษฎออีฟบางส่วนจากตำราของนักนิติศาสตร์อิสลามทั้ง 4 สำนักคิด</h2>
+
+      <p><strong>1) มัสฮับอัลหะนะฟียะฮ์</strong></p>
+
+      <p>ท่านอิบนุ อาบิดีน อัลหะนาฟีย์ ได้ระบุไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">(قوله وأكثرها اثنا عشر) لما رواه الترمذي والنسائي بسند فيه ضعف . . . وقد تقرر أن الحديث الضعيف يجوز العمل به في الفضائل</blockquote>
+      <p class="ar-translation">“(และสำนวนที่ว่า จำนวนรอกอัต (ละหมาดดุฮา) มากที่สุดคือ 12 รอกอัต) เพราะมีรายงานโดยท่านอัตติรมีซีย์และอันนะสาอีย์ด้วยกับสายรายงานที่ฎออีฟ. . . . และได้มีมติมาว่าหะดีษฎออีฟสามารถนำมาใช้ในเรื่องฟะฎออิลุลอะมาลได้”<sup class="fn-ref" id="fnref-12"><a href="#ref-12">¹²</a></sup></p>
+
+      <p><strong>2) มัสฮับมาลิกียะฮ์</strong></p>
+
+      <p>ท่านมุหัมมัด อัลหัฏฏ้อบ อัลมาลิกีย์ ได้ระบุไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">(كل كلام لا يذكر الله تعالى فيه فيبدأ به وبالصلاة على فهو أقطع ممحوق من كل بركة) أخرجه الديلمي في مسند الفرودس وأبو موسى المديني والخليلي والرهاوي في الأربعين، قال الحافظ السخاوي: وسنده ضعيف
+
+قلت: وإن كان ضعيفا فقد اتفق العلماء على جواز العمل بالحديث الضعيف في فضائل الأعمال</blockquote>
+      <p class="ar-translation">“(ทุกคำกล่าวที่ไม่ได้เริ่มด้วยการกล่าวพระนามของอัลลอฮ์และการศอลาวาต จะขาดความบะรอกะฮ์) รายงานโดยอัดดัยละมีย์ ในมุสนัดอัลฟิรเดาวส์และอบู มูซา อัลมะดีนีย์และอัลคอลีลีย์และอัรรุฮาวีย์ในหนังสืออัลอัรบะอีน ซึ่งท่านอัซซะคอวีย์ได้กล่าวว่า: สายรายงานหะดีษนี้อยู่ในระดับที่ฎออีฟ ฉัน (คือท่านอัลหัฏฏ้อบ) ขอเสริมว่า: แม้ว่าหะดีษดังกล่าวจะฎออีฟ ก็ได้มีมติจากนักวิชาการว่าสามารถนำหะดีษฎออีฟมาปฏิบัตในเรื่องฟะฎออิลุลอะมาลได้มารองรับอยู่แล้ว”<sup class="fn-ref" id="fnref-13"><a href="#ref-13">¹³</a></sup></p>
+
+      <p><strong>3) มัสฮับอัชชาฟีอียะฮ์</strong></p>
+
+      <p>มัสฮับชาฟีอีย์มีตัวอย่างมากมาย และผ่านหูผ่านตามามากแล้ว ไม่ว่าจะเป็นเรื่องการถือศีลอดในเดือนรอญับ ประเด็นค่ำคืนนิศฟูชะอ์บาน การทำอิบาดัตในค่ำคืนวันอีดทั้งสอง การละหมาดชด (กอฎอ) อีด สำหรับผู้ที่พลาดโอกาสไป</p>
+
+      <p><strong>4) มัสฮับอัลหะนาบิละฮ์</strong></p>
+
+      <p>มัสฮับฮัมบาลีย์ก็มีประเด็นคล้ายกับมัสฮับชาฟีอีย์ ซึ่งก็ได้กล่าวผ่านมาบางส่วนแล้ว</p>
+
+      <h2 class="article-h2">บทสรุป</h2>
+
+      <p>เราได้ทราบมาแล้วว่านักวิชาการได้มีทัศนะที่เห็นต่างในประเด็นการนำหะดีษฎออีฟมาปฏิบัติ ทำให้มีทัศนะแยกออกมาเป็น 3 กลุ่ม โดยทัศนะที่อนุญาตให้นำมาปฏิบัติได้ จัดเป็นทัศนะส่วนใหญ่ของนักวิชาการตั้งแต่ยุคแรก จนถึงยุคปัจจุบัน</p>
+
+      <p>แต่แน่นอนว่าใครใคร่ยึดถือสิ่งใดก็ยึดถือสิ่งนั้น เพราะเหตุเช่นนี้ท่านอับดุลลอฮ์ บิน มุบาร็อก จึงประพันธ์ตำราเล่มหนึ่งชื่อว่า “อัซซุฮฺด์” และอิหม่ามอะห์มัดก็ประพันธ์ตำราเล่มหนึ่งชื่อหนังสือว่า “อัซซุฮฺด์” และอิหม่ามอัลบุคอรีย์ก็ยังได้ประพันธ์ตำราเล่มหนึ่งชื่อว่า “อัลอะดับ อัลมุฟร็อด” และ “บิรรุลวาลิดัยน์” และท่านอิบนุ ตัยมียะฮ์เองก็ได้ประพันธ์ตำราชุดหนึ่งชื่อว่า “อัลกะลิม อัฎฎอยยิบ” รวมถึงท่านวะเกี้ยะอ์ บิน อัลญัรรอห์, ท่านอบู ดาวูด อัสซะญิสตานีย์, อบู ฮาติม อัรรอซีย์, อัลบัยฮะกีย์, อัลคอฏีบ อัลบัฆดาดีย์ ก็มีหนังสือ “อัซซุฮฺด์” เช่นกัน</p>
+
+      <p>หรือหนังสือที่รวบรวมบทดุอาอ์ของท่านอิบนุ อัซซุนนีย์ ชื่อว่า “อะมัล อัลเยาวม์ วัลลัยละฮ์” และของท่านอัฏเฏาะบะรอนีย์ ชื่อว่า “อัดดุอาอ์” และของท่านอัลบัยฮะกีย์ ชื่อว่า “อัดดะอาว้าต”</p>
+
+      <p>ซึ่งอยากจะบอกว่าตำราเหล่านี้ทั้งหมดนั้นมีหะดีษฎออีฟปะปนอยู่เป็นจำนวนมาก แต่นักวิชาการเหล่านี้ก็ไม่ได้เคร่งครัดในการรายงานหะดีษฎออีฟในหนังสือของตัวเอง เพราะตำราทั้งหมดนั้น ในเนื้อหาล้วนแล้วเกี่ยวกับจรรยามารยาทและซิเกรบทรำลึกทั้งสิ้น แม้ว่าบางครั้งเราจะได้อ่าน หรือได้ยินมาว่ามีบางท่านคัดค้านการนำหะดีษฎออีฟมาใช้</p>
+
+      <p>แต่ถ้าเราคนธรรมดาสามัญชนจะนำหะดีษฎออีฟมาปฏิบัติ ก็ควรนำเงื่อนไขที่ท่านอัซซะคอวีย์และอิบนุ หะญัร อัลอัสกอลานีย์ระบุไว้ มาพิจารณาเพื่อบรรทัดฐาน ซึ่งเรื่องดังกล่าวนี้ถือเป็นสิ่งที่สำคัญ</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). เข้าใจหะดีษฎออีฟ พาร์ท 3: การนำหะดีษฎออีฟมาปฏิบัติ. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/hadith/daif-hadith-lesson-3.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <!-- BIBLIOGRAPHY — references from the source manuscript. Arabic titles in Arabic
+         where certain; otherwise transliteration (Rule 3/6). Cited footnotes back-link. -->
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography">
+        <li id="ref-1">ตัดรี้บุรรอวีย์ ฟี ชัรห์ ตักรี้บุนนะวาวีย์, เล่ม 1 หน้า 151, สนพ.อัรกอม บิน อบี อัรกอม, พิมพ์ครั้งที่ 1 ค.ศ. 2005. <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">อัลมะรอซีล, หน้า 15, สนพ.ดารุลกุตุบ อัลอิลมียะฮ์. <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">สามารถค้นคว้าเพิ่มเติมได้จากหนังสือ حكم العمل بالحديث الضعيف, มุหัมมัด เอาวามะฮ์, หน้า 34 ถึงหน้า 60, สนพ.ดารุลมินฮาจ และหนังสือ الحديث الضعيف وحكم الاحتجاج به, อับดุลกะรีม อัลคุฎัยร์, หน้า 259-271, สนพ.ดารุลมินฮาจ. <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">อัลหะดีษ อัฎฎออีฟ, อับดุลกะรีม อัลคุฎัยร์, หน้า 249, สนพ.ดารุลมินฮาจ. <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">ค้นคว้าเพิ่มเติมได้จากหนังสือ الحديث الضعيف وحكم الاحتجاج به, อับดุลกะรีม อัลคุฎัยร์, หน้า 249-259, สนพ.ดารุลมินฮาจ. <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+        <li id="ref-6">ตัดรีบุรรอวีย์, ญะลาลุดดีน อัซซุยูฏีย์, เล่ม 1 หน้า 350, สนพ.อัลเกาษัร, ครั้งที่ 2 เดือน รอญับ ฮ.ศ. 1415; หนังสืออิรช้าดุดฏุลลาบ อัลหะกออิก, อันนะวาวีย์, หน้าที่ 259, 269-271, สนพ.อัลอิมาน, มะดีนะฮ์ อัลมุเนาวาเราะฮ์; อัลฟะตาวา, อันนะวาวีย์, หน้า 260, สนพ.อัรกอม บิน อบี อัรกอม. <a class="fn-back" href="#fnref-6" aria-label="กลับไปยังเชิงอรรถที่ 6">↑</a></li>
+        <li id="ref-7">อัลฟัตหุลมุบีน, อิบนุ หะญัร อัลฮัยตะมีย์, หน้า 95, สนพ.ดารุลกุตุบ อัลอิลมียะฮ์. <a class="fn-back" href="#fnref-7" aria-label="กลับไปยังเชิงอรรถที่ 7">↑</a></li>
+        <li id="ref-8">อัลเกาลุลบาเดี้ยะอ์, อัซซะคอวีย์, หน้า 472, สนพ.มุอัซซาซะฮ์ อัรรอยยาน, ออกเผยแพร่ ค.ศ. 2002; ตัดรี้บุรรอวีย์ ฟี ชัรห์ อัตตักรี้บุนนะวาวีย์, เล่ม 1 หน้า 152, สนพ.อัรกอม บิน อบี อัรกอม, พิมพ์ครั้งที่ 1 ค.ศ. 2005. <a class="fn-back" href="#fnref-8" aria-label="กลับไปยังเชิงอรรถที่ 8">↑</a></li>
+        <li id="ref-9">ตับยีนุลอุญุบ, อิบนุ หะญัร อัลอัสกอลานีย์, หน้า 23, สนพ.มุอัซซาซะฮ์ อัลกุรฏุบะฮ์. <a class="fn-back" href="#fnref-9" aria-label="กลับไปยังเชิงอรรถที่ 9">↑</a></li>
+        <li id="ref-10">أخرجه الترمذي في جامعه، كتاب الفرائض، باب ما جاء في إبطال ميراث القاتل، رقم 2109، من حديث أبي هريرة. <a class="fn-back" href="#fnref-10" aria-label="กลับไปยังเชิงอรรถที่ 10">↑</a></li>
+        <li id="ref-11">อิฮ์ดาอ์ อัดดิบาญะฮ์ บิชัรห์ สุนัน อิบนิ มาญะฮ์, ศอฟาอ์ อัฎฎอวีย์ อะห์มัด อัลอะดาวีย์, เล่ม 4 หน้า 21, สนพ.มักตะบะฮ์ ดาร อัลยะกีน. <a class="fn-back" href="#fnref-11" aria-label="กลับไปยังเชิงอรรถที่ 11">↑</a></li>
+        <li id="ref-12">หะชียะฮ์ ร้อดดุลมุห์ต้าร, อิบนุ อาบิดีน, เล่ม 2 หน้า 23, สนพ.อัลหะลาบีย์, พิมพ์ ค.ศ. 1966. <a class="fn-back" href="#fnref-12" aria-label="กลับไปยังเชิงอรรถที่ 12">↑</a></li>
+        <li id="ref-13">มะวาฮิบ อัลญะลีล ลิชัรห์ มุคตะศ้อร คอลีล, อัลหัฏฏ้อบ มุหัมมัด บิน มุหัมมัด อัลมัฆริบีย์, เล่ม 1 หน้า 25, สนพ.ดารุลกุตุบ อัลอิลมียะฮ์. <a class="fn-back" href="#fnref-13" aria-label="กลับไปยังเชิงอรรถที่ 13">↑</a></li>
+      </ol>
+    </section>
+
+    <nav class="series-nav" aria-label="ชุดบทเรียนทำความเข้าใจหะดีษฎออีฟ">
+  <a class="series-prev" href="/articles/hadith/daif-hadith-lesson-2.html">← บทเรียนที่ 2</a>
+</nav>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+function ifpAlign(){
+  var AR_MAX=60, TH_MAX=80;
+  function mark(el,max){var n=(el.textContent||'').trim().replace(/[\u064B-\u0652\u0670\u0653-\u065F\u06D6-\u06ED\u0640]/g,'').length; el.classList.toggle('is-short', n>0&&n<=max);}
+  document.querySelectorAll('.aya-block .block-ar, .hadith-block .block-ar').forEach(function(el){mark(el,AR_MAX);});
+  // คำแปลของ aya/hadith = .ar-translation ที่อยู่ใน block หรือเป็น sibling ถัดไปนอก block
+  document.querySelectorAll('.aya-block .ar-translation, .hadith-block .ar-translation').forEach(function(el){mark(el,TH_MAX);});
+  document.querySelectorAll('.aya-block, .hadith-block').forEach(function(blk){
+    var n=blk.nextElementSibling;
+    while(n && n.classList && n.classList.contains('ar-translation')){ mark(n,TH_MAX); n=n.nextElementSibling; }
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){requestAnimationFrame(ifpAlign);})
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260619a" charset="UTF-8"></script>
+</body>
+</html>

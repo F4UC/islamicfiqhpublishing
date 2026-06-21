@@ -673,6 +673,37 @@ New article (not a retro-audit). Arabic blocks sourced byte-exact; scholar block
 - **hadith-block** Ibn Masʿūd `لاَ يَمْنَعَنَّ…` — sunnah.com/bukhari:7247, sha1=a670001efc6f5e1ca79ad4c88e1d28a25010a767 [FLAG: author's quoted wording ends `…ويعترض في أفق السماء`, which does NOT match sunnah.com bukhari:7247 matn (`…الفجر أو الصبح`); per prompt directive + R8/R53 used canonical bukhari:7247 byte-exact — editor to confirm desired riwāyah]
 - **R77 embedded sacred text** (Ibn al-Qayyim / Jordan fatwa / Nawawi / Iraq blocks embed āyah+hadith): kept WHOLE scholar block byte-exact & bare (no canonical splice); standalone canonical āyah/hadith appear separately.
 
+## 2026-06-21 — NEW BUILD: daif-hadith-lesson-1 (hadith) — Arabic provenance
+New article (not a retro-audit). Source: Drive fileId 1H5PuklKd-bav_u8jfpPhx0k0nMlg09kmug_lcPWQR_8. No standalone Quran/hadith blocks exist in the source — ALL Arabic is muḥaqqiq/scholar prose (Ibn Ḥajar al-ʿAsqalānī from Nuzhat al-Naẓar; Ibn al-Ṣalāḥ from Maʿrifat Anwāʿ ʿUlūm al-Ḥadīth), so no quran.com/sunnah.com fetch was required.
+- **12 `.ar-quote` scholar blocks** stripped to uniformly BARE per Rule 60 (ALL-OR-NOTHING; source was partially voweled). Operation deleted ONLY marks U+064B–U+0652 + U+0670 (ًٌٍَُِّْٰ); consonant skeleton + spaces + author's editorial bracket [من] unchanged. Verified by byte-diff: removed-set membership only, 0 harakat remaining inside any ar-quote (script-checked).
+- No embedded sacred-text edge case (R77): the Quranic/ḥadīth wording the lesson discusses is conceptual, not quoted as Arabic matn, so nothing was spliced.
+- article blob SHA (git :path) = d641d6f0a3602ba797d81c733c8c4f693ff6e590 (pre-ศอฮาบัต normalization; re-add after final edits).
+
+
+---
+
+## 2026-06-21 — NEW ARTICLE: articles/hadith/daif-hadith-lesson-2.html (เข้าใจหะดีษฎออีฟ พาร์ท 2)
+Branch: claude/p3-daif-hadith-lesson-2 · HTML blob SHA: 91e3ca3fe9d3dd1d434fc37fec05924a948e9a56
+Source: Drive fileId 1dHKnDBD8ANYMACdOc8YAVqGAk2Xdt6Qv6Gkkjooh0Fc (raw → /tmp/src_daif2.txt)
+
+- **R71 child-safety screen:** PASS — none. Hadith-methodology lesson; no content sexualizes a minor.
+- **Arabic blocks (all 23) = scholar quotes `.ar-quote` (R60 ALL-OR-NOTHING → UNIFORMLY BARE).**
+  Source mixed voweled + bare scholar quotes → stripped harakat from ALL so uniformly bare.
+  Operation: byte-exact — deleted ONLY U+064B–U+0652 via script (strip-marks); consonant skeleton + spacing UNCHANGED. Never retyped.
+  Byte-diff proof: for every block, `strip_U064B-0652(source_block) == html_block` verified True (23/23); remaining harakat in html ar-quotes = 0.
+- **No `.aya-block` / `.hadith-block`:** the source contains NO standalone āyah or standalone hadith — every Arabic passage is a scholar quotation. The Prophetic hadith "من كذب علي متعمدا…" is embedded continuously INSIDE al-Nawawi's quote → per R77 EDGE CASE / R1 kept verbatim & bare inside the `.ar-quote`; NO canonical splice, NO standalone re-fetch (it does not stand alone).
+- **Punctuation:** did NOT normalize Latin `,`/`.`/`:`/`"`/`!`/`-` inside scholar Arabic (R77 normalize is optional; chose byte-exact verbatim per R1 — source's existing marks preserved).
+
+
+## 2026-06-21 — NEW BUILD: daif-hadith-lesson-3 (hadith) — Arabic provenance
+New article (not a retro-audit). Source: Drive `1o0IsTiLnvFFwSNxXbxZ_Zu3sUqzmFfWcusNhfz2Ly7w` ("เข้าใจหะดีษฎออีฟ พาร์ท 3"). R71 child-safety screen: none (hadith-methodology lesson).
+- **15 scholar `.ar-quote` blocks** (al-Nawawi ×4, Ibn Qudamah, al-Suyuti, al-Iraqi, Ibn Hajar al-Haytami, al-Sakhawi ×2, the daif phrase as ar-inline excluded, al-Tirmidhi isnad+grading, Ibn Abidin, al-Hattab) stripped to uniformly BARE per Rule 60 (source was MIXED voweled+bare, so all-or-nothing → BARE). Delete-only U+064B–U+0652; skeleton + spaces UNCHANGED. Byte-diff verified: each block's bare-normalized skeleton found verbatim in the Drive source (15/15). sha1(concat of 15 blocks)=cda14d6d33ea8316. Never retyped.
+- **hadith-block** (standalone matn `الْقَاتِلُ لاَ يَرِثُ`) — sunnah.com/tirmidhi:2109 (Jamiʿ al-Tirmidhi, Kitab al-Faraʾiḍ, bab abtal mirath al-qatil; Abu Hurayrah; graded Hasan/Darussalam). Pasted byte-exact, fully voweled. sha1(block)=43aa02f50bff6a3d. takhrij in bibliography ref-10.
+- **R77 EDGE CASE**: the matn `القاتل لا يرث` also appears EMBEDDED inside al-Tirmidhi's bare grading quote (`...أن القاتل لا يرث...`). Per R77/R1, the scholar quote was kept byte-exact & BARE (no canonical splice); the standalone canonical hadith provided separately as `.hadith-block` (voweled) + takhrij. The isnad fragment is al-Tirmidhi's chain text → `.ar-quote` bare (not the prophetic matn).
+- No Quran āyah in this article. No `.aya-block`.
+- ★No Purge★ until owner directs.
+
+
 ## 2026-06-21 — NEW BUILD: using-daif-hadith-in-rulings (hadith) — Arabic provenance
 New standalone usul article (not a retro-audit). HTML blob SHA = 85b5d5c648bc8197d8dd1ba56f2e41c97be1fb1e (final).
 - **Scholar tashkeel R60 ALL-OR-NOTHING → uniformly BARE:** 15 `.ar-quote` blocks. Source had mixed voweling (some fully voweled, some bare), so per R60 ALL blocks stripped to uniformly bare. Operation byte-exact: deleted ONLY U+064B–U+0652 via `re.sub('[ً-ْ]','')`; consonant skeleton + spaces unchanged. Verified: `HARAKAT.sub('', raw) == bare` (True) and all 15 in-file ar-quote blocks match the stripped reference list (harakat count 0, skeleton-equal). 1337 harakat marks removed total.
