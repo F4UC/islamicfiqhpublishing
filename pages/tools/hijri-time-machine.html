@@ -304,6 +304,80 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
 .htm-panel { display: none; }
 .htm-panel.active { display: block; }
 
+/* ─── Redesign: Sidebar + Main Content ─── */
+.tm-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+.tm-sidebar {
+  flex: 0 0 160px;
+  position: sticky;
+  top: 100px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 16px 0;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+.tm-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tm-nav-link {
+  display: block;
+  padding: 8px 16px;
+  color: var(--text-secondary);
+  font-family: var(--ui);
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+.tm-nav-link:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+.tm-nav-link.active {
+  color: var(--accent-color);
+  border-left-color: var(--accent-color);
+  background: rgba(211,47,47,0.05);
+}
+.tm-content {
+  flex: 1;
+  min-width: 0;
+}
+.htm-search-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+#tm-search-input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 1px solid var(--border-secondary);
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: var(--thai);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  transition: var(--theme-transition);
+}
+#tm-search-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(211,47,47,0.12);
+}
+@media (max-width: 768px) {
+  .tm-layout { flex-direction: column; }
+  .tm-sidebar { flex: none; width: 100%; position: static; max-height: 200px; }
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
   .converter-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -450,21 +524,18 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
 
   <!-- Explorer Panel -->
   <div id="panel-explorer" class="htm-panel">
-    <div class="explorer-panel">
-      <div class="explorer-header">
-        <h2>สำรวจเหตุการณ์สำคัญ</h2>
-        <div class="year-input-wrap">
-          <label>ปี ฮ.ศ.</label>
-          <input type="number" class="year-input" id="explore-year" min="1" max="1500" value="500">
-          <span class="year-suffix">ฮ.ศ.</span>
-          <button class="btn-explore" id="btnExplore">สำรวจ</button>
-        </div>
-      </div>
-      <div id="explorer-output">
-        <div class="timeline-empty">
-          <div>กรอกปี ฮ.ศ. ที่ต้องการสำรวจแล้วกดปุ่ม "สำรวจ"</div>
-        </div>
-      </div>
+    <div class="htm-search-box">
+      <input type="text" id="tm-search-input" placeholder="ค้นหาเหตุการณ์, บุคคล, สถานที่ (รองรับภาษาอาหรับและไทย)">
+    </div>
+    <div class="tm-layout">
+      <aside class="tm-sidebar" id="tm-sidebar">
+        <ul class="tm-nav-list" id="tm-nav-list">
+          <li><a href="#" class="tm-nav-link">กำลังโหลด...</a></li>
+        </ul>
+      </aside>
+      <section class="tm-content" id="tm-content">
+        <div class="timeline-empty"><div>กำลังเตรียมข้อมูลไทม์ไลน์...</div></div>
+      </section>
     </div>
   </div>
 
@@ -661,51 +732,117 @@ function hijriYearToGregorianApprox(h) {
 
 var TM_CHRONICLES = {};  /* chronicle id -> {nameThai, book, ...}; filled by the shard loader */
 
-function exploreYear() {
-  const hy = parseInt(document.getElementById('explore-year').value);
-  if (!hy || hy < 1 || hy > 1500) {
-    document.getElementById('explorer-output').innerHTML =
-      '<div class="timeline-empty"><div>กรุณากรอกปี ฮ.ศ. ระหว่าง 1 ถึง 1500</div></div>';
-    return;
-  }
+let tmObserver = null;
 
-  const range = 15;
-  const nearby = EVENTS.filter(e => Math.abs(e.year - hy) <= range);
-  const ceApprox = hijriYearToGregorianApprox(hy);
+function initTimelineView() {
+  const content = document.getElementById('tm-content');
+  const navList = document.getElementById('tm-nav-list');
+  if (!content || !navList) return;
 
-  let html = `
-    <div class="century-badge">${getCenturyLabel(hy)}</div>
-    <div class="year-range-display">แสดงเหตุการณ์รอบปี <span>ฮ.ศ. ${hy}</span> (ประมาณ ค.ศ. ${ceApprox}) ในช่วง ±${range} ปี</div>
-  `;
-
-  if (nearby.length === 0) {
-    html += `<div class="timeline-empty"><div>ไม่พบเหตุการณ์สำคัญที่บันทึกไว้ในช่วงนี้</div></div>`;
-    document.getElementById('explorer-output').innerHTML = html;
-    return;
-  }
-
-  // Group events by year; order years by proximity to the queried year (focus first).
   const byYear = {};
-  nearby.forEach(e => { (byYear[e.year] = byYear[e.year] || []).push(e); });
-  const years = Object.keys(byYear).map(Number)
-    .sort((a, b) => (Math.abs(a - hy) - Math.abs(b - hy)) || (a - b));
+  EVENTS.forEach(e => { (byYear[e.year] = byYear[e.year] || []).push(e); });
+  const years = Object.keys(byYear).map(Number).sort((a, b) => a - b);
 
-  html += '<div class="tm-timeline">';
+  let html = '';
+  let navHtml = '';
+
   years.forEach(y => {
     const evs = byYear[y];
-    const isFocus = (y === hy);
     const ceYear = hijriYearToGregorianApprox(y);
-    const yearHead = `ปี ฮ.ศ. ${y} <span class="tm-ce">(≈ ค.ศ. ${ceYear})</span> · ${evs.length} เหตุการณ์`;
-    const groupsHtml = renderYearGroups(evs, isFocus);
-    if (isFocus) {
-      html += `<section class="tm-year tm-focus"><h3 class="tm-year-head">${yearHead}</h3>${groupsHtml}</section>`;
-    } else {
-      html += `<details class="tm-year"><summary class="tm-year-head">${yearHead}</summary>${groupsHtml}</details>`;
+    const yearHead = `ปี ฮ.ศ. ${y} <span class="tm-ce">(≈ ค.ศ. ${ceYear})</span>`;
+    const groupsHtml = renderYearGroups(evs, true);
+    
+    html += `<section class="tm-year-section" id="year-${y}">
+               <div class="century-badge">${getCenturyLabel(y)}</div>
+               <details class="tm-year" open>
+                 <summary class="tm-year-head">${yearHead}</summary>
+                 ${groupsHtml}
+               </details>
+             </section>`;
+    
+    navHtml += `<li><a href="#year-${y}" class="tm-nav-link" data-year="${y}">ฮ.ศ. ${y}</a></li>`;
+  });
+
+  content.innerHTML = html;
+  navList.innerHTML = navHtml;
+
+  if (tmObserver) tmObserver.disconnect();
+  tmObserver = new IntersectionObserver(entries => {
+    let visibleYears = [];
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        visibleYears.push(entry.target.id);
+      }
+    });
+    if (visibleYears.length > 0) {
+      document.querySelectorAll('.tm-nav-link').forEach(link => link.classList.remove('active'));
+      const activeId = visibleYears[visibleYears.length - 1];
+      const activeLink = document.querySelector(`.tm-nav-link[href="#${activeId}"]`);
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
     }
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  document.querySelectorAll('.tm-year-section').forEach(sec => tmObserver.observe(sec));
+  
+  document.querySelectorAll('.tm-nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSec = document.getElementById(targetId);
+      if (targetSec) {
+        window.scrollTo({ top: targetSec.offsetTop - 80, behavior: 'smooth' });
+      }
+    });
+  });
+}
+
+function performDeepSearch(query) {
+  const content = document.getElementById('tm-content');
+  if (!query) {
+    initTimelineView();
+    document.getElementById('tm-sidebar').style.display = 'block';
+    return;
+  }
+  
+  document.getElementById('tm-sidebar').style.display = 'none';
+  query = query.toLowerCase();
+  
+  const matches = EVENTS.filter(e => {
+    if (e.title && e.title.toLowerCase().includes(query)) return true;
+    if (e.titleArabic && e.titleArabic.includes(query)) return true;
+    if (e.desc && e.desc.toLowerCase().includes(query)) return true;
+    if (e.accounts) {
+      for (let a of e.accounts) {
+        if (a.detail && a.detail.toLowerCase().includes(query)) return true;
+        if (a.arabicExcerpt && a.arabicExcerpt.includes(query)) return true;
+      }
+    }
+    if (e.figures) {
+      for (let f of e.figures) {
+        if (f.thai && f.thai.toLowerCase().includes(query)) return true;
+        if (f.arabic && f.arabic.includes(query)) return true;
+      }
+    }
+    return false;
+  });
+
+  if (matches.length === 0) {
+    content.innerHTML = `<div class="timeline-empty">ไม่พบผลการค้นหาสำหรับ "${query}"</div>`;
+    return;
+  }
+
+  matches.sort((a, b) => a.year - b.year);
+  
+  let html = `<div class="year-range-display">พบ ${matches.length} เหตุการณ์ สำหรับ "<span>${query}</span>"</div>`;
+  html += '<div class="tm-timeline">';
+  matches.forEach(e => {
+    html += renderEventCard(e);
   });
   html += '</div>';
-
-  document.getElementById('explorer-output').innerHTML = html;
+  
+  content.innerHTML = html;
 }
 
 /* Partition a year's events into thematic groups (collapsible), ordered by the
@@ -905,7 +1042,7 @@ function renderEventCard(e) {
       if (added) {
         var out = document.getElementById('explorer-output');
         if (out && out.children.length && !out.querySelector('.timeline-empty')) {
-          exploreYear();
+          initTimelineView();
         }
       }
     })
@@ -946,8 +1083,7 @@ function renderEventCard(e) {
   if(bH2G) bH2G.addEventListener('click', convertHijriToGregorian);
   var bG2H = document.getElementById('btnConvertG2H');
   if(bG2H) bG2H.addEventListener('click', convertGregorianToHijri);
-  var bExp = document.getElementById('btnExplore');
-  if(bExp) bExp.addEventListener('click', exploreYear);
+
 
   /* Delegated handler for per-chronicle source tabs inside event cards.
      explorer-output persists across re-renders, so one listener suffices. */
@@ -961,6 +1097,16 @@ function renderEventCard(e) {
     body.querySelectorAll('.tm-tab').forEach(function(x){ x.classList.toggle('active', x === tab); });
     body.querySelectorAll('.tm-acc').forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-acc') === idx); });
   });
+  var tsInput = document.getElementById('tm-search-input');
+  if(tsInput) {
+    let tmTimeout;
+    tsInput.addEventListener('input', function(e) {
+      clearTimeout(tmTimeout);
+      tmTimeout = setTimeout(function() {
+        performDeepSearch(e.target.value.trim());
+      }, 300);
+    });
+  }
 })();
 </script>
 </body>

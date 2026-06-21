@@ -7,7 +7,7 @@
     "ibn-kathir":        { "type": "annal", "order": 1, "nameThai": "อิบนุ กะษีร", "book": "อัลบิดายะฮ์ วันนิฮายะฮ์", "bookArabic": "البداية والنهاية", "died": "ฮ.ศ. 774", "shamelaBook": 30097, "islamwebBook": 59 },
     "ibn-athir":         { "type": "annal", "order": 2, "nameThai": "อิบนุ อัษีร", "book": "อัลกามิล ฟิตตารีค", "bookArabic": "الكامل في التاريخ", "died": "ฮ.ศ. 630", "shamelaBook": 21712 },
     "ibn-jawzi":         { "type": "annal", "order": 3, "nameThai": "อิบนุ อัลเญาซีย์", "book": "อัลมุนตะซ็อม", "bookArabic": "المنتظم في تاريخ الملوك والأمم", "died": "ฮ.ศ. 597", "shamelaBook": 12406 },
-    "sibt-ibn-al-jawzi": { "type": "annal", "order": 4, "nameThai": "สิบฏ์ อิบนุลเญาซีย์", "book": "มิรอาตุซซะมาน ฟี ตารีคิลอะอ์ยาน", "bookArabic": "مرآة الزمان في تواريخ الأعيان", "died": "ฮ.ศ. 654", "note": "หลานฝ่ายมารดาของอิบนุลเญาซีย์" },
+    "sibt-ibn-al-jawzi": { "type": "annal", "order": 4, "nameThai": "สิบฏ์ อิบนุลเญาซีย์", "book": "มิรอาตุซซะมาน ฟี ตารีคิลอะอ์ยาน", "bookArabic": "مرآة الزمان في تواريخ الأعيان", "died": "ฮ.ศ. 654", "shamelaBook": 12209, "note": "หลานฝ่ายมารดาของอิบนุลเญาซีย์" },
 
     "al-dhahabi-siyar":  { "type": "tarajim", "nameThai": "อัซซะฮะบีย์", "book": "ซิยัร อะอ์ลาม อันนุบะลาอ์", "bookArabic": "سير أعلام النبلاء", "died": "ฮ.ศ. 748" },
     "al-subki-tabaqat":  { "type": "tarajim", "nameThai": "อัซซุบกีย์", "book": "ฏอบะกอต อัชชาฟิอียะฮ์ อัลกุบรอ", "bookArabic": "طبقات الشافعية الكبرى", "died": "ฮ.ศ. 771" },
