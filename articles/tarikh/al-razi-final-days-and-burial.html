@@ -80,8 +80,8 @@ body { position: relative; }
 .ar-quote, .ar-feature,
 .aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
 .ar-translation { text-align: left; }
-.aya-block .block-ar.is-short, .aya-block .ar-translation.is-short,
-.hadith-block .block-ar.is-short, .hadith-block .ar-translation.is-short { text-align: center; }
+.aya-block .block-ar.is-short, .hadith-block .block-ar.is-short,
+.ar-translation.is-short { text-align: center; }
 /* Global Arabic On/Off — single source of truth: html.no-arabic */
 html.no-arabic .ar-feature,
 html.no-arabic .aya-block,
@@ -459,7 +459,7 @@ document.querySelectorAll('.reveal').forEach(function(el) {
 // PART 1 — conditional alignment judged at the REAL rendered width.
 function ifpAlign(){
   var AR_MAX=60, TH_MAX=80;
-  function mark(el,max){var n=(el.textContent||'').trim().length; el.classList.toggle('is-short', n>0&&n<=max);}
+  function mark(el,max){var n=(el.textContent||'').trim().replace(/[\u064B-\u0652\u0670\u0653-\u065F\u06D6-\u06ED\u0640]/g,'').length; el.classList.toggle('is-short', n>0&&n<=max);}
   document.querySelectorAll('.aya-block .block-ar, .hadith-block .block-ar').forEach(function(el){mark(el,AR_MAX);});
   // คำแปลของ aya/hadith = .ar-translation ที่อยู่ใน block หรือเป็น sibling ถัดไปนอก block
   document.querySelectorAll('.aya-block .ar-translation, .hadith-block .ar-translation').forEach(function(el){mark(el,TH_MAX);});
