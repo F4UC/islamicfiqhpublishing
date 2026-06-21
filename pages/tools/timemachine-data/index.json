@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h118.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 118,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 118 (Shamela 166–167) — กบฏเคาะดาช + มรณกรรมต้นวงศ์อับบาซียะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h119.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 119,
