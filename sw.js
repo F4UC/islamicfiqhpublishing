@@ -119,7 +119,9 @@ async function staleWhileRevalidate(request) {
       return response;
     })
     .catch(() => null);
-  return cached || (await network) || new Response('null', { headers: { 'Content-Type': 'application/json' } });
+  // Miss + network failure → surface a real network error so callers' .catch
+  // fires (never a fake 200 'null', which they'd parse as an empty array).
+  return cached || (await network) || Response.error();
 }
 
 // --- router -----------------------------------------------------------------
