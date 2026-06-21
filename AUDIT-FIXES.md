@@ -717,3 +717,10 @@ New standalone usul article (not a retro-audit). HTML blob SHA = 85b5d5c648bc819
 - Byte-diff: 10/10 ar-quote consonant skeletons match the Drive source skeleton exactly (verified by strip-marks comparison).
 - Punctuation: NOT normalized (R77 is audit-scope; fresh build keeps source byte-exact). Latin `"` inside blocks 6/7 (الموت الإكلينيكي / القتل الرحيم) and in-text `(1)` marker in block 3 kept verbatim per R1.
 - Article blob SHA (at build): 015ab9aea04c05ecc6a140e8a1138265262650ba
+
+## 2026-06-21 — NEW BUILD: fatwa-of-mufti-vs-ruling-of-qadi (nitisart) — Arabic provenance
+New standalone usul/fiqh article (mufti's fatwā vs qāḍī's binding ḥukm). HTML blob SHA = a0ae94a8418f14a37bce2b455bcecbaa8100baa7 (staged).
+- **Scholar tashkeel R60 ALL-OR-NOTHING → uniformly BARE:** 8 `.ar-quote` blocks (Ibn al-Qayyim, ʿAṭiyyah Ṣaqr ×3, al-Qarāfī, al-Subkī, al-Ghazālī, Kuwaiti Fiqh Encyclopedia). Source had mixed voweling (some fully voweled, some bare), so per R60 ALL stripped to uniformly bare. Byte-exact: deleted ONLY U+064B–U+0652 via `re.sub('[ً-ْ]','')`; consonant skeleton + spaces unchanged. Verified each in-file block skeleton == source skeleton (harakat-stripped): all 8 OK byte-exact (harakat count 0 in file).
+- **R77 scholar-Arabic punctuation normalization:** removed trailing Latin full-stop `.` from the 4 source quotes that ended with it (Ibn al-Qayyim, ʿAṭiyyah Ṣaqr quote 1+2, al-Qarāfī, al-Subkī). Arabic comma `،` (U+060C) was already present in source — unchanged. No other punctuation edits. byte-diff confirmed (skeleton-equal modulo trailing dot).
+- **No standalone aya-block / hadith-block in this article** — source contains NO Quran āyah and NO hadith. Every Arabic passage is a scholar quotation introduced by "ท่าน X ระบุไว้ว่า:" etc.
+- **FLAG (R9/R3 — al-Subkī demise year):** the naqḍ-al-qaḍāʾ quote is attributed in the source simply to "อัซซุบกีย์" / "فتاوى السبكي" without specifying which al-Subkī (Taqī al-Dīn d. AH 756 or Tāj al-Dīn d. AH 771). Could not verify which one from islamweb's citation. Per R9/R3 NO demise year was fabricated — first mention left without a year; editor to confirm and add the correct year.
