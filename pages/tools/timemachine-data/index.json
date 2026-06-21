@@ -1112,6 +1112,24 @@
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 216 (al-Bidayah เล่ม 11, ص55): ★การรุกรานของจักรพรรดิธีโอฟิลอสและศึกรูมของอัลมะอ์มูน★ (Rule 89)",
       "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h217.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 217,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 217 - อัลมะอ์มูนปราบกบฏอียิปต์+ศึกรูม (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h218.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 218,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 218 - ★★จุดเริ่มมิห์นะฮ์+มรณกรรมอัลมะอ์มูน★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
     }
   ]
 }
