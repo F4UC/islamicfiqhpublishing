@@ -672,3 +672,17 @@ New article (not a retro-audit). Arabic blocks sourced byte-exact; scholar block
 - **hadith-block** Bilāl/Ibn Umm Maktūm — sunnah.com/muslim:1092c (exact wording match `…حَتَّى يُؤَذِّنَ ابْنُ أُمِّ مَكْتُومٍ`; takhrīj al-Bukhārī & Muslim), sha1=8413cd41af5a896da1263205f926644fd592f973
 - **hadith-block** Ibn Masʿūd `لاَ يَمْنَعَنَّ…` — sunnah.com/bukhari:7247, sha1=a670001efc6f5e1ca79ad4c88e1d28a25010a767 [FLAG: author's quoted wording ends `…ويعترض في أفق السماء`, which does NOT match sunnah.com bukhari:7247 matn (`…الفجر أو الصبح`); per prompt directive + R8/R53 used canonical bukhari:7247 byte-exact — editor to confirm desired riwāyah]
 - **R77 embedded sacred text** (Ibn al-Qayyim / Jordan fatwa / Nawawi / Iraq blocks embed āyah+hadith): kept WHOLE scholar block byte-exact & bare (no canonical splice); standalone canonical āyah/hadith appear separately.
+
+---
+
+## 2026-06-21 — NEW ARTICLE: articles/hadith/daif-hadith-lesson-2.html (เข้าใจหะดีษฎออีฟ พาร์ท 2)
+Branch: claude/p3-daif-hadith-lesson-2 · HTML blob SHA: 91e3ca3fe9d3dd1d434fc37fec05924a948e9a56
+Source: Drive fileId 1dHKnDBD8ANYMACdOc8YAVqGAk2Xdt6Qv6Gkkjooh0Fc (raw → /tmp/src_daif2.txt)
+
+- **R71 child-safety screen:** PASS — none. Hadith-methodology lesson; no content sexualizes a minor.
+- **Arabic blocks (all 23) = scholar quotes `.ar-quote` (R60 ALL-OR-NOTHING → UNIFORMLY BARE).**
+  Source mixed voweled + bare scholar quotes → stripped harakat from ALL so uniformly bare.
+  Operation: byte-exact — deleted ONLY U+064B–U+0652 via script (strip-marks); consonant skeleton + spacing UNCHANGED. Never retyped.
+  Byte-diff proof: for every block, `strip_U064B-0652(source_block) == html_block` verified True (23/23); remaining harakat in html ar-quotes = 0.
+- **No `.aya-block` / `.hadith-block`:** the source contains NO standalone āyah or standalone hadith — every Arabic passage is a scholar quotation. The Prophetic hadith "من كذب علي متعمدا…" is embedded continuously INSIDE al-Nawawi's quote → per R77 EDGE CASE / R1 kept verbatim & bare inside the `.ar-quote`; NO canonical splice, NO standalone re-fetch (it does not stand alone).
+- **Punctuation:** did NOT normalize Latin `,`/`.`/`:`/`"`/`!`/`-` inside scholar Arabic (R77 normalize is optional; chose byte-exact verbatim per R1 — source's existing marks preserved).
