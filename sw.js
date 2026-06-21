@@ -26,7 +26,7 @@ const RUNTIME = CACHE_VERSION + '-runtime';
  * any version not listed here. (site-background.css intentionally omitted — it
  * does not exist in the repo.) */
 const PRECACHE_URLS = [
-  '/offline.html',
+  '/offline', // extensionless — /offline.html 308-redirects (clean URLs), and cache.add() rejects redirects
   '/manifest.webmanifest',
   '/favicon.png?v=2',
   '/og-cover.jpg',
@@ -92,7 +92,7 @@ async function htmlNetworkFirst(request) {
   } catch (err) {
     const cached = await caches.match(request);
     if (cached) return cached;
-    const offline = await caches.match('/offline.html');
+    const offline = await caches.match('/offline');
     return offline || new Response('Offline', { status: 503, statusText: 'Offline' });
   }
 }
