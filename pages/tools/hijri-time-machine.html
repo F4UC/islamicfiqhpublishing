@@ -282,6 +282,9 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
 .tm-lbl { display: block; font-family: var(--ui); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 8px; }
 .tm-figures ul, .tm-sources ul { list-style: none; margin: 0; padding: 0; }
 .tm-figures li, .tm-sources li { padding: 4px 0; color: var(--text-secondary); line-height: 1.7; }
+.tm-tarajim { font-family: var(--ui); font-size: 12px; color: var(--text-tertiary); }
+.tm-tarajim a { color: var(--text-tertiary); text-decoration: none; border-bottom: 1px dotted var(--border-secondary); }
+.tm-tarajim a:hover { color: var(--accent-color); border-bottom-color: var(--accent-color); }
 .tm-ar { font-family: var(--arabic); font-size: 17px; color: var(--text-primary); }
 .tm-src-link { font-family: var(--ui); font-size: 12.5px; color: var(--accent-color); font-weight: 700; text-decoration: none; border-bottom: 1px solid transparent; }
 .tm-src-link:hover { border-bottom-color: var(--accent-color); }
@@ -740,7 +743,17 @@ function renderEventCard(e) {
     let lis = '';
     e.figures.forEach(f => {
       const ar = f.arabic ? ` - <span class="tm-ar" dir="rtl" lang="ar">${f.arabic}</span>` : '';
-      lis += `<li>${f.thai}${ar}</li>`;
+      /* Person-scoped biographical references (tarajim): Siyar, Tabaqat, Tahdhib, ...
+         Resolved against the source registry; follow the person wherever they appear. */
+      let tj = '';
+      if (f.tarajim && f.tarajim.length) {
+        tj = ' <span class="tm-tarajim">' + f.tarajim.map(function (t) {
+          const src = (typeof TM_CHRONICLES !== 'undefined' && TM_CHRONICLES[t.source]) || {};
+          const nm = (src.book || t.source || 'ชีวประวัติ') + (t.loc ? ' ' + t.loc : '');
+          return t.url ? `<a href="${t.url}" target="_blank" rel="noopener noreferrer">${nm} ↗</a>` : nm;
+        }).join(' · ') + '</span>';
+      }
+      lis += `<li>${f.thai}${ar}${tj}</li>`;
     });
     figuresHtml = `<div class="tm-figures"><span class="tm-lbl">บุคคลสำคัญ</span><ul>${lis}</ul></div>`;
   }
@@ -758,8 +771,8 @@ function renderEventCard(e) {
                  : (e.desc ? [{ chronicle: null, detail: e.desc }] : []);
   let tabsHtml = '', panelsHtml = '';
   accounts.forEach(function (a, i) {
-    const ch = (typeof TM_CHRONICLES !== 'undefined' && TM_CHRONICLES[a.chronicle]) || {};
-    const name = ch.nameThai || a.chronicle || 'แหล่งอ้างอิง';
+    const ch = (typeof TM_CHRONICLES !== 'undefined' && TM_CHRONICLES[a.source || a.chronicle]) || {};
+    const name = ch.nameThai || a.source || a.chronicle || 'แหล่งอ้างอิง';
     const act = i === 0 ? ' active' : '';
     tabsHtml += `<button type="button" class="tm-tab${act}" data-acc="${i}">${name}</button>`;
     let links = '';
@@ -828,7 +841,7 @@ function renderEventCard(e) {
     if (!g) return m;
     ['persons', 'places', 'books'].forEach(function (k) {
       (g[k] || []).forEach(function (it) {
-        if (it && it.id) m[it.id] = { thai: it.canonicalThai || it.id, arabic: it.arabic || '' };
+        if (it && it.id) m[it.id] = { thai: it.canonicalThai || it.id, arabic: it.arabic || '', tarajim: it.tarajim || null };
       });
     });
     return m;
@@ -840,8 +853,14 @@ function renderEventCard(e) {
       var shards = (manifest && manifest.shards) || [];
       var gloss = fetch(BASE + ((manifest.meta && manifest.meta.glossary) || 'glossary.json'))
         .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
-      var chron = fetch(BASE + 'chronicles.json')
-        .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+      /* Unified source registry: prefer sources.json (annal + tarajim, type-tagged),
+         fall back to the older chronicles.json for back-compat. */
+      var chron = fetch(BASE + 'sources.json')
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+        .catch(function () {
+          return fetch(BASE + 'chronicles.json')
+            .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+        });
       var data = Promise.all(shards.map(function (s) {
         return fetch(BASE + s.file).then(function (r) { return r.ok ? r.json() : null; })
           .catch(function () { return null; });
@@ -851,7 +870,7 @@ function renderEventCard(e) {
     .then(function (res) {
       var gmap = indexGlossary(res[0]);
       var loaded = res[1] || [];
-      if (res[2] && res[2].chronicles) TM_CHRONICLES = res[2].chronicles;
+      if (res[2]) TM_CHRONICLES = res[2].sources || res[2].chronicles || TM_CHRONICLES;
       var added = 0;
       loaded.forEach(function (shard) {
         if (!shard || !Array.isArray(shard.events)) return;

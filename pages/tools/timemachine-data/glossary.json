@@ -724,14 +724,38 @@
       "arabic": "الحسن البصري",
       "canonicalThai": "อัลหะสัน อัลบัศรีย์",
       "note": "อิหม่ามและนักพรตผู้ยิ่งใหญ่แห่งตาบิอีนของบัศเราะฮ์",
-      "variantsFound": []
+      "variantsFound": [],
+      "tarajim": [
+        {
+          "source": "al-dhahabi-siyar",
+          "loc": "เล่ม 4 หน้า 563"
+        },
+        {
+          "source": "al-mizzi-tahdhib",
+          "loc": "เล่ม 6 หน้า 95"
+        }
+      ]
     },
     {
       "id": "muhammad-b-sirin",
       "arabic": "محمد بن سيرين",
       "canonicalThai": "มุหัมมัด บิน สีรีน",
       "note": "อิบนุ สีรีน ปราชญ์ตาบิอีนผู้ตีความฝันแห่งบัศเราะฮ์",
-      "variantsFound": []
+      "variantsFound": [],
+      "tarajim": [
+        {
+          "source": "al-dhahabi-siyar",
+          "loc": "เล่ม 4 หน้า 544"
+        },
+        {
+          "source": "al-mizzi-tahdhib",
+          "loc": "เล่ม 31 หน้า 140"
+        },
+        {
+          "source": "ibn-khallikan",
+          "loc": "เล่ม 6 หน้า 35"
+        }
+      ]
     },
     {
       "id": "al-harith-b-amr",
@@ -864,7 +888,21 @@
       "arabic": "الحجاج بن يوسف الثقفي",
       "canonicalThai": "อัลหัจญาจ บิน ยูซุฟ",
       "note": "ผู้ครองอิรักผู้เลื่องชื่อสมัยอับดุลมาลิก-อัลวะลีดที่ 1",
-      "variantsFound": []
+      "variantsFound": [],
+      "tarajim": [
+        {
+          "source": "al-dhahabi-siyar",
+          "loc": "เล่ม 4 หน้า 520"
+        },
+        {
+          "source": "al-mizzi-tahdhib",
+          "loc": "เล่ม 2 หน้า 233"
+        },
+        {
+          "source": "ibn-khallikan",
+          "loc": "เล่ม 2 หน้า 53"
+        }
+      ]
     },
     {
       "id": "qutayba-b-muslim",
