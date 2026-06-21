@@ -53,6 +53,37 @@
       ],
       "confidence": "high",
       "reviewFlags": []
+    },
+    {
+      "id": "bidayah-h107-002",
+      "book": "al-bidayah",
+      "hijriYear": 107,
+      "ceYear": 725,
+      "order": 2,
+      "type": "obituary",
+      "cat": "ประวัติศาสตร์",
+      "group": "ผู้วายชนม์แห่งปี (อะอ์ยาน)",
+      "title": "ผู้วายชนม์แห่งปี ฮ.ศ. 107 (อะอ์ยาน)",
+      "persons": [
+        "sulayman-b-yasar",
+        "ikrima"
+      ],
+      "places": [
+        "medina",
+        "mecca"
+      ],
+      "accounts": [
+        {
+          "chronicle": "ibn-kathir",
+          "detail": "ในบรรดาผู้วายชนม์ของปีนี้คือสุลัยมาน บิน ยะซาร หนึ่งในเจ็ดฟุเกาะฮาอ์แห่งมะดีนะฮ์ และอิกริมะฮ์ มะวลาของอิบนุ อับบาส หนึ่งในตาบิอีน นักตัฟซีรผู้รอบรู้และนักเดินทางแสวงหาความรู้",
+          "arabicExcerpt": "سليمان بن يسَار أحَد التابعين (١) . وعِكْرمة مولى ابن عباس (٢) : أحدُ التابعين، والمفسِّرين المكثرين والعلماء الربَّانيِّين، والرحَّالين الجوَّالين",
+          "loc": "เล่ม 9 หน้า 77",
+          "url": "https://shamela.ws/book/30097/4590",
+          "urlAlt": "https://www.islamweb.net/ar/library/content/59/1067/"
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
     }
   ]
 }

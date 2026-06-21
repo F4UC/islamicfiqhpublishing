@@ -53,6 +53,36 @@
       ],
       "confidence": "high",
       "reviewFlags": []
+    },
+    {
+      "id": "bidayah-h108-002",
+      "book": "al-bidayah",
+      "hijriYear": 108,
+      "ceYear": 726,
+      "order": 2,
+      "type": "obituary",
+      "cat": "ประวัติศาสตร์",
+      "group": "ผู้วายชนม์แห่งปี (อะอ์ยาน)",
+      "title": "ผู้วายชนม์แห่งปี ฮ.ศ. 108 (อะอ์ยาน)",
+      "persons": [
+        "bakr-al-muzani",
+        "muhammad-b-kab-al-qurazi"
+      ],
+      "places": [
+        "basra"
+      ],
+      "accounts": [
+        {
+          "chronicle": "ibn-kathir",
+          "detail": "ในบรรดาผู้วายชนม์ของปีนี้คือบักร์ บิน อับดุลลอฮ์ อัลมุซะนีย์ อัลบัศรีย์, รอชิด บิน สะอด์ อัลมักรออีย์ อัลหิมศีย์ และมุหัมมัด บิน กะอ์บ์ อัลกุร็อซีย์ นักตัฟซีรและตาบิอีน",
+          "arabicExcerpt": "بَكْرُ بن عبد اللَّه المُزني البصري (١) . وراشد بن سعد المقرائي الحمصي (٢) . ومحمد بن كعب القرظي",
+          "loc": "เล่ม 9 หน้า 93",
+          "url": "https://shamela.ws/book/30097/4606",
+          "urlAlt": "https://www.islamweb.net/ar/library/content/59/1069/"
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
     }
   ]
 }

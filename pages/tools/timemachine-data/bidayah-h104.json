@@ -54,6 +54,35 @@
       ],
       "confidence": "high",
       "reviewFlags": []
+    },
+    {
+      "id": "bidayah-h104-002",
+      "book": "al-bidayah",
+      "hijriYear": 104,
+      "ceYear": 723,
+      "order": 2,
+      "type": "obituary",
+      "cat": "ประวัติศาสตร์",
+      "group": "ผู้วายชนม์แห่งปี (อะอ์ยาน)",
+      "title": "ผู้วายชนม์แห่งปี ฮ.ศ. 104 (อะอ์ยาน)",
+      "persons": [
+        "khalid-b-madan"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "chronicle": "ibn-kathir",
+          "detail": "ในบรรดาผู้วายชนม์ของปีนี้คือคอลิด บิน มะอ์ดาน อัลกะลาอีย์ ตาบิอีนผู้ทรงเกียรติแห่งชาม ผู้มีรายงานหะดีษจากเศาะหาบะฮ์หลายท่าน",
+          "arabicExcerpt": "خالد بن مَعْدان الكَلاعي (٤) : [له رواياتٌ عن جماعة من الصحابة، وكان تابعيًّا جليلًا",
+          "loc": "เล่ม 9 หน้า 57",
+          "url": "https://shamela.ws/book/30097/4570",
+          "urlAlt": "https://www.islamweb.net/ar/library/content/59/1060/"
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
     }
   ]
 }

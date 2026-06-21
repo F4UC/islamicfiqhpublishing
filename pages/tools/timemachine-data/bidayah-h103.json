@@ -54,6 +54,35 @@
       ],
       "confidence": "high",
       "reviewFlags": []
+    },
+    {
+      "id": "bidayah-h103-002",
+      "book": "al-bidayah",
+      "hijriYear": 103,
+      "ceYear": 722,
+      "order": 2,
+      "type": "obituary",
+      "cat": "ประวัติศาสตร์",
+      "group": "ผู้วายชนม์แห่งปี (อะอ์ยาน)",
+      "title": "ผู้วายชนม์แห่งปี ฮ.ศ. 103 (อะอ์ยาน)",
+      "persons": [
+        "ata-b-yasar"
+      ],
+      "places": [
+        "medina"
+      ],
+      "accounts": [
+        {
+          "chronicle": "ibn-kathir",
+          "detail": "ในบรรดาผู้วายชนม์ของปีนี้คือยะซีด บิน อบี มุสลิม อบุลอะลาอ์ อัลมะดะนีย์ และอะฏออ์ บิน ยะซาร อัลฮิลาลีย์ ตาบิอีนและนักเล่าเรื่องแห่งมะดีนะฮ์",
+          "arabicExcerpt": "يزيد بن أبي مسلم (٥) ، أبو العلاء المدني",
+          "loc": "เล่ม 9 หน้า 46",
+          "url": "https://shamela.ws/book/30097/4559",
+          "urlAlt": "https://www.islamweb.net/ar/library/content/59/1058/"
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
     }
   ]
 }

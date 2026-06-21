@@ -50,6 +50,35 @@
       ],
       "confidence": "high",
       "reviewFlags": []
+    },
+    {
+      "id": "bidayah-h97-002",
+      "book": "al-bidayah",
+      "hijriYear": 97,
+      "ceYear": 716,
+      "order": 2,
+      "type": "obituary",
+      "cat": "ประวัติศาสตร์",
+      "group": "ผู้วายชนม์แห่งปี (อะอ์ยาน)",
+      "title": "ผู้วายชนม์แห่งปี ฮ.ศ. 97 (อะอ์ยาน)",
+      "persons": [
+        "al-hasan-b-al-hasan"
+      ],
+      "places": [
+        "medina"
+      ],
+      "accounts": [
+        {
+          "chronicle": "ibn-kathir",
+          "detail": "ในบรรดาผู้วายชนม์ของปีนี้คืออัลหะสัน บิน อัลหะสัน บิน อะลีย์ บิน อบี ฏอลิบ อบู มุหัมมัด อัลกุเราะชีย์ อัลฮาชิมีย์ (หลานปู่ของอะลีย์ บิน อบี ฏอลิบ) ผู้รายงานหะดีษจากบิดาของท่าน",
+          "arabicExcerpt": "الحسن بن الحسن (١) بن علي بن أبي طالب، أبو محمد القرشي الهاشمي",
+          "loc": "เล่ม 9 หน้า 363",
+          "url": "https://shamela.ws/book/30097/4486",
+          "urlAlt": "https://www.islamweb.net/ar/library/content/59/1039/"
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
     }
   ]
 }
