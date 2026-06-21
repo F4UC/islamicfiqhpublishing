@@ -96,9 +96,8 @@ body { position: relative; }
 .ar-quote, .ar-feature,
 .aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
 .ar-translation { text-align: left; }
-.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
-.aya-block .block-ar.is-1line,
-.hadith-block .block-ar.is-1line { text-align: center; }
+.aya-block .block-ar.is-short, .aya-block .ar-translation.is-short,
+.hadith-block .block-ar.is-short, .hadith-block .ar-translation.is-short { text-align: center; }
 /* Global Arabic On/Off — single source of truth: html.no-arabic */
 html.no-arabic .ar-feature,
 html.no-arabic .aya-block,
@@ -390,7 +389,7 @@ html.no-arabic .ar-quote { display: none; }
       <p>ตรงกันข้าม เขากลับแสดงความเศร้า และนั่งรับแขกแสดงความเสียใจ (เปิดบ้านรับการแสดงความอาลัย) ต่อการจากไปของเขา และยังปฏิบัติตามพินัยกรรมของอัลอาฎิดที่ฝากฝังให้ดูแลบุตรหลานของตนอย่างดี</p>
       <p>ตอนที่นูรุดดีน ซังกียืนยันให้เศาะลาฮุดดีนดำเนินคำสั่งเปลี่ยนการดุอาอ์บนมิมบัรให้เป็นในนามของคอลีฟะฮ์อับบาซียะฮ์ เศาะลาฮุดดีนยังรอจนกว่าอัลอาฎิดจะล้มป่วยหนัก จนไม่สามารถมาร่วมละหมาดหรือบริหารราชการได้ จึงค่อยเริ่มกระบวนการเปลี่ยนแปลง หากเศาะลาฮุดดีนรีบร้อนทำในขณะที่อัลอาฎิดยังแข็งแรงอยู่ ก็อาจทำให้เกิดสงครามกลางเมืองในหมู่มุสลิม ภายในอียิปต์ทันที</p>
       <p>หลังจากอัลอาฎิดเสียชีวิตได้ไม่นาน เศาะลาฮุดดีนก็ รู้สึกเสียใจ ที่รีบเปลี่ยนคำดุอาอ์บนมิมบัรก่อนที่เขาจะเสียชีวิตโดยสมบูรณ์ ท่านอบู ชามะฮ์บันทึกว่า:</p>
-      <p class="ar-translation thai-quote">“ความเสียใจของเศาะลาฮุดดีนนั้น เล่ากันว่า ท่านพูดว่า ‘หากฉันรู้ว่าเขาจะตายเพราะโรคนี้ ฉันคงรอจนเขาเสียชีวิตก่อนแล้วค่อยเปลี่ยน’”</p>
+      <p class="ar-translation">“ความเสียใจของเศาะลาฮุดดีนนั้น เล่ากันว่า ท่านพูดว่า ‘หากฉันรู้ว่าเขาจะตายเพราะโรคนี้ ฉันคงรอจนเขาเสียชีวิตก่อนแล้วค่อยเปลี่ยน’”</p>
       <p>แม้จะมีความแตกต่างด้านความเชื่อ แต่ก่อนที่อัลอาฎิดจะเสียชีวิต เขากลับไว้วางใจเศาะลาฮุดดีนมากที่สุด ถึงกับฝากฝังลูกๆ ไว้ให้ดูแล เพราะเห็นในความเมตตาและความซื่อสัตย์ของเศาะลาฮุดดีน</p>
       <p>ท่านอบู ชามะฮ์เล่าว่า: “อบุลฟุตูห์ บุตรของอัลอาฎิด เล่าว่า: “ในช่วงที่พ่อของข้าพเจ้าป่วย เขาได้เรียกเศาะลาฮุดดีนมาพบ และให้พวกเรา (ซึ่งยังเล็กอยู่หลายคน) เข้าไปด้วย ท่านจึงฝากฝังพวกเราไว้กับเศาะลาฮุดดีน และเขาก็รับปากว่าจะให้เกียรติและดูแลเราอย่างดี”</p>
       <p>ตามพินัยกรรมนั้น เศาะลาฮุดดีนจึงย้ายครอบครัวของอัลอาฎิดไปพักในส่วนหนึ่งของพระราชวัง และจัดคนดูแลพวกเขาอย่างดี ทั้งอิบนุ ชัดดาดและอบู ชามะฮ์ต่างก็ยืนยันว่า เขาให้เด็กๆ และเหล่าญาติพี่น้องของอดีตคอลีฟะฮ์อยู่ในอาคารพิเศษในพระราชวัง พร้อมคนดูแลความปลอดภัยและความเป็นอยู่ทั้งหมด</p>
@@ -477,18 +476,19 @@ document.querySelectorAll('.reveal').forEach(function(el) {
 </script>
 <script>
 function ifpAlign(){
-  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
-  document.querySelectorAll(s).forEach(function(el){
-    var cs=getComputedStyle(el);
-    var lh=parseFloat(cs.lineHeight);
-    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
-    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
-    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  var AR_MAX=60, TH_MAX=80;
+  function mark(el,max){var n=(el.textContent||'').trim().length; el.classList.toggle('is-short', n>0&&n<=max);}
+  document.querySelectorAll('.aya-block .block-ar, .hadith-block .block-ar').forEach(function(el){mark(el,AR_MAX);});
+  // คำแปลของ aya/hadith = .ar-translation ที่อยู่ใน block หรือเป็น sibling ถัดไปนอก block
+  document.querySelectorAll('.aya-block .ar-translation, .hadith-block .ar-translation').forEach(function(el){mark(el,TH_MAX);});
+  document.querySelectorAll('.aya-block, .hadith-block').forEach(function(blk){
+    var n=blk.nextElementSibling;
+    while(n && n.classList && n.classList.contains('ar-translation')){ mark(n,TH_MAX); n=n.nextElementSibling; }
   });
 }
 window.addEventListener('load',ifpAlign);
 window.addEventListener('resize',ifpAlign);
-new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+new MutationObserver(function(){requestAnimationFrame(ifpAlign);})
   .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
 </script>
 <script defer src="../../main.js?v=20260619a" charset="UTF-8"></script>

@@ -96,9 +96,8 @@ body { position: relative; }
 .ar-quote, .ar-feature,
 .aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
 .ar-translation { text-align: left; }
-.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
-.aya-block .block-ar.is-1line,
-.hadith-block .block-ar.is-1line { text-align: center; }
+.aya-block .block-ar.is-short, .aya-block .ar-translation.is-short,
+.hadith-block .block-ar.is-short, .hadith-block .ar-translation.is-short { text-align: center; }
 /* Global Arabic On/Off — single source of truth: html.no-arabic */
 html.no-arabic .ar-feature,
 html.no-arabic .aya-block,
@@ -410,11 +409,11 @@ html.no-arabic .ar-quote { display: none; }
 
       <p>ท่านอิหม่ามอัลบุคอรีย์ได้รายงานเอาไว้ในตำราศอเฮี้ยะฮ์ของท่านว่า ท่านอับดุลลอฮ์ อิบนุ อัมร์ เราะฎิยัลลอฮุอันฮุ ได้เล่าว่า:</p>
 
-      <p class="ar-translation thai-quote">“บิดาของฉันได้แต่งงานให้แก่ฉันกับสตรีนางหนึ่งอันมีเกียรติ (ในสายรายงานของอิหม่ามอะห์มัดระบุว่า คือตระกูลกุเรช) และ (หลังจากแต่งงานกันแล้ว) บิดาของฉันมักจะถามไถ่ภรรยาของฉันถึงเรื่องสามีของนางอยู่เสมอ นางกล่าวว่า: ‘เขาเป็นชายที่ดีคนหนึ่ง แต่ตั้งแต่เราอยู่ด้วยกัน เขาไม่เคยนอนร่วมเตียงกับฉันเลย และไม่เคยเปิดดูซอกมุมของเราเลย’ เมื่อสิ่งนี้เกิดขึ้นอย่างยาวนานไป บิดาของฉันจึงนำเรื่องไปบอกท่านนบี ท่านจึงได้กล่าวว่า ‘พาเขามาหาฉัน’</p>
+      <p class="ar-translation">“บิดาของฉันได้แต่งงานให้แก่ฉันกับสตรีนางหนึ่งอันมีเกียรติ (ในสายรายงานของอิหม่ามอะห์มัดระบุว่า คือตระกูลกุเรช) และ (หลังจากแต่งงานกันแล้ว) บิดาของฉันมักจะถามไถ่ภรรยาของฉันถึงเรื่องสามีของนางอยู่เสมอ นางกล่าวว่า: ‘เขาเป็นชายที่ดีคนหนึ่ง แต่ตั้งแต่เราอยู่ด้วยกัน เขาไม่เคยนอนร่วมเตียงกับฉันเลย และไม่เคยเปิดดูซอกมุมของเราเลย’ เมื่อสิ่งนี้เกิดขึ้นอย่างยาวนานไป บิดาของฉันจึงนำเรื่องไปบอกท่านนบี ท่านจึงได้กล่าวว่า ‘พาเขามาหาฉัน’</p>
 
-      <p class="ar-translation thai-quote">ฉันจึงไปพบท่านหลังจากนั้น และท่านกล่าวว่า: ‘เจ้าถือศีลอดอย่างไร?’ ฉันตอบว่า: ‘ถือศีลอดทุกวัน’ ท่านกล่าวว่า: ‘แล้วเจ้าอ่านอัลกุรอานอย่างไร?’ ฉันตอบว่า: ‘ฉันอ่านทุกคืน’ ท่านกล่าวว่า: ‘จงถือศีลอดเดือนละสามวัน และอ่านอัลกุรอานให้จบทุกเดือน’ ฉันกล่าวว่า: ‘ฉันสามารถทำได้มากกว่านั้น’ ท่านกล่าวว่า: ‘จงถือศีลอดสัปดาห์ละสามวัน’ ฉันกล่าวว่า: ‘ฉันสามารถทำได้มากกว่านั้น’ ท่านกล่าวว่า: ‘จงละศีลอดสองวันและถือศีลอดหนึ่งวัน’ ฉันกล่าวว่า: ‘ฉันสามารถทำได้มากกว่านั้น’ ท่านกล่าวว่า: ‘จงถือศีลอดแบบที่ดีที่สุด คือการถือศีลอดของดาวูด คือถือศีลอดหนึ่งวันและละศีลอดหนึ่งวัน และจงอ่านอัลกุรอานให้จบในทุกเจ็ดวันหนึ่งครั้ง’</p>
+      <p class="ar-translation">ฉันจึงไปพบท่านหลังจากนั้น และท่านกล่าวว่า: ‘เจ้าถือศีลอดอย่างไร?’ ฉันตอบว่า: ‘ถือศีลอดทุกวัน’ ท่านกล่าวว่า: ‘แล้วเจ้าอ่านอัลกุรอานอย่างไร?’ ฉันตอบว่า: ‘ฉันอ่านทุกคืน’ ท่านกล่าวว่า: ‘จงถือศีลอดเดือนละสามวัน และอ่านอัลกุรอานให้จบทุกเดือน’ ฉันกล่าวว่า: ‘ฉันสามารถทำได้มากกว่านั้น’ ท่านกล่าวว่า: ‘จงถือศีลอดสัปดาห์ละสามวัน’ ฉันกล่าวว่า: ‘ฉันสามารถทำได้มากกว่านั้น’ ท่านกล่าวว่า: ‘จงละศีลอดสองวันและถือศีลอดหนึ่งวัน’ ฉันกล่าวว่า: ‘ฉันสามารถทำได้มากกว่านั้น’ ท่านกล่าวว่า: ‘จงถือศีลอดแบบที่ดีที่สุด คือการถือศีลอดของดาวูด คือถือศีลอดหนึ่งวันและละศีลอดหนึ่งวัน และจงอ่านอัลกุรอานให้จบในทุกเจ็ดวันหนึ่งครั้ง’</p>
 
-      <p class="ar-translation thai-quote">ฉันปรารถนาในภายหลังว่าฉันน่าจะรับเอาสิ่งที่ท่านรอซูลผ่อนผันให้ เพราะในเวลานี้ฉันแก่ชราและอ่อนแอ ฉันจึงอ่านอัลกุรอานโดยแบ่งเจ็ดส่วนให้สมาชิกในครอบครัวได้อ่านในเวลากลางวัน และฉันจะนำที่อ่านนั้นมาทบทวนในเวลากลางคืนเพื่อให้เบาแรงแก่ตัวเอง และหากฉันต้องการเสริมพละกำลัง ฉันจะละศีลอดบางวันและนับจำนวนวันเหล่านั้น แล้วกลับมาถือศีลอดในจำนวนวันที่เท่ากัน เพื่อไม่ให้ฉันละทิ้งสิ่งที่ฉันได้เคยปฏิบัติขณะที่อยู่กับท่านนบี”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+      <p class="ar-translation">ฉันปรารถนาในภายหลังว่าฉันน่าจะรับเอาสิ่งที่ท่านรอซูลผ่อนผันให้ เพราะในเวลานี้ฉันแก่ชราและอ่อนแอ ฉันจึงอ่านอัลกุรอานโดยแบ่งเจ็ดส่วนให้สมาชิกในครอบครัวได้อ่านในเวลากลางวัน และฉันจะนำที่อ่านนั้นมาทบทวนในเวลากลางคืนเพื่อให้เบาแรงแก่ตัวเอง และหากฉันต้องการเสริมพละกำลัง ฉันจะละศีลอดบางวันและนับจำนวนวันเหล่านั้น แล้วกลับมาถือศีลอดในจำนวนวันที่เท่ากัน เพื่อไม่ให้ฉันละทิ้งสิ่งที่ฉันได้เคยปฏิบัติขณะที่อยู่กับท่านนบี”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
 
       <p>อัลฮาฟิศอิบนุ หะญัร อัลอัสกอลานีย์ได้อธิบายต้นประโยคจากคำกล่าวของภรรยาท่านอับดุลลอฮ์ไว้ว่า:</p>
 
@@ -516,18 +515,19 @@ document.querySelectorAll('.reveal').forEach(function(el) {
 </script>
 <script>
 function ifpAlign(){
-  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
-  document.querySelectorAll(s).forEach(function(el){
-    var cs=getComputedStyle(el);
-    var lh=parseFloat(cs.lineHeight);
-    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
-    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
-    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  var AR_MAX=60, TH_MAX=80;
+  function mark(el,max){var n=(el.textContent||'').trim().length; el.classList.toggle('is-short', n>0&&n<=max);}
+  document.querySelectorAll('.aya-block .block-ar, .hadith-block .block-ar').forEach(function(el){mark(el,AR_MAX);});
+  // คำแปลของ aya/hadith = .ar-translation ที่อยู่ใน block หรือเป็น sibling ถัดไปนอก block
+  document.querySelectorAll('.aya-block .ar-translation, .hadith-block .ar-translation').forEach(function(el){mark(el,TH_MAX);});
+  document.querySelectorAll('.aya-block, .hadith-block').forEach(function(blk){
+    var n=blk.nextElementSibling;
+    while(n && n.classList && n.classList.contains('ar-translation')){ mark(n,TH_MAX); n=n.nextElementSibling; }
   });
 }
 window.addEventListener('load',ifpAlign);
 window.addEventListener('resize',ifpAlign);
-new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+new MutationObserver(function(){requestAnimationFrame(ifpAlign);})
   .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
 </script>
 <script defer src="../../main.js?v=20260614e" charset="UTF-8"></script>
