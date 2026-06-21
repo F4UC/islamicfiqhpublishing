@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การถอดเครื่องช่วยชีวิตแก่ผู้ป่วยที่ไม่ตอบสนองต่อการรักษา — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="บทวิเคราะห์นิติศาสตร์อิสลามว่าด้วยการถอดหรือไม่ใส่เครื่องช่วยพยุงชีพแก่ผู้ป่วยที่ไม่ตอบสนองต่อการรักษา ผ่านมติของสภาฟัตวาแห่งจอร์แดน อียิปต์ และสภานิติศาสตร์อิสลามนานาชาติ พร้อมการแยกแยะจากการุณยฆาต">
+<meta name="keywords" content="ถอดเครื่องช่วยชีวิต, ผู้ป่วยระยะสุดท้าย, การุณยฆาต, สมองตาย, ฟัตวา, นิติศาสตร์อิสลาม, ฟิกฮ์การแพทย์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การถอดเครื่องช่วยชีวิตแก่ผู้ป่วยที่ไม่ตอบสนองต่อการรักษา — Islamic Fiqh Publishing">
+<meta property="og:description" content="ถอดเครื่องช่วยพยุงชีพได้หรือไม่เมื่อผู้ป่วยไม่ตอบสนองต่อการรักษา รวมมติสภาฟัตวาและเส้นแบ่งจากการุณยฆาตในมุมมองนิติศาสตร์อิสลาม">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/withdrawing-life-support">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/nitisart/withdrawing-life-support">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "การถอดเครื่องช่วยชีวิตแก่ผู้ป่วยที่ไม่ตอบสนองต่อการรักษา",
+  "inLanguage": "th",
+  "datePublished": "2026-06-21",
+  "dateModified": "2026-06-21",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/nitisart/withdrawing-life-support"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.aya-block .block-ar.is-short, .hadith-block .block-ar.is-short,
+.ar-translation.is-short { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="IF">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<script src="/pwa-register.js?v=2" defer></script>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="withdrawing-life-support">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">การถอดเครื่องช่วยชีวิตแก่ผู้ป่วยที่ไม่ตอบสนองต่อการรักษา</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">เครื่องช่วยชีวิตหมายถึงอะไร?</p>
+      <p>ตัวอย่างเครื่องช่วยชีวิตที่เราน่าจะพอคุ้นเคยหรือผ่านหูผ่านตามาบ้างในช่วงนี้ก็คือ เครื่องเอคโม่ หรือ ECMO : extracorporeal membrane oxygenation เป็นเครื่องช่วยพยุงการทำงานของหัวใจและปอด เป็นอุปกรณ์ที่จะทำหน้าที่ปั๊มเลือดทดแทนการบีบตัวของหัวใจ ร่วมกับทำหน้าที่แลกเปลี่ยนออกซิเจนทดแทนปอด โดยอาศัยหลักการเดียวกับเครื่องหัวใจและปอดเทียม (cardiopulmonary bypass machine) ที่ใช้ในการผ่าตัดหัวใจ ซึ่งได้รับการปรับปรุงให้สามารถใช้ทดแทนหัวใจและปอดได้ยาวนานและปลอดภัยขึ้น จากหลายชั่วโมงเป็นหลายวัน โดยที่มีภาวะแทรกซ้อนต่อผู้ป่วยน้อยที่สุด ประโยชน์ของการใช้ เอคโม่ จะช่วยประคับประคองเพื่อรอให้อวัยวะกลับมาทำงานเป็นปกติ<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+      <p>แน่นอนว่าเครื่องช่วยหายใจตัวนี้ คือเครื่องมือที่จำเป็นอย่างยิ่งสำหรับคนไข้ที่ติดเชื้อ COVID-19 ที่อาการวิกฤตที่สุด เพื่อช่วยในการหายใจและอาจช่วยรักษาชีวิตพวกเขาเอาไว้ได้</p>
+      <p>แต่บางครั้ง แม้จะใช้เครื่องมือช่วยชีวิตเพื่อช่วยพยุงชีพของผู้ป่วย ผู้ป่วยก็ไม่มีการตอบสนองต่อการรักษา จนมีคำถามขึ้นมาว่า เราสามารถอดอุปกรณ์เหล่านี้ได้หรือไม่?</p>
+      <h2 class="article-h2">มติของสภาวินิจฉัยปัญหาศาสนาแห่งประเทศจอร์แดน</h2>
+      <p>สถาบันวินิจฉัยปัญหาศาสนาแห่งประเทศจอร์แดนได้ทำการลงมติในประเด็นนี้เอาไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">قرار رقم: (117) حكم رفع أجهزة الإنعاش عن المريض الذي لا يرجى شفاؤه</blockquote>
+      <p class="ar-translation">“มติ เลขที่ 117 ข้อตัดสินในการถอดเครื่องช่วยพยุงชีพในผู้ป่วยที่ไม่ตอบสนองต่อการรักษา”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ورد إلينا سؤال يقول فيه صاحبه:</blockquote>
+      <p class="ar-translation">“ได้มีคำถามมายังสภาว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">هل يجوز للفريق الطبي المعالج أن لا يضع مرضى السرطان على أجهزة الإنعاش والتنفس أو إجراء مباشرة غسيل الكلى إذا تأكد وتيقن أنه لا يرجى أي فائدة للمريض من ذلك؟</blockquote>
+      <p class="ar-translation">อนุญาตหรือไม่ ในการที่กลุ่มแพทย์ผู้ทำการรักษาผู้ป่วยไม่ใส่เครื่องช่วยพยุงชีพแก่ผู้ป่วยมะเร็ง หากพวกเขายืนยันและมีความมั่นใจว่า การใช้เครื่องมือพยุงชีพแก่ผู้ป่วยดังกล่าวไม่เกิดประโยชน์ใดๆ ต่อผู้ป่วยเลย”</p>
+      <p>คำตอบ:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">رأى المجلس أنه لا مانع شرعا من عدم وضع مريض السرطان على أجهزة الإنعاش أو التنفس أو مباشرة غسيل الكلى إذا تأكد وتيقن الفريق الطبي المعالج أنه لا يوجد أية فائدة ترجى للمريض من ذلك(1)، شريطة أن يؤيد ذلك تقرير من فريق طبي لا يقل عن ثلاثة أطباء، مختصين، عدول، ثقات.</blockquote>
+      <p class="ar-translation">“ทางสภามีความเห็นว่า การกระทำดังกล่าวนั้นไม่เป็นที่ต้องห้ามตามกฎหมายอิสลาม ในการไม่ใส่เครื่องช่วยพยุงชีพแก่ผู้ป่วยมะเร็ง ถ้าหากว่ากลุ่มแพทย์เหล่านั้นยืนยันและมีความมั่นใจว่า การกระทำดังกล่าวไม่เกิดประโยชน์ใดๆ ต่อผู้ป่วย (ทั้งนี้ในประเด็นนี้นั้นสามารถพิจารณาตามหลักเกณฑ์การพิจารณาไม่ใส่ “ท่อช่วยหายใจ” (Withholding Intubation) สำหรับผู้ป่วยติดเชื้อไวรัสโคโรนา 2019 ที่ทางรพ.ธรรมศาสตร์ออกประกาศได้เช่นกัน ซึ่งจะอ้างอิงไว้ข้างล่าง<sup class="fn-ref" id="fnref-5"><a href="#ref-5">⁵</a></sup>) แต่มีเงื่อนไขว่าจะต้องมีคณะแพทย์ผู้เชี่ยวชาญที่มีความน่าเชื่อถือมีจรรยาบรรณและยุติธรรมอย่างน้อยสามคนขึ้นไป (บ้างก็ระบุว่าสองคนขึ้นไปก็ได้แล้ว) ลงมติในการพิจารณาไม่ใส่เครื่องช่วยพยุงชีพ”</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ومما يدل على جواز التوقف عن استعمال العلاج للمريض في حال الدلالة على أنه لا فائدة منه ما حدث لعمر بن الخطاب رضي الله عنه عندما طعن في المسجد، فأتي بنبيذ، فشربه، فخرج من جوفه، ثم أتي بلبن، فشربه، فخرج من جوفه، فعرفوا أنه ميت، ولم يقوموا بعلاجه، لأنهم علموا أن لا فائدة من العلاج</blockquote>
+      <p class="ar-translation">“และหลักฐานที่ชี้ว่า การใช้เครื่องช่วยพยุงชีพแก่ผู้ป่วยไม่เกิดประโยชน์ใดๆ นั้น อ้างอิงมาจากเหตุการณ์ที่ท่านอุมัรโดนแทงในมัสญิด ซึ่งมีผู้ที่อยู่ในเหตุการณ์ได้ให้ท่านอุมัรดื่มน้ำนะบีซ (เพื่อรักษาอาการบาดเจ็บ) และท่านก็ได้ดื่มเข้าไป แต่น้ำนะบีซก็ออกมาจากตัว (ทางบาดแผลที่ถูกแทง-ผู้แปล) ของท่าน จากนั้นก็มีคนให้ท่านดื่มนม ท่านก็ดื่ม แต่นมก็ไหลออกมาจากตัว (ทางบาดแผลที่ถูกแทง-ผู้แปล) ของท่านอีกเช่นกัน กระทั้งพวกเขา (เหล่าเศาะหาบะฮ์) รู้ว่าท่านอุมัรนั้นอาการโคม่าไปแล้ว (ดั่งผู้ที่ตายไปแล้ว) จึงไม่มีใครรักษาท่านต่อไป เพราะพวกเขาเองรู้ว่า การรักษาท่านอุมัรไปนั้น ไม่มีประโยชน์อันใดแล้ว จึงไม่สามารถทำอะไรได้เลย (เพราะตัวท่านอุมัรไม่ตอบสนองต่อการรักษาแล้วนั่นเอง)”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+      <h2 class="article-h2">สรุปสาระสำคัญจากมติ</h2>
+      <p>สรุปจากมติดังกล่าวนี้คือ</p>
+      <p>สามารถถอดหรือไม่ใส่เครื่องช่วยพยุงชีพได้ หากทำไปแล้วไม่ได้เกิดประโยชน์อันใดต่อผู้ป่วย และการถอดเครื่องช่วยพยุงชีพจะต้องไม่ทำให้ผู้ป่วยเสียชีวิตเร็วขึ้น หรือใส่ไปแล้วก็ไม่ได้ทำให้ผู้ป่วยเสียชีวิตช้าลง กล่าวคืออัตราการใส่หรือไม่ใส่เครื่องช่วยนั้นมีเปอร์เซ็นต์เท่าๆ กัน</p>
+      <p>นั่นจึงเป็นเหตุผลว่าเมื่อมีประเด็นอะไรที่เกี่ยวข้องกับการรักษาหรือเกี่ยวกับประเด็นทางการแพทย์ นักวิชาการหลายท่านเน้นย้ำให้ฟังความเห็นของหมอหรือแพทย์ที่มีจรรยาบรรณ มีความน่าเชื่อถือเท่านั้น</p>
+      <h2 class="article-h2">มติของสภาวินิจฉัยปัญหาศาสนาแห่งประเทศอียิปต์</h2>
+      <p>และประเด็นนี้ทางสถาบันวินิจฉัยปัญหาศาสนาแห่งประเทศอียิปต์ก็ได้มีผู้ถามไปว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ما حكم رفع الأجهزة الطبية عن المريض الميؤوس من شفائه، وما الفرق بين ذلك والقتل الرحيم؟</blockquote>
+      <p class="ar-translation">“อะไรคือข้อกำหนดในการถอดเครื่องช่วยพยุงชีพกับผู้ป่วยระยะสุดท้าย แล้วอะไรคือความแตกต่างระหว่างประเด็นนี้กับการการุณยฆาต?”</p>
+      <p>ซึ่งคำตอบก็คล้ายๆ กับของสภาจอร์แดน</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يجوز شرعا رفع الأجهزة الطبية عن المريض الميؤوس من شفائه، التي تستخدم في الإبقاء على حياته دون تقدم في حالته الصحية، وهو ما يسمى "الموت الإكلينيكي"، فقط إذا نصح الأطباء بذلك.</blockquote>
+      <p class="ar-translation">“แต่ก็มีเพิ่มเงื่อนไขเข้ามาว่า หากต้องการจะถอดเครื่องช่วยพยุงชีพ สามารถถอดได้ หากใช้เพียงเผื่อยื้อชีวิตให้มีลมหายใจต่อไป แต่ไม่สามารถรักษาให้หายได้ ซึ่งภาวะดังกล่าวนี้เรียกว่า ภาวะหยุดหายใจและหัวใจหยุดเต้นพร้อมกัน Clinical Death เป็นการเสียชีวิตทางคลีนิค (หรือจะกล่าวง่ายๆ คือ ต้องเป็นผู้ป่วยที่มีภาวะสมองตายจริงๆ เท่านั้น)”</p>
+      <p>และมีเพิ่มเติมตรงประเด็น การการุณยฆาต ซึ่งในภาษาอาหรับได้ใช้คำว่า <span class="ar-inline" lang="ar" dir="rtl">القتل الرحيم</span> ซึ่งที่ผ่านมาทางเราก็ได้แนะนำพี่น้องถึงเกณฑ์พิจารณาไม่ใส่ท่อช่วยหายใจ ผู้ป่วยโควิด 19 ของรพ.ธรรมศาสตร์ในการใช้พิจารณามาแล้ว</p>
+      <p>แต่มีหนึ่งหัวข้อใหญ่ตามเอกสารดังกล่าวที่ไม่สามารถทำได้ (ตามที่สถาบันของอียิปต์ได้ให้คำตอบไว้) นั่นก็คือ กรณีผู้ป่วยมีการแสดงเจตนาไว้ล่วงหน้าในกรณีที่หนึ่ง ดังกล่าวนี้ถือว่าเป็นการการุณยฆาต ซึ่งในหลักการศาสนาไม่อนุญาตอย่างเด็ดขาด ซึ่งทางสถาบันชี้ขาดปัญหาศาสนาแห่งประเทศอียิปต์ได้ให้เนื้อหาเพิ่มเติมจากคำถามข้างบนว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وهذا يختلف عن ما يسمى بـ"القتل الرحيم" الذي يطلب فيه المريض من الطبيب إنهاء حياته، أو يقرر الطبيب ذلك من تلقاء نفسه بسبب إعاقة المريض أو شدة الألم عليه، فإن هذا حرام قطعا</blockquote>
+      <p class="ar-translation">“และประเด็นที่กล่าวผ่านมานั้น (คือการถอดเครื่องช่วยพยุงชีพแก่ผู้ป่วยระยะสุดท้าย) แตกต่างกับกรณี การการุณยฆาต เพราะการการุณยฆาตนี้คือการที่ผู้ป่วยยินยอมให้แพทย์นั้นจบชีวิตของตัวเองได้ หรือ (หากผู้ป่วยไม่ได้มีการแสดงเจตนาไว้ล่วงหน้า) แพทย์ผู้ดูแลพิจารณาลงมติด้วยตัวเองในการทำการุณยฆาตกับผู้ป่วย อันเนื่องจากความทุพพลภาพ (คือการสูญเสียอวัยวะหรือสูญเสียสมรรถภาพของอวัยวะหรือของร่างกาย) หรือทำการุณยฆาตเพื่อให้ผู้ป่วยหลุดพ้นจากความเจ็บปวด การกระทำดังกล่าวนี้เป็นสิ่งต้องห้ามอย่างเด็ดขาด”<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup></p>
+      <p>ส่วนในกรณีที่ 2 นั่นก็พิจารณาเป็นข้อๆ ไปนะครับ บางข้อก็ใช้ได้ ถูกตามข้อกฎหมายอิสลาม บางข้อก็ไม่สามารถนำมาใช้ได้ อันเนื่องจากขัดกับกฎหมายอิสลามนั่นเอง</p>
+      <h2 class="article-h2">มติของสภานิติศาสตร์อิสลามนานาชาติ</h2>
+      <p>เพิ่มเติมเนื้อหาอีกสักหน่อยครับ ข้อมูลจากสภานิติศาสตร์อิสลามนานาชาติภายใต้องค์กรความร่วมมืออิสลาม (International Islamic Fiqh Academy : iifa) ซึ่งเป็นข้อมูลที่เก่ามากๆ แล้ว เพราะเป็นข้อมูลเมื่อปี 1987 ซึ่งทางสภาได้มีมติกันในประเด็นเรื่อง</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">حكم إيقاف العلاج عن المريض الميؤوس من برئه، كالمريض الذي يعاني من سرطان متقدم ومنتشـر، أو أي حالة يقرر الأطباء انه لا يوجد أي أمل في شفائها</blockquote>
+      <p class="ar-translation">“ข้อกำหนดเรื่องการหยุดรักษาผู้ป่วยที่อยู่ในระยะสุดท้าย เช่น ผู้ป่วยมะเร็งระยะสุดท้าย หรือในภาวะไหนก็ตามที่คณะแพทย์ได้ลงมติเห็นว่า ไม่มีหวังที่จะรักษาผู้ป่วยได้”</p>
+      <p>ซึ่งได้มีมติกันในข้อนึงว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">جواز رفع أجهزة الإنعاش إذا ثبت موت الدماغ ثبوتا قطعيا.</blockquote>
+      <p class="ar-translation">“อนุญาตให้ถอดเครื่องช่วยพยุงชีพแก่ผู้ป่วย ถ้าหากยืนยันได้ว่าผู้ป่วยนั้น มีภาวะสมองตายจริงๆ”<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+      <p>ทั้งหมดนี้คือหลักการศาสนาทางทฤษฎีที่ปรากฎอยู่ แน่นอนว่าในทางปฏิบัตินั้น ก็หาใช่ว่าจะทำกันง่ายๆ ดังนั้นก็พิจารณากันให้ถี่ถ้วนนะครับ และประเด็นนี้จริงๆ มีข้อกฎหมายเข้ามาเกี่ยวพันกันเยอะมาก ดังนั้นกระทู้นี้จึงเป็นเพียงการบอกข้อมูลคร่าวๆ ก่อนเท่านั้นนะครับ</p>
+
+      <h2 class="article-h2">สรุป</h2>
+      <ol class="article-summary">
+        <li><strong>อนุญาตให้ถอดหรือไม่ใส่เครื่องช่วยพยุงชีพได้:</strong> หากคณะแพทย์ผู้เชี่ยวชาญที่น่าเชื่อถือยืนยันว่าการกระทำดังกล่าวไม่เกิดประโยชน์ใดๆ ต่อผู้ป่วยอีกต่อไป โดยต้องมีมติจากคณะแพทย์อย่างน้อยสามคน (บางทัศนะระบุสองคนขึ้นไป)</li>
+        <li><strong>เงื่อนไขสำคัญ:</strong> การถอดเครื่องต้องไม่ทำให้ผู้ป่วยเสียชีวิตเร็วขึ้น และการใส่เครื่องก็ไม่ได้ทำให้เสียชีวิตช้าลง กล่าวคือเครื่องไม่มีผลต่ออัตราการรอดชีวิตของผู้ป่วยแล้ว</li>
+        <li><strong>หลักฐานอ้างอิง:</strong> เหตุการณ์ที่ท่านอุมัร อิบนุ อัลค็อฏฏอบ ถูกแทงในมัสญิด ซึ่งเหล่าเศาะหาบะฮ์หยุดการรักษาเมื่อรู้ว่าไม่มีประโยชน์อันใดอีกแล้ว</li>
+        <li><strong>เส้นแบ่งจากการุณยฆาต:</strong> การถอดเครื่องช่วยพยุงชีพแก่ผู้ป่วยที่มีภาวะสมองตาย (Clinical Death) แตกต่างจากการุณยฆาต (القتل الرحيم) ซึ่งคือการที่ผู้ป่วยยินยอมหรือแพทย์ตัดสินใจจบชีวิตผู้ป่วย อันเป็นสิ่งต้องห้ามอย่างเด็ดขาดในหลักการศาสนา</li>
+        <li><strong>การประยุกต์ใช้จริง:</strong> ประเด็นนี้มีข้อกฎหมายเข้ามาเกี่ยวพันจำนวนมาก จึงต้องพิจารณาอย่างถี่ถ้วน และฟังความเห็นของแพทย์ที่มีจรรยาบรรณและน่าเชื่อถือเป็นสำคัญ</li>
+      </ol>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การถอดเครื่องช่วยชีวิตแก่ผู้ป่วยที่ไม่ตอบสนองต่อการรักษา. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/withdrawing-life-support.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography">
+        <li id="ref-1">ความหมายและการทำงานของเครื่อง ECMO (extracorporeal membrane oxygenation). สืบค้นจาก https://bit.ly/3ib17fE <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">دائرة الإفتاء العام الأردنية، قرار رقم (117): حكم رفع أجهزة الإنعاش عن المريض الذي لا يُرجَى شفاؤه. สืบค้นจาก https://bit.ly/3yhtazG <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">دار الإفتاء المصرية، حكم رفع الأجهزة الطبية عن المريض الميؤوس من شفائه والفرق بينه وبين القتل الرحيم. สืบค้นจาก https://bit.ly/2WwyUYc <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">مجمع الفقه الإسلامي الدولي (منظمة التعاون الإسلامي)، قرار بشأن أجهزة الإنعاش، 1987م. สืบค้นจาก https://bit.ly/37skaMt <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+        <li id="ref-5">เกณฑ์การพิจารณาไม่ใส่ท่อช่วยหายใจ (Withholding Intubation) สำหรับผู้ป่วยติดเชื้อไวรัสโคโรนา 2019, โรงพยาบาลธรรมศาสตร์เฉลิมพระเกียรติ. สืบค้นจาก https://www.thairath.co.th/news/local/central/2148314 <a class="fn-back" href="#fnref-5" aria-label="กลับไปยังเชิงอรรถที่ 5">↑</a></li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+function ifpAlign(){
+  var AR_MAX=60, TH_MAX=80;
+  function mark(el,max){var n=(el.textContent||'').trim().replace(/[\u064B-\u0652\u0670\u0653-\u065F\u06D6-\u06ED\u0640]/g,'').length; el.classList.toggle('is-short', n>0&&n<=max);}
+  document.querySelectorAll('.aya-block .block-ar, .hadith-block .block-ar').forEach(function(el){mark(el,AR_MAX);});
+  // คำแปลของ aya/hadith = .ar-translation ที่อยู่ใน block หรือเป็น sibling ถัดไปนอก block
+  document.querySelectorAll('.aya-block .ar-translation, .hadith-block .ar-translation').forEach(function(el){mark(el,TH_MAX);});
+  document.querySelectorAll('.aya-block, .hadith-block').forEach(function(blk){
+    var n=blk.nextElementSibling;
+    while(n && n.classList && n.classList.contains('ar-translation')){ mark(n,TH_MAX); n=n.nextElementSibling; }
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){requestAnimationFrame(ifpAlign);})
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260619a" charset="UTF-8"></script>
+</body>
+</html>
