@@ -65,16 +65,31 @@ def strip_dia(s):
     return s.translate({ord(c): None for c in DIA})
 
 
-def fetch(book, pid, cache='/tmp'):
+def fetch(book, pid, cache='/tmp', tries=5):
     """Fetch one Shamela page via AJAX, cache to disk. `book` may be an id or a
-    source key in BOOK. Returns the JSON dict {nass, pageNum, nextId, prevId, ...}."""
+    source key in BOOK. Returns the JSON dict {nass, pageNum, nextId, prevId, ...}.
+    Robust against transient rate-limits: Shamela sometimes returns an EMPTY body,
+    which would otherwise be cached and break json.load — so we validate `nass`,
+    discard a bad/empty cache file, sleep, and retry up to `tries` times."""
+    import time as _t
     bid = BOOK.get(book, book)
     fn = os.path.join(cache, f'sh_{bid}_{pid}.json')
-    if not os.path.exists(fn):
+    for t in range(tries):
+        if os.path.exists(fn) and os.path.getsize(fn) > 10:
+            try:
+                d = json.load(open(fn, encoding='utf-8'))
+                if d.get('nass') is not None:
+                    return d
+            except Exception:
+                pass
+        if os.path.exists(fn):
+            os.remove(fn)
         subprocess.run(['curl', '-sS', '-A', UA, '-H', 'X-Requested-With: XMLHttpRequest',
-                        '--max-time', '25', f'https://shamela.ws/ajax/pageContent/{bid}/{pid}',
-                        '-o', fn], check=True)
-    return json.load(open(fn, encoding='utf-8'))
+                        '--max-time', '30', f'https://shamela.ws/ajax/pageContent/{bid}/{pid}',
+                        '-o', fn])
+        if t < tries - 1 and (not os.path.exists(fn) or os.path.getsize(fn) <= 10):
+            _t.sleep(3)
+    raise RuntimeError(f'fetch failed for {bid}/{pid} after {tries} tries')
 
 
 def page_text(book, pid, cache='/tmp'):
