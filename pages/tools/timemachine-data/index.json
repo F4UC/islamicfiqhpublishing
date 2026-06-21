@@ -685,9 +685,18 @@
       "file": "bidayah-h169.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 169,
-      "events": 1,
+      "events": 2,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 169 (al-Bidayah ل.10 ص410): ★การเสียชีวิตของอัลมะฮ์ดีที่มาสะบะษานและคำชี้แจงว่าเขาไม่ใช่อัลมะฮ์ดีที่ถูกสัญญา★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h170.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 170,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 170 - ★ตายอัลฮาดี+ขึ้นครองฮารูน อัรเราะชีด+ตั้งยะห์ยา อัลบัรมะกีย์★ (Rule 89)",
       "reviewStatus": "DRAFT"
     }
   ]
