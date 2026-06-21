@@ -693,3 +693,12 @@ Source: Drive fileId 1dHKnDBD8ANYMACdOc8YAVqGAk2Xdt6Qv6Gkkjooh0Fc (raw → /tmp/
   Byte-diff proof: for every block, `strip_U064B-0652(source_block) == html_block` verified True (23/23); remaining harakat in html ar-quotes = 0.
 - **No `.aya-block` / `.hadith-block`:** the source contains NO standalone āyah or standalone hadith — every Arabic passage is a scholar quotation. The Prophetic hadith "من كذب علي متعمدا…" is embedded continuously INSIDE al-Nawawi's quote → per R77 EDGE CASE / R1 kept verbatim & bare inside the `.ar-quote`; NO canonical splice, NO standalone re-fetch (it does not stand alone).
 - **Punctuation:** did NOT normalize Latin `,`/`.`/`:`/`"`/`!`/`-` inside scholar Arabic (R77 normalize is optional; chose byte-exact verbatim per R1 — source's existing marks preserved).
+
+
+## 2026-06-21 — NEW BUILD: daif-hadith-lesson-3 (hadith) — Arabic provenance
+New article (not a retro-audit). Source: Drive `1o0IsTiLnvFFwSNxXbxZ_Zu3sUqzmFfWcusNhfz2Ly7w` ("เข้าใจหะดีษฎออีฟ พาร์ท 3"). R71 child-safety screen: none (hadith-methodology lesson).
+- **15 scholar `.ar-quote` blocks** (al-Nawawi ×4, Ibn Qudamah, al-Suyuti, al-Iraqi, Ibn Hajar al-Haytami, al-Sakhawi ×2, the daif phrase as ar-inline excluded, al-Tirmidhi isnad+grading, Ibn Abidin, al-Hattab) stripped to uniformly BARE per Rule 60 (source was MIXED voweled+bare, so all-or-nothing → BARE). Delete-only U+064B–U+0652; skeleton + spaces UNCHANGED. Byte-diff verified: each block's bare-normalized skeleton found verbatim in the Drive source (15/15). sha1(concat of 15 blocks)=cda14d6d33ea8316. Never retyped.
+- **hadith-block** (standalone matn `الْقَاتِلُ لاَ يَرِثُ`) — sunnah.com/tirmidhi:2109 (Jamiʿ al-Tirmidhi, Kitab al-Faraʾiḍ, bab abtal mirath al-qatil; Abu Hurayrah; graded Hasan/Darussalam). Pasted byte-exact, fully voweled. sha1(block)=43aa02f50bff6a3d. takhrij in bibliography ref-10.
+- **R77 EDGE CASE**: the matn `القاتل لا يرث` also appears EMBEDDED inside al-Tirmidhi's bare grading quote (`...أن القاتل لا يرث...`). Per R77/R1, the scholar quote was kept byte-exact & BARE (no canonical splice); the standalone canonical hadith provided separately as `.hadith-block` (voweled) + takhrij. The isnad fragment is al-Tirmidhi's chain text → `.ar-quote` bare (not the prophetic matn).
+- No Quran āyah in this article. No `.aya-block`.
+- ★No Purge★ until owner directs.
