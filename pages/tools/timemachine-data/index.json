@@ -7,12 +7,21 @@
   },
   "shards": [
     {
+      "file": "bidayah-h109.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 109,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 109 (Shamela 96) — ปลดอะซัด, แต่งตั้งอัชร็อส อัลกามิล",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h110.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 110,
-      "events": 2,
+      "events": 3,
       "eventsSchema": "v3",
-      "scope": "ปี ฮ.ศ. 110 (Shamela 114–141) — มรณกรรมอัลหะสัน อัลบัศรีย์ + อิบนุ สีรีน",
+      "scope": "ปี ฮ.ศ. 110 (Shamela 96–141) — ฆ็อซวะตุฏฏีน + มรณกรรมอัลหะสัน อัลบัศรีย์ + อิบนุ สีรีน",
       "reviewStatus": "DRAFT"
     },
     {
