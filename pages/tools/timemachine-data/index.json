@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h116.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 116,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 116 (Shamela 156) — โรคระบาด + มรณกรรมอัลญุนัยด์ + กบฏอัลหาริษ",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h117.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 117,
