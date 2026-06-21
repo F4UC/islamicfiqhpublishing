@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h98.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 98,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 98 (Shamela 367–370) — การล้อมคอนสแตนติโนเปิล",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h99.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 99,
