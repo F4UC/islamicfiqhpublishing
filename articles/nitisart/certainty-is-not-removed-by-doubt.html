@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE: [ชื่อบทความ] — Islamic Fiqh Publishing (em-dash + site name, Rule 44) -->
+<title>ความมั่นใจจะไม่ถูกหักล้างด้วยความสงสัย — Islamic Fiqh Publishing</title>
+
+<!-- No-flash theme bootstrap — copy verbatim, do not edit. -->
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<!-- META: replace the ALL-CAPS tokens; keep Thai text natural. -->
+<meta name="description" content="บทวิเคราะห์กฎเกณฑ์นิติศาสตร์อิสลามแม่บท “ความมั่นใจจะไม่ถูกหักล้างด้วยความสงสัย” หนึ่งในห้าแม่บทใหญ่ของฟิกฮ์ พร้อมหลักฐานจากหะดีษและตัวอย่างการประยุกต์ใช้ ผ่านทัศนะของอัซซุยูฏีย์และอัซซุหัยลีย์">
+<meta name="keywords" content="กฎเกณฑ์ฟิกฮ์, อัลยะกีน, ความสงสัย, แม่บทนิติศาสตร์, อัซซุยูฏีย์, นิติศาสตร์อิสลาม, ฟิกฮ์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="ความมั่นใจจะไม่ถูกหักล้างด้วยความสงสัย — Islamic Fiqh Publishing">
+<meta property="og:description" content="อัลยะกีน (ความมั่นใจ) จะไม่ถูกหักล้างด้วยความสงสัย หนึ่งในห้าแม่บทใหญ่ของนิติศาสตร์อิสลามที่ครอบคลุมกว่า 3/4 ของวิชาฟิกฮ์">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/certainty-is-not-removed-by-doubt">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- CANONICAL (N-A): ต้อง mirror og:url เป๊ะ — extensionless (ไม่มี .html, ตรงกับ sitemap) — เปลี่ยน CATEGORY/SLUG ให้ตรง path จริง -->
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/nitisart/certainty-is-not-removed-by-doubt">
+
+<!-- ARTICLE JSON-LD (schema.org Article): แทน ความมั่นใจจะไม่ถูกหักล้างด้วยความสงสัย, 2026-06-21 (ISO YYYY-MM-DD จาก articles.json), CATEGORY/SLUG. author: หมวด kalam เปลี่ยนเป็น "มัรกัส อัลอิมาม อัลอัชอะรีย์" (กฎ 69) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ความมั่นใจจะไม่ถูกหักล้างด้วยความสงสัย",
+  "inLanguage": "th",
+  "datePublished": "2026-06-21",
+  "dateModified": "2026-06-21",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/nitisart/certainty-is-not-removed-by-doubt"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<!-- Article-scoped CSS (cb-bar, ar-* blocks, citation, bibliography). Copy verbatim. -->
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem; /* N4: align with .ar-quote */
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.aya-block .block-ar.is-short, .hadith-block .block-ar.is-short,
+.ar-translation.is-short { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+</head>
+<!-- PLACEMENT: copy this file to articles/<CATEGORY>/<SLUG>.html (depth 2). The ../../
+     asset paths resolve to the repo root from there (and from this preview path too,
+     via root-clamping). Set data-article-id="certainty-is-not-removed-by-doubt" and add the matching entry to
+     articles.json so the byline + reading time inject (Rules 55/57). -->
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="certainty-is-not-removed-by-doubt">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<!-- HERO — DEFAULT = no-hero (Rule 67): solid banner + eyebrow + H1, NO <img> (กัน 404).
+     เติม hero image ทีหลังเป็น batch ได้. แทนที่ CATEGORY (path+label) และ ความมั่นใจจะไม่ถูกหักล้างด้วยความสงสัย. -->
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์ / ฟิกฮ์</a>
+      <!-- ความมั่นใจจะไม่ถูกหักล้างด้วยความสงสัย: H1 text only; em-dash + site name go in <title> (Rule 44) -->
+      <h1 class="article-feature-title">ความมั่นใจจะไม่ถูกหักล้างด้วยความสงสัย</h1>
+    </div>
+  </div>
+</div>
+
+<!-- OPTIONAL hero WITH image — ใช้เฉพาะเมื่อมีรูปจริงบน CDN เท่านั้น (ห้ามชี้ไฟล์ 404).
+     ถ้ามีรูป ให้สลับบล็อกด้านบนเป็นบล็อกนี้ (เอา no-hero ออก, ใส่ <img> + เครดิต):
+<div class="article-feature">
+  <img
+    src="https://images.islamicfiqhpublishing.com/articles/SLUG.jpg"
+    alt="FEATURE_IMAGE_ALT — คำอธิบายภาพ (Rule 42)"
+    width="1600"
+    height="900"
+    loading="eager"
+    fetchpriority="high"
+  >
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">ความมั่นใจจะไม่ถูกหักล้างด้วยความสงสัย</h1>
+    </div>
+    <p class="article-feature-credit">ภาพ: IMAGE_CREDIT</p>
+  </div>
+</div>
+-->
+
+<article>
+<div class="article-wrap">
+
+  <!-- Byline INJECTED at runtime from articles.json (author/date/readingTime).
+       Keep .article-meta EMPTY in source (Rule 57). -->
+  <div class="article-meta"></div>
+
+  <!-- Reading control bar (theme / font-size / Arabic on-off). Copy verbatim. -->
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  // cb- control bar: thin sync/proxy layer. Reuses the EXISTING handlers
+  // (toggleDarkMode, changeFontSize, and the main.js-created #arabicToggleBtn) and
+  // their persistence — no logic is duplicated here. cbSync() only mirrors real
+  // state (dark-mode class, font active step, html.no-arabic) into the visuals.
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();                                   // parse-time: theme + arabic correct (no flash)
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);                     // re-place glider after web fonts shift widths
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">กฎเกณฑ์นี้ถือเป็นอีกหนึ่งแม่บทจากแม่บททั้ง 5 แห่งกฎเกณฑ์นิติศาสตร์อิสลาม ซึ่งเป็นกฎเกณฑ์ที่ได้มีการออกประมวลมาตราย่อยออกมาหลายมาตรา</p>
+
+      <p>ท่านอิหม่ามอัซซุยูฏีย์ได้ระบุไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ودليلها قوله صلى الله عليه وسلم { إذا وجد أحدكم في بطنه شيئا فأشكل عليه ، أخرج منه شيء أم لا ؟ فلا يخرجن من المسجد حتى يسمع صوتا أو يجد ريحا } رواه مسلم من حديث أبي هريرة</blockquote>
+      <p class="ar-translation">“และที่มาของกฎเกณฑ์นี้คือ คำกล่าวของท่านนบี ﷺ ที่ว่า ‘หากผู้ใดในหมู่พวกท่านรู้สึกว่าท้องเสีย แล้วมีความลังเลว่ามีอะไรออกมาจากท้องหรือไม่นั้น เขาไม่จำเป็นต้องออกจากมัสยิด (เพื่อไปทำอาบน้ำละหมาดใหม่) จนกว่าจะ (มั่นใจโดยการ) ได้ยินเสียงการผายลมอย่างชัดเจนหรือได้กลิ่นอย่างแน่นอน’ รายงานโดยมุสลิมจากหะดีษของอบู ฮุร็อยเราะฮ์”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">وروى مسلم عن أبي سعيد الخدري قال : قال رسول الله صلى الله عليه وسلم { إذا شك أحدكم في صلاته ، فلم يدر كم صلى أثلاثا أم أربعا ؟ فليطرح الشك ، وليبن على ما استيقن }</blockquote>
+      <p class="ar-translation">“และรายงานโดยมุสลิมจากอบู สะอี้ด อัลคุดรีย์ ท่านได้กล่าวว่า ท่านนบี ﷺ ได้กล่าวว่า เมื่อใดก็ตามที่พวกเจ้ามีความสงสัยในช่วงละหมาด โดยไม่รู้ว่าตัวเองละหมาดไปกี่รอกะอัต 3 หรือ 4 รอกะอัตกันแน่ ท่านจงทิ้งรอกะอัตที่สงสัย แล้วจงยึดรอกะอัตที่มั่นใจ”</p>
+
+      <p>ท่านอัซซุยูฏีย์ยังได้ระบุอีกว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">اعلم أن هذه القاعدة تدخل في جميع أبواب الفقه والمسائل المخرجة عليها تبلغ ثلاثة أرباع الفقه وأكثر ولو سردتها هنا لطال الشرح ولكني أسوق منها جملة صالحة</blockquote>
+      <p class="ar-translation">“ท่านจงทราบไว้เถิดว่ากฎเกณฑ์บทนี้ ครอบคลุมทุกๆ บทของวิชานิติศาสตร์ และบรรดาประเด็นต่างๆ ที่ถูกสังเคราะห์ออกมาจากกฎเกณฑ์บทนี้ ครอบคลุมมากถึง 3/4 ของนิติศาสตร์หรือมากกว่านั้น (กล่าวคือ หากแบ่งวิชาฟิกฮ์ออกเป็นสี่ส่วน กฎเกณฑ์บทนี้จะครอบคลุมมากถึง 3 ส่วนหรือมากกว่า) และถ้าหากว่าฉันจะกล่าวหรือชี้แจงอธิบายถึงกฎเกณฑ์บทนี้ แน่นอนว่ามันจะทำให้หนังสือเล่มนี้ยืดยาว แต่ว่าฉันจะเอามากล่าวเพียงส่วนหนึ่งพอประมาณก็ถือว่าเพียงพอแล้ว”</p>
+
+      <h2 class="article-h2">ตัวอย่าง</h2>
+      <p>ท่านอิหม่ามอัซซุยูฏีย์ได้ระบุไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فأقول : يندرج في هذه القاعدة عدة قواعد : منها : قولهم : الأصل بقاء ما كان على ما كان</blockquote>
+      <p class="ar-translation">“ฉันขอกล่าวว่า กฎเกณฑ์ต่างๆ ที่เข้าภายใต้กฎเกณฑ์นี้นั้นมีมากมาย ส่วนหนึ่งก็คือ คำกล่าวของนักนิติศาสตร์ที่ว่า ตามหลักการเดิมแล้ว สิ่งหนึ่งจะยังคงอยู่เฉกเช่นเดิม ในสภาพที่เคยเป็นมาไม่แปรเปลี่ยน”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">فمن أمثلة ذلك من تيقن الطهارة وشك في الحدث فهو متطهر أو تيقن في الحدث وشك في الطهارة فهو محدث</blockquote>
+      <p class="ar-translation">“ตัวอย่างจากกฎเกณฑ์ดังกล่าวคือ ผู้ที่มั่นใจว่าตนได้อาบน้ำละหมาดแล้ว แต่สงสัยว่า ตัวเองมีหะดัษหรือเปล่า (แต่จำไม่ได้) ก็ให้ถือว่าตัวเองนั้นยังคงมีน้ำละหมาดอยู่ หรือมั่นใจว่าเสียน้ำละหมาดแล้ว แต่สงสัยว่าหลังจากเสียน้ำละหมาดแล้ว ตนเองได้อาบน้ำละหมาดแล้วหรือยัง ก็ให้ถือว่า ยังไม่ได้อาบน้ำละหมาด”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">آخر الليل ، وشك في طلوع الفجر صح صومه لأن الأصل بقاء الليل</blockquote>
+      <p class="ar-translation">“คนๆ หนึ่งได้รับประทานอาหารในช่วงท้ายของกลางคืน แต่เขาสงสัยว่าเข้าเวลาซุบห์แล้วหรือยัง? การถือศีลอดของเขาใช้ได้ (เนื่องจากเขามั่นใจว่าเขาได้รับประทานในเวลากลางคืน) เพราะหลักการเดิมคือ กลางคืนยังเหลือเวลาอยู่”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">أكل آخر النهار ، بلا اجتهاد وشك في الغروب بطل صومه لأن الأصل بقاء النهار .</blockquote>
+      <p class="ar-translation">“คนๆ หนึ่งได้รับประทานอาหารในช่วงท้ายของกลางวัน โดยไม่ได้คิดวิเคราะห์ว่า เข้าเวลามักริบแล้วหรือยัง? แต่แล้วก็สงสัยว่าตะวันตกดินแล้วหรือยัง (หลังจากรับประทานไปแล้ว) ถือว่า การถือศีลอดนั้นเป็นโมฆะ เพราะหลักการเดิมคือ กลางวันยังคงดำเนินต่อไป”</p>
+
+      <p>ท่านมุหัมมัด อัซซุหัยลีย์ ได้ระบุไว้ว่า:</p>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">من شك هل طلق امرأته، أو لا، فلا يقع الطلاق؛ لأن الأصل أنه لم يفعله.</blockquote>
+      <p class="ar-translation">“หากบุคคลหนึ่งเกิดความสงสัยว่า ตนเองได้ลั่นวาจาที่จะหย่าภรรยาออกไปหรือเปล่า ดังกล่าวถือว่าไม่นับ เพราะพื้นฐานเดิมแล้ว เขายังไม่ได้ลั่นวาจา”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا شك في عدد الطواف بنى على اليقين.</blockquote>
+      <p class="ar-translation">“เมื่อเกิดความสงสัยว่าฏอวาฟไปกี่รอบแล้ว ก็ให้นับจำนวนฏอวาฟที่มั่นใจที่สุด”</p>
+
+      <h2 class="article-h2">ข้อยกเว้น</h2>
+      <blockquote lang="ar" dir="rtl" class="ar-quote">بال حيوان في ماء كثير، ثم وجده متغيرا ولم يدر أتغير بالبول أم بغيره؟ فهو نجس لهذا الشك.</blockquote>
+      <p class="ar-translation">“มีสัตว์จำนวนหนึ่งได้ฉี่ลงไปในบ่อที่มีน้ำอยู่เป็นจำนวนมาก หลังจากนั้นน้ำเกิดการเปลี่ยนแปลง และไม่รู้ว่าน้ำเปลี่ยนแปลงเพราะฉี่หรือเพราะสาเหตุอื่น น้ำดังกล่าวถือเป็นน้ำที่สกปรก ด้วยกับการสงสัยดังกล่าว”</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">من أصابته نجاسة في ثوبه أو بدنه، وجهل موضعها، يجب غسل كله.</blockquote>
+      <p class="ar-translation">“ผู้ที่โดนสิ่งสกปรกเปื้อนเสื้อหรือโดนร่างกาย แต่ไม่รู้ว่าโดนจุดไหน จำเป็นต้องล้าง (เสื้อทั้งชุด หรืออาบน้ำใหม่) ทั้งหมด”</p>
+
+      <!-- CITATION (อ้างอิงบทความนี้): replace title + CATEGORY/SLUG + year (พ.ศ.), Rule 40. -->
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). ความมั่นใจจะไม่ถูกหักล้างด้วยความสงสัย. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/certainty-is-not-removed-by-doubt.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <!-- BIBLIOGRAPHY: Arabic sources, numbered; each ↑ back-links to its #fnref-N.
+         Native script, no translation (Rule 6). Keep ids in sync with the <sup> refs. -->
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography" lang="ar" dir="rtl">
+        <li id="ref-1">السيوطي، جلال الدين عبد الرحمن. الأشباه والنظائر في قواعد وفروع فقه الشافعية.</li>
+        <li id="ref-2">الزحيلي، محمد مصطفى. القواعد الفقهية وتطبيقاتها في المذاهب الأربعة.</li>
+        <li id="ref-3">أخرجه مسلم في صحيح مسلم، كتاب الحيض، رقم 362، من حديث أبي هريرة رضي الله عنه.</li>
+        <li id="ref-4">أخرجه مسلم في صحيح مسلم، كتاب المساجد ومواضع الصلاة، رقم 571، من حديث أبي سعيد الخدري رضي الله عنه.</li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+// Scroll-reveal animation (Rule 35) — toggles .active per article.css.
+// Font-size, dark mode, progress bar and back-to-top are handled globally by main.js.
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+// PART 1 — conditional alignment judged at the REAL rendered width.
+function ifpAlign(){
+  var AR_MAX=60, TH_MAX=80;
+  function mark(el,max){var n=(el.textContent||'').trim().replace(/[\u064B-\u0652\u0670\u0653-\u065F\u06D6-\u06ED\u0640]/g,'').length; el.classList.toggle('is-short', n>0&&n<=max);}
+  document.querySelectorAll('.aya-block .block-ar, .hadith-block .block-ar').forEach(function(el){mark(el,AR_MAX);});
+  // คำแปลของ aya/hadith = .ar-translation ที่อยู่ใน block หรือเป็น sibling ถัดไปนอก block
+  document.querySelectorAll('.aya-block .ar-translation, .hadith-block .ar-translation').forEach(function(el){mark(el,TH_MAX);});
+  document.querySelectorAll('.aya-block, .hadith-block').forEach(function(blk){
+    var n=blk.nextElementSibling;
+    while(n && n.classList && n.classList.contains('ar-translation')){ mark(n,TH_MAX); n=n.nextElementSibling; }
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){requestAnimationFrame(ifpAlign);})
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260619a" charset="UTF-8"></script>
+</body>
+</html>
