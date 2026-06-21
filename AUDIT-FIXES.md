@@ -678,3 +678,18 @@ New article (not a retro-audit). Source: Drive fileId 1H5PuklKd-bav_u8jfpPhx0k0n
 - **12 `.ar-quote` scholar blocks** stripped to uniformly BARE per Rule 60 (ALL-OR-NOTHING; source was partially voweled). Operation deleted ONLY marks U+064B–U+0652 + U+0670 (ًٌٍَُِّْٰ); consonant skeleton + spaces + author's editorial bracket [من] unchanged. Verified by byte-diff: removed-set membership only, 0 harakat remaining inside any ar-quote (script-checked).
 - No embedded sacred-text edge case (R77): the Quranic/ḥadīth wording the lesson discusses is conceptual, not quoted as Arabic matn, so nothing was spliced.
 - article blob SHA (git :path) = d641d6f0a3602ba797d81c733c8c4f693ff6e590 (pre-ศอฮาบัต normalization; re-add after final edits).
+
+
+---
+
+## 2026-06-21 — NEW ARTICLE: articles/hadith/daif-hadith-lesson-2.html (เข้าใจหะดีษฎออีฟ พาร์ท 2)
+Branch: claude/p3-daif-hadith-lesson-2 · HTML blob SHA: 91e3ca3fe9d3dd1d434fc37fec05924a948e9a56
+Source: Drive fileId 1dHKnDBD8ANYMACdOc8YAVqGAk2Xdt6Qv6Gkkjooh0Fc (raw → /tmp/src_daif2.txt)
+
+- **R71 child-safety screen:** PASS — none. Hadith-methodology lesson; no content sexualizes a minor.
+- **Arabic blocks (all 23) = scholar quotes `.ar-quote` (R60 ALL-OR-NOTHING → UNIFORMLY BARE).**
+  Source mixed voweled + bare scholar quotes → stripped harakat from ALL so uniformly bare.
+  Operation: byte-exact — deleted ONLY U+064B–U+0652 via script (strip-marks); consonant skeleton + spacing UNCHANGED. Never retyped.
+  Byte-diff proof: for every block, `strip_U064B-0652(source_block) == html_block` verified True (23/23); remaining harakat in html ar-quotes = 0.
+- **No `.aya-block` / `.hadith-block`:** the source contains NO standalone āyah or standalone hadith — every Arabic passage is a scholar quotation. The Prophetic hadith "من كذب علي متعمدا…" is embedded continuously INSIDE al-Nawawi's quote → per R77 EDGE CASE / R1 kept verbatim & bare inside the `.ar-quote`; NO canonical splice, NO standalone re-fetch (it does not stand alone).
+- **Punctuation:** did NOT normalize Latin `,`/`.`/`:`/`"`/`!`/`-` inside scholar Arabic (R77 normalize is optional; chose byte-exact verbatim per R1 — source's existing marks preserved).
