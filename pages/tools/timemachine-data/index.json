@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h108.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 108,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 108 (Shamela 92–95) — ศึกรูม/เติร์ก, อัลหาริษพลีชีพ",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h109.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 109,
