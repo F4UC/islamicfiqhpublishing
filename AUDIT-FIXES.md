@@ -702,3 +702,10 @@ New article (not a retro-audit). Source: Drive `1o0IsTiLnvFFwSNxXbxZ_Zu3sUqzmFfW
 - **R77 EDGE CASE**: the matn `القاتل لا يرث` also appears EMBEDDED inside al-Tirmidhi's bare grading quote (`...أن القاتل لا يرث...`). Per R77/R1, the scholar quote was kept byte-exact & BARE (no canonical splice); the standalone canonical hadith provided separately as `.hadith-block` (voweled) + takhrij. The isnad fragment is al-Tirmidhi's chain text → `.ar-quote` bare (not the prophetic matn).
 - No Quran āyah in this article. No `.aya-block`.
 - ★No Purge★ until owner directs.
+
+
+## 2026-06-21 — NEW BUILD: using-daif-hadith-in-rulings (hadith) — Arabic provenance
+New standalone usul article (not a retro-audit). HTML blob SHA = 85b5d5c648bc8197d8dd1ba56f2e41c97be1fb1e (final).
+- **Scholar tashkeel R60 ALL-OR-NOTHING → uniformly BARE:** 15 `.ar-quote` blocks. Source had mixed voweling (some fully voweled, some bare), so per R60 ALL blocks stripped to uniformly bare. Operation byte-exact: deleted ONLY U+064B–U+0652 via `re.sub('[ً-ْ]','')`; consonant skeleton + spaces unchanged. Verified: `HARAKAT.sub('', raw) == bare` (True) and all 15 in-file ar-quote blocks match the stripped reference list (harakat count 0, skeleton-equal). 1337 harakat marks removed total.
+- **No standalone aya-block / hadith-block in this article.** Every Arabic passage is a scholar quotation introduced by "ท่าน X กล่าวว่า:" — including the Tirmidhi-cited hadith `عن حنش … من أبواب الكبائر` (Tirmidhi 188, sunnah.com/tirmidhi:188) which is presented as al-Tirmidhi's running citation with isnad → treated as scholar `.ar-quote` (R77 embedded-sacred-text: kept verbatim/bare, NO canonical splice). Takhrij listed in bibliography.
+- **FLAG (R56/R1):** block from al-Zarkashi's "al-Nukat" contains literal backslash-escaped brackets `\[أحدها\]` carried verbatim from the Drive source (Shamela markup artifact). Brackets `[أحدها]` are a meaningful editorial insertion; the backslashes are stray escaping. Kept verbatim per R1/R56 — editor to confirm whether to drop the `\` escapes.
