@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h113.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 113,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 113 (Shamela 145–146) — มัสละมะฮ์รุกแดนเติร์ก + อับดุลวะฮ์ฮาบพลีชีพ",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h114.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 114,
