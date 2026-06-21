@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 254,
+    "ceYear": 868,
+    "ceSpan": "868-869",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 254 (al-Bidayah เล่ม 11, ص234): การสังหารบุฆา อัชชะรอบี และ ★อะหมัด บิน ฏูลูนปกครองอียิปต์ (กำเนิดราชวงศ์ฏูลูนิด)★ (Rule 89, 2 เหตุการณ์)",
+    "groupOrder": [
+      "การสถาปนารัฐ · การเมือง"
+    ],
+    "reviewStatus": "DRAFT - แปลตรงจากตำรา (Rule 89)"
+  },
+  "events": [
+    {
+      "id": "bidayah-h254-001",
+      "book": "al-bidayah",
+      "hijriYear": 254,
+      "ceYear": 868,
+      "order": 1,
+      "type": "event",
+      "cat": "ประวัติศาสตร์",
+      "group": "การสถาปนารัฐ · การเมือง",
+      "title": "เคาะลีฟะฮ์อัลมุอ์ตัซสั่งสังหารบุฆา อัชชะรอบี",
+      "persons": [
+        "al-mutazz",
+        "bugha-al-sharabi"
+      ],
+      "places": [
+        "samarra",
+        "baghdad"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้ เคาะลีฟะฮ์อัลมุอ์ตัซได้สั่งให้สังหารบุฆา อัชชะรอบี ตั้งประจานศีรษะของเขาที่สามัรรออ์ จากนั้นที่แบกแดด ศพของเขาถูกเผาด้วยไฟ และทรัพย์สินกับคลังของเขาถูกยึด",
+          "arabicExcerpt": "فيها أمر الخليفة المعتزُّ بقتل بُغَا الشرابيّ، ونصب رأسه بسامُرَّاء، ثم ببغداد، وحرّقت جثته [بالنار] ، وأخذت أمواله وحواصله",
+          "loc": "เล่ม 11 หน้า 234",
+          "url": "https://shamela.ws/book/30097/5288",
+          "page": 234
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    },
+    {
+      "id": "bidayah-h254-002",
+      "book": "al-bidayah",
+      "hijriYear": 254,
+      "ceYear": 868,
+      "order": 2,
+      "type": "event",
+      "cat": "ประวัติศาสตร์",
+      "group": "การสถาปนารัฐ · การเมือง",
+      "title": "อะหมัด บิน ฏูลูนปกครองอียิปต์ (กำเนิดราชวงศ์ฏูลูนิด)",
+      "persons": [
+        "ahmad-b-tulun"
+      ],
+      "places": [
+        "egypt"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "และในปีนี้ อะหมัด บิน ฏูลูนได้ปกครองดินแดนอียิปต์ เขาคือผู้สร้างมัสยิดญามิอ์อันโด่งดังที่นั่น",
+          "arabicExcerpt": "وفيها: ولي أحمد بن طولون الدِّيار المصرية، وهو باني الجامع المشهور بها",
+          "loc": "เล่ม 11 หน้า 234",
+          "url": "https://shamela.ws/book/30097/5288",
+          "page": 234
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}
