@@ -550,6 +550,41 @@
       "canonicalThai": "สัลม์ บิน อะห์วัซ",
       "note": "แม่ทัพ/หัวหน้าตำรวจของนัศร์ ผู้สั่งสังหารญะฮ์ม",
       "variantsFound": []
+    },
+    {
+      "id": "ibrahim-b-al-walid",
+      "arabic": "إبراهيم بن الوليد بن عبد الملك",
+      "canonicalThai": "อิบรอฮีม บิน อัลวะลีด",
+      "note": "เคาะลีฟะฮ์อุมัยยะฮ์ก่อนมัรวานที่ 2",
+      "variantsFound": []
+    },
+    {
+      "id": "al-walid-b-yazid",
+      "arabic": "الوليد بن يزيد",
+      "canonicalThai": "อัลวะลีด บิน ยะซีด",
+      "note": "เคาะลีฟะฮ์อุมัยยะฮ์ที่ถูกสังหาร (ชนวนความขัดแย้ง)",
+      "variantsFound": []
+    },
+    {
+      "id": "yazid-al-naqis",
+      "arabic": "يزيد بن الوليد الناقص",
+      "canonicalThai": "ยะซีด อันนากิศ",
+      "note": "เคาะลีฟะฮ์อุมัยยะฮ์ผู้สังหารอัลวะลีด บิน ยะซีด",
+      "variantsFound": []
+    },
+    {
+      "id": "yazid-b-khalid-al-qasri",
+      "arabic": "يزيد بن خالد القسري",
+      "canonicalThai": "ยะซีด บิน คอลิด อัลก็อสรีย์",
+      "note": "แม่ทัพผู้สังหารบุตรของอัลวะลีดในคุก",
+      "variantsFound": []
+    },
+    {
+      "id": "thabit-b-nuaym",
+      "arabic": "ثابت بن نعيم الجذامي",
+      "canonicalThai": "ษาบิต บิน นุอัยม์",
+      "note": "ผู้ก่อกบฏที่ปาเลสไตน์ต่อมัรวาน",
+      "variantsFound": []
     }
   ],
   "places": [
@@ -902,6 +937,18 @@
       "id": "sind",
       "arabic": "السند",
       "canonicalThai": "สินธ์",
+      "variantsFound": []
+    },
+    {
+      "id": "ayn-al-jarr",
+      "arabic": "عين الجر",
+      "canonicalThai": "อัยนุลญัรร์ (บิกาอ์)",
+      "variantsFound": []
+    },
+    {
+      "id": "palestine",
+      "arabic": "فلسطين",
+      "canonicalThai": "ปาเลสไตน์",
       "variantsFound": []
     }
   ],
