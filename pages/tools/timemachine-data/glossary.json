@@ -249,6 +249,55 @@
       "canonicalThai": "มุหัมมัด บิน อัลมุนกะดิร",
       "note": "ตาบิอีนและนักรายงานหะดีษ (วายชนม์ปี 130)",
       "variantsFound": []
+    },
+    {
+      "id": "sulayman-b-ali",
+      "arabic": "سليمان بن علي",
+      "canonicalThai": "สุลัยมาน บิน อะลีย์",
+      "note": "อาของอัสซัฟฟาห์ ผู้ปกครองบัศเราะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "ismail-b-ali",
+      "arabic": "إسماعيل بن علي",
+      "canonicalThai": "อิสมาอีล บิน อะลีย์",
+      "note": "อาของอัสซัฟฟาห์",
+      "variantsFound": []
+    },
+    {
+      "id": "ziyad-b-ubaydallah",
+      "arabic": "زياد بن عبيد الله الحارثي",
+      "canonicalThai": "ซิยาด บิน อุบัยดิลลาฮ์ อัลหาริษีย์",
+      "note": "ลุงฝ่ายมารดาของอัสซัฟฟาห์ ผู้ปกครองหิญาซ",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-al-ashath",
+      "arabic": "محمد بن الأشعث",
+      "canonicalThai": "มุหัมมัด บิน อัลอัชอัษ",
+      "note": "แม่ทัพผู้พิชิตอิฟรีกียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "sharik-al-mahri",
+      "arabic": "شريك بن شيخ المهري",
+      "canonicalThai": "ชะรีก บิน ชัยค์ อัลมะฮ์รีย์",
+      "note": "ผู้ก่อกบฏที่บุคอรอต่ออบู มุสลิม",
+      "variantsFound": []
+    },
+    {
+      "id": "yahya-b-muhammad",
+      "arabic": "يحيى بن محمد",
+      "canonicalThai": "ยะห์ยา บิน มุหัมมัด",
+      "note": "น้องชายของอัสซัฟฟาห์",
+      "variantsFound": []
+    },
+    {
+      "id": "ziyad-b-salih-al-khuzai",
+      "arabic": "زياد بن صالح الخزاعي",
+      "canonicalThai": "ซิยาด บิน ศอลิห์ อัลคุซาอีย์",
+      "note": "แม่ทัพของอบู มุสลิม (คนละคนกับซิยาด บิน ศอลิห์ อัลหาริษีย์)",
+      "variantsFound": []
     }
   ],
   "places": [
@@ -432,6 +481,48 @@
       "id": "mecca",
       "arabic": "مكة",
       "canonicalThai": "มักกะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "bahrain",
+      "arabic": "البحرين",
+      "canonicalThai": "อัลบะฮ์เรน",
+      "variantsFound": []
+    },
+    {
+      "id": "oman",
+      "arabic": "عمان",
+      "canonicalThai": "โอมาน",
+      "variantsFound": []
+    },
+    {
+      "id": "ahwaz",
+      "arabic": "الأهواز",
+      "canonicalThai": "อัลอะฮ์วาซ",
+      "variantsFound": []
+    },
+    {
+      "id": "ifriqiya",
+      "arabic": "إفريقية",
+      "canonicalThai": "อิฟรีกียะฮ์ (แอฟริกาเหนือ)",
+      "variantsFound": []
+    },
+    {
+      "id": "bukhara",
+      "arabic": "بخارى",
+      "canonicalThai": "บุคอรอ",
+      "variantsFound": []
+    },
+    {
+      "id": "hijaz",
+      "arabic": "الحجاز",
+      "canonicalThai": "หิญาซ",
+      "variantsFound": []
+    },
+    {
+      "id": "sham",
+      "arabic": "الشام",
+      "canonicalThai": "ชาม",
       "variantsFound": []
     }
   ],
