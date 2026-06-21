@@ -1126,9 +1126,18 @@
       "file": "bidayah-h218.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 218,
-      "events": 2,
+      "events": 3,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 218 - ★★จุดเริ่มมิห์นะฮ์+มรณกรรมอัลมะอ์มูน★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h219.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 219,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 219 - ★กบฏอะละวีย์มุฮัมมัด บิน อัลกอซิม(อัฏฏอลิกอน)★ (Rule 89)",
       "reviewStatus": "DRAFT"
     }
   ]
