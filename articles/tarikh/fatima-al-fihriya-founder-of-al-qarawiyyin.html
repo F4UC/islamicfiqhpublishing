@@ -97,9 +97,8 @@ body { position: relative; }
 .ar-quote, .ar-feature,
 .aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
 .ar-translation { text-align: left; }
-.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
-.aya-block .block-ar.is-1line,
-.hadith-block .block-ar.is-1line { text-align: center; }
+.aya-block .block-ar.is-short, .aya-block .ar-translation.is-short,
+.hadith-block .block-ar.is-short, .hadith-block .ar-translation.is-short { text-align: center; }
 /* Global Arabic On/Off — single source of truth: html.no-arabic */
 html.no-arabic .ar-feature,
 html.no-arabic .aya-block,
@@ -397,7 +396,7 @@ html.no-arabic .ar-quote { display: none; }
 
       <p>ดร.ลุฏฟี อีซา นักประวัติศาสตร์ชาวตูนิเซีย ได้เสนอจุดสังเกตเชิงการเมืองที่น่าสนใจเกี่ยวกับการที่ครอบครัวอัลฟิฮ์รีย์ย้ายถิ่นฐานจากกอยรอวานไปยังเมืองเฟส ซึ่งอยู่ภายใต้การปกครองของราชวงศ์อิดรีสีย์ในขณะนั้น ท่านอธิบายว่า:</p>
 
-      <p class="ar-translation thai-quote">“ทางการอิดรีสีย์น่าจะยินดีต้อนรับการเข้ามาของอบู อับดิลละฮ์ อัลฟิฮ์รีย์ ด้วยเหตุผลทางการเมืองที่สำคัญ โดยเฉพาะในแง่ของการจัดรูปแบบอัตลักษณ์ชาติพันธุ์ของเมืองเฟส”</p>
+      <p class="ar-translation">“ทางการอิดรีสีย์น่าจะยินดีต้อนรับการเข้ามาของอบู อับดิลละฮ์ อัลฟิฮ์รีย์ ด้วยเหตุผลทางการเมืองที่สำคัญ โดยเฉพาะในแง่ของการจัดรูปแบบอัตลักษณ์ชาติพันธุ์ของเมืองเฟส”</p>
 
       <p>นั่นหมายความว่า การต้อนรับชนชั้นสูงเชื้อสายอาหรับจากเมืองกอยรอวานเข้าสู่เฟส เป็นส่วนหนึ่งของกระบวนการสร้างอัตลักษณ์ทางวัฒนธรรมและศาสนาให้กับเมืองเฟสในฐานะเมืองหลวงใหม่ของอาณาจักร</p>
 
@@ -411,7 +410,7 @@ html.no-arabic .ar-quote { display: none; }
 
       <p>แต่ในอีกมุมหนึ่ง ดร.มุนีฟ รอเฟี้ยอ์ อัซซุบัยอีย์ ผู้อำนวยการสถาบันวิทยาศาสตร์โลกอิสลาม ให้ความเห็นว่า สิ่งนี้สะท้อนถึง ความบกพร่องในการจดบันทึกและการจัดทำชีวประวัติของสตรีผู้ทรงมีคุณูปการในอารยธรรมอิสลามอย่างใหญ่หลวงเช่น ฟาฏิมะฮ์ อัลฟิฮ์รียะฮ์ โดยกล่าวว่า:</p>
 
-      <p class="ar-translation thai-quote">“เป็นไปได้ว่า ชีวประวัติของสตรีเหล่านี้ ยังคงถูกเก็บเป็นต้นฉบับที่ยังไม่ได้ตรวจสอบหรือพิมพ์เผยแพร่”</p>
+      <p class="ar-translation">“เป็นไปได้ว่า ชีวประวัติของสตรีเหล่านี้ ยังคงถูกเก็บเป็นต้นฉบับที่ยังไม่ได้ตรวจสอบหรือพิมพ์เผยแพร่”</p>
 
       <p>ส่วนนี้ชี้ให้เห็นถึงข้อเท็จจริงที่ว่า แม้ฟาฏิมะฮ์ อัลฟิฮ์รียะฮ์ จะมีบทบาทสำคัญในฐานะผู้ริเริ่มก่อตั้งศูนย์การศึกษาที่ทรงอิทธิพลที่สุดแห่งหนึ่งของโลกมุสลิม แต่ประวัติของเธอกลับหลงเหลือเพียงเสี้ยวเล็กๆ เท่านั้นในหน้าหนังสือประวัติศาสตร์ ซึ่งอาจเป็นผลทั้งจากค่านิยมด้านความสำรวมในวัฒนธรรมต่อเพศหญิง และการมองข้ามบทบาทของสตรีในประวัติศาสตร์อย่างเป็นระบบ</p>
 
@@ -485,7 +484,7 @@ html.no-arabic .ar-quote { display: none; }
 
       <p>หนึ่งในผู้ที่ตั้งข้อสังเกตคือ ดร.อับดุลฮาดี อัตตาซี ซึ่งในหนังสือของเขาชื่อว่า “มัสญิดกอรอวียีน: มัสญิดและมหาวิทยาลัยแห่งเมืองเฟส” ได้อ้างถึงเอกสารสำคัญที่ค้นพบระหว่างการบูรณะมัสญิด ในเอกสารนั้นระบุไว้ชัดเจนด้วยอักษรวิจิตรอาหรับรูปแบบกูฟีว่า:</p>
 
-      <p class="ar-translation thai-quote">“มัสญิดแห่งนี้ถูกสร้างขึ้นในเดือนซุลเกาะอ์ดะฮ์ ปีฮ.ศ. 263 (ค.ศ. 877) ตามคำสั่งของอิหม่ามดาวูด บิน อิดรีส”</p>
+      <p class="ar-translation">“มัสญิดแห่งนี้ถูกสร้างขึ้นในเดือนซุลเกาะอ์ดะฮ์ ปีฮ.ศ. 263 (ค.ศ. 877) ตามคำสั่งของอิหม่ามดาวูด บิน อิดรีส”</p>
 
       <p>ข้อความนี้หากได้รับการตรวจสอบอย่างรอบด้าน ก็อาจเปลี่ยนความเข้าใจทั่วไปที่เชื่อว่าผู้หญิงเป็นผู้ก่อตั้งเพียงลำพัง</p>
 
@@ -587,18 +586,19 @@ document.querySelectorAll('.reveal').forEach(function(el) {
 </script>
 <script>
 function ifpAlign(){
-  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
-  document.querySelectorAll(s).forEach(function(el){
-    var cs=getComputedStyle(el);
-    var lh=parseFloat(cs.lineHeight);
-    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
-    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
-    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  var AR_MAX=60, TH_MAX=80;
+  function mark(el,max){var n=(el.textContent||'').trim().length; el.classList.toggle('is-short', n>0&&n<=max);}
+  document.querySelectorAll('.aya-block .block-ar, .hadith-block .block-ar').forEach(function(el){mark(el,AR_MAX);});
+  // คำแปลของ aya/hadith = .ar-translation ที่อยู่ใน block หรือเป็น sibling ถัดไปนอก block
+  document.querySelectorAll('.aya-block .ar-translation, .hadith-block .ar-translation').forEach(function(el){mark(el,TH_MAX);});
+  document.querySelectorAll('.aya-block, .hadith-block').forEach(function(blk){
+    var n=blk.nextElementSibling;
+    while(n && n.classList && n.classList.contains('ar-translation')){ mark(n,TH_MAX); n=n.nextElementSibling; }
   });
 }
 window.addEventListener('load',ifpAlign);
 window.addEventListener('resize',ifpAlign);
-new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+new MutationObserver(function(){requestAnimationFrame(ifpAlign);})
   .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
 </script>
 <script defer src="../../main.js?v=20260619a" charset="UTF-8"></script>

@@ -95,9 +95,8 @@ body { position: relative; }
 .ar-quote, .ar-feature,
 .aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
 .ar-translation { text-align: left; }
-.ar-quote.is-1line, .ar-feature.is-1line, .ar-translation.is-1line,
-.aya-block .block-ar.is-1line,
-.hadith-block .block-ar.is-1line { text-align: center; }
+.aya-block .block-ar.is-short, .aya-block .ar-translation.is-short,
+.hadith-block .block-ar.is-short, .hadith-block .ar-translation.is-short { text-align: center; }
 /* Global Arabic On/Off — single source of truth: html.no-arabic */
 html.no-arabic .ar-feature,
 html.no-arabic .aya-block,
@@ -570,24 +569,20 @@ document.querySelectorAll('.reveal').forEach(function(el) {
 </script>
 <script>
 // PART 1 — conditional alignment judged at the REAL rendered width.
-// 1 line => centered (.is-1line); 2+ lines => flush to side (CSS handles which).
 function ifpAlign(){
-  var s='.ar-quote,.ar-feature,.aya-block .block-ar,.hadith-block .block-ar,.ar-translation';
-  document.querySelectorAll(s).forEach(function(el){
-    var cs=getComputedStyle(el);
-    var lh=parseFloat(cs.lineHeight);
-    if(!lh||isNaN(lh)){el.classList.remove('is-1line');return;}
-    // scrollHeight includes vertical padding (e.g. .ar-feature) — subtract it so
-    // the line count reflects text only, per the ONE-line-centered rule.
-    var pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
-    el.classList.toggle('is-1line', Math.round((el.scrollHeight-pad)/lh)<=1);
+  var AR_MAX=60, TH_MAX=80;
+  function mark(el,max){var n=(el.textContent||'').trim().length; el.classList.toggle('is-short', n>0&&n<=max);}
+  document.querySelectorAll('.aya-block .block-ar, .hadith-block .block-ar').forEach(function(el){mark(el,AR_MAX);});
+  // คำแปลของ aya/hadith = .ar-translation ที่อยู่ใน block หรือเป็น sibling ถัดไปนอก block
+  document.querySelectorAll('.aya-block .ar-translation, .hadith-block .ar-translation').forEach(function(el){mark(el,TH_MAX);});
+  document.querySelectorAll('.aya-block, .hadith-block').forEach(function(blk){
+    var n=blk.nextElementSibling;
+    while(n && n.classList && n.classList.contains('ar-translation')){ mark(n,TH_MAX); n=n.nextElementSibling; }
   });
 }
 window.addEventListener('load',ifpAlign);
 window.addEventListener('resize',ifpAlign);
-// Re-run right after the Arabic On/Off toggle fires (it flips html.no-arabic);
-// main.js is shared/off-limits, so observe the class change here instead.
-new MutationObserver(function(){ requestAnimationFrame(ifpAlign); })
+new MutationObserver(function(){requestAnimationFrame(ifpAlign);})
   .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
 </script>
 <script defer src="../../main.js?v=20260619a" charset="UTF-8"></script>

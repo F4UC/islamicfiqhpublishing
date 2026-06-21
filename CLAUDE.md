@@ -485,7 +485,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 ---
 
-## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–85)
+## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–85, 90)
 
 * **กฎข้อที่ 71:** **★[ความปลอดภัยเด็ก — Child-Safety Override · เหนือกฎความครบถ้วนทุกข้อ · บังคับกับทุกเอเยนต์]★** หากต้นฉบับจาก Drive หรือเนื้อหาใดๆ มีสาระที่ทำให้**ผู้เยาว์เป็นวัตถุทางเพศ (sexualizes a minor)** มาตรการนี้อยู่เหนือกฎ 1/49/56 และเกตทุกชนิด ให้ปฏิบัติโดยเด็ดขาด:
   1. **PASS-with-flag (ตัดทิ้ง ไม่ใช่ปัดตก):** ถือว่าบทความ "ผ่าน" ได้โดย**ตัด (drop) เฉพาะส่วนที่ละเมิดออกทั้งหมด** แล้วตั้ง **child-safety flag** กำกับ — ส่วนที่ตัดนี้**ไม่นับในตัวหารของ coverage (กฎ 72)** การตัดตามกฎนี้ไม่ถือว่า coverage ตก
@@ -563,9 +563,19 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **CI gate:** ทุก PR ต้องผ่าน `.github/workflows/ci.yml` (JSON valid, Arabic-ortho, gitleaks) ก่อน owner-merge
   *(EN: scoped+expiring fine-grained PATs, never commit secrets; render external/JSON data via textContent — never innerHTML; vendored libs pinned + SRI + self-hosted; every PR must pass CI before owner-merge.)*
 
+* **กฎข้อที่ 90:** **[Block Alignment Standard — มาตรฐานการจัดแนวบล็อก]** การจัดแนว (alignment) ของทุกบล็อกตัดสินจาก **ชนิดเนื้อหา + จำนวนอักขระ (char-count)** ไม่ใช่จำนวนบรรทัดที่ render (ยกเลิก logic `is-1line` แบบนับ `scrollHeight/lineHeight` เดิมทั้งหมด) · *(หมายเหตุลำดับเลข: R86–R89 เป็นข้อเสนอที่ยังไม่ผนวกใน `docs/CONSISTENCY-AUDIT.md` — รักษาหมายเลข R90 ตามที่กองบรรณาธิการกำหนดสำหรับมาตรฐานการจัดแนว)*
+  - **ร้อยแก้วไทย** ใน body → **ชิดซ้าย** · หัวข้อ `.article-h2` → **ชิดซ้าย** หนา มีเส้นใต้
+  - **อาหรับปราชญ์** `.ar-quote` / `.ar-feature` → **ชิดขวาเสมอ** · **หะดีษ** `.hadith-block .block-ar` → ชิดขวา (เกิน 60 ตัวอักษรอาหรับ) / **กึ่งกลาง** (≤ 60)
+  - **อายะฮ์** `.aya-block .block-ar` → **กึ่งกลาง** (≤ 60 ตัวอาหรับ) / ชิดขวา (เกิน)
+  - **คำแปลไทยของ aya/hadith** → **กึ่งกลาง** (≤ 80 ตัวไทย) / ชิดซ้าย (เกิน) · **คำแปลปราชญ์** `.ar-translation` (ของ `.ar-quote`/`.ar-feature`) → **ชิดซ้ายเสมอ**
+  - **บทกวีไทย** `.poem-th` → **กึ่งกลาง**
+  - ทุกย่อหน้าคำแปลใช้คลาส `.ar-translation` (สีเดียวทั้งก้อน) · **ห้ามใช้ `<p>` เปล่าหรือ `thai-quote` สำหรับคำแปล**
+  - การจัดตำแหน่งทำผ่าน `ifpAlign()` ด้วย char-count (สลับคลาส `.is-short`) — ห้ามใช้ logic นับบรรทัด render (`is-1line` ยกเลิก) · กึ่งกลางได้เฉพาะ `.aya-block`/`.hadith-block` (และคำแปลของมัน) เท่านั้น ผ่าน CSS `.is-short`
+  - การแบ่งย่อหน้าคำแปลเชิงเนื้อหา (รวม/แยกตามหลักภาษา) และการแปลง `<p>` เปล่า/`thai-quote` ยืนเดี่ยวให้เป็น `.ar-translation` = **งานบรรณาธิการของ One (เฟส B)** ทำแยกจาก mechanical · เฟส A แตะเฉพาะที่ deterministic 100% (CSS, `ifpAlign`, และ `class="ar-translation thai-quote"` → `class="ar-translation"` เท่านั้น)
+
 ---
 
-## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–85)
+## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–85, 90)
 
 * **Rule 71:** **★[Child-Safety Override · supersedes every fidelity/coverage rule · binds every agent]★** If any Drive source or other content sexualizes a minor, this measure overrides Rules 1/49/56 and every gate. Act decisively:
   1. **PASS-with-flag (drop, do not reject):** the article may be considered "passing" by **dropping only the offending span entirely** and setting a **child-safety flag** — the dropped span is **excluded from the Rule 72 coverage denominator**; a drop under this rule does not lower coverage.
@@ -638,3 +648,13 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **DOM (stored-XSS):** data from JSON / external sources / users must be rendered via `textContent` or DOM APIs — **never `innerHTML` with untrusted data**.
   - **Vendored libs:** pin by filename + **SRI (`integrity` sha384)** + `MANIFEST.sha256`; `script-src 'self'` only, no external CDN (SRI requires Cloudflare Auto-Minify/Rocket Loader OFF).
   - **CI gate:** every PR must pass `.github/workflows/ci.yml` (JSON validity, Arabic orthography, gitleaks) before owner-merge.
+
+* **Rule 90:** **[Block Alignment Standard]** Alignment of every block is decided by **content type + character count**, NOT by rendered line count (the old `is-1line` `scrollHeight/lineHeight` logic is retired entirely). *(Numbering note: R86–R89 are still proposals in `docs/CONSISTENCY-AUDIT.md`, not yet merged into this list; the alignment standard keeps the editor-assigned number R90.)*
+  - **Thai body prose** → **left**; headings `.article-h2` → **left**, bold, underlined.
+  - **Scholar Arabic** `.ar-quote` / `.ar-feature` → **always right**; **hadith** `.hadith-block .block-ar` → right (> 60 Arabic chars) / **center** (≤ 60).
+  - **Quran aya** `.aya-block .block-ar` → **center** (≤ 60 Arabic chars) / right (>).
+  - **Thai translation of aya/hadith** → **center** (≤ 80 Thai chars) / left (>); **scholar-quote translation** `.ar-translation` (of `.ar-quote`/`.ar-feature`) → **always left**.
+  - **Thai verse** `.poem-th` → **center**.
+  - Every translation paragraph uses class `.ar-translation` (one uniform colour) · **never use a bare `<p>` or `thai-quote` for a translation**.
+  - Alignment runs through `ifpAlign()` by char-count (toggling `.is-short`) — never render-line-count logic (`is-1line` retired); only `.aya-block`/`.hadith-block` (and their translations) may center, via the CSS `.is-short` rule.
+  - Content-level re-paragraphing of translations (merge/split by language), and converting bare `<p>` / standalone `thai-quote` into `.ar-translation`, are **One's editorial work (Phase B)** — separate from the mechanical pass. Phase A touches only the 100%-deterministic parts (CSS, `ifpAlign`, and `class="ar-translation thai-quote"` → `class="ar-translation"`).
