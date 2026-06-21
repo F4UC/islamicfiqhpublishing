@@ -7,6 +7,15 @@
   },
   "shards": [
     {
+      "file": "bidayah-h97.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 97,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 97 (Shamela 361–366) — เตรียมทัพคอนสแตนติโนเปิล",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h98.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 98,
