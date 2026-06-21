@@ -48,7 +48,13 @@ HOUSE = [('R1', r'(?<![ก-ฮ])ทว่า'), ('R2', r'มิใช่'), ('R3
          ('R4', r'ๆ(?=[ก-๛a-zA-Z0-9])'), ('R5', r'ศ่อเหี้ยห์'), ('R6', r'มัซฮับ'),
          ('R7', r'ศอฮาบัต|อัลญาฮิส|ศอลาฮุดดีน|ไบบาร์ส|ไบบัรส์|นิซามุลมุลก์|บะตูเตาะฮ์'),
          ('R8', r'สุล่าน'), ('R9', r'อบูล')]
-ROYAL = r'พระองค์|สิ้นพระชนม์|เสด็จ|ทอดพระเนตร|พระกรรณ|สวรรคต|ราชยา'
+# R5: royal language for HUMANS only. These verbs/nouns are never used of Allah →
+# hard error wherever they appear (incl. for the Prophet ﷺ — owner ruling: use คำกลาง
+# ถือกำเนิด/เสียชีวิต, not ประสูติ/สิ้นพระชนม์).
+ROYAL = r'สิ้นพระชนม์|เสด็จ|ทอดพระเนตร|พระกรรณ|สวรรคต|ราชยา|ประสูติ|ราชสมภพ|บรรทม|พระราชโองการ|พระราชดำรัส|พระบรมราช'
+# พระองค์/ทรง are LEGITIMATE for Allah (Qur'an/khutbah translations) but forbidden for
+# humans. Can't tell referent by regex → warn once/event for human-referent review (not block).
+ROYAL_AMBIG = r'พระองค์'
 
 def main():
     try:
@@ -103,6 +109,8 @@ def main():
             for rid, rx in HOUSE:
                 if re.search(rx, pr): err(f'[{rid}] {e["id"]}: house-style violation')
             if re.search(ROYAL, pr): err(f'[R5] {e["id"]}: royal/forbidden word in prose')
+            if re.search(ROYAL_AMBIG, pr):
+                warn(f'[R5] {e["id"]}: "พระองค์" — ยืนยันว่าหมายถึงอัลลอฮ์ (อนุญาต) ไม่ใช่มนุษย์')
             for m in re.finditer(r'อิบนุ(?!ล)(?=[ก-ฮ])|อบู(?=[ก-ฮ])', pr):
                 err(f'[R52] {e["id"]}: missing space after อิบนุ/อบู near "{pr[m.start():m.start()+12]}"')
             # missing-link (high confidence, substring-filtered)
