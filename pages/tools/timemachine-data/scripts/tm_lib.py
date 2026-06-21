@@ -34,8 +34,24 @@ BOOK_THAI = {'ibn-kathir': 'อัลบิดายะฮ์ วันนิฮ
 
 
 def clean(nass):
-    """Strip HTML tags + unescape entities + collapse whitespace."""
+    """Strip HTML tags + unescape entities + collapse whitespace.
+    NOTE: keeps footnote/apparatus TEXT (used for year-marker scanning only)."""
     return re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', nass or ''))).strip()
+
+
+def clean_main(nass):
+    """Pure MAIN-TEXT Arabic for excerpts (Rule 89): drop the footnote apparatus
+    (`<p class="hamesh">…</p>` blocks + `<hr>`), inline footnote-ref digits
+    (`<span class="c2">(٢)</span>`), and Shamela copy-buttons (`<a class="btn_tag">`)
+    BEFORE stripping the remaining tags. Keeps meaningful spans (c4/c5 phrases, Quran
+    refs). Use this — not clean() — to build/verify arabicExcerpt so the stored Arabic
+    has no chrome/footnotes. Byte-exact gates must compare against clean_main() too."""
+    s = nass or ''
+    s = re.sub(r'<p[^>]*class="[^"]*\bhamesh\b[^"]*"[^>]*>.*?</p>', ' ', s, flags=re.S)
+    s = re.sub(r'<hr\s*/?>', ' ', s)
+    s = re.sub(r'<span[^>]*class="[^"]*\bc2\b[^"]*"[^>]*>.*?</span>', ' ', s, flags=re.S)
+    s = re.sub(r'<a[^>]*class="[^"]*\bbtn_tag\b[^"]*"[^>]*>.*?</a>', ' ', s, flags=re.S)
+    return re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
 
 
 def strip_dia(s):
