@@ -742,6 +742,12 @@ New article (not a retro-audit). Source: Drive `1NMMf2_2LLrucw7aM07BXE6DSmQuI3cN
 - **Drive markdown-escape artifact:** source carried `\[النساء: 3\]` (literal backslashes from Drive's bracket-escaping). The backslashes are non-content escape artifacts (R56) — stripped so the scholar's bracket reference reads `[النساء: 3]`. Skeleton/harakat untouched otherwise.
 - ★No Purge★ until owner directs.
 
+## 2026-06-22 — autopsy-in-islamic-law (PR #254) R60 strip
+- File: articles/nitisart/autopsy-in-islamic-law.html · block: .ar-quote #1 (line 439, «…عندما يشكل على القاضي…»)
+- Action: stripped 2 residual harakat (U+064F ḍamma + U+0652 sukūn on يشكل) → block uniformly BARE per R60 all-or-nothing
+- Skeleton byte-frozen (only U+064B–U+0652 removed; verified by strip-diff). All 3 .ar-quote now 0 harakat. No hadith/aya blocks present.
+- A1-directed (batch-5 gate). Post-fix blob SHA: a3e638f8120e85e6c6b7cf291601e391736bfbbf
+
 ## 2026-06-22 — prophets-kin-and-charity (PR #262) R60 strip
 - File: articles/nitisart/prophets-kin-and-charity.html · blocks: 3 of 26 .ar-quote (tanwīn fatḥ on فرضاً/تطوعاً/تطوعًا/فرضًا + اختلف-block)
 - Action: stripped 5 residual harakat (U+064B etc.) → all 26 .ar-quote uniformly BARE per R60
