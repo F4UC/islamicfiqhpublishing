@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การชันสูตรพลิกศพในกฎหมายอิสลาม — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+
+<meta name="description" content="การชันสูตรพลิกศพและการผ่าศพมุสลิมในมุมมองนิติศาสตร์อิสลาม ว่าด้วยการให้เกียรติศพ หลักความจำเป็น มติสภานิติศาสตร์อิสลาม และฟัตวาสำนักจุฬาราชมนตรี">
+<meta name="keywords" content="ชันสูตรพลิกศพ, ผ่าศพ, นิติศาสตร์อิสลาม, ฟิกฮ์, เกียรติของศพ, ฟัตวา, จุฬาราชมนตรี, นิติเวชศาสตร์">
+<meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
+
+<meta property="og:title" content="การชันสูตรพลิกศพในกฎหมายอิสลาม — Islamic Fiqh Publishing">
+<meta property="og:description" content="อิสลามให้เกียรติศพมุสลิมและห้ามทำลายศพ แต่เมื่อใดที่การชันสูตรพลิกศพและการผ่าศพจึงเป็นที่อนุโลม? สำรวจหลักความจำเป็น มติสภานิติศาสตร์ และฟัตวาที่เกี่ยวข้อง">
+<meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
+<meta property="og:url" content="https://islamicfiqhpublishing.com/articles/nitisart/autopsy-in-islamic-law">
+<link rel="canonical" href="https://islamicfiqhpublishing.com/articles/nitisart/autopsy-in-islamic-law">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "การชันสูตรพลิกศพในกฎหมายอิสลาม",
+  "inLanguage": "th",
+  "datePublished": "2026-06-22",
+  "dateModified": "2026-06-22",
+  "author": { "@type": "Organization", "name": "กองบรรณาธิการ Islamic Fiqh Publishing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Islamic Fiqh Publishing",
+    "logo": { "@type": "ImageObject", "url": "https://islamicfiqhpublishing.com/favicon.png" }
+  },
+  "image": "https://islamicfiqhpublishing.com/og-cover.jpg",
+  "mainEntityOfPage": "https://islamicfiqhpublishing.com/articles/nitisart/autopsy-in-islamic-law"
+}
+</script>
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png?v=2">
+<meta name="theme-color" content="#e3edf7">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+<style>
+body { position: relative; }
+
+#readingProgressBar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 4px;
+  background: var(--accent-color); z-index: 9999; transition: width 0.1s ease-out;
+}
+
+
+.article-body p, .lead-text {
+  line-height: 2.0; margin-bottom: 24px; text-align: left;
+  word-break: break-word; color: var(--text-secondary);
+}
+.lead-text { font-size: 17px; color: var(--text-primary); font-weight: 400; }
+
+/* SOP B.2 — ar-feature: unified Arabic block (alignment decided by JS), no side border */
+.ar-feature {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-primary);
+  padding: 24px 24px;
+  background: rgba(255,255,255,0.02);
+}
+.ar-translation {
+  color: var(--text-tertiary);
+}
+
+/* SOP B.3 — ar-quote: scholar Arabic shown above its Thai translation */
+.ar-quote {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.45rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+/* PART 1 — conditional alignment: a 1-line block is centered; a 2+-line block is
+   flush to its side (Arabic right, Thai left). .is-1line is set by ifpAlign() at
+   the real rendered width. No coloured vertical border on any Arabic block. */
+.ar-quote, .ar-feature,
+.aya-block .block-ar, .hadith-block .block-ar { text-align: right; }
+.ar-translation { text-align: left; }
+.aya-block .block-ar.is-short, .hadith-block .block-ar.is-short,
+.ar-translation.is-short { text-align: center; }
+/* Global Arabic On/Off — single source of truth: html.no-arabic */
+html.no-arabic .ar-feature,
+html.no-arabic .aya-block,
+html.no-arabic .hadith-block,
+html.no-arabic .ar-quote { display: none; }
+
+/* SOP B.1 — ar-inline */
+.ar-inline {
+  font-family: 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+}
+
+/* SOP B.6 — article-summary */
+.article-summary {
+  margin: 24px 0 32px 0;
+  padding-left: 28px;
+  list-style: decimal;
+}
+.article-summary li {
+  margin-bottom: 28px;
+  line-height: 2.0;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.article-summary li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* article-h2 */
+.article-h2 {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Citation box — box / text / button + reading-tools styled globally in article.css.
+   Only the article-specific label and copied-toast live here. */
+.citation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-color);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.citation-label::before { content: '❝'; font-size: 18px; line-height: 0; position: relative; top: 4px; }
+.citation-footer { display: flex; justify-content: flex-end; }
+.copy-alert {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--text-primary); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px;
+  font-size: 14px; font-weight: 600; opacity: 0; visibility: hidden; z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-alert.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+
+/* Related articles — editorial reading list (Part 6) */
+.related-section { max-width: 880px; margin: 0 auto; padding: 64px 24px 80px; }
+.related-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--text-primary); margin: 0 0 4px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-primary);
+}
+.related-list { display: flex; flex-direction: column; }
+.related-row {
+  position: relative; display: block; text-decoration: none; color: inherit;
+  padding: 22px 0 22px 20px; border-bottom: 1px solid var(--border-primary);
+}
+.related-row::before {
+  content: ''; position: absolute; left: 0; top: 22px; bottom: 22px;
+  width: 2px; background: var(--accent-color);
+  transform: scaleY(0); transform-origin: top; transition: transform 0.28s ease;
+}
+.related-row:hover::before { transform: scaleY(1); }
+.related-article-category {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--accent-color); margin-bottom: 7px; display: block;
+}
+.related-article-title {
+  font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 1.05rem; font-weight: 500;
+  color: var(--text-primary); line-height: 1.5; margin: 0 0 6px;
+  transition: color 0.22s ease;
+}
+.related-row:hover .related-article-title { color: var(--text-secondary); }
+.related-article-excerpt {
+  font-family: 'Sarabun', sans-serif; font-size: 0.9rem; color: var(--text-tertiary);
+  line-height: 1.6; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Back to top */
+#backToTopBtn {
+  position: fixed; bottom: 30px; right: 30px; display: none;
+  background: var(--accent-color); color: #fff; border: none;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
+  cursor: pointer; z-index: 1000; transition: all 0.3s;
+}
+#backToTopBtn:hover { transform: translateY(-3px); }
+
+
+/* ===== PART 5 — FOOTNOTES + BIBLIOGRAPHY ===== */
+.fn-ref { font-size: 0.72em; line-height: 0; vertical-align: super; }
+.fn-ref a { color: #a01818; text-decoration: none; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.bibliography-section { margin-top: 8px; }
+.bibliography { margin: 18px 0 0; padding-left: 1.5em; list-style: decimal; }
+.bibliography li {
+  font-family: 'Sarabun', sans-serif; font-size: 15px; line-height: 1.9;
+  color: var(--text-primary); margin-bottom: 14px; word-break: break-word;
+}
+.fn-back { color: #a01818; text-decoration: none; margin-left: 6px; font-weight: 700; }
+.fn-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .related-section { padding: 48px 20px 64px; }
+  #backToTopBtn { bottom: 20px; right: 20px; }
+  .article-summary { padding-left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+
+/* ===== cb- control bar (shadcn/21st-style) — drives the SAME handlers as the
+   legacy .reading-tools bar, which is kept (hidden) so main.js keeps owning
+   behaviour + persistence (theme, font-size, Arabic On/Off). ===== */
+.reading-tools { display: none; }
+@property --cb-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+.cb-stage{
+  --cb-card:#0e0e11;--cb-card2:#0b0b0d;--cb-fg:#fafafa;--cb-muted:#a1a1aa;
+  --cb-line:rgba(255,255,255,.08);--cb-line2:rgba(255,255,255,.14);
+  --cb-accent:#fafafa;--cb-accent-ink:#09090b;--cb-accent-glow:rgba(255,255,255,.22);
+  --cb-thumb-on:#18181b;--cb-thumb-on-ink:#fafafa;--cb-beam:#e8403d;--cb-beam-core:#ff6b68;
+  --cb-ease:cubic-bezier(0.16,1,0.3,1);
+  position:relative;border-radius:16px;padding:1px;background:var(--cb-line);overflow:hidden;margin:18px 0;
+}
+.cb-stage::before{content:"";position:absolute;inset:-45%;
+  background:conic-gradient(from var(--cb-angle),transparent 0deg,var(--cb-beam) 32deg,var(--cb-beam-core) 50deg,var(--cb-beam) 68deg,transparent 100deg);
+  animation:cb-spin 4.5s linear infinite}
+@keyframes cb-spin{to{--cb-angle:360deg}}
+.cb-inner{position:relative;border-radius:15px;background:linear-gradient(180deg,var(--cb-card),var(--cb-card2));padding:12px 14px}
+.cb-bar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.cb-vsep{width:1px;align-self:stretch;background:var(--cb-line);margin:3px 1px}
+.cb-bar .cb-label{font-family:'Sarabun',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--cb-muted);letter-spacing:0}
+.cb-ctl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--cb-line);background:rgba(255,255,255,.03);border-radius:11px;padding:8px 13px;transition:background .25s var(--cb-ease),border-color .25s var(--cb-ease),transform .2s var(--cb-ease)}
+.cb-ctl:hover{background:rgba(255,255,255,.06);border-color:var(--cb-line2)}
+.cb-ctl:active{transform:scale(.97)}
+.cb-ico{position:relative;width:17px;height:17px;flex:none;color:var(--cb-fg)}
+.cb-ico svg{position:absolute;inset:0;width:17px;height:17px;transition:transform .45s var(--cb-ease),opacity .35s var(--cb-ease)}
+.cb-ico .cb-sun{transform:scale(0) rotate(90deg);opacity:0}
+.cb-ico .cb-moon{transform:scale(1);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-sun{transform:scale(1) rotate(0);opacity:1}
+.cb-stage.cb-day .cb-ico .cb-moon{transform:scale(0) rotate(-90deg);opacity:0}
+.cb-seg{position:relative;display:inline-flex;background:rgba(0,0,0,.4);border:1px solid var(--cb-line);border-radius:11px;padding:3px}
+.cb-glider{position:absolute;top:3px;bottom:3px;left:0;width:0;border-radius:8px;background:var(--cb-accent);box-shadow:0 2px 14px var(--cb-accent-glow);transition:transform .35s var(--cb-ease),width .35s var(--cb-ease);z-index:0}
+.cb-seg button{position:relative;z-index:1;border:0;background:transparent;color:var(--cb-muted);cursor:pointer;font-family:'Inter',system-ui,sans-serif;font-weight:600;border-radius:8px;padding:6px 12px;line-height:1;transition:color .25s var(--cb-ease)}
+.cb-seg button.cb-s1{font-size:12px}.cb-seg button.cb-s2{font-size:14px}.cb-seg button.cb-s3{font-size:16px}
+.cb-seg button.cb-active{color:var(--cb-accent-ink)}
+.cb-sw{cursor:pointer;border:0;background:transparent;padding:0}
+.cb-track{position:relative;display:block;width:46px;height:26px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid var(--cb-line);transition:background .3s var(--cb-ease),box-shadow .3s var(--cb-ease),border-color .3s var(--cb-ease)}
+.cb-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:999px;background:#e4e4e7;color:#18181b;display:grid;place-items:center;font-family:'Amiri',serif;font-size:14px;line-height:1;transition:transform .34s var(--cb-ease),background .3s,color .3s;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cb-sw[aria-checked="true"] .cb-track{background:var(--cb-accent);border-color:transparent;box-shadow:0 0 0 1px var(--cb-accent),0 4px 16px var(--cb-accent-glow)}
+.cb-sw[aria-checked="true"] .cb-thumb{transform:translateX(20px);background:var(--cb-thumb-on);color:var(--cb-thumb-on-ink)}
+/* DAY MODE — beam stays red, everything else flips to light. --cb-card matches the site's day surface (#fff). */
+.cb-stage.cb-day{--cb-card:#ffffff;--cb-card2:#f4f2ec;--cb-fg:#1c1c1f;--cb-muted:#5b5b62;--cb-line:rgba(0,0,0,.10);--cb-line2:rgba(0,0,0,.16);--cb-accent:#1c1c1f;--cb-accent-ink:#ffffff;--cb-accent-glow:rgba(0,0,0,.18);--cb-thumb-on:#ffffff;--cb-thumb-on-ink:#1c1c1f}
+.cb-stage.cb-day .cb-ctl{background:rgba(0,0,0,.03)}
+.cb-stage.cb-day .cb-ctl:hover{background:rgba(0,0,0,.06)}
+.cb-stage.cb-day .cb-seg{background:rgba(0,0,0,.05)}
+.cb-stage.cb-day .cb-track{background:rgba(0,0,0,.10)}
+@media (prefers-reduced-motion:reduce){.cb-stage::before{animation:none}.cb-ico svg,.cb-glider,.cb-thumb,.cb-track{transition:none}}
+</style>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="IF">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<script src="/pwa-register.js?v=2" defer></script>
+</head>
+<body id="article-page" class="ifp-tools-page" lang="th" data-article-id="autopsy-in-islamic-law">
+
+<div id="readingProgressBar"></div>
+
+<button onclick="scrollToTop()" id="backToTopBtn" title="กลับขึ้นบนสุด">↑</button>
+
+<div id="header-placeholder"></div>
+
+<div class="article-feature no-hero">
+  <div class="article-feature-content">
+    <div class="article-feature-inner">
+      <a href="../../pages/nitisart.html" class="article-feature-eyebrow">นิติศาสตร์ / ฟิกฮ์</a>
+      <h1 class="article-feature-title">การชันสูตรพลิกศพในกฎหมายอิสลาม</h1>
+    </div>
+  </div>
+</div>
+
+<article>
+<div class="article-wrap">
+
+  <div class="article-meta"></div>
+
+  <div class="cb-stage" data-cb>
+    <div class="cb-inner">
+      <div class="cb-bar">
+        <button class="cb-ctl" type="button" data-cb-theme aria-label="สลับโหมดกลางวัน/กลางคืน">
+          <span class="cb-ico">
+            <svg class="cb-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg>
+            <svg class="cb-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+          </span>
+          <span class="cb-label" data-cb-theme-label>กลางคืน</span>
+        </button>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">ขนาด</span>
+        <div class="cb-seg" data-cb-seg>
+          <span class="cb-glider"></span>
+          <button class="cb-s1" type="button" data-cb-size="small">A</button>
+          <button class="cb-s2 cb-active" type="button" data-cb-size="normal">A</button>
+          <button class="cb-s3" type="button" data-cb-size="large">A</button>
+        </div>
+        <div class="cb-vsep"></div>
+        <span class="cb-label">อาหรับ</span>
+        <button class="cb-sw" type="button" role="switch" aria-checked="true" data-cb-arabic aria-label="เปิด/ปิด ต้นฉบับภาษาอาหรับ">
+          <span class="cb-track"><span class="cb-thumb">ع</span></span>
+        </button>
+        <span class="cb-label" data-cb-ar-state>เปิด</span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    function cbSync(){
+      var stage=document.querySelector('.cb-stage[data-cb]'); if(!stage) return;
+      var dark=document.documentElement.classList.contains('dark-mode');
+      stage.classList.toggle('cb-day', !dark);
+      var tl=stage.querySelector('[data-cb-theme-label]'); if(tl) tl.textContent=dark?'กลางคืน':'กลางวัน';
+      var act=document.querySelector('.reading-tools .btn-tool.active[onclick*="changeFontSize"]'), d=0;
+      if(act){var m=(act.getAttribute('onclick')||'').match(/changeFontSize\((-?\d+)\)/); d=m?parseInt(m[1],10):0;}
+      var key=d<0?'small':(d>0?'large':'normal'), glider=stage.querySelector('.cb-glider'), activeBtn=null;
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){var on=b.getAttribute('data-cb-size')===key; b.classList.toggle('cb-active',on); if(on)activeBtn=b;});
+      if(glider&&activeBtn){glider.style.width=activeBtn.offsetWidth+'px'; glider.style.transform='translateX('+activeBtn.offsetLeft+'px)';}
+      var arOn=!document.documentElement.classList.contains('no-arabic');
+      var sw=stage.querySelector('[data-cb-arabic]'); if(sw) sw.setAttribute('aria-checked', arOn?'true':'false');
+      var as=stage.querySelector('[data-cb-ar-state]'); if(as) as.textContent=arOn?'เปิด':'ปิด';
+    }
+    function after(){ cbSync(); if(typeof ifpAlign==='function') ifpAlign(); }
+    var stage=document.querySelector('.cb-stage[data-cb]');
+    if(stage){
+      var tbtn=stage.querySelector('[data-cb-theme]');
+      if(tbtn) tbtn.addEventListener('click',function(){ if(typeof toggleDarkMode==='function') toggleDarkMode(); after(); });
+      stage.querySelectorAll('[data-cb-size]').forEach(function(b){
+        b.addEventListener('click',function(){ var k=b.getAttribute('data-cb-size'); var delta=k==='small'?-2:(k==='large'?2:0); if(typeof changeFontSize==='function') changeFontSize(delta); after(); });
+      });
+      var sw=stage.querySelector('[data-cb-arabic]');
+      if(sw) sw.addEventListener('click',function(){ var real=document.getElementById('arabicToggleBtn'); if(real) real.click(); cbSync(); });
+    }
+    cbSync();
+    document.addEventListener('DOMContentLoaded',cbSync);
+    window.addEventListener('load',cbSync);
+    window.addEventListener('resize',cbSync);
+    setTimeout(cbSync,450);
+  })();
+  </script>
+
+  <div class="reading-tools">
+    <div class="tool-group">
+      <span class="tool-label">Appearance:</span>
+      <button class="btn-tool" onclick="toggleDarkMode()" id="darkBtn">Night Mode 🌙</button>
+    </div>
+    <div class="tool-group">
+      <span class="tool-label">Font Size:</span>
+      <button class="btn-tool" onclick="changeFontSize(-2)">A-</button>
+      <button class="btn-tool" onclick="changeFontSize(0)">Normal</button>
+      <button class="btn-tool" onclick="changeFontSize(2)">A+</button>
+    </div>
+  </div>
+
+  <div class="article-body" id="main-content">
+
+      <p class="lead-text">ประเด็นการชันสูตรพลิกศพในกฎหมายอิสลามเป็นประเด็นที่ไม่ใหม่ แต่ก็ไม่เก่ามากนัก เพียงแต่หาผู้ที่กล่าวถึงประเด็นนี้ในทางกฎหมายอิสลามนั้นยาก และหาอ่านเกือบจะไม่ได้ ซึ่งทางสำนักจุฬาราชมนตรีก็เคยมีการกล่าวถึงเมื่อหลายปีมาแล้ว และทางสาธารณะสุขก็เคยออกคู่มือการชันสูตรเมื่อปี 2561 มาแล้ว แต่ก็จะขอเอามาปัดฝุ่นกันสักนิด</p>
+
+      <p>จากหลักความเชื่อพื้นฐานเดิมของอิสลามนั้นถือว่า</p>
+
+      <p class="ar-translation">“กรณีผู้นับถือศาสนาอิสลามเสียชีวิตให้รักษาศพไว้ในสภาพเดิม ห้ามให้มีการทำลายศพโดยเด็ดขาด เพราะว่าหลักศาสนาอิสลามถือว่ามนุษย์ทุกคนที่ถูกสร้างมาเป็นที่ต้องห้ามมิให้ใครมาทำลาย”</p>
+
+      <p>จากความเชื่อดังกล่าว ในกรณีการตายโดยธรรมชาติหรือตายปกตินั้น การชันสูตรศพมุสลิมที่เสียชีวิตในลักษณะดังกล่าวตามหลักศาสนาอิสลามโดยพื้นฐานเดิมแล้วย่อมทำไม่ได้ เพราะศาสนาอิสลามยังคงให้เกียรติและคุ้มครองคุณค่าอันสูงส่งของความเป็นมนุษย์ไม่ว่าจะมีชีวิตอยู่หรือตายไปแล้ว ศาสนาอิสลามก็ยังคงถือว่า เกียรติยศและความประเสริฐในการเป็นมนุษย์ยังคงมีอยู่อย่างสมบูรณ์</p>
+
+      <p>ซึ่งการชันสูตรพลิกศพตามข้อบัญญัติของศาสนาอิสลามนั้นนักวิชาการได้ระบุไว้ว่า ให้ยึดหลักนิติศาสตร์อิสลามซึ่งประกอบด้วยหลักความจำเป็นและเกิดผลประโยชน์โดยรวม</p>
+
+      <p>นักวิชาการอิสลามในอดีตไม่เคยมีใครกล่าวถึงเกี่ยวกับการชันสูตรศพเลย และไม่พบหลักฐานใด ๆ ที่ระบุชัดเจนถึงการห้ามหรืออนุมัติในการชันสูตรศพ</p>
+
+      <p>แต่ทั้งนี้ เราจะพบประเด็นใกล้เคียงได้จากนักวิชาการด้านนิติศาสตร์อิสลามใน 2 กรณีคือ</p>
+
+      <p><strong>กรณีที่ 1</strong> การผ่าศพหญิงมีครรภ์ (ที่เสียชีวิต) เพื่อเอาทารกที่ยังมีชีวิตอยู่ในครรภ์ออกมา</p>
+
+      <p><strong>กรณีที่ 2</strong> คือ การผ่าท้องศพเพื่อเอาทรัพย์ เงินทองบางอย่างที่เขาได้กลืนเข้าไปก่อนตาย ผ่าออกมาคืนให้แก่เจ้าของ</p>
+
+      <p>ซึ่งไม่มีเรื่องการชันสูตรศพโดยตรงเลย แต่นักวิชาการสมัยใหม่ก็เอาสองเรื่องนี้มาเปรียบเทียบกับกรณีการชันสูตรศพว่าทำได้</p>
+
+      <p>กระนั้นการดำเนินการทุกขั้นตอนของการชันสูตรศพต้องอยู่ภายใต้ขอบเขตที่จำเป็นเท่านั้น</p>
+
+      <h2 class="article-h2">ทำไมจึงต้องทำการชันสูตรศพ?</h2>
+
+      <p>ในกรณีที่ผู้ตายไม่ได้เสียชีวิตอย่างปกติ การชันสูตรพลิกศพตามกระบวนการทางนิติวิทยาศาสตร์ ก็เป็นวิธีการหนึ่งที่จะค้นหาความจริง เพื่อปกป้องและคุ้มครองสิทธิความชอบธรรมของผู้เสียชีวิต ที่ไม่สามารถระบุสาเหตุการตายได้ การชันสูตรพลิกศพจะทำให้ทราบถึงข้อเท็จจริงต่าง ๆ และสามารถหาสาเหตุของการเสียชีวิตที่ผิดธรรมชาติได้อย่างถูกต้องและชัดเจน อันจะนำไปสู่การหาตัวผู้กระทำความผิดมาดำเนินคดี อีกทั้งยังก่อให้เกิดประโยชน์และได้รับความเป็นธรรมแก่ผู้เสียชีวิต ครอบครัว และสังคมอีกด้วย</p>
+
+      <p>ซึ่งการชันสูตรศพนั้นมีบทบาทต่อกระบวนการยุติธรรม เช่น</p>
+
+      <ol class="article-summary">
+        <li><strong>เพื่อช่วยเหลือการรวบรวมข้อมูลหลักฐานในกระบวนการยุติธรรม</strong> เป็นวัตถุประสงค์หลักของการทำงานด้านนิติเวชศาสตร์ เช่น การตรวจทางนิติพยาธิต้องดำเนินการเพื่อให้ข้อมูลแก่กระบวนการยุติธรรมว่า ผู้ตายเป็นใคร ตายมานานเท่าใด ตายเพราะเหตุใด อาจจะช่วยบอกพฤติการณ์ในการตายได้ อาทิ การถูกแทงในรายนี้ไม่น่าเป็นอุบัติเหตุเนื่องจากถูกแทง 23 แผล หรือบอกได้ว่าการถูกกระสุนปืนตายในรายที่ต้องสงสัยนี้ไม่ใช่การฆ่าตัวตายเพราะกระสุน เข้าทางด้านหลังและยิงในระยะห่าง เป็นต้น ซึ่งในเมื่อผู้ตายพูดไม่ได้ การชันสูตรนี่แหล่ะจะพูดแทนผู้ตาย</li>
+        <li><strong>เพื่อกันผู้บริสุทธิ์ให้พ้นโทษ</strong> การหาพยานหลักฐานเพื่อนำตัวผู้กระทำผิดมาลงโทษนั้นยาก และอาจจะใช้เวลานาน แต่การพิสูจน์ว่าบุคคลนั้นไม่ได้เกี่ยวข้องหรือไม่น่าจะเกี่ยวข้องกับอาชญากรรมที่เกิดขึ้นจะง่ายกว่า เช่น มีผู้ต้องสงสัยว่าเป็นผู้ข่มขืนกระทำชำเรา แต่ผลตรวจน้ำอสุจิที่เปื้อนตามตัวและเสื้อผ้าของผู้เสียหายหรือผู้ตายพบสารพันธุกรรมที่ไม่ตรงกับผู้ต้องสงสัย ทำให้ ผู้ต้องสงสัยได้รับการปล่อยตัวไปก่อนได้ เป็นต้น</li>
+        <li><strong>เพื่อเปิดเผยอันตรายอันอาจเกิดต่อผู้คนทั่วไป</strong> เช่น เชื้อโรคติดต่อบางชนิดอาจมีการติดต่อและตายอย่างรวดเร็ว</li>
+      </ol>
+
+      <p>แต่กระนั้นอยู่จะเอาศพมาชันสูตรเลยก็ไม่ได้เช่นกัน เพราะกฎหมายประเทศไทยเราก็มีประมวลกฎหมายวิธีพิจารณาความอาญาในหมวด 2 การชันสูตรพลิกศพ ตั้งแต่มาตรา 148 ถึง มาตรา 156 ในมาตรา 148 ได้ระบุไว้ว่า:</p>
+
+      <p class="ar-translation">“เมื่อปรากฏแน่ชัดหรือสงสัยว่า บุคคลใดตายโดยผิดธรรมชาติ หรือตายในระหว่างอยู่ในความควบคุมของเจ้าพนักงานให้มีการชันสูตรพลิกศพ เว้นแต่ตายโดยประหารชีวิตตามกฎหมาย”<sup class="fn-ref" id="fnref-1"><a href="#ref-1">¹</a></sup></p>
+
+      <p>ซึ่งการตายโดยผิดธรรมชาตินั้นมี 5 ลักษณะ ดังต่อไปนี้คือ การฆ่าตัวตาย, การถูกสัตว์ทำร้าย, การตายโดยอุบัติเหตุ, การตายที่ยังไม่ปรากฏเหตุ และการถูกผู้อื่นทำให้ตาย</p>
+
+      <p>ดังกล่าวนี้คือคำนิยาม ข้อกฎหมายหมาย บทบาทของการชันสูตรศพ</p>
+
+      <h2 class="article-h2">แล้วกฎหมายอิสลามว่าอย่างไรเกี่ยวกับการชันสูตรศพ?</h2>
+
+      <p>ก่อนอื่นต้องบอกให้ทราบก่อนว่า การชันสูตรศพในประเทศไทยนั้น ยังแบ่งออกเป็นสองขั้นตอน คือ การชันสูตรพลิกศพ และการผ่าชันสูตร</p>
+
+      <p>ซึ่งการชันสูตรพลิกศพโดยการผ่าศพตรวจ เป็นการกระทำเมื่อมีเหตุจำเป็นเพื่อหาสาเหตุการตายในกรณีที่การพลิกศพไม่สามารถบ่งบอกสาเหตุการตายได้ชัดเจน ตามประมวลกฎหมายวิธีพิจารณาความคดีอาญา มาตรา 151 บัญญัติว่า:</p>
+
+      <p class="ar-translation">“ในเมื่อมีความจำเป็นเพื่อพบเหตุของการตาย เจ้าพนักงานผู้ชันสูตรพลิกศพมีอำนาจสั่งให้ผ่าศพเพื่อแยกธาตุส่วนใด หรือจะให้ส่งทั้งศพหรือบางส่วนไปยังแพทย์ หรือพนักงานแยกธาตุของรัฐบาลก็ได้”</p>
+
+      <p>การผ่าศพเป็นวิธีที่ดีที่สุดในการพิสูจน์หาสาเหตุการตาย สามารถตอบปัญหาและข้อสงสัยจากการพลิกศพได้ เช่น เมื่อพลิกศพพบบาดแผลเป็นรูลึกเข้าไปในร่างกาย รูลึกนี้อาจเกิดจากกระสุนปืนหรือตะปูขนาดใหญ่ก็ได้</p>
+
+      <p>การผ่าศพจะทำให้ทราบว่าบาดแผลนั้นเกิดจากอาวุธหรือวัตถุอะไร และยังทำให้ทราบต่อไปว่าอาวุธหรือวัตถุนั้น ถูกอวัยวะสำคัญอะไรจึงทำให้ตายหรือในกรณีที่การพลิกศพไม่พบบาดแผลปรากฏภายนอกให้เห็น การผ่าศพจะบอกได้ว่า การตายเกิดจากตับแตก ม้ามแตก ฯลฯ อันเป็นผลให้เกิดการบาดเจ็บ หรือเกิดจากกล้ามเนื้อหัวใจขาดเลือดไปหล่อเลี้ยง เส้นโลหิตในสมองแตก ฯลฯ หรือโรคภัยไข้เจ็บธรรมดา เป็นต้น</p>
+
+      <p>แต่กฎหมายอิสลามนั้นรวมทั้งสองไว้ด้วยกัน</p>
+
+      <p>สภานิติศาสตร์อิสลาม ได้ลงมติไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">يجوز تشريح جثث الموتى، لأحد الأغراض الآتية: ( أ ) التحقيق في دعوى جنائية، لمعرفة أسباب الموت، أو الجريمة المرتكبة، وذلك عندما يُشْكل على القاضي معرفة أسباب الوفاة، ويتبين أن التشريح هو السبيل لمعرفة هذه الأسباب. (ب) التحقق من الأمراض التي تستدعي التشريح، ليتخذ على ضوئه الاحتياطات الواقية، والعلاجات المناسبة لتلك الأمراض.</blockquote>
+      <p class="ar-translation">“อนุญาตให้ทำการชันสูตรศพเพื่อวัตถุประสงค์อย่างใดอย่างหนึ่งดังต่อไปนี้คือ</p>
+      <p>(1) เพื่อทำสำนวนชันสูตรพลิกศพมาประกอบสำนวนคดีอาญาในการสอบสวนหาเหตุในการตาย หรือสอบสวนในกรณีที่มีการก่ออาชญากรรม และเช่นเดียวกันนั้นเมื่อผู้พิพากษาเกิดข้อสงสัยในการเสียชีวิตของผู้ตาย การชันสูตรศพคือวิธีที่จะรู้ว่าผู้ตายเสียชีวิตด้วยเหตุอันใด</p>
+      <p>(2) เพื่อตรวจหาโรคที่ทำให้เสียชีวิต เพื่อหาวิธีป้องกันและรักษาจากโรคดังกล่าว ดังไวรัสโคโรนาที่กำลังเกิดขึ้นในปัจจุบัน”<sup class="fn-ref" id="fnref-2"><a href="#ref-2">²</a></sup></p>
+
+      <p>สภานักวิชาการอาวุโสแห่งราชอาณาจักรซาอุดีอาระเบียได้มีมติเหมือนดังสภานิติศาสตร์อิสลามเช่นเดียวกัน<sup class="fn-ref" id="fnref-3"><a href="#ref-3">³</a></sup> ทางสถาบันชี้ขาดปัญหาศาสนาของประเทศอียิปต์ก็มีความเห็นไปในทางเดียวกัน<sup class="fn-ref" id="fnref-4"><a href="#ref-4">⁴</a></sup></p>
+
+      <h2 class="article-h2">สรุปกันให้เข้าใจคือ</h2>
+
+      <ol class="article-summary">
+        <li><strong>การชันสูตรศพเพื่อเป็นหลักฐานในคดีอาญา:</strong> ตามกฎหมายอิสลามแล้วสามารถกระทำได้ เมื่อการชันสูตรดังกล่าวมีความจำเป็น และสามารถคืนความยุติธรรมให้แก่ผู้ถูกกล่าวหาได้ ซึ่งตรงนี้มีผลโดยรวมต่อสังคม</li>
+        <li><strong>การชันสูตรศพที่ติดไวรัสเพื่อวิจัยทางการแพทย์:</strong> เพื่อหาทางป้องกันและรักษาก็เป็นที่อนุโลมเช่นเดียวกันในกฎหมายอิสลาม</li>
+      </ol>
+
+      <p>การอนุโลมให้ทำการชันสูตรศพเป็นการอนุมัติในกรณีพิเศษเฉพาะในกรณีจำเป็นจริงๆ และได้รับการยินยอมจากผู้ปกครองของศพ ทั้งการชันสูตรจะต้องอยู่ภายใต้การกำกับดูแลของผู้รู้ทางศาสนาอิสลามและการปฏิบัติต้องเป็นไปอย่างนิ่มนวลละมุนละไม ให้ความเคารพและให้เกียรติศพ พร้อมทังต้องระมัดระวังไม่กระทำใดๆ อันเป็นการลบหลู่เกียรติยศของศพ เมื่อเสร็จสิ้นการชันสูตรแล้วให้รีบรวบรวมชิ้นส่วนของศพทั้งหมดเพื่อนำไปฝังตามหลักการศาสนาดังที่สภานิติศาสตร์อิสลามได้ระบุไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">ثالثا: يجب في جميع الأحوال دفن جميع أجزاء الجثة المشرحة.</blockquote>
+      <p class="ar-translation">“ประการที่สาม: เมื่อได้ทำการชันสูตรเสร็จสิ้นแล้ว จำเป็นที่จะต้องนำอวัยวะทุกส่วนฝังลงไปด้วย”</p>
+
+      <p>ซึ่งทางสำนักจุฬาราชมนตรี ได้ออกคำวินิจฉัยทางศาสนา (ฟัตวา) ที่ 04/2549 เรื่อง การชันสูตรพลิกศพ ไว้ว่า:</p>
+
+      <p class="ar-translation">“เกียรติของมนุษย์มิได้จำกัดเฉพาะที่เขายังมีชีวิตอยู่เท่านั้น แต่ยังครอบคลุมทั้งขณะที่มีชีวิตอยู่และเสียชีวิตไปแล้ว จึงเป็นหน้าที่ของทุกคนที่ต้องดูแลและรักษาไว้</p>
+      <p class="ar-translation">ดังนั้น การขุดศพและการย้ายซากศพในหลุมฝังศพคือการละเมิดเกียรติที่พระเจ้าทรงใช้ให้รักษาและป้องกันไว้ การขุดศพมุสลิมจึงเป็นที่ต้องห้าม นอกจากในกรณีที่จำเป็นเท่านั้น</p>
+      <p class="ar-translation">ทั้งนี้ ด้วยการเล็งเห็นคุณประโยชน์อันใหญ่หลวงที่จะเกิดขึ้นทั้งในแง่ของการดำเนินคดีและในทางการแพทย์ จึงอนุโลมให้ทำการชันสูตรพลิกศพเป็นกรณีพิเศษที่จำเป็นจริง ๆ เท่านั้น และต้องได้รับการยินยอมจากผู้ปกครองของศพ อิหม่ามประจำมัสยิด คณะกรรมการอิสลามประจำจังหวัด ตามลำดับ และการชันสูตรพลิกศพจะต้องอยู่ภายใต้การกำกับดูแลของผู้รู้ทางศาสนาอิสลาม และการปฏิบัติต้องเป็นไปอย่างนุ่มนวล ละมุนละไม ให้เกียรติต่อศพ และเมื่อเสร็จสิ้นการชันสูตรพลิกศพให้รีบรวบรวมชิ้นส่วนของศพทั้งหมดเพื่อนำไปฝังตามหลักการศาสนาอิสลาม”</p>
+
+      <h2 class="article-h2">กรณีศพอาจารย์ใหญ่ในการเรียนแพทย์</h2>
+
+      <p>และอาจจะมีคำถามว่า การเรียนของนศพ. หรือนิสิตแพทย์ที่เป็นมุสลิมในวิชากายวิภาคศาสตร์ (Anatomy) ซึ่งต้องใช้ศพของอาจารย์ใหญ่ ซึ่งเป็นศพจริงๆ เพื่อใช้ศึกษาโครงสร้างและหน้าที่ของอวัยวะต่างๆ หรือใช้เพื่อฝึกผ่าตัด กรณีดังกล่าวนี้ทำได้ไหม?</p>
+
+      <p>ทางสถาบันชี้ขาดปัญหาศาสนาแห่งประเทศอียิปต์ด้ระบุไว้ว่า:</p>
+
+      <blockquote lang="ar" dir="rtl" class="ar-quote">إذا كانت جثة واحدة تكفي لتعليم الطلاب، فلا يصح أن يتعدى ذلك إلى جثة أخرى</blockquote>
+      <p class="ar-translation">“หากการใช้ศพเพียงแค่คนเดียวเพียงพอที่จะศึกษาแล้ว ก็ไม่อนุญาตให้ใช้ศพอื่น ๆ มาเพื่อศึกษาต่อ (ในขณะที่ศพเดียวก็เพียงพอแล้ว)”</p>
+
+      <div class="citation-box" id="citation-area">
+        <div class="citation-label">อ้างอิงบทความนี้</div>
+        <div class="citation-text" id="citation-text">กองบรรณาธิการ. (2569). การชันสูตรพลิกศพในกฎหมายอิสลาม. Islamic Fiqh Publishing. สืบค้นจาก https://islamicfiqhpublishing.com/articles/nitisart/autopsy-in-islamic-law.html</div>
+        <div class="citation-footer">
+          <button class="copy-btn" onclick="copyCite()">คัดลอกอ้างอิง</button>
+        </div>
+      </div>
+
+  </div>
+
+    <section class="bibliography-section">
+      <h2 class="article-h2">บรรณานุกรม</h2>
+      <ol class="bibliography">
+        <li id="ref-1">ประมวลกฎหมายวิธีพิจารณาความอาญา มาตรา 148. สืบค้นจาก https://bit.ly/3i5nf8O <a class="fn-back" href="#fnref-1" aria-label="กลับไปยังเชิงอรรถที่ 1">↑</a></li>
+        <li id="ref-2">مجمع الفقه الإسلامي الدولي، قرار بشأن تشريح جثث الموتى. สืบค้นจาก https://bit.ly/3jM5k7i <a class="fn-back" href="#fnref-2" aria-label="กลับไปยังเชิงอรรถที่ 2">↑</a></li>
+        <li id="ref-3">هيئة كبار العلماء بالمملكة العربية السعودية. สืบค้นจาก https://al-maktaba.org/book/21759/774 <a class="fn-back" href="#fnref-3" aria-label="กลับไปยังเชิงอรรถที่ 3">↑</a></li>
+        <li id="ref-4">دار الإفتاء المصرية، فتوى رقم 15011. สืบค้นจาก https://www.dar-alifta.org/AR/ViewFatwa.aspx?ID=15011 <a class="fn-back" href="#fnref-4" aria-label="กลับไปยังเชิงอรรถที่ 4">↑</a></li>
+      </ol>
+    </section>
+
+</div>
+</article>
+
+
+<div id="footer-placeholder"></div>
+
+<div class="copy-alert" id="copyAlert">คัดลอกแล้ว ✓</div>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  obs.observe(el);
+});
+</script>
+<script>
+function ifpAlign(){
+  var AR_MAX=60, TH_MAX=80;
+  function mark(el,max){var n=(el.textContent||'').trim().replace(/[ً-ْٰٓ-ٟۖ-ۭـ]/g,'').length; el.classList.toggle('is-short', n>0&&n<=max);}
+  document.querySelectorAll('.aya-block .block-ar, .hadith-block .block-ar').forEach(function(el){mark(el,AR_MAX);});
+  document.querySelectorAll('.aya-block .ar-translation, .hadith-block .ar-translation').forEach(function(el){mark(el,TH_MAX);});
+  document.querySelectorAll('.aya-block, .hadith-block').forEach(function(blk){
+    var n=blk.nextElementSibling;
+    while(n && n.classList && n.classList.contains('ar-translation')){ mark(n,TH_MAX); n=n.nextElementSibling; }
+  });
+}
+window.addEventListener('load',ifpAlign);
+window.addEventListener('resize',ifpAlign);
+new MutationObserver(function(){requestAnimationFrame(ifpAlign);})
+  .observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+</script>
+<script defer src="../../main.js?v=20260619a" charset="UTF-8"></script>
+</body>
+</html>
