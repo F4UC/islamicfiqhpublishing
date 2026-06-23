@@ -761,3 +761,15 @@ New article (not a retro-audit). Source: Drive `1NMMf2_2LLrucw7aM07BXE6DSmQuI3cN
   Source: api.quran.com/api/v4/quran/verses/uthmani?verse_key=5:32 (continuous substring).
 - Only the empty block filled; rest of file byte-identical; comments/articles.json unchanged; lint+ortho PASS. Post blob SHA: 824b8e7538f69abaa285065fa5ce902c94e39ec2
 - ★ TYPE B (al-nawawi «مثل» wuḍūʾ hadith) NOT done — FLAGGED: author skeleton «مثل…غفر له» matches no single voweled narration (muslim:226a/bukhari:159=«نحو…غُفِرَ لَهُ»; abudawud:106=«مِثْلَ…غَفَرَ اللَّهُ لَهُ»). Held for One/A1 decision per "STOP+FLAG, don't stitch."
+
+## 2026-06-23 — DEBT-FIX TYPE B DECISION (al-nawawi-sahih-muslim-commentary): LEAVE BARE by design
+- The wuḍūʾ matn «من توضأ مثل وضوئي هذا، ثم صلى ركعتين لا يحدث فيهما نفسه، غفر له ما تقدم من ذنبه»
+  (line 444) is LEFT BARE — author's wording untouched, no edit made.
+- Rationale (A1/One integrity ruling): the author's «مثل» + «غفر له» (no الله) skeleton is a real attested
+  sharḥ-form wording (e.g. islamweb fatwa 128735), NOT a copy error. No single VOWELED riwāya matches it
+  (bukhari:159/muslim:226a = «نحو…غُفِرَ لَهُ»; abudawud:106 = «مِثْلَ…غَفَرَ اللَّهُ لَهُ»).
+  • Composing harakat by stitching different riwāyāt = fabricating a vocalized narration no muḥaddith
+    transmitted → forbidden (STOP+FLAG-don't-stitch rule).
+  • Adopting one source verbatim = altering the author's attested wording → R1 violation.
+  • Bare preserves the author's exact wording and invents nothing; the gap is cosmetic (absent harakat),
+    not a content error. → LEFT BARE per A1 integrity rule. TYPE B intentionally excluded from PR #265.
