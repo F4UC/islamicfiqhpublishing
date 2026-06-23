@@ -753,3 +753,11 @@ New article (not a retro-audit). Source: Drive `1NMMf2_2LLrucw7aM07BXE6DSmQuI3cN
 - Action: stripped 5 residual harakat (U+064B etc.) → all 26 .ar-quote uniformly BARE per R60
 - ★ 2 .hadith-block (رُبَّ مُبَلَّغٍ… / كِخْ كِخْ…) left BYTE-IDENTICAL, stay fully voweled (16/27 marks) — verified
 - Skeleton byte-frozen (only U+064B–U+0652 removed). A1-directed batch-5 gate. Post-fix blob SHA: 0952257b35871b76d8181c577edd1ff332fb1612
+
+## 2026-06-23 — DEBT-FIX TYPE C: ethics-of-war-in-islamic-law missing āyah (PR claude/debt-typebc)
+- Empty .block-ar inside aya-block (was <p class="block-ar"…></p>) had dropped its āyah; Thai fn-5 = al-Māʾidah 5:32.
+- Inserted byte-exact QPC-Uthmani clause from quran.com matching the Thai:
+  «مَن قَتَلَ نَفْسًۢا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍ فِى ٱلْأَرْضِ فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعًا»
+  Source: api.quran.com/api/v4/quran/verses/uthmani?verse_key=5:32 (continuous substring).
+- Only the empty block filled; rest of file byte-identical; comments/articles.json unchanged; lint+ortho PASS. Post blob SHA: 824b8e7538f69abaa285065fa5ce902c94e39ec2
+- ★ TYPE B (al-nawawi «مثل» wuḍūʾ hadith) NOT done — FLAGGED: author skeleton «مثل…غفر له» matches no single voweled narration (muslim:226a/bukhari:159=«نحو…غُفِرَ لَهُ»; abudawud:106=«مِثْلَ…غَفَرَ اللَّهُ لَهُ»). Held for One/A1 decision per "STOP+FLAG, don't stitch."
