@@ -2,3 +2,21 @@
 # engines de-index promptly instead of treating it as a soft 404.
 /pages/privacy        410
 /pages/privacy.html   410
+
+# Internal / dev paths — not part of the public site (One, 2026-06-23). Return 404 so
+# the charter, agent docs, build scripts, internal docs, and the source template are
+# neither served nor indexed. (Static-root deploy; /api/* Functions untouched.)
+/CLAUDE.md                404
+/AGENTS.md                404
+/CONTEXT.md               404
+/DEBUG-FINDINGS.md        404
+/REVIEW-QUEUE.md          404
+/AUDIT-FIXES.md           404
+/README.md                404
+/docs/*                   404
+/scripts/*                404
+/articles/_TEMPLATE.html  404
+/articles/_TEMPLATE       404
+/.claude/*                404
+/.codex/*                 404
+/.github/*                404
