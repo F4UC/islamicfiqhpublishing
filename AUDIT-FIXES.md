@@ -754,6 +754,17 @@ New article (not a retro-audit). Source: Drive `1NMMf2_2LLrucw7aM07BXE6DSmQuI3cN
 - ★ 2 .hadith-block (رُبَّ مُبَلَّغٍ… / كِخْ كِخْ…) left BYTE-IDENTICAL, stay fully voweled (16/27 marks) — verified
 - Skeleton byte-frozen (only U+064B–U+0652 removed). A1-directed batch-5 gate. Post-fix blob SHA: 0952257b35871b76d8181c577edd1ff332fb1612
 
+## 2026-06-23 — DEBT-FIX TYPE A: R60 strip of legacy scholar .ar-quote (PR claude/debt-r60-r53)
+- Scope: 21 legacy articles (NOT Phase-3). Stripped ALL marks (U+064B–U+0652, U+0670, U+0653–065F, U+06D6–06ED, U+0640 tatweel) from scholar .ar-quote blocks → uniformly BARE per R60.
+- 296 scholar-prose blocks stripped; 11 blocks PRESERVED voweled (R77 — embedded āyah/hadith):
+    payment-for-teaching-hadith #9 (Q2:41); shia-scholars-challenge-asharism #1 (Q19:83);
+    time-in-islamic-theology #3; barakah-of-eating-together #2 (hadith); al-turtushi #14 (Q25:7);
+    harm-of-academic-fanaticism #4 (Q17:79) + #25 (متفق/hadith); persia-shiism #10 (Q9:73);
+    remembering-the-mawlid #1; the-mihna-under-al-mamun #14 + #15 (qawluhu taʿālā).
+- SACRED-SAFE method: each block skipped-if-marker (قوله تعالى/قال الله/﴿﴾/{}/قال رسول/رواه/أخرجه/متفق…) on bare text; else strip.
+- Asserts per file: whole-file skeleton byte-identical (only marks removed); everything OUTSIDE .ar-quote byte-identical (aya/hadith/ar-translation untouched); non-sacred residual core harakat = 0.
+- articles.json/reading-time unchanged (ar-quote excluded). 0-comment counts unchanged. ortho PASS. 3 PRE-EXISTING legacy lint fails (ทว่า/ไม้ยมก/ไบบัรส์) left as-is (out of scope).
+
 ## 2026-06-23 — DEBT-FIX TYPE C: ethics-of-war-in-islamic-law missing āyah (PR claude/debt-typebc)
 - Empty .block-ar inside aya-block (was <p class="block-ar"…></p>) had dropped its āyah; Thai fn-5 = al-Māʾidah 5:32.
 - Inserted byte-exact QPC-Uthmani clause from quran.com matching the Thai:
