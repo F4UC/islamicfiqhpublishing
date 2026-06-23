@@ -17,7 +17,7 @@
  * caches (this is how a Purge + redeploy reaches already-installed users).
  * ========================================================================== */
 
-const CACHE_VERSION = 'ifp-v1';
+const CACHE_VERSION = 'ifp-v2';
 const PRECACHE = CACHE_VERSION + '-precache';
 const RUNTIME = CACHE_VERSION + '-runtime';
 
