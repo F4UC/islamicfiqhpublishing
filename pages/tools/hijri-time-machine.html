@@ -1047,10 +1047,7 @@ function renderEventCard(e) {
         });
       });
       if (added) {
-        var out = document.getElementById('explorer-output');
-        if (out && out.children.length && !out.querySelector('.timeline-empty')) {
-          initTimelineView();
-        }
+        initTimelineView();
       }
     })
     .catch(function () { /* inline events remain fully functional */ });
@@ -1093,8 +1090,8 @@ function renderEventCard(e) {
 
 
   /* Delegated handler for per-chronicle source tabs inside event cards.
-     explorer-output persists across re-renders, so one listener suffices. */
-  var expOut = document.getElementById('explorer-output');
+     tm-content persists across re-renders, so one listener suffices. */
+  var expOut = document.getElementById('tm-content');
   if(expOut) expOut.addEventListener('click', function(ev){
     var tab = ev.target.closest && ev.target.closest('.tm-tab');
     if(!tab) return;
