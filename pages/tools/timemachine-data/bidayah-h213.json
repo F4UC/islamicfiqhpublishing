@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 213,
+    "ceYear": 828,
+    "ceSpan": "828-829",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 213 (al-Bidayah เล่ม 11, ص47): กบฏที่อียิปต์ (อับดุสสลาม/อิบนุ ญะลีส) และการแต่งตั้งอัลมุอ์ตะศิมเป็นเจ้าเมืองชาม (Rule 89)",
+    "groupOrder": [
+      "การสถาปนารัฐ · การเมือง"
+    ],
+    "reviewStatus": "DRAFT - แปลตรงจากตำรา (Rule 89)"
+  },
+  "events": [
+    {
+      "id": "bidayah-h213-001",
+      "book": "al-bidayah",
+      "hijriYear": 213,
+      "ceYear": 828,
+      "order": 1,
+      "type": "event",
+      "cat": "ประวัติศาสตร์",
+      "group": "การสถาปนารัฐ · การเมือง",
+      "title": "กบฏที่อียิปต์และการแต่งตั้งอัลมุอ์ตะศิม",
+      "persons": [
+        "al-mamun",
+        "abd-al-salam-egypt",
+        "ibn-jalis",
+        "al-mutasim"
+      ],
+      "places": [
+        "egypt",
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้ มีชายสองคนก่อการที่อียิปต์ คือ อับดุสสลาม และอิบนุ ญะลีส ทั้งสองถอดถอนอัลมะอ์มูนและยึดครองแผ่นดินอียิปต์ กลุ่มชนจากพวกกัยสียะฮ์และยะมานียะฮ์ก็ติดตามทั้งสอง อัลมะอ์มูนจึงแต่งตั้งอบู อิสฮาก (อัลมุอ์ตะศิม) พี่น้องของเขาเป็นเจ้าเมืองชาม",
+          "arabicExcerpt": "ثار رجلان بمصر، وهما: عبدُ السلام، وابن جَليس، فخلعا المأمون واستحوذا على الديار المصرية، وتابعها طائفة من القيسيّة واليمانية، فولَّى المأمون أخاه أبا إسحاق نيابة الشام",
+          "loc": "เล่ม 11 หน้า 47",
+          "url": "https://shamela.ws/book/30097/5101",
+          "page": 47
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "purpose": "Registry of the chronicle sources whose accounts appear in Time Machine events (v3 multi-source model). Each event's accounts[] entry references one of these by id; the renderer shows one tab per chronicle.",
+    "reviewStatus": "DRAFT"
+  },
+  "chronicles": {
+    "ibn-kathir": { "order": 1, "nameThai": "อิบนุ กะษีร", "book": "อัลบิดายะฮ์ วันนิฮายะฮ์", "bookArabic": "البداية والنهاية", "died": "ฮ.ศ. 774", "shamelaBook": 30097, "islamwebBook": 59 },
+    "ibn-athir":  { "order": 2, "nameThai": "อิบนุ อัษีร", "book": "อัลกามิล ฟิตตารีค", "bookArabic": "الكامل في التاريخ", "died": "ฮ.ศ. 630", "shamelaBook": 21712 },
+    "ibn-jawzi":  { "order": 3, "nameThai": "อิบนุ อัลเญาซีย์", "book": "อัลมุนตะซ็อม", "bookArabic": "المنتظم في تاريخ الملوك والأمم", "died": "ฮ.ศ. 597", "shamelaBook": 12406 }
+  }
+}

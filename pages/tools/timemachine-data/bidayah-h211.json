@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 211,
+    "ceYear": 826,
+    "ceSpan": "826-827",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 211 (al-Bidayah เล่ม 11, ص44): มรณกรรมผู้มีชื่อเสียง รวม ★อับดุรร็อซซาก อัศศ็อนอานี (เจ้าของอัลมุศ็อนนัฟ)★ (Rule 89)",
+    "groupOrder": [
+      "การสถาปนารัฐ · การเมือง"
+    ],
+    "reviewStatus": "DRAFT - แปลตรงจากตำรา (Rule 89)"
+  },
+  "events": [
+    {
+      "id": "bidayah-h211-001",
+      "book": "al-bidayah",
+      "hijriYear": 211,
+      "ceYear": 826,
+      "order": 1,
+      "type": "event",
+      "cat": "ประวัติศาสตร์",
+      "group": "การสถาปนารัฐ · การเมือง",
+      "title": "มรณกรรมปี ฮ.ศ.211 (อับดุรร็อซซาก อัศศ็อนอานี)",
+      "persons": [
+        "abd-al-razzaq-al-sanani"
+      ],
+      "places": [],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "และในปีนี้ได้เสียชีวิตจากผู้มีชื่อเสียง: อบู อัลญะวาบ และฏ็อลก์ บิน ฆ็อนนาม และอับดุรร็อซซาก บิน ฮัมมาม อัศศ็อนอานี เจ้าของหนังสือ 'อัลมุศ็อนนัฟ' และ 'อัลมุสนัด' และอับดุลลอฮ์ บิน ศอลิห์ อัลอิจญ์ลีย์",
+          "arabicExcerpt": "أبو الجوَّاب . وطَلْقُ بنُ غَنَّام . وعبد الرزاق بن همَّام الصَّنْعاني صاحب \"المصنّف\" و \"المسند\" . وعبد اللَّه بن صالح العِجلي",
+          "loc": "เล่ม 11 หน้า 44",
+          "url": "https://shamela.ws/book/30097/5098",
+          "page": 44
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

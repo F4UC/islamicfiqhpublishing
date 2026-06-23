@@ -1,0 +1,7 @@
+# Transient Shamela page caches written by scripts/tm_lib.fetch() — never commit.
+sh_*.json
+scripts/sh_*.json
+# Python artifacts
+scripts/__pycache__/
+**/__pycache__/
+*.pyc

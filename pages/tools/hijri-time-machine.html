@@ -248,9 +248,135 @@ html, body {
 .relation-link { color: var(--accent-color); font-weight: 700; text-decoration: none; border-bottom: 1px solid transparent; transition: var(--theme-transition); }
 .relation-link:hover { border-bottom-color: var(--accent-color); color: var(--text-primary); }
 
+/* ─── Chronicle timeline v2: grouped accordion (R86 / al-Bidayah) ─── */
+.tm-timeline { display: flex; flex-direction: column; gap: 18px; }
+.tm-year { background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: 12px; box-shadow: 0 4px 12px var(--shadow-color); overflow: hidden; }
+.tm-year.tm-focus { border-left: 4px solid var(--accent-color); padding: 8px 6px 12px; }
+.tm-year-head { font-family: var(--ui); font-size: 17px; font-weight: 700; color: var(--text-primary); padding: 16px 20px; margin: 0; cursor: default; }
+details.tm-year > summary.tm-year-head { cursor: pointer; list-style: none; }
+details.tm-year > summary.tm-year-head::-webkit-details-marker { display: none; }
+details.tm-year > summary.tm-year-head::before { content: '▸'; color: var(--accent-color); margin-left: 0; margin-right: 10px; font-size: 13px; transition: transform 0.2s; display: inline-block; }
+details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg); }
+.tm-ce { font-family: var(--ui); font-size: 13px; color: var(--text-tertiary); font-weight: 500; }
+
+.tm-group { margin: 10px 14px; border: 1px solid var(--border-secondary); border-radius: 10px; background: var(--bg-secondary); }
+.tm-group-head { font-family: var(--thai); font-size: 15px; font-weight: 700; color: var(--text-primary); padding: 13px 16px; cursor: pointer; list-style: none; border-radius: 10px; }
+.tm-group-head::-webkit-details-marker { display: none; }
+.tm-group-head::before { content: '■'; color: var(--accent-color); font-size: 10px; margin-right: 9px; vertical-align: 1px; }
+.tm-group-head em { color: var(--text-tertiary); font-weight: 500; font-style: normal; font-size: 13px; }
+.tm-group[open] > .tm-group-head { border-bottom: 1px solid var(--border-secondary); border-radius: 10px 10px 0 0; }
+
+.tm-event { border-top: 1px dashed var(--border-secondary); }
+.tm-group > .tm-event:first-of-type { border-top: none; }
+.tm-event-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 14px; padding: 13px 16px; cursor: pointer; list-style: none; }
+.tm-event-head::-webkit-details-marker { display: none; }
+.tm-event-head::before { content: '▸'; color: var(--accent-color); font-size: 12px; margin-right: 8px; transition: transform 0.2s; display: inline-block; }
+.tm-event[open] > .tm-event-head::before { transform: rotate(90deg); }
+.tm-event-title { font-family: var(--thai); font-size: 15.5px; font-weight: 700; color: var(--text-primary); flex: 1; min-width: 0; }
+.tm-title-ar { font-family: var(--arabic); font-size: 16px; color: var(--text-secondary); font-weight: 400; }
+.tm-event-year { font-family: var(--ui); font-size: 12px; color: var(--text-tertiary); white-space: nowrap; font-weight: 600; }
+.tm-event-body { padding: 4px 18px 20px; }
+.tm-detail { font-family: var(--thai); font-size: 15px; color: var(--text-secondary); line-height: 2.05; text-align: left; word-break: break-word; }
+
+.tm-figures, .tm-sources, .tm-related { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--border-secondary); font-family: var(--thai); font-size: 14px; }
+.tm-lbl { display: block; font-family: var(--ui); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 8px; }
+.tm-figures ul, .tm-sources ul { list-style: none; margin: 0; padding: 0; }
+.tm-figures li, .tm-sources li { padding: 4px 0; color: var(--text-secondary); line-height: 1.7; }
+.tm-tarajim { font-family: var(--ui); font-size: 12px; color: var(--text-tertiary); }
+.tm-tarajim a { color: var(--text-tertiary); text-decoration: none; border-bottom: 1px dotted var(--border-secondary); }
+.tm-tarajim a:hover { color: var(--accent-color); border-bottom-color: var(--accent-color); }
+.tm-ar { font-family: var(--arabic); font-size: 17px; color: var(--text-primary); }
+.tm-src-link { font-family: var(--ui); font-size: 12.5px; color: var(--accent-color); font-weight: 700; text-decoration: none; border-bottom: 1px solid transparent; }
+.tm-src-link:hover { border-bottom-color: var(--accent-color); }
+.tm-note { color: var(--text-tertiary); font-size: 13px; }
+
+/* per-chronicle source tabs (v3 multi-source) */
+.tm-tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; border-bottom: 1px solid var(--border-secondary); }
+.tm-tab { font-family: var(--ui); font-size: 13px; font-weight: 700; color: var(--text-tertiary); background: none; border: none; border-bottom: 2px solid transparent; padding: 7px 13px; cursor: pointer; margin-bottom: -1px; transition: var(--theme-transition); }
+.tm-tab:hover { color: var(--text-primary); }
+.tm-tab.active { color: var(--accent-color); border-bottom-color: var(--accent-color); }
+.tm-acc { display: none; }
+.tm-acc.active { display: block; }
+.tm-acc-src { margin-top: 12px; font-family: var(--thai); font-size: 13px; color: var(--text-tertiary); }
+.tm-cross { margin-top: 16px; padding-top: 12px; border-top: 1px dashed var(--border-secondary); font-family: var(--thai); font-size: 13px; color: var(--text-tertiary); line-height: 1.7; }
+
 /* ─── Hidden panel ─── */
 .htm-panel { display: none; }
 .htm-panel.active { display: block; }
+
+/* ─── Redesign: Sidebar + Main Content ─── */
+.tm-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+.tm-sidebar {
+  flex: 0 0 160px;
+  position: sticky;
+  top: 100px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 16px 0;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+.tm-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tm-nav-link {
+  display: block;
+  padding: 8px 16px;
+  color: var(--text-secondary);
+  font-family: var(--ui);
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+.tm-nav-link:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+.tm-nav-link.active {
+  color: var(--accent-color);
+  border-left-color: var(--accent-color);
+  background: rgba(211,47,47,0.05);
+}
+.tm-content {
+  flex: 1;
+  min-width: 0;
+}
+.htm-search-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+#tm-search-input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 1px solid var(--border-secondary);
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: var(--thai);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  transition: var(--theme-transition);
+}
+#tm-search-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(211,47,47,0.12);
+}
+@media (max-width: 768px) {
+  .tm-layout { flex-direction: column; }
+  .tm-sidebar { flex: none; width: 100%; position: static; max-height: 200px; }
+}
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
@@ -405,21 +531,18 @@ html, body {
 
   <!-- Explorer Panel -->
   <div id="panel-explorer" class="htm-panel">
-    <div class="explorer-panel">
-      <div class="explorer-header">
-        <h2>สำรวจเหตุการณ์สำคัญ</h2>
-        <div class="year-input-wrap">
-          <label>ปี ฮ.ศ.</label>
-          <input type="number" class="year-input" id="explore-year" min="1" max="1500" value="500">
-          <span class="year-suffix">ฮ.ศ.</span>
-          <button class="btn-explore" id="btnExplore">สำรวจ</button>
-        </div>
-      </div>
-      <div id="explorer-output">
-        <div class="timeline-empty">
-          <div>กรอกปี ฮ.ศ. ที่ต้องการสำรวจแล้วกดปุ่ม "สำรวจ"</div>
-        </div>
-      </div>
+    <div class="htm-search-box">
+      <input type="text" id="tm-search-input" placeholder="ค้นหาเหตุการณ์, บุคคล, สถานที่ (รองรับภาษาอาหรับและไทย)">
+    </div>
+    <div class="tm-layout">
+      <aside class="tm-sidebar" id="tm-sidebar">
+        <ul class="tm-nav-list" id="tm-nav-list">
+          <li><a href="#" class="tm-nav-link">กำลังโหลด...</a></li>
+        </ul>
+      </aside>
+      <section class="tm-content" id="tm-content">
+        <div class="timeline-empty"><div>กำลังเตรียมข้อมูลไทม์ไลน์...</div></div>
+      </section>
     </div>
   </div>
 
@@ -614,58 +737,216 @@ function hijriYearToGregorianApprox(h) {
   return Math.round(h * 0.9702 + 621.5);
 }
 
-function exploreYear() {
-  const hy = parseInt(document.getElementById('explore-year').value);
-  if (!hy || hy < 1 || hy > 1500) {
-    document.getElementById('explorer-output').innerHTML =
-      '<div class="timeline-empty"><div>กรุณากรอกปี ฮ.ศ. ระหว่าง 1 ถึง 1500</div></div>';
+var TM_CHRONICLES = {};  /* chronicle id -> {nameThai, book, ...}; filled by the shard loader */
+
+let tmObserver = null;
+
+function initTimelineView() {
+  const content = document.getElementById('tm-content');
+  const navList = document.getElementById('tm-nav-list');
+  if (!content || !navList) return;
+
+  const byYear = {};
+  EVENTS.forEach(e => { (byYear[e.year] = byYear[e.year] || []).push(e); });
+  const years = Object.keys(byYear).map(Number).sort((a, b) => a - b);
+
+  let html = '';
+  let navHtml = '';
+
+  years.forEach(y => {
+    const evs = byYear[y];
+    const ceYear = hijriYearToGregorianApprox(y);
+    const yearHead = `ปี ฮ.ศ. ${y} <span class="tm-ce">(≈ ค.ศ. ${ceYear})</span>`;
+    const groupsHtml = renderYearGroups(evs, true);
+    
+    html += `<section class="tm-year-section" id="year-${y}">
+               <div class="century-badge">${getCenturyLabel(y)}</div>
+               <details class="tm-year" open>
+                 <summary class="tm-year-head">${yearHead}</summary>
+                 ${groupsHtml}
+               </details>
+             </section>`;
+    
+    navHtml += `<li><a href="#year-${y}" class="tm-nav-link" data-year="${y}">ฮ.ศ. ${y}</a></li>`;
+  });
+
+  content.innerHTML = html;
+  navList.innerHTML = navHtml;
+
+  if (tmObserver) tmObserver.disconnect();
+  tmObserver = new IntersectionObserver(entries => {
+    let visibleYears = [];
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        visibleYears.push(entry.target.id);
+      }
+    });
+    if (visibleYears.length > 0) {
+      document.querySelectorAll('.tm-nav-link').forEach(link => link.classList.remove('active'));
+      const activeId = visibleYears[visibleYears.length - 1];
+      const activeLink = document.querySelector(`.tm-nav-link[href="#${activeId}"]`);
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  document.querySelectorAll('.tm-year-section').forEach(sec => tmObserver.observe(sec));
+  
+  document.querySelectorAll('.tm-nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSec = document.getElementById(targetId);
+      if (targetSec) {
+        window.scrollTo({ top: targetSec.offsetTop - 80, behavior: 'smooth' });
+      }
+    });
+  });
+}
+
+function performDeepSearch(query) {
+  const content = document.getElementById('tm-content');
+  if (!query) {
+    initTimelineView();
+    document.getElementById('tm-sidebar').style.display = 'block';
+    return;
+  }
+  
+  document.getElementById('tm-sidebar').style.display = 'none';
+  query = query.toLowerCase();
+  
+  const matches = EVENTS.filter(e => {
+    if (e.title && e.title.toLowerCase().includes(query)) return true;
+    if (e.titleArabic && e.titleArabic.includes(query)) return true;
+    if (e.desc && e.desc.toLowerCase().includes(query)) return true;
+    if (e.accounts) {
+      for (let a of e.accounts) {
+        if (a.detail && a.detail.toLowerCase().includes(query)) return true;
+        if (a.arabicExcerpt && a.arabicExcerpt.includes(query)) return true;
+      }
+    }
+    if (e.figures) {
+      for (let f of e.figures) {
+        if (f.thai && f.thai.toLowerCase().includes(query)) return true;
+        if (f.arabic && f.arabic.includes(query)) return true;
+      }
+    }
+    return false;
+  });
+
+  if (matches.length === 0) {
+    content.innerHTML = `<div class="timeline-empty">ไม่พบผลการค้นหาสำหรับ "${query}"</div>`;
     return;
   }
 
-  const range = 15;
-  const nearby = EVENTS.filter(e => Math.abs(e.year - hy) <= range).sort((a, b) => a.year - b.year);
-  const ceApprox = hijriYearToGregorianApprox(hy);
+  matches.sort((a, b) => a.year - b.year);
+  
+  let html = `<div class="year-range-display">พบ ${matches.length} เหตุการณ์ สำหรับ "<span>${query}</span>"</div>`;
+  html += '<div class="tm-timeline">';
+  matches.forEach(e => {
+    html += renderEventCard(e);
+  });
+  html += '</div>';
+  
+  content.innerHTML = html;
+}
 
-  let html = `
-    <div class="century-badge">${getCenturyLabel(hy)}</div>
-    <div class="year-range-display">แสดงเหตุการณ์รอบปี <span>ฮ.ศ. ${hy}</span> (ประมาณ ค.ศ. ${ceApprox}) ในช่วง ±${range} ปี</div>
-  `;
+/* Partition a year's events into thematic groups (collapsible), ordered by the
+   shard's groupOrder (groupRank); ungrouped/inline events fall into a default
+   bucket shown last. The focus year's first group is open by default. */
+function renderYearGroups(evs, isFocus) {
+  const DEFAULT = 'เหตุการณ์สำคัญ';
+  const buckets = {};
+  evs.forEach(e => { const g = e.group || DEFAULT; (buckets[g] = buckets[g] || []).push(e); });
+  const bucketRank = (items) => {
+    let r = Infinity;
+    items.forEach(e => { if (typeof e.groupRank === 'number' && e.groupRank >= 0 && e.groupRank < r) r = e.groupRank; });
+    return r === Infinity ? 999 : r;
+  };
+  const labels = Object.keys(buckets).sort((a, b) => bucketRank(buckets[a]) - bucketRank(buckets[b]));
+  let out = '';
+  labels.forEach((label, gi) => {
+    const items = buckets[label].slice().sort((a, b) => ((a.order || 0) - (b.order || 0)) || (a.year - b.year));
+    const open = (isFocus && gi === 0) ? ' open' : '';
+    let body = '';
+    items.forEach(e => { body += renderEventCard(e); });
+    out += `<details class="tm-group"${open}><summary class="tm-group-head">${label} <em>(${items.length})</em></summary>${body}</details>`;
+  });
+  return out;
+}
 
-  if (nearby.length === 0) {
-    html += `<div class="timeline-empty"><div>ไม่พบเหตุการณ์สำคัญที่บันทึกไว้ในช่วงนี้</div></div>`;
-  } else {
-    html += '<div class="timeline">';
-    nearby.forEach(e => {
-      const ceYear = hijriYearToGregorianApprox(e.year);
-      let relationHtml = '';
-      if (e.relatedArticle) {
-        relationHtml = `
-          <div class="event-relation">
-            <span class="relation-label">อ่านบทวิเคราะห์เชิงลึก:</span>
-            <a href="${e.relatedArticle.url}" class="relation-link"><strong>${e.relatedArticle.title}</strong></a>
-          </div>
-        `;
+/* One collapsible event card: detailed translation + figures (Thai + Arabic)
+   + multi-source citations. Tolerates inline events that lack v2 fields. */
+function renderEventCard(e) {
+  const ceYear = hijriYearToGregorianApprox(e.year);
+  const titleAr = e.titleArabic ? ` <span class="tm-title-ar" dir="rtl" lang="ar">${e.titleArabic}</span>` : '';
+
+  let figuresHtml = '';
+  if (e.figures && e.figures.length) {
+    let lis = '';
+    e.figures.forEach(f => {
+      const ar = f.arabic ? ` - <span class="tm-ar" dir="rtl" lang="ar">${f.arabic}</span>` : '';
+      /* Person-scoped biographical references (tarajim): Siyar, Tabaqat, Tahdhib, ...
+         Resolved against the source registry; follow the person wherever they appear. */
+      let tj = '';
+      if (f.tarajim && f.tarajim.length) {
+        tj = ' <span class="tm-tarajim">' + f.tarajim.map(function (t) {
+          const src = (typeof TM_CHRONICLES !== 'undefined' && TM_CHRONICLES[t.source]) || {};
+          const nm = (src.book || t.source || 'ชีวประวัติ') + (t.loc ? ' ' + t.loc : '');
+          return t.url ? `<a href="${t.url}" target="_blank" rel="noopener noreferrer">${nm} ↗</a>` : nm;
+        }).join(' · ') + '</span>';
       }
-
-      html += `
-        <div class="event-card">
-          <div class="event-header">
-            <div class="event-year-badge-inline">
-              <span class="event-year-num">${e.year} ฮ.ศ.</span>
-              <span class="event-year-ce">≈ ค.ศ. ${ceYear}</span>
-            </div>
-          </div>
-          <div class="event-body">
-            <div class="event-title">${e.title}</div>
-            <div class="event-desc">${e.desc}</div>
-            ${relationHtml}
-          </div>
-        </div>`;
+      lis += `<li>${f.thai}${ar}${tj}</li>`;
     });
-    html += '</div>';
+    figuresHtml = `<div class="tm-figures"><span class="tm-lbl">บุคคลสำคัญ</span><ul>${lis}</ul></div>`;
   }
 
-  document.getElementById('explorer-output').innerHTML = html;
+  let relationHtml = '';
+  if (e.relatedArticle) {
+    relationHtml = `<div class="tm-related"><span class="tm-lbl">อ่านบทวิเคราะห์เชิงลึก</span>
+      <a href="${e.relatedArticle.url}" class="relation-link"><strong>${e.relatedArticle.title}</strong></a></div>`;
+  }
+
+  /* Per-chronicle accounts: one tab + panel each. The tab bar is shown only
+     when more than one chronicle reports the event. Falls back to a single
+     inline detail for older/inline events that lack accounts[]. */
+  var accounts = (e.accounts && e.accounts.length) ? e.accounts
+                 : (e.desc ? [{ chronicle: null, detail: e.desc }] : []);
+  let tabsHtml = '', panelsHtml = '';
+  accounts.forEach(function (a, i) {
+    const ch = (typeof TM_CHRONICLES !== 'undefined' && TM_CHRONICLES[a.source || a.chronicle]) || {};
+    const name = ch.nameThai || a.source || a.chronicle || 'แหล่งอ้างอิง';
+    const act = i === 0 ? ' active' : '';
+    tabsHtml += `<button type="button" class="tm-tab${act}" data-acc="${i}">${name}</button>`;
+    let links = '';
+    if (a.url) links += ` <a href="${a.url}" class="tm-src-link" target="_blank" rel="noopener noreferrer">Shamela ↗</a>`;
+    if (a.urlAlt) links += ` <a href="${a.urlAlt}" class="tm-src-link" target="_blank" rel="noopener noreferrer">islamweb ↗</a>`;
+    const srcLine = (ch.book || '') + (a.loc ? ' ' + a.loc : '') + links;
+    const srcHtml = srcLine.trim() ? `<div class="tm-acc-src"><span class="tm-lbl">ที่มา</span> ${srcLine}</div>` : '';
+    panelsHtml += `<div class="tm-acc${act}" data-acc="${i}"><div class="tm-detail">${a.detail || ''}</div>${srcHtml}</div>`;
+  });
+  const tabBar = accounts.length > 1 ? `<div class="tm-tabs">${tabsHtml}</div>` : '';
+
+  let crossHtml = '';
+  if (e.crossRefs && e.crossRefs.length) {
+    crossHtml = `<div class="tm-cross"><span class="tm-lbl">อ้างอิงเทียบเคียง</span> ` +
+      e.crossRefs.map(function (c) { return (c.work || '') + (c.loc ? ' ' + c.loc : ''); }).join(' · ') + `</div>`;
+  }
+
+  return `<details class="tm-event">
+    <summary class="tm-event-head">
+      <span class="tm-event-title">${e.title}${titleAr}</span>
+      <span class="tm-event-year">${e.year} ฮ.ศ. · ≈ ค.ศ. ${ceYear}</span>
+    </summary>
+    <div class="tm-event-body">
+      ${tabBar}
+      ${panelsHtml}
+      ${figuresHtml}
+      ${relationHtml}
+      ${crossHtml}
+    </div>
+  </details>`;
 }
 
 /* Initialize with current Hijri year */
@@ -680,6 +961,99 @@ function exploreYear() {
   document.getElementById('g-month').value = today.getMonth() + 1;
   document.getElementById('g-day').value = today.getDate();
   document.getElementById('explore-year').value = h.year;
+})();
+
+/* ------------------------------------------------------------------------
+ * R86 / Time Machine data-model (v2): lazy-load external chronicle shards
+ * (al-Bidayah wa al-Nihayah, etc.) listed in ./timemachine-data/index.json,
+ * resolve person/place names against glossary.json, and merge into EVENTS.
+ * The inline EVENTS array is the always-available base; shards enrich the
+ * timeline without bloating the page. v2 shard events carry detailed text,
+ * a thematic group, figures (Thai + Arabic), and multi-source citations.
+ * Graceful degradation: on any fetch/parse failure the tool keeps working
+ * with the inline events.
+ * ---------------------------------------------------------------------- */
+(function loadChronicleShards() {
+  if (typeof fetch !== 'function') return;
+  var BASE = './timemachine-data/';
+  var seen = {};
+  EVENTS.forEach(function (e) { if (e.id) seen[e.id] = true; });
+
+  /* glossary id -> {thai, arabic} for figure resolution */
+  function indexGlossary(g) {
+    var m = {};
+    if (!g) return m;
+    ['persons', 'places', 'books'].forEach(function (k) {
+      (g[k] || []).forEach(function (it) {
+        if (it && it.id) m[it.id] = { thai: it.canonicalThai || it.id, arabic: it.arabic || '', tarajim: it.tarajim || null };
+      });
+    });
+    return m;
+  }
+
+  fetch(BASE + 'index.json')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (manifest) {
+      var shards = (manifest && manifest.shards) || [];
+      var gloss = fetch(BASE + ((manifest.meta && manifest.meta.glossary) || 'glossary.json'))
+        .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+      /* Unified source registry: prefer sources.json (annal + tarajim, type-tagged),
+         fall back to the older chronicles.json for back-compat. */
+      var chron = fetch(BASE + 'sources.json')
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+        .catch(function () {
+          return fetch(BASE + 'chronicles.json')
+            .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+        });
+      var data = Promise.all(shards.map(function (s) {
+        return fetch(BASE + s.file).then(function (r) { return r.ok ? r.json() : null; })
+          .catch(function () { return null; });
+      }));
+      return Promise.all([gloss, data, chron]);
+    })
+    .then(function (res) {
+      var gmap = indexGlossary(res[0]);
+      var loaded = res[1] || [];
+      if (res[2]) TM_CHRONICLES = res[2].sources || res[2].chronicles || TM_CHRONICLES;
+      var added = 0;
+      loaded.forEach(function (shard) {
+        if (!shard || !Array.isArray(shard.events)) return;
+        var groupOrder = (shard.meta && shard.meta.groupOrder) || [];
+        shard.events.forEach(function (ev) {
+          if (ev.id && seen[ev.id]) return;
+          if (ev.id) seen[ev.id] = true;
+          if (typeof ev.hijriYear !== 'number') return;
+          var figures = (ev.persons || []).map(function (pid) {
+            return gmap[pid] || null;
+          }).filter(Boolean);
+          var accounts = ev.accounts ||
+            (ev.detail ? [{ chronicle: 'ibn-kathir', detail: ev.detail,
+              loc: (ev.source && ev.source.loc) || '', url: (ev.source && ev.source.url) || '',
+              urlAlt: (ev.source && ev.source.urlAlt) || '' }] : null);
+          EVENTS.push({
+            id: ev.id,
+            year: ev.hijriYear,
+            cat: ev.cat,
+            group: ev.group || null,
+            groupRank: ev.group ? groupOrder.indexOf(ev.group) : -1,
+            order: typeof ev.order === 'number' ? ev.order : 0,
+            title: ev.title,
+            titleArabic: ev.titleArabic || null,
+            figures: figures,
+            accounts: accounts,
+            crossRefs: ev.crossRefs || null
+          });
+          added++;
+        });
+      });
+      if (added) {
+        var out = document.getElementById('explorer-output');
+        if (out && out.children.length && !out.querySelector('.timeline-empty')) {
+          initTimelineView();
+        }
+      }
+    })
+    .catch(function () { /* inline events remain fully functional */ });
 })();
 </script>
 <script>
@@ -716,8 +1090,30 @@ function exploreYear() {
   if(bH2G) bH2G.addEventListener('click', convertHijriToGregorian);
   var bG2H = document.getElementById('btnConvertG2H');
   if(bG2H) bG2H.addEventListener('click', convertGregorianToHijri);
-  var bExp = document.getElementById('btnExplore');
-  if(bExp) bExp.addEventListener('click', exploreYear);
+
+
+  /* Delegated handler for per-chronicle source tabs inside event cards.
+     explorer-output persists across re-renders, so one listener suffices. */
+  var expOut = document.getElementById('explorer-output');
+  if(expOut) expOut.addEventListener('click', function(ev){
+    var tab = ev.target.closest && ev.target.closest('.tm-tab');
+    if(!tab) return;
+    var body = tab.closest('.tm-event-body');
+    if(!body) return;
+    var idx = tab.getAttribute('data-acc');
+    body.querySelectorAll('.tm-tab').forEach(function(x){ x.classList.toggle('active', x === tab); });
+    body.querySelectorAll('.tm-acc').forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-acc') === idx); });
+  });
+  var tsInput = document.getElementById('tm-search-input');
+  if(tsInput) {
+    let tmTimeout;
+    tsInput.addEventListener('input', function(e) {
+      clearTimeout(tmTimeout);
+      tmTimeout = setTimeout(function() {
+        performDeepSearch(e.target.value.trim());
+      }, 300);
+    });
+  }
 })();
 </script>
 </body>

@@ -1,0 +1,1873 @@
+{
+  "meta": {
+    "purpose": "Manifest of Time Machine chronicle shards lazy-loaded by hijri-time-machine.html (R86 ingestion pipeline). The inline EVENTS array in the page is the always-available base; these shards enrich the timeline without bloating the page. Each shard's events map hijriYear->year and summary->desc at load time.",
+    "glossary": "glossary.json",
+    "reviewStatus": "DRAFT — awaiting owner review (ผมแปล คุณตรวจ)",
+    "schema": "v2 — events carry group/detail/sources[]; figures resolved from glossary at load; renderer = grouped accordion"
+  },
+  "shards": [
+    {
+      "file": "bidayah-h94.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 94,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 94 (Shamela ~296–319) — ปีแห่งฟุเกาะฮาอ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h95.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 95,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 95 (Shamela ~320–330) — มรณกรรมอัลหัจญาจ + อันนะเคาะอีย์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h96.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 96,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 96 (Shamela ~347–360) — อัลวะลีดที่ 1 สิ้น + สุลัยมานขึ้นครองราชย์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h97.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 97,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 97 (Shamela 361–366) — เตรียมทัพคอนสแตนติโนเปิล",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h98.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 98,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 98 (Shamela 367–370) — การล้อมคอนสแตนติโนเปิล",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h99.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 99,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 99 (Shamela 371–384) — สุลัยมานสิ้น + อุมัรที่ 2 ขึ้นครองราชย์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h100.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 100,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 100 (Shamela 385–390) — หลักร้อยปีแรก + ผู้วายชนม์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h101.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 101,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 101 — หนีคุกยะซีด บิน อัลมุฮัลลับ + มรณกรรม/ชีวประวัติอุมัรที่ 2 (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h102.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 102,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 102 — กบฏยะซีด บิน อัลมุฮัลลับ ยึดบัศเราะฮ์ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h103.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 103,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 103 — เปลี่ยนผู้ว่าการคุรอซาน + ผู้วายชนม์ (มุญาฮิด) (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h104.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 104,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 104 — ตีคุจันดะฮ์ + ปลดอับดุรเราะห์มาน บิน อัฎเฎาะห์ฮาก (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h105.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 105,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 105 — ทัพชายแดน + มรณกรรมยะซีดที่ 2 (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h106.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 106,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 106 — ศึกฟัรเฆาะนะฮ์/คอซาร์ + ฮิชามนำหัจญ์ปฏิเสธสาปแช่งอะลี (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h107.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 107,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 107 — กบฏเยเมน/ไซปรัส + อะสัด อัลก็อสรีย์บุกคุรอซาน (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h108.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 108,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 108 — พิชิตซีซาเรีย/วัรษาน/ญันญะเราะฮ์ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h109.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 109,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 109 — อัชรอส อัสสุละมีย์ครองคุรอซาน + ริบาฏ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h110.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 110,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 110 — ฆอซวะตุฏฏีน + อัชรอส/ซะมัรกอนด์ + กวีอัลฟะรอซดัก (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h111.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 111,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 111 — อัลญุนัยด์ อัลมุรรีย์ครองคุรอซาน + ชัยเหนือคอกอน (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h112.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 112,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 112 — ศึกอัรดะบีล (อัลญัรรอห์ชะฮีด) + ศึกซะมัรกอนด์ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h113.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 113,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 113 — ตีมัรอัช + มัสละมะฮ์ฆ่าบุตรคอกอน + ชะฮีดอับดุลวะฮ์ฮาบ บิน บุคต์ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h114.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 114,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 114 — อัลบัฏฏอลจับคอนสแตนติน + มรณกรรมอะฏออ์ บิน อบีเราะบาห์ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h115.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 115,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 115 — กาฬโรคชาม + มรณกรรมอบู ญะอ์ฟัร อัลบากิร (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h116.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 116,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 116 — กาฬโรคชาม/อิรัก + มรณกรรมอัลญุนัยด์ + กบฏอัลหาริษ บิน ชุร็อยห์ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h117.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 117,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 117 — มัรวาน อัลฮิมารตีอัลลาน + มรณกรรมเกาะตาดะฮ์ บิน ดิอามะฮ์ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h118.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 118,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 118 — คิดาชบิดเบือนดะอ์วะฮ์อับบาส + มรณกรรมอะลี บิน อับดุลลอฮ์ บิน อับบาส (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h119.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 119,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 119 — สมรภูมินหรบัลค์: อะสัดชนะคอกอน (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h120.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 120,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 120 — มรณกรรมอะสัด อัลก็อสรีย์ + ปลดคอลิด อัลก็อสรีย์จากอิรัก (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h121.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 121,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 121 — มัรวานพิชิตแดนเจ้าทอง + ความนำซัยด์ บิน อะลี (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h122.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 122,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 122 — การพลีชีพของซัยด์ บิน อะลี + ที่มา 'รอฟิเฎาะฮ์' (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h123.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 123,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 123 — เติร์กแตกแยก + เจรจาซุฆด์ + ยูซุฟ บิน อุมัรชิงคุรอซาน (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h124.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 124,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 124 — อบู มุสลิม อัลคุรอซานีย์ปรากฏตัว + มรณกรรมมุฮัมมัด บิน อะลี (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h125.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 125,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 125 — มรณกรรมฮิชาม + อัลวะลีดที่ 2 ขึ้นครอง (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h126.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 126,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 126 — ปลงพระชนม์อัลวะลีดที่ 2 + ยะซีดที่ 3 อันนากิศ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h127.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 127,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 127 — ศึกอัยนุลญัรร์ (มัรวานที่ 2 ชนะ) + สังหารบุตรอัลวะลีดที่ 2 (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h128.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 128,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 128 — กบฏ/สังหารอัลหาริษ บิน ชุร็อยห์ + สังหารอัลญะฮ์ม บิน เศาะฟวาน (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h129.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 129,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 129 — สงครามเคาะวาริจญ์ + การประกาศดะอ์วะฮ์อับบาส (อบู มุสลิม) (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h130.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 130,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 130 — อบู มุสลิมยึดมัรว์ + พิชิตคุรอซาน (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h131.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 131,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 131 — มรณกรรมนัศร์ บิน สัยยาร + ศึกอิศบะฮาน (ก็อหฺเฏาะบะฮ์ชนะ) (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h132.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 132,
+      "events": 2,
+      "scope": "ปี ฮ.ศ. 132 — สถาปนาเคาะลีฟะฮ์อัสซัฟฟาห์ + ศึกอัซซาบล้มมัรวานที่ 2 (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT",
+      "eventsSchema": "v3"
+    },
+    {
+      "file": "bidayah-h133.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 133,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 133 — จัดวางผู้ปกครองต้นรัชสมัยอัสซัฟฟาห์ + กบฏชะรีก อัลมะฮ์รีย์ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h134.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 134,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 134 — ค็อซิมปราบเคาะวาริจญ์โอมาน + ทัพอับบาสในมาวะรออันนะฮ์ร/อินเดีย (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h135.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 135,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 135 — อบู มุสลิมปราบกบฏซิยาด บิน ศอลิห์ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h136.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 136,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 136 — มรณกรรมอัสซัฟฟาห์ + ขึ้นครองอัลมันศูร + กบฏอับดุลลอฮ์ บิน อะลี (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h137.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 137,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 137 — ★การสังหารอบู มุสลิม อัลคุรอซานีย์★ (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h138.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 138,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 138 — ★รัฐอุมัยยะฮ์อันดะลุส (อับดุรเราะฮ์มาน อัดดาคิล)★ · ยอมจำนนอับดุลลอฮ์ บิน อะลี · กบฏญะฮ์วัร (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h139.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 139,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 139 — ศอลิห์ บิน อะลี/ศึกรูม/ไถ่เชลย, ขยายมัสยิดอัลฮะรอม, จับกุมอับดุลลอฮ์ บิน อะลี (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h140.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 140,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 140 — ตายอบู ดาวูด+กวาดล้างของอับดุลญับบาร, หัจญ์อัลมันศูร+เยือนบัยตุลมักดิส (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h141.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 141,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 141 — ★กบฏรอวันดียะฮ์ (ยกอัลมันศูรเป็นพระเจ้า)★, แต่งตั้งอัลมะฮ์ดี+ประหารอับดุลญับบาร, พิชิตฏ็อบริสตานครั้งแรก (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h142.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 142,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 142 — กบฏอุยัยนะฮ์(สินด์), ★อุบายอบู อัลเคาะศีบยึดป้อมฏ็อบริสตาน★, มรณกรรมสุลัยมาน บิน อะลี, มรณกรรมอัมร์ บิน อุบัยด์(มุอ์ตะซิละฮ์) (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h143.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 143,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 143 — ระดมพลตีอัดดัยลัม, มรณกรรมปีนี้(สุลัยมาน อัตตัยมีย์ ฯลฯ) (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h144.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 144,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 144 — ★จุดเริ่มความขัดแย้งวงศ์ฮะซันกับอัลมันศูร★ (จองจำ/ทรมาน/สังหารอัดดีบาจญ์) (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h145.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 145,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 145 — ★กบฏมุฮัมมัด อันนัฟซุซซะกียะฮ์(มะดีนะฮ์)+อิบรอฮีม(บัศเราะฮ์)★ — ยึดมะดีนะฮ์, สังหารมุฮัมมัด, ศึกบาคัมรอ+สังหารอิบรอฮีม, มรณกรรมวงศ์อะฮ์ลุลบัยต์ (แปลเต็มเหตุการณ์เรือธง Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h146.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 146,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 146 - ★การสถาปนาแบกแดด (มะดีนะตุสสลาม)★, เติร์ก/เคาะซัรบุกบาบุลอับวาบ, อบู ฮะนีฟะฮ์กับการก่อสร้าง (แปลเต็ม Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h147.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 147,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "พวกเติร์กบุกตัฟลีส/อาร์มีเนีย และ ★การตายของอับดุลลอฮ์ บิน อะลี (อุบายอีซา บิน มูซา) และการปลดอีซาจากรัชทายาทเพื่ออัลมะฮ์ดี★",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h148.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 148,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ศึกพวกเติร์ก และ ★มรณกรรมญะอ์ฟัร บิน มุฮัมมัด อัศศอดิก และอัลอะอ์มัช★",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h149.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 149,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "กำแพงแบกแดดเสร็จ ศึกฤดูร้อนในรูม และผู้ปกครองประจำปี",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h150.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 150,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "★กบฏอุสตาษสีสในคุรอซานและการปราบโดยคอซิม บิน คุซัยมะฮ์★ และมรณกรรมอิบนุ ญุร็อยจ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h151.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 151,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 151 (al-Bidayah ล.10 ص348-350): ★เรื่องอับดุลลอฮ์ อัลอัชตัร (บุตรอันนัฟซุซซะกียะฮ์) ที่สินด์★, อัลมะฮ์ดีกลับจากคุรอซาน+สร้างอัรรุศอฟะฮ์+ต่อสัตยาบัน, ★มรณกรรมอิบนุ อิสฮาก เจ้าของสีเราะฮ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h152.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 152,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 152 (al-Bidayah ล.10 ص350): การเปลี่ยนผู้ปกครอง และ ★พวกเคาะวาริจญ์สังหารมะอ์น บิน ซาอิดะฮ์ที่สิญิสตาน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h153.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 153,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 153 (al-Bidayah ล.10 ص350-351): ★การจองจำอบู อัยยูบ อัลมูรยานีย์ และเรื่องบุตรลับของอัลมันศูรจากเมาศิล★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h154.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 154,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 154 (al-Bidayah ล.10 ص352): ศึกฤดูร้อนของมะอ์ยูฟ บิน ยะห์ยา หัจญ์ และมรณกรรมประจำปี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h155.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 155,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 155 (al-Bidayah ล.10 ص356-357): ★การสร้างเมืองอัรรอฟิเกาะฮ์★, การประหารอิบนุ อบี อัลเอาญาอ์ (ซินดีกกุหะดีษ 4000), ★มรณกรรมฮัมมาด อัรรอวิยะฮ์ ผู้รวบรวมมุอัลลากอต★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h156.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 156,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 156 (al-Bidayah ل.10 ص358): การประหารอัมร์ บิน ชัดดาดและการตายกะทันหันของอัลฮัยษัม, ★มรณกรรมฮัมซะฮ์ อัซซัยยาต (นักอ่านทั้งเจ็ด)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h157.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 157,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 157 - ปราสาทอัลคุลด์, ★อิมามอัลเอาซาอีย์ตอบอับดุลลอฮ์ บิน อะลีอย่างกล้าหาญ★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h158.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 158,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 158 - ★การเสียชีวิตของอัลมันศูร+ขึ้นครองอัลมะฮ์ดี★ ชีวประวัติ+คุฏบะฮ์อะเราะฟะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h159.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 159,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 159 (al-Bidayah ل.10 ص377-379 - ปีแรกของอัลมะฮ์ดี): ศึกรูม+แต่งตั้งผู้ปกครอง, ★อีซา บิน มูซาถอนตัวจากรัชทายาท+สัตยาบันให้มูซา อัลฮาดีและฮารูน อัรเราะชีด★, มรณกรรมอิบนุ อบี ษิอ์บ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h160.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 160,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 160 (al-Bidayah ล.10 ص379-382): ★กบฏยูซุฟ อัลบัรม์ที่คุรอซาน★, การกุศลของอัลมะฮ์ดีที่มักกะฮ์+ปรึกษามาลิกเรื่องกะอ์บะฮ์, ★มรณกรรมชุอ์บะฮ์ บิน อัลฮัจญาจ★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h161.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 161,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 161 (al-Bidayah ل.10 ص382-383): การปรับปรุงเส้นทางหัจญ์, การขยายมัสยิดบัศเราะฮ์, และคำสั่งรื้อมักศูเราะฮ์/ลดความสูงมินบัรของอัลมะฮ์ดี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h162.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 162,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 162 (al-Bidayah ล.10 ص385-386): ★กบฏอับดุสสลาม อัลยัชกุรีย์ที่กินนัสรีน★+ศึกฤดูร้อนในรูม, ★มรณกรรมอิบรอฮีม บิน อัดฮัม นักพรตผู้ยิ่งใหญ่★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h163.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 163,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 163 (al-Bidayah ل.10 ص400-402): ★การปราบอัลมุก็อนนะอ์ (ซินดีกศาสดาปลอมสวมหน้ากากแห่งคุรอซาน)★, ศึกรูมของฮารูน อัรเราะชีด, มรณกรรมอีซา บิน อะลี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h164.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 164,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 164 (al-Bidayah ل.10 ص402): ศึกรูมที่ล้มเหลวของอับดุลกะบีร, การสร้างปราสาทอีซาบาษ, อัลมะฮ์ดีป่วยกลางทางหัจญ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h165.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 165,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 165 (al-Bidayah ل.10 ص403): ★ศึกคอนสแตนติโนเปิลของฮารูน อัรเราะชีดและสนธิสัญญาสงบศึกกับจักรพรรดินีอิรีน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h166.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 166,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 166 (al-Bidayah ل.10 ص404-405): อัรเราะชีดกลับจากรูม+สัตยาบันให้ฮารูน, ★การล่มสลายของวะซีรยะอ์กูบ บิน ดาวูด (เพราะไว้ชีวิตอะละวีย์)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h167.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 167,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 167 (al-Bidayah ل.10 ص406): มูซา อัลฮาดีสู่ญุรญาน, ★มรณกรรมอีซา บิน มูซา (อดีตรัชทายาท)★, การปราบพวกซะนาดิเกาะฮ์ของอัลมะฮ์ดี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h168.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 168,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 168 (al-Bidayah ل.10 ص408): ชาวรูมละเมิดสนธิสัญญา, การตั้งดีวานอัลอะซิมมะฮ์ของอัลมะฮ์ดี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h169.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 169,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 169 (al-Bidayah ل.10 ص410): ★การเสียชีวิตของอัลมะฮ์ดีที่มาสะบะษานและคำชี้แจงว่าเขาไม่ใช่อัลมะฮ์ดีที่ถูกสัญญา★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h170.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 170,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 170 - ★ตายอัลฮาดี+ขึ้นครองฮารูน อัรเราะชีด+ตั้งยะห์ยา อัลบัรมะกีย์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h171.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 171,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 171 (al-Bidayah ل.10 ص423): อัรเราะชีดมอบตราประทับให้ยะห์ยา อัลบัรมะกีย์, สังหารอบู ฮุร็อยเราะฮ์เจ้าเมืองอัลญะซีเราะฮ์, อัลค็อยซุรอนทำหัจญ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h172.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 172,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 172 (al-Bidayah ل.10 ص423): อัรเราะชีดยกเลิกภาษีอุชร์ของชาวอิรัก, ออกหาที่พำนักใหม่, หัจญ์และศึกฤดูร้อน (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h173.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 173,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 173 (al-Bidayah ل.10 ص423-425): ★มรณกรรมมุฮัมมัด บิน สุลัยมาน เจ้าชายอับบาสผู้มั่งคั่งที่บัศเราะฮ์ และการยึดทรัพย์โดยอัรเราะชีด★ (ปีนี้ยังมีชีวประวัติอัลค็อยซุรอน) (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h174.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 174,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 174 - ★เรื่องฆอดิร ทาสคนโปรดของอัลฮาดี+ลางสังหรณ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h175.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 175,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 175 - ★อัรเราะชีดประเมินอัลมะอ์มูน/เลือกอัลอามีนก่อน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h176.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 176,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 176 - ★กบฏยะห์ยา บิน อับดุลลอฮ์(อัดดัยลัม)+อามาน★, มรณกรรมกวีอิบนุ ฮัรมะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h177.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 177,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 177 (al-Bidayah ل.10 ص435): มรณกรรมผู้มีชื่อเสียง รวม ★ฟะร็อจญ์ บิน ฟะฎอละฮ์ ผู้ไม่ยอมลุกยืนให้อัลมันศูร (อ้างหะดีษ)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h178.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 178,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 178 (al-Bidayah ل.10 ص436): กบฏพวกเฮาฟียะฮ์ที่อียิปต์และกบฏที่อิฟรีกิยะฮ์ (ฆ่าอัลฟัฎล์ บิน เราะห์), การปราบโดยฮัรษะมะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h179.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 179,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 179 (al-Bidayah ل.10 ص438): การเปลี่ยนตำแหน่ง (คอลิด บิน บัรมัก→อัลฟัฎล์ บิน อัรเราะบีอ์), ★การสังหารอัลวะลีด บิน เฏาะรีฟ เคาะวาริจญ์โดยยะซีด บิน มัซยัด★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h180.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 180,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 180 - ★ฟิตนะฮ์ในชาม+ปราบโดยญะอ์ฟัร อัลบัรมะกีย์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h181.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 181,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 181 - ศึกรูม, ★คำสั่งเขียนเศาะละวาตในจดหมาย★, ยะห์ยาขอพัก (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h182.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 182,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 182 - ★อัลมะอ์มูนรัชทายาทลำดับสอง+ผนวกกับญะอ์ฟัร อัลบัรมะกีย์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h183.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 183,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 183 - ★การบุกของพวกเคาะซัรที่อาร์มีเนีย+ตอบโต้★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h184.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 184,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 184 - อัรเราะชีดเก็บภาษีค้างชำระ, กบฏอบู อัมร์ อัชชารีย์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h185.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 185,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 185 - ฏ็อบริสตานสังหารเจ้าเมือง, สังหารอะบาน เคาะวาริจญ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h186.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 186,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 186 - ★แบ่งรัชทายาท อามีน/มะอ์มูน/มุอ์ตะมัน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h187.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 187,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 187 - ★★การล่มสลายของวงศ์บัรมัก★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h188.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 188,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 188 - ★ชัยชนะเหนือนิเคโฟรอส+หัจญ์ครั้งสุดท้ายของอัรเราะชีด★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h189.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 189,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 189 - เผาร่างญะอ์ฟัร อัลบัรมะกีย์, ย้ายสู่อัรร็อกเกาะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h190.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 190,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 190 (al-Bidayah ل.10 ص482): ★กบฏรอฟิอ์ บิน ลัยษ์ที่สะมัรกอนด์ (ตีอะลี บิน อีซาแตกพ่าย)★ — เหตุที่ดึงอัรเราะชีดสู่ตะวันออก (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h191.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 191,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 191 (al-Bidayah ل.10 ص486): กบฏษัรวานในอิรักและอบู อันนิดาอ์ในชาม, การสังหารยะซีด บิน มัคลัดใกล้เฏาะรอซูส (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h192.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 192,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 192 (al-Bidayah ل.10 ص488): ฮัรษะมะฮ์จับกุมอะลี บิน อีซา, สงบศึกกับรูม, ★กบฏคุรเราะมียะฮ์ที่อัลญะบัลและอาเซอร์ไบจาน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h193.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 193,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 193 - ★★การเสียชีวิตของฮารูน อัรเราะชีดที่ฏูส★★+ชีวประวัติ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h194.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 194,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 194 - กบฏชาวฮิมศ์+ปราบโดยอับดุลลอฮ์ อัลฮะเราะชีย์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h195.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 195,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 195 - ★จุดเริ่มสงครามกลางเมือง: ฏอฮิรสังหารอะลี บิน อีซา, ฉากอัลอามีนตกปลา★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h196.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 196,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 196 (al-Bidayah ل.10 ص530): มรณกรรม(อบู มุอาวิยะฮ์/อัลวะลีด บิน มุสลิม), อัลอามีนจองจำผู้ตำหนิ, ส่งกองทัพสู่ฮุลวานสู้ฏอฮิร (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h197.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 197,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 197 (al-Bidayah ل.10 ص533): ★การล้อมแบกแดดโดยฏอฮิรและฮัรษะมะฮ์ และความตกต่ำของอัลอามีน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h198.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 198,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 198 (al-Bidayah ل.10 ص535-537): ★★การล่มของแบกแดดและการสังหารมุฮัมมัด อัลอามีน★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h199.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 199,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 199 (al-Bidayah ل.10 ص540-541): อัลฮะซัน บิน สะฮ์ลเป็นเจ้าเมืองอิรัก, ★จุดเริ่มกบฏอะละวีย์ — อิบนุ เฏาะบาเฏาะบาและอบู อัสสะรอยาที่กูฟะฮ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h200.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 200,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 200 (al-Bidayah ل.10 ص542): ★การยึดมักกะฮ์ของอะละวีย์ — ฮุซัยน์ อัลอัฟฏ็อสถอดผ้าคลุมกะอ์บะฮ์และยึดคลัง★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h201.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 201,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 201 - ★อะลี อัรริฎอเป็นรัชทายาท+วงศ์อับบาสตั้งอิบรอฮีม บิน อัลมะฮ์ดีต้าน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h202.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 202,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 202 - ★อิบรอฮีม บิน อัลมะฮ์ดีครองแบกแดดต้านอัลมะอ์มูน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h203.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 203,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 203 - ★การเสียชีวิตของอะลี อัรริฎอที่ฏูส★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h204.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 204,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 204 - ★อัลมะอ์มูนเข้าแบกแดด(สวมเขียว)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h205.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 205,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 205 - ★ฏอฮิรปกครองตะวันออก(ฏอฮิรียะฮ์)+เริ่มศึกบาบัก★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h206.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 206,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 206 - แต่งตั้งผู้ปกครอง, อุทกภัยอัสสะวาด (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h207.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 207,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 207 - กบฏเยเมน, ★มรณกรรมฏอฮิร บิน อัลฮุซัยน์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h208.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 208,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 208 - กบฏอัลฮะซัน บิน อัลฮุซัยน์(กัรมาน), แต่งตั้งเกาะฎี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h209.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 209,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 209 - ★นัศร์ บิน ชะบัษยอมจำนน, บาบักจับแม่ทัพ★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h210.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 210,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 210 - ★จับกุม+อภัยอิบรอฮีม บิน อัลมะฮ์ดี (อัลมะอ์มูน)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h211.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 211,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 211 (al-Bidayah เล่ม 11, ص44): มรณกรรมผู้มีชื่อเสียง รวม ★อับดุรร็อซซาก อัศศ็อนอานี (เจ้าของอัลมุศ็อนนัฟ)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h212.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 212,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 212 (al-Bidayah เล่ม 11, ص46-47): ศึกบาบัก และ ★การที่อัลมะอ์มูนเผยบิดอะฮ์สองอย่าง (มัคลูกของกุรอาน + ตัฟฎีลอะลี)★ — อิบนุ กะษีรประณาม (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h213.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 213,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 213 (al-Bidayah เล่ม 11, ص47): กบฏที่อียิปต์ (อับดุสสลาม/อิบนุ ญะลีส) และการแต่งตั้งอัลมุอ์ตะศิมเป็นเจ้าเมืองชาม (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h214.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 214,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 214 (al-Bidayah เล่ม 11, ص51): ★บาบักสังหารมุฮัมมัด บิน ฮุมัยด์★, อับดุลลอฮ์ บิน ฏอฮิรเลือกครองคุรอซาน (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h215.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 215,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 215 (al-Bidayah เล่ม 11, ص53): ศึกรูมของอัลมะอ์มูน และ ★การแต่งงานของมุฮัมมัด อัลญะวาด (อิมามที่ 9) กับอุมมุลฟัฎล์บุตรีอัลมะอ์มูน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h216.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 216,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 216 (al-Bidayah เล่ม 11, ص55): ★การรุกรานของจักรพรรดิธีโอฟิลอสและศึกรูมของอัลมะอ์มูน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h217.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 217,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 217 - อัลมะอ์มูนปราบกบฏอียิปต์+ศึกรูม (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h218.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 218,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 218 - ★★จุดเริ่มมิห์นะฮ์+มรณกรรมอัลมะอ์มูน★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h219.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 219,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 219 - ★กบฏอะละวีย์มุฮัมมัด บิน อัลกอซิม(อัฏฏอลิกอน)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h220.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 220,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 220 (al-Bidayah เล่ม 11, ص78): พวกซุฏฏ์ถูกเนรเทศและถูกรูมกวาดล้าง, ★การแต่งตั้งอัลอัฟชีนสู้บาบัก อัลคุรเราะมีย์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h221.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 221,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 221 (al-Bidayah เล่ม 11, ص79): ★ศึกระหว่างบุฆา อัลกะบีร/อัลอัฟชีนกับบาบัก★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h222.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 222,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 222 (al-Bidayah เล่ม 11, ص80): ★อัลอัฟชีนพิชิตอัลบัษษ์ เมืองหลวงของบาบัก (จุดเปลี่ยนศึกบาบัก)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h223.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 223,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 223 - ★การประหารบาบัก อัลคุรเราะมีย์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h224.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 224,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 224 (al-Bidayah เล่ม 11, ص90): ★กบฏมาซยาร บิน กอรินที่ฏ็อบริสตาน (เชื่อมโยงกับอัลอัฟชีน)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h225.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 225,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 225 (al-Bidayah เล่ม 11, ص96): ★การประหารมาซยารและคำสารภาพปรักปรำอัลอัฟชีน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h226.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 226,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 226 (al-Bidayah เล่ม 11, ص99): ★การตายของอัลอัฟชีน (พบรูปเคารพและหนังสือมะญูซี — ฝักใฝ่ศาสนาบรรพบุรุษ)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h227.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 227,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 227 - กบฏซุฟยานี, ★สิ้นอัลมุอ์ตะศิม(อัลมุษัมมัน)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h228.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 228,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 228 - อัลวาษิกให้เกียรติอัชนาส, ภัยพิบัติหัจญ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h229.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 229,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 229 - ★การรีดทรัพย์เจ้าหน้าที่โดยอัลวาษิก/อิบนุ อัซซัยยาต★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h230.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 230,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 230 - บนูสุลัยม์ก่อการ, ทัพบุฆาผู้พี่ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h231.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 231,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 231 - ★การพลีชีพของอะหมัด บิน นัศร์ อัลคุซาอี (มิห์นะฮ์)★, ไถ่เชลย (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h232.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 232,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 232 - ★อัลวาษิกเสียชีวิต → อัลมุตะวักกิลขึ้นครอง★, ปราบเผ่าอาหรับ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h233.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 233,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 233 - ★การล่มสลาย/ประหารอิบนุ อัซซัยยาต, อัมพาตอิบนุ อะบีดุอาด★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h234.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 234,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 234 - กบฏอิบนุ อัลบะอีษที่มะร็อนด์, อุบายต่ออีตาค (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h235.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 235,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 235 - ★สังหารอีตาค★, คำวิงวอนอิบนุ อัลบะอีษ, นบีปลอม (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h236.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 236,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 236 - ★ทำลายหลุมศพอัลฮุเซน (กัรบะลาอ์)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h237.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 237,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 237 - กบฏอาร์เมเนีย, ★ล่มสลายอิบนุ อะบีดุอาด + ฟื้นฟูซุนนะฮ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h238.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 238,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 238 - ★เผาตัฟลีส, ปล้นดิมยาฏ (แฟรงก์)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h239.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 239,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 239 - ★กฎฆิยาร์ต่ออะฮ์ลุซซิมมะฮ์★, เนรเทศอะลี บิน อัลญะฮ์ม (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h240.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 240,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 240 - ★เสียชีวิต+ชีวประวัติอะหมัด บิน อะบีดุอาด★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h241.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 241,
+      "events": 7,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 241 - ★มรณกรรมอิหม่ามอะหมัด บิน หัมบัล★, กบฏฮิมศ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h242.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 242,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 242 - แผ่นดินไหวใหญ่ (กูมิส), โรมันปล้นอัลญะซีเราะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h243.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 243,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 243 - ★อัลมุตะวักกิลมุ่งดิมัชก์★, เสียชีวิตอิบรอฮีม บิน อัลอับบาส (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h244.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 244,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 244 - ★ทดลองย้ายเมืองหลวงดิมัชก์ล้มเหลว, หอกของท่านนบี ﷺ★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h245.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 245,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 245 - อัลมาฮูซะฮ์, ★แผ่นดินไหวใหญ่ (อันฏอกียะฮ์/ลาษิกียะฮ์)★, น้ำพุมักกะฮ์แห้ง (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h246.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 246,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 246 - อัลมาฮูซะฮ์, ไถ่เชลย, ★ฝนเลือดที่บัลค์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h247.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 247,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 247 - ★★ลอบสังหารอัลมุตะวักกิล → อัลมุนตะศิร (อนาธิปไตยสามัรรออ์)★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h248.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 248,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 248 - ★มรณกรรมอัลมุนตะศิร → อัลมุสตะอีน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h249.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 249,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 249 - ★หายนะมะลัฏยะฮ์, ฟิตนะฮ์มหาชนต่อต้านเติร์ก★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h250.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 250,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 250 - ★การปฏิวัติ/สังหารยะห์ยา บิน อุมัร อัลอะละวี★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h251.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 251,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 251 - ★สงครามกลางเมืองอัลมุสตะอีน vs อัลมุอ์ตัซ, ล้อมแบกแดด★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h252.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 252,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 252 - ★อัลมุสตะอีนสละราชย์ → อัลมุอ์ตัซ★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h253.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 253,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 253 - ปราบกบฏอับดุลอะซีซ บิน อะบีดุลัฟ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h254.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 254,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 254 - สังหารบุฆา อัชชะรอบี, ★อะหมัด บิน ฏูลูน→อียิปต์ (ฏูลูนิด)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h255.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 255,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 255 - ★ศ็อฟฟารีด, สละราชย์อัลมุอ์ตัซ→อัลมุฮ์ตะดี, ทรัพย์เกาะบีหะฮ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h256.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 256,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 256 - ★สังหารอัลมุฮ์ตะดี→อัลมุอ์ตะมิด, กบฏซันจ์ล้อมบัศเราะฮ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h257.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 257,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 257 - ★ศ็อฟฟารีด/อัลมุวัฟฟัก, สงครามซันจ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h258.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 258,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 258 - ★อัลมุวัฟฟัก/ซันจ์, ประหารยะห์ยา อัลบะห์รอนี★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h259.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 259,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 259 - สงครามซันจ์ (อับดุรเราะห์มาน บิน มุฟลิห์), ต้านโรมันที่มะลัฏยะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h260.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 260,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 260 - ★ทุพภิกขภัยใหญ่, ซันจ์สังหารอะลี บิน ซัยด์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h261.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 261,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 261 - ★การแตกแยก: อิบนุ วาศิล, นัศร์ อัสสามานี (สามานิด), ยะอ์กูบ, ซันจ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h262.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 262,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 262 - ★ยุทธการดัยร์ อัลอะกูล (อัลมุวัฟฟัก vs ยะอ์กูบ)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h263.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 263,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 263 - สงครามแพร่กระจาย, สังหารหมู่ซันจ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h264.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 264,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 264 - ★มรณกรรมมูซา บิน บุฆา, อัลมุวัฟฟักครอบงำเคาะลีฟะฮ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h265.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 265,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 265 - ★อิบนุ ฏูลูนรวมชาม, ยุทธการมาดมูดัก (ซันจ์)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h266.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 266,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 266 - อะซาตะกีน/อัรร็อยย์, ★อิบนุ อัลอะษีร: รัฐอ่อนแอ★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h267.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 267,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 267 - ★จุดพลิกสงครามซันจ์: อะบุลอับบาส/อัลมุวัฟฟักทำลายอัลมะนีอะฮ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h268.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 268,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 268 - ★ปิดล้อมเมืองหลวงซันจ์: แปรพักตร์ญะอ์ฟัร อัสสัจญาน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h269.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 269,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 269 - ★ยึดเมืองหลวงซันจ์, ศอหิบุซซันจ์หนี★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h270.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 270,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 270 - ★★สังหารศอหิบุซซันจ์ = จบกบฏซันจ์★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h271.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 271,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 271 - อัมร์ บิน อัลลัยษ์ถูกปลด, ★ยุทธการอัฏเฏาะวาฮีน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h272.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 272,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 272 - ★กวาดล้างผู้นำซันจ์, ฮัมดาน บิน ฮัมดูน (ฮัมดานิด)★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h273.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 273,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 273 - อิบนุ อะบิสซาจยึดโมซูล (ฏูลูนิด), อัลมุวัฟฟักจองจำลุอ์ลุอ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h274.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 274,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 274 - อัลมุวัฟฟัก vs อัมร์ บิน อัลลัยษ์, ★ศิดดีกปล้นสามัรรออ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h275.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 275,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 275 - คุมาเราะวัยฮ์ vs อิบนุ อะบิสซาจ, ★อัลมุวัฟฟักจองจำบุตร★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h276.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 276,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 276 - อัมร์/ตำรวจแบกแดด, ฮารูน อัชชารีล้อมโมซูล, น้ำหลากจมผู้แสวงบุญเยเมน (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h277.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 277,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 277 - บาซมาร์/คุมาเราะวัยฮ์, ยูซุฟ บิน ยะอ์กูบ/มะซอลิม (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h278.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 278,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 278 - ★มรณกรรมอัลมุวัฟฟัก★, ดาวหาง, น้ำไนล์เหือด (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h279.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 279,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 279 - ★อัลมุอ์ตะฎิดเป็นรัชทายาท, คำสั่งห้ามปรัชญา/โหร★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h280.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 280,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 280 - ★อัลมุอ์ตะฎิดประหารชัยละมะฮ์, ปราบบนูชัยบาน★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h281.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 281,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 281 - ★ทุพภิกขภัยกินคน, มาริดีน, ก็อฏรุนนะดาสมรสอัลมุอ์ตะฎิด★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h282.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 282,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 282 - ★ก็อฏรุนนะดาเข้าหอ, ปฏิรูปนัยรูซ★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h283.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 283,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 283 - ★ฮารูน อัลคอริญีถูกตรึง, ฮัมดานิด, ฟัตวามรดก★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h284.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 284,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 284 - ★ความพยายามสาปแช่งมุอาวิยะฮ์ (วะซีรห้าม)★, ศีรษะรอฟิอ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h285.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 285,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 285 - ปล้นผู้แสวงบุญ, ★พายุ/หินตก/ลูกเห็บ + ดิจญ์ละฮ์ท่วม★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h286.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 286,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 286 - ยึดอามิด/ฏูลูนิด, ของกำนัลอัมร์ บิน อัลลัยษ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h287.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 287,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 287 - ★★เกาะรอมิเฏาะฮ์ชนะอัลอับบาส, สังหารมุฮัมมัด บิน ซัยด์★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h288.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 288,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 288 - ★ปีภัยพิบัติ: ร็อกเกาะฮ์/โรคระบาด/แผ่นดินไหวอัรดะบีล★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h289.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 289,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 289 - ★เกาะรอมิเฏาะฮ์ 'ฟาฏิมียีน' โจมตีดิมัชก์, ประหารอะบุลฟะวาริส★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h290.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 290,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 290 - ★สังหารยะห์ยา/อัชชัยค์, อัลฮุเซน บิน ซักรอวัยฮ์ก่อการ★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h291.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 291,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 291 - ★★ประหารอัลฮุเซน บิน ซักรอวัยฮ์ (จบกบฏเกาะรอมิเฏาะฮ์ในชาม)★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h292.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 292,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 292 - ★★สิ้นราชวงศ์ฏูลูนิด อัลมุกตะฟียึดอียิปต์★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h293.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 293,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 293 - ★เกาะรอมิเฏาะฮ์บุกฏ็อบะรียะฮ์/ฮีต★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h294.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 294,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 294 - ★★สังหารหมู่ผู้แสวงบุญ + สังหารซักรอวัยฮ์★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h295.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 295,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 295 - ★อิสมาอีล สามานิดเสียชีวิต, ★อัลมุกตะฟี→อัลมุกตะดิร (เด็กสุด)★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h296.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 296,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 296 - ★★รัฐประหารอิบนุลมุอ์ตัซ (เคาะลีฟะฮ์วันเดียว)★★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h297.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 297,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 297 - ทัพฤดูร้อน/ไถ่เชลย, ★น้ำท่วมมักกะฮ์★ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h298.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 298,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 298 - อัลกอซิม/เชลย, ของกำนัลสามานิด, นอกรีต (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h299.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 299,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 299 - ดาวหาง, โรคระบาดฟาริส, ปลดอิบนุล ฟุรอต (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h300.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 300,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 300 - ★★ก่อตั้งรัฐฟาฏิมียะฮ์ (อุบัยดี)★★ ปีสุดท้าย (Rule 89)",
+      "reviewStatus": "DRAFT"
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all **85 rules (ข้อ 1–85), plus sub-rules 12.1/12.2 and House-Style S1–S8 (+ placeholders S9/S10 → Rules 76/77, linter pending)**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all **90 rules (ข้อ 1–90), plus sub-rules 12.1/12.2 and House-Style S1–S8 (+ placeholders S9/S10 → Rules 76/77, linter pending)**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 >
 > **★ Rule 71 (Child-Safety Override) supersedes every fidelity/coverage rule, for every agent. Read it first. ★**
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (85 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (90 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -200,7 +200,7 @@
 
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 85 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 90 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -485,7 +485,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 ---
 
-## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–85, 90)
+## หมวดที่ 14: ความปลอดภัยเด็ก · ความครบถ้วนเนื้อหา · Normalize ทับศัพท์ · ความมั่นคง · คุณภาพคำแปล/อักขระ/โครงสร้าง (Section 14 — Rules 71–90)
 
 * **กฎข้อที่ 71:** **★[ความปลอดภัยเด็ก — Child-Safety Override · เหนือกฎความครบถ้วนทุกข้อ · บังคับกับทุกเอเยนต์]★** หากต้นฉบับจาก Drive หรือเนื้อหาใดๆ มีสาระที่ทำให้**ผู้เยาว์เป็นวัตถุทางเพศ (sexualizes a minor)** มาตรการนี้อยู่เหนือกฎ 1/49/56 และเกตทุกชนิด ให้ปฏิบัติโดยเด็ดขาด:
   1. **PASS-with-flag (ตัดทิ้ง ไม่ใช่ปัดตก):** ถือว่าบทความ "ผ่าน" ได้โดย**ตัด (drop) เฉพาะส่วนที่ละเมิดออกทั้งหมด** แล้วตั้ง **child-safety flag** กำกับ — ส่วนที่ตัดนี้**ไม่นับในตัวหารของ coverage (กฎ 72)** การตัดตามกฎนี้ไม่ถือว่า coverage ตก
@@ -519,7 +519,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **Branch protection / ruleset:** push ตรง `main` ถูกบล็อก (503) ทุกการเปลี่ยนแปลงต้องผ่าน PR → preview → QA/byte-QC → **owner-merge**; **เอเยนต์ห้าม merge `main`, ห้าม Purge Everything** (Custom Purge เฉพาะ URL หลัง merge) สอดคล้องกฎ 66 + Push & safety discipline · บทที่ติด child-safety flag (กฎ 71) ห้าม merge จนกว่า One ตัดสิน
   - รายละเอียดทั้งหมด: **`docs/SECURITY.md`**
 
-* **กฎข้อที่ 75:** **[ความถูกต้องของคำแปล · Translation Accuracy]** คำแปลไทยของตัวบทอาหรับทุกชนิด (`.ar-translation`, คำแปลอายะฮ์/หะดีษ, คำแปลคำพูดปราชญ์) ต้องตรวจ **ความถูกต้องเชิงความหมาย (semantic)** เทียบกับตัวบทอาหรับต้นทาง ไม่ใช่แค่ความมี/ความครบ (presence/coverage) — **แยกขอบเขตจากกฎ 72** (72 วัดว่าเนื้อหาครบ; 75 วัดว่าแปลถูก) · แปลผิด / ความหมายตกหล่น = **FLAG** · ให้ใช้คำแปลไทยเชิงวิชาการที่เป็นที่ยอมรับ; เมื่อไม่แน่ใจให้ **FLAG ขอเจ้าของ** ห้ามเดา
+* **กฎข้อที่ 75:** **[ความถูกต้องของคำแปล · Translation Accuracy]** คำแปลไทยของตัวบทอาหรับทุกชนิด (`.ar-translation`, คำแปลอายะฮ์/หะดีษ, คำแปลคำพูดปราชญ์) ต้องตรวจ **ความถูกต้องเชิงความหมาย (semantic)** เทียบกับตัวบทอาหรับต้นทาง ไม่ใช่แค่ความมี/ความครบ (presence/coverage) — **แยกขอบเขตจากกฎ 72** (72 วัดว่าเนื้อหาครบ; 75 วัดว่าแปลถูก) · แปลผิด / ความหมายตกหล่น = **FLAG** · ให้ใช้คำแปลไทยเชิงวิชาการที่เป็นที่ยอมรับ; เมื่อไม่แน่ใจให้ **FLAG ขอเจ้าของ** ห้ามเดา · **★คำหลายความหมายตามบริบท (polysemy)** ต้องแปลตามบริบท ห้ามแปลตรงตัวผิดบริบท เช่น **قام** (=ลุกขึ้น/ดำรงตำแหน่ง/บริหาร/ยืน), **خرج** (=ออก/ลุกฮือก่อกบฏ), **أقام** (=พำนัก/จัดตั้ง), **الصائفة** (=ทัพฤดูร้อน ไม่ใช่ "ราชยา"), **بايع** (=ให้สัตยาบัน) — ขยายตารางนี้เมื่อพบคำใหม่
 
 * **กฎข้อที่ 76:** **[ห้ามอักขระพิเศษในร้อยแก้วไทย · No Special Symbols in Thai Prose]** ร้อยแก้วในเนื้อบทความ (`.article-body`) **ห้ามมี `#`, `|`, `@`** หรืออักขระมาร์กอัป/ควบคุมอื่น (มักหลุดมาจาก Markdown / การ paste) เว้นแต่เจ้าของอนุมัติ · อัญประกาศโค้ง “ ” ‘ ’ และเครื่องหมายวรรคตอนไทยมาตรฐานยังใช้ได้ตามปกติ · (จะบังคับด้วย linter ภายหลัง — เป็นงานแยก ดู S9)
 
@@ -563,6 +563,34 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **CI gate:** ทุก PR ต้องผ่าน `.github/workflows/ci.yml` (JSON valid, Arabic-ortho, gitleaks) ก่อน owner-merge
   *(EN: scoped+expiring fine-grained PATs, never commit secrets; render external/JSON data via textContent — never innerHTML; vendored libs pinned + SRI + self-hosted; every PR must pass CI before owner-merge.)*
 
+* **กฎข้อที่ 86:** **[ทะเบียนล็อกการทับศัพท์ · Transliteration Glossary Lock]** งาน **ดูดตำราคลาสสิกจำนวนมาก** (เช่น Time Machine ingestion) ต้องล็อกการทับศัพท์ด้วย **ไฟล์ทะเบียนกลาง (translation memory)** ไม่ใช่สะกดลอยตามใจแต่ละรอบ/แต่ละ agent:
+  - **ที่ตั้ง:** `pages/tools/timemachine-data/glossary.json` — schema `persons/places/books → {id, arabic, canonicalThai, variantsFound[]}`
+  - ทุกการแปลต้องสะกดชื่อปราชญ์/สถานที่/ตำราตรงกับ `canonicalThai` ของทะเบียน · ชื่อใหม่ **append** เข้าทะเบียน · เมื่อหลาย agent แปลขนาน ทุกตัวถือ glossary เดียวกัน → สะกดตรงกันทั้งโปรเจกต์
+  - รวมหลักที่ล็อกแล้วของ **กฎ 52** (อิบนุ/อบู เว้นวรรค, อิบนุล/อบุล), **73** (corpus-dominant), **82** (สระ/ตัวสะกด), **12.1/12.2** เป็นโครงไฟล์เดียวสำหรับ bulk-ingest
+  - **อาหรับ = reference byte-exact เท่านั้น** ห้ามแก้ (กฎ 60/7/8) · ไม่แน่ใจรูปทับศัพท์ → **FLAG ไม่เดา** (กฎ 52/3); บันทึก variant ที่พบใน `variantsFound`
+  *(EN: bulk classical-text ingestion must lock transliteration via a central glossary/translation-memory at pages/tools/timemachine-data/glossary.json; every Thai spelling of a person/place/title must match canonicalThai, new names appended; parallel translators share one glossary so names are identical project-wide; Arabic stays byte-exact reference (Rules 60/7/8); unsure → FLAG, never guess (Rules 52/3). Folds Rules 52/73/82/12.1/12.2 into a file lock for ingestion.)*
+
+* **กฎข้อที่ 87:** **[ความร่วมมือหลายเอเยนต์ + ประตูตรวจก่อน push · Multi-agent Collaboration & Push-gate]** เมื่อมีเอเยนต์/IDE มากกว่าหนึ่งทำงานบนรีโปเดียวกัน (เช่น Claude + Antigravity):
+  - **GitHub feature branch = source of truth** (ไม่ผูกกับ local เครื่องใด) · ส่งงานให้อีกฝั่งเห็นด้วยการ **push สาขา** ไม่ใช่ merge · ทุก clone ตั้ง remote เดียวกัน
+  - **แบ่งบทบาทชัด:** เอเยนต์ผู้เขียน (author) แก้/ใส่ข้อมูล + **commit** (ไม่ push เอง) · เอเยนต์ผู้คุมประตู (gate) **pull → ตรวจ → push** · ★ต้อง `git pull` ก่อนแก้ทุกครั้งกัน diverge
+  - **★ประตูตรวจก่อน push (หน้าที่ gate-agent):** ตรวจ byte-exact (กฎ 60) + glossary lock (กฎ 86) + house-style (S1–S8/กฎ 5) + ความหมาย (กฎ 75) · push ได้แม้พบ violation (เพราะอยู่บนสาขาเพื่อรีวิว ไม่ใช่ main) แต่ต้อง **FLAG ทันที** ไม่ปล่อยเงียบ
+  - **ห้ามเอเยนต์ใด merge `main` เด็ดขาด** (ย้ำกฎ 74) — เฉพาะ One · บทที่ติดกฎ 71 ห้าม push ขึ้นสาขาที่สร้าง preview จนกว่า One ตัดสิน (กฎ 84)
+  *(EN: when multiple agents/IDEs share one repo, the GitHub feature branch is the source of truth (not any local clone); work is shared by PUSH, never merge. Split roles: author-agent edits + commits (does NOT push); gate-agent pulls → verifies → pushes (always git pull before editing to avoid divergence). The push-gate re-checks byte-exact (R60), glossary lock (R86), house-style (S1-S8/R5), and meaning (R75) — push is allowed even with a finding (it lives on the branch for review, not main) but must be FLAGGED, never silently passed. No agent merges main (reinforces R74) — only One; Rule-71 content must not reach a preview-creating branch until One decides (R84).)*
+
+* **กฎข้อที่ 88:** **[ทะเบียนแหล่ง + ประตู byte-exact สำหรับงานดูดหลายตำรา · Source Registry & Byte-exact Ingestion Gate]** ต่อยอดกฎ 86 สำหรับ Time Machine / งานดูดหลายตำรา:
+  - **registry กลางของแหล่ง** `pages/tools/timemachine-data/sources.json` แยก **2 ชนิดตามหน่วยข้อมูล**: `annal` (พงศาวดารรายปี → ผูกกับ **เหตุการณ์** `accounts[]`/แท็บ) และ `tarajim` (ตำราชีวประวัติ/ฏอบะกอต → ผูกกับ **บุคคล** `glossary.persons[].tarajim[]`/ลิงก์) · เพิ่มแหล่งใหม่ (อิบนุลอะษีร/อิบนุลเญาซีย์/สิบฏ์/ซิยัร/ฏอบะกอต ฯลฯ) = เพิ่ม **1 entry** ใน registry (ดู `DATA-MODEL.md`) renderer อ่านชื่อ/ลิงก์อัตโนมัติ
+  - **★ทุก `arabicExcerpt` ที่เพิ่ม/แก้ ต้องผ่าน byte-exact gate ก่อน push:** เป็น **substring ต่อเนื่อง** ของแหล่งที่ล็อก (re-fetch เทียบ) — **โครงสร้าง QC ผ่าน (`scripts/tm_qc.py`) ≠ byte-exact ผ่าน** ต้องตรวจแยกด้วยการ re-fetch · ห้าม **เย็บข้อความคนละตำแหน่งมาต่อกัน** (non-contiguous = ผิดกฎ 60) · ดึงด้วย `tm_lib.extract()` ที่การันตี substring เสมอ
+  - บันทึก **ความต่างข้ามแหล่ง** (วันที่/จำนวน/สถานที่ที่ตำราระบุต่างกัน) ในตัวคำแปล = คุณค่าหลักของหลายสำนวน
+  *(EN: extends R86 for the Time Machine / multi-book pipeline. A central registry `sources.json` tags every source as `annal` (event-scoped → accounts/tabs) or `tarajim` (person-scoped → glossary.tarajim/links); add a source = one registry entry (see DATA-MODEL.md); the renderer reads names/links from it. ★Every added/edited arabicExcerpt must pass a byte-exact gate before push: it must be a CONTIGUOUS substring of the locked source (re-fetch to verify) — a structural QC pass (scripts/tm_qc.py) is NOT a byte-exact pass; verify separately by re-fetch. Never stitch non-contiguous fragments (= R60 violation); extract via tm_lib.extract() which guarantees a substring. Record cross-source DIFFERENCES (dates/numbers/places that the chronicles report differently) in the translation — the core value of multiple accounts.)*
+
+* **กฎข้อที่ 89:** **[แปลตรงจากตำราเต็มท่อน ไม่ใช่คำบอกเล่า · Full Source Translation, not Summary]** เนื้อหา Time Machine ทุกชิ้นต้องเป็น **คำแปลตรงจากตัวบทตำราจริง (อัลบิดายะฮ์ ฯลฯ) ครบทุกประโยค** — ไม่ใช่การสรุป/เล่าเองว่า "ปีนั้นเกิดอะไร" (เช่น "ปี 1 ท่านนบีฮิจเราะฮ์..." แบบไม่มีแหล่ง = ผิด เพราะกลายเป็นเรื่องเล่า ไม่ใช่คำแปล):
+  - **ต้องมีแหล่งอ้างอิงจริงเสมอ** (เล่ม/หน้า/url) — ไม่มีแหล่ง = ห้ามใส่ · หัวใจคือ "ยกตำราทั้งกองมาวางเรียงแล้วแปล"
+  - **`arabicExcerpt` = อาหรับล้วน** ผ่าน `tm_lib.clean()` — **ห้ามมี HTML/chrome ของ Shamela** (`<span>`/`<a class="btn_tag">`/`<hr>`), **ห้ามมีเชิงอรรถ (`hamesh`)/ปุ่มคัดลอกปน** · เป็น substring ต่อเนื่อง byte-exact (กฎ 60/88)
+  - **`detail` = คำแปลไทยเต็มของท่อนนั้น 1:1** ทุกประโยค (ไม่ย่อ) · ความหมายแม่นยำตามกฎ 75 (قام/خرج/ظهور แปลตามบริบท ไม่ใช่ "ยืน")
+  - **★เคร่ง R5 กับมนุษย์ทุกคนรวมบรรดานบี ﷺ★:** ใช้คำกลาง — `ประสูติ`→`ถือกำเนิด`, `สิ้นพระชนม์`→`เสียชีวิต/วะฟาต` · ราชาศัพท์ (`พระองค์`/`ทรง`) ใช้ได้**เฉพาะกับอัลลอฮ์** (ในคุฏบะฮ์/อายะฮ์) เท่านั้น
+  - persons/places ทุกตัวต้องอยู่ใน glossary ก่อนอ้าง (กฎ 86)
+  *(EN: every Time Machine entry must be a COMPLETE faithful translation of the actual source passage (al-Bidayah etc.), sentence by sentence — never a self-narrated summary of "what happened that year"; a line with no real citation becomes hearsay, not a translation, and is forbidden. arabicExcerpt = pure Arabic via tm_lib.clean() (NO Shamela HTML/chrome/footnote(hamesh)/copy-buttons), a byte-exact contiguous substring (R60/88). detail = full 1:1 Thai translation of that excerpt, semantically accurate (R75: render قام/خرج/ظهور by context, not "stand"). Strict R5 for ALL humans incl. prophets ﷺ — use neutral words (ถือกำเนิด/เสียชีวิต-วะฟาต), reserve royal register (พระองค์/ทรง) for Allah ONLY (khutbah/Qur'an). Every person/place must be glossary-registered before use (R86).)*
+
 * **กฎข้อที่ 90:** **[Block Alignment Standard — มาตรฐานการจัดแนวบล็อก]** การจัดแนว (alignment) ของทุกบล็อกตัดสินจาก **ชนิดเนื้อหา + จำนวนอักขระ (char-count)** ไม่ใช่จำนวนบรรทัดที่ render (ยกเลิก logic `is-1line` แบบนับ `scrollHeight/lineHeight` เดิมทั้งหมด) · *(หมายเหตุลำดับเลข: R86–R89 เป็นข้อเสนอที่ยังไม่ผนวกใน `docs/CONSISTENCY-AUDIT.md` — รักษาหมายเลข R90 ตามที่กองบรรณาธิการกำหนดสำหรับมาตรฐานการจัดแนว)*
   - **ร้อยแก้วไทย** ใน body → **ชิดซ้าย** · หัวข้อ `.article-h2` → **ชิดซ้าย** หนา มีเส้นใต้
   - **อาหรับปราชญ์** `.ar-quote` / `.ar-feature` → **ชิดขวาเสมอ** · **หะดีษ** `.hadith-block .block-ar` → ชิดขวา (เกิน 60 ตัวอักษรอาหรับ) / **กึ่งกลาง** (≤ 60)
@@ -575,7 +603,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 
 ---
 
-## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–85, 90)
+## Section 14: Child Safety · Content Coverage · Transliteration Normalization · Security · Translation/Symbol/Structure Quality (Rules 71–90)
 
 * **Rule 71:** **★[Child-Safety Override · supersedes every fidelity/coverage rule · binds every agent]★** If any Drive source or other content sexualizes a minor, this measure overrides Rules 1/49/56 and every gate. Act decisively:
   1. **PASS-with-flag (drop, do not reject):** the article may be considered "passing" by **dropping only the offending span entirely** and setting a **child-safety flag** — the dropped span is **excluded from the Rule 72 coverage denominator**; a drop under this rule does not lower coverage.
@@ -608,7 +636,7 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **Branch protection / ruleset:** direct push to `main` is blocked (503); every change goes through PR → preview → QA/byte-QC → **owner-merge**; **agents never merge `main` and never Purge Everything** (Custom Purge by URL only, after merge), consistent with Rule 66 + Push & safety discipline. Child-safety-flagged articles (Rule 71) must not be merged until One decides.
   - Full details: **`docs/SECURITY.md`**
 
-* **Rule 75:** **[Translation Accuracy]** Every Thai rendering of an Arabic passage (`.ar-translation`, aya/hadith translations, scholar-quote translations) must be checked for **SEMANTIC correctness** against the Arabic source, not merely presence/coverage — **distinct from Rule 72** (72 measures completeness; 75 measures correctness). Mistranslation or dropped meaning = **FLAG**. Prefer established scholarly Thai renderings; when unsure, **FLAG for the owner** — never guess.
+* **Rule 75:** **[Translation Accuracy]** Every Thai rendering of an Arabic passage (`.ar-translation`, aya/hadith translations, scholar-quote translations) must be checked for **SEMANTIC correctness** against the Arabic source, not merely presence/coverage — **distinct from Rule 72** (72 measures completeness; 75 measures correctness). Mistranslation or dropped meaning = **FLAG**. Prefer established scholarly Thai renderings; when unsure, **FLAG for the owner** — never guess. **★Context-dependent (polysemous) words** must be rendered by context, never literally out of context — e.g. **قام** (rose up / took office / managed / stood), **خرج** (went out / rebelled), **أقام** (stayed / established), **al-ṣāʾifa** (the summer campaign, not "ราชยา"), **bāyaʿa** (gave allegiance); extend this list as new cases appear.
 
 * **Rule 76:** **[No Special Symbols in Thai Prose]** Article body prose (`.article-body`) must not contain **`#`, `|`, `@`**, or other markup/control characters (common Markdown/paste leakage) unless owner-approved. Curly quotes “ ” ‘ ’ and standard Thai punctuation remain allowed. (Enforced later by linter — separate task; see S9.)
 
@@ -648,6 +676,12 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   - **DOM (stored-XSS):** data from JSON / external sources / users must be rendered via `textContent` or DOM APIs — **never `innerHTML` with untrusted data**.
   - **Vendored libs:** pin by filename + **SRI (`integrity` sha384)** + `MANIFEST.sha256`; `script-src 'self'` only, no external CDN (SRI requires Cloudflare Auto-Minify/Rocket Loader OFF).
   - **CI gate:** every PR must pass `.github/workflows/ci.yml` (JSON validity, Arabic orthography, gitleaks) before owner-merge.
+
+* **Rule 86:** **[Transliteration Glossary Lock]** Bulk classical-text ingestion (e.g. the Time Machine pipeline) must lock transliteration via a central glossary / translation-memory file: `pages/tools/timemachine-data/glossary.json` (schema `persons/places/books → {id, arabic, canonicalThai, variantsFound[]}`). Every Thai spelling of a scholar/place/title MUST match the glossary's `canonicalThai`; new names are appended there (never spelled ad-hoc per run/agent); parallel translators all share one glossary so names are identical project-wide. Folds the locked precedents of Rules 52 (Ibn/Abu spacing; Ibn al-/Abu al-), 73 (corpus-dominant), 82 (vowel/spelling), 12.1/12.2 into one file lock for ingestion. Arabic stays byte-exact reference only (Rules 60/7/8). Unsure of a form → FLAG, never guess (Rules 52/3); record observed variants in `variantsFound`.
+
+* **Rule 87:** **[Multi-agent Collaboration & Push-gate]** When more than one agent/IDE works the same repo (e.g. Claude + Antigravity): the **GitHub feature branch is the source of truth** (not any local clone) — share work by **pushing the branch, never merging**; all clones use the same remote. Split roles: the **author-agent** edits/ingests + **commits (does NOT push)**; the **gate-agent** **pulls → verifies → pushes** (★always `git pull` before editing to avoid divergence). The **push-gate** re-checks byte-exact (R60), glossary lock (R86), house-style (S1-S8/R5), and meaning (R75); a push is allowed even with a finding (it lives on the branch for review, not main) but **must be FLAGGED, never silently passed**. **No agent merges `main`** (reinforces R74) — only One; Rule-71-flagged content must not reach a preview-creating branch until One decides (R84).
+
+* **Rule 88:** **[Source Registry & Byte-exact Ingestion Gate]** Extends R86 for the Time Machine / multi-book pipeline. A central registry `pages/tools/timemachine-data/sources.json` tags every source by data granularity: `annal` (year-chronicle → event-scoped `accounts[]`/tabs) or `tarajim` (biographical dictionary → person-scoped `glossary.persons[].tarajim[]`/links). Adding any source (Ibn al-Athir / Ibn al-Jawzi / Sibt ibn al-Jawzi / al-Dhahabi's Siyar / al-Subki's Tabaqat, …) = **one registry entry** (see `DATA-MODEL.md`); the renderer reads names/links from it. **★Every added/edited `arabicExcerpt` must pass a byte-exact gate before push:** it must be a **CONTIGUOUS substring** of the locked source (re-fetch to verify) — a structural QC pass (`scripts/tm_qc.py`) is **NOT** a byte-exact pass; verify separately by re-fetch. **Never stitch non-contiguous fragments** (= R60 violation); extract via `tm_lib.extract()` which guarantees a substring. Record cross-source **differences** (dates/numbers/places the chronicles report differently) in the translation — the core value of multiple accounts.
 
 * **Rule 90:** **[Block Alignment Standard]** Alignment of every block is decided by **content type + character count**, NOT by rendered line count (the old `is-1line` `scrollHeight/lineHeight` logic is retired entirely). *(Numbering note: R86–R89 are still proposals in `docs/CONSISTENCY-AUDIT.md`, not yet merged into this list; the alignment standard keeps the editor-assigned number R90.)*
   - **Thai body prose** → **left**; headings `.article-h2` → **left**, bold, underlined.
