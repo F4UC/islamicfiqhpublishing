@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "hijriYear": 62,
+    "ceYear": 682,
+    "ceSpan": "682",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 62 (เล่ม 13): คณะผู้แทนมะดีนะฮ์ - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 62"
+  },
+  "events": [
+    {
+      "id": "bidayah-h62-001",
+      "book": "al-bidayah",
+      "hijriYear": 62,
+      "ceYear": 682,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 62: คณะผู้แทนชาวมะดีนะฮ์เดินทางไปเข้าเฝ้ายะซีด",
+      "persons": [
+        "yazid-b-muawiya"
+      ],
+      "places": [
+        "medina"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(62) มีการกล่าวว่า คณะผู้แทนจากชาวมะดีนะฮ์ได้เดินทางมา(เข้าเฝ้ายะซีด)",
+          "arabicExcerpt": "قدم وفد المدينة النبوية على يزيد بن معاوية، فأكرمهم وأجازهم بجوائز سنيّة، ثم عادوا من عنده بالجوائز فخلعوه وولَّوا عليهم عبد اللَّه بن حنظلة الغَسِيل، فبعث إليهم يزيد جندًا في السنة الآتية [إلى المدينة، فكانت وقعة الحرَّة على ما سنبيِّنه في التي بعدها إن شاء اللَّه تعالى",
+          "loc": "เล่ม 13 หน้า 302",
+          "url": "https://shamela.ws/book/30097/4063",
+          "page": 302
+        }
+      ],
+      "confidence": "medium",
+      "reviewFlags": [
+        "เนื้อหาสั้น-อาจขยายภายหลัง"
+      ]
+    }
+  ]
+}
