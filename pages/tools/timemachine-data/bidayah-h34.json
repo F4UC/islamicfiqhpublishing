@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 34,
+    "ceYear": 654,
+    "ceSpan": "654",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 34 (al-Bidayah เล่ม 12): ความไม่พอใจอุษมาน - Rule 89. ★offset vol12: pid=น.+3146★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ",
+      "มะฆอซี · ฟุตูหาต",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 34"
+  },
+  "events": [
+    {
+      "id": "bidayah-h34-001",
+      "book": "al-bidayah",
+      "hijriYear": 34,
+      "ceYear": 654,
+      "order": 1,
+      "type": "event",
+      "cat": "การเมือง",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 34: จุดเริ่มความไม่พอใจอุษมาน - ฝ่ายต่อต้านชาวกูฟะฮ์ติดต่อกัน ถูกเนรเทศไปฮิมศ์",
+      "persons": [
+        "uthman-b-affan",
+        "abd-al-rahman-b-khalid"
+      ],
+      "places": [
+        "al-kufa",
+        "homs"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "และในปีนี้(ปีที่สามสิบสี่) บรรดาผู้ที่หันเหออกจาก(ไม่พอใจ)อุษมานได้ติดต่อกันทางจดหมาย ส่วนใหญ่ของพวกเขาเป็นชาวกูฟะฮ์ ซึ่งถูกเนรเทศจากกูฟะฮ์ ขณะที่พวกเขาอยู่ภายใต้การดูแลของอับดุรเราะห์มาน บิน คอลิด บิน อัลวะลีด ที่เมืองฮิมศ์",
+          "arabicExcerpt": "وفي هذه السنة تكاتب المنحرفون عن عثمان وكان جمهورهم من أهل الكوفة - وهم في معاملة عبد الرحمن بن خالد بن الوليد بحمص منفيون عن الكوفة",
+          "loc": "เล่ม 12 หน้า 309",
+          "url": "https://shamela.ws/book/30097/3455",
+          "page": 309
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}
