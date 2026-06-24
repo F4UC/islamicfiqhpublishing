@@ -741,6 +741,76 @@ var TM_CHRONICLES = {};  /* chronicle id -> {nameThai, book, ...}; filled by the
 
 let tmObserver = null;
 
+/* ─────────────────────────────────────────────────────────────────────────
+ * Lazy-load shared state (R86 / Phase B1 — see docs/SCALING-ROADMAP.md).
+ * BASE / seen / indexGlossary are hoisted OUT of the former bootstrap IIFE
+ * (the "breaking seam") so the per-year loaders below can reach them.
+ * ───────────────────────────────────────────────────────────────────────── */
+var BASE = './timemachine-data/';
+var seen = {};
+/* Seed `seen` from inline EVENTS so inline events are never double-merged. */
+EVENTS.forEach(function (e) { if (e.id) seen[e.id] = true; });
+
+let SHARD_INDEX = [];      /* = manifest.shards */
+let GMAP = {};             /* = indexGlossary(glossary) */
+const YEAR_LOADED = {};    /* hijriYear -> true once its shard merged */
+let ALL_LOADED = false;    /* true after a search-triggered full load */
+const YEAR_PENDING = {};   /* hijriYear -> true while its shard fetch is in flight */
+
+/* glossary id -> {thai, arabic, tarajim} for figure resolution (hoisted). */
+function indexGlossary(g) {
+  var m = {};
+  if (!g) return m;
+  ['persons', 'places', 'books'].forEach(function (k) {
+    (g[k] || []).forEach(function (it) {
+      if (it && it.id) m[it.id] = { thai: it.canonicalThai || it.id, arabic: it.arabic || '', tarajim: it.tarajim || null };
+    });
+  });
+  return m;
+}
+
+/* STEP 0.5 — fetch indirection (API-ready). ALL shard data access goes through
+   these two functions and nothing else, so the future static→gated-API swap
+   (BASE+file → API + session token, locked-stub handling) touches ONLY here. */
+function tmFetchYear(entry) { return fetch(BASE + entry.file).then(function (r) { return r.ok ? r.json() : null; }); }
+function tmFetchAll() { return Promise.all(SHARD_INDEX.map(tmFetchYear)); }
+
+/* Merge one shard's events into EVENTS — dedup by seen[id], resolve figures via
+   GMAP, normalize accounts. Lifted verbatim from the former bootstrap loop so
+   openYear() and loadAllShards() share identical merge semantics. */
+function tmMergeShard(shard) {
+  if (!shard || !Array.isArray(shard.events)) return 0;
+  var groupOrder = (shard.meta && shard.meta.groupOrder) || [];
+  var added = 0;
+  shard.events.forEach(function (ev) {
+    if (ev.id && seen[ev.id]) return;
+    if (ev.id) seen[ev.id] = true;
+    if (typeof ev.hijriYear !== 'number') return;
+    var figures = (ev.persons || []).map(function (pid) {
+      return GMAP[pid] || null;
+    }).filter(Boolean);
+    var accounts = ev.accounts ||
+      (ev.detail ? [{ chronicle: 'ibn-kathir', detail: ev.detail,
+        loc: (ev.source && ev.source.loc) || '', url: (ev.source && ev.source.url) || '',
+        urlAlt: (ev.source && ev.source.urlAlt) || '' }] : null);
+    EVENTS.push({
+      id: ev.id,
+      year: ev.hijriYear,
+      cat: ev.cat,
+      group: ev.group || null,
+      groupRank: ev.group ? groupOrder.indexOf(ev.group) : -1,
+      order: typeof ev.order === 'number' ? ev.order : 0,
+      title: ev.title,
+      titleArabic: ev.titleArabic || null,
+      figures: figures,
+      accounts: accounts,
+      crossRefs: ev.crossRefs || null
+    });
+    added++;
+  });
+  return added;
+}
+
 function initTimelineView() {
   const content = document.getElementById('tm-content');
   const navList = document.getElementById('tm-nav-list');
@@ -808,14 +878,31 @@ function initTimelineView() {
 function performDeepSearch(query) {
   const content = document.getElementById('tm-content');
   if (!query) {
-    initTimelineView();
+    /* STEP 5: empty query → collapsed skeleton (YEAR_LOADED retained so a
+       re-open is instant) + show sidebar. */
+    renderSkeleton();
     document.getElementById('tm-sidebar').style.display = 'block';
     return;
   }
-  
+
   document.getElementById('tm-sidebar').style.display = 'none';
+
+  /* ข1: first search must load every shard once so results match the old
+     all-loaded search; subsequent searches reuse the merged EVENTS. */
+  if (!ALL_LOADED) {
+    content.innerHTML = '<div class="timeline-empty">กำลังโหลดข้อมูลทั้งหมดเพื่อค้นหา…</div>';
+    loadAllShards().then(function () { renderSearchResults(query); });
+    return;
+  }
+  renderSearchResults(query);
+}
+
+/* Existing filter/render, unchanged — now reachable both immediately (when all
+   shards are already loaded) and after a search-triggered loadAllShards(). */
+function renderSearchResults(query) {
+  const content = document.getElementById('tm-content');
   query = query.toLowerCase();
-  
+
   const matches = EVENTS.filter(e => {
     if (e.title && e.title.toLowerCase().includes(query)) return true;
     if (e.titleArabic && e.titleArabic.includes(query)) return true;
@@ -963,37 +1050,154 @@ function renderEventCard(e) {
 })();
 
 /* ------------------------------------------------------------------------
- * R86 / Time Machine data-model (v2): lazy-load external chronicle shards
- * (al-Bidayah wa al-Nihayah, etc.) listed in ./timemachine-data/index.json,
- * resolve person/place names against glossary.json, and merge into EVENTS.
- * The inline EVENTS array is the always-available base; shards enrich the
- * timeline without bloating the page. v2 shard events carry detailed text,
- * a thematic group, figures (Thai + Arabic), and multi-source citations.
- * Graceful degradation: on any fetch/parse failure the tool keeps working
- * with the inline events.
+ * R86 / Time Machine data-model (v2) — LAZY-LOAD by year (Phase B1).
+ * See docs/SCALING-ROADMAP.md § "Phase B1". The bootstrap fetches only the
+ * index + glossary + sources, then paints a collapsed year skeleton; each
+ * year's chronicle shard (al-Bidayah wa al-Nihayah, etc.) is fetched on first
+ * open and merged into EVENTS (the inline array is the always-available base).
+ * Graceful degradation: on any fetch/parse failure the tool falls back to the
+ * inline events via the old initTimelineView().
  * ---------------------------------------------------------------------- */
-(function loadChronicleShards() {
-  if (typeof fetch !== 'function') return;
-  var BASE = './timemachine-data/';
-  var seen = {};
-  EVENTS.forEach(function (e) { if (e.id) seen[e.id] = true; });
 
-  /* glossary id -> {thai, arabic} for figure resolution */
-  function indexGlossary(g) {
-    var m = {};
-    if (!g) return m;
-    ['persons', 'places', 'books'].forEach(function (k) {
-      (g[k] || []).forEach(function (it) {
-        if (it && it.id) m[it.id] = { thai: it.canonicalThai || it.id, arabic: it.arabic || '', tarajim: it.tarajim || null };
-      });
+/* STEP 2 — renderSkeleton(): every year a CLOSED <details>; shard loads on open.
+   Year list = union of SHARD_INDEX years + inline-only EVENTS years (lose nothing). */
+function renderSkeleton() {
+  var content = document.getElementById('tm-content');
+  var navList = document.getElementById('tm-nav-list');
+  if (!content || !navList) return;
+
+  /* per-year event counts: shard entry count, or inline EVENTS count for inline-only years */
+  var counts = {};
+  var yearSet = {};
+  SHARD_INDEX.forEach(function (s) { counts[s.hijriYear] = s.events; yearSet[s.hijriYear] = true; });
+  EVENTS.forEach(function (e) {
+    if (!(e.year in counts)) counts[e.year] = (counts[e.year] || 0) + 1;  /* inline-only year */
+    yearSet[e.year] = true;
+  });
+  var years = Object.keys(yearSet).map(Number).sort(function (a, b) { return a - b; });
+
+  var html = '', navHtml = '';
+  years.forEach(function (y) {
+    var ceYear = hijriYearToGregorianApprox(y);
+    var yearHead = 'ปี ฮ.ศ. ' + y + ' <span class="tm-ce">(≈ ค.ศ. ' + ceYear + ')</span>';
+    var cnt = counts[y] || 0;
+    html += '<section class="tm-year-section" id="year-' + y + '">'
+          +   '<div class="century-badge">' + getCenturyLabel(y) + '</div>'
+          +   '<details class="tm-year" data-year="' + y + '">'
+          +     '<summary class="tm-year-head">' + yearHead + ' <span class="tm-count">' + cnt + ' เหตุการณ์</span></summary>'
+          +     '<div class="tm-year-body"></div>'
+          +   '</details>'
+          + '</section>';
+    navHtml += '<li><a href="#year-' + y + '" class="tm-nav-link" data-year="' + y + '">ฮ.ศ. ' + y + '</a></li>';
+  });
+  content.innerHTML = html;
+  navList.innerHTML = navHtml;
+
+  /* re-attach the SAME IntersectionObserver for nav active-state (config unchanged) */
+  if (tmObserver) tmObserver.disconnect();
+  tmObserver = new IntersectionObserver(function (entries) {
+    var visibleYears = [];
+    entries.forEach(function (entry) { if (entry.isIntersecting) visibleYears.push(entry.target.id); });
+    if (visibleYears.length > 0) {
+      document.querySelectorAll('.tm-nav-link').forEach(function (link) { link.classList.remove('active'); });
+      var activeId = visibleYears[visibleYears.length - 1];
+      var activeLink = document.querySelector('.tm-nav-link[href="#' + activeId + '"]');
+      if (activeLink) activeLink.classList.add('active');
+    }
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  document.querySelectorAll('.tm-year-section').forEach(function (sec) { tmObserver.observe(sec); });
+
+  /* nav-click: open target details + scroll + load its shard */
+  document.querySelectorAll('.tm-nav-link').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var y = parseInt(this.getAttribute('data-year'), 10);
+      var targetSec = document.getElementById('year-' + y);
+      if (targetSec) {
+        var det = targetSec.querySelector('.tm-year');
+        if (det) det.open = true;
+        window.scrollTo({ top: targetSec.offsetTop - 80, behavior: 'smooth' });
+        openYear(y);
+      }
     });
-    return m;
-  }
+  });
 
+  /* load-on-open: the `toggle` event does not bubble, so bind each <details> */
+  document.querySelectorAll('.tm-year').forEach(function (det) {
+    det.addEventListener('toggle', function () {
+      if (!det.open) return;
+      var y = parseInt(det.getAttribute('data-year'), 10);
+      if (!YEAR_LOADED[y]) openYear(y);
+    });
+  });
+
+  /* auto-open the first year, or the #year-N deep-link if present and valid */
+  var hashYear = null;
+  var m = (location.hash || '').match(/^#year-(\d+)$/);
+  if (m) hashYear = parseInt(m[1], 10);
+  var openTarget = (hashYear !== null && yearSet[hashYear]) ? hashYear : years[0];
+  if (openTarget != null) {
+    var sec = document.getElementById('year-' + openTarget);
+    var det = sec && sec.querySelector('.tm-year');
+    if (det) det.open = true;
+    openYear(openTarget);
+  }
+}
+
+/* STEP 3 — openYear(y): fetch that year's shard once, merge, render its body. */
+function openYear(y) {
+  if (YEAR_LOADED[y]) { renderYearBody(y); return; }
+  if (YEAR_PENDING[y]) return;  /* a fetch is already in flight for this year */
+  var section = document.getElementById('year-' + y);
+  var body = section && section.querySelector('.tm-year-body');
+  var entry = SHARD_INDEX.find(function (s) { return s.hijriYear === y; });
+  if (!entry) { YEAR_LOADED[y] = true; renderYearBody(y); return; }  /* inline-only year */
+  if (body) body.innerHTML = '<div class="tm-year-loading">กำลังโหลด…</div>';
+  YEAR_PENDING[y] = true;
+  tmFetchYear(entry).then(function (shard) {
+    YEAR_PENDING[y] = false;
+    if (!shard) {
+      if (body) body.innerHTML = '<div class="tm-year-retry">โหลดไม่สำเร็จ <button type="button" class="tm-retry-btn" data-year="' + y + '">ลองใหม่</button></div>';
+      return;
+    }
+    tmMergeShard(shard);
+    YEAR_LOADED[y] = true;
+    renderYearBody(y);
+  }).catch(function () {
+    YEAR_PENDING[y] = false;
+    if (body) body.innerHTML = '<div class="tm-year-retry">โหลดไม่สำเร็จ <button type="button" class="tm-retry-btn" data-year="' + y + '">ลองใหม่</button></div>';
+  });
+}
+
+/* STEP 4 — renderYearBody(y): render that year's events with the existing renderer. */
+function renderYearBody(y) {
+  var section = document.getElementById('year-' + y);
+  if (!section) return;
+  var body = section.querySelector('.tm-year-body');
+  if (!body) return;
+  var evs = EVENTS.filter(function (e) { return e.year === y; });
+  body.innerHTML = renderYearGroups(evs, true);
+}
+
+/* STEP 6 — loadAllShards(): bulk-load every shard once (via the tmFetchAll seam)
+   so search can scan the full corpus. seen[id] dedup makes re-merging any
+   already-open year a no-op, so nothing is double-pushed. */
+function loadAllShards() {
+  return tmFetchAll().then(function (shards) {
+    (shards || []).forEach(function (shard) { if (shard) tmMergeShard(shard); });
+    SHARD_INDEX.forEach(function (s) { YEAR_LOADED[s.hijriYear] = true; });
+    ALL_LOADED = true;
+  });
+}
+
+/* STEP 1 — bootstrap: fetch index + glossary + sources ONLY (no shards), then
+   paint the skeleton. On any failure fall back to the old all-inline view. */
+(function bootstrapLazy() {
+  if (typeof fetch !== 'function') { initTimelineView(); return; }
   fetch(BASE + 'index.json')
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
     .then(function (manifest) {
-      var shards = (manifest && manifest.shards) || [];
+      SHARD_INDEX = (manifest && manifest.shards) || [];
       var gloss = fetch(BASE + ((manifest.meta && manifest.meta.glossary) || 'glossary.json'))
         .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
       /* Unified source registry: prefer sources.json (annal + tarajim, type-tagged),
@@ -1004,52 +1208,14 @@ function renderEventCard(e) {
           return fetch(BASE + 'chronicles.json')
             .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
         });
-      var data = Promise.all(shards.map(function (s) {
-        return fetch(BASE + s.file).then(function (r) { return r.ok ? r.json() : null; })
-          .catch(function () { return null; });
-      }));
-      return Promise.all([gloss, data, chron]);
+      return Promise.all([gloss, chron]);
     })
     .then(function (res) {
-      var gmap = indexGlossary(res[0]);
-      var loaded = res[1] || [];
-      if (res[2]) TM_CHRONICLES = res[2].sources || res[2].chronicles || TM_CHRONICLES;
-      var added = 0;
-      loaded.forEach(function (shard) {
-        if (!shard || !Array.isArray(shard.events)) return;
-        var groupOrder = (shard.meta && shard.meta.groupOrder) || [];
-        shard.events.forEach(function (ev) {
-          if (ev.id && seen[ev.id]) return;
-          if (ev.id) seen[ev.id] = true;
-          if (typeof ev.hijriYear !== 'number') return;
-          var figures = (ev.persons || []).map(function (pid) {
-            return gmap[pid] || null;
-          }).filter(Boolean);
-          var accounts = ev.accounts ||
-            (ev.detail ? [{ chronicle: 'ibn-kathir', detail: ev.detail,
-              loc: (ev.source && ev.source.loc) || '', url: (ev.source && ev.source.url) || '',
-              urlAlt: (ev.source && ev.source.urlAlt) || '' }] : null);
-          EVENTS.push({
-            id: ev.id,
-            year: ev.hijriYear,
-            cat: ev.cat,
-            group: ev.group || null,
-            groupRank: ev.group ? groupOrder.indexOf(ev.group) : -1,
-            order: typeof ev.order === 'number' ? ev.order : 0,
-            title: ev.title,
-            titleArabic: ev.titleArabic || null,
-            figures: figures,
-            accounts: accounts,
-            crossRefs: ev.crossRefs || null
-          });
-          added++;
-        });
-      });
-      if (added) {
-        initTimelineView();
-      }
+      GMAP = indexGlossary(res[0]);
+      if (res[1]) TM_CHRONICLES = res[1].sources || res[1].chronicles || TM_CHRONICLES;
+      renderSkeleton();
     })
-    .catch(function () { /* inline events remain fully functional */ });
+    .catch(function () { initTimelineView(); /* inline events remain fully functional */ });
 })();
 </script>
 <script>
@@ -1092,6 +1258,9 @@ function renderEventCard(e) {
      tm-content persists across re-renders, so one listener suffices. */
   var expOut = document.getElementById('tm-content');
   if(expOut) expOut.addEventListener('click', function(ev){
+    /* lazy-load retry button (shown when a year's shard fetch failed) */
+    var rb = ev.target.closest && ev.target.closest('.tm-retry-btn');
+    if(rb){ openYear(parseInt(rb.getAttribute('data-year'),10)); return; }
     var tab = ev.target.closest && ev.target.closest('.tm-tab');
     if(!tab) return;
     var body = tab.closest('.tm-event-body');
