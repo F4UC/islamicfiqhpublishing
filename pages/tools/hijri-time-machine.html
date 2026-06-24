@@ -16,8 +16,8 @@
   })();
 </script>
 
-<meta name="description" content="สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลาม พร้อมแปลงปฏิทินฮิจเราะฮ์และคริสต์ศักราชแบบสองทาง">
-<meta name="keywords" content="ปฏิทินฮิจเราะฮ์, แปลงวันที่, ประวัติศาสตร์อิสลาม, Hijri calendar, Islamic history timeline">
+<meta name="description" content="สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามรายปีฮิจเราะฮ์ คัดแยกเป็นชุดตามตำราของปราชญ์แต่ละท่าน เริ่มจากอัลบิดายะฮ์ วันนิฮายะฮ์ของอิบนุ กะษีร">
+<meta name="keywords" content="ประวัติศาสตร์อิสลาม, ไทม์ไลน์อิสลาม, อัลบิดายะฮ์ วันนิฮายะฮ์, อิบนุ กะษีร, Islamic history timeline, al-Bidayah wa al-Nihayah">
 <meta name="author" content="กองบรรณาธิการ Islamic Fiqh Publishing">
 
 <link rel="icon" href="../../favicon.png?v=2" type="image/png">
@@ -26,7 +26,7 @@
 <meta name="theme-color" content="#e3edf7">
 
 <meta property="og:title" content="HIJRI TIME MACHINE — Islamic Fiqh Publishing">
-<meta property="og:description" content="สำรวจไทม์ไลน์ประวัติศาสตร์อิสลามและแปลงปฏิทินฮิจเราะฮ์-คริสต์ศักราช">
+<meta property="og:description" content="สำรวจไทม์ไลน์ประวัติศาสตร์อิสลามรายปีฮิจเราะฮ์ คัดแยกเป็นชุดตามตำราของปราชญ์แต่ละท่าน">
 <meta property="og:image" content="https://islamicfiqhpublishing.com/og-cover.jpg">
 <meta property="og:url" content="https://islamicfiqhpublishing.com/pages/tools/hijri-time-machine.html">
 <meta property="og:type" content="website">
@@ -78,94 +78,6 @@ html, body {
   text-align: center; 
   word-break: break-word; 
   transition: var(--theme-transition); 
-}
-
-/* ─── Tabs ─── */
-.htm-tabs { display: flex; border-bottom: 1px solid var(--border-secondary); margin-bottom: 40px; gap: 32px; transition: var(--theme-transition); justify-content: center; }
-.htm-tab { padding: 14px 8px; font-size: 14px; font-weight: 600; color: var(--text-secondary); background: transparent; border: none; cursor: pointer; transition: var(--theme-transition); font-family: var(--thai); letter-spacing: 0.05em; position: relative; }
-.htm-tab::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 2px; background: var(--accent-color); transform: scaleX(0); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
-.htm-tab.active { color: var(--accent-color); font-weight: 700; }
-.htm-tab.active::after { transform: scaleX(1); }
-
-/* ─── Converter ─── */
-.converter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
-.conv-side { 
-  background: var(--bg-secondary); 
-  border: 1px solid var(--border-primary); 
-  border-radius: 12px; 
-  padding: 36px; 
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); 
-  box-shadow: 0 4px 20px var(--shadow-color); 
-}
-.conv-side:hover {
-  border-color: var(--accent-color);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px var(--shadow-color);
-}
-.conv-label { 
-  font-family: var(--ui); 
-  font-size: 13px; 
-  font-weight: 700; 
-  letter-spacing: 1.5px; 
-  text-transform: uppercase; 
-  color: var(--accent-color); 
-  margin-bottom: 24px; 
-  display: block; 
-  border-bottom: 1px solid var(--border-secondary); 
-  padding-bottom: 12px; 
-  transition: var(--theme-transition); 
-}
-.conv-fields { display: flex; gap: 14px; }
-.conv-field { display: flex; flex-direction: column; gap: 8px; flex: 1; }
-.conv-field label { font-family: var(--thai); font-size: 12px; color: var(--text-secondary); font-weight: 500; transition: var(--theme-transition); }
-.conv-field input, .conv-field select {
-  padding: 12px 16px; border: 1px solid var(--border-secondary); border-radius: 8px; font-size: 15px;
-  font-family: var(--thai); background: var(--bg-tertiary); width: 100%; color: var(--text-primary);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); box-sizing: border-box;
-}
-.conv-field input:focus, .conv-field select:focus { 
-  outline: none; 
-  border-color: var(--accent-color); 
-  background: var(--bg-secondary); 
-  box-shadow: 0 0 0 3px rgba(211,47,47, 0.12);
-}
-.conv-result { 
-  margin-top: 24px; 
-  padding: 20px 24px; 
-  background: var(--bg-tertiary); 
-  border: 1px solid var(--border-secondary); 
-  border-radius: 8px; 
-  font-size: 17px; 
-  font-weight: 600; 
-  color: var(--text-primary); 
-  min-height: 60px; 
-  display: flex; 
-  align-items: center; 
-  transition: var(--theme-transition); 
-  font-family: var(--thai);
-}
-.conv-result-label { font-family: var(--thai); font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-tertiary); margin-top: 20px; margin-bottom: 6px; transition: var(--theme-transition); }
-
-.htm-note { margin-top: 36px; padding: 22px 24px; background: var(--bg-secondary); border: 1px solid var(--border-primary); border-left: 3px solid var(--accent-color); border-radius: 10px; transition: var(--theme-transition); }
-.htm-note h3 { font-family: var(--serif); font-size: 14px; font-weight: 600; letter-spacing: 0.04em; color: var(--text-primary); margin: 0 0 10px; transition: var(--theme-transition); }
-.htm-note p { font-family: var(--thai); font-size: 13.5px; line-height: 2.0; color: var(--text-secondary); margin: 0 0 10px; text-align: left; word-break: break-word; transition: var(--theme-transition); }
-.htm-note p:last-child { margin-bottom: 0; }
-.htm-note a { color: var(--accent-color); text-decoration: none; border-bottom: 1px solid currentColor; }
-.htm-note .note-disc { font-weight: 600; color: var(--text-primary); }
-
-.btn-convert { 
-  width: 100%; margin-top: 24px; padding: 14px; 
-  color: #fff; background: var(--accent-color); border: 1px solid var(--accent-color); 
-  border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; 
-  font-family: var(--thai); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); 
-  box-shadow: 0 2px 8px rgba(211,47,47, 0.15);
-}
-.btn-convert:hover { 
-  background: var(--text-primary); 
-  border-color: var(--text-primary); 
-  color: var(--bg-primary);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* ─── Year Explorer ─── */
@@ -300,30 +212,45 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
 .tm-acc-src { margin-top: 12px; font-family: var(--thai); font-size: 13px; color: var(--text-tertiary); }
 .tm-cross { margin-top: 16px; padding-top: 12px; border-top: 1px dashed var(--border-secondary); font-family: var(--thai); font-size: 13px; color: var(--text-tertiary); line-height: 1.7; }
 
-/* ─── Book Collections — ชุดตำราแยกตามผู้ประพันธ์ (Gallery carousel, ขาว-ดำ) ─── */
-.bc-section { margin: 4px 0 44px; }
+/* ─── Book Collections — Liquid Glass carousel (ขาว-ดำ) ─── */
+.bc-section { position: relative; margin: 4px 0 48px; padding: 30px 26px 18px; border-radius: 28px;
+  background: linear-gradient(165deg, rgba(216,204,184,0.34), rgba(245,242,236,0.14) 58%, rgba(255,255,255,0) 100%);
+  border: 1px solid rgba(255,255,255,0.55);
+  box-shadow: 0 16px 48px rgba(60,50,38,0.12), inset 0 1px 0 rgba(255,255,255,0.7);
+  -webkit-backdrop-filter: blur(10px) saturate(125%); backdrop-filter: blur(10px) saturate(125%); }
+html.dark-mode .bc-section { background: linear-gradient(165deg, rgba(64,58,46,0.46), rgba(28,26,22,0.16) 60%, rgba(0,0,0,0) 100%);
+  border-color: rgba(255,255,255,0.1); box-shadow: 0 16px 48px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.08); }
 .bc-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
 .bc-head-text { display: flex; flex-direction: column; gap: 8px; }
 .bc-title { font-family: var(--ui); font-size: clamp(20px, 3vw, 27px); font-weight: 700; color: var(--text-primary); margin: 0; letter-spacing: 0.01em; }
 .bc-sub { font-family: var(--thai); font-size: 14px; color: var(--text-secondary); margin: 0; line-height: 1.75; max-width: 30rem; }
 .bc-nav { display: none; gap: 8px; flex-shrink: 0; }
-.bc-arrow { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid var(--border-primary); background: var(--bg-secondary); color: var(--text-primary); cursor: pointer; font-size: 17px; line-height: 1; transition: background 0.2s, border-color 0.2s, opacity 0.2s; font-family: var(--ui); }
-.bc-arrow:hover:not(:disabled) { background: var(--text-primary); color: var(--bg-primary); border-color: var(--text-primary); }
+.bc-arrow { width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid rgba(255,255,255,0.55); background: rgba(255,255,255,0.35); color: var(--text-primary); cursor: pointer; font-size: 18px; line-height: 1; transition: background 0.2s, transform 0.2s, opacity 0.2s; font-family: var(--ui); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 4px 14px rgba(0,0,0,0.08); }
+.bc-arrow:hover:not(:disabled) { background: var(--text-primary); color: var(--bg-primary); transform: translateY(-1px); }
 .bc-arrow:disabled { opacity: 0.3; cursor: default; }
 @media (min-width: 768px) { .bc-nav { display: flex; } }
-.bc-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 4px 4px 14px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.bc-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 6px 4px 16px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .bc-track::-webkit-scrollbar { display: none; }
-.bc-card { position: relative; flex: 0 0 auto; width: 320px; max-width: 82vw; min-height: 26rem; border-radius: 14px; overflow: hidden; scroll-snap-align: start; text-decoration: none; background: var(--bg-secondary); border: 1px solid var(--border-primary); box-shadow: 0 6px 22px var(--shadow-color); display: block; }
-/* monochrome backdrop: grayscale tonal layer + big faded Arabic watermark */
-.bc-card-bg { position: absolute; inset: 0; background: linear-gradient(150deg, #2a2a2a 0%, #111 100%); filter: grayscale(100%); transition: transform 0.4s ease; }
-.bc-card.locked .bc-card-bg { background: linear-gradient(150deg, #5a5a5a 0%, #2e2e2e 100%); }
-.bc-card:hover .bc-card-bg { transform: scale(1.05); }
-.bc-watermark { position: absolute; top: 14px; right: 18px; left: 18px; font-family: var(--arabic); font-size: 40px; line-height: 1.25; color: rgba(255,255,255,0.13); text-align: right; pointer-events: none; user-select: none; z-index: 1; }
-.bc-veil { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 42%, rgba(0,0,0,0.12) 100%); z-index: 2; }
-.bc-body { position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; padding: 26px 24px; color: #fff; }
-.bc-tag { font-family: var(--ui); font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
-.bc-tag.open { background: #fff; color: #111; }
-.bc-tag.soon { background: rgba(255,255,255,0.16); color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+.bc-card { position: relative; flex: 0 0 auto; width: 320px; max-width: 82vw; min-height: 26rem; border-radius: 18px; overflow: hidden; scroll-snap-align: start; text-decoration: none; display: block;
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow: 0 14px 34px rgba(30,24,16,0.30), inset 0 1px 0 rgba(255,255,255,0.28);
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s; }
+.bc-card.bc-open { cursor: pointer; }
+.bc-card.bc-open:focus-visible { outline: 2px solid var(--text-primary); outline-offset: 3px; }
+.bc-card:hover { transform: translateY(-6px); box-shadow: 0 26px 50px rgba(30,24,16,0.42), inset 0 1px 0 rgba(255,255,255,0.35); }
+/* cinematic warm-grayscale backdrop (imagery behind the glass) */
+.bc-card-bg { position: absolute; inset: 0; background: linear-gradient(150deg, #2c2824 0%, #15120f 100%); transition: transform 0.5s ease; }
+.bc-card.locked .bc-card-bg { background: linear-gradient(150deg, #5b554c 0%, #2c2925 100%); filter: grayscale(60%); }
+.bc-card:hover .bc-card-bg { transform: scale(1.06); }
+/* liquid-glass specular sheen */
+.bc-card::before { content: ''; position: absolute; inset: 0; z-index: 4; pointer-events: none; border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.05) 20%, rgba(255,255,255,0) 42%); }
+.bc-watermark { position: absolute; top: 16px; right: 18px; left: 18px; font-family: var(--arabic); font-size: 40px; line-height: 1.25; color: rgba(255,255,255,0.14); text-align: right; pointer-events: none; user-select: none; z-index: 1; }
+.bc-veil { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 44%, rgba(0,0,0,0.1) 100%); z-index: 2; }
+.bc-body { position: absolute; inset: 0; z-index: 5; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; padding: 26px 24px; color: #fff; }
+.bc-tag { font-family: var(--ui); font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; margin-bottom: 12px; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.bc-tag.open { background: rgba(255,255,255,0.92); color: #111; }
+.bc-tag.soon { background: rgba(255,255,255,0.14); color: #fff; border: 1px solid rgba(255,255,255,0.45); }
 .bc-author { font-family: var(--thai); font-size: 13px; color: rgba(255,255,255,0.78); margin: 0 0 4px; }
 .bc-name { font-family: var(--ui); font-size: 21px; font-weight: 700; line-height: 1.3; margin: 0 0 10px; }
 .bc-desc { font-family: var(--thai); font-size: 13.5px; line-height: 1.7; color: rgba(255,255,255,0.82); margin: 0 0 16px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -333,11 +260,36 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
 .bc-dots { display: flex; justify-content: center; gap: 8px; margin-top: 18px; }
 .bc-dot { width: 8px; height: 8px; border-radius: 999px; border: none; padding: 0; cursor: pointer; background: var(--border-primary); transition: background 0.2s, width 0.2s; }
 .bc-dot.active { background: var(--text-primary); width: 22px; }
-@media (max-width: 680px) { .bc-card { min-height: 23rem; } .bc-name { font-size: 19px; } }
+@media (max-width: 680px) { .bc-section { padding: 20px 16px 14px; border-radius: 22px; } .bc-card { min-height: 23rem; } .bc-name { font-size: 19px; } }
+
+/* ─── Desert cinematic hero (บ้านของอัลบิดายะฮ์) — CSS-rendered, CSP-safe ─── */
+#view-bidayah[hidden] { display: none; }
+.dh-hero { position: relative; width: 100%; min-height: min(78vh, 560px); border-radius: 24px; overflow: hidden; margin: 4px 0 30px; display: flex; align-items: flex-end; isolation: isolate; }
+.dh-sky { position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, #16140f 0%, #2e271d 34%, #7a5d3a 70%, #c79a63 92%, #d8b27f 100%); }
+.dh-sun { position: absolute; left: 50%; bottom: 26%; width: 240px; height: 240px; margin-left: -120px; z-index: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255,238,205,0.95) 0%, rgba(248,210,150,0.55) 38%, rgba(214,160,92,0) 70%); animation: dhSun 9s ease-in-out infinite alternate; }
+.dh-haze { position: absolute; left: 0; right: 0; bottom: 18%; height: 130px; z-index: 1; background: linear-gradient(180deg, rgba(255,231,193,0) 0%, rgba(255,225,178,0.35) 60%, rgba(255,225,178,0) 100%); filter: blur(6px); }
+.dh-dunes { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 56%; z-index: 2; display: block; }
+.dh-dunes path { stroke: none; }
+.dh-d3 { fill: #9a7245; }
+.dh-d2 { fill: #7d572f; }
+.dh-d1 { fill: #4f3720; }
+.dh-veil { display: none; }
+.dh-hero::after { content: ''; position: absolute; inset: 0; z-index: 3; pointer-events: none; background: linear-gradient(to top, rgba(20,14,8,0.78) 0%, rgba(20,14,8,0.18) 40%, rgba(20,14,8,0) 70%); }
+.dh-back { position: absolute; top: 18px; left: 18px; z-index: 6; font-family: var(--ui); font-size: 13px; font-weight: 600; color: #fff; padding: 9px 16px; border-radius: 999px; cursor: pointer; border: 1px solid rgba(255,255,255,0.4); background: rgba(255,255,255,0.14); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: background 0.2s; }
+.dh-back:hover { background: rgba(255,255,255,0.28); }
+.dh-inner { position: relative; z-index: 6; padding: 0 40px 44px; max-width: 720px; }
+.dh-eyebrow { font-family: var(--ui); font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,236,205,0.92); margin: 0 0 12px; }
+.dh-title { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 6vw, 64px); line-height: 1.02; letter-spacing: 0.01em; color: #fff; margin: 0 0 8px; }
+.dh-title em { font-style: italic; color: rgba(255,224,184,0.92); }
+.dh-arabic { font-family: var(--arabic); font-size: clamp(22px, 4vw, 34px); color: rgba(255,255,255,0.66); margin: 0 0 16px; }
+.dh-desc { font-family: var(--thai); font-size: clamp(14px, 1.6vw, 16px); line-height: 1.85; color: rgba(255,255,255,0.86); max-width: 38rem; margin: 0 0 24px; }
+.dh-cta { display: inline-flex; align-items: center; gap: 9px; font-family: var(--ui); font-size: 15px; font-weight: 600; color: #16140f; background: rgba(255,247,235,0.96); padding: 14px 30px; border-radius: 999px; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.8); transition: transform 0.2s; }
+.dh-cta:hover { transform: scale(1.03); }
+@keyframes dhSun { from { transform: translateY(8px); opacity: 0.9; } to { transform: translateY(-6px); opacity: 1; } }
+@media (max-width: 680px) { .dh-inner { padding: 0 22px 34px; } .dh-hero { min-height: 66vh; border-radius: 18px; } }
+@media (prefers-reduced-motion: reduce) { .dh-sun { animation: none; } }
 
 /* ─── Hidden panel ─── */
-.htm-panel { display: none; }
-.htm-panel.active { display: block; }
 
 /* ─── Redesign: Sidebar + Main Content ─── */
 .tm-layout {
@@ -415,8 +367,6 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
-  .converter-grid { grid-template-columns: 1fr; gap: 24px; }
-  .conv-fields { flex-direction: column; }
   .explorer-header { flex-direction: column; align-items: flex-start; gap: 20px; }
   .htm-hero h1 { font-size: 32px; }
 }
@@ -468,104 +418,13 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
 <main>
 <div class="htm-container">
 
+  <!-- ═══ HOME: landing + book-collection carousel ═══ -->
+  <div id="view-home">
   <div class="htm-hero">
     <h1 data-reveal>HIJRI TIME MACHINE</h1>
-    <p data-reveal data-delay="1">มากกว่าการแปลงปฏิทิน สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามที่เกิดขึ้นในปี ฮ.ศ. นั้นๆ เพื่อเชื่อมโยงอดีตสู่ปัจจุบัน</p>
+    <p data-reveal data-delay="1">สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามรายปีฮิจเราะฮ์ คัดแยกเป็นชุดตามตำราของปราชญ์แต่ละท่าน เลือกชุดเพื่อเข้าสำรวจ</p>
   </div>
 
-  <div class="htm-tabs" role="tablist">
-    <button class="htm-tab active" data-tab="converter" role="tab">แปลงปฏิทิน</button>
-    <button class="htm-tab" data-tab="explorer" role="tab">สำรวจไทม์ไลน์</button>
-  </div>
-
-  <!-- Converter Panel -->
-  <div id="panel-converter" class="htm-panel active">
-    <div class="converter-grid">
-
-      <div class="conv-side">
-        <span class="conv-label">ปฏิทินฮิจเราะฮ์ (AH)</span>
-        <div class="conv-fields">
-          <div class="conv-field">
-            <label>วัน</label>
-            <input type="number" id="h-day" min="1" max="30" placeholder="1–30" value="1">
-          </div>
-          <div class="conv-field">
-            <label>เดือน</label>
-            <select id="h-month">
-              <option value="1">1 - มุหัรรอม</option>
-              <option value="2">2 - ศอฟัร</option>
-              <option value="3">3 - รอบีอุลเอาวัล</option>
-              <option value="4">4 - รอบีอุษษานี</option>
-              <option value="5">5 - ญุมาดัลเอาวัล</option>
-              <option value="6">6 - ญุมาดัษษานี</option>
-              <option value="7">7 - รอญับ</option>
-              <option value="8">8 - ชะอ์บาน</option>
-              <option value="9">9 - รอมาฎอน</option>
-              <option value="10">10 - เชาวาล</option>
-              <option value="11">11 - ซุลเกาะอ์ดะฮ์</option>
-              <option value="12">12 - ซุลหิจญะฮ์</option>
-            </select>
-          </div>
-          <div class="conv-field">
-            <label>ปี ฮ.ศ.</label>
-            <input type="number" id="h-year" min="1" max="1500" placeholder="เช่น 771" value="1">
-          </div>
-        </div>
-        <button class="btn-convert" id="btnConvertH2G">แปลงเป็นคริสต์ศักราช</button>
-        <div>
-          <div class="conv-result-label">ผลลัพธ์</div>
-          <div class="conv-result" id="result-gregorian">กรอกวันที่ฮิจเราะฮ์แล้วกดแปลง</div>
-        </div>
-      </div>
-
-      <div class="conv-side">
-        <span class="conv-label">ปฏิทินคริสต์ศักราช (CE)</span>
-        <div class="conv-fields">
-          <div class="conv-field">
-            <label>วัน</label>
-            <input type="number" id="g-day" min="1" max="31" placeholder="1–31" value="1">
-          </div>
-          <div class="conv-field">
-            <label>เดือน</label>
-            <select id="g-month">
-              <option value="1">มกราคม</option>
-              <option value="2">กุมภาพันธ์</option>
-              <option value="3">มีนาคม</option>
-              <option value="4">เมษายน</option>
-              <option value="5">พฤษภาคม</option>
-              <option value="6">มิถุนายน</option>
-              <option value="7">กรกฎาคม</option>
-              <option value="8">สิงหาคม</option>
-              <option value="9">กันยายน</option>
-              <option value="10">ตุลาคม</option>
-              <option value="11">พฤศจิกายน</option>
-              <option value="12">ธันวาคม</option>
-            </select>
-          </div>
-          <div class="conv-field">
-            <label>ปี ค.ศ.</label>
-            <input type="number" id="g-year" min="622" max="2100" placeholder="เช่น 2024" value="622">
-          </div>
-        </div>
-        <button class="btn-convert" id="btnConvertG2H">แปลงเป็นฮิจเราะฮ์</button>
-        <div>
-          <div class="conv-result-label">ผลลัพธ์</div>
-          <div class="conv-result" id="result-hijri">กรอกวันที่คริสต์ศักราชแล้วกดแปลง</div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="htm-note">
-      <h3>วิธีคำนวณและข้อพึงทราบ</h3>
-      <p>เครื่องมือนี้ใช้ปฏิทินฮิจเราะฮ์แบบตาราง (เลขคณิต) อิงวัฏจักร 30 ปี (มีปีอธิกมาส 11 ปีต่อรอบ ปีฐาน 354 วัน) คำนวณตรงจากสูตร โดยตรึงต้นปฏิทินที่ 1 มุหัรรอม ฮ.ศ. 1 ให้ตรงกับ 16 กรกฎาคม ค.ศ. 622 (ปฏิทินจูเลียน) ระบบนี้ไม่ได้อิงการเห็นดวงจันทร์จริง และไม่ได้อ้างอิงปฏิทินสำเร็จรูปอุมมุลกุรอหรือปฏิทินราชการใดๆ</p>
-      <p><span class="note-disc">การกำหนดวันสำคัญทางศาสนา</span> (เช่น ต้นและปลายเดือนรอมาฎอน วันอีด) ยึดการเห็นดวงจันทร์ (รุอ์ยะฮ์) เป็นเกณฑ์ ผลที่ได้จากการคำนวณนี้จึงเป็นค่าประมาณทางปฏิทิน อาจคลาดเคลื่อนจากวันจริง 1 ถึง 2 วัน อ่านเพิ่มได้ในบทความ <a href="../../articles/nitisart/moon-sighting-vs-astronomy.html">การเห็นดวงจันทร์กับดาราศาสตร์</a></p>
-      <p>ผลคำนวณเป็นแนวทาง กรณีเฉพาะให้สอบถามผู้รู้</p>
-    </div>
-  </div>
-
-  <!-- Explorer Panel -->
-  <div id="panel-explorer" class="htm-panel">
     <div class="bc-section">
       <div class="bc-head">
         <div class="bc-head-text">
@@ -578,7 +437,7 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
         </div>
       </div>
       <div class="bc-track" id="bc-track">
-        <a class="bc-card" href="#tm-content" aria-label="เปิดชุดอัลบิดายะฮ์ วันนิฮายะฮ์">
+        <div class="bc-card bc-open" id="bc-open-bidayah" role="button" tabindex="0" aria-label="เปิดชุดอัลบิดายะฮ์ วันนิฮายะฮ์">
           <div class="bc-card-bg"></div>
           <div class="bc-watermark">البداية والنهاية</div>
           <div class="bc-veil"></div>
@@ -589,7 +448,7 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
             <p class="bc-desc">บันทึกเหตุการณ์รายปีฮิจเราะฮ์ที่ 1–100 แปลตรงจากตำราเต็มท่อน พร้อมต้นฉบับอาหรับ</p>
             <span class="bc-more">เปิดอ่าน <span class="bc-arrowi">→</span></span>
           </div>
-        </a>
+        </div>
         <div class="bc-card locked" aria-disabled="true">
           <div class="bc-card-bg"></div>
           <div class="bc-watermark">المنتظم</div>
@@ -641,6 +500,28 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
       </div>
       <div class="bc-dots" id="bc-dots"></div>
     </div>
+  </div><!-- /view-home -->
+
+  <!-- ═══ BIDAYAH: its own house — desert hero + year timeline ═══ -->
+  <div id="view-bidayah" hidden>
+    <section class="dh-hero" aria-label="อัลบิดายะฮ์ วันนิฮายะฮ์">
+      <div class="dh-sky"></div>
+      <div class="dh-sun"></div>
+      <div class="dh-haze"></div>
+      <svg class="dh-dunes" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+        <path class="dh-d3" d="M0,210 C240,150 480,196 720,176 C960,156 1200,206 1440,164 L1440,320 L0,320 Z"/>
+        <path class="dh-d2" d="M0,250 C300,206 600,262 900,230 C1140,204 1320,252 1440,222 L1440,320 L0,320 Z"/>
+        <path class="dh-d1" d="M0,286 C360,256 720,298 1080,272 C1260,260 1380,288 1440,278 L1440,320 L0,320 Z"/>
+      </svg>
+      <button type="button" class="dh-back" id="dh-back">‹ กลับสู่ชุดตำรา</button>
+      <div class="dh-inner">
+        <p class="dh-eyebrow">อิบนุ กะษีร · ฮ.ศ. 1–100</p>
+        <h2 class="dh-title">อัลบิดายะฮ์ <em>วันนิฮายะฮ์</em></h2>
+        <p class="dh-arabic" dir="rtl" lang="ar">البداية والنهاية</p>
+        <p class="dh-desc">บันทึกเหตุการณ์รายปีฮิจเราะฮ์ แปลตรงจากตำราเต็มท่อนพร้อมต้นฉบับอาหรับ — เลื่อนลงเพื่อสำรวจไทม์ไลน์</p>
+        <a class="dh-cta" href="#tm-content">เข้าสำรวจไทม์ไลน์ <span class="bc-arrowi">↓</span></a>
+      </div>
+    </section>
     <div class="htm-search-box">
       <input type="text" id="tm-search-input" placeholder="ค้นหาเหตุการณ์, บุคคล, สถานที่ (รองรับภาษาอาหรับและไทย)">
     </div>
@@ -662,13 +543,17 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
 <div id="footer-placeholder"></div>
 <script defer src="../../main.js?v=20260619a"></script>
 <script>
-/* ─── Tab switching ─── */
-function switchTab(name, btn) {
-  document.querySelectorAll('.htm-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.htm-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('panel-' + name).classList.add('active');
-  if (btn) btn.classList.add('active');
-  if (name === 'explorer') bookCarouselUpdate();
+/* ─── View switching: home (carousel) ⇄ bidayah (timeline) ─── */
+function showBidayah() {
+  document.getElementById('view-home').hidden = true;
+  document.getElementById('view-bidayah').hidden = false;
+  window.scrollTo({ top: 0, behavior: 'auto' });
+}
+function showHome() {
+  document.getElementById('view-bidayah').hidden = true;
+  document.getElementById('view-home').hidden = false;
+  window.scrollTo({ top: 0, behavior: 'auto' });
+  bookCarouselUpdate();
 }
 
 /* ─── Book-collections carousel (ขาว-ดำ) ─── */
@@ -713,77 +598,6 @@ function bookCarouselInit() {
   track.addEventListener('scroll', function () { window.requestAnimationFrame(bookCarouselUpdate); });
   window.addEventListener('resize', bookCarouselUpdate);
   bookCarouselUpdate();
-}
-
-/* ─── Calendar conversion math ─── */
-function gregorianToJD(y, m, d) {
-  let a = Math.floor((14 - m) / 12);
-  let yr = y + 4800 - a;
-  let mo = m + 12 * a - 3;
-  return d + Math.floor((153 * mo + 2) / 5) + 365 * yr + Math.floor(yr / 4) - Math.floor(yr / 100) + Math.floor(yr / 400) - 32045;
-}
-
-function jdToGregorian(jd) {
-  let a = jd + 32044;
-  let b = Math.floor((4 * a + 3) / 146097);
-  let c = a - Math.floor(146097 * b / 4);
-  let d = Math.floor((4 * c + 3) / 1461);
-  let e = c - Math.floor(1461 * d / 4);
-  let m = Math.floor((5 * e + 2) / 153);
-  return {
-    day:   e - Math.floor((153 * m + 2) / 5) + 1,
-    month: m + 3 - 12 * Math.floor(m / 10),
-    year:  100 * b + d - 4800 + Math.floor(m / 10)
-  };
-}
-
-function hijriToJD(y, m, d) {
-  return d + Math.ceil(29.5 * (m - 1)) + (y - 1) * 354 + Math.floor((3 + 11 * y) / 30) + 1948439;
-}
-
-function jdToHijri(jd) {
-  let l = jd - 1948440 + 10632;
-  let n = Math.floor((l - 1) / 10631);
-  l = l - 10631 * n + 354;
-  let j = Math.floor((10985 - l) / 5316) * Math.floor((50 * l) / 17719) + Math.floor(l / 5670) * Math.floor((43 * l) / 15238);
-  l = l - Math.floor((30 - j) / 15) * Math.floor((17719 * j) / 50) - Math.floor(j / 16) * Math.floor((15238 * j) / 43) + 29;
-  let month = Math.floor((24 * l) / 709);
-  return {
-    day:   l - Math.floor((709 * month) / 24),
-    month: month,
-    year:  30 * n + j - 30
-  };
-}
-
-const HIJRI_MONTHS = ['','มุหัรรอม','ศอฟัร','รอบีอุลเอาวัล','รอบีอุษษานี','ญุมาดัลเอาวัล','ญุมาดัษษานี','รอญับ','ชะอ์บาน','รอมาฎอน','เชาวาล','ซุลเกาะอ์ดะฮ์','ซุลหิจญะฮ์'];
-const GREGORIAN_MONTHS = ['','มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'];
-
-function convertHijriToGregorian() {
-  let d = parseInt(document.getElementById('h-day').value) || 1;
-  let m = parseInt(document.getElementById('h-month').value) || 1;
-  let y = parseInt(document.getElementById('h-year').value) || 1;
-  if (d < 1 || d > 30 || m < 1 || m > 12 || y < 1) {
-    document.getElementById('result-gregorian').textContent = 'กรุณากรอกวันที่ที่ถูกต้อง';
-    return;
-  }
-  let jd = hijriToJD(y, m, d);
-  let g = jdToGregorian(jd);
-  document.getElementById('result-gregorian').textContent =
-    `${g.day} ${GREGORIAN_MONTHS[g.month]} ค.ศ. ${g.year}`;
-}
-
-function convertGregorianToHijri() {
-  let d = parseInt(document.getElementById('g-day').value) || 1;
-  let m = parseInt(document.getElementById('g-month').value) || 1;
-  let y = parseInt(document.getElementById('g-year').value) || 622;
-  if (y < 622) {
-    document.getElementById('result-hijri').textContent = 'ปฏิทินฮิจเราะฮ์เริ่มต้น ค.ศ. 622';
-    return;
-  }
-  let jd = gregorianToJD(y, m, d);
-  let h = jdToHijri(jd);
-  document.getElementById('result-hijri').textContent =
-    `${h.day} ${HIJRI_MONTHS[h.month]} ฮ.ศ. ${h.year}`;
 }
 
 /* ─── Historical Events Data ─── */
@@ -1191,19 +1005,6 @@ function renderEventCard(e) {
   </details>`;
 }
 
-/* Initialize with current Hijri year */
-(function init() {
-  const today = new Date();
-  const jd = gregorianToJD(today.getFullYear(), today.getMonth() + 1, today.getDate());
-  const h = jdToHijri(jd);
-  document.getElementById('h-year').value = h.year;
-  document.getElementById('h-month').value = h.month;
-  document.getElementById('h-day').value = h.day;
-  document.getElementById('g-year').value = today.getFullYear();
-  document.getElementById('g-month').value = today.getMonth() + 1;
-  document.getElementById('g-day').value = today.getDate();
-})();
-
 /* ------------------------------------------------------------------------
  * R86 / Time Machine data-model (v2) — LAZY-LOAD by year (Phase B1).
  * See docs/SCALING-ROADMAP.md § "Phase B1". The bootstrap fetches only the
@@ -1400,14 +1201,14 @@ function loadAllShards() {
   /* CSP-safe event wiring (replaces former inline onclick handlers) */
   var topBtn = document.getElementById('backToTopBtn');
   if(topBtn) topBtn.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
-  document.querySelectorAll('.htm-tab').forEach(function(tab){
-    tab.addEventListener('click', function(){ switchTab(tab.getAttribute('data-tab'), tab); });
-  });
   bookCarouselInit();
-  var bH2G = document.getElementById('btnConvertH2G');
-  if(bH2G) bH2G.addEventListener('click', convertHijriToGregorian);
-  var bG2H = document.getElementById('btnConvertG2H');
-  if(bG2H) bG2H.addEventListener('click', convertGregorianToHijri);
+  var bOpen = document.getElementById('bc-open-bidayah');
+  if(bOpen){
+    bOpen.addEventListener('click', showBidayah);
+    bOpen.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); showBidayah(); } });
+  }
+  var bBack = document.getElementById('dh-back');
+  if(bBack) bBack.addEventListener('click', showHome);
 
 
   /* Delegated handler for per-chronicle source tabs inside event cards.
