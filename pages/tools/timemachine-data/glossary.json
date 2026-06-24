@@ -3,7 +3,8 @@
     "purpose": "Translation memory / canonical transliteration lock for the Time Machine ingestion pipeline (R86). Seeded from al-Bidayah year 132. Every Thai spelling of a scholar/place/title MUST match canonicalThai; new names append here.",
     "transliterationBasis": "Locked precedents from REVIEW-QUEUE.md / AUDIT-FIXES.md (e.g. ابن→อิบนุ, ال→อัล, ط→ฏ, ة→ะฮ์, nisba ي→ีย์). Arabic is byte-exact reference only (never edited).",
     "reviewStatus": "DRAFT — awaiting owner review",
-    "lastExpanded": "ปีฮ.ศ. 132 ครบทั้งปี (al-Bidayah เล่ม 10)"
+    "lastExpanded": "ปีฮ.ศ. 132 ครบทั้งปี (al-Bidayah เล่ม 10)",
+    "lastCleanup": "ปีฮ.ศ. — ลบ orphan glossary (entry ที่ไม่มีเหตุการณ์อ้างถึง) ออก 70 รายการ"
   },
   "persons": [
     {
@@ -20,14 +21,6 @@
       "variantsFound": []
     },
     {
-      "id": "marwan-ii",
-      "arabic": "مروان بن محمد",
-      "canonicalThai": "มัรวาน บิน มุหัมมัด",
-      "aliasThai": "มัรวานที่ 2 / มัรวาน อัลหิมาร",
-      "note": "เคาะลีฟะฮ์อุมัยยะฮ์องค์สุดท้าย",
-      "variantsFound": []
-    },
-    {
       "id": "al-hasan-b-qahtaba",
       "arabic": "الحسن بن قحطبة",
       "canonicalThai": "อัลหะซัน บิน ก็อหฺเฏาะบะฮ์",
@@ -40,39 +33,15 @@
       "variantsFound": []
     },
     {
-      "id": "uthman-b-sufyan",
-      "arabic": "عثمان بن سفيان",
-      "canonicalThai": "อุษมาน บิน สุฟยาน",
-      "variantsFound": []
-    },
-    {
-      "id": "muhammad-b-khalid-al-qasri",
-      "arabic": "محمد بن خالد القسري",
-      "canonicalThai": "มุหัมมัด บิน คอลิด อัลก็อสรีย์",
-      "variantsFound": []
-    },
-    {
       "id": "ibn-hubayra",
       "arabic": "ابن هبيرة (يزيد بن عمر)",
       "canonicalThai": "อิบนุ ฮุบัยเราะฮ์",
       "variantsFound": []
     },
     {
-      "id": "ziyad-b-salih",
-      "arabic": "زياد بن صالح الحارثي",
-      "canonicalThai": "ซิยาด บิน ศอลิห์ อัลหาริษีย์",
-      "variantsFound": []
-    },
-    {
       "id": "abu-salama-al-khallal",
       "arabic": "أبو سلمة حفص بن سليمان الخلال",
       "canonicalThai": "อบู สะละมะฮ์ หัฟศ์ บิน สุลัยมาน อัลค็อลลาล",
-      "variantsFound": []
-    },
-    {
-      "id": "muslim-b-qutayba",
-      "arabic": "مسلم بن قتيبة",
-      "canonicalThai": "มุสลิม บิน กุตัยบะฮ์",
       "variantsFound": []
     },
     {
@@ -88,13 +57,6 @@
       "arabic": "إبراهيم بن محمد الإمام",
       "canonicalThai": "อิบรอฮีม บิน มุหัมมัด อัลอิมาม",
       "note": "ผู้นำขบวนการอับบาซียะฮ์ ถูกมัรวานจองจำจนสิ้นชีพ",
-      "variantsFound": []
-    },
-    {
-      "id": "abdullah-b-ali",
-      "arabic": "عبد الله بن علي",
-      "canonicalThai": "อับดุลลอฮ์ บิน อะลีย์",
-      "note": "อาของอัสซัฟฟาห์ แม่ทัพผู้ชนะยุทธการอัซซาบ",
       "variantsFound": []
     },
     {
@@ -126,38 +88,10 @@
       "variantsFound": []
     },
     {
-      "id": "abu-muhammad-al-sufyani",
-      "arabic": "أبو محمد السفياني",
-      "canonicalThai": "อบู มุหัมมัด อัสสุฟยานี",
-      "note": "เชื้อสายอุมัยยะฮ์ ผู้ก่อกบฏที่คินนัสรีน",
-      "variantsFound": []
-    },
-    {
-      "id": "abu-al-ward-al-kilabi",
-      "arabic": "أبو الورد مجزأة بن الكوثر الكلابي",
-      "canonicalThai": "อบุลวัรด์ มัจญ์ซะอะฮ์ บิน อัลเกาษัร อัลกิลาบีย์",
-      "note": "อดีตขุนพลของมัรวาน ผู้นำกบฏคินนัสรีน",
-      "variantsFound": []
-    },
-    {
-      "id": "amir-b-ismail",
-      "arabic": "عامر بن إسماعيل",
-      "canonicalThai": "อามิร บิน อิสมาอีล",
-      "note": "แม่ทัพหน่วยที่สังหารมัรวานที่บูศีร",
-      "variantsFound": []
-    },
-    {
       "id": "khalid-b-barmak",
       "arabic": "خالد بن برمك",
       "canonicalThai": "คอลิด บิน บัรมัก",
       "note": "ต้นตระกูลบัรมัก (Barmakids) เสนาบดีกรมคลัง",
-      "variantsFound": []
-    },
-    {
-      "id": "abd-al-hamid-al-katib",
-      "arabic": "عبد الحميد بن يحيى الكاتب",
-      "canonicalThai": "อับดุลหะมีด บิน ยะห์ยา อัลกาติบ",
-      "note": "เลขานุการเอกของมัรวาน ปรมาจารย์ร้อยแก้วจดหมายอาหรับ",
       "variantsFound": []
     },
     {
@@ -195,41 +129,6 @@
       "variantsFound": []
     },
     {
-      "id": "tamim-b-nasr",
-      "arabic": "تميم بن نصر بن سيار",
-      "canonicalThai": "ตะมีม บิน นัศร์",
-      "note": "บุตรของนัศร์ บิน สัยยาร",
-      "variantsFound": []
-    },
-    {
-      "id": "nubata-b-hanzala",
-      "arabic": "نباتة بن حنظلة",
-      "canonicalThai": "นุบาตะฮ์ บิน หันเซาะละฮ์",
-      "note": "แม่ทัพอุมัยยะฮ์ ผู้ปกครองญุรญาน",
-      "variantsFound": []
-    },
-    {
-      "id": "abu-hamza-al-khariji",
-      "arabic": "أبو حمزة الخارجي",
-      "canonicalThai": "อบู หัมซะฮ์ อัลคอริญีย์",
-      "note": "ผู้นำเคาะวาริจญ์อิบาฎีย์ ผู้ยึดมะดีนะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "ibn-atiyya",
-      "arabic": "عبد الملك بن محمد بن عطية",
-      "canonicalThai": "อับดุลมาลิก บิน มุหัมมัด บิน อะฏียะฮ์",
-      "note": "แม่ทัพของมัรวานผู้ปราบอบู หัมซะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "abdullah-b-yahya",
-      "arabic": "عبد الله بن يحيى",
-      "canonicalThai": "อับดุลลอฮ์ บิน ยะห์ยา",
-      "note": "อิมามอิบาฎีย์ ผู้ปกครองศ็อนอาอ์",
-      "variantsFound": []
-    },
-    {
       "id": "abu-dawud-khalid",
       "arabic": "أبو داود خالد بن إبراهيم",
       "canonicalThai": "อบู ดาวูด คอลิด บิน อิบรอฮีม",
@@ -241,13 +140,6 @@
       "arabic": "موسى بن كعب",
       "canonicalThai": "มูซา บิน กะอ์บ์",
       "note": "แม่ทัพของอบู มุสลิม",
-      "variantsFound": []
-    },
-    {
-      "id": "muhammad-b-al-munkadir",
-      "arabic": "محمد بن المنكدر",
-      "canonicalThai": "มุหัมมัด บิน อัลมุนกะดิร",
-      "note": "ตาบิอีนและนักรายงานหะดีษ (วายชนม์ปี 130)",
       "variantsFound": []
     },
     {
@@ -335,31 +227,10 @@
       "variantsFound": []
     },
     {
-      "id": "abdullah-b-hasan",
-      "arabic": "عبد الله بن حسن بن حسن بن علي",
-      "canonicalThai": "อับดุลลอฮ์ บิน หะซัน",
-      "note": "เชื้อสายอะลีย์ผู้มาทวงสิทธิต่ออัสซัฟฟาห์",
-      "variantsFound": []
-    },
-    {
       "id": "isa-b-ali",
       "arabic": "عيسى بن علي",
       "canonicalThai": "อีซา บิน อะลีย์",
       "note": "อาของอัสซัฟฟาห์ ผู้นำละหมาดศพพระองค์",
-      "variantsFound": []
-    },
-    {
-      "id": "rabia-al-ray",
-      "arabic": "ربيعة الرأي",
-      "canonicalThai": "เราะบีอะฮ์ อัรรออ์ยุ",
-      "note": "นักนิติศาสตร์ อาจารย์ของอิมามมาลิก (วายชนม์ 136)",
-      "variantsFound": []
-    },
-    {
-      "id": "zayd-b-aslam",
-      "arabic": "زيد بن أسلم",
-      "canonicalThai": "ซัยด์ บิน อัสลัม",
-      "note": "ตาบิอีนและนักรายงานหะดีษ (วายชนม์ 136)",
       "variantsFound": []
     },
     {
@@ -398,24 +269,10 @@
       "variantsFound": []
     },
     {
-      "id": "mulabbid-b-harmala",
-      "arabic": "ملبد بن حرملة الشيباني",
-      "canonicalThai": "มุลับบิด บิน หัรมะละฮ์ อัชชัยบานีย์",
-      "note": "ผู้นำเคาะวาริจญ์ในอัลญะซีเราะฮ์",
-      "variantsFound": []
-    },
-    {
       "id": "humayd-b-qahtaba",
       "arabic": "حميد بن قحطبة",
       "canonicalThai": "หุมัยด์ บิน ก็อหฺเฏาะบะฮ์",
       "note": "บุตรของก็อหฺเฏาะบะฮ์ ผู้ปกครองอัลญะซีเราะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "constantine-v",
-      "arabic": "قسطنطين ملك الروم",
-      "canonicalThai": "ก็อสฏ็อนฏีน (จักรพรรดิไบแซนไทน์)",
-      "note": "กษัตริย์รูมผู้ยึดมะลัฏยะฮ์",
       "variantsFound": []
     },
     {
@@ -468,13 +325,6 @@
       "variantsFound": []
     },
     {
-      "id": "isbahbadh-tabaristan",
-      "arabic": "الإصبهبذ",
-      "canonicalThai": "อัลอิศบะฮ์บัซ (กษัตริย์เฏาะบะริสตาน)",
-      "note": "ผู้ปกครองเฏาะบะริสตานก่อนการพิชิต",
-      "variantsFound": []
-    },
-    {
       "id": "shayban-al-yashkuri",
       "arabic": "شيبان بن عبد العزيز اليشكري",
       "canonicalThai": "ชัยบาน บิน อับดุลอะซีซ อัลยัชกุรีย์",
@@ -503,45 +353,10 @@
       "variantsFound": []
     },
     {
-      "id": "jadi-al-kirmani",
-      "arabic": "جديع بن علي الكرماني",
-      "canonicalThai": "ญุดัยอ์ บิน อะลีย์ อัลกิรมานีย์",
-      "note": "ผู้นำอาหรับในคุรอซาน ถูกนัศร์สังหาร (บิดาของอะลีย์ บิน อัลกิรมานีย์)",
-      "variantsFound": []
-    },
-    {
-      "id": "abdullah-b-muawiya",
-      "arabic": "عبد الله بن معاوية بن عبد الله بن جعفر",
-      "canonicalThai": "อับดุลลอฮ์ บิน มุอาวิยะฮ์",
-      "note": "เชื้อสายญะอ์ฟัร บิน อบีฏอลิบ ผู้ก่อกบฏยึดฟารส์",
-      "variantsFound": []
-    },
-    {
-      "id": "abd-al-wahid-b-sulayman",
-      "arabic": "عبد الواحد بن سليمان بن عبد الملك",
-      "canonicalThai": "อับดุลวาฮิด บิน สุลัยมาน",
-      "note": "ผู้ปกครองมักกะฮ์-มะดีนะฮ์ของอุมัยยะฮ์",
-      "variantsFound": []
-    },
-    {
       "id": "al-harith-b-surayj",
       "arabic": "الحارث بن سريج",
       "canonicalThai": "อัลหาริษ บิน สุรัยจญ์",
       "note": "ผู้ก่อกบฏในคุรอซานต่อนัศร์ บิน สัยยาร",
-      "variantsFound": []
-    },
-    {
-      "id": "jahm-b-safwan",
-      "arabic": "الجهم بن صفوان",
-      "canonicalThai": "ญะฮ์ม บิน ศ็อฟวาน",
-      "note": "ผู้ที่ฟิรเกาะฮ์ญะฮ์มียะฮ์ถูกอ้างชื่อถึง (ปฏิเสธคุณลักษณะของอัลลอฮ์)",
-      "variantsFound": []
-    },
-    {
-      "id": "al-dahhak-al-khariji",
-      "arabic": "الضحاك بن قيس الخارجي",
-      "canonicalThai": "อัฎเฎาะห์หาก บิน ก็อยส์ อัลคอริญีย์",
-      "note": "ผู้นำเคาะวาริจญ์ ถูกสังหารปี 128",
       "variantsFound": []
     },
     {
@@ -566,24 +381,10 @@
       "variantsFound": []
     },
     {
-      "id": "yazid-al-naqis",
-      "arabic": "يزيد بن الوليد الناقص",
-      "canonicalThai": "ยะซีด อันนากิศ",
-      "note": "เคาะลีฟะฮ์อุมัยยะฮ์ผู้สังหารอัลวะลีด บิน ยะซีด",
-      "variantsFound": []
-    },
-    {
       "id": "yazid-b-khalid-al-qasri",
       "arabic": "يزيد بن خالد القسري",
       "canonicalThai": "ยะซีด บิน คอลิด อัลก็อสรีย์",
       "note": "แม่ทัพผู้สังหารบุตรของอัลวะลีดในคุก",
-      "variantsFound": []
-    },
-    {
-      "id": "thabit-b-nuaym",
-      "arabic": "ثابت بن نعيم الجذامي",
-      "canonicalThai": "ษาบิต บิน นุอัยม์",
-      "note": "ผู้ก่อกบฏที่ปาเลสไตน์ต่อมัรวาน",
       "variantsFound": []
     },
     {
@@ -608,24 +409,10 @@
       "variantsFound": []
     },
     {
-      "id": "asad-b-abd-allah-al-qasri",
-      "arabic": "أسد بن عبد الله القسري",
-      "canonicalThai": "อะซัด บิน อับดุลลอฮ์ อัลก็อสรีย์",
-      "note": "อะมีรแห่งคุรอซานสมัยฮิชาม",
-      "variantsFound": []
-    },
-    {
       "id": "khalid-al-qasri",
       "arabic": "خالد بن عبد الله القسري",
       "canonicalThai": "คอลิด บิน อับดุลลอฮ์ อัลก็อสรีย์",
       "note": "ผู้ครองอิรัก พี่ชายของอะซัด",
-      "variantsFound": []
-    },
-    {
-      "id": "khaqan",
-      "arabic": "خاقان",
-      "canonicalThai": "คอกอน",
-      "note": "กษัตริย์ของพวกเติร์ก",
       "variantsFound": []
     },
     {
@@ -685,13 +472,6 @@
       "variantsFound": []
     },
     {
-      "id": "abd-al-wahhab-b-bukht",
-      "arabic": "عبد الوهاب بن بخت",
-      "canonicalThai": "อับดุลวะฮ์ฮาบ บิน บัคต์",
-      "note": "อะมีรผู้พลีชีพในแดนรูมร่วมกับอัลบัฏฏอล",
-      "variantsFound": []
-    },
-    {
       "id": "al-jarrah-b-abd-allah-al-hakami",
       "arabic": "الجراح بن عبد الله الحكمي",
       "canonicalThai": "อัลญัรรอห์ บิน อับดุลลอฮ์ อัลหะกะมีย์",
@@ -703,20 +483,6 @@
       "arabic": "سعيد بن عمرو الحرشي",
       "canonicalThai": "สะอีด บิน อัมร์ อัลหะเราะชีย์",
       "note": "แม่ทัพที่ฮิชามส่งไปกู้สถานการณ์จากพวกเติร์ก",
-      "variantsFound": []
-    },
-    {
-      "id": "salih-b-abd-al-rahman",
-      "arabic": "صالح بن عبد الرحمن",
-      "canonicalThai": "ศอลิห์ บิน อับดุรเราะห์มาน",
-      "note": "ผู้แปลงทะเบียน (ดีวาน) ของอิรักจากเปอร์เซียสู่ภาษาอาหรับ",
-      "variantsFound": []
-    },
-    {
-      "id": "hafsa-bint-sirin",
-      "arabic": "حفصة بنت سيرين (أم الهذيل)",
-      "canonicalThai": "หัฟเศาะฮ์ บินต์ สีรีน",
-      "note": "นักวิชาการหญิงตาบิอีนแห่งบัศเราะฮ์",
       "variantsFound": []
     },
     {
@@ -779,13 +545,6 @@
       "variantsFound": []
     },
     {
-      "id": "salim-b-abd-allah",
-      "arabic": "سالم بن عبد الله بن عمر",
-      "canonicalThai": "สาลิม บิน อับดุลลอฮ์",
-      "note": "หนึ่งในเจ็ดฟุเกาะฮาอ์แห่งมะดีนะฮ์ หลานของอุมัร บิน อัลค็อฏฏอบ",
-      "variantsFound": []
-    },
-    {
       "id": "yazid-ii",
       "arabic": "يزيد بن عبد الملك",
       "canonicalThai": "ยะซีด บิน อับดุลมาลิก",
@@ -828,13 +587,6 @@
       "variantsFound": []
     },
     {
-      "id": "al-jad-b-dirham",
-      "arabic": "الجعد بن درهم",
-      "canonicalThai": "อัลญะอ์ด บิน ดิรฮัม",
-      "note": "ต้นเค้าของพวกญะฮ์มียะฮ์ ถูกคอลิด อัลก็อสรีย์ ประหาร",
-      "variantsFound": []
-    },
-    {
       "id": "umar-ii",
       "arabic": "عمر بن عبد العزيز",
       "canonicalThai": "อุมัร บิน อับดุลอะซีซ",
@@ -846,27 +598,6 @@
       "arabic": "سليمان بن عبد الملك",
       "canonicalThai": "สุลัยมาน บิน อับดุลมาลิก",
       "note": "เคาะลีฟะฮ์อุมัยยะฮ์ผู้แต่งตั้งอุมัรที่ 2 เป็นผู้สืบตำแหน่ง",
-      "variantsFound": []
-    },
-    {
-      "id": "abu-bakr-b-hazm",
-      "arabic": "أبو بكر بن محمد بن عمرو بن حزم",
-      "canonicalThai": "อบู บักร์ บิน หัซม์",
-      "note": "กอฎีและผู้ครองมะดีนะฮ์สมัยอุมัรที่ 2",
-      "variantsFound": []
-    },
-    {
-      "id": "kharija-b-zayd",
-      "arabic": "خارجة بن زيد بن ثابت",
-      "canonicalThai": "คอริญะฮ์ บิน ซัยด์",
-      "note": "หนึ่งในเจ็ดฟุเกาะฮาอ์แห่งมะดีนะฮ์ บุตรของซัยด์ บิน ษาบิต",
-      "variantsFound": []
-    },
-    {
-      "id": "ilyun",
-      "arabic": "إليون",
-      "canonicalThai": "อิลยูน (เลโอที่ 3)",
-      "note": "เลโอที่ 3 ชาวอิเซาเรียน ผู้ทรยศมัสละมะฮ์แล้วขึ้นเป็นจักรพรรดิไบแซนไทน์",
       "variantsFound": []
     },
     {
@@ -912,13 +643,6 @@
       "variantsFound": []
     },
     {
-      "id": "ibrahim-al-nakhai",
-      "arabic": "إبراهيم بن يزيد النخعي",
-      "canonicalThai": "อิบรอฮีม อันนะเคาะอีย์",
-      "note": "ฟะกีฮ์และตาบิอีนคนสำคัญแห่งกูฟะฮ์",
-      "variantsFound": []
-    },
-    {
       "id": "said-b-al-musayyib",
       "arabic": "سعيد بن المسيب",
       "canonicalThai": "สะอีด บิน อัลมุสัยยับ",
@@ -937,69 +661,6 @@
       "arabic": "عروة بن الزبير",
       "canonicalThai": "อุรวะฮ์ บิน อัซซุบัยร์",
       "note": "หนึ่งในเจ็ดฟุเกาะฮาอ์แห่งมะดีนะฮ์ นักประวัติศาสตร์ซีเราะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "al-hasan-b-al-hasan",
-      "arabic": "الحسن بن الحسن بن علي",
-      "canonicalThai": "อัลหะสัน บิน อัลหะสัน",
-      "note": "หลานปู่ของอะลีย์ บิน อบี ฏอลิบ",
-      "variantsFound": []
-    },
-    {
-      "id": "khalid-b-madan",
-      "arabic": "خالد بن معدان الكلاعي",
-      "canonicalThai": "คอลิด บิน มะอ์ดาน",
-      "note": "ตาบิอีนผู้ทรงเกียรติแห่งชาม",
-      "variantsFound": []
-    },
-    {
-      "id": "aban-b-uthman",
-      "arabic": "أبان بن عثمان بن عفان",
-      "canonicalThai": "อะบาน บิน อุษมาน",
-      "note": "ฟะกีฮ์ตาบิอีน บุตรของเคาะลีฟะฮ์อุษมาน",
-      "variantsFound": []
-    },
-    {
-      "id": "sulayman-b-yasar",
-      "arabic": "سليمان بن يسار",
-      "canonicalThai": "สุลัยมาน บิน ยะซาร",
-      "note": "หนึ่งในเจ็ดฟุเกาะฮาอ์แห่งมะดีนะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "ikrima",
-      "arabic": "عكرمة مولى ابن عباس",
-      "canonicalThai": "อิกริมะฮ์",
-      "note": "มะวลาของอิบนุ อับบาส นักตัฟซีรคนสำคัญ",
-      "variantsFound": []
-    },
-    {
-      "id": "bakr-al-muzani",
-      "arabic": "بكر بن عبد الله المزني",
-      "canonicalThai": "บักร์ อัลมุซะนีย์",
-      "note": "ตาบิอีนแห่งบัศเราะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "muhammad-b-kab-al-qurazi",
-      "arabic": "محمد بن كعب القرظي",
-      "canonicalThai": "มุหัมมัด บิน กะอ์บ์ อัลกุร็อซีย์",
-      "note": "นักตัฟซีรและตาบิอีน",
-      "variantsFound": []
-    },
-    {
-      "id": "raja-b-haywa",
-      "arabic": "رجاء بن حيوة الكندي",
-      "canonicalThai": "เราะญาอ์ บิน หัยวะฮ์",
-      "note": "ที่ปรึกษาเคาะลีฟะฮ์อุมัยยะฮ์ ผู้แนะนำแต่งตั้งอุมัรที่ 2",
-      "variantsFound": []
-    },
-    {
-      "id": "musa-b-nusayr",
-      "arabic": "موسى بن نصير",
-      "canonicalThai": "มูซา บิน นุศ็อยร์",
-      "note": "แม่ทัพผู้พิชิตอันดะลุสและมัฆริบ",
       "variantsFound": []
     },
     {
@@ -1508,12 +1169,6 @@
       "note": "แม่ทัพของอัลมันศูร"
     },
     {
-      "id": "al-mulabbid-al-khariji",
-      "arabic": "الملبد الخارجي",
-      "canonicalThai": "อัลมุลับบิด อัลคอริญีย์",
-      "note": "หัวหน้าเคาะวาริจญ์ ถูกสังหารปี ฮ.ศ.138"
-    },
-    {
       "id": "sufyan-b-muawiya",
       "arabic": "سفيان بن معاوية",
       "canonicalThai": "สุฟยาน บิน มุอาวิยะฮ์",
@@ -1814,12 +1469,6 @@
       "note": "แม่ทัพศึกฤดูร้อนรูม ฮ.ศ.154"
     },
     {
-      "id": "abd-al-wahhab-b-ibrahim",
-      "arabic": "عبد الوهاب بن إبراهيم",
-      "canonicalThai": "อับดุลวะฮ์ฮาบ บิน อิบรอฮีม",
-      "note": "แม่ทัพ/ผู้นำหัจญ์ (วงศ์อับบาส)"
-    },
-    {
       "id": "muhammad-b-said",
       "arabic": "محمد بن سعيد",
       "canonicalThai": "มุฮัมมัด บิน สะอีด",
@@ -1890,12 +1539,6 @@
       "arabic": "عمر بن زهير",
       "canonicalThai": "อุมัร บิน ซุฮัยร์",
       "note": "เจ้าเมืองกูฟะฮ์สมัยอัลมันศูร"
-    },
-    {
-      "id": "hammad-ajrad",
-      "arabic": "حماد عجرد",
-      "canonicalThai": "ฮัมมาด อัจญ์ร็อด",
-      "note": "กวี ถูกกล่าวหาเรื่องนอกศาสนา"
     },
     {
       "id": "al-awzai",
@@ -2456,12 +2099,6 @@
       "note": "แม่ทัพของอัลมะอ์มูน ผู้พิชิตแบกแดด"
     },
     {
-      "id": "abd-al-rahman-b-jabala",
-      "arabic": "عبد الرحمن بن جبلة الأبناوي",
-      "canonicalThai": "อับดุรเราะฮ์มาน บิน ญะบะละฮ์",
-      "note": "แม่ทัพของอัลอามีน"
-    },
-    {
       "id": "kawthar",
       "arabic": "كوثر",
       "canonicalThai": "เกาษัร",
@@ -2592,12 +2229,6 @@
       "arabic": "أبو إسحاق المعتصم بن الرشيد",
       "canonicalThai": "อบู อิสฮาก อัลมุอ์ตะศิม บิน อัรเราะชีด",
       "note": "บุตรอัรเราะชีด เคาะลีฟะฮ์ต่อมา (อัลมุอ์ตะศิม)"
-    },
-    {
-      "id": "mahdi-b-alwan",
-      "arabic": "مهدي بن علوان",
-      "canonicalThai": "มะฮ์ดี บิน อัลวาน",
-      "note": "ผู้นำเคาะวาริจญ์"
     },
     {
       "id": "babak",
@@ -2790,18 +2421,6 @@
       "arabic": "مازيار بن قارن",
       "canonicalThai": "มาซยาร บิน กอริน",
       "note": "ผู้นำกบฏที่ฏ็อบริสตาน ฮ.ศ.224"
-    },
-    {
-      "id": "mankjur",
-      "arabic": "منكجور",
-      "canonicalThai": "มันกะญูร",
-      "note": "แม่ทัพที่ยอมจำนน"
-    },
-    {
-      "id": "jafar-b-dinar",
-      "arabic": "جعفر بن دينار",
-      "canonicalThai": "ญะอ์ฟัร บิน ดีนาร",
-      "note": "เจ้าเมืองเยเมน"
     },
     {
       "id": "itakh",
@@ -4745,13 +4364,6 @@
       "variantsFound": []
     },
     {
-      "id": "uqba-b-amir",
-      "arabic": "عقبة بن عامر",
-      "canonicalThai": "อุกบะฮ์ บิน อามิร",
-      "note": "",
-      "variantsFound": []
-    },
-    {
       "id": "busr-b-abi-artat",
       "arabic": "بسر بن أبي أرطاة",
       "canonicalThai": "บุสร์ บิน อบี อัรฏอฮ์",
@@ -4808,12 +4420,6 @@
       "variantsFound": []
     },
     {
-      "id": "great-zab",
-      "arabic": "الزاب الأكبر",
-      "canonicalThai": "แม่น้ำซาบใหญ่ (อัซซาบ อัลอักบัร)",
-      "variantsFound": []
-    },
-    {
       "id": "harran",
       "arabic": "حران",
       "canonicalThai": "หัรรอน",
@@ -4853,13 +4459,6 @@
       "id": "al-jazira",
       "arabic": "الجزيرة",
       "canonicalThai": "อัลญะซีเราะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "busir",
-      "arabic": "بوصير",
-      "canonicalThai": "บูศีร",
-      "note": "หมู่บ้านในอียิปต์ จุดสิ้นพระชนม์ของมัรวาน",
       "variantsFound": []
     },
     {
@@ -4941,18 +4540,6 @@
       "variantsFound": []
     },
     {
-      "id": "qudayd",
-      "arabic": "قديد",
-      "canonicalThai": "กุดัยด์",
-      "variantsFound": []
-    },
-    {
-      "id": "wadi-al-qura",
-      "arabic": "وادي القرى",
-      "canonicalThai": "วาดิลกุรอ",
-      "variantsFound": []
-    },
-    {
       "id": "yemen",
       "arabic": "اليمن",
       "canonicalThai": "เยเมน",
@@ -5019,12 +4606,6 @@
       "variantsFound": []
     },
     {
-      "id": "kish",
-      "arabic": "كش",
-      "canonicalThai": "กิช",
-      "variantsFound": []
-    },
-    {
       "id": "hind",
       "arabic": "الهند",
       "canonicalThai": "อัลฮินด์ (อินเดีย/สินธ์)",
@@ -5037,22 +4618,10 @@
       "variantsFound": []
     },
     {
-      "id": "al-anbar",
-      "arabic": "الأنبار",
-      "canonicalThai": "อัลอันบาร",
-      "variantsFound": []
-    },
-    {
       "id": "al-humayma",
       "arabic": "الحميمة",
       "canonicalThai": "อัลหุมัยมะฮ์",
       "note": "ถิ่นกำเนิดของวงศ์อับบาซียะฮ์ในอัลบัลกออ์",
-      "variantsFound": []
-    },
-    {
-      "id": "nasibin",
-      "arabic": "نصيبين",
-      "canonicalThai": "นะศีบีน",
       "variantsFound": []
     },
     {
@@ -5104,21 +4673,9 @@
       "variantsFound": []
     },
     {
-      "id": "al-massisa",
-      "arabic": "المصيصة",
-      "canonicalThai": "อัลมัศศีเศาะฮ์",
-      "variantsFound": []
-    },
-    {
       "id": "khurasan",
       "arabic": "خراسان",
       "canonicalThai": "คุรอซาน",
-      "variantsFound": []
-    },
-    {
-      "id": "marw-al-rudh",
-      "arabic": "مرو الروذ",
-      "canonicalThai": "มัรว์ อัรรูซ",
       "variantsFound": []
     },
     {
@@ -5143,24 +4700,6 @@
       "id": "ayn-al-jarr",
       "arabic": "عين الجر",
       "canonicalThai": "อัยนุลญัรร์ (บิกาอ์)",
-      "variantsFound": []
-    },
-    {
-      "id": "palestine",
-      "arabic": "فلسطين",
-      "canonicalThai": "ปาเลสไตน์",
-      "variantsFound": []
-    },
-    {
-      "id": "al-bakhra",
-      "arabic": "حصن البخراء",
-      "canonicalThai": "ป้อมอัลบัครออ์ (ใกล้ตัดมุร)",
-      "variantsFound": []
-    },
-    {
-      "id": "tadmur",
-      "arabic": "تدمر",
-      "canonicalThai": "ตัดมุร (ปาลไมรา)",
       "variantsFound": []
     },
     {
@@ -5480,12 +5019,6 @@
       "arabic": "الرافقة",
       "canonicalThai": "อัรรอฟิเกาะฮ์",
       "note": "เมืองที่อัลมะฮ์ดีสร้างใกล้อัรร็อกเกาะฮ์"
-    },
-    {
-      "id": "qayrawan",
-      "arabic": "القيروان",
-      "canonicalThai": "อัลก็อยเราะวาน",
-      "note": "เมืองในอิฟรีกิยะฮ์"
     },
     {
       "id": "kerman",
