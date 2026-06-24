@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 85,
+    "ceYear": 704,
+    "ceSpan": "704",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 85 (al-Bidayah เล่ม 14): ฟิตนะฮ์ - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 85"
+  },
+  "events": [
+    {
+      "id": "bidayah-h85-001",
+      "book": "al-bidayah",
+      "hijriYear": 85,
+      "ceYear": 704,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 85: การสังหารอับดุรเราะห์มาน บิน อัลอัชอัษ (สิ้นการกบฏ)",
+      "persons": [
+        "abd-al-rahman-b-al-ashath"
+      ],
+      "places": [
+        "medina"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(85) ตามที่อิบนุ ญะรีรกล่าว เกิดการสังหารอับดุรเราะห์มาน บิน อัลอัชอัษ วัลลอฮุอะอ์ลัม",
+          "arabicExcerpt": "كان مقتل عبد الرحمن بن الأشعث، فالله أعلم",
+          "loc": "เล่ม 14 หน้า 208",
+          "url": "https://shamela.ws/book/30097/4331",
+          "page": 208
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

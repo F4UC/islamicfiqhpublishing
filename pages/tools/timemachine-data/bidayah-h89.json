@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 89,
+    "ceYear": 708,
+    "ceSpan": "708",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 89 (al-Bidayah เล่ม 14): ฟุตูหโรมัน - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 89"
+  },
+  "events": [
+    {
+      "id": "bidayah-h89-001",
+      "book": "al-bidayah",
+      "hijriYear": 89,
+      "ceYear": 708,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 89: มัสละมะฮ์และอัลอับบาส พิชิตป้อมในดินแดนโรมัน (อัมโมเรียม/เฮราเคลีย)",
+      "persons": [
+        "maslama-b-abd-al-malik",
+        "al-abbas-b-al-walid"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(89) มัสละมะฮ์ บิน อับดุลมาลิก และหลานชายของเขาอัลอับบาส ได้ยกทัพไปดินแดนโรมัน สังหารผู้คนเป็นจำนวนมาก และพิชิตป้อมปราการมากมาย",
+          "arabicExcerpt": "فيها غزا مسلمة بن عبد الملك وابن أخيه العباس بلاد الروم فقتلا خلقًا كثيرًا وفتحا حصونًا كثيرة",
+          "loc": "เล่ม 14 หน้า 239",
+          "url": "https://shamela.ws/book/30097/4362",
+          "page": 239
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

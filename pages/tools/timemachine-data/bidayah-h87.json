@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 87,
+    "ceYear": 706,
+    "ceSpan": "706",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 87 (al-Bidayah เล่ม 14): การปกครอง - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 87"
+  },
+  "events": [
+    {
+      "id": "bidayah-h87-001",
+      "book": "al-bidayah",
+      "hijriYear": 87,
+      "ceYear": 706,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 87: ★อุมัร บิน อับดุลอะซีซ ได้รับแต่งตั้งให้ปกครองมะดีนะฮ์★",
+      "persons": [
+        "al-walid-i",
+        "umar-ii"
+      ],
+      "places": [
+        "medina"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(87) อัลวะลีด บิน อับดุลมาลิก ได้ปลดฮิชาม บิน อิสมาอีล ออกจากการปกครองมะดีนะฮ์ และแต่งตั้งลูกพี่ลูกน้องของเขาซึ่งเป็นสามีของฟาฏิมะฮ์ บินต์ อับดุลมาลิก น้องสาวของเขา คืออุมัร บิน อับดุลอะซีซ ให้ปกครองแทน",
+          "arabicExcerpt": "ففيها عزل الوليد بن عبد الملك هشام بن إسماعيل عن إمرة المدينة وولَّى عليها ابن عمه وزوج أخته فاطمة بنت عبد الملك عمرَ بن عبد العزيز",
+          "loc": "เล่ม 14 หน้า 232",
+          "url": "https://shamela.ws/book/30097/4355",
+          "page": 232
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

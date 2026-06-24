@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 86,
+    "ceYear": 705,
+    "ceSpan": "705",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 86 (al-Bidayah เล่ม 14): ฟุตูหเติร์ก - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 86"
+  },
+  "events": [
+    {
+      "id": "bidayah-h86-001",
+      "book": "al-bidayah",
+      "hijriYear": 86,
+      "ceYear": 705,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 86: ★กุตัยบะฮ์ บิน มุสลิม พิชิตดินแดนเติร์ก/ทรานสอกเซียนา★",
+      "persons": [
+        "qutayba-b-muslim",
+        "al-hajjaj"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(86) กุตัยบะฮ์ บิน มุสลิม ผู้แทนของอัลหัจญาจที่มัรว์และคุรอซาน ได้ยกทัพไปยังดินแดนมากมายในแผ่นดินเติร์ก",
+          "arabicExcerpt": "ففيها غزا قتيبة بن مسلم نائب الحجاج على مرو وخراسان، بلادًا كثيرة من أرض الترك",
+          "loc": "เล่ม 14 หน้า 217",
+          "url": "https://shamela.ws/book/30097/4340",
+          "page": 217
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}
