@@ -6,27 +6,31 @@
  * `_redirects`, so a `_redirects` 404 is a no-op for a path that has a real file.
  * Functions run BEFORE static-asset serving, so this reliably overrides real files.
  *
- * Everything not explicitly blocked falls through to normal handling (static assets
- * and other Functions such as /api/*) via context.next(). Cheap: exact-Set + prefix
- * startsWith, no regex, early return.
+ * Blocking strategy (three passes, short-circuit):
+ *   1. BLOCK_EXACT  — extensionless internal files + _TEMPLATE variants
+ *   2. BLOCK_PREFIX — entire internal dirs (docs/, scripts/, .claude/, .codex/, .github/)
+ *   3. BLOCK_EXT    — all .md, .py, .sha256 files anywhere in the tree
+ *
+ * Everything else falls through via context.next() (static assets, /api/*, etc.).
+ * Cheap: Set.has (O(1)) + small Array.some with startsWith/endsWith, early return.
  */
 const BLOCK_EXACT = new Set([
-  "/CLAUDE.md",
-  "/AGENTS.md",
-  "/CONTEXT.md",
-  "/DEBUG-FINDINGS.md",
-  "/REVIEW-QUEUE.md",
-  "/AUDIT-FIXES.md",
-  "/README.md",
   "/articles/_TEMPLATE",
   "/articles/_TEMPLATE.html",
+  "/pages/tools/ijazah-data/NOTICE",
 ]);
 
 const BLOCK_PREFIX = ["/docs/", "/scripts/", "/.claude/", "/.codex/", "/.github/"];
 
+const BLOCK_EXT = [".md", ".py", ".sha256"];
+
 export async function onRequest(context) {
   const path = new URL(context.request.url).pathname;
-  if (BLOCK_EXACT.has(path) || BLOCK_PREFIX.some((p) => path.startsWith(p))) {
+  if (
+    BLOCK_EXACT.has(path) ||
+    BLOCK_PREFIX.some((p) => path.startsWith(p)) ||
+    BLOCK_EXT.some((e) => path.endsWith(e))
+  ) {
     return new Response("Not Found", { status: 404 });
   }
   return context.next();
