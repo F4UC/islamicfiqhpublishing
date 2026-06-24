@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 78,
+    "ceYear": 697,
+    "ceSpan": "697",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 78 (al-Bidayah เล่ม 14): ฟุตูหโรมัน - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 78"
+  },
+  "events": [
+    {
+      "id": "bidayah-h78-001",
+      "book": "al-bidayah",
+      "hijriYear": 78,
+      "ceYear": 697,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 78: การศึกใหญ่ในดินแดนโรมัน พิชิตอัซเกาะละฮ์ แต่สูญเสียมากจากพายุหิมะขากลับ",
+      "persons": [
+        "abd-al-malik-b-marwan"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(ปีที่เจ็ดสิบแปด)เกิดการศึกครั้งใหญ่ของมุสลิมในดินแดนโรมัน พวกเขาได้พิชิตอัซเกาะละฮ์ ครั้นเมื่อพวกเขากลับ ก็ประสบกับฝนตกหนัก หิมะ และลูกเห็บอย่างรุนแรง ผู้คนจำนวนมากจึงประสบภัยเสียชีวิตเพราะเหตุนั้น",
+          "arabicExcerpt": "ففيها كانت غزوة عظيمة للمسلمين ببلاد الروم افتتحوا أزقلة ، فلما رجعوا أصابهم مطر عظيم وثلج وبرد، فأصيب بسببه ناس كثير",
+          "loc": "เล่ม 14 หน้า 158",
+          "url": "https://shamela.ws/book/30097/4281",
+          "page": 158
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

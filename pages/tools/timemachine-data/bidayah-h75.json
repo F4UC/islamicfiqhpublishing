@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 75,
+    "ceYear": 694,
+    "ceSpan": "694",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 75 (al-Bidayah เล่ม 14): ฟุตูหโรมัน - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 75"
+  },
+  "events": [
+    {
+      "id": "bidayah-h75-001",
+      "book": "al-bidayah",
+      "hijriYear": 75,
+      "ceYear": 694,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 75: มุฮัมมัด บิน มัรวาน ยกทัพหน้าร้อนปะทะโรมันที่มัรอัช",
+      "persons": [
+        "muhammad-b-marwan",
+        "abd-al-malik-b-marwan"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(ปีที่เจ็ดสิบห้า) มุฮัมมัด บิน มัรวาน น้องชายของอับดุลมาลิก บิน มัรวาน (และเป็นบิดาของมัรวาน อัลหิมาร) ได้ยกทัพไปทำศึกหน้าร้อนกับชาวโรมัน ขณะที่พวกเขาออกมาจากเมืองมัรอัช",
+          "arabicExcerpt": "وفي هذه السنة غزا محمد بن مروان -أخو عبد الملك بن مروان وهو والد مروان الحمار- صائفة الروم حين خرجوا من عند مرعش",
+          "loc": "เล่ม 14 หน้า 138",
+          "url": "https://shamela.ws/book/30097/4261",
+          "page": 138
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

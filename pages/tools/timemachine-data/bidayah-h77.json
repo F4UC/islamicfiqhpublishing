@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 77,
+    "ceYear": 696,
+    "ceSpan": "696",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 77 (al-Bidayah เล่ม 14): ปราบเคาะวาริจ - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 77"
+  },
+  "events": [
+    {
+      "id": "bidayah-h77-001",
+      "book": "al-bidayah",
+      "hijriYear": 77,
+      "ceYear": 696,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 77: อัลหัจญาจส่งทัพกูฟะฮ์ 5 หมื่นปราบชะบีบ บิน ยะซีด (เคาะวาริจ)",
+      "persons": [
+        "al-hajjaj",
+        "shabib-b-yazid"
+      ],
+      "places": [
+        "al-kufa"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(ปีที่เจ็ดสิบเจ็ด) อัลหัจญาจได้ส่งนักรบชาวกูฟะฮ์ออกไปจำนวนสี่หมื่นคน และมีอีกหนึ่งหมื่นคนมาสมทบ รวมเป็นห้าหมื่นคน (เพื่อปราบชะบีบ บิน ยะซีด)",
+          "arabicExcerpt": "فيها أخرج الحجاج مقاتلة أهل الكوفة وكانوا أربعين ألفًا، وانضاف إليهم عشرة آلاف، فصاروا خمسين ألفًا",
+          "loc": "เล่ม 14 หน้า 152",
+          "url": "https://shamela.ws/book/30097/4275",
+          "page": 152
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 76,
+    "ceYear": 695,
+    "ceSpan": "695",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 76 (al-Bidayah เล่ม 14): เคาะวาริจ - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 76"
+  },
+  "events": [
+    {
+      "id": "bidayah-h76-001",
+      "book": "al-bidayah",
+      "hijriYear": 76,
+      "ceYear": 695,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 76: การลุกฮือของเคาะวาริจ - ศอลิห์ บิน มุสัรริห์ และชะบีบ บิน ยะซีด",
+      "persons": [
+        "shabib-b-yazid"
+      ],
+      "places": [],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในต้นปีนี้(ปีที่เจ็ดสิบหก) ในวันแรกของเดือนเศาะฟัร คืนวันพุธ เกิดการรวมตัวของศอลิห์ บิน มุสัรริห์ ผู้นำกลุ่มเศาะฟะรียะฮ์ และชะบีบ บิน ยะซีด หนึ่งในนักรบกล้าหาญแห่งเคาะวาริจ",
+          "arabicExcerpt": "كان في أولها في مستهل صفر منها ليلة الأربعاء اجتماع صالح بن مسرّح أمير الصّفرية، وشبيب بن يزيد أحد شجعان الخوارج",
+          "loc": "เล่ม 14 หน้า 146",
+          "url": "https://shamela.ws/book/30097/4269",
+          "page": 146
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}
