@@ -31,6 +31,11 @@ jobs:
       - name: Arabic orthography gate (articles)
         run: python3 scripts/lint-arabic-ortho.py $(find articles -name '*.html')
 
+      - name: Time Machine QC gate (charter rules)
+        env:
+          PYTHONUTF8: "1"
+        run: python3 pages/tools/timemachine-data/scripts/tm_qc.py
+
       - name: House-style lint (informational, non-blocking)
         continue-on-error: true
         run: node scripts/lint-article.js $(find articles -name '*.html')
