@@ -300,47 +300,40 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
 .tm-acc-src { margin-top: 12px; font-family: var(--thai); font-size: 13px; color: var(--text-tertiary); }
 .tm-cross { margin-top: 16px; padding-top: 12px; border-top: 1px dashed var(--border-secondary); font-family: var(--thai); font-size: 13px; color: var(--text-tertiary); line-height: 1.7; }
 
-/* ─── Book Collections — ชุดตำราแยกตามผู้ประพันธ์ (DisplayCards stacked) ─── */
-.bc-section { margin: 4px 0 40px; }
-.bc-head { text-align: center; margin-bottom: 4px; }
-.bc-title { font-family: var(--ui); font-size: 19px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px; }
-.bc-sub { font-family: var(--thai); font-size: 14px; color: var(--text-tertiary); margin: 0; line-height: 1.7; }
-.dc-stack { display: grid; grid-template-areas: 'stack'; place-items: center; padding: 56px 0 78px; }
-.dc-card {
-  grid-area: stack; position: relative; display: flex; flex-direction: column; justify-content: space-between;
-  height: 9rem; width: 22rem; max-width: 86vw; padding: 15px 20px; box-sizing: border-box;
-  border: 2px solid var(--border-primary); border-radius: 14px; background: var(--bg-secondary);
-  box-shadow: 0 8px 26px var(--shadow-color); user-select: none; text-decoration: none;
-  transition: transform 0.7s cubic-bezier(0.16,1,0.3,1), border-color 0.4s, filter 0.7s;
-}
-.dc-card::after { content: ''; position: absolute; top: -5%; right: -2px; height: 110%; width: 58%;
-  background: linear-gradient(to left, var(--bg-primary), transparent); border-radius: 0 14px 14px 0; pointer-events: none; }
-.dc-card.locked { filter: grayscale(100%); cursor: default; }
-.dc-card.locked::before { content: ''; position: absolute; inset: 0; border-radius: 14px; background: var(--bg-primary); opacity: 0.5; transition: opacity 0.7s; z-index: 1; }
-.dc-card.locked:hover { filter: grayscale(0); }
-.dc-card.locked:hover::before { opacity: 0; }
-.dc-card:hover { border-color: var(--accent-color); }
-.dc-row { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 10px; }
-.dc-badge { display: inline-flex; width: 26px; height: 26px; align-items: center; justify-content: center; border-radius: 999px; border: 1.5px solid var(--accent-color); color: var(--accent-color); font-size: 13px; flex: none; }
-.dc-title { font-family: var(--ui); font-size: 16px; font-weight: 700; color: var(--accent-color); margin: 0; }
-.dc-desc { position: relative; z-index: 2; font-family: var(--thai); font-size: 16px; color: var(--text-primary); white-space: nowrap; margin: 0; font-weight: 600; }
-.dc-date { position: relative; z-index: 2; font-family: var(--ui); font-size: 12.5px; color: var(--text-tertiary); margin: 0; }
-.dc-card.c1 { transform: skewY(-8deg); z-index: 1; }
-.dc-card.c1:hover { transform: skewY(-8deg) translateY(-2.5rem); }
-.dc-card.c2 { transform: skewY(-8deg) translate(4rem, 2.5rem); z-index: 2; }
-.dc-card.c2:hover { transform: skewY(-8deg) translate(4rem, 2.25rem); }
-.dc-card.c3 { transform: skewY(-8deg) translate(8rem, 5rem); z-index: 3; cursor: pointer; }
-.dc-card.c3:hover { transform: skewY(-8deg) translate(8rem, 3.5rem); }
-.dc-card.c3 .dc-badge { background: var(--accent-color); color: var(--bg-secondary); }
-@media (max-width: 680px) {
-  .dc-stack { padding: 26px 0 46px; }
-  .dc-card { width: 17rem; height: 8.4rem; padding: 13px 16px; }
-  .dc-desc { font-size: 14.5px; }
-  .dc-card.c2 { transform: skewY(-8deg) translate(2.2rem, 1.7rem); }
-  .dc-card.c2:hover { transform: skewY(-8deg) translate(2.2rem, 1.4rem); }
-  .dc-card.c3 { transform: skewY(-8deg) translate(4.4rem, 3.4rem); }
-  .dc-card.c3:hover { transform: skewY(-8deg) translate(4.4rem, 2.2rem); }
-}
+/* ─── Book Collections — ชุดตำราแยกตามผู้ประพันธ์ (Gallery carousel, ขาว-ดำ) ─── */
+.bc-section { margin: 4px 0 44px; }
+.bc-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+.bc-head-text { display: flex; flex-direction: column; gap: 8px; }
+.bc-title { font-family: var(--ui); font-size: clamp(20px, 3vw, 27px); font-weight: 700; color: var(--text-primary); margin: 0; letter-spacing: 0.01em; }
+.bc-sub { font-family: var(--thai); font-size: 14px; color: var(--text-secondary); margin: 0; line-height: 1.75; max-width: 30rem; }
+.bc-nav { display: none; gap: 8px; flex-shrink: 0; }
+.bc-arrow { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid var(--border-primary); background: var(--bg-secondary); color: var(--text-primary); cursor: pointer; font-size: 17px; line-height: 1; transition: background 0.2s, border-color 0.2s, opacity 0.2s; font-family: var(--ui); }
+.bc-arrow:hover:not(:disabled) { background: var(--text-primary); color: var(--bg-primary); border-color: var(--text-primary); }
+.bc-arrow:disabled { opacity: 0.3; cursor: default; }
+@media (min-width: 768px) { .bc-nav { display: flex; } }
+.bc-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 4px 4px 14px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.bc-track::-webkit-scrollbar { display: none; }
+.bc-card { position: relative; flex: 0 0 auto; width: 320px; max-width: 82vw; min-height: 26rem; border-radius: 14px; overflow: hidden; scroll-snap-align: start; text-decoration: none; background: var(--bg-secondary); border: 1px solid var(--border-primary); box-shadow: 0 6px 22px var(--shadow-color); display: block; }
+/* monochrome backdrop: grayscale tonal layer + big faded Arabic watermark */
+.bc-card-bg { position: absolute; inset: 0; background: linear-gradient(150deg, #2a2a2a 0%, #111 100%); filter: grayscale(100%); transition: transform 0.4s ease; }
+.bc-card.locked .bc-card-bg { background: linear-gradient(150deg, #5a5a5a 0%, #2e2e2e 100%); }
+.bc-card:hover .bc-card-bg { transform: scale(1.05); }
+.bc-watermark { position: absolute; top: 14px; right: 18px; left: 18px; font-family: var(--arabic); font-size: 40px; line-height: 1.25; color: rgba(255,255,255,0.13); text-align: right; pointer-events: none; user-select: none; z-index: 1; }
+.bc-veil { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 42%, rgba(0,0,0,0.12) 100%); z-index: 2; }
+.bc-body { position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; padding: 26px 24px; color: #fff; }
+.bc-tag { font-family: var(--ui); font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+.bc-tag.open { background: #fff; color: #111; }
+.bc-tag.soon { background: rgba(255,255,255,0.16); color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+.bc-author { font-family: var(--thai); font-size: 13px; color: rgba(255,255,255,0.78); margin: 0 0 4px; }
+.bc-name { font-family: var(--ui); font-size: 21px; font-weight: 700; line-height: 1.3; margin: 0 0 10px; }
+.bc-desc { font-family: var(--thai); font-size: 13.5px; line-height: 1.7; color: rgba(255,255,255,0.82); margin: 0 0 16px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.bc-more { font-family: var(--ui); font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 7px; color: #fff; }
+.bc-card:hover .bc-more .bc-arrowi { transform: translateX(4px); }
+.bc-arrowi { transition: transform 0.25s; display: inline-block; }
+.bc-dots { display: flex; justify-content: center; gap: 8px; margin-top: 18px; }
+.bc-dot { width: 8px; height: 8px; border-radius: 999px; border: none; padding: 0; cursor: pointer; background: var(--border-primary); transition: background 0.2s, width 0.2s; }
+.bc-dot.active { background: var(--text-primary); width: 22px; }
+@media (max-width: 680px) { .bc-card { min-height: 23rem; } .bc-name { font-size: 19px; } }
 
 /* ─── Hidden panel ─── */
 .htm-panel { display: none; }
@@ -575,26 +568,78 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
   <div id="panel-explorer" class="htm-panel">
     <div class="bc-section">
       <div class="bc-head">
-        <p class="bc-title">ชุดตำราประวัติศาสตร์ (แยกตามผู้ประพันธ์)</p>
-        <p class="bc-sub">แต่ละชุดคือผลงานของปราชญ์แต่ละท่าน เก็บแยกของใครของมัน — เลื่อนเมาส์ดูได้</p>
+        <div class="bc-head-text">
+          <h2 class="bc-title">ชุดตำราประวัติศาสตร์</h2>
+          <p class="bc-sub">แยกตามผู้ประพันธ์ — เก็บผลงานของปราชญ์แต่ละท่านไว้เป็นชุดของใครของมัน เลื่อนดูชุดที่เปิดให้เข้าถึงและที่กำลังจะมา</p>
+        </div>
+        <div class="bc-nav">
+          <button class="bc-arrow" id="bc-prev" aria-label="ก่อนหน้า">‹</button>
+          <button class="bc-arrow" id="bc-next" aria-label="ถัดไป">›</button>
+        </div>
       </div>
-      <div class="dc-stack">
-        <div class="dc-card c1 locked" aria-disabled="true">
-          <div class="dc-row"><span class="dc-badge">◆</span><span class="dc-title">อิบนุ อัลเญาซีย์</span></div>
-          <p class="dc-desc">อัลมุนตะศ็อม ฟี ตารีค</p>
-          <p class="dc-date">เร็วๆ นี้ · ชุดสมาชิก</p>
-        </div>
-        <div class="dc-card c2 locked" aria-disabled="true">
-          <div class="dc-row"><span class="dc-badge">◆</span><span class="dc-title">อัซซะฮะบีย์</span></div>
-          <p class="dc-desc">สิยัร อะอ์ลาม อันนุบะลาอ์</p>
-          <p class="dc-date">เร็วๆ นี้ · ชุดสมาชิก</p>
-        </div>
-        <a class="dc-card c3" href="#tm-content" role="button" aria-label="เปิดชุดอัลบิดายะฮ์ วันนิฮายะฮ์">
-          <div class="dc-row"><span class="dc-badge">★</span><span class="dc-title">อิบนุ กะษีร</span></div>
-          <p class="dc-desc">อัลบิดายะฮ์ วันนิฮายะฮ์</p>
-          <p class="dc-date">ฮ.ศ. 1–100 · เปิดให้เข้าถึง</p>
+      <div class="bc-track" id="bc-track">
+        <a class="bc-card" href="#tm-content" aria-label="เปิดชุดอัลบิดายะฮ์ วันนิฮายะฮ์">
+          <div class="bc-card-bg"></div>
+          <div class="bc-watermark">البداية والنهاية</div>
+          <div class="bc-veil"></div>
+          <div class="bc-body">
+            <span class="bc-tag open">เปิดให้เข้าถึง</span>
+            <p class="bc-author">อิบนุ กะษีร</p>
+            <p class="bc-name">อัลบิดายะฮ์ วันนิฮายะฮ์</p>
+            <p class="bc-desc">บันทึกเหตุการณ์รายปีฮิจเราะฮ์ที่ 1–100 แปลตรงจากตำราเต็มท่อน พร้อมต้นฉบับอาหรับ</p>
+            <span class="bc-more">เปิดอ่าน <span class="bc-arrowi">→</span></span>
+          </div>
         </a>
+        <div class="bc-card locked" aria-disabled="true">
+          <div class="bc-card-bg"></div>
+          <div class="bc-watermark">المنتظم</div>
+          <div class="bc-veil"></div>
+          <div class="bc-body">
+            <span class="bc-tag soon">เร็วๆ นี้</span>
+            <p class="bc-author">อิบนุ อัลเญาซีย์</p>
+            <p class="bc-name">อัลมุนตะศ็อม ฟี ตารีค</p>
+            <p class="bc-desc">พงศาวดารรายปีของอิบนุ อัลเญาซีย์ ครอบคลุมเหตุการณ์และชีวประวัติบุคคลสำคัญ</p>
+            <span class="bc-more">ชุดสมาชิก <span class="bc-arrowi">→</span></span>
+          </div>
+        </div>
+        <div class="bc-card locked" aria-disabled="true">
+          <div class="bc-card-bg"></div>
+          <div class="bc-watermark">مرآة الزمان</div>
+          <div class="bc-veil"></div>
+          <div class="bc-body">
+            <span class="bc-tag soon">เร็วๆ นี้</span>
+            <p class="bc-author">สิบฏ์ อิบนุ อัลเญาซีย์</p>
+            <p class="bc-name">มิรอาตุซซะมาน</p>
+            <p class="bc-desc">บันทึกประวัติศาสตร์ที่รวบรวมรายงานหลากหลายสาย โดยหลานของอิบนุ อัลเญาซีย์</p>
+            <span class="bc-more">ชุดสมาชิก <span class="bc-arrowi">→</span></span>
+          </div>
+        </div>
+        <div class="bc-card locked" aria-disabled="true">
+          <div class="bc-card-bg"></div>
+          <div class="bc-watermark">سير أعلام النبلاء</div>
+          <div class="bc-veil"></div>
+          <div class="bc-body">
+            <span class="bc-tag soon">เร็วๆ นี้</span>
+            <p class="bc-author">อัซซะฮะบีย์</p>
+            <p class="bc-name">สิยัร อะอ์ลาม อันนุบะลาอ์</p>
+            <p class="bc-desc">ชีวประวัติบุคคลสำคัญในประวัติศาสตร์อิสลามตามลำดับชั้น โดยอัซซะฮะบีย์</p>
+            <span class="bc-more">ชุดสมาชิก <span class="bc-arrowi">→</span></span>
+          </div>
+        </div>
+        <div class="bc-card locked" aria-disabled="true">
+          <div class="bc-card-bg"></div>
+          <div class="bc-watermark">طبقات الشافعية الكبرى</div>
+          <div class="bc-veil"></div>
+          <div class="bc-body">
+            <span class="bc-tag soon">เร็วๆ นี้</span>
+            <p class="bc-author">อัซซุบกีย์</p>
+            <p class="bc-name">ฏอบะก็อต อัชชาฟิอียะฮ์ อัลกุบรอ</p>
+            <p class="bc-desc">ลำดับชั้นชีวประวัติปราชญ์มัซฮับชาฟิอีย์ ฉบับใหญ่ โดยตาญุดดีน อัซซุบกีย์</p>
+            <span class="bc-more">ชุดสมาชิก <span class="bc-arrowi">→</span></span>
+          </div>
+        </div>
       </div>
+      <div class="bc-dots" id="bc-dots"></div>
     </div>
     <div class="htm-search-box">
       <input type="text" id="tm-search-input" placeholder="ค้นหาเหตุการณ์, บุคคล, สถานที่ (รองรับภาษาอาหรับและไทย)">
@@ -623,6 +668,51 @@ function switchTab(name, btn) {
   document.querySelectorAll('.htm-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('panel-' + name).classList.add('active');
   if (btn) btn.classList.add('active');
+  if (name === 'explorer') bookCarouselUpdate();
+}
+
+/* ─── Book-collections carousel (ขาว-ดำ) ─── */
+function bookCarouselStep() {
+  var track = document.getElementById('bc-track');
+  if (!track) return 0;
+  var card = track.querySelector('.bc-card');
+  if (!card) return 0;
+  return card.getBoundingClientRect().width + 20; /* card width + gap */
+}
+function bookCarouselUpdate() {
+  var track = document.getElementById('bc-track');
+  if (!track) return;
+  var prev = document.getElementById('bc-prev');
+  var next = document.getElementById('bc-next');
+  var maxScroll = track.scrollWidth - track.clientWidth - 1;
+  if (prev) prev.disabled = track.scrollLeft <= 1;
+  if (next) next.disabled = track.scrollLeft >= maxScroll;
+  var step = bookCarouselStep() || 1;
+  var active = Math.round(track.scrollLeft / step);
+  var dots = document.querySelectorAll('#bc-dots .bc-dot');
+  dots.forEach(function (d, i) { d.classList.toggle('active', i === active); });
+}
+function bookCarouselInit() {
+  var track = document.getElementById('bc-track');
+  if (!track) return;
+  var cards = track.querySelectorAll('.bc-card');
+  var dotsWrap = document.getElementById('bc-dots');
+  if (dotsWrap && !dotsWrap.childElementCount) {
+    cards.forEach(function (_, i) {
+      var b = document.createElement('button');
+      b.className = 'bc-dot' + (i === 0 ? ' active' : '');
+      b.setAttribute('aria-label', 'ไปยังชุดที่ ' + (i + 1));
+      b.addEventListener('click', function () { track.scrollTo({ left: bookCarouselStep() * i, behavior: 'smooth' }); });
+      dotsWrap.appendChild(b);
+    });
+  }
+  var prev = document.getElementById('bc-prev');
+  var next = document.getElementById('bc-next');
+  if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -bookCarouselStep(), behavior: 'smooth' }); });
+  if (next) next.addEventListener('click', function () { track.scrollBy({ left: bookCarouselStep(), behavior: 'smooth' }); });
+  track.addEventListener('scroll', function () { window.requestAnimationFrame(bookCarouselUpdate); });
+  window.addEventListener('resize', bookCarouselUpdate);
+  bookCarouselUpdate();
 }
 
 /* ─── Calendar conversion math ─── */
@@ -1313,6 +1403,7 @@ function loadAllShards() {
   document.querySelectorAll('.htm-tab').forEach(function(tab){
     tab.addEventListener('click', function(){ switchTab(tab.getAttribute('data-tab'), tab); });
   });
+  bookCarouselInit();
   var bH2G = document.getElementById('btnConvertH2G');
   if(bH2G) bH2G.addEventListener('click', convertHijriToGregorian);
   var bG2H = document.getElementById('btnConvertG2H');
