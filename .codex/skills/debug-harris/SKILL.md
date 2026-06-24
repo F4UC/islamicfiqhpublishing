@@ -28,12 +28,12 @@ If the user asks for speed or says to skip the checklist, apply the protocol sil
 
 ## Project constraints
 
-- Do not remove, simplify, or alter Islamic academic content unless the user explicitly approves the exact content change.
+- Do not remove, simplify, or alter Islamic academic content unless the owner explicitly approves the exact content change.
 - **Child safety overrides fidelity (CLAUDE.md Rule 71), for every agent.** If a Drive source or any content sexualizes a minor: drop only the offending span and set a child-safety flag (PASS-with-flag); never surface, quote, reproduce, or restore it anywhere — report only its location to the owner (One) + Claude and stop. Never self-merge a child-safety-flagged article.
 - Do not sacrifice animations, visual identity, Arabic typography, QOTD behavior, or editorial charter compliance without calling out the tradeoff first.
 - Treat DNS, SSL, Cloudflare Workers/Pages, cache, and deployment state as separate layers.
 - Record absolute times or concrete dates when diagnosing recent deploy/DNS/cache behavior.
-- **Always cut a fresh branch from the latest `main`** for each task (name it `claude/<short-task>`), open a PR, and let the **owner merge** to trigger the production Cloudflare deploy. **Agents never push or merge to `main`.**
+- **Always cut a fresh branch from the latest `main`** for each task (name it `claude/<short-task>`), open a PR, and let the owner merge to trigger the production Cloudflare deploy.
 - After the owner merges to `main`, Cloudflare deploys (typically 30–60 seconds); the owner (or an agent on request) then fetches the live URL to verify.
 
 ## 1. Reproduce
@@ -68,6 +68,11 @@ For frontend bugs:
 4. CSS visibility/layout conditions.
 5. Recent commits touching the failing surface.
 
+**Trace execution ORDER, not just the failing surface.** A symptom can come from code that runs *before* the code you suspect. In a shared `<script>`/module, an exception thrown early aborts everything after it — so a later function (a loader, a renderer) may never run at all, and fixing *that* later function changes nothing.
+- Confirm the suspected code is actually REACHED. Add a probe (or a breakpoint/log) at its entry; if the probe never fires, the bug is upstream — stop fixing here.
+- Check for an init-time throw: a `getElementById(...)` on a removed element, a null deref, a bad import — any of which aborts the whole block before your target runs.
+- When a fix you're confident in produces NO change on the preview, treat that as evidence the real fault is earlier in the path (a "moot fix"), not that the fix was wrong. Re-trace from the first line that executes.
+
 Only add instrumentation after the visible path and configuration knobs have been checked. Tag temporary probes with a unique prefix such as `[DBG-HARRIS]` and remove them before finishing.
 
 ## 3. Falsify
@@ -79,6 +84,7 @@ Examples:
 - "If HTTPS works but HTTP returns 200 without redirect, the issue is not certificate failure; it is missing HTTPS enforcement."
 - "If the Pages production URL works but the custom domain fails, the build is not the root cause."
 - "If disabling a frame loop fixes jank but removes animation, the fix must preserve the animation with throttling or pause rules."
+- "If the fix I just deployed changes nothing, the bug is not where I fixed it — something earlier in the execution path fails first (e.g. an init throw aborts the script before the loader runs). Falsify by probing whether my target code is even reached."
 
 Run the cheapest disproof first.
 
@@ -96,15 +102,14 @@ Use the ledger to avoid contradicting prior observations. Before declaring the r
 
 - Work on a fresh branch and open a PR. **No direct push or merge to `main`** — the owner reviews and merges every change.
 - Keep changes minimal and reversible.
-- Validate the exact failing path after the fix by fetching the live URL.
-- For web changes, verify both `https://islamicfiqhpublishing.com` and `https://www.islamicfiqhpublishing.com`.
-- For UI fixes, verify that Arabic text direction, punctuation, mobile layout, and animations still comply with the 51 Iron Rules in `CLAUDE.md`.
-- State what was verified and what remains pending, such as DNS propagation or Cloudflare cache purge.
+- Validate the failing path on the PR preview deployment after the fix.
+- For UI fixes, verify that Arabic text direction, punctuation, mobile layout, and animations still comply with the Iron Rules in `CLAUDE.md`.
+- State what was verified on the preview and what remains pending for after-merge (such as DNS propagation or Cloudflare cache purge).
 
 ---
 
-## Editorial Charter — The 51 Iron Rules
+## Editorial Charter — The Iron Rules
 
 The authoritative source is **`CLAUDE.md`** at the repository root. Claude Code loads it automatically every session — read it there. Do not maintain a copy here; `CLAUDE.md` is the single source of truth.
 
-Before committing any fix, confirm it does not violate any rule in `CLAUDE.md`.
+Before opening any fix PR, confirm it does not violate any rule in `CLAUDE.md`.
