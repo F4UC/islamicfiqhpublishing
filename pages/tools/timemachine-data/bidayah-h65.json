@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 65,
+    "ceYear": 684,
+    "ceSpan": "684",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 65 (เล่ม 13): ยุคฟิตนะฮ์ครั้งที่สอง - Rule 89. ★offset: pid=น.+3761★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ",
+      "มะฆอซี · ฟุตูหาต",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 65"
+  },
+  "events": [
+    {
+      "id": "bidayah-h65-001",
+      "book": "al-bidayah",
+      "hijriYear": 65,
+      "ceYear": 684,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 65: ★ขบวนการอัตเตาวาบีน - สุลัยมาน บิน ศุร็อด รวมพลแก้แค้นให้ฮุสัยน์★",
+      "persons": [
+        "sulayman-b-surad",
+        "husayn-b-ali"
+      ],
+      "places": [
+        "al-kufa"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(65) มีผู้คนราวหนึ่งหมื่นเจ็ดพันคนมารวมตัวกับสุลัยมาน บิน ศุร็อด ทุกคนเรียกร้องการแก้แค้นให้อัลฮุสัยน์จากผู้ที่สังหารท่าน (ขบวนการอัตเตาวาบีน)",
+          "arabicExcerpt": "فيها اجتمع إلى سليمان بن صُرَد نحو من سبعة عشر ألفًا، كلُّهم يطلبون الأخذ بثار الحسين ممن قتله",
+          "loc": "เล่ม 13 หน้า 353",
+          "url": "https://shamela.ws/book/30097/4114",
+          "page": 353
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

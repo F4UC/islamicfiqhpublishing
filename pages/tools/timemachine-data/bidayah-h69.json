@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 69,
+    "ceYear": 688,
+    "ceSpan": "688",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 69 (เล่ม 14): ยุคฟิตนะฮ์ครั้งที่สอง - Rule 89. ★offset: pid=น.+4123★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ",
+      "มะฆอซี · ฟุตูหาต",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 69"
+  },
+  "events": [
+    {
+      "id": "bidayah-h69-001",
+      "book": "al-bidayah",
+      "hijriYear": 69,
+      "ceYear": 688,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 69: การสังหารอัมร์ บิน สะอีด อัลอัชดัก (โดยอับดุลมาลิก)",
+      "persons": [
+        "amr-b-said-al-ashdaq",
+        "abd-al-malik-b-marwan"
+      ],
+      "places": [
+        "damascus"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(69)เกิดการสังหารอัมร์ บิน สะอีด อัลอัชดัก อัลอุมะวีย์ โดยอับดุลมาลิก บิน มัรวาน",
+          "arabicExcerpt": "ففيها كان مقتل عمرو بن سعيد الأشدق الأموي قتله عبد الملك بن مروان",
+          "loc": "เล่ม 14 หน้า 70",
+          "url": "https://shamela.ws/book/30097/4193",
+          "page": 70
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 67,
+    "ceYear": 686,
+    "ceSpan": "686",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 67 (เล่ม 14): ยุคฟิตนะฮ์ครั้งที่สอง - Rule 89. ★offset: pid=น.+4123★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ",
+      "มะฆอซี · ฟุตูหาต",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 67"
+  },
+  "events": [
+    {
+      "id": "bidayah-h67-001",
+      "book": "al-bidayah",
+      "hijriYear": 67,
+      "ceYear": 686,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 67: ★การสังหารอุบัยดุลลอฮ์ บิน ซิยาด (โดยอิบรอฮีม บิน อัลอัชตัร)★",
+      "persons": [
+        "ubayd-allah-b-ziyad",
+        "ibrahim-b-al-ashtar"
+      ],
+      "places": [
+        "al-kufa"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(67)เกิดการสังหารอุบัยดุลลอฮ์ บิน ซิยาด ด้วยมือของอิบรอฮีม บิน อัลอัชตัร อันนะเคาะอีย์",
+          "arabicExcerpt": "ففيها كان مقتل عبيد اللَّه بن زياد على يدي إبراهيم بن الأشتر النخعي",
+          "loc": "เล่ม 14 หน้า 33",
+          "url": "https://shamela.ws/book/30097/4156",
+          "page": 33
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 66,
+    "ceYear": 685,
+    "ceSpan": "685",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 66 (เล่ม 14): ยุคฟิตนะฮ์ครั้งที่สอง - Rule 89. ★offset: pid=น.+4123★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ",
+      "มะฆอซี · ฟุตูหาต",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 66"
+  },
+  "events": [
+    {
+      "id": "bidayah-h66-001",
+      "book": "al-bidayah",
+      "hijriYear": 66,
+      "ceYear": 685,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 66: ★การลุกฮือของอัลมุคตาร บิน อบี อุบัยด์ ที่กูฟะฮ์★",
+      "persons": [
+        "al-mukhtar-b-abi-ubayd",
+        "husayn-b-ali"
+      ],
+      "places": [
+        "al-kufa"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(66) อัลมุคตาร บิน อบี อุบัยด์ อัษษะเกาะฟีย์ ผู้โป้ปด ได้ก่อการที่กูฟะฮ์ เพื่อแก้แค้นให้อัลฮุสัยน์ บิน อาลี ตามที่เขาอ้าง",
+          "arabicExcerpt": "ففيها وثب المختار بن أبي عبيد الثقفي الكذاب بالكوفة ليأخذ بثأر الحسين بن علي فيما يزعم",
+          "loc": "เล่ม 14 หน้า 11",
+          "url": "https://shamela.ws/book/30097/4134",
+          "page": 11
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}
