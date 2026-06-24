@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 56,
+    "ceYear": 676,
+    "ceSpan": "676",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 56 (al-Bidayah เล่ม 13): ฟุตูหโรมัน - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 56"
+  },
+  "events": [
+    {
+      "id": "bidayah-h56-001",
+      "book": "al-bidayah",
+      "hijriYear": 56,
+      "ceYear": 676,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 56: ญุนาดะฮ์ บิน อบี อุมัยยะฮ์ พักค้างฤดูหนาวในแผ่นดินโรมัน",
+      "persons": [
+        "junada-b-abi-umayya"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(56) ญุนาดะฮ์ บิน อบี อุมัยยะฮ์ ได้พักค้างฤดูหนาวในแผ่นดินโรมัน",
+          "arabicExcerpt": "ففيها شتا جُنادة بن أبي أميّة بأرض الروم",
+          "loc": "เล่ม 13 หน้า 114",
+          "url": "https://shamela.ws/book/30097/3875",
+          "page": 114
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

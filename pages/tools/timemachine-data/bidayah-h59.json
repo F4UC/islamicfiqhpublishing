@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 59,
+    "ceYear": 679,
+    "ceSpan": "679",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 59 (al-Bidayah เล่ม 13): ฟุตูหโรมัน - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 59"
+  },
+  "events": [
+    {
+      "id": "bidayah-h59-001",
+      "book": "al-bidayah",
+      "hijriYear": 59,
+      "ceYear": 679,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 59: อัมร์ บิน มุรเราะฮ์ พักค้างฤดูหนาวในแผ่นดินโรมัน",
+      "persons": [],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(59) เกิดการพักค้างฤดูหนาวของอัมร์ บิน มุรเราะฮ์ อัลญุฮะนีย์ ในแผ่นดินโรมันทางบก",
+          "arabicExcerpt": "فيها كان مشتى عَمرو بن مرَّة الجُهَني في أرض الروم في البر",
+          "loc": "เล่ม 13 หน้า 137",
+          "url": "https://shamela.ws/book/30097/3898",
+          "page": 137
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

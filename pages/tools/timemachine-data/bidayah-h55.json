@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 55,
+    "ceYear": 675,
+    "ceSpan": "675",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 55 (al-Bidayah เล่ม 13): การปกครอง - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 55"
+  },
+  "events": [
+    {
+      "id": "bidayah-h55-001",
+      "book": "al-bidayah",
+      "hijriYear": 55,
+      "ceYear": 675,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 55: มุอาวิยะฮ์แต่งตั้งอุบัยดุลลอฮ์ บิน ซิยาด ให้ปกครองบัศเราะฮ์",
+      "persons": [
+        "muawiya-b-abi-sufyan",
+        "ubayd-allah-b-ziyad"
+      ],
+      "places": [
+        "al-basra"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(55) มุอาวิยะฮ์ได้ปลดอับดุลลอฮ์ บิน ฆ็อยลาน ออกจากบัศเราะฮ์ และแต่งตั้งอุบัยดุลลอฮ์ บิน ซิยาด ให้ปกครองแทน",
+          "arabicExcerpt": "فيها عزل معاوية عبد اللّه [بن عمرو] بن غَيْلان عن البصرة وولَّى عليها عبيد الله بن زياد",
+          "loc": "เล่ม 13 หน้า 101",
+          "url": "https://shamela.ws/book/30097/3862",
+          "page": 101
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}
