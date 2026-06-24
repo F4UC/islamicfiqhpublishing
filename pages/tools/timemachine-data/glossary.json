@@ -4404,6 +4404,90 @@
       "canonicalThai": "อัมร์ บิน สะอีด อัลอัชดัก",
       "note": "",
       "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-ubayd-allah",
+      "arabic": "محمد بن عبيد الله",
+      "canonicalThai": "มุหัมมัด บิน อุบัยดิลลาฮ์",
+      "note": "วะซีรที่ถูกอัลมุก็อตะดิรปลดในปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "ali-b-isa",
+      "arabic": "علي بن عيسى بن الجراح",
+      "canonicalThai": "อะลีย์ บิน อีซา (อิบนุลญัรรอห์)",
+      "note": "วะซีรผู้เลื่องชื่อด้านความยุติธรรมสมัยอับบาซียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-tahir-al-jannabi",
+      "arabic": "أبو طاهر سليمان بن أبي سعيد الجنابي",
+      "canonicalThai": "อะบูฏอฮิร สุลัยมาน อัลญันนาบี",
+      "note": "หัวหน้าก็อรอมิเฏาะฮ์แห่งบะหฺเรน บุตรอบูสะอีด",
+      "variantsFound": []
+    },
+    {
+      "id": "said-b-abi-said",
+      "arabic": "سعيد بن أبي سعيد الجنابي",
+      "canonicalThai": "สะอีด บิน อะบีสะอีด อัลญันนาบี",
+      "note": "บุตรอบูสะอีดที่ได้รับการสั่งเสีย ก่อนถูกพี่น้องชิงอำนาจ",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hallaj",
+      "arabic": "الحسين بن منصور الحلاج",
+      "canonicalThai": "อัลฮุเซน บิน มันศูร อัลฮัลลาจ",
+      "note": "นักพรตผู้ถูกตัดสินว่าหลงผิด ภายหลังถูกประหารปี 309",
+      "variantsFound": []
+    },
+    {
+      "id": "al-fadl-b-abd-al-malik",
+      "arabic": "الفضل بن عبد الملك الهاشمي",
+      "canonicalThai": "อัลฟัฎล์ บิน อับดิลมะลิก อัลฮาชิมีย์",
+      "note": "ผู้นำหัจญ์ปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "ibrahim-b-khalid",
+      "arabic": "إبراهيم بن خالد الشافعي",
+      "canonicalThai": "อิบรอฮีม บิน คอลิด อัชชาฟิอีย์",
+      "note": "ผู้รวมความรู้และความสมถะ เสียชีวิตปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-bakr-al-ismaili",
+      "arabic": "أبو بكر الإسماعيلي",
+      "canonicalThai": "อะบูบักร อัลอิสมาอีลีย์",
+      "note": "นักหะดีษ ศิษย์ของอิบรอฮีม บิน คอลิด",
+      "variantsFound": []
+    },
+    {
+      "id": "jafar-al-firyabi",
+      "arabic": "جعفر بن محمد الفريابي",
+      "canonicalThai": "ญะอ์ฟัร บิน มุหัมมัด อัลฟิรยาบีย์",
+      "note": "หาฟิซ กอฎีแห่งอัดดีนะวัร เสียชีวิตปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "ali-b-ahmad-al-rasibi",
+      "arabic": "علي بن أحمد الراسبي",
+      "canonicalThai": "อะลีย์ บิน อะหมัด อัรรอสิบีย์",
+      "note": "ผู้ปกครองวาสิฏผู้มั่งคั่ง เสียชีวิตปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-abi-al-shawarib",
+      "arabic": "محمد بن عبد الله ابن أبي الشوارب",
+      "canonicalThai": "มุหัมมัด อิบนุ อะบีอัชชะวาริบ (อัลอะหฺนัฟ)",
+      "note": "กอฎีแห่งมะดีนะตุลมันศูร เสียชีวิตปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-bakr-al-bardai",
+      "arabic": "أبو بكر أحمد بن هارون البردعي",
+      "canonicalThai": "อะบูบักร อะหมัด บิน ฮารูน อัลบัรเดาะอีย์",
+      "note": "หาฟิซ เสียชีวิตปี 301",
+      "variantsFound": []
     }
   ],
   "places": [
@@ -5738,6 +5822,27 @@
       "id": "azerbaijan",
       "arabic": "أذربيجان",
       "canonicalThai": "อาเซอร์ไบจาน",
+      "variantsFound": []
+    },
+    {
+      "id": "al-harbiyya",
+      "arabic": "الحربية",
+      "canonicalThai": "อัลหัรบียะฮ์",
+      "note": "ย่านหนึ่งทางทิศตะวันตกของแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "bab-al-shammasiyya",
+      "arabic": "باب الشماسية",
+      "canonicalThai": "ประตูอัชชัมมาซียะฮ์",
+      "note": "ประตู/ย่านหนึ่งของแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "madinat-al-mansur",
+      "arabic": "مدينة المنصور",
+      "canonicalThai": "มะดีนะตุลมันศูร",
+      "note": "เมืองวงกลมของแบกแดดที่อัลมันศูรสร้าง",
       "variantsFound": []
     }
   ],
