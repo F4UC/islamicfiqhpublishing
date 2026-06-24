@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "hijriYear": 43,
+    "ceYear": 663,
+    "ceSpan": "663",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 43 (เล่ม 13): บุสร์ยกทัพโรมัน - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 43"
+  },
+  "events": [
+    {
+      "id": "bidayah-h43-001",
+      "book": "al-bidayah",
+      "hijriYear": 43,
+      "ceYear": 663,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 43: บุสร์ บิน อบี อัรฏอฮ์ ยกทัพและบุกลึกเข้าดินแดนโรมัน",
+      "persons": [
+        "busr-b-abi-artat"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(43) บุสร์ บิน อบี อัรฏอฮ์ ได้ยกทัพไปดินแดนโรมันและบุกลึกเข้าไปในนั้น",
+          "arabicExcerpt": "فيها غزا بُسْر بن أبي أَرْطاة بلاد الروم، فتوغَّل فيها",
+          "loc": "เล่ม 13 หน้า 13",
+          "url": "https://shamela.ws/book/30097/3774",
+          "page": 13
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}
