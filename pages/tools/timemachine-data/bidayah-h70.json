@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "hijriYear": 70,
+    "ceYear": 689,
+    "ceSpan": "689",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 70 (เล่ม 14): โรมันโจมตีชาม - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ",
+      "การพิชิต (ฟุตูหาต)"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 70"
+  },
+  "events": [
+    {
+      "id": "bidayah-h70-001",
+      "book": "al-bidayah",
+      "hijriYear": 70,
+      "ceYear": 689,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 70: ชาวโรมันลุกฮือโจมตีแผ่นดินชาม (ช่วงฟิตนะฮ์อุมัยยะฮ์อ่อนแอ)",
+      "persons": [],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(70) ชาวโรมันได้ก่อการลุกฮือและระดมกำลังโจมตีผู้ที่อยู่ในแผ่นดินชาม และถือว่าพวกเขาอ่อนแอ",
+          "arabicExcerpt": "فيها ثارت الروم واستجاشوا على من بالشام، واستضعفوهم",
+          "loc": "เล่ม 14 หน้า 79",
+          "url": "https://shamela.ws/book/30097/4202",
+          "page": 79
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}
