@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 49,
+    "ceYear": 669,
+    "ceSpan": "669",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 49 (al-Bidayah เล่ม 13): ฟุตูหโรมัน - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 49"
+  },
+  "events": [
+    {
+      "id": "bidayah-h49-001",
+      "book": "al-bidayah",
+      "hijriYear": 49,
+      "ceYear": 669,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 49: ★การยกทัพถึงคอนสแตนติโนเปิล (ยะซีด) พร้อมเหล่าเศาะหาบะฮ์★",
+      "persons": [
+        "yazid-b-muawiya",
+        "abd-allah-b-umar",
+        "abd-allah-b-abbas",
+        "ibn-al-zubayr"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(49) ยะซีด บิน มุอาวิยะฮ์ ได้ยกทัพไปดินแดนโรมันจนถึงกรุงคอนสแตนติโนเปิล โดยมีเหล่าผู้นำเศาะหาบะฮ์ร่วมไปด้วย ในนั้นมีอิบนุ อุมัร, อิบนุ อับบาส และอิบนุ ซุบัยร์",
+          "arabicExcerpt": "فيها غزا يزيد بن معاوية بلاد الروم حتى بلغ قُسْطنطينيَّة، وكان معه جماعة من سادات الصحابة منهم: ابن عمر، وابن عباس، وابن الزُّبير",
+          "loc": "เล่ม 13 หน้า 31",
+          "url": "https://shamela.ws/book/30097/3792",
+          "page": 31
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}
