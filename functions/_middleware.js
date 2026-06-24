@@ -9,7 +9,7 @@
  * Blocking strategy (three passes, short-circuit):
  *   1. BLOCK_EXACT  — extensionless internal files + _TEMPLATE variants
  *   2. BLOCK_PREFIX — entire internal dirs (docs/, scripts/, .claude/, .codex/, .github/)
- *   3. BLOCK_EXT    — all .md, .py, .sha256 files anywhere in the tree
+ *   3. BLOCK_EXT    — all .md, .py, .sha256, .gitignore files anywhere in the tree
  *
  * Everything else falls through via context.next() (static assets, /api/*, etc.).
  * Cheap: Set.has (O(1)) + small Array.some with startsWith/endsWith, early return.
@@ -22,7 +22,7 @@ const BLOCK_EXACT = new Set([
 
 const BLOCK_PREFIX = ["/docs/", "/scripts/", "/.claude/", "/.codex/", "/.github/"];
 
-const BLOCK_EXT = [".md", ".py", ".sha256"];
+const BLOCK_EXT = [".md", ".py", ".sha256", ".gitignore"];
 
 export async function onRequest(context) {
   const path = new URL(context.request.url).pathname;
