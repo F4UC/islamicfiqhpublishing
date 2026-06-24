@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 91,
+    "ceYear": 710,
+    "ceSpan": "710",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 91 (al-Bidayah เล่ม 14): ฟุตูหเติร์ก - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 91"
+  },
+  "events": [
+    {
+      "id": "bidayah-h91-001",
+      "book": "al-bidayah",
+      "hijriYear": 91,
+      "ceYear": 710,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 91: มัสละมะฮ์ยกทัพถึงอัลบาบ (อาเซอร์ไบจาน) ดินแดนเติร์ก",
+      "persons": [
+        "maslama-b-abd-al-malik"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(91) มัสละมะฮ์ บิน อับดุลมาลิก และหลานชายของเขาอับดุลอะซีซ บิน อัลวะลีด ได้ยกทัพหน้าร้อน และในปีนี้มัสละมะฮ์ได้ยกทัพไปดินแดนเติร์กจนถึงเมืองอัลบาบ จากด้านอาเซอร์ไบจาน",
+          "arabicExcerpt": "فيها غزا الصائفة مسلمة بن عبد الملك وابن أخيه عبد العزيز بن الوليد، وفيها غزا مسلمة بلاد الترك حتى بلغ الباب من ناحية أذربيجان",
+          "loc": "เล่ม 14 หน้า 245",
+          "url": "https://shamela.ws/book/30097/4368",
+          "page": 245
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

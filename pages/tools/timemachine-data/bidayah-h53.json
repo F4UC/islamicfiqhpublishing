@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 53,
+    "ceYear": 673,
+    "ceSpan": "673",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 53 (al-Bidayah เล่ม 13): ฟุตูห - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 53"
+  },
+  "events": [
+    {
+      "id": "bidayah-h53-001",
+      "book": "al-bidayah",
+      "hijriYear": 53,
+      "ceYear": 673,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 53: ★การพิชิตเกาะโรดส์ (ญุนาดะฮ์ บิน อบี อุมัยยะฮ์)★",
+      "persons": [
+        "junada-b-abi-umayya"
+      ],
+      "places": [
+        "rhodes",
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(53) อับดุรเราะห์มาน บิน อุมมิลหะกัม อัษษะเกาะฟีย์ ได้ยกทัพไปดินแดนโรมันและพักค้างฤดูหนาวที่นั่น และในปีนี้มุสลิมภายใต้การนำของญุนาดะฮ์ บิน อบี อุมัยยะฮ์ ได้พิชิตเกาะโรดส์",
+          "arabicExcerpt": "فيها غزا عبد الرحمن بن أمِّ الحكم الثقفيّ بلاد الروم وشتا بها. وفيها افتتح المسلمون وعليهم جُنادة بن أبي أميَّة جزيرة رُودُس",
+          "loc": "เล่ม 13 หน้า 84",
+          "url": "https://shamela.ws/book/30097/3845",
+          "page": 84
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

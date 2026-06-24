@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 57,
+    "ceYear": 677,
+    "ceSpan": "677",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 57 (al-Bidayah เล่ม 13): ฟุตูหโรมัน - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 57"
+  },
+  "events": [
+    {
+      "id": "bidayah-h57-001",
+      "book": "al-bidayah",
+      "hijriYear": 57,
+      "ceYear": 677,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 57: ทัพในแผ่นดินโรมัน + มุอาวิยะฮ์ปลดมัรวานจากมะดีนะฮ์",
+      "persons": [
+        "muawiya-b-abi-sufyan",
+        "marwan-b-al-hakam"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(57) เกิดการพักค้างฤดูหนาวของอับดุลลอฮ์ บิน ก็อยส์ ในแผ่นดินโรมัน และในเดือนเชาวาล มุอาวิยะฮ์ได้ปลดมัรวาน บิน อัลหะกัม ออกจากมะดีนะฮ์",
+          "arabicExcerpt": "فيها كان مَشْتى عبد اللَّه بن قيس بأرض الروم",
+          "loc": "เล่ม 13 หน้า 118",
+          "url": "https://shamela.ws/book/30097/3879",
+          "page": 118
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

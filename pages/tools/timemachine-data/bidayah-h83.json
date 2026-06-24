@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 83,
+    "ceYear": 702,
+    "ceSpan": "702",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 83 (al-Bidayah เล่ม 14): ฟิตนะฮ์อิบนุลอัชอัษ - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 83"
+  },
+  "events": [
+    {
+      "id": "bidayah-h83-001",
+      "book": "al-bidayah",
+      "hijriYear": 83,
+      "ceYear": 702,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 83: ★สมรภูมิดัยรุลญะมาญิม - อัลหัจญาจ ปะทะ อิบนุลอัชอัษ★",
+      "persons": [
+        "al-hajjaj",
+        "abd-al-rahman-b-al-ashath"
+      ],
+      "places": [
+        "medina"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ปีนี้(83)เริ่มต้นโดยที่ผู้คนเผชิญหน้ากันเพื่อสู้รบ ฝ่ายอัลหัจญาจและพรรคพวกอยู่ที่ดัยรุก็อรเราะฮ์ และฝ่ายอิบนุลอัชอัษและพรรคพวกอยู่ที่ดัยรุลญะมาญิม",
+          "arabicExcerpt": "استهلت هذه السنة والناس متواقفون لقتال الحجاج وأصحابه بدير قرة، وابن الأشعث وأصحابه بدير الجماجم",
+          "loc": "เล่ม 14 หน้า 196",
+          "url": "https://shamela.ws/book/30097/4319",
+          "page": 196
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

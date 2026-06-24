@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 93,
+    "ceYear": 712,
+    "ceSpan": "712",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 93 (al-Bidayah เล่ม 14): ฟุตูหโรมัน - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 93"
+  },
+  "events": [
+    {
+      "id": "bidayah-h93-001",
+      "book": "al-bidayah",
+      "hijriYear": 93,
+      "ceYear": 712,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 93: มัสละมะฮ์พิชิตป้อมหลายแห่งในดินแดนโรมัน",
+      "persons": [
+        "maslama-b-abd-al-malik"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(93) มัสละมะฮ์ บิน อับดุลมาลิก ได้พิชิตป้อมปราการมากมายในดินแดนโรมัน อาทิ ป้อมอัลหะดีด, ฆอซาละฮ์ และมาสะฮ์",
+          "arabicExcerpt": "وفيها افتتح مسلمة بن عبد الملك حصونًا كثيرة من بلاد الروم، منها حصن الحديد وغزالة وماسة",
+          "loc": "เล่ม 14 หน้า 250",
+          "url": "https://shamela.ws/book/30097/4373",
+          "page": 250
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

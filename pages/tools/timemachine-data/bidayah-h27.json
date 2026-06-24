@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 27,
+    "ceYear": 648,
+    "ceSpan": "648",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 27 (al-Bidayah เล่ม 12): ฆอซวะฮ์อิฟรีกียะฮ์ - Rule 89. ★offset vol12: pid=น.+3146★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ",
+      "มะฆอซี · ฟุตูหาต",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 27"
+  },
+  "events": [
+    {
+      "id": "bidayah-h27-001",
+      "book": "al-bidayah",
+      "hijriYear": 27,
+      "ceYear": 648,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 27: ★ฆอซวะฮ์อิฟรีกียะฮ์ - อุษมานส่งอับดุลลอฮ์ บิน สะอด์ พิชิตแอฟริกาเหนือ★",
+      "persons": [
+        "uthman-b-affan",
+        "abd-allah-b-sad"
+      ],
+      "places": [
+        "ifriqiya"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "อุษมานได้สั่งให้อับดุลลอฮ์ บิน สะอด์ บิน อบี สัรห์ ยกทัพไปทำศึกพิชิตดินแดนอิฟรีกียะฮ์(แอฟริกาเหนือ) โดยมีเงื่อนไขว่า หากอัลลอฮ์ทรงเปิดชัยชนะแก่เขา เขาจะได้รับหนึ่งในห้าของหนึ่งในห้า(ของทรัพย์เชลย)",
+          "arabicExcerpt": "أمر عثمانُ عبد الله بن سعد بن أبي سَرْح أن يغزوَ بلاد إفريقية، فإذا فتحها الله عليه فله خُمس الخُمس",
+          "loc": "เล่ม 12 หน้า 289",
+          "url": "https://shamela.ws/book/30097/3435",
+          "page": 289
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

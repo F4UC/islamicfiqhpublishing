@@ -7,6 +7,708 @@
   },
   "shards": [
     {
+      "file": "bidayah-h1.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 1,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 1 — มะฆอซี/สะรียะฮ์ยุคแรก (ธงรบแรก)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h2.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 2,
+      "events": 52,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 2 — ฆอซวะฮ์ยุคแรกและบะดัรใหญ่",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h3.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 3,
+      "events": 10,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 3 — ซีอะมัรร์/บนูก็อยนุกออ์/อุฮุด",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h4.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 4,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 4 — อัรรอญีอ์/บิอ์รมะอูนะฮ์/บนูนะฎีร",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h5.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 5,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 5 — ค็อนดัก/บนูกุร็อยเซาะฮ์/อิฟก์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h6.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 6,
+      "events": 10,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 6 — บนูลิห์ยาน/ฮุดัยบิยะฮ์/สาส์นถึงกษัตริย์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h7.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 7,
+      "events": 7,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 7 — ค็อยบัร/ฟะดัก/การกลับของญะอ์ฟัร/อุมเราะตุลเกาะฎออ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h8.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 8,
+      "events": 12,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 8 — มุอ์ตะฮ์/พิชิตมักกะฮ์/หุนัยน์/ฏออิฟ",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h9.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 9,
+      "events": 6,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 9 — ตะบูก/กะอ์บ บิน มาลิก/วุฟูด/บะรออะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h10.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 10,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 10 — วุฟูด/มุอาซเยเมน/หัจญะตุลวะดาอ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h11.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 11,
+      "events": 7,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 11 — การจากไปของท่านนบี/สะกีฟะฮ์/ริดดะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h12.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 12,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 12 — ฟุตูหอิรัก(คอลิด)/ริดดะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h13.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 13,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 13 — ฟุตูหชาม/ยัรมูก/อบูบักรถึงแก่กรรม",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h14.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 14,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 14 — พิชิตดามัสกัส/ฟุตูหชาม",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h15.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 15,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 15 — สมรภูมิฟิห์ล/ฟุตูหชาม",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h16.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 16,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 16 — พิชิตบัยตุลมักดิส/กอดิซิยะฮ์/มะดาอิน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h17.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 17,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 17 — ก่อตั้งกูฟะฮ์/ฟุตูห",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h18.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 18,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 18 — ฏออูนอัมวาส/ปีอัรร่อมาดะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h19.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 19,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 19 — มรณกรรมยะซีด บิน อบี สุฟยาน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h20.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 20,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 20 — การพิชิตอียิปต์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h21.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 21,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 21 — สมรภูมินะฮาวันด์/ฟัตหุลฟุตูห",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h23.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 23,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 23 — การถึงแก่กรรมอุมัร/ฟุตูหเปอร์เซีย",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h24.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 24,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 24 — อุษมานเคาะลีฟะฮ์/ชูรอ",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h25.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 25,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 25 — การพิชิตอเล็กซานเดรียซ้ำ",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h26.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 26,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 26 — ยุคอุษมาน/ขยายมัสยิดอัลฮะรอม",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h27.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 27,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 27 — ฆอซวะฮ์อิฟรีกียะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h28.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 28,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 28 — พิชิตไซปรัส",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h31.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 31,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 31 — สมรภูมิเสากระโดงเรือ",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h33.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 33,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 33 — อิฟรีกียะฮ์/กุรรออ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h34.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 34,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 34 — ความไม่พอใจอุษมาน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h35.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 35,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 35 — การสังหารอุษมาน/ฟิตนะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h36.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 36,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 36 — สมรภูมิญะมัล/ฟิตนะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h37.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 37,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 37 — สมรภูมิศิฟฟีน/ตะห์กีม",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h40.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 40,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 40 — การลอบสังหารอาลี/สิ้นยุครอชิดีน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h41.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 41,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 41 — อามุลญะมาอะฮ์/เริ่มอุมัยยะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h43.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 43,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 43 — บุสร์ยกทัพโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h44.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 44,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 44 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h45.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 45,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 45 — การปกครอง",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h46.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 46,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 46 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h47.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 47,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 47 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h48.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 48,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 48 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h49.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 49,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 49 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h51.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 51,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 51 — เหตุการณ์สำคัญ",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h53.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 53,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 53 — ฟุตูห",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h54.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 54,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 54 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h55.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 55,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 55 — การปกครอง",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h56.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 56,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 56 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h57.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 57,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 57 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h59.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 59,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 59 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h60.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 60,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 60 — มุอาวิยะฮ์เสียชีวิต/ยะซีดขึ้น",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h61.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 61,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 61 — กัรบะลาอ์/การสังหารอัลฮุสัยน์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h62.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 62,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 62 — คณะผู้แทนมะดีนะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h63.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 63,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 63 — สมรภูมิอัลฮัรเราะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h64.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 64,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 64 — ยะซีดสิ้น/การล้อมมักกะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h65.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 65,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 65 — ฟิตนะฮ์ครั้งที่สอง",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h66.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 66,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 66 — ฟิตนะฮ์ครั้งที่สอง",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h67.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 67,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 67 — ฟิตนะฮ์ครั้งที่สอง",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h68.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 68,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 68 — ฟิตนะฮ์ครั้งที่สอง",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h69.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 69,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 69 — ฟิตนะฮ์ครั้งที่สอง",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h71.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 71,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 71 — ฟิตนะฮ์ครั้งที่สอง",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h73.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 73,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 73 — การสังหารอิบนุ ซุบัยร์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h74.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 74,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 74 — การปกครอง",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h75.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 75,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 75 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h76.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 76,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 76 — เคาะวาริจ",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h77.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 77,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 77 — ปราบเคาะวาริจ",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h78.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 78,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 78 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h79.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 79,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 79 — โรคระบาด",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h80.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 80,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 80 — อุทกภัยญุหาฟ",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h81.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 81,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 81 — ฟุตูห",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h83.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 83,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 83 — ฟิตนะฮ์อิบนุลอัชอัษ",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h84.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 84,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 84 — ฟุตูห",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h85.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 85,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 85 — ฟิตนะฮ์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h86.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 86,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 86 — ฟุตูหเติร์ก",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h87.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 87,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 87 — การปกครอง",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h88.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 88,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 88 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h89.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 89,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 89 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h91.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 91,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 91 — ฟุตูหเติร์ก",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h93.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 93,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 93 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h94.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 94,
@@ -37,7 +739,7 @@
       "file": "bidayah-h97.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 97,
-      "events": 2,
+      "events": 1,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 97 (Shamela 361–366) — เตรียมทัพคอนสแตนติโนเปิล",
       "reviewStatus": "DRAFT"
@@ -55,7 +757,7 @@
       "file": "bidayah-h99.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 99,
-      "events": 2,
+      "events": 1,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 99 (Shamela 371–384) — สุลัยมานสิ้น + อุมัรที่ 2 ขึ้นครองราชย์",
       "reviewStatus": "DRAFT"
@@ -64,7 +766,7 @@
       "file": "bidayah-h100.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 100,
-      "events": 2,
+      "events": 1,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 100 (Shamela 385–390) — หลักร้อยปีแรก + ผู้วายชนม์",
       "reviewStatus": "DRAFT"

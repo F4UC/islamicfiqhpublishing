@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 44,
+    "ceYear": 664,
+    "ceSpan": "664",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 44 (al-Bidayah เล่ม 13): ฟุตูหโรมัน - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 44"
+  },
+  "events": [
+    {
+      "id": "bidayah-h44-001",
+      "book": "al-bidayah",
+      "hijriYear": 44,
+      "ceYear": 664,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 44: อับดุรเราะห์มาน บิน คอลิด ยกทัพและพักค้างฤดูหนาวในดินแดนโรมัน",
+      "persons": [
+        "abd-al-rahman-b-khalid"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(44) อับดุรเราะห์มาน บิน คอลิด บิน อัลวะลีด ได้ยกทัพไปดินแดนโรมันพร้อมกับมุสลิม และพักค้างฤดูหนาวที่นั่น",
+          "arabicExcerpt": "فيها غزا عبد الرحمن بن خالد بن الوليد بلاد الروم ومعه المسلمون، وشتوا هنالك",
+          "loc": "เล่ม 13 หน้า 19",
+          "url": "https://shamela.ws/book/30097/3780",
+          "page": 19
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

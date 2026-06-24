@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 28,
+    "ceYear": 647,
+    "ceSpan": "647",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 28 (al-Bidayah เล่ม 12): ฟุตูหไซปรัส - แปลตรงตามตำราเต็มท่อน (Rule 89). ★offset vol12: pid=น.+3146★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 28"
+  },
+  "events": [
+    {
+      "id": "bidayah-h28-001",
+      "book": "al-bidayah",
+      "hijriYear": 28,
+      "ceYear": 647,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 28: ★การพิชิตเกาะไซปรัส (กุบรุศ) - ทัพเรือของมุอาวิยะฮ์★",
+      "persons": [
+        "ibn-jarir",
+        "muawiya-b-abi-sufyan"
+      ],
+      "places": [
+        "cyprus",
+        "sham",
+        "damascus"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(ปีที่ยี่สิบแปด) อิบนุ ญะรีรได้กล่าวถึงการพิชิตเกาะไซปรัส(กุบรุศ) ตามอัลวากิดี ซึ่งเป็นเกาะหนึ่งทางตะวันตกของแผ่นดินชามในทะเล โดดเดี่ยวอยู่ลำพัง และมีส่วนปลายยาวยื่นไปทางชายฝั่งด้านที่ติดกับดามัสกัส",
+          "arabicExcerpt": "ففيها ذكر ابن جرير فتحَ قبرص تبعًا للواقدي، وهي جزيرةٌ غربي بلاد الشام في البحر، مخلصة وحدها، ولها ذَنَبٌ مستطيلٌ إلى نحو الساحل مما يلي دمشق",
+          "loc": "เล่ม 12 หน้า 290",
+          "url": "https://shamela.ws/book/30097/3436",
+          "page": 290
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

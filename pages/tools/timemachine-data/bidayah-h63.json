@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 63,
+    "ceYear": 683,
+    "ceSpan": "683",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 63 (เล่ม 13): สมรภูมิอัลฮัรเราะฮ์ - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ",
+      "มะฆอซี · ฟุตูหาต",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 63"
+  },
+  "events": [
+    {
+      "id": "bidayah-h63-001",
+      "book": "al-bidayah",
+      "hijriYear": 63,
+      "ceYear": 683,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 63: ★สมรภูมิอัลฮัรเราะฮ์ - กองทัพยะซีดปราบมะดีนะฮ์★",
+      "persons": [
+        "yazid-b-muawiya"
+      ],
+      "places": [
+        "medina"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(63)เกิดสมรภูมิอัลฮัรเราะฮ์ สาเหตุของมันคือ เมื่อชาวมะดีนะฮ์ได้ถอดถอนยะซีด บิน มุอาวิยะฮ์(ออกจากการเป็นเคาะลีฟะฮ์)",
+          "arabicExcerpt": "ففيها كانت: وَقْعَةُ الحَرَّة وكان سببها: أن أهل المدينة لما خلعوا يزيد بن معاوية",
+          "loc": "เล่ม 13 หน้า 307",
+          "url": "https://shamela.ws/book/30097/4068",
+          "page": 307
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

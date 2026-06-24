@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 47,
+    "ceYear": 667,
+    "ceSpan": "667",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 47 (al-Bidayah เล่ม 13): ฟุตูหโรมัน - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 47"
+  },
+  "events": [
+    {
+      "id": "bidayah-h47-001",
+      "book": "al-bidayah",
+      "hijriYear": 47,
+      "ceYear": 667,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "มะฆอซี · ฟุตูหาต",
+      "title": "ปี 47: มุสลิมพักค้างฤดูหนาวในดินแดนโรมัน",
+      "persons": [],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(47) มุสลิมได้พักค้างฤดูหนาวในดินแดนโรมัน(เพื่อการญิฮาด)",
+          "arabicExcerpt": "فيها شتا المسلمون ببلاد الروم",
+          "loc": "เล่ม 13 หน้า 28",
+          "url": "https://shamela.ws/book/30097/3789",
+          "page": 28
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

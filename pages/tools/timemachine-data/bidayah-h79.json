@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 79,
+    "ceYear": 698,
+    "ceSpan": "698",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 79 (al-Bidayah เล่ม 14): โรคระบาด - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 79"
+  },
+  "events": [
+    {
+      "id": "bidayah-h79-001",
+      "book": "al-bidayah",
+      "hijriYear": 79,
+      "ceYear": 698,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 79: โรคระบาดใหญ่ที่ชาม - ผู้คนเกือบสูญสิ้น ไม่มีใครออกศึก",
+      "persons": [],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(ปีที่เจ็ดสิบเก้า)เกิดโรคระบาด(ฏออูน)ครั้งใหญ่ที่ชาม จนผู้คนเกือบสูญสิ้นเพราะความรุนแรงของมัน และในปีนี้ไม่มีชาวชามคนใดออกศึกเลยเพราะความอ่อนแอและจำนวนที่น้อยลง",
+          "arabicExcerpt": "ففيها وقع طاعون عظيم بالشام حتى كادوا يفنون من شدته، ولم يغز فيها أحد من أهل الشام لضعفهم وقلتهم",
+          "loc": "เล่ม 14 หน้า 167",
+          "url": "https://shamela.ws/book/30097/4290",
+          "page": 167
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

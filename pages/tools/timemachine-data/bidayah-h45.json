@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 45,
+    "ceYear": 665,
+    "ceSpan": "665",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 45 (al-Bidayah เล่ม 13): การปกครอง - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 45"
+  },
+  "events": [
+    {
+      "id": "bidayah-h45-001",
+      "book": "al-bidayah",
+      "hijriYear": 45,
+      "ceYear": 665,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 45: มุอาวิยะฮ์แต่งตั้งซิยาดให้ปกครองบัศเราะฮ์",
+      "persons": [
+        "muawiya-b-abi-sufyan",
+        "ziyad-b-abihi",
+        "al-mughira-b-shuba"
+      ],
+      "places": [
+        "al-basra"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(45) มุอาวิยะฮ์ได้แต่งตั้งอัลหาริษ บิน อับดิลลาฮ์ อัลอัซดีย์ ให้ปกครองบัศเราะฮ์ จากนั้นปลดเขาหลังสี่เดือน และแต่งตั้งซิยาดแทน",
+          "arabicExcerpt": "فيها ولَّى معاوية البصرة للحارث بن عبد الله الأزدي، ثم عزله عنها بعد أربعة أشهر، وولَّى زيادًا",
+          "loc": "เล่ม 13 หน้า 22",
+          "url": "https://shamela.ws/book/30097/3783",
+          "page": 22
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

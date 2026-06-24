@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 74,
+    "ceYear": 693,
+    "ceSpan": "693",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 74 (al-Bidayah เล่ม 14): การปกครอง - Rule 89. ★offset vol14: pid=น.+4123★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 74"
+  },
+  "events": [
+    {
+      "id": "bidayah-h74-001",
+      "book": "al-bidayah",
+      "hijriYear": 74,
+      "ceYear": 693,
+      "order": 1,
+      "type": "event",
+      "cat": "การเมือง",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 74: อับดุลมาลิกมอบการปกครองมะดีนะฮ์แก่อัลหัจญาจ บิน ยูซุฟ",
+      "persons": [
+        "abd-al-malik-b-marwan",
+        "al-hajjaj"
+      ],
+      "places": [
+        "medina"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(ปีที่เจ็ดสิบสี่) อับดุลมาลิกได้ปลดฏอริก บิน อัมร์ ออกจากการปกครองมะดีนะฮ์ และผนวกมันให้แก่อัลหัจญาจ บิน ยูซุฟ อัษษะเกาะฟีย์ อัลหัจญาจจึงมาถึงและพำนักอยู่ที่นั่นหนึ่งเดือน",
+          "arabicExcerpt": "فيها عزل عبد الملك طارق بن عمرو عن إمارة المدينة وأضافها إلى الحجاج بن يوسف الثقفي، فقدمها فأقام بها شهرًا",
+          "loc": "เล่ม 14 หน้า 130",
+          "url": "https://shamela.ws/book/30097/4253",
+          "page": 130
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

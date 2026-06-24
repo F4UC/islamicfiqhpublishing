@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 51,
+    "ceYear": 671,
+    "ceSpan": "671",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 51 (al-Bidayah เล่ม 13): เหตุการณ์สำคัญ - Rule 89. ★offset vol13: pid=น.+3761★",
+    "groupOrder": [
+      "มะฆอซี · ฟุตูหาต",
+      "เหตุการณ์สำคัญ",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 51"
+  },
+  "events": [
+    {
+      "id": "bidayah-h51-001",
+      "book": "al-bidayah",
+      "hijriYear": 51,
+      "ceYear": 671,
+      "order": 1,
+      "type": "event",
+      "cat": "เหตุการณ์สำคัญ",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 51: ★การสังหารฮุจร์ บิน อะดี และสหาย★",
+      "persons": [
+        "hujr-b-adi",
+        "muawiya-b-abi-sufyan"
+      ],
+      "places": [
+        "al-kufa"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(51)เกิดการสังหารฮุจร์ บิน อะดี และสหายของเขา",
+          "arabicExcerpt": "فيها كان مقتل حُجْر بن عديّ وأصحابه",
+          "loc": "เล่ม 13 หน้า 63",
+          "url": "https://shamela.ws/book/30097/3824",
+          "page": 63
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}
