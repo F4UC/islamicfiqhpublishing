@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 90,
+    "ceYear": 708,
+    "ceSpan": "708",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 90 (เล่ม 14): Rule 89. ★offset: pid=น.+4123★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ",
+      "การพิชิต (ฟุตูหาต)",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 90"
+  },
+  "events": [
+    {
+      "id": "bidayah-h90-001",
+      "book": "al-bidayah",
+      "hijriYear": 90,
+      "ceYear": 708,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "การพิชิต (ฟุตูหาต)",
+      "title": "ปี 90: มัสละมะฮ์และอัลอับบาส บิน อัลวะลีด พิชิตป้อมในดินแดนโรมัน",
+      "persons": [
+        "maslama-b-abd-al-malik",
+        "al-abbas-b-al-walid"
+      ],
+      "places": [
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(90) มัสละมะฮ์ บิน อับดุลมาลิก และอัลอับบาส บิน อัลวะลีด ได้ยกทัพไปดินแดนโรมัน พิชิตป้อมปราการ สังหารชาวโรมันจำนวนมาก ได้ทรัพย์เชลยและจับเชลยเป็นจำนวนมาก",
+          "arabicExcerpt": "فيها غزا مسلمة بن عبد الملك والعباس بن الوليد بلاد الروم؛ ففتحا حصونًا وقتلا خلقًا من الروم وغنما وأسرا خلقًا كثيرًا",
+          "loc": "เล่ม 14 หน้า 241",
+          "url": "https://shamela.ws/book/30097/4364",
+          "page": 241
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "hijriYear": 29,
+    "ceYear": 649,
+    "ceSpan": "649",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 29 (เล่ม 12): Rule 89. ★offset: pid=น.+3146★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ",
+      "การพิชิต (ฟุตูหาต)",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 29"
+  },
+  "events": [
+    {
+      "id": "bidayah-h29-001",
+      "book": "al-bidayah",
+      "hijriYear": 29,
+      "ceYear": 649,
+      "order": 1,
+      "type": "event",
+      "cat": "การเมือง",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 29: อุษมานปลดอบู มูซา อัลอัชอะรีย์ จากการปกครองบัศเราะฮ์",
+      "persons": [
+        "uthman-b-affan",
+        "abu-musa-al-ashari"
+      ],
+      "places": [
+        "al-basra"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(29) อุษมาน บิน อัฟฟาน ได้ปลดอบู มูซา อัลอัชอะรีย์ ออกจากการปกครองบัศเราะฮ์",
+          "arabicExcerpt": "ففيها عزلَ عثمان بن عفان أبا موسى الأشعري عن البصرة",
+          "loc": "เล่ม 12 หน้า 291",
+          "url": "https://shamela.ws/book/30097/3437",
+          "page": 291
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

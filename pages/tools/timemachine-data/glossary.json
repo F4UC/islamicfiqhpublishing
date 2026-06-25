@@ -3,7 +3,8 @@
     "purpose": "Translation memory / canonical transliteration lock for the Time Machine ingestion pipeline (R86). Seeded from al-Bidayah year 132. Every Thai spelling of a scholar/place/title MUST match canonicalThai; new names append here.",
     "transliterationBasis": "Locked precedents from REVIEW-QUEUE.md / AUDIT-FIXES.md (e.g. ابن→อิบนุ, ال→อัล, ط→ฏ, ة→ะฮ์, nisba ي→ีย์). Arabic is byte-exact reference only (never edited).",
     "reviewStatus": "DRAFT — awaiting owner review",
-    "lastExpanded": "ปีฮ.ศ. 132 ครบทั้งปี (al-Bidayah เล่ม 10)"
+    "lastExpanded": "ปีฮ.ศ. 132 ครบทั้งปี (al-Bidayah เล่ม 10)",
+    "lastCleanup": "ปีฮ.ศ. — ลบ orphan glossary (entry ที่ไม่มีเหตุการณ์อ้างถึง) ออก 70 รายการ"
   },
   "persons": [
     {
@@ -20,14 +21,6 @@
       "variantsFound": []
     },
     {
-      "id": "marwan-ii",
-      "arabic": "مروان بن محمد",
-      "canonicalThai": "มัรวาน บิน มุหัมมัด",
-      "aliasThai": "มัรวานที่ 2 / มัรวาน อัลหิมาร",
-      "note": "เคาะลีฟะฮ์อุมัยยะฮ์องค์สุดท้าย",
-      "variantsFound": []
-    },
-    {
       "id": "al-hasan-b-qahtaba",
       "arabic": "الحسن بن قحطبة",
       "canonicalThai": "อัลหะซัน บิน ก็อหฺเฏาะบะฮ์",
@@ -40,39 +33,15 @@
       "variantsFound": []
     },
     {
-      "id": "uthman-b-sufyan",
-      "arabic": "عثمان بن سفيان",
-      "canonicalThai": "อุษมาน บิน สุฟยาน",
-      "variantsFound": []
-    },
-    {
-      "id": "muhammad-b-khalid-al-qasri",
-      "arabic": "محمد بن خالد القسري",
-      "canonicalThai": "มุหัมมัด บิน คอลิด อัลก็อสรีย์",
-      "variantsFound": []
-    },
-    {
       "id": "ibn-hubayra",
       "arabic": "ابن هبيرة (يزيد بن عمر)",
       "canonicalThai": "อิบนุ ฮุบัยเราะฮ์",
       "variantsFound": []
     },
     {
-      "id": "ziyad-b-salih",
-      "arabic": "زياد بن صالح الحارثي",
-      "canonicalThai": "ซิยาด บิน ศอลิห์ อัลหาริษีย์",
-      "variantsFound": []
-    },
-    {
       "id": "abu-salama-al-khallal",
       "arabic": "أبو سلمة حفص بن سليمان الخلال",
       "canonicalThai": "อบู สะละมะฮ์ หัฟศ์ บิน สุลัยมาน อัลค็อลลาล",
-      "variantsFound": []
-    },
-    {
-      "id": "muslim-b-qutayba",
-      "arabic": "مسلم بن قتيبة",
-      "canonicalThai": "มุสลิม บิน กุตัยบะฮ์",
       "variantsFound": []
     },
     {
@@ -88,13 +57,6 @@
       "arabic": "إبراهيم بن محمد الإمام",
       "canonicalThai": "อิบรอฮีม บิน มุหัมมัด อัลอิมาม",
       "note": "ผู้นำขบวนการอับบาซียะฮ์ ถูกมัรวานจองจำจนสิ้นชีพ",
-      "variantsFound": []
-    },
-    {
-      "id": "abdullah-b-ali",
-      "arabic": "عبد الله بن علي",
-      "canonicalThai": "อับดุลลอฮ์ บิน อะลีย์",
-      "note": "อาของอัสซัฟฟาห์ แม่ทัพผู้ชนะยุทธการอัซซาบ",
       "variantsFound": []
     },
     {
@@ -126,38 +88,10 @@
       "variantsFound": []
     },
     {
-      "id": "abu-muhammad-al-sufyani",
-      "arabic": "أبو محمد السفياني",
-      "canonicalThai": "อบู มุหัมมัด อัสสุฟยานี",
-      "note": "เชื้อสายอุมัยยะฮ์ ผู้ก่อกบฏที่คินนัสรีน",
-      "variantsFound": []
-    },
-    {
-      "id": "abu-al-ward-al-kilabi",
-      "arabic": "أبو الورد مجزأة بن الكوثر الكلابي",
-      "canonicalThai": "อบุลวัรด์ มัจญ์ซะอะฮ์ บิน อัลเกาษัร อัลกิลาบีย์",
-      "note": "อดีตขุนพลของมัรวาน ผู้นำกบฏคินนัสรีน",
-      "variantsFound": []
-    },
-    {
-      "id": "amir-b-ismail",
-      "arabic": "عامر بن إسماعيل",
-      "canonicalThai": "อามิร บิน อิสมาอีล",
-      "note": "แม่ทัพหน่วยที่สังหารมัรวานที่บูศีร",
-      "variantsFound": []
-    },
-    {
       "id": "khalid-b-barmak",
       "arabic": "خالد بن برمك",
       "canonicalThai": "คอลิด บิน บัรมัก",
       "note": "ต้นตระกูลบัรมัก (Barmakids) เสนาบดีกรมคลัง",
-      "variantsFound": []
-    },
-    {
-      "id": "abd-al-hamid-al-katib",
-      "arabic": "عبد الحميد بن يحيى الكاتب",
-      "canonicalThai": "อับดุลหะมีด บิน ยะห์ยา อัลกาติบ",
-      "note": "เลขานุการเอกของมัรวาน ปรมาจารย์ร้อยแก้วจดหมายอาหรับ",
       "variantsFound": []
     },
     {
@@ -195,41 +129,6 @@
       "variantsFound": []
     },
     {
-      "id": "tamim-b-nasr",
-      "arabic": "تميم بن نصر بن سيار",
-      "canonicalThai": "ตะมีม บิน นัศร์",
-      "note": "บุตรของนัศร์ บิน สัยยาร",
-      "variantsFound": []
-    },
-    {
-      "id": "nubata-b-hanzala",
-      "arabic": "نباتة بن حنظلة",
-      "canonicalThai": "นุบาตะฮ์ บิน หันเซาะละฮ์",
-      "note": "แม่ทัพอุมัยยะฮ์ ผู้ปกครองญุรญาน",
-      "variantsFound": []
-    },
-    {
-      "id": "abu-hamza-al-khariji",
-      "arabic": "أبو حمزة الخارجي",
-      "canonicalThai": "อบู หัมซะฮ์ อัลคอริญีย์",
-      "note": "ผู้นำเคาะวาริจญ์อิบาฎีย์ ผู้ยึดมะดีนะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "ibn-atiyya",
-      "arabic": "عبد الملك بن محمد بن عطية",
-      "canonicalThai": "อับดุลมาลิก บิน มุหัมมัด บิน อะฏียะฮ์",
-      "note": "แม่ทัพของมัรวานผู้ปราบอบู หัมซะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "abdullah-b-yahya",
-      "arabic": "عبد الله بن يحيى",
-      "canonicalThai": "อับดุลลอฮ์ บิน ยะห์ยา",
-      "note": "อิมามอิบาฎีย์ ผู้ปกครองศ็อนอาอ์",
-      "variantsFound": []
-    },
-    {
       "id": "abu-dawud-khalid",
       "arabic": "أبو داود خالد بن إبراهيم",
       "canonicalThai": "อบู ดาวูด คอลิด บิน อิบรอฮีม",
@@ -241,13 +140,6 @@
       "arabic": "موسى بن كعب",
       "canonicalThai": "มูซา บิน กะอ์บ์",
       "note": "แม่ทัพของอบู มุสลิม",
-      "variantsFound": []
-    },
-    {
-      "id": "muhammad-b-al-munkadir",
-      "arabic": "محمد بن المنكدر",
-      "canonicalThai": "มุหัมมัด บิน อัลมุนกะดิร",
-      "note": "ตาบิอีนและนักรายงานหะดีษ (วายชนม์ปี 130)",
       "variantsFound": []
     },
     {
@@ -335,31 +227,10 @@
       "variantsFound": []
     },
     {
-      "id": "abdullah-b-hasan",
-      "arabic": "عبد الله بن حسن بن حسن بن علي",
-      "canonicalThai": "อับดุลลอฮ์ บิน หะซัน",
-      "note": "เชื้อสายอะลีย์ผู้มาทวงสิทธิต่ออัสซัฟฟาห์",
-      "variantsFound": []
-    },
-    {
       "id": "isa-b-ali",
       "arabic": "عيسى بن علي",
       "canonicalThai": "อีซา บิน อะลีย์",
       "note": "อาของอัสซัฟฟาห์ ผู้นำละหมาดศพพระองค์",
-      "variantsFound": []
-    },
-    {
-      "id": "rabia-al-ray",
-      "arabic": "ربيعة الرأي",
-      "canonicalThai": "เราะบีอะฮ์ อัรรออ์ยุ",
-      "note": "นักนิติศาสตร์ อาจารย์ของอิมามมาลิก (วายชนม์ 136)",
-      "variantsFound": []
-    },
-    {
-      "id": "zayd-b-aslam",
-      "arabic": "زيد بن أسلم",
-      "canonicalThai": "ซัยด์ บิน อัสลัม",
-      "note": "ตาบิอีนและนักรายงานหะดีษ (วายชนม์ 136)",
       "variantsFound": []
     },
     {
@@ -398,24 +269,10 @@
       "variantsFound": []
     },
     {
-      "id": "mulabbid-b-harmala",
-      "arabic": "ملبد بن حرملة الشيباني",
-      "canonicalThai": "มุลับบิด บิน หัรมะละฮ์ อัชชัยบานีย์",
-      "note": "ผู้นำเคาะวาริจญ์ในอัลญะซีเราะฮ์",
-      "variantsFound": []
-    },
-    {
       "id": "humayd-b-qahtaba",
       "arabic": "حميد بن قحطبة",
       "canonicalThai": "หุมัยด์ บิน ก็อหฺเฏาะบะฮ์",
       "note": "บุตรของก็อหฺเฏาะบะฮ์ ผู้ปกครองอัลญะซีเราะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "constantine-v",
-      "arabic": "قسطنطين ملك الروم",
-      "canonicalThai": "ก็อสฏ็อนฏีน (จักรพรรดิไบแซนไทน์)",
-      "note": "กษัตริย์รูมผู้ยึดมะลัฏยะฮ์",
       "variantsFound": []
     },
     {
@@ -468,13 +325,6 @@
       "variantsFound": []
     },
     {
-      "id": "isbahbadh-tabaristan",
-      "arabic": "الإصبهبذ",
-      "canonicalThai": "อัลอิศบะฮ์บัซ (กษัตริย์เฏาะบะริสตาน)",
-      "note": "ผู้ปกครองเฏาะบะริสตานก่อนการพิชิต",
-      "variantsFound": []
-    },
-    {
       "id": "shayban-al-yashkuri",
       "arabic": "شيبان بن عبد العزيز اليشكري",
       "canonicalThai": "ชัยบาน บิน อับดุลอะซีซ อัลยัชกุรีย์",
@@ -503,45 +353,10 @@
       "variantsFound": []
     },
     {
-      "id": "jadi-al-kirmani",
-      "arabic": "جديع بن علي الكرماني",
-      "canonicalThai": "ญุดัยอ์ บิน อะลีย์ อัลกิรมานีย์",
-      "note": "ผู้นำอาหรับในคุรอซาน ถูกนัศร์สังหาร (บิดาของอะลีย์ บิน อัลกิรมานีย์)",
-      "variantsFound": []
-    },
-    {
-      "id": "abdullah-b-muawiya",
-      "arabic": "عبد الله بن معاوية بن عبد الله بن جعفر",
-      "canonicalThai": "อับดุลลอฮ์ บิน มุอาวิยะฮ์",
-      "note": "เชื้อสายญะอ์ฟัร บิน อบีฏอลิบ ผู้ก่อกบฏยึดฟารส์",
-      "variantsFound": []
-    },
-    {
-      "id": "abd-al-wahid-b-sulayman",
-      "arabic": "عبد الواحد بن سليمان بن عبد الملك",
-      "canonicalThai": "อับดุลวาฮิด บิน สุลัยมาน",
-      "note": "ผู้ปกครองมักกะฮ์-มะดีนะฮ์ของอุมัยยะฮ์",
-      "variantsFound": []
-    },
-    {
       "id": "al-harith-b-surayj",
       "arabic": "الحارث بن سريج",
       "canonicalThai": "อัลหาริษ บิน สุรัยจญ์",
       "note": "ผู้ก่อกบฏในคุรอซานต่อนัศร์ บิน สัยยาร",
-      "variantsFound": []
-    },
-    {
-      "id": "jahm-b-safwan",
-      "arabic": "الجهم بن صفوان",
-      "canonicalThai": "ญะฮ์ม บิน ศ็อฟวาน",
-      "note": "ผู้ที่ฟิรเกาะฮ์ญะฮ์มียะฮ์ถูกอ้างชื่อถึง (ปฏิเสธคุณลักษณะของอัลลอฮ์)",
-      "variantsFound": []
-    },
-    {
-      "id": "al-dahhak-al-khariji",
-      "arabic": "الضحاك بن قيس الخارجي",
-      "canonicalThai": "อัฎเฎาะห์หาก บิน ก็อยส์ อัลคอริญีย์",
-      "note": "ผู้นำเคาะวาริจญ์ ถูกสังหารปี 128",
       "variantsFound": []
     },
     {
@@ -566,24 +381,10 @@
       "variantsFound": []
     },
     {
-      "id": "yazid-al-naqis",
-      "arabic": "يزيد بن الوليد الناقص",
-      "canonicalThai": "ยะซีด อันนากิศ",
-      "note": "เคาะลีฟะฮ์อุมัยยะฮ์ผู้สังหารอัลวะลีด บิน ยะซีด",
-      "variantsFound": []
-    },
-    {
       "id": "yazid-b-khalid-al-qasri",
       "arabic": "يزيد بن خالد القسري",
       "canonicalThai": "ยะซีด บิน คอลิด อัลก็อสรีย์",
       "note": "แม่ทัพผู้สังหารบุตรของอัลวะลีดในคุก",
-      "variantsFound": []
-    },
-    {
-      "id": "thabit-b-nuaym",
-      "arabic": "ثابت بن نعيم الجذامي",
-      "canonicalThai": "ษาบิต บิน นุอัยม์",
-      "note": "ผู้ก่อกบฏที่ปาเลสไตน์ต่อมัรวาน",
       "variantsFound": []
     },
     {
@@ -608,24 +409,10 @@
       "variantsFound": []
     },
     {
-      "id": "asad-b-abd-allah-al-qasri",
-      "arabic": "أسد بن عبد الله القسري",
-      "canonicalThai": "อะซัด บิน อับดุลลอฮ์ อัลก็อสรีย์",
-      "note": "อะมีรแห่งคุรอซานสมัยฮิชาม",
-      "variantsFound": []
-    },
-    {
       "id": "khalid-al-qasri",
       "arabic": "خالد بن عبد الله القسري",
       "canonicalThai": "คอลิด บิน อับดุลลอฮ์ อัลก็อสรีย์",
       "note": "ผู้ครองอิรัก พี่ชายของอะซัด",
-      "variantsFound": []
-    },
-    {
-      "id": "khaqan",
-      "arabic": "خاقان",
-      "canonicalThai": "คอกอน",
-      "note": "กษัตริย์ของพวกเติร์ก",
       "variantsFound": []
     },
     {
@@ -685,13 +472,6 @@
       "variantsFound": []
     },
     {
-      "id": "abd-al-wahhab-b-bukht",
-      "arabic": "عبد الوهاب بن بخت",
-      "canonicalThai": "อับดุลวะฮ์ฮาบ บิน บัคต์",
-      "note": "อะมีรผู้พลีชีพในแดนรูมร่วมกับอัลบัฏฏอล",
-      "variantsFound": []
-    },
-    {
       "id": "al-jarrah-b-abd-allah-al-hakami",
       "arabic": "الجراح بن عبد الله الحكمي",
       "canonicalThai": "อัลญัรรอห์ บิน อับดุลลอฮ์ อัลหะกะมีย์",
@@ -703,20 +483,6 @@
       "arabic": "سعيد بن عمرو الحرشي",
       "canonicalThai": "สะอีด บิน อัมร์ อัลหะเราะชีย์",
       "note": "แม่ทัพที่ฮิชามส่งไปกู้สถานการณ์จากพวกเติร์ก",
-      "variantsFound": []
-    },
-    {
-      "id": "salih-b-abd-al-rahman",
-      "arabic": "صالح بن عبد الرحمن",
-      "canonicalThai": "ศอลิห์ บิน อับดุรเราะห์มาน",
-      "note": "ผู้แปลงทะเบียน (ดีวาน) ของอิรักจากเปอร์เซียสู่ภาษาอาหรับ",
-      "variantsFound": []
-    },
-    {
-      "id": "hafsa-bint-sirin",
-      "arabic": "حفصة بنت سيرين (أم الهذيل)",
-      "canonicalThai": "หัฟเศาะฮ์ บินต์ สีรีน",
-      "note": "นักวิชาการหญิงตาบิอีนแห่งบัศเราะฮ์",
       "variantsFound": []
     },
     {
@@ -779,13 +545,6 @@
       "variantsFound": []
     },
     {
-      "id": "salim-b-abd-allah",
-      "arabic": "سالم بن عبد الله بن عمر",
-      "canonicalThai": "สาลิม บิน อับดุลลอฮ์",
-      "note": "หนึ่งในเจ็ดฟุเกาะฮาอ์แห่งมะดีนะฮ์ หลานของอุมัร บิน อัลค็อฏฏอบ",
-      "variantsFound": []
-    },
-    {
       "id": "yazid-ii",
       "arabic": "يزيد بن عبد الملك",
       "canonicalThai": "ยะซีด บิน อับดุลมาลิก",
@@ -828,13 +587,6 @@
       "variantsFound": []
     },
     {
-      "id": "al-jad-b-dirham",
-      "arabic": "الجعد بن درهم",
-      "canonicalThai": "อัลญะอ์ด บิน ดิรฮัม",
-      "note": "ต้นเค้าของพวกญะฮ์มียะฮ์ ถูกคอลิด อัลก็อสรีย์ ประหาร",
-      "variantsFound": []
-    },
-    {
       "id": "umar-ii",
       "arabic": "عمر بن عبد العزيز",
       "canonicalThai": "อุมัร บิน อับดุลอะซีซ",
@@ -846,27 +598,6 @@
       "arabic": "سليمان بن عبد الملك",
       "canonicalThai": "สุลัยมาน บิน อับดุลมาลิก",
       "note": "เคาะลีฟะฮ์อุมัยยะฮ์ผู้แต่งตั้งอุมัรที่ 2 เป็นผู้สืบตำแหน่ง",
-      "variantsFound": []
-    },
-    {
-      "id": "abu-bakr-b-hazm",
-      "arabic": "أبو بكر بن محمد بن عمرو بن حزم",
-      "canonicalThai": "อบู บักร์ บิน หัซม์",
-      "note": "กอฎีและผู้ครองมะดีนะฮ์สมัยอุมัรที่ 2",
-      "variantsFound": []
-    },
-    {
-      "id": "kharija-b-zayd",
-      "arabic": "خارجة بن زيد بن ثابت",
-      "canonicalThai": "คอริญะฮ์ บิน ซัยด์",
-      "note": "หนึ่งในเจ็ดฟุเกาะฮาอ์แห่งมะดีนะฮ์ บุตรของซัยด์ บิน ษาบิต",
-      "variantsFound": []
-    },
-    {
-      "id": "ilyun",
-      "arabic": "إليون",
-      "canonicalThai": "อิลยูน (เลโอที่ 3)",
-      "note": "เลโอที่ 3 ชาวอิเซาเรียน ผู้ทรยศมัสละมะฮ์แล้วขึ้นเป็นจักรพรรดิไบแซนไทน์",
       "variantsFound": []
     },
     {
@@ -912,13 +643,6 @@
       "variantsFound": []
     },
     {
-      "id": "ibrahim-al-nakhai",
-      "arabic": "إبراهيم بن يزيد النخعي",
-      "canonicalThai": "อิบรอฮีม อันนะเคาะอีย์",
-      "note": "ฟะกีฮ์และตาบิอีนคนสำคัญแห่งกูฟะฮ์",
-      "variantsFound": []
-    },
-    {
       "id": "said-b-al-musayyib",
       "arabic": "سعيد بن المسيب",
       "canonicalThai": "สะอีด บิน อัลมุสัยยับ",
@@ -937,69 +661,6 @@
       "arabic": "عروة بن الزبير",
       "canonicalThai": "อุรวะฮ์ บิน อัซซุบัยร์",
       "note": "หนึ่งในเจ็ดฟุเกาะฮาอ์แห่งมะดีนะฮ์ นักประวัติศาสตร์ซีเราะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "al-hasan-b-al-hasan",
-      "arabic": "الحسن بن الحسن بن علي",
-      "canonicalThai": "อัลหะสัน บิน อัลหะสัน",
-      "note": "หลานปู่ของอะลีย์ บิน อบี ฏอลิบ",
-      "variantsFound": []
-    },
-    {
-      "id": "khalid-b-madan",
-      "arabic": "خالد بن معدان الكلاعي",
-      "canonicalThai": "คอลิด บิน มะอ์ดาน",
-      "note": "ตาบิอีนผู้ทรงเกียรติแห่งชาม",
-      "variantsFound": []
-    },
-    {
-      "id": "aban-b-uthman",
-      "arabic": "أبان بن عثمان بن عفان",
-      "canonicalThai": "อะบาน บิน อุษมาน",
-      "note": "ฟะกีฮ์ตาบิอีน บุตรของเคาะลีฟะฮ์อุษมาน",
-      "variantsFound": []
-    },
-    {
-      "id": "sulayman-b-yasar",
-      "arabic": "سليمان بن يسار",
-      "canonicalThai": "สุลัยมาน บิน ยะซาร",
-      "note": "หนึ่งในเจ็ดฟุเกาะฮาอ์แห่งมะดีนะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "ikrima",
-      "arabic": "عكرمة مولى ابن عباس",
-      "canonicalThai": "อิกริมะฮ์",
-      "note": "มะวลาของอิบนุ อับบาส นักตัฟซีรคนสำคัญ",
-      "variantsFound": []
-    },
-    {
-      "id": "bakr-al-muzani",
-      "arabic": "بكر بن عبد الله المزني",
-      "canonicalThai": "บักร์ อัลมุซะนีย์",
-      "note": "ตาบิอีนแห่งบัศเราะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "muhammad-b-kab-al-qurazi",
-      "arabic": "محمد بن كعب القرظي",
-      "canonicalThai": "มุหัมมัด บิน กะอ์บ์ อัลกุร็อซีย์",
-      "note": "นักตัฟซีรและตาบิอีน",
-      "variantsFound": []
-    },
-    {
-      "id": "raja-b-haywa",
-      "arabic": "رجاء بن حيوة الكندي",
-      "canonicalThai": "เราะญาอ์ บิน หัยวะฮ์",
-      "note": "ที่ปรึกษาเคาะลีฟะฮ์อุมัยยะฮ์ ผู้แนะนำแต่งตั้งอุมัรที่ 2",
-      "variantsFound": []
-    },
-    {
-      "id": "musa-b-nusayr",
-      "arabic": "موسى بن نصير",
-      "canonicalThai": "มูซา บิน นุศ็อยร์",
-      "note": "แม่ทัพผู้พิชิตอันดะลุสและมัฆริบ",
       "variantsFound": []
     },
     {
@@ -1508,12 +1169,6 @@
       "note": "แม่ทัพของอัลมันศูร"
     },
     {
-      "id": "al-mulabbid-al-khariji",
-      "arabic": "الملبد الخارجي",
-      "canonicalThai": "อัลมุลับบิด อัลคอริญีย์",
-      "note": "หัวหน้าเคาะวาริจญ์ ถูกสังหารปี ฮ.ศ.138"
-    },
-    {
       "id": "sufyan-b-muawiya",
       "arabic": "سفيان بن معاوية",
       "canonicalThai": "สุฟยาน บิน มุอาวิยะฮ์",
@@ -1814,12 +1469,6 @@
       "note": "แม่ทัพศึกฤดูร้อนรูม ฮ.ศ.154"
     },
     {
-      "id": "abd-al-wahhab-b-ibrahim",
-      "arabic": "عبد الوهاب بن إبراهيم",
-      "canonicalThai": "อับดุลวะฮ์ฮาบ บิน อิบรอฮีม",
-      "note": "แม่ทัพ/ผู้นำหัจญ์ (วงศ์อับบาส)"
-    },
-    {
       "id": "muhammad-b-said",
       "arabic": "محمد بن سعيد",
       "canonicalThai": "มุฮัมมัด บิน สะอีด",
@@ -1890,12 +1539,6 @@
       "arabic": "عمر بن زهير",
       "canonicalThai": "อุมัร บิน ซุฮัยร์",
       "note": "เจ้าเมืองกูฟะฮ์สมัยอัลมันศูร"
-    },
-    {
-      "id": "hammad-ajrad",
-      "arabic": "حماد عجرد",
-      "canonicalThai": "ฮัมมาด อัจญ์ร็อด",
-      "note": "กวี ถูกกล่าวหาเรื่องนอกศาสนา"
     },
     {
       "id": "al-awzai",
@@ -2456,12 +2099,6 @@
       "note": "แม่ทัพของอัลมะอ์มูน ผู้พิชิตแบกแดด"
     },
     {
-      "id": "abd-al-rahman-b-jabala",
-      "arabic": "عبد الرحمن بن جبلة الأبناوي",
-      "canonicalThai": "อับดุรเราะฮ์มาน บิน ญะบะละฮ์",
-      "note": "แม่ทัพของอัลอามีน"
-    },
-    {
       "id": "kawthar",
       "arabic": "كوثر",
       "canonicalThai": "เกาษัร",
@@ -2592,12 +2229,6 @@
       "arabic": "أبو إسحاق المعتصم بن الرشيد",
       "canonicalThai": "อบู อิสฮาก อัลมุอ์ตะศิม บิน อัรเราะชีด",
       "note": "บุตรอัรเราะชีด เคาะลีฟะฮ์ต่อมา (อัลมุอ์ตะศิม)"
-    },
-    {
-      "id": "mahdi-b-alwan",
-      "arabic": "مهدي بن علوان",
-      "canonicalThai": "มะฮ์ดี บิน อัลวาน",
-      "note": "ผู้นำเคาะวาริจญ์"
     },
     {
       "id": "babak",
@@ -2790,18 +2421,6 @@
       "arabic": "مازيار بن قارن",
       "canonicalThai": "มาซยาร บิน กอริน",
       "note": "ผู้นำกบฏที่ฏ็อบริสตาน ฮ.ศ.224"
-    },
-    {
-      "id": "mankjur",
-      "arabic": "منكجور",
-      "canonicalThai": "มันกะญูร",
-      "note": "แม่ทัพที่ยอมจำนน"
-    },
-    {
-      "id": "jafar-b-dinar",
-      "arabic": "جعفر بن دينار",
-      "canonicalThai": "ญะอ์ฟัร บิน ดีนาร",
-      "note": "เจ้าเมืองเยเมน"
     },
     {
       "id": "itakh",
@@ -4745,13 +4364,6 @@
       "variantsFound": []
     },
     {
-      "id": "uqba-b-amir",
-      "arabic": "عقبة بن عامر",
-      "canonicalThai": "อุกบะฮ์ บิน อามิร",
-      "note": "",
-      "variantsFound": []
-    },
-    {
       "id": "busr-b-abi-artat",
       "arabic": "بسر بن أبي أرطاة",
       "canonicalThai": "บุสร์ บิน อบี อัรฏอฮ์",
@@ -4792,6 +4404,3800 @@
       "canonicalThai": "อัมร์ บิน สะอีด อัลอัชดัก",
       "note": "",
       "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-ubayd-allah",
+      "arabic": "محمد بن عبيد الله",
+      "canonicalThai": "มุหัมมัด บิน อุบัยดิลลาฮ์",
+      "note": "วะซีรที่ถูกอัลมุก็อตะดิรปลดในปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "ali-b-isa",
+      "arabic": "علي بن عيسى بن الجراح",
+      "canonicalThai": "อะลีย์ บิน อีซา (อิบนุลญัรรอห์)",
+      "note": "วะซีรผู้เลื่องชื่อด้านความยุติธรรมสมัยอับบาซียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-tahir-al-jannabi",
+      "arabic": "أبو طاهر سليمان بن أبي سعيد الجنابي",
+      "canonicalThai": "อะบูฏอฮิร สุลัยมาน อัลญันนาบี",
+      "note": "หัวหน้าก็อรอมิเฏาะฮ์แห่งบะหฺเรน บุตรอบูสะอีด",
+      "variantsFound": []
+    },
+    {
+      "id": "said-b-abi-said",
+      "arabic": "سعيد بن أبي سعيد الجنابي",
+      "canonicalThai": "สะอีด บิน อะบีสะอีด อัลญันนาบี",
+      "note": "บุตรอบูสะอีดที่ได้รับการสั่งเสีย ก่อนถูกพี่น้องชิงอำนาจ",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hallaj",
+      "arabic": "الحسين بن منصور الحلاج",
+      "canonicalThai": "อัลฮุเซน บิน มันศูร อัลฮัลลาจ",
+      "note": "นักพรตผู้ถูกตัดสินว่าหลงผิด ภายหลังถูกประหารปี 309",
+      "variantsFound": []
+    },
+    {
+      "id": "al-fadl-b-abd-al-malik",
+      "arabic": "الفضل بن عبد الملك الهاشمي",
+      "canonicalThai": "อัลฟัฎล์ บิน อับดิลมะลิก อัลฮาชิมีย์",
+      "note": "ผู้นำหัจญ์ปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "ibrahim-b-khalid",
+      "arabic": "إبراهيم بن خالد الشافعي",
+      "canonicalThai": "อิบรอฮีม บิน คอลิด อัชชาฟิอีย์",
+      "note": "ผู้รวมความรู้และความสมถะ เสียชีวิตปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-bakr-al-ismaili",
+      "arabic": "أبو بكر الإسماعيلي",
+      "canonicalThai": "อะบูบักร อัลอิสมาอีลีย์",
+      "note": "นักหะดีษ ศิษย์ของอิบรอฮีม บิน คอลิด",
+      "variantsFound": []
+    },
+    {
+      "id": "jafar-al-firyabi",
+      "arabic": "جعفر بن محمد الفريابي",
+      "canonicalThai": "ญะอ์ฟัร บิน มุหัมมัด อัลฟิรยาบีย์",
+      "note": "หาฟิซ กอฎีแห่งอัดดีนะวัร เสียชีวิตปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "ali-b-ahmad-al-rasibi",
+      "arabic": "علي بن أحمد الراسبي",
+      "canonicalThai": "อะลีย์ บิน อะหมัด อัรรอสิบีย์",
+      "note": "ผู้ปกครองวาสิฏผู้มั่งคั่ง เสียชีวิตปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-abi-al-shawarib",
+      "arabic": "محمد بن عبد الله ابن أبي الشوارب",
+      "canonicalThai": "มุหัมมัด อิบนุ อะบีอัชชะวาริบ (อัลอะหฺนัฟ)",
+      "note": "กอฎีแห่งมะดีนะตุลมันศูร เสียชีวิตปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-bakr-al-bardai",
+      "arabic": "أبو بكر أحمد بن هارون البردعي",
+      "canonicalThai": "อะบูบักร อะหมัด บิน ฮารูน อัลบัรเดาะอีย์",
+      "note": "หาฟิซ เสียชีวิตปี 301",
+      "variantsFound": []
+    },
+    {
+      "id": "bishr-al-khadim",
+      "arabic": "بشر الخادم",
+      "canonicalThai": "บิชร์ อัลคอดิม",
+      "note": "ขันทีแม่ทัพที่รบชนะโรมปี 302",
+      "variantsFound": []
+    },
+    {
+      "id": "bida-al-jariya",
+      "arabic": "بدعة جارية عريب",
+      "canonicalThai": "บิดอะฮ์ ญาริยะฮ์ของอุรัยบ์",
+      "note": "ทาสหญิงนักร้องผู้มั่งคั่ง เสียชีวิตปี 302",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-zura-al-shafii",
+      "arabic": "أبو زرعة محمد بن عثمان",
+      "canonicalThai": "อะบูซุรอะฮ์ มุหัมมัด บิน อุษมาน อัชชาฟิอีย์",
+      "note": "กอฎีแห่งอียิปต์แล้วดิมัชก์ ผู้แรกที่เผยแพร่ฟิกฮ์ชาฟิอีย์ในชาม",
+      "variantsFound": []
+    },
+    {
+      "id": "al-nasai",
+      "arabic": "أحمد بن علي بن شعيب النسائي",
+      "canonicalThai": "อันนะซาอีย์ (อะหมัด บิน อะลีย์ บิน ชุอัยบ์)",
+      "note": "อิมามหะดีษเจ้าของสุนันอันนะซาอีย์ เสียชีวิตปี 303",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-khallikan",
+      "arabic": "ابن خلكان",
+      "canonicalThai": "อิบนุ ค็อลลิกาน",
+      "note": "นักประวัติศาสตร์เจ้าของหนังสือวะฟะยาตุลอะอ์ยาน",
+      "variantsFound": []
+    },
+    {
+      "id": "umm-musa-al-qahramana",
+      "arabic": "أم موسى القهرمانة",
+      "canonicalThai": "อุมมุมูซา อัลก็อฮ์ระมานะฮ์",
+      "note": "หัวหน้าผู้ดูแลกิจการภายในวังสมัยมุกตะดิร",
+      "variantsFound": []
+    },
+    {
+      "id": "thabit-b-sinan",
+      "arabic": "ثابت بن سنان",
+      "canonicalThai": "ษาบิต บิน สินาน",
+      "note": "แพทย์และนักประวัติศาสตร์ ดูแลโรงพยาบาลแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-al-tamimi-farruja",
+      "arabic": "محمد بن أحمد التميمي",
+      "canonicalThai": "มุหัมมัด บิน อะหมัด อัตตะมีมีย์ (ฟัรรูญะฮ์)",
+      "note": "หาฟิซ เสียชีวิตปี 304",
+      "variantsFound": []
+    },
+    {
+      "id": "yusuf-al-razi",
+      "arabic": "يوسف بن الحسين الرازي",
+      "canonicalThai": "ยูซุฟ บิน อัลฮุเซน อัรรอซีย์",
+      "note": "นักพรตศิษย์ซุนนูน อัลมิศรีย์ เสียชีวิตปี 304",
+      "variantsFound": []
+    },
+    {
+      "id": "yamut-b-al-muzarri",
+      "arabic": "يموت بن المزرع",
+      "canonicalThai": "ยะมูต บิน อัลมุซัรริอ์",
+      "note": "นักรายงานและนักอักษรศาสตร์ หลานอัลญาหิซ",
+      "variantsFound": []
+    },
+    {
+      "id": "dhu-al-nun-al-misri",
+      "arabic": "ذو النون المصري",
+      "canonicalThai": "ซุนนูน อัลมิศรีย์",
+      "note": "นักพรตซูฟียุคแรกชาวอียิปต์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-jahiz",
+      "arabic": "الجاحظ",
+      "canonicalThai": "อัลญาหิซ",
+      "note": "ปราชญ์อักษรศาสตร์และนักประพันธ์ชาวบัศเราะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-musa-al-hamid",
+      "arabic": "سليمان بن محمد أبو موسى الحامض",
+      "canonicalThai": "อะบูมูซา สุลัยมาน บิน มุหัมมัด อัลหามิฎ",
+      "note": "นักไวยากรณ์กูฟะฮ์ ศิษย์ษะอ์ลับ เสียชีวิตปี 305",
+      "variantsFound": []
+    },
+    {
+      "id": "thalab",
+      "arabic": "ثعلب",
+      "canonicalThai": "ษะอ์ลับ",
+      "note": "อิมามนักไวยากรณ์สำนักกูฟะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-khalifa-al-fadl-b-al-hubab",
+      "arabic": "أبو خليفة الفضل بن الحباب",
+      "canonicalThai": "อะบูเคาะลีฟะฮ์ อัลฟัฎล์ บิน อัลหุบาบ",
+      "note": "นักหะดีษบัศเราะฮ์ เสียชีวิตปี 305",
+      "variantsFound": []
+    },
+    {
+      "id": "sinan-b-thabit",
+      "arabic": "سنان بن ثابت",
+      "canonicalThai": "สินาน บิน ษาบิต",
+      "note": "แพทย์ผู้ดูแลโรงพยาบาลแบกแดด บุตรษาบิต บิน กุรเราะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "umm-al-muqtadir",
+      "arabic": "السيدة أم المقتدر",
+      "canonicalThai": "อัสสัยยิดะฮ์ มารดาของอัลมุกตะดิร",
+      "note": "พระมารดาผู้ทรงอิทธิพล สร้างโรงพยาบาลและตั้งศาลร้องทุกข์",
+      "variantsFound": []
+    },
+    {
+      "id": "hamid-b-al-abbas",
+      "arabic": "حامد بن العباس",
+      "canonicalThai": "หามิด บิน อัลอับบาส",
+      "note": "วะซีรปี 306 ที่พิสูจน์ว่าไร้ความสามารถ",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-muqla",
+      "arabic": "أبو علي بن مقلة",
+      "canonicalThai": "อิบนุ มุกละฮ์ (อะบูอะลีย์)",
+      "note": "เสมียนผู้ต่อมาเป็นวะซีรและปรมาจารย์อักษรวิจิตร",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-surayj",
+      "arabic": "أحمد بن عمر بن سريج",
+      "canonicalThai": "อะหมัด บิน อุมัร บิน สุร็อยจ์ (อัลบาซุลอัชฮับ)",
+      "note": "กอฎีชีรอซ อิมามใหญ่ผู้เผยแพร่สำนักชาฟิอีย์ ราว 400 ผลงาน",
+      "variantsFound": []
+    },
+    {
+      "id": "ibrahim-al-kilabi",
+      "arabic": "إبراهيم بن أحمد الكلابي",
+      "canonicalThai": "อิบรอฮีม บิน อะหมัด อัลกิลาบีย์",
+      "note": "ฟะกีฮ์ชาฟิอีย์ผู้สมถะ เสียชีวิตปี 306",
+      "variantsFound": []
+    },
+    {
+      "id": "ahmad-al-jalla",
+      "arabic": "أحمد بن يحيى الجلاء",
+      "canonicalThai": "อะหมัด บิน ยะห์ยา อัลญัลลาอ์",
+      "note": "นักพรตชาวแบกแดดที่พำนักในชาม",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-yala-al-hasan",
+      "arabic": "الحسن بن يوسف القاضي أبو يعلى",
+      "canonicalThai": "อะบูยะอ์ลา อัลหะซัน บิน ยูซุฟ",
+      "note": "กอฎีแห่งอัลอุรดุน",
+      "variantsFound": []
+    },
+    {
+      "id": "abdan-al-ahwazi",
+      "arabic": "عبد الله بن أحمد الجواليقي عبدان",
+      "canonicalThai": "อับดาน อัลอะฮ์วาซีย์ (อับดุลลอฮ์ บิน อะหมัด)",
+      "note": "หาฟิซผู้จดจำหะดีษหนึ่งแสน",
+      "variantsFound": []
+    },
+    {
+      "id": "waki-al-qadi",
+      "arabic": "محمد بن خلف الضبي وكيع",
+      "canonicalThai": "วะกีอ์ (มุหัมมัด บิน เคาะลัฟ อัฎฎ็อบบีย์)",
+      "note": "กอฎีและนักประพันธ์ ผู้แต่งหนังสืออัลอะดัด",
+      "variantsFound": []
+    },
+    {
+      "id": "badr-al-hamami",
+      "arabic": "بدر الحمامي",
+      "canonicalThai": "บัดร์ อัลหะมามี",
+      "note": "อะมีร/แม่ทัพผู้ปลดปล่อยเชลยจากจอร์เจียปี 307",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-jawzi",
+      "arabic": "ابن الجوزي",
+      "canonicalThai": "อิบนุลเญาซีย์",
+      "note": "นักประวัติศาสตร์ที่อิบนุ กะษีรอ้างอิงบ่อย (เจ้าของอัลมุนตะศ็อม)",
+      "variantsFound": []
+    },
+    {
+      "id": "ahmad-b-al-abbas",
+      "arabic": "أحمد بن العباس",
+      "canonicalThai": "อะหมัด บิน อัลอับบาส",
+      "note": "ผู้นำหัจญ์ปี 307 พี่น้องของอุมมุมูซา",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-yala-al-mawsili",
+      "arabic": "أحمد بن علي بن المثنى أبو يعلى الموصلي",
+      "canonicalThai": "อะบูยะอ์ลา อัลเมาศิลีย์",
+      "note": "หาฟิซเจ้าของมุสนัดอบูยะอ์ลาอันเลื่องชื่อ เสียชีวิตปี 307",
+      "variantsFound": []
+    },
+    {
+      "id": "ishaq-al-bazzaz",
+      "arabic": "إسحاق بن عبد الله البزاز الكوفي",
+      "canonicalThai": "อิสหาก บิน อับดิลลาฮ์ อัลบัซซาซ",
+      "note": "นักหะดีษกูฟะฮ์เจ้าของมุสนัด เสียชีวิตปี 307",
+      "variantsFound": []
+    },
+    {
+      "id": "jafar-al-araj",
+      "arabic": "جعفر بن محمد الأعرج النيسابوري",
+      "canonicalThai": "ญะอ์ฟัร บิน มุหัมมัด อัลอะอ์ร็อจ",
+      "note": "หาฟิซชาวนัยซาบูร เสียชีวิตที่หะลับปี 307",
+      "variantsFound": []
+    },
+    {
+      "id": "al-saji",
+      "arabic": "زكريا بن يحيى الساجي",
+      "canonicalThai": "ซะกะรียา บิน ยะห์ยา อัสซาญีย์",
+      "note": "ฟะกีฮ์-นักหะดีษ อาจารย์ของอัลอัชอะรี",
+      "variantsFound": []
+    },
+    {
+      "id": "al-ashari",
+      "arabic": "أبو الحسن الأشعري",
+      "canonicalThai": "อะบูอัลหะซัน อัลอัชอะรี",
+      "note": "อิมามผู้ก่อตั้งสำนักเทววิทยาอัชอะรีย์",
+      "variantsFound": []
+    },
+    {
+      "id": "ibrahim-b-sufyan",
+      "arabic": "إبراهيم بن سفيان",
+      "canonicalThai": "อิบรอฮีม บิน สุฟยาน",
+      "note": "ฟะกีฮ์ผู้รายงานเศาะฮีหฺมุสลิม เสียชีวิตปี 308",
+      "variantsFound": []
+    },
+    {
+      "id": "ahmad-b-al-salt",
+      "arabic": "أحمد بن الصلت الحماني",
+      "canonicalThai": "อะหมัด บิน อัศศ็อลต์ อัลหิมมานีย์",
+      "note": "นักกุหะดีษปลอมเพื่อยกย่องอะบูหะนีฟะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "muslim",
+      "arabic": "مسلم بن الحجاج",
+      "canonicalThai": "อิมามมุสลิม บิน อัลหัจญาจ",
+      "note": "เจ้าของหนังสือเศาะฮีหฺมุสลิม",
+      "variantsFound": []
+    },
+    {
+      "id": "al-tabari",
+      "arabic": "محمد بن جرير الطبري",
+      "canonicalThai": "อะบูญะอ์ฟัร มุหัมมัด บิน ญะรีร อัฏฏ็อบรี",
+      "note": "อิมามนักประวัติศาสตร์และมุฟัสซิร เจ้าของตารีคและตัฟซีรอัฏฏ็อบรี",
+      "variantsFound": []
+    },
+    {
+      "id": "al-khatib-al-baghdadi",
+      "arabic": "الخطيب البغدادي",
+      "canonicalThai": "อัลเคาะฏีบ อัลแบกดาดีย์",
+      "note": "นักประวัติศาสตร์-นักหะดีษ เจ้าของตารีคแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "al-sulami",
+      "arabic": "أبو عبد الرحمن السلمي",
+      "canonicalThai": "อะบูอับดิรเราะห์มาน อัสสุละมี",
+      "note": "นักประวัติศาสตร์ซูฟี เจ้าของฏ่อบะก็อตอัศศูฟียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "yusuf-b-abi-al-saj",
+      "arabic": "يوسف بن أبي الساج",
+      "canonicalThai": "ยูซุฟ บิน อะบีอัสซาจ",
+      "note": "ผู้ปกครองที่ถูกปล่อยและคืนตำแหน่งปี 310",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-bakr-al-adami",
+      "arabic": "أبو بكر بن الأدمي القارئ",
+      "canonicalThai": "อะบูบักร บิน อัลอะดะมี",
+      "note": "กอรีผู้ขับขานอัลกุรอานในแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "ishaq-al-hashimi",
+      "arabic": "إسحاق بن عبد الملك الهاشمي",
+      "canonicalThai": "อิสหาก บิน อับดิลมะลิก อัลฮาชิมีย์",
+      "note": "ผู้นำหัจญ์ปี 310",
+      "variantsFound": []
+    },
+    {
+      "id": "al-muhassin",
+      "arabic": "المحسن بن علي بن الفرات",
+      "canonicalThai": "อัลมุหัสซิน บิน อัลฟุรอต",
+      "note": "บุตรวะซีรอิบนุลฟุรอต ผู้ทรมานและวางยาพิษหามิด",
+      "variantsFound": []
+    },
+    {
+      "id": "al-khallal",
+      "arabic": "أحمد بن محمد بن هارون الخلال",
+      "canonicalThai": "อะบูบักร อัลค็อลลาล",
+      "note": "อิมามฮัมบะลีย์ เจ้าของอัลญามิอ์ ลิอุลูมิลอิมามอะหมัด",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-muhammad-al-jariri",
+      "arabic": "أحمد بن محمد الجريري",
+      "canonicalThai": "อะบูมุหัมมัด อัลญะรีรี",
+      "note": "ซูฟีคนสำคัญ ศิษย์สะรีย์ อัสสะก็อฏี",
+      "variantsFound": []
+    },
+    {
+      "id": "sari-al-saqati",
+      "arabic": "سري السقطي",
+      "canonicalThai": "สะรีย์ อัสสะก็อฏี",
+      "note": "ปรมาจารย์ซูฟียุคแรก อาจารย์ของอัลญุนัยด์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-junayd",
+      "arabic": "الجنيد بن محمد",
+      "canonicalThai": "อัลญุนัยด์ บิน มุหัมมัด",
+      "note": "ปรมาจารย์ซูฟีสายสุนนะฮ์แห่งแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "al-zajjaj",
+      "arabic": "إبراهيم بن السري الزجاج",
+      "canonicalThai": "อิบรอฮีม อัซซัจญาจ",
+      "note": "นักไวยากรณ์ เจ้าของมะอานิลกุรอาน",
+      "variantsFound": []
+    },
+    {
+      "id": "al-bujayri",
+      "arabic": "عمر بن محمد بن بجير البجيري",
+      "canonicalThai": "อุมัร บิน บุญัยร์ อัลบุญัยรี",
+      "note": "นักหะดีษเจ้าของเศาะฮีหฺ",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-khuzayma",
+      "arabic": "محمد بن إسحاق بن خزيمة",
+      "canonicalThai": "อิบนุ คุซัยมะฮ์ (อิมามแห่งบรรดาอิมาม)",
+      "note": "อิมามหะดีษชาฟิอีย์ เจ้าของเศาะฮีหฺอิบนุ คุซัยมะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-shirazi",
+      "arabic": "أبو إسحاق الشيرازي",
+      "canonicalThai": "อะบูอิสหาก อัชชีรอซี",
+      "note": "ฟะกีฮ์ชาฟิอีย์ เจ้าของฏ่อบะก็อตอัชชาฟิอียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-hayja-b-hamdan",
+      "arabic": "أبو الهيجاء عبد الله بن حمدان",
+      "canonicalThai": "อะบูอัลฮัยญาอ์ อับดุลลอฮ์ บิน หัมดาน",
+      "note": "นายเมืองกูฟะฮ์ฝ่ายหัมดานิด ถูกอะบูฏอฮิรจับปี 312",
+      "variantsFound": []
+    },
+    {
+      "id": "nazuk",
+      "arabic": "نازوك",
+      "canonicalThai": "นาซูก",
+      "note": "อะมีรตำรวจแห่งแบกแดดสมัยมุกตะดิร",
+      "variantsFound": []
+    },
+    {
+      "id": "al-khaqani",
+      "arabic": "عبد الله بن محمد بن خاقان",
+      "canonicalThai": "อะบูอัลกอสิม บิน คอกอน อัลคอกอนี",
+      "note": "วะซีรที่ได้รับแต่งตั้งหลังอิบนุลฟุรอต ปี 312",
+      "variantsFound": []
+    },
+    {
+      "id": "ibrahim-b-khamsh",
+      "arabic": "إبراهيم بن خمش",
+      "canonicalThai": "อิบรอฮีม บิน ค็อมช์",
+      "note": "นักพรต-นักเทศน์ชาวนัยซาบูร เสียชีวิตปี 312",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-ismail",
+      "arabic": "محمد بن إسماعيل",
+      "canonicalThai": "มุหัมมัด บิน อิสมาอีล",
+      "note": "ผู้อ้างตนเป็นอัลมะฮ์ดีระหว่างกูฟะฮ์-แบกแดด หัวหน้าอิสมาอีลียะฮ์ยุคแรก",
+      "variantsFound": []
+    },
+    {
+      "id": "al-khasibi",
+      "arabic": "أحمد بن عبيد الله الخصيبي",
+      "canonicalThai": "อะบูอัลอับบาส อัลเคาะศีบี",
+      "note": "วะซีรปี 313-314 ที่ถูกปลดเพราะมัวเมาสุรา",
+      "variantsFound": []
+    },
+    {
+      "id": "al-ghadairi",
+      "arabic": "علي بن عبد الحميد الغضائري",
+      "canonicalThai": "อะลีย์ บิน อับดิลหะมีด อัลเฆาะฎออิรี",
+      "note": "นักอิบาดะฮ์ที่เชื่อถือได้ เสียชีวิตปี 313",
+      "variantsFound": []
+    },
+    {
+      "id": "al-dumustuq",
+      "arabic": "الدمستق",
+      "canonicalThai": "อัดดุมุสตุก",
+      "note": "ตำแหน่งแม่ทัพใหญ่ของไบแซนไทน์ (โดเมสติก) ผู้บุกมะลัฏยะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-kalwadhani",
+      "arabic": "عبيد الله بن محمد الكلوذاني",
+      "canonicalThai": "อะบูอัลกอสิม อัลกัลวะษานี",
+      "note": "ผู้รักษาการวะซีรแทนอะลีย์ บิน อีซา ปี 314",
+      "variantsFound": []
+    },
+    {
+      "id": "nasr-al-faraidi",
+      "arabic": "نصر بن القاسم الفرائضي",
+      "canonicalThai": "นัศร์ บิน อัลกอสิม อัลฟะรออิฎี",
+      "note": "นักวิชาการแบ่งมรดกสำนักหะนะฟี เสียชีวิตปี 314",
+      "variantsFound": []
+    },
+    {
+      "id": "al-abbas-b-al-muqtadir",
+      "arabic": "العباس بن المقتدر",
+      "canonicalThai": "อัลอับบาส บิน อัลมุกตะดิร",
+      "note": "โอรสของเคาะลีฟะฮ์อัลมุกตะดิร",
+      "variantsFound": []
+    },
+    {
+      "id": "nasr-al-hajib",
+      "arabic": "نصر الحاجب",
+      "canonicalThai": "นัศร์ อัลหาญิบ",
+      "note": "มหาดเล็กใหญ่ในราชสำนักมุกตะดิร",
+      "variantsFound": []
+    },
+    {
+      "id": "al-akhfash",
+      "arabic": "علي بن سليمان الأخفش",
+      "canonicalThai": "อะลีย์ บิน สุลัยมาน อัลอัคฟัช",
+      "note": "นักไวยากรณ์ (อัลอัคฟัชผู้เล็ก) เสียชีวิตปี 315",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-allah-al-qazwini",
+      "arabic": "عبد الله بن محمد القزويني",
+      "canonicalThai": "อับดุลลอฮ์ บิน มุหัมมัด อัลก็อซวีนี",
+      "note": "ผู้เสียชีวิตปี 315",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mubarrad",
+      "arabic": "محمد بن يزيد المبرد",
+      "canonicalThai": "อัลมุบัรริด",
+      "note": "อิมามนักไวยากรณ์สำนักบัศเราะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "harun-b-gharib",
+      "arabic": "هارون بن غريب",
+      "canonicalThai": "ฮารูน บิน เฆาะรีบ",
+      "note": "ลูกพี่ลูกน้องฝ่ายมารดาของอัลมุกตะดิร",
+      "variantsFound": []
+    },
+    {
+      "id": "mardawij",
+      "arabic": "مرداويج",
+      "canonicalThai": "มัรดาวิจ",
+      "note": "ผู้นำอัดดัยลัมผู้ก่อตั้งราชวงศ์ซิยาริด",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hasan-al-dai",
+      "arabic": "الحسن بن القاسم الداعي العلوي",
+      "canonicalThai": "อัลหะซัน บิน อัลกอสิม อัดดาอีย์ อัลอะละวี",
+      "note": "ผู้นำซัยดียะฮ์เจ้าเมืองอัรร็อย ถูกฆ่าปี 316",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-bakr-b-abi-dawud",
+      "arabic": "أبو بكر بن أبي داود السجستاني",
+      "canonicalThai": "อะบูบักร บิน อะบีดาวูด อัสสิญิสตานี",
+      "note": "หาฟิซบุตรของอะบูดาวูดเจ้าของสุนัน",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-awana-al-isfaraini",
+      "arabic": "يعقوب بن إسحاق الإسفراييني",
+      "canonicalThai": "อะบูอะวานะฮ์ อัลอิสฟะรอยินี",
+      "note": "หาฟิซเจ้าของมุสตัครอจอะบูอะวานะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qahir",
+      "arabic": "القاهر محمد بن المعتضد",
+      "canonicalThai": "อัลกอฮิร มุหัมมัด บิน อัลมุอ์ตะฎิด",
+      "note": "พี่น้องของอัลมุกตะดิร ถูกตั้งเป็นเคาะลีฟะฮ์ 2 วันปี 317 ภายหลังเป็นเคาะลีฟะฮ์จริง",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-umar-al-qadi",
+      "arabic": "محمد بن يوسف أبو عمر القاضي",
+      "canonicalThai": "อะบูอุมัร มุหัมมัด บิน ยูซุฟ",
+      "note": "กอฎีอัลกุฎอต (หัวหน้าผู้พิพากษา) สมัยมุกตะดิร",
+      "variantsFound": []
+    },
+    {
+      "id": "ahmad-b-mahdi",
+      "arabic": "أحمد بن مهدي بن رستم",
+      "canonicalThai": "อะหมัด บิน มะฮ์ดี บิน รุสตุม",
+      "note": "นักพรตผู้ทุ่มเทแสวงหาความรู้ เสียชีวิตปี 317",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-athir",
+      "arabic": "ابن الأثير",
+      "canonicalThai": "อิบนุลอะษีร",
+      "note": "นักประวัติศาสตร์เจ้าของอัลกามิล ฟิตตารีค (อิบนุ กะษีรอ้างอิงบ่อย)",
+      "variantsFound": []
+    },
+    {
+      "id": "sulayman-b-al-hasan",
+      "arabic": "سليمان بن الحسن بن مخلد",
+      "canonicalThai": "สุลัยมาน บิน อัลหะซัน บิน มัคลัด",
+      "note": "วะซีรแทนอิบนุ มุกละฮ์ปี 318",
+      "variantsFound": []
+    },
+    {
+      "id": "nasir-al-dawla",
+      "arabic": "ناصر الدولة بن حمدان",
+      "canonicalThai": "นาศิรุดเดาละฮ์ บิน หัมดาน",
+      "note": "ผู้นำฮัมดานิดแห่งอัลเมาศิล",
+      "variantsFound": []
+    },
+    {
+      "id": "harun-b-al-muqtadir",
+      "arabic": "هارون بن المقتدر",
+      "canonicalThai": "ฮารูน บิน อัลมุกตะดิร",
+      "note": "โอรสของอัลมุกตะดิร",
+      "variantsFound": []
+    },
+    {
+      "id": "al-radi",
+      "arabic": "أبو العباس الراضي بالله",
+      "canonicalThai": "อะบูอัลอับบาส อัรรอฎี บิลลาฮ์",
+      "note": "โอรสมุกตะดิร ภายหลังเป็นเคาะลีฟะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "yahya-b-said",
+      "arabic": "يحيى بن محمد بن صاعد",
+      "canonicalThai": "ยะห์ยา บิน มุหัมมัด บิน ศออิด",
+      "note": "หาฟิซคนสำคัญ เสียชีวิตปี 318",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-allaf",
+      "arabic": "الحسن بن علي ابن العلاف",
+      "canonicalThai": "อิบนุลอัลลาฟ",
+      "note": "กวีตาบอด สหายสนทนาของอัลมุอ์ตะฎิด",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mutadid",
+      "arabic": "المعتضد بالله",
+      "canonicalThai": "อัลมุอ์ตะฎิด บิลลาฮ์",
+      "note": "เคาะลีฟะฮ์อับบาซียะฮ์ บิดาของอัลมุกตะดิร",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-al-balkhi",
+      "arabic": "محمد بن الفضل البلخي",
+      "canonicalThai": "มุหัมมัด บิน อัลฟัฎล์ อัลบัลคี",
+      "note": "นักพรตชาวบัลค์ เสียชีวิตปี 319",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-sad-al-warraq",
+      "arabic": "محمد بن سعد الوراق",
+      "canonicalThai": "มุหัมมัด บิน สะอด์ อัลวัรรอก",
+      "note": "ฟะกีฮ์-นักพรต ศิษย์อะบูอุษมาน อันนัยซาบูรี",
+      "variantsFound": []
+    },
+    {
+      "id": "al-husayn-b-al-qasim",
+      "arabic": "الحسين بن القاسم",
+      "canonicalThai": "อัลหุเซน บิน อัลกอสิม",
+      "note": "วะซีรศัตรูของมุอ์นิส ผู้จุดชนวนการสังหารมุกตะดิร",
+      "variantsFound": []
+    },
+    {
+      "id": "al-fadl-b-jafar",
+      "arabic": "الفضل بن جعفر بن الفرات",
+      "canonicalThai": "อัลฟัฎล์ บิน ญะอ์ฟัร บิน อัลฟุรอต",
+      "note": "วะซีรคนสุดท้ายของอัลมุกตะดิร",
+      "variantsFound": []
+    },
+    {
+      "id": "al-nawbakhti",
+      "arabic": "إسحاق بن إسماعيل النوبختي",
+      "canonicalThai": "อะบูยะอ์กูบ อันเนาบัคตี",
+      "note": "อะมีรผู้คัดค้านการตั้งบุตรมุกตะดิรเป็นเคาะลีฟะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-khayran",
+      "arabic": "الحسين بن صالح بن خيران",
+      "canonicalThai": "อะบูอะลีย์ บิน ค็อยรอน",
+      "note": "ฟะกีฮ์ชาฟิอีย์ผู้ปฏิเสธตำแหน่งกอฎี เสียชีวิตปี 320",
+      "variantsFound": []
+    },
+    {
+      "id": "ali-b-bulayq",
+      "arabic": "علي بن بليق",
+      "canonicalThai": "อะลีย์ บิน บุลัยก์",
+      "note": "หาญิบสมัยอัลกอฮิร",
+      "variantsFound": []
+    },
+    {
+      "id": "al-barbahari",
+      "arabic": "أبو محمد البربهاري",
+      "canonicalThai": "อะบูมุหัมมัด อัลบัรบะฮารี",
+      "note": "ผู้นำสำนักหะนาบิละฮ์-นักเทศน์แห่งแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-shuja-buyih",
+      "arabic": "أبو شجاع بويه",
+      "canonicalThai": "อะบูชุญาอ์ บูยิฮ์",
+      "note": "ต้นตระกูลราชวงศ์บูยิด ชาวประมงดัยลัม",
+      "variantsFound": []
+    },
+    {
+      "id": "al-tahawi",
+      "arabic": "أحمد بن محمد الطحاوي",
+      "canonicalThai": "อะบูญะอ์ฟัร อัฏเฏาะหาวี",
+      "note": "อิมามฟะกีฮ์หะนะฟี เจ้าของอะกีดะฮ์เฏาะหาวียะฮ์ หลานอัลมุซะนีย์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-muzani",
+      "arabic": "إسماعيل بن يحيى المزني",
+      "canonicalThai": "อัลมุซะนีย์",
+      "note": "ศิษย์ใหญ่ของอิมามอัชชาฟิอีย์ เจ้าของอัลมุคตะศ็อร",
+      "variantsFound": []
+    },
+    {
+      "id": "ali-b-buyih",
+      "arabic": "علي بن بويه",
+      "canonicalThai": "อะลีย์ บิน บูยิฮ์ (อิมาดุดเดาละฮ์)",
+      "note": "ผู้ก่อตั้งราชวงศ์บูยิดแห่งฟาริส",
+      "variantsFound": []
+    },
+    {
+      "id": "al-suli",
+      "arabic": "أبو بكر الصولي",
+      "canonicalThai": "อะบูบักร อัศศูลี",
+      "note": "นักประพันธ์-นักประวัติศาสตร์ราชสำนักอับบาซียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-yaqut",
+      "arabic": "محمد بن ياقوت",
+      "canonicalThai": "มุหัมมัด บิน ยากูต",
+      "note": "หัวหน้ามหาดเล็กผู้บัญชาการกองทัพแบกแดดสมัยอัรรอฎี",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-shanabudh",
+      "arabic": "محمد بن أحمد بن شنبوذ",
+      "canonicalThai": "อิบนุ ชะนะบูษ",
+      "note": "นักอ่านอัลกุรอานที่ถูกตำหนิเรื่องการอ่านที่แตกต่าง ปี 323",
+      "variantsFound": []
+    },
+    {
+      "id": "badr-al-kharshani",
+      "arabic": "بدر الخرشني",
+      "canonicalThai": "บัดร์ อัลค็อรชะนี",
+      "note": "นายตำรวจแห่งแบกแดดสมัยอัรรอฎี",
+      "variantsFound": []
+    },
+    {
+      "id": "niftawayh",
+      "arabic": "إبراهيم بن محمد بن عرفة نفطويه",
+      "canonicalThai": "นิฟเฏาะวัยฮ์",
+      "note": "นักไวยากรณ์-นักประพันธ์ชาวอัซดี เสียชีวิตปี 323",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-rahman-b-isa",
+      "arabic": "عبد الرحمن بن عيسى",
+      "canonicalThai": "อับดุรเราะห์มาน บิน อีซา",
+      "note": "วะซีรน้องชายอะลีย์ บิน อีซา ปี 324",
+      "variantsFound": []
+    },
+    {
+      "id": "al-karkhi",
+      "arabic": "محمد بن القاسم الكرخي",
+      "canonicalThai": "อะบูญะอ์ฟัร อัลกัรคี",
+      "note": "วะซีรช่วงสั้นปี 324",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-tughj",
+      "arabic": "محمد بن طغج الإخشيد",
+      "canonicalThai": "มุหัมมัด บิน ฏุฆจ์ อัลอิคชีด",
+      "note": "ผู้ก่อตั้งราชวงศ์อิคชีดิดแห่งอียิปต์-ชาม",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qaim-fatimi",
+      "arabic": "القائم بأمر الله بن المهدي",
+      "canonicalThai": "อัลกออิม บิอัมริลลาฮ์",
+      "note": "เคาะลีฟะฮ์ฟาฏิมียะฮ์องค์ที่สองแห่งมัฆริบ",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-rahman-al-nasir",
+      "arabic": "عبد الرحمن الناصر الأموي",
+      "canonicalThai": "อับดุรเราะห์มาน อันนาศิร อัลอุมะวี",
+      "note": "เคาะลีฟะฮ์อุมะวียะฮ์แห่งอันดะลุส",
+      "variantsFound": []
+    },
+    {
+      "id": "jahza",
+      "arabic": "أحمد بن جعفر جحظة",
+      "canonicalThai": "ญะห์เซาะฮ์",
+      "note": "กวี-นักขับร้อง-นักเล่าเรื่องราชสำนัก",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-raiq",
+      "arabic": "محمد بن رائق",
+      "canonicalThai": "มุหัมมัด บิน รออิก",
+      "note": "อะมีรุลอุมะรออ์คนแรก ผู้กุมอำนาจแทนเคาะลีฟะฮ์อัรรอฎี",
+      "variantsFound": []
+    },
+    {
+      "id": "al-baridi",
+      "arabic": "أبو عبد الله البريدي",
+      "canonicalThai": "อะบูอับดิลลาฮ์ อัลบะรีดี",
+      "note": "ผู้ปกครองอัลอะฮ์วาซผู้กระด้างกระเดื่อง",
+      "variantsFound": []
+    },
+    {
+      "id": "bajkam",
+      "arabic": "بجكم",
+      "canonicalThai": "บัจกัม",
+      "note": "แม่ทัพเติร์ก ภายหลังเป็นอะมีรุลอุมะรออ์",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-washsha",
+      "arabic": "محمد بن إسحاق ابن الوشاء",
+      "canonicalThai": "อิบนุลวัชชาอ์",
+      "note": "นักไวยากรณ์-นักประพันธ์เรื่องเล่า เสียชีวิตปี 325",
+      "variantsFound": []
+    },
+    {
+      "id": "al-askari",
+      "arabic": "محمد بن أحمد العسكري",
+      "canonicalThai": "อะบูบักร อัลอัสกะรี",
+      "note": "ฟะกีฮ์สำนักอะบูเษาร์ เสียชีวิตปี 325",
+      "variantsFound": []
+    },
+    {
+      "id": "muizz-al-dawla",
+      "arabic": "معز الدولة بن بويه",
+      "canonicalThai": "มุอิซซุดเดาละฮ์ บิน บูยิฮ์",
+      "note": "ผู้นำบูยิดผู้ยึดแบกแดดในเวลาต่อมา น้องของอิมาดุดเดาละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "lashkari",
+      "arabic": "لشكري",
+      "canonicalThai": "ลัชกะรี",
+      "note": "อะมีรของวัชมะกีร อัดดัยละมี ผู้ยึดอาเซอร์ไบจานปี 326",
+      "variantsFound": []
+    },
+    {
+      "id": "umayya-b-ishaq",
+      "arabic": "أمية بن إسحاق",
+      "canonicalThai": "อุมัยยะฮ์ บิน อิสหาก",
+      "note": "ผู้ปกครองชันตะรีนที่ทรยศไปเข้ากับพวกคริสต์ปี 327",
+      "variantsFound": []
+    },
+    {
+      "id": "radmir",
+      "arabic": "ردمير",
+      "canonicalThai": "รัดมีร (รามิโร)",
+      "note": "กษัตริย์คริสต์ (รามิโรที่ 2 แห่งเลออน)",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-rahman-b-abi-hatim",
+      "arabic": "عبد الرحمن بن أبي حاتم الرازي",
+      "canonicalThai": "อับดุรเราะห์มาน บิน อะบีหาติม อัรรอซี",
+      "note": "อิมามนักวิจารณ์หะดีษ เจ้าของอัลญัรห์ วัตตะอ์ดีลและอัลอิลัล",
+      "variantsFound": []
+    },
+    {
+      "id": "rukn-al-dawla",
+      "arabic": "ركن الدولة الحسن بن بويه",
+      "canonicalThai": "รุกนุดเดาละฮ์ บิน บูยิฮ์",
+      "note": "ผู้นำบูยิดแห่งอัรร็อยและอัศบะฮาน น้องของอิมาดุดเดาละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "washmgir",
+      "arabic": "وشمكير",
+      "canonicalThai": "วัชมะกีร",
+      "note": "ผู้นำซิยาริด พี่น้องของมัรดาวิจ",
+      "variantsFound": []
+    },
+    {
+      "id": "jafar-al-murtaish",
+      "arabic": "جعفر المرتعش",
+      "canonicalThai": "ญะอ์ฟัร อัลมุรตะอิช",
+      "note": "ปรมาจารย์ซูฟีแห่งแบกแดด เสียชีวิตปี 328",
+      "variantsFound": []
+    },
+    {
+      "id": "al-shibli",
+      "arabic": "أبو بكر الشبلي",
+      "canonicalThai": "อัชชิบลี",
+      "note": "ปรมาจารย์ซูฟีชื่อดังแห่งแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "al-muttaqi",
+      "arabic": "المتقي لله إبراهيم بن المقتدر",
+      "canonicalThai": "อัลมุตตะกี ลิลลาฮ์ อิบรอฮีม",
+      "note": "เคาะลีฟะฮ์อับบาซียะฮ์ บุตรอัลมุกตะดิร ขึ้นครองปี 329",
+      "variantsFound": []
+    },
+    {
+      "id": "kurtekin",
+      "arabic": "كورتكين",
+      "canonicalThai": "กูรตะกีน",
+      "note": "ผู้นำดัยลัมที่เป็นอะมีรุลอุมะรออ์ปี 329",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mansur",
+      "arabic": "أبو جعفر المنصور",
+      "canonicalThai": "อะบูญะอ์ฟัร อัลมันศูร",
+      "note": "เคาะลีฟะฮ์อับบาซียะฮ์ผู้สถาปนาเมืองแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "sayf-al-dawla",
+      "arabic": "سيف الدولة علي بن حمدان",
+      "canonicalThai": "สัยฟุดเดาละฮ์ อะลีย์ บิน หัมดาน",
+      "note": "ผู้นำฮัมดานิดแห่งหะลับ น้องของนาศิรุดเดาละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "tuzun",
+      "arabic": "توزون",
+      "canonicalThai": "ตูซูน",
+      "note": "แม่ทัพเติร์ก ภายหลังเป็นอะมีรุลอุมะรออ์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qarariti",
+      "arabic": "أبو إسحاق القراريطي",
+      "canonicalThai": "อะบูอิสหาก อัลกอรอรีฏี",
+      "note": "วะซีรสมัยอัลมุตตะกี",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-husayn-al-baridi",
+      "arabic": "أبو الحسين البريدي",
+      "canonicalThai": "อะบูอัลหุเซน อัลบะรีดี",
+      "note": "พี่น้องตระกูลบะรีดีผู้กุมอำนาจที่แบกแดดชั่วคราว",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mahamili",
+      "arabic": "الحسين بن إسماعيل المحاملي",
+      "canonicalThai": "อัลหุเซน บิน อิสมาอีล อัลมะหามิลี",
+      "note": "ฟะกีฮ์ชาฟิอีย์-นักหะดีษ กอฎีกูฟะฮ์ 60 ปี เสียชีวิตปี 330",
+      "variantsFound": []
+    },
+    {
+      "id": "al-jubbai",
+      "arabic": "أبو علي الجبائي",
+      "canonicalThai": "อะบูอะลีย์ อัลญุบบาอี",
+      "note": "อิมามมุอ์ตะซิละฮ์ อาจารย์เดิมของอัลอัชอะรี",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-shirzad",
+      "arabic": "ابن شيرزاد",
+      "canonicalThai": "อิบนุ ชีรซาด",
+      "note": "เลขานุการ/ผู้แทนของตูซูนที่กุมอำนาจในแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-uqda",
+      "arabic": "أحمد بن محمد بن عقدة",
+      "canonicalThai": "อะบูอัลอับบาส บิน อุกดะฮ์",
+      "note": "หาฟิซผู้ทรงจำหะดีษมหาศาล (กูฟะฮ์) เสียชีวิตปี 332",
+      "variantsFound": []
+    },
+    {
+      "id": "al-tabarani",
+      "arabic": "سليمان بن أحمد الطبراني",
+      "canonicalThai": "อัฏฏ็อบรอนี",
+      "note": "หาฟิซเจ้าของอัลมุอ์ญัมทั้งสาม",
+      "variantsFound": []
+    },
+    {
+      "id": "al-daraqutni",
+      "arabic": "علي بن عمر الدارقطني",
+      "canonicalThai": "อัดดาเราะกุฏนี",
+      "note": "อิมามนักวิจารณ์หะดีษเจ้าของอัสสุนัน",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mustakfi",
+      "arabic": "المستكفي بالله عبد الله بن المكتفي",
+      "canonicalThai": "อัลมุสตักฟี บิลลาฮ์ อับดุลลอฮ์",
+      "note": "เคาะลีฟะฮ์อับบาซียะฮ์ บุตรอัลมุกตะฟี ขึ้นครองปี 333 ภายใต้ตูซูน",
+      "variantsFound": []
+    },
+    {
+      "id": "al-muti",
+      "arabic": "المطيع لله الفضل بن المقتدر",
+      "canonicalThai": "อัลมุฏีอ์ ลิลลาฮ์ อัลฟัฎล์",
+      "note": "เคาะลีฟะฮ์อับบาซียะฮ์ที่บูยิดตั้งขึ้นปี 334 (หุ่นเชิดของบูยิด)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-khiraqi",
+      "arabic": "عمر بن الحسين الخرقي",
+      "canonicalThai": "อุมัร บิน อัลหุเซน อัลคิเราะกี",
+      "note": "ฟะกีฮ์ฮัมบะลีย์ เจ้าของอัลมุคตะศ็อรอันเลื่องชื่อ เสียชีวิตปี 334",
+      "variantsFound": []
+    },
+    {
+      "id": "takin",
+      "arabic": "تكين التركي",
+      "canonicalThai": "ตะกีน อัตตุรกี",
+      "note": "แม่ทัพเติร์กที่นาศิรุดเดาละฮ์ปราบและควักตาปี 335",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-qasim-al-baridi",
+      "arabic": "أبو القاسم بن البريدي",
+      "canonicalThai": "อะบูอัลกอสิม บิน อัลบะรีดี",
+      "note": "ผู้นำตระกูลบะรีดีรุ่นหลังที่พ่ายบูยิด",
+      "variantsFound": []
+    },
+    {
+      "id": "nasr-al-thamali",
+      "arabic": "نصر الثملي",
+      "canonicalThai": "นัศร์ อัษษะมะลี",
+      "note": "อะมีรชายแดนของสัยฟุดเดาละฮ์ ผู้ดำเนินการไถ่เชลย",
+      "variantsFound": []
+    },
+    {
+      "id": "al-istarabadhi",
+      "arabic": "الحسن بن حمويه الإستراباذي",
+      "canonicalThai": "อัลหะซัน บิน หัมมูยะฮ์ อัลอิสตะรอบาษี",
+      "note": "กอฎีผู้มั่งคั่งและใจบุญ ผู้ต่อต้านอัลฮัลลาจ เสียชีวิตปี 335",
+      "variantsFound": []
+    },
+    {
+      "id": "imad-al-dawla",
+      "arabic": "عماد الدولة بن بويه",
+      "canonicalThai": "อิมาดุดเดาละฮ์ บิน บูยิฮ์",
+      "note": "พี่ชายคนโตของบูยิด เจ้าผู้ครองฟาริส",
+      "variantsFound": []
+    },
+    {
+      "id": "mardavij",
+      "arabic": "مرداويج",
+      "canonicalThai": "มัรดาวีจญ์",
+      "note": "ผู้ก่อตั้งราชวงศ์ซิยาริด กษัตริย์แห่งอัดดัยลัม พี่ชายของวัชมะกีร",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-munadi",
+      "arabic": "أبو الحسين بن المنادي أحمد بن جعفر",
+      "canonicalThai": "อิบนุ อัลมุนาดี อะหมัด บิน ญะอ์ฟัร",
+      "note": "นักปราชญ์ด้านวิชาอัลกุรอาน เสียชีวิตปี 336",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-hasan-al-makki",
+      "arabic": "أبو الحسن الزاهد المكي",
+      "canonicalThai": "อะบูอัลหะซัน อัซซาฮิด อัลมักกี",
+      "note": "นักพรตแห่งมักกะฮ์ ที่บุตรสาวผู้ทรงธรรมของเขาเสียชีวิตปี 336",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-hamduyah",
+      "arabic": "عبد الله بن محمد بن حمدويه",
+      "canonicalThai": "อับดุลลอฮ์ บิน หัมดูยะฮ์",
+      "note": "ผู้ทรงธรรมแห่งนัยสาบูร บิดาของอัลหากิม อันนัยสาบูรี เสียชีวิตปี 337",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hakim-al-naysaburi",
+      "arabic": "الحاكم أبو عبد الله النيسابوري",
+      "canonicalThai": "อัลหากิม อันนัยสาบูรี",
+      "note": "นักหะดีษผู้ยิ่งใหญ่ ผู้ประพันธ์อัลมุสตัดร็อก (กล่าวถึงในฐานะบุตรของอิบนุหัมดูยะฮ์)",
+      "variantsFound": []
+    },
+    {
+      "id": "qudama-al-katib",
+      "arabic": "قدامة بن جعفر الكاتب",
+      "canonicalThai": "กุดามะฮ์ บิน ญะอ์ฟัร",
+      "note": "อาลักษณ์และนักวรรณศิลป์ ผู้ประพันธ์ตำราอัลเคาะรอจญ์ เสียชีวิตปี 337",
+      "variantsFound": []
+    },
+    {
+      "id": "adud-al-dawla",
+      "arabic": "عضد الدولة بن بويه",
+      "canonicalThai": "อะฎุดุดเดาละฮ์ บิน บูยิฮ์",
+      "note": "ผู้ปกครองบูยิดผู้ยิ่งใหญ่ หลานและทายาทของอิมาดุดเดาละฮ์ สถาปนาปี 338",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-saib",
+      "arabic": "أبو السائب عتبة بن عبيد الله الهمذاني",
+      "canonicalThai": "อะบูอัสสาอิบ อัลฮะมะษานี",
+      "note": "หัวหน้าผู้พิพากษา(กอฎีอัลกุฎอต)แต่งตั้งปี 338",
+      "variantsFound": []
+    },
+    {
+      "id": "imran-b-shahin",
+      "arabic": "عمران بن شاهين",
+      "canonicalThai": "อิมรอน บิน ชาฮีน",
+      "note": "ผู้นำกบฏในเขตลุ่มน้ำอัลบะฏออิห์ ตั้งตัวเป็นอิสระจากบูยิด",
+      "variantsFound": []
+    },
+    {
+      "id": "al-saymari",
+      "arabic": "أبو جعفر الصيمري",
+      "canonicalThai": "อะบูญะอ์ฟัร อัศศ็อยมะรี",
+      "note": "วะซีรของมุอิซซุดเดาละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-nahhas",
+      "arabic": "أبو جعفر النحاس أحمد بن محمد",
+      "canonicalThai": "อะบูญะอ์ฟัร อันนะหาส",
+      "note": "นักไวยากรณ์และนักอรรถาธิบายชาวอียิปต์ จมน้ำไนล์เสียชีวิตปี 338",
+      "variantsFound": []
+    },
+    {
+      "id": "al-muhallabi",
+      "arabic": "أبو محمد الحسن بن محمد المهلبي",
+      "canonicalThai": "อะบูมุหัมมัด อัลมุฮัลละบี",
+      "note": "วะซีรของมุอิซซุดเดาละฮ์ ตั้งแต่ปี 339",
+      "variantsFound": []
+    },
+    {
+      "id": "al-farabi",
+      "arabic": "أبو نصر الفارابي محمد بن محمد",
+      "canonicalThai": "อะบูนัศร์ อัลฟารอบี",
+      "note": "นักปรัชญาและนักทฤษฎีดนตรีผู้ยิ่งใหญ่ 'ครูคนที่สอง' เสียชีวิตที่ดิมัชก์ปี 339",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-sina",
+      "arabic": "ابن سينا",
+      "canonicalThai": "อิบนุ สีนา",
+      "note": "นักปรัชญาและแพทย์ผู้ยิ่งใหญ่ (อาวิเซนนา) ผู้ศึกษาจากตำราของอัลฟารอบี",
+      "variantsFound": []
+    },
+    {
+      "id": "sahib-uman",
+      "arabic": "صاحب عمان",
+      "canonicalThai": "เจ้าผู้ครองโอมาน",
+      "note": "ผู้ปกครองโอมานที่บุกอัลบัศเราะฮ์ทางทะเลปี 340",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-yaqub-al-hajari",
+      "arabic": "أبو يعقوب الهجري",
+      "canonicalThai": "อะบูยะอ์กูบ อัลฮะญะรี",
+      "note": "พันธมิตรของเจ้าผู้ครองโอมานในการบุกบัศเราะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-abi-al-azaqir",
+      "arabic": "محمد بن علي بن أبي العزاقر",
+      "canonicalThai": "อิบนุ อะบีอัลอะซากิร",
+      "note": "ผู้ถูกประหารข้อหานอกศาสนา(ลัทธิอ้างความเป็นพระเจ้า) ก่อนหน้านี้",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-hasan-al-karkhi",
+      "arabic": "أبو الحسن الكرخي عبيد الله بن الحسين",
+      "canonicalThai": "อะบูอัลหะซัน อัลกัรคี",
+      "note": "อิมามใหญ่ของสำนักหะนะฟีและผู้นำมุอ์ตะซิละฮ์ เสียชีวิตปี 340",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mansur-al-fatimi",
+      "arabic": "المنصور الفاطمي إسماعيل بن القائم",
+      "canonicalThai": "อัลมันศูร ฟาฏิมียะฮ์",
+      "note": "เคาะลีฟะฮ์ฟาฏิมียะฮ์องค์ที่สามแห่งอัลมัฆริบ ผู้ปราบกบฏอะบูยะซีด เสียชีวิตปี 341",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-yazid-al-khariji",
+      "arabic": "أبو يزيد الخارجي",
+      "canonicalThai": "อะบูยะซีด อัลคอริญี",
+      "note": "ผู้นำกบฏเคาะวาริจญ์(อิบาฎียะฮ์)ต่อต้านฟาฏิมียะฮ์ในอัลมัฆริบ",
+      "variantsFound": []
+    },
+    {
+      "id": "al-muizz-al-fatimi",
+      "arabic": "المعز لدين الله الفاطمي معد",
+      "canonicalThai": "อัลมุอิซซ์ ฟาฏิมียะฮ์ (มะอัดด์)",
+      "note": "เคาะลีฟะฮ์ฟาฏิมียะฮ์ผู้สร้างเมืองไคโรและพิชิตอียิปต์ สืบทอดปี 341",
+      "variantsFound": []
+    },
+    {
+      "id": "jawhar-al-qaid",
+      "arabic": "جوهر القائد",
+      "canonicalThai": "เญาฮัร อัลกออิด",
+      "note": "แม่ทัพฟาฏิมียะฮ์ผู้พิชิตอียิปต์และสร้างเมืองไคโร",
+      "variantsFound": []
+    },
+    {
+      "id": "yusuf-b-wajih",
+      "arabic": "يوسف بن وجيه صاحب عمان",
+      "canonicalThai": "ยูซุฟ บิน วะญีฮ์",
+      "note": "เจ้าผู้ครองโอมานที่บุกอัลบัศเราะฮ์ปี 341",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-said-al-arabi",
+      "arabic": "أبو سعيد بن الأعرابي أحمد بن محمد",
+      "canonicalThai": "อะบูสะอีด บิน อัลอะอ์รอบี",
+      "note": "เชคแห่งมัสยิดหะรอมและนักประพันธ์ตำราศูฟี เสียชีวิตปี 341",
+      "variantsFound": []
+    },
+    {
+      "id": "al-tanukhi",
+      "arabic": "علي بن محمد أبو القاسم التنوخي",
+      "canonicalThai": "อะบูอัลกอสิม อัตตะนูคี",
+      "note": "กอฎีและนักปราชญ์(หะนะฟี/มุอ์ตะซิละฮ์) ปู่ของกอฎีอัตตะนูคี เสียชีวิตปี 342",
+      "variantsFound": []
+    },
+    {
+      "id": "dibl-al-shair",
+      "arabic": "دعبل الشاعر",
+      "canonicalThai": "ดิอ์บิล",
+      "note": "กวีอับบาซียะฮ์ที่มีชื่อเสียง (อ้างถึงบทกวีของเขา)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-baghawi",
+      "arabic": "البغوي عبد الله بن محمد",
+      "canonicalThai": "อัลบะเฆาวี",
+      "note": "นักหะดีษผู้มีชื่อเสียงในแบกแดด (ผู้รายงานหะดีษให้อัตตะนูคี)",
+      "variantsFound": []
+    },
+    {
+      "id": "constantine",
+      "arabic": "قسطنطين بن الدمستق",
+      "canonicalThai": "ฟุสฏ็อนฏีน (คอนสแตนติน)",
+      "note": "บุตรของอัดดุมุสตุก แม่ทัพโรม ถูกสังหารปี 343",
+      "variantsFound": []
+    },
+    {
+      "id": "nuh-b-nasr",
+      "arabic": "نوح بن نصر الساماني",
+      "canonicalThai": "นูห์ บิน นัศร์ อัสสามานี",
+      "note": "อะมีรซามานียะฮ์ เจ้าผู้ครองคุรอซานและมาวะรออันนะฮ์ร เสียชีวิตปี 343",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-malik-b-nuh",
+      "arabic": "عبد الملك بن نوح الساماني",
+      "canonicalThai": "อับดุลมะลิก บิน นูห์",
+      "note": "อะมีรซามานียะฮ์ สืบทอดต่อจากบิดานูห์ปี 343",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-ali-al-katib",
+      "arabic": "أبو علي الكاتب الحسن بن أحمد المصري",
+      "canonicalThai": "อะบูอะลีย์ อัลกาติบ",
+      "note": "นักพรตศูฟีชาวอียิปต์ เสียชีวิตปี 343",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-ali-al-rudhbari",
+      "arabic": "أبو علي الروذباري",
+      "canonicalThai": "อะบูอะลีย์ อัรรูซบารี",
+      "note": "ปรมาจารย์ศูฟี (สหายของอะบูอะลีย์ อัลกาติบ)",
+      "variantsFound": []
+    },
+    {
+      "id": "bakhtiyar",
+      "arabic": "أبو منصور بختيار بن معز الدولة",
+      "canonicalThai": "อะบูมันศูร บัคติยาร",
+      "note": "บุตรของมุอิซซุดเดาละฮ์ ทายาทอะมีรุลอุมะรออ์ ตั้งปี 344",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-sammak",
+      "arabic": "عثمان بن أحمد أبو عمرو الدقاق ابن السماك",
+      "canonicalThai": "อิบนุ อัสสัมมาก (อะบูอัมร์ อัดดักกอก)",
+      "note": "นักหะดีษผู้เชื่อถือได้ในแบกแดด เสียชีวิตปี 344",
+      "variantsFound": []
+    },
+    {
+      "id": "al-simnani",
+      "arabic": "محمد بن أحمد أبو جعفر القاضي السمناني",
+      "canonicalThai": "อะบูญะอ์ฟัร อัสสิมนานี",
+      "note": "กอฎีและนักปราชญ์หะนะฟี เสียชีวิตที่เมาศิลปี 344",
+      "variantsFound": []
+    },
+    {
+      "id": "al-ruzbahan",
+      "arabic": "الروزبهان",
+      "canonicalThai": "อัรรูซบะฮาน",
+      "note": "แม่ทัพดัยลัมที่ก่อกบฏต่อมุอิซซุดเดาละฮ์ ถูกถ่วงน้ำปี 345",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-murajja",
+      "arabic": "أبو المرجى بن ناصر الدولة",
+      "canonicalThai": "อะบูอัลมุร็อจญา",
+      "note": "บุตรของนาศิรุดเดาละฮ์ ที่ถูกส่งมายึดแบกแดดปี 345",
+      "variantsFound": []
+    },
+    {
+      "id": "subuktakin",
+      "arabic": "سبكتكين الحاجب",
+      "canonicalThai": "สุบุกตะกีน",
+      "note": "หาญิบ(มหาดเล็ก)ของมุอิซซุดเดาละฮ์ ผู้รักษาแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "ghulam-thalab",
+      "arabic": "غلام ثعلب محمد بن عبد الواحد أبو عمر الزاهد",
+      "canonicalThai": "ฆุลามษะอ์ลับ (อะบูอัมร์ อัซซาฮิด)",
+      "note": "นักภาษาและนักท่องจำผู้ยิ่งใหญ่ ศิษย์ของษะอ์ลับ เสียชีวิตปี 345",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-durayd",
+      "arabic": "ابن دريد محمد بن الحسن",
+      "canonicalThai": "อิบนุ ดุร็อยด์",
+      "note": "นักภาษาและนักประพันธ์ผู้ยิ่งใหญ่ (เจ้าของอัลญัมฮะเราะฮ์)",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-anbari",
+      "arabic": "ابن الأنباري محمد بن القاسم",
+      "canonicalThai": "อิบนุ อัลอันบารี",
+      "note": "นักภาษาและนักไวยากรณ์แห่งแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "maruf-al-karkhi",
+      "arabic": "معروف الكرخي",
+      "canonicalThai": "มะอ์รูฟ อัลกัรคี",
+      "note": "นักพรตศูฟีผู้มีชื่อเสียงในแบกแดด (อ้างถึงหลุมศพ)",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-abbas-al-asamm",
+      "arabic": "أبو العباس الأصم محمد بن يعقوب",
+      "canonicalThai": "อะบูอัลอับบาส อัลอะศ็อมม์",
+      "note": "นักหะดีษผู้ยิ่งใหญ่แห่งนัยสาบูร เสียชีวิตปี 346 อายุ 99 ปี",
+      "variantsFound": []
+    },
+    {
+      "id": "ziri-b-manad",
+      "arabic": "زيري بن مناد الصنهاجي",
+      "canonicalThai": "ซีรี บิน มะนาด อัศศินฮาญี",
+      "note": "ผู้นำเผ่าศินฮาญะฮ์ พันธมิตรฟาฏิมียะฮ์ ต้นราชวงศ์ซีรีด",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-said-b-yunus",
+      "arabic": "أبو سعيد بن يونس عبد الرحمن بن أحمد الصدفي",
+      "canonicalThai": "อิบนุ ยูนุส อัศเศาะดะฟี",
+      "note": "นักประวัติศาสตร์อียิปต์ ผู้ประพันธ์ตารีคมิศร์ เสียชีวิตปี 347",
+      "variantsFound": []
+    },
+    {
+      "id": "muayyid-al-dawla",
+      "arabic": "مؤيد الدولة بن ركن الدولة",
+      "canonicalThai": "มุอัยยิดุดเดาละฮ์ บิน รุกนุดเดาละฮ์",
+      "note": "เจ้าชายบูยิด บุตรของรุกนุดเดาละฮ์ ผู้ครองอัรร็อย",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-bakr-al-najjad",
+      "arabic": "أبو بكر النجاد أحمد بن سلمان",
+      "canonicalThai": "อะบูบักร อันนัจญาด",
+      "note": "อิมามสำนักหันบะลี นักหะดีษและนักนิติศาสตร์ เสียชีวิตปี 348",
+      "variantsFound": []
+    },
+    {
+      "id": "jafar-al-khuldi",
+      "arabic": "جعفر الخلدي أبو محمد الخواص",
+      "canonicalThai": "ญะอ์ฟัร อัลคุลดี",
+      "note": "นักหะดีษและนักพรตศูฟีในแบกแดด เสียชีวิตปี 348",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mustajir",
+      "arabic": "المستجير بالله من ولد عيسى بن المكتفي",
+      "canonicalThai": "อัลมุสตะญีร บิลลาฮ์",
+      "note": "ลูกหลานอัลมุกตะฟีที่ลุกขึ้นในอาเซอร์ไบจานปี 349 และพ่ายแพ้",
+      "variantsFound": []
+    },
+    {
+      "id": "al-marzuban",
+      "arabic": "المرزبان بن محمد",
+      "canonicalThai": "อัลมัรซุบาน",
+      "note": "ผู้ปกครองอาเซอร์ไบจาน(ราชวงศ์ซัลลาริด)ในยุคนั้น",
+      "variantsFound": []
+    },
+    {
+      "id": "unujur-al-ikhshid",
+      "arabic": "أنوجور بن الإخشيذ",
+      "canonicalThai": "อนูญูร บิน อัลอิคชีด",
+      "note": "เจ้าผู้ครองอียิปต์(อิคชีดียะฮ์) เสียชีวิตปี 349",
+      "variantsFound": []
+    },
+    {
+      "id": "ali-b-ikhshid",
+      "arabic": "علي بن الإخشيذ",
+      "canonicalThai": "อะลีย์ บิน อัลอิคชีด",
+      "note": "เจ้าผู้ครองอียิปต์ สืบทอดต่อจากอนูญูรพี่ชายปี 349",
+      "variantsFound": []
+    },
+    {
+      "id": "jafar-b-harb",
+      "arabic": "جعفر بن حرب الكاتب",
+      "canonicalThai": "ญะอ์ฟัร บิน หัรบ์",
+      "note": "อาลักษณ์ผู้มั่งคั่งที่สละทรัพย์เพื่อบำเพ็ญตน เสียชีวิตปี 349",
+      "variantsFound": []
+    },
+    {
+      "id": "al-khattabi",
+      "arabic": "حمد بن محمد الخطابي أبو سليمان",
+      "canonicalThai": "อัลค็อฏฏอบี (อะบูสุลัยมาน)",
+      "note": "นักปราชญ์หะดีษ-ภาษา ผู้ประพันธ์มะอาลิมุสสุนันและฆ่อรีบุลหะดีษ เสียชีวิตปี 388 ณ เมืองบุสต์ (อิบนุ กะษีรกล่าวถึงทั้งปี 349 และ 388)",
+      "variantsFound": []
+    },
+    {
+      "id": "abdullah-ibn-abi-al-shawarib",
+      "arabic": "أبو العباس عبد الله بن الحسن بن أبي الشوارب",
+      "canonicalThai": "อับดุลลอฮ์ อิบนุ อะบีอัชชะวาริบ",
+      "note": "กอฎีคนแรกที่รับเหมาตำแหน่งผู้พิพากษาจากมุอิซซุดเดาละฮ์ ปี 350",
+      "variantsFound": []
+    },
+    {
+      "id": "naja",
+      "arabic": "نجا غلام سيف الدولة",
+      "canonicalThai": "นะญา",
+      "note": "ทาส(แม่ทัพ)ของสัยฟุดเดาละฮ์ ผู้นำทัพบุกรูม",
+      "variantsFound": []
+    },
+    {
+      "id": "mansur-b-nuh",
+      "arabic": "منصور بن نوح الساماني",
+      "canonicalThai": "มันศูร บิน นูห์ อัสสามานี",
+      "note": "อะมีรซามานียะฮ์ เจ้าผู้ครองคุรอซาน สืบทอดต่อจากอับดุลมะลิกพี่ชายปี 350",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hakam-al-mustansir",
+      "arabic": "الحكم المستنصر بن عبد الرحمن الناصر",
+      "canonicalThai": "อัลหะกัม อัลมุสตันศิร",
+      "note": "เคาะลีฟะฮ์อุมัยยะฮ์แห่งอันดะลุส สืบทอดต่อจากอันนาศิรบิดาปี 350",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-firas-al-hamdani",
+      "arabic": "أبو فراس بن سعيد بن حمدان",
+      "canonicalThai": "อะบูฟิรอส อัลหัมดานี",
+      "note": "กวีและแม่ทัพหัมดานิด รองเจ้าเมืองมันบิจ ถูกโรมจับเป็นเชลยปี 351",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-dharr",
+      "arabic": "أبو ذر الغفاري",
+      "canonicalThai": "อบู ซัรร์ อัลฆิฟารี",
+      "note": "เศาะหาบะฮ์ผู้ทรงเกียรติที่ถูกเนรเทศในสมัยอุษมาน (อ้างถึงในฟิตนะฮ์ 351)",
+      "variantsFound": []
+    },
+    {
+      "id": "umar-b-akhtham",
+      "arabic": "عمر بن أكثم أبو بشر الأسدي",
+      "canonicalThai": "อุมัร บิน อักษัม",
+      "note": "กอฎีสำนักชาฟิอี หัวหน้าผู้พิพากษาในสมัยอัลมุฏีอ์ เสียชีวิตปี 352",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-ward",
+      "arabic": "أبو الورد الأعرابي",
+      "canonicalThai": "อะบูอัลวัรด์",
+      "note": "ผู้นำอาหรับเร่ร่อนในอาเซอร์ไบจานที่ถูกนะญาสังหารปี 353",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-taghlib",
+      "arabic": "أبو تغلب بن ناصر الدولة",
+      "canonicalThai": "อะบูตัฆลิบ บิน นาศิรุดเดาละฮ์",
+      "note": "ทายาทหัมดานิดแห่งเมาศิล บุตรของนาศิรุดเดาละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-dai",
+      "arabic": "أبو عبد الله محمد بن الحسين ابن الداعي",
+      "canonicalThai": "อิบนุ อัดดาอี (มุหัมมัด บิน อัลหุเซน)",
+      "note": "อะละวีจากดัยลัมที่อ้างตนเป็นมะฮ์ดีปี 353",
+      "variantsFound": []
+    },
+    {
+      "id": "manwil",
+      "arabic": "منويل أمير الروم",
+      "canonicalThai": "มันวีล (มานูเอล)",
+      "note": "แม่ทัพโรมที่ถูกสังหารในยุทธนาวีช่องแคบที่ซิซิลีปี 353",
+      "variantsFound": []
+    },
+    {
+      "id": "ahmad-sahib-siqilliyya",
+      "arabic": "أحمد أمير صقلية",
+      "canonicalThai": "อะหมัด เจ้าผู้ครองซิกิลลียะฮ์",
+      "note": "ผู้ปกครองซิซิลี(ฝ่ายฟาฏิมียะฮ์) ผู้นำทัพในยุทธนาวีช่องแคบ",
+      "variantsFound": []
+    },
+    {
+      "id": "malik-al-rum",
+      "arabic": "ملك الروم (نقفور فوقاس)",
+      "canonicalThai": "กษัตริย์ของโรม (นิเกโฟรอส โฟกัส)",
+      "note": "จักรพรรดิไบแซนไทน์ ผู้ยึดอัลมัศศีศ็อฮ์และเฏาะรอซูสปี 354",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-ahmad-al-musawi",
+      "arabic": "أبو أحمد الحسين بن موسى الموسوي",
+      "canonicalThai": "อะบูอะหมัด อัลหุเซน บิน มูซา อัลมูซาวี",
+      "note": "นะกีบฏอลิบีน บิดาของอัชชะรีฟ อัรเราะฎีและอัลมุรตะฎอ",
+      "variantsFound": []
+    },
+    {
+      "id": "rashiq-al-nasimi",
+      "arabic": "رشيق النسيمي",
+      "canonicalThai": "รอชีก อันนะสีมี",
+      "note": "ผู้ยึดอันฏอกิยะฮ์ปี 354 ถูกปราบโดยสัยฟุดเดาละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-ahwazi",
+      "arabic": "ابن الأهوازي",
+      "canonicalThai": "อิบนุ อัลอะฮ์วาซี",
+      "note": "ผู้สนับสนุนรอชีกในการยึดอันฏอกิยะฮ์ ถูกประหารปี 354",
+      "variantsFound": []
+    },
+    {
+      "id": "bishara",
+      "arabic": "بشارة غلام سيف الدولة",
+      "canonicalThai": "บิชาเราะฮ์",
+      "note": "ทาส(แม่ทัพ)ของสัยฟุดเดาละฮ์ ผู้ปราบรอชีก",
+      "variantsFound": []
+    },
+    {
+      "id": "wazir-al-rumi",
+      "arabic": "وزير الرومي",
+      "canonicalThai": "วะซีร อัรรูมี",
+      "note": "ชาวโรมที่อิบนุ อัลอะฮ์วาซีตั้งเป็นอะมีรแห่งอันฏอกิยะฮ์ ถูกประหารปี 354",
+      "variantsFound": []
+    },
+    {
+      "id": "marwan-al-qarmati",
+      "arabic": "مروان القرمطي",
+      "canonicalThai": "มัรวาน อัลก็อรมะฏี",
+      "note": "ผู้นำเกาะรอมิเฏาะฮ์ที่ยึดเมืองหิมศ์ปี 354",
+      "variantsFound": []
+    },
+    {
+      "id": "badr-amir",
+      "arabic": "الأمير بدر",
+      "canonicalThai": "อะมีรบัดร์",
+      "note": "แม่ทัพจากหะลับที่ถูกมัรวานสังหารปี 354",
+      "variantsFound": []
+    },
+    {
+      "id": "khalaf-b-ahmad",
+      "arabic": "خلف بن أحمد",
+      "canonicalThai": "เคาะลัฟ บิน อะหมัด",
+      "note": "อะมีรแห่งสิญิสตาน(ราชวงศ์ศ็อฟฟารี) ผู้รู้และรักผู้รู้",
+      "variantsFound": []
+    },
+    {
+      "id": "tahir-b-al-husayn-sijistani",
+      "arabic": "طاهر بن الحسين السجستاني",
+      "canonicalThai": "ฏอฮิร บิน อัลหุเซน (สิญิสตาน)",
+      "note": "ผู้รักษาการที่ก่อกบฏชิงอำนาจในสิญิสตานปี 354",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mutanabbi",
+      "arabic": "أبو الطيب المتنبي أحمد بن الحسين",
+      "canonicalThai": "อัลมุตะนับบี (อะบูอัฏฏ็อยยิบ)",
+      "note": "กวีเอกที่สุดของอาหรับ ถูกสังหารปี 354",
+      "variantsFound": []
+    },
+    {
+      "id": "kafur-al-ikhshidi",
+      "arabic": "كافور الإخشيذي",
+      "canonicalThai": "กาฟูร อัลอิคชีดี",
+      "note": "ผู้ปกครองอียิปต์(อิคชีดียะฮ์) ผู้อุปถัมภ์แล้วระแวงอัลมุตะนับบี",
+      "variantsFound": []
+    },
+    {
+      "id": "fatik-al-asadi",
+      "arabic": "فاتك بن أبي الجهل الأسدي",
+      "canonicalThai": "ฟาติก อัลอะสะดี",
+      "note": "ผู้สังหารอัลมุตะนับบีและบุตรปี 354",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-khalawayh",
+      "arabic": "ابن خالويه",
+      "canonicalThai": "อิบนุ เคาะลาวัยฮ์",
+      "note": "นักภาษาในราชสำนักสัยฟุดเดาละฮ์ คู่ขัดแย้งของอัลมุตะนับบี",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-hibban",
+      "arabic": "أبو حاتم البستي ابن حبان",
+      "canonicalThai": "อิบนุ ฮิบบาน อัลบุสตี",
+      "note": "นักหะดีษผู้ยิ่งใหญ่ เจ้าของเศาะฮีหฺอิบนุ ฮิบบาน เสียชีวิตปี 354",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-khawatimi",
+      "arabic": "ابن الخواتيمي قاضي طرسوس",
+      "canonicalThai": "อิบนุ อัลเคาะวาตีมี",
+      "note": "กอฎีแห่งเฏาะรอซูสที่สูญทรัพย์มหาศาลในการปล้นกองหัจญ์ปี 355",
+      "variantsFound": []
+    },
+    {
+      "id": "umm-kulthum",
+      "arabic": "أم كلثوم بنت علي بن أبي طالب",
+      "canonicalThai": "อุมมุกุลษูม บินต์ อะลี",
+      "note": "บุตรสาวของอะลี บิน อบีฏอลิบ ที่สมรสกับอุมัร บิน อัลค็อฏฏอบ",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-faraj-al-isbahani",
+      "arabic": "أبو الفرج الأصبهاني صاحب الأغاني",
+      "canonicalThai": "อะบูอัลฟะร็อจญ์ อัลอิศบะฮานี",
+      "note": "นักวรรณศิลป์ ผู้ประพันธ์หนังสืออัลอะฆอนี เสียชีวิตปี 356",
+      "variantsFound": []
+    },
+    {
+      "id": "sad-al-dawla",
+      "arabic": "سعد الدولة أبو المعالي شريف بن سيف الدولة",
+      "canonicalThai": "สะอ์ดุดเดาละฮ์ ชะรีฟ",
+      "note": "เจ้าผู้ครองหะลับ บุตรของสัยฟุดเดาละฮ์ สืบทอดปี 356",
+      "variantsFound": []
+    },
+    {
+      "id": "qarghuya",
+      "arabic": "قرغويه مولى سيف الدولة",
+      "canonicalThai": "กัรฆูยะฮ์",
+      "note": "ทาส(แม่ทัพ)ของสัยฟุดเดาละฮ์ ที่ยึดอำนาจในหะลับจากสะอ์ดุดเดาละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-ali-al-qali",
+      "arabic": "أبو علي القالي إسماعيل بن القاسم",
+      "canonicalThai": "อะบูอะลี อัลกอลี",
+      "note": "นักภาษาผู้ประพันธ์อัลอะมาลี ตั้งถิ่นฐานที่คอร์โดบา เสียชีวิตปี 356",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-ilyas",
+      "arabic": "أبو علي محمد بن إلياس صاحب كرمان",
+      "canonicalThai": "มุหัมมัด บิน อิลยาส",
+      "note": "เจ้าผู้ครองกัรมาน เสียชีวิตปี 356 (อะฎุดุดเดาละฮ์ยึดกัรมานต่อ)",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-al-mustakfi",
+      "arabic": "محمد بن المستكفي بالله العباسي",
+      "canonicalThai": "มุหัมมัด บิน อัลมุสตักฟี อัลอับบาซี",
+      "note": "ผู้แอบอ้างเป็นมะฮ์ดีปี 357 ถูกเปิดโปงว่าเป็นอับบาซีและถูกตัดจมูก",
+      "variantsFound": []
+    },
+    {
+      "id": "jafar-b-fallah",
+      "arabic": "جعفر بن فلاح",
+      "canonicalThai": "ญะอ์ฟัร บิน ฟะลาห์",
+      "note": "แม่ทัพฟาฏิมียะฮ์ที่เญาฮัรส่งไปยึดดิมัชก์ปี 359",
+      "variantsFound": []
+    },
+    {
+      "id": "hasan-b-tughj",
+      "arabic": "أبو محمد الحسن بن عبد الله بن طغج",
+      "canonicalThai": "อัลหะซัน บิน ฏุฆจ์",
+      "note": "ผู้นำอิคชีดียะฮ์ที่พ่ายฟาฏิมียะฮ์ที่อัรร็อมละฮ์ปี 359",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-hazm",
+      "arabic": "أبو محمد ابن حزم الظاهري",
+      "canonicalThai": "อิบนุ ฮัซม์ อัซซอฮิรี",
+      "note": "นักนิติศาสตร์-นักปราชญ์ผู้ยิ่งใหญ่แห่งอันดะลุส ผู้ตอบโต้บทกวีของนิเกโฟรอส",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hasan-al-asam",
+      "arabic": "الحسن بن أحمد بن بهرام الأعصم",
+      "canonicalThai": "อัลหะซัน อัลอะอ์ศัม",
+      "note": "ผู้นำเกาะรอมิเฏาะฮ์แห่งบะฮ์เรน ผู้ยึดดิมัชก์และบุกอียิปต์ปี 360",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-asakir",
+      "arabic": "الحافظ ابن عساكر",
+      "canonicalThai": "อิบนุ อะซากิร",
+      "note": "นักประวัติศาสตร์ผู้ยิ่งใหญ่ ผู้ประพันธ์ตารีคดิมัชก์ (แหล่งอ้างอิง)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-sari-al-raffa",
+      "arabic": "السري الرفاء أبو الحسن الكندي",
+      "canonicalThai": "อัสสะรี อัรร็อฟฟาอ์",
+      "note": "กวีชาวเมาศิล เสียชีวิตปี 360 (บ้างว่า 362)",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-fadl-al-shirazi",
+      "arabic": "أبو الفضل الشيرازي الوزير",
+      "canonicalThai": "อะบูอัลฟัฎล์ อัชชีรอซี",
+      "note": "วะซีรในยุคบัคติยาร",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-hani-al-andalusi",
+      "arabic": "محمد بن هانئ الأندلسي",
+      "canonicalThai": "มุหัมมัด บิน ฮานิอ์ อัลอันดะลุสี",
+      "note": "กวีคนสำคัญของอัลมุอิซซ์ ฟาฏิมียะฮ์ เสียชีวิตระหว่างทางสู่อียิปต์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-yaqub-yusuf",
+      "arabic": "أبو يعقوب يوسف الجنابي",
+      "canonicalThai": "อะบูยะอ์กูบ ยูซุฟ",
+      "note": "ผู้นำเกาะรอมิเฏาะฮ์ สืบทอดต่อจากสะอีดพี่ชายปี 361",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-bakr-al-razi-hanafi",
+      "arabic": "أبو بكر الرازي الجصاص الحنفي",
+      "canonicalThai": "อะบูบักร อัรรอซี (อัลญัศศอศ)",
+      "note": "นักนิติศาสตร์สำนักหะนะฟีผู้ยิ่งใหญ่ ผู้ประพันธ์อะห์กามอัลกุรอาน",
+      "variantsFound": []
+    },
+    {
+      "id": "al-rummani",
+      "arabic": "أبو الحسن علي بن عيسى الرماني",
+      "canonicalThai": "อะลี บิน อีซา อัรรุมมานี",
+      "note": "นักไวยากรณ์และนักเทววิทยาแห่งแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-daqqaq-hanbali",
+      "arabic": "ابن الدقاق الحنبلي",
+      "canonicalThai": "อิบนุ อัดดักกอก",
+      "note": "นักนิติศาสตร์สำนักหันบะลีในแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-qasim-hibat-allah",
+      "arabic": "أبو القاسم هبة الله بن ناصر الدولة",
+      "canonicalThai": "อะบูอัลกอสิม ฮิบะตุลลอฮ์",
+      "note": "แม่ทัพหัมดานิด น้องชายของอะบูตัฆลิบ ผู้จับดุมุสตุกเป็นเชลย",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-baqiyya",
+      "arabic": "محمد بن بقية الوزير",
+      "canonicalThai": "มุหัมมัด บิน บะกียะฮ์",
+      "note": "วะซีรของอิซซุดเดาละฮ์ ผู้มาจากชนชั้นต่ำ ตั้งปี 362",
+      "variantsFound": []
+    },
+    {
+      "id": "al-aziz-fatimi",
+      "arabic": "العزيز بالله بن المعز الفاطمي",
+      "canonicalThai": "อัลอะซีซ บิลลาฮ์",
+      "note": "บุตรและทายาทของอัลมุอิซซ์ ฟาฏิมียะฮ์ (เคาะลีฟะฮ์ฟาฏิมียะฮ์องค์ต่อมา)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-tai",
+      "arabic": "الطائع لله أبو بكر عبد الكريم بن المطيع",
+      "canonicalThai": "อัฏฏออิอ์ ลิลลาฮ์ อับดุลกะรีม",
+      "note": "เคาะลีฟะฮ์อับบาซียะฮ์ บุตรของอัลมุฏีอ์ สถาปนาปี 363",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-amid",
+      "arabic": "أبو الفتح بن العميد",
+      "canonicalThai": "อะบูอัลฟัตห์ บิน อัลอะมีด",
+      "note": "วะซีรของรุกนุดเดาละฮ์/อะฎุดุดเดาละฮ์ (บุตรของอัลอะมีดผู้พ่อ)",
+      "variantsFound": []
+    },
+    {
+      "id": "aftakin",
+      "arabic": "أفتكين التركي",
+      "canonicalThai": "อัฟตะกีน",
+      "note": "ผู้นำเติร์กที่หนีอะฎุดุดเดาละฮ์ไปแบกแดดปี 364",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-ishaq-buyid",
+      "arabic": "أبو إسحاق بن ركن الدولة",
+      "canonicalThai": "อะบูอิสหาก บิน รุกนุดเดาละฮ์",
+      "note": "เจ้าชายบูยิด น้องของอะฎุดุดเดาละฮ์ แม่ทัพในอิรัก",
+      "variantsFound": []
+    },
+    {
+      "id": "fakhr-al-dawla",
+      "arabic": "فخر الدولة بن ركن الدولة",
+      "canonicalThai": "ฟัครุดเดาละฮ์ บิน รุกนุดเดาละฮ์",
+      "note": "เจ้าชายบูยิด ผู้ครองฮะมะซาน-อัดดีนะวัร (ปี 365)",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-abbas-buyid",
+      "arabic": "أبو العباس بن ركن الدولة",
+      "canonicalThai": "อะบูอัลอับบาส บิน รุกนุดเดาละฮ์",
+      "note": "บุตรของรุกนุดเดาละฮ์ ในความดูแลของอะฎุดุดเดาละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-maruf",
+      "arabic": "أبو محمد بن معروف القاضي",
+      "canonicalThai": "อะบูมุหัมมัด บิน มะอ์รูฟ",
+      "note": "กอฎีอัลกุฎอตแห่งแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "yusuf-buluggin",
+      "arabic": "يوسف بلكين الصنهاجي",
+      "canonicalThai": "ยูซุฟ บุลลิกีน อัศศินฮาญี",
+      "note": "ผู้ปกครองอิฟรีกียะฮ์ฝ่ายฟาฏิมียะฮ์ ต้นราชวงศ์ซีรีด",
+      "variantsFound": []
+    },
+    {
+      "id": "isa-b-umm-al-ansar",
+      "arabic": "عيسى بن أم الأنصار",
+      "canonicalThai": "อีซา บิน อุมมุลอันศอร",
+      "note": "ผู้แอบอ้างเป็นนบีที่บัรฆอวาเฏาะฮ์ ถูกบุลลิกีนปราบปี 365",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-qasim-nuh",
+      "arabic": "أبو القاسم نوح بن منصور الساماني",
+      "canonicalThai": "อะบูอัลกอสิม นูห์ (นูห์ที่ 2)",
+      "note": "อะมีรซามานียะฮ์ สืบทอดต่อจากมันศูรบิดาปี 366 ขณะอายุ 13 ปี",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-samun",
+      "arabic": "أبو الحسين بن سمعون الواعظ",
+      "canonicalThai": "อิบนุ สัมอูน",
+      "note": "นักเทศนาผู้ทรงคุณธรรมแห่งแบกแดด ผู้กล้าตักเตือนอะฎุดุดเดาละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-husayn-al-anbari",
+      "arabic": "أبو الحسين بن الأنباري الشاعر",
+      "canonicalThai": "อะบูอัลหุเซน บิน อัลอันบารี",
+      "note": "กวีผู้ประพันธ์มรสิยะฮ์(บทไว้อาลัย)อิบนุ บะกียะฮ์อันลือชื่อ",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-wafa",
+      "arabic": "أبو الوفا الحاجب",
+      "canonicalThai": "อะบูอัลวะฟาอ์",
+      "note": "หาญิบของอะฎุดุดเดาละฮ์ ผู้รักษาการที่เมาศิล (ปี 368)",
+      "variantsFound": []
+    },
+    {
+      "id": "qassam-al-tarrab",
+      "arabic": "قسام التراب الحارثي",
+      "canonicalThai": "ก็อสซาม อัตตัรรอบ",
+      "note": "ผู้ปกครองดิมัชก์โดยพฤตินัยปี 368-376 (เดิมเป็นคนแบกดิน)",
+      "variantsFound": []
+    },
+    {
+      "id": "jamila-hamdani",
+      "arabic": "جميلة بنت ناصر الدولة",
+      "canonicalThai": "ญะมีละฮ์ อัลหัมดานียะฮ์",
+      "note": "น้องสาวของอะบูตัฆลิบ ที่ถูกส่งไปกักที่แบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qatii",
+      "arabic": "أبو بكر بن مالك القطيعي",
+      "canonicalThai": "อะบูบักร บิน มาลิก อัลเกาะฏีอี",
+      "note": "นักหะดีษผู้รายงานมุสนัดอะหมัด เสียชีวิตปี 368",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hasan-b-imran",
+      "arabic": "الحسن بن عمران بن شاهين",
+      "canonicalThai": "อัลหะซัน บิน อิมรอน",
+      "note": "บุตรของอิมรอน บิน ชาฮีน ผู้ครองอัลบะฏีหะฮ์สืบต่อปี 369",
+      "variantsFound": []
+    },
+    {
+      "id": "dabba-al-asadi",
+      "arabic": "ضبة بن محمد الأسدي",
+      "canonicalThai": "ฎ็อบบะฮ์ อัลอะสะดี",
+      "note": "อะมีรโจรบนูชัยบานที่อัยนุตตัมร์ ถูกอะฎุดุดเดาละฮ์ปราบปี 369",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-ali-al-farisi",
+      "arabic": "أبو علي الفارسي النحوي",
+      "canonicalThai": "อะบูอะลี อัลฟาริซี",
+      "note": "นักไวยากรณ์ผู้ยิ่งใหญ่ ผู้ประพันธ์อัลอีฎอหฺ",
+      "variantsFound": []
+    },
+    {
+      "id": "al-muhassin-al-tanukhi",
+      "arabic": "أبو علي المحسن بن علي التنوخي",
+      "canonicalThai": "อะบูอะลี อัลมุหัสสิน อัตตะนูคี",
+      "note": "กอฎีและนักประพันธ์(เจ้าของนิชวารุลมุหาเฎาะเราะฮ์) บุตรของอัตตะนูคี",
+      "variantsFound": []
+    },
+    {
+      "id": "al-sahib-b-abbad",
+      "arabic": "الصاحب بن عباد",
+      "canonicalThai": "อัศศอหิบ บิน อับบาด",
+      "note": "วะซีรและนักวรรณศิลป์ผู้ยิ่งใหญ่ของราชวงศ์บูยิด(สาขาอัรร็อย)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-ismaili",
+      "arabic": "أبو بكر الإسماعيلي الجرجاني أحمد بن إبراهيم",
+      "canonicalThai": "อัลอิสมาอีลี อัลญุรญานี",
+      "note": "นักหะดีษผู้ยิ่งใหญ่ ผู้ประพันธ์อัลมุสตัครอจบนเศาะฮีหฺอัลบุคอรี เสียชีวิตปี 371",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-aziz-al-tamimi",
+      "arabic": "عبد العزيز بن الحارث أبو الحسن التميمي",
+      "canonicalThai": "อับดุลอะซีซ อัตตะมีมี",
+      "note": "นักนิติศาสตร์สำนักหันบะลี เสียชีวิตปี 371",
+      "variantsFound": []
+    },
+    {
+      "id": "samsam-al-dawla",
+      "arabic": "صمصام الدولة بن عضد الدولة",
+      "canonicalThai": "เศาะมศอมุดเดาละฮ์ บิน อะฎุดุดเดาละฮ์",
+      "note": "ผู้ปกครองบูยิดแห่งอิรัก สืบทอดต่อจากอะฎุดุดเดาละฮ์บิดาปี 372",
+      "variantsFound": []
+    },
+    {
+      "id": "zubayda-bint-muizz",
+      "arabic": "زبيدة بنت معز الدولة",
+      "canonicalThai": "ซุบัยดะฮ์ บินต์ มุอิซซุดเดาละฮ์",
+      "note": "ภรรยาของมุอัยยิดุดเดาละฮ์ (สินสอด 7 แสนดีนาร)",
+      "variantsFound": []
+    },
+    {
+      "id": "badis",
+      "arabic": "باديس بن منصور الصنهاجي",
+      "canonicalThai": "บาดีส อัลมัฆริบี",
+      "note": "ผู้ปกครองราชวงศ์ซีรีในมัฆริบ หลานของบุลลิกีน",
+      "variantsFound": []
+    },
+    {
+      "id": "al-azdi",
+      "arabic": "أبو الفتح الأزدي محمد بن الحسين الموصلي",
+      "canonicalThai": "อัลอัซดี อัลเมาศิลี",
+      "note": "นักหะดีษ-นักวิพากษ์ ผู้ถูกวิจารณ์ เสียชีวิตปี 374 (บ้างว่า 369)",
+      "variantsFound": []
+    },
+    {
+      "id": "ishaq-qarmati",
+      "arabic": "إسحاق القرمطي",
+      "canonicalThai": "อิสหาก อัลก็อรมะฏี",
+      "note": "ผู้นำเกาะรอมิเฏาะฮ์ที่บุกกูฟะฮ์ปี 375",
+      "variantsFound": []
+    },
+    {
+      "id": "jafar-qarmati",
+      "arabic": "جعفر القرمطي",
+      "canonicalThai": "ญะอ์ฟัร อัลก็อรมะฏี",
+      "note": "ผู้นำเกาะรอมิเฏาะฮ์ที่บุกกูฟะฮ์ปี 375",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-ali-b-abi-hurayra",
+      "arabic": "أبو علي بن أبي هريرة الحسن بن الحسين",
+      "canonicalThai": "อะบูอะลี บิน อะบีฮุร็อยเราะฮ์",
+      "note": "อาจารย์สำนักชาฟิอี เสียชีวิตปี 375",
+      "variantsFound": []
+    },
+    {
+      "id": "husaynak",
+      "arabic": "أبو أحمد الحسين بن علي النيسابوري حسينك",
+      "canonicalThai": "หุเซนัก อันนัยสาบูรี",
+      "note": "ศิษย์คนโปรดของอิบนุ คุซัยมะฮ์ ผู้ทรงอิบาดะฮ์ เสียชีวิตปี 375",
+      "variantsFound": []
+    },
+    {
+      "id": "al-daraki",
+      "arabic": "أبو القاسم الداركي عبد العزيز",
+      "canonicalThai": "อะบูอัลกอสิม อัดดาเราะกี",
+      "note": "อิมามสำนักชาฟิอีผู้ยิ่งใหญ่ เสียชีวิตปี 375",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-hamid-al-isfarayini",
+      "arabic": "أبو حامد الإسفراييني",
+      "canonicalThai": "อะบูหามิด อัลอิสฟะรอยีนี",
+      "note": "อิมามสำนักชาฟิอีผู้ยิ่งใหญ่แห่งแบกแดด(ศิษย์อัดดาเราะกี)",
+      "variantsFound": []
+    },
+    {
+      "id": "sharaf-al-dawla",
+      "arabic": "شرف الدولة بن عضد الدولة",
+      "canonicalThai": "ชะรอฟุดเดาละฮ์ บิน อะฎุดุดเดาละฮ์",
+      "note": "ผู้ปกครองบูยิด ปราบน้องเศาะมศอมุดเดาละฮ์ปี 376",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-hamid-al-marwazi",
+      "arabic": "أبو حامد المروزي أحمد بن الحسين ابن الطبري",
+      "canonicalThai": "อะบูหามิด อัลมัรวะซี (อิบนุ อัฏฏ็อบรี)",
+      "note": "นักนิติศาสตร์หะนะฟี หัวหน้าผู้พิพากษาแห่งคุรอซาน เสียชีวิตปี 377",
+      "variantsFound": []
+    },
+    {
+      "id": "ishaq-b-al-muqtadir",
+      "arabic": "إسحاق بن المقتدر بالله",
+      "canonicalThai": "อิสหาก บิน อัลมุกตะดิร",
+      "note": "บุตรของเคาะลีฟะฮ์อัลมุกตะดิร บิดาของเคาะลีฟะฮ์อัลกอดิร เสียชีวิตปี 377",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qadir",
+      "arabic": "القادر بالله أحمد بن إسحاق",
+      "canonicalThai": "อัลกอดิร บิลลาฮ์",
+      "note": "เคาะลีฟะฮ์อับบาซียะฮ์ในอนาคต (บุตรของอิสหาก บิน อัลมุกตะดิร)",
+      "variantsFound": []
+    },
+    {
+      "id": "shaghab",
+      "arabic": "شغب أم المقتدر",
+      "canonicalThai": "ชะฆ็อบ",
+      "note": "มารดาของเคาะลีฟะฮ์อัลมุกตะดิร (ย่าทวดของอัลกอดิร)",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-jinni",
+      "arabic": "عثمان بن جني",
+      "canonicalThai": "อุษมาน บิน ญินนี",
+      "note": "นักไวยากรณ์-นักภาษาผู้ยิ่งใหญ่ ศิษย์ของอะบูอะลี อัลฟาริซี",
+      "variantsFound": []
+    },
+    {
+      "id": "sutayta",
+      "arabic": "ستيتة بنت المحاملي أمة الواحد",
+      "canonicalThai": "สุตัยตะฮ์ บินต์ อัลมะหามิลี",
+      "note": "นักปราชญ์สตรีผู้รอบรู้สำนักชาฟิอีและให้ฟัตวา เสียชีวิตปี 377",
+      "variantsFound": []
+    },
+    {
+      "id": "al-husayn-al-muqri",
+      "arabic": "الحسين بن علي بن ثابت أبو عبد الله المقرئ",
+      "canonicalThai": "อัลหุเซน บิน อะลี บิน ษาบิต อัลมุกรี",
+      "note": "นักอ่านอัลกุรอานตาบอด ผู้แต่งบทกวีกิรออาต เสียชีวิตปี 378",
+      "variantsFound": []
+    },
+    {
+      "id": "al-shatibi",
+      "arabic": "الإمام الشاطبي القاسم بن فيره",
+      "canonicalThai": "อัชชาฏิบี",
+      "note": "อิมามนักอ่านอัลกุรอาน ผู้ประพันธ์บทกวีอัชชาฏิบียะฮ์(รุ่นหลัง)",
+      "variantsFound": []
+    },
+    {
+      "id": "baha-al-dawla",
+      "arabic": "بهاء الدولة أبو نصر بن شرف الدولة",
+      "canonicalThai": "บะฮาอุดเดาละฮ์ อะบูนัศร์",
+      "note": "ผู้ปกครองบูยิดแห่งอิรัก สืบทอดต่อจากชะรอฟุดเดาละฮ์บิดาปี 379",
+      "variantsFound": []
+    },
+    {
+      "id": "ali-b-abd-al-aziz",
+      "arabic": "أبو الحسن علي بن عبد العزيز الرئيس",
+      "canonicalThai": "อะลี บิน อับดิลอะซีซ (อัรรออิส)",
+      "note": "ขุนนางผู้ใหญ่ในราชสำนักเคาะลีฟะฮ์อัฏฏออิอ์",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-mansur-b-salihan",
+      "arabic": "أبو منصور بن صالحان الوزير",
+      "canonicalThai": "อะบูมันศูร บิน ศอลิหาน",
+      "note": "วะซีรของบะฮาอุดเดาละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-murtada",
+      "arabic": "الشريف المرتضى أبو القاسم علي بن الحسين",
+      "canonicalThai": "อัชชะรีฟ อัลมุรตะฎอ",
+      "note": "นักปราชญ์ชีอะฮ์ผู้ยิ่งใหญ่ บุตรของอัลมูซาวี (พี่ของอัรเราะฎี)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-radi-sharif",
+      "arabic": "الشريف الرضي أبو الحسن محمد بن الحسين",
+      "canonicalThai": "อัชชะรีฟ อัรเราะฎี",
+      "note": "กวีและนักปราชญ์ ผู้รวบรวมนะฮ์ญุลบะลาเฆาะฮ์ บุตรของอัลมูซาวี",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-killis",
+      "arabic": "يعقوب بن يوسف ابن كلس",
+      "canonicalThai": "อิบนุ กิลลิส",
+      "note": "วะซีรผู้ยิ่งใหญ่ของอัลอะซีซ ฟาฏิมียะฮ์ เสียชีวิตปี 380",
+      "variantsFound": []
+    },
+    {
+      "id": "sabiq-al-barbari",
+      "arabic": "سابق البربري الشاعر",
+      "canonicalThai": "สาบิก อัลบัรบะรี",
+      "note": "กวีนักพรตยุคต้น (อัลกอดิรชอบขับบทกวีของเขา)",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-muallim",
+      "arabic": "أبو الحسن علي بن محمد بن الكوكبي ابن المعلم",
+      "canonicalThai": "อิบนุ อัลมุอัลลิม",
+      "note": "วะซีรในยุคบะฮาอุดเดาละฮ์ ถูกรัดคอตายปี 382",
+      "variantsFound": []
+    },
+    {
+      "id": "al-ghalib",
+      "arabic": "الغالب بالله أبو الفضل محمد بن القادر",
+      "canonicalThai": "อัลฆอลิบ บิลลาฮ์",
+      "note": "บุตรของอัลกอดิร ตั้งเป็นทายาทปี 382 (แต่ไม่ได้ครอง)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-usayfir",
+      "arabic": "صاحب الأصيفر الأعرابي",
+      "canonicalThai": "เจ้าผู้ครองอัลอุศ็อยฟิร",
+      "note": "ผู้นำอาหรับเร่ร่อนที่คุ้มกันกองหัจญ์ปี 382",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-ahmad-al-askari",
+      "arabic": "أبو أحمد العسكري الحسن بن عبد الله",
+      "canonicalThai": "อะบูอะหมัด อัลอัสกะรี",
+      "note": "นักภาษาผู้ยิ่งใหญ่ เสียชีวิตปี 382 (บ้างว่า 387)",
+      "variantsFound": []
+    },
+    {
+      "id": "sukayna-bint-baha",
+      "arabic": "سكينة بنت بهاء الدولة",
+      "canonicalThai": "สุกัยนะฮ์ บินต์ บะฮาอุดเดาละฮ์",
+      "note": "ภรรยาของเคาะลีฟะฮ์อัลกอดิร เสียชีวิตก่อนเข้าหอ",
+      "variantsFound": []
+    },
+    {
+      "id": "sabur-b-ardashir",
+      "arabic": "أبو نصر سابور بن أردشير الوزير",
+      "canonicalThai": "สาบูร บิน อัรดะชีร",
+      "note": "วะซีรของบะฮาอุดเดาละฮ์ ผู้ก่อตั้งดารุลอิลม์(มัทเราะซะฮ์วะกัฟแห่งแรก)ปี 383",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-shadhan",
+      "arabic": "أبو بكر البزاز ابن شاذان أحمد بن إبراهيم",
+      "canonicalThai": "อิบนุ ชาษาน (อะบูบักร อัลบัซซาซ)",
+      "note": "นักหะดีษผู้เชื่อถือได้ในแบกแดด เสียชีวิตปี 383",
+      "variantsFound": []
+    },
+    {
+      "id": "al-zaynabi",
+      "arabic": "أبو الحسين محمد بن علي الزينبي",
+      "canonicalThai": "อัซซัยนะบี",
+      "note": "นะกีบของพวกอับบาซียะฮ์ ตั้งปี 384",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-hilal-al-sabi",
+      "arabic": "أبو إسحاق إبراهيم بن هلال الصابي",
+      "canonicalThai": "อิบนุ ฮิลาล อัศศอบี",
+      "note": "อาลักษณ์-นักวรรณศิลป์ชาวศอบิอะฮ์ผู้ลือชื่อ เสียชีวิตปี 384",
+      "variantsFound": []
+    },
+    {
+      "id": "al-dabbi-vizier",
+      "arabic": "أبو العباس أحمد بن إبراهيم الضبي الكافي",
+      "canonicalThai": "อะบูอัลอับบาส อัฎฎ็อบบี (อัลกาฟี)",
+      "note": "วะซีรของฟัครุดเดาละฮ์ สืบต่อจากอัศศอหิบ บิน อับบาด ปี 385",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-jabbar",
+      "arabic": "القاضي عبد الجبار الهمذاني",
+      "canonicalThai": "กอฎีอับดุลญับบาร",
+      "note": "นักเทววิทยามุอ์ตะซิละฮ์ผู้ยิ่งใหญ่ ถูกบะฮาอุดเดาละฮ์ปรับไหมปี 385",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hakim-fatimi",
+      "arabic": "الحاكم بأمر الله أبو علي المنصور",
+      "canonicalThai": "อัลหากิม บิอัมริลลาฮ์",
+      "note": "เคาะลีฟะฮ์ฟาฏิมียะฮ์ผู้ขัดแย้ง ขึ้นครองปี 386 ขณะอายุ 11 ปี (พวกหากิมียะฮ์/ดรูซพาดพิงถึง)",
+      "variantsFound": []
+    },
+    {
+      "id": "arjuwan",
+      "arabic": "أرجوان الخادم",
+      "canonicalThai": "อัรญุวาน",
+      "note": "ขันทีผู้บริหารอาณาจักรฟาฏิมียะฮ์ช่วงต้นรัชกาลอัลหากิม",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-ammar",
+      "arabic": "أمين الدولة الحسن بن عمار",
+      "canonicalThai": "อัลหะซัน บิน อัมมาร",
+      "note": "เชคแห่งเผ่ากุตามะฮ์ ผู้บริหารฟาฏิมียะฮ์ช่วงต้นอัลหากิม",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-talib-al-makki",
+      "arabic": "أبو طالب المكي محمد بن علي",
+      "canonicalThai": "อะบูฏอลิบ อัลมักกี",
+      "note": "นักพรตศูฟี ผู้ประพันธ์กูตุลกุลูบ เสียชีวิตปี 386",
+      "variantsFound": []
+    },
+    {
+      "id": "isa-b-nasturus",
+      "arabic": "عيسى بن نسطورس النصراني",
+      "canonicalThai": "อีซา บิน นัสฏูรุส",
+      "note": "วะซีรชาวคริสต์ของอัลอะซีซ ฟาฏิมียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "misha-vizier",
+      "arabic": "ميشا اليهودي",
+      "canonicalThai": "มีชา",
+      "note": "ขุนนางชาวยิวในราชสำนักอัลอะซีซ ฟาฏิมียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "rustam-majd-al-dawla",
+      "arabic": "رستم مجد الدولة بن فخر الدولة",
+      "canonicalThai": "รุสตัม (มัจดุดเดาละฮ์)",
+      "note": "ผู้ปกครองบูยิดแห่งอัรร็อย บุตรของฟัครุดเดาละฮ์ ขึ้นครองปี 387 ขณะอายุ 4 ปี",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-tammam",
+      "arabic": "أبو تمام حبيب بن أوس الطائي",
+      "canonicalThai": "อะบูตัมมาม",
+      "note": "กวีอับบาซียะฮ์ผู้ยิ่งใหญ่ ผู้รวบรวมอัลหะมาสะฮ์ (อ้างถึงบทกวี)",
+      "variantsFound": []
+    },
+    {
+      "id": "badr-b-hasnawayh",
+      "arabic": "بدر بن حسنويه الكردي",
+      "canonicalThai": "บัดร์ บิน หัสนะวัยฮ์",
+      "note": "อะมีรชาวเคิร์ดผู้ใจบุญ (ฉายานาศิรุดดีน วัดเดาละฮ์)",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-waththab",
+      "arabic": "عبيد الله بن جعفر ابن الوثاب",
+      "canonicalThai": "อิบนุ อัลวัษษาบ",
+      "note": "ผู้แอบอ้างเป็นอดีตเคาะลีฟะฮ์อัฏฏออิอ์ในกีลานปี 388",
+      "variantsFound": []
+    },
+    {
+      "id": "muhadhdhab-al-dawla",
+      "arabic": "مهذب الدولة صاحب البطيحة",
+      "canonicalThai": "มุฮัซซับุดเดาละฮ์",
+      "note": "เจ้าผู้ครองเขตลุ่มน้ำอัลบะฏีหะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-bakhtiyar",
+      "arabic": "أبو نصر بن بختيار",
+      "canonicalThai": "อะบูนัศร์ บิน บัคติยาร",
+      "note": "ผู้ก่อกบฏและสังหารเศาะมศอมุดเดาละฮ์ปี 388",
+      "variantsFound": []
+    },
+    {
+      "id": "mahmud-ghaznawi",
+      "arabic": "محمود بن سبكتكين الغزنوي",
+      "canonicalThai": "มะห์มูด บิน สุบุกตะกีน (อัลฆ็อซนะวี)",
+      "note": "สุลต่านผู้ยิ่งใหญ่แห่งฆ็อซนะ ผู้ล้มราชวงศ์ซามานียะฮ์และพิชิตอินเดีย",
+      "variantsFound": []
+    },
+    {
+      "id": "ilek-khan",
+      "arabic": "إيلك خان ملك الترك",
+      "canonicalThai": "อีลัก ข่าน",
+      "note": "กษัตริย์เติร์ก(การาเคาะนิด)แห่งมาวะรออันนะฮ์ร คู่สงครามของมะห์มูด",
+      "variantsFound": []
+    },
+    {
+      "id": "faiq",
+      "arabic": "فائق الخان",
+      "canonicalThai": "ฟาอิก",
+      "note": "ข่านใหญ่ของพวกเติร์ก(ที่เสียชีวิต)",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-jarrah",
+      "arabic": "ابن الجراح أمير الأعراب",
+      "canonicalThai": "อิบนุ อัลญัรรอหฺ",
+      "note": "อะมีรอาหรับเร่ร่อน(เผ่าฏ็อยยิอ์)ที่จับสองชะรีฟเรียกค่าไถ่ปี 389",
+      "variantsFound": []
+    },
+    {
+      "id": "zahir-al-sarakhsi",
+      "arabic": "زاهر بن أحمد السرخسي",
+      "canonicalThai": "ซาฮิร อัสสะรอคซี",
+      "note": "นักอ่าน-นักนิติศาสตร์-นักหะดีษ เชคแห่งคุรอซาน เสียชีวิตปี 389",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-hazim-al-wasiti",
+      "arabic": "أبو حازم محمد بن الحسن الواسطي",
+      "canonicalThai": "อะบูหาซิม อัลวาสิฏี",
+      "note": "กอฎีแห่งวาสิฏ ผู้รับวะศียะฮ์จากอัลกอดิรปี 390",
+      "variantsFound": []
+    },
+    {
+      "id": "sharif-al-alawi-kufi",
+      "arabic": "الشريف أبو الحسن العلوي الكوفي",
+      "canonicalThai": "อัชชะรีฟ อะบูอัลหะซัน อัลอะละวี อัลกูฟี",
+      "note": "หัวหน้าฏอลิบีนผู้มั่งคั่ง ถูกบูยิดปรับไหมหลายครั้ง เสียชีวิตปี 390",
+      "variantsFound": []
+    },
+    {
+      "id": "barjawan",
+      "arabic": "الأستاذ أبو الفتوح برجوان",
+      "canonicalThai": "บัรญะวาน",
+      "note": "ขันทีผู้สำเร็จราชการฟาฏิมียะฮ์ในรัชกาลอัลหากิม ถูกสังหารปี 390",
+      "variantsFound": []
+    },
+    {
+      "id": "raydan",
+      "arabic": "الأمير ريدان",
+      "canonicalThai": "ร็อยดาน",
+      "note": "อะมีรฟาฏิมียะฮ์ ผู้สังหารบัรญะวานตามคำสั่งอัลหากิม",
+      "variantsFound": []
+    },
+    {
+      "id": "husayn-b-jawhar",
+      "arabic": "الحسين بن القائد جوهر",
+      "canonicalThai": "หุเซน บิน เญาฮัร",
+      "note": "ผู้สำเร็จราชการฟาฏิมียะฮ์สืบต่อจากบัรญะวาน บุตรของเญาฮัร อัลกออิด",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mufa-b-zakariyya",
+      "arabic": "المعافى بن زكريا الجريري ابن طرارا",
+      "canonicalThai": "อัลมุอาฟา บิน ซะกะรียา (อิบนุ ฏ็อรอรอ)",
+      "note": "กอฎีนักปราชญ์ผู้รอบรู้สรรพศาสตร์ ผู้ประพันธ์อัลญะลีส วัลอะนีส เสียชีวิตปี 390",
+      "variantsFound": []
+    },
+    {
+      "id": "al-bafi",
+      "arabic": "أبو محمد البافي",
+      "canonicalThai": "อะบูมุหัมมัด อัลบาฟี",
+      "note": "อิมามสำนักชาฟิอี",
+      "variantsFound": []
+    },
+    {
+      "id": "al-wathiqi",
+      "arabic": "عبد الله بن عثمان الواثقي",
+      "canonicalThai": "อัลวาษิกี",
+      "note": "ผู้แอบอ้างว่าได้รับแต่งตั้งเป็นทายาทเคาะลีฟะฮ์ในดินแดนเติร์กปี 391",
+      "variantsFound": []
+    },
+    {
+      "id": "al-muqallad-uqayli",
+      "arabic": "حسام الدولة المقلد بن المسيب العقيلي",
+      "canonicalThai": "หุสามุดเดาละฮ์ อัลมุก็อลลัด อัลอุก็อยลี",
+      "note": "ผู้นำเผ่าอุก็อยล์(ต้นราชวงศ์อุก็อยลิด) ถูกลอบสังหารปี 391",
+      "variantsFound": []
+    },
+    {
+      "id": "qirwash",
+      "arabic": "قرواش بن المقلد العقيلي",
+      "canonicalThai": "กิรวาช",
+      "note": "อะมีรอุก็อยลิดแห่งเมาศิล สืบทอดต่อจากอัลมุก็อลลัดบิดาปี 391",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-hinzaba",
+      "arabic": "جعفر بن الفضل ابن حنزابة الوزير",
+      "canonicalThai": "อิบนุ ฮินซาบะฮ์",
+      "note": "วะซีรของกาฟูรในอียิปต์ ผู้อุปถัมภ์หะดีษ เสียชีวิตปี 391",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qaim",
+      "arabic": "القائم بأمر الله أبو جعفر عبد الله بن القادر",
+      "canonicalThai": "อัลกออิม บิอัมริลลาฮ์ อับดุลลอฮ์ บิน อัลกอดิร",
+      "note": "เคาะลีฟะฮ์อับบาซียะฮ์ในอนาคต กำเนิดปี 391 (บุตรของอัลกอดิร)",
+      "variantsFound": []
+    },
+    {
+      "id": "jaypal",
+      "arabic": "جيبال ملك الهند",
+      "canonicalThai": "ไชยปาล (Jaypal)",
+      "note": "กษัตริย์ฮินดูแห่งอินเดียที่มะห์มูดแห่งฆ็อซนะปราบและจับเป็นเชลยปี 392",
+      "variantsFound": []
+    },
+    {
+      "id": "amid-al-juyush",
+      "arabic": "عميد الجيوش أبو علي بن أستاذ هرمز",
+      "canonicalThai": "อะมีดุลญุยูช",
+      "note": "แม่ทัพ-ผู้บริหารบูยิดในอิรักยุคบะฮาอุดเดาละฮ์ ผู้ปราบฟิตนะฮ์นิกาย",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-mazyad",
+      "arabic": "سند الدولة أبو الحسين علي بن مزيد الأسدي",
+      "canonicalThai": "อะลี บิน มัซยัด (สะนะดุดเดาละฮ์)",
+      "note": "ผู้นำเผ่าอะซัด ต้นราชวงศ์มัซยะดิดแห่งอัลฮิลละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "maymuna-bint-saqula",
+      "arabic": "ميمونة بنت ساقولة الواعظة",
+      "canonicalThai": "ไมมูนะฮ์ บินต์ ซากูลา",
+      "note": "นักเทศนาสตรีผู้ท่องจำอัลกุรอาน เสียชีวิตปี 393",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-husayn-al-raffa",
+      "arabic": "أبو الحسين الرفاء المقرئ",
+      "canonicalThai": "อะบูอัลหุเซน อัรร็อฟฟาอ์",
+      "note": "นักอ่านอัลกุรอานเสียงไพเราะที่ช่วยกองหัจญ์ปี 394",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-dahhaji",
+      "arabic": "أبو عبد الله بن الدحاجي المقرئ",
+      "canonicalThai": "อิบนุ อัดดะหาญี",
+      "note": "นักอ่านอัลกุรอานเสียงไพเราะที่ช่วยกองหัจญ์ปี 394",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-bahlul",
+      "arabic": "أبو بكر بن البهلول المقرئ",
+      "canonicalThai": "อิบนุ อัลบุฮ์ลูล",
+      "note": "นักอ่านอัลกุรอานผู้นำละหมาดตะรอวีหฺในแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "al-malahimi",
+      "arabic": "أبو نصر البخاري الملاحمي",
+      "canonicalThai": "อะบูนัศร์ อัลบุคอรี (อัลมะลาหิมี)",
+      "note": "นักท่องจำหะดีษผู้รายงานเศาะฮีหฺอัลบุคอรี เสียชีวิตปี 395",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-faris",
+      "arabic": "ابن فارس أحمد بن فارس الرازي",
+      "canonicalThai": "อิบนุ ฟาริส",
+      "note": "นักภาษาผู้ยิ่งใหญ่ ผู้ประพันธ์มะกอยีสุลลุเฆาะฮ์/อัลมุจมัล เสียชีวิตปี 395 (บ้างว่า 390)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-badi-al-hamadhani",
+      "arabic": "بديع الزمان الهمذاني",
+      "canonicalThai": "อัลบะดีอ์ อัซซะมาน อัลฮะมะษานี",
+      "note": "นักวรรณศิลป์ ผู้ริเริ่มมะกอมาต ศิษย์ของอิบนุ ฟาริส",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-akfani",
+      "arabic": "أبو محمد بن الأكفاني القاضي",
+      "canonicalThai": "อิบนุ อัลอักฟานี",
+      "note": "กอฎีแห่งแบกแดด ตั้งปี 396",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-sad-al-ismaili",
+      "arabic": "أبو سعد إسماعيل بن أحمد الإسماعيلي",
+      "canonicalThai": "อะบูสะอ์ด อัลอิสมาอีลี",
+      "note": "นักนิติศาสตร์ชาฟิอีแห่งญุรญาน บุตรของอัลอิสมาอีลี เสียชีวิตปี 396",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-manda",
+      "arabic": "أبو عبد الله بن منده محمد بن إسحاق",
+      "canonicalThai": "อิบนุ มันดะฮ์",
+      "note": "นักท่องจำหะดีษผู้ยิ่งใหญ่แห่งอัศฟะฮาน เสียชีวิตปี 396",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-rakwa",
+      "arabic": "أبو ركوة الوليد الأموي",
+      "canonicalThai": "อะบูรักวะฮ์ (อัลวะลีด)",
+      "note": "ผู้อ้างเชื้อสายอุมัยยะฮ์ที่ก่อกบฏต่ออัลหากิมปี 397",
+      "variantsFound": []
+    },
+    {
+      "id": "al-fadl-b-abdallah",
+      "arabic": "الفضل بن عبد الله",
+      "canonicalThai": "อัลฟัฎล์ บิน อับดิลลาฮ์",
+      "note": "แม่ทัพของอะบูรักวะฮ์ที่ทรยศแล้วถูกอัลหากิมสังหารปี 397",
+      "variantsFound": []
+    },
+    {
+      "id": "al-shaykh-al-mufid",
+      "arabic": "أبو عبد الله محمد بن النعمان ابن المعلم الشيخ المفيد",
+      "canonicalThai": "อัชชัยค์ อัลมุฟีด (อิบนุ อัลมุอัลลิม)",
+      "note": "นักเทววิทยา-นักนิติศาสตร์ชีอะฮ์อิมามียะฮ์ผู้ยิ่งใหญ่ในแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-ali-b-thimal",
+      "arabic": "أبو علي بن ثمال نائب الرحبة",
+      "canonicalThai": "อะบูอะลี บิน ษิมาล",
+      "note": "ผู้รักษาเมืองอัรเราะห์บะฮ์ฝ่ายฟาฏิมียะฮ์ ถูกสังหารปี 399",
+      "variantsFound": []
+    },
+    {
+      "id": "isa-b-khallat",
+      "arabic": "عيسى بن خلاط العقيلي",
+      "canonicalThai": "อีซา บิน ค็อลลาฏ อัลอุก็อยลี",
+      "note": "ผู้ยึดเมืองอัรเราะห์บะฮ์ปี 399",
+      "variantsFound": []
+    },
+    {
+      "id": "abbas-b-mirdas",
+      "arabic": "عباس بن مرداس صاحب حلب",
+      "canonicalThai": "อับบาส บิน มิรดาส",
+      "note": "เจ้าผู้ครองหะลับ(ราชวงศ์มิรดาสิด)ปี 399",
+      "variantsFound": []
+    },
+    {
+      "id": "ali-b-yunus",
+      "arabic": "علي بن يونس الصدفي",
+      "canonicalThai": "อะลี บิน ยูนุส อัศเศาะดะฟี",
+      "note": "นักดาราศาสตร์ ผู้ประพันธ์อัซซีจญ์ อัลหากิมี เสียชีวิตปี 399",
+      "variantsFound": []
+    },
+    {
+      "id": "umm-al-qadir",
+      "arabic": "أم الخليفة القادر بالله",
+      "canonicalThai": "มารดาของอัลกอดิร บิลลาฮ์",
+      "note": "สตรีผู้ทรงคุณธรรม มารดาของเคาะลีฟะฮ์อัลกอดิร เสียชีวิตปี 399",
+      "variantsFound": []
+    },
+    {
+      "id": "al-muayyad-hisham",
+      "arabic": "المؤيد هشام بن الحكم الأموي",
+      "canonicalThai": "อัลมุอัยยิด ฮิชาม บิน อัลหะกัม",
+      "note": "เคาะลีฟะฮ์อุมัยยะฮ์แห่งอันดะลุส(ฮิชามที่ 2) กลับสู่ราชบัลลังก์ปี 400",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hajjaj-b-hurmuz",
+      "arabic": "الحجاج بن هرمز أبو جعفر",
+      "canonicalThai": "อัลหัจญาจ บิน ฮุรมุซ",
+      "note": "แม่ทัพ-ตัวแทนบูยิดเหนืออิรัก เสียชีวิตปี 400 อายุ 105 ปี",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-ghalib-fakhr-al-mulk",
+      "arabic": "أبو غالب بن خلف فخر الملك",
+      "canonicalThai": "อะบูฆอลิบ ฟัครุลมุลก์",
+      "note": "วะซีรของบะฮาอุดเดาละฮ์ ฉายาฟัครุลมุลก์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-rashid-alawi",
+      "arabic": "أبو الفتح الحسن بن جعفر العلوي الراشد بالله",
+      "canonicalThai": "อัรรอชิด บิลลาฮ์ (อัลหะซัน บิน ญะอ์ฟัร)",
+      "note": "อะละวีที่ก่อกบฏอ้างเคาะลีฟะฮ์ปี 401",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-masud-al-dimashqi",
+      "arabic": "أبو مسعود الدمشقي إبراهيم بن محمد",
+      "canonicalThai": "อะบูมัสอูด อัดดิมัชกี",
+      "note": "นักท่องจำหะดีษ ผู้ประพันธ์อัลอัฏรอฟบนเศาะฮีหัยน์ เสียชีวิตปี 401",
+      "variantsFound": []
+    },
+    {
+      "id": "al-baqillani",
+      "arabic": "القاضي أبو بكر الباقلاني",
+      "canonicalThai": "อัลกอฎี อะบูบักร์ อัลบากิลลานี",
+      "note": "นักวิชาการอะชาอิเราะฮ์ ผู้ประพันธ์กัชฟุลอัสรอรหักล้างฟาฏิมียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "hasan-al-nubakhti",
+      "arabic": "الحسن بن الحسين النوبختي أبو محمد",
+      "canonicalThai": "อัลหะซัน อันนูบัคตี อะบูมุหัมมัด",
+      "note": "อาลักษณ์ชีอะฮ์-มุอ์ตะซิลี เสียชีวิตปี 402",
+      "variantsFound": []
+    },
+    {
+      "id": "uthman-al-baqillani",
+      "arabic": "عثمان بن عيسى أبو عمرو الباقلاني",
+      "canonicalThai": "อุษมาน บิน อีซา อัลบากิลลานี (นักพรต)",
+      "note": "นักพรตผู้ยิ่งใหญ่ เลี้ยงชีพด้วยการสานเสื่อ เสียชีวิตปี 402",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-najjar-nahwi",
+      "arabic": "محمد بن جعفر ابن النجار النحوي",
+      "canonicalThai": "อิบนุ อันนัจญาร อันนะฮ์วี",
+      "note": "นักไวยากรณ์ชาวกูฟะฮ์ เสียชีวิตปี 402",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-fulayta",
+      "arabic": "أبو فليتة أمير بني خفاجة",
+      "canonicalThai": "อะบูฟุลัยตะฮ์ (อะมีรบนูเคาะฟาญะฮ์)",
+      "note": "อะมีรบนูเคาะฟาญะฮ์ที่ปล้น/วางยาผู้แสวงบุญ ถูกฟัครุลมุลก์ประหารปี 403",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-marwan-kurdi",
+      "arabic": "أبو نصر بن مروان الكردي نصير الدولة",
+      "canonicalThai": "นะศีรุดเดาละฮ์ อะบูนัศร์ บิน มัรวาน (ชาวเคิร์ด)",
+      "note": "ผู้ปกครองอามิด/มัยยาฟาริกีน/ดิยารบักร์ ฉายานะศีรุดเดาละฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "sultan-al-dawla",
+      "arabic": "سلطان الدولة أبو شجاع بن بهاء الدولة",
+      "canonicalThai": "สุลฏอนุดเดาละฮ์ อะบูชุญาอ์",
+      "note": "บุตรบะฮาอุดเดาละฮ์ ขึ้นปกครองบุวัยฮ์ปี 403",
+      "variantsFound": []
+    },
+    {
+      "id": "toghan-khan",
+      "arabic": "طغان خان",
+      "canonicalThai": "เฏาะฆ็อน ข่าน",
+      "note": "กษัตริย์เติร์ก น้องอีลัก ข่าน ขึ้นปกครองปี 403",
+      "variantsFound": []
+    },
+    {
+      "id": "qabus-b-wushmgir",
+      "arabic": "قابوس بن وشمكير شمس المعالي",
+      "canonicalThai": "กาบูส บิน วัชมะกีร (ชัมสุลมะอาลี)",
+      "note": "เจ้าเมืองญุรญาน/ฏ็อบริสตาน นักปราชญ์-กวี ถูกปลงพระชนม์ปี 403",
+      "variantsFound": []
+    },
+    {
+      "id": "manuchihr-falak",
+      "arabic": "منوجهر فلك المعالي",
+      "canonicalThai": "มะนูเชะฮ์ร (ฟะลักุลมะอาลี)",
+      "note": "บุตรกอบูส ขึ้นปกครองแทน ฉายาฟะลักุลมะอาลี",
+      "variantsFound": []
+    },
+    {
+      "id": "sulayman-al-mustain",
+      "arabic": "سليمان بن الحكم المستعين بالله الأموي",
+      "canonicalThai": "สุลัยมาน บิน อัลหะกัม อัลมุสตะอีน (อุมัยยะฮ์อันดะลุส)",
+      "note": "เคาะลีฟะฮ์อุมัยยะฮ์แห่งอันดะลุส บัยอะฮ์ที่กุรฏุบะฮ์ปี 403",
+      "variantsFound": []
+    },
+    {
+      "id": "al-batti",
+      "arabic": "أحمد بن علي أبو الحسن البتي",
+      "canonicalThai": "อะหมัด บิน อะลี อัลบัตตี",
+      "note": "อาลักษณ์ของอัลกอดิร มีไหวพริบ เสียชีวิตปี 403",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-hamid-hanbali",
+      "arabic": "الحسن بن حامد الوراق الحنبلي",
+      "canonicalThai": "อิบนุ ฮามิด อัลหัมบะลี (อัลหะซัน บิน ฮามิด)",
+      "note": "ฟะกีฮ์หัมบะลีแห่งยุค อาจารย์กอฎีอะบูยะอ์ลา ตายตอนหัจญ์ปี 403",
+      "variantsFound": []
+    },
+    {
+      "id": "al-halimi",
+      "arabic": "الحسين بن الحسن الحليمي",
+      "canonicalThai": "อัลหุสัยน์ อัลหะลีมี",
+      "note": "เชคชาฟิอี ผู้ประพันธ์อัลมินฮาจ กอฎีบุคอรอ เสียชีวิตปี 403",
+      "variantsFound": []
+    },
+    {
+      "id": "al-khuwarizmi-hanafi",
+      "arabic": "محمد بن موسى أبو بكر الخوارزمي",
+      "canonicalThai": "อะบูบักร์ อัลคุวาริซมี (เชคหะนะฟี)",
+      "note": "ผู้นำหะนะฟียะฮ์ที่แบกแดด ตามแนวสะลัฟ เสียชีวิตปี 403",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qabisi",
+      "arabic": "علي بن محمد المعافري القابسي",
+      "canonicalThai": "อัลหาฟิซ อัลกอบีซี",
+      "note": "นักท่องจำหะดีษ ผู้ประพันธ์อัลมุลัคค็อศ เสียชีวิตปี 403",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-faradi",
+      "arabic": "أبو الوليد عبد الله بن محمد الأزدي ابن الفرضي",
+      "canonicalThai": "อิบนุ อัลฟะเราะฎี (อะบูอัลวะลีด อัลอัซดี)",
+      "note": "กอฎีบะลันซิยะฮ์ นักประวัติศาสตร์ พลีชีพด้วยน้ำมือเบอร์เบอร์ปี 403",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-thimal",
+      "arabic": "محمد بن ثمال الخفاجي",
+      "canonicalThai": "มุหัมมัด บิน ษิมาล (เคาะฟาญะฮ์)",
+      "note": "หัวหน้าบนูเคาะฟาญะฮ์ ถูกอิบนุ มัซยัดจับเป็นเชลยปี 404",
+      "variantsFound": []
+    },
+    {
+      "id": "al-aqsasi",
+      "arabic": "أبو الحسن محمد بن الحسن الأقساسي",
+      "canonicalThai": "อะบูอัลหะซัน อัลอักศอศี",
+      "note": "ผู้นำกองหัจญ์ปี 404",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-baghdadi-zahid",
+      "arabic": "الحسين بن أحمد ابن البغدادي",
+      "canonicalThai": "อิบนุ อัลบัฆดาดี (อัลหุสัยน์ บิน อะหมัด)",
+      "note": "นักพรตผู้บำเพ็ญ เสียชีวิตปี 404",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mujahidi-muqri",
+      "arabic": "الحسين بن عثمان المقرئ الضرير المجاهدي",
+      "canonicalThai": "อัลหุสัยน์ อัลมุญาฮิดี (นักอ่านตาบอด)",
+      "note": "ศิษย์คนสุดท้ายของอิบนุ มุญาฮิด อายุเกินร้อยปี เสียชีวิตปี 404",
+      "variantsFound": []
+    },
+    {
+      "id": "al-istakhri-mutazili",
+      "arabic": "علي بن سعيد الإصطخري",
+      "canonicalThai": "อะลี บิน สะอีด อัลอิศเฏาะครี",
+      "note": "เชคมุอ์ตะซิลี ประพันธ์อัรร็อดด์ อะลัลบาฏินียะฮ์ถวายอัลกอดิร เสียชีวิตปี 404",
+      "variantsFound": []
+    },
+    {
+      "id": "malik-al-fariqi",
+      "arabic": "مالك بن سعيد الفارقي قاضي القضاة بمصر",
+      "canonicalThai": "มาลิก บิน สะอีด อัลฟาริกี (กอฎีอียิปต์)",
+      "note": "กอฎีอัลกุฎอตแห่งอียิปต์สมัยอัลหากิม ปี 405",
+      "variantsFound": []
+    },
+    {
+      "id": "bakr-b-shadhan",
+      "arabic": "بكر بن شاذان أبو القاسم المقرئ الواعظ",
+      "canonicalThai": "บักร์ บิน ชาษาน",
+      "note": "นักอ่าน/นักเทศนา นักพรต เสียชีวิตปี 405",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-hamakan",
+      "arabic": "الحسن بن الحسين بن حمكان الهمذاني",
+      "canonicalThai": "อิบนุ ฮะมะกาน อัลฮะมะษานี",
+      "note": "ฟะกีฮ์ชาฟิอีที่แบกแดด อ่อนในด้านหะดีษ เสียชีวิตปี 405",
+      "variantsFound": []
+    },
+    {
+      "id": "al-idrisi-hafiz",
+      "arabic": "عبد الرحمن بن محمد الإستراباذي الإدريسي",
+      "canonicalThai": "อัลอิดรีซี (นักประวัติศาสตร์ซะมัรกอนด์)",
+      "note": "นักท่องจำหะดีษ ประพันธ์ตารีคซะมัรกอนด์ เสียชีวิตปี 405",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-nubata-sadi",
+      "arabic": "أبو نصر عبد العزيز بن نباتة السعدي",
+      "canonicalThai": "อิบนุ นุบาตะฮ์ อัสสะอ์ดี (กวี)",
+      "note": "กวีเลื่องชื่อ สดุดีสัยฟุดเดาละฮ์ เสียชีวิตปี 405",
+      "variantsFound": []
+    },
+    {
+      "id": "al-dinawari-sufyani",
+      "arabic": "عبد الغفار بن عبد الرحمن الدينوري السفياني",
+      "canonicalThai": "อับดุลฆ็อฟฟาร อัดดีนะวะรี อัสสุฟยานี",
+      "note": "ฟะกีฮ์คนสุดท้ายตามแนวทางสุฟยาน อัษเษารีในแบกแดด เสียชีวิตปี 405",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-kajj",
+      "arabic": "يوسف بن أحمد بن كج أبو القاسم",
+      "canonicalThai": "อิบนุ กัจญ์ (ยูซุฟ บิน อะหมัด)",
+      "note": "อิมามชาฟิอี กอฎีอัดดีนะวัร ถูกพวกอัยยารูสังหารปี 405",
+      "variantsFound": []
+    },
+    {
+      "id": "al-faradi-muqri",
+      "arabic": "عبيد الله بن محمد أبو أحمد الفرضي المقرئ",
+      "canonicalThai": "อุบัยดุลลอฮ์ อัลฟะเราะฎี อัลมุกรี",
+      "note": "นักอ่านอัลกุรอาน อิมามผู้เคร่งครัด เสียชีวิตปี 406",
+      "variantsFound": []
+    },
+    {
+      "id": "al-muizz-b-badis",
+      "arabic": "المعز بن باديس الصنهاجي",
+      "canonicalThai": "อัลมุอิซซ์ บิน บาดีส (อัซซีรี)",
+      "note": "ผู้ปกครองอิฟรีกียะฮ์(ราชวงศ์ซีรี) สืบจากบิดาบาดีสปี 406",
+      "variantsFound": []
+    },
+    {
+      "id": "ali-b-hammud",
+      "arabic": "علي بن حمود بن أبي العيش العلوي المتوكل",
+      "canonicalThai": "อะลี บิน หัมมูด อัลมุตะวักกิล (อะละวีอันดะลุส)",
+      "note": "ผู้ก่อตั้งราชวงศ์หัมมูด(อะละวี)ที่อันดะลุส ยึดกุรฏุบะฮ์ปี 407",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qasim-b-hammud",
+      "arabic": "القاسم بن حمود المأمون",
+      "canonicalThai": "อัลกอสิม บิน หัมมูด อัลมะอ์มูน",
+      "note": "น้องอะลี บิน หัมมูด ขึ้นปกครองอันดะลุสต่อปี 407",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-tashfin",
+      "arabic": "علي بن يوسف بن تاشفين المرابطي",
+      "canonicalThai": "อะลี บิน ยูซุฟ บิน ตาชฟีน (อัลมุรอบิฏีน)",
+      "note": "อะมีรุลมุสลิมีนราชวงศ์มุรอบิฏีน (อ้างถึงในสายผู้ครองอันดะลุสภายหลัง)",
+      "variantsFound": []
+    },
+    {
+      "id": "mamun-khwarazmshah",
+      "arabic": "مأمون بن مأمون خوارزم شاه",
+      "canonicalThai": "มะอ์มูน บิน มะอ์มูน เคาะวาริซม์ชาฮ์",
+      "note": "เคาะวาริซม์ชาฮ์ ก่อนมะห์มูดยึดเคาะวาริซม์ปี 407",
+      "variantsFound": []
+    },
+    {
+      "id": "al-ramahurmuzi-vizier",
+      "arabic": "أبو الحسن علي بن الفضل الرامهرمزي",
+      "canonicalThai": "อะลี บิน อัลฟัฎล์ อัรรอมะฮุรมุซี (วะซีร)",
+      "note": "วะซีรของสุลฏอนุดเดาละฮ์ แทนฟัครุลมุลก์ปี 407",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-dust-bazzaz",
+      "arabic": "أحمد بن محمد بن دوست البزاز",
+      "canonicalThai": "อิบนุ ดูสต์ อัลบัซซาซ",
+      "note": "นักท่องจำหะดีษ ฟะกีฮ์สายมาลิก เสียชีวิตปี 407",
+      "variantsFound": []
+    },
+    {
+      "id": "sharaf-al-dawla-arslan",
+      "arabic": "أبو المظفر بن أرسلان خان شرف الدولة",
+      "canonicalThai": "อะบูอัลมุซ็อฟฟัร บิน อัรสลาน ชะร็อฟุดเดาละฮ์",
+      "note": "ผู้ครองมาวะรออันนะฮ์ร(เกาะรอเคาะนียะฮ์) สืบจากเฏาะฆ็อน ข่านปี 408",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-muhadhdhab-al-dawla",
+      "arabic": "أبو الحسين أحمد بن مهذب الدولة",
+      "canonicalThai": "อะหมัด บิน มุฮัซซะบุดเดาละฮ์",
+      "note": "ผู้ครองอัลบะฏออิห์สืบจากบิดา ถูกลูกพี่ลูกน้องสังหารปี 408",
+      "variantsFound": []
+    },
+    {
+      "id": "dubays-b-mazyad",
+      "arabic": "نور الدولة دبيس بن علي بن مزيد",
+      "canonicalThai": "ดุบัยส์ บิน มัซยัด นูรุดเดาละฮ์",
+      "note": "อะมีรบนูมัซยัด(มัซยะดียะฮ์) ขึ้นครองหลังบิดาปี 408",
+      "variantsFound": []
+    },
+    {
+      "id": "shabashi-al-hajib",
+      "arabic": "الحاجب الكبير شباشي أبو نصر السعيد",
+      "canonicalThai": "ชะบาชี อัลหาญิบ (อัสสะอีด)",
+      "note": "มหาดเล็กผู้ใหญ่ ใจบุญ วะกัฟโรงพยาบาล/สะพาน เสียชีวิตปี 408",
+      "variantsFound": []
+    },
+    {
+      "id": "raja-al-ansinawi",
+      "arabic": "رجاء بن عيسى أبو العباس الأنصناوي",
+      "canonicalThai": "เราะญาอ์ อัลอันศินาวี",
+      "note": "ฟะกีฮ์สายมาลิกีจากอันศินา(อียิปต์) เสียชีวิตปี 409",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-abi-allan",
+      "arabic": "عبد الله بن محمد بن أبي علان",
+      "canonicalThai": "อิบนุ อะบีอัลลาน (กอฎีอะฮ์วาซ)",
+      "note": "กอฎีอะฮ์วาซ เชคมุอ์ตะซิลี ประพันธ์เรื่องมุอ์ญิซาตนบี 1000 ข้อ เสียชีวิตปี 409",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-ghani-al-azdi",
+      "arabic": "عبد الغني بن سعيد الأزدي المصري",
+      "canonicalThai": "อับดุลเฆาะนี อัลอัซดี อัลมิศรี (อัลหาฟิซ)",
+      "note": "นักท่องจำหะดีษผู้ยิ่งใหญ่แห่งอียิปต์ ประพันธ์เรื่องข้อพลั้งของอัลหากิม เสียชีวิตปี 409",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-al-qadir",
+      "arabic": "محمد بن القادر بالله أبو الفضل الغالب بالله",
+      "canonicalThai": "มุหัมมัด บิน อัลกอดิร (อัลฆอลิบ บิลลาฮ์)",
+      "note": "รัชทายาทของอัลกอดิร เสียชีวิตก่อนได้ครองปี 409",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-basri-tarsusi",
+      "arabic": "محمد بن إبراهيم أبو الفتح البزاز الطرسوسي",
+      "canonicalThai": "อิบนุ อัลบัศรี อัฏฏ็อรสูซี",
+      "note": "นักหะดีษ ผู้เชื่อถือได้ เสียชีวิตปี 409",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-fawaris-qiwam",
+      "arabic": "الملك أبو الفوارس قوام الدولة",
+      "canonicalThai": "อะบูอัลฟะวาริส เกาะวามุดเดาละฮ์",
+      "note": "ผู้ครองกัรมาน(บุวัยฮ์) แต่งตั้งปี 410",
+      "variantsFound": []
+    },
+    {
+      "id": "al-usayfir-muntafiqi",
+      "arabic": "الأصيفر المنتفقي",
+      "canonicalThai": "อัลอุศัยฟิร อัลมุนตะฟิกี",
+      "note": "ผู้คุ้มกันกองผู้แสวงบุญ เสียชีวิตปี 410",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-mardawayh",
+      "arabic": "أحمد بن موسى ابن مردويه أبو بكر الأصبهاني",
+      "canonicalThai": "อิบนุ มัรดะวัยฮ์ อัลอัศบะฮานี",
+      "note": "นักท่องจำหะดีษผู้ยิ่งใหญ่แห่งอัศบะฮาน เสียชีวิตปี 410",
+      "variantsFound": []
+    },
+    {
+      "id": "hibat-allah-b-salama",
+      "arabic": "هبة الله بن سلامة أبو القاسم الضرير المفسر",
+      "canonicalThai": "ฮิบะตุลลอฮ์ บิน สะลามะฮ์ (นักอรรถาธิบายตาบอด)",
+      "note": "นักอ่าน/มุฟัสสิรตาบอด ผู้แม่นยำตัฟซีร เสียชีวิตปี 410",
+      "variantsFound": []
+    },
+    {
+      "id": "al-zahir-fatimi",
+      "arabic": "الظاهر لإعزاز دين الله علي بن الحاكم",
+      "canonicalThai": "อัฎฎอฮิร ลิอิอ์ซาซ ดีนิลลาฮ์ (ฟาฏิมียะฮ์)",
+      "note": "บุตรอัลหากิม ขึ้นครองฟาฏิมียะฮ์ปี 411",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-dawwas",
+      "arabic": "ابن دواس الأمير",
+      "canonicalThai": "อิบนุ ดะวาส (อะมีร)",
+      "note": "อะมีรที่ร่วมแผนสังหารอัลหากิม ภายหลังถูกกำจัดปี 411",
+      "variantsFound": []
+    },
+    {
+      "id": "al-simnani-qadi",
+      "arabic": "أبو جعفر أحمد بن محمد السمناني",
+      "canonicalThai": "อะบูญะอ์ฟัร อะหมัด บิน มุหัมมัด อัสสิมนานี",
+      "note": "กอฎีดูแลหิสบะฮ์/มรดกที่แบกแดด ปี 412",
+      "variantsFound": []
+    },
+    {
+      "id": "al-nasihi-qadi",
+      "arabic": "أبو محمد الناصحي",
+      "canonicalThai": "อะบูมุหัมมัด อันนาศิหี (กอฎี)",
+      "note": "อะมีรหัจญ์ที่มะห์มูดส่งไปฟื้นเส้นทาง ปี 412",
+      "variantsFound": []
+    },
+    {
+      "id": "jammaz-b-udayy",
+      "arabic": "جماز بن عدي",
+      "canonicalThai": "ญัมมาซ บิน อุดัยย์",
+      "note": "หัวหน้าอาหรับเร่ร่อนที่ปล้นผู้แสวงบุญ ถูกสังหารปี 412",
+      "variantsFound": []
+    },
+    {
+      "id": "al-malini-sufi",
+      "arabic": "أحمد بن محمد أبو سعد الماليني الصوفي",
+      "canonicalThai": "อะบูสะอ์ด อัลมาลีนี อัศศูฟี",
+      "note": "นักท่องจำหะดีษ-ศูฟี เสียชีวิตที่อียิปต์ปี 412",
+      "variantsFound": []
+    },
+    {
+      "id": "al-istarabadhi-qadi",
+      "arabic": "الحسن بن الحسين الإستراباذي القاضي",
+      "canonicalThai": "อัลหะซัน อัลอิสตะรอบาซี (กอฎี)",
+      "note": "ผู้ใหญ่สำนักชาฟิอี เสียชีวิตปี 412",
+      "variantsFound": []
+    },
+    {
+      "id": "dhu-al-sadatayn-vizier",
+      "arabic": "الحسن بن منصور ذو السعادتين الوزير",
+      "canonicalThai": "อัลหะซัน บิน มันศูร ซุสสะอาดะตัยน์",
+      "note": "วะซีรที่แบกแดด ถูกสังหารปี 412",
+      "variantsFound": []
+    },
+    {
+      "id": "al-ghazzal",
+      "arabic": "الحسين بن عمر أبو عبد الله الغزال",
+      "canonicalThai": "อัลหุสัยน์ บิน อุมัร อัลฆ็อซซาล",
+      "note": "เชคนักหะดีษ คนดี เสียชีวิตปี 412",
+      "variantsFound": []
+    },
+    {
+      "id": "al-anbari-poet",
+      "arabic": "محمد بن عمر أبو بكر العنبري",
+      "canonicalThai": "มุหัมมัด บิน อุมัร อัลอันบารี (กวี)",
+      "note": "นักอักษรศาสตร์-กวี เคยเป็นศูฟีแล้วออก เสียชีวิตปี 412",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-rizqawayh",
+      "arabic": "محمد بن أحمد ابن رزقويه البزاز",
+      "canonicalThai": "อิบนุ ริซเกาะวัยฮ์",
+      "note": "นักหะดีษผู้เคร่งครัด ไม่รับสินจ้างจากอะมีร เสียชีวิตปี 412",
+      "variantsFound": []
+    },
+    {
+      "id": "al-daqqaq-naysaburi",
+      "arabic": "أبو علي الحسن بن علي الدقاق النيسابوري",
+      "canonicalThai": "อะบูอะลี อัดดักกอก อันนัยซาบูรี",
+      "note": "นักเทศนา-ศูฟีแห่งนัยซาบูร เสียชีวิตปี 412",
+      "variantsFound": []
+    },
+    {
+      "id": "sari-al-dila",
+      "arabic": "صريع الدلاء علي بن عبد الواحد",
+      "canonicalThai": "ศ็อรีอุดดิลาอ์ (อะลี บิน อับดุลวาหิด กวี)",
+      "note": "ฟะกีฮ์-กวีตลกขบขัน(มาญิน)แห่งแบกแดด เสียชีวิตที่อียิปต์ปี 412",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-bawwab",
+      "arabic": "علي بن هلال ابن البواب الكاتب",
+      "canonicalThai": "อิบนุ อัลเบาวาบ (อะลี บิน ฮิลาล)",
+      "note": "นักเขียนอักษรผู้ยิ่งใหญ่ ผู้พัฒนาลายมือแบบฉบับ เสียชีวิตปี 413",
+      "variantsFound": []
+    },
+    {
+      "id": "al-sukkari-poet",
+      "arabic": "علي بن عيسى الفارسي السكري الشاعر",
+      "canonicalThai": "อัสสุกกะรี (อะลี บิน อีซา กวี)",
+      "note": "กวีผู้สดุดีเศาะฮาบะฮ์ ตำหนิเราะวาฟิฎ คบหาอัลบากิลลานี เสียชีวิตปี 413",
+      "variantsFound": []
+    },
+    {
+      "id": "al-atiqi",
+      "arabic": "محمد بن أحمد أبو جعفر العتيقي",
+      "canonicalThai": "อัลอะตีกี (มุหัมมัด บิน อะหมัด)",
+      "note": "นักหะดีษ พำนักเฏาะรอซูส เสียชีวิตปี 413",
+      "variantsFound": []
+    },
+    {
+      "id": "al-rukhaji-vizier",
+      "arabic": "مؤيد الملك أبو علي الحسن الرخجي",
+      "canonicalThai": "อัลหะซัน อัรรุเคาะญี (มุอัยยิดุลมุลก์)",
+      "note": "วะซีรที่สร้างมาริสตานที่วาสิฏ ปี 413",
+      "variantsFound": []
+    },
+    {
+      "id": "sharaf-al-dawla-buwayhi",
+      "arabic": "الملك شرف الدولة",
+      "canonicalThai": "อัลมะลิก ชะร็อฟุดเดาละฮ์ (เจ้าผู้ครองบุวัยฮ์)",
+      "note": "เจ้าผู้ครองที่มาเข้าเฝ้าเคาะลีฟะฮ์ที่แบกแดด ปี 414",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-sahlan-vizier",
+      "arabic": "الحسن بن الفضل بن سهلان أبو محمد الرامهرمزي",
+      "canonicalThai": "อัลหะซัน บิน อัลฟัฎล์ บิน สะฮ์ลาน (วะซีร)",
+      "note": "วะซีรของสุลฏอนุดเดาละฮ์ สร้างกำแพงอัลหาอิรที่กัรบะลาอ์ ถูกสังหารปี 414",
+      "variantsFound": []
+    },
+    {
+      "id": "al-kashfali",
+      "arabic": "الحسن بن محمد الكشفلي الطبري",
+      "canonicalThai": "อัลกัชฟะลี อัฏฏ็อบรี",
+      "note": "ฟะกีฮ์ชาฟิอี สอนต่อจากอะบูหามิด อัลอิสฟะรอยีนี เสียชีวิตปี 414",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-jahdam-sufi",
+      "arabic": "علي بن عبد الله بن جهضم الصوفي المكي",
+      "canonicalThai": "อิบนุ ญะฮ์ฎ็อม อัศศูฟี",
+      "note": "เชคศูฟีที่มักกะฮ์ ผู้ประพันธ์บะฮ์ญะตุลอัสรอร ถูกกล่าวหาว่ากุหะดีษเราะฆออิบ เสียชีวิตปี 414",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qasim-al-hashimi",
+      "arabic": "القاسم بن جعفر أبو عمر الهاشمي البصري",
+      "canonicalThai": "อัลกอสิม อัลฮาชิมี (กอฎีบัศเราะฮ์)",
+      "note": "กอฎีบัศเราะฮ์ ผู้รายงานสุนันอะบีดาวูดจากอัลลุอ์ลุอี เสียชีวิตปี 414",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-sumayka",
+      "arabic": "محمد بن أحمد أبو الفرج ابن سميكة",
+      "canonicalThai": "อิบนุ สุมัยกะฮ์",
+      "note": "กอฎีชาฟิอี ผู้เชื่อถือได้ เสียชีวิตปี 414",
+      "variantsFound": []
+    },
+    {
+      "id": "al-nasafi-hanafi",
+      "arabic": "محمد بن أحمد أبو جعفر النسفي",
+      "canonicalThai": "อะบูญะอ์ฟัร อันนะสะฟี (หะนะฟี)",
+      "note": "ผู้รู้หะนะฟียะฮ์ ชำนาญคิลาฟ/ญะดัล ถือสันโดษ เสียชีวิตปี 414",
+      "variantsFound": []
+    },
+    {
+      "id": "al-haffar",
+      "arabic": "هلال بن محمد أبو الفتح الحفار",
+      "canonicalThai": "ฮิลาล อัลหัฟฟาร",
+      "note": "นักหะดีษ เสียชีวิตปี 414 ในวัย 92 ปี",
+      "variantsFound": []
+    },
+    {
+      "id": "al-maghribi-vizier",
+      "arabic": "الوزير أبو القاسم المغربي",
+      "canonicalThai": "อัลวะซีร อัลมัฆริบี",
+      "note": "วะซีรในยุคชะร็อฟุดเดาละฮ์ บังคับการต่อสัตยาบัน ปี 415",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-muslima-muaddal",
+      "arabic": "أحمد بن محمود أبو الفرج ابن المسلمة",
+      "canonicalThai": "อิบนุ อัลมุสลิมะฮ์ อัลมุอัดดัล",
+      "note": "นักหะดีษผู้เชื่อถือได้ ถือศีลอดตลอดปี เสียชีวิตปี 415",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mahamili-faqih",
+      "arabic": "أحمد بن محمد المحاملي الفقيه الشافعي",
+      "canonicalThai": "อะหมัด บิน มุหัมมัด อัลมะหามิลี (ฟะกีฮ์ชาฟิอี)",
+      "note": "ฟะกีฮ์ชาฟิอี ศิษย์อะบูหามิด ผู้ประพันธ์อัลลุบาบ/อัลมุกนิอ์ เสียชีวิตปี 415",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-naqib",
+      "arabic": "عبيد الله بن عبد الله ابن النقيب الخفاف",
+      "canonicalThai": "อิบนุ อันนะกีบ อัลค็อฟฟาฟ",
+      "note": "อิมามแห่งซุนนะฮ์ อายุ 110 ปี เสียชีวิตปี 415",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-tawidh",
+      "arabic": "عمر بن عبد الله ابن تعويذ أبو حفص الدلال",
+      "canonicalThai": "อิบนุ ตะอ์วีซ อัดดัลลาล",
+      "note": "ผู้รายงานบทกวีอัชชิบลี เสียชีวิตปี 415",
+      "variantsFound": []
+    },
+    {
+      "id": "jalal-al-dawla",
+      "arabic": "جلال الدولة أبو طاهر بن بهاء الدولة",
+      "canonicalThai": "ญะลาลุดเดาละฮ์ อะบูฏอฮิร",
+      "note": "เจ้าผู้ครองบุวัยฮ์ที่แบกแดด สืบจากชะร็อฟุดเดาละฮ์ปี 416",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-kalijar",
+      "arabic": "أبو كاليجار بن سلطان الدولة",
+      "canonicalThai": "อะบูกาลีญาร",
+      "note": "รัชทายาทบุวัยฮ์ของสุลฏอนุดเดาละฮ์ อ่านคุฏบะฮ์ปี 416",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-makula-vizier",
+      "arabic": "أبو سعد بن ماكولا شرف الملك",
+      "canonicalThai": "อิบนุ มากูลา (ชะร็อฟุลมุลก์)",
+      "note": "วะซีรของญะลาลุดเดาละฮ์ ผู้แรกที่ได้ฉายามากมาย ปี 416",
+      "variantsFound": []
+    },
+    {
+      "id": "al-kharkushi",
+      "arabic": "عثمان النيسابوري الخركوشي الواعظ",
+      "canonicalThai": "อุษมาน อัลค็อรกูชี",
+      "note": "นักเทศนาแห่งนัยซาบูร อาบน้ำศพหมื่นคนในโรคระบาด เสียชีวิตปี 416",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-salhan-vizier",
+      "arabic": "محمد بن الحسن بن صالحان أبو منصور",
+      "canonicalThai": "อิบนุ ศอลหาน (วะซีร)",
+      "note": "วะซีรของชะร็อฟุดเดาละฮ์/บะฮาอุดเดาละฮ์ เสียชีวิตปี 416",
+      "variantsFound": []
+    },
+    {
+      "id": "al-tihami-poet",
+      "arabic": "علي بن محمد التهامي أبو الحسن الشاعر",
+      "canonicalThai": "อัตติฮามี (อะลี บิน มุหัมมัด กวี)",
+      "note": "กวีผู้มีดีวานลือชื่อ บทไว้อาลัยบุตร เสียชีวิตในคุกที่ไคโรปี 416",
+      "variantsFound": []
+    },
+    {
+      "id": "tughrulbek",
+      "arabic": "طغرلبك السلجوقي",
+      "canonicalThai": "ฏุฆรุลบัก (อัสสัลญูกี)",
+      "note": "ผู้ก่อตั้งราชวงศ์สัลญูก(อ้างถึงในเหตุการณ์ปี 450)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-saymari-husayn",
+      "arabic": "الحسين بن علي الصيمري أبو عبد الله",
+      "canonicalThai": "อัลหุสัยน์ อัศศ็อยมะรี (อะบูอับดิลลาฮ์)",
+      "note": "ผู้ให้การต่อกอฎีหลังเตาบะฮ์จากอิอ์ติซาล ปี 417",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mawardi",
+      "arabic": "أبو الحسن علي بن محمد الماوردي",
+      "canonicalThai": "อัลมาวัรดี",
+      "note": "นักนิติศาสตร์/ผู้พิพากษาชาฟิอี ผู้ประพันธ์อัลอะห์กาม อัสสุลฏอนียะฮ์ (อ้างถึงปี 417)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-jili",
+      "arabic": "جعفر بن باي أبو مسلم الجيلي",
+      "canonicalThai": "ญะอ์ฟัร อัลญีลี",
+      "note": "ฟะกีฮ์ชาฟิอี ศิษย์อะบูหามิด เสียชีวิตปี 417",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-hazim-al-hudhali",
+      "arabic": "عمر بن أحمد أبو حازم الهذلي النيسابوري",
+      "canonicalThai": "อะบูหาซิม อัลฮุซะลี อันนัยซาบูรี",
+      "note": "นักหะดีษ เสียชีวิตปี 417",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hammami-muqri",
+      "arabic": "علي بن أحمد أبو الحسن الحمامي المقرئ",
+      "canonicalThai": "อัลหัมมามี (อะลี บิน อะหมัด นักอ่าน)",
+      "note": "นักอ่านอัลกุรอาน ผู้โดดเด่นในสายกิรออาต เสียชีวิตปี 417",
+      "variantsFound": []
+    },
+    {
+      "id": "said-al-lughawi",
+      "arabic": "صاعد بن الحسن الربعي البغدادي اللغوي",
+      "canonicalThai": "ศออิด อัรเราะบะอี อัลลุเฆาะวี",
+      "note": "นักภาษาศาสตร์ ผู้ประพันธ์อัลฟุศูศ ถูกกล่าวหาว่าโกหก เสียชีวิตปี 417",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qaffal-marwazi",
+      "arabic": "أبو بكر عبد الله بن أحمد القفال المروزي",
+      "canonicalThai": "อัลก็อฟฟาล อัลมัรวะซี",
+      "note": "อิมามใหญ่ชาฟิอี ต้นแนวทางคุรอซานียะฮ์ อดีตช่างทำกุญแจ เสียชีวิตปี 417",
+      "variantsFound": []
+    },
+    {
+      "id": "al-shahid-preacher",
+      "arabic": "أحمد بن محمد ابن المهتدي بالله أبو عبد الله الشاهد",
+      "canonicalThai": "อิบนุ อัลมุฮ์ตะดี อัชชาฮิด",
+      "note": "นักเทศนาที่มัสยิดญามิอ์อัลมันศูร เสียชีวิตปี 418",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-khaffaf-warraq",
+      "arabic": "محمد بن الحسين أبو بكر الوراق ابن الخفاف",
+      "canonicalThai": "อิบนุ อัลค็อฟฟาฟ อัลวัรรอก",
+      "note": "นักรายงานที่ถูกกล่าวหาว่ากุสายสืบ เสียชีวิตปี 418",
+      "variantsFound": []
+    },
+    {
+      "id": "al-lalikai",
+      "arabic": "هبة الله بن الحسن أبو القاسم اللالكائي الرازي",
+      "canonicalThai": "อัลลาลิกาอี (ฮิบะตุลลอฮ์ อัรรอซี)",
+      "note": "ศิษย์อะบูหามิด ผู้ประพันธ์ชัรห์อุศูลอิอ์ติกอดอะฮ์ลุสซุนนะฮ์ เสียชีวิตปี 418",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-qasim-b-al-qadir",
+      "arabic": "أبو القاسم بن القادر بالله",
+      "canonicalThai": "อะบูอัลกอสิม บิน อัลกอดิร",
+      "note": "บุตรเคาะลีฟะฮ์อัลกอดิร เสียชีวิตปี 418",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-ishaq-al-isfarayini",
+      "arabic": "إبراهيم بن محمد أبو إسحاق الإسفراييني ركن الدين",
+      "canonicalThai": "อะบูอิสหาก อัลอิสฟะรอยีนี (รุกนุดดีน)",
+      "note": "อิมามชาฟิอี นักเทววิทยา-อุศูล ผู้ประพันธ์ญามิอุลหุลี เสียชีวิตปี 418",
+      "variantsFound": []
+    },
+    {
+      "id": "al-quduri",
+      "arabic": "أحمد بن محمد أبو الحسن القدوري",
+      "canonicalThai": "อัลกุดูรี",
+      "note": "ฟะกีฮ์หะนะฟี ผู้ประพันธ์มุคตะศ็อรอัลกุดูรีอันลือชื่อ เสียชีวิตปี 418",
+      "variantsFound": []
+    },
+    {
+      "id": "hamza-al-munajjim",
+      "arabic": "حمزة بن إبراهيم أبو الخطاب المنجم",
+      "canonicalThai": "หัมซะฮ์ อัลมุนัจญิม",
+      "note": "นักโหราศาสตร์คนโปรดของบะฮาอุดเดาละฮ์ ตายยากจนปี 419",
+      "variantsFound": []
+    },
+    {
+      "id": "al-tajir-muhaddith",
+      "arabic": "محمد بن محمد بن مخلد أبو الحسن التاجر",
+      "canonicalThai": "อะบูอัลหะซัน อัตตาญิร",
+      "note": "นักหะดีษ-พ่อค้าผู้มั่งคั่ง ตายไร้ผ้ากะฝั่น(อัลกอดิรส่งให้) ปี 419",
+      "variantsFound": []
+    },
+    {
+      "id": "mubarak-al-anmati",
+      "arabic": "مبارك الأنماطي",
+      "canonicalThai": "มุบาร็อก อัลอันมาฏี",
+      "note": "ผู้มั่งคั่ง ทิ้งทรัพย์สามแสนดีนาร เสียชีวิตที่อียิปต์ปี 419",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-babshadh-vizier",
+      "arabic": "أبو محمد بن بابشاذ معز الدولة",
+      "canonicalThai": "อิบนุ บาบชาซ (วะซีร)",
+      "note": "วะซีรของกาลีญาร ถูกญะลาลุดเดาละฮ์จองจำ เสียชีวิตปี 419",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-abd-allah-mutakallim",
+      "arabic": "أبو عبد الله المتكلم",
+      "canonicalThai": "อะบูอับดิลลาฮ์ อัลมุตะกัลลิม",
+      "note": "นักเทววิทยา เสียชีวิตปี 419",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-ghalbun-al-suri",
+      "arabic": "عبد المحسن بن محمد ابن غلبون الصوري",
+      "canonicalThai": "อิบนุ ฆ็อลบูน อัศศูรี (กวี)",
+      "note": "กวีฝีมือฉกาจชาวศูร(ไทร์) เสียชีวิตปี 419",
+      "variantsFound": []
+    },
+    {
+      "id": "rustam-al-daylami",
+      "arabic": "رستم بن علي الديلمي",
+      "canonicalThai": "รุสตุม บิน อะลี อัดดัยละมี",
+      "note": "หัวหน้าบาฏินียะฮ์ที่อัรร็อยย์ ถือหลักอิบาหะฮ์ ถูกมะห์มูดปราบปี 420",
+      "variantsFound": []
+    },
+    {
+      "id": "bishr-al-marisi",
+      "arabic": "بشر المريسي",
+      "canonicalThai": "บิชร์ อัลมะรีซี",
+      "note": "นักเทววิทยาญะฮ์มี ผู้ถือว่าอัลกุรอานถูกสร้าง (อ้างในอะกีดะฮ์อัลกอดิรี)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-kinani",
+      "arabic": "عبد العزيز بن يحيى الكناني",
+      "canonicalThai": "อับดุลอะซีซ อัลกินานี",
+      "note": "ผู้โต้วาทีฝ่ายซุนนะฮ์กับบิชร์ อัลมะรีซี (อ้างในอะกีดะฮ์อัลกอดิรี)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-zahid-hasan",
+      "arabic": "الحسن بن أبي العيس أبو علي الزاهد",
+      "canonicalThai": "อัลหะซัน อัซซาฮิด (อะบูอะลี)",
+      "note": "นักพรตผู้มีสภาวะจิต เสียชีวิตปี 420",
+      "variantsFound": []
+    },
+    {
+      "id": "al-rabai-grammarian",
+      "arabic": "علي بن عيسى أبو الحسن الربعي النحوي",
+      "canonicalThai": "อะลี บิน อีซา อัรเราะบะอี (นักไวยากรณ์)",
+      "note": "นักไวยากรณ์ ศิษย์อะบูอะลี อัลฟาริซี เสียชีวิตปี 420 (งานศพมีสามคน)",
+      "variantsFound": []
+    },
+    {
+      "id": "asad-al-dawla-mirdas",
+      "arabic": "أسد الدولة صالح بن مرداس الكلابي",
+      "canonicalThai": "อะสะดุดเดาละฮ์ ศอลิห์ บิน มิรดาส",
+      "note": "กษัตริย์องค์แรกของราชวงศ์มิรดาสที่หะลับ ถูกสังหารปี 419",
+      "variantsFound": []
+    },
+    {
+      "id": "muhammad-b-mahmud",
+      "arabic": "محمد بن محمود بن سبكتكين",
+      "canonicalThai": "มุหัมมัด บิน มะห์มูด",
+      "note": "บุตรมะห์มูดที่ได้รับแต่งตั้งสืบทอด แต่ถูกมัสอูดชิงอำนาจปี 421",
+      "variantsFound": []
+    },
+    {
+      "id": "masud-b-mahmud",
+      "arabic": "مسعود بن محمود بن سبكتكين",
+      "canonicalThai": "มัสอูด บิน มะห์มูด",
+      "note": "บุตรมะห์มูดผู้ชิงอำนาจครองฆ็อซนะฮ์ ปี 421",
+      "variantsFound": []
+    },
+    {
+      "id": "shibl-al-dawla-nasr",
+      "arabic": "شبل الدولة نصر بن صالح بن مرداس",
+      "canonicalThai": "ชิบลุดเดาละฮ์ นัศร์ บิน ศอลิห์ (มิรดาส)",
+      "note": "เจ้าผู้ครองหะลับ(มิรดาส) ขณะไบแซนไทน์บุกปี 421",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-ran-waiz",
+      "arabic": "أحمد بن عبد الله ابن الران الواعظ",
+      "canonicalThai": "อิบนุ อัรรอน อัลวาอิซ",
+      "note": "นักเทศนาผู้มีกะรอมาต พำนักดิมัชก์ เสียชีวิตปี 421",
+      "variantsFound": []
+    },
+    {
+      "id": "al-khali-poet",
+      "arabic": "الحسين بن محمد الخليع الشاعر",
+      "canonicalThai": "อัลค่อลีอ์ (อัลหุสัยน์ บิน มุหัมมัด กวี)",
+      "note": "กวีผู้มีดีวานงดงาม อายุยืน เสียชีวิตปี 421",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qaffal-al-saghir",
+      "arabic": "أبو بكر القفال الصغير",
+      "canonicalThai": "อัลก็อฟฟาล อัศเศาะฆีร",
+      "note": "ฟะกีฮ์ชาฟิอี ผู้ที่มะห์มูดเปลี่ยนมานับถือชาฟิอีด้วยมือเขา",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-furak",
+      "arabic": "أبو بكر بن فورك",
+      "canonicalThai": "อะบูบักร์ บิน ฟูร็อก",
+      "note": "นักเทววิทยาอะชาอิเราะฮ์ ผู้โต้วาทีเรื่องอัรช์ต่อหน้ามะห์มูด",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-haytham",
+      "arabic": "محمد بن الهيضم",
+      "canonicalThai": "มุหัมมัด บิน อัลฮัยษัม",
+      "note": "นักเทววิทยาฝ่ายกัรรอมียะฮ์ ผู้โต้วาทีกับอิบนุ ฟูร็อกต่อหน้ามะห์มูด",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-talib-b-ayyub",
+      "arabic": "أبو طالب محمد بن أيوب الوزير",
+      "canonicalThai": "อะบูฏอลิบ บิน อัยยูบ (วะซีร)",
+      "note": "วะซีรที่อัลกออิมแต่งตั้ง ปี 422",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-wahhab-al-maliki",
+      "arabic": "عبد الوهاب بن علي التغلبي أبو محمد المالكي",
+      "canonicalThai": "อับดุลวะฮ์ฮาบ อัลมาลิกี (กอฎี)",
+      "note": "อิมามมาลิกี ผู้ประพันธ์อัตตัลกีน ย้ายจากแบกแดดสู่อียิปต์ เสียชีวิตปี 422",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-zura-al-razi",
+      "arabic": "روح بن محمد أبو زرعة الرازي",
+      "canonicalThai": "อะบูซุรอะฮ์ อัรรอซี",
+      "note": "ฟะกีฮ์ชาฟิอี กอฎีอัศบะฮาน เสียชีวิตปี 423",
+      "variantsFound": []
+    },
+    {
+      "id": "al-nuaymi",
+      "arabic": "علي بن أحمد البصري النعيمي",
+      "canonicalThai": "อันนุอัยมี (อะลี บิน อะหมัด)",
+      "note": "นักท่องจำหะดีษ กวี นักเทววิทยา ฟะกีฮ์ชาฟิอี เสียชีวิตปี 423",
+      "variantsFound": []
+    },
+    {
+      "id": "al-sabbagh-muhaddith",
+      "arabic": "محمد بن الطيب أبو بكر الصباغ",
+      "canonicalThai": "อัศศ็อบบาฆ (มุหัมมัด บิน อัฏฏ็อยยิบ)",
+      "note": "นักหะดีษ แต่งงานกับสตรี 900 คน เสียชีวิตปี 423 ในวัย 95",
+      "variantsFound": []
+    },
+    {
+      "id": "sandal-khadim",
+      "arabic": "صندل الخادم",
+      "canonicalThai": "ศ็อนดัล (ขันที)",
+      "note": "ขันทีที่ยึดอำนาจอะบูกาลีญาร ถูกสังหารปี 423",
+      "variantsFound": []
+    },
+    {
+      "id": "badrkhan",
+      "arabic": "بدرخان ملك الترك",
+      "canonicalThai": "บัดร์ ข่าน",
+      "note": "กษัตริย์เติร์กแห่งมาวะรออันนะฮ์ร เสียชีวิตปี 423",
+      "variantsFound": []
+    },
+    {
+      "id": "al-burjumi",
+      "arabic": "البرجمي مقدم العيارين",
+      "canonicalThai": "อัลบุรญุมี (หัวหน้าอัยยารู)",
+      "note": "หัวหน้าพวกอัยยารูที่แบกแดด ปี 424 (ไม่ทำร้ายสตรี)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-aziz-b-jalal",
+      "arabic": "العزيز بن جلال الدولة",
+      "canonicalThai": "อัลอะซีซ บิน ญะลาลุดเดาละฮ์",
+      "note": "บุตรญะลาลุดเดาละฮ์ ผู้ปกครองอัลบัศเราะฮ์ ปี 424",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-sammak-waiz",
+      "arabic": "أحمد بن الحسين ابن السماك الواعظ",
+      "canonicalThai": "อิบนุ อัสสัมมาก อัลวาอิซ",
+      "note": "นักเทศนาสายตะเศาวุฟ ถูกกล่าวหาว่าโกหก เสียชีวิตปี 424",
+      "variantsFound": []
+    },
+    {
+      "id": "al-basasiri",
+      "arabic": "أبو الحارث أرسلان البساسيري",
+      "canonicalThai": "อัลบะซาซีรี",
+      "note": "แม่ทัพเติร์กผู้คุ้มครองแบกแดด ภายหลังก่อกบฏใหญ่",
+      "variantsFound": []
+    },
+    {
+      "id": "sinan-b-gharib",
+      "arabic": "سنان بن غريب بن معن",
+      "canonicalThai": "สินาน บิน เฆาะรีบ",
+      "note": "อะมีรอุก็อยลี ขึ้นปกครองหลังบิดา(ด้วยการช่วยของกิรวาช) ปี 425",
+      "variantsFound": []
+    },
+    {
+      "id": "armanus-rum",
+      "arabic": "أرمانوس ملك الروم",
+      "canonicalThai": "อัรมานูส (กษัตริย์โรมัน)",
+      "note": "จักรพรรดิไบแซนไทน์(โรมานอสที่ 3) เสียชีวิตปี 425",
+      "variantsFound": []
+    },
+    {
+      "id": "al-barqani",
+      "arabic": "أحمد بن محمد بن غالب أبو بكر البرقاني",
+      "canonicalThai": "อัลบัรกอนี",
+      "note": "นักท่องจำหะดีษผู้ยิ่งใหญ่ ผู้ประพันธ์ เสียชีวิตปี 425",
+      "variantsFound": []
+    },
+    {
+      "id": "al-abiwardi",
+      "arabic": "أحمد بن محمد الأبيوردي",
+      "canonicalThai": "อัลอับยะวัรดี",
+      "note": "อิมามชาฟิอี ศิษย์อะบูหามิด กอฎีแบกแดด เสียชีวิตปี 425",
+      "variantsFound": []
+    },
+    {
+      "id": "al-bandaniji",
+      "arabic": "الحسن بن عبيد الله البندنيجي أبو علي",
+      "canonicalThai": "อัลบันดะนีญี",
+      "note": "อิมามชาฟิอี ศิษย์อะบูหามิด เสียชีวิตปี 425",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-wahhab-al-tamimi",
+      "arabic": "عبد الوهاب بن عبد العزيز التميمي الحنبلي",
+      "canonicalThai": "อับดุลวะฮ์ฮาบ อัตตะมีมี (หัมบะลี)",
+      "note": "ฟะกีฮ์หัมบะลี นักเทศนา เสียชีวิตปี 425",
+      "variantsFound": []
+    },
+    {
+      "id": "gharib-abu-sinan",
+      "arabic": "غريب بن محمد بن معن أبو سنان",
+      "canonicalThai": "เฆาะรีบ อะบูสินาน",
+      "note": "อะมีรอุก็อยลีที่ผลิตเหรียญในนามตน เสียชีวิตปี 425",
+      "variantsFound": []
+    },
+    {
+      "id": "ahmad-b-kulayb",
+      "arabic": "أحمد بن كليب الشاعر",
+      "canonicalThai": "อะหมัด บิน กุลัยบ์ (กวี)",
+      "note": "กวีที่ตายเพราะความหลงรัก(อิชก์) เสียชีวิตปี 426",
+      "variantsFound": []
+    },
+    {
+      "id": "aslam-b-abi-al-jad",
+      "arabic": "أسلم بن أبي الجعد من بني خالد",
+      "canonicalThai": "อัสลัม บิน อะบีอัลญะอ์ด",
+      "note": "ชายหนุ่มที่อะหมัด บิน กุลัยบ์หลงรัก (ปฏิเสธการพบ)",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-shadhan-bazzaz",
+      "arabic": "الحسن بن أحمد ابن شاذان البزاز أبو علي",
+      "canonicalThai": "อิบนุ ชาษาน อัลบัซซาซ",
+      "note": "เชคนักหะดีษผู้เชื่อถือได้ เสียชีวิตปี 426 (เรื่องความฝันสลามจากท่านนบี)",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-falu-waiz",
+      "arabic": "الحسن بن عثمان ابن الفلو أبو عمر الواعظ",
+      "canonicalThai": "อิบนุ อัลฟัลู อัลวาอิซ",
+      "note": "นักเทศนาผู้มีวาทศิลป์ เสียชีวิตปี 426",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mustansir-fatimi",
+      "arabic": "المستنصر بالله معد أبو تميم الفاطمي",
+      "canonicalThai": "อัลมุสตันศิร บิลลาฮ์ (ฟาฏิมียะฮ์)",
+      "note": "เคาะลีฟะฮ์ฟาฏิมียะฮ์ ขึ้นครองวัย 7 ปีปี 427 (ครองนานที่สุด)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-jarjarai-vizier",
+      "arabic": "الصاحب أبو القاسم الجرجرائي الوزير",
+      "canonicalThai": "อัลญัรญะรออี (วะซีร)",
+      "note": "วะซีรฟาฏิมียะฮ์(ผู้ถูกตัดมือ) สมัยอัฎฎอฮิร/อัลมุสตันศิร เสียชีวิตปี 436",
+      "variantsFound": []
+    },
+    {
+      "id": "badr-al-jamali",
+      "arabic": "بدر بن عبد الله الجمالي أمير الجيوش",
+      "canonicalThai": "บัดร์ อัลญะมาลี (อะมีรุลญุยูช)",
+      "note": "อะมีรุลญุยูชผู้ดูแลอาณาจักรฟาฏิมียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-qudai",
+      "arabic": "القاضي أبو عبد الله القضاعي",
+      "canonicalThai": "อัลกุฎออี",
+      "note": "กอฎีอียิปต์ ผู้ประพันธ์หนังสืออัชชิฮาบ",
+      "variantsFound": []
+    },
+    {
+      "id": "al-thalabi",
+      "arabic": "أحمد بن محمد الثعلبي النيسابوري المفسر",
+      "canonicalThai": "อัษษะอ์ละบี (อัลมุฟัสสิร)",
+      "note": "นักอรรถาธิบายอัลกุรอานผู้ลือชื่อ เจ้าของอัตตัฟซีรอัลกะบีร/อัลอะรออิส เสียชีวิตปี 427",
+      "variantsFound": []
+    },
+    {
+      "id": "al-ukbari-hanbali",
+      "arabic": "الحسن بن شهاب أبو علي العكبري",
+      "canonicalThai": "อัลอุกบะรี (ฟะกีฮ์หัมบะลี-กวี)",
+      "note": "ฟะกีฮ์หัมบะลี-กวี เลี้ยงชีพด้วยการคัดลอก เสียชีวิตปี 428",
+      "variantsFound": []
+    },
+    {
+      "id": "lutf-allah-hashimi",
+      "arabic": "لطف الله بن أحمد أبو الفضل الهاشمي",
+      "canonicalThai": "ลุฏฟุลลอฮ์ อัลฮาชิมี",
+      "note": "กอฎี/เคาะฏีบที่ดัรซีญาน เสียชีวิตปี 428",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-abi-musa-hashimi",
+      "arabic": "محمد بن أحمد ابن أبي موسى الهاشمي",
+      "canonicalThai": "อิบนุ อะบีมูซา อัลฮาชิมี",
+      "note": "อิมามหัมบะลี เสียชีวิตปี 428",
+      "variantsFound": []
+    },
+    {
+      "id": "al-ahwazi-kadhib",
+      "arabic": "محمد بن الحسن الأهوازي ابن أبي علي",
+      "canonicalThai": "อัลอะฮ์วาซี (ญิรอบุลกะษิบ)",
+      "note": "นักรายงานที่ถูกกล่าวว่าโกหก เสียชีวิตปี 428",
+      "variantsFound": []
+    },
+    {
+      "id": "mihyar-al-daylami",
+      "arabic": "مهيار بن مرزويه أبو الحسن الديلمي",
+      "canonicalThai": "มิฮ์ยาร อัดดัยละมี (กวี)",
+      "note": "กวีมะญูซีที่เข้าอิสลามแต่ตามแนวเราะวาฟิฎ เสียชีวิตปี 428",
+      "variantsFound": []
+    },
+    {
+      "id": "hibat-allah-al-hajib",
+      "arabic": "هبة الله بن الحسن أبو الحسين الحاجب",
+      "canonicalThai": "ฮิบะตุลลอฮ์ อัลหาญิบ (กวี)",
+      "note": "กวีผู้มีคุณธรรม เสียชีวิตปี 428",
+      "variantsFound": []
+    },
+    {
+      "id": "al-ghazali",
+      "arabic": "أبو حامد محمد الغزالي",
+      "canonicalThai": "อัลเฆาะซาลี (อะบูหามิด)",
+      "note": "อิมามผู้ประพันธ์ตะฮาฟุตอัลฟะลาสิฟะฮ์ (อ้างถึงการตักฟีรอิบนุ ซีนา)",
+      "variantsFound": []
+    },
+    {
+      "id": "dawud-saljuqi",
+      "arabic": "داود بن ميكائيل السلجوقي جغري بك",
+      "canonicalThai": "ดาวูด อัสสัลญูกี",
+      "note": "น้องฏุฆรุลบัก ยึดคุรอซานปี 429 (จัฆรี เบก)",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-tayyib-al-tabari",
+      "arabic": "القاضي أبو الطيب الطبري",
+      "canonicalThai": "อะบูอัฏฏ็อยยิบ อัฏฏ็อบรี",
+      "note": "กอฎีชาฟิอี ผู้ฟัตวาเรื่องฉายามะลิกุลมุลูก ปี 429",
+      "variantsFound": []
+    },
+    {
+      "id": "al-thaalibi-adib",
+      "arabic": "أبو منصور عبد الملك بن محمد الثعالبي",
+      "canonicalThai": "อัษษะอาลิบี (อะบูมันศูร, ยะตีมะตุดดะฮ์ร)",
+      "note": "นักอักษรศาสตร์ ผู้ประพันธ์ยะตีมะตุดดะฮ์ร เสียชีวิตปี 429",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-qahir-al-baghdadi",
+      "arabic": "أبو منصور عبد القاهر بن طاهر البغدادي",
+      "canonicalThai": "อับดุลกอฮิร อัลบัฆดาดี",
+      "note": "ฟะกีฮ์ชาฟิอี-นักอุศูล ผู้สอน17ศาสตร์ ศิษย์อะบูอิสหาก อัลอิสฟะรอยีนี เสียชีวิตปี 429",
+      "variantsFound": []
+    },
+    {
+      "id": "shabib-b-waththab",
+      "arabic": "شبيب بن وثاب النميري",
+      "canonicalThai": "ชะบีบ บิน วัษษาบ",
+      "note": "อะมีรนุมัยรี อ่านคุฏบะฮ์ให้อัลกออิมที่หัรรอน/อัรร็อกเกาะฮ์ ปี 430",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-nuaym-al-asbahani",
+      "arabic": "أحمد بن عبد الله أبو نعيم الأصبهاني الحافظ",
+      "canonicalThai": "อะบูนุอัยม์ อัลอัศบะฮานี",
+      "note": "นักท่องจำหะดีษผู้ยิ่งใหญ่ เจ้าของหิลยะตุลเอาลิยาอ์ เสียชีวิตปี 430",
+      "variantsFound": []
+    },
+    {
+      "id": "al-burjumi-vizier",
+      "arabic": "الحسن بن الحسين أبو علي البرجمي الوزير",
+      "canonicalThai": "อัลหะซัน อัลบุรญุมี (วะซีร)",
+      "note": "วะซีรของชะร็อฟุดเดาละฮ์ ผู้สร้างมาริสตานที่วาสิฏ เสียชีวิตปี 430",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-futuh-al-alawi",
+      "arabic": "الحسن بن جعفر أبو الفتوح العلوي",
+      "canonicalThai": "อะบูอัลฟุตูห อัลอะละวี (อะมีรมักกะฮ์)",
+      "note": "อะมีรแห่งมักกะฮ์ เสียชีวิตปี 430",
+      "variantsFound": []
+    },
+    {
+      "id": "al-khallal-muaddib",
+      "arabic": "الحسين بن محمد الخلال المؤدب",
+      "canonicalThai": "อัลค็อลลาล อัลมุอัดดิบ",
+      "note": "นักหะดีษ ผู้รายงานเศาะฮีหฺอัลบุคอรี เสียชีวิตปี 430",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-malik-al-waiz",
+      "arabic": "عبد الملك بن محمد أبو القاسم الواعظ",
+      "canonicalThai": "อับดุลมาลิก อัลวาอิซ",
+      "note": "นักหะดีษ-นักเทศนา เสียชีวิตปี 430",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-khazim-ibn-al-farra",
+      "arabic": "محمد بن الحسين ابن الفراء أبو خازم",
+      "canonicalThai": "อะบูคอซิม บิน อัลฟัรรออ์",
+      "note": "น้องกอฎีอะบูยะอ์ลา หัมบะลี เสียชีวิตปี 430",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-yala-hanbali",
+      "arabic": "القاضي أبو يعلى بن الفراء الحنبلي",
+      "canonicalThai": "กอฎีอะบูยะอ์ลา อัลหัมบะลี",
+      "note": "กอฎีหัมบะลีผู้ยิ่งใหญ่ (อ้างถึงในฐานะพี่ชายอะบูคอซิม)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-dinawari-zahid",
+      "arabic": "محمد بن عبيد الله أبو بكر الدينوري الزاهد",
+      "canonicalThai": "อัดดีนะวะรี อัซซาฮิด",
+      "note": "นักพรต ที่ญะลาลุดเดาละฮ์ยกเลิกภาษีเกลือเพื่อเขา เสียชีวิตปี 430",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-al-zarif-poet",
+      "arabic": "الفضل بن منصور أبو الرضا ابن الظريف",
+      "canonicalThai": "อิบนุ อัซซ็อรีฟ (กวี)",
+      "note": "กวีผู้มีไหวพริบ เสียชีวิตปี 430",
+      "variantsFound": []
+    },
+    {
+      "id": "ibn-makula-abu-qasim",
+      "arabic": "هبة الله بن علي أبو القاسم بن ماكولا",
+      "canonicalThai": "ฮิบะตุลลอฮ์ บิน มากูลา (วะซีร)",
+      "note": "วะซีรของญะลาลุดเดาละฮ์ ถูกบีบคอที่ฮีต ปี 430",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-zayd-al-dabusi",
+      "arabic": "عبد الله بن عمر أبو زيد الدبوسي",
+      "canonicalThai": "อะบูซัยด์ อัดดะบูซี",
+      "note": "ฟะกีฮ์หะนะฟี ผู้วางรากฐานวิชาคิลาฟ เสียชีวิตปี 430",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hawfi",
+      "arabic": "علي بن إبراهيم الحوفي النحوي",
+      "canonicalThai": "อัลเหาฟี",
+      "note": "นักไวยากรณ์ ผู้ประพันธ์อิอ์รอบุลกุรอาน เสียชีวิตปี 430",
+      "variantsFound": []
     }
   ],
   "places": [
@@ -4805,12 +8211,6 @@
       "id": "shahrazur",
       "arabic": "شهرزور",
       "canonicalThai": "ชะฮ์ระซูร",
-      "variantsFound": []
-    },
-    {
-      "id": "great-zab",
-      "arabic": "الزاب الأكبر",
-      "canonicalThai": "แม่น้ำซาบใหญ่ (อัซซาบ อัลอักบัร)",
       "variantsFound": []
     },
     {
@@ -4853,13 +8253,6 @@
       "id": "al-jazira",
       "arabic": "الجزيرة",
       "canonicalThai": "อัลญะซีเราะฮ์",
-      "variantsFound": []
-    },
-    {
-      "id": "busir",
-      "arabic": "بوصير",
-      "canonicalThai": "บูศีร",
-      "note": "หมู่บ้านในอียิปต์ จุดสิ้นพระชนม์ของมัรวาน",
       "variantsFound": []
     },
     {
@@ -4941,18 +8334,6 @@
       "variantsFound": []
     },
     {
-      "id": "qudayd",
-      "arabic": "قديد",
-      "canonicalThai": "กุดัยด์",
-      "variantsFound": []
-    },
-    {
-      "id": "wadi-al-qura",
-      "arabic": "وادي القرى",
-      "canonicalThai": "วาดิลกุรอ",
-      "variantsFound": []
-    },
-    {
       "id": "yemen",
       "arabic": "اليمن",
       "canonicalThai": "เยเมน",
@@ -5019,12 +8400,6 @@
       "variantsFound": []
     },
     {
-      "id": "kish",
-      "arabic": "كش",
-      "canonicalThai": "กิช",
-      "variantsFound": []
-    },
-    {
       "id": "hind",
       "arabic": "الهند",
       "canonicalThai": "อัลฮินด์ (อินเดีย/สินธ์)",
@@ -5037,22 +8412,10 @@
       "variantsFound": []
     },
     {
-      "id": "al-anbar",
-      "arabic": "الأنبار",
-      "canonicalThai": "อัลอันบาร",
-      "variantsFound": []
-    },
-    {
       "id": "al-humayma",
       "arabic": "الحميمة",
       "canonicalThai": "อัลหุมัยมะฮ์",
       "note": "ถิ่นกำเนิดของวงศ์อับบาซียะฮ์ในอัลบัลกออ์",
-      "variantsFound": []
-    },
-    {
-      "id": "nasibin",
-      "arabic": "نصيبين",
-      "canonicalThai": "นะศีบีน",
       "variantsFound": []
     },
     {
@@ -5104,21 +8467,9 @@
       "variantsFound": []
     },
     {
-      "id": "al-massisa",
-      "arabic": "المصيصة",
-      "canonicalThai": "อัลมัศศีเศาะฮ์",
-      "variantsFound": []
-    },
-    {
       "id": "khurasan",
       "arabic": "خراسان",
       "canonicalThai": "คุรอซาน",
-      "variantsFound": []
-    },
-    {
-      "id": "marw-al-rudh",
-      "arabic": "مرو الروذ",
-      "canonicalThai": "มัรว์ อัรรูซ",
       "variantsFound": []
     },
     {
@@ -5143,24 +8494,6 @@
       "id": "ayn-al-jarr",
       "arabic": "عين الجر",
       "canonicalThai": "อัยนุลญัรร์ (บิกาอ์)",
-      "variantsFound": []
-    },
-    {
-      "id": "palestine",
-      "arabic": "فلسطين",
-      "canonicalThai": "ปาเลสไตน์",
-      "variantsFound": []
-    },
-    {
-      "id": "al-bakhra",
-      "arabic": "حصن البخراء",
-      "canonicalThai": "ป้อมอัลบัครออ์ (ใกล้ตัดมุร)",
-      "variantsFound": []
-    },
-    {
-      "id": "tadmur",
-      "arabic": "تدمر",
-      "canonicalThai": "ตัดมุร (ปาลไมรา)",
       "variantsFound": []
     },
     {
@@ -5480,12 +8813,6 @@
       "arabic": "الرافقة",
       "canonicalThai": "อัรรอฟิเกาะฮ์",
       "note": "เมืองที่อัลมะฮ์ดีสร้างใกล้อัรร็อกเกาะฮ์"
-    },
-    {
-      "id": "qayrawan",
-      "arabic": "القيروان",
-      "canonicalThai": "อัลก็อยเราะวาน",
-      "note": "เมืองในอิฟรีกิยะฮ์"
     },
     {
       "id": "kerman",
@@ -6199,6 +9526,404 @@
       "id": "rhodes",
       "arabic": "رودس",
       "canonicalThai": "โรดส์ (รูดุส)",
+      "variantsFound": []
+    },
+    {
+      "id": "azerbaijan",
+      "arabic": "أذربيجان",
+      "canonicalThai": "อาเซอร์ไบจาน",
+      "variantsFound": []
+    },
+    {
+      "id": "al-harbiyya",
+      "arabic": "الحربية",
+      "canonicalThai": "อัลหัรบียะฮ์",
+      "note": "ย่านหนึ่งทางทิศตะวันตกของแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "bab-al-shammasiyya",
+      "arabic": "باب الشماسية",
+      "canonicalThai": "ประตูอัชชัมมาซียะฮ์",
+      "note": "ประตู/ย่านหนึ่งของแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "madinat-al-mansur",
+      "arabic": "مدينة المنصور",
+      "canonicalThai": "มะดีนะตุลมันศูร",
+      "note": "เมืองวงกลมของแบกแดดที่อัลมันศูรสร้าง",
+      "variantsFound": []
+    },
+    {
+      "id": "al-kurj",
+      "arabic": "الكرج",
+      "canonicalThai": "อัลกุรจ์ (จอร์เจีย)",
+      "note": "แคว้นจอร์เจีย/คอเคซัส",
+      "variantsFound": []
+    },
+    {
+      "id": "al-rahba",
+      "arabic": "الرحبة",
+      "canonicalThai": "อัรเราะห์บะฮ์",
+      "note": "เมืองริมแม่น้ำยูเฟรติส",
+      "variantsFound": []
+    },
+    {
+      "id": "qarqisiya",
+      "arabic": "قرقيسيا",
+      "canonicalThai": "ก็อรกีซิยา",
+      "note": "เมืองบรรจบเคาะบูร-ยูเฟรติส",
+      "variantsFound": []
+    },
+    {
+      "id": "sinjar",
+      "arabic": "سنجار",
+      "canonicalThai": "สินญาร",
+      "note": "เมืองในอัลญะซีเราะฮ์ใกล้อัลเมาศิล",
+      "variantsFound": []
+    },
+    {
+      "id": "al-mahdiyya",
+      "arabic": "المهدية",
+      "canonicalThai": "อัลมะฮ์ดียะฮ์",
+      "note": "เมืองหลวงฟาฏิมียะฮ์ในอิฟรีกียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "nasibin",
+      "arabic": "نصيبين",
+      "canonicalThai": "นะศีบีน",
+      "note": "เมืองในอัลญะซีเราะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "mukran",
+      "arabic": "مكران",
+      "canonicalThai": "มุกราน",
+      "note": "แคว้นชายฝั่งระหว่างเปอร์เซียกับสินธ์",
+      "variantsFound": []
+    },
+    {
+      "id": "arrajan",
+      "arabic": "أرجان",
+      "canonicalThai": "อัรเราะญาน",
+      "note": "เมืองในแถบฟาริส-คูซิสตาน",
+      "variantsFound": []
+    },
+    {
+      "id": "santarem",
+      "arabic": "شنترين",
+      "canonicalThai": "ชันตะรีน (ซานตาเรม)",
+      "note": "เมืองในอันดะลุส (โปรตุเกสปัจจุบัน)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-anbar",
+      "arabic": "الأنبار",
+      "canonicalThai": "อัลอันบาร",
+      "note": "เมืองริมยูเฟรติสใกล้แบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "al-bataih",
+      "arabic": "البطائح",
+      "canonicalThai": "อัลบะฏออิห์",
+      "note": "เขตลุ่มน้ำขังทางตอนใต้ของอิรัก",
+      "variantsFound": []
+    },
+    {
+      "id": "saruj",
+      "arabic": "سروج",
+      "canonicalThai": "ซะรูจ",
+      "note": "เมืองในเขตอัลญะซีเราะฮ์ที่พวกโรมยึดปี 341",
+      "variantsFound": []
+    },
+    {
+      "id": "cairo",
+      "arabic": "القاهرة",
+      "canonicalThai": "อัลกอฮิเราะฮ์ (ไคโร)",
+      "note": "เมืองหลวงที่ฟาฏิมียะฮ์สร้างขึ้นติดกับมิศร์ปี 364",
+      "variantsFound": []
+    },
+    {
+      "id": "adhana",
+      "arabic": "أذنة",
+      "canonicalThai": "อะษะนะฮ์",
+      "note": "เมืองชายแดนใกล้เฏาะรอซูส",
+      "variantsFound": []
+    },
+    {
+      "id": "mayyafariqin",
+      "arabic": "ميافارقين",
+      "canonicalThai": "มัยยาฟาริกีน",
+      "note": "เมืองในเขตดิยารบักร์",
+      "variantsFound": []
+    },
+    {
+      "id": "al-ruha",
+      "arabic": "الرها",
+      "canonicalThai": "อัรรุฮา (เอเดสซา)",
+      "note": "เมืองในเขตอัลญะซีเราะฮ์ตอนบน (เอเดสซา)",
+      "variantsFound": []
+    },
+    {
+      "id": "manbij",
+      "arabic": "منبج",
+      "canonicalThai": "มันบิจ",
+      "note": "เมืองในเขตอัลญะซีเราะฮ์ใกล้หะลับ",
+      "variantsFound": []
+    },
+    {
+      "id": "al-massisa",
+      "arabic": "المصيصة",
+      "canonicalThai": "อัลมัศศีศ็อฮ์",
+      "note": "เมืองชายแดนในเขตซิลิเซีย(ใกล้เฏาะรอซูส)",
+      "variantsFound": []
+    },
+    {
+      "id": "jazirat-ibn-umar",
+      "arabic": "جزيرة ابن عمر",
+      "canonicalThai": "ญะซีเราะฮ์ อิบนุ อุมัร",
+      "note": "เมืองริมแม่น้ำดิจญ์ละฮ์ตอนบน(ใกล้เมาศิล)",
+      "variantsFound": []
+    },
+    {
+      "id": "siqilliyya",
+      "arabic": "صقلية",
+      "canonicalThai": "ซิกิลลียะฮ์ (ซิซิลี)",
+      "note": "เกาะซิซิลีภายใต้การปกครองของฟาฏิมียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "tabariyya",
+      "arabic": "طبرية",
+      "canonicalThai": "เฏาะบะรียะฮ์ (ทิเบเรียส)",
+      "note": "เมืองในแคว้นชาม(ปาเลสไตน์)",
+      "variantsFound": []
+    },
+    {
+      "id": "baratha",
+      "arabic": "مسجد براثا",
+      "canonicalThai": "บะรอษา",
+      "note": "มัสยิดในแบกแดดที่เป็นศูนย์รวมของพวกชีอะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "hims",
+      "arabic": "حمص",
+      "canonicalThai": "หิมศ์",
+      "note": "เมืองในแคว้นชาม",
+      "variantsFound": []
+    },
+    {
+      "id": "khazar",
+      "arabic": "بلاد الخزر",
+      "canonicalThai": "ดินแดนเคาะซัร (คอซาร์)",
+      "note": "อาณาจักรเติร์กแถบทะเลแคสเปียน-โวลกา",
+      "variantsFound": []
+    },
+    {
+      "id": "khwarizm",
+      "arabic": "خوارزم",
+      "canonicalThai": "เคาะวาริซม์",
+      "note": "แคว้นริมแม่น้ำอามูดาร์ยา(เอเชียกลาง)",
+      "variantsFound": []
+    },
+    {
+      "id": "sadad",
+      "arabic": "صدد",
+      "canonicalThai": "เศาะดัด",
+      "note": "หมู่บ้านใกล้หิมศ์ที่อะบูฟิรอสถูกสังหารปี 357",
+      "variantsFound": []
+    },
+    {
+      "id": "yafa",
+      "arabic": "يافا",
+      "canonicalThai": "ยาฟา (จาฟฟา)",
+      "note": "เมืองท่าในแคว้นชาม(ปาเลสไตน์)",
+      "variantsFound": []
+    },
+    {
+      "id": "ayn-shams",
+      "arabic": "عين شمس",
+      "canonicalThai": "อัยน์ ชัมส์",
+      "note": "พื้นที่ใกล้ไคโร(อียิปต์) สมรภูมิระหว่างเกาะรอมิเฏาะฮ์กับฟาฏิมียะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "mansuriyya",
+      "arabic": "المنصورة",
+      "canonicalThai": "อัลมันศูเราะฮ์",
+      "note": "เมืองหลวงฟาฏิมียะฮ์เดิมในอิฟรีกียะฮ์(มัฆริบ)",
+      "variantsFound": []
+    },
+    {
+      "id": "sabta",
+      "arabic": "سبتة",
+      "canonicalThai": "สับตะฮ์ (เซวตา)",
+      "note": "เมืองท่าทางตอนเหนือสุดของมัฆริบ",
+      "variantsFound": []
+    },
+    {
+      "id": "barghawata",
+      "arabic": "برغواطة",
+      "canonicalThai": "บัรฆอวาเฏาะฮ์",
+      "note": "ดินแดนของเผ่าบัรฆอวาเฏาะฮ์ในมัฆริบตอนปลายสุด",
+      "variantsFound": []
+    },
+    {
+      "id": "ayn-al-tamr",
+      "arabic": "عين التمر",
+      "canonicalThai": "อัยนุตตัมร์",
+      "note": "เมืองโอเอซิสทางตะวันตกของอัลกูฟะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "jukha",
+      "arabic": "جوخى",
+      "canonicalThai": "ญูคอ",
+      "note": "เขตในแถบลุ่มแม่น้ำดิจญ์ละฮ์ใกล้แบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "gilan",
+      "arabic": "بلاد كيلان",
+      "canonicalThai": "กีลาน",
+      "note": "แคว้นทางใต้ของทะเลแคสเปียน(เปอร์เซีย)",
+      "variantsFound": []
+    },
+    {
+      "id": "bust",
+      "arabic": "بست",
+      "canonicalThai": "บุสต์",
+      "note": "เมืองในแคว้นสิญิสตาน(อัฟกานิสถานปัจจุบัน)",
+      "variantsFound": []
+    },
+    {
+      "id": "khuzistan",
+      "arabic": "خوزستان",
+      "canonicalThai": "คูซิสตาน",
+      "note": "แคว้นทางตะวันตกเฉียงใต้ของเปอร์เซีย(อะฮ์วาซ)",
+      "variantsFound": []
+    },
+    {
+      "id": "india",
+      "arabic": "بلاد الهند",
+      "canonicalThai": "อินเดีย (อัลฮินด์)",
+      "note": "อนุทวีปอินเดีย เป้าหมายการพิชิตของมะห์มูดแห่งฆ็อซนะ",
+      "variantsFound": []
+    },
+    {
+      "id": "sura",
+      "arabic": "سورا",
+      "canonicalThai": "สูรอ",
+      "note": "เมืองในเขตอิรักตอนกลาง(ใกล้อัลฮิลละฮ์)",
+      "variantsFound": []
+    },
+    {
+      "id": "barqa",
+      "arabic": "برقة",
+      "canonicalThai": "บัรเกาะฮ์",
+      "note": "เมืองในแคว้นไซเรไนกา(ลิเบียตะวันออก)",
+      "variantsFound": []
+    },
+    {
+      "id": "nubia",
+      "arabic": "بلاد النوبة",
+      "canonicalThai": "นูเบีย",
+      "note": "ดินแดนทางใต้ของอียิปต์(ซูดาน)",
+      "variantsFound": []
+    },
+    {
+      "id": "ghazna",
+      "arabic": "غزنة",
+      "canonicalThai": "ฆ็อซนะ",
+      "note": "เมืองหลวงของราชวงศ์ฆ็อซนะวียะฮ์(อัฟกานิสถาน)",
+      "variantsFound": []
+    },
+    {
+      "id": "valencia",
+      "arabic": "بلنسية",
+      "canonicalThai": "บะลันซิยะฮ์ (วาเลนเซีย)",
+      "note": "เมืองในอันดะลุส ที่อิบนุ อัลฟะเราะฎีเป็นกอฎี",
+      "variantsFound": []
+    },
+    {
+      "id": "haramayn",
+      "arabic": "الحرمين",
+      "canonicalThai": "หะเราะมัยน์ (มักกะฮ์-มะดีนะฮ์)",
+      "note": "นครศักดิ์สิทธิ์สองแห่ง มักกะฮ์และมะดีนะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "muqattam",
+      "arabic": "جبل المقطم",
+      "canonicalThai": "ญะบัลอัลมุก็อฏฏ็อม",
+      "note": "ภูเขาใกล้ไคโร ที่อัลหากิมถูกลอบสังหาร",
+      "variantsFound": []
+    },
+    {
+      "id": "fayd",
+      "arabic": "فيد",
+      "canonicalThai": "ฟัยด์",
+      "note": "เมืองพักกลางเส้นทางหัจญ์ในนัจญด์",
+      "variantsFound": []
+    },
+    {
+      "id": "siraf",
+      "arabic": "سيراف",
+      "canonicalThai": "สีรอฟ",
+      "note": "เมืองท่าในอ่าวเปอร์เซีย",
+      "variantsFound": []
+    },
+    {
+      "id": "jidda",
+      "arabic": "جدة",
+      "canonicalThai": "ญิดดะฮ์",
+      "note": "เมืองท่าริมทะเลแดง ประตูสู่มักกะฮ์",
+      "variantsFound": []
+    },
+    {
+      "id": "sur",
+      "arabic": "صور",
+      "canonicalThai": "ศูร (ไทร์)",
+      "note": "เมืองท่าในเลแวนต์ บ้านเกิดอิบนุ ฆ็อลบูน",
+      "variantsFound": []
+    },
+    {
+      "id": "jayhun",
+      "arabic": "نهر جيحون",
+      "canonicalThai": "ญัยหูน (อามูดาร์ยา)",
+      "note": "แม่น้ำอ็อกซัส/อามูดาร์ยา ที่มะห์มูดสร้างสะพานข้าม",
+      "variantsFound": []
+    },
+    {
+      "id": "ascalon",
+      "arabic": "عسقلان",
+      "canonicalThai": "อัสเกาะลาน",
+      "note": "เมืองชายฝั่งในปาเลสไตน์",
+      "variantsFound": []
+    },
+    {
+      "id": "gaza",
+      "arabic": "غزة",
+      "canonicalThai": "ฆ็อซซะฮ์ (กาซา)",
+      "note": "เมืองในปาเลสไตน์",
+      "variantsFound": []
+    },
+    {
+      "id": "nablus",
+      "arabic": "نابلس",
+      "canonicalThai": "นาบุลุส (นาบลัส)",
+      "note": "เมืองในปาเลสไตน์",
+      "variantsFound": []
+    },
+    {
+      "id": "tihama",
+      "arabic": "تهامة",
+      "canonicalThai": "ตะฮามะฮ์",
+      "note": "ที่ราบชายฝั่งทะเลแดงในคาบสมุทรอาหรับ",
       "variantsFound": []
     }
   ],

@@ -196,6 +196,15 @@
       "reviewStatus": "DRAFT"
     },
     {
+      "file": "bidayah-h22.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 22,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 22 — ฟุตูหเปอร์เซีย",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h23.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 23,
@@ -250,6 +259,15 @@
       "reviewStatus": "DRAFT"
     },
     {
+      "file": "bidayah-h29.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 29,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 29",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h31.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 31,
@@ -301,6 +319,15 @@
       "events": 1,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 37 — สมรภูมิศิฟฟีน/ตะห์กีม",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h39.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 39,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 39",
       "reviewStatus": "DRAFT"
     },
     {
@@ -382,6 +409,15 @@
       "events": 1,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 49 — ฟุตูหโรมัน",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h50.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 50,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 50",
       "reviewStatus": "DRAFT"
     },
     {
@@ -538,12 +574,30 @@
       "reviewStatus": "DRAFT"
     },
     {
+      "file": "bidayah-h70.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 70,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 70 — โรมันโจมตีชาม",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h71.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 71,
       "events": 1,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 71 — ฟิตนะฮ์ครั้งที่สอง",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h72.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 72,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 72",
       "reviewStatus": "DRAFT"
     },
     {
@@ -691,6 +745,15 @@
       "reviewStatus": "DRAFT"
     },
     {
+      "file": "bidayah-h90.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 90,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 90",
+      "reviewStatus": "DRAFT"
+    },
+    {
       "file": "bidayah-h91.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 91,
@@ -712,7 +775,7 @@
       "file": "bidayah-h94.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 94,
-      "events": 2,
+      "events": 1,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 94 (Shamela ~296–319) — ปีแห่งฟุเกาะฮาอ์",
       "reviewStatus": "DRAFT"
@@ -721,7 +784,7 @@
       "file": "bidayah-h95.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 95,
-      "events": 2,
+      "events": 1,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 95 (Shamela ~320–330) — มรณกรรมอัลหัจญาจ + อันนะเคาะอีย์",
       "reviewStatus": "DRAFT"
@@ -2569,6 +2632,1167 @@
       "events": 1,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 300 - ★★ก่อตั้งรัฐฟาฏิมียะฮ์ (อุบัยดี)★★ ปีสุดท้าย (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h301.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 301,
+      "events": 6,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 301 - ฆอซวะฮ์ฮุเซน บิน ฮัมดาน, จดหมายถึงก็อรอมิเฏาะฮ์, อัลฮัลลาจเข้าแบกแดด, วะบาอ์, วะฟิยาต (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h302.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 302,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 302 - ชัยชนะเหนือโรม, มุกตะดิรขลิบบุตร, ริบทรัพย์อิบนุล ญัศศอศ, อิมามอันนะซาอีย์เสียชีวิต (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h304.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 304,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 304 - เปลี่ยนวะซีร, ความตื่นตระหนกเรื่อง 'อัซซับซับ', โรงพยาบาลแบกแดด, วะฟิยาต (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h305.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 305,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 305 - ต้อนรับทูตโรมอย่างอลังการ (วังต้นไม้ทองคำ), วะฟิยาตนักไวยากรณ์อัลหามิฎ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h306.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 306,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 306 - โรงพยาบาลพระมารดา, เปลี่ยนวะซีร, ศาลร้องทุกข์, วะฟิยาตอิบนุ สุร็อยจ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h307.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 307,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 307 - ไฟไหม้อัลกัรค์, เชลยจอร์เจีย, อุกกาบาต, ก็อรอมิเฏาะฮ์บัศเราะฮ์, วะฟิยาตอะบูยะอ์ลา อัลเมาศิลีย์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h308.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 308,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 308 - ราคาพุ่ง-จลาจล, ยกเลิกสัญญาภาษีหามิด, อากาศหนาว, วะฟิยาตผู้รายงานเศาะฮีหฺมุสลิม (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h309.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 309,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 309 - ★การประหารอัลฮัลลาจ, มุอ์นิสคุมอียิปต์-ชาม, อัฏฏ็อบรีโต้หะนาบิละฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h310.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 310,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 310 - ★การเสียชีวิตของอิมามอัฏฏ็อบรี, ชัยชนะเหนือโรม, แผ่นดินแยกที่วาสิฏ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h311.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 311,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 311 - ★ก็อรอมิเฏาะฮ์ปล้นบัศเราะฮ์, วางยาพิษหามิด, วะฟิยาตอิบนุ คุซัยมะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h312.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 312,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 312 - ★อะบูฏอฮิรปล้นกองหัจญ์, การสังหารวะซีรอิบนุลฟุรอต, ประหารสาวกฮัลลาจ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h313.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 313,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 313 - รื้อมัสยิดบะรอษา (มัสยิดฎิรอร), เปลี่ยนวะซีรคอกอนี→เคาะศีบี, วะฟิยาตอัลเฆาะฎออิรี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h314.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 314,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 314 - อัดดุมุสตุกบุกมะลัฏยะฮ์, ปลดวะซีรเคาะศีบี (เมาสุรา), อะลีย์ บิน อีซากลับมา, วะฟิยาตนัศร์ อัลฟะรออิฎี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h315.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 315,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 315 - อะลีย์ บิน อีซากลับ-โรมเข้าสุมัยซาฏ, ★ก็อรอมิเฏาะฮ์จับยูซุฟ บิน อะบีอัสซาจ-ยึดกูฟะฮ์, วะฟิยาตอัลอัคฟัช (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h316.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 316,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 316 - ★อะบูฏอฮิรสร้างดารุลฮิจเราะฮ์-เรียกหามะฮ์ดีมัฆริบ, บาดหมางมุอ์นิส-มุกตะดิร, วะฟิยาตอะบูอะวานะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h317.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 317,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 317 - ★ถอด-คืนมุกตะดิร, ★★ก็อรอมิเฏาะฮ์ปล้นมักกะฮ์-ขโมยหินดำ, จดหมายมะฮ์ดีฟาฏิมียะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h318.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 318,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 318 - ปลดวะซีรอิบนุ มุกละฮ์, กบฏเมาศิล-มอบหัวเมืองแก่โอรส, ★คนกลายเป็นหิน, วะฟิยาตอิบนุลอัลลาฟ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h319.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 319,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 319 - อิบนุ หัมดานตีโรม, น้ำท่วมตักรีต, ลมแดง-ดำที่เมาศิล, วะฟิยาตอัลบัลคี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h320.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 320,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 320 - ★★การสังหารเคาะลีฟะฮ์อัลมุกตะดิร, การขึ้นครองของอัลกอฮิร, วะฟิยาตอิบนุ ค็อยรอน (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h321.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 321,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 321 - อัลกอฮิรห้ามสุรา/นักร้องหญิง, เปลี่ยนวะซีร, ★ต้นกำเนิดบูยิด, ★วะฟิยาตอัฏเฏาะหาวี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h322.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 322,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 322 - โรมบุกมะลัฏยะฮ์, ★ผงาดบูยิด, ★★ควักตาอัลกอฮิร-ขึ้นครองอัรรอฎี, ฆ่าฮารูน บิน เฆาะรีบ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h323.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 323,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 323 - คดีอิบนุ ชะนะบูษ, ห้ามสาวกอัลบัรบะฮารี, ★ฝนดาวตก-ฆ่ามัรดาวิจ, วะฟิยาตนิฟเฏาะวัยฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h324.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 324,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 324 - วิกฤตวะซีร, ★★ภาพรวมการแบ่งอาณาจักรอิสลามทั่วโลก, วะฟิยาตญะห์เซาะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h325.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 325,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 325 - อิบนุ รออิก อะมีรุลอุมะรออ์ปราบอัลบะรีดี (บัจกัม), วะฟิยาตอิบนุลวัชชาอ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h326.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 326,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 326 - จดหมายโรม-ไถ่เชลย, ★การตายของอิบนุ มุกละฮ์, บัจกัมอะมีรุลอุมะรออ์, บูยิดยึดอะฮ์วาซ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h327.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 327,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 327 - บัจกัมปราบหัมดานที่เมาศิล, ★ฟิตนะฮ์อันดะลุส (อุมัยยะฮ์ทรยศ), วะฟิยาตอิบนุ อะบีหาติม อัรรอซี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h328.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 328,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 328 - รุกนุดเดาละฮ์ยึดอัศบะฮาน, น้ำท่วมไทกริส, แผนอัลบะรีดี, แบ่งอียิปต์-ชาม, วะฟิยาตอัลมุรตะอิช (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h329.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 329,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 329 - ★★ตายเคาะลีฟะฮ์อัรรอฎี, ★ขึ้นครองอัลมุตตะกี, กูรตะกีน, ★โดมเขียวมันศูรถล่ม+ทุพภิกขภัย (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h330.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 330,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 330 - ★ดาวหาง+ทุพภิกขภัย, หัมดานิด (สัยฟุดเดาละฮ์) เข้าช่วย, อัลมุตตะกีกลับแบกแดด, ★วะฟิยาตอัลมะหามิลี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h331.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 331,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 331 - ตูซูนเป็นอะมีรุลอุมะรออ์, ลัทธิรอฟฎ์แพร่, ตายสามานิด, ★วะฟิยาตอิมามอัลอัชอะรี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h332.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 332,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 332 - อัลมุตตะกีหนีตูซูน, มุอิซซุดเดาละฮ์แพ้ที่วาสิฏ, ★ตายอะบูฏอฮิร อัลก็อรมิฏีย์, วะฟิยาตอิบนุ อุกดะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h333.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 333,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 333 - ★★ตูซูนควักตาอัลมุตตะกี, ★ขึ้นครองอัลมุสตักฟี, อิคชีดเตือนเรื่องตูซูน (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h334.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 334,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 334 - ★★บูยิดยึดแบกแดด-ควักตาอัลมุสตักฟี-ตั้งอัลมุฏีอ์, ตายตูซูน, อิกฏออ์+ทุพภิกขภัย, ★วะฟิยาตอัลคิเราะกี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h335.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 335,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 335 - อัลมุฏีอ์มั่นคง-ปราบตะกีน, ★การขยายอาณาจักรบูยิด+ไถ่เชลย, วะฟิยาตอัลอิสตะรอบาษี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h336.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 336,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 336 - ยึดบัศเราะฮ์คืน+ข่มขู่เกาะรอมิเฏาะฮ์, รุกนุดเดาละฮ์ยึดเฏาะบะริสตาน, วะฟิยาตอิบนุอัลมุนาดี+บุตรสาวผู้ทรงธรรม (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h337.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 337,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 337 - ยึดเมาศิล+สงบศึกหัมดานิด, สัยฟุดเดาละฮ์พ่ายโรม, ★อุทกภัยดิจญ์ละฮ์, วะฟิยาตบิดาอัลหากิม+กุดามะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h338.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 338,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 338 - ฟิตนะฮ์ชีอะฮ์-ซุนนี+ปล้นกัรค์, กบฏอิมรอน บิน ชาฮีน, ★มรณกรรมอิมาดุดเดาละฮ์+ตั้งอะฎุดุดเดาละฮ์, วะฟิยาตอันนะหาส+อัลมุสตักฟี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h339.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 339,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 339 - ★★คืนอัลหะญะรุลอัสวัดสู่มักกะฮ์(หลัง 22 ปี), สัยฟุดเดาละฮ์ถูกซุ่มโจมตีในรูม, เปลี่ยนวะซีรเป็นอัลมุฮัลละบี, วะฟิยาตอัลกอฮิร+อัลฟารอบี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h340.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 340,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 340 - อัลมุฮัลละบีสกัดเจ้าโอมานที่บัศเราะฮ์, คดีผู้อ้างความเป็นพระเจ้า+ฟิตนะฮ์สำนัก, วะฟิยาตอัลกัรคี อิมามหะนะฟี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h341.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 341,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 341 - โรมยึดซะรูจ+เฆี่ยนวะซีร+พิพาทคุฏบะฮ์มักกะฮ์, ★มรณกรรมอัลมันศูร ฟาฏิมียะฮ์→อัลมุอิซซ์ผู้สร้างไคโร, วะฟิยาตอะบูสะอีด อัลอะอ์รอบี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h342.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 342,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 342 - สัยฟุดเดาละฮ์บุกรูมมีชัย+พิพาทหัจญ์มักกะฮ์+สงครามซามานียะฮ์, วะฟิยาตอัตตะนูคี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h343.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 343,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 343 - ★ชัยชนะสัยฟุดเดาละฮ์เหนือดุมุสตุก+สังหารคอนสแตนติน, โรคระบาด+มรณกรรมนูห์ อัสสามานี, วะฟิยาตอะบูอะลีย์ อัลกาติบ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h344.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 344,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 344 - ★โรคระบาด+ตั๊กแตน, ตั้งบัคติยารเป็นทายาท+นักลวงโลก+สงครามฟาฏิมียะฮ์-อันดะลุส, วะฟิยาตอิบนุ อัสสัมมาก+อัสสิมนานี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h345.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 345,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 345 - ★กบฏรูซบะฮาน(เติร์กรุ่ง-ดัยลัมร่วง), สัยฟุดเดาละฮ์-โรม, ★แผ่นดินไหวฮะมะซาน+ฟิตนะฮ์อัศบะฮาน-กุม, วะฟิยาตฆุลามษะอ์ลับ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h346.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 346,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 346 - ฟิตนะฮ์อัลกัรค์+ทะเลลด+★แผ่นดินไหว40วัน, มุอิซซ์เตรียมรบนาศิรุดเดาละฮ์, โรคระบาดตายเฉียบพลัน, วะฟิยาตอัลอะศ็อมม์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h347.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 347,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 347 - แผ่นดินไหว+ตั๊กแตน+โรมยึดอามิด, ★มุอิซซ์ยึดเมาศิล+สงบศึก, ★เญาฮัรพิชิตมัฆริบถึงมหาสมุทร, วะฟิยาตอิบนุ ยูนุส (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h348.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 348,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 348 - ฟิตนะฮ์รอฟิเฎาะฮ์-ซุนนี+โรมยึดเฏาะรอซูส, ภัยแล้ง+ตั๊กแตน+มุอิซซ์แต่งงานบุตรี, วะฟิยาตอันนัจญาด+อัลคุลดี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h349.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 349,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 349 - อัลมุสตะญีรในอาเซอร์ไบจาน, สัยฟุดเดาละฮ์ถูกซุ่มในรูม, ★ฟิตนะฮ์แบกแดด+ที่มาคำเติร์กมัน, วะฟิยาตอัลค็อฏฏอบี+ญะอ์ฟัร บิน หัรบ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h350.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 350,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 350 - มุอิซซ์ป่วย+สร้างวัง, ★เหมาตำแหน่งผู้พิพากษาครั้งแรก, โรมโจมตีคาราวาน+มรณกรรมอัสสามานี, ★มรณกรรมอันนาศิรแห่งอันดะลุส→อัลหะกัม อัลมุสตันศิร (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h351.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 351,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 351 - ★★โรมปล้นเมืองหะลับ-สังหารหมู่, ปล้นอัยน์ ซัรบะฮ์+จับกวีอะบูฟิรอส, ฟิตนะฮ์รอฟิเฎาะฮ์เขียนคำสาปที่แบกแดด (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h352.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 352,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 352 - ★★อาชูรออ์+ฆอดีรสาธารณะครั้งแรกในแบกแดด, โรมปล้นอัรรุฮา+มรณกรรมอัดดุมุสตุก, แฝดติดกันอาร์เมเนีย, วะฟิยาตอุมัร บิน อักษัม (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h353.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 353,
+      "events": 6,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 353 - อาชูรออ์+กบฏนะญา, โรมตีอัลมัศศีศ็อฮ์, มุอิซซ์-นาศิรุดเดาละฮ์สงบศึก, อิบนุ อัดดาอีอ้างมะฮ์ดี, ★ยุทธนาวีช่องแคบซิซิลี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h354.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 354,
+      "events": 9,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 354 - อาชูรออ์+โรมยึดอัลมัศศีศ็อฮ์+รอชีกยึดอันฏอกิยะฮ์, กบฏมัรวาน-สิจิสตาน, ★คอซาร์รับอิสลาม, ★วะฟิยาตอัลมุตะนับบี+อิบนุ ฮิบบาน (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h355.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 355,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 355 - อาชูรออ์+โรมตีอามิด-นะศีบีน, รุกนุดเดาละฮ์ปราบทัพคุรอซาน, มุอิซซ์ป่วยหนัก, ไถ่เชลย+สร้างมาริสตาน, ★บนูสุลัยม์ปล้นกองหัจญ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h356.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 356,
+      "events": 7,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 356 - ★★มรณกรรมมุอิซซุดเดาละฮ์→บัคติยาร+วัชมะกีรสิ้นชีพ, ★★วะฟิยาตสัยฟุดเดาละฮ์+อัลอิศบะฮานี(อัลอะฆอนี)+กาฟูร+อัลกอลี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h357.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 357,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 357 - มะฮ์ดีปลอม(บุตรอัลมุสตักฟี), โรมจับเชลยอันฏอกิยะฮ์+อูฐหัจญ์ตาย, ★กวีอะบูฟิรอสถูกฆ่าที่เศาะดัด, วะฟิยาตอัลมุตตะกี+กาฟูร (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h358.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 358,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 358 - อาชูรออ์+ทุพภิกขภัยอิรัก+โรมเผาหิมศ์, ★★เญาฮัรพิชิตอียิปต์ให้ฟาฏิมียะฮ์, ★เริ่มสร้างเมืองไคโร (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h359.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 359,
+      "events": 6,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 359 - ★โรมยึดอันฏอกิยะฮ์+ชายฝั่งชาม, ★ลอบสังหารนิเกโฟรอส, ★ฟาฏิมียะฮ์ยึดดิมัชก์, ★อิบนุ ฮัซม์ตอบกวีนิเกโฟรอส (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h360.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 360,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 360 - ★เกาะรอมิเฏาะฮ์ยึดดิมัชก์+บุกอียิปต์, อะษานชีอะฮ์ในดิมัชก์, วะฟิยาตอัสสะรี อัรร็อฟฟาอ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h361.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 361,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 361 - ★โรมบุกอัลญะซีเราะฮ์+ฟิตนะฮ์, ★บัคติยารรีดไถเคาะลีฟะฮ์เลิกญิฮาด, ปรองดองซามานียะฮ์-บูยิด, ★★อัลมุอิซซ์ย้ายสู่อียิปต์, วะฟิยาตสะอีด อัลญันนาบี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h362.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 362,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 362 - นักนิติศาสตร์กระตุ้นบัคติยารชนะโรม, ★จับดุมุสตุกที่อามิด, ★ไฟไหม้อัลกัรค์+อิบนุ บะกียะฮ์, ★★อัลมุอิซซ์เข้าอียิปต์-ไคโร (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h363.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 363,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 363 - ★ฟิตนะฮ์จำลองศึกอูฐในแบกแดด, อิซซุดเดาละฮ์ยึดเมาศิล, ★แตกหักบัคติยาร-สุบุกตะกีน, ★★ถอดถอนอัลมุฏีอ์→สถาปนาอัฏฏออิอ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h364.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 364,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 364 - ★อะฎุดุดเดาละฮ์ยึดแบกแดด-ปลดบัคติยาร+ฟื้นเกียรติเคาะลีฟะฮ์, ★ภัยอัยยารูน, ★คุฏบะฮ์ฟาฏิมียะฮ์ที่มักกะฮ์-มะดีนะฮ์+ถอยสู่ฟารส์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h365.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 365,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 365 - ★รุกนุดเดาละฮ์แบ่งอาณาจักรบูยิด, ฟาฏิมียะฮ์นำหัจญ์, ★ยูซุฟ บุลลิกีนพิชิตมัฆริบ, ★★วะฟิยาตอัลมุอิซซ์ ฟาฏิมียะฮ์(ซิรดาบ)→นิซาร อัลอะซีซ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h366.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 366,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 366 - ★★มรณกรรมรุกนุดเดาละฮ์, ★อะฎุดุดเดาละฮ์ปราบอิซซุดเดาละฮ์-ยึดอิรัก, มรณกรรมมันศูร อัสสามานี→นูห์ที่ 2 (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h367.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 367,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 367 - ★★อะฎุดุดเดาละฮ์ครองแบกแดด-ฆ่าบัคติยาร, ★ห้ามเทศนา, ★อิบนุ สัมอูน, ★ประหารอิบนุ บะกียะฮ์ด้วยช้าง (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h368.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 368,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 368 - ★เกียรติยศพิเศษอะฎุดุดเดาละฮ์+พิชิตหัมดานิด, ★ก็อสซาม อัตตัรรอบครองดิมัชก์+สังหารอะบูตัฆลิบ, วะฟิยาตอัลเกาะฏีอี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h369.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 369,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 369 - ★มรณกรรมอิมรอน บิน ชาฮีน, ★จับกุม-ปลดอัลมูซาวี(บิดาอัรเราะฎี), ★อะฎุดุดเดาละฮ์รับฉายาตาญุดเดาละฮ์+เคาะลีฟะฮ์สมรสบุตรสาวเขา (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h370.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 370,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 370 - ★อัศศอหิบ บิน อับบาด+เคาะลีฟะฮ์เข้าหอกับบุตรอะฎุดุดเดาละฮ์+คุฏบะฮ์ฟาฏิมียะฮ์ที่ฮะเราะมัยน์, ★★วะฟิยาตอัลญัศศอศ+อิบนุ เคาะลาวัยฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h371.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 371,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 371 - ★เพลิงไหม้อัลกัรค์+ขโมยทรัพย์อะฎุดุดเดาละฮ์, ★วะฟิยาตอัลอิสมาอีลี+อับดุลอะซีซ อัตตะมีมี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h372.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 372,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 372 - ★★มรณกรรมอะฎุดุดเดาละฮ์→เศาะมศอมุดเดาละฮ์+เปิดมาริสตานอะฎุดี, ★ผู้แรกใช้ฉายาชาฮันชาห์, สาส์นถึงอัฟตะกีน (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h373.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 373,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 373 - ★ทุพภิกขภัยแบกแดด+มรณกรรมมุอัยยิดุดเดาละฮ์→ฟัครุดเดาละฮ์+เกาะรอมิเฏาะฮ์, ★วะฟิยาตบุลลิกีน บิน ซีรี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h374.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 374,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 374 - ประนีประนอมเศาะมศอมุดเดาละฮ์-ฟัครุดเดาละฮ์+บ้านถล่มดัรบ์ ริบาห์, วะฟิยาตอัลอัซดี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h375.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 375,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 375 - ★เกาะรอมิเฏาะฮ์บุกกูฟะฮ์+ล้มเลิกภาษีผ้าไหม, ★★วะฟิยาตอัดดาเราะกี+หุเซนัก (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h376.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 376,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 376 - ★ภัยพิบัติงูระบาด-แผ่นดินไหวเมาศิล, ★ชะรอฟุดเดาละฮ์ปราบเศาะมศอมุดเดาละฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h377.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 377,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 377 - ★สัตยาบันอัฏฏออิอ์-ชะรอฟุดเดาละฮ์, ★★วะฟิยาตอิสหาก(บิดาอัลกอดิร)+อะบูอะลี อัลฟาริซี+สุตัยตะฮ์(นักปราชญ์สตรี) (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h378.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 378,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 378 - ★ภัยพิบัติพายุ-จมเรือ+ความร้อนบัศเราะฮ์, วะฟิยาตอัลหุเซน นักอ่านตาบอด (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h379.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 379,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 379 - ★มรณกรรมชะรอฟุดเดาละฮ์→บะฮาอุดเดาละฮ์, สร้างมัสยิดญามิอ์อัลเกาะฏีอะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h380.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 380,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 380 - ★อัลมูซาวีรับนะกีบ(ตั้งอัรเราะฎี-อัลมุรตะฎอ)+อัยยารูน, ★วะฟิยาตอิบนุ กิลลิส วะซีรฟาฏิมียะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h381.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 381,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 381 - ★★ถอดถอนอัฏฏออิอ์→สถาปนาอัลกอดิร บิลลาฮ์, ★อะกีดะฮ์อัลกอดิรียะฮ์, ฟิตนะฮ์ฆอดีร (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h382.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 382,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 382 - ★อิบนุ อัลมุอัลลิมห้ามอาชูรออ์+ถูกรัดคอ, กักบริเวณอัฏฏออิอ์, อัลอุศ็อยฟิรคุ้มกันหัจญ์, วะฟิยาตอัลอัสกะรี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h383.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 383,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 383 - มัสยิดอัลหัรบียะฮ์เป็นญามิอ์+สะพานบะฮาอุดเดาละฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h384.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 384,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 384 - ★ภัยอัยยารูน, ★กองหัจญ์อิรัก-ชาม-เยเมนพลาดหัจญ์(อัลอุศ็อยฟิร), ★วะฟิยาตอิบนุ ฮิลาล อัศศอบี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h385.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 385,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 385 - ฟัครุดเดาละฮ์ตั้งอัฎฎ็อบบีเป็นวะซีร, ★จับกุมกอฎีอับดุลญับบาร, ★★วะฟิยาตอัศศอหิบ บิน อับบาด(กาฟีอัลกุฟาต) (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h386.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 386,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 386 - ศพ'อัซซุบัยร์'ที่บัศเราะฮ์, ★อัลหากิมขึ้นครองอียิปต์, ★★วะฟิยาตอัลอะซีซ ฟาฏิมียะฮ์+อะบูฏอลิบ อัลมักกี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h387.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 387,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 387 - ★มรณกรรมฟัครุดเดาละฮ์→รุสตัม(อายุ 4 ปี), ★วะฟิยาตอะบูอะหมัด อัลอัสกะรี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h388.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 388,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 388 - ★ลูกเห็บ+สัตยาบันมัจดุดเดาละฮ์+ผู้แอบอ้างอัฏฏออิอ์, ★การสังหารเศาะมศอมุดเดาละฮ์, ★★วะฟิยาตอัลค็อฏฏอบี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h389.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 389,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 389 - ★★มะห์มูดยึดคุรอซาน-ล้มซามานียะฮ์, ★ฟิตนะฮ์ฆอดีร-อาชูรออ์, ★สองชะรีฟถูกจับเรียกค่าไถ่, วะฟิยาตอัสสะรอคซี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h390.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 390,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 390 - เหมืองทองสิญิสตาน+ยึดฟารส์+วะศียะฮ์อัลกอดิร, ★★วะฟิยาตบัรญะวาน+อัลมุอาฟา บิน ซะกะรียา (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h391.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 391,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 391 - ★อัลกอดิรตั้งทายาท+★กำเนิดอัลกออิม, ★ลอบสังหารอัลมุก็อลลัด→กิรวาช, วะฟิยาตอิบนุ ฮินซาบะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h392.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 392,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 392 - ★★มะห์มูดบุกอินเดีย-จับไชยปาล, ★จลาจลต่อชาวคริสต์ในแบกแดด, ★วะฟิยาตอิบนุ ญินนี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h393.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 393,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 393 - ★อะมีดุลญุยูชห้ามทั้งสองพิธี, ★ราชวงศ์มัซยะดิด+ดิมัชก์, ★★วะฟิยาตอัฏฏออิอ์, ★ไมมูนะฮ์ นักเทศนาสตรี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h394.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 394,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 394 - แต่งตั้งอัลมูซาวี+อิบนุ วาศิลยึดอัลบะฏีหะฮ์, ★นักอ่านอัลกุรอานสองคนช่วยกองหัจญ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h395.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 395,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 395 - ★ทุพภิกขภัยอิฟรีกียะฮ์+ผู้แสวงบุญกระหายตาย, วะฟิยาตอัลบุคอรี อัลมะลาหิมี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h396.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 396,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 396 - ดาวปรากฏ+กิรวาชอะมีรกูฟะฮ์+อัชชะรีฟ อัรเราะฎี, ★★มะห์มูดบุกอินเดีย+★สุญูดต่ออัลหากิม, วะฟิยาตอะบูสะอ์ด อัลอิสมาอีลี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h397.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 397,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 397 - ★★กบฏอะบูรักวะฮ์ต่ออัลหากิม, ★มะห์มูดตีอิตลิก ข่าน+ผู้แสวงบุญพลาดหัจญ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h398.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 398,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 398 - ★มะห์มูดบุกอินเดีย+หิมะแบกแดด, ★★เผามุสฮัฟอ้างอิบนุ มัสอูด, ★แผ่นดินไหวอัดดีนะวัร, ★★อัลหากิมทำลายโบสถ์พระคูหาศักดิ์สิทธิ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h399.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 399,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 399 - ★แย่งชิงอัรเราะห์บะฮ์+เปลี่ยนกอฎี, ★ลมทรายแดง+ผู้แสวงบุญพลาดหัจญ์, วะฟิยาตอะลี บิน ยูนุส+มารดาอัลกอดิร (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h400.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 400,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 400 [ครบรอบศตวรรษ 5] - ★ข่าวลือเคาะลีฟะฮ์ตาย+อัลหากิมยึดของบ้านญะอ์ฟัร+ดารุลอิลม์, ★★วะฟิยาตอะบูอะหมัด อัลมูซาวี(บิดาอัรเราะฎี) (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h401.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 401,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 401 - ★คุฏบะฮ์เมาศิลให้อัลหากิมแล้วยกเลิก, ★อุทกภัยดิจญ์ละฮ์+กบฏอัลอะละวี, ★วะฟิยาตอะบูมัสอูด อัดดิมัชกี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h402.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 402,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 402 - ★อาชูรออ์/มัสยิดอัลกัฟฟ์, ★มะหะฎิรหักล้างฟาฏิมียะฮ์, ★ทัพอินเดียมะห์มูดฆ็อซนะฮ์+พายุดำ, ★วะฟิยาตอันนูบัคตี/อัลบากิลลานี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h403.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 403,
+      "events": 7,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 403 - ★อัรเราะฎีนะกีบวงศ์ฏอลิบ, ★บนูเคาะฟาญะฮ์วางยาผู้แสวงบุญ, ★ฟิตนะฮ์มุสลิม-คริสต์+มะห์มูดปฏิเสธอัลหากิม, ★อุมัยยะฮ์อันดะลุสหวนคืน+ตายบะฮาอุดเดาละฮ์/กอบูส, ★★วะฟิยาตอัลบากิลลานี+อิบนุอัลฟะเราะฎีผู้พลีชีพ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h404.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 404,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 404 - ★อัลกอดิรสถาปนาสุลฏอนุดเดาละฮ์, ★มะห์มูดยกทัพอินเดีย+บนูเคาะฟาญะฮ์ถูกปราบ, ★วะฟิยาตอิบนุอัลบัฆดาดี/อัลมุญาฮิดี/อัลอิศเฏาะครี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h405.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 405,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 405 - ★อัลหากิมกักขังสตรีอียิปต์, ★อิบนุอะบีอัชชะวาริบกอฎี+มัสยิดฟัครุลมุลก์, ★★วะฟิยาตบัดร์ บิน หัสนะวัยฮ์กษัตริย์เคิร์ดผู้ยุติธรรม, ★★อัลหากิม อันนัยสาบูรีเจ้าของอัลมุสตัดร็อก+อิบนุกัจญ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h406.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 406,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 406 - ★ฟิตนะฮ์ซุนนะฮ์-ชีอะฮ์+อัลมุรตะฎอนะกีบ, ★หายนะกองหัจญ์+ทัพอินเดียมะห์มูด, ★★วะฟิยาตอะบูหามิด อัลอิสฟะรอยีนี+อัชชะรีฟ อัรเราะฎีกวี+บาดีส อัซซีรี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h407.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 407,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 407 - ★ไฟไหม้มัชฮัดอัลหุสัยน์กัรบะลาอ์, ★ราชวงศ์หัมมูดครองอันดะลุส+มะห์มูดยึดเคาะวาริซม์+ฟัครุลมุลก์ถูกปลด, ★★วะฟิยาตวะซีรฟัครุลมุลก์ถูกสังหาร (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h408.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 408,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 408 - ★ฟิตนะฮ์ซุนนะฮ์-ชีอะฮ์ใหญ่+ชะร็อฟุดเดาละฮ์ครองมาวะรออันนะฮ์ร, ★★อัลกอดิรบังคับมุอ์ตะซิละฮ์เตาบะฮ์+มะห์มูดปราบอุตริกรรม, ★วะฟิยาตอัลหาญิบ ชะบาชี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h409.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 409,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 409 - ★★เอกสารหลักความเชื่อชาวซุนนะฮ์(ตักฟีรผู้กล่าวอัลกุรอานถูกสร้าง), ★มะห์มูดมีชัยเหนืออินเดีย+น้ำทะเลท่วมบัศเราะฮ์, ★วะฟิยาตมุฮัซซะบุดเดาละฮ์+★★อัลหาฟิซ อับดุลเฆาะนี อัลมิศรี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h410.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 410,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 410 - ★สาส์นมะห์มูดเล่าการพิชิตอินเดีย(เมืองวิหารเทวรูป)+อัลกอดิรแต่งตั้งเกาะวามุดเดาละฮ์ครองกัรมาน, ★วะฟิยาตอิบนุ มัรดะวัยฮ์+ฮิบะตุลลอฮ์ บิน สะลามะฮ์(มุฟัสสิรตาบอด) (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h411.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 411,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 411 - ★★การหายตัว/ลอบสังหารอัลหากิม บิอัมริลลาฮ์(ฟาฏิมียะฮ์)ที่ญะบัลอัลมุก็อฏฏ็อม+ลักษณะการปกครองฉาว(อ้างความเป็นพระเจ้า/เผาเมืองมิศร์)+การขึ้นครองของอัฎฎอฮิร (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h412.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 412,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 412 - ★มะห์มูดฟื้นฟูเส้นทางหัจญ์(สังหารญัมมาซ), ★★วะฟิยาตอิบนุ ริซเกาะวัยฮ์+อะบูอับดิรเราะห์มาน อัสสุละมี+อะบูอะลี อัดดักกอก (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h413.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 413,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 413 - ★ชายอียิปต์ทุบหินดำที่กะอ์บะฮ์+บนูชัยบะฮ์ซ่อม, ★★วะฟิยาตอิบนุ อัลเบาวาบนักเขียนอักษร(ประวัติอักษร12ชนิด)+อัชชัยค์ อัลมุฟีดเชคอิมามียะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h414.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 414,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 414 - ★ชะร็อฟุดเดาละฮ์เข้าแบกแดด+สาส์นมะห์มูดทัพอินเดีย(นกตรวจยาพิษ/หินสมานแผล), ★วะฟิยาตอัลกัชฟะลีชาฟิอี+อิบนุ ญะฮ์ฎ็อมเชคศูฟี+อัลกอสิม อัลฮาชิมี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h415.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 415,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 415 - ★อัลมัฆริบีต่อสัตยาบันชะร็อฟุดเดาละฮ์+เผาเสื้อฟาฏิมียะฮ์, ★★วะฟิยาตสุลฏอนุดเดาละฮ์บุวัยฮ์(ชีรอซ)+อิบนุ อันนะกีบ(อายุ110)+อัลมะหามิลีชาฟิอี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h416.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 416,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 416 - ★★การตายของชะร็อฟุดเดาละฮ์บุวัยฮ์+ฟิตนะฮ์อัยยารูทำลายแบกแดด, ★วะฟิยาตซาบูร บิน อัรดะชีร(ดารุลอิลม์)+★★อัตติฮามีกวี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h417.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 417,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 417 - ★ฟิตนะฮ์อัยยารู(เผาอัลกัรค์)+อากาศหนาวจัด, ★★วะฟิยาตกอฎีอิบนุ อะบีอัชชะวาริบ+อัลก็อฟฟาล อัลมัรวะซี(แนวทางคุรอซานียะฮ์) (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h418.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 418,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 418 - ★★มะห์มูดทำลายเทวรูปโสมนาถ, ★ญะลาลุดเดาละฮ์เข้าแบกแดด, ★★วะฟิยาตอะบูอิสหาก อัลอิสฟะรอยีนี(รุกนุดดีน)+อัลกุดูรี(มุคตะศ็อรหะนะฟี)+อัลวะซีร อัลมัฆริบีกวี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h419.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 419,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 419 - ★ญะลาลุดเดาละฮ์เกือบถูกขับแล้วคืนดี+ลูกเห็บทำลายอินทผลัม, ★วะฟิยาตอัตตาญิร(ตายไร้ผ้ากะฝั่น)+อะบูอัลฟะวาริส(ผู้อธรรม)+อิบนุ ฆ็อลบูน อัศศูรีกวี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h420.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 420,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 420 - ★★การประกาศอะกีดะฮ์อัลกอดิรี+มะห์มูดปราบบาฏินียะฮ์ที่อัรร็อยย์, ★ปลดเคาะฏีบชีอะฮ์+ฟิตนะฮ์บะรอษา, ★วะฟิยาตอัรเราะบะอีนักไวยากรณ์+อะสะดุดเดาละฮ์ บิน มิรดาส (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h421.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 421,
+      "events": 6,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 421 - ★★การเสียชีวิตของมะห์มูดแห่งฆ็อซนะฮ์(มัสอูดชิงอำนาจ)+ชีวประวัติ, ★★ไบแซนไทน์บุกหะลับแล้วพ่าย(อะซาซ)+อัลกอดิรตั้งอัลกออิมรัชทายาท, ★ปล้นนัรซา+ฟิตนะฮ์อาชูรออ์, ★ญะลาลุดเดาละฮ์ยึดวาสิฏ-บัศเราะฮ์ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h422.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 422,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 422 - ★★การเสียชีวิตของอัลกอดิร(ครอง41ปี)+ฟิตนะฮ์ซุนนะฮ์-ชีอะฮ์, ★★การขึ้นเป็นเคาะลีฟะฮ์ของอัลกออิม, ★วะฟิยาตกอฎีอับดุลวะฮ์ฮาบ อัลมาลิกี(อัตตัลกีน) (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h423.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 423,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 423 - ★ความแห้งแล้ง+ความขัดแย้งญะลาลุดเดาละฮ์-อะบูกาลีญาร(อัลมาวัรดี), ★โรคระบาดใหญ่ทั่วตะวันออก(สี่หมื่นศพ)+มัสอูดสังหารชาวอัศบะฮาน, ★วะฟิยาตอันนุอัยมี+อัศศ็อบบาฆ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h424.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 424,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 424 - ★อัยยารูครองแบกแดด(หัวหน้าอัลบุรญุมี), ★ญะลาลุดเดาละฮ์ยึดอัลบัศเราะฮ์+พวกเติร์กลุกฮือ, ★วะฟิยาตอิบนุ อัสสัมมาก อัลวาอิซ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h425.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 425,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 425 - ★มัสอูดยกทัพอินเดีย+อัลบะซาซีรีคุ้มครองแบกแดด+ตายกษัตริย์ไบแซนไทน์, ★★แผ่นดินไหวใหญ่อียิปต์-ชาม, ★โรคคอตีบ(ตาย9หมื่น), ★★วะฟิยาตอัลบัรกอนี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h426.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 426,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 426 - ★อาหรับเร่ร่อนปล้นชานแบกแดด+น้ำท่วมบัศเราะฮ์+ชัยชนะมัสอูดในอินเดีย, ★วะฟิยาตอะหมัด บิน กุลัยบ์(ตายเพราะความหลงรัก)+อิบนุ ชาษาน อัลบัซซาซ (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h427.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 427,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 427 - ★บูรณะสะพานเกาะนเฏาะเราะฮ์อีซา, ★★การเสียชีวิตของอัฎฎอฮิร(ฟาฏิมียะฮ์)+การขึ้นครองของอัลมุสตันศิร, ★★วะฟิยาตอัษษะอ์ละบีนักอรรถาธิบายอัลกุรอาน (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h428.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 428,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 428 - ★ญะลาลุดเดาละฮ์ยึดแบกแดด+คืนดีกับอะบูกาลีญาร, ★★วะฟิยาตอัลกุดูรี(มุคตะศ็อร)+มิฮ์ยาร อัดดัยละมีกวี+★★อิบนุ ซีนา(อะวิเซนนา)+การตักฟีรของอัลเฆาะซาลี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h429.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 429,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 429 - ★★จุดเริ่มต้นราชวงศ์สัลญูก(ฏุฆรุลบัก)+อียิปต์ยึดหะลับ, ★★ข้อพิพาทฉายามะลิกุลมุลูก+จุดยืนของอัลมาวัรดี, ★วะฟิยาตอัษษะอาลิบี(ยะตีมะตุดดะฮ์ร)+อับดุลกอฮิร อัลบัฆดาดี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h430.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 430,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 430 - ★มัสอูดตีทัพสัลญูกแตก+บนูสัลญูกยึดคุรอซาน+อัลอะซีซบุวัยฮ์องค์สุดท้าย, ★★วะฟิยาตอะบูนุอัยม์ อัลอัศบะฮานี(หิลยะตุลเอาลิยาอ์)+อะบูซัยด์ อัดดะบูซี(วิชาคิลาฟ)+อัลเหาฟี (Rule 89)",
       "reviewStatus": "DRAFT"
     }
   ]

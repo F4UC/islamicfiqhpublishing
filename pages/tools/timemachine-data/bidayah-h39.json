@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "hijriYear": 39,
+    "ceYear": 659,
+    "ceSpan": "659",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 39 (เล่ม 12): Rule 89. ★offset: pid=น.+3146★",
+    "groupOrder": [
+      "เหตุการณ์สำคัญ",
+      "การพิชิต (ฟุตูหาต)",
+      "ผู้วายชนม์ · ชีวประวัติ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 39"
+  },
+  "events": [
+    {
+      "id": "bidayah-h39-001",
+      "book": "al-bidayah",
+      "hijriYear": 39,
+      "ceYear": 659,
+      "order": 1,
+      "type": "event",
+      "cat": "สงคราม",
+      "group": "เหตุการณ์สำคัญ",
+      "title": "ปี 39: มุอาวิยะฮ์ส่งกองทัพประชิดชายแดนเขตปกครองของอาลี",
+      "persons": [
+        "muawiya-b-abi-sufyan",
+        "ali-b-abi-talib"
+      ],
+      "places": [
+        "iraq",
+        "sham"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(39) มุอาวิยะฮ์ บิน อบี สุฟยาน ได้จัดเตรียมกองทัพจำนวนมาก แล้วกระจายไปตามชายแดนเขตปกครองของอาลี บิน อบีฏอลิบ",
+          "arabicExcerpt": "فيها جهز معاوية بن أبي سفيان جيوشًا كثيرة ففرقها في أطراف معاملات علي بن أبي طالب",
+          "loc": "เล่ม 12 หน้า 534",
+          "url": "https://shamela.ws/book/30097/3680",
+          "page": 534
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}

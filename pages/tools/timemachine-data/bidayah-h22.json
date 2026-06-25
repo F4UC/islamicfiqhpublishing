@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار ابن كثير",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "hijriYear": 22,
+    "ceYear": 643,
+    "ceSpan": "642-643",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 22 (เล่ม 12): ฟุตูหเปอร์เซีย - Rule 89. ★offset vol12: pid=น.+3146★",
+    "groupOrder": [
+      "การพิชิต (ฟุตูหาต)",
+      "เหตุการณ์สำคัญ"
+    ],
+    "reviewStatus": "DRAFT - Rule 89; ปี 22"
+  },
+  "events": [
+    {
+      "id": "bidayah-h22-001",
+      "book": "al-bidayah",
+      "hijriYear": 22,
+      "ceYear": 643,
+      "order": 1,
+      "type": "event",
+      "cat": "การทหาร",
+      "group": "การพิชิต (ฟุตูหาต)",
+      "title": "ปี 22: การพิชิตฮะมะซาน (ครั้งที่สอง), อัรร็อย และอาเซอร์ไบจาน",
+      "persons": [],
+      "places": [
+        "hamadhan",
+        "rayy",
+        "azerbaijan"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้(22)เกิดการพิชิต(ฟุตูหาต)มากมาย อาทิ การพิชิตฮะมะซานครั้งที่สอง แล้วเมืองอัรร็อยและพื้นที่ถัดไป จากนั้นอาเซอร์ไบจาน",
+          "arabicExcerpt": "وفيها كانت فتوحات كثيرة منها : فتح هَمَذان ثانية ثم الرَّيَ وما بعدها ثم أذْرَبِيجان",
+          "loc": "เล่ม 12 หน้า 246",
+          "url": "https://shamela.ws/book/30097/3392",
+          "page": 246
+        }
+      ],
+      "confidence": "high",
+      "reviewFlags": []
+    }
+  ]
+}
