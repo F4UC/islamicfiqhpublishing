@@ -20,11 +20,18 @@
 import { createClerkClient } from '@clerk/backend';
 
 export async function onRequest({ request, env }) {
-  if (!env || !env.CLERK_SECRET_KEY) {
+  // authenticateRequest() requires BOTH the secret and the (non-secret)
+  // publishable key — without publishableKey it throws and valid sessions get
+  // mis-reported as 401. Both are set as Pages env vars (CLERK_PUBLISHABLE_KEY
+  // is non-secret but kept env-driven so prod/dev use their own instance).
+  if (!env || !env.CLERK_SECRET_KEY || !env.CLERK_PUBLISHABLE_KEY) {
     return json({ ok: false, error: 'auth_not_configured' }, 503);
   }
 
-  const clerk = createClerkClient({ secretKey: env.CLERK_SECRET_KEY });
+  const clerk = createClerkClient({
+    secretKey: env.CLERK_SECRET_KEY,
+    publishableKey: env.CLERK_PUBLISHABLE_KEY,
+  });
 
   // Allowed origins for token verification. Env-driven (comma-separated) so
   // preview deploys / custom domains can verify without a code change; falls
