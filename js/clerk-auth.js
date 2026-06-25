@@ -18,7 +18,8 @@
  * Until both are configured, this script no-ops (the page works without auth).
  */
 (function () {
-  var PUBLISHABLE_KEY = 'pk_test_aW5maW5pdGUtcXVldHphbC0yLmNsZXJrLmFjY291bnRzLmRldiQ';
+  // Publishable key is NON-SECRET (shipped to every browser); allowlist the scanner false positive.
+  var PUBLISHABLE_KEY = 'pk_test_aW5maW5pdGUtcXVldHphbC0yLmNsZXJrLmFjY291bnRzLmRldiQ'; // gitleaks:allow
   var FRONTEND_API_HOST = 'infinite-quetzal-2.clerk.accounts.dev';
 
   /* Session-token getter for the gated API (sent as Authorization: Bearer <jwt>). */
