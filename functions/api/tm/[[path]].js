@@ -26,11 +26,16 @@ export async function onRequest({ request, env }) {
 
   const clerk = createClerkClient({ secretKey: env.CLERK_SECRET_KEY });
 
+  // Allowed origins for token verification. Env-driven (comma-separated) so
+  // preview deploys / custom domains can verify without a code change; falls
+  // back to the production origin only.
+  const authorizedParties = (env.CLERK_AUTHORIZED_PARTIES
+    ? env.CLERK_AUTHORIZED_PARTIES.split(',').map((s) => s.trim()).filter(Boolean)
+    : ['https://islamicfiqhpublishing.com']);
+
   let state;
   try {
-    state = await clerk.authenticateRequest(request, {
-      authorizedParties: ['https://islamicfiqhpublishing.com'],
-    });
+    state = await clerk.authenticateRequest(request, { authorizedParties });
   } catch (e) {
     return json({ ok: false, error: 'unauthorized' }, 401);
   }

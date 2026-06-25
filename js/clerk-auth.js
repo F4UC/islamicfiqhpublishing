@@ -18,8 +18,8 @@
  * Until both are configured, this script no-ops (the page works without auth).
  */
 (function () {
-  var PUBLISHABLE_KEY = 'pk_test_REPLACE_WITH_CLERK_PUBLISHABLE_KEY';
-  var FRONTEND_API_HOST = 'REPLACE_WITH_CLERK_FRONTEND_API_HOST';
+  var PUBLISHABLE_KEY = 'pk_test_aW5maW5pdGUtcXVldHphbC0yLmNsZXJrLmFjY291bnRzLmRldiQ';
+  var FRONTEND_API_HOST = 'infinite-quetzal-2.clerk.accounts.dev';
 
   /* Session-token getter for the gated API (sent as Authorization: Bearer <jwt>). */
   window.ifpGetToken = function () {
