@@ -3349,9 +3349,27 @@
       "file": "bidayah-h381.json",
       "book": "al-bidayah-wa-al-nihayah",
       "hijriYear": 381,
-      "events": 3,
+      "events": 4,
       "eventsSchema": "v3",
       "scope": "ปี ฮ.ศ. 381 - ★★ถอดถอนอัฏฏออิอ์→สถาปนาอัลกอดิร บิลลาฮ์, ★อะกีดะฮ์อัลกอดิรียะฮ์, ฟิตนะฮ์ฆอดีร (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h382.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 382,
+      "events": 4,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 382 - ★อิบนุ อัลมุอัลลิมห้ามอาชูรออ์+ถูกรัดคอ, กักบริเวณอัฏฏออิอ์, อัลอุศ็อยฟิรคุ้มกันหัจญ์, วะฟิยาตอัลอัสกะรี (Rule 89)",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "bidayah-h383.json",
+      "book": "al-bidayah-wa-al-nihayah",
+      "hijriYear": 383,
+      "events": 1,
+      "eventsSchema": "v3",
+      "scope": "ปี ฮ.ศ. 383 - มัสยิดอัลหัรบียะฮ์เป็นญามิอ์+สะพานบะฮาอุดเดาละฮ์ (Rule 89)",
       "reviewStatus": "DRAFT"
     }
   ]
