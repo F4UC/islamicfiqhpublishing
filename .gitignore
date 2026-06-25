@@ -16,6 +16,10 @@ wrangler.jsonc
 .dev.vars
 .dev.vars.*
 
+# Node deps for Pages Functions — installed at build from package-lock.json,
+# never committed.
+node_modules/
+
 # Large binary / video files — host externally (Cloudflare R2, YouTube, etc.)
 *.mp4
 *.mov
