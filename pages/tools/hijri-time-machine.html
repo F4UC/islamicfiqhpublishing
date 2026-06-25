@@ -68,17 +68,21 @@ html, body {
   margin-bottom: 18px; 
   transition: var(--theme-transition); 
 }
-.htm-hero p { 
-  font-family: var(--thai); 
-  font-size: 15px; 
-  color: var(--text-secondary); 
-  line-height: 2.0; 
-  max-width: 100%; 
-  margin: 0 auto; 
-  text-align: center; 
-  word-break: break-word; 
-  transition: var(--theme-transition); 
+.htm-hero p {
+  font-family: var(--thai);
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 2.0;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  word-break: break-word;
+  transition: var(--theme-transition);
 }
+/* Clerk login control (STEP 1 — identity only; opt-in) */
+.ifp-auth { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 22px; min-height: 36px; }
+.ifp-auth-btn { font-family: var(--thai); font-size: 14px; font-weight: 600; color: #fff; background: #c49a45; border: none; border-radius: 8px; padding: 9px 22px; cursor: pointer; transition: opacity .2s ease; }
+.ifp-auth-btn:hover { opacity: .88; }
 
 /* ─── Year Explorer ─── */
 .explorer-panel { 
@@ -423,6 +427,11 @@ html.dark-mode .bc-section { background: linear-gradient(165deg, rgba(64,58,46,0
   <div class="htm-hero">
     <h1 data-reveal>HIJRI TIME MACHINE</h1>
     <p data-reveal data-delay="1">สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามรายปีฮิจเราะฮ์ คัดแยกเป็นชุดตามตำราของปราชญ์แต่ละท่าน เลือกชุดเพื่อเข้าสำรวจ</p>
+    <!-- Clerk login (STEP 1 — identity only; opt-in, does NOT gate content yet). Revealed by js/clerk-auth.js once Clerk loads. -->
+    <div id="ifp-auth" class="ifp-auth" hidden>
+      <button id="ifp-signin" type="button" class="ifp-auth-btn" hidden>เข้าสู่ระบบ</button>
+      <span id="ifp-userbtn"></span>
+    </div>
   </div>
 
     <div class="bc-section">
@@ -542,6 +551,8 @@ html.dark-mode .bc-section { background: linear-gradient(165deg, rgba(64,58,46,0
 
 <div id="footer-placeholder"></div>
 <script defer src="../../main.js?v=20260619a"></script>
+<!-- Clerk login (STEP 1 — identity only). Loaded ONLY here + the account page (opt-in). -->
+<script defer src="../../js/clerk-auth.js?v=20260625a"></script>
 <script>
 /* ─── View switching: home (carousel) ⇄ bidayah (timeline) ─── */
 function showBidayah() {

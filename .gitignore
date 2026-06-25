@@ -5,10 +5,16 @@
 .env.*
 !.env.example
 
-# Wrangler — block all wrangler config and cache (Workers not used; Pages deploys natively)
+# Wrangler — block all wrangler config and cache (Pages deploys natively)
 wrangler.toml
 wrangler.jsonc
 .wrangler/
+
+# Cloudflare Pages Functions local secrets — never commit.
+# CLERK_SECRET_KEY (and later STRIPE_SECRET_KEY etc.) live here locally;
+# production sets them via `wrangler pages secret put`.
+.dev.vars
+.dev.vars.*
 
 # Large binary / video files — host externally (Cloudflare R2, YouTube, etc.)
 *.mp4
