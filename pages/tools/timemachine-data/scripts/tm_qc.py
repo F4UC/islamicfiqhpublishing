@@ -111,7 +111,10 @@ def main():
             if re.search(ROYAL, pr): err(f'[R5] {e["id"]}: royal/forbidden word in prose')
             if re.search(ROYAL_AMBIG, pr):
                 warn(f'[R5] {e["id"]}: "พระองค์" — ยืนยันว่าหมายถึงอัลลอฮ์ (อนุญาต) ไม่ใช่มนุษย์')
-            for m in re.finditer(r'อิบนุ(?!ล)(?=[ก-ฮ])|อบู(?=[ก-ฮ])', pr):
+            # R52 + Rule 11: อิบนุ may fuse with al- as อิบนุล (moon-letter ل) OR a
+            # geminated sun-letter (ชัมซียะฮ์ assimilation), e.g. อิบนุสสัมมาก / อิบนุศเศาะบาฆ
+            # — a geminate is a consonant optionally with เ then the same consonant: ([ก-ฮ])เ?\1
+            for m in re.finditer(r'อิบนุ(?!ล)(?!([ก-ฮ])เ?\1)(?=[ก-ฮ])|อบู(?=[ก-ฮ])', pr):
                 err(f'[R52] {e["id"]}: missing space after อิบนุ/อบู near "{pr[m.start():m.start()+12]}"')
             # missing-link (high confidence, substring-filtered)
             linked = set(e.get('persons', []))
