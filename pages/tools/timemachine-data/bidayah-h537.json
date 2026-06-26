@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "book": "al-bidayah-wa-al-nihayah",
+    "bookArabic": "البداية والنهاية",
+    "author": "ibn-kathir",
+    "edition": "ط دار هجر (تحقيق عبد القادر الأرناؤوط - بشار عواد معروف)",
+    "sourceBase": "https://shamela.ws/book/30097",
+    "sourceBaseAlt": "https://www.islamweb.net/ar/library/content/59",
+    "hijriYear": 537,
+    "ceYear": 1142,
+    "ceSpan": "1142-1143",
+    "schema": "v3",
+    "scope": "ปี ฮ.ศ. 537 (al-Bidayah เล่ม 14): อิมาดุดดีน ซันกีครองเมืองอัลหะดีษะฮ์-ย้ายวงศ์มะฮาริชไปโมศุล-จัดวางนาอิบ (Rule 89; ปีสั้น)",
+    "groupOrder": [
+      "ราชวงศ์อัยยูบ"
+    ],
+    "reviewStatus": "DRAFT - แปลตรงจากตำรา (Rule 89)"
+  },
+  "events": [
+    {
+      "id": "bidayah-h537-001",
+      "cat": "ประวัติศาสตร์",
+      "group": "ราชวงศ์อัยยูบ",
+      "order": 1,
+      "hijriYear": 537,
+      "title": "อิมาดุดดีน ซันกีครองอัลหะดีษะฮ์-ย้ายวงศ์มะฮาริชไปโมศุล",
+      "persons": [
+        "zanki-b-aqsunqur"
+      ],
+      "places": [
+        "al-hadithah",
+        "mawsil"
+      ],
+      "book": "al-bidayah",
+      "ceYear": 1142,
+      "type": "event",
+      "confidence": "high",
+      "reviewFlags": [
+        "Rule 89: แปลตรงเต็มท่อน; R12 อิหม่าม; R52 อบู เว้นวรรค; loc=เล่ม 14"
+      ],
+      "accounts": [
+        {
+          "source": "ibn-kathir",
+          "detail": "ในปีนี้ อิมาดุดดีน ซันกีครองเมืองอัลหะดีษะฮ์ และย้ายวงศ์มะฮาริชจากมันไปยังโมศุล และจัดวางนาอิบจากฝ่ายของเขาในเมืองนั้น",
+          "arabicExcerpt": "ثم دخلت سنة سبع وثلاثين وخمسمئة] فيها: ملك عماد الدين زنكي الحديثة، ونقل آل مهارش منها إلى الموصل، ورتَّب فيها نُوَّابًا من جهته . [",
+          "loc": "เล่ม 14 หน้า 110",
+          "url": "https://shamela.ws/book/30097/6238"
+        }
+      ]
+    }
+  ]
+}
