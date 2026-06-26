@@ -13004,6 +13004,69 @@
       "canonicalThai": "มิสกะวัยฮ์",
       "note": "กวี/นักปราชญ์(ถูกอ้างกลอนโดยอัชชะญะรี)",
       "variantsFound": []
+    },
+    {
+      "id": "muin-al-din-unur",
+      "arabic": "معين الدين أنر",
+      "canonicalThai": "มุอีนุดดีน อุนุร",
+      "note": "อะตาบักผู้บริหารดามัสกัส ผู้นำรับศึกครูเสด#2",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hasan-b-ali-badis",
+      "arabic": "الحسن بن علي بن يحيى بن تميم بن المعز بن باديس",
+      "canonicalThai": "อัลหะซัน บิน อะลี (บนีบาดีส)",
+      "note": "กษัตริย์องค์สุดท้ายราชวงศ์บนีบาดีสแห่งอัลมะฮ์ดียะฮ์ หนี ฮ.ศ. 543",
+      "variantsFound": []
+    },
+    {
+      "id": "ilyas-al-qissis",
+      "arabic": "إلياس القسيس",
+      "canonicalThai": "อิลยาส (บาทหลวง)",
+      "note": "บาทหลวงผู้ยุยงครูเสดตีดามัสกัส ถูกสังหาร ฮ.ศ. 543",
+      "variantsFound": []
+    },
+    {
+      "id": "al-findalawi",
+      "arabic": "أبو الحجاج يوسف بن دوناس الفندلاوي",
+      "canonicalThai": "อบุลหัจญาจ อัลฟินดะลาวี",
+      "note": "เชคมัซฮับมาลิกีที่ดามัสกัส ชะฮีดในศึกครูเสด#2 ฮ.ศ. 543",
+      "variantsFound": []
+    },
+    {
+      "id": "suri-b-al-husayn",
+      "arabic": "سوري بن الحسين",
+      "canonicalThai": "ซูรี บิน อัลหุซัยน์",
+      "note": "กษัตริย์อัลฆูร ยึดฆ็อซนะฮ์แล้วถูกตรึง ฮ.ศ. 543",
+      "variantsFound": []
+    },
+    {
+      "id": "ibrahim-al-raqqi",
+      "arabic": "إبراهيم بن محمد الغنوي الرقي",
+      "canonicalThai": "อิบรอฮีม อัรร็อกกี",
+      "note": "นักหะดีษ ศิษย์อัชชาชีและอัลเฆาะซาลี สิ้น ฮ.ศ. 543",
+      "variantsFound": []
+    },
+    {
+      "id": "shahanshah-b-ayyub",
+      "arabic": "شاهنشاه بن أيوب بن شاذي",
+      "canonicalThai": "ชาฮันชาห์ บิน อัยยูบ",
+      "note": "พี่ของนัจมุดดีน อัยยูบ ชะฮีด บิดาของตะกียุดดีน อุมัร สิ้น ฮ.ศ. 543",
+      "variantsFound": []
+    },
+    {
+      "id": "ali-b-husayn-zaynabi",
+      "arabic": "علي بن الحسين الزينبي أبو القاسم",
+      "canonicalThai": "อะลี บิน อัลหุซัยน์ อัซซัยนะบี",
+      "note": "กอฎิลกุฎาตแบกแดด สิ้น ฮ.ศ. 543",
+      "variantsFound": []
+    },
+    {
+      "id": "abd-al-rahman-al-halhuli",
+      "arabic": "عبد الرحمن الحلحولي",
+      "canonicalThai": "อับดุรเราะฮ์มาน อัลหัลหูลี",
+      "note": "นักบำเพ็ญตน ชะฮีดพร้อมอัลฟินดะลาวี ฮ.ศ. 543",
+      "variantsFound": []
     }
   ],
   "places": [
@@ -15258,6 +15321,41 @@
       "arabic": "طرابلس الغرب",
       "canonicalThai": "ฏ็อรอบุลุสตะวันตก (ตริโปลี-ลิเบีย)",
       "note": "เมืองในลิเบีย แฟรงก์ยึด ฮ.ศ. 541",
+      "variantsFound": []
+    },
+    {
+      "id": "al-kuswa",
+      "arabic": "الكسوة",
+      "canonicalThai": "อัลกุสวะฮ์",
+      "note": "ที่ตั้งทัพใกล้ดามัสกัส",
+      "variantsFound": []
+    },
+    {
+      "id": "baniyas",
+      "arabic": "بانياس",
+      "canonicalThai": "บานิยาส",
+      "note": "ป้อมที่ดามัสกัสยกให้แฟรงก์เป็นค่าสงบศึก ฮ.ศ. 543",
+      "variantsFound": []
+    },
+    {
+      "id": "al-nayrab",
+      "arabic": "النيرب",
+      "canonicalThai": "อันนัยร็อบ",
+      "note": "ย่านชานดามัสกัส ที่อัลฟินดะลาวีชะฮีด",
+      "variantsFound": []
+    },
+    {
+      "id": "bab-al-saghir",
+      "arabic": "باب الصغير",
+      "canonicalThai": "บาบุศเศาะฆีร",
+      "note": "สุสานในดามัสกัส",
+      "variantsFound": []
+    },
+    {
+      "id": "al-rabwa",
+      "arabic": "الربوة",
+      "canonicalThai": "อัรร็อบวะฮ์",
+      "note": "ย่านชานดามัสกัส",
       "variantsFound": []
     }
   ],
