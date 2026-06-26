@@ -125,11 +125,16 @@ async function loadEntitlement(DB, uid) {
     const w = await DB.prepare('SELECT work_id, free_until_year FROM works').all();
     for (const row of (w.results || [])) freeUntil.set(row.work_id, row.free_until_year);
     if (uid) {
+      // Normalize current_period_end with datetime() before comparing: a raw
+      // ISO string (e.g. "2026-06-26T09:00:00Z") would sort lexicographically
+      // AFTER datetime('now') ("YYYY-MM-DD HH:MM:SS") on the same day, leaking
+      // paid content past expiry. datetime() parses ISO 8601 (incl. Z/offset)
+      // to canonical UTC, so both sides compare correctly.
       const q = await DB.prepare(
         `SELECT pg.work_id FROM subscriptions s
            JOIN plan_grants pg ON pg.plan_id = s.plan_id
           WHERE s.clerk_user_id = ?1 AND s.status = 'active'
-            AND (s.current_period_end IS NULL OR s.current_period_end > datetime('now'))`
+            AND (s.current_period_end IS NULL OR datetime(s.current_period_end) > datetime('now'))`
       ).bind(uid).all();
       for (const row of (q.results || [])) subWorks.add(row.work_id);
     }
