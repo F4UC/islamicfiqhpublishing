@@ -1,0 +1,9 @@
+{
+  "name": "islamicfiqhpublishing-functions",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Server-side dependencies for Cloudflare Pages Functions only. The site itself is static (no build step); this file exists so Pages bundles @clerk/backend for functions/api/* (Clerk JWT verification). Keep the Pages build command EMPTY and output dir = repo root.",
+  "dependencies": {
+    "@clerk/backend": "^3.8.3"
+  }
+}
