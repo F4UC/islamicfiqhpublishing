@@ -14215,6 +14215,83 @@
       "canonicalThai": "ชิฮาบุดดีน อัลฮาริมี",
       "note": "ลุงของเศาะลาฮุดดีน(ฝ่ายแม่)",
       "variantsFound": []
+    },
+    {
+      "id": "khalid-ibn-al-qaysarani",
+      "arabic": "الموفق خالد ابن القيسراني",
+      "canonicalThai": "คอลิด อิบนุลก็อยซะรอนี (อัลมุวัฟฟัก)",
+      "note": "ทูตของนูรุดดีนไปทำบัญชีอียิปต์ ฮ.ศ. 568",
+      "variantsFound": []
+    },
+    {
+      "id": "qutb-al-din-al-naysaburi",
+      "arabic": "قطب الدين النيسابوري",
+      "canonicalThai": "กุฏบุดดีน อันนัยซาบูรี",
+      "note": "ฟะกีฮ์ชาฟิอีผู้ยิ่งใหญ่ มาสอนที่หะลับ/ดามัสกัส ฮ.ศ. 568",
+      "variantsFound": []
+    },
+    {
+      "id": "al-malik-al-adil",
+      "arabic": "الملك العادل أبو بكر بن أيوب",
+      "canonicalThai": "อัลมาลิกอัลอาดิล อบู บักร์ บิน อัยยูบ",
+      "note": "น้องของเศาะลาฮุดดีน(ต่อมาเป็นสุลต่าน)",
+      "variantsFound": []
+    },
+    {
+      "id": "mlih-b-lawun",
+      "arabic": "مليح بن ليون",
+      "canonicalThai": "มะลีห์ บิน ลัยอูน",
+      "note": "กษัตริย์อาร์เมเนีย ตีโรมแตก ฮ.ศ. 568",
+      "variantsFound": []
+    },
+    {
+      "id": "sultan-shah",
+      "arabic": "سلطان شاه",
+      "canonicalThai": "สุลต่านชาห์",
+      "note": "ผู้นำที่เคาะวาริซม์(สงครามภายใน) ฮ.ศ. 568",
+      "variantsFound": []
+    },
+    {
+      "id": "al-hasan-b-safi",
+      "arabic": "الحسن بن صافي ملك النحاة",
+      "canonicalThai": "อัลหะซัน บิน ศอฟี (มะลิกุนนุหาต)",
+      "note": "ราชาแห่งนักไวยากรณ์ สิ้น ฮ.ศ. 568",
+      "variantsFound": []
+    },
+    {
+      "id": "yazdan-al-turki",
+      "arabic": "يزدن التركي",
+      "canonicalThai": "ยัซดัน อัตตุรกี",
+      "note": "อะมีรรอฟิฎีแห่งแบกแดด สิ้น ฮ.ศ. 568",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-fida-ismail",
+      "arabic": "الملك أبو الفداء إسماعيل بن طغتكين بن أيوب",
+      "canonicalThai": "อบุลฟิดาอ์ อิสมาอีล บิน ฏุฆติกีน",
+      "note": "เจ้าเยเมน(อัยยูบ) ผู้อ้างคิลาฟะฮ์(อิบนุ กะษีรปฏิเสธ)",
+      "variantsFound": []
+    },
+    {
+      "id": "kamal-al-sumayrami",
+      "arabic": "كمال السميرمي",
+      "canonicalThai": "กะมาล อัสสุมัยเราะมี",
+      "note": "วะซีรของสุลต่านมะห์มูด(เจ้าของอีลดิกิซ)",
+      "variantsFound": []
+    },
+    {
+      "id": "abu-al-yaman-al-kindi",
+      "arabic": "أبو اليمن الكندي",
+      "canonicalThai": "อบุลยะมัน อัลกินดี",
+      "note": "นักภาษา/กวีแห่งแบกแดด",
+      "variantsFound": []
+    },
+    {
+      "id": "jamal-al-din-al-mawsili",
+      "arabic": "الوزير جمال الدين الموصلي",
+      "canonicalThai": "วะซีรญะมาลุดดีน อัลเมาศิลี",
+      "note": "วะซีรโมศุล(อัลญะวาด) ฝังใกล้มัสยิดนบี ﷺ",
+      "variantsFound": []
     }
   ],
   "places": [
@@ -16770,6 +16847,34 @@
       "arabic": "سلمية",
       "canonicalThai": "สะละมียะฮ์",
       "note": "เมืองในชาม(ถิ่นกำเนิดที่อ้างของอัลมะฮ์ดีฟาฏิมียะฮ์)",
+      "variantsFound": []
+    },
+    {
+      "id": "ibrim",
+      "arabic": "إبريم",
+      "canonicalThai": "อิบรีม",
+      "note": "ป้อมในนูเบีย ตูรอนชาห์พิชิต ฮ.ศ. 568",
+      "variantsFound": []
+    },
+    {
+      "id": "bahasna",
+      "arabic": "بهسنا",
+      "canonicalThai": "บะฮัสนา",
+      "note": "เมืองในเขตรอยต่อชาม-โรม นูรุดดีนยึด ฮ.ศ. 568",
+      "variantsFound": []
+    },
+    {
+      "id": "zar",
+      "arabic": "زرع",
+      "canonicalThai": "ซัรอ์",
+      "note": "เมืองในเฮารอน(ใต้ดามัสกัส)",
+      "variantsFound": []
+    },
+    {
+      "id": "al-shubak",
+      "arabic": "الشوبك",
+      "canonicalThai": "อัชเชาบัก",
+      "note": "ป้อมแฟรงก์ในทรานส์จอร์แดน(ใกล้อัลกะรัก)",
       "variantsFound": []
     }
   ],
