@@ -1180,21 +1180,29 @@ function openUpsell(meta) {
   var sub  = box.querySelector('.tm-upsell-sub');
   var prim = box.querySelector('.tm-upsell-primary');
   var sec  = box.querySelector('.tm-upsell-secondary');
-  var authed = !!(meta && meta.authed);
-  if (!authed) {
-    h.textContent   = 'สมัครฟรีเพื่อเข้าสำรวจไทม์ไลน์';
-    sub.textContent = 'สมาชิก FIQH (ฟรี) ปลดล็อกยุคท่านนบี (ฮ.ศ. 1–11) และอิญาซะฮ์';
-    prim.textContent = 'สมัครฟรี';
-    prim.onclick = tmSignUp;
-    sec.hidden = false;
-    sec.textContent = 'มีบัญชีแล้ว · เข้าสู่ระบบ';
-    sec.onclick = tmSignIn;
+  var tier = (meta && meta.tier) || 'guest';
+  sec.hidden = true;
+
+  if (tier === 'guest') {
+    h.textContent    = 'สมัครสมาชิกเพื่อสำรวจไทม์ไลน์';
+    sub.textContent  = 'สมาชิก FIQH (ฟรี) อ่านอัลบิดายะฮ์ ฮ.ศ. 1–5 ได้ทันที';
+    prim.textContent = 'ดูแพ็กเกจสมาชิก';
+    prim.onclick     = function () { location.href = '/pages/membership.html'; };
+    sec.hidden       = false;
+    sec.textContent  = 'มีบัญชีแล้ว · เข้าสู่ระบบ';
+    sec.onclick      = tmSignIn;
+  } else if (tier === 'free') {
+    h.textContent    = 'อ่านต่อด้วย FIQH+';
+    sub.textContent  = 'สมาชิกฟรีอ่านได้ถึง ฮ.ศ. 5 · อัปเกรดเพื่ออ่านต่อ';
+    prim.textContent = 'ดูแพ็กเกจ FIQH+ / PRO';
+    prim.onclick     = function () { location.href = '/pages/membership.html'; };
+  } else if (tier === 'plus') {
+    h.textContent    = 'อ่านครบทุกปีด้วย FIQH PRO';
+    sub.textContent  = 'FIQH+ อ่านถึง ฮ.ศ. 11 · อัปเกรด PRO เพื่ออ่านครบทุกปี';
+    prim.textContent = 'อัปเกรดเป็น FIQH PRO';
+    prim.onclick     = function () { location.href = '/pages/membership.html'; };
   } else {
-    h.textContent   = 'ปีนี้สำหรับสมาชิก FIQH+';
-    sub.textContent = 'อัปเกรดเป็น FIQH+ เพื่ออ่านอัลบิดายะฮ์ครบทุกปี';
-    prim.textContent = 'ดูแพ็กเกจ FIQH+';
-    prim.onclick = function () { window.location.href = '/pages/account.html'; }; /* P2: membership.html not yet built — account page is the current upgrade destination */
-    sec.hidden = true;
+    return; // tier === 'pro': ไม่ล็อก ไม่ต้อง popup
   }
   box.hidden = false;
 }

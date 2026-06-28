@@ -9,14 +9,14 @@
  *                             stubbed when the caller isn't entitled.
  *   - /api/tm/search        PR-C (not yet).
  *
- * Entitlement model (al-bidayah = the Time Machine timeline product):
- *   - HIJRI is fully fiqh-gated: a year is unlocked only if the request is
- *     LOGGED IN and (year <= works.free_until_year['al-bidayah'] (=11, the
- *     Prophetic-era teaser) OR an active subscription grants 'al-bidayah').
- *   - Guest (no token) => every year is a locked-stub (200, not an error).
+ * Entitlement model (al-bidayah = the Time Machine timeline product) — 3-tier:
+ *   - Guest (no token)  => every year locked; popup "register".
+ *   - FIQH free (login) => years 1..works.free_until_year (=5) unlocked; popup "FIQH+/PRO".
+ *   - FIQH+ (plan_grants.year_cap=11) => years 1..11; popup "upgrade PRO".
+ *   - FIQH PRO (plan_grants.year_cap=NULL) => all years unlocked; no popup.
  *   - Locked year => each event keeps `title` + each account's byte-exact
  *     `arabicExcerpt` teaser; the Thai `detail` (the paid moat) is STRIPPED.
- *   - `meta.authed` lets the front-end pick the popup (register vs upgrade).
+ *   - `meta.tier` ('guest'|'free'|'plus'|'pro') drives the front-end popup.
  *
  * Secrets/bindings (per Cloudflare Pages environment, never committed):
  *   CLERK_SECRET_KEY (secret) + CLERK_PUBLISHABLE_KEY (non-secret) + D1 binding `DB`.
@@ -26,7 +26,6 @@ import { createClerkClient } from '@clerk/backend';
 
 const DATA_BASE = '/pages/tools/timemachine-data/';
 const BIDAYAH_WORK = 'al-bidayah';     // the Time Machine timeline's product id
-const FALLBACK_FREE_UNTIL = 11;        // used only if the works row is missing
 
 export async function onRequest(context) {
   const { request, env, params } = context;
@@ -80,20 +79,23 @@ async function handleYear(request, env, yearRaw) {
   if (!env || !env.DB) return json({ ok: false, error: 'db_not_configured' }, 503);
 
   const uid = await verifyUser(request, env);          // null = Guest (not logged in)
-  const ent = await loadEntitlement(env.DB, uid);      // { freeUntil:Map, subWorks:Set }
+  const ent = await loadEntitlement(env.DB, uid);      // { freeUntil:int, grants:{} }
 
   const shard = await readShard(request, year);
   if (!shard) return json({ ok: false, error: 'year_not_found' }, 404);
 
-  const freeUntil = ent.freeUntil.has(BIDAYAH_WORK) ? ent.freeUntil.get(BIDAYAH_WORK) : FALLBACK_FREE_UNTIL;
-  // Guest (no login) is ALWAYS locked. FIQH member: free years 1..freeUntil;
-  // FIQH+ (active sub granting al-bidayah): every year.
-  const unlocked = !!uid && ((year <= freeUntil) || ent.subWorks.has(BIDAYAH_WORK));
+  const unlocked = yearUnlocked(uid, ent, year);
 
   let events = Array.isArray(shard.events) ? shard.events : [];
   if (!unlocked) events = events.map(stubEvent);
 
-  const meta = Object.assign({}, shard.meta, { yearLocked: !unlocked, authed: !!uid, freeUntilYear: freeUntil });
+  const tier = !uid ? 'guest' :
+    (('al-bidayah' in ent.grants) && ent.grants['al-bidayah'] === null) ? 'pro' :
+    ('al-bidayah' in ent.grants) ? 'plus' : 'free';
+  const meta = Object.assign({}, shard.meta, {
+    yearLocked: !unlocked, authed: !!uid,
+    freeUntilYear: ent.freeUntil, tier,
+  });
   return json({ ok: true, year, meta, events }, 200);
 }
 
@@ -117,29 +119,43 @@ async function readShard(request, year) {
   try { return await r.json(); } catch (e) { return null; }
 }
 
-// { freeUntil: Map<work_id,int>, subWorks: Set<work_id> } — never throws.
+// { freeUntil: int, grants: { work_id: int|null } } — never throws.
+// freeUntil = works.free_until_year for 'al-bidayah' (= 5 per D1); 0 if row missing.
+// grants: keyed by work_id; value is year_cap (null = unlimited / PRO).
+//   Multiple active plan_grants for the same work are merged: null wins, else max cap.
+// Keeps datetime() normalization to guard against ISO-string expiry leak (see history).
 async function loadEntitlement(DB, uid) {
-  const freeUntil = new Map();
-  const subWorks = new Set();
   try {
-    const w = await DB.prepare('SELECT work_id, free_until_year FROM works').all();
-    for (const row of (w.results || [])) freeUntil.set(row.work_id, row.free_until_year);
-    if (uid) {
-      // Normalize current_period_end with datetime() before comparing: a raw
-      // ISO string (e.g. "2026-06-26T09:00:00Z") would sort lexicographically
-      // AFTER datetime('now') ("YYYY-MM-DD HH:MM:SS") on the same day, leaking
-      // paid content past expiry. datetime() parses ISO 8601 (incl. Z/offset)
-      // to canonical UTC, so both sides compare correctly.
-      const q = await DB.prepare(
-        `SELECT pg.work_id FROM subscriptions s
-           JOIN plan_grants pg ON pg.plan_id = s.plan_id
-          WHERE s.clerk_user_id = ?1 AND s.status = 'active'
-            AND (s.current_period_end IS NULL OR datetime(s.current_period_end) > datetime('now'))`
-      ).bind(uid).all();
-      for (const row of (q.results || [])) subWorks.add(row.work_id);
+    const w = await DB.prepare(
+      `SELECT free_until_year AS f FROM works WHERE work_id = 'al-bidayah'`
+    ).first();
+    const freeUntil = w ? (w.f || 0) : 0;
+    if (!uid) return { freeUntil, grants: {} };
+    const { results } = await DB.prepare(
+      `SELECT pg.work_id AS work, pg.year_cap AS cap
+         FROM subscriptions s JOIN plan_grants pg ON pg.plan_id = s.plan_id
+        WHERE s.clerk_user_id = ? AND s.status = 'active'
+          AND datetime(s.current_period_end) > datetime('now')`
+    ).bind(uid).all();
+    const grants = {};
+    for (const r of (results || [])) {
+      const cap = (r.cap == null) ? null : r.cap;
+      if (!(r.work in grants)) grants[r.work] = cap;
+      else if (grants[r.work] !== null) {
+        grants[r.work] = (cap === null) ? null : Math.max(grants[r.work], cap);
+      }
     }
-  } catch (e) { /* fail-safe: empty → only fallback free years visible */ }
-  return { freeUntil, subWorks };
+    return { freeUntil, grants };
+  } catch (e) { return { freeUntil: 0, grants: {} }; /* fail-safe: everything locked */ }
+}
+
+// Guest: always locked. FIQH free: years 1..freeUntil. FIQH+: up to cap. PRO: cap null = all.
+function yearUnlocked(uid, ent, year) {
+  if (!uid) return false;
+  if (year <= ent.freeUntil) return true;
+  const cap = (BIDAYAH_WORK in ent.grants) ? ent.grants[BIDAYAH_WORK] : undefined;
+  if (cap === undefined) return false;
+  return cap === null || year <= cap;
 }
 
 function json(body, status) {
