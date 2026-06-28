@@ -863,7 +863,8 @@ function tmMergeShard(shard) {
       titleArabic: ev.titleArabic || null,
       figures: figures,
       accounts: accounts,
-      crossRefs: ev.crossRefs || null
+      crossRefs: ev.crossRefs || null,
+      locked: ev.locked || false
     });
     added++;
   });
@@ -1396,9 +1397,33 @@ function loadAllShards() {
      Mirror the auth state from #ifp-userbtn via MutationObserver. */
   var dhSignin = document.getElementById('dh-auth-signin');
   var ifpUserbtn = document.getElementById('ifp-userbtn');
+  var _prevAuthed = false;
   function syncDhAuth() {
     if(!dhSignin) return;
-    dhSignin.hidden = !!(ifpUserbtn && ifpUserbtn.children.length > 0);
+    var authed = !!(ifpUserbtn && ifpUserbtn.children.length > 0);
+    dhSignin.hidden = authed;
+    /* P2 fix: on unauthenticated→authenticated transition, invalidate locked-year
+       cache so the next open sends a bearer-token request and gets full content. */
+    if(authed && !_prevAuthed) {
+      Object.keys(YEAR_META).forEach(function(y) {
+        if(YEAR_META[y] && YEAR_META[y].yearLocked) {
+          var yr = parseInt(y, 10);
+          /* remove locked stubs from EVENTS + seen so tmMergeShard can re-merge */
+          for(var i = EVENTS.length - 1; i >= 0; i--) {
+            if(EVENTS[i].year === yr && EVENTS[i].locked) {
+              if(EVENTS[i].id) delete seen[EVENTS[i].id];
+              EVENTS.splice(i, 1);
+            }
+          }
+          delete YEAR_LOADED[yr];
+          /* if the year section is already open, re-fetch it now */
+          var sec = document.getElementById('year-' + yr);
+          var det = sec && sec.querySelector('.tm-year');
+          if(det && det.open) openYear(yr);
+        }
+      });
+    }
+    _prevAuthed = authed;
   }
   if(dhSignin) {
     dhSignin.hidden = false; /* show initially; hide once authed state is confirmed */
