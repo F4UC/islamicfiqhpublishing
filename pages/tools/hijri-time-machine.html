@@ -1043,7 +1043,7 @@ function renderLockedCard(e) {
     +   teaser
     +   '<div class="tm-locked-cta">'
     +     '<p class="tm-locked-msg">คำแปลไทยและรายละเอียดฉบับเต็มสำหรับสมาชิก</p>'
-    +     '<button type="button" class="tm-unlock-btn">สมัคร / เข้าสู่ระบบเพื่ออ่าน</button>'
+    +     '<button type="button" class="tm-unlock-btn" data-year="' + e.year + '">สมัคร / เข้าสู่ระบบเพื่ออ่าน</button>'
     +   '</div>'
     + '</div>'
     + '</details>';
@@ -1172,6 +1172,9 @@ function closeUpsell() {
 function maybeShowUpsell(y) {
   var m = YEAR_META[y];
   if (m && m.yearLocked && !sessionStorage.getItem('ifp_upsell_shown')) {
+    /* P2-A: skip if Bidayah view is not yet visible (e.g. bootstrap auto-open) */
+    var bv = document.getElementById('view-bidayah');
+    if (!bv || bv.hidden) return;
     sessionStorage.setItem('ifp_upsell_shown', '1');
     openUpsell(m);
   }
@@ -1405,8 +1408,10 @@ function loadAllShards() {
     /* P2 fix: on unauthenticated→authenticated transition, invalidate locked-year
        cache so the next open sends a bearer-token request and gets full content. */
     if(authed && !_prevAuthed) {
+      var anyLocked = false;
       Object.keys(YEAR_META).forEach(function(y) {
         if(YEAR_META[y] && YEAR_META[y].yearLocked) {
+          anyLocked = true;
           var yr = parseInt(y, 10);
           /* remove locked stubs from EVENTS + seen so tmMergeShard can re-merge */
           for(var i = EVENTS.length - 1; i >= 0; i--) {
@@ -1422,6 +1427,8 @@ function loadAllShards() {
           if(det && det.open) openYear(yr);
         }
       });
+      /* P2-B: search corpus may contain locked stubs — force a full re-fetch */
+      if(anyLocked) ALL_LOADED = false;
     }
     _prevAuthed = authed;
   }
@@ -1444,6 +1451,8 @@ function loadAllShards() {
     if(ub) {
       var sec = ub.closest && ub.closest('.tm-year-section');
       var ly  = sec ? parseInt(sec.id.replace('year-', ''), 10) : null;
+      /* P2-C: search results have no .tm-year-section — fall back to data-year */
+      if (!ly) ly = parseInt(ub.getAttribute('data-year'), 10) || null;
       openUpsell(ly ? YEAR_META[ly] : null);
       return;
     }
