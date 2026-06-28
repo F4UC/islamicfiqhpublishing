@@ -404,6 +404,42 @@ html.dark-mode .bc-section { background: linear-gradient(165deg, rgba(64,58,46,0
 [data-reveal][data-delay="2"]{transition-delay:.16s;}
 [data-reveal][data-delay="3"]{transition-delay:.24s;}
 [data-reveal][data-delay="4"]{transition-delay:.32s;}
+
+/* ─── Metered gate: locked event teaser (Step 2 · R90) ─── */
+.tm-locked-ar { font-family: var(--arabic); font-size: 18px; direction: rtl; text-align: right; color: var(--text-secondary); padding: 12px 0 4px; line-height: 2.0; border-top: 1px dashed var(--border-secondary); margin-top: 8px; }
+.tm-locked-cta { margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border-secondary); display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.tm-locked-msg { font-family: var(--thai); font-size: 14px; color: var(--text-tertiary); margin: 0; }
+.tm-unlock-btn { font-family: var(--thai); font-size: 14px; font-weight: 600; color: var(--text-primary); background: var(--bg-tertiary); border: 1px solid var(--border-primary); border-radius: 8px; padding: 9px 20px; cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+.tm-unlock-btn:hover { background: var(--bg-secondary); border-color: var(--text-tertiary); }
+.tm-lock-ico { font-size: 13px; opacity: 0.7; }
+details.tm-locked > .tm-event-head::before { content: ''; margin-right: 0; }
+
+/* ─── Upsell overlay (Step 2 · R90) ─── */
+.tm-upsell { position: fixed; inset: 0; z-index: 9000; display: flex; align-items: center; justify-content: center; padding: 24px;
+  background: rgba(0,0,0,0.52); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.tm-upsell[hidden] { display: none; }
+.tm-upsell-box { position: relative; width: 100%; max-width: 420px; border-radius: 22px; padding: 38px 36px 32px;
+  background-color: var(--bg-secondary);
+  background-image: linear-gradient(165deg, rgba(216,204,184,0.34), rgba(245,242,236,0.14) 58%, rgba(255,255,255,0) 100%);
+  border: 1px solid rgba(255,255,255,0.55);
+  box-shadow: 0 24px 64px rgba(60,50,38,0.22), inset 0 1px 0 rgba(255,255,255,0.7);
+  -webkit-backdrop-filter: blur(18px) saturate(130%); backdrop-filter: blur(18px) saturate(130%); }
+html.dark-mode .tm-upsell-box { background-image: linear-gradient(165deg, rgba(64,58,46,0.56), rgba(28,26,22,0.28) 60%, rgba(0,0,0,0) 100%); border-color: rgba(255,255,255,0.12); box-shadow: 0 24px 64px rgba(0,0,0,0.54), inset 0 1px 0 rgba(255,255,255,0.1); }
+.tm-upsell-x { position: absolute; top: 14px; right: 16px; font-family: var(--ui); font-size: 22px; line-height: 1; color: var(--text-tertiary); background: none; border: none; cursor: pointer; padding: 4px 8px; border-radius: 6px; transition: color 0.15s; }
+.tm-upsell-x:hover { color: var(--text-primary); }
+.tm-upsell-h { font-family: var(--thai); font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+.tm-upsell-sub { font-family: var(--thai); font-size: 14px; color: var(--text-secondary); line-height: 1.8; margin: 0 0 24px; }
+.tm-upsell-primary { display: block; width: 100%; font-family: var(--thai); font-size: 15px; font-weight: 700; color: #fff; background: #c49a45; border: none; border-radius: 10px; padding: 13px; cursor: pointer; transition: opacity 0.2s; margin-bottom: 10px; }
+.tm-upsell-primary:hover { opacity: 0.88; }
+.tm-upsell-secondary { display: block; width: 100%; font-family: var(--thai); font-size: 14px; font-weight: 600; color: var(--text-secondary); background: none; border: 1px solid var(--border-primary); border-radius: 10px; padding: 11px; cursor: pointer; transition: border-color 0.2s, color 0.2s; }
+.tm-upsell-secondary[hidden] { display: none; }
+.tm-upsell-secondary:hover { border-color: var(--text-tertiary); color: var(--text-primary); }
+
+/* ─── Bidayah view: auth affordance (Step 2 · R90) ─── */
+.dh-auth-corner { position: absolute; top: 18px; right: 18px; z-index: 6; }
+.dh-auth-signin { font-family: var(--ui); font-size: 13px; font-weight: 600; color: #fff; padding: 9px 16px; border-radius: 999px; cursor: pointer; border: 1px solid rgba(255,255,255,0.4); background: rgba(255,255,255,0.14); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: background 0.2s; }
+.dh-auth-signin:hover { background: rgba(255,255,255,0.28); }
+.dh-auth-signin[hidden] { display: none; }
 </style>
 <!-- PWA -->
 <link rel="manifest" href="/manifest.webmanifest">
@@ -523,6 +559,11 @@ html.dark-mode .bc-section { background: linear-gradient(165deg, rgba(64,58,46,0
         <path class="dh-d1" d="M0,286 C360,256 720,298 1080,272 C1260,260 1380,288 1440,278 L1440,320 L0,320 Z"/>
       </svg>
       <button type="button" class="dh-back" id="dh-back">‹ กลับสู่ชุดตำรา</button>
+      <!-- Subtle auth affordance — sign-in from timeline without going home -->
+      <div class="dh-auth-corner" id="dh-auth-corner">
+        <button type="button" class="dh-auth-signin" id="dh-auth-signin" hidden>เข้าสู่ระบบ</button>
+        <span id="dh-userbtn"></span>
+      </div>
       <div class="dh-inner">
         <p class="dh-eyebrow">อิบนุ กะษีร · ฮ.ศ. 1–100</p>
         <h2 class="dh-title">อัลบิดายะฮ์ <em>วันนิฮายะฮ์</em></h2>
@@ -548,6 +589,17 @@ html.dark-mode .bc-section { background: linear-gradient(165deg, rgba(64,58,46,0
 
 </div>
 </main>
+
+<!-- Upsell modal (Step 2 PR-B — metered gate; scoped to the Time Machine only) -->
+<div id="tm-upsell" class="tm-upsell" hidden>
+  <div class="tm-upsell-box" role="dialog" aria-modal="true" aria-labelledby="tm-upsell-h">
+    <button type="button" class="tm-upsell-x" aria-label="ปิด">×</button>
+    <h3 id="tm-upsell-h" class="tm-upsell-h"></h3>
+    <p class="tm-upsell-sub"></p>
+    <button type="button" class="tm-upsell-primary"></button>
+    <button type="button" class="tm-upsell-secondary"></button>
+  </div>
+</div>
 
 <div id="footer-placeholder"></div>
 <script defer src="../../main.js?v=20260619a"></script>
@@ -734,6 +786,7 @@ EVENTS.forEach(function (e) { if (e.id) seen[e.id] = true; });
 let SHARD_INDEX = [];      /* = manifest.shards */
 let GMAP = {};             /* = indexGlossary(glossary) */
 const YEAR_LOADED = {};    /* hijriYear -> true once its shard merged */
+const YEAR_META   = {};    /* hijriYear -> { yearLocked, authed, freeUntilYear } from API */
 let ALL_LOADED = false;    /* true after a search-triggered full load */
 const YEAR_PENDING = {};   /* hijriYear -> true while its shard fetch is in flight */
 
@@ -749,11 +802,37 @@ function indexGlossary(g) {
   return m;
 }
 
-/* STEP 0.5 — fetch indirection (API-ready). ALL shard data access goes through
-   these two functions and nothing else, so the future static→gated-API swap
-   (BASE+file → API + session token, locked-stub handling) touches ONLY here. */
-function tmFetchYear(entry) { return fetch(BASE + entry.file).then(function (r) { return r.ok ? r.json() : null; }); }
-function tmFetchAll() { return Promise.all(SHARD_INDEX.map(tmFetchYear)); }
+/* STEP 0.5 — fetch seam (Step 2 PR-B: static → gated API).
+   ALL shard data access flows through tmFetchYear / tmFetchAll only.
+   tmGetToken / tmApiYear are provider-agnostic: today clerk-auth.js exposes
+   window.ifpGetToken; after any future auth swap only that file changes. */
+function tmGetToken() {
+  return (typeof window.ifpGetToken === 'function') ? window.ifpGetToken() : Promise.resolve(null);
+}
+function tmApiYear(year, token) {
+  var headers = token ? { Authorization: 'Bearer ' + token } : {};
+  return fetch('/api/tm/year/' + year, { headers: headers })
+    .then(function (r) { return r.ok ? r.json() : null; });
+}
+function tmFetchYear(entry) {
+  return tmGetToken().then(function (token) {
+    return tmApiYear(entry.hijriYear, token);
+  }).then(function (res) {
+    if (!res || !res.ok) return null;
+    if (res.meta) YEAR_META[res.year] = res.meta;
+    return res;   /* tmMergeShard reads res.events — shape is compatible */
+  });
+}
+function tmFetchAll() {
+  return tmGetToken().then(function (token) {
+    return Promise.all(SHARD_INDEX.map(function (s) {
+      return tmApiYear(s.hijriYear, token).then(function (res) {
+        if (res && res.ok && res.meta) YEAR_META[res.year] = res.meta;
+        return res;
+      });
+    }));
+  });
+}
 
 /* Merge one shard's events into EVENTS — dedup by seen[id], resolve figures via
    GMAP, normalize accounts. Lifted verbatim from the former bootstrap loop so
@@ -943,9 +1022,36 @@ function renderYearGroups(evs, isFocus) {
   return out;
 }
 
+/* Locked-event teaser (Step 2 PR-B).
+   Shows the byte-exact Arabic excerpt from each account (the free tease);
+   the Thai detail is absent — it is the paid moat, stripped by the worker. */
+function renderLockedCard(e) {
+  var ceYear = hijriYearToGregorianApprox(e.year);
+  var teaser = '';
+  (e.accounts || []).forEach(function (a) {
+    if (a.arabicExcerpt) {
+      teaser += '<blockquote class="tm-locked-ar" dir="rtl" lang="ar">' + a.arabicExcerpt + '</blockquote>';
+    }
+  });
+  return '<details class="tm-event tm-locked">'
+    + '<summary class="tm-event-head">'
+    +   '<span class="tm-event-title"><span class="tm-lock-ico" aria-hidden="true">🔒</span> ' + e.title + '</span>'
+    +   '<span class="tm-event-year">' + e.year + ' ฮ.ศ. · ≈ ค.ศ. ' + ceYear + '</span>'
+    + '</summary>'
+    + '<div class="tm-event-body">'
+    +   teaser
+    +   '<div class="tm-locked-cta">'
+    +     '<p class="tm-locked-msg">คำแปลไทยและรายละเอียดฉบับเต็มสำหรับสมาชิก</p>'
+    +     '<button type="button" class="tm-unlock-btn">สมัคร / เข้าสู่ระบบเพื่ออ่าน</button>'
+    +   '</div>'
+    + '</div>'
+    + '</details>';
+}
+
 /* One collapsible event card: detailed translation + figures (Thai + Arabic)
    + multi-source citations. Tolerates inline events that lack v2 fields. */
 function renderEventCard(e) {
+  if (e.locked) return renderLockedCard(e);
   const ceYear = hijriYearToGregorianApprox(e.year);
   const titleAr = e.titleArabic ? ` <span class="tm-title-ar" dir="rtl" lang="ar">${e.titleArabic}</span>` : '';
 
@@ -1014,6 +1120,60 @@ function renderEventCard(e) {
       ${crossHtml}
     </div>
   </details>`;
+}
+
+/* ─── Step 2 PR-B: auth wrappers + upsell logic ─────────────────────────
+ * Provider-agnostic: today clerk-auth.js may expose window.ifpSignIn/Up;
+ * a future firebase-auth.js drop-in defines the same globals automatically.
+ * Hard Clerk fallback guarantees the buttons work even before that swap. */
+function tmSignIn() {
+  if (typeof window.ifpSignIn === 'function') return window.ifpSignIn();
+  if (window.Clerk) return Clerk.redirectToSignIn();
+}
+function tmSignUp() {
+  if (typeof window.ifpSignUp === 'function') return window.ifpSignUp();
+  if (window.Clerk) return Clerk.redirectToSignUp();
+}
+
+function openUpsell(meta) {
+  var box  = document.getElementById('tm-upsell');
+  if (!box) return;
+  var h    = box.querySelector('.tm-upsell-h');
+  var sub  = box.querySelector('.tm-upsell-sub');
+  var prim = box.querySelector('.tm-upsell-primary');
+  var sec  = box.querySelector('.tm-upsell-secondary');
+  var authed = !!(meta && meta.authed);
+  if (!authed) {
+    h.textContent   = 'สมัครฟรีเพื่อเข้าสำรวจไทม์ไลน์';
+    sub.textContent = 'สมาชิก FIQH (ฟรี) ปลดล็อกยุคท่านนบี (ฮ.ศ. 1–11) และอิญาซะฮ์';
+    prim.textContent = 'สมัครฟรี';
+    prim.onclick = tmSignUp;
+    sec.hidden = false;
+    sec.textContent = 'มีบัญชีแล้ว · เข้าสู่ระบบ';
+    sec.onclick = tmSignIn;
+  } else {
+    h.textContent   = 'ปีนี้สำหรับสมาชิก FIQH+';
+    sub.textContent = 'อัปเกรดเป็น FIQH+ เพื่ออ่านอัลบิดายะฮ์ครบทุกปี';
+    prim.textContent = 'ดูแพ็กเกจ FIQH+';
+    prim.onclick = function () { window.location.href = '/pages/membership.html'; };
+    sec.hidden = true;
+  }
+  box.hidden = false;
+}
+function closeUpsell() {
+  var box = document.getElementById('tm-upsell');
+  if (box) box.hidden = true;
+}
+
+/* Show the upsell popup once per session at the first locked year (NYT-wall moment).
+   After that, locked years still show teaser cards inline; the popup only reappears
+   on an explicit .tm-unlock-btn click. Free years never trigger it. */
+function maybeShowUpsell(y) {
+  var m = YEAR_META[y];
+  if (m && m.yearLocked && !sessionStorage.getItem('ifp_upsell_shown')) {
+    sessionStorage.setItem('ifp_upsell_shown', '1');
+    openUpsell(m);
+  }
 }
 
 /* ------------------------------------------------------------------------
@@ -1113,12 +1273,12 @@ function renderSkeleton() {
 
 /* STEP 3 — openYear(y): fetch that year's shard once, merge, render its body. */
 function openYear(y) {
-  if (YEAR_LOADED[y]) { renderYearBody(y); return; }
+  if (YEAR_LOADED[y]) { renderYearBody(y); maybeShowUpsell(y); return; }
   if (YEAR_PENDING[y]) return;  /* a fetch is already in flight for this year */
   var section = document.getElementById('year-' + y);
   var body = section && section.querySelector('.tm-year-body');
   var entry = SHARD_INDEX.find(function (s) { return s.hijriYear === y; });
-  if (!entry) { YEAR_LOADED[y] = true; renderYearBody(y); return; }  /* inline-only year */
+  if (!entry) { YEAR_LOADED[y] = true; renderYearBody(y); maybeShowUpsell(y); return; }  /* inline-only year */
   if (body) body.innerHTML = '<div class="tm-year-loading">กำลังโหลด…</div>';
   YEAR_PENDING[y] = true;
   tmFetchYear(entry).then(function (shard) {
@@ -1130,6 +1290,7 @@ function openYear(y) {
     tmMergeShard(shard);
     YEAR_LOADED[y] = true;
     renderYearBody(y);
+    maybeShowUpsell(y);
   }).catch(function () {
     YEAR_PENDING[y] = false;
     if (body) body.innerHTML = '<div class="tm-year-retry">โหลดไม่สำเร็จ <button type="button" class="tm-retry-btn" data-year="' + y + '">ลองใหม่</button></div>';
@@ -1224,11 +1385,43 @@ function loadAllShards() {
 
   /* Delegated handler for per-chronicle source tabs inside event cards.
      tm-content persists across re-renders, so one listener suffices. */
+  /* Upsell modal: × button + backdrop click → close */
+  var upsellEl = document.getElementById('tm-upsell');
+  if(upsellEl) {
+    upsellEl.querySelector('.tm-upsell-x').addEventListener('click', closeUpsell);
+    upsellEl.addEventListener('click', function(ev){ if(ev.target === upsellEl) closeUpsell(); });
+  }
+
+  /* Bidayah auth affordance: show sign-in button when user is not authed.
+     Mirror the auth state from #ifp-userbtn via MutationObserver. */
+  var dhSignin = document.getElementById('dh-auth-signin');
+  var ifpUserbtn = document.getElementById('ifp-userbtn');
+  function syncDhAuth() {
+    if(!dhSignin) return;
+    dhSignin.hidden = !!(ifpUserbtn && ifpUserbtn.children.length > 0);
+  }
+  if(dhSignin) {
+    dhSignin.hidden = false; /* show initially; hide once authed state is confirmed */
+    dhSignin.addEventListener('click', tmSignIn);
+    if(ifpUserbtn) {
+      new MutationObserver(syncDhAuth).observe(ifpUserbtn, { childList: true, subtree: true });
+      syncDhAuth();
+    }
+  }
+
   var expOut = document.getElementById('tm-content');
   if(expOut) expOut.addEventListener('click', function(ev){
     /* lazy-load retry button (shown when a year's shard fetch failed) */
     var rb = ev.target.closest && ev.target.closest('.tm-retry-btn');
     if(rb){ openYear(parseInt(rb.getAttribute('data-year'),10)); return; }
+    /* unlock button on a locked teaser card → open upsell with that year's meta */
+    var ub = ev.target.closest && ev.target.closest('.tm-unlock-btn');
+    if(ub) {
+      var sec = ub.closest && ub.closest('.tm-year-section');
+      var ly  = sec ? parseInt(sec.id.replace('year-', ''), 10) : null;
+      openUpsell(ly ? YEAR_META[ly] : null);
+      return;
+    }
     var tab = ev.target.closest && ev.target.closest('.tm-tab');
     if(!tab) return;
     var body = tab.closest('.tm-event-body');
