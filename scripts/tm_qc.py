@@ -34,11 +34,14 @@ Translation quality checks:
       (very short Thai vs long Arabic may indicate summary — R89, non-blocking)
   T4  Ornate-bracket spacing: ﴿…﴾ (U+FD3F/U+FD3E) must have exactly 1 space
       before ﴿ and 1 space after ﴾, content flush inside — R92 (non-blocking)
+  T5  Month canonical check: detail uses a variant spelling from glossary.json
+      months[*].variantsFound instead of the canonicalThai form → WARN (non-blocking,
+      glossary must be loaded; silently skipped if glossary absent — R86)
 
 Exit codes:
   0  All structural checks pass AND T1-ERROR = 0 AND T2-ERROR = 0
   1  Any structural (S1-S7) failure, OR T1-ERROR > 0, OR T2-ERROR > 0
-  T3 and T4 findings are always non-blocking (printed but exit 0).
+  T3, T4, and T5 findings are always non-blocking (printed but exit 0).
 
 Usage:
   python3 scripts/tm_qc.py <shard.json> [<shard2.json> ...]
@@ -58,6 +61,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SHARD_DIR = REPO_ROOT / "pages" / "tools" / "timemachine-data"
 SOURCES_FILE = SHARD_DIR / "sources.json"
 CHRONICLES_FILE = SHARD_DIR / "chronicles.json"  # legacy fallback
+GLOSSARY_FILE = SHARD_DIR / "glossary.json"
 
 # ---------------------------------------------------------------------------
 # Unicode helpers
@@ -165,6 +169,29 @@ def check_ornate_spacing(detail: str) -> list:
 
 
 # ---------------------------------------------------------------------------
+# Glossary month-variant map loader (for T5)
+# ---------------------------------------------------------------------------
+def load_month_variant_map() -> dict:
+    """
+    Return {variant_thai: canonical_thai} built from glossary.json months section.
+    Silently returns {} if the file or 'months' key is absent.
+    """
+    if not GLOSSARY_FILE.exists():
+        return {}
+    try:
+        data = json.loads(GLOSSARY_FILE.read_text(encoding='utf-8'))
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return {}
+    month_variant_map = {}
+    for entry in data.get('months', []):
+        canonical = entry.get('canonicalThai', '')
+        for variant in entry.get('variantsFound', []):
+            if variant and variant != canonical:
+                month_variant_map[variant] = canonical
+    return month_variant_map
+
+
+# ---------------------------------------------------------------------------
 # Source registry loader
 # ---------------------------------------------------------------------------
 def load_sources() -> set:
@@ -239,12 +266,18 @@ def structural_check(path: Path, known_sources: set) -> list:
 # ---------------------------------------------------------------------------
 # Translation quality checks
 # ---------------------------------------------------------------------------
-def translation_checks(path: Path, data: dict) -> list:
+def translation_checks(path: Path, data: dict,
+                       month_variants: dict | None = None) -> list:
     """
     Return list of (severity, loc, check_code, msg).
     T1 ERROR and T2 ERROR are blocking (caller inspects severity).
-    T1 WARN, T3, T4 are always non-blocking.
+    T1 WARN, T3, T4, T5 are always non-blocking.
+
+    month_variants: {variant_thai: canonical_thai} from load_month_variant_map().
+                    Pass None or {} to skip T5.
     """
+    if month_variants is None:
+        month_variants = {}
     findings = []
     events = data.get('events', [])
 
@@ -296,13 +329,20 @@ def translation_checks(path: Path, data: dict) -> list:
                     findings.append(('WARN', loc, 'T4',
                         f'ornate-bracket spacing error — {issue} (R92)'))
 
+            # T5 — Month canonical check (non-blocking, skipped if no glossary)
+            for variant, canonical in month_variants.items():
+                if variant in detail:
+                    findings.append(('WARN', loc, 'T5',
+                        f'เดือนนอก canonical: {variant!r} → ใช้ {canonical!r} (R86)'))
+
     return findings
 
 
 # ---------------------------------------------------------------------------
 # Per-file runner
 # ---------------------------------------------------------------------------
-def run_file(path: Path, known_sources: set, verbose: bool = True) -> dict:
+def run_file(path: Path, known_sources: set, verbose: bool = True,
+             month_variants: dict | None = None) -> dict:
     """Run all checks on one shard. Returns result dict."""
     result = {
         'path': str(path),
@@ -325,7 +365,7 @@ def run_file(path: Path, known_sources: set, verbose: bool = True) -> dict:
     except Exception:
         return result
 
-    findings = translation_checks(path, data)
+    findings = translation_checks(path, data, month_variants=month_variants)
     result['translation_findings'] = findings
     if verbose and findings:
         for sev, loc, check, msg in findings:
@@ -347,19 +387,23 @@ def has_blocking_findings(result: dict) -> bool:
 # ---------------------------------------------------------------------------
 # Multi-file report
 # ---------------------------------------------------------------------------
-def run_report(shards: list, known_sources: set) -> int:
+def run_report(shards: list, known_sources: set,
+               month_variants: dict | None = None) -> int:
     """Run all shards, print summary. Returns exit code (1 if any blocking errors)."""
+    if month_variants is None:
+        month_variants = {}
     total = len(shards)
     struct_fail = 0
     t_counts = {
         'T1_ERROR': 0, 'T1_WARN': 0,
         'T2_ERROR': 0, 'T2_FLAG': 0,
-        'T3': 0, 'T4': 0,
+        'T3': 0, 'T4': 0, 'T5': 0,
     }
     t3_worst = []
 
     for path in sorted(shards):
-        result = run_file(path, known_sources, verbose=False)
+        result = run_file(path, known_sources, verbose=False,
+                          month_variants=month_variants)
 
         if any(s == 'ERROR' for s, _ in result['structural_errors']):
             struct_fail += 1
@@ -388,6 +432,9 @@ def run_report(shards: list, known_sources: set) -> int:
             elif check == 'T4':
                 t_counts['T4'] += 1
                 print(f'  [WARN] T4 {path.name}/{loc}: {msg}')
+            elif check == 'T5':
+                t_counts['T5'] += 1
+                print(f'  [WARN] T5 {path.name}/{loc}: {msg}')
 
     print()
     print('=' * 60)
@@ -400,6 +447,7 @@ def run_report(shards: list, known_sources: set) -> int:
     print(f'T2 Honorific leakage    FLAG   : {t_counts["T2_FLAG"]}  [non-blocking, editor review]')
     print(f'T3 Translation brevity  WARN   : {t_counts["T3"]}')
     print(f'T4 Ornate-bracket spac. WARN   : {t_counts["T4"]}')
+    print(f'T5 Month canonical      WARN   : {t_counts["T5"]}  [non-blocking, R86]')
 
     if t3_worst:
         t3_worst.sort()
@@ -429,13 +477,14 @@ def main():
     a = ap.parse_args()
 
     known_sources = load_sources()
+    month_variants = load_month_variant_map()
 
     if a.report or a.all:
         shards = sorted(SHARD_DIR.glob('bidayah-h*.json'))
         if not shards:
             print('No bidayah-h*.json shards found under', SHARD_DIR)
             sys.exit(1)
-        sys.exit(run_report(shards, known_sources))
+        sys.exit(run_report(shards, known_sources, month_variants=month_variants))
 
     if not a.shards:
         ap.print_help()
@@ -445,11 +494,12 @@ def main():
     for raw_path in a.shards:
         path = Path(raw_path)
         print(f'--- {path.name} ---')
-        result = run_file(path, known_sources, verbose=True)
+        result = run_file(path, known_sources, verbose=True,
+                          month_variants=month_variants)
         if has_blocking_findings(result):
             overall_exit = 1
         elif not result['translation_findings']:
-            print('  [OK] T1-T4 clean')
+            print('  [OK] T1-T5 clean')
 
     sys.exit(overall_exit)
 

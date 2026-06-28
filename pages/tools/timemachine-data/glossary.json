@@ -21560,10 +21560,9 @@
     {
       "id": "muharram",
       "arabic": "محرم",
-      "canonicalThai": "มุฮัรร็อม",
-      "note": "FLAG: corpus majority=มุฮัรร็อม (24) vs มุฮัรรอม (17); user baseline expects มุฮัรรอม — One to confirm canonical before normalizing",
+      "canonicalThai": "มุฮัรรอม",
       "variantsFound": [
-        "มุฮัรรอม"
+        "มุฮัรร็อม"
       ]
     },
     {
@@ -21642,7 +21641,8 @@
       "arabic": "ذو القعدة",
       "canonicalThai": "ซุลเกาะอ์ดะฮ์",
       "variantsFound": [
-        "ซุลเกาะดะฮ์"
+        "ซุลเกาะดะฮ์",
+        "ซุลกอดะฮ์"
       ]
     },
     {

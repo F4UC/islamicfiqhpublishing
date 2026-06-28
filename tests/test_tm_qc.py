@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-tests/test_tm_qc.py — Self-tests for scripts/tm_qc.py checks T1–T4.
+tests/test_tm_qc.py — Self-tests for scripts/tm_qc.py checks T1–T5.
 
 Run with:  python3 tests/test_tm_qc.py
 Exit 0 if all tests pass, 1 if any fail.
@@ -15,6 +15,8 @@ Fixtures test:
   T4a  ﴿text﴾ with no spaces         → T4 WARN
   T4b  ﴾text﴿ reversed brackets      → T4 WARN
   T4c  ﴿text﴾ with correct spacing   → no T4
+  T5a  detail has variant month (ซุลเกาะดะฮ์) → T5 WARN
+  T5b  detail has canonical month (ซุลเกาะอ์ดะฮ์) → no T5
 """
 import sys
 from pathlib import Path
@@ -32,6 +34,14 @@ from tm_qc import (
     ORNATE_CLOSE,
     FDFA,
 )
+
+# Minimal month_variants map for T5 tests (mirrors glossary dhul-qada entry)
+T5_MONTH_VARIANTS = {
+    'ซุลเกาะดะฮ์': 'ซุลเกาะอ์ดะฮ์',
+    'ซุลกอดะฮ์':   'ซุลเกาะอ์ดะฮ์',
+    'ซุลฮิจญะฮ์':  'ซุลหิจญะฮ์',
+    'มุฮัรร็อม':   'มุฮัรรอม',
+}
 
 # ---------------------------------------------------------------------------
 # Minimal shard builder
@@ -70,9 +80,11 @@ def check(name: str, condition: bool, hint: str = ''):
         print(f'  FAIL  {name}' + (f'  ({hint})' if hint else ''))
 
 
-def findings_for(detail: str, arabic: str = 'أ' * 50, event_id: str = 'test-001'):
+def findings_for(detail: str, arabic: str = 'أ' * 50, event_id: str = 'test-001',
+                 month_variants: dict | None = None):
     data = make_shard(event_id, detail, arabic)
-    return translation_checks(Path('test.json'), data)
+    return translation_checks(Path('test.json'), data,
+                               month_variants=month_variants or {})
 
 
 def checks_of_type(findings, check_code: str):
@@ -195,6 +207,25 @@ def test_t4():
 
 
 # ---------------------------------------------------------------------------
+# T5 tests
+# ---------------------------------------------------------------------------
+
+def test_t5():
+    # T5a — variant month in detail → T5 WARN
+    detail_variant = 'ในเดือนซุลเกาะดะฮ์ปีนี้มีเหตุการณ์สำคัญ'
+    f = findings_for(detail_variant, month_variants=T5_MONTH_VARIANTS)
+    t5 = checks_of_type(f, 'T5')
+    check('T5a: ซุลเกาะดะฮ์ in detail → T5 WARN',
+          any(sev == 'WARN' for sev, *_ in t5), f'got {t5}')
+
+    # T5b — canonical month in detail → no T5
+    detail_canonical = 'ในเดือนซุลเกาะอ์ดะฮ์ปีนี้มีเหตุการณ์สำคัญ'
+    f2 = findings_for(detail_canonical, month_variants=T5_MONTH_VARIANTS)
+    t5b = checks_of_type(f2, 'T5')
+    check('T5b: ซุลเกาะอ์ดะฮ์ in detail → no T5', len(t5b) == 0, f'got {t5b}')
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -212,6 +243,9 @@ def main():
     print()
     print('=== T4 Ornate-bracket spacing ===')
     test_t4()
+    print()
+    print('=== T5 Month canonical check ===')
+    test_t5()
     print()
     print('=' * 40)
     print(f'Results: {len(TESTS_PASSED)} passed, {len(TESTS_FAILED)} failed')
