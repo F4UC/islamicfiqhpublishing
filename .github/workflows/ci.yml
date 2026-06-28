@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v6
         with:
           node-version: "20"
@@ -34,7 +36,12 @@ jobs:
       - name: Time Machine QC gate (charter rules)
         env:
           PYTHONUTF8: "1"
-        run: python3 pages/tools/timemachine-data/scripts/tm_qc.py
+        run: python3 scripts/tm_qc.py --all
+
+      - name: Time Machine arabicExcerpt immutability guard (R60/R88)
+        env:
+          PYTHONUTF8: "1"
+        run: python3 scripts/check_source_immutable.py
 
       - name: House-style lint (informational, non-blocking)
         continue-on-error: true
