@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hijri Time Machine Preview — Islamic Fiqh Publishing</title>
+
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
+
+<meta name="description" content="พรีวิว UX/UI ใหม่สำหรับ Hijri Time Machine ของ Islamic Fiqh Publishing">
+<meta name="robots" content="noindex">
+
+<link rel="icon" href="../../favicon.png?v=2" type="image/png">
+<link rel="stylesheet" href="../../article.css?v=20260614d">
+<link rel="stylesheet" href="../../css/tokens.css?v=20260529n">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/amiri-400-arabic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-thai.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+
+<style>
+:root {
+  --tm-ink: #0a0907;
+  --tm-panel: rgba(250,247,244,0.84);
+  --tm-panel-strong: #fffaf4;
+  --tm-line: rgba(26,22,18,0.12);
+  --tm-line-strong: rgba(26,22,18,0.22);
+  --tm-red: #b31b1b;
+  --tm-gold: #c49a45;
+  --tm-radius: 8px;
+  --serif: 'IBM Plex Sans Thai', system-ui, sans-serif;
+  --thai: 'Sarabun', system-ui, sans-serif;
+  --arabic: 'Amiri', serif;
+  --ui: 'D-DIN', 'Inter', system-ui, sans-serif;
+}
+
+html.dark-mode {
+  --tm-panel: rgba(20,17,13,0.86);
+  --tm-panel-strong: #14110d;
+  --tm-line: rgba(255,255,255,0.10);
+  --tm-line-strong: rgba(255,255,255,0.18);
+  --tm-red: #d32f2f;
+}
+
+html, body {
+  background: var(--bg-primary);
+}
+
+.tm-preview-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 34px 22px 80px;
+}
+
+.tm-preview-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  border-radius: var(--tm-radius);
+  border: 1px solid var(--tm-line);
+  background:
+    linear-gradient(90deg, rgba(10,9,7,0.92) 0%, rgba(10,9,7,0.70) 48%, rgba(10,9,7,0.20) 100%),
+    url('../../images/heroes/hero-history-1.webp') center / cover no-repeat;
+  color: #f5f1ea;
+  display: grid;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.tm-preview-hero-inner {
+  max-width: 760px;
+  padding: 44px;
+}
+
+.tm-preview-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ui);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245,241,234,0.78);
+  margin-bottom: 16px;
+}
+
+.tm-preview-kicker::before {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: var(--tm-gold);
+}
+
+.tm-preview-title {
+  font-family: var(--serif);
+  font-size: clamp(38px, 7vw, 76px);
+  line-height: 1.04;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin: 0 0 14px;
+}
+
+.tm-preview-title span {
+  color: #f1c772;
+}
+
+.tm-preview-copy {
+  font-family: var(--thai);
+  max-width: 660px;
+  font-size: 16px;
+  line-height: 2;
+  color: rgba(245,241,234,0.86);
+  margin: 0 0 26px;
+}
+
+.tm-preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tm-btn {
+  appearance: none;
+  border: 1px solid var(--tm-line-strong);
+  border-radius: var(--tm-radius);
+  padding: 11px 16px;
+  font-family: var(--thai);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.tm-btn:hover {
+  border-color: var(--tm-red);
+  transform: translateY(-1px);
+}
+
+.tm-btn.primary {
+  background: var(--tm-red);
+  border-color: var(--tm-red);
+  color: #fff;
+}
+
+.tm-btn.hero {
+  background: rgba(255,250,244,0.96);
+  border-color: rgba(255,255,255,0.42);
+  color: #14110d;
+}
+
+.tm-btn.ghost {
+  background: transparent;
+  color: inherit;
+  border-color: rgba(245,241,234,0.34);
+}
+
+.tm-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.tm-stat {
+  background: var(--tm-panel);
+  border: 1px solid var(--tm-line);
+  border-radius: var(--tm-radius);
+  padding: 18px;
+}
+
+.tm-stat-label {
+  display: block;
+  font-family: var(--thai);
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-bottom: 8px;
+}
+
+.tm-stat-value {
+  display: block;
+  font-family: var(--ui);
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.tm-stat-note {
+  display: block;
+  font-family: var(--thai);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+}
+
+.tm-workspace {
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.tm-control-panel,
+.tm-reader-panel,
+.tm-source-panel {
+  background: var(--tm-panel);
+  border: 1px solid var(--tm-line);
+  border-radius: var(--tm-radius);
+}
+
+.tm-control-panel {
+  position: sticky;
+  top: 18px;
+  overflow: hidden;
+}
+
+.tm-panel-head {
+  padding: 18px;
+  border-bottom: 1px solid var(--tm-line);
+}
+
+.tm-panel-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.tm-panel-sub {
+  font-family: var(--thai);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-tertiary);
+  margin: 6px 0 0;
+}
+
+.tm-controls {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.tm-field {
+  display: grid;
+  gap: 7px;
+}
+
+.tm-field label {
+  font-family: var(--thai);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.tm-input,
+.tm-select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--tm-line-strong);
+  border-radius: var(--tm-radius);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--thai);
+  font-size: 14px;
+  padding: 9px 11px;
+}
+
+.tm-input:focus,
+.tm-select:focus {
+  outline: none;
+  border-color: var(--tm-red);
+  box-shadow: 0 0 0 3px rgba(179,27,27,0.12);
+}
+
+.tm-filter-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.tm-source-panel {
+  margin-top: 16px;
+  padding: 18px;
+}
+
+.tm-source-tabs {
+  display: flex;
+  gap: 6px;
+  margin: 14px 0;
+}
+
+.tm-source-tab {
+  flex: 1;
+  border: 1px solid var(--tm-line);
+  border-radius: var(--tm-radius);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  font-family: var(--thai);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.tm-source-tab.active {
+  background: var(--tm-red);
+  border-color: var(--tm-red);
+  color: #fff;
+}
+
+.tm-source-list {
+  display: grid;
+  gap: 8px;
+}
+
+.tm-source-card {
+  border: 1px solid var(--tm-line);
+  border-radius: var(--tm-radius);
+  background: var(--bg-primary);
+  padding: 11px;
+}
+
+.tm-source-name {
+  font-family: var(--thai);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.tm-source-meta {
+  font-family: var(--thai);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+.tm-reader-panel {
+  min-height: 540px;
+  overflow: hidden;
+}
+
+.tm-reader-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  border-bottom: 1px solid var(--tm-line);
+}
+
+.tm-result-title {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.tm-result-meta {
+  font-family: var(--thai);
+  color: var(--text-tertiary);
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 5px 0 0;
+}
+
+.tm-year-list {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+}
+
+.tm-year-card {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid var(--tm-line);
+  border-radius: var(--tm-radius);
+  background: var(--bg-primary);
+  padding: 14px;
+}
+
+.tm-year-no {
+  font-family: var(--ui);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.tm-year-ce {
+  display: block;
+  font-family: var(--ui);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-tertiary);
+  margin-top: 5px;
+}
+
+.tm-year-scope {
+  font-family: var(--thai);
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.tm-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tm-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 23px;
+  border-radius: 999px;
+  border: 1px solid var(--tm-line);
+  padding: 2px 8px;
+  font-family: var(--thai);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  background: var(--bg-secondary);
+}
+
+.tm-badge.ready {
+  color: var(--tm-red);
+  border-color: rgba(179,27,27,0.28);
+  background: rgba(179,27,27,0.07);
+}
+
+.tm-year-body {
+  grid-column: 1 / -1;
+  display: none;
+  border-top: 1px solid var(--tm-line);
+  padding-top: 14px;
+}
+
+.tm-year-card.open .tm-year-body {
+  display: block;
+}
+
+.tm-event-list {
+  display: grid;
+  gap: 10px;
+}
+
+.tm-event-card {
+  border: 1px solid var(--tm-line);
+  border-radius: var(--tm-radius);
+  background: var(--tm-panel-strong);
+  padding: 14px;
+}
+
+.tm-event-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+}
+
+.tm-event-title {
+  font-family: var(--thai);
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.tm-event-ar {
+  display: block;
+  font-family: var(--arabic);
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.tm-event-group {
+  font-family: var(--thai);
+  font-size: 12px;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.tm-account-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.tm-account-tab {
+  border: 1px solid var(--tm-line);
+  border-radius: 999px;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  font-family: var(--thai);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.tm-account-tab.active {
+  background: var(--tm-red);
+  color: #fff;
+  border-color: var(--tm-red);
+}
+
+.tm-account-detail {
+  font-family: var(--thai);
+  font-size: 15px;
+  line-height: 2;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+
+.tm-account-source {
+  margin-top: 10px;
+  font-family: var(--thai);
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.tm-arabic-box {
+  margin-top: 12px;
+}
+
+.tm-arabic-box summary {
+  font-family: var(--thai);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.tm-arabic-text {
+  margin: 10px 0 0;
+  border: 1px solid var(--tm-line);
+  border-radius: var(--tm-radius);
+  background: var(--bg-primary);
+  padding: 14px;
+  font-family: var(--arabic);
+  font-size: 20px;
+  line-height: 2.1;
+  color: var(--text-primary);
+  text-align: right;
+  white-space: pre-wrap;
+}
+
+.tm-figures {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tm-empty,
+.tm-loading,
+.tm-error {
+  padding: 42px 18px;
+  text-align: center;
+  font-family: var(--thai);
+  color: var(--text-tertiary);
+  line-height: 1.8;
+}
+
+.tm-load-more {
+  padding: 0 18px 18px;
+}
+
+.tm-preview-note {
+  margin-top: 16px;
+  border: 1px solid var(--tm-line);
+  border-radius: var(--tm-radius);
+  padding: 14px 16px;
+  font-family: var(--thai);
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text-tertiary);
+  background: var(--bg-secondary);
+}
+
+#readingProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--accent-color);
+  z-index: 9999;
+  transition: width .1s linear;
+}
+
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 500;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--border-primary);
+  border-radius: 50%;
+  background: rgba(10,12,16,0.72);
+  color: var(--text-secondary);
+  box-shadow: 0 8px 32px rgba(0,0,0,.28);
+  transition: all .35s cubic-bezier(.2,.7,.2,1);
+  cursor: pointer;
+  padding: 0;
+}
+
+#backToTopBtn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 920px) {
+  .tm-preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tm-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .tm-control-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 680px) {
+  .tm-preview-shell {
+    padding: 18px 14px 64px;
+  }
+
+  .tm-preview-hero {
+    min-height: 520px;
+  }
+
+  .tm-preview-hero-inner {
+    padding: 28px 20px;
+  }
+
+  .tm-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tm-reader-top,
+  .tm-year-card,
+  .tm-event-head {
+    grid-template-columns: 1fr;
+  }
+
+  .tm-reader-top {
+    display: grid;
+  }
+
+  .tm-year-card {
+    gap: 10px;
+  }
+
+  .tm-event-group {
+    white-space: normal;
+  }
+}
+</style>
+</head>
+<body class="ifp-tools-page" lang="th">
+<div id="readingProgress"></div>
+<button id="backToTopBtn" title="กลับขึ้นบนสุด" type="button">↑</button>
+<div id="header-placeholder"></div>
+
+<main class="tm-preview-shell">
+  <section class="tm-preview-hero" aria-label="Hijri Time Machine preview">
+    <div class="tm-preview-hero-inner">
+      <p class="tm-preview-kicker">Preview · Book-Scoped Explorer</p>
+      <h1 class="tm-preview-title">Hijri Time <span>Machine</span></h1>
+      <p class="tm-preview-copy">พรีวิวรูปโฉมใหม่สำหรับคลังพงศาวดารรายปี: อ่านเร็วขึ้น ค้นหาเป็นระบบขึ้น และยึดตำราเป็นขอบเขตหลักเสมอ เพื่อเพิ่มตำราใหม่ในอนาคตโดยไม่ผสมเนื้อหาข้ามเล่ม</p>
+      <div class="tm-preview-actions">
+        <a class="tm-btn hero" href="#tm-workspace">เข้าสู่ preview</a>
+        <button class="tm-btn ghost" id="tm-open-latest" type="button">เปิดปีล่าสุด</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="tm-preview-grid" aria-label="Book summary">
+    <div class="tm-stat">
+      <span class="tm-stat-label">ปีที่ลงทะเบียน</span>
+      <span class="tm-stat-value" id="stat-years">-</span>
+      <span class="tm-stat-note" id="stat-range">กำลังอ่าน manifest</span>
+    </div>
+    <div class="tm-stat">
+      <span class="tm-stat-label">เหตุการณ์</span>
+      <span class="tm-stat-value" id="stat-events">-</span>
+      <span class="tm-stat-note">นับจาก index.json</span>
+    </div>
+    <div class="tm-stat">
+      <span class="tm-stat-label">ทะเบียนอ้างอิง</span>
+      <span class="tm-stat-value" id="stat-sources">-</span>
+      <span class="tm-stat-note">metadata เท่านั้น ไม่ใช่การรวมตำรา</span>
+    </div>
+    <div class="tm-stat">
+      <span class="tm-stat-label">สถานะข้อมูล</span>
+      <span class="tm-stat-value" id="stat-status">Draft</span>
+      <span class="tm-stat-note">preview เท่านั้น ยังไม่ merge</span>
+    </div>
+  </section>
+
+  <section class="tm-workspace" id="tm-workspace">
+    <aside>
+      <div class="tm-control-panel">
+        <div class="tm-panel-head">
+          <h2 class="tm-panel-title">ตัวกรองคลัง</h2>
+          <p class="tm-panel-sub">ทุกตัวกรองทำงานภายในตำราที่เลือกเท่านั้น ไม่มีการรวมผลข้ามตำรา</p>
+        </div>
+        <div class="tm-controls">
+          <div class="tm-field">
+            <label for="tm-book">ตำราที่กำลังอ่าน</label>
+            <select class="tm-select" id="tm-book"></select>
+          </div>
+          <div class="tm-field">
+            <label for="tm-query">ค้นหา</label>
+            <input class="tm-input" id="tm-query" type="search" placeholder="เช่น อิบนุ ตัยมียะฮ์, ตาตาร์, دمشق">
+          </div>
+          <div class="tm-filter-row">
+            <div class="tm-field">
+              <label for="tm-century">ศตวรรษ</label>
+              <select class="tm-select" id="tm-century"></select>
+            </div>
+            <div class="tm-field">
+              <label for="tm-status">สถานะ</label>
+              <select class="tm-select" id="tm-status"></select>
+            </div>
+          </div>
+          <div class="tm-filter-row">
+            <button class="tm-btn primary" id="tm-deep-search" type="button">ค้นลึกในตำรานี้</button>
+            <button class="tm-btn" id="tm-reset" type="button">ล้างตัวกรอง</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tm-source-panel">
+        <h2 class="tm-panel-title">ทะเบียนอ้างอิง</h2>
+        <p class="tm-panel-sub">ส่วนนี้เป็น metadata สำหรับตรวจที่มาเท่านั้น เนื้อหา reader/search ยังถูกล็อกตามตำราที่เลือก</p>
+        <div class="tm-source-tabs">
+          <button class="tm-source-tab active" data-source-type="annal" type="button">Annal</button>
+          <button class="tm-source-tab" data-source-type="tarajim" type="button">Tarajim</button>
+        </div>
+        <div class="tm-source-list" id="tm-source-list"></div>
+      </div>
+    </aside>
+
+    <section class="tm-reader-panel" aria-live="polite">
+      <div class="tm-reader-top">
+        <div>
+          <h2 class="tm-result-title" id="result-title">กำลังเตรียม preview</h2>
+          <p class="tm-result-meta" id="result-meta">โหลด manifest, source registry และ glossary</p>
+        </div>
+        <button class="tm-btn" id="tm-collapse" type="button">ย่อทุกปี</button>
+      </div>
+      <div class="tm-year-list" id="tm-year-list">
+        <div class="tm-loading">กำลังโหลดข้อมูล preview...</div>
+      </div>
+      <div class="tm-load-more" id="tm-load-more-wrap" hidden>
+        <button class="tm-btn" id="tm-load-more" type="button">แสดงเพิ่ม</button>
+      </div>
+    </section>
+  </section>
+
+  <p class="tm-preview-note">Preview นี้เป็นหน้าแยกเพื่อทดสอบ UX/UI เท่านั้น ไม่แก้ข้อมูล `timemachine-data/*.json`, ไม่เปลี่ยนหน้าหลัก, ไม่ merge เข้า main และออกแบบให้ตำราแต่ละเล่มแยกขอบเขตกันชัดเจน</p>
+</main>
+
+<div id="footer-placeholder"></div>
+<script defer src="../../main.js?v=20260619a"></script>
+<script>
+(function () {
+  'use strict';
+
+  var BASE = './timemachine-data/';
+  var manifest = null;
+  var sources = {};
+  var glossary = {};
+  var filtered = [];
+  var visibleCount = 60;
+  var loadedYears = {};
+  var allShardsLoaded = false;
+  var allEvents = [];
+  var sourceMode = 'annal';
+  var activeBook = '';
+
+  var els = {
+    book: document.getElementById('tm-book'),
+    query: document.getElementById('tm-query'),
+    century: document.getElementById('tm-century'),
+    status: document.getElementById('tm-status'),
+    years: document.getElementById('tm-year-list'),
+    title: document.getElementById('result-title'),
+    meta: document.getElementById('result-meta'),
+    sourceList: document.getElementById('tm-source-list'),
+    loadMoreWrap: document.getElementById('tm-load-more-wrap'),
+    loadMore: document.getElementById('tm-load-more')
+  };
+
+  function ceYear(h) {
+    return Math.round(h * 0.9702 + 621.5);
+  }
+
+  function byId(id) {
+    return document.getElementById(id);
+  }
+
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (typeof text === 'string') node.textContent = text;
+    return node;
+  }
+
+  function clear(node) {
+    while (node.firstChild) node.removeChild(node.firstChild);
+  }
+
+  function safeNumber(n) {
+    return Number(n || 0).toLocaleString('en-US');
+  }
+
+  function sourceName(id) {
+    var s = sources[id] || {};
+    return s.nameThai || id || 'แหล่งอ้างอิง';
+  }
+
+  function glossaryName(id) {
+    var p = glossary[id] || {};
+    return p.thai || id;
+  }
+
+  function buildGlossaryMap(raw) {
+    var map = {};
+    ['persons', 'places', 'books'].forEach(function (key) {
+      (raw[key] || []).forEach(function (item) {
+        if (!item || !item.id) return;
+        map[item.id] = {
+          thai: item.canonicalThai || item.id,
+          arabic: item.arabic || '',
+          tarajim: item.tarajim || []
+        };
+      });
+    });
+    return map;
+  }
+
+  function fetchJson(path) {
+    return fetch(path).then(function (r) {
+      if (!r.ok) throw new Error(path + ' ' + r.status);
+      return r.json();
+    });
+  }
+
+  function setupFilters() {
+    clear(els.book);
+    clear(els.century);
+    clear(els.status);
+
+    var books = {};
+    (manifest.shards || []).forEach(function (s) {
+      if (!s.book) return;
+      books[s.book] = true;
+    });
+    var bookList = Object.keys(books).sort();
+    var desiredBook = activeBook;
+    bookList.forEach(function (book) {
+      els.book.appendChild(new Option(book, book));
+    });
+    activeBook = desiredBook && books[desiredBook] ? desiredBook : (bookList[0] || '');
+    els.book.value = activeBook;
+    els.book.disabled = bookList.length <= 1;
+
+    els.century.appendChild(new Option('ทั้งหมด', 'all'));
+    for (var c = 1; c <= 8; c++) {
+      var start = ((c - 1) * 100) + 1;
+      var end = c * 100;
+      els.century.appendChild(new Option('ศตวรรษ ' + c + ' (' + start + '-' + end + ')', String(c)));
+    }
+
+    els.status.appendChild(new Option('ทุกสถานะ', 'all'));
+    var seen = {};
+    manifest.shards.forEach(function (s) {
+      if (activeBook && s.book !== activeBook) return;
+      var status = s.reviewStatus || 'DRAFT';
+      if (seen[status]) return;
+      seen[status] = true;
+      els.status.appendChild(new Option(status, status));
+    });
+  }
+
+  function updateStats() {
+    var shards = bookShards();
+    var years = shards.map(function (s) { return s.hijriYear; });
+    var sourceKeys = Object.keys(sources);
+    var totalEvents = shards.reduce(function (sum, s) { return sum + (s.events || 0); }, 0);
+    byId('stat-years').textContent = safeNumber(shards.length);
+    byId('stat-events').textContent = safeNumber(totalEvents);
+    byId('stat-sources').textContent = safeNumber(sourceKeys.length);
+    byId('stat-range').textContent = years.length ? 'ฮ.ศ. ' + Math.min.apply(null, years) + '-' + Math.max.apply(null, years) : 'ยังไม่มีข้อมูล';
+    byId('stat-status').textContent = (manifest.meta && manifest.meta.reviewStatus) ? 'Draft' : 'Preview';
+  }
+
+  function renderSources() {
+    clear(els.sourceList);
+    Object.keys(sources)
+      .filter(function (id) { return sources[id].type === sourceMode; })
+      .sort(function (a, b) { return (sources[a].order || 99) - (sources[b].order || 99); })
+      .forEach(function (id) {
+        var s = sources[id];
+        var card = el('div', 'tm-source-card');
+        card.appendChild(el('div', 'tm-source-name', s.book || id));
+        var meta = el('div', 'tm-source-meta');
+        var bits = [s.nameThai, s.bookArabic, s.died].filter(Boolean);
+        meta.textContent = bits.join(' · ');
+        card.appendChild(meta);
+        els.sourceList.appendChild(card);
+      });
+  }
+
+  function applyFilters() {
+    activeBook = els.book.value || activeBook;
+    var q = (els.query.value || '').trim().toLowerCase();
+    var century = els.century.value;
+    var status = els.status.value;
+    var rows = bookShards().filter(function (s) {
+      var hay = [s.scope || '', s.file || '', s.book || '', s.reviewStatus || '', String(s.hijriYear || '')].join(' ').toLowerCase();
+      if (q && hay.indexOf(q) === -1) return false;
+      if (century !== 'all' && Math.ceil(s.hijriYear / 100) !== parseInt(century, 10)) return false;
+      if (status !== 'all' && s.reviewStatus !== status) return false;
+      return true;
+    });
+    filtered = rows;
+    visibleCount = 60;
+    renderYearList();
+  }
+
+  function renderYearList() {
+    clear(els.years);
+    var total = filtered.length;
+    var rows = filtered.slice(0, visibleCount);
+    els.title.textContent = total ? 'สำรวจปีฮิจเราะฮ์ในตำรานี้' : 'ไม่พบปีที่ตรงตัวกรอง';
+    els.meta.textContent = total ? 'ตำรา: ' + activeBook + ' · แสดง ' + rows.length + ' จาก ' + total + ' ปี · กดเปิดปีเพื่อโหลด shard ตามต้องการ' : 'ลองล้างตัวกรองหรือใช้คำค้นอื่น';
+    if (!rows.length) {
+      els.years.appendChild(el('div', 'tm-empty', 'ไม่พบผลลัพธ์ใน manifest'));
+    }
+    rows.forEach(function (entry) {
+      els.years.appendChild(renderYearCard(entry));
+    });
+    els.loadMoreWrap.hidden = visibleCount >= total;
+  }
+
+  function renderYearCard(entry) {
+    var card = el('article', 'tm-year-card');
+    card.dataset.year = String(entry.hijriYear);
+
+    var year = el('div', 'tm-year-no', String(entry.hijriYear));
+    year.appendChild(el('span', 'tm-year-ce', '≈ ค.ศ. ' + (entry.ceYear || ceYear(entry.hijriYear))));
+    card.appendChild(year);
+
+    var body = el('div');
+    body.appendChild(el('p', 'tm-year-scope', entry.scope || entry.file));
+    var badges = el('div', 'tm-badges');
+    badges.appendChild(el('span', 'tm-badge', safeNumber(entry.events) + ' เหตุการณ์'));
+    badges.appendChild(el('span', 'tm-badge', entry.book || 'book'));
+    var st = el('span', 'tm-badge' + ((entry.reviewStatus || '').indexOf('READY') >= 0 ? ' ready' : ''), entry.reviewStatus || 'DRAFT');
+    badges.appendChild(st);
+    body.appendChild(badges);
+    card.appendChild(body);
+
+    var button = el('button', 'tm-btn', 'เปิดปี');
+    button.type = 'button';
+    button.addEventListener('click', function () { toggleYear(card, entry); });
+    card.appendChild(button);
+
+    var details = el('div', 'tm-year-body');
+    card.appendChild(details);
+    return card;
+  }
+
+  function toggleYear(card, entry) {
+    var opened = card.classList.toggle('open');
+    var button = card.querySelector('.tm-btn');
+    if (button) button.textContent = opened ? 'ปิดปี' : 'เปิดปี';
+    if (opened && !loadedYears[entry.hijriYear]) {
+      loadYear(card, entry);
+    }
+  }
+
+  function loadYear(card, entry) {
+    var body = card.querySelector('.tm-year-body');
+    clear(body);
+    body.appendChild(el('div', 'tm-loading', 'กำลังโหลด shard ปี ฮ.ศ. ' + entry.hijriYear + '...'));
+    fetchJson(BASE + entry.file).then(function (shard) {
+      loadedYears[entry.hijriYear] = shard;
+      renderShard(body, shard);
+    }).catch(function () {
+      clear(body);
+      body.appendChild(el('div', 'tm-error', 'โหลด shard ไม่สำเร็จ'));
+    });
+  }
+
+  function renderShard(container, shard) {
+    clear(container);
+    var list = el('div', 'tm-event-list');
+    (shard.events || []).forEach(function (event) {
+      list.appendChild(renderEvent(event, shard));
+    });
+    container.appendChild(list);
+  }
+
+  function renderEvent(event, shard) {
+    var card = el('div', 'tm-event-card');
+    var head = el('div', 'tm-event-head');
+    var titleBox = el('div');
+    titleBox.appendChild(el('h3', 'tm-event-title', event.title || event.id || 'เหตุการณ์'));
+    if (event.titleArabic) {
+      var ar = el('span', 'tm-event-ar', event.titleArabic);
+      ar.lang = 'ar';
+      ar.dir = 'rtl';
+      titleBox.appendChild(ar);
+    }
+    head.appendChild(titleBox);
+    head.appendChild(el('div', 'tm-event-group', event.group || 'เหตุการณ์'));
+    card.appendChild(head);
+
+    var accounts = event.accounts || [];
+    if (accounts.length > 1) {
+      var tabs = el('div', 'tm-account-tabs');
+      accounts.forEach(function (account, index) {
+        var tab = el('button', 'tm-account-tab' + (index === 0 ? ' active' : ''), sourceName(account.source || account.chronicle));
+        tab.type = 'button';
+        tab.addEventListener('click', function () {
+          renderAccount(card, account);
+          tabs.querySelectorAll('.tm-account-tab').forEach(function (t) { t.classList.remove('active'); });
+          tab.classList.add('active');
+        });
+        tabs.appendChild(tab);
+      });
+      card.appendChild(tabs);
+    }
+
+    var accountWrap = el('div', 'tm-account-wrap');
+    card.appendChild(accountWrap);
+    renderAccount(card, accounts[0] || {});
+
+    var figures = (event.persons || []).concat(event.places || []);
+    if (figures.length) {
+      var figWrap = el('div', 'tm-figures');
+      figures.slice(0, 12).forEach(function (id) {
+        figWrap.appendChild(el('span', 'tm-badge', glossaryName(id)));
+      });
+      card.appendChild(figWrap);
+    }
+
+    return card;
+  }
+
+  function renderAccount(card, account) {
+    var wrap = card.querySelector('.tm-account-wrap');
+    clear(wrap);
+    wrap.appendChild(el('div', 'tm-account-detail', account.detail || 'ไม่มีคำแปลใน account นี้'));
+    var sourceBits = [];
+    var s = sources[account.source || account.chronicle] || {};
+    if (s.book) sourceBits.push(s.book);
+    if (account.loc) sourceBits.push(account.loc);
+    if (account.url) sourceBits.push(account.url);
+    if (sourceBits.length) wrap.appendChild(el('div', 'tm-account-source', sourceBits.join(' · ')));
+    if (account.arabicExcerpt) {
+      var box = el('details', 'tm-arabic-box');
+      box.appendChild(el('summary', '', 'ดูต้นฉบับภาษาอาหรับ'));
+      var ar = el('div', 'tm-arabic-text', account.arabicExcerpt);
+      ar.lang = 'ar';
+      ar.dir = 'rtl';
+      box.appendChild(ar);
+      wrap.appendChild(box);
+    }
+  }
+
+  function loadAllForSearch() {
+    if (allShardsLoaded) {
+      renderDeepSearch();
+      return;
+    }
+    els.title.textContent = 'กำลังค้นลึกในตำรานี้';
+    els.meta.textContent = 'โหลดเฉพาะ shards ของ ' + activeBook + ' เพื่อค้นในคำแปล ต้นฉบับ และบุคคล';
+    clear(els.years);
+    els.years.appendChild(el('div', 'tm-loading', 'กำลังโหลด shards ของตำรานี้...'));
+    Promise.all(bookShards().map(function (entry) {
+      return fetchJson(BASE + entry.file).catch(function () { return null; });
+    })).then(function (shards) {
+      allEvents = [];
+      shards.forEach(function (shard) {
+        if (!shard || !Array.isArray(shard.events)) return;
+        shard.events.forEach(function (event) {
+          allEvents.push({ shard: shard, event: event });
+        });
+      });
+      allShardsLoaded = true;
+      renderDeepSearch();
+    });
+  }
+
+  function renderDeepSearch() {
+    var q = (els.query.value || '').trim().toLowerCase();
+    if (!q) {
+      els.meta.textContent = 'ใส่คำค้นก่อนค้นลึก';
+      return;
+    }
+    clear(els.years);
+    var matches = allEvents.filter(function (row) {
+      var event = row.event;
+      var parts = [event.title || '', event.titleArabic || '', event.group || '', event.id || ''];
+      (event.accounts || []).forEach(function (a) {
+        parts.push(a.detail || '');
+        parts.push(a.arabicExcerpt || '');
+      });
+      (event.persons || []).forEach(function (id) { parts.push(glossaryName(id)); });
+      (event.places || []).forEach(function (id) { parts.push(glossaryName(id)); });
+      return parts.join(' ').toLowerCase().indexOf(q) >= 0;
+    });
+    els.title.textContent = 'ผลค้นลึกในตำรานี้';
+    els.meta.textContent = 'ตำรา: ' + activeBook + ' · พบ ' + matches.length + ' เหตุการณ์จาก ' + allEvents.length + ' เหตุการณ์';
+    matches.slice(0, 80).forEach(function (row) {
+      var card = el('article', 'tm-year-card open');
+      var y = row.shard.meta && row.shard.meta.hijriYear;
+      card.appendChild(el('div', 'tm-year-no', String(y || '')));
+      var summary = el('div');
+      summary.appendChild(el('p', 'tm-year-scope', row.shard.meta && row.shard.meta.scope ? row.shard.meta.scope : row.shard.file || ''));
+      card.appendChild(summary);
+      var body = el('div', 'tm-year-body');
+      body.appendChild(renderEvent(row.event, row.shard));
+      card.appendChild(body);
+      els.years.appendChild(card);
+    });
+    if (!matches.length) els.years.appendChild(el('div', 'tm-empty', 'ไม่พบผลค้นลึกในตำรานี้'));
+    els.loadMoreWrap.hidden = true;
+  }
+
+  function bookShards() {
+    return (manifest.shards || []).filter(function (s) {
+      return !activeBook || s.book === activeBook;
+    });
+  }
+
+  function init() {
+    Promise.all([
+      fetchJson(BASE + 'index.json'),
+      fetchJson(BASE + 'sources.json'),
+      fetchJson(BASE + 'glossary.json')
+    ]).then(function (res) {
+      manifest = res[0];
+      sources = (res[1] && res[1].sources) || {};
+      glossary = buildGlossaryMap(res[2] || {});
+      setupFilters();
+      updateStats();
+      renderSources();
+      applyFilters();
+    }).catch(function (err) {
+      clear(els.years);
+      els.title.textContent = 'โหลด preview ไม่สำเร็จ';
+      els.meta.textContent = String(err && err.message ? err.message : err);
+      els.years.appendChild(el('div', 'tm-error', 'ตรวจ path ของ timemachine-data หรือเปิดผ่าน local server'));
+    });
+  }
+
+  els.book.addEventListener('change', function () {
+    activeBook = els.book.value;
+    loadedYears = {};
+    allShardsLoaded = false;
+    allEvents = [];
+    setupFilters();
+    els.book.value = activeBook;
+    updateStats();
+    renderSources();
+    applyFilters();
+  });
+  els.query.addEventListener('input', applyFilters);
+  els.century.addEventListener('change', applyFilters);
+  els.status.addEventListener('change', applyFilters);
+  byId('tm-reset').addEventListener('click', function () {
+    els.query.value = '';
+    els.century.value = 'all';
+    els.status.value = 'all';
+    applyFilters();
+  });
+  byId('tm-deep-search').addEventListener('click', loadAllForSearch);
+  byId('tm-collapse').addEventListener('click', function () {
+    document.querySelectorAll('.tm-year-card.open').forEach(function (card) {
+      card.classList.remove('open');
+      var btn = card.querySelector('.tm-btn');
+      if (btn) btn.textContent = 'เปิดปี';
+    });
+  });
+  byId('tm-open-latest').addEventListener('click', function () {
+    if (!manifest || !manifest.shards || !manifest.shards.length) return;
+    var scoped = bookShards();
+    var latest = scoped[scoped.length - 1];
+    if (!latest) return;
+    els.query.value = String(latest.hijriYear);
+    els.century.value = 'all';
+    els.status.value = 'all';
+    applyFilters();
+    setTimeout(function () {
+      var card = document.querySelector('.tm-year-card[data-year="' + latest.hijriYear + '"]');
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        toggleYear(card, latest);
+      }
+    }, 50);
+  });
+  els.loadMore.addEventListener('click', function () {
+    visibleCount += 60;
+    renderYearList();
+  });
+  document.querySelectorAll('.tm-source-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      sourceMode = tab.getAttribute('data-source-type');
+      document.querySelectorAll('.tm-source-tab').forEach(function (t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+      renderSources();
+    });
+  });
+
+  var progress = byId('readingProgress');
+  window.addEventListener('scroll', function () {
+    var st = document.documentElement.scrollTop;
+    var sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    if (progress) progress.style.width = (sh > 0 ? (st / sh * 100) : 0) + '%';
+    var topBtn = byId('backToTopBtn');
+    if (topBtn) topBtn.style.display = st > 400 ? 'block' : 'none';
+  });
+  byId('backToTopBtn').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  init();
+})();
+</script>
+</body>
+</html>
