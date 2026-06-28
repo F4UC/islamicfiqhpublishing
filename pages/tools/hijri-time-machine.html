@@ -789,6 +789,7 @@ const YEAR_LOADED = {};    /* hijriYear -> true once its shard merged */
 const YEAR_META   = {};    /* hijriYear -> { yearLocked, authed, freeUntilYear } from API */
 let ALL_LOADED = false;    /* true after a search-triggered full load */
 const YEAR_PENDING = {};   /* hijriYear -> true while its shard fetch is in flight */
+var AUTH_EPOCH = 0;        /* incremented on every auth-state change; in-flight fetches discard if stale */
 
 /* glossary id -> {thai, arabic, tarajim} for figure resolution (hoisted). */
 function indexGlossary(g) {
@@ -815,18 +816,22 @@ function tmApiYear(year, token) {
     .then(function (r) { return r.ok ? r.json() : null; });
 }
 function tmFetchYear(entry) {
+  var epoch = AUTH_EPOCH;  /* P1-c: capture epoch before async work */
   return tmGetToken().then(function (token) {
     return tmApiYear(entry.hijriYear, token);
   }).then(function (res) {
+    if (AUTH_EPOCH !== epoch) return null;  /* auth changed while in flight — discard */
     if (!res || !res.ok) return null;
     if (res.meta) YEAR_META[res.year] = res.meta;
     return res;   /* tmMergeShard reads res.events — shape is compatible */
   });
 }
 function tmFetchAll() {
+  var epoch = AUTH_EPOCH;  /* P1-c: capture epoch before async work */
   return tmGetToken().then(function (token) {
     return Promise.all(SHARD_INDEX.map(function (s) {
       return tmApiYear(s.hijriYear, token).then(function (res) {
+        if (AUTH_EPOCH !== epoch) return null;  /* discard stale response */
         if (res && res.ok && res.meta) YEAR_META[res.year] = res.meta;
         return res;
       });
@@ -840,6 +845,17 @@ function tmFetchAll() {
 function tmMergeShard(shard) {
   if (!shard || !Array.isArray(shard.events)) return 0;
   var groupOrder = (shard.meta && shard.meta.groupOrder) || [];
+  /* P1-b: if the API says this year is locked, remove any pre-existing inline events
+     so they cannot shadow the locked stubs (seen[] dedup would otherwise keep full
+     Thai content visible for guests). */
+  if (shard.meta && shard.meta.yearLocked && typeof shard.year === 'number') {
+    for (var j = EVENTS.length - 1; j >= 0; j--) {
+      if (EVENTS[j].year === shard.year) {
+        if (EVENTS[j].id) delete seen[EVENTS[j].id];
+        EVENTS.splice(j, 1);
+      }
+    }
+  }
   var added = 0;
   shard.events.forEach(function (ev) {
     if (ev.id && seen[ev.id]) return;
@@ -1408,6 +1424,7 @@ function loadAllShards() {
     /* P2 fix: on unauthenticated→authenticated transition, invalidate locked-year
        cache so the next open sends a bearer-token request and gets full content. */
     if(authed && !_prevAuthed) {
+      AUTH_EPOCH++;  /* P1-c: invalidate in-flight guest fetches */
       var anyLocked = false;
       Object.keys(YEAR_META).forEach(function(y) {
         if(YEAR_META[y] && YEAR_META[y].yearLocked) {
@@ -1434,6 +1451,7 @@ function loadAllShards() {
          Iterates SHARD_INDEX (not YEAR_META) to catch years the authed user could
          see with yearLocked=false that a guest cannot. Re-fetches open years as guest
          (which returns locked stubs). Inline-only years are unaffected. */
+      AUTH_EPOCH++;  /* P1-c: invalidate any in-flight authed fetches */
       var anyPurged = false;
       SHARD_INDEX.forEach(function(s) {
         var yr = s.hijriYear;
@@ -1450,7 +1468,13 @@ function loadAllShards() {
         var det = sec && sec.querySelector('.tm-year');
         if(det && det.open) openYear(yr);
       });
-      if(anyPurged) ALL_LOADED = false;
+      if(anyPurged) {
+        ALL_LOADED = false;
+        /* P1-a: search mode — #tm-content shows flat cards with no .tm-year-section;
+           re-render the skeleton so paid Thai details are not left visible. */
+        var contentEl = document.getElementById('tm-content');
+        if(contentEl && !contentEl.querySelector('.tm-year-section')) renderSkeleton();
+      }
     }
     _prevAuthed = authed;
   }
