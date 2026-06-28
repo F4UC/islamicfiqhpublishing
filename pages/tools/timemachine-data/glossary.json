@@ -25776,5 +25776,103 @@
       "author": "อิบนุ กะษีร",
       "variantsFound": []
     }
+  ],
+  "months": [
+    {
+      "id": "muharram",
+      "arabic": "محرم",
+      "canonicalThai": "มุฮัรร็อม",
+      "note": "FLAG: corpus majority=มุฮัรร็อม (24) vs มุฮัรรอม (17); user baseline expects มุฮัรรอม — One to confirm canonical before normalizing",
+      "variantsFound": [
+        "มุฮัรรอม"
+      ]
+    },
+    {
+      "id": "safar",
+      "arabic": "صفر",
+      "canonicalThai": "เศาะฟัร",
+      "variantsFound": []
+    },
+    {
+      "id": "rabi-al-awwal",
+      "arabic": "ربيع الأول",
+      "canonicalThai": "เราะบีอุลเอาวัล",
+      "variantsFound": []
+    },
+    {
+      "id": "rabi-al-akhir",
+      "arabic": "ربيع الآخر",
+      "canonicalThai": "เราะบีอุลอาคิร",
+      "note": "ชื่อแรก (الآخر) — ห้าม normalize ข้าม rabi-al-thani (R86)",
+      "variantsFound": []
+    },
+    {
+      "id": "rabi-al-thani",
+      "arabic": "ربيع الثاني",
+      "canonicalThai": "เราะบีอุษษานี",
+      "note": "ชื่อสอง (الثاني) — 0 occurrences in corpus; entry for future ingestion; separate from rabi-al-akhir",
+      "variantsFound": []
+    },
+    {
+      "id": "jumada-al-ula",
+      "arabic": "جمادى الأولى",
+      "canonicalThai": "ญุมาดัลอูลา",
+      "variantsFound": []
+    },
+    {
+      "id": "jumada-al-akhira",
+      "arabic": "جمادى الآخرة",
+      "canonicalThai": "ญุมาดัลอาคิเราะฮ์",
+      "note": "ชื่อแรก (الآخرة) — ห้าม normalize ข้าม jumada-al-thaniya (R86)",
+      "variantsFound": []
+    },
+    {
+      "id": "jumada-al-thaniya",
+      "arabic": "جمادى الثانية",
+      "canonicalThai": "ญุมาดัษษานียะฮ์",
+      "note": "ชื่อสอง (الثانية) — 0 occurrences in corpus; entry for future ingestion; separate from jumada-al-akhira",
+      "variantsFound": []
+    },
+    {
+      "id": "rajab",
+      "arabic": "رجب",
+      "canonicalThai": "เราะญับ",
+      "note": "เฉพาะบริบทเดือน — ไม่แตะ 'อิบนุ เราะญับ' (ชื่อบุคคล)",
+      "variantsFound": []
+    },
+    {
+      "id": "shaban",
+      "arabic": "شعبان",
+      "canonicalThai": "ชะอ์บาน",
+      "variantsFound": []
+    },
+    {
+      "id": "ramadan",
+      "arabic": "رمضان",
+      "canonicalThai": "เราะมะฎอน",
+      "variantsFound": []
+    },
+    {
+      "id": "shawwal",
+      "arabic": "شوال",
+      "canonicalThai": "เชาวาล",
+      "variantsFound": []
+    },
+    {
+      "id": "dhul-qada",
+      "arabic": "ذو القعدة",
+      "canonicalThai": "ซุลเกาะอ์ดะฮ์",
+      "variantsFound": [
+        "ซุลเกาะดะฮ์"
+      ]
+    },
+    {
+      "id": "dhul-hijja",
+      "arabic": "ذو الحجة",
+      "canonicalThai": "ซุลหิจญะฮ์",
+      "variantsFound": [
+        "ซุลฮิจญะฮ์"
+      ]
+    }
   ]
 }
