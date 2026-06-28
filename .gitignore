@@ -38,6 +38,11 @@ itibar-source.md
 DHL.txt
 temp.css
 
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
 # Local build / migration helpers — not part of the published site
 migrate.ps1
 fix_arabic_order.py
