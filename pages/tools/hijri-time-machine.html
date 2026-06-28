@@ -820,7 +820,7 @@ function tmFetchYear(entry) {
   return tmGetToken().then(function (token) {
     return tmApiYear(entry.hijriYear, token);
   }).then(function (res) {
-    if (AUTH_EPOCH !== epoch) return null;  /* auth changed while in flight — discard */
+    if (AUTH_EPOCH !== epoch) return {stale: true};  /* P2: sentinel — openYear will retry */
     if (!res || !res.ok) return null;
     if (res.meta) YEAR_META[res.year] = res.meta;
     return res;   /* tmMergeShard reads res.events — shape is compatible */
@@ -1303,6 +1303,11 @@ function openYear(y) {
   YEAR_PENDING[y] = true;
   tmFetchYear(entry).then(function (shard) {
     YEAR_PENDING[y] = false;
+    if (shard && shard.stale) {
+      /* P2: auth changed mid-flight — restart under new epoch */
+      setTimeout(function () { openYear(y); }, 0);
+      return;
+    }
     if (!shard) {
       if (body) body.innerHTML = '<div class="tm-year-retry">โหลดไม่สำเร็จ <button type="button" class="tm-retry-btn" data-year="' + y + '">ลองใหม่</button></div>';
       return;
@@ -1331,7 +1336,9 @@ function renderYearBody(y) {
    so search can scan the full corpus. seen[id] dedup makes re-merging any
    already-open year a no-op, so nothing is double-pushed. */
 function loadAllShards() {
+  var epoch = AUTH_EPOCH;  /* P1: capture before async — discard entire batch if auth changes */
   return tmFetchAll().then(function (shards) {
+    if (AUTH_EPOCH !== epoch) return;  /* P1: auth changed mid-batch — discard entire result */
     (shards || []).forEach(function (shard) { if (shard) tmMergeShard(shard); });
     SHARD_INDEX.forEach(function (s) { YEAR_LOADED[s.hijriYear] = true; });
     ALL_LOADED = true;
