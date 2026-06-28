@@ -611,6 +611,13 @@ function showBidayah() {
   document.getElementById('view-home').hidden = true;
   document.getElementById('view-bidayah').hidden = false;
   window.scrollTo({ top: 0, behavior: 'auto' });
+  /* P2: deferred upsell — locked year may have loaded during bootstrap while the
+     view was hidden (maybeShowUpsell guard skipped it); fire now that view is visible */
+  Object.keys(YEAR_META).some(function (y) {
+    var m = YEAR_META[y];
+    if (m && m.yearLocked) { maybeShowUpsell(parseInt(y, 10)); return true; }
+    return false;
+  });
 }
 function showHome() {
   document.getElementById('view-bidayah').hidden = true;
