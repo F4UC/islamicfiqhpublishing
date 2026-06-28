@@ -1429,6 +1429,28 @@ function loadAllShards() {
       });
       /* P2-B: search corpus may contain locked stubs — force a full re-fetch */
       if(anyLocked) ALL_LOADED = false;
+    } else if(!authed && _prevAuthed) {
+      /* P1 sign-out: purge all API-backed shards so guest cannot browse paid content.
+         Iterates SHARD_INDEX (not YEAR_META) to catch years the authed user could
+         see with yearLocked=false that a guest cannot. Re-fetches open years as guest
+         (which returns locked stubs). Inline-only years are unaffected. */
+      var anyPurged = false;
+      SHARD_INDEX.forEach(function(s) {
+        var yr = s.hijriYear;
+        if(!YEAR_LOADED[yr]) return;
+        anyPurged = true;
+        for(var i = EVENTS.length - 1; i >= 0; i--) {
+          if(EVENTS[i].year === yr) {
+            if(EVENTS[i].id) delete seen[EVENTS[i].id];
+            EVENTS.splice(i, 1);
+          }
+        }
+        delete YEAR_LOADED[yr];
+        var sec = document.getElementById('year-' + yr);
+        var det = sec && sec.querySelector('.tm-year');
+        if(det && det.open) openYear(yr);
+      });
+      if(anyPurged) ALL_LOADED = false;
     }
     _prevAuthed = authed;
   }
