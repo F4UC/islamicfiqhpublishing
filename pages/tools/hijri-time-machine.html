@@ -835,14 +835,25 @@ function tmFetchYear(entry) {
 }
 function tmFetchAll() {
   var epoch = AUTH_EPOCH;  /* P1-c: capture epoch before async work */
+  /* P2: cap concurrent Worker/D1 calls — 644 shards ÷ 16 workers ≈ 40 batches
+     instead of 644 simultaneous requests. Pool pulls next shard as each finishes. */
+  var CONCURRENCY = 16;
   return tmGetToken().then(function (token) {
-    return Promise.all(SHARD_INDEX.map(function (s) {
-      return tmApiYear(s.hijriYear, token).then(function (res) {
-        if (AUTH_EPOCH !== epoch) return null;  /* discard stale response */
+    var shards = SHARD_INDEX.slice();
+    var results = new Array(shards.length);
+    var cursor = 0;
+    function worker() {
+      if (cursor >= shards.length) return Promise.resolve();
+      var i = cursor++;
+      return tmApiYear(shards[i].hijriYear, token).then(function (res) {
+        if (AUTH_EPOCH !== epoch) return null;
         if (res && res.ok && res.meta) YEAR_META[res.year] = res.meta;
-        return res;
-      });
-    }));
+        results[i] = res || null;
+      }).then(worker);
+    }
+    var pool = [];
+    for (var w = 0; w < CONCURRENCY; w++) pool.push(worker());
+    return Promise.all(pool).then(function () { return results; });
   });
 }
 
@@ -1182,7 +1193,7 @@ function openUpsell(meta) {
     h.textContent   = 'ปีนี้สำหรับสมาชิก FIQH+';
     sub.textContent = 'อัปเกรดเป็น FIQH+ เพื่ออ่านอัลบิดายะฮ์ครบทุกปี';
     prim.textContent = 'ดูแพ็กเกจ FIQH+';
-    prim.onclick = function () { window.location.href = '/pages/membership.html'; };
+    prim.onclick = function () { window.location.href = '/pages/account.html'; }; /* P2: membership.html not yet built — account page is the current upgrade destination */
     sec.hidden = true;
   }
   box.hidden = false;
