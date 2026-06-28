@@ -25,6 +25,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'scripts'))
 from tm_qc import (
     arabic_ratio,
     find_ligature_leakage,
+    find_fullword_honorific_leakage,
     check_ornate_spacing,
     translation_checks,
     ORNATE_OPEN,
@@ -130,6 +131,22 @@ def test_t2():
     check('T2b: ﷺ (U+FDFA) in detail → NOT flagged (S5 exempt)',
           len(t2b) == 0,
           f'got {t2b}')
+
+    # T2c — رضي الله عنه (full-word honorific) in detail → T2 ERROR
+    detail_with_radi = 'อับดุลลอฮ์ رضي الله عنه กล่าวว่า: จงซื่อสัตย์'
+    fw = find_fullword_honorific_leakage(detail_with_radi)
+    check('T2c: رضي الله عنه in detail → full-word honorific detected',
+          len(fw) > 0, f'got {fw}')
+    f3 = findings_for(detail_with_radi)
+    t2c = checks_of_type(f3, 'T2')
+    check('T2c: رضي الله عنه in detail → T2 ERROR in findings',
+          any(sev == 'ERROR' for sev, *_ in t2c), f'got {t2c}')
+
+    # T2d — عز وجل (full-word, shorter pattern) → detected, not shadowed by longer match
+    detail_azza = 'อัลลอฮ์ عز وجل ผู้ทรงยิ่งใหญ่'
+    fw2 = find_fullword_honorific_leakage(detail_azza)
+    check('T2d: عز وجل in detail → full-word honorific detected (not shadowed)',
+          any(phrase == 'عز وجل' for phrase, *_ in fw2), f'got {fw2}')
 
 
 # ---------------------------------------------------------------------------

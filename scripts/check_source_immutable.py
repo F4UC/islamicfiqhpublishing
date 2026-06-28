@@ -56,7 +56,7 @@ def load_shard_accounts(json_text: str) -> dict:
         eid = event.get('id', '')
         for ai, account in enumerate(event.get('accounts', [])):
             source = account.get('source', f'?{ai}')
-            key = f'{eid}::{source}'
+            key = f'{eid}::{ai}'
             accounts[key] = account.get('arabicExcerpt', '')
     return accounts
 
@@ -116,12 +116,12 @@ def main():
     print()
     print(f'[ERROR] {len(violations)} arabicExcerpt mutation(s) detected (R60/R88):')
     for v in violations:
-        print(f'  {v["file"]} :: {v["account"]}')
+        print(f'  {v["file"]} :: account index {v["account"]}')
         print(f'    base length: {v["base_len"]}  →  head length: {v["head_len"]}')
         print(f'    Add [source-edit] to the commit message if this change is owner-approved.')
     print()
-    print('NOTE: This check is informational (exit 0). FLAG for gate-agent review (R87).')
-    sys.exit(0)
+    print('BLOCKING: arabicExcerpt mutations are not allowed without [source-edit] tag (R60/R88).')
+    sys.exit(1)
 
 
 if __name__ == '__main__':
