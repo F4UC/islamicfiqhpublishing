@@ -974,7 +974,10 @@ function performDeepSearch(query) {
      all-loaded search; subsequent searches reuse the merged EVENTS. */
   if (!ALL_LOADED) {
     content.innerHTML = '<div class="timeline-empty">กำลังโหลดข้อมูลทั้งหมดเพื่อค้นหา…</div>';
-    loadAllShards().then(function () { renderSearchResults(query); });
+    loadAllShards().then(function (ok) {
+      if (ok) { renderSearchResults(query); }
+      else { setTimeout(function () { performDeepSearch(query); }, 0); } /* P2: retry under new epoch */
+    });
     return;
   }
   renderSearchResults(query);
@@ -1345,10 +1348,11 @@ function renderYearBody(y) {
 function loadAllShards() {
   var epoch = AUTH_EPOCH;  /* P1: capture before async — discard entire batch if auth changes */
   return tmFetchAll().then(function (shards) {
-    if (AUTH_EPOCH !== epoch) return;  /* P1: auth changed mid-batch — discard entire result */
+    if (AUTH_EPOCH !== epoch) return false;  /* P2: return false so caller can retry */
     (shards || []).forEach(function (shard) { if (shard) tmMergeShard(shard); });
     SHARD_INDEX.forEach(function (s) { YEAR_LOADED[s.hijriYear] = true; });
     ALL_LOADED = true;
+    return true;
   });
 }
 
