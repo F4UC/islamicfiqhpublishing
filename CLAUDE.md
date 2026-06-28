@@ -1,12 +1,12 @@
 # Islamic Fiqh Publishing — Editorial Charter (Universal Agent Rules)
 
-> **MANDATORY:** Every AI agent working on this repository must read and comply with all **90 rules (ข้อ 1–90), plus sub-rules 12.1/12.2 and House-Style S1–S8 (+ placeholders S9/S10 → Rules 76/77, linter pending)**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
+> **MANDATORY:** Every AI agent working on this repository must read and comply with all **92 rules (ข้อ 1–92), plus sub-rules 12.1/12.2 and House-Style S1–S8 (+ placeholders S9/S10 → Rules 76/77, linter pending)**, before executing any task. These rules are the single source of truth for all editorial, typographic, and technical standards.
 >
 > **★ Rule 71 (Child-Safety Override) supersedes every fidelity/coverage rule, for every agent. Read it first. ★**
 
 ---
 
-# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (90 กฎเหล็ก)
+# ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing (92 กฎเหล็ก)
 
 ### หมวดที่ 1: มาตรฐานวิชาการและความสมบูรณ์ของเนื้อหา (Editorial & Academic Integrity)
 
@@ -200,7 +200,7 @@
 
 ---
 
-# Editorial Charter of Islamic Fiqh Publishing (The 90 Iron Rules)
+# Editorial Charter of Islamic Fiqh Publishing (The 92 Iron Rules)
 
 ## Section 1: Academic & Editorial Integrity
 
@@ -697,3 +697,21 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 เมื่อ lead-in `<p>` ที่อยู่ก่อนหน้า `.ar-quote` ระบุชื่อผู้พูดแล้ว (เช่น "ท่านอิบนุ กะษีรได้กล่าวว่า:") → `<p class="ar-translation">` ที่ตามมาต้องไม่มี `<span class="attribution">` ที่ซ้ำชื่อนั้นอีก ให้เริ่มด้วยข้อความคำแปลทันที · ใช้ `<span class="attribution">` ได้เฉพาะเมื่อ lead-in ไม่ได้ระบุชื่อ (ใช้สรรพนาม "ท่าน" / "เขา" หรือไม่มีชื่อ) หรือเมื่อไม่มี lead-in prose นำหน้าเลย · **ห้ามแตะตัวบทอาหรับ** (กฎ 60) · **ห้ามแก้ไขข้อความคำแปล** — diff ต่อหนึ่งกรณีคือการลบ span เดียวเท่านั้น
 
 *English:* When the prose lead-in `<p>` immediately before an `.ar-quote` already names the speaker (e.g. "Ibn Kathir said:"), the following `<p class="ar-translation">` must NOT repeat it via `<span class="attribution">`. Start directly with the translation text. Use `<span class="attribution">` only when the lead-in uses a pronoun ("ท่าน" / "he") or names no one, or when there is no prose lead-in at all. Arabic text is byte-exact (Rule 60). Translation text is never modified — the diff per case is deletion of one span only.
+
+**Rule 92 — Divine Honorifics in Thai Translation (คำยกย่องอัลลอฮ์ในคำแปลไทย — ถอดเป็นไทย ไม่ตัด)**
+เมื่อคำยกย่องอัลลอฮ์ปรากฏในตัวบทอาหรับ (รูป ligature เช่น ﷿ = عز وجل หรือคำเต็ม تعالى / سبحانه) แล้วต้องนำลงช่องคำแปลไทย (`detail` ของ Time Machine, `.ar-translation`, หรือร้อยแก้วไทย) ต้อง **ถอดเป็นไทยตามรูป canonical — ห้ามตัดทิ้ง และห้ามคงกลิฟอาหรับไว้ในข้อความไทย**
+
+| อาหรับ | รูปไทย (canonical) |
+|---|---|
+| ﷿ / عز وجل | อัซซะวะญัลละ |
+| تعالى | ตะอาลา |
+| سبحانه | ซุบหานะฮู |
+| سبحانه وتعالى | ซุบหานะฮูวะตะอาลา (มีใน R49 แล้ว) |
+
+- **ข้อยกเว้น ﷺ (U+FDFA):** นามนบีคงสัญลักษณ์ ﷺ ตามเดิม ไม่ถอดเป็นคำ (R5/S5)
+- **คำสดุดีปราชญ์ (มนุษย์)** เช่น رحمه الله (﵀) → "เราะหิมะฮุลลอฮ์" วางท้ายชื่อ ไม่มีวงเล็บ (R10)
+- เขียนติดเป็นคำเดียว ไม่เว้นวรรคภายใน (R13) วางต่อหลัง "อัลลอฮ์" ตามตำแหน่งในต้นฉบับ
+- **ขอบเขต: เฉพาะข้อความไทย — ห้ามแตะ `arabicExcerpt`** ที่ ligature/คำยกย่องเป็น byte-exact ของแหล่ง คงไว้ทุกตัว (R60/88)
+- คำยกย่องอื่นที่ยังไม่มีในตาราง (เช่น جل جلاله) → **FLAG ไม่เดารูปถอด** เพิ่มลงตารางเมื่อ One ยืนยัน (ขยายแบบเดียวกับ R73)
+
+*English:* Divine honorifics (ligature or full word: ﷿/عز وجل, تعالى, سبحانه) that land in a Thai translation field (Time Machine `detail`, `.ar-translation`, or Thai prose) must be transliterated to the canonical Thai form in the table above — never stripped, never left as an Arabic glyph inside Thai. Exception: ﷺ (U+FDFA) stays as the symbol, not spelled out (R5/S5). Scholar (human) honorific رحمه الله (﵀) → เราะหิมะฮุลลอฮ์, placed after the name without parentheses (R10). Write as one word with no internal spaces (R13), positioned right after "อัลลอฮ์" per the source. Scope: Thai text ONLY — never touch `arabicExcerpt`, where the honorific/ligature is a byte-exact substring of the source and must be preserved (R60/88). An honorific not yet in the table (e.g. جل جلاله) → FLAG, don't guess the Thai form; add to the table once One confirms (extend like R73).
