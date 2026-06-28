@@ -27,6 +27,14 @@
     return (window.Clerk && Clerk.session) ? Clerk.session.getToken() : Promise.resolve(null);
   };
 
+  /* P2: sign-in/up stubs — queue clicks that arrive before Clerk.load() resolves,
+     then drain them (real redirect) once Clerk is ready. tmSignIn()/tmSignUp() in
+     the page call these via window.ifpSignIn/ifpSignUp first, so they're always used
+     before the hard Clerk fallback. */
+  var _authQueue = [];
+  window.ifpSignIn = function () { _authQueue.push('in'); };
+  window.ifpSignUp = function () { _authQueue.push('up'); };
+
   /* STEP-1 self-check: prove the gated path works (200 { userId } when signed in). */
   function verifySession() {
     window.ifpGetToken().then(function (token) {
@@ -41,6 +49,12 @@
   function mountAuth() {
     if (!window.Clerk) return;
     Clerk.load().then(function () {
+      /* Replace queue stubs with live redirects, then drain any queued clicks. */
+      window.ifpSignIn = function () { Clerk.redirectToSignIn(); };
+      window.ifpSignUp = function () { Clerk.redirectToSignUp(); };
+      var q = _authQueue.splice(0);
+      q.forEach(function (a) { a === 'in' ? Clerk.redirectToSignIn() : Clerk.redirectToSignUp(); });
+
       var box = document.getElementById('ifp-auth');
       var signin = document.getElementById('ifp-signin');
       var userbtn = document.getElementById('ifp-userbtn');
