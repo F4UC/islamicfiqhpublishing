@@ -707,11 +707,14 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
 | تعالى | ตะอาลา |
 | سبحانه | ซุบหานะฮู |
 | سبحانه وتعالى | ซุบหานะฮูวะตะอาลา (มีใน R49 แล้ว) |
+| ﵇ / عليه السلام | อะลัยฮิสสลาม |
+| ﵁ / رضي الله عنه | เราะฎิยัลลอฮุอันฮุ |
 
+- **★﵁/﵇ มีรูปผันตามเพศ/พจน์:** عنه=อันฮุ (ชายเดี่ยว), عنها=อันฮา (หญิง), عنهم=อันฮุม (พหูพจน์), عنهما=อันฮุมา (สองคน) — ถอดตามผู้ถูกกล่าวถึงในบริบท; ﵇ เช่นกัน (อะลัยฮิมัสสลาม สำหรับพหูพจน์) · ตัว ligature เดี่ยวสื่อรูปชายเดี่ยว ถ้าบริบทไม่ชัดว่าผันรูปใด → **FLAG ไม่เดา**
 - **ข้อยกเว้น ﷺ (U+FDFA):** นามนบีคงสัญลักษณ์ ﷺ ตามเดิม ไม่ถอดเป็นคำ (R5/S5)
 - **คำสดุดีปราชญ์ (มนุษย์)** เช่น رحمه الله (﵀) → "เราะหิมะฮุลลอฮ์" วางท้ายชื่อ ไม่มีวงเล็บ (R10)
 - เขียนติดเป็นคำเดียว ไม่เว้นวรรคภายใน (R13) วางต่อหลัง "อัลลอฮ์" ตามตำแหน่งในต้นฉบับ
 - **ขอบเขต: เฉพาะข้อความไทย — ห้ามแตะ `arabicExcerpt`** ที่ ligature/คำยกย่องเป็น byte-exact ของแหล่ง คงไว้ทุกตัว (R60/88)
 - คำยกย่องอื่นที่ยังไม่มีในตาราง (เช่น جل جلاله) → **FLAG ไม่เดารูปถอด** เพิ่มลงตารางเมื่อ One ยืนยัน (ขยายแบบเดียวกับ R73)
 
-*English:* Divine honorifics (ligature or full word: ﷿/عز وجل, تعالى, سبحانه) that land in a Thai translation field (Time Machine `detail`, `.ar-translation`, or Thai prose) must be transliterated to the canonical Thai form in the table above — never stripped, never left as an Arabic glyph inside Thai. Exception: ﷺ (U+FDFA) stays as the symbol, not spelled out (R5/S5). Scholar (human) honorific رحمه الله (﵀) → เราะหิมะฮุลลอฮ์, placed after the name without parentheses (R10). Write as one word with no internal spaces (R13), positioned right after "อัลลอฮ์" per the source. Scope: Thai text ONLY — never touch `arabicExcerpt`, where the honorific/ligature is a byte-exact substring of the source and must be preserved (R60/88). An honorific not yet in the table (e.g. جل جلاله) → FLAG, don't guess the Thai form; add to the table once One confirms (extend like R73).
+*English:* Divine honorifics (ligature or full word: ﷿/عز وجل, تعالى, سبحانه) that land in a Thai translation field (Time Machine `detail`, `.ar-translation`, or Thai prose) must be transliterated to the canonical Thai form in the table above — never stripped, never left as an Arabic glyph inside Thai. Exception: ﷺ (U+FDFA) stays as the symbol, not spelled out (R5/S5). Scholar (human) honorific رحمه الله (﵀) → เราะหิมะฮุลลอฮ์, placed after the name without parentheses (R10). Write as one word with no internal spaces (R13), positioned right after "อัลลอฮ์" per the source. Scope: Thai text ONLY — never touch `arabicExcerpt`, where the honorific/ligature is a byte-exact substring of the source and must be preserved (R60/88). An honorific not yet in the table (e.g. جل جلاله) → FLAG, don't guess the Thai form; add to the table once One confirms (extend like R73). **★﵁/﵇ inflect by gender/number — render per the referent: عنه=อันฮุ (masc. sing.), عنها=อันฮา (fem.), عنهم=อันฮุม (plural), عنهما=อันฮุมา (dual); ﵇ likewise (อะลัยฮิมัสสลาม for plural). The lone ligature = masculine singular; if context is unclear which form applies → FLAG, don't guess.**
