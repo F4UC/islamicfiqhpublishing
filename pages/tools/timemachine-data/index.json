@@ -7108,6 +7108,30 @@
       "eventsSchema": "v3",
       "scope": "จักรวาลวิทยา - มลาอิกะฮ์",
       "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "muntazam-pre-17.json",
+      "book": "al-muntazam",
+      "hijriYear": null,
+      "era": "pre-hijra",
+      "unit": "al-janna",
+      "order": 17,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "จักรวาลวิทยา - สวรรค์",
+      "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "muntazam-pre-18.json",
+      "book": "al-muntazam",
+      "hijriYear": null,
+      "era": "pre-hijra",
+      "unit": "adam",
+      "order": 18,
+      "events": 2,
+      "eventsSchema": "v3",
+      "scope": "บรรดานบี - การสร้างอาดัม (จุดหยุด)",
+      "reviewStatus": "DRAFT"
     }
   ]
 }
