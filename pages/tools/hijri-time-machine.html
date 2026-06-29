@@ -213,6 +213,16 @@ details.tm-year[open] > summary.tm-year-head::before { transform: rotate(90deg);
 .tm-acc-src { margin-top: 12px; font-family: var(--thai); font-size: 13px; color: var(--text-tertiary); }
 .tm-cross { margin-top: 16px; padding-top: 12px; border-top: 1px dashed var(--border-secondary); font-family: var(--thai); font-size: 13px; color: var(--text-tertiary); line-height: 1.7; }
 
+/* ต้นฉบับอาหรับแบบพับเก็บ (กดเปิดดู) */
+.tm-acc-ar { margin-top: 12px; }
+.tm-acc-ar > summary { cursor: pointer; list-style: none; display: inline-block; font-family: var(--ui); font-size: 12.5px; font-weight: 700; color: var(--accent-color); border-bottom: 1px solid transparent; }
+.tm-acc-ar > summary:hover { border-bottom-color: var(--accent-color); }
+.tm-acc-ar > summary::-webkit-details-marker { display: none; }
+.tm-acc-ar > summary::after { content: ' ▾'; font-size: 10px; }
+.tm-acc-ar[open] > summary::after { content: ' ▴'; }
+.tm-acc-ar-text { font-family: var(--arabic); font-size: 18px; direction: rtl; text-align: right; color: var(--text-secondary); line-height: 2.0; padding: 10px 0 4px; margin: 8px 0 0; border-top: 1px dashed var(--border-secondary); }
+.tm-acc-ar-meta { margin-top: 8px; font-family: var(--thai); font-size: 12.5px; color: var(--text-tertiary); }
+
 /* ─── Book Collections — Liquid Glass carousel (ขาว-ดำ) ─── */
 .bc-section { position: relative; margin: 4px 0 48px; padding: 30px 26px 18px; border-radius: 28px;
   background: linear-gradient(165deg, rgba(216,204,184,0.34), rgba(245,242,236,0.14) 58%, rgba(255,255,255,0) 100%);
@@ -1122,11 +1132,12 @@ function renderEventCard(e) {
     const name = ch.nameThai || a.source || a.chronicle || 'แหล่งอ้างอิง';
     const act = i === 0 ? ' active' : '';
     tabsHtml += `<button type="button" class="tm-tab${act}" data-acc="${i}">${name}</button>`;
-    let links = '';
-    if (a.urlAlt) links += ` <a href="${a.urlAlt}" class="tm-src-link" target="_blank" rel="noopener noreferrer">islamweb ↗</a>`;
-    const srcLine = (ch.book || '') + (a.loc ? ' ' + a.loc : '') + links;
-    const srcHtml = srcLine.trim() ? `<div class="tm-acc-src"><span class="tm-lbl">ที่มา</span> ${srcLine}</div>` : '';
-    panelsHtml += `<div class="tm-acc${act}" data-acc="${i}"><div class="tm-detail">${a.detail || ''}</div>${srcHtml}</div>`;
+    var srcMeta = (ch.book || '') + (a.loc ? ' ' + a.loc : '');
+    if (a.urlAlt) srcMeta += ` <a href="${a.urlAlt}" class="tm-src-link" target="_blank" rel="noopener noreferrer">islamweb ↗</a>`;
+    var arHtml = a.arabicExcerpt
+      ? `<details class="tm-acc-ar"><summary>ดูต้นฉบับภาษาอาหรับ</summary><blockquote class="tm-acc-ar-text" dir="rtl" lang="ar">${a.arabicExcerpt}</blockquote>${srcMeta.trim() ? `<div class="tm-acc-ar-meta">${srcMeta}</div>` : ''}</details>`
+      : (srcMeta.trim() ? `<div class="tm-acc-src">${srcMeta}</div>` : '');
+    panelsHtml += `<div class="tm-acc${act}" data-acc="${i}"><div class="tm-detail">${a.detail || ''}</div>${arHtml}</div>`;
   });
   const tabBar = accounts.length > 1 ? `<div class="tm-tabs">${tabsHtml}</div>` : '';
 
