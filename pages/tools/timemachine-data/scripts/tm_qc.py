@@ -33,8 +33,15 @@ def err(m): ERRORS.append(m)
 def warn(m): WARNINGS.append(m)
 
 def shard_files():
-    return sorted(glob.glob(os.path.join(DATA, 'bidayah-h*.json')),
-                  key=lambda x: int(re.search(r'h(\d+)', x).group(1)))
+    # al-Bidayah (bidayah-h<N>.json) + al-Muntazam (muntazam-h<N>.json year shards
+    # AND muntazam-pre-<NN>.json pre-Hijra topical-chapter shards, hijriYear:null).
+    files = (glob.glob(os.path.join(DATA, 'bidayah-h*.json'))
+             + glob.glob(os.path.join(DATA, 'muntazam-*.json')))
+    def sortkey(x):
+        b = os.path.basename(x)
+        m = re.search(r'(\d+)', b)              # robust: any trailing/embedded number
+        return (b.split('-')[0], int(m.group(1)) if m else 0, b)
+    return sorted(files, key=sortkey)
 
 def yr(f): return os.path.basename(f).replace('bidayah-h', '').replace('.json', '')
 
@@ -81,7 +88,9 @@ def main():
         if fs: forms[p['id']] = fs
 
     files = shard_files()
-    idx_counts = {s['hijriYear']: s['events'] for s in idx['shards']}
+    # Key index event-counts by FILE, not hijriYear: pre-Hijra muntazam shards have
+    # hijriYear:null (would collide). File names are unique across both books.
+    idx_counts = {s['file']: s['events'] for s in idx['shards']}
     ev_total = acc_total = multi = 0
     ids_seen = set()
 
@@ -90,9 +99,9 @@ def main():
             d = json.load(open(f, encoding='utf-8'))
         except Exception as e:
             err(f'[structure] {os.path.basename(f)}: invalid JSON ({e})'); continue
-        y = d['meta']['hijriYear']
-        if idx_counts.get(y) != len(d['events']):
-            err(f'[structure] y{y}: index says {idx_counts.get(y)} events, shard has {len(d["events"])}')
+        fb = os.path.basename(f)
+        if idx_counts.get(fb) != len(d['events']):
+            err(f'[structure] {fb}: index says {idx_counts.get(fb)} events, shard has {len(d["events"])}')
         for e in d['events']:
             ev_total += 1; acc_total += len(e['accounts'])
             if len(e['accounts']) > 1: multi += 1

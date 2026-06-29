@@ -60,6 +60,27 @@ def clean_main(nass):
     return re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
 
 
+def clean_main_jawzi(nass):
+    """Pure MAIN-TEXT Arabic for al-Muntazam (Ibn al-Jawzi, Shamela book 12406).
+
+    ★ Book 12406 uses a DIFFERENT class template from al-Bidayah (book 30097), so
+    clean_main() is WRONG here: in al-Muntazam `class="c2"` wraps the actual hadith
+    MATN («...») — the core narration — while the footnote-ref digits ([١][٢]…) live
+    in `class="c4"`. Using clean_main() would silently DELETE every matn (R89/byte-exact
+    catastrophe). Verified class roles on pid 99/100/101:
+      c2 = matn «...» (KEEP)   ·   c5 = connectives قَالَ:/قَالُوا: (KEEP)
+      c4 = footnote-ref [N] (DROP) · hamesh = footnote apparatus block (DROP)
+      btn_tag = Shamela copy buttons (DROP)
+    Use THIS — not clean_main() — to build AND byte-gate al-Muntazam excerpts so the
+    stored Arabic is a contiguous, chrome-free, footnote-free substring (Rule 60/88)."""
+    s = nass or ''
+    s = re.sub(r'<p[^>]*class="[^"]*\bhamesh\b[^"]*"[^>]*>.*?</p>', ' ', s, flags=re.S)
+    s = re.sub(r'<span[^>]*class="[^"]*\bc4\b[^"]*"[^>]*>.*?</span>', ' ', s, flags=re.S)
+    s = re.sub(r'<a[^>]*class="[^"]*\bbtn_tag\b[^"]*"[^>]*>.*?</a>', ' ', s, flags=re.S)
+    s = re.sub(r'<hr\s*/?>', ' ', s)
+    return re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
+
+
 def strip_dia(s):
     """Remove Arabic diacritics only (used for year-marker scanning, never for storage)."""
     return s.translate({ord(c): None for c in DIA})
