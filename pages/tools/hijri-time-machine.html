@@ -1510,10 +1510,15 @@ function loadAllShards() {
   if(dhSignin) {
     dhSignin.hidden = false; /* show initially; hide once authed state is confirmed */
     dhSignin.addEventListener('click', tmSignIn);
-    if(ifpUserbtn) {
-      new MutationObserver(syncDhAuth).observe(ifpUserbtn, { childList: true, subtree: true });
+    function attachIfpObserver(){
+      var btn = document.getElementById('ifp-userbtn'); // re-query: header injects async
+      if(!btn) return false;
+      ifpUserbtn = btn;
+      new MutationObserver(syncDhAuth).observe(btn, { childList: true, subtree: true });
       syncDhAuth();
+      return true;
     }
+    if(!attachIfpObserver()) window.addEventListener('ifp:authready', attachIfpObserver);
   }
 
   var expOut = document.getElementById('tm-content');
