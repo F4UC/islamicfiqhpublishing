@@ -512,8 +512,11 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   | บัยบัรส์ | ไบบาร์ส · ไบบัรส์ | Baybars |
   | นิซอมุลมุลก์ | นิซามุลมุลก์ | Niẓām al-Mulk |
   | อิบนุ บะฏูเฏาะฮ์ | อิบนุ บะตูเตาะฮ์ | Ibn Baṭṭūṭah (ط→ฏ) |
+  | ดามัสกัส | ดิมัชก์ (ในร้อยแก้ว) | Damascus — ใช้ชื่อสามัญไทยที่ผู้อ่านรู้จักดี (เจ้าของ 29 มิ.ย. 2026) |
 
   ขอบเขต: ใช้กับ**ร้อยแก้วไทย**เท่านั้น **ห้ามแตะตัวบทอาหรับ / อายะฮ์ / หะดีษ / ชื่อในบล็อก `lang="ar"`** (สอดคล้องกฎ 7/8/53/60); คำที่มีกฎสะกดเฉพาะแล้ว (12.1 ศอเฮี้ยะฮ์, 12.2 มัสฮับ) ให้ยึดกฎนั้น
+
+  **★ คำขยาย/ชื่อสมัยใหม่ในวงเล็บ ( ) — เฉพาะชื่อที่ผู้อ่านทั่วไปไม่คุ้น:** ชื่อสถานที่/คำที่**คนไทยรู้จักดีอยู่แล้ว ไม่ต้องใส่คำขยายในวงเล็บ** เช่น **ดามัสกัส, เยรูซาเล็ม (บัยตุลมักดิส), อันดะลุส, ยะอ์ญูจญ์และมะอ์ญูจญ์** ฯลฯ — ใส่วงเล็บขยายเฉพาะชื่อที่ทับศัพท์แล้วผู้อ่านทั่วไปไม่คุ้น (เช่น กุบรุส (ไซปรัส), อักรีฏัช (เกาะครีต), สะรันดีบ (ศรีลังกา)) (เจ้าของ 29 มิ.ย. 2026)
 
 * **กฎข้อที่ 74:** **[มาตรฐานความมั่นคงและ HTTP headers · Security & Headers Policy]** นโยบายความมั่นคงกำหนดไว้ใน **`docs/SECURITY.md`** (authoritative) บังคับใช้จริงผ่าน **`_headers`** สาระบังคับ:
   - **CSP** บังคับใน `_headers` — **★ห้ามตัด `'unsafe-inline'` จาก `script-src`/`style-src` และห้าม refactor inline event handler (`onclick` ฯลฯ) / inline `<script>` ในเทมเพลต-บทความ★** เพราะ control bar + chrome + no-flash theme bootstrap พึ่งพา inline เหล่านี้ทั้งเว็บ การ harden CSP ต้องผ่าน One เท่านั้น
@@ -629,8 +632,11 @@ TRANSLITERATION (only where script conversion is unavoidable, e.g. inline mentio
   | บัยบัรส์ | ไบบาร์ส · ไบบัรส์ | Baybars |
   | นิซอมุลมุลก์ | นิซามุลมุลก์ | Niẓām al-Mulk |
   | อิบนุ บะฏูเฏาะฮ์ | อิบนุ บะตูเตาะฮ์ | Ibn Baṭṭūṭah (ط→ฏ) |
+  | ดามัสกัส | ดิมัชก์ (in prose) | Damascus — use the common Thai exonym readers know (owner, 29 Jun 2026) |
 
   Scope: **Thai prose only**. **Never touch Arabic text / Quran / Hadith / names inside `lang="ar"` blocks** (per Rules 7/8/53/60); terms with a dedicated spelling rule (12.1 ศอเฮี้ยะฮ์, 12.2 มัสฮับ) follow that rule.
+
+  **★ Parenthetical gloss / modern name in ( ) — only for names readers won't recognize:** well-known place names/terms (**ดามัสกัส Damascus, เยรูซาเล็ม/บัยตุลมักดิส Jerusalem, อันดะลุส al-Andalus, ยะอ์ญูจญ์และมะอ์ญูจญ์ Gog & Magog**, etc.) take **no parenthetical gloss**; add a gloss only for transliterations a general reader won't recognize (e.g. กุบรุส (ไซปรัส), อักรีฏัช (เกาะครีต), สะรันดีบ (ศรีลังกา)). (owner, 29 Jun 2026)
 
 * **Rule 74:** **[Security & HTTP Headers Policy]** The security policy lives in **`docs/SECURITY.md`** (authoritative), enforced at the edge via **`_headers`**. Mandatory points:
   - **CSP** is enforced in `_headers` — **★never remove `'unsafe-inline'` from `script-src`/`style-src`, and never refactor inline event handlers (`onclick`, etc.) / inline `<script>` in templates or articles★**, because the control bar + chrome + no-flash theme bootstrap depend on them site-wide. Hardening CSP requires One's approval only.
