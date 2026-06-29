@@ -1123,7 +1123,6 @@ function renderEventCard(e) {
     const act = i === 0 ? ' active' : '';
     tabsHtml += `<button type="button" class="tm-tab${act}" data-acc="${i}">${name}</button>`;
     let links = '';
-    if (a.url) links += ` <a href="${a.url}" class="tm-src-link" target="_blank" rel="noopener noreferrer">Shamela ↗</a>`;
     if (a.urlAlt) links += ` <a href="${a.urlAlt}" class="tm-src-link" target="_blank" rel="noopener noreferrer">islamweb ↗</a>`;
     const srcLine = (ch.book || '') + (a.loc ? ' ' + a.loc : '') + links;
     const srcHtml = srcLine.trim() ? `<div class="tm-acc-src"><span class="tm-lbl">ที่มา</span> ${srcLine}</div>` : '';
