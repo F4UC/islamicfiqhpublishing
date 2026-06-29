@@ -33,6 +33,7 @@ export async function onRequest(context) {
   const route = segs.join('/');
 
   if (route === 'whoami') return handleWhoami(request, env);
+  if (route === 'me') return handleMe(request, env);
   if (segs[0] === 'year' && segs[1]) return handleYear(request, env, segs[1]);
   // '/search' => PR-C
   return json({ ok: false, error: 'not_found' }, 404);
@@ -46,6 +47,27 @@ async function handleWhoami(request, env) {
   const uid = await verifyUser(request, env);
   if (!uid) return json({ ok: false, error: 'unauthorized' }, 401);
   return json({ ok: true, userId: uid }, 200);
+}
+
+// Current membership snapshot for the account page. Never 401 (guest => tier 'guest').
+async function handleMe(request, env) {
+  if (!env || !env.DB) return json({ ok:false, error:'db_not_configured' }, 503);
+  const uid = await verifyUser(request, env);
+  if (!uid) return json({ ok:true, authed:false, tier:'guest' }, 200);
+  let sub = null;
+  try {
+    sub = await env.DB.prepare(
+      `SELECT s.plan_id AS planId, s.current_period_end AS periodEnd,
+              p.title_th AS planTitle, p.price_thb AS price
+         FROM subscriptions s JOIN plans p ON p.plan_id = s.plan_id
+        WHERE s.clerk_user_id = ? AND s.status = 'active'
+          AND datetime(s.current_period_end) > datetime('now')
+        ORDER BY p.price_thb DESC LIMIT 1`
+    ).bind(uid).first();
+  } catch (e) { sub = null; }
+  if (!sub) return json({ ok:true, authed:true, tier:'free', planTitle:'FIQH (ฟรี)' }, 200);
+  const tier = sub.planId === 'fiqh-pro' ? 'pro' : (sub.planId === 'fiqh-plus' ? 'plus' : 'paid');
+  return json({ ok:true, authed:true, tier, planId:sub.planId, planTitle:sub.planTitle, periodEnd:sub.periodEnd }, 200);
 }
 
 // ---- shared: verify Clerk JWT → userId or null (NEVER throws, NEVER 401s) ----
