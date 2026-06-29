@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (typeof syncDarkButton === 'function') syncDarkButton(document.documentElement.classList.contains('dark-mode'));
 
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260529n')
+    fetch('/components/header.html?v=20260629b')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
