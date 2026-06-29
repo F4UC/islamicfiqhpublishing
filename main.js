@@ -106,7 +106,17 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
-            
+
+            // Site-wide auth chrome: load clerk-auth once (idempotent). Was opt-in (TM/account only);
+            // now global so the avatar / sign-in shows in the header on every page.
+            if (!window.__ifpClerkLoading && !window.ifpGetToken) {
+                window.__ifpClerkLoading = true;
+                var ca = document.createElement('script');
+                ca.defer = true;
+                ca.src = '/js/clerk-auth.js?v=20260629a';
+                document.body.appendChild(ca);
+            }
+
             // เรียกปรับรูปไอคอนปุ่มธีมเมื่อประกอบร่างเสร็จ
             updateThemeIcon(document.documentElement.classList.contains('dark-mode'));
             

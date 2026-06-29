@@ -1,10 +1,10 @@
 /**
  * Clerk auth — STEP 1: LOGIN / IDENTITY ONLY (no content gating yet).
  *
- * Loaded ONLY on the Hijri Time Machine page and the account page (login is
- * opt-in — free articles and the ijazah tool never load this). The client only
- * proves "who you are" and fetches a session token; the real entitlement check
- * happens server-side in functions/api/tm/* (and, later, D1). No Stripe here.
+ * Loaded site-wide (injected by main.js right after the central header mounts) so
+ * the avatar / sign-in button appears in the header chrome on every page. The
+ * client only proves "who you are" and fetches a session token; the real
+ * entitlement check happens server-side in functions/api/tm/* (and D1). No Stripe here.
  *
  * ⚑ CONFIG — One must fill these two values from the Clerk dashboard
  *    (app_3FchX2P8bM4RbPyfuNFsMHdGBkV → API keys / Frontend API) before deploy:
@@ -18,6 +18,11 @@
  * Until both are configured, this script no-ops (the page works without auth).
  */
 (function () {
+  // Idempotent: main.js loads this site-wide, but some pages may also include it
+  // directly — never double-init Clerk.
+  if (window.__ifpClerkInit) return;
+  window.__ifpClerkInit = true;
+
   // Publishable key is NON-SECRET (shipped to every browser); allowlist the scanner false positive.
   var PUBLISHABLE_KEY = 'pk_test_aW5maW5pdGUtcXVldHphbC0yLmNsZXJrLmFjY291bnRzLmRldiQ'; // gitleaks:allow
   var FRONTEND_API_HOST = 'infinite-quetzal-2.clerk.accounts.dev';
@@ -67,6 +72,8 @@
         signin.hidden = false;
         signin.addEventListener('click', function () { Clerk.redirectToSignIn(); });
       }
+      /* Let pages (e.g. the account membership card) react once auth state is known. */
+      window.dispatchEvent(new CustomEvent('ifp:authready', { detail: { signedIn: !!Clerk.user } }));
     }).catch(function () { /* auth optional in STEP 1 — never block the timeline */ });
   }
 
