@@ -6976,6 +6976,18 @@
       "eventsSchema": "v3",
       "scope": "باب ذكر البلاد (เต็มบท) - ดินแดน/เจ็ดอิกลีม/เมืองสำคัญ",
       "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "muntazam-pre-06.json",
+      "book": "al-muntazam",
+      "hijriYear": null,
+      "era": "pre-hijra",
+      "unit": "dhikr-al-jibal",
+      "order": 6,
+      "events": 3,
+      "eventsSchema": "v3",
+      "scope": "ذكر الجبال (ตอนต้น) - ภูเขา",
+      "reviewStatus": "DRAFT"
     }
   ]
 }
