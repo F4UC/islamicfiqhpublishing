@@ -7000,6 +7000,18 @@
       "eventsSchema": "v3",
       "scope": "เนินเขา/ช่องเขา และป้อมปราการ",
       "reviewStatus": "DRAFT"
+    },
+    {
+      "file": "muntazam-pre-08.json",
+      "book": "al-muntazam",
+      "hijriYear": null,
+      "era": "pre-hijra",
+      "unit": "dhikr-al-bihar",
+      "order": 8,
+      "events": 5,
+      "eventsSchema": "v3",
+      "scope": "ذكر البحار + البحيرات - ทะเลและทะเลสาบ",
+      "reviewStatus": "DRAFT"
     }
   ]
 }
