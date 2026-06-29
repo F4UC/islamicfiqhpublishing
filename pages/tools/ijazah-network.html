@@ -310,6 +310,29 @@ html.dark-mode .pill-gap { color:var(--gold-bright); }
 .cy-overlay-th { font-family:var(--thai); font-size:14px; color:var(--text-mute); line-height:1.7; }
 .cy-hint { font-family:var(--thai); font-size:12px; color:var(--text-mute); margin-top:10px; line-height:1.7; }
 
+/* ── Members-only lock (gated graph, FIQH+/PRO) ─────────── */
+#ijazah-lock {
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  padding:24px; z-index:6;
+  background:color-mix(in srgb, var(--ink-2) 88%, transparent);
+  backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px);
+}
+.ijz-lock-card {
+  max-width:380px; text-align:center; font-family:var(--thai);
+  background:var(--ink); border:1px solid var(--rule-strong); border-radius:14px;
+  padding:30px 26px; box-shadow:0 18px 50px rgba(0,0,0,.18);
+}
+.ijz-lock-icon { font-size:34px; line-height:1; margin-bottom:10px; }
+.ijz-lock-card h3 { font-family:var(--ui); font-size:18px; color:var(--text); margin:0 0 10px; }
+.ijz-lock-card p { font-size:14px; color:var(--text-dim); line-height:1.8; margin:0 0 20px; }
+.ijz-lock-card strong { color:var(--gold-bright); }
+.ijz-lock-card .ifp-auth-btn {
+  display:inline-block; font-family:var(--ui); font-size:14px; font-weight:600;
+  text-decoration:none; color:#fff; background:var(--plate-gold);
+  padding:11px 26px; border-radius:9px; transition:opacity .15s ease;
+}
+.ijz-lock-card .ifp-auth-btn:hover { opacity:.88; }
+
 /* ── Path-between panel ─────────────────────────────────── */
 .path-panel {
   margin-top:24px; padding:22px; border:1px solid var(--rule-strong);
@@ -705,8 +728,8 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
 (function(){
   'use strict';
 
-  var DATA_BASE  = 'ijazah-data/';
-  var GRAPH_BASE = 'ijazah-data/graphs/';
+  var DATA_BASE  = 'ijazah-data/';                /* catalog (index/sources) — public teaser */
+  var GRAPH_BASE = '/api/ijazah/graph/';          /* graphs — gated to FIQH+/PRO (was 'ijazah-data/graphs/') */
 
   /* Arabic-script detector (escaped \u ranges only — no literal Arabic
      glyph appears in this source file). Covers Arabic, Arabic Supplement,
@@ -1006,6 +1029,22 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   }
   function hideOverlay(){ $overlay.classList.add('hidden'); }
 
+  /* Members-only lock: laid over the graph stage when the gated API answers 403.
+     The 23-chain catalog stays visible (teaser); only the graph itself is gated. */
+  function showIjazahLock(){
+    hideOverlay();
+    var p = document.querySelector('.cy-wrap') || document.body;   // the graph stage
+    if(document.getElementById('ijazah-lock')) return;
+    var d = document.createElement('div');
+    d.id = 'ijazah-lock';
+    d.innerHTML =
+      '<div class="ijz-lock-card"><div class="ijz-lock-icon">🔒</div>' +
+      '<h3>เครือข่ายสายอิญาซะฮ์ฉบับเต็ม</h3>' +
+      '<p>เปิดดูแผนผังสายรายงานทั้งหมดได้สำหรับสมาชิก <strong>FIQH+ / PRO</strong></p>' +
+      '<a href="/pages/membership.html" class="ifp-auth-btn">ดูแพ็กเกจ</a></div>';
+    p.appendChild(d);
+  }
+
   /* Index a chain's narrator names (disp/full) for the search filter. */
   function indexNarrators(gid, data){
     if(narratorText[gid]) return;
@@ -1033,15 +1072,26 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     }
   }
 
+  /* Fetch a chain's graph through the gated API: attaches the Clerk bearer token
+     when present, and surfaces the members-only lock on a 403. Returns the parsed
+     JSON, or null when the chain is locked (caller stops/skips render). */
+  async function fetchGraph(gid, silent){
+    var token = window.ifpGetToken ? await window.ifpGetToken() : null;
+    var r = await fetch(GRAPH_BASE + gid + '.json', { headers: token ? { Authorization:'Bearer '+token } : {} });
+    if(r.status === 403){ if(!silent) showIjazahLock(); return null; }   // members-only
+    if(!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  }
+
   function loadGraph(gid){
     showOverlay('กำลังโหลดแผนภูมิของสายนี้…');
     $titleAr.textContent = '';
     $status.innerHTML = '';
     $pathResult.textContent = '';
     if(graphCache[gid]){ applyGraph(graphCache[gid], gid); return; }
-    fetch(GRAPH_BASE + gid + '.json')
-      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    fetchGraph(gid)
       .then(function(data){
+        if(!data) return;                  // locked (403) → lock overlay already shown
         graphCache[gid] = data;
         indexNarrators(gid, data);
         applyGraph(data, gid);
@@ -1059,8 +1109,7 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     var run = function(){
       groups.forEach(function(g){
         if(narratorText[g.gid]) return;
-        fetch(GRAPH_BASE + g.gid + '.json')
-          .then(function(r){ return r.ok ? r.json() : null; })
+        fetchGraph(g.gid, true)            // silent prefetch: a 403 returns null → skip (never pops the lock)
           .then(function(data){
             if(!data) return;
             graphCache[g.gid] = data;
