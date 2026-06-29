@@ -99,38 +99,152 @@ body { background: var(--ink); color: var(--paper); }
 
 /* ─── GRID CONTAINER ─────────────────────────────────────────────── */
 .tools-container { max-width: 1100px; margin: 0 auto 100px; padding: 0 24px; }
-.tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 22px; align-items: stretch; }
 
 /* ─── TOOL CARDS ─────────────────────────────────────────────────── */
 .tool-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
-  border-radius: 12px;
-  padding: 40px 30px;
-  text-align: center;
-  display: flex; flex-direction: column; height: 100%;
-  position: relative; overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s, border-color 0.3s;
+  min-height: 320px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.96), rgba(245,240,231,0.98)),
+    var(--paper);
+  border: 1px solid rgba(245,241,234,0.72);
+  border-radius: 10px;
+  padding: 24px;
+  color: #14110d;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.88);
+  transition: transform 0.32s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.32s, border-color 0.32s;
 }
 .tool-card:hover {
-  border-color: var(--gold);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-  transform: translateY(-5px);
+  border-color: rgba(196,154,69,0.85);
+  box-shadow: 0 26px 70px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.92);
+  transform: translateY(-6px);
 }
 .tool-card::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-  background: var(--gold);
-  transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--accent-color));
+  border-radius: 0 0 999px 999px;
+  transform: scaleX(0.32);
+  transform-origin: left;
+  transition: transform 0.32s ease;
 }
 .tool-card:hover::before { transform: scaleX(1); }
+.tool-card::after {
+  content: '';
+  position: absolute;
+  right: -70px;
+  bottom: -96px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1px solid rgba(196,154,69,0.20);
+  background: radial-gradient(circle, rgba(196,154,69,0.10) 0%, rgba(196,154,69,0.04) 42%, transparent 70%);
+  pointer-events: none;
+}
 
-.tool-name      { font-family: var(--thai); font-size: 22px; font-weight: 700; letter-spacing: .04em; color: var(--paper); margin-bottom: 12px; }
-.tool-desc-text { font-size: 14px; color: var(--text-dim); line-height: 1.7; flex-grow: 1; text-align: left; }
+.tool-card-head,
+.tool-card-body,
+.tool-card-foot {
+  position: relative;
+  z-index: 1;
+}
+
+.tool-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.tool-name {
+  font-family: var(--thai);
+  font-size: clamp(22px, 2vw, 28px);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.22;
+  color: #14110d;
+  margin: 0;
+}
+
+.tool-status {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border: 1px solid rgba(179,27,27,0.18);
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: rgba(179,27,27,0.08);
+  color: #8f1717;
+  font-family: var(--ph-thai);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tool-desc-text {
+  max-width: 48ch;
+  font-family: var(--ph-thai);
+  font-size: 15px;
+  color: rgba(20,17,13,0.74);
+  line-height: 1.85;
+  margin: 0;
+  text-align: left;
+  word-break: break-word;
+}
+
+.tool-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(20,17,13,0.10);
+}
+
+.tool-card-note {
+  font-family: var(--ph-thai);
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(20,17,13,0.46);
+}
+
+.tool-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #b31b1b;
+  font-family: var(--ph-thai);
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.tool-card-action::after {
+  content: '→';
+  font-family: var(--ph-thai);
+  font-weight: 800;
+  transition: transform 0.2s ease;
+}
+
+.tool-card:hover .tool-card-action::after { transform: translateX(3px); }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .tools-grid { grid-template-columns: 1fr; }
-  .tool-desc-text { text-align: center; }
+  .tool-card { min-height: 0; padding: 22px; }
+  .tool-card-head,
+  .tool-card-foot { align-items: flex-start; flex-direction: column; }
+  .tool-desc-text { text-align: left; }
 }
 </style>
 <!-- PWA -->
@@ -171,13 +285,31 @@ body { background: var(--ink); color: var(--paper); }
     <div class="tools-grid">
 
       <a class="tool-card" href="tools/hijri-time-machine.html">
-        <h2 class="tool-name">HIJRI TIME MACHINE</h2>
-        <p class="tool-desc-text">มากกว่าการแปลงปฏิทิน สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามที่เกิดขึ้นในปี ฮ.ศ. นั้นๆ เพื่อเชื่อมโยงอดีตสู่ปัจจุบัน</p>
+        <div class="tool-card-head">
+          <h2 class="tool-name">HIJRI TIME MACHINE</h2>
+          <span class="tool-status">พร้อมใช้งาน</span>
+        </div>
+        <div class="tool-card-body">
+          <p class="tool-desc-text">มากกว่าการแปลงปฏิทิน สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามที่เกิดขึ้นในปี ฮ.ศ. นั้นๆ เพื่อเชื่อมโยงอดีตสู่ปัจจุบัน</p>
+        </div>
+        <div class="tool-card-foot">
+          <span class="tool-card-note">ปฏิทิน · ประวัติศาสตร์</span>
+          <span class="tool-card-action">เปิดเครื่องมือ</span>
+        </div>
       </a>
 
       <a class="tool-card" href="tools/ijazah-network.html">
-        <h2 class="tool-name">เครือข่ายสายอิญาซะฮ์</h2>
-        <p class="tool-desc-text">สำรวจสายอิญาซะฮ์ (สายการรับอนุญาตสืบทอดวิชา) แบบโต้ตอบได้ ค้นหาสาย แสดงแผนผังครู–ลูกศิษย์ ตรวจความต่อเนื่องของสาย และตามรอยแหล่งอ้างอิงของทุกการเชื่อม</p>
+        <div class="tool-card-head">
+          <h2 class="tool-name">เครือข่ายสายอิญาซะฮ์</h2>
+          <span class="tool-status">พร้อมใช้งาน</span>
+        </div>
+        <div class="tool-card-body">
+          <p class="tool-desc-text">สำรวจสายอิญาซะฮ์ (สายการรับอนุญาตสืบทอดวิชา) แบบโต้ตอบได้ ค้นหาสาย แสดงแผนผังครู–ลูกศิษย์ ตรวจความต่อเนื่องของสาย และตามรอยแหล่งอ้างอิงของทุกการเชื่อม</p>
+        </div>
+        <div class="tool-card-foot">
+          <span class="tool-card-note">สายรายงาน · แผนผัง</span>
+          <span class="tool-card-action">เปิดเครื่องมือ</span>
+        </div>
       </a>
 
     </div>
@@ -218,5 +350,4 @@ body { background: var(--ink); color: var(--paper); }
 (function(){function h(){document.querySelectorAll(".hero-slide picture").forEach(function(p){var s=p.querySelector("source[data-srcset]");if(s){s.srcset=s.dataset.srcset;}var i=p.querySelector("img[data-src]");if(i){i.src=i.dataset.src;}});}var ric=window.requestIdleCallback||function(f){return setTimeout(f,1);};if(document.readyState!=="loading"){ric(h,{timeout:1500});}else{addEventListener("DOMContentLoaded",function(){ric(h,{timeout:1500});});}})();</script>
 </body>
 </html>
-
 
