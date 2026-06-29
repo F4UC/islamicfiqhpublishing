@@ -196,52 +196,48 @@ html.dark-mode .hero-tagline { color:var(--gold-bright); }
   color:var(--text-dim); margin-top:14px; max-width:620px; text-align:left; word-break:break-word;
 }
 
-/* ── Search ─────────────────────────────────────────────── */
-.search-wrap { position:relative; max-width:680px; margin-bottom:28px; }
-.search-input {
-  width:100%; padding:16px 56px 16px 22px;
-  border:1px solid var(--rule-strong); border-radius:999px;
-  background:var(--ink-2); color:var(--text);
-  font-family:var(--thai); font-size:16px; font-weight:300; outline:none;
-  transition:border-color .3s, box-shadow .3s;
+/* ── Chain picker (compact search + dropdown) ───────────── */
+.picker { position:relative; max-width:680px; margin-bottom:22px; }
+.picker-field {
+  display:flex; align-items:center; gap:10px;
+  padding:13px 20px; border:1px solid var(--rule-strong); border-radius:999px;
+  background:var(--ink-2); color:var(--text); cursor:text;
+  transition:border-color .25s, box-shadow .25s;
 }
-.search-input::placeholder { color:var(--text-mute); }
-.search-input:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(211,47,47,.12); }
-.search-clear {
-  position:absolute; right:16px; top:50%; transform:translateY(-50%);
-  font-size:22px; color:var(--text-mute); display:none; cursor:pointer; line-height:1;
-  padding:4px 8px; transition:color .25s;
+.picker.open .picker-field,
+.picker-field:focus-within { border-color:var(--accent); box-shadow:0 0 0 3px rgba(211,47,47,.12); }
+.picker-field > svg { flex:0 0 auto; color:var(--text-mute); }
+.picker-input {
+  flex:1 1 auto; min-width:0; border:none; outline:none; background:transparent;
+  color:var(--text); font-family:var(--thai); font-size:16px; font-weight:300;
 }
-.search-clear:hover { color:var(--accent); }
-.search-clear.visible { display:block; }
-
-/* ── Chain cards ────────────────────────────────────────── */
-.chain-grid {
-  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:16px; margin-top:8px;
+.picker-input::placeholder { color:var(--text-mute); }
+.picker-current {
+  flex:0 1 auto; max-width:48%; font-family:var(--arabic); font-size:17px;
+  color:var(--paper); direction:rtl; text-align:right;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
 }
-.chain-card {
-  display:flex; flex-direction:column; gap:12px;
-  padding:22px 22px 20px; border:1px solid var(--rule-strong);
-  background:var(--ink-2); border-radius:12px; cursor:pointer;
-  transition:border-color .28s, background .28s, transform .2s cubic-bezier(.2,.7,.2,1), box-shadow .28s;
-  position:relative; overflow:hidden;
+.picker-menu {
+  position:absolute; left:0; right:0; top:calc(100% + 8px); z-index:20;
+  max-height:60vh; overflow-y:auto; display:none; padding:6px;
+  background:var(--ink-2); border:1px solid var(--rule-strong); border-radius:14px;
+  box-shadow:0 18px 50px rgba(0,0,0,.16);
 }
-.chain-card::before {
-  content:''; position:absolute; left:0; top:0; bottom:0; width:0;
-  background:var(--accent); transition:width .28s cubic-bezier(.2,.7,.2,1);
+.picker.open .picker-menu { display:block; }
+.pick-item {
+  display:flex; flex-direction:column; gap:7px; padding:14px 16px;
+  border-radius:10px; cursor:pointer; position:relative; transition:background .18s;
 }
-.chain-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.06); }
-.chain-card:hover::before { width:3px; }
-.chain-card.active { border-color:var(--accent); background:rgba(211,47,47,.06); }
-.chain-card.active::before { width:3px; }
-.chain-bab {
-  font-family:var(--arabic); font-size:18px; line-height:1.7; color:var(--paper);
+.pick-item + .pick-item { margin-top:2px; }
+.pick-item:hover, .pick-item.active { background:rgba(211,47,47,.07); }
+.pick-item.active { box-shadow:inset 3px 0 0 var(--accent); }
+.pick-bab {
+  font-family:var(--arabic); font-size:17px; line-height:1.6; color:var(--paper);
   direction:rtl; text-align:right;
-  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
 }
-.chain-books { font-family:var(--thai); font-size:13px; color:var(--text-dim); line-height:1.6; }
-.chain-foot { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-top:auto; }
+.pick-books { font-family:var(--thai); font-size:13px; color:var(--text-dim); line-height:1.6; }
+.pick-foot { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
 .chain-counts { font-family:var(--ui); font-size:11px; letter-spacing:.06em; color:var(--text-mute); }
 .pill {
   font-family:var(--thai); font-size:11px; font-weight:500;
@@ -497,7 +493,6 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   .cy-controls { position:static; order:-1; top:auto; left:auto; right:auto;
                  justify-content:center; padding:8px 4px 10px; }
   .cy-ctrl { min-width:48px; min-height:48px; }
-  .chain-grid { grid-template-columns:1fr; }
   /* Drawer becomes a bottom-sheet on mobile */
   .drawer {
     top:auto; bottom:0; right:0; left:0; width:100%; max-width:100%;
@@ -534,9 +529,7 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     <h1 class="hero-title" data-reveal data-delay="1">เครือข่ายสายอิญาซะฮ์</h1>
     <p class="hero-tagline" data-reveal data-delay="1">สายแห่งการรับอนุญาตสืบทอดวิชา · จากครูสู่ศิษย์ต่อเนื่องเป็นสายโซ่</p>
     <p class="hero-lede" data-reveal data-delay="2">
-      เครื่องมือนี้แสดงผล <strong>สายอิญาซะฮ์</strong> (สายการรับอนุญาตให้สืบทอดวิชา ตำรา หรือสายรายงาน)
-      ในรูปแบบแผนภูมิเครือข่ายที่โต้ตอบได้ — มิใช่เพียงสายหะดีษ แต่ครอบคลุมสายการถ่ายทอดตำราฟิกฮ์ กะลาม
-      และสายสะมาอฺ (การฟังตรงจากครู) แต่ละสายตามรอยถึงผู้รายงานทีละท่าน พร้อมแหล่งอ้างอิงที่ตรวจสอบได้
+      แผนผังสายการถ่ายทอดอิญาซะฮ์ของตำราฟิกฮ์ หะดีษ กะลาม และสารพัดวิชาในรูปแบบเครือข่ายที่ (เกือบ) เชื่อมโยงถึงกันทั้งหมด
     </p>
     <div class="hero-stats" data-reveal data-delay="3">
       <div class="stat-item"><span class="stat-num" id="statChains">—</span><span class="stat-label">สาย</span></div>
@@ -547,39 +540,24 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
 </section>
 
 <!-- ==========================================================
-     SECTION: SEARCH + CHAIN LIST
-     ========================================================== -->
-<section class="section" id="chainSection">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <div class="section-no">01</div>
-      <div class="section-eyebrow">เลือกสาย</div>
-      <h2 class="section-title">รายการสายอิญาซะฮ์</h2>
-      <p class="section-lede">ค้นหาและเลือกสายที่ต้องการ — คลิกการ์ดเพื่อโหลดแผนภูมิเครือข่ายของสายนั้น</p>
-    </div>
-
-    <div class="search-wrap" data-reveal>
-      <input type="text" id="chainSearch" class="search-input"
-             placeholder="ค้นหาสาย / ตำรา / ปราชญ์…" autocomplete="off" dir="auto">
-      <span class="search-clear" id="chainSearchClear" title="ล้างการค้นหา">×</span>
-    </div>
-
-    <div class="chain-grid" id="chainGrid" data-reveal data-delay="1">
-      <div class="list-empty">กำลังโหลดรายการสาย…</div>
-    </div>
-  </div>
-</section>
-
-<!-- ==========================================================
      SECTION: GRAPH PANEL
      ========================================================== -->
 <section class="section" id="graphSection" style="padding-top:0;">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <div class="section-no">02</div>
+      <div class="section-no">01</div>
       <div class="section-eyebrow">แผนภูมิเครือข่าย</div>
       <h2 class="section-title">สายต่อเนื่องของผู้รายงาน</h2>
-      <p class="section-lede">รากของสาย (ผู้ให้อิญาซะฮ์ระดับสูงสุด) อยู่ด้านบน ไล่ลงสู่ผู้รับอนุญาตด้านล่าง — แตะที่โหนดเพื่อเน้นสายเชื่อมและดูประวัติผู้รายงาน</p>
+      <p class="section-lede">แตะที่ใครคนใดคนหนึ่ง เพื่อเน้นสายเชื่อมและดูประวัติผู้รายงาน</p>
+    </div>
+
+    <div class="picker" id="chainPicker" data-reveal>
+      <div class="picker-field">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input class="picker-input" id="chainSearch" type="text" placeholder="ค้นหาสาย / ตำรา / ปราชญ์…" autocomplete="off" dir="auto">
+        <span class="picker-current" id="chainCurrent" lang="ar" dir="rtl"></span>
+      </div>
+      <div class="picker-menu" id="chainMenu"></div>
     </div>
 
     <div class="graph-bar" data-reveal>
@@ -590,17 +568,15 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     <div class="cy-wrap" data-reveal data-delay="1">
       <div id="cy"></div>
 
-      <!-- Control bar — day/night + Arabic on/off (whisper style) -->
+      <!-- Control bar — day/night + clear highlight (whisper style) -->
       <div class="cy-controls" id="cyControls">
         <button type="button" class="cy-ctrl" id="themeToggle" aria-pressed="false"
                 title="สลับโหมดกลางวัน/กลางคืน" aria-label="สลับโหมดกลางวัน/กลางคืน">
           <span id="themeIcon">☀</span>
           <span class="ctrl-th" id="themeLabel">กลางวัน</span>
         </button>
-        <button type="button" class="cy-ctrl" id="arabicToggle" aria-pressed="true"
-                title="เปิด/ปิดอักษรอาหรับ" aria-label="เปิดหรือปิดอักษรอาหรับ">
-          <span class="ctrl-ar" id="arabicGlyph">&#x639;</span>
-          <span class="ctrl-th" id="arabicLabel">อาหรับ: เปิด</span>
+        <button type="button" class="cy-ctrl" id="clearHiBtn" title="ล้างการเน้น" aria-label="ล้างการเน้น">
+          <span>✕</span><span class="ctrl-th">ล้างการเน้น</span>
         </button>
       </div>
 
@@ -826,9 +802,10 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   };
 
   /* ── DOM refs ──────────────────────────────────────────── */
-  var $grid       = document.getElementById('chainGrid');
+  var $picker     = document.getElementById('chainPicker');
+  var $menu       = document.getElementById('chainMenu');
   var $search     = document.getElementById('chainSearch');
-  var $searchClear= document.getElementById('chainSearchClear');
+  var $chainCurrent= document.getElementById('chainCurrent');
   var $titleAr    = document.getElementById('graphTitleAr');
   var $status     = document.getElementById('graphStatus');
   var $overlay    = document.getElementById('cyOverlay');
@@ -870,18 +847,6 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     return e;
   }
 
-  /* Re-render every open/visible view after an Arabic on/off toggle. */
-  function rerenderAll(){
-    renderChainList(currentList());
-    if(curGraph){
-      renderGraphHeader(curGraph);
-      refreshGraphLabels();
-      populatePathSelectors(curGraph);
-    }
-    if($drawer.classList.contains('open') && lastDrawerNode){
-      openDrawer(lastDrawerNode);
-    }
-  }
   /* Does a chain match the query? Searches bab + book titles, plus narrator
      names once that chain's graph has been indexed by prefetchForSearch(). */
   function matchGroup(g, q){
@@ -889,13 +854,6 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     if(hay.indexOf(q) > -1) return true;
     var nt = narratorText[g.gid];
     return nt ? (nt.indexOf(q) > -1) : false;
-  }
-
-  /* the list currently being shown (respects the active search filter) */
-  function currentList(){
-    var q = ($search.value || '').trim().toLowerCase();
-    if(!q) return groups;
-    return groups.filter(function(g){ return matchGroup(g, q); });
   }
 
   /* ========================================================
@@ -932,86 +890,108 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     prefetchForSearch();
   }).catch(function(err){
     console.error('[Ijāzah Network] index load failed', err);
-    $grid.innerHTML = '';
-    $grid.appendChild(el('div','list-empty','ไม่สามารถโหลดรายการสายได้ — โปรดลองใหม่อีกครั้ง'));
+    $menu.innerHTML = '';
+    $menu.appendChild(el('div','list-empty','ไม่สามารถโหลดรายการสายได้ — โปรดลองใหม่อีกครั้ง'));
     overlayError('ไม่สามารถโหลดข้อมูลเริ่มต้นได้');
   });
 
   /* ========================================================
-     CHAIN LIST
+     CHAIN PICKER (dropdown list)
      ======================================================== */
   function renderChainList(list){
-    $grid.innerHTML = '';
+    $menu.innerHTML = '';
     if(!list.length){
-      $grid.appendChild(el('div','list-empty','ไม่พบสายที่ตรงกับคำค้น'));
+      $menu.appendChild(el('div','list-empty','ไม่พบสายที่ตรงกับคำค้น'));
       return;
     }
     list.forEach(function(g){
-      var card = document.createElement('div');
-      card.className = 'chain-card';
-      card.setAttribute('data-gid', g.gid);
-      /* a11y: the card acts as a button — keyboard-focusable & activatable.
-         Label is Thai (the bab is Arabic and may be gated off). */
-      card.setAttribute('role', 'button');
-      card.setAttribute('tabindex', '0');
-      card.setAttribute('aria-label',
+      var item = document.createElement('div');
+      item.className = 'pick-item';
+      item.setAttribute('data-gid', g.gid);
+      /* a11y: each row acts as a button — keyboard-focusable & activatable. */
+      item.setAttribute('role', 'option');
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('aria-label',
         'แสดงแผนภูมิสายอิญาซะฮ์ · ' + (g.n_nodes||0) + ' ผู้รายงาน · ' +
         (g.continuous ? 'สายต่อเนื่อง' : 'พบช่วงที่สายขาด'));
 
       /* bab is Arabic — gated. When Arabic is off, show a Thai placeholder. */
-      card.appendChild(arabicEl('div','chain-bab', g.bab || '', 'สายอิญาซะฮ์'));
+      item.appendChild(arabicEl('div','pick-bab', g.bab || '', 'สายอิญาซะฮ์'));
 
       var books = (g.books || []).join(' · ');   /* book titles may be Arabic */
       if(arabicOn){
-        card.appendChild(el('div','chain-books', books));
+        item.appendChild(el('div','pick-books', books));
       } else if((g.books||[]).some(function(b){ return RE_ARABIC.test(b); })){
         /* titles are Arabic-script → suppress, show neutral Thai label */
-        card.appendChild(el('div','chain-books','(ชื่อตำราภาษาอาหรับ — ปิดการแสดงผล)'));
+        item.appendChild(el('div','pick-books','(ชื่อตำราภาษาอาหรับ — ปิดการแสดงผล)'));
       } else {
-        card.appendChild(el('div','chain-books', books));
+        item.appendChild(el('div','pick-books', books));
       }
 
       var foot = document.createElement('div');
-      foot.className = 'chain-foot';
+      foot.className = 'pick-foot';
       foot.appendChild(el('span','chain-counts',
         (g.n_nodes||0) + ' ผู้รายงาน · ' + (g.n_edges||0) + ' การเชื่อม'));
       var pill = g.continuous
         ? el('span','pill pill-cont','สายต่อเนื่อง')
         : el('span','pill pill-gap','พบช่วงที่สายขาด');
       foot.appendChild(pill);
-      card.appendChild(foot);
+      item.appendChild(foot);
 
-      card.addEventListener('click', function(){ loadGraph(g.gid); });
-      card.addEventListener('keydown', function(ev){
+      item.addEventListener('click', function(){ selectChain(g.gid); });
+      item.addEventListener('keydown', function(ev){
         if(ev.key === 'Enter' || ev.key === ' ' || ev.key === 'Spacebar'){
           ev.preventDefault();
-          loadGraph(g.gid);
+          selectChain(g.gid);
         }
       });
-      $grid.appendChild(card);
+      $menu.appendChild(item);
     });
     markActiveCard(curGraph && curGraph.meta ? curGraph.meta.gid : null);
   }
 
+  /* Highlight the active row and mirror the chosen chain's name into the field. */
   function markActiveCard(gid){
-    var cards = $grid.querySelectorAll('.chain-card');
-    for(var i=0;i<cards.length;i++){
-      var on = cards[i].getAttribute('data-gid') === gid;
-      cards[i].classList.toggle('active', on);
-      if(on) cards[i].setAttribute('aria-current', 'true');
-      else cards[i].removeAttribute('aria-current');
+    var items = $menu.querySelectorAll('.pick-item');
+    for(var i=0;i<items.length;i++){
+      var on = items[i].getAttribute('data-gid') === gid;
+      items[i].classList.toggle('active', on);
+      if(on) items[i].setAttribute('aria-selected', 'true');
+      else items[i].removeAttribute('aria-selected');
+    }
+    if($chainCurrent){
+      var g = null;
+      for(var j=0;j<groups.length;j++){ if(groups[j].gid === gid){ g = groups[j]; break; } }
+      $chainCurrent.textContent = (gid && g && arabicOn) ? (g.bab || '') : '';
     }
   }
 
-  /* Search filter (case-insensitive substring over bab + books) */
+  /* ── Dropdown open/close ───────────────────────────────── */
+  function openMenu(){ if($picker) $picker.classList.add('open'); }
+  function closeMenu(){ if($picker) $picker.classList.remove('open'); }
+
+  /* Pick a chain from the dropdown: load it (through the existing gate),
+     collapse the menu, and reset the search field. */
+  function selectChain(gid){
+    loadGraph(gid);                 // unchanged: routes through fetchGraph/gate
+    $search.value = '';
+    applyFilter();
+    closeMenu();
+  }
+
+  /* Search filter (case-insensitive substring over bab + books + narrators) */
   function applyFilter(){
     var q = ($search.value || '').trim().toLowerCase();
-    $searchClear.classList.toggle('visible', !!q);
     if(!q){ renderChainList(groups); return; }
     renderChainList(groups.filter(function(g){ return matchGroup(g, q); }));
   }
-  $search.addEventListener('input', applyFilter);
-  $searchClear.addEventListener('click', function(){ $search.value=''; applyFilter(); $search.focus(); });
+  $search.addEventListener('focus', openMenu);
+  $search.addEventListener('input', function(){ openMenu(); applyFilter(); });
+  $search.addEventListener('keydown', function(ev){ if(ev.key === 'Escape'){ closeMenu(); $search.blur(); } });
+  /* Click outside the picker closes the menu. */
+  document.addEventListener('click', function(ev){
+    if($picker && !$picker.contains(ev.target)) closeMenu();
+  });
 
   /* ========================================================
      GRAPH LOADING
@@ -1719,9 +1699,6 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   var $themeToggle = document.getElementById('themeToggle');
   var $themeIcon   = document.getElementById('themeIcon');
   var $themeLabel  = document.getElementById('themeLabel');
-  var $arabicToggle= document.getElementById('arabicToggle');
-  var $arabicLabel = document.getElementById('arabicLabel');
-
   function syncThemeButton(){
     var dark = document.documentElement.classList.contains('dark-mode');
     if($themeIcon)  $themeIcon.textContent  = dark ? '☾' : '☀';  /* ☾ / ☀ */
@@ -1739,21 +1716,11 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     });
   }
 
-  var $arabicGlyph = document.getElementById('arabicGlyph');
-  function syncArabicButton(){
-    if($arabicLabel) $arabicLabel.textContent = 'อาหรับ: ' + (arabicOn ? 'เปิด' : 'ปิด');
-    if($arabicToggle) $arabicToggle.setAttribute('aria-pressed', arabicOn ? 'true' : 'false');
-    /* the button's own ayn icon is an Arabic glyph — hide it when OFF so a
-       DOM scan yields zero rendered Arabic. (Glyph shown via &#x639; when ON.) */
-    if($arabicGlyph) $arabicGlyph.style.display = arabicOn ? '' : 'none';
-  }
-  if($arabicToggle){
-    syncArabicButton();
-    $arabicToggle.addEventListener('click', function(){
-      arabicOn = !arabicOn;
-      syncArabicButton();
-      rerenderAll();   /* re-render every visible view with the new gate */
-    });
+  /* Clear-highlight button — same action as tapping empty graph space, for
+     users who'd rather press a control. clearHighlight() is defined above. */
+  var $clearHiBtn = document.getElementById('clearHiBtn');
+  if($clearHiBtn){
+    $clearHiBtn.addEventListener('click', clearHighlight);
   }
 
 })();
