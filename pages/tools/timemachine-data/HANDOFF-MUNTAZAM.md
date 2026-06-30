@@ -1,17 +1,18 @@
-# SESSION HANDOFF — สถานะล่าสุด (1 ก.ค. 2026, รอบ 31)
+# SESSION HANDOFF — สถานะล่าสุด (1 ก.ค. 2026, รอบ 31-32)
 
 > ส่งมอบจากเซสชั่น Claude (context เต็ม) → เซสชั่นใหม่ทำต่อ
 > **สรุป 1 บรรทัด:** อัลมุนตะซ็อมเดินถึง **สีเราะฮ์มักกะฮ์ - ปีที่สามจากการถือกำเนิด / การผ่าอก (ชักก์ศ็อดร์)** แล้ว; branch พร้อม merge; ทุก shard ผ่าน QC + byte-gate; สไตล์ถูกกฎ (ไม่มีไอคอน, เว้นวรรควงเล็บ S11)
 
 ## ตัวเลขปัจจุบัน
-- branch `claude/timemachine-muntazam-2` · tip `78fcb545` · push/ sync กับ origin · working tree สะอาด
-- **169 shards** (`muntazam-pre-02` .. `muntazam-pre-170`) อยู่ใน `index.json` ครบ · **glossary 3957 persons / 643 places**
-- ตรวจผ่านครบ: **tm_qc 0 violations (ชาร์ด muntazam) · 0 ไอคอน ★ · byte-gate ทุก shard (re-fetch)** · pre-170 ใหม่: byte-gate 2/2 · S11 ok · R5/R89
-- **PR:** เอเยนต์ create มัก 403 (R74/R87) → ถ้าเปิดไม่ได้ One เปิด + merge เองที่ `github.com/F4UC/islamicfiqhpublishing/pull/new/claude/timemachine-muntazam-2`
+- **★ branch ใหม่ `claude/timemachine-muntazam-3`** (แตกสดจาก origin/main หลัง PR #301 squash-merge เข้า main แล้ว) · tip `b9f2d05a` · push/sync · tree สะอาด
+- **เหตุที่ย้าย branch:** muntazam-2 เดิม diverge จาก main (squash-divergence) → PR conflict ที่ glossary/index; muntazam-3 = delta สะอาด merge ได้ทันที. **เซสชั่นหน้าให้แตก branch ใหม่จาก origin/main ปัจจุบันเสมอ** (`git checkout -b claude/timemachine-muntazam-N origin/main`) หลัง One merge
+- **delta บน branch นี้ = 2 ชาร์ดใหม่:** `muntazam-pre-170` + `muntazam-pre-171` (pre-02..pre-169 อยู่ใน main แล้ว) · **glossary 3958 persons / 645 places**
+- ตรวจผ่านครบ: **tm_qc 0 findings (pre-170/171) · 0 ไอคอน ★ · 0 em-dash · byte-gate pre-170 2/2 + pre-171 3/3 (re-fetch)** · S11 ok · R5/R52/R89/R92
+- **PR:** เอเยนต์ create ได้ 403 (R74/R87 ยืนยัน) → **One เปิด + merge เองที่ `github.com/F4UC/islamicfiqhpublishing/pull/new/claude/timemachine-muntazam-3`** (อย่าใช้ muntazam-2 = conflict)
 
 ## จุดทำต่อ (RESUME)
-- **RESUME: pid 670** (เล่ม 2 หน้า 265) — หะดีษการผ่าอกสายชัดดาด บิน เอาส์/บนีอามิร (สำนวนที่ 3) → คืนสู่อามินะฮ์ → มรณะอามินะฮ์ที่อัลอับวาอ์ → อับดุลมุฏฏ็อลิบเลี้ยง → มรณะอับดุลมุฏฏ็อลิบ → อบู ฏอลิบเลี้ยง → พบบาทหลวงบะฮีรอ → ฮัรบุลฟิญาร → ฮิลฟุลฟุฎูล → แต่งเคาะดีญะฮ์ → สร้างกะอ์บะฮ์/ตัดสินหินดำ → เผยพระวจนะ ...
-- **เสร็จรอบนี้ (pre-170, pid 668-669):** ปีที่สามจากการถือกำเนิด / ชักก์ศ็อดร์ - บทสรุปหะดีษฮะลีมะฮ์ (เด็กสองขวบคืนสู่อามินะฮ์/ผ่าอกครั้งแรกหลังกระโจม) + วงศ์ฮะลีมะฮ์/เข้าอิสลาม + หะดีษอุตบะฮ์ บิน อับด์ อัสสุละมี (นกขาว 2 ตัว/ล้างหัวใจ/ตราประทับนบูวะฮ์/ตาชั่ง) · +glossary utba-b-abd-al-sulami · FLAG R52 al-compound (อิบนุลหุศ็อยน์/อิบนุลมุษฮิบ ผู้รายงานอิสนาด)
+- **RESUME: pid 673** (เล่ม 2 หน้า 268) — ต่ออัรรอฟอุกาซ (ฮะลีมะฮ์พาท่านหลบ) → คืนสู่อามินะฮ์ → มรณะอามินะฮ์ที่อัลอับวาอ์ → อับดุลมุฏฏ็อลิบเลี้ยง → มรณะอับดุลมุฏฏ็อลิบ → อบู ฏอลิบเลี้ยง → พบบาทหลวงบะฮีรอ → ฮัรบุลฟิญาร → ฮิลฟุลฟุฎูล → แต่งเคาะดีญะฮ์ → สร้างกะอ์บะฮ์/ตัดสินหินดำ → เผยพระวจนะ ...
+- **เสร็จรอบนี้ (2 ชาร์ด):** pre-170 (pid 668-669) บทสรุปหะดีษฮะลีมะฮ์ + หะดีษการผ่าอกสายอุตบะฮ์ บิน อับด์ อัสสุละมี (+utba-b-abd-al-sulami) · pre-171 (pid 670-672) หะดีษการผ่าอกสายชัดดาด บิน เอาส์ ละเอียด + อัรรอฟอุกาซ (+shaddad-b-aws/al-lat/ukaz) · **FLAG ค้าง:** R52 al-compound (อิบนุลหุศ็อยน์/อิบนุลมุษฮิบ); محمد بن عمر = อัลวากิดีย์ (ครูอิบนุ สะอด์)
 - เมื่อถึง **ปี ฮ.ศ. 1** เปลี่ยนไฟล์เป็น `muntazam-hN.json` (hijriYear=N, เลิกใช้ pre-NN / era=pre-hijra) · คาดเริ่ม ~pid 690-720 (ต้องผ่านสีเราะฮ์มักกะฮ์ทั้งหมดก่อน)
 
 ## กฎสไตล์ที่ต้องระวัง (One ตำหนิรอบนี้ อย่าพลาดซ้ำ)
