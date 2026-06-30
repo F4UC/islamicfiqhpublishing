@@ -1,24 +1,72 @@
-# AGENTS.md — แนวทางสำหรับ AI ที่ทำงานกับรีโปนี้ (รวม Codex code review)
+# AGENTS.md — Islamic Fiqh Publishing AI Agent Rules
 
-โปรเจกต์: เว็บเผยแพร่ตำราอิสลามคลาสสิกภาษาไทย (static site, Cloudflare Pages)
-เอกสาร authoritative: CLAUDE.md (81 ข้อ: 1–81 + ข้อย่อย 12.1/12.2 + House Style S1–S8, +S9/S10 placeholders → Rules 76/77) + golden-master.md + docs/SECURITY.md
-บทอ้างอิงมาตรฐาน: articles/nitisart/moon-sighting-vs-astronomy.html
+โปรเจกต์นี้อยู่ภายใต้ธรรมนูญกองบรรณาธิการ Islamic Fiqh Publishing
 
-★ ก่อนแตะเนื้อหา: (1) **Child-safety (Rule 71)** เหนือทุกกฎ — เจอเนื้อ sexualize ผู้เยาว์ = drop+flag, ห้าม surface/quote, route One+Claude, ห้าม self-merge · (2) **Coverage ≥99% (Rule 72)** harakat-normalized · (3) **Normalize ทับศัพท์ (Rule 73)** corpus-dominant (เศาะหาบะฮ์ ไม่ใช่ ศอฮาบัต)
+**เอกสารแม่บทที่มีอำนาจสูงสุด:** `CLAUDE.md`
+
+ทุก AI agent ที่ทำงานกับ repository นี้ — รวมถึง Codex, Claude, Cursor, ChatGPT หรือ coding/review agent อื่น ๆ — ต้องอ่านและปฏิบัติตาม `CLAUDE.md` ก่อนแก้ไขไฟล์ใด ๆ
+
+`CLAUDE.md` เป็น single source of truth สำหรับ:
+
+- กฎบรรณาธิการและความซื่อสัตย์เชิงวิชาการ
+- มาตรฐานการทับศัพท์ อักขรวิธี และการเลือกใช้คำไทย/อาหรับ
+- มาตรฐาน typography, quotation, bibliography, citation และ footnote
+- โครงสร้าง HTML/article และ house style ของเว็บ
+- workflow เฉพาะ repository
+- security, privacy และ child-safety override
+- quality-control และ linter expectations
+
+## ลำดับอำนาจของกฎ
+
+1. Safety และ child-safety override ใน `CLAUDE.md` อยู่เหนือทุกกฎเสมอ
+2. Repository security, secret-handling และ privacy rules ห้ามถูกลดระดับหรือ bypass
+3. Editorial fidelity และ byte-exact source preservation ต้องคงไว้ เว้นแต่ One อนุมัติให้เปลี่ยนโดยชัดแจ้ง
+4. Technical edits ต้องไม่เปลี่ยนความหมายของบทความ ตัวบทอาหรับ citation typography หรือ house style โดยไม่ตั้งใจ
+5. หากคำสั่งใดขัดกับ `CLAUDE.md` ให้หยุดและรายงาน conflict ก่อนแก้ไข
+
+## สิ่งที่ agent ต้องทำก่อนแก้ไข
+
+1. อ่าน `CLAUDE.md`
+2. ระบุว่ากฎส่วนใดเกี่ยวข้องกับงานที่กำลังทำ
+3. ห้าม duplicate, weaken, override, summarize away หรือเลือกใช้บางกฎจาก `CLAUDE.md` แบบ selective
+4. แก้เฉพาะขอบเขตงานที่ได้รับมอบหมาย
+5. รักษา Arabic text แบบ byte-exact เว้นแต่เป็นงานแก้ไขที่ตรวจสอบแหล่งอ้างอิงแล้ว
+6. ห้ามเปิดเผย secrets, API keys, private credentials, internal tokens หรือข้อมูลส่วนตัว
+7. รันหรืออธิบาย checks ที่เกี่ยวข้องเมื่อทำได้
 
 ## ตั้งใจให้เป็นเช่นนั้น — อย่า flag เป็น bug
-- อาหรับ byte-exact จากต้นฉบับ (Rule 1): ห้ามเสนอ "แก้" สะกด/ไวยากรณ์/อักขรวิธี — variant และ orthography ต้นฉบับ (เช่น อียิปต์ دينى/فى/التى) เป็นความตั้งใจ
-- ar-quote (คำพูดปราชญ์) เปลือยสระโดยตั้งใจ (Rule 53/60): อย่า flag ว่า "ขาด harakat"
-- aya-block สระเต็มจาก quran.com (imlaei/Ḥafṣ); hadith-block สระเต็มจาก sunnah.com: waqf / dagger-alef ไม่ใช่ error
-- readingTime ใน articles.json สร้างจาก scripts/gen-reading-time.js เท่านั้น: อย่าเสนอแก้มือ
-- ไม่มี related-section markup รายบท (by-design ทั้งเว็บตาม golden-master): อย่าเสนอให้เพิ่ม
-- typo ภาษาไทยในต้นฉบับคงไว้ตาม Rule 1 จนกว่า maintainer อนุมัติ: อย่า auto-flag ทุกคำ
-- deploy: push ตรงเข้า main ถูกบล็อก, ทุกอย่างผ่าน PR, purge = Custom Purge by URL
 
-## อยากให้ช่วยตรวจจริง (มีประโยชน์มาก)
-- อายะฮ์/หะดีษถูกตัดไม่ครบ (truncated)
-- คำแปลไทย ↔ อาหรับ ไม่ตรง
-- HTML/แท็กพัง, อัญประกาศโค้งไม่สมดุล
-- สายรายงาน/การพาดพิง (isnad) ผิด
-- ลิงก์เสีย, articles.json ไม่ valid / id ซ้ำ / ไม่ใช่ union-entry
-- coverage < 99% เทียบต้นฉบับ (Rule 72), Arabic skeleton ไม่ byte-exact (เทียบ byte-diff + blob SHA)
+- Arabic byte-exact จากต้นฉบับ: ห้ามเสนอ “แก้” สะกด/ไวยากรณ์/อักขรวิธี หากเป็น variant หรือ orthography ของต้นฉบับ
+- `ar-quote` สำหรับคำพูดปราชญ์อาจไม่มีสระโดยตั้งใจตาม charter; อย่า flag ว่า “ขาด harakat” โดยอัตโนมัติ
+- `aya-block` ต้องสอดคล้องกับ quran.com และ `hadith-block` ต้องสอดคล้องกับแหล่งหะดีษที่กำหนดใน `CLAUDE.md`
+- `readingTime` และ metadata generated fields ต้องแก้ผ่าน script/source ที่กำหนด ไม่แก้มือโดยไม่มีเหตุผล
+- Typo ภาษาไทยในต้นฉบับอาจต้องคงไว้ตาม fidelity rule จนกว่า maintainer/One อนุมัติ
+- อย่าเพิ่ม related-section, markup, component หรือ UI pattern ใหม่โดยอัตโนมัติ หาก charter/golden master ไม่รองรับ
+
+## สิ่งที่ควรตรวจจริง
+
+- อายะฮ์หรือหะดีษถูกตัดไม่ครบ
+- คำแปลไทยไม่ตรงกับตัวบทอาหรับ
+- HTML/แท็กพัง หรืออัญประกาศโค้งไม่สมดุล
+- สายรายงาน/isnad หรือการพาดพิงแหล่งข้อมูลผิด
+- citation, bibliography, locators หรือ source labels ผิดมาตรฐาน
+- ลิงก์เสีย, JSON ไม่ valid, id ซ้ำ หรือ generated index ไม่สอดคล้อง
+- coverage ต่ำกว่ามาตรฐานที่ `CLAUDE.md` กำหนด
+- Arabic skeleton หรือ byte-exact text เปลี่ยนโดยไม่มีเหตุผลและไม่มี approval
+- secret leakage, overly broad CSP, unsafe auth/session handling หรือ webhook/payment regression
+
+## สำหรับงาน code
+
+Code agents แก้ implementation ได้ แต่ห้ามปฏิบัติกับ article content เหมือนโค้ดทั่วไป บทความ HTML, ตัวบทอาหรับ, คำแปลไทย, citation, footnote และ editorial markup อยู่ภายใต้ `CLAUDE.md`
+
+## สำหรับงาน editorial
+
+Editorial agents ต้องรักษาสารัตถะของผู้เขียน เว้นแต่ One ขอให้ rewrite, condense, expand หรือ restructure อย่างชัดเจน
+
+## สำหรับ Codex / QC agent
+
+Codex ควรทำหน้าที่เป็น quality-control agent โดยใช้ `CLAUDE.md` เป็น checklist หลัก และอ่าน `CODEX.md` เพิ่มเติมหากมีไฟล์นั้นใน repository
+
+## Source of truth
+
+อย่า copy ธรรมนูญทั้งฉบับมาใส่ไฟล์นี้ ให้แก้ `CLAUDE.md` เมื่อกฎจริงของโปรเจกต์เปลี่ยน ไฟล์นี้มีหน้าที่ชี้ agent ทุกตัวไปยัง rulebook ที่ authoritative เท่านั้น
