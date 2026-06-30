@@ -975,7 +975,11 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
   function selectChain(gid){
     loadGraph(gid);                 // unchanged: routes through fetchGraph/gate
     $search.value = '';
-    applyFilter();
+    applyFilter();                  // rebuilds the menu rows (search cleared → full list)
+    /* Reflect the chosen chain in the picker NOW, before the async gated fetch
+       resolves. On the guest/free 403 path applyGraph never runs, so without
+       this the collapsed picker would keep the old/blank #chainCurrent. */
+    markActiveCard(gid);
     closeMenu();
   }
 
