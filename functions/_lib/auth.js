@@ -123,11 +123,18 @@ export async function verifyUserBySession(env, request) {
  *      Linking ONLY on a verified email prevents both duplicate accounts AND
  *      email-spoof account hijacks.
  *   3. else → new user_id, insert users + oauth_accounts, return it.
+ * Emails are normalized (trim + lowercase) so different provider casings map to
+ * ONE verified account and the verified-email unique index behaves case-insensitively.
+ * Both the users-insert and the oauth-insert are conflict-tolerant so concurrent
+ * callbacks converge on one account instead of erroring.
  */
 export async function linkOrCreateUser(env, opts) {
   const provider = opts.provider;
   const sub = opts.sub;
-  const email = opts.email || null;
+  // Canonical email key (case/space-insensitive). Providers usually return a
+  // canonical address, but Apple vs Google casing can differ — normalize so they
+  // don't split into two accounts.
+  const email = (opts.email ? String(opts.email).trim().toLowerCase() : '') || null;
   const emailVerified = !!opts.emailVerified;
   const displayName = opts.displayName || null;
 
@@ -147,12 +154,7 @@ export async function linkOrCreateUser(env, opts) {
     const u = await env.DB.prepare(
       'SELECT user_id FROM users WHERE email=? AND email_verified=1 LIMIT 1'
     ).bind(email).first();
-    if (u && u.user_id) {
-      await env.DB.prepare(
-        'INSERT INTO oauth_accounts (provider, provider_sub, user_id, email) VALUES (?,?,?,?)'
-      ).bind(provider, sub, u.user_id, email).run();
-      return u.user_id;
-    }
+    if (u && u.user_id) return linkOauthAccount(env, provider, sub, u.user_id, email);
   }
 
   // 3. brand-new user. The users insert can lose a race against a concurrent
@@ -169,17 +171,31 @@ export async function linkOrCreateUser(env, opts) {
       const winner = await env.DB.prepare(
         'SELECT user_id FROM users WHERE email=? AND email_verified=1 LIMIT 1'
       ).bind(email).first();
-      if (winner && winner.user_id) {
-        await env.DB.prepare(
-          'INSERT INTO oauth_accounts (provider, provider_sub, user_id, email) VALUES (?,?,?,?)'
-        ).bind(provider, sub, winner.user_id, email).run();
-        return winner.user_id;
-      }
+      if (winner && winner.user_id) return linkOauthAccount(env, provider, sub, winner.user_id, email);
     }
     throw e; // not the verified-email race — surface it
   }
-  await env.DB.prepare(
-    'INSERT INTO oauth_accounts (provider, provider_sub, user_id, email) VALUES (?,?,?,?)'
-  ).bind(provider, sub, userId, email).run();
-  return userId;
+  return linkOauthAccount(env, provider, sub, userId, email);
+}
+
+/**
+ * Insert the (provider, sub) → user_id link, idempotently. If a concurrent
+ * first-time callback for the same provider/sub already created the link (PK
+ * conflict), re-read and return the existing link's user_id instead of throwing.
+ * (A losing creator may leave a harmless unlinked users row; no entitlement
+ * attaches to it.)
+ */
+async function linkOauthAccount(env, provider, sub, userId, email) {
+  try {
+    await env.DB.prepare(
+      'INSERT INTO oauth_accounts (provider, provider_sub, user_id, email) VALUES (?,?,?,?)'
+    ).bind(provider, sub, userId, email).run();
+    return userId;
+  } catch (e) {
+    const existing = await env.DB.prepare(
+      'SELECT user_id FROM oauth_accounts WHERE provider=? AND provider_sub=?'
+    ).bind(provider, sub).first();
+    if (existing && existing.user_id) return existing.user_id;
+    throw e;
+  }
 }
