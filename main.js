@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (typeof syncDarkButton === 'function') syncDarkButton(document.documentElement.classList.contains('dark-mode'));
 
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260629b')
+    fetch('/components/header.html?v=20260630a')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.__ifpClerkLoading = true;
                 var ca = document.createElement('script');
                 ca.defer = true;
-                ca.src = '/js/clerk-auth.js?v=20260629a';
+                ca.src = '/js/clerk-auth.js?v=20260630a';
                 document.body.appendChild(ca);
             }
 

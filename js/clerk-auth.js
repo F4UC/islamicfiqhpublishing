@@ -51,6 +51,74 @@
     });
   }
 
+  /* Render the membership tier pill next to the avatar (Part 4). Reads /api/tm/me
+     with the session token; cached per signed-in session so listener churn (token
+     refresh) doesn't re-hit the API. Hidden + cleared when signed out. */
+  function renderTierBadge() {
+    var el = document.getElementById('ifp-tier');
+    if (!el) return;
+    if (el.getAttribute('data-loaded') === '1') return; // already shown this session
+    window.ifpGetToken().then(function (token) {
+      if (!token) { clearTierBadge(); return; }
+      fetch('/api/tm/me', { headers: { Authorization: 'Bearer ' + token } })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          if (!d || !d.authed) { clearTierBadge(); return; }
+          var label = d.tier === 'pro' ? 'FIQH PRO' : (d.tier === 'plus' ? 'FIQH+' : 'FIQH');
+          el.textContent = label;
+          el.hidden = false;
+          el.setAttribute('data-loaded', '1');
+        })
+        .catch(function () { /* badge optional — never block the page */ });
+    });
+  }
+  function clearTierBadge() {
+    var el = document.getElementById('ifp-tier');
+    if (el) { el.hidden = true; el.textContent = ''; el.removeAttribute('data-loaded'); }
+  }
+
+  var _verifiedOnce = false;
+
+  /* Single source of truth for the header auth chrome. Re-queries the (async-
+     injected) header elements on EVERY call so it works no matter when the header
+     mounts, and is safe to run repeatedly (Clerk.addListener fires it on every
+     sign-in / sign-out / token refresh). */
+  function applyAuthUI() {
+    if (!window.Clerk) return;
+    var box = document.getElementById('ifp-auth');
+    var signin = document.getElementById('ifp-signin');
+    var userbtn = document.getElementById('ifp-userbtn');
+    var signedIn = !!Clerk.user;
+    if (box) box.hidden = false;
+
+    if (signin && !signin.__ifpBound) {
+      signin.addEventListener('click', function () { Clerk.redirectToSignIn(); });
+      signin.__ifpBound = true;
+    }
+
+    if (signedIn) {
+      if (signin) signin.hidden = true;
+      if (userbtn && !userbtn.__ifpUserBtnMounted) {
+        Clerk.mountUserButton(userbtn);
+        userbtn.__ifpUserBtnMounted = true; // guard: never double-mount
+      }
+      renderTierBadge();
+      if (!_verifiedOnce) { _verifiedOnce = true; verifySession(); }
+    } else {
+      if (signin) signin.hidden = false;
+      if (userbtn && userbtn.__ifpUserBtnMounted) {
+        try { Clerk.unmountUserButton(userbtn); } catch (_) {}
+        userbtn.__ifpUserBtnMounted = false;
+      }
+      if (userbtn) userbtn.innerHTML = '';
+      clearTierBadge();
+    }
+
+    /* Let pages (account card, ijazah re-lock, TM mirror) react to EVERY change —
+       login AND logout — not just the initial load. */
+    window.dispatchEvent(new CustomEvent('ifp:authready', { detail: { signedIn: signedIn } }));
+  }
+
   function mountAuth() {
     if (!window.Clerk) return;
     Clerk.load().then(function () {
@@ -60,20 +128,18 @@
       var q = _authQueue.splice(0);
       q.forEach(function (a) { a === 'in' ? Clerk.redirectToSignIn() : Clerk.redirectToSignUp(); });
 
-      var box = document.getElementById('ifp-auth');
-      var signin = document.getElementById('ifp-signin');
-      var userbtn = document.getElementById('ifp-userbtn');
-      if (box) box.hidden = false;
-      if (Clerk.user) {
-        if (signin) signin.hidden = true;
-        if (userbtn) Clerk.mountUserButton(userbtn);
-        verifySession();
-      } else if (signin) {
-        signin.hidden = false;
-        signin.addEventListener('click', function () { Clerk.redirectToSignIn(); });
+      applyAuthUI();                  // initial paint
+      Clerk.addListener(applyAuthUI); // re-run on every auth / session change
+
+      /* The header is injected asynchronously by main.js; on pages that load this
+         script directly it may not exist yet. Re-apply once #ifp-auth appears, then
+         disconnect — a single observer feeding the same applyAuthUI path. */
+      if (!document.getElementById('ifp-auth')) {
+        var mo = new MutationObserver(function () {
+          if (document.getElementById('ifp-auth')) { mo.disconnect(); applyAuthUI(); }
+        });
+        mo.observe(document.documentElement, { childList: true, subtree: true });
       }
-      /* Let pages (e.g. the account membership card) react once auth state is known. */
-      window.dispatchEvent(new CustomEvent('ifp:authready', { detail: { signedIn: !!Clerk.user } }));
     }).catch(function () { /* auth optional in STEP 1 — never block the timeline */ });
   }
 
