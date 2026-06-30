@@ -88,6 +88,13 @@ nav.chrome-nav .nav-item.active::after { transform: scaleX(1); }
 }
 .ifp-auth-btn:hover { opacity: .88; }
 #ifp-userbtn { display: inline-flex; align-items: center; }
+/* Membership tier pill shown next to the avatar when signed in (clerk-auth.js). */
+.ifp-tier {
+  font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: .08em; text-transform: none; white-space: nowrap; line-height: 1;
+  color: var(--header-text); border: 1px solid var(--header-icon-border);
+  border-radius: 999px; padding: 5px 11px;
+}
 
 .chrome-hamburger {
   display: none; font-size: 20px; cursor: pointer;
@@ -505,6 +512,7 @@ html.dark-mode .read-more-link { color: #fff !important; }
       </button>
       <span id="ifp-auth" class="ifp-auth" hidden>
         <button id="ifp-signin" type="button" class="ifp-auth-btn" hidden>เข้าสู่ระบบ</button>
+        <span id="ifp-tier" class="ifp-tier" hidden></span>
         <span id="ifp-userbtn"></span>
       </span>
       <button class="chrome-hamburger" id="mobileMenuBtn" aria-label="เมนู">☰</button>

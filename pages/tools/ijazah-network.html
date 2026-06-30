@@ -1120,6 +1120,19 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     }
   });
 
+  /* Re-lock on sign-out: clerk-auth.js re-dispatches ifp:authready on every auth
+     change. When the user logs out, tear down the current render and drop the
+     client-side cache (so a later click re-hits the gate, not stale JSON), then
+     show the members-only overlay. Gate/fetchGraph/loadGraph are untouched. */
+  window.addEventListener('ifp:authready', function(e){
+    if(e && e.detail && e.detail.signedIn === false){
+      if(cy){ try{ cy.destroy(); }catch(_){} cy = null; }
+      graphCache = {};   // discard graphs fetched while authorized
+      curGraph = null;
+      showIjazahLock();
+    }
+  });
+
   function buildIndices(data){
     nodeById = {}; adj = {}; edgeMap = {}; nodeOrder = {}; holderIds = {};
     (data.nodes||[]).forEach(function(n, i){
