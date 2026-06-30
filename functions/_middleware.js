@@ -22,7 +22,7 @@ const BLOCK_EXACT = new Set([
   "/pages/tools/ijazah-data/NOTICE",
 ]);
 
-const BLOCK_PREFIX = ["/docs/", "/scripts/", "/.claude/", "/.codex/", "/.github/", "/pages/tools/ijazah-data/graphs/"];
+const BLOCK_PREFIX = ["/docs/", "/scripts/", "/.claude/", "/.codex/", "/.github/", "/pages/tools/ijazah-data/graphs/", "/pages/tools/timemachine-data/bidayah-h"];
 
 const BLOCK_EXT = [".md", ".py", ".sha256", ".gitignore"];
 
