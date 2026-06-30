@@ -450,17 +450,17 @@
 <div id="footer-placeholder"></div>
 <script defer src="../main.js?v=20260629b"></script>
 <script>
-/* Start a Stripe Checkout session for a paid plan. Reuses the site-wide Clerk
-   token helper (window.ifpGetToken). Guests are routed to sign-in first. */
+/* Start a Stripe Checkout session for a paid plan. First-party session cookie
+   (credentials:'include'); a 401 means not signed in → route to /login. */
 async function ifpStartCheckout(planId, mode) {
-  var token = window.ifpGetToken ? await window.ifpGetToken() : null;
-  if (!token) { if (window.ifpSignIn) window.ifpSignIn(); return; } // guest → sign in first
   try {
     var r = await fetch('/api/stripe/checkout', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ plan_id: planId, mode: mode })
     });
+    if (r.status === 401) { if (window.ifpSignIn) window.ifpSignIn(); return; } // not signed in → /login
     var data = await r.json();
     if (data && data.url) { window.location = data.url; return; }
   } catch (e) {}

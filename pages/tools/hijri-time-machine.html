@@ -596,7 +596,7 @@ html.dark-mode .tm-upsell-box { background-image: linear-gradient(165deg, rgba(6
 <div id="footer-placeholder"></div>
 <script defer src="../../main.js?v=20260629b"></script>
 <!-- Clerk login (STEP 1 — identity only). Loaded ONLY here + the account page (opt-in). -->
-<script defer src="../../js/clerk-auth.js?v=20260630a"></script>
+<script defer src="../../js/auth.js?v=20260630b"></script>
 <script>
 /* ─── View switching: home (carousel) ⇄ bidayah (timeline) ─── */
 function showBidayah() {
@@ -804,14 +804,14 @@ function indexGlossary(g) {
 
 /* STEP 0.5 — fetch seam (Step 2 PR-B: static → gated API).
    ALL shard data access flows through tmFetchYear / tmFetchAll only.
-   tmGetToken / tmApiYear are provider-agnostic: today clerk-auth.js exposes
-   window.ifpGetToken; after any future auth swap only that file changes. */
+   Phase 2 cutover: auth is the first-party session cookie (credentials:'include');
+   no Bearer token. tmGetToken stays as a no-op seam for callers. */
 function tmGetToken() {
-  return (typeof window.ifpGetToken === 'function') ? window.ifpGetToken() : Promise.resolve(null);
+  return Promise.resolve(null);
 }
 function tmApiYear(year, token) {
   var headers = token ? { Authorization: 'Bearer ' + token } : {};
-  return fetch('/api/tm/year/' + year, { headers: headers })
+  return fetch('/api/tm/year/' + year, { headers: headers, credentials: 'include' })
     .then(function (r) { return r.ok ? r.json() : null; });
 }
 function tmFetchYear(entry) {

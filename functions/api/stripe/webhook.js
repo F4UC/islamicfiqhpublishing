@@ -21,7 +21,9 @@ export async function onRequestPost(context) {
       const s = event.data.object;
       // one-time pass only (subscriptions are handled by invoice.paid)
       if (s.mode === 'payment' && s.payment_status === 'paid') {
-        const uid = s.metadata && s.metadata.clerk_user_id;
+        // Phase 2: prefer the first-party user_id; fall back to clerk_user_id for
+        // any in-flight Clerk-era event during the transition.
+        const uid = s.metadata && (s.metadata.user_id || s.metadata.clerk_user_id);
         const plan = s.metadata && s.metadata.plan_id;
         if (uid && plan) await grantPass(DB, uid, plan);
       }
@@ -29,7 +31,7 @@ export async function onRequestPost(context) {
       const inv = event.data.object;
       if (inv.subscription) {
         const sub = await stripe.subscriptions.retrieve(inv.subscription);
-        const uid  = sub.metadata && sub.metadata.clerk_user_id;
+        const uid  = sub.metadata && (sub.metadata.user_id || sub.metadata.clerk_user_id);
         const plan = sub.metadata && sub.metadata.plan_id;
         const end  = new Date(sub.current_period_end * 1000).toISOString();
         if (uid && plan) await upsertSub(DB, sub.id, uid, plan, 'active', end);
@@ -57,18 +59,28 @@ async function grantPass(DB, uid, plan) {
   }
   const end = new Date(baseMs + 30 * 86400 * 1000).toISOString();
   await DB.prepare(
-    `INSERT INTO subscriptions (sub_id, clerk_user_id, plan_id, status, current_period_end, source)
-     VALUES (?,?,?,?,?, 'stripe')
+    `INSERT INTO subscriptions (sub_id, user_id, clerk_user_id, plan_id, status, current_period_end, source)
+     VALUES (?,?,?,?,?,?, 'stripe')
      ON CONFLICT(sub_id) DO UPDATE SET
-       status='active', current_period_end=excluded.current_period_end, plan_id=excluded.plan_id`
-  ).bind(subId, uid, plan, 'active', end).run();
+       status='active', current_period_end=excluded.current_period_end,
+       plan_id=excluded.plan_id, user_id=COALESCE(excluded.user_id, subscriptions.user_id)`
+  ).bind(subId, firstPartyId(uid), uid, plan, 'active', end).run();
 }
 
 async function upsertSub(DB, subId, uid, plan, status, end) {
   await DB.prepare(
-    `INSERT INTO subscriptions (sub_id, clerk_user_id, plan_id, status, current_period_end, source)
-     VALUES (?,?,?,?,?, 'stripe')
+    `INSERT INTO subscriptions (sub_id, user_id, clerk_user_id, plan_id, status, current_period_end, source)
+     VALUES (?,?,?,?,?,?, 'stripe')
      ON CONFLICT(sub_id) DO UPDATE SET
-       status=excluded.status, current_period_end=excluded.current_period_end, plan_id=excluded.plan_id`
-  ).bind(subId, uid, plan, status, end).run();
+       status=excluded.status, current_period_end=excluded.current_period_end,
+       plan_id=excluded.plan_id, user_id=COALESCE(excluded.user_id, subscriptions.user_id)`
+  ).bind(subId, firstPartyId(uid), uid, plan, status, end).run();
+}
+
+// The gate keys on user_id. Only write a genuine first-party id ('usr_…') there;
+// a Clerk-era fallback id is kept ONLY in the NOT-NULL clerk_user_id column so it
+// can never clobber a migrated user_id (COALESCE above preserves the existing one).
+// [A1: clerk_user_id stays NOT NULL this phase; consider relaxing it later.]
+function firstPartyId(uid) {
+  return (typeof uid === 'string' && uid.indexOf('usr_') === 0) ? uid : null;
 }
