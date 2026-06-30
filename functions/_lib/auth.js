@@ -137,10 +137,15 @@ export async function linkOrCreateUser(env, opts) {
   ).bind(provider, sub).first();
   if (linked && linked.user_id) return linked.user_id;
 
-  // 2. link to an existing user by verified email
+  // 2. link to an existing user by verified email — BOTH sides must be verified.
+  // The incoming login is verified (emailVerified) AND the existing row must carry
+  // email_verified=1. Without the stored-side check, an attacker who first logged in
+  // with a provider supplying an UNVERIFIED victim address would have created a
+  // users row (email_verified=0); the real owner's later verified login would then
+  // link onto the attacker's account. Requiring email_verified=1 closes that hijack.
   if (email && emailVerified) {
     const u = await env.DB.prepare(
-      'SELECT user_id FROM users WHERE email=? LIMIT 1'
+      'SELECT user_id FROM users WHERE email=? AND email_verified=1 LIMIT 1'
     ).bind(email).first();
     if (u && u.user_id) {
       await env.DB.prepare(

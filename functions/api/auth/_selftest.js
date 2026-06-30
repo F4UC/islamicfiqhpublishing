@@ -16,6 +16,15 @@ function json(body, status) {
 
 export async function onRequestPost(context) {
   const { request, env } = context;
+
+  // Preview-only: this throwaway smoke test writes to D1, so never expose it on the
+  // production custom domain. Pages preview hosts end in `.pages.dev` (per-deployment
+  // hash + branch alias) — that's where A1's QA runs; production gets a 404, removing
+  // the unauthenticated-write attack surface there. Removed entirely in a later phase.
+  let host = '';
+  try { host = new URL(request.url).hostname; } catch (_) {}
+  if (!host.endsWith('.pages.dev')) return json({ ok: false, error: 'not_available' }, 404);
+
   if (!env || !env.DB) return json({ ok: false, error: 'db_not_configured' }, 503);
 
   const importedLib =
