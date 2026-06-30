@@ -884,7 +884,10 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     if(!startGid || !groups.some(function(g){ return g.gid === startGid; })){
       startGid = groups.length ? groups[0].gid : null;
     }
-    if(startGid){ loadGraph(startGid); }
+    /* Reflect the requested chain in the picker before the gated fetch — on the
+       guest/free 403 path applyGraph never runs, so #chainCurrent would
+       otherwise stay blank for the default/deep-linked locked chain. */
+    if(startGid){ markActiveCard(startGid); loadGraph(startGid); }
     /* Build the narrator search index in the background (also warms the
        per-chain graph cache so clicking a card is instant). */
     prefetchForSearch();
@@ -1112,6 +1115,7 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     var gid = gidFromHash();
     if(gid && groups.some(function(g){ return g.gid === gid; }) &&
        (!curGraph || !curGraph.meta || curGraph.meta.gid !== gid)){
+      markActiveCard(gid);   // reflect the requested chain before the gated fetch (403 path)
       loadGraph(gid);
     }
   });
