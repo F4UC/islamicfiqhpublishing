@@ -12,8 +12,10 @@
 # (Google's documented requirement when FedCM is off). Scoped to /auth-test so the
 # rest of the site keeps the stricter same-origin. Removed with the harness in Phase 2.
 /auth-test
+  ! Cross-Origin-Opener-Policy
   Cross-Origin-Opener-Policy: same-origin-allow-popups
 /auth-test.html
+  ! Cross-Origin-Opener-Policy
   Cross-Origin-Opener-Policy: same-origin-allow-popups
 
 /
