@@ -275,6 +275,11 @@
   .cta--border-gold { border: 1px solid var(--gold); color: var(--gold-deep); background: transparent; }
   .cta--border-gold:hover { background: var(--gold-tint); border-color: var(--gold-deep); }
 
+  /* Two checkout options (auto-renew card vs 30-day pass) stacked under a tier */
+  .cta-group { display: flex; flex-direction: column; gap: 10px; margin-top: 32px; }
+  .cta-group .cta { margin-top: 0; }
+  .cta-group .cta-sub { font-weight: 600; font-size: 13px; }
+
   .addons { margin-top: 80px; text-align: center; }
   .addons-h {
     font-family: var(--serif);
@@ -385,7 +390,10 @@
           <li class="no"><span class="ck no">✕</span> “อัลบิดายะฮ์ วันนิฮายะฮ์” ฉบับเต็ม</li>
         </ul>
 
-        <a class="cta cta--gold" href="#">สมัคร FIQH+</a>
+        <div class="cta-group">
+          <button type="button" class="cta cta--gold" onclick="ifpStartCheckout('fiqh-plus','subscription')">ต่ออัตโนมัติด้วยบัตร</button>
+          <button type="button" class="cta cta-sub" onclick="ifpStartCheckout('fiqh-plus','pass')">จ่ายรายเดือน · พร้อมเพย์/บัตร</button>
+        </div>
       </article>
 
       <!-- TIER 3: FIQH PRO (Paid) -->
@@ -405,7 +413,10 @@
           <li><span class="ck yes">✓</span> เข้าถึงเนื้อหา “อัลบิดายะฮ์ วันนิฮายะฮ์” ได้ทั้งชุด</li>
         </ul>
 
-        <a class="cta cta--border-gold" href="#">สมัคร FIQH PRO</a>
+        <div class="cta-group">
+          <button type="button" class="cta cta--gold" onclick="ifpStartCheckout('fiqh-pro','subscription')">ต่ออัตโนมัติด้วยบัตร</button>
+          <button type="button" class="cta cta--border-gold cta-sub" onclick="ifpStartCheckout('fiqh-pro','pass')">จ่ายรายเดือน · พร้อมเพย์/บัตร</button>
+        </div>
       </article>
 
     </section>
@@ -439,6 +450,23 @@
 <div id="footer-placeholder"></div>
 <script defer src="../main.js?v=20260629b"></script>
 <script>
+/* Start a Stripe Checkout session for a paid plan. Reuses the site-wide Clerk
+   token helper (window.ifpGetToken). Guests are routed to sign-in first. */
+async function ifpStartCheckout(planId, mode) {
+  var token = window.ifpGetToken ? await window.ifpGetToken() : null;
+  if (!token) { if (window.ifpSignIn) window.ifpSignIn(); return; } // guest → sign in first
+  try {
+    var r = await fetch('/api/stripe/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+      body: JSON.stringify({ plan_id: planId, mode: mode })
+    });
+    var data = await r.json();
+    if (data && data.url) { window.location = data.url; return; }
+  } catch (e) {}
+  alert('เริ่มการชำระเงินไม่สำเร็จ ลองใหม่อีกครั้ง');
+}
+
 (function(){
   var bar = document.getElementById('readingProgress');
   if(bar){
