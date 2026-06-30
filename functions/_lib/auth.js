@@ -138,11 +138,27 @@ export async function linkOrCreateUser(env, opts) {
   const emailVerified = !!opts.emailVerified;
   const displayName = opts.displayName || null;
 
-  // 1. already linked
+  // 1. already linked. If this callback now carries a VERIFIED email and the user
+  //    row is still unverified, upgrade it so future cross-provider verified-email
+  //    linking works (otherwise the row stays permanently ineligible and a second
+  //    verified provider for the same mailbox would split into a new user_id).
+  //    Only upgrades a currently-unverified row (never clobbers an already-verified
+  //    email). If another verified account already owns this email the partial
+  //    unique index rejects the update — we swallow that and leave the row as-is;
+  //    auto-merging two accounts is deliberate future work, not done silently here.
   const linked = await env.DB.prepare(
     'SELECT user_id FROM oauth_accounts WHERE provider=? AND provider_sub=?'
   ).bind(provider, sub).first();
-  if (linked && linked.user_id) return linked.user_id;
+  if (linked && linked.user_id) {
+    if (email && emailVerified) {
+      try {
+        await env.DB.prepare(
+          'UPDATE users SET email=?, email_verified=1 WHERE user_id=? AND email_verified=0'
+        ).bind(email, linked.user_id).run();
+      } catch (e) { /* email already owned by another verified account — leave as-is */ }
+    }
+    return linked.user_id;
+  }
 
   // 2. link to an existing user by verified email — BOTH sides must be verified.
   // The incoming login is verified (emailVerified) AND the existing row must carry
