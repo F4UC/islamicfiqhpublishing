@@ -103,7 +103,7 @@ async function handleYear(request, env, yearRaw) {
   const uid = await verifyUser(request, env);          // null = Guest (not logged in)
   const ent = await loadEntitlement(env.DB, uid);      // { freeUntil:int, grants:{} }
 
-  const shard = await readShard(request, year);
+  const shard = await readShard(request, year, env);
   if (!shard) return json({ ok: false, error: 'year_not_found' }, 404);
 
   const unlocked = yearUnlocked(uid, ent, year);
@@ -133,10 +133,13 @@ function stubEvent(ev) {
   };
 }
 
-// Same-origin fetch of the static shard (MVP). At lockdown: swap to ASSETS/R2.
-async function readShard(request, year) {
+// Read the static shard. Prefer ASSETS (bypasses the _middleware block on raw shards);
+// fall back to same-origin fetch only if ASSETS is unavailable.
+async function readShard(request, year, env) {
   const url = new URL(DATA_BASE + 'bidayah-h' + year + '.json', request.url);
-  const r = await fetch(url.toString(), { cf: { cacheTtl: 300 } });
+  const r = (env && env.ASSETS)
+    ? await env.ASSETS.fetch(new Request(url.toString()))
+    : await fetch(url.toString(), { cf: { cacheTtl: 300 } });
   if (!r.ok) return null;
   try { return await r.json(); } catch (e) { return null; }
 }
