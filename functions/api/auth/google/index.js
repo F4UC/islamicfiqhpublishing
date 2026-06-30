@@ -26,6 +26,23 @@ export async function onRequestPost(context) {
   const { request, env } = context;
   if (!env || !env.DB || !env.GOOGLE_CLIENT_ID) return json({ ok: false }, 401);
 
+  // Reject cross-site POSTs BEFORE minting a session (login CSRF / session
+  // fixation): otherwise an attacker could submit their own valid Google
+  // credential+nonce from another origin and land the victim with the attacker's
+  // first-party session. Same-origin is required three ways:
+  //   - Origin header must match our own origin (when present),
+  //   - Sec-Fetch-Site must be same-origin / none (never cross-site / same-site),
+  //   - Content-Type must be application/json (a non-CORS-safelisted type, so a
+  //     cross-site form/beacon can't send it and a cross-site fetch triggers a
+  //     preflight the endpoint never answers).
+  const selfOrigin = new URL(request.url).origin;
+  const origin = request.headers.get('Origin');
+  const secFetchSite = request.headers.get('Sec-Fetch-Site');
+  const contentType = (request.headers.get('Content-Type') || '').toLowerCase();
+  if (origin && origin !== selfOrigin) return json({ ok: false }, 401);
+  if (secFetchSite && secFetchSite !== 'same-origin' && secFetchSite !== 'none') return json({ ok: false }, 401);
+  if (contentType.indexOf('application/json') === -1) return json({ ok: false }, 401);
+
   let body;
   try { body = await request.json(); } catch (e) { return json({ ok: false }, 401); }
   const credential = body && body.credential;
