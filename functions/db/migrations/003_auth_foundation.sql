@@ -22,6 +22,11 @@ CREATE TABLE IF NOT EXISTS users (
   created_at    TEXT NOT NULL DEFAULT (datetime('now'))
 );
 CREATE INDEX IF NOT EXISTS users_email_idx ON users(email);
+-- At most ONE verified account per email. Partial unique index (rows with
+-- email_verified=1 only) so multiple UNVERIFIED rows are still allowed, but two
+-- concurrent verified-email OAuth callbacks can't create duplicate verified users.
+-- linkOrCreateUser links onto the single surviving verified row on conflict.
+CREATE UNIQUE INDEX IF NOT EXISTS users_verified_email_uidx ON users(email) WHERE email_verified = 1;
 
 CREATE TABLE IF NOT EXISTS oauth_accounts (
   provider      TEXT NOT NULL,              -- 'google' | 'apple'

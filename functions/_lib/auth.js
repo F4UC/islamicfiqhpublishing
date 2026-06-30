@@ -155,11 +155,29 @@ export async function linkOrCreateUser(env, opts) {
     }
   }
 
-  // 3. brand-new user
+  // 3. brand-new user. The users insert can lose a race against a concurrent
+  // verified-email callback (the users_verified_email_uidx partial unique index
+  // rejects a second email_verified=1 row). On conflict, re-query the surviving
+  // verified row and link onto it instead of duplicating.
   const userId = genUserId();
-  await env.DB.prepare(
-    'INSERT INTO users (user_id, email, email_verified, display_name) VALUES (?,?,?,?)'
-  ).bind(userId, email, emailVerified ? 1 : 0, displayName).run();
+  try {
+    await env.DB.prepare(
+      'INSERT INTO users (user_id, email, email_verified, display_name) VALUES (?,?,?,?)'
+    ).bind(userId, email, emailVerified ? 1 : 0, displayName).run();
+  } catch (e) {
+    if (email && emailVerified) {
+      const winner = await env.DB.prepare(
+        'SELECT user_id FROM users WHERE email=? AND email_verified=1 LIMIT 1'
+      ).bind(email).first();
+      if (winner && winner.user_id) {
+        await env.DB.prepare(
+          'INSERT INTO oauth_accounts (provider, provider_sub, user_id, email) VALUES (?,?,?,?)'
+        ).bind(provider, sub, winner.user_id, email).run();
+        return winner.user_id;
+      }
+    }
+    throw e; // not the verified-email race — surface it
+  }
   await env.DB.prepare(
     'INSERT INTO oauth_accounts (provider, provider_sub, user_id, email) VALUES (?,?,?,?)'
   ).bind(provider, sub, userId, email).run();
