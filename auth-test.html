@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Auth Test (Phase 1a) — internal</title>
+  <!-- Google Identity Services -->
+  <script src="https://accounts.google.com/gsi/client" async></script>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 560px; margin: 48px auto; padding: 0 20px; color: #1c1914; }
+    h1 { font-size: 20px; }
+    .muted { color: #6b6258; font-size: 14px; line-height: 1.6; }
+    #status { margin-top: 20px; padding: 14px 16px; border: 1px solid #ddd; border-radius: 10px; font-size: 14px; }
+    .ok { color: #1a7f37; }
+    .err { color: #b31b1b; }
+    #gbtn { margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <h1>Phase 1a — Google login test</h1>
+  <p class="muted">Internal harness (not linked anywhere; removed in Phase 2). Test on the
+  production domain only — the Google authorized origin won't match a <code>.pages.dev</code>
+  preview. The session this mints is ignored by the live gate.</p>
+
+  <div id="gbtn"></div>
+  <div id="status">กำลังเตรียม…</div>
+
+  <script>
+  (function () {
+    var $status = document.getElementById('status');
+    function setStatus(msg, cls) { $status.textContent = msg; $status.className = cls || ''; }
+
+    // Server-issued nonce is embedded in the id_token by GIS, then re-checked server-side.
+    var currentNonce = null;
+
+    async function start() {
+      try {
+        var cfg = await fetch('/api/auth/google/config', { cache: 'no-store' }).then(function (r) { return r.json(); });
+        if (!cfg || !cfg.clientId) { setStatus('GOOGLE_CLIENT_ID not configured on the server.', 'err'); return; }
+        var n = await fetch('/api/auth/google/nonce', { cache: 'no-store' }).then(function (r) { return r.json(); });
+        if (!n || !n.nonce) { setStatus('Could not get a nonce.', 'err'); return; }
+        currentNonce = n.nonce;
+
+        if (!window.google || !google.accounts || !google.accounts.id) {
+          setStatus('Google Identity Services not loaded yet — reload.', 'err'); return;
+        }
+        google.accounts.id.initialize({
+          client_id: cfg.clientId,
+          nonce: currentNonce,
+          callback: onCredential,
+        });
+        google.accounts.id.renderButton(document.getElementById('gbtn'), { theme: 'outline', size: 'large' });
+        setStatus('Ready — click “Sign in with Google”.');
+      } catch (e) {
+        setStatus('Setup failed.', 'err');
+      }
+    }
+
+    async function onCredential(resp) {
+      setStatus('Verifying…');
+      try {
+        var r = await fetch('/api/auth/google', {
+          method: 'POST',
+          credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ credential: resp.credential, nonce: currentNonce }),
+        });
+        if (!r.ok) { setStatus('Sign-in failed (' + r.status + ').', 'err'); return; }
+        // Echo only the opaque user id (never the cookie/token).
+        var who = await fetch('/api/auth/google/whoami', { credentials: 'include', cache: 'no-store' })
+          .then(function (x) { return x.json(); }).catch(function () { return null; });
+        if (who && who.userId) setStatus('Signed in ✓  (user ' + who.userId + ')', 'ok');
+        else setStatus('Signed in ✓', 'ok');
+      } catch (e) {
+        setStatus('Sign-in failed.', 'err');
+      }
+    }
+
+    // GIS loads async; wait for it before wiring up.
+    var tries = 0;
+    (function waitForGis() {
+      if (window.google && google.accounts && google.accounts.id) { start(); return; }
+      if (tries++ > 100) { setStatus('Google Identity Services failed to load.', 'err'); return; }
+      setTimeout(waitForGis, 100);
+    })();
+  })();
+  </script>
+</body>
+</html>
