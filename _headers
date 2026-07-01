@@ -18,8 +18,16 @@
   ! Cross-Origin-Opener-Policy
   Cross-Origin-Opener-Policy: same-origin-allow-popups
 
+# /login (the permanent sign-in surface) — same GIS popup requirement as /auth-test.
+/login
+  ! Cross-Origin-Opener-Policy
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+/login.html
+  ! Cross-Origin-Opener-Policy
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+
 /
-  Cache-Control: no-cache, no-store, must-revalidate
+Cache-Control: no-cache, no-store, must-revalidate
   Pragma: no-cache
   Expires: 0
   Surrogate-Control: no-store

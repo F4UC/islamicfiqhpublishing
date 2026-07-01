@@ -1,5 +1,5 @@
 import Stripe from 'stripe';
-import { createClerkClient } from '@clerk/backend';
+import { verifyUserBySession } from '../../_lib/auth.js';
 
 // Price IDs come from env (One sets them in Cloudflare). Keeps code free of hardcoded IDs.
 function priceFor(env, planId, mode) {
@@ -13,7 +13,7 @@ function priceFor(env, planId, mode) {
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  // 1. Auth: identify the Clerk user from the Bearer token (copied helper)
+  // 1. Auth: identify the user from the first-party session cookie (Phase 2 cutover)
   const uid = await verifyUser(request, env);
   if (!uid) return json({ ok: false, error: 'auth_required' }, 401);
 
@@ -38,12 +38,12 @@ export async function onRequestPost(context) {
     success_url: `${origin}/pages/account.html?paid=1`,
     cancel_url:  `${origin}/pages/membership.html?canceled=1`,
     client_reference_id: uid,
-    metadata: { clerk_user_id: uid, plan_id: planId },
+    metadata: { user_id: uid, plan_id: planId },
     // PromptPay is one-time only → offer it for passes; subscriptions are card-only
     payment_method_types: mode === 'subscription' ? ['card'] : ['card', 'promptpay'],
   };
   if (mode === 'subscription') {
-    params.subscription_data = { metadata: { clerk_user_id: uid, plan_id: planId } };
+    params.subscription_data = { metadata: { user_id: uid, plan_id: planId } };
   }
 
   try {
@@ -54,33 +54,13 @@ export async function onRequestPost(context) {
   }
 }
 
-// ---- shared: verify Clerk JWT → userId or null (NEVER throws, NEVER 401s) ----
-// COPIED VERBATIM from functions/api/tm/[[path]].js (short-term duplication — flagged
-// as debt; consolidate into a shared module later).
+// ---- resolve the signed-in user from our first-party session cookie (Phase 2
+// cutover; was Clerk JWT). Returns the userId string or null; never throws. ----
 async function verifyUser(request, env) {
-  if (!env || !env.CLERK_SECRET_KEY || !env.CLERK_PUBLISHABLE_KEY) return null;
-  try {
-    const clerk = createClerkClient({
-      secretKey: env.CLERK_SECRET_KEY,
-      publishableKey: env.CLERK_PUBLISHABLE_KEY,
-    });
-    // Env-driven allowed origins so preview/custom domains verify without a code
-    // change; falls back to the production origin only.
-    const authorizedParties = (env.CLERK_AUTHORIZED_PARTIES
-      ? env.CLERK_AUTHORIZED_PARTIES.split(',').map((s) => s.trim()).filter(Boolean)
-      : ['https://islamicfiqhpublishing.com']);
-    const state = await clerk.authenticateRequest(request, { authorizedParties });
-    // `isAuthenticated` is current; `isSignedIn` is the older alias.
-    const signedIn = state && (state.isAuthenticated ?? state.isSignedIn);
-    if (!signedIn) return null;
-    const auth = state.toAuth();
-    return (auth && auth.userId) || null;
-  } catch (e) {
-    return null;
-  }
+  const r = await verifyUserBySession(env, request);
+  return r ? r.userId : null;
 }
 
-// COPIED VERBATIM from functions/api/tm/[[path]].js.
 function json(body, status) {
   return new Response(JSON.stringify(body), {
     status,

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>เข้าสู่ระบบ — Islamic Fiqh Publishing</title>
+  <link rel="stylesheet" href="/css/fonts.css?v=20260614a">
+  <!-- Google Identity Services -->
+  <script src="https://accounts.google.com/gsi/client" async></script>
+  <style>
+    #login-main { max-width: 460px; margin: 96px auto 120px; padding: 0 22px; font-family: 'Sarabun', system-ui, sans-serif; }
+    .login-card {
+      border: 1px solid var(--card-border, #e6e0d6); border-radius: 18px; padding: 36px 30px;
+      background: var(--card-bg, #fff); box-shadow: 0 14px 40px rgba(0,0,0,.06); text-align: center;
+    }
+    .login-card h1 { font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; font-size: 24px; margin: 0 0 8px; color: #1c1914; }
+    .login-card p.sub { font-size: 14px; color: #6b6258; margin: 0 0 26px; line-height: 1.7; }
+    #gbtn { display: flex; justify-content: center; min-height: 44px; }
+    .login-or { display: flex; align-items: center; gap: 12px; color: #9a907e; font-size: 12px; margin: 20px 0; }
+    .login-or::before, .login-or::after { content: ''; flex: 1; height: 1px; background: #e6e0d6; }
+    .login-pk {
+      width: 100%; font-family: 'Sarabun', system-ui, sans-serif; font-size: 15px; font-weight: 600;
+      padding: 12px; border: 1px solid #c9c2b5; border-radius: 12px; background: #fff; cursor: pointer;
+      transition: border-color .2s;
+    }
+    .login-pk:hover { border-color: #1c1914; }
+    #login-status { margin-top: 18px; font-size: 13px; color: #6b6258; min-height: 18px; }
+    #login-status.err { color: #b31b1b; }
+  </style>
+</head>
+<body lang="th">
+  <div id="header-placeholder"></div>
+
+  <main id="login-main">
+    <div class="login-card">
+      <h1>เข้าสู่ระบบ</h1>
+      <p class="sub">เข้าสู่ระบบเพื่อเข้าถึงเนื้อหาสำหรับสมาชิก<br>ด้วยบัญชี Google หรือพาสคีย์ (Face ID / ลายนิ้วมือ)</p>
+      <div id="gbtn"></div>
+      <div class="login-or">หรือ</div>
+      <button id="login-pk" class="login-pk" type="button">เข้าสู่ระบบด้วยพาสคีย์</button>
+      <div id="login-status"></div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script defer src="/main.js?v=20260630b"></script>
+  <script defer src="/js/auth.js?v=20260630b"></script>
+  <script>
+  (function () {
+    var $status = document.getElementById('login-status');
+    function setStatus(m, err) { $status.textContent = m || ''; $status.className = err ? 'err' : ''; }
+
+    // Return to where the user came from (same-origin only), else home.
+    function redirectBack() {
+      var dest = '/';
+      try {
+        if (document.referrer) {
+          var u = new URL(document.referrer);
+          if (u.origin === location.origin && u.pathname !== '/login' && u.pathname !== '/login.html') {
+            dest = u.pathname + u.search;
+          }
+        }
+      } catch (e) {}
+      location.href = dest;
+    }
+
+    var currentNonce = null;
+    async function startGoogle() {
+      try {
+        var cfg = await fetch('/api/auth/google/config', { cache: 'no-store' }).then(function (r) { return r.json(); });
+        if (!cfg || !cfg.clientId) { setStatus('การเข้าสู่ระบบด้วย Google ยังไม่พร้อมใช้งาน', true); return; }
+        var n = await fetch('/api/auth/google/nonce', { cache: 'no-store' }).then(function (r) { return r.json(); });
+        if (!n || !n.nonce) { setStatus('เริ่มการเข้าสู่ระบบไม่สำเร็จ', true); return; }
+        currentNonce = n.nonce;
+        if (!window.google || !google.accounts || !google.accounts.id) { setStatus('กำลังโหลด Google…'); return; }
+        google.accounts.id.initialize({ client_id: cfg.clientId, nonce: currentNonce, callback: onGoogle });
+        google.accounts.id.renderButton(document.getElementById('gbtn'), { theme: 'outline', size: 'large', width: 320 });
+      } catch (e) { setStatus('เริ่มการเข้าสู่ระบบไม่สำเร็จ', true); }
+    }
+    async function onGoogle(resp) {
+      setStatus('กำลังตรวจสอบ…');
+      try {
+        var r = await fetch('/api/auth/google', {
+          method: 'POST', credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ credential: resp.credential, nonce: currentNonce }),
+        });
+        if (r.ok) { redirectBack(); return; }
+      } catch (e) {}
+      setStatus('เข้าสู่ระบบไม่สำเร็จ ลองใหม่อีกครั้ง', true);
+    }
+
+    document.getElementById('login-pk').addEventListener('click', async function () {
+      setStatus('กำลังเข้าสู่ระบบด้วยพาสคีย์…');
+      var ok = window.ifpSignInWithPasskey ? await window.ifpSignInWithPasskey() : false;
+      if (ok) { redirectBack(); return; }
+      setStatus('เข้าสู่ระบบด้วยพาสคีย์ไม่สำเร็จ', true);
+    });
+
+    var tries = 0;
+    (function waitForGis() {
+      if (window.google && google.accounts && google.accounts.id) { startGoogle(); return; }
+      if (tries++ > 100) { setStatus('โหลด Google ไม่สำเร็จ', true); return; }
+      setTimeout(waitForGis, 100);
+    })();
+  })();
+  </script>
+</body>
+</html>

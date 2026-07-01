@@ -102,18 +102,18 @@ document.addEventListener("DOMContentLoaded", function() {
     if (typeof syncDarkButton === 'function') syncDarkButton(document.documentElement.classList.contains('dark-mode'));
 
     // สั่งโหลดไฟล์ Header
-    fetch('/components/header.html?v=20260630a')
+    fetch('/components/header.html?v=20260630b')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
 
-            // Site-wide auth chrome: load clerk-auth once (idempotent). Was opt-in (TM/account only);
-            // now global so the avatar / sign-in shows in the header on every page.
-            if (!window.__ifpClerkLoading && !window.ifpGetToken) {
-                window.__ifpClerkLoading = true;
+            // Site-wide auth chrome (Phase 2): load the first-party auth client once
+            // (idempotent). Replaces clerk-auth.js; the gate now reads our session cookie.
+            if (!window.__ifpAuthLoading && !window.__ifpAuthInit) {
+                window.__ifpAuthLoading = true;
                 var ca = document.createElement('script');
                 ca.defer = true;
-                ca.src = '/js/clerk-auth.js?v=20260630a';
+                ca.src = '/js/auth.js?v=20260630b';
                 document.body.appendChild(ca);
             }
 
