@@ -1,14 +1,14 @@
-# SESSION HANDOFF — สถานะล่าสุด (1 ก.ค. 2026, รอบ 31-32)
+# SESSION HANDOFF — สถานะล่าสุด (2 ก.ค. 2026, รอบ 33)
 
 > ส่งมอบจากเซสชั่น Claude (context เต็ม) → เซสชั่นใหม่ทำต่อ
 > **สรุป 1 บรรทัด:** อัลมุนตะซ็อมเดินถึง **สีเราะฮ์มักกะฮ์ - ปีที่สามจากการถือกำเนิด / การผ่าอก (ชักก์ศ็อดร์)** แล้ว; branch พร้อม merge; ทุก shard ผ่าน QC + byte-gate; สไตล์ถูกกฎ (ไม่มีไอคอน, เว้นวรรควงเล็บ S11)
 
 ## ตัวเลขปัจจุบัน
-- **★ branch ใหม่ `claude/timemachine-muntazam-3`** (แตกสดจาก origin/main หลัง PR #301 squash-merge เข้า main แล้ว) · tip `990f5a04` (+banner) · push/sync · tree สะอาด
-- **เหตุที่ย้าย branch:** muntazam-2 เดิม diverge จาก main (squash-divergence) → PR conflict ที่ glossary/index; muntazam-3 = delta สะอาด merge ได้ทันที. **เซสชั่นหน้าให้แตก branch ใหม่จาก origin/main ปัจจุบันเสมอ** (`git checkout -b claude/timemachine-muntazam-N origin/main`) หลัง One merge
-- **delta บน branch นี้ = 90 ชาร์ดใหม่:** `pre-170`..`pre-226` + **`h1-001`..`h1-014`** + **`h2-001`..`h2-019`** (★★AH 2: มรณกรรมชะฮีดบัดร์) (pre-02..pre-169 อยู่ใน main แล้ว) · **glossary 4082 persons / 671 places** · ★★AH 2 หลังบัดร์: muntazam-h1 (h1-001..014) + muntazam-h2 (h2-001..019) · **PR #315 เปิดแล้ว (One เปิด, open, head ตรง tip)**
+- **★ branch ใหม่ `claude/timemachine-muntazam-4`** (แตกสดจาก origin/main หลัง **PR #314+#315 squash-merge เข้า main แล้ว** — One merge เอง 2 ก.ค.) · baseline = origin/main tip `07985ab8` · tree สะอาด
+- **เหตุที่ย้าย branch:** squash-merge ทำให้ branch เก่า diverge → PR conflict ที่ glossary/index. **ทุกเซสชั่นใหม่ให้แตก branch ใหม่จาก origin/main ปัจจุบันเสมอ** (`git fetch origin && git checkout -B claude/timemachine-muntazam-N origin/main`) หลัง One merge — ห้ามใช้ branch เก่าที่ squash-merge ไปแล้ว
+- **สถานะ main ล่าสุด:** ทุกชาร์ดถึง **h2-019 (pid 932) merge เข้า main แล้ว** (PR #314+#315) · **glossary 4191 persons / 676 places** · al-muntazam 258 ชาร์ด (hijri-y1:14 + hijri-y2:19 + pre-series) · **delta บน muntazam-4 = ชาร์ดใหม่ตั้งแต่ h2-020 (pid 933) เป็นต้นไป**
 - ตรวจผ่านครบ: **tm_qc 0 findings (pre-170..175; pre-176 เหลือเฉพาะ R52 false-positive 'กอบูส' documented) · 0 ★ · 0 em-dash · byte-gate ทุก shard (re-fetch)** · S11 ok · R5/R52/R89/R92
-- **PR:** เอเยนต์ create ได้ 403 (R74/R87 ยืนยัน) → **One เปิด + merge เองที่ `github.com/F4UC/islamicfiqhpublishing/pull/new/claude/timemachine-muntazam-3`** (อย่าใช้ muntazam-2 = conflict)
+- **PR:** เอเยนต์ create มัก 403 (R74/R87) → **One เปิด + merge เองที่ `github.com/F4UC/islamicfiqhpublishing/pull/new/claude/timemachine-muntazam-4`** · **เอเยนต์ push branch ตัวเองได้ แต่ห้าม merge เด็ดขาด**
 
 ## จุดทำต่อ (RESUME)
 - **RESUME: pid 933** (เล่ม 3 หน้า 141; **AH 2 · ไฟล์ muntazam-h2-020.json** · hijriYear=2, ceYear=623, era=hijri, unit=hijri-y2, order=20) — ต่อ★★บทมรณกรรมปีที่2: จบหะดีษอุมัยร์ บิน อัลหุมาม(อิกริมะฮ์)/เศาะหาบีชะฮีดบัดร์ที่เหลือ/แล้วเข้าปีที่3 (السنة الثالثة). loc=เล่ม 3 หน้า [pid-792] → อับดุลมุฏฏ็อลิบเลี้ยง → มรณะอับดุลมุฏฏ็อลิบ → อบู ฏอลิบเลี้ยง → พบบาทหลวงบะฮีรอ → ฮัรบุลฟิญาร → ฮิลฟุลฟุฎูล → แต่งเคาะดีญะฮ์ → สร้างกะอ์บะฮ์/ตัดสินหินดำ → เผยพระวจนะ ...
