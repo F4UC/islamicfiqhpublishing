@@ -1,7 +1,7 @@
 /**
- * GET /api/auth/google/config — echoes the PUBLIC Google client id so the throwaway
- * /auth-test harness needn't hardcode it. Non-secret: the client id is shipped to
- * every browser by Google Identity Services. Phase 1a only (removed with the harness).
+ * GET /api/auth/google/config — echoes the PUBLIC Google client id so /login needn't
+ * hardcode it. Non-secret: the client id is shipped to every browser by Google
+ * Identity Services.
  */
 export async function onRequestGet(context) {
   const { env } = context;
