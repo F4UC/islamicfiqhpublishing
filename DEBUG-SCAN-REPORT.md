@@ -18,7 +18,7 @@ Every finding carries: **file:line · evidence · severity · proposed action.**
 | 3 | DEAD-CODE | Dead `if (window.Clerk)…` fallback + stale "Clerk" comments (Clerk fully decommissioned; buttons work via `ifpSignIn`) | `pages/tools/hijri-time-machine.html:1155-1161`, `:82`, `:598` | small PR: drop the 2 dead fallback lines + refresh comments |
 | 4 | SECURITY (hygiene) | Dead CSP allowance: `challenges.cloudflare.com` (Turnstile) — **0** source usage after email-login removal | `_headers:9` (script-src + frame-src) | small PR: prune Turnstile origins from CSP |
 | 5 | DEAD-CODE (cosmetic) | Stale "was Clerk / clerk-auth.js" comments in `functions/**` + `main.js` | see SCAN E.2 | optional comment-refresh PR (defer to avoid cache-bust cascade on `main.js`) |
-| 6 | BRANCH | 12 branches confirmed MERGED (squash) → deletion candidates; the rest are open/active/abandoned | see SCAN F | **actioned in this task** (merged only) |
+| 6 | BRANCH | 12 merged branches were **already auto-deleted** at merge; only 13 branches actually exist on the remote | see SCAN F | none needed — cleanup already done by auto-delete-on-merge |
 
 **Clean scans (no action):** SCAN A internal links (all resolve), SCAN C JS parse (`node --check` 21/21 OK), SCAN C smart-quotes/dup-ids/secret-logging (none), SCAN D cache-bust (fully consistent), SCAN E secrets/deps/`.gitignore` (clean).
 
@@ -105,10 +105,12 @@ Flagged every `.js`/`.css`/image/`.json` whose basename appears in **no** other 
 
 ## SCAN F — branch classification & cleanup
 
-**Critical method note:** this repo **squash-merges** PRs, so no merged branch tip is an ancestor of `main` — `git branch -r --merged` returns **nothing** and is unusable here. Merged status below is taken from the **authoritative GitHub PR API** (`merged_at != null`), cross-checked with ahead/behind counts.
+**Critical method notes:**
+1. This repo **squash-merges** PRs, so no merged branch tip is an ancestor of `main` — `git branch -r --merged` returns **nothing** and is unusable. Merged status is taken from the **authoritative GitHub PR API** (`merged_at != null`).
+2. The repo has **auto-delete-head-branch on merge** enabled. My initial `git branch -r` inventory was built from **stale local remote-tracking refs** (no `--prune` had run) and listed 30 branches; `git ls-remote --heads origin` shows only **13 actually exist**. After `git remote prune origin`, the picture is authoritative.
 
-### F-1 · MERGED — safe to delete (deleted in this task)
-All have a **closed PR with `merged_at` set**; GitHub retains one-click "Restore branch" on each merged PR, so deletion is fully reversible.
+### F-1 · MERGED — ALREADY DELETED on merge (no action needed / possible)
+These 12 merged branches were **auto-deleted at merge time**; they do **not** exist on the remote (`git push --delete` → "remote ref does not exist"). Each remains one-click restorable from its merged PR. **Nothing to delete.**
 
 | Branch | PR | Purpose |
 |--------|----|---------|
@@ -125,7 +127,11 @@ All have a **closed PR with `merged_at` set**; GitHub retains one-click "Restore
 | `claude/tm-shard-gate` | #308 | gate raw bidayah TM shards |
 | `claude/cleanup-dead-files` | #321 | remove dead auth harness + purge Clerk CSP/COOP |
 
-### F-2 · UNMERGED — leave for One's call (NOT touched)
+The **closed-without-merge** branches (`F4UC-patch-1` #219, `claude/p3-daif-hadith-lesson-1` #237, `claude/phase3-batch1..4` #209/210/213/214, `claude/r90-align-pilot` #290) were **also already deleted** from the remote (pruned as stale locals). They no longer exist — no action.
+
+### F-2 · UNMERGED — the 13 branches that ACTUALLY exist (leave for One's call, NOT touched)
+Verified via `git ls-remote --heads origin`. (`main` and this report's `claude/debug-scan-report` also present.)
+
 **Open PRs (look active):**
 | Branch | PR | Last commit | Purpose |
 |--------|----|-------------|---------|
@@ -137,18 +143,7 @@ All have a **closed PR with `merged_at` set**; GitHub retains one-click "Restore
 | `feat/months-finalize` | #294 open | 2026-06-28 | glossary muharram canonical + article months |
 | `preview/timemachine-book-scoped-ui` | #297 open | 2026-06-29 | book-scoped Time Machine preview |
 
-**Closed-without-merge (abandoned/superseded — One decides if worth deleting):**
-| Branch | PR | Note |
-|--------|----|------|
-| `F4UC-patch-1` | #219 closed, not merged | old hadith-scholars edit |
-| `claude/p3-daif-hadith-lesson-1` | #237 closed, not merged | daif hadith lesson |
-| `claude/phase3-batch1` | #209 closed, not merged | article batch (reworked) |
-| `claude/phase3-batch2` | #210 closed, not merged | article batch (reworked) |
-| `claude/phase3-batch3` | #213 closed, not merged | article batch (reworked) |
-| `claude/phase3-batch4` | #214 closed, not merged | article batch (reworked) |
-| `claude/r90-align-pilot` | #290 closed, not merged | R90 alignment pilot |
-
-**No PR ever opened (stale locals pushed long ago — One decides):**
+**No PR ever opened (stale — never proposed for merge; One decides):**
 | Branch | Last commit | Note |
 |--------|-------------|------|
 | `claude/exclude-internal-paths` | 2026-06-23 | Pages `_middleware` 404 for internal paths (behind 43) |
@@ -156,7 +151,7 @@ All have a **closed PR with `merged_at` set**; GitHub retains one-click "Restore
 | `claude/timemachine-prototype` | 2026-06-20 | old prototype (behind 81) |
 | `claude/works-cover-cachebust` | 2026-06-19 | works.json cover cache-bust (behind 81) |
 
-> ⚠️ Closed-without-merge and no-PR branches are **deliberately NOT deleted** — they contain commits not in `main` and are not recoverable from `main`. Only One should decide their fate.
+> ⚠️ These 11 (7 open-PR + 4 no-PR) are **deliberately NOT touched** — the no-PR ones contain commits not in `main` and are **not** recoverable from `main`. Only One should decide their fate. The open-PR ones are active work.
 
 ---
 
