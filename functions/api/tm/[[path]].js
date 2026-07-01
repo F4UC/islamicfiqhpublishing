@@ -18,11 +18,11 @@
  *     `arabicExcerpt` teaser; the Thai `detail` (the paid moat) is STRIPPED.
  *   - `meta.tier` ('guest'|'free'|'plus'|'pro') drives the front-end popup.
  *
- * Secrets/bindings (per Cloudflare Pages environment, never committed):
- *   CLERK_SECRET_KEY (secret) + CLERK_PUBLISHABLE_KEY (non-secret) + D1 binding `DB`.
- *   @clerk/backend runs on the Workers runtime.
+ * Auth (Phase 2 cutover): the signed-in user is resolved from our first-party
+ *   __Host-ifp_sess cookie via _lib/auth.js verifyUserBySession (was Clerk JWT).
+ *   Bindings: D1 `DB`. (Clerk env kept in the environment for rollback only.)
  */
-import { createClerkClient } from '@clerk/backend';
+import { verifyUserBySession } from '../../_lib/auth.js';
 
 const DATA_BASE = '/pages/tools/timemachine-data/';
 const BIDAYAH_WORK = 'al-bidayah';     // the Time Machine timeline's product id
@@ -33,43 +33,48 @@ export async function onRequest(context) {
   const route = segs.join('/');
 
   if (route === 'whoami') return handleWhoami(request, env);
+  if (route === 'me') return handleMe(request, env);
   if (segs[0] === 'year' && segs[1]) return handleYear(request, env, segs[1]);
   // '/search' => PR-C
   return json({ ok: false, error: 'not_found' }, 404);
 }
 
-// ---- STEP 1 identity (unchanged behaviour) ----
+// ---- STEP 1 identity (now reads the first-party session cookie) ----
 async function handleWhoami(request, env) {
-  if (!env || !env.CLERK_SECRET_KEY || !env.CLERK_PUBLISHABLE_KEY) {
-    return json({ ok: false, error: 'auth_not_configured' }, 503);
+  if (!env || !env.DB) {
+    return json({ ok: false, error: 'db_not_configured' }, 503);
   }
   const uid = await verifyUser(request, env);
   if (!uid) return json({ ok: false, error: 'unauthorized' }, 401);
   return json({ ok: true, userId: uid }, 200);
 }
 
-// ---- shared: verify Clerk JWT → userId or null (NEVER throws, NEVER 401s) ----
-async function verifyUser(request, env) {
-  if (!env || !env.CLERK_SECRET_KEY || !env.CLERK_PUBLISHABLE_KEY) return null;
+// Current membership snapshot for the account page. Never 401 (guest => tier 'guest').
+async function handleMe(request, env) {
+  if (!env || !env.DB) return json({ ok:false, error:'db_not_configured' }, 503);
+  const uid = await verifyUser(request, env);
+  if (!uid) return json({ ok:true, authed:false, tier:'guest' }, 200);
+  let sub = null;
   try {
-    const clerk = createClerkClient({
-      secretKey: env.CLERK_SECRET_KEY,
-      publishableKey: env.CLERK_PUBLISHABLE_KEY,
-    });
-    // Env-driven allowed origins so preview/custom domains verify without a code
-    // change; falls back to the production origin only.
-    const authorizedParties = (env.CLERK_AUTHORIZED_PARTIES
-      ? env.CLERK_AUTHORIZED_PARTIES.split(',').map((s) => s.trim()).filter(Boolean)
-      : ['https://islamicfiqhpublishing.com']);
-    const state = await clerk.authenticateRequest(request, { authorizedParties });
-    // `isAuthenticated` is current; `isSignedIn` is the older alias.
-    const signedIn = state && (state.isAuthenticated ?? state.isSignedIn);
-    if (!signedIn) return null;
-    const auth = state.toAuth();
-    return (auth && auth.userId) || null;
-  } catch (e) {
-    return null;
-  }
+    sub = await env.DB.prepare(
+      `SELECT s.plan_id AS planId, s.current_period_end AS periodEnd,
+              p.title_th AS planTitle, p.price_thb AS price
+         FROM subscriptions s JOIN plans p ON p.plan_id = s.plan_id
+        WHERE s.user_id = ? AND s.status = 'active'
+          AND datetime(s.current_period_end) > datetime('now')
+        ORDER BY p.price_thb DESC LIMIT 1`
+    ).bind(uid).first();
+  } catch (e) { sub = null; }
+  if (!sub) return json({ ok:true, authed:true, tier:'free', planTitle:'FIQH (ฟรี)' }, 200);
+  const tier = sub.planId === 'fiqh-pro' ? 'pro' : (sub.planId === 'fiqh-plus' ? 'plus' : 'paid');
+  return json({ ok:true, authed:true, tier, planId:sub.planId, planTitle:sub.planTitle, periodEnd:sub.periodEnd }, 200);
+}
+
+// ---- resolve the signed-in user from our first-party session cookie (Phase 2
+// cutover; was Clerk JWT). Returns the userId string or null; never throws. ----
+async function verifyUser(request, env) {
+  const r = await verifyUserBySession(env, request);
+  return r ? r.userId : null;
 }
 
 // ---- STEP 2: metered year endpoint (never 401 — Guests get stubs) ----
@@ -81,7 +86,7 @@ async function handleYear(request, env, yearRaw) {
   const uid = await verifyUser(request, env);          // null = Guest (not logged in)
   const ent = await loadEntitlement(env.DB, uid);      // { freeUntil:int, grants:{} }
 
-  const shard = await readShard(request, year);
+  const shard = await readShard(request, year, env);
   if (!shard) return json({ ok: false, error: 'year_not_found' }, 404);
 
   const unlocked = yearUnlocked(uid, ent, year);
@@ -111,10 +116,13 @@ function stubEvent(ev) {
   };
 }
 
-// Same-origin fetch of the static shard (MVP). At lockdown: swap to ASSETS/R2.
-async function readShard(request, year) {
+// Read the static shard. Prefer ASSETS (bypasses the _middleware block on raw shards);
+// fall back to same-origin fetch only if ASSETS is unavailable.
+async function readShard(request, year, env) {
   const url = new URL(DATA_BASE + 'bidayah-h' + year + '.json', request.url);
-  const r = await fetch(url.toString(), { cf: { cacheTtl: 300 } });
+  const r = (env && env.ASSETS)
+    ? await env.ASSETS.fetch(new Request(url.toString()))
+    : await fetch(url.toString(), { cf: { cacheTtl: 300 } });
   if (!r.ok) return null;
   try { return await r.json(); } catch (e) { return null; }
 }
@@ -134,7 +142,7 @@ async function loadEntitlement(DB, uid) {
     const { results } = await DB.prepare(
       `SELECT pg.work_id AS work, pg.year_cap AS cap
          FROM subscriptions s JOIN plan_grants pg ON pg.plan_id = s.plan_id
-        WHERE s.clerk_user_id = ? AND s.status = 'active'
+        WHERE s.user_id = ? AND s.status = 'active'
           AND datetime(s.current_period_end) > datetime('now')`
     ).bind(uid).all();
     const grants = {};

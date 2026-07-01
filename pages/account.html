@@ -52,10 +52,17 @@
     color: var(--text-secondary);
     margin: 0 0 8px;
   }
-  /* Clerk login control (STEP 1 — identity only; opt-in) */
-  .ifp-auth { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 28px; min-height: 40px; }
-  .ifp-auth-btn { font-family: var(--thai); font-size: 15px; font-weight: 600; color: #fff; background: #c49a45; border: none; border-radius: 8px; padding: 11px 28px; cursor: pointer; transition: opacity .2s ease; }
-  .ifp-auth-btn:hover { opacity: .88; }
+  /* Membership status card (populated by /api/tm/me once auth is known). */
+  .acct-membership {
+    margin-top: 26px; padding: 22px 24px;
+    background: rgba(196,154,69,0.10);
+    border: 1px solid rgba(196,154,69,0.35);
+    border-radius: 12px;
+    font-family: var(--thai); font-size: 16px; line-height: 1.9;
+    color: var(--text-primary); text-align: center;
+  }
+  .acct-membership strong { color: #c49a45; }
+  .acct-note { font-family: var(--thai); }
 </style>
 </head>
 <body id="account-page" class="ifp-tools-page" lang="th">
@@ -69,19 +76,19 @@
     <div class="acct-card">
       <h1>บัญชีของฉัน</h1>
       <p>เข้าสู่ระบบเพื่อจัดการบัญชีและเข้าถึงเนื้อหาที่สมัครไว้ บทความและสายอิญาซะฮ์ยังคงเปิดให้อ่านฟรีโดยไม่ต้องเข้าสู่ระบบ</p>
-      <!-- Clerk login (STEP 1 — identity only; opt-in). Revealed by js/clerk-auth.js once Clerk loads. -->
-      <div id="ifp-auth" class="ifp-auth" hidden>
-        <button id="ifp-signin" type="button" class="ifp-auth-btn" hidden>เข้าสู่ระบบ</button>
-        <span id="ifp-userbtn"></span>
-      </div>
+      <div id="acct-membership" class="acct-membership" hidden></div>
+      <p class="acct-note" style="font-size:13px;color:var(--text-tertiary);margin-top:18px">
+        ประวัติการชำระเงินและการยกเลิกสมาชิกจะเปิดให้ใช้เมื่อระบบสมาชิกแบบชำระเงินพร้อม
+      </p>
     </div>
   </div>
 </main>
 
 <div id="footer-placeholder"></div>
-<script defer src="../main.js?v=20260619a"></script>
-<!-- Clerk login (STEP 1 — identity only). Loaded ONLY here + the Time Machine page (opt-in). -->
-<script defer src="../js/clerk-auth.js?v=20260625a"></script>
+<script defer src="../main.js?v=20260630b"></script>
+<!-- Auth also loads site-wide via main.js (after header inject); this direct
+     include is idempotent (guarded in js/auth.js) and keeps account self-sufficient. -->
+<script defer src="../js/auth.js?v=20260630b"></script>
 <script>
 (function(){
   window.addEventListener('scroll',function(){
@@ -90,6 +97,33 @@
     btn.style.display = (document.documentElement.scrollTop > 400) ? 'grid' : 'none';
   });
 })();
+
+// Membership status — js/auth.js (loaded site-wide by main.js after the header
+// mounts) fires ifp:authready once the first-party session is known.
+window.addEventListener('ifp:authready', function () { loadMembership(); });
+async function loadMembership() {
+  var box = document.getElementById('acct-membership');
+  if (!box) return;
+  try {
+    var r = await fetch('/api/tm/me', { credentials: 'include', cache: 'no-store' });
+    var d = await r.json();
+    if (!d || !d.authed) { box.hidden = true; return; }
+    box.hidden = false;
+    if (d.tier === 'free') {
+      box.innerHTML = 'สถานะของคุณ: <strong>FIQH (ฟรี)</strong><br>' +
+        '<span style="font-size:13px">อ่านอัลบิดายะฮ์ ฮ.ศ. 1–5 · บทความทั้งหมด</span><br>' +
+        '<a href="/pages/membership.html" class="ifp-auth-btn" style="display:inline-block;margin-top:14px;text-decoration:none">ดูแพ็กเกจ FIQH+ / PRO</a>';
+    } else {
+      var name = d.tier === 'pro' ? 'FIQH PRO' : (d.tier === 'plus' ? 'FIQH+' : (d.planTitle || 'สมาชิก'));
+      var when = '';
+      if (d.periodEnd) {
+        try { when = ' · ต่ออายุ ' + new Date(d.periodEnd.replace(' ', 'T') + 'Z')
+          .toLocaleDateString('th-TH', { year:'numeric', month:'long', day:'numeric' }); } catch(e){}
+      }
+      box.innerHTML = 'สถานะของคุณ: <strong>' + name + '</strong>' + when;
+    }
+  } catch (e) { box.hidden = true; }
+}
 </script>
 </body>
 </html>

@@ -80,9 +80,6 @@ html, body {
   transition: var(--theme-transition);
 }
 /* Clerk login control (STEP 1 — identity only; opt-in) */
-.ifp-auth { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 22px; min-height: 36px; }
-.ifp-auth-btn { font-family: var(--thai); font-size: 14px; font-weight: 600; color: #fff; background: #c49a45; border: none; border-radius: 8px; padding: 9px 22px; cursor: pointer; transition: opacity .2s ease; }
-.ifp-auth-btn:hover { opacity: .88; }
 
 /* ─── Year Explorer ─── */
 .explorer-panel { 
@@ -463,11 +460,6 @@ html.dark-mode .tm-upsell-box { background-image: linear-gradient(165deg, rgba(6
   <div class="htm-hero">
     <h1 data-reveal>HIJRI TIME MACHINE</h1>
     <p data-reveal data-delay="1">สำรวจไทม์ไลน์ประวัติศาสตร์ นิติศาสตร์ และเทววิทยาอิสลามรายปีฮิจเราะฮ์ คัดแยกเป็นชุดตามตำราของปราชญ์แต่ละท่าน เลือกชุดเพื่อเข้าสำรวจ</p>
-    <!-- Clerk login (STEP 1 — identity only; opt-in, does NOT gate content yet). Revealed by js/clerk-auth.js once Clerk loads. -->
-    <div id="ifp-auth" class="ifp-auth" hidden>
-      <button id="ifp-signin" type="button" class="ifp-auth-btn" hidden>เข้าสู่ระบบ</button>
-      <span id="ifp-userbtn"></span>
-    </div>
   </div>
 
     <div class="bc-section">
@@ -602,9 +594,9 @@ html.dark-mode .tm-upsell-box { background-image: linear-gradient(165deg, rgba(6
 </div>
 
 <div id="footer-placeholder"></div>
-<script defer src="../../main.js?v=20260619a"></script>
+<script defer src="../../main.js?v=20260630b"></script>
 <!-- Clerk login (STEP 1 — identity only). Loaded ONLY here + the account page (opt-in). -->
-<script defer src="../../js/clerk-auth.js?v=20260628a"></script>
+<script defer src="../../js/auth.js?v=20260630b"></script>
 <script>
 /* ─── View switching: home (carousel) ⇄ bidayah (timeline) ─── */
 function showBidayah() {
@@ -812,14 +804,14 @@ function indexGlossary(g) {
 
 /* STEP 0.5 — fetch seam (Step 2 PR-B: static → gated API).
    ALL shard data access flows through tmFetchYear / tmFetchAll only.
-   tmGetToken / tmApiYear are provider-agnostic: today clerk-auth.js exposes
-   window.ifpGetToken; after any future auth swap only that file changes. */
+   Phase 2 cutover: auth is the first-party session cookie (credentials:'include');
+   no Bearer token. tmGetToken stays as a no-op seam for callers. */
 function tmGetToken() {
-  return (typeof window.ifpGetToken === 'function') ? window.ifpGetToken() : Promise.resolve(null);
+  return Promise.resolve(null);
 }
 function tmApiYear(year, token) {
   var headers = token ? { Authorization: 'Bearer ' + token } : {};
-  return fetch('/api/tm/year/' + year, { headers: headers })
+  return fetch('/api/tm/year/' + year, { headers: headers, credentials: 'include' })
     .then(function (r) { return r.ok ? r.json() : null; });
 }
 function tmFetchYear(entry) {
@@ -1131,7 +1123,6 @@ function renderEventCard(e) {
     const act = i === 0 ? ' active' : '';
     tabsHtml += `<button type="button" class="tm-tab${act}" data-acc="${i}">${name}</button>`;
     let links = '';
-    if (a.url) links += ` <a href="${a.url}" class="tm-src-link" target="_blank" rel="noopener noreferrer">Shamela ↗</a>`;
     if (a.urlAlt) links += ` <a href="${a.urlAlt}" class="tm-src-link" target="_blank" rel="noopener noreferrer">islamweb ↗</a>`;
     const srcLine = (ch.book || '') + (a.loc ? ' ' + a.loc : '') + links;
     const srcHtml = srcLine.trim() ? `<div class="tm-acc-src"><span class="tm-lbl">ที่มา</span> ${srcLine}</div>` : '';
@@ -1518,10 +1509,15 @@ function loadAllShards() {
   if(dhSignin) {
     dhSignin.hidden = false; /* show initially; hide once authed state is confirmed */
     dhSignin.addEventListener('click', tmSignIn);
-    if(ifpUserbtn) {
-      new MutationObserver(syncDhAuth).observe(ifpUserbtn, { childList: true, subtree: true });
+    function attachIfpObserver(){
+      var btn = document.getElementById('ifp-userbtn'); // re-query: header injects async
+      if(!btn) return false;
+      ifpUserbtn = btn;
+      new MutationObserver(syncDhAuth).observe(btn, { childList: true, subtree: true });
       syncDhAuth();
+      return true;
     }
+    if(!attachIfpObserver()) window.addEventListener('ifp:authready', attachIfpObserver);
   }
 
   var expOut = document.getElementById('tm-content');

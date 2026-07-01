@@ -9,6 +9,8 @@
  * Blocking strategy (three passes, short-circuit):
  *   1. BLOCK_EXACT  — extensionless internal files + _TEMPLATE variants
  *   2. BLOCK_PREFIX — entire internal dirs (docs/, scripts/, .claude/, .codex/, .github/)
+ *                     and the raw ijazah graph files (served only via the gated
+ *                     /api/ijazah worker, which reaches them through env.ASSETS)
  *   3. BLOCK_EXT    — all .md, .py, .sha256, .gitignore files anywhere in the tree
  *
  * Everything else falls through via context.next() (static assets, /api/*, etc.).
@@ -20,7 +22,7 @@ const BLOCK_EXACT = new Set([
   "/pages/tools/ijazah-data/NOTICE",
 ]);
 
-const BLOCK_PREFIX = ["/docs/", "/scripts/", "/.claude/", "/.codex/", "/.github/"];
+const BLOCK_PREFIX = ["/docs/", "/scripts/", "/.claude/", "/.codex/", "/.github/", "/pages/tools/ijazah-data/graphs/", "/pages/tools/timemachine-data/bidayah-h"];
 
 const BLOCK_EXT = [".md", ".py", ".sha256", ".gitignore"];
 

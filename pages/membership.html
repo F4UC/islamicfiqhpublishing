@@ -275,6 +275,11 @@
   .cta--border-gold { border: 1px solid var(--gold); color: var(--gold-deep); background: transparent; }
   .cta--border-gold:hover { background: var(--gold-tint); border-color: var(--gold-deep); }
 
+  /* Two checkout options (auto-renew card vs 30-day pass) stacked under a tier */
+  .cta-group { display: flex; flex-direction: column; gap: 10px; margin-top: 32px; }
+  .cta-group .cta { margin-top: 0; }
+  .cta-group .cta-sub { font-weight: 600; font-size: 13px; }
+
   .addons { margin-top: 80px; text-align: center; }
   .addons-h {
     font-family: var(--serif);
@@ -372,7 +377,7 @@
           <span class="tname">FIQH+</span>
         </div>
         <div class="price">
-          <span class="price-cur">฿</span><span class="price-num">139</span><span class="price-unit">/ เดือน</span>
+          <span class="price-cur">฿</span><span class="price-num">169</span><span class="price-unit">/ เดือน</span>
         </div>
         <div class="price-foot">เข้าถึงได้มากขึ้น พร้อมข้อมูลอิญาซะฮ์และตำราประวัติศาสตร์</div>
 
@@ -385,7 +390,10 @@
           <li class="no"><span class="ck no">✕</span> “อัลบิดายะฮ์ วันนิฮายะฮ์” ฉบับเต็ม</li>
         </ul>
 
-        <a class="cta cta--gold" href="#">สมัคร FIQH+</a>
+        <div class="cta-group">
+          <button type="button" class="cta cta--gold" onclick="ifpStartCheckout('fiqh-plus','subscription')">ต่ออัตโนมัติด้วยบัตร</button>
+          <button type="button" class="cta cta-sub" onclick="ifpStartCheckout('fiqh-plus','pass')">จ่ายรายเดือน · พร้อมเพย์/บัตร</button>
+        </div>
       </article>
 
       <!-- TIER 3: FIQH PRO (Paid) -->
@@ -394,7 +402,7 @@
           <span class="tname">FIQH PRO</span>
         </div>
         <div class="price">
-          <span class="price-cur">฿</span><span class="price-num">299</span><span class="price-unit">/ เดือน</span>
+          <span class="price-cur">฿</span><span class="price-num">699</span><span class="price-unit">/ เดือน</span>
         </div>
         <div class="price-foot">ปลดล็อกข้อมูลเต็มรูปแบบของตำราประวัติศาสตร์และนิติศาสตร์</div>
 
@@ -405,7 +413,10 @@
           <li><span class="ck yes">✓</span> เข้าถึงเนื้อหา “อัลบิดายะฮ์ วันนิฮายะฮ์” ได้ทั้งชุด</li>
         </ul>
 
-        <a class="cta cta--border-gold" href="#">สมัคร FIQH PRO</a>
+        <div class="cta-group">
+          <button type="button" class="cta cta--gold" onclick="ifpStartCheckout('fiqh-pro','subscription')">ต่ออัตโนมัติด้วยบัตร</button>
+          <button type="button" class="cta cta--border-gold cta-sub" onclick="ifpStartCheckout('fiqh-pro','pass')">จ่ายรายเดือน · พร้อมเพย์/บัตร</button>
+        </div>
       </article>
 
     </section>
@@ -437,8 +448,25 @@
 </main>
 
 <div id="footer-placeholder"></div>
-<script defer src="../main.js?v=20260619a"></script>
+<script defer src="../main.js?v=20260630b"></script>
 <script>
+/* Start a Stripe Checkout session for a paid plan. First-party session cookie
+   (credentials:'include'); a 401 means not signed in → route to /login. */
+async function ifpStartCheckout(planId, mode) {
+  try {
+    var r = await fetch('/api/stripe/checkout', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ plan_id: planId, mode: mode })
+    });
+    if (r.status === 401) { if (window.ifpSignIn) window.ifpSignIn(); return; } // not signed in → /login
+    var data = await r.json();
+    if (data && data.url) { window.location = data.url; return; }
+  } catch (e) {}
+  alert('เริ่มการชำระเงินไม่สำเร็จ ลองใหม่อีกครั้ง');
+}
+
 (function(){
   var bar = document.getElementById('readingProgress');
   if(bar){
