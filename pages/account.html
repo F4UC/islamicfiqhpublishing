@@ -85,10 +85,10 @@
 </main>
 
 <div id="footer-placeholder"></div>
-<script defer src="../main.js?v=20260629b"></script>
-<!-- Clerk auth also loads site-wide via main.js (after header inject); this direct
-     include is idempotent (guarded in clerk-auth.js) and keeps account self-sufficient. -->
-<script defer src="../js/clerk-auth.js?v=20260630a"></script>
+<script defer src="../main.js?v=20260630b"></script>
+<!-- Auth also loads site-wide via main.js (after header inject); this direct
+     include is idempotent (guarded in js/auth.js) and keeps account self-sufficient. -->
+<script defer src="../js/auth.js?v=20260630b"></script>
 <script>
 (function(){
   window.addEventListener('scroll',function(){
@@ -98,16 +98,14 @@
   });
 })();
 
-// Membership status — clerk-auth.js (loaded site-wide by main.js after the header
-// mounts) fires ifp:authready once Clerk knows the session.
+// Membership status — js/auth.js (loaded site-wide by main.js after the header
+// mounts) fires ifp:authready once the first-party session is known.
 window.addEventListener('ifp:authready', function () { loadMembership(); });
 async function loadMembership() {
-  var token = await window.ifpGetToken();
   var box = document.getElementById('acct-membership');
   if (!box) return;
-  if (!token) { box.hidden = true; return; }
   try {
-    var r = await fetch('/api/tm/me', { headers: { Authorization: 'Bearer ' + token } });
+    var r = await fetch('/api/tm/me', { credentials: 'include', cache: 'no-store' });
     var d = await r.json();
     if (!d || !d.authed) { box.hidden = true; return; }
     box.hidden = false;

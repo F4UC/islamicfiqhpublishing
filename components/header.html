@@ -76,8 +76,8 @@ nav.chrome-nav .nav-item.active::after { transform: scaleX(1); }
 }
 .chrome-icon-btn:hover { border-color: #b31b1b; color: #b31b1b; transform: rotate(8deg); }
 
-/* Site-wide auth chrome — login button / Clerk avatar slot (shared by every page;
-   js/clerk-auth.js reveals + mounts into #ifp-auth). Also styles the account page's
+/* Site-wide auth chrome — login button / avatar slot (shared by every page;
+   js/auth.js reveals + mounts into #ifp-auth). Also styles the account page's
    membership CTA, which reuses .ifp-auth-btn. */
 .ifp-auth { display: inline-flex; align-items: center; gap: 10px; }
 .ifp-auth-btn {
@@ -87,14 +87,38 @@ nav.chrome-nav .nav-item.active::after { transform: scaleX(1); }
   transition: opacity .2s ease;
 }
 .ifp-auth-btn:hover { opacity: .88; }
-#ifp-userbtn { display: inline-flex; align-items: center; }
-/* Membership tier pill shown next to the avatar when signed in (clerk-auth.js). */
+#ifp-userbtn { display: inline-flex; align-items: center; position: relative; }
+/* Membership tier pill shown next to the avatar when signed in (js/auth.js). */
 .ifp-tier {
   font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 600;
   letter-spacing: .08em; text-transform: none; white-space: nowrap; line-height: 1;
   color: var(--header-text); border: 1px solid var(--header-icon-border);
   border-radius: 999px; padding: 5px 11px;
 }
+/* First-party avatar + account dropdown (js/auth.js, signed-in state). */
+.ifp-avatar {
+  width: 32px; height: 32px; display: grid; place-items: center;
+  border: 1px solid var(--header-icon-border); border-radius: 50%;
+  color: var(--header-text); background: transparent; cursor: pointer; padding: 0;
+  transition: border-color .25s, color .25s;
+}
+.ifp-avatar:hover { border-color: #b31b1b; color: #b31b1b; }
+.ifp-menu {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 1001; min-width: 160px;
+  display: flex; flex-direction: column; padding: 6px;
+  background: var(--header-bg); border: 1px solid var(--header-border);
+  border-radius: 12px; box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+}
+/* `display:flex` above overrides the hidden attribute; this higher-specificity
+   rule lets [hidden] actually hide the menu (js/auth.js toggles menu.hidden). */
+.ifp-menu[hidden] { display: none; }
+.ifp-menu-item {
+  font-family: 'Sarabun', system-ui, sans-serif; font-size: 14px; text-align: left;
+  color: var(--header-text); background: transparent; border: 0; border-radius: 8px;
+  padding: 9px 12px; cursor: pointer; text-decoration: none; text-transform: none;
+  letter-spacing: normal;
+}
+.ifp-menu-item:hover { background: rgba(255,255,255,0.08); }
 
 .chrome-hamburger {
   display: none; font-size: 20px; cursor: pointer;

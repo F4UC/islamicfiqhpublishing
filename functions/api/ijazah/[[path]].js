@@ -4,7 +4,7 @@
  * which bypasses _middleware's block, so the raw file is unreachable by the public but
  * still serveable here after the entitlement check.
  */
-import { createClerkClient } from '@clerk/backend';
+import { verifyUserBySession } from '../../_lib/auth.js';
 
 export async function onRequest(context) {
   const { request, env, params } = context;
@@ -39,7 +39,7 @@ async function hasIjazah(DB, uid) {
   try {
     const row = await DB.prepare(
       `SELECT 1 AS ok FROM subscriptions s JOIN plan_grants pg ON pg.plan_id = s.plan_id
-        WHERE s.clerk_user_id = ? AND s.status = 'active'
+        WHERE s.user_id = ? AND s.status = 'active'
           AND datetime(s.current_period_end) > datetime('now')
           AND pg.work_id = 'ijazah' LIMIT 1`
     ).bind(uid).first();
@@ -47,33 +47,13 @@ async function hasIjazah(DB, uid) {
   } catch (e) { return false; }
 }
 
-// ---- shared: verify Clerk JWT → userId or null (NEVER throws, NEVER 401s) ----
-// COPIED VERBATIM from functions/api/tm/[[path]].js (short-term duplication — flagged
-// as debt; consolidate into a shared module later).
+// ---- resolve the signed-in user from our first-party session cookie (Phase 2
+// cutover; was Clerk JWT). Returns the userId string or null; never throws. ----
 async function verifyUser(request, env) {
-  if (!env || !env.CLERK_SECRET_KEY || !env.CLERK_PUBLISHABLE_KEY) return null;
-  try {
-    const clerk = createClerkClient({
-      secretKey: env.CLERK_SECRET_KEY,
-      publishableKey: env.CLERK_PUBLISHABLE_KEY,
-    });
-    // Env-driven allowed origins so preview/custom domains verify without a code
-    // change; falls back to the production origin only.
-    const authorizedParties = (env.CLERK_AUTHORIZED_PARTIES
-      ? env.CLERK_AUTHORIZED_PARTIES.split(',').map((s) => s.trim()).filter(Boolean)
-      : ['https://islamicfiqhpublishing.com']);
-    const state = await clerk.authenticateRequest(request, { authorizedParties });
-    // `isAuthenticated` is current; `isSignedIn` is the older alias.
-    const signedIn = state && (state.isAuthenticated ?? state.isSignedIn);
-    if (!signedIn) return null;
-    const auth = state.toAuth();
-    return (auth && auth.userId) || null;
-  } catch (e) {
-    return null;
-  }
+  const r = await verifyUserBySession(env, request);
+  return r ? r.userId : null;
 }
 
-// COPIED VERBATIM from functions/api/tm/[[path]].js.
 function json(body, status) {
   return new Response(JSON.stringify(body), {
     status,

@@ -17,7 +17,7 @@
  * caches (this is how a Purge + redeploy reaches already-installed users).
  * ========================================================================== */
 
-const CACHE_VERSION = 'ifp-v2';
+const CACHE_VERSION = 'ifp-v3';
 const PRECACHE = CACHE_VERSION + '-precache';
 const RUNTIME = CACHE_VERSION + '-runtime';
 
@@ -35,7 +35,7 @@ const PRECACHE_URLS = [
   '/icons/icon-512-maskable.png',
   '/article.css?v=20260614d',
   '/css/fonts.css?v=20260614a',
-  '/main.js?v=20260619a',
+  '/main.js?v=20260630b',
   '/fonts/sarabun-400-thai.woff2',
   '/fonts/amiri-400-arabic.woff2',
   '/fonts/ibm-plex-sans-thai-600-thai.woff2'

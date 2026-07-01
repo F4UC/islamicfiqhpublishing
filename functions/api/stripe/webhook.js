@@ -21,7 +21,7 @@ export async function onRequestPost(context) {
       const s = event.data.object;
       // one-time pass only (subscriptions are handled by invoice.paid)
       if (s.mode === 'payment' && s.payment_status === 'paid') {
-        const uid = s.metadata && s.metadata.clerk_user_id;
+        const uid = s.metadata && s.metadata.user_id;
         const plan = s.metadata && s.metadata.plan_id;
         if (uid && plan) await grantPass(DB, uid, plan);
       }
@@ -29,7 +29,7 @@ export async function onRequestPost(context) {
       const inv = event.data.object;
       if (inv.subscription) {
         const sub = await stripe.subscriptions.retrieve(inv.subscription);
-        const uid  = sub.metadata && sub.metadata.clerk_user_id;
+        const uid  = sub.metadata && sub.metadata.user_id;
         const plan = sub.metadata && sub.metadata.plan_id;
         const end  = new Date(sub.current_period_end * 1000).toISOString();
         if (uid && plan) await upsertSub(DB, sub.id, uid, plan, 'active', end);
@@ -57,18 +57,27 @@ async function grantPass(DB, uid, plan) {
   }
   const end = new Date(baseMs + 30 * 86400 * 1000).toISOString();
   await DB.prepare(
-    `INSERT INTO subscriptions (sub_id, clerk_user_id, plan_id, status, current_period_end, source)
-     VALUES (?,?,?,?,?, 'stripe')
+    `INSERT INTO subscriptions (sub_id, user_id, clerk_user_id, plan_id, status, current_period_end, source)
+     VALUES (?,?,?,?,?,?, 'stripe')
      ON CONFLICT(sub_id) DO UPDATE SET
-       status='active', current_period_end=excluded.current_period_end, plan_id=excluded.plan_id`
-  ).bind(subId, uid, plan, 'active', end).run();
+       status='active', current_period_end=excluded.current_period_end,
+       plan_id=excluded.plan_id, user_id=COALESCE(excluded.user_id, subscriptions.user_id)`
+  ).bind(subId, firstPartyId(uid), uid, plan, 'active', end).run();
 }
 
 async function upsertSub(DB, subId, uid, plan, status, end) {
   await DB.prepare(
-    `INSERT INTO subscriptions (sub_id, clerk_user_id, plan_id, status, current_period_end, source)
-     VALUES (?,?,?,?,?, 'stripe')
+    `INSERT INTO subscriptions (sub_id, user_id, clerk_user_id, plan_id, status, current_period_end, source)
+     VALUES (?,?,?,?,?,?, 'stripe')
      ON CONFLICT(sub_id) DO UPDATE SET
-       status=excluded.status, current_period_end=excluded.current_period_end, plan_id=excluded.plan_id`
-  ).bind(subId, uid, plan, status, end).run();
+       status=excluded.status, current_period_end=excluded.current_period_end,
+       plan_id=excluded.plan_id, user_id=COALESCE(excluded.user_id, subscriptions.user_id)`
+  ).bind(subId, firstPartyId(uid), uid, plan, status, end).run();
+}
+
+// The gate keys on user_id, so only a genuine first-party id ('usr_…') is written
+// there; COALESCE above never clobbers an existing user_id on conflict.
+// clerk_user_id column retained as NOT NULL legacy; holds the first-party id. Drop via migration later if desired.
+function firstPartyId(uid) {
+  return (typeof uid === 'string' && uid.indexOf('usr_') === 0) ? uid : null;
 }

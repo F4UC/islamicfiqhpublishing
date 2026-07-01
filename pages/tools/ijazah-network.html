@@ -688,7 +688,7 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
 </button>
 
 <!-- Header/footer + scroll-reveal — Rule 26 -->
-<script src="../../main.js?v=20260629b"></script>
+<script src="../../main.js?v=20260630b"></script>
 
 <!-- Graph libraries — self-hosted (no external CDN / supply-chain dep), version pinned in filename. See vendor/README.md -->
 <script src="vendor/cytoscape-3.30.2.min.js" integrity="sha384-IWROdLKRsN1UuJywMlWl7/blXQ8GEooN2n7dzTxfEPd7ybYIKCUJ2Ol/1Gpf3YV4"></script>
@@ -1059,12 +1059,11 @@ html.dark-mode .prov-sha { color:var(--gold-bright); }
     }
   }
 
-  /* Fetch a chain's graph through the gated API: attaches the Clerk bearer token
-     when present, and surfaces the members-only lock on a 403. Returns the parsed
-     JSON, or null when the chain is locked (caller stops/skips render). */
+  /* Fetch a chain's graph through the gated API using the first-party session
+     cookie (credentials:'include'), and surface the members-only lock on a 403.
+     Returns the parsed JSON, or null when the chain is locked (caller skips render). */
   async function fetchGraph(gid, silent){
-    var token = window.ifpGetToken ? await window.ifpGetToken() : null;
-    var r = await fetch(GRAPH_BASE + gid + '.json', { headers: token ? { Authorization:'Bearer '+token } : {} });
+    var r = await fetch(GRAPH_BASE + gid + '.json', { credentials: 'include' });
     if(r.status === 403){ if(!silent) showIjazahLock(); return null; }   // members-only
     if(!r.ok) throw new Error('HTTP ' + r.status);
     return r.json();
