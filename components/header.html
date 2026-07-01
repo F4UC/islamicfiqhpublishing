@@ -109,6 +109,9 @@ nav.chrome-nav .nav-item.active::after { transform: scaleX(1); }
   background: var(--header-bg); border: 1px solid var(--header-border);
   border-radius: 12px; box-shadow: 0 16px 40px rgba(0,0,0,0.45);
 }
+/* `display:flex` above overrides the hidden attribute; this higher-specificity
+   rule lets [hidden] actually hide the menu (js/auth.js toggles menu.hidden). */
+.ifp-menu[hidden] { display: none; }
 .ifp-menu-item {
   font-family: 'Sarabun', system-ui, sans-serif; font-size: 14px; text-align: left;
   color: var(--header-text); background: transparent; border: 0; border-radius: 8px;
