@@ -25,8 +25,16 @@
       transition: border-color .2s;
     }
     .login-pk:hover { border-color: #1c1914; }
-    #login-status { margin-top: 18px; font-size: 13px; color: #6b6258; min-height: 18px; }
+    .login-email { display: flex; flex-direction: column; gap: 10px; margin: 0; }
+    .login-email-input {
+      width: 100%; font-family: 'Sarabun', system-ui, sans-serif; font-size: 15px;
+      padding: 12px 14px; border: 1px solid #c9c2b5; border-radius: 12px; outline: none;
+      background: #fff; color: #1c1914;
+    }
+    .login-email-input:focus { border-color: #1c1914; }
+    #login-status { margin-top: 18px; font-size: 13px; color: #6b6258; min-height: 18px; line-height: 1.6; }
     #login-status.err { color: #b31b1b; }
+    #login-status.ok { color: #1a7f37; }
   </style>
 </head>
 <body lang="th">
@@ -39,6 +47,12 @@
       <div id="gbtn"></div>
       <div class="login-or">หรือ</div>
       <button id="login-pk" class="login-pk" type="button">เข้าสู่ระบบด้วยพาสคีย์</button>
+      <div class="login-or">หรือ</div>
+      <form id="login-email-form" class="login-email">
+        <input id="login-email" class="login-email-input" type="email" inputmode="email"
+               autocomplete="email" placeholder="อีเมลของคุณ" required>
+        <button id="login-email-btn" class="login-pk" type="submit">ส่งลิงก์เข้าสู่ระบบ</button>
+      </form>
       <div id="login-status"></div>
     </div>
   </main>
@@ -98,6 +112,34 @@
       if (ok) { redirectBack(); return; }
       setStatus('เข้าสู่ระบบด้วยพาสคีย์ไม่สำเร็จ', true);
     });
+
+    // Email magic link: post the address; show the same message regardless of whether
+    // an account exists (no enumeration). The link in the inbox does the sign-in.
+    document.getElementById('login-email-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var email = document.getElementById('login-email').value.trim();
+      if (!email) { setStatus('กรุณากรอกอีเมล', true); return; }
+      setStatus('กำลังส่งลิงก์…');
+      try {
+        var r = await fetch('/api/auth/email/request', {
+          method: 'POST', credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email }),
+        });
+        if (r.status === 429) { setStatus('ขออภัย มีการร้องขอบ่อยเกินไป กรุณาลองใหม่ในภายหลัง', true); return; }
+        if (r.status === 400) { setStatus('รูปแบบอีเมลไม่ถูกต้อง', true); return; }
+        var el = document.getElementById('login-status');
+        el.textContent = 'ถ้าอีเมลนี้มีบัญชี เราได้ส่งลิงก์ไปแล้ว โปรดตรวจกล่องจดหมาย';
+        el.className = 'ok';
+      } catch (err) { setStatus('ส่งลิงก์ไม่สำเร็จ ลองใหม่อีกครั้ง', true); }
+    });
+
+    // Surface expired/invalid magic-link redirects (/login?e=expired).
+    try {
+      if (new URLSearchParams(location.search).get('e') === 'expired') {
+        setStatus('ลิงก์เข้าสู่ระบบหมดอายุหรือถูกใช้ไปแล้ว โปรดขอลิงก์ใหม่', true);
+      }
+    } catch (e) {}
 
     var tries = 0;
     (function waitForGis() {
